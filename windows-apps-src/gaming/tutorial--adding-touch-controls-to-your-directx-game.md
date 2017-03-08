@@ -3,16 +3,23 @@ author: mtoepke
 title: "Controles táctiles para juegos"
 description: "Aprende a agregar controles táctiles básicos a tu juego C++ de la Plataforma universal de Windows (UWP) con DirectX."
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, juegos, entrada táctil, controles, directx, entrada"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 901b83b1c4a2e572e4fe41e1df59910432982687
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 44d5071ee0cd695351c77630d699a1a060f477d6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Controles táctiles para juegos
+# <a name="touch-controls-for-games"></a>Controles táctiles para juegos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aprende a agregar controles táctiles básicos a tu juego C++ de la Plataforma universal de Windows (UWP) con DirectX. Te enseñamos cómo agregar controles basados en el tacto para mover una cámara de plano fijo en un entorno de Direct3D, donde arrastrar con un dedo o un lápiz cambia la perspectiva de la cámara.
 
@@ -22,12 +29,12 @@ Puedes incorporar estos controles en juegos donde desees que el jugador arrastre
 
  
 
-## Objetivos
+## <a name="objectives"></a>Objetivos
 
 
 -   Crear un sencillo control de tocar y arrastrar para obtener una vista panorámica de una cámara de plano fijo en un juego DirectX.
 
-## Configuración de la infraestructura básica para eventos de toque
+## <a name="set-up-the-basic-touch-event-infrastructure"></a>Configuración de la infraestructura básica para eventos de toque
 
 
 Primero, definimos nuestro tipo de controlador básico, **CameraPanController** en este caso. Aquí definimos el controlador como una idea abstracta, el conjunto de comportamientos que el usuario puede llevar a cabo.
@@ -126,7 +133,7 @@ Ahora ya tenemos todos los componentes necesarios para implementar controles tá
 
 Ahora, intentemos combinar todas las piezas.
 
-## Creación de los eventos táctiles básicos
+## <a name="create-the-basic-touch-events"></a>Creación de los eventos táctiles básicos
 
 
 El distribuidor de eventos de Windows Runtime proporciona 3 eventos que queremos que controle nuestra aplicación:
@@ -204,7 +211,7 @@ void CameraPanController::OnPointerReleased(
 }
 ```
 
-## Inicialización de los controles táctiles y del estado del controlador
+## <a name="initialize-the-touch-controls-and-the-controller-state"></a>Inicialización de los controles táctiles y del estado del controlador
 
 
 Enlacemos los eventos e inicialicemos todos los campos de estado básicos del controlador de cámara.
@@ -238,7 +245,7 @@ void CameraPanController::Initialize( _In_ CoreWindow^ window )
 
 **Initialize** hace referencia a la instancia [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) de la aplicación como un parámetro y registra los controladores de eventos que desarrollamos en los eventos adecuados en **CoreWindow**.
 
-## Obtención y establecimiento de la posición del controlador de cámara
+## <a name="getting-and-setting-the-position-of-the-camera-controller"></a>Obtención y establecimiento de la posición del controlador de cámara
 
 
 Definamos algunos métodos para obtener y establecer la posición del controlador de cámara en el espacio de la escena.
@@ -272,7 +279,7 @@ DirectX::XMFLOAT3 CameraPanController::get_FixedLookPoint()
 
 **get\_FixedLookPoint** es una propiedad pública que, en este ejemplo, obtiene un punto de vista que es normal al plano x-y. Puedes cambiar este método para usar las funciones trigonométricas, sin y cos, al calcular los valores de las coordenadas X, Y y Z si quieres crear ángulos más oblicuos para la cámara fija.
 
-## Actualización de la información de estado del controlador de cámara
+## <a name="updating-the-camera-controller-state-information"></a>Actualización de la información de estado del controlador de cámara
 
 
 Ahora vamos a realizar los cálculos que convierten la información de coordenadas del puntero registrada en **m\_panPointerPosition** en nueva información de coordenadas con respecto al espacio de la escena en 3D. Nuestra aplicación llamará a este método cada vez que actualicemos el bucle de la aplicación principal. Aquí calculamos la información de la nueva posición que luego pasamos a la aplicación que se usa para actualizar la matriz de vista antes de proyectarla a la ventanilla.
@@ -320,7 +327,7 @@ void CameraPanController::Update( CoreWindow ^window )
 
 Puesto que no queremos que la vibración del toque o del mouse entrecorten la vista panorámica de la cámara, establecemos una zona muerta alrededor del puntero con un diámetro de 32 píxeles. Tenemos también un valor de velocidad, que en este caso es 1:1 con el cruce seguro de píxel del puntero pasada la zona muerta. Puedes ajustar este comportamiento para reducir o aumentar la velocidad del movimiento.
 
-## Actualización de la matriz de vista con la nueva posición de cámara
+## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>Actualización de la matriz de vista con la nueva posición de cámara
 
 
 Ahora podemos obtener una coordenada del espacio de la escena en la que se centra nuestra cámara, y que se actualiza cada vez que se lo ordenamos a la aplicación (cada 60 segundos en el bucle principal de la aplicación, por ejemplo). Este pseudocódigo sugiere el comportamiento de llamada que puedes implementar:
@@ -349,10 +356,5 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

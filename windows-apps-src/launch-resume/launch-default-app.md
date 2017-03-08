@@ -3,15 +3,22 @@ author: TylerMSFT
 title: "Iniciar la aplicación predeterminada de un URI"
 description: "Aprende a iniciar la aplicación predeterminada de un identificador de recursos uniforme (URI). Los URI te permiten iniciar otra aplicación para realizar una tarea específica. En este tema también se proporciona una descripción general de los muchos esquemas de URI integrados en Windows."
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 881056cf24755d880a142bd5317fc6e524d1cd81
-ms.openlocfilehash: 119b24573163224456d4f847cf3a444fb8420c5e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fcc1d056fc3a4cb8d57ae5082e62cf0b802bb4e7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Iniciar la aplicación predeterminada de un URI
+# <a name="launch-the-default-app-for-a-uri"></a>Iniciar la aplicación predeterminada para un URI
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -36,18 +43,18 @@ En este tema se describen los siguientes esquemas de URI integrados en Windows:
 |[ms-people:](#people-app-uri-scheme) | Aplicación Contactos |
 |[ms-settings:](#settings-app-uri-scheme) | Aplicación Configuración |
 |[ms-store:](#store-app-uri-scheme)  | Aplicación de la Tienda |
-|[ms-tonepicker:](#tone-uri-scheme) | Selector de tono |
+|[ms-tonepicker:](#tone-picker-uri-scheme) | Selector de tono |
 |[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | Aplicación de números cercanos |
 
 <br> Por ejemplo, el siguiente URI abre el explorador predeterminado y muestra el sitio web de Bing.
 
 `http://bing.com`
 
-También puedes iniciar esquemas de URI personalizados. Si no hay ninguna aplicación instalada para controlar ese URI, puedes recomendar una aplicación para que la instale el usuario. Para obtener más información, consulta [Recomendar una aplicación](#recommend).
+También puedes iniciar esquemas de URI personalizados. Si no hay ninguna aplicación instalada para controlar ese URI, puedes recomendar una aplicación para que la instale el usuario. Para obtener más información, consulta [Recomendar una aplicación si no hay ninguna disponible para administrar el URI](#recommend-an-app-if-one-is-not-available-to-handle-the-uri).
 
-En general, la aplicación no puede seleccionar qué aplicación se inicia, sino que es el usuario el que determina la aplicación que se inicia. Se puede registrar más de una aplicación para controlar el mismo esquema de URI. La excepción a esto son los esquemas de URI reservados. Los registros de esquemas de URI reservados se ignoran. Para obtener una lista completa de los esquemas de URI reservados, consulta [Administración de la activación de URI](handle-uri-activation.md). En casos en los que más de una aplicación puede haber registrado el mismo esquema de URI, la aplicación puede recomendar iniciar una aplicación específica. Para obtener más información, consulta [Recomendar una aplicación](#recommend).
+En general, la aplicación no puede seleccionar qué aplicación se inicia. sino que es el usuario el que determina la aplicación que se inicia. Se puede registrar más de una aplicación para controlar el mismo esquema de URI. La excepción a esto son los esquemas de URI reservados. Los registros de esquemas de URI reservados se ignoran. Para obtener una lista completa de los esquemas de URI reservados, consulta [Administración de la activación de URI](handle-uri-activation.md). En casos en los que más de una aplicación puede haber registrado el mismo esquema de URI, la aplicación puede recomendar iniciar una aplicación específica. Para obtener más información, consulta [Recomendar una aplicación si no hay ninguna disponible para administrar el URI](#recommend-an-app-if-one-is-not-available-to-handle-the-uri).
 
-### Llamar a LaunchUriAsync para iniciar un URI
+### <a name="call-launchuriasync-to-launch-a-uri"></a>Llamar a LaunchUriAsync para iniciar un URI
 
 Usa el método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar un URI. Cuando llames a este método, tu aplicación debe ser la aplicación en primer plano; es decir, debe estar visible para el usuario. Este requisito permite asegurar que el usuario permanezca en control. Para cumplir este requisito, asegúrate de enlazar todos los inicios de URI directamente a la interfaz de usuario de la aplicación. El usuario siempre debe tener que realizar alguna acción para iniciar el URI. Si intentas iniciar un URI y tu aplicación no está en primer plano, se producirá un error en el inicio y se invocará a la devolución de llamada de error.
 
@@ -91,7 +98,7 @@ promptOptions.TreatAsUntrusted = true;
 var success = await Windows.System.Launcher.LaunchUriAsync(uriBing, promptOptions);
 ```
 
-### Recomendar una aplicación si no hay ninguna disponible para administrar el URI
+### <a name="recommend-an-app-if-one-is-not-available-to-handle-the-uri"></a>Recomendar una aplicación si no hay ninguna disponible para administrar el URI
 
 En algunos casos, es posible que el usuario no tenga instalada una aplicación para administrar el URI que estás iniciando. Si esto sucede, de manera predeterminada, el sistema operativo ofrece un vínculo al usuario para que busque una aplicación apropiada en la Tienda. Si quieres recomendar al usuario qué aplicación comprar en este escenario, debes pasar la recomendación junto con el URI que estás iniciando.
 
@@ -110,7 +117,7 @@ options.PreferredApplicationDisplayName = "Contoso URI Ap";
 var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 ```
 
-### Establecer las preferencias de visualización restantes
+### <a name="set-remaining-view-preference"></a>Establecer las preferencias de visualización restantes
 
 Las aplicaciones de origen que llaman a [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) pueden solicitar permanecer en pantalla después de iniciarse un URI. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el URI. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. **DesiredRemainingView** también se puede usar para indicar que la aplicación de origen no necesita permanecer en pantalla después del inicio del URI y puede sustituirse por completo por la aplicación de destino. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
 
@@ -125,12 +132,12 @@ options.DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseL
 var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 ```
 
-## Esquemas de URI ##
+## <a name="uri-schemes"></a>Esquemas de URI ##
 
 A continuación se describen los diversos esquemas de URI.
 <br>
 
-### Llamar al esquema de URI de la aplicación
+### <a name="call-app-uri-scheme"></a>Llamar al esquema de URI de la aplicación
 
 La aplicación puede usar el esquema de URI **ms-call:** para iniciar la aplicación de llamada.
 
@@ -138,7 +145,7 @@ La aplicación puede usar el esquema de URI **ms-call:** para iniciar la aplicac
 |------------------|--------------------------|
 | ms-call:settings | Llama a la página de configuración de la aplicación. | 
 <br>
-### Esquema de URI de correo electrónico
+### <a name="email-uri-scheme"></a>Esquema de URI de correo electrónico
 
 La aplicación puede usar los esquemas de URI **mailto:** para iniciar la aplicación de correo predeterminada.
 
@@ -147,7 +154,7 @@ La aplicación puede usar los esquemas de URI **mailto:** para iniciar la aplica
 | mailto:                  | Inicia la aplicación de correo electrónico predeterminada.                                                                                                                             |
 | mailto:\[email address\] | Inicia la aplicación de correo electrónico y crea un mensaje nuevo con la dirección de correo electrónico especificada en la línea "Para". Ten en cuenta que el correo electrónico no se envía hasta que el usuario presiona "Enviar". |
 <br>
-### Esquema de URI de HTTP
+### <a name="http-uri-scheme"></a>Esquema de URI de HTTP
 
 La aplicación puede usar los esquemas de URI **http:** para iniciar el explorador web predeterminado.
 
@@ -155,7 +162,7 @@ La aplicación puede usar los esquemas de URI **http:** para iniciar el explorad
 |------------|-----------------------------------|
 | http:      | Abre el explorador web predeterminado. |
 <br>
-### Esquemas de URI de la aplicación Mapas
+### <a name="maps-app-uri-schemes"></a>Esquemas de URI de la aplicación Mapas
 
 La aplicación puede usar los esquemas de URI **bingmaps:**, **ms-drive-to:** y **ms-walk-to:** para [iniciar la aplicación Mapas de Windows](launch-maps-app.md) para ver mapas, indicaciones y resultados de búsqueda específicos. Por ejemplo, el siguiente URI abre la aplicación Mapas de Windows y muestra un mapa centrado sobre la ciudad de Nueva York.
 
@@ -165,13 +172,13 @@ La aplicación puede usar los esquemas de URI **bingmaps:**, **ms-drive-to:** y 
 
 Para obtener más información, consulta [Iniciar la aplicación Mapas de Windows](launch-maps-app.md). Para usar el control de mapa en tu propia aplicación, consulta [Mostrar mapas con vistas 2D, 3D y Streetside](https://msdn.microsoft.com/library/windows/apps/mt219695).
 <br>
-### Esquema de URI de la aplicación Mensajes
+### <a name="messaging-app-uri-scheme"></a>Esquema de URI de la aplicación Mensajes
 
 La aplicación puede usar el esquema de URI **ms-chat:** para iniciar la aplicación Mensajes de Windows.
 
 | Esquema de URI |Resultado | |-- ---------|--------| | ms-chat:   | Inicia la aplicación Mensajes. | | ms-chat:?ContactID={contacted}  |  Permite que la aplicación Mensajes se inicie con información de un contacto determinado.   | | ms-chat:?Body={body} | Permite que la aplicación Mensajes se inicie con una cadena que se usará como el contenido del mensaje.| | ms-chat:?Addresses={address}&Body={body} | Permite que la aplicación Mensajes se inicie con información de direcciones concretas y con una cadena que se usará como el contenido del mensaje. Nota: Las direcciones se pueden concatenar. | | ms-chat:?TransportId={transportId}  | Permite que la aplicación Mensajes se inicie con un identificador de transporte concreto. |
 <br>
-### Esquema de URI de selector de tono
+### <a name="tone-picker-uri-scheme"></a>Esquema de URI de selector de tono
 
 La aplicación puede usar esquema de URI **ms-tonepicker:** para elegir tonos, alarmas y tonos del sistema. También puedes guardar nuevos tonos y obtener el nombre para mostrar de un tono.
 
@@ -181,7 +188,7 @@ La aplicación puede usar esquema de URI **ms-tonepicker:** para elegir tonos, a
 
 Los parámetros se pasan a través de una clase [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx) a la API LaunchURI. Consulta [Elegir y guardar los tonos con el esquema URI ms-tonepicker](launch-ringtone-picker.md) para obtener más información.
 
-### Esquema de URI de la aplicación de números cercanos
+### <a name="nearby-numbers-app-uri-scheme"></a>Esquema de URI de la aplicación de números cercanos
 <br>
 La aplicación puede usar el esquema de URI **ms-yellowpage:** para iniciar la aplicación de números cercanos.
 
@@ -190,13 +197,13 @@ La aplicación puede usar el esquema de URI **ms-yellowpage:** para iniciar la a
 | ms-yellowpage:?input=\[keyword\]&method=\[String o T9\] | Inicia la aplicación de números cercanos. `input` hace referencia a la palabra clave que quieres buscar. `method` hace referencia al tipo de búsqueda (cadena o T9). <br> Si `method`es `T9` (un tipo de teclado), `keyword` debe ser una cadena numérica que se asigna a las letras del teclado T9 que se van a buscar.<br>Si `method`es `String` , `keyword` es la palabra clave que se va a buscar. |
  
 <br>
-### Esquema de URI de la aplicación Contactos
+### <a name="people-app-uri-scheme"></a>Esquema de URI de la aplicación Contactos
 
 La aplicación puede usar el esquema de URI **ms-people:** para iniciar la aplicación Contactos.
 Para obtener más información, consulta [Iniciar la aplicación Contactos](launch-people-apps.md).
 
 <br>
-### Esquema de URI de la aplicación Configuración
+### <a name="settings-app-uri-scheme"></a>Esquema de URI de la aplicación Configuración
 
 La aplicación puede usar el esquema de URI **ms-settings:** para [iniciar la aplicación Configuración de Windows](launch-settings-app.md). El inicio de la aplicación Configuración es una parte importante de la programación de una aplicación compatible con la privacidad. Si la aplicación no puede obtener acceso a un recurso con información confidencial, se recomienda proporcionar al usuario un vínculo a la configuración de privacidad de ese recurso. Por ejemplo, el siguiente URI abre la aplicación Configuración y muestra la configuración de privacidad de la cámara.
 
@@ -207,16 +214,11 @@ La aplicación puede usar el esquema de URI **ms-settings:** para [iniciar la ap
 Para obtener más información, consulta [Iniciar la aplicación Configuración de Windows](launch-settings-app.md) y [Directrices para aplicaciones compatibles con la privacidad](https://msdn.microsoft.com/library/windows/apps/hh768223).
 
 <br>
-### Esquema de URI de la aplicación de la Tienda
+### <a name="store-app-uri-scheme"></a>Esquema de URI de la aplicación de la Tienda
 
 La aplicación puede usar el esquema de URI **ms-windows-store:** para [iniciar la aplicación de la Tienda Windows](launch-store-app.md). Permite abrir páginas de detalles del producto, páginas de revisión del producto, páginas de búsqueda, etc. Por ejemplo, el siguiente URI abre la aplicación de la Tienda Windows e inicia la página principal de la Tienda.
 
 `ms-windows-store://home/`
 
 Para obtener más información, consulta [Iniciar la aplicación de la Tienda Windows](launch-store-app.md).
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

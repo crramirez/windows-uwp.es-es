@@ -3,16 +3,23 @@ author: msatranjr
 title: "Mostrar puntos de interés en un mapa"
 description: "Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, mapa, map, ubicación, location, marcadores, pushpins"
 translationtype: Human Translation
-ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
-ms.openlocfilehash: 8afdb41d6790bb9647a6b89086c4b86872940c51
+ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
+ms.openlocfilehash: c8fdc16b99a9d2d57f71e32e008fa668c3404835
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="display-points-of-interest-poi-on-a-map"></a>Mostrar puntos de interés en un mapa
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML. Un punto de interés es un punto concreto del mapa que representa algo de interés. Por ejemplo, la ubicación de un negocio, ciudad o amigo.
@@ -27,10 +34,10 @@ Muestra elementos de la interfaz de usuario de XAML en el mapa como, por ejemplo
 
 En resumen:
 
--   [Agrega MapIcon al mapa](#mapicon) para mostrar una imagen, por ejemplo, un marcador con texto opcional.
--   [Agrega MapPolygon al mapa](#mappolygon) para mostrar una forma multipunto.
--   [Agrega MapPolyline al mapa](#mappolyline) para mostrar las líneas en el mapa.
--   [Agrega código XAML al mapa](#mapxaml) para mostrar elementos de la interfaz de usuario personalizados.
+-   [Agrega MapIcon al mapa](#add-a-mapicon) para mostrar una imagen, por ejemplo, un marcador con texto opcional.
+-   [Agrega MapPolygon al mapa](#add-a-mappolygon) para mostrar una forma multipunto.
+-   [Agrega MapPolyline al mapa](#add-a-mappolyline) para mostrar las líneas en el mapa.
+-   [Agrega código XAML al mapa](#add-xaml) para mostrar elementos de la interfaz de usuario personalizados.
 
 Si quieres colocar en el mapa un elevado número de elementos, considera la posibilidad de [superponer imágenes en mosaico en el mapa](overlay-tiled-images.md). Para mostrar carreteras en el mapa, consulta [Mostrar rutas e indicaciones](routes-and-directions.md).
 
@@ -104,7 +111,7 @@ private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEven
          new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
 
    });
-           
+
    mapPolygon.ZIndex = 1;
    mapPolygon.FillColor = Colors.Red;
    mapPolygon.StrokeColor = Colors.Blue;
@@ -129,7 +136,7 @@ private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEve
          new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude-0.001 },                
          new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
    });
-              
+
    mapPolyline.StrokeColor = Colors.Black;
    mapPolyline.StrokeThickness = 3;
    mapPolyline.StrokeDashed = true;
@@ -226,11 +233,4 @@ En este ejemplo se muestra una colección de elementos XAML enlazados a la clase
 * [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
 * [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
 * [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)
-
-
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

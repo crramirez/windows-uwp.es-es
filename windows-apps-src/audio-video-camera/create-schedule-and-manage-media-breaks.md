@@ -1,22 +1,29 @@
 ---
 author: drewbatgit
-ms.assetid: 
+ms.assetid: 0309c7a1-8e4c-4326-813a-cbd9f8b8300d
 description: "En este artículo se muestra cómo crear, programar y administrar las interrupciones multimedia en tu aplicación de reproducción de contenido multimedia."
 title: Crear, programar y administrar interrupciones multimedia
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 2e969e53a29a98223f26353a5444ca9d9ebe2641
-ms.openlocfilehash: 0fe495f3eb2c15ccff4a672abd904dc43cfdf193
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8d4e9a87009b50538adac2357badc0a7dfe8f88c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Crear, programar y administrar interrupciones multimedia
+# <a name="create-schedule-and-manage-media-breaks"></a>Crear, programar y administrar interrupciones multimedia
 
 En este artículo se muestra cómo crear, programar y administrar las interrupciones multimedia en tu aplicación de reproducción de contenido multimedia. Las interrupciones multimedia se suelen usar para insertar anuncios de audio o vídeo en el contenido multimedia. A partir de Windows 10, versión 1607, puedes usar la clase [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) para agregar interrupciones multimedia a cualquier elemento [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) que reproduzcas con [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) de forma rápida y fácil.
 
 
 Después de programar una o más interrupciones multimedia, el sistema reproducirá automáticamente tu contenido multimedia en el momento especificado durante la reproducción. **MediaBreakManager** proporciona eventos para que la aplicación pueda reaccionar cuando se inicien las interrupciones multimedia, cuando finalicen o cuando el usuario las omita. También puedes acceder a una [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) para que tus interrupciones multimedia supervisen eventos como la descarga y el almacenamiento en búfer de actualizaciones de progreso.
 
-## Programar interrupciones multimedia
+## <a name="schedule-media-breaks"></a>Programar interrupciones multimedia
 Cada objeto **MediaPlaybackItem** tiene su propio [**MediaBreakSchedule**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSchedule) que usas para configurar las interrupciones multimedia que se reproducirán cuando lo haga el elemento. El primer paso para usar interrupciones multimedia en tu aplicación es crear un elemento [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) para el contenido de reproducción principal. 
 
 [!code-cs[MoviePlaybackItem](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetMoviePlaybackItem)]
@@ -51,12 +58,12 @@ Este ejemplo también usa una sobrecarga del constructor [**MediaPlaybackItem**]
 
 [!code-cs[MidrollBreak2](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetMidrollBreak2)]
 
-## Omitir interrupciones multimedia
+## <a name="skip-media-breaks"></a>Omitir interrupciones multimedia
 Como se mencionó anteriormente en este artículo, la propiedad [**CanSkip**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.CanSkip) de **MediaPlaybackItem** se puede establecer para impedir que el usuario omita el contenido con los controles integrados. Sin embargo, puedes llamar a [**SkipCurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.SkipCurrentBreak) desde el código en cualquier momento para omitir la interrupción actual.
 
 [!code-cs[SkipButtonClick](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetSkipButtonClick)]
 
-## Controlar eventos MediaBreak
+## <a name="handle-mediabreak-events"></a>Controlar eventos MediaBreak
 
 Hay varios eventos relacionados con las interrupciones multimedia que se pueden registrar para poder tomar medidas basadas en el estado cambiante de las interrupciones multimedia.
 
@@ -80,12 +87,12 @@ El siguiente ejemplo usa la propiedad [**Source**](https://msdn.microsoft.com/li
 
 [!code-cs[BreakSeekedOver](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakSeekedOver)]
 
-## Obtener información sobre la interrupción multimedia actual
+## <a name="get-information-about-the-current-media-break"></a>Obtener información sobre la interrupción multimedia actual
 Como se mencionó anteriormente en este artículo, la propiedad [**CurrentItemIndex**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.CurrentItemIndex) se puede usar para determinar qué elemento multimedia se está reproduciendo actualmente en una interrupción multimedia. Puedes comprobar periódicamente el elemento que se está reproduciendo actualmente para actualizar la interfaz de usuario. Asegúrate de comprobar en primer lugar si la propiedad [**CurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.CurrentBreak) tiene el valor null. Si la propiedad es null, la interrupción multimedia no se está reproduciendo actualmente.
 
 [!code-cs[GetCurrentBreakItemIndex](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetGetCurrentBreakItemIndex)]
 
-## Acceso a la sesión de reproducción actual
+## <a name="access-the-current-playback-session"></a>Acceso a la sesión de reproducción actual
 El objeto [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) usa la clase **MediaPlayer** para proporcionar datos y eventos relacionados con el contenido multimedia que se esté reproduciendo actualmente. [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) también tiene una **MediaPlaybackSession** a la que puedes acceder para obtener datos y eventos específicamente relacionados con el contenido de la interrupción multimedia que se está reproduciendo. La información a la que puedes acceder desde la sesión de reproducción incluye el estado de reproducción actual, en reproducción o en pausa, y la posición de reproducción actual dentro del contenido. Puedes usar las propiedades [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) y [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight), y el elemento [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged) para ajustar la interfaz de usuario de vídeo si el contenido de la interrupción multimedia tiene una relación de aspecto diferente a la del contenido principal. También puedes recibir eventos como [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded) y [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged), que pueden proporcionar una telemetría valiosa sobre el rendimiento de la aplicación.
 
 En el siguiente ejemplo se registra un controlador para **evento BufferingProgressChanged**; en el controlador de eventos, actualiza la interfaz de usuario para mostrar el progreso de almacenamiento en búfer actual.
@@ -94,7 +101,7 @@ En el siguiente ejemplo se registra un controlador para **evento BufferingProgre
 
 [!code-cs[BufferingProgressChanged](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBufferingProgressChanged)]
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 * [Reproducción de contenido multimedia](media-playback.md)
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
 * [Control manual de los controles de transporte de contenido multimedia del sistema](system-media-transport-controls.md)
@@ -105,10 +112,5 @@ En el siguiente ejemplo se registra un controlador para **evento BufferingProgre
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

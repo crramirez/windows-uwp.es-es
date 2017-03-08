@@ -3,15 +3,22 @@ author: mithom
 title: Auriculares
 description: Usa las API de auriculares Windows.Gaming.Input para detectar los auriculares, capturar la voz del jugador y reproducir audio.
 ms.assetid: 021CCA26-D339-4C8B-B084-0D499BD83ABE
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, juegos, auriculares
 translationtype: Human Translation
-ms.sourcegitcommit: 31dc2428175fc0afc84f30537898748300c7b242
-ms.openlocfilehash: 5306ef31bf20b25a5f2a24dee8bd8b55de2773da
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 04baee2a3011cee63933fe1fdab759d1b6d29c89
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="headset"></a>Auriculares
 
-En esta página se describen los conceptos básicos de programación para auriculares que usan [Windows.Gaming.Input.Headset][headset] y las API relacionadas para la Plataforma universal de Windows (UWP).
+En esta página se describen los conceptos básicos de programación para auriculares mediante [Windows.Gaming.Input.Headset][headset] y las API relacionadas para la Plataforma universal de Windows (UWP).
 
 En esta página encontrarás información sobre:
 * Cómo obtener acceso a auriculares conectados a un dispositivo de entrada o de navegación
@@ -70,9 +77,4 @@ Los detalles del trabajo con XAudio no se explican aquí; para obtener más info
 [igamecontroller.headsetconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetconnected.aspx
 [igamecontroller.headsetdisconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetdisconnected.aspx
 [headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

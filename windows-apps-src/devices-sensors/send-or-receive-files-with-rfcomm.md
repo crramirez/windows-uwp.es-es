@@ -2,33 +2,40 @@
 author: msatranjr
 ms.assetid: 5B3A6326-15EE-4618-AA8C-F1C7FB5232FB
 title: Bluetooth RFCOMM
-description: "En este artículo se proporciona información general de Bluetooth RFCOMM en aplicaciones para la Plataforma universal de Windows (UWP), junto con el código de ejemplo sobre cómo enviar o recibir un archivo."
+description: "En este artículo se proporciona información general sobre Bluetooth RFCOMM en aplicaciones para la Plataforma universal de Windows (UWP), junto con código de ejemplo sobre cómo enviar o recibir un archivo."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 97b5128f8543ea8eab24be5aa8c6a71811e97896
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8342d53c5d53e06f6793ce1d125c26f0e3880c07
+ms.lasthandoff: 02/07/2017
 
 ---
-# Bluetooth RFCOMM
+# <a name="bluetooth-rfcomm"></a>Bluetooth RFCOMM
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** API importantes **
+**API importantes**
 
 -   [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413)
 -   [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529)
 
 En este artículo se proporciona información general de Bluetooth RFCOMM en aplicaciones para la Plataforma universal de Windows (UWP), junto con el código de ejemplo sobre cómo enviar o recibir un archivo.
 
-## Información general
+## <a name="overview"></a>Información general
 
 Las API del espacio de nombres [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) se basan en los patrones existentes para Windows.Devices, incluidos [**enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) e [**instantiation**](https://msdn.microsoft.com/library/windows/apps/BR225654). La lectura y la escritura de datos están diseñadas para aprovechar los [**patrones de flujo de datos establecidos**](https://msdn.microsoft.com/library/windows/apps/BR208119) y los objetos en [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/BR241791). Los atributos del Protocolo de detección de servicios (DSP) tienen un valor y un tipo esperado. Sin embargo, algunos dispositivos comunes tienen implementaciones incorrectas de los atributos SDP, en los que el valor no es del tipo esperado. Además, muchos usos de RFCOMM no requieren atributos SDP adicionales. Por estas razones, esta API permite el acceso a los datos SDP sin analizar, desde los cuales los desarrolladores pueden obtener la información que necesitan.
 
-Las API RFCOMM usan el concepto de identificadores de servicio. Aunque un identificador de servicio es simplemente un GUID de 128bit, también suelen especificarse como un entero de 16 o 32bits. La API RFCOMM ofrece un contenedor para que los identificadores de servicio puedan especificarse y consumirse como GUID de 128bits y como enteros de 32bit, pero no ofrece enteros de 16bits. Esto no es un problema para la API, ya que los lenguajes se convierten de forma automática a un entero de 32bits y el identificador todavía puede generarse correctamente.
+Las API RFCOMM usan el concepto de identificadores de servicio. Aunque un identificador de servicio es simplemente un GUID de 128 bit, también suelen especificarse como un entero de 16 o 32 bits. La API RFCOMM ofrece un contenedor para que los identificadores de servicio puedan especificarse y consumirse como GUID de 128 bits y como enteros de 32 bit, pero no ofrece enteros de 16 bits. Esto no es un problema para la API, ya que los lenguajes se convierten de forma automática a un entero de 32 bits y el identificador todavía puede generarse correctamente.
 
 Las aplicaciones pueden realizar operaciones del dispositivo de varios pasos en una tarea en segundo plano para así poder ejecutarse hasta completarse, incluso si la aplicación pasa a segundo plano y se suspende. Esto permite un mantenimiento del dispositivo más fiable, como los cambios en el firmware o la configuración permanente, así como la sincronización de contenidos, sin que el usuario tenga que interrumpir lo que hacía y ver una barra de progreso. Usa la clase [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297315) para el mantenimiento del dispositivo y la clase [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297337) para la sincronización de contenidos. Ten en cuenta que estas tareas en segundo plano limitan el tiempo que la aplicación puede ejecutarse en segundo plano, y no tienen por objetivo permitir el funcionamiento indefinidamente ni la sincronización infinita.
 
 Para obtener un ejemplo de código completo que detalle la operación de RFCOMM, consulta [**Bluetooth RFCOMM chat sample (Muestra de chat de Bluetooth RFCOMM)**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat) en Github.  
-## Enviar un archivo como cliente
+## <a name="send-a-file-as-a-client"></a>Enviar un archivo como cliente
 
 Al enviar archivos, el escenario de aplicación básico consiste en conectarse a un dispositivo emparejado según el dispositivo deseado. Esto implica los pasos siguientes:
 
@@ -49,7 +56,7 @@ async void Initialize()
             RfcommDeviceService.GetDeviceSelector(
                 RfcommServiceId.ObexObjectPush));
 
-    if (services.Count > 0) 
+    if (services.Count > 0)
     {
         // Initialize the target Bluetooth BR device
         auto service = await RfcommDeviceService.FromIdAsync(services[0].Id);
@@ -143,7 +150,7 @@ void Initialize()
                 RfcommServiceId::ObexObjectPush)))
     .then([](DeviceInformationCollection^ services)
     {
-        if (services->Size > 0) 
+        if (services->Size > 0)
         {
             // Initialize the target Bluetooth BR device
             create_task(RfcommDeviceService::FromIdAsync(services[0]->Id))
@@ -232,7 +239,7 @@ bool IsCompatibleVersion(RfcommDeviceService^ service)
 }
 ```
 
-## Recibir un archivo como servidor
+## <a name="receive-file-as-a-server"></a>Recibir un archivo como servidor
 
 Otro escenario de aplicación RFCOMM común es hospedar un servicio en el equipo y exponerlo para otros dispositivos.
 
@@ -277,7 +284,7 @@ void InitializeServiceSdpAttributes(RfcommServiceProvider provider)
     writer.WriteByte(SERVICE_VERSION_ATTRIBUTE_TYPE)
     // Then write the data
     writer.WriteUint32(SERVICE_VERSION);
-    
+
     auto data = writer.DetachBuffer();
     provider.SdpRawAttributes.Add(SERVICE_VERSION_ATTRIBUTE_ID, data);
 }
@@ -340,7 +347,7 @@ void InitializeServiceSdpAttributes(RfcommServiceProvider^ provider)
     writer->WriteByte(SERVICE_VERSION_ATTRIBUTE_TYPE)
     // Then write the data
     writer->WriteUint32(SERVICE_VERSION);
-    
+
     auto data = writer->DetachBuffer();
     provider->SdpRawAttributes->Add(SERVICE_VERSION_ATTRIBUTE_ID, data);
 }
@@ -364,10 +371,4 @@ void OnConnectionReceived(
     });
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

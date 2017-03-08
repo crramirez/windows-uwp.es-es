@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 4a311d20-ba8c-4816-8091-35726428dc94
 description: "Conoce ejemplos adicionales que muestran cómo usar las propiedades, los métodos y los eventos de las clases AdControl e InterstitialAd en las bibliotecas de Microsoft Advertising."
 title: "Ejemplos de código"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, anuncios, publicidad, ejemplos de código"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: a8f18048915927f9e93d4469e7288e5a06a69070
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ae6e806f8aead387afe55dec2d70c04b7fc21284
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -14,7 +21,7 @@ ms.openlocfilehash: a8f18048915927f9e93d4469e7288e5a06a69070
 
 
 
-En esta sección se proporcionan ejemplos que muestran cómo usar las propiedades, los métodos y los eventos de las clases [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) e [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)  de las bibliotecas de Microsoft Advertising para orientarse a los usuarios, actualizar anuncios de forma manual y controlar eventos. Para obtener tutoriales de introducción que muestran cómo agregar estos controles a la aplicación, consulta [Tutoriales de desarrollo](developer-walkthroughs.md).
+En esta sección se proporcionan ejemplos que muestran cómo usar las propiedades, los métodos y los eventos de las clases [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) e [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) en las bibliotecas de Microsoft Advertising para orientarse a los usuarios, actualizar anuncios de forma manual y controlar eventos. Para obtener tutoriales de introducción que muestran cómo agregar estos controles a la aplicación, consulta [Tutoriales de desarrollo](developer-walkthroughs.md).
 
 Para obtener proyectos de muestra completos que muestren cómo agregar anuncios de banner y vídeo intersticial a aplicaciones JavaScript y HTML, y aplicaciones XAML con C# y C++, consulta las [muestras de publicidad disponibles en GitHub](http://aka.ms/githubads).
 
@@ -38,9 +45,4 @@ Para obtener proyectos de muestra completos que muestren cómo agregar anuncios 
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

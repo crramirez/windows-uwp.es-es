@@ -1,25 +1,32 @@
 ---
 author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: "Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase de tarea que se define en el espacio de nombres concurrency en ppltasks.h."
+description: "En este artículo se describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase de tarea que se define en el espacio de nombres concurrency en ppltasks.h."
 title: "Programación asincrónica en C++"
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, subprocesos, asincrónicos, C++"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 12fdf79cbf3a79e4789131d0da8eee978b82cdf8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 112b5d58064ae6cd006d791a2c4534848baee259
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Programación asincrónica en C++
+# <a name="asynchronous-programming-in-c"></a>Programación asincrónica en C++
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase `task` que se define en el espacio de nombres `concurrency` en ppltasks.h.
 
-## Tipos asincrónicos de Plataforma universal de Windows (UWP)
+## <a name="universal-windows-platform-uwp-asynchronous-types"></a>Tipos asincrónicos de Plataforma universal de Windows (UWP)
 
 La Plataforma universal de Windows (UWP) cuenta con un modelo bien definido para llamar a métodos asincrónicos y proporciona los tipos que necesitas para consumirlos. Si no estás familiarizado con el modelo asincrónico de UWP, lee [Programación asincrónica][AsyncProgramming] antes de leer el resto de este artículo.
 
-Aunque puedes consumir las API de UWP asincrónicas directamente en C++, el método preferido es usar la [**clase task**][task-class] y sus funciones y tipos relacionados, que se encuentran dentro del espacio de nombres [**concurrency**][concurrencyNamespace] y están definidos en `<ppltasks.h>`. **concurrency::task** es un tipo de uso general, pero cuando se usa el conmutador de compilador **/ZW**, que es obligatorio para los componentes y las aplicaciones de la Plataforma universal de Windows (UWP), la clase task incluye los tipos asincrónicos de UWP para que sea más fácil:
+Aunque puedes consumir las API de UWP asincrónicas directamente en C++, el método preferido es usar la [**clase task**][task-class] y sus funciones y tipos relacionados, que se encuentran dentro del espacio de nombres [**concurrency**][concurrencyNamespace] y están definidos en `<ppltasks.h>`. **concurrency::task** es un tipo de uso general, pero cuando se usa el conmutador de compilador **/ZW**, que es obligatorio para los componentes y las aplicaciones para la Plataforma universal de Windows (UWP), la clase task incluye los tipos asincrónicos de UWP para que sea más fácil:
 
 -   encadenar múltiples operaciones sincrónicas y asincrónicas;
 
@@ -29,9 +36,9 @@ Aunque puedes consumir las API de UWP asincrónicas directamente en C++, el mét
 
 -   garantizar que las tareas individuales se ejecuten en el contexto o contenedor de subproceso apropiado.
 
-En este artículo se proporcionan pautas básicas acerca de cómo usar la clase **task** con API asincrónicas de UWP. Para obtener documentación más completa acerca de **task** y sus métodos relacionados, incluido [**create\_task**][createTask], consulta [Paralelismo de tareas (Runtime de simultaneidad)][taskParallelism]. Para obtener más información sobre cómo crear métodos públicos asincrónicos para el consumo por parte de JavaScript u otros lenguajes compatibles con UWP, consulta [Creación de operaciones asincrónicas en C++ para aplicaciones de Windows Runtime][createAsyncCpp].
+En este artículo se proporcionan pautas básicas acerca de cómo usar la clase **task** con API asincrónicas de UWP. Para obtener documentación más completa acerca de **task** y sus métodos relacionados, incluido [**create\_task**][createTask], consulta [Paralelismo de tareas (tiempo de ejecución de simultaneidad)][taskParallelism]. Para obtener más información sobre cómo crear métodos públicos asincrónicos para el consumo por parte de JavaScript u otros lenguajes compatibles con UWP, consulta [Creación de operaciones asincrónicas en C++ para aplicaciones de Windows Runtime][createAsyncCpp].
 
-## Consumo de una operación asincrónica mediante el uso de una tarea
+## <a name="consuming-an-async-operation-by-using-a-task"></a>Consumo de una operación asincrónica mediante el uso de una tarea
 
 En el siguiente ejemplo se muestra cómo usar la clase task para consumir un método **async** que devuelve una interfaz de [**IAsyncOperation**][IAsyncOperation] y cuya operación produce un valor. He aquí los pasos básicos:
 
@@ -72,13 +79,13 @@ void App::TestAsync()
 }
 ```
 
-La tarea que la función [**task::then**][taskThen] crea y devuelve se conoce como una *continuación*. El argumento de entrada (en este caso) al lambda proporcionado por el usuario es el resultado que la operación de la tarea produce cuando se completa. Es el mismo valor que se recuperaría al llamar a [**IAsyncOperation::GetResults**](https://msdn.microsoft.com/library/windows/apps/br206600) si estuvieras usando la interfaz **IAsyncOperation** directamente.
+La tarea que la función [**task::then**][taskThen] crea y devuelve se conoce como una *continuación*. El argumento de entrada (en este caso) al lambda proporcionado por el usuario es el resultado que produce la operación de la tarea cuando se completa. Es el mismo valor que se recuperaría al llamar a [**IAsyncOperation::GetResults**](https://msdn.microsoft.com/library/windows/apps/br206600) si estuvieras usando la interfaz **IAsyncOperation** directamente.
 
 El método [**task::then**][taskThen] vuelve de inmediato y su delegado no se ejecuta hasta que el trabajo asincrónico se completa satisfactoriamente. En este ejemplo, si la operación asincrónica hace que se inicie una excepción o finaliza en el estado Cancelado como resultado de una solicitud de cancelación, la continuación nunca se ejecutará. Más adelante, describiremos el modo en que se escriben las continuaciones que se ejecutan incluso si se canceló la tarea previa o fue errónea.
 
 Aunque declares la variable de tarea en la pila local, administra su vigencia para que no se elimine hasta que todas las operaciones se completen y todas las referencias a ella queden fuera del alcance, incluso si el método vuelve antes de que la operación se complete.
 
-## Creación de una cadena de tareas
+## <a name="creating-a-chain-of-tasks"></a>Creación de una cadena de tareas
 
 En la programación asincrónica, es común definir una secuencia de operaciones, también conocida como *cadenas de tareas*, en la que cada continuación se ejecuta solamente cuando se completa una de las anteriores. En algunos casos, la tarea anterior (o *antecedente*) produce un valor que la continuación acepta como entrada. Mediante el uso del método [**task::then**][taskThen], puedes crear cadenas de tareas de una manera sencilla e intuitiva. El método devuelve **task<T>**, donde **T** es el tipo de devolución de la función lambda. Puedes componer múltiples continuaciones en una cadena de tareas:  `myTask.then(…).then(…).then(…);`
 
@@ -112,9 +119,9 @@ El ejemplo anterior ilustra cuatro puntos importantes:
 
 -   Dado que la segunda continuación se basa en valores, si la operación que la llamada a [**DeleteAsync**][deleteAsync] comenzó inicia una excepción, la segunda continuación no se ejecuta.
 
-**Nota** La creación de una cadena de tareas constituye tan solo una de las maneras de usar la clase **task** para componer operaciones asincrónicas. También puedes componer operaciones usando los operadores de unión y elección **&&** y **||**. Para obtener más información, consulta [Paralelismo de tareas (Runtime de simultaneidad)][taskParallelism].
+**Nota** La creación de una cadena de tareas constituye tan solo una de las maneras de usar la clase **task** para componer operaciones asincrónicas. También puedes componer operaciones usando los operadores de unión y elección **&&** y **||**. Para obtener más información, consulta [Paralelismo de tareas (tiempo de ejecución de simultaneidad)][taskParallelism].
 
-## Tipos devueltos de tareas y tipos devueltos de función lambda
+## <a name="lambda-function-return-types-and-task-return-types"></a>Tipos devueltos de tareas y tipos devueltos de función Lambda
 
 En una continuación de tarea, el tipo devuelto de la función lambda se incluye en un objeto **task**. Si el lambda devuelve una **double**, el tipo de tarea de continuación es **task<double>**. No obstante, el objeto de tarea está diseñado para que no produzca tipos devueltos anidados sin necesidad. Si un lambda devuelve una **IAsyncOperation<SyndicationFeed^>^**, la continuación devuelve una **task<SyndicationFeed^>**, no una **task<task<SyndicationFeed^>>** o **task<IAsyncOperation<SyndicationFeed^>^>^**. Este proceso se conoce como *desencapsulación asincrónica* y también garantiza que la operación asincrónica dentro de la continuación se complete antes de que se invoque a la siguiente continuación.
 
@@ -131,7 +138,7 @@ En el ejemplo anterior, observa que la tarea devuelve **task<void>** incluso cua
 | tarea<TResult>                                    |tarea<TResult>  |
 
 
-## Tareas de cancelación
+## <a name="canceling-tasks"></a>Tareas de cancelación
 
 Normalmente, es bueno dar al usuario la opción de cancelar una operación asincrónica. Y en algunos casos, probablemente tengas que cancelar una operación mediante programación desde fuera de la cadena de tareas. Aunque cada tipo devuelto \***Async** tenga un método [**Cancel**][IAsyncInfoCancel] que hereda de [**IAsyncInfo**][IAsyncInfo], es extraño exponerlo a métodos externos. La manera que se prefiere para admitir la cancelación en una cadena de tareas es usar un [**cancellation\_token\_source**](https://msdn.microsoft.com/library/windows/apps/xaml/hh749985.aspx) para crear un [**cancellation\_token**](https://msdn.microsoft.com/library/windows/apps/xaml/hh749975.aspx) y, después, pasar el token al constructor de la tarea inicial. Si se crea una tarea asincrónica con un token de cancelación y se llama a [**cancellation\_token\_source::cancel**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750076.aspx), la tarea automáticamente llama a **Cancel** en la operación **IAsync\*** y pasa la solicitud de cancelación a su cadena de continuación. El siguiente seudocódigo demuestra el enfoque básico.
 
@@ -148,15 +155,15 @@ auto getFileTask2 = create_task(documentsFolder->GetFileAsync(fileName),
 //getFileTask2.then ...
 ```
 
-Cuando se cancela una tarea, se propaga una excepción [**task\_canceled**][taskCanceled] hacia abajo en la cadena de tareas. Las continuaciones basadas en valores, simplemente, no se ejecutarán, pero las continuaciones basadas en tarea harán que se inicie la excepción cuando se llame a [**task::get**][taskGet]. Si tienes una continuación de control de errores, asegúrate de que almacene en memoria la excepción **task\_canceled** explícitamente. (Esta excepción no se deriva de [**Platform::Exception**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755825.aspx).)
+Cuando se cancela una tarea, se propaga una excepción [**task\_canceled**][taskCanceled] hacia abajo en la cadena de tareas. Las continuaciones basadas en valores sencillamente no se ejecutarán, pero las continuaciones basadas en tareas harán que se inicie la excepción cuando se llame a [**task::get**][taskGet]. Si tienes una continuación de control de errores, asegúrate de que almacene en memoria la excepción **task\_canceled** explícitamente. (Esta excepción no se deriva de [**Platform::Exception**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755825.aspx).)
 
 La cancelación es cooperativa. Si tu continuación realiza trabajo de larga duración que es más que simplemente invocar un método de UWP, es tu responsabilidad comprobar el estado del token de cancelación periódicamente y detener la ejecución si se cancela. Después de que limpies todos los recursos que se asignaron en la continuación, llama a [**cancel\_current\_task**](https://msdn.microsoft.com/library/windows/apps/xaml/hh749945.aspx) para cancelar la tarea y propagar la cancelación hacia abajo a cualquier continuación basada en valores que la siga. He aquí otro ejemplo: puedes crear una cadena de tareas que represente el resultado de una operación [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/BR207871). Si el usuario elige el botón **Cancelar**, no se llama al método [**IAsyncInfo::Cancel**][IAsyncInfoCancel]. En cambio, la operación se realiza correctamente, pero devuelve **nullptr**. La continuación puede probar el parámetro de entrada y llamar a **cancel\_current\_task** si la entrada es **nullptr**.
 
 Para obtener más información, consulta el tema sobre la [cancelación en la PPL](https://msdn.microsoft.com/library/windows/apps/xaml/dd984117.aspx)
 
-## Control de errores en una cadena de tareas
+## <a name="handling-errors-in-a-task-chain"></a>Control de errores en una cadena de tareas
 
-Si quieres que una continuación se ejecute incluso si se canceló el antecedente o se inició una excepción, convierte la continuación en una continuación basada en tareas especificando la entrada en su función lambda como **task<TResult>** o **task<void>** si la función lambda de la tarea antecedente devuelve [**IAsyncAction^**][IAsyncAction].
+Si quieres que una continuación se ejecute incluso si se canceló el antecedente o se inició una excepción, convierte la continuación en una continuación basada en tareas especificando la entrada en su función lambda como **task<TResult>** o **task<void>** si la función lambda de la tarea antecedente devuelve [**IAsyncAction**][IAsyncAction].
 
 Para administrar errores y la cancelación en una cadena de tareas, no tienes que hacer que todas las continuaciones se basen en tareas ni incluir cada operación que pueda iniciarse dentro de un bloque `try…catch`. En cambio, puedes agregar una continuación basada en tareas al final de la cadena y controlar todos los errores allí. Cualquier excepción, y esto incluye una excepción [**task\_canceled**][taskCanceled], se propagará hacia abajo en la cadena de tareas y eludirá cualquier continuación basada en valores para que puedas administrarla en la continuación basada en tareas de control de errores. Podemos reescribir el ejemplo anterior para usar una continuación basada en tareas de control de errores:
 
@@ -194,13 +201,13 @@ void App::DeleteWithTasksHandleErrors(String^ fileName)
 }
 ```
 
-En una continuación basada en tareas, llamamos a la función miembro [**task::get**][taskGet] para obtener los resultados de la tarea. Todavía tenemos que llamar a **task::get** incluso si la operación fue una acción [**IAsyncAction**][IAsyncAction] que no produce ningún resultado porque e **task::get** también obtiene cualquier excepción que se haya transportado hacia abajo en la tarea. Si la tarea de entrada está almacenando una excepción, se inicia en la llamada a **task::get**. Si no llamas a **task::get** o no usas una continuación basada en tareas al final de la cadena, o no capturas el tipo de excepción iniciado, se inicia una **unobserved\_task\_exception** cuando se hayan eliminado todas las referencias a la tarea.
+En una continuación basada en tareas, llamamos a la función miembro [**task::get**][taskGet] para obtener los resultados de la tarea. Todavía tenemos que llamar a **task::get**, incluso si la operación fue una acción [**IAsyncAction**][IAsyncAction] que no produce ningún resultado, porque **task::get** también obtiene cualquier excepción que se haya transportado hacia abajo en la tarea. Si la tarea de entrada está almacenando una excepción, se inicia en la llamada a **task::get**. Si no llamas a **task::get** o no usas una continuación basada en tareas al final de la cadena, o no capturas el tipo de excepción iniciado, se inicia una **unobserved\_task\_exception** cuando se hayan eliminado todas las referencias a la tarea.
 
 Solamente captura las excepciones que puedas administrar. Si tu aplicación se encuentra con un error del que no puedes recuperarte, es mejor dejar que se bloquee a dejar que continúe ejecutándose en un estado desconocido. Además, en general, no intentes capturar la propia **unobserved\_task\_exception**. Esta excepción principalmente se usa para fines de diagnóstico. Generalmente, cuando se inicia **unobserved\_task\_exception**, indica un error en el código. Normalmente, la causa es una excepción que debe controlarse o una excepción irrecuperable que otro error en el código causó.
 
-## Administración del contenido del subproceso
+## <a name="managing-the-thread-context"></a>Administración del contenido del subproceso
 
-La interfaz de usuario de una aplicación para UWP se ejecuta en un contenedor uniproceso (STA). Una tarea cuyo lambda devuelve [**IAsyncAction**][IAsyncAction] or [**IAsyncOperation**][IAsyncOperation] reconoce contenedores. De manera predeterminada, si la tarea se crea en el STA, todas sus continuaciones se ejecutarán también en él, a menos que especifiques lo contrario. En otras palabras, toda la cadena de tareas hereda el reconocimiento de apartamentos de la tarea primaria. Este comportamiento ayuda a simplificar las interacciones con los controles de la interfaz de usuario, a la que solamente puede obtenerse acceso desde el STA.
+La interfaz de usuario de una aplicación para UWP se ejecuta en un contenedor uniproceso (STA). Una tarea cuyo lambda devuelve [**IAsyncAction**][IAsyncAction] o [**IAsyncOperation**][IAsyncOperation] reconoce contenedores. De manera predeterminada, si la tarea se crea en el STA, todas sus continuaciones se ejecutarán también en él, a menos que especifiques lo contrario. En otras palabras, toda la cadena de tareas hereda el reconocimiento de apartamentos de la tarea primaria. Este comportamiento ayuda a simplificar las interacciones con los controles de la interfaz de usuario, a la que solamente puede obtenerse acceso desde el STA.
 
 Por ejemplo, en una aplicación para UWP, en la función miembro de cualquier clase que representa una página XAML, puedes rellenar un control [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) desde dentro de un método [**task::then**][taskThen] sin tener que usar el objeto [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211).
 
@@ -288,17 +295,17 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
 
 Las tareas anidadas, que son tareas nuevas que se crean dentro de una continuación, no heredan el reconocimiento de apartamentos de la tarea inicial.
 
-## Control de actualizaciones de progreso
+## <a name="handing-progress-updates"></a>Control de actualizaciones de progreso
 
 Los métodos que admiten [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/br206594.aspx) o [**IAsyncActionWithProgress**](https://msdn.microsoft.com/library/windows/apps/br206581.aspx) proporcionan actualizaciones de progreso periódicamente mientras que la operación está en curso, antes de que se complete. Los informes de progreso son independientes de la noción de tareas y continuaciones. Eres tan solo el delegado de la propiedad [**Progress**](https://msdn.microsoft.com/library/windows/apps/br206594) del objeto. Un uso típico del delegado es actualizar una barra de progreso en la interfaz de usuario.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Creación de operaciones asincrónicas en C++ para aplicaciones de la Tienda Windows][createAsyncCpp]
 * [Referencia del lenguaje Visual C++](http://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
 * [Programación asincrónica][AsyncProgramming]
-* [Paralelismo de tareas (Runtime de simultaneidad)][taskParallelism]
-* [clase de tarea][task-class]
+* [Paralelismo de tareas (tiempo de ejecución de simultaneidad)][taskParallelism]
+* [clase task][task-class]
  
 <!-- LINKS -->
 [AsyncProgramming]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh464924.aspx> "AsyncProgramming"
@@ -311,14 +318,9 @@ Los métodos que admiten [**IAsyncOperationWithProgress**](https://msdn.microsof
 [IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> "IAsyncInfo"
 [IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> "IAsyncInfoCancel"
 [taskCanceled]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750106.aspx> "TaskCancelled"
-[task-class]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750113.aspx> "Clase de tarea"
+[task-class]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750113.aspx> "Clase Task"
 [taskGet]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750017.aspx> "TaskGet"
 [taskParallelism]: <https://msdn.microsoft.com/library/windows/apps/xaml/dd492427.aspx> "Paralelismo de tareas"
 [taskThen]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
 [useArbitrary]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

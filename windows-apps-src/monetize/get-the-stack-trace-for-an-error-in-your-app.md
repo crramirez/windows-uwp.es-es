@@ -1,11 +1,18 @@
 ---
 author: mcleanbyron
-ms.assetid: 
+ms.assetid: b556a245-6359-4ddc-a4bd-76f9873ab694
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener el seguimiento de la pila de un error en la aplicación."
 title: "Obtener el seguimiento de la pila de un error en la aplicación"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, seguimiento de la pila, stack trace, error"
 translationtype: Human Translation
-ms.sourcegitcommit: 767097f068630e5ec171415c05d6dc395c8b26b3
-ms.openlocfilehash: 90481b5f85d010a142e86ca67ac94c3ec25d89c6
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8b10c7f9e2de962aca719055a26d8c3954ea052f
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -125,9 +132,4 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
 * [Obtener los datos del informe de errores](get-error-reporting-data.md)
 * [Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

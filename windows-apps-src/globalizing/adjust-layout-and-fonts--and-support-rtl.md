@@ -1,20 +1,27 @@
 ---
 author: DelfCo
-Description: "Desarrolla tu aplicación para admitir los diseños y fuentes de varios idiomas, incluida la dirección de flujo de derecha a izquierda."
-title: "Ajustar el diseño y las fuentes, y admitir la escritura RTL"
+Description: "Desarrolla la aplicación para que admita los diseños y las fuentes de varios idiomas, incluida la dirección de flujo RTL (de derecha a izquierda)."
+title: "Ajustar el diseño y las fuentes y admitir la escritura RTL"
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 05208607b148a48e8a680691de90161feeea7700
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b7d34aaf891497af80ed8c94609e6a8fbbd3bec
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="adjust-layout-and-fonts-and-support-rtl"></a>Ajustar el diseño y las fuentes, y admitir la escritura RTL
+# <a name="adjust-layout-and-fonts-and-support-rtl"></a>Ajustar el diseño y las fuentes y admitir la escritura RTL
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Desarrolla la aplicación para que admita los diseños y fuentes de varios idiomas, incluida la dirección de flujo RTL (de derecha a izquierda).
+Desarrolla la aplicación para que admita los diseños y las fuentes de varios idiomas, incluida la dirección de flujo RTL (de derecha a izquierda).
 
 ## <a name="layout-guidelines"></a>Directrices de diseño
 
@@ -110,9 +117,4 @@ C++:
 
 ## <a name="related-topics"></a>Temas relacionados
 [FlowDirection](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.flowdirection.aspx)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -5,13 +5,20 @@ ms.assetid: AA8DA53B-FE6E-40AC-9F0A-CB09637C87B4
 title: "Automatización del mismo nivel personalizada"
 label: Custom automation peers
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 9e1a458fa7ec51d621156e3ec6ed97b0361a6217
-ms.openlocfilehash: be53632455fe2fa847cc77c82ed0c2e2edff6685
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cd196547f78e896c25ee11c955146868cefd5f96
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Automatización del mismo nivel personalizada  
+# <a name="custom-automation-peers"></a>Automatización del mismo nivel personalizada  
 
 Describe el concepto de automatización del mismo nivel para la Automatización de la interfaz de usuario de Microsoft y cómo puedes proporcionar compatibilidad de automatización para tu propia clase de interfaz de usuario personalizada.
 
@@ -32,7 +39,7 @@ Generalmente, existen API paralelas en el marco de trabajo de Automatización de
 <span id="Determining_the_existing_state_of_UI_Automation_support_for_your_custom_UI_class"/>
 <span id="determining_the_existing_state_of_ui_automation_support_for_your_custom_ui_class"/>
 <span id="DETERMINING_THE_EXISTING_STATE_OF_UI_AUTOMATION_SUPPORT_FOR_YOUR_CUSTOM_UI_CLASS"/>
-## Determinar el estado actual de la compatibilidad para automatización de la interfaz de usuario para tu clase de interfaz de usuario personalizada  
+## <a name="determining-the-existing-state-of-ui-automation-support-for-your-custom-ui-class"></a>Determinar el estado actual de la compatibilidad para automatización de la interfaz de usuario para tu clase de interfaz de usuario personalizada  
 Antes de intentar implementar un sistema de automatización del mismo nivel para un control personalizado, debes probar si la clase base y su sistema de automatización del mismo nivel proporcionan la compatibilidad para accesibilidad o automatización que necesitas. En muchos casos, la combinación de las implementaciones [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472), los pares específicos y los modelos que implementan pueden proporcionar una experiencia de accesibilidad básica y, a la vez, satisfactoria. Que esto sea cierto depende de la cantidad de cambios que hayas implementado en la exposición del modelo de objetos al control en comparación con su clase base. Además, esto depende de si las incorporaciones a la funcionalidad de la clase base se corresponden con los nuevos elementos de la interfaz de usuario en el contrato de la plantilla o con la apariencia visual del control. En algunos casos, tus cambios puede incorporar nuevos aspectos de la experiencia del usuario que requieren una compatibilidad para accesibilidad adicional.
 
 Incluso si al usar la clase base del mismo nivel se proporciona compatibilidad para accesibilidad básica, sigue considerándose una práctica recomendada definir un sistema del mismo nivel para que puedas proporcionar información precisa sobre **ClassName** a Automatización de la interfaz de usuario para escenarios de prueba automatizada. Esta consideración es especialmente importante si estás escribiendo un control que está destinado a su consumo por parte de terceros.
@@ -40,7 +47,7 @@ Incluso si al usar la clase base del mismo nivel se proporciona compatibilidad p
 <span id="Automation_peer_classes__"/>
 <span id="automation_peer_classes__"/>
 <span id="AUTOMATION_PEER_CLASSES__"/>
-## Clases de automatización del mismo nivel  
+## <a name="automation-peer-classes"></a>Clases de automatización del mismo nivel  
 UWP se basa en convenciones y técnicas de automatización de la interfaz de usuario existentes usadas por marcos de interfaz de usuario de código administrado anteriores, como Windows Forms, Windows Presentation Foundation (WPF) y Microsoft Silverlight. Muchas de las clases de control, y su función y propósito, también derivan de un marco de trabajo de la interfaz de usuario anterior.
 
 Por convención, los nombres de las clases del mismo nivel comienzan con el nombre de la clase de control y terminan con "AutomationPeer". Por ejemplo, [**ButtonAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242458) es la clase del mismo nivel para la clase de control [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265).
@@ -51,7 +58,7 @@ Por convención, los nombres de las clases del mismo nivel comienzan con el nomb
 <span id="Peers__patterns_and_control_types"/>
 <span id="peers__patterns_and_control_types"/>
 <span id="PEERS__PATTERNS_AND_CONTROL_TYPES"/>
-## Sistemas del mismo nivel, patrones y tipos de control  
+## <a name="peers-patterns-and-control-types"></a>Sistemas del mismo nivel, patrones y tipos de control  
 Un *patrón de control* es una implementación de la interfaz que expone un aspecto específico de una funcionalidad de un control a un cliente de automatización de la interfaz de usuario. Los clientes de automatización de la interfaz de usuario usan las propiedades y los métodos expuestos a través de un patrón de control para recuperar información sobre las funcionalidades del control o manipular el comportamiento en tiempo de ejecución del control.
 
 Los patrones de control ofrecen una manera de categorizar y exponer la funcionalidad de un control independientemente del tipo de control o de su apariencia. Por ejemplo, un control que presenta una interfaz tabular usa el patrón de control **Grid** para exponer el número de filas y columnas en la tabla, y para permitir que un cliente de Automatización de la interfaz de usuario pueda recuperar elementos de la tabla. Como en otros ejemplos, el cliente de Automatización de la interfaz de usuario puede usar el patrón de control **Invoke** para los controles que pueden invocarse (como botones), y el patrón de control **Scroll** para los controles que tienen barras de desplazamiento, (como cuadros de lista, vistas de lista o cuadros combinados). Cada patrón de control representa un tipo de funcionalidad independiente y es posible combinar los patrones de control para describir el conjunto completo de funcionalidades admitidas por un control en particular.
@@ -76,7 +83,7 @@ Para obtener una lista de los patrones de control, interfaces de proveedor y sus
 <span id="Guidance_for_how_to_implement_control_patterns"/>
 <span id="guidance_for_how_to_implement_control_patterns"/>
 <span id="GUIDANCE_FOR_HOW_TO_IMPLEMENT_CONTROL_PATTERNS"/>
-### Instrucciones para implementar patrones de control  
+### <a name="guidance-for-how-to-implement-control-patterns"></a>Instrucciones para implementar patrones de control  
 Los patrones de control y las acciones para las que están diseñados forman parte de una definición más amplia del marco de trabajo de Automatización de la interfaz de usuario, y no solo se aplican a la compatibilidad con accesibilidad de una aplicación de la Tienda Windows. Cuando implementas un patrón de control, deberías asegurarte de implementarlo de forma que coincida con las instrucciones que se ofrecen en MSDN y en la especificación de automatización de la interfaz de usuario. Si necesitas instrucciones, normalmente puedes usar los temas de MSDN y no necesitarás consultar la especificación. Las instrucciones para cada patrón se detallan en el tema sobre la [implementación de patrones de control de automatización de la interfaz de usuario](https://msdn.microsoft.com/library/windows/desktop/Ee671292). Verás que cada tema bajo esta área tiene una sección sobre convenciones e instrucciones de implementación y otra sección sobre los miembros necesarios. Las instrucciones suelen hacer referencia a determinadas API de la interfaz del patrón de control relevante en la referencia sobre [interfaces de patrones de control para proveedores](https://msdn.microsoft.com/library/windows/desktop/Ee671201). Estas interfaces son interfaces nativas o de COM (y sus API usan la sintaxis de estilo COM). Pero todo lo que ves allí tiene un equivalente en el espacio de nombres [**Windows.UI.Xaml.Automation.Provider**](https://msdn.microsoft.com/library/windows/apps/BR209225).
 
 Si estás usando los sistemas del mismo nivel de automatización predeterminados y ampliando su comportamiento, ten en cuenta que estos sistemas del mismo nivel ya han sido escritos de acuerdo con las directrices de Automatización de la interfaz de usuario. Si admiten patrones de control, puedes confiar en la compatibilidad de ese patrón de acuerdo con las instrucciones del tema sobre la [implementación de patrones de control de automatización de la interfaz de usuario](https://msdn.microsoft.com/library/windows/desktop/Ee671292). Si un sistema de control del mismo nivel notifica que es representativo de un tipo de control definido por la automatización de la interfaz de usuario, quiere decir que ha seguido las instrucciones documentadas en el tema sobre [compatibilidad con tipos de control de automatización de la interfaz de usuario](https://msdn.microsoft.com/library/windows/desktop/Ee671633).
@@ -88,19 +95,19 @@ Se recomienda seguir las instrucciones para los patrones de la sección sobre [i
 <span id="Built-in_automation_peer_classes"/>
 <span id="built-in_automation_peer_classes"/>
 <span id="BUILT-IN_AUTOMATION_PEER_CLASSES"/>
-## Clases integradas de sistemas de automatización del mismo nivel  
+## <a name="built-in-automation-peer-classes"></a>Clases integradas de sistemas de automatización del mismo nivel  
 En general, los elementos implementan una clase de sistemas de automatización del mismo nivel si aceptan actividad de interfaz de usuario por parte de este o si contienen información que necesitan los usuarios de tecnologías de asistencia que representan la interfaz de usuario interactiva o significativa de las aplicaciones. No todos los elementos visuales de UWP tienen sistemas de automatización del mismo nivel. Algunos ejemplos de las clases que implementan sistemas de automatización del mismo nivel son [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) y [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683). Algunos ejemplos de clases que no implementan sistemas de automatización del mismo nivel son [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) y las clases basadas en [**Panel**](https://msdn.microsoft.com/library/windows/apps/BR227511), como [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) y [**Canvas**](https://msdn.microsoft.com/library/windows/apps/BR209267). Un **Panel** no tiene un sistema del mismo nivel porque proporciona un comportamiento de diseño que es únicamente visual. No hay ninguna manera accesible de que el usuario interactúe con un **Panel**. En su lugar, todos los elementos secundarios que contenga un **Panel** se notifican a los árboles de Automatización de la interfaz de usuario como elementos secundarios del siguiente elemento primario del árbol que tenga una representación de elemento o de sistema del mismo nivel.
 
 <span id="UI_Automation_and_UWP_process_boundaries"/>
 <span id="ui_automation_and_uwp_process_boundaries"/>
 <span id="UI_AUTOMATION_AND_UWP_PROCESS_BOUNDARIES"/>
-## Límites del proceso de UWP y automatización de la interfaz de usuario  
+## <a name="ui-automation-and-uwp-process-boundaries"></a>Límites del proceso de UWP y automatización de la interfaz de usuario  
 Por lo general, el código de cliente de automatización de la interfaz de usuario que tiene acceso a una aplicación para UWP se ejecuta fuera de proceso. La infraestructura de marco de trabajo de automatización de la interfaz de usuario permite que la información atraviese los límites del proceso. Este concepto se explica con mayor detalle en la [introducción a la Automatización de la interfaz de usuario](https://msdn.microsoft.com/library/windows/desktop/Ee684007).
 
 <span id="OnCreateAutomationPeer"/>
 <span id="oncreateautomationpeer"/>
 <span id="ONCREATEAUTOMATIONPEER"/>
-## OnCreateAutomationPeer  
+## <a name="oncreateautomationpeer"></a>OnCreateAutomationPeer  
 Todas las clases que derivan del objeto [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) contienen el método virtual protegido [**OnCreateAutomationPeer**](https://msdn.microsoft.com/ibrary/windows/apps/windows.ui.xaml.uielement.oncreateautomationpeer). La secuencia de inicialización de objetos para los sistemas de automatización del mismo nivel llama a **OnCreateAutomationPeer** para obtener el objeto de automatización del mismo nivel para cada control y así construir un árbol de Automatización de la interfaz de usuario para uso de tiempo de ejecución. El código de Automatización de la interfaz de usuario puede usar el sistema del mismo nivel para obtener información sobre las características de un control y para simular el uso interactivo por medio de sus patrones de control. Un control personalizado que admite automatización debe invalidar **OnCreateAutomationPeer** y devolver una instancia de una clase que deriva de [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185). Por ejemplo, si un control personalizado deriva de la clase [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/BR227736), el objeto devuelto por **OnCreateAutomationPeer** debe derivar de [**ButtonBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242460).
 
 Si estás escribiendo una clase de control personalizada y pretendes suministrar también un nuevo sistema del mismo nivel de automatización, debes invalidar el método [**OnCreateAutomationPeer**](https://msdn.microsoft.com/ibrary/windows/apps/windows.ui.xaml.uielement.oncreateautomationpeer) de tu control personalizado para que devuelva una nueva instancia del sistema del mismo nivel. La clase del mismo nivel debe derivar directa o indirectamente de [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185).
@@ -160,7 +167,7 @@ La definición de clase del mismo nivel se puede hacer en el mismo archivo de c�
 <span id="Choosing_the_correct_peer_base_class"/>
 <span id="choosing_the_correct_peer_base_class"/>
 <span id="CHOOSING_THE_CORRECT_PEER_BASE_CLASS"/>
-### Elección de la clase base del mismo nivel correcta  
+### <a name="choosing-the-correct-peer-base-class"></a>Elección de la clase base del mismo nivel correcta  
 Asegúrate de que tu [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) derive de una clase base que sea la mejor opción para la lógica de sistema del mismo nivel existente de la clase de control de la que derivas. En el caso del ejemplo anterior, dado que `NumericUpDown` deriva de [**RangeBase**](https://msdn.microsoft.com/library/windows/apps/BR227863), existe una clase [**RangeBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242506) disponible en la que debes basar tu sistema del mismo nivel. Mediante el uso de la clase del mismo nivel coincidente más cercana en paralelo con el modo en que derivas el control en sí, puedes evitar invalidar al menos parte de la funcionalidad de [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) porque la clase base del mismo nivel ya la implementa.
 
 La clase [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) base no tiene una clase correspondiente del mismo nivel. Si necesitas una clase del mismo nivel para que se corresponda con un control personalizado que deriva de **Control**, deriva la clase del mismo nivel personalizada de [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472).
@@ -173,7 +180,7 @@ Si derivas directamente de [**ContentControl**](https://msdn.microsoft.com/libra
 <span id="Initialization_of_a_custom_peer_class"/>
 <span id="initialization_of_a_custom_peer_class"/>
 <span id="INITIALIZATION_OF_A_CUSTOM_PEER_CLASS"/>
-## Inicialización de una clase del mismo nivel personalizada  
+## <a name="initialization-of-a-custom-peer-class"></a>Inicialización de una clase del mismo nivel personalizada  
 El sistema de automatización del mismo nivel debe definir un constructor con seguridad de tipos que use una instancia del control propietario para la inicialización base. En el siguiente ejemplo, la implementación pasa el valor *owner* a la base [**RangeBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242506) y, finalmente, [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472) usa *owner* para establecer [**FrameworkElementAutomationPeer.Owner**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.owner).
 
 C#
@@ -200,7 +207,7 @@ public:    NumericUpDownAutomationPeer(NumericUpDown^ owner);
 <span id="Core_methods_of_AutomationPeer"/>
 <span id="core_methods_of_automationpeer"/>
 <span id="CORE_METHODS_OF_AUTOMATIONPEER"/>
-## Métodos Core de AutomationPeer  
+## <a name="core-methods-of-automationpeer"></a>Métodos Core de AutomationPeer  
 Por cuestiones de infraestructura de UWP, los métodos que se pueden invalidar de un sistema de automatización del mismo nivel forman parte de un par de métodos: el método de acceso público que el proveedor de Automatización de la interfaz de usuario usa como punto de reenvío para los clientes de Automatización de la interfaz de usuario y el método de personalización "Core" protegido que una clase de UWP puede invalidar para influir en el comportamiento. Estos dos métodos se conectan entre sí de manera predeterminada de tal manera que la llamada al método de acceso siempre invoca el método "Core" paralelo que tiene la implementación del proveedor o, como reserva, invoca una implementación predeterminada de las clases base.
 
 Cuando se implemente un sistema del mismo nivel para un control personalizado, invalida cualquiera de los métodos "Core" desde la clase base de sistemas de automatización del mismo nivel donde quieres exponer comportamiento exclusivo para tu control personalizado. Para obtener información sobre tu control, el código de automatización de la interfaz de usuario llama a los métodos públicos de la clase del mismo nivel. Para proporcionar información acerca de tu control, invalida cada método con un nombre que termine con "Core" cuando el diseño y la implementación de tu control cree escenarios de accesibilidad u otros escenarios de Automatización de la interfaz de usuario que difieran de lo que admite la clase base de sistemas de automatización del mismo nivel.
@@ -240,7 +247,7 @@ protected override AutomationControlType GetAutomationControlTypeCore()
 <span id="GetPattern_and_GetPatternCore"/>
 <span id="getpattern_and_getpatterncore"/>
 <span id="GETPATTERN_AND_GETPATTERNCORE"/>
-### GetPattern y GetPatternCore  
+### <a name="getpattern-and-getpatterncore"></a>GetPattern y GetPatternCore  
 Una implementación de [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) de un sistema del mismo nivel devuelve el objeto que admite el patrón solicitado en el parámetro de entrada. Específicamente, un cliente de Automatización de la interfaz de usuario llama a un método que se reenvía al método [**GetPattern**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpattern) del proveedor y especifica un valor de enumeración [**PatternInterface**](https://msdn.microsoft.com/library/windows/apps/BR242496) que asigna nombre al patrón solicitado. La invalidación de **GetPatternCore** debería devolver el objeto que implementa el modelo especificado. Ese objeto es el propio sistema del mismo nivel, porque el sistema del mismo nivel debe implementar la interfaz de patrón correspondiente siempre que notifica que admite un patrón. Si tu sistema del mismo nivel no tiene una implementación personalizada de un patrón, pero sabes que la base de este implementa el patrón, puedes llamar a la implementación de **GetPatternCore** del tipo base desde tu **GetPatternCore**. Un **GetPatternCore** de un sistema del mismo nivel devolverá **null** si este no admite un patrón. Sin embargo, en lugar de devolver **null** directamente desde tu implementación, normalmente usarás la llamada a la implementación base para devolver **null** para cualquier patrón no admitido.
 
 Cuando se admite un patrón, la implementación de [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) implementación puede devolver **this** o **Me**. Lo que se espera es que el cliente de Automatización de la interfaz de usuario convierta el valor [**GetPattern**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpattern) devuelto a la interfaz de patrón solicitada siempre que no sea un valor **null**.
@@ -288,7 +295,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 <span id="Forwarding_patterns_from_sub-elements"/>
 <span id="forwarding_patterns_from_sub-elements"/>
 <span id="FORWARDING_PATTERNS_FROM_sub-elementS"/>
-### Reenvío de patrones de subelementos  
+### <a name="forwarding-patterns-from-sub-elements"></a>Reenvío de patrones de subelementos  
 Una implementación del método [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) también puede especificar un subelemento o una parte como proveedor de patrones para su host. Este ejemplo imita el modo en que [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) transfiere el control del patrón de desplazamiento al sistema del mismo nivel de su control [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527) interno. Para especificar un subelemento para el control de patrones, este código obtiene el objeto del subelemento, crea un sistema del mismo nivel para el subelemento con el método [**FrameworkElementAutomationPeer.CreatePeerForElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.createpeerforelement) y devuelve el nuevo sistema del mismo nivel.
 
 C#
@@ -325,7 +332,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 <span id="Other_Core_methods"/>
 <span id="other_core_methods"/>
 <span id="OTHER_CORE_METHODS"/>
-### Otros métodos Core  
+### <a name="other-core-methods"></a>Otros métodos Core  
 Tu control probablemente necesite admitir equivalentes de teclado para escenarios primarios. Para obtener más información acerca de por qué esto puede ser necesario, consulta [Accesibilidad de teclado](keyboard-accessibility.md). La implementación de compatibilidad de teclado es necesariamente parte del código de control y no el código de sistemas del mismo nivel, porque eso es parte de la lógica de un control, pero tu clase de sistemas del mismo nivel debe invalidar los métodos [**GetAcceleratorKeyCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getacceleratorkeycore) y [**GetAccessKeyCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getaccesskeycore) para notificar a los clientes de Automatización de la interfaz de usuario qué claves se usan. Ten en cuenta que es posible que las cadenas que proporcionan información clave deban localizarse y, por consiguiente, deben provenir de recursos, en lugar de cadenas codificadas de forma rígida.
 
 Si estás proporcionando un sistema del mismo nivel para una clase que admite una colección, es mejor derivar de clases funcionales y clases del mismo nivel que ya cuenten con ese tipo de compatibilidad para colecciones. Si no puedes hacerlo, los sistemas del mismo nivel para controles que mantienen colecciones secundarias pueden tener que invalidar el método [**GetChildrenCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getchildrencore) de los sistemas del mismo nivel relacionado con la colección para notificar correctamente las relaciones entre los elementos principales y los secundarios al árbol de Automatización de la interfaz de usuario.
@@ -343,7 +350,7 @@ Podrías invalidar [**GetOrientationCore**](https://msdn.microsoft.com/library/w
 <span id="Base_implementation_in_FrameworkElementAutomationPeer"/>
 <span id="base_implementation_in_frameworkelementautomationpeer"/>
 <span id="BASE_IMPLEMENTATION_IN_FRAMEWORKELEMENTAUTOMATIONPEER"/>
-### Implementación base en FrameworkElementAutomationPeer  
+### <a name="base-implementation-in-frameworkelementautomationpeer"></a>Implementación base en FrameworkElementAutomationPeer  
 La implementación base de [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472) proporciona cierta información de Automatización de la interfaz de usuario que puede ser interpretada desde diversas propiedades de comportamiento y diseño que se definen en el nivel del marco.
 
 * [**GetBoundingRectangleCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getboundingrectanglecore): devuelve una estructura [**Rect**](https://msdn.microsoft.com/library/windows/apps/BR225994) basada en las características de diseño conocidas. Devuelve un valor de 0 **Rect** si [**IsOffscreen**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.isoffscreen) es **true**.
@@ -362,7 +369,7 @@ La implementación base de [**FrameworkElementAutomationPeer**](https://msdn.mic
 <span id="Peers_and_AutomationProperties"/>
 <span id="peers_and_automationproperties"/>
 <span id="PEERS_AND_AUTOMATIONPROPERTIES"/>
-## Sistemas del mismo nivel y AutomationProperties  
+## <a name="peers-and-automationproperties"></a>Sistemas del mismo nivel y AutomationProperties  
 Tu sistema de automatización del mismo nivel debe proporcionar valores predeterminados adecuados para la información relativa a la accesibilidad de tu control. Ten en cuenta que cualquier código de aplicación que use el control puede invalidar parte de ese comportamiento incluyendo los valores de propiedad adjunta [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081) en instancias de control. Los autores de llamadas pueden hacer esto para los controles predeterminados o para los controles personalizados. Por ejemplo, el siguiente XAML crea un botón que tiene dos propiedades de Automatización de la interfaz de usuario personalizadas:  `<Button AutomationProperties.Name="Special"      AutomationProperties.HelpText="This is a special button."/>`
 
 Para obtener más información acerca de las propiedades adjuntas [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081), consulta [Información básica de accesibilidad](basic-accessibility-information.md).
@@ -372,7 +379,7 @@ Algunos de los métodos [**AutomationPeer**](https://msdn.microsoft.com/library/
 <span id="Implementing_patterns"/>
 <span id="implementing_patterns"/>
 <span id="IMPLEMENTING_PATTERNS"/>
-## Implementación de patrones  
+## <a name="implementing-patterns"></a>Implementación de patrones  
 Veamos cómo escribir un sistema del mismo nivel para un control que implementa un comportamiento de expansión y contracción implementando la interfaz del patrón de control para expansión y contracción. El sistema del mismo nivel debería permitir la accesibilidad para el comportamiento de expansión y contracción devolviéndose a sí mismo siempre que se llame a [**GetPattern**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpattern) con un valor [**PatternInterface.ExpandCollapse**](https://msdn.microsoft.com/library/windows/apps/BR242496). El sistema del mismo nivel después hereda la interfaz de proveedor para ese patrón ([**IExpandCollapseProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.iexpandcollapseprovider)) y proporciona implementaciones para cada uno de los miembros de esa interfaz de proveedor. En este caso, la interfaz tiene que invalidar tres miembros: [**Expand**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.iexpandcollapseprovider.expand), [**Collapse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.iexpandcollapseprovider.collapse) y [**ExpandCollapseState**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.iexpandcollapseprovider.expandcollapsestate).
 
 Es útil planear con tiempo la accesibilidad en el diseño de la API de la propia clase. Siempre que tengas un comportamiento que pueda llegar a ser solicitado por las interacciones típicas con un usuario que trabaja en la interfaz de usuario y también por medio de un patrón de proveedores de automatización, proporciona un solo método que pueda llamar el patrón de automatización o la respuesta de la interfaz de usuario. Por ejemplo, si tu control tiene partes de botón que tienen controladores de eventos conectados que pueden expandir o contraer el control, y tiene equivalentes de teclado para esas acciones, haz que estos controladores de eventos llamen al mismo método al que llamas desde dentro del cuerpo de las implementaciones de [**Expand**](https://msdn.microsoft.com/library/windows/apps/BR242570) o [**Collapse**](https://msdn.microsoft.com/library/windows/apps/BR242569) para [**IExpandCollapseProvider**](https://msdn.microsoft.com/library/windows/desktop/Ee671242) en el sistema del mismo nivel. Usar un método de lógica común también puede resultar útil para garantizar la actualización de los estados visuales de tu control a fin de mostrar estados lógicos de forma uniforme independientemente de cómo se haya invocado el comportamiento.
@@ -395,7 +402,7 @@ Una implementación alternativa es que el propio control pueda hacer referencia 
 <span id="UI_Automation_events"/>
 <span id="ui_automation_events"/>
 <span id="UI_AUTOMATION_EVENTS"/>
-## Eventos de automatización de la interfaz de usuario  
+## <a name="ui-automation-events"></a>Eventos de automatización de la interfaz de usuario  
 
 Los eventos de Automatización de la interfaz de usuario pueden clasificarse de la siguiente manera.
 
@@ -409,13 +416,13 @@ Los eventos de Automatización de la interfaz de usuario pueden clasificarse de 
 <span id="AutomationEvents_identifiers"/>
 <span id="automationevents_identifiers"/>
 <span id="AUTOMATIONEVENTS_IDENTIFIERS"/>
-### Identificadores de AutomationEvents  
+### <a name="automationevents-identifiers"></a>Identificadores de AutomationEvents  
 Los eventos de Automatización de la interfaz de usuario están definidos por los valores [**AutomationEvents**](https://msdn.microsoft.com/library/windows/apps/BR209183). Los valores de la enumeración identifican unívocamente el tipo de evento.
 
 <span id="Raising_events"/>
 <span id="raising_events"/>
 <span id="RAISING_EVENTS"/>
-### Generación de eventos  
+### <a name="raising-events"></a>Generación de eventos  
 Los clientes de automatización de la interfaz de usuario pueden suscribirse a eventos de automatización. En el modelo de sistemas de automatización del mismo nivel, los sistemas de automatización del mismo nivel para los controles personalizados deben informar de los cambios en el estado del control que sean pertinentes a la accesibilidad llamando al método [**RaiseAutomationEvent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.raiseautomationevent). De manera similar, cuando cambia un valor clave de una propiedad de Automatización de la interfaz de usuario, los sistemas de control personalizado del mismo nivel deben llamar al método [**RaisePropertyChangedEvent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.raisepropertychangedevent).
 
 El siguiente ejemplo de código muestra cómo obtener el objeto del sistema del mismo nivel del código de definición de control y llamar a un método para desencadenar un evento desde ese sistema del mismo nivel. Con fines de optimización, el código determina si hay escuchas para este tipo de evento. Desencadenar el evento y crear el objeto del mismo nivel solo cuando hay escuchas evita sobrecargas innecesarias y ayuda al control a mantener su capacidad de respuesta.
@@ -439,13 +446,13 @@ if (AutomationPeer.ListenerExists(AutomationEvents.PropertyChanged))
 <span id="Peer_navigation"/>
 <span id="peer_navigation"/>
 <span id="PEER_NAVIGATION"/>
-## Navegación de sistemas del mismo nivel  
+## <a name="peer-navigation"></a>Navegación de sistemas del mismo nivel  
 Después de localizar un sistema de automatización del mismo nivel, un cliente de Automatización de la interfaz de usuario puede navegar por la estructura del mismo nivel de una aplicación llamando a los métodos [**GetChildren**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getchildren) y [**GetParent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getparent) del objeto del sistema de mismo nivel. La implementación del método [**GetChildrenCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getchildrencore) del sistema del mismo nivel admite la navegación entre elementos de la interfaz de usuario dentro de un control. El sistema de Automatización de la interfaz de usuario llama a este método para crear un árbol de los subelementos incluidos dentro de un control, por ejemplo, elementos de lista en un cuadro de lista. El método **GetChildrenCore** en [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472) recorre el árbol visual de elementos para crear el árbol de sistemas de automatización del mismo nivel. Los controles personalizados pueden invalidar este método para exponer una representación diferente de los elementos secundarios a los clientes de automatización, lo que devuelve los sistemas de automatización del mismo nivel de los elementos que transmiten información o permiten la interacción del usuario.
 
 <span id="Native_automation_support_for_text_patterns"/>
 <span id="native_automation_support_for_text_patterns"/>
 <span id="NATIVE_AUTOMATION_SUPPORT_FOR_TEXT_PATTERNS"/>
-## Compatibilidad de automatización nativa para patrones de texto  
+## <a name="native-automation-support-for-text-patterns"></a>Compatibilidad de automatización nativa para patrones de texto  
 Algunos sistemas de automatización del mismo nivel predeterminados de las aplicaciones para UWP admiten patrones de control para el patrón de texto ([**PatternInterface.Text**](https://msdn.microsoft.com/library/windows/apps/BR242496)). Sin embargo, esta compatibilidad se ofrece mediante métodos nativos y los sistemas de automatización del mismo nivel no anotarán la interfaz [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) en la herencia (administrada). Aun así, si un cliente de Automatización de la interfaz de usuario administrado o no administrado solicita patrones al sistema de automatización del mismo nivel, notificará la compatibilidad con el patrón de texto y proporcionará el comportamiento de partes del patrón cuando se llame a las API del cliente.
 
 Si tienes intención de derivar desde uno de los controles de texto de la aplicación para UWP y crear también un sistema del mismo nivel personalizado que derive de uno de los sistemas del mismo nivel relacionados con el texto, comprueba las secciones Observaciones del sistema del mismo nivel para informarte sobre la compatibilidad de nivel nativo con los patrones. Puedes acceder al comportamiento de base nativa en el sistema del mismo nivel personalizado si llamas a la implementación base desde las implementaciones de la interfaz del proveedor administrado, pero es difícil modificar lo que hace la implementación base porque las interfaces nativas en el sistema del mismo nivel y su control propietario no están expuestas. Generalmente usarás las implementaciones base tal cual (solo llamada a la base) o reemplazarás por completo la funcionalidad con tu propio código administrado y no llamarás a la implementación base. Este es un escenario avanzado. Necesitarás estar muy familiarizado con el marco de servicios de texto que usa tu control para poder admitir los requisitos de accesibilidad al usar ese marco.
@@ -453,7 +460,7 @@ Si tienes intención de derivar desde uno de los controles de texto de la aplica
 <span id="AutomationProperties.AccessibilityView"/>
 <span id="automationproperties.accessibilityview"/>
 <span id="AUTOMATIONPROPERTIES.ACCESSIBILITYVIEW"/>
-## AutomationProperties.AccessibilityView  
+## <a name="automationpropertiesaccessibilityview"></a>AutomationProperties.AccessibilityView  
 Además de proporcionar un sistema del mismo nivel personalizado, también puedes ajustar la representación de la vista de árbol para cualquier instancia de control, estableciendo [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.accessibilityview) en XAML. Esto no se implementa como parte de una clase del mismo nivel, pero lo mencionamos aquí porque está relacionado con la compatibilidad para accesibilidad general ya sea para controles personalizados o para las plantillas que personalices.
 
 El principal escenario de uso de **AutomationProperties.AccessibilityView** es omitir deliberadamente determinados controles de una plantilla de las vistas de Automatización de la interfaz de usuario, porque no contribuyen de forma significativa a la vista de accesibilidad de todo el control. Para evitar esto, establece **AutomationProperties.AccessibilityView** en "Raw".
@@ -461,7 +468,7 @@ El principal escenario de uso de **AutomationProperties.AccessibilityView** es o
 <span id="Throwing_exceptions_from_automation_peers"/>
 <span id="throwing_exceptions_from_automation_peers"/>
 <span id="THROWING_EXCEPTIONS_FROM_AUTOMATION_PEERS"/>
-## Iniciar excepciones desde sistemas de automatización del mismo nivel  
+## <a name="throwing-exceptions-from-automation-peers"></a>Iniciar excepciones desde sistemas de automatización del mismo nivel  
 Las API que implementas para la compatibilidad del sistema de automatización del mismo nivel pueden generar excepciones. Se espera que cualquier cliente de automatización de la interfaz de usuario que está escuchando sea lo suficientemente sólido como para continuar después de que se inicien la mayoría de las excepciones. Con toda probabilidad, el agente de escucha está mirando hacia un árbol de automatización vertical que incluye aplicaciones distintas de la tuya y es un diseño de cliente inaceptable para traer el cliente completo, solo porque un área del árbol inició una excepción basada en el sistema del mismo nivel cuando el cliente llamó a sus API.
 
 Para los parámetros que se pasan en tu sistema del mismo nivel, se puede validar la entrada y, por ejemplo, iniciar [**ArgumentNullException**](https://msdn.microsoft.com/library/windows/apps/system.argumentnullexception) si se pasó **null** y eso no es un valor válido para tu implementación. Sin embargo, si el sistema del mismo nivel realiza operaciones posteriores, recuerda que las interacciones del sistema del mismo nivel con el control de hospedaje tienen cierto carácter asíncrono. Cualquier cosa que haga un sistema del mismo nivel no bloqueará necesariamente el umbral de la interfaz de usuario en el control (y probablemente no debería). Así que podrías tener situaciones en las que un objeto estaba disponible o tenía ciertas propiedades cuando se creó el sistema del mismo nivel o cuando se llamó por primera vez a un método de sistema de automatización del mismo nivel, pero mientras tanto, el estado del control ha cambiado. Para estos casos, hay dos excepciones dedicadas que un proveedor puede iniciar:
@@ -472,16 +479,11 @@ Para los parámetros que se pasan en tu sistema del mismo nivel, se puede valida
 Más allá de esto, los sistemas del mismo nivel deberían ser relativamente conservadores en cuanto a las excepciones que inician desde su compatibilidad con el sistema del mismo nivel. La mayoría de los clientes no podrá controlar excepciones procedentes de sistemas del mismo nivel y convertirlas en opciones que se puedan accionar y que puedan ser elegidas por los usuarios cuando interaccionen con el cliente. Así que, a veces, capturar excepciones sin volver a iniciarlas dentro de las implementaciones del mismo nivel puede suponer una estrategia más acertada que iniciar excepciones cada vez que no funciona algo que el sistema del mismo nivel intenta hacer. Ten en cuenta también que la mayoría de los clientes de Automatización de la interfaz de usuario no se escriben en código administrado. La mayoría están escritas en COM, y solo buscan **S\_OK** en **HRESULT** cuando llaman a un método de cliente de Automatización de la interfaz de usuario que termina accediendo al sistema del mismo nivel.
 
 <span id="related_topics"/>
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
 * [Muestra de accesibilidad en XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472)
 * [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185)
 * [**OnCreateAutomationPeer**](https://msdn.microsoft.com/ibrary/windows/apps/windows.ui.xaml.uielement.oncreateautomationpeer)
 * [Interfaces y patrones de control](control-patterns-and-interfaces.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

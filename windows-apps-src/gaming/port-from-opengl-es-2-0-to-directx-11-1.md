@@ -1,18 +1,25 @@
 ---
 author: mtoepke
-title: Migrar de OpenGL ES2.0 a Direct3D11
-description: "Incluye artículos, información general y tutoriales para portar una canalización de gráficos de OpenGL ES 2.0 a Direct3D 11 y Windows Runtime."
+title: "Migrar de OpenGL ES 2.0 a Direct3D 11"
+description: "Incluye artículos, información general y tutoriales para portar una canalización de gráficos de OpenGL ES 2.0 a Direct3D 11 y a Windows Runtime."
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, games, juegos, opengl, direct3d 11, port, portar, graphics, gráficos"
 translationtype: Human Translation
-ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: aab0c3e9f3816e0657dfb6fec4917d62f2be5280
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 14ed2be84f295570dc95b3f1d28dfdd3720bada4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Portar de OpenGL ES 2.0 a Direct3D 11
+# <a name="port-from-opengl-es-20-to-direct3d-11"></a>Portar de OpenGL ES 2.0 a Direct3D 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Incluye artículos, información general y tutoriales para portar una canalización de gráficos de OpenGL ES 2.0 a Direct3D 11 y Windows Runtime.
 
@@ -33,7 +40,7 @@ Incluye artículos, información general y tutoriales para portar una canalizaci
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Asignar de OpenGL ES2.0 a Direct3D11.1](map-concepts-and-infrastructure.md)</p></td>
+<td align="left"><p>[Asignar de OpenGL ES 2.0 a Direct3D 11.1](map-concepts-and-infrastructure.md)</p></td>
 <td align="left"><p>Cuando comiences el proceso para portar la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las principales diferencias entre las API. Los temas de esta sección te ayudarán a planear tu estrategia de migración y los cambios de API que debes realizar cuando traslades el procesamiento de gráficos a Direct3D.</p></td>
 </tr>
 <tr class="even">
@@ -41,7 +48,7 @@ Incluye artículos, información general y tutoriales para portar una canalizaci
 <td align="left"><p>Para este ejercicio de migración, empezaremos con algo básico: llevar un representador simple de un cubo giratorio con vértices sombreados de OpenGL ES 2.0 a Direct3D, de modo que coincida con la plantilla Aplicación DirectX 11 (Windows universal) de Visual Studio 2015.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Referencia de OpenGL ES 2.0 a Direct3D11.1](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
+<td align="left"><p>[Referencia de OpenGL ES 2.0 a Direct3D 11.1](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
 <td align="left"><p>Usa estos temas de referencia para buscar muestras de código corto y asignación de API al realizar la migración de OpenGL ES 2.0 a Direct3D 11.</p></td>
 </tr>
 </tbody>
@@ -60,10 +67,5 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

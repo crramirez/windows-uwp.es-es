@@ -3,16 +3,23 @@ author: msatranjr
 title: "Introducción a ubicación y mapas"
 description: "En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos."
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, mapa, ubicación, servicios de mapa, map, location, map services"
 translationtype: Human Translation
-ms.sourcegitcommit: a3240047ec77ada0c5f6b5586eee2404353889f6
-ms.openlocfilehash: 327185d655d8495901cfa9fa0a99c0af3a8cdae0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6ab167cb032cffba11e7e90e3aefe91bd1c21d74
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introducción a ubicación y mapas
+# <a name="maps-and-location-overview"></a>Introducción a ubicación y mapas
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.
@@ -23,7 +30,7 @@ En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, bus
 
  
 
-## Mostrar mapas
+## <a name="display-maps"></a>Mostrar mapas
 
 
 Muestra mapas con las vistas 2D, 3D o Streetside en tu aplicación mediante las API del espacio de nombres [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751). Puedes marcar puntos de interés en el mapa con marcadores, imágenes, formas o elementos de interfaz de usuario XAML. También puedes superponer imágenes en ventana o reemplazar las imágenes de mapa de forma conjunta.
@@ -38,7 +45,7 @@ Muestra mapas con las vistas 2D, 3D o Streetside en tu aplicación mediante las 
 
 
 
-## Acceder a servicios de mapa
+## <a name="access-map-services"></a>Acceder a servicios de mapa
 
 Agrega rutas, indicaciones y funcionalidades de geocodificación a tu aplicación mediante las API del espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). También puedes ayudar al usuario a administrar mapas sin conexión iniciando la aplicación Configuración directamente en la página correspondiente.
 
@@ -50,7 +57,7 @@ Agrega rutas, indicaciones y funcionalidades de geocodificación a tu aplicació
 | [Realizar geocodificación y geocodificación inversa](geocoding.md) | Puedes convertir direcciones en ubicaciones geográficas (geocodificación), y ubicaciones geográficas en direcciones (geocodificación inversa), si llamas a los métodos de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) del espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). |
 
 
-## Obtener la ubicación del usuario
+## <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 
 Obtén la ubicación actual del usuario y recibe notificaciones cuando la ubicación cambie en tu aplicación mediante las API del espacio de nombres [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603). Estos miembros de las API también se usan con frecuencia en los parámetros de las API de mapas. Las API del espacio de nombres [**Windows.Devices.Geolocation.Geofencing**](https://msdn.microsoft.com/library/windows/apps/dn263744) envían notificaciones a tu aplicación cuando el usuario accede a una geovalla o sale de esta (un área geográfica predefinida).
 
@@ -62,13 +69,13 @@ Obtén la ubicación actual del usuario y recibe notificaciones cuando la ubicac
 | [Guía de diseño de geovallas](guidelines-for-geofencing.md) | Directrices de rendimiento para las aplicaciones que usan la característica de geovalla. |
 | [Configurar una geovalla](set-up-a-geofence.md) | Configura una geovalla en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano. |
 
-## Iniciar la aplicación Mapas de Windows
+## <a name="launch-the-windows-maps-app"></a>Iniciar la aplicación Mapas de Windows
 
 La aplicación puede iniciar la aplicación Mapas de Windows como aquí se indica para mostrar mapas específicos e indicaciones paso a paso. En lugar de proporcionar la funcionalidad de mapa directamente en tu propia aplicación, considera la posibilidad de usar la aplicación Mapas de Windows para proporcionar esa funcionalidad. Para obtener más información, consulta [Iniciar la aplicación Mapas de Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
 
 ![Ejemplo de la aplicación Mapas de Windows.](images/mapnyc.png)
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Muestra de ubicación geográfica de UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
@@ -79,12 +86,4 @@ La aplicación puede iniciar la aplicación Mapas de Windows como aquí se indic
 * [Directrices para aplicaciones compatibles con la privacidad](https://msdn.microsoft.com/library/windows/apps/hh768223)
 * [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechar los mapas y la ubicación entre teléfonos, tabletas y equipos en tus aplicaciones Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Ejemplo de aplicación de tráfico de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

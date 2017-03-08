@@ -3,16 +3,23 @@ author: PatrickFarley
 Description: "Sigue estos procedimientos recomendados para el uso de geovallas en tu aplicación."
 title: Directrices para usar geovallas en aplicaciones
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, mapa, map, ubicación, location, geovalla, geofencing"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0a152fbc444e252ed8c2a822036e00b8869703ac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e21b5b89c95a6b4988e1e95fc924ec3eefd46942
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Directrices para usar geovallas en aplicaciones
+# <a name="guidelines-for-geofencing-apps"></a>Directrices para usar geovallas en aplicaciones
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -22,13 +29,13 @@ ms.openlocfilehash: 0a152fbc444e252ed8c2a822036e00b8869703ac
 
 Sigue estos procedimientos recomendados para el uso de [**geovallas**](https://msdn.microsoft.com/library/windows/apps/dn263744) en una aplicación.
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 
 -   Si la aplicación necesitará acceso a Internet cuando se produzca un evento [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587), comprueba si hay acceso a Internet antes de crear la geovalla.
     -   Si la aplicación no tiene acceso a Internet, puedes pedir al usuario que se conecte a Internet antes de configurar la geovalla.
     -   Si no es posible el acceso a Internet, evita el consumo de energía necesario para las comprobaciones de la ubicación de geovalla.
--   Asegúrate de que las notificaciones de geovalla sean relevantes, mediante la comprobación de la marca de tiempo y la ubicación actual cuando un evento de geovalla indique que se ha cambiado al estado [**Entered**](https://msdn.microsoft.com/library/windows/apps/dn263660) o al estado **Exited**. Consulta [Comprobar la marca de tiempo y la ubicación actual](#timestamp) para más información.
+-   Asegúrate de que las notificaciones de geovalla sean relevantes, mediante la comprobación de la marca de tiempo y la ubicación actual cuando un evento de geovalla indique que se ha cambiado al estado [**Entered**](https://msdn.microsoft.com/library/windows/apps/dn263660) o al estado **Exited**. Consulta **Comprobar la marca de tiempo y la ubicación actual** para más información.
 -   Crea excepciones para administrar los casos en los que un dispositivo no pueda acceder a la información local y notifica al usuario si fuese necesario. Puede que no esté disponible la información de ubicación porque los permisos estén desactivados, el dispositivo no disponga de un adaptador GPS, la señal GPS esté bloqueada o la señal Wi-Fi no sea lo suficientemente intensa.
 -   En general, no es necesario escuchar los eventos de geovalla en primer y segundo plano al mismo tiempo. Sin embargo, si la aplicación debe escuchar eventos de geovalla tanto en primer como en segundo plano:
 
@@ -40,9 +47,9 @@ Sigue estos procedimientos recomendados para el uso de [**geovallas**](https://m
 -   No uses más de 1.000 geovallas por aplicación. El sistema admite miles de geovallas por aplicación, pero para mantener un buen rendimiento de la aplicación y reducir su uso de memoria, no uses más de 1000.
 -   No crees una geovalla con un radio inferior a 50 metros. Si tu aplicación debe usar una geovalla con un radio pequeño, aconseja a los usuarios que usen la aplicación en un dispositivo con radio GPS para garantizar el mejor rendimiento.
 
-## Instrucciones de uso adicionales
+## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
-### Comprobar la marca de tiempo y la ubicación actual
+### <a name="checking-the-time-stamp-and-current-location"></a>Comprobar la marca de tiempo y la ubicación actual
 
 Cuando un evento indica un cambio a un estado [**Entered**](https://msdn.microsoft.com/library/windows/apps/dn263660) o **Exited**, comprueba la marca de tiempo del evento y tu ubicación actual. Varios factores, como que el sistema no disponga de recursos suficiente para iniciar una tarea en segundo plano, que el usuario no vea la notificación o que el dispositivo esté en modo de espera (en Windows), pueden afectar al momento en que el usuario realmente procesa el evento. Por ejemplo, se podría producir la siguiente secuencia:
 
@@ -54,7 +61,7 @@ Cuando un evento indica un cambio a un estado [**Entered**](https://msdn.microso
 
 Gracias a la marca de tiempo, puedes saber que la acción ocurrió en el pasado. Gracias a la ubicación actual, puedes ver que el usuario ahora está fuera de la geovalla. Según la funcionalidad de tu aplicación, quizás quieras filtrar este evento.
 
-### Agentes de escucha en primer plano y en segundo plano
+### <a name="background-and-foreground-listeners"></a>Agentes de escucha en primer plano y en segundo plano
 
 Por lo general, una aplicación no necesita escuchar los eventos [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587) en una tarea en primer plano y en segundo plano al mismo tiempo. El método más limpio para tratar un caso en que pudieras necesitarlo es dejar que la tarea en segundo plano administre las notificaciones. Si configuras agentes de escucha de geovalla en primer plano y en segundo plano, no estarás seguro de cuál se iniciará primero y, por lo tanto, debes llamar siempre al método [**ReadReports**](https://msdn.microsoft.com/library/windows/apps/dn263633) para averiguar si se ha producido un evento.
 
@@ -62,9 +69,9 @@ Si has configurado agentes de escucha de geovalla en primer plano y en segundo p
 
 ```csharp
     Windows.UI.Core.CoreWindow coreWindow;    
-    
+
     // This needs to be set before InitializeComponent sets up event registration for app visibility
-    coreWindow = CoreWindow.GetForCurrentThread(); 
+    coreWindow = CoreWindow.GetForCurrentThread();
     coreWindow.VisibilityChanged += OnVisibilityChanged;
 ```
 
@@ -114,13 +121,13 @@ function onVisibilityChanged() {
 }
 ```
 
-### Determinar el tamaño de las geovallas
+### <a name="sizing-your-geofences"></a>Determinar el tamaño de las geovallas
 
 Aunque el GPS puede proporcionar la información de ubicación más precisa, las geovallas también pueden usar Wi-Fi y otros sensores de ubicación para determinar la posición actual del usuario. Sin embargo, estos otros métodos pueden afectar al tamaño de las geovallas que puedes crear. Si el nivel de precisión es bajo, no será de utilidad crear geovallas pequeñas. En general, se recomienda no crear una geovalla con un radio inferior a 50 metros. Además, las tareas en segundo plano de geovallas solo se ejecutan periódicamente en Windows; si utilizas una geovalla pequeña, existe la posibilidad de que se te pase por alto un evento [**Enter**](https://msdn.microsoft.com/library/windows/apps/dn263660) o **Exit** por completo.
 
 Si tu aplicación debe usar una geovalla con un radio pequeño, aconseja a los usuarios que usen la aplicación en un dispositivo con radio GPS para garantizar el mejor rendimiento.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Configurar una geovalla](https://msdn.microsoft.com/library/windows/apps/mt219702)
@@ -130,13 +137,4 @@ Si tu aplicación debe usar una geovalla con un radio pequeño, aconseja a los u
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

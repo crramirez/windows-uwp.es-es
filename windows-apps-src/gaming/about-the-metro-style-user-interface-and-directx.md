@@ -3,20 +3,27 @@ author: mtoepke
 title: "El objeto de aplicación y DirectX"
 description: Los juegos DirectX para Plataforma universal de Windows (UWP) no usan muchos elementos y objetos de la interfaz de usuario de Windows.
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, DirectX, objeto de aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 78e2bbcc4c9182b09138da457c839466b49ac31a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7d3290633ead698a6c42c3accdbd2012ccfd7065
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# El objeto de aplicación y DirectX
+# <a name="the-app-object-and-directx"></a>El objeto de aplicación y DirectX
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Los juegos DirectX para Plataforma universal de Windows (UWP) no usan muchos elementos y objetos de la interfaz de usuario de Windows. Como se ejecutan a un nivel más bajo en la pila de Windows Runtime, deben interoperar con el marco de la interfaz de usuario de una manera más básica, mediante el acceso y la interoperación con el objeto de aplicación directamente. Aprende cuándo y cómo se realiza esta interoperación y de qué manera puedes usar eficazmente, como desarrollador de DirectX, este modelo en el desarrollo de una aplicación para UWP.
 
-## Los espacios de nombres de interfaz de usuario principales
+## <a name="the-important-core-user-interface-namespaces"></a>Los espacios de nombres de interfaz de usuario principales
 
 
 En primer lugar, veamos los espacios de nombres de Windows Runtime que debes incluir (con **using**) en la aplicación para UWP. Pronto los describiremos en detalle.
@@ -31,7 +38,7 @@ En primer lugar, veamos los espacios de nombres de Windows Runtime que debes inc
 
  
 
-## El objeto de aplicación de Windows Runtime
+## <a name="the-windows-runtime-app-object"></a>El objeto de aplicación de Windows Runtime
 
 
 Es posible que desees que tu aplicación para UWP obtenga una ventana y un proveedor de vistas de los que se pueda obtener una vista y a los que se pueda conectar la cadena de intercambio (los búferes de presentación). También puedes enlazar esta vista a los eventos específicos de ventana para la aplicación en ejecución. Para obtener la ventana primaria del objeto de aplicación, definida por el tipo [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), crea un tipo que implemente [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482), de la misma manera que en el fragmento de código anterior.
@@ -52,13 +59,13 @@ Este es el conjunto básico de pasos necesarios para obtener una ventana con el 
 
     En este tipo, define:
 
-    -   Un método denominado [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491) que devuelva una instancia de la implementación de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), tal como la creaste en el paso1.
+    -   Un método denominado [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491) que devuelva una instancia de la implementación de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), tal como la creaste en el paso 1.
 
 3.  Pasa una instancia del proveedor de vistas a [**CoreApplication.Run**](https://msdn.microsoft.com/library/windows/apps/hh700469) desde **main**.
 
 Con estos conceptos básicos en mente, veamos otras opciones para ampliar este enfoque.
 
-## Tipos de interfaz de usuario principales
+## <a name="core-user-interface-types"></a>Tipos de interfaz de usuario principales
 
 
 Estos son otros tipos de interfaz de usuario principales de Windows Runtime que podrían resultar útiles:
@@ -79,12 +86,12 @@ La vista de la aplicación la genera el proveedor de vistas para la ventana de a
 
 En resumen, el objeto aplicación proporciona una fábrica de proveedores de vistas. Crea un proveedor de vistas y una instancia de ventana primaria para la aplicación. El proveedor de vistas define la vista de la aplicación para la ventana primaria de la aplicación. Veamos ahora los detalles de la vista y la ventana primaria.
 
-## Comportamientos y propiedades de CoreApplicationView
+## <a name="coreapplicationview-behaviors-and-properties"></a>Comportamientos y propiedades de CoreApplicationView
 
 
 [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) representa la vista actual de la aplicación. El singleton de aplicación crea la vista de la aplicación durante la inicialización, pero la vista permanece inactiva hasta que se activa. Puedes obtener la clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que muestra la vista al accediendo a la propiedad [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) de esta y puedes controlar eventos de activación y desactivación para la vista registrando delegados con el evento [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018).
 
-## Comportamientos y propiedades de CoreWindow
+## <a name="corewindow-behaviors-and-properties"></a>Comportamientos y propiedades de CoreWindow
 
 
 La ventana primaria, que es una instancia de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), se crea y se pasa al proveedor de vistas cuando se inicializa el objeto de aplicación. Si la aplicación tiene una ventana para mostrar, la muestra; de lo contrario, simplemente inicializa la vista.
@@ -93,7 +100,7 @@ La ventana primaria, que es una instancia de [**CoreWindow**](https://msdn.micro
 
 También puedes obtener el distribuidor de eventos de ventana para la ventana a través de la propiedad [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264) que proporciona una instancia de [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211).
 
-## Comportamientos y propiedades de CoreDispatcher
+## <a name="coredispatcher-behaviors-and-properties"></a>Comportamientos y propiedades de CoreDispatcher
 
 
 Puedes determinar el comportamiento de los subprocesos de la distribución de eventos para una ventana con el tipo [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211). En este tipo, hay un método especialmente importante: el método [**CoreDispatcher.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215), que inicia el procesamiento de eventos de ventana. Llamar a este método con la opción incorrecta para la aplicación puede provocar comportamientos de procesamiento de eventos inesperados de todo tipo.
@@ -109,7 +116,7 @@ Puedes determinar el comportamiento de los subprocesos de la distribución de ev
 
 UWP con DirectX debe usar la opción [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217) para evitar comportamientos de bloqueo que puedan interrumpir las actualizaciones de elementos gráficos.
 
-## Consideraciones de ASTA para desarrolladores con DirectX
+## <a name="asta-considerations-for-directx-devs"></a>Consideraciones de ASTA para desarrolladores con DirectX
 
 
 El objeto de aplicación que define la representación en tiempo de ejecución de tu aplicación para UWP y DirectX usa un modelo de subprocesos denominado contenedor uniproceso de aplicación (ASTA) para hospedar las vistas de la interfaz de usuario de tu aplicación. Si estás desarrollando una aplicación para UWP y DirectX, estarás familiarizado con las propiedades de ASTA, porque los subprocesos que envíes desde tu aplicación para UWP y DirectX deben usar las API de [**Windows::System::Threading**](https://msdn.microsoft.com/library/windows/apps/br229642) o deben usar [**CoreWindow::CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211). (Puedes obtener el objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) del ASTA llamando a [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) desde la aplicación).
@@ -152,10 +159,5 @@ En general, cuando diseñes tu aplicación para UWP, usa la clase [**CoreDispatc
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

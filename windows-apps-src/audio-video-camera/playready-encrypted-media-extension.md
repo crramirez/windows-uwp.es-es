@@ -1,26 +1,33 @@
 ---
 author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: "En esta sección se describe cómo modificar una aplicación web de PlayReady para que admita los cambios realizados de la versión anterior de Windows8.1 a la versión de Windows10."
+description: "En esta sección se describe cómo modificar una aplicación web de PlayReady para que admita los cambios realizados de la versión anterior de Windows 8.1 a la versión de Windows 10."
 title: Encrypted Media Extension (EME) de PlayReady
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 15b8c2cac08e59cfd9bd2c97c3a146cbc2be5548
-ms.openlocfilehash: eb85d9ea29917788612e0aa755465dbd6d1b9ba9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0698a01b1f846581422c5ecf4d47a45dd22762c4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Encrypted Media Extension (EME) de PlayReady
+# <a name="playready-encrypted-media-extension"></a>Encrypted Media Extension (EME) de PlayReady
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En esta sección se describe cómo modificar una aplicación web de PlayReady para que admita los cambios realizados de la versión anterior de Windows8.1 a la versión de Windows10.
+En esta sección se describe cómo modificar una aplicación web de PlayReady para que admita los cambios realizados de la versión anterior de Windows 8.1 a la versión de Windows 10.
 
 El uso de elementos multimedia de PlayReady en Internet Explorer permite a los desarrolladores crear aplicaciones web capaces de proporcionar contenido de PlayReady al usuario a la vez que aplica las reglas de acceso definidas por el proveedor de contenido. En esta sección se describe cómo agregar elementos multimedia de PlayReady a tus aplicaciones web existentes usando solo HTML5 y JavaScript.
 
-## Novedades de Encrypted Media Extension de PlayReady
+## <a name="whats-new-in-playready-encrypted-media-extension"></a>Novedades de Encrypted Media Extension de PlayReady
 
-En esta sección se proporciona una lista con los cambios realizados en Encrypted Media Extension (EME) de PlayReady para habilitar la protección de contenido de PlayReady en Windows10.
+En esta sección se proporciona una lista con los cambios realizados en Encrypted Media Extension (EME) de PlayReady para habilitar la protección de contenido de PlayReady en Windows 10.
 
 En la siguiente lista se describen las nuevas características y los cambios realizados en Encrypted Media Extension de PlayReady para Windows 10:
 
@@ -54,13 +61,13 @@ En la siguiente lista se describen las nuevas características y los cambios rea
 
     Esta función se agregó para limitar la reproducción de contenido a una resolución máxima incluso cuando se posee una clave más capaz (pero no una licencia). Admite casos en los que se codifican varios tamaños de flujo con una única clave.
 
-## Compatibilidad con Encrypted Media Extension en PlayReady
+## <a name="encrypted-media-extension-support-in-playready"></a>Compatibilidad con Encrypted Media Extension en PlayReady
 
 En esta sección se describe la versión de Encrypted Media Extension de W3C compatible con PlayReady.
 
 PlayReady para aplicaciones web está actualmente enlazado al [borrador de la extensión multimedia cifrada (EME) de W3C del 10 de mayo de 2013](http://www.w3.org/TR/2013/WD-encrypted-media-20130510/). En versiones futuras de Windows se cambiará esta compatibilidad de acuerdo con la especificación de EME actualizada.
 
-## Usar el DRM de hardware
+## <a name="use-hardware-drm"></a>Usar el DRM de hardware
 
 En esta sección se describe cómo la aplicación web puede usar DRM de hardware de PlayReady y cómo deshabilitar DRM de hardware si el contenido protegido no lo admite.
 
@@ -71,7 +78,7 @@ En ocasiones algunos contenidos no son compatibles con DRM de hardware. El conte
 > [!NOTE]
 > Para determinar si se admite el contenido HEVC, después de crear una instancia de `com.microsoft.playready`, usa el método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
 
-## Agregar la detención segura a aplicaciones web
+## <a name="add-secure-stop-to-your-web-app"></a>Agregar la detención segura a aplicaciones web
 
 En esta sección se describe cómo agregar la detención segura a aplicaciones web.
 
@@ -261,7 +268,7 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 > [!NOTE]
 > El `<SessionID>B64 encoded session ID</SessionID>` de los datos de detención segura del ejemplo descrito anteriormente puede ser un asterisco (*), que es un carácter comodín para todas las sesiones de detención segura registradas. Es decir, la etiqueta **SessionID** puede ser una sesión específica o un carácter comodín (\*) para seleccionar todas las sesiones de detención segura.
 
-## Consideraciones de programación para Encrypted Media Extension
+## <a name="programming-considerations-for-encrypted-media-extension"></a>Consideraciones de programación para Encrypted Media Extension
 
 En esta sección se enumeran las consideraciones de programación que debes tener en cuenta al crear aplicaciones para Windows 10 habilitadas para PlayReady.
 
@@ -295,15 +302,10 @@ function foo() {
 
 Para obtener más información, consulta las [aplicaciones de muestra](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 - [DRM de PlayReady](playready-client-sdk.md)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

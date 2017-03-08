@@ -3,38 +3,45 @@ author: jwmsft
 description: "Vincula el valor de una propiedad en una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. TemplateBinding solo se puede usar dentro de una definición de ControlTemplate en XAML."
 title: "Extensión de marcado TemplateBinding"
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4242bb606f29a6b70213dc8cde818ed86c3dda8d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7f279590cc1351efee2552e237ab095674768463
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensión de marcado {TemplateBinding}
+# <a name="templatebinding-markup-extension"></a>Extensión de marcado {TemplateBinding}
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vincula el valor de una propiedad en una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. **TemplateBinding** solo se puede usar dentro de una definición de [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) en XAML.
 
-## Uso del atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
 ``` syntax
 <object propertyName="{TemplateBinding sourceProperty}" .../>
 ```
 
-## Uso del atributo XAML (para la propiedad Setter en la plantilla o estilo)
+## <a name="xaml-attribute-usage-for-setter-property-in-template-or-style"></a>Uso del atributo XAML (para la propiedad Setter en la plantilla o estilo)
 
 ``` syntax
 <Setter Property="propertyName" Value="{TemplateBinding sourceProperty}" .../>
 ```
 
-## Valores de XAML
+## <a name="xaml-values"></a>Valores de XAML
 
 | Término | Descripción |
 |------|-------------|
 | propertyName | El nombre de la propiedad que se establece en la sintaxis de setter. Debe ser una propiedad de dependencia. |
 | sourceProperty | El nombre de otra propiedad de dependencia que existe en el tipo al que se aplica la plantilla. |
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 El uso de **TemplateBinding** es una parte fundamental de la definición de una plantilla de control, tanto si eres un autor de control personalizado como si reemplazas una plantilla de control para los controles existentes. Para obtener más información, consulta [Inicio rápido: plantillas de control](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
 
@@ -52,7 +59,7 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 
 **Nota** En la implementación del procesador XAML de Windows Runtime no hay una representación de clase de respaldo para **TemplateBinding**. **TemplateBinding** se usa exclusivamente en marcado XAML. No hay una forma directa de reproducir el comportamiento en el código.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Inicio rápido: Plantillas de control](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
 * [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946)
@@ -60,10 +67,5 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 * [Introducción a XAML](xaml-overview.md)
 * [Introducción a las propiedades de dependencia](dependency-properties-overview.md)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

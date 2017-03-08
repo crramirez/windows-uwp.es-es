@@ -3,17 +3,24 @@ author: mcleblanc
 title: "Introducción: ¿y después?"
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
 description: "Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d71c0026c8658e8aa88827915b8f2d815f10c6ef
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2ca600085c14c43d9d9d37e80efbae30bae650ef
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introducción. ¿Y después?
+# <a name="getting-started-what-next"></a>Introducción: ¿y después?
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes. Para los próximos pasos, lee los siguientes temas y después abre Microsoft Visual Studio y empieza a escribir código.
 
@@ -24,20 +31,15 @@ Con esta información básica, ya puedes empezar a crear aplicaciones para la Pl
 -   [Creación de tu primera aplicación de Windows en tiempo de ejecución con C# o Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=394138): un tema centrado en el desarrollo para Windows Phone.
 -   [Vídeos para desarrolladores de iOS y Android](https://msdn.microsoft.com/library/windows/apps/dn393982): ayuda adicional; en este caso, en formato visual.
 
-Además, asegúrate de visitar nuestros [recursos de la comunidad](http://go.microsoft.com/fwlink/p/?LinkId=263513) para obtener información sobre cómo obtener ayuda y conectarte mediante foros de desarrolladores, blogs, encuentros y talleres para desarrolladores, y eventos y contactos locales de Microsoft.
+Además, asegúrate de visitar nuestros [recursos de la comunidad](https://developer.microsoft.com/en-us/windows/support) para obtener información sobre cómo obtener ayuda y conectarte mediante foros de desarrolladores, blogs, encuentros y talleres para desarrolladores, y eventos y contactos locales de Microsoft.
 
-Creemos que Windows10 te ofrecerá nuevas oportunidades de creación de aplicaciones. Esperamos ver pronto las excelentes aplicaciones que crearás.
+Creemos que Windows 10 te ofrecerá nuevas oportunidades de creación de aplicaciones. Esperamos ver pronto las excelentes aplicaciones que crearás.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 **Temas para desarrolladores de iOS**
 * [Recursos para desarrolladores de iOS](https://msdn.microsoft.com/library/windows/apps/jj945493)
 * [Controles de Windows para desarrolladores de iOS](https://msdn.microsoft.com/library/windows/apps/dn263255)
 * [Guía básica de Windows para desarrolladores de iOS](https://msdn.microsoft.com/library/windows/apps/dn263256)
 * [Blog sobre la compilación de aplicaciones para Windows](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

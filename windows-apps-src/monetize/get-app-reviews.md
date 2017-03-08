@@ -2,19 +2,28 @@
 author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de opiniones de un intervalo de fechas proporcionado y otros filtros opcionales."
-title: "Obtener opiniones de la aplicación"
+title: "Obtener las opiniones de la aplicación"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, servicios de la Tienda, API de análisis de la Tienda Windows, opiniones, reviews"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: 49d3f3cb608f3207306af443c67b684a0ae9f319
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 68ad995341d0d4bedbe566e8a491a80b9b0a8ed2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="get-app-reviews"></a>Obtener opiniones de la aplicación
+# <a name="get-app-reviews"></a>Obtener las opiniones de la aplicación
 
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos de opiniones en formato JSON de un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de críticas](../publish/reviews-report.md) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos de opiniones en formato JSON de un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de opiniones](../publish/reviews-report.md) del panel del Centro de desarrollo de Windows.
 
-## <a name="prerequisites"></a>Requisitos previos
+Después de recuperar las revisiones, puedes usar los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md) de la API de opiniones de la Tienda Windows para responder mediante programación a opiniones.
+
+## <a name="prerequisites"></a>Requisitos previos.
 
 Para usar este método, primero debes hacer lo siguiente:
 
@@ -82,7 +91,7 @@ Para obtener una lista de los campos y operadores compatibles de cada campo, con
 | notHelpfulCount  | eq, ne  | El número de veces que la opinión se ha marcado como no útil.  |
 | responseDate  | eq, ne  | La fecha en la que se envió la respuesta.  |
 | responseText  | eq, ne, contains  | El contenido de texto de la respuesta.  |
-
+| id  | eq, ne  | El identificador de la revisión (es un GUID).        |
 
 <span/> 
 
@@ -138,7 +147,8 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | helpfulCount           | número  | El número de veces que la opinión se ha marcado como útil.     |
 | notHelpfulCount        | número  | El número de veces que la opinión se ha marcado como no útil.               |
 | responseDate           | cadena  | La fecha en la que se envió una respuesta.                 |
-| responseText           | cadena  | El contenido de texto de la respuesta.        |
+| responseText           | string  | El contenido del texto de la respuesta.        |
+| id                     | string  | El identificador de la revisión (es un GUID). Puedes usar este identificador en los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md).       |
 
 <span/> 
 
@@ -171,7 +181,8 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
       "helpfulCount": 0,
       "notHelpfulCount": 0,
       "responseDate": "2015-08-07T01:50:22.9874488Z",
-      "responseText": "1"
+      "responseText": "1",
+      "id": "6be543ff-1c9c-4534-aced-af8b4fbe0316"
     }
   ],
   "@nextLink": null,
@@ -181,15 +192,12 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Informe Críticas](../publish/reviews-report.md)
+* [Informe de opiniones](../publish/reviews-report.md)
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
-* [Obtener los datos de compra de la aplicación](get-app-acquisitions.md)
+* [Obtener información de respuesta de opiniones de la aplicación](get-response-info-for-app-reviews.md)
+* [Enviar respuestas a opiniones de la aplicación](submit-responses-to-app-reviews.md)
+* [Obtener los datos de las adquisiciones de la aplicación](get-app-acquisitions.md)
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
 * [Obtener los datos del informe de errores](get-error-reporting-data.md)
 * [Obtener la clasificación de la aplicación](get-app-ratings.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

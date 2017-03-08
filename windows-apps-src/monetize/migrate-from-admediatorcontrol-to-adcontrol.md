@@ -1,11 +1,18 @@
 ---
 author: mcleanbyron
 ms.assetid: 9621641A-7462-425D-84CC-101877A738DA
-description: "Aprende cómo se realiza la migración de AdMediatorControl a AdControl en las aplicaciones para UWP."
+description: "Obtén más información sobre cómo se realiza la migración de AdMediatorControl a AdControl en las aplicaciones para UWP."
 title: Migrar de AdMediatorControl a AdControl para las aplicaciones para UWP
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, anuncios, publicidad, migrar, AdMediatorControl, AdControl, ads, advertising, migrate
 translationtype: Human Translation
-ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
-ms.openlocfilehash: 6e7e833327dce4b49e44b7485908c8a507b217ef
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 83235595a6a7f9e9b0b5d8de154d6e5d8a8db8ef
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -158,9 +165,4 @@ En **Administrador de referencias**, expande **Universal Windows**, haz clic en 
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[AdControl](./code/AdvertisingSamples/MigrateToAdControl/cs/ExamplePage1.xaml.cs#Snippet5)]
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -1,17 +1,25 @@
 ---
 author: awkoren
-Description: "Implementa y depura una aplicación para Plataforma universal de Windows (UWP) convertida a partir de una aplicación de escritorio de Windows (Win32, WPF y Windows Forms) mediante el uso del puente de aplicación de escritorio a UWP."
+Description: "Implementa y depura una aplicación para la Plataforma universal de Windows (UWP) convertida a partir de una aplicación de escritorio de Windows (Win32, WPF y Windows Forms) mediante el uso del Puente de dispositivo de escritorio a UWP."
 Search.Product: eADQiWindows 10XVcnh
-title: Depurar aplicaciones convertidas con el puente de escritorio
+title: Depurar aplicaciones convertidas con el Puente de dispositivo de escritorio
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 translationtype: Human Translation
-ms.sourcegitcommit: dba00371b29b3179a6dc3bdd96a092437331e61a
-ms.openlocfilehash: 537ac8e83d5f54bf83ec0e05b71be354651000f2
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 9660d14a1ca28929a213d4ed5a59cdcda73ccc39
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="debug-apps-converted-with-the-desktop-bridge"></a>Depurar aplicaciones convertidas con el puente de escritorio
+# <a name="debug-apps-converted-with-the-desktop-bridge"></a>Depurar aplicaciones convertidas con el Puente de dispositivo de escritorio
 
-En este tema se proporciona información destinada a ayudarte a depurar correctamente tu aplicación y luego convertirla con el puente de escritorio a UWP. Tienes varias opciones para depurar la aplicación convertida.
+En este tema se proporciona información destinada a ayudarte a depurar correctamente tu aplicación y luego convertirla con el Puente de dispositivo de escritorio a UWP. Tienes varias opciones para depurar la aplicación convertida.
 
 ## <a name="attach-to-process"></a>Asociar al proceso
 
@@ -53,7 +61,7 @@ Puedes empezar de este modo:
 
     Establece PackageLayout en la ubicación raíz de la AppX que creó el convertidor (arriba). A continuación, elige qué icono ejecutar.
 
-8.  Abre y edita AppXFileList.xml. Este archivo define cómo copiar el resultado de la compilación de depuración de Win32 en el diseño de AppX que el convertidor compiló. De manera predeterminada, tenemos un marcador de posición en el archivo con una etiqueta y comentario de ejemplo:
+8.    Abre y edita AppXFileList.xml. Este archivo define cómo copiar el resultado de la compilación de depuración de Win32 en el diseño de AppX que el convertidor compiló. De manera predeterminada, tenemos un marcador de posición en el archivo con una etiqueta y comentario de ejemplo:
 
     ```XML
     <?xml version="1.0" encoding="utf-8"?>
@@ -118,9 +126,9 @@ Puedes empezar de este modo:
 
     ![alt](images/desktop-to-uwp/debug-5.png)
 
-10. Por último, ahora puedes establecer un punto de interrupción en el código de Win32 y presionar la tecla F5 para iniciar el depurador. Copiará las actualizaciones que realizaste en tu aplicación de Win32 en el paquete AppX y te permitirá depurar directamente desde dentro de Visual Studio.
+10.    Por último, ahora puedes establecer un punto de interrupción en el código de Win32 y presionar la tecla F5 para iniciar el depurador. Copiará las actualizaciones que realizaste en tu aplicación de Win32 en el paquete AppX y te permitirá depurar directamente desde dentro de Visual Studio.
 
-11. Si actualizas tu aplicación, necesitarás usar MakeAppX para volver a empaquetar la aplicación. Para obtener más información, consulta [App packager (MakeAppx.exe) (Empaquetador de aplicaciones [MakeAppx.exe])](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx). 
+11.    Si actualizas tu aplicación, necesitarás usar MakeAppX para volver a empaquetar la aplicación. Para obtener más información, consulta [App packager (MakeAppx.exe) (Empaquetador de aplicaciones [MakeAppx.exe])](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx). 
 
 Si tienes varias configuraciones de compilación (por ejemplo, para lanzamiento y depuración), puedes agregar lo siguiente al archivo AppXFileList.xml para copiar la compilación de Win32 desde distintas ubicaciones:
 
@@ -134,7 +142,7 @@ Si tienes varias configuraciones de compilación (por ejemplo, para lanzamiento 
 
 También puedes usar la compilación condicional para habilitar rutas de código en particular si actualizas tu aplicación para UWP pero sigues queriendo compilarla para Win32. 
 
-1.  En el ejemplo siguiente, el código se compilará solo para DesktopUWP y mostrará un icono con la API de WinRT. 
+1.    En el ejemplo siguiente, el código se compilará solo para DesktopUWP y mostrará un icono con la API de WinRT. 
 
     ```C#
     [Conditional("DesktopUWP")]
@@ -148,17 +156,17 @@ También puedes usar la compilación condicional para habilitar rutas de código
     }
     ```
 
-2.  Puedes usar Configuration Manager para agregar la nueva configuración de compilación:
+2.    Puedes usar Configuration Manager para agregar la nueva configuración de compilación:
 
     ![alt](images/desktop-to-uwp/debug-6.png)
 
     ![alt](images/desktop-to-uwp/debug-7.png)
 
-3.  A continuación, en las propiedades del proyecto, agrega compatibilidad con símbolos de compilación condicional:
+3.    A continuación, en las propiedades del proyecto, agrega compatibilidad con símbolos de compilación condicional:
 
     ![alt](images/desktop-to-uwp/debug-8.png)
 
-4.  Ahora puedes alternar el destino de compilación a DesktopUWP si quieres que la compilación esté destinada a la API de UWP que agregaste.
+4.    Ahora puedes alternar el destino de compilación a DesktopUWP si quieres que la compilación esté destinada a la API de UWP que agregaste.
 
 ## <a name="plmdebug"></a>PLMDebug 
 
@@ -174,9 +182,4 @@ Puedes invocar procesos personalizados dentro del contenedor de un paquete de la
 Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [-Command] <string> [[-Args]
     <string>]  [<CommonParameters>]
 ```
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

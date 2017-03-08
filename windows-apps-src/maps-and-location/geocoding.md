@@ -3,16 +3,23 @@ author: PatrickFarley
 title: "Realizar geocodificación y geocodificación inversa"
 description: "Puedes convertir direcciones en ubicaciones geográficas (geocodificación) y ubicaciones geográficas en direcciones (geocodificación inversa), si llamas a los métodos de la clase MapLocationFinder del espacio de nombres Windows.Services.Maps."
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, geocodificación, geocoding, mapa, map, ubicación, location"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d42708a82f99e345183b6cbcb87cfdd136b10e52
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 16be7bcafaf286a71e79fb4bca01511ddc7a1ae0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Realizar geocodificación y geocodificación inversa
+# <a name="perform-geocoding-and-reverse-geocoding"></a>Realizar geocodificación y geocodificación inversa
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Puedes convertir direcciones en ubicaciones geográficas (geocodificación), y ubicaciones geográficas en direcciones (geocodificación inversa), si llamas a los métodos de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) del espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979).
@@ -32,7 +39,7 @@ Aquí se explica la relación entre las clases de geocodificación y geocodifica
 
  
 
-## Obtener una ubicación (geocodificación)
+## <a name="get-a-location-geocode"></a>Obtener una ubicación (geocodificación)
 
 
 Convierte una dirección o el nombre de un lugar en una ubicación geográfica (geocodificación) mediante el siguiente procedimiento.
@@ -81,7 +88,7 @@ Este código muestra los siguientes resultados en el cuadro de texto `tbOutputTe
 result = (47.6406099647284,-122.129339994863)
 ```
 
-## Obtener una dirección (geocodificación inversa)
+## <a name="get-an-address-reverse-geocode"></a>Obtener una dirección (geocodificación inversa)
 
 
 Convierte una ubicación geográfica en una dirección (geocodificación inversa) mediante el siguiente procedimiento.
@@ -123,7 +130,7 @@ Este código muestra los siguientes resultados en el cuadro de texto `tbOutputTe
 town = Redmond
 ```
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
@@ -133,11 +140,4 @@ town = Redmond
 * [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550)
 * [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)
 * [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

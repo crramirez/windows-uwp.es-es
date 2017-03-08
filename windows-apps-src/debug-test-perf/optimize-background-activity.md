@@ -2,18 +2,25 @@
 author: PatrickFarley
 ms.assetid: 24351dad-2ee3-462a-ae78-2752bb3374c2
 title: "Aprovechamiento de las características de ahorro de batería"
-description: "Crea aplicaciones para UWP que colaboren con el sistema para usar tareas en segundo plano de una manera que produzca un consumo eficiente de la batería."
+description: "Crea aplicaciones para UWP que colaboren con el sistema para usar tareas en segundo plano con un consumo eficiente de la batería."
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 73b19e54b863693aece045e5b653bc0583a676bb
-ms.openlocfilehash: 854ec43d075f8adc1f875d3b9e5e2d818434edb9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 045dfeb4696a4854b114d88da2a2cbb75d621a58
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="optimize-background-activity"></a>Optimización de la actividad en segundo plano
+# <a name="optimize-background-activity"></a>Optimizar la actividad en segundo plano
 
 Las aplicaciones universales de Windows deben tener un buen rendimiento en todas las familias de dispositivos por igual. En los dispositivos alimentados por batería, el consumo de energía es un factor determinante en la experiencia global del usuario de la aplicación. Una duración de la batería de todo el día es una característica deseable para todos los usuarios, pero requiere la eficiencia de todo el software instalado en el dispositivo, incluido el tuyo. 
 
-El comportamiento de las tareas en segundo plano es posiblemente el factor más determinante en el gasto total de energía de una aplicación. Una tarea en segundo plano es cualquier actividad del programa que se haya registrado en el sistema para ejecutarse sin que la aplicación esté abierta. Consulta [Crear y registrar una tarea en segundo plano fuera del proceso](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-an-outofproc-background-task) para obtener más información.
+El comportamiento de las tareas en segundo plano es posiblemente el factor más determinante en el gasto total de energía de una aplicación. Una tarea en segundo plano es cualquier actividad del programa que se haya registrado en el sistema para ejecutarse sin que la aplicación esté abierta. Consulta [Crear y registrar una tarea en segundo plano fuera del proceso](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task) para obtener más información.
 
 ## <a name="background-activity-allowance"></a>Permiso para la actividad en segundo plano
 
@@ -47,12 +54,7 @@ Asegúrate de probar tu aplicación en dispositivos reales para los escenarios d
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y registrar una tarea en segundo plano fuera del proceso](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-an-outofproc-background-task)  
+* [Crear y registrar una tarea en segundo plano fuera del proceso](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
 * [Planificación del rendimiento](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -2,23 +2,30 @@
 author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
-description: "Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows10 Mobile."
+description: "Simula la interacción en el mundo real con un dispositivo y prueba las características de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows 10 Mobile."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9a33710315486c23a204a528d3d87421c6990b85
-ms.openlocfilehash: 6889c80d9879295fec31685aa3fd9bea9e6aea3e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c20b64cdc2a1335d4739d6790512eddd76bc8a08
+ms.lasthandoff: 02/07/2017
 
 ---
-# Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
+# <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows10 Mobile. El emulador es una aplicación de escritorio que simula un dispositivo móvil que ejecuta Windows10. Proporciona un entorno virtualizado en el que puedes depurar y probar aplicaciones de Windows sin un dispositivo físico. También proporciona un entorno aislado para prototipos de la aplicación.
+Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows 10 Mobile. El emulador es una aplicación de escritorio que simula un dispositivo móvil que ejecuta Windows 10. Proporciona un entorno virtualizado en el que puedes depurar y probar aplicaciones de Windows sin un dispositivo físico. También proporciona un entorno aislado para prototipos de la aplicación.
 
 El emulador ha sido diseñado para proporcionar unas prestaciones comparables a las de un dispositivo real. No obstante, antes de publicar tu aplicación en la Tienda Windows, te recomendamos que la pruebes en un dispositivo físico.
 
 Puedes probar tu aplicación universal con una imagen de emulador de Windows 10 Mobile para diversas resoluciones de pantalla y configuraciones de tamaño de pantalla. Puedes simular la interacción en el mundo real con un dispositivo y probar varias funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft.
 
-## Requisitos del sistema
+## <a name="system-requirements"></a>Requisitos del sistema
 
 El equipo debe cumplir los siguientes requisitos:
 
@@ -46,7 +53,7 @@ Microsoft Emulator para Windows 10 Mobile requiere Visual Studio 2015; no es com
 
 Emulador de Microsoft para Windows 10 Mobile no puede cargar las aplicaciones orientadas a versiones del Windows Phone OS anteriores a Windows Phone OS 7.1.
 
-## Instalación y desinstalación
+## <a name="installing-and-uninstalling"></a>Instalación y desinstalación
 
 -   **Instalación**.
 
@@ -60,7 +67,7 @@ Emulador de Microsoft para Windows 10 Mobile no puede cargar las aplicaciones or
 
     Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador virtual de Ethernet para Hyper-V que se creó para que lo use el emulador no se elimina automáticamente. Puedes eliminar manualmente este adaptador virtual desde **Conexiones de red** en **Panel de control**.
 
-## Novedades en el Emulador de Microsoft para Windows 10 Mobile
+## <a name="whats-new-in-microsoft-emulator-for-windows-10-mobile"></a>Novedades en el Emulador de Microsoft para Windows 10 Mobile
 
 Además de proporcionar soporte para la Plataforma universal de Windows (UWP), el emulador ha agregado la funcionalidad siguiente:
 
@@ -68,9 +75,9 @@ Además de proporcionar soporte para la Plataforma universal de Windows (UWP), e
 -   Compatibilidad con NFC. El emulador permite simular NFC y hace que sea posible probar y desarrollar aplicaciones universales compatibles con NFC/proximidad.
 -   La aceleración de hardware nativo mejora el rendimiento de los elementos gráficos en el emulador mediante el uso de la tarjeta gráfica local. Para poder usar la aceleración, debes tener instalada una tarjeta gráfica compatible y habilitar la aceleración en la pestaña **Sensores** de la configuración **Herramientas adicionales** de la interfaz de usuario del emulador.
 
-## Funciones que se pueden probar en el emulador
+## <a name="features-that-you-can-test-in-the-emulator"></a>Funciones que se pueden probar en el emulador
 
-Además de las nuevas funciones que se mencionan en la sección anterior, puedes probar las siguientes funciones que se usan de forma común en el Emulador de Microsoft para Windows10 Mobile.
+Además de las nuevas funciones que se mencionan en la sección anterior, puedes probar las siguientes funciones que se usan de forma común en el Emulador de Microsoft para Windows 10 Mobile.
 
 -   **Resolución de pantalla, tamaño de pantalla y memoria**. Haz que tu aplicación tenga un mercado potencial amplio probándola en varias imágenes de emulador para simular diversas resoluciones de pantalla, tamaños físicos y restricciones de memoria.
 
@@ -96,7 +103,7 @@ Además de las nuevas funciones que se mencionan en la sección anterior, puedes
 
 -   **Pantalla de bloqueo**. Con el emulador abierto, presiona dos veces F12 en el teclado del equipo. La tecla F12 emula el botón de inicio/apagado en el teléfono. Al presionar la tecla por primera vez, se apaga la pantalla. Al presionar la tecla por segunda vez, la pantalla se enciende de nuevo, con la pantalla de bloqueo activada. Desbloquea la pantalla usando el mouse para deslizar la pantalla de bloqueo hacia arriba.
 
-## Características que no se pueden probar en el emulador
+## <a name="features-that-you-cant-test-in-the-emulator"></a>Características que no se pueden probar en el emulador
 
 Prueba las características siguientes únicamente en un dispositivo físico.
 
@@ -104,9 +111,9 @@ Prueba las características siguientes únicamente en un dispositivo físico.
 -   Giroscopio
 -   Controlador de vibración
 -   Brillo. El nivel de brillo del emulador siempre es Alto.
--   Vídeo de alta resolución. Los vídeos con una resolución superior a la resolución VGA (640x480) no se reproducen de forma confiable, sobre todo en imágenes de emulador con solo 512MB de memoria.
+-   Vídeo de alta resolución. Los vídeos con una resolución superior a la resolución VGA (640 x 480) no se reproducen de forma confiable, sobre todo en imágenes de emulador con solo 512 MB de memoria.
 
-## Entrada de mouse
+## <a name="mouse-input"></a>Entrada de mouse
 
 Simula la entrada mediante mouse usando el mouse físico o el panel táctil en tu PC con Windows y el botón de la entrada del mouse en la barra de herramientas del emulador. Esta función es útil si tu aplicación proporciona al usuario la posibilidad de usar un mouse emparejado con su dispositivo de Windows 10 para proporcionar datos de entrada.
 
@@ -120,7 +127,7 @@ La pantalla del emulador con la entrada del mouse habilitada.
 
 El botón de la entrada del mouse en la barra de herramientas del emulador.
 
-## Entrada de teclado
+## <a name="keyboard-input"></a>Entrada de teclado
 
 El emulador admite la asignación del teclado de hardware del equipo de desarrollo al teclado de un Windows Phone. El comportamiento de las teclas es el mismo que en un dispositivo Windows Phone. 
 
@@ -151,7 +158,7 @@ ESC | WIN + ESC | ATRÁS | Las pulsaciones prolongadas funcionan según lo previ
  
 
 
-## Near Field Communications (NFC)
+## <a name="near-field-communications-nfc"></a>Near Field Communications (NFC)
 
 Crea y prueba aplicaciones que usen funciones compatibles con Near Field Communication (NFC) en Windows 10 Mobile mediante la pestaña **NFC** del menú **Herramientas adicionales** del emulador. NFC es útil para diversas situaciones, desde los escenarios de proximidad (por ejemplo, tocar para compartir) hasta la emulación de tarjetas (por ejemplo, tocar para pagar).
 
@@ -173,7 +180,7 @@ En todos los modos, la ventana del emulador tiene tres áreas de interés.
 
 Después de iniciar el instalador de inicio rápido, asegúrate de seguir las instrucciones anteriores para seleccionar las 3 casillas del aviso del firewall. Asimismo, la herramienta tapper debe estar instalada y usarse en el mismo equipo host físico que el emulador de Microsoft.
 
-### Modo de proximidad
+### <a name="proximity-mode"></a>Modo de proximidad
 
 Para simular un par de teléfonos tocándose entre sí, deberás iniciar un par de emuladores de Windows Phone 8. Dado que Visual Studio no admite la ejecución de dos emuladores idénticos al mismo tiempo, tendrás que seleccionar diferentes resoluciones de cada uno de los emuladores para solucionar el problema.
 
@@ -211,7 +218,7 @@ Puedes crear estos mensajes editando las ventanas **Carga** o proporcionarlas en
 
 El Kit de controladores de Windows 8 (WDK) incluye una muestra de controlador que expone el mismo protocolo que el emulador de Windows Phone 8. Deberás descargar el DDK, compilar ese controlador de muestra, instalarlo en un dispositivo de Windows 8 y, a continuación, agregar la dirección IP del dispositivo de Windows 8 o nombre de host a la lista de dispositivos y tocarlo con otro dispositivo de Windows 8 o con un emulador de Windows Phone 8.
 
-### Modo HCE (Emulación de tarjeta basada en host)
+### <a name="host-card-emulation-hce-mode"></a>Modo HCE (Emulación de tarjeta basada en host)
 
 En el modo de Emulación de tarjeta basada en host (HCE) puedes probar la aplicación de emulación de tarjeta basada en HCE escribiendo tus propios scripts para simular un terminal de lector de tarjetas inteligentes, como una terminal de punto de venta (POS). Esta herramienta supone que estás familiarizado con los pares de respuesta de comandos (compatibles con ISO-7816-4) que se envían entre un terminal lector (como un punto de venta, un lector de distintivos o un lector de tarjetas de tránsito) y la tarjeta inteligente (que estás emulando en la aplicación).
 
@@ -231,7 +238,7 @@ También puedes usar la herramienta del simulador del terminal de MasterCard ([h
 
 Para más información sobre el soporte técnico de HCE y sobre cómo desarrollar aplicaciones HCE en Windows 10 Mobile, consulta el [Blog del equipo de Microsoft NFC](http://go.microsoft.com/fwlink/?LinkId=534749).
 
-### Cómo crear scripts para las pruebas de HCE
+### <a name="how-to-create-scripts-for-hce-testing"></a>Cómo crear scripts para las pruebas de HCE
 
 Los scripts se escriben como código de C# y se llama al método de ejecución del script al hacer clic en el botón **Reproducir**, este método toma una interfaz IScriptProcessor que se usa para emitir comandos APDU de emisión, para emitir a la ventana de registro y controlar el tiempo de espera para esperar una respuesta APDU del teléfono.
 
@@ -258,13 +265,13 @@ A continuación te mostramos una referencia acerca de qué funcionalidad está d
         }
 ```
 
-### Modo de lector de tarjeta inteligente
+### <a name="smart-card-reader-mode"></a>Modo de lector de tarjeta inteligente
 
 El emulador se puede conectar a un dispositivo lector de tarjetas inteligentes del equipo host. De este modo, las tarjetas inteligentes insertadas o tocadas se mostrarán en tu aplicación para móvil y podrás establecer comunicación con ellas mediante APDU con la clase [**Windows.Devices.SmartCards.SmartCardConnection**](https://msdn.microsoft.com/library/windows/apps/Dn608002). Para que esto funcione, necesitarás conectar un dispositivo lector de tarjetas inteligentes compatible al equipo. Para ello hay disponibles lectores de tarjetas inteligentes USB (NFC/sin contactos e insertar/contacto). Para permitir al emulador funcionar con un lector de tarjeta inteligente conectado, primero elige el modo de **Lector de tarjetas** que debe mostrar un cuadro desplegable con todos los lectores de tarjetas inteligentes compatibles conectados al sistema host y, a continuación, elegir el dispositivo lector de tarjetas inteligentes al que deseas estar conectado en la lista desplegable.
 
 Ten en cuenta que no todos los lectores de tarjetas inteligentes compatibles con NFC admiten algunos tipos de tarjetas NFC, y algunos no son compatibles con los comandos APDU de tarjeta de almacenamiento PC/SC estándar.
 
-## Entrada multipunto
+## <a name="multi-point-input"></a>Entrada multipunto
 
 Simula una entrada multitáctil para reducir y aumentar, girar y realizar un movimiento panorámico de los objetos con el botón **Multi-touch Input** de la barra de herramientas del emulador. Esta característica es útil si tu aplicación muestra fotos, mapas u otros elementos visuales que los usuarios pueden reducir o aumentar, girar o aplicarles movimientos panorámicos.
 
@@ -281,7 +288,7 @@ La captura de pantalla siguiente muestra la entrada multitáctil.
 
 ![Opción de entrada multipunto en la barra de herramientas del emulador](images/em-multipoint.png)
 
-## Acelerómetro
+## <a name="accelerometer"></a>Acelerómetro
 
 Prueba aplicaciones que sigan el movimiento del teléfono con la pestaña **Accelerometer** de las **herramientas adicionales** del emulador.
 
@@ -305,7 +312,7 @@ Puedes probar el sensor del acelerómetro con la entrada en vivo o con la entrad
 
 ![Página Accelerometer de las herramientas adicionales del emulador](images/em-accelerometer.png)
 
-## Ubicación y conducción
+## <a name="location-and-driving"></a>Ubicación y conducción
 
 Prueba aplicaciones que usen navegación o geovallas con la pestaña **Location** de las **herramientas adicionales** del emulador. Esta característica es útil para simular conducir, ir en bicicleta o caminar en condiciones parecidas a las del mundo real.
 
@@ -385,7 +392,7 @@ La captura de pantalla siguiente muestra el modo Route. La línea naranja indica
 
 -   Las únicas propiedades de posición que se simulan son la latitud, la longitud, la precisión y el origen de la posición. El simulador de ubicación no simula otras propiedades como la velocidad, el rumbo, etc.
 
-## Red
+## <a name="network"></a>Red
 
 Prueba tu aplicación con distintas velocidades de red y distintas intensidades de señal con la pestaña **Network** de las **herramientas adicionales** del emulador. Esta característica es útil si tu aplicación llama a servicios web o transfiere datos.
 
@@ -409,7 +416,7 @@ También puedes revisar la configuración de red actual en la pestaña **Network
 
 ![Página Network de las herramientas adicionales del emulador](images/em-network.png)
 
-## Tarjeta SD
+## <a name="sd-card"></a>Tarjeta SD
 
 Prueba tu aplicación con una tarjeta SD extraíble simulada, con la pestaña **SD card** de **Additional Tools** del emulador. Esta característica es útil si tu aplicación lee o escribe archivos.
 
@@ -448,7 +455,7 @@ La pestaña **SD Card** usa una carpeta en el equipo de desarrollo para simular 
 
 La velocidad de lectura y escritura en relación con la tarjeta SD simulada está limitada, para imitar las velocidades del mundo real. La obtención de acceso una tarjeta SD es más lenta que la obtención de acceso a la unidad de disco duro del equipo.
 
-## Notificaciones
+## <a name="notifications"></a>Notificaciones
 
 Envía notificaciones de inserción a tu aplicación con la pestaña **Notificaciones** de las **herramientas adicionales** del emulador. Esta característica es útil si tu aplicación recibe notificaciones de inserción.
 
@@ -520,14 +527,14 @@ Puedes probar fácilmente las notificaciones de inserción sin crear el servicio
 
 ![Página Notifications de las herramientas adicionales del emulador](images/em-notifications.png)
 
-## Sensores
+## <a name="sensors"></a>Sensores
 
 Prueba el funcionamiento de tu aplicación en teléfonos de bajo costo que no tengan todas las características de cámara o sensores opcionales, con la pestaña **Sensors** de las **herramientas adicionales** del emulador. Esta característica es útil si tu aplicación usa la cámara o alguno de los sensores del teléfono y quieres que tu aplicación llegue a un mercado lo más amplio posible.
 
 -   De forma predeterminada, todos los sensores están habilitados en la lista **Optional sensors**. Activa o desactiva las casillas de los sensores de forma individual para habilitarlos o deshabilitarlos.
 -   Tras cambiar tus selecciones, haz clic en **Apply**. Posteriormente tendrás que reiniciar el emulador.
 -   Si haces modificaciones y posteriormente cambias de pestaña o cierras la ventana **Additional Tools** sin hacer clic en **Apply**, tus cambios se descartarán.
--   Tu configuración permanece vigente entre las sesiones de emulador hasta que la cambies o la restablezcas. Si capturas un punto de control, la configuración se guarda con el punto de control. La configuración únicamente permanece vigente para el emulador específico que estés usando, por ejemplo **Emulator 8.1 WVGA 4" 512MB**.
+-   Tu configuración permanece vigente entre las sesiones de emulador hasta que la cambies o la restablezcas. Si capturas un punto de control, la configuración se guarda con el punto de control. La configuración únicamente permanece vigente para el emulador específico que estés usando, por ejemplo **Emulator 8.1 WVGA 4" 512 MB**.
 
 ![Página Sensors de las herramientas adicionales del emulador](images/em-sensors.png)
 
@@ -562,7 +569,7 @@ Aquí te presentamos la lista de las características de cámara compatibles con
 | Resolución de vídeo   | 640 x 480 (VGA)          | 640 x 480 (VGA) o superior |
 | Resolución de la vista previa | 640 x 480 (VGA)          | 640 x 480 (VGA)           |
 
-## Contadores de velocidad de fotogramas
+## <a name="frame-rate-counters"></a>Contadores de velocidad de fotogramas
 
 Usa el contador de velocidad de fotogramas en Windows Phone Emulator para supervisar las prestaciones de tu aplicación en ejecución.
 
@@ -607,11 +614,11 @@ Puedes habilitar o deshabilitar la visualización de los contadores de velocidad
 >End If
 >```
 
-## Problemas conocidos
+## <a name="known-issues"></a>Problemas conocidos
 
 A continuación se indican los problemas conocidos con el emulador, con sugerencias para solucionarlos en el caso de que surjan.
 
-### Mensaje de error: "Error al quitar el conmutador Ethernet virtual"
+### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>Mensaje de error: "Error al quitar el conmutador Ethernet virtual"
 
 En algunos casos, incluso después de actualizar a un nuevo paquete piloto de Windows 10, un conmutador de red virtual asociado con el emulador puede entrar en un estado donde no se puede eliminar a través de la interfaz de usuario.
 
@@ -619,19 +626,19 @@ Para recuperar de esta situación, ejecuta "netcfg -d" desde un símbolo del sis
 
 **Nota** Este comando eliminará todos los dispositivos de red, no solo los asociados con el emulador. Cuando se vuelva a inicia tu PC, se detectarán automáticamente todos los dispositivos de red de hardware.
  
-### No se pueden iniciar los emuladores
+### <a name="unable-to-launch-the-emulators"></a>No se pueden iniciar los emuladores
 
 El emulador de Microsoft incluye XDECleanup.exe, una herramienta que elimina todas las máquinas virtuales, discos de diferenciación y conmutadores de red específicos del emulador, y se entrega con los archivos binarios de emulador (XDE) preparados. Debes usar esta herramienta para limpiar las máquinas virtuales del emulador si entran en un estado incorrecto. Ejecuta la herramienta un símbolo del sistema con privilegios de administrador:`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
 > **Nota** XDECleanup.exe elimina todas las máquinas virtuales Hyper-V específicas del emulador y también elimina los puntos de control o estados guardados de las máquinas virtuales.
 
-### Desinstalar la imagen de Windows 10 Mobile
+### <a name="uninstall-windows-10-for-mobile-image"></a>Desinstalar la imagen de Windows 10 Mobile
 
 Cuando instalas el emulador, se instala una imagen VHD de Windows 10 Mobile, que obtiene su propia entrada la lista **Programas y características** del Panel de control. Si quieres desinstalar la imagen, busca **Imagen de 10 Windows 10 Mobile - <version>** en la lista de programas instalados, haz clic en él y elige **Desinstalar**.
 
 En la versión actual, tendrás que eliminar manualmente el archivo VHD para el emulador. Si el emulador se ha instalado en la ruta predeterminada, el archivo VHD se encuentra en C:\\Archivos de programa (x86)\\Windows Kits\\10\\Emulation\\Mobile\\<version>\\flash.vhd.
 
-###Cómo deshabilitar los gráficos acelerados por hardware
+###<a name="how-to-disable-hardware-accelerated-graphics"></a>Cómo deshabilitar los gráficos acelerados por hardware
 
 De forma predeterminada, el emulador de Windows 10 Mobile usa gráficos acelerados de hardware. Si tienes problemas para iniciar el emulador con la aceleración de hardware habilitada, puedes desactivar estableciendo un valor del Registro.
 
@@ -646,19 +653,14 @@ Para deshabilitar la aceleración de hardware:
 
 **Nota:** Después de establecer este valor del Registro, debes eliminar la máquina virtual en el administrador de Hyper-V para la configuración que iniciaste en Visual Studio y después volver a iniciar el emulador con gráficos representados por software.
 
-## Recursos de soporte técnico
+## <a name="support-resources"></a>Recursos de soporte técnico
 
-Para encontrar respuestas y solucionar problemas al empezar a trabajar con las herramientas de Windows10, visita el [Foro de herramientas de Windows10](http://go.microsoft.com/fwlink/?LinkId=534765). Para ver todos los foros de desarrollo de Windows10, visita [este vínculo](http://go.microsoft.com/fwlink/?LinkId=535000).
+Para encontrar respuestas y solucionar problemas al empezar a trabajar con las herramientas de Windows 10, visita el [Foro de herramientas de Windows 10](http://go.microsoft.com/fwlink/?LinkId=534765). Para ver todos los foros de desarrollo de Windows 10, visita [este vínculo](http://go.microsoft.com/fwlink/?LinkId=535000).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Ejecutar aplicaciones de Windows Phone en el emulador](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Archivo del SDK de Windows y Windows Phone](https://dev.windows.com/downloads/sdk-archive)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

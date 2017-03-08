@@ -3,21 +3,28 @@ title: "Biometría de huellas digitales"
 description: "En este artículo se explica cómo agregar la opción de biometría de huellas digitales en la aplicación para la Plataforma universal de Windows (UWP)."
 ms.assetid: 55483729-5F8A-401A-8072-3CD611DDFED2
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: d2dfbc6c69e8ee97a01bbf0d7ae82488ca62e3cb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 84e191df23f10f81a3588662f9ba1505cee12e21
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Biometría de huellas digitales
+# <a name="fingerprint-biometrics"></a>Biometría de huellas digitales
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se explica cómo agregar la opción de biometría de huellas digitales en la aplicación para la Plataforma universal de Windows (UWP). Al incluir una solicitud de autenticación con huella digital cuando el usuario deba dar su consentimiento a una acción concreta, se aumenta la seguridad de su aplicación. Por ejemplo, puedes solicitar la autenticación con huella digital antes de autorizar una compra desde la aplicación o de permitir el acceso a recursos restringidos. Puedes administrar la autenticación con huella digital mediante la clase [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) del espacio de nombres [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356).
 
-## Comprueba si el dispositivo tiene un lector de huellas digitales
+## <a name="check-the-device-for-a-fingerprint-reader"></a>Comprueba si el dispositivo tiene un lector de huellas digitales
 
 
 Para saber si el dispositivo tiene un lector de huellas digitales, llama al método [**UserConsentVerifier.CheckAvailabilityAsync**](https://msdn.microsoft.com/library/windows/apps/dn279138). Incluso si un dispositivo admite la autenticación con huellas digitales, es recomendable que la aplicación proporcione a los usuarios la opción para habilitarla o deshabilitarla en la configuración.
@@ -64,7 +71,7 @@ public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
 }
 ```
 
-## Solicitar consentimiento y devolver resultados
+## <a name="request-consent-and-return-results"></a>Solicitar consentimiento y devolver resultados
 
 
 Para solicitar el consentimiento del usuario mediante un examen de huellas digitales, llama al método [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139). Para que la autenticación con huella digital funcione, el usuario debe haber agregado anteriormente una "firma" con huella digital a la base de datos de huellas digitales.
@@ -123,8 +130,3 @@ private async System.Threading.Tasks.Task<string> RequestConsent(string userMess
     return returnMessage;
 }
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

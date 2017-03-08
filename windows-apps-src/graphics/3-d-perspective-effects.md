@@ -2,17 +2,24 @@
 author: Jwmsft
 ms.assetid: 90F07341-01F4-4205-8161-92DD2EB49860
 title: Efectos de perspectiva 3D para interfaces de usuario XAML
-description: "Puedes usar transformaciones de perspectiva para aplicar efectos 3D al contenido de tus aplicaciones de WindowsRuntime. Por ejemplo, puedes crear la ilusión de que un objeto gira hacia ti o se aleja, como se muestra aquí."
+description: "Puedes usar transformaciones de perspectiva para aplicar efectos 3D al contenido de tus aplicaciones de Windows Runtime. Por ejemplo, puedes crear la ilusión de que un objeto gira hacia ti o se aleja, como se muestra aquí."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 54bcd19419f31563f910b705fce8128bca33825b
-ms.openlocfilehash: 543dfb60b1fa70e2fceebbdd03da8a301eb9d08f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b0855392c9e9e3f18d08a16cf39cdfa5c0910701
+ms.lasthandoff: 02/07/2017
 
 ---
-# Efectos de perspectiva 3D para interfaces de usuario XAML
+# <a name="3-d-perspective-effects-for-xaml-ui"></a>Efectos de perspectiva 3D para interfaces de usuario XAML
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Puedes usar transformaciones de perspectiva para aplicar efectos 3D al contenido de tus aplicaciones de WindowsRuntime. Por ejemplo, puedes crear la ilusión de que un objeto gira hacia ti o se aleja, como se muestra aquí.
+Puedes usar transformaciones de perspectiva para aplicar efectos 3D al contenido de tus aplicaciones de Windows Runtime. Por ejemplo, puedes crear la ilusión de que un objeto gira hacia ti o se aleja, como se muestra aquí.
 
 ![Imagen con transformación de perspectiva](images/3dsimple.png)
 
@@ -43,7 +50,7 @@ Aquí nos hemos centrado en las propiedades de [**PlaneProjection**](https://msd
 
 [Ejecutar esta muestra](http://go.microsoft.com/fwlink/p/?linkid=236112)
 
-## Clase PlaneProjection
+## <a name="planeprojection-class"></a>Clase PlaneProjection
 
 Puedes aplicar efectos 3D a cualquier [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) estableciendo la propiedad [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection) del UIElement mediante una clase [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192). **PlaneProjection** define cómo se representa la transformación en el espacio. El ejemplo siguiente muestra un caso sencillo.
 
@@ -141,7 +148,7 @@ Usa [**CenterOfRotationZ**](https://msdn.microsoft.com/library/windows/apps/wind
 
 [Ejecuta esta muestra de control deslizante](http://go.microsoft.com/fwlink/p/?linkid=236112) y experimenta con la rotación del objeto alrededor de diferentes ubicaciones del centro de rotación.
 
-## Posicionamiento de un objeto
+## <a name="positioning-an-object"></a>Posicionamiento de un objeto
 
 Hasta ahora, has aprendido cómo girar un objeto en el espacio. Puedes colocar estos objetos que giran en el espacio relacionados entre sí con una de estas propiedades:
 
@@ -154,17 +161,17 @@ Hasta ahora, has aprendido cómo girar un objeto en el espacio. Puedes colocar e
 
 **Desplazamiento local**
 
-Las propiedades [**LocalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetx), [**LocalOffsetY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsety) y [**LocalOffsetZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetz) trasladan un objeto a lo largo del eje respectivo del plano del objeto después de que haya girado. Por consiguiente, la rotación del objeto determina la dirección en que este se traslada. Para demostrar este concepto, el ejemplo siguiente anima **LocalOffsetX** de 0 a 400 y [**RotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationy) de 0 a 65grados.
+Las propiedades [**LocalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetx), [**LocalOffsetY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsety) y [**LocalOffsetZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetz) trasladan un objeto a lo largo del eje respectivo del plano del objeto después de que haya girado. Por consiguiente, la rotación del objeto determina la dirección en que este se traslada. Para demostrar este concepto, el ejemplo siguiente anima **LocalOffsetX** de 0 a 400 y [**RotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationy) de 0 a 65 grados.
 
 [Ejecutar esta muestra](http://go.microsoft.com/fwlink/p/?linkid=236209)
 
 Observa en el ejemplo anterior que el objeto se mueve a lo largo de su propio eje X. Muy al principio de la animación, cuando el valor de [**RotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationy) es casi cero (paralelo a la pantalla), el objeto se mueve a lo largo de la pantalla en la dirección X, pero a medida que el objeto gira acercándose, se mueve hacia ti a lo largo del eje X del plano del objeto. Por otra parte, si animaste la propiedad **RotationY** a -65 grados, el objeto se alejará describiendo una curva.
 
-[**LocalOffsetY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsety) funciona de manera similar a [**LocalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetx), excepto que se mueve a lo largo del eje vertical, por lo que cambiar [**RotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationx) afecta a la dirección en la que **LocalOffsetY** mueve el objeto. En el ejemplo siguiente, **LocalOffsetY** se anima de 0 a 400 y **RotationX** de 0 a 65grados.
+[**LocalOffsetY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsety) funciona de manera similar a [**LocalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetx), excepto que se mueve a lo largo del eje vertical, por lo que cambiar [**RotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationx) afecta a la dirección en la que **LocalOffsetY** mueve el objeto. En el ejemplo siguiente, **LocalOffsetY** se anima de 0 a 400 y **RotationX** de 0 a 65 grados.
 
 [Ejecutar esta muestra](http://go.microsoft.com/fwlink/p/?linkid=236210)
 
-[**LocalOffsetZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetz) traslada el objeto perpendicular al plano del objeto como si se hubiera dibujado un vector directamente a través del centro, desde detrás del objeto hacia ti. Para demostrar cómo funciona **LocalOffsetZ**, en el ejemplo siguiente se anima **LocalOffsetZ** de 0 a 400 y [**RotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationx) de 0 a 65grados.
+[**LocalOffsetZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetz) traslada el objeto perpendicular al plano del objeto como si se hubiera dibujado un vector directamente a través del centro, desde detrás del objeto hacia ti. Para demostrar cómo funciona **LocalOffsetZ**, en el ejemplo siguiente se anima **LocalOffsetZ** de 0 a 400 y [**RotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationx) de 0 a 65 grados.
 
 [Ejecutar esta muestra](http://go.microsoft.com/fwlink/p/?linkid=236211)
 
@@ -174,18 +181,13 @@ Al principio de la animación, cuando el valor de [**RotationX**](https://msdn.m
 
 Las propiedades [**GlobalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsetx), [**GlobalOffsetY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsety) y [**GlobalOffsetZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsetz) trasladan el objeto a lo largo de los ejes relativos a la pantalla. Es decir, a diferencia de las propiedades de desplazamiento local, el eje por el que se mueve el objeto es independiente de cualquier rotación que se le aplique. Estas propiedades resultan útiles cuando solo quieres mover el objeto a lo largo de los ejes X, Y o Z de la pantalla sin preocuparte por la rotación que le aplique.
 
-El ejemplo siguiente anima [**GlobalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsetx) de 0 a 400 y [**RotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationy) de 0 a 65grados.
+El ejemplo siguiente anima [**GlobalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsetx) de 0 a 400 y [**RotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationy) de 0 a 65 grados.
 
 [Ejecutar esta muestra](http://go.microsoft.com/fwlink/p/?linkid=236213)
 
 Observa en este ejemplo que el objeto no cambia su curso a medida que gira. Esto se debe a que el objeto se mueve a lo largo del eje x de la pantalla independientemente de su rotación.
 
-## Posicionamiento de un objeto
+## <a name="positioning-an-object"></a>Posicionamiento de un objeto
 
 Puedes usar los tipos [**Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128) y [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266) para escenarios semi-3D más complejos que los que son posibles con [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192). **Matrix3DProjection** proporciona una matriz de transformación 3D completa para aplicar a cualquier [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911), por lo que puedes aplicar matrices de perspectiva y matrices de transformación de modelos arbitrarias a los elementos. Ten en cuenta que estas API son mínimas y, si las usas, tendrás que escribir el código que crea correctamente las matrices de transformación 3D. Por este motivo, es más fácil usar **PlaneProjection** para escenarios 3D sencillos.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

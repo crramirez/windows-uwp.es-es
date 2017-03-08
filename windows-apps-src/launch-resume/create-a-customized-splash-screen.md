@@ -3,16 +3,23 @@ author: TylerMSFT
 title: "Mostrar una pantalla de presentación durante más tiempo"
 description: "Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación que aparece al iniciar la aplicación, pero se puede personalizar."
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: bec87d2e208ca6f8d310de139692ef13f052b915
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 220e2e1bee237120acd35d2a4111bf7390b8e619
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Mostrar una pantalla de presentación durante más tiempo
+# <a name="display-a-splash-screen-for-more-time"></a>Mostrar una pantalla de presentación durante más tiempo
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -36,7 +43,7 @@ Asegúrate de que tu pantalla de presentación extendida imite la pantalla de pr
 
 Usa los siguientes pasos para crear una pantalla de presentación extendida que imite eficazmente la pantalla de presentación predeterminada.
 
-## Agregar un elemento **Página en blanco** a tu aplicación existente
+## <a name="add-a-blank-page-item-to-your-existing-app"></a>Agregar un elemento **Página en blanco** a tu aplicación existente
 
 
 En este tema se da por hecho que quieres agregar una pantalla de presentación extendida a un proyecto de aplicación Plataforma universal de Windows (UWP) mediante C#, Visual Basic o C++.
@@ -47,7 +54,7 @@ En este tema se da por hecho que quieres agregar una pantalla de presentación e
 
 Agregar un elemento de **Página en blanco** genera dos archivos, uno para el marcado (ExtendedSplash.xaml) y otro para el código (ExtendedSplash.xaml.cs).
 
-## XAML esencial para una pantalla de presentación extendida
+## <a name="essential-xaml-for-an-extended-splash-screen"></a>XAML esencial para una pantalla de presentación extendida
 
 
 Sigue estos pasos para agregar una imagen y un control de progreso a la pantalla de presentación extendida.
@@ -74,7 +81,7 @@ Agrega el siguiente código para definir los elementos [**Canvas**](https://msdn
 
  
 
-## Código esencial para una clase de pantalla de presentación extendida
+## <a name="essential-code-for-an-extended-splash-screen-class"></a>Código esencial para una clase de pantalla de presentación extendida
 
 
 La pantalla de presentación extendida debe responder cuando cambie el tamaño (solo Windows) o la orientación de la ventana. La posición de la imagen que usas debe actualizarse para que tu pantalla de presentación extendida se vea correctamente sin importar cómo cambie la ventana.
@@ -234,7 +241,7 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
 
     Cuando modifiques el controlador de activación del inicio en App.xaml.cs, establece también `loadstate` en true si el anterior [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) de la aplicación era **Terminated**. En este caso, el método `RestoreStateAsync` restaura la aplicación a su estado anterior. Para obtener una introducción al inicio, suspensión y finalización de aplicaciones, consulta [Ciclo de vida de la aplicación](app-lifecycle.md).
 
-## Modificar el controlador de activación de inicio
+## <a name="modify-the-launch-activation-handler"></a>Modificar el controlador de activación de inicio
 
 
 Cuando se inicia tu aplicación, el sistema pasa la información de la pantalla de presentación al controlador de eventos de activación de inicio de la aplicación. Puedes usar esta información para posicionar correctamente la imagen en la página de la pantalla de presentación extendida. Puedes obtener esta información de la pantalla de presentación en los argumentos del evento de activación que se pasan al controlador [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) de tu aplicación (consulta la variable `args` en el código siguiente).
@@ -257,7 +264,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 }
 ```
 
-## Código completo
+## <a name="complete-code"></a>Código completo
 
 
 > **Nota**  El código siguiente difiere ligeramente de los fragmentos de código mostrados en los pasos anteriores.
@@ -416,7 +423,7 @@ namespace SplashScreenExample
 
 App.xaml.cs: este proyecto se creó usando la plantilla de proyecto **Aplicación vacía (XAML)** de aplicación para UWP de Visual Studio 2015. Los controladores de eventos `OnNavigationFailed` y `OnSuspending` se generan automáticamente y no es necesario cambiarlos para implementar una pantalla de presentación extendida. En este tema solo se modifica `OnLaunched`.
 
-Si no usaste una plantilla de proyecto para tu aplicación, consulta el paso 4: [Modificar el controlador de activación de inicio](#modify_the_launch_activation_handler) para ver un ejemplo de `OnLaunched` modificado que no usa la navegación de [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682).
+Si no usaste una plantilla de proyecto para tu aplicación, consulta el paso 4: [Modificar el controlador de activación de inicio](#modify-the-launch-activation-handler) para ver un ejemplo de `OnLaunched` modificado que no usa la navegación de [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682).
 
 ```cs
 using System;
@@ -533,7 +540,7 @@ namespace SplashScreenExample
 }
 ```
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Ciclo de vida de la aplicación](app-lifecycle.md)
@@ -548,9 +555,4 @@ namespace SplashScreenExample
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

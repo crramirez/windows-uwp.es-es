@@ -3,39 +3,46 @@ author: jwmsft
 title: Atributo xPhase
 description: "Usa xPhase con la extensión de marcado xBind para representar los elementos ListView y GridView de forma incremental y mejorar la experiencia de movimiento panorámica."
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: c6100f59bb91bc3c6451fc2167d914b0a4a36ded
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 873da2adeea277e0f8f869703aac782c21b0419e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Atributo x:Phase
+# <a name="xphase-attribute"></a>Atributo x:Phase
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Usa **x:Phase** con la [extensión de marcado {x:Bind}](x-bind-markup-extension.md) para representar los elementos [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) de forma incremental y mejorar la experiencia de movimiento panorámica. **x:Phase** proporciona una manera declarativa de lograr el mismo efecto que si se usase el evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) para controlar manualmente la representación de los elementos de lista. Consulta también [Actualizar los elementos ListView and GridView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
-## Uso del atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
 
 ``` syntax
 <object x:Phase="PhaseValue".../>
 ```
 
-## Valores de XAML
+## <a name="xaml-values"></a>Valores de XAML
 
 
 | Término | Descripción |
 |------|-------------|
 | PhaseValue | Un número que indica la fase en la que se procesará el elemento. El predeterminado es 0. | 
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 Si una lista se mueve panorámicamente con el dedo o la rueda del ratón, tal vez no se puedan representar los elementos a la misma velocidad que el desplazamiento en función de la complejidad de la plantilla de datos. Esto es especialmente cierto para un dispositivo portátil con una CPU eficiente como un teléfono o una tableta.
 
 El escalonamiento habilita la representación incremental de la plantilla de datos para que se pueda priorizar el contenido y que los elementos más importantes se representen primero. Así la lista puede mostrar contenido de cada elemento en caso de desplazamiento rápido y representar más elementos de cada plantilla conforme el tiempo lo vaya permitiendo.
 
-## Ejemplo
+## <a name="example"></a>Ejemplo
 
 ```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
@@ -77,10 +84,5 @@ Los números de fase no necesitan ser contiguos y son los mismos que el valor de
 El escalonamiento solo afecta a los enlaces [{x:Bind}](x-bind-markup-extension.md) , no a los enlaces [{Binding}](binding-markup-extension.md) .
 
 El escalonamiento solo se aplica cuando la plantilla de elementos se representa usando un control que tiene constancia del escalonamiento. Para Windows 10, esto significa [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). El escalonamiento no se aplicará a las plantillas de datos usadas en otros controles de elementos ni en otros escenarios, como las secciones [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) o [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843). En estos casos, todos los elementos de la interfaz de usuario serán datos enlazados a la vez.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

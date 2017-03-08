@@ -1,22 +1,29 @@
 ---
 author: mijacobs
-Description: "Un icono es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación para la Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación."
+Description: "Un icono es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación para la Plataforma universal de Windows (UWP) en Microsoft Visual Studio, este incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación."
 title: Iconos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 37de1a413ac9b5e74c905c140899ec7577a6fae5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11640527ffdb6883885345646310e5e4b786ad2b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Iconos de aplicaciones para UWP
+# <a name="tiles-for-uwp-apps"></a>Iconos de aplicaciones para UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Un *icono* es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación. Windows muestra este icono cuando se instala la aplicación por primera vez. Cuando se instala la aplicación, puedes cambiar el contenido del icono a través de notificaciones; por ejemplo, puedes cambiar el icono para comunicar nueva información al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.
 
-## Configurar el icono predeterminado
+## <a name="configure-the-default-tile"></a>Configurar el icono predeterminado
 
 
 Cuando creas un nuevo proyecto en Visual Studio, se crea un icono predeterminado sencillo que muestra el nombre y el logotipo de la aplicación.
@@ -76,7 +83,7 @@ Hay algunos elementos que deberías actualizar:
       </Applications>
 ```
 
-## Usar notificaciones para personalizar el icono
+## <a name="use-notifications-to-customize-your-tile"></a>Usar notificaciones para personalizar el icono
 
 
 Cuando se instale la aplicación, puedes usar las notificaciones para personalizar tu icono. Puedes hacerlo la primera vez que se inicia la aplicación o en respuesta a algún evento, como una notificación de inserción.
@@ -100,10 +107,5 @@ Cuando se instale la aplicación, puedes usar las notificaciones para personaliz
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

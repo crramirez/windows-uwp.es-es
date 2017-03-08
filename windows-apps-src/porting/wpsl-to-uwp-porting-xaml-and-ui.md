@@ -3,15 +3,22 @@ author: mcleblanc
 description: "La práctica para definir la interfaz de usuario en forma de marcado XAML declarativo se traslada muy bien tanto para Windows Phone Silverlight como para aplicaciones para la Plataforma universal de Windows (UWP)."
 title: "Migración de XAML y la interfaz de usuario de Windows Phone Silverlight a UWP"
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 3aa68943724c008e18df63d8b0ae20f448146303
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1ec72aec1e94ff92ef30fcc206456c7614107c98
+ms.lasthandoff: 02/07/2017
 
 ---
 
 #  <a name="porting-windows-phone-silverlight-xaml-and-ui-to-uwp"></a>Migración de XAML y la interfaz de usuario de Windows Phone Silverlight a UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 El tema anterior era [Solución de problemas](wpsl-to-uwp-troubleshooting.md).
@@ -238,7 +245,7 @@ La manera más sencilla de migrar esto a una aplicación para UWP es usar un [**
     <BitmapIcon UriSource="Assets/winrt_check.png" Width="21" Height="21"/>
 ```
 
-Aquí, winrt\_check.png es una máscara alfa en forma de un mapa de bits como es wpsl\_check.png y podría ser el mismo archivo. Sin embargo, puede que quieras proporcionar varios tamaños diferentes de winrt\_check.png que se usarán para diferentes factores de escala. Para obtener información sobre esto y para ver una explicación de los cambios en los valores de **Width** y **Height**, consulta [Píxeles de visualización o efectivos, distancia de visualización y factores de escala](#view-effective-pixels-viewing-distance-and-scale-factors) en este tema.
+Aquí, winrt\_check.png es una máscara alfa en forma de un mapa de bits como es wpsl\_check.png y podría ser el mismo archivo. Sin embargo, puede que quieras proporcionar varios tamaños diferentes de winrt\_check.png que se usarán para diferentes factores de escala. Para obtener información sobre esto y para ver una explicación de los cambios en los valores de **Width** y **Height**, consulta [Píxeles de visualización o efectivos, distancia de visualización y factores de escala](#view-or-effective-pixels-viewing-distance-and-scale-factors) en este tema.
 
 Un enfoque más general, que es adecuado si existen diferencias entre la forma de tema claro y oscuro de un mapa de bits, es usar dos recursos de imagen: uno con un primer plano oscuro (para el tema claro) y otro con un primer plano claro (para el tema oscuro). Para obtener más información acerca de cómo asignar un nombre a este conjunto de recursos de mapas de bits, consulta [Cómo asignar nombre a los recursos mediante calificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324). Una vez que se ha asignado correctamente un nombre a los conjuntos de archivos de imagen, puedes hacer referencia a ellos en el resumen, usando su nombre raíz, como este:
 
@@ -355,7 +362,7 @@ El código que muestra una notificación del sistema con la clase **Microsoft.Ph
 
 Consulta [Trabajar con iconos, notificaciones y notificaciones del sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
 
-## <a name="vieweffective-pixels-viewing-distance-and-scale-factors"></a>Píxeles de visualización o efectivos, distancia de visualización y factores de escala
+## <a name="view-or-effective-pixels-viewing-distance-and-scale-factors"></a>Píxeles de visualización o efectivos, distancia de visualización y factores de escala
 
 Las aplicaciones de Windows Phone Silverlight y las aplicaciones de Windows 10 difieren en la forma en que abstraen el tamaño y el diseño de los elementos de interfaz de usuario fuera el tamaño físico real y la resolución de dispositivos. Una aplicación Windows Phone Silverlight usa píxeles de visualización para hacerlo. Con Windows 10, el concepto de píxeles de visualización se ha perfeccionado en el de píxeles efectivos. Esta es una explicación de este término, lo que significa y el valor adicional que ofrece.
 
@@ -391,10 +398,5 @@ El siguiente tema es [Migración de modelo de E/S, dispositivos y aplicaciones](
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md)
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -1,18 +1,25 @@
 ---
 title: Caja de seguridad de credenciales
-description: "En este artículo se describe cómo las aplicaciones de la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario."
+description: "En este artículo se describe cómo las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario."
 ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 2d5e1fada82e0c39ad0dce31c779ac80005aff17
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d72432aa5f9ccc40d4f822f5d76c1e09b606e33a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Caja de seguridad de credenciales
+# <a name="credential-locker"></a>Caja de seguridad de credenciales
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo las aplicaciones de la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario.
@@ -21,7 +28,7 @@ Por ejemplo, tienes una aplicación que se conecta a un servicio para obtener ac
 
 La caja de seguridad de credenciales funciona de forma diferente para cuentas de dominio. Si se guardan credenciales con tu cuenta Microsoft y asocias esa cuenta con una cuenta de dominio (como la cuenta que usas en el trabajo), las credenciales se trasferirán a esa cuenta de dominio. Sin embargo, las nuevas credenciales que se agregan al iniciar sesión con la cuenta de dominio no se incluirán en el perfil móvil. De esta manera se garantiza que las credenciales privadas del dominio no queden expuestas fuera del mismo.
 
-## Almacenar credenciales de usuario
+## <a name="storing-user-credentials"></a>Almacenar credenciales de usuario
 
 
 1.  Obtén una referencia a la caja de seguridad de credenciales usando el objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) del espacio de nombres [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089).
@@ -33,7 +40,7 @@ vault.Add(new Windows.Security.Credentials.PasswordCredential(
     "My App", username, password));
 ```
 
-## Recuperar credenciales de usuario
+## <a name="retrieving-user-credentials"></a>Recuperar credenciales de usuario
 
 
 Tienes varias maneras para recuperar credenciales de usuario de la caja de seguridad de credenciales una vez que tengas una referencia al objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081).
@@ -104,7 +111,7 @@ private Windows.Security.Credentials.PasswordCredential GetCredentialFromLocker(
 }
 ```
 
-## Eliminar credenciales de usuario
+## <a name="deleting-user-credentials"></a>Eliminar credenciales de usuario
 
 
 Eliminar las credenciales de usuario en la caja de seguridad de credenciales también es un proceso rápido en dos pasos.
@@ -119,7 +126,7 @@ vault.Remove(new Windows.Security.Credentials.PasswordCredential(
     "My App", username, password));
 ```
 
-## Procedimientos recomendados
+## <a name="best-practices"></a>Procedimientos recomendados
 
 
 Usa la caja de seguridad de credenciales solo para contraseñas y no para blobs de datos más grandes.
@@ -130,8 +137,3 @@ Guarda las contraseñas en la caja de seguridad de credenciales solamente si se 
 -   El usuario decidió guardar las contraseñas.
 
 Nunca almacenes credenciales en texto sin formato con los datos de la aplicación o la configuración de itinerancia.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -3,9 +3,16 @@ author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
 description: "En este artículo se muestra cómo usar la interfaz IMediaEncodingProperties para establecer la resolución y la velocidad de fotogramas de la secuencia de vista previa de la cámara, así como de las fotos y los vídeos capturados."
 title: "Establecer el formato, la resolución y la velocidad de fotogramas para MediaCapture"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6c3ed4ab773fe821acaee7d5b8c70fdc8770de81
-ms.openlocfilehash: 828cbddd9568bd4e9d0a571880a867afff293e34
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8c8defd41ea1b65ac78d159b52eea926c7252e9e
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -86,10 +93,5 @@ Para garantizar que las secuencias de captura de foto o vídeo coincidan con la 
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO3-->
 
 

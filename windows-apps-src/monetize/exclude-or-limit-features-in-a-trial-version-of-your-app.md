@@ -3,10 +3,16 @@ author: mcleanbyron
 Description: "Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba."
 title: "Excluir o limitar las características de una versión de prueba"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: "muestra de código de prueba gratuita"
+keywords: "windows 10, uwp, prueba, trial, compra desde la aplicación, in-app purchase, IAP, Windows.ApplicationModel.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 0d377677237264e2dad290c7d49c47800c255138
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b55c837e63792e6da4e684602e79d99ad7cff1e
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -120,9 +126,4 @@ Para obtener más información sobre cómo describir tu aplicación, consulta [C
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,9 +3,16 @@ author: mcleblanc
 description: "El proceso de migración se empieza creando un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él."
 title: "Migración de un proyecto de Windows Phone Silverlight a un proyecto de UWP"
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 273017f4607c25ee56d7400debe59e94acb36d4f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 95cd7958979dd5c2a7955bb098c8b34fbf024b0f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -49,7 +56,7 @@ El nombre y el número de versión coinciden con las carpetas de la ubicación d
 
 A menos que la aplicación esté destinada a la familia de dispositivos que implementa la API, tendrás que usar la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para probar la presencia de la API antes de llamarla (esto se denomina "código adaptable"). A continuación, se evaluará esta condición donde se ejecute la aplicación, pero solo se evaluará en true en dispositivos en los que la API está presente y, por tanto, está disponible para ser llamada. Usa únicamente los SDK de extensión y el código adaptable después de comprobar primero si existe una API universal. En la sección siguiente se proporcionan algunos ejemplos.
 
-Consulta también [Manifiesto del paquete de la aplicación](#appxpackage).
+Consulta también [Manifiesto del paquete de la aplicación](#the-app-package-manifest).
 
 ## <a name="maximizing-markup-and-code-reuse"></a>Maximización de la reutilización de código y marcado
 
@@ -58,7 +65,7 @@ Encontrarás que refactorizar un poco o agregar código adaptable (lo cual se ex
 -   Los archivos que son comunes a todas las familias de dispositivo no necesitan ninguna consideración especial. Esos archivos serán usados por la aplicación en todas las familias de dispositivos en las que se ejecuta. Esto incluye los archivos de marcado XAML, los archivos de código fuente imperativo y los archivos de recursos.
 -   Es posible que tu aplicación detecte la familia de dispositivos en la que se está ejecutando y navegar a una vista que se ha diseñado específicamente para esa familia de dispositivos. Para obtener más información, consulta [Detección de la plataforma en la que se está ejecutando la aplicación](wpsl-to-uwp-input-and-sensors.md).
 -   Una técnica similar que puede resultar útil si no existe otra alternativa es proporcionar a un archivo de marcado o archivo **ResourceDictionary** (o la carpeta que contiene el archivo) un nombre especial que se carga automáticamente en tiempo de ejecución solo cuando la aplicación se ejecuta en una familia de dispositivos en particular. Esta técnica se ilustra en el caso práctico [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md).
--   Para usar funciones que no están disponibles en todas las familias de dispositivos (por ejemplo, impresoras, escáneres o el botón de la cámara) puedes escribir código adaptable. Consulta el tercer ejemplo en [Compilación condicional y código adaptable](#conditional-compilation) en este tema.
+-   Para usar funciones que no están disponibles en todas las familias de dispositivos (por ejemplo, impresoras, escáneres o el botón de la cámara) puedes escribir código adaptable. Consulta el tercer ejemplo en [Compilación condicional y código adaptable](#conditional-compilation-and-adaptive-code) en este tema.
 -   Si quieres admitir tanto Windows Phone Silverlight como Windows 10, es posible que puedas compartir archivos de código fuente entre proyectos. Pasos a seguir: en Visual Studio, haz clic con el botón derecho en el proyecto en **Explorador de soluciones**, selecciona **Agregar elemento existente**, selecciona los archivos para compartir y haz clic en **Agregar como vínculo**. Almacena tus archivos de código fuente en una carpeta común en el sistema de archivos donde puedan verlos los proyectos vinculados a ellos y no te olvides de agregarlos al control de código fuente. Si puedes factorizar el código fuente imperativo para que la mayor parte de un archivo, si no todo, funcione en ambas plataformas, no necesitas tener dos copias de este. Puedes encapsular la lógica específica de la plataforma del archivo dentro de directivas de compilación condicional siempre que sea posible, o condiciones de tiempo de ejecución cuando sea necesario. Consulta la sección siguiente y [Directivas de preprocesador de C#](http://msdn.microsoft.com/library/ed8yd1ha.aspx).
 -   Para su reutilización en el nivel binario, en lugar del nivel de código fuente, existen bibliotecas de clases portables que admiten el subconjunto de API de .NET que están disponibles en Windows Phone Silverlight, así como el subconjunto para aplicaciones de Windows 10 (núcleo .NET). Los conjuntos de bibliotecas de clases portables tienen compatibilidad binaria con estas plataformas .NET y más. Usa Visual Studio para crear un proyecto destinado a una biblioteca de clases portable. Consulta [Desarrollo multiplataforma con la biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391.aspx).
 
@@ -145,10 +152,5 @@ Es importante saber cómo editar el manifiesto del paquete de la aplicación, po
 Consulta [Referencia del esquema del manifiesto del paquete para Windows 10](https://msdn.microsoft.com/library/windows/apps/dn934820).
 
 El siguiente tema es [Solución de problemas](wpsl-to-uwp-troubleshooting.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

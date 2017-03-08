@@ -4,13 +4,20 @@ description: "Describe los pasos necesarios para garantizar que la aplicación p
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Temas de contraste alto
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: f3da82cab8813653a6ee999976983937649b42b2
-ms.openlocfilehash: 30785998d11f09ef94f33789e3e74b0933d9c83e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b75d36d6a537f465545729cf90b36fdde1f552e0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Temas de contraste alto  
+# <a name="high-contrast-themes"></a>Temas de contraste alto  
 
 Windows admite temas de contraste alto para el sistema operativo y las aplicaciones que los usuarios pueden elegir habilitar. Los temas de contraste alto usan una pequeña paleta de colores de contraste que facilita la visualización de la interfaz.
 
@@ -38,7 +45,7 @@ Si el color `#E6E6E6` se establece alineado en el primer ejemplo, el objeto Grid
 
 En el segundo ejemplo, la [**extensión de marcado {ThemeResource}**](../xaml-platform/themeresource-markup-extension.md) se usa para hacer referencia a un color de la colección [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx), una propiedad dedicada de un elemento [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794). ThemeDictionaries permite a XAML intercambiar los colores automáticamente en función del tema actual del usuario.
 
-## Diccionarios de temas
+## <a name="theme-dictionaries"></a>Diccionarios de temas
 
 Si necesitas cambiar un color de su valor predeterminado del sistema, crea una colección ThemeDictionaries para tu aplicación.
 
@@ -77,7 +84,7 @@ El último paso es determinar qué color se usará en el contraste alto y se tra
 > [!NOTE]
 > HighContrast no es el único nombre de clave disponible. También están HighContrastBlack, HighContrastWhite y HighContrastCustom. En la mayoría de los casos, solo necesitarás HighContrast.
 
-## Colores de contraste alto
+## <a name="high-contrast-colors"></a>Colores de contraste alto
 
 En la página *Configuración > Accesibilidad > Contraste alto*, hay 4 temas de contraste alto de manera predeterminada. 
 
@@ -152,7 +159,7 @@ Más adelante, en la aplicación, puedes establecer el fondo.
 
 Observa que `{ThemeResource}` se usa dos veces, una vez para hacer referencia a `SystemColorWindowColor` y otra para hacer referencia a `BrandedPageBackgroundBrush`. Ambos son necesarios para que la aplicación use el tema correctamente en tiempo de ejecución. Este es un buen momento para probar la funcionalidad en la aplicación. El fondo de Grid se actualizará automáticamente al cambiar a un tema de contraste alto. También se actualizará al cambiar entre los distintos temas de contraste alto.
 
-## Cuándo usar bordes
+## <a name="when-to-use-borders"></a>Cuándo usar bordes
 
 Las páginas, los paneles, los elementos emergentes y las barras deberían usar `SystemColorWindowColor` para su fondo en contraste alto. Agrega un borde solo de contraste alto cuando sea necesario para conservar los límites importantes en la interfaz de usuario.
 
@@ -160,7 +167,7 @@ Las páginas, los paneles, los elementos emergentes y las barras deberían usar 
 
 ![Un panel de navegación separado del resto de la página](images/high-contrast-actions-content.png)
 
-## Elementos de lista
+## <a name="list-items"></a>Elementos de lista
 
 En contraste alto, los elementos de una clase [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) tienen el fondo establecido en `SystemColorHighlightColor` al mantener el mouse encima, pulsarlos o seleccionarlos. Los elementos de lista complejos suelen presentar un error en que el contenido del elemento de lista no puede invertir el color al mantener el mouse sobre el elemento, pulsarlo o seleccionarlo. Esto hace que el elemento no se pueda leer.
 
@@ -170,7 +177,7 @@ En contraste alto, los elementos de una clase [ListView](https://msdn.microsoft.
 
 
 
-### Elementos de lista con texto de color
+### <a name="list-items-with-colored-text"></a>Elementos de lista con texto de color
 
 Una causa es establecer TextBlock.Foreground en la clase [DataTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) de ListView. Normalmente, esto se hace para establecer una jerarquía visual. La propiedad Foreground se establece en la clase [ListViewItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx) y la propiedad TextBlocks de DataTemplate hereda el color de Foreground correcto al mantener el mouse sobre el elemento, pulsarlo o seleccionarlo. Sin embargo, al establecer Foreground se interrumpe la herencia.
 
@@ -221,7 +228,7 @@ Para resolverlo establece Foreground de manera condicional a través de un objet
 </DataTemplate>
 ```
 
-### Elementos de lista con botones y vínculos
+### <a name="list-items-with-buttons-and-links"></a>Elementos de lista con botones y vínculos
 
 A veces, los elementos de lista contienen controles más complejos, como [HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.hyperlinkbutton.aspx) o [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx). Estos controles tienen sus propios estados para mantener el mouse, pulsar y, en ocasiones, seleccionar, que no funcionan sobre un elemento de lista. Los hipervínculos también son amarillos en el tema Negro en contraste alto, lo que dificulta su lectura al mantener el mouse sobre un elemento de lista, pulsarlo o seleccionarlo.
 
@@ -284,22 +291,17 @@ Una solución es establecer el fondo de la clase DataTemplate en `SystemColorWin
 
 
 
-## Detección de contraste alto
+## <a name="detecting-high-contrast"></a>Detección de contraste alto
 
 Puedes comprobar mediante programación si el tema actual es un tema de contraste alto usando los miembros de la clase [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237).
 
 > [!NOTE]
 > Asegúrate de llamar al constructor **AccessibilitySettings** desde un ámbito donde la aplicación esté inicializada y mostrando contenido.
 
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
 * [Ejemplo de configuración y contraste de la interfaz de usuario](http://go.microsoft.com/fwlink/p/?linkid=231539)
 * [Ejemplo de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Ejemplo de contraste alto XAML](http://go.microsoft.com/fwlink/p/?linkid=254993)
 * [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

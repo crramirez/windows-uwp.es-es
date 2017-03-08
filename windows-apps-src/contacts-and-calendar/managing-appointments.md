@@ -3,20 +3,27 @@ author: Xansky
 description: "Con el espacio de nombres Windows.ApplicationModel.Appointments, puedes crear y administrar citas en la aplicación de calendario de un usuario."
 title: Administrar citas
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, citas, calendario, appointments, calendar
 translationtype: Human Translation
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: ae7fe9075a4c49c99a572087bf4b7b176555caef
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8fe8c0172d50cfe65bc8e695ffeb6899a228bdd2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Administrar citas
+# <a name="manage-appointments"></a>Administrar citas
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Con el espacio de nombres [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/Dn263359), puedes crear y administrar citas en la aplicación de calendario de un usuario. Aquí te mostraremos cómo crear una cita, agregarla a la aplicación de calendario, reemplazarla en dicha aplicación y quitarla de ella. También te enseñaremos cómo mostrar un intervalo de tiempo para una aplicación de calendario y crear un objeto de repetición de citas.
 
-## Crear una cita y aplicarle datos
+## <a name="create-an-appointment-and-apply-data-to-it"></a>Crear una cita y aplicarle datos
 
 Crea un objeto [**Windows.ApplicationModel.Appointments.Appointment**](https://msdn.microsoft.com/library/windows/apps/Dn297221) y asígnale una variable. Después, aplica a la **Appointment** las propiedades de cita suministradas por un usuario mediante la interfaz de usuario.
 
@@ -250,7 +257,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Agregar una cita al calendario del usuario
+## <a name="add-an-appointment-to-the-users-calendar"></a>Agregar una cita al calendario del usuario
 
 Crea un objeto [**Windows.ApplicationModel.Appointments.Appointment**](https://msdn.microsoft.com/library/windows/apps/Dn297221) y asígnale una variable. Después, llama al método [**AppointmentManager.ShowAddAppointmentAsync(Appointment, Rect, Placement)**](https://msdn.microsoft.com/library/windows/apps/dn297261) para mostrar la interfaz de usuario para agregar citas del proveedor de citas predeterminado para permitir que el usuario agregue una cita. Si el usuario hizo clic en **Agregar**, la muestra imprime el identificador de citas que **ShowAddAppointmentAsync** devolvió.
 
@@ -281,7 +288,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 
 **Nota** En las aplicaciones de la Tienda de Windows Phone, [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona igual que [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) en el sentido de que el cuadro de diálogo para agregar la cita es editable.
 
-## Reemplazar una cita en el calendario del usuario
+## <a name="replace-an-appointment-in-the-users-calendar"></a>Reemplazar una cita en el calendario del usuario
 
 Crea un objeto [**Windows.ApplicationModel.Appointments.Appointment**](https://msdn.microsoft.com/library/windows/apps/Dn297221) y asígnale una variable. Después, llama al método [**AppointmentManager.ShowReplaceAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showreplaceappointmentasync) apropiado para mostrar la interfaz de usuario de reemplazo de citas del proveedor de citas predeterminado para permitir que el usuario reemplace una cita. El usuario también brinda el identificador de citas que quiere reemplazar. Este identificador se devolvió desde [**AppointmentManager.ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync). Si el usuario hizo clic en **Reemplazar**, la muestra imprime que actualizó ese identificador de citas.
 
@@ -335,7 +342,7 @@ private async void Replace-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Quitar una cita del calendario del usuario
+## <a name="remove-an-appointment-from-the-users-calendar"></a>Quitar una cita del calendario del usuario
 
 Llama al método [**AppointmentManager.ShowRemoveAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showremoveappointmentasync) apropiado para mostrar la interfaz de usuario de eliminación de citas del proveedor de citas predeterminado para permitir que el usuario quite una cita. El usuario también proporciona el identificador de citas que quiere quitar. Este identificador se devolvió desde [**AppointmentManager.ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync). Si el usuario hizo clic en **Eliminar**, la muestra imprime que quitó la cita especificada por ese identificador de citas.
 
@@ -385,7 +392,7 @@ private async void Remove-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Mostrar un intervalo de tiempo para el proveedor de citas
+## <a name="show-a-time-span-for-the-appointments-provider"></a>Mostrar un intervalo de tiempo para el proveedor de citas
 
 Llama al método [**AppointmentManager.ShowTimeFrameAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showtimeframeasync) para mostrar un intervalo de tiempo específico para la interfaz de usuario principal del proveedor de citas predeterminado si el usuario hizo clic en **Mostrar**. La muestra imprime que el proveedor de citas predeterminado apareció en pantalla.
 
@@ -399,7 +406,7 @@ private async void Show-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Crear un objeto de repetición de citas y aplicarle datos
+## <a name="create-an-appointment-recurrence-object-and-apply-data-to-it"></a>Crear un objeto de repetición de citas y aplicarle datos
 
 Crea un objeto [**Windows.ApplicationModel.Appointments.AppointmentRecurrence**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentrecurrence) y asígnale una variable. Después, aplica a **AppointmentRecurrence** las propiedades de repetición suministradas por un usuario mediante la interfaz de usuario.
 
@@ -502,7 +509,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Agregar una nueva cita editable
+## <a name="add-a-new-editable-appointment"></a>Agregar una nueva cita editable
 
 [**ShowEditNewAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) funciona igual que [**ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync), salvo por el hecho de que el cuadro de diálogo para agregar la cita es editable, de modo que el usuario puede modificar los datos de la cita antes de guardarla.
 
@@ -537,7 +544,7 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Mostrar detalles de la cita
+## <a name="show-appointment-details"></a>Mostrar detalles de la cita
 
 [**ShowAppointmentDetailsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) hace que el sistema muestre los detalles de la cita especificada. Una aplicación que implementa calendarios de aplicación puede elegir activarse para mostrar los detalles de las citas en los calendarios que posee. De lo contrario, el sistema mostrará los detalles de la cita. Aquí te mostramos una sobrecarga del método que acepta un argumento de fecha de inicio para que veas los detalles de una instancia de una cita periódica.
 
@@ -560,19 +567,14 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 }
 ```
 
-## Resumen y pasos siguientes
+## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
 Con esto deberías tener nociones básicas sobre cómo administrar citas. Descarga las [muestras de aplicaciones universales de Windows](http://go.microsoft.com/fwlink/p/?linkid=619979) de GitHub para ver más ejemplos sobre la administración de citas.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Muestra de API de citas](http://go.microsoft.com/fwlink/p/?linkid=309836)
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,13 +1,20 @@
 ---
 author: Jwmsft
-Description: "Analiza con qué frecuencia leemos el texto en nuestras vidas diarias, en correo electrónico, un libro, una señal de tráfico, los precios en una carta, la presión de los neumáticos, un letrero en un poste de la calle."
+Description: "Piensa en la frecuencia con la que leemos el texto en nuestras vidas diarias: en correo electrónico, un libro, una señal de tráfico, los precios en una carta, la presión de los neumáticos o un letrero en un poste de la calle."
 title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 04f8e82f05c46d41657dae0b30e04f49341bb5db
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 41c5b771440a3ad88b3c1fcc2aec57b2e080741b
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="text-controls"></a>Controles de texto
@@ -190,9 +197,4 @@ Para los controles TextBox y RichEditBox, la revisión ortográfica está activa
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

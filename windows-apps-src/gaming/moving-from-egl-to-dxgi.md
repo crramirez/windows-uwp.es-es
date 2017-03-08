@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: "Comparar código de EGL con DXGI y Direct3D"
-description: DirectX Graphics Interface (DXGI) y varias API de Direct3D cumplen el mismo rol que EGL. Este tema ayuda a comprender DXGI y Direct3D 11 desde la perspectiva de EGL.
+description: "DirectX Graphics Interface (DXGI) y varias API de Direct3D cumplen el mismo rol que EGL. Este tema te ayudará a comprender DXGI y Direct3D 11 desde la perspectiva de EGL."
 ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, EGL, DXGI, Direct3D
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 599196300a393352540abf1154d1508af7b4caa1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7d7e4058eccd39911bd84d3967ef07b93b6ee89d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Comparar código EGL con DXGI y Direct3D
+# <a name="compare-egl-code-to-dxgi-and-direct3d"></a>Comparar código EGL con DXGI y Direct3D
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -29,7 +36,7 @@ DXGI y Direct3D, al igual que EGL, proporcionan métodos para configurar recurso
 
  
 
-## ¿En qué aspectos se comparan DXGI y Direct3D?
+## <a name="how-does-dxgi-and-direct3d-compare"></a>¿En qué aspectos se comparan DXGI y Direct3D?
 
 
 La gran ventaja de EGL sobre DXGI y Direct3D es que es relativamente sencillo comenzar a dibujar en una superficie de ventana. Esto se debe a que OpenGL ES 2.0, y por ende EGL, es una especificación implementada por varios proveedores de plataformas, mientras que DXGI y Direct3D constituyen una única referencia que deben cumplir los controladores de los proveedores de hardware. Esto significa que Microsoft debe implementar un conjunto de API que permita el conjunto más amplio posible de características de proveedor, en lugar de centrarse en un subconjunto funcional ofrecido por un proveedor específico, o mediante la combinación de comandos de configuración específicos del proveedor en API más sencillas. Por otro lado, Direct3D proporciona un único conjunto de API que cubre un rango muy amplio de plataformas de hardware gráfico y niveles de característica, y ofrece más flexibilidad para desarrolladores con experiencia con la plataforma.
@@ -73,7 +80,7 @@ Echa un vistazo a [Getting Started with DirectX Graphics (Introducción a los gr
 
  
 
-## Obtener una ventana de presentación
+## <a name="obtaining-a-window-for-display"></a>Obtener una ventana de presentación
 
 
 En este ejemplo, se pasa un HWND al elemento eglGetDisplay de un recurso de ventana específico de la plataforma Microsoft Windows. Otras plataformas, como iOS de Apple (Cocoa) y Android de Google, tienen diferentes controladores o referencias a recursos de ventana, y pueden tener una sintaxis de llamada totalmente diferente. Después de obtener una presentación, la inicializas, estableces los parámetros de configuración preferidos y creas una superficie con un búfer de reserva en el que puedes dibujar.
@@ -204,7 +211,7 @@ m_d3dContext->OMSetRenderTargets(
         nullptr);
 ```
 
-## Crear un contexto de representación
+## <a name="creating-a-rendering-context"></a>Crear un contexto de representación
 
 
 En EGL 1.4, una "presentación" representa un conjunto de recursos de ventana. Generalmente, puedes configurar una "superficie" para la presentación proporcionando un conjunto de atributos al objeto de presentación y obteniendo a cambio una superficie. Creas un contexto para mostrar el contenido de la superficie creándolo y vinculándolo con la superficie y la presentación.
@@ -282,7 +289,7 @@ D3D11CreateDevice(
 );
 ```
 
-## Dibujar en un recurso de textura o mapa de píxeles
+## <a name="drawing-into-a-texture-or-pixmap-resource"></a>Dibujar en un recurso de textura o mapa de píxeles
 
 
 Para dibujar en una textura con OpenGL ES 2.0, configura un búfer de píxeles, o PBuffer. Después de que le hayas configurado y creado una EGLSurface correctamente, puedes proporcionarle un contexto de representación y ejecutar la canalización de sombreador para dibujar en la textura.
@@ -329,7 +336,7 @@ m_d3dContext->OMSetRenderTargets(
 
 Esta textura puede pasarse a un sombreador si está asociada a una interfaz [**ID3D11ShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476628).
 
-## Dibujar en la pantalla
+## <a name="drawing-to-the-screen"></a>Dibujar en la pantalla
 
 
 Cuando hayas usado el elemento EGLContext para configurar los búferes y actualizar tus datos, ejecuta los sombreadores que tenga vinculados y lleva los resultados al búfer de reserva mediante glDrawElements. Muestras el búfer de reserva llamando a eglSwapBuffers.
@@ -358,7 +365,7 @@ m_d3dContext->DrawIndexed(
 m_swapChainCoreWindow->Present1(1, 0, &parameters);
 ```
 
-## Liberar recursos gráficos
+## <a name="releasing-graphics-resources"></a>Liberar recursos gráficos
 
 
 En EGL, liberas los recursos de ventana pasando EGLDisplay a eglTerminate.
@@ -371,7 +378,7 @@ EGLBoolean eglTerminate(eglDisplay);
 
 En una aplicación para UWP, puedes cerrar CoreWindow con [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows/apps/br208260), aunque esto solo puede usarse para ventanas de interfaz de usuario secundarias. El subproceso de interfaz de usuario principal y su elemento CoreWindow asociado no pueden cerrarse. En cambio, el sistema operativo define el momento de su expiración. No obstante, cuando se cierra un elemento CoreWindow secundario, se genera el evento [**CoreWindow::Closed**](https://msdn.microsoft.com/library/windows/apps/br208261).
 
-## Asignación de referencia de la API de EGL a Direct3D 11
+## <a name="api-reference-mapping-for-egl-to-direct3d-11"></a>Asignación de referencia de la API de EGL a Direct3D 11
 
 
 | API de EGL                          | Comportamiento o API de Direct3D 11 similar                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -412,10 +419,5 @@ En una aplicación para UWP, puedes cerrar CoreWindow con [**CoreWindow::Close**
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

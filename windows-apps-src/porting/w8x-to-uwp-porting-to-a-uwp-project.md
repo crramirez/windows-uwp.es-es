@@ -3,15 +3,22 @@ author: mcleblanc
 description: "Tienes dos opciones cuando empieza el proceso de migración."
 title: "Migración de un proyecto de Windows Runtime 8.x a un proyecto de UWP"
 ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: bd0526404f7e8f7fb87a0798c4e0c06bd9305c19
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d711d981a674d1516b12ee11c379e679c45dcb60
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Migración de un proyecto de Windows Runtime 8.x a un proyecto de UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Tienes dos opciones cuando empieza el proceso de migración. Una es editar una copia de los archivos de proyecto existentes, entre los que se incluye el manifiesto del paquete de la aplicación (para esta opción, consulta la información sobre cómo actualizar los archivos de proyecto en [Migrar aplicaciones a la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/mt148501.aspx)). La otra opción es crear un nuevo proyecto de Windows 10 en Visual Studio y copiar los archivos en él. En la primera sección de este tema se describe esa segunda opción, pero el resto del tema contiene información adicional aplicable a ambas opciones. También puedes mantener tu nuevo proyecto de Windows 10 en la misma solución que tus proyectos existentes y compartir archivos de código fuente mediante un proyecto compartido. También puedes mantener el nuevo proyecto en una solución específica y compartir archivos de código fuente mediante la característica de archivos vinculados de Visual Studio.
@@ -33,8 +40,8 @@ Encontrarás que refactorizar un poco o agregar código adaptable (lo cual se ex
 -   Los archivos que son comunes a todas las familias de dispositivo no necesitan ninguna consideración especial. Esos archivos serán usados por la aplicación en todas las familias de dispositivos en las que se ejecuta. Esto incluye los archivos de marcado XAML, los archivos de código fuente imperativo y los archivos de recursos.
 -   Es posible que tu aplicación detecte la familia de dispositivos en la que se está ejecutando y navegar a una vista que se ha diseñado específicamente para esa familia de dispositivos. Para obtener más información, consulta [Detección de la plataforma en la que se está ejecutando la aplicación](w8x-to-uwp-input-and-sensors.md).
 -   Una técnica similar que puede resultar útil si no existe otra alternativa es proporcionar a un archivo de marcado o archivo **ResourceDictionary** (o la carpeta que contiene el archivo) un nombre especial que se carga automáticamente en tiempo de ejecución solo cuando la aplicación se ejecuta en una familia de dispositivos en particular. Esta técnica se ilustra en el caso práctico [Bookstore1](w8x-to-uwp-case-study-bookstore1.md).
--   Debes poder eliminar muchas de las directivas de compilación condicional del código fuente de la aplicación Universal 8.1 si solo necesitas compatibilidad con Windows 10. Consulta [Compilación condicional y código adaptable](#reviewing-conditional-compilation) en este tema.
--   Para usar características que no están disponibles en todas las familias de dispositivos (por ejemplo, impresoras, escáneres o el botón de la cámara) puedes escribir código adaptable. Consulta el tercer ejemplo de [Compilación condicional y código adaptable](#reviewing-conditional-compilation) en este tema.
+-   Debes poder eliminar muchas de las directivas de compilación condicional del código fuente de la aplicación Universal 8.1 si solo necesitas compatibilidad con Windows 10. Consulta [Compilación condicional y código adaptable](#conditional-compilation-and-adaptive-code) en este tema.
+-   Para usar características que no están disponibles en todas las familias de dispositivos (por ejemplo, impresoras, escáneres o el botón de la cámara) puedes escribir código adaptable. Consulta el tercer ejemplo en [Compilación condicional y código adaptable](#conditional-compilation-and-adaptive-code) en este tema.
 -   Si quieres disponer de compatibilidad con Windows 8.1, Windows Phone 8.1 y Windows 10, puedes mantener tres proyectos en la misma solución y compartir código con un proyecto compartido. Como alternativa, puedes compartir archivos de código fuente entre proyectos. Pasos a seguir: en Visual Studio, haz clic con el botón derecho en el proyecto en **Explorador de soluciones**, selecciona **Agregar elemento existente**, selecciona los archivos para compartir y haz clic en **Agregar como vínculo**. Almacena tus archivos de código fuente en una carpeta común en el sistema de archivos donde puedan verlos los proyectos vinculados a ellos. Y no te olvides de agregarlos al control de origen.
 -   Para la reutilización en el nivel binario, en lugar del nivel de código fuente, consulta [Crear componentes de Windows en tiempo de ejecución en C# y Visual Basic](http://msdn.microsoft.com/library/windows/apps/xaml/br230301.aspx). También hay bibliotecas de clases portables que admiten el subconjunto de las API de .NET que están disponibles en .NET Framework para aplicaciones Windows 8.1, Windows Phone 8.1 y Windows 10 (núcleo de .NET) y el conjunto completo de .NET Framework. Los conjuntos de bibliotecas de clases portables tienen compatibilidad binaria con estas plataformas. Usa Visual Studio para crear un proyecto destinado a una biblioteca de clases portable. Consulta [Desarrollo multiplataforma con la biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391.aspx).
 
@@ -62,7 +69,7 @@ El nombre y el número de versión coinciden con las carpetas de la ubicación d
 
 A menos que la aplicación esté destinada a la familia de dispositivos que implementa la API, tendrás que usar la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para probar la presencia de la API antes de llamarla (esto se denomina "código adaptable"). A continuación, se evaluará esta condición donde se ejecute la aplicación, pero solo se evaluará en true en dispositivos en los que la API está presente y, por tanto, está disponible para ser llamada. Usa únicamente los SDK de extensión y el código adaptable después de comprobar primero si existe una API universal. En la sección siguiente se proporcionan algunos ejemplos.
 
-Consulta también [Manifiesto del paquete de la aplicación](#appxpackage).
+Consulta también [Manifiesto del paquete de la aplicación](#app-package-manifest).
 
 ## <a name="conditional-compilation-and-adaptive-code"></a>Compilación condicional y código adaptable
 
@@ -159,7 +166,7 @@ Consulta también [Detección de la plataforma en la que se está ejecutando la 
 
 ## <a name="app-package-manifest"></a>Manifiesto del paquete de la aplicación
 
-En el tema [Qué ha cambiado en Windows 10](https://msdn.microsoft.com/library/windows/apps/dn705793) se ofrece una lista con los cambios en la referencia del esquema de manifiesto del paquete para Windows 10, entre los que se incluyen los elementos que se han agregado, quitado y cambiado. Para obtener información de referencia sobre todos los elementos, atributos y tipos del esquema, consulta [Jerarquía de elemento](https://msdn.microsoft.com/library/windows/apps/dn934819). Si portas una aplicación de la Tienda de Windows Phone, asegúrate de que el elemento **pm:PhoneIdentity** en el manifiesto de la aplicación portada coincide con los datos del manifiesto de la aplicación que estás portando (consulta el tema [**pm:PhoneIdentity**](https://msdn.microsoft.com/library/windows/apps/dn934763) para obtener más detalles).
+En el tema [Qué ha cambiado en Windows 10](https://msdn.microsoft.com/library/windows/apps/dn705793) se ofrece una lista con los cambios en la referencia del esquema de manifiesto del paquete para Windows 10, entre los que se incluyen los elementos que se han agregado, quitado y cambiado. Para obtener información de referencia sobre todos los elementos, atributos y tipos del esquema, consulta [Jerarquía de elemento](https://msdn.microsoft.com/library/windows/apps/dn934819). Si vas a portar una aplicación de la Tienda de Windows Phone o si la aplicación es una actualización a una aplicación de la Tienda de Windows Phone, asegúrate de que el elemento **PM: phoneidentity** coincide con lo que está en el manifiesto de la aplicación anterior (usa los mismos GUID que la Tienda asignó a la aplicación). Esto garantiza que los usuarios de la aplicación que van a actualizar a Windows 10 recibirán tu nueva aplicación como una actualización, no un duplicado. Consulta el tema de referencia [**PM: phoneidentity**](https://msdn.microsoft.com/library/windows/apps/dn934763) para obtener más detalles.
 
 La configuración del proyecto (incluidas las referencias de SDK de extensión) determina el área de superficie de API que tu aplicación puede llamar. Pero el manifiesto del paquete de la aplicación es lo que determina el conjunto real de dispositivos en los que los clientes pueden instalar la aplicación desde la Tienda. Para obtener información, consulta los ejemplos de [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903).
 
@@ -173,10 +180,5 @@ El siguiente tema es [Solución de problemas](w8x-to-uwp-troubleshooting.md).
 * [Impulso de aplicaciones de la Tienda Windows con plantillas (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Creación de componentes de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [Desarrollo multiplataforma con la biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391.aspx)
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

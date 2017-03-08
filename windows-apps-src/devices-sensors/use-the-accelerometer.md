@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: "Usar el acelerómetro"
 description: "Aprende a usar el acelerómetro para responder al movimiento del usuario."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8ce3baf2b030096ae5cfc56f31b97ec58e138a44
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8f8236a68fd7628f1f53eebc13731a72414e3217
+ms.lasthandoff: 02/07/2017
 
 ---
-# Usar el acelerómetro
+# <a name="use-the-accelerometer"></a>Usar el acelerómetro
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** API importantes **
+**API importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Acelerómetro**](https://msdn.microsoft.com/library/windows/apps/BR225687)
@@ -23,17 +30,17 @@ Aprende a usar el acelerómetro para responder al movimiento del usuario.
 
 Una aplicación de juego sencilla puede usar un único sensor, el acelerómetro, como un dispositivo de entrada. Estas aplicaciones suelen usar uno o dos ejes de entrada. Pero también pueden usar el evento shake como otra fuente de entrada.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 
 El dispositivo o emulador que estés usando debe ser compatible con un acelerómetro.
 
-## Crear una aplicación de acelerómetro simple
+## <a name="create-a-simple-accelerometer-app"></a>Crear una aplicación de acelerómetro simple
 
 Esta sección se divide en dos subsecciones: En la primera subsección, conocerás los pasos necesarios para crear una aplicación de acelerómetro simple desde cero. En la siguiente subsección se aplica la aplicación que acabas de crear.
 
-### Instrucciones
+### <a name="instructions"></a>Instrucciones
 
 -   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
 
@@ -67,7 +74,7 @@ Esta sección se divide en dos subsecciones: En la primera subsección, conocer�
             // Sensor and dispatcher variables
             private Accelerometer _accelerometer;
 
-            // This event handler writes the current accelerometer reading to 
+            // This event handler writes the current accelerometer reading to
             // the three acceleration text blocks on the app' s main page.
 
             private async void ReadingChanged(object sender, AccelerometerReadingChangedEventArgs e)
@@ -136,7 +143,7 @@ Con la aplicación en ejecución, puedes cambiar los valores de acelerómetro mo
 
 -   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 (o selecciona **Depurar** &gt; **Detener depuración**) para detener la aplicación.
 
-### Explicación
+### <a name="explanation"></a>Explicación
 
 En el ejemplo anterior, se muestra el poco código que debes escribir para poder integrar los datos de entrada del acelerómetro en la aplicación.
 
@@ -157,7 +164,7 @@ _accelerometer.ReportInterval = reportInterval;
 Los nuevos datos del acelerómetro se capturan en el método **ReadingChanged**. Cada vez que el controlador del sensor recibe nuevos datos del sensor, pasa los valores a la aplicación mediante este controlador de eventos. La aplicación registra este controlador de eventos en la siguiente línea.
 
 ```csharp
-_accelerometer.ReadingChanged += new TypedEventHandler<Accelerometer, 
+_accelerometer.ReadingChanged += new TypedEventHandler<Accelerometer,
 AccelerometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -168,13 +175,7 @@ Estos nuevos valores se escriben en los bloques de texto que se encuentran en el
  <TextBlock x:Name="txtYAxis" HorizontalAlignment="Left" Height="15" Margin="70,49,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="53" Foreground="#FFF2EEEE"/>
  <TextBlock x:Name="txtZAxis" HorizontalAlignment="Left" Height="15" Margin="70,80,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="53" Foreground="#FFFFF8F8"/>
 ```
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Muestra de acelerómetro](http://go.microsoft.com/fwlink/p/?linkid=241377)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,15 +3,22 @@ author: laurenhughes
 ms.assetid: 98BD79B3-F420-43C5-98D3-52EBDDB479A0
 description: "En este artículo se enumeran las opciones de codificación que pueden usarse con BitmapEncoder."
 title: Referencia de opciones de BitmapEncoder
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: 4edf119d0f8830fec9ece34f1a7eb8f3ffbe67dd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c29c05e7397e87851ebb0fa5fa29df3b9b58907b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Referencia de opciones de BitmapEncoder
+# <a name="bitmapencoder-options-reference"></a>Referencia de opciones de BitmapEncoder
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artículo enumera las opciones de codificación que pueden usarse con [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206). Una opción de codificación se define por su nombre, que es una cadena, y un valor en un determinado tipo de datos ([**Windows.Foundation.PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871)). Para obtener más información sobre el trabajo con imágenes, consulta [Crear, editar y guardar imágenes de mapa de bits](imaging.md).
 
@@ -31,7 +38,7 @@ Este artículo enumera las opciones de codificación que pueden usarse con [**Bi
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear, editar y guardar imágenes de mapa de bits](imaging.md)
 * [Códecs admitidos](supported-codecs.md)
@@ -40,10 +47,5 @@ Este artículo enumera las opciones de codificación que pueden usarse con [**Bi
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

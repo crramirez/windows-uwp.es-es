@@ -3,16 +3,23 @@ author: dbirtolo
 title: Acceder a sensores y dispositivos desde una tarea en segundo plano
 description: "DeviceUseTrigger permite que aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, incluso cuando la aplicación en primer plano esté suspendida."
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: 060cec50933860407679edbad5d2cd8a6d3e0396
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ea665aee9d8e65f5542de96863dee5b9eec9e346
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Acceder a sensores y dispositivos desde una tarea en segundo plano
+# <a name="access-sensors-and-devices-from-a-background-task"></a>Acceder a sensores y dispositivos desde una tarea en segundo plano
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que la aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, aunque la aplicación en primer plano esté suspendida. Por ejemplo, en función de dónde se ejecute la aplicación, podrías usar una tarea en segundo plano para sincronizar datos con dispositivos o sensores de monitores. Para ahorrar batería y garantizar el consentimiento apropiado por parte del usuario, el uso de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) está sujeto a las directivas descritas en este tema.
@@ -22,17 +29,17 @@ Para acceder a dispositivos periféricos o sensores en segundo plano, crea una t
 > [!Important]
 > **DeviceUseTrigger** no se puede usar con tareas en segundo plano dentro del proceso. La información de este tema solo se aplica a las tareas en segundo plano que se ejecutan fuera del proceso.
 
-## Introducción a las tareas en segundo plano del dispositivo
+## <a name="device-background-task-overview"></a>Introducción a las tareas en segundo plano del dispositivo
 
 Cuando la aplicación deje de ser visible para el usuario, Windows la suspenderá o finalizará para recuperar recursos de CPU y memoria. Esto permite ejecutar otras aplicaciones en primer plano y reduce el consumo de batería. Cuando suceda esto, sin ayuda de una tarea en segundo plano, todos los eventos de datos en curso se perderán. Windows proporciona el desencadenador de tarea en segundo plano, [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337), para que la aplicación pueda realizar operaciones de sincronización y supervisión de larga duración en dispositivos y sensores de manera segura en segundo plano, aunque la aplicación esté suspendida. Para obtener más información sobre el ciclo de vida de la aplicación, consulta [Iniciar, reanudar y tareas en segundo plano](index.md). Para obtener más información sobre las tareas en segundo plano, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
-**Nota**: En una aplicación universal de Windows, para sincronizar un dispositivo en segundo plano, el usuario debe haber aprobado la sincronización en segundo plano de la aplicación. El dispositivo también debe estar conectado o emparejado con el equipo, con E/S activa, y se le permite un máximo de 10minutos de actividad en segundo plano. Más adelante en este tema se proporcionan más detalles sobre la aplicación de directivas.
+**Nota**: En una aplicación universal de Windows, para sincronizar un dispositivo en segundo plano, el usuario debe haber aprobado la sincronización en segundo plano de la aplicación. El dispositivo también debe estar conectado o emparejado con el equipo, con E/S activa, y se le permite un máximo de 10 minutos de actividad en segundo plano. Más adelante en este tema se proporcionan más detalles sobre la aplicación de directivas.
 
-### Limitación: operaciones críticas del dispositivo
+### <a name="limitation-critical-device-operations"></a>Limitación: operaciones críticas del dispositivo
 
 Algunas operaciones críticas del dispositivo, como las actualizaciones del firmware que se ejecutan durante mucho tiempo, no se pueden realizar con [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Esas operaciones solo se pueden realizar en el equipo y solo las puede realizar una aplicación privilegiada que use [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Una *aplicación privilegiada* es una aplicación que ha recibido la autorización del fabricante del dispositivo para realizar esas operaciones. Los metadatos del dispositivo se usan para especificar qué aplicación, si es el caso, se ha designado como aplicación privilegiada para un dispositivo. Para obtener más información, consulta el tema sobre [sincronización y actualización de dispositivos para aplicaciones de dispositivo de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=306619).
 
-## Protocolos o API admitidos en una tarea en segundo plano DeviceUseTrigger
+## <a name="protocolsapis-supported-in-a-deviceusetrigger-background-task"></a>Protocolos o API admitidos en una tarea en segundo plano DeviceUseTrigger
 
 Las tareas en segundo plano que usan [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permiten que tu aplicación se comunique a través de un gran número de protocolos o API, cuando muchos de ellos no se admiten en tareas en segundo plano desencadenadas por el sistema. Los siguientes componentes son compatibles con una aplicación universal de Windows.
 
@@ -48,7 +55,7 @@ Las tareas en segundo plano que usan [**DeviceUseTrigger**](https://msdn.microso
 | IDeviceIOControl | ![deviceservicingtrigger es compatible con ideviceiocontrol](images/ap-tools.png)                                                                                                                       |
 | API de sensores      | ![deviceservicingtrigger admite API de sensores universales](images/ap-tools.png) (limitado a los sensores de la [familia de dispositivos universal](https://msdn.microsoft.com/library/windows/apps/dn894631)) |
 
-## Registrar tareas en segundo plano en el manifiesto del paquete de la aplicación
+## <a name="registering-background-tasks-in-the-app-package-manifest"></a>Registrar tareas en segundo plano en el manifiesto del paquete de la aplicación
 
 La aplicación realizará operaciones de sincronización y actualización en código que se ejecuta como parte de una tarea en segundo plano. Este código está insertado en una clase de Windows Runtime que implementa [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) (o en una página JavaScript dedicada para las aplicaciones JavaScript). Para usar una tarea en segundo plano de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337), la aplicación debe declararla en el archivo de manifiesto de la aplicación de una aplicación en primer plano, como en el caso de las tareas en segundo plano desencadenadas por el sistema.
 
@@ -64,7 +71,7 @@ En este ejemplo de un archivo de manifiesto de paquete de la aplicación, **Devi
 </Extensions>
 ```
 
-## Introducción al uso de DeviceUseTrigger
+## <a name="introduction-to-using-deviceusetrigger"></a>Introducción al uso de DeviceUseTrigger
 
 Para usar [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337), sigue estos pasos básicos. Para obtener más información sobre las tareas en segundo plano, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
@@ -81,7 +88,7 @@ Para usar [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps
 **Importante**  
 Ten en cuenta estos puntos importantes al usar [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337):
 
--   La capacidad de desencadenar tareas en segundo plano mediante programación que usan [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) se incluyó por primera vez en Windows8.1 y WindowsPhone8.1.
+-   La capacidad de desencadenar tareas en segundo plano mediante programación que usan [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) se incluyó por primera vez en Windows 8.1 y Windows Phone 8.1.
 
 -   Windows aplica ciertas directivas para garantizar el consentimiento por parte del usuario al actualizar dispositivos periféricos en el equipo.
 
@@ -91,21 +98,21 @@ Ten en cuenta estos puntos importantes al usar [**DeviceUseTrigger**](https://ms
 
 **Sugerencia**: Para ver cómo funcionan estas tareas en segundo plano, descarga una muestra. Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
  
-## Restricciones de frecuencia y primer plano
+## <a name="frequency-and-foreground-restrictions"></a>Restricciones de frecuencia y primer plano
 
 No hay límites en cuanto a la frecuencia con la que tu aplicación puede iniciar operaciones, pero la aplicación solo puede ejecutar una operación de tarea en segundo plano de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) a la vez (esto no afecta a otros tipos de tareas en segundo plano) y solo puede iniciar una tarea en segundo plano mientras la aplicación se encuentre en primer plano. Si la aplicación no está en primer plano, no puede iniciar una tarea en segundo plano con **DeviceUseTrigger**. La aplicación no puede iniciar una segunda tarea en segundo plano de **DeviceUseTrigger** antes de que se haya completado la primera.
 
-## Restricciones del dispositivo
+## <a name="device-restrictions"></a>Restricciones del dispositivo
 
 Aunque cada aplicación está limitada para registrar y ejecutar solo una tarea en segundo plano de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337), el dispositivo (en el que se ejecuta la aplicación) puede permitir que varias aplicaciones se registren y ejecuten tareas en segundo plano de **DeviceUseTrigger**. En función del dispositivo, puede haber límites en el número total de tareas en segundo plano de **DeviceUseTrigger** de todas las aplicaciones. Esto ayuda a ahorrar batería en dispositivos con restricciones de recursos. Consulta la tabla siguiente para obtener más información.
 
 Desde una sola tarea en segundo plano de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337), la aplicación puede acceder a una cantidad ilimitada de dispositivos periféricos o sensores (limitada solo por las API y los protocolos compatibles enumerados en la tabla anterior).
 
-## Directivas de tareas en segundo plano
+## <a name="background-task-policies"></a>Directivas de tareas en segundo plano
 
 Windows aplica directivas cuando la aplicación usa una tarea en segundo plano de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Si no se cumplen estas directivas, es posible que la tarea en segundo plano se cancele. Es importante tener en cuenta estos requisitos de directivas al usar este tipo de tarea en segundo plano para interactuar con dispositivos o sensores.
 
-### Directivas de inicio de tareas
+### <a name="task-initiation-policies"></a>Directivas de inicio de tareas
 
 En la siguiente tabla se indican las directivas de inicio de tareas que se aplican a una aplicación universal de Windows.
 
@@ -118,11 +125,11 @@ En la siguiente tabla se indican las directivas de inicio de tareas que se aplic
 | Se ejecuta una sola tarea en segundo plano de [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337) por aplicación. | ![se aplica la directiva](images/ap-tools.png) |
 | Todavía no se ha alcanzado la cantidad máxima de tareas en segundo plano de [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337) en el dispositivo (en el que se ejecuta la aplicación). | familia de dispositivos de escritorio: se puede registrar y ejecutar en paralelo una cantidad ilimitada de tareas. |
 |  |  |
-|  | familia de dispositivos móviles: 1 tarea en un dispositivo de 512MB; de lo contrario, pueden registrarse 2 tareas y ejecutarse en paralelo. |
+|  | familia de dispositivos móviles: 1 tarea en un dispositivo de 512 MB; de lo contrario, pueden registrarse 2 tareas y ejecutarse en paralelo. |
 | La cantidad máxima de dispositivos periféricos o sensores a los que puede acceder la aplicación desde una sola tarea en segundo plano de [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337) al usar las API o los protocolos compatibles. | Ilimitada |
-| La tarea en segundo plano consume 400ms de tiempo de CPU (dando por hecho una CPU a 1GHz) cada minuto cuando la pantalla está bloqueada o cada 5 minutos cuando la pantalla no está bloqueada. Si no se cumple esta directiva, se puede cancelar la tarea. | ![se aplica la directiva](images/ap-tools.png) |
+| La tarea en segundo plano consume 400 ms de tiempo de CPU (dando por hecho una CPU a 1 GHz) cada minuto cuando la pantalla está bloqueada o cada 5 minutos cuando la pantalla no está bloqueada. Si no se cumple esta directiva, se puede cancelar la tarea. | ![se aplica la directiva](images/ap-tools.png) |
  
-### Comprobaciones de directivas en tiempo de ejecución
+### <a name="runtime-policy-checks"></a>Comprobaciones de directivas en tiempo de ejecución
 
 Windows aplica los siguientes requisitos de directivas en tiempo de ejecución mientras la tarea se ejecuta en segundo plano. Si cualquiera de los requisitos en tiempo de ejecución deja de cumplirse, Windows cancelará la tarea en segundo plano del dispositivo.
 
@@ -138,11 +145,11 @@ En esta tabla se indican las directivas en tiempo de ejecución que se aplican a
 |  | familia de dispositivos móviles: ningún límite de tiempo. Para conservar los recursos, no pueden ejecutarse más de 1 o 2 tareas al mismo tiempo. |
 | La aplicación no se ha cerrado. | ![La comprobación de directiva se aplica.](images/ap-tools.png) |
 
-## Procedimientos recomendados
+## <a name="best-practices"></a>Procedimientos recomendados
 
 A continuación se indican los procedimientos recomendados para las aplicaciones que usan las tareas en segundo plano de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337).
 
-### Programar una tarea en segundo plano
+### <a name="programming-a-background-task"></a>Programar una tarea en segundo plano
 
 Al usar la tarea en segundo plano de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) desde la aplicación, se garantiza que las operaciones de sincronización o supervisión iniciadas desde la aplicación en primer plano sigan ejecutándose en segundo plano si los usuarios cambian de aplicación y Windows suspende la aplicación en primer plano. Te recomendamos adoptar el siguiente modelo general para registrar, desencadenar tareas en segundo plano y anular su registro:
 
@@ -168,16 +175,11 @@ Al usar la tarea en segundo plano de [**DeviceUseTrigger**](https://msdn.microso
 
     -   Cuando se cierre la aplicación, las tareas en segundo plano se cancelarán y los controladores de eventos se desconectarán de las tareas en segundo plano existentes. Esto te impedirá determinar el estado de las tareas en segundo plano. Si anulas el registro de la tarea en segundo plano y la cancelas, el código de cancelación podrá detener de manera limpia las tareas en segundo plano.
 
-### Cancelar una tarea en segundo plano
+### <a name="cancelling-a-background-task"></a>Cancelar una tarea en segundo plano
 
 Para cancelar una tarea que se ejecuta en segundo plano desde la aplicación en primer plano, usa el método Unregister en el objeto [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) que usas en la aplicación para registrar la tarea en segundo plano de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Al anular el registro de la tarea en segundo plano con el método [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229869) en **BackgroundTaskRegistration**, la infraestructura de tareas en segundo plano cancelará dicha tarea en segundo plano.
 
 Además, el método [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229869) usa un valor booleano True o False para indicar si las instancias en ejecución de la tarea en segundo plano se deben cancelar sin permitir que finalicen. Para obtener más información, consulta la referencia de API para **Unregister**.
 
 Además del método [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229869), la aplicación también debe llamar a [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504). Esto notifica al sistema que ha finalizado la operación asincrónica asociada a una tarea en segundo plano.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

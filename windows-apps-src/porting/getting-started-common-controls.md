@@ -1,19 +1,26 @@
 ---
 author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
-description: Tareas iniciales con controles habituales
-title: Tareas iniciales con controles habituales
+description: "Introducción a los controles habituales"
+title: "Introducción a los controles habituales"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2cd4b7344074c795f14a56cddbe7807c9ffefafe
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 91ea875987d5e1659fff337f95f790ef59286d03
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introducción: controles habituales
+# <a name="getting-started-common-controls"></a>Introducción: controles habituales
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Lista de controles habituales
+## <a name="common-controls-list"></a>Lista de controles habituales
 
 En la sección anterior, trabajaste con tan solo dos controles: botones y bloques de texto. Por supuesto, hay muchos más controles disponibles. Estos son algunos controles comunes que usarás en las aplicaciones y sus equivalentes de iOS. Los controles de iOS se enumeran en orden alfabético, junto con los controles de la Plataforma universal de Windows (UWP) más similares.
 
@@ -22,7 +29,7 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 | Control de iOS (clase/protocolo) | Control de una aplicación de la Tienda Windows equivalente |
 |------------------------------|--------------------------------------|
 | Indicador de actividad (**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> Consulta también [Inicio rápido: agregar controles de progreso](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) |
-| Vista de banner de publicidad (**ADBannerView**) y delegado de vista de banner de publicidad (**ADBannerViewDelegate**) | Consulta [SDK de Microsoft Advertising](http://go.microsoft.com/fwlink/p/?LinkId=263494) |
+| Vista de banner de publicidad (**ADBannerView**) y delegado de vista de banner de publicidad (**ADBannerViewDelegate**) | [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) <br/> Consulta también [Mostrar anuncios en tu aplicación](../monetize/display-ads-in-your-app.md) |
 | Botón (UIButton) | [Botón](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> Consulta también [Inicio rápido: agregar controles de botón](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) |
 | Selector de fecha (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | Vista de imagen (UIImageView) | [Imagen](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Consulta también [Image e ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
@@ -50,18 +57,13 @@ Para ver aún más controles, consulta [Lista de controles](https://msdn.microso
 
 **Nota:** Para ver la lista de controles para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/hh465453).
 
-### Paso siguiente
+### <a name="next-step"></a>Paso siguiente
 
 [Introducción: Navegación](getting-started-navigation.md)
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Build 2014: Información sobre los controles y la interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?LinkID=397897)
 * [Build 2014: Desarrollar aplicaciones con el marco de trabajo de la interfaz de usuario de XAML común](http://go.microsoft.com/fwlink/p/?LinkID=397898)
 * [Build 2014: Usar Visual Studio para crear aplicaciones XAML convergidas](http://go.microsoft.com/fwlink/p/?LinkID=397876)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

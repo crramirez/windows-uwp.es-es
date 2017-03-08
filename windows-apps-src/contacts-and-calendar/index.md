@@ -3,15 +3,22 @@ author: Xansky
 description: "Cómo usar la información de contactos y calendario en la aplicación para UWP."
 title: Contactos y calendario
 ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, contactos, calendario, citas, mensajes de correo, contacts, calendar, appointments, email messages
 translationtype: Human Translation
-ms.sourcegitcommit: c21a5f0f859e3a80d01786caaf6941c3d0b11c18
-ms.openlocfilehash: 0b93ab3f5e0a622fb924a752ec581bbb9df32936
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f0e61f5c586ccd1225fb9e4edf5ab93580cfd043
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Contactos y calendario
+# <a name="contacts-and-calendar"></a>Contactos y calendario
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Puedes permitirle que los usuarios obtengan acceso a los contactos y las citas para que compartan contenido, correos electrónicos, información del calendario o mensajes, o cualquier funcionalidad que diseñes.
 
@@ -27,16 +34,11 @@ Para conocer los distintos modos en que tu aplicación puede obtener acceso a lo
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Ejemplo de API de citas](http://go.microsoft.com/fwlink/p/?linkid=309836)
 * [Ejemplo de API del administrador de contactos](http://go.microsoft.com/fwlink/p/?LinkID=310079)
 * [Muestra de una aplicación de selector de contactos](http://go.microsoft.com/fwlink/p/?linkid=231575)
 * [Ejemplo de control de las acciones de contacto](http://go.microsoft.com/fwlink/p/?LinkID=320151)
 * [Ejemplo de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

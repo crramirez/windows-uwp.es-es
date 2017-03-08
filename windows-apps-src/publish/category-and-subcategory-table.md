@@ -1,15 +1,22 @@
 ---
 author: jnHs
 Description: "Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender mejor de qué se trata."
-title: "Tabla de categoría y subcategoría"
+title: "Tabla de categorías y subcategorías"
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: b31e399d950a99f0cb6f1e912e391429b5463136
-ms.openlocfilehash: 40891ade1c3383f89eed99176b4e9cf979e1fb64
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a69521d9ff9adb682a370b421458269507e9befe
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Tabla de categoría y subcategoría
+# <a name="category-and-subcategory-table"></a>Tabla de categorías y subcategorías
 
 
 Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender mejor de qué se trata.
@@ -59,11 +66,6 @@ No todas las categorías tienen subcategorías. Ten en cuenta que solo puedes us
 | Utilidades y herramientas           | Copias de seguridad y administración <br> Administradores de archivos                |
  
 
-> **Nota** Para obtener información sobre las categorías que se usan en la Tienda Windows para Windows8.1 y versiones anteriores y en la Tienda de Windows Phone, y sobre cuál es su relación con la lista de categorías anterior, consulta el tema [Cómo aparece una aplicación en la Tienda para los clientes de Windows10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
-
-
-
-
-<!--HONumber=Aug16_HO5-->
+> **Nota** Para obtener información sobre las categorías que se usan en la Tienda Windows para Windows 8.1 y versiones anteriores y en la Tienda de Windows Phone, y sobre cuál es su relación con la lista de categorías anterior, consulta el tema [Cómo aparece una aplicación en la Tienda para los clientes de Windows 10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
 
 

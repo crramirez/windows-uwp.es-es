@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: "Planear la migración de OpenGL ES 2.0 a Direct3D"
-description: "Si vas a migrar un juego de plataformas iOS o Android, probablemente has hecho una gran inversión en OpenGL ES 2.0."
+description: "Si vas a migrar un juego de las plataformas iOS o Android, probablemente hayas hecho una gran inversión en OpenGL ES 2.0."
 ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, OpenGL, Direct3D
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 84f13d6507d141c468fcfd6a2bcf75f5419d65da
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d2642abbfbfc6030aa00f68f30d4a45eb0e86ee1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Planear la migración de OpenGL ES 2.0 a Direct3D
+# <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>Planear la migración de OpenGL ES 2.0 a Direct3D
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -26,7 +33,7 @@ La mayor parte de la tarea de migración consiste en dar los primeros pasos por 
 
 Estas son algunas de las cosas que debes tener en cuenta para migrar gráficos de OpenGL ES 2.0 a Direct3D 11.
 
-## Notas sobre proveedores específicos de OpenGL ES 2.0
+## <a name="notes-on-specific-opengl-es-20-providers"></a>Notas sobre proveedores específicos de OpenGL ES 2.0
 
 
 Los temas de migración de esta sección hacen referencia a la implementación de Windows de la especificación de OpenGL ES 2.0 creada por Khronos Group. Todas las muestras del código de OpenGL ES 2.0 se desarrollaron con Visual Studio 2012 y la sintaxis básica de Windows C. Si partes de un código base de Objective-C (iOS) o Java (Android), ten en cuenta que las muestras de código de Open GL ES 2.0 que se proporcionan pueden no usar parámetros o sintaxis de llamadas API similares. Esta orientación intenta no involucrarte con las plataformas en la medida que sea posible.
@@ -35,19 +42,19 @@ La documentación solo usa API de la especificación 2.0 para el código de Open
 
 Las muestras de Direct3D 11 de estos temas usan Microsoft Windows C++ con extensiones de componentes (CX). Para más información sobre esta versión de sintaxis C++, lee [Visual C++](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx), [Extensiones de componentes para plataformas en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/xey702bw.aspx) y [Referencia rápida (C++\\CX)](https://msdn.microsoft.com/library/windows/apps/br212455.aspx).
 
-## Comprender los requisitos y recursos de hardware
+## <a name="understand-your-hardware-requirements-and-resources"></a>Comprender los requisitos y recursos de hardware
 
 
-El conjunto de características para procesar gráficos en OpenGL ES 2.0 se asigna en términos generales a las características proporcionadas en Direct3D 9.1. Si quieres sacar provecho de las características más avanzadas de Direct3D11, revisa la documentación de [Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476080) cuando planees una migración o revisa los temas [Migrar de DirectX9 a la Plataforma universal de Windows (UWP)](porting-your-directx-9-game-to-windows-store.md) cuando ya hayas realizado el esfuerzo inicial.
+El conjunto de características para procesar gráficos en OpenGL ES 2.0 se asigna en términos generales a las características proporcionadas en Direct3D 9.1. Si quieres sacar provecho de las características más avanzadas de Direct3D 11, revisa la documentación de [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080) cuando planees una migración o revisa los temas [Migrar de DirectX 9 a la Plataforma universal de Windows (UWP)](porting-your-directx-9-game-to-windows-store.md) cuando ya hayas realizado el esfuerzo inicial.
 
 Para simplificar tu primera migración, empieza con la plantilla Direct3D de Visual Studio. Esta proporciona un representador básico ya configurado y admite características de aplicaciones para UWP, como recrear recursos en cambios de Windows y niveles de características de Direct3D.
 
-## Comprender los niveles de característica de Direct3D 
+## <a name="understand-direct3d-feature-levels"></a>Comprender los niveles de característica de Direct3D 
 
 
 Direct3D 11 ofrece compatibilidad con los "niveles de característica" de hardware de 9\_1 (Direct3D 9.1) para 11\_1. Estos niveles de característica indican la disponibilidad de ciertos recursos y características de gráficos. Normalmente la mayoría de las plataformas de OpenGL ES 2.0 admiten un conjunto de características de Direct3D 9.1 (nivel de característica 9\_1).
 
-## Revisar API y características de gráficos de DirectX
+## <a name="review-directx-graphics-features-and-apis"></a>Revisar API y características de gráficos de DirectX
 
 
 | Familia de API                                                | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -61,7 +68,7 @@ Direct3D 11 ofrece compatibilidad con los "niveles de característica" de hardwa
 
  
 
-## Revisar la biblioteca de plantillas y API de Windows Runtime
+## <a name="review-the-windows-runtime-apis-and-template-library"></a>Revisar la biblioteca de plantillas y API de Windows Runtime
 
 
 Las API de Windows Runtime proporcionan la infraestructura general para aplicaciones para UWP. Revísalas [aquí](https://msdn.microsoft.com/library/windows/apps/br211377).
@@ -73,9 +80,9 @@ Estas son las API esenciales de Windows Runtime que se usan en la migración de 
 -   [**Windows::ApplicationModel::Core::IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)
 -   [**Windows::ApplicationModel::Core::CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)
 
-Además, la Biblioteca de plantillas C++ de Windows Runtime (WRL) es una biblioteca que proporciona un modo de bajo nivel para crear y usar componentes de Windows Runtime. Las API de Direct3D11 para aplicaciones para UWP se usan mejor en conjunto con las interfaces y tipos de esta biblioteca, como los punteros inteligentes ([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)). Para más información sobre la WRL, lee [Biblioteca de plantillas C++ de Windows Runtime (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx).
+Además, la Biblioteca de plantillas C++ de Windows Runtime (WRL) es una biblioteca que proporciona un modo de bajo nivel para crear y usar componentes de Windows Runtime. Las API de Direct3D 11 para aplicaciones para UWP se usan mejor en conjunto con las interfaces y tipos de esta biblioteca, como los punteros inteligentes ([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)). Para más información sobre la WRL, lee [Biblioteca de plantillas C++ de Windows Runtime (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx).
 
-## Cambiar el sistema de coordenadas
+## <a name="change-your-coordinate-system"></a>Cambiar el sistema de coordenadas
 
 
 Una diferencia que a veces confunde en los primeros pasos de migración es el cambio del sistema de coordenadas tradicional a la derecha de OpenGL al sistema de coordenadas predeterminado a la izquierda de Direct3D. Esta cambio en los modelos de coordenadas afecta muchas partes del juego, desde la configuración de búferes de vértices a varias de las funciones matemáticas de la matriz. Los dos cambios más importantes para hacer son:
@@ -104,7 +111,7 @@ Si embargo Direct3D puede admitir un sistema de coordenadas a la derecha. Direct
 
  
 
-## Preguntas más frecuentes sobre la migración de OpenGL ES 2.0 a Direct3D 11
+## <a name="opengl-es20-to-direct3d-11-porting-frequently-asked-questions"></a>Preguntas más frecuentes sobre la migración de OpenGL ES 2.0 a Direct3D 11
 
 
 -   Pregunta: "En general, ¿puedo buscar ciertas cadenas o patrones en el código de OpenGL y reemplazarlos con los equivalentes de Direct3D?
@@ -116,10 +123,5 @@ Si embargo Direct3D puede admitir un sistema de coordenadas a la derecha. Direct
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

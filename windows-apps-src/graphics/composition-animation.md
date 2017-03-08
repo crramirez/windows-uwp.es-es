@@ -3,14 +3,21 @@ author: scottmill
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: "Animaciones de composición"
 description: "Muchas de las propiedades de objetos y efectos de composición se pueden animar con animaciones de fotogramas y expresión clave, lo que permite a las propiedades de un elemento de la interfaz de usuario cambiar con el tiempo o según un cálculo concreto."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 9ea05f7ba76c7813b200a4c8cd021613f980355d
-ms.openlocfilehash: 72b70dd2ae4de385f2a4711477aebb6d7023158c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 85b2e5006e8f2b9d2d2f78bab044032210011f41
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="composition-animations"></a>Animaciones de composición
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 La API de WinRT Windows.UI.Composition te permite crear, animar, transformar y manipular objetos de compositor en una capa de API unificada. Las animaciones de composición proporcionan una forma eficaz y eficiente para ejecutar animaciones en tu interfaz de usuario de la aplicación. Se han diseñado desde cero para garantizar que las animaciones se ejecuten a 60 FPS independientemente del subproceso de la interfaz de usuario, así como para proporcionarte flexibilidad para crear experiencias increíbles no solo con tiempo, sino también con la entrada y otras propiedades, para controlar las animaciones.
 En este tema se proporciona una visión general de la función disponible que te permite animar las propiedades del objeto de composición.
@@ -24,7 +31,7 @@ Las **animaciones de fotograma clave** proporcionan experiencias tradicionales d
 
 **Animaciones implícitas** son un tipo de animación que permite a los desarrolladores definir animaciones individuales reutilizables o una serie de animaciones por separado de la lógica de la aplicación clave. Las animaciones implícitas permiten que los desarrolladores creen *plantillas* de animación y las enlacen con desencadenadores. Estos desencadenadores son los cambios de propiedad que se originan de asignaciones explícitas. Los desarrolladores pueden definir una plantilla como una animación única o un grupo de animación. Los grupos de animaciones son un conjunto de plantillas de animación que se pueden iniciar conjuntamente de forma explícita o con un desencadenador. Las animaciones implícitas eliminan la necesidad de crear KeyFrameAnimations explícitas cada vez que deseas cambiar el valor de una propiedad y verla animarse.
 
-Las **animaciones de expresión** son un tipo de animación que se introdujo en la capa visual con la actualización de noviembre de Windows 10 (compilación 10586). La idea de las animaciones de expresión es que un desarrollador puede crear relaciones matemáticas entre las propiedades [Visuales](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) y los valores discretos que se evaluarán y actualizarán en cada fotograma. Los desarrolladores pueden hacer referencia a las propiedades en objetos de composición o conjuntos de propiedades, usar aplicaciones auxiliares de funciones matemáticas e incluso hacer referencia a la entrada para derivar estas relaciones matemáticas. Las expresiones hacen que las experiencias como las del efecto parallax y los encabezados permanentes se puedan desarrollar sin problemas en la plataforma Windows.  
+Las **animaciones de expresión** son un tipo de animación que se introdujo en la capa visual con la actualización de noviembre de Windows 10 (compilación 10586). La idea de las animaciones de expresión es que un desarrollador puede crear relaciones matemáticas entre las propiedades [Visuales](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) y los valores discretos que se evaluarán y actualizarán en cada fotograma. Los desarrolladores pueden hacer referencia a las propiedades en objetos de composición o conjuntos de propiedades, usar aplicaciones auxiliares de funciones matemáticas e incluso hacer referencia a la entrada para derivar estas relaciones matemáticas. Las expresiones hacen que las experiencias como las del efecto parallax y los encabezados permanentes se puedan desarrollar sin problemas en la plataforma Windows.  
 
 ## <a name="why-composition-animations"></a>Motivos para usar las animaciones de composición
 **Rendimiento**  
@@ -43,36 +50,36 @@ Puedes consultar nuestra conversaciones //BUILD para las [Animaciones de expresi
 También puedes consultar el tema sobre la [Composición en GitHub](http://go.microsoft.com/fwlink/?LinkID=789439) para ver ejemplos sobre cómo usar las API y muestras de alta fidelidad de las API en acción.
  
 ## <a name="what-can-you-animate-with-composition-animations"></a>¿Qué se puede animar con las animaciones de composición?
-Las animaciones de composición se pueden aplicar a la mayoría de las propiedades de objetos de composición como [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) e **InsetClip**. También puedes aplicar animaciones de composición a los efectos de composición y los conjuntos de propiedades. **Al elegir lo que quieres animar, toma nota del tipo: usa esta opción para determinar qué tipo de animación de fotograma clave quieres construir o qué tipo de expresión debes resolver.**  
+Las animaciones de composición se pueden aplicar a la mayoría de las propiedades de objetos de composición como [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) e **InsetClip**. También puedes aplicar animaciones de composición a los efectos de composición y los conjuntos de propiedades. **Al elegir lo que quieres animar, toma nota del tipo: usa esta opción para determinar qué tipo de animación de fotograma clave quieres construir o qué tipo de expresión debes resolver.**  
  
 ### <a name="visual"></a>Visual
-|Propiedades Visual que se pueden animar|  Tipo|
+|Propiedades Visual que se pueden animar|    Tipo|
 |------|------|
-|AnchorPoint|   Vector2|
-|CenterPoint|   Vector3|
+|AnchorPoint|    Vector2|
+|CenterPoint|    Vector3|
 |Offset|    Vector3|
-|Opacity|   Scalar|
-|Orientation|   Quaternion|
-|RotationAngle| Scalar|
+|Opacity|    Scalar|
+|Orientation|    Quaternion|
+|RotationAngle|    Scalar|
 |RotationAngleInDegrees|    Scalar|
-|RotationAxis|  Vector3|
-|Scale| Vector3|
-|Size|  Vector2|
-|TransformMatrix*|  Matrix4x4|
+|RotationAxis|    Vector3|
+|Scale|    Vector3|
+|Size|    Vector2|
+|TransformMatrix*|    Matrix4x4|
 * Si quieres animar la propiedad TransformMatrix completa como una matriz 4x4, debes usar una animación de expresión para hacerlo. De lo contrario, puedes elegir celdas individuales de la matriz y usar en ellas las animaciones de fotograma clave o expresión.  
 
 ### <a name="insetclip"></a>InsetClip
-|Propiedades InsetClip que se pueden animar|   Type|
+|Propiedades InsetClip que se pueden animar|    Type|
 |-------------------------------|-------|
-|BottomInset|   Scalar|
-|LeftInset| Scalar|
+|BottomInset|    Scalar|
+|LeftInset|    Scalar|
 |RightInset|    Scalar|
-|TopInset|  Scalar|
+|TopInset|    Scalar|
 
 ## <a name="visual-sub-channel-properties"></a>Propiedades Visual de canal secundario
-Además de animar las propiedades de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), también puedes usar los componentes de *canal secundario* de estas propiedades para las animaciones. Por ejemplo, pongamos que solo quieres animar la propiedad X Offset de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) en lugar de la propiedad Offset completa. La animación puede tener como destino la propiedad Offset de tipo Vector3 o el componente escalar de X de la propiedad Offset. Además de poder elegir como destino un componente de subcanal individual de una propiedad, también puedes seleccionar varios componentes. Por ejemplo, puedes elegir el componente X e Y de Scale.
+Además de animar las propiedades de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx), también puedes usar los componentes de *canal secundario* de estas propiedades para las animaciones. Por ejemplo, pongamos que solo quieres animar la propiedad X Offset de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) en lugar de la propiedad Offset completa. La animación puede tener como destino la propiedad Offset de tipo Vector3 o el componente escalar de X de la propiedad Offset. Además de poder elegir como destino un componente de subcanal individual de una propiedad, también puedes seleccionar varios componentes. Por ejemplo, puedes elegir el componente X e Y de Scale.
 
-|Propiedades Visual de canal secundario que se pueden animar|  Tipo|
+|Propiedades Visual de canal secundario que se pueden animar|    Tipo|
 |----------------------------------------|------|
 |AnchorPoint.x, y|Scalar|
 |AnchorPoint.xy|Vector2|
@@ -95,20 +102,20 @@ Además de animar las propiedades de [Visual](https://msdn.microsoft.com/en-us/l
 * El canal secundario Color de la propiedad Brush se anima de manera un poco diferente. Puedes conectar StartAnimation() a Visual.Brush y declarar la propiedad para que se anime en el parámetro como "Color". (Posteriormente se tratan más detalles sobre la animación del color).
 
 ## <a name="property-sets-and-effects"></a>Conjuntos de propiedades y efectos
-Además de la animación de propiedades de objetos de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) e InsetClip, también puedes animar propiedades de una colección PropertySet o un efecto. Para los conjuntos de propiedades, se define una propiedad y se almacena en un conjunto de propiedades de composición. Esta propiedad puede ser posteriormente el destino de una animación (y también se puede hacer referencia a esta simultáneamente en otra). Esto se explica con más detalle en las siguientes secciones.  
+Además de la animación de propiedades de objetos de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) e InsetClip, también puedes animar propiedades de una colección PropertySet o un efecto. Para los conjuntos de propiedades, se define una propiedad y se almacena en un conjunto de propiedades de composición. Esta propiedad puede ser posteriormente el destino de una animación (y también se puede hacer referencia a esta simultáneamente en otra). Esto se explica con más detalle en las siguientes secciones.  
 
 Para los efectos, es posible definir efectos gráficos con las API de efectos de composición (consulta aquí la [introducción a los efectos](./composition-effects.md). Además de definir efectos, también puedes animar los valores de propiedad del efecto. Para ello, el componente de propiedades de la propiedad Brush se establece como destino en las clases SpriteVisual.
 
 ## <a name="quick-formula-getting-started-with-composition-animations"></a>Fórmula rápida: Introducción a las animaciones de composición
 Antes de profundizar en los detalles sobre cómo crear y usar los diferentes tipos de animaciones, a continuación se incluye una fórmula rápida de alto nivel sobre cómo reunir las animaciones de composición.  
-1.  Decide qué propiedad, propiedad del canal secundario o efecto quieres animar (toma nota del tipo).  
-2.  Crea un nuevo objeto para tu animación (será un fotograma clave o una animación de expresión).  
+1.    Decide qué propiedad, propiedad del canal secundario o efecto quieres animar (toma nota del tipo).  
+2.    Crea un nuevo objeto para tu animación (será un fotograma clave o una animación de expresión).  
     *  Para las animaciones de fotograma clave, asegúrate de crear un tipo de animación de fotograma clave que coincida con el tipo de propiedad que quieres animar.  
     *  Solo hay un tipo de animación de expresión.  
-3.  Define el contenido de la animación: inserta los fotogramas clave o define la cadena de expresión.  
+3.    Define el contenido de la animación: inserta los fotogramas clave o define la cadena de expresión.  
     *  Para las animaciones de fotograma clave, asegúrate de que el valor de los fotogramas clave sea del mismo tipo que la propiedad que quieres animar.  
     *  Para las animaciones de expresión, asegúrate de que la cadena de expresión se resolverá en el mismo tipo que la propiedad que quieres animar.  
-4.  Inicia la animación en el objeto [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) cuya propiedad quieres animar. Llama a StartAnimation e incluye como parámetros: el nombre de la propiedad que quieres animar (con formato de cadena) y el objeto de la animación.  
+4.    Inicia la animación en el objeto [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) cuya propiedad quieres animar. Llama a StartAnimation e incluye como parámetros: el nombre de la propiedad que quieres animar (con formato de cadena) y el objeto de la animación.  
 
 ```cs
 // KeyFrame Animation Example to target Opacity property
@@ -137,12 +144,12 @@ Las animaciones de fotograma clave son animaciones basadas en el tiempo que usan
  
 ### <a name="creating-your-animation-and-defining-keyframes"></a>Creación de la animación y definición de fotogramas clave
 Para crear una animación de fotograma clave, usa el método del constructor del objeto Compositor que se relaciona con el tipo de la propiedad que quieres animar. Los distintos tipos de animación de fotograma clave son:
-*   ColorKeyFrameAnimation
-*   QuaternionKeyFrameAnimation
-*   ScalarKeyFrameAnimation
-*   Vector2KeyFrameAnimation
-*   Vector3KeyFrameAnimation
-*   Vector4KeyFrameAnimation  
+*    ColorKeyFrameAnimation
+*    QuaternionKeyFrameAnimation
+*    ScalarKeyFrameAnimation
+*    Vector2KeyFrameAnimation
+*    Vector3KeyFrameAnimation
+*    Vector4KeyFrameAnimation  
 
 Ejemplo que crea una animación de fotograma clave Vector3:     
 ```cs
@@ -150,9 +157,9 @@ var animation = _compositor.CreateVector3KeyFrameAnimation();
 ```
 
 Cada animación de fotograma clave se construye insertando segmentos individuales de fotograma clave que definen dos componentes (con un tercero opcional)  
-*   Tiempo: estado de progreso normalizado del fotograma clave entre 0,0 y 1,0
-*   Valor: valor específico del valor de animación en el estado de tiempo
-*   (Opcional) Función de aceleración: función para describir la interpolación entre el fotograma clave anterior y el actual (se explica más adelante en este tema)  
+*    Tiempo: estado de progreso normalizado del fotograma clave entre 0,0 y 1,0
+*    Valor: valor específico del valor de animación en el estado de tiempo
+*    (Opcional) Función de aceleración: función para describir la interpolación entre el fotograma clave anterior y el actual (se explica más adelante en este tema)  
 
 Ejemplo que inserta un fotograma clave en el punto medio de la animación:
 ```cs
@@ -160,21 +167,21 @@ animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f));
 ```
 
 **Nota:** Al animar el color con animaciones de fotograma clave, hay algunos aspectos adicionales a tener en cuenta:
-1.  StartAnimation se asocia a Visual.Brush, en lugar de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), con **Color** como el tratamiento de propiedad que se quiere animar.
-2.  El componente "valor" del fotograma clave se define mediante el objeto Colors fuera del espacio de nombres Windows.UI.
-3.  Tienes la opción de definir el espacio de colores por el que pasará la interpolación, para lo cual debes establecer la propiedad InterpolationColorSpace. Los valores posibles son:
-    *   CompositionColorSpace.Rgb
-    *   CompositionColorSpace.Hsl
+1.    StartAnimation se asocia a Visual.Brush, en lugar de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx), con **Color** como el tratamiento de propiedad que se quiere animar.
+2.    El componente "valor" del fotograma clave se define mediante el objeto Colors fuera del espacio de nombres Windows.UI.
+3.    Tienes la opción de definir el espacio de colores por el que pasará la interpolación, para lo cual debes establecer la propiedad InterpolationColorSpace. Los valores posibles son:
+    *    CompositionColorSpace.Rgb
+    *    CompositionColorSpace.Hsl
 
 
 ## <a name="keyframe-animation-properties"></a>Propiedades de animación de fotograma clave
 Una vez que hayas definido la animación de fotograma clave y los fotogramas clave individuales, puedes definir varias propiedades fuera de la animación:
-*   DelayTime: el tiempo antes del inicio de una animación después de la llamada a StartAnimation()
-*   Duration: duración de la animación.
-*   IterationBehavior: recuento o comportamiento de repetición infinito de una animación.
-*   IterationCount: el número de veces limitadas que se repetirá una animación de fotograma clave
-*   KeyFrameCount: lectura del número de fotogramas clave en una animación de fotograma clave determinada
-*   StopBehavior: especifica el comportamiento de un valor de propiedad de animación cuando se llama a StopAnimation  
+*    DelayTime: el tiempo antes del inicio de una animación después de la llamada a StartAnimation()
+*    Duration: duración de la animación.
+*    IterationBehavior: recuento o comportamiento de repetición infinito de una animación.
+*    IterationCount: el número de veces limitadas que se repetirá una animación de fotograma clave
+*    KeyFrameCount: lectura del número de fotogramas clave en una animación de fotograma clave determinada
+*    StopBehavior: especifica el comportamiento de un valor de propiedad de animación cuando se llama a StopAnimation  
 *   Dirección: especifica la dirección de la animación para la reproducción  
 
 Ejemplo que establece la duración de la animación en 5 segundos:  
@@ -185,8 +192,8 @@ animation.Duration = TimeSpan.FromSeconds(5);
 ## <a name="easing-functions"></a>Funciones de aceleración
 Las funciones de aceleración (CompositionEasingFunction) indican cómo progresan los valores intermedios desde el valor de fotograma clave anterior hasta el valor de fotograma clave actual. Si no proporcionas una función de aceleración para el fotograma clave, se usará una curva predeterminada.  
 Se admiten dos tipos de funciones de aceleración:
-*   Linear
-*   Cubic Bezier  
+*    Linear
+*    Cubic Bezier  
 *   Paso  
 
 Las funciones Cubic Bezier son funciones paramétricas que suelen usarse para describir curvas suaves que se pueden escalar. Cuando se usan animaciones de fotograma clave de composición, deben definirse dos puntos de control que sean objetos Vector2. Estos puntos de control se usan para definir la forma de la curva. Se recomienda usar sitios similares, como [este](http://cubic-bezier.com/#0,-0.01,.48,.99) para visualizar cómo construyen la curva dos puntos de control para una función Cubic Bezier.
@@ -204,10 +211,10 @@ animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f), easeIn);
 ```
 
 ## <a name="starting-and-stopping-keyframe-animations"></a>Iniciar y detener animaciones de fotograma clave
-Después de definir la animación y los fotogramas clave, estás listo para enlazar la animación. Al iniciar la animación, debes especificar el objeto [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) y la propiedad de destino que se van a animar, así como una referencia a la animación. Para ello, llama a la función StartAnimation(). Recuerda que al llamar a StartAnimation() en una propiedad, se desconectarán y quitarán todas las animaciones que se ejecutaban anteriormente.  
+Después de definir la animación y los fotogramas clave, estás listo para enlazar la animación. Al iniciar la animación, debes especificar el objeto [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) y la propiedad de destino que se van a animar, así como una referencia a la animación. Para ello, llama a la función StartAnimation(). Recuerda que al llamar a StartAnimation() en una propiedad, se desconectarán y quitarán todas las animaciones que se ejecutaban anteriormente.  
 **Nota:** La referencia a la propiedad que elijas para animar tendrá el formato de una cadena.  
 
-Ejemplo en el que se establece e inicia una animación en la propiedad Offset de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx):  
+Ejemplo en el que se establece e inicia una animación en la propiedad Offset de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx):  
 ```cs
 targetVisual.StartAnimation("Offset", animation);
 ```  
@@ -215,15 +222,15 @@ targetVisual.StartAnimation("Offset", animation);
 Si quieres como destino una propiedad de subcanal, debes agregar el subcanal a la cadena que define la propiedad que quieres animar. En los ejemplos anteriores, la sintaxis cambiaría a StartAnimation("Offset.X, animation2), donde animation2 es un objeto ScalarKeyFrameAnimation.  
 
 Después de iniciar la animación, también puedes detenerla antes de que finalice. Esta acción se lleva a cabo mediante la función StopAnimation().  
-Ejemplo en el que se detiene una animación en la propiedad Offset de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx):    
+Ejemplo en el que se detiene una animación en la propiedad Offset de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx):    
 ```cs
 targetVisual.StopAnimation("Offset");
 ```
 
 También puedes definir el comportamiento de la animación cuando se detiene explícitamente. Para ello, debes definir la propiedad Stop Behavior fuera de la animación. Existen tres opciones:
-*   LeaveCurrentValue: la animación marcará el valor de la propiedad animada para que sea el último valor calculado de la animación.
-*   SetToFinalValue: la animación marcará el valor de la propiedad animada para que sea el valor del fotograma clave final.
-*   SetToInitialValue: la animación marcará el valor de la propiedad animada para que sea el valor del primer fotograma clave.  
+*    LeaveCurrentValue: la animación marcará el valor de la propiedad animada para que sea el último valor calculado de la animación.
+*    SetToFinalValue: la animación marcará el valor de la propiedad animada para que sea el valor del fotograma clave final.
+*    SetToInitialValue: la animación marcará el valor de la propiedad animada para que sea el valor del primer fotograma clave.  
 
 Ejemplo en el que se establece la propiedad StopBehavior para una animación de fotograma clave:  
 ```cs
@@ -259,7 +266,7 @@ Para completar el lote, debes llamar a End(). Sin una llamada a End, el lote per
 El fragmento de código y el diagrama siguientes muestran un ejemplo de cómo el lote agregará animaciones para realizar un seguimiento de los estados de finalización. Ten en cuenta que, en este ejemplo, las animaciones 1, 3 y 4 tendrán estados de finalización de los que este lote realizará un seguimiento, pero no la animación 2.  
 ```cs
 myScopedBatch.End();
-CompositionScopedBatch myScopedBatch =  _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
+CompositionScopedBatch myScopedBatch =     _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
 // Start Animation1
 […]
 myScopedBatch.Suspend();
@@ -277,7 +284,7 @@ myScopedBatch.End();
 ## <a name="batching-a-single-animations-completion-event"></a>Procesamiento por lotes de un evento de finalización de una única animación
 Si quieres saber cuándo finaliza una única animación, debes crear un lote con ámbito que incluya solo la animación de destino. Por ejemplo:  
 ```cs
-CompositionScopedBatch myScopedBatch =  _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
+CompositionScopedBatch myScopedBatch =     _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
 Visual.StartAnimation("Opacity", myAnimation);
 myScopedBatch.End();
 ```
@@ -306,10 +313,10 @@ Las animaciones de expresión son un nuevo tipo de animación que el equipo de c
 
 ## <a name="creating-and-attaching-your-expression-animation"></a>Crear y adjuntar la animación de expresión
 Antes de pasar a la sintaxis de creación de animaciones de expresión, hay algunos principios básicos que debemos mencionar:  
-*   Las animaciones de expresión usan una ecuación matemática definida para determinar el valor de la propiedad de animación en cada fotograma.
-*   La ecuación matemática se introduce en la expresión como una cadena.
-*   El resultado de la ecuación matemática debe resolverse en el mismo tipo que la propiedad que se va a animar. Si no coinciden, obtendrá un error cuando se calcule la expresión. Si la ecuación se resuelve en Nan (número/0), el sistema usará el último valor calculado anteriormente.
-*   Las animaciones de expresión tienen un *duración infinita*, siguen ejecutándose hasta que se detienen.  
+*    Las animaciones de expresión usan una ecuación matemática definida para determinar el valor de la propiedad de animación en cada fotograma.
+*    La ecuación matemática se introduce en la expresión como una cadena.
+*    El resultado de la ecuación matemática debe resolverse en el mismo tipo que la propiedad que se va a animar. Si no coinciden, obtendrá un error cuando se calcule la expresión. Si la ecuación se resuelve en Nan (número/0), el sistema usará el último valor calculado anteriormente.
+*    Las animaciones de expresión tienen un *duración infinita*, siguen ejecutándose hasta que se detienen.  
 
 Para crear la animación de expresión, solo tienes que usar el constructor fuera del objeto de composición, donde defines la expresión matemática.  
  
@@ -317,7 +324,7 @@ Ejemplo del constructor donde se define una expresión muy básica que suma dos 
 ```cs
 var expression = _compositor.CreateExpressionAnimation("0.2 + 0.3");
 ```
-De manera similar a las animaciones de fotograma clave, después de definir la animación de expresión, debes adjuntarla al objeto Visual y declarar la propiedad que quieres que anime la animación. A continuación, seguiremos con el ejemplo anterior y adjuntaremos nuestra animación de expresión a la propiedad Opacity de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) (tipo Scalar):  
+De manera similar a las animaciones de fotograma clave, después de definir la animación de expresión, debes adjuntarla al objeto Visual y declarar la propiedad que quieres que anime la animación. A continuación, seguiremos con el ejemplo anterior y adjuntaremos nuestra animación de expresión a la propiedad Opacity de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) (tipo Scalar):  
 ```cs
 targetVisual.StartAnimation("Opacity", expression);
 ```
@@ -330,11 +337,11 @@ Veamos las distintas partes que forman estos tipos de expresiones.
 ### <a name="operators-precedence-and-associativity"></a>Operadores, prioridad y asociatividad
 La cadena de expresión admite el uso de operadores típicos que cabría esperar para describir relaciones matemáticas entre los distintos componentes de la ecuación:  
 
-|Categoría|  Operadores|
+|Categoría|    Operadores|
 |--------|-----------|
-|Unario| -|
+|Unario|    -|
 |Multiplicativo|    * /|
-|Aditivo|  + -|
+|Aditivo|    + -|
 |MOD| %|  
 
 De forma similar, cuando se evalúe la expresión, obedecerá a la prioridad y la asociatividad de los operadores como se define en la especificación del lenguaje C#. Dicho de otro modo, respetará el orden básico de las operaciones.  
@@ -345,21 +352,21 @@ En el siguiente ejemplo, cuando se evalúen, los paréntesis se resolverán prim
 ```
 
 ### <a name="property-parameters"></a>Parámetros de propiedad
-Los parámetros de propiedad son uno de los componentes más eficaces de las animaciones de expresión. En la cadena de expresión, puedes hacer referencia a valores de propiedades de otros objetos, como objetos de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), de conjuntos de propiedades de composición u otros objetos de C#.   
+Los parámetros de propiedad son uno de los componentes más eficaces de las animaciones de expresión. En la cadena de expresión, puedes hacer referencia a valores de propiedades de otros objetos, como objetos de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx), de conjuntos de propiedades de composición u otros objetos de C#.   
 
 Para usarlos en una cadena de expresión, simplemente debes definir las referencias como parámetros para la animación de expresión. Esto se realiza mediante la asignación de la cadena usada en la expresión al objeto real. Esto permite al sistema saber qué debe inspeccionar para calcular el valor al evaluar la ecuación. Existen diferentes tipos de parámetros que se corresponden con el tipo del objeto que quieres incluir en la ecuación:  
 
-|Tipo|  Función para crear el parámetro|
+|Tipo|    Función para crear el parámetro|
 |----|------------------------------|
 |Scalar|    SetScalarParameter(String ref, Scalar obj)|
 |Vector|    SetVector2Parameter(String ref, Vector2 obj)<br/>SetVector3Parameter(String ref, Vector3 obj)<br/>SetVector4Parameter(String ref, Vector4 obj)|
 |Matrix|    SetMatrix3x2Parameter(String ref, Matrix3x2 obj)<br/>SetMatrix4x4Parameter(String ref, Matrix4x4 obj)|
 |Quaternion|    SetQuaternionParameter(String ref, Quaternion obj)|
-|Color| SetColorParameter(String ref, Color obj)|
-|CompositionObject| SetReferenceParameter(String ref, Composition object obj)|
+|Color|    SetColorParameter(String ref, Color obj)|
+|CompositionObject|    SetReferenceParameter(String ref, Composition object obj)|
 |Booleano| SetBooleanParameter (referencia de cadena, booleano obj)|  
 
-En el siguiente ejemplo, se crea una animación de expresión que hará referencia a la propiedad Offset de otros dos elementos [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) de composición y a un objeto System.Numerics Vector3 básico.  
+En el siguiente ejemplo, se crea una animación de expresión que hará referencia a la propiedad Offset de otros dos elementos [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) de composición y a un objeto System.Numerics Vector3 básico.  
 ```cs
 var commonOffset = new Vector3(25.0, 17.0, 10.0);
 var expression = _compositor.CreateExpressionAnimation("SomeOffset / ParentOffset + additionalOffset);
@@ -382,7 +389,7 @@ expression.SetReferenceParameter("sharedProperties", _sharedProperties);
 
 Por último, al hacer referencia a propiedades de otros objetos, también es posible hacer referencia a las propiedades de subcanal en la cadena de expresión o como parte del parámetro de referencia.  
  
-En el ejemplo siguiente, se hace referencia al subcanal x de las propiedades Offset de dos objetos [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx): uno de la propia cadena de expresión y otro al crear la referencia de parámetro.
+En el ejemplo siguiente, se hace referencia al subcanal x de las propiedades Offset de dos objetos [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx): uno de la propia cadena de expresión y otro al crear la referencia de parámetro.
 Ten en cuenta que al hacer referencia al componente X de Offset, cambiamos nuestro tipo de parámetro a Scalar en lugar de a Vector3 como en el ejemplo anterior:  
 ```cs
 var expression = _compositor.CreateExpressionAnimation("xOffset/ ParentOffset.X");
@@ -406,21 +413,21 @@ var expression = _compositor.CreateExpressionAnimation("Offset / Vector3(targetX
 ```
 
 Encontrarás la lista completa de constructores y funciones auxiliares en la sección Apéndice, o de cada tipo en la lista siguiente:  
-*   [Scalar](#scalar)
-*   [Vector2](#vector2)
-*   [Vector3](#vector3)
-*   [Matrix3x2](#matrix3x2)
-*   [Matrix4x4](#matrix4x4)
-*   [Quaternion](#quaternion)
-*   [Color](#color)  
+*    [Scalar](#scalar)
+*    [Vector2](#vector2)
+*    [Vector3](#vector3)
+*    [Matrix3x2](#matrix3x2)
+*    [Matrix4x4](#matrix4x4)
+*    [Quaternion](#quaternion)
+*    [Color](#color)  
 
 ### <a name="expression-keywords"></a>Palabras clave de expresión
 Puedes aprovechar las "palabras clave" especiales, que se tratan de forma diferente cuando se evalúa la cadena de expresión. Dado que se consideran "palabras clave" no pueden usarse como la parte del parámetro de cadena de sus referencias a propiedades.  
  
-|Palabra clave|   Descripción|
+|Palabra clave|    Descripción|
 |-------|--------------|
 |This.StartingValue| Proporciona una referencia al valor de inicio original de la propiedad que se está animando.|
-|This.CurrentValue| Proporciona una referencia al valor "conocido" de la propiedad.|
+|This.CurrentValue|    Proporciona una referencia al valor "conocido" de la propiedad.|
 |Pi| Proporciona una referencia de palabra clave al valor de PI.|
 
 El ejemplo siguiente muestra el uso de la palabra clave this.StartingValue:  
@@ -437,17 +444,17 @@ Además de admitir relaciones matemáticas con operadores, referencias a propied
 Las instrucciones condicionales permiten escribir expresiones para que, siguiendo una condición concreta, el sistema use distintas relaciones matemáticas para calcular el valor de la propiedad de animación. Los operadores ternarios se pueden anidar como las expresiones para las instrucciones true o false.  
 
 Los operadores condicionales siguientes son compatibles con la instrucción condicional: 
-*   Es igual a (==)
-*   No es igual a (!=)
-*   Menor que (<)
-*   Menor o igual que (<=)
-*   Mayor que (>)
-*   Mayor o igual que (>=)  
+*    Es igual a (==)
+*    No es igual a (!=)
+*    Menor que (<)
+*    Menor o igual que (<=)
+*    Mayor que (>)
+*    Mayor o igual que (>=)  
 
 Las conjunciones siguientes se admiten como operadores o funciones en la instrucción condicional:
-*   No: ! / Not(bool1)
-*   Y: && / And(bool1, bool2)
-*   O: || / Or(bool1, bool2)  
+*    No: ! / Not(bool1)
+*    Y: && / And(bool1, bool2)
+*    O: || / Or(bool1, bool2)  
 
 A continuación se incluye un ejemplo de una animación de expresión con una expresión condicional.  
 ```cs
@@ -479,7 +486,7 @@ _parallaxExpression.SetScalarParameter("StartOffset", 0.0f);
 _parallaxExpression.SetScalarParameter("ParallaxValue", 0.5f);
 _parallaxExpression.SetScalarParameter("ItemHeight", 0.0f);
 _parallaxExpression.SetReferenceParameter("ScrollManipulation", _scrollProperties);
-_parallaxExpression.Expression = "(ScrollManipulation.Translation.Y + StartOffset - (0.5 *  ItemHeight)) * ParallaxValue - (ScrollManipulation.Translation.Y + StartOffset - (0.5   * ItemHeight))";
+_parallaxExpression.Expression = "(ScrollManipulation.Translation.Y + StartOffset - (0.5 *     ItemHeight)) * ParallaxValue - (ScrollManipulation.Translation.Y + StartOffset - (0.5     * ItemHeight))";
 ```
 
 ## <a name="animating-with-property-sets"></a>Animación con conjuntos de propiedades
@@ -547,8 +554,8 @@ _target.StartAnimation(“Opacity”, exp);
 Las animaciones son una forma excelente de describir un comportamiento a los usuarios. Existen varias formas, puedes animar el contenido, pero todos los métodos descritos hasta ahora requieren que usted *inicie* explícitamente la animación. Aunque esto te permite tener un control completo para definir cuándo comenzará una animación, resulta difícil administrar cuándo se necesita una animación cada vez que se puede cambiar un valor de propiedad. Esto ocurre con bastante frecuencia cuando las aplicaciones han separado la aplicación "personalidad" que define las animaciones de la aplicación "lógica" que define los componentes principales y la infraestructura de la aplicación. Las animaciones implícitas proporcionan una forma fácil y más limpia de definir la animación de forma separada de la lógica de aplicación principal. Puedes enlazar estas animaciones para la ejecución con desencadenadores de cambio de propiedad específicos.
 
 ### <a name="setting-up-your-implicitanimationcollection"></a>Configuración de tu ImplicitAnimationCollection  
-Las animaciones implícitas se definen con otros objetos **CompositionAnimation** (**KeyFrameAnimation** o **ExpressionAnimation**). La **ImplicitAnimationCollection** representa el conjunto de objetos **CompositionAnimation** que se iniciará cuando el cambio de propiedad *desencadenador* se cumpla. Al definir las animaciones, asegúrate de establecer la propiedad **destino**, que define la propiedad [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) a la que se destinará la animación cuando se inicie. La propiedad de **Destino** solo puede ser una propiedad [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) que se pueda animar.
-En el fragmento de código a continuación, se crea una sola **Vector3KeyFrameAnimation** y se define como parte de la **ImplicitAnimationCollection**. La **ImplicitAnimationCollection** , a continuación, se adjunta a la propiedad **ImplicitAnimation** de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), de forma que cuando el desencadenador se cumple, se iniciará la animación.  
+Las animaciones implícitas se definen con otros objetos **CompositionAnimation** (**KeyFrameAnimation** o **ExpressionAnimation**). La **ImplicitAnimationCollection** representa el conjunto de objetos **CompositionAnimation** que se iniciará cuando el cambio de propiedad *desencadenador* se cumpla. Al definir las animaciones, asegúrate de establecer la propiedad **destino**, que define la propiedad [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) a la que se destinará la animación cuando se inicie. La propiedad de **Destino** solo puede ser una propiedad [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) que se pueda animar.
+En el fragmento de código a continuación, se crea una sola **Vector3KeyFrameAnimation** y se define como parte de la **ImplicitAnimationCollection**. La **ImplicitAnimationCollection** , a continuación, se adjunta a la propiedad **ImplicitAnimation** de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx), de forma que cuando el desencadenador se cumple, se iniciará la animación.  
 ```csharp
 Vector3KeyFrameAnimation animation = _compositor.CreateVector3KeyFrameAnimation();
 animation.DelayTime =  TimeSpan.FromMilliseconds(index);
@@ -561,8 +568,8 @@ visual.ImplicitAnimations = implicitAnimationCollection;
 
 
 ### <a name="triggering-when-the-implicitanimation-starts"></a>Desencadenamiento cuando se inicia ImplicitAnimation  
-Desencadenador es el término que usamos para describir cuando las animaciones se inician de forma implícita. Actualmente los desencadenadores se definen como cambios en cualquiera de las propiedades que se pueden animar en [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) : estos cambios se producen a través de conjuntos explícitos en la propiedad. Por ejemplo, al activar un desencadenador **Offset** en una **ImplicitAnimationCollection**, y asociar una animación con él, las actualizaciones de la **Offset** del destino [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) se animarán a su nuevo valor mediante la animación de la colección.  
-En el ejemplo anterior, se agrega esta línea adicional para establecer el desencadenador en la propiedad **Offset** del destino de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx).  
+Desencadenador es el término que usamos para describir cuando las animaciones se inician de forma implícita. Actualmente los desencadenadores se definen como cambios en cualquiera de las propiedades que se pueden animar en [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) : estos cambios se producen a través de conjuntos explícitos en la propiedad. Por ejemplo, al activar un desencadenador **Offset** en una **ImplicitAnimationCollection**, y asociar una animación con él, las actualizaciones de la **Offset** del destino [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) se animarán a su nuevo valor mediante la animación de la colección.  
+En el ejemplo anterior, se agrega esta línea adicional para establecer el desencadenador en la propiedad **Offset** del destino de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx).  
 ```csharp
 implicitAnimationCollection["Offset"] = animation;
 ```  
@@ -580,7 +587,7 @@ animationGroup.Add(animationA);
 animationGroup.Add(animationB);
 ```   
 Una vez creado el grupo, pueden agregarse animaciones individuales al grupo de animación. Recuerda que no es necesario iniciar explícitamente las animaciones individuales, estas se iniciarán todas cuando se llame a **StartAnimationGroup** para el escenario explícito o cuando el desencadenador se cumple para la implícita.  
-Asegúrate de que las animaciones que se agregan al grupo tienen su propiedad **Destino** definida. Estas definirán qué propiedad del destino de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) se animarán.
+Asegúrate de que las animaciones que se agregan al grupo tienen su propiedad **Destino** definida. Estas definirán qué propiedad del destino de [Visual](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.aspx) se animarán.
 
 ### <a name="using-animation-groups-with-implicit-animations"></a>Uso de grupos de animación con animaciones implícitas  
 Los desarrolladores pueden crear animaciones implícitas de modo que, cuando un desencadenador se cumple, se inicia un conjunto de animaciones en forma de grupo de animación. En este caso, define el grupo de animación como el conjunto de animaciones que se inician cuando se alcanza el desencadenador.  
@@ -643,11 +650,11 @@ class PropertyAnimation
 |Max (Float value1, Float value2)| Devuelve el valor Float más alto entre value1 y value2.|  
 |Min (Float value1, Float value2)| Devuelve el valor Float más bajo entre value1 y value2.|  
 |Lerp(Float value1, Float value2, Float progress)| Devuelve un valor Float que representa el cálculo de interpolación lineal realizado entre los dos valores Scalar basado en el progreso (nota: El progreso es entre 0,0 y 1,0).|  
-|Slerp(Float value1, Float value2, Float progress)| Devuelve un valor Float que representa la interpolación esférica calculada entre los dos valores Float basada en el progreso (nota: El progreso es entre 0,0 y 1,0).|  
+|Slerp(Float value1, Float value2, Float progress)|    Devuelve un valor Float que representa la interpolación esférica calculada entre los dos valores Float basada en el progreso (nota: El progreso es entre 0,0 y 1,0).|  
 |Mod(Float value1, Float value2)| Devuelve el resto del valor Float resultante de la división de value1 y value2.|  
 |Ceil(Float value)| Devuelve el parámetro Float redondeado al siguiente número entero mayor.|  
 |Floor(Float value)| Devuelve el parámetro Float hasta el siguiente número entero menor.|  
-|Sqrt(Float value)| Devuelve la raíz cuadrada del parámetro Float.|  
+|Sqrt(Float value)|    Devuelve la raíz cuadrada del parámetro Float.|  
 |Square(Float value)| Devuelve el cuadrado del parámetro Float.|  
 |Sin(Float value1)| Devuelve el Sin del parámetro Float.|
 |Asin(Float value2)| Devuelve el ArcSin del parámetro Float.|
@@ -658,72 +665,72 @@ class PropertyAnimation
 |Round(Float value)| Devuelve el parámetro Float redondeado al número entero más próximo.|
 |Log10(Float value)| Devuelve el resultado del registro (base 10) del parámetro Float.|
 |Ln(Float value)| Devuelve el resultado del registro natural del parámetro Float.|
-|Pow(Float value, Float power)| Devuelve el resultado del parámetro Float elevado a una potencia determinada.|
+|Pow(Float value, Float power)|    Devuelve el resultado del parámetro Float elevado a una potencia determinada.|
 |ToDegrees(Float radians)| Devuelve el parámetro Float convertido a grados.|
 |ToRadians(Float degrees)| Devuelve el parámetro Float convertido a radianes.|
 
 ### <a name="vector2"></a>Vector2  
 
-|Operaciones con funciones y constructores|   Descripción|
+|Operaciones con funciones y constructores|    Descripción|
 |-----------------------------------|--------------|
-|Abs (Vector2 value)|   Devuelve un valor Vector2 con el valor absoluto aplicado a cada componente.|
-|Clamp (Vector2 value1, Vector2 min, Vector2 max)|  Devuelve un valor Vector2 que contiene los valores comprendidos de cada componente respectivo.|
-|Max (Vector2 value1, Vector2 value2)|  Devuelve un valor Vector2 con ha obtenido Max en cada uno de los componentes correspondientes de value1 y value2.|
-|Min (Vector2 value1, Vector2 value2)|  Devuelve un valor Vector2 con ha obtenido Min en cada uno de los componentes correspondientes de value1 y value2.|
+|Abs (Vector2 value)|    Devuelve un valor Vector2 con el valor absoluto aplicado a cada componente.|
+|Clamp (Vector2 value1, Vector2 min, Vector2 max)|    Devuelve un valor Vector2 que contiene los valores comprendidos de cada componente respectivo.|
+|Max (Vector2 value1, Vector2 value2)|    Devuelve un valor Vector2 con ha obtenido Max en cada uno de los componentes correspondientes de value1 y value2.|
+|Min (Vector2 value1, Vector2 value2)|    Devuelve un valor Vector2 con ha obtenido Min en cada uno de los componentes correspondientes de value1 y value2.|
 |Scale(Vector2 value, Float factor)|    Devuelve un valor Vector2 con cada componente del vector multiplicado por el factor de escala.|
 |Transform(Vector2 value, Matrix3x2 matrix)|    Devuelve un valor Vector2 resultante de la transformación lineal entre Vector2 y Matrix3x2 (lo que también se conoce como multiplicar un vector por una matriz).|
-|Lerp(Vector2 value1, Vector2 value2, Float progress)|  Devuelve un valor Vector2 que representa el cálculo de interpolación lineal realizado entre los dos valores Vector2 basado en el progreso (nota: El progreso es entre 0,0 y 1,0).|
-|Length(Vector2 value)| Devuelve un valor Float que representa la longitud o la magnitud del valor Vector2.|
+|Lerp(Vector2 value1, Vector2 value2, Float progress)|    Devuelve un valor Vector2 que representa el cálculo de interpolación lineal realizado entre los dos valores Vector2 basado en el progreso (nota: El progreso es entre 0,0 y 1,0).|
+|Length(Vector2 value)|    Devuelve un valor Float que representa la longitud o la magnitud del valor Vector2.|
 |LengthSquared(Vector2)|    Devuelve un valor Float que representa el cuadrado de la longitud o la magnitud de un valor Vector2.|
-|Distance(Vector2 value1, Vector2 value2)|  Devuelve un valor Float que representa la distancia entre dos valores Vector2.|
-|DistanceSquared(Vector2 value1, Vector2 value2)|   Devuelve un valor Float que representa el cuadrado de la distancia entre dos valores Vector2.|
-|Normalize(Vector2 value)|  Devuelve un valor Vector2 que representa el vector de unidad del parámetro donde se han normalizado todos los componentes.|
-|Vector2(Float x, Float y)| Construye un valor Vector2 con dos parámetros Float.|
+|Distance(Vector2 value1, Vector2 value2)|    Devuelve un valor Float que representa la distancia entre dos valores Vector2.|
+|DistanceSquared(Vector2 value1, Vector2 value2)|    Devuelve un valor Float que representa el cuadrado de la distancia entre dos valores Vector2.|
+|Normalize(Vector2 value)|    Devuelve un valor Vector2 que representa el vector de unidad del parámetro donde se han normalizado todos los componentes.|
+|Vector2(Float x, Float y)|    Construye un valor Vector2 con dos parámetros Float.|
 
 ### <a name="vector3"></a>Vector3  
 
-|Operaciones con funciones y constructores|   Descripción|
+|Operaciones con funciones y constructores|    Descripción|
 |-----------------------------------|--------------|
-|Abs (Vector3 value)|   Devuelve un valor Vector3 con el valor absoluto aplicado a cada componente.|
-|Clamp (Vector3 value1, Vector3 min, Vector3 max)|  Devuelve un valor Vector3 que contiene los valores comprendidos de cada componente respectivo.|
-|Max (Vector3 value1, Vector3 value2)|  Devuelve un valor Vector3 con ha obtenido Max en cada uno de los componentes correspondientes de value1 y value2.|
-|Min (Vector3 value1, Vector3 value2)|  Devuelve un valor Vector3 con ha obtenido Min en cada uno de los componentes correspondientes de value1 y value2.|
+|Abs (Vector3 value)|    Devuelve un valor Vector3 con el valor absoluto aplicado a cada componente.|
+|Clamp (Vector3 value1, Vector3 min, Vector3 max)|    Devuelve un valor Vector3 que contiene los valores comprendidos de cada componente respectivo.|
+|Max (Vector3 value1, Vector3 value2)|    Devuelve un valor Vector3 con ha obtenido Max en cada uno de los componentes correspondientes de value1 y value2.|
+|Min (Vector3 value1, Vector3 value2)|    Devuelve un valor Vector3 con ha obtenido Min en cada uno de los componentes correspondientes de value1 y value2.|
 |Scale(Vector3 value, Float factor)|    Devuelve un valor Vector3 con cada componente del vector multiplicado por el factor de escala.|
-|Lerp(Vector3 value1, Vector3 value2, Float progress)|  Devuelve un valor Vector3 que representa el cálculo de interpolación lineal realizado entre los dos valores Vector3 basado en el progreso (nota: El progreso es entre 0,0 y 1,0).|
-|Length(Vector3 value)| Devuelve un valor Float que representa la longitud o la magnitud del valor Vector3.|
+|Lerp(Vector3 value1, Vector3 value2, Float progress)|    Devuelve un valor Vector3 que representa el cálculo de interpolación lineal realizado entre los dos valores Vector3 basado en el progreso (nota: El progreso es entre 0,0 y 1,0).|
+|Length(Vector3 value)|    Devuelve un valor Float que representa la longitud o la magnitud del valor Vector3.|
 |LengthSquared(Vector3)|    Devuelve un valor Float que representa el cuadrado de la longitud o la magnitud de un valor Vector3.|
-|Distance(Vector3 value1, Vector3 value2)|  Devuelve un valor Float que representa la distancia entre dos valores Vector3.|
-|DistanceSquared(Vector3 value1, Vector3 value2)|   Devuelve un valor Float que representa el cuadrado de la distancia entre dos valores Vector3.|
-|Normalize(Vector3 value)|  Devuelve un valor Vector3 que representa el vector de unidad del parámetro donde se han normalizado todos los componentes.|
+|Distance(Vector3 value1, Vector3 value2)|    Devuelve un valor Float que representa la distancia entre dos valores Vector3.|
+|DistanceSquared(Vector3 value1, Vector3 value2)|    Devuelve un valor Float que representa el cuadrado de la distancia entre dos valores Vector3.|
+|Normalize(Vector3 value)|    Devuelve un valor Vector3 que representa el vector de unidad del parámetro donde se han normalizado todos los componentes.|
 |Vector3(Float x, Float y, Float z)|    Construye un valor Vector3 con tres parámetros Float|
 
 ### <a name="vector4"></a>Vector4  
 
-|Operaciones con funciones y constructores|   Descripción|
+|Operaciones con funciones y constructores|    Descripción|
 |-----------------------------------|--------------|
-|Abs (Vector4 value)|   Devuelve un valor Vector3 con el valor absoluto aplicado a cada componente.|
-|Clamp (Vector4 value1, Vector4 min, Vector4 max)|  Devuelve un valor Vector4 que contiene los valores comprendidos de cada componente respectivo.|
-|Max (Vector4 value1 Vector4 value2)|   Devuelve un valor Vector4 con ha obtenido Max en cada uno de los componentes correspondientes de value1 y value2.|
-|Min (Vector4 value1 Vector4 value2)|   Devuelve un valor Vector4 con ha obtenido Min en cada uno de los componentes correspondientes de value1 y value2.|
+|Abs (Vector4 value)|    Devuelve un valor Vector3 con el valor absoluto aplicado a cada componente.|
+|Clamp (Vector4 value1, Vector4 min, Vector4 max)|    Devuelve un valor Vector4 que contiene los valores comprendidos de cada componente respectivo.|
+|Max (Vector4 value1 Vector4 value2)|    Devuelve un valor Vector4 con ha obtenido Max en cada uno de los componentes correspondientes de value1 y value2.|
+|Min (Vector4 value1 Vector4 value2)|    Devuelve un valor Vector4 con ha obtenido Min en cada uno de los componentes correspondientes de value1 y value2.|
 |Scale(Vector3 value, Float factor)|    Devuelve un valor Vector3 con cada componente del vector multiplicado por el factor de escala.|
 |Transform(Vector4 value, Matrix4x4 matrix)|    Devuelve un valor Vector4 resultante de la transformación lineal entre Vector4 y Matrix4x4 (lo que también se conoce como multiplicar un vector por una matriz).|
-|Lerp(Vector4 value1, Vector4 value2, Float progress)|  Devuelve un valor Vector4 que representa el cálculo de interpolación lineal realizado entre los dos valores Vector4 basado en el progreso (nota: El progreso es entre 0,0 y 1,0).|
-|Length(Vector4 value)| Devuelve un valor Float que representa la longitud o la magnitud del valor Vector4.|
+|Lerp(Vector4 value1, Vector4 value2, Float progress)|    Devuelve un valor Vector4 que representa el cálculo de interpolación lineal realizado entre los dos valores Vector4 basado en el progreso (nota: El progreso es entre 0,0 y 1,0).|
+|Length(Vector4 value)|    Devuelve un valor Float que representa la longitud o la magnitud del valor Vector4.|
 |LengthSquared(Vector4)|    Devuelve un valor Float que representa el cuadrado de la longitud o la magnitud de un valor Vector4.|
-|Distance(Vector4 value1, Vector4 value2)|  Devuelve un valor Float que representa la distancia entre dos valores Vector4.|
-|DistanceSquared(Vector4 value1, Vector4 value2)|   Devuelve un valor Float que representa el cuadrado de la distancia entre dos valores Vector4.|
-|Normalize(Vector4 value)|  Devuelve un valor Vector4 que representa el vector de unidad del parámetro donde se han normalizado todos los componentes.|
-|Vector4(Float x, Float y, Float z, Float w)|   Construye un valor Vector4 con cuatro parámetros Float|
+|Distance(Vector4 value1, Vector4 value2)|    Devuelve un valor Float que representa la distancia entre dos valores Vector4.|
+|DistanceSquared(Vector4 value1, Vector4 value2)|    Devuelve un valor Float que representa el cuadrado de la distancia entre dos valores Vector4.|
+|Normalize(Vector4 value)|    Devuelve un valor Vector4 que representa el vector de unidad del parámetro donde se han normalizado todos los componentes.|
+|Vector4(Float x, Float y, Float z, Float w)|     Construye un valor Vector4 con cuatro parámetros Float|
 
 ### <a name="matrix3x2"></a>Matrix3x2  
 
-|Operaciones con funciones y constructores|   Descripción|
+|Operaciones con funciones y constructores|    Descripción|
 |-----------------------------------|--------------|
-|Scale(Matrix3x2 value, Float factor)|  Devuelve un valor Matrix3x2 con cada componente de la matriz multiplicado por el factor de escala.|
-|Inverse(Matrix 3x2 value)| Devuelve un objeto Matrix3x2 que representa la matriz recíproca.|
-|Matrix3x2(Float M11, Float M12, Float M21, Float M22, Float M31, Float M32)|   Construye un valor Matrix3x2 con 6 parámetros Float.|
-|Matrix3x2.CreateFromScale(Vector2 scale)|  Construye un valor Matrix3x2 a partir de un valor Vector2 que representa la escala.<br/>\[scale.X, 0.0<br/> 0.0, scale.Y<br/> 0.0, 0.0 \]|
-|Matrix3x2.CreateFromTranslation(Vector2 translation)|  Construye un valor Matrix3x2 a partir de un valor Vector2 que representa la traslación.<br/>\[1.0, 0.0,<br/> 0.0, 1.0,<br/> translation.X, translation.Y\]|  
+|Scale(Matrix3x2 value, Float factor)|    Devuelve un valor Matrix3x2 con cada componente de la matriz multiplicado por el factor de escala.|
+|Inverse(Matrix 3x2 value)|    Devuelve un objeto Matrix3x2 que representa la matriz recíproca.|
+|Matrix3x2(Float M11, Float M12, Float M21, Float M22, Float M31, Float M32)|    Construye un valor Matrix3x2 con 6 parámetros Float.|
+|Matrix3x2.CreateFromScale(Vector2 scale)|    Construye un valor Matrix3x2 a partir de un valor Vector2 que representa la escala.<br/>\[scale.X, 0.0<br/> 0.0, scale.Y<br/> 0.0, 0.0 \]|
+|Matrix3x2.CreateFromTranslation(Vector2 translation)|    Construye un valor Matrix3x2 a partir de un valor Vector2 que representa la traslación.<br/>\[1.0, 0.0,<br/> 0.0, 1.0,<br/> translation.X, translation.Y\]|  
 |Matrix3x2.CreateSkew (Float x, Float y, punto central Vector2.)| Construye un Matrix3x2 de dos Float y un valor Vector2 que represente sesgo<br/>\[1.0, Tan(y),<br/>Tan (x) 1.0<br/>-punto central.Y * Tan(x), -punto central.X * Tan(y)\]|  
 |Matrix3x2.CreateRotation (radianes Float)| Construye un Matrix3x2 de una rotación en radianes<br/>\[Cos(radianes), Sin(radianes),<br/>-Sin(radianes), Cos(radianes),<br/>0.0, 0.0 \]|   
 |Matrix3x2.CreateTranslation(translación Vector2)| El mismo que CreateFromTranslation|      
@@ -732,14 +739,14 @@ class PropertyAnimation
     
 ### <a name="matrix4x4"></a>Matrix4x4  
 
-|Operaciones con funciones y constructores|   Descripción|
+|Operaciones con funciones y constructores|    Descripción|
 |-----------------------------------|--------------|
-|Scale(Matrix4x4 value, Float factor)|  Devuelve un valor Matrix4x4 con cada componente de la matriz multiplicado por el factor de escala.|
+|Scale(Matrix4x4 value, Float factor)|    Devuelve un valor Matrix4x4 con cada componente de la matriz multiplicado por el factor de escala.|
 |Inverse(Matrix4x4)|    Devuelve un objeto Matrix4x4 que representa la matriz recíproca.|
-|Matrix4x4(Float M11, Float M12, Float M13, Float M14,<br/>Float M21, Float M22, Float M23, Float M24,<br/>    Float M31, Float M32, Float M33, Float M34,<br/>    Float M41, Float M42, Float M43, Float M44)| Construye un valor Matrix4x4 con 16 parámetros Float.|
-|Matrix4x4.CreateFromScale(Vector3 scale)|  Construye un valor Matrix4x4 a partir de un valor Vector3 que representa la escala.<br/>\[scale.X, 0.0, 0.0, 0.0,<br/> 0.0, scale.Y, 0.0, 0.0,<br/> 0.0, 0.0, scale.Z, 0.0,<br/> 0.0, 0.0, 0.0, 1.0\]|
-|Matrix4x4.CreateFromTranslation(Vector3 translation)|  Construye un valor Matrix4x4 a partir de un valor Vector3 que representa la traslación.<br/>\[1.0, 0.0, 0.0, 0.0,<br/> 0.0, 1.0, 0.0, 0.0,<br/> 0.0, 0.0, 1.0, 0.0,<br/> translation.X, translation.Y, translation.Z, 1.0\]|
-|Matrix4x4.CreateFromAxisAngle(Vector3 axis, Float angle)|  Construye un valor Matrix4x4 a partir de un eje Vector3 y un valor Float que representen un ángulo.|
+|Matrix4x4(Float M11, Float M12, Float M13, Float M14,<br/>Float M21, Float M22, Float M23, Float M24,<br/>       Float M31, Float M32, Float M33, Float M34,<br/>       Float M41, Float M42, Float M43, Float M44)|    Construye un valor Matrix4x4 con 16 parámetros Float.|
+|Matrix4x4.CreateFromScale(Vector3 scale)|    Construye un valor Matrix4x4 a partir de un valor Vector3 que representa la escala.<br/>\[scale.X, 0.0, 0.0, 0.0,<br/> 0.0, scale.Y, 0.0, 0.0,<br/> 0.0, 0.0, scale.Z, 0.0,<br/> 0.0, 0.0, 0.0, 1.0\]|
+|Matrix4x4.CreateFromTranslation(Vector3 translation)|    Construye un valor Matrix4x4 a partir de un valor Vector3 que representa la traslación.<br/>\[1.0, 0.0, 0.0, 0.0,<br/> 0.0, 1.0, 0.0, 0.0,<br/> 0.0, 0.0, 1.0, 0.0,<br/> translation.X, translation.Y, translation.Z, 1.0\]|
+|Matrix4x4.CreateFromAxisAngle(Vector3 axis, Float angle)|    Construye un valor Matrix4x4 a partir de un eje Vector3 y un valor Float que representen un ángulo.|
 |Matrix4x4(Matrix3x2 Matrix)| Construye un valor Matrix4x4 con un Matrix3x2<br/>\[matrix.11, matrix.12, 0, 0,<br/>matrix.21, matrix.22, 0, 0,<br/>0, 0, 1, 0,<br/>matrix.31, matrix.32, 0, 1\]|  
 |Matrix4x4.CreateTranslation(Vector3 translation)| El mismo que CreateFromTranslation|  
 |Matrix4x4.CreateScale(Vector3 scale)| El mismo que CreateFromScale|  
@@ -747,32 +754,27 @@ class PropertyAnimation
 
 ### <a name="quaternion"></a>Quaternion  
 
-|Operaciones con funciones y constructores|   Descripción|
+|Operaciones con funciones y constructores|    Descripción|
 |-----------------------------------|--------------|
-|Slerp(Quaternion value1, Quaternion value2, Float progress)|   Devuelve un valor Quaternion que representa la interpolación esférica calculada entre los dos valores Quaternion basada en el progreso (nota: El progreso es entre 0,0 y 1,0).|
-|Concatenate(Quaternion value1 Quaternion value2)|  Devuelve un valor Quaternion que representa una concatenación de dos valores Quaternion (también conocido como un valor Quaternion que representa dos rotaciones individuales combinadas).|
-|Length(Quaternion value)|  Devuelve un valor Float que representa la longitud o la magnitud del valor Quaternion.|
-|LengthSquared(Quaternion)| Devuelve un valor Float que representa el cuadrado de la longitud o la magnitud de un valor Quaternion.|
-|Normalize(Quaternion value)|   Devuelve un valor Quaternion cuyos componentes se han normalizado.|
+|Slerp(Quaternion value1, Quaternion value2, Float progress)|    Devuelve un valor Quaternion que representa la interpolación esférica calculada entre los dos valores Quaternion basada en el progreso (nota: El progreso es entre 0,0 y 1,0).|
+|Concatenate(Quaternion value1 Quaternion value2)|    Devuelve un valor Quaternion que representa una concatenación de dos valores Quaternion (también conocido como un valor Quaternion que representa dos rotaciones individuales combinadas).|
+|Length(Quaternion value)|    Devuelve un valor Float que representa la longitud o la magnitud del valor Quaternion.|
+|LengthSquared(Quaternion)|    Devuelve un valor Float que representa el cuadrado de la longitud o la magnitud de un valor Quaternion.|
+|Normalize(Quaternion value)|    Devuelve un valor Quaternion cuyos componentes se han normalizado.|
 |Quaternion.CreateFromAxisAngle(Vector3 axis, Scalar angle)|    Crea un valor Quaternion a partir de un eje Vector3 y un valor Scalar que representan un ángulo.|
 |Quaternion(Float x, Float y, Float z, Float w)|    Construye un valor Quaternion a partir de cuatro valores Float.|
 
 ### <a name="color"></a>Color
 
-|Operaciones con funciones y constructores|   Descripción|
+|Operaciones con funciones y constructores|    Descripción|
 |-----------------------------------|--------------|
-|ColorLerp(Color colorTo, Color colorFrom, Float progress)| Devuelve un objeto Color que representa el valor de interpolación lineal calculado entre dos objetos de color en función de un progreso determinado. (Nota: El Progreso es entre 0,0 y 1,0).|
-|ColorLerpRGB(Color colorTo, Color colorFrom, Float progress)|  Devuelve un objeto Color que representa el valor de interpolación lineal calculado entre dos objetos en función de un progreso determinado en el espacio de colores RGB.|
-|ColorLerpHSL(Color colorTo, Color colorFrom, Float progress)|  Devuelve un objeto Color que representa el valor de interpolación lineal calculado entre dos objetos en función de un progreso determinado en el espacio de colores HSL.|
-|ColorArgb(Float a, Float r, Float g, Float b)| Construye un objeto que representa el valor Color definido por los componentes ARGB.|
-|ColorHsl(Float h, Float s, Float l)|   Construye un objeto que representa el valor Color definido por los componentes HSL (nota: El tono se define a partir de 0 y 2pi)|
+|ColorLerp(Color colorTo, Color colorFrom, Float progress)|    Devuelve un objeto Color que representa el valor de interpolación lineal calculado entre dos objetos de color en función de un progreso determinado. (Nota: El Progreso es entre 0,0 y 1,0).|
+|ColorLerpRGB(Color colorTo, Color colorFrom, Float progress)|    Devuelve un objeto Color que representa el valor de interpolación lineal calculado entre dos objetos en función de un progreso determinado en el espacio de colores RGB.|
+|ColorLerpHSL(Color colorTo, Color colorFrom, Float progress)|    Devuelve un objeto Color que representa el valor de interpolación lineal calculado entre dos objetos en función de un progreso determinado en el espacio de colores HSL.|
+|ColorArgb(Float a, Float r, Float g, Float b)|    Construye un objeto que representa el valor Color definido por los componentes ARGB.|
+|ColorHsl(Float h, Float s, Float l)|    Construye un objeto que representa el valor Color definido por los componentes HSL (nota: El tono se define a partir de 0 y 2pi)|
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

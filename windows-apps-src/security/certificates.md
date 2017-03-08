@@ -1,35 +1,42 @@
 ---
 title: "Introducción a los certificados"
-description: "En este artículo se describe el uso de certificados en las aplicaciones de la Plataforma universal de Windows (UWP)."
+description: "En este artículo se describe el uso de certificados en las aplicaciones para la Plataforma universal de Windows (UWP)."
 ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: e46d31e2f90b9336ea19632099741c1957521578
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 84187230ee8e10c5e9a1a75f67065e202c4bff00
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introducción a los certificados
+# <a name="intro-to-certificates"></a>Introducción a los certificados
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe el uso de certificados en las aplicaciones de la Plataforma universal de Windows (UWP). Los certificados digitales se usan en criptografía de clave pública para enlazar una clave pública a una persona, un equipo o una organización. Las identidades enlazadas suelen usarse para autenticar una entidad a otra. Por ejemplo, los certificados se suelen usar para autenticar un servidor web a un usuario y un usuario a un servidor web. Puedes crear solicitudes de certificados e instalar o importar certificados emitidos. También puedes inscribir un certificado en una jerarquía de certificados.
 
-### Almacenes de certificados compartidos
+### <a name="shared-certificate-stores"></a>Almacenes de certificados compartidos
 
 Las aplicaciones para UWP usan el nuevo modelo de aplicación aislacionista introducido en Windows 8. En este modelo, las aplicaciones se ejecutan en una estructura de sistema operativo de bajo nivel, denominada contenedor de la aplicación, que prohíbe que la aplicación tenga acceso a recursos o archivos fuera de sí misma a menos que se le permita explícitamente. En las siguientes secciones se describen las implicaciones que esto tiene en la infraestructura de clave pública (PKI).
 
-### Almacenamiento de certificados por contenedor de aplicación
+### <a name="certificate-storage-per-app-container"></a>Almacenamiento de certificados por contenedor de aplicación
 
 Los certificados destinados al uso en un contenedor de aplicación específico se almacenan en ubicaciones de contenedor por usuario y por aplicación. Una aplicación que se ejecuta en un contenedor de aplicación tiene acceso de escritura solo a su propio almacén de certificados. Si la aplicación agrega certificados a cualquiera de sus almacenes, no los podrán leer otras aplicaciones. Si se desinstala una aplicación, también se quitarán los certificados específicos de esta. Una aplicación también tiene acceso de lectura a los almacenes de certificados del equipo local que no sean Mi almacén y el almacén de solicitudes.
 
-### Memoria caché
+### <a name="cache"></a>Memoria caché
 
 Cada contenedor de aplicación tiene una caché aislada en la que puede almacenar certificados de emisor necesarios para la validación, listas de revocación de certificados (CRL) y respuestas de protocolo de estado de certificados en línea (OCSP).
 
-### Certificados y claves compartidos
+### <a name="shared-certificates-and-keys"></a>Certificados y claves compartidos
 
 Cuando se inserta una tarjeta inteligente en un lector, los certificados y las claves contenidos en la tarjeta se propagan a Mi almacén de usuario, donde pueden ser compartidos por cualquier aplicación de plena confianza que el usuario ejecute. Sin embargo, los contenedores de aplicación no tienen acceso a Mi almacén por usuario de manera predeterminada.
 
@@ -43,7 +50,7 @@ La funcionalidad sharedUserCertificates del manifiesto se especifica como se ind
 </Capabilities>
 ```
 
-## Campos de un certificado
+## <a name="certificate-fields"></a>Campos de un certificado
 
 
 El estándar de certificado de clave pública X.509 se ha revisado varias veces desde su creación. Cada versión sucesiva de la estructura de datos ha conservado los campos que existían en las versiones anteriores y ha agregado otros nuevos, como se muestra en la siguiente ilustración.
@@ -52,7 +59,7 @@ El estándar de certificado de clave pública X.509 se ha revisado varias veces 
 
 Algunos de estos campos y extensiones se pueden especificar directamente al usar la clase [**CertificateRequestProperties**](https://msdn.microsoft.com/library/windows/apps/br212079) para crear una solicitud de certificado. Pero la mayoría no se puede especificar. La autoridad emisora puede rellenar estos campos o pueden dejarse en blanco. Para obtener más información acerca de los campos, consulta las siguientes secciones:
 
-### Campos de la versión 1
+### <a name="version-1-fields"></a>Campos de la versión 1
 
 | Campo               | Descripción                                                                                                                                                                                                                                                                 |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +73,7 @@ Algunos de estos campos y extensiones se pueden especificar directamente al usar
 
  
 
-### Campos de la versión 2
+### <a name="version-2-fields"></a>Campos de la versión 2
 
 Un certificado X.509 versión 2 contiene los campos básicos definidos en la versión 1 y, además, agrega los siguientes campos.
 
@@ -76,7 +83,7 @@ Un certificado X.509 versión 2 contiene los campos básicos definidos en la ver
 | Identificador único de firmante | Contiene un valor único que se puede utilizar para hacer que el nombre X.500 del firmante del certificado no sea ambiguo si lo reutilizan distintas entidades a lo largo del tiempo. |
  
 
-### Extensiones de la versión 3
+### <a name="version-3-extensions"></a>Extensiones de la versión 3
 
 Un certificado X.509 versión 3 contiene los campos definidos en la versión 1 y la versión 2, y además agrega extensiones de certificado.
 
@@ -96,10 +103,5 @@ Un certificado X.509 versión 3 contiene los campos definidos en la versión 1 y
 | Nombre alternativo del firmante     | Especifica una o más formas de nombre alternativas para el firmante de la solicitud de certificado. Algunos ejemplos de formas alternativas son direcciones de correo electrónico, nombres DNS, direcciones IP y URI.                           |
 | Atributos de directorio de firmantes | Contiene atributos de identificación, como la nacionalidad del firmante del certificado. El valor de extensión es una secuencia de pares de valores OID.                                                              |
 | Identificador de clave del firmante       | Diferencia entre varias claves públicas de las que el firmante del certificado es titular. El valor de extensión suele ser un hash SHA-1 de la clave.                                                                   |
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

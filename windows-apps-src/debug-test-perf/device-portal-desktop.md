@@ -2,13 +2,20 @@
 author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para escritorio
-description: "Aprende cómo Windows Device Portal abre diagnóstico y automatización en el escritorio de Windows."
+description: "Aprende cómo Windows Device Portal abre el diagnóstico y la automatización en el escritorio de Windows."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b5d259172a7e3975d48a5ba669cfbe345869aebf
-ms.openlocfilehash: 3436a95124071045c8ec89ed8ddf644ccc80c29f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7b8b396078d59cc2ab3180e9af8b6017fd5edbda
+ms.lasthandoff: 02/07/2017
 
 ---
-# Portal de dispositivos para escritorio
+# <a name="device-portal-for-desktop"></a>Device Portal para equipos de escritorio
 
 A partir de Windows 10, versión 1607, hay funciones para desarrollador adicionales disponibles para escritorio. Estas funciones están disponibles únicamente si el modo de desarrollador está habilitado.
 
@@ -23,9 +30,9 @@ Device Portal permite ver la información de diagnóstico e interactuar con el e
 - Recopilar seguimiento de ETW 
 - Manipular el almacenamiento aislado de las aplicaciones transferidas localmente
 
-## Configurar Device Portal en escritorio de Windows
+## <a name="set-up-device-portal-on-windows-desktop"></a>Configurar Device Portal en escritorio de Windows
 
-### Activar Device Portal
+### <a name="turn-on-device-portal"></a>Activar Device Portal
 
 En el menú **Configuración del desarrollador**, con el modo de desarrollador habilitado, puedes habilitar Device Portal.  
 
@@ -51,7 +58,7 @@ Se necesita HTTPS para la autenticación y la comunicación segura.
 
 Si usas el Portal de dispositivos en un entorno protegido, como un laboratorio de pruebas, en el que confías en todos los usuarios de la red local, no tienes información personal en el dispositivo y existen requisitos únicos, puedes deshabilitar la autenticación. Esto permite la comunicación sin cifrar y que cualquier persona que tenga la dirección IP del equipo lo controle.
 
-## Páginas de Device Portal
+## <a name="device-portal-pages"></a>Páginas de Device Portal
 
 Device Portal en el escritorio proporciona el conjunto estándar de páginas. Para obtener descripciones detalladas, consulta [Windows Device Portal overview (Introducción a Windows Device Portal)](device-portal.md).
 
@@ -65,7 +72,7 @@ Device Portal en el escritorio proporciona el conjunto estándar de páginas. Pa
 - Redes
 - Explorador de archivos de la aplicación 
 
-## Configuración de números de puerto
+## <a name="setting-port-numbers"></a>Configuración de números de puerto
 
 Si quieres seleccionar los números de puerto para Device Portal (como 80 y 443), puedes establecer las siguientes claves de registro:
 
@@ -74,12 +81,12 @@ Si quieres seleccionar los números de puerto para Device Portal (como 80 y 443)
     - HttpPort: un DWORD necesario. Contiene el número de puerto que escuchará Device Portal para las conexiones HTTP.  
     - HttpsPort: un DWORD necesario. Contiene el número de puerto que escuchará Device Portal para las conexiones HTTPS.
 
-## Error al instalar el paquete de modo de desarrollador o al iniciar Device Portal
-En ocasiones, debido a problemas de compatibilidad o de red, el modo de desarrollador no se instalará correctamente. El paquete de modo de desarrollador es necesario para la implementación **remota** (Device Portal y SSH), pero no para el desarrollo local.  Aunque pueden ocurrir estos problemas, puedes seguir implementando la aplicación localmente con Visual Studio. 
+## <a name="failure-to-install-developer-mode-package-or-launch-device-portal"></a>Error al instalar el paquete de modo de desarrollador o al iniciar Device Portal
+En ocasiones, debido a problemas de compatibilidad o de red, el modo de desarrollador no se instalará correctamente. El paquete de modo de desarrollador es necesario para la implementación **remota** (Device Portal y SSH), pero no para el desarrollo local.  Aunque puedes encontrar estos problemas, puedes seguir implementando la aplicación localmente con Visual Studio. 
 
 Consulta el foro de [problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos y otros problemas. 
 
-### No se pudo ubicar el paquete
+### <a name="failed-to-locate-the-package"></a>No se pudo ubicar el paquete
 
 "No se pudo ubicar el paquete del modo de desarrollador en Windows Update. Código de error 0x001234 Más información"   
 
@@ -89,13 +96,13 @@ Corregir este problema:
 
 1. Asegúrate de que el equipo esté conectado a Internet. 
 2. Si estás en un equipo unido a un dominio, habla con el administrador de red. 
-3. Buscar actualizaciones de Windows en Configuración > Actualizaciones y seguridad > [Actualizaciones de Windows](ms-settings:windowsupdate).
-4. Comprueba que el paquete de modo de desarrollador de Windows esté presente en Configuración > Sistema > Aplicaciones y características > [Administrar características opcionales](ms-settings:optionalfeatures) > Agregar una característica. Si no aparece, Windows no puede encontrar el paquete correcto para el equipo. 
+3. Buscar actualizaciones de Windows en Configuración > Actualizaciones y seguridad > Actualizaciones de Windows.
+4. Comprueba que el paquete de modo de desarrollador de Windows esté presente en Configuración > Sistema > Aplicaciones y características > Administrar características opcionales > Agregar una característica. Si no aparece, Windows no puede encontrar el paquete correcto para el equipo. 
 
 Después de llevar a cabo cualquiera de los pasos anteriores, deshabilita y vuelve a habilitar el modo de desarrollador para comprobar la corrección. 
 
 
-### No se pudo instalar el paquete
+### <a name="failed-to-install-the-package"></a>No se pudo instalar el paquete
 
 "No se pudo instalar el paquete de modo de desarrollador. Código de error 0x001234  Más información"
 
@@ -103,11 +110,6 @@ Este error puede producirse debido a incompatibilidades entre la compilación de
 
 Corregir este problema:
 
-1. Buscar actualizaciones de Windows en Configuración > Actualizaciones y seguridad > [Actualizaciones de Windows](ms-settings:windowsupdate).
+1. Buscar actualizaciones de Windows en Configuración > Actualizaciones y seguridad > Actualizaciones de Windows.
 2. Reinicia el equipo para asegurarte de que se aplican a todas las actualizaciones.
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

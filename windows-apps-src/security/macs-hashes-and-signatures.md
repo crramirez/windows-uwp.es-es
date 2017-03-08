@@ -1,23 +1,30 @@
 ---
 title: MAC, hash y firmas
-description: "En este artículo se describe cómo se pueden utilizar los códigos de autenticación de mensaje (MAC), los hash y las firmas en las aplicaciones de la Plataforma universal de Windows (UWP) para detectar mensajes manipulados."
+description: "En este artículo se describe cómo se pueden usar los códigos de autenticación de mensaje (MAC), los hash y las firmas en las aplicaciones de la Plataforma universal de Windows (UWP) para detectar mensajes manipulados."
 ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 2c43e8ea726827d263fd397ea28058c04d30a7aa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f29b77317e0b03aff7e56087aa3a882720170b29
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# MAC, hash y firmas
+# <a name="macs-hashes-and-signatures"></a>MAC, hash y firmas
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo se pueden utilizar los códigos de autenticación de mensaje (MAC), los hash y las firmas en las aplicaciones de la Plataforma universal de Windows (UWP) para detectar mensajes manipulados.
 
-## Códigos de autenticación de mensaje (MAC)
+## <a name="message-authentication-codes-macs"></a>Códigos de autenticación de mensaje (MAC)
 
 
 El cifrado ayuda a impedir que personas no autorizadas puedan leer un mensaje, pero no evita que una persona pueda manipular el mensaje. La modificación de un mensaje, aunque produzca algo sin sentido, puede tener un impacto grave. Los códigos de autenticación de mensaje (MAC) ayudan a prevenir la manipulación de mensajes. Por ejemplo, considera el siguiente escenario:
@@ -122,7 +129,7 @@ namespace SampleMacAlgorithmProvider
 }
 ```
 
-## Hash
+## <a name="hashes"></a>Hash
 
 
 Una función hash criptográfica toma un bloque de datos de una longitud arbitraria y devuelve una cadena de bits de tamaño fijo. Las funciones hash se suelen usar al firmar datos. Como la mayoría de las operaciones de firma con clave pública requieren realizar cálculos intensivos, suele ser más eficiente firmar (cifrar) un hash de mensaje que firmar el mensaje original. El siguiente procedimiento representa un escenario frecuente (aunque simplificado):
@@ -179,7 +186,7 @@ public void SampleReusableHash()
 
 ```
 
-## Firmas digitales
+## <a name="digital-signatures"></a>Firmas digitales
 
 
 Las firmas digitales son el equivalente de clave pública a los códigos de autenticación de mensaje (MAC) de clave privada. A diferencia de los MAC, que usan claves privadas para permitir que el destinatario de un mensaje compruebe que el mensaje no se ha manipulado durante la transmisión, las firmas usan un par de claves, la pública y la privada.
@@ -189,8 +196,3 @@ Pero como la mayoría de las operaciones de firma con clave pública requieren r
 La firma solo garantiza que no se manipuló el mensaje original y, mediante la clave pública del remitente, que alguien con acceso a la clave privada firmó el hash de mensaje.
 
 Puedes usar un objeto [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para enumerar los algoritmos de firma disponibles y generar o importar un par de claves. Puedes usar métodos estáticos en la clase [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) para firmar un mensaje o comprobar una firma.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

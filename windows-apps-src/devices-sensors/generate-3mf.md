@@ -1,20 +1,28 @@
 ---
 author: PatrickFarley
-Description: "Describe la estructura del tipo de archivo de formato de fabricación 3D y cómo puede crearse y manipularse con la API de Windows.Graphics.Printing3D."
+Description: "Describe la estructura del tipo de archivo de formato de fabricación 3D y cómo puede crearse y manipularse con la API Windows.Graphics.Printing3D."
 MS-HAID: dev\_devices\_sensors.generate\_3mf
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Generar un paquete 3MF
+ms.assetid: 968d918e-ec02-42b5-b50f-7c175cc7921b
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: c790d57e72a75ec28e376722f8d87c2655b18c42
-ms.openlocfilehash: 1d291173cc68d4eedcbc2918f308be1489105a08
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2b1f15534e1388bfd61ba09faeb590464e44d8fd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Generar un paquete 3MF
+# <a name="generate-a-3mf-package"></a>Generar un paquete 3MF
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -25,7 +33,7 @@ ms.openlocfilehash: 1d291173cc68d4eedcbc2918f308be1489105a08
 
 En esta guía, se describe la estructura del documento de formato de fabricación 3D y cómo puede crearse y manipularse con la API [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx).
 
-## ¿Qué es 3MF?
+## <a name="what-is-3mf"></a>¿Qué es 3MF?
 
 El formato de fabricación 3D es un conjunto de convenciones de uso de XML para describir el aspecto y la estructura de modelos 3D para la fabricación (impresión 3D). Define un conjunto de partes (algunas necesarias y algunas opcionales), y sus relaciones, con el objetivo de proporcionar toda la información necesaria para un dispositivo de fabricación 3D. Un conjunto de datos que se adhiere al formato de fabricación 3D puede guardarse como un archivo con la extensión .3mf.
 
@@ -34,7 +42,7 @@ En Windows 10, la clase [**Printing3D3MFPackage**](https://msdn.microsoft.com/li
 <!-- >**Note** This guide describes how to construct a 3MF document from scratch. If you wish to make changes to an already existing 3MF document provided in the form of a .3mf file, you simply need to convert it to a **Printing3D3MFPackage** and alter the contained classes/properties in the same way (see [link]) below). -->
 
 
-## Clases principales de la estructura 3MF
+## <a name="core-classes-in-the-3mf-structure"></a>Clases principales de la estructura 3MF
 
 La clase **Printing3D3MFPackage** representa un documento 3MF completo y en el centro de un documento 3MF hay su parte de modelo, que representa la clase [**Printing3DModel**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dmodel.aspx). La mayoría de la información que queremos especificar sobre un modelo 3D se almacenará configurando las propiedades de la clase **Printing3DModel** y las propiedades de sus clases subyacentes.
 
@@ -42,13 +50,13 @@ La clase **Printing3D3MFPackage** representa un documento 3MF completo y en el c
 
 <!-- >**Note** We do not yet associate the **Printing3D3MFPackage** with its corresponding **Printing3DModel** object. Only after fleshing out the **Printing3DModel** with all of the information we wish to specify will we make that association (see [link]). -->
 
-## Metadatos
+## <a name="metadata"></a>Metadatos
 
 El componente de modelo de un documento 3MF puede contener metadatos en forma de pares clave-valor de cadenas almacenadas en la propiedad **Metadata**. Hay una serie de nombres predefinidos de metadatos, pero hay otros pares que se pueden agregar como parte de una extensión (se describe con más detalle en [3MF specification [Especificación 3MF]](http://3mf.io/what-is-3mf/3mf-specification/)). El receptor del paquete (un dispositivo de fabricación 3D) es el que determina si se administran los metadatos y la forma de hacerlo, pero te recomendamos incluir tanta información básica como sea posible en el paquete 3MF:
 
 [!code-cs[Metadatos](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetMetadata)]
 
-## Datos de malla
+## <a name="mesh-data"></a>Datos de malla
 
 En el contexto de esta guía, una malla es un cuerpo de geometría de 3 dimensiones construido a partir de un único conjunto de vértices (aunque no es necesario que aparezca como un único sólido). Una parte de la malla se representa mediante la clase [**Printing3DMesh**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dmesh.aspx). Un objeto de malla válido debe contener información sobre la ubicación de todos sus vértices, así como todas las caras de triángulos que existan entre ciertos conjuntos de vértices.
 
@@ -68,7 +76,7 @@ Cuando un objeto Printing3DMesh contiene conjuntos válidos de vértices y triá
 [!code-cs[MeshAdd](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetMeshAdd)]
 
 
-## Crear materiales
+## <a name="create-materials"></a>Crear materiales
 
 
 Un modelo 3D puede contener datos de varios materiales. Esta convención está diseñada para sacar provecho de los dispositivos de fabricación 3D que pueden usar varios materiales en un único trabajo de impresión. También hay varios *tipos* de grupos de materiales, cada uno de ellos capaz de admitir un gran número de diferentes materiales individuales. Cada grupo de materiales debe tener un número de identificación de referencia único y cada material de dentro de ese grupo también debe tener un identificador único.
@@ -77,7 +85,7 @@ De este modo, los objetos de malla diferentes de dentro de un modelo pueden hace
 
 En esta guía primero se mostrará cómo crear distintos tipos de materiales dentro de sus respectivos grupos de materiales y cómo almacenarlos como recursos en el objeto de modelo. A continuación, se tratará la asignación de distintos materiales a mallas individuales y a triángulos individuales.
 
-### Materiales base
+### <a name="base-materials"></a>Materiales base
 
 El tipo de material predeterminado es **material base**, que tiene un valor **material de color** (descrito a continuación) y un atributo de nombre que sirve para especificar el *tipo* de material que se debe usar.
 
@@ -86,19 +94,19 @@ El tipo de material predeterminado es **material base**, que tiene un valor **ma
 > [!NOTE]
 > El dispositivo de fabricación 3D determinará qué materiales físicos disponibles se asignan a cada elemento de material virtual almacenado en 3MF. La asignación de materiales no tiene que ser 1:1: si una impresora 3D solo usa un material, imprimirá todo el modelo en ese material, independientemente de las caras o los objetos a los que se asignaron distintos materiales.
 
-### Materiales de color
+### <a name="color-materials"></a>Materiales de color
 
 Los **materiales de color** son similares a los **materiales base**, pero no contienen ningún nombre. Por lo tanto, no proporcionan instrucciones sobre el tipo de material que debe usar la máquina. Contienen solamente datos de color y permiten que la máquina elija el tipo de material (y entonces puede que la máquina pida al usuario que realice la elección). En el siguiente código, los objetos `colrMat` del método anterior se usan individualmente.
 
 [!code-cs[ColorMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetColorMaterialGroup)]
 
-### Materiales compuestos
+### <a name="composite-materials"></a>Materiales compuestos
 
 Los **materiales compuestos**, simplemente, indican al dispositivo de fabricación que se debe usar una combinación uniforme de distintos **materiales base**. Cada **grupo de materiales compuestos** debe hacer referencia exactamente a un **grupo de materiales base** desde el que se deban dibujar ingredientes. Además, los **materiales base** de este grupo que se pondrán a disposición deben aparecer en una lista de **índices de materiales**, a la que cada **material compuesto** haga referencia al especificar las relaciones (cada **material compuesto** es simplemente una relación de **materiales base**).
 
 [!code-cs[CompositeMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetCompositeMaterialGroup)]
 
-### Materiales de coordenadas de textura
+### <a name="texture-coordinate-materials"></a>Materiales de coordenadas de textura
 
 3MF admite el uso de imágenes 2D para dar color a las superficies de modelos 3D. De esta forma, el modelo puede transmitir muchos más datos de color por cara de triángulo (en lugar de tener un solo valor de color por vértice de triángulo). Al igual que los **materiales de color**, los materiales de coordenadas de textura solo transmiten datos de color. Para usar una textura 2D, primero debe declararse un recurso de textura:
 
@@ -111,13 +119,13 @@ A continuación, debemos rellenar **Texture3Coord Materials**. Cada uno hace ref
 
 [!code-cs[Texture2CoordMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetTexture2CoordMaterialGroup)]
 
-## Asignar materiales a las caras
+## <a name="map-materials-to-faces"></a>Asignar materiales a las caras
 
 Para determinar los materiales que se asignan a los vértices de cada triángulo, debemos trabajar algo más en el objeto de malla de nuestro modelo (si un modelo contiene varias mallas, cada una debe tener sus materiales asignados por separado). Como se mencionó anteriormente, los materiales se asignan por vértices por triángulo. Consulta el código siguiente para ver cómo se especifica y se interpreta esta información.
 
 [!code-cs[MaterialIndices](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetMaterialIndices)]
 
-## Componentes y compilación
+## <a name="components-and-build"></a>Componentes y compilación
 
 La estructura de componentes permite al usuario colocar más de un objeto de malla en un modelo 3D imprimible. Un objeto [**Printing3DComponent**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponent.aspx) contiene una única malla y una lista de referencias a otros componentes. En realidad, se trata de una lista de objetos [**Printing3DComponentWithMatrix**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponentwithmatrix.aspx). Cada objeto **Printing3DComponentWithMatrix** contiene un elemento **Printing3DComponent** y, lo que es importante, una matriz de transformación que se aplica a la malla y a los componentes que contiene dicho elemento **Printing3DComponent**.
 
@@ -127,7 +135,7 @@ Se debe hacer referencia directamente a todos los objetos **Printing3DComponent*
 
 [!code-cs[Componentes](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetComponents)]
 
-## Guardar el paquete
+## <a name="save-package"></a>Guardar el paquete
 Ahora que tenemos un modelo con materiales y componentes definidos, podemos guardarlo en el paquete.
 
 [!code-cs[SavePackage](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetSavePackage)]
@@ -138,7 +146,7 @@ En el siguiente método se toma un paquete **Printing3D3MFPackage** terminado y 
 
 [!code-cs[SaveTo3mf](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetSaveTo3mf)]
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 [Impresión en 3D desde la aplicación](https://msdn.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
 [Ejemplo de impresión en 3D de UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
@@ -147,9 +155,4 @@ En el siguiente método se toma un paquete **Printing3D3MFPackage** terminado y 
  
 
  
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

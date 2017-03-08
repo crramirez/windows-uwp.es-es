@@ -1,23 +1,30 @@
 ---
 author: mtoepke
 title: "Crea recursos de dispositivo de búfer de profundidad"
-description: "Aprende cómo crear los recursos de dispositivo Direct3D necesarios para admitir la realización de pruebas de profundidad para volúmenes de sombra."
+description: "Aprende a crear los recursos de dispositivo Direct3D necesarios para admitir la realización de pruebas de profundidad para volúmenes de sombra."
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, juegos, Direct3D, búfer de profundidad"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 85fb020e7d476d3b2095875376903c5e28f08d94
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 87e4248545288f4725e0cf0b104a75f1925ad3a3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Crea recursos de dispositivo de búfer de profundidad
+# <a name="create-depth-buffer-device-resources"></a>Crear recursos de dispositivo para búferes de profundidad
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Aprende cómo crear los recursos de dispositivo Direct3D necesarios para admitir la realización de pruebas de profundidad para instantáneas de volumen. Parte 1 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
-## Recursos que necesitarás
+## <a name="resources-youll-need"></a>Recursos que necesitarás
 
 
 Representar una asignación de profundidad para instantáneas de volumen requiere los siguientes recursos dependientes del dispositivo de Direct3D:
@@ -32,7 +39,7 @@ Representar una asignación de profundidad para instantáneas de volumen requier
 
 Ten en cuenta que la creación de estos recursos debe incluirse en una rutina de creación de recursos dependientes de dispositivos. De esa manera tu procesador puede recrearlos si, por ejemplo, se instala un controlador de dispositivo nuevo o si el usuario mueve tu aplicación a un monitor conectado a una tarjeta gráfica diferente.
 
-## Comprobar la compatibilidad de la característica
+## <a name="check-feature-support"></a>Comprobar la compatibilidad de la característica
 
 
 Antes de crear la asignación de profundidad, llama al método [**CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) en el dispositivo Direct3D, solicita **D3D11\_FEATURE\_D3D9\_SHADOW\_SUPPORT** y proporciona una estructura [**D3D11\_FEATURE\_DATA\_D3D9\_SHADOW\_SUPPORT**](https://msdn.microsoft.com/library/windows/desktop/jj247569).
@@ -54,7 +61,7 @@ if (isD3D9ShadowSupported.SupportsDepthAsTextureWithLessEqualComparisonFilter)
 
 Si esta característica no es compatible, no intentes cargar sombreadores compilados para el sombreador modelo 4 nivel 9\_x que llamen a funciones de comparación de muestras. En muchos casos, la falta de compatibilidad para esta característica significa que la GPU es un dispositivo antiguo con un controlador que no está actualizado para admitir al menos WDDM 1.2. Si el dispositivo admite al menos la característica de nivel 10\_0, entonces puedes cargar en su lugar un sombreador de comparación de muestras compilado para el sombreador modelo 4\_0.
 
-## Crear un búfer de profundidad
+## <a name="create-depth-buffer"></a>Crear un búfer de profundidad
 
 
 Primero, intenta crear la asignación de profundidad con un formato de profundidad de más alta precisión. Debes configurar primero las propiedades de vista de recurso de sombreador coincidentes. Si la creación de recursos es errónea, por ejemplo debido a poca memoria en el dispositivo o a un formato que el hardware no admite, prueba un formato de menor precisión y cambiar las propiedades para que coincidan.
@@ -107,7 +114,7 @@ hr = pD3DDevice->CreateShaderResourceView(
     );
 ```
 
-## Crear estado de comparación
+## <a name="create-comparison-state"></a>Crear estado de comparación
 
 
 Ahora crea el objeto de estado de muestra de comparación. La característica de nivel 9\_1 solo admite D3D11\_COMPARISON\_LESS\_EQUAL. Las opciones de filtrado se explican con más profundidad en [Compatibilidad con mapas de sombras en una variedad de hardware](target-a-range-of-hardware.md) o simplemente puedes elegir el filtrado de puntos para asignaciones de instantáneas más rápidas.
@@ -146,7 +153,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-## Crear estados de representación
+## <a name="create-render-states"></a>Crear estados de representación
 
 
 Ahora crea un estado de representación que puedas usar para habilitar la selección de la cara anterior. Ten en cuenta que los dispositivos de nivel de característica 9\_1 necesitan que **DepthClipEnable** se establezca en **true**.
@@ -182,7 +189,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-## Crear búferes de constantes
+## <a name="create-constant-buffers"></a>Crear búferes de constantes
 
 
 No te olvides de crear un búfer de constantes para representar desde el punto de visualización de la luz. También puedes usar este búfer de constantes para especificar la posición de la luz respecto del sombreador. Usa una matriz de perspectiva para las luces puntuales y usa una matriz ortogonal para las luces direccionales (como la luz del sol).
@@ -239,7 +246,7 @@ context->UpdateSubresource(
     );
 ```
 
-## Crear una ventanilla
+## <a name="create-a-viewport"></a>Crear una ventanilla
 
 
 Necesitas una ventanilla separada para representar en la asignación de instantáneas. La ventanilla no es un recurso basado en dispositivos. Eres libre de crearla en cualquier otro lugar de tu código. Crear una ventanilla junto con la asignación de instantáneas puede ayudarte a que sea más conveniente mantener la dimensión de la ventanilla congruente con la dimensión de la asignación de instantáneas.
@@ -261,10 +268,5 @@ En la parte siguiente de este tutorial, aprenderás a crear la asignación de in
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

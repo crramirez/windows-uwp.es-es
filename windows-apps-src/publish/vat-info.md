@@ -3,23 +3,30 @@ author: jnHs
 Description: "Si es necesario que proporciones un número de identificación a efectos de IVA durante el proceso de registro del Centro de desarrollo, a continuación encontrarás información que te ayudará a ponerte en marcha."
 title: "Información sobre el IVA"
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9ff913999f0697b379df868277fb45597150aa6e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a26cb43d230cd7dbb050254cceb70d3158c3af5d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Información sobre el IVA
+# <a name="vat-info"></a>Información sobre el IVA
 
 
 Si es necesario que proporciones un número de identificación a efectos de IVA durante el proceso de registro del Centro de desarrollo, a continuación encontrarás información que te ayudará a ponerte en marcha.
 
-## Descripción de los números de IVA
+## <a name="understanding-vat-numbers"></a>Descripción de los números de IVA
 
 
 Un número de impuesto sobre el valor añadido (IVA) es un identificador que se utiliza en los países o regiones de la Unión Europea. Para obtener más información, consulta el [sitio de VIES](http://go.microsoft.com/fwlink/p/?LinkId=258372) oficial de la Unión Europea.
 
-## Formatos válidos para números de IVA
+## <a name="accepted-formats-for-vat-numbers"></a>Formatos válidos para números de IVA
 
 
 Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente tabla se proporciona únicamente a modo de orientación. Ponte en contacto con las autoridades tributarias locales para comprobar si hay cambios recientes en caso de que esta orientación no sea suficiente para proporcionar a Microsoft un número de IVA.
@@ -247,10 +254,5 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

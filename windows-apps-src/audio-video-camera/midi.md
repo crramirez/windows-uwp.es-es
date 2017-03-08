@@ -3,20 +3,27 @@ author: drewbatgit
 ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
 description: "En este artículo se muestra cómo enumerar dispositivos MIDI (interfaz digital de instrumentos musicales), y enviar y recibir mensajes MIDI desde una aplicación universal de Windows."
 title: MIDI
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: cc3553aff7c30a2e84b527dc9e108f7c45b7b21f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: bd494a814155d72642bb721a939fcc8c50668a2d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# MIDI
+# <a name="midi"></a>MIDI
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se muestra cómo enumerar dispositivos MIDI (interfaz Digital de instrumentos musicales) y enviar y recibir mensajes MIDI desde una aplicación universal de Windows.
 
-## Enumerar dispositivos MIDI
+## <a name="enumerate-midi-devices"></a>Enumerar dispositivos MIDI
 
 Antes de enumerar y usar dispositivos MIDI, agrega los siguientes espacios de nombres al proyecto.
 
@@ -34,7 +41,7 @@ Enumerar dispositivos de salida MIDI funciona exactamente igual que la enumeraci
 
 [!code-cs[EnumerateMidiOutputDevices](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetEnumerateMidiOutputDevices)]
 
-## Crear una clase auxiliar de monitor de dispositivo
+## <a name="create-a-device-watcher-helper-class"></a>Crear una clase auxiliar de monitor de dispositivo
 
 El espacio de nombres [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/br225459) proporciona la clase [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/br225446) que puede notificar a la aplicación si se agregan o eliminan dispositivos del sistema, o si se actualiza la información de un dispositivo. Dado que las aplicaciones MIDI habilitadas normalmente están interesadas en dispositivos de entrada y salida, este ejemplo crea una clase auxiliar que implementa el patrón **DeviceWatcher**, por lo que puede usarse el mismo código para ambos dispositivos de entrada MIDI y salida MIDI, sin necesidad de duplicación.
 
@@ -84,7 +91,7 @@ Proporciona un destructor para anular el registro de los controladores de evento
 
 [!code-cs[WatcherDestructor](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherDestructor)]
 
-## Crear los puertos MIDI para enviar y recibir mensajes
+## <a name="create-midi-ports-to-send-and-receive-messages"></a>Crear los puertos MIDI para enviar y recibir mensajes
 
 En el código subyacente de la página, debes declarar variables de miembros para almacenar dos instancias de la clase auxiliar **MyMidiDeviceWatcher**: una para dispositivos de entrada y otra para dispositivos de salida.
 
@@ -122,7 +129,7 @@ Cuando la aplicación se desactiva, asegúrate de limpiar los recursos de las ap
 
 [!code-cs[CleanUp](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetCleanUp)]
 
-## Usar el sintetizador de MIDI general integrado en Windows
+## <a name="using-the-built-in-windows-general-midi-synth"></a>Usar el sintetizador de MIDI general integrado en Windows
 
 Cuando enumeres dispositivos MIDI de salida mediante la técnica descrita anteriormente, la aplicación detectará un dispositivo de MIDI denominado "Sintetizador por tabla de ondas GS de Microsoft". Este es un sintetizador MIDI general integrado que puedes reproducir desde la aplicación. Sin embargo, al intentar crear un puerto de salida MIDI en este dispositivo se producirá un error a menos que hayas incluido la extensión SDK para el sintetizador integrado en el proyecto.
 
@@ -141,10 +148,5 @@ Cuando enumeres dispositivos MIDI de salida mediante la técnica descrita anteri
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

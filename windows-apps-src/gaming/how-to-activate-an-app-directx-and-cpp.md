@@ -3,20 +3,27 @@ author: mtoepke
 title: "Cómo activar una aplicación (DirectX y C++)"
 description: "En este tema se muestra cómo definir la experiencia de activación de una aplicación DirectX para la Plataforma universal de Windows (UWP)."
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, juegos, games, directx, activación, activation"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0b13604d2b0349817881a5c1c56c311931c90759
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4d3585e28ca4a3665a881df4f16a3cc3f82fcc52
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Cómo activar una aplicación (DirectX y C++)
+# <a name="how-to-activate-an-app-directx-and-c"></a>Cómo activar una aplicación (DirectX y C++)
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se muestra cómo definir la experiencia de activación de una aplicación DirectX para la Plataforma universal de Windows (UWP).
 
-## Registrar el controlador de eventos de activación de la aplicación
+## <a name="register-the-app-activation-event-handler"></a>Registrar el controlador de eventos de activación de la aplicación
 
 
 Primero, haz un registro para controlar el evento [**CoreApplicationView::Activated**](https://msdn.microsoft.com/library/windows/apps/br225018), que se activa cuando el sistema operativo inicia e inicializa la aplicación.
@@ -36,7 +43,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 }
 ```
 
-## Activar la instancia de CoreWindow para la aplicación
+## <a name="activate-the-corewindow-instance-for-the-app"></a>Activar la instancia de CoreWindow para la aplicación
 
 
 Cuando se inicia la aplicación, debes obtener una referencia a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para la aplicación. **CoreWindow** contiene el distribuidor de mensajes de eventos de ventana que la aplicación usa para procesar eventos de ventana. Obtén esta referencia en la devolución de llamada del evento de activación de la aplicación con una llamada a [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589). Después de obtener esta referencia, activa la ventana de aplicación principal con una llamada a [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).
@@ -49,7 +56,7 @@ void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^
 }
 ```
 
-## Iniciar el mensaje de evento de procesamiento para la ventana de aplicación principal
+## <a name="start-processing-event-message-for-the-main-app-window"></a>Iniciar el mensaje de evento de procesamiento para la ventana de aplicación principal
 
 
 Las devoluciones de llamada se producen a medida que [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) procesa los mensajes de eventos para el elemento [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) de la aplicación. Esta devolución de llamada no se invocará si no llamas a [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) desde el bucle principal de la aplicación (implementado en el método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) del proveedor de vistas).
@@ -79,7 +86,7 @@ void App::Run()
 }
 ```
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Cómo suspender una aplicación (DirectX y C++)](how-to-suspend-an-app-directx-and-cpp.md)
@@ -91,10 +98,5 @@ void App::Run()
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

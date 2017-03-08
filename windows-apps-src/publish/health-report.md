@@ -3,21 +3,28 @@ author: jnHs
 Description: "El informe Estado del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden."
 title: Informe Estado
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2481343772a6cf8af0667dc0796ed455dba1eaee
-ms.openlocfilehash: a92a2ab8f11c46217d1d7b63f86c5bf68757d3fb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 838b70d5925627710875a498d0cc91efb3e0adf7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Informe Estado
+# <a name="health-report"></a>Informe Estado
 
 
-El informe **Mantenimiento** del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden. Puedes visualizar estos datos en tu panel (**Análisis** > **Mantenimiento**) o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Si corresponde, puedes ver seguimientos de la pila para una mayor depuración. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+El informe **Estado** del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden. Puedes visualizar estos datos en tu panel (**Análisis** > **Mantenimiento**) o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Si corresponde, puedes ver seguimientos de la pila para una mayor depuración. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 
 > **Nota** Si ya habías publicado aplicaciones y habías visto datos de rendimiento, es posible que observes que se notifica un mayor número de bloqueos y eventos aquí. Esto se debe a que podemos incluir más datos en este informe para ofrecerle una perspectiva más completa.
 
-## Aplicar filtros
+## <a name="apply-filters"></a>Aplicar filtros
 
 
 Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página por intervalo de fechas, versión del paquete, tipo de dispositivo o versión de SO.
@@ -29,24 +36,24 @@ Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** pa
 
 La información de todos los gráficos que aparecen a continuación reflejará el período de tiempo seleccionado en la sección **Aplicar filtros**. De manera predeterminada, se incluirán datos de todas las versiones de paquetes, a menos que hayas usado la opción **Aplicar filtros** para elegir solo una.
 
-## Bloqueos y eventos totales
+## <a name="total-crashes-and-events"></a>Bloqueos y eventos totales
 
 
 El gráfico **Failure hits (Número de errores)** (antes conocido como **Bloqueos y eventos totales**) muestra el número de bloqueos y eventos diarios que los clientes experimentaron al usar la aplicación durante el período de tiempo seleccionado. De cada tipo de evento que la aplicación experimentó se realiza un seguimiento por separado: bloqueos, cuelgues, excepciones de JavaScript o errores de memoria.
 
 También puedes filtrar los resultados por mercado o por la versión del SO.
 
-## Mercados
+## <a name="markets"></a>Mercados
 
 
 El gráfico **Mercados** muestra el número total de bloqueos y eventos durante el período de tiempo seleccionado por mercado. De manera predeterminada, en la parte superior se muestra el mercado con un mayor número seguido del resto en orden descendente. Puedes invertir el orden alternando la flecha situada en la columna **Aciertos** del gráfico.
 
-## Versión del paquete
+## <a name="package-version"></a>Versión del paquete
 
 
 El gráfico **Versión del paquete** muestra el número total de bloqueos y eventos durante el período de tiempo seleccionado por versión del paquete. De manera predeterminada, en la parte superior se muestra la versión del paquete con un mayor número seguido del resto en orden descendente. Puedes invertir el orden alternando la flecha situada en la columna **Aciertos** del gráfico.
 
-## Errores
+## <a name="failures"></a>Errores
 
 
 El gráfico **Errores** muestra el número total de bloqueos y eventos durante el período de tiempo seleccionado por nombre de error. De manera predeterminada, en la parte superior se muestra el error con un mayor número seguido del resto en orden descendente. Puedes invertir el orden alternando la flecha situada en la columna **Aciertos** del gráfico. También te mostramos el porcentaje de cada error del total de errores.
@@ -56,9 +63,4 @@ Para mostrar el informe **Detalles del error** de un error en concreto, seleccio
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

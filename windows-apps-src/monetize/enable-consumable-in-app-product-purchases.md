@@ -3,10 +3,16 @@ author: mcleanbyron
 Description: "Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar) a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza."
 title: "Habilitar compras de productos consumibles desde la aplicación"
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
-keywords: "muestra de código de oferta desde la aplicación"
+keywords: "UWP, consumibles, consumable, complementos, add-ons, compras desde la aplicación, in-app purchases, IAP, Windows.ApplicationModel.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: acb7218bed287f430950d4f8d3621831b269ae18
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7395cf28f96b2f7aa9bc6a1d4c461385d50fcbf6
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -76,9 +82,4 @@ En el siguiente ejemplo, se demuestra cómo se puede usar [GetUnfulfilledConsuma
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

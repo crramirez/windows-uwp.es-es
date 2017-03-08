@@ -3,20 +3,27 @@ author: jnHs
 Description: "Puedes enviar aplicaciones a la Tienda Windows en más de 100 idiomas."
 title: Idiomas admitidos
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3d14f1d11290942a90498f7aff4dc324daa3a84e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b9d0720ee56430320cfc4ca2725fb3e0ac8049e5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Idiomas admitidos
+# <a name="supported-languages"></a>Idiomas admitidos
 
 
 Puedes enviar aplicaciones a la Tienda Windows en más de 100 idiomas.
 
 Para obtener más información sobre la configuración de idiomas en tus aplicaciones, consulta [Globalización y la localización](../globalizing/globalizing-portal.md) y [Administrar idiomas y regiones](../globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
 
-## Idiomas admitidos
+## <a name="supported-languages"></a>Idiomas admitidos
 
 
 Son los idiomas que admite la Tienda Windows. La aplicación debe admitir al menos uno de estos idiomas y no debe especificar ningún código de idioma que no se incluya aquí.
@@ -135,10 +142,5 @@ Son los idiomas que admite la Tienda Windows. La aplicación debe admitir al men
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

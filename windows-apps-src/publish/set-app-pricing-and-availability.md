@@ -1,27 +1,34 @@
 ---
 author: jnHs
-Description: "La página Precios y disponibilidad del proceso de envío de la aplicación permite determinar cuánto costará tu aplicación, independientemente de si ofreces una prueba gratuita y cómo, cuándo y dónde estará disponible para los clientes."
+Description: "La página Precios y disponibilidad del proceso de envío de la aplicación permite determinar cuánto costará tu aplicación, independientemente de si ofreces una evaluación gratuita, y cómo, cuándo y dónde estará disponible para los clientes."
 title: Establecer los precios y la disponibilidad de las aplicaciones
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2ce776b69eed7d5803db7a37b54c4b00f58dc6c0
-ms.openlocfilehash: e5b956f819af3cbbd7e00d77de77a15678a2ab4c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9971f61947759ff23adf7ccc5204ea27287f4720
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Establecer los precios y la disponibilidad de las aplicaciones
+# <a name="set-app-pricing-and-availability"></a>Establecer los precios y la disponibilidad de las aplicaciones
 
 
-La página **Precios y disponibilidad** del [proceso de envío de la aplicación](app-submissions.md) permite determinar cuánto costará tu aplicación, independientemente de si ofreces una prueba gratuita y cómo, cuándo y dónde estará disponible para los clientes. A continuación, te guiaremos por las opciones de esta página y lo que debes tener en cuenta al escribir la información.
+La página **Precios y disponibilidad** del [proceso de envío de la aplicación](app-submissions.md) permite determinar cuánto costará tu aplicación, independientemente de si ofreces una evaluación gratuita, y cómo, cuándo y dónde estará disponible para los clientes. A continuación, te guiaremos por las opciones de esta página y lo que debes tener en cuenta al escribir la información.
 
-## Precio base
+## <a name="base-price"></a>Precio base
 
 
 El primer elemento de esta página te permite seleccionar un precio base de la aplicación. Puedes elegir ofrecerla de forma gratuita o puede seleccionar una de las franjas de precios disponibles. Es necesario especificar un precio base para enviar la aplicación.
 
 Para más información, consulta [Definir la selección de precios y mercados](define-pricing-and-market-selection.md).
 
-## Prueba gratuita
+## <a name="free-trial"></a>Prueba gratuita
 
 
 Muchos desarrolladores eligen permitir que los clientes prueben su aplicación de forma gratuita con la funcionalidad de prueba proporcionada por la Tienda. De manera predeterminada, una aplicación no estará disponible como prueba gratuita, pero si quieres ofrecer una, seleccione un valor de la lista desplegable **Prueba gratuita**.
@@ -32,17 +39,17 @@ También tienes la opción de seleccionar una versión de prueba con límite de 
 
 > **Nota** Las pruebas de tiempo limitado no se muestran a los clientes en Windows Phone 8.1 y versiones anteriores.
 
-## Mercados y precios personalizados
+## <a name="markets-and-custom-prices"></a>Mercados y precios personalizados
 
 
 De manera predeterminada, tu aplicación figurará en todos los mercados posibles al precio base. Puedes cambiar esta configuración para incluir o excluir mercados específicos y cambiar el precio de la aplicación en cualquier mercado en que la ofrezcas en la sección **Mercados y precios personalizados**. Para más información, consulta [Definir la selección de precios y mercados](define-pricing-and-market-selection.md).
 
-## Precio de oferta
+## <a name="sale-pricing"></a>Precio de oferta
 
 
 Si quieres ofrecer tu aplicación a un precio reducido durante un período de tiempo limitado, puedes crear y programar una oferta. Para obtener más información, consulta [Poner aplicaciones y complementos en oferta](put-apps-and-add-ons-on-sale.md).
 
-## Distribución y visibilidad
+## <a name="distribution-and-visibility"></a>Distribución y visibilidad
 
 
 La sección **Distribución y visibilidad** te permite establecer restricciones sobre cómo se puede detectar y adquirir la aplicación.
@@ -52,23 +59,23 @@ El valor predeterminado es **Make this app available in the Store**. Esto signif
 Si quieres ocultar la aplicación en la Tienda pero aún ponerla a disposición de determinadas personas, selecciona una de las siguientes opciones para limitar la disponibilidad de tu aplicación. Ten en cuenta que los clientes de Windows 8 y Windows 8.1 no podrán obtener la aplicación si eliges cualquiera de estas opciones.
 
 -   **Ocultar esta aplicación y evitar la adquisición. Los clientes con un código promocional aún pueden descargarla en dispositivos Windows 10**: ningún cliente puede encontrar la aplicación en la Tienda a través de la búsqueda o exploración, pero puedes [generar códigos promocionales](generate-promotional-codes.md) para distribuirla entre personas concretas en Windows 10. Estas personas pueden usar el vínculo y el código para obtener la aplicación de forma gratuita, aunque ya no se la ofrezcas a ningún otro cliente.
--   **Ocultar la aplicación en la Tienda. Los clientes que dispongan de un vínculo directo a la descripción de la aplicación podrán continuar descargándola, salvo en Windows 8 y Windows 8.1**: ningún cliente puede encontrar la aplicación en la Tienda a través de la búsqueda o exploración, pero los clientes con el vínculo directo a la descripción de la aplicación pueden descargarla en dispositivos que ejecuten Windows10 o Windows Phone 8.1 y versiones anteriores.
+-   **Ocultar la aplicación en la Tienda. Los clientes que dispongan de un vínculo directo a la descripción de la aplicación podrán continuar descargándola, salvo en Windows 8 y Windows 8.1**: ningún cliente puede encontrar la aplicación en la Tienda a través de la búsqueda o exploración, pero los clientes con el vínculo directo a la descripción de la aplicación pueden descargarla en dispositivos que ejecuten Windows 10 o Windows Phone 8.1 y versiones anteriores.
 -   **Ocultar esta aplicación y ponerla a la disposición de solo las personas que especifiques abajo, quienes podrán descargar esta aplicación en dispositivos Windows Phone 8.x. Se puede usar un código de promoción para descargar esta aplicación en dispositivos Windows 10**: ningún cliente puede encontrar la aplicación en la Tienda a través de la búsqueda o la exploración, y únicamente los clientes de Windows Phone 8.x cuyas direcciones de correo electrónico (asociadas a sus cuentas de Microsoft) hayas especificado en el cuadro (separadas por punto y coma) pueden descargar la aplicación mediante el vínculo directo a su descripción. También puedes [generar códigos promocionales](generate-promotional-codes.md) para distribuirla entre personas concretas en Windows 10. A menudo se usa esta opción para las [pruebas beta](beta-testing-and-targeted-distribution.md) en Windows Phone 8.1 y versiones anteriores. Ten en cuenta que esta opción solo se puede seleccionar si nunca antes has publicado la aplicación con la opción **Distribución y visibilidad** establecida en **Todo el mundo puede encontrar tu aplicación en la Tienda**.
 
 > **Nota** Para dejar de ofrecer completamente una aplicación a los clientes nuevos, haz clic en **Make app unavailable** desde la página Información general de la aplicación. Después de confirmar que quieres que la aplicación deje de estar disponible, en el plazo de unas horas dejará de estar visible en la Tienda y ningún cliente nuevo podrá acceder a ella de ninguna manera. Esta acción invalidará cualquiera de las opciones aquí seleccionadas: no estará disponible para los clientes nuevos de ninguna manera. Para que vuelva a estar disponible para los nuevos clientes, puedes hacer clic en **Make app available** desde la página Información general de la aplicación en cualquier momento. Para obtener más información, consulta [Quitar una aplicación de la Tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
-## Familias de dispositivos Windows 10
+## <a name="windows-10-device-families"></a>Familias de dispositivos Windows 10
 
 Ahora se administra la disponibilidad de las familias de dispositivos en la página **Paquetes** de tu envío. Para obtener más información, consulta [Disponibilidad de familias de dispositivos](upload-app-packages.md#device-family-availability).
 
-## Licencias organizativas
+## <a name="organizational-licensing"></a>Licencias organizativas
 
 
 De manera predeterminada, tu aplicación se puede ofrecer a las organizaciones para su compra por volumen. En esta sección puedes indicar si lo permites, y en qué condiciones.
 
 Para obtener más información, consulta [Opciones de licencias organizativas](organizational-licensing.md).
 
-## Fecha de publicación
+## <a name="publish-date"></a>Fecha de publicación
 
 
 Puedes indicar cuándo se publicará la aplicación (o la actualización) seleccionando una opción en la sección **Fecha de publicación**.
@@ -83,9 +90,4 @@ También puedes cambiar la fecha de lanzamiento después de enviar la aplicació
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

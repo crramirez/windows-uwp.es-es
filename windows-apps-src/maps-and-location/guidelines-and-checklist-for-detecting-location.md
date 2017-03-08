@@ -3,16 +3,23 @@ author: msatranjr
 Description: "En este tema se describen las directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario."
 title: "Directrices para las aplicaciones con reconocimiento de ubicación"
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, ubicación, location, mapa, map, ubicación geográfica, geolocation"
 translationtype: Human Translation
-ms.sourcegitcommit: 7159aea3feef96781575825d019a379e0eadc603
-ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f52f2f7a33edcbb0bd360c7b336cc3988abb80f5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Directrices para las aplicaciones con reconocimiento de ubicación
+# <a name="guidelines-for-location-aware-apps"></a>Directrices para las aplicaciones con reconocimiento de ubicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -22,7 +29,7 @@ ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 
 En este tema se describen las directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario.
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 
 -   Empieza a usar el objeto de ubicación solo cuando la aplicación necesite datos de ubicación.
@@ -66,7 +73,7 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
 
     -   Especifica el umbral de movimiento. Algunas aplicaciones solo necesitan actualizaciones de la ubicación cuando el usuario se ha desplazado una gran distancia. Por ejemplo, es posible que una aplicación que proporciona noticias locales o actualizaciones meteorológicas no necesite actualizaciones de la ubicación a menos que la ubicación del usuario haya cambiado a otra ciudad. En este caso, debes ajustar el movimiento mínimo requerido para un evento de actualización de la ubicación. Para ello, establece la propiedad [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539). Esta acción filtra los eventos [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540). Estos eventos solo se generan cuando un cambio de posición supera el umbral de movimiento.
 
-    -   Usa un valor de [**reportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) que se alinee con la experiencia de la aplicación y reduzca el uso de los recursos del sistema. Por ejemplo, es posible que una aplicación de información meteorológica solo requiera una actualización de los datos cada 15minutos. La mayoría de aplicaciones, excepto las de navegación en tiempo real, no requiere una transmisión constante de alta precisión de actualizaciones de la ubicación. Si la aplicación no requiere el flujo de datos más preciso posible o si rara vez requiere actualizaciones, establece la propiedad **ReportInterval** para indicar la frecuencia mínima de actualizaciones de ubicación que necesita la aplicación. El origen de la ubicación puede ahorrar energía si solo calcula la ubicación cuando es necesario.
+    -   Usa un valor de [**reportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) que se alinee con la experiencia de la aplicación y reduzca el uso de los recursos del sistema. Por ejemplo, es posible que una aplicación de información meteorológica solo requiera una actualización de los datos cada 15 minutos. La mayoría de aplicaciones, excepto las de navegación en tiempo real, no requiere una transmisión constante de alta precisión de actualizaciones de la ubicación. Si la aplicación no requiere el flujo de datos más preciso posible o si rara vez requiere actualizaciones, establece la propiedad **ReportInterval** para indicar la frecuencia mínima de actualizaciones de ubicación que necesita la aplicación. El origen de la ubicación puede ahorrar energía si solo calcula la ubicación cuando es necesario.
 
         Las aplicaciones que sí necesitan datos en tiempo real deben establecer [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) en 0, para indicar que no se especifica ningún intervalo mínimo. El intervalo predeterminado de informe es de 1 segundo o de la frecuencia que el hardware admita, lo que sea más corto.
 
@@ -74,7 +81,7 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
 
         **Nota:** No se garantiza que el origen de la ubicación atenderá la solicitud para el intervalo de informe indicado. No todos los dispositivos de proveedores de ubicación hacen un seguimiento del intervalo de informe, pero lo debes proporcionar para los que sí lo hacen.
 
-    -   Para ahorrar energía, establece la propiedad [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) para indicar a la plataforma de ubicación si la aplicación necesita datos de alta precisión. En caso de que no haya ninguna aplicación que necesite datos de alta precisión, el sistema puede ahorrar energía si no activa los proveedoresGPS.
+    -   Para ahorrar energía, establece la propiedad [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) para indicar a la plataforma de ubicación si la aplicación necesita datos de alta precisión. En caso de que no haya ninguna aplicación que necesite datos de alta precisión, el sistema puede ahorrar energía si no activa los proveedores GPS.
 
         -   Establece [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) en **HIGH** para permitir que el GPS pueda adquirir datos.
         -   Si la aplicación únicamente usa la información de ubicación para personalizar la publicidad, establece [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) en **Default** y usa solamente un patrón de llamada de un único intento para minimizar el consumo de energía.
@@ -100,13 +107,13 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
 
     Las API de Windows Runtime tienen acceso a todos estos sensores, excepto al magnetómetro. Los sensores de fusión son más precisos y estables que los físicos, pero consumen más energía. Usa los sensores adecuados para cada propósito. Para obtener información, consulta [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
-**Modo de espera conectado** 
+**Modo de espera conectado**
 - Cuando el equipo se encuentra en estado de modo de espera conectado, siempre se puede crear una instancia de los objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No obstante, el objeto **Geolocator** no encontrará ningún sensor que pueda agregar, por lo que las llamadas a [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) agotarán el tiempo de espera después de 7 segundos, no se llamará nunca a las escuchas de eventos [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) y se llamará una vez a las escuchas de eventos [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) con el estado **NoData**.
 
-## Instrucciones de uso adicionales
+## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
 
-### Detección de cambios en la configuración de ubicación
+### <a name="detecting-changes-in-location-settings"></a>Detección de cambios en la configuración de ubicación
 
 El usuario puede desactivar la funcionalidad de ubicación mediante la **configuración de privacidad de ubicación** de la aplicación **Configuración**.
 
@@ -119,7 +126,7 @@ El usuario puede desactivar la funcionalidad de ubicación mediante la **configu
 
 Ten en cuenta que el servicio de ubicación devolverá datos en cuanto estén disponibles. Primero podría devolver una ubicación con un mayor radio de error y después actualizar la ubicación con información más precisa en cuanto esté disponible. Las aplicaciones que muestran la ubicación del usuario normalmente actualizan la ubicación a medida que llega una información más precisa.
 
-### Representación gráfica de la ubicación
+### <a name="graphical-representations-of-location"></a>Representación gráfica de la ubicación
 
 La aplicación debe usar [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) para indicar claramente la ubicación actual del usuario en el mapa. Existen tres bandas principales de precisión: un radio de error de aproximadamente 10 metros, un radio de error de aproximadamente 100 metros y un radio de error superior a 1 kilómetro. Con el uso de la información de precisión, puedes asegurarte de que tu aplicación muestre la ubicación de forma precisa en el contexto de los datos disponibles. Para obtener información general sobre cómo usar el control de mapa, consulta [Mostrar mapas con vistas 2D, 3D y Streetside](https://msdn.microsoft.com/library/windows/apps/mt219695).
 
@@ -140,7 +147,7 @@ Cuando la precisión de la ubicación cambia de una banda de precisión a otra, 
 -   Haciendo que la animación de transición sea suave y la transición rápida y fluida.
 -   Esperando unos cuantos informes consecutivos para confirmar el cambio en la precisión, para ayudar a evitar zooms no deseados y demasiado frecuentes.
 
-### Representación textual de la ubicación
+### <a name="textual-representations-of-location"></a>Representación textual de la ubicación
 
 Algunos tipos de aplicaciones (por ejemplo, una aplicación de información meteorológica o de información local) necesitan mecanismos para representar una ubicación de forma textual en las diferentes bandas de precisión. Asegúrate de mostrar la ubicación claramente y solamente en el nivel de precisión proporcionado por los datos.
 
@@ -148,7 +155,7 @@ Algunos tipos de aplicaciones (por ejemplo, una aplicación de información mete
 -   Para una precisión de aproximadamente 100 metros (resolución Wi-Fi), los datos de ubicación recibidos son moderadamente precisos y se recomienda que muestres información del nombre de la ciudad. Evita usar el nombre del barrio.
 -   Para una precisión superior a 1 kilómetro (resolución de IP), muestra solo el nombre del estado o provincia, o del país o región.
 
-### Consideraciones de privacidad
+### <a name="privacy-considerations"></a>Consideraciones de privacidad
 
 La ubicación geográfica de un usuario es información de identificación personal (PII). En el sitio web siguiente se ofrecen directrices para proteger la privacidad de los usuarios.
 
@@ -156,7 +163,7 @@ La ubicación geográfica de un usuario es información de identificación perso
 
 <!--For more info, see [Guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md).-->
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Configurar una geovalla](https://msdn.microsoft.com/library/windows/apps/mt219702)
 * [Obtener la ubicación actual](https://msdn.microsoft.com/library/windows/apps/mt219698)
@@ -166,13 +173,4 @@ La ubicación geográfica de un usuario es información de identificación perso
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

@@ -1,17 +1,24 @@
 ---
 author: DelfCo
-description: Puedes usar Windows.Networking.Sockets y Winsock para comunicarte con otros dispositivos como un desarrollador de aplicaciones para la Plataforma universal de Windows (UWP).
+description: Puedes usar Windows.Networking.Sockets y Winsock para comunicarte con otros dispositivos como desarrollador de aplicaciones para la Plataforma universal de Windows (UWP).
 title: Sockets
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4557fa59d377edc2ae5bf5a9be63516d152949bb
-ms.openlocfilehash: 49a9ae4d7d3994ad7fbb78fc9dc60cdd9dca07c3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0e9121dfc590a1a7f67be69b7dbce475e438dd08
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Sockets
+# <a name="sockets"></a>Sockets
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -22,7 +29,7 @@ Puedes usar [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/
 
 >**Nota** Como parte del [aislamiento de red](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx), el sistema prohíbe establecer conexiones de sockets (Sockets o WinSock) entre dos aplicaciones para UWP que se ejecuten en el mismo equipo, ya sea mediante la dirección de bucle invertido local (127.0.0.0) o especificando explícitamente la dirección IP local. Esto significa que no puedes usar sockets para la comunicación entre dos aplicaciones para UWP. UWP proporciona otros mecanismos para la comunicación entre aplicaciones. Consulta [App-to-app communication (Comunicación entre aplicaciones)](https://msdn.microsoft.com/windows/uwp/app-to-app/index) para obtener más información.
 
-## Operaciones básicas de sockets TCP
+## <a name="basic-tcp-socket-operations"></a>Operaciones básicas de sockets TCP
 
 Un socket TCP proporciona transferencias de datos de red de bajo nivel en cualquier dirección para conexiones de larga duración. Los sockets TCP son la característica subyacente que usan la mayoría de los protocolos de red que se usan en Internet. Esta sección muestra cómo habilitar una aplicación para UWP para enviar y recibir datos con un socket de secuencias TCP mediante las clases [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) y [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) como parte del espacio de nombres de [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960). Para esta sección, crearemos una aplicación muy sencilla que funcionará como un servidor de eco y un cliente para demostrar las operaciones básicas de TCP.
 
@@ -104,7 +111,7 @@ catch (Exception e)
 }
 ```
 
-## Operaciones básicas de sockets UDP
+## <a name="basic-udp-socket-operations"></a>Operaciones básicas de sockets UDP
 
 Un socket UDP proporciona transferencias de datos de red de bajo nivel en cualquier dirección para la comunicación de red que no requiere una conexión establecida. Dado que los sockets UDP no mantienen la conexión en ambos extremos, proporcionan una solución rápida y sencilla para redes entre equipos remotos. No obstante, los sockets UDP no garantizan la integridad de los paquetes de red o si llegan al destino remoto. Algunos ejemplos de aplicaciones que usan sockets UDP son la detección de redes locales y los clientes de chat local. Esta sección muestra el uso de la clase [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) para enviar y recibir mensajes UDP mediante la creación de un sencillo servidor de eco y cliente.
 
@@ -190,11 +197,11 @@ private async void Socket_MessageReceived(Windows.Networking.Sockets.DatagramSoc
 }
 ```
 
-## Operaciones en segundo plano y agente de socket
+## <a name="background-operations-and-the-socket-broker"></a>Operaciones en segundo plano y agente de socket
 
 Si la aplicación recibe conexiones o datos en sockets, debes estar preparado para realizar esas operaciones correctamente mientras la aplicación no está en primer plano. Para ello, usa al agente de socket. Para obtener más información sobre cómo usar el agente de socket, consulta [Comunicaciones de red en segundo plano](network-communications-in-the-background.md).
 
-## Envíos por lotes
+## <a name="batched-sends"></a>Envíos por lotes
 
 A partir de Windows 10, Windows.Networking.Sockets admite el envío por lotes, un método para enviar varios búferes de datos con mucha menos sobrecarga por cambio de contexto que si envías cada uno de los búferes de forma independiente. Esto es especialmente útil tu aplicación está usando VoIP, VPN u otras tareas que implican mover una gran cantidad de datos de manera más eficaz posible.
 
@@ -264,11 +271,11 @@ Existen algunas limitaciones importantes impuestas mediante el uso de escrituras
 -   El patrón **FlushAsync** solo funciona en Windows 10 y en adelante.
 -   En otros casos, usa **Task.WaitAll** en lugar del patrón **FlushAsync**.
 
-## Uso compartido de puertos para DatagramSocket
+## <a name="port-sharing-for-datagramsocket"></a>Uso compartido de puertos para DatagramSocket
 
 Windows 10 introduce una propiedad [**DatagramSocketControl**](https://msdn.microsoft.com/library/windows/apps/hh701190) nueva, [**MulticastOnly**](https://msdn.microsoft.com/library/windows/apps/dn895368), que permite especificar que la **DatagramSocket** en cuestión sea capaz de coexistir con otros sockets de multidifusión Win32 o WinRT enlazados a la misma dirección y puerto.
 
-## Proporcionar un certificado de cliente con la clase StreamSocket
+## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Proporcionar un certificado de cliente con la clase StreamSocket
 
 La clase [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) admite el uso de SSL/TLS para autenticar el servidor con el que se comunica la aplicación. En algunos casos, la aplicación también debe autenticarse en el servidor mediante un certificado de cliente TLS. En Windows 10, puedes proporcionar un certificado de cliente en el objeto [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) (se debe establecer antes de iniciar el protocolo de enlace TLS). Si el servidor solicita el certificado de cliente, Windows responderá con el certificado proporcionado.
 
@@ -281,7 +288,7 @@ socket.Control.ClientCertificate = certificate;
 await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 ```
 
-## Excepciones en Windows.Networking.Sockets
+## <a name="exceptions-in-windowsnetworkingsockets"></a>Excepciones en Windows.Networking.Sockets
 
 El constructor de la clase [**HostName**](https://msdn.microsoft.com/library/windows/apps/br207113) que se usa con los sockets puede generar una excepción si la cadena pasada no es un nombre de host válido (contiene caracteres que no se pueden usar en un nombre de host). Si una aplicación recibe información del usuario relativa a **HostName**, el constructor debe estar en un bloque Try/Catch. Si se genera una excepción, la aplicación podrá notificar al usuario y solicitar otro nombre de host.
 
@@ -293,14 +300,9 @@ Un error en una operación [**MessageWebSocket**](https://msdn.microsoft.com/lib
 
 Para los errores de validación de parámetros, una aplicación también puede usar el **HRESULT** de la excepción para obtener información más detallada del error que causó la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E\_INVALIDARG**.
 
-## API Winsock
+## <a name="the-winsock-api"></a>API Winsock
 
 También puedes usar [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673) en tu aplicación para UWP. La API Winsock compatible se basa en aquella de Microsoft Silverlight de Windows Phone 8.1 y sigue siendo compatible con la mayoría de los tipos, propiedades y métodos (se han quitado algunas API consideradas obsoletas). Puedes encontrar más información sobre la programación de Winsock [aquí](https://msdn.microsoft.com/library/windows/desktop/ms740673).
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

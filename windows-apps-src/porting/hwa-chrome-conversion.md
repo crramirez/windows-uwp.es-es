@@ -3,9 +3,17 @@ author: seksenov
 title: "Aplicaciones Web hospedadas: Convierte tu aplicación de Chrome en una aplicación para la Plataforma universal de Windows"
 description: "Convierte tu aplicación de Chrome o extensión de Chrome en una aplicación para la Plataforma universal de Windows (UWP) para la Tienda Windows."
 kw: Package Chrome Extension for Windows Store tutorial, Port Chrome Extension to Windows 10, How to convert Chrome App to Windows, How to add Chrome Extension to Windows Store, hwa-cli, Hosted Web Apps Command Line Interface CLI Tool, Install Chrome Extension on Windows 10 Device, convert .crx to .AppX
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Extensiones de Chrome para Windows, Chrome extensions for Windows, aplicaciones de Chrome para Windows, Chrome apps for Windows, hwa-cli, convertir .crx a. AppX, convert .crx to .AppX
+ms.assetid: 04f37333-48ba-441b-875e-246fbc3e1a4d
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 84cdd12e2a38aafeb989c0f33b1212077dc1d98e
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 84d8875cc7b1c8540f54fec78cd675bd96919fd2
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -46,9 +54,10 @@ Completa la información que te solicite la Tienda Windows.
     During the conversion process, you will be prompted for an Identity Name, Publisher Identity, and Publisher Display Name. To retrieve these values, visit the Dashboard in the [Windows Dev Center](https://developer.microsoft.com/windows).
     - Click on "[Create a new app](https://developer.microsoft.com/dashboard/Application/New)" and reserve your app name.
 ![Panel Reservar un nombre del Centro de desarrollo de Windows](images/hwa-to-uwp/reserve_a_name.png)
-    - A continuación, haz clic en "Identidad de aplicación" en el menú de la izquierda, en la sección "Administración de aplicaciones".
-    ![Panel identidad de la aplicación del Centro de desarrollo de Windows](images/hwa-to-uwp/app_identity.png)
-    - Deberías ver los 3 valores para el que se te piden en la página: 1. Nombre de identidad: `Package/Identity/Name`
+    - A continuación, haz clic en "Identidad de aplicación" en el menú de la izquierda de la sección "Administración de aplicaciones".
+    ![Panel Identidad de aplicación del Centro de desarrollo de Windows](images/hwa-to-uwp/app_identity.png)
+    - Deberías ver los tres valores que se te solicitan enumerados en la página: 
+        1. Nombre de identidad: `Package/Identity/Name`
         2. Identidad del editor: `Package/Identity/Publisher`
         3. Nombre para mostrar del editor: `Package/Properties/PublisherDisplayName`
 
@@ -59,13 +68,13 @@ Después de empaquetar la aplicación web para la Tienda Windows, personalízala
 
 ### <a name="application-content-uri-rules"></a>Reglas de URI de contenido de la aplicación
 
-Las [reglas de URI de contenido de la aplicación (ACUR)](/hwa-access-features.md) o URI de contenido definen el ámbito de la aplicación web hospedada mediante una lista de direcciones URL permitidas en el manifiesto del paquete de la aplicación. Para controlar la comunicación al contenido remoto y desde este, debes definir qué direcciones URL se incluyen o se excluyen de esta lista. Si un usuario hace clic en una dirección URL que esté incluida de forma explícita, Windows abrirá la ruta de destino en el navegador predeterminado. Con las ACUR, también son puedes de conceder acceso a una dirección URL a las [API universales de Windows](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
+Las [reglas de URI de contenido de la aplicación (ACUR)](./hwa-access-features.md) o URI de contenido definen el ámbito de la aplicación web hospedada mediante una lista de direcciones URL permitidas en el manifiesto del paquete de la aplicación. Para controlar la comunicación al contenido remoto y desde este, debes definir qué direcciones URL se incluyen o se excluyen de esta lista. Si un usuario hace clic en una dirección URL que esté incluida de forma explícita, Windows abrirá la ruta de destino en el navegador predeterminado. Con las ACUR, también son puedes de conceder acceso a una dirección URL a las [API universales de Windows](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 
 Como mínimo, las reglas deberían incluir la página de inicio de la aplicación. La herramienta de conversión creará automáticamente un conjunto de ACUR por ti, en función de la página de inicio y su dominio. Sin embargo, si hay cualquier redirección mediante programación, ya sea en el servidor o en el cliente, será necesario agregar estos los destinos a la lista de direcciones URL permitidas.
 
 *Nota: Las ACUR solamente se aplican a la navegación de página. Las imágenes, las bibliotecas de JavaScript y otros activos similares no se ven afectados por estas restricciones.*
 
-Muchas aplicaciones usan sitios de terceros para sus flujos de inicio de sesión; por ejemplo, Facebook y Google. La herramienta de conversión creará automáticamente un conjunto de ACUR por ti, en función de los sitios más populares. Si tu método de autenticación no se incluye en esa lista y se trata de un flujo de redirección, tendrás que agregar sus rutas como una ACUR. También puedes pensar en usar un [agente de autenticación web](/hwa-access-features.md).
+Muchas aplicaciones usan sitios de terceros para sus flujos de inicio de sesión; por ejemplo, Facebook y Google. La herramienta de conversión creará automáticamente un conjunto de ACUR por ti, en función de los sitios más populares. Si tu método de autenticación no se incluye en esa lista y se trata de un flujo de redirección, tendrás que agregar sus rutas como una ACUR. También puedes pensar en usar un [agente de autenticación web](./hwa-access-features.md).
 
 ### <a name="flash"></a>Flash
 
@@ -95,12 +104,7 @@ Chrome proporciona aplicaciones con [API de propósito especial](https://develop
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Mejorar la aplicación web mediante el acceso a características de la Plataforma universal de Windows (UWP)](/hwa-access-features.md)
+- [Mejorar la aplicación web mediante el acceso a características de la Plataforma universal de Windows (UWP)](./hwa-access-features.md)
 - [Guía de aplicaciones para la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Descarga de activos de diseño para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

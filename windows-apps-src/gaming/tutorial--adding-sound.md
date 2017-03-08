@@ -3,20 +3,27 @@ author: mtoepke
 title: Agregar sonido
 description: "En este paso, examinaremos el modo en que la muestra del juego de disparos crea un objeto para la reproducción de sonido usando las API de XAudio2."
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, juegos, sonidos
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e44bc1046310b57cffa3eb4009e91885c61470eb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11553a22274a36094a3e839e8fda648f78cfaaf8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Agregar sonido
+# <a name="add-sound"></a>Agregar sonido
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este paso, examinaremos cómo la muestra de juego de disparos crea un objeto para la reproducción de sonido usando las API de [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Agregar salida de sonido usando [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
@@ -27,7 +34,7 @@ En la muestra de juego, los comportamientos y objetos de audio se definen en tre
 -   **MediaReader.h/.cpp**. Este código define los métodos para leer archivos de audio .wav desde el almacenamiento local.
 -   **SoundEffect.h/.cpp**. Este código define un objeto para la reproducción de sonido en el juego.
 
-## Definición del motor de audio
+## <a name="defining-the-audio-engine"></a>Definición del motor de audio
 
 
 Cuando la muestra de juego se inicia, crea un objeto **Audio** que asigna los recursos de audio para el juego. El código que declara este objeto tiene el siguiente aspecto:
@@ -54,7 +61,7 @@ protected:
 
 Los métodos **Audio::MusicEngine** y **Audio::SoundEffectEngine** devuelven referencias a objetos [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) que definen la voz de procesamiento para cada tipo de audio. Una voz de procesamiento es el dispositivo de audio usado para la reproducción. Los búferes de datos de sonido no se pueden enviar directamente a las voces de procesamiento, pero los datos enviados a otros tipos de voces deben dirigirse a una voz de procesamiento para que se escuchen.
 
-## Inicialización de los recursos de audio
+## <a name="initializing-the-audio-resources"></a>Inicialización de los recursos de audio
 
 
 La muestra inicializa los objetos [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) para los motores de música y efectos sonoros que llaman a [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212). Una vez inicializados los motores, crea una voz de procesamiento para cada uno con llamadas a [**IXAudio2::CreateMasteringVoice**](https://msdn.microsoft.com/library/windows/desktop/hh405048), como se muestra a continuación:
@@ -91,7 +98,7 @@ void Audio::CreateDeviceIndependentResources()
 
 Cuando un archivo de audio de música o efectos sonoros se carga, este método llama a [**IXAudio2::CreateSourceVoice**](https://msdn.microsoft.com/library/windows/desktop/ee418607) en la voz de procesamiento, lo que crea una instancia de una voz de origen para reproducción. Echaremos un vistazo a este código tan pronto como terminemos de revisar cómo carga la muestra de juego los archivos de audio.
 
-## Lectura de un archivo de audio
+## <a name="reading-an-audio-file"></a>Lectura de un archivo de audio
 
 
 En la muestra de juego, el código para leer archivos con formato de audio está definido en **MediaReader.cpp**. El método específico que lee en un archivo de audio .wav codificado, **MediaReader::LoadMedia**, tiene el siguiente aspecto:
@@ -264,7 +271,7 @@ Se llama a **SoundEffect::Initialize** desde el método **Simple3DGame:Initializ
 
 Ahora que el juego de muestra tiene un archivo de audio en la memoria, veamos cómo se reproduce durante el juego.
 
-## Reproducción de un archivo de audio
+## <a name="playing-back-an-audio-file"></a>Reproducción de un archivo de audio
 
 
 ```cpp
@@ -306,14 +313,14 @@ Para reproducir el sonido, este método usa el objeto voz de origen **m\_sourceV
 
 Ahora, cada vez que la munición y un objetivo colisionan, una llamada a **SoundEffect::PlaySound** hace que se reproduzca un ruido.
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 
-Con esto terminamos este rápido repaso del desarrollo de juegos DirectX para la Plataforma universal de Windows (UWP). Llegados a este punto, ya tienes una idea de qué necesitas hacer para que tu propio juego para Windows8 sea una gran experiencia. Recuerda que tu juego se puede jugar en una amplia variedad de dispositivos y plataformas de Windows8, así que diseña los componentes (gráficos, controles, interfaz de usuario y audio) para tantas configuraciones diferentes como puedas.
+Con esto terminamos este rápido repaso del desarrollo de juegos DirectX para la Plataforma universal de Windows (UWP). Llegados a este punto, ya tienes una idea de qué necesitas hacer para que tu propio juego para Windows 8 sea una gran experiencia. Recuerda que tu juego se puede jugar en una amplia variedad de dispositivos y plataformas de Windows 8, así que diseña los componentes (gráficos, controles, interfaz de usuario y audio) para tantas configuraciones diferentes como puedas.
 
 Para obtener más información sobre formas de modificar la muestra de juego proporcionada en estos documentos, consulta el tema sobre [cómo extender la muestra de juego](tutorial-resources.md).
 
-## Código de muestra completo para esta sección
+## <a name="complete-sample-code-for-this-section"></a>Código de muestra completo para esta sección
 
 
 Audio.h
@@ -560,10 +567,5 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

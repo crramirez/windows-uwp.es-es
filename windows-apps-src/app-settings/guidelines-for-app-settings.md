@@ -5,9 +5,16 @@ title: "Directrices para la configuración de una aplicación"
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e995023cd8a4216c60d5691f9f87be3aff9d8498
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -21,7 +28,7 @@ La configuración es la parte de la aplicación que el usuario puede personaliza
 ## <a name="should-i-include-a-settings-page-in-my-app"></a>¿Debo incluir una página de configuración en mi aplicación?
 
 
-        Estos son ejemplos de opciones de la aplicación que pertenecen a una página de configuración de la aplicación: 
+        Estos son ejemplos de opciones de la aplicación que pertenecen a una página de configuración de la aplicación:
 
 -   Las opciones de configuración que afectan al comportamiento de la aplicación y que no se ajustan con frecuencia, como cuando eliges entre Celsius o Fahrenheit como unidades de temperatura predeterminadas en una aplicación del tiempo, cuando cambias la configuración de una cuenta para una aplicación de correo, la configuración de las notificaciones o las opciones de accesibilidad.
 -   Opciones que dependen de las preferencias del usuario, como música, efectos de sonido o temas de colores.
@@ -50,36 +57,52 @@ Para el diseño del panel de navegación, el elemento Configuración de la aplic
 
 ![punto de entrada de la configuración de la aplicación para el panel de navegación](images/appsettings-entrypoint-navpane.png)
 
-**Barra de la aplicación**
+**Barra de aplicaciones**
 
-Si usas una barra de la aplicación o una barra de herramientas, que normalmente forma parte de un diseño de navegación centralizada, con pestañas o tablas dinámicas, coloca el último elemento del punto de entrada en el menú del control flotante "Más". Si es importante tener una mayor detectabilidad del punto de entrada de configuración de la aplicación, coloca el punto de entrada directamente en la barra de la aplicación y no en el menú del control flotante "Más".
+Si estás usando la [barra de aplicaciones](../controls-and-patterns/app-bars.md) o la barra de herramientas, coloca el punto de entrada de configuración como el último elemento en el menú de desbordamiento "Más". Si es importante tener una mayor detectabilidad del punto de entrada de configuración de la aplicación, colócalo directamente en la barra de aplicaciones y no en el desbordamiento.
 
-![punto de entrada de la configuración de la aplicación para la barra de la aplicación](images/appsettings-entrypoint-tabs.png)
+![punto de entrada de la configuración de la aplicación para la barra de aplicaciones](images/appsettings-entrypoint-tabs.png)
 
-**Navegación centralizada**
+**Concentrador**
 
-Si estás usando un diseño de navegación centralizada, el punto de entrada de la configuración de la aplicación debe colocarse en el menú del control flotante "Más" de la barra de la aplicación.
+Si estás usando un diseño de navegación centralizada, el punto de entrada de la configuración de la aplicación debe colocarse en el menú de desbordamiento "Más" de la barra de aplicaciones.
 
 **Pestañas y tablas dinámicas**
 
-Para un diseño de pestañas o tablas dinámicas, no se recomienda colocar el punto de entrada de la configuración de la aplicación como uno de los elementos principales de la navegación. En su lugar, el punto de entrada de la configuración de la aplicación debe colocarse en el menú del control flotante "Más" de la barra de la aplicación.
+Para un diseño de pestañas o tablas dinámicas, no se recomienda colocar el punto de entrada de la configuración de la aplicación como uno de los elementos principales de la navegación. En su lugar, el punto de entrada de la configuración de la aplicación debe colocarse en el menú de desbordamiento "Más" de la barra de aplicaciones.
 
-**Maestro-detalles**
+**Panel maestro y detalles**
 
 En lugar de esconder el punto de entrada de la configuración de la aplicación en lo más profundo de un panel de detalles maestro, conviértelo en el último elemento anclado en el nivel superior del panel maestro.
 
 ## <a name="layout"></a>Diseño
 
 
-Tanto en las plataformas móviles como de escritorio, la ventana de configuración de la aplicación debe abrirse en pantalla completa y llenar toda la ventana. Si el menú de configuración de la aplicación tiene hasta un máximo de cuatro grupos de nivel superior, estos grupos deben estar en cascada hacia abajo en una columna.
+Tanto en las plataformas móviles como de escritorio, la ventana de configuración de la aplicación debe abrirse en pantalla completa y llenar toda la ventana. Si el menú de configuración de la aplicación tiene hasta cuatro grupos de nivel superior, estos grupos deben estar en cascada descendente en una columna.
 
 Escritorio:
 
-![diseño de la página de configuración de la aplicación en el escritorio](images/appsettings-layout-navpane-desktop.png)
+![diseño de la página de configuración de la aplicación en un equipo de escritorio](images/appsettings-layout-navpane-desktop.png)
 
 Móvil:
 
-![diseño de la página de configuración de la aplicación en el teléfono](images/appsettings-layout-navpane-mobile.png)
+![diseño de la página de configuración de la aplicación en un teléfono](images/appsettings-layout-navpane-mobile.png)
+
+## <a name="color-mode-settings"></a>Configuración de "Modo de color"
+
+
+Si la aplicación permite a los usuarios elegir el modo de color de la aplicación, presenta estas opciones usando los [botones de radio](../controls-and-patterns/radio-button.md) o un [cuadro combinado](../controls-and-patterns/lists.md#drop-down-lists) con el encabezado "Elegir un modo". En las opciones debe haber lo siguiente:
+- Claro
+- Oscuro
+- Versión predeterminada de Windows
+
+También te recomendamos que agregues un hipervínculo a la página Colores de la aplicación de Configuración de Windows donde los usuarios puedan comprobar el tema predeterminado de Windows. Usa la cadena "Configuración de color de Windows" para el texto del hipervínculo.
+
+![Sección "Elegir un modo"](images/appsettings_mode.png)
+
+<div class=”microsoft-internal-note”>
+Revisiones detalladas que muestran las cadenas de texto preferidas de la sección "Elegir un modo" disponible en [UNI](http://uni/DesignDepot.FrontEnd/#/ProductNav/2543/0/dv/?t=Windows%7CControls%7CColorMode&f=RS2).
+</div>
 
 ## <a name="about-section-and-give-feedback-button"></a>Sección "Acerca de" y botón "Enviar comentarios"
 
@@ -90,13 +113,11 @@ Si necesitas una sección de "Acerca de esta aplicación" en la aplicación, cre
 
 ![Sección "Acerca de esta aplicación" con un botón "Enviar comentarios"](images/appsettings-about.png)
 
-## <a name="recommendations"></a>Recomendaciones
+
+## <a name="recommended-page-content"></a>Contenido de la página recomendado
 
 
-## <a name="app-settings-page-content"></a>Contenido de la página de configuración de la aplicación
-
-
-Cuando tengas una lista de elementos que quieras incluir en la página de configuración de la aplicación, ten en cuenta las siguientes directrices:
+Cuando tengas una lista de los elementos que quieras incluir en la página de configuración de la aplicación, ten en cuenta las siguientes directrices:
 
 -   Agrupar opciones relacionadas o similares en una etiqueta de configuración.
 -   Intenta limitar el número total de opciones de configuración a un máximo de cuatro o cinco.
@@ -106,9 +127,7 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
 -   Combina las opciones menos usadas en una sola entrada para que las opciones más habituales puedan tener su propia entrada. Coloca el contenido o los vínculos que solo contienen información en la opción de configuración "Acerca de".
 -   No dupliques la funcionalidad en el panel "Permisos". Windows proporciona este panel de forma predeterminada y no puedes modificarlo.
 
-##  <a name="add-settings-content-to-settings-flyouts"></a>Agregar contenido de configuración a los controles flotantes Configuración
-
-
+-   Agregar contenido de configuración a los controles flotantes Configuración
 -   Presenta el contenido de arriba a abajo en una sola columna, desplazable si fuera necesario. Limita el desplazamiento a un máximo del doble del alto de pantalla.
 -   Usa los controles siguientes para la configuración de la aplicación:
 
@@ -132,10 +151,4 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
 * [Directrices sobre los controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469)
 * [Almacenar y recuperar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,14 +3,21 @@ author: DBirtolo
 ms.assetid: F8A741B4-7A6A-4160-8C5D-6B92E267E6EA
 title: Emparejar dispositivos
 description: Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio de nombres Windows.Devices.Enumeration admite tres modos de emparejar dispositivos.
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 502a1a650d327e914ffef049278581851ad4ec3b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7349188a9b735ac887c1afbc09c572f598407471
+ms.lasthandoff: 02/07/2017
 
 ---
-# Emparejar dispositivos
+# <a name="pair-devices"></a>Emparejar dispositivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** API importantes **
@@ -27,23 +34,23 @@ Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio 
 
  
 
-## Emparejamiento automático
+## <a name="automatic-pairing"></a>Emparejamiento automático
 
 
 A veces quieres usar un dispositivo en tu aplicación, pero no importa si el dispositivo está emparejado o no. Simplemente quieres poder usar la funcionalidad asociada con un dispositivo. Por ejemplo, si deseas que la aplicación simplemente capture una imagen desde una cámara web, no estás necesariamente interesado en el dispositivo en sí, sino simplemente en la captura de la imagen. Si hay API de dispositivos disponibles para el dispositivo que te interesa, este escenario estaría incluido en el emparejamiento automático.
 
 En este caso, simplemente usa las API asociadas al dispositivo, haciendo las llamadas que sean necesarias y confiando en que el sistema controle el emparejamiento que pueda ser necesario. Algunos dispositivos no necesitan emparejarse para que puedas usar su funcionalidad. Si el dispositivo no necesita emparejarse, las API del dispositivo controlarán la acción de emparejamiento de forma silenciosa para que no tengas que integrar esa funcionalidad en la aplicación. Tu aplicación no tendrá ningún conocimiento sobre si un determinado dispositivo está emparejado o debe estarlo, pero seguirás pudiendo obtener acceso al dispositivo y usando su funcionalidad.
 
-## Emparejamiento básico
+## <a name="basic-pairing"></a>Emparejamiento básico
 
 
 El emparejamiento básico se produce cuando la aplicación usa las API del espacio de nombres [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) para intentar emparejar el dispositivo. En este escenario, le permites a Windows que intente el proceso de emparejamiento y lo administre. Si se necesita la intervención del usuario, esto lo gestionará Windows. Usarías el emparejamiento básico necesitas emparejar un dispositivo y no hay una API de dispositivo pertinente que intentará realizar el emparejamiento automático. Simplemente quieres poder usar el dispositivo y necesitas emparejarlo primero.
 
 Para intentar el emparejamiento básico, primero debes obtener el objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) del dispositivo que te interesa. Una vez que recibas ese objeto, tendrás que interactuar con la propiedad [**DeviceInformation.Pairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx), la cual es un objeto [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx). Para intentar realizar el emparejamiento, llama a [**DeviceInformationPairing.PairAsync**](https://msdn.microsoft.com/library/windows/apps/mt608800). Necesitarás **esperar** al resultado para dar tiempo a tu aplicación para que intente completar la acción de emparejamiento. Se devolverá el resultado de la acción del emparejamiento y, siempre y cuando no se devuelva ningún error, se emparejará el dispositivo.
 
-Si estás usando el emparejamiento básico, tienes acceso a información adicional sobre el estado de emparejamiento del dispositivo. Por ejemplo, puedes saber el estado del emparejamiento ([**IsPaired**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx_ispaired)) y si se puede emparejar el dispositivo ([**CanPair**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx_canpair)). Ambas son propiedades del objeto [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx). Si usas el emparejamiento automático, puede que no tengas acceso a esta información a menos que obtengas los objetos [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) pertinentes.
+Si estás usando el emparejamiento básico, tienes acceso a información adicional sobre el estado de emparejamiento del dispositivo. Por ejemplo, puedes saber el estado del emparejamiento ([**IsPaired**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.ispaired.aspx)) y si se puede emparejar el dispositivo ([**CanPair**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.canpair.aspx)). Ambas son propiedades del objeto [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx). Si usas el emparejamiento automático, puede que no tengas acceso a esta información a menos que obtengas los objetos [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) pertinentes.
 
-## Emparejamiento personalizado
+## <a name="custom-pairing"></a>Emparejamiento personalizado
 
 
 El emparejamiento personalizado permite a tu aplicación participar en el proceso de emparejamiento. Esto permite a la aplicación especificar los objetos [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808) que sean compatibles con el proceso de emparejamiento. También tendrás que crear tu propia interfaz de usuario para interactuar con el usuario según sea necesario. Usa el emparejamiento personalizado cuando quieras que tu aplicación tenga un poco más de influencia sobre cómo se realiza el proceso de emparejamiento o para mostrar tu propia interfaz de usuario de emparejamiento.
@@ -54,14 +61,14 @@ Para admitir el emparejamiento personalizado, debes crear un controlador para el
 
 Es importante tener en cuenta que el emparejamiento personalizado es siempre una operación de nivel del sistema. Por este motivo, cuando se usa en el escritorio o en Windows Phone, siempre se mostrará un cuadro de diálogo del sistema al usuario cuando se vaya a producir el emparejamiento. Esto es porque ambas plataformas plantean una experiencia de usuario que requiere consentimiento del usuario. Dado que el cuadro de diálogo se genera automáticamente, no necesitarás crear tu propio cuadro de diálogo cuando se opte por una enumeración [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808) de tipo **ConfirmOnly** al operar en estas plataformas. En cuanto a las demás enumeraciones **DevicePairingKinds**, deberás realizar algunos controles especiales en función del valor **DevicePairingKinds** específico. Consulta la muestra para ver ejemplos de cómo controlar el emparejamiento personalizado en diferentes valores **DevicePairingKinds**.
 
-## Desemparejamiento
+## <a name="unpairing"></a>Desemparejamiento
 
 
 Desemparejar un dispositivo solo es relevante en los escenarios de emparejamiento básico o personalizado descritos anteriormente. Si estás usando el emparejamiento automático, la aplicación ignora el estado de emparejamiento del dispositivo y no es necesario desemparejarla. Si decides desemparejar un dispositivo, el proceso es idéntico si implementas el emparejamiento básico o el personalizado. Esto es porque no es necesario proporcionar información adicional o interactuar en el proceso de desemparejamiento.
 
 El primer paso para desemparejar un dispositivo es obtener el objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) del dispositivo que desees desemparejar. A continuación, necesitas recuperar la propiedad [**DeviceInformation.Pairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx) y llamar a [**DeviceInformationPairing.UnpairAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.unpairasync). Al igual que con el emparejamiento, tendrás que **esperar** al resultado. Se devolverá el resultado de la acción del desemparejamiento y, siempre y cuando no haya ningún error, se desemparejará el dispositivo.
 
-## Muestra
+## <a name="sample"></a>Muestra
 
 
 Para descargar una muestra que te indique cómo usar las API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459), haz clic [aquí](http://go.microsoft.com/fwlink/?LinkID=620536).
@@ -72,10 +79,5 @@ Para descargar una muestra que te indique cómo usar las API [**Windows.Devices.
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

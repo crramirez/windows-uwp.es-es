@@ -4,17 +4,24 @@ title: "Actualizar un icono dinámico desde una tarea en segundo plano"
 description: "Usa una tarea en segundo plano para actualizar el icono dinámico de tu aplicación con contenido actualizado."
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: d651a5dbf8478de238944cac36ea13429b0f1849
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 76521772e4f93ee143ad698ad798f4b88ebcf3a7
+ms.lasthandoff: 02/07/2017
 
 ---
 
 
-# Actualizar un icono dinámico desde una tarea en segundo plano
+# <a name="update-a-live-tile-from-a-background-task"></a>Actualizar un icono dinámico desde una tarea en segundo plano
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -28,7 +35,7 @@ Este vídeo te muestra cómo agregar iconos dinámicos a tus aplicaciones.
 
 <iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/afb47cc5-edd3-4262-ae45-8f0e3ae664ac/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">One Dev Minute - Updating a live tile from a background task</iframe>
 
-## Crear el proyecto de tareas en segundo plano
+## <a name="create-the-background-task-project"></a>Crear el proyecto de tareas en segundo plano
 
 
 Para habilitar un icono dinámico para tu aplicación, agrega un nuevo proyecto de componente de Windows en tiempo de ejecución a tu solución. Este es un ensamblado independiente que el sistema operativo carga y ejecuta en segundo plano cuando un usuario instala tu aplicación.
@@ -38,7 +45,7 @@ Para habilitar un icono dinámico para tu aplicación, agrega un nuevo proyecto 
 3.  Asigna el nombre BackgroundTasks al proyecto y haz clic o pulsa **Aceptar**. Microsoft Visual Studio agrega el nuevo proyecto a la solución.
 4.  En el proyecto principal, agrega una referencia al proyecto BackgroundTasks.
 
-## Implementar la tarea en segundo plano
+## <a name="implement-the-background-task"></a>Implementar la tarea en segundo plano
 
 
 Implementa la interfaz [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) para crear una clase que actualice el icono dinámico de tu aplicación. El trabajo en segundo plano se incluye en el método Run. En este caso, la tarea obtiene una fuente de distribución para los blogs de MSDN. Para impedir que la tarea se cierre de forma prematura mientras aún se ejecuta el código asincrónico, obtén un aplazamiento.
@@ -141,7 +148,7 @@ namespace BackgroundTasks
 }
 ```
 
-## Configurar el manifiesto del paquete
+## <a name="set-up-the-package-manifest"></a>Configurar el manifiesto del paquete
 
 
 Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declaración de tarea en segundo plano. Establece el punto de entrada de la tarea en el nombre de la clase, incluido su espacio de nombres.
@@ -158,7 +165,7 @@ Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declara
 9.  En el campo **Logotipo pequeño**, establece una ruta de acceso en un icono de 30 x 30 píxeles.
 10. En el campo **Logotipo ancho** , establece una ruta de acceso a un icono de 310 x 150 píxeles.
 
-## Registrar la tarea en segundo plano
+## <a name="register-the-background-task"></a>Registrar la tarea en segundo plano
 
 
 Crea un [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para registrar tu tarea.
@@ -240,7 +247,7 @@ namespace ContosoApp
 }
 ```
 
-## Depurar la tarea en segundo plano
+## <a name="debug-the-background-task"></a>Depurar la tarea en segundo plano
 
 
 Para depurar la tarea en segundo plano, establece un punto de interrupción en el método Run de la tarea. En la barra de herramientas **Ubicación de depuración**, selecciona tu tarea en segundo plano. Esto hace que el sistema llame al método Run inmediatamente.
@@ -255,7 +262,7 @@ Para depurar la tarea en segundo plano, establece un punto de interrupción en e
 8.  Presiona Mayús+F5 o pulsa **Depurar &gt; Detener depuración** para detener la depuración.
 9.  Regresa al icono de la aplicación en la pantalla Inicio. Tras unos pocos segundos, aparecerán notificaciones de icono en el icono de tu aplicación.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
@@ -267,9 +274,4 @@ Para depurar la tarea en segundo plano, establece un punto de interrupción en e
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

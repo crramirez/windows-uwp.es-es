@@ -3,18 +3,25 @@ author: mcleblanc
 ms.assetid: A5320094-DF53-42FC-A6BA-A958F8E9210B
 title: Probar aplicaciones de Surface Hub con Visual Studio
 description: "El simulador de Visual Studio ofrece un entorno para diseñar, desarrollar, depurar y probar aplicaciones para UWP, incluidas las aplicaciones creadas para Surface Hub."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: 1939508e8ace2fe3ed9210d6969d1c68843c32a9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 426670f9b8d24a770f74aa0bdfaa5abb043c39ef
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Probar aplicaciones de Surface Hub con Visual Studio
-El simulador de Visual Studio ofrece un entorno donde puede diseñar, desarrollar, depurar y probar aplicaciones de la Plataforma universal de Windows (UWP), incluidas las aplicaciones que hayas creado para Microsoft Surface Hub. El simulador no usa la misma interfaz de usuario que Surface Hub, pero es útil para probar el aspecto y el comportamiento de la aplicación con la resolución y el tamaño de la pantalla de Surface Hub.
+# <a name="test-surface-hub-apps-using-visual-studio"></a>Probar aplicaciones de Surface Hub con Visual Studio
+El simulador de Visual Studio ofrece un entorno donde puedes diseñar, desarrollar, depurar y probar aplicaciones de la Plataforma universal de Windows (UWP), incluidas las aplicaciones que hayas creado para Microsoft Surface Hub. El simulador no usa la misma interfaz de usuario que Surface Hub, pero es útil para probar el aspecto y el comportamiento de la aplicación con la resolución y el tamaño de la pantalla de Surface Hub.
 
 Para obtener más información, consulta [Ejecutar aplicaciones de la Tienda Windows en el simulador](https://msdn.microsoft.com/library/hh441475.aspx).
 
-## Agregar resoluciones de Surface Hub al simulador
+## <a name="add-surface-hub-resolutions-to-the-simulator"></a>Agregar resoluciones de Surface Hub al simulador
 Para agregar resoluciones de Surface Hub al simulador:
 
 1. Crea una configuración para Surface Hub de 55" guardando el siguiente XML en un archivo denominado **HardwareConfigurations-SurfaceHub55.xml**.  
@@ -65,10 +72,10 @@ Para agregar resoluciones de Surface Hub al simulador:
 
    > **Sugerencia**&nbsp;&nbsp;[Activa el modo tableta](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) para simular mejor la experiencia en un Surface Hub.
 
-## Implementar aplicaciones en un Surface Hub desde Visual Studio
+## <a name="deploy-apps-to-a-surface-hub-from-visual-studio"></a>Implementar aplicaciones en un Surface Hub desde Visual Studio
 La implementación manual de una aplicación es un proceso sencillo.
 
-### Habilitar el modo de desarrollador
+### <a name="enable-developer-mode"></a>Habilitar el modo de desarrollador
 De manera predeterminada, Surface Hub solo instala aplicaciones de la Tienda Windows. Para instalar aplicaciones firmadas por otros orígenes, debes habilitar el modo de desarrollador.
 
 > **Nota**&nbsp;&nbsp;Una vez habilitado el modo de desarrollador, se deberá restablecer el Surface Hub para volver a deshabilitarlo. Al restablecer el dispositivo se eliminan todas las configuraciones y los archivos de usuario locales y luego se vuelve a instalar Windows.
@@ -81,7 +88,7 @@ De manera predeterminada, Surface Hub solo instala aplicaciones de la Tienda Win
 
 3. Elige el **Modo de desarrollador** y acepta la advertencia.
 
-### Implementar la aplicación desde Visual Studio
+### <a name="deploy-your-app-from-visual-studio"></a>Implementar la aplicación desde Visual Studio
 Para obtener más información, consulta [Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 
    > **Nota**&nbsp;&nbsp;Esta característica requiere al menos **Visual Studio 2015 Update 1**.
@@ -99,9 +106,4 @@ Para obtener más información, consulta [Implementación y depuración de aplic
 3. Elige **Iniciar depuración (F5)** para implementar y depurar la aplicación en el Surface Hub o presiona Ctrl+F5 para implementar únicamente la aplicación.
 
    > **Sugerencia**&nbsp;&nbsp;Si el Surface Hub se encuentra en la pantalla de bienvenida, descártalo seleccionando cualquier botón.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

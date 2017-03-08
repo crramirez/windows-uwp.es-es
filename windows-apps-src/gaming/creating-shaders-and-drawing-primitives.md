@@ -3,16 +3,23 @@ author: mtoepke
 title: Crear sombreadores y dibujar primitivos
 description: "Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla."
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, sombreadores, primitivos, DirectX
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 36ce1c3c0df0dd9dd4f5cf3d31282d5b15050f5c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 62f4b9b641a3c365659e44893a8a7801f2c1f6c0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Crear sombreadores y dibujar primitivos
+# <a name="create-shaders-and-drawing-primitives"></a>Crear sombreadores y dibujar primitivos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla.
 
@@ -20,18 +27,18 @@ Creamos y dibujamos un triángulo amarillo con sombreadores de vértices y píxe
 
 **Objetivo:** crear sombreadores y dibujar primitivos.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 
 Suponemos que estás familiarizado con C++. También necesitas tener experiencia básica en los conceptos de programación de gráficos.
 
 Suponemos además que has consultado [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md).
 
-**Tiempo para completarlo:** 20minutos.
+**Tiempo para completarlo:** 20 minutos.
 
-## Instrucciones
+## <a name="instructions"></a>Instrucciones
 
-### 1. Compilar archivos de origen HLSL
+### <a name="1-compiling-hlsl-source-files"></a>1. Compilar archivos de origen HLSL
 
 Microsoft Visual Studio usa el compilador de código HLSL [fxc.exe](https://msdn.microsoft.com/library/windows/desktop/bb232919) para compilar los archivos de origen .hlsl (SimpleVertexShader.hlsl y SimplePixelShader.hlsl) en archivos de objetos de sombreador binarios .cso (SimpleVertexShader.cso y SimplePixelShader.cso). Para obtener más información acerca del compilador de código HLSL, consulta el tema sobre el compilador de efectos. Para obtener más información acerca de cómo compilar código de sombreadores, consulta el tema sobre la [compilación de sombreadores](https://msdn.microsoft.com/library/windows/desktop/bb509633).
 
@@ -74,11 +81,11 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 }
 ```
 
-### 2. Leer datos del disco
+### <a name="2-reading-data-from-disk"></a>2. Leer datos del disco
 
 Usamos la función DX::ReadDataAsync de DirectXHelper.h en la plantilla Aplicación DirectX 11 (Universal Windows) para leer datos desde un archivo en el disco de forma asincrónica.
 
-### 3. Crear sombreadores de vértices y píxeles
+### <a name="3-creating-vertex-and-pixel-shaders"></a>3. Crear sombreadores de vértices y píxeles
 
 Leemos los datos del archivo SimpleVertexShader.cso y asignamos esos datos a la matriz de bytes *vertexShaderBytecode*. Llamamos a [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) con la matriz de bytes para crear el sombreador de vértices ([**ID3D11VertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476641)). Establecemos el valor de profundidad del vértice en 0,5 en el origen SimpleVertexShader.hlsl para garantizar que el triángulo se dibuja. Rellenamos la matriz de estructuras [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) para describir el diseño del código del sombreador de vértices y luego llamamos a [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) para crear el diseño. La matriz tiene un elemento de diseño que define la posición del vértice. Leemos los datos del archivo SimplePixelShader.cso y asignamos esos datos a la matriz de bytes *pixelShaderBytecode*. Llamamos a [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) con la matriz de bytes para crear el sombreador de píxeles ([**ID3D11PixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476576)). Establecemos el valor del píxel en (1,1,1,1) en el origen SimplePixelShader.hlsl para que el triángulo sea amarillo. Puedes cambiar el color modificando este valor.
 
@@ -197,7 +204,7 @@ Creamos un búfer de índices y un búffer de vértices que definen un triángul
 
 Hemos usado los sombreadores de vértices y píxeles, el diseño del sombreador de vértices, el búfer de índices y el búfer de vértices para dibujar un triángulo amarillo.
 
-### 4. Dibujar el triángulo y mostrar la imagen representada
+### <a name="4-drawing-the-triangle-and-presenting-the-rendered-image"></a>4. Dibujar el triángulo y mostrar la imagen representada
 
 Entramos en un bucle sin fin para representar y mostrar continuamente la escena. Llamamos a [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar el destino de representación como el destino de salida. Llamamos a [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) con {0.071f, 0.04f, 0.561f, 1.0f} para borrar el destino de representación y que muestre un color azul sólido.
 
@@ -277,7 +284,7 @@ Llamamos a [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/wind
                 );
 ```
 
-## Resumen y pasos siguientes
+## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
 
 Hemos creado y dibujado un triángulo amarillo con sombreadores de vértices y píxeles.
@@ -292,10 +299,5 @@ A continuación, crearemos un cubo 3D en órbita y le aplicaremos efectos de ilu
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

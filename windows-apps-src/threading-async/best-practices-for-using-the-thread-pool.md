@@ -3,19 +3,26 @@ author: TylerMSFT
 ms.assetid: 95CF7F3D-9E3A-40AC-A083-D8A375272181
 title: Procedimientos recomendados para usar el grupo de subprocesos
 description: En este tema se describen los procedimientos recomendados para trabajar con el grupo de subprocesos.
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, subprocesos, grupo de subprocesos
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 796625fe5c1892ac99195a4920dbc7e539aebf76
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d3b45da6a11bab926812682c209207bbbb436bf1
+ms.lasthandoff: 02/07/2017
 
 ---
-# Procedimientos recomendados para usar el grupo de subprocesos
+# <a name="best-practices-for-using-the-thread-pool"></a>Procedimientos recomendados para usar el grupo de subprocesos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tema se describen los procedimientos recomendados para trabajar con el grupo de subprocesos.
 
-## Qué hacer
+## <a name="dos"></a>Qué hacer
 
 
 -   Usa el grupo de subprocesos para realizar trabajos paralelos en tu aplicación.
@@ -34,7 +41,7 @@ En este tema se describen los procedimientos recomendados para trabajar con el g
 
 -   Usa elementos de trabajo preasignados cuando no puedes tolerar un error de asignación de recursos en el momento de uso.
 
-## Cosas que evitar
+## <a name="donts"></a>Cosas que evitar
 
 
 -   No crees temporizadores periódicos con un valor *period* de &lt;1 milisegundo (incluido 0). Esto hará que el elemento de trabajo se comporte como un temporizador de único disparo.
@@ -47,16 +54,10 @@ En este tema se describen los procedimientos recomendados para trabajar con el g
 
 -   No intentes ejecutar un elemento de trabajo preasignado más de una vez sin reiniciarlo. [Crear un elemento de trabajo periódico](create-a-periodic-work-item.md)
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Crear un elemento de trabajo periódico](create-a-periodic-work-item.md)
 * [Enviar un elemento de trabajo al grupo de subprocesos](submit-a-work-item-to-the-thread-pool.md)
 * [Enviar un elemento de trabajo con un temporizador](use-a-timer-to-submit-a-work-item.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

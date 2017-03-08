@@ -3,14 +3,21 @@ author: DBirtolo
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: "Orientación del sensor"
 description: "Los datos de sensor procedentes de las clases Accelerometer, Gyrometer, Compass, Inclinometer y OrientationSensor se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 62b4042cf1c6296c908a12feb5b2fcbd2b9b8734
-ms.openlocfilehash: 9deb0327f67350af49ba19224a75e766ff9805d7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d9e54efb077bf46faf30e2ce3052fb0c860d0409
+ms.lasthandoff: 02/07/2017
 
 ---
-# Orientación del sensor
+# <a name="sensor-orientation"></a>Orientación del sensor
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** API importantes **
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: 9deb0327f67350af49ba19224a75e766ff9805d7
 
 Los datos de sensor procedentes de las clases [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687), [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718), [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705), [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766) y [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea. Si tu aplicación admite el giro automático y cambia su orientación para amoldarse al dispositivo cuando el usuario lo gire, deberás ajustar los datos de sensor para el giro antes de usarlos.
 
-## Orientación de la pantalla y orientación del dispositivo
+## <a name="display-orientation-vs-device-orientation"></a>Orientación de la pantalla y orientación del dispositivo
 
 Para poder comprender los ejes de referencia de los sensores, debes distinguir entre la orientación de la pantalla y la orientación del dispositivo. La orientación de la pantalla es la dirección en la que se muestran las imágenes y el texto en la pantalla, mientras que la orientación del dispositivo es el posicionamiento físico del dispositivo. En la siguiente imagen, la orientación del dispositivo y de la pantalla está en **horizontal** (ten en cuenta que los ejes de sensor que se muestran solo se aplican a dispositivos con orientación horizontal predeterminada).
 
@@ -35,7 +42,7 @@ En la siguiente imagen se muestra la orientación de pantalla en Landscape y la 
 
 Los valores de orientación se consultan a través de la clase [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258), usando para ello el método [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) con la propiedad [**CurrentOrientation**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx). Luego, se puede crear lógica contrastándolos con la enumeración [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142). No olvides que, por cada orientación que admitas, deberás admitir también una conversión de los ejes de referencia a dicha orientación.
 
-## Dispositivos con orientación horizontal predeterminada y dispositivos con orientación vertical predeterminada
+## <a name="landscape-first-vs-portrait-first-devices"></a>Dispositivos con orientación horizontal predeterminada y dispositivos con orientación vertical predeterminada
 
 Los fabricantes producen dispositivos tanto con orientación horizontal predeterminada como con orientación vertical predeterminada. El marco de referencia varía entre dispositivos con orientación horizontal predeterminada (por ejemplo, equipos de escritorio y portátiles) y dispositivos con orientación vertical predeterminada (por ejemplo, teléfonos y algunas tabletas). En la siguiente tabla se muestran los ejes de sensor para ambos tipos de dispositivo, con orientación horizontal predeterminada y con orientación vertical predeterminada.
 
@@ -46,13 +53,13 @@ Los fabricantes producen dispositivos tanto con orientación horizontal predeter
 | **LandscapeFlipped ** | ![Dispositivo con orientación horizontal predeterminada en orientación LandscapeFlipped](images/sensor-orientation-4.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación LandscapeFlipped](images/sensor-orientation-5.PNG) | 
 | **PortraitFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación PortraitFlipped](images/sensor-orientation-6.PNG)| ![Dispositivo con orientación vertical predeterminada en orientación PortraitFlipped](images/sensor-orientation-7.PNG) |
 
-## Difusión de presentaciones con dispositivos y dispositivos sin periféricos
+## <a name="devices-broadcasting-display-and-headless-devices"></a>Difusión de presentaciones con dispositivos y dispositivos sin periféricos
 
 Algunos dispositivos tienen la capacidad de difundir la presentación a otro dispositivo. Por ejemplo, podrías tener una tableta y difundir la presentación a un proyector que estará orientado horizontalmente. En este escenario es importante tener en cuenta que la orientación del dispositivo se basa en el dispositivo original, no en el que presenta la pantalla. Por lo tanto, un acelerómetro notificará los datos de la tableta.
 
 Además, algunos dispositivos no disponen de una pantalla. Con estos dispositivos, la orientación predeterminada de los mismos es vertical.
 
-## Orientación de la pantalla y encabezado de brújula
+## <a name="display-orientation-and-compass-heading"></a>Orientación de la pantalla y encabezado de brújula
 
 
 El encabezado de brújula depende de los ejes de referencia, de modo que cuando la orientación del dispositivo lo hace. La compensación se efectúa siguiendo esta tabla (suponiendo que el usuario mira al norte).
@@ -99,7 +106,7 @@ private void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
 }
 ```
 
-## Orientación de la pantalla con acelerómetro y girómetro
+## <a name="display-orientation-with-the-accelerometer-and-gyrometer"></a>Orientación de la pantalla con acelerómetro y girómetro
 
 Esta tabla convierte los datos de acelerómetro y girómetro para los datos de la pantalla.
 
@@ -153,7 +160,7 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 }
 ```
 
-## Orientación de la pantalla y orientación del dispositivo
+## <a name="display-orientation-and-device-orientation"></a>Orientación de la pantalla y orientación del dispositivo
 
 Los datos de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) se cambian de otra forma. Pensemos en estas distintas orientaciones al girar en el sentido contrario al de las agujas del reloj hacia el eje Z, deberemos revertir el giro para regresar a la orientación del usuario. En el caso de los datos de cuaternión, podemos emplear la fórmula de Euler para definir un giro con un cuaternión de referencia. También podemos usar una matriz de giro de referencia.
 
@@ -167,10 +174,5 @@ Los datos de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/
 | **Portrait**         | 90                                 | cos(-45⁰) + (i + j + k)*sin(-45⁰)       | \[0 1 0<br/>-1 0 0<br/>0 0 1]              |
 | **LandscapeFlipped** | 180                                | 0 - i - j - k                           | \[1 0 0<br/> 0 1 0<br/> 0 0 1]               |
 | **PortraitFlipped**  | 270                                | cos(-135⁰) + (i + j + k)*sin(-135⁰)     | \[0 -1 0<br/> 1  0 0<br/> 0  0 1]             |
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

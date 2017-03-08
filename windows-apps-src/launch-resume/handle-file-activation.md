@@ -3,16 +3,23 @@ author: TylerMSFT
 title: "Administrar la activación de archivos"
 description: "Una aplicación se puede registrar para convertirse en el controlador predeterminado de un tipo de archivo específico."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ed7aee6add80d31b48006d9dec9e207c449a1912
-ms.openlocfilehash: ffcfa8991e9eb73b8d6a47bb7dd1cd23220097e0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6575ea6480b5c03836f9f44bdb19d8b17d78d16d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="handle-file-activation"></a>Controlar la activación de archivos
+# <a name="handle-file-activation"></a>Administrar la activación de archivos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -151,9 +158,4 @@ Los archivos que recibes pueden provenir de un origen que no es de confianza. Se
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

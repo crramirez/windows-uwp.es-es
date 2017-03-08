@@ -3,16 +3,23 @@ author: IvorB
 ms.assetid: E9ADC88F-BD4F-4721-8893-0E19EA94C8BA
 title: Emparejamiento fuera de banda
 description: "El emparejamiento fuera de banda permite que las aplicaciones se conecten a un punto de servicio periférico sin tener que usar el modo de detección."
+ms.author: ivorb
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: 283f0a0cfc7b3827e70ea79490818bc259d98ad1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc0bad7d8625817cfffcc84f89afeed96a07a21f
+ms.lasthandoff: 02/07/2017
 
 ---
-# Emparejamiento fuera de banda
+# <a name="out-of-band-pairing"></a>Emparejamiento fuera de banda
 
 El emparejamiento fuera de banda permite que las aplicaciones se conecten a un punto de servicio periférico sin tener que usar el modo de detección. Las aplicaciones deben usar el espacio de nombres [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) y pasar una cadena con formato especial (blob de fuera de banda) al método **FromIdAsync** que corresponda al periférico designado. Cuando ejecutes **FromIdAsync**, el dispositivo de host se emparejará y conectará al periférico antes de que la operación vuelva al autor de la llamada.
 
-## Formato del blob de fuera de banda
+## <a name="out-of-band-blob-format"></a>Formato del blob de fuera de banda
 
 ```json
     "connectionKind":"Network",
@@ -60,7 +67,7 @@ El emparejamiento fuera de banda permite que las aplicaciones se conecten a un p
 | Caja registradora | CashDrawerProtocolProvider.dll |
 | Escáner | BarcodeScannerProtocolProvider.dll |
 
-## Ejemplo de uso: impresora de red
+## <a name="usage-example-network-printer"></a>Ejemplo de uso: impresora de red
 
 ```csharp
 String oobBlobNetworkPrinter =
@@ -74,7 +81,7 @@ String oobBlobNetworkPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobNetworkPrinter);
 ```
 
-## Ejemplo de uso: impresora Bluetooth
+## <a name="usage-example-bluetooth-printer"></a>Ejemplo de uso: impresora Bluetooth
 
 ```csharp
 string oobBlobBTPrinter =
@@ -87,9 +94,4 @@ string oobBlobBTPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobBTPrinter);
 
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

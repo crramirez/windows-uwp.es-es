@@ -1,19 +1,26 @@
 ---
 author: QuinnRadich
-title: "Novedades de Windows10, versión 1511, noviembre de 2015"
+title: "Novedades de Windows 10, versión 1511"
 description: "Tanto la versión 1511 de Windows 10 como las nuevas herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la tecnología de la nueva Plataforma universal de Windows."
 keywords: "conoce las novedades, novedades, actualizar, actualización, actualizaciones, características, nuevo, Windows 10, 1511, noviembre"
+ms.author: quradic
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
 translationtype: Human Translation
-ms.sourcegitcommit: 5646bf7681b5b028031eab02f8dd5c352d4b9cc1
-ms.openlocfilehash: 7f6a0879db5e3ec660866c0c08b9b7c7ca773644
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: d1acbde95d3d36cade7242a9f89a2bc01aaf8914
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Novedades de Windows
+# <a name="whats-new-in-windows-version-1511"></a>Novedades de Windows 10, versión 1511
 
-Tanto la versión 1511 de Windows 10 como las actualizaciones de las herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la Plataforma universal de Windows. [Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows10 y estarás listo para [crear una nueva aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) o para aprender a usar el [código de aplicación existente en Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
+Tanto la versión 1511 de Windows 10 como las actualizaciones de las herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la Plataforma universal de Windows. [Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) o para aprender a usar el [código de aplicación existente en Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
 
-## Windows 10, versión 1511, noviembre de 2015
+## <a name="windows-10-version-1511---november-2015"></a>Windows 10, versión 1511, noviembre de 2015
 
 Función | Descripción
  :---- | :----
@@ -29,9 +36,4 @@ API de tarjetas inteligentes | Se agregaron varias API de SmartCardCryptogram al
 API de almacenamiento actualizado | En la [clase Windows.Storage.DownloadsFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.downloadsfolder.aspx), tu aplicación ahora puede [crear un archivo](https://msdn.microsoft.com/library/windows/apps/windows.storage.downloadsfolder.createfileforuserasync.aspx) o [crear una carpeta](https://msdn.microsoft.com/library/windows/apps/windows.storage.downloadsfolder.createfolderforuserasync.aspx) dentro de la carpeta Descargas para un determinado [Usuario](https://msdn.microsoft.com/library/windows/apps/windows.system.user.aspx). En la [clase Windows.Storage.StorageLibrary](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagelibrary.aspx), tu aplicación ahora puede [obtener una Biblioteca especificada](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagelibrary.getlibraryforuserasync.aspx) para un determinado [Usuario](https://msdn.microsoft.com/library/windows/apps/windows.system.user.aspx).
 Kit para la certificación de aplicaciones en Windows | El Kit para la certificación de aplicaciones en Windows se actualizó con pruebas mejoradas. Para obtener una lista completa de las actualizaciones, visita la página [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit).
 Descargas de diseños | Echa un vistazo a nuestras nuevas plantillas de diseño de aplicaciones para UWP para Adobe Photoshop. También hemos actualizado las plantillas de Microsoft PowerPoint y Adobe Illustrator y creado una versión PDF de nuestras directrices. [Visita la página Descargas de diseños](https://developer.microsoft.com/windows/design/assets).
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

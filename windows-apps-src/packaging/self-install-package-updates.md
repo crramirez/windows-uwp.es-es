@@ -2,21 +2,28 @@
 author: mcleanbyron
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: "Descargar e instalar actualizaciones de paquete para tu aplicación."
-description: "Obtén información sobre cómo marcar paquetes como obligatorios en el panel del Centro de desarrollo y escribir código en tu aplicación para descargar e instalar las actualizaciones del paquete."
+description: "Obtén información sobre cómo marcar paquetes como obligatorios en el panel del Centro de desarrollo y escribir código en tu aplicación para descargar e instalar las actualizaciones de los paquetes."
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b96d4074a8960db314313c612955900c6a05dc48
-ms.openlocfilehash: 4da8ffe72435501876a1e859d10a16cf19eb11fd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ffd1af9475791b8190f9364d85f7a7fa23548856
+ms.lasthandoff: 02/07/2017
 
 ---
-# Descargar e instalar actualizaciones de paquete para tu aplicación.
+# <a name="download-and-install-package-updates-for-your-app"></a>Descargar e instalar actualizaciones de paquetes para tu aplicación
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A partir de la versión 1607 de Windows 10, puedes usar una API en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para comprobar actualizaciones de paquete de la aplicación actual y descargar e instalar los paquetes actualizados mediante programación. También puedes consultar los paquetes que se [marcaron como obligatorios en el panel del Centro de desarrollo de Windows](#mandatory-dashboard) y deshabilitar la funcionalidad en tu aplicación hasta que se instale la actualización obligatoria.
 
 Estas características te ayudan a mantener tu base de usuarios actualizada con la última versión de la aplicación y los servicios relacionados de manera automática.
 
-## Introducción a API
+## <a name="api-overview"></a>Introducción a API
 
 Las aplicaciones destinadas a la versión 1607 de Windows 10 u otras posteriores pueden usar los siguientes métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para descargar e instalar actualizaciones de paquete.
 
@@ -37,7 +44,7 @@ Estos métodos usan objetos [StorePackageUpdate](https://msdn.microsoft.com/libr
 
 <span/>
 
-## Ejemplos de código
+## <a name="code-examples"></a>Ejemplos de código
 
 Los ejemplos de código siguientes muestran cómo descargar e instalar las actualizaciones de paquete en tu aplicación. Estos ejemplos suponen que:
 * El código se ejecuta en el contexto de un elemento [Page](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx).
@@ -47,7 +54,7 @@ Los ejemplos de código siguientes muestran cómo descargar e instalar las actua
 
 <span/>
 
-### Descargar e instalar todas las actualizaciones de paquete
+### <a name="download-and-install-all-package-updates"></a>Descargar e instalar todas las actualizaciones de paquete
 
 El siguiente ejemplo de código muestra cómo descargar e instalar todas las actualizaciones de paquete disponibles.  
 
@@ -98,7 +105,7 @@ public async Task DownloadAndInstallAllUpdatesAsync()
 }
 ```
 
-### Controlar las actualizaciones de paquete obligatorias
+### <a name="handle-mandatory-package-updates"></a>Controlar las actualizaciones de paquete obligatorias
 
 El siguiente ejemplo de código se basa en el ejemplo anterior y muestra cómo determinar si los paquetes de actualización se han [marcado como obligatorios en el panel del Centro de desarrollo de Windows](#mandatory-dashboard). Por lo general, debes degradar la experiencia de tu aplicación correctamente para el usuario en caso de que una actualización de paquete obligatoria no se descargue o instale correctamente.
 
@@ -213,7 +220,7 @@ private void HandleMandatoryPackageError()
 ```
 
 <span id="mandatory-dashboard" />
-## Hacer que un envío de paquete sea obligatorio en el panel del Centro de desarrollo
+## <a name="make-a-package-submission-mandatory-in-the-dev-center-dashboard"></a>Hacer que un envío de paquete sea obligatorio en el panel del Centro de desarrollo
 
 Cuando creas un envío de paquete para una aplicación destinada a la versión de Windows 10 o posterior, puedes marcar el paquete como obligatorio y la fecha y hora a partir de la cual es obligatorio. Cuando se establece esta propiedad y la aplicación detecta que la actualización de paquete está disponible mediante la API que se describió anteriormente en este artículo, la aplicación puede determinar si el paquete de actualización es obligatorio y modificar su comportamiento hasta que se instale la actualización (por ejemplo, la aplicación puede deshabilitar características).
 
@@ -228,9 +235,4 @@ Para marcar un envío de paquete como obligatorio:
 Para obtener más información acerca de cómo configurar paquetes en el panel del Centro de desarrollo, consulta [Cargar paquetes de aplicación](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages).
 
   >**Nota**&nbsp;&nbsp;Si creas un [paquete piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights), puedes marcar los paquetes como obligatorios con una interfaz de usuario similar en la página **Paquetes** para el piloto. En este caso, la actualización del paquete obligatoria se aplica solo a los clientes que forman parte del grupo piloto.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

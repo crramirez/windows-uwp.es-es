@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: Migrar objetos de sombreador
-description: "Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es configurar los objetos equivalentes del sombreador de fragmentos y vértices en Direct3D 11, y asegurarte de que el programa principal pueda comunicarse con los objetos del sombreador después de su compilación."
+description: "Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es configurar los objetos equivalentes del sombreador de fragmentos y vértices en Direct3D 11, y asegurarte de que el programa principal pueda comunicarse con los objetos de sombreador después de su compilación."
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, games, juegos, port, portar, shader, sombreador, direct3d, opengl
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 478b5615834ea946a6a327fc2cbf54651e21b695
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f683e8b6ad04b1350adae1c962da09e2f15f5cec
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Portar objetos de sombreador
+# <a name="port-the-shader-objects"></a>Portar objetos de sombreador
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -28,10 +35,10 @@ Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es config
 
 De forma muy parecida a OpenGL ES 2.0, los sombreadores compilados en Direct3D deben asociarse con un contexto de dibujo. Ten en cuenta que Direct3D no tiene el concepto de un objeto de programa sombreador en sí; debes asignar sombreadores directamente a una interfaz [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385). Este paso sigue el proceso de OpenGL ES 2.0 para crear y enlazar objetos de sombreador y te proporciona los comportamientos de API correspondientes en Direct3D.
 
-Instrucciones
+<a name="instructions"></a>Instrucciones
 ------------
 
-### Paso 1: compilar los sombreadores
+### <a name="step-1-compile-the-shaders"></a>Paso 1: compilar los sombreadores
 
 En esta muestra simple de OpenGL ES 2.0, el sombreador se almacena como archivos de texto y se carga como datos de cadena de la compilación en tiempo de ejecución.
 
@@ -102,7 +109,7 @@ auto createPSTask = loadPSTask.then([this](Platform::Array<byte>^ fileData) {
 };
 ```
 
-### Paso 2: crear y cargar los sombreadores de fragmentos (píxeles) y vértices
+### <a name="step-2-create-and-load-the-vertex-and-fragment-pixel-shaders"></a>Paso 2: crear y cargar los sombreadores de fragmentos (píxeles) y vértices
 
 OpenGL ES 2.0 tiene la noción de un "programa" sombreador, que sirve como interfaz entre el programa principal que se ejecuta en la CPU y los sombreadores que se ejecutan en la GPU. Los sombreadores se compilan (o se cargan en fuentes compiladas) y se asocian con un programa que permite su ejecución en la GPU.
 
@@ -181,7 +188,7 @@ m_d3dContext->PSSetShader(
   0);
 ```
 
-### Paso 3: definir los datos que hay que suministrar a los sombreadores
+### <a name="step-3-define-the-data-to-supply-to-the-shaders"></a>Paso 3: definir los datos que hay que suministrar a los sombreadores
 
 En nuestro ejemplo de OpenGL ES 2.0, tenemos que declarar un elemento **uniform** para la canalización del sombreador:
 
@@ -298,11 +305,11 @@ m_d3dContext->UpdateSubresource(
 
 El búfer de vértices se crea y actualiza de manera similar. Esto se explica en el siguiente paso, [Portar datos y búferes de vértices](port-the-vertex-buffers-and-data-config.md).
 
-Paso siguiente
+<a name="next-step"></a>Paso siguiente
 ---------
 
 [Portar datos y búferes de vértices](port-the-vertex-buffers-and-data-config.md)
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 [Portar un representador simple de OpenGL ES 2.0 a Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
@@ -319,10 +326,5 @@ Paso siguiente
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,13 +3,20 @@ author: jnHs
 Description: "Puedes promocionar tu aplicación o complemento en la Tienda Windows al ponerlos en oferta durante un tiempo limitado."
 title: Poner aplicaciones y complementos en oferta
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
-ms.openlocfilehash: d5884fc4be04de69132662ade7e42f69d36d2346
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5823fce5aa5b5d0e98bc43828dc7469a08fdb9d0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Poner aplicaciones y complementos en oferta
+# <a name="put-apps-and-add-ons-on-sale"></a>Poner aplicaciones y complementos en oferta
 
 Puedes promocionar tu aplicación o complemento en la Tienda Windows al ponerlos en oferta durante un tiempo limitado.
 
@@ -17,7 +24,7 @@ Cuando programes una oferta para reducir temporalmente el precio de tu aplicaci�
 
 > **Nota**  El precio de oferta solo se muestra a tus clientes de Windows 10. En otros sistemas operativos, los clientes verán el precio normal de la aplicación o el complemento. Siempre puedes cambiar un precio eligiendo una franja de precios diferente en un nuevo envío, pero no se mostrará como una oferta por tiempo limitado.
 
-## Programar una oferta
+## <a name="scheduling-a-sale"></a>Programar una oferta
 
 Las ofertas se programan como parte del envío de una aplicación o un complemento. Si quieres programar una oferta para una aplicación o un complemento que ya se ha publicado, tendrás que crear un nuevo envío, aunque ese sea el único cambio que quieras realizar.
 
@@ -39,7 +46,7 @@ Las ofertas se programan como parte del envío de una aplicación o un complemen
 
 > **Nota**  Es posible seleccionar una franja de precios mayor que el precio base de la aplicación. Sin embargo, el precio de oferta solo se mostrará a los clientes si es inferior al precio normal de la aplicación en ese mercado. Seleccionar un precio de oferta mayor que el precio base de la aplicación puede ser apropiado si ya has establecido en determinados mercados precios personalizados que superan el precio base y quieres reducir temporalmente el precio en dichos mercados (siendo el precio de venta todavía mayor que el precio base de la aplicación). Si tus selecciones resultan en que el precio de la aplicación aumente en un mercado concreto, dicho precio (superior) no se mostrará en ese mercado: los clientes seguirán viendo la aplicación con su precio anterior (inferior). También se mostrará a los clientes el menor precio disponible si programas distintas ofertas superpuestas con diferentes precios.
 
-## Cambiar o cancelar una oferta programada
+## <a name="changing-or-canceling-a-scheduled-sale"></a>Cambiar o cancelar una oferta programada
 
 
 Para revisar o cancelar una oferta previamente programada para una aplicación o un complemento, debes crear y realizar un nuevo envío para la Tienda.
@@ -64,10 +71,5 @@ Cuando el envío supere el proceso de certificación, los cambios surtirán efec
 Si la oferta no ha comenzado en el momento de completarse el proceso de certificación, nunca llegará a entrar en efecto. Si eliminas una oferta que ya ha finalizado, simplemente se quitará de tu página **Precios y disponibilidad**.
 
 > **Importante**  Dado que los clientes pueden ver la fecha de finalización programada en la descripción de la Tienda que se muestra la aplicación, no es recomendable eliminar una oferta una vez iniciada. Si eliminas una oferta que ya está en curso, terminará cuando el envío complete el proceso de certificación, lo que puede resultar frustrante para los clientes potenciales.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

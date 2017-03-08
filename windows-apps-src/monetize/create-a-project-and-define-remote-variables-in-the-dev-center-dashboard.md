@@ -1,21 +1,28 @@
 ---
 author: mcleanbyron
 Description: "Antes de poder ejecutar un experimento en tu aplicación para la Plataforma universal de Windows (UWP) con pruebas A/B, debes crear un proyecto y definir tus variables remotas en el panel del Centro de desarrollo."
-title: Crear un proyecto y definir variables remotas en el panel del Centro de desarrollo
+title: "Creación de un proyecto y definición de variables remotas en el panel del Centro de desarrollo"
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, UWP, Microsoft Store Services SDK, pruebas A/B, experimentos
 translationtype: Human Translation
-ms.sourcegitcommit: 32c1b379ee3913e267664e6d125fbc3daf480bb3
-ms.openlocfilehash: 88a55c9ed64d5f52f959a1c68618dc5296dc24d6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ad24e9a52458b826f3ce1bc7aba3dbdcf302f87d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Crear un proyecto y definir variables remotas en el panel del Centro de desarrollo
+# <a name="create-a-project-and-define-remote-variables-in-the-dev-center-dashboard"></a>Creación de un proyecto y definición de variables remotas en el panel del Centro de desarrollo
 
 Para comenzar con la experimentación, crea un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación para tu aplicación en el panel del Centro de desarrollo y define las variables remotas a las que puede obtener acceso la aplicación.
 
 Las siguientes instrucciones describen los pasos básicos para crear un proyecto. Para ver un tutorial detallado que muestre de principio a fin el proceso de crear un proyecto y luego ejecutar un experimento, consulta [Crear y ejecutar el primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
-## Instrucciones
+## <a name="instructions"></a>Instrucciones
 
 1. Inicia sesión en el [panel del Centro de desarrollo](https://dev.windows.com/overview).
 2. En **Tus aplicaciones**, selecciona la aplicación para la que deseas crear un experimento.
@@ -31,20 +38,15 @@ Las siguientes instrucciones describen los pasos básicos para crear un proyecto
 >**Nota**&nbsp;&nbsp;No puedes editar, agregar o quitar variables remotas mientras haya un experimento activo en el proyecto. Esta limitación ayuda a proteger la integridad de los datos para el grupo de control del experimento activo.
 
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 Después de crear un proyecto, puedes [codificar la aplicación para la experimentación](code-your-experiment-in-your-app.md) para comenzar a recuperar los valores de variables remotos en la aplicación y puedes [crear un experimento en el proyecto](define-your-experiment-in-the-dev-center-dashboard.md).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Programar tu aplicación para los experimentos](code-your-experiment-in-your-app.md)
 * [Definir el experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Administrar el experimento en el panel del Centro de desarrollo](manage-your-experiment.md)
 * [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

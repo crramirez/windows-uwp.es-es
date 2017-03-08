@@ -3,20 +3,27 @@ author: jnHs
 Description: "El informe de uso del panel del Centro de desarrollo de Windows te permite ver cómo usan la aplicación los clientes."
 title: Informe de uso
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: c413ff1d4fe709e92f7a306e671f9a4fe22a5999
-ms.openlocfilehash: 21be2064914189abe8ef68c858d33346b947550c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b3c225316b028baa9a499e81841cdb939be9588e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Informe de uso
+# <a name="usage-report"></a>Informe de uso
 
 
-El informe **Uso** del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows10 usan la aplicación y obtener información sobre los eventos personalizados que hayas definido. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
+El informe **Uso** del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows 10 usan la aplicación y obtener información sobre los eventos personalizados que hayas definido. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
 > **Nota**  Anteriormente, el informe de **uso** solo proporcionaba datos si el SDK de Visual Studio Application Insights estaba activado en la aplicación. Con el informe de **uso** actualizado, esto ya no es necesario.
 
-## Aplicar filtros
+## <a name="apply-filters"></a>Aplicar filtros
 
 
 En la parte superior de la página, se puede expandir **Aplicar filtros** para filtrar todos los datos de esta página por intervalo de fechas o grupo de productos (versiones de SO relacionadas).
@@ -29,19 +36,19 @@ La información de todos los gráficos que aparecen a continuación reflejará e
 
 > **Nota** En este informe solo se incluyen los datos de uso de los clientes de Windows 10.
 
-## Sesiones de usuario totales
+## <a name="total-user-sessions"></a>Sesiones de usuario totales
 
 El gráfico **Sesiones de usuario totales** muestra el número de sesiones de usuario diarias de la aplicación durante el período de tiempo seleccionado.
 
 Cada sesión de usuario representa un distinto período de tiempo cuando un usuario interactuó con la aplicación. Se considera que cada sesión de usuario finalizará después de un período de inactividad, por lo que solo un cliente puede tener varias sesiones de usuario en el mismo día. Ten en cuenta que este gráfico no realiza un seguimiento de usuarios únicos de la aplicación.
 
-## Usuarios activos
+## <a name="active-users"></a>Usuarios activos
 
 El gráfico **Usuarios activos** muestra el número de clientes que usaron la aplicación en un día determinado durante el período de tiempo seleccionado.
 
 Cada usuario activo representa a un cliente que usó la aplicación ese día. Este gráfico no realiza un seguimiento de las sesiones de usuario único (es decir, un cliente se representa en este gráfico tanto si usó la aplicación una vez como si lo hizo varias veces ese día).
 
-## Eventos personalizados
+## <a name="custom-events"></a>Eventos personalizados
 
 El gráfico **Eventos personalizados** muestra el total de repeticiones de cualquier evento personalizado que has definido para la aplicación. Puede incluir varias repeticiones para el mismo cliente.
 
@@ -50,9 +57,4 @@ Los eventos personalizados se implementan mediante el método [StoreServicesCust
 
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,14 +1,22 @@
 ---
 author: jnHs
 Description: "Consulta cómo publicar tus aplicaciones de Windows en la Tienda Windows."
+title: Publicar aplicaciones de Windows
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 translationtype: Human Translation
-ms.sourcegitcommit: f894decad6a88ad3923e0bd5c54a6f4906555081
-ms.openlocfilehash: 6e2b6158a586fa82780664cd2ef2de0b425a1f1d
-
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 43cd6db99001974283175cb611d2e06c5da2221c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Publicar aplicaciones de Windows
+# <a name="publish-windows-apps"></a>Publicar aplicaciones de Windows
 
 Puedes usar el panel del Centro de desarrollo de Windows para publicar tus aplicaciones en la Tienda Windows. 
 
@@ -29,9 +37,4 @@ Esta sección contiene información sobre cómo publicar y administrar tus aplic
 | [Proceso de pago](getting-paid-apps.md) | Obtén información detallada sobre cómo recibir ganancias a partir de las aplicaciones, los complementos y Microsoft Advertising. |
 | [Directivas de la Tienda y Código de conducta](https://msdn.microsoft.com/library/windows/apps/dn764939.aspx) | En esta sección se incluyen las [directivas de la Tienda](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx) y los criterios de [calidad de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt652261.aspx) que se aplican al contenido y a las aplicaciones de Windows, así como el [Código de conducta](https://msdn.microsoft.com/library/windows/apps/dn764941.aspx) que deben seguir los desarrolladores. |
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -1,18 +1,25 @@
 ---
 author: msatranjr
 title: "Superponer imágenes en mosaico en un mapa"
-description: "Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo."
+description: "Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa la opción de orígenes de icono para superponer información especializada, como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos; o bien, úsala para reemplazar el mapa predeterminado por completo."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer"
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: a00d3d27161310077a0690cef7e4d11a5209bee7
+ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
+ms.openlocfilehash: dd52df5f95b25e26ddb0fb8db50c9faf27df02ee
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Superponer imágenes en mosaico en un mapa
+# <a name="overlay-tiled-images-on-a-map"></a>Superponer imágenes en mosaico en un mapa
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante los orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
@@ -21,10 +28,10 @@ Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante 
 
 -   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## Información general de la imagen en mosaico
+## <a name="tiled-image-overview"></a>Información general de la imagen en mosaico
 
 
-Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256x256píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256 x 256 píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
 **Importante**  
 Al usar la opción de orígenes de icono, no tienes que escribir código para solicitar o colocar los iconos individuales. La clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) se encarga de solicitar los iconos a medida que los necesita. Cada solicitud especifica las coordenadas X e Y, y el nivel de zoom para el icono individual. Solo debes indicar el formato del URI o el nombre de archivo que se debe usar para recuperar los iconos en la propiedad **UriFormatString**. Es decir, se insertan los parámetros reemplazables en el URI base o en el nombre de archivo para indicar dónde se deben pasar las coordenadas X e Y, y el nivel de zoom para cada icono.
@@ -41,7 +48,7 @@ Este es un ejemplo de la propiedad [**UriFormatString**](https://msdn.microsoft.
 
 Para obtener más información acerca del sistema de iconos que usan los servicios de asignación, consulta [Bing Maps Tile System (Sistema de iconos de Mapas de Bing)](http://go.microsoft.com/fwlink/p/?LinkId=626692).
 
-### Superponer los iconos de un origen de iconos
+### <a name="overlay-tiles-from-a-tile-source"></a>Superponer los iconos de un origen de iconos
 
 Superpón imágenes en mosaico desde un origen de iconos en un mapa mediante [**MapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn637141).
 
@@ -81,7 +88,7 @@ Superpón imágenes en mosaico desde un origen de iconos en un mapa mediante [**
          MapControl1.TileSources.Add(tileSource);
     ```
 
-## Superponer iconos desde un servicio web
+## <a name="overlay-tiles-from-a-web-service"></a>Superponer iconos desde un servicio web
 
 
 Superpón imágenes en mosaico recuperadas desde un servicio web mediante la clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986).
@@ -93,9 +100,9 @@ Superpón imágenes en mosaico recuperadas desde un servicio web mediante la cla
         http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
     ```
 
-    El servicio web debe admitir un URI que contenga los parámetros reemplazables {x}, {y}, y {zoomlevel}. La mayoría de los servicios web (Nokia, Bing o Google, por ejemplo) admiten URI con este formato. Si el servicio web requiere argumentos adicionales que no estén disponibles con la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control de los eventos [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#customuri) que figura más adelante en este tema.
+    El servicio web debe admitir un URI que contenga los parámetros reemplazables {x}, {y}, y {zoomlevel}. La mayoría de los servicios web (Nokia, Bing o Google, por ejemplo) admiten URI con este formato. Si el servicio web requiere argumentos adicionales que no estén disponibles con la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control de los eventos [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#provide-a-custom-uri) que figura más adelante en este tema.
 
-3.  A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tileintro).
+3.  A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tiled-image-overview).
 
 El siguiente ejemplo, se superponen los iconos de un servicio web ficticio en un mapa de Norteamérica. El valor de la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) se especifica en el constructor de la clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986). En este ejemplo, solo se muestran los iconos dentro de los límites geográficos especificados en la propiedad opcional [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147).
 
@@ -144,7 +151,7 @@ void MainPage::AddHttpMapTileSource()
 }
 ```
 
-## Superponer iconos desde el almacenamiento local
+## <a name="overlay-tiles-from-local-storage"></a>Superponer iconos desde el almacenamiento local
 
 
 Superpón imágenes en mosaico almacenadas como archivos en el almacenamiento local mediante la clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Normalmente, estos archivos se empaquetan y distribuyen con la aplicación.
@@ -156,9 +163,9 @@ Superpón imágenes en mosaico almacenadas como archivos en el almacenamiento lo
         Tile_{zoomlevel}_{x}_{y}.png
     ```
 
-    Si el formato de los nombres de archivo requiere argumentos adicionales que no están disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control del evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#customuri) que figura más adelante en este tema.
+    Si el formato de los nombres de archivo requiere argumentos adicionales que no están disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control del evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#provide-a-custom-uri) que figura más adelante en este tema.
 
-3.  A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tileintro).
+3.  A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tiled-image-overview).
 
 Puedes usar los siguientes protocolos y ubicaciones para cargar mosaicos desde un almacenamiento local:
 
@@ -195,7 +202,7 @@ El ejemplo siguiente carga iconos almacenados como archivos en la carpeta de ins
         }
 ```
 
-## Proporcionar un URI personalizado
+## <a name="provide-a-custom-uri"></a>Proporcionar un URI personalizado
 
 
 Si los parámetros reemplazables disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) de la clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) o la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) de la clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994) no son suficientes para recuperar los iconos, deberás crear un URI personalizado. Crea y devuelve un URI personalizado al proporcionar un controlador personalizado para el evento **UriRequested**. El evento **UriRequested** se genera para cada icono individual.
@@ -241,7 +248,7 @@ using System.Threading.Tasks;
         }
 ```
 
-## Superponer iconos desde un origen personalizado
+## <a name="overlay-tiles-from-a-custom-source"></a>Superponer iconos desde un origen personalizado
 
 
 Superpón iconos personalizados mediante la clase [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983). Crea iconos mediante programación en la memoria sobre la marcha o escribe tu propio código para cargar los iconos existentes de otro origen.
@@ -317,16 +324,16 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
        int pixelHeight = 256;
        int pixelWidth = 256;
        int bpp = 4;
- 
+
        Array<byte>^ bytes = ref new Array<byte>(pixelHeight * pixelWidth * bpp);
-       
+
        for (int y = 0; y < pixelHeight; y++)
        {
               for (int x = 0; x < pixelWidth; x++)
               {
                      int pixelIndex = y * pixelWidth + x;
                      int byteIndex = pixelIndex * bpp;
- 
+
                      // Set the current pixel bytes.
                      bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
                      bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
@@ -334,23 +341,23 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
                      bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
               }
        }
- 
+
        // Create RandomAccessStream from byte array.
        InMemoryRandomAccessStream^ randomAccessStream = ref new InMemoryRandomAccessStream();
        IOutputStream^ outputStream = randomAccessStream->GetOutputStreamAt(0);
        DataWriter^ writer = ref new DataWriter(outputStream);
        writer->WriteBytes(bytes);
- 
+
        create_task(writer->StoreAsync()).then([writer](unsigned int)
        {
               create_task(writer->FlushAsync());
        });
- 
+
        return randomAccessStream;
 }
 ```
 
-## Reemplazo del mapa predeterminado
+## <a name="replace-the-default-map"></a>Reemplazo del mapa predeterminado
 
 
 Reemplazar todo el mapa con iconos personalizados o de terceros:
@@ -358,17 +365,11 @@ Reemplazar todo el mapa con iconos personalizados o de terceros:
 -   Especifica [**MapTileLayer**](https://msdn.microsoft.com/library/windows/apps/dn637143).**BackgroundReplacement** como el valor de la propiedad [**Layer**](https://msdn.microsoft.com/library/windows/apps/dn637157) de la clase [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144).
 -   Especifica [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).**None** como el valor de la propiedad [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Bing Maps Developer Center (Centro para desarrolladores de Mapas de Bing)](https://www.bingmapsportal.com/)
 * [UWP map sample (Muestra de mapa de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo de compilación de 2015: Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Ejemplo de aplicación de tráfico de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

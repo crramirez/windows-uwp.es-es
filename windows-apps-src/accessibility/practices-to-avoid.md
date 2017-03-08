@@ -1,16 +1,23 @@
 ---
 author: Xansky
-Description: "Enumera los procedimientos a evitar si quieres crear una aplicación accesible para la Plataforma universal de Windows (UWP)."
+Description: "Enumera los procedimientos que deben evitarse si quieres crear una aplicación accesible para la Plataforma universal de Windows (UWP)."
 ms.assetid: 024A9B70-9821-45BB-93F1-61C0B2ECF53E
 title: Procedimientos de accesibilidad que deben evitarse
 label: Accessibility practices to avoid
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 014fb096817a25651188821fa59b202d260781d5
-ms.openlocfilehash: 382899f038e2ac2ad6e34e98b3ba4849e9685d10
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 27e91fad32818a920f393cba703773ea7fddcf0d
+ms.lasthandoff: 02/07/2017
 
 ---
-# Procedimientos de accesibilidad que deben evitarse
+# <a name="accessibility-practices-to-avoid"></a>Procedimientos de accesibilidad que deben evitarse
 
 Si quieres crear una aplicación accesible para Plataforma universal de Windows (UWP), consulta la siguiente lista de procedimientos que deben evitarse: 
 
@@ -29,13 +36,8 @@ Si quieres crear una aplicación accesible para Plataforma universal de Windows 
 * **No cambies el contexto de usuario ni actives una funcionalidad de forma automática.** Los cambios de activación y el contexto solamente deben producirse cuando el usuario realiza una acción directa en un elemento de la interfaz de usuario que tiene enfoque. Los cambios en el contexto del usuario incluyen cambiar el enfoque, mostrar el contenido nuevo y navegar a una página diferente. La realización de cambios al contexto sin que el usuario participe puede desorientar a aquellos usuarios que tienen discapacidades. Las excepciones a este requisitos son, entre otras, mostrar submenús, validar formularios, mostrar texto de ayuda en otro control y cambiar el contexto en respuesta a un evento asincrónico.
 
 <span id="related_topics"/>
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
 * [Accesibilidad en la Tienda](accessibility-in-the-store.md)
 * [Lista de comprobación de accesibilidad](accessibility-checklist.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

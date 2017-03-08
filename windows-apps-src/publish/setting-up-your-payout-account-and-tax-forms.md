@@ -1,15 +1,22 @@
 ---
 author: jnHs
 Description: Para recibir dinero por las ventas de aplicaciones en la Tienda Windows, debes configurar tu cuenta de pago y rellenar los formularios fiscales necesarios.
-title: Configurar formularios fiscales y cuentas de pago
+title: Configurar formularios fiscales y cuenta de pago
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea9ea2d39ecd0fc54381df8d5fa7dd7cdc2fae51
-ms.openlocfilehash: 7de230aeee932f781a282ab7555e1c90bcd76460
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e2cdcf5d06fdbe6f510a416bd1da28e7cf6a51d5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Configurar formularios fiscales y cuentas de pago
+# <a name="setting-up-your-payout-account-and-tax-forms"></a>Configurar formularios fiscales y cuenta de pago
 
 
 Para recibir dinero por las ventas de aplicaciones en la Tienda Windows, debes configurar tu cuenta de pago y rellenar los formularios fiscales necesarios.
@@ -30,7 +37,7 @@ Una vez que [hayas configurado tu cuenta de desarrollador](opening-a-developer-a
 
  
 
-## Cuenta de pago
+## <a name="payout-account"></a>Cuenta de pago
 
 
 Una cuenta de pago es la cuenta bancaria a la que te enviamos las ganancias por tus ventas. Esta cuenta bancaria debe estar ubicada en el mismo país o región donde registraste tu cuenta de desarrollador.
@@ -57,7 +64,7 @@ Si necesitas actualizar o cambiar tu cuenta de pago, sigue los mismos pasos de a
 
  
 
-### Información de PayPal
+### <a name="paypal-info"></a>Información de PayPal
 
 En ciertos países y regiones, puedes crear una cuenta de pago con tu información de PayPal. Sin embargo, antes de elegir PayPal como opción de cuenta de pago:
 
@@ -72,11 +79,11 @@ Preguntas comunes acerca del uso de PayPal como método de pago:
 -   **¿Tiene que estar registrada mi cuenta de PayPal en el mismo país o región que mi cuenta del Centro de desarrollo?** No. Cuando configuras una cuenta de PayPal, puedes aceptar la configuración predeterminada. No deberías tener ningún problema con otros países o regiones y divisas, a menos que hayas bloqueado el pago con ciertas divisas. Esta configuración se administra en la página Preferencias de recepción de pagos de PayPal.
 -   **¿Tengo que aceptar los pagos de PayPal manualmente?** No. Las cuentas de PayPal están configuradas de forma predeterminada para requerir que los usuarios acepten los pagos manualmente, lo que significa que si no se acepta el pago antes de 30 días, se devuelve. Puedes cambiar esta configuración si desactivas “Preguntarme” en la página Más opciones de PayPal.
 
-### Requisitos específicos para determinados países o regiones
+### <a name="specific-requirements-for-certain-countriesregions"></a>Requisitos específicos para determinados países o regiones
 
 En algunos países y regiones deben cumplirse requisitos adicionales para las cuentas de pago. Si resides en Pakistán, Rusia o Ucrania, ten en cuenta los requisitos siguientes.
 
-### Pakistán
+### <a name="pakistan"></a>Pakistán
 
 El formulario R es un requisito regulatorio bancario de Pakistán. Se utiliza para indicar el propósito y la razón para la recepción de fondos desde el extranjero. Por lo tanto, cuando optes a un pago mensual de Microsoft, deberás presentar en tu banco un formulario R para que se pueda emitir el pago. Ponte en contacto con tu sucursal bancaria local para informarte sobre cómo obtener una copia del formulario R.
 
@@ -84,7 +91,7 @@ Este formulario R deberá remitirse al banco cada mes que se opte a un pago. Por
 
 Una vez que el pago se haya emitido, tienes 30 días para presentar el formulario R. Si no lo presentas en un plazo de 30 días, los fondos se devolverán a Microsoft.
 
-### Rusia
+### <a name="russia"></a>Rusia
 
 Si eres un desarrollador que vive en Rusia, puede que tengas que proporcionar documentación a tu banco antes de que este ingrese un importe en tu cuenta. Cuando reúnas los requisitos para recibir pagos, te proporcionaremos la siguiente documentación por correo electrónico:
 
@@ -98,7 +105,7 @@ Para garantizar que el pago se realiza correctamente, ten en cuenta los siguient
 -   La información introducida en el Centro de desarrollo en caracteres latinos se translitera a caracteres cirílicos.
 -   Los pagos se efectuarán a una cuenta bancaria y no a una tarjeta bancaria.
 
-### Ucrania
+### <a name="ukraine"></a>Ucrania
 
 Si eres un desarrollador que vive en Ucrania, puede que tengas que proporcionar documentación a tu banco antes de que este ingrese un importe en tu cuenta. Cuando reúnas los requisitos para recibir pagos, te proporcionaremos la siguiente documentación por correo electrónico:
 
@@ -114,7 +121,7 @@ Para garantizar que el pago se realiza correctamente, ten en cuenta los siguient
 -   Los pagos se abonan directamente de Microsoft a tu cuenta bancaria en USD.
 -   La información introducida en el Centro de desarrollo en caracteres latinos se translitera a caracteres cirílicos.
 
-## Formularios fiscales
+## <a name="tax-forms"></a>Formularios fiscales
 
 
 Después de [registrar una cuenta de desarrollador](opening-a-developer-account.md) y configurar tu [cuenta de pago](#receiving_payments), puedes crear tu *perfil fiscal* para la Tienda Windows siguiendo estos pasos:
@@ -142,11 +149,11 @@ A continuación verás versiones electrónicas de los formularios fiscales que d
 
 No es necesario contar con un Número de Identificación del contribuyente individual (o ITIN) de los Estados Unidos para recibir pagos de Microsoft ni para reclamar beneficios por tratado fiscal.
 
-### Tasas de retención
+### <a name="withholding-rates"></a>Tasas de retención
 
 La información proporcionada en los formularios fiscales determina la tasa de retención de impuestos correspondiente. La tasa de retención se aplica únicamente a las ventas que realices dentro de los Estados Unidos,; las ventas llevadas a cabo fuera de los Estados Unidos no están sujetas a retención. Las tasas de retención pueden variar, pero para la mayoría de los desarrolladores que se registran fuera de los Estados Unidos, la tasa predeterminada es del 30 por ciento. Tienes la opción de reducir esta tasa, si tu país o región ha aceptado un tratado fiscal de ingresos con los Estados Unidos.
 
-### Beneficios por tratado fiscal
+### <a name="tax-treaty-benefits"></a>Beneficios por tratado fiscal
 
 Si estás fuera de los Estados Unidos, quizás puedas aprovechar los beneficios por tratado fiscal. Estos beneficios, que varían de un país o región a otro, te permiten reducir la cantidad de impuestos retenidos por la Tienda Windows. Para reclamar beneficios por tratado fiscal, completa la Parte II del formulario W-8BEN. Te recomendamos que te comuniques con los recursos correspondientes de tu país o región para determinar si estos beneficios se aplican en tu caso.
 
@@ -156,10 +163,5 @@ Si estás fuera de los Estados Unidos, quizás puedas aprovechar los beneficios 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

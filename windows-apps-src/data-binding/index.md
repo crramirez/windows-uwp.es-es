@@ -3,15 +3,22 @@ author: mcleblanc
 ms.assetid: 83b4be37-6613-4d00-a48a-0451a24a30fb
 title: Enlace de datos
 description: "El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 3144758352b99f8c145a3c7be8a6c43d6a002104
-ms.openlocfilehash: e26b9753b3169e124c710a3f2e20907c749e5ec3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1680ceb9d9fdaf9cd2f9aa5d66f78b95e5da41e1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Enlace de datos
+# <a name="data-binding"></a>Enlace de datos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos. Enlace de datos permite separar la preocupación de los datos de la preocupación de la interfaz de usuario y esto da como resultado un modelo conceptual más sencillo y una mejor legibilidad, comprobación y mantenimiento de la aplicación. En el marcado, puedes usar la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) o la [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Incluso puedes usar una combinación de ambos en la misma aplicación, aun en el mismo elemento de la interfaz de usuario. {x:Bind} es nuevo para Windows 10 y tiene un mejor rendimiento.
 
@@ -21,10 +28,5 @@ El enlace de datos es una forma para que la interfaz de usuario de la aplicació
 | [Enlace de datos en profundidad](data-binding-in-depth.md) | En este tema se describen detalladamente las características del enlace de datos. |
 | [Datos de muestra sobre la superficie de diseño y para la creación de prototipos](displaying-data-in-the-designer.md) | Para hacer que los controles se rellenen con datos en el diseñador de Visual Studio (de modo que puedas trabajar en el diseño de la aplicación, las plantillas y otras propiedades visuales), puedes usar los datos de ejemplo en tiempo de diseño de distintas maneras. Los datos de ejemplo también pueden ser muy útiles y ahorrarte tiempo si creas una aplicación de diseño de bocetos (o prototipos). Puedes usar los datos de ejemplo del boceto o el prototipo en tiempo de ejecución para ilustrar tus ideas sin tener que conectarte a los datos dinámicos reales. |
 | [Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md) | Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [<strong>CollectionViewSource</strong>](https://msdn.microsoft.com/library/windows/apps/BR209833) que están enlazadas juntas en una cadena. |
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

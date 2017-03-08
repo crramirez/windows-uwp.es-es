@@ -3,14 +3,20 @@ author: mcleanbyron
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
 description: "Aprende a agregar valores de identificador de aplicación y de identificador de unidad de anuncios a la aplicación desde el panel del Centro de desarrollo de Windows antes de enviar la aplicación a la Tienda."
 title: "Configurar unidades de anuncios en la aplicación"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, anuncios, publicidad, unidades de anuncios
 translationtype: Human Translation
-ms.sourcegitcommit: c6e0cf98c6eb2cdc656d5b4555d794ff6a94d2bc
-ms.openlocfilehash: 705955faf7ddd67f80098f8c3ac7b2844553de95
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 32a934f1d113d561c72ab3ac48a8ef3d0820c176
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Configurar unidades de anuncios en la aplicación
+# <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anuncios en la aplicación
 
 
 
@@ -32,7 +38,7 @@ Para configurar el identificador de aplicación y las unidades de anuncios de la
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 [Valores del modo de prueba](test-mode-values.md)
 
@@ -40,9 +46,4 @@ Para configurar el identificador de aplicación y las unidades de anuncios de la
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -2,9 +2,17 @@
 author: QuinnRadich
 title: "Elegir una versión de UWP"
 description: "Al escribir una aplicación para UWP en Microsoft Visual Studio, puedes elegir la versión de destino. Obtén información sobre la diferencia entre las diferentes versiones de UWP y sobre cómo configurar las opciones en proyectos nuevos y existentes."
+ms.author: quradic
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 translationtype: Human Translation
-ms.sourcegitcommit: 7e59551f528e23e497122f822fbfc09ec3086cdc
-ms.openlocfilehash: 58e58c212cb6efd76f4afb8d3b6c7a3c5ddf215e
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e2bc7b4a12aed40093985000486b9f3f78967524
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -38,9 +46,4 @@ Ten en cuenta que vas a declarar que tu aplicación funciona en cualquier versi�
 * En el código, puedes llamar libremente (es decir, sin comprobaciones condicionales) a las API que existen en la versión especificada por la **Versión mínima**.
 * Asegúrate de probar tu código en un dispositivo en el que se ejecute la **Versión mínima**, para asegurarte de que funciona sin necesidad de API que solo están presentes en la **Versión de destino**.
 * El valor de **Versión de destino** se usa para identificar todas las referencias (winmds del contrato) para compilar el proyecto. Pero estas referencias te permitirán compilar el código con llamadas a API que no tienen por qué existir en los dispositivos que hayas declarado que admites (a través de **Versión mínima**). Por lo tanto, cualquier API que se haya introducido después la **Versión mínima** deberá llamarse a través de código adaptativo. Para obtener más información acerca del código adaptativo, consulta la [Guía de aplicaciones de la Plataforma universal de Windows (UWP)](../get-started/universal-application-platform-guide.md).
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

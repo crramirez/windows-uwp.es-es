@@ -1,24 +1,31 @@
 ---
 author: drewbatgit
 ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
-description: "En este artículo se enumera la compatibilidad con formatos y códecs de vídeo para aplicaciones para UWP."
+description: "En este artículo se indican la compatibilidad con los formatos y códecs de audio y vídeo para las aplicaciones para UWP."
 title: "Códecs admitidos"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7bd0002d62519757cf582d6070a22890a0e1837e
-ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2c477e9dc0cc86534a179edb8e3a9415f4872d93
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Códecs admitidos
+# <a name="supported-codecs"></a>Códecs admitidos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se enumera la compatibilidad con formatos y códecs de audio, vídeo e imagen para aplicaciones para UWP.
 
 En las tablas siguientes, "D" indica compatibilidad con el descodificador y "E" con el codificador.
 
-## Compatibilidad con formato y códec de audio
+## <a name="audio-codec--format-support"></a>Compatibilidad con formato y códec de audio
 
 Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio para cada familia de dispositivos.
 
@@ -27,7 +34,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 
  
 
-### Escritorio
+### <a name="desktop"></a>Escritorio
 
 <table>
 <colgroup>
@@ -338,7 +345,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 
  
 
-### Móvil
+### <a name="mobile"></a>Móvil
 
 <table>
 <colgroup>
@@ -649,7 +656,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 
  
 
-### IoT Core (x86)
+### <a name="iot-core-x86"></a>IoT Core (x86)
 
 <table>
 <colgroup>
@@ -960,7 +967,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 
  
 
-### IoT Core (ARM)
+### <a name="iot-core-arm"></a>IoT Core (ARM)
 
 <table>
 <colgroup>
@@ -1271,7 +1278,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 
  
 
-### Xbox
+### <a name="xbox"></a>Xbox
 
 <table>
 <colgroup>
@@ -1582,7 +1589,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 
  
 
-## Compatibilidad con formato y códec de vídeo
+## <a name="video-codec--format-support"></a>Compatibilidad con formato y códec de vídeo
 
 Las siguientes tablas muestran la compatibilidad con los formatos y los códecs de vídeo para cada familia de dispositivos.
 
@@ -1592,7 +1599,7 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 
  
 
-### Escritorio
+### <a name="desktop"></a>Escritorio
 
 <table>
 <colgroup>
@@ -1811,7 +1818,7 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 
  
 
-### Móvil
+### <a name="mobile"></a>Móvil
 
 <table>
 <colgroup>
@@ -2030,7 +2037,7 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 
  
 
-### IoT Core (x86)
+### <a name="iot-core-x86"></a>IoT Core (x86)
 
 <table>
 <colgroup>
@@ -2249,7 +2256,7 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 
  
 
-### IoT (ARM)
+### <a name="iot-arm"></a>IoT (ARM)
 
 <table>
 <colgroup>
@@ -2468,7 +2475,7 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 
  
 
-### Xbox
+### <a name="xbox"></a>Xbox
 
 <table>
 <colgroup>
@@ -2685,7 +2692,7 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 </tbody>
 </table>
 
-## Compatibilidad con formato y códec de imagen 
+## <a name="image-codec--format-support"></a>Compatibilidad con formato y códec de imagen 
 
 <table>
 <colgroup>
@@ -2757,8 +2764,3 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 <sup>3</sup> Solo se admiten determinados formatos de cámara RAW.  
 
 Para obtener más información acerca de los códecs de imágenes, consulta [Native WIC Codecs (Códecs WIC nativos)](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx).
-
-
-<!--HONumber=Nov16_HO1-->
-
-

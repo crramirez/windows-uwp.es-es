@@ -2,16 +2,24 @@
 author: payzer
 title: "Referencia de API de configuración de desarrollador de Xbox de Device Portal"
 description: "Obtén información sobre cómo tener acceso a la configuración de desarrollador de Xbox."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 translationtype: Human Translation
-ms.sourcegitcommit: c51eff41e63d815f6298b4fc46a9b11314bc8bc9
-ms.openlocfilehash: 5a983714cda9b5a5f45e555e2cb6f980f082a003
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: a17a489944fdc2d78831549c1afdc2bd87deabdf
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Referencia de API de la configuración de desarrollador   
+# <a name="developer-settings-api-reference"></a>Referencia de API de la configuración de desarrollador   
 Puede obtener acceso a la configuración de Xbox One que es útil para desarrollar mediante esta API.
 
-## Obtener todas las opciones de configuración del desarrollador al mismo tiempo
+## <a name="get-all-developer-settings-at-once"></a>Obtener todas las opciones de configuración del desarrollador al mismo tiempo
 
 **Solicitud**
 
@@ -51,7 +59,7 @@ Código de estado HTTP      | Descripción
 4XX | Códigos de error
 5XX | Códigos de error
 
-## Obtener las opciones de configuración de una en una
+## <a name="get-settings-one-at-a-time"></a>Obtener las opciones de configuración de una en una
 Las opciones de configuración también se pueden recuperar individualmente.
 
 **Solicitud**
@@ -92,7 +100,7 @@ Código de estado HTTP      | Descripción
 4XX | Códigos de error
 5XX | Códigos de error
 
-## Configurar el valor de una opción de configuración
+## <a name="set-the-value-of-a-setting"></a>Configurar el valor de una opción de configuración
 Puedes configurar el valor de una opción de configuración.
 
 **Solicitud**
@@ -133,10 +141,5 @@ Código de estado HTTP      | Descripción
 **Familias de dispositivos disponibles**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -2,24 +2,31 @@
 author: DBirtolo
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
 title: Epson ESC/POS con formato
-description: "Aprende a usar el lenguaje de comandos ESC/POS para dar formato al texto, como aplicar negrita o caracteres de tamaño doble, para tu impresora de punto de servicio."
+description: "Aprende a usar el lenguaje de comandos ESC/POS para dar formato al texto (como, por ejemplo, aplicar negrita o caracteres de tamaño doble) de la impresora de punto de servicio."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: b645e41d7456f1dff664e3f61721a3564d554202
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 70b737625f5301d3147f4570b4e6f7216c2212c7
+ms.lasthandoff: 02/07/2017
 
 ---
-# Epson ESC/POS con formato
+# <a name="epson-escpos-with-formatting"></a>ESC/POS de Epson con formato
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** API importantes **
+**API importantes**
 
--   [Impresora PointofService](https://msdn.microsoft.com/library/windows/apps/Mt426652)
+-   [**Impresora PointofService**](https://msdn.microsoft.com/library/windows/apps/Mt426652)
 -   [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
 
 Aprende a usar el lenguaje de comandos ESC/POS para dar formato al texto, como aplicar negrita o caracteres de tamaño doble, para tu impresora de punto de servicio.
 
-## Uso de ESC/POS
+## <a name="escpos-usage"></a>Uso de ESC/POS
 
 El punto de servicio de Windows te permite usar diversos tipos de impresoras, incluidas varias impresoras de la serie Epson TM (para obtener una lista completa de las impresoras compatibles, consulta la página [Impresora PointofService](https://msdn.microsoft.com/library/windows/apps/Mt426652)). Windows admite la impresión mediante el lenguaje de control de impresoras ESC/POS, que proporciona comandos eficaces y funcionales para la comunicación con la impresora.
 
@@ -29,14 +36,14 @@ Todos los comandos empiezan con el carácter ESC (ASCII 27, HEX 1B) o GS (ASCII 
 
 La [**API PointOfService de Windows**](https://msdn.microsoft.com/library/windows/apps/Dn298071) proporciona gran parte de esa funcionalidad a través de los métodos **Print()** o **PrintLine()**. Sin embargo, para obtener determinado formato o enviar comandos específicos, debes usar comandos ESC/POS, que se integran como una cadena y se envían a la impresora.
 
-## Ejemplo de uso de caracteres de tamaño doble y negrita
+## <a name="example-using-bold-and-double-size-characters"></a>Ejemplo de uso de caracteres de tamaño doble y negrita
 
 El siguiente ejemplo muestra cómo usar los comandos ESC/POS para imprimir en negrita y caracteres de tamaño doble. Ten en cuenta que cada comando se integra como una cadena, y luego se inserta en las llamadas a printJob.
 
 ```csharp
 // … prior plumbing code removed for brevity
 // this code assumed you've already created a receipt print job (printJob)
-// and also that you've already checked the PosPrinter Capabilities to 
+// and also that you've already checked the PosPrinter Capabilities to
 // verify that the printer supports Bold and DoubleHighDoubleWide print modes
 
 const string ESC = "\u001B";
@@ -56,11 +63,4 @@ printJob.ExecuteAsync();
 ```
 
 Para obtener más información sobre ESC/POS, incluidos los comandos disponibles, echa un vistazo a [Epson ESC/POS FAQ (Preguntas más frecuentes sobre Epson ESC/POS)](http://content.epson.de/fileadmin/content/files/RSD/downloads/escpos.pdf). Para obtener detalles sobre [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) y todas las funcionalidades disponibles, consulta el tema [Impresora PointofService](https://msdn.microsoft.com/library/windows/apps/Mt426652) en MSDN.
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

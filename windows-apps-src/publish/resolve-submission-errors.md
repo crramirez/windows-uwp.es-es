@@ -3,37 +3,44 @@ author: jnHs
 Description: "Si se producen errores después de enviar la aplicación a la Tienda, tienes que resolverlos para poder continuar el proceso de certificación."
 title: "Resolver errores de envío"
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: e295011db20d151f54e2581f8c67014b30261eb6
-ms.openlocfilehash: 71f8ee9e2b8d1f892711ada30c58eefde250cca3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b97cb009078039582bfcff6cdaa678f1dd9b979
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Resolver errores de envío
+# <a name="resolve-submission-errors"></a>Resolver errores de envío
 
 Si se producen errores después de enviar la aplicación a la Tienda, tienes que resolverlos para poder continuar el [proceso de certificación](the-app-certification-process.md). El mensaje de error indicará cuál es el problema y lo que probablemente tendrás que hacer para corregirlo. Aquí encontrarás información adicional que puede ayudarte a resolver estos errores.
 
-## Aplicaciones para UWP
+## <a name="uwp-apps"></a>Aplicaciones para UWP
 
 Si envías una aplicación para UWP, es posible que veas un error durante el procesamiento previo si el archivo de paquete no es un archivo .appxupload generado por Visual Studio para la Tienda. Asegúrate de seguir los pasos de [Empaquetado de aplicaciones universales de Windows para Windows 10](../packaging/packaging-uwp-apps.md) al crear el archivo de paquete de la aplicación y carga solo el archivo .appxupload en la página [Paquetes](upload-app-packages.md) del envío, no un appx o .appxbundle.
 
 Si se muestra un error de compilación, asegúrate de que eres capaz de generar correctamente la aplicación en modo de lanzamiento. Para obtener más información, consulta [Errores de compilador interno nativo .NET](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
-## Aplicaciones de Windows Phone
+## <a name="windows-phone-apps"></a>Aplicaciones de Windows Phone
 
 Es posible que veas **error 2001** cuando se detectan problemas con los paquetes de Windows Phone durante el procesamiento previo. En la mayoría de los casos, necesitarás volver a compilar el paquete de la aplicación para corregir el error. Una vez que lo hayas hecho, reemplaza el paquete antiguo por el nuevo en la página [Paquetes](upload-app-packages.md) del envío antes de hacer clic de nuevo en **Enviar a la Tienda**.
 
 Hay una serie de problemas que pueden causar este error. Revisa la lista siguiente para determinar lo que es posible que se aplique a los paquetes.
 
 -   **Uno o varios ensamblados del paquete se han ofuscado incorrectamente:** usa una herramienta diferente para realizar la ofuscación o quita la ofuscación. El proceso de compilación optimiza los ensamblados ofuscados pero, en ocasiones, algunos ensamblados se ofuscan con una herramienta que modifica el MSIL de una forma no compatible que provoca un error.
--   **El tamaño de uno o varios métodos de la aplicación supera los 256KB de nivel de integridad:** refactoriza el método incorrecto en funciones más pequeñas. El tamaño de MSIL para métodos de un ensamblado se puede determinar mediante la herramienta ILDASM.
+-   **El tamaño de uno o varios métodos de la aplicación supera los 256 KB de nivel de integridad:** refactoriza el método incorrecto en funciones más pequeñas. El tamaño de MSIL para métodos de un ensamblado se puede determinar mediante la herramienta ILDASM.
 -   **Error en la validación de la firma de nombre seguro para uno o varios ensamblados:** este error suele ocurrir cuando la firma de nombre seguro se realizó con una clave diferente a la esperada en los metadatos del ensamblado. Firma con la clave correcta o quita la firma de nombre seguro.
--   **El paquete contiene ensamblados en modo mixto (con código administrado y nativo):** los ensamblados en modo mixto no son compatibles con WindowsPhone. Quita los ensamblados de modo mixto del paquete y vuelve a enviar la aplicación.
+-   **El paquete contiene ensamblados en modo mixto (con código administrado y nativo):** los ensamblados en modo mixto no son compatibles con Windows Phone. Quita los ensamblados de modo mixto del paquete y vuelve a enviar la aplicación.
 -   **Un ensamblado de Windows Phone 8.1 XAP o appx/appxbundle no es válido:** asegúrate de que el archivo .winmd tenga al menos un punto de entrada público. Si es necesario, puedes usar cualquier aplicación descompilador para revisar el código y comprobar si hay puntos de entrada públicos.
 
 Otro error que puede aparecer después de enviar la aplicación es el **error 1300**. Esto ocurre cuando ya se han precompilado uno o varios ensamblados (o todo el paquete). Para solucionar este problema, recompila el paquete de la aplicación en Microsoft Visual Studio y, a continuación, envía el paquete recién generado.
 
-## Errores de nombre/identidad
+## <a name="nameidentity-errors"></a>Errores de nombre/identidad
 
 Si aparece un error que dice **El nombre encontrado en el paquete no es uno de los nombres de aplicación reservados. Reserva el nombre de la aplicación o actualiza el paquete con el nombre de la aplicación correcto para este idioma** puede deberse a que escribiste un nombre incorrecto en el paquete. Este error también puede producirse si estás usando un nombre de aplicación que aún no has reservado en el Centro de desarrollo. Normalmente se puede resolver el error siguiendo estos pasos:
 
@@ -48,10 +55,5 @@ Si aparece un error que dice **El nombre encontrado en el paquete no es uno de l
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

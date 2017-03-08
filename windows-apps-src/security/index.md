@@ -3,16 +3,23 @@ title: Seguridad
 description: "Esta sección contiene artículos sobre la compilación de aplicaciones para la Plataforma universal de Windows (UWP) seguras para Windows 10."
 ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 82f6e2decde2d332bd08b0b9798350b973860f21
-ms.openlocfilehash: b30492c3c74b19d5ce306829302be17ff303723f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e769a9aa7d381a527c1e1504efc52c2ead031c70
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="security"></a>Seguridad
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta sección contiene artículos sobre la compilación de aplicaciones para la Plataforma universal de Windows (UWP) seguras para Windows 10.
 
@@ -51,9 +58,4 @@ La sección de criptografía contiene información sobre temas más complejos re
 | [MAC, hash y firmas](macs-hashes-and-signatures.md)               | En este artículo se describe cómo se pueden usar los códigos de autenticación de mensajes (MAC), los hash y las firmas en las aplicaciones para detectar mensajes manipulados.                                                                                                                                                                                                                                                                                                                                                                                |
 | [Restricciones de exportación sobre la criptografía](export-restrictions-on-cryptography.md) | Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en                                                                                                                                                                                                                                                                                                                                                                                                     |
 | [Tareas comunes de criptografía](common-cryptography-tasks.md)                     | En estos artículos se ofrece código de ejemplo para tareas comunes de criptografía, como crear números aleatorios, comparar búferes, convertir entre cadenas y datos binarios, copiar a matrices de bytes y desde ellas; y codificar y descodificar datos.                                                                                                                                                                                                                                                                                    |
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

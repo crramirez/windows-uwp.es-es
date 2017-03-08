@@ -3,25 +3,32 @@ author: mtoepke
 title: Agregar una interfaz de usuario
 description: "Has visto cómo el juego de muestra implementa el objeto principal del juego, así como el marco de representación básico."
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, juegos, interfaz de usuario, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4f4ca9626e38ce7449b6476345205d136b3d9a2d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cb8cb8eae3328a9010553b7f3e041b8f2dbd8c02
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Agregar una interfaz de usuario
+# <a name="add-a-user-interface"></a>Agregar una interfaz de usuario
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Has visto cómo el juego de muestra implementa el objeto principal del juego, así como el marco de representación básico. Ahora, veamos cómo el juego de muestra ofrece comentarios sobre el estado de la partida al jugador. Aquí aprenderás a agregar sencillas opciones de menú y componentes de pantalla de visualización frontal encima de la salida de la canalización de gráficos 3-D.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Agregar gráficos y comportamientos básicos de interfaz de usuario a un juego DirectX de la Plataforma universal de Windows (UWP).
 
-## La superposición de la interfaz de usuario
+## <a name="the-user-interface-overlay"></a>La superposición de la interfaz de usuario
 
 
 Si bien existen muchas formas de mostrar elementos de texto y de interfaz de usuario en un juego DirectX, vamos a centrarnos en una: [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) (con [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) para los elementos de texto).
@@ -34,7 +41,7 @@ Direct2D es un conjunto de API de dibujo en 2-D que sirve para dibujar primitivo
 
 En esta muestra de juego tenemos dos componentes de UI principales: la pantalla de visualización frontal para los controles en el juego y de puntuación y una superposición que sirve para mostrar texto sobre el estado del juego y diversas opciones (como la información de pausa o el inicio de nivel).
 
-### Usar Direct2D para una pantalla de visualización frontal
+### <a name="using-direct2d-for-a-heads-up-display"></a>Usar Direct2D para una pantalla de visualización frontal
 
 Se trata de la pantalla de visualización frontal en el juego para la muestra de juego sin los elementos visuales. Es sencilla y despejada, lo que permite al jugador centrarse en navegar por el mundo en 3-D y disparar a los objetivos. Una buena interfaz o pantalla de visualización frontal nunca debe limitar la capacidad de un jugador de procesar y reaccionar a los eventos del juego.
 
@@ -177,7 +184,7 @@ En este código, el destino de representación de Direct2D establecido para la s
 
  
 
-### Mostrar la información sobre el estado del juego con una superposición
+### <a name="displaying-game-state-information-with-an-overlay"></a>Mostrar la información sobre el estado del juego con una superposición
 
 Además de la pantalla de visualización frontal, la muestra de juego tiene una superposición que representa cinco estados del juego, todos ellos con un gran primitivo rectangular de color negro con texto para que el jugador lo lea. (Observa que los rectángulos de controlador de movimiento y vista no se dibujan, porque no están activos en estos estados). Estos estados de superposición son:
 
@@ -203,7 +210,7 @@ Además de la pantalla de visualización frontal, la muestra de juego tiene una 
 
 Echemos un vistazo a cómo inicializamos y dibujamos la superposición para estos cinco estados.
 
-### Inicialización y dibujo de la superposición
+### <a name="initializing-and-drawing-the-overlay"></a>Inicialización y dibujo de la superposición
 
 Los cinco estados explícitos tienen algunas cosas en común: una, todos usan un rectángulo negro en el centro de la pantalla como fondo; dos, el texto mostrado es texto de título o de cuerpo; y tres, el texto usa la fuente Segoe UI y se dibuja encima del rectángulo negro. Como consecuencia, los recursos que necesitan y los métodos que implementan son muy parecidos.
 
@@ -370,7 +377,7 @@ El método **Initialize** obtiene una fábrica del objeto [**ID2D1Device**](http
 
 Ahora, todo lo que la superposición necesita es algo de texto para mostrar.
 
-### Representación del estado del juego en la superposición
+### <a name="representing-game-state-in-the-overlay"></a>Representación del estado del juego en la superposición
 
 Cada uno de los cinco estados de la superposición en la muestra de juego tiene un método correspondiente en el objeto **GameInfoOverlay**. Estos métodos dibujan una variación de la superposición para comunicar información explícita al jugador acerca del propio juego. Esta comunicación, por supuesto, se representa como dos cadenas: una cadena de título y una cadena de cuerpo. Debido a que la muestra ya configuró los recursos y el diseño para esta información en el método **RecreateDeviceResources**, sólo necesita proporcionar las cadenas específicas del estado de superposición.
 
@@ -502,11 +509,11 @@ void DirectXApp::SetGameInfoOverlay(GameInfoOverlayState state)
 
 Y ahora la muestra de juego tiene una forma de comunicar información de texto al jugador basándose en el estado del juego.
 
-### Pasos siguientes
+### <a name="next-steps"></a>Pasos siguientes
 
 En el siguiente tema, [Agregar controles](tutorial--adding-controls.md), vemos cómo el jugador interactúa con la muestra de juego y cómo la entrada cambia el estado del juego.
 
-### Código de muestra completo para esta sección
+### <a name="complete-sample-code-for-this-section"></a>Código de muestra completo para esta sección
 
 GameHud.h
 
@@ -1478,7 +1485,7 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 }
 ```
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 [Crear un juego para UWP sencillo con DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -1489,10 +1496,5 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

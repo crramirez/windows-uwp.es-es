@@ -2,19 +2,27 @@
 author: mcleanbyron
 description: "Aprende a usar la API de REST de metadatos de la aplicación para acceder a determinados metadatos de los tipos de aplicaciones. Esta API está pensada para que las redes de publicidad puedan recuperar información sobre las aplicaciones de la Tienda Windows con el objetivo de mejorar su forma de vender espacio de anuncios a los anunciantes."
 title: "API de metadatos de la aplicación para redes de publicidad"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, red de publicidad, metadatos de la aplicación"
+ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
 translationtype: Human Translation
-ms.sourcegitcommit: 97f7d8e5ebc2df1752a182d5765b6a8b28b539e5
-ms.openlocfilehash: e2b0680e62014526f684e7c1f7fd7da83a14f5d3
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8ee555d335007a09c61247a929705aa2fff2469d
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# API de metadatos de la aplicación para redes de publicidad
+# <a name="app-metadata-api-for-advertising-networks"></a>API de metadatos de la aplicación para redes de publicidad
 
 Las redes de publicidad pueden usar la *API de metadatos de la aplicación* para, mediante programación, recuperar metadatos sobre las aplicaciones de la Tienda Windows, incluidos detalles como la descripción y la categoría de la descripción de la Tienda de la aplicación, y si la aplicación está destinada a niños menores de 13 años. El acceso a esta API está actualmente restringido a los desarrolladores a los que Microsoft ha concedido permiso a la API.
 
 Este artículo proporciona instrucciones sobre cómo solicitar acceso a la API mediante el [portal de la API de metadatos de la aplicación](https://admetadata.portal.azure-api.net/), cómo obtener tu clave de suscripción para acceder a la API y cómo llamar a la API.
 
-## Solicitar acceso
+## <a name="request-access"></a>Solicitar acceso
 
 Las redes de publicidad pueden solicitar acceso a la API de metadatos de la aplicación, para ello, deben seguir estas instrucciones:
 
@@ -26,7 +34,7 @@ Las redes de publicidad pueden solicitar acceso a la API de metadatos de la apli
 Después de enviar la solicitud, recibirás un correo electrónico en 24 horas aproximadamente que te avisa si se ha concedido o denegado tu solicitud.
 
 <span id="get-key" />
-## Obtener tu clave de suscripción
+## <a name="get-your-subscription-key"></a>Obtener tu clave de suscripción
 
 Si se te concede acceso a la API de metadatos de la aplicación, sigue estas instrucciones para obtener tu clave de suscripción. Esta clave se debe pasar en el encabezado de solicitud de llamadas a la API.
 
@@ -35,7 +43,7 @@ Si se te concede acceso a la API de metadatos de la aplicación, sigue estas ins
 3. En la sección **Tus suscripciones** de la página, haz clic en **Mostrar** junto a **Clave principal**. Esta es tu clave de suscripción. Copia la clave para que puedas usarla más adelante cuando llames a la API.
 
 <span id="call-the-api" />
-## Llamar a la API
+## <a name="call-the-api"></a>Llamar a la API
 
 Una vez que tengas la clave de suscripción, estás listo para llamar a la API con la sintaxis de REST de HTTP desde el lenguaje de programación de tu elección. Para obtener información sobre la sintaxis de la API, consulta la siguiente sección [Sintaxis de API](#syntax). Para ver ejemplos de código en C#, JavaScript, Python y otros idiomas, haz clic en la ficha **API** del portal de la API de metadatos de la aplicación, haz clic en **Detalles de la aplicación**y, a continuación, consulta la sección **Ejemplos de código** en la parte inferior de la página.
 
@@ -46,7 +54,7 @@ Como alternativa, puedes llamar a la API mediante la interfaz de usuario proporc
 
 
 <span id="syntax" />
-## Sintaxis de API
+## <a name="api-syntax"></a>Sintaxis de API
 
 Este método tiene la siguiente sintaxis de solicitud.
 
@@ -57,7 +65,7 @@ Este método tiene la siguiente sintaxis de solicitud.
 <span/>
  
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -65,7 +73,7 @@ Este método tiene la siguiente sintaxis de solicitud.
 
 <span/>
 
-### Parámetros de la solicitud
+### <a name="request-parameters"></a>Parámetros de la solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------|
@@ -73,7 +81,7 @@ Este método tiene la siguiente sintaxis de solicitud.
 
 <span/>
 
-### Ejemplo de solicitud
+### <a name="request-example"></a>Ejemplo de solicitud
 
 En el siguiente ejemplo se muestra cómo recuperar metadatos para una aplicación con el valor de Id. de la Tienda 9NBLGGH29DM8.
 
@@ -82,7 +90,7 @@ GET https://admetadata.azure-api.net/v1/app/9NBLGGH29DM8 HTTP/1.1
 Ocp-Apim-Subscription-Key: <subscription key>
 ```
 
-### Cuerpo de la respuesta
+### <a name="response-body"></a>Cuerpo de la respuesta
 
 En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada satisfactoria a este método.
 
@@ -127,9 +135,4 @@ Para obtener más información acerca de los valores del cuerpo de respuesta, co
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

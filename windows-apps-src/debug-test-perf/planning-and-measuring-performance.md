@@ -3,19 +3,26 @@ author: mcleblanc
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: "Planeación del rendimiento"
 description: "Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f66617e3131399a1cfcac17f258cc3b42c6810d2
+ms.lasthandoff: 02/07/2017
 
 ---
-# Planificación del rendimiento
+# <a name="planning-for-performance"></a>Planeación del rendimiento
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, puedes realizar mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos.
 
-## Especificar objetivos
+## <a name="specifying-goals"></a>Especificar objetivos
 
 La experiencia del usuario es una forma básica de definir el buen rendimiento. La percepción del usuario del rendimiento de una aplicación puede verse afectada por su tiempo de inicio. Un usuario debería tener en cuenta que un tiempo de inicio de una aplicación de menos de un segundo se considera un rendimiento excelente; un rendimiento de menos de 5 segundos, bueno, y uno de más de 5 segundos, deficiente.
 
@@ -23,7 +30,7 @@ Otras métricas tienen un impacto menos obvio en la experiencia del usuario; por
 
 Es mejor establecer un objetivo inicial y revisarlo más tarde, que no tener ningún objetivo en absoluto. Los objetivos de rendimiento de la aplicación deben ser específicos y mensurables y deben dividirse en tres categorías: el tiempo que tardan los usuarios o la aplicación en completar tareas (tiempo); la velocidad y la continuidad con la que la aplicación se redibuja en respuesta a la interacción del usuario (fluidez); y cómo conserva la aplicación los recursos del sistema, incluida la batería (eficiencia).
 
-## Tiempo
+## <a name="time"></a>Tiempo
 
 Piensa en los intervalos de tiempo aceptables (*clases de interacción*) necesarios para que los usuarios realicen sus tareas en tu aplicación. Para cada clase de interacción, asigna una etiqueta, una opinión de percepción del usuario y unas duraciones máximas e ideales. Aquí tienes algunas sugerencias.
 
@@ -55,7 +62,7 @@ Si vas a mostrar contenido en directo, te recomendamos que tengas también en cu
 
 Con tus objetivos especificados, ahora tienes una mayor capacidad para probar, analizar y optimizar tu aplicación.
 
-## Fluidez
+## <a name="fluidity"></a>Fluidez
 
 Los objetivos de fluidez apreciables específicos de la aplicación pueden incluir:
 
@@ -63,7 +70,7 @@ Los objetivos de fluidez apreciables específicos de la aplicación pueden inclu
 -   Las animaciones se representan a 60 fotogramas por segundo (FPS).
 -   Cuando un usuario realiza un movimiento panorámico/desplazamiento, la aplicación presenta de 3 a 6 páginas de contenido por segundo.
 
-## Eficiencia
+## <a name="efficiency"></a>Eficiencia
 
 Los objetivos de eficiencia apreciables específicos de la aplicación pueden incluir:
 
@@ -71,7 +78,7 @@ Los objetivos de eficiencia apreciables específicos de la aplicación pueden in
 -   Cuando la aplicación está inactiva, *N* y *M* son igual a cero en el proceso de la aplicación.
 -   La aplicación puede usarse activamente durante *X* horas con batería; cuando la aplicación está inactiva, el dispositivo conserva la carga durante *Y* horas.
 
-## Diseñar la aplicación para el rendimiento
+## <a name="design-your-app-for-performance"></a>Diseñar la aplicación para el rendimiento
 
 Ahora puedes usar tus objetivos de rendimiento para diseñar la aplicación. Usando la aplicación de ejemplo de comidas, una vez que el usuario navega a la página de recetas, puedes elegir [actualizar elementos de forma incremental](optimize-gridview-and-listview.md#update-items-incrementally) para que el nombre de la receta se represente en primer lugar, la visualización de ingredientes se aplace y la visualización de imágenes se aplace aún más. Esto mantiene la capacidad de respuesta y una interfaz de usuario fluida en el movimiento panorámico y el desplazamiento, con una representación de fidelidad total una vez que la interacción se reduce a un ritmo que pueda seguir el subproceso de interfaz de usuario. A continuación se enumeran algunos otros aspectos que se deben tener en cuenta.
 
@@ -110,7 +117,7 @@ Ahora puedes usar tus objetivos de rendimiento para diseñar la aplicación. Usa
 
 Con todo listo en materia de diseño de rendimiento, puedes empezar a codificar la aplicación.
 
-## Equipar la aplicación para lograr rendimiento
+## <a name="instrument-for-performance"></a>Equipar la aplicación para lograr rendimiento
 
 Durante la codificación, agrega código que registre mensajes y eventos en determinados puntos mientras la aplicación se ejecuta. Luego, cuando pruebes la aplicación, puedes usar herramientas de generación de perfiles como Windows Performance Recorder y Windows Performance Analyzer (ambas incluidas en [Windows Performance Toolkit](https://msdn.microsoft.com/library/windows/apps/xaml/hh162945.aspx)) para crear y ver un informe sobre el rendimiento de la aplicación. En este informe, puedes buscar los mensajes y eventos para que te resulte más fácil analizar los resultados.
 
@@ -152,7 +159,7 @@ Consulta también la [muestra de registro](http://go.microsoft.com/fwlink/p/?Lin
 
 Con la aplicación instrumentada, ya puedes probar y medir su rendimiento.
 
-## Probar y medir con objetivos de rendimiento
+## <a name="test-and-measure-against-performance-goals"></a>Probar y medir con objetivos de rendimiento
 
 Parte del plan de rendimiento es definir durante el desarrollo todos los puntos en los que se medirá el rendimiento. Esto sirve para diferentes fines en función de si mides durante la fase de creación del prototipo, la de desarrollo o la de implementación. Medir el rendimiento durante las primeras etapas de un prototipo puede resultar muy valioso, por lo que te recomendamos hacerlo tan pronto como tengas un código que realice algún trabajo significativo. Las mediciones en las primeras etapas te proporcionan una idea clara de los lugares donde se consumen más recursos en la aplicación y te proporcionan información para que puedas tomar las decisiones de diseño correctas. Esto da como resultado aplicaciones de alto rendimiento y escalado. Por lo general, resulta costeso cambiar los diseños más tarde. Si el rendimiento se mide tarde en el ciclo del producto, es posible que debas realizar modificaciones de última hora y que el rendimiento no sea bueno.
 
@@ -177,7 +184,7 @@ Para más información, consulta estos recursos y herramientas de generación de
 -   La sesión //build/ [Rendimiento de XAML](https://channel9.msdn.com/Events/Build/2015/3-698)
 -   La sesión //build/ [Nuevas herramientas XAML de Visual Studio 2015](https://channel9.msdn.com/Events/Build/2015/2-697)
 
-## Responder a los resultados de la prueba de rendimiento
+## <a name="respond-to-the-performance-test-results"></a>Responder a los resultados de la prueba de rendimiento
 
 Después de analizar los resultados de las pruebas de rendimiento, determina si es necesario hacer cambios. Por ejemplo:
 
@@ -187,13 +194,8 @@ Después de analizar los resultados de las pruebas de rendimiento, determina si 
 
 Si es necesario hacer cambios, hazlos y vuelve a instrumentar o probar y repite la operación.
 
-## Optimización
+## <a name="optimizing"></a>Optimización
 
 Optimizar las rutas de código crítico para el rendimiento de la aplicación es lo que más tiempo conlleva. La creación de perfiles te lo indicará. A menudo, existe un equilibrio entre la creación de software que cumpla con buenas prácticas de diseño y la escritura de código que funcione en la optimización más elevada. Suele ser mejor dar prioridad a la productividad del desarrollador y a un buen diseño del software en las áreas donde no importa tanto el rendimiento.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -1,17 +1,24 @@
 ---
 author: mcleanbyron
 Description: "Para realizar un experimento en tu aplicación de la Plataforma universal de Windows (UWP) con pruebas A/B, debes escribir el código del experimento en tu aplicación."
-title: "Programación de tu aplicación para los experimentos"
+title: "Programar tu aplicación para los experimentos"
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Microsoft Store Services SDK, pruebas A/B, experimentos
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: cc32e2688bce636e1f4bda02aade4ed1d94f3e28
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d5c46c896aad3dfbc0f6f9bdb010652507654cb0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="code-your-app-for-experimentation"></a>Programación de tu aplicación para los experimentos
+# <a name="code-your-app-for-experimentation"></a>Programar tu aplicación para los experimentos
 
-Después de [crear un proyecto y definir variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md), estarás listo para actualizar el código de tu aplicación en la Plataforma universal de Windows (UWP) para:
+Después de [crear un proyecto y definir variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md), estarás listo para actualizar el código de tu aplicación para la Plataforma universal de Windows (UWP) para:
 * Recibir los valores de variables remotas del Centro de desarrollo de Windows.
 * Usar variables remotas para configurar las experiencias de aplicación para tus usuarios.
 * Registrar eventos en el Centro de desarrollo que indican cuándo han visto los usuarios el experimento y han realizado una acción deseada (también denominada *conversión*).
@@ -110,9 +117,4 @@ Después de programar el experimento en la aplicación, estás listo para los si
 * [Administración de tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md)
 * [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

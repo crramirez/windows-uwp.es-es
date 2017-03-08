@@ -2,14 +2,21 @@
 author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Creación de una aplicación &quot;Hello, world&quot; (XAML)"
-description: "En este tutorial se enseña a usar el lenguaje XAML con C# para crear una sencilla aplicación Hello, world para la Plataforma universal de Windows (UWP) de Windows 10."
+description: "En este tutorial se enseña a usar el lenguaje XAML con C# para crear una sencilla aplicación Hello, world para la Plataforma universal de Windows (UWP) en Windows 10."
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
-ms.openlocfilehash: e928b4bb116ad98ffe7c225ac1ef2306e56a13ea
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 16622dbd9914907f75c8392f8e4de6e1c10b049c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="create-a-hello-world-app-xaml"></a>Creación de una aplicación "Hello, world" (XAML)
+# <a name="create-a-hello-world-app-xaml"></a>Crear una aplicación "Hello, world" (XAML)
 
 Este tutorial te enseña a usar XAML y C# para crear una aplicación sencilla "Hello, world" para la Plataforma universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes compilar una aplicación que se ejecute en cualquier dispositivo de Windows 10.
 
@@ -23,8 +30,7 @@ Aquí aprenderás a:
 ## <a name="before-you-start"></a>Antes de comenzar...
 
 -   [¿Qué es una aplicación universal de Windows](whats-a-uwp.md)?
--   [Novedades de Windows 10](https://dev.windows.com/whats-new-windows-10-dev-preview)
--   Para completar este tutorial, debes tener Windows 10 y Visual Studio 2015. [Prepárate](get-set-up.md).
+-   Para realizar este tutorial, debes tener Windows 10 y Visual Studio 2015. [Prepárate](get-set-up.md).
 -   También se supone que estás usando el diseño de ventana predeterminado de Visual Studio. Si cambias el diseño predeterminado, puedes restablecerlo en el menú **Ventana** con el comando **Restablecer diseño de la ventana**.
 
 
@@ -255,10 +261,5 @@ Cuando ejecutes la aplicación y hagas clic en el botón, tu equipo (o teléfono
 
 Enhorabuena, has creado tu primera aplicación para Windows 10 y la UWP.
 
-Para aprender a usar XAML para diseñar los controles que usará la aplicación prueba la ([tutorial sobre la cuadrícula](../layout/grid-tutorial.md) o salta directamente al [siguiente paso](learn-more.md)?
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+Para aprender a usar XAML para diseñar los controles que usará la aplicación, prueba el [tutorial sobre la cuadrícula](../layout/grid-tutorial.md), o salta directamente a los [pasos siguientes](learn-more.md).
 

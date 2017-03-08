@@ -3,16 +3,23 @@ author: mtoepke
 title: Controles de movimiento y vista para juegos
 description: "Aprende a agregar controles de movimiento y vista tradicionales de mouse y teclado (también conocidos como controles mouselook) a un juego DirectX."
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, juegos, controles, movimiento y vista
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d5bd0a43c1f261e6a12ed947e497d3e45d0ab6a7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 40af05538aa6a6fff6e159fe8aa8812090e8b44b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles de movimiento y vista para juegos
+# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles de movimiento y vista para juegos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aprende a agregar controles de movimiento y vista tradicionales de mouse y teclado (también conocidos como controles mouselook) a un juego DirectX.
 
@@ -22,13 +29,13 @@ Si se trata de un concepto de control desconocido para ti, piensa en ello de est
 
 En el mundo de los juegos, estos controles se conocen comúnmente como controles WASD, puesto que las teclas W, A, S y D se usan para el movimiento de cámara fija en el plano x-z y el mouse se usa para controlar la rotación de la cámara sobre los ejes x e y.
 
-## Objetivos
+## <a name="objectives"></a>Objetivos
 
 
 -   Agregar controles básicos de movimiento y vista a tu juego DirectX para mouse, teclado y pantallas táctiles.
 -   Implementar una cámara en primera persona usada para navegar por el entorno en 3D.
 
-## Nota sobre las implementaciones de controles táctiles
+## <a name="a-note-on-touch-control-implementations"></a>Nota sobre las implementaciones de controles táctiles
 
 
 Para los controles táctiles, implementamos dos controladores: el controlador de movimiento, que se encarga del movimiento en el plano x-z relativo al punto de vista de la cámara, y el controlador de vista, que apunta el punto de vista de la cámara. Nuestro controlador de movimiento se asigna a los teclas WASD del teclado y el controlador de vista, al mouse. Sin embargo, para los controles táctiles es necesario definir una región de la pantalla que funcione como las entradas direccionales, o las teclas WASD virtuales, con el resto de la pantalla como espacio de entrada para los controles de vista.
@@ -39,7 +46,7 @@ Nuestra pantalla tiene esta apariencia.
 
 Cuando mueves el puntero táctil (¡no hablamos del mouse!) en la parte inferior izquierda de la pantalla, cualquier movimiento hacia arriba hará que la cámara se mueva hacia delante. Cualquier movimiento hacia abajo moverá la cámara hacia atrás. Lo mismo ocurre con el movimiento a izquierda y derecha dentro del espacio de puntero del controlador de movimiento. Fuera de ese espacio, y se convierte en un controlador de vista: basta con tocar o arrastrar la cámara al lugar hacia el que quieras mirar.
 
-## Configuración de la infraestructura básica para eventos de entrada
+## <a name="set-up-the-basic-input-event-infrastructure"></a>Configuración de la infraestructura básica para eventos de entrada
 
 
 En primer lugar, debemos crear la clase de control que usaremos para controlar los eventos de entrada del mouse y del teclado, y actualizar la perspectiva de la cámara según dicha entrada. Debido a que vamos a implementar controles de movimiento y vista, recibe el nombre de **MoveLookController**.
@@ -184,7 +191,7 @@ Y, por último, usamos estos métodos y propiedades para inicializar, acceder y 
 
 Ahora ya tenemos todos los componentes necesarios para implementar tus controles de movimiento y vista. Por tanto, intentemos combinar todas las piezas.
 
-## Creación de los eventos de entrada básicos
+## <a name="create-the-basic-input-events"></a>Creación de los eventos de entrada básicos
 
 
 El distribuidor de eventos de Windows Runtime proporciona 5 eventos que queremos que controlen las instancias de la clase **MoveLookController**:
@@ -376,7 +383,7 @@ void MoveLookController::OnKeyUp(
 
 Cuando la tecla se suelta, el controlador de eventos lo revierte a falso. Cuando llamamos a **Update**, comprueba los estados de movimiento direccional y mueve la cámara en consonancia. Este proceso es mucho más simple que la implementación táctil.
 
-## Inicialización de los controles táctiles y del estado del controlador
+## <a name="initialize-the-touch-controls-and-the-controller-state"></a>Inicialización de los controles táctiles y del estado del controlador
 
 
 Encadenemos ahora los eventos e inicialicemos todos los campos de estado de controladores.
@@ -423,7 +430,7 @@ void MoveLookController::Initialize( _In_ CoreWindow^ window )
 
 **Initialize** hace referencia a la instancia [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) de la aplicación como un parámetro y registra los controladores de eventos que desarrollamos en los eventos adecuados en **CoreWindow**. Inicializa los id. del puntero de movimiento y vista, establece el vector de comandos para nuestra implementación de movimiento en pantalla táctil en cero y establece que la cámara mire al frente cuando se inicia la aplicación.
 
-## Obtención y configuración de la posición y la orientación de la cámara
+## <a name="getting-and-setting-the-position-and-orientation-of-the-camera"></a>Obtención y configuración de la posición y la orientación de la cámara
 
 
 Definamos algunos métodos para obtener y establecer la posición de la cámara en relación a la ventanilla.
@@ -464,7 +471,7 @@ DirectX::XMFLOAT3 MoveLookController::get_LookPoint()
 }
 ```
 
-## Actualización de la información de estado del controlador
+## <a name="updating-the-controller-state-info"></a>Actualización de la información de estado del controlador
 
 
 Ahora vamos a realizar los cálculos que convierten la información de coordenadas del puntero registrada en **m\_movePointerPosition** en nueva información de coordenadas, con respecto al sistema de coordenadas del mundo. Nuestra aplicación llamará a este método cada vez que actualicemos el bucle de la aplicación principal. Es aquí, por tanto, donde calculamos la información de la nueva posición del punto de vista que luego pasamos a la aplicación para actualizar la matriz de vista antes de proyectarla a la ventanilla.
@@ -556,7 +563,7 @@ Cuando calculamos la velocidad, también traducimos las coordenadas recibidas de
 
 La posición final del punto de vista para el jugador es la última posición más la velocidad calculada y esto es lo que el representador lee cuando llama al método **get\_Position** (probablemente durante la configuración de cada fotograma). Después, restablecemos el comando de movimiento a cero.
 
-## Actualización de la matriz de vista con la nueva posición de cámara
+## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>Actualización de la matriz de vista con la nueva posición de cámara
 
 
 Podemos obtener una coordenada del espacio de la escena en la que se centra nuestra cámara, y que se actualiza cada vez que se lo ordenamos a la aplicación (cada 60 segundos en el bucle principal de la aplicación, por ejemplo). Este pseudocódigo sugiere el comportamiento de llamada que puedes implementar:
@@ -585,10 +592,5 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

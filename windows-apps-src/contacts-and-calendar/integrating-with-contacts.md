@@ -1,15 +1,23 @@
 ---
 author: normesta
-description: "Muestra cómo agregar la aplicación junto a las acciones en una tarjeta de contacto"
+description: "Muestra cómo agregar la aplicación junto a las acciones en una tarjeta de contacto."
 MSHAttr: PreferredLib:/library/windows/apps
 title: "Conectar la aplicación a acciones en una tarjeta de contacto"
+ms.author: normesta
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, contactos, tarjeta de contacto, anotación, contacts, contact card, annotation"
+ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 translationtype: Human Translation
-ms.sourcegitcommit: 5c0f6ef1f1a346a66ca554a415d9f24c8a314ae1
-ms.openlocfilehash: 034dc2b7be69763416192014abe24b9bf924c443
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: da64e23714035b6763104d48430371469272a939
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Conectar la aplicación a acciones en una tarjeta de contacto
+# <a name="connect-your-app-to-actions-on-a-contact-card"></a>Conectar la aplicación a acciones en una tarjeta de contacto
 
 La aplicación puede aparecer junto a acciones en una tarjeta de contacto o una minitarjeta de contacto. Los usuarios pueden elegir tu aplicación para realizar una acción, como abrir una página de perfil, realizar una llamada o enviar un mensaje.
 
@@ -19,11 +27,11 @@ Para empezar, busca contactos existentes o crea contactos nuevos. A continuació
 
 Para obtener una muestra más completa, consulta la [muestra de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration).
 
-## Buscar o crear un contacto
+## <a name="find-or-create-a-contact"></a>Buscar o crear un contacto
 
 Si tu aplicación ayuda a los contactos a conectarse con otras personas, busca contactos en Windows y anótalos a continuación. Si tu aplicación administra contactos, puedes agregarlos a una lista de contactos de Windows y anotarlos a continuación.
 
-### Buscar un contacto
+### <a name="find-a-contact"></a>Buscar un contacto
 
 Para buscar contactos, usa un nombre, una dirección de correo electrónico o un número de teléfono.
 
@@ -37,7 +45,7 @@ contacts = await contactStore.FindContactsAsync(emailAddress);
 Contact contact = contacts[0];
 ```
 
-### Crear un contacto
+### <a name="create-a-contact"></a>Crear un contacto
 
 Si tu aplicación es más bien como una libreta de direcciones, crea contactos y agrégalos a una lista de contactos.
 
@@ -71,7 +79,7 @@ await contactList.SaveContactAsync(contact);
 
 ```
 
-## Etiquetar cada contacto con una anotación
+## <a name="tag-each-contact-with-an-annotation"></a>Etiquetar cada contacto con una anotación
 
 Etiqueta cada contacto con una lista de acciones (operaciones) que la aplicación pueda realizar (por ejemplo, videollamadas y mensajería).
 
@@ -101,7 +109,7 @@ annotation.SupportedOperations = ContactAnnotationOperations.Message |
 await annotationList.TrySaveAnnotationAsync(annotation);
 ```
 
-## Registrarse para cada operación
+## <a name="register-for-each-operation"></a>Registrarse para cada operación
 
 En el manifiesto del paquete, regístrate para cada operación que enumeraste en la anotación.
 
@@ -135,7 +143,7 @@ También puedes agregarlos en la pestaña **Declaraciones** del diseñador de ma
 
 ![Pestaña declaraciones del diseñador de manifiestos](images/manifest-designer-protocols.png)
 
-## Buscar la aplicación junto a las acciones en una tarjeta de contacto
+## <a name="find-your-app-next-to-actions-in-a-contact-card"></a>Buscar la aplicación junto a las acciones en una tarjeta de contacto
 
 Abre la aplicación Contactos. La aplicación aparece junto a cada acción (operación) que especificaste en la anotación y el manifiesto del paquete.
 
@@ -143,7 +151,7 @@ Abre la aplicación Contactos. La aplicación aparece junto a cada acción (oper
 
 Si los usuarios eligen tu aplicación para una acción, esta aparecerá como la aplicación predeterminada para esa acción la próxima vez que los usuarios abran una tarjeta de contacto.
 
-## Buscar la aplicación junto a las acciones en una minitarjeta de contacto
+## <a name="find-your-app-next-to-actions-in-a-mini-contact-card"></a>Buscar la aplicación junto a las acciones en una minitarjeta de contacto
 
 En las minitarjetas de contacto, la aplicación aparece en las pestañas que representan acciones.
 
@@ -174,7 +182,7 @@ Para ver más ejemplos con minitarjetas de contacto, consulta la [muestra de tar
 
 Igual que la tarjeta de contacto, cada pestaña recuerda la aplicación que el usuario usó por última vez, lo que permite volver fácilmente a la aplicación.
 
-## Realizar operaciones cuando los usuarios seleccionan tu aplicación en una tarjeta de contacto
+## <a name="perform-operations-when-users-select-your-app-in-a-contact-card"></a>Realizar operaciones cuando los usuarios seleccionan tu aplicación en una tarjeta de contacto
 
 Invalida el método [Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330) en el archivo **App.cs** y navega por los usuarios a una página de la aplicación. La [muestra de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration) muestra una manera de hacerlo.
 
@@ -209,9 +217,4 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 ```
 
 La propiedad ```args.uri.scheme``` contiene el nombre de la operación y la propiedad ```args.uri.Query``` contiene el identificador del usuario.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

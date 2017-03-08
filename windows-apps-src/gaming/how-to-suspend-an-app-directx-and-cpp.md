@@ -3,20 +3,27 @@ author: mtoepke
 title: "Cómo suspender una aplicación (DirectX y C++)"
 description: "En este tema verás cómo guardar datos importantes de la aplicación y del estado del sistema cuando el sistema suspende la aplicación DirectX para la Plataforma universal de Windows (UWP)."
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, juegos, games, suspensión, suspend, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dd7319b254dcaaa5da7a7055bbde299f5e7e62a3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 028350f3e4bf6bda5a72663c009e8117c9311b3e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Cómo suspender una aplicación (DirectX y C++)
+# <a name="how-to-suspend-an-app-directx-and-c"></a>Cómo suspender una aplicación (DirectX y C++)
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema verás cómo guardar datos importantes de la aplicación y del estado del sistema cuando el sistema suspende la aplicación DirectX para la Plataforma universal de Windows (UWP).
 
-## Registrar el controlador de eventos de suspensión
+## <a name="register-the-suspending-event-handler"></a>Registrar el controlador de eventos de suspensión
 
 
 Primero, realiza un registro para administrar el evento [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860), que se desencadena cuando la aplicación cambia a un estado de suspensión debido a la acción del usuario o del sistema.
@@ -35,7 +42,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 }
 ```
 
-## Guarda los datos de la aplicación antes de la suspensión
+## <a name="save-any-app-data-before-suspending"></a>Guarda los datos de la aplicación antes de la suspensión
 
 
 Cuando la aplicación controla el evento [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860), tiene la oportunidad de guardar sus datos de aplicación importantes en la función de controlador. La aplicación debe utilizar la API de almacenamiento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para guardar datos de aplicación simples de manera sincrónica. Si vas a desarrollar un juego, guarda toda la información de estado sobre el juego que sea importante. No olvides suspender el procesamiento de audio.
@@ -91,10 +98,10 @@ void App::Run()
 }
 ```
 
-## Llamar a Trim()
+## <a name="call-trim"></a>Llamar a Trim()
 
 
-Desde Windows8.1, todas las aplicaciones de la TiendaWindows con DirectX deben llamar a [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) al suspenderse. Esta llamada la indica al controlador gráfico que libere todos los búferes temporales asignados para la aplicación, lo que reduce la posibilidad de que se cierre la aplicación para reclamar recursos de memoria mientras esté en estado de suspensión. Este es un requisito de certificación para Windows8.1.
+Desde Windows 8.1, todas las aplicaciones de la Tienda Windows con DirectX deben llamar a [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) al suspenderse. Esta llamada la indica al controlador gráfico que libere todos los búferes temporales asignados para la aplicación, lo que reduce la posibilidad de que se cierre la aplicación para reclamar recursos de memoria mientras esté en estado de suspensión. Este es un requisito de certificación para Windows 8.1.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)
@@ -126,12 +133,12 @@ void DX::DeviceResources::Trim()
 }
 ```
 
-## Liberar los recursos exclusivos y los identificadores de archivos
+## <a name="release-any-exclusive-resources-and-file-handles"></a>Liberar los recursos exclusivos y los identificadores de archivos
 
 
 Cuando la aplicación controla el evento [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860), también tiene la oportunidad de liberar recursos exclusivos e identificadores de archivos. Liberar recursos exclusivos e identificadores de archivos sirve para que otras aplicaciones puedan acceder a ellos cuando la aplicación no los está usando. Cuando la aplicación se active después de haberla finalizado, deberá abrir sus recursos exclusivos e identificadores de archivos.
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 
 El sistema suspende la aplicación cuando el usuario cambia a otra aplicación o al escritorio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera. El sistema restaura la aplicación en el punto exacto en el que estaba, para que parezca al usuario que se ejecutaba en segundo plano
@@ -140,7 +147,7 @@ El sistema intenta mantener la aplicación y sus datos en memoria mientras está
 
 El sistema no notifica a una aplicación cuando se cierra, con lo cual la aplicación deberá guardar sus datos de aplicación y liberar los recursos exclusivos y los identificadores de archivos cuando se suspenda, y restaurarlos cuando vuelva a activarse.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Cómo reanudar una aplicación (DirectX y C++)](how-to-resume-an-app-directx-and-cpp.md)
 * [Cómo activar una aplicación (DirectX y C++)](how-to-activate-an-app-directx-and-cpp.md)
@@ -151,10 +158,5 @@ El sistema no notifica a una aplicación cuando se cierra, con lo cual la aplica
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,21 +3,28 @@ author: mtoepke
 title: Representar la escena con prueba de profundidad
 description: "Crea un efecto de sombra agregando pruebas de profundidad al sombreador de vértices (o geometría) y al sombreador de píxeles."
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, games, juegos, rendering, representación, scene, escena, depth testing, pruebas de profundidad, direct3d, shadows, sombras"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6351cc9f6efe0d4bffb54961624a35b4a9f4136a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Representar la escena con prueba de profundidad
+# <a name="render-the-scene-with-depth-testing"></a>Representar la escena con prueba de profundidad
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Crea un efecto de sombra agregando pruebas de profundidad al sombreador de vértices (o geometría) y al sombreador de píxeles. Parte 3 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
-## Incluir la transformación para el frustum de la luz
+## <a name="include-transformation-for-light-frustum"></a>Incluir la transformación para el frustum de la luz
 
 
 Tu sombreador de vértices necesita calcular la posición transformada del espacio de luz para cada vértice. Proporciona el modelo de espacio de luz y las matrices de proyección con un búfer de constantes. También puedes usar este búfer de constantes para proporcionar la posición de la luz y la normal para los cálculos de iluminación. La posición transformada en el espacio de luz se usará durante la prueba de profundidad.
@@ -61,7 +68,7 @@ PixelShaderInput main(VertexShaderInput input)
 
 Luego el sombreador de píxeles usará la posición del espacio de luz interpolado que proporcionó el sombreador de vértices para probar si el píxel está en la sombra.
 
-## Probar si la posición está en el frustum de la luz
+## <a name="test-whether-the-position-is-in-the-light-frustum"></a>Probar si la posición está en el frustum de la luz
 
 
 Primero comprueba que el píxel esté en el frustum de vista de la luz normalizando las coordenadas X e Y. Si ambas están en el rango \[0, 1\], es posible que el píxel esté en la sombra. De lo contrario, puedes omitir la prueba de profundidad. Un sombreador puede probar esto rápidamente llamando a [Saturar](https://msdn.microsoft.com/library/windows/desktop/hh447231) y comparando el resultado con el valor original.
@@ -83,7 +90,7 @@ if ((saturate(shadowTexCoords.x) == shadowTexCoords.x) &&
 {
 ```
 
-## Prueba de profundidad con el mapa de sombras
+## <a name="depth-test-against-the-shadow-map"></a>Prueba de profundidad con el mapa de sombras
 
 
 Usa una función de comparación de muestras ([SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) o [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697)) para probar la profundidad del píxel en espacio de luz con respecto al mapa de profundidad. Calcula el valor de profundidad de espacio de luz normalizada, que es `z / w`, y pasa el valor a la función de comparación. Dado que usamos una prueba de comparación LessOrEqual para el muestrario, la función intrínseca devuelve cero cuando se aprueba la prueba de comparación. Esto indica que el píxel está en sombra.
@@ -115,7 +122,7 @@ lighting = float(shadowMap.SampleCmpLevelZero(
     );
 ```
 
-## Calcular la iluminación dentro o fuera de la sombra
+## <a name="compute-lighting-in-or-out-of-shadow"></a>Calcular la iluminación dentro o fuera de la sombra
 
 
 Si el píxel no está en sombra, el sombreador de píxeles debe calcular la iluminación directa y agregarla al valor del píxel.
@@ -161,10 +168,5 @@ En la siguiente parte de este tutorial, aprenderás sobre la [compatibilidad con
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

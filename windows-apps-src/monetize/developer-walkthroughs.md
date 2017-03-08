@@ -3,13 +3,20 @@ author: mcleanbyron
 ms.assetid: 527660fb-8e32-41b4-89cb-d422ed48c69b
 description: "Usa los tutoriales de esta sección para aprender a agregar anuncios en banners y anuncios intersticiales en vídeo a las aplicaciones mediante las bibliotecas de Microsoft Advertising."
 title: Tutoriales de desarrollo para las bibliotecas de Microsoft Advertising
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, anuncios, ads, publicidad, advertising, tutoriales, walkthroughs
 translationtype: Human Translation
-ms.sourcegitcommit: 20baef9a06b6cdb4ca4f48f71a8e9e2a34192b0f
-ms.openlocfilehash: 40759b1ca7c9e62c985e1ae5844bc3032a2940a2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fb1d2e8ea3a5747523f77106b98d033b70df5a95
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Tutoriales de desarrollo para las bibliotecas de Microsoft Advertising
+# <a name="developer-walkthroughs-for-the-microsoft-advertising-libraries"></a>Tutoriales de desarrollo para las bibliotecas de Microsoft Advertising
 
 
 
@@ -18,7 +25,7 @@ En los tutoriales de esta sección se muestra cómo agregar anuncios en banner y
 
 Para obtener proyectos de muestra completos que muestran cómo agregar anuncios intersticiales en banners y vídeos a aplicaciones de JavaScript y HTML y aplicaciones XAML con C# y C++, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
 
-## En esta sección:
+## <a name="in-this-section"></a>En esta sección:
 
 |  Tema    | Descripción |               
 |----------|-------|
@@ -33,9 +40,4 @@ Para obtener proyectos de muestra completos que muestran cómo agregar anuncios 
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

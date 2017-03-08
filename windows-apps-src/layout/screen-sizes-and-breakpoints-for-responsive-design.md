@@ -1,22 +1,29 @@
 ---
 author: mijacobs
-title: "Tamaños de pantalla y puntos de interrupción de diseño adaptativo"
+title: "Tamaños de pantalla y puntos de interrupción para el diseño adaptativo"
 description: .
 ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
 label: Screen sizes and break points
 template: detail.hbs
 op-migration-status: ready
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 7189987209e894d81b2574aff576c64fb5f7a97a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7c992aa651069f6876aa920da88ada659480132e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  <a name="screen-sizes-and-break-points-for-responsive-design"></a>Tamaños de pantalla y puntos de interrupción de diseño adaptativo
+#  <a name="screen-sizes-and-break-points-for-responsive-design"></a>Tamaños de pantalla y puntos de interrupción para el diseño adaptativo
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-El número de destinos de dispositivo y tamaños de pantalla en el ecosistema de Windows 10 es demasiado grande como para preocuparse de optimizar la interfaz de usuario para cada uno de ellos. En su lugar, se recomienda el diseño de unos anchos claves (también denominados "puntos de interrupción"): 360, 640, 1024 y 1366 epx.
+El número de destinos de dispositivo y tamaños de pantalla en el ecosistema de Windows 10 es demasiado grande como para preocuparse de optimizar la interfaz de usuario para cada uno de ellos. En su lugar, se recomienda el diseño de unos anchos claves (también denominados "puntos de interrupción"): 360, 640, 1024 y 1366 epx.
 
 > [!TIP]
 > Al diseñar para puntos de interrupción específicos, diseña la cantidad de espacio en pantalla disponible para la aplicación (ventana de la aplicación). Cuando la aplicación se ejecuta en pantalla completa, la ventana de la aplicación tiene el mismo tamaño que la pantalla, pero, en otros casos, es más pequeña.
@@ -100,9 +107,4 @@ En esta tabla se describen las diferentes clases de tamaño y se proporcionan re
 
 Con [**Continuum para teléfonos**](http://go.microsoft.com/fwlink/p/?LinkID=699431), una nueva experiencia de dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un monitor, un mouse y un teclado para que los teléfonos funcionen como un portátil. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, un teléfono móvil no se mantendrá siempre en la clase de tamaño pequeño.
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

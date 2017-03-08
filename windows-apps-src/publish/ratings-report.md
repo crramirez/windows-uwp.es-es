@@ -3,20 +3,27 @@ author: jnHs
 Description: "El informe Clasificaciones del panel del Centro de desarrollo de Windows te permite ver la distribución de cómo los clientes clasifican la aplicación en la Tienda Windows."
 title: Informe Clasificaciones
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
-ms.openlocfilehash: 45d22b46a750655cc723658b476ba40d18b4f745
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 19364d7d3e8e29364f527c09f931ef637cbf03d9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Informe Clasificaciones
+# <a name="ratings-report"></a>Informe Clasificaciones
 
 
 El informe **Clasificaciones** del panel del Centro de desarrollo de Windows te permite ver la distribución de cómo los clientes clasifican la aplicación en la Tienda Windows. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con el método [obtener la clasificación de la aplicación](../monetize/get-app-ratings.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, una clasificación significa el número de estrellas (de 1 a 5) que un cliente proporcionó a la aplicación al clasificarla en la Tienda. En el informe **Clasificaciones** no se incluye información sobre los comentarios individuales que se dejan como opiniones; estos están disponibles en el [informe de opiniones](reviews-report.md).
 
-## Aplicar filtros
+## <a name="apply-filters"></a>Aplicar filtros
 
 
 Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página por intervalo de fechas o por mercado.
@@ -27,17 +34,17 @@ Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** pa
 
 La información contenida en todos los gráficos enumerados a continuación reflejará el período de tiempo seleccionado en la sección **Aplicar filtros** y todos los filtros que hayas elegido aquí.
 
-## Clasificación promedio
+## <a name="average-rating"></a>Clasificación promedio
 
 
 El gráfico **Clasificación promedio** muestra la clasificación promedio de la aplicación durante el período de tiempo seleccionado.
 
-## Número de clasificaciones
+## <a name="number-of-ratings"></a>Número de clasificaciones
 
 
 El gráfico **número de clasificaciones** muestra el número total de clasificaciones de la aplicación durante el período de tiempo seleccionado.
 
-## Clasificaciones nuevas y revisadas
+## <a name="new-and-revised-ratings"></a>Clasificaciones nuevas y revisadas
 
 
 El gráfico **Clasificaciones nuevas y revisadas** muestra el número de clasificaciones para cada tipo de clasificación (nueva o revisada) durante el período de tiempo seleccionado.
@@ -47,7 +54,7 @@ El gráfico **Clasificaciones nuevas y revisadas** muestra el número de clasifi
 
 >**Nota**  Una clasificación aparecerá aquí como revisada incluso si el cliente solo cambió o agregó el texto o el título de la opinión y dejó igual la clasificación.
 
-## Clasificación promedio con el tiempo
+## <a name="average-rating-over-time"></a>Clasificación promedio con el tiempo
 
 
 El gráfico **Clasificación promedio con el tiempo** muestra cómo ha cambiado la clasificación promedio de la aplicación durante el período de tiempo seleccionado.
@@ -56,7 +63,7 @@ En lugar de calcular el promedio de todas las valoraciones realizadas durante el
 
 Si has filtrado la información por **Últimos 30 días** o **Últimos 3 meses**, el gráfico muestra tu clasificación media por día. Si has filtrado por **Últimos 6 meses** o **Últimos 12 meses**, el gráfico muestra tu clasificación media por semana (en ese caso, se considera que empieza una nueva semana el lunes y la clasificación promedio que se muestra es de la semana anterior).
 
-## Mercados
+## <a name="markets"></a>Mercados
 
 
 El gráfico **Mercados** muestra la clasificación promedio y el número de clasificaciones durante el período de tiempo seleccionado por mercado.
@@ -70,9 +77,4 @@ De manera predeterminada, mostramos el mercado que tenía más críticas y se si
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -1,15 +1,22 @@
 ---
-author: jnHs
+author: shawjohn
 Description: "Puedes crear una campaña publicitaria con el panel del Centro de desarrollo para ayudar a promover tu aplicación y cultivar tu base de usuarios."
-title: "Crear una campaña publicitaria para tu aplicación"
+title: "Crear una campaña publicitaria para tu aplicación: desarrollar aplicaciones para la UWP"
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
+ms.author: johnshaw
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, anuncio, campaña, promover"
 translationtype: Human Translation
-ms.sourcegitcommit: 65b82f422e602515e9531664e35f1e1c1e9f5932
-ms.openlocfilehash: 3ea67f9e4f0d834bd77ef116c5e0b16008f4ae5f
+ms.sourcegitcommit: b01924366a0bc2afabe2f381e72e45862f0dd682
+ms.openlocfilehash: a4cee4bd81088fc47ee4d11525297a06381e21b8
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para tu aplicación
+# <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para la aplicación
 
 
 Puedes crear una campaña publicitaria con el panel del Centro de desarrollo para ayudar a promover tu aplicación y cultivar tu base de usuarios. De manera predeterminada, elegimos el público de destino para tus anuncios en función de la configuración de tu aplicación en el panel del Centro de desarrollo, pero puedes definir tu propio público de manera opcional. También puedes usar un conjunto predeterminado de plantillas de anuncios o cargar tus propios diseños de anuncio. Para obtener más información sobre las campañas publicitarias, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md).
@@ -30,7 +37,7 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 4.  En la sección **Detalles de campaña**, define la configuración global de tu campaña.
     -   Asigna un nombre a la campaña publicitaria en el campo **Nombre de la campaña**.
     -   En **Tipo de campaña**, elige una de estas opciones:
-        -   **De pago**: estos anuncios se ejecutarán en cualquier aplicación que coincida con el dispositivo y la categoría de la aplicación.
+        -   **De pago**: estos anuncios se ejecutarán en cualquier aplicación que coincida con el dispositivo y la categoría de la aplicación. Para las campañas nuevas creadas a partir del 9 de enero de 2017, estos anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft. Las campañas de promoción de aplicaciones dirigidas a aplicaciones y propiedades premium de Microsoft se conocen como campañas *universales*.
         -   **De la comunidad (gratuita)**: esta publicidad se ejecutará en aplicaciones publicadas por otros desarrolladores que también crean campañas de anuncios de la comunidad. Para poder seleccionar esta opción, primero debes activar la casilla **Mostrar anuncios de la comunidad en mi aplicación** en la página del panel **Monetizar con anuncios**. Para obtener más información, consulta [Acerca de la publicidad de la comunidad](about-community-ads.md).
         -   **Interna (gratuita)**: esta publicidad solo se ejecutará en tus aplicaciones (que coincidan con el dispositivo de la aplicación anunciado). La publicidad interna es gratuita. Para obtener más información, consulta [Acerca de los anuncios internos](about-house-ads.md).
     -   En **Campaign duration**, elige una de estas opciones:
@@ -45,6 +52,7 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
     -   Elige los países o las regiones en que quieres que aparezcan estos anuncios. Puedes elegir hasta 5. Para obtener una lista de los países o regiones admitidos, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md#where-will-my-ad-appear).
     -   Elige los tipos de dispositivos en los que quieres que aparezcan estos anuncios. Solo se muestran los tipos de dispositivo admitidos por la aplicación.
+    -   Elige las superficies en las que quieres que aparezcan estos anuncios. Si eliges **Universal**, tus anuncios aparecerán en aplicaciones, además de MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
     -   Elige el sistema operativo. Solo se muestran los sistemas operativos admitidos por la aplicación.
     -   Selecciona el sexo y el intervalo de edad de la audiencia deseada.
 
@@ -88,7 +96,7 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
     -   Establece un instrumento de pago de la campaña publicitaria haciendo clic en **Agregar nuevo instrumento de pago** y rellena los detalles de la cuenta.
         > **Importante**  El país o la región de la dirección de facturación de tu instrumento de pago debe coincidir con el país o la región asociado con tu cuenta del Centro de desarrollo.
-- Si has recibido un cupón de un representante de Microsoft para pagar una campaña publicitaria, haz clic en **Utilizar un cupón**, escribe el código del cupón y haz clic en **Aplicar** para aplicar el cupón a la campaña.
+    -   Si has recibido un cupón de un representante de Microsoft para pagar una campaña publicitaria, haz clic en **Utilizar un cupón**, escribe el código del cupón y haz clic en **Aplicar** para aplicar el cupón a la campaña.
 
 10.  Por último, haz clic en **Revisar** para confirmar la configuración de la campaña publicitaria y, si es una campaña publicitaria de pago, la información de presupuesto y pago. Haz clic en **Confirmar** y tus anuncios empezarán a aparecer en dispositivos en pocas horas.
    > **Sugerencia** Para ver cómo se están comportando las campañas, en el menú de navegación superior del panel, selecciona **Promociones**. Selecciona **Filtros de sección** para definir el ámbito de lo que se incluye en el informe por **Fecha**, **Objetivo de la campaña**, **Nombre de la aplicación**, **Tipo de campaña** o **Estado**. Además de ver información sobre las **Impresiones**, **Clics**, **Conversiones** y **Gasto** de la campaña, puedes usar el informe para **Pausar** o **Reanudar** una campaña. Para editar una campaña, selecciona su nombre en la lista.
@@ -97,14 +105,6 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
 * [Administrar campañas publicitarias](managing-your-ad-campaign.md)
 * [Acerca de los anuncios internos](about-house-ads.md)
-* [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md)
+* [Informe Promocionar la aplicación](promote-your-app-report.md)
 * [Preguntas comunes sobre las campañas publicitarias](common-questions.md)
- 
-
- 
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

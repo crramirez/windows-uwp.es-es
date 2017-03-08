@@ -3,15 +3,22 @@ author: drewbatgit
 ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
 description: "En este artículo se muestra cómo capturar una secuencia de fotos variable, que permite capturar varios fotogramas de imágenes en sucesión rápida y configurar cada uno para que use una configuración de foco, flash, ISO, exposición y compensación de la exposición diferente."
 title: Secuencia de fotos variable
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: b4f9bc3ad0340a893474360a542f35315ef01712
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 780ee8a28f0c272b4cbf7e4fe770784aa4f11b9d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Secuencia de fotos variable
+# <a name="variable-photo-sequence"></a>Secuencia de fotos variable
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se muestra cómo capturar una secuencia de fotos variable, que permite capturar varios fotogramas de imágenes en sucesión rápida y configurar cada uno para que use una configuración de foco, flash, ISO, exposición y compensación de la exposición diferente. Esta característica permite escenarios como crear imágenes de alto rango dinámico (HDR).
@@ -21,7 +28,7 @@ Si deseas capturar imágenes HDR pero no quieres implementar tu propio algoritmo
 > [!NOTE] 
 > Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para implementar la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código que encontrarás en este artículo se ha agregado suponiendo que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
-## Configurar la aplicación para usar la captura de secuencia de fotos variable
+## <a name="set-up-your-app-to-use-variable-photo-sequence-capture"></a>Configurar la aplicación para usar la captura de secuencia de fotos variable
 
 Además de los espacios de nombres necesarios para la captura de multimedia básico, la implementación de una captura de secuencia fotográfica variable requiere los siguientes espacios de nombres.
 
@@ -31,7 +38,7 @@ Declara una variable de miembro para almacenar el objeto [**VariablePhotoSequenc
 
 [!code-cs[VPSMemberVariables](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVPSMemberVariables)]
 
-## Preparar la captura de secuencia de fotos variable
+## <a name="prepare-the-variable-photo-sequence-capture"></a>Preparar la captura de secuencia de fotos variable
 
 Después de inicializar tu objeto [MediaCapture](capture-photos-and-video-with-mediacapture.md), asegúrate de que las secuencias de fotos variables son compatibles con el dispositivo actual. Para ello, obtén una instancia del objeto [**VariablePhotoSequenceController**](https://msdn.microsoft.com/library/windows/apps/dn640573) de la captura multimedia [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) y comprueba la propiedad [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn640580).
 
@@ -58,37 +65,37 @@ Crea un objeto [**ImageEncodingProperties**](https://msdn.microsoft.com/library/
 
 [!code-cs[PrepareVPS](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPrepareVPS)]
 
-## Inicia la captura de una secuencia de fotos variable
+## <a name="start-the-variable-photo-sequence-capture"></a>Inicia la captura de una secuencia de fotos variable
 
 Para iniciar la captura de la secuencia de fotos variable, llama a [**VariablePhotoSequenceCapture.StartAsync**](https://msdn.microsoft.com/library/windows/apps/dn652577). Asegúrate de inicializar las matrices para almacenar las imágenes capturadas y los valores de control de fotograma, y establece el índice actual en 0. Establece la variable de estado de grabación de la aplicación y actualiza la interfaz de usuario para deshabilitar el inicio de otra captura mientras esta está en curso.
 
 [!code-cs[StartVPSCapture](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetStartVPSCapture)]
 
-## Recibe los fotogramas capturados
+## <a name="receive-the-captured-frames"></a>Recibe los fotogramas capturados
 
 El evento [**PhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/dn652573) se genera para cada fotograma capturado. Guarda los valores de control y la imagen capturada para el fotograma y, a continuación, incrementa el índice del fotograma actual. Este ejemplo muestra cómo obtener una representación [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) de cada fotograma. Para obtener más información acerca del uso de **SoftwareBitmap**, consulta [Imagen](imaging.md).
 
 [!code-cs[OnPhotoCaptured](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetOnPhotoCaptured)]
 
-## Administra la finalización de la captura de secuencia de fotos variable
+## <a name="handle-the-completion-of-the-variable-photo-sequence-capture"></a>Administra la finalización de la captura de secuencia de fotos variable
 
 El evento [**Stopped**](https://msdn.microsoft.com/library/windows/apps/dn652585) se produce cuando todos los fotogramas de la secuencia han sido capturados. Actualizar el estado de grabación de la aplicación y actualizar la interfaz de usuario para permitir al usuario iniciar nuevas capturas. En este punto, puedes pasar las imágenes capturadas y los valores de control de fotograma al código de procesamiento de la imagen.
 
 [!code-cs[OnStopped](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetOnStopped)]
 
-## Actualiza los controladores de fotograma
+## <a name="update-frame-controllers"></a>Actualiza los controladores de fotograma
 
 Si deseas realizar otra captura de secuencia de fotos variable con una configuración diferente para cada fotograma, no necesitas reiniciar completamente **VariablePhotoSequenceCapture**. Puedes borrar la colección [**DesiredFrameControllers**](https://msdn.microsoft.com/library/windows/apps/dn640574) y agregar nuevos controladores de fotograma, o puedes modificar los valores del controlador de fotograma existente. El siguiente ejemplo comprueba el objeto [**FrameFlashCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652657) para comprobar que el dispositivo actual es compatible con el flash y la potencia del flash para los fotogramas de una secuencia de fotos variable. Si es así, se actualiza cada fotograma para habilitar el flash al 100% de energía. Los valores de compensación de exposición que anteriormente estaban establecidos por cada fotograma siguen activos.
 
 [!code-cs[UpdateFrameControllers](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUpdateFrameControllers)]
 
-## Limpia la captura de una secuencia de fotos variable
+## <a name="clean-up-the-variable-photo-sequence-capture"></a>Limpia la captura de una secuencia de fotos variable
 
 Cuando hayas terminado de capturar secuencias de fotos variables o la aplicación esté suspendida, limpia el objeto de secuencia de fotos variable con una llamada a [**FinishAsync**](https://msdn.microsoft.com/library/windows/apps/dn652569). Anula el registro de controladores de eventos del objeto y establécelo en null.
 
 [!code-cs[CleanUpVPS](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpVPS)]
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -98,10 +105,5 @@ Cuando hayas terminado de capturar secuencias de fotos variables o la aplicació
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

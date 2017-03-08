@@ -1,22 +1,29 @@
 ---
 author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
-description: "En este artículo se muestra cómo usar la clase MediaSource, que proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde diferentes orígenes (como archivos locales o remotos) y se expone un modelo común para acceder a datos multimedia, independientemente del formato multimedia subyacente."
+description: "En este artículo se muestra cómo usar la clase MediaSource, que proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde diferentes orígenes (como archivos locales o remotos) y se expone un modelo común para obtener acceso a datos multimedia, independientemente del formato multimedia subyacente."
 title: "Elementos multimedia, listas de reproducción y pistas"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 9999805c8a3bf946aa323b921cea6d63f9a48789
-ms.openlocfilehash: 4c4c6fdb1ea2d42d5bda1034df082bf836d8b803
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1bab50aba53c96907151351c3b0fa81749ff2f88
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Elementos multimedia, listas de reproducción y pistas
+# <a name="media-items-playlists-and-tracks"></a>Elementos multimedia, listas de reproducción y pistas
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
  En este artículo se muestra cómo usar la clase [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), que proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde diferentes orígenes (como archivos locales o remotos) y se expone un modelo común para acceder a datos multimedia, independientemente del formato multimedia subyacente. La clase [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) amplía la funcionalidad del objeto **MediaSource**, lo que permite administrar y seleccionar entre varias pistas de audio, vídeo y metadatos incluidos en un elemento multimedia. [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite crear listas de reproducción de uno o más elementos de reproducción de contenido multimedia.
 
 
-## Crear y reproducir un objeto MediaSource
+## <a name="create-and-play-a-mediasource"></a>Crear y reproducir un objeto MediaSource
 
 Crea una nueva instancia del objeto **MediaSource** con una llamada a uno de los métodos de fábrica expuestos por la clase:
 
@@ -59,7 +66,7 @@ También puedes establecer la propiedad [**AutoPlay**](https://msdn.microsoft.co
 
 [!code-cs[AutoPlay](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetAutoPlay)]
 
-## Controlar varias pistas de audio, vídeo y metadatos con MediaPlaybackItem
+## <a name="handle-multiple-audio-video-and-metadata-tracks-with-mediaplaybackitem"></a>Controlar varias pistas de audio, vídeo y metadatos con MediaPlaybackItem
 
 El uso de un objeto [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) para la reproducción es conveniente porque proporciona una forma común de reproducir contenido multimedia desde diferentes tipos de orígenes, pero puedes acceder a un comportamiento más avanzado al crear una clase [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) a partir de **MediaSource**. Esto incluye la posibilidad de acceder a varias pistas de audio, vídeo y datos de un elemento multimedia y administrarlas.
 
@@ -114,7 +121,7 @@ Dado que puede haber más de una pista de metadatos activa a la vez, no se estab
 
 Mientras se procesan las pistas de metadatos, puedes acceder al conjunto de indicaciones de la pista mediante el acceso a las propiedades [**Cues**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.TimedMetadataTrack.Cues) o [**ActiveCues**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.TimedMetadataTrack.ActiveCues). Puedes hacerlo para actualizar la interfaz de usuario con el fin de mostrar las ubicaciones de indicación de un elemento multimedia.
 
-## Controlar errores desconocidos y códecs no admitidos al abrir elementos multimedia
+## <a name="handle-unsupported-codecs-and-unknown-errors-when-opening-media-items"></a>Controlar errores desconocidos y códecs no admitidos al abrir elementos multimedia
 A partir de Windows 10, versión 1607, puedes comprobar si el códec necesario para la reproducción de un elemento multimedia se admite parcial o totalmente en el dispositivo en el que se ejecuta la aplicación. En el controlador de eventos correspondiente a los eventos de cambio de pistas de **MediaPlaybackItem**, como [**AudioTracksChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracksChanged), primero comprueba si el cambio de pista es una inserción de una pista nueva. Si es así, puedes obtener una referencia a la pista que se va a insertar usando el índice pasado en el parámetro **IVectorChangedEventArgs.Index** con la colección de pistas adecuada del parámetro **MediaPlaybackItem**, por ejemplo, la colección [**AudioTracks**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracks).
 
 Una vez que tengas una referencia a la pista insertada, comprueba el valor de [**DecoderStatus**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrackSupportInfo.DecoderStatus) de la propiedad [**SupportInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrack.SupportInfo) de la pista. Si el valor es [**FullySupported**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus), entonces el códec adecuado que se necesita para reproducir la pista está presente en el dispositivo. Si el valor es [**Degraded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus), el sistema puede reproducir la pista, pero la reproducción se degradará de alguna manera. Por ejemplo, una pista de audio 5.1 puede reproducirse como estéreo de dos canales. Si este es el caso, quizás quieras actualizar tu interfaz de usuario para alertar al usuario sobre la degradación. Si el valor es [**UnsupportedSubtype**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus) o [**UnsupportedEncoderProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus), la pista no se puede reproducir en absoluto con los códecs actuales del dispositivo. Quizás quieras alertar al usuario y omitir la reproducción del elemento o implementar la interfaz de usuario para que el usuario pueda descargar el códec correcto. El método [**GetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrack.GetEncodingProperties) de la pista puede usarse para determinar el códec necesario para la reproducción.
@@ -127,14 +134,14 @@ En el controlador del evento [**OpenFailed**](https://msdn.microsoft.com/library
 
 [!code-cs[OpenFailed](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetOpenFailed)]
 
-## Establecer las propiedades de visualización que se usan en los controles de transporte de contenido multimedia del sistema
+## <a name="set-display-properties-used-by-the-system-media-transport-controls"></a>Establecer las propiedades de visualización que se usan en los controles de transporte de contenido multimedia del sistema
 A partir de Windows 10, versión 1607, el contenido multimedia que se reproduce en una clase [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) se integra automáticamente en los controles de transporte de contenido multimedia del sistema (SMTC) de manera predeterminada. Puedes especificar los metadatos que se mostrarán en SMTC actualizando las propiedades de visualización de **MediaPlaybackItem**. Obtén un objeto que representa las propiedades de visualización de un elemento mediante una llamada a [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties). Establece si el elemento de reproducción es música o vídeo al establecer el valor de la propiedad [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type). A continuación, establece las propiedades [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) o [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) del objeto. Llama a [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923) para actualizar las propiedades del elemento en los valores que hayas especificado. Por lo general, una aplicación recuperará los valores de visualización dinámicamente desde un servicio web, pero en el siguiente ejemplo se muestra este proceso con los valores codificados de forma rígida.
 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
 [!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
 
-## Agregar texto temporizado externo con TimedTextSource
+## <a name="add-external-timed-text-with-timedtextsource"></a>Agregar texto temporizado externo con TimedTextSource
 
 En algunos escenarios, puedes tener archivos externos que contienen texto temporizado asociado con un elemento multimedia, tales como archivos independientes que contienen los subtítulos en las distintas configuraciones regionales. Usa la clase [**TimedTextSource**](https://msdn.microsoft.com/library/windows/apps/dn956679) para cargarla en archivos de texto temporizado externos de una secuencia o un URI.
 
@@ -152,7 +159,7 @@ En el controlador del evento [**TimedTextSource.Resolved**](https://msdn.microso
 
 [!code-cs[TimedTextSourceResolved](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetTimedTextSourceResolved)]
 
-## Agregar pistas de metadatos adicionales
+## <a name="add-additional-metadata-tracks"></a>Agregar pistas de metadatos adicionales
 
 Puedes crear pistas de metadatos personalizadas dinámicamente en el código y asociarlas con un origen de contenido multimedia. Las pistas que creas pueden contener texto de subtítulo o título, o pueden contener los datos de propiedad de la aplicación.
 
@@ -172,7 +179,7 @@ En este ejemplo se agrega una pista de texto personalizado al especificar **Time
 
 [!code-cs[TextCueEntered](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetTextCueEntered)]
 
-## Reproducir una lista de elementos multimedia con MediaPlaybackList
+## <a name="play-a-list-of-media-items-with-mediaplaybacklist"></a>Reproducir una lista de elementos multimedia con MediaPlaybackList
 
 El objeto [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite crear una lista de reproducción de elementos multimedia, que se representan con objetos **MediaPlaybackItem**.
 
@@ -212,20 +219,15 @@ Establece la propiedad [**AutoRepeatEnabled**](https://msdn.microsoft.com/librar
 [!code-cs[RepeatButton](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetRepeatButton)]
 
 
-###Controlar los errores de los elementos multimedia en una lista de reproducción
+###<a name="handle-the-failure-of-media-items-in-a-playback-list"></a>Controlar los errores de los elementos multimedia en una lista de reproducción
 El evento [**ItemFailed**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.ItemFailed) se genera cuando se produce un error al intentar abrir un elemento de la lista. La propiedad [**ErrorCode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItemError.ErrorCode) del objeto [**MediaPlaybackItemError**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItemError) pasado al controlador enumera la causa específica del error cuando es posible, incluidos los errores de red, descodificación o de cifrado.
 
 [!code-cs[ItemFailed](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetItemFailed)]
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 * [Reproducción de contenido multimedia](media-playback.md)
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
 * [Integrar con los controles de transporte multimedia del sistema](integrate-with-systemmediatransportcontrols.md)
 * [Reproducir elementos multimedia en segundo plano](background-audio.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

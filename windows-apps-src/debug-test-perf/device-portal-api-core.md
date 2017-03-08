@@ -3,9 +3,16 @@ author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referencia de API principal de Device Portal
 description: "Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b4222774dc4b0f9cdcac871311f5ead69c1e70a9
-ms.openlocfilehash: 3bacb9ac42e157afaed5e9e0e6438654db03ff28
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 10d8799b73a941a4a0eb89fd369d67b2fc6a68c2
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -222,7 +229,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="device-manager"></a>Administrador de dispositivos
+## Device manager
 ---
 ### <a name="get-the-installed-devices-on-the-machine"></a>Obtener los dispositivos instalados en la máquina
 
@@ -281,7 +288,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="dump-collection"></a>Colección de volcados de memoria
+## Dump collection
 ---
 ### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Obtener la lista de todos los volcados de memoria de aplicaciones
 
@@ -865,7 +872,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="etw"></a>ETW
+## ETW
 ---
 ### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Crear una sesión ETW en tiempo real a través de un WebSocket
 
@@ -925,7 +932,7 @@ Esta respuesta se envía desde el servidor al cliente. Esto se envía como texto
     "Events":[
         {
             "Timestamp": int,
-            "Provider": string,
+            "ProviderName": string,
             "ID": int, 
             "TaskName": string,
             "Keyword": int,
@@ -1060,7 +1067,7 @@ GET | /api/etw/customproviders
 * IoT
 
 ---
-## <a name="os-information"></a>Información del SO
+## OS information
 ---
 ### <a name="get-the-machine-name"></a>Obtener el nombre de la máquina
 
@@ -1268,7 +1275,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="performance-data"></a>Datos de rendimiento
+## Performance data
 ---
 ### <a name="get-the-list-of-running-processes"></a>Obtener la lista de procesos en ejecución
 
@@ -1410,7 +1417,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="power"></a>Energía
+## Power
 ---
 ### <a name="get-the-current-battery-state"></a>Obtener el estado actual de la batería
 
@@ -1831,7 +1838,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="remote-control"></a>Control remoto
+## Remote control
 ---
 ### <a name="restart-the-target-computer"></a>Reiniciar el equipo de destino
 
@@ -1919,7 +1926,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="task-manager"></a>Administrador de tareas
+## Task manager
 ---
 ### <a name="start-a-modern-app"></a>Iniciar una aplicación moderna
 
@@ -2019,7 +2026,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="networking"></a>Redes
+## Networking
 ---
 ### <a name="get-the-current-ip-configuration"></a>Obtener la configuración IP actual
 
@@ -2336,7 +2343,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="windows-error-reporting-wer"></a>Informe de errores de Windows (WER)
+## Windows Error Reporting (WER)
 ---
 ### <a name="download-a-windows-error-reporting-wer-file"></a>Descargar un archivo de Informe de errores de Windows (WER)
 
@@ -2502,7 +2509,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="windows-performance-recorder-wpr"></a>Windows Performance Recorder (WPR) 
+## Windows Performance Recorder (WPR) 
 ---
 ### <a name="start-tracing-with-a-custom-profile"></a>Iniciar el seguimiento con un perfil personalizado
 
@@ -2965,7 +2972,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## <a name="dns-sd-tags"></a>Etiquetas de DNS-SD 
+## DNS-SD Tags 
 ---
 ### <a name="view-tags"></a>Ver etiquetas
 
@@ -3465,8 +3472,3 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * Xbox
 * IoT
-
-
-<!--HONumber=Dec16_HO1-->
-
-

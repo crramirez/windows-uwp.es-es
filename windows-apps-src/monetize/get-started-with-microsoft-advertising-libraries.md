@@ -3,14 +3,20 @@ author: mcleanbyron
 ms.assetid: ae45490f-3eb1-4b7f-8e18-bf82f0ca5d6d
 description: "Obtén la información que necesitas para comenzar a usar las bibliotecas de Microsoft Advertising para agregar anuncios intersticiales en vídeo y banners a tus aplicaciones."
 title: "Introducción a las bibliotecas de Microsoft Advertising"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anuncios, publicidad, introducción"
 translationtype: Human Translation
-ms.sourcegitcommit: 65f8c2b8be053565a903cec4b8d9ccc277cfd41e
-ms.openlocfilehash: b5fe116ea850e93b5208b829e4ed6cec2bc42de0
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 81392a218165d4e0c2b954bdc6cb7789f7aa63f1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introducción a las bibliotecas de Microsoft Advertising
+# <a name="get-started-with-the-microsoft-advertising-libraries"></a>Introducción a las bibliotecas de Microsoft Advertising
 
 
 
@@ -21,7 +27,7 @@ Para obtener proyectos de muestra completos que muestren cómo agregar anuncios 
 
  
 
-## En esta sección
+## <a name="in-this-section"></a>En esta sección
 
 | Tema                                                                                                       | Descripción                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
@@ -38,9 +44,4 @@ Para obtener proyectos de muestra completos que muestren cómo agregar anuncios 
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

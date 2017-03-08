@@ -1,34 +1,41 @@
 ---
 author: TylerMSFT
 title: "Agregar una pantalla de presentación"
-description: "Define la imagen de la pantalla de presentación y el color de fondo de la aplicación con MicrosoftVisualStudio2015."
+description: "Define la imagen de la pantalla de presentación y el color de fondo de la aplicación con Microsoft Visual Studio 2015."
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 4d8a00cf7bd151ab97e9abc10a09a3794a0e292f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b8d8b81b1807681d3aa3c5ed61359a5da64dfac
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Agregar una pantalla de presentación
+# <a name="add-a-splash-screen"></a>Agregar una pantalla de presentación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Establece la imagen de la pantalla de presentación y el color de fondo de tu aplicación con MicrosoftVisualStudio2015.
+Establece la imagen de la pantalla de presentación y el color de fondo de tu aplicación con Microsoft Visual Studio 2015.
 
-## Establecer la imagen de la pantalla de presentación y el color de fondo en Visual Studio 2015
+## <a name="set-the-splash-screen-image-and-background-color-in-visual-studio-2015"></a>Establecer la imagen de la pantalla de presentación y el color de fondo en Visual Studio 2015
 
 
 Cuando usas una plantilla de Visual Studio 2015 para crear tu aplicación, se agrega una imagen predeterminada al proyecto que se establece como imagen de la pantalla de presentación. El color de fondo predeterminado de la pantalla de presentación es gris claro. Si quieres cambiar la imagen o el color predeterminados de la pantalla de presentación de tu aplicación, sigue los pasos siguientes:
 
-1.  Abre el proyecto existente de tu aplicación para Plataforma universal de Windows (UWP) en VisualStudio2015.
+1.  Abre el proyecto existente de tu aplicación para Plataforma universal de Windows (UWP) en Visual Studio 2015.
 2.  Abre el archivo "Package.appxmanifest" en el **Explorador de soluciones**. También puedes abrir este archivo desde la barra de menús seleccionando **Proyecto** &gt; **Tienda** &gt; **Editar manifiesto de la aplicación**.
 3.  Abre la pestaña **Activos visuales** y selecciona **Pantalla de presentación** en el panel **Todos los activos de imagen** situado en el lado izquierdo de la ventana "Package.appxmanifest". Si vas a cambiar la pantalla de presentación por primera vez, verás la ruta de acceso "Assets\\SplashScreen.png" en el campo **Pantalla de presentación**.
 
-    En la siguiente captura de pantalla se muestra la ventana "Package.appxmanifest" en VisualStudio2015. Según el tipo de proyecto, verás un conjunto de activos visuales ligeramente distinto.
+    En la siguiente captura de pantalla se muestra la ventana "Package.appxmanifest" en Visual Studio 2015. Según el tipo de proyecto, verás un conjunto de activos visuales ligeramente distinto.
 
-    ![captura de pantalla de la ventana "package.appxmanifest" en VisualStudio2013](images/appmanifest.png)
+    ![captura de pantalla de la ventana "package.appxmanifest" en Visual Studio 2013](images/appmanifest.png)
 
     Si abres "Package.appxmanifest" en un editor de texto, se muestra el elemento [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br211467) como secundario del elemento [**VisualElements**](https://msdn.microsoft.com/library/windows/apps/br211471). El marcado de la pantalla de presentación predeterminada del archivo de manifiesto tiene el siguiente aspecto en un editor de texto:
 
@@ -52,7 +59,7 @@ Cuando usas una plantilla de Visual Studio 2015 para crear tu aplicación, se ag
 
     El establecimiento de un color de fondo para tu pantalla de presentación es opcional. Si no especificas un color para la aplicación para UWP, se establecerá el gris claro (valor hexadecimal \#464646) como color de fondo predeterminado de la pantalla de presentación. Se trata del mismo color que el color de fondo del **Icono** (consulta el campo **Color de fondo** en la sección **Imágenes y logotipos en mosaico** de la pestaña **Activos visuales**). Si no especificas un color para un Windows Phone, o lo estableces en "transparente", el color de fondo de pantalla de presentación será transparente.
 
-## Resumen y pasos siguientes
+## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
 
 Si tu aplicación tarda un poco en cargarse, considera la posibilidad de agregar una pantalla de presentación extendida. Para obtener instrucciones paso a paso, consulta [Crear una pantalla de presentación personalizada](create-a-customized-splash-screen.md).
@@ -62,7 +69,7 @@ Este artículo está destinado a desarrolladores de Windows 10 que programan apl
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear una pantalla de presentación personalizada](create-a-customized-splash-screen.md)
 
@@ -74,9 +81,4 @@ Este artículo está destinado a desarrolladores de Windows 10 que programan apl
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

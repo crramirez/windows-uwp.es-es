@@ -3,14 +3,21 @@ author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: Usar pinceles
 description: "Los objetos Brush se usan para pintar los interiores o los contornos de formas, texto y partes de los controles, de forma que el objeto pintado esté visible en una interfaz de usuario."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: f5934600cc185c952acc57ae38e0b190466e0dfa
-ms.openlocfilehash: dc415135a05a63226a6b2d0b828245fe2f713788
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: bf3e4e169108f4cab98dcb460552daff8822c64c
+ms.lasthandoff: 02/07/2017
 
 ---
-# Usar pinceles
+# <a name="use-brushes"></a>Usar pinceles
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -19,15 +26,15 @@ ms.openlocfilehash: dc415135a05a63226a6b2d0b828245fe2f713788
 
 Los objetos [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) se usan para pintar el interior o el contorno de formas, texto y partes de controles, de forma que el objeto pintado sea visible en una interfaz de usuario. Veamos los pinceles disponibles y cómo usarlos.
 
-## Introducción a los pinceles
+## <a name="introduction-to-brushes"></a>Introducción a los pinceles
 
 Para pintar un objeto tal como [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377) o las partes de un [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) que se muestran en el Canvas de la aplicación, usa un [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076). Por ejemplo, puedes establecer la propiedad [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx) del **Shape** o el [**Background**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx), y las propiedades [**Foreground**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.foreground.aspx) de un **Control** en un valor **Brush**, y ese **Brush** determina cómo se pinta o se representa el elemento en la interfaz de usuario. Los distintos tipos de pinceles son: [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962), [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108), [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) y [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703).
 
-## Pinceles de colores sólidos
+## <a name="solid-color-brushes"></a>Pinceles de colores sólidos
 
 Un [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) pinta un área con un único [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723), como rojo o azul. Este es el pincel más básico. En XAML hay tres maneras de definir un **SolidColorBrush** y el color sólido que especifica: nombres de color predefinidos, valores de color hexadecimales o la sintaxis de los elementos de las propiedades.
 
-### Nombres de color predefinidos
+### <a name="predefined-color-names"></a>Nombres de color predefinidos
 
 Puedes usar un nombre de color predefinido, como [**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx) o [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx). Hay 256 colores con nombre disponibles. El analizador XAML convierte el nombre del color en una estructura [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) con los canales de color correctos. Los 256 colores con nombre están basados en los nombres de colores *X11* de la especificación de hojas de estilo CSS de nivel 3 (CSS3), por lo que es posible que ya conozcas esta lista de colores con nombre si tienes experiencia en desarrollo o diseño web.
 
@@ -43,7 +50,7 @@ Esta imagen muestra el [**SolidColorBrush**](https://msdn.microsoft.com/library/
 
 Si vas a definir un [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) mediante programación en lugar de usar XAML, cada color con nombre está disponible como una propiedad estática de la clase [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors). Por ejemplo, para declarar un valor [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx) de un **SolidColorBrush** para representar el color con nombre "Orquídea", establece el valor de **Color** en el valor estático [**Colors.Orchid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.orchid.aspx).
 
-### Valores de color hexadecimales
+### <a name="hexadecimal-color-values"></a>Valores de color hexadecimales
 
 Puedes usar una cadena de formato hexadecimal para declarar valores precisos de color de 24 bits con un canal alfa de 8 bits para un [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962). Dos caracteres del intervalo 0 a F definen cada valor de componente y el orden de los valores de componente de la cadena hexadecimal es: canal alfa (opacidad), canal rojo, canal verde y canal azul (**ARGB**). Por ejemplo, el valor hexadecimal "\#FFFF0000" define el rojo completamente opaco (alfa="FF", rojo="FF", verde="00" y azul="00").
 
@@ -55,7 +62,7 @@ Este ejemplo de XAML establece la propiedad [**Fill**](https://msdn.microsoft.co
 </StackPanel>
 ```
 
-### <span id="Property_element_syntax__"></span><span id="property_element_syntax__"></span><span id="PROPERTY_ELEMENT_SYNTAX__"></span>Sintaxis de elemento de propiedad
+### <a name="span-idpropertyelementsyntaxspanspan-idpropertyelementsyntaxspanspan-idpropertyelementsyntaxspanproperty-element-syntax"></a><span id="Property_element_syntax__"></span><span id="property_element_syntax__"></span><span id="PROPERTY_ELEMENT_SYNTAX__"></span>Sintaxis de elemento de propiedad
 
 Puedes usar la sintaxis de los elementos de las propiedades para definir un [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962). Esta sintaxis es más detallada que los métodos anteriores, pero puedes especificar valores de propiedades adicionales en un elemento, como el valor de [**Opacity**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.opacity.aspx). Para obtener más información sobre la sintaxis XAML, incluida la sintaxis de los elementos de propiedad, consulta el tema [introducción a XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595) y [Guía de sintaxis XAML](https://msdn.microsoft.com/library/windows/apps/Mt185596).
 
@@ -69,7 +76,7 @@ En los ejemplos anteriores, la cadena "SolidColorBrush" ni siquiera se vio en la
 </Rectangle>
 ```
 
-## <span id="Linear_gradient_brushes_"></span><span id="linear_gradient_brushes_"></span><span id="LINEAR_GRADIENT_BRUSHES_"></span>Pinceles de degradado lineal
+## <a name="span-idlineargradientbrushesspanspan-idlineargradientbrushesspanspan-idlineargradientbrushesspanlinear-gradient-brushes"></a><span id="Linear_gradient_brushes_"></span><span id="linear_gradient_brushes_"></span><span id="LINEAR_GRADIENT_BRUSHES_"></span>Pinceles de degradado lineal
 
 Un [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108) pinta un área con un degradado que se define a lo largo de una línea. Esta línea se denomina *eje de degradado*. Los colores del degradado y su ubicación en el eje de degradado se especifican con objetos [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078). De manera predeterminada, el eje de degradado va de la esquina superior izquierda a la esquina inferior derecha de la superficie pintada por el pincel, lo que produce un sombreado en diagonal.
 
@@ -99,7 +106,7 @@ El color de cada punto entre los delimitadores de degradado se interpolan lineal
 
 ![Delimitadores de degradado](images/linear-gradients-stops.png) Para cambiar la línea en la que se sitúan los delimitadores de degradado, establece las propiedades [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.startpoint.aspx) y [**EndPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.endpoint.aspx) en valores distintos a los valores de inicio predeterminados, `(0,0)` y `(1,1)`. Si cambias los valores de coordenadas de **StartPoint** y **EndPoint**, puedes crear degradados horizontales o verticales, invertir el sentido de degradado o condensar la extensión del degradado para aplicarlo en un área más reducida que la superficie pintada completa. Para condensar el degradado, debes establecer los valores de **StartPoint** o **EndPoint** en un valor entre 0 y 1. Por ejemplo, si deseas un degradado horizontal en el que toda la atenuación se produzca en la mitad izquierda del pincel y el lado derecho sea sólido con el color del último [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078), debes especificar un **StartPoint** de `(0,0)` y un **EndPoint** de `(0.5,0)`.
 
-### <span id="Use_tools_to_make_gradients"></span><span id="use_tools_to_make_gradients"></span><span id="USE_TOOLS_TO_MAKE_GRADIENTS"></span>Usar herramientas para hacer degradados
+### <a name="span-idusetoolstomakegradientsspanspan-idusetoolstomakegradientsspanspan-idusetoolstomakegradientsspanuse-tools-to-make-gradients"></a><span id="Use_tools_to_make_gradients"></span><span id="use_tools_to_make_gradients"></span><span id="USE_TOOLS_TO_MAKE_GRADIENTS"></span>Usar herramientas para hacer degradados
 
 Ahora que ya sabes cómo funcionan los degradados lineales, puedes usar Visual Studio o Blend para crear estos degradados con facilidad. Para crear un degradado, selecciona el objeto al que deseas aplicar un degradado en la superficie de diseño o en la vista XAML. Expande **Pincel** y selecciona la pestaña **Degradado lineal** ficha (consulta la siguiente captura de pantalla).
 
@@ -109,7 +116,7 @@ Ahora puedes cambiar los colores de los delimitadores de degradado y deslizar su
 
 ![Barra situada en la parte inferior de la ventana de propiedades que controla los delimitadores de degradado.](images/tool-gradient-brush-2.png)
 
-## <span id="Image_brushes"></span><span id="image_brushes"></span><span id="IMAGE_BRUSHES"></span>Pinceles de imagen
+## <a name="span-idimagebrushesspanspan-idimagebrushesspanspan-idimagebrushesspanimage-brushes"></a><span id="Image_brushes"></span><span id="image_brushes"></span><span id="IMAGE_BRUSHES"></span>Pinceles de imagen
 
 Un [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) pinta una superficie con una imagen que proviene de un origen de archivo de imagen. La propiedad [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/BR210107) se establece con la ruta de acceso de la imagen para cargar. Normalmente, el origen de imagen proviene de un elemento **Content** que forma parte de los recursos de la aplicación.
 
@@ -131,21 +138,21 @@ Este es el aspecto del [**ImageBrush**](https://msdn.microsoft.com/library/windo
 
 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) e [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) hacen referencia a un archivo de origen de imagen (en varios formatos de imagen posibles) mediante el Identificador uniforme de recursos (URI). Estos archivos de origen de imagen se especifican como URI. Para más información sobre la especificación de orígenes de imagen, sobre los formatos de imagen que puedes usar y su empaquetado en una aplicación, consulta [Image e ImageBrush](https://msdn.microsoft.com/library/windows/apps/Mt280382).
 
-## Pinceles y texto
+## <a name="brushes-and-text"></a>Pinceles y texto
 
 También puedes usar pinceles para aplicar características de representación a elementos de texto. Por ejemplo, la propiedad [**Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665) de [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) admite un [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076). Puedes aplicar cualquiera de los pinceles aquí descritos a texto. Aunque debes tener cuidado porque el texto puede quedar fácilmente ilegible si usas pinceles que puedan aplicar sangría en el fondo usado para representar el texto o que puedan difuminar los contornos de los caracteres de texto. Usa [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) para mejorar la legibilidad de los elementos de texto en la mayoría de los casos, a menos que la finalidad del elemento de texto sea principalmente decorativa.
 
 Incluso cuando utilices un color sólido, asegúrate de que el color de texto que elijas tenga suficiente contraste con respecto al color de fondo del contenedor de diseño del texto. El nivel de contraste entre el primer plano del texto y el fondo del contenedor de texto debe tenerse en cuenta para la accesibilidad.
 
-## WebViewBrush
+## <a name="webviewbrush"></a>WebViewBrush
 
 Un [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) es un tipo especial de pincel que puede obtener acceso al contenido que se ve normalmente en un control [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702). En lugar de representar el contenido en el área rectangular del control **WebView**, **WebViewBrush** pinta ese contenido en otro elemento que tiene una propiedad de tipo [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) para una superficie de representación. **WebViewBrush** no es apropiado para todos los escenarios de uso del pincel, pero es útil para las transiciones de un control **WebView**. Para obtener más información, consulta **WebViewBrush**.
 
-## Pinceles como recursos de XAML
+## <a name="brushes-as-xaml-resources"></a>Pinceles como recursos de XAML
 
 Puedes declarar cualquier pincel como un recurso con clave de XAML en un diccionario de recursos de XAML. Esto facilita la replicación de los mismos valores de pincel cuando se aplican a varios elementos de una interfaz de usuario. Así, los valores de pincel se comparten y aplican a cualquier caso en el que se haga referencia al recurso de pincel como un uso [{StaticResource}](https://msdn.microsoft.com/library/windows/apps/Mt185588) en el código XAML. Esto incluye los casos en los que se tiene una plantilla de control XAML que hace referencia al pincel compartido cuando la misma plantilla de control es un recurso de XAML con clave.
 
-## Pinceles en código
+## <a name="brushes-in-code"></a>Pinceles en código
 
 Es mucho más frecuente especificar pinceles con XAML que usar código para definirlos. Esto es así porque los pinceles, por lo general, se definen como recursos XAML, y porque los valores de pincel suelen ser el resultado de herramientas de diseño, o porque se incluyen como parte de una definición de interfaz de usuario de XAML. Aun así, si alguna vez quieres definir un pincel con código, todos los tipos [**Pincel**](https://msdn.microsoft.com/library/windows/apps/BR228076) están disponibles para la creación de una instancia de código.
 
@@ -175,10 +182,5 @@ Para ver ejemplos de código, consulta las páginas de referencia de [**WebViewB
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

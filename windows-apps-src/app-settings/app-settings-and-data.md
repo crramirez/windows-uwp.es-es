@@ -1,17 +1,24 @@
 ---
 author: mijacobs
 Description: "En esta sección se incluyen directrices de la experiencia del usuario para presentar la configuración de la aplicación y almacenarla como datos de la aplicación."
-title: "Datos y configuración de la aplicación"
+title: "Configuración y datos de la aplicación"
 ms.assetid: E7F312F7-54D8-411F-8D92-92FBB95C2463
 label: App settings and data
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 52bf5b65412918e522b57ba06d83c67771086a93
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cdb1035d3d035c92c29e84bdd04ca7692c7e19de
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="app-settings-and-data"></a>Datos y configuración de la aplicación
+# <a name="app-settings-and-data"></a>Configuración y datos de la aplicación
 
 
 
@@ -46,10 +53,5 @@ Los datos de la aplicación son los que la propia aplicación crea y administra.
 </table>
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

@@ -2,22 +2,30 @@
 author: awkoren
 Description: "En este artículo se explica cómo firmar una aplicación de escritorio que se ha convertido a la Plataforma universal de Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
-title: "Firmar una aplicación convertida con el puente de escritorio a UWP"
+title: "Firmar una aplicación convertida con el Puente de dispositivo de escritorio a UWP"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 232c3012-71ff-4f76-a81e-b1758febb596
 translationtype: Human Translation
-ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
-ms.openlocfilehash: 2db978089a6334214c3b4c85dbde8d4a4e846092
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b5936030f09e52933053f2465659157083b9eec2
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Firmar una aplicación convertida con el puente de escritorio
+# <a name="sign-an-app-converted-with-the-desktop-bridge"></a>Firmar una aplicación convertida con el Puente de dispositivo de escritorio
 
 En este artículo se explica cómo firmar una aplicación de escritorio que se ha convertido a la Plataforma universal de Windows (UWP). Debes firmar el paquete .appx con un certificado para poder implementarla.
 
-## Firmar automáticamente con Desktop App Converter (DAC)
+## <a name="automatically-sign-using-the-desktop-app-converter-dac"></a>Firmar automáticamente con Desktop App Converter (DAC)
 
 Usa la marca ```-Sign``` cuando ejecutes DAC para firmar automáticamente el paquete .appx. Para conocer más detalles, consulta [Vista previa de Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md).
 
-## Firmar manualmente mediante SignTool.exe
+## <a name="manually-sign-using-signtoolexe"></a>Firmar manualmente mediante SignTool.exe
 
 Primero, crea un certificado con MakeCert.exe. Si se te solicita que especifiques una contraseña, selecciona "Ninguna". 
 
@@ -40,9 +48,9 @@ Para obtener más información, consulta [Cómo firmar un paquete de la aplicaci
 
 Las tres herramientas anteriores se incluyen con el SDK de Microsoft Windows 10. Para llamarlas directamente, llama al script ```C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat``` desde un símbolo del sistema.
 
-## Errores comunes
+## <a name="common-errors"></a>Errores comunes
 
-### La falta de coincidencia entre el editor y el certificado produce el error de SignTool "Error: Error de SignerSign()" (-2147024885/0x8007000b)
+### <a name="publisher-and-cert-mismatch-causes-signtool-error-error-signersign-failed--21470248850x8007000b"></a>La falta de coincidencia entre el editor y el certificado produce el error de SignTool "Error: Error de SignerSign()" (-2147024885/0x8007000b)
 
 La entrada Editor del manifiesto AppX debe coincidir con el valor de Firmante del certificado con que firmas.  Puedes usar cualquiera de los métodos siguientes para ver el firmante del certificado. 
 
@@ -66,7 +74,7 @@ Ejecuta **certutil** desde la línea de comandos en el archivo PFX y copia el va
 certutil -dump <cert_file.pfx>
 ```
 
-### Firmas Authenticode dañadas o con formato incorrecto
+### <a name="corrupted-or-malformed-authenticode-signatures"></a>Firmas Authenticode dañadas o con formato incorrecto
 
 En esta sección se incluye información detallada sobre cómo identificar problemas con los archivos portables ejecutables (PE) del paquete AppX que pueden contener firmas Authenticode dañadas o con formato incorrecto. Las firmas Authenticode no válidas en los archivos PE, que pueden estar en cualquier formato binario (como .exe, .dll, chm, etc.) impedirán que el paquete se firme correctamente y, por consiguiente, que se pueda implementar desde un paquete AppX. 
 
@@ -77,7 +85,7 @@ Para que la firma Authenticode sea correcta, debe cumplirse lo siguiente en la f
 - El inicio de la entrada **WIN_CERTIFICATE** en el archivo PE no se puede extenderse más allá del final del archivo ejecutable.
 - La entrada **WIN_CERTIFCATE** debe estar situada al final de la imagen.
 - El tamaño de la entrada **WIN_CERTIFICATE** debe ser positivo.
-- La entrada **WIN_CERTIFICATE** debe comenzar después de la estructura **IMAGE_NT_HEADERS32** en los archivos ejecutables de 32bits y la estructura IMAGE_NT_HEADERS64 en los archivos ejecutables de 64bits.
+- La entrada **WIN_CERTIFICATE** debe comenzar después de la estructura **IMAGE_NT_HEADERS32** en los archivos ejecutables de 32 bits y la estructura IMAGE_NT_HEADERS64 en los archivos ejecutables de 64 bits.
 
 Para obtener más información, consulta la [especificación del ejecutable del portal Authenticode](http://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) y la [especificación del formato de archivo PE](https://msdn.microsoft.com/windows/hardware/gg463119.aspx) (en inglés). 
 
@@ -85,13 +93,8 @@ Ten en cuenta que SignTool.exe puede generar una lista de los archivos binarios 
 
 Para corregir estos archivos binarios con formato incorrecto, asegúrate de que cumplen con los requisitos anteriores.
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 
 - [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
 - [SignTool.exe (Sign Tool)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
 - [Cómo firmar un paquete de la aplicación con SignTool](https://msdn.microsoft.com/library/windows/desktop/jj835835.aspx)
-
-
-<!--HONumber=Nov16_HO1-->
-
-

@@ -3,17 +3,24 @@ author: mcleblanc
 description: Desplazamiento por Visual Studio
 title: Desplazamiento por Visual Studio
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3f23745d161965d08a35abbef31b8e4342cf1ff6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 57341e52ad51e446e6828e5b4ba6228094152d7f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introducción: desplazamiento por Visual Studio
+# <a name="getting-started-getting-around-in-visual-studio"></a>Tareas iniciales: desplazamiento por Visual Studio
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Desplazamiento por MicrosoftVisual Studio
+## <a name="getting-around-in-microsoft-visual-studio"></a>Desplazamiento por Microsoft Visual Studio
 
 Volvamos al proyecto que creamos antes: te mostraremos cómo desplazarte por el entorno de desarrollo integrado (IDE) Microsoft de Visual Studio.
 
@@ -21,13 +28,13 @@ Si eres desarrollador de Xcode, deberías estar familiarizado con la vista prede
 
 ![entorno de desarrollo de xcode](images/ios-to-uwp/xcode-ide.png)
 
-MicrosoftVisual Studio es muy similar, aunque la vista predeterminada tiene los controles en el lado izquierdo del **cuadro de herramientas**. Los archivos de origen están en el **Explorador de soluciones** en el lado derecho y las propiedades están en **Propiedades**, en el panel **Explorador de soluciones**, de este modo:
+Microsoft Visual Studio es muy similar, aunque la vista predeterminada tiene los controles en el lado izquierdo del **cuadro de herramientas**. Los archivos de origen están en el **Explorador de soluciones** en el lado derecho y las propiedades están en **Propiedades**, en el panel **Explorador de soluciones**, de este modo:
 
 ![entorno de desarrollo de visual studio](images/ios-to-uwp/vs-ide.png)
 
 Si todo esto te suena extraño, te alegrará saber que puedes reorganizar los paneles de Visual Studio para colocar los archivos de origen a la izquierda de la pantalla y el cuadro de herramientas a la derecha. De hecho, puedes hacer clic y arrastrar la barra de título de cualquier panel para cambiar su posición, y Visual Studio mostrará un cuadro sombreado para indicarte dónde se acoplará una vez que lo sueltes. Muchos paneles también tienen un pequeño icono de chincheta en su barra de título. Esto te permite anclar el panel en su posición actual para fijarlo. Si desanclas el panel, puedes contraerlo para ahorrar espacio: útil si tienes un monitor pequeño. Y si te lías (no te preocupes, a todos nos ha pasado alguna vez), selecciona **Restablecer diseño de ventana** desde el menú **Ventana** para restaurar el orden.
 
-## Adición de controles, configuración de sus propiedades y respuesta a eventos
+## <a name="adding-controls-setting-their-properties-and-responding-to-events"></a>Adición de controles, configuración de sus propiedades y respuesta a eventos
 
 Ahora agregaremos algunos controles al proyecto. Después cambiaremos algunas de las propiedades y escribiremos código para responder a uno de los eventos del control.
 
@@ -117,15 +124,10 @@ Por último, para ejecutar la aplicación, selecciona el menú **Depurar** y des
 
 ![resultados de ejecutar el primer tutorial: hola a todos](images/ios-to-uwp/vs-hello-world.png)
 
-Para salir de la aplicación, vuelve a VisualStudio, pulsa el menú **Depurar** y después pulsa **Detener depuración** (o presiona Mayús+F5). Ten en cuenta que Visual Studio te permite probar la aplicación en muchos dispositivos diferentes para comprobar cómo funcionará en cada uno.
+Para salir de la aplicación, vuelve a Visual Studio, pulsa el menú **Depurar** y después pulsa **Detener depuración** (o presiona Mayús + F5). Ten en cuenta que Visual Studio te permite probar la aplicación en muchos dispositivos diferentes para comprobar cómo funcionará en cada uno.
 
-## Paso siguiente
+## <a name="next-step"></a>Paso siguiente
 
 [Introducción: controles habituales](getting-started-common-controls.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

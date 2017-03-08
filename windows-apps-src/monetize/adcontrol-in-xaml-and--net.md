@@ -1,18 +1,25 @@
 ---
 author: mcleanbyron
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
-description: "Aprende a usar la clase AdControl para mostrar anuncios en banner en una aplicación XAML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1."
+description: "Aprende a usar la clase AdControl para mostrar anuncios en banners en una aplicación XAML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1."
 title: AdControl en XAML y .NET
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, anuncios, publicidad, AdControl, XAML, .NET, tutorial
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: f68171524fc535c5c4b855305898d56b1731182d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: db84e03d0cefb4692689ed901f25930a064f9a31
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="adcontrol-in-xaml-and-net"></a>AdControl en XAML y .NET
 
 
-En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para mostrar anuncios en banner en una aplicación XAML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1. En este tutorial no se usa **AdMediatorControl** ni la mediación de anuncios.
+En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para mostrar anuncios en banners en una aplicación XAML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1. En este tutorial no se usa **AdMediatorControl** ni la mediación de anuncios.
 
 Para obtener un ejemplo de proyecto completo que enseña cómo agregar anuncios en banner a una aplicación XAML con C# y C++, consulta los [ejemplos de publicidad en GitHub](http://aka.ms/githubads).
 
@@ -148,9 +155,4 @@ Para obtener un ejemplo de proyecto completo que enseña cómo agregar anuncios 
 * [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -2,13 +2,21 @@
 author: Mtoepke
 title: UWP en Xbox One
 description: "Cómo crear aplicaciones de la Plataforma universal de Windows (UWP) en Xbox One."
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 translationtype: Human Translation
-ms.sourcegitcommit: 7a53a7a9e786ebe04963a827bdfbc5beb69819eb
-ms.openlocfilehash: d46add99bccd41b4d278e58f79b356714fa4a038
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 36d19f660bc3c03377f864b1d659a19396917130
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# UWP en Xbox One
+# <a name="uwp-on-xbox-one"></a>UWP en Xbox One
 
 Introducción a la creación de una aplicación para la Plataforma universal de Windows (UWP) en Xbox One.
 
@@ -34,14 +42,9 @@ Esta sección incluye pasos de configuración, una guía por el proceso de auten
 |[Deshabilitar el modo de desarrollador en Xbox One](devkit-deactivation.md)| Explica cómo deshabilitar el modo de desarrollador en Xbox One. |
 |[Características UWP que aún no se admiten en Xbox One](http://go.microsoft.com/fwlink/p/?LinkId=760755)|  Describe las áreas de características de UWP que aún no son totalmente funcionales en Xbox One.|  
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 - [Introducción a las aplicaciones para UWP en Xbox One](http://go.microsoft.com/fwlink/p/?LinkId=780786) 
-- [Automatizar el inicio de aplicaciones de Windows10 para UWP](automate-launching-uwp-apps.md)
+- [Automatizar el inicio de aplicaciones de Windows 10 para UWP](automate-launching-uwp-apps.md)
 - [CPUSets para el desarrollo de juegos](cpusets-games.md)
   
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

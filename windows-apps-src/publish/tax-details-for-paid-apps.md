@@ -1,18 +1,25 @@
 ---
 author: jnHs
-Description: "Para conocer tus consideraciones fiscales para la selección de precios, la implicación en el pago y la responsabilidad fiscal, consulta tus países/regiones de distribución en las tablas siguientes."
+Description: "Para comprender qué debes tener en cuenta en asuntos fiscales, las implicaciones para los pagos y la responsabilidad fiscal, consulta tus países/regiones de distribución en las tablas siguientes."
 title: Detalles de impuestos para aplicaciones de pago
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 56421bc1ce426310189ddcb1c9893437469c075a
-ms.openlocfilehash: 69ae8d29df626f6a1e2ce1bb4a8a09e99353a0ac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: beaf73f0bf4709bcda2edda4afb97869eaccc27b
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="tax-details-for-paid-apps"></a>Detalles de impuestos para aplicaciones de pago
 
 
-Para conocer tus consideraciones fiscales para la selección de precios, la implicación en el pago y la responsabilidad fiscal, consulta tus países/regiones de distribución en las tablas siguientes.
+Para comprender qué debes tener en cuenta en asuntos fiscales, las implicaciones para los pagos y la responsabilidad fiscal, consulta tus países/regiones de distribución en las tablas siguientes.
 
 > **Nota** Puede que el ajuste de expansión comercial tenga consecuencias en el pago en un conjunto limitado de países/regiones. Para obtener más información sobre el ajuste de expansión comercial y los mercados en los que se aplica, consulta el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y la lista de [países/regiones afectados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
@@ -161,10 +168,10 @@ Para conocer tus consideraciones fiscales para la selección de precios, la impl
 | Filipinas                      | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. [Obtén más información sobre las consideraciones fiscales para este país.](#mixed-remittance-countriesregions)                                                                  | 70 % del precio seleccionado                 | Desarrollador          |
 | Polonia                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 23 % de impuestos) | Microsoft          |
 | Portugal                         | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 23 % de impuestos) | Microsoft          |
-| Puerto Rico                      | Los impuestos se suman al precio seleccionado. [Obtén más información sobre los aspectos fiscales de este país.](#mixed-remittance-countries-regions)                                                                                                     | 70 % del precio seleccionado                 | Microsoft          |
+| Puerto Rico                      | Los impuestos se suman al precio seleccionado. [Obtén más información sobre los aspectos fiscales de este país.](#mixed-remittance-countriesregions)                                                                                                     | 70 % del precio seleccionado                 | Microsoft          |
 | Catar                            | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
-| Rumanía                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 24 % de impuestos) | Microsoft          |
-| Rusia                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 18 % de impuestos) | Microsoft          |
+| Rumanía                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 19 % de impuestos) | Microsoft          |
+| Rusia                           | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 18 % de impuestos) | Microsoft          |
 | Ruanda                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | San Cristóbal y Nieves            | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | Santa Lucía                      | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
@@ -220,7 +227,7 @@ Para conocer tus consideraciones fiscales para la selección de precios, la impl
 ## <a name="mixed-remittance-countriesregions"></a>Países/regiones con ingreso combinado
 
 
-Determinados socios de facturación de Microsoft pueden cobrar y remitir los impuestos por ventas, uso, bienes y servicios, valor añadido o similares, si los hubiera, aplicables a la adquisición por parte de los clientes de tus aplicaciones o productos desde la aplicación a través de la Tienda en los países o regiones que se indican a continuación. Los informes que Microsoft pone a tu disposición identificarán las transacciones para las que un socio de facturación ha recaudado impuestos de ventas, uso, bienes y servicios, valor añadido u otros impuestos similares aplicables a la adquisición por parte de los clientes de tus aplicaciones o productos desde la aplicación a través de la Tienda. Excepto en el caso de las transacciones que se describen en el informe, ni Microsoft ni sus proveedores de servicios de facturación remitirán ningún impuesto sobre las ventas, uso, bienes y servicios, valor añadido o similares en relación con la adquisición, por parte del cliente, de tus aplicaciones o productos desde la aplicación en estos países o regiones. Es tu responsabilidad revisar el informe que se te ha proporcionado, así como determinar y cumplir con tus obligaciones, si corresponde, de registrar, recaudar e ingresar impuestos con respecto a las transacciones relacionadas con tus aplicaciones o productos desde la aplicación.
+Determinados socios de facturación de Microsoft pueden cobrar y remitir los impuestos por ventas, uso, bienes y servicios, valor añadido o similares, si los hubiera, aplicables a la adquisición por parte de los clientes de tus aplicaciones o productos desde la aplicación a través de la Tienda en los países o regiones que se indican a continuación. Los [informes](payout-summary.md#downloading-payment-transactions) que Microsoft pone a tu disposición identificarán las transacciones para las que un socio de facturación ha recaudado impuestos de ventas, uso, bienes y servicios, valor añadido u otros impuestos similares aplicables a la adquisición por parte de los clientes de tus aplicaciones o productos desde la aplicación a través de la Tienda. Excepto en el caso de las transacciones que se describen en el informe, ni Microsoft ni sus proveedores de servicios de facturación remitirán ningún impuesto sobre las ventas, uso, bienes y servicios, valor añadido o similares en relación con la adquisición, por parte del cliente, de tus aplicaciones o productos desde la aplicación en estos países o regiones. Es tu responsabilidad revisar el informe que se te ha proporcionado, así como determinar y cumplir con tus obligaciones, si corresponde, de registrar, recaudar e ingresar impuestos con respecto a las transacciones relacionadas con tus aplicaciones o productos desde la aplicación.
 
 | Países/regiones con ingreso combinado |
 |------------------------------------|
@@ -279,10 +286,5 @@ Cada fila del informe contiene la fecha y la hora de la transacción y, si está
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO5-->
 
 

@@ -3,16 +3,23 @@ title: "Restricciones de exportación sobre la criptografía"
 description: "Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Tienda Windows."
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: a6bd271ddfece1cc104243b8800f6473df14c275
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 265f0f0d9db1a8ae53a8d6561e289f8e303e08b1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Restricciones de exportación sobre la criptografía
+# <a name="export-restrictions-on-cryptography"></a>Restricciones de exportación sobre la criptografía
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Tienda Windows.
 
@@ -26,7 +33,7 @@ Para obtener más información sobre la Oficina de Industria y Seguridad y el De
 
 Para obtener información sobre la Normativa de la Administración de Exportaciones (EAR) que regula la exportación de tecnología que incluya cifrado, consulta la página [EAR Controls for Items That Use Encryption (Controles de la EAR para productos que usen cifrado)](http://go.microsoft.com/fwlink/p/?LinkID=245645).
 
-## Usos regulados
+## <a name="governed-uses"></a>Usos regulados
 
 En primer lugar, determina si tu aplicación usa un tipo de criptografía que esté regulada por la Normativa de la Administración de Exportaciones. La pregunta incluye los ejemplos que se muestran en esta lista, pero recuerda que esta lista no incluye cada aplicación de criptografía posible.
 
@@ -42,7 +49,7 @@ En primer lugar, determina si tu aplicación usa un tipo de criptografía que es
 
 Para obtener una lista completa y actualizada de las aplicaciones criptográficas, consulta [EAR Controls for Items That Use Encryption (Controles de la EAR para productos que usen cifrado)](http://go.microsoft.com/fwlink/p/?LinkID=245645).
 
-## Usos no restringidos
+## <a name="non-restricted-uses"></a>Usos no restringidos
 
 Ten en cuenta que algunas de las aplicaciones de criptografía no están restringidas. Estas son algunas de las tareas sin restricciones:
 
@@ -57,9 +64,4 @@ Para obtener una lista completa y actualizada de las aplicaciones criptográfica
 Si la aplicación llama, admite, tiene o usa criptografía o cifrado para cualquier tarea que no esté en esta lista, necesita un Número de clasificación de control de exportación (ECCN).
 
 Si no tienes un número ECCN, consulta el tema sobre [ECCN Questions and Answers (Preguntas y respuestas sobre ECCN)](http://go.microsoft.com/fwlink/p/?LinkID=245646).
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

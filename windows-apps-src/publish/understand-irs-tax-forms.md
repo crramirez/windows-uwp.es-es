@@ -2,9 +2,17 @@
 author: jnHs
 Description: "Obtén información sobre los formularios fiscales emitidos por Microsoft, incluido quién los recibirá y cuándo estarán disponibles."
 title: "Descripción de los formularios fiscales del IRS emitidos por Microsoft"
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 translationtype: Human Translation
-ms.sourcegitcommit: 684a76a503a0adefb1754059ffa6aa8d4d8d940b
-ms.openlocfilehash: 2927588bc096ef1ed9e8451cea73ba78efa9d7c0
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 5f51e1c5a44767e49b5c3dc5f578c2532da11008
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -54,10 +62,10 @@ CIF/NIF: \*\*\*\*\*4442<br>
     <td valign="top">No se aplica ninguna de las anteriores.</td>
     <td valign="top">Ninguno</td>
   </tr>
-</table>
-
-
-<table>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
   <tr>
      <th>Si soy un desarrollador de Estados Unidos que vende aplicaciones de pago y... </th>
      <th> Debo recibir este formulario</th>
@@ -119,9 +127,4 @@ CIF/NIF: \*\*\*\*\*0505<br>
 
 
 > **Nota**: Si tienes más preguntas o dudas relacionadas con los **formularios fiscales del IRS**, crea una [incidencia de soporte técnico](http://aka.ms/storesupport). Microsoft no puede responder preguntas relacionadas con tus circunstancias fiscales específicas. Para tales preguntas, consulta a tu profesional en materia fiscal.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

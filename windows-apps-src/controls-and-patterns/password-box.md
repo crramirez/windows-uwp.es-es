@@ -6,9 +6,16 @@ ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
 label: Password box
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 1addc6eee8ae4819fa388332998ac8a69e01cdf3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1f4af88235615226954f5a8ca7fd038568d08012
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="password-box"></a>Cuadro de contraseña
@@ -184,14 +191,9 @@ Para obtener más información sobre cómo usar los ámbitos de entrada, consult
 [Controles de texto](text-controls.md)
 
 - [Directrices sobre revisión ortográfica](spell-checking-and-prediction.md)
-- [Adición de búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
-- [Directrices para la entrada de texto](text-controls.md)
+- [Agregar búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [Directrices sobre la entrada de texto](text-controls.md)
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

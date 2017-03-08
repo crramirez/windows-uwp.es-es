@@ -1,17 +1,24 @@
 ---
 author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
-description: "Usa la API de análisis de la Tienda Windows para recuperar datos de análisis mediante programación para las aplicaciones que se registran en tu cuenta del Centro de desarrollo de Windows o la de tu organización."
+description: "Usa la API de análisis de la Tienda Windows para recuperar datos de análisis mediante programación para las aplicaciones que se registran en tu cuenta del Centro de desarrollo de Windows o en la de tu organización."
 title: "Acceder a los datos de análisis mediante los servicios de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, servicios de la Tienda, API de análisis de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 1a2e856cddf9998eeb8b0132c2fb79f5188c218b
-ms.openlocfilehash: 596cc5054367acf0d3609a34b764bc7fcf33ea0b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1538f06b09bd4143750c10a2774137f87359ebce
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="access-analytics-data-using-windows-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Tienda Windows
 
-Usa la *API de análisis de la Tienda Windows* para recuperar datos de análisis mediante programación referentes a las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows o en la de tu organización. Esta API permite recuperar los datos respecto a las adquisiciones de aplicaciones y de complementos (conocidas también como producto desde la aplicación o IAP), errores, valoraciones de la aplicación y opiniones. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas procedentes de la aplicación o el servicio.
+Usa la *API de análisis de la Tienda Windows* para recuperar mediante programación datos de análisis de las aplicaciones que se registran en tu cuenta del Centro de desarrollo de Windows o en la de tu organización. Esta API permite recuperar los datos respecto a las adquisiciones de aplicaciones y de complementos (conocidas también como producto desde la aplicación o IAP), errores, valoraciones de la aplicación y opiniones. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas procedentes de la aplicación o el servicio.
 
 Los siguientes pasos describen el proceso de principio a fin:
 
@@ -45,7 +52,7 @@ Para asociar una aplicación de Azure AD con la cuenta del Centro de desarrollo 
 
 Antes de llamar a cualquiera de los métodos en la API de análisis de la Tienda Windows, debes obtener un token de acceso de Azure AD para pasarlo al encabezado **Authorization** de cada método en la API. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
 
-Para obtener el token de acceso, sigue las instrucciones en [Llamadas entre servicios mediante las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
+Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
 ```
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
@@ -67,15 +74,12 @@ Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instruc
 
 Cuando tengas un token de acceso de Azure AD, podrás llamar a la API de análisis de la Tienda Windows. Para obtener información sobre la sintaxis de cada método, consulta los siguientes artículos. Debes pasar el token de acceso al encabezado **Authorization** de cada método.
 
-* [Obtener los datos de las adquisiciones de la aplicación](get-app-acquisitions.md)
-* [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
-* [Obtener los datos del informe de errores](get-error-reporting-data.md)
-* [Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)
-* [Obtener el seguimiento de la pila de un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)
-* [Obtener las valoraciones de la aplicación](get-app-ratings.md)
-* [Obtener las opiniones de la aplicación](get-app-reviews.md)
-* [Obtener los datos de rendimiento de los anuncios](get-ad-performance-data.md)
-* [Obtener los datos de rendimiento de la campaña de anuncios](get-ad-campaign-performance-data.md)
+| Situación       | Descripción      |
+|---------------|--------------------|
+| Adquisiciones |  Obtén los datos de adquisición para tus aplicaciones y complementos. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Obtener los datos de las adquisiciones de la aplicación](get-app-acquisitions.md)</li><li>[Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)</li></ul> |
+| Errores | Obtén datos acerca de los errores en las aplicaciones. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Obtener los datos del informe de errores](get-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)</li><li>[Obtener el seguimiento de la pila de un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)</li></ul> |
+| Calificaciones y opiniones | Obtén información de calificaciones y opiniones de las aplicaciones. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Obtener la clasificación de la aplicación](get-app-ratings.md)</li><li>[Obtener opiniones de la aplicación](get-app-reviews.md)</li></ul> |
+| Anuncios en la aplicación y campañas de anuncios | Obtén datos de rendimiento de los anuncios en tus aplicaciones y de tus campañas de anuncios promocionales. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Obtener los datos de rendimiento de los anuncios](get-ad-performance-data.md)</li><li>[Obtener los datos de rendimiento de la campaña de anuncios](get-ad-campaign-performance-data.md)</li></ul> |
 
 ## <a name="code-example"></a>Ejemplo de código
 
@@ -114,14 +118,8 @@ La API de análisis de la Tienda Windows devuelve respuestas de error en un obje
 * [Obtener los datos del informe de errores](get-error-reporting-data.md)
 * [Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)
 * [Obtener el seguimiento de la pila de un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)
-* [Obtener las valoraciones de la aplicación](get-app-ratings.md)
-* [Obtener las opiniones de la aplicación](get-app-reviews.md)
+* [Obtener la clasificación de la aplicación](get-app-ratings.md)
+* [Obtener opiniones de la aplicación](get-app-reviews.md)
 * [Obtener los datos de rendimiento de los anuncios](get-ad-performance-data.md)
 * [Obtener los datos de rendimiento de la campaña de anuncios](get-ad-campaign-performance-data.md)
- 
-
-
-
-<!--HONumber=Dec16_HO4-->
-
 

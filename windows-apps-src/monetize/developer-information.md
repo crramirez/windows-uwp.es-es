@@ -3,22 +3,28 @@ author: mcleanbyron
 ms.assetid: 278114aa-2a44-4d63-a1d2-d512d8aababc
 description: "Obtén información general para desarrolladores sobre las bibliotecas de Microsoft Advertising incluidas en Microsoft Store Services SDK."
 title: "Información para desarrolladores sobre las bibliotecas de Microsoft Advertising"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, anuncios, ads, publicidad, advertising
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: 70692d09c037d9e5802734bc5de6a6c79799bffb
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 44b5266a104b2f706537cea2167b395487f275d2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Información para desarrolladores sobre las bibliotecas de Microsoft Advertising
+# <a name="developer-information-about-the-microsoft-advertising-libraries"></a>Información para desarrolladores sobre las bibliotecas de Microsoft Advertising
 
 
 
 
-En los temas de esta sección se proporciona información útil para los desarrolladores relativa a las bibliotecas de Microsoft Advertising incluidas en Microsoft Store Services SDK (para aplicaciones para UWP) y en Microsoft Advertising SDK para Windows y Windows Phone 8.x (para aplicaciones de Windows8.1 y WindowsPhone8.x).
+En los temas de esta sección se proporciona información útil para los desarrolladores relativa a las bibliotecas de Microsoft Advertising incluidas en Microsoft Store Services SDK (para aplicaciones para UWP) y en Microsoft Advertising SDK para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x).
 
 
-## En esta sección
+## <a name="in-this-section"></a>En esta sección
 
 | Tema                                                                                                       | Descripción                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
@@ -35,9 +41,4 @@ En los temas de esta sección se proporciona información útil para los desarro
  
 
  
-
-
-
-<!--HONumber=Sep16_HO2-->
-
 

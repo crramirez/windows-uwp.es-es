@@ -1,15 +1,22 @@
 ---
 author: jnHs
 Description: "Para ver los datos de rendimiento de las unidades de anuncio en tus aplicaciones, usa los informes de rendimiento de la publicidad de nivel de aplicación y de nivel de cuenta en el panel del Centro de desarrollo de Windows."
-title: Informe de rendimiento de la publicidad
+title: Informe Rendimiento de la publicidad
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6b354b1b009bf9e4f2899f7ef97ef8791712f52b
-ms.openlocfilehash: b75d9310e577c77d1caed3e9f34762e925eb11ae
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d53fe17f2d2452e66a6b4f9c1609112c621ede64
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Informe de rendimiento de la publicidad
+# <a name="advertising-performance-report"></a>Informe Rendimiento de la publicidad
 
 
 Para ver los datos de rendimiento de las unidades de anuncios en tus aplicaciones, puedes usar los siguientes informes en el panel del Centro de desarrollo de Windows:
@@ -24,7 +31,7 @@ De manera predeterminada, los informes se filtran según el rendimiento de los �
 
 En las siguientes secciones se proporcionan más detalles sobre estos informes.
 
-## Informe de rendimiento de la publicidad en el nivel de la aplicación
+## <a name="app-level-advertising-performance-report"></a>Informe de rendimiento de la publicidad en el nivel de la aplicación
 
 Esta página muestra en el panel los datos de rendimiento en forma de gráfico, mapamundi y tabla para las unidades de anuncios de Microsoft en la aplicación seleccionada actualmente. Para ver este informe, selecciona una de las aplicaciones en el panel y haz clic en **Análisis** &gt; **Rendimiento de publicidad** en el panel de navegación.
 
@@ -46,13 +53,13 @@ En la vista de mapa, los tonos más oscuros representan los valores más altos y
 
 Para realizar un análisis de los datos en mayor profundidad, selecciona **Descargar informe** y, a continuación, abre el archivo CSV (valores separados por comas) en Microsoft Excel o un programa similar.
 
-## Informe de rendimiento de la publicidad en el nivel de la cuenta
+## <a name="account-level-advertising-performance-report"></a>Informe de rendimiento de la publicidad en el nivel de la cuenta
 
 Esta página muestra los datos de rendimiento de las unidades de anuncios de Microsoft y de los anuncios de la comunidad usados en las aplicaciones que están registradas en tu cuenta de desarrollador. Para ver este informe, ve a la página de información general del panel y haz clic en **Rendimiento de publicidad** en el panel de navegación.
 
 Esta página incluye las siguientes secciones.
 
-### Microsoft Advertising
+### <a name="microsoft-advertising"></a>Microsoft Advertising
 
 Este informe proporciona los datos de rendimiento de todas las unidades de anuncios de Microsoft usadas en tus aplicaciones. Este informe también incluye los datos de rendimiento de las unidades de anuncio de pubCenter que no se asignaron correctamente a las aplicaciones del Centro de desarrollo.
 
@@ -70,7 +77,7 @@ Para obtener más información sobre la migración de cuentas de pubCenter al Ce
 
 Para realizar un análisis de los datos en mayor profundidad, selecciona **Descargar informe** y, a continuación, abre el archivo CSV (valores separados por comas) en Microsoft Excel o un programa similar.
 
-### Anuncios de la comunidad Microsoft
+### <a name="microsoft-community-ads"></a>Anuncios de la comunidad Microsoft
 
 En esta sección se proporcionan los datos de rendimiento en forma de gráfico y mapamundi de los anuncios de la comunidad en la aplicación seleccionada actualmente en el panel. Para obtener más información sobre los anuncios de la comunidad, consulta [Acerca de los anuncios de la comunidad](about-community-ads.md).
 
@@ -85,7 +92,7 @@ Los datos se obtienen del seguimiento que realizamos de las siguientes métricas
 
 Para analizar los datos de una de estas métricas en un gráfico o una vista de mapamundi, haz clic en **Gráfico** o **Mapa**. Haz clic en los encabezados situados sobre el gráfico o el mapa para cambiar entre las diferentes métricas. En la vista de mapa, los tonos más oscuros representan los valores más altos y tonos más claros representan valores más bajos. Puedes mantener el mouse sobre un país o región específico en el mapa para analizar el valor de la métrica seleccionada. También puedes acercar cualquier área del mapa para ver datos referentes a países más pequeños.
 
-## Notas acerca de los informes
+## <a name="notes-about-the-reports"></a>Notas acerca de los informes
 
 Estas son algunas cosas que debes tener en cuenta al usar los informes de rendimiento de la publicidad.
 
@@ -96,9 +103,4 @@ Estas son algunas cosas que debes tener en cuenta al usar los informes de rendim
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

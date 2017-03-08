@@ -3,16 +3,23 @@ author: mtoepke
 title: "Conceptos básicos sobre la muestra de Marble Maze"
 description: "En este documento se describen las características fundamentales del proyecto Marble Maze, como la forma en que usa Visual C++ en el entorno de Windows Runtime, cómo se crea y se estructura, y cómo se compila."
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c9aafbf7d8061893180a1a823c2c1cafd9ef7a7f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cc155d7a454cabe5c0d820f5d74313dfeaf01830
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Conceptos básicos sobre la muestra de Marble Maze
+# <a name="marble-maze-sample-fundamentals"></a>Conceptos básicos sobre la muestra de Marble Maze
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este documento se describen las características fundamentales del proyecto Marble Maze, como la forma en que usa Visual C++ en el entorno de Windows Runtime, cómo se crea y se estructura, y cómo se compila. El documento también describe varias convenciones que se usan en el código.
@@ -29,7 +36,7 @@ Estos son algunos de los puntos principales que se tratan en este documento para
 -   En la mayoría de los casos, usa el controlador de excepciones en vez de los códigos de resultados para tratar los errores inesperados.
 -   Usa anotaciones de SAL junto con herramientas de análisis de código para detectar errores en tu aplicación.
 
-## Creación del proyecto de Visual Studio
+## <a name="creating-the-visual-studio-project"></a>Creación del proyecto de Visual Studio
 
 
 Si has descargado y extraído la muestra, puedes abrir el archivo de la solución MarbleMaze.sln en Visual Studio para ver el código. También puedes ver el código fuente en la página de la Galería de muestras de MSDN [Muestra del juego Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011) seleccionando la pestaña **Examinar código**.
@@ -44,7 +51,7 @@ Un valor importante del proyecto en la plantilla **DirectX 11 App (Windows unive
 
 Cada aplicación para UWP que adquieras de la Tienda Windows tiene la forma de paquete de la aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Para más información sobre los paquetes de la aplicación, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
-##   Compilar, implementar y ejecutar el juego
+##  <a name="building-deploying-and-running-the-game"></a> Compilar, implementar y ejecutar el juego
 
 
 Compila un proyecto de aplicación para UWP como lo harías con un proyecto estándar. (En la barra de menús, elige **Compilar, Compilar solución**.) Este paso compila el código y lo empaqueta para usarlo como una aplicación UWP.
@@ -53,7 +60,7 @@ Después de compilar el proyecto, debes implementarlo. (En la barra de menús, e
 
 Una vez implementado el proyecto, elige el icono de Marble Maze para ejecutar el juego. De forma alternativa, desde Visual Studio, en la barra de menús, elige **Depurar, Iniciar depuración**.
 
-###   Control del juego
+###  <a name="controlling-the-game"></a> Control del juego
 
 Puedes usar la entrada táctil, el acelerómetro, el mando de la Xbox 360 o el mouse para controlar Marble Maze.
 
@@ -65,7 +72,7 @@ Puedes usar la entrada táctil, el acelerómetro, el mando de la Xbox 360 o el m
 -   Usa el botón Back del mando o la tecla Inicio del teclado para reiniciar el juego.
 -   Cuando la tabla de puntuaciones máximas esté visible, usa el botón Back o la tecla Inicio para borrar las puntuaciones.
 
-##   Convenciones del código
+##  <a name="code-conventions"></a> Convenciones del código
 
 
 Windows Runtime es una interfaz de programación que puedes usar para crear aplicaciones para UWP que se ejecutan solo en un entorno de aplicación especial. Estas aplicaciones usan funciones autorizadas, tipos de datos y dispositivos, y se distribuyen desde la Tienda Windows. En el nivel inferior, Windows Runtime consta de una interfaz binaria de aplicaciones (ABI). La ABI es un contrato binario de nivel inferior que hace que varios lenguajes de programación, como JavaScript, los lenguajes .NET y Visual C++, puedan acceder a las API de Windows Runtime.
@@ -81,7 +88,7 @@ Marble Maze usa **^** junto con [**Microsoft::WRL::ComPtr**](https://msdn.micros
 
 Para más información sobre las extensiones de lenguaje disponibles para una aplicación para UWP con C++, consulta [Referencia de lenguaje Visual C++ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh699871).
 
-###   Administración de errores
+###  <a name="error-handling"></a> Administración de errores
 
 Marble Maze usa el controlador de excepciones como método principal para tratar los errores inesperados. Aunque el código de los juegos tradicionalmente usa códigos de error o de registro, como los valores **HRESULT**, para indicar los errores, el controlador de excepciones tiene dos ventajas principales. En primer lugar, hace que el código sea más fácil de leer y mantener. Desde el punto de vista del código, el controlador de excepciones es una manera más eficaz de propagar un error a una rutina que pueda administrar dicho error. Normalmente, el uso de códigos de error requiere que cada función propague los errores explícitamente. Una segunda ventaja es que puedes configurar el depurador de Visual Studio para que se interrumpa cuando ocurra una excepción de manera que puedas parar inmediatamente en el lugar y contexto del error. Windows Runtime también usa mucho el control de excepciones. Por lo tanto, si usas el control de excepciones en tu código puedes combinar todo el control de errores en un solo modelo.
 
@@ -104,7 +111,7 @@ Recomendamos que uses las siguientes convenciones en tu modelo de administració
 
 -   Aunque recomendamos que evites el uso de **HRESULT** para los errores inesperados, es más importante evitar el uso del controlador de excepciones para controlar el flujo de código. Por lo tanto, se prefiere usar un valor de retorno **HRESULT** cuando sea necesario para controlar el flujo de código.
 
-###   Anotaciones de SAL
+###  <a name="sal-annotations"></a> Anotaciones de SAL
 
 Usa anotaciones de SAL junto con herramientas de análisis de código para detectar errores en tu aplicación.
 
@@ -126,12 +133,12 @@ Para realizar un análisis de código en tu aplicación, en la barra de menús e
 
 La lista completa de anotaciones disponibles está definida en sal.h. Para obtener más información, consulta [Anotaciones de SAL](https://msdn.microsoft.com/library/windows/apps/ms235402.aspx).
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 
 Lee [Estructura de la aplicación Marble Maze](marble-maze-application-structure.md) para obtener información sobre cómo está estructurado el código de la aplicación Marble Maze y para ver las diferencias de las aplicaciones para UWP con DirectX respecto a las aplicaciones de escritorio tradicionales.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Estructura de la aplicación Marble Maze](marble-maze-application-structure.md)
@@ -143,10 +150,5 @@ Lee [Estructura de la aplicación Marble Maze](marble-maze-application-structure
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

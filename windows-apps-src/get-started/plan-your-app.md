@@ -3,17 +3,24 @@ author: GrantMeStrength
 title: "Planear tu aplicación de Plataforma universal de Windows (UWP)"
 description: "En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco etapas diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar."
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 43214b9e2c786a007b8d9cdef7700e275101aba5
-ms.openlocfilehash: 4d17f7da6969910d2738377174cec9f1c1517dde
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 21e08e22e6c6ebada4445a05f32d2bd37244758f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  Planear la aplicación para la Plataforma universal de Windows (UWP)
+#  <a name="plan-your-universal-windows-platform-uwp-app"></a>Planear la aplicación para la Plataforma universal de Windows (UWP)
 
-En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco etapas diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar.
+En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco fases diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar.
 
-## Concepto
+## <a name="concept"></a>Concepto
 
 **Concreta tu aplicación**
 
@@ -52,7 +59,7 @@ Después de tener una buena idea resulta muy tentador pasar a desarrollarla, inc
 
 El término "embudo" se debe a su forma. En la parte ancha del embudo entran muchas ideas y cada una se muestra como un artefacto de diseño de baja fidelidad (como un boceto, quizás, o como un párrafo de texto). A medida que esta recopilación de ideas viaja hacia el extremo estrecho del embudo, el número de ideas se reduce y aumenta, al mismo tiempo, la fidelidad de los artefactos que representan las ideas. Cada artefacto solo debe capturar la información necesaria para comparar una idea con otra o para responder a una pregunta determinada, como "¿es útil o intuitivo?". *No debe emplearse más tiempo ni esfuerzo en cada uno de ellos*. Algunas ideas se quedarán en el camino al probarlas, lo cual te parecerá bien, porque no habrás invertido más de lo absolutamente necesario en juzgar dichas ideas. Las ideas que consigan avanzar a lo largo del embudo se tratarán sucesivamente como ideas de alta fidelidad. Al final tendrás un único artefacto de diseño que representará la idea ganadora. Esta es la idea que ha ganado por méritos propios, no simplemente porque se te ocurrió primero. De este modo, habrás diseñado la mejor aplicación posible.
 
-## Estructura
+## <a name="structure"></a>Estructura
 
 
 **La organización hace que todo sea más sencillo**
@@ -65,7 +72,7 @@ Una buena AI no solo facilita los escenarios de usuario, sino que también te ay
 
 Para obtener directrices relacionadas, consulta [Patrones de diseño básicos](../layout/navigation-basics.md).
 
-## Dynamics
+## <a name="dynamics"></a>Dynamics
 
 **Ejecutar el concepto**
 
@@ -89,7 +96,7 @@ Técnicas habituales para ayudarte con este paso:
 -   Modificar y comentar los destinos y las actividades que agregaron los amigos.
 -   Compartir itinerarios para que puedan seguirlos amigos y familiares.
 
-## Elementos visuales
+## <a name="visual"></a>Elementos visuales
 
 **Habla sin pronunciar ni una palabra**
 
@@ -99,7 +106,7 @@ Una vez que hayas establecido la dinámica de la aplicación, puedes hacer que t
 
 Todas las aplicaciones tienen su propia identidad única, de modo que explora las direcciones visuales que puedes tomar con tu aplicación. Deja que el contenido determine el aspecto y la sensación de tu aplicación y no permitas que el aspecto determine el contenido.
 
-## Prototipo
+## <a name="prototype"></a>Prototipo
 
 **Refina tu obra maestra**
 
@@ -107,9 +114,9 @@ La creación del prototipo es una etapa del *embudo de diseño*, que es una téc
 
 No nos cansamos de decírselo a los nuevos desarrolladores: la creación de aplicaciones de gran calidad es un proceso iterativo. Te recomendamos que crees los prototipos lo antes posible y de manera frecuente. Al igual que sucede con cualquier trabajo creativo, las mejores aplicaciones son el resultado de un proceso intensivo de ensayo y error.
 
-## Decide qué funciones incluirás
+## <a name="decide-what-features-to-include"></a>Decide qué funciones incluirás
 
-Cuando sepas qué es lo que buscan los usuarios y cómo puedes ayudarlos a encontrarlo, puedes echar un vistazo a algunas herramientas de la caja de herramientas. Explora la Plataforma universal de Windows (UWP) y asocia funciones con las necesidades de la aplicación. Asegúrate de seguir las [directrices de experiencia del usuario](https://msdn.microsoft.com/library/windows/apps/hh465424.aspx) para cada característica.
+Cuando sepas qué es lo que buscan los usuarios y cómo puedes ayudarlos a encontrarlo, puedes echar un vistazo a algunas herramientas de la caja de herramientas. Explora la Plataforma universal de Windows (UWP) y asocia funciones con las necesidades de la aplicación. Asegúrate de seguir las [directrices de experiencia del usuario](https://developer.microsoft.com/windows/apps/design) para cada característica.
 <!--need URL for landing page -->
 
 Técnicas comunes:
@@ -163,11 +170,11 @@ Volvamos a tomar el ejemplo de la aplicación para viajes. Para ofrecer una exce
 -   Zoom semántico: los usuarios se desplazan por la escala de tiempo del itinerario y acercan la vista para ver con más detalle la larga lista de actividades que planearon.
 -   Imágenes de usuario: los usuarios eligen la imagen que quieren que aparezca cuando comparten su viaje con amigos.
 
-## Decide cómo rentabilizar tu aplicación
+## <a name="decide-how-to-monetize-your-app"></a>Decide cómo rentabilizar tu aplicación
 
 Cuentas con muchas opciones para ganar dinero con tu aplicación. Si decides usar publicidad o ventas en la aplicación, querrás diseñar una interfaz de usuario que lo permita. Para más información, consulta [Planear la rentabilidad](../monetize/index.md).
 
-## Diseña la experiencia de usuario de tu aplicación
+## <a name="design-the-ux-for-your-app"></a>Diseña la experiencia de usuario de tu aplicación
 
 Se trata de comprender correctamente los aspectos fundamentales. Ahora que sabes cuáles son los puntos fuertes de tu aplicación y ya pensaste en los flujos que quieres admitir, puedes comenzar a pensar en los aspectos fundamentales del diseño de la experiencia de usuario.
 
@@ -210,7 +217,7 @@ Para obtener información detallada sobre cómo usar superficies distintas, cons
 
     -   En la [barra de comandos](https://msdn.microsoft.com/library/windows/apps/hh465302): debes colocar la mayoría de los comandos en la barra de comandos, que generalmente permanece oculta hasta que el usuario toca la pantalla para que se muestre.
     -   En el lienzo de la aplicación: si el usuario se encuentra en una página o vista que tiene un solo propósito, puedes ofrecerle comandos para ese propósito directamente en el lienzo. Debería haber muy pocos de estos comandos.
-    -   En un [menú contextual](https://msdn.microsoft.com/library/windows/apps/hh465308): puedes usar los menús contextuales para acciones del Portapapeles (como cortar, copiar y pegar) o para comandos que se aplican al contenido y que no se pueden seleccionar (como agregar un alfiler de anotación en una ubicación sobre el mapa).
+    -   En un [menú contextual](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/menus): puedes usar los menús contextuales para acciones del Portapapeles (como cortar, copiar y pegar) o para comandos que se aplican al contenido y que no se pueden seleccionar (como agregar un alfiler de anotación en una ubicación sobre el mapa).
 
 **Decide cómo diseñar tu aplicación en cada vista.**  Windows no solo admite la orientación vertical y horizontal, sino que además te permite cambiar el tamaño de las aplicaciones a cualquier ancho: desde la pantalla completa hasta un ancho mínimo. Te interesa que tu aplicación tenga un funcionamiento y un aspecto perfectos en cualquier tamaño, pantalla y orientación, para ello tendrás que planear el diseño de los elementos de la interfaz de usuario para distintos tamaños y vistas. Al hacerlo, la interfaz de usuario de la aplicación cambia de forma fluida para satisfacer las necesidades y preferencias del usuario.
 
@@ -218,7 +225,7 @@ Para obtener información detallada sobre cómo usar superficies distintas, cons
 
 Para obtener más información sobre cómo diseñar para diferentes tamaños de pantalla, consulta <!--[Responsive design 101](designing-in-effective-pixels.md)-->.
 
-## Causa una buena primera impresión
+## <a name="make-a-good-first-impression"></a>Causa una buena primera impresión
 
 Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicien por primera vez la aplicación. Vuelve a consultar el enunciado de puntos fuertes. Aunque no tengas la oportunidad de decir a los usuarios en persona para qué es excelente la aplicación, puedes transmitirles el mensaje con tu primera impresión. Aprovecha lo siguiente:
 
@@ -230,14 +237,9 @@ Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicie
 
 **Página principal**  La página principal es la página que verán los usuarios cada vez que inicien tu aplicación. El contenido debe tener un propósito claro y mostrar de inmediato para qué sirve la aplicación. Haz que esta página sea excelente en algo en particular y confía en que las personas explorarán el resto de la aplicación. Céntrate en eliminar las distracciones de la página de destino y no en su detectabilidad.
 
-## Valida tu diseño
+## <a name="validate-your-design"></a>Valida tu diseño
 
-Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada función cuenta con un conjunto de directrices de experiencia del usuario que te ayudan a pulir la aplicación, así como un conjunto de requisitos de la Tienda que debes cumplir para vender la aplicación en la Tienda Windows. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://dev.windows.com/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
+Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada función cuenta con un conjunto de directrices de experiencia del usuario que te ayudan a pulir la aplicación, así como un conjunto de requisitos de la Tienda que debes cumplir para vender la aplicación en la Tienda Windows. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
 
 Usa las [directrices detalladas de la experiencia de usuario para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh465424) para mantenerte centrado en las características importantes. Usa las herramientas que encontrarás en [Visual Studio performance tools (Herramientas de rendimiento de Visual Studio)](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx) para analizar el rendimiento de cada uno de los escenarios de la aplicación.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

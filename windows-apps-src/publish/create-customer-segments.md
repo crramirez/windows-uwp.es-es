@@ -2,9 +2,17 @@
 author: shawjohn
 Description: "Aprende a crear segmentos de clientes para poder dirigirte a un subgrupo de tu base de clientes para fines promocionales o de participación."
 title: Crear segmentos de clientes
+ms.author: johnshaw
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 translationtype: Human Translation
-ms.sourcegitcommit: eed71b2fc06db71fd105df37a73bd0cd0832931f
-ms.openlocfilehash: 28906c98d2826f5312e01713e2621159c6b24923
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1c1aa77ee989344f5e09ddaeb864d5ddceb03660
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -18,13 +26,13 @@ Por ejemplo, podrías crear un segmento que incluya solo a clientes de 50 años 
 
 ## <a name="to-create-a-customer-segment"></a>Para crear un segmento de clientes
 
-1.  En el [panel del Centro de desarrollo de Windows](https://developer.microsoft.com/dashboard/overview), selecciona **Clientes** en el menú superior.
-2.  En la página **Grupos de clientes**, sigue uno de estos procedimientos:
+1.    En el [panel del Centro de desarrollo de Windows](https://developer.microsoft.com/dashboard/overview), selecciona **Clientes** en el menú superior.
+2.    En la página **Grupos de clientes**, sigue uno de estos procedimientos:
  - En la sección **Mis grupos de clientes**, selecciona **Crear nuevo grupo** para definir un segmento desde cero. Asegúrate de que la opción **Segmento** está seleccionada en la lista desplegable **Tipo de grupo**.
  - En la sección **Segment templates**, selecciona **Copy to use a predefined segment**, una copia que puedes usar tal cual o modificar según tus necesidades.
-3.  En la lista **Include customers from this app**, selecciona una de las aplicaciones de destino.
-4.  En la casilla **Nombre del segmento**, elige un nombre para el segmento.
-5.  En la sección **Definir condiciones de inclusión**, selecciona los criterios de filtro para el segmento.
+3.    En la lista **Include customers from this app**, selecciona una de las aplicaciones de destino.
+4.    En la casilla **Nombre del segmento**, elige un nombre para el segmento.
+5.    En la sección **Definir condiciones de inclusión**, selecciona los criterios de filtro para el segmento.
 
     Puedes elegir entre diversos criterios de filtro, incluidos **Origen de adquisición**, **Adquisiciones**, **Datos demográficos**, **Clasificación**, **Adquisiciones de la Tienda**, **Compras de la tienda** y **Gasto de la Tienda**.
 
@@ -57,9 +65,4 @@ Si ves los resultados y **Customers in this segment** dice **Pequeño**, el segm
 
 - En la sección **Define inclusion conditions**, ajusta los criterios de filtro para que el segmento incluya más clientes.
 - En la página **Grupos de clientes**, en la sección **Inactive segments**, selecciona **Actualizar** para ver si el segmento contiene actualmente suficientes clientes. Esta táctica podría dar resultados, por ejemplo, si más clientes que cumplen tus criterios de segmento han descargado tu aplicación desde que creaste el segmento.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

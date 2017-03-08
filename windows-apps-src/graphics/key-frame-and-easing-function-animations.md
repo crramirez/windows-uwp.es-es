@@ -3,23 +3,30 @@ author: Jwmsft
 title: "Animaciones de fotograma clave y animaciones de función de aceleración"
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: "Las animaciones de fotograma clave lineales, las animaciones de fotograma clave con un valor KeySpline o las funciones de aceleración son tres técnicas distintas para prácticamente el mismo escenario."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 7b4676e5c5a66450b321ab6f5f8670f9491b7a9d
-ms.openlocfilehash: 163109a8e87c0d270eeeed825958af7ec51ee336
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2eb40a8787479e6abd03ef2f0adb2d7462bfef16
+ms.lasthandoff: 02/07/2017
 
 ---
-# Animaciones de fotograma clave y animaciones de función de aceleración
+# <a name="key-frame-animations-and-easing-function-animations"></a>Animaciones de fotograma clave y animaciones de función de aceleración
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las animaciones de fotograma clave lineales, las animaciones de fotograma clave con un valor **KeySpline** o las funciones de aceleración son tres técnicas distintas para prácticamente el mismo escenario: crear una animación de guion gráfico que es un poco más compleja y que tiene un comportamiento de animación no lineal desde un estado inicial hasta un estado final.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Asegúrate de que has leído el tema sobre las [animaciones de guion gráfico](storyboarded-animations.md). Este tema se basa en los conceptos de animación que se explicaron en el tema sobre [animaciones de guion gráfico](storyboarded-animations.md) y no los explicaremos nuevamente. Por ejemplo, en la sección de [animaciones de guion gráfico](storyboarded-animations.md) se describe cómo seleccionar como destino animaciones y guiones gráficos para usarlos como recursos, los valores de la propiedad [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) tales como [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior), etc.
 
-## Animación mediante animaciones de fotograma clave
+## <a name="animating-using-key-frame-animations"></a>Animación mediante animaciones de fotograma clave
 
 Las animaciones de fotograma clave permiten que se alcance más de un valor de destino en un punto junto con la escala de tiempo de la animación. En otras palabras, cada fotograma clave puede especificar un valor intermedio diferente y el último fotograma clave que se alcanza se convierte en el valor de animación final. Si especificas varios valores para animar, puedes crear animaciones más complejas. Las animaciones de fotograma clave también permiten una lógica de interpolación distinta, las cuales se implementan como una subclase **KeyFrame** diferente según el tipo de animación. Específicamente, cada tipo de animación de fotograma clave presenta una variación de **Discrete**, **Linear**, **Spline** y **Easing** de su clase **KeyFrame** para especificar sus fotogramas clave. Por ejemplo, para especificar una animación que selecciona como destino [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) y usa fotogramas clave, puedes declarar fotogramas clave con [**DiscreteDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243130), [**LinearDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210316), [**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446) y [**EasingDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210269). Puedes usar algunos de estos tipos, o todos, dentro de una única colección de **KeyFrames**, para cambiar la interpolación cada vez que se alcanza un nuevo fotograma clave.
 
@@ -40,7 +47,7 @@ Además de la propiedad [**Duration**](https://msdn.microsoft.com/library/window
     -   Si está establecido como un valor de [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377), la escala de tiempo se repite hasta llegar a dicho horario. Esto puede truncar parte de la animación en la secuencia de fotograma clave, si no es un factor entero de la duración implícita de la escala de tiempo.
 -   [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (no se usa habitualmente)
 
-### Fotogramas clave lineales
+### <a name="linear-key-frames"></a>Fotogramas clave lineales
 
 Los fotogramas clave lineales dan como resultado una interpolación lineal simple del valor hasta que se alcanza el valor **KeyTime** del fotograma. El comportamiento de interpolación es lo que más se asemeja a las animaciones **From**/**To**/**By** más simples que se describen en el tema [Animaciones de guion gráfico](storyboarded-animations.md).
 
@@ -62,7 +69,7 @@ Aquí te mostramos cómo usar una animación de fotograma clave para escalar el 
 </StackPanel>
 ```
 
-### Fotogramas clave discretos
+### <a name="discrete-key-frames"></a>Fotogramas clave discretos
 
 Los fotogramas clave discretos no usan ninguna interpolación. Cuando se llega a un valor **KeyTime**, simplemente se aplica el nuevo **Value**. Según la propiedad de interfaz de usuario que se está animando, por lo general, esto genera una animación que simula un "salto". Asegúrate de que este sea el comportamiento estético que realmente quieres. Puedes minimizar los saltos aparentes al aumentar la cantidad de fotogramas clave declarados, pero si tu objetivo es una animación suave, lo mejor es que uses en cambio fotogramas clave lineales o spline.
 
@@ -70,7 +77,7 @@ Los fotogramas clave discretos no usan ninguna interpolación. Cuando se llega a
 
  
 
-### Fotogramas clave spline
+### <a name="spline-key-frames"></a>Fotogramas clave spline
 
 Un fotograma clave spline crea una transición variable entre valores de acuerdo con el valor de la propiedad **KeySpline**. Esta propiedad especifica el primer y el segundo punto de control de una curva Bézier, que describen la aceleración de la animación. Básicamente, [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) define una función sobre una relación de tiempo en la que el gráfico de tiempo de la función tiene la forma de la curva Bézier. Por lo general, se especifica un valor de **KeySpline** en una cadena de atributos XAML abreviada que tiene cuatro valores [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) separados por espacios o comas. Estos valores son pares "X,Y" para dos puntos de control de la curva Bézier. X representa al tiempo e Y es el modificador de función para el valor. Cada valor debe estar comprendido siempre entre 0 y 1, ambos inclusive. Sin una modificación del punto de control a un valor **KeySpline**, la línea recta de 0,0 a 1,1 es la representación de una función a lo largo del tiempo para una interpolación lineal. Los puntos de control cambian la forma de la curva y, por ende, el comportamiento de la función a lo largo del tiempo para la animación spline. Lo mejor es verlo en un gráfico. Puedes ejecutar la [muestra del visualizador de spline clave de Silverlight](http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) en un explorador para ver de qué manera los puntos de control modifican la curva y cómo se ejecuta una animación de muestra cuando se la usa como un valor **KeySpline**.
 
@@ -104,7 +111,7 @@ El ejemplo que sigue muestra tres fotogramas clave diferentes aplicados a una an
 </Storyboard>
 ```
 
-### Fotogramas clave de aceleración
+### <a name="easing-key-frames"></a>Fotogramas clave de aceleración
 
 Un fotograma clave de aceleración es un fotograma clave en el que se aplica interpolación, y la función a lo largo del tiempo de la interpolación está controlada por varias fórmulas matemáticas predefinidas. En realidad, puedes producir el mismo resultado con un fotograma clave spline que el que puedes obtener con algunos de los tipos de funciones de aceleración, pero hay algunas funciones de aceleración, tales como [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049), que no puedes reproducir con un spline.
 
@@ -139,7 +146,7 @@ En este ejemplo se aplica [**CubicEase**](https://msdn.microsoft.com/library/win
 
 Este es solo un ejemplo de una función de aceleración. Podrás encontrar más información en la siguiente sección.
 
-## Funciones de aceleración
+## <a name="easing-functions"></a>Funciones de aceleración
 
 Las funciones de aceleración te permiten aplicar fórmulas matemáticas personalizadas a tus animaciones. Por lo general, las operaciones matemáticas resultan útiles para producir animaciones que simulan una física del mundo real en un sistema de coordenadas en 2D. Por ejemplo, es posible que quieras que un objeto rebote de forma realista o se comporte como si estuviera colgado de un muelle. Para ello, podrías usar animaciones de fotogramas clave o incluso de **From**/**To**/**By** para mostrar estos efectos, pero representaría una carga de trabajo considerable y la animación resultaría menos realista que si usas una fórmula matemática.
 
@@ -191,7 +198,7 @@ En un ejemplo anterior, mostramos cómo declarar una función de aceleración pa
 
 Cuando se aplica una función de aceleración a una animación **From**/**To**/**By**, se cambian las características de la función a lo largo del tiempo, con respecto a cómo el valor se interpola entre los valores **From** y **To** durante el transcurso de la propiedad [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) de la animación. Sin una función de aceleración, se trataría de una interpolación lineal.
 
-## <span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Animaciones de valores de objetos discretas
+## <a name="span-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspandiscrete-object-value-animations"></a><span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Animaciones de valores de objetos discretas
 
 Hay un tipo de animación que merece especial atención porque es la única forma en la que se puede aplicar un valor animado a las propiedades que no son del tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) o [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Se trata de la animación de fotograma clave [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320). La animación con valores [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) es diferente porque no es posible interpolar los valores entre los fotogramas. Cuando se alcanza el valor [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) del fotograma, el valor animado se establece inmediatamente en el valor especificado en la propiedad **Value** en el fotograma clave. Dado que no hay interpolación, hay un solo fotograma clave que puedes usar en la colección de fotogramas clave **ObjectAnimationUsingKeyFrames** [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132).
 
@@ -264,14 +271,9 @@ También puedes usar [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.
 
 Puedes usar más de un [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) para un conjunto de fotogramas [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320). Esta puede ser una forma interesante de crear una animación de presentación al animar el valor de [**Image.Source**](https://msdn.microsoft.com/library/windows/apps/BR242760), como un escenario de ejemplo para el cual varios valores de objetos pueden resultar útiles.
 
- ## Temas relacionados
+ ## <a name="related-topics"></a>Temas relacionados
 
 * [Sintaxis de Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586)
 * [Introducción a las propiedades de dependencia](https://msdn.microsoft.com/library/windows/apps/Mt185583)
 * [**Guion gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)
-
-
-<!--HONumber=Nov16_HO1-->
-
-

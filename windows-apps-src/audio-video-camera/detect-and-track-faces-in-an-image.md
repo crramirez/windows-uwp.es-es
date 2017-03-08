@@ -1,20 +1,27 @@
 ---
 author: drewbatgit
 ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
-description: "Este tema muestra cómo usar el FaceDetector para detectar los rostros de una imagen El FaceTracker está optimizado para realizar el seguimiento facial durante una secuencia de fotogramas de vídeo."
+description: "Este tema muestra cómo usar el FaceDetector para detectar los rostros de una imagen FaceTracker está optimizado para realizar un seguimiento facial durante una secuencia de fotogramas de vídeo."
 title: "Detectar rostros en imágenes o vídeos"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7526d5ddfbaa6f5128ef5775bc75cc48768f647d
-ms.openlocfilehash: 4f0fa85639711302a2f6eb187cde8f7a94de70df
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 72e5804ea592dc2a9478cba766decaadf611e88e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Detectar rostros en imágenes o vídeos
+# <a name="detect-faces-in-images-or-videos"></a>Detectar rostros en imágenes o vídeos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[Parte de la información hace referencia a la versión preliminar del producto, que puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
+\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
 
 Este tema muestra cómo usar el [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) para detectar los rostros de una imagen El [**FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) está optimizado para realizar el seguimiento facial durante una secuencia de fotogramas de vídeo.
 
@@ -22,7 +29,7 @@ Para conocer un método alternativo de seguimiento facial mediante el [**FaceDet
 
 El código de este artículo se adaptó de los ejemplos de [detección de rostro](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) y [seguimiento facial básico](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409). Puedes descargar estos ejemplos para ver el código usado en contexto o para usarlos como punto de partida para tu propia aplicación.
 
-## Detectar rostros en una sola imagen
+## <a name="detect-faces-in-a-single-image"></a>Detectar rostros en una sola imagen
 
 La clase [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) permite detectar uno o más rostros en una imagen estática.
 
@@ -68,7 +75,7 @@ Si la lista de rostros pasada al método auxiliar no está vacía, recorre cada 
 
 [!code-cs[ShowDetectedFaces](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetShowDetectedFaces)]
 
-## Realizar el seguimiento facial en una secuencia de fotogramas
+## <a name="track-faces-in-a-sequence-of-frames"></a>Realizar el seguimiento facial en una secuencia de fotogramas
 
 Si quieres detectar rostros en un vídeo, es más eficaz usar la clase [**FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) que la clase [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129), aunque los pasos de implementación son muy similares. El **FaceTracker** usa la información sobre los fotogramas procesados anteriormente para optimizar el proceso de detección.
 
@@ -92,7 +99,7 @@ Llama a [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/a
 
 [!code-cs[ProcessCurrentVideoFrame](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetProcessCurrentVideoFrame)]
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Análisis de la escena para la captura multimedia](scene-analysis-for-media-capture.md)
 * [Ejemplo de detección de rostro básica](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
@@ -100,9 +107,4 @@ Llama a [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/a
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Reproducción de contenido multimedia](media-playback.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

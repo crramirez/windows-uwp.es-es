@@ -3,25 +3,32 @@ author: DBirtolo
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
 title: Identificadores de clase de servicio AEP
 description: "Los servicios de extremo de asociación (AEP) proporcionan un contrato de programación de los servicios que admite un dispositivo a través de un protocolo determinado. Algunos de estos servicios han establecido identificadores que deben usarse al hacer referencia a ellos."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 61d8891a97403057fe34c66dbecc6962b05e087e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d2259c82acf700d21f4c3f51a367180bb976f636
+ms.lasthandoff: 02/07/2017
 
 ---
-# Identificadores de clase de servicio AEP
+# <a name="aep-service-class-ids"></a>Identificadores de clase de servicio AEP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+**API importantes**
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 Los servicios de extremo de asociación (AEP) proporcionan un contrato de programación de los servicios que admite un dispositivo a través de un protocolo determinado. Algunos de estos servicios han establecido identificadores que deben usarse al hacer referencia a ellos. Estos contratos se identifican con la propiedad **System.Devices.AepService.ServiceClassId**. En este tema se muestran varios identificadores de clases de servicios AEP conocidos. El identificador de clase de servicio AEP también se aplica a los protocolos con identificadores de clase personalizada.
 
 Los desarrolladores de aplicaciones deben usar filtros de sintaxis de consulta avanzada (AQS) basados en los identificadores de clases para limitar sus consultas a los servicios AEP que planeen usar. Esto limitará los resultados de la consulta a los servicios relevantes y aumentará considerablemente el rendimiento, la vida útil de la batería y la calidad del servicio para el dispositivo. Por ejemplo, una aplicación puede usar estos identificadores de clases de servicio para usar un dispositivo como una sincronización de Miracast o como representador de medios digitales DLNA (DMR). Para obtener más información sobre la interacción de los dispositivos y servicios entre sí, consulta [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991).
 
-## Servicios Bluetooth y Bluetooth LE
+## <a name="bluetooth-and-bluetooth-le-services"></a>Servicios Bluetooth y Bluetooth LE
 
 Los servicios Bluetooth entran dentro de uno de los dos protocolos, el protocolo Bluetooth o el protocolo Bluetooth LE. Los identificadores de estos protocolos son los siguientes:
 
@@ -70,13 +77,13 @@ El protocolo Bluetooth admite varios servicios que siguen el mismo formato bási
 
 Para obtener una lista más completa de los servicios de Bluetooth disponibles, consulta las páginas de servicios y protocolos Bluetooth [aquí](http://go.microsoft.com/fwlink/p/?LinkID=619586) y [aquí](http://go.microsoft.com/fwlink/p/?LinkID=619587). También puedes usar la API [**GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571) para obtener algunos servicios GATT comunes.
 
-## Servicios Bluetooth LE personalizados
+## <a name="custom-bluetooth-le-services"></a>Servicios Bluetooth LE personalizados
 
 Los servicios Bluetooth LE personalizados usan el siguiente identificador de protocolo: {bb7bb05e 5972-42b5 94fc76eaa7084d49}
 
 Los perfiles personalizados se definen con sus propios GUID definidos. Este GUID personalizado se debe usar para **System.Devices.AepService.ServiceClassId**.
 
-## Servicios UPnP
+## <a name="upnp-services"></a>Servicios UPnP
 
 Los servicios UPnP usan el siguiente identificador de protocolo: {0e261de4 12f0-46e6 91ba428607ccef64}
 
@@ -99,7 +106,7 @@ En general, todos los servicios UPnP tienen aplicado su nombre con hash en un GU
 
  
 
-## Servicios WSD
+## <a name="wsd-services"></a>Servicios WSD
 
 Los servicios WSD usan el siguiente identificador de protocolo: {782232aa a2f9-4993 971baedc551346b0}
 
@@ -112,25 +119,16 @@ En general, todos los servicios WSD tienen aplicado su nombre con hash en un GUI
 
  
 
-## Ejemplo de AQS
+## <a name="aqs-sample"></a>Ejemplo de AQS
 
 Esta AQS filtrará todos los objetos **AssociationEndpointService** UPnP compatibles con DIAL. En este caso, [ **DeviceInformationKind** ](https://msdn.microsoft.com/library/windows/apps/Dn948991) se establece en **AsssociationEndpointService**.
 
 ``` syntax
-System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND 
+System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND
 System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D716D8EC26B29B}"
 ```
 
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

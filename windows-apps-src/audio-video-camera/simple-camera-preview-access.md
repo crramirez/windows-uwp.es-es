@@ -3,21 +3,28 @@ author: drewbatgit
 ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
 description: "En este artículo se describe cómo mostrar rápidamente la secuencia de vista previa de la cámara en una página XAML en una aplicación para la Plataforma universal de Windows (UWP)."
 title: "Mostrar la vista previa de la cámara"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6aacd5ef8043c9c89116a1d287174210f02f7d62
-ms.openlocfilehash: 5eb53d1527f2cd002dfb66110f1f1f3618458b3a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d65d09349850f580d8bcee2d3875b38b8ed189f1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Mostrar la vista previa de la cámara
+# <a name="display-the-camera-preview"></a>Mostrar la vista previa de la cámara
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este artículo se describe cómo mostrar rápidamente la secuencia de vista previa de la cámara en una página XAML en una aplicación para la Plataforma universal de Windows (UWP). La creación de una aplicación que capture fotos y vídeos con la cámara requiere que realices tareas, como controlar la orientación del dispositivo y de la cámara o establecer opciones de codificación para el archivo capturado. En algunos escenarios de la aplicación, es posible que solo quieras mostrar la secuencia de vista previa de la cámara sin preocuparte por estas otras consideraciones. En este artículo se muestra cómo hacerlo con la cantidad de código mínima. Ten en cuenta que siempre debes apagar la secuencia de vista previa correctamente cuando termines mediante el procedimiento siguiente.
 
 Para obtener información sobre cómo escribir una aplicación de cámara que capture fotos o haga vídeos, consulta [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
-## Agregar declaraciones de funcionalidades al manifiesto de la aplicación
+## <a name="add-capability-declarations-to-the-app-manifest"></a>Agregar declaraciones de funcionalidades al manifiesto de la aplicación
 
 Para que tu aplicación tenga acceso a la cámara de un dispositivo, debes declarar que esta usa las funcionalidades *cámara web* y *micrófono* del dispositivo. 
 
@@ -27,7 +34,7 @@ Para que tu aplicación tenga acceso a la cámara de un dispositivo, debes decla
 2.  Selecciona la pestaña **Funcionalidades**.
 3.  Selecciona las casillas **Cámara web** y **Micrófono**.
 
-## Agregar una clase CaptureElement a la página
+## <a name="add-a-captureelement-to-your-page"></a>Agregar una clase CaptureElement a la página
 
 Usa una clase [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) para visualizar la secuencia de vista previa en la página XAML.
 
@@ -35,7 +42,7 @@ Usa una clase [**CaptureElement**](https://msdn.microsoft.com/library/windows/ap
 
 
 
-## Usar MediaCapture para iniciar el flujo de vista previa
+## <a name="use-mediacapture-to-start-the-preview-stream"></a>Usar MediaCapture para iniciar el flujo de vista previa
 
 El objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) es la interfaz de la aplicación para la cámara del dispositivo. Esta clase es un miembro del espacio de nombres Windows.Media.Capture. En el ejemplo de este artículo también se usan las API de los espacios de nombres [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) y [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx), además de las que se incluyen con la plantilla de proyecto predeterminada.
 
@@ -60,13 +67,13 @@ Para conectar el control **MediaCapture** a la clase **CaptureElement**, estable
 [!code-cs[StartPreviewAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStartPreviewAsync)]
 
 
-## Apagar la secuencia de vista previa
+## <a name="shut-down-the-preview-stream"></a>Apagar la secuencia de vista previa
 
 Cuando termines de usar la secuencia de vista previa, debes apagar siempre esa secuencia y deshacerte correctamente de los recursos asociados para garantizar la disponibilidad de la cámara para otras aplicaciones del dispositivo. Los pasos necesarios para cerrar la secuencia de vista previa son:
 
 -   Si la cámara está en vista previa, llama al método [**StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622) para detener la secuencia de vista previa. Se generará una excepción si llamas al método **StopPreviewAsync** mientras no se está ejecutando la vista previa.
--   Establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) del objeto **CaptureElement** en nulo. Usa [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para asegurarte de que esta llamada se ejecuta en el subproceso de interfaz de usuario.
--   Llama al método [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) del objeto **MediaCapture** para liberar el objeto. Vuelve a usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para asegurarte de que esta llamada se ejecuta en el subproceso de interfaz de usuario.
+-   Establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) del objeto **CaptureElement** en nulo. Usa [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para asegurarte de que esta llamada se ejecuta en el subproceso de interfaz de usuario.
+-   Llama al método [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) del objeto **MediaCapture** para liberar el objeto. Vuelve a usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para asegurarte de que esta llamada se ejecuta en el subproceso de interfaz de usuario.
 -   Establece la variable de miembro **MediaCapture** en nulo.
 -   Llama al método [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestRelease) para permitir que la pantalla se apague cuando esté inactiva.
 
@@ -85,14 +92,9 @@ En el controlador de eventos **Suspending**, comprueba primero que la página es
 [!code-cs[SuspendingHandler](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetSuspendingHandler)]
 
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Obtener un fotograma de vista previa](get-a-preview-frame.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

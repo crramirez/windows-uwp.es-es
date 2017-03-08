@@ -3,46 +3,53 @@ author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
 description: "Obtén información sobre los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK."
 title: Problemas conocidos de las bibliotecas de Microsoft Advertising
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, anuncios, publicidad, problemas conocidos, ads, advertising, known issues
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: 7d0eeda4deac304fb9b573b6ed206a191f037a3e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 54e3361ce9fdfc67495d41903b8b291931b7ee9f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Problemas conocidos de las bibliotecas de Microsoft Advertising
+# <a name="known-issues-for-the-microsoft-advertising-libraries"></a>Problemas conocidos de las bibliotecas de Microsoft Advertising
 
 
 
 
 En este tema se enumeran los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x).
 
-## La instalación del Microsoft Store Services SDK requiere Visual Studio Tools para aplicaciones universales de Windows
+## <a name="installation-of-microsoft-store-services-sdk-requires-visual-studio-tools-for-universal-windows-apps"></a>La instalación del Microsoft Store Services SDK requiere Visual Studio Tools para aplicaciones universales de Windows
 
 Para instalar el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) con Visual Studio 2015, debes tener instalada la versión 1.1 o posterior de Visual Studio Tools para aplicaciones universales de Windows. Para obtener más información, consulta las [notas de la versión](http://go.microsoft.com/fwlink/?LinkID=624516) de Visual Studio.
 
-## Proyectos de Windows Phone 8.x Silverlight
+## <a name="windows-phone-8x-silverlight-projects"></a>Proyectos de Windows Phone 8.x Silverlight
 
 El SDK de Microsoft Advertising para Windows y Windows Phone 8.x ofrece compatibilidad limitada con los proyectos de Windows Phone 8.x Silverlight. Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md#silverlight_support).
 
 Para obtener los ensamblados de Microsoft Advertising para proyectos de Windows Phone 8.x Silverlight, instala el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk), abre el proyecto en Visual Studio y, después, ve a **Proyecto** > **Agregar servicio conectado** > **Ad Mediator** para descargar automáticamente los ensamblados. Después de hacer esto, puedes quitar las referencias de Ad Mediator del proyecto si no quieres usar la mediación de anuncios. Para obtener más información, consulta [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md) (AdControl en Windows Phone Silverlight).
 
-## Interfaz de AdControl desconocida en XAML
+## <a name="adcontrol-interface-unknown-in-xaml"></a>Interfaz de AdControl desconocida en XAML
 
 El marcado XAML de un [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) puede mostrar incorrectamente una línea curva azul que indica que la interfaz es desconocida. Esto ocurre solo cuando el destino es x86 y se puede ignorar.
 
-## lastError de una solicitud de anuncio anterior
+## <a name="lasterror-from-previous-ad-request"></a>lastError de una solicitud de anuncio anterior
 
 Si hay un **lastError** sobrante de la solicitud de anuncio anterior, se puede desencadenar el evento dos veces en la siguiente llamada al anuncio. Si bien la nueva solicitud del anuncio se realizará y puede producir un anuncio válido, este comportamiento puede causar confusión.
 
-## Botones de navegación y anuncios intersticiales en los teléfonos
+## <a name="interstitial-ads-and-navigation-buttons-on-phones"></a>Botones de navegación y anuncios intersticiales en los teléfonos
 
 En los teléfonos (o emuladores) que tienen botones de software **Atrás**, **Inicio** y **Búsqueda**, en lugar de botones de hardware, es posible que los botones de temporizador y de click-through para los anuncios intersticiales en vídeo estén ocultos.
 
-## Los anuncios creados recientemente no se envían a la aplicación
+## <a name="recently-created-ads-are-not-being-served-to-your-app"></a>Los anuncios creados recientemente no se envían a la aplicación
 
 Si has creado un anuncio recientemente (menos de un día), podría no estar disponible de inmediato. Si el anuncio ha sido aprobado para contenido editorial, se enviará una vez que el servidor de publicidad lo haya procesado y el anuncio esté disponible como inventario.
 
-## No se muestran anuncios en la aplicación
+## <a name="no-ads-are-shown-in-your-app"></a>No se muestran anuncios en la aplicación
 
 Existen muchos motivos para que no veas anuncios, incluidos errores de red. Entre otros motivos se incluyen:
 
@@ -56,7 +63,7 @@ Si puedes ver anuncios de prueba en la aplicación, el código funciona y es cap
 
 También puedes publicar una pregunta en el [foro](http://go.microsoft.com/fwlink/p/?LinkId=401266).
 
-## En la aplicación se muestran anuncios de prueba, en lugar de anuncios dinámicos
+## <a name="test-ads-are-showing-in-your-app-instead-of-live-ads"></a>En la aplicación se muestran anuncios de prueba, en lugar de anuncios dinámicos
 
 Pueden mostrarse anuncios de prueba, incluso cuando esperas anuncios dinámicos. Esto puede suceder en los siguientes escenarios:
 
@@ -66,7 +73,7 @@ Pueden mostrarse anuncios de prueba, incluso cuando esperas anuncios dinámicos.
 
 Cuando una unidad de anuncios dinámicos envía anuncios de prueba, el estado de la unidad de anuncios muestra **Active and serving test ads** en el Centro de desarrollo de Windows. Esto no corresponde actualmente a las aplicaciones para teléfonos.
 
-## Los valores de prueba obsoletos para el identificador de unidad de anuncios y el identificador de aplicación ya no funcionan
+## <a name="obsolete-test-values-for-ad-unit-id-and-application-id-no-longer-working"></a>Los valores de prueba obsoletos para el identificador de unidad de anuncios y el identificador de aplicación ya no funcionan
 
 Los siguientes valores de prueba para aplicaciones de Windows Phone Silverlight están obsoletos y dejarán de funcionar. Si tienes un proyecto existente que usa estos valores de prueba, actualiza el proyecto para usar los valores proporcionados en [Test mode values](test-mode-values.md) (Valores del modo de prueba).
 
@@ -78,7 +85,7 @@ Los siguientes valores de prueba para aplicaciones de Windows Phone Silverlight 
 | test_client     |  Image480_80   |
 
 <span id="reference_errors"/>
-## Errores de referencia provocados por dirigirse a Cualquier CPU en el proyecto
+## <a name="reference-errors-caused-by-targeting-any-cpu-in-your-project"></a>Errores de referencia provocados por dirigirse a Cualquier CPU en el proyecto
 
 Al usar las bibliotecas de Microsoft Advertising, no puedes dirigirte a **Cualquier CPU** en tu proyecto. Si el proyecto se dirige a la plataforma **Cualquier CPU**, puede que veas una advertencia después de agregar la referencia similar a esta.
 
@@ -94,21 +101,21 @@ Cuando crees los paquetes de la aplicación para el envío a la tienda (como se 
 
 ![createapppackages](images/13-16280cb1-a838-42b9-9256-eac7f33f5603.png)
 
-## Orden Z en las aplicaciones de JavaScript/HTML
+## <a name="z-order-in-javascripthtml-apps"></a>Orden Z en las aplicaciones de JavaScript/HTML
 
 Las aplicaciones de JavaScript/HTML no deben colocar elementos en el intervalo MAX-10 reservado de orden z. La única excepción es una superposición de interrupción, como una notificación de llamada entrante para una aplicación de Skype.
 
 <span id="bkmk-ui"/>
-## No uses bordes
+## <a name="do-not-use-borders"></a>No uses bordes
 
 Establecer las propiedades relacionadas con los bordes heredados por **AdControl** de su clase primaria hará que la colocación del anuncio sea incorrecta.
 
-## Más información
+## <a name="more-information"></a>Más información
 
 
 Para obtener más información acerca de los últimos problemas conocidos y para publicar preguntas relacionadas con las bibliotecas de Microsoft Advertising, visita el [foro](http://go.microsoft.com/fwlink/p/?LinkId=401266).
 
-## Soporte técnico
+## <a name="support"></a>Soporte técnico
 
 
 Para ponerte en contacto con soporte técnico para problemas relacionados con las bibliotecas de Microsoft Advertising, visita la [página de soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331508) y elige **Publicidad en la aplicación**.
@@ -116,9 +123,4 @@ Para ponerte en contacto con soporte técnico para problemas relacionados con la
  
 
  
-
-
-
-<!--HONumber=Sep16_HO2-->
-
 

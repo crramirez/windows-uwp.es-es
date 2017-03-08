@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: "Convertir el marco de representación"
-description: "Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11."
+description: "Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones, como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11."
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, juegos, marco de representación, convertir, direct3d 9, direct3d 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c5cdddbf2bf75da761f4439ef2d890170c6681c5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d33a694cf835ba3d997a7c4a111349c117e2493e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Convertir el marco de representación
+# <a name="convert-the-rendering-framework"></a>Convertir el marco de representación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -21,9 +28,9 @@ ms.openlocfilehash: c5cdddbf2bf75da761f4439ef2d890170c6681c5
 -   [Parte 3: Migrar el bucle del juego](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
-Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como migrar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11. Parte 2 del tutorial [Migrar una aplicación simple de Direct3D9 a DirectX11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como migrar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11. Parte 2 del tutorial [Migrar una aplicación simple de Direct3D 9 a DirectX 11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-## Convertir efectos a sombreadores HLSL
+## <a name="convert-effects-to-hlsl-shaders"></a>Convertir efectos a sombreadores HLSL
 
 
 El siguiente ejemplo es una técnica simple de D3DX escrita para la API heredada de efectos, para los datos de color de paso y la transformación de vértices en el hardware.
@@ -180,7 +187,7 @@ PS_OUTPUT main(PS_INPUT In)
 }
 ```
 
-## Compilar y cargar sombreadores
+## <a name="compile-and-load-shaders"></a>Compilar y cargar sombreadores
 
 
 Los juegos de Direct3D 9 por lo general usaban la biblioteca de efectos como una forma conveniente de implementar canalizaciones programables. Los efectos pueden compilarse en tiempo de ejecución con el método [**función D3DXCreateEffectFromFile**](https://msdn.microsoft.com/library/windows/desktop/bb172768).
@@ -262,7 +269,7 @@ const D3D11_INPUT_ELEMENT_DESC vertexDesc[] =
 };
 ```
 
-## Crear recursos de geometría
+## <a name="create-geometry-resources"></a>Crear recursos de geometría
 
 
 En Direct3D 9, almacenamos recursos de geometría al crear búferes en el dispositivo Direct3D, bloquear la memoria y copiar datos de la memoria de CPU a la memoria de GPU.
@@ -315,7 +322,7 @@ m_d3dDevice->CreateBuffer(
     );
 ```
 
-## Implementar la cadena de representación
+## <a name="implement-the-rendering-chain"></a>Implementar la cadena de representación
 
 
 Los juegos de Direct3D 9 a menudo usaban una cadena de representación basada en efectos. Este tipo de cadena de representación configura el objeto de efecto, le proporciona los recursos que necesita y le permite representar cada pase.
@@ -489,10 +496,5 @@ La cadena de representación que acabamos de crear recibirá una llamada proveni
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

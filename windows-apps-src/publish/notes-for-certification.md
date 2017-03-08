@@ -3,13 +3,20 @@ author: jnHs
 Description: "Cuando envías tu aplicación, tienes la opción de usar la página Notas para la certificación para proporcionar información adicional a los evaluadores de certificación. Esta información puede ayudarte a garantizar que tu aplicación se prueba correctamente."
 title: "Notas para la certificación"
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9f8bc1fc435c0ee25220c60d68a5adaa34ff6214
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 92a110879f6ff92b3e1e41964ff6acea6b7cb5ec
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Notas para la certificación
+# <a name="notes-for-certification"></a>Notas para la certificación
 
 
 Cuando envías tu aplicación, tienes la opción de usar la página **Notas para la certificación** para proporcionar información adicional a los evaluadores de certificación. Esta información puede ayudar a garantizar que tu aplicación se prueba correctamente.
@@ -44,10 +51,5 @@ Cuando estés considerando qué escribir, recuerda que:
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

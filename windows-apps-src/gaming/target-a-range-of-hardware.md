@@ -1,23 +1,30 @@
 ---
 author: mtoepke
 title: Compatibilidad con mapas de sombras en una variedad de hardware
-description: "Representa sombras de alta fidelidad en dispositivos más rápidos, y sombras más rápidas en dispositivos menos eficaces."
+description: "Representa sombras de mayor fidelidad en dispositivos más veloces, y sombras más rápidas en dispositivos menos eficaces."
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, juegos, mapas de sombras, directx
 translationtype: Human Translation
-ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
-ms.openlocfilehash: a2e2ed02025352bd5583abeed8856a216eab4ead
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e4cffcf1e9655d5bc5dacbfc17cb64b5671d7551
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Compatibilidad con mapas de sombras en una variedad de hardware
+# <a name="support-shadow-maps-on-a-range-of-hardware"></a>Compatibilidad con mapas de sombras en una variedad de hardware
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Representa sombras de alta fidelidad en dispositivos más rápidos, y sombras más rápidas en dispositivos menos eficaces. Parte 4 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
-## Comparación de tipos de filtros
+## <a name="comparison-filter-types"></a>Comparación de tipos de filtros
 
 
 Usa solamente el filtrado lineal si el dispositivo puede tolerar una disminución de rendimiento. Por lo general, los dispositivos con nivel de característica 9\_1 de Direct3D no tienen suficiente energía para usar en sombras con filtrado lineal. En estos dispositivos, usa en cambio el filtrado de punto. Cuando usas el filtrado lineal, ajusta el sombreador de píxeles para que combine los contornos de sombra.
@@ -102,17 +109,17 @@ float3 shadow = (1.0f - lighting) * ambient;
 return float4(input.color * (light + shadow), 1.f);
 ```
 
-## Tamaño del búfer de sombras
+## <a name="shadow-buffer-size"></a>Tamaño del búfer de sombras
 
 
 Si bien los mapas de sombras más grandes no tienen tanto efecto pixelado, requieren más espacio en la memoria de gráficos. Experimenta con distintos tamaños de mapas de sombras en tu juego y observa los resultados en distintos tipos de dispositivos y distintos tipos de pantalla. Considera una optimización, como mapas de sombras en cascada, para obtener mejores resultados con menos memoria de gráficos. Consulta [Técnicas habituales para mejorar los mapas de profundidad de sombras](https://msdn.microsoft.com/library/windows/desktop/ee416324).
 
-## Profundidad del búfer de sombras
+## <a name="shadow-buffer-depth"></a>Profundidad del búfer de sombras
 
 
 Una mayor precisión en el búfer de sombras dará resultados de prueba de profundidad más precisos, lo que ayuda a evitar problemas de rivalidad en el búfer z (z-buffer fighting). Pero al igual que los mapas de sombras más grandes, una mayor precisión requiere más memoria. Prueba distintos tipos de precisión de profundidad en tu juego, DXGI\_FORMAT\_R24G8\_TYPELESS contra DXGI\_FORMAT\_R16\_TYPELESS, y observa la velocidad y calidad en los distintos niveles de característica.
 
-## Optimizar sombreadores precompilados
+## <a name="optimizing-precompiled-shaders"></a>Optimizar sombreadores precompilados
 
 
 Las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar compilación dinámica de sombreador, pero resulta más rápido usar vínculos dinámicos de sombreador. También puedes usar directivas de compilador y bloques `#ifdef` para crear versiones distintas de sombreadores. Esto se realiza al abrir el archivo del proyecto de Visual Studio en un editor de texto y agregar varias entradas `<FxcCompiler>` para el HLSL (cada una con las definiciones de preprocesador apropiadas). Ten en cuenta que para esto se necesitan nombres de archivo diferentes. En este caso, Visual Studio anexa \_point y \_linear a las distintas versiones del sombreador.
@@ -175,10 +182,5 @@ La entrada del archivo del proyecto para la versión de filtro lineal del sombre
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

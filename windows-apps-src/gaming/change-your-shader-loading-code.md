@@ -3,16 +3,23 @@ author: mtoepke
 title: "Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D"
 description: "En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0."
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, juegos, OpenGL, Direct3D, canalización de sombreador"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 144e3374c16118418872f6c473c5f39101fbfce0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 20d02d9b9724c0cfd8120d4d38fa476b9efa3bb3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D
+# <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -23,7 +30,7 @@ ms.openlocfilehash: 144e3374c16118418872f6c473c5f39101fbfce0
 
 En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0. En términos de diseño de API, sin embargo, los principales componentes para crear y administrar las fases de sombreador forman parte de dos interfaces importantes: [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) y [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). En este tema intentamos asignar patrones comunes de API para la canalización de sombreador de OpenGL ES 2.0 a sus equivalentes en Direct3D 11 en estas interfaces.
 
-## Revisar la canalización de sombreador en Direct3D 11
+## <a name="reviewing-the-direct3d-11-shader-pipeline"></a>Revisar la canalización de sombreador en Direct3D 11
 
 
 Los objetos de sombreador se crean en la interfaz [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575)con métodos, como [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) y [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513).
@@ -39,7 +46,7 @@ La canalización de gráficos en Direct3D 11 se administra mediante instancias d
 
 (También hay fases para los sombreadores de geometría, sombreadores de casco, teseladores y sombreadores de dominio, pero, como estos no tienen análogos en OpenGL ES 2.0, no los trataremos en este tema). Para obtener una lista completa de los métodos para estas fases, consulta las páginas de referencia [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) y [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). **ID3D11DeviceContext1** extiende **ID3D11DeviceContext** para Direct3D 11.
 
-## Crear un sombreador
+## <a name="creating-a-shader"></a>Crear un sombreador
 
 
 En Direct3D, los recursos de sombreador no se crean antes de su compilación y carga, en cambio, un recurso se crea tras la carga de HLSL. Por lo tanto, no hay una función análoga directa para glCreateShader, que crea un recurso de sombreador inicializado de un tipo específico (como GL\_VERTEX\_SHADER o GL\_FRAGMENT\_SHADER). En cambio, los sombreadores se crean después de haberse cargado HLSL con funciones específicas como [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) y [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513), que toman el tipo y el HLSL compilado como parámetros.
@@ -50,7 +57,7 @@ En Direct3D, los recursos de sombreador no se crean antes de su compilación y c
 
  
 
-## Compilar un sombreador
+## <a name="compiling-a-shader"></a>Compilar un sombreador
 
 
 Los sombreadores de Direct3D deben precompilarse como archivos de objeto de sombreador compilado (.cso) en aplicaciones para la Plataforma universal de Windows (UWP) y cargarse mediante una de las API de los archivos de Windows Runtime. (Las aplicaciones de escritorio pueden compilar los sombreadores en cadenas o archivos de texto en tiempo de ejecución). Los archivos CSO se crean a partir de archivos .hlsl que forman parte del proyecto de Microsoft Visual Studio y conservan los mismos nombres, solo con una extensión de archivo .cso. Asegúrate de que estén incluidos en el paquete cuando hagas el traslado.
@@ -62,7 +69,7 @@ Los sombreadores de Direct3D deben precompilarse como archivos de objeto de somb
 
  
 
-## Cargar un sombreador
+## <a name="loading-a-shader"></a>Cargar un sombreador
 
 
 Como se explicó en la sección de creación de un sombreador, Direct3D 11 crea el sombreador cuando el archivo CSO correspondiente se carga en un búfer y se pasa a uno de los métodos de la siguiente tabla.
@@ -73,7 +80,7 @@ Como se explicó en la sección de creación de un sombreador, Direct3D 11 crea 
 
  
 
-## Configurar la canalización
+## <a name="setting-up-the-pipeline"></a>Configurar la canalización
 
 
 OpenGL ES 2.0 tiene el objeto del"programa sombreador" que contiene varios sombreadores para la ejecución. Los sombreadores individuales se adjuntan al objeto de programa sombreador. Si embargo, en Direct3D 11, trabajas directamente con el contexto de representación ([**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)) y creas los sombreadores allí.
@@ -109,7 +116,7 @@ D3D11CreateDevice(
 );
 ```
 
-## Establecer las ventanillas
+## <a name="setting-the-viewports"></a>Establecer las ventanillas
 
 
 Establecer una ventanilla en Direct3D 11 es muy similar a como lo haces en OpenGL ES 2.0. En Direct3D 11, llama a [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) con un [**CD3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/jj151722) configurado.
@@ -132,7 +139,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
  
 
-## Configurar los sombreadores de vértices
+## <a name="configuring-the-vertex-shaders"></a>Configurar los sombreadores de vértices
 
 
 La configuración de un sombreador de vértices en Direct3D 11 se realiza cuando el sombreador está cargado. Los uniformes se pasan como búferes de constantes con [**ID3D11DeviceContext1::VSSetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh446795).
@@ -145,7 +152,7 @@ La configuración de un sombreador de vértices en Direct3D 11 se realiza cuando
 
  
 
-## Configurar los sombreadores de píxeles
+## <a name="configuring-the-pixel-shaders"></a>Configurar los sombreadores de píxeles
 
 
 La configuración de un sombreador de píxeles en Direct3D 11 se realiza cuando el sombreador está cargado. Los uniformes se pasan como búferes de constantes con [**ID3D11DeviceContext1::PSSetConstantBuffers1.**](https://msdn.microsoft.com/library/windows/desktop/hh404649).
@@ -158,7 +165,7 @@ La configuración de un sombreador de píxeles en Direct3D 11 se realiza cuando 
 
  
 
-## Generar los resultados finales
+## <a name="generating-the-final-results"></a>Generar los resultados finales
 
 
 Cuando la canalización se completa, dibujas los resultados de las fases de sombreador en el búfer de reserva. En Direct3D 11, al igual que en Open GL ES 2.0, esto implica llamar a un comando de dibujo para producir la salida de los resultados como mapa de colores en el búfer de reserva, y luego enviar ese búfer de reserva a la pantalla.
@@ -170,7 +177,7 @@ Cuando la canalización se completa, dibujas los resultados de las fases de somb
 
  
 
-## Migrar GLSL a HLSL
+## <a name="porting-glsl-to-hlsl"></a>Migrar GLSL a HLSL
 
 
 GLSL y HLSL no son muy distintos más allá de la compatibilidad con tipos complejos y la sintaxis general. Muchos desarrolladores consideran que la migración es más fácil estableciendo un alias de las instrucciones comunes de OpenGL ES 2.0 y las definiciones de sus equivalentes en HLSL. Ten en cuenta que Direct3D usa la versión del modelo de sombreador para expresar el conjunto de características del HLSL que una interfaz de gráficos admite. OpenGL tiene una especificación de versión distinta para HLSL. La siguiente tabla intenta darte una idea aproximada de los conjuntos de características del lenguaje de sombreador que se definen para Direct3D 11 y OpenGL ES 2.0 en términos de versión.
@@ -184,7 +191,7 @@ GLSL y HLSL no son muy distintos más allá de la compatibilidad con tipos compl
 
 Para obtener más detalles sobre las diferencias entre los dos lenguajes de sombreador, así como las asignaciones comunes de sintaxis, lee la [referencia de GLSL a HLSL](glsl-to-hlsl-reference.md).
 
-## Migrar los intrínsecos de OpenGL a la semántica de HLSL
+## <a name="porting-the-opengl-intrinsics-to-hlsl-semantics"></a>Migrar los intrínsecos de OpenGL a la semántica de HLSL
 
 
 La semántica de HLSL de Direct3D 11consiste en cadenas que, como un uniforme o nombre de atributo, se usan para identificar un valor pasado entre la aplicación y un programa sombreador. Si bien hay una gran variedad de cadenas, el mejor procedimiento es usar una cadena como POSITION o COLOR que indique el uso. Asignas la semántica cuando construyes un búfer de constantes o un diseño de entrada de búfer. Puedes anexar un número entre 0 y 7 a la semántica para usar registros distintos para valores similares. Por ejemplo: COLOR0, COLOR1, COLOR2...
@@ -246,10 +253,5 @@ Para obtener más detalles sobre el uso de semántica con Direct3D, lee [Semánt
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

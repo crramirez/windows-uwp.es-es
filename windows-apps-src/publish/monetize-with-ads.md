@@ -1,33 +1,40 @@
 ---
 author: jnHs
-Description: "Si la aplicación usa la mediación de anuncios o muestra banners o anuncios intersticiales en vídeo de Microsoft Advertising, usa la página Rentabilidad &gt; Rentabilizar con anuncios para administrar el uso que haces de los anuncios."
-title: Rentabilizar con anuncios
+Description: "Si la aplicación usa la mediación de anuncios o muestra banners o anuncios intersticiales en vídeo de Microsoft Advertising, usa la página Monetización &gt; Monetizar con anuncios para administrar el uso que haces de los anuncios."
+title: Monetizar con anuncios
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: af322795be849bdaa2b1babeaec29d09f5d73fcf
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e82431c9b39999af9fe19ac147a6c031b9a3edc3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Rentabilizar con anuncios
+# <a name="monetize-with-ads"></a>Monetizar con anuncios
 
 
 Si la aplicación usa un control **AdMediatorControl**, **AdControl** o **InterstitialAd** para mostrar anuncios en banner o anuncios intersticiales en vídeo, usa la página **Monetización** &gt; **Monetizar con anuncios** para administrar el uso de los anuncios.
 
-## Mediación de anuncios de Windows
+## <a name="windows-ad-mediation"></a>Mediación de anuncios de Windows
 
 
 Si la aplicación usa la mediación de anuncios, usa esta sección para establecer la configuración de mediación y agrega los parámetros necesarios para cada una de las redes de anuncios que tu aplicación usa. Para más información sobre las opciones de esta sección, consulta [Enviar la aplicación y configurar la mediación de anuncios](https://msdn.microsoft.com/library/windows/apps/mt219689).
 
 La mediación de anuncios permite optimizar los ingresos generados por la publicidad desde la aplicación al arbitrar solicitudes de pancartas desde varias redes de anuncios. Para más información sobre la mediación de anuncios, consulta [Usar la mediación de anuncios para maximizar los ingresos](https://msdn.microsoft.com/library/windows/apps/mt219691).
 
-## Cumplimiento de COPPA
+## <a name="coppa-compliance"></a>Cumplimiento de COPPA
 
 Para cumplir con la Ley de protección de la privacidad infantil en línea ("COPPA"), debes notificar a Microsoft si la aplicación se dirige a los niños menores de 13 años. Si usas centro de desarrollo para indicar a Microsoft que la aplicación se dirige a los niños menores de 13 años, Microsoft tomará medidas para deshabilitar sus servicios de publicidad conductual al ofrecer publicidad en tu aplicación. Si la aplicación se dirige a niños menores de 13 años, tienes determinadas obligaciones en virtud de la COPPA.
 
 Para obtener más información sobre tus obligaciones en virtud de la COPPA, consulta [esta página](http://go.microsoft.com/fwlink/p/?linkid=536558).
 
-## Anuncios de filiales de Microsoft
+## <a name="microsoft-affiliate-ads"></a>Anuncios de filiales de Microsoft
 
 Activa la casilla de esta sección si quieres mostrar anuncios de filiales de Microsoft en tu aplicación. Si activas esta casilla, se ofrecerán anuncios de productos de la Tienda, como música, juegos, películas, aplicaciones, hardware y software a la aplicación cuando no haya otras redes de anuncios disponibles. Cuando los usuarios hagan clic en los anuncios y productos de bus en la Tienda dentro de una ventana de atribución determinada, conseguirás una comisión sobre las compras aprobadas.
 
@@ -35,13 +42,13 @@ Si cambias esta selección, no es necesario volver a publicar la aplicación par
 
 > **Nota**  Si la aplicación usa la mediación de anuncios (es decir, usa un objeto **AdMediatorControl** para mostrar anuncios), la aplicación puede mostrar anuncios de filiales solo si las opciones de mediación de anuncios están configurada para mostrar anuncios de Microsoft.
 
-## Anuncios de la comunidad
+## <a name="community-ads"></a>Anuncios de la comunidad
 
 Activa la casilla de esta sección si quieres promocionar de manera cruzada tu aplicación con aplicaciones de otros desarrolladores. Si activas esta casilla y después [creas una campaña publicitaria de la comunidad](create-an-ad-campaign-for-your-app.md), tu aplicación mostrará anuncios para las aplicaciones publicadas por otros desarrolladores que también crean campañas publicitarias de la comunidad y los anuncios para sus aplicaciones se mostrarán en la aplicación. Los anuncios de la comunidad son gratuitos y se muestran solamente cuando no haya anuncios de otras redes de publicidad disponibles.
 
 Si cambias esta selección, no es necesario volver a publicar la aplicación para que los cambios surtan efecto. Para obtener más información sobre los anuncios de la comunidad, consulta [Acerca de los anuncios de la comunidad](about-community-ads.md).
 
-## Unidades de anuncio de Microsoft Advertising
+## <a name="microsoft-advertising-ad-units"></a>Unidades de anuncio de Microsoft Advertising
 
 Usa esta sección para crear una unidad de anuncio de Microsoft Advertising. Solo hace falta crear unidades de anuncios en los siguientes escenarios:
 
@@ -67,9 +74,4 @@ Las unidades de anuncio aparecen en una tabla en la parte inferior de esta secci
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

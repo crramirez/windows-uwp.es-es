@@ -1,21 +1,28 @@
 ---
 author: jnHs
-Description: Si se crea un nuevo complemento en el panel del Centro de desarrollo de Windows, es necesario que especifiques un tipo de producto y asignarle a este un id. del producto.
+Description: Si creas un nuevo complemento en el panel del Centro de desarrollo de Windows, es necesario que especifiques un tipo de producto y asignarle a este un id. del producto.
 title: Establecer el tipo del producto de tu complemento y el id. del producto
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e59324aca65cf8baacb085da22a20d952fdb8c9a
-ms.openlocfilehash: 2a469506c8b440e1aa8555ac57b88f2026ae4d8e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: abd6c27367476e5f1da11cde14b7d7f08105ad3e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Establecer el tipo del producto de tu complemento y el id. del producto
+# <a name="set-your-add-on-product-type-and-product-id"></a>Establecer el tipo del producto de tu complemento y el id. del producto
 
 Un complemento debe estar asociado a una aplicación que ya hayas creado en el panel (incluso si todavía no la has enviado). Puedes encontrar el botón para **Crear un complemento nuevo** en la página **Introducción** de la aplicación o en su página **Complemento**.
 
 Una vez que hagas clic en el botón, verás la página **Crear un nuevo complemento**. Aquí deberás especificar un tipo de producto y asignarle un id. del producto.
 
-## Tipo de producto
+## <a name="product-type"></a>Tipo de producto
 
 En primer lugar, debes indicar qué tipo de complemento ofreces. Esta selección se refiere al modo en la que el cliente puede usar tu complemento.
 
@@ -30,7 +37,7 @@ Hay dos tipos de complementos consumibles que puedes seleccionar:
 
 Debes seleccionar **Duradero** si se puede comprar el producto solo una vez. Los complementos duraderos a menudo se usan para desbloquear funcionalidad adicional en una aplicación. Los complementos duraderos no se consumen pero puedes establecer la **duración del producto** para que caduque después de un período establecido (con opciones de 1 a 365 días). La **duración del producto** predeterminada para un complemento duradero es **para siempre**, lo que significa que el complemento no caduca nunca. Esto se puede cambiar a una duración distinta en el paso [Propiedades del complemento](enter-add-on-properties.md) del proceso de envío del complemento.
 
-## Id. del producto
+## <a name="product-id"></a>Id. del producto
 
 Escribe un id. del producto único para el complemento. Este es el mismo identificador al que debes hacer referencia en [el código de la aplicación para llamar al complemento](https://msdn.microsoft.com/library/windows/apps/mt219684).
 
@@ -46,10 +53,5 @@ A continuación, se detallan algunos aspectos que se deben tener en cuenta al el
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

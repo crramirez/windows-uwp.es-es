@@ -3,23 +3,30 @@ author: msatranjr
 title: Diagnosticar condiciones de error del componente de Windows Runtime
 description: "En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: da02ed10336ea2381213fd5fada153db4cc06ab1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Diagnosticar condiciones de error del componente de Windows Runtime
+# <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnosticar condiciones de error del componente de Windows Runtime
 
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado. Expande la información que se proporciona en los mensajes de error de [Winmdexp.exe (herramienta de exportación de metadatos Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)y complementa la información sobre las restricciones que se proporciona en [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
 En este artículo no se abarcan todos los errores. Los errores que se tratan aquí se agrupan por categoría general, y cada categoría incluye una tabla de mensajes de error relacionados. Busca el texto del mensaje (omitiendo valores específicos de marcadores de posición) o el número de mensaje. Si no encuentras la información que necesitas aquí, por favor, ayúdanos a mejorar la documentación con el botón de comentarios al final de este artículo. Incluye el mensaje del error. Como alternativa, puedes presentar un error en el sitio Web de Microsoft Connect.
 
-## El mensaje de error para implementar la interfaz asincrónica proporciona un tipo incorrecto
+## <a name="error-message-for-implementing-async-interface-provides-incorrect-type"></a>El mensaje de error para implementar la interfaz asincrónica proporciona un tipo incorrecto
 
 
 Los componentes administrados de Windows Runtime no pueden implementar las interfaces de la Plataforma universal de Windows (UWP) que representan operaciones o acciones asincrónicas ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx) o [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). En su lugar, .NET Framework proporciona la clase [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para generar operaciones asincrónicas en componentes de Windows Runtime. El mensaje de error que Winmdexp.exe muestra cuando intentas implementar una interfaz asincrónica incorrectamente hace referencia a esta clase por su nombre anterior, AsyncInfoFactory. .NET Framework ya no incluye la clase AsyncInfoFactory.
@@ -34,7 +41,7 @@ Los componentes administrados de Windows Runtime no pueden implementar las inter
 
  
 
-## Referencias ausentes a mscorlib.dll o System.Runtime.dll
+## <a name="missing-references-to-mscorlibdll-or-systemruntimedll"></a>Referencias ausentes a mscorlib.dll o System.Runtime.dll
 
 
 Este problema se produce únicamente cuando se utiliza Winmdexp.exe desde la línea de comandos. Te recomendamos que uses la opción /reference para incluir referencias a mscorlib.dll y System.Runtime.dll desde los ensamblados de referencia principales de .NET Framework, que se encuentran en "%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5" ("%ProgramFiles%\\..." en un equipo de 32 bits).
@@ -46,7 +53,7 @@ Este problema se produce únicamente cuando se utiliza Winmdexp.exe desde la lí
 
  
 
-## No se permite la sobrecarga de los operadores
+## <a name="operator-overloading-is-not-allowed"></a>No se permite la sobrecarga de los operadores
 
 
 En un componente de Windows Runtime escrito en código administrado, no se pueden exponer operadores sobrecargados en tipos públicos.
@@ -61,7 +68,7 @@ En un componente de Windows Runtime escrito en código administrado, no se puede
 
  
 
-## Los constructores en una clase tienen el mismo número de parámetros
+## <a name="constructors-on-a-class-have-the-same-number-of-parameters"></a>Los constructores en una clase tienen el mismo número de parámetros
 
 
 En el UWP, una clase puede tener solo un constructor con un determinado número de parámetros. Por ejemplo, no puedes tener un constructor que tenga un único parámetro de tipo **String** y otro que tenga un único parámetro de tipo **int** (**Integer** en Visual Basic). La única solución alternativa es usar un número de parámetros diferente para cada constructor.
@@ -72,7 +79,7 @@ En el UWP, una clase puede tener solo un constructor con un determinado número 
 
  
 
-## Debes especificar un valor predeterminado para las sobrecargas que tienen el mismo número de parámetros
+## <a name="must-specify-a-default-for-overloads-that-have-the-same-number-of-parameters"></a>Debes especificar un valor predeterminado para las sobrecargas que tienen el mismo número de parámetros
 
 
 En la UWP los métodos sobrecargados pueden tener el mismo número de parámetros solo si se especifica una sobrecarga como sobrecarga predeterminada. Consulta "Métodos sobrecargados" en [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
@@ -84,7 +91,7 @@ En la UWP los métodos sobrecargados pueden tener el mismo número de parámetro
 
  
 
-## Errores de espacio de nombres y nombres inválidos para el archivo de salida
+## <a name="namespace-errors-and-invalid-names-for-the-output-file"></a>Errores de espacio de nombres y nombres inválidos para el archivo de salida
 
 
 En la Plataforma universal de Windows, todos los tipos públicos en un archivo de metadatos (.winmd) de Windows deben estar en un espacio de nombres que comparta el nombre del archivo .winmd o en subespacios de nombres del nombre de archivo. Por ejemplo, si el proyecto de Visual Studio se denomina A.B (es decir, el componente de Windows Runtime es A.B.winmd), puede contener las clases públicas A.B.Class1 y A.B.C.Class2, pero no la A.Class3 (WME0006) o D.Class4 (WME1044).
@@ -118,7 +125,7 @@ Un tipo en un componente de Windows Runtime no puede tener un nombre idéntico a
 
  
 
-## Exportar tipos que no son tipos válidos de la Plataforma universal de Windows
+## <a name="exporting-types-that-arent-valid-universal-windows-platform-types"></a>Exportar tipos que no son tipos válidos de la Plataforma universal de Windows
 
 
 La interfaz pública de tu componente debe exponer solo los tipos UWP. Sin embargo, .NET Framework proporciona asignaciones para varios tipos de uso frecuente que son ligeramente diferentes en .NET Framework y la UWP. Esto permite al desarrollador de .NET Framework trabajar con tipos familiares en lugar de aprender nuevos. Puedes usar estos tipos de .NET Framework asignados en la interfaz pública de tu componente. Consulta "Declarar tipos en componentes de Windows Runtime" y "Pasar tipos de la Plataforma universal de Windows a código administrado" en [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) y [Asignaciones de .NET Framework de los tipos de Windows Runtime](net-framework-mappings-of-windows-runtime-types.md).
@@ -168,7 +175,7 @@ En general, la mejor opción es la interfaz que más se asemeje al tipo. Por eje
 
  
 
-## Estructuras que contienen campos de tipos no autorizados
+## <a name="structures-that-contain-fields-of-disallowed-types"></a>Estructuras que contienen campos de tipos no autorizados
 
 
 En la UWP una estructura puede contener solo campos, y solo las estructuras pueden contener campos. Estos campos deben ser públicos. Los tipos de campos válidos incluyen tipos primitivos, estructuras y enumeraciones.
@@ -179,7 +186,7 @@ En la UWP una estructura puede contener solo campos, y solo las estructuras pued
 
  
 
-## Restricciones en las matrices en signaturas de miembros
+## <a name="restrictions-on-arrays-in-member-signatures"></a>Restricciones en las matrices en signaturas de miembros
 
 
 En la UWP, las matrices en las signaturas de miembros deben ser unidimensionales con un límite inferior de 0 (cero). Los tipos de matrices anidadas como `myArray[][]` (`myArray()()` en Visual Basic) no están permitidos.
@@ -196,7 +203,7 @@ En la UWP, las matrices en las signaturas de miembros deben ser unidimensionales
 
  
 
-## Los parámetros de matriz deben especificar si el contenido de la matriz es de lectura o escritura.
+## <a name="array-parameters-must-specify-whether-array-contents-are-readable-or-writable"></a>Los parámetros de matriz deben especificar si el contenido de la matriz es de lectura o escritura.
 
 
 En la UWP, los parámetros deben ser de solo lectura o de solo escritura. No se pueden marcar parámetros **ref** (**ByRef** sin el atributo [OutAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.outattribute.aspx) en Visual Basic). Esto se aplica al contenido de las matrices, por lo que los parámetros de las matrices deben indicar si el contenido de la matriz es de solo lectura o solo escritura. La dirección es clara para los parámetros **out** (parámetro **ByRef** con el atributo OutAttribute en Visual Basic), pero los parámetros de matrices pasados por valor (ByVal en Visual Basic) deben estar marcados. Consulta [Pasar matrices a un componente de Windows Runtime](passing-arrays-to-a-windows-runtime-component.md).
@@ -211,7 +218,7 @@ En la UWP, los parámetros deben ser de solo lectura o de solo escritura. No se 
 | WME1106      | El método '{0}' tiene el parámetro '{1}', que es una matriz. En Windows Runtime, el contenido de los parámetros de la matriz debe ser o bien de lectura o bien de escritura. Aplica o bien {2} o bien {3} a '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
-## Miembro con un parámetro denominado "valor"
+## <a name="member-with-a-parameter-named-value"></a>Miembro con un parámetro denominado "valor"
 
 
 En el UWP, los valores devueltos se considera que son parámetros de salida y los nombres de los parámetros deben ser únicos. De forma predeterminada, Winmdexp.exe proporciona al valor devuelto el nombre de "value". Si tu método tiene un parámetro denominado "value", obtendrás el error WME1092. Hay dos formas de corregirlo:
@@ -245,13 +252,8 @@ El código de JavaScript puede acceder a los parámetros de salida de un método
 | WME1092 | El método '\{0}' tiene un parámetro denominado '\{1}', que es el mismo que el nombre de un valor de retorno predeterminado. Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto.<br/>**Nota**  El nombre predeterminado es "returnValue" para los descriptores de acceso de propiedad y "value" para todos los otros métodos. |
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
 * [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

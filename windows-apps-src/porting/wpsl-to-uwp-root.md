@@ -3,15 +3,22 @@ author: mcleblanc
 description: "Si eres un desarrollador con una aplicación de Windows Phone Silverlight, puedes hacer un uso inigualable de tus conocimientos y código fuente al pasar a Windows 10."
 title: "Migrar de Windows Phone Silverlight a UWP"
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 05831f3e357086b338d32e83146d380ca9c78a74
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 06409936f37368351f6c8ad47e50a7d980d522f4
+ms.lasthandoff: 02/07/2017
 
 ---
 
 #  <a name="move-from-windows-phone-silverlight-to-uwp"></a>Migrar de Windows Phone Silverlight a UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Si eres un desarrollador con una aplicación de Windows Phone Silverlight, puedes hacer un uso inigualable de tus conocimientos y código fuente al mover a Windows 10. Con Windows 10, puedes crear una aplicación para la Plataforma universal de Windows (UWP), que es un único paquete de la aplicación que los clientes pueden instalar en todos los tipos de dispositivos. Para más información sobre Windows 10, las aplicaciones para UWP y los conceptos de código adaptable e interfaz de usuario adaptable que se mencionan en esta guía de migración, consulta la [Guía de aplicaciones de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
@@ -79,16 +86,13 @@ En el nivel de función, la buena noticia es que hay muy poco que no sea compati
 * [Novedades para desarrolladores en Windows 10](https://dev.windows.com/getstarted/whats-new-windows-10)
 * [Guía de aplicaciones para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn894631)
 * [Guía básica para aplicaciones universales de Windows (UWP) con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583)
-* [What's next for Windows Phone 8 developers (Novedades para desarrolladores de Windows Phone 8)](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
+* [Siguientes pasos para los desarrolladores de Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
+
 **Artículos de revista**
-* [Visual Studio Magazine: Windows Phone 8.1: A Giant Leap Forward for Convergence (Visual Studio Magazine: Windows Phone 8.1, un paso de gigante hacia la convergencia)](http://go.microsoft.com/fwlink/p/?LinkID=398541)
+* [Revista de Visual Studio: Windows Phone 8.1, un paso de gigante hacia la convergencia](http://go.microsoft.com/fwlink/p/?LinkID=398541)
+
 **Presentaciones**
 * [La historia de traer la música de Nokia de Windows Phones a Windows 8.](http://go.microsoft.com/fwlink/p/?LinkId=321521)
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

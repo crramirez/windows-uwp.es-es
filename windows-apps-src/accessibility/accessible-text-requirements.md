@@ -5,13 +5,20 @@ ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
 title: Requisitos de texto accesible
 label: Accessible text requirements
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: f36c6a8c191f48c6fb04820c19a98891e46ecf9d
-ms.openlocfilehash: a87e578ae9cfb3fd3104392028f6b7412d23d619
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c1decefe507ccebbaee1055426fbde06eb9670e7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Requisitos de texto accesible  
+# <a name="accessible-text-requirements"></a>Requisitos de texto accesible  
 
 
 
@@ -20,7 +27,7 @@ En este tema se describen los procedimientos recomendados sobre accesibilidad de
 
 <span id="contrast_rations"/>
 <span id="CONTRAST_RATIONS"/>
-## Relaciones de contraste  
+## <a name="contrast-ratios"></a>Relaciones de contraste  
 Aunque los usuarios siempre tienen la opción de cambiar a un modo de contraste alto, el diseño de la aplicación para el texto debe considerar esa opción como último recurso. Un procedimiento mucho más recomendable es asegurarse de que el texto de la aplicación cumpla con ciertos criterios establecidos para el nivel de contraste entre el texto y su fondo. La evaluación del nivel de contraste se basa en técnicas deterministas que no tienen en cuenta el matiz del color. Por ejemplo, si hay texto rojo sobre un fondo verde, es posible que un usuario daltónico no pueda leer el texto. Si se comprueba y corrige la relación de contraste, se puede evitar este tipo de problemas de accesibilidad.
 
 Las recomendaciones de contraste de texto aquí documentadas se basan en un estándar de accesibilidad web, [G18: asegurarse de que exista una relación de contraste de al menos 4.5:1 entre el texto (e imágenes de texto) y el fondo que se encuentra detrás de él](http://go.microsoft.com/fwlink/p/?linkid=221823). Este criterio se encuentra en la especificación sobre las *técnicas de W3C para WCAG 2.0*.
@@ -37,7 +44,7 @@ Usa herramientas de contraste de color para comprobar que la relación de contra
 <span id="Text_element_roles"/>
 <span id="text_element_roles"/>
 <span id="TEXT_ELEMENT_ROLES"/>
-## Roles de elementos de texto  
+## <a name="text-element-roles"></a>Roles de elementos de texto  
 Una aplicación para UWP puede usar estos elementos predeterminados (comúnmente denominados *elementos de texto* o *controles de textedit*):
 
 * [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652): El rol es [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182).
@@ -52,7 +59,7 @@ En los modelos de texto de XAML, hay dos elementos que se usan principalmente pa
 <span id="Auto-suggest_accessibility"/>
 <span id="auto-suggest_accessibility"/>
 <span id="AUTO-SUGGEST_ACCESSIBILITY"/>
-## Accesibilidad de las sugerencias automáticas  
+## <a name="auto-suggest-accessibility"></a>Accesibilidad de las sugerencias automáticas  
 Cuando un usuario escribe en un campo de entrada y aparece una lista de sugerencias posibles, este tipo de escenario se conoce como sugerencia automática. Esto es habitual en la línea **A:** de un campo de correo, el cuadro de búsqueda de Cortana en Windows, el campo de entrada de la dirección URL en Microsoft Edge, el campo de entrada de la ubicación en la aplicación El Tiempo, etc. Si usas un [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox) de XAML o los controles HTML intrínsecos, esta experiencia ya está enlazada automáticamente de manera predeterminada. Para que esta experiencia sea accesible, deben asociarse el campo de entrada y la lista. Esto se explica en la sección [Implementación de las sugerencias automáticas](#implementing_auto-suggest).
 
 Narrador se ha actualizado para que este tipo de experiencia sea accesible con un modo especial de sugerencias. En un nivel alto, si el campo de edición y la lista se conectan correctamente, el usuario podrá:
@@ -69,7 +76,7 @@ _Ejemplo de una lista de sugerencias_
 <span id="Implementing_auto-suggest"/>
 <span id="implementing_auto-suggest"/>
 <span id="IMPLEMENTING_AUTO-SUGGEST"/>
-### Implementación de las sugerencias automáticas  
+### <a name="implementing-auto-suggest"></a>Implementación de las sugerencias automáticas  
 Para que esta experiencia sea accesible, el campo de entrada y la lista deben asociarse en el árbol de UIA. Esta asociación se realiza con la propiedad [UIA_ControllerForPropertyId](https://msdn.microsoft.com/windows/desktop/ee684017) en las aplicaciones de escritorio o con la propiedad [ControlledPeers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) en las aplicaciones para UWP.
 
 En un nivel alto, existen 2 tipos de experiencias de sugerencias automáticas.
@@ -86,10 +93,10 @@ Si no hay ninguna selección predeterminada, como en el cuadro de ubicación de 
 ![Lista sin ninguna selección predeterminada](images/autosuggest-no-default-selection.png)<br/>
 _Ejemplo en el que no existe ninguna selección predeterminada_
 
-### Implementación de XAML  
+### <a name="xaml-implementation"></a>Implementación de XAML  
 Si se utiliza la clase XAML [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox) predeterminada, todo está ya enlazado de forma automática. Si vas a crear tu propia experiencia de sugerencias automáticas con una clase [**TextBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox) y una lista, tendrás que establecer la lista como [**AutomationProperties.ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) en la clase **TextBox**. Debes activar el evento **AutomationPropertyChanged** para la propiedad [**ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) cada vez que agregues o quites esta propiedad y también activar tus propios eventos [**SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) o [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) según el tipo de escenario, algo que se explica anteriormente en este mismo artículo.
 
-### Implementación de HTML  
+### <a name="html-implementation"></a>Implementación de HTML  
 Si usas los controles intrínsecos de HTML, la implementación de UIA ya se habrá asignado automáticamente. A continuación hay un ejemplo de una implementación que ya está enlazada automáticamente:
 
 ``` HTML
@@ -105,13 +112,13 @@ Si usas los controles intrínsecos de HTML, la implementación de UIA ya se habr
 <span id="Text_in_graphics"/>
 <span id="text_in_graphics"/>
 <span id="TEXT_IN_GRAPHICS"/>
-## Texto en gráficos  
+## <a name="text-in-graphics"></a>Texto en gráficos  
 Siempre que sea posible, evita incluir texto en un gráfico. Por ejemplo, las tecnologías de asistencia no podrán leer automáticamente los textos que incluyas en el archivo de origen de imagen que se muestre en la aplicación como un elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) ni tampoco acceder a ellos. Si tienes que usar texto en los gráficos, asegúrate de que el valor [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) que proporcionas como equivalente del texto alternativo incluya el texto o un resumen del significado del texto. Se aplican consideraciones similares si estás creando caracteres de texto de vectores como parte de una clase [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355) o mediante la clase [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921).
 
 <span id="Text_font_size"/>
 <span id="text_font_size"/>
 <span id="TEXT_FONT_SIZE"/>
-## Tamaño de fuente del texto  
+## <a name="text-font-size"></a>Tamaño de fuente del texto  
 Muchos lectores tienen problemas para leer el texto que hay en una aplicación cuando se usa un tamaño de fuente de texto que les resulta demasiado pequeño para leerlo. En primer lugar, puedes evitar este problema si creas un tamaño de texto lo suficientemente grande para la interfaz de usuario de la aplicación. También hay tecnologías de asistencia que forman parten de Windows y que permiten a los usuarios cambiar los tamaños de presentación de las aplicaciones o la visualización en general.
 
 * Algunos usuarios cambian los valores de puntos por pulgada (ppp) de su pantalla principal como opción de accesibilidad. Esta opción está disponible en **Aumentar el tamaño de los objetos en pantalla** de **Accesibilidad**, que lleva a la interfaz de usuario del **Panel de control** para la **Apariencia y personalización** / **Pantalla**. Las opciones exactas de tamaño que están disponibles pueden variar según las funciones del dispositivo de presentación.
@@ -120,7 +127,7 @@ Muchos lectores tienen problemas para leer el texto que hay en una aplicación c
 <span id="Text_scale_factor"/>
 <span id="text_scale_factor"/>
 <span id="TEXT_SCALE_FACTOR"/>
-## Factor de escala de texto  
+## <a name="text-scale-factor"></a>Factor de escala de texto  
 Varios controles y elementos de texto tienen una propiedad [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Esta propiedad tiene el valor **true** de forma predeterminada. Cuando su valor es **true**, la opción **Ajuste de escala de texto** del teléfono (**Configuración &gt; Accesibilidad**) hace que el tamaño del texto de ese elemento se agrande. El texto que tiene un tamaño de **FontSize** pequeño se verá más afectado que el texto que tiene un tamaño de **FontSize** grande. De todos modos, puedes deshabilitar el aumento de tamaño automático si estableces la propiedad **IsTextScaleFactorEnabled** del elemento en **false**. Prueba con este marcado, ajusta la opción **Tamaño del texto** en el teléfono y mira a ver qué ocurre con los elementos **TextBlock**:
 
 XAML
@@ -163,15 +170,10 @@ Estos tipos tienen una propiedad **IsTextScaleFactorEnabled**:
 * [**TextElement**](https://msdn.microsoft.com/library/windows/apps/BR209967) y clases derivadas
 
 <span id="related_topics"/>
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
 * [Información básica de accesibilidad](basic-accessibility-information.md)
 * [Muestra de visualización de texto en XAML](http://go.microsoft.com/fwlink/p/?linkid=238579)
 * [Muestra de edición de texto en XAML](http://go.microsoft.com/fwlink/p/?linkid=251417)
 * [Muestra de accesibilidad en XAML](http://go.microsoft.com/fwlink/p/?linkid=238570) 
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

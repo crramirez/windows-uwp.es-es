@@ -1,21 +1,28 @@
 ---
 author: jwmsft
-description: "Conoce los comandos de movimiento y dibujo (un minilenguaje) que podrás usar para especificar geometrías de rutas de acceso como un valor de atributo XAML."
+description: "Obtén información sobre los comandos de movimiento y dibujo (un minilenguaje) que podrás usar para especificar geometrías de rutas de acceso como un valor de atributo XAML."
 title: Sintaxis de comandos de movimiento y dibujo
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 832e757c5bbdc10c2f0f10db127d3f21932313b3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ea01f8191190db0a9b13b8081bc6fef687369c13
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Sintaxis de comandos de movimiento y dibujo
+# <a name="move-and-draw-commands-syntax"></a>Sintaxis de comandos de movimiento y dibujo
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Conoce los comandos de movimiento y dibujo (un minilenguaje) que podrás usar para especificar geometrías de rutas de acceso como un valor de atributo XAML. Los comandos de movimiento y dibujo se usan en muchas herramientas de diseño y de gráficos capaces de producir un gráfico de vector o una forma, como un formato de serialización e intercambio.
 
-## Propiedades que usan cadenas de comandos de movimiento y dibujo
+## <a name="properties-that-use-move-and-draw-command-strings"></a>Propiedades que usan cadenas de comandos de movimiento y dibujo
 
 La sintaxis de comandos de movimiento y dibujo es compatible con un convertidor de tipos interno para XAML, que analiza los comandos y genera una representación de gráficos en tiempo de ejecución. Esta representación es básicamente un conjunto acabado de vectores que están listos para su presentación. Los propios vectores no definen por completo los detalles de la presentación, sino que es necesario definir otros valores en los elementos. En cuanto al objeto [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355), necesitas valores para las propiedades [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378) y [**Stroke**](https://msdn.microsoft.com/library/windows/apps/br243383) entre otras y, a continuación, debes conectar ese objeto **Path** al árbol visual. En cambio, para el objeto [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722), debes establecer la propiedad [**Foreground**](https://msdn.microsoft.com/library/windows/apps/dn251974).
 
@@ -28,11 +35,11 @@ Hay dos propiedades en Windows Runtime que pueden usar una cadena que represente
 
 [**PathGeometry.Figures**](https://msdn.microsoft.com/library/windows/apps/br210169) también puede usar comandos de movimiento y dibujo. Asimismo, puedes combinar un objeto [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) que use comandos de movimiento y dibujo con otros tipos de [**Geometry**](https://msdn.microsoft.com/library/windows/apps/br210041) en un objeto [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057), que luego puedes usar como valor de [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). De todos modos, esto no es tan común como usar comandos de movimiento y dibujo para los datos definidos del atributo.
 
-## Usar comandos de movimiento y dibujo y usar la clase **PathGeometry**
+## <a name="using-move-and-draw-commands-versus-using-a-pathgeometry"></a>Usar comandos de movimiento y dibujo y usar la clase **PathGeometry**
 
 Para XAML en Windows Runtime, los comandos de movimiento y dibujo crean una clase [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) que consta de un solo objeto [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/br210143) con un valor de propiedad [**Figures**](https://msdn.microsoft.com/library/windows/apps/br210169). Cada comando de dibujo crea una clase derivada [**PathSegment**](https://msdn.microsoft.com/library/windows/apps/br210174) en cada colección de [**segmentos**](https://msdn.microsoft.com/library/windows/apps/br210164) del objeto **PathFigure**, el comando de movimiento cambia la propiedad [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/br210166) y la existencia de un comando próximo establece [**IsClosed**](https://msdn.microsoft.com/library/windows/apps/br210159) en **true**. Puedes examinar esta estructura como si fuera un modelo de objetos si examinas los valores de **Data** en tiempo de ejecución.
 
-## Sintaxis básica
+## <a name="the-basic-syntax"></a>Sintaxis básica
 
 La sintaxis para mover y dibujar comandos puede resumirse del modo siguiente:
 
@@ -56,7 +63,7 @@ Con frecuencia se pueden omitir los espacios en blanco, siempre que el resultado
 
 No uses la coma como separador decimal. Recuerda que la cadena de comandos se interpreta en lenguaje XAML y que no se tienen en cuenta las convenciones de formato numérico específicas de otras culturas que puedan ser distintas de las usadas en la configuración regional **en-us**.
 
-## Peculiaridades de la sintaxis
+## <a name="syntax-specifics"></a>Peculiaridades de la sintaxis
 
 **Regla de relleno**
 
@@ -222,7 +229,7 @@ En lugar de usar un valor numérico estándar, puedes usar estos valores especia
 
 En lugar de usar valores decimales o enteros, puedes usar la notación científica. Por ejemplo, `+1.e17` es un valor válido.
 
-## Herramientas de diseño que producen comandos de movimiento y dibujo
+## <a name="design-tools-that-produce-move-and-draw-commands"></a>Herramientas de diseño que producen comandos de movimiento y dibujo
 
 Al usar la herramienta **Lápiz** y otras herramientas de dibujo en Blend para Microsoft Visual Studio 2015, normalmente se produce un objeto [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) que consta de comandos de movimiento y dibujo.
 
@@ -230,16 +237,11 @@ Es posible que encuentres datos de comandos de movimiento y dibujo existentes en
 
 Asimismo, hay disponibles complementos o exportadores de otras herramientas que normalmente se usan para el diseño con gráficos de vector y que pueden generar el vector en formato XAML. Normalmente crean objetos [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) en un contenedor de diseño junto con comandos de movimiento y dibujo de la propiedad [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Es posible contar con varios elementos **Path** en el XAML para poder aplicar distintos pinceles. Muchos de estos exportadores o complementos se escribieron originalmente para XAML de Windows Presentation Foundation (WPF), pero la sintaxis de path XAML es idéntica a la de XAML de Windows Runtime. Normalmente, es posible usar trozos de XAML de un exportador y pegarlos directamente en una página XAML de Windows Runtime. (No obstante, no podrás usar el pincel **RadialGradientBrush** si este formaba parte del XAML convertido, ya que no es compatible con el lenguaje XAML de Windows Runtime).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Dibujar formas](https://msdn.microsoft.com/library/windows/apps/mt280380)
 * [Usar pinceles](https://msdn.microsoft.com/library/windows/apps/mt280383)
 * [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)
 * [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

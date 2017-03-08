@@ -3,16 +3,23 @@ author: mtoepke
 title: Migrar GLSL
 description: "Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código de esos sombreadores, del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11."
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, games, juegos, glsl, port, portar
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 883f4423f72f044435ffc0ee9eccdcd5b0d63bfa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7416a4dafe24f86243a3a9962d01db1dc7b61031
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Portar GLSL
+# <a name="port-the-glsl"></a>Portar GLSL
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -53,10 +60,10 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 
 En este ejemplo, el búfer de constantes usa el registro b0 para mantener el búfer empaquetado. Para hacer referencia a todos los registros, se usa b\#. Para obtener más información sobre la implementación de búferes de constantes, registros y empaquetado de datos en HLSL, lee [Shader Constants (HLSL) (Constantes de sombreador [HLSL])](https://msdn.microsoft.com/library/windows/desktop/bb509581).
 
-Instrucciones
+<a name="instructions"></a>Instrucciones
 ------------
 
-### Paso 1: portar el sombreador de vértices
+### <a name="step-1-port-the-vertex-shader"></a>Paso 1: portar el sombreador de vértices
 
 En nuestro ejemplo simple de OpenGL ES 2.0, el sombreador de vértices tiene tres entradas: una matriz 4x4 de proyección de vista de modelo constante y dos vectores de 4 coordenadas. Estos dos vectores contienen la posición de vértice y su color. El sombreador transforma el vector de posición en coordenadas de perspectiva y lo asigna al elemento intrínseco gl\_Position para su rasterización. Asimismo, el color de vértice se copia en una variable de la interpolación durante la rasterización.
 
@@ -115,7 +122,7 @@ PixelShaderInput main(VertexShaderInput input)
 
 El tipo de datos de salida, PixelShaderInput, se rellena durante la rasterización y se proporciona al sombreador de fragmentos (píxeles).
 
-### Paso 2: portar el sombreador de fragmentos
+### <a name="step-2-port-the-fragment-shader"></a>Paso 2: portar el sombreador de fragmentos
 
 El sombreador de fragmentos de nuestro ejemplo en GLSL es extremadamente simple: proporciona el elemento intrínseco gl\_FragColor con el valor del color interpolado. OpenGL ES 2.0 lo escribirá en el destino de representación predeterminado.
 
@@ -150,7 +157,7 @@ float4 main(PixelShaderInput input) : SV_TARGET
 
 El color para el píxel en posición se escribe en el destino de representación. Ahora veamos cómo mostrar el contenido de ese destino de representación en [Dibujar en la pantalla](draw-to-the-screen.md).
 
-## Paso anterior
+## <a name="previous-step"></a>Paso anterior
 
 
 [Portar datos y búferes de vértices](port-the-vertex-buffers-and-data-config.md) Paso siguiente
@@ -168,7 +175,7 @@ Comprender la semántica de HLSL y el empaquetado de los búferes de constantes 
 -   Asegúrate de saber qué nivel de características de Direct3D eliges como destino para cada sombreador. La semántica del nivel de característica 9\_\* difiere aquella que se encuentra en el nivel 11\_1.
 -   La semántica SV\_POSITION resuelve los datos de posición asociados después de la interpolación, para coordinar valores donde: X está entre 0 y el ancho del destino de representación; Y está entre 0 y el alto del destino de representación; Z se divide por el valor W de la coordenada homogénea original (Z/W) y W es 1 dividido por el valor W original (1/W).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 [Portar un representador simple de OpenGL ES 2.0 a Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
@@ -185,10 +192,5 @@ Comprender la semántica de HLSL y el empaquetado de los búferes de constantes 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

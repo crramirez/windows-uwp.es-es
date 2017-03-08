@@ -3,22 +3,29 @@ author: mcleblanc
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
 title: "Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación"
 description: "Mejora el control del inicio y la activación de la aplicación para crear aplicaciones para la Plataforma universal de Windows (UWP) con tiempo de inicio optimizado."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 5411faa3af685e1a285119ba456a440725845711
-ms.openlocfilehash: 2224c6c2ca0a606492d381af85e665170601f054
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b59a4eb056e36156b847c769778b2609863ec1fc
+ms.lasthandoff: 02/07/2017
 
 ---
-# Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
+# <a name="best-practices-for-your-apps-startup-performance"></a>Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Mejora el control del inicio y la activación de la aplicación para crear aplicaciones para la Plataforma universal de Windows (UWP) con tiempo de inicio optimizado.
 
-## Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
+## <a name="best-practices-for-your-apps-startup-performance"></a>Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 
 En parte, los usuarios notan si una aplicación es rápida o lenta según el tiempo que tarda en iniciarse. En el contexto de este tema, el tiempo de inicio de una aplicación comienza cuando el usuario inicia la aplicación y finaliza cuando puede interactuar con la aplicación de modo significativo. En esta sección se proporcionan sugerencias sobre cómo mejorar el rendimiento de la aplicación cuando se inicia.
 
-### Medir el tiempo de inicio de la aplicación
+### <a name="measuring-your-apps-startup-time"></a>Medir el tiempo de inicio de la aplicación
 
 Asegúrate de iniciar la aplicación algunas veces antes de medir el tiempo de inicio. Esto proporciona un punto de partida para la medición y garantiza que estás midiendo el tiempo de inicio más razonablemente corto que sea posible.
 
@@ -48,11 +55,11 @@ Ngen.exe precompila todas las aplicaciones del equipo que se usaron y que no con
 
 Cuando vuelvas a compilar la aplicación, ya no se usará la imagen nativa. En su lugar, la aplicación se compila Just-In-Time, o sea, que se compila a medida que se ejecuta la aplicación. Debes volver a ejecutar Ngen.exe para obtener una nueva imagen nativa.
 
-### Aplaza el trabajo lo más que puedas
+### <a name="defer-work-as-long-as-possible"></a>Aplaza el trabajo lo más que puedas
 
 Para mejorar el tiempo de inicio de la aplicación, realiza solo el trabajo que sea absolutamente necesario para permitir que el usuario empiece a interaccionar con la aplicación. Esto puede ser especialmente beneficioso si puedes retrasar la carga de ensamblados adicionales. Common Language Runtime carga un ensamblado la primera vez que se usa. Si puedes reducir al mínimo la cantidad de ensamblados que se cargan, es posible que mejores el tiempo de inicio de la aplicación y la memoria que consume.
 
-### Realizar trabajos de ejecución prolongados de forma independiente
+### <a name="do-long-running-work-independently"></a>Realizar trabajos de ejecución prolongados de forma independiente
 
 La aplicación puede ser interactiva aunque algunas de sus partes no sean totalmente funcionales. Por ejemplo, si la aplicación muestra datos que tardan un poco recuperarse, puedes hacer que ese código se ejecute de forma independiente del código de inicio de la aplicación. Para hacerlo, recupera los datos de forma asincrónica. Cuando los datos estén disponibles, úsalos para rellenar la interfaz de usuario de la aplicación.
 
@@ -60,13 +67,13 @@ Muchas de las API de la Plataforma universal de Windows (UWP) que recuperan dato
 
 Si la aplicación tarda demasiado en cargar parte de su interfaz de usuario, contempla la posibilidad de agregarle una cadena en esa área con la indicación "Obteniendo los datos más recientes" o algo similar. De este modo, los usuarios sabrán que la aplicación sigue procesando.
 
-## Minimizar el tiempo de inicio
+## <a name="minimize-startup-time"></a>Minimizar el tiempo de inicio
 
 Todas las aplicaciones, excepto las más simples, tardan un tiempo perceptible en cargar los recursos, analizar el XAML, configurar las estructuras de datos y ejecutar la lógica durante la activación. En este artículo, dividimos el proceso de activación en tres fases y lo analizamos. También proporcionamos sugerencias para reducir la duración de cada fase y técnicas para lograr que cada fase del inicio de la aplicación sea más aceptable para el usuario.
 
 El período de activación es el tiempo que transcurre entre el momento en que el usuario inicia la aplicación y el instante en que esta pasa a ser funcional. Este tiempo es fundamental, ya que es la primera impresión que tienen los usuarios de tu aplicación. Ellos esperan una respuesta instantánea y continua del sistema y las aplicaciones. Cuando las aplicaciones no se inician rápidamente, el diseño del sistema y la aplicación se percibe como discontinuo o deficiente. Lo que es aún peor, si el proceso de activación de una aplicación tarda demasiado, la Administración del ciclo de vida de los procesos (PLM) podría cancelarla o el usuario podría desinstalarla.
 
-### Introducción a las fases de inicio
+### <a name="introduction-to-the-stages-of-startup"></a>Introducción a las fases de inicio
 
 El inicio implica un número de fragmentos en movimiento y todos ellos deben coordinarse correctamente para lograr la mejor experiencia del usuario. Los siguientes pasos se producen entre el momento en que el usuario hace clic en el icono de la aplicación y el momento en que se muestra el contenido de la aplicación.
 
@@ -82,7 +89,7 @@ El inicio implica un número de fragmentos en movimiento y todos ellos deben coo
 -   Se llama al objeto Render para crear los elementos visuales de todo el contenido de la ventana.
 -   El objeto Frame se presenta al Administrador de ventanas de escritorio (DWM).
 
-### Haz menos en la ruta de acceso de inicio
+### <a name="do-less-in-your-startup-path"></a>Haz menos en la ruta de acceso de inicio
 
 Mantén tu ruta de acceso de al código de inicio libre de todo lo que no se necesite para el primer marco.
 
@@ -91,9 +98,9 @@ Mantén tu ruta de acceso de al código de inicio libre de todo lo que no se nec
 -   Muestra el progreso de la interfaz de usuario si esta está a la espera de datos.
 -   Ten cuidado con los diseños de aplicación que implican una gran cantidad de análisis de los archivos de configuración o una interfaz de usuario que se genera dinámicamente mediante código.
 
-### Reducir el número de elementos
+### <a name="reduce-element-count"></a>Reducir el número de elementos
 
-El rendimiento de inicio de una aplicación XAML está relacionada directamente con el número de elementos que creas durante el inicio. Cuantos menos elementos crees, menos tiempo tardará la aplicación en iniciarse. Como referencia aproximada, considera la posibilidad de que la creación de cada elemento tarde 1ms.
+El rendimiento de inicio de una aplicación XAML está relacionada directamente con el número de elementos que creas durante el inicio. Cuantos menos elementos crees, menos tiempo tardará la aplicación en iniciarse. Como referencia aproximada, considera la posibilidad de que la creación de cada elemento tarde 1 ms.
 
 -   Las plantillas que se usan en los controles de elementos pueden tener el mayor impacto, ya que se repiten varias veces. Consulta [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md).
 -   Los objetos UserControl y las plantillas de controles se ampliarán, por lo que también deberían tenerse en cuenta.
@@ -111,7 +118,7 @@ El rendimiento de la aplicación no solo se basa en el rendimiento sin procesar,
 
 En este tema se describe el "primer marco" que proviene de una animación y programa de televisión, y es una medida del tiempo transcurrido antes de que el usuario final vea el contenido.
 
-### Mejorar la percepción del inicio
+### <a name="improve-startup-perception"></a>Mejorar la percepción del inicio
 
 Usemos el ejemplo de un juego en línea simple para identificar cada fase del inicio y diferentes técnicas para interactuar con el usuario durante el proceso. En este ejemplo, la primera fase de activación es el tiempo entre el momento en que el usuario pulsa el icono del juego y el instante en que el juego comienza a ejecutar el código. Durante este lapso, el sistema no tiene ningún contenido que mostrar al usuario para incluso indicar que se ha iniciado el juego correspondiente. Sin embargo, el uso de una pantalla de presentación proporciona este contenido al sistema. Luego, el juego notifica al usuario que se ha completado la primera fase de la activación reemplazando la pantalla de presentación estática con su propia interfaz de usuario cuando comienza a ejecutar el código.
 
@@ -123,7 +130,7 @@ La tercera fase comienza una vez que el juego tiene un conjunto mínimo de infor
 
 Ahora que ya hemos identificado las tres fases de activación del juego en línea, las asociaremos con el código real.
 
-### Fase 1
+### <a name="phase-1"></a>Fase 1
 
 Antes de iniciarse, la aplicación tiene que indicar al sistema lo que quiere mostrar como pantalla de presentación. Para ello, proporciona una imagen y color de fondo al elemento SplashScreen en el manifiesto de la aplicación, como se muestra en el ejemplo. Windows muestra esto una vez que comienza la activación de la aplicación.
 
@@ -146,7 +153,7 @@ Para más información, consulta el tema [Agregar una pantalla de presentación]
 
 Usa el constructor de la aplicación solamente para inicializar las estructuras de datos que son fundamentales para la aplicación. El constructor solo se llama la primera vez que se ejecuta la aplicación y no necesariamente cada vez que se activa. Por ejemplo, el constructor no se llama para una aplicación que se ha ejecutado, colocado en segundo plano y después activado a través del contrato de Buscar.
 
-### Fase 2
+### <a name="phase-2"></a>Fase 2
 
 Existen varias razones por las cuales se activa una aplicación, cada una de las cuales debe tratarse de manera diferente. Puedes invalidar los métodos [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/BR242330), [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/BR242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701801), [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/BR242335), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/BR242336) y [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701806) para controlar cada motivo de activación. Una de las cosas que debe hacer una aplicación en estos métodos es crear una interfaz de usuario, asignarla a [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/BR209051) y después llamar a [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046). En este momento, la pantalla de presentación se reemplaza por la interfaz de usuario que creó la aplicación. Este elemento visual puede ser la pantalla de carga o la interfaz de usuario real de la aplicación si hay disponible suficiente información en la activación para crearla.
 
@@ -265,7 +272,7 @@ Existen varias razones por las cuales se activa una aplicación, cada una de las
 
 Las aplicaciones que muestran una página de carga en el controlador de activación comienzan la tarea de creación de la interfaz de usuario en segundo plano. Una vez creado ese elemento, se produce su evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723). En el controlador de eventos, se reemplaza el contenido de la ventana (que actualmente es la pantalla de carga) con la página principal recién creada.
 
-Es fundamental que una aplicación con un período de inicialización extendido muestre una página de carga. Aparte de proporcionar los comentarios de los usuarios sobre el proceso de activación, el proceso finalizará si no se llama a [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) durante los 15segundos posteriores al inicio del proceso de activación.
+Es fundamental que una aplicación con un período de inicialización extendido muestre una página de carga. Aparte de proporcionar los comentarios de los usuarios sobre el proceso de activación, el proceso finalizará si no se llama a [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) durante los 15 segundos posteriores al inicio del proceso de activación.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -321,7 +328,7 @@ Es fundamental que una aplicación con un período de inicialización extendido 
 
 Para ver un ejemplo del uso de pantallas de presentación extendidas, consulta el tema sobre la [muestra de pantalla de presentación](http://go.microsoft.com/fwlink/p/?linkid=234889).
 
-### Fase 3
+### <a name="phase-3"></a>Fase 3
 
 El simple hecho de que la aplicación haya mostrado la interfaz de usuario no significa que esté totalmente lista para usarse. En el caso de nuestro juego, la interfaz de usuario se muestra con marcadores de posición para las características que necesitan datos de Internet. En este punto, el juego descarga los datos adicionales necesarios para que la aplicación pase a estar totalmente funcional y habilita las características de manera progresiva a medida que se obtienen los datos.
 
@@ -331,17 +338,17 @@ Tendrías que mostrar una página de carga o, lo que es peor, una pantalla de pr
 
 El modo exacto en que una aplicación responde a cada fase del inicio depende de ti, pero el usuario la percibirá como una aplicación rápida, al igual que el sistema en su totalidad, si proporcionas la mayor cantidad de interacción posible (pantalla de presentación, pantalla de carga, interfaz de usuario mientras se cargan los datos).
 
-### Minimizar los ensamblados administrados en la ruta de acceso de inicio
+### <a name="minimize-managed-assemblies-in-the-startup-path"></a>Minimizar los ensamblados administrados en la ruta de acceso de inicio
 
 El código reutilizable por lo general consiste en incluir módulos (DLL) en un proyecto. Para cargar estos módulos, es necesario tener acceso al disco y, como puedes imaginar, esto puede consumir una gran cantidad de recursos. Esto provoca un mayor impacto en el inicio en frío, pero también puede tenerlo en el inicio en caliente. En el caso de C# y Visual Basic, CLR trata de retrasar este alto consumo la mayor cantidad de tiempo posible mediante la carga de ensamblados a petición. Es decir, CLR no carga un módulo hasta que un método ejecutado hace referencia a él. Por este motivo, solo debes hacer referencia a los ensamblados que sean necesarios para el arranque de tu aplicación en el código de inicio, para que CLR no cargue módulos innecesarios. Si en tu ruta de acceso de inicio hay rutas de código sin usar que tienen referencias innecesarias, puedes moverlas a otros métodos para evitar las cargas innecesarias.
 
 Otro modo de reducir las cargas de módulos consiste en combinar los módulos de las aplicaciones. Por lo general, lleva menos tiempo cargar un ensamblado grande que dos pequeños. No siempre es posible hacerlo y solo debes combinar los módulos si esto no supone una diferencia material para la productividad del desarrollador o la reusabilidad del código. Puedes usar herramientas, como [PerfView](http://go.microsoft.com/fwlink/p/?linkid=251609) o el [Windows Performance Analyzer (WPA)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) para averiguar qué módulos se cargan en el inicio.
 
-### Realizar solicitudes web inteligentes
+### <a name="make-smart-web-requests"></a>Realizar solicitudes web inteligentes
 
 Puedes mejorar considerablemente el tiempo de carga de una aplicación al empaquetar localmente su contenido, incluyendo XAML, imágenes y otros archivos importantes para la aplicación. Las operaciones de disco son más rápidas que las operaciones de red. Si una aplicación necesita un archivo en particular durante la inicialización, puedes reducir el tiempo de inicio total si lo cargas desde el disco en lugar de recuperarlo desde un servidor remoto.
 
-## Eficiencia de diarios y páginas en caché
+## <a name="journal-and-cache-pages-efficiently"></a>Eficiencia de diarios y páginas en caché
 
 El control Frame proporciona funciones de navegación. Ofrece la navegación a una página (método Navigate), el registro en diario de navegación (propiedades BackStack/ForwardStack, método GoForward/GoBack), almacenamiento en caché de las páginas (Page.NavigationCacheMode) y compatibilidad con la serialización (método GetNavigationState).
 
@@ -360,10 +367,5 @@ Sin embargo, el objeto Frame ofrece una memoria caché de página opcional que p
 El almacenamiento en caché de las páginas puede mejorar el rendimiento, ya que evita la creación de instancias y, por tanto, mejora el rendimiento de navegación. El almacenamiento en caché de las páginas puede afectar negativamente al rendimiento debido al exceso de almacenamiento en caché, lo que afectará al conjunto de trabajo.
 
 Por lo tanto, es recomendable usar el almacenamiento en caché de páginas según sea adecuado para tu aplicación. Por ejemplo, supongamos que tienes una aplicación que muestra una lista de elementos en un objeto Frame y, al pulsar un elemento, el marco navega a una página de detalles de ese elemento. Es recomendable que esta página de lista se establezca de modo que se almacene en la memoria caché. Si la página de detalles es la misma para todos los elementos, también es recomendable que se almacene en caché. Sin embargo, si la página de detalles está más heterogénea, quizá sea mejor desactivar el almacenamiento en caché.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

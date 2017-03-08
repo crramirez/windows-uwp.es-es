@@ -2,9 +2,17 @@
 author: jnHs
 Description: "El tiempo estimado para transferir pagos, los umbrales de pago aplicables y los catálogos de soluciones de Microsoft desde los que puedes recibir pagos pueden variar según el país o la región y el tipo de cuenta de pago."
 title: "Umbrales, métodos y plazos de pago"
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 translationtype: Human Translation
-ms.sourcegitcommit: d5ec64bbd1e8b10c17ff5c43d89e6652eadb2367
-ms.openlocfilehash: 4fd7a23f6d6c880e490f93dba248b6c1e43c7053
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 7da8727d3f901cfbab7c68d0b7f7362438d3fc65
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -24,7 +32,7 @@ Por lo general, enviaremos cualquier pago adeudado de un determinado mes el día
 
 | Método de pago | Número de días la acreditación en la cuenta de pago |
 |--------------------|--------------------------------------------|
-| PayPal | 1 día laborable | 
+| PayPal | 1 día laborable |    
 | ACH/SEPA |Entre 2 y 3 días laborables |
 | Transferencia bancaria | Entre 7 y 10 días laborables |
 
@@ -4161,9 +4169,4 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
     <td>N/D</td>
   </tr>
 </table>
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

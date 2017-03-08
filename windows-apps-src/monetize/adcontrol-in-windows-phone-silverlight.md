@@ -1,17 +1,24 @@
 ---
 author: mcleanbyron
 ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
-description: "Aprende a usar la clase AdControl para mostrar anuncios de banner en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0."
+description: "Aprende a usar la clase AdControl para mostrar anuncios en banners en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0."
 title: AdControl en Windows Phone Silverlight
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, anuncios, publicidad, AdControl, Silverlight, Windows Phone
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: f4b519b56e8f656f75405a946c646e9f7b89ba99
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1f4606f5bb5446d8749f80e2bf4772a0b6db48b3
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="adcontrol-in-windows-phone-silverlight"></a>AdControl en Windows Phone Silverlight
 
-En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) para mostrar anuncios de banner en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0.
+En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) para mostrar anuncios en banners en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0.
 
 > **Nota para Windows Phone Silverlight 8.0**&nbsp;&nbsp;Los anuncios en banner aún se admiten para las aplicaciones de Silverlight de Windows Phone 8.0 que usan **AdControl** de una versión anterior del Universal Ad Client SDK o Microsoft Advertising SDK y que ya están disponibles en la Tienda. Sin embargo, los anuncios en banner ya no se admiten en los nuevos proyectos de Silverlight para Windows Phone 8.0. Además, algunos escenarios de depuración y pruebas están limitados en los proyectos de Silverlight de Windows Phone 8.x. Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md#silverlight_support).
 
@@ -128,9 +135,4 @@ Para comenzar, descarga e instala el paquete de NuGet que contiene los ensamblad
 
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

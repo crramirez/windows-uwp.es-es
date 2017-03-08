@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: d074e9d5-b3e0-4f16-b1e4-02b32ac99b2c
 description: Aprende a asignar propiedades **AdControl** a valores.
 title: Ejemplo de propiedades XAML de AdControl
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, anuncios, publicidad, AdControl, XAML, propiedades
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: f33e4048a1a9aa68ecc627d81ca15858027720c1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dbcc08b1373c7f73d5b9ebf541ec82bb01fd9df3
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -33,9 +40,4 @@ Los valores son ejemplos. En el código se establecen los valores de estas funci
 * [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

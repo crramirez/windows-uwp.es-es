@@ -2,22 +2,29 @@
 author: mcleblanc
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: Pruebas beta
-description: "Las pruebas beta te ofrecen la posibilidad de mejorar la aplicación en función de los comentarios de las personas ajenas al equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos."
+description: "Las pruebas beta te ofrecen la posibilidad de mejorar la aplicación en función de los comentarios de las personas ajenas al equipo de desarrollo de aplicaciones, que prueban la aplicación no comercial en sus propios dispositivos."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 13857b2ba5946149d04ad4f6eda6828cc11a0640
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7f84b573a051bca38000d2d480368147110ea22c
+ms.lasthandoff: 02/07/2017
 
 ---
-# Pruebas beta
+# <a name="beta-testing"></a>Pruebas beta
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las *pruebas beta* te ofrecen la posibilidad de mejorar tu aplicación en función de los comentarios de los individuos fuera del equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos.
 
 Esta sección describe las opciones de pruebas beta para las aplicaciones universales de Windows.
 
-## ¿Por qué realizar pruebas beta?
+## <a name="why-beta-test"></a>¿Por qué realizar pruebas beta?
 
 Para probar una aplicación minuciosamente, debes intentar probarla con tantas configuraciones de dispositivos e interacciones del usuario como sea posible. Llevar a cabo todas esas pruebas internamente es difícil, si no imposible.
 
@@ -30,11 +37,11 @@ Con las pruebas beta, puedes:
 -   Obtener información de uso real que se puede usar para mejorar la experiencia del usuario.
 -   Recibir comentarios sin que afecte a las clasificaciones públicas de la Tienda Windows.
 
-## Cuando hacer las pruebas beta
+## <a name="when-to-beta-test"></a>Cuando hacer las pruebas beta
 
 Es mejor realizar las pruebas beta como la fase final de las pruebas antes de publicar la aplicación final. En ese momento, ya habrás probado la aplicación por ti mismo tanto como haya sido posible y habrás cubierto todos los casos de uso explícitos. Las pruebas beta no son un sustituto de otros métodos de prueba. Dado que las pruebas beta no se moderan, puede que los participantes no capturen todos los errores del código, ya que la experiencia de cada evaluador es autodirigida y es poco probable que exploren todas las funciones de la aplicación. No obstante, los comentarios de las pruebas beta pueden proporcionar una buena dosis final de información del mundo real que revele problemas que no se podrían haber previsto antes de hacerla pública.
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 En el panel Centro de desarrollo de Windows unificado, podrás limitar la distribución de las aplicaciones a solo los evaluadores, independientemente de los sistemas operativos a los que esté destinada la aplicación. No es necesario para crear una versión independiente de la aplicación con un nombre y una identidad del paquete distintos. Puedes realizar las pruebas y luego crear un nuevo envío cuando estés listo para que la aplicación esté disponible para todos los usuarios. (Por supuesto, puedes crear una aplicación separada para realizar las pruebas si lo prefieres. Si lo haces, asegúrate de asignarle un nombre distinto del que deseas que sea el nombre final; es decir, distinto del nombre de la aplicación público.)
 
@@ -46,10 +53,5 @@ Consulta [Pruebas beta y distribución dirigida](https://msdn.microsoft.com/libr
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

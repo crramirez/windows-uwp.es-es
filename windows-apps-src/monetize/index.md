@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
 description: "Windows SDK, Microsoft Store Services SDK y la Tienda Windows proporcionan muchas características que permiten ganar más dinero con las aplicaciones y conseguir clientes gracias a la interacción con los usuarios."
 title: "Monetización, atracción de clientes y servicios de la Tienda"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, monetizar, atraer, promover, servicios de la Tienda, monetize, engage, promote, Store services
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: e8a4c40dbc715d82d6f41fef8a49df5bfdfa79ae
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5a3497d5aa1c8a4415b7b4fb9f7888448ae74f9f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -35,9 +42,4 @@ Para obtener detalles sobre los aranceles de la Tienda Windows y cómo recibir e
 * [Crear segmentos de clientes](../publish/create-customer-segments.md)
 * [Informe de comentarios](../publish/feedback-report.md)
 * [Informe de uso](../publish/usage-report.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

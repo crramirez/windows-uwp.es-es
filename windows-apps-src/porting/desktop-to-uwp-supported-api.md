@@ -2,13 +2,21 @@
 author: awkoren
 Description: "En este artículo se explica cómo firmar una aplicación de escritorio que se ha convertido a la Plataforma universal de Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
-title: API de UWP admitidas para aplicaciones de escritorio convertidas
+title: API de UWP compatibles con aplicaciones de escritorio convertidas
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 translationtype: Human Translation
-ms.sourcegitcommit: 3751b16837a1e12f68954b2dec7dfaf0fb8554b6
-ms.openlocfilehash: c99d103fe5d613c5b654ba2b0bb83987a7fcb944
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: f5ee6f103fa9a7e5f13dc68eb9c6060e6b66e227
+ms.lasthandoff: 02/08/2017
 
 ---
-# API de UWP admitidas para aplicaciones convertidas con el puente de escritorio
+# <a name="supported-uwp-apis-for-apps-converted-with-the-desktop-bridge"></a>API de UWP compatibles con aplicaciones convertidas con el Puente de dispositivo de escritorio
 
 Las aplicaciones de escritorio convertidas pueden usar una amplia gama de API de Plataforma universal de Windows (UWP), incluso si no se realizó la transición a una aplicación para UWP. Este artículo enumera las clases disponibles que puede usar tu aplicación convertida. 
 
@@ -38,14 +46,14 @@ En ocasiones, puede parecer que las API en estas áreas funcionen correctamente.
 
 Algunas API de UWP disponibles para aplicaciones de escritorio completas no se admiten para aplicaciones convertidas. Si la aplicación de escritorio usa las API de UWP antes de la conversión, deberías comprobar que aún se admiten estas API. Para obtener más información, consulta [API de Windows Runtime para aplicaciones de escritorio](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx).
 
-## Lista de API
+## <a name="list-of-apis"></a>Lista de API
 
 La siguiente es una lista completa de las API para UWP que se admiten en aplicaciones convertidas. Puedes ver las [API admitidas en las aplicaciones recientemente convertidas](#new) o las [API admitidas tanto en aplicaciones convertidas como en aplicaciones de escritorio](#both). 
 
-Para obtener ejemplos sobre cómo usar las API de WinRT, consulta las [muestras de puente de aplicación de escritorio a UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) y las [muestras de aplicaciones para Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) disponibles en GitHub.
+Para obtener ejemplos sobre cómo usar las API de WinRT, consulta [Desktop app bridge to UWP Samples (Ejemplos del puente de aplicación de escritorio a UWP)](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) y [Universal Windows Platform (UWP) app samples (Ejemplos de aplicaciones de la Plataforma universal de Windows [UWP])](https://github.com/Microsoft/Windows-universal-samples) en GitHub. También puedes consultar la aplicación de compilación de la entrada de blog de Windows [Calling Windows 10 APIs From a Desktop Application (Llamar a API de Windows 10 desde una aplicación de escritorio)](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application). 
 
 <span id="new" />
-### API admitidas en las aplicaciones recientemente convertidas
+### <a name="apis-supported-in-newly-converted-apps"></a>API que se admiten en aplicaciones recién convertidas
 
 * [Windows.ApplicationModel.DataTransfer.DataProviderHandler](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataProviderHandler)
 * [Windows.ApplicationModel.DataTransfer.DataRequest](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest)
@@ -371,7 +379,7 @@ Para obtener ejemplos sobre cómo usar las API de WinRT, consulta las [muestras 
 * [Windows.UI.StartScreen.JumpListItem](https://msdn.microsoft.com/library/windows/apps/Windows.UI.StartScreen.JumpListItem)
 
 <span id="both" />
-### API admitidas tanto en aplicaciones convertidas como en aplicaciones de escritorio
+### <a name="apis-supported-in-both-converted-apps-and-desktop-applications"></a>API admitidas tanto en aplicaciones convertidas como en aplicaciones de escritorio
 
 * [Windows.ApplicationModel.Core.AppListEntry](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.AppListEntry)
 * [Windows.ApplicationModel.DataTransfer.DataPackage](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)
@@ -1037,9 +1045,4 @@ Para obtener ejemplos sobre cómo usar las API de WinRT, consulta las [muestras 
 * [Windows.Web.Syndication.SyndicationPerson](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationPerson)
 * [Windows.Web.Syndication.SyndicationText](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationText)
 * [Windows.Web.WebError](https://msdn.microsoft.com/library/windows/apps/Windows.Web.WebError)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

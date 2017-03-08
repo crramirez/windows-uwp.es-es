@@ -5,13 +5,20 @@ ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: Accesibilidad de teclado
 label: Keyboard accessibility
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 2215aeae041ff975d99d29ea42350f6ce0f2a681
-ms.openlocfilehash: 112c7be4cb5418332a19565be9b739e7032ba834
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9b1261de60bf0a45940fe9a284d8a5276b42e0a3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Accesibilidad de teclado  
+# <a name="keyboard-accessibility"></a>Accesibilidad de teclado  
 
 
 
@@ -20,7 +27,7 @@ Si tu aplicación no proporciona un buen acceso de teclado, los usuarios inviden
 <span id="keyboard_navigation_among_UI_elements"/>
 <span id="keyboard_navigation_among_ui_elements"/>
 <span id="KEYBOARD_NAVIGATION_AMONG_UI_ELEMENTS"/>
-## Navegación de teclado entre elementos de la interfaz de usuario  
+## <a name="keyboard-navigation-among-ui-elements"></a>Navegación de teclado entre elementos de la interfaz de usuario  
 Para usar el teclado con un control, el control debe tener el foco y, para recibirlo (sin usar un puntero), debe ser accesible en un diseño de interfaz de usuario a través de navegación mediante tabulación. De manera predeterminada, el orden de tabulación de los controles es el mismo que el orden en el que se agregaron a una superficie de diseño, enumerada en XAML, o que se agregó mediante programación a un contenedor.
 
 En la mayoría de los casos, el orden predeterminado basado en cómo definiste los controles en XAML es el mejor orden, especialmente porque es el orden en el que los lectores de pantalla leen los controles. No obstante, el orden predeterminado no necesariamente corresponde al orden visual. La posición de visualización real probablemente dependa del contenedor de diseño primario y ciertas propiedades que puedes establecer en los elementos secundarios para influir en el diseño. Para asegurarte de que la aplicación tiene un buen orden de tabulación, prueba este comportamiento tú mismo. Especialmente si tienes una metáfora de cuadrícula o de tabla para el diseño, el orden de la tabla podría ser distinto al orden en que leerían los usuarios. Esto no siempre es un problema. Pero asegúrate de probar la funcionalidad de tu aplicación como una interfaz de usuario táctil y como una interfaz de usuario con teclado, y comprueba que la interfaz de usuario tiene sentido con ambos métodos.
@@ -60,12 +67,12 @@ Tanto si ajustas los valores [**TabIndex**](https://msdn.microsoft.com/library/w
 <span id="keyboard_navigation_within_a_UI_element"/>
 <span id="keyboard_navigation_within_a_ui_element"/>
 <span id="KEYBOARD_NAVIGATION_WITHIN_A_UI_ELEMENT"/>
-## Navegación por teclado dentro de un elemento de interfaz de usuario  
+## <a name="keyboard-navigation-within-a-ui-element"></a>Navegación por teclado dentro de un elemento de interfaz de usuario  
 Para los elementos compuestos, es importante asegurar una correcta navegación interna entre los elementos contenidos. Un elemento compuesto puede administrar su elemento secundario activo actual para reducir la sobrecarga que implica hacer que todos los elementos secundarios tengan foco. Un elemento compuesto de este tipo se incluye en el orden de tabulación y controla los eventos de navegación por teclado. Muchos de los controles compuestos ya tienen una lógica de navegación interna integrada para controlar la administración de eventos. Por ejemplo, el recorrido mediante teclas de dirección de los elementos está habilitado de manera predeterminada en los controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) y [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678) .
 
 <span id="keyboard_activation"/>
 <span id="KEYBOARD_ACTIVATION"/>
-## Alternativas de teclado para eventos y acciones de puntero para elementos de control específicos  
+## <a name="keyboard-alternatives-to-pointer-actions-and-events-for-specific-control-elements"></a>Alternativas de teclado para eventos y acciones de puntero para elementos de control específicos  
 Asegúrate de que los elementos de la interfaz de usuario en los que pueda hacerse clic también puedan invocarse con el teclado. Para usar el teclado con un elemento de la interfaz de usuario, el elemento debe tener foco. Solo las clases que derivan de [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) admiten navegación mediante tabulación y foco.
 
 Para aquellos elementos de la interfaz de usuario que puedan invocarse, implementa controladores de eventos de teclado para las tecla ENTRAR y la barra espaciadora. Esto hace que la compatibilidad de accesibilidad de teclado básica sea completa y permite a los usuarios lograr escenarios de aplicación básicos mediante el uso del teclado solamente, es decir, los usuarios pueden alcanzar todos los elementos de la interfaz de usuario interactivos y activar la funcionalidad predeterminada.
@@ -85,7 +92,7 @@ XAML
 
 <span id="keyboard_shortcuts"/>
 <span id="KEYBOARD_SHORTCUTS"/>
-## Métodos abreviados de teclado  
+## <a name="keyboard-shortcuts"></a>Métodos abreviados de teclado  
 Además de implementar la navegación por teclado y la activación para tu aplicación, una práctica recomendada es implementar métodos abreviados para la funcionalidad de la aplicación. La navegación mediante tabulación proporciona un buen nivel básico de compatibilidad con teclado, pero con formas complejas, probablemente también quieras agregar compatibilidad para teclas de método abreviado. Esto puede hacer que el uso de tu aplicación sea más eficiente, incluso para aquellos que usan tanto dispositivos de puntero como un teclado.
 
 Un *método abreviado* es una combinación de teclas que mejora la productividad al proporcionar al usuario una forma eficaz de acceder a las funciones de la aplicación. Existen dos tipos de métodos abreviados:
@@ -145,7 +152,7 @@ Para obtener más información sobre la implementación de las teclas de método
 <span id="Implementing_a_key_event_handler"/>
 <span id="implementing_a_key_event_handler"/>
 <span id="IMPLEMENTING_A_KEY_EVENT_HANDLER"/>
-### Implementar un controlador de eventos de tecla  
+### <a name="implementing-a-key-event-handler"></a>Implementar un controlador de eventos de tecla  
 Los eventos de entrada como los eventos de tecla usan un concepto de evento denominado *eventos enrutados*. Un evento enrutado se puede propagar por los elementos secundarios de un control compuesto, lo que permite a un control primario controlar los eventos de varios elementos secundarios. Este modelo de evento es conveniente para definir acciones de teclas de método abreviado en un control que contenga varias partes compuestas que no estén diseñadas para admitir foco ni para formar parte del orden de tabulación.
 
 Para obtener código de ejemplo que muestra cómo escribir un controlador de eventos de tecla que incluya la comprobación de modificadores como la tecla Ctrl, consulta [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607).
@@ -153,7 +160,7 @@ Para obtener código de ejemplo que muestra cómo escribir un controlador de eve
 <span id="Keyboard_navigation_for_custom_controls"/>
 <span id="keyboard_navigation_for_custom_controls"/>
 <span id="KEYBOARD_NAVIGATION_FOR_CUSTOM_CONTROLS"/>
-## Navegación mediante teclado para controles personalizados  
+## <a name="keyboard-navigation-for-custom-controls"></a>Navegación mediante teclado para controles personalizados  
 Se recomienda el uso de teclas de dirección como métodos abreviados de teclado para navegar entre elementos secundarios, en los casos en que dichos elementos mantengan una relación espacial entre sí. Si los nodos de la vista de árbol tienen sub-elementos secundarios separados para administrar la activación de nodos y las acciones de expandir/contraer, usa las teclas de flecha izquierda y derecha para proporcionar la funcionalidad de expandir/contraer del teclado. Si tienes un control orientado que admite el recorrido direccional dentro del contenido del control, usa las teclas de dirección adecuadas.
 
 Por lo general, para implementar un control de teclas personalizado para controles personalizados se incluye una invalidación de los métodos [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982.aspx) y [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983.aspx) como parte de la lógica de la clase.
@@ -161,7 +168,7 @@ Por lo general, para implementar un control de teclas personalizado para control
 <span id="An_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="an_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="AN_EXAMPLE_OF_A_VISUAL_STATE_FOR_A_FOCUS_INDICATOR"/>
-## Un ejemplo de un estado visual para un indicador de foco  
+## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>Un ejemplo de un estado visual para un indicador de foco  
 Ya hemos mencionado que los controles personalizados que el usuario habilite para que tengan el foco deben tener un indicador de foco visual. Normalmente, ese indicador de foco es tan simple como dibujar un rectángulo justo alrededor del rectángulo de límite normal del control. La clase [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) del foco visual es un elemento del mismo nivel que el resto de la composición del control en una plantilla de control, pero se establece inicialmente con un valor [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) en **Collapsed** porque el control aún no tiene el foco. Después, cuando el control obtiene el foco, se invoca un estado visual que establece específicamente el valor de **Visibility** en **Visible**. Cuando el foco se mueve a otro lugar, se llama a otro estado visual y **Visibility** pasa a ser **Collapsed**.
 
 Todos los controles XAML predeterminados mostrarán un indicador de foco visual adecuado cuando reciban el foco (si es que pueden recibirlo). También hay distintos aspectos potenciales según el tema seleccionado por el usuario (en especial si el usuario usa un modo de contraste alto). Si usas los controles XAML en la interfaz de usuario y no reemplazas las plantillas de control, no tienes que hacer nada más para obtener indicadores de foco visual en los controles que se comportan y se muestran correctamente. Si lo que intentas es volver a crear la plantilla de un control, o si tienes curiosidad sobre cómo los controles XAML proporcionan sus indicadores de foco visual, en el resto de esta sección se explica cómo se logra en XAML y la lógica de control.
@@ -226,22 +233,17 @@ Ten en cuenta que solo uno de los estados con nombre ajusta la propiedad [**Visi
 <span id="Keyboard_accessibility_and_Windows_Phone"/>
 <span id="keyboard_accessibility_and_windows_phone"/>
 <span id="KEYBOARD_ACCESSIBILITY_AND_WINDOWS_PHONE"/>
-## Accesibilidad de teclado y WindowsPhone
-Por lo general, un dispositivo de WindowsPhone carece de un teclado de hardware dedicado. Sin embargo, un panel de entrada de software (SIP) puede dar cabida a diversos escenarios de accesibilidad de teclado. Los lectores de pantalla pueden leer entradas de texto desde el SIP de **Texto** e incluso advertir de posibles eliminaciones. Los usuarios podrán saber dónde están sus dedos porque el lector de pantalla es capaz de detectar que el usuario está examinando las teclas, de modo que lee en voz alta el nombre de la tecla examinada. De igual modo, algunos de los conceptos de accesibilidad relativos al teclado se pueden asignar a determinados comportamientos de tecnología de asistencia en los que no se usa el teclado en absoluto. Por ejemplo, incluso si un SIP no incluye una tecla TAB, el Narrador admite un gesto táctil que equivale a presionar dicha tecla, de modo que disponer de un orden de tabulación útil de los controles de una interfaz de usuario sigue siendo un principio de accesibilidad de gran importancia. Las teclas de dirección para navegar por los elementos de controles complejos también se pueden usar como gestos táctiles en el Narrador. Cuando el foco llega a un control que no está destinado a la entrada de texto, Narrador admite un gesto con el que se invoca la acción de dicho control.
+## <a name="keyboard-accessibility-and-windows-phone"></a>Accesibilidad de teclado y Windows Phone
+Por lo general, un dispositivo de Windows Phone carece de un teclado de hardware dedicado. Sin embargo, un panel de entrada de software (SIP) puede dar cabida a diversos escenarios de accesibilidad de teclado. Los lectores de pantalla pueden leer entradas de texto desde el SIP de **Texto** e incluso advertir de posibles eliminaciones. Los usuarios podrán saber dónde están sus dedos porque el lector de pantalla es capaz de detectar que el usuario está examinando las teclas, de modo que lee en voz alta el nombre de la tecla examinada. De igual modo, algunos de los conceptos de accesibilidad relativos al teclado se pueden asignar a determinados comportamientos de tecnología de asistencia en los que no se usa el teclado en absoluto. Por ejemplo, incluso si un SIP no incluye una tecla TAB, el Narrador admite un gesto táctil que equivale a presionar dicha tecla, de modo que disponer de un orden de tabulación útil de los controles de una interfaz de usuario sigue siendo un principio de accesibilidad de gran importancia. Las teclas de dirección para navegar por los elementos de controles complejos también se pueden usar como gestos táctiles en el Narrador. Cuando el foco llega a un control que no está destinado a la entrada de texto, Narrador admite un gesto con el que se invoca la acción de dicho control.
 
 Los métodos abreviados de teclado no suelen ser relevantes para las aplicaciones Windows Phone, puesto que un SIP carece de teclas Control o ALT.
 
 <span id="related_topics"/>
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
 * [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607)
 * [Entrada: muestra de teclado táctil](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [Muestra de respuesta a la apariencia del teclado en pantalla](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [Muestra de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

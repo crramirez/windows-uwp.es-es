@@ -5,13 +5,20 @@ ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: "Información general sobre accesibilidad"
 label: Accessibility overview
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a93f6fb154300ac27b9dc700182d90083fb2cbc8
-ms.openlocfilehash: 669672ecd8c15adb2e53eb8e4a8efd8483af14d1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a03953885179cf8e969e3b35a426aa958c528f54
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Información general sobre accesibilidad  
+# <a name="accessibility-overview"></a>Información general sobre accesibilidad  
 
 
 
@@ -21,7 +28,7 @@ Este artículo es una descripción general de los conceptos y las tecnologías r
 <span id="Accessibility_and_your_app"/>
 <span id="accessibility_and_your_app"/>
 <span id="ACCESSIBILITY_AND_YOUR_APP"/>
-## Accesibilidad y la aplicación  
+## <a name="accessibility-and-your-app"></a>Accesibilidad y la aplicación  
 Existe una gran variedad de discapacidades, entre ellas, limitaciones en la movilidad, vista, percepción de los colores, audición, habla, cognición y alfabetización. No obstante, puedes dar respuesta a la mayoría de los requisitos si sigues las instrucciones incluidas en este documento. Esto significa que debes proporcionar lo siguiente:
 
 * Soporte para lectores de pantalla e interacciones de teclado.
@@ -35,13 +42,13 @@ Además, las funciones de plantilla, estilo y enlace de datos simplifican la imp
 <span id="UI_Automation"/>
 <span id="ui_automation"/>
 <span id="UI_AUTOMATION"/>
-## Automatización de la interfaz de usuario  
+## <a name="ui-automation"></a>Automatización de la interfaz de usuario  
 Compatibilidad de la accesibilidad viene principalmente de la compatibilidad integrada con el marco de trabajo de automatización de la interfaz de usuario de Microsoft. Esa compatibilidad se proporciona mediante clases base y el comportamiento integrado de la implementación de clases para los tipos de control, y una representación de la interfaz de la API del proveedor de la automatización de la interfaz de usuario. Cada clase de control usa los conceptos de automatización de la interfaz de usuario de automatización del mismo nivel y patrones de automatización que notifican del contenido y rol del control a los clientes de automatización de la interfaz de usuario. La automatización de la interfaz de usuario considera que la aplicación es una ventana de nivel superior y todo el contenido de esa ventana de aplicación se pone a disposición de un cliente de automatización de la interfaz de usuario a través del marco de trabajo de automatización de la interfaz de usuario. Para obtener más información sobre la automatización de la interfaz de usuario, consulta el tema [UI Automation Overview](https://msdn.microsoft.com/library/windows/desktop/Ee684076) (Introducción a la automatización de la interfaz de usuario).
 
 <span id="Assistive_technology"/>
 <span id="assistive_technology"/>
 <span id="ASSISTIVE_TECHNOLOGY"/>
-## Tecnología de asistencia  
+## <a name="assistive-technology"></a>Tecnología de asistencia  
 Muchas de las necesidades de accesibilidad del usuario se satisfacen a través de productos de tecnología de asistencia instalados por este o por herramientas y de la configuración proporcionada por el sistema operativo. Esto incluye funciones como lectores de pantalla, ampliación de pantalla y configuración de contraste alto.
 
 Los productos de tecnología de asistencia incluyen una variedad de software y hardware. Estos productos funcionan a través de los marcos de accesibilidad y la interfaz de teclado estándar que proporcionan información acerca del contenido y la estructura de una interfaz de usuario a los lectores de pantalla y otras tecnologías de asistencia. A continuación, se incluyen algunos ejemplos de productos de tecnología de asistencia:
@@ -59,7 +66,7 @@ Algunas de las opciones que puedes usar para probar los escenarios de accesibili
 <span id="Screen_reader_support_and_basic_accessibility_information"/>
 <span id="screen_reader_support_and_basic_accessibility_information"/>
 <span id="SCREEN_READER_SUPPORT_AND_BASIC_ACCESSIBILITY_INFORMATION"/>
-## Información de accesibilidad básica y compatibilidad para lectores de pantalla  
+## <a name="screen-reader-support-and-basic-accessibility-information"></a>Información de accesibilidad básica y compatibilidad para lectores de pantalla  
 Los lectores de pantalla proporcionan acceso al texto de una aplicación representándolo en algún otro formato, como Braille o idioma hablado. El comportamiento exacto de un lector de pantalla depende del software y de la configuración de usuario de este.
 
 Por ejemplo, algunos lectores de pantalla leen toda la interfaz de usuario de una aplicación cuando el usuario la inicia o cambia a ella, lo que permite que el usuario reciba todo el contenido informativo disponible antes de desplazarse por ella. Algunos lectores de pantalla también leen el texto asociado con un control individual cuando recibe el foco durante la navegación por tabulación. Esto permite a los usuarios orientarse mientras navegan entre los controles de entrada de una aplicación. Narrador es un ejemplo de lector de pantalla que proporciona ambos comportamientos, en función de la elección del usuario.
@@ -71,7 +78,7 @@ Existen muchas otras propiedades de automatización disponibles (incluidas las p
 <span id="Keyboard_support"/>
 <span id="keyboard_support"/>
 <span id="KEYBOARD_SUPPORT"/>
-## Compatibilidad de teclado  
+## <a name="keyboard-support"></a>Compatibilidad de teclado  
 Para proporcionar una buena compatibilidad de teclado, debes asegurarte de que cada parte de tu aplicación pueda usarse con un teclado. Si tu aplicación usa principalmente los controles estándar y no usa ningún control personalizado, ya tienes la mayor parte del camino recorrido. El modelo de control básico de XAML proporciona compatibilidad de teclado integrada que incluye navegación mediante tabulación, entrada de texto y compatibilidad específica del control. Los elementos que funcionan como contenedores de diseño (como los paneles) usan el orden de diseño para establecer un orden de tabulación predeterminado. Ese orden suele ser el orden de tabulación correcto que se debe usar para una representación accesible de la interfaz de usuario. Si usas los controles [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) para mostrar los datos, estos proporcionan navegación integrada mediante teclas de dirección. O bien, si usas un control [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265), este ya controla la tecla Entrar o la barra espaciadora para la activación de botones.
 
 Para más información acerca de todos los aspectos de la compatibilidad de teclado, incluido el orden de tabulación y la activación o la navegación basadas en teclas, consulta [Accesibilidad de teclado](keyboard-accessibility.md).
@@ -79,13 +86,13 @@ Para más información acerca de todos los aspectos de la compatibilidad de tecl
 <span id="Media_and_captioning"/>
 <span id="media_and_captioning"/>
 <span id="MEDIA_AND_CAPTIONING"/>
-## Contenido multimedia y subtítulos  
+## <a name="media-and-captioning"></a>Contenido multimedia y subtítulos  
 Normalmente muestras los medios audiovisuales a través de un objeto [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926). Puedes usar las API **MediaElement** para controlar la reproducción multimedia. Con fines de accesibilidad, proporciona controles que permitan que los usuarios reproduzcan, pongan en pausa y detengan los medios según sea necesario. En ocasiones, los medios incluyen componentes adicionales que tienen como propósito ofrecer accesibilidad, como los subtítulos o las pistas de audio alternativas que incluyen descripciones narrativas.
 
 <span id="Accessible_text"/>
 <span id="accessible_text"/>
 <span id="ACCESSIBLE_TEXT"/>
-## Texto accesible  
+## <a name="accessible-text"></a>Texto accesible  
 Tres aspectos del texto son pertinentes para la accesibilidad:
 
 * Las herramientas deben determinar si se debe leer el texto como parte de un recorrido de secuencia de tabulación o solo como una representación general del documento. Para ayudar a determinar este aspecto, puedes elegir el elemento adecuado para mostrar el texto o ajustar las propiedades de esos elementos de texto. Cada elemento de texto disponible tiene un propósito específico que, a su vez, suele tener un rol de automatización de la interfaz de usuario correspondiente. Si se usa el elemento incorrecto, es posible que se notifique el rol incorrecto a la automatización de la interfaz de usuario y que se genere confusión en la experiencia de un usuario de tecnología de asistencia.
@@ -95,13 +102,13 @@ Tres aspectos del texto son pertinentes para la accesibilidad:
 <span id="Supporting_high-contrast_themes"/>
 <span id="supporting_high-contrast_themes"/>
 <span id="SUPPORTING_HIGH-CONTRAST_THEMES"/>
-## Compatibilidad con temas de contraste alto  
+## <a name="supporting-high-contrast-themes"></a>Compatibilidad con temas de contraste alto  
 Los controles de la interfaz de usuario usan una representación visual que se define como parte de un diccionario de temas de recursos XAML. Uno o varios de estos temas se usan específicamente cuando el sistema se establece en contraste alto. Cuando el usuario cambia a contraste alto, al buscar el tema adecuado de forma dinámica en un diccionario de recursos, todos tus controles de la interfaz de usuario también usarán un tema de contraste alto adecuado. Debes asegurarte de no haber deshabilitado los temas mediante la especificación de un estilo explícito o el uso de otra técnica de aplicación de estilo que impida la carga de temas de contraste alto e invalide los cambios de estilo. Para más información, consulta [Temas de contraste alto](high-contrast-themes.md).
 
 <span id="Design_for_alternative_UI"/>
 <span id="design_for_alternative_ui"/>
 <span id="DESIGN_FOR_ALTERNATIVE_UI"/>
-## Diseño para interfaces de usuario alternativas  
+## <a name="design-for-alternative-ui"></a>Diseño para interfaces de usuario alternativas  
 Cuando diseñes tus aplicaciones, ten en cuenta su uso por parte de personas con movilidad, vista y audición limitadas. Dado que los productos de tecnología de asistencia hacen gran uso de las interfaces de usuario estándares, es particularmente importante proporcionar buena compatibilidad para teclado y lectores de pantalla aunque no realices ningún otro ajuste para la accesibilidad.
 
 En muchos casos, puedes transmitir información esencial mediante el uso de múltiples técnicas a fin de ampliar tu público. Por ejemplo, puedes resaltar información usando tanto información de color como iconos para ayudar a los usuarios con daltonismo; además, puedes mostrar alertas visuales junto con efectos de sonido para ayudar a los usuarios con discapacidades auditivas.
@@ -154,7 +161,7 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 <span id="Verification_and_publishing"/>
 <span id="verification_and_publishing"/>
 <span id="VERIFICATION_AND_PUBLISHING"/>
-## Verificación y publicación  
+## <a name="verification-and-publishing"></a>Verificación y publicación  
 Para obtener más información sobre las declaraciones de accesibilidad y la publicación de la aplicación, consulta [Accesibilidad en la Tienda](accessibility-in-the-store.md).
 
 > [!NOTE]
@@ -163,24 +170,19 @@ Para obtener más información sobre las declaraciones de accesibilidad y la pub
 <span id="Assistive_technology_support_in_custom_controls"/>
 <span id="assistive_technology_support_in_custom_controls"/>
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_CUSTOM_CONTROLS"/>
-## Compatibilidad con tecnologías de asistencia en controles personalizados  
+## <a name="assistive-technology-support-in-custom-controls"></a>Compatibilidad con tecnologías de asistencia en controles personalizados  
 Cuando crees un control personalizado, te recomendamos que también implementes o extiendas una o varias subclases de [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) para proporcionar compatibilidad con accesibilidad. En algunos casos, siempre y cuando uses la misma clase del mismo nivel que usó la clase de control base, la compatibilidad de la automatización con tu clase derivada es adecuada en un nivel básico. De todos modos, debes probarlo. Y recuerda que la implementación de una clase del mismo nivel es un procedimiento recomendado para que esta pueda notificar correctamente el nombre de clase de tu nueva clase de control. La implementación de la automatización del mismo nivel personalizada conlleva algunos pasos. Para obtener más información, consulta [Personalizar sistemas de automatización del mismo nivel](custom-automation-peers.md).
 
 <span id="Assistive_technology_support_in_apps_that_support_XAML___Microsoft_DirectX_interop"/>
 <span id="assistive_technology_support_in_apps_that_support_xaml___microsoft_directx_interop"/>
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_APPS_THAT_SUPPORT_XAML___MICROSOFT_DIRECTX_INTEROP"/>
-## Compatibilidad para tecnología de asistencia en aplicaciones que admiten la interoperabilidad XAML/Microsoft DirectX  
+## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>Compatibilidad para tecnología de asistencia en aplicaciones que admiten la interoperabilidad XAML/Microsoft DirectX  
 No se puede acceder de manera predeterminada al contenido de Microsoft DirectX hospedado en una interfaz de usuario XAML (mediante [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) o [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041)). El [ejemplo de interoperabilidad XAML SwapChainPanel DirectX](http://go.microsoft.com/fwlink/p/?LinkID=309155) muestra cómo crear sistemas del mismo nivel de automatización de la interfaz de usuario para el contenido de DirectX hospedado. Esta técnica permite que se pueda acceder al contenido hospedado a través de la automatización de la interfaz de usuario.
 
 <span id="related_topics"/>
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 * [Diseño de accesibilidad](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [Ejemplo de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Accesibilidad](accessibility.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

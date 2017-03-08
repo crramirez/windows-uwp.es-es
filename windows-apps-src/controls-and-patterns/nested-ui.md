@@ -4,12 +4,20 @@ Description: Usar la interfaz de usuario anidada para permitir varias acciones e
 title: Interfaz de usuario anidada en elementos de lista
 label: Nested UI in list items
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 37f47db0d7085bf61836ed3fc9ccdc03470f58da
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: cfda479d2a05dfac4125688d3666abfb23bc45a2
+ms.lasthandoff: 02/08/2017
 
 ---
-# Interfaz de usuario anidada en elementos de lista
+# <a name="nested-ui-in-list-items"></a>Interfaz de usuario anidada en elementos de lista
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -28,7 +36,7 @@ En este artículo, se usan los términos *lista*, *elemento de lista* e *interfa
 
 > NOTA&nbsp;&nbsp; ListView y GridView derivan ambos de la clase [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), por lo que tienen la misma funcionalidad, pero muestran los datos de manera diferente. En este artículo, cuando hablamos sobre las listas, la información corresponde a ambos controles, ListView y GridView.
 
-## Acciones principales y secundarias
+## <a name="primary-and-secondary-actions"></a>Acciones principales y secundarias
 
 Al crear la interfaz de usuario con una lista, ten en cuenta las acciones que el usuario puede llevar a cabo desde esos elementos de lista.  
 
@@ -43,7 +51,7 @@ La *acción principal* es lo que el usuario espera que suceda al pulsar el eleme
 
 Las *acciones secundarias* suelen ser aceleradores asociados a elementos de lista. Estos aceleradores pueden ser para la administración de la lista o acciones relacionadas con el elemento de lista.
 
-## Opciones de acciones secundarias
+## <a name="options-for-secondary-actions"></a>Opciones de acciones secundarias
 
 Al crear la interfaz de usuario de la lista, primero debes tener en cuenta todos los métodos de entrada que admite UWP. Para obtener más información sobre los distintos tipos de entrada, consulta [Información básica de entradas](../input-and-devices/input-primer.md).
 
@@ -53,13 +61,13 @@ Considera la posibilidad de exponer acciones adicionales en la interfaz de usuar
 
 Si decides que no es necesario colocar acciones secundarias en la interfaz de usuario de la lista principal, hay otras formas de exponerlas al usuario. Estas son algunas opciones que puedes tener en cuenta para colocar acciones secundarias.
 
-### Colocar acciones secundarias en la página de detalles
+### <a name="put-secondary-actions-on-the-detail-page"></a>Colocar acciones secundarias en la página de detalles
 
 Coloca las acciones secundarias en la página a la que navega el elemento de lista al pulsarlo. Si usas el patrón de maestro y detalles, la página de detalles suele ser un buen lugar para colocar acciones secundarias.
 
 Para obtener más información, consulta [Patrón maestro y detalles](master-details.md).
 
-### Colocar acciones secundarias en un menú contextual
+### <a name="put-secondary-actions-in-a-context-menu"></a>Colocar acciones secundarias en un menú contextual
 
 Coloca las acciones secundarias en un menú contextual al que el usuario pueda acceder mediante un clic con el botón derecho o mediante pulsar y sostener. De este modo, el usuario podrá realizar una acción, como eliminar un correo electrónico, sin tener que cargar la página de detalles. También se recomienda que estas opciones estén disponibles en la página de detalles, ya que los menús contextuales están destinados a ser aceleradores en lugar de la interfaz de usuario principal.
 
@@ -67,7 +75,7 @@ Para exponer las acciones secundarias cuando la entrada proviene de un controlad
 
 Para obtener más información, consulta [Menús contextuales y controles flotantes](menus.md).
 
-### Colocar acciones secundarias en la interfaz de usuario al mantener el mouse para optimizar la entrada de puntero
+### <a name="put-secondary-actions-in-hover-ui-to-optimize-for-pointer-input"></a>Colocar acciones secundarias en la interfaz de usuario al mantener el mouse para optimizar la entrada de puntero
 
 Si prevés que la aplicación se usará con frecuencia con la entrada de puntero, como, por ejemplo, con el mouse y el lápiz, y quieres que las acciones secundarias estén disponibles para esas entradas, puedes mostrar las acciones secundarias solo al mantener el mouse. Este acelerador está visible solo cuando se usa una entrada de puntero, por lo que debes asegurarte de usar las otras opciones para admitir también otros tipos de entrada.
 
@@ -76,7 +84,7 @@ Si prevés que la aplicación se usará con frecuencia con la entrada de puntero
 
 Para obtener más información, consulta [Interacciones de mouse](../input-and-devices/mouse-interactions.md).
 
-## Colocación de la interfaz de usuario para las acciones principales y secundarias
+## <a name="ui-placement-for-primary-and-secondary-actions"></a>Colocación de la interfaz de usuario para las acciones principales y secundarias
 
 Si decides que las acciones secundarias se deben exponer en la interfaz de usuario de la lista principal, se recomienda seguir las directrices siguientes.
 
@@ -84,15 +92,15 @@ Al crear un elemento de lista con acciones principales y secundarias, coloca la 
 
 En estos ejemplos, hablaremos sobre la interfaz de usuario de la lista donde el elemento fluye más horizontalmente (es más ancho que alto). Sin embargo, es posible que tengas elementos de lista de forma más cuadrada, o más altos que anchos. Por lo general, estos son los elementos que se usan en una cuadrícula. Para estos elementos, si la lista no se desplaza verticalmente, puedes colocar las acciones secundarias en la parte inferior del elemento de lista, en lugar de colocarlas a la derecha.
 
-## Ten en cuenta todas las entradas
+## <a name="consider-all-inputs"></a>Ten en cuenta todas las entradas
 
 Si decides usar la interfaz de usuario anidada, evalúa también la experiencia del usuario con todos los tipos de entrada. Como se mencionó anteriormente, la interfaz de usuario anidada funciona a la perfección para algunos tipos de entrada. Sin embargo, no siempre funciona bien con otros. En particular, las entradas de teclado, controlador y control remoto pueden tener dificultades para acceder a los elementos de la interfaz de usuario anidada. Asegúrate de seguir las instrucciones siguientes para garantizar que UWP funcione con todos los tipos de entrada.
 
-## Control de la interfaz de usuario anidada
+## <a name="nested-ui-handling"></a>Control de la interfaz de usuario anidada
 
 Si tienes más de una acción anidada en el elemento de lista, se recomienda seguir estas instrucciones para controlar la navegación con la entrada de teclado, controlador para juegos, control remoto u otra entrada que no sea de puntero.
 
-### Interfaz de usuario anidada donde los elementos de lista realizan una acción
+### <a name="nested-ui-where-list-items-perform-an-action"></a>Interfaz de usuario anidada donde los elementos de lista realizan una acción
 
 Si la interfaz de usuario de la lista con elementos anidados admite acciones como invocar y seleccionar (uno o varios elementos) o las operaciones de arrastrar y colocar, se recomiendan estas técnicas direccionales para navegar por los elementos de la interfaz de usuario anidada.
 
@@ -130,7 +138,7 @@ Para conseguir esta interfaz de usuario, establece [IsItemClickEnabled](https://
 
 Para que el código lo implemente, consulta la sección [Ejemplo](#example) de este artículo.
 
-### Interfaz de usuario anidada donde los elementos de lista no realizan ninguna acción
+### <a name="nested-ui-where-list-items-do-not-perform-an-action"></a>Interfaz de usuario anidada donde los elementos de lista no realizan ninguna acción
 
 Puedes usar una vista de lista, porque proporciona virtualización y un comportamiento de desplazamiento optimizado, sin tener una acción asociada con un elemento de lista. Por lo general, estas interfaces de usuario usan el elemento de lista solo para agrupar elementos y garantizar que se desplazan como un conjunto.
 
@@ -175,7 +183,7 @@ Si la entrada proviene de un teclado, esta es la experiencia que obtiene el usua
 - Desde uno de los elementos de Interfaz de usuario anidada, al presionar la tecla TAB se recorren los elementos de Interfaz de usuario anidada en orden de tabulación.  Después de visitar todos los elementos de Interfaz de usuario anidada, se coloca el foco en el siguiente control en el orden de tabulación después de ListView.
 - Las teclas Mayús+TAB realizan la acción inversa a la tecla TAB.
 
-## Ejemplo
+## <a name="example"></a>Ejemplo
 
 En este ejemplo se muestra cómo implementar la [interfaz de usuario anidada donde los elementos de lista realizan una acción](#nested-ui-where-list-items-perform-an-action).
 
@@ -302,9 +310,4 @@ public static class DependencyObjectExtensions
     }
 }
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

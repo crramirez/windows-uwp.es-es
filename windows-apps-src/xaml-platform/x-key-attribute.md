@@ -3,19 +3,26 @@ author: jwmsft
 description: Identifica exclusivamente los elementos que se crean y a los cuales se hace referencia como recursos, y que existen dentro de un ResourceDictionary.
 title: Atributo xKey
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
-ms.openlocfilehash: 35d4e02ce477757e1a97a54fd9d200dd31675f4d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 67b2b3b60ab6faba5ca30bb585205aba007597ca
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Atributo x:Key
+# <a name="xkey-attribute"></a>atributo x:Key
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Identifica exclusivamente los elementos que se crean y a los cuales se hace referencia como recursos, y que existen dentro de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794).
 
-## Uso del atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
 ``` syntax
 <ResourceDictionary>
@@ -23,7 +30,7 @@ Identifica exclusivamente los elementos que se crean y a los cuales se hace refe
 </ResourceDictionary>
 ```
 
-## Uso del atributo XAML (**ResourceDictionary** implícito)
+## <a name="xaml-attribute-usage-implicit-resourcedictionary"></a>Uso del atributo XAML (**ResourceDictionary** implícito)
 
 ``` syntax
 <object.Resources>
@@ -31,14 +38,14 @@ Identifica exclusivamente los elementos que se crean y a los cuales se hace refe
 </object.Resources>
 ```
 
-## Valores de XAML
+## <a name="xaml-values"></a>Valores de XAML
 
 | Término | Descripción |
 |------|-------------|
 | objeto | Cualquier objeto que se pueda compartir. Consulta [Referencias a ResourceDictionary y a recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273). |
 | stringKeyValue | Se usa una cadena verdadera como clave, que debe cumplir con la gramática _XamlName_. Consulta "Gramática XamlName", a continuación. | 
 
-##   Gramática XamlName
+##  <a name="xamlname-grammar"></a> Gramática XamlName
 
 A continuación se muestra la gramática normativa de una cadena que se usa como clave en la implementación de XAML en la Plataforma universal de Windows (UWP):
 
@@ -55,7 +62,7 @@ CombiningCharacter::= none
 -   No se admite el intervalo de caracteres Unicode.
 -   Un nombre no puede comenzar por un dígito.
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 Los elementos secundarios de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) generalmente incluyen un atributo **x:Key** que especifica un valor de clave único dentro de ese diccionario. El procesador XAML hace cumplir la exclusividad de la clave en tiempo de carga. Los valores **x:Key** que no son únicos generarán errores o excepciones en el analizador. Si la [extensión de marcado {StaticResource}](staticresource-markup-extension.md) lo solicita, una clave no resuelta también generará excepciones de análisis XAML.
 
@@ -66,10 +73,5 @@ Ten en cuenta que, en la sintaxis implícita que se muestra, el objeto [**Resour
 El código que equivale a especificar **x:Key** es cualquier operación que use una clave con el [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) subyacente. Por ejemplo, un **x:Key** aplicado en el marcado para un recurso es equivalente al valor del parámetro *key* de **Insert** cuando se agrega un recurso a un **ResourceDictionary**.
 
 Un elemento de un diccionario de recursos puede pasar por alto un valor de **x:Key** si se trata de un [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) o un [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) dirigido; en cualquiera de estos casos, la clave implícita del elemento de recurso es el valor de **TargetType** interpretado como una cadena. Para obtener más información, consulta [Inicio rápido: controles de estilo](https://msdn.microsoft.com/library/windows/apps/hh465498) y [Referencias a ResourceDictionary y a los recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

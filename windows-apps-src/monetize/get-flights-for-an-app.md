@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
 description: "Usa este método en la API de envío de la Tienda Windows para recuperar la información del paquete piloto de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows."
 title: "Obtener paquetes piloto de una aplicación mediante la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envío de la Tienda de Windows, Windows Store submission API, pilotos, flights, paquetes piloto, package flights"
 translationtype: Human Translation
-ms.sourcegitcommit: ef90390fcf7d4aa2e040eae65119ac7959f3423f
-ms.openlocfilehash: eddac4b37f6f00bad33f543f0e55415a5dcea887
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ee49b494f3b0dd88229e3f40fd2c5cedb57ffe7c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obtener paquetes piloto de una aplicación mediante la API de envío de la Tienda Windows
+# <a name="get-package-flights-for-an-app-using-the-windows-store-submission-api"></a>Obtener paquetes piloto de una aplicación mediante la API de envío de la Tienda Windows
 
 
 
 
 Usa este método en la API de envío de la Tienda Windows para enumerar los paquetes piloto de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows. Para obtener más información acerca de los paquetes piloto, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
@@ -25,7 +32,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
@@ -35,7 +42,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
  
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -43,7 +50,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 |  Nombre  |  Tipo  |  Descripción  |  Obligatorio  |
 |------|------|------|------|
@@ -53,11 +60,11 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Cuerpo de la solicitud
+### <a name="request-body"></a>Cuerpo de la solicitud
 
 No incluyas un cuerpo de la solicitud para este método.
 
-### Ejemplos de solicitud
+### <a name="request-examples"></a>Ejemplos de solicitud
 
 En el siguiente ejemplo se muestra cómo enumerar todos los paquetes piloto de una aplicación.
 
@@ -73,7 +80,7 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/lis
 Authorization: Bearer <your access token>
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una solicitud correcta para el primer paquete piloto de una aplicación con un total de tres paquetes piloto. Para obtener más información acerca de los valores del cuerpo de respuesta, consulta la siguiente sección.
 
@@ -101,7 +108,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 }
 ```
 
-### Cuerpo de la respuesta
+### <a name="response-body"></a>Cuerpo de la respuesta
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -111,7 +118,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 
 <span/>
 
-## Códigos de error
+## <a name="error-codes"></a>Códigos de error
 
 Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
@@ -122,15 +129,10 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 <span/>
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener todas las aplicaciones](get-all-apps.md)
 * [Obtener una aplicación](get-an-app.md)
 * [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

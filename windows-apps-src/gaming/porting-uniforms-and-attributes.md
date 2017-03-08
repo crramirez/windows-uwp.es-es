@@ -3,13 +3,20 @@ author: mtoepke
 title: "Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D"
 description: "Durante el proceso de migración de OpenGL ES 2.0 a Direct3D 11, debes cambiar la sintaxis y el comportamiento de API para pasar datos entre la aplicación y los programas sombreadores."
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, games, juegos, opengl, direct3d, buffers, búferes, uniforms, uniformes, vertex attributes, atributos de vértice"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d3a1c0d3a37f24bdf4dfec1118aa206dfd6b9ac1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 43b568b046246931e24ded5f40f56d3f24d1b05a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
+# <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -37,7 +44,7 @@ Esta es la asignación básica.
 
  
 
-## Búferes de puertos
+## <a name="port-buffers"></a>Búferes de puertos
 
 
 En OpenGL ES 2.0, el proceso de crear y enlazar cualquier tipo de búfer, por lo general, sigue este patrón:
@@ -119,7 +126,7 @@ m_d3dDevice->CreateRenderTargetView(
   &m_d3dRenderTargetViewWin);
 ```
 
-## Cambiar uniformes y objetos de búfer de uniformes a búferes de constantes en Direct3D
+## <a name="change-uniforms-and-uniform-buffer-objects-to-direct3d-constant-buffers"></a>Cambiar uniformes y objetos de búfer de uniformes a búferes de constantes en Direct3D
 
 
 En Open GL ES 2.0, los uniformes son los mecanismos para suministrar datos constantes a programas sombreadores individuales. Los sombreadores no pueden alterar estos datos.
@@ -184,7 +191,7 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 
 Observa que se debe declarar un registro para cada búfer de constantes. Los distintos niveles de característica de Direct3D tienen distintos máximos de registros disponibles. Por lo tanto, no superes la cantidad máxima para el mínimo nivel de característica que estás eligiendo como destino.
 
-## Migrar atributos de vértice a diseños de entrada de Direct3D y semántica de HLSL
+## <a name="port-vertex-attributes-to-a-direct3d-input-layouts-and-hlsl-semantics"></a>Migrar atributos de vértice a diseños de entrada de Direct3D y semántica de HLSL
 
 
 Dado que la canalización de sombreador puede modificar los datos de vértice, OpenGL ES 2.0 requiere que los especifiques como "atributos" en lugar de "uniformes". (Esto cambió en las versiones más recientes de OpenGL y GLSL.) Los datos específicos de vértices con valores de posición, normales, tangente y color se proporcionan en los sombreadores como valores de atributo. Estos valores de atributo corresponden a desplazamientos específicos para cada elemento en los datos de vértice; por ejemplo, el primer atributo podría apuntar al componente de posición de un vértice individual y el segundo, a la normal, y así sucesivamente.
@@ -298,10 +305,5 @@ struct VertexShaderInput
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

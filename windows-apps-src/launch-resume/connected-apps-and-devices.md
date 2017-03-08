@@ -1,10 +1,18 @@
 ---
 author: TylerMSFT
-title: Connected apps and devices (Project "Rome")
-description: "Esta sección describe cómo usar la plataforma de sistemas remotos para descubrir dispositivos remotos, iniciar una aplicación en un dispositivo remoto y comunicarse con un servicio de aplicaciones en un dispositivo remoto."
+title: Aplicaciones y dispositivos conectados (proyecto &quot;Roma&quot;)
+description: "En esta sección se describe cómo usar la plataforma de sistemas remotos para descubrir dispositivos remotos, iniciar una aplicación en un dispositivo remoto y comunicarse con un servicio de aplicaciones en un dispositivo remoto."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 translationtype: Human Translation
-ms.sourcegitcommit: 871599217e6da0eb0febd140323e99db7d1258cb
-ms.openlocfilehash: 2dbce34aeaf4933eee22e1e8ef40c48e633f6f7e
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 357cf459fffc46e5d77f316af881e1a6e8bd8867
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -14,7 +22,7 @@ En esta sección se explica cómo conectar aplicaciones en dispositivos y plataf
 
 La mayoría de los usuarios tiene varios dispositivos y con frecuencia comienzan una actividad en un dispositivo y la finalizan en otro. Para ello, las aplicaciones necesitan abarcar dispositivos y plataformas.
 
-Las [API de sistemas remotos](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.System.RemoteSystems) introducidas en Windows 10, versión 1607, te permiten crear aplicaciones que permiten a los usuarios iniciar una tarea en un dispositivo y finalizarla en otro. La tarea sigue siendo el punto central y los usuarios pueden hacer su trabajo en el dispositivo que resulte más cómodo. Por ejemplo, puedes escuchar la radio del teléfono en el coche, pero, cuando llegues a casa, querrás transferir la reproducción a tu Xbox One, que está conectado a tu equipo de música en casa.
+Las [API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems) introducidas en Windows 10, versión 1607, te permiten crear aplicaciones que permiten a los usuarios iniciar una tarea en un dispositivo y finalizarla en otro. La tarea sigue siendo el punto central y los usuarios pueden hacer su trabajo en el dispositivo que resulte más cómodo. Por ejemplo, puedes escuchar la radio del teléfono en el coche, pero, cuando llegues a casa, querrás transferir la reproducción a tu Xbox One, que está conectado a tu equipo de música en casa.
 
 También puedes usar el proyecto "Roma" para dispositivos complementarios o escenarios de control remoto. Usa las API de mensajería de aplicaciones para crear un canal de la aplicación entre dos dispositivos para enviar y recibir mensajes personalizados. Por ejemplo, puedes escribir una aplicación para el teléfono que controle la reproducción en tu televisión o una aplicación complementaria que proporcione información sobre los personajes de un programa de televisión que estés viendo en otra aplicación.  
 
@@ -27,9 +35,4 @@ Consulta la [muestra de sistemas remotos](https://github.com/Microsoft/Windows-u
 | [Detectar dispositivos remotos](discover-remote-devices.md)  | Obtén información sobre cómo detectar dispositivos a los que te puedas conectar. |
 | [Iniciar una aplicación en un dispositivo remoto](launch-a-remote-app.md) | Aprende a iniciar una aplicación en un dispositivo remoto.  |
 | [Comunicarse con un servicio de aplicaciones remoto](communicate-with-a-remote-app-service.md) | Obtén información sobre cómo interactuar con una aplicación en un dispositivo remoto. |
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,15 +3,22 @@ author: TylerMSFT
 title: Registrar una tarea en segundo plano
 description: "Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: d65b8d3312e49469bd99d458b45bf5a46f345e6a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: eb3ab08cd26cd39ada38a1428b221157ebf55558
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="register-a-background-task"></a>Registrar una tarea en segundo plano
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -394,9 +401,4 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

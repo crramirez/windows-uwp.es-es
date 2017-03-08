@@ -5,9 +5,16 @@ title: RichEditBox
 ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
 label: Rich edit box
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: a8e8e42c87809eb08685fb137a242b1177b824b4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ae0fab5d09779ccfcc1c9b15e29921c07f0f6c6d
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="rich-edit-box"></a>Cuadro de texto enriquecido
@@ -207,13 +214,8 @@ Para obtener más información sobre cómo usar los ámbitos de entrada, consult
 
 * [Controles de texto](text-controls.md)
 - [Directrices sobre revisión ortográfica](spell-checking-and-prediction.md)
-- [Adición de búsqueda](search.md)
-- [Directrices para la entrada de texto](text-controls.md)
+- [Agregar búsqueda](search.md)
+- [Directrices sobre la entrada de texto](text-controls.md)
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

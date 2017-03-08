@@ -3,14 +3,21 @@ author: TylerMSFT
 ms.assetid: beac6333-655a-4bcf-9caf-bba15f715ea5
 title: "Subprocesamiento y programación asincrónica"
 description: "El subprocesamiento y la programación asincrónica permiten a tu aplicación realizar el trabajo de forma asincrónica en subprocesos paralelos."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, asincrónico, asincrónica, subprocesos, subprocesamiento, asynchronous, threads, threading"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8962e24e393f0b7961f618f90cd38ead9e54dda4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fb249a1c7a562cb4b1eb7ff8590e8525c00c64f2
+ms.lasthandoff: 02/07/2017
 
 ---
-# Subprocesamiento y programación asincrónica
+# <a name="threading-and-async-programming"></a>Subprocesamiento y programación asincrónica
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El subprocesamiento y la programación asincrónica permiten a tu aplicación realizar el trabajo de forma asincrónica en subprocesos paralelos.
 
@@ -35,13 +42,4 @@ El grupo de subprocesos es más eficaz en la administración de subprocesos porq
 | [Crear un elemento de trabajo periódico](create-a-periodic-work-item.md)                                                   | Obtén información sobre cómo crear un elemento de trabajo que se repita periódicamente. |
 | [Enviar un elemento de trabajo al grupo de subprocesos](submit-a-work-item-to-the-thread-pool.md)                               | Obtén información acerca de cómo realizar trabajo en un subproceso separado mediante el envío de un elemento de trabajo al grupo de subprocesos. |
 | [Enviar un elemento de trabajo con un temporizador](use-a-timer-to-submit-a-work-item.md)                                       | Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador. |
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

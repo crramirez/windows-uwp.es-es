@@ -3,14 +3,21 @@ author: TylerMSFT
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
 title: Enviar un elemento de trabajo con un temporizador
 description: "Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, temporizador, subprocesos
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: ea45e3b61f7646b5df978f36961bd6264ff08fe2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 984571c0b059a989477d99c4f823ed839dd8bff4
+ms.lasthandoff: 02/07/2017
 
 ---
-# Enviar un elemento de trabajo con un temporizador
+# <a name="use-a-timer-to-submit-a-work-item"></a>Enviar un elemento de trabajo con un temporizador
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** API importantes **
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: ea45e3b61f7646b5df978f36961bd6264ff08fe2
 
 Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador.
 
-## Crear un temporizador de único disparo
+## <a name="create-a-single-shot-timer"></a>Crear un temporizador de único disparo
 
 Usa el método [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para crear un temporizador para el elemento de trabajo. Envía un lambda que realice el trabajo y usa el parámetro *delay* para especificar cuánto tiempo espera el grupo de subprocesos antes de poder asignar el elemento de trabajo a un subproceso disponible. El retraso se especifica con una estructura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996).
 
@@ -34,54 +41,54 @@ En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta en tres mi
 > ThreadPoolTimer DelayTimer = ThreadPoolTimer.CreateTimer(
 >     (source) =>
 >     {
->         // 
+>         //
 >         // TODO: Work
->         // 
+>         //
 >         
->         // 
+>         //
 >         // Update the UI thread by using the UI core dispatcher.
->         // 
+>         //
 >         Dispatcher.RunAsync(
 >             CoreDispatcherPriority.High,
 >             () =>
 >             {
->                 // 
+>                 //
 >                 // UI components can be accessed within this scope.
->                 // 
-> 
+>                 //
+>
 >             });
-> 
+>
 >     }, delay);
 > ```
 > ``` cpp
 > TimeSpan delay;
 > delay.Duration = 3 * 60 * 10000000; // 10,000,000 ticks per second
-> 
+>
 > ThreadPoolTimer ^ DelayTimer = ThreadPoolTimer::CreateTimer(
 >         ref new TimerElapsedHandler([this](ThreadPoolTimer^ source)
 >         {
->             // 
+>             //
 >             // TODO: Work
->             // 
+>             //
 >             
->             // 
+>             //
 >             // Update the UI thread by using the UI core dispatcher.
->             // 
+>             //
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
 >                 ref new DispatchedHandler([this]()
 >                 {
->                     // 
+>                     //
 >                     // UI components can be accessed within this scope.
->                     // 
-> 
+>                     //
+>
 >                     ExampleUIUpdateMethod("Timer completed.");
-> 
+>
 >                 }));
-> 
+>
 >         }), delay);
 > ```
 
-## Proporcionar un controlador de finalización
+## <a name="provide-a-completion-handler"></a>Proporcionar un controlador de finalización
 
 Si es necesario, controla la cancelación y la finalización del elemento de trabajo con un [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Usa la sobrecarga [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para enviar un lambda adicional. Este se ejecuta cuando se cancela el temporizador o cuando se completa el elemento de trabajo.
 
@@ -92,48 +99,48 @@ En el siguiente ejemplo se crea un temporizador que envía el elemento de trabaj
 > TimeSpan delay = TimeSpan.FromMinutes(3);
 >             
 > bool completed = false;
-> 
+>
 > ThreadPoolTimer DelayTimer = ThreadPoolTimer.CreateTimer(
 >     (source) =>
 >     {
->         // 
+>         //
 >         // TODO: Work
->         // 
-> 
->         // 
+>         //
+>
+>         //
 >         // Update the UI thread by using the UI core dispatcher.
->         // 
+>         //
 >         Dispatcher.RunAsync(
 >                 CoreDispatcherPriority.High,
 >                 () =>
 >                 {
->                     // 
+>                     //
 >                     // UI components can be accessed within this scope.
->                     // 
-> 
+>                     //
+>
 >                 });
-> 
+>
 >         completed = true;
 >     },
 >     delay,
 >     (source) =>
 >     {
->         // 
+>         //
 >         // TODO: Handle work cancellation/completion.
->         // 
-> 
-> 
->         // 
+>         //
+>
+>
+>         //
 >         // Update the UI thread by using the UI core dispatcher.
->         // 
+>         //
 >         Dispatcher.RunAsync(
 >             CoreDispatcherPriority.High,
 >             () =>
 >             {
->                 // 
+>                 //
 >                 // UI components can be accessed within this scope.
->                 // 
-> 
+>                 //
+>
 >                 if (completed)
 >                 {
 >                     // Timer completed.
@@ -142,52 +149,52 @@ En el siguiente ejemplo se crea un temporizador que envía el elemento de trabaj
 >                 {
 >                     // Timer cancelled.
 >                 }
-> 
+>
 >             });
 >     });
 > ```
 > ``` cpp
 > TimeSpan delay;
 > delay.Duration = 3 * 60 * 10000000; // 10,000,000 ticks per second
-> 
+>
 > completed = false;
-> 
+>
 > ThreadPoolTimer ^ DelayTimer = ThreadPoolTimer::CreateTimer(
 >         ref new TimerElapsedHandler([&](ThreadPoolTimer ^ source)
 >         {
->             // 
+>             //
 >             // TODO: Work
->             // 
-> 
->             // 
+>             //
+>
+>             //
 >             // Update the UI thread by using the UI core dispatcher.
->             // 
+>             //
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
 >                 ref new DispatchedHandler([&]()
 >                 {
->                     // 
+>                     //
 >                     // UI components can be accessed within this scope.
->                     // 
-> 
+>                     //
+>
 >                 }));
-> 
+>
 >             completed = true;
-> 
+>
 >         }),
 >         delay,
 >         ref new TimerDestroyedHandler([&](ThreadPoolTimer ^ source)
 >         {
->             // 
+>             //
 >             // TODO: Handle work cancellation/completion.
->             // 
-> 
+>             //
+>
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
 >                 ref new DispatchedHandler([&]()
 >                 {
->                     // 
+>                     //
 >                     // Update the UI thread by using the UI core dispatcher.
->                     // 
-> 
+>                     //
+>
 >                     if (completed)
 >                     {
 >                         // Timer completed.
@@ -196,12 +203,12 @@ En el siguiente ejemplo se crea un temporizador que envía el elemento de trabaj
 >                     {
 >                         // Timer cancelled.
 >                     }
-> 
+>
 >                 }));
 >         }));
 > ```
 
-## Cancelar el temporizador
+## <a name="cancel-the-timer"></a>Cancelar el temporizador
 
 Si el temporizador sigue contando el tiempo restante pero ya no se necesita el elemento de trabajo, llama a [**Cancel**](https://msdn.microsoft.com/library/windows/apps/BR230588). Se cancela el temporizador y el elemento de trabajo no se envía al grupo de subprocesos.
 
@@ -213,7 +220,7 @@ Si el temporizador sigue contando el tiempo restante pero ya no se necesita el e
 > DelayTimer->Cancel();
 > ```
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 Las aplicaciones de la Plataforma universal de Windows (UWP) no pueden usar **Thread.Sleep** porque puede bloquear el subproceso de interfaz de usuario. En su lugar, puedes usar un [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) para crear un elemento de trabajo, y esto retrasará la tarea realizada por el elemento de trabajo sin bloquear el subproceso de interfaz de usuario.
 
@@ -221,7 +228,7 @@ Consulta la [muestra de grupo de subprocesos](http://go.microsoft.com/fwlink/p/?
 
 Para obtener información sobre cómo repetir temporizadores, consulta [Crear un elemento de trabajo periódico](create-a-periodic-work-item.md).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Enviar un elemento de trabajo al grupo de subprocesos](submit-a-work-item-to-the-thread-pool.md)
 * [Procedimientos recomendados para usar el grupo de subprocesos](best-practices-for-using-the-thread-pool.md)
@@ -229,10 +236,4 @@ Para obtener información sobre cómo repetir temporizadores, consulta [Crear un
  
 
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

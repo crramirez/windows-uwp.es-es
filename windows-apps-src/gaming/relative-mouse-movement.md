@@ -1,15 +1,24 @@
 ---
 author: scottmill
 title: Movimiento de mouse relativo
+description: "Utiliza controles de mouse relativos, que no usan el cursor del sistema y no devuelven coordenadas de pantalla absolutas para el seguimiento del delta de píxeles entre los movimientos del mouse en los juegos."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, games, juegos, mouse, input, entrada
+ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 translationtype: Human Translation
-ms.sourcegitcommit: 4a00847f0559d93eea199d7ddca0844b5ccaa5aa
-ms.openlocfilehash: b035e81776039fba60f239b18efef8fe5b43b2f6
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: f207c1b7de4fd4a885c05c6988ecf685359d1d8b
+ms.lasthandoff: 02/08/2017
 
 ---
 
-En los juegos, el mouse es una opción de control común que es conocida por muchos de los jugadores, y es también esencial para muchos géneros de juegos, como los juegos de disparos en primera y tercera persona, y los juegos de estrategia en tiempo real. Aquí analizamos la implementación de controles de mouse relativos, que no usan el cursor del sistema y no devuelven coordenadas de pantalla absolutas. En su lugar, siguen el delta de píxeles entre los diferentes movimientos del mouse.
+# <a name="relative-mouse-movement-and-corewindow"></a>Movimiento de mouse relativo y CoreWindow
 
-# CoreWindow o movimiento de mouse relativo
+En los juegos, el mouse es una opción de control común que es conocida por muchos de los jugadores, y es también esencial para muchos géneros de juegos, como los juegos de disparos en primera y tercera persona, y los juegos de estrategia en tiempo real. Aquí analizamos la implementación de controles de mouse relativos, que no usan el cursor del sistema y no devuelven coordenadas de pantalla absolutas. En su lugar, siguen el delta de píxeles entre los diferentes movimientos del mouse.
 
 Algunas aplicaciones, como los juegos, usan el mouse como un dispositivo de entrada más general. Por ejemplo, un modelador 3D puede usar la entrada de mouse para orientar un objeto 3D simulando una bola de seguimiento virtual, o un juego puede usar el mouse para cambiar la dirección de la cámara de visualización mediante controles con apariencia de mouse. 
 
@@ -30,10 +39,10 @@ Con este patrón, la ubicación del cursor del mouse absoluto se conserva al ent
 
  
 
-## Controlar el movimiento de mouse relativo
+## <a name="handling-relative-mouse-movement"></a>Controlar el movimiento de mouse relativo
 
 
-Para acceder a los valores delta de mouse relativo, regístrate para el evento [MouseDevice::MouseMoved](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.devices.input.mousedevice.mousemoved.aspx) tal como se muestra aquí.
+Para acceder a los valores delta de mouse relativo, regístrate para el evento [MouseDevice::MouseMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mousedevice.mousemoved.aspx) tal como se muestra aquí.
 
 
 ```cpp
@@ -59,11 +68,11 @@ void MoveLookController::OnMouseMoved(
     pointerDelta.y = static_cast<float>(args->MouseDelta.Y);
 
     float2 rotationDelta;
-    rotationDelta = pointerDelta * ROTATION_GAIN;   // scale for control sensitivity
+    rotationDelta = pointerDelta * ROTATION_GAIN;    // scale for control sensitivity
 
     // update our orientation based on the command
-    m_pitch -= rotationDelta.y;                     // mouse y increases down, but pitch increases up
-    m_yaw   -= rotationDelta.x;                     // yaw defined as CCW around y-axis
+    m_pitch -= rotationDelta.y;                        // mouse y increases down, but pitch increases up
+    m_yaw   -= rotationDelta.x;                        // yaw defined as CCW around y-axis
 
     // limit pitch to straight up or straight down
     float limit = (float)(M_PI/2) - 0.01f;
@@ -79,23 +88,18 @@ void MoveLookController::OnMouseMoved(
 
 ```
 
-El controlador de eventos de este ejemplo de código, **OnMouseMoved**, representa la vista sobre la base de los movimientos del mouse. La posición del puntero del mouse se pasa al controlador como un objeto [MouseEventArgs](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.devices.input.mouseeventargs.aspx). 
+El controlador de eventos de este ejemplo de código, **OnMouseMoved**, representa la vista sobre la base de los movimientos del mouse. La posición del puntero del mouse se pasa al controlador como un objeto [MouseEventArgs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mouseeventargs.aspx). 
 
-Omite procesar en exceso los datos de mouse absoluto del evento [CoreWindow::PointerMoved](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.core.corewindow.pointermoved.aspx) cuando la aplicación cambie al control de valores de movimiento de mouse relativo. No obstante, solamente omite esta entrada si el evento **CoreWindow::PointerMoved** se produjo como resultado de la entrada de mouse (en contraposición con la entrada táctil). El cursor se oculta estableciendo el valor de [CoreWindow::PointerCursor](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) en **nullptr**. 
+Omite procesar en exceso los datos de mouse absoluto del evento [CoreWindow::PointerMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointermoved.aspx) cuando la aplicación cambie al control de valores de movimiento de mouse relativo. No obstante, solamente omite esta entrada si el evento **CoreWindow::PointerMoved** se produjo como resultado de la entrada de mouse (en contraposición con la entrada táctil). El cursor se oculta estableciendo el valor de [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) en **nullptr**. 
 
-## Volver al movimiento de mouse absoluto
+## <a name="returning-to-absolute-mouse-movement"></a>Volver al movimiento de mouse absoluto
 
-Cuando la aplicación salga del modo de manipulación de escenas u objetos 3D, y ya no use el movimiento de mouse relativo (por ejemplo, cuando devuelve una pantalla de menú) vuelve al procesamiento normal del movimiento de mouse absoluto. En este punto, deja de leer los datos de mouse relativo, reinicia el procesamiento de eventos de mouse (y puntero) estándar y establece [CoreWindow::PointerCursor](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) en un valor no nulo. 
+Cuando la aplicación salga del modo de manipulación de escenas u objetos 3D, y ya no use el movimiento de mouse relativo (por ejemplo, cuando devuelve una pantalla de menú) vuelve al procesamiento normal del movimiento de mouse absoluto. En este punto, deja de leer los datos de mouse relativo, reinicia el procesamiento de eventos de mouse (y puntero) estándar y establece [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) en un valor no nulo. 
 
 > **Nota**  
 Cuando tu aplicación se encuentra en el modo de manipulación de escenas u objetos 3D (procesamiento de movimientos de mouse relativo con el cursor desactivado), el mouse no puede invocar la interfaz de usuario perimetral como los accesos, la pila de retroceso o la barra de la aplicación. Por lo tanto, es importante proporcionar un mecanismo para salir de este modo específico, como la tecla **Esc** que se usa habitualmente.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) 
 * [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md)
-
-
-<!--HONumber=Aug16_HO3-->
-
-

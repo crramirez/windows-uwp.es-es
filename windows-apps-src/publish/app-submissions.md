@@ -4,13 +4,19 @@ Description: "Una vez que hayas creado tu aplicación reservando un nombre, pued
 title: "Envíos de aplicaciones"
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: "lista de comprobación"
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: ce9858da15cac0e34a2bb2c68c25ba63ec79af4c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: df66981ae8355ea62128a881f02fd6fb891ffb30
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Envíos de aplicaciones
+# <a name="app-submissions"></a>Envíos de aplicaciones
 
 
 Una vez que hayas [creado tu aplicación reservando un nombre](create-your-app-by-reserving-a-name.md), puedes empezar a trabajar en conseguir que se publique. El primer paso es crear un **envío**.
@@ -21,14 +27,14 @@ Después de publicar la aplicación, puedes publicar una versión actualizada cr
 
 > **Nota**&nbsp;&nbsp;En esta sección de la documentación se describe cómo crear el envío de una aplicación en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de la Tienda Windows](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.
 
-## Lista de comprobación de envío de la aplicación
+## <a name="app-submission-checklist"></a>Lista de comprobación de envío de la aplicación
 
 
 A continuación se incluyen los detalles que puedes proporcionar al crear el envío de tu aplicación, con vínculos a más información.
 
 Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees.
 
-### Página Precios y disponibilidad
+### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
 | Nombre del campo                    | Notas                                       | Más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Precio base**                | Obligatorio                                    | [Precio base](set-app-pricing-and-availability.md#base-price)              |
@@ -41,7 +47,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 <span/>
 
-### Página de propiedades de la aplicación
+### <a name="app-properties-page"></a>Página de propiedades de la aplicación
 
 | Nombre del campo                    | Notas                                       | Más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
@@ -51,7 +57,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 <span/>
 
-### Página de clasificación por edades
+### <a name="age-ratings-page"></a>Página de clasificación por edades
 
 | Nombre del campo                    | Notas                                       | Más información                          |
 |-------------------------------|---------------------------------------------|----------------------------------------|
@@ -59,7 +65,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 <span/>
 
-### Página de paquetes
+### <a name="packages-page"></a>Página de paquetes
 
 | Nombre del campo                    | Notas                                  | Más información                          |
 |-------------------------------|----------------------------------------|----------------------------------------|
@@ -70,7 +76,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 <span/>
 
-### Descripciones de la Tienda
+### <a name="store-listings"></a>Descripciones de la Tienda
 
 Necesitarás toda la información necesaria como mínimo para uno de los idiomas que admita la aplicación. Te recomendamos que proporciones [descripciones de la Tienda](create-app-store-listings.md) en todos los idiomas que admita la aplicación, y también puedes [proporcionar descripciones de la Tienda en idiomas adicionales](create-app-store-listings.md#store-listing-languages).
 
@@ -93,7 +99,7 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 
 <span/>
 
-### Notas para la página de certificación
+### <a name="notes-for-certification-page"></a>Notas para la página de certificación
 
 | Nombre del campo                    | Notas                                       | Para obtener más información                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
@@ -102,9 +108,4 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 <span/>
 
 **Note**&nbsp;&nbsp;Para obtener información sobre cómo publicar aplicaciones de línea de negocio (LOB) directamente en las empresas, consulta [Distribuir aplicaciones de LOB a empresas](distribute-lob-apps-to-enterprises.md).
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

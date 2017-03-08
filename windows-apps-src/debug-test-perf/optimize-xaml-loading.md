@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
 title: Optimizar el marcado XAML
 description: "El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo para una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 655603e7fa8687480b5376806bc199afecd425fd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 24a5696a6e835a40b9b4e800677596514b56d53b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Optimizar el marcado XAML
+# <a name="optimize-your-xaml-markup"></a>Optimizar el marcado XAML
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo en una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación.
 
@@ -84,7 +91,7 @@ Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en App
 
 La manera de hacer que el ejemplo anterior de contador sea más eficiente es mover `SecondPageTextBrush` a SecondPage.xaml y mover `ThirdPageTextBrush` a ThirdPage.xaml. `InitialPageTextBrush`  puede permanecer en App.xaml porque los recursos de la aplicación deben analizarse en el inicio de la aplicación en cualquier caso.
 
-## Minimizar el recuento de elementos
+## <a name="minimize-element-count"></a>Minimizar el recuento de elementos
 
 Si bien la plataforma XAML es capaz de mostrar un gran número de elementos, puedes hacer que tu aplicación diseñe y represente contenidos más rápido usando la menor cantidad de elementos para lograr los elementos visuales que quieras.
 
@@ -106,7 +113,7 @@ Si bien la plataforma XAML es capaz de mostrar un gran número de elementos, pue
 
 -   Si debes volver a usar el mismo elemento basado en vectores numerosas veces, te resultará más útil usar un elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) en su lugar. Los elementos basados en vectores pueden ser más engorrosos porque la CPU debe crear cada elemento individual por separado. Ten en cuenta que el archivo de imagen debe descodificarse una sola vez.
 
-## Consolidar varios pinceles que tengan el mismo aspecto en un recurso
+## <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>Consolidar varios pinceles que tengan el mismo aspecto en un recurso
 
 La plataforma XAML trata de almacenar en caché los objetos usados frecuentemente para que puedan volver a usarse siempre que sea posible. De todos modos, el lenguaje XAML no puede determinar fácilmente si un pincel declarado en una pieza de marcado es el mismo que está declarado en otra. Este ejemplo usa [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) como demostración, pero el caso resulta ser más probable y más importante mediante [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068).
 
@@ -146,7 +153,7 @@ Busca también pinceles que usen los colores predefinidos: `"Orange"` y `"#FFFFA
 </Page>
 ```
 
-## Minimizar el exceso de dibujo
+## <a name="minimize-overdrawing"></a>Minimizar el exceso de dibujo
 
 El exceso de dibujo es donde se dibuja más de un objeto en los mismos píxeles de pantalla. Ten en cuenta que, a veces, todo se reduce a encontrar el equilibrio entre esta guía y el deseo de minimizar el número de elementos.
 
@@ -240,7 +247,7 @@ Si debes realizar la prueba de posicionamiento de [**Grid**](https://msdn.micros
 
 Usa [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823) como diagnóstico visual. Es posible que veas que se dibujan objetos que antes no habían aparecido en escena.
 
-## Almacenar el contenido estático en caché
+## <a name="cache-static-content"></a>Almacenar el contenido estático en caché
 
 Otra fuente de exceso de dibujo es una forma realizada a partir de muchos elementos superpuestos. Si estableces [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084) en **BitmapCache** en la clase [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) que contiene la forma compuesta, la plataforma representará el elemento en un mapa de bits una vez y, a continuación, usará ese mapa de bits en cada fotograma en lugar de realizar el exceso de dibujo.
 
@@ -272,7 +279,7 @@ La imagen anterior es el resultado, pero este es un mapa de las regiones que se 
 
 Ten en cuenta el uso de [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084). No uses esta técnica si alguna de las subformas es animada, ya que es probable que la memoria caché de mapas de bits se tenga que regenerar en cada fotograma, lo que anula este propósito.
 
-## ResourceDictionaries
+## <a name="resourcedictionaries"></a>ResourceDictionaries
 
 Los objetos ResourceDictionaries generalmente se usan para almacenar los recursos en un nivel algo global. Los recursos a los que la aplicación quiere hacer referencia en varios lugares. Por ejemplo, estilos, pinceles, plantillas, etc. En general, hemos optimizado el objeto ResourceDictionaries para no crear instancias de los recursos, a menos que se pidan. Sin embargo, hay varios lugares en los que debes tener algo de cuidado.
 
@@ -280,17 +287,12 @@ Los objetos ResourceDictionaries generalmente se usan para almacenar los recurso
 
 **ResourceDictionaries en un elemento UserControl**. Los objetos ResourceDictionaries definidos en un objeto UserControl resultan en una penalización. La plataforma creará una copia de este tipo de objeto ResourceDictionary para todas las instancias del objeto UserControl. Si tienes un objeto UserControl que se usa con mucha frecuencia, saca el objeto ResourceDictionary del objeto UserControl y ponlo en el nivel de página.
 
-## Usar XBF2
+## <a name="use-xbf2"></a>Usar XBF2
 
-XBF2 es una representación binaria de marcado XAML que evita todos los costos de análisis de texto en tiempo de ejecución. También optimiza el código binario para la creación de la carga y el árbol, además de permitir rutas de acceso rápido para que los tipos XAML mejoren los costos de creación de montones y objetos, por ejemplo VSM, ResourceDictionary, Styles, etc. Se asigna completamente a la memoria, por lo que no se necesita superficie de montones para la carga y lectura de una página XAML. Además, reduce la superficie de disco de las páginas XAML almacenadas en un appx. XBF2 es una representación más compacta y puede reducir en hasta un 50% la superficie de disco de los archivos XAML/XBF1 comparativos. Por ejemplo, la aplicación integrada Fotos vio una reducción de un 60% tras la conversión a XBF, de aproximadamente 1MB de activos XBF1 a 400kB de activos XBF2. También hemos visto aplicaciones que reducen el uso de la CPU entre un 15% y un 20% y del montón de Win32 entre un 10% y un 15%.
+XBF2 es una representación binaria de marcado XAML que evita todos los costos de análisis de texto en tiempo de ejecución. También optimiza el código binario para la creación de la carga y el árbol, además de permitir rutas de acceso rápido para que los tipos XAML mejoren los costos de creación de montones y objetos, por ejemplo VSM, ResourceDictionary, Styles, etc. Se asigna completamente a la memoria, por lo que no se necesita superficie de montones para la carga y lectura de una página XAML. Además, reduce la superficie de disco de las páginas XAML almacenadas en un appx. XBF2 es una representación más compacta y puede reducir en hasta un 50 % la superficie de disco de los archivos XAML/XBF1 comparativos. Por ejemplo, la aplicación integrada Fotos vio una reducción de un 60 % tras la conversión a XBF, de aproximadamente 1 MB de activos XBF1 a 400 kB de activos XBF2. También hemos visto aplicaciones que reducen el uso de la CPU entre un 15 % y un 20 % y del montón de Win32 entre un 10 % y un 15 %.
 
 Los controles y diccionarios integrados de XAML que proporciona el marco ya están totalmente habilitados para XBF2. Para tu propia aplicación, asegúrate de que el archivo de proyecto declare TargetPlatformVersion 8.2 o posterior.
 
 Para comprobar si tienes XBF2, abre la aplicación en un editor de código binario; los bytes 12 y 13 son 00 02 si tienes XBF2.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: "Asignar características de DirectX 9 a las API de DirectX 11"
-description: "Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP)."
+description: "Comprende cómo se trasladarán las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP)."
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, games, DirectX 9, DirectX 11, portar, porting
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6ab76921f1e8b613010f99eba6a141daca128ea5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 58847adcb94f7e730bcdcd98767282811d555016
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Asignar características de DirectX 9 a las API de DirectX 11
+# <a name="map-directx-9-features-to-directx-11-apis"></a>Asignar características de DirectX 9 a las API de DirectX 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -23,7 +30,7 @@ ms.openlocfilehash: 6ab76921f1e8b613010f99eba6a141daca128ea5
 
 Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP).
 
-## Asignar Direct3D 9 a las API de DirectX 11
+## <a name="mapping-direct3d-9-to-directx-11-apis"></a>Asignar Direct3D 9 a las API de DirectX 11
 
 
 [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) sigue siendo la base de los gráficos DirectX, pero la API ha cambiado desde DirectX 9:
@@ -34,7 +41,7 @@ Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y 
 
 Para obtener una lista completa de las características de  Direct3D 11, consulta [Características de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476342) y [Características de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404562).
 
-## Pasar de Direct2D 9 a Direct2D 11
+## <a name="moving-from-direct2d-9-to-direct2d-11"></a>Pasar de Direct2D 9 a Direct2D 11
 
 
 [Direct2D (Windows)](https://msdn.microsoft.com/library/windows/desktop/dd370990) sigue siendo una parte importante de los gráficos DirectX y Windows. Todavía puedes usar Direct2D para dibujar juegos 2D y dibujar superposiciones (HUD) sobre Direct3D.
@@ -45,7 +52,7 @@ Dado que Direct2D se basa en Direct3D, también usa DXGI y contextos de disposit
 
 La API [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) agrega compatibilidad para texto con formato otorgado mediante Direct2D. Consulta [Introducción a DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd371554).
 
-## Reemplazar bibliotecas de aplicaciones auxiliares desusadas
+## <a name="replace-deprecated-helper-libraries"></a>Reemplazar bibliotecas de aplicaciones auxiliares desusadas
 
 
 D3DX y DXUT están en desuso y no pueden usarse para juegos de UWP. Estas bibliotecas auxiliares proporcionaban recursos para tareas, como la carga de texturas y mallas.
@@ -54,32 +61,32 @@ D3DX y DXUT están en desuso y no pueden usarse para juegos de UWP. Estas biblio
 -   El tutorial [Crear un juego para UWP sencillo con DirectX](tutorial--create-your-first-metro-style-directx-game.md) te muestra tareas comunes de programación de juegos, entre ellas los elementos gráficos, la carga de archivos, la interfaz de usuario, los controles y el sonido.
 -   El proyecto [DirectX Tool Kit (Kit de herramientas de DirectX)](http://go.microsoft.com/fwlink/p/?LinkID=248929) de la comunidad, te ofrece clases auxiliares que puedes usar con aplicaciones de Direct3D 11 y UWP.
 
-## Trasladar programas sombreadores de FX a HLSL
+## <a name="move-shader-programs-from-fx-to-hlsl"></a>Trasladar programas sombreadores de FX a HLSL
 
 
 La biblioteca de utilidades de D3DX (D3DX 9, D3DX 10 y D3DX 11), incluidos los efectos, está en desuso para UWP. Todos los juegos de DirectX para UWP controlan la canalización de gráficos con [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561) sin efectos.
 
 Visual Studio todavía usa FXC como opción avanzada para compilar objetos de sombreador. Los sombreadores de los juegos de la UWP se compilan con anticipación. El código de bytes se carga en tiempo de ejecución y, a continuación, cada recurso de sombreador se enlaza a la canalización de elementos gráficos durante el pase de representación apropiado. Los sombreadores deben moverse a sus propios archivos .HLSL independientes y las técnicas de representación deben implementarse en el código C++.
 
-Para ver rápidamente la carga de recursos de sombreador, consulta [Migración simple de Direct3D9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Para ver rápidamente la carga de recursos de sombreador, consulta [Migración simple de Direct3D 9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 Direct3D 11 introdujo el modelo de sombreador 5, que requiere el nivel de característica 11\_0 (o superior) de Direct3D. Consulta [HLSL Shader Model 5 Features for Direct3D 11 (Características del modelo de sombreador 5 de HLSL para Direct3D 11)](https://msdn.microsoft.com/library/windows/desktop/ff471419).
 
-## Reemplazar XNAMath y D3DXMath
+## <a name="replace-xnamath-and-d3dxmath"></a>Reemplazar XNAMath y D3DXMath
 
 
 El código que usa XNAMath (o D3DXMath) debe migrarse a [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). DirectXMath incluye tipos portátiles entre x86, x64 y ARM. Consulta [Migración de código de la biblioteca de matemáticas XNA](https://msdn.microsoft.com/library/windows/desktop/ee418730).
 
 Ten en cuenta que con los sombreadores conviene usar tipos flotantes de DirectXMath. Por ejemplo las estructuras [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) y [**XMFLOAT4X4**](https://msdn.microsoft.com/library/windows/desktop/ee419621) alinean los datos de manera conveniente para los búferes de constantes.
 
-## Reemplazar DirectSound con XAudio2 (y audio de fondo)
+## <a name="replace-directsound-with-xaudio2-and-background-audio"></a>Reemplazar DirectSound con XAudio2 (y audio de fondo)
 
 
 DirectSound no es compatible con la UWP:
 
 -   Usa [XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049) para agregar efectos de sonido a tu juego.
 
-##  Reemplazar DirectInput con XInput y las API de la UWP
+##  <a name="replace-directinput-with-xinput-and-uwp-apis"></a>Reemplazar DirectInput con XInput y las API de la UWP
 
 
 DirectInput no es compatible con la UWP:
@@ -88,12 +95,12 @@ DirectInput no es compatible con la UWP:
 -   Usa [XInput](https://msdn.microsoft.com/library/windows/desktop/ee417001) 1.4 para la compatibilidad con el dispositivo de juego y los auriculares con micrófono. Si estás usando una base de código compartido para escritorio y UWP, consulta [XInput Versions (Versiones de XInput)](https://msdn.microsoft.com/library/windows/desktop/hh405051) para obtener información sobre la compatibilidad con versiones anteriores.
 -   Regístrate para usar los eventos de la clase [**EdgeGesture**](https://msdn.microsoft.com/library/windows/apps/hh701600) si tu juego necesita usar la barra de aplicaciones.
 
-## Usar Microsoft Media Foundation en lugar de DirectShow
+## <a name="use-microsoft-media-foundation-instead-of-directshow"></a>Usar Microsoft Media Foundation en lugar de DirectShow
 
 
 DirectShow ya no forma parte de la API de DirectX ni de la API de Windows. [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) proporciona contenido de vídeo para Direct3D mediante superficies compartidas. Consulta [Las API de vídeo en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh447677).
 
-## Reemplazar DirectPlay con código de red
+## <a name="replace-directplay-with-networking-code"></a>Reemplazar DirectPlay con código de red
 
 
 Microsoft DirectPlay está en desuso. Si tu juego usa servicios de red, debes proporcionar un código de red que cumpla con los requisitos de UWP. Usa estas API:
@@ -113,7 +120,7 @@ Estos artículos te ayudarán a agregar características de red y a declarar la 
 
 Ten en cuenta que todas las aplicaciones para UWP (incluidos los juegos) usan tipos específicos de tareas en segundo plano para mantener la conectividad mientras la aplicación está suspendida. Si tu juego necesita mantener el estado de conexión durante la suspensión, consulta [Conceptos básicos de redes](https://msdn.microsoft.com/library/windows/apps/mt280233).
 
-## Asignación de funciones
+## <a name="function-mapping"></a>Asignación de funciones
 
 
 Usa esta tabla cuando tengas que convertir código de Direct3D 9 a Direct3D 11. También te puede resultar útil para distinguir entre el dispositivo y el contexto del dispositivo.
@@ -235,7 +242,7 @@ Usa esta tabla cuando tengas que convertir código de Direct3D 9 a Direct3D 11. 
 
  
 
-## Asignación de formatos de superficie
+## <a name="surface-format-mapping"></a>Asignación de formatos de superficie
 
 
 Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
@@ -670,10 +677,5 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

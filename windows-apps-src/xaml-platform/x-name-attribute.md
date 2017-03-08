@@ -3,31 +3,38 @@ author: jwmsft
 description: "Identifica de forma única elementos de objeto para acceder al objeto con instancia desde el código subyacente o el código general."
 title: Atributo xName
 ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
-ms.openlocfilehash: 1a70bffd6e6990ece4565b919846503b95ae8f61
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a80a5cdeae5adc2af59072400aa42428eac28431
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Atributo x:Name
+# <a name="xname-attribute"></a>atributo x:Name
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Identifica de forma única elementos de objeto para acceder al objeto con instancia desde el código subyacente o el código general. Una vez aplicado a un modelo de programación de respaldo, se puede considerar que **x:Name** es equivalente a la variable que contiene una referencia de objeto, tal como la devuelve un constructor.
 
-## Uso del atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
 ``` syntax
 <object x:Name="XAMLNameValue".../>
 ```
 
-## Valores de XAML
+## <a name="xaml-values"></a>Valores de XAML
 
 | Término | Descripción |
 |------|-------------|
 | XAMLNameValue | Una cadena que cumple con las restricciones de la gramática XamlName. |
 
-##   Gramática XamlName
+##  <a name="xamlname-grammar"></a> Gramática XamlName
 
 La siguiente es la gramática normativa de una cadena que se usa como clave en esta implementación de XAML:
 
@@ -44,7 +51,7 @@ CombiningCharacter::= none
 -   No se admite el intervalo de caracteres Unicode.
 -   Un nombre no puede comenzar por un dígito. Algunas implementaciones de herramienta anteponen un carácter de subrayado (_) a una cadena si el usuario elige un dígito como carácter inicial, o la herramienta genera automáticamente valores de **x:Name** en función de otros valores que contienen dígitos.
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 El **x:Name** especificado se convierte en el nombre de un campo que se crea en el código subyacente cuando se procesa el código XAML, y ese campo contiene una referencia al objeto. El proceso de creación de este campo se realiza mediante los pasos de destino de MSBuild, que son los responsables de unir las clases parciales de un archivo XAML con su código subyacente. Este comportamiento no está necesariamente especificado por el lenguaje XAML; es la implementación particular que la programación de la plataforma universal de Windows (UWP) para XAML aplica para usar **x:Name** en sus modelos de programación y aplicación.
 
@@ -56,7 +63,7 @@ Las herramientas de diseño suelen generar valores **x:Name** automáticamente p
 
 **Nota** El campo de respaldo de una referencia **x:Name** no se crea para el elemento raíz de una página o archivo XAML; esto sucede especialmente en aplicaciones de C++ o CX. Si necesitas hacer referencia al objeto raíz desde el código subyacente en C++, usa otras API o un cruce seguro de árbol. Por ejemplo, puedes llamar a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para un elemento secundario con nombre conocido y, después, llamar a [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
 
-### x:Name y otras propiedades de Name
+### <a name="xname-and-other-name-properties"></a>x:Name y otras propiedades de Name
 
 Algunos tipos usados en XAML de UWP también tienen una propiedad denominada **Name**. Por ejemplo, [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) y [**TextElement.Name**](https://msdn.microsoft.com/library/windows/apps/hh702125).
 
@@ -64,13 +71,8 @@ Si **Name** está disponible como propiedad que puede establecerse en un element
 
 **Nota** El elemento [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) no debería usarse para cambiar valores establecidos originalmente por **x:Name**, aunque hay algunas excepciones a esa regla general. En los escenarios típicos, la creación y la definición de ámbitos de nombres XAML es una operación del procesador XAML. La modificación de **FrameworkElement.Name** en tiempo de ejecución puede producir una alineación de nombres incorrecta entre el ámbito de nombres XAML y el campo privado, lo que es difícil de rastrear en el código subyacente.
 
-### x:Name y x:Key
+### <a name="xname-and-xkey"></a>x:Name y x:Key
 
 **x:Name** puede aplicarse como atributo a los elementos de un elemento [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) y actuar como sustituto del [atributo x:Key](x-key-attribute.md). Por regla general, todos los elementos de un elemento **ResourceDictionary** deben tener un atributo x:Key o x:Name. Esto es habitual para [animaciones con guión gráfico](https://msdn.microsoft.com/library/windows/apps/mt187354). Para obtener más información, consulta la sección de [Referencias a ResourceDictionary y a los recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,13 +3,20 @@ author: jnHs
 Description: Se ha integrado Microsoft Advertising con pubCenter en el Centro de desarrollo de Windows.
 title: "Integración del Centro de desarrollo y pubCenter"
 ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 609d1dd2b154b8096871ef5fbf3e26245f46dc5c
-ms.openlocfilehash: 5a7fb36d22b4f30465602c96ddc252602e462207
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e29476296eb1fc8288cc37dd5ca71ef78476727a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Integración del Centro de desarrollo y pubCenter
+# <a name="pubcenter-dev-center-integration"></a>Integración del Centro de desarrollo y pubCenter
 
 Se ha integrado Microsoft Advertising con pubCenter en el Centro de desarrollo de Windows. **A partir del 1 de octubre de 2016, se deshabilitó el acceso a pubCenter y, ahora debes administrar toda tu información de pago correspondiente a las ganancias de Microsoft Advertising en el Centro de desarrollo.** Consulta las siguientes preguntas más frecuentes para obtener más información.
 
@@ -35,7 +42,7 @@ Los informes de pago se pueden ver o descargar al hacer clic en **Pago** en el C
 
 **¿Cuánto debo ganar para recibir pagos y cuándo se acreditarán los pagos en mi cuenta?**
 
-Para Microsoft Advertising, el umbral de pago es 50USD o el equivalente local. El tiempo de acreditación de los pagos en tu cuenta depende de la forma de pago que uses. Para obtener más información, consulta la sección [Microsoft Advertising](payment-thresholds-methods-and-timeframes.md#microsoft-advertising) del artículo [Umbrales, métodos y plazos de pago](payment-thresholds-methods-and-timeframes.md).
+Para Microsoft Advertising, el umbral de pago es 50 USD o el equivalente local. El tiempo de acreditación de los pagos en tu cuenta depende de la forma de pago que uses. Para obtener más información, consulta la sección [Microsoft Advertising](payment-thresholds-methods-and-timeframes.md#microsoft-advertising) del artículo [Umbrales, métodos y plazos de pago](payment-thresholds-methods-and-timeframes.md).
 
 **¿Cómo puedo crear promociones en el Centro de desarrollo?**
 
@@ -54,9 +61,4 @@ Si tu pregunta no se ha respondido aquí y necesitas más ayuda, abre una [incid
 
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

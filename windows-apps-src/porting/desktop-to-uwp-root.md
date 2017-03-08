@@ -2,14 +2,22 @@
 author: awkoren
 Description: "Empieza a usar el puente de escritorio a UWP y convierte tu aplicación de escritorio de Windows (por ejemplo, Win32, WPF y Windows Forms) en una aplicación para Plataforma universal de Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
-title: "Convertir la aplicación de escritorio en una aplicación para Plataforma universal de Windows (UWP) con el puente de escritorio"
+title: "Convertir la aplicación de escritorio en una aplicación para la Plataforma universal de Windows (UWP) con el Puente de dispositivo de escritorio"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 translationtype: Human Translation
-ms.sourcegitcommit: 462d2b13cefc6abb4d7c6f814ec4ee659e4afde8
-ms.openlocfilehash: 1ef54c3c45113e434333058d0f039e213ea8eed2
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: dd9f45b0ddcc201053ed8e35908da66443e47d72
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="bring-your-desktop-app-to-the-universal-windows-platform-uwp-with-the-desktop-bridge"></a>Convertir la aplicación de escritorio en una aplicación para Plataforma universal de Windows (UWP) con el puente de escritorio
+# <a name="bring-your-desktop-app-to-the-universal-windows-platform-uwp-with-the-desktop-bridge"></a>Convertir la aplicación de escritorio en una aplicación para la Plataforma universal de Windows (UWP) con el Puente de dispositivo de escritorio
 
 Empieza a usar el puente de escritorio a UWP y convierte tu aplicación de escritorio de Windows en una aplicación para Plataforma universal de Windows (UWP).
 
@@ -87,14 +95,10 @@ Para enviar comentarios o realizar sugerencias, envía elementos o vota a favor 
 | [Convertir manualmente la aplicación a UWP mediante el puente de escritorio](desktop-to-uwp-manual-conversion.md) | Aprende a crear un paquete de la aplicación y un manifiesto manualmente. |
 | [Extensiones para aplicaciones de puente de escritorio](desktop-to-uwp-extensions.md) | Mejora la aplicación convertida con extensiones para habilitar características como las tareas de inicio y la integración del Explorador de archivos. |
 | [API de UWP admitidas para aplicaciones convertidas con el puente de escritorio](desktop-to-uwp-supported-api.md) | Consulta qué API de UWP están disponibles para su uso en tu aplicación de escritorio convertida. |
-| [Depurar aplicaciones convertidas con el puente de escritorio](desktop-to-uwp-debug.md) | Explica las opciones para depurar la aplicación convertida. | 
+| [Guía de empaquetado de Puente de dispositivo de escritorio para aplicaciones de escritorio de .NET con Visual Studio](desktop-to-uwp-packaging-dot-net.md) | Configura tu solución de Visual Studio para que puedas editar, depurar y empaquetar tu aplicación. NET. | 
+| [Depurar aplicaciones convertidas con el Puente de dispositivo de escritorio](desktop-to-uwp-debug.md) | Explica las opciones para depurar la aplicación convertida. | 
 | [Firmar una aplicación convertida con el puente de escritorio](desktop-to-uwp-signing.md) | Aprende a firmar el paquete de la aplicación convertida con un certificado. |
 | [Distribuir aplicaciones convertidas con el puente de escritorio](desktop-to-uwp-distribute.md) | Consulta cómo distribuir la aplicación convertida a los usuarios.  |
 | [Segundo plano del puente de escritorio](desktop-to-uwp-behind-the-scenes.md) | Realiza un análisis más profundo sobre cómo funciona el puente de escritorio a UWP en modo no visible. | 
 | [Problemas conocidos de puente de escritorio](desktop-to-uwp-known-issues.md) | Enumera los problemas conocidos del puente de escritorio a UWP. | 
 | [Ejemplos de código de puente de aplicación de escritorio a UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) | Ejemplos de código en GitHub que muestran las características de las aplicaciones convertidas. |
-
-
-<!--HONumber=Dec16_HO3-->
-
-

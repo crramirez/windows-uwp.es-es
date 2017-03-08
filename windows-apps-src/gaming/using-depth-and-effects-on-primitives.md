@@ -3,34 +3,41 @@ author: mtoepke
 title: Usar profundidad y efectos en primitivos
 description: "Aquí te mostramos cómo usar la profundidad, la perspectiva, el color y otros efectos en primitivos."
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, juegos, profundidad, efectos, primitivos, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6c58e23a0831a0850a4e28887b4717abedbc7086
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 923bce3dd5f340b97fd6d4e7b31c4ed2e949ca94
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Usar profundidad y efectos en primitivos
+# <a name="use-depth-and-effects-on-primitives"></a>Usar profundidad y efectos en primitivos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aquí te mostramos cómo usar la profundidad, la perspectiva, el color y otros efectos en primitivos.
 
 **Objetivo:** Crear un objeto 3D, aplicar iluminación básica de vértices y colorearlo.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 
 Suponemos que estás familiarizado con C++. También necesitas tener experiencia básica en los conceptos de programación de elementos gráficos.
 
 Suponemos además que has consultado [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md) y [Crear sombreadores y dibujar primitivos](creating-shaders-and-drawing-primitives.md).
 
-**Tiempo para completarlo:** 20minutos.
+**Tiempo para completarlo:** 20 minutos.
 
-Instrucciones
+<a name="instructions"></a>Instrucciones
 ------------
 
-### 1. Definir variables del cubo
+### <a name="1-defining-cube-variables"></a>1. Definir variables del cubo
 
 Primero necesitamos definir las estructuras **SimpleCubeVertex** y **ConstantBuffer** para el cubo. Estas estructuras especifican las posiciones de los vértices, los colores para el cubo y de qué manera se visualizará el cubo. Declaramos [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) y [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) con [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) y declaramos una instancia de **ConstantBuffer**.
 
@@ -62,7 +69,7 @@ private:
     ConstantBuffer m_constantBufferData;
 ```
 
-### 2. Crear una vista de la galería de símbolos y profundidad
+### <a name="2-creating-a-depth-stencil-view"></a>2. Crear una vista de la galería de símbolos y profundidad
 
 Además de crear una vista del destino de representación, también creamos una vista de la galería de símbolos y profundidad. La vista de la galería de símbolos y profundidad permite que Direct3D represente con eficacia objetos cercanos a la cámara frente a objetos alejados de la cámara. Antes de poder crear una vista de un búfer de galería de símbolos y profundidad, debemos crear el búfer. Rellenamos [**D3D11_TEXTURE2D_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) para describir el búfer de galería de símbolos y profundidad y luego llamamos a [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) para crearlo. Para crear una vista de la galería de símbolos y profundidad, rellenamos [**D3D11\_DEPTH\_STENCIL\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476112) para describir la vista y pasar la descripción y el búfer a [**ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507).
 
@@ -109,7 +116,7 @@ Además de crear una vista del destino de representación, también creamos una 
             );
 ```
 
-### 3. Actualizar perspectiva con la ventana
+### <a name="3-updating-perspective-with-the-window"></a>3. Actualizar perspectiva con la ventana
 
 Actualizamos los parámetros de la proyección de perspectiva del búfer de constantes, según las dimensiones de la ventana. Corregimos los parámetros a un campo de vista de 70 grados con un intervalo de profundidad de 0,01 a 100.
 
@@ -142,7 +149,7 @@ Actualizamos los parámetros de la proyección de perspectiva del búfer de cons
             );
 ```
 
-### 4. Crear sombreadores de vértices y píxeles con elementos de color
+### <a name="4-creating-vertex-and-pixel-shaders-with-color-elements"></a>4. Crear sombreadores de vértices y píxeles con elementos de color
 
 En esta aplicación, creamos sombreadores de vértices y píxeles más complejos en relación con los descritos en el tutorial anterior, [Crear sombreadores y dibujar primitivos](creating-shaders-and-drawing-primitives.md). El sombreador de vértices de la aplicación transforma cada posición de vértice en un espacio de proyección y pasa el color del vértice por el sombreador de píxeles.
 
@@ -332,7 +339,7 @@ Creamos búferes de vértices, índices y constantes para definir un cubo en ór
         
 ```
 
-### 5. Girar y dibujar el cubo, y mostrar la imagen representada
+### <a name="5-rotating-and-drawing-the-cube-and-presenting-the-rendered-image"></a>5. Girar y dibujar el cubo, y mostrar la imagen representada
 
 Entramos en un bucle sin fin para representar y mostrar continuamente la escena. Llamamos a la función insertada **rotationY** (BasicMath.h) con una cantidad de rotación para establecer los valores que girarán la matriz de modelo del cubo en torno al eje Y. A continuación, llamamos a [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) para actualizar el búfer de constantes y girar el modelo del cubo. Llamamos a [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar el destino de representación como el destino de salida. En llamada a **OMSetRenderTargets** pasamos la vista de la galería de símbolos y profundidad. Llamamos a [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para borrar el destino de representación de color azul y llamamos a [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) para borrar el búfer de profundidad.
 
@@ -439,7 +446,7 @@ Llamamos a [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/wind
                 );
 ```
 
-## Resumen y pasos siguientes
+## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
 
 Hemos usado profundidad, color y otros efectos en primitivos.
@@ -454,10 +461,5 @@ A continuación, aplicaremos texturas en primitivos.
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 
