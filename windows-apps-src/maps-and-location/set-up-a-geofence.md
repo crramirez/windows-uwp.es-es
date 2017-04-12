@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, mapa, ubicación, geovalla, notificaciones"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 8a143359948e536d30efb425055969ae8ac0987f
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-up-a-geofence"></a>Configurar una geovalla
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Configura una [**Geovalla**](https://msdn.microsoft.com/library/windows/apps/dn263587) en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano.
@@ -466,7 +463,7 @@ Las tareas de probar y depurar aplicaciones de geovalla pueden resultar todo un 
 
 Antes de que la aplicación pueda acceder a la ubicación, la opción **Ubicación** debe estar habilitada en el dispositivo. En la aplicación **Configuración**, comprueba que la siguiente **configuración de privacidad de ubicación** esté activada:
 
--   **La ubicación de este dispositivo...** está **activada** (no es aplicable en Windows 10 Mobile)
+-   **La ubicación de este dispositivo...** está **activada** (no es aplicable en Windows10 Mobile)
 -   La configuración de servicios de ubicación, **"Ubicación"**, está **activada**
 -   En **Elige las aplicaciones que pueden usar tu ubicación**, la aplicación está establecida como **activada**
 
@@ -475,4 +472,3 @@ Antes de que la aplicación pueda acceder a la ubicación, la opción **Ubicaci�
 * [Muestra de ubicación geográfica para UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Directrices de diseño para geovallas](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Directrices de diseño para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
-

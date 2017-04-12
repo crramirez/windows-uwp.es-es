@@ -1,28 +1,25 @@
 ---
 author: mcleanbyron
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
-description: "Usa los ejemplos de código de Python de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows."
-title: "Ejemplos de código de Python para la API de envío de la Tienda Windows"
+description: "Usa los ejemplos de código Python de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows."
+title: "Ejemplos de código Python para la API de envío"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, ejemplos de código, Windows Store submission API, code examples"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f787fd042982e4e5a965c9bb77ef72a8dabb6ae9
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, code examples, ejemplos de código"
+ms.openlocfilehash: a46907ecfea1de60b8a32cdaea7076f056a41ff5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="python-code-examples-for-the-windows-store-submission-api"></a>Ejemplos de código de Python para la API de envío de la Tienda Windows
+# <a name="python-code-examples-for-the-submission-api"></a>Ejemplos de código Python para la API de envío
 
 En este artículo se proporcionan ejemplos de código de Python para usar la *API de envío de la Tienda Windows*. Para obtener más información sobre esta API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
 Estos ejemplos de código muestran las siguientes tareas:
 
-* [Obtener un token de acceso de Azure AD](#token)
+* [Obtener un token de acceso de AzureAD](#token)
 * [Crear un complemento](#create-add-on)
 * [Crear un paquete piloto](#create-package-flight)
 * [Crear un envío de aplicación](#create-app-submission)
@@ -30,7 +27,7 @@ Estos ejemplos de código muestran las siguientes tareas:
 * [Crear un envío de paquete piloto](#create-flight-submission)
 
 <span id="token" />
-## <a name="obtain-an-azure-ad-access-token"></a>Obtener un token de acceso de Azure AD
+## <a name="obtain-an-azure-ad-access-token"></a>Obtener un token de acceso de AzureAD
 
 En el siguiente ejemplo se muestra cómo [obtener un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) que puedas usar para llamar a métodos en la API de envío de la Tienda Windows. Después de obtener un token, tienes 60 minutos para utilizar este token en llamadas a la API de envío de Tienda Windows antes de que el token expire. Después de que el token expire, puedes generar uno nuevo.
 
@@ -94,5 +91,4 @@ En el siguiente ejemplo se muestra cómo usar varios métodos en la API de enví
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante los servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-
+* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 301f1b55644842225f1b8d040d5b02a035d1940b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 23afad0c6499950d13d9771a5f0286403a5fe886
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="porting-windows-phone-silverlight-to-uwp-for-form-factor-and-ux"></a>Migración de Windows Phone Silverlight a UWP para factor de forma y experiencia del usuario
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -75,5 +72,4 @@ Vuelve a consultar la lista [Maximización de la reutilización de código y mar
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md)
-
 

@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e05d6278472af75fb97f33eb840f6ecf28d33670
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b3081680c0d2324585fa5550aa7c6e8548673219
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="printing-and-scanning"></a>Impresión y digitalización
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En esta sección se describe cómo imprimir y digitalizar desde la aplicación universal de Windows.
 
@@ -34,5 +32,4 @@ En esta sección se describe cómo imprimir y digitalizar desde la aplicación u
 * [//Vídeo de compilación 2015: Developing apps that print in Windows 10 (Desarrollar aplicaciones que imprimen en Windows 10)](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [Muestra de impresión para UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984)
  
-
 

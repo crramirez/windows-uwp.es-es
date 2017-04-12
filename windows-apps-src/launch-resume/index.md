@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 40400b8b17da9b010c0f03e9976201a1def025f8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 412876d0b05b2e703482f8cc79a1f07268ac200f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launching-resuming-and-background-tasks"></a>Inicio, reanudación y tareas en segundo plano
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta sección incluye información sobre los siguientes asuntos:
 
@@ -107,7 +104,7 @@ La sección [Tareas en segundo plano](support-your-app-with-background-tasks.md)
 
 ## <a name="remote-systems"></a>Sistemas remotos
 
-La sección [Aplicaciones y dispositivos conectados (proyecto "Roma")](connected-apps-and-devices.md) describe cómo usar la plataforma de sistemas remotos para detectar dispositivos remotos, iniciar una aplicación en un dispositivo remoto y comunicarse con un servicio de aplicaciones en un dispositivo remoto.
+En la sección [Aplicaciones y dispositivos conectados (Project Rome)](connected-apps-and-devices.md) se describe cómo usar la plataforma de sistemas remotos para detectar dispositivos remotos, iniciar una aplicación en un dispositivo remoto y comunicarse con un servicio de aplicaciones en un dispositivo remoto.
 
 | Tema | Descripción |
 |-------|-------------|
@@ -123,4 +120,3 @@ La sección [Pantallas de presentación](splash-screens.md) describe cómo estab
 |-------|-------------|
 | [Agregar una pantalla de presentación](add-a-splash-screen.md) | Establecer el color de imagen y de fondo de la pantalla de presentación de la aplicación. |
 | [Mostrar una pantalla de presentación durante más tiempo](create-a-customized-splash-screen.md) | Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación cuando la aplicación se inicia, y se puede personalizar. |
-

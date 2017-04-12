@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 975f364fec4edfcf90ee65912f509741bd1f80dd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5df57d0bd5d2104278f653d78b1e478a034a38ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="porting-windows-phone-silverlight-to-uwp-for-io-device-and-app-model"></a>Migración de modelo de E/S, dispositivos y aplicaciones de Windows Phone Silverlight a UWP
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -36,7 +33,7 @@ Para obtener más información, consulta [Ciclo de vida de la aplicación](https
 
 ## <a name="camera"></a>Cámara
 
-El código de captura de cámara de Windows Phone Silverlight usa las clases **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera** o **Microsoft.Phone.Tasks.CameraCaptureTask**. Para migrar el código a la Plataforma universal de Windows (UWP), puedes usar la clase [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). En el tema [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) se ofrece un ejemplo de código. Ese método permite capturar una foto a un archivo de almacenamiento y requiere las funcionalidades de **micrófono** y **cámara web** [**funcionalidades de dispositivos**](https://msdn.microsoft.com/library/windows/apps/dn934747) para establecerlo en el manifiesto del paquete de la aplicación.
+El código de captura de cámara de WindowsPhone Silverlight usa las clases **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera** o **Microsoft.Phone.Tasks.CameraCaptureTask**. Para migrar el código a la Plataforma universal de Windows (UWP), puedes usar la clase [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). En el tema [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) se ofrece un ejemplo de código. Ese método permite capturar una foto a un archivo de almacenamiento y requiere las funcionalidades de **micrófono** y **cámara web** [**funcionalidades de dispositivos**](https://msdn.microsoft.com/library/windows/apps/dn934747) para establecerlo en el manifiesto del paquete de la aplicación.
 
 Otra opción es la clase [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030), que también necesita el **micrófono** y la **cámara web** [**funcionalidades de dispositivos**](https://msdn.microsoft.com/library/windows/apps/dn934747).
 
@@ -71,7 +68,7 @@ Consulta también [Compilación condicional y código adaptable](wpsl-to-uwp-por
 
 ## <a name="device-status"></a>Estado del dispositivo
 
-Una aplicación de Windows Phone Silverlight puede usar la clase **Microsoft.Phone.Info.DeviceStatus** para obtener información sobre el dispositivo en el que se ejecuta la aplicación. Si bien no hay ningún equivalente de UWP para el espacio de nombres **Microsoft.Phone.Info**, a continuación detallamos algunas de las propiedades y los eventos que puedes usar en una aplicación para UWP en vez de llamadas a los miembros de la clase **DeviceStatus**.
+Una aplicación de WindowsPhone Silverlight puede usar la clase **Microsoft.Phone.Info.DeviceStatus** para obtener información sobre el dispositivo en el que se ejecuta la aplicación. Si bien no hay ningún equivalente de UWP para el espacio de nombres **Microsoft.Phone.Info**, a continuación detallamos algunas de las propiedades y los eventos que puedes usar en una aplicación para UWP en vez de llamadas a los miembros de la clase **DeviceStatus**.
 
 | Windows Phone Silverlight                                                               | UWP                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -86,7 +83,7 @@ Una aplicación de Windows Phone Silverlight puede usar la clase **Microsoft.Ph
 | Propiedad **IsKeyboardPresent**                                                          | No hay equivalente. Esta propiedad proporciona información sobre los teclados de hardware para dispositivos móviles, que habitualmente no se usan.                                                                                                                                                                                                        |
 | Evento **KeyboardDeployedChanged**                                                       | No hay equivalente. Esta propiedad proporciona información sobre los teclados de hardware para dispositivos móviles, que habitualmente no se usan.                                                                                                                                                                                                        |
 | Propiedad **PowerSource**                                                                | No hay equivalente                                                                                                                                                                                                                                                                                                                      |
-| Evento **PowerSourceChanged**                                                            | Controla el evento [**RemainingChargePercentChanged**](https://msdn.microsoft.com/library/windows/apps/jj207240) (solo la familia de dispositivos móviles). El evento se genera cuando el valor de la propiedad [**RemainingChargePercent**](https://msdn.microsoft.com/library/windows/apps/jj207239) (solo para la familia de dispositivos móviles) disminuye un 1 %. |
+| Evento **PowerSourceChanged**                                                            | Controla el evento [**RemainingChargePercentChanged**](https://msdn.microsoft.com/library/windows/apps/jj207240) (solo la familia de dispositivos móviles). El evento se genera cuando el valor de la propiedad [**RemainingChargePercent**](https://msdn.microsoft.com/library/windows/apps/jj207239) (solo para la familia de dispositivos móviles) disminuye un 1%. |
 
 ## <a name="location"></a>Ubicación
 
@@ -99,5 +96,4 @@ El equivalente de la aplicación para UWP de las propiedades **PhoneApplicationP
 Sin embargo, es conveniente diseñar la interfaz de usuario de la aplicación para UWP para que tenga un aspecto óptimo independientemente del tamaño de pantalla y la orientación del dispositivo. Encontrarás más información al respecto en el tema [Migración para factores de forma y experiencia de usuario](wpsl-to-uwp-form-factors-and-ux.md), que es el tema posterior al siguiente.
 
 El siguiente tema es [Migración de capas de negocio y de datos](wpsl-to-uwp-business-and-data.md).
-
 

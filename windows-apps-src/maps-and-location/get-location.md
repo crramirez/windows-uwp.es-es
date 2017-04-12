@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, mapa, map, ubicación, location, funcionalidad de ubicación, location capability"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fec870534c7e028ea85e8aa5242f09569e082b96
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 05fa3330f5346f69061cb60cf8b54de451845e06
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario.
@@ -265,7 +262,7 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 Para que la aplicación pueda acceder a la ubicación del usuario, la opción **Ubicación** debe estar habilitada en el dispositivo. En la aplicación **Configuración**, comprueba que la siguiente **configuración de privacidad de ubicación** esté activada:
 
--   **La ubicación de este dispositivo...** está **activada** (no es aplicable en Windows 10 Mobile)
+-   **La ubicación de este dispositivo...** está **activada** (no es aplicable en Windows10 Mobile)
 -   La configuración de servicios de ubicación, **"Ubicación"**, está **activada**
 -   En **Elige las aplicaciones que pueden usar tu ubicación**, la aplicación está establecida como **activada**
 
@@ -274,4 +271,3 @@ Para que la aplicación pueda acceder a la ubicación del usuario, la opción **
 * [Muestra de ubicación geográfica para UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Directrices de diseño para geovallas](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Directrices de diseño para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
-

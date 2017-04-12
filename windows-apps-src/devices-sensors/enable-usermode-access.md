@@ -9,15 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ced83940fb49f5812343fee34cb11582683bd672
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d96d01216a37c4e8dbcd0fcd0eb83ccb4859b288
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="enable-usermode-access-on-windows-10-iot-core"></a>Habilitar el acceso de modo de usuario en Windows 10 IoT Core
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Windows 10 IoT Core contiene nuevas API para acceder a GPIO, I2C, SPI y UART directamente desde el modo de usuario. Los paneles de desarrollo como Raspberry Pi 2 exponen un subconjunto de estas conexiones que permiten a los usuarios ampliar un módulo de cálculo base con circuitos personalizados para dirigirte a una aplicación particular. Normalmente, estos buses de bajo nivel se comparten con otras funciones incorporadas críticas, con solo un subconjunto de las patillas y buses de GPIO expuestos en los encabezados. Para preservar la estabilidad del sistema, es necesario especificar qué patillas y buses son seguros para modificar las aplicaciones de modo de usuario. 
@@ -113,7 +111,7 @@ Package(2) { "SPI0-SupportedDataBitLengths", Package() { 8 }},
 
 La propiedad **SupportedDataBitLengths** enumera las longitudes de bits de datos admitidas por el controlador. Pueden especificarse varios valores en una lista separada por comas. La API evitará que los usuarios especifiquen valores fuera de esta lista. La longitud de bits de datos se pasa al controlador de SPB en el campo _LEN del descriptor de conexión (sección de ACPI 6.4.3.8.2.2).  
 
-Estas declaraciones de recursos se puede considerar como "plantillas". Algunos de los campos son fijos al arrancar el sistema, mientras que otros se especifican dinámicamente en tiempo de ejecución. Los siguientes campos del descriptor SPISerialBus son fijos: 
+Estas declaraciones de recursos se pueden considerar como "plantillas". Algunos de los campos son fijos al arrancar el sistema, mientras que otros se especifican dinámicamente en tiempo de ejecución. Los siguientes campos del descriptor SPISerialBus son fijos: 
 
 * DeviceSelection 
 * DeviceSelectionPolarity 
@@ -711,9 +709,9 @@ Hay herramientas de línea de comandos simples para Gpio, I2c, Spi y serie dispo
 
 | Herramienta | Vínculo |
 |------|------|
-| GpioTestTool | https://developer.microsoft.com/windows/iot/win10/samples/GPIOTestTool |
-| I2cTestTool    | https://developer.microsoft.com/windows/iot/win10/samples/I2cTestTool | 
-| SpiTestTool |    https://developer.microsoft.com/windows/iot/win10/samples/spitesttool |
+| GpioTestTool | https://developer.microsoft.com/windows/iot/samples/gpiotesttool |
+| I2cTestTool    | https://developer.microsoft.com/windows/iot/samples/I2cTestTool | 
+| SpiTestTool |    https://developer.microsoft.com/windows/iot/samples/spitesttool |
 | MinComm (serie) |    https://github.com/ms-iot/samples/tree/develop/MinComm |
 
 ## <a name="resources"></a>Recursos
@@ -731,9 +729,9 @@ Hay herramientas de línea de comandos simples para Gpio, I2c, Spi y serie dispo
 | GpioClx    | https://msdn.microsoft.com/library/windows/hardware/hh439508.aspx |
 | SerCx | https://msdn.microsoft.com/library/windows/hardware/ff546939.aspx |
 | Pruebas MITT I2C | https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx |
-| GpioTestTool | https://developer.microsoft.com/windows/iot/win10/samples/GPIOTestTool |
-| I2cTestTool    | https://developer.microsoft.com/windows/iot/win10/samples/I2cTestTool | 
-| SpiTestTool |    https://developer.microsoft.com/windows/iot/win10/samples/spitesttool |
+| GpioTestTool | https://developer.microsoft.com/windows/iot/samples/GPIOTestTool |
+| I2cTestTool    | https://developer.microsoft.com/windows/iot/samples/I2cTestTool | 
+| SpiTestTool |    https://developer.microsoft.com/windows/iot/samples/spitesttool |
 | MinComm (serie) |    https://github.com/ms-iot/samples/tree/develop/MinComm |
 | Hardware Lab Kit (HLK) | https://msdn.microsoft.com/library/windows/hardware/dn930814.aspx |
 
@@ -741,7 +739,7 @@ Hay herramientas de línea de comandos simples para Gpio, I2c, Spi y serie dispo
 
 ### <a name="appendix-a---raspberry-pi-asl-listing"></a>Apéndice A: Lista de ASL de Raspberry Pi
 
-Patillaje de encabezado: https://developer.microsoft.com/windows/iot/win10/samples/PinMappingsRPi2
+Patillaje de encabezado: https://developer.microsoft.com/windows/iot/samples/PinMappingsRPi2
 
 ```
 DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
@@ -903,7 +901,7 @@ DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
 
 ### <a name="appendix-b---minnowboardmax-asl-listing"></a>Apéndice B: Lista de ASL de MinnowBoardMax
 
-Patillaje de encabezado: https://developer.microsoft.com/windows/iot/win10/samples/PinMappingsMBM
+Patillaje de encabezado: https://developer.microsoft.com/windows/iot/samples/PinMappingsMBM
 
 ```
 DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
@@ -1091,4 +1089,3 @@ GpioInt(Edge, ActiveBoth, Shared, $($_.PullConfig), 0, "\\_SB.GPI0",) { $($_.Pin
     $resourceIndex += 2;
 }
 ```
-

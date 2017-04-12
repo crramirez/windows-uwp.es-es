@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4b97cb009078039582bfcff6cdaa678f1dd9b979
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b72b5593f4266a015b14e2b61a70c87ce199cdfd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="resolve-submission-errors"></a>Resolver errores de envío
 
 Si se producen errores después de enviar la aplicación a la Tienda, tienes que resolverlos para poder continuar el [proceso de certificación](the-app-certification-process.md). El mensaje de error indicará cuál es el problema y lo que probablemente tendrás que hacer para corregirlo. Aquí encontrarás información adicional que puede ayudarte a resolver estos errores.
@@ -33,9 +30,9 @@ Es posible que veas **error 2001** cuando se detectan problemas con los paquetes
 Hay una serie de problemas que pueden causar este error. Revisa la lista siguiente para determinar lo que es posible que se aplique a los paquetes.
 
 -   **Uno o varios ensamblados del paquete se han ofuscado incorrectamente:** usa una herramienta diferente para realizar la ofuscación o quita la ofuscación. El proceso de compilación optimiza los ensamblados ofuscados pero, en ocasiones, algunos ensamblados se ofuscan con una herramienta que modifica el MSIL de una forma no compatible que provoca un error.
--   **El tamaño de uno o varios métodos de la aplicación supera los 256 KB de nivel de integridad:** refactoriza el método incorrecto en funciones más pequeñas. El tamaño de MSIL para métodos de un ensamblado se puede determinar mediante la herramienta ILDASM.
+-   **El tamaño de uno o varios métodos de la aplicación supera los 256KB de nivel de integridad:** refactoriza el método incorrecto en funciones más pequeñas. El tamaño de MSIL para métodos de un ensamblado se puede determinar mediante la herramienta ILDASM.
 -   **Error en la validación de la firma de nombre seguro para uno o varios ensamblados:** este error suele ocurrir cuando la firma de nombre seguro se realizó con una clave diferente a la esperada en los metadatos del ensamblado. Firma con la clave correcta o quita la firma de nombre seguro.
--   **El paquete contiene ensamblados en modo mixto (con código administrado y nativo):** los ensamblados en modo mixto no son compatibles con Windows Phone. Quita los ensamblados de modo mixto del paquete y vuelve a enviar la aplicación.
+-   **El paquete contiene ensamblados en modo mixto (con código administrado y nativo):** los ensamblados en modo mixto no son compatibles con WindowsPhone. Quita los ensamblados de modo mixto del paquete y vuelve a enviar la aplicación.
 -   **Un ensamblado de Windows Phone 8.1 XAP o appx/appxbundle no es válido:** asegúrate de que el archivo .winmd tenga al menos un punto de entrada público. Si es necesario, puedes usar cualquier aplicación descompilador para revisar el código y comprobar si hay puntos de entrada públicos.
 
 Otro error que puede aparecer después de enviar la aplicación es el **error 1300**. Esto ocurre cuando ya se han precompilado uno o varios ensamblados (o todo el paquete). Para solucionar este problema, recompila el paquete de la aplicación en Microsoft Visual Studio y, a continuación, envía el paquete recién generado.
@@ -52,7 +49,6 @@ Si aparece un error que dice **El nombre encontrado en el paquete no es uno de l
  
 
  
-
 
 
 

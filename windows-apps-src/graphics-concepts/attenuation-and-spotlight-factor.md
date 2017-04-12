@@ -2,21 +2,17 @@
 title: "Atenuación y factor de foco de luz"
 description: "Los componentes de iluminación difusa y especular de la ecuación global de iluminación contienen términos que describen la atenuación de la luz y el cono del foco de luz."
 ms.assetid: F61D4ACB-09AB-4087-9E2D-224E472D6196
-keywords:
-- "Atenuación y factor de foco de luz"
+keywords: "Atenuación y factor de foco de luz"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6ca596ae1deebadc4bb192c7e2622daa9bf6b348
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 41b2b16e6eea6eb3edceb523b4db7cf207af48fb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="attenuation-and-spotlight-factor"></a>Atenuación y factor de foco de luz
 
 
@@ -100,7 +96,6 @@ Tras calcular la atenuación de la luz, para calcular los componentes de difusi�
  
 
  
-
 
 
 

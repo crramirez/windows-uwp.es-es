@@ -9,20 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Centro de opiniones, iniciar, Feedback Hub, launch
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 65a54d96b556b58a83af58b3d52d666372f337bb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70607e99ba646cab1805c13e8779871c1e3ec611
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar el Centro de opiniones desde la aplicación
 
 Puedes animar a los clientes a dejar comentarios agregando un control (como un botón) a la aplicación de la Plataforma universal de Windows (UWP) que inicia el Centro de opiniones. El Centro de opiniones es una aplicación preinstalada que proporciona un único lugar para recopilar comentarios sobre Windows y las aplicaciones instaladas. Todos los comentarios de los clientes sobre la aplicación enviados a través del Centro de opiniones se recopilan y se presentan en el [informe de comentarios](../publish/feedback-report.md), en el panel del Centro de desarrollo de Windows; por lo tanto, puedes ver los problemas, sugerencias y votos a favor que los clientes hayan enviado en un informe.
 
 Para iniciar el Centro de opiniones desde la aplicación, usa una API que se incluya con el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Se recomienda usar esta API para iniciar el Centro de opiniones desde un elemento de la interfaz de usuario de tu aplicación que siga nuestras directrices para el diseño.
 
->**Nota:**&nbsp;&nbsp;El Centro de opiniones solo está disponible en dispositivos que ejecutan la versión 10.0.14271 o posterior de un sistema operativo Windows 10 que se base en [familias de dispositivos](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families) móviles o de escritorio. Te recomendamos que muestres un control de comentarios en la aplicación solo si el Centro de opiniones está disponible en el dispositivo del usuario. El código de este tema muestra cómo hacerlo.
+> [!NOTE]
+> El Centro de opiniones solo está disponible en dispositivos que ejecutan la versión 10.0.14271 o posterior de un sistema operativo Windows 10 que se base en [familias de dispositivos](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families) móviles o de escritorio. Te recomendamos que muestres un control de comentarios en la aplicación solo si el Centro de opiniones está disponible en el dispositivo del usuario. El código de este tema muestra cómo hacerlo.
 
 ## <a name="how-to-launch-feedback-hub-from-your-app"></a>Cómo iniciar el Centro de opiniones desde la aplicación
 
@@ -37,13 +35,12 @@ Para iniciar el Centro de opiniones desde la aplicación:
   * Establece la fuente del contenido que se muestra en el control de **Segoe MDL2 Assets**.
   * Establece el texto en el control en el código de carácter Unicode hexadecimal E939. Este es el código de carácter para el icono de comentarios recomendados en la fuente **Segoe MDL2 Assets**.
   * Establece la visibilidad del control en oculto.
-
-    > **Nota:**&nbsp;&nbsp;Te recomendamos que ocultes el control de comentarios de manera predeterminada y que lo muestres en el código de inicialización solo si el Centro de opiniones está disponible en el dispositivo del usuario. En el paso siguiente se muestra cómo hacerlo.
+    > [!NOTE]
+    > Te recomendamos que ocultes el control de comentarios y que lo muestres en el código de inicialización solo si el Centro de opiniones está disponible en el dispositivo del usuario. En el paso siguiente se muestra cómo hacerlo.
 
   El siguiente código muestra la definición XAML de una clase [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) que está configurada como se describió anteriormente.
 
-  > [!div class="tabbedCodeSnippets"]
-  ```xml
+  ```XML
   <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
   ```
 
@@ -51,15 +48,13 @@ Para iniciar el Centro de opiniones desde la aplicación:
 
   Si esta propiedad devuelve **true**, haz que el control sea visible. El siguiente código muestra cómo hacerlo para una clase [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#ToggleFeedbackVisibility)]
 
-  <span/>
-  >**Nota:**&nbsp;&nbsp;Aunque el Centro de opiniones no es compatible con dispositivos Xbox en este momento, la propiedad **IsSupported** devuelve actualmente **true** en dispositivos Xbox que ejecuten la versión 10.0.14271 o posterior de Windows 10. Este es un problema conocido que se resolverá en una futura versión de Microsoft Store Services SDK.  
+    > [!NOTE]
+    > Aunque el Centro de opiniones no es compatible con dispositivos Xbox en este momento, la propiedad **IsSupported** devuelve actualmente **true** en dispositivos Xbox que ejecutan la versión 10.0.14271 o posterior de Windows 10. Este es un problema conocido que se resolverá en una futura versión de Microsoft Store Services SDK.  
 
 8. En el controlador de eventos que se ejecuta cuando el usuario hace clic en el control, obtén un objeto [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) y llama al método [LaunchAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync.aspx) para iniciar la aplicación Centro de opiniones. Hay dos sobrecargas para este método: una sin parámetros y otra que acepta un diccionario de pares clave y valor que contienen los metadatos que quieres asociar a los comentarios. En el ejemplo siguiente se muestra cómo iniciar el Centro de opiniones en el controlador de eventos [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) para una clase [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#FeedbackButtonClick)]
 
 ## <a name="design-recommendations-for-your-feedback-ui"></a>Recomendaciones de diseño para la interfaz de usuario de información
@@ -83,4 +78,3 @@ También te recomendamos que uses una o varias de las siguientes opciones de ubi
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Informe de comentarios](../publish/feedback-report.md)
-

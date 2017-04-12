@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, ruta, mapa, ubicación, indicaciones"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 11519df0c6655d663b31759e9064337a706bbc53
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 62f0f26cc9a78a29e6fab5a8f762e0b28b7df6a3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="display-routes-and-directions-on-a-map"></a>Mostrar rutas e indicaciones en un mapa
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Solicita rutas e indicaciones y muéstralas en tu aplicación.
@@ -196,6 +193,5 @@ En este ejemplo se muestra lo siguiente en un [**MapControl**](https://msdn.micr
 * [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
 * [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo de compilación de 2015: Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Ejemplo de aplicación de tráfico de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-

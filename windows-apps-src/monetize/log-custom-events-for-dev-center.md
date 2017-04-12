@@ -9,20 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store Services SDK, registrar eventos, log events
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 80cc3ec6aab90549c55ff8c8f78b54f5827f61ff
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b2fad3ea78a2007b2519e4b0b27276f9f003af2c
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="log-custom-events-for-dev-center"></a>Registrar eventos personalizados para el Centro de desarrollo
 
 El [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del panel Centro de desarrollo de Windows te permite obtener información sobre los eventos personalizados que definiste en tu aplicación para la Plataforma universal de Windows (UWP). Un evento personalizado es una cadena arbitraria que representa un evento o una actividad en tu aplicación. Por ejemplo, un juego podría definir eventos personalizados denominados *firstLevelPassed*, *secondLevelPassed*, y así sucesivamente, que se registren cuando el usuario supere los distintos niveles del juego.
 
 Para registrar un evento personalizado de tu aplicación, pasa la cadena de eventos personalizados al método [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) proporcionado por el Microsoft Store Services SDK. Puedes revisar el total de repeticiones para los eventos personalizados en la sección **Eventos personalizados** del informe de [uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) en el panel del Centro de desarrollo.
 
->**Nota**&nbsp;&nbsp;los eventos personalizados que registres en el Centro de desarrollo no están relacionados con los [eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx) y no aparecen en el **Visor de eventos**.
+> [!NOTE]
+> Los eventos personalizados que registras en el Centro de desarrollo no están relacionados con los [eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx) y no aparecen en el **Visor de eventos**.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -50,4 +48,3 @@ Para poder revisar los eventos de registro personalizado en el **informe de uso*
 * [Informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report)
 * [Método de registro](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)
 * [Microsoft Store Services SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)
-

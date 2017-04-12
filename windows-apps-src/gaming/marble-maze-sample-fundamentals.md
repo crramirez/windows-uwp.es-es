@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: cc155d7a454cabe5c0d820f5d74313dfeaf01830
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="marble-maze-sample-fundamentals"></a>Conceptos básicos sobre la muestra de Marble Maze
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este documento se describen las características fundamentales del proyecto Marble Maze, como la forma en que usa Visual C++ en el entorno de Windows Runtime, cómo se crea y se estructura, y cómo se compila. El documento también describe varias convenciones que se usan en el código.
@@ -147,7 +144,6 @@ Lee [Estructura de la aplicación Marble Maze](marble-maze-application-structure
  
 
  
-
 
 
 

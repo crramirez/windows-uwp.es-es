@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 15b12bfafea71705a9c18464461a73e3e2f05563
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ade00b4084ffb990444573a2128623c9ef29c5ef
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="enable-device-capabilities"></a>Habilitar funcionalidades de dispositivos
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tutorial describe cómo declarar funcionalidades del dispositivo en Microsoft Visual Studio. Esto permite que la aplicación use cámaras, micrófonos, sensores de ubicación y otros dispositivos.
@@ -80,5 +78,4 @@ La siguiente tabla conecta algunas de las funcionalidades a las API de Windows R
 | Perfil GATT de Bluetooth           | [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) | 
 | Bluetooth RFCOMM         | [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) | 
 | Punto de servicio (POS)   | [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) |
-
 

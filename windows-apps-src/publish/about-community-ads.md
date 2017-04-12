@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Puedes promocionar tu aplicación de manera cruzada con las aplicaciones publicadas por otros desarrolladores. Esta función se denomina &quot;anuncios de la comunidad&quot;."
+Description: "Puedes promocionar tu aplicación de manera cruzada con las aplicaciones publicadas por otros desarrolladores. Esta función se denomina anuncios de la comunidad."
 title: Acerca de los anuncios de la comunidad
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
 ms.author: wdg-dev-content
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 13963ddf9f745c6de2e6d7ef7d948f649b2f6f5e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 708f46dc0be53961d8fd26f41a933e5756720a98
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="about-community-ads"></a>Acerca de los anuncios de la comunidad
 
 Si tu aplicación usa un objeto **AdMediatorControl** o **AdControl** para mostrar anuncios en banners, puedes promocionar tu aplicación de manera cruzada con otros desarrolladores de aplicaciones en la Tienda Windows de forma gratuita. Esta función se denomina *anuncios de la comunidad*.  
@@ -44,4 +41,3 @@ Para participar en anuncios de la comunidad:
 
 * [Monetizar con anuncios](monetize-with-ads.md)
 * [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
-

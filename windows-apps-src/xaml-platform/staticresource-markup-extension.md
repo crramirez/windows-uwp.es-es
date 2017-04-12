@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 539bc6b0a43491c9ef75701bc574c7e31d2c02e7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 234d90382fb62e6f0be9683dfb7b01d9fa80a185
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="staticresource-markup-extension"></a>Extensión de marcado {StaticResource}
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso ya definido. Los recursos se definen en un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) y el uso de **StaticResource** hace referencia a la clave de ese recurso en el **ResourceDictionary**.
 
@@ -90,5 +87,4 @@ Cuando exista una clave de recurso como parte del uso de cualquier **{StaticReso
 * [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [Atributo x:Key](x-key-attribute.md)
 * [Extensión de marcado {ThemeResource}](themeresource-markup-extension.md)
-
 

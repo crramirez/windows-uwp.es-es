@@ -13,13 +13,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 43cbc8999d21d0534c4b6e557822345a69f66007
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 215cf54a5d6ed1b0c514768817cc11d1a85627e2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-input-scope-to-change-the-touch-keyboard"></a>Usar el ámbito de entrada para cambiar el teclado táctil
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -263,4 +260,3 @@ Incluye la tecla **=**.
 |------------------------------------------------------------|------------------------------------------------------------------|
 | ![Teclado táctil de Windows predeterminado](images/input-scopes/kbdpcdefault.png)<br>Misma distribución que **Default**.| ![Teclado táctil de Windows Phone para nombres o números de teléfono](images/input-scopes/kbdwpnameorphonenumber.png)<br>Incluye las teclas **;** y **@**. La tecla **&amp;123** se sustituye por la tecla **123**, que abre el teclado del teléfono (consulta **TelephoneNumber**).|
 |Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: siempre deshabilitada</li><li>Uso de mayúsculas automático: siempre habilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul> | Disponibilidad de funciones:<ul><li>Revisión ortográfica: deshabilitada de manera predeterminada, se puede habilitar</li><li>Autocorrección: deshabilitada de manera predeterminada, se puede habilitar</li><li>Uso de mayúsculas automático: deshabilitado de manera predeterminada, se puede habilitar. La primera letra de cada palabra se escribe en mayúscula.</li><li>Predicción de texto: deshabilitada de manera predeterminada, se puede habilitar</li></ul> |
-

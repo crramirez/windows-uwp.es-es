@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de las adquisiciones agregados de una aplicación durante un intervalo de fechas especificado y según otros filtros opcionales."
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de una aplicación durante un intervalo de fechas especificado y según otros filtros opcionales."
 title: "Obtener los datos de las adquisiciones de la aplicación"
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, adquisiciones de aplicaciones, app acquisitions"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9a716acb00b7a86429c444555c491b48cbc2c4b0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b6ffd8300871e06d8b93682bed8d42546d1b88fc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-app-acquisitions"></a>Obtener los datos de las adquisiciones de la aplicación
 
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos de las adquisiciones agregados en formato JSON de una aplicación pertenecientes a un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de adquisiciones](../publish/acquisitions-report.md) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados en formato JSON de una aplicación pertenecientes a un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de adquisiciones](../publish/acquisitions-report.md) del panel del Centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -34,7 +31,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud       |
+| Método | URI de solicitud       |
 |--------|----------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions``` |
 
@@ -44,7 +41,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -80,7 +77,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 | storeClient | Una de las cadenas siguientes:<ul><li><strong>Tienda de Windows Phone (cliente)</strong></li><li><strong>Tienda Windows (cliente)</strong></li><li><strong>Tienda Windows (web)</strong></li><li><strong>Compras por volumen de empresas</strong></li><li><strong>Otros</strong></li></ul> |
 | gender | Una de las cadenas siguientes:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Desconocido</strong></li></ul> |
 | market | Es una cadena que contiene el código de país ISO 3166 del mercado donde se realizó la compra. |
-| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul> |
+| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul> |
 | deviceType | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul> |
 | orderName | Es una cadena que especifica el nombre del pedido del código promocional que se usó para comprar la aplicación (esto solo es aplicable si el usuario adquirió la aplicación canjeando un código promocional). |
 
@@ -105,7 +102,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Value      | matriz  | Matriz de objetos que contienen datos de clasificación agregados. Para obtener más información sobre los datos de cada objeto, consulta la sección [valores de compra](#acquisition-values) que encontrarás a continuación.                                                                                                                      |
+| Valor      | matriz  | Una matriz de objetos que contienen los datos de adquisición agregados de la aplicación. Para más información sobre los datos de cada objeto, consulta la sección [valores de compra](#acquisition-values) que encontrarás a continuación.                                                                                                                      |
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de datos de compra de la solicitud. |
 | TotalCount | entero    | Número total de filas en el resultado de datos de la consulta.                                                                                                                                                                                                                             |
 
@@ -117,7 +114,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| date                | cadena | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| fecha                | cadena | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | applicationId       | cadena | El Id. de la Tienda de la aplicación sobre la que estás recuperando los datos de compra.                                                                                                                                                                 |
 | applicationName     | cadena | Nombre para mostrar de la aplicación.                                                                                                                                                                                                             |
 | deviceType          | cadena | Tipo de dispositivo que completó la compra. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                                  |
@@ -165,6 +162,5 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
 * [Obtener los datos del informe de errores](get-error-reporting-data.md)
-* [Obtener la clasificación de la aplicación](get-app-ratings.md)
-* [Obtener las opiniones de la aplicación](get-app-reviews.md)
-
+* [Get app ratings (Obtener la clasificación de la aplicación)](get-app-ratings.md)
+* [Get app reviews (Obtener opiniones de la aplicación)](get-app-reviews.md)

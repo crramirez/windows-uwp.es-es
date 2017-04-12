@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 9621641A-7462-425D-84CC-101877A738DA
 description: "Obtén más información sobre cómo se realiza la migración de AdMediatorControl a AdControl en las aplicaciones para UWP."
-title: Migrar de AdMediatorControl a AdControl para las aplicaciones para UWP
+title: Migrar de AdMediatorControl a AdControl
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP, anuncios, publicidad, migrar, AdMediatorControl, AdControl, ads, advertising, migrate
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 83235595a6a7f9e9b0b5d8de154d6e5d8a8db8ef
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, AdMediatorControl, AdMediatorControl, AdControl, AdControl, migrate, migrar
+ms.openlocfilehash: 71928b67d3c2799b3d8d3711f6f7e5a3610e9c76
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="migrate-from-admediatorcontrol-to-adcontrol-for-uwp-apps"></a>Migrar de AdMediatorControl a AdControl para las aplicaciones para UWP
+# <a name="migrate-from-admediatorcontrol-to-adcontrol"></a>Migrar de AdMediatorControl a AdControl
 
 Las versiones de SDK de publicidad anteriores de Microsoft permitían a las aplicaciones para la Plataforma universal de Windows (UWP) mostrar anuncios de banner mediante la clase **AdMediatorControl**, con la que los desarrolladores podían optimizar sus ingresos por anuncios con la visualización de anuncios de banner desde nuestras redes socias (AOL y AppNexus), así como AdDuplex. El [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) ya no admite la clase **AdMediatorControl**. Si tienes una aplicación existente que usa la clase **AdMediatorControl** de un SDK anterior y quieres migrarla a una aplicación para UWP que usa el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk), sigue las instrucciones de este artículo para actualizar el código de modo que use la clase **AdControl** en lugar de la clase **AdMediatorControl**. De manera opcional, puedes configurar la aplicación para la mediación de anuncios con AdDuplex, mediante un enfoque ponderado o clasificado.
 
@@ -165,4 +162,3 @@ En **Administrador de referencias**, expande **Universal Windows**, haz clic en 
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[AdControl](./code/AdvertisingSamples/MigrateToAdControl/cs/ExamplePage1.xaml.cs#Snippet5)]
-

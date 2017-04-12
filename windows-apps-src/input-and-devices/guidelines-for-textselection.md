@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 40c27746a8364ca9f22288b9bfc128dd2b317815
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70dbf24b53a36f7ee55ce387f713ce2abc79a87c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="selecting-text-and-images"></a>Seleccionar texto e imágenes
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -120,7 +117,7 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 **Para desarrolladores**
 * [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/mt185599)
 
-**Ejemplos**
+**Muestras**
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
@@ -138,7 +135,6 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
  
 
  
-
 
 
 

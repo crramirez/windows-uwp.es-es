@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5185eb704f94e33031684aef761c701398c0dbd7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e3e4ba56438746c257ac917f61d9f1703f20ecdd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="attached-properties-overview"></a>Introducción a las propiedades adjuntas
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Una *propiedad adjunta* es un concepto de XAML. Las propiedades adjuntas permiten establecer en un objeto pares adicionales de propiedad/valor, pero las propiedades no forman parte de la definición original de dicho objeto. Por lo general, las propiedades adjuntas se definen como una forma especializada de propiedad de dependencia que no tiene un contenedor de propiedades convencional en el modelo de objetos del tipo de propietario.
 
@@ -125,5 +122,4 @@ El punto en el nombre de la propiedad adjunta es una parte fundamental del patr�
 * [Inicio rápido: traducción de recursos de interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/hh943060)
 * [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)
 * [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)
-
 

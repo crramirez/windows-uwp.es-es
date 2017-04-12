@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "La sección de descripciones de la Tienda del proceso de envío de la aplicación es donde incluyes el texto y las imágenes que los clientes verán en la descripción de la Tienda de tu aplicación."
+Description: "La sección de descripciones de la Tienda del proceso de envío de la aplicación es donde incluyes el texto y las imágenes que los clientes verán en la descripción de la Tienda en tu aplicación."
 title: "Creación de descripciones de la Tienda de aplicaciones"
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dcce4d53dd095c634f893d40f87eaf69cf546f1d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 84b00674e06433625010a976f7237b26ea062d7c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-app-store-listings"></a>Creación de descripciones de la Tienda de aplicaciones
 
 
-La sección **Descripciones de la Tienda** del [proceso de envío de la aplicación](app-submissions.md) es donde proporcionas el texto y las [imágenes](app-screenshots-and-images.md) que los clientes verán en la descripción de la Tienda de tu aplicación.
+La sección de **Descripciones de la Tienda** del [proceso de envío de aplicación](app-submissions.md) es donde proporcionas el texto y las [imágenes](app-screenshots-and-images.md) que los clientes verán en la descripción de la Tienda en tu aplicación.
 
 Muchos de los campos de una **Descripción de la tienda** son opcionales, pero se recomienda proporcionar varias imágenes y tanta información como sea posible para que la lista destaque. El mínimo necesario para que el paso **Descripciones de la Tienda** se considere completado es una descripción de texto y al menos una [captura de pantalla](app-screenshots-and-images.md).
 
@@ -120,4 +117,3 @@ Escribe la dirección de correo electrónico o la dirección URL de la página w
 Si tienes una directiva de privacidad de la aplicación, escribe la dirección URL aquí. Eres responsable de garantizar que la aplicación cumpla con las leyes y normas de privacidad aplicables y de proporcionar una directiva de privacidad, si es necesario.
 
 **Importante**  Microsoft no proporciona una directiva de privacidad predeterminada para tu aplicación. De igual modo, tu aplicación no está cubierta por ninguna directiva de privacidad de Microsoft. Para determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
-

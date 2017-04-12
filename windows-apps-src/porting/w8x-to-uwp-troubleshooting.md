@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6c10376854656abe276c53a9b6778665c1d47a4b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b30d26041718a74b9e2f3b9b93440e8fdf02b6c5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="troubleshooting-porting-windows-runtime-8x-to-uwp"></a>Solución de problemas de migración de Windows Runtime 8.x a UWP
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El tema anterior era [Migración del proyecto](w8x-to-uwp-porting-to-a-uwp-project.md).
 
@@ -52,10 +49,9 @@ La información de las soluciones de la tabla está destinada a ofrecerte inform
 |---------|--------|
 | Al abrir un proyecto de Windows 10 en Visual Studio, aparece el mensaje "Se requiere una actualización de Visual Studio. Uno o varios proyectos requieren un platform SDK &lt;versión&gt; que no está instalado o se incluye como parte de una actualización futura de Visual Studio". | Consulta la sección [TargetPlatformVersion](#targetplatformversion) en este tema. |
 | Se genera una excepción System.InvalidCastException cuando se llama a InitializeComponent en un archivo xaml.cs.| Esto puede ocurrir cuando tienes más de un archivo xaml (al menos uno de los cuales está calificado como MRT) que comparten el mismo archivo xaml.cs y los elementos tienen atributos x:Name que no son coherentes entre los dos archivos xaml. Intenta agregar el mismo nombre a los mismos elementos en los dos archivos XAML u omite los nombres por completo. |
-| Si se ejecuta en el dispositivo, la aplicación finaliza o, si se inicia desde Visual Studio, se muestra el error "No se puede activar la aplicación de la Tienda Windows \[…\]. Error en la solicitud de activación con el error "Windows no pudo comunicarse con la aplicación de destino. Esto indica normalmente que se anuló el proceso de la aplicación de destino. \[…\]”. | El problema podría ser el código imprescindible que se ejecuta en tus propias páginas o en las propiedades enlazadas (u otros tipos) durante la inicialización. O bien, el problema podría producirse al analizar el archivo XAML que estaba a punto de mostrarse cuando la aplicación finalizó (si se inicia desde Visual Studio, es la página de inicio). Busca claves de recurso no válidas o prueba algunas de las instrucciones de la sección "Seguimiento de problemas" de este tema.|
+| Si se ejecuta en el dispositivo, la aplicación finaliza o, si se inicia desde VisualStudio, se muestra el error "No se puede activar la aplicación de la Tienda Windows \[…\]. Error en la solicitud de activación con el error "Windows no pudo comunicarse con la aplicación de destino. Esto indica normalmente que se anuló el proceso de la aplicación de destino. \[…\]”. | El problema podría ser el código imprescindible que se ejecuta en tus propias páginas o en las propiedades enlazadas (u otros tipos) durante la inicialización. O bien, el problema podría producirse al analizar el archivo XAML que estaba a punto de mostrarse cuando la aplicación finalizó (si se inicia desde VisualStudio, es la página de inicio). Busca claves de recurso no válidas o prueba algunas de las instrucciones de la sección "Seguimiento de problemas" de este tema.|
 | El compilador o el analizador XAML (o una excepción en tiempo de ejecución) muestra el error "*No se pudo resolver el recurso '<resourcekey>'*". | La clave de recurso no es aplicable para las aplicaciones de la Plataforma universal de Windows (UWP) (este es el caso de algunos recursos de Windows Phone, por ejemplo). Busca el recurso equivalente correcto y actualiza el marcado. Algunos ejemplos que podrías encontrar al instante son las claves del sistema como `PhoneAccentBrush`. |
 | El compilador de C# muestra el error "*No se puede encontrar el tipo o el nombre de espacio de nombres '<name>' \[...\]*" o "*El tipo o el nombre del espacio de nombres '<name>' no existe en el espacio de nombres \[...\]*" o "*El tipo o el nombre del espacio de nombres '<name>' no existe en el contexto actual*". | Es posible que esto signifique que el tipo se implemente en un SDK de extensión (aunque puede haber casos en los que la solución no sea tan fácil). Usa el contenido de referencia de las [API de Windows](https://msdn.microsoft.com/library/windows/apps/bg124285) para determinar con qué extensión implementa el SDK la API y, a continuación, usa el comando **Agregar** > **Referencia** de Visual Studio para agregar una referencia a ese SDK al proyecto. Si la aplicación está dirigida al conjunto de API que se conoce como la familia de dispositivos universales, es fundamental que uses la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para probar en tiempo de ejecución la presencia del SDK de extensión antes de llamarlas (esto se denomina código adaptable). Si existe una API universal, siempre es preferible a una API de un SDK de extensión. Para obtener más información, consulta [SDK de extensión](w8x-to-uwp-porting-to-a-uwp-project.md). |
 
 El siguiente tema es [Migración de XAML y la interfaz de usuario](w8x-to-uwp-porting-xaml-and-ui.md).
-
 

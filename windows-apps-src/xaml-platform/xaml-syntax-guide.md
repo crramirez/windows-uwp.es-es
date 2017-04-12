@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 36fb575659b5334c6215e1686aeb02d74b9f8fd5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c8d44bdbbad763ad4c24b37b3bd7760c8d630c1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-syntax-guide"></a>Guía de sintaxis XAML
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A continuación explicamos las reglas de la sintaxis XAML y la terminología que describe las restricciones o alternativas que existen en la sintaxis XAML. Este tema te resultará muy útil si no tienes experiencia en el uso del lenguaje XAML, si deseas recordar la terminología o las partes de la sintaxis, o si sientes curiosidad acerca del funcionamiento del lenguaje XAML y quieres conocerlo mejor.
 
@@ -291,7 +288,7 @@ En raras ocasiones, verás una sintaxis XAML donde el tipo de una propiedad es u
 
 ## <a name="xaml-placeholder-conventions-in-windows-runtime-reference"></a>Convenciones de marcadores de posición XAML en la referencia de Windows en tiempo de ejecución
 
-Si has consultado la sección **Sintaxis** de los temas de referencia sobre las API de Windows en tiempo de ejecución que usan XAML, probablemente hayas visto en la sintaxis bastantes marcadores de posición. La sintaxis XAML es diferente a la de las extensiones de componentes de C#, Microsoft Visual Basic o Visual C++ (C++/CX), lo que se debe a que la sintaxis XAML es una sintaxis de uso. Indica el uso final en tus archivos XAML, pero sin ser excesivamente preceptiva sobre los valores que puedes usar. Por tanto, normalmente el uso describe un tipo de gramática que mezcla literales y marcadores de posición, y define algunos de los marcadores de posición en la sección **Valores de XAML**.
+Si has consultado la sección **Sintaxis** de los temas de referencia sobre las API de Windows en tiempo de ejecución que usan XAML, probablemente hayas visto en la sintaxis bastantes marcadores de posición. La sintaxis XAML es diferente a la de las extensiones de componentes de C#, Microsoft Visual Basic o VisualC++ (C++/CX), lo que se debe a que la sintaxis XAML es una sintaxis de uso. Indica el uso final en tus archivos XAML, pero sin ser excesivamente preceptiva sobre los valores que puedes usar. Por tanto, normalmente el uso describe un tipo de gramática que mezcla literales y marcadores de posición, y define algunos de los marcadores de posición en la sección **Valores de XAML**.
 
 Cuando veas nombres de elementos o de tipos en la sintaxis XAML para una propiedad, el nombre que se muestra es para el tipo que define originalmente la propiedad. Sin embargo, el XAML de Windows Runtime admite un modelo de herencia de clases para las clases basadas en [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). Por tanto, a menudo puedes usar un atributo en una clase que no es literalmente la clase definitoria, sino que se deriva de una clase que definió en primer lugar la propiedad o atributo. Por ejemplo, puedes establecer [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) como atributo en cualquier clase derivada [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) mediante una herencia en profundidad. Por ejemplo: `<Button Visibility="Visible" />`. No tomes el nombre del elemento mostrado en cualquier sintaxis de uso de XAML de forma demasiado literal; puede que la sintaxis sea viable para elementos que representan esa clase y elementos que representan una clase derivada. En aquellos casos en que sea raro o imposible que el tipo mostrado como elemento definitorio se encuentre en un uso de la vida real, ese nombre de tipo se usa de forma deliberada en minúsculas en la sintaxis. Por ejemplo, la sintaxis que ves para **UIElement.Visibility** es:
 
@@ -322,5 +319,4 @@ Las secciones de uso de XAML también utilizan diversos marcadores de posición 
 * [Espacios de nombres XAML y asignación de espacios de nombres](xaml-namespaces-and-namespace-mapping.md)
 * [Referencias a ResourceDictionary a recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
  
-
 

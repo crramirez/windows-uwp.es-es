@@ -1,25 +1,22 @@
 ---
 author: mcleanbyron
 ms.assetid: 934F2DBF-2C7E-4B77-997D-17B9B0535D51
-description: "Usa este método en la API de envío de la Tienda Windows para confirmar un envío de aplicaciones nuevo o actualizado al Centro de desarrollo de Windows."
-title: "Confirmación de un envío de aplicación con la API de envío de la Tienda Windows"
+description: "Usa este método en la API de envío de la Tienda Windows para confirmar un envío de aplicación nuevo o actualizado al Centro de desarrollo de Windows."
+title: "Confirmar un envío de aplicación"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, confirmación de envío de aplicación"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b22143dc9f64e1f1075b0f9a2851699ca4208673
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, commit app submission, confirmar envío de aplicación"
+ms.openlocfilehash: bbfaaa016d4c45e20afec8a98a1c1d87b6dd9bd4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="commit-an-app-submission"></a>Confirmar un envío de aplicación
 
-# <a name="commit-an-app-submission-using-the-windows-store-submission-api"></a>Confirmación de un envío de aplicación con la API de envío de la Tienda Windows
 
-
-Usa este método en la API de envío de la Tienda Windows para confirmar un envío de aplicaciones nuevo o actualizado al Centro de desarrollo de Windows. La acción de confirmación alerta al Centro de desarrollo de que los datos de envío se han cargado (incluidos los paquetes e imágenes relacionados). En respuesta, el Centro de desarrollo confirma los cambios en los datos de envío para la recopilación y la publicación. Después de que la operación de confirmación se realice correctamente, los cambios en el envío se muestran en el panel del Centro de desarrollo.
+Usa este método en la API de envío de la Tienda Windows para confirmar un envío de aplicación nuevo o actualizado al Centro de desarrollo de Windows. La acción de confirmación alerta al Centro de desarrollo de que los datos de envío se han cargado (incluidos los paquetes e imágenes relacionados). En respuesta, el Centro de desarrollo confirma los cambios en los datos de envío para la recopilación y la publicación. Después de que la operación de confirmación se realice correctamente, los cambios en el envío se muestran en el panel del Centro de desarrollo.
 
 Para obtener más información sobre cómo se ajusta la operación de confirmación en el proceso de envío de una aplicación mediante la API de envío de la Tienda Windows, consulta [Administración de envíos de aplicaciones](manage-app-submissions.md).
 
@@ -35,9 +32,9 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ## <a name="request"></a>Solicitud
 
-Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del cuerpo del encabezado y la solicitud.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Method | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` |
 
@@ -46,9 +43,9 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Type   | Descripción                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -56,8 +53,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío que deseas confirmar. Para obtener más información sobre el Id. de la Tienda, consulta [Visualización de los detalles de identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| submissionId | string | Obligatorio. El identificador del envío que deseas confirmar. Esta identificación está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta para las solicitudes de [Creación de un envío de aplicaciones](create-an-app-submission.md).  |
+| applicationId | cadena | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío que deseas confirmar. Para obtener más información sobre el Id. de la Tienda, consulta [Visualización de los detalles de identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| submissionId | cadena | Obligatorio. El identificador del envío que deseas confirmar. Esta identificación está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta para las solicitudes de [Creación de un envío de aplicaciones](create-an-app-submission.md).  |
 
 <span/>
 
@@ -76,7 +73,7 @@ Authorization: Bearer <your access token>
 
 ## <a name="response"></a>Respuesta
 
-El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisfactoria a este método. Para obtener más información acerca de los valores en el cuerpo de respuesta, consulta las secciones siguientes.
+El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisfactoria a este método. Para obtener más información acerca de los valores del cuerpo de respuesta, consulta las secciones siguientes.
 
 ```json
 {
@@ -88,7 +85,7 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | cadena  | El estado del envío. Puede ser uno de los valores siguientes: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificación</li><li>Error de certif.</li><li>Lanzamiento</li><li>Error de lanz.</li></ul>  |
+| status           | cadena  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicación</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>Error de lanz.</li></ul>  |
 
 <span/>
 
@@ -108,9 +105,8 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-* [Obtención de un envío de aplicación](get-an-app-submission.md)
+* [Get an app submission (Obtener un envío de aplicación)](get-an-app-submission.md)
 * [Creación de un envío de aplicación](create-an-app-submission.md)
 * [Actualización de un envío de aplicación](update-an-app-submission.md)
-* [Eliminación de un envío de aplicación](delete-an-app-submission.md)
-* [Obtener el estado de un envío de aplicación](get-status-for-an-app-submission.md)
-
+* [Eliminar un envío de aplicación](delete-an-app-submission.md)
+* [Get the status of an app submission (Obtener el estado de un envío de aplicación)](get-status-for-an-app-submission.md)

@@ -2,21 +2,17 @@
 title: Filtrado de texturas con mapas MIP
 description: "Un mapa MIP es una secuencia de texturas, cada una de las cuales es una representación de la misma imagen con una resolución progresivamente inferior. El alto y ancho de cada imagen, o nivel, en el mapa MIP es una potencia de dos inferior al nivel anterior."
 ms.assetid: 28E863A2-C776-40E4-8551-9851DF7EC93E
-keywords:
-- Filtrado de texturas con mapas MIP
+keywords: Filtrado de texturas con mapas MIP
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d5644fb4e57962de06874d15f7c9e97ed74106b4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 65c775a265f7c5a0b15f76d867a9403308fc7128
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-filtering-with-mipmaps"></a>Filtrado de texturas con mapas MIP
 
 
@@ -64,7 +60,6 @@ Direct3D puede realizar automáticamente el filtrado de texturas de los mapas MI
  
 
  
-
 
 
 

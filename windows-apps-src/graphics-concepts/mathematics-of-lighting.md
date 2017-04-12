@@ -2,21 +2,17 @@
 title: "Cálculos de iluminación"
 description: "El modelo de luz de Direct3D cubre la iluminación de ambiente, difusa, especular y de emisión. Es suficiente flexibilidad para resolver una gran variedad de situaciones de iluminación. La cantidad total de luz en una escena se conoce como iluminación global."
 ms.assetid: D0521F56-050D-4EDF-9BD1-34748E94B873
-keywords:
-- "Cálculos de iluminación"
+keywords: "Cálculos de iluminación"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a7745e9a8c15398a3305d32e828e119832d8250c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fd26d7253de1422f81ff4c0b9bf94d45cd02b2fc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="mathematics-of-lighting"></a>Cálculos de iluminación
 
 
@@ -69,7 +65,7 @@ Todos los cálculos de iluminación se realizan en el espacio de modelo al trans
 </tr>
 <tr class="odd">
 <td align="left"><p>[Luz especular](specular-lighting.md)</p></td>
-<td align="left"><p><em>La iluminación especular</em> identifica los resaltados especulares brillantes que se producen cuando la luz llega a una superficie del objeto y se refleja hacia la cámara. La iluminación especular es más intensa que la luz difusa y sale más rápidamente por la superficie del objeto. Lleva más tiempo calcular la iluminación especular que la iluminación difusa. Sin embargo, la ventaja de usarla es que agrega detalles importantes a una superficie.</p></td>
+<td align="left"><p><em>La iluminación especular</em> identifica los resaltados especulares brillantes que se producen cuando la luz alcanza la superficie de un objeto y se refleja hacia la cámara. La iluminación especular es más intensa que la luz difusa y sale más rápidamente por la superficie del objeto. Lleva más tiempo calcular la iluminación especular que la iluminación difusa. Sin embargo, la ventaja de usarla es que agrega detalles importantes a una superficie.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Luz de emisión](emissive-lighting.md)</p></td>
@@ -96,7 +92,6 @@ Todos los cálculos de iluminación se realizan en el espacio de modelo al trans
  
 
  
-
 
 
 

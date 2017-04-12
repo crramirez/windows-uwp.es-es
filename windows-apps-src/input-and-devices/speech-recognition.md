@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 79e40abde2265a8e6f760bd00768a18b06f69116
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 49cd1e7ac0fceff7e39679f337ea4c029fa98806
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="speech-recognition"></a>Reconocimiento de voz
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -118,7 +115,7 @@ catch (Exception exception)
 
 3.  **Gramáticas SRGS** ([**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)).
 
-    Una gramática SRGS (Especificación de gramática de reconocimiento de voz) es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formato XML definido por [SRGS versión 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
+    Una gramáticaSRGS (Especificación de gramática de reconocimiento de voz) es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formatoXML definido por [SRGS versión 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
 
 4.  **Restricciones de los comandos de voz** ([**SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220))
 
@@ -172,7 +169,7 @@ Si usas una restricción basada en una lista de palabras o frases, o bien una re
 -   La pantalla **Has dicho**, si lo que el usuario ha dicho pudiera interpretarse como más de un posible resultado.
 -   La pantalla **Te he oído** o la pantalla de error.
 
-La siguiente imagen muestra un ejemplo del flujo entre pantallas de un reconocedor de voz que usa una restricción basada en un archivo de gramática SRGS. En este ejemplo, el reconocimiento de voz fue correcto.
+La siguiente imagen muestra un ejemplo del flujo entre pantallas de un reconocedor de voz que usa una restricción basada en un archivo de gramáticaSRGS. En este ejemplo, el reconocimiento de voz fue correcto.
 
 ![initial reconocimiento screen for a constraint based on a sgrs grammar file](images/speech-listening-initial.png)
 
@@ -224,7 +221,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
  
 
  
-
 
 
 

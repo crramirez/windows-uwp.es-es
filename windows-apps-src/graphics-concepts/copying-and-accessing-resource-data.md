@@ -2,21 +2,17 @@
 title: Copia y acceso a datos de recursos
 description: "Los indicadores de uso indican cómo la aplicación pretende utilizar los datos de recursos para colocar recursos en el área de mayor rendimiento de memoria posible. Los datos de recursos se copian en los recursos para que la CPU o la GPU puedan acceder a estos sin que ello afecte al rendimiento."
 ms.assetid: 6A09702D-0FF2-4EA6-A353-0F95A3EE34E2
-keywords:
-- Copia y acceso a datos de recursos
+keywords: Copia y acceso a datos de recursos
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1dc6853a5675b6e22300650a5c44519436c391d0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e26e6abf4b15584f8c04a837dcc6bd23aad0f1d0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="copying-and-accessing-resource-data"></a>Copia y acceso a datos de recursos
 
 
@@ -139,7 +135,6 @@ Por lo tanto, si una aplicación quiere asignar un recurso que se origina en la 
  
 
  
-
 
 
 

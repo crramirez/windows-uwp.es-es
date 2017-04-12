@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 835d5393-427f-4155-a737-d509ea1de99f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 51076aed4ae55956164efaf3a3c01461e4b7338b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7e37846e7696213093e84d7409c6900e0aad5ed5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="whats-new-in-windows"></a>Novedades de Windows
 
 Tanto la vista previa de la versión 1607 de Windows 10 como las actualizaciones de las herramientas de desarrollador de Windows te siguen proporcionando las herramientas, características y experiencias que permite la tecnología de la Plataforma universal de Windows. [Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) o para aprender a usar el [código de aplicación existente en Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
@@ -34,4 +31,3 @@ API de chat | La nueva clase [ChatSyncManager](https://msdn.microsoft.com/librar
 Windows IoT | Windows 10 IoT Core te permite crear aplicaciones de IoT en la familiaridad de Windows y ahora está disponible en Raspberry Pi 3, el panel de Raspberry Pi más reciente.
 API para multimedia | Las nuevas API MediaBreak en el espacio de nombres Windows.Media.Playback permiten programar y administrar las interrupciones multimedia al reproducir contenido multimedia con MediaSource y MediaPlaybackItem. Las nuevas API de AudioGraph en el espacio de nombres Windows.Media.Audio agregan procesamiento de audio espacial que te permite asignar emisores de posición 3D y agentes de escucha a los nodos del gráfico de audio.
 API de mapas | La clase [MapControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx#_blank) se ha mejorado para permitir que los desarrolladores obtengan una región visible que está cerca de la cámara, excluidas las regiones que están alejadas y cerca del horizonte en una vista profundamente inclinada. La clase [MapLocationFinder](https://msdn.microsoft.com/library/windows/apps/windows.services.maps.maplocationfinder.aspx#_blank) se ha extendido, lo que permite a los desarrolladores optimizar el tráfico de red con geocodificación inversa mediante la especificación de una precisión deseada. Los desarrolladores pueden ahora aprovecharse de la descarga de mapas sin conexión con el método [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx#_blank) y especificando la latitud y longitud. Para obtener más información, consulta [Iniciar la aplicación Mapas de Windows](https://msdn.microsoft.com/windows/uwp/launch-resume/launch-maps-app#_blank).
-

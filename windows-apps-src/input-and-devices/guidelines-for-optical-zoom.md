@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 567c3bc66c78924bc33ec3a336db6e2ce8592d68
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5598f5278b6d4aff1dd9ebd786c6a344e14529ec
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="optical-zoom-and-resizing"></a>Zoom óptico y cambio de tamaño
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -85,8 +82,8 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
 
 **Ejemplos**
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Muestras de archivo**
@@ -101,7 +98,6 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hello
-description: "Un dispositivo complementario Windows Hello es un dispositivo que puede actuar de forma conjunta con tu escritorio Windows 10 para mejorar la experiencia de autenticación del usuario. Con el marco del dispositivo complementario de Windows Hello, un dispositivo complementario puede proporcionar una experiencia enriquecida para Windows Hello, incluso cuando la biometría no está disponible (por ejemplo, si el equipo con Windows 10 no tiene una cámara para la autenticación facial o un dispositivo lector de huellas digitales)."
+description: "Un dispositivo complementario Windows Hello es un dispositivo que puede actuar de forma conjunta con tu escritorio Windows 10 para mejorar la experiencia de autenticación del usuario. Con el marco del dispositivo complementario de Windows Hello, un dispositivo complementario puede proporcionar una experiencia enriquecida para Windows Hello, incluso cuando la biometría no está disponible (por ejemplo, si el equipo con Windows 10 no tiene una cámara para la autenticación facial o un dispositivo lector de huellas digitales)."
 author: awkoren
 ms.author: alkoren
 ms.date: 02/08/2017
@@ -9,17 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 7a6935e61e6f62fce8335651e0cef261ed491507
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 050aa91e8d2a25fa80ec95d2fcdebf886430e37d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueo de Windows con dispositivos complementarios (IoT) de Windows Hello
 
 Un dispositivo complementario Windows Hello es un dispositivo que puede actuar de forma conjunta con tu escritorio Windows 10 para mejorar la experiencia de autenticación del usuario. Con el marco del dispositivo complementario de Windows Hello, un dispositivo complementario puede proporcionar una experiencia enriquecida para Windows Hello, incluso cuando la biometría no está disponible (por ejemplo, si el equipo con Windows 10 no tiene una cámara para la autenticación facial o un dispositivo lector de huellas digitales).
 
-> **Nota** El marco del dispositivo complementario Windows Hello es una característica especializada no disponible para todos los desarrolladores de aplicaciones. Para usar este marco, la aplicación debe estar aprovisionada específicamente por Microsoft e incluir la funcionalidad *secondaryAuthenticationFactor* restringida en su manifiesto. Para obtener una autorización, ponte en contacto con [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
+> **Nota** El marco del dispositivo complementario Windows Hello es una característica especializada no disponible para todos los desarrolladores de aplicaciones. Para usar este marco, la aplicación debe estar aprovisionada específicamente por Microsoft e incluir la funcionalidad *secondaryAuthenticationFactor* restringida en su manifiesto. Para obtener su autorización, ponte en contacto con [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
 
 ## <a name="introduction"></a>Introducción
 
@@ -689,4 +687,3 @@ La clave para conseguir las protecciones de seguridad enumeradas anteriormente e
 - Protección contra la clonación del dispositivo complementario Windows Hello
 - Protección contra interceptaciones cuando se envían las claves HMAC en el registro del equipo
 - Comprobación de la disponibilidad de la señal de presencia del usuario
-

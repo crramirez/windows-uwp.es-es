@@ -11,17 +11,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 94a92c184f4c695caf29cb7a185842ccd72e4c53
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: be99225c0691c8813a071a314ab3df4573fb11f5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="mouse-interactions"></a>Interacciones de mouse
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Optimiza el diseño de tu aplicación de la Plataforma universal de Windows (UWP) para la entrada táctil y obtén compatibilidad básica con ratón de manera predeterminada.
+Optimiza el diseño de tu aplicación de la Plataforma universal de Windows (UWP) para la entrada táctil y obtén compatibilidad básica con mouse de manera predeterminada.
 
  
 
@@ -68,7 +65,7 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 <td align="left"><p>Clic con el botón secundario para seleccionar y ordenar</p></td>
 <td align="left"><p>Haz clic con el botón secundario para mostrar la barra de navegación (si está disponible) y la barra de la aplicación con comandos globales. Haz clic con el botón secundario en un elemento para seleccionarlo y mostrar la barra de la aplicación con comandos contextuales para el elemento seleccionado.</p>
 <div class="alert">
-<strong>Nota</strong>  Haz clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de la aplicación no son comportamientos de interfaz de usuario adecuados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
+<strong>Nota</strong>  Haz clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de aplicaciones no son comportamientos de interfaz de usuario adecuados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
 </div>
 <div>
  
@@ -156,7 +153,6 @@ Si necesitas personalizar el cursor del mouse:
  
 
  
-
 
 
 

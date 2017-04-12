@@ -1,26 +1,24 @@
 ---
 author: mcleanbyron
 Description: "Después de definir el experimento en el panel del Centro de desarrollo y codificar el experimento en la aplicación, estás listo para activar el experimento y usar el panel del Centro de desarrollo para revisar los resultados del experimento."
-title: Administrar el experimento en el panel del Centro de desarrollo
+title: Administrar tu experimento en el panel
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP, Microsoft Store Services SDK, pruebas A/B, experimentos, A/B tests, experiments
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bc73d2b63b94f9700fc5013d3ea51a92cabd7ca3
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
+ms.openlocfilehash: 67f09d20f937d86319e9f27362c69dea21d579ae
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
-# <a name="manage-your-experiment-in-the-dev-center-dashboard"></a>Administrar el experimento en el panel del Centro de desarrollo
+# <a name="manage-your-experiment-in-the-dashboard"></a>Administrar tu experimento en el panel
 
 Después de [definir el experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md) y [codificar la aplicación para el experimento](code-your-experiment-in-your-app.md), estás listo para activar el experimento y usar el panel del Centro de desarrollo para revisar los resultados del experimento. Después de haber obtenido todos los datos que necesitas, puedes terminar el experimento y elegir si quieres seguir usando los valores de variables del control de variación para todas tus aplicaciones o cambiar a los valores de variables de otra de tus variaciones.
 
-> **Nota**&nbsp;&nbsp;Cuando activas un experimento, el Centro de desarrollo inicia inmediatamente la recopilación de datos de las aplicaciones que están pensadas para registrar los datos del experimento. Sin embargo, pueden pasar varias horas antes de que los datos del experimento aparezcan en el panel.
+> [!NOTE]
+> Cuando activas un experimento, el Centro de desarrollo empieza inmediatamente a recopilar datos de las aplicaciones que están pensadas para registrar los datos del experimento. Sin embargo, pueden pasar varias horas antes de que los datos del experimento aparezcan en el panel.
 
 Para ver un tutorial que muestra de principio a fin el proceso de crear y ejecutar un experimento, consulta [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
@@ -35,8 +33,8 @@ Cuando estés satisfecho con los parámetros del experimento en el panel y hayas
   * Haz clic en el vínculo **Activar** del experimento. El experimento se agrega a la sección **Experimentos activos** en la parte superior de la página.
   * Haz clic en el nombre del experimento, desplázate a la parte inferior de la página del experimento y haz clic en **Activar**.
 
-> **Importante**&nbsp;&nbsp;Después de activar un experimento, ya no se pueden modificar sus parámetros a menos que hayas hecho clic en la casilla **Experimento editable** al crear el experimento. Te recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento.
-
+> [!IMPORTANT]
+> Después de activar un experimento, ya no se pueden modificar sus parámetros a menos que hayas hecho clic en la casilla **Experimento editable** al crear el experimento. Te recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento.
 
 ## <a name="review-the-results-of-your-experiment"></a>Revisar los resultados del experimento
 
@@ -46,7 +44,8 @@ Cuando estés satisfecho con los parámetros del experimento en el panel y hayas
   * La sección **Resumen de resultados** enumera los objetivos del experimento y el porcentaje de velocidad de conversión para cada variación.
   * La sección **Detalles de los resultados** proporciona más detalles para cada variación de todos los objetivos del experimento, incluidas vistas, conversiones, usuarios únicos, tasa de conversión, % diferencial, confianza y significación. La *confianza* es una medida estadística la confiabilidad de una estimación, que calcula el margen de error. La *importancia* es una medida estadística, basada en el tamaño de muestra para determinar la probabilidad de que un resultado no se deba al azar, sino que se atribuya a una causa específica.
 
-  >**Nota**&nbsp;&nbsp;El Centro de desarrollo solo notifica el primer evento de conversión de cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
+> [!NOTE]
+> El Centro de desarrollo solo notifica el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
 
 
 ## <a name="complete-your-experiment"></a>Completar el experimento
@@ -60,9 +59,8 @@ Cuando estés satisfecho con los parámetros del experimento en el panel y hayas
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear un proyecto y definir variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [Programar tu aplicación para los experimentos](code-your-experiment-in-your-app.md)
+* [Creación de un proyecto y definición de variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [Programar tu aplicación para los experimentos.](code-your-experiment-in-your-app.md)
 * [Definir el experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
-

@@ -2,21 +2,17 @@
 title: "Compresión por bloques de las texturas"
 description: "La compatibilidad de la compresión por bloques (BC) para las texturas se ha ampliado en Direct3D 11 para incluir los algoritmos BC6H y BC7."
 ms.assetid: 63506C46-BF14-464B-B20C-8B8F359E7AFE
-keywords:
-- "Compresión por bloques de las texturas"
+keywords: "Compresión por bloques de las texturas"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3930d5d2350fcbb7878edec8a5a93dfd4c36caee
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3288232e0010c1b23d58992cfd6c9f038a74a552
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-block-compression"></a>Compresión por bloques de las texturas
 
 
@@ -103,7 +99,6 @@ El formato BC7 puede seleccionar diferentes modos de codificación para cada blo
  
 
  
-
 
 
 

@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 24C5F796-5FB8-4B5D-B428-C3154B3098BD
 description: "Usa este método en la API de envío de la Tienda Windows para actualizar un envío ya existente de un paquete piloto."
-title: "Actualizar un envío de paquete piloto mediante la API de envío de la Tienda Windows"
+title: "Actualizar un envío de paquete piloto"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP, API de envío de la Tienda Windows, envío de paquetes piloto, actualización"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dbd8447808c1446805f179fd1181ae88dd847083
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, flight submission, envío piloto, update, actualizar"
+ms.openlocfilehash: 89ef86cdf3243322f3d8725e40ef13bf43f31a8e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="update-a-package-flight-submission-using-the-windows-store-submission-api"></a>Actualizar un envío de paquete piloto mediante la API de envío de la Tienda Windows
+# <a name="update-a-package-flight-submission"></a>Actualizar un envío de paquete piloto
 
 
 Usa este método en la API de envío de la Tienda Windows para actualizar un envío ya existente de un paquete piloto. Después de actualizar correctamente un envío mediante este método, debes [confirmar el envío](commit-a-flight-submission.md) para su ingesta y publicación.
@@ -48,7 +45,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -56,9 +53,9 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. Id. de la Tienda de la aplicación para la cual quieres actualizar un envío de paquete piloto. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Obligatorio. Id. del paquete piloto para el cual quieres actualizar un envío. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto de una aplicación](get-flights-for-an-app.md).  |
-| submissionId | string | Obligatorio. Identificador del envío que se debe actualizar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un envío de paquete piloto](create-a-flight-submission.md).  |
+| applicationId | cadena | Obligatorio. Id. de la Tienda de la aplicación para la cual quieres actualizar un envío de paquete piloto. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | cadena | Obligatorio. Id. del paquete piloto para el cual quieres actualizar un envío. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto de una aplicación](get-flights-for-an-app.md).  |
+| submissionId | cadena | Obligatorio. Identificador del envío que se debe actualizar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un envío de paquete piloto](create-a-flight-submission.md).  |
 
 <span/>
 
@@ -96,7 +93,7 @@ Content-Type: application/json
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -138,7 +135,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -173,4 +170,3 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Commit a package flight submission (Confirmar un envío de paquete piloto)](commit-a-flight-submission.md)
 * [Delete a package flight submission (Eliminar un envío de paquete piloto)](delete-a-flight-submission.md)
 * [Get the status of a package flight submission (Obtener el estado de un envío de paquete piloto)](get-status-for-a-flight-submission.md)
-

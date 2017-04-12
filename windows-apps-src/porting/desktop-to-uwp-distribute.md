@@ -1,39 +1,36 @@
 ---
-author: awkoren
-Description: "Distribuir la aplicación para UWP convertida con el puente de escritorio a UWP"
+author: normesta
+Description: "Distribuir la aplicación para UWP convertida con el Puente de dispositivo de escritorio a UWP"
 Search.Product: eADQiWindows 10XVcnh
-title: "Distribuir la aplicación para UWP convertida con el Puente de dispositivo de escritorio a UWP"
-ms.author: alkoren
-ms.date: 02/08/2017
+title: Puente de dispositivo de escritorio a UWP, distribuir
+ms.author: normesta
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 0acb144d79c1d05d68cc7430f4cc99efeadc7c6b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ee38bd22b6d4737cf5bb64eb489365e3f83efd53
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="distribute-apps-converted-with-the-desktop-bridge"></a>Distribuir aplicaciones convertidas con el Puente de dispositivo de escritorio
+# <a name="desktop-to-uwp-bridge-distribute"></a>Puente de dispositivo de escritorio a UWP: distribuir
 
 Hay tres métodos principales para implementar la aplicación convertida: la Tienda Windows, la instalación de prueba y el registro de archivos dinámico.  
 
 ## <a name="windows-store"></a>Tienda Windows
 
-La Tienda Windows es la forma más cómoda para que los clientes obtengan tu aplicación. Para empezar, rellena el formulario en [Bring your existing apps and games to the Windows Store with the Desktop Bridge](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge) (Llevar las aplicaciones y los juegos existentes a la Tienda Windows con el puente de escritorio). Microsoft se pondrá en contacto contigo para iniciar el proceso de incorporación. 
+La Tienda Windows es la forma más cómoda para que los clientes obtengan tu aplicación. Para empezar, rellena el formulario en [Bring your existing apps and games to the Windows Store with the Desktop Bridge](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge) (Llevar las aplicaciones y los juegos existentes a la Tienda Windows con el puente de escritorio). Microsoft se pondrá en contacto contigo para iniciar el proceso de incorporación.
 
-Ten en cuenta que debes ser el desarrollador o el editor de la aplicación o el juego para incorporarlos a la Tienda Windows. Como tal, asegúrate de que tu nombre y dirección de correo coincidan con el sitio web que envías como la dirección URL a continuación, para que podemos validar que eres el desarrollador o el editor.
+Ten en cuenta que debes ser el desarrollador o el editor de la aplicación o el juego para incorporarlos a la TiendaWindows. Como tal, asegúrate de que tu nombre y dirección de correo coincidan con el sitio web que envías como la dirección URL a continuación, para que podemos validar que eres el desarrollador o el editor.
 
 ## <a name="sideloading"></a>Instalación de prueba
 
 La instalación de prueba proporciona una forma fácil para implementar en varios equipos. Es especialmente útil en escenarios empresariales o de línea de negocio (LOB) en los que quieres un mayor control sobre la experiencia de distribución, pero no quieres participar en el certificado de la Tienda.
 
-Antes de implementar la aplicación mediante transferencia local, tienes que iniciar sesión con un certificado. Para obtener información sobre cómo crear un certificado, consulta [Firmar el paquete .appx](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx). 
+Antes de implementar la aplicación mediante transferencia local, tienes que iniciar sesión con un certificado. Para obtener información sobre cómo crear un certificado, consulta [Firmar el paquete de la aplicación de Windows](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx).
 
-Para importar un certificado que creaste anteriormente, sigue estos pasos. Puedes importar el certificado directamente con CERTUTIL o puedes instalarlo desde un paquete AppX que hayas firmado, tal como lo hará el cliente. 
+Para importar un certificado que creaste anteriormente, sigue estos pasos. Puedes importar el certificado directamente con CERTUTIL o puedes instalarlo desde un paquete de la aplicación de Windows que hayas firmado, tal como lo hará el cliente.
 
 Para instalar el certificado mediante CERTUTIL, ejecuta el siguiente comando desde un símbolo del sistema de administrador:
 
@@ -41,9 +38,9 @@ Para instalar el certificado mediante CERTUTIL, ejecuta el siguiente comando des
 Certutil -addStore TrustedPeople <testcert.cer>
 ```
 
-Para importar el certificado desde el paquete AppX como lo haría un cliente:
+Para importar el certificado desde el paquete de la aplicación de Windows como lo haría un cliente:
 
-1.    En el Explorador de archivos, haz clic en un paquete AppX que hayas firmado con un certificado de prueba y elige **Propiedades** en el menú contextual.
+1.    En el Explorador de archivos, haz clic en un paquete de la aplicación de Windows que hayas firmado con un certificado de prueba y elige **Propiedades** en el menú contextual.
 2.    Haz clic o pulsa la pestaña **Firmas digitales**.
 3.    Haz clic o pulsa en el certificado y elige **Detalles**.
 4.    Haz clic o pulsa **Ver certificado**.
@@ -64,7 +61,7 @@ but terminated in a rootcertificate which is not trusted by the trust provider.
 in the app package must be trusted."
 ```
 
-Ahora que se ha establecido la confianza del certificado, existen dos formas de instalar el paquete: a través de PowerShell o, simplemente, al hacer doble clic en el archivo del paquete AppX para instalarlo.  Para instalar a través de PowerShell, ejecuta el cmdlet siguiente:
+Ahora que se ha establecido la confianza del certificado, existen dos formas de instalar el paquete: a través de PowerShell o, simplemente, al hacer doble clic en el archivo del paquete de la aplicación de Windows para instalarlo.  Para instalar a través de PowerShell, ejecuta el cmdlet siguiente:
 
 ```powershell
 Add-AppxPackage <MyApp>.appx
@@ -74,13 +71,13 @@ Add-AppxPackage <MyApp>.appx
 
 El registro de archivos dinámico resulta útil para la depuración cuando los archivos se colocan en el disco en una ubicación a la que puedes acceder y que puedes actualizar con facilidad. Además, este tipo de registro no requiere firma ni certificado.  
 
-Para implementar la aplicación durante el desarrollo, ejecuta el siguiente cmdlet de PowerShell: 
+Para implementar la aplicación durante el desarrollo, ejecuta el siguiente cmdlet de PowerShell:
 
 ```Add-AppxPackage –Register AppxManifest.xml```
 
 Para actualizar los archivos .exe o .dll de la aplicación, simplemente reemplaza los archivos existentes en el paquete con los nuevos, aumenta el número de versión en AppxManifest.xml y, a continuación, vuelve a ejecutar el comando anterior.
 
-Ten en cuenta esto: 
+Ten en cuenta esto:
 
 * Cualquier unidad en la que instales la aplicación convertida debe tener el formato NTFS.
 * Una aplicación convertida se ejecuta siempre como el usuario interactivo.

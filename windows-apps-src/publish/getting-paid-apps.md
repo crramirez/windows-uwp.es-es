@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: af5c30aae3927f901bb93fd2c79bfee202754a1e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c27e06491b66fea4f451b70309a9a8c3802aff18
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-paid"></a>Proceso de pago
 Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y complementos, como las ganancias de Microsoft Advertising.
 
@@ -23,7 +20,7 @@ Aquí encontrarás información importante que necesitarás para asegurarte de q
 
 ## <a name="store-fee"></a>Comisión de la Tienda
 
-Cuando te [registras para obtener una cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkID=615100), aceptas el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058). Este acuerdo explica la relación que tienes con Microsoft en cuanto a la venta de aplicaciones en la Tienda Windows, incluida la comisión de la Tienda que Microsoft cobra por cada venta realizada.
+Cuando te [registras para obtener una cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkID=615100), aceptas el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058). Este acuerdo explica la relación que tienes con Microsoft en cuanto a la venta de aplicaciones en la TiendaWindows, incluida la comisión de la Tienda que Microsoft cobra por cada venta realizada.
 
 En la mayoría de los casos, la comisión de la Tienda es del 30%. Las comisiones están establecidas oficialmente en el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058). Revisa siempre ese documento si tienes alguna duda.
 
@@ -31,7 +28,7 @@ La comisión de la Tienda Windows se aplica a todas las ventas de aplicaciones r
 
 ## <a name="price-tiers"></a>Franjas de precios
 
-La franja de precios establece el precio de venta en todos los países donde eliges distribuir tu aplicación. Puedes ofrecer tu aplicación de forma gratuita o elegir un precio que los clientes deben pagar para adquirir tu aplicación. Las franjas de precios empiezan por 0,99 USD, con incrementos adicionales (1,29 USD, 1,49 USD, 1,99 USD, etc.). Estos incrementos entre franjas de precios aumentan a medida que el precio sube.
+La franja de precios establece el precio de venta en todos los países donde eliges distribuir tu aplicación. Puedes ofrecer tu aplicación de forma gratuita o elegir un precio que los clientes deben pagar para adquirir tu aplicación. Las franjas de precios empiezan por 0,99USD, con incrementos adicionales (1,29USD, 1,49USD, 1,99USD, etc.). Estos incrementos entre franjas de precios aumentan a medida que el precio sube.
 
 > **Nota** Estas franjas de precios también se aplican a cualquier complemento que ofrezcas desde la aplicación.
 
@@ -61,7 +58,6 @@ Una vez hayas establecido el estado de suspensión de pago en **Activado**, todo
  
 
  
-
 
 
 

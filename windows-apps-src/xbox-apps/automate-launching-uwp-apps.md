@@ -2,15 +2,13 @@
 title: Automatizar el inicio de las aplicaciones para la Plataforma universal de Windows (UWP) de Windows 10
 description: "Los desarrolladores pueden usar la activación de protocolos y la activación del inicio para automatizar el inicio de los juegos o aplicaciones para UWP para las pruebas automatizadas."
 author: listurm
-translationtype: Human Translation
-ms.sourcegitcommit: c5d0f685f4c733cbe4ba4c07aab565b888ddfe58
 ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar el inicio de aplicaciones de Windows 10 para UWP
 
-# Automatizar el inicio de aplicaciones de Windows 10 para UWP
-
-## Introducción
+## <a name="introduction"></a>Introducción
 
 Los desarrolladores tienen varias opciones para lograr el inicio automatizado de las aplicaciones para la Plataforma universal de Windows (UWP). En este documento exploramos los métodos para iniciar una aplicación mediante la activación de protocolos y del inicio.
 
@@ -20,7 +18,7 @@ La *activación del inicio* es el inicio normal de una aplicación, como por eje
 
 Con cada método de activación, tienes la posibilidad de usar la línea de comandos o una aplicación de selector. Para todos los métodos de activación, si la aplicación se está ejecutando, la activación la llevará al primer plano (lo que la reactiva) y proporcionará argumentos de activación nuevos. Esto ofrece flexibilidad para usar los comandos de activación para proporcionar mensajes nuevos a la aplicación. Es importante tener en cuenta que el proyecto debe compilarse e implementarse para que el método de activación ejecute la aplicación recién actualizada. 
 
-## Activación de protocolos
+## <a name="protocol-activation"></a>Activación de protocolos
 
 Sigue estos pasos para configurar la activación de protocolos para las aplicaciones: 
 
@@ -37,7 +35,7 @@ Sigue estos pasos para configurar la activación de protocolos para las aplicaci
 
 Ahora que la activación de protocolos está configurada, tienes dos opciones (la línea de comandos o la aplicación de selector) para activar la aplicación mediante el protocolo. 
 
-### Línea de comandos
+### <a name="command-line"></a>Línea de comandos
 
 Para activar la aplicación con un protocolo, usa la línea de comandos con el inicio de comando seguido del nombre de protocolo definido previamente, dos puntos (":") y cualquier parámetro. Los parámetros pueden ser cualquier cadena arbitraria. Sin embargo, para aprovechar las funcionalidades del identificador uniforme de recursos (URI), es recomendable seguir el formato de URI estándar: 
 
@@ -57,7 +55,7 @@ Ejemplos:
 
 La activación de línea de comandos de protocolo admite caracteres Unicode hasta un límite 2038 caracteres en el URI sin procesar. 
 
-### Aplicación de selector
+### <a name="launcher-application"></a>Aplicación de selector
 
 Para iniciar, crea una aplicación independiente que admita la API de WinRT. En el ejemplo siguiente se muestra código de C++ para iniciar con la activación de protocolos en un programa de selector, donde **PackageURI** es el URI de la aplicación con los argumentos correspondientes; por ejemplo `myapplication:` o `myapplication:protocol activation arguments`.
 
@@ -100,7 +98,7 @@ Uri(URI));
 ```
 La activación de protocolos con la aplicación de selector tiene las mismas limitaciones de argumentos que la activación de protocolos con la línea de comandos. Ambas admiten caracteres Unicode hasta un límite 2038 caracteres en el identificador URI sin procesar. 
 
-## Activación de selector
+## <a name="launch-activation"></a>Activación de selector
 
 También puedes iniciar la aplicación mediante la activación de selector. No se requiere ninguna configuración, pero se necesita el identificador de modelo de usuario de aplicación (AUMID) de la aplicación para UWP. El AUMID es el nombre de familia de paquete seguido de un signo de exclamación y el identificador de la aplicación. 
 
@@ -115,7 +113,7 @@ La mejor forma de obtener el nombre de familia de paquete es completar estos pas
 
 El identificador de la aplicación se puede encontrar en el archivo **Package.appxmanifest** (abierto en la vista XML), bajo el elemento `<Applications>`.
 
-### Línea de comandos
+### <a name="command-line"></a>Línea de comandos
 
 Con el SDK de Windows10 se instala una herramienta para realizar una activación de inicio de una aplicación para UWP. Se puede ejecutar desde la línea de comandos y usa el AUMID de la aplicación para iniciarse como argumento.
 
@@ -131,7 +129,7 @@ Debe tener este aspecto:
 
 Esta opción no admite argumentos de línea de comandos. 
 
-### Aplicación de selector
+### <a name="launcher-application"></a>Aplicación de selector
 
 Puedes crear una aplicación independiente que admita el uso de COM para el inicio. En el ejemplo siguiente se muestra el código de C++ para iniciarse con la activación de inicio en un programa selector. Con este código, puedes crear un objeto **ApplicationActivationManager** y llamar a **ActivateApplication** pasando el AUMID encontrado anteriormente y los argumentos correspondientes. Para obtener más información acerca de los otros parámetros, consulta el tema sobre el [método IApplicationActivationManager::ActivateApplication (MSDN)](https://msdn.microsoft.com/library/windows/desktop/hh706903(v=vs.85).aspx).
 
@@ -177,7 +175,7 @@ Manager. hr = 0x%08lx \n", AUMID, hr);
 
 Este método admite los argumentos que se pasan, a diferencia del método para iniciar anterior (es decir, la línea de comandos).
 
-## Aceptar argumentos
+## <a name="accepting-arguments"></a>Aceptar argumentos
 
 Para aceptar los argumentos pasados en la activación de la aplicación para UWP, debes agregar código a la aplicación. Para determinar si se produjo la activación de protocolo o la activación de inicio, invalida el evento **OnActivated** y comprueba el tipo de argumento y, después, obtén la cadena sin procesar o los valores analizados previamente del objeto de URI. 
 
@@ -189,7 +187,7 @@ void OnActivated(IActivatedEventArgs^ args)
         // Check for launch activation
         if (args->Kind == ActivationKind::Launch)
         {
-            auto launchArgs = static_cast<LaunchActivatedEventArgs^>(args); 
+            auto launchArgs = static_cast<LaunchActivatedEventArgs^>(args);    
 Platform::String^ argval = launchArgs->Arguments;
             // Manipulate arguments …
         }
@@ -204,15 +202,9 @@ Platform::String^ argval = launchArgs->Arguments;
     }
 ```
 
-## Resumen
+## <a name="summary"></a>Resumen
 En resumen, puedes usar distintos métodos para iniciar la aplicación para UWP. Dependiendo de los requisitos y de los casos de uso, algunos métodos pueden resultar más adecuados que otros. 
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 - [UWP en Xbox One](index.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

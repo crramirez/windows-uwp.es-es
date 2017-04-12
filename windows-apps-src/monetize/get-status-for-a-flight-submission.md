@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: C78176D6-47BB-4C63-92F8-426719A70F04
 description: "Usa este método en la API de envío de la Tienda Windows para obtener el estado de un envío de paquete piloto."
-title: "Obtener el estado de un envío de paquete piloto con la API de envío de la Tienda Windows"
+title: "Obtener el estado de un envío de paquete piloto"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, API de envío de la Tienda Windows, Windows Store submission API, envío de paquete piloto, flight submission, estado, status"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5bc88cd8c7cdf2e56ac719d33cc2abf228b0803b
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, flight submission, envío piloto, status, estado"
+ms.openlocfilehash: 06367fd2110b66fc36babf137a12b482df4f7d40
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-the-status-of-a-package-flight-submission-using-the-windows-store-submission-api"></a>Obtener el estado de un envío de paquete piloto con la API de envío de la Tienda Windows
+# <a name="get-the-status-of-a-package-flight-submission"></a>Obtener el estado de un envío de paquete piloto
 
 
 
@@ -37,7 +34,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions{submissionId}/status``` |
 
@@ -48,7 +45,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -56,8 +53,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío del paquete piloto cuyo estado quieres obtener. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Obligatorio. El Id. del paquete piloto que contiene el envío cuyo estado quieres obtener. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
+| applicationId | cadena | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío del paquete piloto cuyo estado quieres obtener. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | cadena | Obligatorio. El Id. del paquete piloto que contiene el envío cuyo estado quieres obtener. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
 | submissionId | cadena | Obligatorio. El identificador del envío para el que quieres obtener el estado. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta para las solicitudes de [creación de un envío de paquete piloto](create-a-flight-submission.md).  |
 
 <span/>
@@ -94,8 +91,8 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada co
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | cadena  | El estado del envío. Puede ser uno de los valores siguientes: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
-| statusDetails           | object  |  Contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores. Para obtener más información, consulta [Recurso de detalles de estado](manage-flight-submissions.md#status-details-object). |
+| status           | cadena  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicación</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
+| statusDetails           | objeto  |  Contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores. Para obtener más información, consulta [Recurso de detalles de estado](manage-flight-submissions.md#status-details-object). |
 
 
 <span/>
@@ -114,11 +111,10 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de paquetes piloto](manage-flight-submissions.md)
 * [Obtener un envío de aplicación](get-an-app-submission.md)
-* [Crear un envío de aplicación](create-an-app-submission.md)
+* [Create an app submission (Crear un envío de aplicación)](create-an-app-submission.md)
 * [Confirmar un envío de aplicación](commit-an-app-submission.md)
-* [Actualizar un envío de aplicación](update-an-app-submission.md)
+* [Actualización de un envío de aplicación](update-an-app-submission.md)
 * [Eliminar un envío de aplicación](delete-an-app-submission.md)
-

@@ -2,25 +2,22 @@
 author: mcleanbyron
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: "Usa estos métodos en la API de envío de la Tienda Windows para recuperar los datos de las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows."
-title: "Obtener datos de aplicación mediante la API de envío de la Tienda Windows"
+title: "Obtener datos de la aplicación"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP, API de envío de la Tienda Windows, Windows Store submission API, datos de la aplicación, app data"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 756f11cdc440a891658c2311cc61199dec3d6d1f
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, app data, datos de la aplicación"
+ms.openlocfilehash: dc0aa91aa417689866aa6bd666f0446c0eb2e242
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-app-data-using-the-windows-store-submission-api"></a>Obtener datos de aplicación mediante la API de envío de la Tienda Windows
+# <a name="get-app-data"></a>Obtener datos de la aplicación
 
 Usa los métodos siguientes de la API de envío de la Tienda Windows para obtener datos de aplicaciones existentes en tu cuenta del Centro de desarrollo. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
->**Nota:**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. Este permiso se habilita para cuentas de desarrollador en fases y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
+>**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. Este permiso se habilita para cuentas de desarrollador en fases y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
 
 Antes de poder usar estos métodos, la aplicación ya debe existir en tu cuenta del Centro de desarrollo. Para crear o administrar envíos de aplicaciones, consulta los métodos de [Administrar envíos de aplicaciones](manage-app-submissions.md).
 
@@ -155,11 +152,11 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción           |
 |-----------------|---------|------------------------|
-| flightId            | cadena  | El identificador del paquete piloto. Proporciona este valor el Centro de desarrollo.  |
+| flightId            | cadena  | El identificador para el paquete piloto. Este valor está proporcionado por el Centro de desarrollo.  |
 | friendlyName           | cadena  | El nombre del paquete piloto, según lo especifica el desarrollador.   |
 | lastPublishedFlightSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para el paquete piloto.   |
 | pendingFlightSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para el paquete piloto.  |    
-| groupIds           | matriz  | Una matriz de cadenas que contienen los identificadores de los grupos de pilotos asociados con el paquete piloto. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
+| groupIds           | matriz  | Una matriz de cadenas que contengan los identificadores de los grupos piloto asociados con el paquete piloto. Para obtener más información acerca de los grupos piloto, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
 | rankHigherThan           | cadena  | El nombre descriptivo del paquete piloto que está clasificado inmediatamente por debajo del paquete piloto actual. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
 
 
@@ -181,8 +178,8 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción                 |
 |-----------------|---------|------------------------------|
-| id            | string  | Identificador del envío.    |
-| resourceLocation   | string  | Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para el envío.            |
+| id            | cadena  | Identificador del envío.    |
+| resourceLocation   | cadena  | Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para el envío.            |
  
 <span/>
 
@@ -194,4 +191,3 @@ Este recurso tiene los siguientes valores.
 * [Obtener una aplicación](get-an-app.md)
 * [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)
 * [Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md)
-

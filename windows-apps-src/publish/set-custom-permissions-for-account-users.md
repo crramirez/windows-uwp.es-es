@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 23d8c14bfdbfc05a1397fa67cb831d38ec092233
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 2ce4ddc5240281618fefa16587067c4ad9382b2e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-custom-permissions-for-account-users"></a>Establecimiento de permisos personalizados para usuarios de cuentas
 
 Al agregar usuarios a tu cuenta, puedes proporcionarles un [rol estándar](manage-account-users.md#roles-and-permissions) o puedes personalizar sus permisos para proporcionarle al usuario el nivel de acceso adecuado. Algunos de estos permisos se aplican a toda la cuenta, y algunos pueden haberse concedido a todos los productos o haberse limitado a determinados productos. 
@@ -184,4 +181,3 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
 </table>
 
 \* Los permisos marcados con un asterisco (*) conceden acceso a características que no están disponibles para todas las cuentas. Si tu cuenta no se ha habilitado para acceder a estas características, las selecciones de estos permisos no tendrán efecto alguno.  
-

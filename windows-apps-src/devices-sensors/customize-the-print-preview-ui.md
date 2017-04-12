@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fa1a8c487d3fef2b0caa322d81c0ebdbdfe3865f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 568c11a41552cb4e63d2e9b685ff5fc84abbe70b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar la interfaz de usuario de la vista previa de impresión
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -189,6 +187,5 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Directrices de diseño de impresión](https://msdn.microsoft.com/library/windows/apps/Hh868178)
-* [//Vídeo de compilación 2015: desarrollo de aplicaciones que imprimen en Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
+* [//Vídeo de compilación 2015: Developing apps that print in Windows 10 (Desarrollar aplicaciones que imprimen en Windows 10)](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [Muestra de impresión para UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984)
-

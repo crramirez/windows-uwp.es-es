@@ -2,25 +2,21 @@
 title: Mapas en un grupo de iconos
 description: "Cuando un recurso se crea como un recurso de streaming, los iconos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de iconos. Un grupo de iconos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación)."
 ms.assetid: 58B8DBD5-62F5-4B94-8DD1-C7D57A812185
-keywords:
-- Mapas en un grupo de iconos
+keywords: Mapas en un grupo de iconos
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9c8ba46cdd1968fd72307849005f91aa5e872260
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bc5787333c266491e432abbb3c5039f73bdeb1f2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="mappings-are-into-a-tile-pool"></a>Mapas en un grupo de iconos
 
 
-Cuando un recurso se crea como un recurso de streaming, los iconos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de iconos. Un grupo de iconos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación). El sistema operativo y el controlador de pantalla administran este grupo de memoria y una aplicación comprende fácilmente la superficie de memoria. Los recursos de streaming asignan áreas de 64 KB apuntando a ubicaciones de un grupo de iconos. Una ventaja de esta configuración es que permite que varios recursos compartan y reutilicen los mismos iconos, y que los mismos iconos vuelvan a usarse en distintas ubicaciones dentro de un recurso, si lo prefieres.
+Cuando un recurso se crea como un recurso de streaming, los iconos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de iconos. Un grupo de iconos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación). El sistema operativo y el controlador de pantalla administran este grupo de memoria y una aplicación comprende fácilmente la superficie de memoria. Los recursos de streaming asignan áreas de 64KB apuntando a ubicaciones de un grupo de iconos. Una ventaja de esta configuración es que permite que varios recursos compartan y reutilicen los mismos iconos, y que los mismos iconos vuelvan a usarse en distintas ubicaciones dentro de un recurso, si lo prefieres.
 
 El coste de la flexibilidad de rellenar los iconos de un recurso a partir de un grupo de iconos es que el recurso tiene que hacer el trabajo de definición y mantenimiento de la asignación de los iconos del grupo de iconos que representan los iconos necesarios para el recurso. Se pueden cambiar las asignaciones de los iconos. Además, no todos los iconos de un recurso deben asignarse simultáneamente, un recurso puede tener asignaciones **nulas**. Una asignación **nula** define un icono que no está disponible desde el punto de vista de que el recurso no puede obtener acceso a él.
 
@@ -34,13 +30,13 @@ Nos gustaría explorar qué almacenamiento podría necesitar la tabla de página
 
 Supongamos que cada entrada de la tabla de página es de 64 bits.
 
-En el peor de los casos de llamada de tabla de página para una sola superficie, dada la limitación de recursos en Direct3D 11, supongamos que se crea un recurso de streaming con un formato de 128 bits por elemento (por ejemplo, un flotante RGBA). En ese caso, un icono de 64 KB contiene solo 4096 píxeles. El tamaño máximo admitido de [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 (pero con solo un mapa MIP único) necesitaría aproximadamente 1 GB de almacenamiento en la tabla de página si se llena del todo (sin incluir los mapas MIP) con entradas de tabla de 64 bits. Si se agregan mapas MIP, aumentará el almacenamiento de tabla de página (en el peor de los casos) completamente asignado en aproximadamente un tercio, 1,3 GB.
+En el peor de los casos de llamada de tabla de página para una sola superficie, dada la limitación de recursos en Direct3D 11, supongamos que se crea un recurso de streaming con un formato de 128 bits por elemento (por ejemplo, un flotante RGBA). En ese caso, un icono de 64KB contiene solo 4096 píxeles. El tamaño máximo admitido de [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 (pero con solo un mapa MIP único) necesitaría aproximadamente 1GB de almacenamiento en la tabla de página si se llena del todo (sin incluir los mapas MIP) con entradas de tabla de 64 bits. Si se agregan mapas MIP, aumentará el almacenamiento de tabla de página (en el peor de los casos) completamente asignado en aproximadamente un tercio, 1,3GB.
 
 Este caso daría acceso a aproximadamente 10,6 terabytes de memoria direccionable. Puede haber un límite en la cantidad de memoria direccionable, pero podría reducir estas cantidades, quizás alrededor del rango de terabytes.
 
-Otro caso a tener en cuenta es un único recurso de streaming de [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) de 16384\*16384 con un formato de 32 bits por elemento, incluidos mapas MIP. El espacio necesario en una tabla de página completa sería aproximadamente de 170 KB con entradas de tabla de 64 bits.
+Otro caso a tener en cuenta es un único recurso de streaming de [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) de 16384\*16384 con un formato de 32 bits por elemento, incluidos mapas MIP. El espacio necesario en una tabla de página completa sería aproximadamente de 170KB con entradas de tabla de 64 bits.
 
-Por último, veamos un ejemplo con un formato BC, por ejemplo, BC7 con 128 bits por icono de 4x4 píxeles. Es un byte por píxel. Un objeto [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 con mapas MIP necesitaría aproximadamente 85 MB para rellenar completamente esta memoria en una tabla de página. No está mal teniendo en cuenta que esto permite que un recurso de streaming expanda 550 gigapíxeles (512 GB de memoria en este caso).
+Por último, veamos un ejemplo con un formato BC, por ejemplo, BC7 con 128 bits por icono de 4x4 píxeles. Es un byte por píxel. Un objeto [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 con mapas MIP necesitaría aproximadamente 85MB para rellenar completamente esta memoria en una tabla de página. No está mal teniendo en cuenta que esto permite que un recurso de streaming expanda 550 gigapíxeles (512GB de memoria en este caso).
 
 En la práctica, no se definiría nada parecido a estas asignaciones completas, dado que la cantidad de memoria física disponible no permitiría nada cercano a la cantidad asignada y de referencia a la vez. Pero, con un grupo de iconos, las aplicaciones pueden optar por volver a usar los iconos (como un ejemplo simple, reutilizar un icono de color "negro" para grandes regiones en negro de una imagen). Es eficaz si se usa el grupo de iconos (es decir, asignaciones de tabla de página) como una herramienta de compresión de memoria.
 
@@ -86,7 +82,6 @@ El contenido inicial de la tabla de página es **nulo** para todas las entradas.
  
 
  
-
 
 
 

@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c5e02bcd4912a5db5d691f4172baeff2378433e4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6f50ad39420f3154c437a58d19971ed01e638528
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="use-the-gyrometer"></a>Usar el girómetro
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -141,7 +139,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar los valores de girómetro moviendo el dispositivo o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 
@@ -182,4 +180,3 @@ Estos nuevos valores se escriben en los bloques de texto que se encuentran en el
  ## <a name="related-topics"></a>Temas relacionados
 
 * [Muestra del girómetro](http://go.microsoft.com/fwlink/p/?linkid=241379)
-

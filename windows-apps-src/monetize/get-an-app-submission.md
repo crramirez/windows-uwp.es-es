@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: BF296C25-A2E6-48E4-9D08-0CCDB5FAE0C8
 description: "Usa este método en la API de envío de la Tienda Windows para obtener datos para un envío de aplicación existente."
-title: "Obtener un envío de aplicación con la API de envío de la Tienda Windows"
+title: "Obtener un envío de aplicación"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, API de envío de la Tienda Windows, Windows Store submission API, envío de aplicación, app submission"
-translationtype: Human Translation
-ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
-ms.openlocfilehash: 1763ba9ebf95c37afbbb219244010f0d6e7cfee4
-ms.lasthandoff: 02/08/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, app submission, envío de aplicación"
+ms.openlocfilehash: 2ecdb66818c020dc3bc608fbd65a97d43b8688ab
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-an-app-submission-using-the-windows-store-submission-api"></a>Obtener un envío de aplicación con la API de envío de la Tienda Windows
+# <a name="get-an-app-submission"></a>Obtener un envío de aplicación
 
 
 Usa este método en la API de envío de la Tienda Windows para obtener datos para un envío de aplicación existente. Para obtener más información sobre el proceso de creación un envío de aplicación mediante la API de envío de la Tienda Windows, consulta [Administrar envíos de aplicación](manage-app-submissions.md).
@@ -35,7 +32,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId} ``` |
 
@@ -46,7 +43,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -85,7 +82,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada co
     "marketSpecificPricings": {},
     "sales": [],
     "priceId": "Tier2",
-    "isAdvancedPricingModel": "true"
+    "isAdvancedPricingModel": true
   },
   "visibility": "Public",
   "targetPublishMode": "Manual",
@@ -94,13 +91,17 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada co
     "en-us": {
       "baseListing": {
         "copyrightAndTrademarkInfo": "",
-        "keywords": [],
+        "keywords": [
+           "epub"
+        ],
         "licenseTerms": "",
         "privacyPolicy": "",
         "supportContact": "",
         "websiteUrl": "",
         "description": "Description",
-        "features": [],
+        "features": [
+          "Free ebook reader"
+        ],
         "releaseNotes": "",
         "images": [
           {
@@ -111,9 +112,13 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada co
           }
         ],
         "recommendedHardware": [],
-        "title": "ApiTestApp For Devbox"
+        "title": "Contoso ebook reader"
       },
-      "platformOverrides": {}
+      "platformOverrides": {
+        "Windows81": {
+          "description": "Ebook reader for Windows 8.1"
+        }
+      }
     }
   },
   "hardwarePreferences": [
@@ -157,7 +162,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada co
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -194,7 +199,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Crear un envío de aplicación](create-an-app-submission.md)
 * [Confirmar un envío de aplicación](commit-an-app-submission.md)
-* [Actualizar un envío de aplicación](update-an-app-submission.md)
+* [Actualización de un envío de aplicación](update-an-app-submission.md)
 * [Eliminar un envío de aplicación](delete-an-app-submission.md)
-* [Obtener el estado de un envío de aplicación](get-status-for-an-app-submission.md)
-
+* [Get the status of an app submission (Obtener el estado de un envío de aplicación)](get-status-for-an-app-submission.md)

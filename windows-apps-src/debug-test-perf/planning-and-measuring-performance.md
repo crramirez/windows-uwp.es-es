@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f66617e3131399a1cfcac17f258cc3b42c6810d2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d80ff77c380d8c4f03cb2ef415126cba46d77062
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="planning-for-performance"></a>Planeación del rendimiento
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, puedes realizar mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos.
@@ -197,5 +195,4 @@ Si es necesario hacer cambios, hazlos y vuelve a instrumentar o probar y repite 
 ## <a name="optimizing"></a>Optimización
 
 Optimizar las rutas de código crítico para el rendimiento de la aplicación es lo que más tiempo conlleva. La creación de perfiles te lo indicará. A menudo, existe un equilibrio entre la creación de software que cumpla con buenas prácticas de diseño y la escritura de código que funcione en la optimización más elevada. Suele ser mejor dar prioridad a la productividad del desarrollador y a un buen diseño del software en las áreas donde no importa tanto el rendimiento.
-
 

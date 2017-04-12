@@ -1,7 +1,7 @@
 ---
 author: joannaleecy
 title: "Monetización para juegos"
-description: "Implementa anuncios de banner, anuncios intersticiales en vídeo y compras desde la aplicación para juegos para Plataforma universal de Windows (UWP) en Windows 10."
+description: "Implementa anuncios de banner, anuncios intersticiales en vídeo y compras desde la aplicación para juegos para Plataforma universal de Windows (UWP) en Windows10."
 ms.assetid: 79f4e177-d8e7-45d3-8a78-31d4c2fe298a
 ms.author: joanlee
 ms.date: 02/08/2017
@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, juegos, monetización, games, monetization"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: eccff6f037890fdd375eb150520db99a67aa718d
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="monetization-for-games"></a>Monetización para juegos
 
@@ -54,7 +52,7 @@ Las compras desde el juego son productos que se compran dentro de un juego. Tamb
 
 Puedes crear dos tipos de complementos en la Tienda: _duraderos_ o _consumibles_. Los complementos duraderos son artículos que persisten durante un período de tiempo especificado y se pueden comprar una sola vez hasta que expiran. Los complementos consumibles son artículos que se puedan comprar y usar una y otra vez.
 
-Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es decir, si son _administrados por el desarrollador_ o _administrados por la Tienda_ (esta característica está disponible a partir de Windows 10, versión 1607). Con un complemento consumible administrado por el desarrollador, es tu responsabilidad hacer un seguimiento de saldo del artículo para el jugador; con un complemento consumible administrado por la Tienda, la Tienda Windows hace el seguimiento de saldo del artículo por ti. Para obtener más información, consulta [Introducción a los complementos consumibles](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es decir, si son _administrados por el desarrollador_ o _administrados por la Tienda_ (esta característica está disponible a partir de Windows10, versión 1607). Con un complemento consumible administrado por el desarrollador, es tu responsabilidad hacer un seguimiento de saldo del artículo para el jugador; con un complemento consumible administrado por la Tienda, la Tienda Windows hace el seguimiento de saldo del artículo por ti. Para obtener más información, consulta [Introducción a los complementos consumibles](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Crear compras desde el juego
 
@@ -165,7 +163,7 @@ Los anuncios de banner y los anuncios intersticiales en vídeo pueden mostrarse 
 
 Las clases [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) e [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) incluidas en Microsoft Store Services SDK, que forma parte del espacio de nombres [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aspx), se usan para mostrar anuncios en los juegos.
 
-Para empezar, descarga e instala [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) con Visual Studio 2015. Para obtener más información, consulta [Características disponibles en el SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk#features-available-in-the-sdk).
+Para empezar, descarga e instala [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) con VisualStudio2015. Para obtener más información, consulta [Características disponibles en el SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk#features-available-in-the-sdk).
 
 #### <a name="implementation-guides"></a>Guías de implementación
 
@@ -180,7 +178,7 @@ Durante el desarrollo, puedes usar los valores de prueba que se muestran a conti
 |AdType             | AdUnitId  | AppId                              |
 |-------------------|-----------|------------------------------------|
 |Anuncios de banner         |10865270   |3f83fe91-d6be-434d-a0ae-7351c5a997f1|
-|Anuncios intersticiales   |11389925   |d25517cb-12d4-4699-8bdc-52040c712cab|
+|Anuncios intersticiales    |11389925   |d25517cb-12d4-4699-8bdc-52040c712cab|
 
 Algunos procedimientos recomendados destinados a ayudarte en el proceso de diseño e implementación son los siguientes:
 
@@ -225,8 +223,8 @@ Elige entre varios tipos de campañas que pueden ayudarte a aumentar la base de 
 |Tipo de campaña             | Los anuncios para el juego aparecen en...                                                                                                                                                                   |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |De pago                      |Aplicaciones que coinciden con el dispositivo o la categoría del juego.                                                                                                                                                   |
-|Comunidad gratuita            |Aplicaciones publicadas por otros desarrolladores que también participan en campañas de anuncios de la comunidad. Para obtener más información, consulta [Acerca de los anuncios de la comunidad](https://msdn.microsoft.com/windows/uwp/publish/about-community-ads).|
-|Interno gratuito                |Solo las aplicaciones que hayas publicado. Para obtener más información, consulta [Acerca de los anuncios internos](https://msdn.microsoft.com/windows/uwp/publish/about-house-ads).                                                            |
+|Comunidad gratuita               |Aplicaciones publicadas por otros desarrolladores que también participan en campañas de anuncios de la comunidad. Para obtener más información, consulta [Acerca de los anuncios de la comunidad](https://msdn.microsoft.com/windows/uwp/publish/about-community-ads).|
+|Interno gratuito                   |Solo las aplicaciones que hayas publicado. Para obtener más información, consulta [Acerca de los anuncios internos](https://msdn.microsoft.com/windows/uwp/publish/about-house-ads).                                                            |
 
 ## <a name="related-links"></a>Vínculos relacionados
 

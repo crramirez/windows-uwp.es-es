@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 78278741-09A4-4406-A112-9AF3C73F5C16
 description: "Usa este método en la API de envío de la Tienda Windows para recuperar información sobre un complemento de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows."
-title: "Obtener un complemento mediante la API de envío de la Tienda Windows"
+title: Obtener un complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, Windows Store submission API, complemento, add-on, producto desde la aplicación, in-app product, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e000c435b8a271085872bfb1ce42dd09352847c5
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, add-on, complemento, in-app product, producto desde la aplicación, IAP, IAP"
+ms.openlocfilehash: a79c93c1ed7d38b4de1da2bbd05456fd0884692e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-an-add-on-using-the-windows-store-submission-api"></a>Obtener un complemento mediante la API de envío de la Tienda Windows
+# <a name="get-an-add-on"></a>Obtener un complemento
 
 
 
@@ -28,7 +25,7 @@ Usa este método en la API de envío de la Tienda Windows para recuperar informa
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
@@ -36,7 +33,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` |
 
@@ -47,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -76,7 +73,7 @@ Authorization: Bearer <your access token>
 
 ## <a name="response"></a>Respuesta
 
-En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada correcta a este método. Para obtener más información acerca de los valores en el cuerpo de la respuesta, consulta [Recurso de complemento](manage-add-ons.md#add-on-object).
+El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisfactoria a este método. Para obtener más información acerca de los valores en el cuerpo de la respuesta, consulta [Recurso de complemento](manage-add-ons.md#add-on-object).
 
 ```json
 {
@@ -116,9 +113,8 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-* [Administrar envíos de complemento](manage-add-on-submissions.md)
+* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Administración de envíos de complementos](manage-add-on-submissions.md)
 * [Obtener todos los complementos](get-all-add-ons.md)
 * [Crear un complemento](create-an-add-on.md)
 * [Eliminar un complemento](delete-an-add-on.md)
-

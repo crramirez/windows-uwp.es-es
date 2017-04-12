@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ce908bd14065143f71062bf5792d256c7ac775e9
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 8ce325c212b9f5aba11ab35f3cfcfeea9a44bcbe
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="respond-to-customer-feedback"></a>Responder a los comentarios de los clientes
 
 Puedes usar el [informe de comentarios](feedback-report.md) para revisar los comentarios que los clientes de Windows 10 dejaron sobre tu aplicación en el Centro de opiniones y luego responder directamente a los comentarios. Puedes publicar tus respuestas en el Centro de opiniones para que todos lo vean (como comentarios individuales o al actualizar el estado de un comentario y agregar una descripción), para indicar a los clientes sobre nuevas funciones o correcciones de errores o para pedir comentarios más específicos sobre cómo mejorar la aplicación. También puedes enviar tu respuesta por correo electrónico directamente al cliente que envió el comentario.
@@ -64,4 +61,3 @@ Independientemente del método que uses para responder a los comentarios de un c
 > **Nota** Los clientes pueden notificar a Microsoft sobre la recepción de una respuesta inapropiada de un desarrollador a un comentario. Pueden también optar por no recibir las respuestas de los comentarios por correo electrónico.
 
 La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. No obstante, si crees que el contenido de los comentarios de un cliente sobre tu producto es inadecuado, envía una [incidencia de soporte técnico](http://go.microsoft.com/fwlink/p/?LinkID=401178).
-

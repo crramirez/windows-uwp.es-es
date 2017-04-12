@@ -1,25 +1,22 @@
 ---
 author: mcleanbyron
-description: "Usa este método en la API de envío de la Tienda Windows para obtener información acerca del lanzamiento de paquetes para el envío de paquetes piloto."
-title: "Obtener información acerca del lanzamiento de paquete para el envío de paquetes piloto con la API de envío de la Tienda Windows"
+description: "Usa este método en la API de envío de la Tienda Windows para obtener información sobre el lanzamiento de paquetes para el envío de paquete piloto."
+title: "Obtener la información de lanzamiento para un envío piloto"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, API de envío de la Tienda Windows, Windows Store submission API, lanzamiento de paquete, package rollout, envío de paquete piloto, flight submission"
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, package rollout, lanzamiento de paquete, flight submission, envío piloto"
 ms.assetid: 397f1b99-2be7-4f65-bcf1-9433a3d496ad
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: d47bd0a5df654ba723c1c7650ea9779ee5962993
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: a1c12c7cb0e9a32502396bfa1da49351f63163e0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="get-rollout-info-for-a-flight-submission"></a>Obtener la información de lanzamiento para un envío piloto
 
-# <a name="get-package-rollout-info-for-a-package-flight-submission-using-the-windows-store-submission-api"></a>Obtener información acerca del lanzamiento de paquete para el envío de paquetes piloto con la API de envío de la Tienda Windows
 
-
-Usa este método en la API de envío de la Tienda Windows para obtener información acerca del [lanzamiento de paquetes](../publish/gradual-package-rollout.md) para el envío de paquetes piloto. Para obtener más información acerca del proceso de creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows, consulta [Administrar envíos de paquetes piloto](manage-flight-submissions.md).
+Usa este método en la API de envío de la Tienda Windows para obtener información acerca del [lanzamiento de paquetes](../publish/gradual-package-rollout.md) para el envío de paquete piloto. Para obtener más información acerca del proceso de creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows, consulta [Administrar envíos de paquetes piloto](manage-flight-submissions.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -33,7 +30,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ## <a name="request"></a>Solicitud
 
-Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de utilización y descripciones del encabezado y de los parámetros de la solicitud.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del encabezado y de los parámetros de la solicitud.
 
 | Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
@@ -46,7 +43,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -54,8 +51,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El identificador de la Tienda de la aplicación que contiene el envío del paquete piloto con la información acerca del lanzamiento de paquetes cuyo estado quieres obtener. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Obligatorio. El identificador del paquete piloto que contiene el envío con la información acerca del lanzamiento de paquetes cuyo estado quieres obtener. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto de una aplicación](get-flights-for-an-app.md).  |
+| applicationId | cadena | Obligatorio. El identificador de la Tienda de la aplicación que contiene el envío del paquete piloto con la información acerca del lanzamiento de paquetes cuyo estado quieres obtener. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | cadena | Obligatorio. El identificador del paquete piloto que contiene el envío con la información acerca del lanzamiento de paquetes cuyo estado quieres obtener. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto de una aplicación](get-flights-for-an-app.md).  |
 | submissionId | cadena | Obligatorio. El identificador del envío con la información acerca del lanzamiento de paquetes que quieres obtener. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un envío de paquete piloto](create-a-flight-submission.md).  |
 
 <span/>
@@ -80,7 +77,7 @@ El siguiente ejemplo muestra el cuerpo de la respuesta JSON a una llamada correc
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 25,
+    "packageRolloutPercentage": 25.0,
     "packageRolloutStatus": "PackageRolloutInProgress",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -91,7 +88,7 @@ Si el lanzamiento de paquetes gradual no está habilitado en el envío del paque
 ```json
 {
     "isPackageRollout": false,
-    "packageRolloutPercentage": 0,
+    "packageRolloutPercentage": 0.0,
     "packageRolloutStatus": "PackageRolloutNotStarted",
     "fallbackSubmissionId": "0"
 }
@@ -114,4 +111,3 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Lanzamiento gradual del paquete](../publish/gradual-package-rollout.md)
 * [Administrar envíos de paquete piloto mediante la API de envío de la Tienda Windows](manage-flight-submissions.md)
 * [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-

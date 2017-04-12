@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: bc3a34d16f8245ef2e932c46e76ce965ce8755b7
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 84cc1c7347b71a174b25635188ef2972c2bb39d9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>Elegir y guardar los tonos con el esquema de URI ms-tonepicker
 
 En este tema se describe cómo usar el esquema de URI **ms-tonepicker:**. Este esquema de URI puede usarse para:
@@ -102,7 +99,7 @@ Los argumentos que puedes pasar para mostrar el protector de tono son los siguie
 
 | Valores devueltos | Tipo | Valores posibles | Descripción |
 |--------------|------|-------|-------------|
-| Resultado | Int32 | 0: correcto.<br>1: cancelado por el usuario.<br>2: archivo no válido.<br>3: tipo de contenido de archivo no válido.<br>4: el archivo supera el tamaño de tono máximo (1 MB en Windows 10).<br>5: el archivo supera la duración máxima de 40 segundos.<br>6: el archivo está protegido por administración de derechos digitales.<br>7: parámetros no válidos. | Resultado de la operación del selector. |
+| Resultado | Int32 | 0: correcto.<br>1: cancelado por el usuario.<br>2: archivo no válido.<br>3: tipo de contenido de archivo no válido.<br>4: el archivo supera el tamaño de tono máximo (1MB en Windows 10).<br>5: el archivo supera la duración máxima de 40 segundos.<br>6: el archivo está protegido por administración de derechos digitales.<br>7: parámetros no válidos. | Resultado de la operación del selector. |
 <br>
 **Ejemplo: Guardar un archivo de música local como un tono**
 
@@ -202,4 +199,3 @@ using (var connection = new AppServiceConnection())
     }
 }
 ```
-

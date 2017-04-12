@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
 description: "Usa este método en la API de envío de la Tienda Windows para recuperar los datos de todos los complementos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows."
-title: "Obtener todos los complementos mediante la API de envío de la Tienda Windows"
+title: Obtener todos los complementos
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, API de envío de la Tienda Windows, Windows Store submission API, complementos, add-ons, productos desde la aplicación, in-app products, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 568dfb5dd47414a6ca4bb0c52ab36437bd119b73
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, add-ons, complementos, in-app products, productos desde la aplicación, IAPs, IAP"
+ms.openlocfilehash: bb31d8cbe60703aff179913648556f408ba65586
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-all-add-ons-using-the-windows-store-submission-api"></a>Obtener todos los complementos mediante la API de envío de la Tienda Windows
+# <a name="get-all-add-ons"></a>Obtener todos los complementos
 
 
 
@@ -28,7 +25,7 @@ Usa este método en la API de envío de la Tienda Windows para recuperar datos d
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
@@ -36,7 +33,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
 
@@ -47,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -145,7 +142,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de solicitud inicial se establece en 10, pero hay 100 complementos registrados en la cuenta, el cuerpo de la respuesta incluirá un valor de @nextLink de ```inappproducts?skip=10&top=10```, lo que indica que puedes llamar a ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10``` para solicitar los 10 complementos siguientes. |
+| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de la solicitud inicial se establece en 10, pero hay 100 complementos registrados en la cuenta, el cuerpo de la respuesta incluirá un valor @nextLink de ```inappproducts?skip=10&top=10```, lo que indica que puedes llamar a ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10``` para solicitar los 10 complementos siguientes. |
 | value            | matriz  |  Una matriz que contiene objetos que proporcionan información sobre cada complemento. Para obtener más información, consulta [Recurso de complemento](manage-add-ons.md#add-on-object).   |
 | totalCount   | entero  | Número de objetos de la aplicación en la matriz *value* del cuerpo de la respuesta.                                                                                                                                                 |
 
@@ -164,9 +161,8 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de complemento](manage-add-on-submissions.md)
 * [Obtener un complemento](get-an-add-on.md)
 * [Crear un complemento](create-an-add-on.md)
 * [Eliminar un complemento](delete-an-add-on.md)
-

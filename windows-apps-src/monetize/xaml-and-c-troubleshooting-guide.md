@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anuncios, publicidad, AdControl, solución de problemas, XAML, c#"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0d5ba07f3a77f360dcb45c7139a7301cdb623dbb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c48b265ded1ef5030a1e038806751f0f3379679b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-and-c-troubleshooting-guide"></a>Guía de solución de problemas de XAML y C#
 
 En este tema encontrarás soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de XAML.
@@ -277,4 +274,3 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
  
 
  
-

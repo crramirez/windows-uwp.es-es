@@ -2,21 +2,17 @@
 title: "Configurar la funcionalidad de la galería de símbolos de profundidad"
 description: "En esta sección se describen los pasos para configurar el búfer de la galería de símbolos de profundidad y el estado de la galería de símbolos de profundidad para la fase de fusión de salida."
 ms.assetid: B3F6CDAA-93ED-4DC1-8E69-972C557C7920
-keywords:
-- "Configurar la funcionalidad de la galería de símbolos de profundidad"
+keywords: "Configurar la funcionalidad de la galería de símbolos de profundidad"
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6814e5ee5aa99558830af4da3b43d102048f8bcb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9064c65732287777c90fe3987cda61c087e49508
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsconfiguringdepth-stencilfunctionalityspanconfiguring-depth-stencil-functionality"></a><span id="direct3dconcepts.configuring_depth-stencil_functionality"></span>Configurar la funcionalidad de la galería de símbolos de profundidad
 
 
@@ -102,4 +98,3 @@ Un sombreador puede leer un búfer inactivo de la galería de símbolos de profu
 [Canalización de gráficos](graphics-pipeline.md)
 
 [Fase de fusión de salida](https://msdn.microsoft.com/library/windows/desktop/bb205120)
-

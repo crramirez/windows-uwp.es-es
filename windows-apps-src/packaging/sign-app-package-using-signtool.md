@@ -9,18 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6fbcf24984fde4b86e94481d6ad1104a827a8c31
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5cbff0011a4a96c61d7f7bad7e57bd130e09c39b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="sign-an-app-package-using-signtool"></a>Firmar un paquete de aplicación con SignTool
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **SignTool** es una herramienta de línea de comandos que se usa para firmar un paquete de aplicación o un lote de aplicaciones con un certificado. El certificado puede crearlo el usuario (con fines de prueba) o emitirlo una empresa (para distribución). Firmar un paquete de aplicación proporciona al usuario la verificación de que los datos de la aplicación no se han modificado después de haberse firmado, a la vez que confirma la identidad del usuario o la empresa que la firmara. **SignTool** puede firmar paquetes de aplicación y lotes de aplicaciones cifrados o sin cifrar.
+
+> [!IMPORTANT] 
+> Si usaste Visual Studio para desarrollar tu aplicación, es recomendable usar el Asistente de Visual Studio para crear y firmar el paquete de la aplicación. Para más información, consulta [Empaquetado de aplicaciones para UWP con Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
 Para obtener más información sobre la firma de código y los certificados en general, consulta [Introducción a la firma de código](https://msdn.microsoft.com/library/windows/desktop/aa380259.aspx#introduction_to_code_signing).
 

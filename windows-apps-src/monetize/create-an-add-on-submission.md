@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
 description: "Usa este método en la API de envío de la Tienda Windows para crear un nuevo complemento para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows."
-title: "Creación de un envío de complemento mediante la API de envío de la Tienda Windows"
+title: "Crear un envío de complemento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, crear envío de complemento, producto desde la aplicación, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
-ms.openlocfilehash: f824fe7d37a4a2db4e336fd43c335047e09aa323
-ms.lasthandoff: 02/08/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, create add-on submission, crear envío de complemento, in-app product, producto desde la aplicación, IAP, IAP"
+ms.openlocfilehash: 3bf7379856a5011d5323351d7952091b0ff9d179
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="create-an-add-on-submission-using-the-windows-store-submission-api"></a>Creación de un envío de complemento mediante la API de envío de la Tienda Windows
+# <a name="create-an-add-on-submission"></a>Crear un envío de complemento
 
 
 
@@ -39,9 +36,9 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ## <a name="request"></a>Solicitud
 
-Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del cuerpo del encabezado y la solicitud.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Method | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions``` |
 
@@ -50,9 +47,9 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Type   | Descripción                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -60,7 +57,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Obligatorio. Id. de la Tienda del complemento para el cual deseas crear un envío. El Id. de la Tienda está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes de [Creación de un complemento](create-an-add-on.md) u [Obtención de los detalles de los complementos](get-all-add-ons.md).  |
+| inAppProductId | cadena | Obligatorio. Id. de la Tienda del complemento para el cual deseas crear un envío. El Id. de la Tienda está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes de [Creación de un complemento](create-an-add-on.md) u [Obtención de los detalles de los complementos](get-all-add-ons.md).  |
 
 <span/>
 
@@ -124,7 +121,7 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
       }
     ],
     "priceId": "Free",
-    "isAdvancedPricingModel": "true"
+    "isAdvancedPricingModel": true
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
   "targetPublishMode": "Immediate",
@@ -169,10 +166,9 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-* [Administración de envíos de complementos](manage-add-on-submissions.md)
+* [Manage add-on submissions (Administrar envíos de complemento)](manage-add-on-submissions.md)
 * [Obtención de un envío de complemento](get-an-add-on-submission.md)
 * [Confirmación de un envío de complemento](commit-an-add-on-submission.md)
 * [Actualización de un envío de complemento](update-an-add-on-submission.md)
-* [Eliminar un envío de complemento](delete-an-add-on-submission.md)
-* [Obtener el estado de un envío de complemento](get-status-for-an-add-on-submission.md)
-
+* [Eliminación de un envío de complemento](delete-an-add-on-submission.md)
+* [Get the status of an add-on submission (Obtener el estado de un envío de complemento)](get-status-for-an-add-on-submission.md)

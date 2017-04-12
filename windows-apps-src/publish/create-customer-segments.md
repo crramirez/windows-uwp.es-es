@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1c1aa77ee989344f5e09ddaeb864d5ddceb03660
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 2ba423d7f7624575e7cf743e9589d31a90d05295
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-customer-segments"></a>Crear segmentos de clientes
 
 En ocasiones, puede que quieras dirigirte a un subgrupo de tu base de clientes para fines promocionales y de participación. Puedes hacerlo en el Centro de desarrollo de Windows creando un tipo de [grupo de clientes](create-customer-groups.md) denominado *segmento* que incluya a los clientes de Windows 10 que cumplan con los criterios demográficos o de ingresos que elijas.
@@ -65,4 +62,3 @@ Si ves los resultados y **Customers in this segment** dice **Pequeño**, el segm
 
 - En la sección **Define inclusion conditions**, ajusta los criterios de filtro para que el segmento incluya más clientes.
 - En la página **Grupos de clientes**, en la sección **Inactive segments**, selecciona **Actualizar** para ver si el segmento contiene actualmente suficientes clientes. Esta táctica podría dar resultados, por ejemplo, si más clientes que cumplen tus criterios de segmento han descargado tu aplicación desde que creaste el segmento.
-

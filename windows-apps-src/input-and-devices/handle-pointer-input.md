@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d93583c4d6eeaa8e81bda4672d38386f07e7dcc5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5923b02d2d41a9d5311f39cb02f0bc58f5f6188c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="handle-pointer-input"></a>Controlar la entrada de puntero
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -73,7 +70,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 <td align="left"><p>Se produce cuando la plataforma cancela un puntero.</p>
 <ul>
 <li>Los punteros táctiles se cancelan cuando se detecta un lápiz dentro del alcance de la superficie de entrada.</li>
-<li>No se detectan contactos activos de más de 100 ms.</li>
+<li>No se detectan contactos activos de más de 100ms.</li>
 <li>Se modifica el monitor o la pantalla (resolución, configuración, configuración de multimonitor).</li>
 <li>El escritorio está bloqueado o el usuario ha cerrado la sesión.</li>
 <li>El número de contactos simultáneos superó el número admitido por el dispositivo.</li>
@@ -1093,8 +1090,8 @@ namespace PointerInput
 
 **Ejemplos**
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Muestras de archivo**
@@ -1107,7 +1104,6 @@ namespace PointerInput
  
 
  
-
 
 
 

@@ -2,32 +2,31 @@
 author: mcleanbyron
 ms.assetid: c5246681-82c7-44df-87e1-a84a926e6496
 description: "Usa este método en la API de promociones de la Tienda Windows para administrar los creativos para las campañas de anuncios promocionales."
-title: "Administrar creativos de campañas de anuncios"
+title: Administrar creativos
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de promociones de la Tienda Windows, campañas de anuncios, Windows Store promotions API, ad campaigns"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1e0755134a47b6acfb48f735ea56c4aa3c46be14
-ms.lasthandoff: 02/08/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store promotions API, API de promociones de la Tienda Windows, ad campaigns, campañas de anuncios"
+ms.openlocfilehash: d94ff7863de620beab2ef67c4a6e5c4a50cf273d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="manage-creatives-for-ad-campaigns"></a>Administrar creativos de campañas de anuncios
+# <a name="manage-creatives"></a>Administrar creativos
 
 Usa estos métodos en la API de promociones de la Tienda Windows para cargar tus propios creativos personalizados y usarlos en las campañas de anuncios promocionales u obtener un creativo existente. Un creativo puede estar asociado a una o varias líneas de entrega, incluso entre campañas de anuncios, siempre que represente siempre a la misma aplicación.
 
-Para obtener más información sobre la relación entre los creativos y las campañas de anuncios, las líneas de entrega y los perfiles de destino, consulta [Run ad campaigns using Windows Store services (Ejecutar campañas de anuncios con servicios de la Tienda Windows)](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
+Para obtener más información sobre la relación entre los creativos y las campañas de anuncios, las líneas de entrega y los perfiles objetivo, consulta [Ejecutar campañas de anuncios con los servicios de la Tienda Windows](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
+
+>**Nota**&nbsp;&nbsp;Al usar esta API para cargar tu propio creativo, el tamaño máximo permitido para el creativo es 40 KB. Si envías un archivo creativo más grande, esta API no emitirá un error, pero la campaña no se creará correctamente.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar estos métodos, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
@@ -45,7 +44,7 @@ Estos métodos tienen los siguientes URI.
 
 | Encabezado        | Tipo   | Descripción         |
 |---------------|--------|---------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 | Id. de seguimiento   | GUID   | Opcional. Un id. que realiza un seguimiento del flujo de llamadas.                                  |
 
 
@@ -114,10 +113,10 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  número entero   |  El id. del creativo.     |   Sí    |      |    No   |       
 |  name   |  cadena   |   El nombre del creativo.    |    No   |      |  Sí     |       
-|  content   |  cadena   |  El contenido de la imagen de creativo, en formato codificado en Base64.     |  No     |      |   Sí    |       
-|  height   |  número entero   |   La altura del creativo.    |    No    |      |   Sí    |       
-|  width   |  número entero   |  El ancho del creativo.     |  No    |     |    Sí   |       
-|  landingUrl   |  cadena   |  La dirección URL de destino del creativo (este valor debe ser un URI válido).     |  No    |     |   Sí    |       
+|  content   |  cadena   |  El contenido de la imagen de creativo, en formato codificado en Base64.<br/><br/>**Nota**&nbsp;&nbsp;El tamaño máximo permitido para el creativo es 40 KB. Si envías un archivo creativo más grande, esta API no emitirá un error, pero la campaña no se creará correctamente.     |  No     |      |   Sí    |       
+|  height   |  entero   |   La altura del creativo.    |    No    |      |   Sí    |       
+|  width   |  entero   |  El ancho del creativo.     |  No    |     |    Sí   |       
+|  landingUrl   |  cadena   |  Si usas un servicio de seguimiento de campañas como Kochava, AppsFlyer o Tune para medir el análisis de instalación de la aplicación, asigna la dirección URL de seguimiento en este campo al llamar el método POST (si se especifica, este valor debe ser un URI válido). Si no usas un servicio de seguimiento de campañas, omite este valor al llamar al método (en este caso, esta dirección URL se creará automáticamente).   |  No    |     |   Sí    |       
 |  format   |  cadena   |   El formato del anuncio. Actualmente, el único valor admitido es **Banner**.    |   No    |  Pancarta   |  No     |       
 |  imageAttributes   | [ImageAttributes](#image-attributes)    |   Proporciona los atributos del creativo.     |   No    |      |   Sí    |       
 |  storeProductId   |  cadena   |   El [id. de la Tienda](in-app-purchases-and-trials.md#store-ids) de la aplicación a la que está asociada esta campaña de anuncios. Un ejemplo de id. de la Tienda para un producto es 9nblggh42cfd.    |   No    |    |  No     |   |  
@@ -127,7 +126,7 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 
 | Campo        | Tipo   |  Descripción      |  Solo lectura  | Valor predeterminado  | Obligatorio para POST |  
 |--------------|--------|---------------|------|-------------|------------|
-|  imageExtension   |   cadena  |   La extensión de imagen (como PNG o JPG).    |    No   |      |   Sí    |       |
+|  imageExtension   |   cadena  |   Uno de los siguientes valores: **PNG** o **JPG**.    |    No   |      |   Sí    |       |
 
 
 ## <a name="related-topics"></a>Temas relacionados
@@ -137,4 +136,3 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 * [Administrar líneas de entrega de campañas de anuncios](manage-delivery-lines-for-ad-campaigns.md)
 * [Administrar perfiles de destino de las campañas de anuncios](manage-targeting-profiles-for-ad-campaigns.md)
 * [Obtener los datos de rendimiento de la campaña de anuncios](get-ad-campaign-performance-data.md)
-

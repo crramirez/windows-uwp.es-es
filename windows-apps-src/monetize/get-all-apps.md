@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 2BCFF687-DC12-49CA-97E4-ACEC72BFCD9B
 description: "Usa este método en la API de envío de la Tienda Windows para recuperar información sobre todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows."
-title: "Obtener todas las aplicaciones mediante la API de envío de la Tienda Windows"
+title: Obtener todas las aplicaciones
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP, API de envío de la Tienda Windows, Windows Store submission API, aplicaciones, apps"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 12466a50c6cabe5ceca907cdd2f0d600ec95121f
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, apps, aplicaciones"
+ms.openlocfilehash: 93e973eb20835160e6b580bc932ce559b47e0ce1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-all-apps-using-the-windows-store-submission-api"></a>Obtener todas las aplicaciones mediante la API de envío de la Tienda Windows
+# <a name="get-all-apps"></a>Obtener todas las aplicaciones
 
 
 
@@ -28,7 +25,7 @@ Usa este método en la API de envío de la Tienda Windows para recuperar los dat
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
@@ -36,7 +33,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications``` |
 
@@ -47,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -124,8 +121,8 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| value      | matriz  | Una matriz de objetos que contienen información acerca de cada aplicación registrada en tu cuenta. Para obtener más información sobre los datos de cada objeto, consulta [Recurso de aplicación](get-app-data.md#application_object).                                                                                                                           |
-| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de solicitud inicial se establece en 10, pero hay 20 aplicaciones registradas en la cuenta, el cuerpo de la respuesta incluirá un valor de @nextLink de ```applications?skip=10&top=10```, lo que indica que puedes llamar a ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10``` para solicitar las 10 aplicaciones siguientes. |
+| value      | matriz  | Una matriz de objetos que contienen información acerca de cada aplicación registrada en tu cuenta. Para más información sobre los datos de cada objeto, consulta [Recurso de aplicación](get-app-data.md#application_object).                                                                                                                           |
+| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de la solicitud inicial se establece en 10, pero hay 20 aplicaciones registradas en la cuenta, el cuerpo de la respuesta incluirá un valor @nextLink de ```applications?skip=10&top=10```, lo que indica que puedes llamar a ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10``` para solicitar las 10 aplicaciones siguientes. |
 | totalCount | entero    | El número total de filas del resultado de datos de la consulta (es decir, el número total de aplicaciones registradas en tu cuenta).                                                                                                                                                                                                                             |
 
 <span/>
@@ -147,4 +144,3 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Obtener una aplicación](get-an-app.md)
 * [Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md)
 * [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)
-

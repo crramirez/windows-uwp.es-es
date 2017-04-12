@@ -12,13 +12,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows Information Protection, datos empresariales, protección de datos empresariales, edp, aplicaciones habilitadas"
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b9bde047a70d31105680361d34cf71b33f708f93
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f624d20d33f560f151b40bd1a405711d697fd4cb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-information-protection-wip"></a>Windows Information Protection (WIP)
 
 __Nota__ La directiva de Windows Information Protection (WIP) se puede aplicar a Windows 10, versión 1607.
@@ -66,11 +63,11 @@ Si estás listo para optimizar tu aplicación, consulta una de estas guías:
 
 **Para las aplicaciones de la Plataforma Universal de Windows (UWP) creadas con C.#**
 
-[Crear una aplicación habilitada que consume datos de empresa y personales](wip-dev-guide.md).
+[Guía para desarrolladores sobre Windows Information Protection (WIP)](wip-dev-guide.md).
 
 **Para aplicaciones de escritorio creadas con C++**
 
-[Crear una aplicación habilitada que consume datos de empresa y personales (C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
+[Guía para desarrolladores sobre Windows Information Protection (WIP)](http://go.microsoft.com/fwlink/?LinkId=822192).
 
 
 ## <a name="create-non-enlightened-enterprise-app"></a>Crear una aplicación empresarial no habilitada
@@ -100,4 +97,3 @@ Si tienes previsto incluir la aplicación en una directiva de MAM, deberás habi
 
 
  
-

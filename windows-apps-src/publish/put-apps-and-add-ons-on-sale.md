@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5823fce5aa5b5d0e98bc43828dc7469a08fdb9d0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7c88e927a88dbef928deedd6f92b2aa7b60da1cf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="put-apps-and-add-ons-on-sale"></a>Poner aplicaciones y complementos en oferta
 
 Puedes promocionar tu aplicación o complemento en la Tienda Windows al ponerlos en oferta durante un tiempo limitado.
@@ -71,5 +68,4 @@ Cuando el envío supere el proceso de certificación, los cambios surtirán efec
 Si la oferta no ha comenzado en el momento de completarse el proceso de certificación, nunca llegará a entrar en efecto. Si eliminas una oferta que ya ha finalizado, simplemente se quitará de tu página **Precios y disponibilidad**.
 
 > **Importante**  Dado que los clientes pueden ver la fecha de finalización programada en la descripción de la Tienda que se muestra la aplicación, no es recomendable eliminar una oferta una vez iniciada. Si eliminas una oferta que ya está en curso, terminará cuando el envío complete el proceso de certificación, lo que puede resultar frustrante para los clientes potenciales.
-
 

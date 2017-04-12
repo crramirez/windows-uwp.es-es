@@ -12,18 +12,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 90096443a0b67b816869e6c9e607ccfd43f0cea1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4ca7e133f930ff4663de0cc1769ac26caa9f44ad
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP 
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Una aplicación para la Plataforma universal de Windows (UWP) puede ejecutarse en cualquier dispositivo de Windows, desde el teléfono o la tableta hasta el equipo.
+Una aplicación de la Plataforma universal de Windows (UWP) puede ejecutarse en cualquier dispositivo de Windows, desde el teléfono o la tableta hasta el equipo.
 
 ![dispositivos de Windows](images/1894834-hig-device-primer-01-500.png)
 
@@ -39,7 +36,7 @@ En este artículo se describen las características de la interfaz de usuario y 
 
 Las aplicaciones para UWP ajustan automáticamente el tamaño de los controles, las fuentes y otros elementos de la interfaz de usuario para que sean legibles en todos los dispositivos.
 
-Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24 px en un Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24 px en un teléfono de 5 pulgadas a unos centímetros de distancia.
+Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24px en un Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24px en un teléfono de 5 pulgadas a unos centímetros de distancia.
 
 ![distancias de visualización para diferentes dispositivos](images/1910808-hig-uap-toolkit-03.png)
 
@@ -224,7 +221,6 @@ A continuación se muestra un ejemplo de esta técnica aplicado al diseño de un
 - [¿Qué es una aplicación para UWP?](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)
 
  
-
 
 
 

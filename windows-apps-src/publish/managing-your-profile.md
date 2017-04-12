@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5ca55f04d919e273017530ab4c14d09c7a2ec20a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0a2d8562774c00544fcdcab8941bfbb04f889a45
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="managing-your-account-settings-and-profile-info"></a>Administrar la configuración de la cuenta y la información del perfil
 
@@ -39,6 +37,5 @@ Si cambias el nombre para mostrar del publicador, tendremos que volver a comprob
 
 Esta sección también incluye vínculos a [configurar formularios fiscales y cuenta de pago](setting-up-your-payout-account-and-tax-forms.md). Deberás hacer esto para poder cobrar dinero por las aplicaciones o los complementos.
 
-Algunos programas pueden proporcionar un código que te permita ampliar las capacidades de tu cuenta; estas se pueden especificar en **Configuración de la cuenta**. Esta página también permite ver los detalles de cualquier [dispositivos Windows Phone 8 o Windows Phone 8.1 que hayas desbloqueado para realizar pruebas](http://go.microsoft.com/fwlink/p/?LinkId=533897) y participar o no en el [Programa Insider del Centro de desarrollo](dev-center-insider-program.md).
-
+Algunos programas pueden proporcionar un código que te permita ampliar las capacidades de tu cuenta; estas se pueden especificar en **Configuración de la cuenta**. Esta página también permite ver los detalles de cualquier [dispositivos Windows Phone8 o Windows Phone8.1 que hayas desbloqueado para realizar pruebas](http://go.microsoft.com/fwlink/p/?LinkId=533897) y participar o no en el [Programa Insider del Centro de desarrollo](dev-center-insider-program.md).
 

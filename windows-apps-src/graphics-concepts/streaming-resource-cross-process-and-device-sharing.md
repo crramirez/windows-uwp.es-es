@@ -2,21 +2,17 @@
 title: Uso compartido recursos de streaming en distintos procesos y dispositivos
 description: Los grupos de iconos pueden compartirse con otros procesos, igual que los recursos tradicionales. Los recursos de streaming que hacen referencia a grupos de iconos no se pueden compartir en diferentes dispositivos y procesos.
 ms.assetid: D035AF4B-D71B-4F20-9A98-7C360BF9B285
-keywords:
-- Uso compartido de los recursos de streaming en distintos procesos y dispositivos
+keywords: Uso compartido de los recursos de streaming en distintos procesos y dispositivos
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cba124fe9152790857fa9658513414735c60de47
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8f383805759e099144f13a5924b5da90240b4ef0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsstreaming-resource-cross-process-and-device-sharingspanstreaming-resource-cross-process-and-device-sharing"></a><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>Uso compartido de los recursos de streaming en distintos procesos y dispositivos
 
 
@@ -56,7 +52,6 @@ No se puede cambiar el tamaño de los grupos de iconos compartidos.
  
 
  
-
 
 
 

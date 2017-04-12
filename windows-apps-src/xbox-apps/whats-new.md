@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 96f9c9ef355382c72423187a7f81635571762071
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5546177401630e8938f0d25d77ea42afdbfb55d7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>Qué novedades encontrarán los desarrolladores en la última actualización de UWP en Xbox One
 
 La versión de julio de 2016 de la Plataforma universal de Windows (UWP) en Xbox One contiene las nuevas características, las actualizaciones de funciones ya existentes y las correcciones de errores siguientes.
@@ -40,7 +37,7 @@ Ahora es posible reproducir música y audio desde una aplicación que se ejecute
 
 ## <a name="xaml-improvements"></a>Mejoras de XAML
 Se han realizado las siguientes mejoras en la plataforma XAML:
--    El rectángulo de foco ahora se ha adaptado para una experiencia de 10 pies de televisión.
+-    El rectángulo de foco ahora se ha adaptado para una experiencia de 10pies de televisión.
 -    Los sonidos de Xbox ahora están incrustados en la plataforma XAML.
 -    Se ha mejorado la navegación con foco XY entre elementos de la interfaz de usuario. 
 
@@ -58,4 +55,3 @@ Se han realizado las siguientes mejoras a la herramienta Windows Device Portal (
 ## <a name="see-also"></a>Consulta también
 - [Problemas conocidos](known-issues.md)
 - [UWP en Xbox One](index.md)
-

@@ -2,21 +2,17 @@
 title: Fase de salida de flujo (SO)
 description: "La fase de salida de flujo (SO) saca (o transmite) continuamente datos de vértices desde la fase activa anterior a uno o más búferes de la memoria. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse desde la CPU."
 ms.assetid: DE89E99F-39BC-4B34-B80F-A7D373AA7C0A
-keywords:
-- Fase de salida de flujo (SO)
+keywords: Fase de salida de flujo (SO)
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 52a5e886cb2e5ddd8f9bda459f7bd658fb3f7a1b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 07bc125426854bdd82c7cebaed6f3585197353db
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="stream-output-so-stage"></a>Fase de salida de flujo (SO)
 
 
@@ -61,7 +57,6 @@ La fase de salida de flujo admite hasta 4 búferes al mismo tiempo.
  
 
  
-
 
 
 

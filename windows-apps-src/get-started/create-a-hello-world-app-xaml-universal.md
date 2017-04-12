@@ -2,61 +2,68 @@
 author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Creación de una aplicación &quot;Hello, world&quot; (XAML)"
-description: "En este tutorial se enseña a usar el lenguaje XAML con C# para crear una sencilla aplicación Hello, world para la Plataforma universal de Windows (UWP) en Windows 10."
+description: "En este tutorial se enseña a usar el lenguaje XAML con C# para crear una sencilla aplicación Hello, world para la Plataforma universal de Windows (UWP) de Windows 10."
 ms.author: jken
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 16622dbd9914907f75c8392f8e4de6e1c10b049c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 95e447550705d606483c20ec34cca6c97b03785c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-hello-world-app-xaml"></a>Crear una aplicación "Hello, world" (XAML)
 
 Este tutorial te enseña a usar XAML y C# para crear una aplicación sencilla "Hello, world" para la Plataforma universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes compilar una aplicación que se ejecute en cualquier dispositivo de Windows 10.
 
 Aquí aprenderás a:
 
--   Creación de un nuevo proyecto de **Visual Studio 2015** diseñado para **Windows 10** y **UWP**.
--   Escribe XAML para cambiar la interfaz de usuario en la página de inicio.
--   Ejecuta el proyecto en el escritorio local y en el emulador de teléfono de Visual Studio.
--   Usa un SpeechSynthesizer para que la aplicación hable al presionar un botón.
+-   Creación de un nuevo proyecto de **Visual Studio 2017** diseñado para **Windows 10** y **UWP**.
+-   Escribir XAML para cambiar la interfaz de usuario en la página de inicio.
+-   Ejecutar el proyecto en el escritorio local de Visual Studio.
+-   Usar un SpeechSynthesizer para que la aplicación hable al presionar un botón.
+
 
 ## <a name="before-you-start"></a>Antes de comenzar...
 
 -   [¿Qué es una aplicación universal de Windows](whats-a-uwp.md)?
--   Para realizar este tutorial, debes tener Windows 10 y Visual Studio 2015. [Prepárate](get-set-up.md).
+-   Para realizar este tutorial, debes tener Windows10 y Visual Studio2017. [Prepárate](get-set-up.md).
 -   También se supone que estás usando el diseño de ventana predeterminado de Visual Studio. Si cambias el diseño predeterminado, puedes restablecerlo en el menú **Ventana** con el comando **Restablecer diseño de la ventana**.
 
+> [!NOTE]
+> En este tutorial se usa Visual Studio Community 2017. Si usas otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
 
-## <a name="if-you-would-rather-watch-a-video"></a>Si en su lugar prefieres ver un vídeo...
+## <a name="video-summary"></a>Vídeo resumen
 
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Writing-Your-First-Windows-10-App/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
-Si prefieres un enfoque visual sobre una guía paso a paso, en este vídeo se describe el mismo material pero con una banda sonora agradable.
+
 
 ## <a name="step-1-create-a-new-project-in-visual-studio"></a>Paso 1: Creación de un nuevo proyecto en Visual Studio.
 
-1.  Inicia Visual Studio 2015.
+1.  Inicia Visual Studio 2017.
 
 2.  En el menú **Archivo**, selecciona **Nuevo > Proyecto...** para abrir el cuadro de diálogo *Nuevo proyecto*.
 
 3.  En la lista de plantillas del lado izquierdo, abre **Instalado > Plantillas > Visual C# > Windows** y, a continuación, elige **Universal** para ver la lista de plantillas de proyecto para UWP.
 
-    (Si no ves ninguna plantilla Universal, es posible que no tengas Visual Studio 2015 o que falten los componentes para crear aplicaciones para UWP. Consulta [Prepárate](get-set-up.md) para arreglar tus herramientas.)
+    (Si no ves ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP. Puedes repetir el proceso de instalación y agregar compatibilidad con UWP haciendo clic en **Abrir el instalador de Visual Studio** en el diálogo *Nuevo proyecto*. Consulta [Prepárate](get-set-up.md).
+
+    ![Cómo repetir el proceso de instalación](images/win10-cs-install.png)
 
 4.  Elige la plantilla **Aplicación vacía (Windows Universal)** y escribe "HelloWorld" como **Nombre**. Selecciona **Aceptar**.
 
     ![La ventana Nuevo proyecto](images/win10-cs-01.png)
 
-5.  Se visualiza el cuadro de diálogo de versión mínima/de destino. La configuración predeterminada es correcta, por lo tanto, selecciona **Aceptar** para crear el proyecto.
+> [!NOTE]
+> Si es la primera vez que usas Visual Studio, es posible que se te solicite habilitar el **Modo de desarrollador** en un diálogo de configuración. El modo de desarrollador es una opción de configuración especial que habilita determinadas funciones, como permiso para ejecutar aplicaciones directamente, en lugar de solo desde la Tienda. Para obtener más información, lee [Habilitar el dispositivo para el desarrollo](enable-your-device-for-development.md). Para continuar con esta guía, selecciona **Modo de desarrollador**, haz clic en **Sí** y cierra el diálogo.
 
-    ![La ventana de Explorador de soluciones](images/win10-cs-02.png)
+ ![Diálogo para activar el modo de desarrollador](images/win10-cs-00.png)
+
+5.  Se visualiza el cuadro de diálogo de versión mínima/de destino. La configuración predeterminada es correcta para este tutorial, por lo tanto, selecciona **Aceptar** para crear el proyecto.
+
+    ![Ventana de Explorador de soluciones](images/win10-cs-02.png)
 
 6.  Cuando se abra el nuevo proyecto, sus archivos se muestran en el panel **Explorador de soluciones** de la derecha. Es posible que debas elegir la pestaña **Explorador de soluciones** en lugar de la pestaña **Propiedades** para ver los archivos.
 
@@ -181,40 +188,6 @@ No hace muchas cosas (todavía), pero te felicitamos, has compilado tu primera a
 
    Cierra la ventana de la aplicación.
 
-### <a name="start-the-app-on-a-mobile-device-emulator"></a>Iniciar la aplicación en un emulador de dispositivos móviles
-
-La aplicación se ejecuta en cualquier dispositivo de Windows 10, así que vamos a ver su aspecto en un Windows Phone.
-
-Además de las opciones para realizar la depuración en un dispositivo de escritorio, Visual Studio ofrece opciones para implementar y depurar la aplicación en un dispositivo móvil físico conectado al equipo o en un emulador de dispositivos móviles. Puedes elegir entre varios emuladores para dispositivos con diferentes configuraciones de memoria y pantalla.
-
--   **Dispositivo**
--   **Emulador <SDK version> WVGA de 4 pulgadas y 512 MB**
--   **Emulador <SDK version> WVGA de 4 pulgadas y 1 GB**
--   Etc. (Varios emuladores en otras configuraciones)
-
-(¿No ves los emuladores? Consulta [Prepárate](get-set-up.md) para asegurarte de que tienes instaladas las herramientas de desarrollo de la aplicación universal de Windows.)
-
-**Inicio de la depuración en un emulador de dispositivo móvil**
-
-1.  Es una buena práctica para probar la aplicación en un dispositivo con una pantalla pequeña y memoria limitada, por lo que en el menú del dispositivo de destino (![Empezar a depurar el menú](images/startdebug-full.png)) en la barra de herramientas **Estándar**, elige **Emulador 10.0.14393.0 WVGA de 4 pulgadas y 512 MB**.
-
-2.  Haz clic en el botón **Iniciar depuración** (![Botón de inicio de depuración](images/startdebug-sm.png)) en la barra de herramientas.
-
-   O bien
-
-   En el menú **Depurar**, haz clic en **Iniciar depuración**.
-
-   O bien
-
-   Presiona F5.
-
-Visual Studio inicia el emulador seleccionado y, a continuación, implementa e inicia la aplicación. Esto puede tardar un poco de tiempo la primera vez que se inicia. En el emulador de dispositivos móviles, la aplicación tiene este aspecto.
-
-![Pantalla inicial de la aplicación en un dispositivo móvil](images/win10-cs-09.png)
-
-Si tienes un Windows Phone que funciona con Windows 10, también puedes conectarlo al equipo e implementar y ejecutar la aplicación en él directamente (aunque primero tendrás que [habilitar el modo de desarrollador](enable-your-device-for-development.md)).
-
-
 ## <a name="step-3-event-handlers"></a>Paso 3: Controladores de eventos
 
 Un "controlador de eventos" suena complicado, pero es simplemente otra forma de designar el código que se llama cuando se produce un evento (por ejemplo, cuando el usuario hace clic en tu botón).
@@ -228,7 +201,7 @@ Un "controlador de eventos" suena complicado, pero es simplemente otra forma de 
 3.  Edita el código del controlador de eventos en *MainPage.xaml.cs*, la página de código subyacente. Aquí es cuando se pone interesante. El controlador de eventos predeterminado tiene este aspecto:
 
 ```C#
-private void button_Click(object sender, RouteEventArgs e)
+private void Button_Click(object sender, RouteEventArgs e)
 {
 
 }
@@ -237,7 +210,7 @@ private void button_Click(object sender, RouteEventArgs e)
   Vamos a cambiarlo para que tenga esta apariencia:
 
 ```C#
-private async void button_Click(object sender, RoutedEventArgs e)
+private async void Button_Click(object sender, RoutedEventArgs e)
         {
             MediaElement mediaElement = new MediaElement();
             var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
@@ -259,7 +232,16 @@ Cuando ejecutes la aplicación y hagas clic en el botón, tu equipo (o teléfono
 ## <a name="summary"></a>Resumen
 
 
-Enhorabuena, has creado tu primera aplicación para Windows 10 y la UWP.
+Enhorabuena, has creado tu primera aplicación para Windows10 y la UWP.
 
 Para aprender a usar XAML para diseñar los controles que usará la aplicación, prueba el [tutorial sobre la cuadrícula](../layout/grid-tutorial.md), o salta directamente a los [pasos siguientes](learn-more.md).
 
+
+## <a name="see-also"></a>Consulta también
+
+* [Crear tu primera aplicación](your-first-app.md)
+* [Publicar aplicaciones de Windows](https://developer.microsoft.com/store/publish-apps).
+* [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
+* [Muestras de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
+* [¿Qué es una aplicación universal de Windows?](whats-a-uwp.md)
+* [Registrarse para obtener una cuenta de Windows](sign-up.md)

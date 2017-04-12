@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
 description: "Obtén información sobre los tamaños admitidos para los anuncios de banner."
-title: "Tamaños de anuncios admitidos para anuncios de banner"
+title: "Tamaños admitidos de anuncios de banner"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, anuncios, publicidad, tamaños, banner"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0c0ae3dbb197b166993a71bad80a05b11c5d815f
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, sizes, tamaños, banner, banner"
+ms.openlocfilehash: 6f8e679a31da140911306110027e1fdc041df399
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="supported-ad-sizes-for-banner-ads"></a>Tamaños de anuncios admitidos para anuncios de banner
+# <a name="supported-banner-ad-sizes"></a>Tamaños admitidos de anuncios de banner
 
 
 
@@ -95,4 +92,3 @@ Microsoft Advertising admite anuncios de banner con los siguientes tamaños.
  
 
  
-

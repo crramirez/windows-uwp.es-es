@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, juegos, interfaz de usuario, navegación"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 5b5789b90cefb6ba22c2a3d8b5ebbb45be5b0dad
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="ui-navigation-controller"></a>Controlador de navegación de la interfaz de usuario
 
 En esta página se describen los conceptos básicos de programación para dispositivos de navegación de la interfaz de usuario mediante la clase [Windows.Gaming.Input.UINavigationController][uinavigationcontroller] y las API relacionadas para la Plataforma universal de Windows (UWP).
@@ -236,4 +233,3 @@ La [muestra InputInterfacingUWP _(GitHub)_](https://github.com/Microsoft/Xbox-AT
 [uinavigationreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationreading.aspx
 [requireduinavigationbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.requireduinavigationbuttons.aspx
 [optionaluinavigationbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.optionaluinavigationbuttons.aspx
-

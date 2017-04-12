@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fb97ccb1555e214871603861a3e5edeaaf3a55d7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6aa514190f98be78acf199b586d1ed0db1e5b03f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="generate-promotional-codes"></a>Genera códigos promocionales
 
 
-Puedes generar códigos promocionales para una aplicación o complemento que hayas publicado en la Tienda Windows. Los códigos promocionales son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o complemento. También puedes usarlos en situaciones de atención al cliente y ofrecer a los usuarios acceso gratuito a tu aplicación o complemento, o para [realizar pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10.
+Puedes generar códigos promocionales para una aplicación o un complemento que hayas publicado en la Tienda Windows. Los códigos promocionales son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o complemento. También puedes usarlos en situaciones de atención al cliente y ofrecer a los usuarios acceso gratuito a tu aplicación o complemento, o para [realizar pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10.
 
 Cada código promocional contiene una dirección URL única y canjeable que puedes distribuir a un usuario o a un grupo de usuarios. El usuario solo tiene que hacer clic en la dirección URL para canjear el código e instalar la aplicación o complemento desde la Tienda Windows.
 
@@ -140,7 +137,6 @@ También puedes descargar un pedido activo desde esta tabla.
  
 
  
-
 
 
 

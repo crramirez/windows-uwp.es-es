@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: "Creación de un componente simple de Windows Runtime y llamada a este desde JavaScript"
-description: "En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente desde tu aplicación universal de Windows creada para Windows mediante JavaScript."
+description: "En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente de tu aplicación universal de Windows creada para Windows mediante JavaScript."
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 ms.author: misatran
 ms.date: 02/08/2017
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6f1bfc96416febdf531dec52c14bcaee13de9f14
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 381e1d264e27d2b68e644895d0b795128540a5d7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Tutorial: Creación de un componente simple de Windows Runtime y llamarlo desde JavaScript
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente desde tu aplicación universal de Windows creada para Windows mediante JavaScript.
@@ -189,7 +186,7 @@ Selecciona el botón Basics 2 para aumentar el valor de la propiedad SamplePrope
 
  
 
-Para detener la depuración y cerrar la aplicación, pasa de la aplicación a Visual Studio y presiona Mayús + F5.
+Para detener la depuración y cerrar la aplicación, pasa de la aplicación a Visual Studio y presiona Mayús+F5.
 
 ## <a name="using-the-windows-runtime-from-javascript-and-managed-code"></a>Uso de Windows Runtime desde JavaScript y código administrado
 
@@ -328,7 +325,7 @@ La forma de controlar los eventos de Windows Runtime en JavaScript es muy difere
 
 Para ejecutar la aplicación, presiona la tecla F5. Si no se sella la clase, recibirás el mensaje de error "Exporting unsealed type 'SampleComponent.Example' is not currently supported. Márcalo como sellado."
 
-Selecciona el botón **Runtime 1**. El controlador de eventos muestra los cambios a medida que se agregan o cambian los elementos y al final se llama al método DisplayStats para generar un resumen de recuentos. Para detener la depuración y cerrar la aplicación, vuelve a Visual Studio y presiona Mayús + F5.
+Selecciona el botón **Runtime 1**. El controlador de eventos muestra los cambios a medida que se agregan o cambian los elementos y al final se llama al método DisplayStats para generar un resumen de recuentos. Para detener la depuración y cerrar la aplicación, vuelve a Visual Studio y presiona Mayús+F5.
 
 Para agregar dos elementos más a la colección PropertySet desde el código administrado, agrega el código siguiente a la clase PropertySetStats:
 
@@ -742,4 +739,3 @@ Para ejecutar la aplicación, presiona la tecla F5. Para iniciar la operación a
 * [Introducción a .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-

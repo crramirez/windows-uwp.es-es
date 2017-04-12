@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 93319caaa16afe84a897dbc4bd6370a5cef3cdd1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: dcceab233f19696f11075fdc4e46fe4a3aa7e5b9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Configurar el entorno de desarrollo de UWP en Xbox
 
 El entorno de desarrollo de la Plataforma universal de Windows (UWP) en Xbox consta de un equipo de desarrollo conectado a una consola Xbox One a través de una red local.
@@ -34,7 +31,7 @@ En este artículo se describen los pasos para configurar y probar el entorno de 
 
 ## <a name="windows-10-sdk-setup"></a>Configuración del SDK de Windows 10
 
-Instala la versión preliminar del SDK de Windows 10 más reciente. Para obtener información sobre la instalación, consulta [Descarga las actualizaciones para desarrolladores de Insider Preview](http://go.microsoft.com/fwlink/p/?LinkId=780552).
+Instala la versión preliminar del SDK de Windows10 más reciente. Para obtener información sobre la instalación, consulta [Descarga las actualizaciones para desarrolladores de Insider Preview](http://go.microsoft.com/fwlink/p/?LinkId=780552).
 
 > [!IMPORTANT]
 > Debes instalar el SDK más reciente, pero _no_ necesitas instalar la última versión de Windows Insider Preview del sistema operativo.
@@ -119,4 +116,3 @@ Enhorabuena, has creado e implementado tu primera aplicación para UWP en Xbox c
 - [UWP en Xbox One](index.md)
 
 ----
-

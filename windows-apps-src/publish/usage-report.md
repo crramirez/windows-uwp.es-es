@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b3c225316b028baa9a499e81841cdb939be9588e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f15b72a814c713a389a1f6126e2261959a16ee6c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="usage-report"></a>Informe de uso
 
 
-El informe **Uso** del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows 10 usan la aplicación y obtener información sobre los eventos personalizados que hayas definido. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
+El informe **Uso** del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows10 usan la aplicación y obtener información sobre los eventos personalizados que hayas definido. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
 > **Nota**  Anteriormente, el informe de **uso** solo proporcionaba datos si el SDK de Visual Studio Application Insights estaba activado en la aplicación. Con el informe de **uso** actualizado, esto ya no es necesario.
 
@@ -57,4 +54,3 @@ Los eventos personalizados se implementan mediante el método [StoreServicesCust
 
 
  
-

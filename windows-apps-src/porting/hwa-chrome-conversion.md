@@ -10,14 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Extensiones de Chrome para Windows, Chrome extensions for Windows, aplicaciones de Chrome para Windows, Chrome apps for Windows, hwa-cli, convertir .crx a. AppX, convert .crx to .AppX
 ms.assetid: 04f37333-48ba-441b-875e-246fbc3e1a4d
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 84d8875cc7b1c8540f54fec78cd675bd96919fd2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b2168242d5464dbf41f12c777aa5672753a4ae6e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="convert-your-existing-chrome-app-to-a-universal-windows-platform-app"></a>Convierte tu aplicación de Chrome existente en una aplicación para la Plataforma universal de Windows
+# <a name="convert-your-existing-chrome-app-to-a-uwp-app"></a>Convertir tu aplicación de Chrome existente a una aplicación para UWP
 
 Hemos facilitado la conversión de tu aplicación de Chrome existente hospedada en una aplicación que se ejecute en la Plataforma universal de Windows (UWP). Existen dos formas de convertir tu aplicación de Chrome:
 
@@ -41,7 +38,7 @@ Hemos facilitado la conversión de tu aplicación de Chrome existente hospedada 
     
 5. El archivo `.appx` generado aparecerá en la misma carpeta que el paquete de Chrome. Ahora ya puedes para cargar la aplicación en la Tienda Windows. 
 
-## <a name="uploading-your-app-to-the-windows-store"></a>Cargar la aplicación en la Tienda Windows
+## <a name="uploading-your-app-to-the-windows-store"></a>Cargar la aplicación en la TiendaWindows
 
 Para subir la aplicación, visita el panel del [Centro de desarrollo de Windows](https://developer.microsoft.com/windows). Haz clic en "[Crear una nueva aplicación](https://developer.microsoft.com/dashboard/Application/New)" y reserva el nombre de tu aplicación.
 ![Panel Reservar un nombre del Centro de desarrollo de Windows](images/hwa-to-uwp/reserve_a_name.png)
@@ -78,15 +75,15 @@ Muchas aplicaciones usan sitios de terceros para sus flujos de inicio de sesión
 
 ### <a name="flash"></a>Flash
 
-Flash no está permitido en las aplicaciones de Windows 10. Tendrás que asegurarte de que la experiencia de la aplicación no se vea afectado por su ausencia.
+Flash no está permitido en las aplicaciones de Windows10. Tendrás que asegurarte de que la experiencia de la aplicación no se vea afectado por su ausencia.
 
-En el caso de los anuncios, deberás asegurarte de que tu proveedor de anuncios tenga una opción de HTML5. Puedes consultar [Bing Ads](https://bingads.microsoft.com/) y [Anuncios en aplicaciones](http://adsinapps.microsoft.com/).
+En el caso de los anuncios, deberás asegurarte de que tu proveedor de anuncios tenga una opción de HTML5. Puedes consultar [Bing Ads](https://bingads.microsoft.com/) y las [bibliotecas de Microsoft advertising](../monetize/display-ads-in-your-app.md). 
 
-Los vídeos de YouTube deberían seguir funcionando, ya que ahora [son `<video>`HTML5 de forma predeterminada,](http://youtube-eng.blogspot.com/2015/01/youtube-now-defaults-to-html5_27.html) siempre y cuando utilices el [método de incrustación `<iframe>`](https://developers.google.com/youtube/iframe_api_reference). Si la aplicación todavía usa la API de Flash, tendrás que cambiar el estilo de incrustación mencionado anteriormente.
+Los vídeos de YouTube deberían seguir funcionando, ya que ahora [son `<video>`HTML5 de forma predeterminada,](http://youtube-eng.blogspot.com/2015/01/youtube-now-defaults-to-html5_27.html) siempre y cuando utilices el [método de inserción `<iframe>`](https://developers.google.com/youtube/iframe_api_reference). Si la aplicación todavía usa la API de Flash, tendrás que cambiar el estilo de incrustación mencionado anteriormente.
 
 ### <a name="image-assets"></a>Activos de imagen
 
-El almacén web de Chrome ya [requiere una imagen para el icono de la aplicación de 128 x 128](https://developer.chrome.com/webstore/images) en el paquete de la aplicación. En el caso de las aplicaciones de Windows 10, debes proporcionar imágenes de icono de la aplicación de 44 x 44, 50 x 50, 150 x 150 y 600 x 350, como mínimo. La herramienta de conversión creará automáticamente estas imágenes, basadas en la imagen de 128 x 128. Para que las experiencia de la aplicación sea más rica y más elegante, te recomendamos crear tus propios archivos de imagen. Estos son algunas [directrices para los activos de los iconos y las ventanas](https://msdn.microsoft.com/library/windows/apps/mt412102.aspx).
+El almacén web de Chrome ya [requiere una imagen para el icono de la aplicación de 128 x 128](https://developer.chrome.com/webstore/images) en el paquete de la aplicación. En el caso de las aplicaciones de Windows10, debes proporcionar imágenes de icono de la aplicación de 44 x 44, 50 x 50, 150 x 150 y 600 x 350, como mínimo. La herramienta de conversión creará automáticamente estas imágenes, basadas en la imagen de 128 x 128. Para que las experiencia de la aplicación sea más rica y más elegante, te recomendamos crear tus propios archivos de imagen. Estos son algunas [directrices para los activos de los iconos y las ventanas](https://msdn.microsoft.com/library/windows/apps/mt412102.aspx).
 
 ### <a name="capabilities"></a>Funcionalidades
 
@@ -107,4 +104,3 @@ Chrome proporciona aplicaciones con [API de propósito especial](https://develop
 - [Mejorar la aplicación web mediante el acceso a características de la Plataforma universal de Windows (UWP)](./hwa-access-features.md)
 - [Guía de aplicaciones para la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Descarga de activos de diseño para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-

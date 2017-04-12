@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 84e191df23f10f81a3588662f9ba1505cee12e21
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f9168184e360661dd2e6e2808b193f1e4026c0f5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="fingerprint-biometrics"></a>Biometría de huellas digitales
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se explica cómo agregar la opción de biometría de huellas digitales en la aplicación para la Plataforma universal de Windows (UWP). Al incluir una solicitud de autenticación con huella digital cuando el usuario deba dar su consentimiento a una acción concreta, se aumenta la seguridad de su aplicación. Por ejemplo, puedes solicitar la autenticación con huella digital antes de autorizar una compra desde la aplicación o de permitir el acceso a recursos restringidos. Puedes administrar la autenticación con huella digital mediante la clase [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) del espacio de nombres [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356).

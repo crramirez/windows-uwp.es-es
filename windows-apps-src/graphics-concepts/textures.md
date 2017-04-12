@@ -2,21 +2,17 @@
 title: Texturas
 description: "Las texturas son una herramienta muy eficaz para dotar de realismo a las imágenes en 3D generadas por PC. Direct3D admite un amplio conjunto de características de texturas, lo que ofrece a los desarrolladores un acceso fácil a técnicas avanzadas de creación de texturas."
 ms.assetid: B9E85C9E-B779-4852-9166-6FA2240B7046
-keywords:
-- Texturas
+keywords: Texturas
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4c78099f6bd30956c45a907a960a595288e0eaf4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ef5c72f3c667c63cb48c469349ae26c364050c19
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="textures"></a>Texturas
 
 
@@ -45,7 +41,7 @@ Para mejorar el rendimiento, piensa en la posibilidad de usar texturas dinámica
 </tr>
 <tr class="even">
 <td align="left"><p>[Conceptos básicos sobre la creación de texturas](basic-texturing-concepts.md)</p></td>
-<td align="left"><p>Las primeras imágenes en 3D generadas por PC, aunque en general eran avanzadas para su época, solían tener una apariencia plástica y brillante. Carecían de los tipos de marcas (como rayas, grietas, huellas digitales y manchas) que proporcionan a los objetos en 3D una complejidad visual realista. Las texturas han hecho populares por mejorar el realismo de las imágenes en 3D generadas por el equipo.</p></td>
+<td align="left"><p>Las primeras imágenes en 3D generadas por PC, aunque en general eran avanzadas para su época, solían tener una apariencia plástica y brillante. Carecían de los tipos de marcas (como rayas, fisuras, huellas digitales y manchas) que dan a los objetos 3D una complejidad visual realista. Las texturas han hecho populares por mejorar el realismo de las imágenes en 3D generadas por el equipo.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Modos de direccionamiento de las texturas](texture-addressing-modes.md)</p></td>
@@ -69,11 +65,11 @@ Para mejorar el rendimiento, piensa en la posibilidad de usar texturas dinámica
 </tr>
 <tr class="even">
 <td align="left"><p>[Mapas de luz con texturas](light-mapping-with-textures.md)</p></td>
-<td align="left"><p>Un mapa de luz es una textura o un grupo de texturas que contiene información sobre la iluminación de una escena en 3D. Los mapas de luz asignan áreas de la luz y sombra a los primitivos. La combinación de texturas múltiples y multipase permite a la aplicación representar las escenas con una apariencia más realista que técnicas de sombreado.</p></td>
+<td align="left"><p>Un mapa de luz es una textura o un grupo de texturas que contiene información sobre la iluminación de una escena en 3D. Los mapas de luz asignan áreas de luz y sombra a primitivos. La combinación de texturas múltiples y multipase permite a la aplicación representar las escenas con una apariencia más realista que técnicas de sombreado.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Recursos de texturas comprimidas](compressed-texture-resources.md)</p></td>
-<td align="left"><p>Los mapas de texturas son imágenes digitalizadas que se dibujan sobre formas tridimensionales para agregar detalles visuales. Se asignan a estas formas durante la rasterización, y el proceso puede consumir grandes cantidades tanto de bus como de memoria del sistema. Para reducir la cantidad de memoria que consumen las texturas, Direct3D admite la compresión las de superficies de las texturas. Algunos dispositivos Direct3D admiten las superficies de texturas comprimidas de forma nativa.</p></td>
+<td align="left"><p>Los mapas de texturas son imágenes digitalizadas que se dibujan sobre formas tridimensionales para agregar detalles visuales. Se dibujan en estas formas durante la rasterización y el proceso puede consumir grandes cantidades de bus y memoria del sistema. Para reducir la cantidad de memoria que consumen las texturas, Direct3D admite la compresión de superficies de texturas. Algunos dispositivos Direct3D admiten las superficies de texturas comprimidas de forma nativa.</p></td>
 </tr>
 </tbody>
 </table>
@@ -88,7 +84,6 @@ Para mejorar el rendimiento, piensa en la posibilidad de usar texturas dinámica
  
 
  
-
 
 
 

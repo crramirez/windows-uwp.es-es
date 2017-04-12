@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ec46f3287deefca67dab96fe12b3380c7dbd6ed9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8aa2070606f7ef077dfa4392d576f212b2f8ea84
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-an-app-for-results"></a>Iniciar una aplicación para obtener resultados
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -29,7 +26,7 @@ ms.lasthandoff: 02/07/2017
 
 Aprende a iniciar una aplicación desde otra aplicación e intercambiar datos entre las dos. Esto se denomina *iniciar una aplicación para obtener resultados*. En el siguiente ejemplo se muestra cómo usar [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) para iniciar una aplicación para obtener resultados.
 
-Las nuevas API de comunicación entre aplicaciones de Windows 10 hacen que las aplicaciones de Windows (y las aplicaciones web de Windows) puedan iniciar una aplicación e intercambiar archivos y datos. Esto te permite crear soluciones combinadas a partir de varias aplicaciones. Con estas nuevas API, las tareas complejas que hubieran requerido que el usuario usara varias aplicaciones ahora se pueden controlar sin problemas. Por ejemplo, la aplicación podría iniciar una aplicación de redes sociales para elegir un contacto o iniciar una aplicación de confirmación de compra para completar un proceso de pago.
+Las nuevas API de comunicación entre aplicaciones de Windows10 hacen que las aplicaciones de Windows (y las aplicaciones web de Windows) puedan iniciar una aplicación e intercambiar archivos y datos. Esto te permite crear soluciones combinadas a partir de varias aplicaciones. Con estas nuevas API, las tareas complejas que hubieran requerido que el usuario usara varias aplicaciones ahora se pueden controlar sin problemas. Por ejemplo, la aplicación podría iniciar una aplicación de redes sociales para elegir un contacto o iniciar una aplicación de confirmación de compra para completar un proceso de pago.
 
 La aplicación que inicias para obtener resultados se denomina la aplicación iniciada. La aplicación que inicia la aplicación se denomina aplicación que llama. Para este ejemplo escribirás tanto la aplicación que llama como la aplicación iniciada.
 
@@ -112,7 +109,7 @@ Reemplaza el método [**OnNavigatedTo**](https://msdn.microsoft.com/library/wind
 using Windows.ApplicationModel.Activation
 ```
 
-El objeto [**NavigationEventArgs**](https://msdn.microsoft.com/library/windows/apps/br243285) del método [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) contiene los datos pasados desde la aplicación que llama. Los datos no puede superar los 100 KB y se almacenan en un objeto [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131).
+El objeto [**NavigationEventArgs**](https://msdn.microsoft.com/library/windows/apps/br243285) del método [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) contiene los datos pasados desde la aplicación que llama. Los datos no puede superar los 100KB y se almacenan en un objeto [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131).
 
 En el código de ejemplo siguiente, la aplicación iniciada espera que los datos enviados desde la aplicación que llama estén en un elemento [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131), en una clave denominada **TestData**, ya que así es como se ha codificado que realice el envío la aplicación que llama del ejemplo.
 
@@ -190,7 +187,7 @@ string familyName = Windows.ApplicationModel.Package.Current.Id.FamilyName;
 ## <a name="remarks"></a>Observaciones
 
 
-En el ejemplo de este procedimiento se ofrece una introducción de tipo "hola a todos" a fin de iniciar una aplicación para obtener resultados. Los conceptos clave que se deben tener en cuenta son que la nueva API [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) permite iniciar una aplicación de manera asincrónica y comunicarse a través de la clase [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131). La transmisión de datos a través de un elemento **ValueSet** está limitada a 100 KB. Si necesitas transmitir mayores volúmenes de datos, puedes compartir archivos mediante la clase [**SharedStorageAccessManager**](https://msdn.microsoft.com/library/windows/apps/dn889985) para crear tokens de archivo que se puedan pasar entre aplicaciones. Por ejemplo, si existe un elemento **ValueSet** denominado `inputData`, podrías almacenar el token en un archivo que quieras compartir con la aplicación iniciada:
+En el ejemplo de este procedimiento se ofrece una introducción de tipo "hola a todos" a fin de iniciar una aplicación para obtener resultados. Los conceptos clave que se deben tener en cuenta son que la nueva API [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) permite iniciar una aplicación de manera asincrónica y comunicarse a través de la clase [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131). La transmisión de datos a través de un elemento **ValueSet** está limitada a 100KB. Si necesitas transmitir mayores volúmenes de datos, puedes compartir archivos mediante la clase [**SharedStorageAccessManager**](https://msdn.microsoft.com/library/windows/apps/dn889985) para crear tokens de archivo que se puedan pasar entre aplicaciones. Por ejemplo, si existe un elemento **ValueSet** denominado `inputData`, podrías almacenar el token en un archivo que quieras compartir con la aplicación iniciada:
 
 ```cs
 inputData["ImageFileToken"] = SharedStorageAccessManager.AddFile(myFile);
@@ -208,4 +205,3 @@ Después, pásalo a la aplicación iniciada mediante **LaunchUriForResultsAsync*
  
 
  
-

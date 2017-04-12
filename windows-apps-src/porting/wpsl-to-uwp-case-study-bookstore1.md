@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
-description: "En este tema se presenta un caso práctico de migración de una aplicación para Windows Phone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10."
+description: "En este tema se presenta un caso práctico de migración de una aplicación para WindowsPhone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows10."
 title: "Caso práctico de Windows Phone Silverlight a UWP, Bookstore1"
 ms.author: markl
 ms.date: 02/08/2017
@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 14003238ead3af2d796bab4f96dadfb050f7d595
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0cd284b2cb0ed4170d587cb3b412bc1954496c93
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-phone-silverlight-to-uwp-case-study-bookstore1"></a>Caso práctico de Windows Phone Silverlight a UWP: Bookstore1
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-En este tema se presenta un caso práctico de migración de una aplicación para Windows Phone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10. Con Windows 10, puedes crear un paquete de la aplicación único que los clientes pueden instalar en una amplia variedad de dispositivos, como se verá en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+En este tema se presenta un caso práctico de migración de una aplicación para WindowsPhone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows10. Con Windows 10, puedes crear un paquete de la aplicación único que los clientes pueden instalar en una amplia variedad de dispositivos, como se verá en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 La aplicación que portaremos consta de un enlace **ListBox** enlazado con un modelo de vista. El modelo de vista tiene una lista de libros que muestra el título, el autor y la portada de libro. Las imágenes de portada de libro tienen el valor de **Acción de compilación** establecido en **Contenido** y de **Copiar en el directorio de salida** establecido en **No copiar**.
 
@@ -80,9 +77,9 @@ La vista y el modelo de vista funcionan juntos correctamente y **ListBox** está
 
 ## <a name="paying-off-the-debt-items-and-some-initial-styling"></a>Saldar la deuda de elementos y algunos estilos iniciales
 
-De forma predeterminada, se admiten todas las orientaciones. La aplicación Windows Phone Silverlight se restringe explícitamente a sí misma a la orientación vertical solo, por lo que para saldar la deuda de los elementos n.º 1 y n.º 2 debemos ir al manifiesto del paquete de la aplicación en el nuevo proyecto y comprobar que el valor sea **Portrait** en **Orientaciones admitidas**.
+De forma predeterminada, se admiten todas las orientaciones. La aplicación WindowsPhone Silverlight se restringe explícitamente a sí misma a la orientación vertical solo, por lo que para saldar la deuda de los elementos n.º 1 y n.º 2 debemos ir al manifiesto del paquete de la aplicación en el nuevo proyecto y comprobar que el valor sea **Portrait** en **Orientaciones admitidas**.
 
-En el caso de esta aplicación, el elemento n.º 3 no es una deuda, ya que la barra de estado (anteriormente denominada bandeja del sistema) se muestra de forma predeterminada. Para los elementos n.º 4 y n.º 5, tenemos que encontrar cuatro estilos **TextBlock** de la Plataforma universal de Windows (UWP) que correspondan a los estilos de Windows Phone Silverlight que estábamos usando. Puedes ejecutar la aplicación Windows Phone Silverlight en el emulador y compararla en paralelo con la ilustración de la sección [Texto](wpsl-to-uwp-porting-xaml-and-ui.md). Si hacemos esto y echamos una mirada a las propiedades de los estilos del sistema de Windows Phone Silverlight, podemos generar esta tabla.
+En el caso de esta aplicación, el elemento n.º 3 no es una deuda, ya que la barra de estado (anteriormente denominada bandeja del sistema) se muestra de forma predeterminada. Para los elementos n.º4 y n.º 5, tenemos que encontrar cuatro estilos **TextBlock** de la Plataforma universal de Windows (UWP) que correspondan a los estilos de WindowsPhone Silverlight que estábamos usando. Puedes ejecutar la aplicación WindowsPhone Silverlight en el emulador y compararla en paralelo con la ilustración de la sección [Texto](wpsl-to-uwp-porting-xaml-and-ui.md). Si hacemos esto y echamos una mirada a las propiedades de los estilos del sistema de Windows Phone Silverlight, podemos generar esta tabla.
 
 | Clave de estilo de Windows Phone Silverlight | Clave de estilo de UWP          |
 |-------------------------------------|------------------------|
@@ -93,9 +90,9 @@ En el caso de esta aplicación, el elemento n.º 3 no es una deuda, ya que la ba
  
 Para establecer estos estilos puedes escribirlos en el editor de marcado o usar las herramientas de XAML de Visual Studio y establecerlos sin necesidad de escribir nada. Para ello, haz clic con el botón derecho en **TextBlock** y en **Editar estilo** &gt; **Aplicar recurso**. Para hacer esto con **TextBlock** en la plantilla del elemento, haz clic con el botón derecho en **ListBox** y en **Editar plantillas adicionales** &gt; **Editar elementos generados (ItemTemplate)**.
 
-Hay un fondo blanco con 80 % de opacidad detrás de los elementos porque el estilo predeterminado del control **ListBox** establece su fondo en el recurso del sistema `ListBoxBackgroundThemeBrush`. Establece `Background="Transparent"` en **ListBox** para borrar este fondo. Para alinear a la izquierda los **TextBlock** de la plantilla de elemento, edítalos de nuevo tal como se describe más arriba y establece un **Margin** de `"9.6,0"` en ambos **TextBlock**.
+Hay un fondo blanco con 80% de opacidad detrás de los elementos porque el estilo predeterminado del control **ListBox** establece su fondo en el recurso del sistema `ListBoxBackgroundThemeBrush`. Establece `Background="Transparent"` en **ListBox** para borrar este fondo. Para alinear a la izquierda los **TextBlock** de la plantilla de elemento, edítalos de nuevo tal como se describe más arriba y establece un **Margin** de `"9.6,0"` en ambos **TextBlock**.
 
-Después de hacerlo, y debido a los [cambios relacionados con los píxeles de visualización](wpsl-to-uwp-porting-xaml-and-ui.md), debemos recorrer y multiplicar toda dimensión de tamaño fijo que aún no hayamos modificado (márgenes, ancho, alto, etc.) por 0,8. De este modo, las imágenes deben cambiar de 70 x 70 px a 56 x 56 px, por ejemplo.
+Después de hacerlo, y debido a los [cambios relacionados con los píxeles de visualización](wpsl-to-uwp-porting-xaml-and-ui.md), debemos recorrer y multiplicar toda dimensión de tamaño fijo que aún no hayamos modificado (márgenes, ancho, alto, etc.) por 0,8. De este modo, las imágenes deben cambiar de 70x70px a 56x56px, por ejemplo.
 
 Pero obtengamos esas imágenes que vamos a representar antes de mostrar los resultados de la aplicación de estilos.
 
@@ -140,4 +137,3 @@ Cuando la aplicación se ejecuta en un dispositivo móvil, el fondo de un cuadro
 En este caso práctico se mostró el proceso de migración de una aplicación muy sencilla (y posiblemente, poco realista). Por ejemplo, se puede usar controles de lista para seleccionar o establecer un contexto de navegación; la aplicación navega a una página con más detalles sobre el elemento que se pulsó. Esta aplicación en particular no hace nada con la selección del usuario y no tiene navegación. Aun así, el caso práctico sirve para dar los primeros pasos y presentar el proceso de migración, así como demostrar técnicas importantes que se puede usar en aplicaciones para UWP reales.
 
 El siguiente caso práctico es [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md), en el que vamos a ver cómo mostrar datos agrupados y obtener acceso a ellos.
-

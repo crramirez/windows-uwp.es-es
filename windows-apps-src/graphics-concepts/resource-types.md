@@ -2,21 +2,17 @@
 title: Tipos de recursos
 description: "Los distintos tipos de recursos tienen un diseño (o una superficie de memoria) diferente."
 ms.assetid: BCDDF227-1837-44DA-ABD4-E39BCFF2B8EF
-keywords:
-- Tipos de recursos
+keywords: Tipos de recursos
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1e21222b97f7a8711de93345623d2d82b3e8e4d2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 77f1b408533d37ecf18bdc1c6c364e6d6c88b94d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="resource-types"></a>Tipos de recursos
 
 
@@ -66,9 +62,9 @@ Un búfer se crea como un recurso no estructurado. Dado que no está estructurad
 
 Un búfer es una colección de elementos; un búfer de vértices contiene los datos por vértice. El ejemplo más simple es un búfer de vértices que contiene un tipo de datos, como datos de posición. Se pueden visualizar como en la siguiente ilustración.
 
-![Ilustración de un búfer de vértices que contiene datos de posición](images/d3d10-resources-single-element-vb2.png)
+![ilustración de un búfer de vértices que contiene datos de posición](images/d3d10-resources-single-element-vb2.png)
 
-Más a menudo, un búfer de vértices contiene todos los datos necesarios para especificar completamente los vértices 3D. Un ejemplo podría ser un búfer de vértices que contiene la posición por vértice, la normal y las coordenadas de textura. Estos datos suelen organizarse como conjuntos de elementos por vértice, como se muestra en la siguiente ilustración.
+Con más frecuencia, un búfer de vértices contiene todos los datos necesarios para especificar completamente los vértices 3D. Un ejemplo podría ser un búfer de vértices que contiene la posición por vértice y las coordenadas normales y de textura. Estos datos normalmente se organizan como conjuntos de elementos por vértice, como se muestra en la siguiente ilustración.
 
 ![Ilustración de un búfer de vértices que contiene la posición, la normal y datos de textura](images/d3d10-vertex-buffer-element.png)
 
@@ -85,7 +81,7 @@ Antes de crear un búfer de vértices, debes definir su diseño mediante la crea
 
 Un búfer de índices contiene un conjunto secuencial de índices de 16 o 32 bits; cada índice se utiliza para identificar un vértice en un búfer de vértices. El uso de un búfer de índices con uno o más búferes de vértices para suministrar datos a la fase IA se denomina indexación. Un búfer de índices se puede visualizar como en la siguiente ilustración.
 
-![Ilustración de un búfer de índices](images/d3d10-index-buffer.png)
+![ilustración de un búfer de índices](images/d3d10-index-buffer.png)
 
 Los índices secuenciales almacenados en un búfer de índices se encuentran con los siguientes parámetros:
 
@@ -101,7 +97,7 @@ Un búfer de índices puede unir varias series de líneas o triángulos ([topolo
 
 Direct3D tiene un búfer para suministrar constantes de sombreador que se denomina "búfer de constantes de sombreador" o simplemente "búfer de constantes". Conceptualmente, se parece a un búfer de vértices de un solo elemento, como se muestra en la siguiente ilustración.
 
-![Ilustración de un búfer de constantes de sombreador](images/d3d10-shader-resource-buffer.png)
+![ilustración de un búfer de constantes del sombreador](images/d3d10-shader-resource-buffer.png)
 
 Cada elemento almacena una constante de 1 a 4 componentes, que se determina por el formato de los datos almacenados.
 
@@ -185,7 +181,7 @@ Un recurso Texture3D (también conocido como "textura de volumen") contiene un v
 
 ![Ilustración de un recurso de textura 3D](images/d3d10-resource-texture3d.png)
 
-Cuando se enlaza un segmento de mapa MIP de textura 3D como una salida de destino de representación (con una vista de destino de representación), la textura 3D se comporta igual que una matriz de texturas 2D con n segmentos. El segmento de representación particular se elige en la fase del sombreador de geometría.
+Cuando se enlaza un segmento de mapa MIP de textura 3D como una salida de destino de representación (con una vista de destino de representación), la textura 3D se comporta igual que una matriz de texturas 2D con n segmentos. El sector de representación concreto se elige desde la fase del sombreador de geometría.
 
 No hay ningún concepto de una matriz de texturas 3D; por lo tanto, un subrecurso de textura 3D es un nivel de mapa MIP único.
 
@@ -253,4 +249,3 @@ Un único recurso se puede enlazar a varias fases de la canalización, siempre q
 
 
 [Recursos](resources.md)
-

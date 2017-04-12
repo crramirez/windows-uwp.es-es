@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
-description: "Obtén información sobre los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK."
-title: Problemas conocidos de las bibliotecas de Microsoft Advertising
+description: "Obtén información sobre los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en Microsoft Store Services SDK."
+title: Problemas conocidos de las bibliotecas de publicidad
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP, anuncios, publicidad, problemas conocidos, ads, advertising, known issues
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54e3361ce9fdfc67495d41903b8b291931b7ee9f
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, known issues, problemas conocidos
+ms.openlocfilehash: 33bf3c2db5db7e8ec07df3f4d13cc0ad074e99a3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="known-issues-for-the-microsoft-advertising-libraries"></a>Problemas conocidos de las bibliotecas de Microsoft Advertising
+# <a name="known-issues-for-the-advertising-libraries"></a>Problemas conocidos de las bibliotecas de publicidad
 
 
 
@@ -43,7 +40,7 @@ Si hay un **lastError** sobrante de la solicitud de anuncio anterior, se puede d
 
 ## <a name="interstitial-ads-and-navigation-buttons-on-phones"></a>Botones de navegación y anuncios intersticiales en los teléfonos
 
-En los teléfonos (o emuladores) que tienen botones de software **Atrás**, **Inicio** y **Búsqueda**, en lugar de botones de hardware, es posible que los botones de temporizador y de click-through para los anuncios intersticiales en vídeo estén ocultos.
+En los teléfonos (o emuladores) que tienen los botones **Atrás**, **Inicio** y **Buscar** de software, en lugar de botones de hardware, es posible que los botones de temporizador regresivo y de click-through para los anuncios intersticiales estén ocultos.
 
 ## <a name="recently-created-ads-are-not-being-served-to-your-app"></a>Los anuncios creados recientemente no se envían a la aplicación
 
@@ -123,4 +120,3 @@ Para ponerte en contacto con soporte técnico para problemas relacionados con la
  
 
  
-

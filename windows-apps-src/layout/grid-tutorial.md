@@ -9,19 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 87947b5bd1c1db008a21828c3940475c2b53fd6d
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 094cabc642884f57af2dbeb5125a2a8b81365824
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Creación de una aplicación meteorológica sencilla con Grid y StackPanel
 
-Usa XAML para crear el diseño de una aplicación meteorológica sencilla con los elementos **Grid** y **StackPanel**. Con estas herramientas, puedes crear aplicaciones con un aspecto fantástico que funcionen en cualquier dispositivo que ejecute Windows 10. Este tutorial dura entre 10 y 20 minutos.
+Usa XAML para crear el diseño de una aplicación meteorológica sencilla con los elementos **Grid** y **StackPanel**. Con estas herramientas, puedes crear aplicaciones con un aspecto fantástico que funcionen en cualquier dispositivo que ejecute Windows10. Este tutorial dura entre 10 y 20minutos.
 
 ## <a name="prerequisites"></a>Requisitos previos
-- Windows 10 y Microsoft Visual Studio 2015. [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](../get-started/get-set-up.md).
+- Windows10 y Microsoft Visual Studio2015. [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](../get-started/get-set-up.md).
 - Conocimientos acerca de cómo crear una aplicación de "Hello World" básica mediante XAML y C#. Si aún no los tienes, [haz clic aquí para aprender a crear una aplicación "Hello World"](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="step-1-create-a-blank-app"></a>Paso 1: Crear una aplicación en blanco
@@ -123,4 +120,3 @@ Si lo deseas, experimenta con el diseño anterior y explora diferentes maneras e
 Para obtener una introducción al diseño de diseños para aplicaciones para UWP, consulta [Introducción al diseño de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/layout/design-and-ui-intro).
 
 Para obtener información sobre cómo crear diseños dinámicos que se adapten a diferentes tamaños de pantalla, consulta [Definir diseños de página con XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml)
-

@@ -2,24 +2,22 @@
 author: msatranjr
 ms.assetid: 26834A51-512B-485B-84C8-ABF713787588
 title: "Crear una aplicación de tarjeta NFC inteligente"
-description: "Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC mediante el uso de un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO)."
+description: "Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC con un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO)."
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ee62e0d1ddd41ce1cce61bc854168f0cac6ad038
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bc8064cd5446ca4c481c60b08cdf626ec85be646
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
 # <a name="create-an-nfc-smart-card-app"></a>Crear una aplicación de tarjeta NFC inteligente
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Importante** Este tema solo se aplica a Windows 10 Mobile.
+**Importante** Este tema solo se aplica a Windows10 Mobile.
 
 Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC con un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO). Esto limitaba la variedad de soluciones de pago posibles por otros comerciantes o desarrolladores que no estaban unidos a MNO. En Windows 10 Mobile, se ha incluido una nueva tecnología de emulación de tarjetas denominada Emulación de tarjeta de host (HCE). La tecnología HCE permite a tu aplicación comunicarse directamente con un lector de tarjetas NFC. En este tema se muestra cómo funciona la emulación de tarjeta de host (HCE) en dispositivos de Windows 10 Mobile y cómo se desarrolla una aplicación HCE para que los clientes puedan acceder a los servicios a través de su teléfono en lugar de con una tarjeta física sin colaboración con un MNO.
 
@@ -83,7 +81,7 @@ En Windows 10 Mobile, el sistema configura la tabla de enrutamiento del controla
 
 Cuando un lector externo envía un comando "SELECT AID", el controlador de NFC comprueba primero las rutas de AID en la tabla de enrutamiento en busca de una coincidencia. Si no hay ninguna coincidencia, usará la ruta basada en protocolos como la ruta predeterminada para el tráfico ISO-DEP (14443-4-A). Para cualquier otro tráfico no ISO-DEP, usará el enrutamiento basado en la tecnología.
 
-Windows 10 Mobile proporciona una opción de menú "Tarjeta SIM" en la página de Configuración de NFC para seguir usando aplicaciones basadas en SIM de Windows Phone 8.1 heredadas, que no registran sus AID en el sistema. Si el usuario selecciona "Tarjeta SIM" como su tarjeta de pago predeterminada, la ruta de ISO-DEP se establece en UICC; para todas las demás opciones del menú desplegable, la ruta de ISO-DEP es al host.
+Windows10 Mobile proporciona una opción de menú "Tarjeta SIM" en la página de Configuración de NFC para seguir usando aplicaciones basadas en SIM de Windows Phone 8.1 heredadas, que no registran sus AID en el sistema. Si el usuario selecciona "Tarjeta SIM" como su tarjeta de pago predeterminada, la ruta de ISO-DEP se establece en UICC; para todas las demás opciones del menú desplegable, la ruta de ISO-DEP es al host.
 
 La ruta de ISO-DEP se establece en "Tarjeta SIM" para los dispositivos que tengan una tarjeta SIM habilitada para SE cuando el dispositivo se arranca por primera vez con Windows 10 Mobile. Cuando el usuario instala una aplicación habilitada para HCE y esa aplicación permite registros de grupo AID de HCE, la ruta de ISO-DEP apuntará al host. Las nuevas aplicaciones basadas en SIM necesitan registrar los AID en la tarjeta SIM para que las rutas AID específicas se rellenen en la tabla de enrutamiento del controlador.
 
@@ -252,13 +250,13 @@ var appletIdGroup = new SmartCardAppletIdGroup(
 
 Puedes incluir hasta 9 AID (con una longitud de 5-16 bytes cada uno) por cada grupo de AID.
 
-Usa el método [**RegisterAppletIdGroupAsync**](https://msdn.microsoft.com/library/windows/apps/Dn894656) para registrar el grupo de AID con el sistema, que devolverá un objeto [**SmartCardAppletIdGroupRegistration**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration). De manera predeterminada, la propiedad [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy) del objeto de registro se establece en **Disabled**. Esto significa que aunque los AID se registren con el sistema, aún no se han habilitado y no recibirán tráfico.
+Usa el método [**RegisterAppletIdGroupAsync**](https://msdn.microsoft.com/library/windows/apps/Dn894656) para registrar el grupo de AID con el sistema, que devolverá un objeto [**SmartCardAppletIdGroupRegistration**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration). De manera predeterminada, la propiedad [**ActivationPolicy**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) del objeto de registro se establece en **Disabled**. Esto significa que aunque los AID se registren con el sistema, aún no se han habilitado y no recibirán tráfico.
 
 ```csharp
 reg = await SmartCardEmulator.RegisterAppletIdGroupAsync(appletIdGroup);
 ```
 
-Puedes habilitar las tarjetas registradas (grupos de AID) mediante el método [**RequestActivationPolicyChangeAsync**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_requestactivationpolicychangeasync) de la clase [**SmartCardAppletIdGroupRegistration**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration) como se muestra a continuación. Como solo se puede habilitar una tarjeta de pago única a la vez en el sistema, si establece el elemento [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy) de un grupo de AID de pago en **Enabled**, se obtiene el mismo resultado que si se establece la tarjeta de pago predeterminada. Se pedirá al usuario que permita esta tarjeta como una tarjeta de pago predeterminada, independientemente de si hay una tarjeta de pago predeterminada ya seleccionada o no. Esta declaración no corresponde si la aplicación ya es la aplicación de pago predeterminada y está cambiando simplemente entre sus propios grupos de AID. Puedes registrar hasta 10 grupos de AID por aplicación.
+Puedes habilitar las tarjetas registradas (grupos de AID) mediante el método [**RequestActivationPolicyChangeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de la clase [**SmartCardAppletIdGroupRegistration**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) como se muestra a continuación. Como solo se puede habilitar una tarjeta de pago única a la vez en el sistema, si establece el elemento [**ActivationPolicy**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de un grupo de AID de pago en **Enabled**, se obtiene el mismo resultado que si se establece la tarjeta de pago predeterminada. Se pedirá al usuario que permita esta tarjeta como una tarjeta de pago predeterminada, independientemente de si hay una tarjeta de pago predeterminada ya seleccionada o no. Esta declaración no corresponde si la aplicación ya es la aplicación de pago predeterminada y está cambiando simplemente entre sus propios grupos de AID. Puedes registrar hasta 10 grupos de AID por aplicación.
 
 ```csharp
 reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.Enabled);
@@ -290,7 +288,7 @@ bgTask = taskBuilder.Register();
 
 ## <a name="foreground-override-behavior"></a>Comportamiento de reemplazo de primer plano
 
-Puedes cambiar el elemento [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy) de cualquiera de los registros de grupos de AID a **ForegroundOverride** mientras la aplicación está en primer plano sin pedir confirmación al usuario. Cuando el usuario pulsa en un terminal desde su dispositivo mientras la aplicación está en primer plano, el tráfico se enruta a la aplicación incluso si el usuario no ha elegido ninguna de las tarjetas de pago como su tarjeta de pago predeterminada. Cuando se cambia la directiva de activación de la tarjeta a **ForegroundOverride**, este cambio es solo temporal hasta que la aplicación deje de estar en primer plano y no afectará a la tarjeta de pago predeterminada establecida por el usuario. Puedes cambiar el elemento **ActivationPolicy** de tus tarjetas de pago o no de pago desde la aplicación en primer plano de la siguiente manera. Ten en cuenta que solo es posible llamar al método [**RequestActivationPolicyChangeAsync**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_requestactivationpolicychangeasync) desde una aplicación en primer plano y no se puede llamar desde una tarea en segundo plano.
+Puedes cambiar el elemento [**ActivationPolicy**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de cualquiera de los registros de grupos de AID a **ForegroundOverride** mientras la aplicación está en primer plano sin pedir confirmación al usuario. Cuando el usuario pulsa en un terminal desde su dispositivo mientras la aplicación está en primer plano, el tráfico se enruta a la aplicación incluso si el usuario no ha elegido ninguna de las tarjetas de pago como su tarjeta de pago predeterminada. Cuando se cambia la directiva de activación de la tarjeta a **ForegroundOverride**, este cambio es solo temporal hasta que la aplicación deje de estar en primer plano y no afectará a la tarjeta de pago predeterminada establecida por el usuario. Puedes cambiar el elemento **ActivationPolicy** de tus tarjetas de pago o no de pago desde la aplicación en primer plano de la siguiente manera. Ten en cuenta que solo es posible llamar al método [**RequestActivationPolicyChangeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) desde una aplicación en primer plano y no se puede llamar desde una tarea en segundo plano.
 
 ```csharp
 reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.ForegroundOverride);
@@ -335,7 +333,7 @@ Smartcardemulator.IsHostCardEmulationSupported();
 
 ## <a name="lock-screen-and-screen-off-behavior"></a>Comportamiento de la pantalla de bloqueo y de la pantalla apagada
 
-Windows 10 Mobile tiene la configuración de emulación de tarjeta de nivel de dispositivo, que puede establecer el operador de telefonía móvil o el fabricante del dispositivo. De manera predeterminada, la alternancia de "pulsar para pagar "está deshabilitada, y la "directiva de habilitación del nivel del dispositivo" está definida en "Siempre", a menos que el OEM o el operador móvil omitan estos valores.
+Windows10 Mobile tiene la configuración de emulación de tarjeta de nivel de dispositivo, que puede establecer el operador de telefonía móvil o el fabricante del dispositivo. De manera predeterminada, la alternancia de "pulsar para pagar "está deshabilitada, y la "directiva de habilitación del nivel del dispositivo" está definida en "Siempre", a menos que el OEM o el operador móvil omitan estos valores.
 
 La aplicación puede consultar el valor de [**EnablementPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn608006) en el nivel del dispositivo y realizar una acción para cada caso según el comportamiento deseado de la aplicación en cada estado.
 
@@ -386,5 +384,4 @@ var appletIdGroup = new SmartCardAppletIdGroup(
 ```
 
 ** Importante **  
-La compatibilidad para interceptar SMS binarios heredados de Windows Phone 8.1 se ha quitado y se ha reemplazado con una nueva compatibilidad más amplia de SMS en Windows 10 Mobile, pero las aplicaciones de Windows Phone 8.1 heredadas basadas en esto deben actualizarse para usar las nuevas API para SMS de Windows 10 Mobile.
-
+La compatibilidad para interceptar SMS binarios heredados de Windows Phone8.1 se ha quitado y se ha reemplazado con una nueva compatibilidad más amplia de SMS en Windows10 Mobile, pero las aplicaciones de Windows Phone8.1 heredadas basadas en esto deben actualizarse para usar las nuevas API para SMS de Windows10 Mobile.

@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, juegos, games, suspensión, suspend, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 028350f3e4bf6bda5a72663c009e8117c9311b3e
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="how-to-suspend-an-app-directx-and-c"></a>Cómo suspender una aplicación (DirectX y C++)
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema verás cómo guardar datos importantes de la aplicación y del estado del sistema cuando el sistema suspende la aplicación DirectX para la Plataforma universal de Windows (UWP).
 
@@ -101,7 +98,7 @@ void App::Run()
 ## <a name="call-trim"></a>Llamar a Trim()
 
 
-Desde Windows 8.1, todas las aplicaciones de la Tienda Windows con DirectX deben llamar a [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) al suspenderse. Esta llamada la indica al controlador gráfico que libere todos los búferes temporales asignados para la aplicación, lo que reduce la posibilidad de que se cierre la aplicación para reclamar recursos de memoria mientras esté en estado de suspensión. Este es un requisito de certificación para Windows 8.1.
+Desde Windows8.1, todas las aplicaciones de la TiendaWindows con DirectX deben llamar a [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) al suspenderse. Esta llamada la indica al controlador gráfico que libere todos los búferes temporales asignados para la aplicación, lo que reduce la posibilidad de que se cierre la aplicación para reclamar recursos de memoria mientras esté en estado de suspensión. Este es un requisito de certificación para Windows8.1.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)
@@ -155,7 +152,6 @@ El sistema no notifica a una aplicación cuando se cierra, con lo cual la aplica
  
 
  
-
 
 
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, servicios de la Tienda, API de análisis de la Tienda Windows, opiniones, reviews"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 68ad995341d0d4bedbe566e8a491a80b9b0a8ed2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 79ba971e64958ab83e2674a91be37be754d2d9b6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-app-reviews"></a>Obtener las opiniones de la aplicación
 
 
@@ -34,7 +31,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews``` |
 
@@ -44,7 +41,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|---------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -73,8 +70,8 @@ Para obtener una lista de los campos y operadores compatibles de cada campo, con
 | Campos        | Operadores compatibles   |  Descripción        |
 |---------------|--------|-----------------|
 | market | eq, ne | Cadena que contiene el código de país ISO 3166 del mercado del dispositivo. |
-| osVersion  | eq, ne  | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul>  |
-| deviceType  | eq, ne  | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Consola</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul>  |
+| osVersion  | eq, ne  | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul>  |
+| deviceType  | eq, ne  | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul>  |
 | isRevised  | eq, ne  | Especifica <strong>true</strong> para filtrar las opiniones que hayan sido revisadas; de lo contrario, especifica <strong>false</strong>.  |
 | packageVersion  | eq, ne  | Versión del paquete de aplicaciones que se revisó.  |
 | deviceModel  | eq, ne  | Tipo de dispositivo en el cual se revisó la aplicación.  |
@@ -114,8 +111,8 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                            |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Value      | matriz  | Matriz de objetos que contienen los datos de revisión. Para obtener más información sobre los datos de cada objeto, consulta la sección [valores de revisión](#review-values) que encontrarás a continuación.                                                                                                                                      |
-| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de datos de opiniones de la solicitud. |
+| Valor      | matriz  | Matriz de objetos que contienen los datos de revisión. Para más información sobre los datos de cada objeto, consulta la sección [valores de revisión](#review-values) que encontrarás a continuación.                                                                                                                                      |
+| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de opiniones de la solicitud. |
 | TotalCount | entero    | El número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                             |
 
 <span/>
@@ -126,9 +123,9 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 | Valor                  | Tipo    | Descripción                                                                                                                                                                                                                          |
 |------------------------|---------|---------------------|
-| date                   | cadena  | La primera fecha del intervalo de fechas de los datos de opiniones. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.  |
+| fecha                   | cadena  | La primera fecha del intervalo de fechas de los datos de opiniones. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.  |
 | applicationId          | cadena  | El Id. de la Tienda de la aplicación sobre la que estás recuperando los datos de opiniones.        |
-| applicationName        | cadena  | El nombre para mostrar de la aplicación.   |
+| applicationName        | cadena  | Nombre para mostrar de la aplicación.   |
 | market                 | cadena  | El código de país ISO 3166 del mercado desde el cual se ha enviado la opinión.       |
 | osVersion              | cadena  | La versión del sistema operativo desde el cual se ha enviado la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [Campos de filtro](#filter-fields).         |
 | deviceType             | cadena  | El tipo de dispositivo desde el cual se ha enviado la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [Campos de filtro](#filter-fields).      |
@@ -147,7 +144,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | helpfulCount           | número  | El número de veces que la opinión se ha marcado como útil.     |
 | notHelpfulCount        | número  | El número de veces que la opinión se ha marcado como no útil.               |
 | responseDate           | cadena  | La fecha en la que se envió una respuesta.                 |
-| responseText           | string  | El contenido del texto de la respuesta.        |
+| responseText           | cadena  | El contenido del texto de la respuesta.        |
 | id                     | string  | El identificador de la revisión (es un GUID). Puedes usar este identificador en los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md).       |
 
 <span/> 
@@ -192,7 +189,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Informe de opiniones](../publish/reviews-report.md)
+* [Informe Críticas](../publish/reviews-report.md)
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
 * [Obtener información de respuesta de opiniones de la aplicación](get-response-info-for-app-reviews.md)
 * [Enviar respuestas a opiniones de la aplicación](submit-responses-to-app-reviews.md)
@@ -200,4 +197,3 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
 * [Obtener los datos del informe de errores](get-error-reporting-data.md)
 * [Obtener la clasificación de la aplicación](get-app-ratings.md)
-

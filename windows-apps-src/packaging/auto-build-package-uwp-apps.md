@@ -3,17 +3,15 @@ author: rmpablos
 title: "Configurar compilaciones automatizadas para la aplicación para UWP"
 description: "Cómo configurar las compilaciones automatizadas para producir paquetes de instalaciones de prueba o paquetes de la Tienda."
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 54dcebb0dc4b1a41acdae655b9caf14f72161f36
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f4c68af97e5d5b11a0c5320c9fa6040b9ab94e5a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -21,7 +19,7 @@ Puedes usar Visual Studio Team Services (VSTS) para crear compilaciones automati
 
 ## <a name="select-the-right-type-of-build-agent"></a>Seleccionar el tipo correcto de agente de compilación
 
-Elige el tipo de agente de compilación que quieres que VSTS use cuando ejecuta el proceso de compilación. Un agente de compilación hospedado se implementa con las herramientas y SDK más comunes, y funcionará para la mayoría de los escenarios, consulta el artículo [Software en el servidor de compilación hospedado](https://www.visualstudio.com/en-us/docs/build/admin/agents/hosted-pool#software). Sin embargo, puedes crear a un agente de compilación personalizado si necesitas tener más control sobre los pasos de la compilación. Puedes usar la siguiente tabla para ayudarte a tomar esa decisión.
+Elige el tipo de agente de compilación que quieres que VSTS use cuando ejecuta el proceso de compilación. Un agente de compilación hospedado se implementa con las herramientas y SDK más comunes, y funcionará para la mayoría de los escenarios, consulta el artículo [Software en el servidor de compilación hospedado](https://www.visualstudio.com/docs/build/admin/agents/hosted-pool#software). Sin embargo, puedes crear a un agente de compilación personalizado si necesitas tener más control sobre los pasos de la compilación. Puedes usar la siguiente tabla para ayudarte a tomar esa decisión.
 
 |**Escenario**|**Agente personalizado**|**Agente de compilación hospedado**|
 -------------|----------------|----------------------|
@@ -33,13 +31,13 @@ Elige el tipo de agente de compilación que quieres que VSTS use cuando ejecuta 
 |Ejecutar pruebas unitarias|: white_check_mark:||
 |Usar compilaciones incrementales|: white_check_mark:||
 
->Nota: Si tienes previsto seleccionar como destino el SDK de la Actualización de aniversario de Windows (compilación 14393) tendrás que configurar el agente de compilación personalizado, ya que el grupo de compilación hospedado solo admite el SDK 10586 y 10240. Más información para [elegir una versión de UWP](https://msdn.microsoft.com/en-us/windows/uwp/updates-and-versions/choose-a-uwp-version)
+>Nota: Si tienes previsto seleccionar como destino el SDK de la Actualización de aniversario de Windows (compilación 14393) tendrás que configurar el agente de compilación personalizado, ya que el grupo de compilación hospedado solo admite el SDK 10586 y 10240. Más información para [elegir una versión de UWP](https://msdn.microsoft.com/windows/uwp/updates-and-versions/choose-a-uwp-version)
 
 #### <a name="create-a-custom-build-agent-optional"></a>Crear un agente de compilación personalizado (opcional)
 
 Si decides crear a un agente de compilación personalizado, necesitarás las herramientas de la plataforma universal de Windows. Estas herramientas forman parte de Visual Studio. Puedes usar la edición de la comunidad de Visual Studio.
 
-Para obtener más información, consulta [Implementar un agente en Windows.](https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows) 
+Para obtener más información, consulta [Implementar un agente en Windows.](https://www.visualstudio.com/docs/build/admin/agents/v2-windows) 
 
 Para ejecutar pruebas unitarias de UWP, tendrás que hacer lo siguiente: •    Implementar e iniciar la aplicación. •    Ejecutar el agente VSTS en modo interactivo. •    Configurar el agente para que inicie sesión automáticamente después de un reinicio.
 
@@ -113,7 +111,7 @@ Esta tarea almacena los artefactos generados en VSTS. Puedes verlos en la pesta�
 Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que cargaste en la Tienda (appxupload), así como los paquetes que habilitan la instalación de prueba (appxbundle).
 
 
->Nota: De manera predeterminada, el agente VSTS mantiene los paquetes appx generados más recientes. Si deseas almacenar solo los artefactos de la compilación actual, configura la compilación para limpiar el directorio de archivos binarios. Para ello, agrega una variable llamada `Build.Clean` y, a continuación, establécela en el valor `all`. Para obtener más información, consulta [Especificar el repositorio.](https://www.visualstudio.com/en-us/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way)
+>Nota: De manera predeterminada, el agente VSTS mantiene los paquetes appx generados más recientes. Si deseas almacenar solo los artefactos de la compilación actual, configura la compilación para limpiar el directorio de archivos binarios. Para ello, agrega una variable llamada `Build.Clean` y, a continuación, establécela en el valor `all`. Para obtener más información, consulta [Especificar el repositorio.](https://www.visualstudio.com/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way)
 
 #### <a name="the-types-of-automated-builds"></a>Los tipos de compilaciones automatizadas
 A continuación, usarás tu definición de compilación para crear una compilación automatizada. La siguiente tabla describe cada tipo de compilación automatizada que puedes crear. 
@@ -319,11 +317,11 @@ Si deseas distribuir los paquetes appx desde un sitio web como VSTS o HockeyApp,
 
 <span id="certificates-best-practices"/>
 ### <a name="best-practices-for-signing-certificates"></a>Procedimientos recomendados para certificados de firma 
-Visual Studio genera un certificado para cada proyecto. Esto hace que sea difícil mantener una lista protegida de certificados válidos. Si tienes previsto crear varias aplicaciones, puedes crear un único certificado para firmar todas las aplicaciones. A continuación, cada dispositivo que confíe en tu certificado podrá realizar instalaciones de prueba de cualquiera de las aplicaciones sin necesidad de instalar otro certificado. Para obtener más información, consulta [Cómo crear un certificado de firma del paquete de la aplicación.](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx)
+Visual Studio genera un certificado para cada proyecto. Esto hace que sea difícil mantener una lista protegida de certificados válidos. Si tienes previsto crear varias aplicaciones, puedes crear un único certificado para firmar todas las aplicaciones. A continuación, cada dispositivo que confíe en tu certificado podrá realizar instalaciones de prueba de cualquiera de las aplicaciones sin necesidad de instalar otro certificado. Para obtener más información, consulta [Cómo crear un certificado de firma del paquete de la aplicación.](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)
 
 
 #### <a name="create-a-signing-certificate"></a>Crear un certificado de firma
-Usa la herramienta [MakeCert.exe](https://msdn.microsoft.com/en-us/library/windows/desktop/ff548309(%09v=vs.85).aspx) para crear un certificado. El siguiente ejemplo crea un certificado con la herramienta MakeCert.exe.
+Usa la herramienta [MakeCert.exe](https://msdn.microsoft.com/library/windows/desktop/ff548309.aspx) para crear un certificado. El siguiente ejemplo crea un certificado con la herramienta MakeCert.exe.
 
 ```
 MakeCert /n publisherName /r /h 0 /eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" /e expirationDate /sv MyKey.pvk MyKey.cer
@@ -359,8 +357,7 @@ Registra la clave pública del certificado en la ubicación de raíz de confianz
 La forma más sencilla de registrar el certificado es hacer doble clic en el archivo .cer y, a continuación, seguir los pasos en el asistente para guardar el certificado en el almacén de personas de confianza y el equipo local.
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Compilar la aplicación de .NET para Windows](https://www.visualstudio.com/en-us/docs/build/get-started/dot-net) 
+* [Compilar la aplicación de .NET para Windows](https://www.visualstudio.com/docs/build/get-started/dot-net) 
 * [Empaquetado de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
 * [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
-* [Cómo crear un certificado de firma del paquete de la aplicación](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx)
-
+* [Cómo crear un certificado de firma del paquete de la aplicación](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)

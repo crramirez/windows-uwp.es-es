@@ -9,20 +9,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 3f92c8fd-4096-4972-97da-01ae5db6423c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 9819e632ab6de58eee4358866d3186c0fa31f69f
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 9236b0cd9ac658a34283e54ba70b7e70d19c6bb3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="media-capture-api-reference"></a>Referencia de API de captura multimedia #
 
 **Solicitud**
 
 Puedes capturar una representación de PNG de la pantalla actual mediante el siguiente formato de solicitud.
 
-| Método        | URI de la solicitud     | 
+| Método        | URI de solicitud     | 
 | ------------- |-----------------|
 | GET           | /ext/screenshot |
 <br>
@@ -32,7 +29,7 @@ Puedes capturar una representación de PNG de la pantalla actual mediante el sig
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 
-| Parámetro del URI      | Descripción     | 
+| Parámetro de URI      | Descripción     | 
 | ------------------ |-----------------|
 | descargar (opcional)| Un valor booleano que indica si los encabezados de respuesta HTTP deben configurarse para indicar que el explorador del host debe descargar la captura de pantalla como datos adjuntos en lugar de representarla en el explorador.  |
 <br>
@@ -60,5 +57,4 @@ Esta API tiene los siguientes códigos de estado esperado.
 **Familias de dispositivos disponibles**
 
 * Windows Xbox
-
 

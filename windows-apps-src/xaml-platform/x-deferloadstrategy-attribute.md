@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4ccc18920a98b3c2258b4965e96fa063124d0546
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0fd1e58549ba19397948864fe5fe0b31fcaf01d7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xdeferloadstrategy-attribute"></a>Atributo x:DeferLoadStrategy
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **x:DeferLoadStrategy="Lazy"** es una característica que puedes usar para optimizar el rendimiento del inicio o de los escenarios para crear árboles de una aplicación XAML. Al usar **x:DeferLoadStrategy="Lazy"**, se retrasa la creación de un elemento y sus elementos secundarios consiguiendo así reducir el tiempo de inicio y el coste de la memoria, ya que no es necesario crear los elementos. Esto es útil para reducir los costes de los elementos que no se usan a menudo. El elemento se ejecutará en el momento en que se le haga referencia desde el código o desde VisualStateManager.
 
@@ -36,7 +33,7 @@ Las restricciones de el de uso **x: DeferLoadStrategy** son:
 
 -   Requiere definir el atributo [x:Name](x-name-attribute.md) , ya que debe haber una forma de encontrar el elemento más adelante.
 -   Solo se puede marcar un elemento [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) como diferido, a excepción de los tipos derivados de la clase [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
--   No se pueden aplazar elementos raíz en las clases [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) y [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
+-   No se pueden aplazar elementos raíz en las clases [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) y [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
 -   Los elementos de la clase [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) no se puede aplazar.
 -   No funciona con atributos XAML sueltos cargados con el método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048).
 -   Mover un elemento primario borrará todos los elementos que no se hayan realizado.
@@ -93,5 +90,4 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
     this.FindName("DeferredGrid"); // This will realize the deferred grid
 }
 ```
-
 

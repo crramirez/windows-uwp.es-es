@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anuncios, publicidad, AdControl, InterstitialAd
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f01b69502d41a7128ac5f59589f6d014d92f52a3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 93b56259314c54a56cd8ebbef89694319a95e41c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="workflows-for-creating-apps-with-ads"></a>Flujos de trabajo para crear aplicaciones con anuncios
 
 
@@ -54,7 +51,7 @@ Sigue las instrucciones de los siguientes tutoriales para agregar un objeto [AdC
 
 Si usas un objeto **AdControl** o **InterstitialAd** para mostrar anuncios en la aplicación, debes especificar un identificador de aplicación y un identificador de unidad de anuncios en el código para vincular la aplicación a tu cuenta del Centro de desarrollo de Windows y para proporcionar anuncios. Mientras desarrolles la aplicación, usa los valores de identificador de aplicación y de identificador de unidad de anuncios para ver cómo la aplicación representa los anuncios durante las pruebas. Esto te permite ver cómo la aplicación recibe y representa anuncios durante las pruebas. Para obtener más información, consulta [Valores del modo de prueba](test-mode-values.md).
 
-Para obtener proyectos de muestra completos que muestren cómo agregar anuncios de banner e intersticiales en vídeo a aplicaciones de JavaScript y HTML y aplicaciones XAML con C# y C++, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
+Para proyectos de muestra completos que muestren cómo agregar anuncios de banner e intersticiales a aplicaciones JavaScript y HTML, y aplicaciones XAML con C# y C++, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
 
 ## <a name="configure-your-app-to-receive-live-ads"></a>Configurar la aplicación para que pueda recibir anuncios dinámicos
 
@@ -69,4 +66,3 @@ Cuando tu aplicación se publique y esté disponible en la Tienda Windows, puede
  
 
  
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de colecciones de la Tienda Windows, completar, consumible, Windows Store collection API, fulfill, consumable
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 201e4fedc5f36202cba4c495ae9344d5a7975d62
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="report-consumable-products-as-fulfilled"></a>Notificar productos consumibles como completados
 
 Usa este método en la API de colecciones de la Tienda Windows para notificar un producto consumible como completado para un cliente determinado. Para que un usuario pueda volver a comprar un producto consumible, la aplicación o el servicio debe notificar el producto consumible como completado para dicho usuario.
@@ -40,7 +37,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud                                                   |
+| Método | URI de solicitud                                                   |
 |--------|---------------------------------------------------------------|
 | POST   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
 
@@ -50,7 +47,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | string | Obligatorio. Token de acceso de Azure AD con formato **Portador** &lt;*token*&gt;.                           |
+| Authorization  | cadena | Obligatorio. Token de acceso de Azure AD con formato **Portador** &lt;*token*&gt;.                           |
 | Host           | string | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | number | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
@@ -76,7 +73,7 @@ El objeto UserIdentity contiene los parámetros siguientes.
 |----------------------|--------|-------------------|----------|
 | identityType         | cadena | Especifica el valor de cadena **b2b**.    | Sí      |
 | identityValue        | string | La [clave de identificador de la Tienda Windows](view-and-grant-products-from-a-service.md#step-4) que representa la identidad del usuario para el que quieres notificar un producto consumible como completado.      | Sí      |
-| localTicketReference | string | El identificador solicitado para la respuesta devuelta. Se recomienda usar el mismo valor que la [notificación](view-and-grant-products-from-a-service.md#claims-in-a-windows-store-id-key) *userId* de la clave de identificador de la Tienda Windows. | Sí      |
+| localTicketReference | cadena | El identificador solicitado para la respuesta devuelta. Se recomienda usar el mismo valor que la [notificación](view-and-grant-products-from-a-service.md#claims-in-a-windows-store-id-key) *userId* de la clave de identificador de la Tienda Windows. | Sí      |
 
 <span/> 
 
@@ -156,4 +153,3 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 * [Consultar productos](query-for-products.md)
 * [Conceder productos gratuitos](grant-free-products.md)
 * [Renovar una clave de id. de la Tienda Windows](renew-a-windows-store-id-key.md)
-

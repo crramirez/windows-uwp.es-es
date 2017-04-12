@@ -1,6 +1,6 @@
 ---
 author: QuinnRadich
-Description: "Diseña una interfaz de usuario informativa que enseñe a los usuarios cómo funciona la aplicación de la Tienda Windows."
+Description: "Diseñar una interfaz de usuario informativa que enseñe a los usuarios cómo funciona la aplicación de la Tienda Windows."
 title: "Directrices para diseñar una interfaz de usuario informativa"
 label: Instructional UI
 template: detail.hbs
@@ -11,18 +11,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: c87e2f06-339d-4413-b585-172752964f56
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b9734304b813794d615eca4d0c9d852dc8df31c1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 3d1d1e139baf82800ca999c0ab931f7965882b0c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="instructional-ui-guidelines"></a>Directrices para una interfaz de usuario informativa
 
 
 
-En ocasiones, puede resultar útil informar al usuario acerca de las funciones de la aplicación que puede que no resulten tan obvias para ellos, tales como las interacciones táctiles específicas. En estos casos, debes presentar instrucciones a través de la interfaz de usuario para que puedan usar esas características que posiblemente no conozcan.
+En ocasiones puede resultar útil informar al usuario acerca de las funciones de la aplicación que puedan no resultar obvias para ellos, tales como las interacciones táctiles específicas. En estos casos, debes presentar instrucciones a través de la interfaz de usuario para que puedan usar esas características que posiblemente no conozcan.
 
 ## <a name="when-to-use-instructional-ui"></a>Cuándo usar la interfaz de usuario informativa
 
@@ -77,4 +74,3 @@ Aquí te mostramos algunos ejemplos en los que la interfaz de usuario informativ
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Directrices para la ayuda de la aplicación](guidelines-for-app-help.md)
-

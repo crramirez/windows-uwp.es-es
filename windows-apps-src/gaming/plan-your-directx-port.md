@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, DirectX, port, migración"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: e255bceae44ace0722a2df0c53d60ec0f8fa35fe
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="plan-your-directx-port"></a>Planear la migración de DirectX
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -45,7 +42,7 @@ Debes reemplazar las bibliotecas auxiliares de D3DX y DXUT con tus propias bibli
 
 Los sombreadores escritos en lenguaje de ensamblado deben actualizarse a HLSL mediante la funcionalidad del modelo de sombreador 4 nivel 9\_1 o 9\_3. En cambio, los sombreadores escritos para la biblioteca de efectos necesitarán actualizarse a una versión más reciente de la sintaxis de HLSL. Consulta la sección [Asignación de características](feature-mapping.md) para obtener más información.
 
-Conoce los distintos [Niveles de característica de Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876). Los niveles de característica clasifican una amplia gama de hardware de vídeo al definir conjuntos de funciones conocidas. Cada conjunto corresponde, a grandes rasgos, a versiones de Direct3D, de 9.1 a 11.2. Todas los niveles de característica usan la API de DirectX 11.
+Conoce los distintos [Niveles de característica de Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876). Los niveles de característica clasifican una amplia gama de hardware de vídeo al definir conjuntos de funciones conocidas. Cada conjunto corresponde, a grandes rasgos, a versiones de Direct3D, de 9.1 a 11.2. Todas los niveles de característica usan la API de DirectX11.
 
 ## <a name="plan-to-port-win32-ui-code-to-corewindow"></a>Planear para migrar código de interfaz de usuario de Win32 a CoreWindow
 
@@ -68,7 +65,6 @@ Hay dos conceptos que usarás con frecuencia:
  
 
  
-
 
 
 

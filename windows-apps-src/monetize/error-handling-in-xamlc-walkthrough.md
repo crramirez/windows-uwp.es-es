@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anuncios, publicidad, control de errores, error handling, XAML, c#
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7bfb809f1b5511ba27faf1bdd664c24da109e2f3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d6c048397a5f7fd6c9a6cd625a7ff5ce0b6c29bf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tutorial de control de errores en XAML y C#
 
 En este tema se muestra cómo detectar errores de [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) en la aplicación.
@@ -88,7 +85,6 @@ En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que conti
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestras de publicidad en GitHub](http://aka.ms/githubads)
+* [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
 
  
-

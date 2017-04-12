@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: feacd96ca2fa0cc4cd3d1087a982f61bc18d4604
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d17fd77759911e11c2efeaf84058526d8819781f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-declarations"></a>Declaraciones de la aplicación
 
 Puedes proporcionar información adicional sobre la aplicación en la sección **Declaraciones de la aplicación** de la página **Propiedades de la aplicación** durante el [proceso de envío](app-submissions.md). Con estas declaraciones, puedes asegurarte de que la aplicación se muestra correctamente y que se ofrece al conjunto de clientes adecuado, o puedes indicar cuáles son los clientes que pueden usar la aplicación.
@@ -52,7 +49,7 @@ Si quieres impedir que la aplicación se instale en unidades alternativas o alma
 
 Ten en cuenta que no hay ninguna opción para restringir la instalación de modo que una aplicación solo pueda instalarse en un medio de almacenamiento extraíble.
 
-> **Nota** En Windows Phone 8.1, esta condición se indicaba previamente a través de StoreManifest.xml.
+> **Nota** En Windows Phone8.1, esta condición se indicaba previamente a través de StoreManifest.xml.
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>Windows puede incluir los datos de la aplicación en copias de seguridad automáticas en OneDrive.
 
@@ -60,14 +57,13 @@ Esta casilla está activada de forma predeterminada para permitir que los datos 
 
 Si quieres impedir que los datos de la aplicación se incluyan en copias de seguridad automáticas, desactiva la casilla.
 
-> **Nota** En Windows Phone 8.1, esta condición se indicaba previamente a través de StoreManifest.xml.
+> **Nota** En Windows Phone8.1, esta condición se indicaba previamente a través de StoreManifest.xml.
 
  
 
  
 
  
-
 
 
 

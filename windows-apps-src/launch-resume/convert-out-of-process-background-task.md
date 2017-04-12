@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: f67d3ea2293e50a04bdbb4277fa4ad9e46834473
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 390e7255e381bdbb004bfe5e0e95f3ccbcbeb490
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="convert-an-out-of-process-background-task-to-an-in-process-background-task"></a>Convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso
 
 La forma más sencilla de convertir tu actividad en segundo plano fuera del proceso en una actividad dentro del proceso consiste en introducir tu código de método [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) en la aplicación e iniciarlo desde [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).
@@ -28,4 +25,3 @@ Si actualmente estás comunicando procesos de segundo y primer plano, puedes qui
 
 * Las tareas en segundo plano dentro del proceso no admiten la activación de una tarea en segundo plano de VoIP.
 * Las tareas en segundo plano dentro del proceso no admiten los siguientes desencadenadores: [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) e **IoTStartupTask**.
-

@@ -1,7 +1,7 @@
 ---
 author: mijacobs
-Description: "En este artículo indican los glifos que vienen con la fuente Segoe MDL2 Assets y se proporcionan instrucciones de uso para ellos."
-Search.Refinement.TopicID: 184
+Description: "En este artículo se enumeran y se proporcionan instrucciones de uso de los glifos que vienen con la fuente Segoe MDL2 Assets."
+Search.Refinement.TopicID: "184"
 title: Directrices para iconos de Segoe MDL2
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
 label: Segoe MDL2 icons
@@ -12,18 +12,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0869bd8f26a6baf0a6b174812526fe7d80487dec
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 669a59227e06a976ee567eeea7717787727a51ff
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="segoe-mdl2-icons"></a>Iconos de Segoe MDL2
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Este artículo indica los iconos que proporciona la fuente Segoe MDL2 Assets. 
+Este artículo enumera los iconos que proporciona la fuente Segoe MDL2 Assets. 
 
 <div class="important-apis" >
 <b>API importantes</b><br/>
@@ -63,7 +60,7 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 ## <a name="icon-list"></a>Lista de iconos
 
-<table>
+<table style="background-color: white; color: black">
 
  <tr>
   <td>Símbolo</td>
@@ -5150,7 +5147,6 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 
  
-
 
 
 

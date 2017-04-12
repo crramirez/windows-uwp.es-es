@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6107fe07fc8e98db7d197354246784a31a9c902c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b8200f3dd345d2da63a9fa127db53201afefc92d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="handle-app-prelaunch"></a>Administrar el inicio previo de aplicaciones
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Obtén información sobre cómo controlar el inicio previo de las aplicaciones mediante el reemplazo del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
 
@@ -26,7 +23,7 @@ Obtén información sobre cómo controlar el inicio previo de las aplicaciones m
 
 Cuando los recursos del sistema disponibles lo permiten, el rendimiento de inicio de las aplicaciones de la Tienda Windows en dispositivos de la familia de dispositivos de escritorio mejora al iniciar en segundo plano y de manera proactiva las aplicaciones que el usuario usa con más frecuencia. Una aplicación iniciada previamente se pone en estado suspendido poco después de iniciarse. Después, cuando el usuario invoca la aplicación, esta pasa del estado de suspensión al de ejecución para reanudarse, lo que resulta más rápido que iniciarla en frío. La experiencia del usuario es que la aplicación se inicia muy rápidamente.
 
-Antes de Windows 10, las aplicaciones no aprovechaban el inicio previo automáticamente. En Windows 10, versión 1511, todas las aplicaciones de la Plataforma universal de Windows (UWP) son candidatas para el inicio previo. En Windows 10, versión 1607, debes participar en el comportamiento de inicio previo llamando a [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx). Es un buen lugar para poner esta llamada dentro de `OnLaunched()` cerca de la ubicación en que se realiza la comprobación `if (e.PrelaunchActivated == false)`.
+Antes de Windows10, las aplicaciones no aprovechaban el inicio previo automáticamente. En Windows 10, versión 1511, todas las aplicaciones de la Plataforma universal de Windows (UWP) son candidatas para el inicio previo. En Windows 10, versión 1607, debes participar en el comportamiento de inicio previo llamando a [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx). Es un buen lugar para poner esta llamada dentro de `OnLaunched()` cerca de la ubicación en que se realiza la comprobación `if (e.PrelaunchActivated == false)`.
 
 Si una aplicación se inicia previamente depende de los recursos del sistema. Si el sistema experimenta una presión del recurso, las aplicaciones no se inician previamente.
 
@@ -154,10 +151,9 @@ Si la aplicación de WinJS está destinada a una versión anterior de Windows 10
     -   Un ejemplo de implicación de rendimiento es que podrías esperar a que el usuario cambie a la aplicación para recuperar la información meteorológica actual, en lugar de cargarla con el inicio previo de la aplicación y tener que volver a cargarla cuando la aplicación sea visible para garantizar que la información esté actualizada.
 -   Si la aplicación borra su icono dinámico al iniciarse, aplaza esto hasta el evento de cambio de visibilidad.
 -   La telemetría de la aplicación debería distinguir entre las activaciones de icono normales y las de inicio previo para que puedas limitar el escenario en caso de problemas.
--   Si tienes Microsoft Visual Studio 2015 Update 1 y Windows 10, versión 1511, puedes simular el inicio previo de la aplicación en Visual Studio 2015. Para ello, elige **Depurar** &gt; **Otros destinos de depuración** &gt; **Depurar inicio previo de la aplicación universal de Windows**.
+-   Si tienes Microsoft Visual Studio 2015 Update 1 y Windows10, versión 1511, puedes simular el inicio previo de la aplicación en Visual Studio2015. Para ello, elige **Depurar** &gt; **Otros destinos de depuración** &gt; **Depurar inicio previo de la aplicación universal de Windows**.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Ciclo de vida de la aplicación](app-lifecycle.md)
 * [CoreApplication.EnablePrelaunch](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)
-

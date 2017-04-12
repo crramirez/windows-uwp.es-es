@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, juegos, programación"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 736f5f5864edc9c7a976e8e0f062779ddd1f86c5
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="game-programming-resources"></a>Recursos de programación de juegos
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Para obtener más información sobre la programación de juegos en Windows, consulta los siguientes recursos.
@@ -33,7 +30,7 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 ## <a name="game-design-guidance"></a>Guía de diseño de juegos
 
 
--   [Índice de las directrices sobre la experiencia del usuario para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/hh465424)
+-   [Índice de las directrices sobre la experiencia del usuario para aplicaciones de la TiendaWindows](https://msdn.microsoft.com/library/windows/apps/hh465424)
 
 ## <a name="blogs"></a>Blogs
 
@@ -55,11 +52,11 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 
 
 -   [The Future of Gaming Across the Microsoft Ecosystem](http://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem) (El futuro de los juegos en el ecosistema de Microsoft), por Phil Spencer
--   [Developing Games for Windows 10](http://channel9.msdn.com/Events/GDC/GDC-2015/Developing-Games-for-Windows-10) (Desarrollo de juegos para Windows 10): Chris Tector, Don Xbox
+-   [Developing Games for Windows10](http://channel9.msdn.com/Events/GDC/GDC-2015/Developing-Games-for-Windows-10) (Desarrollo de juegos para Windows10): Chris Tector, Don Xbox
 -   [Advanced DirectX 12 Graphics and Performance](http://channel9.msdn.com/Events/GDC/GDC-2015/Advanced-DirectX12-Graphics-and-Performance) (Rendimiento y gráficos avanzados de DirectX 12): Max McMullen
--   [Gaming Consumer Experience on Windows 10](http://channel9.msdn.com/Events/GDC/GDC-2015/Gaming-Consumer-Experience-on-Windows-10) (Experiencia del consumidor de juegos en Windows 10): Bill Schiefelbein
+-   [Gaming Consumer Experience on Windows10](http://channel9.msdn.com/Events/GDC/GDC-2015/Gaming-Consumer-Experience-on-Windows-10) (Experiencia del consumidor de juegos en Windows10): Bill Schiefelbein
 -   [New Opportunities for Independent Developers](http://channel9.msdn.com/Events/GDC/GDC-2015/New-Opportunities-for-Independent-Developers) (Nuevas oportunidades para los desarrolladores independientes): Chris Charla
--   [Developing with Xbox Live for Windows 10](http://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10) (Desarrollo con Xbox Live para Windows 10): Vijay Gajjala, Brian Tyler
+-   [Developing with Xbox Live for Windows10](http://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10) (Desarrollo con Xbox Live para Windows 10): Vijay Gajjala, Brian Tyler
 -   [Xbox Live Multiplayer: Introducing services for cross-platform matchmaking and gameplay](http://channel9.msdn.com/Events/GDC/GDC-2015/Xbox-Live-Multiplayer-Introducing-services-for-cross-platform-matchmaking-and-gameplay) (Modo multijugador de Xbox Live: Introducción a los servicios de matchmaking y juego entre plataformas): Ferdinand Schober
 -   [Fable Legends: Cross-device Gameplay with Xbox Live](http://channel9.msdn.com/Events/GDC/GDC-2015/Fable-Legends-Cross-device-Gameplay-with-Xbox-Live) (Fable Legends: Juego entre dispositivos con Xbox Live): Raymond Arifianto, Julian Davis
 -   [Best Practices for Leveraging Cloud-Based User Stats and Achievements in Xbox Live](http://channel9.msdn.com/Events/GDC/GDC-2015/Best-Practices-for-Leveraging-Cloud-Based-User-Stats-and-Achievements-in-Xbox-Live) (Prácticas recomendadas para aprovechar las estadísticas y los logros del usuario basados en la nube en Xbox Live): Cierra McDonald
@@ -67,7 +64,7 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 -   [Better Power, Better Performance: Your Game on DirectX 12](http://channel9.msdn.com/Events/GDC/GDC-2015/Better-Power-Better-Performance-Your-Game-on-DirectX12) (Más eficacia, mayor rendimiento: Tu juego en DirectX 12): Bennett Sorbo
 -   [Sustained Gaming Performance in multi-core mobile devices](http://channel9.msdn.com/Events/GDC/GDC-2015/Sustained-gaming-performance-in-multi-core-mobile-devices) (Rendimiento de los juegos mantenido en dispositivos móviles de varios núcleos): Julian Calinov
 -   [Designing Games for a Windows Core World](http://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World) (Diseño de juegos para un mundo de Windows Core): Todd Williams, Shai Hinitz
--   [PC Games for Windows 10](http://channel9.msdn.com/Events/GDC/GDC-2015/PC-Games-for-Windows-10) (Juegos de PC para Windows 10): Chuck Walbourn
+-   [PC Games for Windows10](http://channel9.msdn.com/Events/GDC/GDC-2015/PC-Games-for-Windows-10) (Juegos de PC para Windows10): Chuck Walbourn
 
 ## <a name="build-2015-session-videos"></a>//vídeos de sesiones de build 2015
 
@@ -85,7 +82,6 @@ Para obtener más información sobre la programación de juegos en Windows, cons
  
 
  
-
 
 
 

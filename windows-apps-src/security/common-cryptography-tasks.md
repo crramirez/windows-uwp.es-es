@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3ce185e4bdd247c8b0ac71401a2ff863c64f880a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3a4dfeb102d8db35a6ae032eb5001b4873456b82
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="common-cryptography-tasks"></a>Tareas comunes de criptografía
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En estos artículos se ofrece código de ejemplo para tareas comunes de criptografía de la Plataforma universal de Windows (UWP), como crear números aleatorios, comparar búferes, convertir entre cadenas y datos binarios, copiar a matrices de bytes y desde ellas, y codificar y descodificar datos.
 
@@ -32,4 +29,3 @@ En estos artículos se ofrece código de ejemplo para tareas comunes de criptogr
 | [Copiar a la matriz de bytes o desde ella](copy-to-and-from-byte-arrays.md)                       | Este código de ejemplo muestra cómo copiar a matrices de bytes o desde ellas en una aplicación para UWP.                             |
 | [Codificar y descodificar datos](encode-and-decode-data.md)                                   | Este código de ejemplo muestra cómo codificar y descodificar datos hexadecimales y base64 en una aplicación para UWP.            |
  
-

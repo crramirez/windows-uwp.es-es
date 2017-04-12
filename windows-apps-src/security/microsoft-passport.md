@@ -1,6 +1,6 @@
 ---
 title: Windows Hello
-description: "En este artículo se describe la nueva tecnología Windows Hello que se incluirá como parte del sistema operativo Windows 10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10."
+description: "En este artículo se describe la nueva tecnología Windows Hello que se incluirá como parte del sistema operativo Windows10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows10."
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
 author: awkoren
 ms.author: alkoren
@@ -9,20 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f77de7b7a3c89a57855afba59028f55d8e8bb39c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e22176049652717af5ad222f7e6c8a30d447ce1b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-hello"></a>Windows Hello
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se describe la nueva tecnología Windows Hello que se incluirá como parte del sistema operativo Windows 10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10.
+En este artículo se describe la nueva tecnología Windows Hello que se incluirá como parte del sistema operativo Windows10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows10.
 
 Ten en cuenta que este artículo se centra en el desarrollo de aplicaciones. Para información sobre los detalles de implementación y la arquitectura de Windows Hello, consulta la [Guía de Windows Hello en TechNet](https://technet.microsoft.com/library/mt589441.aspx).
 
@@ -93,7 +90,7 @@ Siempre que sea factible, Microsoft recomienda el uso de hardware de TPM. El TPM
 ## <a name="222-authentication"></a>2.2.2 Autenticación
 
 
-Cuando un usuario quiere obtener acceso a material de clave protegido, empieza el proceso de autenticación: el usuario escribe un PIN o realiza un gesto biométrico para desbloquear el dispositivo, un proceso denominado a veces "liberar la clave".
+Cuando un usuario quiere acceder a material de clave protegido, el proceso de autenticación: el usuario escribe un PIN o realiza un gesto biométrico para desbloquear el dispositivo, un proceso denominado a veces "liberar la clave".
 
 Una aplicación nunca puede usar las claves de otra aplicación y un usuario nunca puede usar las claves de otro usuario. Estas claves se usan para firmar las solicitudes que se envían al proveedor de identidades o IDP, solicitando acceso a los recursos especificados. Las aplicaciones pueden usar API específicas para solicitar operaciones que requieren material de clave para determinadas acciones. El acceso a través de estas API requiere validación explícita mediante un gesto de usuario y el material de clave no se expone a la aplicación solicitante. En cambio, la aplicación solicita una acción específica, como la firma de un fragmento de datos, y el nivel de Windows Hello controla el trabajo real y devuelve los resultados.
 
@@ -104,7 +101,7 @@ Ahora que tenemos un conocimiento básico de cómo funciona Windows Hello, veamo
 
 Existen diferentes escenarios que se pueden implementar con Windows Hello. Por ejemplo, iniciar sesión en tu aplicación en un dispositivo. Otro escenario habitual sería autenticarse en un servicio. En lugar de usar un nombre de inicio de sesión y una contraseña, se usará Windows Hello. En los siguientes capítulos, analizaremos la implementación de un par de escenarios diferentes, como la autenticación en los servicios con Windows Hello y cómo pasar de un sistema existente que usa el nombre de usuario y contraseña a un sistema que usa Windows Hello.
 
-Por último, ten en cuenta que las API de Windows Hello necesitan el uso del SDK de Windows 10 que coincida con el sistema operativo en el que se usará la aplicación. Es decir, se debe usar Windows SDK 10.0.10240 para las aplicaciones que se van a implementar en Windows 10 y el 10.0.10586 para las aplicaciones que se van a implementar en Windows 10, versión 1511.
+Por último, ten en cuenta que las API de Windows Hello necesitan el uso del SDK de Windows10 que coincida con el sistema operativo en el que se usará la aplicación. Es decir, se debe usar el SDK de Windows 10.0.10240 para las aplicaciones que se van a implementar en Windows10 y el 10.0.10586 para las aplicaciones que se van a implementar en Windows10, versión 1511.
 
 ## <a name="3-implementing-windows-hello"></a>3 Implementación de Windows Hello
 
@@ -265,7 +262,7 @@ Cuando la aplicación intente acceder a un servicio back-end protegido, el servi
 
 Además de comprobar las claves, el servicio también puede comprobar la atestación de clave y decidir si hay limitaciones invocadas sobre el almacenamiento de las claves en el dispositivo. Por ejemplo, si el dispositivo usa TPM para proteger las claves, la seguridad es mayor que cuando los dispositivos almacenan las claves sin TPM. La lógica de back-end podría decidir, por ejemplo, que el usuario solo pueda transferir cierta cantidad de dinero cuando no se usa ningún TPM para reducir los riesgos.
 
-La atestación solo está disponible para los dispositivos que tienen un chip TPM versión 2.0 o posterior. Por tanto, debes tener en cuenta que es posible que esta información no esté disponible en todos los dispositivos.
+La atestación solo está disponible para los dispositivos que tienen un chip TPM versión 2.0 o posterior. Por tanto, debes tener en cuenta que esta información podría no estar disponible en todos los dispositivos.
 
 El flujo de trabajo de cliente podría parecerse al del siguiente gráfico:
 
@@ -425,9 +422,9 @@ El paso final de la migración a un escenario de Windows Hello completo consiste
 
 Windows 10 presenta un mayor nivel de seguridad que también es muy sencillo de poner en práctica. Windows Hello proporciona un nuevo sistema de inicio de sesión biométrico que reconoce al usuario e invalida activamente los esfuerzos para sortear la identificación correcta. Por eso, puede ofrecer varias capas de claves y certificados que nunca se podrán revelar o usar fuera del módulo de plataforma segura. Además, existe una capa de seguridad adicional disponible a través del uso opcional de claves y certificados de identidad de atestación.
 
-Como desarrollador, puedes usar esta guía de diseño e implementación de estas tecnologías con el fin de agregar fácilmente una autenticación segura a tus implementaciones de Windows 10 para proteger las aplicaciones y los servicios back-end. El código necesario es mínimo y fácil de entender. El trabajo pesado lo hace Windows 10.
+Como desarrollador, puedes usar esta guía de diseño e implementación de estas tecnologías con el fin de agregar fácilmente una autenticación segura a tus implementaciones de Windows10 para proteger las aplicaciones y los servicios back-end. El código necesario es mínimo y fácil de entender. El trabajo pesado lo hace Windows10.
 
-Las opciones de implementación flexibles permiten que Windows Hello reemplace el sistema de autenticación existente o funcione con este. La experiencia de implementación es fácil y económica. No es necesaria ninguna infraestructura adicional para implementar la seguridad de Windows 10. Con Microsoft Hello integrado en el sistema operativo, Windows 10 ofrece la solución más segura para los problemas de autenticación a los que se enfrenta el desarrollador moderno.
+Las opciones de implementación flexibles permiten que Windows Hello reemplace el sistema de autenticación existente o funcione con este. La experiencia de implementación es fácil y económica. No es necesaria ninguna infraestructura adicional para implementar la seguridad de Windows10. Con Microsoft Hello integrado en el sistema operativo, Windows10 ofrece la solución más segura para los problemas de autenticación a los que se enfrenta el desarrollador moderno.
 
 ¡Misión logra! Acabas de hacer que Internet sea un lugar seguro.
 

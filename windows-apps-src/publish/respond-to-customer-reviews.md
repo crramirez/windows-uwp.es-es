@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Puedes responder directamente a las opiniones sobre la aplicación para que los clientes sepan que lees sus comentarios."
+Description: "Puedes responder directamente a las críticas sobre la aplicación para que los clientes sepan que lees sus comentarios."
 title: Responder a las opiniones de los clientes
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 06be2dad7022a25e07a159bec7f1d007ff608ed3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7de4e53df32979d87a19b7d0556ef716b901687b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="respond-to-customer-reviews"></a>Responder a las opiniones de los clientes
 
 
-Puedes responder directamente a las opiniones sobre la aplicación para que los clientes sepan que lees sus comentarios. Con la respuesta a una crítica, puedes contar a los clientes las funciones que has agregado o los errores que has corregido basándote en sus comentarios, u obtener comentarios más específicos sobre cómo mejorar la aplicación. También puede optar por mostrar la respuesta en la Tienda para que la vean todos los clientes de Windows 10.
+Puedes responder directamente a las críticas sobre la aplicación para que los clientes sepan que lees sus comentarios. Con la respuesta a una crítica, puedes contar a los clientes las funciones que has agregado o los errores que has corregido basándote en sus comentarios, u obtener comentarios más específicos sobre cómo mejorar la aplicación. También puede optar por mostrar la respuesta en la Tienda para que la vean todos los clientes de Windows 10.
 
 > **Importante** No podrás responder directamente a las opiniones escritas por clientes que hayan elegido no recibir respuestas a la opinión. Tampoco se puede responder a opiniones creadas por clientes fuera de Estados Unidos con dispositivos Windows Phone 8.
 
@@ -31,7 +28,7 @@ Cuando envíes una respuesta a una opinión, el cliente la recibirá por correo 
 
 De manera predeterminada, solo verá tu respuesta el cliente al que estás respondiendo. Si quieres permitir que otros clientes vean tu respuesta, consulta el cuadro **Hacer pública la respuesta** para permitirnos mostrar tu respuesta en la descripción de la Tienda de tu aplicación, justo debajo de la opinión del cliente. Las respuestas públicas será visibles para los clientes que visualicen la Tienda en dispositivos Windows 10.
 
-> **Importante** No podrás cambiar una respuesta pública más adelante (a menos que el cliente revise su opinión original); por lo tanto, revisa la respuesta cuidadosamente antes de decidir hacerla pública. Si un cliente revisa la opinión original, tu respuesta se quitará. Después podrás enviar una nueva respuesta a la opinión revisada si lo deseas.
+> **Importante** No podrás cambiar una respuesta pública más adelante (a menos que el cliente revise su crítica original); por lo tanto, revisa la respuesta cuidadosamente antes de decidir hacerla pública. Si un cliente revisa la opinión original, tu respuesta se quitará. Después podrás enviar una nueva respuesta a la opinión revisada si lo deseas.
 
 ## <a name="guidelines-for-responses"></a>Orientación para las respuestas
 
@@ -54,4 +51,3 @@ La relación con tus clientes depende de ti. Microsoft no se involucra en las di
 
 
 Escuchar y responder a los clientes es solo el primer paso. Tener en cuenta sus comentarios y actuar en consecuencia es también importante. Si realizas mejoras significativas, puedes presentarla en la Tienda con confianza [creando un nuevo envío](app-submissions.md) para actualizar la aplicación.
-

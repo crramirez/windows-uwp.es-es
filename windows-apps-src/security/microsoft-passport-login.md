@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2ffec3d72ab0b3ca87a5cc0ec9325fe805ae9b6f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 336bb3b58e9f6cfeb3c173a8bb1c9e72bc7929b7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-windows-hello-login-app"></a>Crear una aplicación de inicio de sesión de Windows Hello
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
@@ -35,10 +32,10 @@ Antes de comenzar, debes leer la introducción a [Windows Hello](microsoft-passp
 
 Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También tendrás que usar Visual Studio de 2015 (Community Edition o superior) en una máquina de Windows 10.
 
--   Abre Visual Studio 2015 y selecciona Archivo > Nuevo > Proyecto.
+-   Abre Visual Studio2015 y selecciona Archivo > Nuevo > Proyecto.
 -   Se abrirá una ventana de "Nuevo proyecto". Navegación a Plantillas > Visual C#.
 -   Elige la aplicación vacía (Windows Universal) y el nombre de la aplicación "PassportLogin".
--   Compila y ejecuta la nueva aplicación (F5), debería mostrarse una ventana vacía en la pantalla. Cierra la aplicación.
+-   Compila y ejecuta la nueva aplicación (F5); debería mostrarse una ventana vacía en la pantalla. Cierra la aplicación.
 
 ![Nuevo proyecto de Windows Hello](images/passport-login-1.png)
 
@@ -970,7 +967,7 @@ En este ejercicio crearás una nueva página, que a su vez creará una nueva cue
 
     ![Registrar un usuario nuevo de Windows Hello](images/passport-login-11.png)
 
-En esta práctica has aprendido las habilidades esenciales que necesitas para usar la nueva API de Windows Hello para autenticar usuarios existentes y crear cuentas para los nuevos usuarios. Con este nuevo conocimiento, puedes eliminar la necesidad de que los usuarios tengan que recordar contraseñas para tu aplicación y, aún así, estar seguro de que tus aplicaciones permanecen protegidas con la autenticación de usuarios. Windows 10 usa la nueva tecnología de autenticación de Windows Hello para admitir las opciones de inicio de sesión biométrico.
+En esta práctica has aprendido las habilidades esenciales que necesitas para usar la nueva API de Windows Hello para autenticar usuarios existentes y crear cuentas para los nuevos usuarios. Con este nuevo conocimiento puedes eliminar la necesidad de que los usuarios tengan que recordar contraseñas para tu aplicación y, aún así, estar seguro de que tus aplicaciones permanecen protegidas con la autenticación de usuarios. Windows 10 usa la nueva tecnología de autenticación de Windows Hello para admitir las opciones de inicio de sesión biométrico.
 
 ## <a name="related-topics"></a>Temas relacionados
 

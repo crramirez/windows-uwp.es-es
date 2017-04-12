@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9734690f4446d9d5f44013fb370d5a31625473f9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 973207d480327ced18b6136796ef92d5d5b81dd5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-namescopes"></a>Ámbitos de nombres XAML
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Un *ámbito de nombres XAML* almacena relaciones entre los nombres de objetos definidos en XAML y sus equivalentes de instancia. Este concepto es similar al significado más amplio del término *ámbito de nombres* en otros lenguajes y tecnologías de programación.
 
@@ -90,5 +87,4 @@ Debido a la separación de los ámbitos de nombres XAML, buscar elementos con no
 * [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)
 * [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)
  
-
 

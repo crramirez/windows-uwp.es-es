@@ -2,21 +2,17 @@
 title: "Búferes de profundidad"
 description: "Un búfer de profundidad, o búfer Z, almacena la información de profundidad para controlar qué áreas de polígonos se representan y no se ocultan de la vista."
 ms.assetid: BE83A1D7-D43D-4013-8817-EFD2B24DC58E
-keywords:
-- "Búferes de profundidad"
+keywords: "Búferes de profundidad"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 541794ea7d5df8534ddfc3272957d0b66813d18c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b33ca3f4c4557578a3f0878308db45281b315201
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="depth-buffers"></a>Búferes de profundidad
 
 
@@ -42,7 +38,7 @@ Aunque la mayoría de las aplicaciones no usan esta característica, puedes camb
 
 Casi todos los aceleradores del mercado admiten el búfer Z, lo que convierte a los búferes Z en el tipo más común de búfer de profundidad actualmente. Aunque estén en todas partes, los búferes Z presentan ciertas desventajas. Debido a las operaciones matemáticas implicadas, los valores Z generados en un búfer Z tienden a no distribuirse de forma uniforme en todo el intervalo del búfer Z (normalmente de 0,0 a 1,0, ambos inclusive).
 
-En concreto, la relación entre los planos de recorte cercano y alejado afecta encarecidamente a la forma desigual en que están distribuidos los valores Z. Con una relación de 100 entre la distancia de plano alejado y la distancia de plano cercano, se emplea un 90 por ciento del intervalo de búfer de profundidad en el primer 10 por ciento del intervalo de profundidad de la escena. Las aplicaciones típicas de entretenimiento o simulaciones visuales con escenas exteriores a menudo requieren relaciones de planos cercanos o lejanos de cualquier sitio entre 1000 y 10 000. En una relación de 1000, se emplea un 98 por ciento del intervalo en el primer 2 por ciento del intervalo de profundidad, y la distribución aún es peor con relaciones superiores. Esto puede generar defectos de la superficie ocultos en objetos distantes, especialmente cuando se usan búferes de profundidad de 16 bits, la profundidad de bits que más se admite habitualmente.
+En concreto, la relación entre los planos de recorte cercano y alejado afecta encarecidamente a la forma desigual en que están distribuidos los valores Z. Con una relación de 100 entre la distancia de plano alejado y la distancia de plano cercano, se emplea un 90 por ciento del intervalo de búfer de profundidad en el primer 10 por ciento del intervalo de profundidad de la escena. Las aplicaciones típicas de entretenimiento o simulaciones visuales con escenas exteriores a menudo requieren relaciones de planos cercanos o lejanos de cualquier sitio entre 1000 y 10000. En una relación de 1000, se emplea un 98 por ciento del intervalo en el primer 2 por ciento del intervalo de profundidad, y la distribución aún es peor con relaciones superiores. Esto puede generar defectos de la superficie ocultos en objetos distantes, especialmente cuando se usan búferes de profundidad de 16 bits, la profundidad de bits que más se admite habitualmente.
 
 Un búfer de profundidad basado en W, por otro lado, suele distribuirse más equitativamente entre los planos de recorte cercano y alejado que un búfer Z. La principal ventaja es que la relación de las distancias de los planos de recorte alejado y cercano ya no resulta un problema. Esto permite que las aplicaciones admitan grandes intervalos máximos, a la vez que siguen obteniendo un búfer de profundidad relativamente preciso cerca del punto ocular. Un búfer de profundidad basado en W no es perfecto y, a veces, puede mostrar defectos de la superficie ocultos en objetos cercanos. Otro inconveniente del enfoque de búfer W está relacionado con la compatibilidad de hardware: el búfer W no se admite tanto en hardware como el búfer Z.
 
@@ -58,7 +54,6 @@ La interpretación real de un valor de profundidad es específica del representa
  
 
  
-
 
 
 

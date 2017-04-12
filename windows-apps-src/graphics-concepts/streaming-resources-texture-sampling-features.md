@@ -2,21 +2,17 @@
 title: "Características de muestreo de texturas de los recursos de streaming"
 description: "Las características de muestreo de texturas de los recursos de streaming incluyen la obtención de los comentarios de estado del sombreador sobre las áreas asignadas, la comprobación de si todos los datos a los que se accede se han asignado en el recurso, la compresión para ayudar a los sombreadores a evitar áreas de recursos de streaming con mapas MIP que se sabe que no se han asignado y la detección de que el LOD mínimo se ha asignado completamente para la totalidad de una superficie de filtro de texturas."
 ms.assetid: C2B2DD69-8354-417A-894D-6235A8B48B53
-keywords:
-- "Características de muestreo de texturas de los recursos de streaming"
+keywords: "Características de muestreo de texturas de los recursos de streaming"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8bcd4ec264dce2962b9057e1f04309d54f3bf3d6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7d03ba6eec780a3c05e4d15247c423852d7d75f6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="streaming-resources-texture-sampling-features"></a>Características de muestreo de texturas de los recursos de streaming
 
 
@@ -30,7 +26,7 @@ Las características de muestreo de texturas descritas aquí requieren el [nivel
 ## <a name="span-idshaderstatusfeedbackaboutmappedareasspanspan-idshaderstatusfeedbackaboutmappedareasspanspan-idshaderstatusfeedbackaboutmappedareasspanshader-status-feedback-about-mapped-areas"></a><span id="Shader_status_feedback_about_mapped_areas"></span><span id="shader_status_feedback_about_mapped_areas"></span><span id="SHADER_STATUS_FEEDBACK_ABOUT_MAPPED_AREAS"></span>Comentarios de estado de sombreadores sobre las áreas asignadas
 
 
-Cualquier instrucción de sombreador que lee o escribe en un recurso de streaming hace que se registre información sobre el estado. Este estado se expone como un valor de retorno adicional opcional en cada instrucción de acceso de recurso que entra en un registro temporal de 32 bits. El contenido del valor devuelto es opaco. Es decir, no se permite la lectura directa por parte del programa sombreador. No obstante, puedes usar la función [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) para extraer la información de estado.
+Cualquier instrucción de sombreador que lee o escribe en un recurso de streaming hace que se registre información sobre el estado. Este estado se expone como un valor de retorno adicional opcional en cada instrucción de acceso de recurso que entra en un registro temporal de 32bits. El contenido del valor devuelto es opaco. Es decir, no se permite la lectura directa por parte del programa sombreador. No obstante, puedes usar la función [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) para extraer la información de estado.
 
 ## <a name="span-idfullymappedcheckspanspan-idfullymappedcheckspanspan-idfullymappedcheckspanfully-mapped-check"></a><span id="Fully_mapped_check"></span><span id="fully_mapped_check"></span><span id="FULLY_MAPPED_CHECK"></span>Comprobación de la asignación completa
 
@@ -81,7 +77,6 @@ La compatibilidad de esta característica depende de la compatibilidad de [nivel
  
 
  
-
 
 
 

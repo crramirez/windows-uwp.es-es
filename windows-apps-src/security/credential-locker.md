@@ -1,6 +1,6 @@
 ---
 title: Caja de seguridad de credenciales
-description: "En este artículo se describe cómo las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario."
+description: "En este artículo se describe cómo las aplicaciones de la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario."
 ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
 author: awkoren
 ms.author: alkoren
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d72432aa5f9ccc40d4f822f5d76c1e09b606e33a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 86862ae7eb630515f45ca2a5705c325e235e9bc0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="credential-locker"></a>Caja de seguridad de credenciales
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo las aplicaciones de la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario.

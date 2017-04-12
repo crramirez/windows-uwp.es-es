@@ -6,13 +6,11 @@ ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
 label: Touch design guidelines
 template: detail.hbs
 redirect_url: https://msdn.microsoft.com/windows/uwp/input-and-devices/touch-interactions
-translationtype: Human Translation
-ms.sourcegitcommit: 2db7aaccfd56b1bdfda099b197a695bad8a9cba1
 ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# Directrices para el diseño de la función táctil
+# <a name="touch-design-guidelines"></a>Directrices para el diseño de la función táctil
 
 
 
@@ -20,7 +18,7 @@ ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
 
 Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para entrada táctil, pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Qué hacer y qué no hacer
+## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Qué hacer y qué no hacer
 
 
 -   Diseña aplicaciones en las que la interacción táctil sea el principal método de entrada que se espera.
@@ -31,7 +29,7 @@ Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias
 -   No uses interacciones temporales en la medida de lo posible (ejemplo de uso correcto: mantener pulsado).
 -   No uses la cantidad de dedos para distinguir la manipulación en la medida de lo posible.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Instrucciones de uso adicionales
+## <a name="span-idadditionalusageguidancespanspan-idadditionalusageguidancespanspan-idadditionalusageguidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Instrucciones de uso adicionales
 
 
 Ante todo, diseña tu aplicación teniendo en mente que el principal método de entrada de los usuarios será táctil. Si usas los controles de la plataforma, la compatibilidad con el mouse, el panel táctil y el lápiz o la pluma no requiere programación adicional, ya que Windows8 la ofrece de forma gratuita.
@@ -157,13 +155,13 @@ Además, te recomendamos lo siguiente:
 -   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
 -   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
-    **Nota** Una excepción a esto se produce cuando se usan interacciones temporales específicas para favorecer el aprendizaje y la exploración (por ejemplo, mantener presionado).
+    **Nota** Una excepción a esto se produce cuando se usan interacciones temporales específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
 
      
 
 -   Las descripciones y las indicaciones visuales adecuadas tienen un gran efecto sobre el uso de las interacciones avanzadas.
 
-## <span id="related_topics"></span>Artículos relacionados
+## <a name="span-idrelatedtopicsspanrelated-articles"></a><span id="related_topics"></span>Artículos relacionados
 
 **Para desarrolladores (XAML)**
 * [Interacciones táctiles](https://msdn.microsoft.com/library/windows/apps/mt185617)
@@ -173,11 +171,5 @@ Además, te recomendamos lo siguiente:
  
 
 
-
-
-
-
-
-<!--HONumber=Sep16_HO3-->
 
 

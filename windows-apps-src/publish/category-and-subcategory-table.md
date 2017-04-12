@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a69521d9ff9adb682a370b421458269507e9befe
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1234a1209f7cc32901b093a44c2b71fc90a6f3b5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="category-and-subcategory-table"></a>Tabla de categorías y subcategorías
 
 
@@ -66,6 +63,5 @@ No todas las categorías tienen subcategorías. Ten en cuenta que solo puedes us
 | Utilidades y herramientas           | Copias de seguridad y administración <br> Administradores de archivos                |
  
 
-> **Nota** Para obtener información sobre las categorías que se usan en la Tienda Windows para Windows 8.1 y versiones anteriores y en la Tienda de Windows Phone, y sobre cuál es su relación con la lista de categorías anterior, consulta el tema [Cómo aparece una aplicación en la Tienda para los clientes de Windows 10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
-
+> **Nota** Para obtener información sobre las categorías que se usan en la Tienda Windows para Windows8.1 y versiones anteriores y en la Tienda de Windows Phone, y sobre cuál es su relación con la lista de categorías anterior, consulta el tema [Cómo aparece una aplicación en la Tienda para los clientes de Windows10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
 

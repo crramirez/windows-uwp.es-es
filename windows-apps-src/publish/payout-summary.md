@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ad3f2a584f9867e72e2d93df659990424e9ac611
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: be33881f015bfa1f91a545cfb571bb5f3da66c20
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="payout-summary"></a>Resumen de pago
 
 
@@ -25,7 +22,7 @@ Si usas Microsoft Advertising para ganar dinero a partir del 1 de abril de 2016,
 
 Si vendes productos en Azure Marketplace, también verás información sobre los pagos efectuados correctamente desde el 1 de noviembre de 2015 en adelante en **Resumen de pago**. Para obtener más detalles sobre el pago en Azure Marketplace, consulta la página [Microsoft Azure Marketplace Participation Policies (Directivas de participación de Microsoft Azure Marketplace)](http://go.microsoft.com/fwlink/p/?LinkId=722436) y el documento [Microsoft Azure Marketplace Publisher Agreement (Acuerdo del publicador de Microsoft Azure Marketplace)](http://go.microsoft.com/fwlink/p/?LinkID=699560 ). Puedes encontrar más información sobre cómo ver la información de pagos anteriores de Azure Marketplace [aquí](http://go.microsoft.com/fwlink/p/?LinkID=722439).
 
-> **Nota**  Para poder recibir el pago, las ganancias por la aplicación deben alcanzar el umbral de pago aplicable. Si las ganancias son inferiores al umbral de pago, estas permanecerán en la categoría Reservado hasta que se alcance el umbral. Para obtener información detallada sobre el umbral de pago correspondiente a las ganancias por la aplicación, consulta el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058). Para las ganancias de Microsoft Advertising, el umbral de pago es de 50 USD (o su equivalente en moneda local). 
+> **Nota**  Para poder recibir el pago, las ganancias por la aplicación deben alcanzar el umbral de pago aplicable. Si las ganancias son inferiores al umbral de pago, estas permanecerán en la categoría Reservado hasta que se alcance el umbral. Para obtener información detallada sobre el umbral de pago correspondiente a las ganancias por la aplicación, consulta el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058). Para las ganancias de Microsoft Advertising, el umbral de pago es de 50USD (o su equivalente en moneda local). 
 >
 > Los pagos se realizan mensualmente (siempre que se haya alcanzado cualquier umbral de pago aplicable). Por lo general, enviaremos cualquier pago pendiente a día 15 de un mes determinado. Recuerda que los pagos suelen tardar entre 3 y 10 días laborables adicionales en acreditarse en tu cuenta de pago. Para obtener más información, consulta [Umbrales, métodos y plazos de pago](payment-thresholds-methods-and-timeframes.md).
 
@@ -34,7 +31,7 @@ Si vendes productos en Azure Marketplace, también verás información sobre los
 
 En la parte superior de la página, encontrarás el apartado **Ganancias y pagos actuales**, que contiene tres secciones: **Reservado**, **Próximo pago** y **Pago más reciente**.
 
--   En **Reservado** se muestra el importe que ha acumulado tu cuenta, pero que aún no se ha programado para el pago, incluidas las ganancias por publicidad. (Las ganancias de Azure Marketplace no aparecen en la sección Reservado; si solo participas en Azure Marketplace, verás que aparece el valor 0,00 USD en esta sección). Las ganancias obtenidas por las ventas de tus aplicaciones más recientes, se mantienen en un estado pendiente durante 30 días aproximadamente antes de que puedas cobrarlas. Después, se programan las ganancias para el pago en el mes siguiente (suponiendo que se haya alcanzado el umbral de pago). Cuando se intenta un pago, tu saldo reservado disminuirá en el importe del pago y verás el importe reflejado en **Próximo pago**. Ten en cuenta que el importe que se muestra en **Reservado** es una estimación, porque los tipos de cambio para las ventas en otras monedas pueden variar antes de la creación del pago. Puedes observar cómo tu saldo reservado cambia ligeramente al principio de cada mes. Tu saldo reservado se actualiza mensualmente para reflejar los tipos de cambio mensuales y así representa una estimación más precisa. Puedes hacer clic en **Ver detalles** para ver información adicional, o en el vínculo **Descargar las transacciones reservadas** para ver un archivo .csv de todas las transacciones que estén en la categoría **Reservado**.
+-   En **Reservado** se muestra el importe que ha acumulado tu cuenta, pero que aún no se ha programado para el pago, incluidas las ganancias por publicidad. (Las ganancias de Azure Marketplace no aparecen en la sección Reservado; si solo participas en Azure Marketplace, verás que aparece el valor 0,00USD en esta sección). Las ganancias obtenidas por las ventas de tus aplicaciones más recientes, se mantienen en un estado pendiente durante 30 días aproximadamente antes de que puedas cobrarlas. Después, se programan las ganancias para el pago en el mes siguiente (suponiendo que se haya alcanzado el umbral de pago). Cuando se intenta un pago, tu saldo reservado disminuirá en el importe del pago y verás el importe reflejado en **Próximo pago**. Ten en cuenta que el importe que se muestra en **Reservado** es una estimación, porque los tipos de cambio para las ventas en otras monedas pueden variar antes de la creación del pago. Puedes observar cómo tu saldo reservado cambia ligeramente al principio de cada mes. Tu saldo reservado se actualiza mensualmente para reflejar los tipos de cambio mensuales y así representa una estimación más precisa. Puedes hacer clic en **Ver detalles** para ver información adicional, o en el vínculo **Descargar las transacciones reservadas** para ver un archivo .csv de todas las transacciones que estén en la categoría **Reservado**.
 -   En **Próximo pago** se muestra el número de pagos que se harán en un futuro, el importe de tus próximos pagos y las fechas de creación de los pagos. Si tus ganancias aptas aún no han alcanzado el umbral de pago, no se muestra el próximo pago aquí. Puedes hacer clic en **Ver detalles** para ver información adicional, como los importes de pago y su origen de ingresos correspondiente. Cuando se muestre un importe en la sección **Próximo pago**, verás un vínculo temporal a **Descargar transacciones**.  Si haces clic en el vínculo, puedes ver un archivo .csv que incluye todas las transacciones que componen los próximos pagos.  Ten en cuenta que, si el importe que consta en la sección **Próximo pago** pasa a la sección **Pago más reciente**, el vínculo **Descargar transacciones** ya no se muestra más.
 -   En **Pago más reciente** se muestra el importe del último pago intentado. Si el pago se realizó correctamente, el vínculo **Ver detalles** aparecerá en color azul y puedes hacer clic en él para ver los detalles de cada pago. Ten en cuenta que si intentamos hacer varios pagos y solo uno de ellos se realiza correctamente, aquí solo se mostrará el importe del pago correcto. Si se produce un error en uno o más pagos, el vínculo **Ver detalles** aparecerá en color rojo y se mostrará el número de pagos con error. Puedes hacer clic en **Ver detalles** para ver más detalles sobre el problema a fin de poder solucionarlo.
 
@@ -56,7 +53,7 @@ Debajo de la sección **Total pagado hasta la fecha**, verás los últimos tres 
 
 En la parte superior de cada extracto, verás el importe total de tu pago mensual. Justo debajo, en los **Pagos emitidos**, verás un resumen de cómo se calculó el importe del pago.
 
-Debajo, en la sección **Proceeds breakdown**, puedes ver detalles sobre cuánto dinero se ganó por mercado y por fuente de ingresos (por ejemplo, Tienda de Windows Phone, Tienda de Windows 8, Tienda Windows, etc.) por aplicación. También verás detalles acerca de los [ajustes](#proceeds-by-app-and-adjustments) realizados, incluida la fecha, el importe y el motivo del ajuste.
+Debajo, en la sección **Proceeds breakdown**, puedes ver detalles sobre cuánto dinero se ganó por mercado y por fuente de ingresos (por ejemplo, Tienda de Windows Phone, Tienda de Windows 8, TiendaWindows, etc.) por aplicación. También verás detalles acerca de los [ajustes](#proceeds-by-app-and-adjustments) realizados, incluida la fecha, el importe y el motivo del ajuste.
 
 Ten en cuenta que en las secciones anteriores solo se muestra información sobre tus ganancias (y ajustes) por ventas de aplicaciones; si ganaste dinero mediante publicidad, verás una sección independiente de Microsoft Advertising con detalles sobre los pagos y conversiones de divisas.
 
@@ -80,7 +77,7 @@ En la siguiente tabla se describen los campos que aparecen en el archivo .csv. T
 
 | Nombre del campo              | Descripción                                                                                                                              |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Fuente de ingresos          | La fuente de tus ingresos, que se basa en el lugar en el que se ha producido la transacción (por ejemplo, Tienda Windows, Tienda de Windows Phone, Tienda Windows 8, Microsoft Advertising, etc.). |
+| Fuente de ingresos          | La fuente de tus ingresos, que se basa en el lugar en el que se ha producido la transacción (por ejemplo, Tienda Windows, Tienda de Windows Phone, Tienda Windows8, Microsoft Advertising, etc.). |
 | Id. de pedido          |  Un identificador de pedido exclusivo. Este id. permite identificar las transacciones de compra con sus respectivas transacciones que no son de compra (como las devoluciones, la anulaciones, etc.). Ambas tendrá el mismo id. de pedido. Además, en el caso de un cargo dividido en el que se hayan usado varios métodos de pago para una sola compra, te permitirá vincular las transacciones de compra.                                                                                                          |
 | Id. de transacción          |       Identificador único de la transacción.  |
 | Fecha y hora de transacción   | Fecha y hora en que se realizó la transacción (hora UTC).                                                                                        |
@@ -114,7 +111,6 @@ En la siguiente tabla se describen los campos que aparecen en el archivo .csv. T
  
 
  
-
 
 
 

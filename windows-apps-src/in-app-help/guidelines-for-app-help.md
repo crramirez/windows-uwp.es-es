@@ -11,13 +11,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: c3e73f9b-4839-4804-b379-c95b0ca4fbe8
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 64cb4871178ad712189e672bbde9f0ca9ffc6d26
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ced5455cb910a4872aca23491970688888cff70b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidelines-for-app-help"></a>Directrices para la ayuda de la aplicación
 
 
@@ -69,6 +66,5 @@ El método estándar para presentar ayuda es mostrándola en la misma aplicació
 Para obtener tutoriales detallados, funciones avanzadas o bibliotecas de temas de ayuda que son demasiado grandes para la aplicación, lo mejor es incluir vínculos a páginas web externas. Estos vínculos deben usarse con moderación si es posible, ya que alejan al usuario de la experiencia de la aplicación.
 
 [Consulta las directrices para la ayuda externa](external-help.md)
-
 
 

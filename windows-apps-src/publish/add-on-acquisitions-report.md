@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "En el informe Adquisiciones de complementos del panel del Centro de desarrollo de Windows puedes ver cuántos complementos has vendido, junto con los detalles demográficos y de plataforma."
+Description: "En el informe de adquisiciones de complementos del panel del Centro de desarrollo de Windows puedes ver cuántos complementos has vendido, junto con los detalles demográficos y de plataforma."
 title: Informe Adquisiciones de complementos
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 189b15728fd5013a1f976803ffb0e55f57e95142
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c2001e93fd06cc93fa5cfe9d2a10a029e13c82d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-on-acquisitions-report"></a>Informe Adquisiciones de complementos
 
 
-En el informe **Adquisiciones de complementos** del panel del Centro de desarrollo de Windows puedes ver cuántos complementos has vendido, junto con los detalles demográficos y de plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de complementos](../monetize/get-in-app-acquisitions.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+En el informe de **adquisiciones de complementos** del panel del Centro de desarrollo de Windows puedes ver cuántos complementos has vendido, junto con los detalles demográficos y de plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de complementos](../monetize/get-in-app-acquisitions.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, la adquisición de un complemento significa que un cliente te ha comprado un complemento. Varias compras del mismo complemento consumible realizadas por el mismo cliente se contabilizan como adquisiciones de complementos independientes.
 
@@ -70,4 +67,3 @@ En el gráfico **Versión de SO** se muestra el número total de adquisiciones s
  
 
  
-

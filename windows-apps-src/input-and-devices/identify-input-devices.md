@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8131f56572c4266b5987669d4195ab94d1fd5206
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8449d48dd8f3b50aaede6f85f41094d9073606a9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -191,7 +188,7 @@ private void GetPointerDevices()
 
 **Ejemplos**
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Ejemplo de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 
 **Muestras de archivo**
@@ -199,7 +196,6 @@ private void GetPointerDevices()
  
 
  
-
 
 
 

@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, texturas, DirectX
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="apply-textures-to-primitives"></a>Aplicar texturas en primitivos
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aquí te mostramos cómo cargar datos de texturas sin procesar y cómo aplicar esos datos a un primitivo 3D, mediante el cubo que creamos en [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md). También te mostramos cómo introducir un modelo de iluminación simple con producto escalar, donde las superficies del cubo son más claras o más oscuras a una distancia y ángulos relativos a una fuente de luz.
 
@@ -32,7 +29,7 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Suponemos además que consultaste [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md), [Crear sombreadores y dibujar primitivos](creating-shaders-and-drawing-primitives.md) y [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md).
 
-**Tiempo para completarlo:** 20 minutos.
+**Tiempo para completarlo:** 20minutos.
 
 <a name="instructions"></a>Instrucciones
 ------------
@@ -527,7 +524,6 @@ Cargamos datos de texturas sin procesar y aplicamos esos datos a un primitivo 3D
  
 
  
-
 
 
 

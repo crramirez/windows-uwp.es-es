@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Una vez que la aplicación esté en la Tienda Windows, es el momento de mostrarla al máximo número de clientes posible."
+Description: "Una vez que la aplicación esté en la TiendaWindows, es el momento de mostrarla al máximo número de clientes posible."
 title: "Promoción de aplicaciones y atracción de clientes"
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1177acd3f5bea2a53cb0d76217dcf5a4edc86647
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 72beedaf83c684d0cfab7416d25804a34d4ac62a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-promotion-and-customer-engagement"></a>Promoción de aplicaciones y atracción de clientes
 
 
-Una vez que la aplicación esté en la Tienda Windows, es el momento de mostrarla al máximo número de clientes posible. Te brindamos opciones para que promuevas tus productos y mantengas a los clientes implicados.
+Una vez que la aplicación esté en la TiendaWindows, es el momento de mostrarla al máximo número de clientes posible. Te brindamos opciones para que promuevas tus productos y mantengas a los clientes implicados.
 
 -   [Crear una campaña publicitaria para la aplicación](create-an-ad-campaign-for-your-app.md)
 -   [Crear una campaña de promoción de la aplicación personalizada](create-a-custom-app-promotion-campaign.md)
@@ -35,4 +32,3 @@ Una vez que la aplicación esté en la Tienda Windows, es el momento de mostrar
  
 
  
-

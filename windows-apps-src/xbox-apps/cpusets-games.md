@@ -2,19 +2,17 @@
 title: CPUSets para el desarrollo de juegos
 description: "En este artículo se incluye una descripción general de la API de CPUSets, nueva para la Plataforma universal de Windows (UWP) y con información esencial relevante para el desarrollo de juegos y aplicaciones."
 author: hammondsp
-translationtype: Human Translation
-ms.sourcegitcommit: 9f15d551715d9ccf23e4eb397637f4fafacec350
 ms.openlocfilehash: 6065435dc3add0d9bde15dc6bdd355935b8f53cd
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="cpusets-for-game-development"></a>CPUSets para el desarrollo de juegos
 
-# CPUSets para el desarrollo de juegos
-
-## Introducción
+## <a name="introduction"></a>Introducción
 
 La Plataforma universal de Windows (UWP) es el núcleo de una amplia gama de dispositivos electrónicos de consumo. Como tal, requiere un API de uso general para satisfacer las necesidades de todos los tipos de aplicaciones, desde juegos y aplicaciones incrustadas hasta software empresarial que se ejecuta en servidores. Al aprovechar la información correcta proporcionada por la API, puedes asegurarte de que tu juego se ejecuta el mejor rendimiento en cualquier hardware.
 
-## API de CPUSets
+## <a name="cpusets-api"></a>API de CPUSets
 
 La API de CPUSets proporciona control sobre los conjuntos de CPU que están disponibles para los subprocesos en los que se realizará la programación. Existen dos funciones disponibles para controlar dónde se programan los subprocesos:
 - **SetProcessDefaultCpuSets**: esta función puede usarse para especificar los nuevos subprocesos de conjuntos de CPU que pueden ejecutarse si no se asignan a determinados conjuntos de CPU.
@@ -22,7 +20,7 @@ La API de CPUSets proporciona control sobre los conjuntos de CPU que están disp
 
 Si la función **SetProcessDefaultCpuSets** nunca se ha usado, los subprocesos recién creados se pueden programar en cualquier conjunto de CPU disponible para el proceso. En esta sección se explican los conceptos básicos de la API de CPUSets.
 
-### GetSystemCpuSetInformation
+### <a name="getsystemcpusetinformation"></a>GetSystemCpuSetInformation
 
 La primera API usada para recopilar información es la función **GetSystemCpuSetInformation**. Esta función rellena la información de una matriz de objetos **SYSTEM_CPU_SET_INFORMATION** que proporciona el código de título. La memoria del destino debe asignarse al código del juego, el tamaño del cual se determina mediante una llamada a **GetSystemCpuSetInformation**. Se requieren dos llamadas a **GetSystemCpuSetInformation** tal como se muestra en el siguiente ejemplo.
 
@@ -40,7 +38,7 @@ GetSystemCpuSetInformation(cpuSets, size, &size, curProc, 0);
 
 Cada instancia de **SYSTEM_CPU_SET_INFORMATION** devuelta contiene información sobre una unidad de procesamiento única, también conocida como un conjunto de CPU. Esto no significa necesariamente que representa un único componente físico de hardware. Las CPU que usan hyperthreading tendrán varios núcleos lógicos ejecutándose en un único núcleo de procesamiento físico. La programación de varios subprocesos en diferentes núcleos lógicos que residen en el mismo núcleo físico permite optimizar los recursos de nivel de hardware que, de lo contrario, requerirían más trabajo en el nivel del kernel. Dos subprocesos programados en núcleos lógicos independientes en el mismo núcleo físico deben compartir el tiempo de CPU, pero se ejecutarían de forma más eficaz que si se programaran en el mismo núcleo lógico.
 
-### SYSTEM_CPU_SET_INFORMATION
+### <a name="systemcpusetinformation"></a>SYSTEM_CPU_SET_INFORMATION
 
 La información de cada instancia de esta estructura de datos que devuelve **GetSystemCpuSetInformation** contiene información sobre una unidad de procesamiento única en la que se pueden programar los subprocesos. Dada la amplia gama de dispositivos de destino posible, una gran parte de la información de la estructura de datos **SYSTEM_CPU_SET_INFORMATION** puede no ser aplicable al desarrollo de juegos. La Tabla 1 proporciona una explicación de los miembros de datos que son útiles para el desarrollo de juegos.
 
@@ -73,7 +71,7 @@ A continuación se incluyen algunos ejemplos del tipo de información recopilada
 
   ![Tabla 4](images/cpusets-table4.png)
 
-### SetThreadSelectedCpuSets
+### <a name="setthreadselectedcpusets"></a>SetThreadSelectedCpuSets
 
 Ahora que está disponible la información sobre los conjuntos de CPU, puede usarse para organizar los subprocesos. El identificador de un subproceso creado con **CreateThread** se pasa a esta función junto con una matriz de identificadores de conjuntos de CPU en los que se puede programar el subproceso. Se muestra un ejemplo de su uso en el siguiente código.
 
@@ -84,15 +82,15 @@ SetThreadSelectedCpuSets(audioHandle, cores, 2);
 ```
 En este ejemplo, se crea un subproceso basado en una función que se declara como **AudioThread**. Posteriormente, este subproceso se puede programar en uno de los dos conjuntos de CPU. La propiedad del subproceso del conjunto de CPU no es exclusiva. Los subprocesos creados sin bloquearse en un conjunto de CPU específico pueden tomar tiempo de **AudioThread**. De igual modo, también se pueden bloquear otros subprocesos creados en uno o ambos conjuntos de CPU posteriormente.
 
-### SetProcessDefaultCpuSets
+### <a name="setprocessdefaultcpusets"></a>SetProcessDefaultCpuSets
 
 El contrario de **SetThreadSelectedCpuSets** es **SetProcessDefaultCpuSets**. Cuando se crean subprocesos, no es necesario bloquearlos en determinados conjuntos de CPU. Si no quieres que estos subprocesos se ejecuten en conjuntos de CPU específicos (aquellos que usan el subproceso de representación o el subproceso de audio, por ejemplo), puedes usar esta función para especificar en qué núcleos se pueden programar estos subprocesos.
 
-## Consideraciones para el desarrollo de juegos
+## <a name="considerations-for-game-development"></a>Consideraciones para el desarrollo de juegos
 
 Como hemos visto, la API de CPUSets proporciona una gran cantidad de información y flexibilidad para la programación de subprocesos. En lugar de adoptar el enfoque de abajo arriba de intentar encontrar usos para estos datos, resulta más eficaz adoptar el enfoque de arriba a abajo de averiguar cómo se pueden usar los datos para admitir escenarios comunes.
 
-### Trabajar con hyperthreading y subprocesos críticos en el tiempo
+### <a name="working-with-time-critical-threads-and-hyperthreading"></a>Trabajar con hyperthreading y subprocesos críticos en el tiempo
 
 Este método es eficaz si el juego tiene algunos subprocesos que deben ejecutarse en tiempo real junto con otros subprocesos de trabajo que requieren relativamente poco tiempo de CPU. Algunas tareas, como la música de fondo continua, deben ejecutarse sin interrupciones para una experiencia de juego perfecta. Incluso un único fotograma de colapso de un subproceso de audio puede causar la aparición de mensajes o problemas, por lo cual es muy importante que reciba la cantidad de tiempo de CPU en cada fotograma.
 
@@ -131,7 +129,7 @@ Si el sistema usa hyperthreading, es importante que el conjunto de conjuntos de 
 
 Un ejemplo de organización de subprocesos basada en núcleos físicos puede encontrarse en el ejemplo de CPUSets disponible en el repositorio de GitHub, cuyo link se encuentra en la sección [Recursos adicionales](#additional-resources).
 
-### Reducir el costo de la coherencia de caché con la memoria caché de último nivel
+### <a name="reducing-the-cost-of-cache-coherence-with-last-level-cache"></a>Reducir el costo de la coherencia de caché con la memoria caché de último nivel
 
 La coherencia de caché es el concepto en que la memoria caché es la misma en varios recursos de hardware que actúan en los mismos datos. Si los subprocesos se programan en diferentes núcleos, pero que funcionan en los mismos datos, es posible que estén funcionando en copias independientes de los datos en memorias caché diferentes. Para obtener los resultados correctos, estas cachés deben mantenerse coherentes entre sí. Mantener la coherencia entre varias cachés es relativamente costoso, pero es necesario para que cualquier sistema de varios núcleos funcione. Además, está completamente fuera del control del código de cliente; el sistema subyacente funciona independientemente para mantener las memorias caché actualizadas mediante el acceso a los recursos de memoria compartidos entre núcleos.
 
@@ -183,18 +181,12 @@ El diseño de caché que se muestra en la figura 1 es un ejemplo del tipo de dis
 
 ![Caché del Lumia 950](images/cpusets-lumia950cache.png)
 
-## Resumen
+## <a name="summary"></a>Resumen
 
 La API de CPUSets disponible para el desarrollo de UWP proporciona una cantidad considerable de información y control sobre las opciones de multithreading. La complejidad adicional en comparación con las API multiproceso de desarrollo de Windows presenta alguna curva de aprendizaje, pero la mayor flexibilidad permite, en última instancia, un rendimiento superior en una amplia gama de equipos de consumo y otros destinos de hardware.
 
-## Recursos adicionales
+## <a name="additional-resources"></a>Recursos adicionales
 - [Conjuntos de CPU (MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
 - [Muestra de CPUSets proporcionada por ATG](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
 - [UWP en Xbox One](index.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e866c3afc551cf9604809cf7fec36efd7bfa439c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8d62135680e13f866654c168364bb3393651bd2d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="access-keys"></a>Teclas de acceso
 
 Los usuarios que tienen dificultades para usar un mouse, como las personas con discapacidades motrices, a menudo dependen del teclado para navegar por una aplicación e interactuar con ella.  El marco XAML te permite proporcionar acceso de teclado a los elementos de la interfaz de usuario gracias a la navegación mediante tabulación y las teclas de acceso.
@@ -388,4 +385,3 @@ public sealed partial class ScopedAccessKeys : Page
         }
     }
 ```
-

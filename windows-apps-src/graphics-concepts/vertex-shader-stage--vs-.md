@@ -2,21 +2,17 @@
 title: "Fase del sombreador de vértices (VS)"
 description: "La fase del sombreador de vértices procesa vértices, normalmente realizando ciertas operaciones como transformar, enmascarar e iluminar. Un sombreador de vértices toma un solo vértice de entrada y produce un solo vértice de salida."
 ms.assetid: 5133C4BB-B4E6-4697-9276-F718AD44869C
-keywords:
-- "Fase del sombreador de vértices (VS)"
+keywords: "Fase del sombreador de vértices (VS)"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6819826d829036c6b2cb2de4f2f42025820de9fe
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 761296a9897ad99ec57527f073a1ad1c2d792966
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="vertex-shader-vs-stage"></a>Fase del sombreador de vértices (VS)
 
 
@@ -62,7 +58,6 @@ Un solo vértice. Cada vértice de salida puede comprender hasta 16 vectores de 
  
 
  
-
 
 
 

@@ -2,21 +2,17 @@
 title: Vistas
 description: "El término \\ 0034;vista \\ 0034; se usa para referirse a \\ 0034;datos en el formato necesario\\ 0034;. Por ejemplo, una vista de búfer de constantes (CBV) serían los datos de búfer de constantes con el formato correcto. En esta sección se describen las vistas más comunes y útiles."
 ms.assetid: 0C7FB99F-7391-472F-BA53-576888DFC171
-keywords:
-- Vistas
+keywords: Vistas
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: beaed3bbaf6cab56c826788d0361b1200c73a003
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0091afb549c778f367e12726054cb908eb0c3eba
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="views"></a>Vistas
 
 
@@ -47,7 +43,7 @@ El término "vista" se usa para referirse a "datos en el formato necesario". Por
 </tr>
 <tr class="odd">
 <td align="left"><p>[Vista de recursos del sombreador (SRV) y de acceso desordenado (UAV)](shader-resource-view--srv-.md)</p></td>
-<td align="left"><p>Las vistas de recurso de sombreador normalmente encapsulan texturas en un formato en el que los sombreadores pueden acceder a ellas. Una vista de acceso sin ordenar proporciona una funcionalidad similar, pero permite la lectura y la escritura en la textura (o cualquier otro recurso) en cualquier orden.</p></td>
+<td align="left"><p>Las vistas de recurso de sombreador normalmente encapsulan texturas en un formato que permite a los sombreadores acceder a ellas. Una vista de acceso sin ordenar proporciona una funcionalidad similar, pero permite la lectura y la escritura en la textura (o cualquier otro recurso) en cualquier orden.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Muestra](sampler.md)</p></td>
@@ -63,7 +59,7 @@ El término "vista" se usa para referirse a "datos en el formato necesario". Por
 </tr>
 <tr class="odd">
 <td align="left"><p>[Vista de salida de flujo (SOV)](stream-output-view--sov-.md)</p></td>
-<td align="left"><p>Las vistas de salida de secuencia habilitan la información de vértices procedente de los sombreadores de vértices, teselación y geometría para volver a ser transmitidos a la aplicación para su uso posterior. Por ejemplo, un objeto que ha sido distorsionado por estos sombreadores puede volver a escribirse en la aplicación para proporcionar datos de entrada más precisa para la física o ingeniería. Sin embargo, en la práctica, las vistas de salida de secuencia son una funcionalidad de la canalización de gráficos que se usa poco.</p></td>
+<td align="left"><p>Las vistas de salida de secuencia habilitan la información de vértices procedente de los sombreadores de vértices, teselación y geometría para volver a ser transmitidos a la aplicación para su uso posterior. Por ejemplo, un objeto que estos sombreadores hayan distarcionado puede volver a escribirse en la aplicación para proporcionar una entrada más precisa para una física u otro motor. Sin embargo, en la práctica, las vistas de salida de secuencia son una funcionalidad de la canalización de gráficos que se usa poco.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Vista ordenada de rasterizador (ROV)](rasterizer-ordered-view--rov-.md)</p></td>
@@ -82,7 +78,6 @@ El término "vista" se usa para referirse a "datos en el formato necesario". Por
  
 
  
-
 
 
 

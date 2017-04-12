@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Agregar controles
-description: "Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego 3-D, y cómo va a desarrollar controles básicos para mandos, función táctil y mouse."
+description: "Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego en 3-D, y a cómo desarrollar controles básicos para mandos, toque y mouse."
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, controles, entrada
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: d70e9ef8efffd2a78f6c49596e716770a9162b5c
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-controls"></a>Agregar controles
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego 3-D, y cómo va a desarrollar controles básicos para mandos, función táctil y mouse.
 
@@ -31,7 +28,7 @@ Echemos un vistazo ahora al modo en que la muestra de juego implementa los contr
 ## <a name="uwp-game-apps-and-controls"></a>Aplicaciones y controles de juegos de UWP
 
 
-Un buen juego de la UWP admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows 10 en una tableta sin botones físicos o un PC multimedia con un mando de la Xbox conectado, o la última plataforma de juego de escritorio con un ratón y un teclado de juego de alto rendimiento. Tu juego debería ser compatible con todos esos dispositivos si su diseño lo permite.
+Un buen juego de la UWP admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows10 en una tableta sin botones físicos o un PC multimedia con un mando de la Xbox conectado, o la última plataforma de juego de escritorio con un ratón y un teclado de juego de alto rendimiento. Tu juego debería ser compatible con todos esos dispositivos si su diseño lo permite.
 
 Esta muestra admite los tres. Es un sencillo juego de disparos en primera persona, y los controles de movimiento y vista que son estándar en este género se pueden implementar fácilmente para todas esas tres formas de entrada.
 
@@ -1908,7 +1905,7 @@ void MoveLookController::UpdateGameController()
 ```
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -1920,7 +1917,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
  
 
  
-
 
 
 

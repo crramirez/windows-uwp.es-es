@@ -1,29 +1,26 @@
 ---
 author: mcleanbyron
 ms.assetid: 8e6c3d3d-0120-40f4-9f90-0b0518188a1a
-description: "Usa la API de promociones de la Tienda Windows para administrar las campañas publicitarias promocionales mediante programación para las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows o en la de tu organización."
-title: "Ejecución de campañas publicitarias con los servicios de la Tienda Windows"
+description: "Usa la API de promociones de la Tienda Windows para administrar las campañas de anuncios promocionales mediante programación para las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows o en la de tu organización."
+title: "Ejecutar campañas de anuncios con los servicios de la Tienda"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, API de promociones de la Tienda Windows, campañas publicitarias"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ec245f07098a662c80517de49ba5637a69b30f35
-ms.lasthandoff: 02/08/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store promotions API, API de promociones de la Tienda Windows, ad campaigns, campañas de anuncios"
+ms.openlocfilehash: d1575c686080fb8c4c35c032cdc1beca587aeb37
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="run-ad-campaigns-using-store-services"></a>Ejecutar campañas de anuncios con los servicios de la Tienda
 
-# <a name="run-ad-campaigns-using-windows-store-services"></a>Ejecución de campañas publicitarias con los servicios de la Tienda Windows
-
-Usa la *API de promociones de la Tienda Windows* para administrar las campañas publicitarias promocionales mediante programación para las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows o en la de tu organización. Esta API permite crear, actualizar y supervisar las campañas y otros activos relacionados, como la selección de destino y los creativos. Esta API es especialmente útil para los desarrolladores que crean grandes volúmenes de campañas y que quieran hacerlo sin usar el panel del Centro de desarrollo de Windows. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas procedentes de la aplicación o el servicio.
+Usa la *API de promociones de la Tienda Windows* para administrar las campañas de anuncios promocionales mediante programación para las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows o en la de tu organización. Esta API permite crear, actualizar y supervisar las campañas y otros activos relacionados, como la selección de destino y los creativos. Esta API es especialmente útil para los desarrolladores que crean grandes volúmenes de campañas y que quieran hacerlo sin usar el panel del Centro de desarrollo de Windows. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas procedentes de la aplicación o el servicio.
 
 Los siguientes pasos describen el proceso de principio a fin:
 
 1.  Asegúrate de que se hayan completado todos los [requisitos previos](#prerequisites).
-2.  Antes de llamar a un método en la API de promociones de la tienda Windows, [consigue un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Tras obtener un token, tienes 60 minutos para utilizar dicho token en llamadas a la API de promociones de la Tienda Windows antes de que expire. Una vez que el token expire, puedes generar uno nuevo.
+2.  Antes de llamar a un método en la API de promociones de la tienda Windows, [consigue un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Tras obtener un token, tienes 60minutos para utilizar dicho token en llamadas a la API de promociones de la Tienda Windows antes de que expire. Una vez que el token expire, puedes generar uno nuevo.
 3.  [Llama a la API de promociones de la Tienda Windows](#call-the-windows-store-promotions-api).
 
 Como alternativa, puedes crear y administrar las campañas publicitarias mediante el panel del Centro de desarrollo de Windows, donde también se puede acceder a las campañas publicitarias que crees mediante programación a través de la API de promociones de la Tienda Windows. Para obtener más información acerca de la administración de campañas publicitarias en el panel, consulta [Crear una campaña publicitaria para tu aplicación](../publish/create-an-ad-campaign-for-your-app.md).
@@ -35,7 +32,9 @@ Como alternativa, puedes crear y administrar las campañas publicitarias mediant
 
 Antes de empezar a escribir código para llamar a la API de promociones de la Tienda Windows, asegúrate de que has completado los siguientes requisitos previos.
 
-* Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office 365 u otros servicios empresariales de Microsoft, ya tienes un directorio de Azure AD. De lo contrario, puedes [crear un nuevo Azure AD desde el Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) sin ningún coste adicional.
+* Antes de poder crear e iniciar correctamente una campaña de anuncios con esta API, primero tienes que [crear una campaña de anuncios de pago con la página **Promocionar la aplicación** en el panel del Centro de desarrollo](../publish/create-an-ad-campaign-for-your-app.md), y tienes que agregar al menos un instrumento de pago en esta página. Después de hacer esto, podrás crear correctamente líneas de entrega facturables para campañas de anuncios con esta API. Las líneas de entrega de las campañas de anuncios que creas con esta API facturarán siempre automáticamente al instrumento de pago elegido en la página **Promocionar la aplicación** del panel.
+
+* Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office365 u otros servicios empresariales de Microsoft, ya tienes un directorio de AzureAD. De lo contrario, puedes [crear un nuevo Azure AD desde el Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) sin ningún coste adicional.
 
 * Debes asociar una aplicación de Azure AD con tu cuenta del Centro de desarrollo, recuperar el identificador de inquilino y el identificador de cliente correspondientes a la aplicación y generar la clave. La aplicación de Azure AD representa la aplicación o el servicio desde el que quieres llamar a la API de promociones de la Tienda Windows. Necesitas el identificador de inquilino, el de cliente y la clave para obtener un token de acceso de Azure AD que se pasará a la API.
 
@@ -43,7 +42,7 @@ Antes de empezar a escribir código para llamar a la API de promociones de la Ti
 
 Para asociar una aplicación de Azure AD con la cuenta del Centro de desarrollo y recuperar los valores requeridos:
 
-1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y asocia la cuenta del Centro de desarrollo de tu organización al directorio de Azure AD de tu organización. Para obtener instrucciones detalladas, consulta [Administración de usuarios de la cuenta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
+1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y asocia la cuenta del Centro de desarrollo de tu organización al directorio de AzureAD de tu organización. Para obtener instrucciones detalladas, consulta [Administración de usuarios de la cuenta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
 
 2.  En la página **Administrar usuarios**, haz clic en **Agregar aplicaciones de Azure AD**, agrega la aplicación de Azure AD que represente la aplicación o el servicio que usarás para administrar las campañas promocionales de tu cuenta del Centro de desarrollo y asígnale el rol **Administrador**. Si esta aplicación ya existe en el directorio de Azure AD, puedes seleccionarla en la página **Agregar aplicaciones de Azure AD** para agregarla a tu cuenta del Centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Adición de aplicaciones de Azure AD**. Para obtener más información, consulta [Adición y administración de aplicaciones de Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
@@ -107,9 +106,8 @@ El siguiente ejemplo de código muestra cómo obtener un token de acceso de Azur
 * [Administración de las campañas publicitarias](manage-ad-campaigns.md)
 * [Administración de las líneas de entrega de las campañas publicitarias](manage-delivery-lines-for-ad-campaigns.md)
 * [Administración de los perfiles de selección de destino de las campañas publicitarias](manage-targeting-profiles-for-ad-campaigns.md)
-* [Administración de los creativos de las campañas publicitarias](manage-creatives-for-ad-campaigns.md)
+* [Administrar creativos de campañas de anuncios](manage-creatives-for-ad-campaigns.md)
 * [Obtener los datos de rendimiento de la campaña de anuncios](get-ad-campaign-performance-data.md)
 
 
  
-

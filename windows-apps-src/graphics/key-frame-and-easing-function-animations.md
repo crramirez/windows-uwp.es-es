@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2eb40a8787479e6abd03ef2f0adb2d7462bfef16
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7b0eca20b947a69d1e5f2125de8a376594a40320
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>Animaciones de fotograma clave y animaciones de función de aceleración
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las animaciones de fotograma clave lineales, las animaciones de fotograma clave con un valor **KeySpline** o las funciones de aceleración son tres técnicas distintas para prácticamente el mismo escenario: crear una animación de guion gráfico que es un poco más compleja y que tiene un comportamiento de animación no lineal desde un estado inicial hasta un estado final.
@@ -273,7 +271,7 @@ Puedes usar más de un [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/l
 
  ## <a name="related-topics"></a>Temas relacionados
 
-* [Sintaxis de Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586)
+* [Sintaxis de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586)
 * [Introducción a las propiedades de dependencia](https://msdn.microsoft.com/library/windows/apps/Mt185583)
 * [**Guion gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)

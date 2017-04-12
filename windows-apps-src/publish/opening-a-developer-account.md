@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 26329304df64689ea7938d4fc838bd730696e4a2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6b7f11330c5849d0df4e54c10a71c2a70fc77a08
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="opening-a-developer-account"></a>Abrir una cuenta de desarrollador
 
@@ -58,7 +56,7 @@ Al crear una cuenta de empresa, sigue estas directrices, especialmente si más d
 
 > **Importante** Para permitir que varios usuarios accedan a tu cuenta del Centro de desarrollo, te recomendamos que uses Azure Active Directory para asignar roles a los usuarios individuales, quienes podrán tener acceso a la cuenta si inician sesión con sus credenciales individuales de Azure AD. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
 
--   Crea tu cuenta Microsoft con una dirección de correo electrónico que pertenezca al dominio de tu empresa pero no a una persona concreta; por ejemplo, windowsapps@fabrikam.com.
+-   Crea tu cuenta de Microsoft con una dirección de correo electrónico que pertenezca al dominio de tu empresa, pero no a una persona concreta; por ejemplo, windowsapps@fabrikam.com.
 -   Limita el acceso a esta cuenta Microsoft al menor número posible de desarrolladores.
 -   Configura una lista de distribución de correo electrónico corporativa que incluya a todos los que deban tener acceso a la cuenta de desarrollador y agrega esta dirección de correo electrónico a tu información de seguridad. Esto permite que todos los empleados de la lista reciban códigos de seguridad cuando sea necesario y administrar la información de seguridad de tu cuenta Microsoft. Si la configuración de una lista de distribución no fuera factible, el propietario de la cuenta de correo electrónico individual tendrá que estar disponible para acceder y compartir el código de seguridad cuando se le pida (como cuando se agrega nueva información de seguridad a la cuenta o cuando hay que acceder a ella desde un nuevo dispositivo).
 -   Agrega un número de teléfono corporativo que no requiera una extensión y al que puedan acceder los integrantes principales del equipo.
@@ -90,6 +88,5 @@ Cuando cierres la cuenta, es importante que comprendas lo que sucede con las apl
 -   Aunque la aplicación siga disponible para los clientes que la hayan adquirido con anterioridad, su descripción se quitará de la Tienda y ningún cliente nuevo podrá comprarla.
 -   El nombre de la aplicación quedará libre para que pueda utilizarlo otro desarrollador.
 -   Si tienes saldo adeudado de ventas de aplicación anteriores, puedes solicitar el pago de ese saldo incluso si el importe adeudado no alcanza el umbral de pago habitual.
-
 
 

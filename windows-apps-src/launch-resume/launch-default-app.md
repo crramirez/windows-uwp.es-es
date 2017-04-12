@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fcc1d056fc3a4cb8d57ae5082e62cf0b802bb4e7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f74a93714b32613b6bee606a3916961b861b2d08
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar la aplicación predeterminada para un URI
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -221,4 +218,3 @@ La aplicación puede usar el esquema de URI **ms-windows-store:** para [iniciar 
 `ms-windows-store://home/`
 
 Para obtener más información, consulta [Iniciar la aplicación de la Tienda Windows](launch-store-app.md).
-

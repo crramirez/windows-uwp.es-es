@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f3ebf555d943e302ed5f505a91659bf1d9489e17
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4bfe0e3904695edd848ef4c9a7b960d8cc01d4c9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="use-the-light-sensor"></a>Usar el sensor de luz
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -138,7 +136,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar los valores del sensor de luz al cambiar la luz disponibles para el sensor o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 
@@ -175,4 +173,3 @@ Estos nuevos valores se escriben en un bloque de texto que se encuentra en el c�
 
 * [Muestra de LightSensor](http://go.microsoft.com/fwlink/p/?linkid=241381)
  
-

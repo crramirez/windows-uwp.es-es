@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 description: "El proceso de migración se empieza creando un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él."
-title: "Migración de un proyecto de Windows Phone Silverlight a un proyecto de UWP"
+title: "Migración de proyectos de Windows Phone Silverlight a proyectos de UWP"
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
 ms.author: markl
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 95cd7958979dd5c2a7955bb098c8b34fbf024b0f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 558bbe9947c32c98010bb658e3fd482224b272ed
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="porting-windows-phone-silverlight-projects-to-uwp-projects"></a>Migración de proyectos de Windows Phone Silverlight a proyectos de UWP
 
-# <a name="porting-a-windows-phone-silverlight-project-to-a-uwp-project"></a>Migración de un proyecto de Windows Phone Silverlight a un proyecto de UWP
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El tema anterior era [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md).
 
@@ -71,7 +68,7 @@ Encontrarás que refactorizar un poco o agregar código adaptable (lo cual se ex
 
 ## <a name="conditional-compilation-and-adaptive-code"></a>Compilación condicional y código adaptable
 
-Si quieres compatibilidad con Windows Phone Silverlight y Windows 10 en un solo archivo de código, también puedes hacerlo. Si buscas en el proyecto de Windows 10 en las páginas de propiedades del proyecto, verás que el proyecto define WINDOWS\_UAP como un símbolo de compilación condicional. En general, puedes usar la siguiente lógica para realizar la compilación condicional.
+Si quieres compatibilidad con Windows Phone Silverlight y Windows 10 en un solo archivo de código, también puedes hacerlo. Si buscas en el proyecto de Windows10 en las páginas de propiedades del proyecto, verás que el proyecto define WINDOWS\_UAP como un símbolo de compilación condicional. En general, puedes usar la siguiente lógica para realizar la compilación condicional.
 
 ```csharp
 #if WINDOWS_UAP
@@ -105,7 +102,7 @@ Si es así y ahora quieres además compatibilidad con Windows 10, también puede
 #endif // WINDOWS_UAP
 ```
 
-Quizá hayas usado la compilación condicional para limitar el control del botón Atrás del hardware para Windows Phone. En Windows 10, el evento de botón Atrás es un concepto universal. Los botones Atrás implementados en hardware o en software generarán el evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596), por lo que ese es el que hay que controlar.
+Quizá hayas usado la compilación condicional para limitar el control del botón Atrás del hardware para Windows Phone. En Windows10, el evento de botón Atrás es un concepto universal. Los botones Atrás implementados en hardware o en software generarán el evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596), por lo que ese es el que hay que controlar.
 
 ```csharp
        Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
@@ -120,7 +117,7 @@ Quizá hayas usado la compilación condicional para limitar el control del botó
 
 ```
 
-Quizá hayas usado la compilación condicional para limitar el control del botón de la cámara del hardware para Windows Phone. En Windows 10, el botón de la cámara de hardware es un concepto específico de la familia de dispositivos móviles. Debido a que se ejecutará un paquete de la aplicación en todos los dispositivos, cambiamos nuestra condición de tiempo de compilación a una condición de tiempo de ejecución mediante el uso de código adaptable. Para ello, usamos la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar en tiempo de ejecución la presencia de la clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** se define en el SDK de la extensión móvil, por lo que deberemos agregar una referencia a ese SDK al proyecto para poder compilar este código. No obstante, ten en cuenta que el controlador solo se ejecutará en un dispositivo que implementa los tipos definidos en el SDK de extensión móvil y que esa es la familia de dispositivos móviles. Por lo tanto, el siguiente código solo cuida el uso de las características que están presentes, aunque lo consigue de una forma distinta de la compilación condicional.
+Quizá hayas usado la compilación condicional para limitar el control del botón de la cámara del hardware para Windows Phone. En Windows10, el botón de la cámara de hardware es un concepto específico de la familia de dispositivos móviles. Debido a que se ejecutará un paquete de la aplicación en todos los dispositivos, cambiamos nuestra condición de tiempo de compilación a una condición de tiempo de ejecución mediante el uso de código adaptable. Para ello, usamos la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar en tiempo de ejecución la presencia de la clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** se define en el SDK de la extensión móvil, por lo que deberemos agregar una referencia a ese SDK al proyecto para poder compilar este código. No obstante, ten en cuenta que el controlador solo se ejecutará en un dispositivo que implementa los tipos definidos en el SDK de extensión móvil y que esa es la familia de dispositivos móviles. Por lo tanto, el siguiente código solo cuida el uso de las características que están presentes, aunque lo consigue de una forma distinta de la compilación condicional.
 
 ```csharp
        // Note: Cache the value instead of querying it more than once.
@@ -152,5 +149,4 @@ Es importante saber cómo editar el manifiesto del paquete de la aplicación, po
 Consulta [Referencia del esquema del manifiesto del paquete para Windows 10](https://msdn.microsoft.com/library/windows/apps/dn934820).
 
 El siguiente tema es [Solución de problemas](wpsl-to-uwp-troubleshooting.md).
-
 

@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: "Convertir el marco de representación"
-description: "Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones, como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11."
+description: "Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11."
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, juegos, marco de representación, convertir, direct3d 9, direct3d 11"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: d33a694cf835ba3d997a7c4a111349c117e2493e
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="convert-the-rendering-framework"></a>Convertir el marco de representación
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/07/2017
 -   [Parte 3: Migrar el bucle del juego](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
-Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como migrar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11. Parte 2 del tutorial [Migrar una aplicación simple de Direct3D 9 a DirectX 11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como migrar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11. Parte 2 del tutorial [Migrar una aplicación simple de Direct3D9 a DirectX11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 ## <a name="convert-effects-to-hlsl-shaders"></a>Convertir efectos a sombreadores HLSL
 
@@ -493,7 +490,6 @@ La cadena de representación que acabamos de crear recibirá una llamada proveni
  
 
  
-
 
 
 

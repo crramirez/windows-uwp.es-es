@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, anuncios, publicidad, intersticial, javascript, código de muestra, ads, advertising, interstitial, sample code"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 91a54bdd2e41b3e7df0ee0aad32448ab9ed66ac0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 192ea42e9d55bbafcd6c6dbd463681832ac28c86
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="interstitial-ad-sample-code-in-javascript"></a>Código de ejemplo de anuncios intersticiales en JavaScript
 
 En este tema se proporciona el código de ejemplo completo para una aplicación básica para la Plataforma universal de Windows (UWP) en JavaScript y HTML que muestra un anuncio intersticial. Para obtener instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
@@ -29,6 +26,8 @@ Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar 
 >**Nota para Windows 8.x y Windows Phone 8.1**&nbsp;&nbsp;Si el proyecto está dirigido a Windows 8.1 o Windows Phone 8.1, el archivo HTML predeterminado del proyecto se denomina default.html en lugar de index.html y el archivo JavaScript predeterminado del proyecto se denomina default.js en lugar de main.js.
 
 Reemplaza los valores de las variables ```applicationId``` y ```adUnitId``` por valores dinámicos del Centro de desarrollo de Windows antes de enviar la aplicación a la Tienda. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md).
+
+>**Nota**&nbsp;&nbsp;Para modificar este ejemplo y mostrar un anuncio de banner intersticial en lugar de un anuncio de vídeo intersticial, pasa el valor **InterstitialAdType.display** al primer parámetro del método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) en lugar de **InterstitialAdType.video**. Para más información, consulta [Anuncios intersticiales](interstitial-ads.md).
 
 ### <a name="indexhtml"></a>index.html
 
@@ -50,7 +49,6 @@ Reemplaza los valores de las variables ```applicationId``` y ```adUnitId``` por 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestras de publicidad en GitHub](http://aka.ms/githubads)
+* [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
 
  
-

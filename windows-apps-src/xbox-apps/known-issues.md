@@ -1,21 +1,18 @@
 ---
 author: Mtoepke
-title: Problemas conocidos de UWP en el Programa para desarrolladores de Xbox One
-description: 
+title: Problemas conocidos de UWP en el Programa para desarrolladores de Xbox
+description: Se indican los problemas conocidos con la UWP en el Programa para desarrolladores de Xbox.
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 4b13b9bbbc75de47ed69112680894d5e3f34d8a1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 203d1abede2607617e0175103f54bf3068d53ff4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Problemas conocidos de UWP en el Programa para desarrolladores de Xbox
 
 En este tema se describen los problemas conocidos de UWP en el Programa para desarrolladores de Xbox One. Para obtener más información acerca de este programa, consulta [UWP en Xbox](index.md). 
@@ -58,7 +55,17 @@ Para solucionar este problema, deshabilita temporalmente el control parental o:
 
 En este punto, el permiso es _permanente_ hasta que se cierra la sesión del usuario, aunque se desinstale y vuelva a instalar la aplicación.
  
-Existe otro tipo de excepción que solo está disponible para cuentas de menores. Una cuenta de un menor requiere que uno de los progenitores inicie sesión para conceder permiso, pero, cuando lo hace, el progenitor tiene la opción de elegir **Siempre** y permitir que el menor inicie la aplicación. Esa excepción se almacena en la nube y se conservará, incluso si el menor cierra la sesión y vuelve a iniciarla.   
+Existe otro tipo de excepción que solo está disponible para cuentas de menores. Una cuenta de un menor requiere que uno de los progenitores inicie sesión para conceder permiso, pero, cuando lo hace, el progenitor tiene la opción de elegir **Siempre** y permitir que el menor inicie la aplicación. Esa excepción se almacena en la nube y se conservará, incluso si el menor cierra la sesión y vuelve a iniciarla.
+
+## <a name="storagefilecopyasync-fails-to-copy-encrypted-files-to-unencrypted-destination"></a>Se produce un error de StorageFile.CopyAsync al copiar archivos cifrados en un destino sin cifrar 
+
+Cuando StorageFile.CopyAsync se usa para copiar un archivo cifrado en un destino que no está cifrado, se producirá un error en la llamada con la excepción siguiente:
+
+```
+System.UnauthorizedAccessException: Access is denied. (Excep_FromHResult 0x80070005)
+```
+
+Esto puede afectar a los desarrolladores de Xbox que quieran copiar en otra ubicación los archivos que se implementan como parte de su paquete de la aplicación. El motivo es que el contenido del paquete está cifrado en una consola Xbox en el modo comercial, pero no en el modo de desarrollo. Como resultado, es posible que parezca que la aplicación funciona según lo esperado durante el desarrollo y pruebas, pero presente un error cuando se publique y luego instale en una consola Xbox en modo comercial.
 
 <!--### x86 vs. x64
 
@@ -176,7 +183,7 @@ Sometimes this is resolved by sorting a column on the table.-->
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>Desplazarse a WDP genera una advertencia de certificado
 
-Recibirás una advertencia acerca del certificado proporcionado, similar a la siguiente captura de pantalla, porque el certificado de seguridad firmado por la consola Xbox One no se considera un editor de confianza conocido. Para obtener acceso a Windows Device Portal, haz clic en **Continuar a este sitio web**.
+Recibirás una advertencia acerca del certificado proporcionado, similar a la siguiente captura de pantalla, porque el certificado de seguridad firmado por la consola Xbox One no se considera un editor de confianza conocido. Para acceder a Windows Device Portal, haz clic en **Continuar a este sitio web**.
 
 ![Advertencia de certificado de seguridad de sitio web](images/security_cert_warning.jpg)
 
@@ -233,4 +240,3 @@ namespace TestDNLA {
 ## <a name="see-also"></a>Consulta también
 - [Preguntas más frecuentes](frequently-asked-questions.md)
 - [UWP en Xbox One](index.md)
-

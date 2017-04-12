@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 69fdeed812eb6add3eeacb0e776e7477e061979f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2ccc9b0d81b69a06973feac8d554aa0ab47f2af0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones
 
 
@@ -73,12 +70,11 @@ Consulta también [Compilación condicional y código adaptable](w8x-to-uwp-port
 ## <a name="location"></a>Ubicación
 
 
-Si una aplicación que declara la funcionalidad de Ubicación en su manifiesto del paquete de la aplicación se usa en Windows 10, el sistema pedirá al usuario final su consentimiento. Esto ocurre tanto si la aplicación es de la Tienda de Windows Phone como si es una aplicación de Windows 10. Por lo tanto, si la aplicación muestra su propia petición de consentimiento personalizado o si proporciona una alternancia de activar y desactivar, es aconsejable quitarla para que solo se le solicite una vez al usuario final.
+Si una aplicación que declara la funcionalidad de Ubicación en su manifiesto del paquete de la aplicación se usa en Windows 10, el sistema pedirá al usuario final su consentimiento. Esto ocurre tanto si la aplicación es de la Tienda de Windows Phone como si es una aplicación de Windows10. Por lo tanto, si la aplicación muestra su propia petición de consentimiento personalizado o si proporciona una alternancia de activar y desactivar, es aconsejable quitarla para que solo se le solicite una vez al usuario final.
 
  
 
  
-
 
 
 

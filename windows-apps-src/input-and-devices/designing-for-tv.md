@@ -5,20 +5,17 @@ title: "Diseño para Xbox y televisión"
 ms.assetid: 780209cb-3e8a-4cf7-8f80-8b8f449580bf
 label: Designing for Xbox and TV
 template: detail.hbs
-isNew: true
+isNew: True
 keywords: "Xbox, TV, experiencia de 10 pies, controlador para juegos, control remoto, entrada, interacción"
 ms.author: elcowle
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 572073c2c577f3f6833b9cbee303875e378d6030
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="designing-for-xbox-and-tv"></a>Diseño para Xbox y televisión
 
 Diseña tu aplicación para la Plataforma universal de Windows (UWP) de manera que se vea y funcione bien en la Xbox One y las pantallas de televisión.
@@ -362,7 +359,7 @@ La siguiente es una aplicación inmobiliaria imaginaria que muestra una lista de
 
 ![Aplicación inmobiliaria imaginaria](images/designing-for-tv/2d-focus-navigation-and-interaction-real-estate-app.png)
 
-#### <a name="problem-ui-elements-located-after-long-scrolling-listgrid-a-nameproblem-ui-elements-located-after-long-scrolling-list-grida"></a>Problema: algunos elementos de la interfaz de usuario se encuentran después de una cuadrícula/lista de desplazamiento larga<a name="problem-ui-elements-located-after-long-scrolling-list-grid"></a>
+#### Problema: algunos elementos de la interfaz de usuario se encuentran después de una cuadrícula/lista de desplazamiento larga<a name="problem-ui-elements-located-after-long-scrolling-list-grid"></a>
 
 La [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) de las propiedades que se muestra en la siguiente imagen es una lista con desplazamiento muy larga. Si la [participación](#focus-engagement) *no* se requiere en la `ListView`, cuando el usuario navegue a la lista, el foco se colocará en el primer elemento en la lista. Para que el usuario llegue al botón **anterior** o **siguiente**, deberá pasar por todos los elementos de la lista. En casos como este en el que resulta difícil solicitarle al usuario que recorra toda la lista (es decir, cuando la lista no es lo suficientemente corta como para que esta experiencia sea aceptable) sería conveniente considerar otras opciones.
 
@@ -596,11 +593,11 @@ Debido a que el usuario de una aplicación en el entorno de 10 pies usa un contr
 
 ![Cambia el tamaño de texto, las aplicaciones y otros elementos](images/designing-for-tv/ui-scaling.png) 
 
-En Xbox One, no hay ninguna configuración semejante del sistema; sin embargo, para que los elementos de la interfaz de usuario de la UWP tengan el tamaño apropiado para un televisor, se escalan con un valor predeterminado de **200%** para aplicaciones XAML y **150%** para aplicaciones HTML. Siempre que los elementos de la interfaz de usuario sean del tamaño apropiado en otros dispositivos, también lo serán en televisores. Xbox One representa tu aplicación en 1080p (1920 x 1080 píxeles). Por lo tanto, al traer una aplicación desde otros dispositivos tales como un equipo, asegúrate de que la interfaz de usuario se vea bien en 960 x 540 px al 100 % de escala (o 1280 x 720 px en 100 % de escala para aplicaciones HTML) usando las [técnicas adaptables](../layout/screen-sizes-and-breakpoints-for-responsive-design.md).
+En Xbox One, no hay ninguna configuración semejante del sistema; sin embargo, para que los elementos de la interfaz de usuario de la UWP tengan el tamaño apropiado para un televisor, se escalan con un valor predeterminado de **200%** para aplicaciones XAML y **150%** para aplicaciones HTML. Siempre que los elementos de la interfaz de usuario sean del tamaño apropiado en otros dispositivos, también lo serán en televisores. Xbox One representa tu aplicación en 1080p (1920 x 1080 píxeles). Por lo tanto, al traer una aplicación desde otros dispositivos tales como un equipo, asegúrate de que la interfaz de usuario se vea bien en 960 x 540 px al 100% de escala (o 1280 x 720 px en 100% de escala para aplicaciones HTML) usando las [técnicas adaptables](../layout/screen-sizes-and-breakpoints-for-responsive-design.md).
 
 El diseño para Xbox es un poco diferente al diseño para PC porque solo necesitas preocuparte por una resolución: 1920 x 1080. No importa si el usuario tiene un televisor con una mayor resolución; las aplicaciones para UWP siempre se ajustarán a 1080p.
 
-Los tamaños correctos de los activos del conjunto de 200 % (o 150 % para aplicaciones HTML) también se extraerán para tu aplicación cuando se ejecute en Xbox One, independientemente de la resolución del televisor.
+Los tamaños correctos de los activos del conjunto de 200% (o 150% para aplicaciones HTML) también se extraerán para tu aplicación cuando se ejecute en Xbox One, independientemente de la resolución del televisor.
 
 ### <a name="content-density"></a>Densidad de contenido
 
@@ -629,7 +626,7 @@ Cuando uses un texto más grande en tu interfaz de usuario, elige un tamaño que
 
 ### <a name="opting-out-of-scale-factor"></a>Deshabilitar el factor de escala
 
-Recomendamos que tu aplicación aproveche la compatibilidad con el factor de escala, la cual le ayudará a ejecutarse correctamente en todos los dispositivos mediante un ajuste de escala para cada tipo de dispositivo. Sin embargo, es posible deshabilitar este comportamiento y diseñar toda tu interfaz de usuario en escala del 100%. Ten en cuenta que no puedes cambiar el factor de escala a un valor distinto de 100 %.
+Recomendamos que tu aplicación aproveche la compatibilidad con el factor de escala, la cual le ayudará a ejecutarse correctamente en todos los dispositivos mediante un ajuste de escala para cada tipo de dispositivo. Sin embargo, es posible deshabilitar este comportamiento y diseñar toda tu interfaz de usuario en escala del 100%. Ten en cuenta que no puedes cambiar el factor de escala a un valor distinto de 100%.
 
 En el caso de las aplicaciones XAML, si quieres deshabilitar el factor de escala, usa el siguiente fragmento de código:
 
@@ -1018,7 +1015,7 @@ Si bien los botones estándar de la UWP funcionan bien en televisores, algunos e
 
 La interfaz de usuario anidada expone los elementos anidados que se pueden accionar dentro de un elemento de interfaz de usuario del contenedor en el que tanto el elemento anidado como el elemento contenedor pueden tener un foco independiente entre sí.
 
-La interfaz de usuario anidada funciona bien para algunos tipos de entrada, pero no siempre para el controlador para juegos y el control remoto, que dependen de la navegación XY. Asegúrate de seguir las directrices de este tema para garantizar que el usuario pueda acceder fácilmente a todos los elementos interactivos y que la interfaz de usuario esté optimizada para el entorno de 304,8 cm. Una solución habitual es colocar elementos de interfaz de usuario anidadas en un elemento `ContextFlyout` (consulta [CommandBar y ContextFlyout](#commandbar-and-contextflyout)).
+La interfaz de usuario anidada funciona bien para algunos tipos de entrada, pero no siempre para el controlador para juegos y el control remoto, que dependen de la navegación XY. Asegúrate de seguir las directrices de este tema para garantizar que el usuario pueda acceder fácilmente a todos los elementos interactivos y que la interfaz de usuario esté optimizada para el entorno de 304,8cm. Una solución habitual es colocar elementos de interfaz de usuario anidadas en un elemento `ContextFlyout` (consulta [CommandBar y ContextFlyout](#commandbar-and-contextflyout)).
 
 Para obtener más información sobre la interfaz de usuario anidada, consulta [Interfaz de usuario anidada en elementos de lista](../controls-and-patterns/nested-ui.md).
 
@@ -1125,4 +1122,3 @@ El diseño para la experiencia de 10 pies presenta consideraciones especiales qu
 - [Dispositivo básico para aplicaciones de la Plataforma universal de Windows (UWP)](device-primer.md)
 - [Interacciones con controlador para juegos y control remoto](gamepad-and-remote-interactions.md)
 - [Sonido en las aplicaciones para UWP](../style/sound.md)
-

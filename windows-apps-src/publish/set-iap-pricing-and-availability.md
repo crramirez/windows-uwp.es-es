@@ -1,16 +1,9 @@
 ---
 redirect_url: https://msdn.microsoft.com/windows/uwp/publish/set-add-on-pricing-and-availability
-translationtype: Human Translation
-ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
-ms.openlocfilehash: debd24d97f4fa22d450b1c5335937326ddb2af56
-
+ms.openlocfilehash: 7ac1074c3a56aa72220b83c2c3668cda89e67ce5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# Establecer precios y disponibilidad de IAP
+# <a name="set-iap-pricing-and-availability"></a>Establecer precios y disponibilidad de IAP
 
 Esta página se ha redirigido a: Establecer los precios y la disponibilidad de los complementos.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

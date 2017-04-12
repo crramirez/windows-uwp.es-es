@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 description: "Si eres un desarrollador con una aplicación de Windows Phone Silverlight, puedes hacer un uso inigualable de tus conocimientos y código fuente al pasar a Windows 10."
-title: "Migrar de Windows Phone Silverlight a UWP"
+title: Migrar de WindowsPhone Silverlight a UWP
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
 ms.author: markl
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 06409936f37368351f6c8ad47e50a7d980d522f4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d055f576cfa56502da845e849c100f66dd0c7ccf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+#  <a name="move-from-windows-phone-silverlight-to-uwp"></a>Migrar de WindowsPhone Silverlight a UWP
 
-#  <a name="move-from-windows-phone-silverlight-to-uwp"></a>Migrar de Windows Phone Silverlight a UWP
-
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Si eres un desarrollador con una aplicación de Windows Phone Silverlight, puedes hacer un uso inigualable de tus conocimientos y código fuente al mover a Windows 10. Con Windows 10, puedes crear una aplicación para la Plataforma universal de Windows (UWP), que es un único paquete de la aplicación que los clientes pueden instalar en todos los tipos de dispositivos. Para más información sobre Windows 10, las aplicaciones para UWP y los conceptos de código adaptable e interfaz de usuario adaptable que se mencionan en esta guía de migración, consulta la [Guía de aplicaciones de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
@@ -59,26 +56,26 @@ Antes o durante la migración, considera la posibilidad de si la aplicación pod
 
 Cuando leas esta guía de migración, puedes consultar [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md). Una asignación bastante sencilla es la regla general; la tabla de asignaciones de espacios de nombres y clases describe las excepciones.
 
-En el nivel de función, la buena noticia es que hay muy poco que no sea compatible con UWP. La mayoría de tus conocimientos y código fuente se traslada muy bien a las aplicaciones para UWP, como verás en el resto de esta guía de migración. No obstante, estas son algunas características de Windows Phone Silverlight que puede que hayas usado y para las que no existe un equivalente de UWP.
+En el nivel de función, la buena noticia es que hay muy poco que no sea compatible con UWP. La mayoría de tus conocimientos y código fuente se traslada muy bien a las aplicaciones para UWP, como verás en el resto de esta guía de migración. No obstante, estas son algunas características de WindowsPhone Silverlight que puede que hayas usado y para las que no existe un equivalente de UWP.
 
-| Función para la que no hay equivalente en UWP | Documentación de Windows Phone Silverlight para la característica |
+| Función para la que no hay equivalente en UWP | Documentación de WindowsPhone Silverlight para la característica |
 |----------------------------------------------|---------------------------------------------------------|
 | Microsoft XNA. En general, [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) con C++ sirve de sustitución. Consulta [Desarrollo de juegos](https://msdn.microsoft.com/library/windows/apps/hh452744) e [Interoperabilidad de DirectX y XAML](https://msdn.microsoft.com/library/windows/apps/hh825871). | [Biblioteca de clases de XNA Framework](http://msdn.microsoft.com/library/bb203940.aspx) | 
-|Aplicaciones de modos | [Modos para Windows Phone 8](http://msdn.microsoft.com/library/windows/apps/jj206990.aspx) |
+|Aplicaciones de modos | [Modos para Windows Phone8](http://msdn.microsoft.com/library/windows/apps/jj206990.aspx) |
 
 &nbsp;
 
 | Tema| Descripción|
 |------|------------| 
-| [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md) | En este se tema se ofrece una asignación completa de las API de Windows Phone Silverlight a sus equivalentes de UWP. |
+| [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md) | En este se tema se ofrece una asignación completa de las API de WindowsPhone Silverlight a sus equivalentes de UWP. |
 | [Migración del proyecto](wpsl-to-uwp-porting-to-a-uwp-project.md) | El proceso de migración se empieza creando un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él. |
 | [Solución de problemas](wpsl-to-uwp-troubleshooting.md) | Se recomienda leer hasta el final esta guía de migración, aunque somos conscientes de que estás deseando seguir avanzando y llegar a la fase de compilación y ejecución de tu proyecto. Con esto en mente, puedes avanzar temporalmente si comentas o quitas cualquier código que no sea esencial y más tarde regresas allí para restaurar lo que has quitado. La tabla de solución de problemas de síntomas y soluciones de este tema puede resultarte útil en esta etapa, aunque no sustituye la lectura de los siguientes temas. Siempre puedes consultar la tabla a medida que avances a través de los temas posteriores. |
-| [Migración de XAML y la interfaz de usuario](wpsl-to-uwp-porting-xaml-and-ui.md) | La práctica para definir la interfaz de usuario en forma de marcado XAML declarativo se traslada muy bien desde Windows Phone Silverlight a las aplicaciones de UWP. Encontrarás que grandes secciones del marcado son compatibles, una vez hayas actualizado las referencias de clave de recurso del sistema, cambiado algunos nombres de tipos de elementos y cambiado "clr-namespace" por "using". |
+| [Migración de XAML y la interfaz de usuario](wpsl-to-uwp-porting-xaml-and-ui.md) | La práctica para definir la interfaz de usuario en forma de marcado XAML declarativo se traslada muy bien desde WindowsPhone Silverlight a las aplicaciones de UWP. Encontrarás que grandes secciones del marcado son compatibles, una vez hayas actualizado las referencias de clave de recurso del sistema, cambiado algunos nombres de tipos de elementos y cambiado "clr-namespace" por "using". |
 | [Migración de modelo de E/S, dispositivos y aplicaciones](wpsl-to-uwp-input-and-sensors.md) | El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este. También puede implicar el procesamiento de datos. No obstante, este código no se considera generalmente como la capa de interfaz de usuario o la capa de datos. Este código incluye la integración con el controlador de vibración, el acelerómetro, el giroscopio, el micrófono y los altavoces (que se relacionan con el reconocimiento y la síntesis de voz), la localización (geográfica) y las modalidades de entrada, como, por ejemplo, entrada táctil, mouse, teclado y lápiz. |
 | [Migración de capas de negocio y de datos](wpsl-to-uwp-business-and-data.md) | Detrás de la interfaz de usuario se encuentran las capas de negocio y de datos. El código de estas capas llama a las API del sistema operativo y de .NET Framework (por ejemplo, proceso en segundo plano, ubicación, cámara, sistema de archivos, red y acceso a otros datos). La mayoría de ellas están [disponibles para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/br211369), por lo que posiblemente podrás migrar gran parte de este código sin cambios. |
 | [Migración para factor de forma y experiencia del usuario](wpsl-to-uwp-form-factors-and-ux.md) | Las aplicaciones de Windows comparten una apariencia común entre PC, dispositivos móviles y muchos otros tipos de dispositivos. La interfaz de usuario, las entradas y los patrones de interacción son muy similares, y un usuario que se mueve entre dispositivos agradecerá la experiencia familiar.|
-|[Caso práctico: Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) | En este tema se presenta un caso práctico de migración de una aplicación para Windows Phone Silverlight muy simple a una aplicación para la Plataforma universal de Windows a la aplicación para UWP de Windows 10. Con Windows 10, puedes crear un paquete de la aplicación único que los clientes pueden instalar en una amplia variedad de dispositivos, como se verá en este caso práctico. |
-| [Caso práctico: Bookstore2](wpsl-to-uwp-case-study-bookstore2.md) | Este caso práctico, que se basa en la información proporcionada en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), comienza con una aplicación Windows Phone Silverlight que muestra datos agrupados en un **LongListSelector**. En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y, en **LongListSelector**, podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. |
+|[Caso práctico: Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) | En este tema se presenta un caso práctico de migración de una aplicación para WindowsPhone Silverlight muy simple a una aplicación para la Plataforma universal de Windows a la aplicación para UWP de Windows10. Con Windows 10, puedes crear un paquete de la aplicación único que los clientes pueden instalar en una amplia variedad de dispositivos, como se verá en este caso práctico. |
+| [Caso práctico: Bookstore2](wpsl-to-uwp-case-study-bookstore2.md) | Este caso práctico, que se basa en la información proporcionada en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), comienza con una aplicación WindowsPhone Silverlight que muestra datos agrupados en un **LongListSelector**. En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y, en **LongListSelector**, podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. |
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -89,10 +86,9 @@ En el nivel de función, la buena noticia es que hay muy poco que no sea compati
 * [Siguientes pasos para los desarrolladores de Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
 
 **Artículos de revista**
-* [Revista de Visual Studio: Windows Phone 8.1, un paso de gigante hacia la convergencia](http://go.microsoft.com/fwlink/p/?LinkID=398541)
+* [Revista de VisualStudio: Windows Phone8.1, un paso de gigante hacia la convergencia](http://go.microsoft.com/fwlink/p/?LinkID=398541)
 
 **Presentaciones**
 * [La historia de traer la música de Nokia de Windows Phones a Windows 8.](http://go.microsoft.com/fwlink/p/?LinkId=321521)
  
-
 

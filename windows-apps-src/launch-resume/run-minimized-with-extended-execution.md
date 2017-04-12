@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b7bda3b25e2c268926223da429abf559524ad38c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: bd9ccaa4cb87a24906c531996d4fc3f88875b060
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="run-while-minimized-with-extended-execution"></a>Ejecutar mientras está minimizada con ejecución extendida
 
 En este artículo se muestra cómo usar la ejecución extendida para posponer cuándo se debe suspender la aplicación para que pueda ejecutarse mientras está minimizada.
@@ -24,7 +21,7 @@ Cuando el usuario minimiza la aplicación o cambia a otra, la primera entra en e
 
 Hay casos en que puede ser necesario que una aplicación se siga ejecutando, en lugar de suspenderse, mientras está minimizada. Si es necesario que una aplicación se siga ejecutando, la puede seguir ejecutando el sistema operativo o este puede solicitar que se siga ejecutando. Por ejemplo, al reproducir audio en segundo plano, el sistema operativo puede mantener una aplicación ejecutándose más tiempo si sigues estos pasos de [Reproducción de contenido multimedia en segundo plano](../audio-video-camera/background-audio.md). De lo contrario, debes solicitar más tiempo manualmente.
 
-Crea una clase [ExtendedExecutionSession](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx) para solicitar más tiempo para completar una operación en segundo plano. El tipo de clase **ExtendedExecutionSession** que se crea está determinado por la enumeración [ExtendedExecutionReason](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx) que se proporciona al crearla. Existen tres valores de enumeración **ExtendedExecutionReason**: **Unspecified, LocationTracking** y **SavingData**.
+Crea una clase [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx) para solicitar más tiempo para completar una operación en segundo plano. El tipo de clase **ExtendedExecutionSession** que se crea está determinado por la enumeración [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx) que se proporciona al crearla. Existen tres valores de enumeración **ExtendedExecutionReason**: **Unspecified, LocationTracking** y **SavingData**.
 
 ## <a name="run-while-minimized"></a>Ejecutar mientras está minimizada
 
@@ -36,7 +33,7 @@ En todas las ediciones del sistema operativo, este tipo de sesión de ejecución
 
 ## <a name="track-the-users-location"></a>Realizar un seguimiento de la ubicación del usuario
 
-Especifica **ExtendedExecutionReason.LocationTracking** cuando crees una clase **ExtendedExecutionSession** si tu aplicación necesita registrar con regularidad la ubicación desde la clase [Geolocator](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.geolocation.geolocator.aspx). Las aplicaciones de navegación y seguimiento de la forma física que necesitan controlar regularmente la ubicación del usuario deben usar este motivo.
+Especifica **ExtendedExecutionReason.LocationTracking** cuando crees una clase **ExtendedExecutionSession** si tu aplicación necesita registrar con regularidad la ubicación desde la clase [Geolocator](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx). Las aplicaciones de navegación y seguimiento de la forma física que necesitan controlar regularmente la ubicación del usuario deben usar este motivo.
 
 Una sesión de ejecución extendida de seguimiento de ubicación puede ejecutarse siempre que sea necesario. Sin embargo, solo se puede ejecutar una sesión de este tipo por dispositivo. Una sesión de ejecución extendida de seguimiento de ubicación solo se puede solicitar en primer plano y la aplicación debe estar en estado **En ejecución**. Esto garantiza que el usuario es consciente de que la aplicación ha iniciado una sesión de seguimiento de ubicación extendida. Es posible usar el ubicador geográfico mientras la aplicación está en segundo plano mediante el uso de una tarea en segundo plano, o un servicio de aplicaciones, sin solicitar un seguimiento de la ubicación de sesión de ejecución ampliada.
 
@@ -44,7 +41,7 @@ Una sesión de ejecución extendida de seguimiento de ubicación puede ejecutars
 
 Especifica **ExtendedExecutionReason.SavingData** cuando crees una clase **ExtendedExecutionSession** para guardar los datos de usuario, si el hecho de no guardar los datos antes de que finalice la aplicación va a causar la pérdida de datos y una experiencia de usuario negativa.
 
-No uses este tipo de sesión para extender el tiempo que tarda una aplicación en cargar o descargar datos. Si necesitas cargar datos, solicita una [transferencia en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/networking/background-transfers) o registra el objeto **MaintenanceTrigger** para controlar la transferencia cuando exista corriente alterna disponible. Una sesión de ejecución extendida **ExtendedExecutionReason.SavingData** se puede solicitar cuando la aplicación está en primer plano y con el estado **En ejecución**, o bien en segundo plano y con el estado **Suspendiendo**.
+No uses este tipo de sesión para extender el tiempo que tarda una aplicación en cargar o descargar datos. Si necesitas cargar datos, solicita una [transferencia en segundo plano](https://msdn.microsoft.com/windows/uwp/networking/background-transfers) o registra el objeto **MaintenanceTrigger** para controlar la transferencia cuando exista corriente alterna disponible. Una sesión de ejecución extendida **ExtendedExecutionReason.SavingData** se puede solicitar cuando la aplicación está en primer plano y con el estado **En ejecución**, o bien en segundo plano y con el estado **Suspendiendo**.
 
 El estado **Suspendiendo** es la última oportunidad durante el ciclo de vida de la aplicación que una aplicación puede funcionar antes de cerrarse. Solicitar una sesión de ejecución extendida **ExtendedExecutionReason.SavingData** mientras la aplicación está en estado **Suspendiendo** causa un problema potencial que debes tener en cuenta. Si se solicita una sesión de ejecución extendida durante el estado **Suspendiendo** y el usuario solicita que se vuelva a iniciar la aplicación, puede parecer que tarda mucho tiempo en iniciarse. La causa es que el período de tiempo de la sesión de ejecución extendida debe finalizar para que la antigua instancia de la aplicación se pueda cerrar y se pueda iniciar una nueva. Para garantizar que no se pierda el estado de usuario se sacrifica el tiempo de rendimiento de inicio.
 
@@ -77,7 +74,7 @@ switch (result)
 
 La llamada a **RequestExtensionAsync** comprueba con el sistema operativo si el usuario ha aprobado la actividad en segundo plano de la aplicación y si el sistema tiene los recursos disponibles para permitir la ejecución en segundo plano.
 
-Puedes comprobar la clase [BackgroundExecutionManager](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx) con antelación para determinar la enumeración [BackgroundAccessStatus](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundaccessstatus.aspx?f=255&MSPPError=-2147217396), que es la configuración de usuario que indica si la aplicación puede ejecutarse en segundo plano. Para obtener más información sobre estas configuraciones de usuario, consulta [Battery awareness and background activity](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#XWK8mEgWD7JHvC10.97) (Reconocimiento de batería y actividad en segundo plano).
+Puedes comprobar la clase [BackgroundExecutionManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx) con antelación para determinar la enumeración [BackgroundAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundaccessstatus.aspx?f=255&MSPPError=-2147217396), que es la configuración de usuario que indica si la aplicación puede ejecutarse en segundo plano. Para obtener más información sobre estas configuraciones de usuario, consulta [Battery awareness and background activity](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#XWK8mEgWD7JHvC10.97) (Reconocimiento de batería y actividad en segundo plano).
 
 La enumeración **ExtendedExecutionReason** indica la operación que tu aplicación está realizando en segundo plano. La cadena **Description** es una cadena en lenguaje natural que explica por qué la aplicación tiene que realizar la operación. El controlador de eventos **Revoked** es necesario para que una sesión de ejecución extendida pueda detener correctamente si el usuario (o el sistema) decide que la aplicación ya no se puede ejecutar en segundo plano.
 
@@ -237,16 +234,16 @@ static class ExtendedExecutionHelper
 
 ## <a name="ensure-that-your-app-uses-resources-well"></a>Asegúrate de que la aplicación usa bien los recursos
 
-El ajuste de uso de memoria y energía de la aplicación es esencial para garantizar que el sistema operativo permitirá que la aplicación siga ejecutándose cuando deje de ser la aplicación en primer plano. Usa las [API de administración de memoria](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.aspx) para ver cuánta memoria está usando la aplicación. Cuando más memoria use la aplicación, más difícil será para el sistema operativo mantener la aplicación en ejecución cuando otra aplicación esté en primer plano. El usuario es, en última instancia, quien controla toda la actividad en segundo plano que la aplicación puede llevar a cabo y quien tiene visibilidad sobre el impacto que la aplicación tiene sobre el uso de la batería.
+El ajuste de uso de memoria y energía de la aplicación es esencial para garantizar que el sistema operativo permitirá que la aplicación siga ejecutándose cuando deje de ser la aplicación en primer plano. Usa las [API de administración de memoria](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx) para ver cuánta memoria está usando la aplicación. Cuando más memoria use la aplicación, más difícil será para el sistema operativo mantener la aplicación en ejecución cuando otra aplicación esté en primer plano. El usuario es, en última instancia, quien controla toda la actividad en segundo plano que la aplicación puede llevar a cabo y quien tiene visibilidad sobre el impacto que la aplicación tiene sobre el uso de la batería.
 
-Usa [BackgroundExecutionManager.RequestAccessAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx) para determinar si el usuario ha decidido que la actividad en segundo plano de la aplicación debe ser limitada. Ten en cuenta el uso de la batería y ejecuta aplicaciones en segundo plano solo cuando sea necesario completar una acción que requiera el usuario.
+Usa [BackgroundExecutionManager.RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx) para determinar si el usuario ha decidido que la actividad en segundo plano de la aplicación debe ser limitada. Ten en cuenta el uso de la batería y ejecuta aplicaciones en segundo plano solo cuando sea necesario completar una acción que requiera el usuario.
 
 ## <a name="see-also"></a>Consulta también
 
 [Muestra de ejecución extendida](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ExtendedExecution)  
-[Ciclo de vida de la aplicación](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/app-lifecycle)  
-[Administración de memoria en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/reduce-memory-usage)  
-[Transferencias en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/networking/background-transfers) [Battery Awareness and Background Activity](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#I2bkQ6861TRpbRjr.97) (Reconocimiento de la batería y actividad en segundo plano)  
-[Clase MemoryManager](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.aspx)  
-[Reproducir contenido multimedia en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)  
-
+[Ciclo de vida de la aplicación](https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle)  
+[Administración de memoria en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/reduce-memory-usage)  
+[Transferencias en segundo plano](https://msdn.microsoft.com/windows/uwp/networking/background-transfers)  
+[Reconocimiento de la batería y la actividad en segundo plano](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#I2bkQ6861TRpbRjr.97)  
+[Clase MemoryManager](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx)  
+[Reproducir contenido multimedia en segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)  

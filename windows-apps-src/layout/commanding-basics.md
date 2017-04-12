@@ -12,18 +12,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ec6e7879faf3c33edc97b26b2d0721808a02dfdc
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a9e7cda7794b3463ffa567bcf36ebec2d2d02687
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="command-design-basics-for-uwp-apps"></a>Conceptos básicos de diseño de los comandos para las aplicaciones para UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-En una aplicación para la Plataforma universal de Windows (UWP), los *elementos de comandos* son los elementos interactivos de la interfaz de usuario que permiten al usuario realizar acciones, como enviar un correo electrónico, eliminar un elemento o enviar un formulario. En este artículo se describen los elementos de comandos (como los botones y las casillas), las interacciones que admiten y las superficies de comandos (como las barras de comandos y los menús contextuales) para hospedarlos.
+En una aplicación de la Plataforma universal de Windows (UWP), los *elementos de comandos* son los elementos interactivos de la interfaz de usuario que permiten al usuario realizar acciones como enviar un correo electrónico, eliminar un elemento o enviar un formulario. En este artículo se describen los elementos de comandos (como los botones y las casillas), las interacciones que admiten y las superficies de comandos (como las barras de comandos y los menús contextuales) para hospedarlos.
 
 ## <a name="provide-the-right-type-of-interactions"></a>Proporcionar el tipo correcto de interacciones
 
@@ -160,7 +157,6 @@ Consulta la [Información básica de interacción](../input-and-devices/input-pr
  
 
  
-
 
 
 

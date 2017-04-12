@@ -2,23 +2,20 @@
 author: mcleanbyron
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
 description: "Usa los ejemplos de código de C# de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows."
-title: "Ejemplos de código de C# para la API de envío de la Tienda Windows"
+title: "Ejemplos de código C# para la API de envío"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, ejemplos de código"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c71555eb854e5dcf6cbccf89e9b0b8ffe35ab0e4
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, code examples, ejemplos de código"
+ms.openlocfilehash: 59b9c0b2cc503a56e0a1c9a75ce5ef471983c699
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="c-code-examples-for-the-submission-api"></a>Ejemplos de código C\# para la API de envío
 
-# <a name="c-code-examples-for-the-windows-store-submission-api"></a>Ejemplos de código de C\# para la API de envío de la Tienda Windows
-
-En este artículo se proporcionan ejemplos de código de C# para usar la *API de envío de la Tienda Windows*. Para obtener más información sobre esta API, consulta [Create and manage submissions using Windows Store services (Crear y administrar envíos mediante el uso de servicios de la Tienda Windows)](create-and-manage-submissions-using-windows-store-services.md).
+En este artículo se proporcionan ejemplos de código C# para usar la *API de envío de la Tienda Windows*. Para obtener más información sobre esta API, consulta [Create and manage submissions using Windows Store services (Crear y administrar envíos mediante el uso de servicios de la Tienda Windows)](create-and-manage-submissions-using-windows-store-services.md).
 
 Estos ejemplos de código muestran las siguientes tareas:
 
@@ -38,7 +35,7 @@ En estos ejemplos se usan las bibliotecas siguientes:
 
 ## <a name="main-program"></a>Programa principal
 
-En el ejemplo siguiente se implementa un programa de línea de comandos que llama a los métodos de otros ejemplos de este artículo para mostrar las diferentes formas de usar la API de envío de la Tienda Windows. Para adaptar este programa a tu propio uso:
+En el ejemplo siguiente se implementa un programa de línea de comandos que llama a los métodos de otros ejemplos de este artículo para mostrar las diferentes formas de usar la API de envío de la TiendaWindows. Para adaptar este programa a tu propio uso:
 
 * Asigna las propiedades ```ApplicationId```, ```InAppProductId``` y ```FlightId``` al identificador de la aplicación, el complemento (los complementos también se denominan productos en aplicación o IAP) y el paquete piloto que quieras administrar. Estos identificadores están disponibles en el panel del Centro de desarrollo.
 * Asigna las propiedades ```ClientId``` y ```ClientSecret``` al identificador de cliente y la clave de la aplicación, y reemplaza la cadena *tenantid* de la dirección URL de ```TokenEndpoint``` por el identificador de inquilino de la aplicación. Para obtener más información, consulta [Asociación de una aplicación de Azure AD a tu cuenta del Centro de desarrollo de Windows](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account)
@@ -60,7 +57,7 @@ La aplicación de muestra usa la clase auxiliar ```ClientConfiguration``` para p
 En el ejemplo siguiente se implementa una clase que usa varios métodos en la API de envío de la Tienda Windows para actualizar un envío de aplicación. El método ```RunAppSubmissionUpdateSample``` de la clase crea un nuevo envío como clon del último envío publicado y, a continuación, actualiza y confirma el envío clonado al Centro de desarrollo de Windows. Específicamente, el método ```RunAppSubmissionUpdateSample``` realiza estas tareas:
 
 1. Para empezar, el método [obtiene datos de la aplicación especificada](get-an-app.md).
-2. Después, [elimina el envío pendiente de la aplicación](delete-an-app-submission.md), si existe uno.
+2. A continuación, [elimina el envío pendiente de la aplicación](delete-an-app-submission.md), si existe uno.
 3. Luego [crea un nuevo envío de la aplicación](create-an-app-submission.md) (el nuevo envío es una copia del último envío publicado).
 4. Cambia algunos detalles para el nuevo envío y carga un nuevo paquete para el envío a Azure Blob Storage.
 5. Después, [actualiza](update-an-app-submission.md) y [confirma](commit-an-app-submission.md) el nuevo envío al Centro de desarrollo de Windows.
@@ -89,7 +86,7 @@ En el ejemplo siguiente se implementa una clase que usa varios métodos en la AP
 En el ejemplo siguiente se implementa una clase que usa varios métodos en la API de envío de la Tienda Windows para actualizar un envío de un complemento existente. El método ```RunInAppProductSubmissionUpdateSample``` de la clase crea un nuevo envío como clon del último envío publicado y, a continuación, actualiza y confirma el envío clonado en el Centro de desarrollo de Windows. Específicamente, el método ```RunInAppProductSubmissionUpdateSample``` realiza estas tareas:
 
 1. Para empezar, el método [obtiene datos del complemento especificado](get-an-add-on.md).
-2. Después, [elimina el envío pendiente del complemento](delete-an-add-on-submission.md), si existe uno.
+2. A continuación, [elimina el envío pendiente del complemento](delete-an-add-on-submission.md), si existe uno.
 3. Luego [crea un nuevo envío del complemento](create-an-add-on-submission.md) (el nuevo envío es una copia del último envío publicado).
 5. Después, [actualiza](update-an-add-on-submission.md) y [confirma](commit-an-add-on-submission.md) el nuevo envío al Centro de desarrollo de Windows.
 6. Por último, periódicamente [comprueba el estado del nuevo envío](get-status-for-an-add-on-submission.md) hasta que el envío se confirma correctamente.
@@ -103,7 +100,7 @@ En el ejemplo siguiente se implementa una clase que usa varios métodos en la AP
 En el ejemplo siguiente se implementa una clase que usa varios métodos en la API de envío de la Tienda Windows para actualizar un envío de paquete piloto. El método ```RunFlightSubmissionUpdateSample``` de la clase crea un nuevo envío como clon del último envío publicado y, a continuación, actualiza y confirma el envío clonado en el Centro de desarrollo de Windows. Específicamente, el método ```RunFlightSubmissionUpdateSample``` realiza estas tareas:
 
 1. Para empezar, el método [obtiene datos del paquete piloto especificado](get-a-flight.md).
-2. Después, [elimina el envío pendiente del paquete piloto](delete-a-flight-submission.md), si existe uno.
+2. A continuación, [elimina el envío pendiente del paquete piloto](delete-a-flight-submission.md), si existe uno.
 3. Luego [crea un nuevo envío del paquete piloto](create-a-flight-submission.md) (el nuevo envío es una copia del último envío publicado).
 4. Carga un nuevo paquete para el envío a Azure Blob Storage.
 5. Después, [actualiza](update-a-flight-submission.md) y [confirma](commit-a-flight-submission.md) el nuevo envío al Centro de desarrollo de Windows.
@@ -127,4 +124,3 @@ La clase ```IngestionClient``` proporciona métodos auxiliares que otros método
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-

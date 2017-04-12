@@ -2,21 +2,17 @@
 title: Recursos de texturas
 description: "Las texturas son un tipo de recurso usado para la representación."
 ms.assetid: 016F6CDA-D361-4E6B-BA99-49E915A19364
-keywords:
-- Recursos de texturas
+keywords: Recursos de texturas
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 82205cb8df691ced5d960f5be716801e628260da
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c82079666f2ee32a4e858414c824142d2bcff932
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-resources"></a>Recursos de texturas
 
 
@@ -37,7 +33,6 @@ La aplicación también puede establecer los estados de la perspectiva de la tex
  
 
  
-
 
 
 

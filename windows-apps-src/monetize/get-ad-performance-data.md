@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, anuncios, ads, rendimiento, performance"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a9d6226ebb06c1a9322ab44c3001a8b86aab1e5d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a4d907e60ddcd6a1ff093c9feccdefdda9551d09
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-ad-performance-data"></a>Obtener los datos de rendimiento de los anuncios
 
 
@@ -38,7 +35,7 @@ Para obtener más información, consulta [Acceder a los datos de análisis media
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud                                                              |
+| Método | URI de solicitud                                                              |
 |--------|--------------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/adsperformance``` |
 
@@ -48,7 +45,7 @@ Para obtener más información, consulta [Acceder a los datos de análisis media
 
 | Encabezado        | Tipo   | Descripción           |
 |---------------|--------|--------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span />
 
@@ -108,7 +105,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                            |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Value      | matriz  | Matriz de objetos que contiene datos agregados de rendimiento de anuncios. Para obtener más información sobre los datos de cada objeto, consulta la sección de [valores de rendimiento de anuncios](#ad-performance-values) que encontrarás a continuación.                                                                                                                      |
+| Valor      | matriz  | Matriz de objetos que contiene datos agregados de rendimiento de anuncios. Para más información sobre los datos de cada objeto, consulta la sección de [valores de rendimiento de anuncios](#ad-performance-values) que encontrarás a continuación.                                                                                                                      |
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 5, pero resulta que hay más de 5 elementos de datos de la consulta. |
 | TotalCount | entero    | Número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                             |
 
@@ -183,4 +180,3 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 * [Informe de rendimiento de la publicidad](../publish/advertising-performance-report.md)
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
-

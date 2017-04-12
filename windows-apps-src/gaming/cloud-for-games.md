@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, servicios en la nube
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 72f357cbf8e370512f9230978de546aa3d54c660
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>Uso de servicios en la nube con juegos para UWP
 
-La Plataforma universal de Windows (UWP) de Windows 10 ofrece un conjunto de API que pueden usarse para desarrollar juegos en todos los dispositivos de Microsoft. Al desarrollar juegos en todos los dispositivos y plataformas, puede usar un back-end en la nube para ayudar a escalar el juego según la demanda.
+La Plataforma universal de Windows (UWP) de Windows 10 ofrece un conjunto de API que pueden usarse para desarrollar juegos en todos los dispositivos de Microsoft. Al desarrollar juegos en todos los dispositivos y plataformas, puede usar un back-end en la nube para ayudar a escalar el juego según la demanda.
 
 ##  <a name="what-is-cloud-computing"></a>¿Qué es la informática de nube?
 
@@ -149,7 +147,7 @@ A continuación se indican algunas maneras de usar las ofertas de la nube de Azu
 
 | Requisitos                 | Escenarios de actividad                            | Oferta de productos                      | Funcionalidades de productos                               |
 |-----------------------------------|-----------------------------------------------|---------------------------------------|----------------------------------------------------|
-| Hospedar el dominio en la nube.     | Responder a las consultas DNS de manera eficaz.            | [DNS de Azure](https://azure.microsoft.com/services/dns/) | Hospedar el dominio con alto rendimiento y disponibilidad  |
+| Hospedar el dominio en la nube.     | Responder a las consultas DNS de manera eficaz.            | [DNS de Azure](https://azure.microsoft.com/services/dns/) | Hospedar el dominio con alto rendimiento y disponibilidad    |
 | Iniciar sesión, verificación de identidad      | El jugador inicia sesión y se autentica la identidad del jugador.  | [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) | Inicio de sesión único a cualquier aplicación web en la nube y local con la autenticación multifactor.            |
 | Juego con el modelo de infraestructura como servicio (IaaS)      | El juego se hospeda en máquinas virtuales en la nube.       | [VM de Azure](https://azure.microsoft.com/services/virtual-machines/) | Escala de 1 a miles de instancias de máquina virtual como servidores de juegos con redes virtuales integradas y equilibrio de carga; coherencia híbrida con sistemas locales.           |
 | Juegos web o móviles con el modelo de plataforma como servicio (PaaS)            | El juego se hospeda en una plataforma administrada.                | [Servicio de aplicaciones de Azure](https://azure.microsoft.com/services/app-service/) | PaaS para sitios web o juegos móviles (lo que se refiere a las VM de Azure con software intermedio, herramientas de desarrollo, BI y administración de bases de datos).   |
@@ -159,14 +157,14 @@ A continuación se indican algunas maneras de usar las ofertas de la nube de Azu
 | Base de datos de juegos relacional escalable| Almacenamiento estructurado de datos relacionales, como las transacciones en el juego, en la base de datos. | [Base de datos SQL de Azure](https://azure.microsoft.com/services/sql-database/)| Base de datos SQL como servicio ([comparación con SQL en una máquina virtual](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)).  |
 | Base de datos de juegos escalable y distribuida de baja latencia| Lectura, escritura y consulta rápidas de datos del juego y el reproductor con flexibilidad de esquema. | [Azure DocumentDB](https://azure.microsoft.com/services/documentdb/)| Base de datos de documentos NoSQL de baja latencia como servicio.   |
 | Uso del centro de datos propio con los servicios de Azure | El juego se recupera del propio centro de datos y se envía a los dispositivos cliente. | [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) | Permite a tu organización ofrecer servicios de Azure del propio centro de datos que te ayudarán a mejorar tus logros.  |
-| Transferencia de fragmentos de datos de gran tamaño| Los archivos de gran tamaño, como los de imagen, audio y vídeo de juegos, se pueden enviar a los usuarios desde la ubicación emergente más cercana de la Red de entrega de contenido (CDN) con CDN de Azure.    | [Red de entrega de contenido de Azure](https://azure.microsoft.com/services/cdn/) | Basada en una topología de red moderna de grandes nodos centralizadas, la red CDN de Azure controla picos repentinos de tráfico y cargas elevadas para aumentar considerablemente la velocidad y la disponibilidad, lo que da lugar a mejoras significativas de la experiencia del usuario.  |
+| Transferencia de fragmentos de datos de gran tamaño| Los archivos de gran tamaño, como los de imagen, audio y vídeo de juegos, se pueden enviar a los usuarios desde la ubicación emergente más cercana de la Red de entrega de contenido (CDN) con CDN de Azure.     | [Red de entrega de contenido de Azure](https://azure.microsoft.com/services/cdn/) | Basada en una topología de red moderna de grandes nodos centralizadas, la red CDN de Azure controla picos repentinos de tráfico y cargas elevadas para aumentar considerablemente la velocidad y la disponibilidad, lo que da lugar a mejoras significativas de la experiencia del usuario.  |
 | Baja latencia               | Realiza el almacenamiento en caché para compilar juegos rápidos y escalables con más control y aislamiento garantizado de los datos; también puede usarse para mejorar la característica de creación de coincidencias del juego. | [Caché en Redis de Azure](https://azure.microsoft.com/services/cache/) | Acceso a datos coherente de alto rendimiento y baja latencia para impulsar aplicaciones de Azure rápidas y escalables.  |
 | Alta escalabilidad y baja latencia | Controla fluctuaciones en el número de usuarios de juegos con lectura y escritura de baja latencia. | [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) | Capacidad de impulsar los escenarios de uso intensivo de datos y baja latencia más complejos, así como de escalar con confianza para controlar más usuarios a la vez. Service Fabric permite compilar juegos sin tener que crear un almacén independiente o una caché, según sea necesario para aplicaciones sin estado. |
 | Capacidad para recopilar millones de eventos por segundo de dispositivos.                         | Registrar millones de eventos por segundo de dispositivos. | [Centros de eventos de Azure](https://azure.microsoft.com/services/event-hubs/) | Ingesta de telemetría de escala de nube de juegos, sitios web, aplicaciones y dispositivos.  |
 | Procesamiento de datos de juegos en tiempo real  | Realizar un análisis en tiempo real de los datos de jugadores para mejorar el juego.| [Análisis de transmisiones de Azure](https://azure.microsoft.com/services/stream-analytics/) | Procesamiento de transmisiones en tiempo real en la nube.  |
-| Desarrollo de un juego predictivo         | Crear un juego dinámico personalizado según los datos de jugadores.  | [Aprendizaje automático de Azure](https://azure.microsoft.com/services/machine-learning/) | Servicio en la nube totalmente administrado que te permite compilar, implementar y compartir fácilmente soluciones de análisis predictivo.  |
+| Desarrollo de un juego predictivo          | Crear un juego dinámico personalizado según los datos de jugadores.    | [Aprendizaje automático de Azure](https://azure.microsoft.com/services/machine-learning/) | Servicio en la nube totalmente administrado que te permite compilar, implementar y compartir fácilmente soluciones de análisis predictivo.  |
 | Recopilación y análisis de datos de juegos| Procesamiento en paralelo masivo de datos de bases de datos relacionales y no relacionales. | [Almacenamiento de datos de Azure](https://azure.microsoft.com/services/sql-data-warehouse/)| Almacenamiento de datos elástico como servicio con funcionalidades de clase empresarial.   |
-| Creación de campañas de marketing para aumentar el uso y la retención  | Enviar notificaciones de inserción a los reproductores de destino para generar interés y fomentar acciones específicas del juego según el análisis de datos. | [Interacción móvil](https://azure.microsoft.com/services/mobile-engagement/) |  Aumentar el tiempo de juego y la retención del usuario en las principales plataformas (iOS, Android, Windows y Windows Phone). |
+| Creación de campañas de marketing para aumentar el uso y la retención  |    Enviar notificaciones de inserción a los reproductores de destino para generar interés y fomentar acciones específicas del juego según el análisis de datos. | [Interacción móvil](https://azure.microsoft.com/services/mobile-engagement/) |  Aumentar el tiempo de juego y la retención del usuario en las principales plataformas (iOS, Android, Windows y Windows Phone). |
 
 
 ##  <a name="startup-and-developer-resources"></a>Recursos para nuevas empresas y desarrolladores
@@ -177,7 +175,7 @@ A continuación se indican algunas maneras de usar las ofertas de la nube de Azu
     
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
-    Si quieres agregar características de Xbox Live, como un juego multijugador, matchmaking multiplataforma, puntuación de jugador, logros y marcadores a tu juego de Windows 10, suscríbete con ID@Xbox para obtener las herramientas y el soporte técnico que necesitas para dar rienda suelta a tu creatividad y maximizar tu éxito. Antes de realizar la solicitud a ID@Xbox, registra una cuenta de desarrollador en el [Centro de desarrollo de Windows](https://developer.microsoft.com/windows/programs/join).
+    Si quieres agregar características de Xbox Live, como un juego multijugador, matchmaking multiplataforma, puntuación de jugador, logros y marcadores a tu juego de Windows 10, suscríbete a ID@Xbox para obtener las herramientas y el soporte técnico que necesitas para dar rienda suelta a tu creatividad y maximizar tu éxito. Antes presentar la solicitud en ID@Xbox, registra una cuenta de desarrollador en el [Centro de desarrollo de Windows](https://developer.microsoft.com/windows/programs/join).
 
 ## <a name="software-as-a-service-for-game-backend"></a>Software como servicio para el back-end del juego
 
@@ -206,4 +204,3 @@ Estas son algunas de las empresas que ofrecen back-end de nube para los juegos b
  
 
  
-

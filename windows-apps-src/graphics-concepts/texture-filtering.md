@@ -2,21 +2,17 @@
 title: Filtrado de texturas
 description: "El filtrado de texturas produce un color para cada píxel en la imagen representada en 2D del primitivo cuando un primitivo se representa mediante la asignación de un primitivo en 3D a una pantalla 2D."
 ms.assetid: 1CCF4138-5D48-4B07-9490-996844F994D8
-keywords:
-- Filtrado de texturas
+keywords: Filtrado de texturas
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 97b2dc04c518bfec4b09a50707c08767932f05c6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 43dccdc8a8834830b6c15fcfc1cd56216e27ee90
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-filtering"></a>Filtrado de texturas
 
 
@@ -56,11 +52,11 @@ Direct3D admite los siguientes métodos de filtrado de texturas.
 </tr>
 <tr class="even">
 <td align="left"><p>[Filtrado de texturas bilineal](bilinear-texture-filtering.md)</p></td>
-<td align="left"><p><em>El filtrado bilineal</em> calcula la media ponderada de los 4 elementos de textura más cercanos al punto de muestreo. Este método de filtrado es más precisos y común que el filtrado de punto más cercano. Este método es eficaz, porque se implementa en el hardware gráfico actual.</p></td>
+<td align="left"><p>El <em>filtrado bilineal</em> calcula el promedio ponderado de los 4 elementos de textura más cercanos al punto de muestreo. Este enfoque filtrado es más precisos y común que el filtrado por punto más cercano. Este método es eficaz, porque se implementa en el hardware gráfico actual.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Filtrado de texturas anisotrópico](anisotropic-texture-filtering.md)</p></td>
-<td align="left"><p><em>La anisotropía</em> es la distorsión visible en los elementos de textura de un objeto 3D cuya superficie está orientada en ángulo con respecto al plano de la pantalla. Cuando un píxel de un primitivo anisotrópico se asigna a elementos de textura, su forma se distorsiona.</p></td>
+<td align="left"><p>La <em>anisotropía</em> es la distorsión visible en los elementos de textura de un objeto 3D cuya superficie está orientada en un ángulo con respecto al plano de la pantalla. Cuando un píxel de un primitivo anisotrópico se asigna a elementos de textura, su forma se distorsiona.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Filtrado de texturas con mapas MIP](texture-filtering-with-mipmaps.md)</p></td>
@@ -79,7 +75,6 @@ Direct3D admite los siguientes métodos de filtrado de texturas.
  
 
  
-
 
 
 

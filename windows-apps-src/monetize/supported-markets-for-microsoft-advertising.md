@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: 4804e371-065e-4d5a-ab1a-9c5732f52a9e
-description: "Obtén información sobre los países y las regiones admitidos para los anuncios intersticiales y los anuncios de banner."
+description: "Obtén información sobre los países y regiones admitidos para los anuncios de banner e intersticiales."
 title: Mercados admitidos para Microsoft Advertising
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anuncios, publicidad, mercados
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6150c885c4159911932bf8d7c3848b1e182b2f61
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 822c8a3bc9b427edbadb47293bfa1f75aa94a880
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="supported-markets-for-microsoft-advertising"></a>Mercados admitidos para Microsoft Advertising
 
 
 
 
-Los anuncios intersticiales y los anuncios de banner se admiten en los siguientes países y regiones.
+Los anuncios de banner e intersticiales se admiten en los siguientes países y regiones.
 
 <span id="interstitialads"/>
 ## <a name="interstitial-ads"></a>Anuncios intersticiales
@@ -319,4 +316,3 @@ Los anuncios intersticiales y los anuncios de banner se admiten en los siguiente
  
 
  
-

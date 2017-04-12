@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: d711d981a674d1516b12ee11c379e679c45dcb60
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Migración de un proyecto de Windows Runtime 8.x a un proyecto de UWP
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Tienes dos opciones cuando empieza el proceso de migración. Una es editar una copia de los archivos de proyecto existentes, entre los que se incluye el manifiesto del paquete de la aplicación (para esta opción, consulta la información sobre cómo actualizar los archivos de proyecto en [Migrar aplicaciones a la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/mt148501.aspx)). La otra opción es crear un nuevo proyecto de Windows 10 en Visual Studio y copiar los archivos en él. En la primera sección de este tema se describe esa segunda opción, pero el resto del tema contiene información adicional aplicable a ambas opciones. También puedes mantener tu nuevo proyecto de Windows 10 en la misma solución que tus proyectos existentes y compartir archivos de código fuente mediante un proyecto compartido. También puedes mantener el nuevo proyecto en una solución específica y compartir archivos de código fuente mediante la característica de archivos vinculados de Visual Studio.
+Tienes dos opciones cuando empieza el proceso de migración. Una es editar una copia de los archivos de proyecto existentes, entre los que se incluye el manifiesto del paquete de la aplicación (para esta opción, consulta la información sobre cómo actualizar los archivos de proyecto en [Migrar aplicaciones a la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/mt148501.aspx)). La otra opción es crear un nuevo proyecto de Windows 10 en Visual Studio y copiar los archivos en él. En la primera sección de este tema se describe esa segunda opción, pero el resto del tema contiene información adicional aplicable a ambas opciones. También puedes mantener tu nuevo proyecto de Windows10 en la misma solución que tus proyectos existentes y compartir archivos de código fuente mediante un proyecto compartido. También puedes mantener el nuevo proyecto en una solución específica y compartir archivos de código fuente mediante la característica de archivos vinculados de Visual Studio.
 
 ## <a name="create-the-project-and-copy-files-to-it"></a>Crear el proyecto y copiar archivos en él
 
@@ -73,9 +70,9 @@ Consulta también [Manifiesto del paquete de la aplicación](#app-package-manife
 
 ## <a name="conditional-compilation-and-adaptive-code"></a>Compilación condicional y código adaptable
 
-Si usas la compilación condicional (con directivas de preprocesador C#) para que los archivos de código funcionen en Windows 8.1 y Windows Phone 8.1, ahora puedes revisar esa compilación condicional a la luz del trabajo de convergencia realizado en Windows 10. Convergencia significa que, en la aplicación de Windows 10, algunas condiciones se pueden quitar por completo. Otras cambian a comprobaciones en tiempo de ejecución, como se muestra en los siguientes ejemplos.
+Si usas la compilación condicional (con directivas de preprocesador C#) para que los archivos de código funcionen en Windows 8.1 y Windows Phone 8.1, ahora puedes revisar esa compilación condicional a la luz del trabajo de convergencia realizado en Windows10. Convergencia significa que, en la aplicación de Windows 10, algunas condiciones se pueden quitar por completo. Otras cambian a comprobaciones en tiempo de ejecución, como se muestra en los siguientes ejemplos.
 
-**Nota** También puedes admitir Windows 8.1, Windows Phone 8.1 y Windows 10 en un solo archivo de código. Si buscas en el proyecto de Windows 10 en las páginas de propiedades del proyecto, verás que el proyecto define WINDOWS\_UAP como un símbolo de compilación condicional. Por tanto, puedes usarlo en combinación con WINDOWS\_APP y WINDOWS\_PHONE\_APP. En estos ejemplos se muestra el caso más simple de eliminación de la compilación condicional de una aplicación Universal 8.1 de sustitución del código equivalente para una aplicación de Windows 10.
+**Nota** También puedes admitir Windows 8.1, Windows Phone 8.1 y Windows 10 en un solo archivo de código. Si buscas en el proyecto de Windows10 en las páginas de propiedades del proyecto, verás que el proyecto define WINDOWS\_UAP como un símbolo de compilación condicional. Por tanto, puedes usarlo en combinación con WINDOWS\_APP y WINDOWS\_PHONE\_APP. En estos ejemplos se muestra el caso más simple de eliminación de la compilación condicional de una aplicación Universal 8.1 de sustitución del código equivalente para una aplicación de Windows10.
 
 Este primer ejemplo muestra el patrón de uso de la API **PickSingleFileAsync** (que se aplica únicamente a Windows 8.1) y la API **PickSingleFileAndContinue** (que se aplica únicamente a Windows Phone 8.1).
 
@@ -87,7 +84,7 @@ Este primer ejemplo muestra el patrón de uso de la API **PickSingleFileAsync** 
 #endif // WINDOWS_APP
 ```
 
-Windows 10 converge en la API [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275), por lo que el código se simplifica en el siguiente:
+Windows10 converge en la API [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275), por lo que el código se simplifica en el siguiente:
 
 ```csharp
     // Use Windows.Storage.Pickers.FileOpenPicker.PickSingleFileAsync
@@ -110,7 +107,7 @@ En este ejemplo, se controla el botón Atrás de hardware, pero solo en Windows 
 #endif // WINDOWS_PHONE_APP
 ```
 
-En Windows 10, el evento de botón Atrás es un concepto universal. Los botones Atrás implementados en hardware o en software generarán el evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596), por lo que ese es el que hay que controlar.
+En Windows10, el evento de botón Atrás es un concepto universal. Los botones Atrás implementados en hardware o en software generarán el evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596), por lo que ese es el que hay que controlar.
 
 ```csharp
     Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
@@ -141,7 +138,7 @@ void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input.CameraE
 #endif // WINDOWS_PHONE_APP
 ```
 
-En Windows 10, el botón de la cámara de hardware es un concepto específico de la familia de dispositivos móviles. Debido a que se ejecutará un paquete de la aplicación en todos los dispositivos, cambiamos nuestra condición de tiempo de compilación a una condición de tiempo de ejecución mediante el uso de código adaptable. Para ello, usamos la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar en tiempo de ejecución la presencia de la clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** se define en el SDK de la extensión móvil, por lo que deberemos agregar una referencia a ese SDK al proyecto para poder compilar este código. No obstante, ten en cuenta que el controlador solo se ejecutará en un dispositivo que implementa los tipos definidos en el SDK de extensión móvil y que esa es la familia de dispositivos móviles. Por lo tanto, este código es moralmente equivalente al código Universal 8.1 en que procura usar únicamente características que están presentes, aunque lo consiga de un modo distinto.
+En Windows10, el botón de la cámara de hardware es un concepto específico de la familia de dispositivos móviles. Debido a que se ejecutará un paquete de la aplicación en todos los dispositivos, cambiamos nuestra condición de tiempo de compilación a una condición de tiempo de ejecución mediante el uso de código adaptable. Para ello, usamos la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar en tiempo de ejecución la presencia de la clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** se define en el SDK de la extensión móvil, por lo que deberemos agregar una referencia a ese SDK al proyecto para poder compilar este código. No obstante, ten en cuenta que el controlador solo se ejecutará en un dispositivo que implementa los tipos definidos en el SDK de extensión móvil y que esa es la familia de dispositivos móviles. Por lo tanto, este código es moralmente equivalente al código Universal 8.1 en que procura usar únicamente características que están presentes, aunque lo consiga de un modo distinto.
 
 ```csharp
     // Note: Cache the value instead of querying it more than once.
@@ -180,5 +177,4 @@ El siguiente tema es [Solución de problemas](w8x-to-uwp-troubleshooting.md).
 * [Impulso de aplicaciones de la Tienda Windows con plantillas (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Creación de componentes de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [Desarrollo multiplataforma con la biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391.aspx)
-
 

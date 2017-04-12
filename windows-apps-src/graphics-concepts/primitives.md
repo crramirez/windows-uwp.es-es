@@ -2,21 +2,17 @@
 title: Primitivos
 description: "Un primitivo 3D es una colección de vértices que forma una sola entidad 3D."
 ms.assetid: A1FE6F49-B0D4-4665-90E1-40AD98E668B1
-keywords:
-- Primitivos
+keywords: Primitivos
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e6734ff8534302d3866374adba45c34d70ae440a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 22f143030d3973cf77cd3b0857cf9b67ff5503fb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="primitives"></a>Primitivos
 
 
@@ -43,11 +39,11 @@ Un *primitivo* 3D es una colección de vértices que forma una sola entidad 3D.
 </tr>
 <tr class="even">
 <td align="left"><p>[Listas de líneas](line-lists.md)</p></td>
-<td align="left"><p>Una lista de líneas es una lista de segmentos de línea recta aislados. Las listas de líneas son útiles para tareas tales como agregar aguanieve o lluvia intensa a una escena en 3D. Para crear una lista de líneas, las aplicaciones rellenan una matriz de vértices.</p></td>
+<td align="left"><p>Una lista de líneas es una lista de segmentos de línea recta aislados. Las listas de líneas son útiles para tareas como agregar aguanieve o lluvia torrencial a una escena 3D. Para crear una lista de líneas, las aplicaciones rellenan una matriz de vértices.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Series de líneas](line-strips.md)</p></td>
-<td align="left"><p>Una serie de líneas es un primitivo que se compone de segmentos de línea conectados. La aplicación puede usar series de líneas para crear polígonos abiertos. Un polígono cerrado es un polígono cuyo último vértice está conectada al primero por un segmento de línea.</p></td>
+<td align="left"><p>Una serie de líneas es un primitivo que se compone de segmentos de línea conectados. La aplicación puede usar las series de líneas para crear polígonos que no están cerrados. Un polígono cerrado es un polígono cuyo último vértice está conectada al primero por un segmento de línea.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Listas de triángulos](triangle-lists.md)</p></td>
@@ -70,7 +66,6 @@ Un *primitivo* 3D es una colección de vértices que forma una sola entidad 3D.
  
 
  
-
 
 
 

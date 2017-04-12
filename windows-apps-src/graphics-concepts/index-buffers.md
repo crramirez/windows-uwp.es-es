@@ -2,21 +2,17 @@
 title: "Búferes de índices"
 description: "Los búferes de índices son búferes de memoria que contienen datos de índice, que son desplazamientos de enteros en búferes de vértices y se usan para representar primitivos."
 ms.assetid: 14D3DEC5-CF74-488B-BE41-16BF5E3201BE
-keywords:
-- "Búferes de índices"
+keywords: "Búferes de índices"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6aa62a7506b37314b1952a6687920a2cdf3deca3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: aeb526032489cac2fdbbc436f98eac0cda59b643
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="index-buffers"></a>Búferes de índices
 
 
@@ -48,7 +44,6 @@ La aplicación puede escribir directamente índices en un búfer de índices asi
  
 
  
-
 
 
 

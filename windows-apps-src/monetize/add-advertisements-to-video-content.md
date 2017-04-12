@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
 description: "Aprende a usar la clase AdScheduler para agregar anuncios a contenido de vídeo."
-title: "Agregar anuncios a contenido de vídeo en HTML 5 y JavaScript"
+title: "Agregar anuncios a contenido de vídeo"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, anuncios, publicidad, vídeo, programador, JavaScript"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b42b57f385857301bb74037dbb5c0c7200653316
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, video, vídeo, scheduler, programador, javascript, JavaScript"
+ms.openlocfilehash: 88e0bb4ceb9cba12d1eb5857761f5b59afaa15f2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="add-advertisements-to-video-content-in-html-5-and-javascript"></a>Agregar anuncios a contenido de vídeo en HTML 5 y JavaScript
+# <a name="add-advertisements-to-video-content"></a>Agregar anuncios a contenido de vídeo
 
 
 Este tutorial muestra cómo usar la clase [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) para agregar anuncios a contenido de vídeo en una aplicación para la plataforma Universal de Windows (UWP) que se haya escrito mediante JavaScript con HTML.
@@ -25,7 +22,7 @@ Este tutorial muestra cómo usar la clase [AdScheduler](https://msdn.microsoft.c
 
 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) funciona tanto con contenido multimedia progresivo como de streaming y utiliza los formatos de carga Video Ad Serving Template (VAST) 2.0/3.0 y VMAP estándar de IAB. Al usar estándares, [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) es independiente del servicio de anuncios con el que interactúa.
 
-La publicidad para el contenido de vídeo es diferente en función de si el programa es inferior a 10 minutos (formato corto) o superior a 10 minutos (formato largo). Aunque la segunda opción es más complicada de configurar en el servicio, realmente no existe ninguna diferencia en cómo se escribe el código del lado cliente. Si la clase [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) recibe una carga de VAST con un solo anuncio en lugar de un manifiesto, esto se trata como si el manifiesto llamara a un solo anuncio ya preparado (un salto en el minuto 00:00).
+La publicidad para el contenido de vídeo es diferente en función de si el programa es inferior a 10minutos (formato corto) o superior a 10minutos (formato largo). Aunque la segunda opción es más complicada de configurar en el servicio, realmente no existe ninguna diferencia en cómo se escribe el código del lado cliente. Si la clase [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) recibe una carga de VAST con un solo anuncio en lugar de un manifiesto, esto se trata como si el manifiesto llamara a un solo anuncio ya preparado (un salto en el minuto 00:00).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -64,7 +61,7 @@ La publicidad para el contenido de vídeo es diferente en función de si el prog
 
 4.  Agrega el archivo AdScheduler.js al proyecto:
 
-  a.  En Visual Studio, haz clic en **Proyecto** y luego en **Administrar paquetes de NuGet**.
+  a.  En VisualStudio, haz clic en **Proyecto** y luego en **Administrar paquetes de NuGet**.
 
   b.  En el cuadro de búsqueda, escribe **Microsoft.StoreServices.VideoAdScheduler** e instala el paquete Microsoft.StoreServices.VideoAdScheduler. El archivo AdScheduler.js se agrega al subdirectorio .. /js en el proyecto.
 
@@ -103,4 +100,3 @@ La publicidad para el contenido de vídeo es diferente en función de si el prog
 
   > [!div class="tabbedCodeSnippets"]
   [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet5)]
-

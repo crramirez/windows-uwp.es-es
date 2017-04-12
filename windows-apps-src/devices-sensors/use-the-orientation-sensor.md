@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 349a28f1980b863091cedd4515737a48de51b390
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 435c2d7ca1bf2a256356c28a83d51e493d98e014
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="use-the-orientation-sensor"></a>Usar el sensor de orientación
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -179,7 +177,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar la orientación moviendo el dispositivo o usando las herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 
@@ -325,7 +323,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar la orientación moviendo el dispositivo o usando las herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ### <a name="explanation"></a>Explicación
 
@@ -356,4 +354,3 @@ Estos nuevos valores se escriben en un bloque de texto que se encuentra en el c�
 * [Muestra de OrientationSensor](http://go.microsoft.com/fwlink/p/?linkid=241382)
 * [Muestra del sensor SimpleOrientation](http://go.microsoft.com/fwlink/p/?linkid=241383)
  
-

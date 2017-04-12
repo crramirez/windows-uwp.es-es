@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, racing wheel, volante, force feedback, fuerza de respuesta
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: ca8413a857fd4d8925a6767280a32a8336eeba19
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="racing-wheel-and-force-feedback"></a>Volante y fuerza de respuesta
 
 En esta página se describen los conceptos básicos de programación de los volantes de Xbox One usando [Windows.Gaming.Input.RacingWheel][racingwheel] y las API relacionadas para la Plataforma universal de Windows (UWP).
@@ -60,7 +57,7 @@ Como controladores de navegación de la interfaz de usuario, los volantes asigna
 |               Abajo | Cruceta hacia abajo         |
 |               Izquierda | Cruceta hacia la izquierda         |
 |              Derecha | Cruceta hacia la derecha        |
-|               Vista | Botón de vista        |
+|               Ver | Botón de vista        |
 |               Menú | Botón de menú        |
 |             Aceptar | Botón A           |
 |             Cancelar | Botón B           |
@@ -387,4 +384,3 @@ Por último, se puede habilitar, deshabilitar o restablecer de forma asincrónic
 [wheelmotor]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheel.wheelmotor.aspx
 [racingwheelreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheelreading.aspx
 [racingwheelbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheelbuttons.aspx
-

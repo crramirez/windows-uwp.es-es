@@ -2,21 +2,17 @@
 title: Comportamiento UAV con iconos sin asignar
 description: El comportamiento de las lecturas y escrituras de las vistas de acceso sin ordenar (UAV) dependen del nivel de compatibilidad del hardware.
 ms.assetid: CDB224E2-CC07-4568-9AAC-C8DC74536561
-keywords:
-- Comportamiento UAV con iconos sin asignar
+keywords: Comportamiento UAV con iconos sin asignar
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ecaeca63e6d3d9d9a7e40282b9c4c16b5d24a179
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c5e3b3be467a49839d530fd976c7f756421de218
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsuavbehaviorwithnon-mappedtilesspanuav-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.uav_behavior_with_non-mapped_tiles"></span>Comportamiento UAV con iconos sin asignar
 
 
@@ -34,7 +30,6 @@ Las operaciones de sombreador que intentan escribir en un icono no asignado prov
  
 
  
-
 
 
 

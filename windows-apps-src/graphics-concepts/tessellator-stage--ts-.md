@@ -2,21 +2,17 @@
 title: Fase de Tessellator (TS)
 description: "La fase de Tessellator (TS) crea un patrón de muestreo del dominio que representa la revisión de geometría y genera un conjunto de objetos más pequeños (triángulos, puntos o líneas) que conectan estas muestras."
 ms.assetid: 2F006F3D-5A04-4B3F-8BC7-55567EFCFA6C
-keywords:
-- Fase de Tessellator (TS)
+keywords: Fase de Tessellator (TS)
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b50139fe60bb36df06e8f50d7b529602f0e6d764
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0a18a2ba4172fb4c7aad1d4e8a071bf077afeead
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="tessellator-ts-stage"></a>Fase de Tessellator (TS)
 
 
@@ -61,8 +57,8 @@ El Tessellator es una etapa de función fija que se inicializa mediante el enlac
 
 La fase de Tessellator (TS) funciona en dos fases:
 
--   La primera fase procesa los factores de teselación, para lo que soluciona problemas de redondeo, administra factores muy pequeños, reduce y combina factores y usa la aritmética de punto flotante de 32 bits.
--   La segunda fase genera listas de puntos o topología en función del tipo de partición seleccionado. Esta es la tarea principal del escenario del Tessellator y usa fracciones de 16 bits con aritmética de punto fijo. La aritmética de punto fijo permite la aceleración de hardware a la vez que se mantiene una precisión aceptable. Por ejemplo, dada una revisión ancho de 64 metros, esta precisión puede colocar puntos con una resolución de 2 mm.
+-   La primera fase procesa los factores de teselación, para lo que soluciona problemas de redondeo, administra factores muy pequeños, reduce y combina factores y usa la aritmética de punto flotante de 32bits.
+-   La segunda fase genera listas de puntos o topología en función del tipo de partición seleccionado. Esta es la tarea principal del escenario del Tessellator y usa fracciones de 16bits con aritmética de punto fijo. La aritmética de punto fijo permite la aceleración de hardware a la vez que se mantiene una precisión aceptable. Por ejemplo, dada una revisión ancho de 64metros, esta precisión puede colocar puntos con una resolución de 2mm.
 
     | Tipo de particiones | Intervalo                       |
     |----------------------|-----------------------------|
@@ -99,7 +95,6 @@ El Tessellator envía coordenadas uv (y, opcionalmente, w) y la topología de su
  
 
  
-
 
 
 

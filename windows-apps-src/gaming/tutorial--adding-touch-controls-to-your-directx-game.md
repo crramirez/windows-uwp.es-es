@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, juegos, entrada táctil, controles, directx, entrada"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 44d5071ee0cd695351c77630d699a1a060f477d6
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="touch-controls-for-games"></a>Controles táctiles para juegos
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aprende a agregar controles táctiles básicos a tu juego C++ de la Plataforma universal de Windows (UWP) con DirectX. Te enseñamos cómo agregar controles basados en el tacto para mover una cámara de plano fijo en un entorno de Direct3D, donde arrastrar con un dedo o un lápiz cambia la perspectiva de la cámara.
 
@@ -353,7 +350,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
  
 
  
-
 
 
 

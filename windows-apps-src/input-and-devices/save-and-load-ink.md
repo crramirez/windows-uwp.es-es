@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7c4f0ac39decede933f10fc94ebeb09fa41415e4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 81d3a37103f1dcea6b68850d163fa5cc9aded5bc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Almacenar y recuperar datos de trazos de lápiz de Windows Ink
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -440,7 +437,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 * [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md)
 
 **Ejemplos**
-* [Ink sample (Muestra de entrada de lápiz)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Muestra de entrada de lápiz](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Muestra de entrada de lápiz simple](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Muestra de entrada de lápiz compleja](http://go.microsoft.com/fwlink/p/?LinkID=620314)
 * [Muestra de libro para colorear](https://aka.ms/cpubsample-coloringbook)
@@ -448,7 +445,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
  
-
 
 
 

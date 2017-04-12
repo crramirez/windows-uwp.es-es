@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 46f79b34762eeb3424b887662418105e2e8a3ec2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ff685c37d1759d6f15542ed0716f6d4b6feef56f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="save-a-file-with-a-picker"></a>Guardar un archivo con un selector
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -70,7 +67,7 @@ Este ejemplo establece tres propiedades: [**SuggestedStartLocation**](https://ms
      
 - Dado que nuestro usuario está guardando un documento o archivo de texto, la muestra establece [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880) en la carpeta local de la aplicación mediante [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621). Establece [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) en una ubicación adecuada para el tipo de archivo que se está guardando, por ejemplo, música, imágenes, vídeos o documentos. Desde la ubicación de inicio, el usuario puede dirigirse a otras ubicaciones.
 
-- Como queremos asegurarnos de que nuestra aplicación puede abrir el archivo después de que este se haya guardado, usaremos [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) para especificar los tipos de archivo que admite la muestra (archivos de texto y documentos de Microsoft Word). Procura que todos los tipos de archivo que indiques sean compatibles con tu aplicación. Los usuarios podrán guardar sus archivos como cualquier otro tipo de archivo que especifiques. También pueden cambiar el tipo de archivo seleccionando otro de los tipos de archivo especificados. La primera opción de tipo de archivo de la lista se seleccionará de manera predeterminada: para controlar esto, establece la propiedad [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873).
+- Como queremos asegurarnos de que nuestra aplicación puede abrir el archivo después de que este se haya guardado, usaremos [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) para especificar los tipos de archivo que admite la muestra (archivos de texto y documentos de MicrosoftWord). Procura que todos los tipos de archivo que indiques sean compatibles con tu aplicación. Los usuarios podrán guardar sus archivos como cualquier otro tipo de archivo que especifiques. También pueden cambiar el tipo de archivo seleccionando otro de los tipos de archivo especificados. La primera opción de tipo de archivo de la lista se seleccionará de manera predeterminada: para controlar esto, establece la propiedad [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873).
 
 > **Nota**  El selector de archivos usa también el tipo de archivo seleccionado actualmente para filtrar los archivos que se van a mostrar, de modo que solo muestren al usuario los tipos de archivo que coincidan con los tipos de archivo seleccionados.
 
@@ -118,4 +115,3 @@ El ejemplo comprueba que el archivo es válido y escribe en él su propio nombre
  
 
  
-

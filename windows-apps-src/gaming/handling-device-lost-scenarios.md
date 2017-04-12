@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "Controlar escenarios cuando se quitan dispositivos en Direct3D 11"
+title: Controlar escenarios cuando se quitan dispositivos en Direct3D11
 description: "En este tema se explica cómo recrear la cadena de la interfaz de dispositivo de Direct3D y DXGI cuando se quita o reinicializa la tarjeta gráfica."
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
 ms.author: mtoepke
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, juegos, games, directx 11, dispositivo perdido, device lost
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2202d8ea4584f7755464fd3035829d348cfbff8d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3d7a93ed0b1ce78cba278232eb5325e463c12789
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Controlar escenarios cuando se quitan dispositivos en Direct3D11
 
-# <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Controlar escenarios cuando se quitan dispositivos en Direct3D 11
 
-
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se explica cómo recrear la cadena de la interfaz de dispositivo de Direct3D y DXGI cuando se quita o reinicializa la tarjeta gráfica.
 
@@ -30,9 +27,9 @@ En DirectX9, las aplicaciones podrían encontrarse con la condición "[dispositi
 -   El dispositivo gráfico deja de responder y se restablece.
 -   Se conecta o se quita una tarjeta gráfica físicamente.
 
-Cuando se dan estas circunstancias, DXGI devuelve un código de error que indica que el dispositivo de Direct3D debe reinicializarse y que los recursos de dispositivo deben recrearse. Este tutorial explica de qué manera las aplicaciones y juegos de Direct3D 11 pueden detectar cualquier circunstancia y responder ante esta cuando se restablece, quita o cambia la tarjeta gráfica. Los ejemplos de código proceden de la plantilla Aplicación DirectX 11 (Windows universal) que se incluye con Microsoft Visual Studio 2015.
+Cuando se dan estas circunstancias, DXGI devuelve un código de error que indica que el dispositivo de Direct3D debe reinicializarse y que los recursos de dispositivo deben recrearse. Este tutorial explica de qué manera las aplicaciones y juegos de Direct3D11 pueden detectar cualquier circunstancia y responder ante esta cuando se restablece, quita o cambia la tarjeta gráfica. Los ejemplos de código proceden de la plantilla Aplicación DirectX11 (Windows universal) que se incluye con Microsoft Visual Studio2015.
 
-# <a name="instructions"></a>Instrucciones
+## <a name="instructions"></a>Instrucciones
 
 ### <a name="spanspanstep-1"></a><span></span>Paso 1:
 
@@ -170,15 +167,4 @@ Para obtener más detalles, consulta [**GetDeviceRemovedReason**](https://msdn.m
 
 El símbolo del sistema para desarrolladores de Visual Studio admite una herramienta de línea de comandos, 'dxcap', para la captura y reproducción de eventos de Direct3D relacionados con el diagnóstico de gráficos de Visual Studio. Puedes usar la opción de la línea de comandos "-forcetdr" mientras se ejecuta la aplicación, lo que forzará un evento de detección del tiempo de espera y recuperación de la GPU, que desencadenará DXGI\_ERROR\_DEVICE\_REMOVED y te permitirá probar el código de control de errores.
 
-> **Nota:** DXCap y sus DLL de soporte se instalan en system32/syswow64 como parte de las Herramientas de gráficos de Windows 10, que ya no se distribuyen mediante Windows SDK. En su lugar, se proporcionan a través de la característica de herramientas de gráficos a petición que es un componente opcional del sistema operativo, y que debe instalarse para poder habilitar y usar las herramientas de gráficos en Windows 10. Para más información sobre cómo instalar las herramientas de gráficos para Windows 10 visite: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>
-
- 
-
- 
-
- 
-
-
-
-
-
+> **Nota** DXCap y sus DLL de soporte se instalan en system32/syswow64 como parte de las Herramientas de gráficos de Windows 10, que ya no se distribuyen vía Windows SDK. En su lugar, se proporcionan a través de la característica de herramientas de gráficos a petición que es un componente opcional del sistema operativo, y que debe instalarse para poder habilitar y usar las herramientas de gráficos en Windows 10. Para más información sobre cómo instalar las herramientas de gráficos para Windows 10 visite: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>

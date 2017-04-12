@@ -9,18 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, Windows.Services.Store"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7e486c451174cd24429dc35cda07d22fe2b28745
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5ce47241bad229d0f44e14d3f9332603e6776f2f
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="get-product-info-for-apps-and-add-ons"></a>Obtener información de producto para aplicaciones y complementos
 
-Las aplicaciones diseñadas para Windows 10, versión 1607 o posterior, pueden usar métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para acceder a información relacionada con la Tienda para la aplicación actual o uno de sus complementos (también conocidos como productos desde la aplicación o IAP). Los siguientes ejemplos de este artículo muestran cómo hacer esto para diferentes escenarios. Para una muestra completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Las aplicaciones diseñadas para Windows 10, versión 1607 o posterior pueden usar métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para acceder a información relacionada con la Tienda para la aplicación actual o uno de sus complementos (también conocidos como productos desde la aplicación o IAP). Los siguientes ejemplos de este artículo muestran cómo hacer esto para diferentes escenarios. Para una muestra completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
->**Nota**&nbsp;&nbsp;Este artículo es aplicable a las aplicaciones diseñadas para Windows 10, versión 1607 o posterior. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [Compras desde la aplicación y pruebas con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+> [!NOTE]
+> Este artículo es aplicable a las aplicaciones dirigidas a Windows 10, versión 1607 o posterior. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [Compras desde la aplicación y pruebas con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -33,9 +31,10 @@ El código de estos ejemplos supone que:
 * El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
 * La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
 
-Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
->**Nota**&nbsp;&nbsp;Si tienes una aplicación de escritorio que usa el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), tienes que agregar código adicional que no se muestra en estos ejemplos para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
+> [!NOTE]
+> Si tienes una aplicación de escritorio que usa el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop), puede que tengas que agregar código adicional que no se muestra en estos ejemplos para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
 
 ## <a name="get-info-for-the-current-app"></a>Obtener información de la aplicación actual
 
@@ -55,9 +54,10 @@ El siguiente ejemplo recupera información para complementos duraderos con los i
 
 ## <a name="get-info-for-add-ons-that-are-available-for-the-current-app"></a>Obtener información sobre los complementos que están disponibles para la aplicación actual
 
-Para obtener información de producto de la Tienda para los complementos que están disponibles para la aplicación actual, usa el método [GetAssociatedStoreProductsAsync](https://msdn.microsoft.com/library/windows/apps/mt706571.aspx). Este es un método asincrónico que devuelve una colección de objetos [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) que representan cada uno de los complementos disponibles. Debes pasar una lista de cadenas a este método que identifiquen los tipos de complementos que quieras recuperar. Para obtener una lista de los valores de cadena compatibles, consulta la propiedad [ProductKind](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.productkind.aspx).
+Para obtener información de producto de la Tienda para los complementos que están disponibles para la aplicación actual, usa el método [GetAssociatedStoreProductsAsync](https://msdn.microsoft.com/library/windows/apps/mt706571.aspx). Este es un método asincrónico que devuelve una colección de objetos [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) que representan cada uno de los complementos disponibles. Debes pasar una lista de cadenas a este método que identifiquen los tipos de complementos que quieras recuperar. Para una lista de los valores de cadena compatibles, consulta la propiedad [ProductKind](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.productkind.aspx).
 
->**Nota**&nbsp;&nbsp;Si la aplicación tiene muchos complementos, puedes usar de forma alternativa el método [GetAssociatedStoreProductsWithPagingAsync](https://msdn.microsoft.com/library/windows/apps/mt706572.aspx) para emplear la paginación con el fin de devolver los resultados del complemento.
+> [!NOTE]
+> Si la aplicación tiene muchos complementos, puedes usar de forma alternativa el método [GetAssociatedStoreProductsWithPagingAsync](https://msdn.microsoft.com/library/windows/apps/mt706572.aspx) para emplear la paginación con el fin de devolver los resultados de complementos.
 
 En el siguiente ejemplo, se recupera información respecto a todos los complementos duraderos, complementos consumibles administrados por la Tienda y complementos consumibles administrados por el desarrollador.
 
@@ -67,9 +67,10 @@ En el siguiente ejemplo, se recupera información respecto a todos los complemen
 
 ## <a name="get-info-for-add-ons-for-the-current-app-that-the-current-user-is-entitled-to-use"></a>Obtén información respecto a los complementos de la aplicación actual que el usuario actual tenga derecho a usar
 
-Para obtener información de producto de la Tienda para los complementos que el usuario actual tenga derecho a usar, usa el método [GetUserCollectionAsync](https://msdn.microsoft.com/library/windows/apps/mt706580.aspx). Este es un método asincrónico que devuelve una colección de objetos [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) que representan cada uno de los complementos. Debes pasar una lista de cadenas a este método que identifiquen los tipos de complementos que quieras recuperar. Para obtener una lista de los valores de cadena compatibles, consulta la propiedad [ProductKind](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.productkind.aspx).
+Para obtener información de producto de la Tienda para los complementos que el usuario actual tenga derecho a usar, usa el método [GetUserCollectionAsync](https://msdn.microsoft.com/library/windows/apps/mt706580.aspx). Este es un método asincrónico que devuelve una colección de objetos [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) que representan cada uno de los complementos. Debes pasar una lista de cadenas a este método que identifiquen los tipos de complementos que quieras recuperar. Para una lista de los valores de cadena compatibles, consulta la propiedad [ProductKind](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.productkind.aspx).
 
->**Nota**&nbsp;&nbsp;Si la aplicación tiene muchos complementos, puedes usar de forma alternativa el método [GetUserCollectionWithPagingAsync](https://msdn.microsoft.com/library/windows/apps/mt706581.aspx) para utilizar la paginación con el fin de devolver los resultados del complemento.
+> [!NOTE]
+> Si la aplicación tiene muchos complementos, puedes usar de forma alternativa el método [GetUserCollectionWithPagingAsync](https://msdn.microsoft.com/library/windows/apps/mt706581.aspx) para emplear la paginación con el fin de devolver los resultados de complementos.
 
 El siguiente ejemplo recupera información sobre complementos duraderos con los id. de la Tienda especificados.
 
@@ -84,4 +85,3 @@ El siguiente ejemplo recupera información sobre complementos duraderos con los 
 * [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md)
 * [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md)
 * [Muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-

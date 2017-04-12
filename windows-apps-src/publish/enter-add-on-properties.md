@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 186088f249c2e6fe116c970bd1969fcb59863ba6
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="enter-add-on-properties"></a>Especificar las propiedades de complemento
 
 
@@ -73,7 +70,6 @@ Por ejemplo, supongamos que tienes un juego y que vendes una bolsa de monedas de
  
 
  
-
 
 
 

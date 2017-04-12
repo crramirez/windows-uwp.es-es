@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: AD80F9B3-CED0-40BD-A199-AB81CDAE466C
 description: "Usa este método en la API de envío de la Tienda Windows para eliminar un paquete piloto de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows."
-title: "Eliminar un paquete piloto mediante la API de envío de la Tienda Windows"
+title: Eliminar un paquete piloto
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, API de envío de la Tienda Windows, Windows Store submission API, eliminar piloto, delete flight"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 781fda9708867dd2f09957e1f06b80e220534e02
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, delete flight, eliminar piloto"
+ms.openlocfilehash: e20661cef4ac7cad17ea5a62d37e9b217061809c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="delete-a-package-flight-using-the-windows-store-submission-api"></a>Eliminar un paquete piloto mediante la API de envío de la Tienda Windows
+# <a name="delete-a-package-flight"></a>Eliminar un paquete piloto
 
 
 
@@ -29,13 +26,13 @@ Usa este método en la API de envío de la Tienda Windows para eliminar un paque
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
 ## <a name="request"></a>Solicitud
 
-Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del encabezado y del cuerpo de la solicitud.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
 | Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
@@ -48,7 +45,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -56,8 +53,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que contiene el paquete piloto que quieres eliminar. El Id. de la Tienda para la aplicación está disponible en la página del panel del Centro de desarrollo.  |
-| flightId | string | Obligatorio. El identificador del paquete piloto que se va a eliminar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
+| applicationId | cadena | Obligatorio. El Id. de la Tienda de la aplicación que contiene el paquete piloto que quieres eliminar. El Id. de la Tienda para la aplicación está disponible en la página del panel del Centro de desarrollo.  |
+| flightId | cadena | Obligatorio. El identificador del paquete piloto que se va a eliminar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
 
 <span/>
 
@@ -94,7 +91,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Create and manage submissions using Windows Store services (Crear y administrar envíos mediante el uso de servicios de la Tienda Windows)](create-and-manage-submissions-using-windows-store-services.md)
+* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Crear un paquete piloto](create-a-flight.md)
 * [Obtener un paquete piloto](get-a-flight.md)
-

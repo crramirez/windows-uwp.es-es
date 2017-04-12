@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-description: Puedes usar Windows.Networking.Sockets y Winsock para comunicarte con otros dispositivos como desarrollador de aplicaciones para la Plataforma universal de Windows (UWP).
+description: Puedes usar Windows.Networking.Sockets y Winsock para comunicarte con otros dispositivos como un desarrollador de aplicaciones para la Plataforma universal de Windows (UWP).
 title: Sockets
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 ms.author: bobdel
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0e9121dfc590a1a7f67be69b7dbce475e438dd08
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8933fb5c970203746fe1a00c71c0630fa264ebf6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="sockets"></a>Sockets
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -303,6 +300,5 @@ Para los errores de validación de parámetros, una aplicación también puede u
 ## <a name="the-winsock-api"></a>API Winsock
 
 También puedes usar [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673) en tu aplicación para UWP. La API Winsock compatible se basa en aquella de Microsoft Silverlight de Windows Phone 8.1 y sigue siendo compatible con la mayoría de los tipos, propiedades y métodos (se han quitado algunas API consideradas obsoletas). Puedes encontrar más información sobre la programación de Winsock [aquí](https://msdn.microsoft.com/library/windows/desktop/ms740673).
-
 
 

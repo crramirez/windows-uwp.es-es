@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 873da2adeea277e0f8f869703aac782c21b0419e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a629fb07bfa2e3f8bb3d070e9fe4994baba4336b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xphase-attribute"></a>Atributo x:Phase
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Usa **x:Phase** con la [extensión de marcado {x:Bind}](x-bind-markup-extension.md) para representar los elementos [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) de forma incremental y mejorar la experiencia de movimiento panorámica. **x:Phase** proporciona una manera declarativa de lograr el mismo efecto que si se usase el evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) para controlar manualmente la representación de los elementos de lista. Consulta también [Actualizar los elementos ListView and GridView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
@@ -84,5 +81,4 @@ Los números de fase no necesitan ser contiguos y son los mismos que el valor de
 El escalonamiento solo afecta a los enlaces [{x:Bind}](x-bind-markup-extension.md) , no a los enlaces [{Binding}](binding-markup-extension.md) .
 
 El escalonamiento solo se aplica cuando la plantilla de elementos se representa usando un control que tiene constancia del escalonamiento. Para Windows 10, esto significa [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). El escalonamiento no se aplicará a las plantillas de datos usadas en otros controles de elementos ni en otros escenarios, como las secciones [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) o [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843). En estos casos, todos los elementos de la interfaz de usuario serán datos enlazados a la vez.
-
 

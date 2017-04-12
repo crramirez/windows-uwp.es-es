@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1aea4f2da584124050665d159b1d83f34368b819
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 38bafd7c63b101e495748c169a1b566115c2a1e6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xbox-dev-mode-companion"></a>Complemento del modo de desarrollo de Xbox
 
 La aplicación Complemento del modo de desarrollo de Xbox te permite conectarte a una consola Xbox One y controlarla de forma remota. Esta herramienta se creó para desarrolladores que usan el modo de desarrollador de Xbox.
@@ -48,4 +45,3 @@ Puedes ver la página de ayuda haciendo clic en el icono con el símbolo de inte
 
 ## <a name="see-also"></a>Consulta también
 - [UWP en Xbox One](index.md)
-

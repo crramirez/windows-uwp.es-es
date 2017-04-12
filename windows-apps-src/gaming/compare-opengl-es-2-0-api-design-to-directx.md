@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: "Planear la migración de OpenGL ES 2.0 a Direct3D"
-description: "Si vas a migrar un juego de las plataformas iOS o Android, probablemente hayas hecho una gran inversión en OpenGL ES 2.0."
+description: "Si vas a migrar un juego de las plataformas iOS o Android, probablemente hayas hecho una gran inversión en OpenGLES2.0."
 ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, OpenGL, Direct3D
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: d2642abbfbfc6030aa00f68f30d4a45eb0e86ee1
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>Planear la migración de OpenGL ES 2.0 a Direct3D
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -45,7 +42,7 @@ Las muestras de Direct3D 11 de estos temas usan Microsoft Windows C++ con extens
 ## <a name="understand-your-hardware-requirements-and-resources"></a>Comprender los requisitos y recursos de hardware
 
 
-El conjunto de características para procesar gráficos en OpenGL ES 2.0 se asigna en términos generales a las características proporcionadas en Direct3D 9.1. Si quieres sacar provecho de las características más avanzadas de Direct3D 11, revisa la documentación de [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080) cuando planees una migración o revisa los temas [Migrar de DirectX 9 a la Plataforma universal de Windows (UWP)](porting-your-directx-9-game-to-windows-store.md) cuando ya hayas realizado el esfuerzo inicial.
+El conjunto de características para procesar gráficos en OpenGL ES 2.0 se asigna en términos generales a las características proporcionadas en Direct3D 9.1. Si quieres sacar provecho de las características más avanzadas de Direct3D11, revisa la documentación de [Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476080) cuando planees una migración o revisa los temas [Migrar de DirectX9 a la Plataforma universal de Windows (UWP)](porting-your-directx-9-game-to-windows-store.md) cuando ya hayas realizado el esfuerzo inicial.
 
 Para simplificar tu primera migración, empieza con la plantilla Direct3D de Visual Studio. Esta proporciona un representador básico ya configurado y admite características de aplicaciones para UWP, como recrear recursos en cambios de Windows y niveles de características de Direct3D.
 
@@ -80,7 +77,7 @@ Estas son las API esenciales de Windows Runtime que se usan en la migración de 
 -   [**Windows::ApplicationModel::Core::IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)
 -   [**Windows::ApplicationModel::Core::CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)
 
-Además, la Biblioteca de plantillas C++ de Windows Runtime (WRL) es una biblioteca que proporciona un modo de bajo nivel para crear y usar componentes de Windows Runtime. Las API de Direct3D 11 para aplicaciones para UWP se usan mejor en conjunto con las interfaces y tipos de esta biblioteca, como los punteros inteligentes ([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)). Para más información sobre la WRL, lee [Biblioteca de plantillas C++ de Windows Runtime (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx).
+Además, la Biblioteca de plantillas C++ de Windows Runtime (WRL) es una biblioteca que proporciona un modo de bajo nivel para crear y usar componentes de Windows Runtime. Las API de Direct3D11 para aplicaciones para UWP se usan mejor en conjunto con las interfaces y tipos de esta biblioteca, como los punteros inteligentes ([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)). Para más información sobre la WRL, lee [Biblioteca de plantillas C++ de Windows Runtime (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx).
 
 ## <a name="change-your-coordinate-system"></a>Cambiar el sistema de coordenadas
 
@@ -120,7 +117,6 @@ Si embargo Direct3D puede admitir un sistema de coordenadas a la derecha. Direct
  
 
  
-
 
 
 

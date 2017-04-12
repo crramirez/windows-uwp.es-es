@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f78c828faded1d7efbd82bc41245052ce95862c7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b136c53cd39028c15ff55be803ae314c773a9be6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="get-battery-information"></a>Obtener información sobre la batería
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** API importantes **
 
@@ -342,5 +340,4 @@ Por último, para ejecutar esta aplicación de batería básica: en el menú **D
 **Sugerencia** Para recibir los valores numéricos del objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005), depura la aplicación en la **Máquina local** o en un **Dispositivo** externo (por ejemplo, un Windows Phone). Al depurar en un emulador de dispositivo, el objeto **BatteryReport** devuelve **null** a las propiedades de capacidad y velocidad.
 
  
-
 

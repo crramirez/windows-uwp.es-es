@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, games, DirectX 9, DirectX 11, portar, porting
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 58847adcb94f7e730bcdcd98767282811d555016
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Asignar características de DirectX 9 a las API de DirectX 11
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -68,7 +65,7 @@ La biblioteca de utilidades de D3DX (D3DX 9, D3DX 10 y D3DX 11), incluidos los e
 
 Visual Studio todavía usa FXC como opción avanzada para compilar objetos de sombreador. Los sombreadores de los juegos de la UWP se compilan con anticipación. El código de bytes se carga en tiempo de ejecución y, a continuación, cada recurso de sombreador se enlaza a la canalización de elementos gráficos durante el pase de representación apropiado. Los sombreadores deben moverse a sus propios archivos .HLSL independientes y las técnicas de representación deben implementarse en el código C++.
 
-Para ver rápidamente la carga de recursos de sombreador, consulta [Migración simple de Direct3D 9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Para ver rápidamente la carga de recursos de sombreador, consulta [Migración simple de Direct3D9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 Direct3D 11 introdujo el modelo de sombreador 5, que requiere el nivel de característica 11\_0 (o superior) de Direct3D. Consulta [HLSL Shader Model 5 Features for Direct3D 11 (Características del modelo de sombreador 5 de HLSL para Direct3D 11)](https://msdn.microsoft.com/library/windows/desktop/ff471419).
 
@@ -356,7 +353,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>Nota</strong>   Usa la referencia .r en el sombreador para duplicar el color rojo y mover el color verde a otros componentes alfa, y obtener el comportamiento de Direct3D 9.
+<strong>Nota</strong>   Usa la referencia .r en el sombreador para duplicar el color rojo y mover el color verde a los componentes alfa para obtener el comportamiento de Direct3D 9.
 </div>
 <div>
  
@@ -402,7 +399,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
 <td align="left"><p>DXGI_FORMAT_G8R8_G8B8_UNORM</p>
 <div class="alert">
-<strong>Nota</strong>   En Direct3D 9 la escala de datos aumentó en 255.0f, pero puede controlarse en el sombreador.
+<strong>Nota</strong>   En Direct3D 9, los datos se escalaron verticalmente en 255.0f, pero puede controlarse en el sombreador.
 </div>
 <div>
  
@@ -416,7 +413,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_B8G8_UNORM</p>
 <div class="alert">
-<strong>Nota</strong>   En Direct3D 9 la escala de datos aumentó en 255.0f, pero puede controlarse en el sombreador.
+<strong>Nota</strong>   En Direct3D 9, los datos se escalaron verticalmente en 255.0f, pero puede controlarse en el sombreador.
 </div>
 <div>
  
@@ -674,7 +671,6 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
  
 
  
-
 
 
 

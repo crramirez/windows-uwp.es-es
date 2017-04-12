@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c9c359fd424b4c9526ebfc610adc7097bb83cbda
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cfaa7c96a3ec8bf50f19ee699ff74b037500a838
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-the-windows-maps-app"></a>Iniciar la aplicación Mapas de Windows
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Aprende a iniciar la aplicación Mapas de Windows desde la aplicación. En este tema se describen los esquemas de identificador uniforme de recursos (URI) **bingmaps:, ms-drive-to:, ms-walk-to:** y **ms-settings:**. Usa estos esquemas de URI para iniciar la aplicación Mapas de Windows para especificar mapas, indicaciones y resultados de búsqueda o para descargar mapas sin conexión de Mapas de Windows desde la aplicación Configuración.
@@ -87,7 +84,7 @@ Para controlar el tipo de vista, usa los parámetros *ss* (Streetside) y *sty* (
 | bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness        | Muestra un mapa con un punto denominado Some\_Business (en Las Vegas).                                                                                                                                          |
 | bingmaps:?cp=40.726966~-74.006076&trfc=1&sty=a                             | Muestra un mapa de Nueva York con el tráfico activado y el estilo de mapa aéreo.                                                                                                                                               |
 | bingmaps:?cp=47.6204~-122.3491&sty=3d                                      | Muestra una vista 3D de la Space Needle.                                                                                                                                                                   |
-| bingmaps:?cp=47.6204~-122.3491&sty=3d&rad=200&pit=75&hdg=165               | Muestra una vista 3D de la Space Needle con un radio de 200 m, una rotación alrededor del eje x (pitch) o 75 grados, y un encabezado de 165 grados.                                                                                        |
+| bingmaps:?cp=47.6204~-122.3491&sty=3d&rad=200&pit=75&hdg=165               | Muestra una vista 3D de la Space Needle con un radio de 200m, una rotación alrededor del eje x (pitch) o 75 grados, y un encabezado de 165 grados.                                                                                        |
 | bingmaps:?cp=47.6204~-122.3491&ss=1                                        | Muestra una vista de Streetside de Space Needle.                                                                                                                                                           |
 
  
@@ -433,4 +430,3 @@ La sintaxis de los parámetros específicos de la aplicación Mapas para el esqu
  
 
  
-

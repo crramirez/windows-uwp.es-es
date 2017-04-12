@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, objeto principal
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f81b3eaa9b896295386232f99b789dc3857b3bad
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="define-the-main-game-object"></a>Definir el objeto principal del juego
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hasta ahora, hemos diseñado la estructura básica del juego de muestra y hemos implementado una máquina de estado que controla los comportamientos generales del usuario y del sistema, pero aún no hemos examinado la parte que convierte la muestra en un juego real: las reglas y las mecánicas y cómo se implementan. Vamos a ver los detalles del objeto principal de la muestra de juego y cómo las reglas que implementa se traducen en interacciones con el mundo del juego.
 
@@ -96,7 +93,7 @@ Primero, revisemos los métodos internos definidos en **Simple3DGame**.
 -   **Initialize**. Establece los valores iniciales de las variables globales e inicializa los objetos del juego.
 -   **LoadGame**. Inicializa un nuevo nivel y comienza a cargarlo.
 -   **LoadLevelAsync**. Inicia una tarea asincrónica (consulta la [biblioteca de modelos paralelos](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx) para obtener información más detallada) con objeto de inicializar el nivel y después invocar una tarea asincrónica en el representador para cargar los recursos de nivel específicos del dispositivo. Este método se ejecuta en otro subproceso; como consecuencia, solo se puede llamar a los métodos [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) (en contraposición a los métodos [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) desde este subproceso. Los métodos de contexto de dispositivo se llaman en el método **FinalizeLoadLevel**.
--   **FinalizeLoadLevel**. Finaliza cualquier tarea de carga de nivel que sea necesario realizar en el subproceso principal. Esto incluye cualquier llamada a métodos de contexto de dispositivo de Direct3D 11 ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)).
+-   **FinalizeLoadLevel**. Finaliza cualquier tarea de carga de nivel que sea necesario realizar en el subproceso principal. Esto incluye cualquier llamada a métodos de contexto de dispositivo de Direct3D11 ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)).
 -   **StartLevel**. Inicia el juego para un nuevo nivel.
 -   **PauseGame**. Pausa el juego.
 -   **RunGame**. Ejecuta una iteración del bucle del juego. Si el estado del juego es is **Active**, recibe una llamada de **App::Update** una vez cada iteración del bucle del juego.
@@ -156,7 +153,7 @@ private:
 Al principio del ejemplo de código hay cuatro objetos cuyas instancias se actualizan mientras se ejecuta el bucle del juego.
 
 -   El objeto **de la instancia** . Este objeto representa la entrada del jugador. (Para más información sobre el objeto **MoveLookController**, consulta el tema sobre [cómo agregar controles](tutorial--adding-controls.md).
--   Objeto **GameRenderer**. Este objeto representa al representador de Direct3D 11 derivado de la clase **DirectXBase** que controla todos los objetos específicos del dispositivo y su representación. (Para más información, consulta el tema sobre cómo [ensamblar la canalización de representación](tutorial--assembling-the-rendering-pipeline.md).)
+-   Objeto **GameRenderer**. Este objeto representa al representador de Direct3D11 derivado de la clase **DirectXBase** que controla todos los objetos específicos del dispositivo y su representación. (Para más información, consulta el tema sobre cómo [ensamblar la canalización de representación](tutorial--assembling-the-rendering-pipeline.md).)
 -   Objeto **Camera**. Este objeto representa la vista en primera persona que tiene el jugador del mundo de juego. (Para más información sobre el objeto **Camera** consulta el tema sobre cómo [ensamblar la canalización de representación](tutorial--assembling-the-rendering-pipeline.md).)
 -   Objeto **Audio**. Este objeto controla la reproducción de audio del juego. (Para más información sobre el objeto **Audio**, consulta el tema sobre cómo [agregar sonido](tutorial--adding-sound.md).)
 
@@ -3613,7 +3610,7 @@ XMFLOAT3 AnimateCirclePosition::Evaluate(_In_ float t)
 ```
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -3625,7 +3622,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
  
 
  
-
 
 
 

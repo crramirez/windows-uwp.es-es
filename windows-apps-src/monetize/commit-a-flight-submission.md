@@ -2,26 +2,23 @@
 author: mcleanbyron
 ms.assetid: F94AF8F6-0742-4A3F-938E-177472F96C00
 description: "Usa este método en la API de envío de la Tienda Windows para confirmar un envío de paquete piloto nuevo o actualizado al Centro de desarrollo de Windows."
-title: "Confirmación de un envío de paquete piloto con la API de envío de la Tienda Windows"
+title: "Confirmar un envío de paquete piloto"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, confirmación de envío de piloto"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 305c9280b00fbbd669bee31732e831238054f177
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, commit flight submission, confirmar envío piloto"
+ms.openlocfilehash: 5171fb89b9485ed314a8c7f0322db89019e9d512
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="commit-a-package-flight-submission-using-the-windows-store-submission-api"></a>Confirmación de un envío de paquete piloto con la API de envío de la Tienda Windows
-
+# <a name="commit-a-package-flight-submission"></a>Confirmar un envío de paquete piloto
 
 
 
-Usa este método en la API de envío de la Tienda Windows para confirmar un envío de paquetes piloto nuevo o actualizado al Centro de desarrollo de Windows. El centro de desarrollo alerta al Centro de desarrollo de que los datos de envío se han cargado (incluidos los paquetes relacionados). En respuesta, el Centro de desarrollo confirma los cambios en los datos de envío para la recopilación y la publicación. Después de que la operación de confirmación se realice correctamente, los cambios en el envío se muestran en el panel del Centro de desarrollo.
+
+Usa este método en la API de envío de la Tienda Windows para confirmar un envío de paquete piloto nuevo o actualizado al Centro de desarrollo de Windows. El centro de desarrollo alerta al Centro de desarrollo de que los datos de envío se han cargado (incluidos los paquetes relacionados). En respuesta, el Centro de desarrollo confirma los cambios en los datos de envío para la recopilación y la publicación. Después de que la operación de confirmación se realice correctamente, los cambios en el envío se muestran en el panel del Centro de desarrollo.
 
 Para obtener más información sobre cómo se ajusta la operación de confirmación en el proceso de creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows, consulta [Administración de envíos de paquetes piloto](manage-flight-submissions.md).
 
@@ -37,9 +34,9 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ## <a name="request"></a>Solicitud
 
-Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del cuerpo del encabezado y la solicitud.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Method | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit``` |
 
@@ -48,9 +45,9 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Type   | Descripción                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -58,9 +55,9 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío de paquete piloto que quieres confirmar. El Id. de la Tienda para la aplicación está disponible en el panel del Centro de desarrollo.  |
-| flightId | string | Obligatorio. El identificador del paquete piloto que contiene el envío que se va a confirmar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta para las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
-| submissionId | string | Obligatorio. El identificador del envío que se va a confirmar. Esta identificación está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta para las solicitudes de [creación de un envío de paquete piloto](create-a-flight-submission.md).  |
+| applicationId | cadena | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío de paquete piloto que quieres confirmar. El Id. de la Tienda para la aplicación está disponible en el panel del Centro de desarrollo.  |
+| flightId | cadena | Obligatorio. El identificador del paquete piloto que contiene el envío que se va a confirmar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta para las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
+| submissionId | cadena | Obligatorio. El identificador del envío que se va a confirmar. Esta identificación está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta para las solicitudes de [creación de un envío de paquete piloto](create-a-flight-submission.md).  |
 
 <span/>
 
@@ -79,7 +76,7 @@ Authorization: Bearer <your access token>
 
 ## <a name="response"></a>Respuesta
 
-El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisfactoria a este método. Para obtener más información acerca de los valores en el cuerpo de respuesta, consulta las secciones siguientes.
+El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisfactoria a este método. Para obtener más información acerca de los valores del cuerpo de respuesta, consulta las secciones siguientes.
 
 ```json
 {
@@ -91,7 +88,7 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | cadena  | El estado del envío. Puede ser uno de los valores siguientes: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificación</li><li>Error de certif.</li><li>Lanzamiento</li><li>Error de lanz.</li></ul>  |
+| status           | cadena  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicación</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>Error de lanz.</li></ul>  |
 
 <span/>
 
@@ -112,9 +109,8 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 * [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Manage package flight submissions (Administrar envíos de paquetes piloto)](manage-flight-submissions.md)
-* [Obtención de un envío de paquete piloto](get-a-flight-submission.md)
-* [Creación de un envío de paquete piloto](create-a-flight-submission.md)
-* [Actualización de un envío de paquete piloto](update-a-flight-submission.md)
+* [Get a package flight submission (Obtener un envío de paquete piloto)](get-a-flight-submission.md)
+* [Crear un envío de paquete piloto](create-a-flight-submission.md)
+* [Actualizar un envío de paquete piloto](update-a-flight-submission.md)
 * [Eliminación de un envío de paquete piloto](delete-a-flight-submission.md)
 * [Get the status of a package flight submission (Obtener el estado de un envío de paquete piloto)](get-status-for-a-flight-submission.md)
-

@@ -2,21 +2,17 @@
 title: "Transformación de proyección"
 description: "Una transformación de proyección controla los aspectos internos de la cámara, como la elección de un objetivo para una cámara. Este es el más complicado de los tres tipos de transformación."
 ms.assetid: 378F205D-3800-4477-9820-5EBE6528B14A
-keywords:
-- "Transformación de proyección"
+keywords: "Transformación de proyección"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 83679e9a41adcad68f1341328de4c03b10db08e5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cb6704383bafe9ee3e5785701c78f92e84b90b3d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="projection-transform"></a>Transformación de proyección
 
 
@@ -79,7 +75,6 @@ Direct3D utiliza la matriz de proyección establecida actualmente en sus cálcul
  
 
  
-
 
 
 

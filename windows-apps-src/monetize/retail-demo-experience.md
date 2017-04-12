@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, aplicación de demostración comercial"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 843f98782410559d47bdb8dc0b23b50fa96552d6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2fa839c3a559ff0065c98712f73b9bb3ed81b276
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="create-a-retail-demo-experience-rdx-app"></a>Crear una aplicación de experiencia de demostración comercial (RDX)
 
-Cuando los clientes entran en una tienda o un establecimiento comercial, esperan encontrar los equipos y los teléfonos móviles más recientes en exposición, y estos dispositivos expuestos se conocen como dispositivos de demostración comercial.
+Cuando los clientes entran en una tienda o un establecimiento comercial, esperan encontrar los equipos y los teléfonos móviles más recientes en exposición y estos dispositivos que se exhiben se conocen como dispositivos de demostración comercial.
 Los dispositivos de demostración comercial y el contenido que se instala en ellos son, en gran medida, responsables de la experiencia del cliente en las tiendas porque los clientes suelen dedicar una parte importante de su tiempo a divertirse con estos dispositivos.
 
 Las aplicaciones que se instalan en estos equipos y teléfonos móviles de las tiendas minoristas deben ser aplicaciones aptas para la experiencia de demostración comercial (RDX). En este artículo se proporciona información general sobre cómo diseñar y desarrollar una versión de demostración comercial de una aplicación para instalarla en equipos y dispositivos móviles comerciales en una tienda minorista.
@@ -73,7 +71,7 @@ Las aplicaciones de RDX que no cumplan con estos requisitos de prioridad alta se
 
 * Experiencia sin conexión memorable
 
-    La aplicación de experiencia de demostración comercial debe mostrar una estupenda experiencia sin conexión, ya que aproximadamente el 50 % de los dispositivos están sin conexión en los establecimientos minoristas. Esto sirve para garantizar que los clientes que interactúen con la aplicación sin conexión también puedan tener una experiencia positiva y significativa.
+    La aplicación de experiencia de demostración comercial debe mostrar una estupenda experiencia sin conexión, ya que aproximadamente el 50% de los dispositivos están sin conexión en los establecimientos minoristas. Esto sirve para garantizar que los clientes que interactúen con la aplicación sin conexión también puedan tener una experiencia positiva y significativa.
 
 * Experiencia de contenido actualizado
 
@@ -101,7 +99,7 @@ Es posible que el equipo de la tienda comercial de Windows se ponga en contacto 
 
 * Cumplir los requisitos de tamaño de aplicación de la tienda comercial
 
-    El tamaño de la aplicación debe ser inferior a 800 MB. Si tu aplicación de experiencia de demostración comercial no cumple con los requisitos de tamaño, ponte en contacto directamente con el equipo de la tienda comercial de Windows para comentarlo con ellos.
+    El tamaño de la aplicación debe ser inferior a 800MB. Si tu aplicación de experiencia de demostración comercial no cumple con los requisitos de tamaño, ponte en contacto directamente con el equipo de la tienda comercial de Windows para comentarlo con ellos.
 
 ## <a name="preparing-codebase-for-retail-demo-mode-development"></a>Preparar el código base para el desarrollo del modo de demostración comercial
 
@@ -136,7 +134,7 @@ Después de 60 segundos de tiempo de inactividad, el vídeo de la aplicación de
 
 #### <a name="step-2-set-up"></a>Paso 2: Configurar
 * Para dispositivos sin conexión: las carpetas permanecen vacías
-* Para dispositivos en línea: los activos de demostración comercial pueden insertarse en el dispositivo de la Tienda Windows
+* Para dispositivos en línea: los activos de demostración comercial pueden insertarse en el dispositivo de la TiendaWindows
 
 ### <a name="how-to-store-data-across-user-sessions"></a>¿Cómo se almacenan los datos de las sesiones de usuario?
 
@@ -264,4 +262,3 @@ namespace MyCompany.MyApp
  
 
  
-

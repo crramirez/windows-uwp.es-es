@@ -1,25 +1,22 @@
 ---
-author: awkoren
+author: normesta
 Description: "Muestra cómo convertir manualmente una aplicación de escritorio de Windows (por ejemplo, Win32, WPF y Windows Forms) en una aplicación para la Plataforma universal de Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
-title: "Convertir manualmente una aplicación de escritorio de Windows en una aplicación para la Plataforma universal de Windows (UWP)"
-ms.author: alkoren
-ms.date: 02/08/2017
+title: "Puente de dispositivo de escritorio a UWP, conversión manual"
+ms.author: normesta
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 345296a3fa9faeb8daa8e03fbb633863380d2424
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 8d09a0349620e071f5c4d680df18f716e3b10a8e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="desktop-to-uwp-bridge-manual-conversion"></a>Puente de dispositivo de escritorio a UWP: conversión manual
 
-# <a name="manually-convert-your-app-to-uwp-using-the-desktop-bridge"></a>Convertir manualmente la aplicación a UWP mediante el Puente de dispositivo de escritorio
-
-El uso de [Desktop App Converter (DAC)](desktop-to-uwp-run-desktop-app-converter.md) es práctico y automático, y resulta útil si existe alguna duda sobre lo que hace el instalador. No obstante, si la aplicación se instala mediante xcopy, o si estás familiarizado con los cambios que realiza el instalador de la aplicación en el sistema, tal vez desees crear un paquete de la aplicación y un manifiesto manualmente. Este artículo contiene los pasos para las tareas iniciales. También explica cómo agregar activos sin placa a tu aplicación, algo que no realiza el CAD. 
+El uso de [Desktop App Converter (DAC)](desktop-to-uwp-run-desktop-app-converter.md) es práctico y automático, y resulta útil si existe alguna duda sobre lo que hace el instalador. No obstante, si la aplicación se instala mediante xcopy, o si estás familiarizado con los cambios que realiza el instalador de la aplicación en el sistema, tal vez desees crear un paquete de la aplicación y un manifiesto manualmente. Este artículo contiene los pasos para las tareas iniciales. También explica cómo agregar activos sin placa a tu aplicación, algo que no realiza el CAD.
 
 Esta es la manera de empezar con la conversión manual. Como alternativa, si tienes una aplicación .NET y estás usando Visual Studio, consulta el artículo [Desktop Bridge Packaging Guide for .NET Desktop apps with Visual Studio (Guía de empaquetado del Puente de dispositivo de escritorio para aplicaciones de escritorio de .NET con Visual Studio)](desktop-to-uwp-packaging-dot-net.md).  
 
@@ -69,11 +66,11 @@ El archivo _appxmanifest.xml_ debe tener el siguiente contenido (como mínimo). 
 
 ## <a name="run-the-makeappx-tool"></a>Ejecutar la herramienta MakeAppX
 
-Usa el [App packager (MakeAppx.exe) [Empaquetador de aplicaciones (MakeAppx.exe)]](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx) para generar un AppX para el proyecto. MakeAppx.exe se incluye con el SDK de Windows 10. 
+Usa el [App packager (MakeAppx.exe) [Empaquetador de aplicaciones (MakeAppx.exe)]](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx) para generar un paquete de la aplicación de Windows para el proyecto. MakeAppx.exe se incluye con el SDK de Windows 10.
 
-Para ejecutar MakeAppx, primero asegúrate de haber creado un archivo de manifiesto como se ha descrito anteriormente. 
+Para ejecutar MakeAppx, primero asegúrate de haber creado un archivo de manifiesto como se ha descrito anteriormente.
 
-A continuación, crea un archivo de asignación. El archivo debe comenzar por **[Files]** y, después, mostrar cada uno de los archivos de origen en el disco seguido de su ruta de acceso de destino en el paquete. A continuación te mostramos un ejemplo: 
+A continuación, crea un archivo de asignación. El archivo debe comenzar por **[Files]** y, después, mostrar cada uno de los archivos de origen en el disco seguido de su ruta de acceso de destino en el paquete. A continuación te mostramos un ejemplo:
 
 ```
 [Files]
@@ -83,7 +80,7 @@ A continuación, crea un archivo de asignación. El archivo debe comenzar por **
 "MyCustomManifest.xml"       "AppxManifest.xml"
 ```
 
-Finalmente, ejecuta el siguiente comando: 
+Finalmente, ejecuta el siguiente comando:
 
 ```cmd
 MakeAppx.exe pack /f mapping_filepath /p filepath.appx
@@ -91,16 +88,16 @@ MakeAppx.exe pack /f mapping_filepath /p filepath.appx
 
 ## <a name="sign-your-appx-package"></a>Firma el paquete AppX
 
-El cmdlet Add-AppxPackage requiere que el paquete de la aplicación (.appx) que se implemente esté firmado. Usa [SignTool.exe](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx), que se incluye en el SDK de Microsoft Windows 10, para firmar el paquete .appx.
+El cmdlet Add-AppxPackage requiere que el paquete de la aplicación (.appx) que se implemente esté firmado. Usa [SignTool.exe](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx), que se incluye en el SDK de Microsoft Windows 10, para firmar el paquete de la aplicación de Windows.
 
-Ejemplo de uso: 
+Ejemplo de uso:
 
 ```cmd
 C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -sv <my.pvk> <my.cer>
 C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
 C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 ```
-Cuando ejecutes MakeCert.exe y se te pida que escribas una contraseña, selecciona **ninguna**. Para obtener más información sobre los certificados y las firmas, consulta: 
+Cuando ejecutes MakeCert.exe y se te pida que escribas una contraseña, selecciona **ninguna**. Para obtener más información sobre los certificados y las firmas, consulta:
 
 - [Cómo crear certificados temporales para su uso durante el desarrollo](https://msdn.microsoft.com/library/ms733813.aspx)
 - [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
@@ -109,16 +106,16 @@ Cuando ejecutes MakeCert.exe y se te pida que escribas una contraseña, seleccio
 <span id="unplated-assets" />
 ## <a name="add-unplated-assets"></a>Agregar los activos sin placa
 
-Aquí te mostramos cómo configurar opcionalmente los activos de 44 x 44 para la aplicación que se muestran en la barra de tareas. 
+Aquí te mostramos cómo configurar opcionalmente los activos de 44 x 44 para la aplicación que se muestran en la barra de tareas.
 
 1. Obtén las imágenes de 44 x 44 correctas y cópialas en la carpeta que contiene las imágenes (es decir, los activos).
 
-2. Para cada imagen de 44 x 44, crea una copia en la misma carpeta y anexa *.targetsize-44_altform-unplated* al nombre del archivo. Debe tener 2 copias de cada icono, cada una llamada de forma específica. Por ejemplo, después de completar el proceso, la carpeta de activos podría contener *MYAPP_44x44.png* y *MYAPP_44x44.targetsize-44_altform-unplated.png* (nota: el primero es el icono al que se hace referencia en el appxmanifest, en el atributo de VisualElements *Square44x44Logo*). 
+2. Para cada imagen de 44 x 44, crea una copia en la misma carpeta y anexa *.targetsize-44_altform-unplated* al nombre del archivo. Debe tener 2 copias de cada icono, cada una llamada de forma específica. Por ejemplo, después de completar el proceso, la carpeta de activos podría contener *MYAPP_44x44.png* y *MYAPP_44x44.targetsize-44_altform-unplated.png* (nota: el primero es el icono al que se hace referencia en el appxmanifest, en el atributo de VisualElements *Square44x44Logo*).
 
 3.    En el AppXManifest, establece el atributo BackgroundColor para cada icono que estás corrigiendo en transparent. Este atributo se puede encontrar en VisualElements para cada aplicación.
 
 4.    Abre CMD, cambia el directorio a la carpeta raíz del paquete y crea un archivo priconfig.xml ejecutando el comando ```makepri createconfig /cf priconfig.xml /dq en-US```.
 
-5.    Mediante CMD, quédate en la carpeta raíz del paquete y crea los archivos resources.pri mediante el comando ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml```. Por ejemplo, el comando de la aplicación podría tener el siguiente aspecto ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
+5.    Mediante CMD, quédate en la carpeta raíz del paquete y crea los archivos resources.pri mediante el comando ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml```. Por ejemplo, el comando de la aplicación podría tener el siguiente aspecto ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```.
 
-6.    Empaqueta tu AppX mediante las instrucciones del paso siguiente para ver los resultados.
+6.    Empaqueta tu paquete de la aplicación de Windows mediante las instrucciones del paso siguiente para ver los resultados.

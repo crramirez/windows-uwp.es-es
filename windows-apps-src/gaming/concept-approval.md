@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, aprobación del concepto"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 43c4448e7a581dae69f44c64fd2068e79cb6c7ed
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f05789d87f3260aa02d1e0dd33490b248efb42a7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="concept-approval"></a>Aprobación del concepto
 
 Cuando empieces a crear un juego que se ejecutará en Xbox, tendrás que enviar una propuesta relativa al juego a Microsoft para la *aprobación del concepto* antes de que puedas publicarlo. Este envío inicial de alto nivel beneficia tanto a Microsoft como a ti al identificar ya desde el principio del proceso cualquier dificultad o desventaja posibles en el plan general para el juego. Intenta asegurarte de que el contenido no es excesivamente vulgar, ofensivo o cuestionable y que encaja con la plataforma de destino. Una vez que envíes tu propuesta, Microsoft la revisará y te notificará el resultado.
@@ -26,6 +23,6 @@ Si vas a desarrollar un juego de Plataforma universal de Windows (UWP), solo nec
 
 Si eres un desarrollador de juegos independiente o un editor, puedes enviar tu concepto para que sea aprobado a través del programa ID@Xbox. Consigue más información sobre ID@Xbox y haz tu solicitud [aquí](http://www.xbox.com/Developers/id).
 
-Si ya eres un desarrollador de ID@Xbox, debes haber recibido un enlace al Formulario de información del juego (GIF), donde puedes presentar tu concepto de juego. Si tienes alguna pregunta, ponte en contacto con [id@xbox.com](mailto:id@xbox.com).
+Si ya eres desarrollador de ID@Xbox, habrás recibido un enlace al Formulario de información del juego (GIF), donde puedes presentar tu concepto de juego. Si tienes alguna pregunta, ponte en contacto con [id@xbox.com](mailto:id@xbox.com).
 
 Si tienes un contrato de licencia existente con Microsoft, ponte en contacto con el equipo de la cuenta de Microsoft para obtener información sobre el envío de tu concepto.

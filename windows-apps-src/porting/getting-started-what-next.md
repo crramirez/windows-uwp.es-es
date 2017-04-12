@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 2ca600085c14c43d9d9d37e80efbae30bae650ef
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-what-next"></a>Introducción: ¿y después?
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -33,7 +30,7 @@ Con esta información básica, ya puedes empezar a crear aplicaciones para la Pl
 
 Además, asegúrate de visitar nuestros [recursos de la comunidad](https://developer.microsoft.com/en-us/windows/support) para obtener información sobre cómo obtener ayuda y conectarte mediante foros de desarrolladores, blogs, encuentros y talleres para desarrolladores, y eventos y contactos locales de Microsoft.
 
-Creemos que Windows 10 te ofrecerá nuevas oportunidades de creación de aplicaciones. Esperamos ver pronto las excelentes aplicaciones que crearás.
+Creemos que Windows10 te ofrecerá nuevas oportunidades de creación de aplicaciones. Esperamos ver pronto las excelentes aplicaciones que crearás.
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -42,4 +39,3 @@ Creemos que Windows 10 te ofrecerá nuevas oportunidades de creación de aplica
 * [Controles de Windows para desarrolladores de iOS](https://msdn.microsoft.com/library/windows/apps/dn263255)
 * [Guía básica de Windows para desarrolladores de iOS](https://msdn.microsoft.com/library/windows/apps/dn263256)
 * [Blog sobre la compilación de aplicaciones para Windows](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)
-

@@ -9,11 +9,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ff4686aeefbce41330a0fb3bf112a30ffe2b504e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7fd316ba63d0b5e6a98e96841905b13d3680a39f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="bringing-custom-c-games-to-uwp-on-xbox"></a>Llevar los juegos C++ personalizados a UWP en Xbox
 
@@ -32,5 +30,4 @@ Para conocer cómo convertir la consola en un kit de desarrollo y cómo realizar
 ## <a name="see-also"></a>Consulta también
 - [Llevar los juegos existentes a Xbox](development-lanes-landing.md)
 - [UWP en Xbox One](index.md)
-
 

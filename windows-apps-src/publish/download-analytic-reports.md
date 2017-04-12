@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0480c3a35db6aaab1d8f7682dbb2ca5483bc8f5f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e8080eb249b684fd1d6427de0f53aa6e2dd1cda9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="download-analytics-reports"></a>Descargar informes de análisis
 
 
@@ -34,4 +31,3 @@ Puedes descargar archivos que contengan los datos de análisis para que puedas r
 
 ## <a name="related-topics"></a>Temas relacionados
 - [Análisis](analytics.md)
-

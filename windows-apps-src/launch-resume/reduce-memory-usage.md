@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ef4527f72898c8c5a6ad9c56d975966402894b2c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7c8b8eb3ae3c097a346144c57d7899cb5e9584f5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memoria cuando la aplicación pasa a segundo plano
 
 En este artículo se muestra cómo reducir la cantidad de memoria que usa la aplicación cuando pasa al estado de segundo plano para evitar su suspensión o, posiblemente, su finalización.
@@ -28,7 +25,7 @@ Cuando la aplicación pasa al estado de segundo plano, pueden cambiar las restri
 
 ### <a name="events-for-controlling-your-apps-memory-usage"></a>Eventos para controlar el uso de memoria de la aplicación
 
-El evento [MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx) se genera justo antes de que cambie el límite del total de memoria que puede usar la aplicación. Por ejemplo, si la aplicación pasa a segundo plano y en la consola Xbox el límite de memoria cambia de 1024 MB a 128 MB.  
+El evento [MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx) se genera justo antes de que cambie el límite del total de memoria que puede usar la aplicación. Por ejemplo, si la aplicación pasa a segundo plano y en la consola Xbox el límite de memoria cambia de 1024MB a 128MB.  
 Este es el evento más importante que se debe controlar para evitar que la plataforma suspenda o finalice la aplicación.
 
 El evento [MemoryManager.AppMemoryUsageIncreased](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusageincreased.aspx) se genera cuando el consumo de memoria de la aplicación ha aumentado a un valor superior en la enumeración [AppMemoryUsageLevel](https://msdn.microsoft.com/library/windows/apps/windows.system.appmemoryusagelevel.aspx). Por ejemplo, de **Low** a **Medium**. Si bien controlar este evento es opcional, se recomienda hacerlo porque la aplicación sigue siendo responsable de mantenerse por debajo del límite.
@@ -108,4 +105,3 @@ Cuando una aplicación pasa de segundo plano a primer plano, primero obtiene un 
 
 * [Muestra de reproducción de contenido multimedia en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=800141): enseña cómo liberar memoria cuando la aplicación pasa al estado de segundo plano.
 * [Herramientas de diagnóstico](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015/): usa las herramientas de diagnóstico para observar los eventos de recolección de elementos no utilizados y validar que la aplicación esté liberando memoria según lo previsto.
-

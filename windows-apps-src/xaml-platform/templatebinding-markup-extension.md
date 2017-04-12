@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7f279590cc1351efee2552e237ab095674768463
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ca551ff53a0a91b5bc60263b6e282b95c32bf976
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="templatebinding-markup-extension"></a>Extensión de marcado {TemplateBinding}
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vincula el valor de una propiedad en una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. **TemplateBinding** solo se puede usar dentro de una definición de [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) en XAML.
 
@@ -67,5 +64,4 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 * [Introducción a XAML](xaml-overview.md)
 * [Introducción a las propiedades de dependencia](dependency-properties-overview.md)
  
-
 

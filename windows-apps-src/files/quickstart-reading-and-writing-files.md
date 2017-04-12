@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ae2754f543a3bc799b3d5af4c5c3c46f654c1ed7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6b69a2e69948e1d774abe78ba0958aa48ba4d318
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-write-and-read-a-file"></a>Crear, escribir y leer archivos
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -34,7 +31,7 @@ Leer y escribir un archivo con un objeto [**StorageFile**](https://msdn.microsof
 
 ## <a name="prerequisites"></a>Requisitos previos
 
--   **Comprender la programación asincrónica de las aplicaciones para Plataforma universal de Windows (UWP)**
+-   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
 
     Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
@@ -263,4 +260,3 @@ Dim dataReader As New DataReader(inputStream)
  
 
  
-

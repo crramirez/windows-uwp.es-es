@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d80055e8c8ca1e8586cb8f2a54612206301282a1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 48ca3f21a114c54146065e6ba971ccb30bd33351
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-the-windows-store-app"></a>Iniciar la aplicación de la Tienda Windows
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede usar este esquema de URI para iniciar la aplicación de la Tienda Windows en páginas específicas en la tienda.
 
@@ -136,4 +133,3 @@ Inicia una búsqueda de la consulta especificada. Se permiten los espacios en la
  
 
  
-

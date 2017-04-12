@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 038903d6-efab-4da6-96b5-046c7431e6e7
 description: "Usa este método en la API de opiniones de la Tienda Windows para enviar respuestas a las opiniones sobre tu aplicación."
-title: "Envío de respuestas a las opiniones sobre la aplicación"
+title: Enviar respuestas a opiniones
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, servicios de la Tienda, API de opiniones de la Tienda Windows, adquisiciones de complementos
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1531059831b4c20d11661eb87fceda7b8dcb7f02
-ms.lasthandoff: 02/08/2017
-
+keywords: windows 10, Windows 10, uwp, UWP, Store services, servicios de la Tienda, Windows Store reviews API, API de opiniones de la Tienda Windows, add-on acquisitions, adquisiciones de complementos
+ms.openlocfilehash: d418e64bf1608591e877da8339d1dda308611285
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="submit-responses-to-app-reviews"></a>Envío de respuestas a las opiniones sobre la aplicación
+# <a name="submit-responses-to-reviews"></a>Enviar respuestas a opiniones
 
 
 Usa este método en la API de opiniones de la Tienda Windows para responder mediante programación a las opiniones sobre tu aplicación. Cuando se llama a este método, es necesario especificar los identificadores de las opiniones a las que quieres responder. Los identificadores de las opiniones están disponibles en los datos de respuesta del método de [obtención de las opiniones de la aplicación](get-app-reviews.md) en la API de análisis de la tienda Windows y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).
@@ -30,14 +27,14 @@ Cuando un cliente envía una opinión, puede elegir no recibir respuestas a dich
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](respond-to-reviews-using-windows-store-services.md#prerequisites) para la API de opiniones de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Tras obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 * Obtén los identificadores de las opiniones a las que quieres responder. Los identificadores de las opiniones están disponibles en los datos de respuesta del método de [obtención de las opiniones de la aplicación](get-app-reviews.md) en la API de análisis de la tienda Windows y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).
 
 ## <a name="request"></a>Solicitud
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/reviews/responses``` |
 
@@ -47,7 +44,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obligatorio. El token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -69,7 +66,7 @@ Cada objeto de la matriz *Responses* contiene los siguientes valores.
 
 | Valor        | Tipo   | Descripción           |  Obligatorio  |
 |---------------|--------|-----------------------------|-----|
-| ApplicationId | Cadena |  El id. de la Tienda de la aplicación que contiene la opinión a la que deseas responder. El id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un id. de la Tienda sería 9WZDNCRFJ3Q8.   |  Sí  |
+| ApplicationId | Cadena |  El id. de la Tienda de la aplicación que contiene la opinión a la que deseas responder. El id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8.   |  Sí  |
 | ReviewId | Cadena |  El id. de la opinión a la que deseas responder (es un GUID). Los identificadores de las opiniones están disponibles en los datos de respuesta del método de [obtención de las opiniones de la aplicación](get-app-reviews.md) en la API de análisis de la tienda Windows y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).   |  Sí  |
 | ResponseText | Cadena | La respuesta que quieres enviar. La respuesta debe seguir [estas directrices](../publish/respond-to-customer-reviews.md#guidelines-for-responses).   |  Sí  |
 | SupportEmail | Cadena | La dirección de correo electrónico del soporte técnico de la aplicación, que el cliente puede usar para ponerse en contacto contigo directamente. Debe ser una dirección de correo electrónico válida.     |  Sí  |
@@ -122,7 +119,7 @@ Cada objeto de la matriz *Result* contiene los siguientes valores.
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
-En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo para esta solicitud.
+En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo realizada para esta solicitud.
 
 ```json
 {
@@ -149,4 +146,3 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo pa
 * [Responder a las opiniones mediante servicios de la Tienda de Windows](respond-to-reviews-using-windows-store-services.md)
 * [Obtención de información acerca de las respuesta a las opiniones sobre la aplicación](get-response-info-for-app-reviews.md)
 * [Obtener las opiniones de la aplicación](get-app-reviews.md)
-

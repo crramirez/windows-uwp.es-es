@@ -9,18 +9,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d4cc4d526dfbfb2a120bc0a214b5b9287ec1acb3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 534c03287d39916d5fa357307b7479f895240b02
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumibles
 
-Las aplicaciones diseñadas para Windows 10, versión 1607 o posterior, pueden usar métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para administrar el suministro de complementos consumibles del usuario en las aplicaciones para UWP (los complementos se conocen también como productos desde la aplicación o IAP). Usar complementos consumibles para los elementos que se puedan comprar, usar y volver a comprar. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas.
+Las aplicaciones diseñadas para Windows 10, versión 1607 o posterior pueden usar métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para administrar el suministro de complementos consumibles del usuario en las aplicaciones para UWP (los complementos se conocen también como productos desde la aplicación o IAP). Usar complementos consumibles para los elementos que se puedan comprar, usar y volver a comprar. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas.
 
->**Nota**&nbsp;&nbsp;Este artículo es aplicable a las aplicaciones diseñadas para Windows 10, versión 1607 o posterior. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [Compras desde la aplicación y pruebas con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+> [!NOTE]
+> Este artículo es aplicable a las aplicaciones dirigidas a Windows 10, versión 1607 o posterior. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [Compras desde la aplicación y pruebas con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 ## <a name="overview-of-consumable-add-ons"></a>Introducción a los complementos consumibles
 
@@ -34,7 +32,8 @@ Las aplicaciones destinadas a Windows 10, versión 1607 o posterior pueden ofrec
 
   Por ejemplo, si el complemento representa una cantidad inicial de 100 monedas en un juego y el usuario consume 10 monedas, la aplicación notifica a la Tienda que se han completado 10 unidades del complemento, y la Tienda actualiza el saldo restante. Cuando el usuario ha consumido las 100 monedas, puede volver a comprar el complemento de 100 monedas.
 
-  >**Nota**&nbsp;&nbsp;Los consumibles administrados por la Tienda están disponibles a partir de Windows 10, versión 1607. La capacidad para crear un consumible administrado por la Tienda en el panel del Centro de desarrollo de Windows estará disponible próximamente.
+  > [!NOTE]
+  > Los consumibles administrados por la Tienda están disponibles a partir de Windows 10, versión 1607. La capacidad para crear un consumible administrado por la Tienda en el panel del Centro de desarrollo de Windows estará disponible próximamente.
 
 Para ofrecer un complemento consumible a un usuario, sigue este proceso general:
 
@@ -54,9 +53,10 @@ El código de estos ejemplos supone que:
 * El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
 * La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
 
-Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
->**Nota**&nbsp;&nbsp;Si tienes una aplicación de escritorio que usa el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), tienes que agregar código adicional que no se muestra en estos ejemplos para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
+> [!NOTE]
+> Si tienes una aplicación de escritorio que usa el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop), puede que tengas que agregar código adicional que no se muestra en estos ejemplos para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
 
 <span id="report_fulfilled" />
 ## <a name="report-a-consumable-add-on-as-fulfilled"></a>Notificar un complemento consumible como completado
@@ -90,4 +90,3 @@ En este ejemplo se muestra cómo usar el método [GetConsumableBalanceRemainingA
 * [Habilitar compras desde la aplicación para aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md)
 * [Muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-

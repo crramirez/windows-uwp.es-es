@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, seguimiento de la pila, stack trace, error"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8b10c7f9e2de962aca719055a26d8c3954ea052f
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: fb99c65e91e02e3e60b12258e30083183c213324
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>Obtener el seguimiento de la pila de un error en la aplicación
 
 Usa este método en la API de análisis de la Tienda Windows para obtener el seguimiento de la pila de un error en la aplicación. Este método solo puede descargar el seguimiento de la pila de un error en la aplicación que se haya producido en los últimos 30 días. Los seguimientos de la pila también están disponibles en la sección **Errores** del [informe de estado](../publish/health-report.md) en el panel del Centro de desarrollo de Windows.
@@ -28,7 +25,7 @@ Para poder usar este método, debes emplear antes el método para [obtener los d
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 * Obtén el identificador del archivo CAB asociado con el error para el que quieres recuperar el seguimiento de la pila. Para obtener este identificador, usa el método [obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md) para recuperar los detalles de un error específico de tu aplicación y usa el valor **cabId** en el cuerpo de la respuesta de ese método.
 
 ## <a name="request"></a>Solicitud
@@ -36,7 +33,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud                                                          |
+| Método | URI de solicitud                                                          |
 |--------|----------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/stacktrace``` |
 
@@ -46,7 +43,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -54,7 +51,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  |
 |---------------|--------|---------------|------|
-| applicationId | cadena | El id. de la Tienda de la aplicación para la que quieres recuperar el seguimiento de la pila. El id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un id. de la Tienda sería 9WZDNCRFJ3Q8. |  Sí  |
+| applicationId | cadena | El id. de la Tienda de la aplicación para la que quieres recuperar el seguimiento de la pila. El id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8. |  Sí  |
 | cabId | cadena | El identificador exclusivo del archivo CAB asociado con el error para el que quieres recuperar el seguimiento de la pila. Para obtener este identificador, usa el método [obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md) para recuperar los detalles de un error específico de tu aplicación y usa el valor **cabId** en el cuerpo de la respuesta de ese método. |  Sí  |
 
 <span/>
@@ -75,8 +72,8 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo    | Descripción                  |
 |------------|---------|--------------------------------|
-| Valor      | matriz   | Una matriz de objetos, todos los cuales contienen un marco de los datos de seguimiento de la pila. Para obtener más información sobre los datos de cada objeto, consulta la sección [valores del rastreo de la pila](#stack-trace-values) que encontrarás a continuación. |
-| @nextLink  | cadena  | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de errores de la solicitud. |
+| Valor      | matriz   | Una matriz de objetos, todos los cuales contienen un marco de los datos de seguimiento de la pila. Para más información sobre los datos de cada objeto, consulta la sección sobre los [valores del rastreo de la pila](#stack-trace-values) que encontrarás a continuación. |
+| @nextLink  | cadena  | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de errores de la solicitud. |
 | TotalCount | número | El número total de filas del resultado de datos de la consulta.          |
 
 <span/>
@@ -132,4 +129,3 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
 * [Obtener los datos del informe de errores](get-error-reporting-data.md)
 * [Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)
-

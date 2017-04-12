@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, promote, promoción, app, aplicación, campaign, campaña, report, informe, installs, instalaciones"
-translationtype: Human Translation
-ms.sourcegitcommit: b01924366a0bc2afabe2f381e72e45862f0dd682
-ms.openlocfilehash: af719bbb4cc9def4e9b202c8815320698c6148d0
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 25127b8f7214a712b10a1beda1e9b277370e6df2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="promote-your-app-report"></a>Informe Promocionar la aplicación
 
 El informe **Promocionar la aplicación** en el panel del Centro de desarrollo de Windows te permite ver el rendimiento de las campañas de anuncios de promoción de tu aplicación.
@@ -51,7 +48,7 @@ Una instalación se sigue en la Tienda (por teléfono, tableta, PC y otros dispo
 2.  El cliente ha iniciado sesión con una cuenta Microsoft.
 3.  El cliente cumple los requisitos [COPPA](http://go.microsoft.com/fwlink?LinkId=536558) (no se puede hacer un seguimiento de los clientes que no los cumplen).
 
-En consecuencia, es posible que el seguimiento de instalaciones de la aplicación *informe* de una cantidad inferior al número real de instalaciones generadas por la campaña **Promocionar la aplicación**. Ten en cuenta que el número total de descargas de una aplicación se puede ver en el informe **Adquisiciones** en el Centro de desarrollo.
+En consecuencia, es posible que el seguimiento de instalaciones de la aplicación *informe* de una cantidad inferior al número real de instalaciones generadas por la campaña **Promocionar tu aplicación**. Ten en cuenta que el número total de descargas de una aplicación se puede ver en el informe **Adquisiciones** en el Centro de desarrollo.
 
 ## <a name="account-billing-history"></a>Historial de facturación de la cuenta
 
@@ -63,11 +60,10 @@ Si prefieres descargar el historial de facturación de la cuenta como un documen
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear una campaña publicitaria para la aplicación](create-an-ad-campaign-for-your-app.md)
+* [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
 * [Administrar campañas publicitarias](managing-your-ad-campaign.md)
 * [Acerca de los anuncios internos](about-house-ads.md)
 * [Preguntas comunes](common-questions.md)
  
 
  
-

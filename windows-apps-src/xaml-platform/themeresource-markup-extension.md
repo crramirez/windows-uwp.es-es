@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9175c998aa0dffb861697c2206c4202193b9bd9f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3d770bba434a065e5589311e34000006051ab672
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="themeresource-markup-extension"></a>Extensión de marcado {ThemeResource}
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso, con lógica del sistema adicional que recupera diferentes recursos en función del tema activo en ese momento. De forma similar a la [extensión de marcado {StaticResource}](staticresource-markup-extension.md), los recursos se definen en un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) y el uso de **ThemeResource** hace referencia a la clave de ese recurso en el **ResourceDictionary**.
 
@@ -61,7 +58,7 @@ El conjunto de claves de cada diccionario de temas debe proporcionar el mismo co
 
 Por lo general, debes colocar estos recursos en diccionarios de temas y hacer referencia a ellos usando **ThemeResource** solo cuando esos valores puedan cambiar de un tema a otro o sean compatibles con valores que cambian. Esto es apropiado para los siguientes tipos de escenarios:
 
--   Pinceles, en especial colores de [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962). Suponen alrededor del 80 % de los usos de **ThemeResource** en las plantillas de control XAML predeterminadas (generic.xaml).
+-   Pinceles, en especial colores de [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962). Suponen alrededor del 80% de los usos de **ThemeResource** en las plantillas de control XAML predeterminadas (generic.xaml).
 -   Valores de píxeles para bordes, desplazamiento, márgenes, rellenos, etc.
 -   Propiedades de fuentes, como **FontFamily** o **FontSize**.
 -   Plantillas completas para un número limitado de controles a los que normalmente el sistema aplica el estilo y que se usan para presentaciones dinámicas, como [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/hh738501) y [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/br242919).
@@ -144,11 +141,11 @@ Aquí, el valor de [**Color**](https://msdn.microsoft.com/library/windows/apps/b
 
 ## <a name="windows-8-behavior"></a>Comportamiento de Windows 8
 
-Windows 8 no era compatible con la extensión de marcado **ThemeResource**. Esta está disponible a partir de Windows 8.1. Además, Windows 8 no admitía la conmutación dinámica de recursos relacionados por tema para una aplicación de Windows Runtime. La aplicación tenía que reiniciarse para elegir el cambio de tema de las plantillas y estilos de XAML. Esto no es una buena experiencia de usuario, por lo que se recomienda volver a compilar las aplicaciones para Windows 8.1, para que puedan usar estilos con usos de **ThemeResource** y puedan conmutar dinámicamente temas cuando lo haga el usuario. Las aplicaciones compiladas para Windows 8 que se ejecuten en Windows 8.1 siguen usando el comportamiento de Windows 8.
+Windows8 no era compatible con la extensión de marcado **ThemeResource**. Esta está disponible a partir de Windows8.1. Además, Windows8 no admitía la conmutación dinámica de recursos relacionados por tema para una aplicación de Windows Runtime. La aplicación tenía que reiniciarse para elegir el cambio de tema de las plantillas y estilos de XAML. Esto no es una buena experiencia de usuario, por lo que se recomienda volver a compilar las aplicaciones para Windows8.1, para que puedan usar estilos con usos de **ThemeResource** y puedan conmutar dinámicamente temas cuando lo haga el usuario. Las aplicaciones compiladas para Windows 8 que se ejecuten en Windows 8.1 siguen usando el comportamiento de Windows 8.
 
 ## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>Compatibilidad con herramientas en tiempo de diseño para la extensión de marcado **{ThemeResource}**
 
-Microsoft Visual Studio 2013 puede incluir posibles valores de clave en los menús desplegables de Microsoft IntelliSense cuando uses la extensión de marcado **{ThemeResource}** en una página XAML. Por ejemplo, cuando escribes "{ThemeResource", aparece cualquiera de las claves de recurso de los [recursos de tema XAML](https://msdn.microsoft.com/library/windows/apps/mt187274).
+Microsoft Visual Studio2013 puede incluir posibles valores de clave en los menús desplegables de Microsoft IntelliSense cuando uses la extensión de marcado **{ThemeResource}** en una página XAML. Por ejemplo, cuando escribes "{ThemeResource", aparece cualquiera de las claves de recurso de los [recursos de tema XAML](https://msdn.microsoft.com/library/windows/apps/mt187274).
 
 Cuando exista una clave de recurso como parte del uso de cualquier **{ThemeResource}**, la característica **Ir a definición** (F12) puede resolver ese recurso y mostrar el generic.xaml para tiempo de diseño, donde se define el recurso de tema. Puesto que los recursos de tema se definen más de una vez (por tema) **Ir a definición** te lleva a la primera definición que se encuentre en el archivo, que es la definición de **Default**. Si quieres tener las otras definiciones, puedes buscar el nombre de clave dentro del archivo y buscar las definiciones de los otros temas.
 
@@ -157,7 +154,6 @@ Cuando exista una clave de recurso como parte del uso de cualquier **{ThemeResou
 * [Referencias a ResourceDictionary y a recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
 * [Recursos de temas en XAML](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
-* [atributo x:Key](x-key-attribute.md)
+* [Atributo x:Key](x-key-attribute.md)
  
-
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3b85abb11049a1e52e9d6a9cc61aebab407207a4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5187a644e4a952a8d3b199c68c2266e6e7c634f1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="affiliates-performance-report"></a>Informe Rendimiento de filial
 
 Si has decidido [participar en el programa de anuncios de filiales de Microsoft](about-affiliate-ads.md), puedes ver los datos de rendimiento de los anuncios de filiales que aparecen en tu aplicación en los siguientes informes en el panel del Centro de desarrollo de Windows:
@@ -54,4 +51,3 @@ La sección **Rendimiento de filiales** en la página **Información general del
  
 
  
-

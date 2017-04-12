@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, sombreadores, primitivos, DirectX
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 62f4b9b641a3c365659e44893a8a7801f2c1f6c0
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-shaders-and-drawing-primitives"></a>Crear sombreadores y dibujar primitivos
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla.
 
@@ -34,7 +31,7 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Suponemos además que has consultado [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md).
 
-**Tiempo para completarlo:** 20 minutos.
+**Tiempo para completarlo:** 20minutos.
 
 ## <a name="instructions"></a>Instrucciones
 
@@ -296,7 +293,6 @@ A continuación, crearemos un cubo 3D en órbita y le aplicaremos efectos de ilu
  
 
  
-
 
 
 

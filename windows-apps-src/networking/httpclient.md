@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fad4c4c215c209971d2a76b4c1ac6f160f8ebced
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c29d1d0a9595958aaa2872488f131b59ee278161
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="httpclient"></a>HttpClient
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -116,10 +113,9 @@ En C++, no hay ningún método para probar y analizar una cadena en un URI. Si u
 
 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) no tiene una función conveniente. Por este motivo, una aplicación que use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y otras clases de este espacio de nombres debe usar el valor **HRESULT**.
 
-En las aplicaciones que usan .NET Framework 4.5 en C#, VB.NET, [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) devuelve el mensaje que describe la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
+En las aplicaciones que usan .NET Framework4.5 en C#, VB.NET, [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) devuelve el mensaje que describe la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
 En las aplicaciones que usan C++ administrado, [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
 Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E\_INVALIDARG**. Para algunas llamadas a métodos no válidas, el valor de **HRESULT** devuelto es **E\_ILLEGAL\_METHOD\_CALL**.
-
 

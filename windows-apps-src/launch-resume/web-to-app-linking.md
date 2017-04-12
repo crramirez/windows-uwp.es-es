@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 225f0d2bd5d8a2434c3e548064960f44f1df530e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: df5d232cc997c0c888b3a2f092efeb937e991a85
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="support-web-to-app-linking-with-app-uri-handlers"></a>Admitir la vinculación de un sitio web con la aplicación mediante los controladores de URI de la aplicación
 
 Aprende a controlar la relación del usuario con tu aplicación incorporando la compatibilidad de la vinculación de web a aplicación. La vinculación de web a aplicación te permite asociar una aplicación con un sitio web. Cuando los usuarios abran un vínculo http o https a tu sitio web, en lugar de abrirse el navegador, se iniciará la aplicación. Si la aplicación no está instalada, se proporcionará un vínculo para abrir el sitio web en el navegador. Los usuarios pueden confiar en esta experiencia porque solo los propietarios con contenido comprobado pueden registrarse para obtener un vínculo.
@@ -199,4 +196,3 @@ Si quieres seguir la lógica de activación de protocolo, establece un punto de 
 [Controlar la activación de URI](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 
 [Association Launching sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra cómo usar la API LaunchUriAsync().
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, anuncios, ads, publicidad, advertising, AdControl, solución de problemas, troubleshooting, HTML, JavaScript"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fe06749583dc42ec84dc4acd876ea96c70c916db
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 068ba245475aa03b0772e8f38017c93783fdb6ce
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="html-and-javascript-troubleshooting-guide"></a>Guía de solución de problemas de HTML y JavaScript
 
 En este tema encontrarás soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de JavaScript y HTML.
@@ -61,7 +58,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     </head>
     ```
 
-3.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el Id. de la aplicación y el Id. de unidad de anuncio que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md) (Configurar unidades de anuncios en tu aplicación).
+3.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md) (Configurar unidades de anuncios en tu aplicación).
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -234,7 +231,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 <span id="js-adcontrolnotappearing"/>
 ### <a name="adcontrol-not-appearing"></a>AdControl no aparece
 
-1.  Asegúrate de que la funcionalidad **Internet (Client)** está seleccionada en Package.appxmanifest.
+1.  Asegúrate de que la funcionalidad **Internet (Client)** esté seleccionada en Package.appxmanifest.
 
 2.  Asegúrate de crear la instancia de **AdControl**. Si no se creó la instancia de **AdControl**, no estará disponible.
 
@@ -282,7 +279,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     });  
     ```
 
-4.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el Id. de la aplicación y el Id. de unidad de anuncio que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md) (Configurar unidades de anuncios en tu aplicación).
+4.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md) (Configurar unidades de anuncios en tu aplicación).
 
     > [!div class="tabbedCodeSnippets"]
     ``` javascript
@@ -387,4 +384,3 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
  
 
  
-

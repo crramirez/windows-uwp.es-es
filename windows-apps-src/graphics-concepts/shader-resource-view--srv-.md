@@ -2,21 +2,17 @@
 title: Vista de recursos del sombreador (SRV) y vista de acceso desordenado (UAV)
 description: Las vistas de recurso de sombreador normalmente encapsulan texturas en un formato que permite a los sombreadores acceder a ellas. Una vista de acceso desordenada proporciona una funcionalidad similar, pero permite la lectura de la textura y la escritura en ella (o en cualquier otro recurso) en cualquier orden.
 ms.assetid: 4505BCD2-0EDA-40F2-887C-EC081FE32E8F
-keywords:
-- Vista de recursos de sombreador (SRV)
+keywords: Vista de recursos de sombreador (SRV)
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4ce8e7a5d17656545cf047c2ab21cda5c5fbb4f0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2413c37dc7a19f110597a4e5664c6d4ac7b5508c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="shader-resource-view-srv-and-unordered-access-view-uav"></a>Vista de recursos del sombreador (SRV) y vista de acceso desordenado (UAV)
 
 
@@ -34,7 +30,6 @@ Las vistas de acceso desordenado son un poco más costosas en términos de rendi
  
 
  
-
 
 
 

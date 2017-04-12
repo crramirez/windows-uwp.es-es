@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y buscar sugerencias para elegir un buen nombre de aplicación."
+Description: "El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y busca sugerencias para elegir un buen nombre de aplicación."
 title: "Crear la aplicación reservando un nombre"
 keywords: Windows 10, UWP
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
@@ -9,17 +9,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c36f8296f65efcc107ade545c20ab7e3db32c824
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 957caca6fb71cb8cfe5a84e258c0679b0780e6a3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-your-app-by-reserving-a-name"></a>Crear la aplicación reservando un nombre
 
 
-El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y busca sugerencias para [elegir un buen nombre de aplicación](#choosing-your-app-s-name). Cada nombre reservado debe ser único en toda la Tienda.
+El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y busca sugerencias para [elegir un buen nombre de aplicación](#choosing-your-apps-name). Cada nombre reservado debe ser único en toda la Tienda.
 
 > **Nota**  Si tienes una aplicación de Windows Phone que creaste anteriormente, puedes administrarla y enviarla aunque no reservaras su nombre. Sin embargo, para cargar paquetes .appx para la aplicación, o para [ver los detalles de identidad de la aplicación](view-app-identity-details.md) específicos para crear paquetes .appx, tendrás que reservar un nombre único siguiendo los pasos que se indican a continuación. Esto también evita que cualquier otra persona reserve ese nombre.
 
@@ -64,7 +61,6 @@ Para obtener más información, consulta [Administrar nombres de aplicación](ma
  
 
  
-
 
 
 

@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 description: "Usa este método en la API de envío de la Tienda Windows para actualizar el porcentaje de lanzamiento de paquete para un envío de paquete piloto."
-title: "Actualizar el porcentaje de lanzamiento de paquete de un envío de paquete piloto mediante la API de envío de la Tienda Windows"
+title: "Actualizar el porcentaje de lanzamiento de un envío piloto"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, API de envío de la Tienda Windows, implementación del paquete, envío de paquete piloto, actualización, porcentaje"
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, package rollout, lanzamiento de paquete, flight submission, envío piloto, update, actualizar, percentage, porcentaje"
 ms.assetid: ee9aa223-e945-4c11-b430-1f4b1e559743
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: bb09e5ff3c60a56a69c5a52d47e3c791b206a84c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 55b9a67be032e3c2d3497bba0061afcb8218ce33
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="update-the-package-rollout-percentage-for-a-package-flight-submission-using-the-windows-store-submission-api"></a>Actualizar el porcentaje de lanzamiento de paquete de un envío de paquete piloto mediante la API de envío de la Tienda Windows
+# <a name="update-the-rollout-percentage-for-a-flight-submission"></a>Actualizar el porcentaje de lanzamiento de un envío piloto
 
 
 Usa este método en la API de envío de la Tienda Windows para [actualizar el porcentaje de lanzamiento](../publish/gradual-package-rollout.md#setting-the-rollout-percentage) de un envío de paquete piloto. Para obtener más información sobre el proceso de creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows, consulta [Administrar envíos de paquetes piloto](manage-flight-submissions.md).
@@ -30,13 +27,13 @@ Para usar este método, primero debes hacer lo siguiente:
 * Crea un envío para una aplicación de tu cuenta del Centro de desarrollo. Puedes hacer esto en el panel del Centro de desarrollo o con el método de [creación de un envío de aplicación](create-an-app-submission.md).
 * Habilita un lanzamiento de paquete gradual para el envío. Puedes hacerlo en el [panel del Centro de desarrollo](../publish/gradual-package-rollout.md) o mediante el [uso de la API de envío de la Tienda Windows](manage-flight-submissions.md#manage-gradual-package-rollout).
 
->**Nota**&nbsp;&nbsp;Este método solo puede usarse en cuentas del Centro de desarrollo de Windows que estén autorizadas para usar la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
+>**Nota**&nbsp;&nbsp;Este método solo puede usarse en cuentas del Centro de desarrollo de Windows que estén autorizadas para usar la API de envío de la TiendaWindows. No todas las cuentas tienen este permiso habilitado.
 
 ## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del encabezado y de los parámetros de la solicitud.
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | POST   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage``` |
 
@@ -47,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -55,8 +52,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El id. de la Tienda de la aplicación que contiene el envío del paquete piloto con el porcentaje de lanzamiento de paquete que quieres actualizar. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Obligatorio. El id. del paquete piloto que contiene el envío con el porcentaje de lanzamiento de paquete que quieres actualizar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto de una aplicación](get-flights-for-an-app.md).  |
+| applicationId | cadena | Obligatorio. El id. de la Tienda de la aplicación que contiene el envío del paquete piloto con el porcentaje de lanzamiento de paquete que quieres actualizar. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | cadena | Obligatorio. El id. del paquete piloto que contiene el envío con el porcentaje de lanzamiento de paquete que quieres actualizar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto de una aplicación](get-flights-for-an-app.md).  |
 | submissionId | cadena | Obligatorio. El identificador del envío con el porcentaje de lanzamiento de paquete que quieres actualizar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un envío de paquete piloto](create-a-flight-submission.md).  |
 | percentage  |  flotante  |  Obligatorio. El porcentaje de usuarios que recibirán el paquete de lanzamiento gradual.  |
 
@@ -82,7 +79,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 25,
+    "packageRolloutPercentage": 25.0,
     "packageRolloutStatus": "PackageRolloutInProgress",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -105,4 +102,3 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Lanzamiento gradual del paquete](../publish/gradual-package-rollout.md)
 * [Administrar envíos de paquete piloto mediante la API de envío de la Tienda Windows](manage-flight-submissions.md)
 * [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-

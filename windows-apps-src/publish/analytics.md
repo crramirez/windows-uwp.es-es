@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, análisis, informes, panel, aplicaciones"
-translationtype: Human Translation
-ms.sourcegitcommit: b01924366a0bc2afabe2f381e72e45862f0dd682
 ms.openlocfilehash: 13a37a4ae2cea67fdce843ed4e6189797d85b93e
-ms.lasthandoff: 02/08/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="analytics"></a>Análisis
 
 Puedes ver análisis detallados de las aplicaciones en el panel del Centro de desarrollo de Windows. Los gráficos y las estadísticas te permiten saber cómo están funcionando las aplicaciones, desde a cuántos clientes has llegado a cómo usan estos la aplicación y qué opinan de ella. También encontrarás información sobre el estado de la aplicación, el uso de los anuncios y mucho más. Visualiza los informes en el panel o [descarga los informes que necesites](download-analytic-reports.md) para analizar los datos sin conexión. También te ofrecemos varias formas de [acceder a los datos de análisis sin usar el panel](#no-dashboard).
@@ -36,12 +33,12 @@ En esta sección encontrarás detalles sobre la información presentada en cada 
 -   [Informe Instalaciones](installs-report.md)
 -   [Informe Uso](usage-report.md)
 -   [Informe Mantenimiento](health-report.md)
--   [Informe Valoración](ratings-report.md)
--   [Informe Críticas](reviews-report.md)
+-   [Informe de clasificaciones](ratings-report.md)
+-   [Informe de críticas](reviews-report.md)
 -   [Informe Comentarios](feedback-report.md)
 -   [Informe Canales y conversiones](channels-and-conversions-report.md)
 -   [Informe Mediación de anuncios](ad-mediation-report.md)
--   [Informe Rendimiento de publicidad](advertising-performance-report.md)
+-   [Informe de rendimiento de publicidad](advertising-performance-report.md)
 -   [Informe Rendimiento de filial](affiliates-performance-report.md)
 -   [Informe Promocionar la aplicación](promote-your-app-report.md)
 
@@ -76,12 +73,11 @@ Usa los siguientes recursos para empezar a usar Power BI para acceder a los dato
 * [Aprender a usar el paquete de contenido del Centro de desarrollo de Windows para Power BI para conectar con los datos de análisis](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Para conectar con el paquete de contenido del Centro de desarrollo de Windows para Power BI, te recomendamos que especifiques las credenciales de un directorio de Azure AD asociado con tu cuenta del Centro de desarrollo. Si usas las credenciales de tu cuenta de Microsoft, los datos de análisis de Power BI no se actualizarán automáticamente y tendrás que conectarte a Power BI para actualizarlos. Si la organización ya usa Office 365 u otros servicios empresariales de Microsoft, ya tienes Azure AD. De lo contrario, puedes [obtenerlo de forma gratuita](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obtener más información acerca de cómo asociar tu cuenta del Centro de desarrollo con Azure AD, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
+> Para conectar con el paquete de contenido del Centro de desarrollo de Windows para Power BI, te recomendamos que especifiques las credenciales de un directorio de Azure AD asociado con tu cuenta del Centro de desarrollo. Si usas las credenciales de tu cuenta de Microsoft, los datos de análisis de Power BI no se actualizarán automáticamente y tendrás que conectarte a Power BI para actualizarlos. Si la organización ya usa Office365 u otros servicios empresariales de Microsoft, ya tienes AzureAD. De lo contrario, puedes [obtenerlo de forma gratuita](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obtener más información acerca de cómo asociar tu cuenta del Centro de desarrollo con Azure AD, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
 
 ### <a name="dev-center-app"></a>Aplicación del Centro de desarrollo
 
-Instala la aplicación del [Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para ver rápidamente los detalles sobre el estado y el rendimiento de las aplicaciones en cualquier dispositivo Windows 10.
+Instala la aplicación del [Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para ver rápidamente los detalles sobre el estado y el rendimiento de las aplicaciones en cualquier dispositivo Windows10.
 
 ## <a name="related-topics"></a>Temas relacionados
 - [Publicar aplicaciones de Windows](index.md)
-

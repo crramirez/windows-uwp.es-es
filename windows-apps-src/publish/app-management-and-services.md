@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Administra y visualiza los detalles relacionados con cada una de tus aplicaciones en el panel del Centro de desarrollo de Windows y configura servicios, como notificaciones de inserción, pruebas A/B y mapas."
+Description: "Administra y visualiza los detalles relacionados con cada una de tus aplicaciones en el panel del Centro de desarrollo de Windows y configurar servicios como notificaciones de inserción, pruebas A/B y mapas."
 title: "Administración y servicios de aplicaciones"
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 ms.author: wdg-dev-content
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1aaab8d122968265ff17b352a53b69081e84f01e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 48e48d1a350b01777c1d7e5ed4ab1f82b1d66d26
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-management-and-services"></a>Administración y servicios de aplicaciones
 
-Puedes administrar y ver los detalles relacionados con cada una de las aplicaciones en el panel del Centro de desarrollo de Windows y configurar servicios, como notificaciones de inserción, pruebas A/B y mapas.
+Puedes administrar y ver los detalles relacionados con cada una de las aplicaciones en el panel del Centro de desarrollo de Windows y configurar servicios como notificaciones de inserción, pruebas A/B y mapas.
 
 Al trabajar con una aplicación en el panel, verás secciones en el menú de navegación izquierdo para administrar **servicios** y **aplicaciones**. Puedes expandir estas secciones para tener acceso a la funcionalidad que se describe a continuación.
 
@@ -54,7 +51,7 @@ Para más información, consulta [Usar servicios de mapa](use-map-services.md).
 
 ### <a name="product-collections-and-purchases"></a>Colecciones y compras de producto
 
-Para usar la API de colección de la Tienda Windows y la API de compra de la Tienda Windows para acceder a la información sobre la propiedad de las aplicaciones y los complementos, tienes que especificar aquí los identificadores de cliente de Azure AD asociados. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
+Para usar la API de colección de la TiendaWindows y la API de compra de la TiendaWindows para acceder a la información sobre la propiedad de las aplicaciones y los complementos, tienes que especificar aquí los identificadores de cliente de Azure AD asociados. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
 
 Para más información, consulta [Ver y conceder productos desde un servicio](https://msdn.microsoft.com/library/windows/apps/mt609002).
 
@@ -87,4 +84,3 @@ Los desarrolladores con permisos de OEM también pueden [generar paquetes de pre
  
 
  
-

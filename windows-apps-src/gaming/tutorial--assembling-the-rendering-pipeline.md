@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, representar
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7b97a70094c953e9614a84979c9f98fc91a82451
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="assemble-the-rendering-framework"></a>Ensamblar el marco de representación
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hasta ahora, has visto cómo estructurar un juego de la Plataforma universal de Windows (UWP) para que funcione con Windows Runtime, y cómo definir una máquina de estados para gestionar el flujo del juego. Ahora vamos a ver cómo el juego de muestra usa esa estructura y ese estado para mostrar sus gráficos. Aquí echaremos un vistazo a la implementación de un marco de representación, empezando por la inicialización del dispositivo gráfico hasta la presentación de los objetos gráficos para mostrar.
 
@@ -45,13 +42,13 @@ Esta sección cubre tres archivos clave de la muestra del juego ([proporcionada 
 -   **GameRenderer.h/.cpp**
 -   **PrimObject.h/.cpp**
 
-Una vez más, suponemos que comprendes los conceptos de programación 3D básicos como mallas, vértices y texturas. Para obtener más información sobre la programación en Direct3D 11 en general, consulta la [guía de programación de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
+Una vez más, suponemos que comprendes los conceptos de programación 3D básicos como mallas, vértices y texturas. Para obtener más información sobre la programación en Direct3D11 en general, consulta la [guía de programación de Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
 Una vez dicho esto, echemos un vistazo al trabajo que debemos llevar a cabo para que nuestro juego aparezca en la pantalla.
 
 ## <a name="an-overview-of-the-windows-runtime-and-directx"></a>Una introducción a Windows Runtime y DirectX
 
 
-DirectX es una parte fundamental de la experiencia con Windows Runtime y Windows 10. Todos los efectos visuales de Windows 10 están creados sobre DirectX y tú tienes la misma línea directa a la misma interfaz gráfica de bajo nivel, [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534), que proporciona una capa de abstracción para el hardware gráfico y sus controladores. Todas las API de Direct3D 11 están disponibles para que hables directamente con DXGI. El resultado son gráficos rápidos de alto rendimiento en tus juegos, que te proporcionan acceso a todas las últimas características del hardware gráfico.
+DirectX es una parte fundamental de la experiencia con Windows Runtime y Windows 10. Todos los efectos visuales de Windows10 están creados sobre DirectX y tú tienes la misma línea directa a la misma interfaz gráfica de bajo nivel, [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534), que proporciona una capa de abstracción para el hardware gráfico y sus controladores. Todas las API de Direct3D11 están disponibles para que hables directamente con DXGI. El resultado son gráficos rápidos de alto rendimiento en tus juegos, que te proporcionan acceso a todas las últimas características del hardware gráfico.
 
 Para agregar compatibilidad con DirectX a una aplicación para UWP, crea un proveedor de vista para recursos DirectX implementando las interfaces [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482) y [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478). Estas interfaces proporcionan un modelo predeterminado para tu tipo de proveedor de vista y la implementación de tu proveedor de vista de DirectX, respectivamente. El singleton de UWP, representado por el objeto [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016), ejecuta esta implementación.
 
@@ -189,7 +186,7 @@ Cuando la inicialización de DirectXBase finalice, se inicializa el objeto **Gam
 ## <a name="creating-and-loading-directx-graphics-resources"></a>Creación y carga de recursos gráficos de DirectX
 
 
-El primer punto de la agenda en cualquier juego es establecer una conexión con la interfaz gráfica, crear los recursos que necesitamos para dibujar los gráficos y, a continuación, configurar un destino de representación en el que podamos dibujar esos gráficos. En la muestra de juego (y en la plantilla **DirectX 11 App (Universal Windows)** de Microsoft Visual Studio), este proceso se implementa con tres métodos:
+El primer punto de la agenda en cualquier juego es establecer una conexión con la interfaz gráfica, crear los recursos que necesitamos para dibujar los gráficos y, a continuación, configurar un destino de representación en el que podamos dibujar esos gráficos. En la muestra de juego (y en la plantilla **DirectX11 App (Universal Windows)** de Microsoft Visual Studio), este proceso se implementa con tres métodos:
 
 -   **CreateDeviceIndependentResources**
 -   **CreateDeviceResources**
@@ -669,7 +666,7 @@ void GameRenderer::FinalizeCreateGameDeviceResources()
 }
 ```
 
-**CreateDeviceResourcesAsync** es un método que ejecuta un conjunto distinto de tareas asincrónicas para así poder cargar los recursos del juego. Puesto que se espera que se ejecute en un subproceso independiente, solo tiene acceso a los métodos de dispositivo de Direct3D 11 (definidos en [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)), y no a los métodos de contexto de dispositivo (definidos en [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)), por lo que tiene la opción de no realizar ninguna representación. El método **FinalizeCreateGameDeviceResources** se ejecuta en el subproceso principal y carece de acceso a los métodos de contexto dispositivo de Direct3D 11.
+**CreateDeviceResourcesAsync** es un método que ejecuta un conjunto distinto de tareas asincrónicas para así poder cargar los recursos del juego. Puesto que se espera que se ejecute en un subproceso independiente, solo tiene acceso a los métodos de dispositivo de Direct3D11 (definidos en [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)), y no a los métodos de contexto de dispositivo (definidos en [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)), por lo que tiene la opción de no realizar ninguna representación. El método **FinalizeCreateGameDeviceResources** se ejecuta en el subproceso principal y carece de acceso a los métodos de contexto dispositivo de Direct3D11.
 
 La secuencia de eventos para cargar los recursos de los dispositivos del juego se produce del siguiente modo.
 
@@ -6314,7 +6311,7 @@ void Material::RenderSetup(
 ```
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -6326,7 +6323,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
  
 
  
-
 
 
 

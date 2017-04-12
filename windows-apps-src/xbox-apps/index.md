@@ -9,18 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 36d19f660bc3c03377f864b1d659a19396917130
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 82c8fd0945ed49f8accf5e101acfbea151caa3a1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="uwp-on-xbox-one"></a>UWP en Xbox One
 
 Introducción a la creación de una aplicación para la Plataforma universal de Windows (UWP) en Xbox One.
 
-UWP en Xbox One admite el desarrollo de aplicaciones y juegos. No es necesario ser un desarrollador de [ID@Xbox](http://www.xbox.com/Developers/id) para experimentar, crear y probar juegos o aplicaciones en Xbox, pero debes inscribirte en [ID@Xbox](http://www.xbox.com/Developers/id) si quieres publicar y vender un juego en Xbox One o aprovechar las ventajas de Xbox Live en Windows 10. Para unirte a nuestra comunidad de desarrolladores independientes y entusiastas, regístrate en [ID@Xbox](http://www.xbox.com/Developers/id). 
+UWP en Xbox One admite el desarrollo de aplicaciones y juegos. No hace falta formar parte de un programa para desarrolladores para experimentar, crear y probar juegos o aplicaciones en Xbox. Cuando estés listo para publicar y vender juegos en Xbox One o aprovechar las ventajas de Xbox Live en Windows 10, tendrás que unirte al [Programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) o ser un desarrollador [ID@Xbox](http://www.xbox.com/Developers/id). Para más información, consulta [Introducción al programa para desarrolladores](https://developer.microsoft.com/games/xbox/docs/xboxlive/get-started/developer-program-overview.html).
 
 Esta sección incluye pasos de configuración, una guía por el proceso de autenticación, información sobre la instalación de las versiones de las herramientas de Visual Studio y Windows 10 necesarias y, finalmente, los pasos para configurar, compilar, ejecutar y depurar tu primera aplicación sencilla. 
 
@@ -44,7 +41,6 @@ Esta sección incluye pasos de configuración, una guía por el proceso de auten
 
 ## <a name="see-also"></a>Consulta también
 - [Introducción a las aplicaciones para UWP en Xbox One](http://go.microsoft.com/fwlink/p/?LinkId=780786) 
-- [Automatizar el inicio de aplicaciones de Windows 10 para UWP](automate-launching-uwp-apps.md)
+- [Automatizar el inicio de aplicaciones de Windows10 para UWP](automate-launching-uwp-apps.md)
 - [CPUSets para el desarrollo de juegos](cpusets-games.md)
   
-

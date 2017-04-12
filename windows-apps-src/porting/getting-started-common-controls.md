@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
-description: "Introducción a los controles habituales"
+description: Tareas iniciales con controles habituales
 title: "Introducción a los controles habituales"
 ms.author: markl
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 91ea875987d5e1659fff337f95f790ef59286d03
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4df9785b0d8ccea0561a780fa2b807201332cda8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-common-controls"></a>Introducción: controles habituales
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="common-controls-list"></a>Lista de controles habituales
 
@@ -66,4 +63,3 @@ Para ver aún más controles, consulta [Lista de controles](https://msdn.microso
 * [Build 2014: Información sobre los controles y la interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?LinkID=397897)
 * [Build 2014: Desarrollar aplicaciones con el marco de trabajo de la interfaz de usuario de XAML común](http://go.microsoft.com/fwlink/p/?LinkID=397898)
 * [Build 2014: Usar Visual Studio para crear aplicaciones XAML convergidas](http://go.microsoft.com/fwlink/p/?LinkID=397876)
-

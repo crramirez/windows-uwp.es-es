@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9a7c1c5e4352f80aee65cd828f8113ac0bd35d49
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: af862471fcac7ee7f0ab8ad61f57c485d995bae2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="sensors"></a>Sensores
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Los sensores permiten que las aplicaciones conozcan cuál es la relación entre un dispositivo y el entorno físico. Pueden indicar a la aplicación la dirección, la orientación y el movimiento del dispositivo. Pueden ayudarte a crear un juego, una aplicación de realidad aumentada o aplicación de utilidad de forma más útil e interactiva proporcionando una forma exclusiva de entrada, como el uso del movimiento del dispositivo para ordenar los caracteres en la pantalla o para simular que te encuentras en una cabina y el dispositivo es el volante.
@@ -132,5 +130,4 @@ Una aplicación de lector que cambia su pantalla sobre la base de si el disposit
 ## <a name="samples"></a>Muestras
 
 Para algunas muestras que ilustran el uso de un par de sensores diferentes, consulta el tema [Muestras de sensores de Windows](http://go.microsoft.com/fwlink/?LinkID=616041).
-
 

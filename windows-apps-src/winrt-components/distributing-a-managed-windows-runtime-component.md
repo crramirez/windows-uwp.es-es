@@ -9,18 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9ce20fbfc1289eb02faf8868415feda054d6f691
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70ef1ab7bc31fde2f0d4744394c1ae69c8caf7fd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
 # <a name="distributing-a-managed-windows-runtime-component"></a>Distribuir un componente de Windows Runtime administrado
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Puedes distribuir tu componente de Windows Runtime mediante la copia de archivos. Sin embargo, si el componente consta de muchos archivos, la instalación puede ser tediosa para los usuarios. Además, los errores en la colocación de archivos o la incapacidad para establecer referencias pueden causarles problemas. Puedes empaquetar un componente complejo como un SDK de extensión de Visual Studio, para que sea fácil de instalar y usar. Los usuarios solamente necesitan establecer una referencia para todo el paquete. Pueden localizar e instalar tu componente usando el cuadro de diálogo **Extensiones y actualizaciones**, como se describe en [Búsqueda y uso de extensiones de Visual Studio](https://msdn.microsoft.com/library/vstudio/dd293638.aspx), en la biblioteca de MSDN.
 
@@ -80,4 +76,3 @@ Normalmente, un componente complejo incluye los recursos de Windows, pero debes 
 * [Sistema de administración de recursos (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx)
 * [Buscar y usar extensiones de Visual Studio](https://msdn.microsoft.com/library/dd293638.aspx)
 * [Opciones de comandos de MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx)
-

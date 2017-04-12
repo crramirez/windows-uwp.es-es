@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6be02f9ec4163df510827552e04be78fffe1a8a5
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 6bcc81d80bb3e2167b6d6e5ee078279bd830f04c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="inputs-and-devices"></a>Entradas y dispositivos
 
@@ -183,7 +181,7 @@ En este artículo se describe la nueva interfaz de usuario de Windows para reali
 <div class="side-by-side-content">
 <div class="side-by-side-content-left">
 <p><b>[Selección del destino](guidelines-for-targeting.md)</b><br/>
-La selección táctil del destino en Windows usa toda el área de contacto de cada dedo detectado por un digitalizador táctil. El conjunto más grande y más complejo de datos de entrada notificado por el digitalizador se usa para aumentar la precisión cuando se determina el destino previsto (o con más probabilidades) del usuario.
+La selección táctil del destino en Windows usa toda el área de contacto de cada dedo que es detectado por un digitalizador táctil. El conjunto más grande y más complejo de datos de entrada notificado por el digitalizador se usa para aumentar la precisión cuando se determina el destino previsto (o con más probabilidades) del usuario.
 </p>
 </div>
 <div class="side-by-side-content-right">
@@ -210,4 +208,3 @@ El hecho de conocer los dispositivos que admiten aplicaciones para UWP te ayudar
   </div>
 </div>
 </div>
-

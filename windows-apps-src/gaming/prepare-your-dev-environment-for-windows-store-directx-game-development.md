@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, templates, plantillas, tools, herramientas, DirectX
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 2991efd40862eb1cd8842432b3eed3bbe49c8eb2
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="project-templates-and-tools-for-games"></a>Plantillas de proyectos y herramientas para juegos
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tema te mostramos todo lo que necesitas hacer para empezar a programar juegos de DirectX para la Plataforma universal de Windows (UWP).
@@ -65,7 +62,7 @@ En primer lugar, necesitarás Visual Studio.
 
 Si estás vas a portar un juego existente, consulta los siguientes temas.
 
--   [Migrar desde OpenGL ES 2.0 a DirectX 11](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [Migrar desde OpenGL ES2.0 a DirectX11](port-from-opengl-es-2-0-to-directx-11-1.md)
 -   [Migrar desde DirectX 9 a UWP](porting-your-directx-9-game-to-windows-store.md)
 
 Si estás creando un nuevo juego DirectX, consulta los siguientes temas.
@@ -81,7 +78,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
  
 
  
-
 
 
 

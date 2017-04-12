@@ -9,23 +9,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 83c7f52f0d55773c3bb0d5802eb1166aa6cf40a7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7eaddcfc2d02805e60043132328ef482872a9000
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-account-users"></a>Administrar usuarios de la cuenta
 
 
-Puedes usar Azure Active Directory para agregar usuarios a tu cuenta del Centro de desarrollo. A cada usuario se le asigna un rol que le proporciona un conjunto específico de permisos para la cuenta. También se puede asignar un rol a un grupo de usuarios o a una aplicación de Azure AD.
+Puedes usar Azure Active Directory para agregar usuarios a tu cuenta del Centro de desarrollo. A cada usuario se le asigna un rol que le proporciona un conjunto específico de permisos para la cuenta. También se puede asignar un rol a un grupo de usuarios o a una aplicación de AzureAD.
 
 > **Importante** Para agregar y administrar usuarios de la cuenta, primero tienes que asociar tu cuenta del Centro de desarrollo a Azure Active Directory de la organización. Para ello, es necesario iniciar sesión en Azure AD con una cuenta de [administrador local](http://go.microsoft.com/fwlink/?LinkId=746654). Una vez establecida esta asociación, no podrás quitarla sin ponerte en contacto con soporte técnico.
 
 ## <a name="associate-your-dev-center-account-with-your-organizations-azure-active-directory"></a>Asociar la cuenta del Centro de desarrollo a Azure Active Directory de la organización
 
-El Centro de desarrollo de Windows aprovecha Azure Active Directory para la administración de varios usuarios y la asignación de roles. Si la organización ya usa Office 365 u otros servicios de Microsoft, ya tienes Azure AD. De lo contrario, puedes crear un nuevo Azure AD desde el Centro de desarrollo sin ningún coste adicional.
+El Centro de desarrollo de Windows aprovecha Azure Active Directory para la administración de varios usuarios y la asignación de roles. Si la organización ya usa Office365 u otros servicios de Microsoft, ya tienes AzureAD. De lo contrario, puedes crear un nuevo Azure AD desde el Centro de desarrollo sin ningún coste adicional.
 
 Ten en cuenta que solo una cuenta del Centro de desarrollo puede asociarse con Azure AD. Del mismo modo, solo Azure AD puede asociarse con una cuenta del Centro de desarrollo.
 
@@ -37,8 +34,8 @@ Si tu organización ya usa Azure AD, sigue estos pasos para vincular tu cuenta d
 
 1.  Ve a tu **Configuración de la cuenta** y haz clic en **Administrar usuarios**.
 2.  Haz clic en el botón **Asociación de Azure AD con tu cuenta del Centro de desarrollo**.
-3.  Inicia sesión en tu cuenta de Azure AD. Esta cuenta debe tener permisos de [administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para poder configurar la asociación.
-4.  Revisa el nombre de la organización y de dominio de tu cuenta de Azure AD. Para completar la asociación, haz clic en **Confirmar**.
+3.  Inicia sesión en tu cuenta de AzureAD. Esta cuenta debe tener permisos de [administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para poder configurar la asociación.
+4.  Revisa el nombre de la organización y de dominio de tu cuenta de AzureAD. Para completar la asociación, haz clic en **Confirmar**.
 5.  Si la asociación es correcta, estarás listo para agregar y administrar usuarios de la cuenta en la página **Administrar usuarios** de tu cuenta, según se describe en las secciones siguientes.
 
 ### <a name="create-a-brand-new-azure-ad-to-associate-with-your-dev-center-account"></a>Crea una nueva aplicación de Azure AD para asociar a tu cuenta del Centro de desarrollo
@@ -57,16 +54,16 @@ Si necesitas configurar una nueva aplicación de Azure AD para vincular a tu cue
 
 > **Importante** Después de asociar tu cuenta del Centro de desarrollo con Azure AD, siempre tendrás que iniciar sesión en el Centro de desarrollo con la cuenta de administrador global de Azure AD (y no con una cuenta de Microsoft personal) para agregar y administrar los usuarios de la cuenta.
 
-## <a name="add-and-manage-account-users-groups-and-azure-ad-applications"></a>Agregar y administrar usuarios, grupos y aplicaciones de Azure AD de la cuenta
+## <a name="add-and-manage-account-users-groups-and-azure-ad-applications"></a>Agregar y administrar usuarios, grupos y aplicaciones de AzureAD de la cuenta
 
-Una vez establecida la asociación, puedes agregar usuarios, grupos y aplicaciones de Azure AD a tu cuenta. También puedes cambiar los roles, editar los detalles de la cuenta o quitar usuarios.
+Una vez establecida la asociación, puedes agregar usuarios, grupos y aplicaciones de AzureAD a tu cuenta. También puedes cambiar los roles, editar los detalles de la cuenta o quitar usuarios.
 
 > **Nota** Si tu organización usa la [integración de directorios](http://go.microsoft.com/fwlink/p/?LinkID=724033) para sincronizar el servicio de directorio local con Azure AD, no podrás crear nuevos usuarios, grupos ni aplicaciones de Azure AD en el Centro de desarrollo. Tu (u otro administrador en el directorio local) deberá crearlos directamente en el directorio local para que puedas verlos en el Centro de desarrollo y agregarlos a este.
 
 Al administrar usuarios, ten en cuenta lo siguiente:
 
--   Todos los usuarios del Centro de desarrollo deben tener una cuenta activa en Azure AD de la organización.
--   Si creas un **nuevo** usuario o grupo en el Centro de desarrollo, también se agregará a Azure AD de la organización.
+-   Todos los usuarios del Centro de desarrollo deben tener una cuenta activa en AzureAD de la organización.
+-   Si creas un **nuevo** usuario o grupo en el Centro de desarrollo, también se agregará a AzureAD de la organización.
 -   Los cambios de nombre de usuario o nombre efectuados en el Centro de desarrollo, se reflejarán en Azure AD de la organización.
 -   Los usuarios (incluidos los grupos y las aplicaciones de Azure AD) pueden obtener acceso a la totalidad de la cuenta del Centro de desarrollo con los permisos asociados a su rol asignado. Si [personalizas los permisos](set-custom-permissions-for-account-users.md), puedes limitar el acceso de un usuario para que solo pueda trabajar con determinadas aplicaciones o complementos.
 -   Para permitir que un usuario, grupo o aplicación de Azure AD tengan acceso a las funciones de más de un rol, selecciona varios roles o utiliza [permisos personalizados](set-custom-permissions-for-account-users.md) para conceder el acceso que quieras.
@@ -82,7 +79,7 @@ A menos que uses permisos personalizados, a cada usuario, grupo o aplicación de
 
 | Rol                 | Descripción              |
 |----------------------|--------------------------|
-| Administrador              | Tiene acceso completo a la cuenta, excepto para cambiar la configuración fiscal y de pago. Esto incluye la administración de usuarios en el Centro de desarrollo, pero recuerda que la capacidad de crear y eliminar usuarios depende de los permisos que tenga la cuenta en Azure AD. Es decir, si a un usuario se le asigna el rol Administrador, pero no tiene permisos de administrador en Azure AD de la organización, no podrá crear nuevos usuarios ni eliminar los usuarios del directorio (pero puede cambiar el rol que un usuario tiene en el Centro de desarrollo). |
+| Administrador              | Tiene acceso completo a la cuenta, excepto para cambiar la configuración fiscal y de pago. Esto incluye la administración de usuarios en el Centro de desarrollo, pero recuerda que la capacidad de crear y eliminar usuarios depende de los permisos que tenga la cuenta en AzureAD. Es decir, si a un usuario se le asigna el rol Administrador, pero no tiene permisos de administrador en Azure AD de la organización, no podrá crear nuevos usuarios ni eliminar los usuarios del directorio (pero puede cambiar el rol que un usuario tiene en el Centro de desarrollo). |
 | Desarrollador            | Puede cargar paquetes y enviar aplicaciones y complementos, así como ver el [Informe de uso](usage-report.md) para obtener información detallada de telemetría. No puede ver la configuración de la cuenta ni la información financiera.   |
 | Colaborador empresarial | Puede ver informes de [estado](health-report.md) y de [uso](usage-report.md). No puede crear ni enviar productos, cambiar la configuración de cuenta ni ver información financiera.                                         |
 | Colaborador financiero  | Puede ver [informes de pago](payout-summary.md), información financiera e informes de adquisición. No puede modificar las aplicaciones, los complementos ni la configuración de la cuenta.                                                                                                                                   |
@@ -120,7 +117,7 @@ Como alternativa, puedes invitar a usuarios a obtener acceso a tu cuenta sin nec
 
 Si quieres conceder acceso al Centro de desarrollo a una nueva cuenta de usuario, puedes crear una en la sección **Administrar usuarios**. 
 
-De manera predeterminada, el botón de radio **Add to Azure AD** está seleccionado. Si se deja activada esta casilla, se creará una cuenta nueva en el directorio de la organización y se agregará a ese usuario a tu cuenta del Centro de desarrollo. Si no deseas crear nuevas cuentas en el directorio de la organización, pero quieres permitir que los usuarios obtengan acceso a tu cuenta con sus cuentas de Microsoft para iniciar sesión, selecciona **Invitar a usuarios por correo electrónico** en su lugar.
+De manera predeterminada, el botón de radio **Add to Azure AD** está seleccionado. Si se deja activada esta casilla, se creará una cuenta nueva en el directorio de la organización y se agregará a ese usuario a tu cuenta del Centro de desarrollo. Si no deseas crear nuevas cuentas en el directorio de la organización, pero quieres permitir que los usuarios obtengan acceso a tu cuenta con sus cuentas de Microsoft para iniciar sesión, selecciona **Invite users by email** en su lugar.
 
 Si quieres que el usuario nuevo tenga una [cuenta de administrador global](http://go.microsoft.com/fwlink/p/?LinkId=746654) en el directorio de la organización, activa la casilla **Make this user a Global administrator in your Azure AD, with full control over all directory resources**. De esta forma, el usuario podrá obtener acceso a todas las características administrativas en el Azure AD de tu empresa. Podrán agregar y administrar usuarios en el directorio de la organización (pero no en el Centro de desarrollo, a menos que conceda a la cuenta los [permisos de rol](#roles-and-permissions) adecuados. Si activas esta casilla, deberás proporcionar un **correo electrónico de recuperación de contraseña** para el usuario.
 
@@ -140,7 +137,7 @@ Si quieres que el usuario nuevo tenga una [cuenta de administrador global](http:
 
 1.  En la página **Administrar usuarios**, haz clic en **Agregar usuarios**.
 2.  En la página siguiente, haz clic en **Nuevo usuario**.
-3.  Selecciona el botón de selección **Invitar a usuarios por correo electrónico**.
+3.  Selecciona el botón de selección **Invite users by email**.
 3.  Escribe una o varias direcciones de correo electrónico (hasta diez), separadas por coma o punto y coma.
 4.  En la sección **Roles**, selecciona uno o varios roles para asignarlos al nuevo usuario, o asigna permisos personalizados.
 6.  Haz clic en **Guardar**.
@@ -258,7 +255,7 @@ Si la aplicación de Azure AD lee y escribe datos en Microsoft Azure AD, necesit
 
 3.  Verás una pantalla que muestra los valores **Id. de cliente** y **Clave**.
 
-    > **Importante** Asegúrate de imprimir o copiar esta información, ya que no podrás volver a obtener acceso a ella después de salir de esta página.
+    > **Importante** Asegúrate de imprimir o copiar esta información, ya que no podrás volver a acceder a ella después de salir de esta página.
 
 4.  Si quieres crear más claves, haz clic en **Agregar otra clave**.
 
@@ -279,4 +276,3 @@ Para quitar un usuario, un grupo o una aplicación de Azure AD de tu cuenta del 
  
 
  
-

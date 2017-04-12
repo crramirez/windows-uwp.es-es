@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 629e8c3d35c9b9730c07e9f810909298558ae700
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d31c943336b36c325218b0b2a8830daf54ed25ca
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xbox-live-sandbox-api-reference"></a>Referencia de API de espacio aislado de Xbox Live   
 Puedes obtener y configurar el espacio aislado de Xbox Live con esta API de REST.
 
@@ -25,7 +22,7 @@ Puedes obtener y configurar el espacio aislado de Xbox Live con esta API de REST
 
 Puedes leer el valor actual del espacio aislado de Xbox Live del dispositivo con la siguiente solicitud:
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
 GET | /ext/xboxlive/sandbox
 <br />
@@ -33,7 +30,7 @@ GET | /ext/xboxlive/sandbox
 
 - Ninguno
 
-**Encabezados de la solicitud**
+**Encabezados de solicitud**
 
 - Ninguno
 
@@ -69,7 +66,7 @@ PUT | /ext/xboxlive/sandbox
 
 - Ninguno
 
-**Encabezados de la solicitud**
+**Encabezados de solicitud**
 
 - Ninguno
 
@@ -94,5 +91,4 @@ Código de estado HTTP      | Descripción
 **Familias de dispositivos disponibles**
 
 * Windows Xbox
-
 

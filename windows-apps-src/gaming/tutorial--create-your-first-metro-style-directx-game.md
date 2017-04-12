@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: Crear un juego de Plataforma universal de Windows (UWP) simple con DirectX
+title: Crear un juego sencillo para la Plataforma universal de Windows (UWP) con DirectX
 description: "En este conjunto de tutoriales, aprenderás a crear un juego básico para la Plataforma universal de Windows (UWP) con DirectX y C++."
 ms.assetid: 9edc5868-38cf-58cc-1fb3-8fb85a7ab2c9
 keywords:
@@ -12,13 +12,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3ffce29c3ad7088dd24b848cb159b85a4db158e3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8518a350f0c999d6110305c51f46fe12e5b590f0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>Crear un juego de Plataforma universal de Windows (UWP) simple con DirectX
 
 
@@ -38,11 +35,11 @@ Te enseñaremos las técnicas y consideraciones para desarrollar juegos de UWP. 
 
 Antes de empezar este tutorial, necesitas estar familiarizado con estos temas.
 
--   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias y es el lenguaje de desarrollo de juegos de UWP con DirectX 11.1 o versiones posteriores.
+-   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias y es el lenguaje de desarrollo de juegos de UWP con DirectX11.1 o versiones posteriores.
 -   Álgebra lineal básica y conceptos de física newtoniana.
 -   Terminología básica de programación de gráficos.
 -   Conceptos básicos de programación en Windows.
--   Conocimiento básico de las API [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) y [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
+-   Conocimiento básico de las API [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) y [Direct3D11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
 
 ##  <a name="the-windows-store-direct3d-shooting-game-sample"></a>La muestra de juego de disparos Direct3D de la Tienda Windows
 
@@ -77,7 +74,6 @@ La muestra hace una demostración de los siguientes conceptos de juego:
  
 
  
-
 
 
 

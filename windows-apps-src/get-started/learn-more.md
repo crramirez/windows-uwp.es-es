@@ -9,32 +9,29 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0bf7959be6278577cc8fe93011591e4523bee623
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0c21257db05a058c2d92f32218b73d920cc7156c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 # <a name="whats-next"></a>A continuación
 
-Quieres escribir una aplicación y publicarla en la Tienda Windows: ¿por dónde empezar? Si eres principiante en la plataforma UWP, prueba con algunos de los vídeos de <a href="https://channel9.msdn.com/">Channel 9</a> y con los cursos de <a href="https://mva.microsoft.com">Microsoft Virtual Academy</a>. Si ya estás familiarizado con XAML y C#, puedes empezar leyendo los temas siguientes o ir directamente a [algunos ejemplos de descarga](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
+Quieres escribir una aplicación y publicarla en la Tienda Windows: ¿por dónde empezar? Si eres principiante en la plataforma UWP, prueba con algunos de los vídeos de <a href="https://channel9.msdn.com/">Channel 9</a> y con los cursos de <a href="https://mva.microsoft.com">Microsoft Virtual Academy</a> y [LinkedIn Learning](https://www.linkedin.com/topic/windows-programming). Si ya estás familiarizado con el desarrollo de Windows, puedes empezar leyendo los temas siguientes o ir directamente a [algunos ejemplos de descarga](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
 Existen muchos marcos y herramientas disponibles para ayudarte a escribir aplicaciones, y muchos son compatibles con el desarrollo multiplataforma. Por ejemplo, si quieres escribir juegos en 2D, es posible que quieras mirar <a href="http://www.monogame.net">Monogame</a> o algunos de los muchos [marcos de JavaScript o HTML](https://html5gameengine.com/). En el caso de los juegos 3D, existe <a href="http://www.unity3d.com">Unity</a>, y no olvides <a href="http://www.xamarin.com">Xamarin</a> si lo que te interesan son los dispositivos móviles.
 
-Si estás empezando, nuestra recomendación es que consultes los temas sobre la UWP para captar la esencia de la plataforma y, a continuación, investigues para crear tu interfaz de usuario mediante el uso y la posterior personalización de los controles XAML. Usarás XAML para el diseño de la aplicación ([aquí tienes un tutorial](../layout/grid-tutorial.md) que te explicará cómo), pero la principal ventaja de XAML es el uso del *enlace de datos*, que une los controles con la información que la aplicación quiere mostrar: Si eres un principiante en la plataforma de Windows, se trata de un concepto importante de comprender. 
+Si quieres empezar a escribir algo que no sea un juego, nuestra recomendación es que consultes los temas sobre la UWP para captar la esencia de la plataforma y, a continuación, investigues para crear tu interfaz de usuario mediante el uso y la posterior personalización de los controles XAML. Usarás XAML para diseñar tu aplicación ([aquí tienes un tutorial](../layout/grid-tutorial.md) que te explicará cómo), pero la principal ventaja de XAML es el uso del *enlace de datos*, que une los controles con la información que la aplicación quiere mostrar: Si eres un principiante en la plataforma de Windows, se trata de un concepto importante de comprender. 
 <table class="wdg-noborder">
 <tr>
- <td width=60><img src="images/icon3.png" width=64></td>
+ <td width=60><img src="images/icon3.png" alt="Bullet point" width=64></td>
     <td><h2>Ciclo de vida de UWP y la aplicación para UWP</h2><p>¿Cómo se inicia una aplicación y qué sucede cuándo inicias otra? A continuación se muestra el argumento.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">Guía de aplicaciones para la Plataforma universal de Windows (UWP)</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle">Ciclo de vida de la aplicación para UWP</a></li>
     <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">Lo bueno de Windows 10</a></ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon7.png" width=64></td>
+ <td width=60><img src="images/icon7.png" alt="Bullet point" width=64></td>
     <td><h2>Experiencia del usuario e interfaz de usuario</h2><p>¿Qué controles tienes a tu disposición y cómo puedes usarlos? En estos temas se explica cómo funcionan los controles con el código y cómo puedes personalizarlos para adaptarlos a la apariencia de tu aplicación.</p> <ul>
     <li><a href="https://developer.microsoft.com/windows/design">Diseño e interfaz de usuario</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml">Definir diseños de página con XAML</a></li>
@@ -46,7 +43,7 @@ Si estás empezando, nuestra recomendación es que consultes los temas sobre la 
     </ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon6.png" width=64></td>
+ <td width=60><img src="images/icon6.png" alt="Bullet point" width=64></td>
     <td><h2>Datos y servicios</h2><p>Obtén información sobre el enlace de datos, que permite que el código rellene automáticamente listas y cuadrículas. Descubre cómo establecer vínculos a recursos externos para obtener datos en tus aplicaciones.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/data-binding/index">Enlace de datos</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/listview-and-gridview">ListView, GridView y enlace de datos</a></li>
@@ -54,14 +51,14 @@ Si estás empezando, nuestra recomendación es que consultes los temas sobre la 
     </ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon4.png" width=64></td>
+ <td width=60><img src="images/icon4.png" alt="Bullet point" width=64></td>
     <td><h2>Publicación</h2><p>Comparte tu trabajo con el mundo y gana dinero. Te guiaremos durante el proceso para incluir tu aplicación en la Tienda.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/publish/index">Publicar aplicaciones de Windows</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/packaging/index">Empaquetado de aplicaciones</a></li>
     </ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon2.png" width=64></td>
+ <td width=60><img src="images/icon2.png" alt="Bullet point" width=64></td>
     <td><h2>Otros recursos</h2><p>Muestras, tutoriales, vídeos, otras herramientas y SDK. Pasa al siguiente nivel.</p>
     <ul>
     <li><a href="https://developer.microsoft.com/windows/develop">Artículos sobre procedimientos</a></li>
@@ -95,12 +92,10 @@ El [blog para desarrolladores de Windows](https://blogs.windows.com/buildingapps
 
 ## <a name="finding-help-in-the-dev-center"></a>Búsqueda de ayuda en el Centro de desarrollo
 
-El [Centro de desarrollo de Microsoft](http://developer.microsoft.com) contiene una gran cantidad de documentación referente a muchas herramientas, marcos y plataformas diferentes. Cuando busques temas y muestras, debes asegurarte de que estás leyendo contenido específico de UWP. ¿Cómo puedes asegurarte de que estás leyendo el contenido correcto?
-El contenido conceptual, es decir, el contenido de referencia no relacionado con la API, incluirá UWP en la dirección URL del tema. El contenido de la API tendrá una ruta de acceso que incluirá las API de Windows Runtime. 
+El sitio [docs.microsoft.com](http://docs.microsoft.com) contiene una gran cantidad de documentación referente a muchas herramientas, marcos y plataformas diferentes. Cuando explores temas y muestras, debes asegurarte de que estás leyendo contenido específico de UWP. Encontrarás que la referencia UWP empieza en el [Centro de desarrollo de Windows](https://developer.microsoft.com/windows/apps) y la referencia de API que necesitas en [Desarrollar aplicaciones para UWP](https://docs.microsoft.com/uwp/api/).
+Al leer el contenido diseñado específicamente para UWP, la ruta de acceso de la dirección URL contendrá **uwp** y, por lo tanto, también lo tendrá la ruta de acceso que se muestra en la parte superior de la página, del siguiente modo:
 
-![Ejemplo de tema conceptual de UWP](images/devcenter-topic2.png)
-
-![Un tema de referencia UWP de ejemplo](images/devcenter-topic1.png)
+![Buscar documentos sobre UWP](images/UWP-docs.png)
 
 Si se usa un motor de búsqueda y se anexa "Desarrollo de aplicaciones de Windows" a la cadena de búsqueda, la mayoría de las veces se mostrará contenido sobre UWP.
 
@@ -169,7 +164,6 @@ Esta es una lista de las secciones clave del contenido del Centro de desarrollo.
 <td align="left"><a href="https://www.microsoftstore.com/store/msusa/en_US/cat/Developer/categoryID.69418300?icid=en_US_Store_UH_BusEd_Dev">Hardware para desarrolladores de Microsoft Store.</a></td>
 </tr>
 </table>
-
 
 
 

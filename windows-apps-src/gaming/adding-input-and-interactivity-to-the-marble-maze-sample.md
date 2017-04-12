@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, entrada, ejemplo
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: dc667be326950151b08bbaded6d4e9a0b109523b
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Agregar métodos de entrada e interactividad al ejemplo de Marble Maze
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Los juegos de aplicación para Plataforma universal de Windows (UWP) se ejecutan en una variedad de dispositivos, como equipos de escritorio, portátiles y tabletas. Un dispositivo puede tener varios mecanismos de entrada y de control. Al dar soporte a varios dispositivos de entrada, el juego podrá acomodarse a una amplia variedad de preferencias y habilidades entre los clientes. En este documento se describen las prácticas clave que se deben tener en cuenta al trabajar con dispositivos de entrada y se muestra cómo Marble Maze aplica estas prácticas.
@@ -459,7 +456,7 @@ XInput define la constante **XINPUT\_GAMEPAD\_LEFT\_THUMB\_DEADZONE** del stick 
 
 ###  <a name="applying-input-to-the-game-state"></a>Aplicación de la entrada al estado del juego
 
-Los dispositivos notifican los valores de entrada de varias maneras. Por ejemplo, la entrada del puntero podría expresarse en coordenadas de la pantalla y la entrada del mando podría estar en un formato totalmente distinto. Uno de los retos al combinar la entrada de varios dispositivos en un único conjunto de valores de entrada es la normalización, es decir, la conversión de valores a un formato común. Marble Maze normaliza los valores escalándolos en el intervalo \[-1.0, 1.0\]. Para normalizar la entrada del mando Xbox 360, Marble Maze divide los valores de entrada por 32 768 porque los valores de entrada del stick siempre están entre -32 768 y 32 767. La función **PointToTouch**, que ya se ha descrito en esta sección, logra un resultado similar al convertir las coordenadas de pantalla en valores normalizados que están en un intervalo aproximado entre -1,0 y +1,0.
+Los dispositivos notifican los valores de entrada de varias maneras. Por ejemplo, la entrada del puntero podría expresarse en coordenadas de la pantalla y la entrada del mando podría estar en un formato totalmente distinto. Uno de los retos al combinar la entrada de varios dispositivos en un único conjunto de valores de entrada es la normalización, es decir, la conversión de valores a un formato común. Marble Maze normaliza los valores escalándolos en el intervalo \[-1.0, 1.0\]. Para normalizar la entrada del mando Xbox 360, Marble Maze divide los valores de entrada por 32768 porque los valores de entrada del stick siempre están entre -32768 y 32767. La función **PointToTouch**, que ya se ha descrito en esta sección, logra un resultado similar al convertir las coordenadas de pantalla en valores normalizados que están en un intervalo aproximado entre -1,0 y +1,0.
 
 > **Sugerencia** Aunque la aplicación use un único método de entrada, te recomendamos normalizar siempre los valores de entrada. Al hacerlo así, puedes simplificar la forma en que otros componentes interpretan la entrada de tu juego, como la simulación de efectos físicos, y se facilita la escritura de juegos que funcionan en varias resoluciones de pantalla.
 
@@ -527,7 +524,6 @@ Lee [Agregar audio a la muestra de Marble Maze](adding-audio-to-the-marble-maze-
  
 
  
-
 
 
 

@@ -2,21 +2,17 @@
 title: Formato BC6H
 description: "El formato de BC6H es un formato de compresión de texturas diseñado para admitir los espacios de color de alto rango dinámico (HDR) en los datos de origen."
 ms.assetid: 6781D967-9262-4EE7-B354-7A6D0EA0498E
-keywords:
-- Formato BC6H
+keywords: Formato BC6H
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a1cc569adbf15876693e91ac92e6bd364a267cb7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2bca4f5e86229a9b6ffc622a65628f1b588c9ac6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bc6h-format"></a>Formato BC6H
 
 
@@ -25,15 +21,15 @@ El formato de BC6H es un formato de compresión de texturas diseñado para admit
 ## <a name="span-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanspan-idabout-bc6h-dxgi-format-bc6hspanabout-bc6hdxgiformatbc6h"></a><span id="About-BC6H-DXGI-FORMAT-BC6H"></span><span id="about-bc6h-dxgi-format-bc6h"></span><span id="ABOUT-BC6H-DXGI-FORMAT-BC6H"></span>Acerca de BC6H/DXGI\_FORMAT\_BC6H
 
 
-El formato BC6H proporciona una compresión de alta calidad para imágenes que usan tres canales de color HDR, con un valor de 16 bits para cada canal de color del valor (16: 16:16). No existe compatibilidad para un canal alfa.
+El formato BC6H proporciona una compresión de alta calidad para imágenes que usan tres canales de color HDR, con un valor de 16bits para cada canal de color del valor (16: 16:16). No existe compatibilidad para un canal alfa.
 
 BC6H se especifica mediante los siguientes valores de enumeración DXGI\_FORMAT:
 
 -   **DXGI\_FORMAT\_BC6H\_TYPELESS**.
--   **DXGI\_FORMAT\_BC6H\_UF16**. Este formato BC6H no usa un bit de signo en los valores de canal de color de punto flotante de 16 bits.
--   **DXGI\_FORMAT\_BC6H\_SF16**. Este formato BC6H usa un bit de signo en los valores de canal de color de punto flotante de 16 bits.
+-   **DXGI\_FORMAT\_BC6H\_UF16**. Este formato BC6H no usa un bit de signo en los valores de canal de color de punto flotante de 16bits.
+-   **DXGI\_FORMAT\_BC6H\_SF16**. Este formato BC6H usa un bit de signo en los valores de canal de color de punto flotante de 16bits.
 
-**Nota**   El formato de punto flotante de 16 bits para los canales de color también se conoce como formato de punto flotante "medio". Este formato tiene el siguiente diseño de bits:
+**Nota**   El formato de punto flotante de 16bits para los canales de color también se conoce como formato de punto flotante "medio". Este formato tiene el siguiente diseño de bits:
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
 | UF16 (float sin signo) | 5 bits de exponente + 11 bits de mantisa              |
@@ -45,7 +41,7 @@ BC6H se especifica mediante los siguientes valores de enumeración DXGI\_FORMAT:
 
 El formato BC6H puede usarse para los recursos de textura [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277) (incluidas matrices), Texture3D o TextureCube (incluidas matrices). Del mismo modo, este formato se aplica a las superficies de mapas MIP asociadas a estos recursos.
 
-BC6H usa un tamaño de bloque fijo de 16 bytes (128 bits) y un tamaño de mosaico fijo de elementos de textura de 4×4. Al igual que con los formatos de BC anteriores, las imágenes de textura mayores que el tamaño de mosaico compatible (4×4) se comprimen mediante el uso de varios bloques. Esta identidad de direccionamiento también se aplica a imágenes tridimensionales, mapas MIP, mapas de cubo y matrices de texturas. Todos los mosaicos de imágenes deben tener el mismo formato.
+BC6H usa un tamaño de bloque fijo de 16bytes (128bits) y un tamaño de mosaico fijo de elementos de textura de 4×4. Al igual que con los formatos de BC anteriores, las imágenes de textura mayores que el tamaño de mosaico compatible (4×4) se comprimen mediante el uso de varios bloques. Esta identidad de direccionamiento también se aplica a imágenes tridimensionales, mapas MIP, mapas de cubo y matrices de texturas. Todos los mosaicos de imágenes deben tener el mismo formato.
 
 Advertencias con el formato BC6H:
 
@@ -66,7 +62,7 @@ En el caso de dos regiones, hay 32 particiones posibles.
 ## <a name="span-iddecoding-the-bc6h-formatspanspan-iddecoding-the-bc6h-formatspanspan-iddecoding-the-bc6h-formatspandecoding-the-bc6h-format"></a><span id="Decoding-the-BC6H-format"></span><span id="decoding-the-bc6h-format"></span><span id="DECODING-THE-BC6H-FORMAT"></span>Descodificar el formato BC6H
 
 
-El siguiente seudocódigo muestra los pasos para descomprimir el píxel en (x,y), dado el bloque BC6H de 16 bytes.
+El siguiente seudocódigo muestra los pasos para descomprimir el píxel en (x,y), dado el bloque BC6H de 16bytes.
 
 ``` syntax
 decompress_bc6h(x, y, block)
@@ -115,11 +111,11 @@ La tabla siguiente contiene los valores y el número de bits para cada uno de lo
 
  
 
-Cada formato de esta tabla puede identificase de manera exclusiva por los bits de modo. Los primeros diez modos se usan para los mosaicos de dos regiones, y el campo de bits de modo puede tener una longitud de dos o cinco bits. Estos bloques también tienen campos para los extremos de color comprimidos (72 o 75 bits), la partición (5 bits) y los índices de partición (46 bits).
+Cada formato de esta tabla puede identificase de manera exclusiva por los bits de modo. Los primeros diez modos se usan para los mosaicos de dos regiones, y el campo de bits de modo puede tener una longitud de dos o cinco bits. Estos bloques también tienen campos para los extremos de color comprimidos (72 o 75bits), la partición (5bits) y los índices de partición (46bits).
 
 Para los extremos de color comprimidos, los valores en la tabla anterior dan cuenta de la precisión de los extremos RGB almacenados y del número de bits usados para cada valor de color. Por ejemplo, el modo 3 especifica un nivel de precisión del extremo de color de 11, y el número de bits usado para almacenar los valores delta de los extremos transformados para los colores rojo, azul y verde (5, 4 y 4, respectivamente). El modo 10 no usa la compresión delta y, en su lugar, almacena los cuatro extremos de color de forma explícita.
 
-Los últimos cuatro modos de bloque se usan para mosaicos de una región, donde el campo de modo es de 5 bits. Estos bloques tienen campos para los extremos (60 bits) y los índices comprimidos (63 bits). El modo 11 (al igual que el modo 10) no usa la compresión delta y, en su lugar, almacena ambos extremos de color de manera explícita.
+Los últimos cuatro modos de bloque se usan para mosaicos de una región, donde el campo de modo es de 5bits. Estos bloques tienen campos para los extremos (60bits) y los índices comprimidos (63bits). El modo 11 (al igual que el modo 10) no usa la compresión delta y, en su lugar, almacena ambos extremos de color de manera explícita.
 
 Los modos 10011, 10111, 11011 y 11111 (no se muestran) están reservados. No los uses en el codificador. Si se pasan al hardware bloques con uno de estos modos especificados, el bloque descomprimido resultante debe contener todos ceros en todos los canales, excepto en el canal alfa.
 
@@ -131,14 +127,14 @@ Hay 32 conjuntos de partición posibles para un mosaico de dos regiones, y que s
 
 ![tabla de los conjuntos de particiones de bc6h](images/bc6h-partition-sets.png)
 
-En esta tabla de conjuntos de particiones, la entrada en negrita y subrayada es la ubicación del índice de corrección del subconjunto 1 (que se especifica con un bit menos). El índice de la corrección del subconjunto 0 es siempre el índice 0, ya que la partición siempre se organiza de modo que ese índice 0 esté siempre en el subconjunto 0. El orden de las particiones va de la parte superior izquierda a la inferior derecha, y se mueve de izquierda a derecha y luego de arriba abajo.
+En esta tabla de conjuntos de particiones, la entrada en negrita y subrayada es la ubicación del índice de corrección del subconjunto1 (que se especifica con un bit menos). El índice de la corrección del subconjunto 0 es siempre el índice0, ya que la partición siempre se organiza de modo que ese índice0 esté siempre en el subconjunto0. El orden de las particiones va de la parte superior izquierda a la inferior derecha, y se mueve de izquierda a derecha y luego de arriba abajo.
 
 ## <a name="span-idbc6h-compressed-endpoint-formatspanspan-idbc6h-compressed-endpoint-formatspanspan-idbc6h-compressed-endpoint-formatspanbc6h-compressed-endpoint-format"></a><span id="BC6H-compressed-endpoint-format"></span><span id="bc6h-compressed-endpoint-format"></span><span id="BC6H-COMPRESSED-ENDPOINT-FORMAT"></span>Formato de extremo comprimido BC6H
 
 
 ![campos de bits para formatos de extremo comprimidos bc6h](images/bc6h-headers-med.png)
 
-En esta tabla se muestran los campos de bits para los extremos comprimidos como una función del formato de extremo, donde cada columna especifica una codificación y cada fila especifica un campo de bits. Este enfoque ocupa hasta 82 bits para los mosaicos de dos regiones y 65 bits para los mosaicos de una región. Por ejemplo, los primeros 5 bits para la codificación de una región \[16 4\] anterior (en concreto, la columna de más a la derecha) son bits m\[4:0\], los siguientes 10 bits son bits rw\[9:0\] y así sucesivamente con los últimos 6 bits que contiene bw\[10:15\].
+En esta tabla se muestran los campos de bits para los extremos comprimidos como una función del formato de extremo, donde cada columna especifica una codificación y cada fila especifica un campo de bits. Este enfoque ocupa hasta 82bits para los mosaicos de dos regiones y 65bits para los mosaicos de una región. Por ejemplo, los primeros 5bits para la codificación de una región \[16 4\] anterior (en concreto, la columna de más a la derecha) son bits m\[4:0\], los siguientes 10bits son bits rw\[9:0\] y así sucesivamente con los últimos 6bits que contiene bw\[10:15\].
 
 Los nombres de campo en la tabla anterior se definen como sigue:
 
@@ -225,7 +221,7 @@ Dados los extremos sin comprimir, el siguiente paso es realizar una descuantific
 
 Separar el proceso de descuantificación en dos partes (descuantificación de la paleta de colores antes de la interpolación y la descuantificación final después de la interpolación) reduce el número de operaciones de multiplicación necesarias en comparación con un proceso de descuantificación completo antes de la interpolación de la paleta.
 
-El siguiente código muestra el proceso para recuperar las estimaciones de los valores de color de 16 bits originales, para luego usar los valores de peso proporcionados para sumar 6 valores de color adicionales a la paleta. La misma operación se realiza en cada canal.
+El siguiente código muestra el proceso para recuperar las estimaciones de los valores de color de 16bits originales, para luego usar los valores de peso proporcionados para sumar 6 valores de color adicionales a la paleta. La misma operación se realiza en cada canal.
 
 ``` syntax
 int aWeight3[] = {0, 9, 18, 27, 37, 46, 55, 64};
@@ -251,7 +247,7 @@ void generate_palette_unquantized(UINT8 uNumIndices, int c1, int c2, int prec, U
 
 El siguiente código de ejemplo muestra el proceso de interpolación, con las observaciones siguientes:
 
--   Dado que el intervalo completo de los valores de color para la función **unquantize** (abajo) está entre -32768 y 65535, el interpolador se implementa mediante aritmética con signo de 17 bits.
+-   Dado que el intervalo completo de los valores de color para la función **unquantize** (abajo) está entre -32768 y 65535, el interpolador se implementa mediante aritmética con signo de 17bits.
 -   Después de la interpolación, los valores se pasan a la función **finish\_unquantize** (descrita en el tercer ejemplo de esta sección), que aplica el ajuste de escala final.
 -   Todos los descompresores de hardware son necesarios para devolver resultados de bits precisos con estas funciones.
 
@@ -331,7 +327,6 @@ unsigned short finish_unquantize(int comp)
  
 
  
-
 
 
 

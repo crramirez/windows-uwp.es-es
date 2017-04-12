@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0fd6f16b019326b7deefa110c2f65b30ffd83d10
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 20178a8048cadb733bf1e34996ad46067a8660f3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="beta-testing-and-targeted-distribution"></a>Pruebas beta y distribución dirigida
 
 
@@ -35,20 +32,20 @@ Si ya has publicado una versión de la aplicación, puedes crear paquetes piloto
 
 Para obtener más información, consulta [Paquetes piloto](package-flights.md).
 
-> **Nota** Para distribuir paquetes a un conjunto aleatorio de tus clientes de Windows 10 en un porcentaje especificado en lugar de a un grupo concreto de clientes específicos, puedes usar el [lanzamiento de paquete gradual](gradual-package-rollout.md). También puedes combinar el lanzamiento con tus paquetes piloto si quieres distribuir una actualización de forma gradual a uno de tus grupos piloto.
+> **Nota** Para distribuir paquetes a un conjunto aleatorio de tus clientes de Windows10 en un porcentaje especificado en lugar de a un grupo concreto de clientes específicos, puedes usar el [lanzamiento de paquete gradual](gradual-package-rollout.md). También puedes combinar el lanzamiento con tus paquetes piloto si quieres distribuir una actualización de forma gradual a uno de tus grupos piloto.
 
 ### <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>Ocultar la aplicación en la Tienda y usar códigos promocionales
 
 Si deseas limitar la distribución de una aplicación a solo un determinado grupo de evaluadores, **sin** antes publicar un envío que esté disponible de forma mayoritaria, puedes usar el mismo [proceso de envío de la aplicación](app-submissions.md) que en cualquier aplicación que envíes. Para permitir que solo determinados contactos obtengan la aplicación de forma gratuita y evitar que otros clientes vean su descripción o puedan descargarla, haz lo siguiente:
 
--   En tu envío, en la página **Precios y disponibilidad**, elige **Ocultar esta aplicación e impedir la compra. Los clientes con un vínculo directo podrán ver la descripción de la aplicación, pero solo podrán descargarla si tienen un código promocional y están usando un dispositivo Windows 10** en la sección [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility). Esto impide que se encuentre la aplicación en la Tienda mediante la búsqueda o la exploración.
+-   En tu envío, en la página **Precios y disponibilidad**, elige **Ocultar esta aplicación e impedir la compra. Los clientes con un vínculo directo podrán ver la descripción de la aplicación, pero solo podrán descargarla si tienen un código promocional y están usando un dispositivo Windows10** en la sección [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility). Esto impide que se encuentre la aplicación en la Tienda mediante la búsqueda o la exploración.
 -   Cuando la aplicación supere la certificación, [genera códigos promocionales](generate-promotional-codes.md) para ella y distribúyela a los evaluadores. Puedes generar hasta 250 códigos promocionales para una misma aplicación en un período de seis meses. Estos códigos proporcionan a los evaluadores un vínculo directo a la descripción de la aplicación y les permite descargarla de forma gratuita, aunque hayas fijado un precio para ella cuando creaste el envío.
 
 Después de distribuir los vínculos de código promocional a los evaluadores, pueden descargar la aplicación de forma gratuita y ofrecerte sus comentarios para mejorarla. Más adelante, cuando quieras poner la aplicación a disposición del público, tan solo crea un nuevo envío y cambia la opción **Distribución y visibilidad** a **Make this app available in the Store** (junto con cualquier otro cambio que quieras realizar).
 
 Estas son cosas que se deben tener en cuenta al hacerlo:
 
--   Puedes proporcionar a los evaluadores una versión actualizada de la aplicación en cualquier momento mediante la creación de un nuevo envío. Asegúrate de mantener la opción de **Distribución y visibilidad** establecida en **Ocultar esta aplicación e impedir la compra. Los clientes con un vínculo directo podrán ver la descripción de la aplicación, pero solo podrán descargarla si tienen un código promocional y están usando un dispositivo Windows 10**. Los evaluadores obtendrán la actualización cuando esta supere el proceso de certificación, pero nadie más podrá obtenerla.
+-   Puedes proporcionar a los evaluadores una versión actualizada de la aplicación en cualquier momento mediante la creación de un nuevo envío. Asegúrate de mantener la opción de **Distribución y visibilidad** establecida en **Ocultar esta aplicación e impedir la compra. Los clientes con un vínculo directo podrán ver la descripción de la aplicación, pero solo podrán descargarla si tienen un código promocional y están usando un dispositivo Windows10**. Los evaluadores obtendrán la actualización cuando esta supere el proceso de certificación, pero nadie más podrá obtenerla.
 -   Los evaluadores deben tener un dispositivo de Windows 10 en el que puedan instalar la aplicación. (Sin embargo, no es necesario que la aplicación incluya paquetes de Windows 10 para usar este método de evaluación).
 -   Puedes crear más [códigos promocionales](generate-promotional-codes.md) en cualquier momento (hasta 500 códigos cada seis meses).
 -   No se puede revocar el acceso a la aplicación cuando los evaluadores ya la han descargado. Podrán seguir usándola y recibirán cualquier actualización que publiques más adelante.
@@ -68,19 +65,19 @@ Con esta opción, solo aquellos con un vínculo directo a la descripción de la 
 
 Para usar esta opción, al enviar la aplicación selecciona **Ocultar la aplicación en la Tienda. Los clientes que dispongan de un vínculo directo a la descripción de la aplicación podrán continuar descargándola, salvo en Windows 8 y Windows 8.1.** en la sección [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility) de la página **Precios y disponibilidad**.
 
-> **Importante** Esta opción no funciona para los evaluadores con Windows 8 ni Windows 8.1.
+> **Importante** Esta opción no funciona para los evaluadores con Windows8 ni Windows8.1.
 
 ### <a name="targeted-distribution-to-customers-with-specified-email-addresses"></a>Distribución dirigida a clientes con direcciones de correo electrónico específicas
 
-Para las pruebas **en Windows Phone 8.1 y versiones anteriores únicamente**, esta opción ofrece una forma de limitar la distribución de la aplicación. Solo las personas cuya dirección de correo electrónico (asociada a sus cuentas Microsoft) escribas en el cuadro podrán descargar la aplicación mediante un vínculo directo a su descripción.
+Para las pruebas **en Windows Phone8.1 y versiones anteriores únicamente**, esta opción ofrece una forma de limitar la distribución de la aplicación. Solo las personas cuya dirección de correo electrónico (asociada a sus cuentas Microsoft) escribas en el cuadro podrán descargar la aplicación mediante un vínculo directo a su descripción.
 
-> **Importante** Las personas con las direcciones de correo electrónico que especifiques solo podrán descargar la aplicación en dispositivos que ejecuten Windows Phone 8.1 o versiones anteriores.
+> **Importante** Las personas con las direcciones de correo electrónico que especifiques solo podrán descargar la aplicación en dispositivos que ejecuten Windows Phone8.1 o versiones anteriores.
  
 Puedes encontrar el vínculo directo de la aplicación en la página [Identidad de la aplicación](view-app-identity-details.md) del panel. Ningún cliente podrá encontrar la aplicación mediante la búsqueda o exploración en la Tienda y, aunque se disponga del vínculo a la descripción, no se podrá descargar salvo que se use para ello una cuenta de Microsoft asociada a una de las direcciones de correo electrónico que proporcionaras al enviar la aplicación.
 
 > **Nota** Si usas esta opción, aún puedes poner la aplicación a disposición de los evaluadores en dispositivos Windows 10 [generando códigos promocionales](generate-promotional-codes.md), como se ha descrito anteriormente. Cualquier persona que tenga uno de los códigos promocionales de la aplicación podrá descargarla en un dispositivo de Windows 10, aunque no hayas escrito aquí su dirección de correo.
 
-Para usar esta opción, al enviar la aplicación selecciona **Ocultar esta aplicación y ponerla a la disposición de solo las personas que especifiques abajo, quienes podrán descargar esta aplicación en dispositivos Windows Phone 8.x. Se puede usar un código de promoción para descargar esta aplicación en dispositivos Windows 10** de la sección [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility) de la página **Precios y disponibilidad**.
+Para usar esta opción, al enviar la aplicación selecciona **Ocultar esta aplicación y ponerla a la disposición de solo las personas que especifiques abajo, quienes podrán descargar esta aplicación en dispositivos Windows Phone 8.x. Se puede usar un código de promoción para descargar esta aplicación en dispositivos Windows10** de la sección [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility) de la página **Precios y disponibilidad**.
 
 Si eliges esta opción, debes tener en cuenta lo siguiente:
 
@@ -92,4 +89,3 @@ Si eliges esta opción, debes tener en cuenta lo siguiente:
 -   Las direcciones de correo deben estar separadas por punto y coma.
 -   Puedes agregar más direcciones más adelante, pero para ello será necesario crear un nuevo envío.
 -   No se puede revocar el acceso a la aplicación cuando los evaluadores ya la han descargado. Una vez la hayan descargado, podrán seguir usándola y recibirán cualquier actualización que envíes.
-

@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a82cb66c66b593c0241a651e4df34e3998a106c6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ba08e426fea4c494276978d96cf0b36f6956bdb8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Nota** Para obtener información general sobre el uso del enlace de datos en la aplicación con **{x:Bind}** y para realizar una comparación total entre **{x:Bind}** y **{Binding}**, consulta el tema [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
@@ -50,7 +47,7 @@ Durante el tiempo de compilación de XAML, **{x:Bind}** se convierte en un códi
 | _bindingProperties_ |
 | _propName_=_value_\[, _propName_=_value_\]* | Una o más propiedades de enlace que se especifican con una sintaxis de par de nombre-valor. |
 | _propName_ | El nombre de cadena de la propiedad que se establecerá en el objeto Binding. Por ejemplo, "Converter". |
-| _value_ | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad que se establece. A continuación, se muestra un ejemplo de uso de _propName_=_value_ en el que el valor es en sí mismo una extensión de marcado: `Converter={StaticResource myConverterClass}`. Para obtener más información, consulta la sección [Propiedades que se pueden establecer con {x: enlace}](#properties-you-can-set) que se incluye más adelante. | 
+| _value_ | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad que se establece. A continuación, se muestra un ejemplo de uso de _propName_=_value_ en el que el valor es en sí mismo una extensión de marcado: `Converter={StaticResource myConverterClass}`. Para obtener más información, consulta la sección [Propiedades que se pueden establecer con {x: enlace}](#properties-that-you-can-set-with-xbind) que se incluye más adelante. | 
 
 ## <a name="property-path"></a>Ruta de acceso de propiedades
 
@@ -228,4 +225,3 @@ En este XAML de ejemplo se usa **{x:Bind}** con una propiedad **ListView.ItemTem
     </StackPanel>
   </DataTemplate>
 ```
-

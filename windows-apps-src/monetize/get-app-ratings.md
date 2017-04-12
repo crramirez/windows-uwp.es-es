@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de las valoraciones agregados de un intervalo de fechas y otros filtros opcionales."
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de clasificación agregados de un intervalo de fechas y otros filtros opcionales."
 title: "Obtener las valoraciones de la aplicación"
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, UWP, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, valoraciones, ratings"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 25f057eba5827be34b4fcf9d31a6e0ae71dc9893
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ccd3b8660f476ee6734b987c6652d91cf0cd42f5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-app-ratings"></a>Obtener las valoraciones de la aplicación
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de las valoraciones en formato JSON pertenecientes a un intervalo de fechas especificado y según otros filtros opcionales. Esta información también está disponible en el [informe de clasificaciones](../publish/ratings-report.md) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de clasificación en formato JSON pertenecientes a un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de clasificaciones](../publish/ratings-report.md) del panel del Centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -34,7 +31,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings``` |
 
@@ -44,7 +41,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -75,8 +72,8 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 | Campos        |  Descripción        |
 |---------------|-----------------|
 | market | Una cadena que contiene el código de país ISO 3166 del mercado donde se ha valorado la aplicación. |
-| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul> |
-| deviceType | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconocido</strong></li></ul> |
+| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul> |
+| deviceType | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul> |
 | isRevised | Especifica <strong>true</strong> para filtrar las clasificaciones que hayan sido revisadas; de lo contrario, especifica <strong>false</strong>. |
 
 <span/> 
@@ -100,8 +97,8 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                            |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Value      | matriz  | Matriz de objetos que contienen datos de clasificación agregados. Para obtener más información sobre los datos de cada objeto, consulta la sección [valores de clasificación](#rating-values) que encontrarás a continuación.                                                                                                                           |
-| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de datos de clasificación de la solicitud. |
+| Valor      | matriz  | Matriz de objetos que contienen datos de clasificación agregados. Para más información sobre los datos de cada objeto, consulta la sección [valores de clasificación](#rating-values) que encontrarás a continuación.                                                                                                                           |
+| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de clasificación de la solicitud. |
 | TotalCount | entero    | El número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                             |
 
 <span/>
@@ -112,7 +109,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 | Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| date            | cadena  | Es la primera fecha del intervalo de fechas de los datos de clasificación. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| fecha            | cadena  | Es la primera fecha del intervalo de fechas de los datos de clasificación. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | applicationId   | cadena  | El Id. de la Tienda de la aplicación sobre la que estás recuperando los datos de clasificación.                                                                                                                                                                 |
 | applicationName | cadena  | Nombre para mostrar de la aplicación.                                                                                                                                                                                                         |
 | market          | cadena  | Código de país ISO 3166 del mercado desde el cual se envió la clasificación.                                                                                                                                                              |
@@ -163,4 +160,3 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
 * [Obtener los datos del informe de errores](get-error-reporting-data.md)
 * [Obtener opiniones de la aplicación](get-app-reviews.md)
-

@@ -2,25 +2,22 @@
 author: mcleanbyron
 ms.assetid: 4F9657E5-1AF8-45E0-9617-45AF64E144FC
 description: "Usa estos métodos en la API de envío de la Tienda Windows para administrar complementos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows."
-title: "Administrar complementos mediante la API de envío de la Tienda Windows"
+title: "Administración de complementos"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, complementos, producto desde la aplicación, IAP, Windows Store submission API, add-ons, in-app product"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 55a6b548246e801c9fcc0392265263123f24de00
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, add-ons, complementos, in-app product, producto desde la aplicación, IAP, IAP"
+ms.openlocfilehash: b442f48b7d03f0f972882ec240dbc1f37f018fd9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="manage-add-ons-using-the-windows-store-submission-api"></a>Administrar complementos mediante la API de envío de la Tienda Windows
+# <a name="manage-add-ons"></a>Administración de complementos
 
 Usa los métodos siguientes en la API de envío de la Tienda Windows para administrar complementos (también conocidos como productos desde la aplicación o IAP) para tus aplicaciones. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
->**Nota:**&nbsp;&nbsp;estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. Este permiso se habilita para cuentas de desarrollador en fases y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
+>**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. Este permiso se habilita para cuentas de desarrollador en fases y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
 
 Estos métodos solo pueden usarse para obtener, crear o eliminar complementos. Para crear envíos de complementos, consulta los métodos de [Administrar envíos de complemento](manage-add-on-submissions.md).
 
@@ -104,9 +101,9 @@ Este recurso tiene los siguientes valores.
 | Valor      | Tipo   | Descripción        |
 |------------|--------|--------------|
 | applications      | array  | Matriz que contiene un [recurso de aplicación](#application-object) que representa la aplicación a la que está asociado este complemento. Solo se admite un elemento en esta matriz.  |
-| id | string  | Id. de la Tienda del complemento. Este valor lo proporciona la Tienda. Un ejemplo de un Id. de la Tienda sería 9NBLGGH4TNMP.  |
+| id | cadena  | Id. de la Tienda del complemento. Este valor lo proporciona la Tienda. Un ejemplo de un Id. de la Tienda sería 9NBLGGH4TNMP.  |
 | productId | string  | Id. del producto del complemento. Identificador que proporcionó el desarrollador cuando se creó el complemento. Para obtener más información, consulta [Establecer el tipo de producto y el id. del producto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id). |
-| productType | string  | Tipo de producto del complemento. Se admiten los siguientes valores: **Duradero** y **Consumible**.  |
+| productType | string  | El tipo de producto del complemento. Se admiten los siguientes valores: **Duradero** y **Consumible**.  |
 | lastPublishedInAppProductSubmission       | object | Un [recurso de envío](#submission-object) que proporciona información sobre el último envío publicado para el complemento.         |
 | pendingInAppProductSubmission        | object  |  Un [recurso de envío](#submission-object) que proporciona información sobre el envío pendiente actual para el complemento.  |   |
 
@@ -154,8 +151,8 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción     |
 |-----------------|---------|------------------|
-| id            | string  | Identificador del envío.    |
-| resourceLocation   | string  | Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para el envío.     |
+| id            | cadena  | Identificador del envío.    |
+| resourceLocation   | cadena  | Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para el envío.     |
  
 <span/>
 ## <a name="related-topics"></a>Temas relacionados
@@ -163,7 +160,6 @@ Este recurso tiene los siguientes valores.
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de complemento con la API de envío de la Tienda Windows](manage-add-on-submissions.md)
 * [Obtener todos los complementos](get-all-add-ons.md)
-* [Obtener un complemento](get-an-add-on.md)
+* [Obtención de un complemento](get-an-add-on.md)
 * [Crear un complemento](create-an-add-on.md)
 * [Eliminar un complemento](delete-an-add-on.md)
-

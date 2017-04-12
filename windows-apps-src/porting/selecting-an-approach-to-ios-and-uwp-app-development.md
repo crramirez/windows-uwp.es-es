@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9317ea8690d5696d4a9e55b3a88f1a2ff83d8bfd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ccacfc1257af529fcc2363285c6dd9e4ab2315ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Selección de un enfoque para iOS y desarrollo de aplicaciones para UWP
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ¿Cuáles son las opciones al desarrollar aplicaciones multiplataforma?
 
@@ -99,5 +96,4 @@ Con una aplicación de iOS existente, las opciones son un poco más limitadas. S
 -   [PlayCanvas](http://go.microsoft.com/fwlink/p/?LinkID=394061)
 
     Una herramienta para desarrollo de juegos basados en HTML.
-
 

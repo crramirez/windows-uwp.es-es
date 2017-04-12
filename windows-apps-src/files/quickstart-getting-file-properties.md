@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 89dee43da35e9a31bb7a795324119cb429d3734e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4412ccd88c73854c193e24e0ac4e3f03730a9f39
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="get-file-properties"></a>Obtener las propiedades de archivos
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -35,7 +33,7 @@ Obtiene las propiedades —de nivel superior, básicas y extendidas— de un arc
 
 ## <a name="prerequisites"></a>Requisitos previos
 
--   **Comprender la programación asincrónica de las aplicaciones para Plataforma universal de Windows (UWP)**
+-   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
 
     Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
@@ -141,4 +139,3 @@ foreach (Windows.Storage.StorageFile file in files)
  
 
  
-

@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: cb7380d0-bc14-4936-aa1c-206304b3dc70
 description: Aprende a controlar los errores generados por la clase AdControl en las bibliotecas de Microsoft Advertising.
-title: Control de errores con las bibliotecas de Microsoft Advertising
+title: Control de errores con las bibliotecas de publicidad
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, anuncios, ads, publicidad, advertising, control de errores, error handling, javascript, XAML, c#
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f979a250872f19a54c6b638d44624ff2e1840c91
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, error handling, control de errores, javascript, JavaScript, XAML, XAML, c, C#
+ms.openlocfilehash: 7c65f424341517072b06aaba30929f17303dcf1f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="error-handling-with-the-microsoft-advertising-libraries"></a>Control de errores con las bibliotecas de Microsoft Advertising
+# <a name="error-handling-with-the-advertising-libraries"></a>Control de errores con las bibliotecas de publicidad
 
 En este tema se proporciona información básica sobre cómo controlar los errores que genera la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) en las bibliotecas de Microsoft Advertising.
 
@@ -88,4 +85,3 @@ Consulta [Error handling in XAML/C# walkthrough](error-handling-in-xamlc-walkthr
  
 
  
-

@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 059fac41c0c0557dbc3d4739c1da78f794505839
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ac4a09180a678e8da197bfb030e27fa001eb74f0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
 ¿Las cosas no funcionan de la forma esperada? Consulta esta página de preguntas más frecuentes. Asimismo, consulta el tema [Known issues (Problemas conocidos)](known-issues.md) y el foro [Developing Universal Windows apps (Desarrollo de aplicaciones universales de Windows)](https://go.microsoft.com/fwlink/?linkid=839446). 
@@ -72,9 +69,7 @@ Puedes [publicar aplicaciones](../publish/index.md) a través del Centro de desa
 
 ### <a name="can-i-publish-my-game"></a>¿Puedo publicar mi juego?
 
-Puedes usar UWP y Xbox One en el modo de desarrollador para crear y probar los juegos de Xbox One. Para publicar juegos para UWP, debes registrarte en [ID@XBOX](http://www.xbox.com/Developers/id). 
-[ID@Xbox](http://www.xbox.com/Developers/id) proporciona a los desarrolladores acceso completo a las API de Xbox Live para sus juegos, incluida la puntuación de jugador y los logros, así como la capacidad de aprovechar el modo multijugador entre dispositivos, almacenamientos en la nube y todas las características de Xbox Live en Xbox One. 
-[ID@XBOX](http://www.xbox.com/Developers/id) también puede proporcionar acceso a kits de desarrollo de Xbox One para juegos que requieran tener acceso al máximo potencial del hardware de Xbox One.
+Puedes usar UWP y Xbox One en el modo de desarrollador para crear y probar los juegos de Xbox One. Para publicar juegos para UWP, te debes registrar en [ID@XBOX](http://www.xbox.com/Developers/id) o formar parte del [Programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator). Para más información, consulta [Introducción al programa para desarrolladores](https://developer.microsoft.com/games/xbox/docs/xboxlive/get-started/developer-program-overview.html).
 
 ### <a name="will-the-standard-game-engines-work"></a>¿Los motores de juego estándar funcionarán?
 
@@ -142,4 +137,3 @@ Para obtener más información, consulta el proyecto [TVHelpers](https://github.
 ## <a name="see-also"></a>Consulta también
 - [Problemas conocidos de UWP en Xbox One](known-issues.md)
 - [UWP en Xbox One](index.md)
-

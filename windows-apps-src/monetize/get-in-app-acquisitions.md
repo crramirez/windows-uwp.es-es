@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de adquisición agregados de un complemento de un intervalo de fechas especificado y otros filtros opcionales."
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un complemento de un intervalo de fechas especificado y otros filtros opcionales."
 title: Obtener los datos de las adquisiciones de complementos
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, adquisiciones de complementos, add-on acquisitions"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: be69a45586f4b7d66740d141dcc350eafd16bb53
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cdd43c6e5df73ec1983593eb6198eba77c9df6e2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-add-on-acquisitions"></a>Obtener los datos de las adquisiciones de complementos
 
 
 
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos de adquisición agregados de complementos (también conocidos como productos desde la aplicación o IAP) de tu aplicación en formato JSON de un intervalo de fechas especificado y según otros filtros opcionales. Esta información también está disponible en el [informe de adquisiciones de complementos](../publish/add-on-acquisitions-report.md) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un complemento (también conocidos como productos desde la aplicación o IAP) de tu aplicación en formato JSON de un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de adquisiciones de complementos](../publish/add-on-acquisitions-report.md) del panel del Centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -36,7 +33,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud                                                                |
+| Método | URI de solicitud                                                                |
 |--------|----------------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions``` |
 
@@ -46,7 +43,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción          |
 |---------------|--------|--------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -65,7 +62,7 @@ El parámetro *applicationId* o *inAppProductId* es obligatorio. Para recuperar 
 | filter |cadena  | Una o más instrucciones que filtran las filas en la respuesta. Para obtener más información, consulta la sección [filtrar campos](#filter-fields) a continuación. | No   |
 | aggregationLevel | cadena | Especifica el intervalo de tiempo necesario para recuperar los datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>. | No |
 | orderby | cadena | Instrucción que ordena los valores de datos resultantes de cada compra de complemento. La sintaxis es <em>orderby=campo [orden],campo [orden],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>fecha</strong></li><li><strong>acquisitionType</strong></li><li><strong>ageGroup</strong></li><li><strong>storeClient</strong></li><li><strong>gender</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>orderName</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
-| groupby | cadena | Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<ul><li><strong>date</strong></li><li><strong>applicationName</strong></li><li><strong>inAppProductName</strong></li><li><strong>acquisitionType</strong></li><li><strong>ageGroup</strong></li><li><strong>storeClient</strong></li><li><strong>gender</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>orderName</strong></li></ul><p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>date</strong></li><li><strong>applicationId</strong></li><li><strong>inAppProductId</strong></li><li><strong>acquisitionQuantity</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p> |  No  |
+| groupby | cadena | Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<ul><li><strong>fecha</strong></li><li><strong>applicationName</strong></li><li><strong>inAppProductName</strong></li><li><strong>acquisitionType</strong></li><li><strong>ageGroup</strong></li><li><strong>storeClient</strong></li><li><strong>gender</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>orderName</strong></li></ul><p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>date</strong></li><li><strong>applicationId</strong></li><li><strong>inAppProductId</strong></li><li><strong>acquisitionQuantity</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p> |  No  |
 
 <span/>
 
@@ -85,7 +82,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 | storeClient | Una de las cadenas siguientes:<ul><li><strong>Tienda de Windows Phone (cliente)</strong></li><li><strong>Tienda Windows (cliente)</strong></li><li><strong>Tienda Windows (web)</strong></li><li><strong>Compras por volumen de empresas</strong></li><li><strong>Otros</strong></li></ul> |
 | gender | Una de las cadenas siguientes:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Desconocido</strong></li></ul> |
 | market | Es una cadena que contiene el código de país ISO 3166 del mercado donde se realizó la compra. |
-| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul> |
+| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul> |
 | deviceType | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul> |
 | orderName | Una cadena que especifica el nombre del pedido del código promocional que se usó para comprar el complemento (esto solo es aplicable si el usuario adquirió el complemento canjeando un código promocional). |
 
@@ -113,7 +110,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción         |
 |------------|--------|------------------|
-| Value      | matriz  | Matriz de objetos que contienen los datos de compra agregados del complemento. Para obtener más información sobre los datos de cada objeto, consulta la sección [valores de compra del complemento](#add-on-acquisition-values) que encontrarás a continuación.                                                                                                              |
+| Valor      | matriz  | Matriz de objetos que contienen los datos de compra agregados del complemento. Para más información sobre los datos de cada objeto, consulta la sección [valores de compra del complemento](#add-on-acquisition-values) que encontrarás a continuación.                                                                                                              |
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero hay más de 10000 filas de datos de compra de complementos para la solicitud. |
 | TotalCount | entero    | Número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                                 |
 
@@ -126,7 +123,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo    | Descripción        |
 |---------------------|---------|---------------------|
-| date                | cadena  | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| fecha                | cadena  | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | inAppProductId      | cadena  | El identificador de la Tienda del complemento para el que quieres recuperar datos de compra.                                                                                                                                                                 |
 | inAppProductName    | cadena  | Nombre del complemento que quieres que se muestre. Este valor solo aparece en los datos de respuesta si el parámetro *aggregationLevel* se establece en **day**, a menos que especifiques el campo **inAppProductName** en el parámetro *groupby*.                                                                                                                                                                                                            |
 | applicationId       | cadena  | El identificador de la Tienda de la aplicación para la que quieres recuperar los datos de compra de complementos.                                                                                                                                                           |
@@ -184,4 +181,3 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
  
 
  
-

@@ -2,21 +2,17 @@
 title: Vista ordenada de rasterizador (ROV)
 description: "Las vistas ordenadas de rasterizador permiten corregir algunas de las limitaciones de un búfer de profundidad, en particular la de tener varias texturas con transparencia que se apliquen a los mismos píxeles."
 ms.assetid: BCB1EE0D-4C1D-4E17-BDB7-173F448E0A7B
-keywords:
-- Vista ordenada de rasterizador (ROV)
+keywords: Vista ordenada de rasterizador (ROV)
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ee1ac48111c94f88d87e595eaaf6f5442d137ce4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 313b599a402ba00e220aca649834a217daf3eaaa
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="rasterizer-ordered-view-rov"></a>Vista ordenada de rasterizador (ROV)
 
 
@@ -32,7 +28,6 @@ Las vistas ordenadas de rasterizador permiten aplicar los algoritmos de "transpa
  
 
  
-
 
 
 

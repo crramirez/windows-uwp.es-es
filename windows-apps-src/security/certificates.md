@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 84187230ee8e10c5e9a1a75f67065e202c4bff00
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1fb3424b56da696aa5fa99603209b379c1a5b66e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="intro-to-certificates"></a>Introducción a los certificados
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe el uso de certificados en las aplicaciones de la Plataforma universal de Windows (UWP). Los certificados digitales se usan en criptografía de clave pública para enlazar una clave pública a una persona, un equipo o una organización. Las identidades enlazadas suelen usarse para autenticar una entidad a otra. Por ejemplo, los certificados se suelen usar para autenticar un servidor web a un usuario y un usuario a un servidor web. Puedes crear solicitudes de certificados e instalar o importar certificados emitidos. También puedes inscribir un certificado en una jerarquía de certificados.
@@ -103,5 +100,4 @@ Un certificado X.509 versión 3 contiene los campos definidos en la versión 1 y
 | Nombre alternativo del firmante     | Especifica una o más formas de nombre alternativas para el firmante de la solicitud de certificado. Algunos ejemplos de formas alternativas son direcciones de correo electrónico, nombres DNS, direcciones IP y URI.                           |
 | Atributos de directorio de firmantes | Contiene atributos de identificación, como la nacionalidad del firmante del certificado. El valor de extensión es una secuencia de pares de valores OID.                                                              |
 | Identificador de clave del firmante       | Diferencia entre varias claves públicas de las que el firmante del certificado es titular. El valor de extensión suele ser un hash SHA-1 de la clave.                                                                   |
-
 

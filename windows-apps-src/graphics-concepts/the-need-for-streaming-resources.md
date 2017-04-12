@@ -2,21 +2,17 @@
 title: La necesidad de los recursos de streaming
 description: "Los recursos de streaming son necesarios para que no se malgaste memoria de la GPU al almacenar regiones de superficies a las que no se accederá, así como para indicar al hardware cómo filtrar entre mosaicos adyacentes."
 ms.assetid: A88BE65B-104F-4176-9809-C12580A3684C
-keywords:
-- La necesidad de los recursos de streaming
+keywords: La necesidad de los recursos de streaming
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cdd98fcf0772cdcd1e2a75ecaf7d2e0b661e134b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5060d0076d93f8bca7e1547c4d9fb05ad4b1a3f5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="the-need-for-streaming-resources"></a>La necesidad de los recursos de streaming
 
 
@@ -50,9 +46,9 @@ En realidad, sin la compatibilidad con los recursos de streaming, el sistema gr�
 
 Puede usarse la paginación de software para dividir la superficie en mosaicos que sean lo suficientemente pequeños para que el hardware los administre.
 
-Direct3D admite superficies de [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) con hasta 16 384 píxeles en un lugar determinado. Una imagen de 16 384 de ancho por 16 384 de alto y con 4 bytes por píxel consumirá 1 GB de memoria de vídeo (y si se suman los mapas MIP, podría doblar esa cantidad). En la práctica, rara vez será necesario hacer referencia a la totalidad de los 1 GB en una sola operación de representación.
+Direct3D admite superficies de [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) con hasta 16384 píxeles en un lugar determinado. Una imagen de 16384 de ancho por 16384 de alto y con 4 bytes por píxel consumirá 1GB de memoria de vídeo (y si se suman los mapas MIP, podría doblar esa cantidad). En la práctica, rara vez será necesario hacer referencia a la totalidad de los 1GB en una sola operación de representación.
 
-Algunos desarrolladores de juegos modelan superficies de terreno de hasta 128 KB por 128 KB. La forma en que consiguen que esto funcione en las GPU existente es separar la superficie en mosaicos que sean lo suficientemente pequeños como para que el hardware los pueda administrar. La aplicación debe saber qué mosaicos pueden ser necesarios y cargarlos en una memoria caché de texturas en la GPU: un sistema de paginación de software.
+Algunos desarrolladores de juegos modelan superficies de terreno de hasta 128KB por 128KB. La forma en que consiguen que esto funcione en las GPU existente es separar la superficie en mosaicos que sean lo suficientemente pequeños como para que el hardware los pueda administrar. La aplicación debe saber qué mosaicos pueden ser necesarios y cargarlos en una memoria caché de texturas en la GPU: un sistema de paginación de software.
 
 Un inconveniente importante de este método se debe a que el hardware no sabe nada sobre la paginación que se produce: cuando es necesario mostrar en la pantalla una parte de una imagen que incluya mosaicos, el hardware desconoce cómo llevar a cabo un filtrado de función fija (es decir, eficaz) en los distintos mosaicos. Esto significa que la aplicación que administra su propia disposición en mosaicos de software debe recurrir al filtrado manual de las texturas en el código del sombreador (lo que resulta muy costoso si se desea un filtro anisotrópico de buena calidad ) o a malgastar medianiles de creación de memoria alrededor de los mosaicos que contienen datos de los mosaicos vecinos, de forma que el filtrado de hardware de función fija pueda seguir prestando cierta ayuda.
 
@@ -61,9 +57,9 @@ Un inconveniente importante de este método se debe a que el hardware no sabe na
 
 Si una representación en mosaico de las asignaciones de superficie es una característica de primera clase en el sistema gráfico, la aplicación podría indicar al hardware qué mosaicos deben estar disponibles. De esta forma, se malgasta menos memoria de la GPU al almacenar regiones de superficies a las que la aplicación sabe que no se accederá, y el hardware puede comprender cómo filtrar entre los mosaicos adyacentes, lo que reduce parte de las molestia que experimentan los desarrolladores que realizan la disposición en mosaicos de software por sí mismos.
 
-Sin embargo, para proporcionar una solución completa, debe hacerse algo para solucionar el hecho de que, independientemente de si se admite la disposición en mosaico dentro de una superficie, la dimensión de la superficie máxima actualmente es de 16 384, muy lejos de los más de 128 K que las aplicaciones ya desean. Simplemente requerir que el hardware admita tamaños de textura más grandes es un método, pero esta ruta supone gastos importantes o ventajas e inconvenientes.
+Sin embargo, para proporcionar una solución completa, debe hacerse algo para solucionar el hecho de que, independientemente de si se admite la disposición en mosaico dentro de una superficie, la dimensión de la superficie máxima actualmente es de 16384, muy lejos de los más de 128K que las aplicaciones ya desean. Simplemente requerir que el hardware admita tamaños de textura más grandes es un método, pero esta ruta supone gastos importantes o ventajas e inconvenientes.
 
-La ruta del filtro de textura y la ruta de representación de Direct3D ya están saturadas en términos de precisión al admitir texturas de 16 K con los demás requisitos, como la compatibilidad con extensiones de ventanilla que se salgan de la superficie durante la representación o la compatibilidad del ajuste de texturas fuera del borde de la superficie durante el filtrado. Una posibilidad es definir un equilibrio, de manera que a medida que el tamaño de la textura aumente por encima de 16 K, se sacrifiquen la funcionalidad o la precisión de alguna manera. Sin embargo, incluso con esta concesión, podrían requerirse costos de hardware adicionales en cuanto a la capacidad de direccionamiento en todo el sistema de hardware para ir a tamaños de textura más grandes.
+La ruta del filtro de textura y la ruta de representación de Direct3D ya están saturadas en términos de precisión al admitir texturas de 16K con los demás requisitos, como la compatibilidad con extensiones de ventanilla que se salgan de la superficie durante la representación o la compatibilidad del ajuste de texturas fuera del borde de la superficie durante el filtrado. Una posibilidad es definir un equilibrio, de manera que a medida que el tamaño de la textura aumente por encima de 16K, se sacrifiquen la funcionalidad o la precisión de alguna manera. Sin embargo, incluso con esta concesión, podrían requerirse costos de hardware adicionales en cuanto a la capacidad de direccionamiento en todo el sistema de hardware para ir a tamaños de textura más grandes.
 
 ## <a name="span-idissuewithlargetexturesprecisionforlocationsonsurfacespanspan-idissuewithlargetexturesprecisionforlocationsonsurfacespanspan-idissuewithlargetexturesprecisionforlocationsonsurfacespanissue-with-large-textures-precision-for-locations-on-surface"></a><span id="Issue_with_large_textures__precision_for_locations_on_surface"></span><span id="issue_with_large_textures__precision_for_locations_on_surface"></span><span id="ISSUE_WITH_LARGE_TEXTURES__PRECISION_FOR_LOCATIONS_ON_SURFACE"></span>Problema con las texturas de gran tamaño: precisión para las ubicaciones en la superficie
 
@@ -83,7 +79,6 @@ Otro escenario que en el que los recursos de streaming podrían resultar útiles
  
 
  
-
 
 
 

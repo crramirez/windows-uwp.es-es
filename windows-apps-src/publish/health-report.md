@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 838b70d5925627710875a498d0cc91efb3e0adf7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: dd1d0f01968a71dc2120316eb2c33baf0c9d0841
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="health-report"></a>Informe Estado
 
 
-El informe **Estado** del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden. Puedes visualizar estos datos en tu panel (**Análisis** > **Mantenimiento**) o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Si corresponde, puedes ver seguimientos de la pila para una mayor depuración. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+El informe **Mantenimiento** del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden. Puedes visualizar estos datos en tu panel (**Análisis** > **Mantenimiento**) o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Si corresponde, puedes ver seguimientos de la pila para una mayor depuración. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 
 > **Nota** Si ya habías publicado aplicaciones y habías visto datos de rendimiento, es posible que observes que se notifica un mayor número de bloqueos y eventos aquí. Esto se debe a que podemos incluir más datos en este informe para ofrecerle una perspectiva más completa.
@@ -63,4 +60,3 @@ Para mostrar el informe **Detalles del error** de un error en concreto, seleccio
  
 
  
-

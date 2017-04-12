@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: A26A287C-B4B0-49E9-BB28-6F02472AE1BA
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de rendimiento de la campaña publicitaria de la aplicación especificada durante un intervalo de fechas indicado y según otros filtros opcionales."
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de rendimiento de la campaña de anuncios de la aplicación especificada durante un intervalo de fechas indicado y según otros filtros opcionales."
 title: "Obtener los datos de rendimiento de la campaña publicitaria"
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, servicios de la Tienda, Store services, API de análisis de Tienda Windows, Windows Store analytics API, campañas publicitarias, ad campaigns"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ca7ba9ad8817a68c8dd5f74a8bf2674d76f9eadf
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2c0e696488af33731459bdef2c8dc24477755078
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-ad-campaign-performance-data"></a>Obtener los datos de rendimiento de la campaña publicitaria
 
 
@@ -37,7 +34,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud                                                              |
+| Método | URI de solicitud                                                              |
 |--------|--------------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/promotion``` |
 
@@ -47,7 +44,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                |
 |---------------|--------|---------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span />
 
@@ -90,7 +87,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción  |
 |------------|--------|---------------|
-| Value      | matriz  | Una matriz de objetos que contiene datos agregados de rendimiento de una campaña de anuncios. Para obtener más información sobre los datos de cada objeto, consulta la sección siguiente [Objeto de rendimiento de campañas](#campaign-performance-object).          |
+| Valor      | matriz  | Una matriz de objetos que contiene datos agregados de rendimiento de una campaña de anuncios. Para más información sobre los datos de cada objeto, consulta la sección de [objeto de rendimiento de campañas](#campaign-performance-object) que encontrarás a continuación.          |
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 5, pero resulta que hay más de 5 elementos de datos de la consulta. |
 | TotalCount | entero    | Número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                             |
 
@@ -103,13 +100,13 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 |---------------------|--------|------------------------|
 | fecha                | cadena | Es la primera fecha del intervalo de fechas de los datos de rendimiento de una campaña de anuncios. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | applicationId       | cadena | El identificador de la Tienda de la aplicación para la que quieres recuperar los datos de rendimiento de campaña de anuncios.                     |
-| campaignId     | string | El id. de la campaña de anuncios.           |
+| campaignId     | cadena | El id. de la campaña de anuncios.           |
 | lineId     | string |    El identificador de la [línea de entrega](manage-delivery-lines-for-ad-campaigns.md) de la campaña publicitaria que generó estos datos de rendimiento.        |
-| currencyCode              | string | El código de divisa del presupuesto de la campaña.              |
+| currencyCode              | cadena | El código de divisa del presupuesto de la campaña.              |
 | spend          | cadena |  El presupuesto que se ha invertido en la campaña de anuncios.     |
 | impressions           | largo | El número de impresiones de anuncios de la campaña.        |
 | installs              | largo | El número de instalaciones de aplicaciones relacionadas con la campaña.   |
-| clicks            | long | El número de clics de anuncios de la campaña.      |
+| clicks            | largo | El número de clics de anuncios de la campaña.      |
 | iapInstalls            | long | El número de instalaciones de complementos (también denominados compras desde la aplicación o IAP) relacionados con la campaña.      |
 | activeUsers            | long | El número de usuarios que han hecho clic en un anuncio que forma parte de la campaña y han vuelto a la aplicación.      |
 
@@ -159,4 +156,3 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Crear una campaña publicitaria para la aplicación](https://msdn.microsoft.com/windows/uwp/publish/create-an-ad-campaign-for-your-app)
 * [Ejecutar campañas de anuncios con los servicios de la Tienda Windows](run-ad-campaigns-using-windows-store-services.md)
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
-

@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3329a873b0e86a606d6e8899dcaca62c2e127c29
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 952e6381fc46fc2cfbc91a2f4219f69219d8435c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="cryptography"></a>Criptografía
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 El artículo ofrece una descripción general de las características de criptografía disponibles para aplicaciones de la Plataforma universal de Windows (UWP). Para obtener información detallada sobre tareas determinadas, consulta la tabla al final de este artículo.

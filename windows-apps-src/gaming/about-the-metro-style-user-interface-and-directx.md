@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, DirectX, objeto de aplicación"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7d3290633ead698a6c42c3accdbd2012ccfd7065
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="the-app-object-and-directx"></a>El objeto de aplicación y DirectX
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Los juegos DirectX para Plataforma universal de Windows (UWP) no usan muchos elementos y objetos de la interfaz de usuario de Windows. Como se ejecutan a un nivel más bajo en la pila de Windows Runtime, deben interoperar con el marco de la interfaz de usuario de una manera más básica, mediante el acceso y la interoperación con el objeto de aplicación directamente. Aprende cuándo y cómo se realiza esta interoperación y de qué manera puedes usar eficazmente, como desarrollador de DirectX, este modelo en el desarrollo de una aplicación para UWP.
 
@@ -59,7 +56,7 @@ Este es el conjunto básico de pasos necesarios para obtener una ventana con el 
 
     En este tipo, define:
 
-    -   Un método denominado [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491) que devuelva una instancia de la implementación de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), tal como la creaste en el paso 1.
+    -   Un método denominado [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491) que devuelva una instancia de la implementación de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), tal como la creaste en el paso1.
 
 3.  Pasa una instancia del proveedor de vistas a [**CoreApplication.Run**](https://msdn.microsoft.com/library/windows/apps/hh700469) desde **main**.
 
@@ -156,7 +153,6 @@ En general, cuando diseñes tu aplicación para UWP, usa la clase [**CoreDispatc
  
 
  
-
 
 
 

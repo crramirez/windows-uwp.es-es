@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 07cca18b97a50fe8ced8b76094d358b948d18535
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9dee8e05dbf2384fc87c1974a732ff36459fa229
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="make-your-app-easier-to-promote"></a>Facilitar la promoción de la aplicación
 
 
@@ -30,7 +27,7 @@ La Tienda Windows muestra distintos tipos de aplicaciones agrupadas por categor�
 
     Al presentar aplicaciones, la Tienda Windows puede usar tus [capturas de pantalla e imágenes de la aplicación](app-screenshots-and-images.md) en varios diseños. Asegúrate de diseñar capturas de pantalla excelentes que representen la aplicación y de que la primera captura de pantalla sea especialmente representativa y atractiva.
 
-    Para maximizar la posibilidad de presentar la aplicación en la Tienda, también tendrás que proporcionar al menos una imagen promocional del envío de la aplicación. Proporcionar el tamaño de píxeles 2400 x 1200 es lo más importante, ya que podemos usar esa imagen de distintas maneras en la Tienda para los clientes de Windows 10. Ten en cuenta que puede que recortemos esta imagen en algunos diseños, así que el centro de la imagen debería contener la información o los elementos gráficos clave más relevantes de la aplicación. Si la aplicación se ejecuta en versiones anteriores del sistema operativo, también es recomendable proporcionar tamaños de imagen adicionales. Para más información e instrucciones, consulta [Material de promoción](app-screenshots-and-images.md#promotional-artwork).
+    Para maximizar la posibilidad de presentar la aplicación en la Tienda, también tendrás que proporcionar al menos una imagen promocional del envío de la aplicación. Proporcionar el tamaño de píxeles 2400 x 1200 es lo más importante, ya que podemos usar esa imagen de distintas maneras en la Tienda para los clientes de Windows10. Ten en cuenta que puede que recortemos esta imagen en algunos diseños, así que el centro de la imagen debería contener la información o los elementos gráficos clave más relevantes de la aplicación. Si la aplicación se ejecuta en versiones anteriores del sistema operativo, también es recomendable proporcionar tamaños de imagen adicionales. Para más información e instrucciones, consulta [Material de promoción](app-screenshots-and-images.md#promotional-artwork).
 
 -   **Crea una sola versión de tu aplicación, en vez de crear una versión gratuita y otra paga.**
 
@@ -49,7 +46,6 @@ Si sigues estas instrucciones, también será más fácil para terceros promocio
  
 
  
-
 
 
 

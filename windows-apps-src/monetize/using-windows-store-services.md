@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, servicios de la Tienda
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 987d52022489f3ad1eabef047ee6114de448d4ec
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 27e4084cc3ab168fcb68969f973ad21f040cec4f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-store-services"></a>Servicios de la Tienda Windows
 
 La Tienda Windows muestra varios servicios a los que se puede llamar a través de las API de REST para obtener acceso mediante programación a determinados tipos de datos de aplicaciones registradas en una cuenta del Centro de desarrollo de Windows, ya sea tuya o de tu organización.
@@ -31,4 +28,3 @@ La Tienda Windows muestra varios servicios a los que se puede llamar a través d
 | [Crear y administrar usuarios](create-and-manage-submissions-using-windows-store-services.md) | Usa la *API de envío de la Tienda Windows* para efectuar consultas mediante programación y crear envíos de aplicaciones, complementos y paquetes piloto para tu cuenta del Centro de desarrollo de Windows o la de tu organización. Esta API es útil si tu cuenta administra muchas aplicaciones y complementos y quieres automatizar y optimizar el proceso de envío de estos activos. |
 | [Administrar los derechos de producto de un servicio](view-and-grant-products-from-a-service.md)  | Si tienes un catálogo de aplicaciones y complementos en la Tienda, puedes usar la *API de colecciones de la Tienda Windows* y la *API de compra de la Tienda Windows* para acceder a la información de propiedad de estos productos desde tus servicios, notificar un producto consumible como completado para un usuario y conceder un derecho para un producto gratuito a un usuario.  |
 | [API de metadatos de la aplicación para redes de publicidad](app-metadata-api-for-advertising-networks.md)  | Las redes de publicidad pueden usar esta API para, mediante programación, recuperar metadatos sobre las aplicaciones de la Tienda Windows, incluidos detalles como la descripción y la categoría de la descripción de la Tienda correspondientes a la aplicación, y si la aplicación está destinada a niños menores de 13 años. El acceso a esta API está actualmente restringido a los desarrolladores a los que Microsoft ha concedido permiso.  |
-

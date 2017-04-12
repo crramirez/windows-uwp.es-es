@@ -9,20 +9,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8c2251c5c78fed10959b89de0d81ff563d0fa3e3
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d071a0ff6d228608d7f6c7acdcfd88df38f2c390
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="upload-a-folder-to-the-development-directory"></a>Cargar una carpeta en el directorio de desarrollo
 
 **Solicitud**
 
 Puedes cargar una carpeta completa de una vez en el id. de la carpeta conocida para DevelopmentFiles (o en una subcarpeta dentro de esa carpeta).
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :------
 POST | /api/app/packagemanager/upload 
 <br />
@@ -58,5 +55,4 @@ Código de estado HTTP      | Descripción
 **Familias de dispositivos disponibles**
 
 * Windows Xbox
-
 

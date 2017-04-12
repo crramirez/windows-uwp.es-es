@@ -1,24 +1,21 @@
 ---
 author: jwmsft
 description: "Puedes usar la clase PropertyPath y la sintaxis de cadena para crear una instancia de un valor PropertyPath en XAML o en código."
-title: Sintaxis de Property-path
+title: Sintaxis de PropertyPath
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 301f411f1911e12163ba123b93f99f5f15b5e479
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, uwp
+ms.openlocfilehash: 3209028f151608c83e69d6750e978132a6c8b83c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="property-path-syntax"></a>Sintaxis de PropertyPath
 
-# <a name="property-path-syntax"></a>Sintaxis de Property-path
-
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Puedes usar la clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) y la sintaxis de cadena para crear una instancia de un valor **PropertyPath** en XAML o en código. El enlace de datos usa los valores de **PropertyPath**. Una sintaxis similar se usa para seleccionar el destino de las animaciones de guión gráfico. Para los dos escenarios, una ruta de acceso de propiedades describe un cruce seguro de una o más relaciones de propiedades de objeto que finalmente se resuelven en una sola propiedad.
 
@@ -122,5 +119,4 @@ La mayor parte de las veces, puedes aplicar una clase [**PropertyPath**](https:/
 * [**Binding (Enlace)**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**Binding constructor (Constructor Binding)**](https://msdn.microsoft.com/library/windows/apps/br209825)
 * [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)
-
 

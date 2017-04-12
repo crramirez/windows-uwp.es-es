@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store Services SDK
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7a8dcb282ea3df16ee8a12247a07af27cbf65b3a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7fa775c319e1d84f8b73e42723d9fb36fdd03b73
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="microsoft-store-services-sdk"></a>Microsoft Store Services SDK
 
 Microsoft Store Services SDK proporciona características que te ayudan a obtener más dinero y a conectar con clientes en tus aplicaciones para Plataforma universal de Windows (UWP), por ejemplo, mostrando anuncios y ejecutando pruebas A/B en tus aplicaciones. Este SDK es una extensión de Visual Studio 2015 y versiones posteriores de Visual Studio.
@@ -38,9 +35,10 @@ En este momento, el SDK es compatible con los siguientes escenarios para aplicac
 El Microsoft Store Services SDK requiere lo siguiente:
 
 * Visual Studio 2015 o una versión posterior.
-* Visual Studio Tools para aplicaciones universales de Windows instalados con tu versión de Visual Studio.
+* Visual Studio Tools para aplicaciones universales de Windows que se instala con la versión de Visual Studio.
 
->**Nota:**&nbsp;&nbsp;Para instalar el SDK con Visual Studio 2015, debes tener instalada la versión 1.1 o posterior de Visual Studio Tools para aplicaciones universales de Windows. Para obtener más información sobre esta actualización a Visual Studio Tools para aplicaciones universales de Windows, consulta las [notas de la versión](http://go.microsoft.com/fwlink/?LinkID=624516).
+> [!NOTE]
+> Para instalar el SDK con Visual Studio 2015, debes tener instalada la versión 1.1 o posterior de Visual Studio Tools para aplicaciones universales de Windows. Para obtener más información sobre esta actualización a Visual Studio Tools para aplicaciones universales de Windows, consulta las [notas de la versión](http://go.microsoft.com/fwlink/?LinkID=624516).
 
 <span id="install" />
 ## <a name="install-the-sdk"></a>Instalar el SDK
@@ -52,7 +50,8 @@ Hay dos opciones para instalar el Microsoft Store Services SDK para su uso con V
 
 Microsoft publica periódicamente nuevas versiones de Microsoft Store Services SDK con nuevas características y mejoras de rendimiento. Si tienes proyectos existentes que usan el SDK y quieres usar la versión más reciente, simplemente descarga e instala la versión más reciente del SDK en el equipo de desarrollo.
 
->**Nota:**&nbsp;&nbsp;Para instalar el SDK con Visual Studio 2015, debes tener instalada la versión 1.1 o posterior de Visual Studio Tools para aplicaciones universales de Windows. Para obtener más información sobre esta actualización a Visual Studio Tools para aplicaciones universales de Windows, consulta las [notas de la versión](http://go.microsoft.com/fwlink/?LinkID=624516).
+> [!NOTE]
+> Para instalar el SDK con Visual Studio 2015, debes tener instalada la versión 1.1 o posterior de Visual Studio Tools para aplicaciones universales de Windows. Para obtener más información sobre esta actualización a Visual Studio Tools para aplicaciones universales de Windows, consulta las [notas de la versión](http://go.microsoft.com/fwlink/?LinkID=624516).
 
 <span id="install-msi" />
 ### <a name="install-via-msi"></a>Instalación a través de MSI
@@ -90,15 +89,15 @@ Para instalar las bibliotecas del Microsoft Store Services SDK para un proyecto 
   MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
   ```
 
-3.  Inicia Visual Studio y abre el proyecto en el que quieres usar las bibliotecas del Microsoft Store Services SDK.
-
-  >**Nota:**&nbsp;&nbsp;Si tu proyecto ya incluye referencias a bibliotecas de una instalación MSI anterior del SDK, elimina esas referencias del proyecto. Esas referencias tendrán iconos de advertencia junto a ellas, porque las bibliotecas a las que hacen referencia se han eliminado en los pasos anteriores.
+3.  Inicia Visual Studio y abre el proyecto en el que quieres usar las bibliotecas de Microsoft Store Services SDK.
+    > [!NOTE]
+    > Si tu proyecto ya incluye referencias a bibliotecas de una instalación MSI anterior del SDK, elimina esas referencias del proyecto. Esas referencias tendrán iconos de advertencia junto a ellas, porque las bibliotecas a las que hacen referencia se han eliminado en los pasos anteriores.
 
 4. En Visual Studio, haz clic en **Proyecto** y luego en **Administrar paquetes de NuGet**.
 
 5. En el cuadro de búsqueda, escribe **Microsoft.Services.Store.SDK** e instala el paquete Microsoft.Services.Store.SDK.
-
-  >**Nota:**&nbsp;&nbsp;Si la ventana **Salida** notifica un error del *paquete de instalación* que indica que la ruta de acceso es demasiado larga, puede que debas configurar NuGet para extraer los paquetes en otra ubicación con una ruta más corta que la ubicación predeterminada. Para ello, agrega el valor ```repositoryPath``` a un archivo nuget.config en el equipo y asígnalo a una ruta de carpeta corta donde se puedan extraer paquetes de NuGet. Para obtener más información, consulta [este artículo](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) en la documentación de NuGet. Como alternativa, puedes mover tu proyecto de Visual Studio a otra carpeta con una ruta más corta.
+    > [!NOTE]
+    > Si la ventana **Salida** notifica un error de *Install-Package* que indica que la ruta de acceso especificada es demasiado larga, puede que tengas que configurar NuGet para extraer los paquetes en otra ubicación con una ruta más corta que la ubicación predeterminada. Para ello, agrega el valor ```repositoryPath``` a un archivo nuget.config en el equipo y asígnalo a una ruta de carpeta corta donde se puedan extraer paquetes de NuGet. Para obtener más información, consulta [este artículo](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) en la documentación de NuGet. Como alternativa, puedes mover tu proyecto de Visual Studio a otra carpeta con una ruta más corta.
 
 6. Cierra el proyecto y, a continuación, vuelve a abrirlo.
 
@@ -112,8 +111,8 @@ Para instalar las bibliotecas del Microsoft Store Services SDK para un proyecto 
 Después de instalar el Microsoft Store Services SDK a través del instalador MSI o de NuGet, sigue estas instrucciones para hacer referencia a las bibliotecas del SDK en el proyecto UWP.
 
 1. Abre el proyecto en Visual Studio.
-
-  >**Nota:**&nbsp;&nbsp;Si tu proyecto es una aplicación JavaScript que tiene como destino **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica por arquitectura (por ejemplo, **x86**).
+    > [!NOTE]
+    > Si tu proyecto es una aplicación JavaScript que tiene como destino **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica de la arquitectura (por ejemplo, **x86**).
 
 2. En el **Explorador de soluciones**, haz clic con el botón secundario en **Referencias** y selecciona **Agregar referencia...**
 
@@ -125,7 +124,8 @@ Después de instalar el Microsoft Store Services SDK a través del instalador MS
 
 3. Haz clic en **Aceptar**.
 
->**Nota:**&nbsp;&nbsp;Si has instalado las bibliotecas del SDK a través de NuGet, el proyecto contendrá una referencia **Microsoft.Services.Store.SDK**, además de **Microsoft Advertising SDK for XAML** o **Microsoft Advertising SDK for JavaScript**. La referencia **Microsoft.Services.Store.SDK** representa el paquete de NuGet (en lugar de las bibliotecas que contiene) y puedes omitirla.
+> [!NOTE]
+> Si instalaste las bibliotecas del SDK a través de NuGet, el proyecto contendrá una referencia **Microsoft.Services.Store.SDK**, además de **SDK de Microsoft Advertising para XAML** o **SDK de Microsoft Advertising para JavaScript**. La referencia **Microsoft.Services.Store.SDK** representa el paquete de NuGet (en lugar de las bibliotecas que contiene) y puedes omitirla.
 
 <span id="framework" />
 ## <a name="understanding-framework-packages-in-the-sdk"></a>Descripción de los paquetes de marcos en el SDK
@@ -147,4 +147,3 @@ Si publicamos una nueva versión del SDK que incorpora nuevas API o característ
 * [Configurar la aplicación para recibir notificaciones de inserción del Centro de desarrollo](configure-your-app-to-receive-dev-center-notifications.md)
 * [Registrar eventos personalizados para el Centro de desarrollo](log-custom-events-for-dev-center.md)
 * [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md)
-

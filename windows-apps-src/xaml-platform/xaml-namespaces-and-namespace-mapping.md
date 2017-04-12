@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 11a99a1a68a37b8c60974193c8cab51247a25711
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5a3a0350a7a28cc31a1207abd4590a0fa3cbbc3e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Espacios de nombres XAML y asignación de espacios de nombres
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se explican las asignaciones de espacios de nombres XML/XAML (**xmlns**) tal y como se encuentran en el elemento raíz de la mayoría de los archivos XAML. También describe cómo producir asignaciones similares para tipos y ensamblados personalizados.
 
@@ -33,7 +30,7 @@ Tanto en su propósito general como en su aplicación a la programación de apli
 
 La información del tipo de respaldo se asocia a definiciones de espacios de nombres XAML determinadas. Los marcos de XAML, como Windows Runtime, pueden agregar varios ensamblados y espacios de nombres de código para asignarse a un único espacio de nombres XAML. Esto nos da el concepto de vocabulario XAML, que abarca un marco o tecnología de programación mayor. Un vocabulario XAML puede ser bastante amplio; por ejemplo, la mayoría del código XAML documentado para aplicaciones de Windows Runtime de esta referencia constituye un solo vocabulario XAML. Un vocabulario XAML también se puede ampliar; para ello, agrega tipos a las definiciones de código de respaldo asegurándote de incluir los tipos en espacios de nombres de código que ya se usan como orígenes de espacio de nombres asignados del vocabulario XAML.
 
-Un procesador XAML puede consultar los tipos y los miembros en los ensamblados de respaldo asociados a ese espacio de nombres XAML cuando cree una representación de objetos en tiempo de ejecución. Por este motivo, XAML resulta útil como medio para formalizar e intercambiar definiciones de comportamiento de construcción de objetos, y se usa como técnica de definición de interfaz de usuario para una aplicación de la Tienda Windows.
+Un procesador XAML puede consultar los tipos y los miembros en los ensamblados de respaldo asociados a ese espacio de nombres XAML cuando cree una representación de objetos en tiempo de ejecución. Por este motivo, XAML resulta útil como medio para formalizar e intercambiar definiciones de comportamiento de construcción de objetos, y se usa como técnica de definición de interfaz de usuario para una aplicación de la TiendaWindows.
 
 ## <a name="xaml-namespaces-in-typical-xaml-markup-usage"></a>Espacios de nombres XAML en un uso de marcado XAML típico
 
@@ -76,7 +73,7 @@ El espacio de nombres XAML "d:" se usa para la compatibilidad con diseñadores, 
 
 ### <a name="local-and-common"></a>**local:** y **common:**
 
-"local:" es un prefijo que se suele asignar automáticamente en las páginas XAML a un proyecto de aplicación de la Tienda Windows con plantilla. Se asigna para que haga referencia al mismo espacio de nombres que se ha creado para contener el [atributo x:Class](x-class-attribute.md) y el código de todos los archivos XAML, incluido app.xaml. Mientras definas cualquier clase personalizada que quieras usar en XAML en este mismo espacio de nombres, puedes usar el prefijo **local:** para referirte a tus tipos personalizados en XAML. Un prefijo relacionado que procede de un proyecto de aplicación de la Tienda Windows con plantilla es **common:**. Este prefijo hace referencia a un espacio de nombres "Common" anidado que contiene clases de utilidad como conversores y comandos; encontrarás las definiciones en la carpeta Common de la vista **Explorador de soluciones**.
+"local:" es un prefijo que se suele asignar automáticamente en las páginas XAML a un proyecto de aplicación de la TiendaWindows con plantilla. Se asigna para que haga referencia al mismo espacio de nombres que se ha creado para contener el [atributo x:Class](x-class-attribute.md) y el código de todos los archivos XAML, incluido app.xaml. Mientras definas cualquier clase personalizada que quieras usar en XAML en este mismo espacio de nombres, puedes usar el prefijo **local:** para referirte a tus tipos personalizados en XAML. Un prefijo relacionado que procede de un proyecto de aplicación de la TiendaWindows con plantilla es **common:**. Este prefijo hace referencia a un espacio de nombres "Common" anidado que contiene clases de utilidad como conversores y comandos; encontrarás las definiciones en la carpeta Common de la vista **Explorador de soluciones**.
 
 ### **<a name="vsm"></a>vsm:**
 
@@ -118,5 +115,4 @@ Si haces referencia a propiedades adjuntas, el fragmento del tipo de propietario
 * [Plantillas de proyecto C#, VB y C++ para aplicaciones de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Migrar de Silverlight o código XAML en WPF a una aplicación de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/br229571)
  
-
 

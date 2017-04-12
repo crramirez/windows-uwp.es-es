@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Referencia de GLSL a HLSL
-description: "El código OpenGL Shader Language (GLSL) se migra a código de High Level Shader Language (HLSL) de Microsoft cuando se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D 11 para crear un juego para la Plataforma universal de Windows (UWP)."
+description: "El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D11 para crear un juego para la Plataforma universal de Windows (UWP)."
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, sombreados, shaders
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f2d5f5a363abf026e865ed07221ba9075a6a67e7
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="glsl-to-hlsl-reference"></a>Referencia de GLSL a HLSL
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando [se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md) para crear un juego para la Plataforma universal de Windows (UWP). El GLSL al que se hace referencia aquí es compatible con OpenGL ES 2.0. El HLSL es compatible con Direct3D 11. Para obtener información acerca de las diferencias entre Direct3D 11 y las versiones anteriores de Direct3D, consulta el tema sobre la [asignación de características](feature-mapping.md).
+El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando [se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D11](port-from-opengl-es-2-0-to-directx-11-1.md) para crear un juego para la Plataforma universal de Windows (UWP). El GLSL al que se hace referencia aquí es compatible con OpenGL ES 2.0. El HLSL es compatible con Direct3D11. Para obtener información acerca de las diferencias entre Direct3D 11 y las versiones anteriores de Direct3D, consulta el tema sobre la [asignación de características](feature-mapping.md).
 
 -   [Comparación entre OpenGL ES 2.0 y Direct3D 11](#comparing-opengl-es-20-with-direct3d-11)
 -   [Migrar variables de GLSL a HLSL](#porting-glsl-variables-to-hlsl)
@@ -98,7 +95,7 @@ GLSL y HLSL generalmente difieren de estas maneras:
 <td align="left">Matrices principales de fila (predeterminado)</td>
 <td align="left">Matrices principales de columna (predeterminado)
 <div class="alert">
-<strong>Nota</strong>   Usa el modificador de tipo <strong>row_major</strong> para cambiar el diseño de una variable. Para obtener más información, consulta el tema sobre la [sintaxis de variable](https://msdn.microsoft.com/library/windows/desktop/bb509706). También puedes especificar una marca de compilador o una pragma para cambiar el valor predeterminado global.
+<strong>Nota:</strong>   Usa el modificador de tipo <strong>row_major</strong> para cambiar el diseño de una variable. Para obtener más información, consulta el tema sobre la [sintaxis de variable](https://msdn.microsoft.com/library/windows/desktop/bb509706). También puedes especificar una marca de compilador o una pragma para cambiar el valor predeterminado global.
 </div>
 <div>
  
@@ -157,7 +154,7 @@ En GLSL, aplicas modificadores (calificadores) a una declaración de variable de
 <tr class="even">
 <td align="left"><p><strong>const</strong></p>
 <p>Constantes que se compilan dentro del sombreador y nunca cambian.</p></td>
-<td align="left">Usa <strong>static const</strong>. <strong>static</strong> significa que el valor no está expuesto a búferes de constantes., <strong>const</strong> implica que el sombreador no puede cambiar el valor. Por ello, el valor se conoce en el tiempo de compilación según su inicializador.</td>
+<td align="left">Usa <strong>static const</strong>. <strong>static</strong> significa que el valor no está expuesto a búferes de constantes, <strong>const</strong> implica que el sombreador no puede cambiar el valor. Por ello, el valor se conoce en el tiempo de compilación según su inicializador.</td>
 </tr>
 </tbody>
 </table>
@@ -571,7 +568,6 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
  
 
  
-
 
 
 

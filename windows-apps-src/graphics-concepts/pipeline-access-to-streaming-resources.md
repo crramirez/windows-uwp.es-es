@@ -2,21 +2,17 @@
 title: "Acceso de canalización a recursos de streaming"
 description: "Los recursos de streaming se pueden utilizar en vistas de recurso de sombreador (SRV), vistas de destino de representación (RTV), vistas de galería de símbolos de profundidad (DSV) y vistas de acceso sin ordenar (UAV), así como en algunos puntos de enlace donde no se utilizan vistas, como los enlaces de búfer de vértices."
 ms.assetid: 18DA5D61-930D-4466-8EFE-0CED566EA4A6
-keywords:
-- "Acceso de canalización a recursos de streaming"
+keywords: "Acceso de canalización a recursos de streaming"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5f4fd92e1519579f15b3c3d452ce80e944f0942b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b730a8c15f4327397e945b616c6c1edc2e1ad5a9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="pipeline-access-to-streaming-resources"></a>Acceso de canalización a recursos de streaming
 
 
@@ -78,7 +74,6 @@ Si todos los iconos detrás de una superficie de acceso de memoria de un sombrea
  
 
  
-
 
 
 

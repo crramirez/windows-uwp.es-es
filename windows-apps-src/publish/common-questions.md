@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 20a05337052392446d733af7da180f9466fef05f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8171301a628e173128689765914faea622fd4837
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="common-questions-about-ad-campaigns"></a>Preguntas comunes sobre las campañas publicitarias
 
 ## <a name="how-much-does-it-cost-to-run-an-ad-for-my-app"></a>¿Cuánto cuesta mostrar un anuncio para mi aplicación?
@@ -24,7 +21,7 @@ Realmente depende de ti, pero recuerda: cuanto más gastes, más personas verán
 
 ## <a name="how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign"></a>¿Cómo se puede aumentar la cantidad máxima del presupuesto mensual permitida para la campaña publicitaria?
 
-Si tienes previsto gastar más de 10 000 $ en un mes en tus campañas publicitarias, ponte en contacto con [aiacare@microsoft.com](mailto:aiacare@microsoft.com). Se te actualizará a una cuenta premium, que te permite gastar hasta 50 000 $ por campaña. Una cuenta premium también ofrece prestaciones adicionales, como la capacidad de definir las fechas de inicio finalización de la campaña y de especificar una dirección URL de destino de la campaña.
+Si tienes previsto gastar más de 10000$ en un mes en tus campañas publicitarias, ponte en contacto con [aiacare@microsoft.com](mailto:aiacare@microsoft.com). Se te actualizará a una cuenta premium, que te permite gastar hasta 50000$ por campaña. Una cuenta premium también ofrece prestaciones adicionales, como la capacidad de definir las fechas de inicio finalización de la campaña y de especificar una dirección URL de destino de la campaña.
 
 ## <a name="can-i-run-ads-for-one-of-my-apps-in-my-other-apps"></a>¿Puedo mostrar anuncios para una de mis aplicaciones en el resto de mis aplicaciones?
 
@@ -40,7 +37,7 @@ Si usas una de las plantillas de anuncio predeterminadas, puedes elegir el tama�
 
 ## <a name="where-will-my-ad-appear"></a>¿Dónde aparecerá el anuncio?
 
-El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Estas propiedades se establecen al publicar la aplicación en la Tienda Windows. Para campañas "Universal", tus anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
+El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Estas propiedades se establecen al publicar la aplicación en la TiendaWindows. Para campañas "Universal", tus anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
 
 Actualmente, se admiten campañas publicitarias en estos países y regiones:
 
@@ -66,9 +63,8 @@ Ve a <http://commerce.microsoft.com>, inicia sesión con las credenciales de la 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear una campaña publicitaria para la aplicación](create-an-ad-campaign-for-your-app.md)
+* [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
 * [Administrar campañas publicitarias](managing-your-ad-campaign.md)
 * [Acerca de los anuncios internos](about-house-ads.md)
 * [Acerca de los anuncios de la comunidad](about-community-ads.md)
 * [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md)
-

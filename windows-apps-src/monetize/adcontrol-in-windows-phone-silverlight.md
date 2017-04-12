@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
-description: "Aprende a usar la clase AdControl para mostrar anuncios en banners en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0."
+description: "Aprende a usar la clase AdControl para mostrar anuncios de banner en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0."
 title: AdControl en Windows Phone Silverlight
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, anuncios, publicidad, AdControl, Silverlight, Windows Phone
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1f4606f5bb5446d8749f80e2bf4772a0b6db48b3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 743b9faccaa120f1904b592fc09a965dc7878e03
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adcontrol-in-windows-phone-silverlight"></a>AdControl en Windows Phone Silverlight
 
-En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) para mostrar anuncios en banners en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0.
+En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) para mostrar anuncios de banner en una aplicación Silverlight para Windows Phone8.1 o Windows Phone8.0.
 
-> **Nota para Windows Phone Silverlight 8.0**&nbsp;&nbsp;Los anuncios en banner aún se admiten para las aplicaciones de Silverlight de Windows Phone 8.0 que usan **AdControl** de una versión anterior del Universal Ad Client SDK o Microsoft Advertising SDK y que ya están disponibles en la Tienda. Sin embargo, los anuncios en banner ya no se admiten en los nuevos proyectos de Silverlight para Windows Phone 8.0. Además, algunos escenarios de depuración y pruebas están limitados en los proyectos de Silverlight de Windows Phone 8.x. Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md#silverlight_support).
+> **Nota para Windows Phone Silverlight8.0**&nbsp;&nbsp;Los anuncios en banner aún se admiten para las aplicaciones de Silverlight de Windows Phone8.0 que usan **AdControl** de una versión anterior del Universal Ad Client SDK o Microsoft Advertising SDK y que ya están disponibles en la Tienda. Sin embargo, los anuncios en banner ya no se admiten en los nuevos proyectos de Silverlight para Windows Phone8.0. Además, algunos escenarios de depuración y pruebas están limitados en los proyectos de Silverlight de Windows Phone8.x. Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md#silverlight_support).
 
 ## <a name="add-the-advertising-assemblies-to-your-project"></a>Agregar los ensamblados publicitarios a tu proyecto
 
@@ -32,14 +29,14 @@ Para comenzar, descarga e instala el paquete de NuGet que contiene los ensamblad
 
 3.  En la ventana de la **Consola del Administrador de paquetes**, escriba uno de estos comandos.
 
-  * Si el proyecto está destinado a Windows Phone 8.0, escribe este comando.
+  * Si el proyecto está destinado a Windows Phone8.0, escribe este comando.
 
       > [!div class="tabbedCodeSnippets"]
       ```syntax
       Install-Package Microsoft.Advertising.WindowsPhone.SL80 -Version 6.2.40501.1
       ```
 
-  * Si el proyecto está destinado a Windows Phone 8.1, escribe este comando.
+  * Si el proyecto está destinado a Windows Phone8.1, escribe este comando.
 
       > [!div class="tabbedCodeSnippets"]
       ```syntax
@@ -135,4 +132,3 @@ Para comenzar, descarga e instala el paquete de NuGet que contiene los ensamblad
 
 
  
-

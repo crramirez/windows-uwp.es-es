@@ -1,6 +1,6 @@
 ---
 author: shawjohn
-Description: "El informe Canales y conversiones del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows 10 han llegado hasta la descripción de tu aplicación."
+Description: "El informe sobre canales y conversiones del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows 10 han llegado hasta la descripción de la aplicación."
 title: Informe Canales y conversiones
 ms.assetid: C359B9FB-A17B-4A8E-B8EE-19F2F98AA4FF
 ms.author: johnshaw
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, canales, conversiones, informe, análisis"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60f639c6bad73273a6cc7f83cf65fdf321211ba1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cbdd2e530594b97847196941580e2837d71698d0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="channels-and-conversions-report"></a>Informe Canales y conversiones
 
 
-El informe **Canales y conversiones** del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows 10 han llegado hasta la descripción de tu aplicación. Te permite realizar un seguimiento de las [campañas de promoción personalizadas](create-a-custom-app-promotion-campaign.md) para la aplicación o sus complementos y ver cuántas de las visitas han generado nuevas adquisiciones. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
+El informe de **canales y conversiones** del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows 10 han llegado hasta la descripción de la aplicación. Te permite realizar un seguimiento de las [campañas de promoción personalizadas](create-a-custom-app-promotion-campaign.md) para la aplicación o sus complementos y ver cuántas de las visitas han generado nuevas adquisiciones. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
-> **Importante** Este informe solo muestra los datos de vista y conversión de la página de los clientes de Windows 10.
+> **Importante** Este informe solo muestra los datos de vista y conversión de la página de los clientes de Windows10.
 
  
 
@@ -39,7 +36,7 @@ En este informe no se muestra una tasa de conversión dado que nuestras vistas d
 
 Los datos de conversión se proporcionan solo para las campañas personalizadas. Para otros tipos de canal, solo se incluyen en este informe los datos de la vista de página.
 
-> **Nota**  Los clientes pueden llegar a la descripción de la aplicación haciendo clic en una campaña personalizada que no hayas creado tú. Para tener en cuenta esta posibilidad, marcamos cada vista de página dentro de una sesión con el identificador de campaña desde el que el usuario entra a la Tienda por primera vez. Luego se atribuye una conversión de la aplicación a ese identificador de campaña si se produce una adquisición de la aplicación en el plazo de 24 horas. Cuando ves el informe, es por esto que es posible que veas conversiones atribuidas a campañas con las que no estás familiarizado, por qué puedes ver un mayor número total de conversiones que en el desglose de conversiones, y por qué es posible que tengas conversiones o conversiones de complemento que tengan cero vistas de página. Puedes ver el desglose de conversiones por identificador de campaña para ver solo las conversiones atribuidas campañas creadas por ti a fin de evaluar su efectividad.
+> **Nota**  Los clientes pueden llegar a la descripción de la aplicación haciendo clic en una campaña personalizada que no hayas creado tú. Para tener en cuenta esta posibilidad, marcamos cada vista de página dentro de una sesión con el identificador de campaña desde el que el usuario entra a la Tienda por primera vez. Luego se atribuye una conversión de la aplicación a ese identificador de campaña si se produce una adquisición de la aplicación en el plazo de 24horas. Cuando ves el informe, es por esto que es posible que veas conversiones atribuidas a campañas con las que no estás familiarizado, por qué puedes ver un mayor número total de conversiones que en el desglose de conversiones, y por qué es posible que tengas conversiones o conversiones de complemento que tengan cero vistas de página. Puedes ver el desglose de conversiones por identificador de campaña para ver solo las conversiones atribuidas campañas creadas por ti a fin de evaluar su efectividad.
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -99,4 +96,3 @@ En el gráfico **Desglose de conversiones** se muestran los detalles siguientes 
  
 
  
-

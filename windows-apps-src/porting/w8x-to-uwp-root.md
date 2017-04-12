@@ -1,6 +1,6 @@
 ---
 author: mcleblanc
-description: "Si tienes una aplicación Universal 8.1 (tanto si tiene como destino Windows 8.1, Windows Phone 8.1 o ambos), comprobarás que el código fuente y las habilidades se portarán sin dificultad a Windows 10."
+description: "Si tienes una aplicación Universal 8.1 (tanto si tiene como destino Windows8.1, Windows Phone8.1 o ambos), comprobarás que el código fuente y las habilidades se portarán sin dificultad a Windows10."
 title: Portar de Windows Runtime 8.x a UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 ms.author: markl
@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a4ee1fd29b276958ed6a18b4eadcd89d5ea914b6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 37da1d6385bf18fcf44f6425b843715e1a462379
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="move-from-windows-runtime-8x-to-uwp"></a>Mover de Windows Runtime8.x a UWP
 
-# <a name="move-from-windows-runtime-8x-to-uwp"></a>Mover de Windows Runtime 8.x a UWP
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Si tienes una aplicación Universal 8.1 (tanto si tiene como destino Windows 8.1, Windows Phone 8.1 o ambos), comprobarás que el código fuente y las habilidades se portarán sin dificultad a Windows 10. Con Windows 10, puedes crear una aplicación para la Plataforma universal de Windows (UWP), que es un único paquete de la aplicación que los clientes pueden instalar en todos los tipos de dispositivos. Para obtener más información sobre Windows 10, las aplicaciones para UWP y los conceptos de código adaptable e interfaz de usuario adaptable que mencionaremos en esta guía de migración, consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Si tienes una aplicación Universal 8.1 (tanto si tiene como destino Windows8.1, Windows Phone8.1 o ambos), comprobarás que el código fuente y las habilidades se portarán sin dificultad a Windows10. Con Windows 10, puedes crear una aplicación para la Plataforma universal de Windows (UWP), que es un único paquete de la aplicación que los clientes pueden instalar en todos los tipos de dispositivos. Para obtener más información sobre Windows 10, las aplicaciones para UWP y los conceptos de código adaptable e interfaz de usuario adaptable que mencionaremos en esta guía de migración, consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 Durante la migración, verás que Windows 10 comparte la mayoría de las API con las plataformas anteriores, así como el marcado XAML, el marco de trabajo de la interfaz de usuario y las herramientas, por lo que te resultará muy familiar. Al igual que antes, aún puedes elegir entre C++, C# y Visual Basic para el lenguaje de programación a fin de usarlo junto con el marco de trabajo de la interfaz de usuario de XAML. Los primeros pasos de la planificación de qué hacer exactamente con la aplicación o las aplicaciones actuales dependerá de los tipos de aplicaciones y proyectos que tengas. Esto se explica en las siguientes secciones.
 
@@ -32,7 +29,7 @@ Una aplicación Universal 8.1 se compila a partir de un proyecto de aplicación 
 -   AppName\_81.WindowsPhone. Este es el proyecto que crea el paquete de la aplicación para Windows Phone 8.1.
 -   AppName\_81.Shared. Este es el proyecto que contiene código fuente, archivos de marcado y otros activos y recursos, que usan los otros dos proyectos.
 
-A menudo, una aplicación Universal 8.1 de Windows ofrece las mismas funciones (y lo hace usando el mismo código y marcado) en las versiones de Windows 8.1 y Windows Phone 8.1. Una aplicación como esta es ideal para la migración de una única aplicación de Windows 10 destinada a la familia de dispositivos universales (y que puedes instalar en la gama más amplia de dispositivos). Básicamente, migrarás el contenido del proyecto compartido y tendrás que usar poco o nada de los otros dos proyectos porque están vacíos o no contienen gran cosa.
+A menudo, una aplicación Universal 8.1 de Windows ofrece las mismas funciones (y lo hace usando el mismo código y marcado) en las versiones de Windows8.1 y Windows Phone 8.1. Una aplicación como esta es ideal para la migración de una única aplicación de Windows 10 destinada a la familia de dispositivos universales (y que puedes instalar en la gama más amplia de dispositivos). Básicamente, migrarás el contenido del proyecto compartido y tendrás que usar poco o nada de los otros dos proyectos porque están vacíos o no contienen gran cosa.
 
 Otras veces, la forma Windows 8.1 o Windows Phone 8.1 de la aplicación contiene funciones únicas. O bien contienen las mismas características pero las implementan con diferentes técnicas o distinta tecnología. Con una aplicación de este tipo, puedes optar por migrarla a una sola aplicación que tenga como objetivo la familia de dispositivos universales (en cuyo caso, querrás que la aplicación se adapte a diferentes dispositivos) o puedes optar por migrarla como más de una aplicación, quizás una que tenga como destino la familia de dispositivos de escritorio y otra que tenga como destino la familia de dispositivos móviles. La naturaleza de la aplicación Universal 8.1 determinará cuál de estas opciones es mejor en tu caso.
 
@@ -63,10 +60,6 @@ Al migrar una aplicación Universal 8.1 al modelo de las aplicaciones para UWP, 
 
 Antes o durante la migración, considera la posibilidad de si la aplicación podría mejorarse mediante la refactorización de modo que el código con un propósito similar se agrupe en capas y no se disperse arbitrariamente. La factorización de la aplicación en capas, como las descritas anteriormente, facilita corregir la aplicación, probarla y posteriormente leerla y mantenerla. Puedes hacer que la funcionalidad sea más reutilizable siguiendo el patrón Model-View-ViewModel ([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)). Este patrón mantiene separadas entre sí las partes de la aplicación correspondientes a los datos, al negocio y a la interfaz de usuario. Incluso dentro de la interfaz de usuario, puede mantener separados el estado y el comportamiento, además de poderse probar por separado, desde los elementos visuales. Con MVVM, puedes escribir una vez la lógica de datos y de negocio, y usarla en todos los dispositivos, independientemente de la interfaz de usuario. Es probable que también puedas volver a usar la mayor parte del modelo de vista y los elementos de vista entre dispositivos.
 
-## <a name="if-you-have-a-microsoft-visual-studio-2015-rc-project"></a>Si tienes un proyecto de Microsoft Visual Studio 2015 RC
-
-Si tienes un proyecto de Windows 10 que has creado con Microsoft Visual Studio 2015 RC, consulta [Actualización de tu proyecto de UWP Microsoft Visual Studio 2015 RC a RTM](update-your-visual-studio-2015-rc-project-to-rtm.md).
- 
 | Tema | Description |
 |-------|-------------|
 | [Migración del proyecto](w8x-to-uwp-porting-to-a-uwp-project.md) | Tienes dos opciones cuando empieza el proceso de migración. Una es editar una copia de los archivos de proyecto existentes, entre los que se incluye el manifiesto del paquete de la aplicación (para esta opción, consulta la información sobre cómo actualizar los archivos de proyecto en [Migrar aplicaciones a la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/mt148501.aspx)). La otra opción es crear un nuevo proyecto de Windows 10 en Visual Studio y copiar los archivos en él. |
@@ -75,7 +68,7 @@ Si tienes un proyecto de Windows 10 que has creado con Microsoft Visual Studio 2
 | [Migración de modelo de E/S, dispositivos y aplicaciones](w8x-to-uwp-input-and-sensors.md) | El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este. También puede implicar el procesamiento de datos. No obstante, este código no se considera generalmente como la capa de interfaz de usuario o la capa de datos. Este código incluye la integración con el controlador de vibración, el acelerómetro, el giroscopio, el micrófono y los altavoces (que se relacionan con el reconocimiento y la síntesis de voz), la localización (geográfica) y las modalidades de entrada, como, por ejemplo, entrada táctil, mouse, teclado y lápiz. |
 | [Caso práctico: Bookstore1](w8x-to-uwp-case-study-bookstore1.md) | En este tema se presenta un caso práctico de migración de una aplicación Universal 8.1 a una aplicación para UWP de Windows 10. Una aplicación Universal 8.1 es aquella que crea un paquete de la aplicación para Windows 8.1 y otro paquete de la aplicación para Windows Phone 8.1. Con Windows 10, puedes crear un paquete de la aplicación único que los clientes pueden instalar en una amplia variedad de dispositivos, como se verá en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631). |
 | [Caso práctico: Bookstore2](w8x-to-uwp-case-study-bookstore2.md) | Este caso práctico, que se basa en la información proporcionada en el control [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/hh702601). En el modelo de vista, cada instancia de la clase Author representa el grupo de los libros que ha escrito ese autor y en SemanticZoom podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. |
-| [Caso práctico: QuizGame](w8x-to-uwp-case-study-quizgame.md) | En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT 8.1 de un juego de preguntas de punto a punto funcional a una aplicación para UWP de Windows 10. |
+| [Caso práctico: QuizGame](w8x-to-uwp-case-study-quizgame.md) | En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT8.1 de un juego de preguntas de punto a punto funcional a una aplicación para UWP de Windows10. |
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -83,5 +76,3 @@ Si tienes un proyecto de Windows 10 que has creado con Microsoft Visual Studio 2
 * [Referencia de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377)
 * [Compilar aplicaciones universales de Windows para todos los dispositivos Windows](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [Diseño de la experiencia de usuario para aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh767284)
-
-

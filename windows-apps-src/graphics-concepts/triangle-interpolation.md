@@ -2,21 +2,17 @@
 title: "Interpolación de triángulos"
 description: "Durante la representación, la canalización interpola los datos de vértices en cada triángulo."
 ms.assetid: 1A76DD78-CED7-42BE-BA81-B9050CD3AF9B
-keywords:
-- "Interpolación de triángulos"
+keywords: "Interpolación de triángulos"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1adaa39d89be0245771a08273573e2ca06fa4b85
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c440a499de801c3da62b2c2f9d4e436b44d5ce28
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="triangle-interpolation"></a>Interpolación de triángulos
 
 
@@ -43,7 +39,6 @@ El componente alfa de un color se trata como un valor interpolado diferente porq
  
 
  
-
 
 
 

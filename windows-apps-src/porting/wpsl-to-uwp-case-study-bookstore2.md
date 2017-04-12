@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: "Este caso práctico, que se basa en la información proporcionada en Bookstore, comienza con una aplicación Windows Phone Silverlight que muestra datos agrupados en un LongListSelector."
+description: "Este caso práctico, que se basa en la información proporcionada en Bookstore, comienza con una aplicación WindowsPhone Silverlight que muestra datos agrupados en un LongListSelector."
 title: "Caso práctico de Windows Phone Silverlight a UWP, Bookstore2"
 ms.author: markl
 ms.date: 02/08/2017
@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7fbe63cba4a825641ea96b39c39d5845758051cb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7a36649701187a795eb6e75df351af69110bee6b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-phone-silverlight-to-uwp-case-study-bookstore2"></a>Caso práctico de Windows Phone Silverlight a UWP: Bookstore2
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este caso práctico, que se basa en la información proporcionada en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), comienza con una aplicación Windows Phone Silverlight que muestra datos agrupados en un **LongListSelector**. En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y, en **LongListSelector**, podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Repasaremos los pasos de migración de la aplicación a la Plataforma universal de Windows (UWP) de Windows 10.
+Este caso práctico, que se basa en la información proporcionada en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), comienza con una aplicación WindowsPhone Silverlight que muestra datos agrupados en un **LongListSelector**. En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y, en **LongListSelector**, podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Repasaremos los pasos de migración de la aplicación a la Plataforma universal de Windows (UWP) de Windows10.
 
 **Nota**   Cuando abras Bookstore2Universal\_10 en Visual Studio, si aparece el mensaje "Es necesario actualizar Visual Studio", sigue los pasos para configurar la versión de la plataforma de destino en [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
@@ -306,4 +303,3 @@ Ahora podemos optar por quitar `ItemsPath="BookSkus"` y la aplicación seguirá 
 ## <a name="conclusion"></a>Conclusión
 
 En este caso práctico se ha observado una interfaz de usuario más ambiciosa que la anterior. Todas las funciones y conceptos del **LongListSelector** de Windows Phone Silverlight (y más) han resultado estar disponibles para una aplicación para UWP mediante **SemanticZoom**, **ListView**, **GridView** y **CollectionViewSource**. Hemos mostrado cómo volver a usar o copiar y editar marcado y código imperativos en una aplicación para UWP para lograr funcionalidad, una interfaz de usuario e interacciones adaptadas para que se ajusten a los factores de forma de dispositivos Windows más anchos y más estrechos, así como a todos los tamaños intermedios.
-

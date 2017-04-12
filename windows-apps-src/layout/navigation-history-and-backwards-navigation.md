@@ -3,7 +3,7 @@ author: mijacobs
 Description: "La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema."
 title: "Historial de navegación y navegación hacia atrás (aplicaciones de Windows)"
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
-isNew: true
+isNew: True
 label: History and backwards navigation
 template: detail.hbs
 op-migration-status: ready
@@ -13,13 +13,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ea937ba237f4b0c58deff2b8d342337512e0de5f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c2037c4b313b45309162ea4c0874418fe9463d17
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -306,7 +303,6 @@ Cuando el usuario cambia a otra aplicación y vuelve a tu aplicación, te recome
 * [Conceptos básicos de navegación](navigation-basics.md)
 
  
-
 
 
 

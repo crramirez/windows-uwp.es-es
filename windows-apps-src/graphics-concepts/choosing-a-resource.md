@@ -2,21 +2,17 @@
 title: "Elección de un recurso"
 description: "Un recurso es una colección de datos que se usa en la canalización 3D."
 ms.assetid: 6BAD6287-2930-42F8-BF51-69A379D1D2C3
-keywords:
-- "Elección de un recurso"
+keywords: "Elección de un recurso"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 73f2d2f6b6a925a425c94bcf1b5f957a82569236
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1722558dfbb9620d4d265a2a479109366780a514
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="choosing-a-resource"></a>Elección de un recurso
 
 
@@ -97,7 +93,6 @@ La técnica que se incluye en este ejemplo puede mejorar el rendimiento al aisla
  
 
  
-
 
 
 

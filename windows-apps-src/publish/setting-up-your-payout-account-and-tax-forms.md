@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e2cdcf5d06fdbe6f510a416bd1da28e7cf6a51d5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 10333de456b913adf1c35a0df08f9b99ad4d4fa0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="setting-up-your-payout-account-and-tax-forms"></a>Configurar formularios fiscales y cuenta de pago
 
 
@@ -30,8 +27,8 @@ Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer com
 
 Una vez que [hayas configurado tu cuenta de desarrollador](opening-a-developer-account.md), hay dos cosas que debes hacer para poder vender aplicaciones (y ofrecer complementos) en la Tienda Windows:
 
--   [Configurar tu cuenta de pago](#setting_up_your_payout_account)
--   [Completar los formularios fiscales](#paying_taxes)
+-   [Configurar tu cuenta de pago](#payout-account)
+-   [Completar los formularios fiscales](#tax-forms)
 
 > **Nota** Para obtener más información sobre cómo te pagaremos el dinero recaudado mediante tus aplicaciones, consulta [Proceso de pago](getting-paid-apps.md).
 
@@ -42,7 +39,7 @@ Una vez que [hayas configurado tu cuenta de desarrollador](opening-a-developer-a
 
 Una cuenta de pago es la cuenta bancaria a la que te enviamos las ganancias por tus ventas. Esta cuenta bancaria debe estar ubicada en el mismo país o región donde registraste tu cuenta de desarrollador.
 
-> **Nota** En algunos mercados, puede usarse PayPal para tu cuenta de pago. Consulta [Tipos de cuenta, ubicaciones y tarifas](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) para averiguar si PayPal es compatible con un mercado específico y lee la [Información de PayPal](#paypal) a continuación para obtener más detalles.
+> **Nota** En algunos mercados, puede usarse PayPal para tu cuenta de pago. Consulta [Tipos de cuenta, ubicaciones y tarifas](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) para averiguar si PayPal es compatible con un mercado específico y lee la [Información de PayPal](#paypal-info) a continuación para obtener más detalles.
 
  
 **Para configurar tu cuenta de pago**
@@ -124,7 +121,7 @@ Para garantizar que el pago se realiza correctamente, ten en cuenta los siguient
 ## <a name="tax-forms"></a>Formularios fiscales
 
 
-Después de [registrar una cuenta de desarrollador](opening-a-developer-account.md) y configurar tu [cuenta de pago](#receiving_payments), puedes crear tu *perfil fiscal* para la Tienda Windows siguiendo estos pasos:
+Después de [registrar una cuenta de desarrollador](opening-a-developer-account.md) y configurar tu [cuenta de pago](#payout-account), puedes crear tu *perfil fiscal* para la Tienda Windows siguiendo estos pasos:
 
 -   Especifica tu país o región de residencia y nacionalidad.
 -   Completar los formularios fiscales correspondientes.
@@ -160,7 +157,6 @@ Si estás fuera de los Estados Unidos, quizás puedas aprovechar los beneficios 
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "Preguntas más frecuentes sobre la migración a DirectX 11"
+title: "Preguntas más frecuentes sobre la migración a DirectX11"
 description: "Respuestas a las preguntas más frecuentes sobre la migración de juegos a la Plataforma universal de Windows (UWP)."
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
 ms.author: mtoepke
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, games, directx 11
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7dda21925e31785e0ce7c3dfc72ba173b8686743
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="directx-11-porting-faq"></a>Preguntas más frecuentes sobre la migración a DirectX11
 
-# <a name="directx-11-porting-faq"></a>Preguntas más frecuentes sobre la migración a DirectX 11
 
-
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Respuestas a las preguntas más frecuentes sobre la migración de juegos a la Plataforma universal de Windows (UWP).
@@ -66,12 +63,12 @@ También puedes usar DDSTextureLoader y WICTextureLoader, de [DirectXTK](http://
 ## <a name="where-is-the-directx-sdk"></a>¿Dónde está el SDK de DirectX?
 
 
-El SDK de DirectX se incluye como parte de Windows SDK. El SDK de DirectX más reciente que se separó del Windows SDK fue el de junio de 2010. Las muestras de Direct3D están en la Galería de código junto con el resto de las muestras de aplicaciones de la Tienda Windows.
+El SDK de DirectX se incluye como parte de WindowsSDK. El SDK de DirectX más reciente que se separó del WindowsSDK fue el de junio de 2010. Las muestras de Direct3D están en la Galería de código junto con el resto de las muestras de aplicaciones de la Tienda Windows.
 
 ## <a name="what-about-directx-redistributables"></a>¿Qué sucede con los redistribuibles de DirectX?
 
 
-La mayoría de los componentes del Windows SDK ya están incluidos en versiones compatibles del sistema operativo o no tienen ningún componente DLL (como DirectXMath). Todos los componentes de API de Direct3D que las aplicaciones para UWP pueden usar ya están disponibles para tu juego. No es necesario redistribuirlos.
+La mayoría de los componentes del WindowsSDK ya están incluidos en versiones compatibles del sistema operativo o no tienen ningún componente DLL (como DirectXMath). Todos los componentes de API de Direct3D que las aplicaciones para UWP pueden usar ya están disponibles para tu juego. No es necesario redistribuirlos.
 
 Las aplicaciones de escritorio Win32 todavía usan DirectSetup, por lo tanto, si también estás actualizando la versión de escritorio de tu juego, consulta [Implementación de Direct3D 11 para desarrolladores de juegos](https://msdn.microsoft.com/library/windows/desktop/ee416644).
 
@@ -87,12 +84,12 @@ Sí:
 
 -   Lee [Converting to Direct3D 9 (Convertir a Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb204851).
 -   Asegúrate de que tu juego no tenga remanentes de la canalización fija. Consulta [Características desusadas](https://msdn.microsoft.com/library/windows/desktop/cc308047).
--   Luego sigue la ruta de migración de DirectX 9: [Migrar de D3D 9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+-   Luego sigue la ruta de migración de DirectX9: [Migrar de D3D9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-##  <a name="can-i-port-my-directx-10-or-11-game-to-uwp"></a>¿Puedo migrar mi juego DirectX 10 u 11 a UWP?
+##  <a name="can-i-port-my-directx-10-or-11-game-to-uwp"></a>¿Puedo migrar mi juego DirectX10 u11 a UWP?
 
 
-Los juegos de escritorio de DirectX 10.x y 11 son fáciles de migrar a UWP. Consulta [Migrar a Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476190).
+Los juegos de escritorio de DirectX10.x y11 son fáciles de migrar a UWP. Consulta [Migrar a Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476190).
 
 ## <a name="how-do-i-choose-the-right-display-device-in-a-multi-monitor-system"></a>¿Cómo elijo el dispositivo de pantalla correcto en un sistema de varios monitores?
 
@@ -140,7 +137,6 @@ Consulta la información acerca de la [asignación de formatos de superficie](fe
  
 
  
-
 
 
 

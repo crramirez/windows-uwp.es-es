@@ -2,21 +2,17 @@
 title: "Guía de aprendizaje de gráficos de Direct3D"
 description: "Describe los conceptos de gráficos en los que se basa Microsoft Direct3D."
 ms.assetid: c3850a92-4d05-4f72-bf0f-6a0c79e841eb
-keywords:
-- "Guía de aprendizaje de gráficos de Direct3D"
+keywords: "Guía de aprendizaje de gráficos de Direct3D"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e62f9cfde35580dd384ef69fe6e5658d927ce3d8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9d46a13844fafc5f517fce16c39e33257ff8e9a5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="direct3d-graphics-learning-guide"></a>Guía de aprendizaje de gráficos de Direct3D
 
 
@@ -43,7 +39,7 @@ Describe los conceptos de gráficos en los que se basa Microsoft Direct3D. Este 
 </tr>
 <tr class="even">
 <td align="left"><p>[Búferes de vértices e índices](vertex-and-index-buffers.md)</p></td>
-<td align="left"><p><em>Los búferes de vértices</em> son búferes de memoria que contienen datos de vértice. Los vértices de un búfer se procesan para transformar, iluminar y recortar. <em>Los búferes de índices</em> son búferes de memoria que contienen datos de índice, que son desplazamientos de enteros en búferes de vértices y se usan para representar primitivos.</p></td>
+<td align="left"><p>Los <em>búferes de vértices</em> son búferes de memoria que contienen datos de vértice. Los vértices de un búfer se procesan para transformar, iluminar y recortar. Los <em>búferes de índices</em> son búferes de memoria que contienen datos de índice, que son desplazamientos de enteros en búferes de vértices y se usan para representar primitivos.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Dispositivos](devices.md)</p></td>
@@ -79,7 +75,7 @@ Describe los conceptos de gráficos en los que se basa Microsoft Direct3D. Este 
 </tr>
 <tr class="odd">
 <td align="left"><p>[Recursos de streaming](streaming-resources.md)</p></td>
-<td align="left"><p><em>Los recursos de streaming</em> son grandes recursos lógicos que usan pequeñas cantidades de memoria física. En lugar de pasar un recurso completo grande, se envían pequeñas partes del recurso según sea necesario. Los recursos de streaming se conocían anteriormente como <em>recursos en mosaico</em>.</p></td>
+<td align="left"><p>Los <em>recursos de streaming</em> son grandes recursos lógicos que usan pequeñas cantidades de memoria física. En lugar de pasar un recurso grande completo, se transmiten pequeñas partes del recurso según son necesarias. Los recursos de streaming se conocían anteriormente como <em>recursos en mosaico</em>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Anexos](appendix.md)</p></td>
@@ -93,4 +89,3 @@ Describe los conceptos de gráficos en los que se basa Microsoft Direct3D. Este 
  
 
  
-

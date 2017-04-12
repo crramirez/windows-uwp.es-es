@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ca4c7b82fdb7f950d3f68323dec37c2f31e02c87
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8231d8a531098783a6b62383f4a64d61d0a61902
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="share-certificates-between-apps"></a>Compartir certificados entre aplicaciones
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las aplicaciones para la Plataforma universal de Windows (UWP) que necesitan una autenticación segura que vaya más allá de una combinación de id. de usuario y contraseña pueden usar certificados para la autenticación. La autenticación de certificado ofrece un alto grado de confianza al autenticar a un usuario. En algunos casos, un grupo de servicios querrá autenticar un usuario en varias aplicaciones. En este artículo se muestra cómo puedes autenticar varias aplicaciones usando el mismo certificado, y cómo facilitar un práctico código para que un usuario importe un certificado ofrecido para obtener acceso a servicios web protegidos.
@@ -71,7 +68,7 @@ En este artículo se usa Microsoft Internet Information Services (IIS) como ejem
 
 Puedes repetir los pasos anteriores para crear varios servicios web a los que se pueda acceder con el mismo certificado de cliente.
 
-## <a name="create-a-windows-store-app-that-uses-certificate-authentication"></a>Crear una aplicación de la Tienda Windows que use autenticación de certificado
+## <a name="create-a-windows-store-app-that-uses-certificate-authentication"></a>Crear una aplicación de la TiendaWindows que use autenticación de certificado
 
 
 Ahora que tienes uno o varios servicios web protegidos, tus aplicaciones pueden usar certificados para autenticar en esos servicios web. Cuando se realiza una solicitud a un servicio web autenticado usando el objeto [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639), la solicitud inicial no contendrá un certificado de cliente. El servicio web autenticado responderá con una solicitud para autenticar el cliente. Cuando esto ocurre, el cliente de Windows consultará automáticamente los certificados de cliente disponibles en el almacén de certificados. El usuario puede seleccionar uno de estos certificados para autenticarse en el servicio web. Algunos certificados están protegidos por contraseña, por lo que necesitarás proporcionar al usuario una manera de especificar la contraseña del certificado.

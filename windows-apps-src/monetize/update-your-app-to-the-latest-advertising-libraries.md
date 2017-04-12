@@ -1,41 +1,42 @@
 ---
 author: mcleanbyron
 description: "Aprende a actualizar la aplicación para que use las últimas bibliotecas admitidas de Microsoft Advertising y a asegurarte de que siga recibiendo anuncios de banner."
-title: "Actualizar la aplicación a las bibliotecas más recientes de Microsoft Advertising"
+title: "Actualizar la aplicación a las bibliotecas más recientes de publicidad"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, anuncios, publicidad, AdControl, AdMediatorControl, migrar
+keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, AdControl, AdControl, AdMediatorControl, AdMediatorControl, migrate, migrar
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 3cdb1f41fda7bd4e4af1ce9e5f8fb4396da53f63
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 25435ebf314327db7288ac853819c90ebba35669
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="update-your-app-to-the-latest-advertising-libraries"></a>Actualizar la aplicación a las bibliotecas más recientes de publicidad
 
-# <a name="update-your-app-to-the-latest-microsoft-advertising-libraries"></a>Actualizar la aplicación a las bibliotecas más recientes de Microsoft Advertising
+Las aplicaciones que muestran anuncios de banner de Microsoft Advertising tienen que usar **AdControl** o **AdMediatorControl** de uno de los siguientes SDK para poder continuar recibiendo los anuncios de banner después del 1 de abril de 2017:
 
-Solo los SDK siguientes son compatibles para mostrar anuncios de banner de Microsoft en tus aplicaciones usando un **AdControl** o **AdMediatorControl**:
+  * [Microsoft Store Services SDK](http://aka.ms/store-services-sdk) (para aplicaciones para UWP)
+  * [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) (para aplicaciones de Windows 8.1 y Windows Phone 8.x)
 
-* [Microsoft Store Services SDK](http://aka.ms/store-services-sdk) (para aplicaciones para UWP)
-* [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) (para aplicaciones de Windows 8.1 y Windows Phone 8.x)
+Antes de que estos SDK estuviesen disponibles, publicamos estos controles en varias versiones de SDK de publicidad anteriores para aplicaciones de Windows y Windows Phone. Ya no se admiten estas versiones anteriores de SDK de publicidad. Después del 1 de abril de 2017, Microsoft puede dejar de ofrecer anuncios de banner a las aplicaciones que usan las versiones de SDK de publicidad anteriores en cualquier momento, sin ninguna otra advertencia.
 
-Antes de que estos SDK estuviesen disponibles, publicamos varias versiones de SDK de publicidad antigua para aplicaciones de Windows y Windows Phone. Ya no se admiten estas versiones anteriores de SDK de publicidad. En el futuro, tenemos previsto dejara de publicar anuncios de banner para aplicaciones que usan los SDK anteriores.
+Si tienes una aplicación (que ya está en la Tienda o que aún está en desarrollo) que muestra anuncios de banner con **AdControl** o **AdMediatorControl**, sigue las instrucciones de este artículo para determinar si la aplicación se ve afectada por este cambio y para obtener información sobre cómo actualizarla si es necesario.
 
-Si tienes una aplicación existente (ya está en la Tienda o aún está en la etapa de desarrollo) que muestra anuncios de banner mediante los controles **AdControl** o **AdMediatorControl**, tal vez debas actualizar la aplicación para que use el SDK de publicidad más reciente en tu plataforma de destino y, así, siga recibiendo los anuncios de banner en el futuro Sigue las instrucciones de este artículo para determinar si la aplicación se ve afectada por este cambio y para conocer cómo actualizar la aplicación si fuera necesario.
+>**Nota**&nbsp;&nbsp;Además, después del 1 de abril de 2017, también dejaremos de publicar anuncios de banner para cualquier unidad de anuncios que se use en más de una aplicación. Para prepararte para este cambio, asegúrate de que cada una de las unidades de anuncios se usa solo en una aplicación.
 
-Si la aplicación se ve afectada por este cambio y no se actualiza la aplicación para usar el SDK de publicidad más reciente, verás el siguiente comportamiento si dejamos de publicar anuncios de banner en aplicaciones que usan versiones de SDK de publicidad no admitidas:
+## <a name="more-details-about-this-change"></a>Más información sobre este cambio
+
+Para proporcionar contexto adicional sobre este cambio, estamos quitando el soporte técnico para las versiones anteriores del SDK de publicidad que no admiten un conjunto mínimo de capacidades, incluida la posibilidad de ofrecer contenido multimedia enriquecido de HTML5 a través de la [especificación Mobile Rich-media Ad Interface Definitions (MRAID) 1.0](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) de Interactive Advertising Bureau (IAB). Muchos de nuestros anunciantes buscan estas capacidades, y estamos haciendo este cambio con el fin de ayudar a que nuestro ecosistema de aplicaciones sea más atractivo para los anunciantes y, en última instancia, generar más ingresos para ti.
+
+Si la aplicación se ve afectada por este cambio y no se actualiza para usar el SDK de publicidad más reciente para tu plataforma de destino, verás el siguiente comportamiento cuando dejemos de publicar anuncios de banner en las aplicaciones que usan versiones de SDK de publicidad no admitidas:
 
 * Ya no se ofrecerán anuncios de banner a los controles **AdControl** o **AdMediatorControl** de tu aplicación y ya no obtendrás ingresos publicitarios por esos controles.
 
 * Cuando el control **AdControl** o **AdMediatorControl** de tu aplicación solicite un anuncio nuevo, se generará el evento **ErrorOccurred** del control y la propiedad **ErrorCode** de los argumentos del evento tendrá el valor **NoAdAvailable**.
 
-Para proporcionar contexto adicional sobre este cambio, ya no admitimos versiones anteriores del SDK de publicidad que no admiten un conjunto mínimo de capacidades, incluida la posibilidad de ofrecer contenido multimedia enriquecido de HTML5 a través de la [especificación Mobile Rich-media Ad Interface Definitions (MRAID) 1.0](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) de Interactive Advertising Bureau (IAB). Muchos de nuestros anunciantes buscan estas capacidades, y estamos haciendo este cambio con el fin de ayudar a que nuestro ecosistema de aplicaciones sea más atractivo para los anunciantes y, en última instancia, generar más ingresos para ti.
-
-Si se produce algún problema o necesitas ayuda, [ponte en contacto con soporte técnico](http://go.microsoft.com/fwlink/?LinkId=393643).
+Si se produce algún problema o necesitas ayuda, [ponte en contacto con el soporte técnico](http://go.microsoft.com/fwlink/?LinkId=393643).
 
 >**Nota**&nbsp;&nbsp;Si tu aplicación ya usa el [Microsoft Store Services SDK](http://aka.ms/store-services-sdk) (para aplicaciones para UWP) o el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) (para aplicaciones de Windows 8.1 y Windows Phone 8.x), o si actualizaste anteriormente la aplicación para que use uno de estos SDK de publicidad más reciente disponible y no es necesario hacer más cambios en la aplicación.
 
@@ -45,7 +46,7 @@ Si se produce algún problema o necesitas ayuda, [ponte en contacto con soporte 
 
 * El paquete .appx o .xap de la aplicación.
 
-  >**Nota**&nbsp;&nbsp;Si ya no tienes el paquete .appx o .xap de la aplicación, pero todavía tienes un equipo de desarrollo con la versión de Visual Studio y el SDK de publicidad que se usó para crear la aplicación, puedes volver a generar el paquete .appx o .xap en Visual Studio.
+  >**Nota**&nbsp;&nbsp;Si ya no tienes el paquete .appx o .xap de la aplicación, pero todavía tienes un equipo de desarrollo con la versión de Visual Studio y el SDK de publicidad que se usó para crear la aplicación, puedes volver a generar el paquete .appx o .xap en VisualStudio.
 
 <span id="part-1" />
 ## <a name="part-1-determine-whether-you-need-to-update-your-app"></a>Parte 1: determinar si es necesario actualizar la aplicación
@@ -137,13 +138,13 @@ Si la aplicación usa **AdControl** para mostrar anuncios de banner, sigue estas
 
 **Aplicaciones de Windows 8.0**
 
-* Puede que las aplicaciones destinadas a Windows 8.0 ya no presenten anuncios de banner en el futuro. Para evitar perder impresiones, te recomendamos convertir el proyecto en una aplicación para UWP destinada a Windows 10. La mayoría del tráfico de las aplicaciones de Windows 8.0 ahora se ejecuta en dispositivos con Windows 10.
+* Puede que las aplicaciones destinadas a Windows 8.0 ya no presenten anuncios de banner en el futuro. Para evitar perder impresiones, te recomendamos convertir el proyecto en una aplicación para UWP destinada a Windows10. La mayoría del tráfico de las aplicaciones de Windows 8.0 ahora se ejecuta en dispositivos con Windows10.
 
 <span/>
 
 **Aplicaciones de Windows Phone 7.x**
 
-* Puede que las aplicaciones destinadas a Windows Phone 7.x ya no presenten anuncios de banner en el futuro. Para evitar perder impresiones, te recomendamos convertir el proyecto para orientarlo a aplicaciones de Windows Phone 8.1 o convertirlo en una aplicación para UWP destinada a Windows 10. La mayoría del tráfico de las aplicaciones de Windows 7.x ahora se ejecuta en dispositivos con Windows Phone 8.1 o Windows 10.
+* Puede que las aplicaciones destinadas a Windows Phone 7.x ya no presenten anuncios de banner en el futuro. Para evitar perder impresiones, te recomendamos convertir el proyecto para orientarlo a aplicaciones de Windows Phone 8.1 o convertirlo en una aplicación para UWP destinada a Windows10. La mayoría del tráfico de las aplicaciones de Windows 7.x ahora se ejecuta en dispositivos con WindowsPhone8.1 o Windows10.
 
 <span/>
 
@@ -244,7 +245,7 @@ Ten en cuenta esto:
 
 * Puedes conservar el código y el marcado XAML existentes.
 
-* En **Explorador de soluciones**, comprueba las propiedades de la referencia **Microsoft.Advertising.Mobile.UI** en el proyecto. Debe ser la versión 6.2.40501.0 si la aplicación está destinada a Windows Phone 8.0 o la versión 8.1.50112.0 si la aplicación está destinada a Windows Phone 8.1.
+* En **Explorador de soluciones**, comprueba las propiedades de la referencia **Microsoft.Advertising.Mobile.UI** en el proyecto. Debe ser la versión 6.2.40501.0 si la aplicación está destinada a WindowsPhone8.0 o la versión 8.1.50112.0 si la aplicación está destinada a WindowsPhone8.1.
 
 * Para las aplicaciones de Windows Phone 8.x Silverlight, no se admite la prueba de unidades de producción en un emulador. Te recomendamos que hagas las pruebas en un dispositivo.
 
@@ -259,4 +260,3 @@ Si la versión anterior de la aplicación ya está disponible en la Tienda, [cre
 
 
  
-

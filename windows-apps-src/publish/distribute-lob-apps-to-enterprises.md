@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 94d12656a122f623240463886297c2378753924b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e29809f34facafc442b9b26580b91e17ed0a364e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicaciones de línea de negocio a empresas
 
 
@@ -82,12 +79,11 @@ La creación de aplicaciones a través de la Tienda para empresas garantiza que 
 
 En algunos casos, puede que las empresas no quieran que sus aplicaciones de LOB se envíen a través del Centro de desarrollo de Windows por diferentes razones (por ejemplo, por cuestiones de cumplimiento o debido a aplicaciones que necesitan funciones adicionales). En este caso, las empresas pueden implementar aplicaciones directamente en las máquinas a través de la instalación de prueba, sin necesidad de usar la Tienda Windows para empresas.
 
-Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
+Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 
  
 
  
-
 
 
 

@@ -2,21 +2,17 @@
 title: Nivel 1
 description: "Esta sección describe la compatibilidad del nivel 1."
 ms.assetid: 153DA429-0C99-4691-AEB4-124FD9B17BE2
-keywords:
-- Nivel 1
+keywords: Nivel 1
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: de1010a39655e8ac24e213aa5682e9f739b88ecc
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0c463e2a6ea4f43ea1f3eccab69a94f9d6f13170
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="tier-1"></a>Nivel 1
 
 
@@ -28,8 +24,8 @@ Esta sección describe la compatibilidad del nivel 1.
 -   Hardware en el nivel de características 11.0 como mínimo.
 -   No se admite el acolchado.
 -   No se admite Texture1D ni Texture3D.
--   No se admite el suavizado de contorno de muestras múltiples (MSAA) 2, 8 ni 16. Solo es obligatorio 4x, excepto en formatos que no sean de 128 bpp.
--   Ningún patrón de referencia estándar (el diseño en mosaicos de 64 KB y el empaquetado MIP de cola depende del proveedor del hardware).
+-   No se admite el suavizado de contorno de muestras múltiples (MSAA) 2, 8 ni 16. Solo es obligatorio 4x, excepto en formatos que no sean de 128bpp.
+-   Ningún patrón de referencia estándar (el diseño en mosaicos de 64KB y el empaquetado MIP de cola depende del proveedor del hardware).
 -   Limitaciones al modo de acceso a los mosaicos cuando hay asignaciones duplicadas. Consulta [Limitaciones de acceso a los iconos con asignaciones duplicadas](tile-access-limitations-with-duplicate-mappings.md).
 
 ## <a name="span-idspecificlimitationsaffectingtier1onlyspanspan-idspecificlimitationsaffectingtier1onlyspanspan-idspecificlimitationsaffectingtier1onlyspanspecific-limitations-affecting-tier-1-only"></a><span id="Specific_limitations_affecting_tier_1_only"></span><span id="specific_limitations_affecting_tier_1_only"></span><span id="SPECIFIC_LIMITATIONS_AFFECTING_TIER_1_ONLY"></span>Limitaciones específicas que solo afectan al nivel 1
@@ -45,7 +41,7 @@ No están disponibles instrucciones de sombreador para la compresión del LOD y 
 
 ### <a name="span-idalignmentconstraintsforstandardtileshapesspanspan-idalignmentconstraintsforstandardtileshapesspanspan-idalignmentconstraintsforstandardtileshapesspanalignment-constraints-for-standard-tile-shapes"></a><span id="Alignment_constraints_for_standard_tile_shapes"></span><span id="alignment_constraints_for_standard_tile_shapes"></span><span id="ALIGNMENT_CONSTRAINTS_FOR_STANDARD_TILE_SHAPES"></span>Restricciones de alineación para las formas de mosaico estándar
 
-Solo se garantiza que los MIP (a partir de los más finos) cuyas dimensiones sean todas múltiplos del tamaño de mosaico estándar admitan las formas de mosaico estándar y se les puedan asignar o desasignar mosaicos individuales de forma arbitraria. El primer mapa MIP de un recurso de streaming que tenga cualquier dimensión que no sea un múltiplo del tamaño de mosaico estándar, junto con todos los mapas MIP más gruesos, puede tener una forma de mosaico no estándar que encaje en mosaico de N 64 KB para este conjunto de MIP a la vez (N se notifica a la aplicación). Estos N mosaicos se consideran empaquetados como una unidad, que la aplicación debe asignar o desasignar completamente en cualquier momento, aunque las asignaciones de cada uno de los N mosaicos pueden estar en ubicaciones arbitrariamente desligadas de un grupo de mosaicos.
+Solo se garantiza que los MIP (a partir de los más finos) cuyas dimensiones sean todas múltiplos del tamaño de mosaico estándar admitan las formas de mosaico estándar y se les puedan asignar o desasignar mosaicos individuales de forma arbitraria. El primer mapa MIP de un recurso de streaming que tenga cualquier dimensión que no sea un múltiplo del tamaño de mosaico estándar, junto con todos los mapas MIP más gruesos, puede tener una forma de mosaico no estándar que encaje en mosaico de N 64KB para este conjunto de MIP a la vez (N se notifica a la aplicación). Estos N mosaicos se consideran empaquetados como una unidad, que la aplicación debe asignar o desasignar completamente en cualquier momento, aunque las asignaciones de cada uno de los N mosaicos pueden estar en ubicaciones arbitrariamente desligadas de un grupo de mosaicos.
 
 ### <a name="span-idarrayofmipmapsthatarentamultipleofstandardtilesizespanspan-idarrayofmipmapsthatarentamultipleofstandardtilesizespanspan-idarrayofmipmapsthatarentamultipleofstandardtilesizespanarray-of-mipmaps-that-arent-a-multiple-of-standard-tile-size"></a><span id="Array_of_mipmaps_that_aren_t_a_multiple_of_standard_tile_size"></span><span id="array_of_mipmaps_that_aren_t_a_multiple_of_standard_tile_size"></span><span id="ARRAY_OF_MIPMAPS_THAT_AREN_T_A_MULTIPLE_OF_STANDARD_TILE_SIZE"></span>Matriz de mapas MIP que no es un múltiplo del tamaño de mosaico estándar
 
@@ -69,7 +65,6 @@ No se admite el filtrado de reducción mínimo/máximo. Consulta [Característic
  
 
  
-
 
 
 

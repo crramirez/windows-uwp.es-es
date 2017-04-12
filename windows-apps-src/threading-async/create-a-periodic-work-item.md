@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, elemento de trabajo periódico, subprocesos, temporizadores"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 66e8b283631e6a74aa1dabeb53bfc86c304a642c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 89c633f9ab6da23c4b8417a9a75f87c706a3546f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="create-a-periodic-work-item"></a>Crear un elemento de trabajo periódico
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** API importantes **
 
@@ -32,7 +30,7 @@ Usa el método [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/wind
 
 [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) devuelve un objeto [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Almacena este objeto en caso de que se deba cancelar el temporizador.
 
-> **Nota**  Evita especificar un valor de cero (o cualquier valor inferior a 1 milisegundo) para el intervalo. Esto hará que el temporizador periódico se comporte como un temporizador de único disparo.
+> **Nota**  Evita especificar un valor de cero (o cualquier valor inferior a 1milisegundo) para el intervalo. Esto hará que el temporizador periódico se comporte como un temporizador de único disparo.
 
 > **Nota**  Puedes usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
@@ -209,4 +207,3 @@ Para obtener información sobre los temporizadores de un solo uso, consulta [Env
 * [Procedimientos recomendados para usar el grupo de subprocesos](best-practices-for-using-the-thread-pool.md)
 * [Enviar un elemento de trabajo con un temporizador](use-a-timer-to-submit-a-work-item.md)
  
-

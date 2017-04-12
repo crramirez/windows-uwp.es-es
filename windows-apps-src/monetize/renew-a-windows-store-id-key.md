@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de colecciones de la Tienda de Windows, API de compras de la Tienda Windows, clave de identificador de la Tienda Windows, renovar, Windows Store collection API, Windows Store purchase API, Windows Store ID key, renew
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b740cf431607f1748a8513a02746a70560d09da2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 22db5f1ae693c26ecf727c94a9f6746225325f74
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="renew-a-windows-store-id-key"></a>Renovar una clave de id. de la Tienda Windows
 
 
@@ -120,4 +117,3 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 * [Consultar productos](query-for-products.md)
 * [Notificar productos consumibles como completados](report-consumable-products-as-fulfilled.md)
 * [Conceder productos gratuitos](grant-free-products.md)
-

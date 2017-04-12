@@ -1,7 +1,7 @@
 ---
 author: DelfCo
 Description: "Sigue estos procedimientos recomendados cuando globalices las aplicaciones para un público más amplio o cuando localices las aplicaciones para un mercado específico."
-Search.Refinement.TopicID: 180
+Search.Refinement.TopicID: "180"
 title: "Directrices para globalización y localización"
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
 label: Do's and don'ts
@@ -12,13 +12,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a5b3945f67ec1aa52b588b6364dbd04533968d24
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 84d502b9fd10e82be428cd775cc1225d849b68e1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="globalization-and-localization-dos-and-donts"></a>Globalización y localización: qué hacer y qué no hacer
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -131,7 +128,7 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
 <td align="left"><p>Separa los recursos como imágenes y cadenas de UI del código.</p></td>
 <td align="left"><p>Diseña tus aplicaciones para que los recursos, como las cadenas y las imágenes, estén separados del código. Esto permite que se mantengan y localicen de forma independiente, como también se personalicen para diferentes factores de ajuste de escala, opciones de accesibilidad y un gran número de otros contextos de máquina y usuario.</p>
 <p>Separa los recursos de cadena del código de tu aplicación para crear un único código base independiente del idioma. Separa siempre las cadenas del código de aplicación y de marcado, y colócalas en un archivo de recursos, como un archivo ResW o ResJSON.</p>
-<p>Usa la infraestructura de recursos de Windows para controlar la selección de los recursos más apropiados que mejor se adapten al entorno en tiempo de ejecución del usuario.</p></td>
+<p>Usa la infraestructura de recursos de Windowspara controlar la selección de los recursos más apropiados que mejor se adapten al entorno en tiempo de ejecución del usuario.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Aísla otros archivos de recursos localizables.</p></td>
@@ -194,7 +191,6 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
  
 
  
-
 
 
 

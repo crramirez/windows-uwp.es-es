@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 59660de0adb6ff1247ea90f0ace3bcca35f19d1a
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
 Sigue estas instrucciones para preparar los paquetes de la aplicación para enviarlos a la Tienda Windows.
@@ -26,7 +23,7 @@ Asegúrate de [probar tu aplicación con el Kit para la certificación de aplica
 
 ## <a name="building-the-app-package-using-microsoft-visual-studio"></a>Compilar el paquete de la aplicación con Microsoft Visual Studio
 
-Si usas Microsoft Visual Studio como entorno de desarrollo, ya cuentas con herramientas integradas que te ayudarán a crear un paquete de la aplicación de manera rápida y sencilla. Para más información, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
+Si usas MicrosoftVisual Studio como entorno de desarrollo, ya cuentas con herramientas integradas que te ayudarán a crear un paquete de la aplicación de manera rápida y sencilla. Para más información, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
 > **Nota** Asegúrate de que todos los nombres de archivo usan ANSI. 
 
@@ -39,7 +36,7 @@ No es necesario que los paquetes de la aplicación estén firmados con un certif
 
 ### <a name="app-bundles"></a>Paquetes de aplicaciones
 
-En el caso de aplicaciones destinadas a Windows 8.1, Windows Phone 8.1 y versiones posteriores, Visual Studio puede generar un lote de aplicaciones (.appxbundle) para reducir el tamaño de la aplicación que descargarán los usuarios. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
+En el caso de aplicaciones destinadas a Windows8.1, Windows Phone 8.1 y versiones posteriores, Visual Studio puede generar un lote de aplicaciones (.appxbundle) para reducir el tamaño de la aplicación que descargarán los usuarios. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
 
 > **Nota** Un único lote de aplicaciones puede contener los paquetes para todas las arquitecturas. Debes enviar solo un paquete por cada SO de destino.
 
@@ -74,7 +71,7 @@ Los paquetes de la aplicación deben cumplir con estos requisitos.
 
 | Propiedad del paquete de la aplicación | Requisito                                                          |
 |----------------------|----------------------------------------------------------------------|
-| Tamaño del paquete         | .appxbundle: 25 GB como máximo por paquete <br>Paquetes .appx destinados a Windows 10: 25 GB como máximo por paquete<br>Paquetes .appx destinados a Windows 8.1: 8 GB como máximo por paquete <br> Paquetes .appx destinados a Windows 8: 2 GB como máximo por paquete <br> Paquetes .appx destinados a Windows Phone 8.1: 4 GB como máximo por paquete <br> Paquetes .xap: 1 GB como máximo por paquete                                                                           |
+| Tamaño del paquete         | .appxbundle: 25 GB como máximo por paquete <br>Paquetes .appx destinados a Windows10: 25 GB como máximo por paquete<br>Paquetes .appx destinados a Windows8.1: 8 GB como máximo por paquete <br> Paquetes .appx destinados a Windows8: 2 GB como máximo por paquete <br> Paquetes .appx destinados a WindowsPhone 8.1: 4 GB como máximo por paquete <br> Paquetes .xap: 1 GB como máximo por paquete                                                                           |
 | Hash de asignación de bloque     | Algoritmo SHA2-256                                                   |
  
 
@@ -85,7 +82,6 @@ StoreManifest.xml es un archivo de configuración opcional que se puede incluir 
  
 
  
-
 
 
 

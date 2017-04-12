@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 260aa6c4bae2f7e9d051e172f83563f430e4e6c4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 88d4b155acb38a3ab11cc180d112fb3434af87a0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-and-whitespace"></a>XAML y espacio en blanco
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Obtén información sobre las reglas de procesamiento de espacios en blanco que usa XAML.
 
@@ -57,5 +54,4 @@ Hay varias técnicas para conservar los espacios en blanco en el código XAML de
 `xml:space="preserve"`: especifica este atributo en el nivel del elemento donde se desea conservar el espacio en blanco. Ten en cuenta que esto conservará todos los espacios en blanco, incluidos los espacios que podrían agregar las aplicaciones de edición de código o las superficies de diseño para alinear los elementos de marcado como un anidamiento visualmente intuitivo. Una vez más, que esos espacios se representen depende del modelo de contenido del elemento contenedor. No se recomienda especificar `xml:space="preserve"` en el nivel raíz ya que la mayoría de los modelos de objetos no consideran los espacios en blanco significativos de una u otra forma. Se recomienda establecer únicamente el atributo de forma específica en el nivel de elementos que representan los espacios en blanco dentro de las cadenas o que son colecciones de espacios en blanco significativas.
 
 Entidades y los espacios de no separación: XAML admite la colocación de cualquier entidad Unicode dentro de un modelo de objetos de texto. Puedes usar entidades dedicadas como espacios de no separación (en la codificación UTF-8). También puedes usar controles de texto enriquecido que admitan espacios de no separación. Ten cuidado si vas a usar entidades para simular características de diseño como sangrías, ya que la salida en tiempo de ejecución de las entidades se ve afectada por un número mayor de factores que con las utilidades de diseño generales, como el uso correcto de paneles y márgenes.
-
 

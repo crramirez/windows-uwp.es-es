@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 10d8799b73a941a4a0eb89fd369d67b2fc6a68c2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 347d658f346ab14c60a4468c4a9935e555c2e016
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="device-portal-core-api-reference"></a>Referencia de API principal de Device Portal
 
 Todo lo que contiene Windows Device Portal se basa en las API de REST que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
@@ -567,7 +564,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
-200 | Correcto
+200 | Aceptar
 <br />
 **Familias de dispositivos disponibles**
 
@@ -614,7 +611,7 @@ La respuesta incluye una lista de nombres de archivo de volcado de memoria y los
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado previstos.
+Esta API tiene los siguientes códigos de estado esperado.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -720,7 +717,7 @@ La respuesta incluye la configuración de control de bloqueo. Para obtener más 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado previstos.
+Esta API tiene los siguientes códigos de estado esperado.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -3051,7 +3048,7 @@ DELETE | /api/dns-sd/tags
 - Ninguno
 
 **Respuesta**
- - Ninguna
+ - Ninguno
 
 **Código de estado**
 
@@ -3098,7 +3095,7 @@ tagValue | (**obligatorio**) La etiqueta que se debe quitar.
 - Ninguno
 
 **Respuesta**
- - Ninguna
+ - Ninguno
 
 **Código de estado**
 
@@ -3144,7 +3141,7 @@ tagValue | (**obligatorio**) La etiqueta que se debe agregar.
 - Ninguno
 
 **Respuesta**
- - Ninguna
+ - Ninguno
 
 **Código de estado**
 
@@ -3356,7 +3353,7 @@ path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especif
 
 **Respuesta**
 
-- Ninguna
+- Ninguno
 
 **Código de estado**
 
@@ -3406,7 +3403,7 @@ path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especif
 
 **Respuesta**
 
-- Ninguna 
+- Ninguno 
 
 **Código de estado**
 

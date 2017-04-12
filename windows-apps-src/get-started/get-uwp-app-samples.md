@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 93dde6fe68275987c16562370ba277072e5467a9
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e576150cd06000405fa4754e147fbc1546cdf703
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #<a name="get-the-universal-windows-platform-uwp-samples-from-github"></a>Obtener las muestras de Plataforma universal de Windows (UWP) desde GitHub
 Las muestras de aplicaciones para UWP están disponibles en los repositorios de GitHub. Si es la primera vez que trabajas con UWP, puedes comenzar con el repositorio [Microsoft/Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples "Universal Windows Platform app samples GitHub repository"), que contiene ejemplos en los que se muestran todas las características de UWP y sus modelos de utilización de API.  
 ![Repositorio de muestras de UWP de GitHub](images/GitHubUWPSamplesPage.png) Se pueden encontrar más muestras en la sección [Muestras](https://developer.microsoft.com/windows/samples "Dev Center samples") del Centro de desarrollo.  
@@ -54,4 +51,3 @@ Cuando hayas descargado el archivo zip, abre las muestras en Visual Studio:
 Si tienes problemas o preguntas, usa la pestaña Issues (Problemas) del repositorio para crear un nuevo informe de problema y haremos lo posible por ayudar.
 
 ![Imagen de comentarios](images/GitHubUWPSamplesFeedback.png)
-

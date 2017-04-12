@@ -5,16 +5,14 @@ title: Instrucciones para el deslizamiento transversal
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 label: Cross-slide
 template: detail.hbs
-translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 6f89875b5ef14c029103155f4e3c333dbdad0cab
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="guidelines-for-cross-slide"></a>Instrucciones para el deslizamiento transversal
 
-# Instrucciones para el deslizamiento transversal
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -25,14 +23,14 @@ ms.openlocfilehash: 6f89875b5ef14c029103155f4e3c333dbdad0cab
 
 Usa el gesto de deslizamiento transversal para admitir la selección con el gesto de deslizar rápidamente y las interacciones de arrastrar (mover) con el gesto de deslizar.
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Qué hacer y qué no hacer
+## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Qué hacer y qué no hacer
 
 
 -   Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección.
 -   Usa el deslizamiento transversal para la selección de elementos cuando la interacción de pulsar se utilice con otra finalidad.
 -   No uses el deslizamiento transversal para agregar elementos a una cola.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Instrucciones de uso adicionales
+## <a name="span-idadditionalusageguidancespanspan-idadditionalusageguidancespanspan-idadditionalusageguidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Instrucciones de uso adicionales
 
 
 Las interacciones de seleccionar y arrastrar solo se pueden realizar dentro de un área de contenido que sea desplazable en una dirección (vertical u horizontal). Para que funcionen, una dirección de movimiento panorámico debe estar bloqueada y el gesto se debe realizar en la dirección perpendicular a la del movimiento panorámico.
@@ -128,12 +126,12 @@ Usa la acción de arrastrar para mover uno o más objetos de un lugar a otro.
 
 Si es necesario mover más de un objeto, deja que los usuarios seleccionen varios elementos y los arrastren todos al mismo tiempo.
 
-## <span id="related_topics"></span>Artículos relacionados
+## <a name="span-idrelatedtopicsspanrelated-articles"></a><span id="related_topics"></span>Artículos relacionados
 
 
 **Ejemplos**
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Ejemplo de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 **Muestras de archivo**
@@ -150,11 +148,5 @@ Si es necesario mover más de un objeto, deja que los usuarios seleccionen vario
  
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

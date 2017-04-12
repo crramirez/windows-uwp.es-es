@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, redes, directx
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: ce94dda0eaf156f1e09fefbd76f50bc764050970
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="networking-for-games"></a>Conexión en red de juegos
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aprende a desarrollar e incorporar características de red en un juego DirectX.
 
@@ -396,4 +393,3 @@ using namespace Windows::Web::Http;
 * [HttpClient Sample]( http://go.microsoft.com/fwlink/p/?linkid=242550)
 * [Muestra de proximidad](http://go.microsoft.com/fwlink/p/?linkid=245082)
 * [Muestra de StreamSocket](http://go.microsoft.com/fwlink/p/?linkid=243037)
-

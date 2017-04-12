@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, profundidad, efectos, primitivos, directx
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 923bce3dd5f340b97fd6d4e7b31c4ed2e949ca94
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-depth-and-effects-on-primitives"></a>Usar profundidad y efectos en primitivos
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aquí te mostramos cómo usar la profundidad, la perspectiva, el color y otros efectos en primitivos.
 
@@ -32,7 +29,7 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Suponemos además que has consultado [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md) y [Crear sombreadores y dibujar primitivos](creating-shaders-and-drawing-primitives.md).
 
-**Tiempo para completarlo:** 20 minutos.
+**Tiempo para completarlo:** 20minutos.
 
 <a name="instructions"></a>Instrucciones
 ------------
@@ -458,7 +455,6 @@ A continuación, aplicaremos texturas en primitivos.
  
 
  
-
 
 
 

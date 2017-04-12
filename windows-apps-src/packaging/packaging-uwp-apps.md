@@ -8,20 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ca57f50f4827ba5de7a140f1353ba864c5e2fb6c
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, uwp
+ms.openlocfilehash: 6c699b357a2c1271f6765514331eb2ca0a6ff0b3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# <a name="packaging-uwp-apps"></a>Empaquetado de aplicaciones para UWP
+# <a name="package-a-uwp-app-with-visual-studio"></a>Empaquetar una aplicación para UWP con Visual Studio
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Para vender tu aplicación para la Plataforma universal de Windows (UWP) o distribuirla a otros usuarios, necesitas crear un paquete .appxupload para esta. Al crear el paquete .appxupload, se generará otro paquete .appx destinado a pruebas y a la instalación de prueba. Puedes distribuir la aplicación directamente mediante la instalación de prueba del paquete .appx a un dispositivo. Este artículo describe el proceso de configuración, creación y prueba de un paquete de la aplicación para UWP. Para obtener más información sobre la instalación de prueba, consulta [Sideload Apps in Windows 10 (Transferir localmente aplicaciones en Windows 10)](https://technet.microsoft.com/library/mt269549.aspx).
 
-Para Windows 10, se genera un paquete (.appxupload) que se puede cargar en la Tienda Windows. La aplicación estará disponible para instalarse y ejecutarse en cualquier dispositivo de Windows 10. Estos son los pasos para crear un paquete de la aplicación.
+Para Windows 10, se genera un paquete (.appxupload) que se puede cargar en la Tienda Windows. La aplicación estará disponible para instalarse y ejecutarse en cualquier dispositivo de Windows10. Estos son los pasos para crear un paquete de la aplicación.
 
 1.  [Antes de empaquetar la aplicación](#before-packaging-your-app). Sigue estos pasos para asegurarte de que la aplicación está lista para empaquetarse para el envío a la tienda.
 2.  [Configura un paquete de la aplicación](#configure-an-app-package). Usa el diseñador de manifiestos para configurar el paquete. Por ejemplo, agrega imágenes de icono y elige las orientaciones que admitirá la aplicación.
@@ -38,7 +36,7 @@ Después de completar los pasos anteriores, estás listo para vender tu aplicaci
 
 ## <a name="configure-an-app-package"></a>Configurar un paquete de la aplicación
 
-El archivo de manifiesto de la aplicación (package.appxmanifest.xml) presenta las propiedades y la configuración necesarias para crear el paquete de la aplicación. Por ejemplo, las propiedades del archivo de manifiesto describen la imagen que se usará como icono de la aplicación y las orientaciones que la aplicación admite cuando el usuario gira el dispositivo.
+El archivo de manifiesto de la aplicación (package.appxmanifest) presenta las propiedades y la configuración necesarias para crear el paquete de la aplicación. Por ejemplo, las propiedades del archivo de manifiesto describen la imagen que se usará como icono de la aplicación y las orientaciones que la aplicación admite cuando el usuario gira el dispositivo.
 
 Visual Studio tiene un diseñador de manifiestos que facilita el proceso de actualización del archivo de manifiesto sin modificar el lenguaje XML sin formato del archivo.
 
@@ -98,7 +96,7 @@ Para distribuir una aplicación a través de la Tienda, debes crear un paquete .
 **Validar el paquete de la aplicación en un dispositivo remoto de Windows 10**
 
 1.  Para habilitar un dispositivo de Windows 10 para el desarrollo, sigue las instrucciones de [Habilitar el dispositivo para el desarrollo](https://msdn.microsoft.com/library/windows/apps/Dn706236) .
-    **Importante**  No puedes validar el paquete de la aplicación en un dispositivo remoto de ARM para Windows 10.
+    **Importante**  No puedes validar el paquete de la aplicación en un dispositivo remoto de ARM para Windows10.
 2.  Descarga e instala las herramientas remotas para Visual Studio. Estas herramientas se usan para ejecutar el Kit para la certificación de aplicaciones en Windows de forma remota. Para obtener más información acerca de estas herramientas, incluida la ubicación para descargarlas, visita [Ejecutar aplicaciones de la Tienda Windows en un equipo remoto](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor).
 3.  Descarga el [Kit para la certificación de aplicaciones en Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) necesario e instálalo en el dispositivo remoto de Windows 10.
 4.  En la página **Creación del paquete completada** del asistente, elige el botón de opción **Máquina remota** y, a continuación, el botón de puntos suspensivos que se encuentra junto al botón **Probar conexión**.

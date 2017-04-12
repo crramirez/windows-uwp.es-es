@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, juegos, programación asincrónica, DirectX"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: fe3798e475654d4d0ae7773ac26889906d40b3df
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="asynchronous-programming-directx-and-c"></a>Programación asincrónica (DirectX y C++)
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se cubren diversos puntos que deben tener en cuenta al usar la programación asincrónica y los subprocesos con DirectX.
 
@@ -63,12 +60,11 @@ Crea un contexto diferido usando [**ID3D11Device::CreateDeferredContext**](https
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Introducción a multithreading en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476891)
+* [Introducción a multithreading en Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476891)
 
  
 
  
-
 
 
 

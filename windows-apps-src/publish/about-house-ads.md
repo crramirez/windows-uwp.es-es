@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: Puedes crear un anuncio para promocionar una de tus aplicaciones en otras aplicaciones tuyas de forma gratuita. Estos anuncios se denominan &quot;anuncios internos&quot;.
+Description: Puedes crear un anuncio para promocionar una de tus aplicaciones en otras aplicaciones tuyas de forma gratuita. Estos anuncios se denominan anuncios internos.
 title: Acerca de los anuncios internos
 ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
 ms.author: wdg-dev-content
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8c4f6597ecb262bf93efa02b695221606521a754
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 86ba2afa41c414ea9cb604637a40e34cd02cc7a4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="about-house-ads"></a>Acerca de los anuncios internos
 
 
@@ -39,6 +36,5 @@ Cuando un anuncio interno de la aplicación A aparezca en la aplicación B, no s
 * [Administrar campañas publicitarias](managing-your-ad-campaign.md)
 * [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md)
 * [Preguntas comunes](common-questions.md)
-
 
 

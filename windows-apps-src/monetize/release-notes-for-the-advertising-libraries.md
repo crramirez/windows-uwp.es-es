@@ -1,27 +1,24 @@
 ---
 author: mcleanbyron
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
-description: "Consulta las notas de la versión de las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK."
-title: "Notas de la versión de las bibliotecas de Microsoft Advertising"
+description: "Consulta las notas de la versión de las bibliotecas de Microsoft Advertising en Microsoft Store Services SDK."
+title: "Notas de la versión de las bibliotecas de publicidad"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, ads, anuncios, advertising, publicidad, release notes, notas de la versión"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 666071bccd562f2f95e8ae69f50797fdc464548b
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, release notes, notas de la versión"
+ms.openlocfilehash: f3d07df6e64c96e9070cb82bd7ac6e96b9cad1ee
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
-# <a name="release-notes-for-the-microsoft-advertising-libraries"></a>Notas de la versión de las bibliotecas de Microsoft Advertising
-
+# <a name="release-notes-for-the-advertising-libraries"></a>Notas de la versión de las bibliotecas de publicidad
 
 
 
-En esta sección se proporcionan notas de la versión destinadas a la versión actual de las bibliotecas de Microsoft Advertising incluidas en el Microsoft Store Services SDK (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x). Estas bibliotecas admiten aplicaciones de XAML y JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 y Windows Phone 8.
+
+En esta sección se proporcionan notas de la versión destinadas a la versión actual de las bibliotecas de Microsoft Advertising incluidas en Microsoft Store Services SDK (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x). Estas bibliotecas admiten aplicaciones de XAML y JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 y Windows Phone 8.
 
 ## <a name="installation"></a>Instalación
 
@@ -51,11 +48,7 @@ En la versión actual de las bibliotecas de Microsoft Advertising incluidas en M
 
 La clase **AdControl** ya no incluye las propiedades **Latitude** y **Longitude** en las aplicaciones para UWP. En su lugar, el código integrado en el control de anuncios detectará y enviará estos valores a los servidores de anuncios en nombre de la aplicación.
 
-## <a name="important-notice"></a>Aviso importante
-
-Asegúrate de leer el contrato de licencia del usuario final (CLUF) en su totalidad. Consulta el tema [Aviso importante: CLUF](important-notice-eula.md).
 
  
 
  
-

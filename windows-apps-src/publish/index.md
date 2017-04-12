@@ -1,40 +1,31 @@
 ---
-author: jnHs
-Description: "Consulta cómo publicar tus aplicaciones de Windows en la Tienda Windows."
-title: Publicar aplicaciones de Windows
-ms.author: wdg-dev-content
+author: jwmsft
+ms.assetid: b632a6cc-3503-4ab8-bfd1-dde731bd89ab
+description: "En esta sección se incluyen temas donde se explican los conceptos de programación que generalmente se aplican a cualquier aplicación que escribas."
+title: Plataforma XAML
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 43cd6db99001974283175cb611d2e06c5da2221c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 3a5a638a2b8caf63cc3353d7bd6a43068ec61119
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="xaml-platform"></a>Plataforma XAML
 
-# <a name="publish-windows-apps"></a>Publicar aplicaciones de Windows
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Puedes usar el panel del Centro de desarrollo de Windows para publicar tus aplicaciones en la Tienda Windows. 
-
-> **Nota** Debes disponer de una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acceder al panel del Centro de desarrollo de Windows y enviar aplicaciones.
-
-Esta sección contiene información sobre cómo publicar y administrar tus aplicaciones.
-
-| **Tema** | **Descripción** |
-|-----------|-----------------|
-| [Usar el panel del Centro de desarrollo de Windows](using-the-windows-dev-center-dashboard.md) | Obtén información sobre [cómo registrarse para obtener una cuenta](opening-a-developer-account.md) y obtener una visión general de lo que puedes hacer en el panel del Centro de desarrollo. |
-| [Crear la aplicación reservando un nombre](create-your-app-by-reserving-a-name.md) | Aprende a reservar nombres y busca sugerencias para elegir un buen nombre de aplicación. |
-| [Envíos de aplicaciones](app-submissions.md) | Un envío de una aplicación incluye [detalles de precios y disponibilidad](set-app-pricing-and-availability.md), [propiedades](enter-app-properties.md), [clasificación por edades](age-ratings.md), [paquetes](upload-app-packages.md) y [detalles de la descripción de la Tienda](create-app-store-listings.md). Tu envío pasará por el [proceso de certificación](the-app-certification-process.md) antes de que se publique en la Tienda. Algunas características opcionales que puedes usar son la [distribución de paquetes piloto](package-flights.md), las [pruebas beta](beta-testing-and-targeted-distribution.md) y [la distribución de LOB directamente en las empresas](distribute-lob-apps-to-enterprises.md). |
-| [Envíos de complementos](add-on-submissions.md) | Aprende a publicar complementos (productos desde la aplicación) a través del panel del Centro de desarrollo de Windows. |
-| [Rentabilizar con anuncios](monetize-with-ads.md) | Administra el uso de los anuncios, incluidas las configuraciones de mediación de anuncios personalizados y anuncios de filiales. |
-| [Administración y servicios de aplicaciones](app-management-and-services.md) | Usa servicios como pruebas A/B (experimentación) y los mapas, y aprende a [ver los detalles de la identidad de aplicación](view-app-identity-details.md) y [reservar nombres de aplicación adicionales](manage-app-names.md). |
-| [Análisis](analytics.md) | Obtén datos analíticos de tus aplicaciones para ver cómo están funcionando las aplicaciones: p. ej., puedes saber a cuántos clientes has llegado o cómo usan estos la aplicación y qué opinan de ella. También encontrarás información sobre el estado de la aplicación, el uso de los anuncios y mucho más. |
-| [Promoción de aplicaciones y atracción de clientes](app-promotion-and-customer-engagement.md) | Promociona tu aplicación con [campañas publicitarias](create-an-ad-campaign-for-your-app.md), [código promocional](generate-promotional-codes.md), [precio de venta](put-apps-and-add-ons-on-sale.md) y mucho más. 
-| [Proceso de pago](getting-paid-apps.md) | Obtén información detallada sobre cómo recibir ganancias a partir de las aplicaciones, los complementos y Microsoft Advertising. |
-| [Directivas de la Tienda y Código de conducta](https://msdn.microsoft.com/library/windows/apps/dn764939.aspx) | En esta sección se incluyen las [directivas de la Tienda](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx) y los criterios de [calidad de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt652261.aspx) que se aplican al contenido y a las aplicaciones de Windows, así como el [Código de conducta](https://msdn.microsoft.com/library/windows/apps/dn764941.aspx) que deben seguir los desarrolladores. |
+En esta sección se incluyen temas donde se explican los conceptos de programación que generalmente conciernen a cualquier aplicación que escribas si estás usando C#, MicrosoftVisual Basic o extensiones de componentes de VisualC++ (C++/CX) como lenguaje de programación y XAML para la definición de la interfaz de usuario. Esto incluye conceptos de programación básica, como el uso de propiedades y eventos, y el modo en que estos se aplican a la programación de aplicaciones de la Plataforma universal de Windows (UWP). La Plataforma universal de Windows (UWP) amplía los conceptos de propiedades de C#, Visual Basic o C++/CX y sus valores agregando el sistema de propiedades de dependencias. Los temas de esta sección también documentan el lenguaje XAML tal y como lo usa UWP y abarcan escenarios básicos y temas avanzados sobre el uso de XAML para definir la interfaz de usuario de una aplicación para UWP.
  
+| Tema | Descripción |
+|-------|-------------|
+| [Introducción a XAML](xaml-overview.md) | Se presenta el lenguaje XAML y los conceptos de XAML a la audiencia de desarrolladores de aplicaciones de Windows Runtime y se describen las diversas formas de declarar objetos y establecer atributos en XAML que se usan para crear una aplicación de Windows Runtime. |
+| [Introducción a las propiedades de dependencia](dependency-properties-overview.md) | En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C# o Visual Basic junto con definiciones XAML para la interfaz de usuario. |
+| [Propiedades de dependencia personalizadas](custom-dependency-properties.md) | Se explica cómo definir e implementar las propiedades de dependencia personalizadas para una aplicación de Windows Runtime con C++, C# o Visual Basic. |
+| [Introducción a las propiedades adjuntas](attached-properties-overview.md) | Se explica el concepto de propiedad adjunta en XAML y se ofrecen algunos ejemplos. |
+| [Propiedades adjuntas personalizadas](custom-attached-properties.md) | Se explica cómo implementar una propiedad adjunta de XAML como una propiedad de dependencia y cómo definir la convención de descriptor de acceso necesaria para que la propiedad adjunta se pueda usar en XAML. |
+| [Introducción a eventos y eventos enrutados](events-and-routed-events-overview.md) | Aquí se describe el concepto de programación de eventos en una aplicación de Windows Runtime cuando se usa C#, VisualBasic o C++/CX como lenguaje de programación y XAML para la definición de la interfaz de usuario. Puedes asignar controladores para eventos como parte de las declaraciones de los elementos de la interfaz de usuario en XAML, o puedes agregar los controladores en el código. Windows Runtime admite **eventos enrutados**, lo que implica que ciertos eventos de entrada y eventos de datos puedan ser controlados por otros objetos distintos del objeto que originó el evento. Los eventos enrutados son útiles cuando tienes que definir plantillas de control o usar contenedores de páginas o de diseño. |
 
+ 

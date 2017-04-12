@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anuncios, publicidad, unidades de anuncios
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 32a934f1d113d561c72ab3ac48a8ef3d0820c176
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: daf0887462a4c84aa827a6261793a0eaf4d512ca
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anuncios en la aplicación
 
 
@@ -28,22 +25,29 @@ Cuando termines de probar la aplicación y estés listo para enviarla al Centro 
 Para configurar el identificador de aplicación y las unidades de anuncios de la aplicación dinámica:
 
 1.  En el panel del Centro de desarrollo de Windows, selecciona la aplicación y, a continuación, haga clic en **Monetización > Monetizar con anuncios**.
-2.  En la sección **Unidades de anuncio de Microsoft Advertising** de esta página, crea una unidad de anuncio. Para el tipo de unidad de anuncio, selecciona **Banner** si usas un objeto **AdControl** o selecciona **Vídeo intersticial** si usas un objeto **InterstitialAd**. Para obtener más información acerca de esta página, consulta [Rentabilizar con anuncios](../publish/monetize-with-ads.md).
 
-3.  Para cada unidad de anuncio generada, verás un **Id. de aplicación** y un **Id. de unidad de anuncio** en esta página. Para mostrar anuncios en tu aplicación, deberás usar estos valores en el código de la aplicación:
+2.  En la sección **Unidades de anuncios de Microsoft Advertising** de esta página, crea una unidad de anuncios. Para el tipo de unidad de anuncios, selecciona una de las siguientes opciones:
 
-    * Si la aplicación muestra anuncios de banner, asigna estos valores a las propiedades **ApplicationId** y **AdUnitId** del objeto **AdControl**.
+  * Si usas **AdControl** en tu aplicación para mostrar anuncios de banner, selecciona **Banner** para el tipo de unidad de anuncios.
 
-    * Si la aplicación muestra anuncios intersticiales en vídeos, pasa estos valores para el método **RequestAd** del objeto **InterstitialAd**.
+  * Si usas **InterstitialAd** en tu aplicación para mostrar anuncios de banner intersticial o de vídeo intersticial, selecciona **Vídeo intersticial** o **Banner intersticial** (asegúrate de seleccionar la opción adecuada para el tipo de anuncio intersticial que quieras mostrar).
 
- 
+3.  Para cada unidad de anuncios generada, verás un **Id. de aplicación** y un **Id. de la unidad de anuncios** en esta página. Para mostrar anuncios en tu aplicación, tendrás que usar estos valores en el código de la aplicación:
+
+  * Si la aplicación muestra anuncios de banner, asigna estos valores a las propiedades [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) y [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) del objeto **AdControl**. Para obtener más información, consulta [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md) y [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md).
+
+  * Si la aplicación muestra anuncios intersticiales, pasa estos valores al método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) del objeto **InterstitialAd**. Para más información, consulta [Anuncios intersticiales](interstitial-ads.md).
+
+Para más información sobre la página **Monetizar con anuncios**, consulta [Monetizar con anuncios](../publish/monetize-with-ads.md).
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Valores del modo de prueba](test-mode-values.md)
+* [Valores del modo de prueba](test-mode-values.md)
+* [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md)
+* [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md)
+* [Anuncios intersticiales](interstitial-ads.md)
 
 
  
 
  
-

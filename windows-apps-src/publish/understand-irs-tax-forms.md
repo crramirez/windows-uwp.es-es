@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 5f51e1c5a44767e49b5c3dc5f578c2532da11008
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 068a940a54048b10e8f66bd3267b3a22c42beb50
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 
 Según tu ubicación y el importe de ventas o pagos que recibes, es posible que recibas uno o varios formularios fiscales de Microsoft cada año. Microsoft debe emitir estos formularios y presentarlos ante el Servicio de Impuestos Internos (IRS).
@@ -39,7 +36,7 @@ A continuación, explicaremos más sobre estos formularios, incluidos sus destin
      <th> Debo recibir este formulario</th>
   </tr>
   <tr> 
-     <td valign="top">Tuve **ventas superiores a 200 aplicaciones** con un importe total de compra de estas ventas **superior a 20 000 USD** en el año fiscal aplicable (**sin** contar las ventas realizadas en Brasil y China a través de la Tienda de Windows 10).</td>
+     <td valign="top">Tuve **ventas superiores a 200 aplicaciones** con un importe total de compra de estas ventas **superior a 20000USD** en el año fiscal aplicable (**sin** contar las ventas realizadas en Brasil y China a través de la Tienda de Windows10).</td>
     <td valign="top">**1099-K**:<br>
 Contribuyente: Microsoft Corporation<br>
 CIF/NIF: \*\*\*\*\*4442<br>
@@ -47,11 +44,11 @@ CIF/NIF: \*\*\*\*\*4442<br>
 **Importante**: El formulario 1099-K contiene importes de **compra bruta**, no los pagos que se te efectuaron.</td>
   </tr>
   <tr> 
-     <td valign="top">Recibí **al menos 10 USD por pagos** de ventas de aplicaciones realizadas en Brasil y China a través de la Tienda de Windows 10.<br>
+     <td valign="top">Recibí **al menos 10USD por pagos** de ventas de aplicaciones realizadas en Brasil y China a través de la Tienda de Windows10.<br>
 <br>
 **O bien,**<br>
 <br>
-Recibí al menos 600 USD por pagos no relacionados con las ventas de aplicaciones de Microsoft en el año fiscal aplicable (por ejemplo, pagos de incentivos o pagos de un concurso o una promoción).</td>
+Recibí al menos 600USD por pagos no relacionados con las ventas de aplicaciones de Microsoft en el año fiscal aplicable (por ejemplo, pagos de incentivos o pagos de un concurso o una promoción).</td>
     <td valign="top">**1099-MISC**:<br>
 Pagador: Microsoft Corporation<br>
 CIF/NIF: \*\*\*\*\*4442<br>
@@ -71,7 +68,7 @@ CIF/NIF: \*\*\*\*\*4442<br>
      <th> Debo recibir este formulario</th>
   </tr>
   <tr> 
-     <td valign="top">Recibí **al menos 600 USD en pagos** provenientes de anuncios en aplicaciones (Microsoft Advertising) en el año fiscal aplicable.</td>
+     <td valign="top">Recibí **al menos 600USD en pagos** provenientes de anuncios en aplicaciones (Microsoft Advertising) en el año fiscal aplicable.</td>
     <td valign="top">**1099-MISC**:<br>
 Pagador: Microsoft Online, Inc.<br>
 CIF/NIF: \*\*\*\*\*0505<br>
@@ -79,7 +76,7 @@ CIF/NIF: \*\*\*\*\*0505<br>
 **Importante**: Determinadas entidades comerciales no recibirán formularios 1099-MISC, independientemente de los importes de pago recibidos de Microsoft.  Para obtener más información, consulta a tu profesional en materia fiscal.  </td>
   </tr>
   <tr> 
-     <td valign="top">Recibí **menos de 600 USD en pagos** provenientes de anuncios en aplicaciones (Microsoft Advertising) en el año fiscal aplicable.</td>
+     <td valign="top">Recibí **menos de 600USD en pagos** provenientes de anuncios en aplicaciones (Microsoft Advertising) en el año fiscal aplicable.</td>
      <td valign="top">Ninguno</td>
   </tr>
 </table>
@@ -127,4 +124,3 @@ CIF/NIF: \*\*\*\*\*0505<br>
 
 
 > **Nota**: Si tienes más preguntas o dudas relacionadas con los **formularios fiscales del IRS**, crea una [incidencia de soporte técnico](http://aka.ms/storesupport). Microsoft no puede responder preguntas relacionadas con tus circunstancias fiscales específicas. Para tales preguntas, consulta a tu profesional en materia fiscal.
-

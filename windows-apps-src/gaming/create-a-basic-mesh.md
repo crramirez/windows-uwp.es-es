@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, malla, DirectX
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f7dc55c0a7653616a86f1cca41521c7b25c070f9
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-and-display-a-basic-mesh"></a>Crear y mostrar una malla básica
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies. Las listas de vértices que comprimen la estructura de estos objetos poligonales y superficies se denominan mallas. A continuación crearemos una malla básica para un objeto de cubo y haremos que se represente y muestre a través de la canalización de sombreador.
 
@@ -438,7 +435,7 @@ m_swapChain->Present(1, 0);
 En este tema se explica cómo crear y mostrar la geometría simple que tú mismo has elaborado. Para obtener más información sobre cómo cargar geometría compleja de un archivo y convertirla al formato del objeto de búfer de vértices (.vbo) específico de la muestra, consulta [Cómo cargar recursos en tu juego DirectX](load-a-game-asset.md).
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -450,7 +447,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego"
+title: "Definir el marco de la aplicación para UWP del juego"
 description: La primera parte de codificar un juego de Plataforma universal de Windows (UWP) con DirectX es crear el marco que permite al objeto de juego interactuar con Windows.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 ms.author: mtoepke
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, UWP, juegos, games, DirectX
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 82a44a3499297b3988815ad10091cd351a194cbd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9c19c2ca89b2d38929ade8596c10beb3c3a16104
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="define-the-games-universal-windows-platform-uwp-app-framework"></a>Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego
 
 
@@ -33,7 +30,7 @@ La primera parte de codificar un juego de Plataforma universal de Windows (UWP) 
 
 En cualquier juego DirectX de UWP, debes obtener un proveedor de vista que el singleton de la aplicación, el objeto de Windows Runtime que define una instancia de tu aplicación en ejecución, puede usar para acceder a los recursos gráficos que necesita. A través de Windows Runtime, tu aplicación tiene conexión directa con la interfaz gráfica, pero debes especificar los recursos que necesitas y cómo controlarlos.
 
-Tal y como hablamos en [Configuración del proyecto de juego](tutorial--setting-up-the-games-infrastructure.md), Microsoft Visual Studio 2015 proporciona una implementación de un representador básico para DirectX en el archivo **Sample3DSceneRenderer.cpp**, que está disponible cuando seleccionas la plantilla **DirectX 11 App (Universal Windows)** .
+Tal y como hablamos en [Configuración del proyecto de juego](tutorial--setting-up-the-games-infrastructure.md), Microsoft Visual Studio2015 proporciona una implementación de un representador básico para DirectX en el archivo **Sample3DSceneRenderer.cpp**, que está disponible cuando seleccionas la plantilla **DirectX 11 App (Universal Windows)** .
 
 Para obtener más detalles para comprender y crear un proveedor de vista y un representador, consulta el tema sobre cómo [configurar una aplicación para UWP con C++ y DirectX para mostrar una vista DirectX](https://msdn.microsoft.com/library/windows/apps/hh465077).
 
@@ -167,7 +164,7 @@ void App::Load(
 
 Una vez establecida la ventana principal, el singleton de la aplicación llama a **Load**. En la muestra, este método usa un conjunto de tareas asincrónicas (cuya sintaxis se define en la [biblioteca de modelos paralelos](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx)) para crear objetos del juego, cargar recursos gráficos e inicializar la máquina de estados del juego. Al usar el modelo de tarea asincrónica, el método Load finaliza rápidamente y permite que la aplicación empiece a procesar entradas. En este método, la aplicación también muestra una barra de progreso mientras los archivos de recursos se cargan.
 
-Distinguimos dos fases dentro de la carga de recursos porque el acceso al contexto de dispositivo de Direct3D 11 está limitado al subproceso en el que el contexto de dispositivo se creó, mientras que el acceso al dispositivo de Direct3D 11 para crear objetos no está sujeto a ningún subproceso. La tarea **CreateGameDeviceResourcesAsync** se ejecuta en un subproceso distinto del de la tarea de finalización (*FinalizeCreateGameDeviceResources*), que se ejecuta en el subproceso original. Empleamos un modelo parecido para cargar los recursos de nivel con **LoadLevelAsync** y **FinalizeLoadLevel**.
+Distinguimos dos fases dentro de la carga de recursos porque el acceso al contexto de dispositivo de Direct3D11 está limitado al subproceso en el que el contexto de dispositivo se creó, mientras que el acceso al dispositivo de Direct3D11 para crear objetos no está sujeto a ningún subproceso. La tarea **CreateGameDeviceResourcesAsync** se ejecuta en un subproceso distinto del de la tarea de finalización (*FinalizeCreateGameDeviceResources*), que se ejecuta en el subproceso original. Empleamos un modelo parecido para cargar los recursos de nivel con **LoadLevelAsync** y **FinalizeLoadLevel**.
 
 Tras crear los objetos del juego y cargar los recursos gráficos, inicializamos la máquina de estado del juego en las condiciones de inicio (por ejemplo, definir la cantidad de munición inicial, el número de nivel y las posiciones de los objetos). Si el estado del juego indica que el jugador está reanudando un juego, cargamos el nivel actual (aquel en el que el jugador estaba cuando el juego se suspendió).
 
@@ -240,7 +237,7 @@ void App::Uninitialize()
 }
 ```
 
-En la muestra de juego, dejamos que el singleton de la aplicación del juego limpie todo una vez que el juego termine. En Windows 10, cerrar la ventana de la aplicación no acaba con el proceso de la aplicación, sino que en su lugar se escribe en la memoria el estado del singleton de la aplicación. Si hay algo especial que debe ocurrir cuando el sistema tiene que reclamar su memoria, cualquier limpieza de recursos, pon el código de esa limpieza en este método.
+En la muestra de juego, dejamos que el singleton de la aplicación del juego limpie todo una vez que el juego termine. En Windows10, cerrar la ventana de la aplicación no acaba con el proceso de la aplicación, sino que en su lugar se escribe en la memoria el estado del singleton de la aplicación. Si hay algo especial que debe ocurrir cuando el sistema tiene que reclamar su memoria, cualquier limpieza de recursos, pon el código de esa limpieza en este método.
 
 Volveremos a hacer referencia a estos 5 métodos en el tutorial, así que tenlos en cuenta. Ahora vamos a echar un vistazo a la estructura general del motor de juego y las máquinas de estado que la definen.
 
@@ -323,7 +320,7 @@ A continuación tienes una lista de los controladores de eventos de la muestra y
 <td align="left">OnLogicalDpiChanged</td>
 <td align="left">Controla [<strong>DisplayProperties::LogicalDpiChanged</strong>] (https://msdn.microsoft.com/library/windows/apps/br226150). Los PPP de la ventana de juego principal han cambiado, por lo que la aplicación del juego ajusta sus recursos en consonancia.
 <div class="alert">
-<strong>Nota</strong> Las coordenadas de [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) están en PPP (píxeles independientes del dispositivo), como en [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Como resultado, se debe notificar a Direct2D el cambio en PPP para mostrar cualquier primitivo o activo 2D correctamente.
+<strong>Nota</strong>  Las coordenadas de [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) están en PID (píxeles independientes del dispositivo), como en [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Como resultado, se debe notificar a Direct2D el cambio en PPP para mostrar cualquier primitivo o activo 2D correctamente.
 </div>
 <div>
  
@@ -1427,7 +1424,6 @@ int main(Platform::Array<Platform::String^>^)
  
 
  
-
 
 
 

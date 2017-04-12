@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Usa este método en la API de envío de la Tienda Windows para actualizar un envío de complemento ya existente."
-title: "Actualizar un envío de complemento mediante la API de envío de la Tienda Windows"
+title: "Actualizar un envío de complemento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP, API de envío de la Tienda Windows, envío de complemento, producto desde la aplicación, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8b06973c7c6949851bf786b1fb37026eee4b5fad
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, add-on submission, envío de complemento, in-app product, producto desde la aplicación, IAP, IAP"
+ms.openlocfilehash: 867a8495d5dea50d5b362822955e7605eddf4bb9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="update-an-add-on-submission-using-the-windows-store-submission-api"></a>Actualizar un envío de complemento mediante la API de envío de la Tienda Windows
+# <a name="update-an-add-on-submission"></a>Actualizar un envío de complemento
 
 
 Usa este método en la API de envío de la Tienda Windows para actualizar un envío de complemento (también conocido como producto desde la aplicación o IAP) ya existente. Después de actualizar correctamente un envío mediante este método, debes [confirmar el envío](commit-an-add-on-submission.md) para su ingesta y publicación.
@@ -48,7 +45,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -56,8 +53,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Obligatorio. Id. de la Tienda del complemento para el cual deseas actualizar un envío. El Id. de la Tienda está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes de [Creación de un complemento](create-an-add-on.md) u [Obtención de todos los complementos](get-all-add-ons.md).  |
-| submissionId | string | Obligatorio. Identificador del envío que se debe actualizar. Esta identificación está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes de [Creación de un envío de complementos](create-an-add-on-submission.md).  |
+| inAppProductId | cadena | Obligatorio. Id. de la Tienda del complemento para el cual deseas actualizar un envío. El Id. de la Tienda está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes de [Creación de un complemento](create-an-add-on.md) u [Obtención de todos los complementos](get-all-add-ons.md).  |
+| submissionId | cadena | Obligatorio. Identificador del envío que se debe actualizar. Esta identificación está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes de [Creación de un envío de complementos](create-an-add-on-submission.md).  |
 
 <span/>
 
@@ -72,7 +69,7 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 | lifetime           | string  |  Duración del complemento. Puede ser uno de los valores siguientes: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  | Objeto que contiene la información de la descripción del complemento. Para obtener más información, consulta [Listing resource (Recurso de descripción)](manage-add-on-submissions.md#listing-object).  |
 | pricing           | object  | Objeto que contiene la información del precio del complemento. Para obtener más información, consulta [Pricing resource (Recurso de precio)](manage-add-on-submissions.md#pricing-object).  |
-| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | cadena  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
 | tag           | cadena  |  Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) para el complemento (esta información se denominaba anteriormente *tag*).   |
 | visibility  | cadena  |  Visibilidad del complemento. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
@@ -213,4 +210,3 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Commit an add-on submission (Confirmar un envío de complemento)](commit-an-add-on-submission.md)
 * [Delete an add-on submission (Eliminar un envío de complemento)](delete-an-add-on-submission.md)
 * [Get the status of an add-on submission (Obtener el estado de un envío de complemento)](get-status-for-an-add-on-submission.md)
-

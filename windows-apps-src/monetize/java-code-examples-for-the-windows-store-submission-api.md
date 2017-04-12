@@ -1,28 +1,25 @@
 ---
 author: mcleanbyron
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
-description: "Usa los ejemplos de código de Java de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows."
-title: "Ejemplos de código de Java para la API de envío de la Tienda Windows"
+description: "Usa los ejemplos de código Java de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows."
+title: "Ejemplos de código Java para la API de envío"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, ejemplos de código, Windows Store submission API, code examples"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9bf6885129176a75265d073c3f92b9f899bc265d
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, code examples, ejemplos de código"
+ms.openlocfilehash: ff5e857e0f5ce110ab7afc64bd2faa28f7bea517
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="java-code-examples-for-the-submission-api"></a>Ejemplos de código Java para la API de envío
 
-# <a name="java-code-examples-for-the-windows-store-submission-api"></a>Ejemplos de código de Java para la API de envío de la Tienda Windows
-
-En este artículo se proporcionan ejemplos de código de Java para usar la *API de envío de la Tienda Windows*. Para obtener más información sobre esta API, consulta [Crear y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
+En este artículo se proporcionan ejemplos de código Java para usar la *API de envío de la Tienda Windows*. Para obtener más información sobre esta API, consulta [Crear y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
 Estos ejemplos de código muestran las siguientes tareas:
 
-* [Obtener un token de acceso de Azure AD](#token)
+* [Obtener un token de acceso de AzureAD](#token)
 * [Crear un complemento](#create-add-on)
 * [Crear un paquete piloto](#create-package-flight)
 * [Crear un envío de aplicación](#create-app-submission)
@@ -46,7 +43,7 @@ En el siguiente ejemplo se muestran las instrucciones imports que se usan en tod
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/MainExample.java#L1-L64)]
 
 <span id="token" />
-## <a name="obtain-an-azure-ad-access-token"></a>Obtener un token de acceso de Azure AD
+## <a name="obtain-an-azure-ad-access-token"></a>Obtener un token de acceso de AzureAD
 
 En el siguiente ejemplo se muestra cómo [obtener un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) que puedas usar para llamar a métodos en la API de envío de la Tienda Windows. Después de obtener un token, tienes 60 minutos para utilizar este token en llamadas a la API de envío de Tienda Windows antes de que el token expire. Después de que el token expire, puedes generar uno nuevo.
 
@@ -72,7 +69,7 @@ En el siguiente ejemplo se muestra cómo [crear](create-a-flight.md) y luego [el
 En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de la Tienda Windows para crear un envío de aplicación. Para ello, el método ```SubmitNewApplicationSubmission``` crea un nuevo envío como clon del último envío publicado y, después, actualiza y confirma el envío clonado al Centro de desarrollo de Windows. Específicamente, el método ```SubmitNewApplicationSubmission``` realiza estas tareas:
 
 1. Para empezar, el método [obtiene datos de la aplicación especificada](get-an-app.md).
-2. Después, [elimina el envío pendiente de la aplicación](delete-an-app-submission.md), si existe uno.
+2. A continuación, [elimina el envío pendiente de la aplicación](delete-an-app-submission.md), si existe uno.
 3. Luego [crea un nuevo envío de la aplicación](create-an-app-submission.md) (el nuevo envío es una copia del último envío publicado).
 4. Cambia algunos detalles para el nuevo envío y carga un nuevo paquete para el envío a Azure Blob Storage.
 5. Después, [actualiza](update-an-app-submission.md) y [confirma](commit-an-app-submission.md) el nuevo envío al Centro de desarrollo de Windows.
@@ -86,7 +83,7 @@ En el siguiente ejemplo se muestra cómo usar varios métodos en la API de enví
 En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de la Tienda Windows para crear un envío de complemento. Para ello, el método ```SubmitNewInAppProductSubmission``` crea un nuevo envío como clon del último envío publicado y, después, actualiza y confirma el envío clonado al Centro de desarrollo de Windows. Específicamente, el método ```SubmitNewInAppProductSubmission``` realiza estas tareas:
 
 1. Para empezar, el método [obtiene datos del complemento especificado](get-an-add-on.md).
-2. Después, [elimina el envío pendiente del complemento](delete-an-add-on-submission.md), si existe uno.
+2. A continuación, [elimina el envío pendiente del complemento](delete-an-add-on-submission.md), si existe uno.
 3. Luego [crea un nuevo envío del complemento](create-an-add-on-submission.md) (el nuevo envío es una copia del último envío publicado).
 4. Carga un archivo ZIP que contiene los iconos del envío a Azure Blob Storage.
 5. Después, [actualiza](update-an-add-on-submission.md) y [confirma](commit-an-add-on-submission.md) el nuevo envío al Centro de desarrollo de Windows.
@@ -100,7 +97,7 @@ En el siguiente ejemplo se muestra cómo usar varios métodos en la API de enví
 En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de la Tienda Windows para crear un envío de paquete piloto. Para ello, el método ```SubmitNewFlightSubmission``` crea un nuevo envío como clon del último envío publicado y, después, actualiza y confirma el envío clonado al Centro de desarrollo de Windows. Específicamente, el método ```SubmitNewFlightSubmission``` realiza estas tareas:
 
 1. Para empezar, el método [obtiene datos del paquete piloto especificado](get-a-flight.md).
-2. Después, [elimina el envío pendiente del paquete piloto](delete-a-flight-submission.md), si existe uno.
+2. A continuación, [elimina el envío pendiente del paquete piloto](delete-a-flight-submission.md), si existe uno.
 3. Luego [crea un nuevo envío del paquete piloto](create-a-flight-submission.md) (el nuevo envío es una copia del último envío publicado).
 4. Carga un nuevo paquete para el envío a Azure Blob Storage.
 5. Después, [actualiza](update-a-flight-submission.md) y [confirma](commit-a-flight-submission.md) el nuevo envío al Centro de desarrollo de Windows.
@@ -127,5 +124,4 @@ El listado de código siguiente contiene todos los ejemplos anteriores organizad
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-
+* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)

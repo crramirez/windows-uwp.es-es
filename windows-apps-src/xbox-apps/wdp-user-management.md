@@ -1,20 +1,25 @@
----  
+---
 author: WilliamsJason
 title: "Referencia de API de Administración de usuarios de prueba de Xbox Live"
 description: "Obtén información sobre cómo tener acceso a las API de Administración de usuarios mediante programación."
-translationtype: Human Translation
-ms.sourcegitcommit: 67f158b1d3d5ece14c36483a2513a2db2f478660
-ms.openlocfilehash: 66fe038fdb54ac5cb9086bf9225d0a5d573b39c8
-
----  
-
-#Administración de usuarios de Xbox Live#
+ms.author: jaswill
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
+ms.openlocfilehash: c1a2517aa8716cff9201351a12a3c391110aafab
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
+---
+#<a name="xbox-live-user-management"></a>Administración de usuarios de Xbox Live#
 
 **Solicitud**
 
 Puedes obtener la lista de los usuarios en la consola o actualizar la lista al agregar, quitar, iniciar sesión, cerrar sesión o modificar los usuarios existentes.
 
-| Método        | URI de la solicitud     | 
+| Método        | URI de solicitud     | 
 | ------------- |-----------------|
 | GET           | /ext/user |
 | PUT           | /ext/user |
@@ -24,7 +29,7 @@ Puedes obtener la lista de los usuarios en la consola o actualizar la lista al a
 
 * Ninguno
 
-**Encabezados de la solicitud**
+**Encabezados de solicitud**
 
 * Ninguno
 
@@ -41,7 +46,7 @@ Las llamadas a PUT deben incluir una matriz JSON con la estructura siguiente:
   * SponsoredUser (opcional): bool que especifica si agregar un usuario patrocinado.
   * Delete (opcional): bool que especifica eliminar este usuario de la consola
 
-###Respuesta###
+###<a name="response"></a>Respuesta###
 
 **Cuerpo de la respuesta**
 
@@ -67,11 +72,5 @@ Esta API tiene los siguientes códigos de estado esperado.
 | 4XX                | Varios errores de formato o datos de solicitud no válidos |
 | 5XX                | Códigos de error para errores inesperados |
 <br>
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

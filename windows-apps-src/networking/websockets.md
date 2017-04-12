@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 203face64ddb925601d23274c4e9cf9ab6d7c6f8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: de9b10324d212a92a21f64f1b857cdf465e26b4c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="websockets"></a>WebSockets
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -266,7 +263,7 @@ Para los errores de validación de parámetros, una aplicación también puede u
 
 ## <a name="setting-timeouts-on-websocket-operations"></a>Establecimiento de tiempos de espera en operaciones de WebSocket
 
-Las clases MessageWebSocket y StreamWebSocket usan un servicio interno para enviar solicitudes de cliente de WebSocket y recibir respuestas de un servidor. El valor de tiempo de espera predeterminado que se usa en una operación de conexión de WebSocket es 60 segundos. Si el servidor HTTP que admite WebSockets está temporalmente inactivo o bloqueado por una interrupción de la red y el servidor no responde o no puede responder a la solicitud de conexión de WebSocket, el servicio del sistema interno espera los 60 segundos predeterminados antes de devolver un error que provoca el inicio de una excepción en el método WebSocket de ConnectAsync. Si la consulta del nombre de un servidor HTTP del URI devuelve varias direcciones IP para el nombre, el servicio del sistema interno prueba hasta 5 direcciones IP para el sitio, cada una de ellas con un tiempo de espera predeterminado de 60 segundos antes de producir un error. Una aplicación que realiza una solicitud de conexión de WebSocket o servicio web podría esperar varios minutos intentando conectar a diversas direcciones IP antes de que se devolviera un error y se iniciara una excepción. El usuario podría percibir este comportamiento como si la aplicación hubiera dejado de funcionar. El tiempo de espera predeterminado que se usa para las operaciones de envío y recepción después de que se haya establecido una conexión de WebSocket es de 30 segundos.
+Las clases MessageWebSocket y StreamWebSocket usan un servicio interno para enviar solicitudes de cliente de WebSocket y recibir respuestas de un servidor. El valor de tiempo de espera predeterminado que se usa en una operación de conexión de WebSocket es 60 segundos. Si el servidor HTTP que admite WebSockets está temporalmente inactivo o bloqueado por una interrupción de la red y el servidor no responde o no puede responder a la solicitud de conexión de WebSocket, el servicio del sistema interno espera los 60segundos predeterminados antes de devolver un error que provoca el inicio de una excepción en el método WebSocket de ConnectAsync. Si la consulta del nombre de un servidor HTTP del URI devuelve varias direcciones IP para el nombre, el servicio del sistema interno prueba hasta 5 direcciones IP para el sitio, cada una de ellas con un tiempo de espera predeterminado de 60segundos antes de producir un error. Una aplicación que realiza una solicitud de conexión de WebSocket o servicio web podría esperar varios minutos intentando conectar a diversas direcciones IP antes de que se devolviera un error y se iniciara una excepción. El usuario podría percibir este comportamiento como si la aplicación hubiera dejado de funcionar. El tiempo de espera predeterminado que se usa para las operaciones de envío y recepción después de que se haya establecido una conexión de WebSocket es de 30 segundos.
 
 Para que la aplicación responda mejor y se minimicen estos problemas, puedes establecer un tiempo de espera menor en las solicitudes de conexión para que las operaciones dieran error antes por el tiempo de espera y no por la configuración predeterminada.
 
@@ -348,5 +345,4 @@ El siguiente ejemplo crea una tarea que finaliza tras una demora especificada y 
         });
     }
 ```
-
 

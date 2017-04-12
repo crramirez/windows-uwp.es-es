@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, directx, direct3d 9, direct3d 11, cambios
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: e46bb663a5497cb17f396b410fbdcb5d0295e5fe
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="important-changes-from-direct3d-9-to-direct3d-11"></a>Cambios importantes en Direct3D 11 respecto de Direct3D 9
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -35,7 +32,7 @@ Direct3D 11 es esencialmente el mismo tipo de API que Direct3D 9, una interfaz v
 ## <a name="core-api-functions"></a>Funciones API clave
 
 
-En Direct3D 9 tenías que crear una interfaz con la API de Direct3D antes de poder empezar a usarla. En tu juego Direct3D 11 de la Plataforma universal de Windows (UWP), llamas a una función estática llamada [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) para crear el dispositivo y el contexto de dispositivo.
+En Direct3D9 tenías que crear una interfaz con la API de Direct3D antes de poder empezar a usarla. En tu juego Direct3D11 de la Plataforma universal de Windows (UWP), llamas a una función estática llamada [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) para crear el dispositivo y el contexto de dispositivo.
 
 ## <a name="devices-and-device-context"></a>Dispositivo y contexto de dispositivo
 
@@ -44,7 +41,7 @@ Un dispositivo Direct3D 11 representa una tarjeta gráfica virtualizada. Se usa 
 
 Un contexto de dispositivo de Direct3D 11 se usa para establecer el estado de la canalización y generar comandos de representación. Por ejemplo, una cadena de representación de Direct3D 11 usa un contexto de dispositivo para configurar la cadena de representación y dibujar la escena (consulta a continuación). El contexto de dispositivo se usa para acceder (asignar) a la memoria de vídeo usada por los recursos de dispositivo de Direct3D. También se usa para actualizar los datos de los subrecursos, por ejemplo, los datos del búfer de constantes. Para obtener una lista completa de para qué se usa una interfaz de dispositivo de Direct3D 11, consulta [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) y [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). Ten en cuenta que la mayoría de las muestras usan un contexto inmediato para representar directamente en el dispositivo, pero Direct3D 11 también admite contextos de dispositivo diferidos, que se usan principalmente para multithreading.
 
-En Direct3D 11, tanto el controlador de dispositivos como el controlador de contexto de dispositivos se obtienen llamando a [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082). Este método es también donde pides un conjunto específico de características de hardware y se recupera información sobre los niveles de característica de Direct3D admitidos por la tarjeta gráfica. Consulta el tema de [introducción a un dispositivo en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476880) para obtener más información sobre los dispositivos, los contextos de dispositivo y los subprocesos.
+En Direct3D11, tanto el controlador de dispositivos como el controlador de contexto de dispositivos se obtienen llamando a [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082). Este método es también donde pides un conjunto específico de características de hardware y se recupera información sobre los niveles de característica de Direct3D admitidos por la tarjeta gráfica. Consulta el tema de [introducción a un dispositivo en Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476880) para obtener más información sobre los dispositivos, los contextos de dispositivo y los subprocesos.
 
 ## <a name="device-infrastructure-frame-buffers-and-render-target-views"></a>Infraestructura de dispositivo, búferes de cuadros y vistas de destino de representación
 
@@ -56,7 +53,7 @@ Usa [**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404
 ## <a name="device-resources-and-resource-views"></a>Recursos de dispositivo y vistas de recurso
 
 
-Direct3D 11 admite un nivel adicional de polimorfismo en recursos de memoria de vídeo conocidos como vistas. En esencia, donde tenías un único objeto de Direct3D 9 para textura, ahora tienes dos objetos: el recurso de textura, que contiene los datos, y la vista de recurso, que indica cómo se usa la vista para representación. Una vista basada en un recurso permite que este se use para un fin específico. Por ejemplo, se crea un recurso de textura 2D como [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635). Después se crea una vista de recurso de sombreador ([**ID3D11ShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476628)) en él para que pueda usarse como textura en un sombreador. También puede crearse una vista de destino de representación ([**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582)) en el mismo recurso de textura 2D para que pueda usarse como superficie de dibujo. En otro ejemplo, los mismos datos de píxeles se representan en dos formatos de píxeles diferentes usando dos vistas separadas en un único recurso de textura.
+Direct3D 11 admite un nivel adicional de polimorfismo en recursos de memoria de vídeo conocidos como vistas. En esencia, donde tenías un único objeto de Direct3D9 para textura, ahora tienes dos objetos: el recurso de textura, que contiene los datos, y la vista de recurso, que indica cómo se usa la vista para representación. Una vista basada en un recurso permite que este se use para un fin específico. Por ejemplo, se crea un recurso de textura 2D como [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635). Después se crea una vista de recurso de sombreador ([**ID3D11ShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476628)) en él para que pueda usarse como textura en un sombreador. También puede crearse una vista de destino de representación ([**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582)) en el mismo recurso de textura 2D para que pueda usarse como superficie de dibujo. En otro ejemplo, los mismos datos de píxeles se representan en dos formatos de píxeles diferentes usando dos vistas separadas en un único recurso de textura.
 
 Debe crearse el recurso subyacente con propiedades que son compatibles con el tipo de vistas que se crearán a partir de él. Por ejemplo, si se aplica una [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) a una superficie, esa superficie se crea con la marca [**D3D11_BIND_RENDER_TARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476085). La superficie también tiene que tener un formato de superficie de DXGI compatible con la representación (consulta [**DXGI_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059)).
 
@@ -94,7 +91,7 @@ Cuando migres/ aplicaciones de Direct3D 9 a objetos de estado, ten en cuenta que
 
 Direct3D tiene un nuevo mecanismo para determinar la compatibilidad de hardware llamado niveles de característica. Los niveles de característica simplifican la tarea de determinar qué puede hacer la tarjeta gráfica permitiéndote solicitar un conjunto bien definido de funcionalidades de GPU. Por ejemplo, el nivel de característica 9\_1 implementa la funcionalidad proporcionada por los adaptadores gráficos de Direct3D 9, incluso el modelo de sombreador 2.x. Dado que 9\_1 es el nivel de característica más bajo, puedes esperar que todos los dispositivos admitan un sombreador de vértices y un sombreador de píxeles, que eran las mismas fases admitidas por el modelo de sombreador programable de Direct3D 9.
 
-Tu juego usará [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) para crear el contexto de dispositivo y el dispositivo de Direct3D. Cuando llamas a esta función, proporcionas una lista de niveles de características que tu juego puede admitir. Devolverá el nivel de característica admitido más alto desde esa lista. Por ejemplo, si tu juego puede usar las texturas BC4/BC5 (una característica de hardware de DirectX 10),deberías incluir al menos 9\_1 y 10\_0 en la lista de niveles de característica admitidos. Si el juego se ejecuta en hardware de DirectX 9 y no pueden usarse las texturas BC4/BC5, [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) devolverá 9\_1. Entonces tu juego puede retroceder a un formato de textura diferente (y texturas menores).
+Tu juego usará [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) para crear el contexto de dispositivo y el dispositivo de Direct3D. Cuando llamas a esta función, proporcionas una lista de niveles de características que tu juego puede admitir. Devolverá el nivel de característica admitido más alto desde esa lista. Por ejemplo, si tu juego puede usar las texturas BC4/BC5 (una característica de hardware de DirectX 10),deberías incluir al menos 9\_1 y 10\_0 en la lista de niveles de característica admitidos. Si el juego se ejecuta en hardware de DirectX9 y no pueden usarse las texturas BC4/BC5, [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) devolverá9\_1. Entonces tu juego puede retroceder a un formato de textura diferente (y texturas menores).
 
 Si decides extender tu juego de Direct3D 9 para admitir niveles de característica de Direct3D más altos, es mejor terminar de migrar primero tu código de gráficos de Direct3D 9. Después de que tu juego esté funcionando en Direct3D 11, es más fácil agregar rutas de representación adicionales con gráficos mejorados.
 
@@ -103,7 +100,7 @@ Consulta [Niveles de característica de Direct3D](https://msdn.microsoft.com/lib
 ## <a name="feature-levels-and-the-programmable-pipeline"></a>Niveles de característica y la canalización programable
 
 
-El hardware ha continuado evolucionando desde Direct3D 9, y se han agregado varios niveles opcionales nuevos a la canalización de gráficos programable. El conjunto de opciones que tienes para la canalización de gráficos varía con el nivel de característica de Direct3D. El nivel de característica 10.0 incluye la fase de sombreador de geometría con salida de secuencia opcional para una representación en la GPU. El nivel de característica 11\_0 incluye el sombreador de casco y el sombreador de dominios para su uso con teselación de hardware. El nivel de característica 11\_0 incluye compatibilidad completa con sombreadores de DirectCompute, mientras que los niveles de característica 10.x solamente incluyen compatibilidad para una forma limitada de DirectCompute.
+El hardware ha continuado evolucionando desde Direct3D9, y se han agregado varios niveles opcionales nuevos a la canalización de gráficos programable. El conjunto de opciones que tienes para la canalización de gráficos varía con el nivel de característica de Direct3D. El nivel de característica 10.0 incluye la fase de sombreador de geometría con salida de secuencia opcional para una representación en la GPU. El nivel de característica 11\_0 incluye el sombreador de casco y el sombreador de dominios para su uso con teselación de hardware. El nivel de característica 11\_0 incluye compatibilidad completa con sombreadores de DirectCompute, mientras que los niveles de característica 10.x solamente incluyen compatibilidad para una forma limitada de DirectCompute.
 
 Todos los sombreadores se escriben en HLSL mediante el uso de un perfil de sombreador que corresponde a un nivel de característica de Direct3D. Los perfiles de sombreador son compatibles con versiones posteriores. Es por ello que un sombreador de HLSL que se compila usando vs\_4\_0\_level\_9\_1 o ps\_4\_0\_level\_9\_1 funcionará en todos los dispositivos. Los perfiles de sombreador no son compatibles con versiones anteriores. Es por ello que un sombreador compilado mediante el uso de vs_4\_1 solamente funcionará en dispositivos de los niveles de característica 10\_1, 11\_0, o 11\_1.
 
@@ -116,7 +113,6 @@ Direct3D 9 administraba las constantes para los sombreadores mediante el uso de 
  
 
  
-
 
 
 

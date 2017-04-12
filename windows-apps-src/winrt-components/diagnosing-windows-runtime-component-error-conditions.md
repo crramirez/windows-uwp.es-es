@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: da02ed10336ea2381213fd5fada153db4cc06ab1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 55baba42a011197814a01d476fcb062fe6bf2ebf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnosticar condiciones de error del componente de Windows Runtime
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado. Expande la información que se proporciona en los mensajes de error de [Winmdexp.exe (herramienta de exportación de metadatos Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)y complementa la información sobre las restricciones que se proporciona en [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
@@ -256,4 +253,3 @@ El código de JavaScript puede acceder a los parámetros de salida de un método
 
 * [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
 * [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)
-

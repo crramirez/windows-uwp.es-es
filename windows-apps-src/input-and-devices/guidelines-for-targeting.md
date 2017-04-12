@@ -11,17 +11,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fd4ba842a1d6f9eec6012a930a5dda5d7ff7c249
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: dbd5d649dbb9efd95b61f1cffa8266143c5bf2d9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidelines-for-targeting"></a>Directrices para la selección del destino
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-La selección táctil del destino en Windows usa toda el área de contacto de cada dedo detectado por un digitalizador táctil. El conjunto más grande y más complejo de datos de entrada notificado por el digitalizador se usa para aumentar la precisión cuando se determina el destino previsto (o con más probabilidades) del usuario.
+La selección táctil del destino en Windows usa toda el área de contacto de cada dedo que es detectado por un digitalizador táctil. El conjunto más grande y más complejo de datos de entrada notificado por el digitalizador se usa para aumentar la precisión cuando se determina el destino previsto (o con más probabilidades) del usuario.
 
 <div class="important-apis" >
 <b>API importantes</b><br/>
@@ -161,8 +158,8 @@ Usa las siguientes directrices cuando diseñes interacciones de arrastre:
 
 **Ejemplos**
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Muestras de archivo**
@@ -177,7 +174,6 @@ Usa las siguientes directrices cuando diseñes interacciones de arrastre:
  
 
  
-
 
 
 

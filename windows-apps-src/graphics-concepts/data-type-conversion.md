@@ -2,21 +2,17 @@
 title: "Conversión de tipos de datos"
 description: "En las secciones siguientes se describe cómo Direct3D controla las conversiones entre tipos de datos."
 ms.assetid: B50AB8DE-CAED-465B-B18C-81F3A984B8AC
-keywords:
-- "Conversión de tipos de datos"
+keywords: "Conversión de tipos de datos"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d6c9e684f4e555bc725077696973be2d3f15a2c5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6813f7b55957c185a85fe82b90297b6ba5a470eb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="data-type-conversion"></a>Conversión de tipos de datos
 
 
@@ -253,7 +249,6 @@ Las representaciones de enteros de punto fijo se usan de dos formas en Direct3D.
  
 
  
-
 
 
 

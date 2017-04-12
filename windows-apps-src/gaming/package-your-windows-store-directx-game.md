@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, DirectX, package, paquete
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: db31338d908f4c18eaa6b5090b8cf35ac5305655
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empaquetar los juegos DirectX para la Plataforma universal de Windows (UWP)
 
 
@@ -116,7 +113,7 @@ Los niveles de características de DirectX corresponden a conjuntos de caracter�
 
 El paquete de la aplicación de línea base debe usar los formatos de compresión de textura de línea base: BC1, BC2 o BC3. Cualquier dispositivo para UWP puede usarlos: desde plataformas de ARM de gama baja hasta equipos multimedia y estaciones de trabajo de múltiples GPU exclusivas.
 
-La compatibilidad de formato de textura en el nivel de característica 10 o superior de DirectX debe agregarse a un paquete de recursos para conservar el ancho de banda de descarga y el espacio del disco local. Esto permite usar los esquemas de compresión más avanzados para 11, como BC6H y BC7. (Para ver más detalles, consulta [Texture block compression in Direct3D 11 (Compresión de bloques de textura en Direct3D 11)](https://msdn.microsoft.com/library/windows/desktop/hh308955)). Estos formatos son más eficientes para los activos de textura de resolución alta admitidos por los GPU modernos y su uso mejora los requisitos de espacio, rendimiento y apariencia del juego en plataformas de gama alta.
+La compatibilidad de formato de textura en el nivel de característica 10 o superior de DirectX debe agregarse a un paquete de recursos para conservar el ancho de banda de descarga y el espacio del disco local. Esto permite usar los esquemas de compresión más avanzados para11, como BC6H y BC7. (Para ver más detalles, consulta [Texture block compression in Direct3D 11 (Compresión de bloques de textura en Direct3D 11)](https://msdn.microsoft.com/library/windows/desktop/hh308955)). Estos formatos son más eficientes para los activos de textura de resolución alta admitidos por los GPU modernos y su uso mejora los requisitos de espacio, rendimiento y apariencia del juego en plataformas de gama alta.
 
 | Nivel de característica de DirectX | Compresión de textura admitida |
 |-----------------------|-------------------------------|
@@ -229,7 +226,6 @@ Cuando configures tu aplicación para que admita paquetes de recursos para difer
  
 
  
-
 
 
 

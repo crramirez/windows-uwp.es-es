@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
-description: "Obtén más información sobre cómo instalar las bibliotecas de Microsoft Advertising."
+description: Aprende a instalar las bibliotecas de Microsoft Advertising.
 title: Instalar las bibliotecas de Microsoft Advertising
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, anuncios, publicidad, instalar, SDK, bibliotecas, ads, advertising, install, libraries
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 034b597c945f9f12700ac442e4b3014b0bc84c78
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3304efd659a32176a44c33d9df4e8062b3bc7700
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="install-the-microsoft-advertising-libraries"></a>Instalar las bibliotecas de Microsoft Advertising
 
 
@@ -38,9 +35,9 @@ Hay varias bibliotecas de publicidad diferentes en el Microsoft Store Services S
 
 * El SDK de Microsoft Advertising para Windows y Windows Phone 8.x incluye dos conjuntos de bibliotecas de publicidad: las bibliotecas de Microsoft Advertising (que proporcionan las clases [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) e [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) para aplicaciones XAML y JavaScript/HTML) y las bibliotecas para la mediación de anuncios (que proporcionan la clase **AdMediatorControl**).
 
-En esta documentación se describe cómo usar las clases **AdControl** e **InterstitialAd** en las bibliotecas de Microsoft Advertising para mostrar banners o anuncios intersticiales en vídeo. Para obtener información sobre cómo usar la mediación de anuncios para las aplicaciones de Windows 8.1 y Windows Phone 8.x, consulta [Usar la mediación de anuncios para maximizar los ingresos](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359.aspx).
+En esta documentación se describe cómo usar las clases **AdControl** e **InterstitialAd** en las bibliotecas de Microsoft Advertising para mostrar anuncios de banner o intersticiales. Para obtener información sobre cómo usar la mediación de anuncios para las aplicaciones de Windows 8.1 y Windows Phone 8.x, consulta [Usar la mediación de anuncios para maximizar los ingresos](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359.aspx).
 
->**Nota**&nbsp;&nbsp;La mediación de anuncios que usa la clase **AdMediatorControl** actualmente no se admite para aplicaciones para UWP en Windows 10. La mediación del lado del servidor estará disponible próximamente para aplicaciones para UWP mediante las mismas API de anuncios en banner (**AdControl**) y de anuncios intersticiales en vídeo (**InterstitialAd**).
+>**Nota**&nbsp;&nbsp;La mediación de anuncios que usa la clase **AdMediatorControl** actualmente no se admite para aplicaciones para UWP en Windows10. La mediación del lado del servidor estará disponible próximamente para aplicaciones para UWP con las mismas API de anuncios de banner (**AdControl**) y de anuncios intersticiales (**InterstitialAd**).
 
 Antes de poder usar cualquiera de los controles de publicidad en el código de la aplicación, debes hacer referencia a la biblioteca adecuada en el proyecto. En las tablas siguientes se indican los nombres de cada una de las bibliotecas, tal como aparecen en el cuadro de diálogo **Administrador de referencias** en Visual Studio.
 
@@ -57,7 +54,7 @@ Antes de poder usar cualquiera de los controles de publicidad en el código de l
             <td>10.0</td>
         </tr>
         <tr>
-            <td>Windows 8.1</td>
+            <td>Windows8.1</td>
             <td>SDK de Ad Mediator para Windows 8.1 XAML</td>
             <td>1.0</td>
         </tr>
@@ -73,7 +70,7 @@ Antes de poder usar cualquiera de los controles de publicidad en el código de l
             <td>10.0</td>
         </tr>
         <tr>
-            <td>Windows 8.1</td>
+            <td>Windows8.1</td>
             <td>SDK de Microsoft Advertising para Windows 8.1 (JS) nativo</td>
             <td>8.5</td>
         </tr>
@@ -89,7 +86,7 @@ Antes de poder usar cualquiera de los controles de publicidad en el código de l
             <td>1.0</td>
         </tr>
         <tr>
-            <td>Windows 8.1</td>
+            <td>Windows8.1</td>
             <td>SDK de Ad Mediator para Windows 8.1 XAML</td>
             <td>1.0</td>
         </tr>
@@ -106,4 +103,3 @@ Antes de poder usar cualquiera de los controles de publicidad en el código de l
  
 
  
-

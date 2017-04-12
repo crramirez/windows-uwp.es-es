@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: "Inicio automático con Reproducción automática"
-description: "Puedes usar Reproducción automática para ofrecer tu aplicación como una opción cuando un usuario conecte un dispositivo a su PC. Esto incluye dispositivos que no son de volumen, como una cámara o un reproductor multimedia, o dispositivos de volumen, como una unidad USB, una tarjeta SD o un DVD."
+description: "Puedes usar Reproducción automática para ofrecer tu aplicación como una opción cuando un usuario conecte un dispositivo a su PC. Esto incluye dispositivos que no son de volumen, como una cámara o un reproductor de medios, o dispositivos de volumen, como una unidad USB, una tarjeta SD o un DVD."
 ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60d4e40d056671f19149a031eb7774809060729e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 02215be4cff7bbd42bdc1911777f62bacd22b6c7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Inicio automático con Reproducción automática
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Puedes usar **Reproducción automática** para ofrecer tu aplicación como una opción cuando un usuario conecte un dispositivo a su PC. Esto incluye dispositivos que no son de volumen, como una cámara o un reproductor de medios, o dispositivos de volumen, como una unidad USB, una tarjeta SD o un DVD. También puedes usar **Reproducción automática** para ofrecer tu aplicación como una opción cuando los usuarios compartan archivos entre dos equipos mediante proximidad (pulsación).
@@ -44,7 +41,7 @@ Cuando se comparten archivos mediante proximidad, la propiedad **Files** del obj
 
 ### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>Paso 1: Crear un nuevo proyecto y agregar declaraciones de Reproducción automática
 
-1.  Abre Microsoft Visual Studio y selecciona **Nuevo proyecto** en el menú **Archivo**. En la sección **Visual C#**, en **Windows**, selecciona **Aplicación vacía (Windows universal)**. Asigna un nombre a la aplicación **AutoPlayDisplayOrCopyImages** y haz clic en **Aceptar**.
+1.  Abre Microsoft Visual Studioy selecciona **Nuevo proyecto** en el menú **Archivo**. En la sección **Visual C#**, en **Windows**, selecciona **Aplicación vacía (Windows universal)**. Asigna un nombre a la aplicación **AutoPlayDisplayOrCopyImages** y haz clic en **Aceptar**.
 2.  Abre el archivo Package.appxmanifest y selecciona la pestaña **Capacidades**. Selecciona las funcionalidades **Almacenamiento extraíble** y **Biblioteca de imágenes**. Esta acción otorga a la aplicación acceso a dispositivos de almacenamiento extraíbles para la memoria de la cámara y acceso a las imágenes locales.
 3.  En el archivo de manifiesto, selecciona la pestaña **Declaraciones**. En la lista desplegable **Declaraciones disponibles**, selecciona **Contenido de Reproducción automática** y después haz clic en **Agregar**. Selecciona el elemento **Contenido de Reproducción automática** que se agregó a la lista **Declaraciones admitidas**.
 4.  Una declaración de **Contenido de Reproducción automática** identifica tu aplicación como opción cuando Reproducción automática genera un evento de contenido. El evento se basa en el contenido de un dispositivo de volumen como un DVD o una unidad USB. Reproducción automática examina el contenido del dispositivo de volumen y determina qué evento de contenido generará. Si la raíz del volumen contiene una carpeta DCIM, AVCHD o PRIVATE\\ACHD, o bien si el usuario habilitó **Elegir qué hacer con cada tipo de medio** en el Panel de control de Reproducción automática y se encuentran imágenes en la raíz del volumen; entonces Reproducción automática genera el evento **ShowPicturesOnArrival**. En la sección **Acciones de inicio**, especifica los valores de la Tabla 1 a continuación para la primera acción de inicio.
@@ -584,4 +581,3 @@ Puedes agregar una extensión al archivo package.appxmanifest de tu aplicación 
  
 
  
-

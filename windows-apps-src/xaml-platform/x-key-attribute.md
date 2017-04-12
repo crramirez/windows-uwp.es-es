@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 67b2b3b60ab6faba5ca30bb585205aba007597ca
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4b76c16d276af295a1b2eed292ebeffc56b2e604
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xkey-attribute"></a>atributo x:Key
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Identifica exclusivamente los elementos que se crean y a los cuales se hace referencia como recursos, y que existen dentro de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794).
 
@@ -73,5 +70,4 @@ Ten en cuenta que, en la sintaxis implícita que se muestra, el objeto [**Resour
 El código que equivale a especificar **x:Key** es cualquier operación que use una clave con el [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) subyacente. Por ejemplo, un **x:Key** aplicado en el marcado para un recurso es equivalente al valor del parámetro *key* de **Insert** cuando se agrega un recurso a un **ResourceDictionary**.
 
 Un elemento de un diccionario de recursos puede pasar por alto un valor de **x:Key** si se trata de un [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) o un [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) dirigido; en cualquiera de estos casos, la clave implícita del elemento de recurso es el valor de **TargetType** interpretado como una cadena. Para obtener más información, consulta [Inicio rápido: controles de estilo](https://msdn.microsoft.com/library/windows/apps/hh465498) y [Referencias a ResourceDictionary y a los recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
-
 

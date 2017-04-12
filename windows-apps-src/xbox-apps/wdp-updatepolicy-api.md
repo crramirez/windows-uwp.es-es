@@ -2,28 +2,26 @@
 author: payzer
 title: "Referencia de API de la directiva de actualización del kit de desarrollo Device Portal Xbox Developer"
 description: "Obtén información acerca de cómo establecer la directiva de actualización de la consola mediante programación."
-translationtype: Human Translation
-ms.sourcegitcommit: 8f02e0c2f6fa30a3ac56945347c5bec253189bd8
 ms.openlocfilehash: f9313d3c8b93ba13074c547f1f63c9f3204f0f58
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 NOTA: tendrás disponible esta API en la siguiente vista previa de desarrollador.
 
-# Referencia de API de la directiva de actualización del sistema   
+# <a name="system-update-policy-api-reference"></a>Referencia de API de la directiva de actualización del sistema   
 Puedes usar esta API para ver qué directiva de actualización se aplica a la consola y cambiarla por una nueva.
 
 IMPORTANTE: la mayoría de consolas recibirán una respuesta de "acceso denegado" al intentar llamar a esta API. Esto se debe a que no todas las consolas de desarrollo tienen la capacidad de cambiar su directiva de actualización.
 
 Asimismo, esta API afecta a la directiva de actualización de consolas en modo de desarrollador, no a la directiva de las consolas comercializadas.
 
-## Obtener la directiva de actualización de la consola
+## <a name="get-the-console-update-policy"></a>Obtener la directiva de actualización de la consola
 
 **Solicitud**
 
 Puedes usar la siguiente solicitud para obtener la directiva de actualización de la consola.
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
 GET | /ext/update/policy
 <br />
@@ -31,7 +29,7 @@ GET | /ext/update/policy
 
 - Ninguno
 
-**Encabezados de la solicitud**
+**Encabezados de solicitud**
 
 - Ninguno
 
@@ -50,7 +48,7 @@ ResourceSetID: (cadena) ignorar; lo usa la infraestructura de actualización del
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado previstos.
+Esta API tiene los siguientes códigos de estado esperado.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -58,7 +56,7 @@ Código de estado HTTP      | Descripción
 4XX | Códigos de error
 5XX | Códigos de error
 
-## Establecer la directiva de actualización del sistema de la consola
+## <a name="set-a-consoles-system-update-policy"></a>Establecer la directiva de actualización del sistema de la consola
 Puedes usar esta API para cambiar la pertenencia de la consola al grupo de actualización del sistema.
 
 Nota: las consolas únicamente pueden estar en un solo grupo de actualización del sistema.
@@ -67,7 +65,7 @@ Nota: las consolas únicamente pueden estar en un solo grupo de actualización d
 
 Puedes usar la siguiente solicitud para establecer la pertenencia de la consola al grupo de actualización del sistema.
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
 POST | /ext/update/policy
 <br />
@@ -75,7 +73,7 @@ POST | /ext/update/policy
 
 - Ninguno
 
-**Encabezados de la solicitud**
+**Encabezados de solicitud**
 
 - Ninguno
 
@@ -93,11 +91,11 @@ Los elementos GroupID posibles son:
 
 **Respuesta**   
 
-- Ninguna
+- Ninguno
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado previstos.
+Esta API tiene los siguientes códigos de estado esperado.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -109,10 +107,4 @@ Código de estado HTTP      | Descripción
 **Familias de dispositivos disponibles**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c8f8cd6681b4e00e8430d7ddfacdd8fad395365c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cdef86477570b33e9cd0c7adaaceb8fea12e3d40
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="track-recently-used-files-and-folders"></a>Seguimiento de los archivos y carpetas usados recientemente
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -110,4 +108,3 @@ Cuando un usuario selecciona un elemento, considera la posibilidad de agregarlo 
  
 
  
-

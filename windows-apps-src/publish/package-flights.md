@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aefe0836257b04d7b9c1ca6841bc9945c17a70d0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bed8846bf2df3bfce12a4a93a87146ae1adc29f6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="package-flights"></a>Paquetes piloto
 
 Puedes usar paquetes piloto para distribuir paquetes que solo se entregan a un grupo de prueba limitado. 
@@ -40,7 +37,7 @@ Después de publicar en envío para tu aplicación, verás una sección **Paquet
 
 Los grupos piloto te permiten especificar las personas a las que te gustaría incluir en el grupo. Para obtener tus paquetes piloto, cada persona debe estar autenticada en la Tienda con una cuenta de Microsoft asociada a la dirección de correo electrónico que proporciones y debe usar un dispositivo de Windows 10 (según se especifica más arriba) para descargar la aplicación.
 
-Al crear un grupo piloto, debes asignarle un nombre. Cada grupo piloto debe contener al menos una dirección de correo electrónico, con un máximo de 10 000 direcciones de correo electrónico. Puedes escribir las direcciones de correo electrónico directamente en el campo (separadas por espacios, comas o punto y coma), o puede hacer clic en el vínculo **Importar .csv** para crear el grupo piloto a partir de una lista de direcciones de correo electrónico en un archivo .csv.
+Al crear un grupo piloto, debes asignarle un nombre. Cada grupo piloto debe contener al menos una dirección de correo electrónico, con un máximo de 10000 direcciones de correo electrónico. Puedes escribir las direcciones de correo electrónico directamente en el campo (separadas por espacios, comas o punto y coma), o puede hacer clic en el vínculo **Importar .csv** para crear el grupo piloto a partir de una lista de direcciones de correo electrónico en un archivo .csv.
 
 Haz clic en **Crear grupo** para guardar el grupo y continuar configurando el paquete piloto.
 
@@ -48,7 +45,7 @@ Haz clic en **Crear grupo** para guardar el grupo y continuar configurando el pa
 
 > Es posible que también quieras tener en cuenta el modo en que pueden enviarte comentarios sobre la aplicación aquellas personas que incluyas en el paquete piloto. Te sugerimos que [agregues un control en la aplicación para iniciar el Centro de opiniones](../monetize/launch-feedback-hub-from-your-app.md), para que así tus clientes puedan enviarte sus comentarios directamente; además, podrás leer sus comentarios en el [informe de comentarios](feedback-report.md) de la aplicación.
 
-Para editar el grupo piloto más adelante, haz clic en **Ver y administrar los grupos existentes** al crear un nuevo paquete piloto y, luego, selecciona el grupo piloto que quieres modificar o haz clic en el nombre del grupo piloto desde la página de información general de un paquete piloto. Puedes agregar o quitar direcciones de correo directamente en el campo o, si quieres hacer cambios de mayor magnitud, haz clic en **Export.csv** para guardar la información de pertenencia al grupo piloto a un archivo .csv. Realiza los cambios que quieras en este archivo y haz clic en **Import.csv** para usar la nueva versión para actualizar la pertenencia al grupo. Ten en cuenta que los cambios de pertenencia al grupo piloto pueden tardar hasta 30 minutos en implementarse. Si agregas personas a un grupo piloto después de haber publicado un paquete piloto asociado, los paquetes se entregarán a esas nuevas personas de forma automática; no será necesario que crees y publiques un nuevo envío para ese paquete piloto. 
+Para editar el grupo piloto más adelante, haz clic en **Ver y administrar los grupos existentes** al crear un nuevo paquete piloto y, luego, selecciona el grupo piloto que quieres modificar o haz clic en el nombre del grupo piloto desde la página de información general de un paquete piloto. Puedes agregar o quitar direcciones de correo directamente en el campo o, si quieres hacer cambios de mayor magnitud, haz clic en **Export.csv** para guardar la información de pertenencia al grupo piloto a un archivo .csv. Realiza los cambios que quieras en este archivo y haz clic en **Import.csv** para usar la nueva versión para actualizar la pertenencia al grupo. Ten en cuenta que los cambios de pertenencia al grupo piloto pueden tardar hasta 30minutos en implementarse. Si agregas personas a un grupo piloto después de haber publicado un paquete piloto asociado, los paquetes se entregarán a esas nuevas personas de forma automática; no será necesario que crees y publiques un nuevo envío para ese paquete piloto. 
 
 ## <a name="create-a-new-package-flight"></a>Crear un nuevo paquete piloto
 
@@ -129,4 +126,3 @@ Ten en cuenta que se aplicarán todas las mismas reglas de validación del paque
 Para eliminar un paquete piloto que ya no quieras admitir, haz clic en su nombre desde la página Información general de la aplicación. En la página de información general del piloto, haz clic en **Modificar** y luego haz clic en el vínculo **Eliminar** para eliminar el paquete piloto. (Si tienes en curso un envío sin publicar del paquete piloto, primero tendrás que eliminar ese envío). Para que se complete esta operación, pueden pasar hasta 30 minutos.
 
 Cuando eliminas un paquete piloto, los clientes que tenían paquetes que distribuiste en ese paquete piloto obtendrán una actualización de la aplicación si existe una versión más reciente del paquete (o tan pronto como esté disponible un paquete de este tipo). Si desinstalan la aplicación y vuelven a instalarla más tarde, esta se tratará como una nueva adquisición y obtendrán la versión más reciente que esté disponible. 
-

@@ -3,23 +3,21 @@ author: mcleanbyron
 Description: "Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba."
 title: "Excluir o limitar las características de una versión de prueba"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: "windows 10, uwp, prueba, trial, compra desde la aplicación, in-app purchase, IAP, Windows.ApplicationModel.Store"
+keywords: "windows 10, Windows 10, uwp, UWP, trial, prueba, in-app purchase, compra desde la aplicación, IAP, IAP, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8b55c837e63792e6da4e684602e79d99ad7cff1e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: badb14e5c915db68fb262002a8ee3321b62e2778
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>Excluir o limitar las características de una versión de prueba
 
 
->**Nota**&nbsp;&nbsp;En este artículo se muestra cómo usar miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está orientada a Windows 10, versión 1607 o posterior, es recomendable que uses miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para implementar una versión de prueba, en lugar del espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md).
+> [!NOTE]
+> En este artículo se muestra cómo usar miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está orientada a Windows 10, versión 1607 o posterior, es recomendable que uses miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para implementar una versión de prueba, en lugar del espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md).
 
 Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, también puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
 
@@ -106,7 +104,8 @@ Si esta ruta de acceso y este archivo no existen, deberás crearlos durante la i
 
 Después de probar tu aplicación con el servidor de licencias simuladas, y antes de enviar la aplicación a una Tienda para su certificación, sustituye **CurrentAppSimulator** por **CurrentApp**, tal y como se muestra en la siguiente muestra de código.
 
->**Importante:**&nbsp;&nbsp;La aplicación debe usar el objeto **CurrentApp** cuando la envíes a una Tienda o no logrará la certificación.
+> [!IMPORTANT]
+> La aplicación debe usar el objeto **CurrentApp** cuando la envíes a una Tienda o no logrará la certificación.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
@@ -126,4 +125,3 @@ Para obtener más información sobre cómo describir tu aplicación, consulta [C
  
 
  
-

@@ -9,24 +9,21 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: febafd9a36f021bdbf06692a34c8691d1008018f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5cf5fa2ca6abe8b4bc53867587490bae3ab6d551
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-navigation"></a>Introducción: navegación
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="adding-navigation"></a>Agregar navegación
 
 iOS ofrece la clase **UINavigationController** para ayudar con la navegación en la aplicación: puedes insertar y extraer vistas para crear la jerarquía de elementos **UIViewController** que definen la aplicación.
 
-Por el contrario, una aplicación de Windows 10 que contiene varias vistas requiere más que un enfoque de sitio web para la navegación. Puedes esperar que los usuarios pasen de una página a otra conforme hacen clic en controles para abrirse camino por la aplicación. Para obtener información, consulta [Conceptos básicos de diseño de la navegación](https://msdn.microsoft.com/library/windows/apps/dn958438).
+Por el contrario, una aplicación de Windows10 que contiene varias vistas requiere más que un enfoque de sitio web para la navegación. Puedes esperar que los usuarios pasen de una página a otra conforme hacen clic en controles para abrirse camino por la aplicación. Para obtener información, consulta [Conceptos básicos de diseño de la navegación](https://msdn.microsoft.com/library/windows/apps/dn958438).
 
-Una de las formas de administrar esta navegación en una aplicación de Windows 10 es usar la clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682). En el tutorial siguiente se muestra cómo puedes probarlo.
+Una de las formas de administrar esta navegación en una aplicación de Windows10 es usar la clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682). En el tutorial siguiente se muestra cómo puedes probarlo.
 
 Para seguir con la solución que iniciaste anteriormente, abre el archivo **MainPage.xaml** y agrega un botón en la vista **Diseño**. Cambia la propiedad **Content** del botón de "Botón" a "Ir a la página". A continuación, crea un controlador para el evento **Click** del botón, como se muestra en la siguiente ilustración. Si no recuerdas cómo hacerlo, revisa el tutorial de la sección anterior (sugerencia: haz doble clic en el botón de la vista **Diseño**).
 
@@ -42,7 +39,7 @@ Ahora, vamos a agregar un controlador de eventos al botón: haz doble clic en el
 
 ![agregar un botón atrás y su evento click en visual studio](images/ios-to-uwp/vs-add-back-button.png)
 
-Si vuelves a la vista **XAML** del archivo BlankPage.xaml, el código de lenguaje XAML del elemento `<AppBarButton>` debería parecerse a lo siguiente:
+Si vuelves a la vista **XAML** del archivo BlankPage.xaml, el código de lenguajeXAML del elemento `<AppBarButton>` debería parecerse a lo siguiente:
 
 ` <AppBarButton Icon="Back" Click="AppBarButton_Click"/>`
 
@@ -90,5 +87,4 @@ Para más información sobre la navegación, consulta [Navegación](https://msdn
 ### <a name="next-step"></a>Paso siguiente
 
 [Introducción: Animación](getting-started-animation.md)
-
 

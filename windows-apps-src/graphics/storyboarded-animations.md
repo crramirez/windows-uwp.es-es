@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5de5007327b86b401b2f85d6f80adbc2bed820a8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 99b07dd5c19cf16b4337e5af1c46b7285333e474
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="storyboarded-animations"></a>Animaciones con guion gráfico
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las animaciones de guión gráfico no son solo animaciones en un sentido visual. Una animación de guión gráfico es una forma de cambiar el valor de una propiedad de dependencia como una función de tiempo. Una de las razones principales por las que quizás necesites una animación con guión gráfico que no provenga de la Biblioteca de animaciones es para definir el estado visual de un control, como parte de una plantilla de control o una definición de página.
@@ -333,7 +331,6 @@ Hasta ahora, hemos mostrado las animaciones personalizadas que se animan entre d
  
 
  
-
 
 
 

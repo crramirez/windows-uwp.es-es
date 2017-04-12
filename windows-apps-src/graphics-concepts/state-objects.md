@@ -2,21 +2,17 @@
 title: Objetos de estado
 description: "El estado del dispositivo se agrupa en objetos de estado, que reducen en gran medida el coste de los cambios de estado. Existen varios objetos de estado, y cada uno de ellos está diseñado para inicializar un conjunto de estados para una fase concreta de la canalización . Los objetos de estado varían según la versión de Direct3D."
 ms.assetid: D998745C-2B75-4E59-9923-AD1A17A92E05
-keywords:
-- Objetos de estado
+keywords: Objetos de estado
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d3cdc8fda5062ea0b659029d8168a5df5be2fbe6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f046ab40ef4e05a8542f259330269e75ceb06f5f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="state-objects"></a>Objetos de estado
 
 
@@ -70,7 +66,6 @@ Como alternativa, puedes usar el sistema de efectos, que administra automáticam
  
 
  
-
 
 
 

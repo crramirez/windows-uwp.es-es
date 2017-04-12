@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, mapa, ubicación, servicios de mapa, map, location, map services"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6ab167cb032cffba11e7e90e3aefe91bd1c21d74
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 33cf0a7a69ff40434ecb46977e4a6f67ca2a07e4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="maps-and-location-overview"></a>Introducción a ubicación y mapas
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.
@@ -81,9 +78,8 @@ La aplicación puede iniciar la aplicación Mapas de Windows como aquí se indic
 * [Muestra de ubicación geográfica de UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
 * [Obtener la ubicación actual](get-location.md)
-* [Directrices para aplicaciones con reconocimiento de ubicación](guidelines-and-checklist-for-detecting-location.md)
+* [Directrices de diseño para aplicaciones con reconocimiento de ubicación](guidelines-and-checklist-for-detecting-location.md)
 * [Directrices de diseño para mapas](controls-map.md)
 * [Directrices para aplicaciones compatibles con la privacidad](https://msdn.microsoft.com/library/windows/apps/hh768223)
 * [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechar los mapas y la ubicación entre teléfonos, tabletas y equipos en tus aplicaciones Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Ejemplo de aplicación de tráfico de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-

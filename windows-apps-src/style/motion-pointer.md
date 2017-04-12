@@ -5,12 +5,10 @@ title: Animaciones para clic de puntero en aplicaciones para UWP
 ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
 label: Motion--Pointer animations
 template: detail.hbs
-translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
 ms.openlocfilehash: c208b67829e2053302ec0cc7c6da013b89cee8b3
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="pointer-click-animations"></a>Animaciones para clic de puntero
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -44,11 +42,5 @@ Usa las animaciones de puntero para proporcionar comentarios visuales a los usua
  
 
 
-
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-Description: "Prepara la aplicación para localizarla a otros idiomas, mercados o regiones."
+Description: "Prepara la aplicación para la localizarla a otros idiomas, mercados o regiones."
 title: "Preparar la aplicación para la localización"
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a56e0940539928723f6fb3b906d1212f80676768
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 923f6ac6ec656c668eef662cb254b2b28d445548
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="prepare-your-app-for-localization"></a>Preparar la aplicación para la localización
 
 
@@ -175,7 +172,6 @@ El método de ordenación sigue el formato del **panel de control regional**:
  
 
  
-
 
 
 

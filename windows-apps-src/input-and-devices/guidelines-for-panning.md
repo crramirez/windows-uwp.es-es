@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 73e119663483a62d06b29b3212053ba9a0d181ee
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bf0abd41262704ccf634350ae53e8f428d412bf5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -103,7 +100,7 @@ El deslizamiento implica mover los dedos lentamente en la dirección del movimie
 
 **Tipos de movimiento panorámico**
 
-Windows 8 admite tres tipos de movimiento panorámico:
+Windows8 admite tres tipos de movimiento panorámico:
 
 -   Eje único: el movimiento panorámico es posible solo en una dirección (horizontal o vertical).
 -   Guías: el movimiento panorámico es posible en todas las direcciones. Sin embargo, una vez que el usuario cruza un umbral de distancia en una dirección específica, el movimiento panorámico queda restringido a ese eje.
@@ -181,7 +178,7 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 * [Accesibilidad de teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
 
 **Muestras**
-* [Muestra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
@@ -198,7 +195,6 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
  
 
  
-
 
 
 

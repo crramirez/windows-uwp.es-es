@@ -11,13 +11,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6208b71b-37a7-40f5-91b0-19b665e7458a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 19d4a4e00692bc983a56416951e82f71bf5f6be2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 659a2871e540398d34b93c288d34fb80699c36c9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="in-app-help-pages"></a>Páginas de ayuda en la aplicación
 
 La mayoría de las veces, es mejor que la ayuda se muestre dentro la aplicación y cuando el usuario solicite verla.
@@ -62,4 +59,3 @@ En ocasiones, puede ser útil proporcionar más información acerca de una carac
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Directrices para la ayuda de la aplicación](guidelines-for-app-help.md)
-

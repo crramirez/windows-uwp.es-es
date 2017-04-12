@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 16D4C3B9-FC9B-46ED-9F87-1517E1B549FA
 description: "Usa este método en la API de envío de la Tienda Windows para eliminar un complemento de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows."
-title: "Eliminar un complemento mediante la API de envío de la Tienda Windows"
+title: Eliminar un complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, Windows Store submission API, complemento, add-on, eliminar, delete, producto desde la aplicación, in-app product, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 56ae310a13401b733eadf08f2f1992bfe0130884
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, add-on, complemento, delete, eliminar, in-app product, producto desde la aplicación, IAP, IAP"
+ms.openlocfilehash: 74149837e43b65998069c8724b5cd6c55df8703b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="delete-an-add-on-using-the-windows-store-submission-api"></a>Eliminar un complemento mediante la API de envío de la Tienda Windows
+# <a name="delete-an-add-on"></a>Eliminar un complemento
 
 
 
@@ -28,13 +25,13 @@ Usa este método en la API de envío de la Tienda Windows para eliminar un compl
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
 ## <a name="request"></a>Solicitud
 
-Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del encabezado y del cuerpo de la solicitud.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
 | Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
@@ -47,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | string | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -55,7 +52,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | string | Obligatorio. El Id. de la Tienda del complemento que se va a eliminar. El Id. de la Tienda está disponible en el panel del Centro de desarrollo.  |
+| id | cadena | Obligatorio. El Id. de la Tienda del complemento que se va a eliminar. El Id. de la Tienda está disponible en el panel del Centro de desarrollo.  |
 
 <span/>
 
@@ -94,6 +91,5 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 * [Create and manage submissions using Windows Store services (Crear y administrar envíos mediante el uso de servicios de la Tienda Windows)](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener todos los complementos](get-all-add-ons.md)
-* [Obtener un complemento](get-an-add-on.md)
+* [Obtención de un complemento](get-an-add-on.md)
 * [Crear un complemento](create-an-add-on.md)
-

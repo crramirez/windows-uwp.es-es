@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: AC74B4FA-5554-4C03-9683-86EE48546C05
-description: "Usa este método en la API de envío de la Tienda Windows para confirmar un envío de complementos nuevo o actualizado al Centro de desarrollo de Windows."
-title: "Confirmación de un envío de complemento con la API de envío de la Tienda Windows"
+description: "Usa este método en la API de envío de la Tienda Windows para confirmar un envío de complemento nuevo o actualizado al Centro de desarrollo de Windows."
+title: "Confirmar un envío de complemento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, confirmación de envío de complemento, producto desde la aplicación, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bb8fb30a8dace9c9e32cc233bf6b73046263a22d
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, commit add-on submission, confirmar envío de complemento, in-app product, producto desde la aplicación, IAP, IAP"
+ms.openlocfilehash: 3ab65675822f9b9c88e5c613c4394b295e7430e1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="commit-an-add-on-submission-using-the-windows-store-submission-api"></a>Confirmación de un envío de complemento con la API de envío de la Tienda Windows
+# <a name="commit-an-add-on-submission"></a>Confirmar un envío de complemento
 
 
 
@@ -37,9 +34,9 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ## <a name="request"></a>Solicitud
 
-Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del cuerpo del encabezado y la solicitud.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Method | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions/{submissionId}/commit``` |
 
@@ -48,9 +45,9 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Type   | Descripción                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -59,7 +56,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | inAppProductId | cadena | Obligatorio. El Id. de la Tienda del complemento que contiene el envío que deseas confirmar. El Id. de la Tienda está disponible en el panel del Centro de desarrollo, y se incluye en los datos de respuesta para las solicitudes de [Obtención de todos los complementos](get-all-add-ons.md) y [Creación de un complemento](create-an-add-on.md). |
-| submissionId | string | Obligatorio. El identificador del envío que deseas confirmar. Este identificador está disponible en el panel del Centro de desarrollo, y se incluye en los datos de respuesta para las solicitudes de [Creación de un envío de complementos](create-an-add-on-submission.md).  |
+| submissionId | cadena | Obligatorio. El identificador del envío que deseas confirmar. Este identificador está disponible en el panel del Centro de desarrollo, y se incluye en los datos de respuesta para las solicitudes de [Creación de un envío de complementos](create-an-add-on-submission.md).  |
 
 <span/>
 
@@ -78,7 +75,7 @@ Authorization: Bearer <your access token>
 
 ## <a name="response"></a>Respuesta
 
-El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisfactoria a este método. Para obtener más información acerca de los valores en el cuerpo de respuesta, consulta las secciones siguientes.
+El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisfactoria a este método. Para obtener más información acerca de los valores del cuerpo de respuesta, consulta las secciones siguientes.
 
 ```json
 {
@@ -90,7 +87,7 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | cadena  | El estado del envío. Puede ser uno de los valores siguientes: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificación</li><li>Error de certif.</li><li>Lanzamiento</li><li>Error de lanz.</li></ul>  |
+| status           | cadena  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicación</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>Error de lanz.</li></ul>  |
 
 <span/>
 
@@ -114,5 +111,4 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Creación de un envío de complemento](create-an-add-on-submission.md)
 * [Actualización de un envío de complemento](update-an-add-on-submission.md)
 * [Eliminación de un envío de complemento](delete-an-add-on-submission.md)
-* [Obtener el estado de un envío de complemento](get-status-for-an-add-on-submission.md)
-
+* [Get the status of an add-on submission (Obtener el estado de un envío de complemento)](get-status-for-an-add-on-submission.md)

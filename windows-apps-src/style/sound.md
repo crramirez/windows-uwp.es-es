@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "El sonido ayuda a completar la experiencia de usuario de una aplicación y ofrece el toque de audio extra necesario para homogeneizar la percepción de Windows en todas las plataformas."
+Description: "El sonido ayuda a completar la experiencia de usuario de una aplicación y ofrece el toque de audio extra que se ajusta a la percepción de Windows en todas las plataformas."
 label: Sound
 title: Sonido
 template: detail.hbs
@@ -11,18 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fe56db9f63461ad21173406289c18e6f704aa2a4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6c7745b5702d22bc201dbc173af3765097685514
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="sound"></a>Sonido
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Hay muchas formas de usar sonido para mejorar tu aplicación. Puedes usar el sonido para complementar otros elementos de la interfaz de usuario, lo que permitirá a los usuarios reconocer eventos de forma audible. El sonido puede ser un elemento de interfaz de usuario eficaz para personas con discapacidades visuales. Puedes usar sonido para crear una atmósfera que sumerge al usuario; por ejemplo, puedes reproducir una banda sonora divertida en segundo plano en un puzle o usar efectos de sonido inquietantes para un juego de miedo o supervivencia.
+Hay muchas formas de usar sonido para mejorar tu aplicación. Puedes usar sonido para complementar otros elementos de interfaz de usuario, esto permitirá que los usuarios puedan reconocer eventos de forma audible. El sonido puede ser un elemento de interfaz de usuario eficaz para personas con discapacidades visuales. Puedes usar sonido para crear una atmósfera que sumerge al usuario; por ejemplo, puedes reproducir una banda sonora divertida en segundo plano en un puzle o usar efectos de sonido inquietantes para un juego de miedo o supervivencia.
 
 ## <a name="sound-global-api"></a>API global de sonido
 
@@ -153,4 +150,3 @@ La finalidad de esta característica de recorrido consiste en evitar que los son
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Diseño para Xbox y televisión](http://go.microsoft.com/fwlink/?LinkId=760736)
-

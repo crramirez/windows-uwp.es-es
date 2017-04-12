@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, juegos, muestreo múltiple, direct3d, games, multisampling"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7748bf4c2d1654dad77d5971487330d3530d9e84
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aprende a usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D. El muestreo múltiple, también conocido como suavizado de contorno de muestras múltiples, es una técnica gráfica que se usa para disminuir la apariencia de bordes afilados. Se aplica dibujando más píxeles de los que existen en el destino de representación y después promediando valores para mantener la apariencia de un borde "parcial" en ciertos píxeles. Si quieres ver una descripción más minuciosa de cómo funciona el muestreo múltiple en Direct3D, consulta [Multisample Anti-Aliasing Rasterization Rules (Reglas de rasterización para el suavizado de contorno de muestras múltiples)](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample).
 
@@ -210,7 +207,6 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
  
 
  
-
 
 
 

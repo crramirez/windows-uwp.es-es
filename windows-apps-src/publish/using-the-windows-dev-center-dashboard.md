@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a4dfc6003c681bb0379f25d94bb144940467d15e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b0fedbbc881d3c9febac2a1486ec441e5d4719d1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="using-the-windows-dev-center-dashboard"></a>Usar el panel del Centro de desarrollo de Windows
 
 
@@ -31,14 +28,13 @@ El panel del Centro de desarrollo también ofrece funcionalidades de [administra
 
 ## <a name="tips-for-using-the-unified-dashboard"></a>Consejos para usar el panel unificado
 
-Si anteriormente publicaste aplicaciones para Windows 8.1, Windows Phone 8.1 (o versiones de SO anteriores), echa un vistazo al tema [Cómo aparece tu aplicación en la Tienda para los clientes de Windows 10](how-your-app-appears-in-the-store-for-windows-10-customers.md) donde encontrarás información sobre algunos de los cambios realizados en la descripción de tu aplicación para clientes de Windows 10 y cómo se clasifica la información de la aplicación en el nuevo panel.
+Si anteriormente publicaste aplicaciones para Windows8.1, WindowsPhone8.1 (o versiones de SO anteriores), echa un vistazo al tema [Cómo aparece tu aplicación en la Tienda para los clientes de Windows10](how-your-app-appears-in-the-store-for-windows-10-customers.md) donde encontrarás información sobre algunos de los cambios realizados en la descripción de tu aplicación para clientes de Windows10 y cómo se clasifica la información de la aplicación en el nuevo panel.
 
 Las aplicaciones que estaban vinculadas para compartir identidad en el anterior Centro de desarrollo de Windows Phone y en el panel de la Tienda Windows aparecen como la misma aplicación en el panel del Centro de desarrollo. Independientemente de las versiones del SO que admita la aplicación, la administrarás como una sola aplicación. La aplicación tendrá los mismos detalles en todos los dispositivos como, por ejemplo, el precio y la categoría.
 
  
 
  
-
 
 
 

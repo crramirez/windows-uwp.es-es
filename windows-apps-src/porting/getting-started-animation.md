@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9dcf81c0c0aee42d6278a3e1eeccc6dd4da61010
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a45de584c4374afefe0fdca198eb7234351ac42d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-animation"></a>Introducción: animación
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="adding-animations"></a>Agregar animaciones
 
@@ -135,4 +132,3 @@ Puedes modificar este XAML manualmente o regresar a Blend y seguir trabajando de
 ### <a name="next-step"></a>Paso siguiente
 
 [Introducción: A continuación](getting-started-what-next.md)
-

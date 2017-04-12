@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
-description: "Usa este método en la API de envío de la Tienda Windows para crear un complemento de una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows."
-title: "Creación de un complemento mediante la API de envío de la Tienda Windows"
+description: "Usa este método en la API de envío de la Tienda Windows para crear un complemento de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows."
+title: Crear un complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de envío de la Tienda Windows, crear complemento, producto desde la aplicación, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0492398872142aabd32d3a4d68d55b4e326f027e
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, create add-on, crear complemento, in-app product, producto desde la aplicación, IAP, IAP"
+ms.openlocfilehash: 903bbaf0ad515dcf23c4248744b428876805082e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="create-an-add-on-using-the-windows-store-submission-api"></a>Creación de un complemento mediante la API de envío de la Tienda Windows
+# <a name="create-an-add-on"></a>Crear un complemento
 
 
 
@@ -30,15 +27,15 @@ Usa este método en la API de envío de la Tienda Windows para crear un compleme
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
 ## <a name="request"></a>Solicitud
 
-Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del cuerpo del encabezado y la solicitud.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Method | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
 
@@ -47,9 +44,9 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Type   | Descripción                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Token del** &lt;*portador*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Token del** &lt;*portador*&gt;. |
 
 <span/>
 
@@ -57,7 +54,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 El cuerpo de la solicitud tiene los siguientes parámetros.
  
-|  Parámetro  |  Type  |  Descripción  |  Obligatorio  |
+|  Parámetro  |  Tipo  |  Descripción  |  Obligatorio  |
 |------|------|------|------|
 |  applicationIds  |  matriz  |  Una matriz que contiene la Id. de la tienda de la aplicación asociada con este complemento. Solo se admite un elemento en esta matriz.   |  Sí  |
 |  productId  |  string  |  La Id. de producto del complemento. Esto es un identificador que puede usarse en el código para hacer referencia al complemento. Para obtener más información, consulta [Establecimiento del tipo de producto y la Id. del producto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id).  |  Sí  |
@@ -119,4 +116,3 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Obtención de todos los complementos](get-all-add-ons.md)
 * [Obtención de un complemento](get-an-add-on.md)
 * [Eliminación de un complemento](delete-an-add-on.md)
-

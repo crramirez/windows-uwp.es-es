@@ -3,20 +3,16 @@ author: mtoepke
 title: Extender la muestra de juego
 description: "¡Enhorabuena! Llegados a este punto, ya comprendes los componentes clave de un juego 3D DirectX para la Plataforma universal de Windows (UWP)."
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
-keywords:
-- DirectX, XAML
+keywords: DirectX, XAML
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e3f4abdb0a0f42d1b25a3adc1a78ab414affa77a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2d36c8f8f4e3f51928f1c7707e0cb6f69386645d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="extend-the-game-sample"></a>Extender la muestra de juego
 
 
@@ -25,13 +21,13 @@ ms.lasthandoff: 02/07/2017
 ¡Enhorabuena! Llegados a este punto, comprendes los componentes clave de un juego 3D DirectX de la Plataforma universal de Windows (UWP). Puedes establecer el marco para un juego, incluida la canalización de representación y el proveedor de vista, e implementar un bucle de juego básico. También puedes crear una superposición de interfaz de usuario básica e incorporar sonidos y controles. Ya estás preparado para crear un juego por ti mismo, y a continuación te mostramos algunos recursos para ampliar tu conocimiento sobre el desarrollo de juegos DirectX.
 
 -   [Juegos y gráficos de DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)
--   [Introducción a Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
--   [Referencia de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476147)
+-   [Introducción a Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
+-   [Referencia de Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476147)
 
 ## <a name="extending-the-game-sample-using-xaml-for-the-overlay"></a>Extender la muestra de juego: uso de XAML para la superposición
 
 
-Una opción que no hemos tratado en profundidad es el uso de XAML en lugar de Direct2D para la superposición. XAML presenta muchas ventajas respecto a Direct2D a la hora de dibujar elementos de interfaz de usuario; la más importante es que facilita mucho incorporar la apariencia de Windows 10 en tu juego DirectX. Muchos de los elementos, estilos y comportamientos comunes que definen a una aplicación para UWP están estrechamente integrados en el modelo XAML, por lo que implementarlos supone mucho menos trabajo para el desarrollador del juego. Si tu diseño de juego tiene una interfaz de usuario complicada, piensa en la posibilidad de usar XAML en lugar de Direct2D.
+Una opción que no hemos tratado en profundidad es el uso de XAML en lugar de Direct2D para la superposición. XAML presenta muchas ventajas respecto a Direct2D a la hora de dibujar elementos de interfaz de usuario; la más importante es que facilita mucho incorporar la apariencia de Windows10 en tu juego DirectX. Muchos de los elementos, estilos y comportamientos comunes que definen a una aplicación para UWP están estrechamente integrados en el modelo XAML, por lo que implementarlos supone mucho menos trabajo para el desarrollador del juego. Si tu diseño de juego tiene una interfaz de usuario complicada, piensa en la posibilidad de usar XAML en lugar de Direct2D.
 
 Entonces, ¿qué diferencia hay entre implementar una interfaz de usuario con Direct2D e implementar la misma interfaz con XAML?
 
@@ -1520,7 +1516,6 @@ Para descargar una versión del juego de muestra que usa XAML para la superposic
  
 
  
-
 
 
 

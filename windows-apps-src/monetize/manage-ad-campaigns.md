@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, API de promociones de la Tienda Windows, campañas de anuncios, Windows Store promotions API, ad campaigns"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: bde9588176c1e52ccab169ad3f51ad15781e06ee
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: fe1eeb4e67917633997bdc4fbeabf87be497c3ad
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-ad-campaigns"></a>Administrar campañas de anuncios
 
 Usa estos métodos en la [API de promociones de la Tienda Windows](run-ad-campaigns-using-windows-store-services.md) para crear, editar y obtener campañas de anuncios promocionales para tu aplicación. Cada campaña que crees con este método puede asociarse con solo una aplicación.
@@ -33,7 +30,10 @@ Cuando usas estos métodos para crear o actualizar una campaña, normalmente tam
 Para usar estos métodos, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+
+  >**Nota**&nbsp;&nbsp;Como parte de los requisitos previos, asegúrate de [crear al menos una campaña de anuncios de pago en el panel del Centro de desarrollo](../publish/create-an-ad-campaign-for-your-app.md) y de agregar al menos un instrumento de pago para la campaña de anuncios en el panel. Las líneas de entrega de las campañas de anuncios que creas con esta API facturarán siempre automáticamente al instrumento de pago elegido en la página **Promocionar la aplicación** del panel.
+
+* [Obtén un token de acceso de Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 <span/> 
 ## <a name="request"></a>Solicitud
@@ -52,7 +52,7 @@ Estos métodos tienen los siguientes URI.
 
 | Encabezado        | Tipo   | Descripción         |
 |---------------|--------|---------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 | Id. de seguimiento   | GUID   | Opcional. Un id. que realiza un seguimiento del flujo de llamadas.                                  |
 
 <span id="parameters"/> 
@@ -66,7 +66,7 @@ El método GET para consultar campañas de anuncios admite los siguientes parám
 | fetch  |  entero   | Número de filas de datos que se devuelven en la solicitud.    |       
 | campaignSetSortColumn  |  cadena   | Ordena los objetos de [campaña](#campaign) en el cuerpo de la respuesta por el campo especificado. La sintaxis es <em>CampaignSetSortColumn=field</em>, donde el parámetro <em>field</em> puede ser una de las siguientes cadenas:</p><ul><li><strong>id</strong></li><li><strong>createdDateTime</strong></li></ul><p>El valor predeterminado es **createdDateTime**.     |     
 | isDescending  |  Booleano   | Ordena los objetos de [campaña](#campaign) en el cuerpo de la respuesta en orden ascendente o descendente.   |         
-| applicationId  |  cadena   | Usa este valor para devolver solo las campañas de anuncios que se asocian a la aplicación con el [id. de la Tienda especificado](in-app-purchases-and-trials.md#store-ids). Un ejemplo de id. de la Tienda para un producto es 9nblggh42cfd.   |         
+| storeProductId  |  cadena   | Usa este valor para devolver solo las campañas de anuncios que están asociadas a la aplicación con el [id. de la Tienda](in-app-purchases-and-trials.md#store-ids) especificado. Un ejemplo de id. de la Tienda para un producto es 9nblggh42cfd.   |         
 | label  |  cadena   | Usa este valor para devolver solo las campañas de anuncios que incluyen el campo *label* especificado en el objeto de [campaña](#campaign).    |       |    
 
 <span/>
@@ -85,7 +85,7 @@ Authorization: Bearer <your access token>
 
 {
     "name": "Contoso App Campaign",
-    "applicationId": "9nblggh42cfd",
+    "storeProductId": "9nblggh42cfd",
     "configuredStatus": "Active",
     "objective": "DriveInstalls",
     "type": "Community"
@@ -102,7 +102,7 @@ Authorization: Bearer <your access token>
 En el siguiente ejemplo se muestra cómo llamar al método GET para consultar un conjunto de campañas de anuncios, ordenado por la fecha de creación.
 
 ```json
-GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/campaign?applicationId=9nblggh42cfd&fetch=100&skip=0&campaignSetSortColumn=createdDateTime HTTP/1.1
+GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/campaign?storeProductId=9nblggh42cfd&fetch=100&skip=0&campaignSetSortColumn=createdDateTime HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
@@ -117,7 +117,7 @@ Estos métodos devuelven un cuerpo de respuesta JSON con uno o varios objetos de
         "id": 31043481,
         "name": "Contoso App Campaign",
         "createdDate": "2017-01-17T10:12:15Z",
-        "applicationId": "9nblggh42cfd",
+        "storeProductId": "9nblggh42cfd",
         "configuredStatus": "Active",
         "effectiveStatus": "Active",
         "effectiveStatusReasons": [
@@ -147,8 +147,8 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 |  name   |  cadena   |   El nombre de la campaña de anuncios.    |    No   |      |  Sí     |       
 |  configuredStatus   |  cadena   |  Uno de los valores siguientes que especifica el estado de la campaña de anuncios que especifica el desarrollador: <ul><li>**Activo**</li><li>**Inactivo**</li></ul>     |  No     |  Activo    |   Sí    |       
 |  effectiveStatus   |  cadena   |   Uno de los siguientes valores que especifica el estado efectivo de la campaña de anuncios en función de la validación del sistema: <ul><li>**Activo**</li><li>**Inactivo**</li><li>**En proceso**</li></ul>    |    Sí   |      |   No      |       
-|  effectiveStatusReasons   |  matriz   |  Uno o varios de los valores siguientes que especifican el motivo del estado efectivo de la campaña de anuncios: <ul><li>**AdCreativesInactive**</li><li>**BillingFailed**</li><li>**AdLinesInactive**</li><li>**ValidationFailed**</li><li>**Error**</li></ul>      |  Sí     |     |    No     |       
-|  applicationId   |  cadena   |  El [id. de la Tienda](in-app-purchases-and-trials.md#store-ids) de la aplicación a la que está asociada esta campaña de anuncios. Un ejemplo de id. de la Tienda para un producto es 9nblggh42cfd.     |   Sí    |      |  Sí     |       
+|  effectiveStatusReasons   |  matriz   |  Uno o varios de los valores siguientes que especifican el motivo del estado efectivo de la campaña de anuncios: <ul><li>**AdCreativesInactive**</li><li>**BillingFailed**</li><li>**AdLinesInactive**</li><li>**ValidationFailed**</li><li>**Failed**</li></ul>      |  Sí     |     |    No     |       
+|  storeProductId   |  cadena   |  El [id. de la Tienda](in-app-purchases-and-trials.md#store-ids) de la aplicación a la que está asociada esta campaña de anuncios. Un ejemplo de id. de la Tienda para un producto es 9nblggh42cfd.     |   Sí    |      |  Sí     |       
 |  labels   |  matriz   |   Una o varias cadenas que representan etiquetas personalizadas para la campaña. Estas etiquetas pueden usarse para buscar y etiquetar campañas.    |   No    |  nulo    |    No     |       
 |  type   | cadena    |  Uno de los siguientes valores que especifica el tipo de campaña: <ul><li>**De pago**</li><li>**Interna**</li><li>**Comunidad**</li></ul>      |   Sí    |      |   Sí    |       
 |  objective   |  cadena   |  Uno de los siguientes valores que especifica el objetivo de la campaña: <ul><li>**DriveInstall**</li><li>**DriveReengagement**</li><li>**DriveInAppPurchase**</li></ul>     |   No    |  DriveInstall    |   Sí    |       
@@ -162,4 +162,3 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 * [Administrar perfiles de destino de las campañas de anuncios](manage-targeting-profiles-for-ad-campaigns.md)
 * [Administrar creativos de campañas de anuncios](manage-creatives-for-ad-campaigns.md)
 * [Obtener los datos de rendimiento de la campaña de anuncios](get-ad-campaign-performance-data.md)
-

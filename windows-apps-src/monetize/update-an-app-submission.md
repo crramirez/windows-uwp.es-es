@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Usa este método en la API de envío de la Tienda Windows para actualizar un envío de aplicación ya existente."
-title: "Actualizar un envío de aplicaciones mediante la API de envío de la Tienda Windows"
+title: "Actualizar un envío de aplicación"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP, API de envío de la Tienda Windows, envío de aplicaciones"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: df52b5de7751d8428a92bd3892f91159c5fdd518
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, app submission, envío de aplicación, update, actualizar"
+ms.openlocfilehash: a4b7816d0d6e47282864992044eea58eaaa05d1d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="update-an-app-submission-using-the-windows-store-submission-api"></a>Actualizar un envío de aplicaciones mediante la API de envío de la Tienda Windows
+# <a name="update-an-app-submission"></a>Actualizar un envío de aplicación
 
 Usa este método en la API de envío de la Tienda Windows para actualizar un envío de aplicación ya existente. Después de actualizar correctamente un envío mediante este método, debes [confirmar el envío](commit-an-app-submission.md) para su ingesta y publicación.
 
@@ -47,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -55,8 +52,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. Id. de la Tienda de la aplicación para la cual deseas actualizar un envío. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| submissionId | string | Obligatorio. Identificador del envío que se debe actualizar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un envío de aplicación](create-an-app-submission.md).  |
+| applicationId | cadena | Obligatorio. Id. de la Tienda de la aplicación para la cual deseas actualizar un envío. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| submissionId | cadena | Obligatorio. Identificador del envío que se debe actualizar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un envío de aplicación](create-an-app-submission.md).  |
 
 <span/>
 
@@ -69,7 +66,7 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 | applicationCategory           | string  |   Cadena que especifica la [categoría o subcategoría](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) de la aplicación. Las categorías y subcategorías se combinan en una cadena simple mediante el guion bajo "_" como, por ejemplo, **BooksAndReference_EReader**.      |  
 | pricing           |  object  | Objeto que contiene la información del precio de la aplicación. Para obtener más información, consulta la sección [Pricing resource (Recurso de precio)](manage-app-submissions.md#pricing-object).       |   
 | visibility           |  string  |  Visibilidad de la app. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
-| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | cadena  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |  
 | listings           |   object  |  Diccionario de pares de claves y valores en el cual cada clave hace referencia al código de un país y cada valor hace referencia a un objeto de [recurso de descripción](manage-app-submissions.md#listing-object) que contiene la descripción de la aplicación.       |   
 | hardwarePreferences           |  array  |   Matriz de cadenas que definen las [preferencias de hardware](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) de la aplicación. Puede ser uno de los valores siguientes: <ul><li>Función táctil</li><li>Teclado</li><li>Mouse</li><li>Cámara</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonía</li></ul>     |   
@@ -110,13 +107,17 @@ Content-Type: application/json
     "en-us": {
       "baseListing": {
         "copyrightAndTrademarkInfo": "",
-        "keywords": [],
+        "keywords": [
+          "epub"
+        ],
         "licenseTerms": "",
         "privacyPolicy": "",
         "supportContact": "",
         "websiteUrl": "",
         "description": "Description",
-        "features": [],
+        "features": [
+          "Free ebook reader"
+        ],
         "releaseNotes": "",
         "images": [
           {
@@ -127,9 +128,13 @@ Content-Type: application/json
           }
         ],
         "recommendedHardware": [],
-        "title": "ApiTestApp For Devbox"
+        "title": "Contoso ebook reader"
       },
-      "platformOverrides": {}
+      "platformOverrides": {
+        "Windows81": {
+          "description": "Ebook reader for Windows 8.1"
+        }
+      }
     }
   },
   "hardwarePreferences": [
@@ -152,7 +157,7 @@ Content-Type: application/json
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -192,13 +197,17 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada
     "en-us": {
       "baseListing": {
         "copyrightAndTrademarkInfo": "",
-        "keywords": [],
+        "keywords": [
+           "epub"
+        ],
         "licenseTerms": "",
         "privacyPolicy": "",
         "supportContact": "",
         "websiteUrl": "",
         "description": "Description",
-        "features": [],
+        "features": [
+          "Free ebook reader"
+        ],
         "releaseNotes": "",
         "images": [
           {
@@ -209,9 +218,13 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada
           }
         ],
         "recommendedHardware": [],
-        "title": "ApiTestApp For Devbox"
+        "title": "Contoso ebook reader"
       },
-      "platformOverrides": {}
+      "platformOverrides": {
+        "Windows81": {
+          "description": "Ebook reader for Windows 8.1",
+        }
+      }
     }
   },
   "hardwarePreferences": [
@@ -255,7 +268,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -295,4 +308,3 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Commit an app submission (Confirmar el envío de aplicación)](commit-an-app-submission.md)
 * [Delete an app submission (Eliminar un envío de aplicación)](delete-an-app-submission.md)
 * [Get the status of an app submission (Obtener el estado de un envío de aplicación)](get-status-for-an-app-submission.md)
-

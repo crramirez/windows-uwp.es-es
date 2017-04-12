@@ -9,13 +9,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3dcf6a8191553deac5821346718a202bc362c7ff
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fe6d70394af430e34e26b3fdbce2da61ca0572b0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-and-consume-an-app-service"></a>Crear y usar un servicio de aplicaciones
 
 
@@ -26,11 +23,13 @@ Obtén información sobre cómo escribir una aplicación para la Plataforma univ
 
 A partir de Windows 10, versión 1607, puedes crear servicios de aplicación que se ejecutan en el mismo proceso que la aplicación host. Este artículo se centra en la creación de servicios de aplicación que se ejecutan en un proceso en segundo plano independiente. Consulta [Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host](convert-app-service-in-process.md) para obtener más información acerca de los servicios de aplicación que se ejecutan en el mismo proceso que el proveedor.
 
-## <a name="create-a-new-app-service-provider-project"></a>Crear un proyecto nuevo de proveedor de servicios de aplicaciones
+Para más muestras de servicio de aplicación, consulta [Muestras de aplicaciones para la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices).
+
+## <a name="create-a-new-app-service-provider-project"></a>Crear un proyecto nuevo de proveedor de App Service
 
 En este procedimiento, lo crearemos todo en una solución para hacerlo más sencillo.
 
--   En Microsoft Visual Studio 2015, crea un nuevo proyecto de aplicación para UWP y asígnale el nombre AppServiceProvider. (En el cuadro de diálogo **Nuevo proyecto**, selecciona **Plantillas &gt; Otros idiomas &gt; Visual C# &gt; Windows &gt; Windows universal &gt; Aplicación vacía (Windows Universal)**). Esta será la aplicación que proporciona el servicio de aplicaciones.
+-   En Microsoft Visual Studio2015, crea un nuevo proyecto de aplicación para UWP y asígnale el nombre AppServiceProvider. (En el cuadro de diálogo **Nuevo proyecto**, selecciona **Plantillas &gt; Otros idiomas &gt; Visual C# &gt; Windows &gt; Windows universal &gt; Aplicación vacía (Windows Universal)**). Esta será la aplicación que proporciona el servicio de aplicaciones.
 
 ## <a name="add-an-app-service-extension-to-packageappxmanifest"></a>Agregar una extensión de servicio de aplicaciones a package.appxmanifest
 
@@ -382,5 +381,5 @@ namespace MyAppService
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host](convert-app-service-in-process.md)
-* [Hacer que tu aplicación sea compatible con las tareas en segundo plano](support-your-app-with-background-tasks.md)
-
+* [Compatibilidad de la aplicación con tareas en segundo plano](support-your-app-with-background-tasks.md)
+* [Muestras de aplicaciones para la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)

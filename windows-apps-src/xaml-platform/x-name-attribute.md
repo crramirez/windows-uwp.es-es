@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a80a5cdeae5adc2af59072400aa42428eac28431
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9fa472869ed3b81a9f688652a487b1b93986b777
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xname-attribute"></a>atributo x:Name
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Identifica de forma única elementos de objeto para acceder al objeto con instancia desde el código subyacente o el código general. Una vez aplicado a un modelo de programación de respaldo, se puede considerar que **x:Name** es equivalente a la variable que contiene una referencia de objeto, tal como la devuelve un constructor.
 
@@ -74,5 +71,4 @@ Si **Name** está disponible como propiedad que puede establecerse en un element
 ### <a name="xname-and-xkey"></a>x:Name y x:Key
 
 **x:Name** puede aplicarse como atributo a los elementos de un elemento [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) y actuar como sustituto del [atributo x:Key](x-key-attribute.md). Por regla general, todos los elementos de un elemento **ResourceDictionary** deben tener un atributo x:Key o x:Name. Esto es habitual para [animaciones con guión gráfico](https://msdn.microsoft.com/library/windows/apps/mt187354). Para obtener más información, consulta la sección de [Referencias a ResourceDictionary y a los recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
-
 

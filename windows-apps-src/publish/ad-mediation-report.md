@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "El informe Mediación de anuncios te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando."
+Description: "El informe de mediación de anuncios te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando."
 title: "Informe Mediación de anuncios"
 ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3f3f3dd3b594e174def693b7decd21a5753172b9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f79c8491c04c21fb3933d6bcde0d942bd1629fb0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="ad-mediation-report"></a>Informe Mediación de anuncios
 
 
-El informe **Mediación de anuncios** te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando. También muestra las velocidades de adopción de las configuraciones de mediación y proporciona visibilidad de los errores notificados por las redes de anuncios y el mediador. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
+El informe de **mediación de anuncios** te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando. También muestra las velocidades de adopción de las configuraciones de mediación y proporciona visibilidad de los errores notificados por las redes de anuncios y el mediador. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
 **Importante** El informe de **Mediación de anuncios** solo proporciona datos si usas la [mediación de anuncios de Windows](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359) en la aplicación.
 
@@ -68,7 +65,6 @@ El gráfico **Errores por tipo** muestra los errores específicos que experiment
  
 
  
-
 
 
 

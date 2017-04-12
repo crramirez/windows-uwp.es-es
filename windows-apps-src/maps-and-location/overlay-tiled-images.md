@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: "Superponer imágenes en mosaico en un mapa"
-description: "Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa la opción de orígenes de icono para superponer información especializada, como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos; o bien, úsala para reemplazar el mapa predeterminado por completo."
+description: "Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
 ms.author: misatran
 ms.date: 02/08/2017
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer"
-translationtype: Human Translation
-ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
 ms.openlocfilehash: dd52df5f95b25e26ddb0fb8db50c9faf27df02ee
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="overlay-tiled-images-on-a-map"></a>Superponer imágenes en mosaico en un mapa
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante los orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
@@ -31,7 +28,7 @@ Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante 
 ## <a name="tiled-image-overview"></a>Información general de la imagen en mosaico
 
 
-Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256 x 256 píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256x256píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
 **Importante**  
 Al usar la opción de orígenes de icono, no tienes que escribir código para solicitar o colocar los iconos individuales. La clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) se encarga de solicitar los iconos a medida que los necesita. Cada solicitud especifica las coordenadas X e Y, y el nivel de zoom para el icono individual. Solo debes indicar el formato del URI o el nombre de archivo que se debe usar para recuperar los iconos en la propiedad **UriFormatString**. Es decir, se insertan los parámetros reemplazables en el URI base o en el nombre de archivo para indicar dónde se deben pasar las coordenadas X e Y, y el nivel de zoom para cada icono.
@@ -367,9 +364,8 @@ Reemplazar todo el mapa con iconos personalizados o de terceros:
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Bing Maps Developer Center (Centro para desarrolladores de Mapas de Bing)](https://www.bingmapsportal.com/)
-* [UWP map sample (Muestra de mapa de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
+* [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo de compilación de 2015: Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Ejemplo de aplicación de tráfico de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-

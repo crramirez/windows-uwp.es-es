@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 24e966f953928d238f9197359e0b539b8a3e5c3c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 02b1a056cd7e711b1fc4533c353570209153f9e8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="fiddler-settings-api-reference"></a>Referencia de API de configuración de Fiddler   
 Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de desarrollo con esta API de REST.
 
@@ -25,7 +22,7 @@ Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de de
 
 Puedes habilitar el seguimiento de Fiddler para el kit de desarrollo con la siguiente solicitud.  Ten en cuenta que será necesario reiniciar el dispositivo para que esto surta efecto.
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
 POST | /ext/fiddler
 <br />
@@ -33,7 +30,7 @@ POST | /ext/fiddler
 
 Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-| Parámetro del URI      | Descripción     | 
+| Parámetro de URI      | Descripción     | 
 | ------------------ |-----------------|
 | proxyAddress       | La dirección IP o el nombre de host del dispositivo que ejecuta Fiddler. |
 | proxyPort          | El puerto que Fiddler usa para supervisar el tráfico. El valor predeterminado es 8888. |
@@ -50,7 +47,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Respuesta**   
 
-- Ninguna  
+- Ninguno  
 
 **Código de estado**
 
@@ -68,7 +65,7 @@ Código de estado HTTP      | Descripción
 
 Puedes deshabilitar el seguimiento de Fiddler en el dispositivo con la siguiente solicitud. Ten en cuenta que será necesario reiniciar el dispositivo para que esto surta efecto.
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
 DELETE | /ext/fiddler
 <br />
@@ -76,7 +73,7 @@ DELETE | /ext/fiddler
 
 - Ninguno
 
-**Encabezados de la solicitud**
+**Encabezados de solicitud**
 
 - Ninguno
 
@@ -86,7 +83,7 @@ DELETE | /ext/fiddler
 
 **Respuesta**   
 
-- Ninguna 
+- Ninguno 
 
 **Código de estado**
 
@@ -105,5 +102,4 @@ Código de estado HTTP      | Descripción
 
 ## <a name="see-also"></a>Consulta también
 - [Configuración de Fiddler para la UWP en Xbox](uwp-fiddler.md)
-
 

@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "El informe Adquisiciones del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma."
+Description: "El informe de adquisiciones del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma."
 title: Informe Adquisiciones
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a668c3d03c11ac4c6c27cddeefafeb3c42caf1e3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f3db02d5fc5324f281a8a725511066cfbe5de1e3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="acquisitions-report"></a>Informe Adquisiciones
 
 
-El informe **Adquisiciones** del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de la aplicación](../monetize/get-app-acquisitions.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+El informe de **adquisiciones** del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de la aplicación](../monetize/get-app-acquisitions.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, una adquisición significa que un cliente nuevo ha obtenido una licencia para tu aplicación (tanto si cobras dinero como si la ofreces gratis).
 
@@ -65,11 +62,10 @@ El gráfico **Mercados** muestra el número total de adquisiciones durante el pe
 ## <a name="os-version"></a>Versión de SO
 
 
-El gráfico **Versión de SO** muestra el número total de adquisiciones según el sistema operativo del cliente (o mediante la [adquisición por volumen por parte de organizaciones](organizational-licensing.md)). Es posible que en algunos casos no podamos determinar esta información. En ese caso, la versión del SO se muestra como **Desconocida**.
+En el gráfico **Versión de SO** se muestra el número total de adquisiciones según el sistema operativo del cliente (o mediante la [adquisición por volumen por parte de organizaciones](organizational-licensing.md)). Es posible que en algunos casos no podamos determinar esta información. En ese caso, la versión del SO se muestra como **Desconocida**.
 
 
 
  
 
  
-

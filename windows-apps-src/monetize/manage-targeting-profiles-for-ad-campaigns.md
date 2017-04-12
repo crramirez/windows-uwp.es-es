@@ -1,25 +1,22 @@
 ---
 author: mcleanbyron
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
-description: "Usa este método en la API de promociones de la Tienda Windows para administrar los perfiles de destino para las campañas de anuncios promocionales."
-title: "Administrar perfiles de destino de las campañas de anuncios"
+description: "Usa este método en la API de promociones de la Tienda Windows para administrar los perfiles objetivo para las campañas de anuncios promocionales."
+title: Administrar perfiles objetivo
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, API de promociones de la Tienda Windows, campañas de anuncios, Windows Store promotions API, ad campaigns"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: c737e27df4a911d3fcbdcb3128ece865bda2b703
-ms.lasthandoff: 02/08/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Windows Store promotions API, API de promociones de la Tienda Windows, ad campaigns, campañas de anuncios"
+ms.openlocfilehash: 30fb160e389edd18fb3782d332b5603fc6207757
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="manage-targeting-profiles"></a>Administrar perfiles objetivo
 
-# <a name="manage-targeting-profiles-for-ad-campaigns"></a>Administrar perfiles de destino de las campañas de anuncios
 
-
-Usa estos métodos en la API de promociones de la Tienda Windows para seleccionar los usuarios, las regiones y los tipos de inventario que quieres como destino de cada línea de entrega de una campaña de anuncios promocionales. Los perfiles de destino se pueden crear y volver a usar en varias líneas de entrega.
+Usa estos métodos en la API de promociones de la Tienda Windows para seleccionar los usuarios, las zonas geográficas y los tipos de inventario que quieres como destino de cada línea de entrega de una campaña de anuncios promocionales. Los perfiles de destino se pueden crear y volver a usar en varias líneas de entrega.
 
 Para obtener más información sobre la relación entre los perfiles de destino y las campañas de anuncios, las líneas de entrega y los creativos, consulta [Run ad campaigns using Windows Store services (Ejecutar campañas de anuncios con servicios de la Tienda Windows)](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 
@@ -28,7 +25,7 @@ Para obtener más información sobre la relación entre los perfiles de destino 
 Para usar estos métodos, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
@@ -45,7 +42,7 @@ Estos métodos tienen los siguientes URI.
 
 | Encabezado        | Tipo   | Descripción         |
 |---------------|--------|---------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 | Id. de seguimiento   | GUID   | Opcional. Un id. que realiza un seguimiento del flujo de llamadas.                                  |
 
 
@@ -161,7 +158,7 @@ El campo *age* del objeto [TargetingProfile](#targeting-profile) contiene uno o 
 
 |  Valor entero del campo *age*  |  Intervalo de edad correspondiente  |  
 |---------------------------------|---------------------------|
-|     621     |            13 a 17             |
+|     651     |            13 a 17             |
 |     652     |           18 a 24             |
 |     653     |            25 a 34             |
 |     654     |            35 a 49             |
@@ -230,14 +227,14 @@ El campo *osVersion* del objeto [TargetingProfile](#targeting-profile) contiene 
 |---------------------------------|---------------------------|
 |     500     |            Windows Phone 7             |
 |     501     |           Windows Phone 7.1             |
-|     502     |           Windows Phone 7.5             |
-|     503     |           Windows Phone 7.8             |
-|     504     |           Windows Phone 8.0             |
+|     502     |           Windows Phone7.5             |
+|     503     |           Windows Phone7.8             |
+|     504     |           Windows Phone8.0             |
 |     505     |           Windows Phone 8.1             |
-|     506     |           Windows 8.0             |
-|     507     |           Windows 8.1             |
-|     508     |           Windows 10             |
-|     509     |           Windows 10 Mobile             |
+|     506     |           Windows8.0             |
+|     507     |           Windows8.1             |
+|     508     |           Windows10             |
+|     509     |           Windows10 Mobile             |
 
 Para obtener los valores que admite el campo *osVersion* mediante programación, puedes llamar al siguiente método GET.  Para el encabezado ```Authorization```, pasa el token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;.
 
@@ -275,8 +272,8 @@ El campo *deviceType* del objeto [TargetingProfile](#targeting-profile) contiene
 
 |  Valor entero para el campo *deviceType*  |  Tipo de dispositivo correspondiente  |  Descripción  |
 |---------------------------------|---------------------------|---------------------------|
-|     710     |  Windows   |  Representa los dispositivos que ejecutan una versión de escritorio de Windows 10 o Windows 8.x.  |
-|     711     |  Teléfono     |  Representa los dispositivos que ejecutan Windows 10 Mobile, Windows Phone 8.x o Windows Phone 7.x.
+|     710     |  Windows   |  Representa los dispositivos que ejecutan una versión de escritorio de Windows10 o Windows8.x.  |
+|     711     |  Teléfono     |  Representa los dispositivos que ejecutan Windows10 Mobile, Windows Phone8.x o Windows Phone7.x.
 
 Para obtener los valores que admite el campo *deviceType* mediante programación, puedes llamar al siguiente método GET.  Para el encabezado ```Authorization```, pasa el token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;.
 
@@ -620,4 +617,3 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta para este método.
 * [Administrar líneas de entrega de campañas de anuncios](manage-delivery-lines-for-ad-campaigns.md)
 * [Administrar creativos de campañas de anuncios](manage-creatives-for-ad-campaigns.md)
 * [Obtener los datos de rendimiento de la campaña de anuncios](get-ad-campaign-performance-data.md)
-

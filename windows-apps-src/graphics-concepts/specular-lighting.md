@@ -2,25 +2,21 @@
 title: Luz especular
 description: "La luz especular identifica la iluminación especular que se produce cuando la luz alcanza la superficie de un objeto y vuelve a reflejarse hacia la cámara."
 ms.assetid: 71F87137-B00F-48CE-8E6A-F98A139A742A
-keywords:
-- Luz especular
+keywords: Luz especular
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54cb099e768ad1583f686d98375a0f1bcedd4e5d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c57edefa190fbb56b8bbe2a0c06ef2828b780927
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="specular-lighting"></a>Luz especular
 
 
-La *luz especular* identifica la iluminación especular que se produce cuando la luz alcanza la superficie de un objeto y vuelve a reflejarse hacia la cámara. La luz especular es más intensa que la luz difusa y se extiende más rápidamente por la superficie del objeto. Se tarda más en calcular la luz especular que la luz difusa; sin embargo, la ventaja de usarla es que agrega un nivel importante de detalle a una superficie.
+La *luz especular* identifica la iluminación especular que se produce cuando la luz alcanza la superficie de un objeto y vuelve a reflejarse hacia la cámara. La iluminación especular es más intensa que la luz difusa y sale más rápidamente por la superficie del objeto. Se tarda más en calcular la luz especular que la luz difusa; sin embargo, la ventaja de usarla es que agrega un nivel importante de detalle a una superficie.
 
 El modelado del reflejo especular requiere que el sistema sepa en qué dirección se desplaza la luz y la dirección respecto a los ojos del espectador. El sistema usa una versión simplificada del modelo de reflejo especular Phong, que emplea un vector medio para aproximar la intensidad de dicho reflejo especular.
 
@@ -122,7 +118,6 @@ La luz difusa supone más cálculos que la luz especular. Normalmente se usa par
  
 
  
-
 
 
 

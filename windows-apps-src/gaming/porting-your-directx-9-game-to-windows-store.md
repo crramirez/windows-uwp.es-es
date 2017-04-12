@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "Migrar de DirectX 9 a la Plataforma universal de Windows (UWP)"
+title: Migrar de DirectX9 a la Plataforma universal de Windows (UWP)
 description: "En esta sección se incluyen artículos, información general y tutoriales para portar juegos de DirectX 9 a la Plataforma universal de Windows (UWP)."
 ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
 ms.author: mtoepke
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, DirectX 9, DirectX 11, porting, portar
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 9ea27288fd239b2af4b63985a3c8e0ad4055b0b9
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="port-from-directx-9-to-universal-windows-platform-uwp"></a>Portar de DirectX 9 a la Plataforma universal de Windows (UWP)
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta sección incluye artículos, información general y tutoriales para migrar juegos de DirectX 9 a la Plataforma universal de Windows (UWP).
 
@@ -27,8 +24,8 @@ Esta sección incluye artículos, información general y tutoriales para migrar 
 
 
 -   Llega a la audiencia de UWP y rentabiliza tu juego.
--   Elige como destino una amplia variedad de dispositivos que admitan al menos el conjunto de características de gráficos de Direct3D 9.1.
--   Aprende nuevas y valiosas habilidades de desarrollo de juegos en Windows, incluyendo Direct3D 11, modelos de sombreador unificados, API de Windows, XAudio2, entrada táctil, C++/CX y mucho más.
+-   Elige como destino una amplia variedad de dispositivos que admitan al menos el conjunto de características de gráficos de Direct3D9.1.
+-   Aprende nuevas y valiosas habilidades de desarrollo de juegos en Windows, incluyendo Direct3D11, modelos de sombreador unificados, API de Windows, XAudio2, entrada táctil, C++/CX y mucho más.
 
 ## <a name="where-do-i-start"></a>¿Por dónde empezar?
 
@@ -40,7 +37,6 @@ Esta sección incluye artículos, información general y tutoriales para migrar 
  
 
  
-
 
 
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de colección de la Tienda Windows, API de compra de la Tienda Windows, ver productos, conceder productos"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7f4f74c887509e772fd01dbdcfe28d86c583fbc1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1f5930a9917933937a1a0103fe118a2ccdf2d47f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-product-entitlements-from-a-service"></a>Administrar los derechos de producto de un servicio
 
 Si tienes un catálogo de aplicaciones y complementos (también conocidos como productos desde la aplicación o IAP), puedes usar la *API de colecciones de la Tienda Windows* y la *API de compras de la Tienda Windows* para obtener acceso a la información de derecho de estos productos desde tus servicios. Un *derecho* representa el derecho de un cliente de usar una aplicación o complemento que se publica a través de la Tienda Windows.
@@ -25,7 +22,7 @@ Estas API constan de métodos REST diseñados para que los desarrolladores los u
 -   API de colecciones de la Tienda Windows: [Consulta productos pertenecientes a un usuario](query-for-products.md) y [notifica un producto como cumplido](report-consumable-products-as-fulfilled.md).
 -   API de compra de la Tienda Windows: [concede un producto gratuito a un usuario](grant-free-products.md).
 
->**Nota**&nbsp;&nbsp;La API de colecciones y la API de compras de la Tienda Windows usan la autenticación de Azure Active Directory (Azure AD) para acceder a la información de propiedad del cliente. Para usar estas API, tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office 365 u otros servicios empresariales de Microsoft, ya tienes un directorio de Azure AD.
+>**Nota**&nbsp;&nbsp;La API de colecciones y la API de compras de la Tienda Windows usan la autenticación de Azure Active Directory (Azure AD) para acceder a la información de propiedad del cliente. Para usar estas API, tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office365 u otros servicios empresariales de Microsoft, ya tienes un directorio de AzureAD.
 
 ## <a name="overview"></a>Introducción
 
@@ -40,7 +37,7 @@ Los siguientes pasos describen el proceso de principio a fin para usar la API de
 En las siguientes secciones se proporcionan más detalles sobre cada uno de estos pasos.
 
 <span id="step-1"/>
-### <a name="step-1-configure-a-web-application-in-azure-ad"></a>Paso 1: Configurar una aplicación web en Azure AD
+## <a name="step-1-configure-a-web-application-in-azure-ad"></a>Paso 1: Configurar una aplicación web en Azure AD
 
 Antes de poder usar la API de colecciones de la Tienda Windows o la API de compras, debes crear una aplicación Web de Azure AD, recuperar el identificador de inquilino y el identificador de cliente de la aplicación y generar una clave. La aplicación de Azure AD representa la aplicación o el servicio desde donde quieres originar la llamada a la API de colecciones de la Tienda Windows o la API de compras. Necesitas el identificador de inquilino, de cliente y la clave para obtener un token de acceso de Azure AD que se pasa a la API.
 
@@ -67,22 +64,22 @@ Antes de poder usar la API de colecciones de la Tienda Windows o la API de compr
 5.  Guarda el manifiesto de la aplicación y cárgalo en la aplicación en el [Portal de administración de Azure](http://manage.windowsazure.com/).
 
 <span id="step-2"/>
-### <a name="step-2-associate-your-azure-ad-client-id-with-your-app-in-windows-dev-center"></a>Paso 2: Asocia tu identificador de cliente de Azure AD con tu aplicación en el Centro de desarrollo de Windows
+## <a name="step-2-associate-your-azure-ad-client-id-with-your-app-in-windows-dev-center"></a>Paso 2: Asocia tu identificador de cliente de Azure AD con tu aplicación en el Centro de desarrollo de Windows
 
-Para que la API de colecciones de la Tienda Windows o la API de compra para funcione en una aplicación o un complemento, tienes que asociar tu identificador de cliente de Azure AD con la aplicación en el panel del Centro de desarrollo de Windows.
+Para que la API de colecciones o la API de compras de la Tienda Windows funcionen en una aplicación o un complemento, tienes que asociar tu id. de cliente de Azure AD con la aplicación (o la aplicación que contiene el complemento) en el panel del Centro de desarrollo de Windows.
 
 >**Nota**&nbsp;&nbsp;Solo debes realizar esta tarea una vez.
 
-1.  Inicia sesión en el [panel del Centro de desarrollo de Windows](https://dev.windows.com/overview) y selecciona tu aplicación.
-2.  Ve a la página **Servicios** &gt; **Colecciones y compras de productos** y escribe tu identificador de cliente de Azure AD en uno de los campos disponibles.
+1.  Inicia sesión en el [panel del Centro de desarrollo](https://dev.windows.com/overview) y selecciona tu aplicación.
+2.  Ve a la página **Servicios** &gt; **Compras y colecciones de productos** y escribe tu id. de cliente de Azure AD en uno de los campos disponibles.
 
 <span id="step-3"/>
-### <a name="step-3-create-azure-ad-access-tokens"></a>Paso 3: Crea tokens de acceso de Azure AD
+## <a name="step-3-create-azure-ad-access-tokens"></a>Paso 3: Crea tokens de acceso de Azure AD
 
 Para poder recuperar una clave de id. de la Tienda Windows o llamar a la API de colecciones o la API de compras de la Tienda Windows, el servicio debe crear varios tokens de acceso de Azure AD diferentes que representen tu identidad de publicador. Cada token se usará con una API diferente. La duración de cada uno de estos tokens es de 60 minutos y se pueden actualizar después de su expiración.
 
 <span id="access-tokens" />
-#### <a name="understanding-the-different-tokens-and-audience-uris"></a>Descripción de los diferentes tokens y los URI de público
+### <a name="understanding-the-different-tokens-and-audience-uris"></a>Descripción de los diferentes tokens y los URI de público
 
 Dependiendo de los métodos que quieres llamar en la API de colecciones de la Tienda Windows o la API de compras, debes crear dos o tres tokens diferentes. Cada token de acceso está asociado con un URI de público diferente (estos son los mismos URI que agregaste anteriormente a la sección `"identifierUris"` del manifiesto de la aplicación de Azure AD).
 
@@ -92,12 +89,12 @@ Dependiendo de los métodos que quieres llamar en la API de colecciones de la Ti
 
   * Si quieres llamar un método en la API de colecciones de la Tienda Windows para [consultar productos pertenecientes a un usuario](query-for-products.md) o [notificar un producto consumible como completado](report-consumable-products-as-fulfilled.md), también debes crear un token con la URI de público `https://onestore.microsoft.com/b2b/keys/create/collections`. En un paso posterior, pasarás este token a un método de cliente en el Windows SDK para solicitar una clave de identificador de la Tienda Windows que se pueda usar con la API de colecciones de la Tienda Windows.
 
-  * Si quieres llamar un método en la API de compra de la Tienda Windows para [conceder un producto gratuito a un usuario](grant-free-products.md), también debes crear un token con la URI de público `https://onestore.microsoft.com/b2b/keys/create/purchase`. En un paso posterior, pasarás este token a un método de cliente en el Windows SDK para solicitar una clave de identificador de la Tienda Windows que se pueda usar con la API de compra de la Tienda Windows.
+  * Si quieres llamar un método en la API de compra de la Tienda Windows para [conceder un producto gratuito a un usuario](grant-free-products.md), también debes crear un token con la URI de público `https://onestore.microsoft.com/b2b/keys/create/purchase`. En un paso posterior, pasarás este token a un método de cliente en el Windows SDK para solicitar una clave de id. de la Tienda Windows que se pueda usar con la API de compras de la Tienda Windows.
 
 <span />
-#### <a name="how-to-create-the-tokens"></a>Cómo crear los tokens
+### <a name="create-the-tokens"></a>Crear los tokens
 
-Para crear los tokens de acceso, usa la API de OAuth 2.0 en tu servicio siguiendo las instrucciones de [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
+Para crear los tokens de acceso, usa la API de OAuth 2.0 en tu servicio siguiendo las instrucciones de [Llamadas entre servicios mediante las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
 ``` syntax
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
@@ -121,16 +118,16 @@ Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instruc
 > **Importante**&nbsp;&nbsp;Debes crear tokens de acceso de Azure AD solamente en el contexto del servicio, no en la aplicación. El secreto de cliente podría verse comprometido si se envía a la aplicación.
 
 <span id="step-4"/>
-### <a name="step-4-create-a-windows-store-id-key"></a>Paso 4: Crea una clave de identificador de la Tienda Windows
+## <a name="step-4-create-a-windows-store-id-key"></a>Paso 4: Crea una clave de identificador de la Tienda Windows
 
-Antes de llamar un método en la API de colecciones o la API de compras de la Tienda Windows, el servicio debe crear una clave de identificador de la Tienda Windows. Este es un token web JSON (JWT) que representa la identidad del usuario a cuya información de propiedad del producto deseas acceder. Para obtener más información acerca de las notificaciones de esta clave, consulta [Notificaciones en una clave de identificador de la Tienda Windows](#claims).
+Antes de llamar a un método en la API de colecciones o la API de compras de la Tienda Windows, la aplicación tiene que crear una clave de id. de la Tienda Windows y enviarla al servicio. Esta clave es un token web JSON (JWT) que representa la identidad del usuario a cuya información de propiedad del producto quieres acceder. Para obtener más información acerca de las notificaciones de esta clave, consulta [Notificaciones en una clave de identificador de la Tienda Windows](#claims).
 
 Actualmente, la única manera de crear una clave de identificador de la Tienda Windows es mediante una llamada a una API de la Plataforma universal de Windows (UWP) desde el código de la parte del cliente de la aplicación. La clave generada representa la identidad del usuario que actualmente está conectado a la Tienda Windows en el dispositivo.
 
 > **Nota**&nbsp;&nbsp;Cada clave de id. de la Tienda Windows es válida durante 90 días. Puedes [renovar la clave](renew-a-windows-store-id-key.md) cuando expire. Te recomendamos que renueves tus claves de id. de la Tienda Windows en lugar de crear claves nuevas.
 
 <span />
-#### <a name="to-create-a-windows-store-id-key-for-the-windows-store-collection-api"></a>Para crear una clave de identificador de la Tienda Windows para la API de colecciones de la Tienda Windows
+### <a name="to-create-a-windows-store-id-key-for-the-windows-store-collection-api"></a>Para crear una clave de identificador de la Tienda Windows para la API de colecciones de la Tienda Windows
 
 Sigue estos pasos para crear una clave de identificador de la Tienda Windows que puedas usar con la API de colecciones de la Tienda Windows para [consultar productos pertenecientes a un usuario](query-for-products.md) o [notificar un producto consumible como completado](report-consumable-products-as-fulfilled.md).
 
@@ -142,12 +139,12 @@ Sigue estos pasos para crear una clave de identificador de la Tienda Windows que
 
   * Si la aplicación usa la clase [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) en el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para administrar las compras desde la aplicación, usa el método [CurrentApp.GetCustomerCollectionsIdAsync](https://msdn.microsoft.com/library/windows/apps/mt608674).
 
-  Pasa el token de acceso de Azure AD al parámetro *serviceTicket* del método. También puedes pasar un identificador al parámetro *publisherUserId* que identifica al usuario actual en el contexto de tus servicios. Si mantienes identificadores de usuario para tus servicios, puedes usar este parámetro para correlacionar estos identificadores de usuario con las llamadas que realices a la API de colecciones de la Tienda Windows.
+  Pasa el token de acceso de Azure AD al parámetro *serviceTicket* del método. También puedes pasar un identificador al parámetro *publisherUserId* que identifica al usuario actual en el contexto de tus servicios. Si mantienes id. de usuario para tus servicios, puedes usar este parámetro para correlacionar estos id. de usuario con las llamadas que realices a la API de colecciones de la Tienda Windows.
 
-3.  Después de que la aplicación recupere correctamente una clave de id. de la Tienda Windows, pasa la clave a tu servicio.
+3.  Después de que la aplicación cree correctamente una clave de id. de la Tienda Windows, pasa la clave de nuevo a tu servicio.
 
 <span />
-#### <a name="to-create-a-windows-store-id-key-for-the-windows-store-purchase-api"></a>Para crear una clave de identificador de la Tienda Windows para la API de compras de la Tienda Windows
+### <a name="to-create-a-windows-store-id-key-for-the-windows-store-purchase-api"></a>Para crear una clave de id. de la Tienda Windows para la API de compras de la Tienda Windows
 
 Sigue estos pasos para crear una clave de identificador de la Tienda Windows que se puede usar con la API de compras de la Tienda Windows para [conceder un producto gratuito a un usuario](grant-free-products.md).
 
@@ -159,12 +156,12 @@ Sigue estos pasos para crear una clave de identificador de la Tienda Windows que
 
   * Si la aplicación usa la clase [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) en el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para administrar las compras desde la aplicación, usa el método [CurrentApp.GetCustomerPurchaseIdAsync](https://msdn.microsoft.com/library/windows/apps/mt608675).
 
-  Pasa el token de acceso de Azure AD al parámetro *serviceTicket* del método. También puedes pasar un identificador al parámetro *publisherUserId* que identifica al usuario actual en el contexto de tus servicios. Si mantienes identificadores de usuario para tus servicios, puedes usar este parámetro para correlacionar estos identificadores de usuario con las llamadas que realices a la API de compras de la Tienda Windows.
+  Pasa el token de acceso de Azure AD al parámetro *serviceTicket* del método. También puedes pasar un identificador al parámetro *publisherUserId* que identifica al usuario actual en el contexto de tus servicios. Si mantienes id. de usuario para tus servicios, puedes usar este parámetro para correlacionar estos id. de usuario con las llamadas que realices a la API de compras de la Tienda Windows.
 
-3.  Después de que la aplicación recupere correctamente una clave de id. de la Tienda Windows, pasa la clave a tu servicio.
+3.  Después de que la aplicación cree correctamente una clave de id. de la Tienda Windows, pasa la clave de nuevo a tu servicio.
 
 <span id="step-5"/>
-### <a name="step-5-call-the-windows-store-collection-api-or-purchase-api-from-your-service"></a>Paso 5: Llama a la API de colecciones o la API de compras de la Tienda Windows desde el servicio
+## <a name="step-5-call-the-windows-store-collection-api-or-purchase-api-from-your-service"></a>Paso 5: Llama a la API de colecciones o la API de compras de la Tienda Windows desde el servicio
 
 Cuando el servicio disponga de una clave de id. de la Tienda Windows que permita acceder a la información de propiedad del producto de un usuario específico, el servicio puede llamar a la API de colecciones o la API de compras de la Tienda Windows siguiendo estas instrucciones:
 
@@ -227,4 +224,3 @@ Este es un ejemplo de un conjunto de notificaciones de clave de id. de la Tienda
 * [Integrar aplicaciones con Azure Active Directory](http://go.microsoft.com/fwlink/?LinkId=722502)
 * [Descripción del manifiesto de aplicación de Azure Active Directory]( http://go.microsoft.com/fwlink/?LinkId=722500)
 * [Tipos de notificaciones y tokens admitidos](http://go.microsoft.com/fwlink/?LinkId=722501)
-

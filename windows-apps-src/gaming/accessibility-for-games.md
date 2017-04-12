@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, accesibilidad, juegos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 74a3e3bf3b4f614a112bedd8a2777f8d641237a9
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="making-games-accessible"></a>Hacer que los juegos sean accesibles
 
@@ -64,8 +62,8 @@ La discapacidad se define como "un desajuste entre las necesidades de la persona
 
 ### <a name="vision"></a>Visual
 
-*   Enfermedades médicas de larga duración como glaucoma, cataratas, daltonismo, miopía y retinopatía diabética.
-*   Situaciones de corta duración y circunstanciales como un monitor o pantalla de tamaño pequeño, una pantalla de baja resolución o un alto brillo de la pantalla debido a fuentes de luz muy brillantes de un monitor
+*    Enfermedades médicas de larga duración como glaucoma, cataratas, daltonismo, miopía y retinopatía diabética.
+*    Situaciones de corta duración y circunstanciales como un monitor o pantalla de tamaño pequeño, una pantalla de baja resolución o un alto brillo de la pantalla debido a fuentes de luz muy brillantes de un monitor
         
 ### <a name="hearing"></a>Auditiva
 
@@ -154,21 +152,21 @@ Al diseñar los subtítulos de tu juego, el objetivo es proporcionar subtítulos
 
 Estas son algunas directrices básicas a tener en cuenta cuando se diseñan los subtítulos:
 
-*   Selecciona una fuente legible simple.
-*   Selecciona el tamaño de fuente lo suficientemente grande o ten en cuenta la opción de un tamaño de fuente ajustable para obtener una mayor flexibilidad. (El tamaño de fuente ideal depende del tamaño de la pantalla o la distancia a la pantalla, entre otros).
-*   Crea un alto contraste entre el color de fondo y el de la fuente. (Para obtener más información, consulta [Información acerca de la relación de contraste](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
+*    Selecciona una fuente legible simple.
+*    Selecciona el tamaño de fuente lo suficientemente grande o ten en cuenta la opción de un tamaño de fuente ajustable para obtener una mayor flexibilidad. (El tamaño de fuente ideal depende del tamaño de la pantalla o la distancia a la pantalla, entre otros).
+*    Crea un alto contraste entre el color de fondo y el de la fuente. (Para obtener más información, consulta [Información acerca de la relación de contraste](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
 * Muestra frases cortas en pantalla. (Recuerda no revelar contenido del juego mostrando el texto antes de que ocurra el evento.)
-*   Distingue qué hace el sonido o quién habla. (Ejemplo: "Daniel: ¡Hola!")
-*   Proporciona la opción de activar y desactivar los subtítulos. (Característica adicional: capacidad de seleccionar cuánta información de sonido se muestra en función de la importancia.)
+*    Distingue qué hace el sonido o quién habla. (Ejemplo: "Daniel: ¡Hola!")
+*    Proporciona la opción de activar y desactivar los subtítulos. (Característica adicional: capacidad de seleccionar cuánta información de sonido se muestra en función de la importancia.)
 
 ### <a name="sound-feedback"></a>Información de sonido
 
 El sonido proporciona información al jugador, aparte de la información visual. Un buen diseño del audio del juego puede mejorar la accesibilidad para los jugadores con dificultades visuales. A continuación se enumeran otras indicaciones por considerar:
 
-*   Usa pistas de audio 3D para proporcionar información espacial adicional.
+*    Usa pistas de audio 3D para proporcionar información espacial adicional.
 * Separa los controles de volumen de la música, la voz y los efectos de sonido.
-*   Diseña una voz que proporcione información significativa para los jugadores. (Ejemplo: "Los enemigos se acercan" frente a "Los enemigos entran por la puerta de atrás.")
-*   Asegúrate de que la voz se habla a una velocidad razonable y proporciona un control de velocidad para obtener una mejor accesibilidad.
+*    Diseña una voz que proporcione información significativa para los jugadores. (Ejemplo: "Los enemigos se acercan" frente a "Los enemigos entran por la puerta de atrás.")
+*    Asegúrate de que la voz se habla a una velocidad razonable y proporciona un control de velocidad para obtener una mejor accesibilidad.
 
 ### <a name="fully-mappable-controls"></a>Controles completamente asignables
 
@@ -192,9 +190,9 @@ Hay muchos factores que pueden causar una reacción fotosensible al jugar a vide
 
 Como desarrollador, estas son algunas sugerencias para el diseño de juego para incluir a jugadores que tienen tendencia a la epilepsia fotosensible:
 
-*   Evita usar luces parpadeantes con una frecuencia de 5 a 30 parpadeos por segundo (hercios) porque las luces parpadeantes en ese intervalo son más probables de causar ataques.
-*   Usa un sistema automatizado para buscar en el juego estímulos que pudieran causar epilepsia fotosensible. (Ejemplo: [Harding Flash and Pattern Analyzer (FPA) G2](http://www.hardingfpa.com/harding-fpa-for-games/) desarrollado por Cambridge Research System Ltd y el Profesor Graham Harding.) 
-*   Diseña pausas entre los niveles del juego y anima a los jugadores a tomar un descanso y a no jugar sin interrupciones.
+*    Evita usar luces parpadeantes con una frecuencia de 5 a 30 parpadeos por segundo (hercios) porque las luces parpadeantes en ese intervalo son más probables de causar ataques.
+*    Usa un sistema automatizado para buscar en el juego estímulos que pudieran causar epilepsia fotosensible. (Ejemplo: [Harding Flash and Pattern Analyzer (FPA) G2](http://www.hardingfpa.com/harding-fpa-for-games/) desarrollado por Cambridge Research System Ltd y el Profesor Graham Harding.) 
+*    Diseña pausas entre los niveles del juego y anima a los jugadores a tomar un descanso y a no jugar sin interrupciones.
 
 ## <a name="other-accessibility-resources"></a>Otros recursos de accesibilidad
 
@@ -221,4 +219,3 @@ Estos son algunos sitios externos que proporcionan información adicional sobre 
 * [Concentrador del desarrollador de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps)
 * [Desarrollar aplicaciones para UWP accesibles](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)
 * [Libro electrónico Creación de un software accesible](https://www.microsoft.com/download/details.aspx?id=19262)
-

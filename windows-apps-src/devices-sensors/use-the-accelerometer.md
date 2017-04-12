@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8f8236a68fd7628f1f53eebc13731a72414e3217
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f0665bf071b4c75ee6a3ea8bcc11cefb357c6825
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="use-the-accelerometer"></a>Usar el acelerómetro
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -178,4 +176,3 @@ Estos nuevos valores se escriben en los bloques de texto que se encuentran en el
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Muestra de acelerómetro](http://go.microsoft.com/fwlink/p/?linkid=241377)
-

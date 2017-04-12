@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d44b9fafa0687bdd9f5e507fc7444313eff4ca3b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d3105e8ac345e1eb6f0d974f8ea29e741dae9f58
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xclass-attribute"></a>Atributo x:Class
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Configura la compilación de XAML para unir clases parciales entre el marcado y el código subyacente. La clase parcial de código se define en un archivo de código separado y la clase parcial de marcado se crea mediante la generación del código durante la compilación de XAML.
 
@@ -49,5 +46,4 @@ El valor del atributo **x:Class** debe ser una cadena que especifique el nombre 
 ## <a name="clr-language-rules"></a>Reglas del lenguaje CLR
 
 Si bien el archivo de código subyacente puede ser un archivo de C++, existen ciertas convenciones que aún siguen el formato del lenguaje CLR para que no haya diferencias en la sintaxis de XAML. En particular, el separador entre los componentes del espacio de nombres y de la clase de nombres de un valor **x:Class** es siempre un punto ("."), aunque el separador para el caso equivalente en el archivo de código C++ asociado al código XAML sea "::". Si declaras espacios de nombres anidados en C++, el separador entre las cadenas sucesivas de espacios de nombres anidados también debe ser "." en lugar de "::" cuando especifiques la parte *namespace* del valor **x:Class**.
-
 

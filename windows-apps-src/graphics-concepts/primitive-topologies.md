@@ -2,21 +2,17 @@
 title: "Topologías primitivas"
 description: "Direct3D admite varias topologías primitivas, que definen cómo se interpretan los vértices y cómo los representa la canalización, tales como listas de puntos, listas de líneas y series de triángulos."
 ms.assetid: 7AA5A4A2-0B7C-431D-B597-684D58C02BA5
-keywords:
-- "Topologías primitivas"
+keywords: "Topologías primitivas"
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 487de51420cd6ce747d0257920429e9015bc1864
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d0d6bed3cbccd37fcd4fc835273099e8d26f671d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="primitive-topologies"></a>Topologías primitivas
 
 
@@ -88,7 +84,6 @@ Para obtener más información acerca de cómo generar varias series, consulta [
  
 
  
-
 
 
 

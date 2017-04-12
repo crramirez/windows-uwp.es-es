@@ -12,13 +12,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 699c9e3ce1477589f9331038ae3c7433b5dc1bde
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0718557245d9072adb0db608a7692dc7674ceca8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="how-a-streaming-resources-area-is-tiled"></a>Cómo se organiza en iconos el área de un recurso de streaming
 
 
@@ -57,7 +54,7 @@ El diseño de los datos dentro de un icono no depende de dónde se asigna el ico
 </tr>
 <tr class="odd">
 <td align="left"><p>[Icono de búfer](buffer-tiling.md)</p></td>
-<td align="left"><p>Un recurso de [búfer](introduction-to-buffers.md) se divide en iconos de 64 KB, con algo de espacio vacío en el último icono si el tamaño no es un múltiplo de 64 KB.</p></td>
+<td align="left"><p>Un recurso de [búfer](introduction-to-buffers.md) se divide en iconos de 64KB, con algo de espacio vacío en el último icono si el tamaño no es un múltiplo de 64KB.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Empaquetado de mapas MIP](mipmap-packing.md)</p></td>
@@ -76,7 +73,6 @@ El diseño de los datos dentro de un icono no depende de dónde se asigna el ico
  
 
  
-
 
 
 

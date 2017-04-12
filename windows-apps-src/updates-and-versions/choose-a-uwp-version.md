@@ -9,28 +9,25 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: e2bc7b4a12aed40093985000486b9f3f78967524
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 2fe7d9017919166992b13a5cc5f058591fecda3e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="choose-a-uwp-version"></a>Elegir una versión de UWP
 
 Al escribir una aplicación para UWP en Microsoft Visual Studio, puedes elegir la versión de destino. Actualmente, solo hay tres versiones posibles.
 
 | Versión | Descripción |
 | --- | --- |
-| Compilación 14393 (edición de Aniversario) | Esta es la versión más reciente de Windows 10, publicada en julio de 2016. Algunas características destacadas de esta versión incluyen: </br> \* **Windows Ink:** Nuevos controles InkCanvas e InkToolbar. </br> \* **API de Cortana:** Usa nuevas acciones de Cortana para integrar la compatibilidad de Cortana con funciones específicas de tu aplicación. </br> \* **Windows Hello:** Microsoft Edge ahora admite Windows Hello, lo que proporciona a los desarrolladores web acceso a la autenticación biométrica. </br> Para obtener información sobre estas y muchas otras funciones agregadas en esta versión de Windows, visita [el Centro de desarrollo](https://developer.microsoft.com/windows/windows-10-for-developers) o la página de información detallada en [Novedades para desarrolladores en Windows 10](../whats-new/windows-10-version-1607.md).  |
-| Compilación 10586 | Esta versión de Windows 10 se publicó en noviembre de 2015. Las características destacadas incluyen la introducción de las API ORTC (Comunicaciones en tiempo real mediante objetos) para la comunicación de vídeo en Microsoft Edge y las API de proveedores para permitir a las aplicaciones usar la autenticación de rostro de Windows Hello. [Más información sobre las características introducidas en esta compilación.](../whats-new/windows-10-version-1511.md) |
+| Compilación 14393 (edición de Aniversario) | Esta es la versión más reciente de Windows10, publicada en julio de 2016. Algunas características destacadas de esta versión incluyen: </br> \* **Windows Ink:** Nuevos controles InkCanvas e InkToolbar. </br> \* **API de Cortana:** Usa nuevas acciones de Cortana para integrar la compatibilidad de Cortana con funciones específicas de tu aplicación. </br> \* **Windows Hello:** Microsoft Edge ahora admite Windows Hello, lo que proporciona a los desarrolladores web acceso a la autenticación biométrica. </br> Para obtener información sobre estas y muchas otras funciones agregadas en esta versión de Windows, visita [el Centro de desarrollo](https://developer.microsoft.com/windows/windows-10-for-developers) o la página de información detallada en [Novedades para desarrolladores en Windows 10](../whats-new/windows-10-version-1607.md).  |
+| Compilación 10586 | Esta versión de Windows10 se publicó en noviembre de 2015. Las características destacadas incluyen la introducción de las API ORTC (Comunicaciones en tiempo real mediante objetos) para la comunicación de vídeo en Microsoft Edge y las API de proveedores para permitir a las aplicaciones usar la autenticación de rostro de Windows Hello. [Más información sobre las características introducidas en esta compilación.](../whats-new/windows-10-version-1511.md) |
 | Compilación 10240 | Esta es la versión inicial de Windows 10, publicada en julio de 2015. [Más información sobre las características introducidas en esta compilación.](../whats-new/windows-10-version-1507.md) |
 
 Es muy recomendable que los nuevos desarrolladores y los desarrolladores que escriban código para un público general usen siempre la compilación más reciente de Windows (14393). Los desarrolladores que escriban aplicaciones de empresa deberían pensar seriamente en ofrecer compatibilidad para una **versión mínima** más antigua.
 
 ## <a name="whats-different-in-each-uwp-version"></a>¿Qué es diferente en cada versión de UWP?
 
-En cada versión sucesiva de Windows 10 están disponibles API nuevas y modificadas para UWP. Para obtener información específica sobre qué funciones se han agregado en qué versión, consulta [Novedades para desarrolladores de Windows 10](../whats-new/windows-10-version-1607.md).
+En cada versión sucesiva de Windows10 están disponibles API nuevas y modificadas para UWP. Para obtener información específica sobre qué funciones se han agregado en qué versión, consulta [Novedades para desarrolladores de Windows10](../whats-new/windows-10-version-1607.md).
 
 Para ver los temas de consulta que enumeran todas las familias de dispositivos y sus versiones, así como todos los contratos de API y sus versiones, consulta [Familias de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) y [Contratos de API](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx).
 
@@ -46,4 +43,3 @@ Ten en cuenta que vas a declarar que tu aplicación funciona en cualquier versi�
 * En el código, puedes llamar libremente (es decir, sin comprobaciones condicionales) a las API que existen en la versión especificada por la **Versión mínima**.
 * Asegúrate de probar tu código en un dispositivo en el que se ejecute la **Versión mínima**, para asegurarte de que funciona sin necesidad de API que solo están presentes en la **Versión de destino**.
 * El valor de **Versión de destino** se usa para identificar todas las referencias (winmds del contrato) para compilar el proyecto. Pero estas referencias te permitirán compilar el código con llamadas a API que no tienen por qué existir en los dispositivos que hayas declarado que admites (a través de **Versión mínima**). Por lo tanto, cualquier API que se haya introducido después la **Versión mínima** deberá llamarse a través de código adaptativo. Para obtener más información acerca del código adaptativo, consulta la [Guía de aplicaciones de la Plataforma universal de Windows (UWP)](../get-started/universal-application-platform-guide.md).
-

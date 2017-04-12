@@ -2,21 +2,17 @@
 title: Seguimiento de peligros frente a recursos de grupos de iconos
 description: "Para recursos que no son de streaming, Direct3D puede impedir ciertas condiciones de riesgo durante la representación, pero, ya que el seguimiento de riesgos sería a nivel de iconos para los recursos de streaming, las condiciones de riesgo de seguimiento durante la representación de los recursos de streaming pueden ser demasiado altas."
 ms.assetid: 8B0C73D3-3F77-41E8-B17D-C595DEE39E49
-keywords:
-- Seguimiento de peligros frente a recursos de grupos de iconos
+keywords: Seguimiento de peligros frente a recursos de grupos de iconos
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5321da19c4c168b48d7e2ba2f3edb7da7880e944
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2bdec458e13e3f2df54555716d59aefcc946ef7b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="hazard-tracking-versus-tile-pool-resources"></a>Seguimiento de peligros frente a recursos de grupos de iconos
 
 
@@ -36,7 +32,6 @@ Una aplicación debe informar al controlador de pantalla de que está esperando 
  
 
  
-
 
 
 

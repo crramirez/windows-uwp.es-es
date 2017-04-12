@@ -2,21 +2,17 @@
 title: Vistas de texturas
 description: "En Direct3D, se accede a los recursos de textura con una vista, que es un mecanismo para la interpretación de hardware de un recurso en la memoria."
 ms.assetid: 18DABFCE-8A36-4C4E-B08E-10428B05D701
-keywords:
-- Vistas de texturas
+keywords: Vistas de texturas
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bd5f49364f40876747e34aaade3ca119230407aa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70b7b5da92f5be038fd1eb16ca27875704410449
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-views"></a>Vistas de texturas
 
 
@@ -42,7 +38,6 @@ Crea un objeto de vista para un destino de representación mediante una llamada 
  
 
  
-
 
 
 

@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 57341e52ad51e446e6828e5b4ba6228094152d7f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 30849b23e9fbdca38f8401afe0f6f7df4b498121
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-getting-around-in-visual-studio"></a>Tareas iniciales: desplazamiento por Visual Studio
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## <a name="getting-around-in-microsoft-visual-studio"></a>Desplazamiento por Microsoft Visual Studio
+## <a name="getting-around-in-microsoft-visual-studio"></a>Desplazamiento por MicrosoftVisual Studio
 
 Volvamos al proyecto que creamos antes: te mostraremos cómo desplazarte por el entorno de desarrollo integrado (IDE) Microsoft de Visual Studio.
 
@@ -28,7 +25,7 @@ Si eres desarrollador de Xcode, deberías estar familiarizado con la vista prede
 
 ![entorno de desarrollo de xcode](images/ios-to-uwp/xcode-ide.png)
 
-Microsoft Visual Studio es muy similar, aunque la vista predeterminada tiene los controles en el lado izquierdo del **cuadro de herramientas**. Los archivos de origen están en el **Explorador de soluciones** en el lado derecho y las propiedades están en **Propiedades**, en el panel **Explorador de soluciones**, de este modo:
+MicrosoftVisual Studio es muy similar, aunque la vista predeterminada tiene los controles en el lado izquierdo del **cuadro de herramientas**. Los archivos de origen están en el **Explorador de soluciones** en el lado derecho y las propiedades están en **Propiedades**, en el panel **Explorador de soluciones**, de este modo:
 
 ![entorno de desarrollo de visual studio](images/ios-to-uwp/vs-ide.png)
 
@@ -124,10 +121,9 @@ Por último, para ejecutar la aplicación, selecciona el menú **Depurar** y des
 
 ![resultados de ejecutar el primer tutorial: hola a todos](images/ios-to-uwp/vs-hello-world.png)
 
-Para salir de la aplicación, vuelve a Visual Studio, pulsa el menú **Depurar** y después pulsa **Detener depuración** (o presiona Mayús + F5). Ten en cuenta que Visual Studio te permite probar la aplicación en muchos dispositivos diferentes para comprobar cómo funcionará en cada uno.
+Para salir de la aplicación, vuelve a VisualStudio, pulsa el menú **Depurar** y después pulsa **Detener depuración** (o presiona Mayús+F5). Ten en cuenta que Visual Studio te permite probar la aplicación en muchos dispositivos diferentes para comprobar cómo funcionará en cada uno.
 
 ## <a name="next-step"></a>Paso siguiente
 
 [Introducción: controles habituales](getting-started-common-controls.md)
-
 

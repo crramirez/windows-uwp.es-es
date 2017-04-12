@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2fbbaac1b6b0f3133b9d541d6887ceb6c379f520
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9e9eb88e2208e33e74c273347d66169459330c27
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-screenshots-and-images"></a>Imágenes y capturas de pantalla de aplicación
 
 
@@ -40,9 +37,9 @@ En la siguiente tabla se indican las distintas imágenes que puedes subir y se e
 | [Capturas de pantalla para móviles](#screenshots)                          | 768 x 1280, 720 x 1280 o 480 x 800 | Se muestra en la descripción de la aplicación en la Tienda cuando se visualiza en un dispositivo móvil.                                                                                                           | Se recomienda para todas las aplicaciones, especialmente si la aplicación está pensada para usarse en dispositivos móviles. Se necesita al menos una captura de pantalla (para cualquier familia de dispositivos). |
 | [Capturas de pantalla holográficas](#screenshots)                          | 1268 x 720 o superior                 | Se muestra en la descripción de la aplicación en la Tienda cuando se visualiza en un dispositivo holográfico.                                                                                                           | Se recomienda si la aplicación está diseñada para Microsoft HoloLens. Se necesita al menos una captura de pantalla (para cualquier familia de dispositivos). |
 | [Icono de la aplicación](#app-tile-icon)                             | 300 x 300                            | Se muestra como el icono de la aplicación en la Tienda para Windows Phone 8.1 y versiones anteriores (y, si solo tienes paquetes destinados a Windows Phone 8.1 o versiones anteriores, en la Tienda de Windows 10). | Se requiere para la visualización correcta en la Tienda si la aplicación está destinada a Windows Phone 8.1 o versiones anteriores.                                                                 |
-| [Imagen promocional: contenido destacado de Windows 10](#promotional-artwork) | 2400 x 1200                          | Se usa para diseños promocionales en la Tienda de Windows 10.                                                                                                                        | Se recomienda para todas las aplicaciones, especialmente aquellas con paquetes para UWP destinados a los clientes de Windows 10.                                                               |
+| [Imagen promocional: contenido destacado de Windows10](#promotional-artwork) | 2400 x 1200                          | Se usa para diseños promocionales en la Tienda de Windows10.                                                                                                                        | Se recomienda para todas las aplicaciones, especialmente aquellas con paquetes para UWP destinados a los clientes de Windows10.                                                               |
 | [Imágenes promocionales: Windows Phone 8.1 y versiones anteriores](#promotional-artwork) | 1000 x 800, 358 x 358                | Se usa para diseños promocionales en la Tienda de Windows Phone 8.1 y versiones anteriores.                                                                                                     | Se recomienda para todas las aplicaciones destinadas a Windows Phone 8.1 o versiones anteriores.                                                                                           |
-| [Imágenes promocionales: Windows 8.1 y versiones anteriores](#promotional-artwork)        | 414 x 180                            | Se usa para diseños promocionales en la Tienda de Windows 8.1.                                                                                                                       | Se recomienda para todas las aplicaciones destinadas a Windows 8.1 o versiones anteriores.                                                                                                 |
+| [Imágenes promocionales: Windows8.1 y versiones anteriores](#promotional-artwork)        | 414 x 180                            | Se usa para diseños promocionales en la Tienda de Windows8.1.                                                                                                                       | Se recomienda para todas las aplicaciones destinadas a Windows8.1 o versiones anteriores.                                                                                                 |
  
 
 ## <a name="screenshots"></a>Capturas de pantalla
@@ -69,9 +66,9 @@ Puedes proporcionar un título corto que describa cada captura de pantalla en 20
 
 ## <a name="app-tile-icon"></a>Icono de la aplicación
 
-Esto no es necesario para todos los envíos, pero es muy recomendable si la aplicación se ejecuta en Windows Phone 8.1 o en versiones anteriores. El icono de la aplicación se usa cuando se muestra la descripción de la Tienda de la aplicación a los clientes en Windows Phone 8.1 y versiones anteriores. Si no proporcionas esta imagen, los clientes de Windows Phone 8.1 o versiones anteriores verán un icono en blanco junto con la descripción de la aplicación. (Esto también se aplica a los clientes de Windows 10, si tu aplicación solo tiene paquetes destinados a Windows Phone 8.1 o versiones anteriores).
+Esto no es necesario para todos los envíos, pero es muy recomendable si la aplicación se ejecuta en Windows Phone8.1 o en versiones anteriores. El icono de la aplicación se usa cuando se muestra la descripción de la Tienda de la aplicación a los clientes en Windows Phone8.1 y versiones anteriores. Si no proporcionas esta imagen, los clientes de Windows Phone8.1 o versiones anteriores verán un icono en blanco junto con la descripción de la aplicación. (Esto también se aplica a los clientes de Windows10, si tu aplicación solo tiene paquetes destinados a Windows Phone8.1 o versiones anteriores).
 
-Si tu envío **únicamente** incluye paquetes para UWP, no es necesario proporcionar esta imagen. Ten en cuenta que si tu envío incluye paquetes para UWP y proporcionas un icono de la aplicación, en algunos diseños de la Tienda dicho icono puede mostrarse junto con la descripción de la aplicación en Windows 10. Para impedir completamente que el icono de la aplicación se muestre a los clientes en Windows 10, puedes crear una [descripción específica de la plataforma](create-platform-specific-descriptions.md) para las versiones anteriores del sistema operativo e incluir dicho icono de la aplicación solo ahí.
+Si tu envío **únicamente** incluye paquetes para UWP, no es necesario proporcionar esta imagen. Ten en cuenta que si tu envío incluye paquetes para UWP y proporcionas un icono de la aplicación, en algunos diseños de la Tienda dicho icono puede mostrarse junto con la descripción de la aplicación en Windows10. Para impedir completamente que el icono de la aplicación se muestre a los clientes en Windows10, puedes crear una [descripción específica de la plataforma](create-platform-specific-descriptions.md) para las versiones anteriores del sistema operativo e incluir dicho icono de la aplicación solo ahí.
 
 El icono de la aplicación debe ser un archivo .png con una medida de 300 x 300 píxeles.
 
@@ -93,9 +90,9 @@ Aquí te sugerimos algunos aspectos que debes tener en cuenta al diseñar tu mat
 -   No incluyas imágenes de gestos desconsiderados, desnudez, apuestas, monedas, drogas, tabaco o alcohol.
 -   No uses armas apuntando hacia el usuario o violencia excesiva y sangre.
 
-### <a name="for-windows-10-2400-x-1200"></a>Para Windows 10: 2400 x 1200
+### <a name="for-windows-10-2400-x-1200"></a>Para Windows10: 2400 x 1200
 
-En la Tienda de Windows 10, en la parte superior de las páginas de categorías Aplicaciones y Juegos se incluye una imagen giratoria de productos destacados para promover el contenido. Para que la aplicación sea apta para esta colocación de contenido destacado, asegúrate de enviar una imagen 2400 x 1200.
+En la Tienda de Windows10, en la parte superior de las páginas de categorías Aplicaciones y Juegos se incluye una imagen giratoria de productos destacados para promover el contenido. Para que la aplicación sea apta para esta colocación de contenido destacado, asegúrate de enviar una imagen 2400 x 1200.
 
 Al diseñar tu imagen, ten en cuenta que, si la usamos el contenido destacado, aplicaremos un degradado por el tercio inferior para que podamos mostrar de forma legible el texto de marketing sobre la imagen. Por este motivo, evita colocar texto y elementos visuales clave en el tercio inferior de la imagen. Además, es posible que recortemos tu imagen, por lo que recomendamos que coloques la información de marca y los detalles más importantes de tu aplicación en el centro.
 
@@ -113,4 +110,3 @@ En la Tienda de Windows Phone 8.1 y versiones anteriores, se pueden usar dos tam
 ### <a name="for-windows-81-and-earlier-414-x-180"></a>Para Windows 8.1 y versiones anteriores: 414 x 180
 
 En la Tienda de Windows 8.1 y versiones anteriores, los diseños promocionales pueden usar una imagen con un tamaño de 414 x 180 píxeles. Si tu aplicación se ejecuta en Windows 8.1 o versiones anteriores, te recomendamos que proporciones una imagen de este tamaño para la consideración promocional.
-

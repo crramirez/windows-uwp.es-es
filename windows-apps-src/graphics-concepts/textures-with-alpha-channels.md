@@ -2,32 +2,28 @@
 title: Texturas con canales alfa
 description: "Hay dos formas de codificar asignaciones de textura con una transparencia más compleja."
 ms.assetid: 768A774A-4F21-4DDE-B863-14211DA92926
-keywords:
-- Texturas con canales alfa
+keywords: Texturas con canales alfa
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 708f6a7903df2ead18cf40e01675c3d244c7f9b0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1ea2282bb00f309f0dd2616898ce8d4a43215ff4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="textures-with-alpha-channels"></a>Texturas con canales alfa
 
 
-Hay dos formas de codificar asignaciones de textura con una transparencia más compleja. En cada caso, un bloque que describe la transparencia precede al bloque de 64 bits que ya se ha descrito. La transparencia se representa como un mapa de bits de 4 x 4 con 4 bits por píxel (codificación explícita) o con menos bits e interpolación lineal, que es similar a lo que se usa para la codificación del color.
+Hay dos formas de codificar asignaciones de textura con una transparencia más compleja. En cada caso, un bloque que describe la transparencia precede el bloque de 64bits ya descrito. La transparencia se representa como un mapa de bits de 4 x 4 con 4 bits por píxel (codificación explícita) o con menos bits e interpolación lineal, que es similar a lo que se usa para la codificación del color.
 
 El bloque de transparencia y el bloque de color se organizan tal como se muestra en la siguiente tabla.
 
-| Dirección de la palabra | Bloque de 64 bits                      |
+| Dirección de la palabra | Bloque de 64bits                      |
 |--------------|-----------------------------------|
 | 3:0          | Bloque de transparencia                |
-| 7:4          | Bloque de 64 bits ya descrito |
+| 7:4          | Bloque de 64bits ya descrito |
 
  
 
@@ -36,15 +32,15 @@ El bloque de transparencia y el bloque de color se organizan tal como se muestra
 
 Para la codificación de textura explícita (formato BC2), los componentes alfabéticos de los elementos de textura que describen la transparencia se codifican en un mapa de bits de 4 x 4, con 4 bits por elemento de textura. Estos 4 bits pueden lograrse mediante diversos medios, como la interpolación de colores o el uso de los 4 bits más importantes de los datos alfabéticos. Sea cual sea el modo en que se generen, se usan tal como están, sin ninguna forma de interpolación.
 
-El siguiente diagrama muestra un bloque de transparencia de 64 bits.
+El siguiente diagrama muestra un bloque de transparencia de 64bits.
 
-![Diagrama de un bloque de transparencia de 64 bits](images/colors4.png)
+![Diagrama de un bloque de transparencia de 64bits](images/colors4.png)
 
 **Nota** El método de compresión de Direct3D usa los 4 bits más importantes.
 
  
 
-Las siguientes tablas muestran cómo se coloca la información alfabética en la memoria para cada palabra de 16 bits.
+Las siguientes tablas muestran cómo se coloca la información alfabética en la memoria para cada palabra de 16bits.
 
 Diseño de la palabra 0:
 
@@ -150,7 +146,6 @@ Con estos formatos no se utiliza la comparación de color usada en BC1 para dete
  
 
  
-
 
 
 

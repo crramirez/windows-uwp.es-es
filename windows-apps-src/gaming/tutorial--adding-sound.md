@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, sonidos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 11553a22274a36094a3e839e8fda648f78cfaaf8
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-sound"></a>Agregar sonido
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este paso, examinaremos cómo la muestra de juego de disparos crea un objeto para la reproducción de sonido usando las API de [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
 
@@ -316,7 +313,7 @@ Ahora, cada vez que la munición y un objetivo colisionan, una llamada a **Sound
 ## <a name="next-steps"></a>Pasos siguientes
 
 
-Con esto terminamos este rápido repaso del desarrollo de juegos DirectX para la Plataforma universal de Windows (UWP). Llegados a este punto, ya tienes una idea de qué necesitas hacer para que tu propio juego para Windows 8 sea una gran experiencia. Recuerda que tu juego se puede jugar en una amplia variedad de dispositivos y plataformas de Windows 8, así que diseña los componentes (gráficos, controles, interfaz de usuario y audio) para tantas configuraciones diferentes como puedas.
+Con esto terminamos este rápido repaso del desarrollo de juegos DirectX para la Plataforma universal de Windows (UWP). Llegados a este punto, ya tienes una idea de qué necesitas hacer para que tu propio juego para Windows8 sea una gran experiencia. Recuerda que tu juego se puede jugar en una amplia variedad de dispositivos y plataformas de Windows8, así que diseña los componentes (gráficos, controles, interfaz de usuario y audio) para tantas configuraciones diferentes como puedas.
 
 Para obtener más información sobre formas de modificar la muestra de juego proporcionada en estos documentos, consulta el tema sobre [cómo extender la muestra de juego](tutorial-resources.md).
 
@@ -564,7 +561,6 @@ void SoundEffect::PlaySound(_In_ float volume)
  
 
  
-
 
 
 

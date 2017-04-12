@@ -3,28 +3,25 @@ author: normesta
 Description: "Esta guía te ayuda a optimizar tu aplicación para controlar los datos de empresa administrados por la directiva de Windows Information Protection (WIP) así como los datos personales."
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: "Crear una aplicación habilitada que consume datos de empresa y personales"
+title: "Guía para desarrolladores sobre Windows Information Protection (WIP)"
 ms.author: normesta
-ms.date: 02/08/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, trabajo en curso, Windows Information Protection, datos empresariales, protección de datos empresariales, edp, aplicaciones habilitadas"
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 5bad765ff182fcd2fb573c3aa766fdaaaef1e2a3
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: a2888b804e66e2630e4ae93b0be31974740d9f99
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="build-an-enlightened-app-that-consumes-both-enterprise-data-and-personal-data"></a>Crear una aplicación habilitada que consume datos de empresa y personales
-
-__Nota__ La directiva de Windows Information Protection (WIP) se puede aplicar a Windows 10, versión 1607.
+# <a name="windows-information-protection-wip-developer-guide"></a>Guía para desarrolladores sobre Windows Information Protection (WIP)
 
 Una aplicación *habilitada* diferencia los datos corporativos y personales y sabe cuáles tiene que proteger en función de las directivas de Windows Information Protection (WIP) definidas por el administrador.
 
 En esta guía te mostraremos cómo crear una. Una vez finalizada, los administradores de las directivas confiarán en tu aplicación para que pueda consumir datos de su organización. Y los empleados estarán encantados de que sus datos personales se mantengan intactos en sus dispositivos, incluso si dejan de formar parte de la administración de dispositivos móviles (MDM) de la organización o si ellos mismos la abandonan.
+
+__Nota__ Esta guía te ayuda a optimizar una aplicación para UWP. Si quieres optimizar una aplicación de escritorio de Windows en C++, consulta [Guía para desarrolladores sobre Windows Information Protection (WIP)](http://go.microsoft.com/fwlink/?LinkId=822192).
 
 Puedes leer más sobre WIP y las aplicaciones habilitadas aquí: [Windows Information Protection (WIP)](wip-hub.md).
 
@@ -36,37 +33,38 @@ Si estás listo para realizar cada una de las tareas, empecemos.
 
 Necesitarás lo siguiente:
 
-* Una máquina Virtual (VM) de prueba que ejecute Windows 10, versión 1607. Vas a depurar la aplicación usando esta VM de prueba.
+* Una máquina Virtual (VM) de prueba que ejecute Windows 10, versión 1607 o posterior. Vas a depurar la aplicación usando esta VM de prueba.
 
-* Un equipo de desarrollo que ejecute Windows 10, versión 1607. Este podría ser la VM de prueba si tienes Visual Studio instalado.
+* Un equipo de desarrollo que ejecute Windows 10, versión 1607 o superior. Este podría ser la VM de prueba si tienes Visual Studio instalado.
 
 ## <a name="setup-your-development-environment"></a>Configuración de tu entorno de desarrollo
 
 Para ello deberás hacer lo siguiente:
 
-* Instala WIP Setup Developer Assistant en la VM de prueba.
+* [Instalar WIP Setup Developer Assistant en la VM de prueba](#install-assistant)
 
-* Crea una directiva de protección mediante WIP Setup Developer Assistant.
+* [Crear una directiva de protección mediante WIP Setup Developer Assistant](#create-protection-policy)
 
-* Configura un proyecto de Visual Studio.
+* [Configurar un proyecto de Visual Studio](#setup-vs-project)
 
-* Configura la depuración remota.
+* [Configurar la depuración remota](#setup-remote-debugging)
 
-* Agregar espacios de nombres a los archivos de código
+* [Agregar espacios de nombres a los archivos de código](#add-namespaces)
 
-**Instalar WIP Setup Developer Assistant en la VM de prueba**
+<span id="install-assistant" />
+### <a name="install-the-wip-setup-developer-assistant-onto-your-test-vm"></a>Instalar WIP Setup Developer Assistant en la VM de prueba
 
  Usa esta herramienta para configurar una directiva de Windows Information Protection en la VM de prueba.
 
  Descarga la herramienta aquí: [WIP Setup Developer Assistant](https://www.microsoft.com/store/p/wip-setup-developer-assistant/9nblggh526jf).
-
-**Crear una directiva de protección**
+<span id="create-protection-policy" />
+### <a name="create-a-protection-policy"></a>Crear una directiva de protección
 
 Para definir la directiva, agrega información a cada sección del asistente del desarrollador para la configuración de WIP. Elige el icono de ayuda junto a cualquier configuración para obtener más información sobre cómo usarla.
 
 Para obtener instrucciones más generales sobre cómo usar esta herramienta, consulta la sección de notas de la versión en la página de descarga de la aplicación.
-
-**Configuración de un proyecto de Visual Studio**
+<span id="setup-vs-project" />
+### <a name="setup-a-visual-studio-project"></a>Configuración de un proyecto de Visual Studio
 
 1. Abre el proyecto en tu equipo de desarrollo.
 
@@ -94,57 +92,71 @@ Para obtener instrucciones más generales sobre cómo usar esta herramienta, con
     ```
 
     De esta forma, si la aplicación se ejecuta en una versión del sistema operativo Windows que no sea compatible con las funcionalidades restringidas, Windows ignorará la funcionalidad ``enterpriseDataPolicy``.
-
-**Configurar la depuración remota**
+<span id="setup-remote-debugging" />
+### <a name="setup-remote-debugging"></a>Configurar la depuración remota
 
 Instala Herramientas remotas para Visual Studio en la VM de prueba solo si vas a desarrollar tu aplicación en un equipo que no sea la VM. A continuación, inicia el depurador remoto en el equipo de desarrollo y comprueba si tu aplicación se ejecuta en la VM de prueba.
 
 Consulta [Instrucciones del equipo remoto](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#remote-pc-instructions).
-
-**Agregar estos espacios de nombres a los archivos de código**
+<span id="add-namespaces" />
+### <a name="add-these-namespaces-to-your-code-files"></a>Agregar estos espacios de nombres a los archivos de código
 
 Agrégalos usando estas instrucciones en la parte superior de los archivos de código (los fragmentos de código utilizados en esta guía):
 
 ```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.EnterpriseData;
-using Windows.ApplicationModel.DataTransfer;
 using Windows.Web.Http;
 using Windows.Storage.Streams;
+using Windows.ApplicationModel.DataTransfer;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml;
+using Windows.ApplicationModel.Activation;
 using Windows.Web.Http.Filters;
 using Windows.Storage;
-using Windows.Foundation.Metadata;
-using Windows.UI.Xaml.Controls;
 using Windows.Data.Xml.Dom;
+using Windows.Foundation.Metadata;
+using Windows.Web.Http.Headers;
 ```
 
-## <a name="determine-whether-the-operating-system-that-runs-your-app-supports-wip"></a>Determinar si el sistema operativo que ejecuta la aplicación admite WIP.
+## <a name="determine-whether-to-use-wip-apis-in-your-app"></a>Determinar si usar API WIP en tu aplicación
 
-Para ello, usa la función [**IsApiContractPresent**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.metadata.apiinformation.isapicontractpresent.aspx).
+Asegurarte de que el sistema operativo que ejecuta tu aplicación admite WIP y que WIP está habilitado en el dispositivo.
 
 ```csharp
-bool wipSupported = ApiInformation.IsApiContractPresent("Windows.Security.EnterpriseData.EnterpriseDataContract", 3);
+bool use_WIP_APIs = false;
 
-if (wipSupported)
+if ((ApiInformation.IsApiContractPresent
+    ("Windows.Security.EnterpriseData.EnterpriseDataContract", 3)
+    && ProtectionPolicyManager.IsProtectionEnabled))
 {
-    // WIP is supported on the platform
+    use_WIP_APIs = true;
 }
 else
 {
-    // WIP is not supported on the platform
+    use_WIP_APIs = false;
 }
 ```
-
-Windows Information Protection es compatible con Windows 10, versión 1607.
+No llamar a las API WIP si el sistema operativo no admite WIP o WIP no está habilitado en el dispositivo.
 
 ## <a name="read-enterprise-data"></a>Leer datos de empresa
 
-Todos los archivos, los puntos de conexión de red, los datos del Portapapeles y los datos que aceptas de un contrato para contenido compartido tienen un identificador de empresa.
+Para leer los archivos protegidos, puntos de conexión de red, datos del portapapeles y datos que puede aceptar de un contrato de uso compartido, tu aplicación tendrá que pedir acceso.
 
-Para leer datos desde cualquiera de estas fuentes, tu aplicación deberá comprobar que tu identificador de empresa está administrado por una directiva.
+Windows Information Protection da a tu aplicación permiso si esta se encuentra en la lista de aplicaciones permitidas de la directiva de protección.
 
-Empecemos con los archivos.
+**En esta sección:**
 
+* [Leer datos desde un archivo](#read-file)
+* [Leer los datos desde el punto de conexión de red](#read-network)
+* [Leer datos desde el Portapapeles](#read-clipboard)
+* [Leer datos desde un contrato para contenido compartido](#read-contract)
+
+<span id="read-file" />
 ### <a name="read-data-from-a-file"></a>Leer datos desde un archivo
 
 **Paso 1: Obtener el identificador de archivo**
@@ -159,22 +171,15 @@ Empecemos con los archivos.
 
 **Paso 2: Determinar si la aplicación puede abrir el archivo**
 
-Determinar si el archivo está protegido. Si es así, la aplicación podrá abrirlo si se cumplen estos dos requisitos:
-
-* La identidad del archivo es administrada por la directiva.
-* Tu aplicación está en la lista de aplicaciones permitidas por esa directiva.
-
-Si una de estas condiciones no se cumple, [**ProtectionPolicyManager.IsIdentityManaged**](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged.aspx) devuelve **false** y no será posible abrir el archivo.
+Llama a [FileProtectionManager.GetProtectionInfoAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.getprotectioninfoasync.aspx) para determinar si la aplicación puede abrir el archivo.
 
 ```csharp
 FileProtectionInfo protectionInfo = await FileProtectionManager.GetProtectionInfoAsync(file);
 
-if (protectionInfo.Status == FileProtectionStatus.Protected)
+if ((protectionInfo.Status != FileProtectionStatus.Protected &&
+    protectionInfo.Status != FileProtectionStatus.Unprotected))
 {
-    if (!ProtectionPolicyManager.IsIdentityManaged(protectionInfo.Identity))
-    {
-        return false;
-    }
+    return false;
 }
 else if (protectionInfo.Status == FileProtectionStatus.Revoked)
 {
@@ -182,6 +187,11 @@ else if (protectionInfo.Status == FileProtectionStatus.Revoked)
     // saying that the user's data has been revoked.
 }
 ```
+
+Un valor [FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx) de **Protected** significa que el archivo está protegido y que la aplicación puede abrirlo porque se encuentra en la lista de aplicaciones permitidas de la directiva.
+
+Un valor [FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx) de **desprotegido** significa que el archivo no está protegido y que la aplicación puede abrirlo incluso si no figura en la lista de aplicaciones permitidas de la directiva.
+
 > **API** <br>
 [FileProtectionManager.GetProtectionInfoAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.getprotectioninfoasync.aspx)<br>
 [FileProtectionInfo](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.aspx)<br>
@@ -201,7 +211,7 @@ var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
 ```csharp
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(file);
 ```
-
+<span id="read-network" />
 ### <a name="read-data-from-a-network-endpoint"></a>Leer los datos desde el punto de conexión de red
 
 Crea un contexto de subproceso protegido para leer desde un punto de conexión de empresa.
@@ -231,17 +241,17 @@ Si el punto de conexión está administrado por una directiva, crea un contexto 
 También proporciona acceso a los recursos de red de empresa que administra esa directiva.
 
 ```csharp
-HttpClient client = null;
-
 if (!string.IsNullOrEmpty(identity))
 {
     using (ThreadNetworkContext threadNetworkContext =
             ProtectionPolicyManager.CreateCurrentThreadNetworkContext(identity))
     {
-        client = new HttpClient();
-
-        // Add code here to get data from the endpoint.
+        return await GetDataFromNetworkRedirectHelperMethod(resourceURI);
     }
+}
+else
+{
+    return await GetDataFromNetworkRedirectHelperMethod(resourceURI);
 }
 ```
 Este ejemplo incluye llamadas de socket en un bloque ``using``. Si no haces esto, asegúrate de cerrar el contexto de subproceso tras haber recuperado los recursos. Consulta [ThreadNetworkContext.Close](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.threadnetworkcontext.close.aspx).
@@ -258,9 +268,57 @@ El método [**ProtectionPolicyManager.CreateCurrentThreadNetworkContext**](https
 **Paso 3: Leer el recurso en un búfer**
 
 ```csharp
-IBuffer data = await client.GetBufferAsync(resourceURI);
+private static async Task<IBuffer> GetDataFromNetworkHelperMethod(Uri resourceURI)
+{
+    HttpClient client;
+
+    client = new HttpClient();
+
+    try { return await client.GetBufferAsync(resourceURI); }
+
+    catch (Exception) { return null; }
+}
 ```
 
+**(Opcional) Usa un token de encabezado en lugar de crear un contexto de subproceso protegido**
+
+```csharp
+public static async Task<IBuffer> GetDataFromNetworkbyUsingHeader(Uri resourceURI)
+{
+    HttpClient client;
+
+    Windows.Networking.HostName hostName =
+        new Windows.Networking.HostName(resourceURI.Host);
+
+    string identity = await ProtectionPolicyManager.
+        GetPrimaryManagedIdentityForNetworkEndpointAsync(hostName);
+
+    if (!string.IsNullOrEmpty(identity))
+    {
+        client = new HttpClient();
+
+        HttpRequestHeaderCollection headerCollection = client.DefaultRequestHeaders;
+
+        headerCollection.Add("X-MS-Windows-HttpClient-EnterpriseId", identity);
+
+        return await GetDataFromNetworkbyUsingHeaderHelperMethod(client, resourceURI);
+    }
+    else
+    {
+        client = new HttpClient();
+        return await GetDataFromNetworkbyUsingHeaderHelperMethod(client, resourceURI);
+    }
+
+}
+
+private static async Task<IBuffer> GetDataFromNetworkbyUsingHeaderHelperMethod(HttpClient client, Uri resourceURI)
+{
+
+    try { return await client.GetBufferAsync(resourceURI); }
+
+    catch (Exception) { return null; }
+}
+```
 
 **Controlar las redirecciones de página**
 
@@ -271,63 +329,44 @@ Para controlar esto, realiza solicitudes hasta que el estado de la respuesta de 
 A continuación, usa el URI de la respuesta para obtener la identidad del punto de conexión. Esta es una forma de hacerlo:
 
 ```csharp
-public static async Task<IBuffer> getDataFromNetworkResource(Uri resourceURI)
+private static async Task<IBuffer> GetDataFromNetworkRedirectHelperMethod(Uri resourceURI)
 {
-    bool finalURL = false;
+    HttpClient client = null;
+
+    HttpBaseProtocolFilter filter = new HttpBaseProtocolFilter();
+    filter.AllowAutoRedirect = false;
+
+    client = new HttpClient(filter);
 
     HttpResponseMessage response = null;
 
-    while (!finalURL)
-    {
-
-        Windows.Networking.HostName hostName =
-            new Windows.Networking.HostName(resourceURI.Host);
-
-        string identity = await ProtectionPolicyManager.
-            GetPrimaryManagedIdentityForNetworkEndpointAsync(hostName);
-
-        HttpClient client = null;
-
-        HttpBaseProtocolFilter filter = new HttpBaseProtocolFilter();
-        filter.AllowAutoRedirect = false;
-
-        if (!string.IsNullOrEmpty(m_EnterpriseId))
-        {
-            using (ThreadNetworkContext threadNetworkContext =
-                    ProtectionPolicyManager.CreateCurrentThreadNetworkContext(identity))
-            {
-                client = new HttpClient(filter);
-            }
-        }
-        else
-        {
-            client = new HttpClient(filter);
-        }
         HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Get, resourceURI);
         response = await client.SendRequestAsync(message);
 
-        if (response.StatusCode == HttpStatusCode.MultipleChoices &&
-            response.StatusCode == HttpStatusCode.MovedPermanently &&
-            response.StatusCode == HttpStatusCode.Found &&
-            response.StatusCode == HttpStatusCode.SeeOther &&
-            response.StatusCode == HttpStatusCode.NotModified &&
-            response.StatusCode == HttpStatusCode.UseProxy &&
-            response.StatusCode == HttpStatusCode.TemporaryRedirect &&
-            response.StatusCode == HttpStatusCode.PermanentRedirect)
-        {
-            resourceURI = message.RequestUri;
-        }
-        else
-        {
-            finalURL = true;
-        }
+    if (response.StatusCode == HttpStatusCode.MultipleChoices ||
+        response.StatusCode == HttpStatusCode.MovedPermanently ||
+        response.StatusCode == HttpStatusCode.Found ||
+        response.StatusCode == HttpStatusCode.SeeOther ||
+        response.StatusCode == HttpStatusCode.NotModified ||
+        response.StatusCode == HttpStatusCode.UseProxy ||
+        response.StatusCode == HttpStatusCode.TemporaryRedirect ||
+        response.StatusCode == HttpStatusCode.PermanentRedirect)
+    {
+        message = new HttpRequestMessage(HttpMethod.Get, message.RequestUri);
+        response = await client.SendRequestAsync(message);
+
+        try { return await response.Content.ReadAsBufferAsync(); }
+
+        catch (Exception) { return null; }
     }
+    else
+    {
+        try { return await response.Content.ReadAsBufferAsync(); }
 
-    IBuffer data = await response.Content.ReadAsBufferAsync();
-
-    return data;
-
+        catch (Exception) { return null; }
+    }
 }
+
 ```
 
 > **API** <br>
@@ -336,6 +375,7 @@ public static async Task<IBuffer> getDataFromNetworkResource(Uri resourceURI)
 [ProtectionPolicyManager.GetForCurrentView](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview.aspx)<br>
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)
 
+<span id="read-clipboard" />
 ### <a name="read-data-from-the-clipboard"></a>Leer datos desde el Portapapeles
 
 **Obtener permiso para usar los datos del Portapapeles**
@@ -432,7 +472,7 @@ private async void PasteText(bool isNewEmptyDocument)
 [ProtectionPolicyEvaluationResult](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicyevaluationresult.aspx)<br>
 [ProtectionPolicyManager.TryApplyProcessUIPolicy](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy.aspx)
 
-
+<span id="read-share" />
 ### <a name="read-data-from-a-share-contract"></a>Leer datos desde un contrato para contenido compartido
 
 Cuando los empleados elijan tu aplicación para compartir su información, tu aplicación abrirá un nuevo elemento con ese contenido.
@@ -491,7 +531,20 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 
 Protege los datos de empresa que se usan fuera de la aplicación. Los datos se usan fuera de la aplicación cuando se muestran en una página, se guardan en un archivo o punto de conexión de red o a través de un contrato para contenido compartido.
 
-### <a name="a-iddisplay-dataaprotect-data-that-appears-in-pages"></a><a id="display-data"></a>Proteger los datos que aparecen en las páginas
+**En esta sección:**
+
+* [Proteger los datos que aparecen en las páginas](#protect-pages)
+* [Proteger datos en un archivo como un proceso en segundo plano](#protect-background)
+* [Proteger parte de un archivo](#protect-part-file)
+* [Leer la parte protegida de un archivo](#read-protected)
+* [Proteger datos en una carpeta](#protect-folder)
+* [Proteger los datos en un punto de conexión de red](#protect-network)
+* [Proteger los datos que tu aplicación comparte a través de un contrato para contenido compartido](#protect-share)
+* [Proteger los archivos que copies en otra ubicación](#protect-other-location)
+* [Proteger los datos de empresa cuando la pantalla del dispositivo esté bloqueada](#protect-locked)
+
+<span id="protect-pages" />
+### <a name="protect-data-that-appears-in-pages"></a>Proteger los datos que aparecen en las páginas
 
 Al mostrar datos en una página, tendrás que informar a Windows de qué tipo de datos se tratan (personal o de empresa). Para ello, *etiqueta* la vista actual de la aplicación o todo su proceso.
 
@@ -499,7 +552,7 @@ Al etiquetar la vista o el proceso, Windows aplica la directiva. Esto evita que 
 
 **Etiquetar la vista actual de la aplicación**
 
-Realiza esta acción si tu aplicación tiene varias vistas y algunas usarán datos de empresa y otra datos personales.
+Realiza esta acción si tu aplicación tiene varias vistas y algunas usarán datos de empresa y otras datos personales.
 
 ```csharp
 
@@ -537,6 +590,7 @@ bool result =
 > **API** <br>
 [ProtectionPolicyManager.TryApplyProcessUIPolicy](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy.aspx)
 
+<span id="protect-file" />
 ### <a name="protect-data-to-a-file"></a>Proteger datos en un archivo
 
 Crea un archivo protegido y escribe en él.
@@ -567,13 +621,12 @@ FileProtectionInfo fileProtectionInfo =
 > **API** <br>
 [FileProtectionManager.ProtectAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.protectasync.aspx)
 
-**Step 3: Escribir esa secuencia o búfer en el archivo**
+**Paso 3: Escribir esa secuencia o búfer en el archivo**
 
 *Escribir una secuencia*
 
 ```csharp
-    if (fileProtectionInfo.Identity == identity &&
-        fileProtectionInfo.Status == FileProtectionStatus.Protected)
+    if (fileProtectionInfo.Status == FileProtectionStatus.Protected)
     {
         var stream = await storageFile.OpenAsync(FileAccessMode.ReadWrite);
 
@@ -591,8 +644,7 @@ FileProtectionInfo fileProtectionInfo =
 *Escribir un búfer*
 
 ```csharp
-     if (fileProtectionInfo.Identity == identity &&
-         fileProtectionInfo.Status == FileProtectionStatus.Protected)
+     if (fileProtectionInfo.Status == FileProtectionStatus.Protected)
      {
          var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(
              enterpriseData, Windows.Security.Cryptography.BinaryStringEncoding.Utf8);
@@ -606,8 +658,7 @@ FileProtectionInfo fileProtectionInfo =
 [FileProtectionInfo](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.aspx)<br>
 [FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx)<br>
 
-
-
+<span id="protect-background" />
 ### <a name="protect-data-to-a-file-as-a-background-process"></a>Proteger datos en un archivo como un proceso en segundo plano
 
 Este código puede ejecutarse mientras la pantalla del dispositivo está bloqueada. Si el administrador ha configurado una directiva de "protección de datos con la pantalla bloqueada (DPL)", Windows eliminará las claves de cifrado necesarias para acceder a los recursos protegido desde la memoria del dispositivo. Esto impide la pérdida de datos en caso de pérdida del dispositivo. La misma función también quita las claves asociadas con los archivos protegidos cuando se cierran sus identificadores.
@@ -640,13 +691,12 @@ ProtectedFileCreateResult protectedFileCreateResult =
 > **API** <br>
 [FileProtectionManager.CreateProtectedAndOpenAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.createprotectedandopenasync.aspx)
 
-**Step 3: Escribir esa secuencia o búfer en el archivo**
+**Paso 3: Escribir esa secuencia o búfer en el archivo**
 
 En este ejemplo se escribe una secuencia en un archivo.
 
 ```csharp
-if (protectedFileCreateResult.ProtectionInfo.Identity == identity &&
-    protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus.Protected)
+if (protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus.Protected)
 {
     IOutputStream outputStream =
         protectedFileCreateResult.Stream.GetOutputStreamAt(0);
@@ -672,6 +722,7 @@ else if (protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus
 [FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx)<br>
 [ProtectedFileCreateResult.Stream](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectedfilecreateresult.stream.aspx)<br>
 
+<span id="protect-part-file" />
 ### <a name="protect-part-of-a-file"></a>Proteger parte de un archivo
 
 En la mayoría de los casos, es más limpio almacenar los datos personales y de empresa por separado, pero puedes almacenarlos en el mismo archivo si lo deseas. Por ejemplo, Microsoft Outlook puede almacenar correos electrónicos de la empresa junto a correos electrónicos personales en un archivo de almacenamiento único.
@@ -747,7 +798,7 @@ await Windows.Storage.FileIO.WriteTextAsync
     (metaDataFile, "<EnterpriseDataMarker start='0' end='" + enterpriseData.Length.ToString() +
     "'></EnterpriseDataMarker>");
 ```
-
+<span id="read-protected" />
 ### <a name="read-the-protected-part-of-a-file"></a>Leer la parte protegida de un archivo
 
 Aquí te mostramos cómo podrías leer los datos de empresa de ese archivo.
@@ -827,7 +878,7 @@ else if (dataProtectionInfo.Status == DataProtectionStatus.Revoked)
 [DataProtectionInfo](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.dataprotectioninfo.aspx)<br>
 [DataProtectionManager.GetProtectionInfoAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.dataprotectionmanager.getstreamprotectioninfoasync.aspx)<br>
 
-
+<span id="protect-folder" />
 ### <a name="protect-data-to-a-folder"></a>Proteger datos en una carpeta
 
 Puedes crear una carpeta y protegerla. De esta forma cualquier elemento que añadas a la carpeta estará automáticamente protegido.
@@ -844,8 +895,7 @@ private async Task<bool> CreateANewFolderAndProtectItAsync(string folderName, st
     FileProtectionInfo fileProtectionInfo =
         await FileProtectionManager.ProtectAsync(newStorageFolder, identity);
 
-    if (fileProtectionInfo.Identity != identity ||
-        fileProtectionInfo.Status != FileProtectionStatus.Protected)
+    if (fileProtectionInfo.Status != FileProtectionStatus.Protected)
     {
         // Protection failed.
         return false;
@@ -862,7 +912,7 @@ Asegúrate de que la carpeta esté vacía antes de protegerla. No puedes protege
 [FileProtectionInfo.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.identity.aspx)<br>
 [FileProtectionInfo.Status](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.status.aspx)
 
-
+<span id="protect-network" />
 ### <a name="protect-data-to-a-network-end-point"></a>Proteger los datos en un punto de conexión de red
 
 Crea un contexto de subproceso protegido para enviar datos a un punto de conexión de empresa.  
@@ -915,6 +965,7 @@ else
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)<br>
 [ProtectionPolicyManager.CreateCurrentThreadNetworkContext](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.createcurrentthreadnetworkcontext.aspx)
 
+<span id="protect-share" />
 ### <a name="protect-data-that-your-app-shares-through-a-share-contract"></a>Proteger los datos que tu aplicación comparte a través de un contrato para contenido compartido
 
 Si quieres que los usuarios compartan contenido desde tu aplicación, tendrás que implementar un contrato para contenido compartido y controlar el evento [**DataTransferManager.DataRequested**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.datarequested).
@@ -946,7 +997,7 @@ private void OnDataRequested(DataTransferManager sender, DataRequestedEventArgs 
 [ProtectionPolicyManager.GetForCurrentView](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview.aspx)<br>
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)
 
-
+<span id="protect-other-location" />
 ### <a name="protect-files-that-you-copy-to-another-location"></a>Proteger los archivos que copies en otra ubicación
 
 ```csharp
@@ -968,7 +1019,7 @@ private async void CopyProtectionFromOneFileToAnother
 > **API** <br>
 [FileProtectionManager.CopyProtectionAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.copyprotectionasync.aspx)<br>
 
-
+<span id="protect-locked" />
 ### <a name="protect-enterprise-data-when-the-screen-of-the-device-is-locked"></a>Proteger los datos de empresa cuando la pantalla del dispositivo esté bloqueada
 
 Elimina todos los datos confidenciales de la memoria si el dispositivo está bloqueado. Una vez que el usuario desbloquee el dispositivo, la aplicación podrá volver a agregar esos datos de forma segura.
@@ -1092,7 +1143,3 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 ## <a name="related-topics"></a>Temas relacionados
 
 [Muestra de Windows Information Protection (WIP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
- 
-
- 
-

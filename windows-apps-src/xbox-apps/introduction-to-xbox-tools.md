@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6f2744a571e7a601eca058957cbe181a14143b68
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 536502316db43ccc04a42b935064294dc5173151
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="introduction-to-xbox-one-tools"></a>Introducción a las herramientas de Xbox One
 
-En esta sección se describe la herramienta específica de Xbox One, _Dev Home_, con Windows Device Portal.
+Esta sección describe la herramienta específica de Xbox One, _Dev Home_, con Windows Device Portal.
 
 ## <a name="dev-home"></a>Dev Home
 
@@ -61,7 +58,7 @@ Dev Home se acoplará a la derecha. Puede cambiar el contexto si presionas dos v
 | Juegos y aplicaciones    | Enumera los títulos y las aplicaciones instaladas en el kit de desarrollo y la capacidad para abrirlos rápidamente. También puedes ver el estado de la administración del ciclo de vida de los procesos (PLM) de juegos y aplicaciones, así como cambiar los estados PLM desde un menú contextual. |
 | Usuarios    | Enumera los usuarios registrados actualmente en la consola. Habilita el inicio y cierre de sesión de usuario de un solo clic, la opción de agregar usuarios e invitados y la visualización de los detalles de dichos usuarios e invitados. |
 | [Configuración de la consola](#console-settings) | Ofrece una vista resumida y opciones de configuración de la consola y de la información. |
-| Visual Studio | Te permite emparejar la consola con una instancia de Visual Studio para permitir la implementación. Si es necesario, desactiva las instancias existentes de VS emparejadas para evitar la implementación de la aplicación para UWP en un kit. |
+| VisualStudio | Te permite emparejar la consola con una instancia de Visual Studio para permitir la implementación. Si es necesario, desactiva las instancias existentes de VS emparejadas para evitar la implementación de la aplicación para UWP en un kit. |
 | [Windows Device Portal](#windows-device-portal) |    Habilita WDP (una herramienta de administración de dispositivos basada en explorador) en el kit. |
 | Estado de Xbox Live | Proporciona el estado actual del servicio Xbox Live. |
 <br/>
@@ -136,4 +133,3 @@ Complemento de modo de desarrollo de Xbox es una herramienta que te permite trab
 
 
 ----
-

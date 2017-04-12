@@ -2,21 +2,17 @@
 title: Tipos de dispositivos
 description: "Los tipos de dispositivos de Direct3D incluyen dispositivos de la capa de abstracción de hardware (HAL) y el rasterizador de referencia."
 ms.assetid: 64084B23-10C0-4541-8E93-FB323385D2F0
-keywords:
-- Tipos de dispositivos
+keywords: Tipos de dispositivos
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 883e40145b4d9667eee4fe2b945f555ccddc9895
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d863c3f45269c448f1f6fc1055ee765f323dbcd7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="device-types"></a>Tipos de dispositivos
 
 
@@ -54,7 +50,6 @@ El procesamiento de vértices de hardware frente a software solo se aplica realm
  
 
  
-
 
 
 

@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
-Description: En este tutorial, puedes crear, ejecutar y administrar el primer experimento con pruebas A/B.
-title: Crear y ejecutar tu primer experimento con pruebas A/B
+Description: "En este tutorial, podrás crear, ejecutar y administrar el primer experimento con pruebas A/B."
+title: Crear y ejecutar tu primer experimento
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP, Microsoft Store Services SDK, pruebas A/B, experimentos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fb9e93747fa77031fe906d9ab7463fc41b73cdeb
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
+ms.openlocfilehash: 8da21ae0968540cf43994673ceeeefa92cf56b18
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
-# <a name="create-and-run-your-first-experiment-with-ab-testing"></a>Crear y ejecutar tu primer experimento con pruebas A/B
+# <a name="create-and-run-your-first-experiment"></a>Crear y ejecutar tu primer experimento
 
 En este tutorial, podrás:
 * Crear un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación en el panel del Centro de desarrollo que defina varias variables remotas que representen el texto y el color de un botón de la aplicación.
@@ -56,7 +53,6 @@ Para seguir con este tutorial, debes tener una cuenta del Centro de desarrollo d
 7. Haz doble clic en el botón del diseñador para abrir el archivo de código y agregar un controlador de eventos para el evento **Click**.  
 8. Reemplaza todo el contenido del archivo de código por el siguiente código. Asigna la variable ```projectId``` al valor [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms) que obtuviste en el panel del Centro de desarrollo en la sección anterior.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
 10. Guarda el archivo de código y crea el proyecto.
@@ -79,7 +75,8 @@ Para seguir con este tutorial, debes tener una cuenta del Centro de desarrollo d
   9. Haz clic de nuevo en el control de la lista desplegable, elige **b**y haz clic en **Agregar variable**. La cadena **128** debe aparecer automáticamente en la columna **Variación A**. En la columna **Variación B**, escribe **255**.  
 10. Haz clic en **Guardar** y luego en **Activar**.
 
-> **Importante**&nbsp;&nbsp;Después de activar un experimento, ya no podrás modificar sus parámetros a menos que hayas hecho clic en la casilla **Experimento editable** al crear el experimento. Normalmente, recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento.
+> [!IMPORTANT]
+> Después de activar un experimento, ya no se pueden modificar sus parámetros a menos que hayas hecho clic en la casilla **Experimento editable** al crear el experimento. Normalmente, recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento.
 
 ## <a name="run-the-app-to-gather-experiment-data"></a>Ejecución de la aplicación para recopilar datos del experimento
 
@@ -91,13 +88,15 @@ Para seguir con este tutorial, debes tener una cuenta del Centro de desarrollo d
 
 Espera al menos varias horas después de completar la sección anterior y, a continuación, sigue estos pasos para revisar los resultados del experimento y completarlo.
 
-> **Nota**&nbsp;&nbsp;En cuanto activas un experimento, el Centro de desarrollo inicia inmediatamente la recopilación de datos de las aplicaciones que están diseñadas para registrar los datos del experimento. Sin embargo, pueden pasar varias horas antes de que los datos del experimento aparezcan en el panel.
+> [!NOTE]
+> En cuanto activas un experimento, el Centro de desarrollo inicia inmediatamente la recopilación de datos de las aplicaciones que están pensadas para registrar los datos del experimento. Sin embargo, pueden pasar varias horas antes de que los datos del experimento aparezcan en el panel.
 
 1. En el Centro de desarrollo, vuelve a la página de la aplicación **Experimentación**.
 2. En la sección **Experimentos activos**, haz clic en **Optimizar clics de botón** y ve a la página de este experimento.
-3. Confirma que los resultados que se muestran en las secciones **Resumen de resultados** y **Detalles de resultados** coinciden con lo que se espera ver. Para obtener más información acerca de estas secciones, consulta [Administra tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md#review-the-results-of-your-experiment).
+3. Confirma que los resultados que se muestran en las secciones **Resumen de resultados** y **Detalles de resultados** coinciden con lo que se espera ver. Para más información sobre estas secciones, consulta [Administrar el experimento en el panel del Centro de desarrollo](manage-your-experiment.md#review-the-results-of-your-experiment).
+    > [!NOTE]
+    > El Centro de desarrollo solo notifica el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
 
-  >**Nota**&nbsp;&nbsp;El Centro de desarrollo solo notifica el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
 4. Ahora estás listo para finalizar el experimento. En la sección **Resumen de resultados**, en la columna **Variación B**, haz clic en **Cambiar**. Esto cambia todos los usuarios de la aplicación al botón azul.
 5. Haz clic en **Aceptar** para confirmar que deseas finalizar el experimento.
 6. Ejecuta la aplicación **SampleExperiment** que creaste en la sección anterior.
@@ -110,4 +109,3 @@ Espera al menos varias horas después de completar la sección anterior y, a con
 * [Definición de tu experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Administración de tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md)
 * [Ejecución de experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
-

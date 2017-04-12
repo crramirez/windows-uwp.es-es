@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: Componentes de Windows Runtime
-description: "En este documento se describe la función orientada a empresas, compatible con Windows 10, que permite a las aplicaciones táctiles de .NET usar el código existente responsable de importantes operaciones fundamentales de la empresa."
+description: "En este documento se describe la función orientada a empresas que cuentan con asistencia de Windows10, que permite a las aplicaciones táctiles de .NET usar el código existente responsable de importantes operaciones fundamentales de la empresa."
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,20 +9,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8844196503c45e9488d3fa2a543d588229d01cdd
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e3acc609e5db083bda023643ef4dae4c5d9d0248
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #<a name="brokered-windows-runtime-components-for-a-side-loaded-windows-store-app"></a>Componentes negociados de Windows Runtime para una aplicación de prueba de la Tienda Windows
 
-En este artículo se describe la función orientada a empresas que cuentan con asistencia de Windows 10, que permite a las aplicaciones táctiles de .NET usar el código existente responsable de importantes operaciones fundamentales de la empresa.
+En este artículo se describe la función orientada a empresas que cuentan con asistencia de Windows10, que permite a las aplicaciones táctiles de .NET usar el código existente responsable de importantes operaciones fundamentales de la empresa.
 
 ##<a name="introduction"></a>Introducción
 
->**Nota** El código de muestra que acompaña este documento se puede [descargar desde esta ubicación](http://go.microsoft.com/fwlink/p/?LinkID=393655), y la plantilla de Microsoft Visual Studio para compilar Componentes negociados de Windows Runtime se puede descargar aquí: [Plantilla de Visual Studio de 2015 destinada a las aplicaciones universales de Windows para Windows 10](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
+>**Nota** El código de muestra que acompaña este documento se puede [descargar desde esta ubicación](http://go.microsoft.com/fwlink/p/?LinkID=393655), y la plantilla de Microsoft Visual Studio para compilar Componentes negociados de Windows Runtime se puede descargar aquí: [Plantilla de Visual Studio de 2015 destinada a las aplicaciones universales de Windows para Windows10](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
 
 Windows incluye una nueva característica llamada *Componentes negociados de Windows Runtime para aplicaciones de prueba*. Usamos el término IPC (comunicación entre procesos) para describir la capacidad de ejecutar activos de software de escritorio existentes en un proceso (componente de escritorio) mientras se interactúa con este código en una aplicación para UWP. Este es un modelo que resultará familiar para los desarrolladores empresariales porque las aplicaciones de base de datos y las aplicaciones que usan servicios NT en Windows comparten una arquitectura multiproceso similar.
 
@@ -118,7 +115,7 @@ En el archivo abierto, busca la etiqueta <OutputType> y cambia su valor a "winmd
 
 Esto se realiza con los siguientes scripts. Agrega los scripts a la línea de comandos de evento posterior a la compilación, en Proyecto **Propiedades** > **Eventos de compilación**.
 
-> **Nota** El script es diferente en función de la versión de Windows de destino (Windows 10) y la versión de Visual Studio en uso.
+> **Nota** El script es diferente en función de la versión de Windows de destino (Windows10) y la versión de Visual Studio en uso.
 
 ```cmd
 call "$(DevEnvDir)..\..\vc\vcvarsall.bat" x86 10.0.10240.0
@@ -582,6 +579,5 @@ En la lista de módulos cargados de un servidor de Agente de sesiones debe figur
 -   [Cómo instalar aplicaciones en Windows 10](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#GroupPolicy)
 
 -   [Implementar aplicaciones de la Tienda Windows en empresas](http://go.microsoft.com/fwlink/p/?LinkID=264770)
-
 
 

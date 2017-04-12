@@ -1,6 +1,6 @@
 ---
 author: TylerMSFT
-title: "Iniciar la aplicación predeterminada para un archivo"
+title: "Iniciar la aplicación predeterminada de un archivo"
 description: "Obtén información sobre cómo iniciar la aplicación predeterminada de un archivo."
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
 ms.author: twhitney
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1ab65f210c5fd01460cbe9f63f8b94f6935a630e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9727aa78a4df0ab204574b12e827f279144d3fe1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-the-default-app-for-a-file"></a>Iniciar la aplicación predeterminada para un archivo
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -435,7 +432,7 @@ No puedes iniciar tipos de archivo que contengan código o script, como archivos
 
 Si intentas iniciar un tipo de archivo restringido, se producirá un error en el inicio y se invocará a la devolución de llamada de error. Si tu aplicación controla una gran cantidad de tipos de archivo y esperas que este error pueda detectarse, conviene que proveas al usuario de una experiencia de reserva. Por ejemplo, puedes ofrecerle la posibilidad de guardar el archivo en el escritorio para poder abrirlo desde allí.
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 ## <a name="related-topics"></a>Temas relacionados
@@ -458,4 +455,3 @@ Si intentas iniciar un tipo de archivo restringido, se producirá un error en el
  
 
  
-

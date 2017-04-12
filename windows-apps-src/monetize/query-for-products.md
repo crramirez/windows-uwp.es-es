@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de colecciones de la Tienda Windows, ver productos, Windows Store collection API, view products
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 29db10862533e7b15c7a676fc3aecd4ba58f9514
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="query-for-products"></a>Consultar productos
 
 
@@ -37,7 +34,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud                                                 |
+| Método | URI de solicitud                                                 |
 |--------|-------------------------------------------------------------|
 | POST   | ```https://collections.mp.microsoft.com/v6.0/collections/query``` |
 
@@ -47,7 +44,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | string | Obligatorio. Token de acceso de Azure AD con formato **Portador** &lt;*token*&gt;.                           |
+| Authorization  | cadena | Obligatorio. Token de acceso de Azure AD con formato **Portador** &lt;*token*&gt;.                           |
 | Host           | string | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | number | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
@@ -75,13 +72,13 @@ El objeto UserIdentity contiene los parámetros siguientes.
 |----------------------|--------|----------------|----------|
 | identityType         | cadena | Especifica el valor de cadena **b2b**.    | Sí      |
 | identityValue        | string | La [clave de identificador de la Tienda Windows](view-and-grant-products-from-a-service.md#step-4) que representa la identidad del usuario cuyos productos quieres consultar.  | Sí      |
-| localTicketReference | string | El identificador solicitado para los productos devueltos. Los artículos devueltos en el cuerpo de la respuesta tendrán un parámetro *localTicketReference* coincidente. Se recomienda usar el mismo valor que la notificación *userId* de la clave de id. de la Tienda Windows. | Sí      |
+| localTicketReference | cadena | El identificador solicitado para los productos devueltos. Los artículos devueltos en el cuerpo de la respuesta tendrán un parámetro *localTicketReference* coincidente. Se recomienda usar el mismo valor que la notificación *userId* de la clave de id. de la Tienda Windows. | Sí      |
 
 <span/> 
 
 El objeto ProductSkuId contiene los parámetros siguientes.
 
-| Parámetro | Tipo   | Descripción          | Requerido |
+| Parámetro | Tipo   | Descripción          | Obligatorio |
 |-----------|--------|----------------------|----------|
 | productId | string | El [identificador de la Tienda](in-app-purchases-and-trials.md#store-ids) para un [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) del catálogo de la Tienda Windows. Un ejemplo de identificador de la Tienda para un producto es 9NBLGGH42CFD. | Sí      |
 | skuID     | string | El [identificador de la Tienda](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) de un producto del catálogo de la Tienda Windows. Un ejemplo de identificador de la Tienda para un SKU es 0010.       | Sí      |
@@ -150,7 +147,7 @@ El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 | ownershipType        | string             | La cadena *OwnedByBeneficiary*.   | Sí      |
 | productId            | string             | El [identificador de la Tienda](in-app-purchases-and-trials.md#store-ids) para el [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) del catálogo de la Tienda Windows. Un ejemplo de identificador de la Tienda para un producto es 9NBLGGH42CFD.          | Sí      |
 | productType          | string             | Uno de los siguientes tipos de producto: **Application**, **Durable** y **UnmanagedConsumable**.        | Sí      |
-| purchasedCountry     | string             | N/A   | No       |
+| purchasedCountry     | string             | N/D   | No       |
 | purchaser            | IdentityContractV6 | Si está presente, representa la identidad del comprador del artículo. Consulta los detalles de este objeto a continuación.        | No       |
 | quantity             | number             | Cantidad del artículo. Actualmente, el valor siempre será 1.      | No       |
 | skuId                | string             | El [identificador de la Tienda](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) del producto del catálogo de la Tienda Windows. Un ejemplo de identificador de la Tienda para un SKU es 0010.     | Sí      |
@@ -164,7 +161,7 @@ El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 
 El objeto IdentityContractV6 contiene los parámetros siguientes.
 
-| Parámetro     | Tipo   | Descripción                                                                        | Requerido |
+| Parámetro     | Tipo   | Descripción                                                                        | Obligatorio |
 |---------------|--------|------------------------------------------------------------------------------------|----------|
 | identityType  | string | Contiene el valor *pub*.                                                      | Sí      |
 | identityValue | string | El valor de cadena del elemento *publisherUserId* de la clave de id. de la Tienda Windows especificada. | Sí      |
@@ -219,4 +216,3 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 * [Notificar productos consumibles como completados](report-consumable-products-as-fulfilled.md)
 * [Conceder productos gratuitos](grant-free-products.md)
 * [Renovar una clave de id. de la Tienda Windows](renew-a-windows-store-id-key.md)
-

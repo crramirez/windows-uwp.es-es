@@ -4,18 +4,15 @@ Description: "Ve los nombres que has reservado para tu aplicación, reserva nomb
 title: "Administrar nombres de aplicación"
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5b34723eb6d336eeacb7437a926cae7f1d3ca871
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0dc9582a0a041f6e30a2bebaa22843983d633cee
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-app-names"></a>Administrar nombres de aplicación
 
 
@@ -37,18 +34,17 @@ Si ya no quieres usar un nombre que has reservado previamente, puedes liberarlo 
 
 Para eliminar uno de los nombres reservados de la aplicación, busca el nombre que quieres dejar de usar y haz clic en **Eliminar**. En el cuadro de diálogo de confirmación, vuelve a hacer clic en **Eliminar** para confirmar.
 
-Ten en cuenta que la aplicación debe tener al menos un nombre reservado. Para quitar completamente una aplicación del panel (que también libera todos los nombres reservados de la aplicación), puedes hacer clic en **Eliminar esta aplicación** desde su página **Introducción**.
+Ten en cuenta que la aplicación debe tener al menos un nombre reservado. Para quitar completamente una aplicación del panel (y liberar todos los nombres reservados de la aplicación), puedes hacer clic en **Eliminar esta aplicación** desde su página **Introducción**. Si has presentado una aplicación y está en curso, tendrás que eliminar esa presentación primero (y, si ya publicaste la aplicación a la Tienda, no puedes eliminarla del panel).
 
 ## <a name="rename-an-app-that-has-already-been-published"></a>Cambiar el nombre de una aplicación ya publicada
 
-Si la aplicación ya está en la Tienda Windows y quieres cambiarle el nombre, puedes hacerlo reservando un nombre nuevo (siguiendo los pasos descritos anteriormente) y, a continuación, creando un nuevo envío de la aplicación. Ten en cuenta que tendrás que actualizar el paquete para que incluya el nuevo nombre a fin de que la Tienda muestre la aplicación con el nuevo nombre. Asegúrate de usar el nuevo nombre en el elemento [**Package/Properties/DisplayName**](https://msdn.microsoft.com/library/windows/apps/dn423240) del manifiesto de la aplicación y actualiza todos los gráficos o texto que incluyan el nombre de la aplicación. También tendrás que revisar la descripción de la aplicación y cambiar el nombre si lo mencionas en cualquier parte.
+Si la aplicación ya está en la Tienda Windows y quieres cambiarle el nombre, puedes hacerlo reservando un nombre nuevo (siguiendo los pasos descritos anteriormente) y, a continuación, creando un nuevo envío de la aplicación. Ten en cuenta que tendrás que actualizar el paquete para que incluya el nuevo nombre a fin de que la Tienda muestre la aplicación con el nuevo nombre. Asegúrate de usar el nuevo nombre en el elemento [**Package/Properties/DisplayName**](https://msdn.microsoft.com/en-us/library/windows/apps/dn934748.aspx) del manifiesto de la aplicación y actualiza todos los gráficos o texto que incluyan el nombre de la aplicación. También tendrás que revisar la descripción de la aplicación y cambiar el nombre si lo mencionas en cualquier parte.
 
 Una vez que se ha publicado la aplicación con el nuevo nombre, puedes eliminar el nombre anterior que ya no necesitas.
 
  
 
  
-
 
 
 

@@ -2,27 +2,23 @@
 title: Cadenas de intercambio
 description: "Una cadena de intercambio es un conjunto de búferes que se usan para mostrar fotogramas al usuario."
 ms.assetid: A38E8BB7-1E77-4D93-B321-D3572A80D5DD
-keywords:
-- Cadenas de intercambio
+keywords: Cadenas de intercambio
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8028c67e2ffb8f1b021ec486691251850de5fa8b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1598811ce05536c3396ef72bb9d1b06ddbba0fdc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="swap-chains"></a>Cadenas de intercambio
 
 
 Una cadena de intercambio es un conjunto de búferes que se usan para mostrar fotogramas al usuario. Cada vez que una aplicación presenta un nuevo fotograma para mostrar, el primer búfer de la cadena de intercambio ocupa el lugar del búfer visualizado. Este proceso se denomina *intercambio* o *desplazamiento*.
 
-Un adaptador de gráficos mantiene un puntero en una superficie que representa la imagen que se muestra en el monitor, llamado búfer frontal. Cuando se actualiza el monitor, la tarjeta gráfica envía el contenido del búfer frontal al monitor para que se muestre. Sin embargo, esto produce un problema de "división" a la hora de representar gráficos en tiempo real. El problema principal es que las frecuencias de actualización de los monitores son muy lentas en comparación con el resto del equipo. Las frecuencias de actualización habituales van de los 60 Hz (60 veces por segundo) a los 100 Hz.
+Un adaptador de gráficos mantiene un puntero en una superficie que representa la imagen que se muestra en el monitor, llamado búfer frontal. Cuando se actualiza el monitor, la tarjeta gráfica envía el contenido del búfer frontal al monitor para que se muestre. Sin embargo, esto produce un problema de "división" a la hora de representar gráficos en tiempo real. El problema principal es que las frecuencias de actualización de los monitores son muy lentas en comparación con el resto del equipo. Las frecuencias de actualización habituales van de los 60Hz (60 veces por segundo) a los 100Hz.
 
 Si la aplicación actualiza el búfer frontal mientras el monitor está en medio de una actualización, la imagen que se muestra se cortará por la mitad, y la mitad superior de la pantalla contendrá la imagen anterior y la mitad inferior contendrá la imagen nueva. Este problema se conoce como *división*.
 
@@ -56,7 +52,6 @@ El desplazamiento de superficies es clave en el software multimedia, de animaci�
  
 
  
-
 
 
 

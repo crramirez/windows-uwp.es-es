@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a9ac85483c3d7e252f24147088b928de6e781dc6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 38f5ecd06d257553a275fb6d5bb508fcd9fdb94d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="support-your-app-with-background-tasks"></a>Hacer que tu aplicación sea compatible con las tareas en segundo plano
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Los temas de esta sección muestran cómo hacer que un código ligero se ejecute en segundo plano en respuesta a desencadenadores. Puedes usar tareas en segundo plano para proporcionar funcionalidad cuando la aplicación esté suspendida o no se esté ejecutando. También puedes usar tareas en segundo plano para aplicaciones de comunicación en tiempo real como VOIP, correo y mensajería instantánea.
 
@@ -186,4 +183,3 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 * [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
 * [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 * [Sincronización y actualización de dispositivos para aplicaciones para dispositivos de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=306619)
-

@@ -1,26 +1,23 @@
 ---
 author: TylerMSFT
 title: "Iniciar una aplicación en un dispositivo remoto"
-description: "Obtén más información sobre cómo iniciar una aplicación en un dispositivo remoto mediante el proyecto &quot;Roma&quot;."
+description: "Obtén más información sobre cómo iniciar una aplicación en un dispositivo remoto con Project Rome."
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: e3ef31ed9a90122ae0634274ac5794e67017bc2f
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 15ab4c39f4da1bb524f912d4e6ab6b3e6a5f34c6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-an-app-on-a-remote-device"></a>Iniciar una aplicación en un dispositivo remoto
 
-En este artículo se explica cómo iniciar una aplicación de Windows en un dispositivo remoto.
+Este artículo explica cómo iniciar una aplicación de Windows en un dispositivo remoto.
 
-A partir de Windows 10, versión 1607, una aplicación para UWP puede iniciar una aplicación para UWP o una aplicación de escritorio de Windows remotamente en otro dispositivo que también esté ejecutando Windows 10, versión 1607 o posterior, siempre que ambos dispositivos hayan iniciado sesión con la misma cuenta de Microsoft (MSA).
+A partir de Windows10, versión 1607, una aplicación para UWP puede iniciar una aplicación para UWP o una aplicación de escritorio de Windows remotamente en otro dispositivo que también esté ejecutando Windows 10, versión 1607 o posterior, siempre que ambos dispositivos hayan iniciado sesión con la misma cuenta de Microsoft (MSA).
 
 La característica de inicio remoto ofrece experiencias de usuario orientadas a tareas, donde un usuario puede iniciar una tarea en un dispositivo y terminarla en otro. Por ejemplo, si el usuario está escuchando música en su teléfono en el automóvil, luego podría trasladar la reproducción a su Xbox One al llegar a casa. El inicio remoto te permite pasar datos contextuales a la aplicación remota que se inicia para continuar la tarea donde se haya dejado.
 
@@ -68,7 +65,6 @@ El objeto [**RemoteLaunchUriStatus**](https://msdn.microsoft.com/library/windows
 ## <a name="related-topics"></a>Temas relacionados
 
 [Referencia de API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
-[Introducción a las aplicaciones y dispositivos conectados (proyecto "Roma")](connected-apps-and-devices.md)  
+[Introducción a aplicaciones y dispositivos conectados (Project Rome)](connected-apps-and-devices.md)  
 [Detectar dispositivos remotos](discover-remote-devices.md)  
 La [muestra de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems) indica cómo detectar un sistema remoto, iniciar una aplicación en un sistema remoto y usar los servicios de aplicaciones para enviar mensajes entre aplicaciones que se ejecuten en dos sistemas.
-

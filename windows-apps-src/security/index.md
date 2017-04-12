@@ -9,23 +9,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e769a9aa7d381a527c1e1504efc52c2ead031c70
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8e17ef86e5eb08808e22c1fb4070e3d15bd01556
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="security"></a>Seguridad
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta sección contiene artículos sobre la compilación de aplicaciones para la Plataforma universal de Windows (UWP) seguras para Windows 10.
 
 ## <a name="introduction"></a>Introducción 
 
-Si no estás familiarizado con el desarrollo de Windows o UWP, empieza por la [Introducción al desarrollo seguro de aplicaciones de Windows](intro-to-secure-windows-app-development.md). En este artículo de introducción se proporciona una descripción general de las consideraciones de seguridad de las aplicaciones y las distintas funciones disponibles en Windows 10.
+Si no estás familiarizado con el desarrollo de Windows o UWP, empieza por la [Introducción al desarrollo seguro de aplicaciones de Windows](intro-to-secure-windows-app-development.md). En este artículo de introducción se proporciona una descripción general de las consideraciones de seguridad de las aplicaciones y las distintas funciones disponibles en Windows10.
 
 ## <a name="authentication-and-user-identity"></a>Autenticación e identidad de usuario
 
@@ -36,7 +33,7 @@ La [sección autenticación e identidad de usuario](authentication-and-user-iden
 <tr><td>[Caja de seguridad de credenciales](credential-locker.md)</td><td>En este artículo se describe cómo las aplicaciones pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo transferirlas entre dispositivos con la cuenta de Microsoft del usuario.</td></tr>
 
 <tr><td>[Biometría de huellas digitales](fingerprint-biometrics.md) </td><td>En este artículo se explica cómo agregar biometría de huellas digitales a la aplicación. La inclusión de una solicitud de autenticación con huella digital cuando el usuario deba dar su consentimiento a una acción concreta aumenta la seguridad de la aplicación. Por ejemplo, puedes solicitar la autenticación con huella digital antes de autorizar una compra desde la aplicación o de permitir el acceso a recursos restringidos. La autenticación con huella digital se administra mediante la clase [UserConsentVerifier](https://msdn.microsoft.com/library/windows/apps/dn279134) en el espacio de nombres [Windows.Security.Credentials.UI](https://msdn.microsoft.com/library/windows/apps/hh701356).</td></tr>
-<tr><td>[Microsoft Passport y Windows Hello](microsoft-passport.md)</td><td>En este artículo se describe la nueva tecnología Microsoft Passport de Windows 10 y se explica cómo pueden implementarla los desarrolladores para proteger sus servicios backend y aplicaciones. En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas de credenciales convencionales y se proporcionan instrucciones sobre cómo diseñar e implementar estas tecnologías como parte de la implementación de Windows 10. </td></tr>
+<tr><td>[Microsoft Passport y Windows Hello](microsoft-passport.md)</td><td>En este artículo se describe la nueva tecnología Microsoft Passport de Windows 10 y se explica cómo pueden implementarla los desarrolladores para proteger sus servicios backend y aplicaciones. En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas de credenciales convencionales y se proporcionan instrucciones sobre cómo diseñar e implementar estas tecnologías como parte de la implementación de Windows10. </td></tr>
 <tr><td>[Crear una aplicación de inicio de sesión de Microsoft Passport](microsoft-passport-login.md)</td><td>Primera parte de un tutorial completo acerca de cómo crear una aplicación para UWP (Plataforma universal de Windows) de Windows 10 que use Microsoft Passport como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña.</td></tr>
 <tr><td>[Crear un servicio de inicio de sesión de Microsoft Passport](microsoft-passport-login-auth-service.md)</td><td>Parte 2 de un tutorial completo acerca de cómo usar Microsoft Passport como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña en aplicaciones para UWP (Plataforma universal de Windows) de Windows 10.</td></tr>
 <tr><td>[Tarjetas inteligentes](smart-cards.md)</td><td>En este tema se explica la manera en que las aplicaciones pueden usar tarjetas inteligentes para conectar a los usuarios a servicios de red seguros, incluido cómo obtener acceso a los lectores de tarjetas inteligentes físicas, crear tarjetas inteligentes virtuales, comunicarse con tarjetas inteligentes, autenticar usuarios, restablecer códigos PIN de usuario y quitar o desconectar tarjetas inteligentes.</td></tr>
@@ -58,4 +55,3 @@ La sección de criptografía contiene información sobre temas más complejos re
 | [MAC, hash y firmas](macs-hashes-and-signatures.md)               | En este artículo se describe cómo se pueden usar los códigos de autenticación de mensajes (MAC), los hash y las firmas en las aplicaciones para detectar mensajes manipulados.                                                                                                                                                                                                                                                                                                                                                                                |
 | [Restricciones de exportación sobre la criptografía](export-restrictions-on-cryptography.md) | Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en                                                                                                                                                                                                                                                                                                                                                                                                     |
 | [Tareas comunes de criptografía](common-cryptography-tasks.md)                     | En estos artículos se ofrece código de ejemplo para tareas comunes de criptografía, como crear números aleatorios, comparar búferes, convertir entre cadenas y datos binarios, copiar a matrices de bytes y desde ellas; y codificar y descodificar datos.                                                                                                                                                                                                                                                                                    |
-

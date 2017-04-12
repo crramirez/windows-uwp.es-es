@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, interfaz de usuario, directx
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: cb8cb8eae3328a9010553b7f3e041b8f2dbd8c02
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-a-user-interface"></a>Agregar una interfaz de usuario
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Has visto cómo el juego de muestra implementa el objeto principal del juego, así como el marco de representación básico. Ahora, veamos cómo el juego de muestra ofrece comentarios sobre el estado de la partida al jugador. Aquí aprenderás a agregar sencillas opciones de menú y componentes de pantalla de visualización frontal encima de la salida de la canalización de gráficos 3-D.
 
@@ -1493,7 +1490,6 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Si la aplicación usa la mediación de anuncios o muestra banners o anuncios intersticiales en vídeo de Microsoft Advertising, usa la página Monetización &gt; Monetizar con anuncios para administrar el uso que haces de los anuncios."
+Description: "Si la aplicación usa la mediación de anuncios o muestra banners o anuncios intersticiales de Microsoft Advertising, usa la página Monetización &gt; Monetizar con anuncios para administrar el uso que haces de los anuncios."
 title: Monetizar con anuncios
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e82431c9b39999af9fe19ac147a6c031b9a3edc3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6418fe1b47ac89e8decb135aa9a2108b3b95ef82
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="monetize-with-ads"></a>Monetizar con anuncios
 
 
-Si la aplicación usa un control **AdMediatorControl**, **AdControl** o **InterstitialAd** para mostrar anuncios en banner o anuncios intersticiales en vídeo, usa la página **Monetización** &gt; **Monetizar con anuncios** para administrar el uso de los anuncios.
+Si la aplicación usa un control **AdMediatorControl**, **AdControl** o **InterstitialAd** para mostrar banners o anuncios intersticiales, usa la página **Monetización** &gt; **Monetizar con anuncios** para administrar el uso de anuncios.
 
 ## <a name="windows-ad-mediation"></a>Mediación de anuncios de Windows
 
@@ -36,11 +33,11 @@ Para obtener más información sobre tus obligaciones en virtud de la COPPA, con
 
 ## <a name="microsoft-affiliate-ads"></a>Anuncios de filiales de Microsoft
 
-Activa la casilla de esta sección si quieres mostrar anuncios de filiales de Microsoft en tu aplicación. Si activas esta casilla, se ofrecerán anuncios de productos de la Tienda, como música, juegos, películas, aplicaciones, hardware y software a la aplicación cuando no haya otras redes de anuncios disponibles. Cuando los usuarios hagan clic en los anuncios y productos de bus en la Tienda dentro de una ventana de atribución determinada, conseguirás una comisión sobre las compras aprobadas.
+Activa la casilla de esta sección si quieres mostrar anuncios de filiales de Microsoft en tu aplicación. Si activas esta casilla, se ofrecerán anuncios de productos de la Tienda, como música, juegos, películas, aplicaciones, hardware y software a la aplicación cuando no haya otras redes de anuncios disponibles. Cuando los usuarios hagan clic en los anuncios y compra productos en la Tienda dentro de una ventana de atribución determinada, conseguirás una comisión sobre las compras aprobadas.
 
-Si cambias esta selección, no es necesario volver a publicar la aplicación para que los cambios surtan efecto. Para obtener más información sobre los anuncios de filiales de Microsoft , consulta el tema [Acerca de los anuncios de filiales](about-affiliate-ads.md).
+Si cambias esta selección, no es necesario volver a publicar la aplicación para que los cambios surtan efecto. Para obtener más información sobre los anuncios de filiales de Microsoft, consulta el tema [Acerca de los anuncios de filiales](about-affiliate-ads.md).
 
-> **Nota**  Si la aplicación usa la mediación de anuncios (es decir, usa un objeto **AdMediatorControl** para mostrar anuncios), la aplicación puede mostrar anuncios de filiales solo si las opciones de mediación de anuncios están configurada para mostrar anuncios de Microsoft.
+> **Nota**  Si la aplicación usa la mediación de anuncios (es decir, usa un objeto **AdMediatorControl** para mostrar anuncios), la aplicación puede mostrar anuncios de filiales solo si las opciones de mediación de anuncios están configuradas para mostrar anuncios de Microsoft.
 
 ## <a name="community-ads"></a>Anuncios de la comunidad
 
@@ -52,26 +49,25 @@ Si cambias esta selección, no es necesario volver a publicar la aplicación par
 
 Usa esta sección para crear una unidad de anuncio de Microsoft Advertising. Solo hace falta crear unidades de anuncios en los siguientes escenarios:
 
--   La aplicación muestra pancartas de Microsoft Advertising mediante un objeto [AdControl](https://msdn.microsoft.com/library/mt313154.aspx).
--   La aplicación muestra anuncios intersticiales en vídeo de Microsoft Advertising mediante el objeto [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx).
+-   La aplicación muestra pancartas mediante un objeto [AdControl](https://msdn.microsoft.com/library/mt313154.aspx).
+-   La aplicación muestra anuncios intersticiales mediante un objeto [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx).
 
 Para crear una unidad de anuncio para estos escenarios:
 
 1.  Otorga un nombre a la unidad de anuncio.
-2.  Selecciona el tipo de unidad (**Pancarta** o **Anuncios intersticiales en vídeo**).
+2.  Selecciona el tipo de unidad de anuncio (**Banner**, **Banner intersticial** o **Vídeo intersticial**).
 3.  Selecciona el tipo de dispositivo (**Móvil** o **PC/Tableta**).
 4.  Haz clic en **Crear unidad de anuncios**.
 
 Las unidades de anuncio aparecen en una tabla en la parte inferior de esta sección. Para cada unidad de anuncio, verás un **Id. de la aplicación** y un **Id. de unidad de anuncio**. Para mostrar anuncios en tu aplicación, debes usar estos valores en el código:
 
--   Si la aplicación muestra pancartas, asigna estos valores a las propiedades [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) y [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) del objeto [AdControl](https://msdn.microsoft.com/library/mt313154.aspx).
--   Si la aplicación muestra anuncios intersticiales en vídeos, pasa estos valores para el método [RequestAd](https://msdn.microsoft.com/library/mt313192.aspx) del objeto [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx).
+-   Si la aplicación muestra pancartas, asigna estos valores a las propiedades [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) y [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) del objeto [AdControl](https://msdn.microsoft.com/library/mt313154.aspx). Para obtener más información, consulta [AdControl en XAML y .NET](../monetize/adcontrol-in-xaml-and--net.md) y [AdControl en HTML5 y JavaScript](../monetize/adcontrol-in-html-5-and-javascript.md).
+-   Si la aplicación muestra anuncios intersticiales, pasa estos valores al método [RequestAd](https://msdn.microsoft.com/library/mt313192.aspx) del objeto [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx). Para más información, consulta [Anuncios intersticiales](../monetize/interstitial-ads.md).
 
-> **Nota**  Si la aplicación usa la mediación de anuncios para mostrar anuncios en banners de Microsoft Advertising (es decir, usa un objeto **AdMediatorControl**), no es necesario solicitar unidades de anuncio. En este escenario, las unidades de anuncios de Microsoft Advertising se generan automáticamente.
-
- 
+> **Nota**  Si la aplicación usa un objeto **AdMediatorControl** para mostrar anuncios en banners de Microsoft Advertising, no es necesario solicitar unidades de anuncio. En este escenario, las unidades de anuncios de Microsoft Advertising se generan automáticamente.
 
  
 
  
 
+ 

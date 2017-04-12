@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-Description: Puedes usar el panel del Centro de desarrollo de Windows para ejecutar experimentos respecto a las aplicaciones para la Plataforma universal de Windows (UWP) con pruebas A/B.
+Description: Puedes usar el panel del Centro de desarrollo de Windows para ejecutar los experimentos para las aplicaciones para la Plataforma universal de Windows (UWP) con pruebas A/B.
 title: Ejecuta experimentos para aplicaciones con pruebas A/B
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
 ms.author: mcleans
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 02e6ebbe6d3c02d08ae21ea71e7daa38b7e77255
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d95f42d7a57c191e371f06b21427d52c5c51773e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="run-app-experiments-with-ab-testing"></a>Ejecuta experimentos para aplicaciones con pruebas A/B
 
 Puedes usar el panel del Centro de desarrollo de Windows para definir las variables remotas que se pueden recuperar en el tiempo de ejecución desde las aplicaciones para la Plataforma Universal de Windows (UWP) y puedes probar las variaciones de estos valores con los usuarios para identificar los valores más eficaces para manejar el comportamiento de usuario deseado. Tu aplicación puede usar variables remotas para configurar las experiencias de aplicación, como las compras desde la aplicación, el flujo de registros, subtítulos y colocación de anuncios.
@@ -64,9 +61,8 @@ Para obtener los resultados más útiles, te recomendamos que sigas estas recome
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear un proyecto y definir variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [Creación de un proyecto y definición de variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
 * [Programar tu aplicación para los experimentos.](code-your-experiment-in-your-app.md)
-* [Define tu experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md)
-* [Administra el experimento en el panel del Centro de desarrollo.](manage-your-experiment.md)
+* [Definición de tu experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md)
+* [Administración de tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md)
 * [Crea y ejecuta tu primer experimento con pruebas A/B.](create-and-run-your-first-experiment-with-a-b-testing.md)
-

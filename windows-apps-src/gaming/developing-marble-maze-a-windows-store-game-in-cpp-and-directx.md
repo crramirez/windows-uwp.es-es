@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, UWP, juegos, games, ejemplo, sample, DirectX, 3d
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 738be6a129158fbd6058ff7407aca0b8ece7ea3e
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>Desarrollo de Marble Maze, un juego para UWP en C++ y DirectX
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En esta sección de la documentación se describe cómo usar DirectX y Visual C++ para crear un juego 3-D de la Plataforma universal de Windows (UWP). En esta documentación se muestra cómo crear un juego en 3-D llamado Marble Maze, que funciona tanto en los nuevos factores de forma, por ejemplo tabletas, como en equipos de escritorio y portátiles tradicionales.
@@ -55,7 +52,7 @@ Marble Maze permite que el usuario interacciones con el tablero del juego de var
 ## <a name="who-should-read-this"></a>¿A quién está dirigida esta documentación?
 
 
-Si estás interesado en crear juegos 3-D u otras aplicaciones que usen muchos elementos gráficos para Windows 10, esta documentación es para ti. Esperamos que uses los principios y procedimientos que se exponen aquí para crear tu propio juego para UWP. Tener experiencia o un gran interés en la programación con C++ y DirectX te ayudará a obtener el máximo provecho de esta documentación. Si no tienes experiencia con DirectX, también te ayudará tener experiencia con entornos de programación de gráficos 3D similares.
+Si estás interesado en crear juegos 3-D u otras aplicaciones que usen muchos elementos gráficos para Windows10, esta documentación es para ti. Esperamos que uses los principios y procedimientos que se exponen aquí para crear tu propio juego para UWP. Tener experiencia o un gran interés en la programación con C++ y DirectX te ayudará a obtener el máximo provecho de esta documentación. Si no tienes experiencia con DirectX, también te ayudará tener experiencia con entornos de programación de gráficos 3D similares.
 
 El documento [Tutorial: crear un juego simple para UWP con DirectX](tutorial--create-your-first-metro-style-directx-game.md) describe otra muestra que implementa un juego de disparos 3-D con DirectX y C++.
 
@@ -106,7 +103,6 @@ Te recomendamos que empieces con los aspectos básicos de la muestra de Marble M
  
 
  
-
 
 
 

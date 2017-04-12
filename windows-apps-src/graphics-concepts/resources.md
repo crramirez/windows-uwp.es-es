@@ -2,21 +2,17 @@
 title: Recursos
 description: "Un recurso es una área en la memoria a la que puede obtener acceso la canalización de Direct3D."
 ms.assetid: 2E68E5A8-83DA-4DC8-B7F3-B8988CF8090C
-keywords:
-- Recursos
+keywords: Recursos
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a95762696905bcb5e1ae900c96a47ee9fc5d1a73
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 361e5e1489e976776015ec9401f1473b9d3c8bdd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="resources"></a>Recursos
 
 
@@ -76,4 +72,3 @@ Una vista de recursos proporciona un modelo general para acceder a un recurso (c
 [Reglas de punto flotante](floating-point-rules.md)
 
 [Conversión de tipos de datos](data-type-conversion.md)
-

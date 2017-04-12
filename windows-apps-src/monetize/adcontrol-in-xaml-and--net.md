@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
-description: "Aprende a usar la clase AdControl para mostrar anuncios en banners en una aplicación XAML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1."
+description: "Aprende a usar la clase AdControl para mostrar anuncios en banner en una aplicación XAML para Windows10 (UWP), Windows8.1 o Windows Phone8.1."
 title: AdControl en XAML y .NET
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,24 +9,21 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, anuncios, publicidad, AdControl, XAML, .NET, tutorial
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: db84e03d0cefb4692689ed901f25930a064f9a31
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9db232709d3aa4ca1b7a6c6672cb2d1c1dea5049
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adcontrol-in-xaml-and-net"></a>AdControl en XAML y .NET
 
 
-En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para mostrar anuncios en banners en una aplicación XAML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1. En este tutorial no se usa **AdMediatorControl** ni la mediación de anuncios.
+En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para mostrar anuncios en banner en una aplicación XAML para Windows10 (UWP), Windows8.1 o Windows Phone8.1. En este tutorial no se usa **AdMediatorControl** ni la mediación de anuncios.
 
 Para obtener un ejemplo de proyecto completo que enseña cómo agregar anuncios en banner a una aplicación XAML con C# y C++, consulta los [ejemplos de publicidad en GitHub](http://aka.ms/githubads).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 * En el caso de las aplicaciones para UWP, instala el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) con Visual Studio 2015.
-* En el caso de las aplicaciones de Windows 8.1 o Windows Phone 8.1, instala [el SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) con Visual Studio 2015 o Visual Studio 2013.
+* En el caso de las aplicaciones de Windows8.1 o Windows Phone 8.1, instala [el SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) con Visual Studio 2015 o Visual Studio 2013.
 
 ## <a name="code-development"></a>Programación de código
 
@@ -46,7 +43,7 @@ Para obtener un ejemplo de proyecto completo que enseña cómo agregar anuncios 
 
   ![addreferences](images/13-a84c026e-b283-44f2-8816-f950a1ef89aa.png)
 
-    > **Nota**&nbsp;&nbsp;Esta imagen corresponde a la creación de un proyecto para UWP para Windows 10 en Visual Studio 2015. Si estás creando una aplicación de Windows 8.1 o Windows Phone 8.1 o si usas Visual Studio 2013, la pantalla tendrá un aspecto diferente.
+    > **Nota**&nbsp;&nbsp;Esta imagen corresponde a la creación de un proyecto para UWP para Windows10 en VisualStudio2015. Si estás creando una aplicación de Windows 8.1 o Windows Phone 8.1 o si usas Visual Studio 2013, la pantalla tendrá un aspecto diferente.
 
 3.  En el **Administrador de referencias**, haz clic en Aceptar.
 4.  Modifica el código XAML de la página en la que se insertará publicidad para que incluya el espacio de nombres **Microsoft.Advertising.WinRT.UI**. Por ejemplo, en la aplicación de ejemplo predeterminada que genera Visual Studio (denominada, en esta aplicación, MyAdFundedWindows10AppXAML), la página XAML es **MainPage.XAML**.
@@ -155,4 +152,3 @@ Para obtener un ejemplo de proyecto completo que enseña cómo agregar anuncios 
 * [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
 
  
-

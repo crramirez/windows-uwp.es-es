@@ -3,23 +3,21 @@ author: mcleanbyron
 Description: "Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar) a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza."
 title: "Habilitar compras de productos consumibles desde la aplicación"
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
-keywords: "UWP, consumibles, consumable, complementos, add-ons, compras desde la aplicación, in-app purchases, IAP, Windows.ApplicationModel.Store"
+keywords: "uwp, UWP, consumable, consumibles, add-ons, complementos, in-app purchases, compras desde la aplicación, IAPs, IAP, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7395cf28f96b2f7aa9bc6a1d4c461385d50fcbf6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e2ecaf364c581e82406c76831dd3e33c82594601
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="enable-consumable-in-app-product-purchases"></a>Habilitar compras de productos consumibles desde la aplicación
 
 
->**Nota**&nbsp;&nbsp;En este artículo se muestra cómo usar miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está orientada a Windows 10, versión 1607, o posterior, te recomendamos que uses miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para administrar los complementos (también conocidos como productos dentro de la aplicación o IAP), en lugar del espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
+> [!NOTE]
+> En este artículo se muestra cómo usar miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está orientada a Windows 10, versión 1607 o posterior, te recomendamos que uses miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para administrar los complementos (también conocidos como productos dentro de la aplicación o IAP), en lugar del espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
 
 Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar) a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se puedan comprar y se usen para comprar bonificaciones concretas.
 
@@ -42,7 +40,8 @@ En el siguiente ejemplo se muestra una solicitud de compra de un producto consum
 
 Cuando se concede al cliente acceso al producto consumible desde la aplicación, es importante realizar un seguimiento del producto suministrado (*productId*) y de la transacción asociada al mismo (*transactionId*).
 
->**Importante**&nbsp;&nbsp;Tu aplicación es la responsable de generar informes precisos de suministro para la Tienda. Este paso es esencial para mantener una experiencia de compra justa y de confianza para tus clientes.
+> [!IMPORTANT]
+> Tu aplicación es responsable de generar informes precisos de suministros para la Tienda. Este paso es esencial para mantener una experiencia de compra justa y de confianza para tus clientes.
 
 En el siguiente ejemplo, se muestra el uso de las propiedades [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) desde la llamada a [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381) en el paso anterior para identificar el producto comprado que se va a suministrar. Se usa una colección para almacenar la información de los productos en una ubicación a la que después se pueda hacer referencia para confirmar que el suministro local se ha realizado correctamente.
 
@@ -51,7 +50,8 @@ En el siguiente ejemplo, se muestra el uso de las propiedades [PurchaseResults](
 
 En el siguiente ejemplo, se muestra cómo usar la matriz del ejemplo anterior para acceder a los pares id. del producto/ id. de transacción que se usan más tarde cuando se informa del suministro a la Tienda.
 
->**Importante**&nbsp;&nbsp;Independientemente de la metodología que use tu aplicación para seguir y confirmar el suministro, debes demostrar la diligencia debida para garantizar que no se cobre a los clientes por artículos que no hayan recibido.
+> [!IMPORTANT]
+> Independientemente de la metodología que use tu aplicación para hacer el seguimiento y confirmar el suministro, debe demostrar la diligencia debida para garantizar que no se cobre a tus clientes por artículos que no hayan recibido.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#IsLocallyFulfilled)]
@@ -60,7 +60,8 @@ En el siguiente ejemplo, se muestra cómo usar la matriz del ejemplo anterior pa
 
 Después de completar el suministro local, la aplicación debe hacer una llamada a [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/dn263380) que incluya el elemento *productId* y la transacción en la que se incluya la compra del producto.
 
->**Importante**&nbsp;&nbsp;De no enviar los informes de productos consumibles desde la aplicación suministrados a la Tienda, el usuario no podrá volver a comprar el producto hasta que se notifique el suministro de la compra anterior.
+> [!IMPORTANT]
+> De no enviar el informe del suministro de productos consumibles desde la aplicación a la Tienda, el usuario no podrá volver a comprar el producto hasta que se notifique el suministro de la compra anterior.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#ReportFulfillment)]
@@ -82,4 +83,3 @@ En el siguiente ejemplo, se demuestra cómo se puede usar [GetUnfulfilledConsuma
  
 
  
-

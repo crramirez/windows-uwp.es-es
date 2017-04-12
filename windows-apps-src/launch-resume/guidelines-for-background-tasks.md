@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5e03fbb7971e5526d542d409bccb1c7fee6fd3ee
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c9bf682e6818f7c9854604448e52aa0111605a05
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidelines-for-background-tasks"></a>Directrices para tareas en segundo plano
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Asegúrate de que tu aplicación cumple los requisitos para ejecutar tareas en segundo plano.
 
@@ -93,12 +90,12 @@ Sigue esta directriz cuando desarrolles tareas en segundo plano para aplicacione
 -   Incluye una tarea en segundo plano registrada con [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) o [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), y declárala en el manifiesto de la aplicación. Asegúrate de que el punto de entrada y los tipos de desencadenadores son correctos. Esto es necesario para la certificación y permite al usuario colocar la aplicación en la pantalla de bloqueo.
 
 **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
-* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera del proceso.](create-and-register-a-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Reproducir elementos multimedia en segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
@@ -115,4 +112,3 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
  
 
  
-

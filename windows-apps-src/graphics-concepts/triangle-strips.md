@@ -2,21 +2,17 @@
 title: "Franjas de triángulos"
 description: "Una franja de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo."
 ms.assetid: BACC74C5-14E5-4ECC-9139-C2FD1808DB82
-keywords:
-- "Franjas de triángulos"
+keywords: "Franjas de triángulos"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 910b4b6aa536e0956b06c33a796a8d929e77acb9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fa94534e10bcf124f0a5ba24e59a51b525f2d44e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="triangle-strips"></a>Franjas de triángulos
 
 
@@ -85,7 +81,6 @@ También puedes usar los triángulos para crear primitivos cuyas superficies par
  
 
  
-
 
 
 

@@ -1,24 +1,21 @@
 ---
 author: mcleanbyron
 ms.assetid: fb6bb856-7a1b-4312-a602-f500646a3119
-description: "Usa este método en la API de opiniones de la Tienda Windows para determinar si se puede responder a una opinión particular, o si se puede responder a cualquier opinión de una aplicación determinada."
-title: "Obtener información de respuesta de opiniones de la aplicación"
+description: "Usa este método en la API de opiniones de la Tienda Windows para determinar si puedes responder a una opinión particular, o si puedes responder a cualquier opinión de una aplicación determinada."
+title: "Obtener información de respuesta de opiniones"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, servicios de la Tienda, Store services, API de opiniones de la Tienda Windows, Windows Store reviews API, información de respuesta, response info"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 88e6158bfc5df23e5c2056624e353b38b39c7331
-ms.lasthandoff: 02/08/2017
-
+keywords: "windows 10, Windows 10, uwp, UWP, Store services, servicios de la Tienda, Windows Store reviews API, API de opiniones de la Tienda Windows, response info, información de respuesta"
+ms.openlocfilehash: 46f5cb04fcea1b06205999743205396a875ebbce
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="get-response-info-for-reviews"></a>Obtener información de respuesta de opiniones
 
-# <a name="get-response-info-for-app-reviews"></a>Obtener información de respuesta de opiniones de la aplicación
-
-Si quieres responder mediante programación a una opinión del cliente de la aplicación, puedes usar este método en la API de opiniones de la Tienda Windows para primero determinar si tienes permiso para responderla. No puedes responder a opiniones enviadas por clientes que han elegido no recibir respuestas a opiniones. Después de confirmar que puedes responder a la opinión, puedes usar el método de [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación](submit-responses-to-app-reviews.md) para responderla mediante programación.
+Si quieres responder mediante programación a una opinión del cliente sobre la aplicación, puedes usar este método en la API de opiniones de la Tienda Windows para determinar primero si tienes permiso para responder. No puedes responder a opiniones enviadas por clientes que han elegido no recibir respuestas a opiniones. Después de confirmar que puedes responder a la opinión, puedes usar el método de [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación](submit-responses-to-app-reviews.md) para responderla mediante programación.
 
 
 ## <a name="prerequisites"></a>Requisitos previos.
@@ -26,7 +23,7 @@ Si quieres responder mediante programación a una opinión del cliente de la apl
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](respond-to-reviews-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 * Obtén el ID de la opinión que quieras comprobar para determinar si puedes responderla. Los identificadores de opinión están disponibles en los datos de respuesta del método [obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de la Tienda Windows y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).
 
 ## <a name="request"></a>Solicitud
@@ -34,7 +31,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/reviews/{reviewId}/apps/{applicationId}/responses/info``` |
 
@@ -44,15 +41,15 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Parámetro        | Tipo   | Descripción                                     |  Necesario  |
+| Parámetro        | Tipo   | Descripción                                     |  Obligatorio  |
 |---------------|--------|--------------------------------------------------|--------------|
-| applicationId | string | El identificador de la aplicación que contiene la opinión que quieres determinar si puedes responder. El id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un id. de la Tienda sería 9WZDNCRFJ3Q8. |  Sí  |
+| applicationId | string | El identificador de la aplicación que contiene la opinión que quieres determinar si puedes responder. El id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8. |  Sí  |
 | reviewId | string | El identificador de la opinión que quieres responder (es un GUID). Los identificadores de opinión están disponibles en los datos de respuesta del método [obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de la Tienda Windows y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md). <br/>Si omites este parámetro, el cuerpo de respuesta de este método indicará si dispones de permisos para responder a opiniones de la aplicación especificada. |  No  |
 
 <span/>
@@ -95,4 +92,3 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Respond to customer reviews using the Dev Center dashboard (Responder a opiniones del cliente mediante el panel del Centro de desarrollo)](../publish/respond-to-customer-reviews.md)
 * [Respond to reviews using Windows Store services (Responder a las opiniones con servicios de la Tienda Windows)](respond-to-reviews-using-windows-store-services.md)
 * [Obtener opiniones de la aplicación](get-app-reviews.md)
-

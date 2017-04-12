@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 52e38acbde0fe1b7a53c210e4988ab34c8aacd50
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f8af866b36cbc8748a878814ec9d46eec340dc5b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="define-custom-recognition-constraints"></a>Definir restricciones de reconocimiento personalizadas
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -132,10 +129,10 @@ private async void YesOrNo_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="specify-an-srgs-grammar-constraint-speechrecognitiongrammarfileconstraint"></a>Especificar una restricción de gramática SRGS (SpeechRecognitionGrammarFileConstraint)
+## <a name="specify-an-srgs-grammar-constraint-speechrecognitiongrammarfileconstraint"></a>Especificar una restricción de gramáticaSRGS (SpeechRecognitionGrammarFileConstraint)
 
 
-Deben agregarse archivos de gramática SRGS a la colección de restricciones de un reconocedor de voz.
+Deben agregarse archivos de gramáticaSRGS a la colección de restricciones de un reconocedor de voz.
 
 El SRGS versión 1.0 es el lenguaje de marcado estándar del sector que se usa para crear gramáticas en formato XML para el reconocimiento de voz. Aunque las aplicaciones para Windows universales ofrecen alternativas al uso de SRGS para crear gramáticas de reconocimiento de voz, tal vez el uso de SRGS para crear gramáticas produzca los mejores resultados, sobre todo en los casos más complejos de reconocimiento de voz.
 
@@ -157,7 +154,7 @@ No olvides estas cuestiones:
 -   Puedes agregar varias restricciones de archivo de gramática a la colección de restricciones.
 -   Usa la extensión de archivo .grxml para los documentos gramáticos basados en XML que cumplen las reglas de SRGS.
 
-Este ejemplo usa una gramática SRGS definida en un archivo llamado srgs.grxml (que se describirá más adelante). En las propiedades del archivo, la **Acción del paquete** está establecida en **Contenido**, con **Copia en el directorio de salida** establecido en **Copiar siempre**:
+Este ejemplo usa una gramáticaSRGS definida en un archivo llamado srgs.grxml (que se describirá más adelante). En las propiedades del archivo, la **Acción del paquete** está establecida en **Contenido**, con **Copia en el directorio de salida** establecido en **Copiar siempre**:
 
 ```CSharp
 private async void Colors_Click(object sender, RoutedEventArgs e)
@@ -184,7 +181,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-El archivo SRGS (srgs.grxml) incluye etiquetas de interpretación semántica. Dichas etiquetas proporcionan un mecanismo para devolver datos coincidentes con la gramática a tu aplicación. Las gramáticas deben cumplir la especificación de [Interpretación semántica para el reconocimiento de voz (SISR) 1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765) del World Wide Web Consortium (W3C).
+El archivo SRGS (srgs.grxml) incluye etiquetas de interpretación semántica. Dichas etiquetas proporcionan un mecanismo para devolver datos coincidentes con la gramática a tu aplicación. Las gramáticas deben cumplir la especificación de [Interpretación semántica para el reconocimiento de voz (SISR)1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765) del World Wide Web Consortium (W3C).
 
 Aquí hemos considerado las variantes de "yes" y "no".
 
@@ -246,7 +243,6 @@ Para indicarle al usuario lo que puede decir, usa las propiedades [**SpeechRecog
  
 
  
-
 
 
 

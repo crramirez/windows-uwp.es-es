@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, red de publicidad, metadatos de la aplicación"
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8ee555d335007a09c61247a929705aa2fff2469d
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d377fe7e1eb71132ffa21dd1b11dddf9ca9bb084
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-metadata-api-for-advertising-networks"></a>API de metadatos de la aplicación para redes de publicidad
 
 Las redes de publicidad pueden usar la *API de metadatos de la aplicación* para, mediante programación, recuperar metadatos sobre las aplicaciones de la Tienda Windows, incluidos detalles como la descripción y la categoría de la descripción de la Tienda de la aplicación, y si la aplicación está destinada a niños menores de 13 años. El acceso a esta API está actualmente restringido a los desarrolladores a los que Microsoft ha concedido permiso a la API.
@@ -58,7 +55,7 @@ Como alternativa, puedes llamar a la API mediante la interfaz de usuario proporc
 
 Este método tiene la siguiente sintaxis de solicitud.
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET   | ```https://admetadata.azure-api.net/v1/app/{app_id}``` |
 
@@ -135,4 +132,3 @@ Para obtener más información acerca de los valores del cuerpo de respuesta, co
  
 
  
-

@@ -9,15 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: c3d1cdab94fc8b4f693ef9294cbb12580a9e199b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e5e4f615ae66b3e551456258270f316df8f3c0d1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
-En este artículo se describe cómo mostrar AccountsSettingsPane y conectar la aplicación para la Plataforma universal de Windows (UWP) a proveedores de identidades externos, como Microsoft o Facebook, con las nuevas API de Administrador de cuentas web de Windows 10. Aprenderás a solicitar permiso al usuario para usar su cuenta de Microsoft, obtener un token de acceso y usarlo para realizar operaciones básicas (como obtener datos de perfil o cargar archivos en su OneDrive). Los pasos son similares para obtener permiso del usuario y acceso con cualquier proveedor de identidades que admita el Administrador de cuentas web.
+En este artículo se describe cómo mostrar AccountsSettingsPane y conectar la aplicación para la Plataforma universal de Windows (UWP) a proveedores de identidad externos, como Microsoft o Facebook, con las nuevas API de Administrador de cuentas web de Windows 10. Aprenderás a solicitar permiso al usuario para usar su cuenta de Microsoft, obtener un token de acceso y usarlo para realizar operaciones básicas (como obtener datos de perfil o cargar archivos en su OneDrive). Los pasos son similares para obtener permiso del usuario y acceso con cualquier proveedor de identidades que admita el Administrador de cuentas web.
 
 > Nota: Para obtener un ejemplo de código completo, consulta [Web account management sample en GitHub (Muestra de administración de cuentas web en GitHub)](http://go.microsoft.com/fwlink/p/?LinkId=620621).
 
@@ -166,7 +164,7 @@ Para obtener un token, usa el método RequestTokenAsync de esta manera:
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 {
     WebTokenRequest request = new WebTokenRequest(command.WebAccountProvider, "wl.basic");
-    WebTokenRequestResult = await WebAuthenticationCoreManager.RequestTokenAsync(request);
+    WebTokenRequestResult result = await WebAuthenticationCoreManager.RequestTokenAsync(request);
 }
 ```
 
@@ -185,7 +183,7 @@ private async void GetAadTokenAsync(WebAccountProviderCommand command)
     string clientId = "your_guid_here"; // Obtain your clientId from the Azure Portal
     WebTokenRequest request = new WebTokenRequest(provider, "User.Read", clientId);
     request.Properties.Add("resource", "https://graph.microsoft.com");
-    WebTokenRequestResult = await WebAuthenticationCoreManager.RequestTokenAsync(request);
+    WebTokenRequestResult result = await WebAuthenticationCoreManager.RequestTokenAsync(request);
 }
 ```
 
@@ -406,4 +404,3 @@ En teoría, puedes usar comandos de configuración para cualquier cosa. Sin emba
 [Agente de autenticación web](web-authentication-broker.md)
 
 [Web account management sample (Muestra de administración de cuentas web)](http://go.microsoft.com/fwlink/p/?LinkId=620621)
-

@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Puedes definir paneles personalizados para el diseño XAML derivando una clase personalizada de la clase Panel."
+Description: "Se pueden definir paneles personalizados para el diseño XAML derivando una clase personalizada de la clase Panel."
 MS-HAID: dev\_ctrl\_layout\_txt.xaml\_custom\_panels\_overview
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -15,13 +15,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1925d6b10eb23a6382bd63e812cade1311da178a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: aeea966a40b551bf4fc54901e622f57745720c43
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-custom-panels-overview"></a>Introducción a los paneles personalizados de XAML
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -210,4 +207,3 @@ Hay otras API que forman parte del sistema de diseño, pero no se declaran media
 
 **Conceptos**
 * [Alineación, margen y espaciado](alignment-margin-padding.md)
-

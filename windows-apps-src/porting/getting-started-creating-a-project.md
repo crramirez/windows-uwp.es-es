@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
-description: "Microsoft Visual Studio es a Windows lo que Xcode a iOS y Mac OS. En este tutorial, te ayudamos a que te sientas cómodo usando Visual Studio."
+description: "MicrosoftVisual Studio es a Windows lo que Xcode a iOS y MacOS. En este tutorial, te ayudamos a que te sientas cómodo usando Visual Studio."
 title: "Creación de un proyecto en Visual Studio"
 ms.author: markl
 ms.date: 02/08/2017
@@ -9,20 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c8aba48fba1badcfeebc9868215b904c76ac6b98
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 76307f16fddc094331847f11855d2dbf0467dddf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-creating-a-project"></a>Introducción: creación de un proyecto
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="creating-a-project"></a>Creación de un proyecto
 
-Microsoft Visual Studio es a Windows lo que Xcode a iOS y Mac OS. En este tutorial, te ayudamos a que te sientas cómodo usando Visual Studio. Muestra los fundamentos que necesitarás para comenzar. Cada vez que crees una aplicación, seguirás unos pasos similares a estos.
+MicrosoftVisual Studio es a Windows lo que Xcode a iOS y MacOS. En este tutorial, te ayudamos a que te sientas cómodo usando Visual Studio. Muestra los fundamentos que necesitarás para comenzar. Cada vez que crees una aplicación, seguirás unos pasos similares a estos.
 
 En el siguiente vídeo se comparan Xcode y Visual Studio.
 
@@ -32,9 +29,9 @@ También encontrarás este [blog sobre la compilación de aplicaciones para Wind
 
 Crear una aplicación para Windows 10 (denominada más formalmente como aplicación de la plataforma universal de Windows [UWP]) es como crear una aplicación de iOS con guiones gráficos. Las aplicaciones de Windows 10 se suelen construir en varias páginas y cada una de ellas contiene una parte distinta de la interfaz de usuario, como un sitio web. Cada página suele tener dos archivos de origen asociados: uno para almacenar la interfaz de usuario en [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/mt185595), y otro que contiene el código fuente, que suele ser C#. A medida que el usuario interactúe con la aplicación, irá pasando por estas páginas. En este tutorial vas a crear una aplicación con dos páginas.
 
-**Nota:** Una característica importante de las aplicaciones de Windows 10 es que el mismo código fuente y el mismo conjunto de API estarán disponibles para ti independientemente de la plataforma. Como sabes, cuando escribes una aplicación de iOS universal para iPhone y iPad, puedes determinar en el tiempo de ejecución la plataforma en que se ejecuta la aplicación y realizar la acción apropiada. De manera similar, las aplicaciones de Windows 10 saben reconocer en tiempo de ejecución el dispositivo en que se ejecutan. Con una aplicación para UWP, no es necesario usar elementos \#ifdef en el código fuente para crear compilaciones de teléfono frente a compilaciones de escritorio. Para mayor comodidad, las aplicaciones de Windows 10 también usan sus controles de interfaz de usuario de forma inteligente en función del dispositivo: por ejemplo, la aplicación puede hacer referencia a un control de selector de fecha, y el control adoptará automáticamente el aspecto y funcionamiento dependiendo de si la pantalla es de escritorio o de teléfono. Sin embargo, el código fuente no se modifica.
+**Nota:** Una característica importante de las aplicaciones de Windows 10 es que el mismo código fuente y el mismo conjunto de API estarán disponibles para ti independientemente de la plataforma. Como sabes, cuando escribes una aplicación de iOS universal para iPhone y iPad, puedes determinar en el tiempo de ejecución la plataforma en que se ejecuta la aplicación y realizar la acción apropiada. De manera similar, las aplicaciones de Windows10 saben reconocer en tiempo de ejecución el dispositivo en que se ejecutan. Con una aplicación para UWP, no es necesario usar elementos \#ifdef en el código fuente para crear compilaciones de teléfono frente a compilaciones de escritorio. Para mayor comodidad, las aplicaciones de Windows 10 también usan sus controles de interfaz de usuario de forma inteligente en función del dispositivo: por ejemplo, la aplicación puede hacer referencia a un control de selector de fecha, y el control adoptará automáticamente el aspecto y funcionamiento dependiendo de si la pantalla es de escritorio o de teléfono. Sin embargo, el código fuente no se modifica.
 
-Veamos cómo crear una aplicación de Windows 10. En primer lugar, ejecuta Visual Studio. La primera vez que lo hagas, Visual Studio te pedirá que obtengas una licencia de desarrollador. Una licencia de desarrollador te permite instalar y probar aplicaciones de la Tienda Windows en el equipo local antes de enviarlas a la Tienda Windows. Para obtener una licencia, sigue las instrucciones en pantalla para iniciar sesión con una cuenta Microsoft. Si no tienes una, haz clic en el vínculo **Regístrese** del cuadro de diálogo **Licencia de desarrollador** y sigue las instrucciones en pantalla.
+Veamos cómo crear una aplicación de Windows 10. En primer lugar, ejecuta Visual Studio. La primera vez que lo hagas, VisualStudio te pedirá que obtengas una licencia de desarrollador. Una licencia de desarrollador te permite instalar y probar aplicaciones de la Tienda Windows en el equipo local antes de enviarlas a la Tienda Windows. Para obtener una licencia, sigue las instrucciones en pantalla para iniciar sesión con una cuenta Microsoft. Si no tienes una, haz clic en el vínculo **Regístrese** del cuadro de diálogo **Licencia de desarrollador** y sigue las instrucciones en pantalla.
 
 Si lo comparamos con Xcode, lo primero que ves cuando inicias Xcode es la pantalla de **bienvenida a Xcode**, parecida a la ilustración siguiente.
 
@@ -60,4 +57,3 @@ En Visual Studio, también puedes elegir entre distintas plantillas de proyecto,
 ## <a name="next-step"></a>Paso siguiente
 
 [Introducción: elección de un lenguaje de programación](getting-started-choosing-a-programming-language.md)
-

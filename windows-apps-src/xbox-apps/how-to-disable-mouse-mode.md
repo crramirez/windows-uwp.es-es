@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e57ee4e6-7807-4943-a933-c2b4dc80fc01
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6848d1783df4489571fcf493a55447f67e5d6fd9
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 980779b110523ceecf608b5077cb8446fb9a1e2b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="how-to-disable-mouse-mode"></a>Cómo deshabilitar el modo de mouse
 El modo de mouse está activado de manera predeterminada para todas las aplicaciones, lo que significa que todas las aplicaciones que no lo hayan deshabilitado voluntariamente tendrán un puntero de mouse (similar al que se muestra en el navegador Edge en la consola). Te recomendamos encarecidamente que lo desactives y optimices la navegación con el mando de dirección.   
    
@@ -52,5 +49,4 @@ Si estás escribiendo una aplicación C++ o DirectX, no tienes que hacer nada. E
 ## <a name="see-also"></a>Consulta también
 - [Procedimientos recomendados para Xbox](tailoring-for-xbox.md)
 - [UWP en Xbox One](index.md)
-
 

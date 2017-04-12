@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f6a1ca4850ffbc19afc8defa6d2d373dbfbf2b2b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9f6c8ebe6285981e0af74448b88e0290de3a66ee
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-intrinsic-data-types"></a>Tipos de datos intrínsecos de XAML
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El lenguaje XAML para Windows Runtime proporciona compatibilidad en el nivel de lenguaje para varios tipos de datos que son tipos primitivos de uso frecuente en Common Language Runtime (CLR) y otros lenguajes de programación como C++.
 
@@ -49,5 +46,4 @@ La especificación XAML 2009 indica otros tipos primitivos en el nivel de lengua
 * [Guía de sintaxis XAML](xaml-syntax-guide.md)
 * [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/mt187354)
  
-
 
