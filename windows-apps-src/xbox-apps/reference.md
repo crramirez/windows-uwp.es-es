@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 5ae8e953-0465-487b-81dd-54a85c904daf
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 36a005bd4af09eac94f5b83dd8a2474d0580d556
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: fa3805d5befbd05824d093d3505b00a810f1a726
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="uwp-on-xbox-one-api-reference"></a>Referencia de API de UWP en Xbox One
 
-Esta sección contiene temas de referencia para la las API de UWP en Xbox One.
+Esta sección contiene temas de referencia para la UWP en las API de Xbox One.
 
 | URI        | Descripción |
 |------------|-------------|
@@ -34,4 +31,3 @@ Esta sección contiene temas de referencia para la las API de UWP en Xbox One.
 ## <a name="see-also"></a>Consulta también
 
 - [UWP en Xbox One](index.md)
-

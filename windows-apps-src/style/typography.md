@@ -10,13 +10,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a10d1b164513f9abce48c51bdfe5f6e4c3bdf79d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 92fd3ee66768fcf1c98d9760ecb44811c9b0f9b3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="typography"></a>Tipografía
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -82,7 +79,7 @@ Interletraje se debe establecer en "métrica" y tracking debe establecerse en "0
 
 De forma parecida al interletraje y al tracking, en el espacio entre palabras y entre letras se usa una configuración específica para garantizar la legibilidad óptima y la integridad humanist.
 
-De forma predeterminada, el espacio entre palabras siempre es del 100 % y el espaciado entre letras debe establecerse en "0".
+De forma predeterminada, el espacio entre palabras siempre es del 100% y el espaciado entre letras debe establecerse en "0".
   </div>
 </div>
 </div>
@@ -99,7 +96,7 @@ De forma predeterminada, el espacio entre palabras siempre es del 100 % y el es
 
 
 >[!NOTE]
->Usa la propiedad [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) en un control de texto XAML para controlar el interletraje y [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar el tracking. De forma predeterminada, Typography.Kerning se ha establecido en “true”, y FontStretch se ha establecido en “Normal”; ambos son valores recomendados.
+>Usa la propiedad [Typogrphy.Kerning](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) en un control de texto XAML para controlar el interletraje y [FontStretch](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_FontStretch) para controlar el tracking. De forma predeterminada, Typography.Kerning se ha establecido en “true”, y FontStretch se ha establecido en “Normal”; ambos son valores recomendados.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -182,7 +179,7 @@ SubtítuloAlt, BaseAlt y LeyendaAlt no se incluyen actualmente. Puedes crear los
 
 ## <a name="primary-and-secondary-text"></a>Texto principal y secundario
 
-Para crear otras jerarquías no incluidas en la rampa de tipos, establece el texto secundario en el 60 % de opacidad. En la [paleta de colores de temas](color.md#color-theming), se usaría BaseMedium. El texto principal siempre debe tener un 100% de opacidad, o BaseHigh.
+Para crear otras jerarquías no incluidas en la rampa de tipos, establece el texto secundario en el 60% de opacidad. En la [paleta de colores de temas](color.md#color-theming), se usaría BaseMedium. El texto principal siempre debe tener un 100% de opacidad, o BaseHigh.
 
 <!-- Need new images
 ![Two phone apps using SubtitleAlt](images/type-ramp-example-2.png)
@@ -218,4 +215,3 @@ Green shows where all caps should be used. Red shows where it should not.
 * [Controles de texto](../controls-and-patterns/text-controls.md)
 * [Fuentes](fonts.md)
 * [Iconos de Segoe MDL2](segoe-ui-symbol-font.md)
-

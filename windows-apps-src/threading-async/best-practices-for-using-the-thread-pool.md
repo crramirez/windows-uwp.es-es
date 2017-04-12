@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, subprocesos, grupo de subprocesos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d3b45da6a11bab926812682c209207bbbb436bf1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: db5231c925575bef21b3d412feda367cd89fe7f4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>Procedimientos recomendados para usar el grupo de subprocesos
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tema se describen los procedimientos recomendados para trabajar con el grupo de subprocesos.
@@ -60,4 +58,3 @@ En este tema se describen los procedimientos recomendados para trabajar con el g
 * [Crear un elemento de trabajo periódico](create-a-periodic-work-item.md)
 * [Enviar un elemento de trabajo al grupo de subprocesos](submit-a-work-item-to-the-thread-pool.md)
 * [Enviar un elemento de trabajo con un temporizador](use-a-timer-to-submit-a-work-item.md)
-

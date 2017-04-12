@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
-description: "La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la Plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework."
+description: "La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework."
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
 ms.author: misatran
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6bac2575b3855357076d4272a423c9c689118b2b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8b759684d07c1fa8265ed958ac9c736aa12a488c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
 
 
@@ -131,4 +128,3 @@ Usuarios de Visual Basic: en .NET Framework, un evento es simplemente un delegad
 * [Introducción a .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-

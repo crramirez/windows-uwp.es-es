@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: "En este artículo se describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase de tarea que se define en el espacio de nombres concurrency en ppltasks.h."
+description: "Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase de tarea que se define en el espacio de nombres concurrency en ppltasks.h."
 title: "Programación asincrónica en C++"
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, subprocesos, asincrónicos, C++"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 112b5d58064ae6cd006d791a2c4534848baee259
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c74a2d18a0852d28cf33715a540356a61438ff48
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="asynchronous-programming-in-c"></a>Programación asincrónica en C++
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase `task` que se define en el espacio de nombres `concurrency` en ppltasks.h.
 
@@ -26,7 +23,7 @@ Este artículo describe la manera recomendada de consumir métodos asincrónicos
 
 La Plataforma universal de Windows (UWP) cuenta con un modelo bien definido para llamar a métodos asincrónicos y proporciona los tipos que necesitas para consumirlos. Si no estás familiarizado con el modelo asincrónico de UWP, lee [Programación asincrónica][AsyncProgramming] antes de leer el resto de este artículo.
 
-Aunque puedes consumir las API de UWP asincrónicas directamente en C++, el método preferido es usar la [**clase task**][task-class] y sus funciones y tipos relacionados, que se encuentran dentro del espacio de nombres [**concurrency**][concurrencyNamespace] y están definidos en `<ppltasks.h>`. **concurrency::task** es un tipo de uso general, pero cuando se usa el conmutador de compilador **/ZW**, que es obligatorio para los componentes y las aplicaciones para la Plataforma universal de Windows (UWP), la clase task incluye los tipos asincrónicos de UWP para que sea más fácil:
+Aunque puedes consumir las API de UWP asincrónicas directamente en C++, el método preferido es usar la [**clase task**][task-class] y sus funciones y tipos relacionados, que se encuentran dentro del espacio de nombres [**concurrency**][concurrencyNamespace] y están definidos en `<ppltasks.h>`. **concurrency::task** es un tipo de uso general, pero cuando se usa el conmutador de compilador **/ZW**, que es obligatorio para los componentes y las aplicaciones de la Plataforma universal de Windows (UWP), la clase task incluye los tipos asincrónicos de UWP para que sea más fácil:
 
 -   encadenar múltiples operaciones sincrónicas y asincrónicas;
 
@@ -323,4 +320,3 @@ Los métodos que admiten [**IAsyncOperationWithProgress**](https://msdn.microsof
 [taskParallelism]: <https://msdn.microsoft.com/library/windows/apps/xaml/dd492427.aspx> "Paralelismo de tareas"
 [taskThen]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
 [useArbitrary]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
-

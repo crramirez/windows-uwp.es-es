@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c2d6590d21607cec7718617a0657e28ba56c072e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0358443abbfb753ace9276f1cca8dfa0a4745508
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="binding-markup-extension"></a>Extensión de marcado {Binding}
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Nota** En Windows 10 se encuentra disponible un nuevo mecanismo de enlace, el cual está optimizado para el rendimiento y la productividad del desarrollador. Consulta [Extensión de marcado {x:Bind}](x-bind-markup-extension.md).
+**Nota** En Windows10 se encuentra disponible un nuevo mecanismo de enlace, el cual está optimizado para el rendimiento y la productividad del desarrollador. Consulta [Extensión de marcado {x:Bind}](x-bind-markup-extension.md).
 
 **Nota** Para obtener información general sobre el uso del enlace de datos en la aplicación con **{Binding}** (y para realizar una comparación total entre **{x:Bind}** y **{Binding}**), consulta el tema [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
@@ -46,7 +43,7 @@ La extensión de marcado **{Binding}** se usa para el enlace de datos de propied
 | *propertyPath* | Una cadena que especifica la ruta de acceso de la propiedad para el enlace. Para obtener más información, consulta la sección [Ruta de acceso de propiedades](#property-path) que aparece más adelante. |
 | *bindingProperties* | *propName*=*value*\[, *propName*=*value*\]*<br/>Una o más propiedades de enlace que se especifican con una sintaxis de par de nombre-valor. |
 | *propName* | El nombre de cadena de la propiedad que se establecerá en el objeto [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Por ejemplo, "Converter". |
-| *value* | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad de la sección [Propiedades de la clase Binding que se pueden establecer con {Binding}](#properties-of-binding) que aparece más adelante. |
+| *value* | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad de la sección [Propiedades de la clase Binding que se pueden establecer con {Binding}](#properties-of-the-binding-class-that-can-be-set-with-binding) que aparece más adelante. |
 
 ## <a name="property-path"></a>Ruta de acceso de propiedades
 
@@ -71,12 +68,12 @@ Para obtener más información sobre la sintaxis de cadenas de una ruta de acces
 
 | Propiedad | Descripción |
 |----------|-------------|
-| [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) | Consulta la sección [Ruta de acceso de propiedades](#property-path) anteriormente. |
+| [**Ruta de acceso**](https://msdn.microsoft.com/library/windows/apps/br209830) | Consulta la sección [Ruta de acceso de propiedades](#property-path) anterior. |
 | [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826) | Especifica un objeto convertidor al que el motor de enlace llama. El convertidor puede establecerse en el marcado mediante la [extensión de marcado {StaticResource}](staticresource-markup-extension.md) para hacer referencia a ese objeto desde un diccionario de recursos. |
 | [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) | Especifica la referencia cultural que usará el convertidor. (Si estableces [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826)). La cultura se establece como un identificador basado en estándares. Para obtener más información, consulta [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880). |
 | [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827) | Especifica un parámetro del convertidor que se puede usar en la lógica del convertidor. (Si estableces [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826)). La mayoría de convertidores usan una lógica simple que obtiene toda la información que necesitan del valor pasado para convertir y no necesitan ningún valor de **ConverterParameter**. El parámetro **ConverterParameter** es para las implementaciones de convertidor más complejas, que disponen de una lógica condicional que controla lo que se pasa en **ConverterParameter**. Puedes escribir un convertidor que use valores que no sean cadenas, aunque no es lo habitual. Consulta las observaciones de **ConverterParameter** para obtener más información. |
 | [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) | Especifica un origen de datos haciendo referencia a otro elemento en la misma construcción XAML que tenga la propiedad **Name** o el [atributo x:Name](x-name-attribute.md). A menudo, se usa para compartir valores relacionados o usar subpropiedades de un elemento de interfaz de usuario para proporcionar un valor específico para otro elemento, por ejemplo, en una plantilla de control XAML. |
-| [**FallbackValue**](https://msdn.microsoft.com/library/windows/apps/dn279345) | Especifica un valor que se mostrará cuando no se pueda resolver el origen o la ruta de acceso. |
+| [**FallbackValue**](https://msdn.microsoft.com/library/windows/apps/dn279345) | Especifica un valor que se mostrará cuando no se puede resolver el origen o la ruta de acceso. |
 | [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209829) | Especifica el modo de enlace como uno de los siguientes valores: "OneTime", "OneWay" o "TwoWay". Estos se corresponden con los nombres de constante de la enumeración de [**BindingMode**](https://msdn.microsoft.com/library/windows/apps/br209822). El valor predeterminado depende del destino de enlace, pero en la mayoría de los casos es "OneWay". Ten en cuenta que esto difiere del valor predeterminado de **{x:Bind}**, que es "OneTime". | 
 | [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) | Para especificar un origen de datos, describe la posición del origen del enlace con relación a la posición del destino de enlace. Esto suele usarse en los enlaces dentro de plantillas de control XAML, estableciendo la [extensión de marcado {RelativeSource}](relativesource-markup-extension.md). |
 | [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) | Especifica el origen de datos del objeto. Dentro de la extensión de marcado **Binding**, la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) requiere una referencia de objeto, como una referencia de [extensión de marcado {StaticResource}](staticresource-markup-extension.md). Si no se especifica esta propiedad, el contexto de datos que actúa especifica el origen. Es más habitual no especificar un valor Source en enlaces individuales y, en lugar de ello, basarse en la propiedad **DataContext** compartida para enlaces múltiples. Para más información, consulta [**DataContext**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.datacontext.aspx) o [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946). |
@@ -88,7 +85,7 @@ Para obtener más información sobre la sintaxis de cadenas de una ruta de acces
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) y **ConverterLanguage** tienen relación con la conversión de un valor o un tipo desde el origen del enlace a un valor o un tipo que sea compatible con la propiedad del destino del enlace. Para obtener más información y ejemplos, consulta la sección “Conversiones de datos” de [Enlaces de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 > [!NOTE]
-> A partir de la versión 1607 de Windows 10, el marco XAML proporciona un valor booleano integrado para el convertidor Visibility. El convertidor asigna **true** al valor de la enumeración **Visible** y **false** a **Collapsed**, para que puedas enlazar una propiedad Visibility a un valor booleano sin necesidad de crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Código adaptativo para versiones](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir de la versión 1607 de Windows10, el marco XAML proporciona un valor booleano integrado para el convertidor Visibility. El convertidor asigna **true** al valor de la enumeración **Visible** y **false** a **Collapsed**, para que puedas enlazar una propiedad Visibility a un valor booleano sin necesidad de crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Código adaptativo para versiones](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) y [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) especifican un origen de enlace, por lo que son mutuamente excluyentes.
 
@@ -130,4 +127,3 @@ Observa que el valor de la propiedad [**Converter**](https://msdn.microsoft.com/
 Microsoft IntelliSense en Microsoft Visual Studio muestra las propiedades del contexto de datos durante la creación de **{Binding}** en el editor de marcado XAML. Tan pronto como escribes "{Binding", se muestran las propiedades de contexto de datos adecuadas para [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) en la lista desplegable. IntelliSense también ayuda con las otras propiedades de [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Para que funcione, debes tener el contexto de datos o el contexto de datos en tiempo de diseño establecido en la página de marcado. **Ir a definición** (F12) también funciona con **{Binding}**. Como alternativa, puedes usar el cuadro de diálogo de enlace de datos.
 
  
-

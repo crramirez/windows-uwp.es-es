@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3fa6cf80bf569703a7fbbc532c9114bee89c7403
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 21d73b60ba3856f81a6d93331982135e188e122e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xuid-directive"></a>Directiva x:Uid
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Proporciona un identificador único para los elementos de marcado. En XAML de la plataforma universal de Windows (UWP), este identificador único se usa en los procesos y herramientas de localización de XAML, por ejemplo, en el uso de recursos de un archivo de recursos .resw.
 
@@ -53,5 +50,4 @@ El lenguaje XAML de UWP tiene algunas reglas para la exclusividad de **x:Uid** d
 En algunos casos usarás una ruta de acceso de recurso en lugar de la funcionalidad integrada del sistema de índice de recursos del paquete (PRI). Cualquier cadena que se usa como un valor de **x: Uid** define una ruta de acceso de recurso que empieza por ms-resource:///Resources/ e incluye la cadena **x: Uid**. La ruta de acceso se completa con los nombres de las propiedades que especifiques en un archivo de recursos o que intervengan de otro modo en la selección de destinos.
 
 No incluyas **x:Uid** en elementos de propiedad, ya que no está permitido en XAML de Windows Runtime.
-
 

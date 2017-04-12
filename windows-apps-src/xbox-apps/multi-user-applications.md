@@ -9,19 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 31866c400683c61b432c3fe620487f93a9187771
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b150b50c1072a96ae0017bae848eeff94bb07ce0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="introduction-to-multi-user-applications"></a>Introducción a las aplicaciones multiusuario
 
 En este tema realizaremos una sencilla introducción de nivel superior para describir el modelo multiusuario de Xbox.
-
-> [!NOTE]
-> Las aplicaciones multiusuario no están habilitadas por el momento. 
 
 El modelo de usuario de Xbox One se ajusta a los requisitos de una consola de juegos que permite que varios usuarios puedan jugar de forma cooperativa en el mismo dispositivo. Asimismo, permite que varios usuarios, cada uno con su propio controlador, inicien sesión y usen la consola al mismo tiempo en una sola sesión interactiva. Esto es diferente en otros dispositivos Windows. Por ejemplo:
 * Los **equipos de escritorio de Windows** permiten que varios usuarios usen el mismo dispositivo, pero cada uno de ellos tiene su propia sesión interactiva que, a su vez, es totalmente independiente de otras sesiones del dispositivo.
@@ -34,7 +28,7 @@ Cada usuario del modelo de usuario de Xbox One cuenta con una cuenta de usuario 
 De forma predeterminada, las aplicaciones para Plataforma universal de Windows (UWP) se ejecutan en el contexto del usuario que inició la aplicación. Estas *aplicaciones de usuario único* (SUA) solo tienen en cuenta a ese único usuario y se ejecutan en un modo que sea compatible con el modelo que el usuario tenga en otros dispositivos Windows. El modelo de usuario de Xbox administra qué usuario está asociado con la aplicación y garantiza que el usuario inicie sesión cuando este inicie la aplicación. En este modelo, los creadores de juegos y aplicaciones para UWP no deben hacer nada especial para ejecutarlas en Xbox. 
 
 ## <a name="multi-user-applications"></a>Aplicaciones multiusuario
-Los juegos para UWP pueden formar parte del modelo multiusuario de Xbox One. Estas *aplicaciones multiusuario* (MUA) se ejecutan en el contexto de una cuenta de sistema (denominada Cuenta predeterminada) y pueden aprovechar al máximo la flexibilidad y eficacia que les ofrece el modelo de usuario de Xbox One. Para este tipo de juegos, el modelo de usuario de Xbox no se encarga de administrar qué usuario está asociado con el juego y tampoco es necesario que el usuario inicie sesión para poder ejecutar el juego. Esto significa que estos juegos deben escribirse para que quede claro cuáles son los requisitos de usuario y cómo deben administrarse; esto es, si es necesario que el usuario inicie sesión, si se debe implementar el concepto de "usuario actual", si se deben permitir entradas de contenido simultáneas de varios usuarios, etc.
+Los juegos para UWP pueden formar parte del modelo multiusuario de Xbox One. Estas *aplicaciones multiusuario* (MUA) se ejecutan en el contexto de una cuenta de sistema (denominada Cuenta predeterminada) y pueden aprovechar al máximo la flexibilidad y eficacia que les ofrece el modelo de usuario de XboxOne. Para este tipo de juegos, el modelo de usuario de Xbox no se encarga de administrar qué usuario está asociado con el juego y tampoco es necesario que el usuario inicie sesión para poder ejecutar el juego. Esto significa que estos juegos deben escribirse para que quede claro cuáles son los requisitos de usuario y cómo deben administrarse; esto es, si es necesario que el usuario inicie sesión, si se debe implementar el concepto de "usuario actual", si se deben permitir entradas de contenido simultáneas de varios usuarios, etc.
    
 Para formar parte del modelo multiusuario:   
 1. Abre el proyecto en Visual Studio.   
@@ -58,4 +52,3 @@ Todas las aplicaciones para UWP y la mayoría de los juegos de usuario único pu
 
 ## <a name="see-also"></a>Consulta también
 - [UWP en Xbox One](index.md)
-

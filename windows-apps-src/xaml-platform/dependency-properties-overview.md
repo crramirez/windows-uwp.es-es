@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C# o Visual Basic junto con definiciones XAML para la interfaz de usuario."
+description: "En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C#, o Visual Basic junto con definiciones XAML para la interfaz de usuario."
 title: "Introducción a las propiedades de dependencia"
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
 ms.author: jimwalk
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: eaf52a930b5419f0c2a53aa14c9dc0fba5b404f6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e46a092298ce183212384155492ea73a79ebe86f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="dependency-properties-overview"></a>Introducción a las propiedades de dependencia
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C#, o Visual Basic junto con definiciones XAML para la interfaz de usuario.
 
@@ -35,7 +32,7 @@ El propósito de las propiedades de dependencia es proporcionar un modo sistémi
 -   Plantillas de usos múltiples como recursos y estilos
 -   Valores que se conocen a través de relaciones de elementos principales y secundarios con otros elementos del árbol de objetos
 
-Una propiedad de dependencia representa o admite una característica específica del modelo de programación para definir una aplicación de Windows Runtime con XAML para la interfaz de usuario, y C#, Microsoft Visual Basic o extensiones de componente Visual C++ (C++/CX) para el código. Entre estas funciones se incluyen:
+Una propiedad de dependencia representa o admite una característica específica del modelo de programación para definir una aplicación de Windows Runtime con XAML para la interfaz de usuario, y C#, MicrosoftVisual Basic o extensiones de componente Visual C++ (C++/CX) para el código. Entre estas funciones se incluyen:
 
 -   Enlace de datos
 -   Estilos
@@ -56,7 +53,7 @@ Este es un resumen de la terminología que usamos en esta documentación cuando 
 |------|-------------|
 | Propiedad de dependencia | Una propiedad que existe en un identificador [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) (consulta más adelante). Generalmente, este identificador se encuentra disponible como miembro estático de la clase derivada **DependencyObject** de definición. |
 | Identificador de propiedad de dependencia | Un valor constante para identificar la propiedad; normalmente es público y de solo lectura. |
-| Contenedor de propiedades | Las implementaciones **get** y **set** que se pueden llamar de una propiedad de Windows Runtime. O bien, la proyección específica del lenguaje de la definición original. Una implementación del contenedor de propiedades **get** llama a [**GetValue**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.getvalue.aspx) y pasa el identificador de la propiedad de dependencia correspondiente. | 
+| Contenedor de propiedades | Las implementaciones **get** y **set** que se pueden llamar de una propiedad de Windows Runtime. O bien, la proyección específica del lenguaje de la definición original. Una implementación del contenedor de propiedades **get** llama a [**GetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.getvalue.aspx) y pasa el identificador de la propiedad de dependencia correspondiente. | 
 
 El contenedor de propiedades no solo es práctico para los llamadores, sino que también expone la propiedad de dependencia a cualquier proceso, herramienta o proyección que use definiciones de Windows Runtime para propiedades.
 
@@ -164,7 +161,7 @@ Tanto en código como en XAML, recuerda que [**DataContext**](https://msdn.micro
 
 Conectar el enlace no es lo único que se necesita en la mayoría de casos de enlace de datos. Para que el enlace unidireccional o bidireccional sea efectivo, la propiedad de origen debe admitir notificaciones de cambio que se propaguen al sistema de enlace y, por consiguiente, al destino. En el caso de orígenes de enlace personalizados, esto significa que la propiedad debe ser una propiedad de dependencia o el objeto debe admitir [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx). Las colecciones deben admitir [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx). Ciertas clases admiten estas interfaces en sus implementaciones para que sean útiles como clases base en escenarios de enlace de datos; un ejemplo de dicha clase es [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx). Para obtener más información sobre el enlace de datos y la forma en que se relaciona con el sistema de propiedades, consulta [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-**Nota**  Los tipos que se enumeran aquí admiten orígenes de datos de Microsoft .NET. Los orígenes de datos de C++/CX usan interfaces diferentes para las notificaciones de cambios o un comportamiento observable. Consulta la sección [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Nota**  Los tipos que se enumeran aquí admiten orígenes de datos de Microsoft.NET. Los orígenes de datos de C++/CX usan interfaces diferentes para las notificaciones de cambios o un comportamiento observable. Consulta la sección [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### <a name="styles-and-templates"></a>Estilos y plantillas
 
@@ -186,7 +183,7 @@ El principio de máquina de estado se expresa mediante el uso de animaciones con
 
 El comportamiento modificado por la propiedad es uno de los principales motivos de la parte "de dependencia" del término propiedad de dependencia. Mantener valores válidos para una propiedad cuando otra propiedad puede influir en el valor de la primera es un problema de desarrollo difícil en muchas plataformas. En el sistema de propiedades de Windows Runtime, cada propiedad de dependencia puede especificar que se invoque una devolución de llamada siempre que cambie el valor de su propiedad. Esta devolución de llamada se puede usar para notificar o cambiar los valores relacionados con la propiedad de una manera generalmente sincrónica. Muchas propiedades de dependencia existentes tienen un comportamiento modificado por la propiedad. También puedes agregar un comportamiento de devolución de llamada similar a las propiedades de dependencia personalizadas e implementar tus propias devoluciones de llamadas modificadas por la propiedad. Consulta un ejemplo en [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
 
-Windows 10 incorpora el método [**RegisterPropertyChangedCallback**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx). Esto permite que el código de la aplicación registre notificaciones de cambio cuando se cambia la propiedad de dependencia especificada en una instancia de [**DependencyObject**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.aspx).
+Windows 10 incorpora el método [**RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx). Esto permite que el código de la aplicación registre notificaciones de cambio cuando se cambia la propiedad de dependencia especificada en una instancia de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.aspx).
 
 ### <a name="default-value-and-clearvalue"></a>Valor predeterminado y **ClearValue**
 
@@ -212,5 +209,4 @@ Los aspectos de subprocesos de [**DependencyObject**](https://msdn.microsoft.com
 **API relacionadas con propiedades de dependencia**
 * [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
 * [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)
-
 

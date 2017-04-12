@@ -2,13 +2,11 @@
 author: JordanEllis6809
 title: 'Unity: Control de versiones del proyecto para UWP'
 description: Control de versiones del proyecto para UWP.
-translationtype: Human Translation
-ms.sourcegitcommit: a1b759b00e35092323b8c4634907dd5c0fffa68c
 ms.openlocfilehash: 3b796c31e6b284cea628ba68a34799cf9317ee2e
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# Unity: Control de versiones del proyecto para UWP
+# <a name="unity-version-control-your-uwp-project"></a>Unity: Control de versiones del proyecto para UWP
 
 ¿Todavía no has compilado tu juego Unity para Xbox con la Plataforma universal de Windows (UWP)?  Como primer paso, consulta el documento [Llevar los juegos Unity a UWP en Xbox](development-lanes-unity.md).
 
@@ -46,7 +44,7 @@ Vamos a seleccionar unos cuantos archivos y carpetas diferentes de la carpeta **
 
 ![Directorio de compilación de UWP](images/uwp-build-directory.png)  
 
-## Carpetas  
+## <a name="folders"></a>Carpetas  
 
 `Assets` | ***Incluir*** | Contiene imágenes de la Tienda Windows.  
 `Data`   | ***Omitir*** | La ubicación donde Unity compila el proyecto (escenas, sombreadores, scripts, prefabs, etc.).  
@@ -54,7 +52,7 @@ Vamos a seleccionar unos cuantos archivos y carpetas diferentes de la carpeta **
 `Properties` | ***Incluir*** | Contiene valores de configuración más avanzados que el desarrollador puede modificar.  
 `Unprocessed` | ***Omitir*** | Contiene los archivos `.dll` y `.pdb` de Unity.  
 
-## Archivos  
+## <a name="files"></a>Archivos  
 
 `App.cs` | ***Incluir*** | El punto de entrada de la aplicación para UWP. Se puede modificar y ampliar con otros archivos de origen.  
 `Package.appxmanifest` | ***Incluir*** | El manifiesto del paquete para tu AppX.  
@@ -62,7 +60,7 @@ Vamos a seleccionar unos cuantos archivos y carpetas diferentes de la carpeta **
 `ScrapyardPhoenix.csproj` | ***Incluir*** | Describe el destino de la compilación para UWP. Si agregas dependencias adicionales al proyecto para UWP, este archivo `*.csproj` contendrá dicha información.  
 `ScrapyardPhoenix.csproj.user` | ***Omitir*** | Este archivo contiene información sobre el usuario local.
 
-## Archivo .gitignore resultante
+## <a name="resulting-gitignore"></a>Archivo .gitignore resultante
 
     ##################################################################
     # The original .gitignore file can be found at
@@ -88,7 +86,7 @@ Y ya está; ahora tus compañeros de equipo estarán sincronizados con el proyec
 
 Puedes encontrarse algunos otros ejemplos de control de versiones de la carpeta UWP en [estos ejemplos](https://bitbucket.org/Unity-Technologies/windowsstoreappssamples/overview).
 
-## Agregar dependencias a tu aplicación para UWP
+## <a name="adding-dependencies-to-your-uwp-app"></a>Agregar dependencias a tu aplicación para UWP
 
 Para agregar dependencias a archivos DLL y WINMD, colócalos en la carpeta **Assets** (Activos) de Unity en la carpeta **Plugins** (Complementos), luego selecciónalos y establece su configuración de plataforma de destino adecuadamente en el Inspector.
 
@@ -96,12 +94,6 @@ Para agregar dependencias a archivos DLL y WINMD, colócalos en la carpeta **Ass
 
 ***ScrapyardPhoenix (Universal Windows)*** es el proyecto al que agregarías una referencia, por ejemplo, el SDK de Xbox Live.
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 - [Llevar los juegos existentes a Xbox](development-lanes-landing.md)
 - [UWP en Xbox One](index.md)
-
-
-
-<!--HONumber=Aug16_HO4-->
-
-

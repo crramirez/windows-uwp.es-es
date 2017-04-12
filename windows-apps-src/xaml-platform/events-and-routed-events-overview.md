@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f3bb487619d7ab1a800224f40ce5eb63ae5d915b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d01cabe3b92e3a1e4df0062334a6c7a1d54beaac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="events-and-routed-events-overview"></a>Introducción a eventos y eventos enrutados
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
@@ -38,7 +35,7 @@ Cuando usas C#, Visual Basic o C++/CX como lenguaje de programación, la interfa
 
 Una de las tareas de programación más comunes de una aplicación de Windows Runtime es capturar la entrada del usuario en la interfaz de usuario. Por ejemplo, la interfaz de usuario podría tener un botón en el que el usuario deba hacer clic para enviar información o cambiar el estado.
 
-La interfaz de usuario de la aplicación de Windows Runtime se define al generar el código XAML. Este XAML suele ser el resultado de una superficie de diseño en Visual Studio. Asimismo, el código XAML también se puede escribir en un editor de texto sin formato o en un editor XAML de terceros. Mientras generas ese código XAML, puedes conectar controladores de eventos para elementos individuales de la interfaz de usuario y, al mismo tiempo, definir todos los demás atributos XAML que establecen los valores de propiedad de ese elemento de la interfaz de usuario.
+La interfaz de usuario de la aplicación de Windows Runtime se define al generar el código XAML. Este XAML suele ser el resultado de una superficie de diseño en VisualStudio. Asimismo, el código XAML también se puede escribir en un editor de texto sin formato o en un editor XAML de terceros. Mientras generas ese código XAML, puedes conectar controladores de eventos para elementos individuales de la interfaz de usuario y, al mismo tiempo, definir todos los demás atributos XAML que establecen los valores de propiedad de ese elemento de la interfaz de usuario.
 
 Para conectar eventos en XAML, tienes que especificar el nombre en cadena del método del controlador que ya has definido o que vas a definir más tarde en el código subyacente. Por ejemplo, este XAML define un objeto [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) con otras propiedades ([x:Name attribute](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366)) asignadas como atributos, y conecta un controlador para el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) del botón, mediante una referencia al método `showUpdatesButton_Click`:
 
@@ -260,9 +257,7 @@ La determinación de si un elemento es visible para la entrada táctil, la entra
 -   Si el elemento es un control, el valor de la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) debe ser **true**.
 -   El elemento debe tener dimensiones reales en el diseño. Un elemento cuyas propiedades [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) y [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) tengan un valor 0, no generarán eventos de entrada.
 
-Algunos controles tienen reglas especiales para la prueba de posicionamiento. Por ejemplo, [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) no tiene ninguna propiedad **Background**, pero se puede someter a la prueba de posicionamiento en toda la región de sus dimensiones. [
-              Los controles **Image**](https://msdn.microsoft.com/library/windows/apps/br242752) y [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) se pueden someter a la prueba de posicionamiento según las dimensiones definidas de su rectángulo e independientemente del contenido transparente, como el canal alfa del archivo de origen multimedia que se esté mostrando. [
-              Los controles **WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) tienen un comportamiento especial en la prueba de posicionamiento porque el HTML hospedado puede controlar la entrada y generar eventos de script.
+Algunos controles tienen reglas especiales para la prueba de posicionamiento. Por ejemplo, [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) no tiene ninguna propiedad **Background**, pero se puede someter a la prueba de posicionamiento en toda la región de sus dimensiones. Los controles [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) y [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) se pueden someter a la prueba de posicionamiento según las dimensiones definidas de su rectángulo e independientemente del contenido transparente, como el canal alfa del archivo de origen multimedia que se esté mostrando. Los controles [**WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) tienen un comportamiento especial en la prueba de posicionamiento porque el HTML hospedado puede controlar la entrada y generar eventos de script.
 
 La mayoría de las clases [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) y [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) no se pueden someter a la prueba de posicionamiento en su propio segundo plano, aunque pueden controlar los eventos de entrada de usuario que se enrutan desde los elementos que contienen.
 
@@ -297,5 +292,4 @@ La definición de un evento personalizado suele realizarse como parte del ejerci
 * [Crear componentes de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399)
  
-
 
