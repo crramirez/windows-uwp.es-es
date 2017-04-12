@@ -1,6 +1,6 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Herramientas de Lápiz que se describen"
+Description: "Herramientas de lápiz que se describen"
 title: Controles de entrada manuscrita
 label: Inking Controls
 template: detail.hbs
@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 541f7e8c45190cfd597869ad1040801d368b77e8
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 50c18f0ef72ad990971323921eae282c76c70be3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="inking-controls"></a>Controles de entrada manuscrita
 
@@ -170,4 +168,3 @@ Para ver una muestra de entrada manuscrita más avanzada, consulta la [muestra d
 - [Interacciones de pluma y lápiz en aplicaciones para UWP](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/)
 - [Reconocer trazos de lápiz](http://windowsstyleguide/input-and-devices/convert-ink-to-text/)
 - [Almacenar y recuperar trazos de lápiz](http://windowsstyleguide/input-and-devices/save-and-load-ink/)
-

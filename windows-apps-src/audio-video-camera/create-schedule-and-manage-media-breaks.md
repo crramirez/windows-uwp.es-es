@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8d4e9a87009b50538adac2357badc0a7dfe8f88c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 439d39dab1b628ff484de587f47a3cf9129d639f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-schedule-and-manage-media-breaks"></a>Crear, programar y administrar interrupciones multimedia
 
 En este artículo se muestra cómo crear, programar y administrar las interrupciones multimedia en tu aplicación de reproducción de contenido multimedia. Las interrupciones multimedia se suelen usar para insertar anuncios de audio o vídeo en el contenido multimedia. A partir de Windows 10, versión 1607, puedes usar la clase [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) para agregar interrupciones multimedia a cualquier elemento [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) que reproduzcas con [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) de forma rápida y fácil.
@@ -109,7 +106,6 @@ En el siguiente ejemplo se registra un controlador para **evento BufferingProgre
  
 
  
-
 
 
 

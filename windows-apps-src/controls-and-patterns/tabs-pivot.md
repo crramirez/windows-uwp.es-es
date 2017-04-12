@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Las pestañas y los controles dinámicos permiten a los usuarios navegar entre el contenido al que se accede con frecuencia."
+Description: "Las pestañas y los controles dinámicos permiten a los usuarios navegar entre contenido al que se accede con frecuencia."
 title: "Pestañas y controles dinámicos"
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 93df9051bc0ae724e2c47f5ce5f73da3910c30ce
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 197feb30f769f4e34a576abeb52bd17d4006bb42
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="pivot-and-tabs"></a>Control dinámico y pestañas
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Los controles dinámicos y el patrón de pestañas relacionado se usan para navegar por categorías de contenido diferenciadas a las que se accede con frecuencia. Los elementos dinámicos permiten la navegación entre dos o más paneles de contenido y se basan en los encabezados de texto para articular las diferentes secciones de contenido.
+Los controles dinámicos y el patrón de pestañas relacionado se usan para navegar por categorías de contenido distintas a las que se accede con frecuencia. Los elementos dinámicos permiten la navegación entre dos o más paneles de contenido y se basan en los encabezados de texto para articular las diferentes secciones de contenido.
 
 ![Ejemplos de pestañas](images/pivot_Hero_main.png)
 
@@ -143,4 +141,3 @@ Las aplicaciones que tienen un control dinámico e incorporan el subrayado en el
 ## <a name="related-topics"></a>Temas relacionados
 - [Conceptos básicos de diseño de la navegación](../layout/navigation-basics.md)
 - [**Muestra de control dinámico**](http://go.microsoft.com/fwlink/p/?LinkId=619903)
-

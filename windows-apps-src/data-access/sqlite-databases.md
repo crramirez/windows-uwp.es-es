@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, SQLite, base de datos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 70f0ae8d4f67e0b24199d7dd56ddebe5a643fae5
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="sqlite-databases"></a>Bases de datos SQLite
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 SQLite es un motor de bases de datos incrustado sin servidor. En este artículo se explica cómo usar la biblioteca SQLite incluida en el SDK, empaquetar tu propia biblioteca SQLite en una aplicación universal de Windows o crearla desde la fuente.
@@ -95,4 +93,3 @@ Hay seis interfaces para realizar operaciones de bases de datos en estos objetos
  
 
  
-

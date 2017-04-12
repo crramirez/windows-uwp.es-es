@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: eae6c26979f3aa6b1c9fabf217f6a49ed89dd38b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 921af1b7f408bed5f846af631592755d48a37dd4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="keep-the-ui-thread-responsive"></a>Mantener la capacidad de respuesta de los subprocesos de la interfaz de usuario
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo. Esto significa cosas distintas en función de la aplicación. En el caso de algunas aplicaciones, esto se traduce en la necesidad de proporcionar una física más realista, cargar los datos desde el disco o desde la Web con mayor rapidez, presentar escenas complejas y navegar entre páginas velozmente, encontrar direcciones al instante o procesar datos con rapidez. Independientemente del tipo de cálculo, los usuarios quieren que las aplicaciones respondan a sus entrada y que no haya casos en que estas parezcan que dejen de responder mientras “están pensando”.
 
@@ -109,5 +107,4 @@ En este ejemplo, el controlador `NextMove-Click` vuelve a **await** para mantene
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/Mt185599)
-
 

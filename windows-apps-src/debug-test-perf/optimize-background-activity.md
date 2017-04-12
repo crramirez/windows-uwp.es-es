@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 045dfeb4696a4854b114d88da2a2cbb75d621a58
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="optimize-background-activity"></a>Optimizar la actividad en segundo plano
 
 Las aplicaciones universales de Windows deben tener un buen rendimiento en todas las familias de dispositivos por igual. En los dispositivos alimentados por batería, el consumo de energía es un factor determinante en la experiencia global del usuario de la aplicación. Una duración de la batería de todo el día es una característica deseable para todos los usuarios, pero requiere la eficiencia de todo el software instalado en el dispositivo, incluido el tuyo. 
@@ -24,7 +21,7 @@ El comportamiento de las tareas en segundo plano es posiblemente el factor más 
 
 ## <a name="background-activity-allowance"></a>Permiso para la actividad en segundo plano
 
-En Windows 10, versión 1607, los usuarios pueden ver el "Uso de batería por aplicación" en la sección **Batería** de la aplicación Configuración. Allí verán una lista de aplicaciones y el porcentaje de la duración de la batería (de la cantidad de duración de la batería que se ha gastado desde la última carga) que cada aplicación ha consumido. 
+En Windows10, versión 1607, los usuarios pueden ver el "Uso de batería por aplicación" en la sección **Batería** de la aplicación Configuración. Allí verán una lista de aplicaciones y el porcentaje de la duración de la batería (de la cantidad de duración de la batería que se ha gastado desde la última carga) que cada aplicación ha consumido. 
 
 ![uso de batería por aplicación](images/battery-usage-by-app.png)
 
@@ -56,5 +53,4 @@ Asegúrate de probar tu aplicación en dispositivos reales para los escenarios d
 
 * [Crear y registrar una tarea en segundo plano fuera del proceso](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
 * [Planificación del rendimiento](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
-
 

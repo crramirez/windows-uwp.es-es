@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 42cb565c9cb1592d90d9f46d2faf783117d0a8bd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 39418d553eceb6b38d9b0cecc633c984f38465b9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="choose-a-notification-delivery-method"></a>Elegir un método de entrega de notificaciones
 
@@ -75,7 +73,7 @@ Esta tabla resume los tipos de entrega de notificaciones.
 <td align="left">Icono, distintivo</td>
 <td align="left">Notificaciones que actualizan regularmente los iconos y los distintivos a intervalos fijos mediante el sondeo del servicio de nube para detectar el contenido nuevo.</td>
 <td align="left"><ul>
-<li>Una aplicación de pronóstico del tiempo actualiza su icono cada 30 minutos para indicar el pronóstico del tiempo.</li>
+<li>Una aplicación de pronóstico del tiempo actualiza su icono cada 30minutos para indicar el pronóstico del tiempo.</li>
 <li>Un sitio de &quot;ofertas diarias&quot; actualiza la oferta del día todas las mañanas.</li>
 <li>Un icono que muestra los días que faltan para un evento actualiza la cuenta atrás mostrada cada día a medianoche.</li>
 </ul></td>
@@ -172,7 +170,6 @@ Para más información, consulta lo siguiente:
  
 
  
-
 
 
 

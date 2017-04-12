@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 5d98b5366160ca52c02330a05e8b8d749e2296bd
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="audio-graphs"></a>Gráficos de audio
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artículo muestra cómo usar las API en el espacio de nombres [**Windows.Media.Audio**](https://msdn.microsoft.com/library/windows/apps/dn914341) para crear gráficos para escenarios de enrutamiento, mezcla y procesamiento de audio.
@@ -47,7 +44,7 @@ API de gráficos de audio de Windows Runtime:
 -   Son significativamente más fáciles de usar que XAudio2.
 -   Pueden usarse desde C#, además de ser compatibles con C++.
 -   Pueden usar archivos de audio directamente, incluidos formatos de archivo comprimido. XAudio2 solo funciona en búferes de audio y no proporciona ninguna funcionalidad de E/S de archivo.
--   Puedes usar la canalización de audio de latencia baja de Windows 10.
+-   Puedes usar la canalización de audio de latencia baja de Windows10.
 -   Admite la conmutación automática de los extremos cuando se usan los parámetros de extremo predeterminados. Por ejemplo, si el usuario cambia del altavoz de un dispositivo a unos auriculares, el audio se redirige automáticamente a la entrada nueva.
 
 ## <a name="audiograph-class"></a>Clase AudioGraph
@@ -218,12 +215,12 @@ La API de gráfico de audio te permite agregar efectos de audio para cada tipo d
 -   Cada tipo de nodo expone un método **DisableEffectsByDefinition** que deshabilita todos los efectos de la lista **EffectDefinitions** del nodo que se agregaron mediante la definición especificada. **EnableEffectsByDefinition** habilita los efectos con la definición especificada.
 
 ## <a name="spatial-audio"></a>Audio espacial
-A partir de Windows 10, versión 1607, **AudioGraph** admite audio espacial, que te permite especificar la ubicación en el espacio 3D desde la que se emite el audio de cualquier nodo de entrada o de submezcla. También puedes especificar una forma y una dirección en la que se emita el audio y una velocidad que se usará para cambiar el audio del nodo a Doppler, así como definir un modelo de caída que describa cómo se atenuará el audio con la distancia. 
+A partir de Windows10, versión 1607, **AudioGraph** admite audio espacial, que te permite especificar la ubicación en el espacio 3D desde la que se emite el audio de cualquier nodo de entrada o de submezcla. También puedes especificar una forma y una dirección en la que se emita el audio y una velocidad que se usará para cambiar el audio del nodo a Doppler, así como definir un modelo de caída que describa cómo se atenuará el audio con la distancia. 
 
 Para crear un emisor, antes puedes crear una forma en la que el sonido se proyectará desde dicho emisor, que puede ser un cono o una forma omnidireccional. La clase [**AudioNodeEmitterShape**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterShape) proporciona métodos estáticos para crear cada una de estas formas. A continuación, crea un modelo de caída. Esto define cómo disminuye el volumen del audio desde el emisor a medida que aumenta la distancia desde el oyente. El método [**CreateNatural**](https://msdn.microsoft.com/library/windows/apps/mt711740) crea un modelo de caída que emula la caída natural del sonido mediante un modelo disminución de distancia cuadrado. Por último, crea un objeto [**AudioNodeEmitterSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterSettings). Actualmente, este objeto solo se usa para habilitar y deshabilitar la atenuación de Doppler basada en velocidad del audio del emisor. Llama al constructor [**AudioNodeEmitter**](https://msdn.microsoft.com/en-us/library/windows/apps/mt694324.aspx) pasando los objetos de inicialización que acabas de crear. De manera predeterminada, el emisor se coloca en el origen, pero puedes establecer la posición de dicho emisor con la propiedad [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter.Position).
 
 > [!NOTE] 
-> Los emisores del nodo de audio solo pueden procesar audio en formato mono con una frecuencia de muestreo de 48 kHz. Si se intenta usar audio estéreo o audio con una frecuencia de muestreo diferente, se producirá una excepción.
+> Los emisores del nodo de audio solo pueden procesar audio en formato mono con una frecuencia de muestreo de 48kHz. Si se intenta usar audio estéreo o audio con una frecuencia de muestreo diferente, se producirá una excepción.
 
 Asigna el emisor a un nodo de audio cuando lo crees mediante el método de creación sobrecargado correspondiente al tipo de nodo que desees. En este ejemplo, se usa [**CreateFileInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914225) para crear un nodo de entrada de archivos desde un archivo especificado y el objeto [**AudioNodeEmitter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter) que se desee asociar con el nodo.
 
@@ -248,7 +245,6 @@ De manera predeterminada, el audio espacial se calcula mediante el algoritmo de 
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en la Tienda que ayuda a los desarrolladores a diseñar iconos dinámicos y adaptables para Windows 10."
+Description: "Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en la Tienda que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10."
 title: Notifications Visualizer
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
@@ -11,18 +11,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f7269e3fde1f5dbca278b2b9047b392049ee452c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d3594936942a8504d88f33bafccd77d66d9bd299
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="notifications-visualizer"></a>Notifications Visualizer
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en [la Tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos y adaptables para Windows 10.
+Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en [la Tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.
 
 ## <a name="overview"></a>Información general
 

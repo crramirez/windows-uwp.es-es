@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: Permite al usuario establecer un valor de un intervalo determinado.
+Description: Permite al usuario establecer un valor en un intervalo determinado.
 title: Controles deslizantes
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2f00c27ae2248ebe39ed1cf426af640ec9200e73
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 392b0b0acf1443b2260a33bbf389d505f8cc7d0e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="sliders"></a>Controles deslizantes
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Un control deslizante es un control que permite al usuario seleccionar entre un intervalo de valores mediante el movimiento de un control de posición por una pista.
+Un control deslizante es un control que permite que el usuario seleccione entre un intervalo de valores moviendo un control de posición por una pista.
 
 ![Control deslizante](images/controls/slider.png)
 
@@ -180,4 +178,3 @@ Al diseñar un control deslizante personalizado, piensa en la manera de presenta
 ## <a name="related-topics"></a>Temas relacionados
 - [Modificadores para alternar](toggles.md)
 - [**Clase de control deslizante**](https://msdn.microsoft.com/library/windows/apps/br209614)
-

@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d96565479d970bca724614768361ba390ab9d668
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f1941a73937db19394e590026a16a023d025bba2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -496,7 +494,7 @@ Ten en cuenta también que un vector virtualizado puede devolver **null** para a
 
 ## <a name="binding-to-data-grouped-by-a-key"></a>Enlace de datos agrupados por una clave
 
-Si tomas una colección plana de elementos (libros, por ejemplo, representados por una clase **BookSku**) y agrupas los elementos mediante una propiedad común, como una clave (la propiedad **BookSku.AuthorName**, por ejemplo), a continuación, el resultado se denomina datos agrupados. Al agrupar los datos, ya no es una colección plana. Los datos agrupados son una colección de objetos de grupo, en la que cada objeto de grupo tiene (a) una clave y (b) una colección de elementos cuya propiedad coincide con dicha clave. Para realizar el ejemplo de libros de nuevo, el resultado de agrupar los libros por nombre del autor genera una colección de grupos de nombre del autor donde cada grupo tiene (a) una clave, que es un nombre de autor, y (b) una colección de clases **BookSku** cuya propiedad **AuthorName** coincide con la clave del grupo.
+Si tomas una colección plana de elementos (libros, por ejemplo, representados por una clase **BookSku**) y agrupas los elementos mediante una propiedad común, como una clave (la propiedad **BookSku.AuthorName**, por ejemplo), a continuación, el resultado se denomina datos agrupados. Al agrupar los datos, ya no es una colección plana. Los datos agrupados son una colección de objetos de grupo, en la que cada objeto de grupo tiene (a) una clave y (b) una colección de elementos cuya propiedad coincide con dicha clave. Para realizar el ejemplo de libros de nuevo, el resultado de agrupar los libros por nombre del autor genera una colección de grupos de nombre del autor donde cada grupo tiene (a)una clave, que es un nombre de autor, y (b)una colección de clases **BookSku** cuya propiedad **AuthorName** coincide con la clave del grupo.
 
 En general, para mostrar una colección, enlazas el [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828) de un control de elementos (como [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) o [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)) directamente a una propiedad que devuelve una colección. Si es una colección de elementos plana no necesitas hacer nada especial. Pero si es una colección de objetos de grupo (como al enlazar a datos agrupados), a continuación, necesitas los servicios de un objeto intermediario llamado [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), que se encuentra entre el control de elementos y el origen del enlace. Enlaza el **CollectionViewSource** a la propiedad que devuelve datos agrupados y enlaza el control de elementos a **CollectionViewSource**. Un valor agregado adicional de un **CollectionViewSource** es que realiza el seguimiento del elemento actual, para poder mantener más de un control de elementos sincronizados al enlazarlos todos al mismo **CollectionViewSource**. Puedes acceder también al elemento actual mediante programación a través de la propiedad [**ICollectionView.CurrentItem**](https://msdn.microsoft.com/library/windows/apps/BR209857) del objeto devuelto por la propiedad [**CollectionViewSource.View**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.collectionviewsource.view).
 
@@ -655,6 +653,5 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | Origen | No se admite | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Para {x: enlace} usa una propiedad o una ruta de acceso estático. | 
 | Modo | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | El modo puede ser OneTime, OneWay o TwoWay. {x: enlace} el valor predeterminado es OneTime; {Binding} predeterminado OneWay. | 
 | UpdateSourceTrigger | No se admite | `<Binding UpdateSourceTrigger="Default [or] PropertyChanged [or] Explicit"/>` | {x: enlace} usa PropertyChanged comportamiento para todos los casos excepto TextBox.Text donde espera pierde foco actualizar el origen. | 
-
 
 

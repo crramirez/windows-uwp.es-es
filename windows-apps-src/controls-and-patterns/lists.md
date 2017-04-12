@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Muestra listas y habilita la interacción con el contenido basado en la colección."
+Description: "Mostrar listas y habilitar la interacción con el contenido basado en la colección."
 title: Listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f6df625d9eaab9db1bd3aed96d3f07160001ae70
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4c17bab575be207106abfac44104bb32bcffd6ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="lists"></a>Listas
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Muestra listas y habilita la interacción con el contenido basado en la colección. Los cuatro patrones de lista tratados en este artículo son:
+Mostrar listas y habilitar la interacción con el contenido basado en la colección. Los cuatro patrones de lista tratados en este artículo son:
 
 -   Vistas de lista, que se usan principalmente para mostrar colecciones de contenido con mucho texto
 -   Vistas de cuadrícula, que se usan principalmente para mostrar colecciones de contenido con muchas imágenes
@@ -59,7 +57,7 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 
 ### <a name="recommendations"></a>Recomendaciones
 
--   Los elementos de una lista deben tener el mismo comportamiento.
+-   Los elementos dentro de una lista deben tener el mismo comportamiento.
 -   Si tu lista está dividida en grupos, puedes usar el [zoom semántico](semantic-zoom.md), que facilita a los usuarios la navegación por los contenidos agrupados.
 
 ### <a name="list-view-articles"></a>Artículos de vista de lista
@@ -263,4 +261,3 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 - [**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)
 - [**Clase ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)
 - [**Clase ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868)
-

@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: Estos son los elementos y los atributos que usas para crear iconos adaptables.
+Description: Estos son los elementos y atributos que usas para crear iconos adaptables.
 title: Plantillas y esquema de iconos adaptables
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive tile schema and templates
@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 47f40261b3829400c06c4ff071404e5d06cdbf7d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 17d3d310ed1dbefb9fbe9c248db4533a6f760066
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="adaptive-tile-templates-schema-and-guidance"></a>Plantillas de iconos adaptables: esquema e instrucciones
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Estos son los elementos y los atributos que usas para crear iconos adaptables. Para obtener instrucciones y ejemplos, consulta [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md).
+Estos son los elementos y atributos que usas para crear iconos adaptables. Para obtener instrucciones y ejemplos, consulta [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md).
 
 ## <a name="tile-element"></a>icono de ventana
 
@@ -147,7 +145,6 @@ Valores de textStyle: caption captionSubtle body bodySubtle base baseSubtle subt
  
 
  
-
 
 
 

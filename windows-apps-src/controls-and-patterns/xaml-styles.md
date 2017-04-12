@@ -8,12 +8,11 @@ title: Estilos XAML
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: XAML styles
 template: detail.hbs
-translationtype: Human Translation
-ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
 ms.openlocfilehash: d12358e6fcab2afa039426532d47616d74b22ef4
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# Estilos XAML
+# <a name="xaml-styles"></a>Estilos XAML
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -21,7 +20,7 @@ ms.openlocfilehash: d12358e6fcab2afa039426532d47616d74b22ef4
 
 El marco XAML te permite personalizar la apariencia de tus aplicaciones de varias maneras. Los estilos te permiten establecer propiedades de control y reusar esa configuración para mantener un aspecto uniforme en varios controles.
 
-## Conceptos básicos de estilos
+## <a name="style-basics"></a>Conceptos básicos de estilos
 
 Los estilos te permiten extraer opciones de configuración de propiedades visuales en recursos reutilizables. Este es un ejemplo que muestra 3 botones con un estilo que establece las propiedades [**BorderBrush**](https://msdn.microsoft.com/library/windows/apps/br209397), [**BorderThickness**](https://msdn.microsoft.com/library/windows/apps/br209399) y [**Primer plano**](https://msdn.microsoft.com/library/windows/apps/br209414). Al aplicar un estilo, puedes hacer que todos los controles tengan el mismo aspecto no tener que establecer estas propiedades en cada control de manera independiente.
 
@@ -58,7 +57,7 @@ Cada elemento [**Establecedor**](https://msdn.microsoft.com/library/windows/apps
 </StackPanel>
 ```
 
-## Aplicar un estilo implícito o explícito
+## <a name="apply-an-implicit-or-explicit-style"></a>Aplicar un estilo implícito o explícito
 
 Si defines un estilo como un recurso, puedes aplicarlo a los controles de dos maneras:
 
@@ -103,7 +102,7 @@ En este ejemplo, el primer estilo tiene un atributo [x:Key](../xaml-platform/x-k
 </Grid>
 ```
 
-## Usar estilos heredados
+## <a name="use-based-on-styles"></a>Usar estilos heredados
 
 Para crear estilos que sean más fáciles de mantener y optimizar la reutilización de estilos, puedes crear estilos que hereden de otros estilos. Usa la propiedad [**BasedOn**](https://msdn.microsoft.com/library/windows/apps/br208852) para crear estilos heredados. Los estilos que heredan de otros estilos deben apuntar al mismo tipo de control o a uno que derive del tipo al que apunta el estilo base. Por ejemplo, si un estilo base apunta a [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/br209365), los estilos que estén basados en este estilo pueden apuntar a **ContentControl** o a tipos que deriven de **ContentControl**, como [**Botón**](https://msdn.microsoft.com/library/windows/apps/br209265) y [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527). Si no se establece un valor en el estilo heredado, se hereda del estilo base. Para cambiar un valor del estilo base, el estilo heredado invalida ese valor. En el siguiente ejemplo se muestra un **Botón** y una [**Casilla**](https://msdn.microsoft.com/library/windows/apps/br209316) con estilos heredados del mismo estilo base.
 
@@ -139,11 +138,11 @@ El estilo base apunta a [**ContentControl**](https://msdn.microsoft.com/library/
 </StackPanel>
 ```
 
-## Usar herramientas para trabajar con estilos fácilmente
+## <a name="use-tools-to-work-with-styles-easily"></a>Usar herramientas para trabajar con estilos fácilmente
 
 Una manera rápida de aplicar estilos a los controles es hacer clic con el botón secundario en un control de la superficie de diseño XAML de Microsoft Visual Studio y seleccionar **Editar estilo** o **Editar plantilla** (según el control en el que estás haciendo clic con el botón secundario). Después, puedes aplicar un estilo existente si seleccionas **Aplicar recurso** o definir un estilo nuevo si seleccionas **Crear vacío**. Si creas un estilo vacío, tienes la opción de definirlo en la página, en el archivo App.xaml o en un diccionario de recursos independiente.
 
-## Estilos ligeros
+## <a name="lightweight-styling"></a>Estilos ligeros
 
 Por norma general, los pinceles del sistema se reemplazan en el nivel de página o aplicación y, en cualquier caso, la sustitución afectará a todos los controles que hacen referencia a ese pincel; además, en XAML, muchos controles pueden hacer referencia el mismo pincel del sistema.
 
@@ -167,7 +166,7 @@ Para estados como PointerOver (se sitúa el mouse sobre el botón), **PointerPre
 
 Al colocar estos reemplazos de pincel en el nivel de **recursos de la aplicación**, se modificarán todos los botones de toda la aplicación, en lugar de en una sola página.
 
-### Estilos según el control
+### <a name="per-control-styling"></a>Estilos según el control
 
 En otros casos se desea modificar un solo control de una página para que tenga un aspecto determinado, sin alterar ninguna otra versión de ese control:
 
@@ -200,16 +199,10 @@ En otros casos se desea modificar un solo control de una página para que tenga 
 
 Esto solo afectaría a esa "casilla especial" en la página donde estuviera el control.
 
-## Modificar los estilos predeterminados del sistema
+## <a name="modify-the-default-system-styles"></a>Modificar los estilos predeterminados del sistema
 
 Debes usar los estilos que vienen con los recursos XAML predeterminados de Windows Runtime cada vez que puedas. Cuando tengas que definir tus propios estilos, intenta basarte en los predeterminados siempre que sea posible (para ello, usa estilos heredados como se explicó antes o empieza a editar una copia del estilo predeterminado original).
 
-## La propiedad Template
+## <a name="the-template-property"></a>La propiedad Template
 
 Se puede usar un establecedor de estilo para la propiedad [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465) de [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) y, de hecho, esto conforma la mayor parte de un estilo XAML típico y los recursos XAML de una aplicación. Esto se explica con más detalle en el tema [Plantillas de control](control-templates.md).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
-

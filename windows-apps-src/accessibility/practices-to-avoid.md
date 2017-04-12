@@ -1,6 +1,6 @@
 ---
 author: Xansky
-Description: "Enumera los procedimientos que deben evitarse si quieres crear una aplicación accesible para la Plataforma universal de Windows (UWP)."
+Description: "Enumera los procedimientos a evitar si quieres crear una aplicación accesible para la Plataforma universal de Windows (UWP)."
 ms.assetid: 024A9B70-9821-45BB-93F1-61C0B2ECF53E
 title: Procedimientos de accesibilidad que deben evitarse
 label: Accessibility practices to avoid
@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 27e91fad32818a920f393cba703773ea7fddcf0d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1e8d436e38125378053b92f75f1b2647d7eda8eb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="accessibility-practices-to-avoid"></a>Procedimientos de accesibilidad que deben evitarse
 
@@ -40,4 +38,3 @@ Si quieres crear una aplicación accesible para Plataforma universal de Windows 
 * [Accesibilidad](accessibility.md)
 * [Accesibilidad en la Tienda](accessibility-in-the-store.md)
 * [Lista de comprobación de accesibilidad](accessibility-checklist.md)
-

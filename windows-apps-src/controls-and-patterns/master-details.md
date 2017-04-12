@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 96f9f9855dba48203e4372cef88d1f6ab7d435f5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d5933eec7b2f34b2c5939bb083113dfd3a1f965d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="masterdetails-pattern"></a>Patrón de maestro y detalles
 
@@ -39,8 +37,8 @@ Al implementar el patrón de maestro y detalles, te recomendamos que uses el est
 
 | Ancho de ventana disponible | Estilo recomendado |
 |------------------------|-------------------|
-| 320 epx - 719 epx        | Apilado           |
-| 720 epx o más ancho       | En paralelo      |
+| 320epx - 719epx        | Apilado           |
+| 720epx o más ancho       | En paralelo      |
 
  
 ## <a name="stacked-style"></a>Estilo apilado
@@ -95,4 +93,3 @@ Para obtener un código de ejemplo que muestre el patrón de maestro y detalles,
 - [Buscar](search.md)
 - [Barras de la aplicación y de comandos](app-bars.md)
 - [**Clase ListView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
-

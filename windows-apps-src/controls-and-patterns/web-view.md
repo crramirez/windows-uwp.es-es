@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9f7f786007a6e251a76fe5c4fcbad5c81b879c53
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 03b4832b64b044a4fb990fac3b64f61409f959bb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="web-view"></a>Vista web
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -334,7 +332,6 @@ Una vista web que hospeda contenido en el subproceso de la interfaz de usuario n
  
 
  
-
 
 
 

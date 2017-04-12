@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 166e63659d138db2c4a6c49f11a2277eae790529
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ca8910129ba0993597be905a24fb5b2c5c4061a4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="integrate-with-the-system-media-transport-controls"></a>Integrar con los controles de transporte de contenido multimedia del sistema
 
-En este artículo se muestra cómo interactuar con los controles de transporte multimedia del sistema (SMTC). Los SMTC son un conjunto de controles comunes para todos los dispositivos de Windows 10 que proporcionan un modo coherente para que los usuarios controlen la reproducción multimedia de todas las aplicaciones en ejecución que usan [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) para la reproducción.
+En este artículo se muestra cómo interactuar con los controles de transporte multimedia del sistema (SMTC). Los SMTC son un conjunto de controles comunes para todos los dispositivos de Windows10 que proporcionan un modo coherente para que los usuarios controlen la reproducción multimedia de todas las aplicaciones en ejecución que usan [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) para la reproducción.
 
 Para obtener una muestra completa que demuestre la integración con los SMTC, consulta la [muestra de controles de transporte multimedia del sistema en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls).
                     
@@ -86,7 +83,6 @@ Como se mencionó anteriormente en este artículo, los SMTC detectarán y mostra
  
 
  
-
 
 
 

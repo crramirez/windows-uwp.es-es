@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Un icono es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación para la Plataforma universal de Windows (UWP) en Microsoft Visual Studio, este incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación."
+Description: "Un icono es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación para la Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación."
 title: Iconos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 11640527ffdb6883885345646310e5e4b786ad2b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e0fccee6ede019b6bb8d8792956d2dca791bf63b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="tiles-for-uwp-apps"></a>Iconos de aplicaciones para UWP
 
@@ -104,7 +102,6 @@ Cuando se instale la aplicación, puedes usar las notificaciones para personaliz
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: normesta
-description: "Muestra cómo agregar la aplicación junto a las acciones en una tarjeta de contacto."
+description: "Muestra cómo agregar la aplicación junto a las acciones en una tarjeta de contacto"
 MSHAttr: PreferredLib:/library/windows/apps
 title: "Conectar la aplicación a acciones en una tarjeta de contacto"
 ms.author: normesta
@@ -10,13 +10,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, contactos, tarjeta de contacto, anotación, contacts, contact card, annotation"
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: da64e23714035b6763104d48430371469272a939
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e882566fcc81941669dd4844235bcbd899ea3079
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>Conectar la aplicación a acciones en una tarjeta de contacto
 
 La aplicación puede aparecer junto a acciones en una tarjeta de contacto o una minitarjeta de contacto. Los usuarios pueden elegir tu aplicación para realizar una acción, como abrir una página de perfil, realizar una llamada o enviar un mensaje.
@@ -186,11 +183,11 @@ Igual que la tarjeta de contacto, cada pestaña recuerda la aplicación que el u
 
 Invalida el método [Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330) en el archivo **App.cs** y navega por los usuarios a una página de la aplicación. La [muestra de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration) muestra una manera de hacerlo.
 
-En el archivo de código subyacente de la página, invalida el método [Page.OnNavigatedTo](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page.onnavigatedto.aspx). La tarjeta de contacto pasa este método, el nombre de la operación y el identificador del usuario.
+En el archivo de código subyacente de la página, invalida el método [Page.OnNavigatedTo](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.onnavigatedto.aspx). La tarjeta de contacto pasa este método, el nombre de la operación y el identificador del usuario.
 
 Para iniciar una llamada de audio o vídeo, consulta la [muestra de VoIP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). Encontrarás la API completa en el espacio de nombres [WIndows.ApplicationModel.Calls](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.calls.aspx).
 
-Para facilitar la mensajería, consulta el espacio de nombres [Windows.ApplicationModel.Chat](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.chat.aspx).
+Para facilitar la mensajería, consulta el espacio de nombres [Windows.ApplicationModel.Chat](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.aspx).
 
 También puedes iniciar otra aplicación. Eso es lo que hace este código.
 
@@ -217,4 +214,3 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 ```
 
 La propiedad ```args.uri.scheme``` contiene el nombre de la operación y la propiedad ```args.uri.Query``` contiene el identificador del usuario.
-

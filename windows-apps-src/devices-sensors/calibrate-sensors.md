@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8c02d9ed6e0612e0b89236b3fdb387e8ac3a5488
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d67146cd0382032eddf8cfe1b47f9348727cb79a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="calibrate-sensors"></a>Calibrar los sensores
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -35,4 +33,3 @@ La enumeración [**MagnetometerAccuracy**](https://msdn.microsoft.com/library/wi
 ## <a name="how-to-calibrate-the-magnetometer"></a>Calibración del magnetómetro
 
 En el siguiente vídeo breve se ofrece información general sobre la calibración del magnetómetro.<iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/727bd0e3-9116-49c3-8af6-0b4339324b71/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">Un minuto para el desarrollador: calibración de sensores</iframe>
-

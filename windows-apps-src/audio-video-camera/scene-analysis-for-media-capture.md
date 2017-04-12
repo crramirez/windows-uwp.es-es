@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
-description: "En este artículo se describe cómo usar las clases SceneAnalysisEffect y FaceDetectionEffect para analizar el contenido de la secuencia de vista previa en las capturas de multimedia."
+description: "En este artículo se describe cómo usar las clases SceneAnalysisEffect y FaceDetectionEffect para analizar el contenido de la secuencia de vista previa de captura de multimedia."
 title: "Efectos para analizar fotogramas de cámara"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c7f46130feac43211bccf57191d940acb8198965
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3fc55919942c1edc82f7c2e5da2608b5f1b1445b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="effects-for-analyzing-camera-frames"></a>Efectos para analizar fotogramas de cámara
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo usar las clases [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) y [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) para analizar el contenido de la secuencia de vista previa de captura de multimedia.
@@ -124,7 +121,6 @@ No todos los dispositivos tienen un dispositivo de captura que puede ajustar el 
  
 
  
-
 
 
 

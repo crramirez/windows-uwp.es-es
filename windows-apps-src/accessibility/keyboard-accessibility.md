@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9b1261de60bf0a45940fe9a284d8a5276b42e0a3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b41e7a03d3ca2ac6d146ed706421699dc66066a3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="keyboard-accessibility"></a>Accesibilidad de teclado  
 
 
@@ -233,8 +230,8 @@ Ten en cuenta que solo uno de los estados con nombre ajusta la propiedad [**Visi
 <span id="Keyboard_accessibility_and_Windows_Phone"/>
 <span id="keyboard_accessibility_and_windows_phone"/>
 <span id="KEYBOARD_ACCESSIBILITY_AND_WINDOWS_PHONE"/>
-## <a name="keyboard-accessibility-and-windows-phone"></a>Accesibilidad de teclado y Windows Phone
-Por lo general, un dispositivo de Windows Phone carece de un teclado de hardware dedicado. Sin embargo, un panel de entrada de software (SIP) puede dar cabida a diversos escenarios de accesibilidad de teclado. Los lectores de pantalla pueden leer entradas de texto desde el SIP de **Texto** e incluso advertir de posibles eliminaciones. Los usuarios podrán saber dónde están sus dedos porque el lector de pantalla es capaz de detectar que el usuario está examinando las teclas, de modo que lee en voz alta el nombre de la tecla examinada. De igual modo, algunos de los conceptos de accesibilidad relativos al teclado se pueden asignar a determinados comportamientos de tecnología de asistencia en los que no se usa el teclado en absoluto. Por ejemplo, incluso si un SIP no incluye una tecla TAB, el Narrador admite un gesto táctil que equivale a presionar dicha tecla, de modo que disponer de un orden de tabulación útil de los controles de una interfaz de usuario sigue siendo un principio de accesibilidad de gran importancia. Las teclas de dirección para navegar por los elementos de controles complejos también se pueden usar como gestos táctiles en el Narrador. Cuando el foco llega a un control que no está destinado a la entrada de texto, Narrador admite un gesto con el que se invoca la acción de dicho control.
+## <a name="keyboard-accessibility-and-windows-phone"></a>Accesibilidad de teclado y WindowsPhone
+Por lo general, un dispositivo de WindowsPhone carece de un teclado de hardware dedicado. Sin embargo, un panel de entrada de software (SIP) puede dar cabida a diversos escenarios de accesibilidad de teclado. Los lectores de pantalla pueden leer entradas de texto desde el SIP de **Texto** e incluso advertir de posibles eliminaciones. Los usuarios podrán saber dónde están sus dedos porque el lector de pantalla es capaz de detectar que el usuario está examinando las teclas, de modo que lee en voz alta el nombre de la tecla examinada. De igual modo, algunos de los conceptos de accesibilidad relativos al teclado se pueden asignar a determinados comportamientos de tecnología de asistencia en los que no se usa el teclado en absoluto. Por ejemplo, incluso si un SIP no incluye una tecla TAB, el Narrador admite un gesto táctil que equivale a presionar dicha tecla, de modo que disponer de un orden de tabulación útil de los controles de una interfaz de usuario sigue siendo un principio de accesibilidad de gran importancia. Las teclas de dirección para navegar por los elementos de controles complejos también se pueden usar como gestos táctiles en el Narrador. Cuando el foco llega a un control que no está destinado a la entrada de texto, Narrador admite un gesto con el que se invoca la acción de dicho control.
 
 Los métodos abreviados de teclado no suelen ser relevantes para las aplicaciones Windows Phone, puesto que un SIP carece de teclas Control o ALT.
 
@@ -245,5 +242,4 @@ Los métodos abreviados de teclado no suelen ser relevantes para las aplicacione
 * [Entrada: muestra de teclado táctil](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [Muestra de respuesta a la apariencia del teclado en pantalla](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [Muestra de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
-
 

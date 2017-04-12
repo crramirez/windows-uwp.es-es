@@ -12,17 +12,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 60ab406a5908b1a21c7a0f579664b7632722dd4e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5a2e44448877ddc7906a8d4e41ec9c0b809f9a7e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="custom-video-effects"></a>Efectos de vídeo personalizados
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo crear un componente de Windows Runtime que implemente la interfaz [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) para permitir la creación de efectos personalizados para las secuencias de vídeo. Se pueden usar efectos personalizados con distintas API de Windows Runtime, como [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), que proporciona acceso a la cámara del dispositivo, y [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), que permite crear composiciones complejas a partir de clips multimedia.
@@ -249,7 +246,6 @@ Para obtener instrucciones generales sobre la creación de composiciones multime
 * [Reproducción de contenido multimedia](media-playback.md)
 
  
-
 
 
 

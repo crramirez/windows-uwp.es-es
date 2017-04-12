@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 986c53ce5fa150e92a4b6d1b86da270ebde26fdf
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 904f0982deb596783ae886c26fee03c180d51987
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="text-block"></a>Bloque de texto
 
@@ -183,9 +181,8 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 
 - [Controles de texto](text-controls.md)
 - [Directrices sobre revisión ortográfica](spell-checking-and-prediction.md)
-- [Agregar búsqueda](search.md)
-- [Directrices sobre la entrada de texto](text-controls.md)
+- [Adición de búsqueda](search.md)
+- [Directrices para la entrada de texto](text-controls.md)
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
-

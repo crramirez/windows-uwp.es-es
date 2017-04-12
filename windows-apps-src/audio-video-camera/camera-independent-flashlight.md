@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
-description: "En este artículo se muestra cómo acceder a la luz de un dispositivo y cómo usarla, si la hay. La funcionalidad de lámpara se administra por separado de la cámara del dispositivo y la funcionalidad de flash de la cámara."
+description: "En este artículo se muestra cómo acceder a la luz de un dispositivo y cómo usarla, si la hay. La funcionalidad de luz se administra por separado de la cámara del dispositivo y la funcionalidad de flash de la cámara."
 title: "Linterna independiente de la cámara"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54251b965f94da70614bcd81f70b9af53cb6168d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7777b1b3f72090667f1e75f3c9e23b6adcd9f2d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="camera-independent-flashlight"></a>Linterna independiente de la cámara
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artículo muestra cómo acceder y usar la luz de un dispositivo, si está presente. La funcionalidad de luz se administra por separado de la funcionalidad de cámara y flash de cámara del dispositivo. Además de adquirir una referencia a la luz y ajustar su configuración, este artículo también muestra cómo liberar correctamente el recurso de luz cuando no está en uso y cómo detectar cuándo cambia la disponibilidad de la luz en caso de que la esté usando otra aplicación.
@@ -81,7 +78,6 @@ Cuando ya no uses la luz, debes deshabilitarla y llamar a [**Lamp.Close**](https
 - [Reproducción de contenido multimedia](media-playback.md)
 
  
-
 
 
 

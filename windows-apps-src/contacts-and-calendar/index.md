@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, contactos, calendario, citas, mensajes de correo, contacts, calendar, appointments, email messages
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f0e61f5c586ccd1225fb9e4edf5ab93580cfd043
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 395b9fabd1481715e21ba65151d63f4b7f74a3bc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="contacts-and-calendar"></a>Contactos y calendario
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Puedes permitirle que los usuarios obtengan acceso a los contactos y las citas para que compartan contenido, correos electrónicos, información del calendario o mensajes, o cualquier funcionalidad que diseñes.
 
@@ -26,8 +23,8 @@ Para conocer los distintos modos en que tu aplicación puede obtener acceso a lo
 
 | Tema | Descripción |
 |-------|-------------|
-| [Seleccionar contactos](selecting-contacts.md) | Mediante el espacio de nombres [<strong>Windows.ApplicationModel.Contacts</strong>](https://msdn.microsoft.com/library/windows/apps/BR225002), tienes varias opciones para seleccionar contactos. Aquí te mostraremos cómo seleccionar un único contacto o varios contactos y aprenderás a configurar el selector de contactos para recuperar solamente la información de contacto que necesita tu aplicación. |
-| [Enviar correo electrónico](sending-email.md) | Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrónico para que el usuario pueda enviar un mensaje de correo electrónico. Puedes rellenar previamente los campos del correo electrónico con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario presiona el botón de enviar. |
+| [Seleccionar contactos](selecting-contacts.md) | Mediante el espacio de nombres [<strong>Windows.ApplicationModel.Contacts</strong>](https://msdn.microsoft.com/library/windows/apps/BR225002), tienes varias opciones para seleccionar contactos. Aquí te mostraremos cómo seleccionar un único contacto o varios contactos, y aprenderás a configurar el selector de contactos para recuperar solamente la información de contacto que necesita tu aplicación. |
+| [Enviar correo electrónico](sending-email.md) | Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrónico para que el usuario pueda enviar un mensaje de correo electrónico. Puedes rellenar previamente los campos del correo electrónico con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar. |
 | [Enviar un mensaje SMS](sending-an-sms-message.md) | En este tema se muestra cómo iniciar el cuadro de diálogo de redacción de mensajes SMS para que el usuario pueda enviar un mensaje SMS. Puedes rellenar previamente los campos del SMS con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario presiona el botón de enviar. |
 | [Administrar citas](managing-appointments.md) | Con el espacio de nombres [<strong>Windows.ApplicationModel.Appointments</strong>](https://msdn.microsoft.com/library/windows/apps/Dn263359), puedes crear y administrar citas en la aplicación de calendario de un usuario. Aquí te mostraremos cómo crear una cita, agregarla a la aplicación de calendario, reemplazarla en dicha aplicación y quitarla de ella. También te enseñaremos cómo mostrar un intervalo de tiempo para una aplicación de calendario y crear un objeto de repetición de citas. |
 | [Conectar la aplicación a acciones en una tarjeta de contacto](integrating-with-contacts.md) | Muestra cómo hacer que tu aplicación aparezca junto a acciones en una tarjeta de contacto o una minitarjeta de contacto. Los usuarios pueden elegir tu aplicación para realizar una acción, como abrir una página de perfil, realizar una llamada o enviar un mensaje. |
@@ -41,4 +38,3 @@ Para conocer los distintos modos en que tu aplicación puede obtener acceso a lo
 * [Muestra de una aplicación de selector de contactos](http://go.microsoft.com/fwlink/p/?linkid=231575)
 * [Ejemplo de control de las acciones de contacto](http://go.microsoft.com/fwlink/p/?LinkID=320151)
 * [Ejemplo de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)
-

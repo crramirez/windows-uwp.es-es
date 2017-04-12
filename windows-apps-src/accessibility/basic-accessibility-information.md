@@ -1,6 +1,6 @@
 ---
 author: Xansky
-Description: "La información de accesibilidad básica se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a tu aplicación a exponer la información básica que necesitan las tecnologías de asistencia."
+Description: "La información de accesibilidad básica se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a que tu aplicación exponga la información básica requerida por las tecnologías de asistencia."
 ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
 title: "Exponer información básica de accesibilidad"
 label: Expose basic accessibility information
@@ -11,18 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 123776d100b0308248e6d715d8253b69f700f1d8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fd873b6d1abd4187f1b8ff1d9040da3242c0ee65
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="expose-basic-accessibility-information"></a>Exponer información básica de accesibilidad  
 
 
 
-La información básica de accesibilidad se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a que tu aplicación exponga la información básica requerida por las tecnologías de asistencia.
+La información de accesibilidad básica se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a que tu aplicación exponga la información básica requerida por las tecnologías de asistencia.
 
 <span id="accessible_name"/>
 <span id="ACCESSIBLE_NAME"/>
@@ -150,4 +147,3 @@ Ten en cuenta que las propiedades adjuntas, como las propiedades [**AutomationPr
 * [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)
 * [Muestra de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Pruebas de accesibilidad](accessibility-testing.md)
-

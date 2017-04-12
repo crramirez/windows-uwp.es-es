@@ -2,22 +2,20 @@
 author: mcleblanc
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
 title: "Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles"
-description: "Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos si enlazas controles de elementos a instancias de CollectionViewSource que están enlazadas juntas en una cadena."
+description: "Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de CollectionViewSource que están enlazadas juntas en una cadena."
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 107d4a9778b377370632b6e8d37ad3216858d251
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9f297cdb3fdc90ab7c024bce3aa93db69465c5d3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 > **Nota** Consulta también [Master/detail sample](http://go.microsoft.com/fwlink/p/?linkid=619991).
@@ -228,5 +226,4 @@ Ten en cuenta que mediante un enlace directo al elemento [**CollectionViewSource
  
 
  
-
 

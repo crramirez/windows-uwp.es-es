@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b59a4eb056e36156b847c769778b2609863ec1fc
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9ab3eeeffbab26f5d26d28160a750c50d53b7e96
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Mejora el control del inicio y la activación de la aplicación para crear aplicaciones para la Plataforma universal de Windows (UWP) con tiempo de inicio optimizado.
 
@@ -100,7 +98,7 @@ Mantén tu ruta de acceso de al código de inicio libre de todo lo que no se nec
 
 ### <a name="reduce-element-count"></a>Reducir el número de elementos
 
-El rendimiento de inicio de una aplicación XAML está relacionada directamente con el número de elementos que creas durante el inicio. Cuantos menos elementos crees, menos tiempo tardará la aplicación en iniciarse. Como referencia aproximada, considera la posibilidad de que la creación de cada elemento tarde 1 ms.
+El rendimiento de inicio de una aplicación XAML está relacionada directamente con el número de elementos que creas durante el inicio. Cuantos menos elementos crees, menos tiempo tardará la aplicación en iniciarse. Como referencia aproximada, considera la posibilidad de que la creación de cada elemento tarde 1ms.
 
 -   Las plantillas que se usan en los controles de elementos pueden tener el mayor impacto, ya que se repiten varias veces. Consulta [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md).
 -   Los objetos UserControl y las plantillas de controles se ampliarán, por lo que también deberían tenerse en cuenta.
@@ -272,7 +270,7 @@ Existen varias razones por las cuales se activa una aplicación, cada una de las
 
 Las aplicaciones que muestran una página de carga en el controlador de activación comienzan la tarea de creación de la interfaz de usuario en segundo plano. Una vez creado ese elemento, se produce su evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723). En el controlador de eventos, se reemplaza el contenido de la ventana (que actualmente es la pantalla de carga) con la página principal recién creada.
 
-Es fundamental que una aplicación con un período de inicialización extendido muestre una página de carga. Aparte de proporcionar los comentarios de los usuarios sobre el proceso de activación, el proceso finalizará si no se llama a [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) durante los 15 segundos posteriores al inicio del proceso de activación.
+Es fundamental que una aplicación con un período de inicialización extendido muestre una página de carga. Aparte de proporcionar los comentarios de los usuarios sobre el proceso de activación, el proceso finalizará si no se llama a [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) durante los 15segundos posteriores al inicio del proceso de activación.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -367,5 +365,4 @@ Sin embargo, el objeto Frame ofrece una memoria caché de página opcional que p
 El almacenamiento en caché de las páginas puede mejorar el rendimiento, ya que evita la creación de instancias y, por tanto, mejora el rendimiento de navegación. El almacenamiento en caché de las páginas puede afectar negativamente al rendimiento debido al exceso de almacenamiento en caché, lo que afectará al conjunto de trabajo.
 
 Por lo tanto, es recomendable usar el almacenamiento en caché de páginas según sea adecuado para tu aplicación. Por ejemplo, supongamos que tienes una aplicación que muestra una lista de elementos en un objeto Frame y, al pulsar un elemento, el marco navega a una página de detalles de ese elemento. Es recomendable que esta página de lista se establezca de modo que se almacene en la memoria caché. Si la página de detalles es la misma para todos los elementos, también es recomendable que se almacene en caché. Sin embargo, si la página de detalles está más heterogénea, quizá sea mejor desactivar el almacenamiento en caché.
-
 

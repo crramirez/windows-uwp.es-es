@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: abeadc4fe27858afcdddfeff08362fff69ce713b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 1750a75657affc0d7557afe393084f88630a7366
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="develop-universal-windows-apps-for-education"></a>Desarrollar aplicaciones universales de Windows para la educación
 ![captura de pantalla de la aplicación Hacer un examen](images/take-a-test-screen-small.png)
 
@@ -45,4 +42,3 @@ A menudo, las aplicaciones educativas se publican en circunstancias especiales p
 
 ## <a name="related-topics"></a>Temas relacionados
 - [Windows 10 for Education](https://technet.microsoft.com/edu/windows/index) en el centro de TI de Windows
-

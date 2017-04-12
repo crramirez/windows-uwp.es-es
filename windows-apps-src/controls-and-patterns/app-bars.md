@@ -12,11 +12,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 868b4145-319b-4a97-82bd-c98d966144db
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b14f83d9e834fcefbb3f9d1f9870f81686b44084
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 6dc3c9d15ebbda67dd055adb4b9d5548b6ac81e3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="app-bar-and-command-bar"></a>Barra de la aplicación y barra de comandos
 
@@ -41,7 +39,7 @@ Las barras de comandos (también conocidas como "barras de la aplicación") prop
 
 El control CommandBar es un control de propósito general, flexible y ligero que puede mostrar contenido complejo, como imágenes o bloques de texto, así como comandos simples, como por ejemplo, controles [AppBarButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx) y [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx).
 
-XAML proporciona tanto el control AppBar y como el control CommandBar. El control AppBar solo se debería usar cuando se actualiza una aplicación universal para Windows 8 que usa dicho control y se necesita minimizar los cambios. Para nuevas aplicaciones de Windows 10, es recomendable usar el control CommandBar en su lugar. Para este documento, se supone que usas el control CommandBar.
+XAML proporciona tanto el control AppBar y como el control CommandBar. El control AppBar solo se debería usar cuando se actualiza una aplicación universal para Windows8 que usa dicho control y se necesita minimizar los cambios. Para nuevas aplicaciones de Windows 10, es recomendable usar el control CommandBar en su lugar. Para este documento, se supone que usas el control CommandBar.
 
 ## <a name="examples"></a>Ejemplos
 Una barra de comandos expandida en la aplicación Fotos de Microsoft.
@@ -268,7 +266,7 @@ Las barras de comandos pueden colocarse en las siguientes regiones de la pantall
 
 Da prioridad a las acciones que van en la barra de comandos en función de su visibilidad.
 
--   Coloca los comandos más importantes, los que quieres que permanezcan visibles en la barra, en las primeras ranuras del espacio de acción. En las pantallas más pequeñas (320 epx de ancho), caben entre 2 y 4 elementos en el espacio de acción de la barra de comandos, en función de otras interfaces de usuario en pantalla.
+-   Coloca los comandos más importantes, los que quieres que permanezcan visibles en la barra, en las primeras ranuras del espacio de acción. En las pantallas más pequeñas (320epx de ancho), caben entre 2 y 4 elementos en el espacio de acción de la barra de comandos, en función de otras interfaces de usuario en pantalla.
 -   Coloca los comandos menos importantes más adelante en el espacio de acción de la barra o dentro de las primeras ranuras del área de desbordamiento. Estos comandos estarán visibles cuando la barra tenga suficiente superficie de pantalla, pero se incluirán en el menú desplegable del área de desbordamiento cuando no haya suficiente espacio.
 -   Coloca los comandos menos importantes dentro del área de desbordamiento. Estos comandos siempre aparecerán en el menú desplegable.
 
@@ -308,4 +306,3 @@ Considera la posibilidad de realizar agrupaciones lógicas de los comandos, como
 
 * [Conceptos básicos de diseño de los comandos para las aplicaciones para UWP](../layout/commanding-basics.md)
 * [**Clase CommandBar**](https://msdn.microsoft.com/library/windows/apps/dn279427)
-

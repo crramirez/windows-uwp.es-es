@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Los estilos te permiten establecer propiedades de control y reutilizar esa configuración para mantener un aspecto uniforme en diversos controles."
+Description: "Los estilos te permiten establecer propiedades de control y reutilizar esa configuración para mantener un aspecto uniforme en varios controles."
 MS-HAID: dev\_ctrl\_layout\_txt.styling\_controls
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -14,13 +14,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60eb44ab45873b638181bb4b3194e443d21356bc
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b9bc1e68e26830a283ed49b753f63a8f7ae63637
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="styling-controls"></a>Estilo de los controles
 
 
@@ -157,5 +154,4 @@ Debes usar los estilos que vienen con los recursos XAML predeterminados de Windo
 ## <a name="the-template-property"></a>La propiedad Template
 
 Se puede usar un establecedor de estilo para la propiedad [**Plantilla**](https://msdn.microsoft.com/library/windows/apps/br209465) de [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) y, de hecho, esto conforma la mayor parte de un estilo XAML típico y los recursos XAML de una aplicación. Esto se explica con más detalle en el tema [Plantillas de control](control-templates.md).
-
 

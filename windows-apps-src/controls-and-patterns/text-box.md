@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 205903636b6486d80ccffde9b32818e02e5ac7ea
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 29ab04588088907a851700fcbd04a64bcea77d63
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="text-box"></a>Cuadro de texto
 
@@ -282,9 +280,8 @@ Para obtener más información y ejemplos, consulta [Usar el ámbito de entrada 
 
 - [Controles de texto](text-controls.md)
 - [Directrices sobre revisión ortográfica](spell-checking-and-prediction.md)
-- [Agregar búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
-- [Directrices sobre la entrada de texto](text-controls.md)
+- [Adición de búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [Directrices para la entrada de texto](text-controls.md)
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
-

@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5266c1aaeeb2ecd009b8ee4dac6218fcb8b2f31b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6ea53de0e200b3e60b55adf3f69bc745bfa01e82
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="flip-view"></a>Vista invertida
 
@@ -225,4 +223,3 @@ Para obtener un ejemplo de código que muestre cómo agregar un indicador de con
 
 - [Directrices sobre listas](lists.md)
 - [**Clase FlipView**](https://msdn.microsoft.com/library/windows/apps/br242678)
-

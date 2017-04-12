@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 780ee8a28f0c272b4cbf7e4fe770784aa4f11b9d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4c6a6ef37af9f860e4ff1c77fd8e5e5151bb271e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="variable-photo-sequence"></a>Secuencia de fotos variable
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se muestra cómo capturar una secuencia de fotos variable, que permite capturar varios fotogramas de imágenes en sucesión rápida y configurar cada uno para que use una configuración de foco, flash, ISO, exposición y compensación de la exposición diferente. Esta característica permite escenarios como crear imágenes de alto rango dinámico (HDR).
@@ -102,7 +99,6 @@ Cuando hayas terminado de capturar secuencias de fotos variables o la aplicació
  
 
  
-
 
 
 

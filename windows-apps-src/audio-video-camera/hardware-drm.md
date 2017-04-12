@@ -1,7 +1,7 @@
 ---
 author: eliotcowley
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
-description: "En este tema se ofrece una descripción general sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware PlayReady a una aplicación para la Plataforma universal de Windows (UWP)."
+description: "En este tema se ofrece una descripción general sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware de PlayReady a una aplicación para la Plataforma universal de Windows (UWP)."
 title: DRM de hardware
 ms.author: elcowle
 ms.date: 02/08/2017
@@ -9,21 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a6d2ea23cb0720d8fe6c7aa581c42db6e025d146
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ba561b340796a175815a37f5c3d8d4c125ef35c4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="hardware-drm"></a>DRM de hardware
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se ofrece una descripción general sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
 
 > [!NOTE] 
-> La DRM basada en hardware PlayReady se admite en una gran variedad de dispositivos, incluidos dispositivos Windows y que no son Windows, como televisores, teléfonos y tabletas. Para que un dispositivo Windows admita la DRM de hardware PlayReady, debe ejecutar Windows 10 y tener una configuración de hardware compatible.
+> La DRM basada en hardware PlayReady se admite en una gran variedad de dispositivos, incluidos dispositivos Windows y que no son Windows, como televisores, teléfonos y tabletas. Para que un dispositivo Windows admita la DRM de hardware PlayReady, debe ejecutar Windows10 y tener una configuración de hardware compatible.
 
 Cada vez más proveedores de contenido se encaminan al uso de protecciones basadas en hardware para conceder permiso para reproducir contenido completo de alto valor en las aplicaciones. Para cubrir esta necesidad, se ha agregado a PlayReady una compatibilidad sólida con la implementación de hardware del cifrado principal. Esta compatibilidad permite la reproducción segura de alta definición (1080p) y altísima definición (UHD) de contenido en varias plataformas de dispositivos. Se protege el material de clave (incluyendo claves privadas, claves de contenido y cualquier otro material de clave que se use para derivar o desbloquear dichas claves), así como muestras de vídeo descifradas comprimidas y descomprimidas mediante el aprovechamiento de la seguridad de hardware.
 
@@ -33,13 +30,13 @@ Este tema proporciona una breve introducción sobre cómo Windows 10 implementa 
 
 Los detalles sobre la implementación de Windows TEE están fuera del ámbito de este documento. Sin embargo, es de utilidad hacer una breve descripción de la diferencia entre el puerto del kit de migración estándar y el puerto de Windows. Windows implementa la capa de proxy de OEM y transfiere las llamadas a funciones serializadas PRITEE a un controlador de modo usuario en el subsistema de Windows Media Foundation. Este finalmente se enrutará bien al controlador de Windows TrEE (entorno de ejecución de confianza) o al controlador de elementos gráficos del OEM. Los detalles de cualquiera de estos enfoques están fuera del ámbito de este documento. El siguiente diagrama muestra la interacción del componente general para el puerto de Windows. Si quieres desarrollar una implementación de Windows PlayReady TEE, puedes ponerte en contacto con <WMLA@Microsoft.com>.
 
-![diagrama de componentes de Windows TEE](images/windowsteecomponentdiagram720.jpg)
+![windows tee component diagram, diagrama de componentes de Windows TEE](images/windowsteecomponentdiagram720.jpg)
 
 ## <a name="considerations-for-using-hardware-drm"></a>Consideraciones para el uso de DRM de hardware
 
-En este tema se ofrece una lista breve de puntos que deben tenerse en cuenta para desarrollar aplicaciones diseñadas para usar DRM de hardware. Como se explica en [DRM PlayReady](playready-client-sdk.md#output-protection), con la HWDRM PlayReady para Windows 10, todas las protecciones de salida se aplican desde dentro de la implementación de Windows TEE, lo que tiene algunas consecuencias en los comportamientos de la protección de salida:
+En este tema se ofrece una lista breve de puntos que deben tenerse en cuenta para desarrollar aplicaciones diseñadas para usar DRM de hardware. Como se explica en [DRM PlayReady](playready-client-sdk.md#output-protection), con la HWDRM PlayReady para Windows10, todas las protecciones de salida se aplican desde dentro de la implementación de Windows TEE, lo que tiene algunas consecuencias en los comportamientos de la protección de salida:
 
--   **Compatibilidad con el nivel de protección de salida (OPL) para vídeo digital sin comprimir 270:** HWDRM PlayReady para Windows 10 no admite una resolución menor y aplicará el uso de HDCP. Recomendamos que el contenido de alta definición para la HWDRM tenga un OPL mayor de 270 (aunque no es necesario). También recomendamos que se establezca una restricción de tipo HDCP en la licencia (HDCP versión 2.2 en Windows 10).
+-   **Compatibilidad con el nivel de protección de salida (OPL) para vídeo digital sin comprimir 270:** HWDRM PlayReady para Windows10 no admite una resolución menor y aplicará el uso de HDCP. Recomendamos que el contenido de alta definición para la HWDRM tenga un OPL mayor de 270 (aunque no es necesario). También recomendamos que se establezca una restricción de tipo HDCP en la licencia (HDCP versión 2.2 en Windows10).
 -   **A diferencia de DRM de software (SWDRM), se aplican protecciones de salida a todos los monitores basadas en el monitor menos capacitado.** Por ejemplo, si el usuario tiene dos monitores conectados y solo uno de ellos es compatible con HDCP, se producirá un error en la reproducción si la licencia requiere HDCP incluso si el contenido solamente se está representando en el monitor compatible con HDCP. En DRM de software, el contenido se podría reproducir siempre que solo se esté representando en el monitor compatible con HDCP.
 -   **No se garantiza que el cliente pueda usar la HWDRM ni que esta sea segura, a menos que las claves de contenido y las licencias cumplan las siguientes condiciones**:
     -   La licencia que se use para la clave de contenido de vídeo debe tener una propiedad de nivel de seguridad mínimo de 3000.
@@ -105,4 +102,3 @@ También puedes usar la propiedad [**PlayReadyStatics.PlayReadyCertificateSecuri
 
 ## <a name="see-also"></a>Consulta también
 - [DRM de PlayReady](playready-client-sdk.md)
-

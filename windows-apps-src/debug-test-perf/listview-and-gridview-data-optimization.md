@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0b1dfaeb098ac4b73c89f4d1a51ec658312aee4e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 722389a7440110eaffa5458e8ef5e85fccb39671
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualización de datos de ListView y GridView
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Nota** Para obtener más información, consulta la sesión //build/ [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView (Aumentar considerablemente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de las clases GridView y ListView)](https://channel9.msdn.com/Events/Build/2013/3-158).
 
@@ -48,7 +46,7 @@ Cuando el control de elementos se acerque al final de los datos existentes, llam
 
 ## <a name="random-access-data-virtualization"></a>Virtualización de datos de acceso aleatorio
 
-La virtualización de datos de acceso aleatorio permite cargar desde un punto arbitrario del conjunto de datos. Un [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) que usa la virtualización de datos de acceso aleatorio, usado para ver una colección de un millón de elementos, puede cargar los elementos del 100 000 al 100 050. Si el usuario se mueve al principio de la lista, el control carga los elementos del 1 al 50. En cualquier momento, el control de la barra de desplazamiento indica que **ListView** contiene un millón de elementos. El control de posición de la barra de desplazamiento se ubica en relación con el lugar donde se encuentran los elementos visibles en el conjunto de datos completo de la colección. Este tipo de virtualización de datos puede reducir significativamente los requisitos de memoria y los tiempos de carga de la colección. Para habilitarla, debes escribir una clase de origen de datos que recupere los datos a petición y administre una memoria caché local e implemente estas interfaces.
+La virtualización de datos de acceso aleatorio permite cargar desde un punto arbitrario del conjunto de datos. Un [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) que usa la virtualización de datos de acceso aleatorio, usado para ver una colección de un millón de elementos, puede cargar los elementos del 100000 al 100050. Si el usuario se mueve al principio de la lista, el control carga los elementos del 1 al 50. En cualquier momento, el control de la barra de desplazamiento indica que **ListView** contiene un millón de elementos. El control de posición de la barra de desplazamiento se ubica en relación con el lugar donde se encuentran los elementos visibles en el conjunto de datos completo de la colección. Este tipo de virtualización de datos puede reducir significativamente los requisitos de memoria y los tiempos de carga de la colección. Para habilitarla, debes escribir una clase de origen de datos que recupere los datos a petición y administre una memoria caché local e implemente estas interfaces.
 
 -   [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx)
 -   [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (C#/VB) o [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) (C++/CX)
@@ -83,7 +81,6 @@ Además, la estrategia de cuándo cargar elementos de datos, la cantidad de carg
 -   ¿Qué tipo de notificaciones proporciona el servicio cuando se cambian los resultados de una consulta? ¿Sabrás si se inserta un elemento en el índice 33? Si el servicio admite consultas basadas en tecla-más-desplazamiento, podría ser mejor que el uso de un índice.
 -   ¿Qué tan inteligente deseas ser en la captura previa elementos? ¿Probarás realizar un seguimiento de la dirección y velocidad de desplazamiento para predecir qué elementos se necesitan?
 -   ¿Con qué dinamismo quieres purgar la memoria caché? Esto es un equilibrio entre el uso de la memoria frente a la experiencia.
-
 
 
 

@@ -11,15 +11,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e995023cd8a4216c60d5691f9f87be3aff9d8498
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 493e491bd16b7346046394d66587788caf06db4f
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
-
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 La configuración es la parte de la aplicación que el usuario puede personalizar y se encuentra en la página de configuración de la aplicación. Por ejemplo, la configuración de la aplicación en una aplicación del lector de noticias puede permitir al usuario especificar qué fuentes de noticias mostrar o cuántas columnas mostrar en la pantalla, mientras que la configuración de la aplicación meteorológica podría permitir al usuario elegir entre Celsius y Fahrenheit como unidad predeterminada de medida. En este artículo se describen los procedimientos recomendados para crear y mostrar la configuración de aplicaciones.
 
@@ -27,8 +25,7 @@ La configuración es la parte de la aplicación que el usuario puede personaliza
 
 ## <a name="should-i-include-a-settings-page-in-my-app"></a>¿Debo incluir una página de configuración en mi aplicación?
 
-
-        Estos son ejemplos de opciones de la aplicación que pertenecen a una página de configuración de la aplicación:
+Estos son ejemplos de opciones de la aplicación que pertenecen a una página de configuración de la aplicación:
 
 -   Las opciones de configuración que afectan al comportamiento de la aplicación y que no se ajustan con frecuencia, como cuando eliges entre Celsius o Fahrenheit como unidades de temperatura predeterminadas en una aplicación del tiempo, cuando cambias la configuración de una cuenta para una aplicación de correo, la configuración de las notificaciones o las opciones de accesibilidad.
 -   Opciones que dependen de las preferencias del usuario, como música, efectos de sonido o temas de colores.
@@ -82,7 +79,7 @@ Tanto en las plataformas móviles como de escritorio, la ventana de configuraci�
 
 Escritorio:
 
-![diseño de la página de configuración de la aplicación en un equipo de escritorio](images/appsettings-layout-navpane-desktop.png)
+![diseño de la página de configuración de la aplicación en el escritorio](images/appsettings-layout-navpane-desktop.png)
 
 Móvil:
 
@@ -143,7 +140,7 @@ Cuando tengas una lista de los elementos que quieras incluir en la página de co
 -   Si la carga de controles o de contenido web tarda, usa un control de progreso indeterminado para indicar al usuario que se está cargando la información. Para obtener más información, consulta [Directrices sobre controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469).
 -   No uses botones para la navegación o para confirmar cambios. Usa hipervínculos para ir a otras páginas y, en lugar de usar un botón para confirmar los cambios, guárdalos automáticamente en la configuración de la aplicación cuando el usuario descarte el control flotante de configuración.
 
-\[Este artículo contiene información específica para aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## <a name="related-articles"></a>Artículos relacionados
 
@@ -151,4 +148,3 @@ Cuando tengas una lista de los elementos que quieras incluir en la página de co
 * [Directrices sobre los controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469)
 * [Almacenar y recuperar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-

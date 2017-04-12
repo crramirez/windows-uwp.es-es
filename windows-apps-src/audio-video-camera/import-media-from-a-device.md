@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: dd2a1e01-c284-4d62-963e-f59f58dca61a
-description: "En este artículo se describe cómo importar contenido multimedia de un dispositivo, incluida la búsqueda de orígenes multimedia disponibles, la importación de archivos, como fotos y archivos de tipo sidecar, y la eliminación de los archivos importados del dispositivo de origen."
+description: "En este artículo se describe cómo importar contenido multimedia de un dispositivo, incluida la búsqueda de orígenes de medios disponibles, la importación de archivos como fotos y archivos sidecar, y la eliminación de los archivos importados del dispositivo de origen."
 title: Importar contenido multimedia
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 4deda6efa9b9b9ea03bee76855e30c8e9a290480
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 588367c1e4c1676641d57bbd33df6bdaf0c854da
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="import-media-from-a-device"></a>Importar contenido multimedia desde un dispositivo
 
-En este artículo se describe cómo importar contenido multimedia de un dispositivo, incluida la búsqueda de orígenes multimedia disponibles, la importación de archivos, como vídeos, fotos y archivos de tipo sidecar, y la eliminación de los archivos importados del dispositivo de origen.
+En este artículo se describe cómo importar contenido multimedia de un dispositivo, incluida la búsqueda de orígenes multimedia disponibles, la importación de archivos como vídeos, fotos y archivos complementarios, y la eliminación de los archivos importados del dispositivo de origen.
 
 > [!NOTE] 
 > El código de este artículo es una adaptación de la [**muestra de la aplicación para UWP MediaImport**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport). Puedes clonar o descargar esta muestra desde el [**repositorio Git de muestras de aplicaciones universales de Windows**](https://github.com/Microsoft/Windows-universal-samples) para ver el código en contexto o usarlo como punto de partida para tu propia aplicación.
@@ -62,7 +59,7 @@ Estas clases se proporcionan en la [**muestra de MediaImport**](https://github.c
 [!code-cs[GeneratorIncrementalLoadingClass](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetGeneratorIncrementalLoadingClass)]
 
 
-# <a name="find-available-sources-from-which-media-can-be-imported"></a>Buscar orígenes disponibles de los que se pueda importar contenido multimedia
+## <a name="find-available-sources-from-which-media-can-be-imported"></a>Buscar orígenes disponibles de los que se pueda importar contenido multimedia
 
 En el controlador de clic del botón de búsqueda de orígenes, llama al método estático [**PhotoImportManager.FindAllSourcesAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportManager.FindAllSourcesAsync) para iniciar el sistema y buscar dispositivos de los que se pueda importar contenido multimedia. Después de esperar a que finalice la operación, repite el procedimiento con cada objeto [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) de la lista devuelta; agrega una entrada al control **ComboBox** y establece la propiedad **Tag** en el propio objeto de origen para que se pueda recuperar fácilmente cuando el usuario realice una selección.
 
@@ -76,13 +73,13 @@ En el controlador [**SelectionChanged**](https://msdn.microsoft.com/library/wind
 
 [!code-cs[SourcesSelectionChanged](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetSourcesSelectionChanged)]
 
-# <a name="find-items-to-import"></a>Buscar elementos para importar
+## <a name="find-items-to-import"></a>Buscar elementos para importar
 
 Agrega variables de miembro de clase de tipo [**PhotoImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSession) y [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult), que se usarán en los siguientes pasos.
 
 [!code-cs[DeclareImport](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImport)]
 
-En el método FindItems, inicializa la variable **CancellationTokenSource** para que pueda usarse para cancelar la operación de búsqueda si es necesario. En un bloque **try**, llama a [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession) en el objeto [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) seleccionado por el usuario para crear una nueva sesión de importación. Crea un nuevo objeto [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx) para proporcionar una devolución de llamada y mostrar el progreso de la operación de búsqueda. A continuación, llama a [**FindItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSession.FindItemsAsync(Windows.Media.Import.PhotoImportContentTypeFilter,Windows.Media.Import.PhotoImportItemSelectionMode) para iniciar la operación de búsqueda. Proporciona un valor [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter) para especificar si se deben devolver fotos, vídeos o ambos. Proporciona un valor [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode) para especificar si deben devolverse todos los elementos multimedia, ninguno o solo los nuevos con su propiedad [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected) establecida en true. Esta propiedad está enlazada a una casilla para cada elemento multimedia de nuestra plantilla de elementos ListBox.
+En el método FindItems, inicializa la variable **CancellationTokenSource** para que pueda usarse para cancelar la operación de búsqueda si es necesario. En un bloque **try**, llama a [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession) en el objeto [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) seleccionado por el usuario para crear una nueva sesión de importación. Crea un nuevo objeto [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx) para proporcionar una devolución de llamada y mostrar el progreso de la operación de búsqueda. Luego, llama a [**FindItemsAsync**](https://docs.microsoft.com/uwp/api/windows.media.import.photoimportsession#Windows_Media_Import_PhotoImportSession_FindItemsAsync_Windows_Media_Import_PhotoImportContentTypeFilter_Windows_Media_Import_PhotoImportItemSelectionMode_) para iniciar la operación de búsqueda. Proporciona un valor [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter) para especificar si se deben devolver fotos, vídeos o ambos. Proporciona un valor [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode) para especificar si deben devolverse todos los elementos multimedia, ninguno o solo los nuevos con su propiedad [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected) establecida en true. Esta propiedad está enlazada a una casilla para cada elemento multimedia de nuestra plantilla de elementos ListBox.
 
 **FindItemsAsync** devuelve una interfaz [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/br206594.aspx). El método de extensión [**AsTask**](https://msdn.microsoft.com/library/hh779750.aspx) se usa para crear una tarea que se pueda esperar, que se pueda cancelar con el token de cancelación y que notifique el progreso mediante el objeto **Progress** proporcionado.
 
@@ -121,6 +118,5 @@ Para eliminar los elementos importados correctamente desde el origen del que se 
 
 
  
-
 
 

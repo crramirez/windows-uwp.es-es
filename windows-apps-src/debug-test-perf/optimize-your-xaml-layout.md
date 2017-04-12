@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d4eae4379fb74d36a97db9be9a100408825682a7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 226b2fd19777deb5135d1e1f059596883f95d3d3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="optimize-your-xaml-layout"></a>Optimiza tu diseño XAML
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -163,8 +161,7 @@ Un requisito común de la interfaz de usuario es tener un diseño en el que los 
 
 ## <a name="use-a-panels-built-in-border-properties"></a>Usar las propiedades de borde integradas de un panel
 
-[
-              Los controles **Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546) y [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378) tienen propiedades de borde integradas que te permiten dibujar un borde alrededor de ellos sin tener que agregar un elemento [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) adicional al XAML. Las nuevas propiedades que admiten el borde integrado son: **BorderBrush**, **BorderThickness**, **CornerRadius** y **Padding**. Cada una de ellas es una clase [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362), por lo que puedes usarlas con enlaces y animaciones. Además, están diseñadas para reemplazar completamente otro elemento **Border**.
+Los controles [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546) y [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378) tienen propiedades de borde integradas que te permiten dibujar un borde alrededor de ellos sin tener que agregar un elemento [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) adicional al XAML. Las nuevas propiedades que admiten el borde integrado son: **BorderBrush**, **BorderThickness**, **CornerRadius** y **Padding**. Cada una de ellas es una clase [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362), por lo que puedes usarlas con enlaces y animaciones. Además, están diseñadas para reemplazar completamente otro elemento **Border**.
 
 Si tu interfaz de usuario tiene elementos [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) alrededor de estos paneles, usa el borde integrado en su lugar, ya que guarda un elemento adicional en la estructura de diseño de la aplicación. Tal como se mencionó anteriormente, esto puede suponer un ahorro significativo, especialmente en el caso de interfaces de usuario repetidas.
 
@@ -190,5 +187,4 @@ Para lograr un buen rendimiento, [**SizeChanged**](https://msdn.microsoft.com/li
 El rendimiento no suele ser algo a tener en cuenta al elegir entre los paneles individuales. Esa elección se suele realizar teniendo en cuenta qué panel proporciona el comportamiento de diseño más cercano a la interfaz de usuario que estás implementando. Por ejemplo, si estás eligiendo entre [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635) y [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546), debes elegir el panel que proporcione la asignación más cercana al modelo de la implementación que tenías en mente.
 
 Cada panel XAML está optimizado para lograr un buen rendimiento y todos los paneles proporcionan un rendimiento similar para interfaces de usuario similares.
-
 

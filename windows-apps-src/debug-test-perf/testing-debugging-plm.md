@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: a5315534fc305c85dcf410b4808d2f8ebd844b3e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 14b8892790b2a2b486b2ddd3e8cb529545c327bd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)
 
 Una de las diferencias clave entre las aplicaciones para UWP y las aplicaciones de escritorio tradicionales es que los títulos UWP residen en un contenedor de aplicación sujeto a Administración de ciclo de vida de los procesos (PLM). Las aplicaciones para UWP pueden suspenderse, reanudarse o finalizarse en todas las plataformas con el servicio Agente de tiempo de ejecución. También hay herramientas dedicadas que puedes usar para forzar dichas transiciones al depurar o probar el código que las controla.
@@ -89,4 +86,3 @@ Ten en cuenta que cada llamada a **/enableDebug** debe ser posterior a otra llam
 ## <a name="related-topics"></a>Temas relacionados
 - [Implementación y depuración de aplicaciones para UWP](deploying-and-debugging-uwp-apps.md)
 - [Depuración, pruebas y rendimiento](index.md)
-

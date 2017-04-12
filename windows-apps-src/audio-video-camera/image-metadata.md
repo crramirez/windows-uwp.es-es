@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: af9a4c243c939ddc04e5d0763b58df00e70d7017
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e69508ae558d93281e0170913fa0ccdc5891cc64
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="image-metadata"></a>Metadatos de imagen
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se muestra cómo leer y escribir propiedades de metadatos de imagen y cómo incluir geoetiquetas en archivos mediante la clase de utilidad [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683) .
@@ -92,7 +89,6 @@ Crea un objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
  
 
  
-
 
 
 

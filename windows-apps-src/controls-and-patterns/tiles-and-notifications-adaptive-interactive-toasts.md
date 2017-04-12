@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Las notificaciones del sistema interactivas y adaptables permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional."
+Description: "Las notificaciones del sistema adaptables e interactivas permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional."
 title: Notificaciones del sistema interactivas y adaptables
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b1962e58d3513ddff908a0d556731d83cce20af4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d9808feeabfa4ffce19d0e669352331804dfd751
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="adaptive-and-interactive-toast-notifications"></a>Notificaciones del sistema interactivas y adaptables
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Las notificaciones del sistema interactivas y adaptables permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional.
+Las notificaciones del sistema adaptables e interactivas permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional.
 
 El modelo de notificaciones del sistema adaptables e interactivas tiene estas actualizaciones sobre el catálogo de plantillas de notificación del sistema heredado:
 
@@ -119,7 +117,30 @@ ToastContent content = new ToastContent()
 };
 ```
 
-Y una representación visual de la estructura:
+A continuación, necesitamos convertir la notificación del sistema en un objeto [XmlDocument](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.xmldocument.aspx). Si definiste la notificación del sistema en un archivo XML (aquí denominado "content.xml"), usa este código:
+
+```CSharp
+string xmlText = File.ReadAllText("content.xml");
+XmlDocument xmlContent = new XmlDocument();
+xmlContent.LoadXml(xmlText);
+```
+
+O bien, si definiste la plantilla de notificaciones del sistema en C#, usa lo siguiente:
+
+```CSharp
+XmlDocument xmlContent = content.GetXml();
+```
+
+Independientemente de cómo crees el objeto XMLDocument, puedes usar este código para crear y enviar la notificación del sistema:
+
+```CSharp
+ToastNotification notification = new ToastNotification(xmlContent);
+ToastNotificationManager.CreateToastNotifier().Show(notification);
+```
+
+Para ver una aplicación completa que muestra las notificaciones del sistema en acción, consulta el artículo de [guía de inicio rápido para enviar una notificación del sistema local](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10).
+
+A continuación se muestra una representación visual de la estructura:
 
 ![estructura de notificación del sistema](images/adaptivetoasts-structure.jpg)
 
@@ -130,7 +151,7 @@ Dentro del elemento visual, debes tener exactamente un elemento de enlace que co
 Las notificaciones de icono en las aplicaciones de la plataforma universal de Windows (UWP) admiten varias plantillas que se basan en distintos tamaños de icono. Las notificaciones del sistema, sin embargo, tienen solo un nombre de plantilla: **ToastGeneric**. Tener solo el nombre de una plantilla quiere decir:
 
 -   Puede cambiar el contenido de la notificación del sistema, por ejemplo, agregando otra línea de texto, una imagen en línea o cambiando la imagen en miniatura que se muestra en el icono de la aplicación a otra cosa, y puede realizar cualquiera de estas cosas sin necesidad de preocuparse de cambiar la plantilla completa o de crear una carga no válida debido a un error de coincidencia entre el nombre de plantilla y el contenido.
--   Puedes usar el mismo código para construir la misma carga para la **notificación del sistema** que tiene como objetivo aplicarse a los diferentes tipos de dispositivos de Microsoft Windows, como teléfonos, tabletas, equipos y Xbox One. Cada uno de estos dispositivos aceptará la notificación y la mostrará al usuario en sus directivas de interfaz de usuario con el modelo de interacción y prestaciones visuales adecuado.
+-   Puedes usar el mismo código para construir la misma carga para la **notificación del sistema** que tiene como objetivo enviarse a los diferentes tipos de dispositivos de MicrosoftWindows, como teléfonos, tabletas, PC y XboxOne. Cada uno de estos dispositivos aceptará la notificación y la mostrará al usuario en sus directivas de interfaz de usuario con el modelo de interacción y prestaciones visuales adecuado.
 
 Para todos los atributos que se admiten en la sección visual y sus elementos secundarios, consulta la sección Esquema a continuación. Para ver más ejemplos, consulta la sección Ejemplos de XML a continuación
 
@@ -249,9 +270,9 @@ ToastContent content = new ToastContent()
 
  
 
-**Notificación con acciones, ejemplo 1**
+**Notificación con acciones**
 
-Este ejemplo muestra...
+En este ejemplo se crea una notificación con dos acciones de respuesta posibles.
 
 ```XML
 <toast launch="app-defined-string">
@@ -309,73 +330,11 @@ ToastContent content = new ToastContent()
 
 ![notificación con acciones, ejemplo 1](images/adaptivetoasts-xmlsample02.jpg)
 
- 
 
-**Notificación con acciones, ejemplo 2**
-
-Este ejemplo muestra...
-
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Restaurant suggestion...</text>
-      <text>We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?</text>
-    </binding>
-  </visual>
-  <actions>
-    <action activationType="foreground" content="Reviews" arguments="reviews" />
-    <action activationType="protocol" content="Show map" arguments="bingmaps:?q=sushi" />
-  </actions>
-</toast>
-```
-
-```CSharp
-ToastContent content = new ToastContent()
-{
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Restaurant suggestion..."
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?"
-                }
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("Reviews", "reviews"),
- 
-            new ToastButton("Show map", "bingmaps:?q=sushi")
-            {
-                ActivationType = ToastActivationType.Protocol
-            }
-        }
-    }
-};
-```
-
-![notificación con acciones, ejemplo 2](images/adaptivetoasts-xmlsample03.jpg)
-
- 
 
 **Notificación con entrada de texto y acciones, ejemplo 1**
 
-Este ejemplo muestra...
+En este ejemplo se crea una notificación que acepta entrada de texto, junto con dos acciones de respuesta.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -456,7 +415,7 @@ ToastContent content = new ToastContent()
 
 **Notificación con entrada de texto y acciones, ejemplo 2**
 
-Este ejemplo muestra...
+En este ejemplo se crea una notificación que acepta entrada de texto y una única acción.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -533,7 +492,7 @@ ToastContent content = new ToastContent()
 
 **Notificación con entrada de selección y acciones**
 
-Este ejemplo muestra...
+En este ejemplo se crea una notificación con un menú de selección desplegable y dos acciones posibles.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -617,7 +576,7 @@ ToastContent content = new ToastContent()
 
 **Notificación de recordatorio**
 
-Este ejemplo muestra...
+Con un menú de selección y dos acciones, como se muestra en el ejemplo anterior, podemos crear una notificación de recordatorio:
 
 ```XML
 <toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">
@@ -714,7 +673,7 @@ ToastContent content = new ToastContent()
 
  
 
-## <a name="handling-activation-foreground-and-background"></a>Administrar la activación (en primer y en segundo plano)
+## <a name="handling-activation-foreground-and-background"></a>Controlar la activación (en primer y en segundo plano)
 
 Para obtener información sobre cómo administrar las activaciones de notificación del sistema (es decir, el usuario hace clic en la notificación del sistema o los botones de la notificación del sistema), consulta [Inicio rápido: Enviar una notificación del sistema local y administrar la aplicación](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/).
 

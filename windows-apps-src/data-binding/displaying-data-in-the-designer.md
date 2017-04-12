@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
-ms.openlocfilehash: 35df3de9b56b9539a559e161e80658c23a9d0480
-ms.lasthandoff: 01/19/2017
-
+ms.openlocfilehash: 4997895e73e7c8bf0f20a2bc504b7b8c17c45339
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Datos de muestra sobre la superficie de diseño y para la creación de prototipos
 =============================================================================================
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Nota**  La cantidad de datos de muestra que necesites (y que te serán de ayuda) depende de si tus enlaces usan la [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) o la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). Las técnicas que se describen en este tema se basan en el uso de la propiedad [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), por lo que solo son apropiadas para la extensión **{Binding}**. Sin embargo, si usas **{x:Bind}** tus enlaces mostrarán, como mínimo, valores de marcador de posición sobre la superficie de diseño (incluso para controles de elementos); así no necesitarás recopilar tantos datos de muestra.
@@ -149,4 +147,3 @@ En lugar de especificar una clase, se puede diseñar el esquema del origen de da
 La característica **Nuevos datos de ejemplo** usa [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), y no **d:DataContext**, de modo que los datos de ejemplo están disponibles cuando se ejecuta el boceto o el prototipo, así como mientras se diseña. Además, el panel **Datos** acelera realmente las tareas de diseño y enlace. Por ejemplo, con solo arrastrar una propiedad de colección del panel **Datos** a la superficie de diseño, se genera un control de elementos enlazados a datos y las plantillas necesarias, todo listo para compilar y ejecutar.
 
 ![Datos de ejemplo para la creación de prototipos.](images/displaying-data-in-the-designer-04.png)
-

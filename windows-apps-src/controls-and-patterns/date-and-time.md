@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 127bf79ebe17e6156a95d4aae168e42b7ff53aa1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5da40bb4c680416f0766cf0d1a171f95358ea63e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="calendar-date-and-time-controls"></a>Calendario, controles de fecha y hora
 
@@ -127,4 +125,3 @@ Un concepto relacionado es la clase Calendar, que influye en la interpretación 
 - [**Clase CalendarDatePicker**](https://msdn.microsoft.com/library/windows/apps/dn950083)
 - [**Clase DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584)
 - [**Clase TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280)
-

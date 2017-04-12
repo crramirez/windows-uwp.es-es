@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a tu aplicación."
+Description: "Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a la aplicación."
 title: "Introducción a los controles y patrones"
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 93297899c341366788f1d7dfa06507c1f3003884
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 14186f0623f16426a98b5184020736bd4321857d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introducción a los controles y patrones
 
@@ -52,7 +50,7 @@ También puedes arrastrar el control desde el Cuadro de herramientas hasta el di
 
 ## <a name="set-the-name-of-a-control"></a>Establecer el nombre de un control 
 
-Para trabajar con un control en el código, hay que establecer su atributo [x:Name](../xaml-platform/x-name-attribute.md) y hacer referencia a este por su nombre en el código. Puedes definir el nombre en la ventana Propiedades de Visual Studio o en XAML. Esta es la forma de establecer el nombre del control seleccionado actualmente usando el cuadro de texto Nombre de la parte superior de la ventana Propiedades. 
+Para trabajar con un control en el código, hay que establecer su atributo [x:Name](../xaml-platform/x-name-attribute.md) y hacer referencia a este por su nombre en el código. Puedes definir el nombre en la ventana Propiedades de VisualStudio o en XAML. Esta es la forma de establecer el nombre del control seleccionado actualmente usando el cuadro de texto Nombre de la parte superior de la ventana Propiedades. 
 
 Para definir el nombre de un control
 1. Selecciona el elemento que quieras denominar.
@@ -85,7 +83,7 @@ Puedes establecer las propiedades del control en la ventana Propiedades, en XAML
 
 ![Selector de colores en el diseñador de Visual Studio](images/add-controls-foreground-designer.png)
 
-Así se establece la propiedad Foreground en el editor XAML. Observa la ventana IntelliSense de Visual Studio que se abre para ayudarte con la sintaxis. 
+Así se establece la propiedad Foreground en el editor XAML. Observa la ventana IntelliSense de VisualStudio que se abre para ayudarte con la sintaxis. 
 
 ![IntelliSense en la parte 1 de XAML](images/add-controls-foreground-xaml.png)
 
@@ -150,4 +148,3 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 -     [Diseño](../layout/index.md)
 -     [Estilo](../style/index.md)
 -     [Facilidad de uso](../usability/index.md)
-

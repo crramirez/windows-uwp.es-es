@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a03953885179cf8e969e3b35a426aa958c528f54
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f0fd2e03c58ac5ffa575cf2381df4c652422efea
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessibility-overview"></a>Información general sobre accesibilidad  
 
 
@@ -179,10 +176,9 @@ Cuando crees un control personalizado, te recomendamos que también implementes 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>Compatibilidad para tecnología de asistencia en aplicaciones que admiten la interoperabilidad XAML/Microsoft DirectX  
 No se puede acceder de manera predeterminada al contenido de Microsoft DirectX hospedado en una interfaz de usuario XAML (mediante [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) o [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041)). El [ejemplo de interoperabilidad XAML SwapChainPanel DirectX](http://go.microsoft.com/fwlink/p/?LinkID=309155) muestra cómo crear sistemas del mismo nivel de automatización de la interfaz de usuario para el contenido de DirectX hospedado. Esta técnica permite que se pueda acceder al contenido hospedado a través de la automatización de la interfaz de usuario.
 
-<span id="related_topics"/>
 ## <a name="related-topics"></a>Temas relacionados  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 * [Diseño de accesibilidad](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [Ejemplo de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Accesibilidad](accessibility.md)
-
+* [Introducción al Narrador](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)

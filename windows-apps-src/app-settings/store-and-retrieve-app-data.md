@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Obtén información sobre cómo almacenar y recuperar datos de la aplicación locales, de itinerancia y temporales."
+Description: "Obtén información sobre cómo almacenar y recuperar datos locales, de itinerancia y temporales de la aplicación."
 title: "Almacenar y recuperar la configuración y otros datos de la aplicación"
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
@@ -11,20 +11,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1e615e989a25520cff86c53e383d0cc5e87956d1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8c50d0eb51240f458fcd1510abb02ce471aa1152
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Almacenar y recuperar la configuración y otros datos de la aplicación
 
 
 
 
 
-Los *datos de la aplicación* son datos mutables específicos de una aplicación concreta. Incluyen el estado de tiempo de ejecución, las preferencias del usuario y otras opciones de configuración. Los datos de la aplicación son diferentes de los *datos de usuario*, los datos que el usuario crea y administra al usar una aplicación. Entre los datos de usuario se incluyen archivos multimedia o documentos, correos electrónicos o transcripciones de comunicaciones, o registros de bases de datos que contienen contenido creado por el usuario. Los datos de usuario pueden ser útiles o significativos a más de una aplicación. Con frecuencia, se trata de datos que el usuario quiere manipular o transmitir como entidad independiente de la propia aplicación (como, por ejemplo, un documento).
+Los *datos de aplicación* son datos mutables específicos de una aplicación concreta. Incluyen el estado de tiempo de ejecución, las preferencias del usuario y otras opciones de configuración. Los datos de la aplicación son diferentes de los *datos de usuario*, los datos que el usuario crea y administra al usar una aplicación. Entre los datos de usuario se incluyen archivos multimedia o documentos, correos electrónicos o transcripciones de comunicaciones, o registros de bases de datos que contienen contenido creado por el usuario. Los datos de usuario pueden ser útiles o significativos a más de una aplicación. Con frecuencia, se trata de datos que el usuario quiere manipular o transmitir como entidad independiente de la propia aplicación (como, por ejemplo, un documento).
 
 **Nota importante sobre los datos de la aplicación: **La duración de los datos de la aplicación está vinculada a la duración de la aplicación. Si una aplicación se quita, todos sus datos se perderán en consecuencia. No uses datos de la aplicación para almacenar datos del usuario o cualquier elemento que se considere valioso o irreemplazable. Recomendamos almacenar este tipo de información en las bibliotecas del usuario o en Microsoft OneDrive. Los datos de la aplicación son perfectos para almacenar la configuración, las preferencias de usuario específicas de la aplicación y los favoritos.
 
@@ -199,7 +196,7 @@ El sistema dispone de varios mecanismos de protección para evitar el uso inapro
 
 Los datos de la aplicación pueden usar el control de versiones para actualizar de una estructura de datos a otra. El número de versión es diferente de la versión de la aplicación y se puede establecer a voluntad. Aunque no es obligatorio, es muy recomendable usar solo números de versión incrementales, porque se podría producir una situación no deseada (incluida la pérdida de datos) al transferir a un número de versión de los datos inferior que represente datos más recientes.
 
-Los datos de la aplicación solo se transfieren entre aplicaciones que tengan el mismo número de versión. Por ejemplo, los dispositivos con la versión 2 transferirán los datos entre sí, y los dispositivos con la versión 3 harán lo mismo, pero no se realizará una transferencia entre los dispositivos de la versión 2 y los de la versión 3. Si instalas una aplicación que usó varios números de versión en otros dispositivos, la aplicación instalada recientemente sincronizará los datos de la aplicación asociados al número de versión más alto.
+Los datos de la aplicación solo se transfieren entre aplicaciones que tengan el mismo número de versión. Por ejemplo, los dispositivos con la versión2 transferirán los datos entre sí, y los dispositivos con la versión3 harán lo mismo, pero no se realizará una transferencia entre los dispositivos de la versión2 y los de la versión3. Si instalas una aplicación que usó varios números de versión en otros dispositivos, la aplicación instalada recientemente sincronizará los datos de la aplicación asociados al número de versión más alto.
 
 ### <a name="testing-and-tools"></a>Pruebas y herramientas
 
@@ -459,6 +456,5 @@ Opcionalmente, puedes crear versiones de los datos de aplicación para la aplica
 * [**Windows.Storage.ApplicationData.RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623)
 * [**Windows.Storage.ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625)
 * [**Windows.Storage.ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588)
-
 
 

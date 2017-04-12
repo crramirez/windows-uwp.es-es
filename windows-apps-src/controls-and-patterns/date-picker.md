@@ -3,7 +3,7 @@ author: Jwmsft
 Description: "El selector de fecha te ofrece una forma estandarizada de permitir a los usuarios seleccionar un valor de fecha localizada usando entrada táctil, de mouse o de teclado."
 title: Selector de fecha
 ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
-isNew: true
+isNew: True
 label: Date picker
 template: detail.hbs
 ms.author: jimwalk
@@ -12,11 +12,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 19551174cebd33785ac21910b52adf31e354373b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 114e91276ee4f080ead825b655fc05fcf460bacb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="date-picker"></a>Selector de fecha
 
@@ -72,4 +70,3 @@ El selector de fecha resultante tiene este aspecto:
 - [Selector de fecha del calendario](calendar-date-picker.md)
 - [Vista de calendario](calendar-view.md)
 - [Selector de hora](time-picker.md)
-

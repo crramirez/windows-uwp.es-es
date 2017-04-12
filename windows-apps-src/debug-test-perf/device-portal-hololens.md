@@ -3,17 +3,16 @@ author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Device Portal para HoloLens
 description: "Obtén información sobre cómo Windows Device Portal para HoloLens te permite configurar y administrar de forma remota tu dispositivo HoloLens."
-translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 00dec1110ba8cc27f759f05bc4a6f352a235d18d
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# Device Portal para HoloLens
+# <a name="device-portal-for-hololens"></a>Device Portal para HoloLens
 
 
-## Configurar Device Portal en HoloLens
+## <a name="set-up-device-portal-on-hololens"></a>Configurar Device Portal en HoloLens
 
-### Habilitar Device Portal
+### <a name="enable-device-portal"></a>Habilitar Device Portal
 
 **Para habilitar Device Portal**
 
@@ -26,9 +25,9 @@ ms.openlocfilehash: 00dec1110ba8cc27f759f05bc4a6f352a235d18d
 7. [Desplázate hacia abajo](https://dev.windows.com/holographic/Gestures.html#Navigation) y habilita Device Portal.
 
 
-### Emparejar el dispositivo
+### <a name="pair-your-device"></a>Emparejar el dispositivo
 
-### Conectarse a través de Wi-Fi 
+### <a name="connect-over-wi-fi"></a>Conectarse a través de Wi-Fi 
 
 1. Conecta HoloLens a una red Wi-Fi.
 2. Busca la dirección IP del dispositivo.- Busca la dirección IP en el dispositivo en Configuración > Red e Internet > Wi-Fi > Opciones avanzadas.
@@ -37,18 +36,18 @@ ms.openlocfilehash: 00dec1110ba8cc27f759f05bc4a6f352a235d18d
 3. Desde un explorador web de tu equipo, ve a `https://<YOUR_HOLOLENS_IP_ADDRESS>`
     - En el explorador se mostrará el mensaje siguiente: "Hay un problema con el certificado de seguridad de este sitio web". Esto ocurre porque el certificado emitido en Device Portal es un certificado de prueba. Puedes ignorar este error de certificado por ahora y continuar.
 
-### Conectarse a través de USB 
+### <a name="connect-over-usb"></a>Conectarse a través de USB 
 
 1. Instala las herramientas para asegurarte de que tienes Visual Studio Update 1 con las Herramientas de desarrollo de Windows 10 instaladas en el equipo. Esto permite la conectividad USB.
 2. Conecta HoloLens en el equipo con un cable micro-USB.
 3. Desde un explorador web de tu equipo, ve a `http://127.0.0.1:10080`.
 
-### Conectarse a un emulador 
+### <a name="connect-to-an-emulator"></a>Conectarse a un emulador 
 
 También puedes usar Device Portal con el emulador. Para conectarte a Device Portal, usa la barra de herramientas. Haz clic en este icono:
 - Abrir Device Portal: abre Windows Device Portal para el sistema operativo de HoloLens en el emulador.
 
-### Crear un nombre de usuario y una contraseña. 
+### <a name="create-a-username-and-password"></a>Crear un nombre de usuario y una contraseña. 
 
 La primera vez que te conectes a Device Portal en HoloLens, debes crear un nombre de usuario y una contraseña.
 1. En un explorador web de tu equipo, escribe la dirección IP de HoloLens. Se abrirá la página de acceso Configuración.
@@ -60,7 +59,7 @@ La primera vez que te conectes a Device Portal en HoloLens, debes crear un nombr
 
 Si quieres cambiar este nombre de usuario o contraseña en cualquier momento, puedes repetir este proceso. Para ello, visita la página de seguridad del dispositivo haciendo clic en el vínculo de seguridad a lo largo de la parte superior derecha, o bien navega a: `https://<YOUR_HOLOLENS_IP_ADDRESS>/devicesecurity.htm`.
 
-### Certificado de seguridad 
+### <a name="security-certificate"></a>Certificado de seguridad 
 
 Si ves un "error de certificado" en el explorador, puedes corregirlo mediante la creación de una relación de confianza con el dispositivo.
 
@@ -77,9 +76,9 @@ Cada HoloLens genera un certificado autofirmado único para su conexión de SSL.
 4. Reinicia el explorador.
 
 
-## Páginas de Device Portal 
+## <a name="device-portal-pages"></a>Páginas de Device Portal 
 
-### Página principal 
+### <a name="home"></a>Página principal 
 
 La sesión de Device Portal se inicia en la página principal. Accede a otras páginas desde la barra de navegación en el lado izquierdo de la página principal.
 
@@ -100,7 +99,7 @@ En la página principal se muestra la siguiente información:
     - **Nombre del dispositivo**: asigna un nombre a HoloLens. Debes reiniciar el dispositivo después de cambiar este valor para que surta efecto. Después de hacer clic en Guardar, en un cuadro de diálogo se te preguntará si quieres reiniciar el dispositivo inmediatamente o más tarde.
     - **Configuración de suspensión**: establece el período de tiempo de espera antes de que el dispositivo entre en el modo de suspensión cuando está conectado y cuando funciona con batería.
 
-### Vista 3D 
+### <a name="3d-view"></a>Vista 3D 
 
 Usa la página Vista 3D para ver cómo HoloLens interpreta el entorno. Navega por la vista con el mouse:
 - **Girar**: haz clic con el botón primario + mouse;
@@ -117,7 +116,7 @@ Usa la página Vista 3D para ver cómo HoloLens interpreta el entorno. Navega po
 
 - Reconstrucción de superficie: haz clic o pulsa Actualizar para mostrar la última malla de asignación espacial del dispositivo. Un recorrido completo puede tardar unos segundos en completarse. La malla no se actualiza automáticamente en la vista 3D y debes hacer clic manualmente en Actualizar para obtener la malla más reciente desde el dispositivo. Haz clic en Guardar para guardar la malla de asignación espacial actual como un archivo obj en tu equipo.
 
-### Captura de realidad mixta 
+### <a name="mixed-reality-capture"></a>Captura de realidad mixta 
 
 Usa la página Mixed Reality Capture (Captura de realidad mixta) para guardar flujos multimedia desde HoloLens.
 - Configuración: controla los flujos multimedia que se capturan al activar los valores siguientes:- Hologramas: captura el contenido holográfico en la secuencia de vídeo. Los hologramas se representan en mono y no estéreo.
@@ -133,7 +132,7 @@ Usa la página Mixed Reality Capture (Captura de realidad mixta) para guardar fl
 
 Ten en cuenta que las aplicaciones de HoloLens no podrán capturar una foto o un vídeo MRC mientras grabas o haces streaming de una Vista previa dinámica des de Device Portal.
 
-### Rendimiento del sistema 
+### <a name="system-performance"></a>Rendimiento del sistema 
 
 La herramienta Rendimiento del sistema de HoloLens tiene 3 métricas adicionales que se pueden grabar. 
 
@@ -142,11 +141,11 @@ Estas son las métricas disponibles:
 - **Energía del sistema**: uso de energía instantánea del sistema, con una media superior a un minuto
 - **Velocidad de fotogramas**: fotogramas por segundo, intervalos en blanco verticales perdidos por segundo y perdidos consecutivos
 
-### Página de volcados de memoria de la aplicación 
+### <a name="app-crash-dumps-page"></a>Página de volcados de memoria de la aplicación 
 
 En esta página puedes recopilar los volcados de memoria de las aplicaciones transferidas localmente. Activa la casilla Volcados de memoria de cada aplicación de la que quieras recopilar volcados de memoria. Vuelve a esta página para recopilar los volcados de memoria. Los archivos de volcado de memoria se pueden abrir en Visual Studio para su depuración.
 
-### Pantalla completa 
+### <a name="kiosk-mode"></a>Pantalla completa 
 
 Habilita la pantalla completa, lo que limita la capacidad del usuario para iniciar aplicaciones nuevas o cambiar la aplicación en ejecución. Cuando la pantalla completa está habilitada, se deshabilitan el gesto Nástico y Cortana y no se muestran las aplicaciones colocadas en el entorno del usuario.
 
@@ -154,7 +153,7 @@ Activa Enable Kiosk Mode para poner HoloLens en pantalla completa. Selecciona la
 
 Ten en cuenta que la aplicación se ejecutará en el inicio, incluso si no está habilitada la pantalla completa. Selecciona Ninguna para que no se ejecute ninguna aplicación en el inicio.
 
-### Simulación 
+### <a name="simulation"></a>Simulación 
 
 Te permite grabar y reproducir datos de entrada para las pruebas.
 - **Capture room**: se usa para descargar un archivo de espacio simulado que contiene la malla espacial de asignación del entorno del usuario. Asigna un nombre al espacio y, a continuación, haz clic en Capturar para guardar los datos como un archivo .xef en tu equipo. Puedes cargar este archivo de espacio en el emulador HoloLens.
@@ -163,14 +162,8 @@ Te permite grabar y reproducir datos de entrada para las pruebas.
 - **Modo de control**: selecciona Valor predeterminado o Simulación en la lista desplegable y pulsa o haz clic en el botón Establecer para seleccionar el modo en HoloLens. Si eliges "Simulación", se deshabilitan los sensores reales de HoloLens y se usan los datos simulados cargados en su lugar. Si cambias a "Simulación", HoloLens no responderá al usuario real hasta que vuelva al "Valor predeterminado".
 
 
-### Entrada virtual 
+### <a name="virtual-input"></a>Entrada virtual 
 
 Envía la entrada de teclado desde la máquina remota a HoloLens.
 
 Haz clic o pulsa en la región de debajo del teclado virtual para habilitar el envío de pulsaciones de teclas a HoloLens. Escribe texto de entrada en el cuadro de texto y haz clic o pulsa en Enviar para enviar las pulsaciones de teclas a la aplicación activa.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

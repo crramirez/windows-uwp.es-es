@@ -1,6 +1,6 @@
 ---
 author: TylerMSFT
-Description: "La API de JavaScript de la aplicación &quot;Hacer un examen&quot; de Microsoft, te permite proteger los exámenes. Gracias a &quot;Hacer un examen&quot;, tendrás a mano un navegador seguro que evitará que los estudiantes usen otro equipo o recursos de Internet durante un examen."
+Description: "La API de JavaScript de la aplicación &quot;Hacer un examen&quot; de Microsoft, te permite proteger los exámenes. Gracias a &quot;Hacer un examen&quot;, tendrás a mano un navegador seguro que evitará que los estudiantes usen otro equipo o Internet durante un examen."
 title: API de JavaScript &quot;Hacer un examen&quot;.
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ac1a9b38a9857ae536025e682f98d01135850a19
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e308280fcecf825061ddf503ce91f8607fcece72
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="take-a-test-javascript-api"></a>API de JavaScript "Hacer un examen"
 
-[Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación basada en navegador que te permite realizar exámenes en línea bloqueados para pruebas de gran importancia. Asimismo, admite el estándar API de los navegadores SBAC en pruebas importantes en las que hay mucho en juego y te permite centrarte en el contenido del examen en vez de dedicar tu tiempo a bloquear Windows.
+[Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación basada en el navegador que te permite realizar exámenes en línea bloqueados para pruebas en las que hay mucho en juego. Asimismo, admite el estándar API de los navegadores SBAC en pruebas importantes en las que hay mucho en juego y te permite centrarte en el contenido del examen en vez de dedicar tu tiempo a bloquear Windows.
 
 Hacer un examen usa la tecnología del navegador Microsoft Edge y proporciona una API de JavaScript que las aplicaciones web pueden usar para bloquear la administración de otras experiencias mientras se realiza un examen.
 
@@ -320,4 +317,3 @@ Detiene la síntesis de voz.
 
 **Requisitos**  
 Windows 10, versión 1607
-

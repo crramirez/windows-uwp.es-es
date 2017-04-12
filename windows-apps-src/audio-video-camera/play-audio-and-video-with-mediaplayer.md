@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 30a84f9b36c8ce3ba339f6526ecb8f801f585492
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 79eabb1341d9a14ec924a1933917e92af797b65a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproducir audio y vídeo con MediaPlayer
 
 En este artículo se muestra cómo reproducir elementos multimedia en la aplicación universal de Windows con la clase [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer). Con Windows 10, versión 1607, se realizaron mejoras significativas en las API de reproducción de elementos multimedia, como un diseño de proceso único simplificado para el audio en segundo plano, la integración automática con controles de transporte multimedia del sistema (SMTC), la capacidad de sincronizar varios reproductores multimedia de audio y de reproducir en una superficie Windows.UI.Composition y una interfaz sencilla para crear y programar interrupciones multimedia en tu contenido. Para aprovechar estas mejoras, el procedimiento recomendado para reproducir elementos multimedia es usar la clase **MediaPlayer** en lugar de **MediaElement** para reproducir elementos multimedia. El control de XAML ligero, [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement), se introdujo para permitir representar contenido multimedia en una página XAML. Muchas API de estado y de control de la reproducción que proporciona la clase **MediaElement** están disponibles a través del nuevo objeto [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession). **La clase MediaElement** continúa en funcionamiento para permitir la compatibilidad con versiones anteriores, pero no se le agregarán nuevas características.
@@ -177,7 +174,6 @@ Ten en cuenta que si el valor de desplazamiento de un reproductor se asigna a un
  
 
  
-
 
 
 

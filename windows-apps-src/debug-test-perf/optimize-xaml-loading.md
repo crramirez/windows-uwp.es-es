@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 24a5696a6e835a40b9b4e800677596514b56d53b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9728eced6de3d246dc1ec9950b90d77fea0d576d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="optimize-your-xaml-markup"></a>Optimizar el marcado XAML
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo en una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación.
 
@@ -289,10 +287,9 @@ Los objetos ResourceDictionaries generalmente se usan para almacenar los recurso
 
 ## <a name="use-xbf2"></a>Usar XBF2
 
-XBF2 es una representación binaria de marcado XAML que evita todos los costos de análisis de texto en tiempo de ejecución. También optimiza el código binario para la creación de la carga y el árbol, además de permitir rutas de acceso rápido para que los tipos XAML mejoren los costos de creación de montones y objetos, por ejemplo VSM, ResourceDictionary, Styles, etc. Se asigna completamente a la memoria, por lo que no se necesita superficie de montones para la carga y lectura de una página XAML. Además, reduce la superficie de disco de las páginas XAML almacenadas en un appx. XBF2 es una representación más compacta y puede reducir en hasta un 50 % la superficie de disco de los archivos XAML/XBF1 comparativos. Por ejemplo, la aplicación integrada Fotos vio una reducción de un 60 % tras la conversión a XBF, de aproximadamente 1 MB de activos XBF1 a 400 kB de activos XBF2. También hemos visto aplicaciones que reducen el uso de la CPU entre un 15 % y un 20 % y del montón de Win32 entre un 10 % y un 15 %.
+XBF2 es una representación binaria de marcado XAML que evita todos los costos de análisis de texto en tiempo de ejecución. También optimiza el código binario para la creación de la carga y el árbol, además de permitir rutas de acceso rápido para que los tipos XAML mejoren los costos de creación de montones y objetos, por ejemplo VSM, ResourceDictionary, Styles, etc. Se asigna completamente a la memoria, por lo que no se necesita superficie de montones para la carga y lectura de una página XAML. Además, reduce la superficie de disco de las páginas XAML almacenadas en un appx. XBF2 es una representación más compacta y puede reducir en hasta un 50% la superficie de disco de los archivos XAML/XBF1 comparativos. Por ejemplo, la aplicación integrada Fotos vio una reducción de un 60% tras la conversión a XBF, de aproximadamente 1MB de activos XBF1 a 400kB de activos XBF2. También hemos visto aplicaciones que reducen el uso de la CPU entre un 15% y un 20% y del montón de Win32 entre un 10% y un 15%.
 
 Los controles y diccionarios integrados de XAML que proporciona el marco ya están totalmente habilitados para XBF2. Para tu propia aplicación, asegúrate de que el archivo de proyecto declare TargetPlatformVersion 8.2 o posterior.
 
 Para comprobar si tienes XBF2, abre la aplicación en un editor de código binario; los bytes 12 y 13 son 00 02 si tienes XBF2.
-
 

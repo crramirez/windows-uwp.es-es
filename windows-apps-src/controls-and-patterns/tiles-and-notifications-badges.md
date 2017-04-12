@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios."
+Description: "Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios."
 title: Iconos, distintivos y notificaciones
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
@@ -11,18 +11,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9ee0379b394aaa40535cd204664f6c3626428321
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: eea89ac8c4d7a02faee9277b0015d759340af6d6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="badge-notifications-for-uwp-apps"></a>Notificaciones de distintivo para aplicaciones para UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 <div style="float:left; font-size:80%; text-align:left; margin: 0px 15px 15px 0px;">
-<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/>Un icono con un distintivo numérico que muestra<br/> el número 63 para indicar que hay 63 correos electrónicos sin leer.</div>
+<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/>Un icono con una notificación numérica que muestra<br/> el número 63 para indicar que hay 63 correos electrónicos sin leer.</div>
 
 Las notificaciones transmiten información de estado o resumen de la aplicación y son específicos de la aplicación. Las notificaciones ser numéricas (1-99) o pueden formar parte de un conjunto de glifos proporcionados por el sistema. Algunos ejemplos de la información que se transmite mejor mediante una notificación son el estado de conexión de red de un juego en línea, el estado de un usuario de una aplicación de mensajería, la cantidad de correos electrónicos sin leer en una aplicación de correo electrónico y la cantidad de entradas nuevas en una aplicación de medios sociales. 
 

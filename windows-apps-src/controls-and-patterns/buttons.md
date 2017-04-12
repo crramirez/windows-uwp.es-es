@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: f04d1a3c-7dcd-4bc8-9586-3396923b312e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 41d86777b3e8aa0b7d32c408beec3f55a4a35d7b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e5c8b5056581540abd5e0ddf75da7785648df1d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="buttons"></a>Botones
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -30,9 +28,6 @@ Un botón ofrece al usuario una forma de desencadenar una acción inmediata.
 <li>[**Clase Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)</li>
 <li>[**Clase RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)</li>
 <li>[**Evento Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)</li>
-<li> </li>
-<li> </li>
-<li> </li>
 </ul>
 </div>
 
@@ -88,7 +83,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 Cuando se pulsa un botón con un dedo o lápiz o se presiona el botón izquierdo del mouse mientras el puntero está sobre él, botón genera el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx). Si un botón tiene el foco del teclado, al presionar la tecla ENTRAR o la barra espaciadora también se genera el evento Click.
 
-Por lo general, no se pueden manipular eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) de bajo nivel en un Button porque tiene el comportamiento Click en su lugar. Para obtener más información, consulta el tema de [introducción a los eventos y eventos enrutados](https://msdn.microsoft.com/en-us/library/windows/apps/mt185584.aspx).
+Por lo general, no se pueden manipular eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) de bajo nivel en un Button porque tiene el comportamiento Click en su lugar. Para obtener más información, consulta el tema de [introducción a los eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx).
 
 Puedes cambiar la forma en que un botón genera el evento Click cambiando la propiedad [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx). El valor de ClickMode predeterminado es **Release**. Si ClickMode es **Hover**, no se genera el evento Click con el teclado o de forma táctil. 
 
@@ -97,7 +92,7 @@ Puedes cambiar la forma en que un botón genera el evento Click cambiando la pro
 
 Button es una clase [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.aspx). Su propiedad de contenido XAML es [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx), que habilita una sintaxis así para XAML: `<Button>A button's content</Button>`. Puedes establecer cualquier objeto como contenido del botón. Si el contenido es una clase [UIElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx), se representa en el botón. Si el contenido es otro tipo de objeto, su representación de cadena se muestra en el botón.
 
-Aquí, un elemento **StackPanel** que contiene texto y una imagen de una banana se establece como el contenido de un botón.
+Aquí, un elemento **StackPanel** que contiene texto y una imagen de una naranja se establece como el contenido de un botón.
 
 ```xaml
 <Button Click="Button_Click" 
@@ -187,6 +182,5 @@ El botón Atrás es un elemento de la interfaz de usuario proporcionado por el s
 - [Modificadores para alternar](toggles.md)
 - [Casillas](checkbox.md)
 - [**Clase Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
-
 
 

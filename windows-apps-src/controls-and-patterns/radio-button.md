@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones."
+Description: "Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones"
 title: Directrices para botones de radio
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aa53060a281a452d47461602866d1b67edc161aa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 33a8b62a378e4a9abe20be04a49c94d886144cc5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="radio-buttons"></a>Botones de radio
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones. Cada opción aparece representada por un botón de radio; un usuario solo puede seleccionar un único botón de radio en un grupo de botones de radio.
+Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones Cada opción aparece representada por un botón de radio; un usuario solo puede seleccionar un único botón de radio en un grupo de botones de radio.
 
 (Si tienes curiosidad acerca del origen nombre, los botones de radio se llaman así por los botones de canales preestablecidos de una radio).
 
@@ -196,4 +194,3 @@ En esta ilustración, se muestra el modo correcto de colocar y espaciar botones 
 
 **Para desarrolladores (XAML)**
 - [**Clase RadioButton Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227544)
-

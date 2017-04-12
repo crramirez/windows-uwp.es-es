@@ -9,18 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: f8d6c28daea2a3d5be67ad2b5da5a05a46f736cc
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 4076bd9edf26108e896e3a7734c2108a00577cd0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="version-adaptive-code-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Código adaptativo para versiones: Usa las nuevas API mientras mantienes la compatibilidad con versiones anteriores
 
-Cada versión del SDK de Windows 10 agrega nuevas y emocionantes funcionalidades, y querrás aprovecharlas. Sin embargo, no todos los clientes actualizarán sus dispositivos a la última versión de Windows 10 al mismo tiempo y quieres asegurarte de que tu aplicación funciona en la gama más amplia posible de dispositivos. Aquí te mostramos cómo diseñar la aplicación para que se ejecute en versiones anteriores de Windows 10, pero que también aproveche las ventajas de las nuevas funciones cuando la aplicación se ejecute en un dispositivo que tenga instalada la actualización más reciente.
+Cada versión del SDK de Windows10 agrega nuevas y emocionantes funcionalidades, y querrás aprovecharlas. Sin embargo, no todos los clientes actualizarán sus dispositivos a la última versión de Windows10 al mismo tiempo y quieres asegurarte de que tu aplicación funciona en la gama más amplia posible de dispositivos. Aquí te mostramos cómo diseñar la aplicación para que se ejecute en versiones anteriores de Windows10, pero que también aproveche las ventajas de las nuevas funciones cuando la aplicación se ejecute en un dispositivo que tenga instalada la actualización más reciente.
 
-Es necesario llevar a cabo 2 pasos para asegurarse de que la aplicación admite la gama más amplia posible de dispositivos Windows 10. En primer lugar, configura el proyecto de Visual Studio para orientarlo a las API más recientes. Esto afecta a lo que sucede cuando se compila la aplicación. En segundo lugar, realiza comprobaciones en tiempo de ejecución para asegurarte de llamar únicamente a las API que estén presentes en el dispositivo en el que se ejecute la aplicación.
+Es necesario llevar a cabo 2 pasos para asegurarse de que la aplicación admite la gama más amplia posible de dispositivos Windows10. En primer lugar, configura el proyecto de Visual Studio para orientarlo a las API más recientes. Esto afecta a lo que sucede cuando se compila la aplicación. En segundo lugar, realiza comprobaciones en tiempo de ejecución para asegurarte de llamar únicamente a las API que estén presentes en el dispositivo en el que se ejecute la aplicación.
 
 ## <a name="configure-your-visual-studio-project"></a>Configura el proyecto de Visual Studio.
 
@@ -46,7 +43,7 @@ Para cambiar la versión mínima y de destino de un proyecto que ya se haya crea
 ![Cambiar el SDK de destino en Visual Studio](images/vs-target-sdk-2.png) 
 
 Como referencia, estos son los números de compilación de cada SDK:
-- Windows 10, versión 1506: Versión del SDK 10240
+- Windows10, versión 1506: Versión del SDK 10240
 - Windows 10, versión 1511 (actualización de noviembre): versión 10586 del SDK
 - Windows 10, versión 1607 (actualización de aniversario): versión 14393 del SDK.
 
@@ -106,11 +103,11 @@ Inconvenientes:
 
 ## <a name="adaptive-code-examples"></a>Ejemplos de código adaptativo
 
-En esta sección se muestran varios ejemplos de código adaptativo que usan las API que son nuevas en Windows 10, versión 1607 (Windows Insider Preview).
+En esta sección se muestran varios ejemplos de código adaptativo que usan las API que son nuevas en Windows10, versión 1607 (Windows Insider Preview).
 
 ### <a name="example-1-new-enum-value"></a>Ejemplo 1: Nuevo valor de enumeración
 
-Windows 10, versión 1607, agrega un nuevo valor a la enumeración [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx): **ChatWithoutEmoji**. Este nuevo ámbito de entrada tiene el mismo comportamiento de entrada que el ámbito de entrada **Chat** (revisión ortográfica, autocompletar, uso de mayúsculas automático), pero se asigna a un teclado táctil sin botón de emoji. Esto resulta útil si creas tu propio selector de emoji y deseas deshabilitar el botón de emoji integrado en el teclado táctil. 
+Windows10, versión 1607, agrega un nuevo valor a la enumeración [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx): **ChatWithoutEmoji**. Este nuevo ámbito de entrada tiene el mismo comportamiento de entrada que el ámbito de entrada **Chat** (revisión ortográfica, autocompletar, uso de mayúsculas automático), pero se asigna a un teclado táctil sin botón de emoji. Esto resulta útil si creas tu propio selector de emoji y deseas deshabilitar el botón de emoji integrado en el teclado táctil. 
 
 Este ejemplo muestra cómo comprobar si el valor de enumeración **ChatWithoutEmoji** está presente y establece la propiedad [InputScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.inputscope.aspx) de un **TextBox** si lo está. Si no se encuentra presente en el sistema en el que se ejecuta la aplicación, en su lugar la propiedad **InputScope** se establece en **Chat**. El código que se muestra podría colocarse en un controlador de eventos Page.Page constructor o Page.Loaded.
 
@@ -195,9 +192,9 @@ Si se usa el valor ChatWithoutEmoji en XAML o en el código sin comprobación, s
 
 Una nueva versión de Windows normalmente aporta nuevos controles a la superficie de las API para UWP que aportan nuevas funciones a la plataforma. Para aprovechar la presencia de un nuevo control, usa el método [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx).
 
-Windows 10, versión 1607, presenta un nuevo control multimedia llamado [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). Este control se basa en la clase [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx), por lo que aporta características como la capacidad para enlazar fácilmente el audio en segundo plano y aprovechar las mejoras de la arquitectura en la pila de multimedia.
+Windows10, versión 1607, presenta un nuevo control multimedia llamado [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). Este control se basa en la clase [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx), por lo que aporta características como la capacidad para enlazar fácilmente el audio en segundo plano y aprovechar las mejoras de la arquitectura en la pila de multimedia.
 
-Sin embargo, si la aplicación se ejecuta en un dispositivo que ejecute una versión de Windows 10 anterior a la versión 1607, debes usar el control [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx) en lugar del nuevo control **MediaPlayerElement**. Puedes usar el método [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) para comprobar la presencia del control MediaPlayerElement en tiempo de ejecución y cargar cualquier control adecuado para el sistema en el que se ejecute la aplicación.
+Sin embargo, si la aplicación se ejecuta en un dispositivo que ejecute una versión de Windows10 anterior a la versión 1607, debes usar el control [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx) en lugar del nuevo control **MediaPlayerElement**. Puedes usar el método [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) para comprobar la presencia del control MediaPlayerElement en tiempo de ejecución y cargar cualquier control adecuado para el sistema en el que se ejecute la aplicación.
 
 Este ejemplo muestra cómo crear una aplicación que use el nuevo control MediaPlayerElement o el control MediaElement antiguo en función de si el tipo MediaPlayerElement está presente. En este código, la clase [UserControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol.aspx) se usa para separar por componentes tanto los controles como su interfaz de usuario y su código relacionados, por lo que se pueden alternar en función de la versión del sistema operativo. Como alternativa, es posible usar un control personalizado, lo que proporciona más funcionalidad y un comportamiento más personalizado de lo necesario para este sencillo ejemplo.
  
@@ -376,7 +373,7 @@ class IsPropertyPresentTrigger : StateTriggerBase
 
 El siguiente paso es configurar el desencadenador de estado visual en XAML, para que se produzcan dos estados visuales diferentes en función de la presencia de la API. 
 
-Windows 10, versión 1607. introduce una nueva propiedad en la clase [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) llamada [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx) que determina si un control toma el foco cuando un usuario interactúa con él. Esto resulta útil si se desea mantener el foco en un cuadro de texto para la entrada de datos (y mantener el teclado táctil visible) mientras el usuario hace clic en un botón.
+Windows10, versión 1607. introduce una nueva propiedad en la clase [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) llamada [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx) que determina si un control toma el foco cuando un usuario interactúa con él. Esto resulta útil si se desea mantener el foco en un cuadro de texto para la entrada de datos (y mantener el teclado táctil visible) mientras el usuario hace clic en un botón.
 
 El desencadenador de este ejemplo comprueba si la propiedad está presente. Si la propiedad está presente, establece la propiedad **AllowFocusOnInteraction** de un botón en **false**; si la propiedad no está presente, el botón conserva su estado original. TextBox se incluye para que sea más fácil ver el efecto de esta propiedad cuando se ejecuta el código.
 
@@ -410,7 +407,7 @@ El desencadenador de este ejemplo comprueba si la propiedad está presente. Si l
 
 ### <a name="example-2-new-enum-value"></a>Ejemplo 2: Nuevo valor de enumeración
 
-Este ejemplo muestra cómo establecer diferentes valores de enumeración en función de si un valor se encuentra presente. Usa un desencadenador de estado personalizado para lograr el mismo resultado que el ejemplo anterior de chat. En este ejemplo, se usa el nuevo ámbito de entrada ChatWithoutEmoji si el dispositivo ejecuta Windows 10, versión 1607; de lo contrario, se usa el ámbito de entrada **Chat**. Los estados visuales que usan este desencadenador se configuran con un estilo *if-else*, en el que el ámbito de entrada se elige en función en la presencia del nuevo valor de enumeración.
+Este ejemplo muestra cómo establecer diferentes valores de enumeración en función de si un valor se encuentra presente. Usa un desencadenador de estado personalizado para lograr el mismo resultado que el ejemplo anterior de chat. En este ejemplo, se usa el nuevo ámbito de entrada ChatWithoutEmoji si el dispositivo ejecuta Windows10, versión 1607; de lo contrario, se usa el ámbito de entrada **Chat**. Los estados visuales que usan este desencadenador se configuran con un estilo *if-else*, en el que el ámbito de entrada se elige en función en la presencia del nuevo valor de enumeración.
 
 **C#**
 ```csharp
@@ -483,4 +480,3 @@ class IsEnumPresentTrigger : StateTriggerBase
 
 - [Guía de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
 - [Detección dinámica de funciones con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
-

@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo abarcan diversos elementos de la experiencia de búsqueda, los ámbitos de búsqueda y la implementación, así como ejemplos de búsqueda en contexto."
+Description: "Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto."
 title: "Búsqueda y buscar en la página"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0a92a3962a6e46f6086b07e548ea39887a780c21
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b85d14b037fc65f10a6a24ed6c1a04b4be3ff6d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="search-and-find-in-page"></a>Búsqueda y buscar en la página
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-La búsqueda es una de las formas principales en la que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
+Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
 
 <div class="important-apis" >
 <b>API importantes</b><br/>
@@ -233,4 +231,3 @@ Para obtener más información sobre cómo agregar comandos a la barra de comand
  
 
  
-

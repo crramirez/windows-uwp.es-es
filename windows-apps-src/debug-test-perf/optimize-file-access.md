@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 31869b116096052bed9e1c462de3f93e4d1335c2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 967ed4b6db682524bd06f81d4c6d7771cc41d84b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="optimize-file-access"></a>Optimizar el acceso a archivos
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Crea aplicaciones para la Plataforma universal de Windows (UWP) que puedan obtener acceso al sistema de archivos de forma eficaz, y así evitar problemas de rendimiento debido a la latencia de discos o a los ciclos de memoria o de la CPU
 
@@ -199,7 +197,7 @@ Este comportamiento de búfer es conveniente en la mayoría de los escenarios en
 
 Cuando leas o escribas grandes conjuntos de datos, podrás aumentar tu velocidad de lectura o escritura si proporcionas un tamaño de búfer mayor a los métodos de extensión [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) y [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx). Esto le da al adaptador de secuencias un búfer interno de mayor tamaño. Por ejemplo, cuando se pasa un flujo de un archivo grande a un analizador XML, el analizador puede hacer varias lecturas secuenciales pequeñas del flujo. Un búfer grande puede reducir la cantidad de llamadas a la secuencia de UWP y aumentar el rendimiento.
 
-> **Nota**  Debes tener cuidado cuando configures un tamaño de búfer que sea mayor que aproximadamente 80 KB, ya que esto puede causar la fragmentación del montón del colector de elementos no utilizados (consulta [Mejorar el rendimiento de la recolección de elementos no utilizados](improve-garbage-collection-performance.md)). El siguiente ejemplo de código crea un adaptador de secuencias administradas con un búfer de 81.920 bytes.
+> **Nota**  Debes tener cuidado cuando configures un tamaño de búfer que sea mayor que aproximadamente 80KB, ya que esto puede causar la fragmentación del montón del colector de elementos no utilizados (consulta [Mejorar el rendimiento de la recolección de elementos no utilizados](improve-garbage-collection-performance.md)). El siguiente ejemplo de código crea un adaptador de secuencias administradas con un búfer de 81.920 bytes.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -240,6 +238,5 @@ Cuando trabajas con una gran cantidad de secuencias al mismo tiempo, es posible 
 Probablemente quieras evitar el almacenamiento en búfer, en el caso de escrituras y lecturas de latencia baja y en el caso de que no quieras leer en bloques grandes de un flujo subyacente de UWP. Por ejemplo, podrías querer escrituras y lecturas de latencia baja si estás usando el flujo de comunicaciones de red.
 
 En una aplicación de chat, podrías usar un flujo en una interfaz de red para enviar y recibir mensajes. En este caso quieres enviar mensajes tan pronto estén listos, en lugar de esperar a que el búfer se llene. Si estableces el tamaño del búfer en 0 cuando llames a los métodos de extensión [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) y [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), el adaptador resultante no asignará un búfer y todas las llamadas manipularán directamente la secuencia de UWP subyacente.
-
 
 

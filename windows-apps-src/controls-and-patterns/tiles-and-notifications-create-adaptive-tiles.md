@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla."
+Description: "Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla."
 title: Crear iconos adaptables
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
@@ -11,20 +11,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 53b130c3f97440bd381adda5c40532d46823ce02
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 27d3de280201d92ee98f6e8a17afd85f76acd7d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="create-adaptive-tiles"></a>Crear iconos adaptables
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). Para obtener la lista completa de atributos y elementos adaptables, consulta el [Esquema de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
+Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). Para obtener la lista completa de atributos y elementos adaptables, consulta el [Esquema de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
 
-(Si quieres, puedes seguir usando las plantillas preestablecidas del [catálogo de plantillas de iconos de Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) al diseñar las notificaciones para Windows 10.)
+(Si quieres, puedes seguir usando las plantillas preestablecidas del [catálogo de plantillas de iconos de Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) al diseñar las notificaciones para Windows10.)
 
 
 ## <a name="getting-started"></a>Introducción
@@ -36,7 +34,7 @@ Las plantillas de iconos adaptables son una nueva característica de Windows 10
 
 ## <a name="how-to-send-a-tile-notification"></a>Cómo enviar una notificación de icono
 
-Lee nuestro artículo [Inicio rápido sobre cómo enviar notificaciones de icono locales](tiles-and-notifications-create-adaptive-tiles.md). La documentación de esta página explica todas las posibilidades visuales de la interfaz de usuario que tienes con los iconos adaptables.
+Lee nuestro artículo [Inicio rápido sobre cómo enviar notificaciones de icono locales](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/10/05/quickstart-sending-a-local-tile-notification-in-windows-10/). La documentación de esta página explica todas las posibilidades visuales de la interfaz de usuario que tienes con los iconos adaptables.
 
 
 ## <a name="usage-guidance"></a>Guía de uso
@@ -386,7 +384,7 @@ new AdaptiveText()
 ## <a name="text-styles"></a>Estilos de texto
 
 
-Los estilos controlan el tamaño de fuente, el color y el espesor de los elementos de texto. Hay una serie de estilos disponibles, así como una variación "sutil" de cada estilo que establece la opacidad al 60 % y que, por lo general, hace que el color del texto tenga un tono gris claro.
+Los estilos controlan el tamaño de fuente, el color y el espesor de los elementos de texto. Hay una serie de estilos disponibles, así como una variación "sutil" de cada estilo que establece la opacidad al 60% y que, por lo general, hace que el color del texto tenga un tono gris claro.
 
 ```XML
 <text hint-style="base">Header content</text>
@@ -421,12 +419,12 @@ new AdaptiveText()
 |--------------------------------|---------------------------|-------------|
 | &lt;text hint-style="\*" /&gt; | Alto de fuente               | Espesor de la fuente |
 | subtítulo                        | 12 píxeles efectivos (epx) | Regular     |
-| body                           | 15 epx                    | Regular     |
-| base                           | 15 epx                    | Semibold    |
-| subtitle                       | 20 epx                    | Regular     |
-| title                          | 24 epx                    | Semilight   |
-| subheader                      | 34 epx                    | Light       |
-| header                         | 46 epx                    | Light       |
+| body                           | 15epx                    | Regular     |
+| base                           | 15epx                    | Semibold    |
+| subtitle                       | 20epx                    | Regular     |
+| title                          | 24epx                    | Semilight   |
+| subheader                      | 34epx                    | Light       |
+| header                         | 46epx                    | Light       |
 
  
 
@@ -444,7 +442,7 @@ Estas variaciones reducen el alto de línea para que el contenido de la parte su
 
 **Variaciones de estilo de texto sutiles**
 
-Cada estilo tiene una variación sutil que proporciona al texto una opacidad del 60 % que, por lo general, hace que el color del texto tenga un tono gris claro.
+Cada estilo tiene una variación sutil que proporciona al texto una opacidad del 60% que, por lo general, hace que el color del texto tenga un tono gris claro.
 
 |                        |
 |------------------------|
@@ -597,19 +595,19 @@ El atributo **hint-weight** te permite controlar el ancho de las columnas. El va
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="even">
 <td align="left">Espesor total: 4</td>
@@ -636,11 +634,11 @@ Para hacer que una columna sea dos veces más grande que otra columna, asigna a 
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">33,3 %</td>
+<td align="left">33,3%</td>
 </tr>
 <tr class="odd">
 <td align="left">2</td>
-<td align="left">66,7 %</td>
+<td align="left">66,7%</td>
 </tr>
 <tr class="even">
 <td align="left">Espesor total: 3</td>
@@ -653,7 +651,7 @@ Para hacer que una columna sea dos veces más grande que otra columna, asigna a 
 
 ![subgrupos, una columna que duplica el tamaño de otra](images/adaptive-tiles-subgroups02.png)
 
-Si quieres que la primera columna ocupe un 20 % del ancho total y que la segunda columna ocupe un 80 % del ancho total, asigna el espesor de la primera en 20 y el de la segunda en 80. Si los valores totales del espesor suman 100, actúan como porcentajes.
+Si quieres que la primera columna ocupe un 20% del ancho total y que la segunda columna ocupe un 80% del ancho total, asigna el espesor de la primera en 20 y el de la segunda en 80. Si los valores totales del espesor suman 100, actúan como porcentajes.
 
 <table>
 <colgroup>
@@ -667,11 +665,11 @@ Si quieres que la primera columna ocupe un 20 % del ancho total y que la segund
 </tr>
 <tr class="even">
 <td align="left">20</td>
-<td align="left">20 %</td>
+<td align="left">20%</td>
 </tr>
 <tr class="odd">
 <td align="left">80</td>
-<td align="left">80 %</td>
+<td align="left">80%</td>
 </tr>
 <tr class="even">
 <td align="left">Espesor total: 100</td>
@@ -1218,7 +1216,7 @@ Puedes establecer una superposición negra en la imagen de fondo y la imagen que
 
 **Usar el atributo "hint-overlay" en una imagen de fondo**
 
-La imagen de fondo tendrá como valor predeterminado un 20 % de superposición mientras tengas algunos elementos de texto en la carga (de lo contrario el valor predeterminado de superposición será de un 0 %).
+La imagen de fondo tendrá como valor predeterminado un 20% de superposición mientras tengas algunos elementos de texto en la carga (de lo contrario el valor predeterminado de superposición será de un 0%).
 
 ```XML
 <binding template="TileWide">
@@ -1273,7 +1271,7 @@ TileMedium = new TileBinding()
 }
 ```
 
-En este ejemplo se muestra una imagen que aparece con una opacidad del 20 % (izquierda) y una opacidad del 0 % (derecha):
+En este ejemplo se muestra una imagen que aparece con una opacidad del 20% (izquierda) y una opacidad del 0% (derecha):
 
 ![Atributo hint-overlay en una imagen que aparece](images/hintoverlay.png)
 
@@ -1397,13 +1395,12 @@ TileWide = new TileBinding()
 
 
 * [Esquema de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md)
-* [Inicio rápido: Enviar una notificación de icono local](tiles-and-notifications-create-adaptive-tiles.md)
+* [Inicio rápido: Enviar una notificación de icono local](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/10/05/quickstart-sending-a-local-tile-notification-in-windows-10/)
 * [Biblioteca de notificaciones en GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
 * [Catálogo de plantillas de iconos especiales](tiles-and-notifications-special-tile-templates-catalog.md)
  
 
  
-
 
 
 

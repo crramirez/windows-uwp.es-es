@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios."
+Description: "Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios."
 title: Iconos, distintivos y notificaciones
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f8b063f45afadda50fa9ea091bf6cba71a25e8c1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4a9a1b18984ed418fc31061ff2ee392230117609
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Iconos, distintivos y notificaciones para las aplicaciones para UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -125,7 +123,6 @@ Un icono es una representación de la aplicación en el menú Inicio. Todas las 
  
 
  
-
 
 
 

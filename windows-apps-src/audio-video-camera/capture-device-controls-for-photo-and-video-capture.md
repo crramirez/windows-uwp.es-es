@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
-description: "En este artículo se muestra cómo usar los controles de dispositivo manuales para permitir escenarios de captura de fotos y vídeo mejorados, como la estabilización de imagen óptica y el zoom suave."
+description: "Este artículo muestra cómo usar los controles de dispositivo manuales para permitir escenarios de captura de fotos y vídeo mejorados, como la estabilización de imagen óptica y el zoom suave."
 title: "Controles manuales de la cámara para la captura de fotos y vídeos"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,23 +9,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: be3c421c2b8d7b4bb71ddaa984ff925f0563f1f6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d0d7a429cf702455d969e1ac1c62def6181e8dd0
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>Controles manuales de la cámara para la captura de fotos y vídeos
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artículo muestra cómo usar los controles de dispositivo manuales para permitir escenarios de captura de fotos y vídeo mejorados, como la estabilización de imagen óptica y el zoom suave.
 
 Los controles mencionados en este artículo se agregan a la aplicación con el mismo patrón. En primer lugar, comprueba si el control es compatible con el dispositivo actual en el que se ejecuta la aplicación. Si el control se admite, establece el modo deseado para él. Por lo general, si el dispositivo actual no admite un control en particular, debes deshabilitar u ocultar el elemento de la interfaz de usuario que permita al usuario habilitar esa característica.
 
-El código de este artículo es una adaptación de la [muestra del SDK de controles manuales de la cámara](http://go.microsoft.com/fwlink/p/?LinkId=619479). Puedes descargar la muestra para ver el código usado en contexto o para usar la muestra como punto de partida para tu propia aplicación.
+El código de este artículo es una adaptación de la [muestra del SDK de controles manuales de la cámara](https://go.microsoft.com/fwlink/?linkid=845228). Puedes descargar la muestra para ver el código usado en contexto o para usar la muestra como punto de partida para tu propia aplicación.
 
 > [!NOTE]
 > Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. El código de este artículo supone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
@@ -349,4 +346,3 @@ Para establecer el nivel de zoom en el dispositivo de captura, crea un nuevo obj
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-

@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c1decefe507ccebbaee1055426fbde06eb9670e7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4f3bb71d1aef8917e14514521393ef1ba7c782d1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessible-text-requirements"></a>Requisitos de texto accesible  
 
 
@@ -175,5 +172,4 @@ Estos tipos tienen una propiedad **IsTextScaleFactorEnabled**:
 * [Información básica de accesibilidad](basic-accessibility-information.md)
 * [Muestra de visualización de texto en XAML](http://go.microsoft.com/fwlink/p/?linkid=238579)
 * [Muestra de edición de texto en XAML](http://go.microsoft.com/fwlink/p/?linkid=251417)
-* [Muestra de accesibilidad en XAML](http://go.microsoft.com/fwlink/p/?linkid=238570) 
-
+* [Muestra de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570) 

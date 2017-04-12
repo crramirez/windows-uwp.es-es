@@ -3,14 +3,11 @@ Description: "Esta es la información que necesitas para crear una aplicación u
 title: "Guías de procedimientos para aplicaciones Windows 10: desarrollo de aplicaciones Windows"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
 redirect_url: https://developer.microsoft.com/windows/develop
-translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
 ms.openlocfilehash: 5b07b46627ca19f2a3cc02e72212a9870d778c7c
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
-# Guías de procedimientos para aplicaciones Windows 10
+# <a name="how-to-guides-for-windows-10-apps"></a>Guías de procedimientos para aplicaciones Windows 10
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -45,9 +42,3 @@ Si quieres una introducción a la Plataforma universal de Windows (UWP) y de có
 | [Subprocesamiento y programación asincrónica](threading-async/index.md) | Usa la programación asincrónica para ayudar a mantener la capacidad de respuesta de la aplicación, al permitir que continúe ejecutándose y respondiendo a la interfaz de usuario mientras se completa otro trabajo que pueda tardar un tiempo prolongado. |
 | [Componentes de Windows Runtime](winrt-components/index.md) | Obtén información sobre estos objetos autocontenidos, que puedes inicializar y usar desde cualquier lenguaje, como C#, Visual Basic, JavaScript y C++. Por ejemplo, puedes crear un componente de Windows Runtime en C++ que use una biblioteca de terceros para realizar una operación que consuma muchos recursos de proceso, o simplemente reutiliza código C# o Visual Basic en una aplicación universal de Windows. 
 | [Plataforma XAML](xaml-platform/index.md) | Aprende los conceptos básicos del lenguaje de programación XAML. O bien, si ya estás familiarizado con XAML, sigue adelante y aprende a implementar características de Windows Runtime en XAML con Visual Studio para crear una excelente aplicación universal de Windows. |
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

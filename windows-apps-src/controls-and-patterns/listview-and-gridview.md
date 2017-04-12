@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: f8532ba0-5510-4686-9fcf-87fd7c643e7b
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: fd8d538e6431bbff011c99ce8d17736d70f0c0ea
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 57fd59c54b7dfe3a8c12519bbac1dcd47d8c0854
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="listview-and-gridview"></a>ListView y GridView
 
@@ -515,11 +513,10 @@ Los controles ListView y GridView permiten arrastrar y colocar elementos en sí 
     En este ejemplo se muestra el uso de los controles ListView y GridView.
 
 *   [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
-    Aquí podrás ver todos los controles XAML en un formato interactivo.
+    Consulta todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Listas](lists.md)
 - [Plantillas de elemento de la vista de lista](listview-item-templates.md)
 - [Arrastrar y colocar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
-

@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7eeb8b79b3c50593470f62c3eddd29a9f218d528
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 29383c65d36b7bc9e5946e4c55298ac0e04107c6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="optimize-animations-media-and-images"></a>Optimizar las animaciones, multimedia e imágenes
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Crea aplicaciones para la Plataforma universal de Windows (UWP) con animaciones suaves, alta velocidad de fotogramas y capturas multimedia y reproducciones de alto rendimiento.
 
@@ -56,7 +54,7 @@ El marco XAML no representa directamente el contenido web de un control [**WebVi
 
 Tampoco es buena idea animar una clase [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). Además de la disminución del rendimiento, puede causar la desactivación u otras anomalías en las imágenes del vídeo que se reproduzca.
 
-> **Nota**  Las recomendaciones de este artículo respecto a **MediaPlayerElement** también se aplican a [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** solo está disponible en Windows 10, versión 1607, por lo que si vas a crear una aplicación para una versión anterior de Windows, debes usar **MediaElement**.
+> **Nota**  Las recomendaciones de este artículo respecto a **MediaPlayerElement** también se aplican a [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** solo está disponible en Windows10, versión 1607, por lo que si vas a crear una aplicación para una versión anterior de Windows, debes usar **MediaElement**.
 
 ### <a name="use-infinite-animations-sparingly"></a>Usar las aplicaciones infinitas moderadamente
 
@@ -111,7 +109,9 @@ A menudo, las aplicaciones ofrecen una vista incrustada donde se reproduce víde
 
 No dibujes elementos XAML sobre el vídeo cuando se encuentre en modo insertado. Si lo haces, se fuerza al marco a realizar trabajo adicional para componer la escena. Por ejemplo, para optimizar esta situación, puedes situar los controles de transporte debajo de un elemento multimedia incrustado en lugar de colocarlos sobre el vídeo. En esta imagen, la barra roja indica un conjunto de controles de transporte (Reproducir, Pausar, Detener, etc.).
 
-![MediaPlayerElement con elementos superpuestos](images/videowithoverlay.png) No coloques estos controles sobre elementos multimedia que no aparezcan en pantalla completa. En su lugar, sitúa los controles de transporte en algún lugar fuera del área en la que se representan los elementos multimedia. En la siguiente imagen, los controles se encuentran debajo del elemento multimedia.
+![MediaPlayerElement con elementos superpuestos](images/videowithoverlay.png)
+
+No coloques estos controles sobre elementos multimedia que no aparecen en pantalla completa. En su lugar, sitúa los controles de transporte en algún lugar fuera del área en la que se representan los elementos multimedia. En la siguiente imagen, los controles se encuentran debajo del elemento multimedia.
 
 ![MediaPlayerElement con elementos vecinos](images/videowithneighbors.png)
 
@@ -127,7 +127,7 @@ Al establecer [**MediaplayerElement.PosterSource**](https://msdn.microsoft.com/l
 
 Siempre es difícil que las plataformas multimedia logren que el arrastre del cabezal de reproducción tenga una verdadera capacidad de respuesta. Por lo general, los usuarios lo logran cambiando el valor de un control deslizante. A continuación, te ofrecemos algunos consejos para que realices esta tarea con la mayor eficacia posible:
 
--   Actualiza el valor de [**Slider**](https://msdn.microsoft.com/library/windows/apps/BR209614) en función de un temporizador que consulte la propiedad [**Position**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx) en [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx). Asegúrate de usar una frecuencia de actualización razonable para el temporizador. La propiedad **Position** solo se actualiza cada 250 milisegundos durante la reproducción.
+-   Actualiza el valor de [**Slider**](https://msdn.microsoft.com/library/windows/apps/BR209614) en función de un temporizador que consulte la propiedad [**Position**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx) en [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx). Asegúrate de usar una frecuencia de actualización razonable para el temporizador. La propiedad **Position** solo se actualiza cada 250milisegundos durante la reproducción.
 -   El tamaño de la frecuencia de los pasos de la clase Slider debe escalarse con la longitud del vídeo.
 -   Suscríbete a los eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointermoved.aspx) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) del control deslizante para establecer la propiedad [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx) en 0 cuando el usuario arrastre el control de posición del control deslizante.
 -   En el controlador de eventos [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx), establece de forma manual la posición multimedia en el valor de la posición del control deslizante para ajustar el control de posición óptimo al arrastrar el cabezal de reproducción.
@@ -154,7 +154,7 @@ Las imágenes se capturan en resoluciones muy altas, lo que puede provocar un ma
 No realices lo siguiente:
 
 ```xaml
-<Image Source="ms-appx:///Assets/highresCar.jpg" 
+<Image Source="ms-appx:///Assets/highresCar.jpg"
        Width="300" Height="200"/>    <!-- BAD CODE DO NOT USE.-->
 ```
 
@@ -163,7 +163,7 @@ En su lugar, haz esto:
 ```xaml
 <Image>
     <Image.Source>
-    <BitmapImage UriSource="ms-appx:///Assets/highresCar.jpg" 
+    <BitmapImage UriSource="ms-appx:///Assets/highresCar.jpg"
                  DecodePixelWidth="300" DecodePixelHeight="200"/>
     </Image.Source>
 </Image>
@@ -199,7 +199,7 @@ Te recomendamos que asocies siempre una clase [**BitmapImage**](https://msdn.mic
 
 **Ejemplos de árbol activo**
 
-Ejemplo 1 (bueno): se especifica el identificador uniforme de recursos (URI) en el marcado.
+Ejemplo 1 (bueno): Se especifica el identificador uniforme de recursos (URI) en el marcado.
 
 ```xaml
 <Image x:Name="myImage" UriSource="Assets/cool-image.png"/>
@@ -273,14 +273,14 @@ Un caso de uso de escalado de imágenes es la creación de miniaturas. Si bien p
 > picker.FileTypeFilter.Add(".jpeg");
 > picker.FileTypeFilter.Add(".png");
 > picker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
-> 
+>
 > StorageFile file = await picker.PickSingleFileAsync();
-> 
+>
 > StorageItemThumbnail fileThumbnail = await file.GetThumbnailAsync(ThumbnailMode.SingleItem, 64);
-> 
+>
 > BitmapImage bmp = new BitmapImage();
 > bmp.SetSource(fileThumbnail);
-> 
+>
 > Image img = new Image();
 > img.Source = bmp;
 > ```
@@ -291,14 +291,14 @@ Un caso de uso de escalado de imágenes es la creación de miniaturas. Si bien p
 > picker.FileTypeFilter.Add(".jpeg")
 > picker.FileTypeFilter.Add(".png")
 > picker.SuggestedStartLocation = PickerLocationId.PicturesLibrary
-> 
+>
 > Dim file As StorageFile = Await picker.PickSingleFileAsync()
-> 
+>
 > Dim fileThumbnail As StorageItemThumbnail = Await file.GetThumbnailAsync(ThumbnailMode.SingleItem, 64)
-> 
+>
 > Dim bmp As New BitmapImage()
 > bmp.SetSource(fileThumbnail)
-> 
+>
 > Dim img As New Image()
 > img.Source = bmp
 > ```
@@ -306,5 +306,3 @@ Un caso de uso de escalado de imágenes es la creación de miniaturas. Si bien p
 ### <a name="decode-images-once"></a>Descodificar las imágenes una sola vez
 
 Para evitar que las imágenes se descodifiquen más de una vez, asigna la propiedad [**Image.Source**](https://msdn.microsoft.com/library/windows/apps/BR242760) desde un URI en lugar de usar secuencias de memoria. El marco XAML puede asociar el mismo URI en varios lugares con una imagen descodificada, pero no puede hacer ese mismo trabajo para distintas secuencias de memoria que contengan los mismos datos; por ello, crea una imagen descodificada diferente para cada secuencia de memoria.
-
-

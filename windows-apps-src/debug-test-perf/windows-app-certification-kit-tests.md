@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: e1a7b61d8f5dfe6ae3477f349d23674d700d002b
 ms.openlocfilehash: 2dab2719eae86487b93b9030b430b84aea7b2737
-ms.lasthandoff: 02/04/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 ## <a name="windows-app-certification-kit-tests"></a>Pruebas del Kit para la certificación de aplicaciones en Windows
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El Kit para la certificación de aplicaciones en Windows contiene diversas pruebas que pueden ayudarte a garantizar que tu aplicación esté lista para publicarse en la Tienda Windows.
 
@@ -127,7 +125,7 @@ Examina el manifiesto de la aplicación para comprobar que el contenido sea corr
 
 -   **Comprobación de la comunicación entre procesos (IPC)**
 
-    Esta prueba impone el requisito de que las aplicaciones de la Tienda Windows no se comunican fuera del contenedor de la aplicación con componentes del escritorio. La comunicación entre procesos está pensada exclusivamente para las aplicaciones de prueba. Las aplicaciones en las que el nombre especificado en [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) sea "DesktopApplicationPath" no superarán esta prueba.
+    Esta prueba impone el requisito de que las aplicaciones de la TiendaWindows no se comunican fuera del contenedor de la aplicación con componentes del escritorio. La comunicación entre procesos está pensada exclusivamente para las aplicaciones de prueba. Las aplicaciones en las que el nombre especificado en [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) sea "DesktopApplicationPath" no superarán esta prueba.
 
 ### <a name="corrective-action"></a>Acción correctiva
 
@@ -191,7 +189,7 @@ Habilita la opción /SAFESEH en el comando enlazador cuando diseñes tu aplicaci
 
 **Observaciones**
 
-La prueba no se realiza en binarios de 64 bits ni en binarios de conjunto de chips ARM porque no almacenan direcciones de controladores de excepciones en la pila.
+La prueba no se realiza en binarios de 64bits ni en binarios de conjunto de chips ARM porque no almacenan direcciones de controladores de excepciones en la pila.
 
 ### <a name="span-idbinscope-3spandata-execution-prevention"></a><span id="binscope-3"></span>Prevención de ejecución de datos
 
@@ -219,7 +217,7 @@ Habilita la opción /DYNAMICBASE en el comando enlazador cuando diseñes tu apli
 
 **Observaciones**
 
-Normalmente, ASLR no afecta al rendimiento. Pero en algunos escenarios, hay una pequeña mejora de rendimiento en sistemas de 32 bits. Es posible que el rendimiento pueda afectar a un sistema muy congestionado con imágenes cargadas en muchas ubicaciones diferentes de la memoria.
+Normalmente, ASLR no afecta al rendimiento. Pero en algunos escenarios, hay una pequeña mejora de rendimiento en sistemas de 32bits. Es posible que el rendimiento pueda afectar a un sistema muy congestionado con imágenes cargadas en muchas ubicaciones diferentes de la memoria.
 
 Esta prueba se realiza solamente en aquellas aplicaciones escritas en código administrado, como mediante el uso de C# o .NET Framework.
 
@@ -307,7 +305,7 @@ Prueba la aplicación para detectar el uso de cualquier API no compatible.
 
 ### <a name="background"></a>Antecedentes
 
-Para lograr la certificación de la Tienda Windows, las aplicaciones deben usar las API para las aplicaciones de la Tienda Windows (es decir, API de Windows en tiempo de ejecución o API de Win32 compatibles). Esta prueba también identifica situaciones en las que un binario administrado toma una dependencia de una función fuera del perfil aprobado.
+Para lograr la certificación de la TiendaWindows, las aplicaciones deben usar las API para las aplicaciones de la Tienda Windows (es decir, API de Windows en tiempo de ejecución o API de Win32 compatibles). Esta prueba también identifica situaciones en las que un binario administrado toma una dependencia de una función fuera del perfil aprobado.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
@@ -322,13 +320,13 @@ Asegúrate de que la aplicación se haya compilado como una versión de lanzamie
 
 Revisa los mensajes de error para identificar la API que usa la aplicación y que no es una [API para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> **Nota** Las aplicaciones C++ creadas en una configuración de depuración no pasarán esta prueba aunque la configuración use solo las API de Windows SDK para aplicaciones de la Tienda Windows. Consulta el tema sobre [alternativas a las API de Windows en aplicaciones de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
+> **Nota** Las aplicaciones C++ creadas en una configuración de depuración no pasarán esta prueba aunque la configuración use solo las API de Windows SDK para aplicaciones de la Tienda Windows. Consulta el tema sobre [alternativas a las API de Windows en aplicaciones de la TiendaWindows](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
 
 ## <a name="performance-tests"></a>Pruebas de rendimiento
 
 La aplicación debe responder con rapidez a la interacción del usuario y los comandos del sistema para que la experiencia de usuario sea rápida y fluida.
 
-Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Los umbrales de la prueba de rendimiento para la certificación de aplicaciones están establecidos de tal manera que los equipos de bajo consumo cumplan con las expectativas del cliente en cuanto a una experiencia rápida y fluida. Para determinar el rendimiento de la aplicación, te recomendamos que la pruebes en un equipo de bajo consumo, por ejemplo, un equipo basado en un procesador Intel Atom con una resolución de pantalla de 1366 x 768 (o superior) y un disco duro giratorio (en lugar de un disco duro de estado sólido).
+Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Los umbrales de la prueba de rendimiento para la certificación de aplicaciones están establecidos de tal manera que los equipos de bajo consumo cumplan con las expectativas del cliente en cuanto a una experiencia rápida y fluida. Para determinar el rendimiento de la aplicación, te recomendamos que la pruebes en un equipo de bajo consumo, por ejemplo, un equipo basado en un procesador IntelAtom con una resolución de pantalla de 1366 x 768 (o superior) y un disco duro giratorio (en lugar de un disco duro de estado sólido).
 
 ### <a name="bytecode-generation"></a>Generación de códigos de bytes
 
@@ -464,7 +462,7 @@ Usa esta tabla como guía.
 <p>Asegúrate de que el manifiesto de la aplicación tenga recursos definidos en dicho archivo.</p>
 </td></tr>
 <tr><td>
-<p>El archivo de imagen {filename} debe tener un tamaño inferior a 204800 bytes.\*\*</p>
+<p>El archivo de imagen {filename} debe tener un tamaño inferior a 204800bytes.\*\*</p>
 </td><td>
 <p>Reduce el tamaño de las imágenes especificadas.</p>
 </td></tr>
@@ -474,7 +472,7 @@ Usa esta tabla como guía.
 <p>Aunque el mapa inverso se genera durante la tarea "F5 debugging" de Visual Studio al llamar a makepri.exe, se puede quitar ejecutando makepri.exe sin el parámetro /m al generar un archivo pri.</p>
 </td></tr>
 <tr><td colspan="2">
-<p>\*\*Indica que se ha incluido una prueba en el Kit para la certificación de aplicaciones en Windows 3.3 para Windows 8.1 y que únicamente es válida cuando se usa esa versión del kit o una posterior.</p>
+<p>\*\*Indica que se ha incluido una prueba en el Kit para la certificación de aplicaciones en Windows3.3 para Windows 8.1 y que únicamente es válida cuando se usa esa versión del kit o una posterior.</p>
 </td></tr>
 </table>
 
@@ -675,4 +673,3 @@ Actualiza el código JavaScript en segundo plano para que llame a Close() correc
  
 
  
-

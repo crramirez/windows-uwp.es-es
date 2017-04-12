@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-description: "En este tema se muestra cómo aplicar efectos a la vista previa de la cámara y a las secuencias de grabación de vídeo, y cómo usar el efecto de estabilización de vídeo."
+description: "Este tema muestra cómo aplicar efectos a la vista previa de la cámara y a las secuencias de grabación de vídeo, y muestra cómo usar el efecto de estabilización de vídeo."
 title: "Efectos para la captura de vídeo"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60b3d3874ea90b7d626ff1a78c104348ff80dc09
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7e8d65576347308eea7dd2f445961ba366557fa3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="effects-for-video-capture"></a>Efectos para la captura de vídeo
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tema muestra cómo aplicar efectos a la vista previa de la cámara y a las secuencias de grabación de vídeo, y muestra cómo usar el efecto de estabilización de vídeo.
 
@@ -110,7 +107,6 @@ Para limpiar el efecto de estabilización de vídeo, llama al método [**RemoveE
  
 
  
-
 
 
 

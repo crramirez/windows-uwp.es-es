@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bf56b564b383ee90e276416bf1dda29f55bb771c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a5a0a20ffa8ca27c123d139f25f636587db07aba
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessibility-testing"></a>Pruebas de accesibilidad  
 
 Procedimientos de prueba que debes seguir para asegurarte de que la aplicación para la Plataforma universal de Windows (UWP) sea accesible.
@@ -75,7 +72,7 @@ La mejor manera de probar tu accesibilidad de teclado es desconectar el mouse o 
 Usa herramientas de contraste de color para comprobar que la relación de contraste del texto visible sea aceptable. Algunas excepciones son los elementos de interfaz de usuario inactivos y los logotipos o el texto decorativo que no transmiten ninguna información y pueden reordenarse sin cambiar el significado. Consulta el tema sobre [requisitos de texto accesible](accessible-text-requirements.md) para obtener más información sobre excepciones y relación de contraste. Consulta las [técnicas de WCAG 2.0 G18 (sección sobre recursos)](http://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) para ver las herramientas que pueden probar las relaciones de contraste.
 
 > [!NOTE]
-> Algunas de las herramientas indicadas en el tema sobre las técnicas de WCAG 2.0 G18 no se pueden usar de manera interactiva con una aplicación de la Tienda Windows. Es posible que debas escribir manualmente en la herramienta los valores de color de primer plano y fondo, realizar capturas de pantalla de la interfaz de usuario de la aplicación y luego ejecutar la herramienta de relación de contraste sobre la imagen de la captura de pantalla, o ejecutar la herramienta a la vez que abres los archivos de mapa de bits en un programa de edición de imágenes en lugar de hacerlo al cargar la imagen en la aplicación.
+> Algunas de las herramientas indicadas en el tema sobre las técnicas de WCAG 2.0 G18 no se pueden usar de manera interactiva con una aplicación de la TiendaWindows. Es posible que debas escribir manualmente en la herramienta los valores de color de primer plano y fondo, realizar capturas de pantalla de la interfaz de usuario de la aplicación y luego ejecutar la herramienta de relación de contraste sobre la imagen de la captura de pantalla, o ejecutar la herramienta a la vez que abres los archivos de mapa de bits en un programa de edición de imágenes en lugar de hacerlo al cargar la imagen en la aplicación.
 
 <span id="verify_your_app_in_high_contrast"/>
 <span id="VERIFY_YOUR_APP_IN_HIGH_CONTRAST"/>
@@ -149,4 +146,3 @@ Un aspecto que puedes probar es si en la vista de elementos de Automatización d
 * [Procedimientos que deben evitarse](practices-to-avoid.md)
 * [Automatización de la interfaz de usuario](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
 * [Accesibilidad en Windows](http://go.microsoft.com/fwlink/p/?LinkId=320802) 
-

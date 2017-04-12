@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 38a78b8af1555bdb4409c967bd27e5967b5c40aa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 51befe8b6b30418599fc1dd04a059f3b053046ad
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="performance"></a>Rendimiento
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, puedes realizar mediciones desde el principio y con la suficiente frecuencia durante el ciclo de vida del proyecto para estar seguro que cumples los objetivos. En esta sección se muestra cómo organizar el flujo de trabajo de rendimiento, solucionar problemas de animaciones y los problemas de velocidad de fotogramas y ajustar el tiempo de inicio, tiempo de navegación de páginas y el uso de la memoria.
 
@@ -40,5 +38,4 @@ Si aún no lo has hecho, un paso que ya hemos visto y que permite realizar mejor
 | [Optimizar el acceso a archivos](optimize-file-access.md) | Crea aplicaciones para UWP que puedan obtener acceso al sistema de archivos de forma eficaz y así poder evitar problemas de rendimiento debido a la latencia de discos o a los ciclos de memoria/CPU. |
 | [Componentes de Windows Runtime y optimización de la interoperabilidad](windows-runtime-components-and-optimizing-interop.md) | Crea aplicaciones para UWP que usen componentes de UWP e interactúen con los tipos administrados y nativos, al mismo tiempo que evitan problemas de rendimiento de la interoperabilidad. |
 | [Herramientas de creación de perfiles y rendimiento](tools-for-profiling-and-performance.md) | Microsoft proporciona varias herramientas que te ayudarán a mejorar el rendimiento de tu aplicación para UWP.|
-
 

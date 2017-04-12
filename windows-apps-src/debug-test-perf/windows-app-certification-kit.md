@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f30eaa7edf229872170a3f661c931787938acb2d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 118d4643c3d4fcb8549549e9d58d4b64d64f0885
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Para que la aplicación tenga posibilidades de [publicarse en la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Hh694062), o de obtener la [certificación de Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx), debes validarla y probarla localmente antes de enviarla para su certificación. En este tema explicamos cómo instalar y ejecutar el [Kit para la certificación de aplicaciones en Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666).
@@ -89,7 +87,7 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 Los umbrales de la prueba de rendimiento del Kit para la certificación de aplicaciones en Windows se basan en el rendimiento de un equipo de bajo consumo.
 
-Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumple con las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Dn764944), te recomendamos probarla en un equipo de bajo consumo; por ejemplo, un equipo basado en un procesador Intel Atom con una resolución de pantalla de 1366 x 768 (o superior) y un disco duro giratorio (en lugar de un disco duro de estado sólido).
+Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumple con las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Dn764944), te recomendamos probarla en un equipo de bajo consumo; por ejemplo, un equipo basado en un procesador IntelAtom con una resolución de pantalla de 1366x768 (o superior) y un disco duro giratorio (en lugar de un disco duro de estado sólido).
 
 A medida que evolucionan los equipos de bajo consumo, las características de rendimiento podrían cambiar con el tiempo. Consulta las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Dn764944) más recientes y prueba la aplicación con la versión más reciente del Kit para la certificación de aplicaciones en Windows para asegurarte de que cumple los últimos requisitos de rendimiento.
 
@@ -100,7 +98,6 @@ A medida que evolucionan los equipos de bajo consumo, las características de re
  
 
  
-
 
 
 

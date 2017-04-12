@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4e8c90996324e7481a7a4dab5a1ff3f30b139276
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8d700c707a3a3cdebe338ac51c8ebb5b37d94da3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-to-app-communication"></a>Comunicación entre aplicaciones
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En esta sección se explica cómo compartir datos entre aplicaciones para la Plataforma universal de Windows (UWP), como por ejemplo, cómo usar el contrato para contenido compartido, cómo copiar y pegar y cómo arrastrar y colocar.
 
@@ -41,4 +38,3 @@ Además del contrato para compartir contenido, las aplicaciones también pueden 
 
 ## <a name="see-also"></a>Consulta también
 - [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/develop)
-

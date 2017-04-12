@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 96902d7532aed1510d959b45528cc71e0e6dca70
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3cd3695f6a7ec9c2d29fdd1826635973aab809a9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>Optimización de la interfaz de usuario de ListView y GridView
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Nota**  
 Para más información, consulta la sesión de //build/ [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView (Aumentar considerablemente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de GridView y ListView)](https://channel9.msdn.com/events/build/2013/3-158).
@@ -324,5 +322,4 @@ Al reciclar un elemento (**ListViewItem**/**GridViewItem**), el marco debe decid
 Cuando hay una distribución desigual de los elementos que usan plantillas de elemento diferentes, entonces es probable que se tengan que crear nuevas plantillas de elemento durante el movimiento panorámico, lo cual elimina muchas de las mejoras proporcionadas por la virtualización. Además, un selector de plantilla de elemento solo tiene en cuenta cinco posibles candidatos al evaluar si se puede reutilizar un contenedor particular para el elemento de datos actual. Por lo tanto, debes pensar detenidamente si tus datos son apropiados para usarlos con un selector de plantilla de elemento antes de usar uno en tu aplicación. Si tu colección es principalmente homogénea, el selector devuelve el mismo tipo la mayoría del tiempo (posiblemente todo el tiempo). Solo debes tener en cuenta el esfuerzo que te supone tener excepciones poco frecuentes en esa homogeneidad y decidir si prefieres usar [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) (o dos controles de elementos).
 
  
-
 

@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4dc1cd837b7ac7849125e0a1737873fec4a15cd3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 34c3aab3e9a04eb535014182c0dbc8c140670b89
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="create-custom-transport-controls"></a>Crear controles de transporte personalizados
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-La clase MediaPlayerElement tiene controles de transporte de XAML personalizables para administrar el control del contenido de audio y vídeo dentro de una aplicación para la Plataforma universal de Windows (UWP). Aquí te mostramos cómo personalizar la platilla MediaTransportControls. Te mostraremos cómo trabajar con el menú de desbordamiento, agregar un botón personalizado y modificar el control deslizante.
+La clase MediaPlayerElement tiene controles de transporte de XAML personalizables para administrar el control del contenido de audio y vídeo dentro de una aplicación para Plataforma universal de Windows (UWP). Aquí te mostramos cómo personalizar la platilla MediaTransportControls. Te mostraremos cómo trabajar con el menú de desbordamiento, agregar un botón personalizado y modificar el control deslizante.
 
 Antes de empezar, debes estar familiarizado con las clases MediaPlayerElement y MediaTransportControls. Para obtener más información, consulta la guía de control de MediaPlayerElement.
 
@@ -71,8 +69,7 @@ Puedes personalizar el aspecto del control al modificar la plantilla predetermin
 En las siguientes secciones se muestra cómo personalizar muchos de los elementos principales de los controles de transporte:
 - [
               Clase **Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): permite que un usuario arrastre a través de sus elementos multimedia y también muestra el progreso.
-- [
-              Clase **CommandBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): contiene todos los botones.
+- Clase [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): contiene todos los botones.
 Para obtener más información, consulta la sección de anatomía del tema de referencia MediaTransportControls.
 
 ## <a name="customize-the-transport-controls"></a>Personalizar los controles de transporte
@@ -271,7 +268,7 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 
 Un elemento [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx) proporciona el control "seek" de MediaTransportControls. Una manera de personalizarlo es cambiando la granularidad del comportamiento de búsqueda.
 
-El control deslizante de búsqueda predeterminado se divide en 100 partes, por lo que el comportamiento de búsqueda se limita a ese número de secciones. Puedes cambiar la granularidad del control deslizante de búsqueda al obtener el elemento Slider del árbol visual de XAML de tu controlador de eventos [**MediaOpened**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx) en [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). En este ejemplo se muestra cómo usar [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx) para obtener una referencia a Slider y luego cambiar la frecuencia de paso predeterminado del control deslizante del 1 % al 0,1 % (1000 pasos) si el contenido multimedia tiene más de 120 minutos. MediaPlayerElement se denomina `MediaPlayerElement1`.
+El control deslizante de búsqueda predeterminado se divide en 100 partes, por lo que el comportamiento de búsqueda se limita a ese número de secciones. Puedes cambiar la granularidad del control deslizante de búsqueda al obtener el elemento Slider del árbol visual de XAML de tu controlador de eventos [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx) en [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). En este ejemplo se muestra cómo usar [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx) para obtener una referencia a Slider y luego cambiar la frecuencia de paso predeterminado del control deslizante del 1% al 0,1% (1000 pasos) si el contenido multimedia tiene más de 120minutos. MediaPlayerElement se denomina `MediaPlayerElement1`.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -294,4 +291,3 @@ private void MediaPlayerElement_MediaPlayer_MediaOpened(object sender, RoutedEve
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Reproducción de contenido multimedia](media-playback.md)
-

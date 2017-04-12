@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 89ab7a65df0a8415d508e5831a22b2c522308f95
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 73423d32dc4e3d78d4281a5d86dcbdb4e33a741b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="3d-printing-from-your-app"></a>Impresión en 3D desde la aplicación
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -69,7 +66,7 @@ En tu método `OnLoadClick`, usa la clase [**FileOpenPicker**](https://msdn.micr
 
 ## <a name="use-3d-builder-to-convert-to-3d-manufacturing-format-3mf"></a>Usar la aplicación 3D Builder para convertir a formato de fabricación 3D (.3mf)
 
-En este punto, es posible cargar un archivo de datos 3D en la memoria de la aplicación. Sin embargo, los datos de geometría 3D pueden proporcionarse en muchos formatos diferentes y no todos son eficaces para la impresión 3D. En Windows 10, se usa el tipo de archivo 3D Manufacturing Format (formato de fabricación 3D) (.3mf) para todas las tareas de impresión 3D.
+En este punto, es posible cargar un archivo de datos 3D en la memoria de la aplicación. Sin embargo, los datos de geometría 3D pueden proporcionarse en muchos formatos diferentes y no todos son eficaces para la impresión 3D. En Windows10, se usa el tipo de archivo 3D Manufacturing Format (formato de fabricación 3D) (.3mf) para todas las tareas de impresión 3D.
 
 > [!NOTE]  
 > El tipo de archivo .3mf ofrece una gran cantidad de funcionalidades que no se incluyen en este tutorial. Para obtener más información sobre 3MF y las características que proporciona a los creadores y los consumidores de productos 3D, consulta [3MF Specification](http://3mf.io/what-is-3mf/3mf-specification/) (Especificación 3MF). Para obtener información sobre cómo aprovechar estas características mediante las API de Windows 10, consulta el tutorial [Generar un paquete 3MF](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
@@ -143,4 +140,3 @@ Por último, es conveniente eliminar el registro de los controladores de eventos
  
 
  
-

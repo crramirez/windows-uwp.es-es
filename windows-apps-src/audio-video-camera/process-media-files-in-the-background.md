@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c7f3262c30797c8ce447b3e97a5cb7dd6d2ea025
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8d3166b40120799818598300a049a4148a40d2cc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="process-media-files-in-the-background"></a>Procesar archivos multimedia en segundo plano
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se muestra cómo usar la clase [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) y una tarea en segundo plano para procesar los archivos multimedia en segundo plano.
@@ -144,7 +141,6 @@ Se llama al controlador de eventos **OnCompleted** cuando la tarea en segundo pl
  
 
  
-
 
 
 

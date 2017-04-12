@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1d8ced4a3dfcf0994d969ad045550ea0cc44a2af
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f2754cea4442fd0333b620f82d1db92d8be1c578
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="custom-audio-effects"></a>Efectos de audio personalizados
 
 En este artículo se describe cómo crear un componente de Windows Runtime que implemente la interfaz [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect) para permitir la creación de efectos personalizados para las secuencias de audio. Se pueden usar efectos personalizados con varias API de Windows Runtime, como [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), que proporciona acceso a la cámara de un dispositivo, [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), que permite crear composiciones complejas a partir de clips multimedia y [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph) que permite ensamblar rápidamente un gráfico de diversos nodos de submezcla, salida y entrada de audio.
@@ -154,7 +151,6 @@ El siguiente fragmento de código muestra cómo agregar el efecto de audio perso
 * [Reproducción de contenido multimedia](media-playback.md)
 
  
-
 
 
 

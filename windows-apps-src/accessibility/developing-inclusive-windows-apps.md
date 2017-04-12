@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 47c28e0629150ccbdf532afc645fe973c3dc8804
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5e4668a185e003150cf9d72aeb5c55c2e092d549
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="developing-inclusive-windows-apps"></a>Desarrollo de aplicaciones inclusivas de Windows  
 
 En este artículo se describe cómo desarrollar aplicaciones accesibles para la Plataforma universal de Windows (UWP). En concreto, se supone que conoces cómo diseñar la jerarquía lógica de la aplicación para tu aplicación. Aprende a desarrollar aplicaciones para UWP de Windows 10 accesibles que incluyan navegación por teclado, configuración de color y contraste y compatibilidad con tecnologías de asistencia.
@@ -69,7 +66,7 @@ Si decides usar tu propio tema de color en lugar de los colores del sistema, ten
 
 **Relación de contraste de color:** La sección 508 actualizada de la Ley sobre Estadounidenses con Discapacidades (ADA), al igual que otras legislaciones, requieren que el contraste de color predeterminado entre el texto y su fondo sea de 5:1. Para el texto grande (tamaños de 18 puntos o de 14 puntos y en negrita), el contraste necesario predeterminado es de 3:1.  
 
-**Combinaciones de colores:** Aproximadamente el 7 % de los hombres (y menos del 1 % de las mujeres) padecen alguna forma de daltonismo. Los usuarios con daltonismo tienen problemas para distinguir entre algunos colores, así que es importante que nunca se use el color por sí solo para transmitir el estado o el significado en una aplicación. Para obtener imágenes decorativas (tales como iconos o fondos), las combinaciones de colores se deberían elegirse de manera que se maximice la percepción de la imagen por parte de los usuarios daltónicos.  
+**Combinaciones de colores:** Aproximadamente el 7% de los hombres (y menos del 1% de las mujeres) padecen alguna forma de daltonismo. Los usuarios con daltonismo tienen problemas para distinguir entre algunos colores, así que es importante que nunca se use el color por sí solo para transmitir el estado o el significado en una aplicación. Para obtener imágenes decorativas (tales como iconos o fondos), las combinaciones de colores se deberían elegirse de manera que se maximice la percepción de la imagen por parte de los usuarios daltónicos.  
 
 ## <a name="accessibility-checklist"></a>Lista de comprobación de accesibilidad  
 La siguiente es una versión abreviada de la lista de comprobación de accesibilidad:
@@ -90,4 +87,3 @@ Para obtener más información, consulta el tema completo [Lista de comprobació
 * [Diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Centro de Microsoft para desarrolladores de accesibilidad](https://msdn.microsoft.com/enable)
 * [Accesibilidad](accessibility.md)
-

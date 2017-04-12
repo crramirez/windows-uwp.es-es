@@ -9,16 +9,13 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3e609ccaae3806a47b458a3e313c275278985d95
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3d2edd2e26633abacce07a2a6fe9f8c9d14b0afe
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="send-an-sms-message"></a>Enviar un mensaje SMS
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tema se muestra cómo iniciar el cuadro de diálogo de redacción de mensajes SMS para que el usuario pueda enviar un mensaje SMS. Puedes rellenar previamente los campos del SMS con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar.
@@ -63,4 +60,3 @@ Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de SMS. 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Seleccionar contactos](selecting-contacts.md)
-

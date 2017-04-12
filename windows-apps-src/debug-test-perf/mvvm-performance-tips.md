@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5833422a3074ddfa581011d91c8364bddb3c3088
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2c803083a9f7a279a6cfb70087c5cd1f0c3def1e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="mvvm-and-language-performance-tips"></a>Sugerencias de rendimiento de MVVM y lenguaje
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se describen algunos aspectos a tener en cuenta acerca del rendimiento y que están relacionados con la elección de patrones de diseño del software y del lenguaje de programación.
 
@@ -45,7 +43,6 @@ Hay varias definiciones concretas del patrón MVVM y marcos de terceros que ayud
  
 
  
-
 
 
 

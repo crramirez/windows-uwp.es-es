@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 23d5f86377dd88877987a9d149377aaee8a4ac48
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 124c0eb2d8640559c2573c532c8dc6089f75d0e7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="designing-inclusive-software-for-windows-10"></a>Diseño de software inclusivo para Windows 10  
 
 Aprende sobre la evolución del diseño inclusivo con aplicaciones de la Plataforma universal de Windows (UWP) para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
@@ -112,4 +109,3 @@ En resumen, sigue estos siete pasos para garantizar que tu software sea inclusiv
 * [Centro de Microsoft para desarrolladores de accesibilidad](https://developer.microsoft.com/windows/accessible-apps)
 * [Desarrollo de aplicaciones inclusivas de Windows](developing-inclusive-windows-apps.md) 
 * [Accesibilidad](accessibility.md)
-

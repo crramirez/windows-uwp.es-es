@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de presentación de la aplicación para la Plataforma universal de Windows (UWP)."
+Description: "Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación para la Plataforma universal de Windows (UWP)."
 title: Activos de mosaico y de icono
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
@@ -11,18 +11,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fa195ab35b0d6b1825adb8ce18ae1666d0bf1581
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0d3b58b8ea03c3ba836078e507495beeebe74fb8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="guidelines-for-tile-and-icon-assets"></a>Directrices sobre los activos de icono y de mosaico
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de visita de la aplicación para la Plataforma universal de Windows (UWP). Estas directrices detallan el lugar donde aparecen los recursos de icono de la aplicación en el sistema y proporcionan sugerencias de diseño detalladas sobre cómo crear los iconos más sofisticados.
+Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación para la Plataforma universal de Windows (UWP). Estas directrices detallan el lugar donde aparecen los recursos de icono de la aplicación en el sistema y proporcionan sugerencias de diseño detalladas sobre cómo crear los iconos más sofisticados.
 
 ![windows 10 start and tiles](images/assetguidance01.jpg)
 
@@ -48,11 +46,11 @@ El alto de la barra de personalización de marca se basa en el factor de escala 
 
 | Factor de escala | Píxeles |
 |--------------|--------|
-| 100 %         | 32     |
-| 125 %         | 40     |
-| 150 %         | 48     |
-| 200 %         | 64     |
-| 400 %         | 128    |
+| 100%         | 32     |
+| 125%         | 40     |
+| 150%         | 48     |
+| 200%         | 64     |
+| 400%         | 128    |
 
  
 
@@ -64,11 +62,11 @@ El ancho de los márgenes se basa en el factor de escala del dispositivo en el q
 
 | Factor de escala | Píxeles |
 |--------------|--------|
-| 100 %         | 8      |
-| 125 %         | 10     |
-| 150 %         | 12     |
-| 200 %         | 16     |
-| 400 %         | 32     |
+| 100%         | 8      |
+| 125%         | 10     |
+| 150%         | 12     |
+| 200%         | 16     |
+| 400%         | 32     |
 
  
 
@@ -133,7 +131,7 @@ Algunos iconos están diseñados para una orientación horizontal o vertical, mi
 
 ![tres iconos centrados](images/assetguidance13.png)
 
-Con activos sin bordes, ten en cuenta los elementos que interactúan dentro de los márgenes y bordes de los iconos. Mantén los márgenes de, al menos, el 16 % del alto o ancho del icono. Este porcentaje representa el doble de ancho de los márgenes en los tamaños de mosaico más pequeños:
+Con activos sin bordes, ten en cuenta los elementos que interactúan dentro de los márgenes y bordes de los iconos. Mantén los márgenes de, al menos, el 16% del alto o ancho del icono. Este porcentaje representa el doble de ancho de los márgenes en los tamaños de mosaico más pequeños:
 
 ![icono sin bordes con márgenes](images/assetguidance14.png)
 
@@ -237,7 +235,7 @@ Como mínimo, te recomendamos que proporciones activos para los factores de esca
 
 **Activos basados en la escala**
 
-| Categoría             | Nombre del elemento      | A una escala del 100 % | A una escala del 125 % | A una escala del 150 % | A una escala del 200 % | A una escala del 400 % |
+| Categoría             | Nombre del elemento      | A una escala del 100% | A una escala del 125% | A una escala del 150% | A una escala del 200% | A una escala del 400% |
 |----------------------|-------------------|---------------|---------------|---------------|---------------|---------------|
 | Pequeño                | Square71x71Logo   | 71x71         | 89x89         | 107x107       | 142x142       | 284x284       |
 | Mediano               | Square150x150Logo | 150x150       | 188x188       | 225x225       | 300x300       | 600x600       |
@@ -249,7 +247,7 @@ Como mínimo, te recomendamos que proporciones activos para los factores de esca
 
 **Ejemplos de nombre de archivo para los activos basados en la escala**
 
-| Categoría             | Nombre del elemento      | A una escala del 100 %                  | A una escala del 125 %                  | A una escala del 150 %                  |
+| Categoría             | Nombre del elemento      | A una escala del 100%                  | A una escala del 125%                  | A una escala del 150%                  |
 |----------------------|-------------------|--------------------------------|--------------------------------|--------------------------------|
 | Pequeño                | Square71x71Logo   | AppNameSmallTile.scale-100.png | AppNameSmallTile.scale-125.png | AppNameSmallTile.scale-150.png |
 | Medio               | Square150x150Logo | AppNameMedTile.scale-100.png   | AppNameMedTile.scale-125.png   | AppNameMedTile.scale-150.png   |
@@ -259,7 +257,7 @@ Como mínimo, te recomendamos que proporciones activos para los factores de esca
 
  
 
-| Categoría             | Nombre del elemento      | A una escala del 200 %                  | A una escala del 400 %                  |
+| Categoría             | Nombre del elemento      | A una escala del 200%                  | A una escala del 400%                  |
 |----------------------|-------------------|--------------------------------|--------------------------------|
 | Pequeño                | Square71x71Logo   | AppNameSmallTile.scale-200.png | AppNameSmallTile.scale-400.png |
 | Medio               | Square150x150Logo | AppNameMedTile.scale-200.png   | AppNameMedTile.scale-400.png   |
@@ -387,7 +385,6 @@ A continuación se enumeran todos los tipos de activos, sus usos y nombres de ar
  
 
  
-
 
 
 

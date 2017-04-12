@@ -2,22 +2,20 @@
 author: mcleblanc
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: Pruebas beta
-description: "Las pruebas beta te ofrecen la posibilidad de mejorar la aplicación en función de los comentarios de las personas ajenas al equipo de desarrollo de aplicaciones, que prueban la aplicación no comercial en sus propios dispositivos."
+description: "Las pruebas beta te ofrecen la posibilidad de mejorar la aplicación en función de los comentarios de las personas ajenas al equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos."
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7f84b573a051bca38000d2d480368147110ea22c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a48a18fdb2c75f334a4ac9cb5916cab6b43d8c7e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="beta-testing"></a>Pruebas beta
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las *pruebas beta* te ofrecen la posibilidad de mejorar tu aplicación en función de los comentarios de los individuos fuera del equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos.
@@ -50,7 +48,6 @@ Consulta [Pruebas beta y distribución dirigida](https://msdn.microsoft.com/libr
  
 
  
-
 
 
 

@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8aa20d434b4ea89d972712e48131e9a965476d1d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f0cf9d2928c8d6a0494092643daa19d9b437d3eb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-edit-and-save-bitmap-images"></a>Crear, editar y guardar imágenes de mapa de bits
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se explica cómo cargar y guardar archivos de imagen mediante [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) y [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206), y cómo usar el objeto [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) para representar imágenes de mapa de bits.
@@ -132,7 +129,6 @@ Puedes transcodificar un archivo de imagen directamente desde un elemento [**Bit
  
 
  
-
 
 
 

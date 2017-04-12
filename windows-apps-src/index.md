@@ -3,15 +3,12 @@ Description: "Esta es la información que necesitas para crear una aplicación u
 title: "Guías de procedimientos para aplicaciones Windows 10: desarrollo de aplicaciones Windows"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
 author: martinekuan
-redirect_url: https://developer.microsoft.com/en-us/windows/develop
-translationtype: Human Translation
-ms.sourcegitcommit: 753a917c0ecbf445560203dbc1406acae52e5265
-ms.openlocfilehash: 2b4bae1606f9b51e2d4901218ebd2d616e4c5edc
-
+redirect_url: https://developer.microsoft.com/en-us/windows/apps
+ms.openlocfilehash: 84a4aebb5c41e713c0038cd203b320ff607fa25a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
-# Guías de procedimientos para aplicaciones para UWP de Windows 10
+# <a name="how-to-guides-for-uwp-apps-on-windows-10"></a>Guías de procedimientos para aplicaciones para UWP de Windows 10
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -22,10 +19,4 @@ Si quieres una introducción a la Plataforma universal de Windows (UWP) y saber 
 -   [Creación de tu primera aplicación de la Plataforma universal de Windows](get-started/create-a-hello-world-app-xaml-universal.md)
 -   [Guía de aplicaciones para la Plataforma universal de Windows (UWP)](get-started/universal-application-platform-guide.md)
 -   [¿Qué es una aplicación para Plataforma universal de Windows?](get-started/whats-a-uwp.md)
-
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

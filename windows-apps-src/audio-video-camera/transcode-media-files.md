@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bcf9532f65b9f0574942d1fb4dd23f5a63613ec9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c9e6a6437e427ca6b5bd063d467fd713526ea8ee
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="transcode-media-files"></a>Transcodificar archivos multimedia
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Puedes usar las API [**Windows.Media.Transcoding**](https://msdn.microsoft.com/library/windows/apps/br207105) para transcodificar archivos de vídeo de un formato a otro.
@@ -43,15 +40,27 @@ El perfil de codificación contiene todas las opciones de configuración que det
 
 La clase [**MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) proporciona métodos estáticos para crear perfiles de codificación predefinidos:
 
--   Wav
--   Audio AAC (M4A)
--   Audio MP3
--   Audio de Windows Media (WMA)
--   Avi
--   Vídeo MP4 (vídeo H.264 más audio AAC)
--   Vídeo de Windows Media (WMV)
+### <a name="methods-for-creating-audio-only-encoding-profiles"></a>Métodos para crear perfiles de codificación de solo audio
 
-Los cuatro primeros perfiles de esta lista contienen solo audio. Los otros tres contienen vídeo y audio.
+Método  |Perfil  |
+---------|---------|
+[CreateAlac](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateAlac_Windows_Media_MediaProperties_AudioEncodingQuality_)     |Audio Apple Lossless Audio Codec (ALAC)         |
+[CreateFlac](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateFlac_Windows_Media_MediaProperties_AudioEncodingQuality_)     |Audio Free Lossless Audio Codec (FLAC)         |
+[CreateM4a](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateM4a_Windows_Media_MediaProperties_AudioEncodingQuality_)     |Audio AAC (M4A)         |
+[CreateMp3](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateMp3_Windows_Media_MediaProperties_AudioEncodingQuality_)     |Audio MP3         |
+[CreateWav](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateWav_Windows_Media_MediaProperties_AudioEncodingQuality_)     |Audio WAV         |
+[CreateWmv](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateWmv_Windows_Media_MediaProperties_VideoEncodingQuality_)     |Audio de Windows Media (WMA)         |
+
+### <a name="methods-for-creating-audio--video-encoding-profiles"></a>Métodos para crear perfiles de codificación de audio y vídeo
+
+Método  |Perfil  |
+---------|---------|
+[CreateAvi](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateAvi_Windows_Media_MediaProperties_VideoEncodingQuality_)     |AVI         |
+[CreateHevc](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateHevc_Windows_Media_MediaProperties_VideoEncodingQuality_)     |Vídeo High Efficiency Video Coding (HEVC), también conocido como vídeo H.265         |
+[CreateMp4](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateMp4_Windows_Media_MediaProperties_VideoEncodingQuality_)     |Vídeo MP4 (vídeo H.264 más audio AAC)         |
+
+[CreateWmv](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateWmv_Windows_Media_MediaProperties_VideoEncodingQuality_)     |Windows Media Video (WMV)         |
+
 
 Con el siguiente código se crea un perfil para vídeo MP4.
 
@@ -76,7 +85,6 @@ Puedes registrar eventos para responder cuando el progreso de la transcodificaci
  
 
  
-
 
 
 

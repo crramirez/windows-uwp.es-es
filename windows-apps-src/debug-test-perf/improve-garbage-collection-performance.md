@@ -2,36 +2,34 @@
 author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: "Mejorar el rendimiento de la recolección de elementos no usados"
-description: "La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no utilizados de .NET para las aplicaciones para UWP."
+description: "La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática mediante el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no utilizados de .NET para las aplicaciones para UWP."
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9b33388429f72dcc7acb9803d00a407ed35589a0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fd469f2a037871b04e67227ad132261711a17511
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="improve-garbage-collection-performance"></a>Mejorar el rendimiento de la recolección de elementos no utilizados
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no utilizados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no usados de .NET para las aplicaciones para UWP. Para más información sobre el funcionamiento del recolector de elementos no utilizados de .NET y las herramientas para depurar y analizar su rendimiento, consulta [Recolección de elementos no utilizados](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
 
-**Nota** La necesidad de intervenir en el comportamiento predeterminado del recolector de elementos no usados es una clara señal de problemas de memoria generales en la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tema solo se aplica a C# y Visual Basic.
+**Nota** La necesidad de intervenir en el comportamiento predeterminado del recolector de elementos no usados es una clara señal de problemas de memoria generales en la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tema solo se aplica a C# y Visual Basic.
 
  
 
 El recolector de elementos no utilizados determina cuándo ejecutarse buscando un equilibrio entre el consumo de memoria del montón administrado y cantidad de trabajo que debe realizar la recolección de elementos no utilizados. Uno de los modos en que el recolector de elementos no utilizados hace esto es dividiendo el montón en generaciones y recolectando solo parte del montón la mayor parte del tiempo. Hay tres generaciones en el montón administrado:
 
--   Generación 0. Esta generación contiene los objetos asignados recientemente, a menos que su tamaño sea de 85 KB o superior, en cuyo caso forman parte del montón de objetos grandes. El montón de objetos grandes se recolecta con las recolecciones de generación 2. Las recolecciones de generación 0 son el tipo de recolección más frecuente y limpian los objetos de corta duración, como las variables locales.
+-   Generación 0. Esta generación contiene los objetos asignados recientemente, a menos que su tamaño sea de 85KB o superior, en cuyo caso forman parte del montón de objetos grandes. El montón de objetos grandes se recolecta con las recolecciones de generación 2. Las recolecciones de generación 0 son el tipo de recolección más frecuente y limpian los objetos de corta duración, como las variables locales.
 -   Generación 1. Esta generación contiene objetos que han sobrevivido a las recolecciones de generación 0. Sirve como búfer entre las generaciones 0 y 2. Las recolecciones de generación 1 tienen lugar con menor frecuencia que las de generación 0 y limpian los objetos temporales que se encontraban activos durante las recolecciones de generación 0 anteriores. Las recolecciones de generación 1 también recolectan la generación 0.
--   Generación 2. Esta generación contiene los objetos de larga duración que han sobrevivido a las recolecciones de las generaciones 0 y 1. Las colecciones de generación 2 son las menos frecuentes y recolectan todo el montón administrado, incluido el montón de objetos de gran tamaño que contiene objetos cuyo tamaño es de 85 KB o superior.
+-   Generación 2. Esta generación contiene los objetos de larga duración que han sobrevivido a las recolecciones de las generaciones 0 y 1. Las colecciones de generación 2 son las menos frecuentes y recolectan todo el montón administrado, incluido el montón de objetos de gran tamaño que contiene objetos cuyo tamaño es de 85KB o superior.
 
-Puedes medir el rendimiento del recolector de elementos no usados en relación con dos aspectos: el tiempo que tarda la recolección de elementos no usados y el consumo de memoria del montón administrado. Si tienes una aplicación pequeña con un tamaño de montón inferior a 100 MB, céntrate en reducir el consumo de memoria. Si tienes una aplicación con un montón administrado superior a 100 MB, céntrate solo en reducir el tiempo de la recolección de elementos no usados. A continuación se muestra cómo mejorar el rendimiento del recolector de elementos no usados de .NET.
+Puedes medir el rendimiento del recolector de elementos no usados en relación con dos aspectos: el tiempo que tarda la recolección de elementos no usados y el consumo de memoria del montón administrado. Si tienes una aplicación pequeña con un tamaño de montón inferior a 100MB, céntrate en reducir el consumo de memoria. Si tienes una aplicación con un montón administrado superior a 100MB, céntrate solo en reducir el tiempo de la recolección de elementos no usados. A continuación se muestra cómo mejorar el rendimiento del recolector de elementos no usados de .NET.
 
 ## <a name="reduce-memory-consumption"></a>Reducir el consumo de memoria
 
@@ -73,7 +71,7 @@ Un ejemplo común de objetos de mediana duración son los objetos que se usan pa
 
 ### <a name="reduce-generation-2-collections-by-avoiding-large-sized-objects-with-short-lifetimes"></a>Reducir recolecciones de generación 2 al evitar objetos de gran tamaño con duraciones cortas
 
-Los objetos de 85 KB o mayores se asignan al montón de objetos grandes (LOH) y se recolectan como parte de la generación 2. Si tienes variables temporales como, por ejemplo, búferes, cuyo tamaño supera los 85 KB, una recolección de generación 2 las eliminará. Al limitar las variables temporales a menos de 85 KB, se reduce el número de recolecciones de generación 2 en la aplicación. Una técnica común consiste en crear una grupo de búferes y volver a usar los objetos del grupo para evitar asignaciones temporales de gran tamaño.
+Los objetos de 85KB o mayores se asignan al montón de objetos grandes (LOH) y se recolectan como parte de la generación 2. Si tienes variables temporales como, por ejemplo, búferes, cuyo tamaño supera los 85KB, una recolección de generación 2 las eliminará. Al limitar las variables temporales a menos de 85KB, se reduce el número de recolecciones de generación 2 en la aplicación. Una técnica común consiste en crear una grupo de búferes y volver a usar los objetos del grupo para evitar asignaciones temporales de gran tamaño.
 
 ### <a name="avoid-reference-rich-objects"></a>Evitar objetos con muchas referencias
 
@@ -84,7 +82,6 @@ El reemplazo de referencias de objeto por índices puede implicar una modificaci
  
 
  
-
 
 
 

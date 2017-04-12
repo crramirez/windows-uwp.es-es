@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
-description: "En este artículo se muestra cómo usar la clase MediaSource, que proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde diferentes orígenes (como archivos locales o remotos) y se expone un modelo común para obtener acceso a datos multimedia, independientemente del formato multimedia subyacente."
+description: "En este artículo se muestra cómo usar la clase MediaSource, que proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde diferentes orígenes (como archivos locales o remotos) y se expone un modelo común para acceder a datos multimedia, independientemente del formato multimedia subyacente."
 title: "Elementos multimedia, listas de reproducción y pistas"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1bab50aba53c96907151351c3b0fa81749ff2f88
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 667e418e78af3a7030dfca4310be498403f4966b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="media-items-playlists-and-tracks"></a>Elementos multimedia, listas de reproducción y pistas
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
  En este artículo se muestra cómo usar la clase [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), que proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde diferentes orígenes (como archivos locales o remotos) y se expone un modelo común para acceder a datos multimedia, independientemente del formato multimedia subyacente. La clase [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) amplía la funcionalidad del objeto **MediaSource**, lo que permite administrar y seleccionar entre varias pistas de audio, vídeo y metadatos incluidos en un elemento multimedia. [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite crear listas de reproducción de uno o más elementos de reproducción de contenido multimedia.
 
@@ -229,5 +226,4 @@ El evento [**ItemFailed**](https://msdn.microsoft.com/library/windows/apps/Windo
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
 * [Integrar con los controles de transporte multimedia del sistema](integrate-with-systemmediatransportcontrols.md)
 * [Reproducir elementos multimedia en segundo plano](background-audio.md)
-
 

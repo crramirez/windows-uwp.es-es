@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 370f2c14-4f1e-47b3-9197-24205ab255a3
-description: "En este artículo se muestran las características de cámara que están disponibles para aplicaciones para UWP, así como los vínculos a los artículos de procedimientos que muestran cómo usarlos."
+description: "Este artículo muestra las características de cámara que están disponibles para aplicaciones para UWP, así como los vínculos a los artículos de procedimientos que muestran cómo usarlos."
 title: "Cámara"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 0b2b421c2619c1649b3a6c9afb6b0ccafafc473b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 883a8977839d8f93ff878b075a52df8b9a587aa9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="camera"></a>Cámara
 
-En esta sección se proporcionan instrucciones para crear aplicaciones para la Plataforma universal de Windows (UWP) que usen la cámara o el micrófono para capturar fotos, vídeos o audio.
+Esta sección proporciona instrucciones para crear aplicaciones para la Plataforma universal de Windows (UWP) que usen la cámara o el micrófono para capturar fotos, vídeos o audio.
 
 ##<a name="use-the-windows-built-in-camera-ui"></a>Usar la interfaz de usuario de la cámara integrada de Windows
 | Tema                                                                                             | Descripción                                                                                                                                                                                                                                                                                    |
@@ -65,7 +62,6 @@ En esta sección se proporcionan instrucciones para crear aplicaciones para la P
  
 
  
-
 
 
 

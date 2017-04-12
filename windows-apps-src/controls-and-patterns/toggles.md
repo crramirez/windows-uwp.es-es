@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3d98936788057d4bd16f1ef44841ef0d8fb0648b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e7db3553ea158c1337e0a541fd497e16d1202af7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="toggle-switches"></a>Modificadores para alternar
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -158,7 +156,7 @@ También puedes usar contenido más complejo si configuras las propiedades [**On
 
 ## <a name="recommendations"></a>Recomendaciones
 
--   Sustituye las etiquetas On y Off cuando haya etiquetas más específicas para la opción. Si hay etiquetas cortas (3 o 4 caracteres) que representan opuestos binarios que son más adecuadas para una determinada opción, úsalas. Por ejemplo, podrías usar "Show/Hide" si la opción es "Mostrar imágenes". Usar etiquetas más específicas puede ayudar a localizarlas en la IU.
+-   Sustituye las etiquetas On y Off cuando haya etiquetas más específicas para la opción. Si hay etiquetas cortas (3o4 caracteres) que representan opuestos binarios que son más adecuadas para una determinada opción, úsalas. Por ejemplo, podrías usar "Show/Hide" si la opción es "Mostrar imágenes". Usar etiquetas más específicas puede ayudar a localizarlas en la IU.
 -   Evita reemplazar las etiquetas On y Off a menos que debas hacerlo; usa las etiquetas predeterminadas a menos que la situación requiera que las personalices.
 -   Las etiquetas no deben tener más de 4 caracteres.
 

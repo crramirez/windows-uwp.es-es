@@ -2,24 +2,22 @@
 author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
-description: "Simula la interacción en el mundo real con un dispositivo y prueba las características de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows 10 Mobile."
+description: "Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows10 Mobile."
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c20b64cdc2a1335d4739d6790512eddd76bc8a08
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 26345315e9e09d2fd9134ba7264028c460d888ea
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
+# <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows10 Mobile
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows 10 Mobile. El emulador es una aplicación de escritorio que simula un dispositivo móvil que ejecuta Windows 10. Proporciona un entorno virtualizado en el que puedes depurar y probar aplicaciones de Windows sin un dispositivo físico. También proporciona un entorno aislado para prototipos de la aplicación.
+Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows10 Mobile. El emulador es una aplicación de escritorio que simula un dispositivo móvil que ejecuta Windows10. Proporciona un entorno virtualizado en el que puedes depurar y probar aplicaciones de Windows sin un dispositivo físico. También proporciona un entorno aislado para prototipos de la aplicación.
 
 El emulador ha sido diseñado para proporcionar unas prestaciones comparables a las de un dispositivo real. No obstante, antes de publicar tu aplicación en la Tienda Windows, te recomendamos que la pruebes en un dispositivo físico.
 
@@ -77,7 +75,7 @@ Además de proporcionar soporte para la Plataforma universal de Windows (UWP), e
 
 ## <a name="features-that-you-can-test-in-the-emulator"></a>Funciones que se pueden probar en el emulador
 
-Además de las nuevas funciones que se mencionan en la sección anterior, puedes probar las siguientes funciones que se usan de forma común en el Emulador de Microsoft para Windows 10 Mobile.
+Además de las nuevas funciones que se mencionan en la sección anterior, puedes probar las siguientes funciones que se usan de forma común en el Emulador de Microsoft para Windows10 Mobile.
 
 -   **Resolución de pantalla, tamaño de pantalla y memoria**. Haz que tu aplicación tenga un mercado potencial amplio probándola en varias imágenes de emulador para simular diversas resoluciones de pantalla, tamaños físicos y restricciones de memoria.
 
@@ -111,7 +109,7 @@ Prueba las características siguientes únicamente en un dispositivo físico.
 -   Giroscopio
 -   Controlador de vibración
 -   Brillo. El nivel de brillo del emulador siempre es Alto.
--   Vídeo de alta resolución. Los vídeos con una resolución superior a la resolución VGA (640 x 480) no se reproducen de forma confiable, sobre todo en imágenes de emulador con solo 512 MB de memoria.
+-   Vídeo de alta resolución. Los vídeos con una resolución superior a la resolución VGA (640x480) no se reproducen de forma confiable, sobre todo en imágenes de emulador con solo 512MB de memoria.
 
 ## <a name="mouse-input"></a>Entrada de mouse
 
@@ -534,7 +532,7 @@ Prueba el funcionamiento de tu aplicación en teléfonos de bajo costo que no te
 -   De forma predeterminada, todos los sensores están habilitados en la lista **Optional sensors**. Activa o desactiva las casillas de los sensores de forma individual para habilitarlos o deshabilitarlos.
 -   Tras cambiar tus selecciones, haz clic en **Apply**. Posteriormente tendrás que reiniciar el emulador.
 -   Si haces modificaciones y posteriormente cambias de pestaña o cierras la ventana **Additional Tools** sin hacer clic en **Apply**, tus cambios se descartarán.
--   Tu configuración permanece vigente entre las sesiones de emulador hasta que la cambies o la restablezcas. Si capturas un punto de control, la configuración se guarda con el punto de control. La configuración únicamente permanece vigente para el emulador específico que estés usando, por ejemplo **Emulator 8.1 WVGA 4" 512 MB**.
+-   Tu configuración permanece vigente entre las sesiones de emulador hasta que la cambies o la restablezcas. Si capturas un punto de control, la configuración se guarda con el punto de control. La configuración únicamente permanece vigente para el emulador específico que estés usando, por ejemplo **Emulator 8.1 WVGA 4" 512MB**.
 
 ![Página Sensors de las herramientas adicionales del emulador](images/em-sensors.png)
 
@@ -655,12 +653,11 @@ Para deshabilitar la aceleración de hardware:
 
 ## <a name="support-resources"></a>Recursos de soporte técnico
 
-Para encontrar respuestas y solucionar problemas al empezar a trabajar con las herramientas de Windows 10, visita el [Foro de herramientas de Windows 10](http://go.microsoft.com/fwlink/?LinkId=534765). Para ver todos los foros de desarrollo de Windows 10, visita [este vínculo](http://go.microsoft.com/fwlink/?LinkId=535000).
+Para encontrar respuestas y solucionar problemas al empezar a trabajar con las herramientas de Windows10, visita el [Foro de herramientas de Windows10](http://go.microsoft.com/fwlink/?LinkId=534765). Para ver todos los foros de desarrollo de Windows10, visita [este vínculo](http://go.microsoft.com/fwlink/?LinkId=535000).
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Ejecutar aplicaciones de Windows Phone en el emulador](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Archivo del SDK de Windows y Windows Phone](https://dev.windows.com/downloads/sdk-archive)
  
-
 

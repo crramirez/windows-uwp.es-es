@@ -8,21 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, depuración, debug, pruebas, test, rendimiento, performance"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a7ce6c003c24a1efd03cc48419438b59e4f2ec11
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, uwp, test, rendimiento, performance, depuración, debug, pruebas"
+ms.openlocfilehash: 6f399136be121288dcff4b482f9e022fc0323181
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 
-# <a name="deploying-and-debugging-universal-windows-platform-uwp-apps"></a>Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artículo te guiará en el procedimiento para dirigirte a distintos destinos de implementación y de depuración.
 
-Microsoft Visual Studio permite implementar y depurar aplicaciones para la Plataforma universal de Windows (UWP) en una variedad de dispositivos de Windows 10. Visual Studio puede controlar el proceso de creación y registro de la aplicación en el dispositivo de destino.
+Microsoft Visual Studio permite implementar y depurar aplicaciones para la Plataforma universal de Windows (UWP) en una variedad de dispositivos de Windows10. Visual Studio puede controlar el proceso de creación y registro de la aplicación en el dispositivo de destino.
 
 ## <a name="picking-a-deployment-target"></a>Elección de un destino de implementación
 
@@ -34,7 +31,7 @@ Para elegir un destino, ve a la lista desplegable de destino de depuración junt
 -   **Máquina local** implementa la aplicación en la máquina de desarrollo actual. Esta opción solo está disponible si la **Versión mínima de la plataforma de destino** de la aplicación es inferior o igual al sistema operativo de la máquina de desarrollo.
 -   **Máquina remota** te permitirá especificar un destino remoto para implementar la aplicación. Puedes encontrar más información acerca de la implementación en una máquina remota en [Especificación de un dispositivo remoto](#specifying-a-remote-device).
 -   **Dispositivo** implementará la aplicación en un dispositivo conectado mediante USB. El dispositivo no debe estar bloqueado por el desarrollador y debe tener la pantalla desbloqueada.
--   Un destino de tipo **Emulador** arrancará e implementará la aplicación en un emulador con la configuración especificada en el nombre. Los emuladores solo están disponibles en máquinas compatibles con Hyper-V que ejecutan Windows 8.1 o posterior.
+-   Un destino de tipo **Emulador** arrancará e implementará la aplicación en un emulador con la configuración especificada en el nombre. Los emuladores solo están disponibles en máquinas compatibles con Hyper-V que ejecutan Windows8.1 o posterior.
 
 
 ## <a name="debugging-deployed-apps"></a>Depuración de aplicaciones implementadas
@@ -95,7 +92,7 @@ Para ello, busca **Depurador remoto** en el menú **Inicio**, ábrelo y, si te l
 
 Para cambiar a **Sin autenticación**, en el **Depurador remoto**, ve a **Herramientas** -&gt; **Opciones** y establécelo en **Sin autenticación**. Tras configurar el depurador remoto, también debes asegurarte de que has configurado el dispositivo host en [Modo de desarrollador](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). Después de esto, puedes implementar desde la máquina de desarrollo.
 
-Para obtener más información, consulta la página de descarga de [Herramientas remotas para Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=717039).
+Para obtener más información, consulta la página [Centro de descarga para Visual Studio](https://www.visualstudio.com/downloads/).
 
 ## <a name="authentication-modes"></a>Modos de autenticación
 
@@ -106,7 +103,7 @@ Existen tres modos de autenticación para la implementación del equipo remoto:
 - **Ninguno**: este modo de autenticación solo está destinado para su uso en la implementación del equipo remoto (de escritorio o portátil). Usa este modo de autenticación si tienes una instalación de máquina de prueba en un entorno en el que se inició sesión con una cuenta de prueba y no se pueden escribir credenciales. Asegúrate de que la configuración del depurador remoto esté establecida para aceptar que no haya autenticación.
 
 ## <a name="advanced-remote-deployment-options"></a>Opciones avanzadas de implementación remota
-Con el lanzamiento de Visual Studio 2015 Update 3 y la Actualización de aniversario de Windows 10, hay nuevas opciones avanzadas de implementación remota para determinados dispositivos Windows 10. Las opciones avanzadas de implementación remota pueden encontrarse en el menú **Depurar** de las propiedades del proyecto.
+Con el lanzamiento de Visual Studio 2015 Update 3 y la Actualización de aniversario de Windows 10, hay nuevas opciones avanzadas de implementación remota para determinados dispositivos Windows10. Las opciones avanzadas de implementación remota pueden encontrarse en el menú **Depurar** de las propiedades del proyecto.
 
 Las nuevas propiedades incluyen lo siguiente:
 * Tipo de implementación
@@ -167,7 +164,7 @@ En el dispositivo remoto, el diseño se registrará en la siguiente ubicación p
 
 ## <a name="debugging-options"></a>Opciones de depuración
 
-Windows 10 presenta una mejora del rendimiento de inicio de las aplicaciones para UWP gracias al inicio y la posterior suspensión de aplicaciones de forma proactiva mediante una técnica denominada [inicio previo](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
+Windows10 presenta una mejora del rendimiento de inicio de las aplicaciones para UWP gracias al inicio y la posterior suspensión de aplicaciones de forma proactiva mediante una técnica denominada [inicio previo](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
 
 La depuración se admite tanto desde un proyecto de Visual Studio (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar el inicio previo de la Aplicación Windows universal**) como para las aplicaciones ya instaladas en la máquina (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar paquete de aplicaciones instalado** y activa la casilla **Activar aplicación con inicio previo**). Para obtener más información, consulta [Debug UWP Prelaunch (Depurar inicio previo de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=717245).
 
@@ -229,4 +226,3 @@ Para obtener una lista completa de todos los comandos de WinDbg, consulta [Debug
 ## <a name="related-topics"></a>Temas relacionados
 - [Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)](testing-debugging-plm.md)
 - [Depuración, pruebas y rendimiento](index.md)
-

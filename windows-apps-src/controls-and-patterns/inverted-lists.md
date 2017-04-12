@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 52c1d63d-69c1-48d6-a234-6f39296e4bfd
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 0a33aaf71dbf23e991591f790f7327d812b060ef
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 332271894b5e11657bd2b0b1ca40f0bd7620889d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="inverted-lists"></a>Listas invertidas
 
@@ -63,4 +61,3 @@ En este ejemplo se muestra cómo alinear los elementos de la vista de lista en l
 - Alinea los mensajes del remitente o el receptor en lados opuestos para mostrar claramente el flujo de la conversación a los usuarios.
 - Haz que los mensajes existentes desaparezcan de la vista para mostrar el último mensaje si el usuario ya está al final de la conversación en espera del siguiente mensaje.
 - No muevas elementos de modo que perturbes la atención de los usuarios si no están leyendo el final de la conversación.
-

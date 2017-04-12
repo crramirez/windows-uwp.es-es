@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8dfbdad7604e3aa7fad60ed777d16b4acd56b5ab
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e729236ae7d506eb59af1a38506931865eff4f14
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="windows-device-portal-overview"></a>Introducción a Windows Device Portal
 
@@ -40,7 +38,7 @@ Xbox | Habilitar dentro del modo de desarrollador | Deshabilitado | 11443 | N/D
 Escritorio| Habilitar dentro del modo de desarrollador | 50080\* | 50043\* | N/D
 Phone | Habilitar dentro del modo de desarrollador | 80| 443 | http://127.0.0.1:10080
 
-\ * No siempre es el caso, ya que Device Portal para escritorio reclama puertos del rango efímero (> 50 000) para evitar conflictos con reclamaciones de puertos existentes en el dispositivo.  Para obtener más información, consulta la sección de [Configuración de puertos](device-portal-desktop.md#setting-port-numbers) referente a los equipos de escritorio.  
+\ * No siempre es el caso, ya que Device Portal para escritorio reclama puertos del rango efímero (> 50000) para evitar conflictos con reclamaciones de puertos existentes en el dispositivo.  Para obtener más información, consulta la sección de [Configuración de puertos](device-portal-desktop.md#setting-port-numbers) referente a los equipos de escritorio.  
 
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
 - [Device Portal para HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
@@ -204,4 +202,3 @@ A fin de ofrecer protección frente a [ataques CSRF](https://wikipedia.org/wiki/
 #### <a name="cross-site-websocket-hijacking-cswsh-protection"></a>Protección contra Cross-Site WebSocket Hijacking (CSWSH)
 
 Para protegerse de los [ataques de CSWSH](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html), todos los clientes que abran una conexión WebSocket al Device Portal también deben proporcionar un encabezado Origin que coincida con el encabezado Host.  Esto demuestra a Device Portal que la solicitud proviene de la interfaz de usuario de Device Portal o de una aplicación cliente válida.  Sin el encabezado Origin, la solicitud se rechazará. 
-

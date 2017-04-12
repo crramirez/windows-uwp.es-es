@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
-description: "En este artículo se indican la compatibilidad con los formatos y códecs de audio y vídeo para las aplicaciones para UWP."
+description: "En este artículo se enumera la compatibilidad con formatos y códecs de vídeo para aplicaciones para UWP."
 title: "Códecs admitidos"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2c477e9dc0cc86534a179edb8e3a9415f4872d93
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0973195b8777a0154b733ba2625327bb9296bd6b
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="supported-codecs"></a>Códecs admitidos
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se enumera la compatibilidad con formatos y códecs de audio, vídeo e imagen para aplicaciones para UWP.
+En este artículo se indican los códecs de audio, vídeo e imagen, así como la disponibilidad de formato de las aplicaciones para UWP de manera predeterminada para cada familia de dispositivos. Ten en cuenta que en estas tablas se indican los códecs que se incluyen con la instalación de Windows 10 para la familia de dispositivos especificada. Los usuarios y las aplicaciones pueden instalar códecs adicionales que puedan estar disponibles. Puedes hacer una consulta en tiempo de ejecución para obtener el conjunto de códecs disponibles actualmente para un dispositivo concreto. Para obtener más información, consulta [Consulta de los códecs instalados en un dispositivo](codec-query.md).
 
 En las tablas siguientes, "D" indica compatibilidad con el descodificador y "E" con el codificador.
 
@@ -71,7 +68,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1/AAC+</td>
+<td align="left">HE-AAC v1 / AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -86,7 +83,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2/eAAC+</td>
+<td align="left">HE-AAC v2 / eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1004,7 +1001,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1/AAC+</td>
+<td align="left">HE-AAC v1 / AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1019,7 +1016,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2/eAAC+</td>
+<td align="left">HE-AAC v2 / eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2760,7 +2757,7 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 </table>
 
 <sup>1</sup> Se admiten imágenes DDS que usan compresión desde BC1 hasta BC5.  
-<sup>2</sup> Se admiten imágenes DNG con una vista previa incrustada que no sea RAW.  
+<sup>2</sup> Se admiten imágenes DNG con una vista integrada que no sea RAW.  
 <sup>3</sup> Solo se admiten determinados formatos de cámara RAW.  
 
 Para obtener más información acerca de los códecs de imágenes, consulta [Native WIC Codecs (Códecs WIC nativos)](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx).

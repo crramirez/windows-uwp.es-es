@@ -11,32 +11,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a5f15129c424c92ac537116458c8433f6c96fa87
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2d48a92d5af75f8543f7b69ac59865e51bd334ee
+ms.sourcegitcommit: d1d53f5100edffe3f3ee57b853dc8cd1568fe7a2
+translationtype: HT
 ---
 # <a name="nav-panes"></a>Paneles de navegación
-
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Un panel de navegación (o "nav pane" abreviado en inglés), es un patrón que admite muchos elementos de navegación de nivel superior a la vez que se conserva el espacio de la pantalla. El panel de navegación se usa ampliamente en aplicaciones móviles, pero también funciona bien en pantallas más grandes. Cuando se usa como una superposición, el panel permanece contraído y fuera de la vista hasta que el usuario presiona el botón, lo que es útil para pantallas más pequeñas. Cuando se usa en su modo acoplado, el panel permanece abierto, lo que te permite aprovechar mejor la pantalla, si hay suficiente espacio en la misma.
 
 ![Ejemplo de un panel de navegación](images/navHero.png)
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Clase SplitView**](https://msdn.microsoft.com/library/windows/apps/dn864360)</li>
-<li> </li>
-<li> </li>
-<li> </li>
-<li> </li>
-<li> </li>
-</ul>
-</div>
 
+**API importantes**
+
+* [**Clase SplitView**](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 ## <a name="is-this-the-right-pattern"></a>¿Es este el patrón adecuado?
 
@@ -54,9 +42,6 @@ El patrón del panel de navegación está formado por un panel de categorías de
 
 Para probar código que implementa este patrón, descarga la [solución de navegación XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlNavigation) de GitHub.
 
-<div class="microsoft-internal-note">
-Las revisiones del panel de navegación y el menú hamburguesa están disponibles en [UNI](http://uni/DesignDepot.FrontEnd/#/Search?c=t&t=Windows%2BRS1%2BControls&f=NavPane_Hamburger).
-</div>
 
 ### <a name="pane"></a>Panel
 
@@ -132,4 +117,3 @@ Para optimizar la [experiencia de 10 pies](http://go.microsoft.com/fwlink/?LinkI
  
 
  
-
