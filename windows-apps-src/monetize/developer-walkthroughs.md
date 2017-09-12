@@ -9,14 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, walkthroughs, tutoriales
-ms.openlocfilehash: 17391bda754195d2cf66ddc2e5e22ed445a37ef0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 73f2c9b36d0b083a74f6b226a2eed95fe49b6f63
+ms.sourcegitcommit: 9d1ca16a7edcbbcae03fad50a4a10183a319c63a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/09/2017
 ---
 # <a name="developer-walkthroughs"></a>Tutoriales para desarrolladores
-
-
-
 
 En los tutoriales de esta sección se muestra cómo agregar anuncios de banner y anuncios intersticiales a las aplicaciones mediante las bibliotecas de Microsoft Advertising.
 
@@ -26,11 +25,12 @@ Para proyectos de muestra completos que muestren cómo agregar anuncios de banne
 
 |  Tema    | Descripción |               
 |----------|-------|
-| [Anuncios intersticiales](interstitial-ads.md)    | Muestra un anuncio intersticial en la aplicación.        |
+| [Anuncios intersticiales](interstitial-ads.md)    | Agrega un anuncio intersticial a la aplicación.       |
+| [Anuncios nativos](native-ads.md)       | Agrega un anuncio nativo a la aplicación para UWP.  |
 | [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md)     | Agrega un anuncio en banner a la aplicación XAML o .NET.        |
 | [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md)     | Agrega un anuncio en banner a la aplicación HTML5 o JavaScript.        |
 | [AdControl en Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md)       | Agrega un anuncio en banner a la aplicación de Windows Phone 8.x Silverlight. |
-| [Agregar anuncios a contenido de vídeo en HTML 5 y JavaScript](add-advertisements-to-video-content.md)     |  Agrega anuncios a contenido de vídeo en una aplicación para Plataforma universal de Windows (UWP) que se ha escrito mediante JavaScript con HTML. |
+| [Mostrar anuncios en contenido de vídeo](add-advertisements-to-video-content.md)     |  Muestra anuncios en contenido de vídeo en una aplicación para Plataforma universal de Windows (UWP) que se ha escrito mediante JavaScript con HTML. |
 
 
 

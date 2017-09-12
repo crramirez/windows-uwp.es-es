@@ -2,22 +2,22 @@
 author: mcleanbyron
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
 description: "Usa los ejemplos de código Python de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows."
-title: "Ejemplos de código Python para la API de envío"
+title: "Muestra de Python: envíos de aplicaciones, complementos y pilotos"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, code examples, ejemplos de código"
-ms.openlocfilehash: a46907ecfea1de60b8a32cdaea7076f056a41ff5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "windows 10, uwp, API de envío de la Tienda Windows, ejemplos de código, python"
+ms.openlocfilehash: 01d40aa31531aa4d5b75f02627bc7e6234963c7e
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/09/2017
 ---
-# <a name="python-code-examples-for-the-submission-api"></a>Ejemplos de código Python para la API de envío
+# <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Muestra de Python: envíos de aplicaciones, complementos y pilotos
 
-En este artículo se proporcionan ejemplos de código de Python para usar la *API de envío de la Tienda Windows*. Para obtener más información sobre esta API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
-
-Estos ejemplos de código muestran las siguientes tareas:
+En este artículo se proporcionan ejemplos de código Python que muestran cómo usar la [API de envío de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md) para estas tareas:
 
 * [Obtener un token de acceso de AzureAD](#token)
 * [Crear un complemento](#create-add-on)
@@ -36,7 +36,7 @@ En el siguiente ejemplo se muestra cómo [obtener un token de acceso de Azure AD
 <span id="create-add-on" />
 ## <a name="create-an-add-on"></a>Crear un complemento
 
-En el siguiente ejemplo se muestra cómo [crear](create-an-add-on.md) y luego [eliminar](delete-an-add-on.md) un complemento (los complementos también se conocen como productos desde la aplicación o IAP).
+En el siguiente ejemplo se muestra cómo [crear](create-an-add-on.md) y luego [eliminar](delete-an-add-on.md) un complemento.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L26-L52)]
 

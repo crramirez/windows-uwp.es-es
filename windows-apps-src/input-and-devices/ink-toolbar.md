@@ -1,8 +1,8 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "Agrega un valor predeterminado InkToolbar a una aplicación de entrada de lápiz de la Plataforma universal de Windows (UWP), agrega un botón de lápiz personalizado a InkToolbar y enlaza el botón de lápiz personalizado con una definición de lápiz personalizado."
-title: "Agregar un control InkToolbar a una aplicación de entrada manuscrita para la Plataforma universal de Windows (UWP)"
-label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
+title: "Agregar un control InkToolbar a una aplicación para la Plataforma universal de Windows (UWP)"
+label: Add an InkToolbar to a Universal Windows Platform (UWP) app
 template: detail.hbs
 keywords: "Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, InkCanvas, InkToolbar, Plataforma universal de Windows, UWP, interacción del usuario, entrada"
 ms.author: kbridge
@@ -11,11 +11,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
-ms.openlocfilehash: dd307bd6d7551c1e95de29360a8601484b37e742
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a4bff46c2ab0f0f1f9a689f2744c9a77ac90630d
+ms.sourcegitcommit: c519e3d34bef37f87bb44f02b295187849bb5eea
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/25/2017
 ---
-# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-inking-app"></a>Agregar un control InkToolbar a una aplicación de entrada manuscrita para la Plataforma universal de Windows (UWP)
+# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>Agregar un control InkToolbar a una aplicación para la Plataforma universal de Windows (UWP)
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
@@ -31,7 +33,7 @@ Como una superposición completamente transparente, el control InkCanvas no prop
 
   Las API de InkPresenter admiten una amplia personalización de la experiencia de entrada manuscrita. Para obtener más información, consulta [Interacciones de pluma y lápiz en aplicaciones para UWP](pen-and-stylus-interactions.md).
 
-- Enlazar un control [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) al control InkCanvas. De manera predeterminada, el control InkToolbar proporciona una interfaz de usuario básica para activar las características de entrada de lápiz y establecer sus propiedades, como el tamaño del trazo, el color de la entrada de lápiz y la forma de la punta del lápiz.
+- Enlazar un control [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) al control InkCanvas. De manera predeterminada, el control InkToolbar incluye una colección de botones personalizable y ampliable para activar las funciones relacionadas con la entrada de lápiz, como el tamaño del trazo, el color de la entrada de lápiz y la forma de la punta del lápiz.
 
   El control InkToolbar se describe en este tema.
 
@@ -47,16 +49,18 @@ Como una superposición completamente transparente, el control InkCanvas no prop
 
 ## <a name="default-inktoolbar"></a>Control InkToolbar predeterminado
 
-De manera predeterminada, el control InkToolbar incluye botones para dibujar, borrar, resaltar y mostrar una regla. Dependiendo de la característica, en un control flotante se proporcionan otros comandos y opciones de configuración, como los destinados a definir el color y el grosor del trazo o a borrar todas las entradas de lápiz.
+De manera predeterminada, el control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) incluye botones para dibujar, borrar, resaltar y mostrar una plantilla (regla o transportador). Dependiendo de la característica, en un control flotante se proporcionan otros comandos y opciones de configuración, como los destinados a definir el color y el grosor del trazo o a borrar todas las entradas de lápiz.
 
 ![InkToolbar](.\images\ink\ink-tools-invoked-toolbar-small.png)  
 *Barra de herramientas de Windows Ink predeterminada*
 
-Para agregar un control InkToolbar predeterminado básico:
+Para agregar un control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) predeterminado a una aplicación de entrada de lápiz, solo tienes que colocarlo en la misma página que el control [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) y asociar los dos controles.
+
 1. En MainPage.xaml, declara un objeto contenedor (para este ejemplo, usamos un control Grid) para la superficie de entrada manuscrita.
 2. Declara un objeto InkCanvas como elemento secundario del contenedor. (El tamaño del control InkCanvas se hereda del contenedor).
 3. Declara un control InkToolbar y usa el atributo TargetInkCanvas para enlazarlo al control InkCanvas.
-  Asegúrate de que el control InkToolbar se declare después de InkCanvas. De lo contrario, la superposición de InkCanvas hará que el control InkToolbar sea inaccesible.
+    > [!NOTE]  
+    > Asegúrate de que el control InkToolbar se declare después de InkCanvas. De lo contrario, la superposición de InkCanvas hará que el control InkToolbar sea inaccesible.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -303,7 +307,7 @@ En este ejemplo, se define un lápiz personalizado con una punta ancha que permi
 
 En primer lugar, definimos nuestro lápiz personalizado y especificamos los atributos de dibujo en el código subyacente. Hacemos referencia este lápiz personalizado de XAML más adelante.
 
-1. Haz clic con el botón secundario en el proyecto en el Explorador de soluciones y selecciona Agregar > Nuevo elemento.
+1. Haz clic con el botón derecho en el proyecto en el Explorador de soluciones y selecciona Agregar > Nuevo elemento.
 2. En Visual C# -> Código, agrega un nuevo archivo de clase y llámalo CalligraphicPen.cs.
 3. En Calligraphic.cs, reemplaza el valor predeterminado mediante un bloque con lo siguiente:
 ```csharp
@@ -532,7 +536,7 @@ namespace Ink_Basic_InkToolbar
 
 Puedes crear un botón de herramienta personalizada para invocar una herramienta que no sea lápiz y que esté definida por la aplicación.
 
-De manera predeterminada, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter) procesa todas las entradas como trazos de lápiz o trazos de borrado. Esto incluye la entrada que modificó una prestación de hardware secundaria, como el botón de menú contextual del lápiz, el botón secundario del mouse o similares. Sin embargo, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter) puede configurarse para dejar una entrada determinada sin procesar que, a continuación, se pasa a la aplicación para procesarla de forma personalizada.
+De manera predeterminada, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter) procesa todas las entradas como trazos de lápiz o trazos de borrado. Esto incluye la entrada que modificó una prestación de hardware secundaria, como el botón de menú contextual del lápiz, el botón derecho del mouse o similares. Sin embargo, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter) puede configurarse para dejar una entrada determinada sin procesar que, a continuación, se pasa a la aplicación para procesarla de forma personalizada.
 
 En este ejemplo, definimos un botón de herramienta personalizada que, cuando se activa, hace que los trazos posteriores se procesen y se representen como un lazo de selección (línea discontinua) en lugar de como una entrada manuscrita. Todos los trazos de lápiz que se hagan dentro de los límites del área de selección se establecen en [**Selected**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkStroke.Selected).
 
@@ -808,6 +812,10 @@ Para obtener más información sobre el secado personalizado, consulta [Interacc
 * [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md)
 
 **Ejemplos**
-* [Muestra de entrada de lápiz](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Muestra de entrada de lápiz simple](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Muestra de entrada de lápiz compleja](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Muestra de entrada de lápiz simple (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Muestra de entrada de lápiz compleja (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Muestra de entrada de lápiz (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Tutorial de introducción: Admitir la entrada de lápiz en tu aplicación para UWP](https://aka.ms/appsample-ink)
+* [Muestra de libro para colorear](https://aka.ms/cpubsample-coloringbook)
+* [Muestra de notas familiares](https://aka.ms/cpubsample-familynotessample)
+

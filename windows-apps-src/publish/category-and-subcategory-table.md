@@ -4,29 +4,30 @@ Description: "Describir la aplicación en la categoría y subcategoría correcta
 title: "Tabla de categorías y subcategorías"
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 1234a1209f7cc32901b093a44c2b71fc90a6f3b5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 88971766290288f6badb611e6b27c58641020005
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="category-and-subcategory-table"></a>Tabla de categorías y subcategorías
 
 
 Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender mejor de qué se trata.
 
-Elige la categoría que mejor describa la aplicación. Después elige una subcategoría, si está disponible.
+Debes elegir la categoría que mejor describa la aplicación. También puedes elegir una subcategoría, si está disponible. (Si eliges **Juegos** para la categoría, se necesita una subcategoría (género)).
 
-> **Nota** Si eliges **Juegos** para la categoría, se necesita una subcategoría.
+Una aplicación solo puede incluirse en una categoría (y una subcategoría, si está disponible). Si no estás seguro de qué categoría o subcategoría usar o no puedes encontrar una que se ajuste a la aplicación, elige una que creas que los clientes tengan más probabilidades de mirar al buscar aplicaciones como la tuya.
 
-Una aplicación solo puede incluirse en una categoría (y una subcategoría, si está disponible). Si no estás seguro de qué categoría o subcategoría usar, elige una que creas que los clientes tengan más probabilidades de mirar al buscar aplicaciones como la tuya.
+Para cambiar la categoría o la subcategoría de una aplicación que ya está en la Tienda, debes [crear un nuevo envío](app-submissions.md) y seleccionar la categoría nueva o subcategoría.
 
-Si quieres cambiar la categoría o la subcategoría de una aplicación que ya está en la Tienda, puedes hacerlo [creando un nuevo envío](app-submissions.md) y seleccionando la categoría nueva.
-
-> **Importante** Si publicas la aplicación en la categoría **Juegos**, no podrás elegir una categoría distinta en un nuevo envío. Tampoco puedes elegir la categoría **Juegos** en una actualización para una aplicación que hayas publicado anteriormente en una categoría diferente.
+> [!IMPORTANT] 
+> Si publicas la aplicación en la categoría **Juegos**, no podrás elegir una categoría distinta en un nuevo envío. Tampoco puedes elegir la categoría **Juegos** en una actualización para una aplicación que hayas publicado anteriormente en una categoría diferente.
 
 La Tienda Windows organiza las aplicaciones en las siguientes categorías y subcategorías.
 
@@ -55,7 +56,7 @@ No todas las categorías tienen subcategorías. Ten en cuenta que solo puedes us
 | Personalización             | Tonos y sonidos <br> Temas <br> Fondos de pantalla y pantallas de bloqueo |
 | Fotos y vídeos               | (Ninguno)                                            |
 | Productividad                | (Ninguno)                                            |
-| Seguridad                    | Protección de PC <br> Seguridad personal <br>         |
+| Seguridad                    | Protección de PC <br> Seguridad personal              |
 | Compras                    | (Ninguno)                                            |
 | Redes sociales                      | (Ninguno)                                            |
 | Deportes                      | (Ninguno)                                            |
@@ -63,5 +64,6 @@ No todas las categorías tienen subcategorías. Ten en cuenta que solo puedes us
 | Utilidades y herramientas           | Copias de seguridad y administración <br> Administradores de archivos                |
  
 
-> **Nota** Para obtener información sobre las categorías que se usan en la Tienda Windows para Windows8.1 y versiones anteriores y en la Tienda de Windows Phone, y sobre cuál es su relación con la lista de categorías anterior, consulta el tema [Cómo aparece una aplicación en la Tienda para los clientes de Windows10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
+> [!NOTE] 
+> Es posible que algunas de las categorías y subcategorías utilizadas en la Tienda Windows para Windows8.1 y versiones anteriores y en la Tienda WindowsPhone se muestren de forma distinta a como aparecen en las categorías indicadas anteriormente. 
 

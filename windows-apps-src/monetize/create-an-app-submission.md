@@ -4,19 +4,18 @@ ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
 description: "Usa este método en la API de envío de la Tienda Windows para crear un nuevo envío para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows."
 title: "Crear un envío de aplicación"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, create app submission, crear envío de aplicación"
-ms.openlocfilehash: 13b1b1cc83b6a8659bf38f5a97caf8b2f50a3ee0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6ed90a764701e40ed513b623a9ddb5aa6a2be466
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="create-an-app-submission"></a>Crear un envío de aplicación
-
-
-
 
 Usa este método en la API de envío de la Tienda Windows para crear un nuevo envío para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows. Después de crear correctamente un nuevo envío mediante este método, [actualiza el envío](update-an-app-submission.md) para realizar los cambios necesarios a los datos de envío y luego [confirma el envío](commit-an-app-submission.md) para la recopilación y la publicación.
 
@@ -30,8 +29,6 @@ Para usar este método, primero debes hacer lo siguiente:
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 * Asegúrate de que la aplicación ya tiene al menos un envío con la información de [clasificación por edades](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) completada.
-
->**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
 ## <a name="request"></a>Solicitud
 
@@ -131,6 +128,7 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
   "automaticBackupEnabled": false,
   "canInstallOnRemovableMedia": true,
   "isGameDvrEnabled": false,
+  "gamingOptions": [],
   "hasExternalInAppProducts": false,
   "meetAccessibilityGuidelines": true,
   "notesForCertification": "",
@@ -182,7 +180,8 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
     "Xbox": false,
     "Team": true
   },
-  "friendlyName": "Submission 2"
+  "friendlyName": "Submission 2",
+  "trailers": []
 }
 ```
 

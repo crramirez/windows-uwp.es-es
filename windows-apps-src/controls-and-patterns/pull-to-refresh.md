@@ -5,21 +5,29 @@ title: Extraer para actualizar
 label: Pull-to-refresh
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
-ms.openlocfilehash: 0d10a0c7f269cc6c7d0b2e9476a926226fe94f82
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+dev-contact: stpete
+doc-status: Published
+ms.openlocfilehash: 51a8c9a2e4618e054374308918a74cf2095119ef
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="pull-to-refresh"></a>Extraer para actualizar
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 El patrón extraer para actualizar permite al usuario desplegar una lista de datos con la entrada táctil para recuperar más datos. Extraer para actualizar se usa ampliamente en aplicaciones móviles, pero es útil en cualquier dispositivo con pantalla táctil. Puedes controlar los [eventos de manipulación](../input-and-devices/touch-interactions.md#manipulation-events) para implementar extraer para actualizar en tu aplicación.
+
+> **API importantes**: [Clase ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [Clase GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
 
 La [muestra de extraer para actualizar](http://go.microsoft.com/fwlink/p/?LinkId=620635) muestra cómo extender un control [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) para admitir este patrón. En este artículo, usamos esta muestra para explicar los puntos clave de la implementación de extraer para actualizar.
 
@@ -39,7 +47,7 @@ El control RefreshableListView proporciona un modo de 'actualización automátic
 - Desactivada: se solicita una actualización solo si se libera la lista mientras se supera el control `PullThreshold`. El indicador se anima y desaparece de la vista cuando el usuario suelta la barra de desplazamiento. El indicador de la barra de estado se muestra si está disponible (en el teléfono).
 - Activada: se solicita una actualización en cuanto se supera el control `PullThreshold`, independientemente de si se liberó o no. El indicador permanece a la vista hasta que se recuperan los nuevos datos y luego se anima y desaparece de la vista. Se usa un método **Deferral** para notificar a la aplicación cuando se completa la captura de datos.
 
-> **Nota**&nbsp;&nbsp;El código de la muestra también se aplica a una clase [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). Para modificar una clase GridView, deriva la clase personalizada de GridView en lugar de ListView y modifica la plantilla predeterminada de GridView.
+> **Nota**&nbsp;&nbsp;El código de la muestra también se aplica a una clase [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). Para modificar una clase GridView, deriva la clase personalizada de GridView en lugar de ListView y modifica la plantilla predeterminada de GridView.
 
 ## <a name="add-a-refresh-indicator"></a>Agregar un indicador de actualización
 
@@ -51,7 +59,7 @@ Aquí se recomiendan directrices para el indicador de actualización.
 
 **Modificar la plantilla de la vista de lista**
 
-En la muestra de extraer para actualizar, la plantilla del control `RefreshableListView` modifica la plantilla estándar **ListView** agregando un indicador de actualización. El indicador de actualización se ubica en un objeto [**Grid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) sobre el objeto [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx), que es la parte que muestra los elementos de lista.
+En la muestra de extraer para actualizar, la plantilla del control `RefreshableListView` modifica la plantilla estándar **ListView** agregando un indicador de actualización. El indicador de actualización se ubica en un objeto [Grid](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) sobre el objeto [ItemsPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx), que es la parte que muestra los elementos de lista.
 
 > **Nota**&nbsp;&nbsp;El cuadro de texto `DefaultRefreshIndicatorContent` proporciona un indicador de reserva de texto que se muestra solo si la propiedad `RefreshIndicatorContent` no está establecida.
 
@@ -123,7 +131,7 @@ Estableces el contenido del indicador de actualización en XAML para la vista de
 
 **Animar el control de giro**
 
-Cuando se despliega la lista, se produce el evento `PullProgressChanged` del objeto RefreshableListView. Controlas este evento en la aplicación para controlar el indicador de actualización. En la muestra, se inicia este guión gráfico para animar la clase [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx) del indicador y girar el indicador de actualización. 
+Cuando se despliega la lista, se produce el evento `PullProgressChanged` del objeto RefreshableListView. Controlas este evento en la aplicación para controlar el indicador de actualización. En la muestra, se inicia este guión gráfico para animar la clase [RotateTransform](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx) del indicador y girar el indicador de actualización. 
 
 **XAML**
 ```xaml
@@ -142,13 +150,13 @@ Cuando se despliega la lista, se produce el evento `PullProgressChanged` del obj
 
 ## <a name="handle-scroll-viewer-manipulation-events"></a>Controlar eventos de manipulación del visor de desplazamiento
 
-La plantilla de control de la vista de lista incluye una clase [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) integrada que permite al usuario desplazarse por los elementos de la lista. Para implementar extraer para actualizar, tendrás que controlar los eventos de manipulación del visor de desplazamiento integrado, así como varios eventos relacionados. Para obtener más información sobre los eventos de manipulación, consulta [Interacciones táctiles](../input-and-devices/touch-interactions.md).
+La plantilla de control de la vista de lista incluye una clase [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) integrada que permite al usuario desplazarse por los elementos de la lista. Para implementar extraer para actualizar, tendrás que controlar los eventos de manipulación del visor de desplazamiento integrado, así como varios eventos relacionados. Para obtener más información sobre los eventos de manipulación, consulta [Interacciones táctiles](../input-and-devices/touch-interactions.md).
 
 ** OnApplyTemplate**
 
-Para obtener acceso al visor de desplazamiento y a otras partes de la plantilla para poder agregar controladores de eventos y llamarlos más adelante en el código, es necesario reemplazar el método [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx). En el método OnApplyTemplate, llamas al método [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx) para obtener una referencia a una parte con nombre de la plantilla de control, que puedes guardar y usar más adelante en el código.
+Para obtener acceso al visor de desplazamiento y a otras partes de la plantilla para poder agregar controladores de eventos y llamarlos más adelante en el código, es necesario reemplazar el método [OnApplyTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx). En el método OnApplyTemplate, llamas al método [GetTemplateChild](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx) para obtener una referencia a una parte con nombre de la plantilla de control, que puedes guardar y usar más adelante en el código.
 
-En la muestra, las variables que se usan para almacenar las partes de la plantilla se declaran en la región Variables privadas. Después de que se recuperen en el método OnApplyTemplate, se agregan controladores de eventos para los eventos [**DirectManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [**DirectManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [**ViewChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx) y [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx).
+En la muestra, las variables que se usan para almacenar las partes de la plantilla se declaran en la región Variables privadas. Después de que se recuperen en el método OnApplyTemplate, se agregan controladores de eventos para los eventos [DirectManipulationStarted](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [DirectManipulationCompleted](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [ViewChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx) y [PointerPressed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx).
 
 **DirectManipulationStarted**
 
@@ -162,7 +170,7 @@ Cuando el usuario deja de desplegar la lista, el código del controlador comprue
 
 También se quitarán los controladores de eventos para las animaciones.
 
-En función del valor de la propiedad `AutoRefresh`, la lista puede animar la copia de seguridad inmediatamente o esperar hasta que la actualización esté completa y, a continuación, animar la copia de seguridad. Un objeto [**Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) se usa para marcar la finalización de la actualización. En ese momento, se oculta la interfaz de usuario del indicador de actualización.
+En función del valor de la propiedad `AutoRefresh`, la lista puede animar la copia de seguridad inmediatamente o esperar hasta que la actualización esté completa y, a continuación, animar la copia de seguridad. Un objeto [Deferral](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) se usa para marcar la finalización de la actualización. En ese momento, se oculta la interfaz de usuario del indicador de actualización.
 
 Esta parte del controlador de eventos DirectManipulationCompleted genera el evento `RefreshRequested` y obtiene el objeto Deferral si es necesario.
 
@@ -232,7 +240,7 @@ En la muestra, la aplicación proporciona y controla el contenido del indicador 
 
 ## <a name="composition-animations"></a>Animaciones de composición
 
-De manera predeterminada, el contenido de un visor de desplazamiento se detiene cuando la barra de desplazamiento alcanza la parte superior. Para permitir al usuario continuar desplegando la lista, debes tener acceso a la capa visual y animar el contenido de la lista. La muestra usa [animaciones de composición](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation) para este fin; más específicamente, [animaciones de expresión](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations).
+De manera predeterminada, el contenido de un visor de desplazamiento se detiene cuando la barra de desplazamiento alcanza la parte superior. Para permitir al usuario continuar desplegando la lista, debes tener acceso a la capa visual y animar el contenido de la lista. La muestra usa [animaciones de composición](https://msdn.microsoft.com/windows/uwp/composition/composition-animation) para este fin; más específicamente, [animaciones de expresión](https://msdn.microsoft.com/windows/uwp/composition/composition-animation#expression-animations).
 
 En la muestra, el trabajo se realiza principalmente en el controlador de eventos `CompositionTarget_Rendering` y el método `UpdateCompositionAnimations`.
 
@@ -242,4 +250,4 @@ En la muestra, el trabajo se realiza principalmente en el controlador de eventos
 - [Interacciones táctiles](../input-and-devices/touch-interactions.md)
 - [Vista de lista y vista de cuadrícula](listview-and-gridview.md)
 - [Plantillas de elemento de la vista de lista](listview-item-templates.md)
-- [Animaciones de expresión](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
+- [Animaciones de expresión](https://msdn.microsoft.com/windows/uwp/composition/composition-animation#expression-animations)

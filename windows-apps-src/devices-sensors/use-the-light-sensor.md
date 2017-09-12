@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
 title: Usar el sensor de luz
 description: "Aprende a usar el sensor de luz ambiental para detectar cambios de iluminación."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4bfe0e3904695edd848ef4c9a7b960d8cc01d4c9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 4060e63490201997b24a324d03366faec5042ed5
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="use-the-light-sensor"></a>Usar el sensor de luz
 
@@ -21,6 +23,10 @@ translationtype: HT
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**LightSensor**](https://msdn.microsoft.com/library/windows/apps/BR225790)
+
+**Muestra**
+
+-   Para ver una implementación más completa, consulta la [muestra de sensor de luz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LightSensor).
 
 Aprende a usar el sensor de luz ambiental para detectar cambios de iluminación.
 
@@ -162,14 +168,9 @@ _lightsensor.ReadingChanged += new TypedEventHandler<LightSensor,
 LightSensorReadingChangedEventArgs>(ReadingChanged);
 ```
 
-Estos nuevos valores se escriben en un bloque de texto que se encuentra en el código XAML del proyecto.
+Estos nuevos valores se escriben en un TextBlock que se encuentra en el código XAML del proyecto.
 
 ```xml
 <TextBlock HorizontalAlignment="Left" Height="44" Margin="52,38,0,0" TextWrapping="Wrap" Text="LUX Reading" VerticalAlignment="Top" Width="150"/>
  <TextBlock x:Name="txtLuxValue" HorizontalAlignment="Left" Height="44" Margin="224,38,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="217"/>
 ```
-
-## <a name="related-topics"></a>Temas relacionados
-
-* [Muestra de LightSensor](http://go.microsoft.com/fwlink/p/?linkid=241381)
- 

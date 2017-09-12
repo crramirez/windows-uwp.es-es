@@ -6,14 +6,20 @@ ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 392b0b0acf1443b2260a33bbf389d505f8cc7d0e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: ksulliv
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: c705c2fc4d53c77391236604f8edb86e164a1177
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="sliders"></a>Controles deslizantes
 
@@ -21,16 +27,9 @@ translationtype: HT
 
 Un control deslizante es un control que permite que el usuario seleccione entre un intervalo de valores moviendo un control de posición por una pista.
 
-![Control deslizante](images/controls/slider.png)
+> **API importantes**: [Clase Slider](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx), [Propiedad Valor](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx), [Evento ValueChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Clase de control deslizante**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx)</li>
-<li>[**Valor de propiedad**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx)</li>
-<li>[**Evento ValueChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)</li>
-</ul>
-</div>
+![Control deslizante](images/controls/slider.png)
 
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
@@ -89,7 +88,7 @@ volumeSlider.ValueChanged += Slider_ValueChanged;
 stackPanel1.Children.Add(volumeSlider);
 ```
 
-Obtienes y configuras el valor del control deslizante de la propiedad [**Valor**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx). Para responder a los cambios de valor, puedes usar el enlace de datos para enlazar la propiedad de valor o controlar los eventos [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx).
+Obtienes y configuras el valor del control deslizante de la propiedad [Value](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx). Para responder a los cambios de valor, puedes usar el enlace de datos para enlazar la propiedad de valor o controlar los eventos [ValueChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx).
 
 ```csharp
 private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -177,4 +176,4 @@ Al diseñar un control deslizante personalizado, piensa en la manera de presenta
 
 ## <a name="related-topics"></a>Temas relacionados
 - [Modificadores para alternar](toggles.md)
-- [**Clase de control deslizante**](https://msdn.microsoft.com/library/windows/apps/br209614)
+- [Clase de control deslizante](https://msdn.microsoft.com/library/windows/apps/br209614)

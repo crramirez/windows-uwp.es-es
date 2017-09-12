@@ -4,60 +4,71 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Tipos de cuenta, ubicaciones y precios
 description: "Microsoft ofrece cuentas de desarrollador individuales y corporativas en muchos países y regiones."
 ms.author: wdg-dev-content
-ms.date: 03/07/2017
+ms.date: 08/17/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 9f6cdace7d619ede77956fb081756e0bc5682e16
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 25ae63638a76df2d064dbbc6334d5793cdadbedf
+ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
 Microsoft ofrece dos tipos de cuentas de desarrollador: cuentas individuales y cuentas de empresa. Las cuentas de desarrollador se ofrecen en [varios países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona acceso para publicar aplicaciones en la Tienda y participar en otros programas de Microsoft para desarrolladores.
 
-> **Nota**: Tanto si se crea una cuenta individual como si se crea una de empresa, únicamente se puede asociar una cuenta de Microsoft con la cuenta de desarrollador. Al suscribirte a una cuenta, asegúrate de que inicias sesión con la cuenta Microsoft que quieres usar para tu cuenta de desarrollador.
+> [!NOTE]
+> Al suscribirte a una cuenta, asegúrate de que inicias sesión con la cuenta Microsoft que quieres usar para tu cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
 
-Cuando [comiences el proceso de suscripción](http://go.microsoft.com/fwlink/p/?LinkId=615100), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, complementos y servicios. Las cuentas individuales están pensadas para un único desarrollador que trabaja por su cuenta. Las cuentas de empresa están diseñadas para las organizaciones y empresas, y permiten acceder a algunas funcionalidades de aplicación adicionales. Para las cuentas de empresa, debemos [comprobar](#account-verification) con más atención para confirmar que tienes autorización para configurar la cuenta de tu empresa. 
+Cuando [comiences el proceso de suscripción](http://go.microsoft.com/fwlink/p/?LinkId=615100), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, juegos, complementos y servicios.
 
-> **Importante**  No es posible cambiar el tipo de cuenta después haberlo seleccionado, así que asegúrate de elegir el tipo adecuado.
+Las cuentas de empresa están diseñadas para las organizaciones y empresas y permiten tener acceso a algunas funcionalidades de aplicaciones adicionales. Para las cuentas de empresa, debemos [comprobar](#account-verification) con más atención para confirmar que tienes autorización para configurar la cuenta de tu empresa. Las cuentas individuales son normalmente adecuadas para un único desarrollador que trabaja por su cuenta, aunque tienes la opción de agregar usuarios adicionales a cualquier tipo de cuenta.
+
+> [!IMPORTANT]
+> No puedes cambiar el tipo de cuenta después de haberla seleccionado, así que asegúrate de que eliges el tipo adecuado.
 
 Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 
 | Cuenta individual | Cuenta de empresa |
 |--------------------|-----------------|
-| <ul><li>No puede usar funcionalidades específicas de las aplicaciones</li><li>Cuesta aproximadamente 19USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li></ul> | <ul><li>Requiere verificación mediante Symantec o Dun & Bradstreet</li><li>Más acceso a las funcionalidades de las aplicaciones</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Cuesta aproximadamente 99USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li></ul> |
+| <ul><li>No puede usar funcionalidades específicas de las aplicaciones</li><li>Cuesta aproximadamente 19USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li></ul> | <ul><li>Requiere realizar una comprobación con más atención</li><li>Más acceso a las funcionalidades de las aplicaciones</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Cuesta aproximadamente 99USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li></ul> |
 
-Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Además, las cuentas de empresa te permiten enviar aplicaciones en las que se proporcionan [declaraciones de funcionalidad de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/Mt270968).
+Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Además, las cuentas de empresa te permiten enviar aplicaciones en las que se proporcionan [declaraciones de funcionalidad de las aplicaciones](../packaging/app-capability-declarations.md).
 
 Concretamente, debes tener una cuenta de empresa para poder publicar aplicaciones que usen estas tres funcionalidades:
 
 -   **enterpriseAuthentication**: Usa las credenciales de Windows para acceder a una intranet corporativa. Normalmente se utiliza en aplicaciones de línea de negocio que se conectan a los servidores de una empresa. (No necesitas esta funcionalidad para la comunicación genérica a través de Internet).
 -   **sharedUserCertificates**: Permite el acceso de una aplicación a certificados de software y hardware como, por ejemplo, los certificados almacenados en una tarjeta inteligente. Suele usarse para aplicaciones empresariales o financieras que requieren una tarjeta inteligente para la autenticación.
--   **documentsLibrary**: Proporciona acceso mediante programación a los documentos del usuario, filtrados por las asociaciones de tipo de archivo declaradas en el manifiesto del paquete. (No necesitas declarar esta funcionalidad para acceder a los Documentos de un usuario con el [selector de archivos](https://msdn.microsoft.com/library/windows/apps/Hh465174)). Ten en cuenta que las aplicaciones destinadas a Windows Phone 8.1 o versiones anteriores no pueden usar la funcionalidad documentsLibrary.
+-   **documentsLibrary**: Proporciona acceso mediante programación a los documentos del usuario, filtrados por las asociaciones de tipo de archivo declaradas en el manifiesto del paquete. (No necesitas declarar esta funcionalidad para acceder a los Documentos de un usuario con el [selector de archivos](../files/quickstart-using-file-and-folder-pickers.md)). Ten en cuenta que las aplicaciones destinadas a Windows Phone 8.1 o versiones anteriores no pueden usar la funcionalidad documentsLibrary.
 
-> **Nota**: Además, debes ponerte en contacto con el soporte técnico y obtener su aprobación para poder enviar aplicaciones que declaren la funcionalidad de **documentsLibrary**.
+> [!NOTE]
+> Además, debes ponerte en contacto con soporte técnico y obtener su aprobación para poder enviar aplicaciones que declaren la funcionalidad **documentsLibrary**.
 
-Tener una cuenta de la empresa no garantiza que las aplicaciones que usan estas funcionalidades aprobarán la certificación. Estas funcionalidades están destinadas a escenarios muy específicos, y la mayoría de las aplicaciones no deberían declararlas. Para obtener más información, consulta [Declaraciones de funcionalidad de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/Mt270968).
+Tener una cuenta de la empresa no garantiza que las aplicaciones que usan estas funcionalidades aprobarán la certificación. Estas funcionalidades están destinadas a escenarios muy específicos, y la mayoría de las aplicaciones no deberían declararlas. Para obtener más información, consulta [Declaraciones de funcionalidad de las aplicaciones](../packaging/app-capability-declarations.md).
+
 
 ## <a name="account-verification"></a>Comprobación de cuentas
 
-Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de la compañía, usamos Symantec o Dun & Bradstreet para comprobar que tienes autorización para crear una cuenta para la compañía a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de la empresa hasta que esta no esté comprobada pero, mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md), acceder al panel del Centro de desarrollo de Windows y seguir creando y probando la aplicación.
+Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de la empresa hasta que esta no esté comprobada pero, mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md), acceder al panel del Centro de desarrollo de Windows y seguir creando y probando la aplicación.
 
 Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**. 
+
 
 ## <a name="developer-account-and-app-submission-markets"></a>Cuenta de desarrollador y mercados de envío de aplicaciones
 
 Puedes registrarte con una cuenta de desarrollador y enviar aplicaciones si resides o diriges un negocio en uno de los países o regiones indicados a continuación.
 
-En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el registro de la cuenta de desarrollador. Los precios están sujetos a cambios.
+En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el registro de la cuenta de desarrollador. Se trata de una tarifa única y no se aplica ningún cargo por renovación. Ten en cuenta que los precios que se indican a continuación están sujetos a cambios.
 
-> **Nota**: Aplicaremos cualquier impuesto o tasa aplicables a la tarifa de registro cuando te suscribas. Además, cuando te paguemos, es posible que el banco te cobre un cargo por recibir el pago.
+> [!NOTE]
+> Aplicaremos cualquier impuesto o tarifas aplicables a la tarifa de registro cuando te registres. Además, cuando te paguemos, es posible que el banco te cobre un cargo por recibir el pago.
 
 En la columna **Pago** se describe cómo [te pagaremos](getting-paid-apps.md) el dinero que ganes con tus aplicaciones. Podrás elegir la [cuenta de pago](setting-up-your-payout-account-and-tax-forms.md) en la que te depositaremos este dinero.
 
-> **Nota**: Algunos mercados no admiten aplicaciones de **pago**. En esos mercados, solo se pueden enviar aplicaciones gratuitas.
+> [!NOTE]
+> Algunos mercados no admiten aplicaciones pagadas (**pago**). En esos mercados, solo se pueden enviar aplicaciones gratuitas.
 
 La columna **PayPal** indica si PayPal es un método de pago admitido que puede usarse para tu [cuenta de pago](setting-up-your-payout-account-and-tax-forms.md) (y, salvo que se indique lo contrario, para la tarifa de registro de la cuenta de desarrollador).
 

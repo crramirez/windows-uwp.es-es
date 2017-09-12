@@ -4,65 +4,89 @@ Description: "En el informe de adquisiciones de complementos del panel del Centr
 title: Informe Adquisiciones de complementos
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 1c2001e93fd06cc93fa5cfe9d2a10a029e13c82d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 46d5ee3d0e0ac9c2a3599f51e17ea4d7425ab5af
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="add-on-acquisitions-report"></a>Informe Adquisiciones de complementos
 
 
-En el informe de **adquisiciones de complementos** del panel del Centro de desarrollo de Windows puedes ver cuántos complementos has vendido, junto con los detalles demográficos y de plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de complementos](../monetize/get-in-app-acquisitions.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+En el informe de **adquisiciones de complementos** del panel del Centro de desarrollo de Windows puedes ver cuántos complementos has vendido, junto con los detalles demográficos y de plataforma. También te permite obtener información de conversión de los clientes de Windows10.
 
-En este informe, la adquisición de un complemento significa que un cliente te ha comprado un complemento. Varias compras del mismo complemento consumible realizadas por el mismo cliente se contabilizan como adquisiciones de complementos independientes.
+Puedes visualizar estos datos en tu panel de información o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de complementos](../monetize/get-in-app-acquisitions.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
-> **Importante**: El informe de **adquisiciones de complementos** no incluye datos sobre reembolsos, devoluciones, anulaciones, etc. Para calcular las ganancias de la aplicación, visita [Resumen de pago](payout-summary.md). En la sección **Reservado**, haz clic en el vínculo **Descargar transacciones reservadas**.
+En este informe, una adquisición de complemento significa que un cliente te ha comprado un complemento (o lo ha adquirido sin tener que pagar, si lo ofrecías de forma gratuita). Varias compras del mismo complemento consumible realizadas por el mismo cliente se contabilizan como adquisiciones de complementos independientes.
+
+> [!IMPORTANT]
+> El informe **Adquisiciones de complementos** no incluye datos sobre reembolsos, devoluciones, anulaciones, etc. Para calcular las ganancias por la aplicación, visita [Resumen de pago](payout-summary.md). En la sección **Reservado**, haz clic en el vínculo **Descargar transacciones reservadas**.
+
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
+Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques.
 
-Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página por un intervalo de fechas o por un tipo de dispositivo. También puedes filtrar para mostrar solo los datos de un complemento específico.
+También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por complementos específicos, por mercado o por tipo de dispositivo.
 
--   **Fecha**: El filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 12 meses**.
--   **Complemento**: El filtro predeterminado es **Todos los complementos**. Si quieres mostrar datos de adquisición solamente de uno de los complementos, aquí puedes elegir uno concreto.
--   **Tipo de dispositivo**: La opción predeterminada es **Todos los dispositivos**. Si quieres mostrar los datos de adquisiciones de complementos de un determinado tipo de dispositivo únicamente, aquí puede elegir uno específico.
+-   **Complemento**: el filtro predeterminado es **Todos los complementos**, pero puedes limitar los datos a uno o varios complementos de la aplicación.
+-   **Mercado**: el filtro predeterminado es **Todos los mercados**, pero puedes limitar los datos a adquisiciones de uno o varios mercados.
+-   **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Si quieres mostrar los datos de adquisiciones de un determinado tipo de dispositivo únicamente, aquí puedes elegir uno específico.
 
-La información de los gráficos que aparecen a continuación reflejará el período de tiempo seleccionado en la sección **Aplicar filtros**.
+La información de todos los gráficos que aparecen a continuación reflejará el intervalo de fechas y los filtros que hayas seleccionado. Algunas secciones también te permiten aplicar filtros adicionales.
 
-La información de todos los gráficos que aparecen a continuación reflejará el período de tiempo seleccionado en la sección **Aplicar filtros**. De manera predeterminada, se incluyen los datos de todos los dispositivos a menos que hayas usado **Aplicar filtros** para elegir solo uno.
 
 ## <a name="add-on-acquisitions"></a>Adquisiciones de complementos
 
+El gráfico **Adquisiciones de complementos** muestra el número de adquisiciones diarias o semanales de tus complementos durante el período de tiempo seleccionado. (Si usas **Aplicar filtros** para mostrar los datos durante más tiempo, los datos de adquisición se agruparán por semanas).
 
-El gráfico **Adquisiciones de complementos** muestra el número de adquisiciones diarias o semanales de tus complementos durante el período de tiempo seleccionado. (Si usas **Aplicar filtros** para filtrar los datos durante más tiempo, los datos se agruparán por semanas).
+También puedes ver el número de adquisiciones del ciclo de vida de la aplicación seleccionando **Complemento acumulativo**. Muestra el total acumulado de todas las adquisiciones desde que la aplicación se publicó por primera vez.
 
-También puedes ver el número de adquisiciones durante ciclo de vida respecto a tus complementos. Muestra el total acumulado de todas las adquisiciones desde que la aplicación se publicó por primera vez.
+También puedes filtrar los resultados por si la adquisición del complemento se originó desde el cliente, la Tienda web o la versión del sistema operativo.
 
-El gráfico también muestra el precio que un cliente pagó por adquirir el complemento.
-
-También puedes filtrar los resultados por mercado o por la versión del SO.
-
-## <a name="top-add-ons"></a>Complementos principales
-
-El gráfico **Complementos principales** muestra el número total de adquisiciones de cada uno de los complementos durante el período de tiempo seleccionado por mercado. De manera predeterminada, se muestra el complemento con más adquisiciones en la parte superior seguido del resto en orden descendente. Si quieres invertir el orden, alterna la flecha situada en la columna **Adquisiciones** del gráfico.
-
-## <a name="markets"></a>Mercados
-
-El gráfico **Mercados** muestra el número total de adquisiciones de complementos durante el período de tiempo seleccionado por mercado. De manera predeterminada, se muestra el mercado con más adquisiciones en la parte superior seguido del resto en orden descendente. Puedes invertir el orden alternando la flecha situada en la columna **Adquisiciones** del gráfico.
 
 ## <a name="customer-demographic"></a>Grupo demográfico de clientes
 
-El gráfico **Grupo demográfico de clientes** muestra información demográfica sobre las personas que han adquirido el complemento. Puedes ver cuántas adquisiciones (durante el período de tiempo seleccionado) han realizado las personas de un determinado grupo de edad divididas por sexo.
+En el gráfico **Grupo demográfico de clientes** se muestra información demográfica sobre las personas que han adquirido los complementos. Puedes ver cuántas adquisiciones (durante el período de tiempo seleccionado) han realizado las personas de un determinado grupo de edad divididas por sexo.
 
-> **Nota** Algunos clientes han optado por no compartir esta información. Si no podemos determinar el grupo de edad o el sexo, la adquisición se clasifica como **Desconocida**.
+> [!NOTE]
+> Algunos clientes han optado por no compartir esta información. Si no podemos determinar el grupo de edad o el sexo, la adquisición se clasifica como **Desconocida**.
 
-## <a name="os-version"></a>Versión de SO
 
-En el gráfico **Versión de SO** se muestra el número total de adquisiciones según el sistema operativo del cliente (o mediante la [adquisición por volumen por parte de organizaciones](organizational-licensing.md)). Es posible que en algunos casos no podamos determinar esta información. En ese caso, la versión del SO se muestra como **Desconocida**.
+## <a name="markets"></a>Mercados
+
+En el gráfico **Mercados** se muestra el número total de adquisiciones de complementos durante el período de tiempo seleccionado en cada mercado en el que tu aplicación está disponible. 
+
+Puedes ver estos datos en forma de **Mapa** visual o cambiar la configuración para verlos en forma de **Tabla**. La tabla mostrará cinco mercados a la vez, ordenados alfabéticamente o por mayor o menor número de adquisiciones o instalaciones. También puedes descargar los datos para ver la información de todos los mercados de forma conjunta.
+
+
+## <a name="add-on-page-views-and-conversions-by-campaign-id"></a>Vistas de página de complementos y conversiones de la aplicación por identificador de campaña
+
+En el gráfico **Vistas de página de complementos y conversiones de la aplicación por identificador de campaña** se muestra el número total de conversiones de complementos (adquisiciones) por identificador de campaña durante el período de tiempo seleccionado, lo que te permite realizar un seguimiento de las conversiones y vistas de página de los clientes de Windows10 para cada una de tus [campañas de promoción personalizadas](create-a-custom-app-promotion-campaign.md). En este gráfico se muestran solo las conversiones de complementos.
+
+> [!NOTE]
+> Los clientes pudieron llegar a la descripción de la aplicación haciendo clic en una campaña personalizada que no hayas creado tú. Marcamos cada vista de página dentro de una sesión con el identificador de campaña desde el que el cliente entró a la Tienda por primera vez. Luego atribuimos conversiones a dicho identificador de campaña para todas las adquisiciones en un plazo de 24 horas. Por este motivo, puedes ver un número de total de conversiones mayor que el total de conversiones de los identificadores de campañas. También es posible que tengas conversiones o conversiones de complementos que tengan cero vistas de página. 
+
+
+## <a name="conversions-breakdown-by-campaign-id"></a>Desglose de conversiones por identificador de campaña
+
+El gráfico **Desglose de conversiones por identificador de campaña** te permite realizar un seguimiento de conversiones y vistas de página de los clientes de Windows10 para cada una de tus [campañas de promoción personalizadas](create-a-custom-app-promotion-campaign.md). Las conversiones de aplicaciones y complementos se muestran por identificador de campaña.
+
+En este gráfico, una *vista de página* significa que un cliente ha visualizado la descripción de la Tienda de la aplicación. Una *conversión* significa que un cliente acaba de obtener una licencia para la aplicación o complemento (tanto si cobras dinero como si los ofreces gratis).
+
+Ten en cuenta que estas vistas de página y números de conversión no son recuentos de clientes únicos. 
+
+
+## <a name="top-add-ons"></a>Complementos principales
+
+En el gráfico **Complementos principales** se muestra el número total de adquisiciones de cada uno de los complementos durante el período de tiempo seleccionado, de modo que puedes ver los complementos que son más populares. 
+
+
 
  
 

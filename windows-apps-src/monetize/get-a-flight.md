@@ -4,14 +4,16 @@ ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
 description: "Usa este método en la API de envío de la Tienda Windows para obtener datos para un paquete piloto de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows."
 title: Obtener un paquete piloto
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda de Windows, flight, piloto, package flight, paquete piloto"
-ms.openlocfilehash: 921d33c033704de711112c30feae7dbbfebc732b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f0494a8c0f994d65a7d428b008f06c0bc9aa42c3
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="get-a-package-flight"></a>Obtener un paquete piloto
 
@@ -26,8 +28,6 @@ Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
-
->**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
 ## <a name="request"></a>Solicitud
 
@@ -54,7 +54,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | cadena | Obligatorio. El Id. de la Tienda de la aplicación que contiene el paquete piloto que quieres obtener. El Id. de la Tienda para la aplicación está disponible en el panel del Centro de desarrollo.  |
-| flightId | cadena | Obligatorio. El identificador del paquete piloto que se va a obtener. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
+| flightId | cadena | Obligatorio. El identificador del paquete piloto que se va a obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
 
 <span/>
 

@@ -4,18 +4,16 @@ Description: "Usa el código de ejemplo de la vista de árbol para crear un árb
 title: "Vista de árbol"
 label: Tree view
 template: detail.hbs
-ms.openlocfilehash: 88e3e79b7ebdf06c200f3525095d7685f7e3e6dc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c7ad99d20fe30ea4b94ad62de45b3832aae3805e
+ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="hierarchical-layout-with-treeview"></a>Diseño jerárquico con TreeView
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-<div class="microsoft-internal-note">
-Las líneas rojas de TreeView están en el almacén de diseño: http://designdepotweb1/DesignDepot.FrontEnd/#/Dashboard/856
-</div>
-
-TreeView es un patrón de lista jerárquica con nodos que se expanden y se contraen, y que contienen elementos anidados. Los elementos anidados pueden ser nodos adicionales o elementos normales de una lista. Puedes usar una clase [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) para crear una vista de árbol con el fin de ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
+Una vista de árbol es un patrón de lista jerárquica con nodos que se expanden y se contraen y que contienen elementos anidados. Los elementos anidados pueden ser nodos adicionales o elementos normales de una lista. Puedes usar una clase [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) para crear una vista de árbol con el fin de ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
 
 La [muestra de TreeView](http://go.microsoft.com/fwlink/?LinkId=785018) es una implementación de referencia creada con **ListView**. No es un control independiente. La vista de árbol que se muestra en el panel de favoritos del navegador Microsoft Edge usa esta implementación de referencia.
 

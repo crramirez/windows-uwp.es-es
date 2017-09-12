@@ -6,14 +6,20 @@ ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 33a8b62a378e4a9abe20be04a49c94d886144cc5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: 370c5266277ff442f26c9aeb951d869ec70b31c5
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="radio-buttons"></a>Botones de radio
 
@@ -21,19 +27,11 @@ translationtype: HT
 
 Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones Cada opción aparece representada por un botón de radio; un usuario solo puede seleccionar un único botón de radio en un grupo de botones de radio.
 
+> **API importantes**: [Clase RadioButton](https://msdn.microsoft.com/library/windows/apps/br227544), [Evento Checked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [Propiedad IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+
 (Si tienes curiosidad acerca del origen nombre, los botones de radio se llaman así por los botones de canales preestablecidos de una radio).
 
 ![Botones de radio](images/controls/radio-button.png)
-
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Clase RadioButton**](https://msdn.microsoft.com/library/windows/apps/br227544)</li>
-<li>[**Evento Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
-<li>[**Propiedad IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)</li>
-</ul>
-</div>
-
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -68,7 +66,7 @@ Botones de radio en la configuración del navegador Microsoft Edge.
 
 Los botones de radio funcionan en grupos. Hay dos formas de agrupar los controles de botón de radio:
 - Colocarlos dentro del mismo contenedor principal.
-- Establece la propiedad [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) en cada botón de radio en el mismo valor.
+- Establece la propiedad [GroupName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) en cada botón de radio en el mismo valor.
 
 > **Nota**&nbsp;&nbsp;Un grupo de botones de radio se comporta como un control único cuando se accede a él con el teclado. Solo se puede acceder a la opción seleccionada mediante la tecla TAB, pero los usuarios pueden desplazarse por el grupo con las teclas de flecha.
 
@@ -158,7 +156,7 @@ Los grupos de botones de radio tienen este aspecto.
 
 ![Botones de radio en dos grupos](images/radio-button-groups.png)
 
-Un botón de radio tiene dos estados: *seleccionado* o *borrado*. Cuando se selecciona un botón de radio, su propiedad [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) es **true**. Cuando un botón de radio está desactivado, su propiedad **IsChecked** es **false**. Un botón de radio se puede desactivar haciendo clic en otro botón de radio del mismo grupo, pero no se puede borrar haciendo clic de nuevo en él. Sin embargo, puedes borrar un botón de radio mediante programación estableciendo su propiedad IsChecked en **false**.
+Un botón de radio tiene dos estados: *seleccionado* o *borrado*. Cuando se selecciona un botón de radio, su propiedad [IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) es **true**. Cuando un botón de radio está desactivado, su propiedad **IsChecked** es **false**. Un botón de radio se puede desactivar haciendo clic en otro botón de radio del mismo grupo, pero no se puede borrar haciendo clic de nuevo en él. Sin embargo, puedes borrar un botón de radio mediante programación estableciendo su propiedad IsChecked en **false**.
 
 ## <a name="recommendations"></a>Recomendaciones
 
@@ -193,4 +191,4 @@ En esta ilustración, se muestra el modo correcto de colocar y espaciar botones 
 
 
 **Para desarrolladores (XAML)**
-- [**Clase RadioButton Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227544)
+- [Clase RadioButton Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/br227544)

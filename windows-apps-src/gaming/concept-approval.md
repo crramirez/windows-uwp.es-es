@@ -4,20 +4,26 @@ title: "Aprobación del concepto"
 description: "Descubre cómo enviar el producto para la aprobación del concepto, lo que será necesario si tu producto se ejecuta en Xbox o usa Xbox Live."
 ms.assetid: 850ec988-761b-49d8-9508-da8a83108de3
 ms.author: elcowle
-ms.date: 02/08/2017
+ms.date: 06/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, aprobación del concepto"
-ms.openlocfilehash: f05789d87f3260aa02d1e0dd33490b248efb42a7
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "windows 10, uwp, aprobación del concepto"
+ms.openlocfilehash: f49e27ad5753a8f4074ca3b55bd7cde47a7e6600
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="concept-approval"></a>Aprobación del concepto
 
-Cuando empieces a crear un juego que se ejecutará en Xbox, tendrás que enviar una propuesta relativa al juego a Microsoft para la *aprobación del concepto* antes de que puedas publicarlo. Este envío inicial de alto nivel beneficia tanto a Microsoft como a ti al identificar ya desde el principio del proceso cualquier dificultad o desventaja posibles en el plan general para el juego. Intenta asegurarte de que el contenido no es excesivamente vulgar, ofensivo o cuestionable y que encaja con la plataforma de destino. Una vez que envíes tu propuesta, Microsoft la revisará y te notificará el resultado.
+La aprobación del concepto es el proceso de envío a Microsoft de una propuesta de un juego. Este envío inicial de alto nivel beneficia tanto a Microsoft como a ti al identificar ya desde el principio del proceso cualquier dificultad o desventaja posibles en el plan general para el juego. Intenta asegurarte de que el contenido no es excesivamente vulgar, ofensivo o cuestionable y que encaja con la plataforma de destino. Una vez que envíes tu propuesta, Microsoft la revisará y te notificará el resultado.
 
-Si vas a desarrollar un juego de Plataforma universal de Windows (UWP), solo necesitas la aprobación del concepto si quieres que los clientes puedan descargarlo en los dispositivos Xbox o deseas habilitar las características de Xbox Live. Si quieres que tu juego UWP esté disponible para el escritorio de Windows o en dispositivos móviles (o si vas a publicar una aplicación para UWP que *no* sea un juego, destinada a cualquier dispositivo), y no vas a usar Xbox Live, todo lo que necesitas es una [cuenta de desarrollador](https://go.microsoft.com/fwlink/?LinkId=817223), y puedes configurar y enviar libremente tu aplicación a la Tienda a través del panel.
+## <a name="who-needs-concept-approval"></a>¿Quién necesita la aprobación de concepto?
+
+Este proceso solo es necesario si vas a publicar un juego de Xbox a través de [ID@Xbox](http://www.xbox.com/Developers/id) o como asociado administrado. No es necesario seguir este proceso si te unes al [Programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) y creas un juego para la Plataforma universal de Windows (UWP), que luego podrás publicar automáticamente en Xbox. Sin embargo, los juegos realizadas a través de este programa se mostrarán en una sección independiente de la Tienda. Si quieres que tu juego aparezca con los juegos de AAA grandes, o si quieres crear un juego más intenso con el Kit de desarrollo de Xbox (XDK), debes pasar por la aprobación de concepto.
+
+Tampoco necesitas aprobación de concepto si vas a desarrollar un juego UWP para escritorio de Windows o dispositivos móviles (o si vas a publicar una aplicación para UWP que *no* un juego, destinada a cualquier dispositivo). Todo lo que necesitas es una [cuenta de desarrollador](https://go.microsoft.com/fwlink/?LinkId=817223), y puedes configurar y enviar libremente la aplicación a la Tienda a través del panel de información.
 
 ## <a name="submit-your-concept-for-approval"></a>Envío de tu concepto para la aprobación
 

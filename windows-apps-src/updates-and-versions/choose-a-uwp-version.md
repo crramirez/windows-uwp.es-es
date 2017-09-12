@@ -3,37 +3,42 @@ author: QuinnRadich
 title: "Elegir una versión de UWP"
 description: "Al escribir una aplicación para UWP en Microsoft Visual Studio, puedes elegir la versión de destino. Obtén información sobre la diferencia entre las diferentes versiones de UWP y sobre cómo configurar las opciones en proyectos nuevos y existentes."
 ms.author: quradic
-ms.date: 02/08/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
-ms.openlocfilehash: 2fe7d9017919166992b13a5cc5f058591fecda3e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 141560d379efab8f0bf8f745ec9e77972d847eec
+ms.sourcegitcommit: 9d1ca16a7edcbbcae03fad50a4a10183a319c63a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/09/2017
 ---
 # <a name="choose-a-uwp-version"></a>Elegir una versión de UWP
 
-Al escribir una aplicación para UWP en Microsoft Visual Studio, puedes elegir la versión de destino. Actualmente, solo hay tres versiones posibles.
+Cada versión de Windows10 ha aportado características nuevas y mejoradas a la plataforma UWP. Al crear una aplicación para UWP en Microsoft Visual Studio, puedes elegir la versión de destino.
+
+En la tabla siguiente se describen las versiones disponibles de Windows10. Ten en cuenta que esta tabla solo se aplica a la creación de aplicaciones para UWP, que solo son compatibles con Windows10. No puedes desarrollar aplicaciones para UWP para versiones anteriores de Windows, y tienes que haber [instalado la versión adecuada del SDK](http://go.microsoft.com/fwlink/?LinkId=821431) con el fin de seleccionar esa versión como destino. 
 
 | Versión | Descripción |
 | --- | --- |
-| Compilación 14393 (edición de Aniversario) | Esta es la versión más reciente de Windows10, publicada en julio de 2016. Algunas características destacadas de esta versión incluyen: </br> \* **Windows Ink:** Nuevos controles InkCanvas e InkToolbar. </br> \* **API de Cortana:** Usa nuevas acciones de Cortana para integrar la compatibilidad de Cortana con funciones específicas de tu aplicación. </br> \* **Windows Hello:** Microsoft Edge ahora admite Windows Hello, lo que proporciona a los desarrolladores web acceso a la autenticación biométrica. </br> Para obtener información sobre estas y muchas otras funciones agregadas en esta versión de Windows, visita [el Centro de desarrollo](https://developer.microsoft.com/windows/windows-10-for-developers) o la página de información detallada en [Novedades para desarrolladores en Windows 10](../whats-new/windows-10-version-1607.md).  |
+| Compilación 15063 (Creators Update) | Esta es la versión más reciente de Windows10, publicada en marzo de 2017. **Ten en cuenta que _debes_ usar Visual Studio2017 para seleccionar esta versión de Windows como destino**. Algunas características destacadas de esta versión incluyen:  </br> \* **Análisis de la entrada de lápiz:** Windows Ink ahora puede clasificar los trazos de lápiz en escribir o dibujar trazos, así como reconocer texto, formas y estructuras de diseño básico. </br> \* **API de Windows.Ui.Composition:** Combina y aplica animaciones de manera sencilla en tu aplicación. </br> \* **Edición dinámica:** Edita en XAML mientras se ejecuta la aplicación y ve cómo los cambios se aplican en tiempo real. </br> Para obtener información sobre estas y muchas otras funciones agregadas en esta versión de Windows, visita [el Centro de desarrollo](https://developer.microsoft.com/windows/windows-10-for-developers) o la página de información detallada en [Novedades para desarrolladores en Windows 10](../whats-new/windows-10-version-1703.md).  |
+| Compilación 14393 (Actualización de aniversario) | Esta versión de Windows10 se publicó en julio de 2016. Algunas características destacadas de esta versión incluyen: </br> \* **Windows Ink:** Nuevos controles InkCanvas e InkToolbar. </br> \* **API de Cortana:** Usa nuevas acciones de Cortana para integrar la compatibilidad de Cortana con funciones específicas de tu aplicación. </br> \* **Windows Hello:** Microsoft Edge ahora admite Windows Hello, lo que proporciona a los desarrolladores web acceso a la autenticación biométrica. </br> Para obtener información sobre estas y muchas otras funciones agregadas en esta versión de Windows, visita [el Centro de desarrollo](https://developer.microsoft.com/windows/windows-10-for-developers) o la página de información detallada en [Novedades para desarrolladores en Windows 10](../whats-new/windows-10-version-1607.md).  |
 | Compilación 10586 | Esta versión de Windows10 se publicó en noviembre de 2015. Las características destacadas incluyen la introducción de las API ORTC (Comunicaciones en tiempo real mediante objetos) para la comunicación de vídeo en Microsoft Edge y las API de proveedores para permitir a las aplicaciones usar la autenticación de rostro de Windows Hello. [Más información sobre las características introducidas en esta compilación.](../whats-new/windows-10-version-1511.md) |
 | Compilación 10240 | Esta es la versión inicial de Windows 10, publicada en julio de 2015. [Más información sobre las características introducidas en esta compilación.](../whats-new/windows-10-version-1507.md) |
 
-Es muy recomendable que los nuevos desarrolladores y los desarrolladores que escriban código para un público general usen siempre la compilación más reciente de Windows (14393). Los desarrolladores que escriban aplicaciones de empresa deberían pensar seriamente en ofrecer compatibilidad para una **versión mínima** más antigua.
+Es muy recomendable que los nuevos desarrolladores y los desarrolladores que escriban código para un público general usen siempre la compilación más reciente de Windows (15063). Los desarrolladores que escriban aplicaciones de empresa deberían pensar seriamente en ofrecer compatibilidad para una **versión mínima** más antigua.
 
 ## <a name="whats-different-in-each-uwp-version"></a>¿Qué es diferente en cada versión de UWP?
 
-En cada versión sucesiva de Windows10 están disponibles API nuevas y modificadas para UWP. Para obtener información específica sobre qué funciones se han agregado en qué versión, consulta [Novedades para desarrolladores de Windows10](../whats-new/windows-10-version-1607.md).
+En cada versión sucesiva de Windows10 están disponibles API nuevas y modificadas para UWP. Para obtener información específica sobre qué funciones se han agregado en qué versión, consulta [Novedades para desarrolladores de Windows10](../whats-new/windows-10-version-1703.md).
 
 Para ver los temas de consulta que enumeran todas las familias de dispositivos y sus versiones, así como todos los contratos de API y sus versiones, consulta [Familias de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) y [Contratos de API](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx).
 
 ## <a name="choose-which-version-to-use-for-your-app"></a>Elegir la versión que usarás para la aplicación
 
-En el diálogo **Nuevo proyecto de Windows universal** de Visual Studio, puedes elegir una versión para la **Versión de destino** y otra para la **Versión mínima**.
+En el diálogo **Nuevo proyecto de Windows universal** de Visual Studio, puedes elegir una versión para la **Versión de destino** y otra para la **Versión mínima**. Además, puedes cambiar la **Versión de destino** y la **Versión mínima** de tu aplicación para UWP en la sección *aplicación* de las **Propiedades** de la aplicación.
 
 * **Versión de destino**. Esto establece el ajuste *TargetPlatformVersion* en el archivo del proyecto. También determina el valor del atributo *TargetDeviceFamily@MaxVersionTested* en el manifiesto del paquete de la aplicación. El valor que elijas especificará la versión de la plataforma UWP a la que está destinada tu proyecto (y, por lo tanto, el conjunto de API disponibles para tu aplicación), por lo que recomendamos que elijas la versión más reciente que sea posible. Para obtener más información sobre el manifiesto del paquete de la aplicación y algunas directrices sobre cómo configurar TargetDeviceFamily manualmente, consulta [TargetDeviceFamily](https://msdn.microsoft.com/library/windows/apps/dn986903).
 * **Versión mínima**. Esto establece el ajuste *TargetPlatformMinVersion* en el archivo del proyecto. También determina el valor del atributo *TargetDeviceFamily@MinVersion* en el manifiesto del paquete de la aplicación. El valor que elijas especificará la versión mínima de la plataforma UWP con la que puede funcionar tu proyecto.

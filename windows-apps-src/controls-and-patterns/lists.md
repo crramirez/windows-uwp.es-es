@@ -6,18 +6,25 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 4c17bab575be207106abfac44104bb32bcffd6ac
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp
+pm-contact: predavid
+design-contact: kimsea
+dev-contact: ranjeshj
+doc-status: Published
+ms.openlocfilehash: 0249132942cbb15a009c85c929185bffcba23cd9
+ms.sourcegitcommit: 690320e6cbfc16ed9e935a136fecc44d68e95719
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="lists"></a>Listas
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
 
 Mostrar listas y habilitar la interacción con el contenido basado en la colección. Los cuatro patrones de lista tratados en este artículo son:
 
@@ -26,16 +33,15 @@ Mostrar listas y habilitar la interacción con el contenido basado en la colecci
 -   Listas desplegables, que permiten que los usuarios elijan un elemento desde una lista ampliable
 -   Cuadros de lista, que permiten que los usuarios elijan uno o varios elementos desde un cuadro que se puede desplazar
 
-Se proporcionan directrices de diseño, características y ejemplos para cada patrón de lista. Al final del artículo, se encuentran vínculos a temas relacionados y API.
+Se proporcionan directrices de diseño, características y ejemplos para cada patrón de lista.
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)</li>
-<li>[**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)</li>
-<li>[**Clase ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)</li>
-</ul>
-</div>
+> **API importantes**: [Clase ListView](https://msdn.microsoft.com/library/windows/apps/br242878), [Clase GridView](https://msdn.microsoft.com/library/windows/apps/br242705), [Clase ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348)
+
+> <div id="main">
+> <strong><span class="uwpd-prelease">Versión previa.</span> Fall Creators Update (compilación 16215 de Windows 10 Insider Preview): cambio de comportamiento</strong>
+> </div>
+> De manera predeterminada, en lugar de llevar a cabo la selección, ahora un lápiz activo ahora se desplaza/realiza movimiento panorámico en aplicaciones para UWP (como la entrada táctil, el panel táctil y el lápiz pasivo).
+> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Consulta el tema de referencia de API [ScrollViewer Class] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) para obtener más información.
 
 ## <a name="list-views"></a>Vistas de lista
 
@@ -180,10 +186,12 @@ Si la colección en un cuadro combinado es lo suficientemente larga, aparecerá 
 
 -   El texto de los elementos del cuadro combinado no debe ocupar más de una línea.
 -   Ordena los elementos de un cuadro combinado en el orden más lógico. Agrupa opciones relacionadas y coloca las opciones más comunes en la parte superior. Ubica los nombres en orden alfabético, los números en orden numérico y las fechas en orden cronológico.
+-   Para crear un cuadro combinado que se actualice en directo mientras el usuario usa las teclas de dirección (como un menú desplegable de fuente), establece SelectionChangedTrigger en "Siempre".  
 
 ### <a name="text-search"></a>Búsqueda de texto
 
-Los cuadros combinados admiten automáticamente la búsqueda dentro de sus colecciones. A medida que los usuarios escriben caracteres en un teclado físico mientras se centran en un cuadro combinado abierto o cerrado, los candidatos que coincidan con la cadena del usuario se incluyen en la vista. Esta funcionalidad es especialmente útil cuando se navega en una lista larga. Por ejemplo, cuando se interactúa con una lista desplegable que contiene una lista de estados, los usuarios pueden presionar la tecla "w" para mostrar "Washington" para la selección rápida. 
+Los cuadros combinados admiten automáticamente la búsqueda dentro de sus colecciones. A medida que los usuarios escriben caracteres en un teclado físico mientras se centran en un cuadro combinado abierto o cerrado, los candidatos que coincidan con la cadena del usuario se incluyen en la vista. Esta funcionalidad es especialmente útil cuando se navega en una lista larga. Por ejemplo, cuando se interactúa con una lista desplegable que contiene una lista de estados, los usuarios pueden presionar la tecla "w" para mostrar "Washington" para la selección rápida.
+
 
 ## <a name="list-boxes"></a>Cuadros de lista
 
@@ -252,12 +260,12 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 
 - [Hub](hub.md)
 - [Panel de maestro y detalles](master-details.md)
-- [Panel de navegación](nav-pane.md)
+- [Panel de navegación](navigationview.md)
 - [Zoom semántico](semantic-zoom.md)
 - [Arrastrar y colocar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 
 **Para desarrolladores**
-- [**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)
-- [**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)
-- [**Clase ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)
-- [**Clase ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868)
+- [Clase ListView](https://msdn.microsoft.com/library/windows/apps/br242878)
+- [Clase GridView](https://msdn.microsoft.com/library/windows/apps/br242705)
+- [Clase ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348)
+- [Clase ListBox](https://msdn.microsoft.com/library/windows/apps/br242868)

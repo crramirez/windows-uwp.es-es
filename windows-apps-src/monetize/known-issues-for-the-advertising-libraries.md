@@ -1,32 +1,30 @@
 ---
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
-description: "Obtén información sobre los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en Microsoft Store Services SDK."
+description: "Obtén información sobre los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising."
 title: Problemas conocidos de las bibliotecas de publicidad
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, known issues, problemas conocidos
-ms.openlocfilehash: 33bf3c2db5db7e8ec07df3f4d13cc0ad074e99a3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b18c4568770afb70bcca991c79d59a9912981705
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="known-issues-for-the-advertising-libraries"></a>Problemas conocidos de las bibliotecas de publicidad
 
 
 
 
-En este tema se enumeran los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x).
-
-## <a name="installation-of-microsoft-store-services-sdk-requires-visual-studio-tools-for-universal-windows-apps"></a>La instalación del Microsoft Store Services SDK requiere Visual Studio Tools para aplicaciones universales de Windows
-
-Para instalar el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) con Visual Studio 2015, debes tener instalada la versión 1.1 o posterior de Visual Studio Tools para aplicaciones universales de Windows. Para obtener más información, consulta las [notas de la versión](http://go.microsoft.com/fwlink/?LinkID=624516) de Visual Studio.
+En este tema se enumeran los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Advertising (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone8.x (para aplicaciones de Windows8.1 y Windows Phone8.x).
 
 ## <a name="windows-phone-8x-silverlight-projects"></a>Proyectos de Windows Phone 8.x Silverlight
 
-El SDK de Microsoft Advertising para Windows y Windows Phone 8.x ofrece compatibilidad limitada con los proyectos de Windows Phone 8.x Silverlight. Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md#silverlight_support).
+El SDK de Microsoft Advertising para Windows y Windows Phone 8.x ofrece compatibilidad limitada con los proyectos de Windows Phone 8.x Silverlight. Para obtener más información, consulta [Compatibilidad de publicidad para proyectos de Windows Phone 8.x Silverlight](adcontrol-in-windows-phone-silverlight.md#silverlight_support).
 
 Para obtener los ensamblados de Microsoft Advertising para proyectos de Windows Phone 8.x Silverlight, instala el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk), abre el proyecto en Visual Studio y, después, ve a **Proyecto** > **Agregar servicio conectado** > **Ad Mediator** para descargar automáticamente los ensamblados. Después de hacer esto, puedes quitar las referencias de Ad Mediator del proyecto si no quieres usar la mediación de anuncios. Para obtener más información, consulta [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md) (AdControl en Windows Phone Silverlight).
 
@@ -64,7 +62,7 @@ También puedes publicar una pregunta en el [foro](http://go.microsoft.com/fwlin
 
 Pueden mostrarse anuncios de prueba, incluso cuando esperas anuncios dinámicos. Esto puede suceder en los siguientes escenarios:
 
-* Microsoft Advertising no puede comprobar o encontrar el identificador de la aplicación dinámica usado en la tienda de la aplicación. En este caso, cuando un usuario crea una unidad de anuncio, su estado puede empezar como dinámico (no de prueba), pero se moverá al estado de prueba dentro de las 6 horas posteriores a la primera solicitud del anuncio. Volverá a ser dinámico si no hay ninguna solicitud de las aplicaciones de prueba durante 10 días.
+* Nuestra plataforma de publicidad no puede comprobar o encontrar el identificador de la aplicación dinámica usado en la Tienda. En este caso, cuando un usuario crea una unidad de anuncio, su estado puede empezar como dinámico (no de prueba), pero se moverá al estado de prueba dentro de las 6 horas posteriores a la primera solicitud del anuncio. Volverá a ser dinámico si no hay ninguna solicitud de las aplicaciones de prueba durante 10 días.
 
 * Las aplicaciones de prueba o las aplicaciones que se ejecutan en el emulador no mostrará anuncios dinámicos.
 

@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, mapa, map, ubicación, location, funcionalidad de ubicación, location capability"
-ms.openlocfilehash: 05fa3330f5346f69061cb60cf8b54de451845e06
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f5af2815783568cb234f1196e065f18b145c7e68
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 
@@ -29,7 +31,7 @@ Busca la ubicación del usuario y responde a los cambios de ubicación. La confi
 
 
 1.  En el **Explorador de soluciones**, haz doble clic en **package.appxmanifest** y selecciona la pestaña **Funcionalidades**.
-2.  En la pestaña **Funcionalidades**, selecciona la pestaña **Funcionalidades**. De esta forma, se agrega la funcionalidad de dispositivo `Location` al archivo de manifiesto del paquete.
+2.  En la lista **Funcionalidades**, activa la casilla **Ubicación**. De esta forma, se agrega la funcionalidad de dispositivo `location` al archivo de manifiesto del paquete.
 
 ```XML
   <Capabilities>

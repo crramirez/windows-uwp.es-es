@@ -8,10 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals"
-ms.openlocfilehash: cc155d7a454cabe5c0d820f5d74313dfeaf01830
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "windows 10, uwp, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals"
+ms.openlocfilehash: e0769690fa3ac49057fb34d36d2b9d6ff6f25e28
+ms.sourcegitcommit: ae20971c4c8276034cd22fd7e10b0e3ddfddf480
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Conceptos básicos sobre la muestra de Marble Maze
 
@@ -19,15 +21,13 @@ translationtype: HT
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este documento se describen las características fundamentales del proyecto Marble Maze, como la forma en que usa Visual C++ en el entorno de Windows Runtime, cómo se crea y se estructura, y cómo se compila. El documento también describe varias convenciones que se usan en el código.
+En este tema se describen las características fundamentales del proyecto Marble Maze, como la forma en que usa Visual C++ en el entorno Windows Runtime, cómo se crea y estructura, y cómo se compila. El tema también describe varias de las convenciones que se usan en el código.
 
 > **Nota**   El código de ejemplo correspondiente a este documento se encuentra en la [muestra de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
 
- 
-## 
 Estos son algunos de los puntos principales que se tratan en este documento para cuando se planea y se desarrolla un juego para la Plataforma universal de Windows (UWP).
 
--   Usa la plantilla de **DirectX 11 App (Windows universal)** en una aplicación con C++ para crear tu juego para UWP. Usa Visual Studio para compilar un proyecto de aplicación para UWP del mismo modo que lo harías con un proyecto estándar.
+-   Usa la plantilla de Visual C++ **DirectX 11 App (Windows universal)** en Visual Studio para crear tu juego para UWP con DirectX.
 -   Windows Runtime proporciona clases e interfaces para que puedas desarrollar aplicaciones para UWP de una manera más moderna y orientada a los objetos.
 -   Usa referencias a objetos con el símbolo circunflejo (^) para administrar la duración de las variables de Windows Runtime, [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) para administrar la duración de los objetos COM y [**std::shared\_ptr**](https://msdn.microsoft.com/library/windows/apps/bb982026.aspx) o [**std::unique\_ptr**](https://msdn.microsoft.com/library/windows/apps/ee410601.aspx) para administrar la duración de todos los demás objetos de C++ asignados por montón.
 -   En la mayoría de los casos, usa el controlador de excepciones en vez de los códigos de resultados para tratar los errores inesperados.
@@ -36,28 +36,30 @@ Estos son algunos de los puntos principales que se tratan en este documento para
 ## <a name="creating-the-visual-studio-project"></a>Creación del proyecto de Visual Studio
 
 
-Si has descargado y extraído la muestra, puedes abrir el archivo de la solución MarbleMaze.sln en Visual Studio para ver el código. También puedes ver el código fuente en la página de la Galería de muestras de MSDN [Muestra del juego Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011) seleccionando la pestaña **Examinar código**.
+Si has descargado y extraído la muestra, puedes abrir el archivo de la solución **MarbleMaze.sln** en Visual Studio y te aparecerá el código. También puedes ver el código fuente en la página de la Galería de muestras de MSDN [Muestra del juego Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011) seleccionando la pestaña **Examinar código**.
 
-Cuando creamos el proyecto de Visual Studio para Marble Maze, empezamos con un proyecto existente. Sin embargo, si aún no tienes un proyecto existente que proporcione la funcionalidad básica que requiere tu juego para UWP con DirectX, recomendamos que crees un proyecto basado en la plantilla **DirectX 11 (Windows universal)** de Visual Studio porque proporciona una aplicación 3-D de trabajo básica.
+Cuando creamos el proyecto de Visual Studio para Marble Maze, empezamos con un proyecto existente. Sin embargo, si aún no tienes un proyecto existente que proporcione la funcionalidad básica que requiere tu juego para UWP con DirectX, recomendamos que crees un proyecto basado en la plantilla **DirectX 11 (Windows universal)** de Visual Studio, porque proporciona una aplicación 3D de trabajo básica.
 
-Un valor importante del proyecto en la plantilla **DirectX 11 App (Windows universal)** es la opción **/ZW**, que permite que el programa pueda usar las extensiones del lenguaje de Windows Runtime. Esta opción está habilitada de manera predeterminada al usar la plantilla de Visual Studio.
+Un valor importante del proyecto en la plantilla **DirectX 11 App (Windows universal)** es la opción **/ZW**, que permite que el programa pueda usar las extensiones del lenguaje de Windows Runtime. Esta opción está habilitada de manera predeterminada al usar la plantilla de Visual Studio. Consulta [Configuración de opciones del compilador](https://docs.microsoft.com/cpp/build/reference/setting-compiler-options) para obtener más información sobre cómo establecer las opciones del compilador en Visual Studio.
 
-> **Precaución**  La opción **/ZW** no es compatible con opciones como **/clr**. En el caso de **/clr**, esto significa que no puedes tener .NET Framework y Windows Runtime como destino desde el mismo proyecto de Visual C++.
+> **Precaución**   La opción **/ZW** no es compatible con opciones como **/clr**. En el caso de **/clr**, esto significa que no puedes tener como objetivo .NET Framework ni Windows Runtime desde el mismo proyecto de Visual C++.
 
  
 
-Cada aplicación para UWP que adquieras de la Tienda Windows tiene la forma de paquete de la aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Para más información sobre los paquetes de la aplicación, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
+Cada aplicación para UWP que adquieras de la Tienda Windows tiene la forma de paquete de la aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Puedes editar el manifiesto abriendo **Package.appxmanifest** en el proyecto. Para más información sobre los paquetes de aplicaciones, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
-##  <a name="building-deploying-and-running-the-game"></a> Compilar, implementar y ejecutar el juego
+##  <a name="building-deploying-and-running-the-game"></a>Compilar, implementar y ejecutar el juego
 
 
-Compila un proyecto de aplicación para UWP como lo harías con un proyecto estándar. (En la barra de menús, elige **Compilar, Compilar solución**.) Este paso compila el código y lo empaqueta para usarlo como una aplicación UWP.
+<!--To build the project, on the menu bar, choose **Build > Build Solution**. The build step compiles the code and also packages it for use as a UWP app.
 
-Después de compilar el proyecto, debes implementarlo. (En la barra de menús, elige **Compilar, Implementar solución**.) Visual Studio también implementa el proyecto cuando ejecutes el juego desde el depurador.
+After you build the project, you must deploy it. In the dropdown menus at the top, select your deployment configuration, and then on the menu bar, choose **Build > Deploy Solution**.
 
-Una vez implementado el proyecto, elige el icono de Marble Maze para ejecutar el juego. De forma alternativa, desde Visual Studio, en la barra de menús, elige **Depurar, Iniciar depuración**.
+After you deploy the project, pick the Marble Maze tile to run the game. Alternatively, from Visual Studio, on the menu bar, choose **Debug, Start Debugging**.-->
 
-###  <a name="controlling-the-game"></a> Control del juego
+En los menús de lista desplegable de la parte superior de Visual Studio, a la izquierda del botón verde de reproducción, selecciona tu configuración de implementación. Recomendamos establecerla como objetivo **Debug** de la arquitectura de tu dispositivo (**x86** para 32 bits, **x64** para 64 bits) y para tu **máquina local**. También puedes probar en un **equipo remoto**, o en un **dispositivo** que esté conectado mediante USB. A continuación, haz clic en el botón verde de reproducción e implementa en tu dispositivo.
+
+###  <a name="controlling-the-game"></a>Control del juego
 
 Puedes usar la entrada táctil, el acelerómetro, el mando de la Xbox 360 o el mouse para controlar Marble Maze.
 

@@ -4,89 +4,129 @@ Description: "La sección de descripciones de la Tienda del proceso de envío de
 title: "Creación de descripciones de la Tienda de aplicaciones"
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 84b00674e06433625010a976f7237b26ea062d7c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 004169178c906ac892865569fd2ed483bd2471fa
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="create-app-store-listings"></a>Creación de descripciones de la Tienda de aplicaciones
 
 
 La sección de **Descripciones de la Tienda** del [proceso de envío de aplicación](app-submissions.md) es donde proporcionas el texto y las [imágenes](app-screenshots-and-images.md) que los clientes verán en la descripción de la Tienda en tu aplicación.
 
-Muchos de los campos de una **Descripción de la tienda** son opcionales, pero se recomienda proporcionar varias imágenes y tanta información como sea posible para que la lista destaque. El mínimo necesario para que el paso **Descripciones de la Tienda** se considere completado es una descripción de texto y al menos una [captura de pantalla](app-screenshots-and-images.md).
+> [!NOTE]
+> Hemos actualizado recientemente las opciones de esta página. Si tenías un envío en curso antes de que las opciones más recientes estuvieran disponibles, dicho envío seguirá mostrando las opciones más antiguas. Puedes eliminar ese envío y luego crear uno nuevo si quieres usar las nuevas opciones para esa aplicación. De lo contrario, las opciones más recientes estarán disponibles en la siguiente actualización, tras publicar el envío en curso.
 
-De manera predeterminada, usaremos la misma descripción de la Tienda (por idioma) para todos los sistemas operativos de destino. Si quieres usar una descripción de la Tienda personalizada para un sistema operativo específico, puedes [crear descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md).
+Muchos de los campos de una **Descripción de la tienda** son opcionales, pero se recomienda proporcionar varias imágenes y tanta información como sea posible para que la lista destaque. El mínimo necesario para que el paso **Descripciones de la Tienda** se considere completado es una descripción de texto y al menos una [captura de pantalla](app-screenshots-and-images.md#screenshots).
+
+> [!TIP]
+> También puedes [importar y exportar las descripciones de la Tienda](import-and-export-store-listings.md) si quieres escribir la información de descripción sin conexión en un archivo .csv, en lugar de proporcionar esta información directamente en el panel de información. Esto puede ser especialmente útil si creas descripciones en varios idiomas.
+
+De manera predeterminada, usaremos la misma descripción de la Tienda (por idioma) para todos los sistemas operativos de destino. Si quieres usar una descripción de la Tienda personalizada para un sistema operativo específico, puedes [crear descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md). La descripción predeterminada siempre se mostrará a los clientes en Windows 10.
 
 ## <a name="store-listing-languages"></a>Idiomas de la descripción de la Tienda
 
 Debes completar la página **Descripción de la Tienda** para al menos un idioma. Te recomendamos que proporciones una descripción de la Tienda en cada idioma que admiten los paquetes, pero que dispongas de flexibilidad para eliminar idiomas para los que no quieres proporcionar una descripción de la Tienda. También puedes crear descripciones de la Tienda en otros idiomas que no son compatibles con los paquetes.
 
-> **Nota**  Si tu envío ya incluye paquetes, te mostraremos los [idiomas](supported-languages.md) compatibles para tus paquetes en la página de información general de envíos (a menos que elimines alguno).
+> [!NOTE]
+> Si tu envío ya incluye paquetes, te mostraremos los [idiomas](supported-languages.md) compatibles para tus paquetes en la página de descripción del envío (a menos que quites alguno).
 
-Para agregar o eliminar idiomas para tus descripciones de la Tienda, haz clic en **Administrar idiomas de la descripción de la Tienda** desde la página de información general de envíos. Si ya has cargado paquetes, verás los idiomas enumerados en la sección **Idiomas admitidos por los paquetes**. Para quitar uno o más de estos idiomas, haz clic en **Quitar**. Si más adelante decides incluir un idioma que anteriormente eliminaste de esta sección, puedes hacer clic en **Agregar**.
+Para agregar o eliminar idiomas para tus descripciones de la Tienda, haz clic en **Agregar/eliminar idiomas** desde la página de información general de envíos. Si ya has cargado paquetes, verás los idiomas enumerados en la sección **Idiomas admitidos por los paquetes**. Para quitar uno o más de estos idiomas, haz clic en **Quitar**. Si más adelante decides incluir un idioma que anteriormente eliminaste de esta sección, puedes hacer clic en **Agregar**.
 
 En la sección **Idiomas de descripción de la Tienda adicionales**, puedes hacer clic en **Administrar idiomas adicionales** para agregar o quitar idiomas que *no* están incluidos en los paquetes. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas adicionales de descripción de la Tienda**. Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas adicionales** y desactiva la casilla para los idiomas que quieres quitar).
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
 
-> **Nota** Al crear una descripción de la Tienda en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción de la Tienda, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplicará a la descripción de la Tienda para este idioma y no afectará al nombre que se muestra cuando un usuario instala la aplicación.
+> [!NOTE]
+> Al crear una descripción de la Tienda en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción de la Tienda, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplicará a la descripción de la Tienda para este idioma y no afectará al nombre que se muestra cuando un usuario instala la aplicación.
 
-Para editar una descripción de la Tienda, haz clic en el nombre del idioma en la información general del envío. Las secciones de la página **Descripción de la Tienda** se describen a continuación.
-
-## <a name="default-store-listing-fields"></a>Campos de descripción de la Tienda predeterminados
+Para editar una descripción de la Tienda, haz clic en el nombre del idioma en la información general del envío.
 
 En la parte superior de la página **Descripción de la Tienda** se encuentran los campos asociados a tu descripción de la Tienda predeterminada para el idioma seleccionado. Estos campos se mostrarán a todos los clientes, a menos que tengas paquetes destinados a versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores; Windows Phone 8.x o versiones anteriores) y crees descripciones de la Tienda específicas de la plataforma para incluir diferentes capturas de pantalla o informaciones para mostrar a los clientes con las versiones específicas del sistema operativo. Para obtener más información, consulta [Creación de descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md).
 
-### <a name="description"></a>Descripción
+## <a name="description"></a>Descripción
 
 El campo de descripción es donde puedes indicar a los clientes qué hace la aplicación. Este campo es necesario y acepta hasta 10 000 caracteres de texto sin formato.
 
 Para obtener consejos para que la descripción destaque, consulta [Escribir una excelente descripción de la aplicación](write-a-great-app-description.md).
 
-### <a name="release-notes"></a>Notas de la versión
+## <a name="release-notes"></a>Notas de la versión
 
 Si es la primera vez que vas a enviar la aplicación, probablemente quieras dejar este campo en blanco. Respecto a una actualización de una aplicación existente, aquí es donde puedes informar a los clientes de lo que ha cambiado en la versión más reciente. Este campo tiene un límite de 1500 caracteres.
 
-### <a name="screenshots"></a>Capturas de pantalla
+## <a name="screenshots"></a>Capturas de pantalla
 
-En la mayoría de los casos, verás varios campos para proporcionar capturas de pantalla para distintos tipos de dispositivos. No es necesario que proporciones capturas de pantalla independientes para cada tipo de dispositivo; solo es necesaria una captura de pantalla para el envío (aunque puedes proporcionar hasta nueve por tipo de dispositivo). En la mayoría de los casos, se recomienda proporcionar capturas de pantalla en todos los tipos de dispositivo que admita la aplicación, para que los clientes vean las imágenes que se asemejan al aspecto que tendrá la aplicación en su dispositivo.
+Es necesaria una captura de pantalla para enviar la aplicación. Se recomienda proporcionar al menos una captura de pantalla para cada tipo de dispositivo que admita tu aplicación.
 
-Para obtener más información, consulta [capturas de pantalla e imágenes de la aplicación](app-screenshots-and-images.md).
+Para obtener más información, consulta [capturas de pantalla e imágenes de la aplicación](app-screenshots-and-images.md#screenshots).
 
-### <a name="app-tile-icon"></a>Icono de la aplicación
+## <a name="store-logos"></a>Logotipos de la Tienda 
 
-La ventana de la aplicación se usa al mostrar la descripción de la Tienda de la aplicación a los clientes en Windows Phone 8.1 y versiones anteriores (y en algunos diseños de la Tienda para clientes en Windows 10). Debe ser un archivo .png que mida de 300 x 300 píxeles.
+Los logotipos de la Tienda son imágenes opcionales que puedes subir para mejorar la forma en que la aplicación se muestra a los clientes. Además, también puedes especificar que solo las imágenes que se suban aquí, se usen en la descripción de la aplicación en la Tienda para los clientes de Windows 10, en vez de permitir a la Tienda que use las imágenes de logotipos de tus paquetes de aplicaciones.
 
-Para más información, consulta [Icono de la ventana de aplicaciones](app-screenshots-and-images.md#app-tile-icon).
+> [!IMPORTANT]
+> Si tu aplicación admite Xbox, o si es compatible con Windows Phone 8.1 o versiones anteriores, debes proporcionar determinadas imágenes aquí para que la descripción aparezca correctamente en la Tienda. 
+
+Para obtener más información, consulta [Logotipos de la Tienda](app-screenshots-and-images.md#store-logos).
+
+## <a name="additional-art-assets"></a>Activos de imágenes adicionales
+
+Puedes enviar activos adicionales para tu producto, incluyendo los tráileres e imágenes promocionales. Son todos opcionales, pero te recomendamos que tengas en cuenta subir como tantos como sea posible. Estas imágenes pueden ayudar a ofrecer una mejor idea de tu producto y una descripción más tentadora.
+
+Para obtener más información, consulta [Activos gráficos adicionales](app-screenshots-and-images.md#additional-art-assets).
+
+## <a name="additional-information"></a>Información adicional
+
+Los campos en esta sección son todos opcionales, pero pueden usarse para ayudar a los clientes a saber más sobre qué hace la aplicación y qué se necesita para obtener una mejor experiencia. Se recomienda revisar las opciones que se describen a continuación y proporcionar cualquier información que los clientes necesitarían saber sobre tu aplicación, o que puede ayudar a tentarlos para descargársela.
 
 ### <a name="app-features"></a>Funciones de la aplicación
 
 Se trata de resúmenes de las funciones clave de la aplicación. Se muestran al cliente en una lista con viñetas en su descripción de la Tienda de la aplicación, junto con su descripción. Hazlas breves, con unas cuantas palabras por función (y no más de 200 caracteres). Puedes incluir hasta 20 funciones.
 
-**Nota**  Aparecerán con viñetas en la descripción de la Tienda, así que no agregues tus propias viñetas.
+> [!NOTE]
+> Las características de la aplicación aparecerán con viñetas en la descripción de la Tienda, así que no agregues tus propias viñetas.
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionales del sistema
 
 Si es necesario, puedes describir las configuraciones de hardware que requiere tu aplicación para funcionar correctamente (más allá de la información que proporcionaste en la sección **Requisitos del sistema** en las [Propiedades de la aplicación](enter-app-properties.md#system-requirements). Esto es especialmente importante, si la aplicación requiere hardware que quizás no esté disponible en todos los equipos.
 
- Puedes escribir hasta 11 elementos para **Hardware mínimo** y **Hardware recomendado**.  Se muestran al cliente en una lista con viñetas en la descripción de la aplicación. Hazlas breves, con unas cuantas palabras por elemento (y no más de 200 caracteres). La información que escribas aquí se mostrará a los clientes que consultan la descripción de la Tienda de aplicaciones en Windows 10, versión 1607 o posterior, junto con los requisitos que indicaste en la página de propiedades del producto.
+Puedes escribir hasta 11 elementos para **Hardware mínimo** y **Hardware recomendado**.  Se muestran al cliente en una lista con viñetas en la descripción de la aplicación. Hazlas breves, con unas cuantas palabras por elemento (y no más de 200 caracteres).
 
-**Nota**  Aparecerán con viñetas en la información, así que no agregues tus propias viñetas.
+La información que escribas aquí se mostrará a los clientes que consultan la descripción de la Tienda de aplicaciones en Windows 10, versión 1607 o posterior, junto con los requisitos que indicaste en la página de propiedades del producto.
+
+> [!NOTE]
+> Los requisitos adicionales del sistema aparecerán con viñetas en la descripción de la Tienda, así que no agregues tus propias viñetas.
+
+### <a name="developed-by"></a>Desarrollado por
+
+Escribe texto aquí si quieres incluir un campo **Desarrollado por** en la descripción de la Tienda de la aplicación. (El valor **Publicado por** indicará el nombre para mostrar del publicador asociado a tu cuenta, independientemente de si proporcionas un valor para el campo **Desarrollado por**).
+
+Este campo tiene un límite de 255 caracteres.
+
 
 ## <a name="shared-fields"></a>Campos compartidos
 
-Los elementos que se describen a continuación son todos campos compartidos y se aplicarán a todas las descripciones de la Tienda en un idioma determinado, independientemente del sistema operativo, incluso si [creas descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md).
+Los elementos que se describen a continuación ayudan a los clientes a descubrir y comprender el producto. La información que se describe aquí se aplicarán a todas las descripciones de la Tienda en un idioma determinado, independientemente del sistema operativo, incluso si [creas descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md).
 
-### <a name="keywords"></a>Palabras clave
+### <a name="search-terms"></a>Términos de búsqueda
 
-Las palabras clave son palabras simples o frases cortas que no se muestran al cliente, pero que ayudan a que tu aplicación aparezca en los resultados de búsqueda relacionados con la palabra clave. Puedes incluir hasta 7 palabras clave con un máximo de 30 caracteres cada una.
+Los términos de búsqueda (anteriormente conocidas como palabras clave) son palabras simples o frases cortas que no se muestran al cliente, pero que ayudan a que tu aplicación aparezca en los resultados de búsqueda relacionados con el término. Puedes incluir hasta 7 términos de búsqueda con un máximo de 30 caracteres cada una y usar palabras no más de 21 entre todos los términos de búsqueda.
 
-Si quieres agregar palabras clave, piensa en las palabras que los clientes podrían usar al buscar aplicaciones como la tuya, especialmente si no forman parte del nombre de la aplicación. Asegúrate de no usar cualquier palabra clave que no sea relevante para tu aplicación.
+Al agregar términos de búsqueda, piensa en las palabras que los clientes podrían usar al buscar aplicaciones como la tuya, especialmente si no forman parte del nombre de la aplicación. Asegúrate de no usar cualquier término que no sea relevante para tu aplicación.
+
+
+### <a name="privacy-policy"></a>Directiva de privacidad
+
+Si tienes una directiva de privacidad de la aplicación, escribe la dirección URL aquí. Eres responsable de garantizar que la aplicación cumpla con las leyes y normas de privacidad aplicables y de proporcionar una directiva de privacidad, si es necesario.
+
+> [!IMPORTANT]
+> Microsoft no proporciona una directiva de privacidad predeterminada para tu aplicación. De igual modo, tu aplicación no está cubierta por ninguna directiva de privacidad de Microsoft. Para determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
 
 ### <a name="copyright-and-trademark-info"></a>Información de copyright y marca comercial
 
@@ -100,7 +140,7 @@ Si los términos de licencia son diferentes a los **Términos de licencia de apl
 
 Si escribes una sola dirección URL en este campo, se mostrará a los clientes como un vínculo en el que pueden hacer clic para leer los términos de licencia adicionales. Esto es útil si los términos de licencia adicionales son muy largos, o si quieres incluir vínculos en los que se puede hacer clic o dar formato a los términos de licencia adicionales.
 
-También puedes incluir hasta 10.000 caracteres de texto en este campo. Si lo haces, los clientes verán estos términos de licencia adicionales mostrados como texto sin formato.
+También puedes escribir hasta 10.000 caracteres de texto en este campo. Si lo haces, los clientes verán estos términos de licencia adicionales mostrados como texto sin formato.
 
 ### <a name="website"></a>Sitio web
 
@@ -110,10 +150,6 @@ Escribe la dirección URL de la página web de tu aplicación. La dirección URL
 
 Escribe la dirección de correo electrónico o la dirección URL de la página web donde los clientes pueden entrar y buscar soporte técnico para la aplicación.
 
-**Importante**  Microsoft no proporciona a tus clientes soporte técnico para la aplicación.
+> [!IMPORTANT]
+> Microsoft no proporciona a tus clientes soporte técnico para la aplicación.
 
-### <a name="privacy-policy"></a>Directiva de privacidad
-
-Si tienes una directiva de privacidad de la aplicación, escribe la dirección URL aquí. Eres responsable de garantizar que la aplicación cumpla con las leyes y normas de privacidad aplicables y de proporcionar una directiva de privacidad, si es necesario.
-
-**Importante**  Microsoft no proporciona una directiva de privacidad predeterminada para tu aplicación. De igual modo, tu aplicación no está cubierta por ninguna directiva de privacidad de Microsoft. Para determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).

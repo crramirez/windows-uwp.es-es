@@ -4,22 +4,30 @@ Description: "Puedes promocionar tu aplicación o complemento en la Tienda Windo
 title: Poner aplicaciones y complementos en oferta
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/21/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 7c88e927a88dbef928deedd6f92b2aa7b60da1cf
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d17394808232aeffbe81404427e668fb9c06e677
+ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Poner aplicaciones y complementos en oferta
 
-Puedes promocionar tu aplicación o complemento en la Tienda Windows al ponerlos en oferta durante un tiempo limitado.
+Puedes promocionar tu aplicación o complemento en la Tienda Windows al ponerlos en oferta durante un tiempo limitado. Puedes elegir ofrecer el producto en una franja de precios inferior o con un descuento basados en porcentajes.
 
-Cuando programes una oferta para reducir temporalmente el precio de tu aplicación o complemento, los clientes que consulten la descripción de la Tienda verán que el precio ha bajado y podrán comprarlos al precio reducido durante el período que hayas seleccionado. Si reduces el precio a **Gratis**, podrán descargarla sin pagar nada durante el periodo de oferta.
+Cuando usas la sección **Precio de oferta** de la página **Precios y disponibilidad** de un envío para reducir temporalmente el precio de la aplicación o complemento, los clientes que consulten la descripción de la Tienda verán el precio tachado, lo que indica que se ha reducido el precio (a diferencia de un [cambio de precio programado](set-and-schedule-app-pricing.md#schedule-price-changes), que puede aumentar o disminuir el precio sin que se muestre como un cambio en la Tienda). 
 
-> **Nota**  El precio de oferta solo se muestra a tus clientes de Windows 10. En otros sistemas operativos, los clientes verán el precio normal de la aplicación o el complemento. Siempre puedes cambiar un precio eligiendo una franja de precios diferente en un nuevo envío, pero no se mostrará como una oferta por tiempo limitado.
+Durante el período de tiempo que tu producto esté rebajado, los clientes podrán comprarlo a un precio inferior durante el período de tiempo seleccionado. Si reduces el precio a **Gratis**, podrán descargarlo sin pagar nada durante el periodo de oferta.
+
+> [!NOTE]
+> El precio de oferta solo se muestra a tus clientes con dispositivos Windows 10, incluida la Xbox One. Las ofertas ofrecidas a los propietarios de uno de tus otros productos solo se mostrarán a los clientes con dispositivos Windows10, versión 1607 o posterior.
+> 
+> En otros sistemas operativos, los clientes verán el precio normal de la aplicación o el complemento y no podrán adquirirlos al precio de oferta. Siempre puedes cambiar un precio eligiendo una franja de precios diferente en un nuevo envío, pero no se mostrará como una oferta por tiempo limitado.
+
 
 ## <a name="scheduling-a-sale"></a>Programar una oferta
 
@@ -27,45 +35,55 @@ Las ofertas se programan como parte del envío de una aplicación o un complemen
 
 **Para programar una oferta**
 
-1.  En la página **Precios y disponibilidad** de un envío en curso de una aplicación o un complemento, ve a la sección **Precio de oferta**.
-2.  Haz clic en **Nueva oferta**.
-3.  Escribe la fecha y la hora del inicio y final del período de oferta. Las horas se muestran en hora UTC.
+1. En la página **Precios y disponibilidad** de un envío en curso de una aplicación o un complemento, ve a la sección **Precio de oferta**.
+2. Selecciona **Mostrar opciones** y, a continuación, selecciona **Nueva oferta**.
+3. La ventana emergente **Selección de mercado** aparecerá y te permitirá crear un *grupo mercado* que especificará los mercados en los que se debe ofrecer la oferta. Puedes hacer clic en **Seleccionar todo** para ofrecer la oferta en todos los mercados en los que la aplicación esté disponible, seleccionar un mercado individual o varios mercados. De manera opcional, puedes escribir un nombre para tu grupo de mercado. Cuando hayas realizado tu selección, haz clic en **Crear**. (Para modificar los mercados en el grupo más adelante, haz clic en el nombre).
 
-   > **Nota**  Para los complementos, no puedes programar ofertas que se superpongan entre sí.
+   > [!NOTE]
+   > Las selecciones de mercado que realices en la sección Precio de oferta no afectarán a los mercados en los que se ofrece la aplicación. Estas selecciones solo determinan si se ofrece un precio de oferta y en qué mercados. Si estableces un precio de oferta para un mercado en el que la aplicación no está disponible, esto no hará que la aplicación esté disponible en ese mercado.
+4. Elige una de las siguientes opciones para especificar el tipo de descuento:
+   - **Precio**: Usa esta opción para seleccionar una franja de precios más bajos a los que se ofrecerá la aplicación. Puedes cambiar la moneda de la lista desplegable para seleccionar el precio en la moneda que prefieras. (El precio se convertirá en el nivel correspondiente para cada moneda. Para obtener información, consulta [Precio](set-app-pricing-and-availability.md)).
+   - **Porcentaje**: Usa esta opción para seleccionar el porcentaje del descuento que se aplicará a la aplicación. El mismo porcentaje de descuento se usa para todas las monedas.
+5. En la fila **Se ofrece a**, elige una de las opciones disponibles, entre las que se incluyen:
+   - **Todos los usuarios**: la oferta se ofrecerá a todos los clientes.
+   - **Los propietarios de**: la oferta se ofrecerá a los clientes que ya poseen una de las aplicaciones. Puedes seleccionar entre tus aplicaciones publicadas en la lista desplegable que aparecerá. Debes tener una o más aplicaciones publicadas para que esta opción esté disponible.
 
-4.  Elige el precio de oferta en la lista desplegable. Puedes elegir cualquier precio, incluido **Gratis**.
-5.  Si quieres especificar precios personalizados para esta oferta, haz clic en **Mostrar las opciones de precio de mercado personalizadas**. Puedes establecer precios de oferta personalizados por mercado (o excluir mercados específicos de la oferta) aquí. Para más información, consulta [Definir la selección de precios y mercados](define-pricing-and-market-selection.md).
+  > [!IMPORTANT]
+  > Si seleccionas **Los propietarios de**, la oferta solo estará visible para los clientes de Windows10, versión 1607 o posterior.
 
-    > **Nota**  Las selecciones de mercado que realices en la sección **Precio de oferta** no afectarán a los mercados en los que se ofrece la aplicación. Estas selecciones solo determinan si se ofrece un precio de oferta y en qué mercados. Si estableces un precio de oferta para un mercado en el que la aplicación no está disponible, esto no hará que la aplicación esté disponible en ese mercado.
+   - **Grupo de usuarios conocido**: la oferta se ofrecerá a las personas en el [grupo de usuarios conocido](create-known-user-groups.md) que selecciones. Debes haber creado el grupo de usuarios conocido para que esta opción esté disponible.
+   - **Segmento**: la oferta se ofrecerá a las personas en el segmento de clientes que selecciones. Puedes usar un [segmento que ya has creado](create-customer-segments.md) aquí. También puedes elegir **Comprador por primera vez** para ofrecer la venta solo a los clientes que nunca hayan comprado nada en la Tienda. Ofrecemos este segmento aquí porque nos dimos cuenta que una vez que un cliente realiza su primera compra en la Tienda, sigue realizando más, así que este puede ser un buen grupo para tentar con un precio de oferta.
+6. Escribe la fecha y la hora del inicio y final del período de oferta. Elige una de las siguientes opciones de zonas horarias:
+   - **UTC**: El tiempo que selecciones será el Horario universal coordinado (UTC), para que la oferta se produzca al mismo tiempo en todos los lugares.
+   - **Local**: El tiempo que selecciones se usará en cada zona horaria asociada con un mercado. (Ten en cuenta para los mercados que tengan más de una zona horaria, se usará solo una zona horaria para ese mercado. Para los Estados Unidos, se usará la zona horario del Este).
+7. Para programar una venta adicional, selecciona **Nueva oferta**. En caso contrario, haz clic en **Guardar** en la parte inferior de la página **Precios y disponibilidad** y, después, selecciona **Enviar a la Tienda** en el resumen del envío.
 
-6.  Haz clic en **Listo** para guardar la oferta programada.
-7.  Haz clic en **Guardar** en la parte inferior de la página **Precios y disponibilidad** y, después, haz clic en **Enviar a la Tienda** en el resumen del envío.
+> [!NOTE]
+> Es posible seleccionar una franja de precios mayor que el precio base de la aplicación. Sin embargo, el precio de oferta solo se mostrará a los clientes si es inferior al precio normal de la aplicación en ese mercado.
 
-> **Nota**  Es posible seleccionar una franja de precios mayor que el precio base de la aplicación. Sin embargo, el precio de oferta solo se mostrará a los clientes si es inferior al precio normal de la aplicación en ese mercado. Seleccionar un precio de oferta mayor que el precio base de la aplicación puede ser apropiado si ya has establecido en determinados mercados precios personalizados que superan el precio base y quieres reducir temporalmente el precio en dichos mercados (siendo el precio de venta todavía mayor que el precio base de la aplicación). Si tus selecciones resultan en que el precio de la aplicación aumente en un mercado concreto, dicho precio (superior) no se mostrará en ese mercado: los clientes seguirán viendo la aplicación con su precio anterior (inferior). También se mostrará a los clientes el menor precio disponible si programas distintas ofertas superpuestas con diferentes precios.
+> Seleccionar un precio de oferta mayor que el precio base de la aplicación puede ser apropiado si ya has establecido en determinados mercados precios personalizados que superan el precio base y quieres reducir temporalmente el precio en dichos mercados (siendo el precio de venta todavía mayor que el precio base de la aplicación). Si tus selecciones resultan en que el precio de la aplicación aumente en un mercado concreto, dicho precio (superior) no se mostrará en ese mercado: los clientes seguirán viendo la aplicación con su precio anterior (inferior). También se mostrará a los clientes el menor precio disponible si programas distintas ofertas superpuestas con diferentes precios.
 
 ## <a name="changing-or-canceling-a-scheduled-sale"></a>Cambiar o cancelar una oferta programada
-
 
 Para revisar o cancelar una oferta previamente programada para una aplicación o un complemento, debes crear y realizar un nuevo envío para la Tienda.
 
 **Para editar una oferta programada**
 
 1.  En la página **Precios y disponibilidad** de un envío en curso de una aplicación o un complemento, ve a la sección **Precio de oferta**.
-2.  Busca la oferta que quieres actualizar y haz clic en su precio para editarla.
-3.  Realiza los cambios y luego haz clic en **Listo**.
-4.  Haz clic en **Guardar** en la parte inferior de la página **Precios y disponibilidad** y, después, haz clic en **Enviar a la Tienda** en el resumen del envío.
-
-Cuando el envío supere el proceso de certificación, los cambios surtirán efecto (aunque la oferta ya haya comenzado).
-
-> **Sugerencia**  Para volver a usar una oferta completada en un nuevo envío, puedes editar sus fechas de inicio y fin. Esto es especialmente útil si configuraste una oferta con precios complicados de mercado personalizado.
- 
-**Para cancelar una oferta programada**
-
-1.  En la página **Precios y disponibilidad** de un envío en curso de una aplicación o un complemento, ve a la sección **Precio de oferta**.
-2.  Encuentra la oferta que quieres cancelar y haz clic en **Eliminar** para quitarla.
+2.  Encuentra la oferta que quieras actualizar y, luego, realiza los cambios.
 3.  Haz clic en **Guardar** en la parte inferior de la página **Precios y disponibilidad** y, después, haz clic en **Enviar a la Tienda** en el resumen del envío.
 
-Si la oferta no ha comenzado en el momento de completarse el proceso de certificación, nunca llegará a entrar en efecto. Si eliminas una oferta que ya ha finalizado, simplemente se quitará de tu página **Precios y disponibilidad**.
+Cuando el envío supere el proceso de certificación, los cambios surtirán efecto.
 
-> **Importante**  Dado que los clientes pueden ver la fecha de finalización programada en la descripción de la Tienda que se muestra la aplicación, no es recomendable eliminar una oferta una vez iniciada. Si eliminas una oferta que ya está en curso, terminará cuando el envío complete el proceso de certificación, lo que puede resultar frustrante para los clientes potenciales.
+> [!IMPORTANT]
+> Si ya ha iniciado una oferta, no podrás editar la fecha de inicio. Aunque puedes editar la fecha de finalización, te recomendamos que no edites una oferta para que finalice antes de su fecha final original. Puede resultar frustrante para los clientes potenciales si finalizas una oferta antes de la fecha en que se publicó originalmente (dado que los clientes verán la fecha de finalización programada al ver descripción de la aplicación en la Tienda).
+
+ **Cancelar una oferta que no se ha iniciado todavía**
+
+1.  En la página **Precios y disponibilidad** de un envío en curso de una aplicación o un complemento, ve a la sección **Precio de oferta**.
+2.  Encuentra la oferta que quieres cancelar y haz clic en **Eliminar**.
+3.  Haz clic en **Guardar** en la parte inferior de la página **Precios y disponibilidad** y, después, haz clic en **Enviar a la Tienda** en el resumen del envío. Si la oferta no ha comenzado en el momento en el que el nuevo envío complete el proceso de certificación, la oferta eliminada no llegará a entrar en efecto.
+
+
+
 

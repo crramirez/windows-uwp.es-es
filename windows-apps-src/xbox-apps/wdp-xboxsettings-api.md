@@ -1,5 +1,5 @@
 ---
-author: payzer
+author: m-stahl
 title: "Referencia de API de configuración de desarrollador de Xbox de Device Portal"
 description: "Obtén información sobre cómo tener acceso a la configuración de desarrollador de Xbox."
 ms.author: wdg-dev-content
@@ -9,9 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
-ms.openlocfilehash: 43e4bb289d12439bbc0f6de347d187b067288d51
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: dfde4c45a4aa5a520e0aa98cd7f31f7d84854e08
+ms.sourcegitcommit: 0e44f197e7e649d542ec3f67cd790a61dbe1226f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/07/2017
 ---
 # <a name="developer-settings-api-reference"></a>Referencia de API de la configuración de desarrollador   
 Puede obtener acceso a la configuración de Xbox One que es útil para desarrollar mediante esta API.
@@ -39,12 +41,20 @@ GET | /ext/settings
 - Ninguno
 
 **Respuesta**   
-La respuesta es una matriz JSON de configuración que contiene toda la configuración. Cada objeto de configuración contiene estos campos:   
+La respuesta es una matriz JSON de configuración que contiene toda la configuración. Cada objeto de configuración contiene estos campos:
 
-Nombre: (cadena) el nombre de la opción de configuración.   
-Valor: (cadena) el valor de la opción de configuración.   
+Nombre: (cadena) el nombre de la opción de configuración.
+Valor: (cadena) el valor de la opción de configuración.
 RequiresReboot - ("Sí" | "No") Este campo indica si es necesario un reinicio para que la configuración surta efecto.
-Categoría: (cadena) la categoría de la opción de configuración
+Disabled: ("Yes" | "No") este campo indica si la configuración está deshabilitada y no puede editarse.
+Category: (cadena) la categoría de la opción de configuración.
+Type: ("Text" | "Number" | "Bool" | "Select") este campo indica de qué tipo es un valor: entrada de texto, un valor booleano ("true" o "false"), un número con un mínimo y un máximo, o si se selecciona de una lista específica de valores.
+
+Si la configuración es Number > Min: (número) este campo indica el valor numérico mínimo de la configuración.
+Max: (número) este campo indica el valor numérico máximo de la configuración.
+
+Si la configuración es Select > OptionsVariable - ("Yes" | "No") este campo indica si las opciones de configuración son variables, si las opciones válidas pueden cambiar sin un reinicio.
+Options: matriz JSON que contiene la las opciones válidas de selección como cadenas.
 
 **Código de estado**
 
@@ -80,12 +90,20 @@ GET | /ext/settings/\<setting name\>
 - Ninguno
 
 **Respuesta**   
-La respuesta es un objeto JSON con los siguientes campos:   
+La respuesta es un objeto JSON con los siguientes campos:
 
-Nombre: (cadena) el nombre de la opción de configuración.   
-Valor: (cadena) el valor de la opción de configuración.   
-RequiresReboot - ("Sí" | "No") Este campo indica si es necesario un reinicio para que la configuración surta efecto.
-Categoría: (cadena) la categoría de la opción de configuración
+Nombre: (cadena) el nombre de la opción de configuración.
+Valor: (cadena) el valor de la opción de configuración.
+RequiresReboot: ("Yes" | "No") este campo indica si es necesario un reinicio para que la configuración surta efecto.
+Disabled: ("Yes" | "No") este campo indica si la configuración está deshabilitada y no puede editarse.
+Category: (cadena) la categoría de la opción de configuración.
+Type: ("Text" | "Number" | "Bool" | "Select") este campo indica de qué tipo es un valor: entrada de texto, un valor booleano ("true" o "false"), un número con un mínimo y un máximo, o si se selecciona de una lista específica de valores.
+
+Si la configuración es Number > Min: (número) este campo indica el valor numérico mínimo de la configuración.
+Max: (número) este campo indica el valor numérico máximo de la configuración.
+
+Si la configuración es Select > OptionsVariable - ("Yes" | "No") este campo indica si las opciones de configuración son variables, si las opciones válidas pueden cambiar sin un reinicio.
+Options: matriz JSON que contiene la las opciones válidas de selección como cadenas.
 
 **Código de estado**
 
@@ -138,4 +156,3 @@ Código de estado HTTP      | Descripción
 **Familias de dispositivos disponibles**
 
 * Windows Xbox
-

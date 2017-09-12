@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f0cf9d2928c8d6a0494092643daa19d9b437d3eb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8679dfd073a3b756e37059a5b0bf35cc6b000e6a
+ms.sourcegitcommit: bfa61aae632cca0c68dbfb0168424d38fd607f84
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>Crear, editar y guardar imágenes de mapa de bits
 
@@ -118,7 +120,7 @@ La clase **SoftwareBitmap** proporciona el método estático [**Convert**](https
 
 ## <a name="transcode-an-image-file"></a>Transcodificar un archivo de imagen
 
-Puedes transcodificar un archivo de imagen directamente desde un elemento [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) a un elemento [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206). Crear un elemento [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) desde el archivo que se va a transcodificar. Crea un nuevo objeto **BitmapDecoder** desde el flujo de entrada. Crea un nuevo elemento [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720) para el codificador en el que se va a escribir y llama a [**BitmapEncoder.CreateForTranscodingAsync**](https://msdn.microsoft.com/library/windows/apps/br226214) pasándole el flujo en memoria y el objeto descodificador. Establece las propiedades de codificación que quieras. Las propiedades del archivo de imagen de entrada que no se establecieron específicamente en el codificador se escribirán sin cambios en el archivo de salida. Llama a [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br226216) para que el codificador codifique en el flujo en memoria. Por último, busca la secuencia de archivos y la secuencia en memoria al principio y llama a [**CopyAsync**](https://msdn.microsoft.com/library/windows/apps/hh701827) para escribir la secuencia en memoria en la secuencia de archivos.
+Puedes transcodificar un archivo de imagen directamente desde un elemento [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) a un elemento [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206). Crear un elemento [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) desde el archivo que se va a transcodificar. Crea un nuevo objeto **BitmapDecoder** desde el flujo de entrada. Crea un nuevo elemento [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720) para el codificador en el que se va a escribir y llama a [**BitmapEncoder.CreateForTranscodingAsync**](https://msdn.microsoft.com/library/windows/apps/br226214) pasándole el flujo en memoria y el objeto descodificador. Las opciones de codificación no son compatibles al realizar la operación de transcodificación; en su lugar deberías usar [**CreateAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.imaging.bitmapencoder#Windows_Graphics_Imaging_BitmapEncoder_CreateAsync_System_Guid_Windows_Storage_Streams_IRandomAccessStream_Windows_Foundation_Collections_IIterable_Windows_Foundation_Collections_IKeyValuePair_System_String_Windows_Graphics_Imaging_BitmapTypedValue___). Las propiedades del archivo de imagen de entrada que no se establecieron específicamente en el codificador se escribirán sin cambios en el archivo de salida. Llama a [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br226216) para que el codificador codifique en el flujo en memoria. Por último, busca la secuencia de archivos y la secuencia en memoria al principio y llama a [**CopyAsync**](https://msdn.microsoft.com/library/windows/apps/hh701827) para escribir la secuencia en memoria en la secuencia de archivos.
 
 [!code-cs[TranscodeImageFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetTranscodeImageFile)]
 

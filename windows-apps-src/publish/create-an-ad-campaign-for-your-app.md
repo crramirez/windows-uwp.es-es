@@ -1,17 +1,19 @@
 ---
-author: shawjohn
+author: JnHs
 Description: "Puedes crear una campaña publicitaria con el panel del Centro de desarrollo para ayudar a promover tu aplicación y cultivar tu base de usuarios."
-title: "Crear una campaña publicitaria para tu aplicación: desarrollar aplicaciones para la UWP"
+title: "Crear una campaña publicitaria para la aplicación"
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
-ms.author: johnshaw
-ms.date: 02/08/2017
+ms.author: wdg-dev-content
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, anuncio, campaña, promover"
-ms.openlocfilehash: c23dd0769807a323a82c5da8fa3ed9c340a8aadb
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 04074261b7efd38f0309f08910e4ee1350302e4c
+ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/22/2017
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para la aplicación
 
@@ -24,90 +26,83 @@ Puedes crear campañas de anuncios solo para las aplicaciones que hayan pasado a
 
 ## <a name="instructions"></a>Instrucciones
 
-Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocionar tu aplicación.
+Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocionar una aplicación.
 
-1.  En el menú de navegación izquierdo de la página de la aplicación, en el panel del Centro de desarrollo, haz clic en **Monetización** &gt; **Promoción de la aplicación**.
-2.  Realiza una de las acciones siguientes:
-
-    -   Si aún no creaste ninguna campaña publicitaria para esta aplicación, la página **Promocionar la aplicación** mostrará información sobre las ventajas de las campañas publicitarias. Haz clic en **Introducción** o **Crear campañas publicitarias**.
-    -   Si ya creaste una campaña publicitaria para esta aplicación, la página **Promocionar la aplicación** mostrará una lista de tus campañas publicitarias existentes. Haz clic en **Nueva campaña**.
-3.  En la página **Nueva campaña**, en la sección **Campaign objective**, elige una de estas acciones:
+1.  En el menú de navegación izquierdo del panel de información, expande **Atraer** y luego selecciona **Campañas de anuncios**.
+2.  Selecciona **Crear campaña** (o si has creado campañas anteriormente, selecciona **Nueva campaña**).
+3.  En la página siguiente, en la sección **Tipo de objetivo**, elige una de las siguientes opciones:
     -   **Incrementar las instalaciones de la aplicación**. Selecciona esta opción si la campaña publicitaria está destinada a conseguir que haya personas que instalen tu aplicación.
     -   **Incrementar el compromiso con la aplicación**. Selecciona esta opción si la campaña publicitaria pretende conseguir que tus clientes aumenten el uso que hacen de la aplicación. Si seleccionas esta opción, puedes dirigir la campaña publicitaria a [segmentos de clientes](create-customer-segments.md) específicos que definas.
 
-4.  En la sección **Detalles de campaña**, define la configuración global de tu campaña.
-    -   Asigna un nombre a la campaña publicitaria en el campo **Nombre de la campaña**.
-    -   En **Tipo de campaña**, elige una de estas opciones:
-        -   **De pago**: estos anuncios se ejecutarán en cualquier aplicación que coincida con el dispositivo y la categoría de la aplicación. Para las campañas nuevas creadas a partir del 9 de enero de 2017, estos anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft. Las campañas de promoción de aplicaciones dirigidas a aplicaciones y propiedades premium de Microsoft se conocen como campañas *universales*.
-        -   **De la comunidad (gratuita)**: esta publicidad se ejecutará en aplicaciones publicadas por otros desarrolladores que también crean campañas de anuncios de la comunidad. Para poder seleccionar esta opción, primero debes activar la casilla **Mostrar anuncios de la comunidad en mi aplicación** en la página del panel **Monetizar con anuncios**. Para obtener más información, consulta [Acerca de la publicidad de la comunidad](about-community-ads.md).
-        -   **Interna (gratuita)**: esta publicidad solo se ejecutará en tus aplicaciones (que coincidan con el dispositivo de la aplicación anunciado). La publicidad interna es gratuita. Para obtener más información, consulta [Acerca de los anuncios internos](about-house-ads.md).
-    -   En **Campaign duration**, elige una de estas opciones:
-        - **Custom**. Si eliges esta opción, el presupuesto de tu campaña se gastará durante el intervalo de fecha y hora que especifiques. Esta opción solo está disponible para los desarrolladores que tengan una cuenta premium. Para obtener información sobre las cuentas premium, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign).
-        - **Mensualmente**. Si eliges esta opción, el presupuesto de tu campaña se gastará cada mes de forma periódica, hasta que detengas la campaña.
+4.  Selecciona la aplicación que quieras promocionar con esta campaña. Ten en cuenta que la aplicación ya debe estar disponible en la Tienda.
+5.  Revisa el nombre proporcionado para la campaña en el campo **Nombre de la campaña** y realiza cambios, si lo deseas.
+6.  En **Tipo de campaña**, elige una de estas opciones:
+        -   **Anuncio pagado**: estos anuncios se ejecutarán en cualquier aplicación que coincida con el dispositivo y la categoría de la aplicación. Para las campañas nuevas creadas a partir del 9 de enero de 2017, estos anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft. Las campañas de promoción de aplicaciones dirigidas a aplicaciones y propiedades premium de Microsoft se conocen como campañas *universales*.
+        -   **Anuncio de la comunidad (gratuito)**: estos anuncios se ejecutarán en aplicaciones publicadas por otros desarrolladores que también crean campañas publicitarias de la comunidad. Para poder seleccionar esta opción, debes optar por mostrar los anuncios de la comunidad en la página **Monetizar con anuncios** de tu aplicación. Para obtener más información, consulta [Acerca de los anuncios de la comunidad](about-community-ads.md).
+        -   **Anuncio interno (gratuito)**: estos anuncios solo se ejecutarán en tus aplicaciones (que coincidan con el tipo de dispositivo de la aplicación anunciada). Los anuncios internos son gratuitos. Para obtener más información, consulta [Acerca de los anuncios internos](about-house-ads.md).
 
-    > [!NOTE]
-    > Si la aplicación no se ha publicado aún, recibirás un mensaje de error en la página **Nueva campaña**. Debes esperar a que tu aplicación se publique antes de poder crear una campaña publicitaria para ella.
+7.  En el caso de campañas publicitarias de pago, confirma la opción **Campaign duration** (el período de tiempo en el que se gastará el presupuesto asignado a la campaña). La opción predeterminada es **Mensualmente**, lo que significa que el presupuesto asignado a la campaña se gastará cada mes de forma recurrente hasta que finalices la campaña. Si tienes una cuenta premium, puedes elegir la opción **Personalizado** para especificar un intervalo de fecha y hora durante el que se gastará el presupuesto asignado a la campaña. Para obtener información sobre las cuentas premium, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign).
 
-5.  Si eliges el objetivo de campaña **Incrementar las instalaciones de la aplicación**, definiremos los destinatarios de tus anuncios, en función de la configuración que hayas seleccionado al crear la aplicación en el panel del Centro de desarrollo. Si prefieres elegir tú mismo el público de tus anuncios, selecciona **Manual** para expandir la sección **Público**. Si quieres volver a los destinatarios predeterminados, selecciona **Automático**.
+8.  Confirma la información de presupuesto y pago. (Si vas a crear una campaña interna o de la comunidad, estas opciones no aparecerán, ya que estas campañas son gratuitas).
 
-    Si seleccionas **Manual**, puedes editar la siguiente información de identificación:
+    -   En **Presupuesto**, usa el control deslizante para establecer la cantidad de dinero que quieres gastar cada mes para mostrar el anuncio (o el presupuesto total, si has seleccionado una duración de campaña personalizada).
 
-    -   Elige los países o las regiones en que quieres que aparezcan estos anuncios. Puedes elegir hasta 5. Para obtener una lista de los países o regiones admitidos, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md#where-will-my-ad-appear).
-    -   Elige los tipos de dispositivos en los que quieres que aparezcan estos anuncios. Solo se muestran los tipos de dispositivo admitidos por la aplicación.
-    -   Elige las superficies en las que quieres que aparezcan estos anuncios. Si eliges **Universal**, tus anuncios aparecerán en aplicaciones, además de MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
-    -   Elige el sistema operativo. Solo se muestran los sistemas operativos admitidos por la aplicación.
-    -   Selecciona el sexo y el intervalo de edad de la audiencia deseada.
+        El presupuesto mensual se prorratea el mes en el que se crea la campaña publicitaria. En otras palabras, si creas una campaña publicitaria a mitad de un mes natural, se te cobrará la mitad del presupuesto mensual para ese mes.
 
-    Esta sección también muestra un gráfico de **Alcance estimado**. Este gráfico muestra el público al que puedes llegar con tus selecciones actuales de destinatarios como un porcentaje de todos los usuarios de aplicaciones habilitadas para anuncios de Windows en los mercados seleccionados.
+    -   Especifica un método de pago para la campaña publicitaria haciendo clic en **Agregar nuevo método de pago** y rellena los detalles de la cuenta. Si ya dispones de un instrumento de pago, puedes seleccionar **Elige otro método de pago** si necesitas actualizarlo. El país o la región de la dirección de facturación del método de pago debe coincidir con el país o la región asociado a tu cuenta del Centro de desarrollo.
 
-6.  Si elegiste el objetivo de campaña **Incrementar el compromiso con la aplicación**, puedes seleccionar uno de los segmentos de clientes como destino.
+    -   Si has recibido un cupón de un representante de Microsoft para pagar una campaña publicitaria, haz clic en **Utilizar un cupón**, escribe el código del cupón y haz clic en **Aplicar** para aplicar el cupón a la campaña.
+
+ Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Audiencia**. (Este paso no está disponible para las campañas de anuncios internos, ya que solo se ejecutan en tus propias aplicaciones).
+
+9.  En la página **Audiencia**, mostraremos la configuración de audiencia que recomendamos para la campaña. También puedes ajustar esta información:
+
+    -   **Países/regiones**: elige hasta 5 países o regiones en los que quieras que aparezca tu anuncio. Para obtener una lista de los países o regiones admitidos, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md#where-will-my-ad-appear).
+    -   **Dispositivos**: elige los tipos de dispositivos en los que quieres que aparezcan estos anuncios. Solo se muestran los tipos de dispositivo admitidos por la aplicación.
+    -   **Surface**: elige **Universal** para que tus anuncios aparezcan en aplicaciones, además de en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft. Elige **Aplicación** si solo quieres que tu anuncio aparezca en las aplicaciones.
+    -   **Sistema operativo**: elige los sistemas operativos en los que debe aparecer el anuncio. Solo se muestran los sistemas operativos admitidos por la aplicación.
+    -   **Sexo**: elige esta opción si deseas restringir la audiencia de tu anuncio por sexo.
+    -   **Intervalo de edad**: selecciona el intervalo de edad de la audiencia que desees.
+
+    Esta sección también muestra un gráfico de **Alcance estimado**. Este gráfico muestra la audiencia a la que puedes esperar llegar con tus selecciones actuales de destinatarios como un porcentaje de todos los usuarios de aplicaciones habilitadas para anuncios de Windows en los mercados seleccionados.
+
+9.  Si elegiste el objetivo de campaña **Incrementar el compromiso con la aplicación**, puedes seleccionar uno de los segmentos de clientes como destino.
 
     > [!NOTE]
     > Los anuncios creados con esta campaña solo se mostrarán a los clientes que estén incluidos en el segmento. Solo se puede seleccionar un segmento por campaña publicitaria. Para información sobre los segmentos, consulta [Crear segmentos de clientes](create-customer-segments.md).
 
-7.  En la sección **Diseño de anuncios**, elige una de estas opciones:
-    -   **Personalizado**. Elige esta opción para usar tus propios diseños de anuncio. Ten en cuenta que si has seleccionado un segmento de clientes en el paso 6, debes usar creativos personalizados. Puedes cargar distintos archivos para cada uno de los tamaños de anuncio disponibles. Los archivos deben cumplir los siguientes requisitos y directrices:
+ Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Diseño de anuncios**. (Este paso no está disponible para las campañas de anuncios internos, ya que solo se ejecutan en tus propias aplicaciones).
+
+10.  En la página **Diseño de anuncios**, elige una de estas opciones:
+    -   **Anuncio generado automáticamente**. Esta es la opción predeterminada, que te permite crear un anuncio a partir de nuestras plantillas predeterminadas. Puedes realizar selecciones para personalizar el contenido de tu anuncio y obtendremos una vista previa del aspecto de tu anuncio según tus elecciones (se actualiza automáticamente a medida que realizas las selecciones).
+        -   En el menú desplegable **Idioma**, selecciona el idioma para el anuncio. El texto del distintivo de la Tienda Windows aparecerá en el idioma que selecciones.
+        -   Para agregar una línea de texto adicional al anuncio, escribe el texto en el campo **Lema personalizado**.
+            > [!NOTE]
+            > El texto que escribas aquí debe estar localizado en el idioma seleccionado. El lema personalizado se rechazará si el texto no cumple las [Directivas de Bing Ads](http://go.microsoft.com/fwlink?LinkId=398341). Consulta esta página para obtener instrucciones sobre el estilo y sobre el contenido no permitido.
+
+        -   Para personalizar aún más el anuncio, expande **Personalizar el diseño del anuncio/ver los tamaños de los anuncios** y elige una de estas opciones:
+            - **Color de fondo**. Elige entre las opciones disponibles.
+            - **Imágenes**. Elige una de las imágenes disponibles (tomadas de la descripción de la Tienda de la aplicación).
+            - **Mostrar clasificación de mi aplicación**. Selecciona esta casilla si quieres mostrar la clasificación de la aplicación.
+            - **Mostrar que mi aplicación es gratuita**. Si la aplicación es gratuita en todos los mercados seleccionados, tienes la opción de seleccionar esta casilla.
+            - **Llamada a la acción**. Si elegiste **Incrementar el compromiso con la aplicación** como objetivo de la campaña, puedes establecer el botón de llamad a la acción de tu anuncio en **Abrir**, **Reproducir**, **Leer**, **Escuchar** o **Comprar**.  
+    -   **Personalizado**. Elige esta opción para usar tus propios diseños de anuncio. Ten en cuenta que si has seleccionado un segmento de clientes en el paso 9, debes usar creativos personalizados. Puedes cargar distintos archivos para cada uno de los tamaños de anuncio disponibles. Los archivos deben cumplir los siguientes requisitos y directrices:
         -   Cada archivo debe ser un .png o .jpg de 40 KB o menos.
         -   Los diseños de tus anuncios deben cumplir los requisitos especificados en la [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595).
         -   El contenido de los diseños de anuncio debe ser pertinente para la aplicación que promueves. Los diseños de anuncios que no están relacionados con la aplicación no se distribuirán a los anuncios de otras aplicaciones.
         -   Todo el contenido de los diseños de anuncio debe ser legible. Por ejemplo, el contenido no debe aparecer borroso, pixelado ni estirado.
-    -   **Anuncio generado automáticamente**. Elige esta opción para usar anuncios de una lista de plantillas predeterminadas. Tienes las siguientes opciones para personalizar el contenido de los anuncios. A medida que hagas selecciones, las vistas previas de los anuncios se actualizarán automáticamente.
-        -   En el menú desplegable **Idioma**, selecciona el idioma de los anuncios. El texto del distintivo de la TiendaWindows y el texto de lema personalizado (si se especifica) se mostrarán en el idioma que selecciones.
-        -   Para agregar una línea de texto adicional al anuncio, escribe el texto en el campo **Custom tag line**.
-            > [!NOTE]
-            > El texto que escribas debe estar localizado en el idioma seleccionado. El lema personalizado se rechazará si el texto no cumple las [Directivas de Bing Ads](http://go.microsoft.com/fwlink?LinkId=398341). Consulta esta página para obtener instrucciones sobre el estilo y sobre el contenido no permitido.
 
-        -   Para personalizar aún más el anuncio, expande **Personalizar el diseño del anuncio/ver los tamaños de los anuncios** y elige una de estas opciones:
-            - **Color de fondo**. Elige entre las opciones disponibles.
-            - **Imágenes**. Las imágenes disponibles son las imágenes que has asociado a la aplicación en la Tienda.
-            - **Mostrar clasificación de mi aplicación**. Selecciona esta casilla si quieres mostrar la clasificación de la aplicación.
-            - **Mostrar que mi aplicación es gratuita**. Si la aplicación es gratuita en todos los mercados seleccionados, también tendrás la opción de seleccionar esta casilla.
-            - **Llamada a la acción**. Si elegiste **Incrementar el compromiso con la aplicación** como objetivo de la campaña, puedes establecer el botón de llamad a la acción de tu anuncio en **Abrir**, **Reproducir**, **Leer**, **Escuchar** o **Comprar**.  
-
-8.  Si tienes una [cuenta premium](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign), puedes usar la casilla **Dirección URL de destino** para controlar lo que sucede cuando un cliente hace clic en el anuncio.
+11.  Si tienes una [cuenta premium](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign), puedes usar la casilla **Dirección URL de destino** para controlar lo que sucede cuando un cliente hace clic en el anuncio.
     - Si dejas la casilla vacía, cuando un cliente haga clic en el anuncio, se mostrará la descripción de la Tienda de la aplicación.
     - Si usas Kochava o Tune para medir el análisis de instalación de la aplicación, escribe la dirección URL de seguimiento de instalación desde Kochava o Tune. Al guardar la campaña, se valida la dirección URL de seguimiento para garantizar que se resuelve en la página de descripción de la aplicación de la Tienda Windows. Para obtener más información sobre el seguimiento de la instalación con Kochava y Tune, consulta la documentación de [Kochava](http://support.kochava.com/) y [Tune](https://help.tune.com/).
     - Si elegiste **Incrementar el compromiso con la aplicación** como objetivo de la campaña, puedes especificar un [vínculo profundo de URI](../launch-resume/handle-uri-activation.md) para redirigir a los clientes del segmento seleccionado a una página específica dentro de la aplicación.
     - Si especificas cualquier destino que no sea la página de descripción de la aplicación o una página dentro de la aplicación, la campaña se pondrá en pausa automáticamente.
 
-9.  Ahora elige la configuración financiera de la campaña publicitaria en la sección **Presupuesto y pago**.
-    > [!NOTE]
-    > Si vas a crear una campaña interna o de la comunidad, no aparecerá la sección **Presupuesto y pago**, ya que estas campañas son gratis.
-
-    -   En **Presupuesto**, usa el control deslizante para establecer la cantidad de dinero que quieres gastar cada mes para mostrar el anuncio.
-
-        El presupuesto mensual se prorratea el mes en el que se crea la campaña publicitaria. En otras palabras, si creas una campaña publicitaria a mitad de un mes natural, se te cobrará la mitad del presupuesto mensual para ese mes.
-
-    -   Establece un instrumento de pago de la campaña publicitaria haciendo clic en **Agregar nuevo instrumento de pago** y rellena los detalles de la cuenta.
-        > [!NOTE]
-        > El país o la región de la dirección de facturación de tu instrumento de pago debe coincidir con el país o la región asociado a tu cuenta del Centro de desarrollo.
-    -   Si has recibido un cupón de un representante de Microsoft para pagar una campaña publicitaria, haz clic en **Utilizar un cupón**, escribe el código del cupón y haz clic en **Aplicar** para aplicar el cupón a la campaña.
-
-10.  Por último, haz clic en **Revisar** para confirmar la configuración de la campaña publicitaria y, si es una campaña publicitaria de pago, la información de presupuesto y pago. Haz clic en **Confirmar** y tus anuncios empezarán a aparecer en dispositivos en pocas horas.
+13.  Por último, haz clic en **Revisar** para confirmar la configuración de la campaña publicitaria y, si es una campaña publicitaria de pago, la información de presupuesto y pago. Haz clic en **Confirmar** y tus anuncios empezarán a aparecer en dispositivos en pocas horas.
 
 ## <a name="review-ad-campaign-performance"></a>Revisar el rendimiento de una campaña publicitaria
 
-Para ver cómo se están comportando las campañas, en el menú de navegación superior del panel, selecciona **Promociones**. Selecciona **Filtros de sección** para definir el ámbito de lo que se incluye en el informe por **Fecha**, **Objetivo de la campaña**, **Nombre de la aplicación**, **Tipo de campaña** o **Estado**. Además de ver información sobre las **Impresiones**, **Clics**, **Conversiones** y **Gasto** de la campaña, puedes usar el informe para **Pausar** o **Reanudar** una campaña.
+Para ver el rendimiento de tus campañas, vuelve a la página **Campañas de anuncios**. Selecciona **Filtros de sección** para definir el ámbito de lo que se incluye en el informe por **Fecha**, **Objetivo de la campaña**, **Nombre de la aplicación**, **Tipo de campaña** o **Estado**. Además de ver información sobre las **Impresiones**, **Clics**, **Conversiones** y **Gasto** de la campaña, puedes usar el informe para **Pausar** o **Reanudar** una campaña. Para obtener más información, consulta el [Informe Campaña publicitaria](promote-your-app-report.md).
 
 Para editar una campaña, selecciona su nombre en la lista.
 

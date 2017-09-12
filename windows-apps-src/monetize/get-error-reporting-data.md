@@ -4,20 +4,22 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados del informe de errores de un intervalo de fechas y otros filtros opcionales."
 title: "Obtener datos de informes de errores para la aplicación"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, Windows 10, uwp, UWP, Store services, servicios de la Tienda, Windows Store analytics API, API de análisis de la Tienda Windows, errors, errores"
-ms.openlocfilehash: dc5c4092368c0b395e42be122a9e0e7feec8f03e
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: 68e54c955d865669907c68d7cf1ef5a0f8986d8d
+ms.sourcegitcommit: 7aabd2e59d45bbc5512dd4ddd9110ae62b79d552
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2017
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Obtener datos de informes de errores para la aplicación
 
 Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de informes de errores relativos a tu aplicación en formato JSON de un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en la sección **Errores** del [informe de estado](../publish/health-report.md) en el panel del Centro de desarrollo de Windows.
 
-Puedes recuperar información adicional sobre errores mediante los métodos para [obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md) y [obtener el seguimiento de la pila de un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md).
+Puedes recuperar información adicional de los errores con los métodos para [obtener los detalles de un error](get-details-for-an-error-in-your-app.md), [obtener el seguimiento de la pila](get-the-stack-trace-for-an-error-in-your-app.md) y [descargar archivo CAB](download-the-cab-file-for-an-error-in-your-app.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -168,8 +170,9 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Informe de estado](../publish/health-report.md)
 * [Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)
 * [Obtener el seguimiento de la pila de un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)
+* [Descargar el archivo .CAB para un error de la aplicación](download-the-cab-file-for-an-error-in-your-app.md)
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
 * [Obtener los datos de compra de la aplicación](get-app-acquisitions.md)
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
 * [Obtener la clasificación de la aplicación](get-app-ratings.md)
-* [Get app reviews (Obtener opiniones de la aplicación)](get-app-reviews.md)
+* [Obtener opiniones de la aplicación](get-app-reviews.md)

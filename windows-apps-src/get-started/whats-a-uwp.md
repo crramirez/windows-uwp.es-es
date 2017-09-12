@@ -3,15 +3,17 @@ author: GrantMeStrength
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
 title: "¿Qué es una aplicación para la Plataforma universal de Windows (UWP)?"
 description: "Obtén información sobre los distintos tipos de aplicaciones universales de Windows: aplicaciones de la Tienda Windows, aplicaciones de la Tienda de Windows Phone y aplicaciones de Windows Runtime."
-ms.author: susanw
+ms.author: jken
 ms.date: 03/22/2017
 ms.topic: article
 pms.prod: windows
 ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
-ms.openlocfilehash: 2afb5cbc74b381e85fa861562e7de57d877b0c7f
-ms.sourcegitcommit: 253ed634522773e15199084a6f74a3a465c2b218
-translationtype: HT
+keywords: windows 10, uwp
+ms.openlocfilehash: 3bbced2db33210952b6c8a45f98e36582330d7d9
+ms.sourcegitcommit: 214a1dcb24e0811811bd7a4a07bfe707ecd93b18
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>¿Qué es una aplicación para la Plataforma universal de Windows (UWP)?
 
@@ -103,4 +105,4 @@ Para información más detallada sobre UWP, lee la [Guía de aplicaciones de la 
 
 * [.NET Native - What it means for Universal Windows Platform (UWP) developers (.NET Native: qué supone para los desarrolladores de la Plataforma universal de Windows [UWP])](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
 * [Universal Windows apps in .NET (Aplicaciones universales de Windows en .NET)](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net)
-* [.NET para aplicaciones para UWP](https://msdn.microsoft.com/en-us/library/mt185501.aspx)
+* [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/mt185501.aspx)

@@ -3,21 +3,24 @@ title: Responder a los comentarios de los clientes
 description: Puedes responder directamente a los comentarios que los clientes dejan en el Centro de opiniones.
 author: JnHs
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
-ms.openlocfilehash: 8ce325c212b9f5aba11ab35f3cfcfeea9a44bcbe
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6b562064cbdbc1a539a2a65a33a6e11027923b21
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="respond-to-customer-feedback"></a>Responder a los comentarios de los clientes
 
 Puedes usar el [informe de comentarios](feedback-report.md) para revisar los comentarios que los clientes de Windows 10 dejaron sobre tu aplicación en el Centro de opiniones y luego responder directamente a los comentarios. Puedes publicar tus respuestas en el Centro de opiniones para que todos lo vean (como comentarios individuales o al actualizar el estado de un comentario y agregar una descripción), para indicar a los clientes sobre nuevas funciones o correcciones de errores o para pedir comentarios más específicos sobre cómo mejorar la aplicación. También puedes enviar tu respuesta por correo electrónico directamente al cliente que envió el comentario.
 
-> **Sugerencia** Puedes animar a los clientes a que dejen comentarios con la API de comentarios en el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para agregar un control que permite que los clientes [inicien el Centro de opiniones desde tu aplicación para UWP](../monetize/launch-feedback-hub-from-your-app.md) directamente. Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella directamente mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
+> [!TIP]
+> Puedes animar a los clientes a que dejen comentarios con la API de comentarios en el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para agregar un control que permite que los clientes [inicien el Centro de opiniones desde tu aplicación para UWP](../monetize/launch-feedback-hub-from-your-app.md) directamente. Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella directamente mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
 
 Para proporcionar una respuesta a cualquier comentario, haz clic en el vínculo **Responder a los comentarios** que aparece junto al comentario en tu **informe de comentarios**.
 
@@ -29,11 +32,13 @@ De manera predeterminada, el botón de radio de **Comentario** se selecciona des
 
 Se mostrará el comentario que hayas escrito como un comentario en el Centro de opiniones, junto con los comentarios enviados por otros clientes. Tu nombre de editor y nombre de la aplicación se mostrarán junto con tu comentario para identificarte como desarrollador. No hay ningún límite en el número de comentarios que puedes escribir para un comentario, pero ten en cuenta que no puedes editar ni eliminar comentarios después enviarlos. Los cinco comentarios más recientes a un comentario se mostrarán en tu **informe de comentarios** (también en el Centro de opiniones). Cuando hay más de cinco comentarios, puedes hacer clic en **Mostrar todos los comentarios** para verlos todos en el Centro de opiniones.
 
+
 ## <a name="private-responses-via-email"></a>Respuestas privadas por correo electrónico
 
 Si prefieres no publicar una respuesta pública, puedes activar la casilla **Enviar comentario como correo electrónico** para enviar una respuesta privada directamente al cliente (si se ha proporcionado una dirección de correo electrónico y no ha optado por no recibir respuestas por correo electrónico). Al hacerlo, Microsoft envía un correo electrónico al cliente en tu nombre. El correo electrónico contendrá los comentarios originales, así como la respuesta que escribas.
 
 Después de activar la casilla **Enviar comentario como correo electrónico**, escribe el comentario y, a continuación, haz clic en **Enviar**. Ten en cuenta que debes proporcionar una dirección de correo electrónico en el campo **Correo electrónico de contacto de soporte técnico** cuando uses esta opción. De manera predeterminada, usamos la dirección de correo electrónico que proporcionaste en la información de contacto de tu cuenta. Si prefieres usar una dirección de correo electrónico diferente, puedes actualizar el campo **Correo electrónico de contacto de soporte técnico** para usar uno diferente. El cliente que recibe la respuesta podrá responder directamente a esta dirección de correo electrónico.
+
 
 ## <a name="public-status-updates-and-descriptions-in-feedback-hub"></a>Actualizaciones de estado públicas y descripciones del Centro de opiniones
 
@@ -49,7 +54,9 @@ Junto con la actualización de estado, puedes escribir un comentario para propor
 
 Con la opción **Actualizar estado** puedes cambiar el estado cuando quieras (además de proporcionar descripciones actualizadas para cada cambio de estado). Siempre que cambie el estado de un comentario, se actualizará el estado en el Centro de opiniones para que los clientes que visualicen la respuesta vean el estado más reciente.
 
+
 ## <a name="guidelines-for-responses"></a>Orientación para las respuestas
+
 Independientemente del método que uses para responder a los comentarios de un cliente, debes seguir estas directrices para todas las respuestas.
 - Las respuestas no pueden tener más de 1000 caracteres.
 - No puedes ofrecer a los usuarios ningún tipo de compensación, incluidos productos de aplicaciones digitales, por sus comentarios públicos.
@@ -58,6 +65,7 @@ Independientemente del método que uses para responder a los comentarios de un c
 - La respuesta debe estar directamente relacionada con la aplicación y el comentario específicos.
 - No incluyas comentarios irreverentes, agresivos, personales ni maliciosos en tu respuesta. Sé siempre educado y recuerda que los clientes que estén contentos serán probablemente los mayores promotores de tu aplicación.
 
-> **Nota** Los clientes pueden notificar a Microsoft sobre la recepción de una respuesta inapropiada de un desarrollador a un comentario. Pueden también optar por no recibir las respuestas de los comentarios por correo electrónico.
+> [!NOTE]
+> Los clientes pueden notificar a Microsoft sobre la recepción de una respuesta inapropiada de un desarrollador a un comentario. Pueden también optar por no recibir las respuestas de los comentarios por correo electrónico.
 
 La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. No obstante, si crees que el contenido de los comentarios de un cliente sobre tu producto es inadecuado, envía una [incidencia de soporte técnico](http://go.microsoft.com/fwlink/p/?LinkID=401178).

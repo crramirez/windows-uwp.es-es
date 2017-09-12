@@ -9,13 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, Windows.ApplicationModel.Store"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 787007b870675749d96afa59a6e9cb5f3be68991
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 06ee6eba5e4dc2f13b1ca8f8555b0e29770d1ec8
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/09/2017
 ---
-
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store
 
 Puedes usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para agregar las funcionalidades de pruebas y compras desde la aplicación a tu aplicación para la Plataforma universal de Windows (UWP) con el fin de rentabilizar la aplicación y agregar nuevas funcionalidades. Estas API también proporcionan acceso a la información de licencia de la aplicación.
@@ -24,15 +23,15 @@ En los artículos de esta sección se ofrecen instrucciones detalladas y ejemplo
 
 Para obtener una muestra completa que demuestre cómo implementar pruebas y compras desde la aplicación con el espacio de nombres **Windows.ApplicationModel.Store**, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
 
->**Notas**&nbsp;&nbsp;
->
-> * Si la aplicación está destinada a Windows 10, versión 1607 o una versión posterior, se recomienda usar los miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en lugar de los de **Windows.ApplicationModel.Store**. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como los complementos de consumibles administrados por la Tienda, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y la Tienda. El espacio de nombres **Windows.Services.Store** también está diseñado para ofrecer un mejor rendimiento. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
-<br/><br/>
-> * El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop). Estas aplicaciones deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
+> [!NOTE]
+> Si la aplicación está destinada a Windows 10, versión 1607 o una versión posterior, se recomienda usar los miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en lugar de los de **Windows.ApplicationModel.Store**. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como los complementos de consumibles administrados por la Tienda, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y la Tienda. El espacio de nombres **Windows.Services.Store** también está diseñado para ofrecer un mejor rendimiento. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
+
+> [!NOTE]
+> El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop). Estas aplicaciones deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Introducción a las clases CurrentApp y CurrentAppSimulator
 
-El punto de entrada principal al espacio de nombres **Windows.ApplicationModel.Store** es la clase [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx). Esta clase proporciona propiedades y métodos estáticos que puedes usar para obtener información acerca de la aplicación actual y sus complementos disponibles (también conocidos como productos desde la aplicación o IAP), obtener información de licencia de la aplicación actual o sus complementos, comprar una aplicación o un complemento para el usuario actual y realizar otras tareas.
+El punto de entrada principal al espacio de nombres **Windows.ApplicationModel.Store** es la clase [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx). Esta clase proporciona métodos y propiedades estáticas que puedes usar para obtener información acerca de la aplicación actual y sus complementos disponibles, obtener información de licencia de la aplicación actual o sus complementos, comprar una aplicación o un complemento para el usuario actual y realizar otras tareas.
 
 La clase [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) obtiene los datos de la Tienda Windows, por lo que debes tener una cuenta de desarrollador y la aplicación debe publicarse en la Tienda antes de poder usar esta clase correctamente en la aplicación. Antes de enviar tu aplicación a la Tienda, puedes probar el código con una versión simulada de esta clase denominada [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx). Tras probar la aplicación y antes de enviarla a la Tienda Windows, debes reemplazar las instancias de **CurrentAppSimulator** por **CurrentApp**. La aplicación no conseguirá la certificación si usa **CurrentAppSimulator**.
 
@@ -44,9 +43,9 @@ Para obtener más información sobre las tareas comunes que puedes realizar con 
 |----------------------------|-----------------------------|
 | [Excluir o limitar las características de una versión de prueba](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba. |
 | [Habilitar compras de productos desde la aplicación](enable-in-app-product-purchases.md)      |  Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.  |
-| [Habilitar compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)      | Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar), a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas. |
+| [Habilitar compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)      | Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar) a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas. |
 | [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md)      |   Si tu aplicación ofrece un catálogo de productos de gran tamaño en la aplicación, también puedes seguir el proceso descrito en este tema para ayudar a administrar dicho catálogo.    |
-| [Usar recibos para comprobar compras de productos](use-receipts-to-verify-product-purchases.md)      |   Cada transacción de la Tienda Windows que tiene como resultado una compra de producto satisfactoria también puede devolver un recibo de transacción que proporcione información sobre el producto enumerado y el coste abonado por el cliente. El acceso a esta información resulta útil en aquellos casos en los que la aplicación debe comprobar que un usuario compró tu aplicación o ha realizado compras de productos desde la aplicación en la Tienda Windows. |
+| [Usar recibos para comprobar compras de productos](use-receipts-to-verify-product-purchases.md)      |   Cada transacción de la Tienda Windows que tiene como resultado una compra de producto satisfactoria también puede devolver un recibo de transacción que proporcione información sobre el producto enumerado y el coste abonado por el cliente. El acceso a esta información resulta útil en aquellos casos en los que la aplicación debe comprobar que un usuario compró tu aplicación o ha realizado compras de productos desde la aplicación en la TiendaWindows. |
 
 <span id="proxy" />
 ## <a name="using-the-windowsstoreproxyxml-file-with-currentappsimulator"></a>Uso del archivo WindowsStoreProxy.xml con CurrentAppSimulator
@@ -55,9 +54,10 @@ Cuando se usa **CurrentAppSimulator**, el estado inicial de la licencias y los p
 
 Se crea un archivo WindowsStoreProxy.xml de manera predeterminada en la siguiente ubicación: %Perfil_usuario%\AppData\Local\Packages\\&lt;carpeta del paquete de la aplicación&gt;\LocalState\Microsoft\Windows Store\ApiData. Puedes editar este archivo para definir el escenario que quieres simular las propiedades **CurrentAppSimulator**.
 
-Aunque se pueden modificar los valores de este archivo, te recomendamos que crees tu propio archivo WindowsStoreProxy.xml (en una carpeta de datos de tu proyecto de Visual Studio) para que **CurrentAppSimulator** lo use en su lugar. Al simular la transacción, llama a [ReloadSimulatorAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync.aspx) para cargar el archivo. Si no llamas a **ReloadSimulatorAsync** para cargar tu propio archivo WindowsStoreProxy.xml, **CurrentAppSimulator** creará o cargará (pero no sobrescribirá) el archivo WindowsStoreProxy.xml predeterminado.
+Aunque se pueden modificar los valores de este archivo, te recomendamos que crees tu propio archivo WindowsStoreProxy.xml (en una carpeta de datos de tu proyecto de Visual Studio) para que **CurrentAppSimulator** lo use en su lugar. Al simular la transacción, llama a [ReloadSimulatorAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync.aspx) para cargar el archivo. Si no llamas a **ReloadSimulatorAsync** para cargar tu propio archivo WindowsStoreProxy.xml, **CurrentAppSimulator** creará o cargará (pero no sobrescribirá) siempre el archivo WindowsStoreProxy.xml.
 
->**Nota:**&nbsp;&nbsp;Ten en cuenta que **CurrentAppSimulator** no se inicializa completamente hasta que se completa **ReloadSimulatorAsync**. Y, dado que **ReloadSimulatorAsync** es un método asincrónico, debe tenerse cuidado para evitar la condición de carrera de consultar **CurrentAppSimulator** en un subproceso mientras se inicializa en otro. Una técnica es usar una marca para indicar que la inicialización se ha completado. Debes usar una aplicación que se instale desde la Tienda Windows debe usar **CurrentApp** en lugar de **CurrentAppSimulator**, y en ese caso, no se llama a **ReloadSimulatorAsync** y, por tanto, la condición de carrera recién mencionada no se aplica. Por este motivo, diseña el código para que funcione en ambos casos, tanto de forma asincrónica como sincrónica.
+> [!NOTE]
+> Ten en cuenta que **CurrentAppSimulator** no se inicializa completamente hasta que se completa **ReloadSimulatorAsync**. Y, dado que **ReloadSimulatorAsync** es un método asincrónico, debe tenerse cuidado para evitar la condición de carrera de consultar **CurrentAppSimulator** en un subproceso mientras se inicializa en otro. Una técnica es usar una marca para indicar que la inicialización se ha completado. Debes usar una aplicación que se instale desde la Tienda Windows debe usar **CurrentApp** en lugar de **CurrentAppSimulator**, y en ese caso, no se llama a **ReloadSimulatorAsync** y, por tanto, la condición de carrera recién mencionada no se aplica. Por este motivo, diseña el código para que funcione en ambos casos, tanto de forma asincrónica como sincrónica.
 
 
 <span id="proxy-examples" />
@@ -459,7 +459,7 @@ Este elemento describe las licencias disponibles para esta aplicación y sus pro
 
 |  Elemento  |  Obligatorio  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
-|  [App](#app-child-of-licenseinformation)  |    Sí   |  1   |    Describe la licencia de la aplicación.         |
+|  [Aplicación](#app-child-of-licenseinformation)  |    Sí   |  1   |    Describe la licencia de la aplicación.         |
 |  [Product](#product-child-of-licenseinformation)  |    No  |  0 o más   |      Describe el estado de la licencia de un complemento duradero en la aplicación.         |   |
 
 La tabla siguiente muestra cómo simular algunas condiciones comunes mediante la combinación de valores que estén en los elementos **App** y **Product**.
@@ -544,4 +544,3 @@ Este elemento describe un complemento consumible. **Product** es un elemento sec
 |  **TransactionId**  |     Sí       |   Contiene un GUID (en forma de cadena) usado por la aplicación para realizar un seguimiento de la transacción de compra de un consumible por el proceso de suministro. Consulta [Habilita compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)            |
 |  **Status**  |      Sí      |  Contiene la cadena usada por la aplicación para indicar el estado de suministro de un consumible. Los valores pueden ser **Active**, **PurchaseReverted**, **PurchasePending** o **ServerError**.             |
 |  **OfferId**  |     No       |    Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el consumible. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
-

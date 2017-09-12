@@ -6,14 +6,19 @@ ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c5a34805941d72981f84a5d515e01d404fb30650
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+doc-status: Published
+ms.openlocfilehash: 8b901f6077b3f2eb765b53caf9bba188eae5ff0e
+ms.sourcegitcommit: 10f8dcf69d37cdb61562fc9f4d268ccb499c368f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/07/2017
 ---
 # <a name="semantic-zoom"></a>Zoom semántico
 
@@ -26,14 +31,7 @@ El zoom semántico permite que el usuario cambie entre dos vistas distintas del 
 
 Por ejemplo, al ver una libreta de direcciones, el usuario puede alejarse para pasar rápidamente a la letra "W" y ampliar para ver los nombres con esa letra. 
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Clase SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)</li>
-<li>[**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)</li>
-<li>[**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)</li>
-</ul>
-</div>
+> **API importantes**: [Clase SemanticZoom](https://msdn.microsoft.com/library/windows/apps/hh702601), [Clase ListView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx), [Clase GridView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)
 
 **Características**:
 
@@ -45,7 +43,7 @@ Por ejemplo, al ver una libreta de direcciones, el usuario puede alejarse para p
 
 Usa un control **SemanticZoom** si es necesario para mostrar un conjunto de datos agrupado lo suficientemente grande como para que no se pueda mostrar en una o dos páginas.
 
-No confundas el zoom semántico con el zoom óptico. Aunque comparten la misma interacción y el comportamiento básico (muestran más o menos detalle en función de un factor de zoom), el zoom óptico hace referencia al ajuste de ampliación de un área de contenido o un objeto, como una fotografía. Para obtener información sobre un control que aplique el zoom óptico, consulta el control [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx).
+No confundas el zoom semántico con el zoom óptico. Aunque comparten la misma interacción y el comportamiento básico (muestran más o menos detalle en función de un factor de zoom), el zoom óptico hace referencia al ajuste de ampliación de un área de contenido o un objeto, como una fotografía. Para obtener información sobre un control que aplique el zoom óptico, consulta el control [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx).
 
 ## <a name="examples"></a>Ejemplos
 
@@ -63,7 +61,7 @@ Una libreta de direcciones es otro ejemplo de un conjunto de datos por el que pu
 
 ## <a name="create-a-semantic-zoom"></a>Creación de un zoom semántico
 
-El control **SemanticZoom** no tiene una representación visual de sí mismo. Es un control de host que administra la transición entre otros 2 controles que proporcionan las vistas de tu contenido, normalmente los controles **ListView** o **GridView**.  Puedes establecer los controles de vista en las propiedades de [**ZoomedInView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx) y [**ZoomedOutView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx) del elemento SemanticZoom.
+El control **SemanticZoom** no tiene una representación visual de sí mismo. Es un control de host que administra la transición entre otros 2 controles que proporcionan las vistas de tu contenido, normalmente los controles **ListView** o **GridView**.  Puedes establecer los controles de vista en las propiedades de [ZoomedInView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx) y [ZoomedOutView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx) del elemento SemanticZoom.
 
 Los 3 elementos que necesitas para un zoom semántico son:
 - Un origen de datos agrupados
@@ -72,30 +70,28 @@ Los 3 elementos que necesitas para un zoom semántico son:
 
 Antes de usar el zoom semántico, debes saber cómo usar una vista de lista con los datos agrupados. Para obtener más información, consulta [Vista de lista y vista de cuadrícula](listview-and-gridview.md) y [Agrupación de elementos en una lista](). 
 
-> **Nota**&nbsp;&nbsp;Para definir la vista ampliada y la vista alejada del control SemanticZoom, puedes usar cualquiera de los dos controles que implementan la interfaz [**ISemanticZoomInformation**](). El marco XAML proporciona 3 controles que implementan esta interfaz: ListView, GridView y Hub.
+> **Nota**&nbsp;&nbsp;Para definir la vista ampliada y la vista alejada del control SemanticZoom, puedes usar cualquiera de los dos controles que implementan la interfaz [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx). El marco XAML proporciona 3 controles que implementan esta interfaz: ListView, GridView y Hub.
  
  Este XAML muestra la estructura del control SemanticZoom. Puedes asignar otros controles a las propiedades ZoomedOutView y ZoomedInView.
  
- **XAML**
  ```xaml
 <SemanticZoom>
     <SemanticZoom.ZoomedInView>
-        <!-- Put the GridView for the zoomed out view here. -->   
+        <!-- Put the GridView for the zoomed in view here. -->   
     </SemanticZoom.ZoomedInView>
 
     <SemanticZoom.ZoomedOutView>
-        <!-- Put the ListView for the zoomed in view here. -->       
+        <!-- Put the ListView for the zoomed out view here. -->       
     </SemanticZoom.ZoomedOutView>
 </SemanticZoom>
  ```
  
-Estos ejemplos se han tomado de la página SemanticZoom de la [Ejemplo de conceptos básicos de interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992). Puedes descargar el ejemplo para ver el código completo como el origen de datos. El zoom semántico usa un control GridView para proporcionar la vista ampliada y un control ListView para la vista alejada.
+Estos ejemplos se han tomado de la página SemanticZoom del [Ejemplo de conceptos básicos de interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992). Puedes descargar el ejemplo para ver el código completo, incluyendo el origen de datos. El zoom semántico usa un control GridView para proporcionar la vista ampliada y un control ListView para la vista alejada.
   
 **Definición de la vista ampliada**
 
 Este es el control GridView para la vista ampliada. La vista ampliada muestra los elementos de datos individuales en grupos. En este ejemplo se muestra cómo visualizar los elementos en una cuadrícula con una imagen y texto. 
 
-**XAML**
 ```xaml
 <SemanticZoom.ZoomedInView>
     <GridView ItemsSource="{x:Bind cvsGroups.View}" 
@@ -111,7 +107,6 @@ Este es el control GridView para la vista ampliada. La vista ampliada muestra lo
  
 El aspecto de los encabezados de grupo se define en el recurso `ZoomedInGroupHeaderTemplate`. La apariencia de los elementos se define en el recurso `ZoomedInTemplate`. 
 
-**XAML**   
 ```xaml
 <DataTemplate x:Key="" x:DataType="data:ControlInfoDataGroup">
     <TextBlock Text="{x:Bind Title}" 
@@ -133,11 +128,10 @@ El aspecto de los encabezados de grupo se define en el recurso `ZoomedInGroupHea
 </DataTemplate>
 ```
 
-**Definición de la vista alejada**
+**Definir la vista alejada**
 
 Este código XAML define un control ListView para la vista alejada. Este ejemplo muestra cómo mostrar los encabezados de grupo como texto en una lista.
 
-**XAML**
 ```xaml
 <SemanticZoom.ZoomedOutView>
     <ListView ItemsSource="{x:Bind cvsGroups.View.CollectionGroups}" 
@@ -148,7 +142,6 @@ Este código XAML define un control ListView para la vista alejada. Este ejemplo
 
  El aspecto se define en el recurso `ZoomedOutTemplate`.
  
- **XAML**   
 ```xaml    
 <DataTemplate x:Key="ZoomedOutTemplate" x:DataType="wuxdata:ICollectionViewGroup">
     <TextBlock Text="{x:Bind Group.(data:ControlInfoDataGroup.Title)}" 
@@ -158,18 +151,16 @@ Este código XAML define un control ListView para la vista alejada. Este ejemplo
 
 **Sincronizar las vistas**
 
-La vista alejada y la vista ampliada deberían estar sincronizadas, de modo que si un usuario sincroniza un grupo en la vista alejada, los detalles de ese mismo grupo se muestran en la vista ampliada. Puedes usar una clase [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx) o agregar código para sincronizar las vistas.
+La vista alejada y la vista ampliada deberían estar sincronizadas, de modo que si un usuario sincroniza un grupo en la vista alejada, los detalles de ese mismo grupo se muestran en la vista ampliada. Puedes usar una clase [CollectionViewSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx) o agregar código para sincronizar las vistas.
 
-Todos los controles que vínculos a la misma clase CollectionViewSource tendrán siempre el mismo elemento actual. Si las dos vistas usan el mismo CollectionViewSource que su origen de datos, la clase CollectionViewSource sincroniza las vistas automáticamente. Para obtener más información, consulta [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx).
+Todos los controles que vínculos a la misma clase CollectionViewSource tendrán siempre el mismo elemento actual. Si las dos vistas usan el mismo CollectionViewSource que su origen de datos, la clase CollectionViewSource sincroniza las vistas automáticamente. Para obtener más información, consulta [CollectionViewSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx).
 
-Si no usas una clase [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.viewchangestarted.aspx) para sincronizar las vistas, deberías controlar el evento ViewChangeStarted y sincronizar los elementos del controlador de eventos, tal como se muestra aquí.
+Si no usas una clase [CollectionViewSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.viewchangestarted.aspx) para sincronizar las vistas, deberías controlar el evento ViewChangeStarted y sincronizar los elementos del controlador de eventos, tal como se muestra aquí.
 
-**XAML**
 ```xaml
 <SemanticZoom x:Name="semanticZoom" ViewChangeStarted="SemanticZoom_ViewChangeStarted">
 ```
 
-**C#**
 ```csharp
 private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChangedEventArgs e)
 {

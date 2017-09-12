@@ -9,9 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
-ms.openlocfilehash: 89dbb45ac39c1f5d30864b99bb3fcff038d034f4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 3325883b85c87753625a39d5b5634a864bd9c49a
+ms.sourcegitcommit: 3e083fe2e253365e506d3e215fca8c35e5e92243
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="get-started-tutorial-a-uwp-game-in-javascript"></a>Tutorial de introducción: un juego para UWP en JavaScript
 
@@ -145,7 +147,7 @@ JavaScript necesita un poco de ayuda para cargar recursos como imágenes, así q
     loader.loadManifest(manifest, true, "../images/");
 ```    
 
-Cuando se llama a la función **loadingComplete()**, las imágenes se cargan y están listas para usar. Verás una sección comentada que crea las nubes, ahora su mapa de bits ya está disponible. Quita los comentarios, para que tenga este aspecto:
+Cuando se llama a la función **loadingComplete()**, las imágenes se cargan y están listas para usar. Podrás ver una sección comentada que crea las nubes, ahora su mapa de bits ya está disponible. Quita los comentarios, para que tenga este aspecto:
 
 ```
     // Create some clouds to drift by..

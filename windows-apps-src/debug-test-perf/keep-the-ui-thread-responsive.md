@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: Mantener la capacidad de respuesta del subproceso de la interfaz de usuario
 description: "Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 921af1b7f408bed5f846af631592755d48a37dd4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d5be2a8ea14f35d048b4402f2cfb1018d5998c3d
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="keep-the-ui-thread-responsive"></a>Mantener la capacidad de respuesta de los subprocesos de la interfaz de usuario
 
@@ -29,7 +31,7 @@ Deberás usar el subproceso de la interfaz de usuario para que realice casi todo
 
 Entre las fases más lentas de una aplicación se incluyen el inicio y el cambio de vistas. No hagas más de lo necesario para que se muestre la interfaz de usuario que el usuario verá inicialmente. Por ejemplo, no crees la interfaz de usuario para que se muestre de manera progresiva y para mostrar el contenido de elementos emergentes.
 
--   Usa [x: DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785) para retrasar la creación de instancias de elementos.
+-   Usa [x:Load attribute](../xaml-platform/x-load-attribute.md) o [x: DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785) para retrasar la creación de instancias de los elementos.
 -   Inserta mediante programación los elementos en el árbol a petición.
 
 [**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918) pone el trabajo en cola para que el subproceso de la interfaz de usuario lo procese cuando no esté ocupado.
@@ -107,4 +109,3 @@ En este ejemplo, el controlador `NextMove-Click` vuelve a **await** para mantene
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/Mt185599)
-

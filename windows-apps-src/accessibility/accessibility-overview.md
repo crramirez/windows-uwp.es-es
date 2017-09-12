@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: f0fd2e03c58ac5ffa575cf2381df4c652422efea
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 230480343a3f63ece4935e34101b1d3ec5408b84
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="accessibility-overview"></a>Información general sobre accesibilidad  
 
@@ -22,11 +24,12 @@ translationtype: HT
 
 Este artículo es una descripción general de los conceptos y las tecnologías relacionados con escenarios de accesibilidad para aplicaciones para la Plataforma universal de Windows (UWP).
 
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+
 <span id="Accessibility_and_your_app"/>
 <span id="accessibility_and_your_app"/>
 <span id="ACCESSIBILITY_AND_YOUR_APP"/>
-## <a name="accessibility-and-your-app"></a>Accesibilidad y la aplicación  
-Existe una gran variedad de discapacidades, entre ellas, limitaciones en la movilidad, vista, percepción de los colores, audición, habla, cognición y alfabetización. No obstante, puedes dar respuesta a la mayoría de los requisitos si sigues las instrucciones incluidas en este documento. Esto significa que debes proporcionar lo siguiente:
+## Accesibilidad y aplicación: Existe una gran variedad de discapacidades o dificultades, entre ellas, limitaciones en la movilidad, vista, percepción de los colores, audición, habla, cognición y alfabetización. No obstante, puedes dar respuesta a la mayoría de los requisitos si sigues las instrucciones incluidas en este documento. Esto significa que debes proporcionar lo siguiente:
 
 * Soporte para lectores de pantalla e interacciones de teclado.
 * Soporte para la personalización de usuario, como configuraciones de fuente, configuración de zoom (ampliación), color y contraste alto.
@@ -181,4 +184,4 @@ No se puede acceder de manera predeterminada al contenido de Microsoft DirectX h
 * [Diseño de accesibilidad](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [Ejemplo de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Accesibilidad](accessibility.md)
-* [Introducción al Narrador](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)
+* [Introducción al Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

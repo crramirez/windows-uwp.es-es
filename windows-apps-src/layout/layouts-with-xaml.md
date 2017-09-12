@@ -7,14 +7,16 @@ label: Page layouts with XAML
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 3862b008afece61648357c84a218ba210703727c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a491a13264a19c50affdbacded69c7ff73e99afa
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="define-page-layouts-with-xaml"></a>Definir diseños de página con XAML
 
@@ -25,7 +27,7 @@ XAML proporciona un sistema de diseño flexible que te permite usar ajustes de t
 Aquí describimos cómo usar las propiedades de XAML y los paneles de diseño para hacer que la aplicación tenga capacidad de respuesta y sea adaptable. Nos basamos en la información importante sobre el diseño de interfaz de usuario con capacidad de respuesta y en técnicas que se encuentran en [Introducción al diseño de aplicaciones para UWP](../layout/design-and-ui-intro.md). Debes entender qué son los píxeles efectivos y comprender cada una de las técnicas de diseño con capacidad de respuesta: Cambiar la posición, Cambiar el tamaño, Redistribuir, Mostrar, Reemplazar y Rediseñar.
 
 > [!NOTE]
-> El diseño de la aplicación comienza por el modelo de navegación que elijas, como la posibilidad de usar [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) con el modelo ["pestañas y controles dinámicos"](../controls-and-patterns/tabs-pivot.md) o [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) con el modelo ["panel de navegación"](../controls-and-patterns/nav-pane.md). Para obtener más información sobre el asunto, consulta [Conceptos básicos de diseño de navegación para las aplicaciones para UWP](../layout/navigation-basics.md). Aquí, hablaremos sobre las técnicas para hacer que el diseño de una sola página o grupo de elementos tenga capacidad de respuesta. Esta información se aplica independientemente del modelo de navegación que elijas para tu aplicación.
+> El diseño de la aplicación comienza por el modelo de navegación que elijas, como la posibilidad de usar [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) con el modelo ["pestañas y controles dinámicos"](../controls-and-patterns/tabs-pivot.md) o [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) con el modelo ["panel de navegación"](../controls-and-patterns/navigationview.md). Para obtener más información sobre el asunto, consulta [Conceptos básicos de diseño de navegación para las aplicaciones para UWP](../layout/navigation-basics.md). Aquí, hablaremos sobre las técnicas para hacer que el diseño de una sola página o grupo de elementos tenga capacidad de respuesta. Esta información se aplica independientemente del modelo de navegación que elijas para tu aplicación.
 
 En el marco XAML se proporcionan varios niveles de optimización que puedes usar para crear una interfaz de usuario con capacidad de respuesta.
 - **Diseño fluido**

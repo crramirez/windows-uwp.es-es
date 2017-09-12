@@ -6,14 +6,20 @@ ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e2c04ea39eee88c225bfef277037363c084e8eff
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: stpete
+doc-status: Published
+ms.openlocfilehash: 5079d1782188b6d2e49fc14741a23a5651995c67
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="hyperlinks"></a>Hipervínculos
 
@@ -21,15 +27,9 @@ translationtype: HT
 
 Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente. Existen dos formas mediante las que se puede agregar un hipervínculo a una aplicación XAML: el elemento de texto **Hyperlink** y el control **HyperlinkButton**.
 
-![Botón de hipervínculo](images/controls/hyperlink-button.png)
+> **API importantes**: [Elemento de texto Hyperlink](https://msdn.microsoft.com/library/windows/apps/dn279356), [Control HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/br242739)
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Elemento de texto Hyperlink**](https://msdn.microsoft.com/library/windows/apps/dn279356)</li>
-<li>[**Control HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)</li>
-</ul>
-</div>
+![Botón de hipervínculo](images/controls/hyperlink-button.png)
 
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
@@ -41,12 +41,6 @@ Elige el tipo correcto de hipervínculo según tus necesidades:
 -   Usa un elemento **Hyperlink** incluido dentro de un control de texto. Un elemento Hyperlink fluye con otros elementos de texto y se puede usar en cualquier elemento InlineCollection. Usa un hipervínculo de texto si quieres ajuste de texto automático y no necesitas obligatoriamente un destino de gran alcance. El texto del hipervínculo puede ser pequeño y difícil de activar, especialmente con la entrada táctil.
 -   Usa un elemento **HyperlinkButton** para los hipervínculos independientes. Un elemento HyperlinkButton es un control Button especializado que puedes usar en cualquier lugar en que usarías un elemento Button.
 -   Usa un elemento **HyperlinkButton** con una [imagen](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx) como su contenido para crear una imagen interactiva.
-
-## <a name="examples"></a>Ejemplos
-
-Hipervínculos en la aplicación Calculadora.
-
-![Ejemplo de un hipervínculo en la aplicación Calculadora](images/control-examples/hyperlinks-calculator.png)
 
 ## <a name="create-a-hyperlink-text-element"></a>Crea un elemento de texto Hyperlink
 
@@ -150,7 +144,7 @@ El color predeterminado del hipervínculo es el color de énfasis del sistema. P
 ## <a name="recommendations"></a>Recomendaciones
 
 -   Usa los hipervínculos solo para la navegación; no los uses para otras acciones.
--   Usa el estilo Body de la tabla de tipos para los hipervínculos basados en texto. Obtén información sobre [**fuentes y la tabla de tipos de Windows 10**](fonts.md).
+-   Usa el estilo Body de la tabla de tipos para los hipervínculos basados en texto. Obtén información sobre [fuentes y la tabla de tipos de Windows 10](fonts.md).
 -   Mantén los hipervínculos discretos y suficientemente separados para que el usuario pueda diferenciarlos y seleccionarlos con facilidad.
 -   Agrega información sobre herramientas a los hipervínculos que indican dónde se dirigirá al usuario. Si se dirige al usuario a un sitio externo, incluye el nombre de dominio de nivel superior dentro de la información sobre herramientas y un estilo de texto con un color de fuente secundario.
 
@@ -160,5 +154,5 @@ El color predeterminado del hipervínculo es el color de énfasis del sistema. P
 - [Directrices para información sobre herramientas](tooltips.md)
 
 **Para desarrolladores (XAML)**
-- [**Clase Windows.UI.Xaml.Documents.Hyperlink**](https://msdn.microsoft.com/library/windows/apps/dn279356)
-- [**Clase Windows.UI.Xaml.Controls.HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)
+- [Clase Windows.UI.Xaml.Documents.Hyperlink](https://msdn.microsoft.com/library/windows/apps/dn279356)
+- [Clase Windows.UI.Xaml.Controls.HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/br242739)

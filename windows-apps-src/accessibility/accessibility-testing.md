@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: a5a0a20ffa8ca27c123d139f25f636587db07aba
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 73fe48744346b2fd784b36d1fa29bd419c0fea02
+ms.sourcegitcommit: f6dd9568eafa10ee5cb2b849c0d82d84a1c5fb93
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="accessibility-testing"></a>Pruebas de accesibilidad  
 
@@ -82,15 +84,18 @@ Usa tu aplicación mientras esté activo un tema de contraste alto para comproba
 <span id="verify_your_app_with_make_everything_on_your_screen_bigger"/>
 <span id="VERIFY_YOUR_APP_WITH_MAKE_EVERYTHING_ON_YOUR_SCREEN_BIGGER"/>
 ## <a name="verify-your-app-with-display-settings"></a>Comprobar la aplicación con configuración de pantalla  
+
 Usa las opciones de pantalla del sistema para ajustar el valor de puntos por pulgada (ppp) de la pantalla y asegúrate de que la interfaz de usuario de la aplicación se escala correctamente cuando cambie el valor de ppp. (Algunos usuarios cambian los valores de ppp como una opción de accesibilidad. Esta opción está disponible en **Accesibilidad** y en las propiedades de pantalla). Si encuentras algún problema, sigue las [Directrices sobre la experiencia del usuario para diseño y escalado](https://msdn.microsoft.com/library/windows/apps/Dn611863) y proporciona recursos adicionales para diferentes factores de escala.
 
 <span id="verify_main_app_scenarios_by_using_narrator"/>
 <span id="VERIFY_MAIN_APP_SCENARIOS_BY_USING_NARRATOR"/>
 ## <a name="verify-main-app-scenarios-by-using-narrator"></a>Comprobar los escenarios de aplicaciones principales mediante el uso del Narrador  
-Si quieres usar Narrador para probar la experiencia de lectura en pantalla de la aplicación, haz lo siguiente:
+Utiliza el Narrador para probar la experiencia de lectura de pantalla de la aplicación.
+
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
 **Utiliza estos pasos para probar cómo funciona la aplicación utilizando el Narrador con un mouse y un teclado:**
-1.  Inicia el Narrador presionando la _tecla del logotipo de Windows y Entrar_.
+1.  Inicia el Narrador presionando la _tecla del logotipo de Windows, Ctrl y Entrar_. En versiones anteriores a Windows 10, versión 1607, usa _tecla del logotipo de Windows y Entrar_ para iniciar el Narrador.
 2.  Navega por la aplicación con el teclado utilizando la tecla de _tabulador_, las teclas de dirección y la combinación _tecla Bloq Mayús + teclas de dirección_.
 3.  Conforme estás navegando por la aplicación, escucha cómo lee Narrador los elementos de la interfaz de usuario y comprueba lo siguiente:
     * En cada control, asegúrate de que el Narrador lee todo el contenido visible. Comprueba también que el Narrador lee el nombre de cada control, los estados aplicables (comprobado, seleccionado, etc.) y los tipos de control (botón, casilla, elemento de lista, etc.).
@@ -145,4 +150,5 @@ Un aspecto que puedes probar es si en la vista de elementos de Automatización d
 * [Accesibilidad](accessibility.md)
 * [Procedimientos que deben evitarse](practices-to-avoid.md)
 * [Automatización de la interfaz de usuario](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
-* [Accesibilidad en Windows](http://go.microsoft.com/fwlink/p/?LinkId=320802) 
+* [Accesibilidad en Windows](http://go.microsoft.com/fwlink/p/?LinkId=320802)
+* [Introducción al Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

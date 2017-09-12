@@ -8,36 +8,39 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, juegos, monetización, games, monetization"
-ms.openlocfilehash: eccff6f037890fdd375eb150520db99a67aa718d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "windows 10, uwp, juegos, monetización, games, monetization"
+ms.openlocfilehash: c2dde3a4f9796b02c969017533b0092b0deaa860
+ms.sourcegitcommit: 0ebc8dca2fd9149ea163b7db9daa14520fc41db4
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/08/2017
 ---
 #  <a name="monetization-for-games"></a>Monetización para juegos
 
 Como desarrollador de juegos, debes conocer las opciones de monetización para que puedas mantener tu negocio y seguir haciendo lo que te apasiona: crear juegos espectaculares. En este artículo se proporciona información general sobre los métodos de monetización de juegos para Plataforma universal de Windows (UWP) y cómo implementar dichos métodos.
 
-En el pasado, simplemente hubieses puesto un precio a tu juego y luego hubieses esperado a que las personas lo compraran en una tienda. Pero hoy en día, tienes diferentes opciones. Puedes distribuir un juego en tiendas "físicas", venderlo en línea (copias físicas o electrónicas) o permitir que todas las personas lo usen de forma gratuita, pero incorporar algún tipo de anuncio o artículos dentro del juego que se puedan comprar. Los juegos ya no son simplemente productos independientes. Suelen venir con contenido adicional que se puede comprar además del juego principal. 
+En el pasado, simplemente hubieses puesto un precio a tu juego y luego hubieses esperado a que las personas lo compraran en una tienda. Pero hoy en día, tienes diferentes opciones. Puedes distribuir un juego en tiendas "físicas", venderlo en línea (copias físicas o electrónicas) o permitir que todas las personas lo usen de forma gratuita, pero incorporar algún tipo de anuncio o artículos dentro del juego que se puedan comprar. Los juegos ya no son simplemente productos independientes. Suelen venir con contenido adicional que se puede comprar además del juego principal.
 
 Puedes promocionar y monetizar un juego para UWP de una o varias de las siguientes maneras:
 * Coloca el juego en la Tienda Windows, que es una oferta de tienda en línea segura con [distribución en todo el mundo](#worldwide-distribution-channel). Los jugadores de todo el mundo pueden comprar un juego en línea al [precio que determines](#set-a-price-for-your-game).
 * Usa las API de Windows SDK para crear [compras dentro del juego](#in-game-purchases). Los jugadores pueden comprar artículos desde el juego o comprar contenido adicional, por ejemplo, equipo adicional, máscaras, mapas o niveles de juego.
-* Usa las API de [Microsoft Store Services SDK](https://visualstudiogallery.msdn.microsoft.com/229b7858-2c6a-4073-886e-cbb79e851211) para mostrar anuncios procedentes de redes de anuncios. Puedes [mostrar anuncios en el juego](#display-ads-in-your-game) y ofrecer a los jugadores la opción de ver anuncios en vídeo a cambio de recompensas dentro del juego.
+* Usa las API de [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) para mostrar anuncios procedentes de redes de anuncios. Puedes [mostrar anuncios en el juego](#display-ads-in-your-game) y ofrecer a los jugadores la opción de ver anuncios en vídeo a cambio de recompensas dentro del juego.
 * [Maximiza el potencial del juego a través de campañas publicitarias](#maximize-your-games-potential-through-ad-campaigns). Promociona tu juego mediante campañas de anuncios de pago, comunitarias (gratuitas) o internas (gratuitas) para aumentar la base de usuarios del juego.
- 
+
 ## <a name="worldwide-distribution-channel"></a>Canal de distribución en todo el mundo
 
 La Tienda Windows puede hacer que el juego esté disponible para descargar en más de 200 países y regiones en todo el mundo, con compatibilidad para la facturación a través de diversas formas de pago, como Visa, MasterCard y PayPal. Para obtener una lista completa de los países y las regiones, consulta [Mercados y precios personalizados](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices).
 
-## <a name="set-a-price-for-your-game"></a>Establecer un precio para el juego 
+## <a name="set-a-price-for-your-game"></a>Establecer un precio para el juego
 
 Los juegos para UWP que se publican en la Tienda pueden ser _de pago_ o _gratuitos_. Un juego de pago te permite cobrar a los jugadores de antemano por el juego un precio que estableces, mientras que un juego gratuito permite a los usuarios descargar y usar el juego sin necesidad de pagarlo.
 
 A continuación se detallan algunos conceptos importantes en relación con el precio del juego en la Tienda.
 
-### <a name="base-price"></a>Precio base 
+### <a name="base-price"></a>Precio base
 
-El precio base del juego es lo que determina si el juego se clasifica como _de pago_ o _gratuito_. Puedes usar el [panel del Centro de desarrollo](https://developer.microsoft.com/windows) para configurar el precio base en función del país y la región. Es posible que el proceso de determinación del precio incluya tus [responsabilidades fiscales si vendes en diferentes países](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) y las [consideraciones relativas a los precios para mercados concretos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets). También puedes [establecer precios personalizados para mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Para obtener más información, consulta [Definir los precios y la selección del mercado](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
+El precio base del juego es lo que determina si el juego se clasifica como _de pago_ o _gratuito_. Puedes usar el [panel del Centro de desarrollo](https://developer.microsoft.com/windows) para configurar el precio base en función del país y la región.
+Es posible que el proceso de determinación del precio incluya tus [responsabilidades fiscales si vendes en diferentes países](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) y las [consideraciones relativas a los precios para mercados concretos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets). También puedes [establecer precios personalizados para mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Para obtener más información, consulta [Definir los precios y la selección del mercado](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
 
 ### <a name="sale-price"></a>Precio de venta
 
@@ -75,7 +78,7 @@ En esta sección se usa un ejemplo de compra simplificado para ilustrar el uso d
 Dado que un complemento se debe crear junto con un juego, tu juego debe publicarse y estar disponible en la Tienda. Los pasos descritos en esta sección muestran cómo crear complementos mientras el juego aún está en la etapa de desarrollo.
 (Si el juego terminado ya está disponible en la Tienda, puedes omitir los tres primeros pasos e ir directamente a [Crear un complemento en la Tienda](#create-an-add-on-in-the-store)).
 
-Para crear complementos mientras el juego aún está en la etapa de desarrollo: 
+Para crear complementos mientras el juego aún está en la etapa de desarrollo:
 1. [Crear un paquete](#create-a-package)
 2. [Publicar el juego como oculto](#publish-the-game-as-hidden)
 3. [Asociar la solución de juego de Visual Studio a la Tienda](#associate-your-game-solution-with-the-store)
@@ -100,7 +103,7 @@ Para crear un paquete que se puede cargar en la Tienda:
 1. Ve al [Centro de desarrollo](https://developer.microsoft.com/store) e inicia sesión.
 2. En la página __Información general del panel__ o __Todas las aplicaciones__, haz clic en la aplicación con la que quieres trabajar. Si aún no creaste un envío de aplicación, haz clic en __Crear una nueva aplicación__ y reserva un nombre.
 3. En la página __Información general de la aplicación__, haz clic en __Iniciar el envío__.
-4. Configura este nuevo envío. En la página de envío: 
+4. Configura este nuevo envío. En la página de envío:
     * Haz clic en __Precios y disponibilidad__. En la sección __Visibilidad__, elige '__Ocultar esta aplicación e impedir la compra...__' para asegurarte de que solo el equipo de desarrollo tenga acceso al juego. Para obtener más información, consulta [Distribución y visibilidad](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
     * Haz clic en __Propiedades__. En la sección __Categoría y subcategoría__, elige __Juegos__ y luego elige una subcategoría adecuada para el juego.
     * Haz clic en __Clasificaciones por edades__. Completa el cuestionario con precisión.
@@ -141,60 +144,56 @@ Si el juego tiene muchos complementos, puedes crearlos mediante programación co
 
 ## <a name="display-ads-in-your-game"></a>Mostrar anuncios en el juego
 
-Las bibliotecas y las herramientas incluidas en Microsoft Store Services SDK te ayudan a configurar un servicio en tu juego para recibir anuncios provenientes de una red de anuncios. A los jugadores se les mostrarán anuncios dinámicos y podrás ganar dinero con los anunciantes cuando los jugadores vean los anuncios que se muestran o interactúen con ellos. Para obtener más información, consulta [Flujos de trabajo para crear aplicaciones con anuncios](https://msdn.microsoft.com/windows/uwp/monetize/workflows-for-creating-apps-with-ads).
+Las bibliotecas y herramientas del SDK de Microsoft Advertising te ayudan a configurar un servicio en tu juego para recibir anuncios provenientes de una red de anuncios. A los jugadores se les mostrarán anuncios dinámicos y podrás ganar dinero con los anunciantes cuando los jugadores vean los anuncios que se muestran o interactúen con ellos.
+Para obtener más información, consulta [Mostrar anuncios en tu aplicación](../monetize/display-ads-in-your-app.md).
 
 ### <a name="ad-formats"></a>Formatos de anuncio
 
-Se pueden mostrar dos tipos de anuncios mediante Microsoft Store Services SDK:
+Se pueden mostrar varios tipos de anuncios mediante el SDK de Microsoft Advertising:
 
 * Anuncios de banner: anuncios que ocupan una parte de la pantalla del juego y generalmente se colocan dentro de un juego.
 * Anuncios intersticiales en vídeo: anuncios de pantalla completa, que pueden ser muy eficaces cuando se usan entre niveles. Si se implementan correctamente, pueden ser menos molestos que los anuncios de banner.
+* Anuncios nativos: anuncios basados en componentes, donde cada parte del anuncio creativo (por ejemplo, el título, la imagen, la descripción y el texto de llamada a la acción) se entrega a la aplicación como un elemento individual que puedes integrar en la aplicación.
 
 ### <a name="which-ads-are-displayed"></a>¿Qué anuncios se muestran?
 
-Actualmente, los anuncios se proporcionan a través de nuestras redes de partners cuando usas Microsoft Store Services SDK. Para obtener más información sobre las ofertas actuales, consulta [Rentabilizar las aplicaciones con anuncios](https://developer.microsoft.com/store/monetize/ads-in-apps).
-Si usas AdControl para mostrar anuncios, puedes optar por mostrar [anuncios de filiales](https://msdn.microsoft.com/windows/uwp/publish/about-affiliate-ads) al expandir los anuncios de productos que se muestran en el juego.
+De manera predeterminada, la aplicación mostrará anuncios de la red de Microsoft, por lo relativo a anuncios de pago. Para maximizar tus ingresos por anuncios, puedes habilitar la mediación de anuncios para tu unidad de anuncios, para mostrar anuncios de redes de anuncios de pago adicionales. Para obtener más información sobre las ofertas actuales, consulta nuestras instrucciones de [mediación de anuncios](../publish/monetize-with-ads.md#ad-mediation).
 
 ### <a name="which-markets-allow-ads-to-be-displayed"></a>¿Qué mercados permiten mostrar anuncios?
 
-Los anuncios de banner y los anuncios intersticiales en vídeo pueden mostrarse a usuarios de determinados países. Para obtener la lista completa de los países y las regiones que admiten anuncios, consulta [Mercados admitidos para Microsoft Advertising](https://msdn.microsoft.com/windows/uwp/monetize/supported-markets-for-microsoft-advertising).
+Para obtener la lista completa de los países y las regiones que admiten anuncios, consulta [Mercados admitidos para las redes de anuncios](../publish/monetize-with-ads.md#network-markets).
 
 ### <a name="apis-for-displaying-ads"></a>API para mostrar anuncios
 
-Las clases [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) e [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) incluidas en Microsoft Store Services SDK, que forma parte del espacio de nombres [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aspx), se usan para mostrar anuncios en los juegos.
+Las clases [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx), [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) y [NativeAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.aspx) del SDK de Microsoft Advertising se usan para mostrar anuncios en pantalla en juegos.
 
-Para empezar, descarga e instala [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) con VisualStudio2015. Para obtener más información, consulta [Características disponibles en el SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk#features-available-in-the-sdk).
+Para comenzar, descarga e instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) con VisualStudio2015 u otra versión posterior. Para más información, consulta [Instalar el SDK de Microsoft Advertising](../monetize/install-the-microsoft-advertising-libraries.md).
 
 #### <a name="implementation-guides"></a>Guías de implementación
 
-En los siguientes tutoriales se muestra cómo implementar anuncios mediante las clases __AdControl__ y __InterstitialAd__:
+Estos recorridos muestran cómo implementar anuncios usando __AdControl__, __InterstitialAd__ y __NativeAd__:
 
-* [Crear anuncios de banner mediante la clase AdControl en XAML y .NET](https://msdn.microsoft.com/windows/uwp/monetize/adcontrol-in-xaml-and--net)
-* [Crear anuncios de banner mediante la clase AdControl en HTML5 y JavaScript](https://msdn.microsoft.com/windows/uwp/monetize/adcontrol-in-html-5-and-javascript)
-* [Crear anuncios intersticiales en vídeo mediante la clase InterstitialAd](https://msdn.microsoft.com/windows/uwp/monetize/interstitial-ads)
+* [Crear anuncios de banner en XAML y .NET](https://msdn.microsoft.com/windows/uwp/monetize/adcontrol-in-xaml-and--net)
+* [Crear anuncios de banner en HTML5 y JavaScript](https://msdn.microsoft.com/windows/uwp/monetize/adcontrol-in-html-5-and-javascript)
+* [Crear anuncios intersticiales](https://msdn.microsoft.com/windows/uwp/monetize/interstitial-ads)
+* [Crear anuncios nativos](https://msdn.microsoft.com/windows/uwp/monetize/native-ads)
 
-Durante el desarrollo, puedes usar los valores de prueba que se muestran a continuación para ver cómo se representan los anuncios. Estos mismos valores también se usan en los tutoriales antes mencionados.
-
-|AdType             | AdUnitId  | AppId                              |
-|-------------------|-----------|------------------------------------|
-|Anuncios de banner         |10865270   |3f83fe91-d6be-434d-a0ae-7351c5a997f1|
-|Anuncios intersticiales    |11389925   |d25517cb-12d4-4699-8bdc-52040c712cab|
+Durante el desarrollo, puedes usar los [valores de prueba de unidad de anuncios](../monetize/test-mode-values.md) para ver cómo se representan los anuncios. Estos valores de prueba de unidad de anuncios también se usan en los recorridos antes mencionados.
 
 Algunos procedimientos recomendados destinados a ayudarte en el proceso de diseño e implementación son los siguientes:
 
-* [Procedimientos recomendados para anuncios de banner mediante la clase AdControl](https://msdn.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines)
-* [Procedimientos recomendados para anuncios intersticiales mediante la clase InterstitialAd](https://msdn.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines#interstitialbestpractices10)
+* [Procedimientos recomendados para anuncios de banner](https://msdn.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines)
+* [Procedimientos recomendados para anuncios intersticiales](https://msdn.microsoft.com/windows/uwp/monetize/ui-and-user-experience-guidelines#interstitialbestpractices10)
 
 Para obtener soluciones a problemas comunes de desarrollo (por ejemplo, anuncios que no se muestran, caja negra que parpadea y desaparece o anuncios que no se actualizan), consulta [Guías de solución de problemas](https://msdn.microsoft.com/windows/uwp/monetize/troubleshooting-guides).
 
 ### <a name="prepare-for-release-by-replacing-ad-unit-test-values"></a>Preparar el lanzamiento reemplazando los valores de prueba de unidad de anuncio
 
-Cuando estés listo para realizar la prueba en directo o para recibir anuncios de juegos publicados, debes actualizar los valores de prueba de unidad de anuncio a los valores reales proporcionados para el juego.
-Para crear unidades de anuncios para el juego, consulta [Configurar unidades de anuncios en la aplicación](https://msdn.microsoft.com/windows/uwp/monetize/set-up-ad-units-in-your-app).
+Cuando estés listo para realizar la prueba en directo o para recibir anuncios de juegos publicados, debes actualizar los valores de prueba de unidad de anuncio a los valores reales proporcionados para el juego. Para crear unidades de anuncios para el juego, consulta [Configurar unidades de anuncios en la aplicación](https://msdn.microsoft.com/windows/uwp/monetize/set-up-ad-units-in-your-app).
 
 ### <a name="other-ad-networks"></a>Otras redes de anuncios
 
-A continuación se detallan otras redes de anuncios que admiten la presentación de anuncios en juegos y aplicaciones para UWP.
+A continuación se detallan otras redes de anuncios que proporcionan SDK para servir anuncios en juegos y aplicaciones para UWP.
 
 #### <a name="vungle"></a>Vungle
 
@@ -209,22 +208,22 @@ Smaato permite incorporar anuncios de banner en juegos y aplicaciones para UWP. 
 Puedes usar AdDuplex para implementar banners o anuncios intersticiales en el juego.
 
 Para conocer más detalles sobre cómo integrar AdDuplex directamente en un proyecto de Windows 10 en XAML, visita el sitio web de AdDuplex:
-* Anuncios de banner: [Windows 10 SDK for XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage) (SDK de Windows 10 para XAML) 
+* Anuncios de banner: [Windows 10 SDK for XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage) (SDK de Windows 10 para XAML)
 * Anuncios intersticiales: [Windows 10 XAML AdDuplex Interstitial Ad Installation and Usage](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage) (Uso e instalación de anuncios intersticiales de AdDuplex para Windows 10 en XAML)
 
 Para obtener información sobre cómo integrar el SDK de AdDuplex en juegos para UWP de Windows 10 creados con Unity, consulta [Windows 10 SDK for Unity apps installation and usage](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage) (SDK de Windows 10 para la instalación y el uso de aplicaciones de Unity).
 
 ## <a name="maximize-your-games-potential-through-ad-campaigns"></a>Maximizar el potencial del juego a través de campañas publicitarias
 
-El siguiente paso consiste en promocionar el juego a través de anuncios. Al [crear una campaña publicitaria](https://msdn.microsoft.com/windows/uwp/publish/create-an-ad-campaign-for-your-app) para tu juego, otras aplicaciones y juegos mostrarán anuncios promocionándolo. 
+El siguiente paso consiste en promocionar el juego a través de anuncios. Al [crear una campaña publicitaria](https://msdn.microsoft.com/windows/uwp/publish/create-an-ad-campaign-for-your-app) para tu juego, otras aplicaciones y juegos mostrarán anuncios promocionándolo.
 
 Elige entre varios tipos de campañas que pueden ayudarte a aumentar la base de jugadores.
 
 |Tipo de campaña             | Los anuncios para el juego aparecen en...                                                                                                                                                                   |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |De pago                      |Aplicaciones que coinciden con el dispositivo o la categoría del juego.                                                                                                                                                   |
-|Comunidad gratuita               |Aplicaciones publicadas por otros desarrolladores que también participan en campañas de anuncios de la comunidad. Para obtener más información, consulta [Acerca de los anuncios de la comunidad](https://msdn.microsoft.com/windows/uwp/publish/about-community-ads).|
-|Interno gratuito                   |Solo las aplicaciones que hayas publicado. Para obtener más información, consulta [Acerca de los anuncios internos](https://msdn.microsoft.com/windows/uwp/publish/about-house-ads).                                                            |
+|Comunidad gratuita            |Aplicaciones publicadas por otros desarrolladores que también participan en campañas de anuncios de la comunidad. Para obtener más información, consulta [Acerca de los anuncios de la comunidad](https://msdn.microsoft.com/windows/uwp/publish/about-community-ads).|
+|Interno gratuito                |Solo las aplicaciones que hayas publicado. Para obtener más información, consulta [Acerca de los anuncios internos](https://msdn.microsoft.com/windows/uwp/publish/about-house-ads).                                                            |
 
 ## <a name="related-links"></a>Vínculos relacionados
 

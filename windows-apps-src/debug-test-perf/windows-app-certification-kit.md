@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: "Kit para la certificación de aplicaciones en Windows"
 description: "Para que la aplicación tenga posibilidades de publicarse en la Tienda Windows, o de obtener la certificación de Windows, debes validarla y probarla localmente antes de enviarla para su certificación. En este tema explicamos cómo instalar y ejecutar el Kit para la certificación de aplicaciones en Windows."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 118d4643c3d4fcb8549549e9d58d4b64d64f0885
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fb5303898bfb0d7021ba4c0aa48afd5038bcad4d
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
@@ -26,7 +28,7 @@ Requisitos previos para probar una aplicación universal de Windows:
 
 -   Debes instalar y ejecutar Windows 10.
 -   Debes instalar la [versión 10 del Kit para la certificación de aplicaciones en Windows]( http://go.microsoft.com/fwlink/p/?LinkID=309666), que se incluye en el Kit de desarrollo de software de Windows (SDK) para Windows 10.
--   Debes tener una licencia de desarrollador válida para tu equipo. Consulta [Obtener una licencia de desarrollador](https://msdn.microsoft.com/library/windows/apps/Hh974578) para saber cómo.
+-   Debes [habilitar el dispositivo para el desarrollo](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 -   Debes implementar la aplicación de Windows que deseas probar en tu equipo.
 
 **Note sobre actualizaciones en contexto**

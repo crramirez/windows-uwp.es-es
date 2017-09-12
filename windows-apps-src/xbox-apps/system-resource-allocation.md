@@ -9,9 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
-ms.openlocfilehash: 81a437807332ff60a1401c00abdcff78e41a7496
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 76c9d372cdfd98ef86f123862c35d238b24fe2ed
+ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos del sistema de aplicaciones para UWP y juegos en Xbox One
 
@@ -36,5 +38,11 @@ Para el **desarrollo de aplicaciones**, es importante tener en cuenta que los re
 
 Para el **desarrollo de juegos**, es importante tener en cuenta que Xbox One, al igual que otras videoconsolas, es una parte especializada de hardware que requiere un kit de desarrollo específico basado en hardware para tener acceso al potencial completo. Si estás trabajando en un juego que requiere acceso al máximo potencial del hardware Xbox One, puedes registrarte con el programa [ID@Xbox](http://www.xbox.com/Developers/id) para acceder a los kits de desarrollo de Xbox One, que incluye compatibilidad con DirectX 12.
 
-## <a name="see-also"></a>Consulta también
+
+Para obtener un poco más información acerca de los recursos del sistema para aplicaciones para UWP en Xbox One, consulta la primera parte de este vídeo.
+</br>
+</br>
+<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developing-xbox-one-applications-16860/Video-What-s-Unique--vk0fOPf9C_2006218965" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
+
+## <a name="see-also"></a>Ve también
 - [UWP en Xbox One](index.md)

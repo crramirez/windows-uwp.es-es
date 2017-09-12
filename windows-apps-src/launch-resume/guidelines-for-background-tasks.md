@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c9bf682e6818f7c9854604448e52aa0111605a05
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 457c31a0657839632cbc60db0c908dca2cc4fafd
+ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/15/2017
 ---
 # <a name="guidelines-for-background-tasks"></a>Directrices para tareas en segundo plano
 
@@ -34,6 +36,8 @@ Si usas una tarea en segundo plano para reproducir contenido multimedia en segun
 |Desencadenadores disponibles | Las tareas en segundo plano dentro de proceso no admiten los siguientes desencadenadores: [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) e **IoTStartupTask**. |
 |VoIP | Las tareas en segundo plano dentro de proceso no admiten la activación de una tarea en segundo plano VoIP dentro de la aplicación. |  
 
+**Límites en el número de instancias de desencadenador:** hay límites respecto al número de instancias de algunos desencadenadores que puede registrar una aplicación. Solo puedes registrar [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger), [MediaProcessingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger) y [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396) una vez por instancia de la aplicación. Si una aplicación supera este límite, el registro iniciará una excepción.
+
 **Cuota de CPU:** las tareas en segundo plano están limitadas por la cantidad de tiempo de uso de reloj que obtienen según el tipo de desencadenador. La mayoría de los desencadenadores están limitados a 30 segundos de uso de reloj, aunque algunos tienen la capacidad de ejecutarse hasta 10 minutos para completar tareas intensivas. Las tareas en segundo plano deben ser ligeras para ahorrar batería y proporcionar una mejor experiencia de usuario para las aplicaciones en primer plano. Consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md) para conocer las restricciones de recursos que se aplican a las tareas en segundo plano.
 
 **Administración de tareas en segundo plano:** la aplicación debería obtener una lista de las tareas en segundo plano registradas, registrarse para controladores de progreso y finalización, y controlar dichos eventos de forma adecuada. Tus clases de tareas en segundo plano deben informar del progreso, la cancelación y la finalización. Para obtener más información, consulta [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md) y [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md).
@@ -52,7 +56,7 @@ Las tareas en segundo plano que se ejecutan en el mismo proceso que la aplicaci�
 
 > **Importante:**  a partir de Windows 10, ya no es necesario que las aplicaciones estén en la pantalla de bloqueo como un requisito previo para ejecutar tareas en segundo plano.
 
-Todas las aplicaciones para la Plataforma universal de Windows (UWP) pueden ejecutar tipos de tareas admitidos sin necesidad de que se anclen en la pantalla de bloqueo. Sin embargo, las aplicaciones deben llamar al método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar ningún tipo de tarea en segundo plano. Este método devolverá el objeto [**BackgroundAccessStatus.Denied**](https://msdn.microsoft.com/library/windows/apps/hh700439) si el usuario denegó explícitamente los permisos de tareas en segundo plano de la aplicación en la configuración del dispositivo.
+Todas las aplicaciones para la Plataforma universal de Windows (UWP) pueden ejecutar tipos de tareas admitidos sin necesidad de que se anclen en la pantalla de bloqueo. Sin embargo, las aplicaciones deben llamar al método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar ningún tipo de tarea en segundo plano. Este método devolverá el objeto [**BackgroundAccessStatus.DeniedByUser**](https://msdn.microsoft.com/library/windows/apps/hh700439) si el usuario denegó explícitamente los permisos de tareas de segundo plano de la aplicación en la configuración del dispositivo. Para obtener más información sobre la elección del usuario sobre la actividad en segundo plano y el ahorro de batería, consulta [Optimizar la actividad en segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity). 
 ## <a name="background-task-checklist"></a>Lista de comprobación de tareas en segundo plano
 
 *Se aplica tanto a las tareas en segundo plano tanto dentro como fuera de proceso.*
@@ -78,16 +82,6 @@ Todas las aplicaciones para la Plataforma universal de Windows (UWP) pueden ejec
 - Al cancelar una tarea, asegúrate de que el controlador de eventos `BackgroundActivated` existe antes de que se produzca la cancelación o la finalización de todo el proceso.
 -   Escribe tareas en segundo plano de corta duración. Las tareas en segundo plano se limitan a 30 segundos de uso.
 -   No confíes en la interacción con el usuario en las tareas en segundo plano.
-
-## <a name="windows-background-task-checklist-for-lock-screen-capable-apps"></a>Windows: lista de comprobación de tareas en segundo plano para aplicaciones compatibles con la pantalla de bloqueo
-
-Sigue esta directriz cuando desarrolles tareas en segundo plano para aplicaciones aptas para estar en la pantalla de bloqueo. Sigue la directriz en [Directrices y lista de comprobación de iconos de pantalla de bloqueo](https://msdn.microsoft.com/library/windows/apps/hh465403).
-
--   Asegúrate de que tu aplicación necesita estar en la pantalla de bloqueo antes de desarrollarla como una aplicación compatible con la pantalla de bloqueo. Para obtener más información, consulta [Introducción a la pantalla de bloqueo](https://msdn.microsoft.com/library/windows/apps/hh779720).
-
--   Asegúrate de que la aplicación siga funcionando cuando no esté en la pantalla de bloqueo.
-
--   Incluye una tarea en segundo plano registrada con [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) o [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), y declárala en el manifiesto de la aplicación. Asegúrate de que el punto de entrada y los tipos de desencadenadores son correctos. Esto es necesario para la certificación y permite al usuario colocar la aplicación en la pantalla de bloqueo.
 
 **Nota**  
 Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).

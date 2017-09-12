@@ -1,53 +1,12 @@
 ---
-author: jnHs
-Description: "Para ver los datos de rendimiento de los anuncios de filiales en tus aplicaciones, usa los informes de rendimiento de filiales en el nivel de la cuenta y de la aplicación en el panel del Centro de desarrollo de Windows."
-title: Informe Rendimiento de filial
-ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
-ms.author: wdg-dev-content
-ms.date: 02/08/2017
-ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 5187a644e4a952a8d3b199c68c2266e6e7c634f1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+redirect_url: https://msdn.microsoft.com/windows/uwp/publish/advertising-performance-report
+ms.openlocfilehash: 647bbb3cf211ecaa7872a11f5cb654112abfcbe9
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="affiliates-performance-report"></a>Informe Rendimiento de filial
 
-Si has decidido [participar en el programa de anuncios de filiales de Microsoft](about-affiliate-ads.md), puedes ver los datos de rendimiento de los anuncios de filiales que aparecen en tu aplicación en los siguientes informes en el panel del Centro de desarrollo de Windows:
-
--   [Informe de rendimiento de filiales en el nivel de la aplicación](#app-level-affiliate-ads-performance-report). En este informe se proporcionan los datos de rendimiento de los anuncios de filiales en la aplicación seleccionada en el panel.
--   [Informe de rendimiento de filiales en el nivel del panel](#dashboard-level-affiliate-ads-performance-report). Este informe proporciona un resumen de los datos de rendimiento de los anuncios de filiales en todas las aplicaciones que has decidido participar en el programa de anuncios de filiales de Microsoft.
-
-Estos informes se actualizan diariamente. De manera predeterminada, los informes se filtran según el rendimiento de los últimos 30 días, en todos los dispositivos. Para cambiar estos filtros, haz clic en **Filtros de página** y elige un intervalo de tiempo diferente o un tipo de dispositivo concreto. Ten en cuenta que se agregan todos los datos según UTC, no tu zona horaria en particular.
-
-Las siguientes secciones proporcionan más detalles sobre estos informes.
-
-## <a name="app-level-affiliate-ads-performance-report"></a>Informe de rendimiento de anuncios de filiales en el nivel de la aplicación
-
-Este informe muestra en el panel los datos de rendimiento de los anuncios de filiales en forma de gráfico y tabla para la aplicación seleccionada actualmente. Para ver este informe, selecciona una de las aplicaciones en el panel y haz clic en **Análisis** &gt; **Rendimiento de filiales** en el panel de navegación.
-
-Los datos se obtienen del seguimiento que realizamos de las siguientes siete métricas de rendimiento de los anuncios de la aplicación:
-
--   **Ingresos estimados (aprobados)**: La cantidad estimada de dinero que has recibido como comisión por las compras aprobadas que han realizado usuarios haciendo clic en los anuncios de filiales de la aplicación.
--   **Ingresos estimados (pendientes de aprobación)**: La cantidad estimada de dinero que podrías recibir como comisión por las compras pendientes de aprobación.
--   **Impresiones**: El número de veces que se ha mostrado un anuncio de filial en la aplicación.
--   **Clics**: El número de veces que alguien ha hecho clic en un anuncio de filial en la aplicación.
--   **CTR**: La tasa de clics; es decir, el número de veces que se ha hecho clic en un anuncio de filial dividido por el número de impresiones de anuncio de filial.
--   **Compras (aprobadas)**: El número de compras aprobadas que han realizado los usuarios haciendo clic en los anuncios de filiales en la aplicación.
--   **Compras (pendientes de aprobación)**: El número de compras pendientes de aprobación que han realizado los usuarios haciendo clic en anuncios de filiales en la aplicación.
-
-> **Nota** Cuando un usuario compra un producto en la Tienda, se produce un período de espera de 45 días hasta que la compra puede aprobarse para el programa de anuncios de filial. Debido a este período de espera, los datos de **Ganancias estimadas (aprobadas)**, **Ganancias estimadas (pendientes de aprobación)**, **Compras (aprobadas)** y **Compras (pendientes de aprobación)** de un día determinado pueden cambiar cuando se aprueben o rechacen las compras.
-
-## <a name="dashboard-level-affiliate-ads-performance-report"></a>Informe de rendimiento de anuncios de filiales en el nivel del panel
-
-La sección **Rendimiento de filiales** en la página **Información general del panel** muestra un resumen de los datos de rendimiento de los anuncios de filiales en todas las aplicaciones que has decidido participar en el programa de anuncios de filiales de Microsoft, en forma de gráfico y tabla. Este informe muestra las mismas métricas de rendimiento y filtros que el informe de rendimiento de filiales en el nivel de la aplicación descrito anteriormente.
-
-## <a name="related-topics"></a>Temas relacionados
-
-* [Acerca de los anuncios de filiales](about-affiliate-ads.md)
-* [Monetizar con anuncios](monetize-with-ads.md)
- 
-
+Este tema se ha redirigido a: Informe Rendimiento de la publicidad
  

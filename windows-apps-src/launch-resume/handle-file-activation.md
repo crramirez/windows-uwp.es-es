@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b35b8a9dcd6ea23b734de1041d829f620103fa6e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e05cc939d4a836e2f385a20f63d6ffb2242696db
+ms.sourcegitcommit: 7f03e200ef34f7f24b6f8b6489ecb44aa2b870bc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="handle-file-activation"></a>Administrar la activación de archivos
 
@@ -75,13 +77,12 @@ Los pasos anteriores permiten agregar un elemento [**Extension**](https://msdn.m
 
 Las aplicaciones que se convierten en predeterminadas para un tipo de archivo muestran sus iconos en varios lugares del sistema. Por ejemplo, estos iconos se muestran en:
 
--   Vista Elementos del Explorador de Windows, menús contextuales y la Cinta
+-   Vista de elementos del Explorador de Windows, menús contextuales y la cinta
 -   Panel de control de programas predeterminados
 -   Selector de archivos
 -   Resultados de búsqueda en la pantalla Inicio
 
-Ajusta el aspecto del logotipo del icono de la aplicación y usa el color de fondo de la aplicación en lugar de usar un icono transparente. Extiende el logotipo hasta el borde sin que quede espacio. Prueba los iconos en fondos de color blanco. Para ver ejemplos de iconos, consulta el [ejemplo de inicio por asociación](http://go.microsoft.com/fwlink/p/?LinkID=620490).
-![el explorador de soluciones con una vista de los archivos de la carpeta imágenes. hay versiones de 16, 32, 48 y 256 píxeles de ‘icon.targetsize’ y ‘smalltile-sdk’](images/seviewofimages.png)
+Incluir un icono de 44 x 44 con el proyecto para que tu logotipo puede aparecer en estas ubicaciones. Ajusta el aspecto del logotipo del icono de la aplicación y usa el color de fondo de la aplicación en lugar de hacer que el icono sea transparente. Extiende el logotipo hasta el borde sin que quede espacio. Prueba los iconos sobre fondos blancos. Consulta [Directrices para los activos de iconos](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets) para obtener más información sobre los iconos.
 
 ## <a name="step-3-handle-the-activated-event"></a>Paso 3: Administrar el evento activado
 

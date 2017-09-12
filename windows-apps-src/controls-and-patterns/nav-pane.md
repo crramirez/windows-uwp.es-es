@@ -1,21 +1,26 @@
 ---
 author: Jwmsft
+redirect_url: https://msdn.microsoft.com/windows/uwp/controls-and-patterns/navigationview
 Description: "Proporciona navegación de nivel superior mientras conserva el espacio de la pantalla."
 title: "Directrices sobre paneles de navegación"
 ms.assetid: 8FB52F5E-8E72-4604-9222-0B0EC6A97541
 label: Nav pane
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 2d48a92d5af75f8543f7b69ac59865e51bd334ee
-ms.sourcegitcommit: d1d53f5100edffe3f3ee57b853dc8cd1568fe7a2
-translationtype: HT
+ms.openlocfilehash: d5c838675eb8cb568f0dabd1c6b776a8a53d3bf4
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="nav-panes"></a>Paneles de navegación
+
+Este artículo se ha movido aquí: [Vista de navegación](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/navigationview).
 
 Un panel de navegación (o "nav pane" abreviado en inglés), es un patrón que admite muchos elementos de navegación de nivel superior a la vez que se conserva el espacio de la pantalla. El panel de navegación se usa ampliamente en aplicaciones móviles, pero también funciona bien en pantallas más grandes. Cuando se usa como una superposición, el panel permanece contraído y fuera de la vista hasta que el usuario presiona el botón, lo que es útil para pantallas más pequeñas. Cuando se usa en su modo acoplado, el panel permanece abierto, lo que te permite aprovechar mejor la pantalla, si hay suficiente espacio en la misma.
 
@@ -24,7 +29,7 @@ Un panel de navegación (o "nav pane" abreviado en inglés), es un patrón que a
 
 **API importantes**
 
-* [**Clase SplitView**](https://msdn.microsoft.com/library/windows/apps/dn864360)
+* [Clase SplitView](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 ## <a name="is-this-the-right-pattern"></a>¿Es este el patrón adecuado?
 
@@ -114,6 +119,3 @@ Para optimizar la [experiencia de 10 pies](http://go.microsoft.com/fwlink/?LinkI
 * [Control de vista en dos paneles](split-view.md)
 * [Panel de maestro y detalles](master-details.md)
 * [Conceptos básicos de navegación](https://msdn.microsoft.com/library/windows/apps/dn958438)
- 
-
- 

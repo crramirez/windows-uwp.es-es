@@ -6,39 +6,41 @@ ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e7db3553ea158c1337e0a541fd497e16d1202af7
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: 7cc1d11035d072fdd52bdfa4a1d0c6e66926ba9f
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="toggle-switches"></a>Modificadores para alternar
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
+El [modificador para alternar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx) representa un conmutador físico que permite a los usuarios activar o desactivar opciones, como un interruptor de la luz. Usa los controles del modificador para alternar para presentar a los usuarios dos opciones que se excluyan mutuamente (como activar/desactivar). Cuando elijan una opción, se producirá un resultado inmediato. 
 
-El modificador para alternar representa un conmutador físico que permite a los usuarios activar o desactivar opciones. Usa los controles **ToggleSwitch** para presentar a los usuarios exactamente dos opciones que se excluyan mutuamente (como activar/desactivar). Cuando elijan una opción, se desencadenará una acción inmediata.
+Para crear un control de modificador para alternar, usa la [clase ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx).
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Clase ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx)</li>
-<li>[**Propiedad IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx)</li>
-<li>[**Evento Toggled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)</li>
-</ul>
-</div>
+> **API importantes**: [Clase ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx), [Propiedad IsOn](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx), [Evento Toggled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)
+
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-Usa un modificador para alternar operaciones binarias que surten efecto inmediatamente después de que el usuario gira el modificador para alternar. Por ejemplo, usa un modificador para alternar para activar o desactivar servicios o componentes de hardware como, por ejemplo, Wi-Fi.
+Usa un modificador para alternar operaciones binarias que surten efecto inmediatamente después de que el usuario gira el modificador para alternar.
 
 ![Modificador para alternar Wi-Fi, activado y desactivado](images/toggleswitches01.png)
 
-Si un modificador físico funcionaría para la acción, un modificador para alternar es probablemente el mejor control para usar.
+Piensa en el modificador para alternar como un interruptor de alimentación físico para un dispositivo: lo activas o desactivas cuando quieres habilitar o deshabilitar la acción que lleva a cabo el dispositivo.
 
-Apenas el usuario activa o desactiva el modificador, recomendamos que la acción correspondiente se realice de inmediato.
+Para que que el modificador para alternar sea sencillo de comprender, etiquétalo con una o dos palabras, preferiblemente nombres, que describan la funcionalidad que controla. Por ejemplo, "Wi-Fi" o "Luces de cocina".  
+
 
 ### <a name="choosing-between-toggle-switch-and-check-box"></a>Elegir entre un modificador para alternar y una casilla
 
@@ -48,25 +50,21 @@ Para algunas acciones, tanto un modificador para alternar como una casilla podr�
 
     ![Modificador para alternar frente a casilla](images/toggleswitches02.png)
 
-    En el ejemplo anterior, queda claro en el caso del modificador para alternar que la conexión inalámbrica está establecida en "Activado". Pero en el caso de la casilla, el usuario tiene que pensar si la conexión inalámbrica está activada ahora o si es necesario marcar la casilla para activarla.
+    En este ejemplo, queda claro en el caso del modificador para alternar que la conexión inalámbrica está establecida en "Activado". Pero en el caso de la casilla, el usuario tiene que pensar si la conexión inalámbrica está activada ahora o si es necesario marcar la casilla para activarla.
 
+-   Usa casillas para los elementos opcionales (deseables). 
 -   Usa una casilla cuando el usuario tiene que realizar algunos pasos más antes de que los cambios surtan efecto. Por ejemplo, si el usuario tiene que hacer clic en un botón "enviar" o "siguiente" para aplicar los cambios, usa una casilla.
+-   Usa casillas cuando el usuario pueda seleccionar varios elementos que están relacionados con un único valor o característica. 
 
-    ![Una casilla y un botón Enviar](images/submitcheckbox.png)
+## <a name="toggle-switches-in-the-the-windows-ui"></a>Modificadores para alternar en la interfaz de usuario de Windows
 
--   Usa casillas o un [cuadro de lista](lists.md) cuando el usuario pueda seleccionar varios elementos:
+Estas imágenes muestran cómo la interfaz de usuario de Windows usa modificadores para alternar. Así es como la pantalla de configuración de almacenamiento inteligente usa los modificadores para alternar:
 
-    ![Una casilla que tiene varios elementos seleccionados](images/guidelines_and_checklist_for_toggle_switches_checkbox_multi_select.png)
+![Modificadores para alternar en el almacenamiento inteligente](images/SmartStorageToggle.png)
 
-## <a name="examples"></a>Ejemplos
+Este ejemplo es de la página de configuración de luz nocturna:
 
-Modificadores para alternar en la configuración general de la aplicación Noticias.
-
-![Modificadores para alternar en la configuración general de la aplicación Noticias](images/control-examples/toggle-switch-news.png)
-
-Modificadores para alternar en la configuración del menú Inicio de Windows.
-
-![Modificadores para alternar en la configuración del menú Inicio de Windows](images/control-examples/toggle-switch-start-settings.png)
+![Modificadores para alternar en la configuración del menú Inicio de Windows](images/NightLightToggle.png)
 
 ## <a name="create-a-toggle-switch"></a>Crear un modificador para alternar
 
@@ -87,7 +85,7 @@ stackPanel1.Children.Add(wiFiToggle);
 
 ### <a name="ison"></a>IsOn
 
-El modificador puede estar activado o desactivado. Usa la propiedad [**IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx) para determinar el estado del modificador. Cuando se usa el modificador para controlar el estado de otra propiedad binaria, puedes usar un enlace como se muestra aquí.
+El modificador puede estar activado o desactivado. Usa la propiedad [IsOn](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx) para determinar el estado del modificador. Cuando se usa el modificador para controlar el estado de otra propiedad binaria, puedes usar un enlace como se muestra aquí.
 
 ```
 <StackPanel Orientation="Horizontal">
@@ -98,12 +96,12 @@ El modificador puede estar activado o desactivado. Usa la propiedad [**IsOn**](h
 
 ### <a name="toggled"></a>Toggled
 
-En otros casos, puedes controlar el evento [**Toggled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx) para responder a cambios en el estado.
+En otros casos, puedes controlar el evento [Toggled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx) para responder a cambios en el estado.
 
 En este ejemplo se muestra cómo agregar un controlador de eventos Toggled en XAML y en el código. El evento Toggled se controla para activar o desactivar un anillo de progreso y cambiar su visibilidad.
 
 ```xaml
-<ToggleSwitch x:Name="toggleSwitch1" IsOn="True" 
+<ToggleSwitch x:Name="toggleSwitch1" IsOn="True"
               Toggled="ToggleSwitch_Toggled"/>
 ```
 
@@ -142,27 +140,27 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 ### <a name="onoff-labels"></a>Etiquetas On y Off
 
-De forma predeterminada, el modificador para alternar incluye las etiquetas literales On y Off, que se localizan automáticamente. Puedes reemplazar estas etiquetas si configuras las propiedades [**OnContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) y [**OffContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx).
+De forma predeterminada, el modificador para alternar incluye las etiquetas literales On y Off, que se localizan automáticamente. Puedes reemplazar estas etiquetas si configuras las propiedades [OnContent](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) y [OffContent](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx).
 
 En este ejemplo, se reemplazan las etiquetas On/Off con etiquetas Show/Hide.  
 
 ```xaml
 <ToggleSwitch x:Name="imageToggle" Header="Show images"
-              OffContent="Show" OnContent="Hide" 
+              OffContent="Show" OnContent="Hide"
               Toggled="ToggleSwitch_Toggled"/>
 ```
 
-También puedes usar contenido más complejo si configuras las propiedades [**OnContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) y [**OffContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx).
+También puedes usar contenido más complejo si configuras las propiedades [OnContentTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) y [OffContentTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx).
 
 ## <a name="recommendations"></a>Recomendaciones
 
--   Sustituye las etiquetas On y Off cuando haya etiquetas más específicas para la opción. Si hay etiquetas cortas (3o4 caracteres) que representan opuestos binarios que son más adecuadas para una determinada opción, úsalas. Por ejemplo, podrías usar "Show/Hide" si la opción es "Mostrar imágenes". Usar etiquetas más específicas puede ayudar a localizarlas en la IU.
--   Evita reemplazar las etiquetas On y Off a menos que debas hacerlo; usa las etiquetas predeterminadas a menos que la situación requiera que las personalices.
--   Las etiquetas no deben tener más de 4 caracteres.
+-    Usa las etiquetas predeterminadas On y Off cuando sea posible; reemplázalas solo cuando sea necesario para que el modificador para alternar tenga sentido. Si las reemplaza, usa una sola palabra que describa con mayor precisión la alternancia. En general, si las palabras "On" y "Off" no describen la acción vinculada a un modificador para alternar, probablemente necesites un control diferentes.
+-    Evita reemplazar las etiquetas On y Off a menos que debas hacerlo; usa las etiquetas predeterminadas a menos que la situación requiera que las personalices.
+
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [**Clase ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/hh701411)
+- [Clase ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/hh701411)
 - [Botones de radio](radio-button.md)
 - [Modificadores para alternar](toggles.md)
 - [Casillas](checkbox.md)

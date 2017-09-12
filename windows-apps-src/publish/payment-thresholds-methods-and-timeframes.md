@@ -3,15 +3,17 @@ author: jnHs
 Description: "El tiempo estimado para transferir pagos, los umbrales de pago aplicables y los catálogos de soluciones de Microsoft desde los que puedes recibir pagos pueden variar según el país o la región y el tipo de cuenta de pago."
 title: "Umbrales, métodos y plazos de pago"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
-ms.openlocfilehash: 2d2f586a1125f12c1034e002e2245e0fe155c1b4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0d0e421108de5daecb552c606b3f2c00b722fb89
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Umbrales, métodos y plazos de pago
 
@@ -23,14 +25,15 @@ Para cualquier país o región específico, usaremos ACH/SEPA o transferencia ba
 
 Por lo general, enviaremos cualquier pago adeudado de un determinado mes el día 15 de ese mes, pero la acreditación del pago en tu cuenta requerirá un tiempo adicional. El número de días variará según el método de pago que usemos para tu cuenta, tal como se describe a continuación. 
 
-> **Nota** Los días que se muestran a continuación son aproximados; cualquier pago puede requerir mayor o menor tiempo.
+> [!NOTE]
+> Los días que se muestran a continuación son aproximados; cualquier pago puede requerir mayor o menor tiempo.
 
 
-| Método de pago | Número de días la acreditación en la cuenta de pago |
+| Método de pago     | Número de días la acreditación en la cuenta de pago     |
 |--------------------|--------------------------------------------|
-| PayPal | 1 día laborable |    
-| ACH/SEPA |Entre 2 y 3 días laborables |
-| Transferencia bancaria | Entre 7 y 10 días laborables |
+| PayPal             | 1 día laborable                             | 
+| ACH/SEPA           | Entre 2 y 3 días laborables                          |
+| Transferencia bancaria      | Entre 7 y 10 días laborables                         |
 
 &nbsp;
 
@@ -38,7 +41,8 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 
 ## <a name="payment-thresholds-and-methods"></a>Umbrales y métodos de pago
 
-> **Nota** Los umbrales de pago se expresan en USD. En algunos mercados, se usa el equivalente en moneda local. 
+> [!NOTE]
+> Los umbrales de pago se expresan aquí en USD. En algunos mercados, se usa el equivalente en moneda local. 
 
 - [TiendaWindows](#windows-store)
 - [Microsoft Advertising](#microsoft-advertising)

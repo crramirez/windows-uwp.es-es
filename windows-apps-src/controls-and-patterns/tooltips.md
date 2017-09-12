@@ -6,14 +6,20 @@ ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 07a4b7fdd600c49cf545c69f9d87eb21ef8d9a67
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: yulikl
+design-contact: kimsea
+dev-contact: stpete
+doc-status: Published
+ms.openlocfilehash: d5bde19c1d3dfba375b370cf8aed46979b6173f0
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="tooltips"></a>Información sobre herramientas
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -22,13 +28,8 @@ La información sobre herramientas es una breve descripción que está vinculada
 
 ![Una información sobre herramientas](images/controls/tool-tip.png)
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Clase ToolTip**](https://msdn.microsoft.com/library/windows/apps/br227608)</li>
-<li>[**Clase ToolTipService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)</li>
-</ul>
-</div>
+> **API importantes**: [Clase ToolTip](https://msdn.microsoft.com/library/windows/apps/br227608), [Clase ToolTipService](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
+
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -75,4 +76,4 @@ Una información sobre herramientas de la aplicación Mapas de Bing.
 
 Temas relacionados
 
-* [**Clase ToolTip**](https://msdn.microsoft.com/library/windows/apps/br227608)
+* [Clase ToolTip](https://msdn.microsoft.com/library/windows/apps/br227608)

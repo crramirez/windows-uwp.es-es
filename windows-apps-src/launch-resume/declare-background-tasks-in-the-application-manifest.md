@@ -9,17 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 364edc93c52d3c7c8cbe5f1a85c8ca751eb44b35
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 65ee6cd32e1fdb6900c859725b8deb6b5031d297
+ms.sourcegitcommit: ba0d20f6fad75ce98c25ceead78aab6661250571
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/24/2017
 ---
-
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tareas en segundo plano en el manifiesto de la aplicación
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -62,8 +61,7 @@ El siguiente fragmento de código está tomado de la [muestra de tarea en segund
  </Application>
 ```
 
-## <a name="add-a-background-task-extension"></a>Agregar extensión de tarea en segundo plano
-
+## <a name="add-a-background-task-extension"></a>Agregar extensión de tarea en segundo plano  
 
 Declara tu primera tarea en segundo plano.
 
@@ -108,8 +106,7 @@ Copia este código al elemento Extensions (agregarás atributos en los siguiente
 </Extension>
 ```
 
-
-## <a name="add-additional-background-task-extensions"></a>Agregar extensiones adicionales de tareas en segundo plano
+### <a name="add-multiple-background-task-extensions"></a>Agregar varias extensiones de tareas en segundo plano
 
 Repite el paso 2 para todas las clases de tareas en segundo plano que haya registrado tu aplicación.
 
@@ -154,17 +151,22 @@ El siguiente ejemplo es el elemento Application completo de la [muestra de tarea
 </Applications>
 ```
 
-## <a name="declare-your-background-task-to-run-in-a-different-process"></a>Declarar la tarea en segundo plano para que se ejecute en un proceso diferente
+## <a name="declare-where-your-background-task-will-run"></a>Declarar donde se ejecutará la tarea en segundo plano
 
-La nueva característica de Windows 10, versión 1507, permite ejecutar la tarea en segundo plano en un proceso diferente de BackgroundTaskHost.exe (el proceso en el que las tareas en segundo plano se ejecutan de manera predeterminada).  Existen dos opciones: ejecutar en el mismo proceso que la aplicación en primer plano o ejecutar en una instancia de BackgroundTaskHost.exe independiente de otras instancias de tareas en segundo plano de la misma aplicación.  
+Puedes especificar dónde se ejecutan las tareas en segundo plano:
 
-### <a name="run-in-the-foreground-application"></a>Ejecutar en la aplicación en primer plano
+* De manera predeterminada, se ejecutan en el proceso de BackgroundTaskHost.exe.
+* En el mismo proceso que la aplicación en primer plano.
+* Usa `ResourceGroup` para colocar varias tareas en segundo plano en el mismo proceso de host o separarlas en distintos procesos.
+* Usa `SupportsMultipleInstances` para ejecutar el proceso en segundo plano en un nuevo proceso que obtiene sus propios límites de recursos (memoria, cpu) cada vez que se desencadena un nuevo desencadenador.
 
-En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación en primer plano. Observa el atributo `Executable`:
+### <a name="run-in-the-same-process-as-your-foreground-application"></a>Ejecutar en el mismo proceso que la aplicación en primer plano
+
+En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación en primer plano.
 
 ```xml
 <Extensions>
-    <Extension Category="windows.backgroundTasks" EntryPoint="ExecModelTestBackgroundTasks.ApplicationTriggerTask" Executable="$targetnametoken$.exe">
+    <Extension Category="windows.backgroundTasks" EntryPoint="ExecModelTestBackgroundTasks.ApplicationTriggerTask">
         <BackgroundTasks>
             <Task Type="systemEvent" />
         </BackgroundTasks>
@@ -172,10 +174,9 @@ En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en e
 </Extensions>
 ```
 
-> [!Note]
-> Usa el elemento Executable únicamente con tareas en segundo plano que lo requieran, por ejemplo, [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).  
+Cuando especifiques **EntryPoint**, la aplicación recibe una devolución de llamada al método especificado cuando se active el desencadenador. Si no especificas un **EntryPoint**, la aplicación recibe la devolución de llamada mediante [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).  Consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) para obtener detalles.
 
-### <a name="run-in-a-different-background-host-process"></a>Ejecutar en un proceso de host en segundo plano diferente
+### <a name="specify-where-your-background-task-runs-with-the-resourcegroup-attribute"></a>Especifica dónde se ejecuta la tarea en segundo plano con el atributo ResourceGroup.
 
 En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en un proceso de BackgroundTaskHost.exe, pero en uno independiente de otras instancias de tareas en segundo plano de la misma aplicación. Observa el atributo `ResourceGroup`, que identifica las tareas en segundo plano que se ejecutan juntas.
 
@@ -209,11 +210,33 @@ En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en u
 </Extensions>
 ```
 
+### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>Ejecutar en un nuevo proceso cada vez que un desencadenador se activa con el atributo SupportsMultipleInstances
+
+Este ejemplo declara una tarea en segundo plano que se ejecuta en un proceso nuevo que obtiene sus propios límites de recursos (memoria y CPU) cada vez que se activa un nuevo desencadenador. Ten en cuenta el uso de `SupportsMultipleInstances` que permite este comportamiento. Para poder usar este atributo debes plantearte la versión de SDK '10.0.15063' (actualización Windows 10 Creator's Update de Windows 10) o superior.
+
+```xml
+<Package
+    xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
+    ...
+    <Applications>
+        <Application ...>
+            ...
+            <Extensions>
+                <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.TimerTriggerTask">
+                    <BackgroundTasks uap4:SupportsMultipleInstances=“True”>
+                        <Task Type="timer" />
+                    </BackgroundTasks>
+                </Extension>
+            </Extensions>
+        </Application>
+    </Applications>
+```
+
+> [!NOTE]
+> No puedes especificar `ResourceGroup` ni `ServerName` junto con `SupportsMultipleInstances`.
 
 ## <a name="related-topics"></a>Temas relacionados
-
 
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
-

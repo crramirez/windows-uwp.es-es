@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
 description: "Este artículo te guiará en el procedimiento para dirigirte a distintos destinos de implementación y de depuración."
 title: "Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)"
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, test, rendimiento, performance, depuración, debug, pruebas"
-ms.openlocfilehash: 6f399136be121288dcff4b482f9e022fc0323181
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 2d4f49b0b9756162a22adf5c52910102d4a37281
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 
@@ -70,7 +72,7 @@ Para volver a este cuadro de diálogo, puedes abrir las propiedades del proyecto
 
 ![Pestaña Depurar](images/debug-remote-machine-config.png)
 
-Para implementar una aplicación en un equipo remoto, también debes descargar e instalar Herramientas remotas para Visual Studio en el equipo de destino. Para obtener instrucciones completas, consulta [Instrucciones del equipo remoto](#remote-pc-instructions).
+Para implementar una aplicación en un equipo remoto de Creators Update, también debes descargar e instalar Herramientas remotas para Visual Studio en el equipo de destino. Para obtener instrucciones completas, consulta [Instrucciones del equipo remoto](#remote-pc-instructions).  Sin embargo, a partir del PC de Creators Update también es compatible con la implementación remota.  
 
 ### <a name="c-and-javascript"></a>C++ y JavaScript
 
@@ -86,7 +88,10 @@ Después de especificar la máquina, puedes seleccionar **Máquina remota** en l
 
 ### <a name="remote-pc-instructions"></a>Instrucciones del equipo remoto
 
-Para implementar en un equipo remoto, el equipo de destino debe tener instalado Visual Studio Remote Tools. La máquina remota también deben ejecutar una versión de Windows que sea superior o igual a la propiedad **Versión mínima de la plataforma de destino** de tus aplicaciones. Una vez que hayas instalado las herramientas remotas, debes iniciar el depurador remoto en el equipo de destino.
+> [!NOTE]
+> Estas instrucciones solo son necesarias para versiones anteriores a Windows 10.  A partir de la actualización de los creadores, un equipo puede tratarse como una consola Xbox.  Es decir, al habilitar la Detección de dispositivos en del equipo con Modo de desarrollador y mediante la Autenticación universal para emparejarlo mediante PIN y conectar con el equipo. 
+
+Para implementar en un equipo remoto con Creators Update preinstalado, el equipo de destino debe tener instalado Visual Studio Remote Tools. La máquina remota también deben ejecutar una versión de Windows que sea superior o igual a la propiedad **Versión mínima de la plataforma de destino** de tus aplicaciones. Una vez que hayas instalado las herramientas remotas, debes iniciar el depurador remoto en el equipo de destino.
 
 Para ello, busca **Depurador remoto** en el menú **Inicio**, ábrelo y, si te lo pide, permite que el depurador configure las opciones del firewall. De manera predeterminada, el depurador se inicia con la autenticación de Windows. Esto requiere credenciales de usuario si el usuario que inició sesión no es el mismo en ambos equipos.
 
@@ -94,13 +99,31 @@ Para cambiar a **Sin autenticación**, en el **Depurador remoto**, ve a **Herram
 
 Para obtener más información, consulta la página [Centro de descarga para Visual Studio](https://www.visualstudio.com/downloads/).
 
+## <a name="passing-command-line-debug-arguments"></a>Pasar argumentos de depuración de la línea de comandos 
+En Visual Studio 2017, puedes pasar argumentos de depuración de la línea de comandos al iniciar la depuración de las aplicaciones para UWP. Puedes acceder a los argumentos de depuración de la línea de comandos desde el parámetro *args* del método **OnLaunched** de la clase [**Application**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application). Para especificar los argumentos de depuración de la línea de comandos, abre las propiedades del proyecto y navega a la pestaña **Depurar**. 
+
+> [!NOTE]
+> Esta característica está disponible en Visual Studio 2017 (versión 15.1) para C#, VB y C++. JavaScript está disponible en versiones posteriores de Visual Studio 2017. Los argumentos de depuración de la línea de comandos están disponibles para todos los tipos de implementación, excepto el simulador.
+
+En el caso de proyectos C# y VB para la UWP, verás un campo **Argumentos de la línea de comandos:** en **Opciones de inicio**. 
+
+![Argumentos de la línea de comandos](images/command-line-arguments.png)
+
+En el caso de proyectos C++ y JS para UWP, verás **Argumentos de la línea de comandos** como un campo en **Propiedades de depuración**.
+
+![Argumentos de la línea de comandos C++ y JS](images/command-line-arguments-cpp.png)
+
+Después de especificar los argumentos de la línea de comandos, puedes acceder al valor del argumento en el método **OnLaunched** de la aplicación. El elemento *args* del objeto [**LaunchActivatedEventArgs**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) tendrá una **Argumentos** con el valor establecido en el texto del campo **Argumentos de la línea de comandos** campo. 
+
+![Argumentos de la línea de comandos C++ y JS](images/command-line-arguments-debugging.png)
+
 ## <a name="authentication-modes"></a>Modos de autenticación
 
 Existen tres modos de autenticación para la implementación del equipo remoto:
 
-- **Universal (protocolo sin cifrar)**: usa este modo de autenticación siempre que realices una implementación en un dispositivo remoto que no sea un PC Windows (de escritorio o portátil). Actualmente, esto es para dispositivos de IoT, dispositivos de Xbox y dispositivos HoloLens. Universal (protocolo sin cifrar) solo se debe usar en redes de confianza. La conexión de depuración es vulnerable para los usuarios malintencionados que podrían interceptar y cambiar los datos que se pasan entre el desarrollo y el equipo remoto.
-- **Windows**: este modo de autenticación solo está destinado para su uso en la implementación del equipo remoto (de escritorio o portátil). Usa este modo de autenticación si tienes acceso a las credenciales del usuario que inició la sesión de la máquina de destino. Este es el canal más seguro para la implementación remota.
-- **Ninguno**: este modo de autenticación solo está destinado para su uso en la implementación del equipo remoto (de escritorio o portátil). Usa este modo de autenticación si tienes una instalación de máquina de prueba en un entorno en el que se inició sesión con una cuenta de prueba y no se pueden escribir credenciales. Asegúrate de que la configuración del depurador remoto esté establecida para aceptar que no haya autenticación.
+- **Universal (protocolo sin cifrar)**: usa este modo de autenticación siempre que realices una implementación en un dispositivo remoto. Actualmente, esto es para dispositivos de IoT, dispositivos de Xbox y dispositivos HoloLens, así como para dispositivos con Creators Update o equipos más nuevos. Universal (protocolo sin cifrar) solo se debe usar en redes de confianza. La conexión de depuración es vulnerable para los usuarios malintencionados que podrían interceptar y cambiar los datos que se pasan entre el desarrollo y el equipo remoto.
+- **Windows**: este modo de autenticación solo está destinado para su uso en la implementación del equipo remoto (de escritorio o portátil) que ejecuten Herramientas remotas para Visual Studio. Usa este modo de autenticación si tienes acceso a las credenciales del usuario que inició la sesión de la máquina de destino. Este es el canal más seguro para la implementación remota.
+- **Ninguno**: este modo de autenticación solo está destinado para su uso en la implementación del equipo remoto (de escritorio o portátil) que ejecuten Herramientas remotas para Visual Studio. Usa este modo de autenticación si tienes una instalación de máquina de prueba en un entorno en el que se inició sesión con una cuenta de prueba y no se pueden escribir credenciales. Asegúrate de que la configuración del depurador remoto esté establecida para aceptar que no haya autenticación.
 
 ## <a name="advanced-remote-deployment-options"></a>Opciones avanzadas de implementación remota
 Con el lanzamiento de Visual Studio 2015 Update 3 y la Actualización de aniversario de Windows 10, hay nuevas opciones avanzadas de implementación remota para determinados dispositivos Windows10. Las opciones avanzadas de implementación remota pueden encontrarse en el menú **Depurar** de las propiedades del proyecto.
@@ -113,7 +136,7 @@ Las nuevas propiedades incluyen lo siguiente:
 ### <a name="requirements"></a>Requisitos
 Para usar las opciones avanzadas de implementación remota, debes cumplir los siguientes requisitos:
 * Tener instalado Visual Studio 2015 Update 3 con Windows 10 Tools 1.4.1 (que incluye el SDK de Actualización de aniversario de Windows 10)
-* Elegir como destino un dispositivo remoto de Xbox con la Actualización de aniversario de Windows 10
+* Elegir como destino un dispositivo remoto de Xbox con la Actualización de aniversario de Windows 10 o un equipo con Windows 10 Creators Update. 
 * Usar el modo Autenticación universal
 
 ### <a name="properties-pages"></a>Páginas de propiedades
@@ -131,10 +154,10 @@ La opción **Copiar archivos en el dispositivo** transferirá físicamente los a
 La **ruta de acceso de registro del paquete** especificada cuando **copias archivos en el dispositivo** es la ubicación física del dispositivo remoto en la que se copian los archivos. Esta ruta de acceso se puede especificar como cualquier ruta de acceso relativa. La ubicación en la que se implementen los archivos será relativa a una raíz de archivos de desarrollo que variará según el dispositivo de destino. Especificar esta ruta de acceso resulta útil en el caso de varios desarrolladores que comparten el mismo dispositivo y trabajan en paquetes con alguna variación en cuanto a compilación.
 
 > [!NOTE]
-> **Copiar archivos en el dispositivo** actualmente se admite en Xbox con Actualización de aniversario de Windows 10.
+> **Copiar archivos en el dispositivo** actualmente se admite en Xbox con Actualización de aniversario de Windows 10 y con equipos con Windows 10 Creators Update.
 
 En el dispositivo remoto, el diseño se copiará en la siguiente ubicación predeterminada según la familia de dispositivos:
-  `Xbox: \\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
+  `\\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
 
 ### <a name="register-layout-from-network"></a>Registrar el diseño desde la red
 Si eliges registrar el diseño desde la red, puedes compilar el diseño de tu paquete en un recurso compartido de red y luego registrar el diseño en el dispositivo remoto directamente desde la red. Esto requiere que especifiques una ruta de acceso de la carpeta del diseño (un recurso compartido de red) accesible desde el dispositivo remoto. La propiedad **Ruta de acceso de la carpeta del diseño** es la ruta de acceso que se establece en relación con el equipo que ejecuta Visual Studio, mientras que la propiedad **Ruta de acceso de registro del paquete** es la misma ruta de acceso, pero especificada en relación con el dispositivo remoto.
@@ -156,10 +179,10 @@ Cuando registres el diseño desde la red por primera vez, las credenciales se al
 No puedes seleccionar **Mantener todos los archivos en el dispositivo** al registrar el diseño desde la red porque no hay archivos que se copien físicamente al dispositivo remoto.
 
 > [!NOTE]
-> La opción **Registrar el diseño desde la red** actualmente se admite en Xbox con Actualización de aniversario de Windows 10.
+> **Registrar el diseño desde la red** actualmente se admite en Xbox con Actualización de aniversario de Windows 10 y con equipos con Windows 10 Creators Update.
 
-En el dispositivo remoto, el diseño se registrará en la siguiente ubicación predeterminada según la familia de dispositivos:
-  `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles`
+En el dispositivo remoto, el diseño se registrará en la siguiente ubicación predeterminada según la familia de dispositivos:   `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles`, este es un vínculo simbólico de la **ruta de acceso de registro del paquete**
+  El equipo no usa un vínculo simbólico y en su lugar, registra directamente la **ruta de acceso de registro del paquete**
 
 
 ## <a name="debugging-options"></a>Opciones de depuración

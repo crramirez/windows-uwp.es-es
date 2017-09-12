@@ -1,17 +1,19 @@
 ---
-author: eliotcowley
+author: drewbatgit
 ms.assetid: DD8FFA8C-DFF0-41E3-8F7A-345C5A248FC2
 description: "En este tema se describe cómo agregar contenido multimedia protegido con PlayReady, a una aplicación para la Plataforma universal de Windows (UWP)."
 title: DRM de PlayReady
-ms.author: elcowle
+ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 161a048a4bfa9479821aec542db17ded8243d231
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 803070143a3d07bfbdbb4f3e1b7b70858b75e0f9
+ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="playready-drm"></a>DRM de PlayReady
 
@@ -470,6 +472,33 @@ En versiones anteriores del DRM de PlayReady, las licencias no persistentes solo
     videoPlayer.msSetMediaProtectionManager( mediaProtectionManager );
     ```
     
+## <a name="query-for-protection-capabilities"></a>Consultar las capacidades de protección
+A partir de Windows 10, versión 1703, puedes consultar las funcionalidades de DRM de hardware, como descodificar códecs, la resolución y las protecciones de salida (HDCP). Las consultas se realizan con el método [**IsTypeSupported**](https://docs.microsoft.com/uwp/api/windows.media.protection.protectioncapabilities#Windows_Media_Protection_ProtectionCapabilities_IsTypeSupported_System_String_System_String_) que toma una cadena que representa las funcionalidades para las que se consulta al soporte técnico y una cadena que especifica el sistema de claves al que se aplica la consulta. Para una lista de los valores de cadena compatibles, consulta la página de referencia de la API para [**IsTypeSupported**](https://docs.microsoft.com/uwp/api/windows.media.protection.protectioncapabilities#Windows_Media_Protection_ProtectionCapabilities_IsTypeSupported_System_String_System_String_). En el siguiente ejemplo de código se muestra el uso de este método.  
+
+    ```cs
+    using namespace Windows::Media::Protection;
+
+    ProtectionCapabilities^ sr = ref new ProtectionCapabilities();
+
+    ProtectionCapabilityResult result = sr->IsTypeSupported(
+    L"video/mp4; codecs=\"avc1.640028\"; features=\"decode-bpp=10,decode-fps=29.97,decode-res-x=1920,decode-res-y=1080\"",
+    L"com.microsoft.playready");
+
+    switch (result)
+    {
+        case ProtectionCapabilityResult::Probably:
+        // Queue up UHD HW DRM video
+        break;
+
+        case ProtectionCapabilityResult::Maybe:
+        // Check again after UI or poll for more info.
+        break;
+
+        case ProtectionCapabilityResult::NotSupported:
+        // Do not queue up UHD HW DRM video.
+        break;
+    }
+    ```
 ## <a name="add-secure-stop"></a>Agregar una detención segura
 
 Esta sección describe cómo agregar una detención segura a una aplicación para UWP.
@@ -508,6 +537,7 @@ Por último, hay una última consideración al usar PlayReady en Xbox One: en lo
 * Implementa la lógica para que solo determinadas cuentas de prueba autenticadas puedan adquirir licencias de SL150 para cierto contenido.
 
 Usa el enfoque que tiene más sentido para tu empresa y el producto.
+
 
 ## <a name="see-also"></a>Consulta también
 - [Reproducción de contenido multimedia](media-playback.md)

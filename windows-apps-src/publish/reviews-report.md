@@ -1,30 +1,77 @@
 ---
 author: jnHs
-Description: "El informe Críticas del panel del Centro de desarrollo de Windows te permite ver los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda."
+Description: "El informe Valoraciones del panel de información del Centro de desarrollo de Windows te permite ver las clasificaciones y los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda."
 title: "Informe Críticas"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2b9cc9142655efc8123fdcde0eef464cb86df070
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b28883ffe2e1993e87c2d41fdb64108d94c8e841
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="reviews-report"></a>Informe Críticas
 
 
-El informe **Críticas** del panel del Centro de desarrollo de Windows te permite ver los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos siguiendo el método de [obtención de las opiniones de la aplicación](../monetize/get-app-reviews.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+El informe **Valoraciones** del panel de información del Centro de desarrollo de Windows te permite ver las clasificaciones y los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos siguiendo el método de [obtención de las opiniones de la aplicación](../monetize/get-app-reviews.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
-> **Nota** También puedes [responder a las críticas de los clientes](respond-to-customer-reviews.md) desde esta página.
+También puedes responder a las valoraciones de los clientes [directamente desde esta página](respond-to-customer-reviews.md), mediante programación [a través de la API de valoraciones de la Tienda Windows](../monetize/submit-responses-to-app-reviews.md), o mediante la [aplicación del Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
 
-Este informe muestra el número de estrellas que un cliente asignó a tu aplicación al escribir una crítica, pero no analiza las clasificaciones por estrellas en toda la aplicación; para obtener las estadísticas de las clasificaciones, consulta el [informe Críticas](ratings-report.md).
+> [!TIP]
+> Para obtener una vista rápida de las valoraciones, clasificaciones y comentarios de los usuarios de todas las aplicaciones en los últimos 30 días, expande **Interactuar** en el menú de navegación izquierdo y selecciona **Valoraciones y comentarios**. 
 
-Ten en cuenta que los clientes pueden dejar una clasificación de la aplicación sin agregar comentarios, por lo que normalmente verás menos críticas que clasificaciones. De manera predeterminada, esta página también muestra las clasificaciones que no incluyen contenido de críticas pero puedes usar los **filtros de página** para mostrar solo las clasificaciones que incluyen críticas, como se describe a continuación.
+## <a name="apply-filters"></a>Aplicar filtros
 
-Cada crítica del cliente contiene lo siguiente:
+Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar las valoraciones. La selección predeterminada es **Duración**, pero también puedes mostrar las valoraciones durante 30 días, 3 meses, 6 meses o 12 meses o durante un intervalo de fechas personalizado que especifiques. Ten en cuenta que los gráficos **Desglose de clasificaciones** y **Clasificación promedio con el tiempo** siempre mostrarán datos de los últimos 12 meses; estas opciones de período de tiempo no afectarán a dichos gráficos.
+
+Puedes expandir la opción **Filtros** para filtrar las valoraciones mostradas en esta página mediante las siguientes opciones. Estos filtros no se aplicarán a los gráficos **Desglose de clasificaciones** y **Clasificación promedio con el tiempo**.
+
+-   **Clasificación**: de manera predeterminada se comprueban las valoraciones con clasificaciones por estrellas, pero puedes activar o desactivar clasificaciones específicas (de 1 a 5 estrellas) si quieres ver solo las valoraciones asociadas a una clasificación por estrellas particular.
+-   **Opinión**: el valor predeterminado es **Todos**, que incluye clasificaciones sin texto de valoración agregado. Puedes seleccionar **Clasificaciones con opinión** para mostrar solo las clasificaciones que incluyen contenido de valoración escrita.
+-   **Versión de SO**: el valor predeterminado es **Todos**. Puedes elegir un tipo de versión de SO específica si quieres que esta página solo muestre valoraciones aportadas por clientes que usen esa versión de SO.
+-   **Versión del paquete**: el valor predeterminado es **Todas**. Si la aplicación incluye más de un paquete, aquí puedes elegir un paquete específico para mostrar solamente valoraciones realizadas por los clientes que tenían ese paquete cuando revisaron la aplicación.
+-   **Respuestas**: el valor predeterminado es **Todas**. Puedes optar por filtrar las críticas para mostrar solamente aquellas donde has [respondido a los clientes](respond-to-customer-reviews.md), o solo aquellas donde aún ha no ha respondido.
+-   **Actualizaciones**: el valor predeterminado es **Todas**. Puedes optar por filtrar las valoraciones para mostrar solamente las que ha actualizado el cliente desde que [respondiste a una valoración](respond-to-customer-reviews.md) o solo aquellas que el cliente aún no ha actualizado.
+-   **Mercado**: El valor predeterminado es **Todos los mercados**. Puedes elegir un mercado específico si quieres que esta página solo muestre críticas de clientes en ese mercado.
+-   **Tipo de dispositivo**: el filtro predeterminado es **Todos los dispositivos**. Puedes elegir un tipo de dispositivo específico si quieres que esta página solo muestre críticas aportadas por clientes que usen ese tipo de dispositivo.
+-   **Nombre de la categoría**: el filtro predeterminado es **Todos**. Puedes elegir una determinada [categoría de detalles de valoración](#review-insights-categories) para mostrar únicamente las valoraciones que hemos asociado a dicha categoría. 
+
+
+> [!TIP]
+> Si no ves las valoraciones en la página, comprueba que los filtros no han excluido todas tus valoraciones. Por ejemplo, si filtras por un SO de destino que no sea compatible con la aplicación, no verás ninguna valoración.
+
+
+## <a name="ratings-breakdown"></a>Desglose de clasificaciones
+
+El gráfico **Desglose de clasificaciones** muestra: 
+- La clasificación promedio por estrellas de la aplicación.
+- El número total de clasificaciones de la aplicación en los últimos 12 meses.
+- El número total de clasificaciones para cada clasificación por estrellas.
+- El número de clasificaciones para cada tipo de clasificación (nueva o revisada) por clasificación por estrellas en los últimos 12 meses.
+ - **Clasificaciones nuevas** son clasificaciones que los clientes han enviado, pero que no han cambiado.
+ - **Clasificaciones revisadas** son clasificaciones que el cliente ha cambiado de cualquier forma, incluso cambiar el texto de la valoración.
+
+> [!TIP]
+> La clasificación promedio que un cliente ve en la Tienda tiene en cuenta el mercado y el tipo de dispositivo del cliente, de modo que puede ser diferente de lo que aparece en este informe. Para ver cómo la clasificación promedio aparecerá en la Tienda para un cliente determinado, tendrás que aplicar filtros para seleccionar un mercado y tipo de dispositivo específicos.
+
+
+## <a name="average-rating-over-time"></a>Clasificación promedio con el tiempo
+
+El gráfico **Clasificación promedio con el tiempo** muestra cómo ha cambiado la clasificación promedio de la aplicación durante los últimos 12 meses.
+
+En lugar de calcular el promedio de todas las clasificaciones realizadas durante los últimos 12 meses (como en el gráfico **Desglose de clasificaciones **), el gráfico de **Clasificación promedio en el tiempo** muestra cómo los clientes clasificaron la aplicación en una semana determinada. Esto puede ayudarte a identificar tendencias o determinar si las clasificaciones se vieron afectadas por actualizaciones u otros factores.
+
+
+## <a name="reviews"></a>Valoraciones
+
+Las valoraciones dejadas por los clientes se muestran en esta página.  
+
+Cada valoración de clientes incluye:
 
 -   El título y el texto de la crítica proporcionados por el cliente. (Las críticas escritas por clientes en Windows Phone 8.1 y versiones anteriores no tendrán título).
 -   La fecha de la crítica.
@@ -33,52 +80,43 @@ Cada crítica del cliente contiene lo siguiente:
 -   La versión del paquete de la aplicación en el dispositivo del cliente en el momento en que se escribió la crítica. (Esta información no está disponible para críticas enviadas en línea o enviadas por los clientes en Windows 8.1 y versiones anteriores).
 -   La versión del SO del dispositivo que estaba usando el cliente cuando se escribió la crítica.
 -   El nombre del dispositivo que estaba usando el cliente cuando se escribió la crítica. (Esta información no está disponible para críticas enviadas en línea o enviadas por los clientes en Windows 8.1 y versiones anteriores).
--   El "recuento de utilidad" de la crítica, según las clasificaciones de otros clientes al leerla. Estas clasificaciones se muestran como una serie de dos números: el primer número muestra cuántos clientes la clasificaron como útil y el segundo número es el número total de clientes que clasificaron la crítica. Por ejemplo, un recuento de utilidad de 4/10 significa que de 10 clasificadores, 4 opinaron que la crítica era útil y 6, que no lo era. (Si no hay ningún voto de utilidad para una crítica, no se mostrará ningún recuento de utilidad.)
+-   El "recuento de utilidad" de la crítica, según las clasificaciones de otros clientes al leerla. Estas clasificaciones se muestran como una serie de dos números: el primer número muestra cuántos clientes la clasificaron como útil y el segundo número es el número total de clientes que clasificaron la crítica. Por ejemplo, un recuento de utilidad de 4/10 significa que de 10 clasificadores, 4 opinaron que la crítica era útil y 6, que no lo era. (Si no hay ningún voto de utilidad para una valoración, no se mostrará ningún recuento de utilidad).
 
-> **Nota** Puede que, ocasionalmente, veas desaparecer opiniones de este informe. Esto puede ocurrir porque Microsoft quita opiniones de la Tienda que estén escritas por clientes que ejecutan ciertas compilaciones de Insider y versiones preliminares de Windows 10. Lo hacemos para reducir la posibilidad de que una opinión negativa que se deba a un problema en una compilación de una versión preliminar de Windows. También podremos eliminar opiniones de la Tienda que se hayan identificado como spam, inadecuadas, ofensivas o que infringían las directivas de otra forma. Esperamos que esta acción dé como resultado una mejor experiencia del cliente.
+Ten en cuenta que los clientes pueden dejar una clasificación de la aplicación sin agregar comentarios, por lo que normalmente verás menos valoraciones que clasificaciones.
 
-## <a name="apply-filters"></a>Aplicar filtros
+Puedes ordenar las valoraciones de la página por fecha o por clasificación en orden ascendente o descendente. Haz clic en el vínculo **Ordenar por** para ver las opciones para ordenar por fecha o clasificación. 
+
+> [!NOTE]
+> Puede que, ocasionalmente, observes que las valoraciones desaparecen de este informe. Esto puede ocurrir porque Microsoft quita opiniones de la Tienda que estén escritas por clientes que ejecutan ciertas compilaciones de Insider y versiones preliminares de Windows 10. Lo hacemos para reducir la posibilidad de que una opinión negativa que se deba a un problema en una compilación de una versión preliminar de Windows. También podremos eliminar opiniones de la Tienda que se hayan identificado como spam, inadecuadas, ofensivas o que infringían las directivas de otra forma. Esperamos que esta acción dé como resultado una mejor experiencia del cliente.
 
 
-Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página.
-
->**Sugerencia** Si no ves ninguna crítica en la página, comprueba que los filtros no hayan excluido todas tus críticas. Por ejemplo, si filtras por un SO de destino que no es compatible con la aplicación, no verás ninguna crítica.
-
--   **Clasificación**: de manera predeterminada se comprueban todas las clasificaciones por estrellas, pero puedes activar o desactivar clasificaciones específicas (de 1 a 5 estrellas) si quieres ver solo las críticas asociadas a una clasificación por estrellas particular.
--   **Desde**: el valor predeterminado (en blanco) mostrará las opiniones a partir del momento en el que se publicó la aplicación. Puedes elegir una fecha distinta si solo quieres ver las opiniones que se dejaron en la fecha que elijas o después de esta.
--   **Hasta**: el valor predeterminado (en blanco) mostrará las opiniones hasta la fecha actual. Puedes elegir una fecha distinta si solo quieres ver las opiniones que se dejaron en la fecha que elijas o antes de esta.
--   **Contenido de la crítica**: el valor predeterminado es **Todos**, que incluye clasificaciones sin texto de crítica agregado. Puedes seleccionar **Clasificaciones con contenido de crítica** para mostrar solo las clasificaciones que incluyen contenido de crítica escrita.
--   **SO de destino**: el valor predeterminado es **Todos**. Puedes elegir un determinado sistema operativo de destino si quieres que esta página muestre solo clasificaciones de clientes con paquetes cuyo destino es el SO en cuestión.
--   **Respuestas**: el valor predeterminado es **Todas**. Puedes optar por filtrar las críticas para mostrar solamente aquellas donde has [respondido a los clientes](respond-to-customer-reviews.md), o solo aquellas donde aún ha no ha respondido.
--   **Actualizaciones**: el valor predeterminado es **Todas**. Puedes optar por filtrar las críticas para mostrar solamente las críticas que ha actualizado el cliente desde que [respondiste a una crítica](respond-to-customer-reviews.md) o solo aquellas que el cliente aún no ha actualizado.
--   **Mercado**: El valor predeterminado es **Todos los mercados**. Puedes elegir un mercado específico si quieres que esta página solo muestre críticas de clientes en ese mercado.
--   **Tipo de dispositivo**: el filtro predeterminado es **Todos los dispositivos**. Puedes elegir un tipo de dispositivo específico si quieres que esta página solo muestre críticas aportadas por clientes que usen ese tipo de dispositivo.
--   **Versión del paquete**: el filtro predeterminado es **Todos los paquetes**. Puedes elegir un paquete específico si deseas que esta página muestre solamente críticas realizadas por los clientes que tenían ese paquete cuando revisaron la aplicación.
-
-La información contenida en todos los gráficos enumerados a continuación reflejará el período de tiempo seleccionado en la sección **Aplicar filtros** y todos los filtros que hayas elegido aquí.
-
-> **Nota** La clasificación media que un cliente ve en la Tienda tiene en cuenta el mercado y el tipo de dispositivo del cliente y considera las clasificaciones durante el último año. Por lo tanto, puede ser diferente de lo que aparece en este informe. Para ver cómo la clasificación media aparecerá en la Tienda para un cliente determinado, tendrás que aplicar filtros para seleccionar un mercado y tipo de dispositivo específicos, así como para establecer la opción **Fecha** en **Últimos 12 meses**.
-
-## <a name="translating-reviews"></a>Traducción de críticas
-
+## <a name="translating-reviews"></a>Traducción de valoraciones
 
 De manera predeterminada, se traducen las críticas que no se escribieron en tu idioma preferido. Si lo prefieres, la traducción de las críticas se puede deshabilitar desactivando la casilla **Traducir críticas** situada en la esquina superior derecha, encima de la lista de críticas.
 
 Ten en cuenta que las críticas las traduce un sistema de traducción automática y que la traducción resultante no siempre será precisa. Se te proporciona el texto original por si quieres compararlo con la traducción o traducirlo por otros medios.
 
-## <a name="sorting-reviews"></a>Ordenación de críticas
+
+## <a name="review-insight-categories"></a>Categorías de detalles de valoración
+
+Puedes ver **Categorías de detalles de valoración** para ver tus valoraciones agrupadas según las categorías que hemos determinado que pueden asociarse con la valoración.
+
+> [!NOTE]
+> Valoraciones con menos de 24 horas o en un idioma distinto del inglés no se incluyen al ver valoraciones por categorías.
+
+Cerca de la parte superior de la página, verás los bloques de colores que representan valoraciones por categoría. Selecciona una de estas categorías para ver solo las valoraciones que hemos asociado a esa categoría. También puedes usar los [filtros de página](#apply-filters) para filtrar por categoría.
+
+Para ver un desglose del número de valoraciones por categoría, selecciona **Mostrar detalles**. 
 
 
-Puedes ordenar las críticas de la página por fecha o por clasificación en orden ascendente o descendente. Haz clic en el vínculo **Ordenar por** para ver las opciones para ordenar por fecha o clasificación. Al hacer clic en un botón de radio en la sección de Clasificación o Fecha, se aplicarán los criterios de ordenación y verás la etiqueta de ordenación junto al encabezado **Ordenar por**. Puedes quitar por completo el criterio de ordenación haciendo clic en la **X** que aparece en cada etiqueta.
+## <a name="responding-to-customer-reviews"></a>Responder a las valoraciones de los clientes
 
-## <a name="responding-to-customer-reviews"></a>Responder a las críticas de los clientes
-
-Puedes usar el panel del Centro de desarrollo de la Tienda Windows para enviar respuestas a muchas de las críticas de los clientes. Para más información, consulta [Responder a las críticas de los clientes](respond-to-customer-reviews.md).
+Puedes usar el panel de información del Centro de desarrollo de la Tienda Windows, la [API de opiniones de la Tienda Windows](../monetize/submit-responses-to-app-reviews.md), o la [aplicación Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para enviar respuestas a muchas de las valoraciones de tus clientes. Para más información, consulta [Responder a las valoraciones de los clientes](respond-to-customer-reviews.md).
 
 Estas son algunas acciones adicionales que puedes considerar según las críticas y clasificaciones que estás viendo.
 
 -   Si notas que hay muchas revisiones que sugieren agregar o modificar una función, o que se quejan sobre un problema, piensa en lanzar una nueva versión que contemple lo indicado en comentarios específicos. (Asegúrate de actualizar la [descripción](create-app-descriptions.md) de tu aplicación para indicar que el problema se ha corregido).
--   Si el promedio de la clasificación es alto, pero el nombre de descargas es bajo, quizás quieras buscar maneras de [exponer la aplicación a más personas](app-promotion-and-customer-engagement.md), dado que es bien recibida por los usuarios que la han probado.
+-   Si el promedio de la clasificación es alto, pero el nombre de descargas es bajo, quizás quieras buscar maneras de [exponer la aplicación a más personas](attract-customers-and-promote-your-apps.md), dado que es bien recibida por los usuarios que la han probado.
 
 
  

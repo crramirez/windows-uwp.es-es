@@ -4,26 +4,28 @@ Description: "Obtén información sobre qué hacer si crees que otra aplicación
 title: "Protección de marcas comerciales y derechos de autor"
 ms.assetid: 61C4EEC0-AD4D-4828-ADEC-F18E99DD4FFC
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f8a74261c6982ec89509579d3856bea743fd8743
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 86935ae0a2fb69f22ebd48ad5e433902c41a77bb
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="trademark-and-copyright-protection"></a>Protección de marcas comerciales y derechos de autor
 
 
 Obtén información sobre qué hacer si crees que otra aplicación está infringiendo tus derechos de propiedad intelectual.
 
-## <a name="1-how-may-i-report-an-infringement-of-my-intellectual-property-rights-within-a-windows-app"></a>1. ¿Cómo puedo comunicar una infracción de mis derechos de propiedad intelectual relativos a una aplicación de Windows?
+### <a name="1-how-may-i-report-an-infringement-of-my-intellectual-property-rights-within-a-windows-app"></a>1. ¿Cómo puedo comunicar una infracción de mis derechos de propiedad intelectual relativos a una aplicación de Windows?
 
 
 Usa el siguiente [formulario](http://go.microsoft.com/fwlink/p/?LinkId=273879) para denunciar una infracción de derechos de publicidad, marca comercial o copyright relativos a una aplicación de Windows. Para infracciones de derechos de publicidad, marca comercial o copyright en múltiples aplicaciones, envía tu denuncia a mktlegal@microsoft.com. Si necesitas más información acerca de la política de la Ley de Derechos de Autor del Milenio Digital.de Microsoft, visita: [https://www.microsoft.com/info/cpyrtInfrg.aspx](http://go.microsoft.com/fwlink/p/?LinkId=626976).
 
-## <a name="2-i-created-my-app-to-work-with-a-microsoft-productservice-may-i-use-the-microsoft-productservice-name-in-the-name-of-my-app"></a>2. He creado la aplicación para que funcione con un servicio/producto de Microsoft. ¿Podría usar el nombre del producto/servicio de Microsoft en el nombre de la aplicación?
+### <a name="2-i-created-my-app-to-work-with-a-microsoft-productservice-may-i-use-the-microsoft-productservice-name-in-the-name-of-my-app"></a>2. He creado la aplicación para que funcione con un servicio/producto de Microsoft. ¿Podría usar el nombre del producto/servicio de Microsoft en el nombre de la aplicación?
 
 
 Microsoft prefiere que no lo hagas. Sin embargo, si es una clara necesidad empresarial, puedes utilizarlo siempre y cuando cumplas las siguientes instrucciones:
@@ -34,31 +36,31 @@ Microsoft prefiere que no lo hagas. Sin embargo, si es una clara necesidad empre
 
 Para obtener más información, consulta las [Instrucciones Generales de Microsoft sobre Marcas Registradas](http://go.microsoft.com/fwlink/p/?LinkId=225434).
 
-## <a name="3-is-it-ok-if-i-use-the-trademarked-name-or-logo-of-another-company-in-the-title-of-my-app-or-as-part-of-the-content-of-my-app"></a>3. ¿Puedo usar el logotipo o el nombre de la marca comercial de otra empresa en el título de la aplicación o como parte del contenido de la aplicación?
+### <a name="3-is-it-ok-if-i-use-the-trademarked-name-or-logo-of-another-company-in-the-title-of-my-app-or-as-part-of-the-content-of-my-app"></a>3. ¿Puedo usar el logotipo o el nombre de la marca comercial de otra empresa en el título de la aplicación o como parte del contenido de la aplicación?
 
 
 Es necesario que consultes a un asesor especializado en marcas comerciales sobre el uso del logotipo o nombre de la marca comercial de otra empresa. De todas formas, Microsoft retirará de la Tienda cualquier aplicación tras la debida notificación por parte de los propietarios de una marca comercial del uso incorrecto de su marca comercial. Por lo tanto, te pedimos que actúes con las debidas diligencias.
 
 Para obtener más información, consulta [U.S. Patent and Trademark Office: Trademark Basics (Oficina Estadounidense de Patentes y Marcas: Conceptos básicos de las marcas comerciales)](http://go.microsoft.com/fwlink/p/?LinkId=225271).
 
-## <a name="4-may-i-use-microsofts-graphical-trademarks-logos-such-as-the-windows-flag-logo-in-my-app"></a>4. ¿Puedo usar marcas gráficas de Microsoft (logotipos), como el logotipo de la BANDERA DE WINDOWS, en mi aplicación?
+### <a name="4-may-i-use-microsofts-graphical-trademarks-logos-such-as-the-windows-flag-logo-in-my-app"></a>4. ¿Puedo usar marcas gráficas de Microsoft (logotipos), como el logotipo de la BANDERA DE WINDOWS, en mi aplicación?
 
 
 No. Microsoft solo permite a terceros usar sus logotipos de marca comercial por medio de una licencia oficial. Es poco frecuente la concesión de esta licencia en este contexto.
 
 Para obtener más información, consulta [U.S. Patent and Trademark Office: Trademark Basics (Oficina Estadounidense de Patentes y Marcas: Conceptos básicos de las marcas comerciales)](http://go.microsoft.com/fwlink/p/?LinkId=225271) o descarga [U.S.Patent and Trademark Office: Trademark Basics (Oficina Estadounidense de Copyright: Conceptos básicos de copyright)](http://go.microsoft.com/fwlink/p/?LinkID=225273).
 
-## <a name="5-do-i-need-to-use-registered--or-trademark--symbols-when-i-refer-to-a-microsoft-trademark-in-my-app-and-must-i-when-using-a-microsoft-trademark-place-a-trademark-attribution-notice-in-my-app-for-example-microsoft-is-a-registered-trademark-of-the-microsoft-corporation"></a>5. ¿Tengo que usar los símbolos de registrado ® o marca comercial ™ al hacer referencia a una marca comercial de Microsoft en mi aplicación? Al usar una marca comercial de Microsoft, ¿es necesario que incluya una nota de atribución de marca comercial, por ejemplo "Microsoft es una marca comercial registrada de Microsoft Corporation"?
+### <a name="5-do-i-need-to-use-registered--or-trademark--symbols-when-i-refer-to-a-microsoft-trademark-in-my-app-and-must-i-when-using-a-microsoft-trademark-place-a-trademark-attribution-notice-in-my-app-for-example-microsoft-is-a-registered-trademark-of-the-microsoft-corporation"></a>5. ¿Tengo que usar los símbolos de registrado ® o marca comercial ™ al hacer referencia a una marca comercial de Microsoft en mi aplicación? Al usar una marca comercial de Microsoft, ¿es necesario que incluya una nota de atribución de marca comercial, por ejemplo "Microsoft es una marca comercial registrada de Microsoft Corporation"?
 
 
 No existe ningún requisito legal que obligue a incluir dichos símbolos o la nota de atribución, pero Microsoft agradece que lo hagas.
 
-## <a name="6-is-it-ok-if-i-make-a-game-that-is-identical-to-someone-elses-game-as-long-as-i-change-the-name"></a>6. ¿Puedo crear un juego que sea idéntico al juego de otra persona siempre y cuando le ponga un nombre diferente?
+### <a name="6-is-it-ok-if-i-make-a-game-that-is-identical-to-someone-elses-game-as-long-as-i-change-the-name"></a>6. ¿Puedo crear un juego que sea idéntico al juego de otra persona siempre y cuando le ponga un nombre diferente?
 
 
 No, no si no tienes permiso para ello. El copyright no protege la idea de un juego, pero protege la expresión original en un juego, como elementos audiovisuales originales, elementos gráficos, sonido, caracteres, etc., y la selección y disposición original de dichos elementos. Un juego que es demasiado parecido al juego creado por otra persona puede convertirte en objeto de una demanda por infracción de copyright. Microsoft no puede asesorar acerca de este asunto. Deberías consultar a un abogado si no estás seguro de hasta qué punto tu juego es parecido a otro ya existente. Para obtener más información, descarga [U.S. Copyright Office: Copyright Basics (Oficina Estadounidense de Copyright: Conceptos básicos de copyright)](http://go.microsoft.com/fwlink/p/?LinkID=225273).
 
-## <a name="7-what-should-i-do-if-i-get-a-notice-from-microsoft-telling-me-it-has-received-a-complaint-that-my-app-infringes-a-trademark-or-copyright"></a>7. ¿Qué debo hacer si recibo un aviso de Microsoft en donde se me informa de que se ha denunciado que mi aplicación incumple los derechos de una marca comercial o copyright?
+### <a name="7-what-should-i-do-if-i-get-a-notice-from-microsoft-telling-me-it-has-received-a-complaint-that-my-app-infringes-a-trademark-or-copyright"></a>7. ¿Qué debo hacer si recibo un aviso de Microsoft en donde se me informa de que se ha denunciado que mi aplicación incumple los derechos de una marca comercial o copyright?
 
 
 Lee detenidamente el aviso de Microsoft y sigue las instrucciones. El aviso de Microsoft puede incluir determinados pasos específicos que debes seguir para comunicarnos qué has hecho para corregir el problema, informarnos de que no estás de acuerdo con el demandante y/o explicarnos que quieres reenviar la aplicación a la Tienda.

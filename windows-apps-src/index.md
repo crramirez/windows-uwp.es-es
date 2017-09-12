@@ -1,22 +1,196 @@
 ---
-Description: "Esta es la información que necesitas para crear una aplicación universal de Windows que se pueda ejecutar en cualquier dispositivo basado en Windows10, como teléfonos, tabletas y PC."
-title: "Guías de procedimientos para aplicaciones Windows 10: desarrollo de aplicaciones Windows"
-ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
-author: martinekuan
-redirect_url: https://developer.microsoft.com/en-us/windows/apps
-ms.openlocfilehash: 84a4aebb5c41e713c0038cd203b320ff607fa25a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+author: mijacobs
+layout: LandingPage
+description: "La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows: PC, teléfonos, Xbox One, HoloLens y mucho más y publicarlas en la Tienda."
+title: "Documentación de UWP: desarrollador de aplicaciones UWP | Documentos de Microsoft"
+ms.prod: windows
+ms.topic: article
+ms.author: mijacobs
+ms.date: 08/4/2017
+ms.technology: uwp
+keywords: "windows uwp, plataforma universal de windows, API de windows runtime, api de windows, referencia de api de windows, api de winrt, referencia de api de windows, api de uwp, referencia de api de uwp, desarrollar uwp, diseñar uwp, publicar uwp"
+ms.openlocfilehash: 92d80e140ee77ca29b04303e226056324e774eeb
+ms.sourcegitcommit: 0ebc8dca2fd9149ea163b7db9daa14520fc41db4
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/08/2017
 ---
-# <a name="how-to-guides-for-uwp-apps-on-windows-10"></a>Guías de procedimientos para aplicaciones para UWP de Windows 10
+# <a name="universal-windows-platform-documentation"></a>Documentación de la Plataforma universal de Windows
+La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows: PC, teléfonos, Xbox One, HoloLens y mucho más y publicarlas en la Tienda.
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Esta es la información que necesitas para crear una aplicación universal de Windows que se pueda ejecutar en cualquier dispositivo basado en Windows10, como teléfonos, tabletas y PC. Esta sección ofrece instrucciones y ejemplos de código organizados por el tipo de tarea que deseas realizar.
-
-Si quieres una introducción a la Plataforma universal de Windows (UWP) y saber cómo te permite usar el mismo código para proporcionar experiencias adaptadas correctamente a varios tipos de dispositivos Windows, consulta estos artículos:
-
--   [Creación de tu primera aplicación de la Plataforma universal de Windows](get-started/create-a-hello-world-app-xaml-universal.md)
--   [Guía de aplicaciones para la Plataforma universal de Windows (UWP)](get-started/universal-application-platform-guide.md)
--   [¿Qué es una aplicación para Plataforma universal de Windows?](get-started/whats-a-uwp.md)
-
+<ul class="panelContent cardsF">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_get-started.svg" alt="Get started icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Introducción</h3>
+                        <p>
+                            <a href="get-started/whats-a-uwp.md">¿Qué es una aplicación para UWP?</a>
+                        </p>
+                        <p>
+                            <a href="get-started/sign-up.md">Registrarse para obtener una cuenta de desarrollador</a>
+                        </p>
+                        <p>
+                            <a href="get-started/get-set-up.md">Preparación</a>
+                        </p>
+                        <p>
+                            <a href="get-started/your-first-app.md">Crear tu primera aplicación</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_management.svg" alt="Design icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Diseño e interfaz de usuario</h3>
+                        <p>
+                            <a href="layout/index.md">Diseño</a>
+                        </p>
+                        <p>
+                            <a href="style/index.md">Estilo</a>
+                        </p>
+                        <p>
+                            <a href="controls-and-patterns/index.md">Controles y patrones</a>
+                        </p>
+                        <p>
+                            <a href="design-downloads/index.md">Kits de herramientas de diseño</a>
+                        </p>
+                        <p>
+                            <a href="input-and-devices/index.md">Entrada y dispositivos</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_code-edit.svg" alt="Develop icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Desarrollar magníficas aplicaciones</h3>
+                        <p>
+                            <a href="packaging/index.md">Empaquetado de aplicaciones</a>
+                        </p>
+                        <p>
+                            <a href="porting/index.md">Migración de aplicaciones a Windows 10</a>
+                        </p>
+                        <p>
+                            <a href="winrt-components/index.md">Componentes de Windows Runtime</a>
+                        </p>
+                        <p>
+                            <a href="xbox-apps/index.md">UWP en Xbox One</a>
+                        </p>
+                        <p>
+                            <a href="apps-for-education/index.md">Aplicaciones educativas para UWP</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_upgrade.svg" alt="Publish icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Publicar</h3>
+                        <p>
+                            <a href="publish/app-submissions.md">Envíos de aplicaciones</a>
+                        </p>
+                        <p>
+                            <a href="publish/the-app-certification-process.md">Proceso de certificación de aplicaciones</a>
+                        </p>
+                        <p>
+                            <a href="publish/upload-app-packages.md">Cargar paquetes de aplicaciones</a>
+                        </p>
+                        <p>
+                            <a href="publish/create-your-app-by-reserving-a-name.md">Reservar un nombre</a>
+                        </p>
+                        <p>
+                            <a href="publish/set-app-pricing-and-availability.md">Establecer los precios y la disponibilidad de las aplicaciones</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_api-reference.svg" alt="API Ref icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Referencia de API</h3>
+                        <p>
+                            <a href="whats-new/windows-10-version-1703.md">Novedades</a>
+                        </p>
+                        <p>
+                            <a href="//docs.microsoft.com/uwp/">API de la Plataforma universal de Windows</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_multi-connect.svg" alt="Related links icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Vínculos relacionados</h3>
+                        <p>
+                            <a href="//docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps">API de Win32 y COM para las aplicaciones para UWP</a>
+                        </p>
+                        <p>
+                            <a href="//msdn.microsoft.com/library/windows/apps/mt185501.aspx">.NET para aplicaciones para UWP</a>
+                        </p>
+                        <p>
+                            <a href="//msdn.microsoft.com/library/windows/apps/mt691886.aspx">API de Microsoft Store Services SDK</a>
+                        </p>
+                        <p>
+                            <a href="//docs.microsoft.com/en-us/uwp/extension-sdks">Contratos de API y los SDK de extensión de familia de dispositivos</a>
+                        </p>
+                        <p>
+                            <a href="//docs.microsoft.com/uwp/schemas/">Especificaciones del esquema de archivo y XML para aplicaciones para UWP.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

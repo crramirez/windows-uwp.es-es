@@ -2,22 +2,22 @@
 author: mcleanbyron
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: "Usa los ejemplos de código Java de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows."
-title: "Ejemplos de código Java para la API de envío"
+title: "Muestra de Java: envíos de aplicaciones, complementos y pilotos"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, code examples, ejemplos de código"
-ms.openlocfilehash: ff5e857e0f5ce110ab7afc64bd2faa28f7bea517
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "windows 10, uwp, API de envío de la Tienda Windows, ejemplos de código, java"
+ms.openlocfilehash: daa91b5354abc070b1ba538f7d818125e4bc94a9
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/09/2017
 ---
-# <a name="java-code-examples-for-the-submission-api"></a>Ejemplos de código Java para la API de envío
+# <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Muestra de Java: envíos de aplicaciones, complementos y pilotos
 
-En este artículo se proporcionan ejemplos de código Java para usar la *API de envío de la Tienda Windows*. Para obtener más información sobre esta API, consulta [Crear y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
-
-Estos ejemplos de código muestran las siguientes tareas:
+En este artículo se proporcionan ejemplos de código Java que muestran cómo usar la [API de envío de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md) para estas tareas:
 
 * [Obtener un token de acceso de AzureAD](#token)
 * [Crear un complemento](#create-add-on)
@@ -52,7 +52,7 @@ En el siguiente ejemplo se muestra cómo [obtener un token de acceso de Azure AD
 <span id="create-add-on" />
 ## <a name="create-an-add-on"></a>Crear un complemento
 
-En el siguiente ejemplo se muestra cómo [crear](create-an-add-on.md) y luego [eliminar](delete-an-add-on.md) un complemento (los complementos también se conocen como productos desde la aplicación o IAP).
+En el siguiente ejemplo se muestra cómo [crear](create-an-add-on.md) y luego [eliminar](delete-an-add-on.md) un complemento.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L310-L345)]
 

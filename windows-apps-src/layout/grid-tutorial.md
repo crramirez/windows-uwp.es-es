@@ -2,20 +2,25 @@
 author: mukin
 Description: "En este artículo de estilo tutorial se describen los pasos para crear una interfaz de usuario de una aplicación básica. Aquí se explica y se muestra el uso de Grid y StackPanel, dos de los elementos XAML más comunes."
 title: "Creación de una aplicación meteorológica sencilla con Grid y StackPanel"
-ms.author: wdg-dev-content
-ms.date: 02/08/2017
+template: detail.hbs
+ms.author: mukin
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
-ms.openlocfilehash: 094cabc642884f57af2dbeb5125a2a8b81365824
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 12a48ec9e907a65abbbd9ec1e9f9c60c3519fa20
+ms.sourcegitcommit: 2de58584a42e580dbc0d19bdecee12bfee7fd7e7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/23/2017
 ---
 # <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Creación de una aplicación meteorológica sencilla con Grid y StackPanel
 
 Usa XAML para crear el diseño de una aplicación meteorológica sencilla con los elementos **Grid** y **StackPanel**. Con estas herramientas, puedes crear aplicaciones con un aspecto fantástico que funcionen en cualquier dispositivo que ejecute Windows10. Este tutorial dura entre 10 y 20minutos.
+
+> **API importantes**: [Clase Grid](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid), [Clase StackPanel](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>Requisitos previos
 - Windows10 y Microsoft Visual Studio2015. [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](../get-started/get-set-up.md).
@@ -46,7 +51,7 @@ Para empezar a crear un diseño, abre **MainPage.xaml** mediante el uso del **Ex
 </Grid>
 ```
 
-El nuevo elemento **Grid** crea un conjunto de 2 filas y columnas que define el diseño de la interfaz de la aplicación. La primera columna tiene un **Width** (ancho) de "3\*", mientras que el segundo tiene "5\*", lo que divide el espacio horizontal entre las 2 columnas en una proporción de 3:5. Del mismo modo, las 2 filas tienen un **Height** (alto) de "3\*" y "\*" respectivamente, por lo tanto, el elemento **Grid** asigna el triple de espacio a la primera fila que a la segunda ("\*" equivale a "1\*"). Estas relaciones se mantienen incluso si se cambia el tamaño de la ventana o se cambia el dispositivo.
+El nuevo elemento **Grid** crea un conjunto de 2 filas y columnas que define el diseño de la interfaz de la aplicación. La primera columna tiene un **Width** (ancho) de "3\*", mientras que el segundo tiene "5\*", lo que divide el espacio horizontal entre las 2 columnas en una proporción de 3:5. Del mismo modo, las 2 filas tienen **Height** (alto) de "3\*" y "\*" respectivamente, por lo tanto, el elemento **Grid** asigna el doble de espacio a la primera fila que a la segunda ("\*" equivale a "1\*"). Estas relaciones se mantienen incluso si se cambia el tamaño de la ventana o se cambia el dispositivo.
 
 Para obtener información sobre otros métodos de definir el tamaño de las filas y columnas, consulta [Definir diseños de página con XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml#layout-properties).
 

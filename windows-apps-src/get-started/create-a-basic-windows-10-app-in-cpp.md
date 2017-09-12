@@ -4,38 +4,35 @@ ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
 title: "Crear una aplicación Hello World en C++ (Windows 10)"
 description: "Con Microsoft Visual Studio 2015, puedes usar C++ para desarrollar una aplicación que se ejecute en Windows 10, incluidos los teléfonos con Windows 10. Estas aplicaciones tienen una interfaz de usuario que se define en lenguaje XAML."
 ms.author: jken
-ms.date: 02/08/2017
+ms.date: 03/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 34a1d665bc98a5224ef7707994138ba40d70763b
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, uwp
+ms.openlocfilehash: c6c351227eacf924314cfaa2157135a8a893704d
+ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/03/2017
 ---
+# <a name="create-a-hello-world-app-in-c"></a>Crear una aplicación "Hello world" en C++
 
-# <a name="create-a-hello-world-app-in-c-windows-10"></a>Crear una aplicación "hello world" en C++ (Windows 10)
+Con Microsoft Visual Studio 2017, podrás usar C++ para desarrollar una aplicación que se ejecuta en Windows 10 con una IU definida en el lenguaje de marcado de aplicaciones extensible (XAML).
 
-Con Microsoft Visual Studio 2015, puedes usar C++ para desarrollar una aplicación que se ejecute en Windows 10, incluidos los teléfonos con Windows 10. Estas aplicaciones tienen una interfaz de usuario que se define en lenguaje XAML.
+> [!NOTE]
+> En este tutorial se usa Visual Studio Community 2017. Si usas otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
 
-Consulta los siguientes temas para acceder a tutoriales en otros lenguajes de programación:
-
--   [Crear la primera aplicación de la Tienda Windows con JavaScript](https://msdn.microsoft.com/library/windows/apps/BR211385)
-
--   [Crear la primera aplicación de la Tienda Windows con C#](https://msdn.microsoft.com/library/windows/apps/Hh974581)
 
 ## <a name="before-you-start"></a>Antes de comenzar...
 
--   Para completar este tutorial, debes usar Visual Studio 2015 Community o una versión posterior, o una de las versiones de Visual Studio 2015 que no sea Community, en un equipo que ejecute Windows 10 o Windows 8.1. Para su descarga, consulta [Obtener las herramientas](http://go.microsoft.com/fwlink/p/?LinkId=532666)
--   Damos por hecho que tienes conocimientos básicos de C++ y XAML estándar y que estás familiarizado con los conceptos de [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
+-   Para completar este tutorial, debes usar Visual Studio Community 2017, o una de las versiones de Visual Studio2017 que no sea Community, en un equipo que ejecute Windows10. Para su descarga, consulta [Obtener las herramientas](http://go.microsoft.com/fwlink/p/?LinkId=532666)
+-   Damos por hecho que tienes conocimientos básicos de C++ y XAML estándar, y que estás familiarizado con los conceptos de [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
 -   Se supone que estás usando el diseño de ventana predeterminado en Visual Studio. Para restablecer el diseño predeterminado, en la barra de menús, elige **Ventana** > **Restablecer diseño de la ventana**.
 
 
 ## <a name="comparing-c-desktop-apps-to-windows-apps"></a>Comparación de aplicaciones de escritorio C++ con aplicaciones de Windows
 
-Si has trabajado en un entorno de programación de escritorio de Windows en C++, posiblemente observarás que algunos aspectos de la programación de aplicaciones de la Tienda Windows y de Windows Phone te resultan familiares, pero otros aspectos requieren algo de estudio por tu parte.
+Si has trabajado en un entorno de programación de escritorio de Windows en C++, posiblemente observarás que algunos aspectos de la escritura de aplicaciones para la UWP te resultan familiares, pero otros aspectos requieren algo de estudio por tu parte.
 
 ### <a name="whats-the-same"></a>¿Qué es igual?
 
@@ -65,11 +62,11 @@ Si has trabajado en un entorno de programación de escritorio de Windows en C++,
 
 ## <a name="hello-world-store-app-in-c"></a>Aplicación Hello World de la Tienda en C++
 
-Nuestra primera aplicación es una presentación para el mundo ("Hello World") que demuestra algunas características básicas de interactividad, diseño y estilos. Vamos a crear una aplicación desde la plantilla de proyecto de aplicación universal de Windows. Si has desarrollado aplicaciones para Windows 8.1 y Windows Phone 8.1 antes, probablemente recuerdes que debes tener tres proyectos en Visual Studio, uno para la aplicación de Windows, otro para la aplicación de teléfono y otro con código compartido. La Plataforma universal de Windows (UWP) de Windows 10 hace posible tener solo un proyecto que se ejecute en todos los dispositivos, incluidos los equipos de escritorio y portátiles que ejecuten Windows 10, los dispositivos como tabletas, teléfonos móviles, etc.
+Nuestra primera aplicación es una presentación para el mundo ("Hello World") que demuestra algunas características básicas de interactividad, diseño y estilos. Vamos a crear una aplicación desde la plantilla de proyecto de aplicación universal de Windows. Si has desarrollado aplicaciones para Windows 8.1 y Windows Phone 8.1 antes, probablemente recuerdes que debes tener tres proyectos en Visual Studio, uno para la aplicación de Windows, otro para la aplicación de teléfono y otro con código compartido. La Plataforma universal de Windows (UWP) de Windows 10 hace posible tener solo un proyecto que se ejecute en todos los dispositivos, incluidos los equipos de escritorio y portátiles que ejecuten Windows 10, los dispositivos como tabletas, teléfonos móviles, dispositivos de realidad virtual, etc.
 
 Empezaremos por los conceptos básicos:
 
--   Cómo crear un proyecto universal de Windows en Visual Studio 2015 o posterior.
+-   Cómo crear un proyecto universal de Windows en Visual Studio 2017.
 
 -   Cómo comprender los proyectos y los archivos que se crean.
 
@@ -79,7 +76,10 @@ Empezaremos por los conceptos básicos:
 
 1.  En la barra de menús de Visual Studio, elige **Archivo** > **Nuevo** > **Proyecto**.
 
-2.  En el cuadro de diálogo **Nuevo Proyecto**, en el panel izquierdo, expande **Instalado** > **Visual C++** > **Windows** > **Universal**.
+2.  En el cuadro de diálogo **Nuevo Proyecto**, en el panel izquierdo, expande **Instalado** > **Visual C++** > **Windows Universal**.
+
+> [!NOTE]
+> Es posible que se te solicite que instales las herramientas de Windows Universal para desarrollo de C++.
 
 3.  En el panel central, selecciona **Aplicación vacía (Windows universal)**.
 
@@ -87,17 +87,18 @@ Empezaremos por los conceptos básicos:
 
 4.  Escribe un nombre para el proyecto. Lo llamaremos HelloWorld.
 
- ![Plantillas de proyecto de C++ en el cuadro de diálogo Nuevo proyecto ](images/vs2015-newuniversalproject-cpp.png)
+ ![Plantillas de proyecto de C++ en el cuadro de diálogo Nuevo proyecto ](images/vs2017-uwp-01.png)
 
 5.  Elige el botón **Aceptar**.
 
-   Si este es el primer proyecto de UWP que has creado y no has habilitado el modo de desarrollador en tu ordenador, aparecerá el cuadro de diálogo Habilitar modo de desarrollador. Haz clic en el vínculo para que aparezca la página de configuración que te permite establecer el modo de desarrollador. El modo de desarrollador te permite implementar y ejecutar localmente las aplicaciones.
+> [!NOTE]
+> Si es la primera vez que usas Visual Studio, es posible que se te solicite habilitar el **Modo de desarrollador** en un diálogo de configuración. El modo de desarrollador es una opción de configuración especial que habilita determinadas funciones, como permiso para ejecutar aplicaciones directamente, en lugar de solo desde la Tienda. Para obtener más información, lee [Habilitar el dispositivo para el desarrollo](enable-your-device-for-development.md). Para continuar con esta guía, selecciona **Modo de desarrollador**, haz clic en **Sí** y cierra el diálogo.
 
    Se crean los archivos del proyecto.
 
 Antes de continuar, veamos qué hay en la solución.
 
-![Solución de aplicación universal con los nodos contraídos](images/vs2015-solutionexploreruniversal-0-cpp.png)
+![Solución de aplicación universal con los nodos contraídos](images/vs2017-uwp-02.png)
 
 ### <a name="about-the-project-files"></a>Sobre los archivos de proyecto
 
@@ -220,7 +221,7 @@ Vamos a agregar algo de contenido a la aplicación.
         <TextBlock Text="What's your name?"/>
         <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
             <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
-            <Button x:Name="inputButton" Content="Say \"Hello\""/>
+            <Button x:Name="inputButton" Content="Say &quot;Hello&quot;"/>
         </StackPanel>
         <TextBlock x:Name="greetingOutput"/>
     </StackPanel>
@@ -242,42 +243,6 @@ Si quieres más información, consulta el tema sobre cómo [ejecutar una aplicac
 
 En la aplicación puedes escribir en el [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683), pero si haces clic en el [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265), no se realiza ninguna acción. En los pasos posteriores, crearás un controlador de eventos para el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) del botón que muestra un saludo personalizado.
 
-## <a name="start-the-app-on-a-mobile-device-emulator"></a>Iniciar la aplicación en un emulador de dispositivos móviles
-
-La aplicación se ejecuta en cualquier dispositivo de Windows 10, así que vamos a ver su aspecto en un Windows Phone. Para esta sección necesitas un Windows Phone con Windows 10 o el acceso a un emulador de Windows Phone. También es necesario que Visual Studio se ejecute en un equipo físico (no una máquina virtual) que admita y tenga habilitado HyperV.
-
-Además de las opciones para realizar la depuración en un dispositivo de escritorio, Visual Studio ofrece opciones para implementar y depurar la aplicación en un dispositivo móvil físico conectado al equipo o en un emulador de dispositivos móviles. Puedes elegir entre varios emuladores para dispositivos con diferentes configuraciones de memoria y pantalla.
-
--   **Dispositivo**
--   **Emulador 10.0.0.0 WVGA de 4 pulgadas y 512 MB**
--   Varios emuladores en otras configuraciones
-
-(Si no ves los emuladores, asegúrate de que tienes instaladas las herramientas de desarrollo de las aplicaciones universales de Windows. Consulta [Preparación](get-set-up.md) para obtener más información).
-
-Se recomienda probar la aplicación en un dispositivo con una pantalla pequeña y de memoria limitada, por lo tanto, usa la opción **Emulador 10.0.0.0 WVGA de 4 pulgadas y 512 MB**.
-**Sugerencia** Para obtener más información sobre el uso del emulador de teléfono, consulta [Ejecutar aplicaciones de Windows Phone en el simulador](http://go.microsoft.com/fwlink/p/?LinkId=394233).
-
-Para depurar tu aplicación en un dispositivo físico, debes contar con uno que esté registrado para desarrollo. Para obtener más información, consulta [Registrar el Windows Phone](https://msdn.microsoft.com/library/windows/apps/Dn614128).
-
-**Para iniciar la depuración en un emulador de dispositivo móvil**
-
-1.  En el menú del dispositivo de destino (![menú Iniciar depuración](images/startdebug-full.png)) en la barra de herramientas **Estándar**, elige **Emulador 10.0.0.0 WVGA de 4 pulgadas y 512 MB**.
-2.  Haz clic en el botón **Iniciar depuración** (![botón Iniciar depuración](images/startdebug-sm.png)) en la barra de herramientas.
-
-   O bien
-
-   En el menú **Depurar**, haz clic en **Iniciar depuración**.
-
-   O bien
-
-   Presiona F5.
-
-En el emulador de dispositivos móviles, la aplicación tiene este aspecto.
-
-![Pantalla inicial de la aplicación en un dispositivo móvil](images/hw10-screen1-mob.png)
-
-Visual Studio inicia el emulador seleccionado y, a continuación, implementa e inicia la aplicación. Lo primero que observarás es que el margen izquierdo de 120 píxeles que se muestra correctamente en el equipo local desplaza el contenido de la pantalla más pequeña de un dispositivo móvil. Más adelante en este tutorial, aprenderás a adaptar la interfaz de usuario a diferentes tamaños de pantalla para que la aplicación siempre se vea bien.
-
 ## <a name="step-2-create-an-event-handler"></a>Paso 2: Crear un controlador de eventos
 
 1.  En MainPage.xaml, en la vista de diseño o XAML, selecciona el [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) "Saluda" del [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635) que agregaste anteriormente.
@@ -291,7 +256,7 @@ Visual Studio inicia el emulador seleccionado y, a continuación, implementa e i
    Al mismo tiempo, en MainPage.xaml, el XAML para [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) se actualiza para declarar el controlador de eventos de [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737), de esta manera:
 
     ```xaml
-    <Button Content="Say \"Hello\" Click="Button_Click"/>
+    <Button Content="Say &quot;Hello&quot;" Click="Button_Click"/>
     ```
 
     Podrías haber agregado esto simplemente al código xaml de forma manual, lo cual puede resultar útil si no se carga el diseñador. Si escribes esto manualmente, escribe "Click" y deja que IntelliSense haga aparecer la opción para agregar un nuevo controlador de eventos. De este modo, Visual Studio creará la declaración del método y el código auxiliar necesarios.
@@ -323,7 +288,7 @@ Es fácil personalizar la apariencia de tu aplicación. De manera predeterminada
 2.  En la etiqueta de apertura [**Aplicación**](https://msdn.microsoft.com/library/windows/apps/BR242324), edita la propiedad [**RequestedTheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme) y establece su valor en **Oscuro**:
 
     ```xaml
-    RequestedTheme="Light"
+    RequestedTheme="Dark"
     ```
 
     Esta es la etiqueta [**Aplicación**](https://msdn.microsoft.com/library/windows/apps/BR242324) completa con el tema oscuro:
@@ -365,7 +330,7 @@ Ahora mismo, en la aplicación de Windows el texto es muy pequeño y difícil de
      En la superficie de diseño XAML, la apariencia del texto cambia. En el editor XAML, se actualiza el XAML para [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652):
 
     ```xaml
-    <TextBlock Text="What's your name?" Style="{StaticResource BasicTextStyle}"/><
+    <TextBlock Text="What's your name?" Style="{StaticResource BaseTextStyle}"/>
     ```
 
 7.  Repite el proceso para establecer el tamaño de fuente y asignar **BaseTextBlockStyle** al elemento `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
@@ -376,12 +341,12 @@ Ahora mismo, en la aplicación de Windows el texto es muy pequeño y difícil de
 
     ```xaml
     <StackPanel x:Name="contentPanel" Margin="120,30,0,0">
-        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="16" Text="What's your name?"/>
+        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="18" Text="What's your name?"/>
         <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
             <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
-            <Button x:Name="inputButton" Content="Say \"Hello\"" Click="Button_Click"/>
+            <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
         </StackPanel>
-        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="16" x:Name="greetingOutput"/>
+        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="18" x:Name="greetingOutput"/>
     </StackPanel>
     ```
 
@@ -443,5 +408,4 @@ Felicidades, has completado el primer tutorial. En él aprendiste cómo se agreg
 Si tienes un proyecto de aplicación universal de Windows destinado a Windows 8.1 o Windows Phone 8.1, puedes portarlo a Windows 10. No hay ningún proceso automático para ello, pero puedes hacerlo manualmente. Empieza con un nuevo proyecto de Windows Universal para obtener la estructura del sistema de proyecto más reciente y los archivos de manifiesto, copia los archivos de código en la estructura de directorios del proyecto, agrega los elementos al proyecto y reescribe el XAML con [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021), como se indica en este tema. Para obtener más información, consulta [Migración de un proyecto de Windows Runtime 8 a un proyecto de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/Mt188203) y [Migrar a la Plataforma universal de Windows (C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525).
 
 Si tienes código C++ que desees integrar con una aplicación para UWP, por ejemplo, para crear una nueva interfaz de usuario de UWP para una aplicación existente, consulta [Cómo: usar código C++ existente en una aplicación universal de la plataforma Windows](http://go.microsoft.com/fwlink/p/?LinkId=619623).
-
 

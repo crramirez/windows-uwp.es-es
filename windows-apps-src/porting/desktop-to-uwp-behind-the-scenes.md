@@ -1,39 +1,41 @@
 ---
 author: normesta
-Description: "En este artículo se ofrece un análisis más profundo sobre cómo funciona el Puente de dispositivo de escritorio a UWP en modo no visible."
-title: Puente de dispositivo de escritorio a UWP, modo no visible
+Description: "En este artículo se ofrece un análisis más profundo sobre cómo funciona el Puente de dispositivo de escritorio en modo no visible."
+title: Segundo plano del Puente de dispositivo de escritorio
 ms.author: normesta
-ms.date: 03/09/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
-ms.openlocfilehash: 9a145ba2699ce95ed853a18faa1cff3af77e7664
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 050499baaf383fc135d833ae1e4733c95f2b5fa1
+ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/26/2017
 ---
-# <a name="desktop-to-uwp-bridge-behind-the-scenes"></a>Puente de dispositivo de escritorio a UWP: modo no visible
+# <a name="behind-the-scenes-of-the-desktop-bridge"></a>Segundo plano del Puente de dispositivo de escritorio
 
-En este artículo se ofrece un análisis más profundo sobre cómo funciona el Puente de dispositivo de escritorio a UWP en modo no visible.
+En este artículo se ofrece un análisis más profundo sobre cómo funciona el Puente de dispositivo de escritorio en modo no visible.
 
-Un objetivo clave del puente de escritorio a UWP es separar el estado de la aplicación del estado del sistema tanto como sea posible a la vez que se mantiene la compatibilidad con otras aplicaciones. Para ello, el puente coloca la aplicación dentro de un paquete de Plataforma universal de Windows (UWP) y, después, detecta y redirige algunos cambios que realiza en el sistema de archivos y en el Registro en tiempo de ejecución.
+Un objetivo clave del Puente de dispositivo de escritorio es separar el estado de la aplicación del estado del sistema tanto como sea posible a la vez que se mantiene la compatibilidad con otras aplicaciones. Para ello, el puente coloca la aplicación dentro de un paquete de Plataforma universal de Windows (UWP) y, después, detecta y redirige algunos cambios que realiza en el sistema de archivos y en el Registro en tiempo de ejecución.
 
-Los paquetes de aplicaciones convertidas son aplicaciones de solo escritorio y de plena confianza que no se virtualizan ni están en un espacio aislado. Esto les permite interactuar con otras aplicaciones de la misma forma que las aplicaciones de escritorio clásicas.
+Los paquetes que creas para tu aplicación de escritorio son solo de escritorio y las aplicaciones de plena confianza no se virtualizan ni están en un espacio aislado. Esto les permite interactuar con otras aplicaciones de la misma forma que las aplicaciones de escritorio clásicas.
 
 ## <a name="installation"></a>Instalación
 
-Los paquetes de aplicaciones se instalan en *C:\Archivos de programa\WindowsApps\nombre_paquete*, con el archivo ejecutable denominado *nombre_aplicación.exe*. Cada carpeta de paquete contiene un manifiesto (denominado AppxManifest.xml) que incluye un espacio de nombres XML especial para las aplicaciones convertidas. En ese archivo de manifiesto hay un elemento ```<EntryPoint>``` que hace referencia a una aplicación de plena confianza. Cuando se inicia la aplicación, no se ejecuta dentro de un contenedor de la aplicación, sino que, en su lugar, se ejecuta como el usuario con normalidad.
+Los paquetes de aplicaciones se instalan en *C:\Archivos de programa\WindowsApps\nombre_paquete*, con el archivo ejecutable denominado *nombre_aplicación.exe*. Cada carpeta de paquete contiene un manifiesto (denominado AppxManifest.xml) que incluye un espacio de nombres XML especial para las aplicaciones empaquetadas. En ese archivo de manifiesto hay un elemento ```<EntryPoint>``` que hace referencia a una aplicación de plena confianza. Cuando se inicia la aplicación, no se ejecuta dentro de un contenedor de la aplicación, sino que, en su lugar, se ejecuta como el usuario con normalidad.
 
 Después de la implementación, el sistema operativo marca los archivos del paquete como de solo lectura y los bloquea completamente. Windows evita que las aplicaciones se inicien en caso de que se manipulen estos archivos.
 
 ## <a name="file-system"></a>Sistema de archivos
 
-Para incluir el estado de la aplicación, el puente intenta capturar los cambios que realiza la aplicación en AppData. Todo lo que se escribe en la carpeta AppData del usuario (por ejemplo, *C:\Usuarios\nombre_usuario\AppData*), como las operaciones de creación, eliminación y actualización, se copia en escritura a una ubicación privada por usuario y por aplicación. Esto crea la ilusión de que la aplicación convertida está editando la carpeta AppData real, pero, en realidad, está modificando una copia privada. Al redireccionar las escrituras de este modo, el sistema puede realizar un seguimiento de todas las modificaciones de archivos que realiza la aplicación. Esto permite que el sistema limpie esos archivos cuando se desinstala la aplicación; por lo tanto, se reduce el "deterioro" del sistema y se ofrece una mejor experiencia de eliminación para el usuario.
+Para incluir el estado de la aplicación, el puente intenta capturar los cambios que realiza la aplicación en AppData. Todo lo que se escribe en la carpeta AppData del usuario (por ejemplo, *C:\Usuarios\nombre_usuario\AppData*), como las operaciones de creación, eliminación y actualización, se copia en escritura a una ubicación privada por usuario y por aplicación. Esto crea la ilusión de que la aplicación empaquetada está editando la carpeta AppData real, pero, en realidad, está modificando una copia privada. Al redireccionar las escrituras de este modo, el sistema puede realizar un seguimiento de todas las modificaciones de archivos que realiza la aplicación. Esto permite que el sistema limpie esos archivos cuando se desinstala la aplicación; por lo tanto, se reduce el "deterioro" del sistema y se ofrece una mejor experiencia de eliminación para el usuario.
 
-Además de redirigir AppData, el puente también combina dinámicamente las carpetas conocidas de Windows (System32, Archivos de programa (x86), etcétera) con los directorios correspondientes del paquete de la aplicación. Cada paquete convertido contiene una carpeta denominada "VFS" en su raíz. Las lecturas de directorios o archivos en el directorio VFS se combinan en tiempo de ejecución con sus respectivos equivalentes nativos. Por ejemplo, una aplicación podría contener *C:\Archivos de pograma\WindowsApps\nombre_paquete\VFS\SystemX86\vc10.dll* como parte de su paquete de la aplicación, pero el archivo aparecería como instalado en *C:\Windows\System32\vc10.dll*.  Esto mantiene la compatibilidad con las aplicaciones de escritorio que pudieran esperar que los archivos se encuentren en ubicaciones distintas del paquete.
+Además de redirigir AppData, el puente también combina dinámicamente las carpetas conocidas de Windows (System32, Archivos de programa (x86), etcétera) con los directorios correspondientes del paquete de la aplicación. Cada paquete contiene una carpeta denominada "VFS" en su raíz. Las lecturas de directorios o archivos en el directorio VFS se combinan en tiempo de ejecución con sus respectivos equivalentes nativos. Por ejemplo, una aplicación podría contener *C:\Archivos de pograma\WindowsApps\nombre_paquete\VFS\SystemX86\vc10.dll* como parte de su paquete de la aplicación, pero el archivo aparecería como instalado en *C:\Windows\System32\vc10.dll*.  Esto mantiene la compatibilidad con las aplicaciones de escritorio que pudieran esperar que los archivos se encuentren en ubicaciones distintas del paquete.
 
-No se permiten las escrituras en archivos o carpetas del paquete de la aplicación convertida. El puente ignora las escrituras en archivos y carpetas que no forman parte del paquete, y se permiten si el usuario tiene permisos.
+No se permiten las escrituras en archivos o carpetas del paquete de la aplicación. El puente ignora las escrituras en archivos y carpetas que no forman parte del paquete, y se permiten si el usuario tiene permisos.
 
 ### <a name="common-operations"></a>Operaciones comunes
 
@@ -69,7 +71,7 @@ FOLDERID_System\spool | AppVSystem32Spool | x86, amd64
 
 ## <a name="registry"></a>Registro
 
-El puente controla el Registro de forma similar al sistema de archivos. Los paquetes de aplicaciones convertidas contienen un archivo registry.dat, que actúa como el equivalente lógico de *HKLM\Software* en el Registro real. En tiempo de ejecución, este Registro virtual combina el contenido de este subárbol en el subárbol del sistema nativo para proporcionar una vista especial de ambos. Por ejemplo, si registry.dat contiene una sola clave "Foo", entonces una operación de lectura de *HKLM\Software* en tiempo de ejecución también mostrará que contiene "Foo" (además de todas las claves del sistema nativo).
+El puente controla el Registro de forma similar al sistema de archivos. Los paquetes de aplicaciones contienen un archivo registry.dat, que actúa como el equivalente lógico de *HKLM\Software* en el Registro real. En tiempo de ejecución, este Registro virtual combina el contenido de este subárbol en el subárbol del sistema nativo para proporcionar una vista especial de ambos. Por ejemplo, si registry.dat contiene una sola clave "Foo", entonces una operación de lectura de *HKLM\Software* en tiempo de ejecución también mostrará que contiene "Foo" (además de todas las claves del sistema nativo).
 
 Solo las claves que se encuentran en *HKLM\Software* forman parte del paquete, no las claves que se encuentran en *HKCU* o en otros lugares del Registro. No se permiten las escrituras en las claves o los valores del paquete. El puente omite las escrituras en las claves o los valores que no forman parte del paquete y dichas escrituras se permiten si el usuario tiene permisos.
 
@@ -91,3 +93,13 @@ Escrituras fuera del paquete | Omitidas por el puente. Se permiten si el usuario
 ## <a name="uninstallation"></a>Desinstalación
 
 Cuando el usuario desinstala un paquete, se quitan todos los archivos y las carpetas ubicados en *C:\Archivos de programa\WindowsApps\nombre_paquete*, así como las escrituras redirigidas a AppData o al Registro que capturó el puente.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+**Encuentra respuestas a preguntas específicas**
+
+Nuestro equipo supervisa estas [etiquetas de StackOverflow](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
+
+**Envíanos tus comentarios acerca de este artículo**
+
+Usa la sección comentarios que tienes a continuación.

@@ -1,22 +1,25 @@
 ---
 author: jnHs
-Description: "Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y productos desde la aplicación (IAP), como las ganancias de Microsoft Advertising."
+Description: "Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y productos desde la aplicación (IAP), como las ganancias de publicidad."
 title: Proceso de pago
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c27e06491b66fea4f451b70309a9a8c3802aff18
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: eae4c71366da0aa4b2be3ce722bfd0e3273ccf0a
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="getting-paid"></a>Proceso de pago
-Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y complementos, como las ganancias de Microsoft Advertising.
+Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y complementos, como las ganancias de publicidad.
 
-> **Importante** Para poder recibir dinero por las ventas de aplicaciones en la Tienda Windows, debes [configurar tu cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
+> [!IMPORTANT]
+> Antes de que recibas dinero por las ventas de aplicaciones en la Tienda Windows, debes [configurar tu cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Comisión de la Tienda
 
@@ -28,11 +31,14 @@ La comisión de la Tienda Windows se aplica a todas las ventas de aplicaciones r
 
 ## <a name="price-tiers"></a>Franjas de precios
 
-La franja de precios establece el precio de venta en todos los países donde eliges distribuir tu aplicación. Puedes ofrecer tu aplicación de forma gratuita o elegir un precio que los clientes deben pagar para adquirir tu aplicación. Las franjas de precios empiezan por 0,99USD, con incrementos adicionales (1,29USD, 1,49USD, 1,99USD, etc.). Estos incrementos entre franjas de precios aumentan a medida que el precio sube.
+La franja de precios que selecciones establece el [precio de ventas](set-and-schedule-app-pricing.md#base-price) en todos los países donde eliges distribuir tu aplicación. También puedes usar características de precios adicionales, tales como [elegir precios diferentes para distintos mercados](set-and-schedule-app-pricing.md#customize-pricing-for-specific-markets) o [poner tu aplicación en oferta](put-apps-and-add-ons-on-sale.md).
 
-> **Nota** Estas franjas de precios también se aplican a cualquier complemento que ofrezcas desde la aplicación.
+Puedes ofrecer tu aplicación de forma gratuita o elegir un precio que los clientes deben pagar para adquirir tu aplicación. Las franjas de precios empiezan por 0,99USD, con incrementos adicionales (1,09USD, 1,19USD, etc.). Estos incrementos entre franjas de precios aumentan a medida que el precio sube.
 
-Cada franja de precios tiene un valor correspondiente en cada una de las más de 60 divisas que ofrece la Tienda. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. No obstante, debido a cambios en las tasas de cambio extranjeras, el importe de ventas exacto puede variar levemente de una moneda a otra.
+> [!NOTE] 
+> Estas franjas de precios también se aplican a cualquier complemento que ofrezcas desde la aplicación.
+
+Cada franja de precios tiene un valor correspondiente en cada una de las divisas que ofrece la Tienda. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. No obstante, debido a cambios en las tasas de cambio extranjeras, el importe de ventas exacto puede variar levemente de una moneda a otra.
 
 Recuerda que la franja de precios que seleccionaste puede incluir el impuesto sobre el valor añadido o las ventas que tus clientes deben pagar. Para más información, consulta [detalles de impuestos para aplicaciones de pago](tax-details-for-paid-apps.md) para obtener más información.
 
@@ -52,7 +58,8 @@ Para seleccionar la opción de pagos en suspensión, ve a **Configuración de la
 
 Una vez hayas establecido el estado de suspensión de pago en **Activado**, todos los pagos estarán en suspensión hasta que cambies el control deslizante por **Desactivado**. Al hacerlo, se te incluirá durante el próximo ciclo de pagos mensual (siempre que se hayas cumplido los umbrales de pago aplicables). Por ejemplo, si has tenido los pagos en suspensión, pero te gustaría que se generara un pago en junio, asegúrate de definir el estado de suspensión del pago en **Desactivado** antes de final de mayo.
 
-> **Importante** La selección del **estado de suspensión de pago** se aplica a **todas** las fuentes de ingresos que se pagan a través del Centro de desarrollo de Windows (Tienda Windows, Microsoft Advertising, Azure Marketplace, etc.). No puedes seleccionar diferentes estados de suspensión para cada fuente de ingresos.
+> [!NOTE]
+> La selección del **Estado de suspensión de pago** se aplica a **todas** las fuentes de ingresos que se pagan a través del Centro de desarrollo de Windows (Tienda Windows, publicidad, AzureMarketplace, etc.). No puedes seleccionar diferentes estados de suspensión para cada fuente de ingresos.
 
 
  

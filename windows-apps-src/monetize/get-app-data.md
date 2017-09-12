@@ -4,20 +4,20 @@ ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: "Usa estos métodos en la API de envío de la Tienda Windows para recuperar los datos de las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Obtener datos de la aplicación"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, app data, datos de la aplicación"
-ms.openlocfilehash: dc0aa91aa417689866aa6bd666f0446c0eb2e242
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0bb01250756c464113570ece433afe11506a5399
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="get-app-data"></a>Obtener datos de la aplicación
 
 Usa los métodos siguientes de la API de envío de la Tienda Windows para obtener datos de aplicaciones existentes en tu cuenta del Centro de desarrollo. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
-
->**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. Este permiso se habilita para cuentas de desarrollador en fases y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
 
 Antes de poder usar estos métodos, la aplicación ya debe existir en tu cuenta del Centro de desarrollo. Para crear o administrar envíos de aplicaciones, consulta los métodos de [Administrar envíos de aplicaciones](manage-app-submissions.md).
 
@@ -88,7 +88,8 @@ Este recurso representa una aplicación registrada en tu cuenta.
   "pendingApplicationSubmission": {
     "id": "1152921504621243487",
     "resourceLocation": "applications/9NBLGGH4R315/submissions/1152921504621243487"
-  }
+  },
+  "hasAdvancedListingPermission": false
 }
 ```
 
@@ -103,7 +104,8 @@ Este recurso tiene los siguientes valores.
 | publisherName       | cadena  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde al valor **paquete/identidad/editor** que aparece en la página de [identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) de la aplicación en el panel del Centro de desarrollo de Windows.       |
 | firstPublishedDate      | cadena  | La fecha en que se publicó la aplicación por primera vez, en formato ISO 8601.   |
 | lastPublishedApplicationSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para la aplicación.    |
-| pendingApplicationSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   |
+| pendingApplicationSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   
+| hasAdvancedListingPermission        | objeto  |  Indica si puedes configurar las [gamingOptions](manage-app-submissions.md#gaming-options-object) o los [tráileres](manage-app-submissions.md#trailer-object) para envíos para la aplicación. Para obtener más información, consulta [esta sección](manage-app-submissions.md#advanced-listings). |  |
 
 
 <span id="add-on-object" />

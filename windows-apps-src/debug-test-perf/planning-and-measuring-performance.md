@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: "Planeación del rendimiento"
 description: "Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: d80ff77c380d8c4f03cb2ef415126cba46d77062
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d25620c0fc86f76b8c0d4de6e606250186b9ce37
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="planning-for-performance"></a>Planeación del rendimiento
 
@@ -85,7 +87,7 @@ Ahora puedes usar tus objetivos de rendimiento para diseñar la aplicación. Usa
 -   Maximiza el tiempo de análisis y carga y la eficacia de la memoria para cada página de la interfaz de usuario de tu aplicación (sobre todo en la página inicial) al [optimizar el marcado XAML](optimize-xaml-loading.md). En pocas palabras, aplaza la carga de la interfaz de usuario y el código hasta que estos sean necesarios.
 -   Para [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705), haz que todos los elementos tengan el mismo tamaño y usen tantas [técnicas de optimización de ListView y GridView](optimize-gridview-and-listview.md) como sea posible.
 -   Declara la interfaz de usuario en forma de marcado, que el marco pueda cargar y reutilizar en fragmentos, en lugar de crearlo de forma imperativa en el código.
--   Contrae los elementos de interfaz de usuario hasta que el usuario los necesite. Consulta la propiedad [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992).
+-   Retrasa la creación de los elementos de interfaz de usuario hasta que el usuario los necesite. Consulta el atributo [**x:Load**](../xaml-platform/x-load-attribute.md).
 -   Opta por las transiciones de tema y las animaciones en lugar de las animaciones de guion gráfico. Para más información, consulta [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/Mt187350). Recuerda que las animaciones de guion gráfico requieren actualizaciones constantes en la pantalla, y mantienen la CPU y la canalización de gráficos activas. Para conservar la batería, no tengas animaciones en funcionamiento si el usuario no está interactuando con la aplicación.
 -   Las imágenes deben cargarse en el tamaño apropiado para la vista en que las presentas, con el método [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210).
 
@@ -195,4 +197,3 @@ Si es necesario hacer cambios, hazlos y vuelve a instrumentar o probar y repite 
 ## <a name="optimizing"></a>Optimización
 
 Optimizar las rutas de código crítico para el rendimiento de la aplicación es lo que más tiempo conlleva. La creación de perfiles te lo indicará. A menudo, existe un equilibrio entre la creación de software que cumpla con buenas prácticas de diseño y la escritura de código que funcione en la optimización más elevada. Suele ser mejor dar prioridad a la productividad del desarrollador y a un buen diseño del software en las áreas donde no importa tanto el rendimiento.
-

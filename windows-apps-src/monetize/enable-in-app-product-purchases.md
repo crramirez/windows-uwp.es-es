@@ -3,26 +3,27 @@ author: mcleanbyron
 Description: "Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación."
 title: "Habilitar compras de productos desde la aplicación"
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
-keywords: "uwp, complementos, add-ons, compras desde la aplicación, in-app purchases, IAP, Windows.ApplicationModel.Store"
+keywords: "uwp, UWP, add-ons, complementos, in-app purchases, compras desde la aplicación, IAPs, IAP, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b7cd3f5d2c566958aaf83b8f633418ce444a2eaa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1f7d4c60d077e3c556f0d369cc41d2e50ab9092b
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/09/2017
 ---
-
 # <a name="enable-in-app-product-purchases"></a>Habilitar compras de productos desde la aplicación
 
->**Nota**&nbsp;&nbsp;En este artículo se muestra cómo usar miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está orientada a Windows 10, versión 1607, o posterior, te recomendamos que uses miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para administrar los complementos (también conocidos como productos dentro de la aplicación o IAP), en lugar del espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
+> [!NOTE]
+> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar las compras de productos desde la aplicación. Si la aplicación está destinada a Windows 10, versión 1607 o una versión posterior, se recomienda usar los miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en lugar de los de **Windows.ApplicationModel.Store**. Para obtener más información, consulta [este artículo](enable-in-app-purchases-of-apps-and-add-ons.md).
 
-Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.
+Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí mostramos cómo habilitar estos productos en la aplicación.
 
-> **Nota**&nbsp;&nbsp;Los productos desde la aplicación no pueden ofrecerse en una versión de prueba de una aplicación. Los clientes que usan una versión de prueba de la aplicación solamente pueden comprar un producto desde la aplicación si compran una versión completa de la misma.
+> [!NOTE]
+> Los productos desde la aplicación no pueden ofrecerse durante la versión de prueba de una aplicación. Los clientes que usan una versión de prueba de la aplicación solamente pueden comprar un producto desde la aplicación si compran una versión completa de la misma.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -41,17 +42,19 @@ Cuando se esté iniciando la aplicación, obtén el objeto [LicenseInformation](
 
 Para cada función que quieras tener disponible a través de un producto desde la aplicación, crea una oferta y agrégala a la aplicación.
 
-> **Importante:**&nbsp;&nbsp;Debes agregar a la aplicación todos los productos desde la aplicación que quieras presentar a tus clientes antes de enviarla a la Tienda. Si deseas agregar nuevos productos en la aplicación más adelante, tendrás que actualizar la aplicación y enviar una nueva versión.
+> [!IMPORTANT]
+> Debes agregar a la aplicación todos los productos desde la aplicación que quieres presentar a tus clientes antes de enviarla Tienda. Si deseas agregar nuevos productos en la aplicación más adelante, tendrás que actualizar la aplicación y enviar una nueva versión.
 
 1.  **Crea un token de oferta desde la aplicación**
 
     En la aplicación, puedes identificar cada producto desde la aplicación con un token. Este token es una cadena que debes definir y usar en la aplicación y en la Tienda para identificar un producto concreto desde la aplicación. Debes darle un nombre único y significativo (en la aplicación) para que puedas identificar rápidamente la función correcta que representa mientras la estás codificando. Estos son algunos ejemplos de nombres:
 
-    -   "SpaceMissionLevel4"
+    * "SpaceMissionLevel4"
+    * "ContosoCloudSave"
+    * "RainbowThemePack"
 
-    -   "ContosoCloudSave"
-
-    -   "RainbowThemePack"
+  > [!NOTE]
+  > El token de oferta desde la aplicación que usas en tu código debe coincidir con el valor del [id. del producto](../publish/set-your-add-on-product-id.md#product-id) que especificas al [definir el complemento correspondiente de la aplicación en el panel del Centro de desarrollo](../publish/add-on-submissions.md).
 
 2.  **Codifica la característica en un bloque condicional**
 
@@ -77,9 +80,12 @@ Este es un paso fácil: cambia todas las referencias a [CurrentAppSimulator](htt
 
 ## <a name="step-4-configure-the-in-app-product-offer-in-the-store"></a>Paso 4: Configura la oferta del producto desde la aplicación en la Tienda
 
-En el panel del Centro de desarrollo, define el identificador de producto, el tipo, el precio y otras propiedades del producto desde la aplicación. Asegúrate de que la configuración es idéntica a la configuración que estableciste en WindowsStoreProxy.xml durante las pruebas. Para más información, consulta [IAP submissions](https://msdn.microsoft.com/library/windows/apps/mt148551).
+En el panel del Centro de desarrollo, ve a la aplicación y [crea un complemento](../publish/add-on-submissions.md) que coincida con la oferta del producto desde la aplicación. Define el id. del producto, el tipo, el precio y otras propiedades para el complemento. Asegúrate de que la configuración es idéntica a la configuración que estableciste en WindowsStoreProxy.xml durante las pruebas.
 
-## <a name="remarks"></a>Comentarios
+  > [!NOTE]
+  > El token de oferta desde la aplicación que usas en tu código debe coincidir con el valor del [id. del producto](../publish/set-your-add-on-product-id.md#product-id) que especificas para el complemento correspondiente en el panel.
+
+## <a name="remarks"></a>Observaciones
 
 Si te interesa que los clientes cuenten con varios productos consumibles desde la aplicación (elementos que se puedan comprar, usar y después volver a comprar si se desea), consulta el tema [Habilitar compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md).
 
@@ -92,4 +98,3 @@ Si necesitas usar recibos para comprobar que el usuario ha realizado una compra 
 * [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md)
 * [Usar recibos para comprobar compras de productos](use-receipts-to-verify-product-purchases.md)
 * [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-

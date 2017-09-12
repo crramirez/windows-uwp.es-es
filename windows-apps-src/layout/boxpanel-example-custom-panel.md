@@ -10,18 +10,17 @@ label: BoxPanel, an example custom panel
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a46e26491e909d825ceaff04d008b8cb56c9aff3
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, uwp
+ms.openlocfilehash: 4fbc5c2e7bea43c2f18cf9e247b0143795bdfc1a
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
-
 # <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, un ejemplo de panel personalizado
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -51,7 +50,7 @@ Un escenario de diseño se expresa del modo siguiente:
 -   Cuando el panel tiene limitaciones en su espacio propio.
 -   La determinación por parte de la lógica del panel de todas las medidas, posiciones de colocación y tamaños que finalmente se convertirán en un diseño de interfaz de usuario representada de elementos secundarios.
 
-Teniendo esto en mente, el `BoxPanel` que mostramos aquí es para un escenario en particular. Como queremos dar prioridad al código en este ejemplo, todavía no vamos a explicar el escenario en detalle, sino que nos centraremos en los pasos necesarios y en los patrones de codificación. Si primero quieres más información sobre el escenario, ve directamente a ["El escenario para `BoxPanel`"](#scenario) y, luego, regresa al código.
+Teniendo esto en mente, el `BoxPanel` que mostramos aquí es para un escenario en particular. Como queremos dar prioridad al código en este ejemplo, todavía no vamos a explicar el escenario en detalle, sino que nos centraremos en los pasos necesarios y en los patrones de codificación. Si primero quieres más información sobre el escenario, ve directamente a ["El escenario para `BoxPanel`"](#the-scenario-for-boxpanel) y, luego, regresa al código.
 
 ## <a name="start-by-deriving-from-panel"></a>Derivar de **Panel** para empezar
 
@@ -113,15 +112,15 @@ protected override Size MeasureOverride(Size availableSize)
     if (aspectratio > 1)
     {
         rowcount = maxrc;
-        colcount = (maxrc > 2 &amp;&amp; Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
+        colcount = (maxrc > 2 && Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
     } 
     else 
     {
-        rowcount = (maxrc > 2 &amp;&amp; Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
+        rowcount = (maxrc > 2 && Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
         colcount = maxrc;
     }
 
-    // Now that we have a column count, divide available horizontal, that&#39;s our cell width.
+    // Now that we have a column count, divide available horizontal, that's our cell width.
     cellwidth = (int)Math.Floor(availableSize.Width / colcount);
     // Next get a cell height, same logic of dividing available vertical by rowcount.
     cellheight = Double.IsInfinity(availableSize.Height) ? Double.PositiveInfinity : availableSize.Height / rowcount;
@@ -137,7 +136,7 @@ protected override Size MeasureOverride(Size availableSize)
 
 El patrón necesario de una implementación de [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) es el bucle que pasa por cada elemento de [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514). Llama siempre al método [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) en cada uno de estos elementos. **Measure** tiene un parámetro de tipo [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995). Lo que se estás pasando aquí es el tamaño que el panel va a tener disponible para el elemento secundario en cuestión. Por lo tanto, antes de poder efectuar el bucle y empezar a llamar a **Measure**, necesitaremos saber la cantidad de espacio que cada celda puede dedicar. En el propio método **MeasureOverride** tenemos el valor *availableSize*. Se trata del tamaño que el elemento principal del panel usó cuando llamó a **Measure**, que era causante de que este **MeasureOverride** se llamara en primer lugar. Así, una lógica típica consistiría en concebir un esquema en el que cada elemento secundario divida el espacio de todo el *availableSize* del panel. Luego, cada división de tamaño se pasaría a **Measure** en cada elemento secundario.
 
-La forma en la que `BoxPanel` divide el tamaño es bastante sencilla: divide su espacio en una serie de cuadros que se controla en gran medida mediante el número de elementos. El tamaño de los cuadros se establece a partir del recuento de filas y columnas y del tamaño disponible. Hay veces en las que una fila o una columna de un cuadrado no es necesaria y se desecha, de modo que el panel pasa a ser más un rectángulo que un cuadrado en cuanto a su relación fila:columna. Para más información sobre cómo se ha llegado hasta esta lógica, ve a ["El escenario para BoxPanel"](#scenario).
+La forma en la que `BoxPanel` divide el tamaño es bastante sencilla: divide su espacio en una serie de cuadros que se controla en gran medida mediante el número de elementos. El tamaño de los cuadros se establece a partir del recuento de filas y columnas y del tamaño disponible. Hay veces en las que una fila o una columna de un cuadrado no es necesaria y se desecha, de modo que el panel pasa a ser más un rectángulo que un cuadrado en cuanto a su relación fila:columna. Para más información sobre cómo se ha llegado hasta esta lógica, ve a ["El escenario para BoxPanel"](#the-scenario-for-boxpanel).
 
 ¿Qué es lo que hace el paso de medición? Establece el valor de la propiedad de solo lectura [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) en cada elemento en el que se haya llamado a [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952). Tener un valor de **DesiredSize** posiblemente sea importante al llegar al paso de organización, ya que **DesiredSize** indica cuál puede o debe ser el tamaño al organizar y en la representación final. Incluso si no usas **DesiredSize** en tu lógica, el sistema seguirá necesitándolo.
 
@@ -230,7 +229,7 @@ Un escenario avanzado para extender más aún `BoxPanel` (no se muestra aquí) s
 Te estarás preguntando por qué el panel no elige 5x2 para diez elementos, ya que así el número de elementos encajaría a la perfección. Pero, en la práctica, los paneles tienen forma de rectángulos que rara vez presentan una relación de aspecto con una orientación muy marcada. La técnica de los mínimos cuadrados es una forma de influir en la lógica de tamaño para que funcione correctamente con las formas de diseño típicas y no fomentar los cambios de tamaño cuando las formas de celda presentan relaciones de aspecto extrañas.
 
 > [!NOTE]
-> Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> Este artículo está orientado a desarrolladores de Windows10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -243,4 +242,3 @@ Te estarás preguntando por qué el panel no elige 5x2 para diez elementos, ya q
 **Conceptos**
 
 * [Alineación, margen y espaciado](alignment-margin-padding.md)
-

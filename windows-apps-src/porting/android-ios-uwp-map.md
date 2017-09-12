@@ -2,7 +2,7 @@
 author: GrantMeStrength
 Description: "Compara las características de plataforma entre iOS, Android y Windows 10."
 Search.Product: eADQiWindows 10XVcnh
-title: Conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
+title: "Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS"
 ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
@@ -10,11 +10,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
-ms.openlocfilehash: ce32bd7ebaca20827a637c456b2dbe82811817cb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 72bb41939b0676dab7c212770cc9eddaef538c3f
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/28/2017
 ---
-#<a name="windows-concepts-for-android-and-ios-developers"></a>Conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
+#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
 
 Si eres un desarrollador con conocimientos o código de Android o iOS, y quieres hacer el cambio a Windows 10 y la Plataforma universal de Windows (UWP), este recurso tiene todo lo que necesitas para asignar características de la plataforma, y tus conocimientos, entre las tres plataformas.
 
@@ -128,13 +130,13 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <td align="left"><strong>Navegación de sistemas del mismo nivel.</strong> <br><br>Presentación al usuario de métodos de navegación entre páginas de la misma importancia jerárquica.</td>
 <td align="left">Las <strong>pestañas</strong>, las <strong>vistas de deslizamiento</strong> y los <strong>cajones de navegación</strong> proporcionan una <strong>navegación lateral</strong>.</td>
 <td align="left">Los <strong>controladores de la barra de pestañas</strong>, <strong>controladores de vista en dos paneles</strong> y <strong>controladores de vista de página</strong> permiten una navegación entre vistas de jerarquía igual.</td>
-<td align="left">Puedes mostrar una lista persistente de vínculos o pestañas situadas encima del contenido mediante <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">pestañas o tablas dinámicas</a></strong>. El <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">panel de navegación o vista en dos paneles</a></strong> permite mostrar una lista de vínculos junto con el contenido.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navegación</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navegar entre dos páginas</a></td>
+<td align="left">Puedes mostrar una lista persistente de vínculos o pestañas situadas encima del contenido mediante <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">pestañas o tablas dinámicas</a></strong>. El <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">panel de navegación o vista en dos paneles</a></strong> permite mostrar una lista de vínculos junto con el contenido.<br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigation-basics">Navegación</a><br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigate-between-two-pages">Navegar entre dos páginas</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Navegación jerárquica.</strong> <br><br>Navegación entre las páginas principales y secundarias de una jerarquía.</td>
 <td align="left">Las <strong>listas</strong>, <strong>listas de cuadrículas</strong>, <strong>botones</strong> y otros controles proporcionan una <strong>navegación descendente</strong> cuando se usan con <strong>intenciones</strong> para cargar otras <strong>actividades</strong>.</td>
 <td align="left">Los <strong>controladores de navegación</strong> permiten a los usuarios navegar entre los niveles de una jerarquía.</td>
-<td align="left">Los <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">hubs</a></strong> permiten mostrar al usuario una vista previa del contenido que se puede seleccionar para navegar a páginas secundarias. El <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">maestro y los detalles</a></strong> permiten a los usuarios elegir de una lista de resúmenes de elemento que se muestran junto a la sección de detalles correspondiente.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navegación</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navegar entre dos páginas</a></td>
+<td align="left">Los <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">hubs</a></strong> permiten mostrar al usuario una vista previa del contenido que se puede seleccionar para navegar a páginas secundarias. El <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">maestro y los detalles</a></strong> permiten a los usuarios elegir de una lista de resúmenes de elemento que se muestran junto a la sección de detalles correspondiente.<br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigation-basics">Navegación</a><br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigate-between-two-pages">Navegar entre dos páginas</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Navegación con el botón Atrás.</strong> <br><br>Navega hacia atrás por una aplicación.</td>
@@ -170,7 +172,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Voz.</strong> <br><br>Reconocimiento de voz para la entrada de voz y funcionalidades adicionales de voz.</td>
 <td align="left">La entrada de voz puede la puede proporcionar cualquier aplicación que implemente un objeto <strong>RecognizerIntent</strong>, tal como <strong>Búsqueda por voz de Google</strong>. La clase <strong>SpeechRecognizer</strong> permite a las aplicaciones usar la API de reconocimiento de voz de Google.</td>
-<td align="left">No existen API integradas de reconocimiento o entrada de voz.</td>
+<td align="left">Las aplicaciones pueden usar la clase <strong>SFSpeechRecognizer</strong> para implementar la entrada de voz y el reconocimiento de voz.</td>
 <td align="left">Puedes usar la API de <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185615.aspx">reconocimiento de voz</a></strong> para interactuar con la aplicación en primer plano. Puedes usar las <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185598.aspx">interacciones de Cortana</a></strong> basadas en voz para iniciar aplicaciones en primer o segundo plano y para interactuar con aplicaciones en segundo plano.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185614.aspx">Interacciones de voz</a></td>
 </tr>
 <tr class="even">

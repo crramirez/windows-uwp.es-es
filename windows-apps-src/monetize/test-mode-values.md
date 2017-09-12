@@ -9,17 +9,19 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anuncios, publicidad, pruebas
-ms.openlocfilehash: ec5b1c1723a7f58b20234d703fc786647268a3b3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0c3e713d9a2bb7c10bda0d9517f5cb882d5e2e57
+ms.sourcegitcommit: 6b772d2a224f8a9c557dc517c6ec0592545e9a43
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/02/2017
 ---
 # <a name="test-mode-values"></a>Valores del modo de prueba
 
-Si usas un objeto [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) o [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) para mostrar anuncios en tu aplicación, debes especificar un identificador de aplicación y un identificador de unidad de anuncios. Mientras desarrollas la aplicación, usa los valores de identificador de aplicación y de identificador de anuncios de prueba para ver cómo la aplicación representa los anuncios durante las pruebas.
+Si usas un objeto [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx), [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) o [NativeAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.aspx) para mostrar anuncios en tu aplicación, debes especificar un identificador de unidad de anuncios y un identificador de aplicación en las propiedades **AdUnitId** y **ApplicationId**. Mientras desarrollas la aplicación, usa los valores de identificador de aplicación y de identificador de anuncios de prueba para ver cómo la aplicación representa los anuncios durante las pruebas.
 
 Si intentas usar valores de prueba en tu aplicación después de publicarla, la aplicación dinámica no recibirá anuncios. Para recibir los anuncios en la aplicación publicada, debes actualizar el código para usar un identificador de aplicación y un identificador de unidad de anuncios proporcionados por el panel del Centro de desarrollo de Windows. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md).
  
-Estos son los valores de prueba que se usarán para los anuncios de banner e intersticiales.
+Estos son los valores de prueba que se usarán para los diferentes tipos de anuncios.
 
 * Para anuncios intersticiales:
 
@@ -33,7 +35,7 @@ Estos son los valores de prueba que se usarán para los anuncios de banner e int
     <tr class="header">
     <th align="left">Sistema operativo de destino</th>
     <th align="left">AdUnitId</th>
-    <th align="left">AppId</th>
+    <th align="left">ApplicationId</th>
     </tr>
     </thead>
     <tbody>
@@ -63,7 +65,7 @@ Estos son los valores de prueba que se usarán para los anuncios de banner e int
     <tr class="header">
     <th align="left">Sistema operativo de destino</th>
     <th align="left">AdUnitId</th>
-    <th align="left">AppId</th>
+    <th align="left">ApplicationId</th>
     </tr>
     </thead>
     <tbody>
@@ -80,8 +82,30 @@ Estos son los valores de prueba que se usarán para los anuncios de banner e int
     </tbody>
     </table>
 
+* Para anuncios nativos:
 
-> **Importante**&nbsp;&nbsp;Para **AdControl**, el tamaño de un anuncio dinámico se define por las propiedades **Width** y **Height**. Para obtener resultados óptimos, asegúrate de que las propiedades **Width** y **Height** del código corresponden a uno de los [tamaños de anuncios admitidos para anuncios de banner](supported-ad-sizes-for-banner-ads.md). Las propiedades **Width** y **Height** no cambiarán en función del tamaño de un anuncio dinámico.
+    <table>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th align="left">Sistema operativo de destino</th>
+    <th align="left">AdUnitId</th>
+    <th align="left">ApplicationId</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td align="left"><p>UWP (Windows 10)</p></td>
+    <td align="left"><p>test</p></td>
+    <td align="left"><p>d25517cb-12d4-4699-8bdc-52040c712cab</p></td>
+    </tbody>
+    </table>
+
+> [!IMPORTANT]
+> Para **AdControl**, el tamaño de un anuncio dinámico se define por las propiedades **Width** y **Height**. Para obtener resultados óptimos, asegúrate de que las propiedades **Width** y **Height** del código corresponden a uno de los [tamaños de anuncios admitidos para anuncios de banner](supported-ad-sizes-for-banner-ads.md). Las propiedades **Width** y **Height** no cambiarán en función del tamaño de un anuncio dinámico.
 
 
  

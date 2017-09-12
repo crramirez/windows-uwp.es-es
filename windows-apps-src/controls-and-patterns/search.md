@@ -6,14 +6,19 @@ ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b85d14b037fc65f10a6a24ed6c1a04b4be3ff6d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 9a12e7490cc1cf7bd1aa65b694a3aeb345ba1128
+ms.sourcegitcommit: 45490bd85e6f8d247a041841d547ecac2ff48250
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/23/2017
 ---
 # <a name="search-and-find-in-page"></a>Búsqueda y buscar en la página
 
@@ -21,12 +26,7 @@ translationtype: HT
 
 Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Clase AutoSuggestBox (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)</li>
-</ul>
-</div>
+> **API importantes**: [Clase AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/dn633874)
 
 ## <a name="elements-of-the-search-experience"></a>Elementos de la experiencia de búsqueda
 
@@ -209,23 +209,12 @@ Buscar en la página tiene un contador de coincidencias:
 
 Para obtener más información sobre cómo agregar comandos a la barra de comandos, consulta [Barra de comandos](app-bars.md).
 
-<div class="microsoft-internal-note">
-## Lista de comprobación Globalización y localización
-
-<table>
-<tr>
-<th>Espaciado vertical</th><td>Usar caracteres no latinos para el espaciado vertical para garantizar que los scripts no latinos se muestren correctamente, incluidos los números.</td>
-</tr>
-<tr>
-<th>Consideraciones bidireccionales</th><td>El icono de lupa no debe mostrarse de forma refleja en bidi.</td>
-</tr>
-</table>
-</div>
+ 
 
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [**Cuadro de sugerencias automáticas**](auto-suggest-box.md)
+* [Cuadro de sugerencias automáticas](auto-suggest-box.md)
 
 
  

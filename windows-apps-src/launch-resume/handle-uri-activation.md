@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b655bea614f1c395959a12e9c3b8a5b1af61d694
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 40c70770028853d5912ef63f84259245252ce881
+ms.sourcegitcommit: 7f03e200ef34f7f24b6f8b6489ecb44aa2b870bc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="handle-uri-activation"></a>Administrar la activación de los identificadores URI
 
@@ -73,12 +75,7 @@ La aplicación recibe eventos de activación solo para los nombres de esquema de
 
 ## <a name="step-2-add-the-proper-icons"></a>Paso 2: Agregar los iconos adecuados
 
-
-Las aplicaciones que se convierten en predeterminadas para un nombre de esquema de URI muestran sus iconos en varios lugares del sistema como, por ejemplo, en el Panel de control Programas predeterminados.
-
-Te recomendamos que incluyas los iconos adecuados con tu proyecto para que el logotipo tenga un aspecto genial en todos los sitios. Ajusta el aspecto del logotipo del icono de la aplicación y usa el color de fondo de la aplicación en lugar de usar un icono transparente. Extiende el logotipo hasta el borde sin que quede espacio. Prueba los iconos en fondos de color blanco. Para ver ejemplos de iconos, consulta el [ejemplo de inicio por asociación](http://go.microsoft.com/fwlink/p/?LinkID=620490).
-
-![el explorador de soluciones con una vista de los archivos de la carpeta imágenes. hay versiones de 16, 32, 48 y 256 píxeles de 'icon.targetsize' y 'smalltile-sdk'](images/seviewofimages.png)
+Las aplicaciones que se convierten en predeterminadas para un nombre de esquema URI muestran sus iconos en varios lugares del sistema, como el panel de control Programas predeterminados. Incluye un icono de 44 x 44 con el proyecto para este propósito. Ajusta el aspecto del logotipo del icono de la aplicación y usa el color de fondo de la aplicación en lugar de usar un icono transparente. Extiende el logotipo hasta el borde sin que quede espacio. Prueba los iconos en fondos de color blanco. Consulta [Directrices para los activos de iconos](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets) para obtener más información sobre los iconos.
 
 ## <a name="step-3-handle-the-activated-event"></a>Paso 3: Administrar el evento activado
 

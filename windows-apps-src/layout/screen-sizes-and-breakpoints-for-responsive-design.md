@@ -7,14 +7,16 @@ label: Screen sizes and break points
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: cd6ba1378aeddb44aa66c53088f32286aff8d29f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b56cdeeb9a3c3d3ca89e19d8057e3d93241e6c3c
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="screen-sizes-and-break-points-for-responsive-design"></a>Tamaños de pantalla y puntos de interrupción para el diseño adaptativo
 
@@ -78,7 +80,7 @@ En esta tabla se describen las diferentes clases de tamaño y se proporcionan re
 <li>Acopla las [barras de la aplicación](../controls-and-patterns/app-bars.md) a la parte inferior de la ventana para una mejor accesibilidad.</li>
 <li>Usa una columna/región a la vez.</li>
 <li>Usa un icono para representar la búsqueda (no mostrar un cuadro de búsqueda).</li>
-<li>Coloca el [panel de navegación](../controls-and-patterns/nav-pane.md) en modo de superposición para ahorrar espacio en pantalla.</li>
+<li>Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo de superposición para ahorrar espacio en pantalla.</li>
 <li>Si usas el [patrón de maestro y detalles](../controls-and-patterns/master-details.md), elige el modo de presentación apilada para ahorrar espacio en pantalla.</li>
 </ul></td>
 <td style="vertical-align:top;"><ul>
@@ -87,7 +89,7 @@ En esta tabla se describen las diferentes clases de tamaño y se proporcionan re
 <li>Sitúa los elementos de comando, como las [barras de la aplicación](../controls-and-patterns/app-bars.md) en la parte superior de la ventana de la aplicación.</li>
 <li>Hasta dos columnas o regiones.</li>
 <li>Muestra el cuadro de búsqueda.</li>
-<li>Coloca el [panel de navegación](../controls-and-patterns/nav-pane.md) en modo de franja para que siempre se muestre en una tira estrecha de iconos.</li>
+<li>Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo de franja para que siempre se muestre en una tira estrecha de iconos.</li>
 <li>Considera la posibilidad de realizar más adaptaciones para las [experiencias con televisores](http://go.microsoft.com/fwlink/?LinkId=760736).</li>
 </ul></td>
 <td style="vertical-align:top;"><ul>
@@ -96,7 +98,7 @@ En esta tabla se describen las diferentes clases de tamaño y se proporcionan re
 <li>Sitúa los elementos de comando, como las [barras de la aplicación](../controls-and-patterns/app-bars.md) en la parte superior de la ventana de la aplicación.</li>
 <li>Hasta tres columnas o regiones.</li>
 <li>Muestra el cuadro de búsqueda.</li>
-<li>Coloca el [panel de navegación](../controls-and-patterns/nav-pane.md) en modo acoplado para que siempre se muestre.</li>
+<li>Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo acoplado para que siempre se muestre.</li>
 </ul></td>
 </tr>
 </tbody>

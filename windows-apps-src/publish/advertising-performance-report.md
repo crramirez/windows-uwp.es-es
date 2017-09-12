@@ -4,99 +4,93 @@ Description: "Para ver los datos de rendimiento de las unidades de anuncio en tu
 title: Informe Rendimiento de la publicidad
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 07/05/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: e12cec828704a839092c1a6cb618ce8a46b83093
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c46533c6762ddd2f47a4dbd40c253bc3d8f346d7
+ms.sourcegitcommit: 10f8dcf69d37cdb61562fc9f4d268ccb499c368f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/07/2017
 ---
 # <a name="advertising-performance-report"></a>Informe Rendimiento de la publicidad
 
 
-Para ver los datos de rendimiento de las unidades de anuncios en tus aplicaciones, puedes usar los siguientes informes en el panel del Centro de desarrollo de Windows:
+En el **Informe Rendimiento de la publicidad** se muestra el rendimiento de tus [unidades de anuncio](monetize-with-ads.md#available-ad-units), incluidos los anuncios de la comunidad y los anuncios de filial. En este informe se incluyen datos de varios proveedores de anuncios de aplicaciones para UWP que usan la [mediación de anuncios](monetize-with-ads.md#mediation). 
 
--   [Informe de rendimiento de la publicidad en el nivel de la aplicación](advertising-performance-report.md#app-level-advertising-performance-report). En este informe se proporcionan los datos de rendimiento de las unidades de anuncios de Microsoft en la aplicación seleccionada en el panel.
--   [Informe de rendimiento de la publicidad en el nivel de la cuenta](advertising-performance-report.md#account-level-advertising-performance-report). Este informe proporciona datos de rendimiento detallados de las unidades de anuncios de Microsoft y de los anuncios de la comunidad respecto a todas las aplicaciones que están registradas en tu cuenta de desarrollador.
+Para ver este informe, amplía **Analizar** en el menú de navegación izquierdo y luego selecciona **Rendimiento de los anuncios**. 
 
-De manera predeterminada, los informes se filtran según el rendimiento de los últimos 30 días, en todos los dispositivos. Para cambiar estos filtros, selecciona **Aplicar filtros**y, a continuación, elige un periodo de tiempo distinto (uno de los periodos preestablecidos o un intervalo de fechas personalizado) o selecciona un tipo de dispositivo individual. 
+Para realizar un análisis con más detalle de los datos, ofrecemos un vínculo para **descargar informe** que puedes usar para descargar archivos CSV (valores separados por comas) que se pueden abrir en MicrosoftExcel o en otro programa. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [Obtener los datos de rendimiento de los anuncios](../monetize/get-ad-performance-data.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
-> [!TIP]
-> Para realizar un análisis de los datos en mayor profundidad, selecciona **Descargar informe** y, a continuación, abre el archivo CSV (valores separados por comas) en Microsoft Excel o un programa similar.
+Al visualizar los informes de rendimiento de la publicidad, ten en cuenta que los datos de los informes de los últimos tres días pueden cambiar, ya que recibimos y procesamos nuevos datos procedentes de varios orígenes. Asimismo, pueden producirse modificaciones de datos hasta de los 90 días anteriores.
 
-En las siguientes secciones se proporcionan más detalles sobre estos informes.
 
-## <a name="app-level-advertising-performance-report"></a>Informe de rendimiento de la publicidad en el nivel de la aplicación
+## <a name="overall-performance"></a>Rendimiento general
 
-Esta página muestra en el panel los datos de rendimiento en forma de gráfico, mapamundi y tabla para las unidades de anuncios de Microsoft en la aplicación seleccionada actualmente. Para ver este informe, selecciona una de las aplicaciones en el panel y haz clic en **Análisis** &gt; **Rendimiento de publicidad** en el panel de navegación.
+En la parte superior del informe, puedes usar los siguientes filtros para ajustar el ámbito de los datos mostrados en el informe:
 
-Los datos se obtienen del seguimiento que realizamos de las siguientes métricas de rendimiento de los anuncios de la aplicación:
+* **Fecha**: permite filtrar el informe por un período de tiempo predeterminado o un intervalo de fechas personalizado. De forma predeterminada, el informe muestra los datos de los últimos 30 días.
+* **Agregación**: permite seleccionar cómo se agregan estos datos y cómo pueden seguir filtrándose. De forma predeterminada, el informe muestra los datos de todas las unidades de anuncios y verás un vínculo **Elegir unidades de anuncios** en la parte inferior de la sección, que te permite seleccionar hasta seis unidades para compararlas. También puedes cambiar la **Agregación** a **Todas las aplicaciones** o **Todos los proveedores de anuncios**. En tal caso, el vínculo de esta sección cambiará a **Elegir aplicaciones** o **Elegir proveedores de anuncios**, lo que te permite elegir hasta seis opciones para compararlas. También puedes agregar una aplicación determinada en la que utilizas anuncios.
+* **Proveedores de anuncios**: permite filtrar el informe por datos de rendimiento para algunos proveedores de anuncios. Para obtener más información acerca de los proveedores de anuncios disponibles, consulta la sección [Mediación de anuncios](monetize-with-ads.md#mediation) en [Monetizar con anuncios](monetize-with-ads.md). De forma predeterminada, el informe muestra datos de todos los proveedores de anuncios. Esta opción se desactivará si has elegido **Todos los proveedores de anuncios** en la lista desplegable **Agregación**.
+* **Dispositivo**: permite filtrar el informe por los datos de rendimiento de determinados tipos de dispositivos. De forma predeterminada, el informe muestra datos de todos los tipos de dispositivo.
 
--   **Ingresos estimados**: La cantidad estimada de dinero que has recibido de los anuncios que se ejecutan en la aplicación.
--   **eCPM**: Rentabilidad por mil impresiones.
--   **Solicitudes**: El número de veces que se ha enviado una solicitud de anuncio desde la aplicación.
--   **Impresiones**: El número de veces que se ha mostrado un anuncio en la aplicación.
--   **Velocidad de relleno**: El porcentaje de solicitudes de anuncio enviadas desde la aplicación en las que se ha mostrado un anuncio.
--   **Clics**: El número de veces que alguien ha hecho clic en un anuncio en la aplicación.
--   **CTR**: La tasa de clics; es decir, el número de veces que se ha hecho clic en un anuncio dividido por el número de impresiones.
 
-Para revisar todas estas métricas de rendimiento para las unidades de anuncios en tu aplicación, consulta la tabla debajo del gráfico y de las vistas de mapa.
+## <a name="report-views"></a>Vistas del informe
 
-Para analizar los datos de una de estas métricas en un gráfico o una vista de mapamundi, haz clic en **Gráfico** o **Mapa**. Haz clic en los encabezados situados sobre el gráfico o el mapa para cambiar entre las diferentes métricas. De manera predeterminada, en el gráfico y las vistas de mapa se muestran los datos de rendimiento para todas las unidades de anuncios en la aplicación, pero puedes hacer clic en **Elegir unidades de anuncios** para seleccionar hasta seis unidades de anuncio individuales para compararlas.
+Debajo de los filtros, el informe muestra los datos entre una variedad de métricas de rendimiento de anuncios en forma de gráfico, mapamundi y tabla para las unidades de anuncio usadas actualmente en la aplicación.
 
-En la vista de mapa, los tonos más oscuros representan los valores más altos y tonos más claros representan valores más bajos. Puedes mantener el mouse sobre un país o región específico en el mapa para analizar el valor de la métrica seleccionada. También puedes acercar cualquier área del mapa para ver datos referentes a países más pequeños.
+Para analizar los datos de una de estas métricas en un gráfico o una vista de mapamundi, haz clic en **Gráfico** o **Mapa**. De forma predeterminada, en las vistas de gráfico y mapa se muestran los datos de rendimiento de todas las unidades de anuncios o proveedores de anuncios, en función de las selecciones de la lista desplegable **Agregación**, pero tienes la opción de seleccionar hasta seis unidades de anuncios, aplicaciones o proveedores de anuncios individuales para compararlos.
 
-Para realizar un análisis de los datos en mayor profundidad, selecciona **Descargar informe** y, a continuación, abre el archivo CSV (valores separados por comas) en Microsoft Excel o un programa similar.
+En la vista de mapa, los tonos más oscuros representan los valores más altos y tonos más claros representan los valores más bajos. Puedes mantener el mouse sobre un país o región específico en el mapa para analizar el valor de la métrica seleccionada. También puedes acercar cualquier área del mapa para ver datos referentes a países más pequeños.
 
-## <a name="account-level-advertising-performance-report"></a>Informe de rendimiento de la publicidad en el nivel de la cuenta
+Para revisar todas las métricas de rendimiento para las unidades de anuncios en tu aplicación, consulta la tabla debajo de las vistas de gráfico y mapa.
 
-Esta página muestra los datos de rendimiento de las unidades de anuncios de Microsoft y de los anuncios de la comunidad usados en las aplicaciones que están registradas en tu cuenta de desarrollador. Para ver este informe, ve a la página de información general del panel y haz clic en **Rendimiento de publicidad** en el panel de navegación.
+> [!NOTE]
+> Si habías creado unidades de anuncios para una aplicación con pubCenter de Microsoft, es posible que no todas se hayan asignado correctamente a las aplicaciones en el Centro de desarrollo. En este informe, estas unidades de anuncio se asocian con los nombres de las aplicaciones que especificaste en pubCenter, con la cadena **(pubCenter)** anexa al nombre de la aplicación.
 
-Esta página incluye las siguientes secciones.
 
-### <a name="microsoft-advertising"></a>Microsoft Advertising
+## <a name="performance-metrics"></a>Métricas de rendimiento
 
-Este informe proporciona los datos de rendimiento de todas las unidades de anuncios de Microsoft usadas en tus aplicaciones. Este informe también incluye los datos de rendimiento de las unidades de anuncio de pubCenter que no se asignaron correctamente a las aplicaciones del Centro de desarrollo.
+Este informe puede incluir datos de las siguientes métricas de rendimiento. Las métricas que se muestran en el informe varían según el proveedor de anuncios.
 
-Este informe muestra las siete mismas métricas de rendimiento y las mismas vistas (gráfico, mapamundi y tabla) que el informe de rendimiento de publicidad en el nivel de la aplicación descrito anteriormente. Puedes aplicar los siguientes filtros a este informe:
+|  Métrica  |  Descripción  |
+|----------|---------------|
+| Ingresos estimados  |  La cantidad estimada de dinero que has recibido de los anuncios que se ejecutan en la aplicación. |
+| eCPM  |  Rentabilidad por mil impresiones. |
+| Solicitudes  | El número de veces que se ha enviado una solicitud de anuncio desde la aplicación.  |
+| Impresiones  | El número de veces que se ha mostrado un anuncio en la aplicación.  |
+| Velocidad de relleno  | El porcentaje de solicitudes de anuncio enviadas desde la aplicación en las que se ha mostrado un anuncio.  |
+| Clics  |  El número de veces que alguien ha hecho clic en un anuncio en la aplicación. |
+| CTR  |  La tasa de clics, es decir, el número de veces que se ha hecho clic en un anuncio dividido por el número de impresiones. |
+| Créditos ganados  | Para [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has ganado por el espacio de anuncios promocionales al mostrar anuncios de la comunidad en tu aplicación.  |
+| Créditos gastados  | Para [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has gastado en los anuncios para tu aplicación.  |
 
--   **Todas las unidades de anuncio**. Cuando se selecciona este filtro, puedes elegir mostrar los datos de todas las unidades de anuncio o de hasta seis unidades de anuncio específicas.
--   **Todas las aplicaciones**. Cuando se selecciona este filtro, puedes elegir mostrar los datos de todas las aplicaciones o de hasta seis aplicaciones específicas.
--   **Aplicación individual**. Cuando se selecciona una aplicación, puedes elegir mostrar los datos de todas las unidades de anuncio usadas por la aplicación o de hasta seis unidades de anuncio específicas usadas por la aplicación.
 
-Si has creado unidades de anuncios para una aplicación con pubCenter de Microsoft, es posible que no se todas se hayan asignado correctamente a las aplicaciones en el Centro de desarrollo. En este informe, estas unidades de anuncio se asocian con los nombres de las aplicaciones que especificaste en pubCenter, con la cadena **(pubCenter)** anexa al nombre de la aplicación.
+## <a name="affiliates-performance"></a>Rendimiento de filial
 
-Si creaste unidades de anuncios para una aplicación con pubCenter y no ves datos sobre ellos en ninguna página de informe, haz clic en **Vincular una cuenta de pubCenter** para vincular esa cuenta a tu cuenta del Centro de desarrollo. Escribe la dirección de correo electrónico asociada a esta cuenta de pubCenter y tu código de vinculación de cuenta. Para encontrar el código de vinculación de cuenta, inicia sesión en la cuenta de pubCenter y ve a la página **Mi información**.
+Si has [decidido participar en el programa de anuncios de filial de Microsoft](about-affiliate-ads.md), aquí podrás ver los datos de rendimiento de los anuncios de filial que aparecen en tu aplicación. Esta información se actualiza diariamente. 
 
-Para obtener más información sobre la migración de cuentas de pubCenter al Centro de desarrollo, consulta el tema [Integración del Centro de desarrollo y pubCenter](pubcenter-dev-center-integration.md).
 
-Para realizar un análisis de los datos en mayor profundidad, selecciona **Descargar informe** y, a continuación, abre el archivo CSV (valores separados por comas) en Microsoft Excel o un programa similar.
+En la parte superior del informe, puedes usar los siguientes filtros para ajustar el ámbito de los datos mostrados en el informe:
+- **Fecha**: permite filtrar el informe por un período de tiempo predeterminado o un intervalo de fechas personalizado. De forma predeterminada, el informe muestra los datos de los últimos 30 días.
+- **Dispositivo**: permite filtrar el informe por los datos de rendimiento de determinados tipos de dispositivos. De forma predeterminada, el informe muestra datos de todos los tipos de dispositivo.
 
-### <a name="microsoft-community-ads"></a>Anuncios de la comunidad Microsoft
+De forma predeterminada, este informe proporciona un resumen (en forma de gráfico y tabla) de los datos de rendimiento de los anuncios de filial en todas las aplicaciones en las que has decidido participar en el programa de anuncios de filial de Microsoft. Puedes seleccionar **Elegir aplicaciones** para seleccionar hasta seis aplicaciones que podrás comparar.
 
-En esta sección se proporcionan los datos de rendimiento en forma de gráfico y mapamundi de los anuncios de la comunidad en la aplicación seleccionada actualmente en el panel. Para obtener más información sobre los anuncios de la comunidad, consulta [Acerca de los anuncios de la comunidad](about-community-ads.md).
+Los datos de rendimiento de filial se obtienen del seguimiento que realizamos de las siguientes siete métricas de rendimiento de los anuncios de filial de la aplicación:
 
-Los datos se obtienen del seguimiento que realizamos de las siguientes métricas de rendimiento de los anuncios en tu aplicación:
+-   **Ingresos estimados (aprobados)**: La cantidad estimada de dinero que has recibido como comisión por las compras aprobadas que han realizado usuarios haciendo clic en los anuncios de filiales de la aplicación.
+-   **Ingresos estimados (pendientes de aprobación)**: La cantidad estimada de dinero que podrías recibir como comisión por las compras pendientes de aprobación.
+-   **Impresiones**: El número de veces que se ha mostrado un anuncio de filial en la aplicación.
+-   **Clics**: El número de veces que alguien ha hecho clic en un anuncio de filial en la aplicación.
+-   **CTR**: La tasa de clics; es decir, el número de veces que se ha hecho clic en un anuncio de filial dividido por el número de impresiones de anuncio de filial.
+-   **Compras (aprobadas)**: El número de compras aprobadas que han realizado los usuarios haciendo clic en los anuncios de filiales en la aplicación.
+-   **Compras (pendientes de aprobación)**: El número de compras pendientes de aprobación que han realizado los usuarios haciendo clic en anuncios de filiales en la aplicación.
 
--   **Solicitudes**: El número de veces que se ha enviado una solicitud de anuncio de la comunidad desde la aplicación.
--   **Velocidad de relleno**: El porcentaje de solicitudes de anuncio de la comunidad enviadas desde la aplicación en las que se ha mostrado un anuncio.
--   **Clics**: El número de veces que alguien ha hecho clic en un anuncio de la comunidad en la aplicación.
--   **CTR**: La tasa de clics; es decir, el número de veces que se ha hecho clic en un anuncio de la comunidad dividido por el número de impresiones.
--   **Créditos obtenidos**: El número de créditos por anuncios de la comunidad que has obtenido de esta aplicación. Para obtener más información acerca de cómo se obtienen los créditos, consulta [Acerca de los anuncios de la comunidad](about-community-ads.md).
--   **Créditos usados**: El número de créditos por anuncios de la comunidad que has usado para esta aplicación. Para obtener más información acerca de cómo se usan los créditos, consulta [Acerca de los anuncios de la comunidad](about-community-ads.md).
+> [!NOTE]
+> Cuando un usuario compra un producto en la Tienda, se produce un período de espera de 45 días hasta que la compra puede aprobarse para el programa de anuncios de filial. Debido a este período de espera, los datos de **Ganancias estimadas (aprobadas)**, **Ganancias estimadas (pendientes de aprobación)**, **Compras (aprobadas)** y **Compras (pendientes de aprobación)** de un día determinado pueden cambiar cuando se aprueben o rechacen las compras.
 
-Para analizar los datos de una de estas métricas en un gráfico o una vista de mapamundi, haz clic en **Gráfico** o **Mapa**. Haz clic en los encabezados situados sobre el gráfico o el mapa para cambiar entre las diferentes métricas. En la vista de mapa, los tonos más oscuros representan los valores más altos y tonos más claros representan valores más bajos. Puedes mantener el mouse sobre un país o región específico en el mapa para analizar el valor de la métrica seleccionada. También puedes acercar cualquier área del mapa para ver datos referentes a países más pequeños.
-
-## <a name="notes-about-the-reports"></a>Notas acerca de los informes
-
-Estas son algunas cosas que debes tener en cuenta al usar los informes de rendimiento de la publicidad.
-
-- Puede haber diferencias entre los informes de rendimiento de publicidad del Centro de desarrollo y de pubCenter. Los datos de rendimiento de la publicidad del Centro de desarrollo se agregan en función de la hora UTC (no de la zona horaria concreta), mientras que los informes de pubCenter se agregan según tu zona horaria.
-- El informe de datos de los últimos tres días puede cambiar, ya que se reciben y procesan nuevos datos procedentes de varios orígenes.
-- Pueden producirse modificaciones de datos hasta de los 90 días anteriores.
-
- 
 
  

@@ -4,14 +4,16 @@ Description: "Descubre cómo promocionar tus aplicaciones y contenido en la Tien
 title: Directrices de marketing para aplicaciones de la Tienda Windows
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: e7d327cbe8d99b6b10ae4ccdeb8c7a6f0ee2ac5e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e953bf1b7392a93ddb8323167ca1bf191e162076
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="windows-store-app-marketing-guidelines"></a>Directrices de marketing para aplicaciones de la Tienda Windows
 
@@ -19,21 +21,25 @@ Descubre cómo promocionar tus aplicaciones y contenido en la Tienda Windows. En
 
 ## <a name="store-badges"></a>Distintivos de la Tienda
 
-Hemos creado distintivos promocionales especiales para ayudarte a que lleguen más clientes a la descripción de la aplicación dentro de la Tienda Windows. Estos distintivos están disponibles en 44 idiomas. Ten en cuenta que existen ciertos requisitos que debes cumplir al usar estas imágenes. Dichos requisitos, junto con los ejemplos de uso y las directrices, están disponibles en un archivo PDF.
+Hemos creado distintivos promocionales especiales para ayudarte a que lleguen más clientes a la descripción de la aplicación en la Tienda Windows. Estos distintivos están disponibles en 44 idiomas. Ten en cuenta que existen ciertos requisitos que debes cumplir al usar estas imágenes. Dichos requisitos, junto con los ejemplos de uso y las directrices, están disponibles en un archivo PDF.
 
-[![Botón Descargar](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) Windows Store Marketing Guidelines (PDF, inglés) (Directrices de marketing de la Tienda Windows)
+[![Botón Descargar](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) **Windows Store Marketing Guidelines (PDF, inglés) (Directrices de marketing de la Tienda Windows)**
+
 
 ## <a name="badge-generator-and-images"></a>Generador de distintivos e imágenes
 
-Puedes usar nuestro [generador de distintivos](http://go.microsoft.com/fwlink/p/?LinkID=534236) para generar el código HTML que muestra el distintivo de la Tienda (en el idioma que prefieras) y que vincula directamente con la descripción de la aplicación en la Tienda. También puedes descargar el conjunto completo de imágenes de distintivos (en formato PNG y PDF) desde el vínculo siguiente.
+Puedes usar nuestro [generador de distintivos](http://go.microsoft.com/fwlink/p/?LinkID=534236) para generar el código HTML que muestra el distintivo de la Tienda (en el idioma que prefieras) y que vincula directamente con la descripción de la aplicación en la Tienda.
 
-[![Botón Descargar](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529771) Todas las imágenes de distintivo
+También puedes descargar el conjunto completo de imágenes de distintivos (en formato PNG y PDF) desde el vínculo siguiente.
+
+[![Botón Descargar](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529771) **Todas las imágenes de distintivo**
+
 
 ## <a name="device-images"></a>Imágenes de dispositivo
 
-Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se ejecuta en un dispositivo Windows. Puedes seleccionar entre una gran variedad de imágenes de dispositivos, incluidos teléfonos, tabletas, portátiles y equipos. Puedes encontrar los procedimientos recomendados y especificaciones técnicas sobre cómo usar estas imágenes en [Windows Store Marketing Guidelines](http://go.microsoft.com/fwlink/p/?LinkId=529769) (Directrices de marketing de la Tienda Windows).
+Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se ejecuta en un dispositivo Windows. Tenemos a tu disposición una gran variedad de imágenes de dispositivos, incluidos teléfonos, tabletas, portátiles y equipos. Puedes encontrar los procedimientos recomendados y especificaciones técnicas sobre cómo usar estas imágenes en [Windows Store Marketing Guidelines](http://go.microsoft.com/fwlink/p/?LinkId=529769) (Directrices de marketing de la Tienda Windows).
 
-[![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) Imagen de dispositivos Windows
+[![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Imagen de dispositivo Windows**
 
 ## <a name="license-to-microsoft-marks"></a>Licencia para las marcas Microsoft
 

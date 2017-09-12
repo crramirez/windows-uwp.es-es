@@ -1,62 +1,50 @@
 ---
-author: shawjohn
-Description: "Puedes ver análisis detallados de las aplicaciones en el panel del Centro de desarrollo de Windows."
-title: "Análisis"
+author: JnHs
+Description: "Obtén análisis detallados de las aplicaciones de Windows en el panel de información o a través de otros métodos."
+title: "Analizar el rendimiento de la aplicación"
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
-ms.author: johnshaw
-ms.date: 02/08/2017
+ms.author: wdg-dev-content
+ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, análisis, informes, panel, aplicaciones"
-ms.openlocfilehash: 13a37a4ae2cea67fdce843ed4e6189797d85b93e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 57e4a30258fa25411bb461cac56aa18d2f74981d
+ms.sourcegitcommit: a93b1da07b386a682435de58a8129d7b4ee90c14
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/29/2017
 ---
-# <a name="analytics"></a>Análisis
+# <a name="analyze-app-performance"></a>Analizar el rendimiento de la aplicación
 
-Puedes ver análisis detallados de las aplicaciones en el panel del Centro de desarrollo de Windows. Los gráficos y las estadísticas te permiten saber cómo están funcionando las aplicaciones, desde a cuántos clientes has llegado a cómo usan estos la aplicación y qué opinan de ella. También encontrarás información sobre el estado de la aplicación, el uso de los anuncios y mucho más. Visualiza los informes en el panel o [descarga los informes que necesites](download-analytic-reports.md) para analizar los datos sin conexión. También te ofrecemos varias formas de [acceder a los datos de análisis sin usar el panel](#no-dashboard).
+Puedes ver análisis detallados de las aplicaciones en el panel del Centro de desarrollo de Windows. Los gráficos y las estadísticas te permiten saber cómo están funcionando las aplicaciones, desde a cuántos clientes has llegado a cómo usan estos la aplicación y qué opinan de ella. También encontrarás métricas sobre el estado de la aplicación, el uso de los anuncios y mucho más.
 
-> [!NOTE]
-> Además de los informes de panel, puedes acceder mediante programación a algunos datos de análisis mediante la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+Puedes visualizar informes de análisis en el panel de información o [descargar los informes que necesites](download-analytic-reports.md) para analizar los datos sin conexión. También te ofrecemos varias formas de [acceder a los datos de análisis sin usar el panel](#no-dashboard).
 
-## <a name="analytics-for-all-your-apps"></a>Análisis para todas las aplicaciones
+## <a name="view-key-analytics-for-all-your-apps"></a>Ver análisis clave de todas las aplicaciones
 
-Para ver un análisis clave acerca de tus aplicaciones más descargadas, en el menú de navegación superior, selecciona **Análisis** > **Información general**. De manera predeterminada, la página **Información general de análisis** muestra información acerca de las cinco aplicaciones que tienen más adquisiciones de ciclo de vida. Para elegir diferentes aplicaciones que mostrar, selecciona **Cambiar filtros**.
+Para ver un análisis clave sobre tus aplicaciones más descargadas, amplía **Analizar** y selecciona **Información general**. De forma predeterminada, la página **Información general de análisis** muestra información acerca de las cinco aplicaciones que tienen más adquisiciones de ciclo de vida. Para elegir diferentes aplicaciones publicadas que mostrar, selecciona **Filtros**.
 
-## <a name="available-reports-for-each-app"></a>Informes disponibles para cada aplicación
+## <a name="view-individual-reports-for-each-app"></a>Ver informes individuales de cada aplicación
 
 En esta sección encontrarás detalles sobre la información presentada en cada uno de los siguientes informes:
 
 -   [Informe Adquisiciones](acquisitions-report.md)
 -   [Informe Adquisiciones de complementos](add-on-acquisitions-report.md)
--   [Informe Instalaciones](installs-report.md)
 -   [Informe Uso](usage-report.md)
--   [Informe Mantenimiento](health-report.md)
--   [Informe de clasificaciones](ratings-report.md)
--   [Informe de críticas](reviews-report.md)
+-   [Informe Estado](health-report.md)
+-   [Informe Críticas](reviews-report.md)
 -   [Informe Comentarios](feedback-report.md)
--   [Informe Canales y conversiones](channels-and-conversions-report.md)
--   [Informe Mediación de anuncios](ad-mediation-report.md)
--   [Informe de rendimiento de publicidad](advertising-performance-report.md)
--   [Informe Rendimiento de filial](affiliates-performance-report.md)
--   [Informe Promocionar la aplicación](promote-your-app-report.md)
+-   [Informe Rendimiento de la publicidad](advertising-performance-report.md)
+-   [Informe Campaña publicitaria](promote-your-app-report.md)
 
 > [!NOTE]
 > Según las funciones y la implementación específicas de la aplicación, es posible que no veas datos en todos estos informes.
 
-## <a name="page-and-section-filters"></a>Filtros de página y de sección
-
-Cada informe incluye filtros que puedes usar para explorar en profundidad los datos. En la parte superior de la página verás **Aplicar filtros**. Puedes usar estos filtros para limitar o ampliar el ámbito de todos los gráficos y la información de la página.
-
-Dentro de cada gráfico determinado, también puedes ver los filtros de sección individuales. Estos filtros limitan los datos que se muestran solo para ese gráfico determinado.
-
-Los filtros específicos varían según el informe. En los temas de esta sección se explica qué filtros están disponibles y se describen los otros datos de la página para cada informe.
-
 <span id="no-dashboard"/>
-## <a name="access-analytics-data-without-using-the-dev-center-dashboard"></a>Acceder a los datos de análisis sin usar el panel del Centro de desarrollo
+## <a name="access-analytics-data-without-using-the-dev-center-dashboard"></a>Acceder a los datos de análisis sin usar el panel de información del Centro de desarrollo
 
-Además de los informes de análisis del panel, hay otras formas de acceder a los datos de análisis.
+Además de los informes de análisis del panel de información, hay otras formas de acceder a los datos de análisis.
 
 ### <a name="windows-store-analytics-api"></a>API de análisis de la Tienda Windows
 
@@ -77,7 +65,5 @@ Usa los siguientes recursos para empezar a usar Power BI para acceder a los dato
 
 ### <a name="dev-center-app"></a>Aplicación del Centro de desarrollo
 
-Instala la aplicación del [Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para ver rápidamente los detalles sobre el estado y el rendimiento de las aplicaciones en cualquier dispositivo Windows10.
+Instala la aplicación del [Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para ver rápidamente los detalles sobre el estado y el rendimiento de las aplicaciones en cualquier dispositivo Windows 10.
 
-## <a name="related-topics"></a>Temas relacionados
-- [Publicar aplicaciones de Windows](index.md)

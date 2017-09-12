@@ -1,17 +1,19 @@
 ---
-author: msatranjr
+author: normesta
 title: Mostrar rutas e indicaciones en un mapa
 description: "Solicita rutas e indicaciones y muéstralas en tu aplicación."
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
-ms.author: misatran
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, ruta, mapa, ubicación, indicaciones"
-ms.openlocfilehash: 62f0f26cc9a78a29e6fab5a8f762e0b28b7df6a3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 83985d986f15602923a21db3d308931397a01767
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>Mostrar rutas e indicaciones en un mapa
 

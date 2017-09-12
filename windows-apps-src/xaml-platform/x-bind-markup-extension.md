@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: ba08e426fea4c494276978d96cf0b36f6956bdb8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0adc0789c4e52e8b9943f774d786aea6efb60c91
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
@@ -181,7 +183,8 @@ Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedade
 | **FallbackValue** | Especifica un valor que se mostrará cuando no se puede resolver el origen o la ruta de acceso. |
 | **Modo** | Especifica el modo de enlace como una de las siguientes cadenas: "OneTime", "OneWay" o "TwoWay". El valor predeterminado es "OneTime". Ten en cuenta que esto difiere del valor predeterminado de **{Binding}**, que es "OneWay" en la mayoría de los casos. |
 | **TargetNullValue** | Especifica el valor que se mostrará cuando se resuelva el valor de origen, pero es explícitamente **null**. |
-| **BindBack** | Especifica una función que se usará en la dirección inversa de un enlace bidireccional. | 
+| **BindBack** | Especifica una función que se usará en la dirección inversa de un enlace bidireccional. |
+| **UpdateSourceTrigger** | Especifica cuándo volver a insertar los cambios desde el control al modelo en los enlaces de TwoWay. El valor predeterminado para todas las propiedades excepto TextBox.Text es PropertyChanged, para TextBox.Text es LostFocus.| 
 
 **Nota** Si quieres convertir el marcado de **{Binding}** a **{x:Bind}**, debes tener en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
  

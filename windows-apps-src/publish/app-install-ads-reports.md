@@ -1,20 +1,12 @@
 ---
-author: shawjohn
-title: "Informe Anuncios de instalación de aplicaciones: desarrollar aplicaciones para UWP"
-ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
-description: "El informe &quot;Anuncios de instalación de aplicaciones&quot; en el panel del Centro de desarrollo de Windows te permite ver el rendimiento de las campañas de anuncios de promoción de tu aplicación."
-ms.author: johnshaw
-ms.date: 02/08/2017
-ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: "Windows 10, UWP, promoción, aplicación, campaña, informe, instalaciones"
 redirect_url: https://msdn.microsoft.com/windows/uwp/publish/promote-your-app-report
-ms.openlocfilehash: f40b6a6e7bfb2748d53c5c4472cf05b63e617703
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 43048bd3570697745d73909b215fe2d7f8f0fa21
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2017
 ---
-# <a name="app-install-ads-report"></a>Informe Anuncios de instalación de aplicaciones
+# <a name="app-install-ads-report"></a>Informe Anuncios para instalación de aplicaciones
  
 Esta página se ha redirigido a "Informe Promocionar la aplicación".
  

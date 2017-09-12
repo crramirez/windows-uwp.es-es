@@ -1,17 +1,19 @@
 ---
-author: msatranjr
+author: normesta
 title: "Solicitar una clave de autenticación de mapas"
 description: "La aplicación universal de Windows debe autenticarse para poder usar MapControl y los servicios de mapa en el espacio de nombres Windows.Services.Maps."
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
-ms.author: misatran
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, clave de autenticación de mapa, control de mapa"
-ms.openlocfilehash: 42078becbc5853787ca057dcbfb58b8d8de7967d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 7b964c19933db460b8f6b0cc7791165ad86adb6c
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar una clave de autenticación de mapas
 
@@ -40,9 +42,9 @@ Para crear una nueva clave
 
 4.  Si no tienes una cuenta de Mapas de Bing, crea una nueva. Rellena los campos **Nombre de cuenta**, **Nombre del contacto**, **Nombre de la compañía**, **Dirección de correo electrónico** y **Número de teléfono**. Después de aceptar los términos de uso, haz clic en **Crear**.
 
-5.  En el menú **Mi cuenta**, haz clic en **Crear o ver claves**.
+5.  En el menú **Mi cuenta**, haz clic en **Mis claves**.
 
-6.  Haz clic en el vínculo **para crear una clave nueva**.
+6.  Si creaste una clave anteriormente, haz clic en el vínculo para crear una nueva clave. De lo contrario, continúa con el formulario Crear clave.
 
 7.  Rellena el formulario **Crear clave** y, después, haz clic en **Crear**.
 

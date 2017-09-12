@@ -1,28 +1,30 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: "Orientación del sensor"
 description: "Los datos de sensor procedentes de las clases Accelerometer, Gyrometer, Compass, Inclinometer y OrientationSensor se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 05/24/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 78a155aecdf7cb98f8742380dae62a0a9025149a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a91e38aa11f7fa25804d6d6f11cc030ee1613311
+ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/26/2017
 ---
 # <a name="sensor-orientation"></a>Orientación del sensor
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** API importantes **
+**API importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Windows.Devices.Sensors.Custom**](https://msdn.microsoft.com/library/windows/apps/Dn895032)
 
-Los datos de sensor procedentes de las clases [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687), [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718), [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705), [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766) y [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea. Si tu aplicación admite el giro automático y cambia su orientación para amoldarse al dispositivo cuando el usuario lo gire, deberás ajustar los datos de sensor para el giro antes de usarlos.
+Los datos de sensor procedentes de las clases [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687), [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718), [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705), [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766) y [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante el marco de referencia del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea. Si tu aplicación admite el giro automático y cambia su orientación para amoldarse al dispositivo cuando el usuario lo gire, deberás ajustar los datos de sensor para el giro antes de usarlos.
 
 ## <a name="display-orientation-vs-device-orientation"></a>Orientación de la pantalla y orientación del dispositivo
 
@@ -48,7 +50,7 @@ Los fabricantes producen dispositivos tanto con orientación horizontal predeter
 |-------------|-----------------|----------------|
 | **Landscape** | ![Dispositivo con orientación horizontal predeterminada en orientación Landscape](images/sensor-orientation-0.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Landscape](images/sensor-orientation-1.PNG) |
 | **Portrait** | ![Dispositivo con orientación horizontal predeterminada en orientación Portrait](images/sensor-orientation-2.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Portrait](images/sensor-orientation-3.PNG) |
-| **LandscapeFlipped ** | ![Dispositivo con orientación horizontal predeterminada en orientación LandscapeFlipped](images/sensor-orientation-4.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación LandscapeFlipped](images/sensor-orientation-5.PNG) | 
+| **LandscapeFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación LandscapeFlipped](images/sensor-orientation-4.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación LandscapeFlipped](images/sensor-orientation-5.PNG) | 
 | **PortraitFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación PortraitFlipped](images/sensor-orientation-6.PNG)| ![Dispositivo con orientación vertical predeterminada en orientación PortraitFlipped](images/sensor-orientation-7.PNG) |
 
 ## <a name="devices-broadcasting-display-and-headless-devices"></a>Difusión de presentaciones con dispositivos y dispositivos sin periféricos
@@ -162,9 +164,14 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 Los datos de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) se cambian de otra forma. Pensemos en estas distintas orientaciones al girar en el sentido contrario al de las agujas del reloj hacia el eje Z, deberemos revertir el giro para regresar a la orientación del usuario. En el caso de los datos de cuaternión, podemos emplear la fórmula de Euler para definir un giro con un cuaternión de referencia. También podemos usar una matriz de giro de referencia.
 
-![Fórmula de Euler](images/eulers-formula.png) Para obtener la orientación relativa que quieres, multiplica el objeto de referencia por el objeto absoluto. Este cálculo no es commutativo.
+![Fórmula de Euler](images/eulers-formula.png)
 
-![Multiplicar el objeto de referencia por el objeto absoluto](images/orientation-formula.png) En la expresión anterior, los datos del sensor devuelven el objeto absoluto.
+Para obtener la orientación relativa que deseas, multiplica el objeto de referencia por el objeto absoluto. Este cálculo no es commutativo.
+
+![Multiplicar el objeto de referencia por el objeto absoluto](images/orientation-formula.png)
+
+En la expresión anterior, los datos de sensor devuelven el objeto absoluto.
+
 
 | Orientación de la pantalla  | Giro en el sentido contrario a las agujas del reloj en torno a Z | Cuaternión de referencia (giro inverso) | Matriz de giro de referencia (giro inverso) | 
 |----------------------|------------------------------------|-----------------------------------------|----------------------------------------------|

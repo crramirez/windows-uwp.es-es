@@ -1,17 +1,19 @@
 ---
-author: msatranjr
+author: normesta
 title: "Mostrar puntos de interés en un mapa"
 description: "Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
-ms.author: misatran
-ms.date: 02/08/2017
+ms.author: normesta
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, mapa, map, ubicación, location, marcadores, pushpins"
-ms.openlocfilehash: c8fdc16b99a9d2d57f71e32e008fa668c3404835
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 280a651df949018dc9cf490e14d72d167fee0858
+ms.sourcegitcommit: 0ebc8dca2fd9149ea163b7db9daa14520fc41db4
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="display-points-of-interest-poi-on-a-map"></a>Mostrar puntos de interés en un mapa
 
@@ -31,10 +33,10 @@ Muestra elementos de la interfaz de usuario de XAML en el mapa como, por ejemplo
 
 En resumen:
 
--   [Agrega MapIcon al mapa](#add-a-mapicon) para mostrar una imagen, por ejemplo, un marcador con texto opcional.
--   [Agrega MapPolygon al mapa](#add-a-mappolygon) para mostrar una forma multipunto.
--   [Agrega MapPolyline al mapa](#add-a-mappolyline) para mostrar las líneas en el mapa.
--   [Agrega código XAML al mapa](#add-xaml) para mostrar elementos de la interfaz de usuario personalizados.
+-   [Agrega MapIcon al mapa](#mapicon) para mostrar una imagen, por ejemplo, un marcador con texto opcional.
+-   [Agrega MapPolygon al mapa](#mappolygon) para mostrar una forma multipunto.
+-   [Agrega MapPolyline al mapa](#mappolyline) para mostrar las líneas en el mapa.
+-   [Agrega código XAML al mapa](#mapxaml) para mostrar elementos de la interfaz de usuario personalizados.
 
 Si quieres colocar en el mapa un elevado número de elementos, considera la posibilidad de [superponer imágenes en mosaico en el mapa](overlay-tiled-images.md). Para mostrar carreteras en el mapa, consulta [Mostrar rutas e indicaciones](routes-and-directions.md).
 
@@ -55,18 +57,20 @@ En el ejemplo siguiente se muestra un mapa de la ciudad de Seattle, el cual cont
          Geopoint snPoint = new Geopoint(snPosition);
 
          // Create a MapIcon.
-         MapIcon mapIcon1 = new MapIcon();
-         mapIcon1.Location = snPoint;
-         mapIcon1.NormalizedAnchorPoint = new Point(0.5, 1.0);
-         mapIcon1.Title = "Space Needle";
-         mapIcon1.ZIndex = 0;
+         var mapIcon1 = new MapIcon
+         {
+             Location = snPoint,
+             NormalizedAnchorPoint = new Point(0.5, 1.0),
+             Title = "Space Needle",
+             ZIndex = 0,
+         };
 
          // Add the MapIcon to the map.
-         MapControl1.MapElements.Add(mapIcon1);
+         myMap.MapElements.Add(mapIcon1);
 
          // Center the map over the POI.
-         MapControl1.Center = snPoint;
-         MapControl1.ZoomLevel = 14;
+         myMap.Center = snPoint;
+         myMap.ZoomLevel = 14;
       }
 ```
 
@@ -90,31 +94,77 @@ Ten en cuenta lo siguiente si quieres trabajar con la clase [**MapIcon**](https:
 -   Asimismo, tampoco se garantiza que se muestre el elemento [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) de la clase [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077). Si no ves el texto, disminuye su tamaño; para ello tienes que reducir el valor de la propiedad [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 -   Si muestras la imagen de un elemento [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) que señala a una ubicación específica del mapa (por ejemplo, un marcador o una flecha), puedes establecer el valor de la propiedad [**NormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637082) en la ubicación aproximada del puntero de la imagen. Si dejas el valor de **NormalizedAnchorPoint** como el valor predeterminado (0, 0), que representa la esquina superior izquierda de la imagen, puede que los cambios realizados en la propiedad [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) del mapa hagan que la imagen apunte a otra ubicación.
 
-## <a name="add-a-mappolygon"></a>Agregar un elemento MapPolygon
+## <a name="add-a-mapbillboard"></a>Agregar un MapBillboard
 
+Muestra imágenes de gran tamaño relacionadas con ubicaciones de mapa como una imagen de un restaurante o un punto de referencia. Cuando los usuarios alejan la imagen, esta se reducirá proporcionalmente de tamaño para permitir que el usuario vea más del mapa. Esto es algo diferente a un [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) que marca una ubicación específica, suele ser pequeño y conserva el mismo tamaño, conforme los usuarios acercan o alejan un mapa.
+
+![Imagen de MapBillboard](images/map-billboard.png)
+
+El siguiente código muestra el [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard) presentado en la imagen anterior.
+
+```csharp
+private void mapBillboardAddButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+{
+    RandomAccessStreamReference mapBillboardStreamReference =
+        RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/billboard.jpg"));
+
+        var mapBillboard = new MapBillboard(myMap.ActualCamera)
+        {
+            Location = myMap.Center,
+            NormalizedAnchorPoint = new Point(0.5, 1.0),
+            Image = mapBillboardStreamReference
+        };
+
+        myMap.MapElements.Add(mapBillboard);
+}
+```
+Hay tres partes de este código que vale la pena examinar un poco más de cerca: la imagen, la cámara de referencia y la propiedad [**NormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard#Windows_UI_Xaml_Controls_Maps_MapBillboard_NormalizedAnchorPoint).
+
+### <a name="image"></a>Imagen
+
+Este ejemplo muestra una imagen personalizada guardada en la carpeta **Activos** del proyecto. La propiedad [**Image**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard#Windows_UI_Xaml_Controls_Maps_MapBillboard_Image) del elemento [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard) espera un valor de tipo [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813). Para este tipo es necesaria una declaración **using** para el espacio de nombres [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/br241791).
+
+>[!NOTE]
+>Si usas la misma imagen para varios iconos del mapa, declara la clase [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813) en el nivel de página o aplicación para mejorar el rendimiento.
+
+### <a name="reference-camera"></a>Cámara de referencia
+
+ Dado que una imagen [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard) se escala vertical y horizontalmente conforme el [**ZoomLevel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol#Windows_UI_Xaml_Controls_Maps_MapControl_ZoomLevel) del mapa cambia, es importante definir en qué lugar de ese [**ZoomLevel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol#Windows_UI_Xaml_Controls_Maps_MapControl_ZoomLevel) la imagen aparece en una escala de 1x normal. Esa posición se define en la cámara de referencia del [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard), y para establecerla, tendrás que pasar un objeto [**MapCamera**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcamera) al constructor del [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard).
+
+ Puedes definir la posición que quieras en un [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) y, a continuación, usar ese [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) para crear un objeto [**MapCamera**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcamera).  Sin embargo, en este ejemplo, solo usamos el objeto [**MapCamera**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcamera) devuelto por la propiedad [**ActualCamera**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol#Windows_UI_Xaml_Controls_Maps_MapControl_ActualCamera) del control de mapa. Se trata de la cámara interna del mapa. La posición actual de la cámara se convierte en la posición de la cámara de referencia; la posición donde la imagen de [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard) aparece en escala de 1x.
+
+ Si tu aplicación ofrece a los usuarios la capacidad de alejar el mapa, se reduce el tamaño de la imagen porque la cámara interna de mapas sube en altitud mientras la imagen en escala de 1x permanece fija en la posición de la cámara de referencia.
+
+### <a name="normalizedanchorpoint"></a>NormalizedAnchorPoint
+
+El [**NormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard#Windows_UI_Xaml_Controls_Maps_MapBillboard_NormalizedAnchorPoint) es el punto de la imagen que está anclado a la propiedad [**Ubicación**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard#Windows_UI_Xaml_Controls_Maps_MapBillboard_Location) de [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard). El punto 0.5,1 es el centro de la parte inferior de la imagen. Como hemos establecido la propiedad [**Ubicación**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard#Windows_UI_Xaml_Controls_Maps_MapBillboard_Location) de [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard) en el centro del control del mapa, se anclará el centro de la parte inferior de la imagen al centro del control de mapas.
+
+## <a name="add-a-mappolygon"></a>Agregar un elemento MapPolygon
 
 Usa la clase [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) para mostrar una forma multipunto en el mapa. En el siguiente ejemplo, obtenido de una [muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977), se muestra en el mapa un cuadro rojo con el borde azul.
 
 ```csharp
 private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
 {
-   double centerLatitude = myMap.Center.Position.Latitude;
-   double centerLongitude = myMap.Center.Position.Longitude;
-   MapPolygon mapPolygon = new MapPolygon();
-   mapPolygon.Path = new Geopath(new List<BasicGeoposition>() {
-         new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude-0.001 },                
-         new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude-0.001 },                
-         new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude+0.001 },
-         new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
+    double centerLatitude = myMap.Center.Position.Latitude;
+    double centerLongitude = myMap.Center.Position.Longitude;
 
-   });
+    var mapPolygon = new MapPolygon()
+    {
+        Path = new Geopath(new List<BasicGeoposition>() {
+        new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude-0.001 },
+        new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude-0.001 },
+        new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude+0.001 },
+        new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
+        }),
+        ZIndex = 1,
+        FillColor = Colors.Red,
+        StrokeColor = Colors.Blue,
+        StrokeThickness = 3,
+        StrokeDashed = false,
+    };
 
-   mapPolygon.ZIndex = 1;
-   mapPolygon.FillColor = Colors.Red;
-   mapPolygon.StrokeColor = Colors.Blue;
-   mapPolygon.StrokeThickness = 3;
-   mapPolygon.StrokeDashed = false;
-   myMap.MapElements.Add(mapPolygon);
+    myMap.MapElements.Add(mapPolygon);
 }
 ```
 
@@ -126,23 +176,24 @@ Usa la clase [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/d
 ```csharp
 private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
 {
-   double centerLatitude = myMap.Center.Position.Latitude;
-   double centerLongitude = myMap.Center.Position.Longitude;
-   MapPolyline mapPolyline = new MapPolyline();
-   mapPolyline.Path = new Geopath(new List<BasicGeoposition>() {                
-         new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude-0.001 },                
-         new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
-   });
+    double centerLatitude = myMap.Center.Position.Latitude;
+    double centerLongitude = myMap.Center.Position.Longitude;
+    var mapPolyline = new MapPolyline
+    {
+        Path = new Geopath(new List<BasicGeoposition>() {
+            new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude-0.001 },
+            new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
+        }),
+        StrokeColor = Colors.Black,
+        StrokeThickness = 3,
+        StrokeDashed = true,
+    };
 
-   mapPolyline.StrokeColor = Colors.Black;
-   mapPolyline.StrokeThickness = 3;
-   mapPolyline.StrokeDashed = true;
-   myMap.MapElements.Add(mapPolyline);
+    myMap.MapElements.Add(mapPolyline);
 }
 ```
 
 ## <a name="add-xaml"></a>Agregar XAML
-
 
 Visualiza elementos de la interfaz de usuario personalizados en el mapa mediante XAML. Coloca XAML en el mapa especificando la ubicación y el punto de anclaje normalizado del XAML.
 

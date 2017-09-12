@@ -9,9 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
-ms.openlocfilehash: cb558b67647dfe065a01cfac1bd1c37f766881d0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 5c139a80f8f24b47047cc2a8b6fb6f812f54f0e6
+ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Llevar los juegos HTML a UWP en Xbox
 Xbox One es una excelente plataforma para juegos HTML 5. Los juegos HTML 5 se ejecutan en el motor del explorador [Edge](https://developer.microsoft.com/microsoft-edge/). Edge es rápido y totalmente compatible con las características de HTML 5 y CSS 3, como WebGL y Canvas.
@@ -21,6 +23,13 @@ Los motores de juegos más populares, como [Construct 2](https://www.scirra.com/
 Los juegos HTML se encuentran en igualdad de condiciones respecto de cualquier otro tipo de juego. Los desarrolladores pueden obtener acceso completo a las API nativas, como la entrada del mando, Kinect, etc.
 
 Xbox One se ejecuta en la Plataforma universal de Windows, lo que significa que, al igual que otros dispositivos de Microsoft, admite aplicaciones web hospedadas, que son aplicaciones que provienen completamente de un servidor. Para obtener más información, consulta [Aplicaciones web hospedadas](http://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).
+
+
+Este vídeo profundiza más sobre las aplicaciones web empaquetadas y las aplicaciones web hospedadas en Xbox, incluyendo cómo crearlas.
+</br>
+</br>
+<iframe src="https://channel9.msdn.com/Events/Xbox/App-Dev-on-Xbox/Web-Apps-on-Xbox/player#time=04m21s:paused" width="600" height="338" height="658.1199951171875" allowFullScreen frameBorder="0"></iframe>
+
 
 Para comenzar, descarga el motor elegido y busca las instrucciones de las aplicaciones de Windows 10. También debes leer la [guía de introducción](getting-started.md) para obtener información sobre cómo convertir la consola en un kit de desarrollo y cómo realizar la implementación desde Visual Studio.
 

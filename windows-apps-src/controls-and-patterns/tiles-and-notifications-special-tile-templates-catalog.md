@@ -6,14 +6,16 @@ ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 11c8fbdfd8653fe93ab712c865dc1d23e7a76581
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: ebeac8bb4d2787514c788ecfa0ab1381ff40820b
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="special-tile-templates"></a>Plantillas de iconos especiales
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -35,13 +37,25 @@ Los siguientes pasos incluyen todo lo que necesitas saber para crear un icono de
 
 **Paso 1: crear tus activos de imagen en formato PNG**
 
-Crear los activos de icono para tu icono y situarlos en tus recursos del proyecto con tus otros activos. Como mínimo, crea un icono de 200 x 200 píxeles, que funcione tanto para iconos pequeños como medianos en teléfonos y en el escritorio. Para proporcionar la mejor experiencia de usuario, crea un icono para cada tamaño. Consulta los detalles de ajuste de tamaño en la imagen a continuación.
+Crear los activos de icono para tu icono y situarlos en tus recursos del proyecto con tus otros activos. Como mínimo, crea un icono de 200 x 200 píxeles, que funcione tanto para iconos pequeños como medianos en teléfonos y en el escritorio. Para proporcionar la mejor experiencia de usuario, crea un icono para cada tamaño. Estos activos no requieren relleno. Consulta los detalles de ajuste de tamaño en la imagen que viene a continuación.
 
 Guarda activos de iconos en formato PNG y con transparencia. En Windows Phone, se muestra cada píxel no transparente en blanco (RGB 255, 255, 255). Por razones de coherencia y simplicidad, usar el blanco también para los iconos de escritorio.
 
 Windows 10 en escritorio, portátil y tableta solo es compatible con activos icónicos cuadrados. El teléfono es compatible tanto con activos cuadrados como con activos que son más altos que anchos, hasta una proporción de ancho:alto 2:3, que es útil para imágenes como un icono de teléfono.
 
 ![ajuste de tamaño de los iconos en iconos pequeños y medianos, en teléfonos y en el escritorio](images/iconic-template-sizing-info.png)
+
+![tamaño para los activos con y sin distintivo](images/assetguidance24.png)
+
+En los activos cuadrados, se produce el centrado automático dentro del contenedor:
+
+![tamaño del activo cuadrado, con y sin distintivo](images/assetguidance25.png)
+
+Para activos no cuadrados, se produce el centrado horizontal o vertical automático y el ajuste del ancho o alto del contenedor:
+
+![tamaño del recurso no cuadrado, con y sin distintivo](images/assetguidance26a.png)
+
+![tamaño del recurso no cuadrado, con y sin distintivo](images/assetguidance26b.png)
 
 **Paso 2: crear el icono de base**
 

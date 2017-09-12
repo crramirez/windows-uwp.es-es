@@ -1,17 +1,19 @@
 ---
-author: msatranjr
+author: normesta
 title: "Superponer imágenes en mosaico en un mapa"
 description: "Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
-ms.author: misatran
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer"
-ms.openlocfilehash: dd52df5f95b25e26ddb0fb8db50c9faf27df02ee
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d6def6405c8a5d731259b4522dff10cb996d178c
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Superponer imágenes en mosaico en un mapa
 
@@ -97,13 +99,12 @@ Superpón imágenes en mosaico recuperadas desde un servicio web mediante la cla
         http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
     ```
 
-    El servicio web debe admitir un URI que contenga los parámetros reemplazables {x}, {y}, y {zoomlevel}. La mayoría de los servicios web (Nokia, Bing o Google, por ejemplo) admiten URI con este formato. Si el servicio web requiere argumentos adicionales que no estén disponibles con la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control de los eventos [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#provide-a-custom-uri) que figura más adelante en este tema.
+    El servicio web debe admitir un URI que contenga los parámetros reemplazables {x}, {y}, y {zoomlevel}. La mayoría de los servicios web (Nokia, Bing o Google, por ejemplo) admiten URI con este formato. Si el servicio web requiere argumentos adicionales que no estén disponibles con la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control de los eventos [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#customuri) que figura más adelante en este tema.
 
-3.  A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tiled-image-overview).
+3.  A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tileintro).
 
 El siguiente ejemplo, se superponen los iconos de un servicio web ficticio en un mapa de Norteamérica. El valor de la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) se especifica en el constructor de la clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986). En este ejemplo, solo se muestran los iconos dentro de los límites geográficos especificados en la propiedad opcional [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147).
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
         private void AddHttpMapTileSource()
         {
@@ -129,6 +130,7 @@ El siguiente ejemplo, se superponen los iconos de un servicio web ficticio en un
             MapControl1.TileSources.Add(tileSource);
         }
 ```
+
 ```cpp
 void MainPage::AddHttpMapTileSource()
 {
@@ -160,9 +162,9 @@ Superpón imágenes en mosaico almacenadas como archivos en el almacenamiento lo
         Tile_{zoomlevel}_{x}_{y}.png
     ```
 
-    Si el formato de los nombres de archivo requiere argumentos adicionales que no están disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control del evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#provide-a-custom-uri) que figura más adelante en este tema.
+    Si el formato de los nombres de archivo requiere argumentos adicionales que no están disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control del evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#customuri) que figura más adelante en este tema.
 
-3.  A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tiled-image-overview).
+3.  A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tileintro).
 
 Puedes usar los siguientes protocolos y ubicaciones para cargar mosaicos desde un almacenamiento local:
 

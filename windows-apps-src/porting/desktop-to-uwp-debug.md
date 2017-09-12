@@ -1,147 +1,162 @@
 ---
 author: normesta
-Description: "Implementa y depura una aplicación para Plataforma universal de Windows (UWP) convertida a partir de una aplicación de escritorio de Windows (Win32, WPF y Windows Forms) mediante el uso del puente de aplicación de escritorio a UWP."
+Description: "Ejecuta la aplicación empaquetada y revisa su aspecto sin tener que iniciar sesión en ella. A continuación, establece los puntos de interrupción y revisa el código. Cuando estés listo para probar la aplicación en un entorno de producción, firma la aplicación e instálala."
 Search.Product: eADQiWindows 10XVcnh
-title: "Puente de dispositivo de escritorio a UWP, depuración"
+title: "Ejecutar, depurar y probar una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)"
 ms.author: normesta
-ms.date: 03/09/2017
+ms.date: 06/20/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
-ms.openlocfilehash: d1ce3054df19b0b51c8203e7fa7296efde848c41
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c160fecc530a6366de48f4f2ecc24df2463c0469
+ms.sourcegitcommit: 77bbd060f9253f2b03f0b9d74954c187bceb4a30
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/11/2017
 ---
-# <a name="desktop-to-uwp-bridge-debug"></a>Puente de dispositivo de escritorio a UWP: depuración
+# <a name="run-debug-and-test-a-packaged-desktop-app-desktop-bridge"></a>Ejecutar, depurar y probar una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)
 
-En este tema se proporciona información destinada a ayudarte a depurar correctamente tu aplicación y luego convertirla con el Puente de dispositivo de escritorio a UWP. Tienes varias opciones para depurar la aplicación convertida.
+Ejecuta la aplicación empaquetada y revisa su aspecto sin tener que iniciar sesión en ella. A continuación, establece los puntos de interrupción y revisa el código. Cuando estés listo para probar la aplicación en un entorno de producción, firma la aplicación e instálala. En este tema se explica cómo realizar cada uno de estos pasos.
 
-## <a name="attach-to-process"></a>Asociar al proceso
+<span id="run-app" />
+## <a name="run-your-app"></a>Ejecutar la aplicación
 
-Cuando Microsoft Visual Studio se ejecuta "como administrador", los comandos *Iniciar depuración* e *Iniciar sin depurar* funcionarán para el proyecto de una aplicación convertida, pero la aplicación iniciada se ejecutará en un [nivel de integridad medio](https://msdn.microsoft.com/library/bb625963) (es decir, no tendrá privilegios elevados). Para otorgar privilegios de administrador a la aplicación iniciada, primero tienes que iniciar "como administrador" a través de un acceso directo o un icono. Una vez que la aplicación se ejecute desde una instancia de Microsoft Visual Studio "como administrador", invoca __Asociar al proceso__ y selecciona el proceso de la aplicación en el cuadro de diálogo.
+Puedes ejecutar la aplicación para probarla de forma local sin tener que obtener un certificado y firmarlo.
 
-## <a name="f5-debug"></a>Depuración con F5
+Si has creado el paquete mediante un proyecto de UWP en Visual Studio, establece el proyecto de empaquetado como proyecto de inicio y luego presiona CTRL + F5 para iniciar la aplicación.
 
-Visual Studio admite ahora un nuevo proyecto de empaquetado. El nuevo proyecto permite copiar automáticamente las actualizaciones al compilar la aplicación en el paquete de la aplicación de Windows creado desde el convertidor en el instalador de la aplicación. Tras configurar el proyecto de empaquetado, ahora también puedes usar F5 para depurar directamente en el paquete aplicación de Windows.
+Si usaste Desktop App Converter o empaquetaste la aplicación de forma manual, abre el símbolo del sistema de Windows PowerShell y en la subcarpeta **PackageFiles** de la carpeta de resultados, ejecuta este cmdlet:
 
->Nota: También puedes usar la opción de depurar un paquete aplicación de Windows existente, con la opción Depurar -> Otros destinos de depuración -> Depurar paquete de aplicaciones instalado.
+```
+Add-AppxPackage –Register AppxManifest.xml
+```
+Para iniciar la aplicación, búscala en el menú Inicio de Windows.
 
-Puedes empezar de este modo:
+![Aplicación empaquetada en el menú Inicio](images/desktop-to-uwp/converted-app-installed.png)
 
-1. Primero, asegúrate de que estás preparado para usar Desktop App Converter. Para obtener instrucciones, consulta [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md).
+> [!NOTE]
+> Una aplicación empaquetada se ejecuta siempre como un usuario interactivo, por lo que cualquier unidad en la que instales la aplicación empaquetada debe tener un formato NTFS.
 
-2. Ejecuta el convertidor y luego el instalador para la aplicación de Win32. El convertidor captura el diseño y los cambios realizados en el registro y produce un paquete de la aplicación de Windows con manifiesto y registery.dat para virtualizar el registro:
+## <a name="debug-your-app"></a>Depurar la aplicación
 
-![alt](images/desktop-to-uwp/debug-1.png)
+Selecciona el paquete en un cuadro de diálogo cada vez que depures la aplicación o instala una extensión y depura la aplicación sin tener que seleccionar el paquete cada vez que inicies la sesión.
 
-3. Instalar e iniciar [Visual Studio 2017 RC](https://www.visualstudio.com/downloads/#visual-studio-community-2017-rc).
+### <a name="debug-your-app-by-selecting-the-package"></a>Depurar la aplicación seleccionando el paquete
 
-4. Instalar el proyecto VSIX de empaquetado de escritorio a UWP desde la [Galería de Visual Studio](http://go.microsoft.com/fwlink/?LinkId=797871).
+Esta opción es la que menos dura a la hora de realizar la instalación, pero es necesario que realices un paso adicional cada vez que quieras iniciar la sesión de depuración.
 
-5. Abre la solución de Win32 correspondiente que se convirtió en Visual Studio.
 
-6. Agrega el nuevo proyecto de empaquetado a la solución haciendo clic en la solución y eligiendo "Agregar nuevo proyecto". A continuación, elige el proyecto de empaquetado de escritorio a UWP en Instalación e implementación:
+1. Asegúrate de que inicias tu aplicación empaquetada al menos una vez para que se instale en el equipo local.
+
+   Consulta la sección anterior [Ejecutar la aplicación](#run-app).
+
+2. Inicia Visual Studio.
+
+   Si quieres depurar la aplicación con permisos elevados, inicia Visual Studio mediante la opción **Ejecutar como administrador**.
+
+3. En Visual Studio, elige **Depurar**->**Otros destinos de depuración**->**Depurar paquete de aplicaciones instalado**.
+
+4. En la lista **Paquetes de aplicación instalados**, selecciona el paquete de la aplicación y luego elige el botón **Adjuntar**.
+
+
+### <a name="debug-your-app-without-having-to-select-the-package"></a>Depurar la aplicación sin tener que seleccionar el paquete
+
+Con esta opción se tarda más tiempo en realizar la instalación, pero no tendrás que seleccionar el paquete instalado cada vez que la inicies. Necesitarás instalar [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) para usar este método.
+
+1. En primer lugar, instala [Desktop Bridge Debugging Project (Proyecto de depuración del Puente de dispositivo de escritorio)](http://go.microsoft.com/fwlink/?LinkId=797871).
+
+2. Inicia Visual Studio y abre el proyecto de la aplicación de escritorio.
+
+6. Agrega un proyecto denominado **Depuración del Puente de dispositivo de escritorio** a la solución.
+
+   Puedes encontrar la plantilla del proyecto en el grupo **Otros tipos de proyectos** de plantillas instaladas.
 
     ![alt](images/desktop-to-uwp/debug-2.png)
 
-    El proyecto resultante se agregará a la solución:
+    El proyecto **Depuración del Puente de dispositivo de escritorio** aparecerá en la solución.
 
     ![alt](images/desktop-to-uwp/debug-3.png)
 
-    En el proyecto de empaquetado, AppXFileList proporciona una asignación de archivos en el diseño de paquete de la aplicación de Windows. Las referencias están vacías al principio, pero se deben establecer manualmente en el proyecto .exe para la ordenación de la compilación.
+7. Abre las páginas de propiedades del proyecto **Depuración del Puente de dispositivo de escritorio**.
 
-7. El proyecto DesktopToUWPPackaging tiene una página de propiedades que te permite configurar la raíz del paquete de la aplicación de Windows y qué icono ejecutar:
+8. Establece el campo **Diseño del paquete** en la ubicación del archivo del manifiesto de paquete (AppxManifest.xml) y elige el archivo ejecutable de la aplicación de la lista desplegable **Start Up Tile (Icono de inicio)**.
 
-    ![alt](images/desktop-to-uwp/debug-4.png)
+     ![alt](images/desktop-to-uwp/debug-4.png)
 
-    Establece PackageLayout en la ubicación raíz del paquete de la aplicación de Windows que creó el convertidor (arriba). A continuación, elige qué icono ejecutar.
+8. Abre el archivo AppXPackageFileList.xml en el editor de código.
 
-8.    Abre y edita AppXFileList.xml. Este archivo define cómo copiar el resultado de la compilación de depuración de Win32 en el diseño del paquete de la aplicación de Windows que el convertidor compiló. De manera predeterminada, tenemos un marcador de posición en el archivo con una etiqueta y comentario de ejemplo:
+9. Quita los comentarios del bloque de XML y agrega los valores de estos elementos:
 
-    ```XML
-    <?xml version="1.0" encoding="utf-8"?>
-    <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-      <ItemGroup>
-    <!— Use the following syntax to copy debug output to the AppX layout
-       <AppxPackagedFile Include="$(outdir)\App.exe">
-          <PackagePath>App.exe</PackagePath>
-        </AppxPackagedFile>
-        See http://etc...
-    -->
-      </ItemGroup>
-    </Project>
-    ```
+   **MyProjectOutputPath**: es la ruta de acceso relativa para depurar la carpeta de la aplicación de escritorio.
 
-    A continuación, te mostramos un ejemplo de cómo crear la asignación. En este caso, copiaremos el .exe y el .dll de la ubicación de la compilación de Win32 en la ubicación del diseño del paquete.
+   **LayoutFile**: es el archivo ejecutable que se encuentra en la carpeta de depuración de la aplicación de escritorio.
+
+   **PackagePath**: es el nombre de archivo completo del archivo ejecutable de la aplicación de escritorio que copiaste en la carpeta del paquete de la aplicación de Windows durante el proceso de conversión.
+
+    A continuación te mostramos un ejemplo:
 
     ```XML
-    <?xml version="1.0" encoding=utf-8"?>
-    <Project ToolsVersion=14.0" xmlns="http://scehmas.microsoft.com/developer/msbuild/2003">
-        <PropertyGroup>
-            <MyProjectOutputPath>{relativepath}</MyProjectOutputPath>
-        </PropertyGroup>
-        <ItemGroup>
-            <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.exe">
-                <PackagePath>$(PackageLayout)\VFS\Program Files (x86)\Contoso Software\Project Tracker\ProjectTracker.exe</PackagePath>
-            </LayoutFile>
-            <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.Models.dll">
-                <PackagePath>$(PackageLayout)\VFS\Program Files (x86)\Contoso Software\Project Tracker\ProjectTracker.Models.dll</PackagePath>
-            </LayoutFile>
-        </ItemGroup>
-    </Project>
+  <?xml version="1.0" encoding="utf-8"?>
+  <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+     <MyProjectOutputPath>..\MyDesktopApp\bin\Debug</MyProjectOutputPath>
+    </PropertyGroup>
+    <ItemGroup>
+      <LayoutFile Include="$(MyProjectOutputPath)\MyDesktopApp.exe">
+        <PackagePath>$(PackageLayout)\MyDesktopApp.exe</PackagePath>
+      </LayoutFile>
+    </ItemGroup>
+  </Project>
     ```
 
-    El archivo se define del siguiente modo:
+  Si la aplicación usa los archivos DLL que se generan a partir de otros proyectos en la solución y quieres revisar el código que se encuentra en esos archivos DLL, incluye un elemento **LayoutFile** en cada uno de esos archivos DLL.
 
-    En primer lugar, definimos *MyProjectOutputPath* para que señale a la ubicación donde se compilará el proyecto de Win32:
+  ```XML
+  ...
+      <LayoutFile Include="$(MyProjectOutputPath)\MyDesktopApp.Models.dll">
+      <PackagePath>$(PackageLayout)\MyDesktopApp.Models.dll</PackagePath>
+      </LayoutFile>
+  ...
+  ```
 
-    ```XML
-    <?xml version="1.0" encoding="utf-8"?>
-    <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-        <PropertyGroup>
-            <MyProjectOutputPath>..\ProjectTracker\bin\DesktopUWP</MyProjectOutputPath>
-        </PropertyGroup>
-    ```
-
-    A continuación, cada *LayoutFile* especifica un archivo para copiar desde la ubicación de la compilación de Win32 en el diseño del paquete de la aplicación de Windows. En este caso, se copian primero un .exe y, luego, un .dll.
-
-    ```XML
-        <ItemGroup>
-            <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.exe">
-                <PackagePath>$(PackageLayout)\VFS\Program Files (x86)\Contoso Software\Project Tracker\ProjectTracker.exe</PackagePath>
-            </LayoutFile>
-            <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.Models.dll">
-                <PackagePath>$(PackageLayout)\VFS\Program Files (x86)\Contoso Software\Project Tracker\ProjectTracker.Models.dll</PackagePath>
-            </LayoutFile>
-        </ItemGroup>
-    </Project>
-    ```
-
-9. Establece el proyecto de empaquetado como proyecto de inicio. De este modo se copian los archivos de Win32 en el paquete de la aplicación de Windows y luego se inicia el depurador cuando el proyecto se genera y se ejecuta.  
+10. Establece el proyecto de empaquetado como proyecto de inicio.  
 
     ![alt](images/desktop-to-uwp/debug-5.png)
 
-10.    Por último, ahora puedes establecer un punto de interrupción en el código de Win32 y presionar la tecla F5 para iniciar el depurador. Copiará las actualizaciones que realizaste en tu aplicación de Win32 en el paquete de la aplicación de Windows y te permitirá depurar directamente desde dentro de Visual Studio.
+11. Establece los puntos de interrupción en el código de la aplicación de escritorio y, a continuación, inicia el depurador.
 
-11.    Si actualizas tu aplicación, necesitarás usar MakeAppX para volver a empaquetar la aplicación. Para obtener más información, consulta [App packager (MakeAppx.exe) (Empaquetador de aplicaciones [MakeAppx.exe])](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx).
+  ![Botón de depuración](images/desktop-to-uwp/debugger-button.png)
 
-Si tienes varias configuraciones de compilación (por ejemplo, para lanzamiento y depuración), puedes agregar lo siguiente al archivo AppXFileList.xml para copiar la compilación de Win32 desde distintas ubicaciones:
+  Visual Studio copia los archivos ejecutables y DLL que especificaste en el archivo XML en el paquete de la aplicación de Windows y, a continuación, inicia el depurador.
+
+#### <a name="handle-multiple-build-configurations"></a>Controlar varias configuraciones de compilación
+
+Si has definido varias configuraciones de compilación (por ejemplo: Liberar y Depurar), puedes modificar el archivo AppXPackageFileList.xml para que se copien solo los archivos que coincidan con la configuración de compilación que elegiste en Visual Studio al iniciar el depurador.
+
+Observa el siguiente ejemplo.
 
 ```XML
 <PropertyGroup>
-    <MyProjectOutputPath Condition="$(Configuration) == 'DesktopUWP'">C:\Users\peterfar\Desktop\ProjectTracker\ProjectTracker\bin\DesktopUWP>
-    </MyProjectOutputPath>
-    <MyProjectOutputPath Condition="$(Configuration) == 'ReleaseDesktopUWP'"> C:\Users\peterfar\Desktop\ProjectTracker\ProjectTracker\bin\ReleaseDesktopUWP</MyProjectOutputPath>
+    <MyProjectOutputPath Condition="$(Configuration) == 'Debug'">..\MyDesktopApp\bin\Debug</MyProjectOutputPath>
+    <MyProjectOutputPath Condition="$(Configuration) == 'Release'"> ..\MyDesktopApp\bin\Release</MyProjectOutputPath>
 </PropertyGroup>
 ```
 
-También puedes usar la compilación condicional para habilitar rutas de código en particular si actualizas tu aplicación para UWP pero sigues queriendo compilarla para Win32.
+#### <a name="debug-uwp-enhancements-to-your-app"></a>Depurar las mejoras de UWP en la aplicación
 
-1.    En el ejemplo siguiente, el código se compilará solo para DesktopUWP y mostrará un icono con la API de WinRT.
+Es posible que quieras mejorar la aplicación e incluir experiencias tan modernas como los iconos dinámicos. Si haces esto, puedes usar la compilación condicional para habilitar rutas de código con configuraciones de compilación específicas.
 
-    ```C#
+1. En primer lugar, en Visual Studio, define una configuración de compilación y asígnale un nombre como "DesktopUWP".
+
+2. En la ficha **Compilación** de las propiedades del proyecto, agrega ese nombre en el campo **Símbolos de compilación condicional**.
+
+     ![alt](images/desktop-to-uwp/debug-8.png)
+
+3. Agrega los bloques de código condicional. Este código se compila solo para la configuración de compilación **DesktopUWP**.
+
+    ```csharp
     [Conditional("DesktopUWP")]
     private void showtile()
     {
@@ -153,25 +168,50 @@ También puedes usar la compilación condicional para habilitar rutas de código
     }
     ```
 
-2.    Puedes usar Configuration Manager para agregar la nueva configuración de compilación:
+### <a name="debug-the-entire-app-lifecycle"></a>Depurar el ciclo de vida de toda la aplicación
 
-    ![alt](images/desktop-to-uwp/debug-6.png)
+en algunos casos quizás necesites un control más preciso del proceso de depuración, incluida la posibilidad de depurar la aplicación antes de que se inicie.
 
-    ![alt](images/desktop-to-uwp/debug-7.png)
+Puedes usar [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) para obtener el control total sobre el ciclo de vida de la aplicación (por ejemplo, puedes suspenderlo, reanudarlo o finalizarlo).
 
-3.    A continuación, en las propiedades del proyecto, agrega compatibilidad con símbolos de compilación condicional:
+[PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) se incluye en Windows SDK.
 
-    ![alt](images/desktop-to-uwp/debug-8.png)
 
-4.    Ahora puedes alternar el destino de compilación a DesktopUWP si quieres que la compilación esté destinada a la API de UWP que agregaste.
+### <a name="modify-your-app-in-between-debug-sessions"></a>Modificar la aplicación entre sesiones de depuración
 
-## <a name="plmdebug"></a>PLMDebug
+Si realizas cambios en la aplicación para corregir errores, vuelve a empaquetarla mediante la herramienta MakeAppx. Consulta [Ejecutar la herramienta MakeAppX](desktop-to-uwp-manual-conversion.md#make-appx)
 
-La opción Asociar a proceso y F5 de Visual Studio son útiles para depurar la aplicación mientras se ejecuta. Sin embargo, en algunos casos quizás necesites un control más preciso del proceso de depuración, incluida la posibilidad de depurar la aplicación antes de que se inicie. En estos escenarios más avanzados, usa [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx). Esta herramienta te permite depurar la aplicación convertida mediante el depurador de Windows y ofrece control total sobre el ciclo de vida de aplicación, lo que incluye la suspensión, la reanudación y la terminación.
+## <a name="test-your-app"></a>Probar la aplicación
 
-PLMDebug se incluye en Windows SDK. Para obtener más información, consulta [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx).
+Para probar la aplicación en una configuración realista mientras la preparas para su distribución, lo mejor es firmar la aplicación e instalarla.
 
-## <a name="run-another-process-inside-the-full-trust-container"></a>Ejecutar otro proceso dentro del contenedor de plena confianza
+Si empaquetaste la aplicación con Visual Studio, puedes ejecutar un script para firmarla e instalarla. Consulta [Realizar la instalación de prueba del paquete de la aplicación](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
+
+Si empaquetaste la aplicación mediante Desktop App Converter, puedes usar el parámetro ``sign`` para firmar la aplicación automáticamente con un certificado generado. Tendrás que instalar el certificado y, a continuación, instalar la aplicación. Consulta [Ejecutar la aplicación empaquetada](desktop-to-uwp-run-desktop-app-converter.md#run-app).   
+
+También puedes firmar la aplicación manualmente. A continuación te indicamos cómo
+
+1. Crea un certificado. Consulta [Crear un certificado](../packaging/create-certificate-package-signing.md).
+
+2. Instala el certificado en el almacén de certificados **Raíz de confianza** o **Personas de confianza** del sistema.
+
+3. Firma la aplicación con ese certificado; para ello, consulta [Firmar un paquete de aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
+
+  > [!IMPORTANT]
+  > Asegúrate de que el nombre del publicador del certificado coincide con el de la aplicación.
+
+### <a name="related-sample"></a>Muestra relacionada
+
+[SigningCerts](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SigningCerts)
+
+
+### <a name="test-your-app-for-windows-10-s"></a>Probar la aplicación en Windows 10 S
+
+Antes de publicar tu aplicación, asegúrate de que funcionará correctamente en dispositivos que ejecutan Windows 10S. De hecho, si vas a publicar la aplicación en la tienda Windows, debes hacerlo porque es un requisito de la tienda. Las aplicaciones que no funcionan correctamente en dispositivos que ejecutan Windows 10S no estarán certificadas. 
+
+Consulta [test your Windows app for Windows 10 S (Probar la aplicación de Windows en Windows 10 S)](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s).
+
+### <a name="run-another-process-inside-the-full-trust-container"></a>Ejecutar otro proceso dentro del contenedor de plena confianza
 
 Puedes invocar procesos personalizados dentro del contenedor de un paquete de la aplicación especificada. Esto puede ser útil para los escenarios de prueba (por ejemplo, si tienes una herramienta de ejecución de pruebas personalizada y quieres probar la salida de la aplicación). Para ello, usa el cmdlet ```Invoke-CommandInDesktopPackage``` de PowerShell:
 
@@ -179,3 +219,13 @@ Puedes invocar procesos personalizados dentro del contenedor de un paquete de la
 Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [-Command] <string> [[-Args]
     <string>]  [<CommonParameters>]
 ```
+
+## <a name="next-steps"></a>Pasos siguientes
+
+**Encuentra respuestas a preguntas específicas**
+
+Nuestro equipo supervisa estas [etiquetas de StackOverflow](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
+
+**Envíanos tus comentarios acerca de este artículo**
+
+Usa la sección comentarios que tienes a continuación.

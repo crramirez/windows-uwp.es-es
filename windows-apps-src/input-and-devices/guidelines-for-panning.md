@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: bf0abd41262704ccf634350ae53e8f428d412bf5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 288cca64cc93438c8f8c0000cfeba1fdda918733
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -82,10 +84,15 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 
 ## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
-
 El movimiento panorámico de forma táctil, mediante un gesto de deslizar o deslizar rápidamente con uno o varios dedos, es como desplazarse con el mouse. La interacción de movimiento panorámico es más parecida a la acción de girar la rueda del mouse o deslizar el cuadro de desplazamiento que a la de hacer clic en la barra de desplazamiento. A menos que se establezca una distinción en una API o que lo requiera la interfaz de usuario de Windows específica de algún dispositivo, simplemente se hace referencia a las dos interacciones como movimiento panorámico.
 
-Según el dispositivo de entrada, el usuario se mueve panorámicamente en una región de movimiento panorámico usando uno de los siguientes:
+> <div id="main">
+> <strong><span class="uwpd-prelease">Versión previa.</span> Fall Creators Update (compilación 16215 de Windows 10 Insider Preview): cambio de comportamiento</strong>
+> </div>
+> De manera predeterminada, en lugar de selección de texto, un lápiz activo ahora se desplaza o un movimiento panorámico en aplicaciones para UWP (como la entrada táctil, panel táctil y el lápiz pasivo).  
+> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Consulta el tema de referencia de API [ScrollViewer Class] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) para obtener más información.
+
+Según el dispositivo de entrada, el usuario realiza movimientos panorámicos por una región desplazable usando uno de los elementos siguientes:
 
 -   Un mouse, un panel táctil o una pluma o un lápiz activos para hacer clic en las flechas de desplazamiento, arrastrar el cuadro de desplazamiento o hacer clic en la barra de desplazamiento.
 -   La rueda del mouse para emular la acción de arrastrar el cuadro de desplazamiento.

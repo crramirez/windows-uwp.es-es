@@ -1,19 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "Device Portal para dispositivos móviles"
 description: "Obtén información sobre cómo Windows Device Portal te permite configurar y administrar el dispositivo móvil de forma remota."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54660777706fbfdc54b08da025c2f280f194c010
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d0a85a780bf71bd43a0482494a1de939582a4b56
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para dispositivos móviles
 
@@ -27,7 +27,7 @@ Para obtener información sobre cómo habilitar el modo de desarrollador, consul
 
 ### <a name="turn-on-device-discovery-and-pairing"></a>Activar la detección de dispositivos y el emparejamiento
 
-Para conectarte a Device Portal, tienes que habilitar la detección de dispositivos y Device Portal. Esto te permite emparejar el teléfono con un equipo u otro dispositivo Windows 10. Ambos dispositivos deben estar conectados a la misma subred de la red mediante una conexión con cable o inalámbrica, o bien deben estar conectados mediante USB.
+Para conectarte a Device Portal, tienes que habilitar la detección de dispositivos y Device Portal en la configuración de tu teléfono. Esto te permite emparejar el teléfono con un equipo u otro dispositivo Windows 10. Ambos dispositivos deben estar conectados a la misma subred de la red mediante una conexión con cable o inalámbrica, o bien deben estar conectados mediante USB.
 
 La primera vez que te conectes al Portal de dispositivos, se te solicitará un código de seguridad de seis caracteres (distingue mayúsculas de minúsculas). Esto garantiza el acceso al teléfono y te mantiene a salvo de los atacantes. Presiona el botón Emparejar del teléfono para generar y mostrar el código y luego escribe los seis caracteres en el cuadro de texto del navegador.
 
@@ -59,7 +59,7 @@ Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y
 
 4. (Opcional) Activa la casilla Recordar mi equipo en el navegador para recordar este emparejamiento en el futuro.
 
-A continuación se muestra la sección de Portal de dispositivos de la página de configuración para desarrollador en Windows Phone.
+A continuación se muestra la sección de Portal de dispositivos de la página de configuración para desarrollador en WindowsPhone.
 
 ![Configuración de Portal de dispositivos](images/device-portal/mob-dev-mode-portal.png)
 

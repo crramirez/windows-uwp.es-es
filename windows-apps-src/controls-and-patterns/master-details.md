@@ -6,20 +6,24 @@ ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: d5933eec7b2f34b2c5939bb083113dfd3a1f965d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 49a586aac0c846cdad02f8448532238bd3eb8551
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="masterdetails-pattern"></a>Patrón de maestro y detalles
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 El patrón de maestro y detalles tiene un panel maestro (normalmente con una [vista de lista](lists.md)) y un panel de detalles para el contenido. Cuando se selecciona un elemento en la lista maestra, se actualiza el panel de detalles. Este patrón se usa con frecuencia para libretas de direcciones y de correos electrónicos.
+
+> **API importantes**: [Clase ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [Clase SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Ejemplo del patrón de maestro y detalles](images/HIGSecOne_MasterDetail.png)
 
@@ -73,17 +77,11 @@ En el panel maestro, un control de [vista de lista](lists.md) funciona bien para
 
 En el panel de detalles, usa el elemento de contenido que sea más apropiado. Si tienes muchos campos independientes, considera la posibilidad de usar un diseño de cuadrícula para organizar los elementos en un formulario.
 
-## <a name="examples"></a>Ejemplos
+## <a name="get-the-code-samples"></a>Obtener las muestras de código
 
-Este diseño de una aplicación que realiza un seguimiento de la bolsa usa un patrón de maestro y detalles. En este ejemplo de la aplicación tal como aparecería en el teléfono, la lista o el panel de maestro está a la izquierda, con el panel de detalles a la derecha.
+Para obtener un código de ejemplo que muestre el patrón de maestro y detalles, consulta estas muestras: 
 
-![Ejemplo de una aplicación con el patrón de maestro y detalles, en el teléfono](images/uap-finance-phone-masterdetails-600.png)
-
-Este diseño de una aplicación que realiza un seguimiento de la bolsa usa un patrón de maestro y detalles. En este ejemplo de la aplicación tal como aparecería en el escritorio, el panel o la lista de maestro y el panel de detalles están visibles y a pantalla completa. El panel de maestro incluye un cuadro de búsqueda en la parte superior y una barra de comandos en la parte inferior.
-
-![Ejemplo de una aplicación con el patrón de maestro y detalles, en el escritorio](images/uap-finance-desktop700.png)
-
-Para obtener un código de ejemplo que muestre el patrón de maestro y detalles, consulta
+- [Muestra de base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) 
 - [Muestra de ListView y GridView](http://go.microsoft.com/fwlink/p/?LinkId=619900)
 - [Muestra de lector RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
 
@@ -92,4 +90,4 @@ Para obtener un código de ejemplo que muestre el patrón de maestro y detalles,
 - [Listas](lists.md)
 - [Buscar](search.md)
 - [Barras de la aplicación y de comandos](app-bars.md)
-- [**Clase ListView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
+- [Clase ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)

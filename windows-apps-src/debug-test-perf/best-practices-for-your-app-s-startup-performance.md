@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
 title: "Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación"
 description: "Mejora el control del inicio y la activación de la aplicación para crear aplicaciones para la Plataforma universal de Windows (UWP) con tiempo de inicio optimizado."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 9ab3eeeffbab26f5d26d28160a750c50d53b7e96
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e36103953ad3fb04ee5beef7e263fc326f817c0b
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 
@@ -108,7 +110,7 @@ En la ventana [Visual Studio Live Visual Tree](http://blogs.msdn.com/b/visualstu
 
 ![Árbol visual activo.](images/live-visual-tree.png)
 
-**Usa x:DeferLoadStrategy**. La contracción de un elemento o el establecimiento de su opacidad en 0, no impedirá su creación. Con x:DeferLoadStrategy, puedes retrasar la carga de un fragmento de la interfaz de usuario y cargarlo cuando se necesite. Esta es una buena manera de retrasar el procesamiento de la interfaz de usuario que no es visible en la pantalla de inicio, de modo que puedes cargarla cuando sea necesario o como parte de un conjunto de lógica retrasada. Para activar la carga, solo necesitas llamar a FindName para el elemento. Para más información y un ejemplo, consulta [Atributo x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785).
+**Usar fraccionamiento**. La contracción de un elemento o el establecimiento de su opacidad en 0, no impedirá su creación. Con x:Load o x:DeferLoadStrategy, puedes retrasar la carga de un fragmento de la interfaz de usuario y cargarlo cuando se necesite. Esta es una buena manera de retrasar el procesamiento de la interfaz de usuario que no es visible en la pantalla de inicio, de modo que puedes cargarla cuando sea necesario o como parte de un conjunto de lógica retrasada. Para activar la carga, solo necesitas llamar a FindName para el elemento. Para más información y un ejemplo, consulta [x:Load attribute](../xaml-platform/x-load-attribute.md) y [x:DeferLoadStrategy attribute](https://msdn.microsoft.com/library/windows/apps/Mt204785).
 
 **Virtualización**. Si tienes una lista o contenido repetido en la interfaz de usuario, se recomienda encarecidamente usar la virtualización de la interfaz de usuario. Si la interfaz de usuario de la lista no se virtualiza, vas a pagar el coste de la creación de todos los elementos iniciales, lo que puede ralentizar el inicio. Consulta [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md).
 
@@ -365,4 +367,3 @@ Sin embargo, el objeto Frame ofrece una memoria caché de página opcional que p
 El almacenamiento en caché de las páginas puede mejorar el rendimiento, ya que evita la creación de instancias y, por tanto, mejora el rendimiento de navegación. El almacenamiento en caché de las páginas puede afectar negativamente al rendimiento debido al exceso de almacenamiento en caché, lo que afectará al conjunto de trabajo.
 
 Por lo tanto, es recomendable usar el almacenamiento en caché de páginas según sea adecuado para tu aplicación. Por ejemplo, supongamos que tienes una aplicación que muestra una lista de elementos en un objeto Frame y, al pulsar un elemento, el marco navega a una página de detalles de ese elemento. Es recomendable que esta página de lista se establezca de modo que se almacene en la memoria caché. Si la página de detalles es la misma para todos los elementos, también es recomendable que se almacene en caché. Sin embargo, si la página de detalles está más heterogénea, quizá sea mejor desactivar el almacenamiento en caché.
-

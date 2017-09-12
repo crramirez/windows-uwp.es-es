@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Introducción a Windows Device Portal"
 description: "Obtén información sobre cómo Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e729236ae7d506eb59af1a38506931865eff4f14
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f22600f2bbd5dc43996550c853c6defd04565ad4
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="windows-device-portal-overview"></a>Introducción a Windows Device Portal
 
@@ -41,7 +43,7 @@ Phone | Habilitar dentro del modo de desarrollador | 80| 443 | http://127.0.0.1:
 \ * No siempre es el caso, ya que Device Portal para escritorio reclama puertos del rango efímero (> 50000) para evitar conflictos con reclamaciones de puertos existentes en el dispositivo.  Para obtener más información, consulta la sección de [Configuración de puertos](device-portal-desktop.md#setting-port-numbers) referente a los equipos de escritorio.  
 
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
-- [Device Portal para HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
+- [Device Portal para HoloLens](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-hololens)
 - [Device Portal para IoT](https://go.microsoft.com/fwlink/?LinkID=616499)
 - [Device Portal para dispositivos móviles](device-portal-mobile.md)
 - [Device Portal para Xbox](device-portal-xbox.md)
@@ -71,28 +73,28 @@ Proporciona la funcionalidad de administración y de instalación o desinstalaci
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-apps.png)
 
 - **Aplicaciones instaladas**: quita e inicia aplicaciones.
-- **Aplicaciones en ejecución**: enumera las aplicaciones que se ejecutan actualmente.
+- **Aplicaciones en ejecución**: se enumeran las aplicaciones en ejecución y se proporciona la opción para cerrarlas.
 - **Instalar aplicación**: selecciona paquetes de la aplicación para la instalación desde una carpeta en el equipo o red.
 - **Dependencia**: agrega las dependencias de la aplicación que se va a instalar.
 - **Implementar**: implementa la aplicación seleccionada y las dependencias en el dispositivo.
 
 **Para instalar una aplicación**
 
-1.    Cuando hayas [creado un paquete de la aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), podrás instalarlo remotamente en el dispositivo. Después de compilarlo en Visual Studio, se genera una carpeta de salida.
+1.  Cuando hayas [creado un paquete de la aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), podrás instalarlo remotamente en el dispositivo. Después de compilarlo en Visual Studio, se genera una carpeta de salida.
 
     ![Instalación de aplicaciones](images/device-portal/iot-installapp0.png)
-2.    Haz clic en Examinar y busca el paquete de la aplicación (.appx).
-3.    Haz clic en Examinar y busca el archivo de certificado (.cer). (No es necesario en todos los dispositivos).
-4.    Agrega dependencias. Si tienes más de una, agrega cada una de ellas individualmente.     
-5.    En **Implementar**, haz clic en **Ir**. 
-6.    Para instalar otra aplicación, haz clic en el botón **Restablecer** para borrar los campos.
+2.  Haz clic en Examinar y busca el paquete de la aplicación (.appx).
+3.  Haz clic en Examinar y busca el archivo de certificado (.cer). (No es necesario en todos los dispositivos).
+4.  Agrega dependencias. Si tienes más de una, agrega cada una de ellas individualmente.     
+5.  En **Implementar**, haz clic en **Ir**. 
+6.  Para instalar otra aplicación, haz clic en el botón **Restablecer** para borrar los campos.
 
 
 **Para desinstalar una aplicación**
 
-1.    Asegúrate de que la aplicación no se esté ejecutando. 
-2.    Si es así, ve a "aplicaciones en ejecución" y ciérrala. Si intentas desinstalar la aplicación mientras se ejecuta, tendrás problemas cuando la vuelvas a instalar. 
-3.    Cuando estés listo, haz clic en **Desinstalar**.
+1.  Asegúrate de que la aplicación no se esté ejecutando. 
+2.  Si es así, ve a "aplicaciones en ejecución" y ciérrala. Si intentas desinstalar la aplicación mientras se ejecuta, tendrás problemas cuando la vuelvas a instalar. 
+3.  Cuando estés listo, haz clic en **Desinstalar**.
 
 ### <a name="processes"></a>Procesos
 

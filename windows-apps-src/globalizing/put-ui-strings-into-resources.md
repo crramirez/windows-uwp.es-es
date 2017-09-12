@@ -10,10 +10,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 9f4ebe843b30d5bc408a705cfc9dda5d6731d4d1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp
+ms.openlocfilehash: a3e224fc51245a5f91c29da2d745a3740029cda9
+ms.sourcegitcommit: 11664964e548a2af30d6e176c515cdbf330934ac
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="put-ui-strings-into-resources"></a>Colocar las cadenas de la interfaz de usuario en recursos
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -65,10 +67,10 @@ Tienes que asociar cada control que necesita texto localizado con el archivo .re
 
 Para el nombre de recurso, proporcionas el valor del atributo **Uid**, además de especificar qué propiedad obtendrá la cadena traducida (en este caso, la propiedad Text). Puedes especificar otros valores o propiedades para diferentes idiomas, como Greeting.Width, pero ten cuidado con las propiedades relacionadas con el diseño de este tipo. Debes tratar de permitir que los controles se distribuyan dinámicamente según la pantalla del dispositivo.
 
-Ten en cuenta que las propiedades adjuntadas se controlan de manera diferente en los archivos resw como AutomationPeer.Name. Tienes que escribir el espacio de nombres explícitamente de la siguiente manera:
+Ten en cuenta que las propiedades se tratan de manera diferente en los archivos resw como AutomationProperties.Name. Tienes que escribir el espacio de nombres explícitamente de la siguiente manera:
 
 ```XML
-MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name</code></pre></td>
+MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
 ```
 
 ## <a name="add-string-resource-identifiers-to-code-and-markup"></a>Agrega identificadores de recursos de cadena al código y al marcado.
@@ -101,7 +103,9 @@ auto str = loader->GetString("Farewell");
 
 3.  Crea una carpeta más llamada "fr-FR" para francés (Francia). Crea un nuevo archivo de recursos y agrega lo siguiente:
 
-    strings/fr-FR/Resources.resw ![agregar recurso, francés](images/addresource-fr-fr.png)
+    strings/fr-FR/Resources.resw
+    
+    ![add resource, agregar recursos, french, francés](images/addresource-fr-fr.png)
 
 ## <a name="build-and-run-the-app"></a>Compila y ejecuta la aplicación.
 

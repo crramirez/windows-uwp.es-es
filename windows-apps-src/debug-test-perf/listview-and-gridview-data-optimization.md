@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
 title: "Virtualización de datos de ListView y GridView"
 description: "Mejora el rendimiento y el tiempo de inicio de las clases ListView y GridView mediante la virtualización de datos."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 722389a7440110eaffa5458e8ef5e85fccb39671
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: eab90ebf2bcb1912292af6503f833e3bfa334d8b
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualización de datos de ListView y GridView
 

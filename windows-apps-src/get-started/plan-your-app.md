@@ -8,10 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 21e08e22e6c6ebada4445a05f32d2bd37244758f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp
+ms.openlocfilehash: f9e14be4ef0e92378d4b6f1e4f5c1066c56fbdd8
+ms.sourcegitcommit: ae20971c4c8276034cd22fd7e10b0e3ddfddf480
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/11/2017
 ---
 #  <a name="plan-your-universal-windows-platform-uwp-app"></a>Planear la aplicación para la Plataforma universal de Windows (UWP)
 
@@ -220,7 +222,7 @@ Para obtener información detallada sobre cómo usar superficies distintas, cons
 
 ![Diseños de una aplicación para PC y móvil](images/ux-budgettracker1-md-notablet.png)
 
-Para obtener más información sobre cómo diseñar para diferentes tamaños de pantalla, consulta <!--[Responsive design 101](designing-in-effective-pixels.md)-->.
+Para obtener más información sobre cómo diseñar para diferentes tamaños de pantalla, consulta [tamaños de pantalla y puntos de interrupción de diseño dinámico](https://docs.microsoft.com/en-us/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design).
 
 ## <a name="make-a-good-first-impression"></a>Causa una buena primera impresión
 
@@ -232,7 +234,7 @@ Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicie
 
 **Primer inicio**  ¿Qué verán los usuarios antes de suscribirse al servicio, iniciar sesión en su cuenta o agregar su propio contenido? Intenta demostrar el valor de la aplicación antes de solicitar información a los usuarios. Considera la posibilidad de ofrecer una muestra del contenido que el usuario pueda manipular para que comprenda lo que hace tu aplicación antes de pedirle que se comprometa.
 
-**Página principal**  La página principal es la página que verán los usuarios cada vez que inicien tu aplicación. El contenido debe tener un propósito claro y mostrar de inmediato para qué sirve la aplicación. Haz que esta página sea excelente en algo en particular y confía en que las personas explorarán el resto de la aplicación. Céntrate en eliminar las distracciones de la página de destino y no en su detectabilidad.
+**Página Inicio**  La página de inicio es la página que verán los usuarios cada vez que inicien tu aplicación. El contenido debe tener un propósito claro y mostrar de inmediato para qué sirve la aplicación. Haz que esta página sea excelente en algo en particular y confía en que las personas explorarán el resto de la aplicación. Céntrate en eliminar las distracciones de la página de destino y no en su detectabilidad.
 
 ## <a name="validate-your-design"></a>Valida tu diseño
 

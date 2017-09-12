@@ -1,387 +1,328 @@
 ---
-author: Karl-Bridge-Microsoft
-Description: "Habilita el acceso de teclado mediante la navegación por tabulación y las teclas de acceso para que los usuarios puedan navegar por los elementos de la interfaz de usuario con el teclado."
-title: Teclas de acceso
-ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
-label: Access keys
+author: kbridge
+Description: "Descubre cómo mejorar la facilidad de uso y la accesibilidad de tu aplicación para UWP al ofrecer a los usuarios una forma intuitiva para que naveguen e interactúen rápidamente con la interfaz de usuario visible de la aplicación a través de un teclado en lugar de un dispositivo señalador (por ejemplo, la entrada táctil o el mouse)."
+title: "Directrices de diseño de las teclas de acceso"
+label: Access keys design guidelines
+keywords: "teclado, tecla de acceso, sugerencia de teclas, accesibilidad, navegación, foco, texto, entrada, interacción del usuario"
 template: detail.hbs
-keywords: "teclas de acceso,teclado,accesibilidad,interacción del usuario,entrada"
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 8d62135680e13f866654c168364bb3393651bd2d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: kimsea
+dev-contact: niallm
+doc-status: Published
+ms.openlocfilehash: ae8bd60311bc7ead44ee3c9a137a233888be55f3
+ms.sourcegitcommit: 0fa9ae00117e8e6b04ed38956e605bb74c1261c6
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="access-keys"></a>Teclas de acceso
 
-Los usuarios que tienen dificultades para usar un mouse, como las personas con discapacidades motrices, a menudo dependen del teclado para navegar por una aplicación e interactuar con ella.  El marco XAML te permite proporcionar acceso de teclado a los elementos de la interfaz de usuario gracias a la navegación mediante tabulación y las teclas de acceso.
-
-- La navegación mediante tabulación es una prestación básica de la accesibilidad de teclado (habilitada de manera predeterminada) que permite a los usuarios mover el foco entre los elementos de la interfaz de usuario con las teclas de dirección y el tabulador del teclado.
-- Las teclas de acceso son una prestación de accesibilidad adicional (que se implementa en la aplicación) para permitir un acceso rápido a los comandos de la aplicación mediante una combinación del modificador de teclado (tecla Alt) y una o más claves alfanuméricas (normalmente una letra asociada con el comando). Entre las teclas de acceso habituales se incluyen _Alt+A_ para abrir el menú Archivo y _Alt+AL_ para alinear a la izquierda.  
-
-Para obtener más información sobre la navegación por teclado y la accesibilidad de teclado, consulta [Interacciones de teclado](https://msdn.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) y [Accesibilidad de teclado](https://msdn.microsoft.com/windows/uwp/accessibility/keyboard-accessibility). En este artículo se da por hecho que conoces los conceptos que se tratan en los artículos siguientes.
-
-## <a name="access-key-overview"></a>Información general sobre las teclas de acceso
-
-Las teclas de acceso permiten a los usuarios invocar botones directamente o establecer el foco con el teclado sin tener que presionar repetidamente las teclas de dirección y el tabulador. Las teclas de acceso están concebidas para que resulte fácil descubrirlas, por lo que debes documentarlas directamente en la interfaz de usuario; por ejemplo, una notificación flotante sobre el control con la tecla de acceso.
-
-![Ejemplo de teclas de acceso y sugerencias de teclas asociadas en Microsoft Word](images/keyboard/accesskeys-keytips.png)
-
-_Figura 1: Ejemplo de teclas de acceso y sugerencias de teclas asociadas en Microsoft Word._
-
-Una tecla de acceso es uno o varios caracteres alfanuméricos asociados con un elemento de la interfaz de usuario. Por ejemplo, Microsoft Word usa _O_ para la pestaña Inicio, _2_ para el botón Deshacer, o _JR_ para la pestaña Dibujo.
-
-**Ámbito de las teclas de acceso**
-
-Una tecla de acceso pertenece a un ámbito específico. Por ejemplo, en la figura 1 _F_, _H_, _N_, y _JI_, pertenecen al ámbito de la página.  Cuando el usuario presiona _H_, el ámbito cambia al ámbito de la pestaña Home (Inicio) y se muestran sus teclas de acceso, tal como se muestra en la figura 2. Las teclas de acceso, _V_, _FP_, _FF_, y _FS_ pertenecen al ámbito de la pestaña Home (Inicio).
-
-![Ejemplo de teclas de acceso y sugerencias de teclas asociadas para el ámbito de la pestaña Home (Inicio) en Microsoft Word](images/keyboard/accesskeys-keytips-hometab.png)
-
-_Figura 2: Ejemplo de teclas de acceso y sugerencias de teclas asociadas para el ámbito de la pestaña Inicio en Microsoft Word._
-
-Dos elementos pueden tener las mismas teclas de acceso si los elementos que pertenecen a ámbitos diferentes. Por ejemplo, _2_ es la tecla de acceso para Deshacer en el ámbito de la página (figura 1) y también para cursiva en el ámbito de la pestaña Home (Inicio) (figura 2). Todas las teclas de acceso pertenecen al ámbito predeterminado, a menos que se especifique otro ámbito.
-
-**Secuencia de teclas de acceso**
-
-Por lo general, las combinaciones de teclas de acceso se presionan de una en una para lograr la acción, no se presionan de forma simultánea. (Existe una excepción a esto que se tratará en la siguiente sección). La secuencia de pulsaciones de teclas necesaria para lograr la acción es una _secuencia de teclas de acceso_. El usuario presiona la tecla Alt para iniciar la secuencia de teclas de acceso. Se invoca una tecla de acceso cuando el usuario presiona la última tecla de una secuencia de teclas de acceso. Por ejemplo, para abrir la pestaña Vista en Word, el usuario presiona la secuencia de teclas de acceso _Alt, N_.
-
-Un usuario puede invocar varias teclas de acceso en una secuencia de teclas de acceso. Por ejemplo, para abrir Copiar formato en un documento de Word, el usuario presiona Alt para inicializar la secuencia, a continuación, presiona _O_ para navegar a la sección Inicio y cambiar el ámbito de las teclas de acceso, luego _O_ y, finalmente _O_ otra vez. _O_ y _OO_ son las teclas de acceso para la pestaña Inicio y el botón Copiar formato respectivamente.
-
-Algunos elementos finalizan una secuencia de teclas de acceso después su invocación (como el botón Copiar formato) y otros no (como la pestaña Inicio). Invocar una tecla de acceso puede producir que se ejecute un comando, se mueva el foco, se cambie el ámbito de las teclas de acceso o alguna otra acción asociada con ella.
-
-## <a name="access-key-user-interaction"></a>Interacción del usuario con las teclas de acceso
-
-Para comprender las API de las teclas de acceso, es necesario comprender antes el modelo de interacción del usuario. A continuación encontrarás un resumen del modelo de interacción del usuario con las teclas de acceso:
-
-- Cuando el usuario presiona la tecla Alt, se inicia la secuencia de teclas de acceso, incluso cuando el foco está en un control de entrada. A continuación, el usuario puede presionar la tecla de acceso para invocar la acción asociada. Esta interacción del usuario requiere que documentes las teclas de acceso disponibles en la interfaz de usuario con alguna prestación visual, como notificaciones flotantes que se muestren al presionar la tecla Alt
-- Cuando el usuario presiona la tecla Alt y la tecla de acceso simultáneamente, la tecla de acceso se invoca inmediatamente. Esto es parecido a disponer de un método abreviado de teclado definido por Alt +_tecla de acceso_. En este caso, no se muestran las prestaciones visuales de las teclas de acceso. Sin embargo, invocar una tecla de acceso podría producir un cambio del ámbito de las teclas de acceso. En este caso, se inicia una secuencia de teclas de acceso y se muestran las prestaciones visuales del nuevo ámbito.
-    > [!NOTE]
-    > Únicamente las teclas de acceso de un solo carácter pueden aprovechar esta interacción del usuario. La combinación Alt +_tecla de acceso_ no se admite para las teclas de acceso con más de un carácter.    
-- Si hay varias claves de acceso de varios caracteres que comparten algunos caracteres, cuando el usuario presiona un carácter compartido, las teclas de acceso se filtran. Por ejemplo, supongamos que se muestran 3 teclas de acceso: _A1_, _A2_, y _C_. Si el usuario presiona _A_, a continuación solo se mostrarán las teclas de acceso _A1_ y _A2_ y se ocultará la prestación visual de C.
-- La tecla Esc quita un nivel de filtrado. Por ejemplo, si tenemos las teclas de acceso _B_, _ABC_, _ACD_, y _ABD_ y el usuario presiona _A_, a continuación, solo se mostrarán _ABC_, _ACD_ y _ABD_. Si luego el usuario presiona _B_, solo se mostrarán _ABC_ y _ABD_. Si el usuario presiona la tecla Esc, se quitará un nivel de filtrado y se mostrarán las teclas de acceso _ABC_, _ACD_ y _ABD_. Si el usuario vuelve a presionar la tecla Esc, se quitará otro nivel de filtrado y todas las teclas de acceso (_B_, _ABC_, _ACD_ y _ABD_) estarán habilitadas y se mostrarán sus prestaciones visuales.
-- La tecla Esc retrocede al ámbito anterior. Las teclas de acceso pueden pertenecer a distintos ámbitos para que sea más fácil navegar por las aplicaciones que tengan una gran cantidad de comandos. La secuencia de teclas de acceso comienza siempre en el ámbito principal. Todas las teclas de acceso pertenecen al ámbito principal, excepto aquellas que especifican un elemento concreto de la interfaz de usuario como el propietario de su ámbito. Si el usuario invoca la tecla de acceso de un elemento que sea propietario de un ámbito, el marco XAML mueve el ámbito a ella automáticamente y la agrega a una pila de navegación interna de teclas de acceso. La tecla Esc retrocede por la pila de navegación de teclas de acceso.
-- Existen varias maneras de descartar la secuencia de teclas de acceso:
-    - El usuario puede presionar Alt para descartar una secuencia de teclas de acceso que esté en curso. Recuerda que presionar Alt también inicia la secuencia de teclas de acceso.
-    - La tecla Esc descarta la secuencia de teclas de acceso si se está en el ámbito principal y sin filtrar.
-        > [!NOTE]
-        > La pulsación de la tecla Esc se pasa a la capa de la interfaz de usuario para controlarla también ahí.
-    - La tecla de tabulador descarta la secuencia de teclas de acceso y vuelve a la navegación mediante tabulación.
-    - La tecla Entrar descarta la secuencia de teclas de acceso y envía la pulsación de la tecla al elemento que tiene el foco.
-    - Las teclas de dirección descartan la secuencia de teclas de acceso y envían la pulsación de la tecla al elemento que tiene el foco.
-    - Un evento de puntero hacia abajo, como un clic del mouse o una función táctil, descarta la secuencia de teclas de acceso.
-    - De manera predeterminada, cuando se invoca una tecla de acceso, se descarta la secuencia de teclas de acceso.  Sin embargo, este comportamiento puede invalidarse si se establece la propiedad [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) en **false**.
-- Se produce una colisión de teclas de acceso cuando no es posible un autómata limitado determinista. Es preferible que estas colisiones de teclas de acceso no existan, pero pueden producirse debido a un gran número de comandos, a problemas de localización o a la generación en tiempo de ejecución de las teclas de acceso.
-
- Hay dos casos donde se producen colisiones:
- - Cuando dos elementos de la interfaz de usuario tienen el mismo valor de tecla de acceso y pertenecen al mismo ámbito de teclas de acceso. Por ejemplo, una tecla de acceso _A1_ para un `button1` y una tecla de acceso _A1_ para un `button2` que pertenece al ámbito predeterminado. En este caso, el sistema resuelve la colisión mediante el procesamiento de la tecla de acceso del primer elemento agregado al árbol visual. El resto se omiten.
- - Cuando hay más de una opción de cálculo en el mismo ámbito de teclas de acceso. Por ejemplo, _A_ y _A1_. Cuando el usuario presiona _A_, el sistema tiene dos opciones: invocar la tecla de acceso _A_ o seguir y consumir el carácter A de la tecla de acceso _A1_. En este caso, el sistema procesará solo la invocación de la primera tecla de acceso que alcancen los autómatas. En el ejemplo de _A_ y _A1_, el sistema solo invocará la tecla de acceso _A_.
--     Cuando el usuario presiona un valor de tecla de acceso no válido en una secuencia de teclas de acceso, no sucede nada. Existen dos categorías de teclas que se consideran teclas de acceso válidas en una secuencia de teclas de acceso:
- - Teclas especiales para salir de la secuencia de teclas de acceso; es decir, Esc, Alt, las teclas de dirección, Entrar y la tecla de tabulador.
- - Caracteres alfanuméricos asignados a las teclas de acceso.
-
-## <a name="access-key-apis"></a>Las API de teclas de acceso
-
-Para admitir la interacción del usuario con las teclas de acceso, el marco XAML proporciona las API que se describen aquí.
-
-**AccessKeyManager**
-
-[AccessKeyManager](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.aspx) es una clase auxiliar que sirve para administrar la interfaz de usuario cuando se muestran u ocultan teclas de acceso. El evento [IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx) se genera cada vez que la aplicación entra y sale de la secuencia de teclas de acceso. Puedes consultar la propiedad [IsDisplayModeEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabled.aspx) para determinar si las prestaciones visuales se muestran o se ocultan.  También se puede llamar a [ExitDisplayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.exitdisplaymode.aspx) para forzar el descarte de una secuencia de teclas de acceso.
+Las teclas de acceso pueden mejorar la facilidad de uso y la accesibilidad de tu aplicación de Windows si ofreces a los usuarios una forma intuitiva para que naveguen e interactúen rápidamente con la interfaz de usuario visible de la aplicación a través de un teclado en lugar de un dispositivo señalador (por ejemplo, la entrada táctil o el mouse).
 
 > [!NOTE]
-> No existe ninguna implementación integrada del objeto visual de las tecla de acceso; tienes que proporcionarla tú.  
+> Un teclado es indispensable para los usuarios que tienen ciertas discapacidades (véase [Accesibilidad del teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)) y también es una herramienta importante para los usuarios que lo prefieren como una forma más eficaz de interactuar con una aplicación.
 
-**AccessKey**
+La Plataforma universal de Windows(UWP) ofrece compatibilidad integrada en los controles de la plataforma tanto para teclas de acceso basadas en el teclado como para comentarios de la interfaz de usuario asociada a través de indicaciones visuales llamadas sugerencias de teclas.
 
-La propiedad [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) te permite especificar una tecla de acceso en un UIElement o [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.accesskey.aspx). Si dos elementos tienen la misma tecla de acceso y el mismo ámbito, únicamente se procesará el primer elemento agregado al árbol visual.
+## <a name="overview"></a>Introducción
 
-Para garantizar que el marco XAML procesa las teclas de acceso, los elementos de la interfaz de usuario deben realizarse en el árbol visual. Si no hay ningún elemento en el árbol visual con una tecla de acceso, no se genera ningún evento de tecla de acceso.
+Una tecla de acceso es una combinación de la tecla Alt y una o más teclas alfanuméricas, lo que sirve como ayuda *mnemotécnica*, y que en general se presionan en secuencia y no de forma simultánea.
 
-Las API de teclas de acceso no admiten caracteres que necesiten dos pulsaciones de teclas para generarse. Un carácter individual debe corresponderse con una tecla de la distribución del teclado nativa de un idioma en concreto.  
-
-**AccessKeyDisplayRequested/Dismissed**
-
-Los eventos [AccessKeyDisplayRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplayrequested.aspx) y [AccessKeyDisplayDismissed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplaydismissed.aspx) se generan cuando la prestación visual de una tecla de acceso debe mostrarse o descartarse. Estos eventos no se generan para elementos cuya propiedad [Visibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility.aspx) esté establecida en **Collapsed**. El evento AccessKeyDisplayRequested se genera durante una secuencia de teclas de acceso cada vez que el usuario presiona un carácter que la tecla de acceso usa. Por ejemplo, si se establece una tecla de acceso en _AB_, este evento se genera cuando el usuario presiona la tecla Alt y otra vez cuando el usuario presiona _A_. Cuando el usuario presiona _B_, se genera el evento AccessKeyDisplayDismissed
-
-**AccessKeyInvoked**
-
-El evento [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx) se genera cuando un usuario alcanza el último carácter de una tecla de acceso. Una tecla de acceso puede tener uno o varios caracteres. Por ejemplo, para las teclas de acceso _A_ y _BC_, cuando el usuario presiona _Alt, A_, o _Alt, B, C_, se genera el evento, pero no se genera cuando el usuario presiona solo _Alt, B_. Este evento se genera cuando se presiona la tecla, no cuando se suelta.
-
-**IsAccessKeyScope**
-
-La propiedad [IsAccessKeyScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.isaccesskeyscope.aspx) te permite especificar que un UIElement sea la raíz de un ámbito de teclas de acceso. El evento de AccessKeyDisplayRequested se genera para este elemento, pero no para sus elementos secundarios. Cuando un usuario invoca este elemento, el marco XAML cambia automáticamente el ámbito y genera el evento AccessKeyDisplayRequested en sus elementos secundarios y el evento de AccessKeyDisplayDismissed en otros elementos de la interfaz de usuario (incluido al elemento primario).  Cuando se cambia el ámbito, no se sale de la secuencia de teclas de acceso.
-
-**AccessKeyScopeOwner**
-
-Para hacer que un elemento participe en el ámbito de otro elemento (el origen) que no sea su elemento primario del árbol visual, puedes establecer la propiedad [AccessKeyScopeOwner](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyscopeowner.aspx). El elemento enlazado a la propiedad AccessKeyScopeOwner debe tener la propiedad IsAccessKeyScope establecida en **true**. De lo contrario, se producirá una excepción.
-
-**ExitDisplayModeOnAccessKeyInvoked**
-
-De manera predeterminada, cuando se invoca una tecla de acceso y el elemento no es propietario de ningún ámbito, se finaliza la secuencia de teclas de acceso y se genera el evento [AccessKeyManager.IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx). Puedes establecer la propiedad [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) en **false** para invalidar este comportamiento y evitar salir de la secuencia de teclas de acceso después de su invocación. (Esta propiedad está tanto en [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) como en [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.exitdisplaymodeonaccesskeyinvoked.aspx)).
+Las sugerencias de teclas son identificadores que se muestran junto a los controles que admiten las teclas de acceso cuando el usuario presiona la tecla Alt. Cada sugerencia de teclas contiene las teclas alfanuméricas que activan el control asociado.
 
 > [!NOTE]
-> Si el elemento es propietario de un ámbito (`IsAccessKeyScope="True"`), la aplicación entra en un nuevo ámbito de teclas de acceso y el evento IsDisplayModeEnabledChanged no se genera.
+> Los métodos abreviados de teclado se admiten automáticamente para las teclas de acceso con un único carácter alfanumérico. Por ejemplo, al presionar Alt+A simultáneamente en Word, se abre el menú Archivo sin mostrar las sugerencias de teclas.
 
-**Localización**
+Al presionar la tecla Alt, se inicializa la funcionalidad de las teclas de acceso y se muestran todas las combinaciones de teclas actualmente disponibles en las sugerencias de teclas. Las pulsaciones de teclas posteriores se controlan mediante el marco de teclas de acceso, que rechaza las teclas no válidas hasta que se presiona una tecla de acceso válida, o se presionan las teclas ENTRAR, Esc, Tab o las flechas para desactivar las teclas de acceso y devolver el control de las pulsaciones de teclas a la aplicación.
 
-Las teclas de acceso pueden localizarse en varios idiomas y cargarse en el tiempo de ejecución mediante la API [ResourceLoader](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.resources.resourceloader.aspx).
+Las aplicaciones de Microsoft Office admiten una amplia variedad de teclas de acceso. La siguiente imagen muestra la pestaña Inicio de Word con las teclas de acceso activadas (observa que admite tanto números como varias pulsaciones de teclas).
 
-## <a name="control-patterns-used-when-an-access-key-is-invoked"></a>Patrones de control usados cuando se invoca una tecla de acceso
+![Indicaciones de KeyTips de las claves de acceso en Microsoft Word](images/accesskeys/keytip-badges-word.png)
 
-Los patrones de control son implementaciones de la interfaz que exponen la funcionalidad de control común; por ejemplo, unos botones implementan el patrón de control **Invoke** y esto provoca el evento **Click**. Cuando se invoca una tecla de acceso, el marco XAML busca si el elemento invocado implementa un patrón de control y, si es así, lo ejecuta. Si el elemento tiene más de un patrón de control, se invoca solo uno de ellas y se omite el resto. Los patrones de control se buscan en el siguiente orden:
+_Indicaciones de KeyTips de las claves de acceso en Microsoft Word_
 
-1.    Invocar. Por ejemplo, un botón (Button).
-2.    Alternancia. Por ejemplo, una casilla (Checkbox).
-3.    Selección. Por ejemplo, un botón de selección (RadioButton).
-4.    Ampliar/contraer. Por ejemplo, un cuadro combinado (ComboBox).
+Para agregar una tecla de acceso a un control, usa la **propiedad AccessKey**. El valor de esta propiedad especifica la secuencia de teclas de acceso, el acceso directo (si se trata de un único carácter alfanumérico) y la sugerencia de teclas.
 
-Si no se encuentra ningún patrón de control, la invocación de la tecla de acceso aparecerá como sin opciones y se registrará un mensaje de depuración para ayudarte a depurar esta situación: "No automation patterns for this component found. (No se han encontrado patrones de automatización para este componente). Implement desired behavior in the event handler for AccessKeyInvoked. (Implementa el comportamiento deseado en el controlador de eventos de AccessKeyInvoked). Setting Handled to true in your event handler will suppress this message. (Si Handled se establece en true en el controlador de eventos, este mensaje se suprimirá)".
+``` xaml
+<Button Content="Accept" AccessKey="A" Click="AcceptButtonClick" />
+```
 
-> [!NOTE]
-> Para ver este mensaje, el tipo de proceso de la aplicación del depurador debe ser _Mixto (administrado y nativo)_ o _Nativo_ en la configuración de depuración de Visual Studio.
+## <a name="when-to-use-access-keys"></a>Cuándo usar las teclas de acceso
 
-Si no deseas que una tecla de acceso ejecute su patrón de control predeterminado, o si el elemento no posee ningún patrón de control, debes controlar el evento [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx) e implementar el comportamiento deseado.
-```csharp
-private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
+Te recomendamos que especifiques las teclas de acceso siempre que sea adecuado en la interfaz de usuario y admitas las teclas de acceso en todos los controles personalizados.
+
+1.  **Las teclas de acceso hacen que la aplicación sea más accesible** para los usuarios que tienen discapacidades motrices, incluidos aquellos usuarios que se pueden presionar solo una tecla a la vez o tienen dificultades para usar un mouse.
+
+    Una interfaz de usuario de teclado bien diseñada es un aspecto importante de la accesibilidad del software. Permite a usuarios con dificultades visuales o con ciertas discapacidades motrices navegar por una aplicación e interactuar con sus funciones. Es posible que estos usuarios no puedan controlar un mouse y empleen varias tecnologías de ayuda, como herramientas para la mejora del teclado, teclados en pantalla, ampliadores de pantallas, lectores de pantalla y utilidades de entrada de voz. Para estos usuarios, es fundamental que la cobertura completa de los comandos.
+
+2.  **Las teclas de acceso hacen que tu aplicación sea más usable** para usuarios avanzados que prefieren interactuar a través del teclado.
+
+    Los usuarios con experiencia suelen tener una fuerte preferencia por el teclado, ya que los comandos se pueden introducir más rápidamente y no requieran apartar las manos de las teclas. Para estos usuarios, la eficacia y la coherencia son cruciales; la exhaustividad es importante solo para los comandos usados con más frecuencia.
+
+## <a name="set-access-key-scope"></a>Establecer el ámbito de las teclas de acceso
+
+Cuando hay muchos de elementos en la pantalla que admiten teclas de acceso, te recomendamos definir los ámbitos de las teclas de acceso para reducir la **carga cognitiva**. Esto minimiza el número de teclas de acceso en la pantalla, lo que hace que sean más fáciles de encontrar y mejora la eficacia y la productividad.
+
+Por ejemplo, Microsoft Word proporciona dos ámbitos de teclas de acceso: un ámbito principal para las pestañas de la Cinta y un ámbito secundario para los comandos de la pestaña seleccionada.
+
+Las imágenes siguientes muestran los dos ámbitos de teclas de acceso en Word. La primera muestra las teclas de acceso principales que permiten al usuario seleccionar una pestaña y otros comandos de nivel superior, mientras que la segunda muestra las claves de acceso secundarias de la pestaña Inicio.
+
+![Teclas de acceso principales en Microsoft Word](images/accesskeys/primary-access-keys-word.png)
+
+_Teclas de acceso principales en Microsoft Word_
+
+![Teclas de acceso secundarias en Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
+
+Teclas de acceso secundarias en Microsoft Word
+
+Las teclas de acceso pueden duplicarse para elementos de distintos ámbitos. En el ejemplo anterior, "2" es la tecla de acceso para Deshacer en el ámbito principal y también es "Cursiva" en el ámbito secundario.
+
+Algunos controles, como CommandBar, no admiten aún ámbitos integrados de teclas de acceso y, en consecuencia, es necesario que los implementes por ti mismo. En el siguiente ejemplo se muestra cómo admitir SecondaryCommands de CommandBar con las teclas de acceso disponibles una vez que se invoca un comando principal (similar a la Cinta en Word).
+
+``` C#
+public class CommandBarHack : CommandBar
 {
-    args.Handled = true;
-    //Do something
+    CommandBarOverflowPresenter secondaryItemsControl;
+    Popup overflowPopup;
+
+    public CommandBarHack()
+    {
+        this.ExitDisplayModeOnAccessKeyInvoked = false;
+        AccessKeyInvoked += OnAccessKeyInvoked;
+    }
+
+    protected override void OnApplyTemplate()
+    {
+        base.OnApplyTemplate();
+
+        Button moreButton = GetTemplateChild("MoreButton") as Button;
+        moreButton.SetValue(Control.IsTemplateKeyTipTargetProperty, true);
+        moreButton.IsAccessKeyScope = true;
+
+        // SecondaryItemsControl changes
+        secondaryItemsControl = GetTemplateChild("SecondaryItemsControl") as CommandBarOverflowPresenter;
+        secondaryItemsControl.AccessKeyScopeOwner = moreButton;
+
+        overflowPopup = GetTemplateChild("OverflowPopup") as Popup;
+
+    }
+    private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
+    {
+
+        if (overflowPopup != null)
+        {
+            overflowPopup.Opened += SecondaryMenuOpened;
+        }
+    }
+
+    private void SecondaryMenuOpened(object sender, object e)
+    {
+        //This is not neccesay given we are automatically pushing the scope.
+        var item = secondaryItemsControl.Items.First();
+        if (item != null && item is Control)
+        {
+            (item as Control).Focus(FocusState.Keyboard);
+        }
+        overflowPopup.Opened -= SecondaryMenuOpened;
+    }
 }
 ```
 
-Para obtener más información sobre los patrones de control, consulta [UI Automation Control Patterns Overview](https://msdn.microsoft.com/library/windows/desktop/ee671194.aspx) (Introducción a los patrones de control de automatización de la interfaz de usuario).
 
-## <a name="access-keys-and-narrator"></a>Teclas de acceso y Narrador
+``` xaml
+<local:CommandBarHack x:Name="MainCommandBar" AccessKey="M" >
+    <AppBarButton AccessKey="G" Icon="Globe" Label="Go"/>
+    <AppBarButton AccessKey="S" Icon="Stop" Label="Stop"/>
+    <AppBarSeparator/>
+    <AppBarButton AccessKey="R" Icon="Refresh" Label="Refresh" IsAccessKeyScope="True">
+        <AppBarButton.Flyout>
+            <MenuFlyout>
+                <MenuFlyoutItem AccessKey="A" Icon="Globe" Text="Refresh A" />
+                <MenuFlyoutItem AccessKey="B" Icon="Globe" Text="Refresh B" />
+                <MenuFlyoutItem AccessKey="C" Icon="Globe" Text="Refresh C" />
+                <MenuFlyoutItem AccessKey="D" Icon="Globe" Text="Refresh D" />
+            </MenuFlyout>
+        </AppBarButton.Flyout>
+    </AppBarButton>
+    <AppBarButton AccessKey="B" Icon="Back" Label="Back"/>
+    <AppBarButton AccessKey="F" Icon="Forward" Label="Forward"/>
+    <AppBarSeparator/>
+    <AppBarToggleButton AccessKey="V" Icon="Favorite" Label="Favorite"/>
+    <CommandBar.SecondaryCommands>
+        <AppBarToggleButton Icon="Like" AccessKey="L" Label="Like"/>
+        <AppBarButton Icon="Setting" AccessKey="T" Label="Settings" />
+    </CommandBar.SecondaryCommands>
+</local:CommandBarHack>
+```
 
-Windows Runtime posee proveedores de automatización de la interfaz de usuario que exponen las propiedades de los elementos de automatización de la interfaz de usuario de Microsoft. Estas propiedades permiten a las aplicaciones cliente de automatización de la interfaz de usuario obtener información sobre algunas partes de la interfaz de usuario. La propiedad [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) permite a los clientes (por ejemplo, a Narrador) descubrir la tecla de acceso asociada con un elemento. Narrador leerá esta propiedad cada vez que un el foco se sitúe sobre un elemento. Si AutomationProperties.AccessKey no tiene ningún valor, el marco XAML devuelve el valor de la propiedad [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) del UIElement o TextElement. No es necesario configurar AutomationProperties.AccessKey si la propiedad AccessKey ya posee un valor.
+![Teclas de acceso principales para CommandBar](images/accesskeys/primary-access-keys-commandbar.png)
 
-## <a name="example-access-key-for-button"></a>Ejemplo: Tecla de acceso de un botón
+_Ámbito principal de CommandBar y teclas de acceso admitidas_
 
-Este ejemplo muestra cómo crear una tecla de acceso de un botón. Usa la información sobre herramientas como una prestación visual para implementar una notificación flotante que contenga la tecla de acceso.
+![Teclas de acceso secundarias para CommandBar](images/accesskeys/secondary-access-keys-commandbar.png)
+
+_Ámbito secundario de CommandBar y teclas de acceso admitidas_
+
+## <a name="avoid-access-key-collisions"></a>Evitar colisiones de teclas de acceso
+
+Las colisiones de teclas de acceso se producen cuando dos o más elementos en el mismo ámbito tienen teclas de acceso duplicadas o comienzan con los mismos caracteres alfanuméricos.
+
+Para resolver las teclas de acceso duplicadas, el sistema procesa la tecla de acceso del primer elemento agregado al árbol visual y pasa por alto todas las demás.
+
+Cuando varias teclas de acceso comienzan con el mismo carácter (por ejemplo, "A", "A1" y "AB"), el sistema procesa la tecla de acceso de un solo carácter y omite todas las demás.
+
+Para evitar las colisiones, usa teclas de acceso únicas o define ámbitos para los comandos.
+
+## <a name="choose-access-keys"></a>Elegir teclas de acceso
+
+Al elegir las teclas de acceso, ten en cuenta lo siguiente:
+
+-   Usa un único carácter para minimizar las pulsaciones de teclas y admite las teclas de aceleración de manera predeterminada (Alt+AccessKey).
+-   Evita usar más de dos caracteres.
+-   Evita las colisiones de teclas de acceso.
+-   Evita los caracteres que son difíciles de diferenciar de otros caracteres, como la letra "I" y el número "1" o la letra "O" y el número "0".
+-   Usa precedentes conocidos de otras aplicaciones populares, como Word ("A" para "Archivo", "O" para "Inicio", etc.).
+-   Usa el primer carácter del nombre del comando o un carácter con una asociación cercana al comando que ayude a recordar.
+    -   Si la primera letra ya está asignada, usa una letra que esté lo más cerca posible de la primera letra del nombre del comando ("N" para "Insertar").
+    -   Usa una consonante que se distinga del nombre del comando ("S" para "Insertar nota al pie").
+    -   Usa una vocal del nombre del comando.
+
+## <a name="localize-access-keys"></a>Localizar las teclas de acceso
+
+Si tu aplicación va a localizarse en varios idiomas, también debes **tener en cuenta la localización de las teclas de acceso**. Por ejemplo, "H" para "Home" en en-US e "I" para "Incio" en es-ES.
+
+Usa la extensión de x:Uid en el marcado para aplicar recursos localizados como se muestra aquí:
+
+``` xaml
+<Button Content="Home" AccessKey="H" x:Uid="HomeButton" />
+```
+Los recursos para cada idioma se agregan a las carpetas String correspondientes en el proyecto:
+
+![Carpetas String de recursos para inglés y español](images/accesskeys/resource-string-folders.png)
+
+_Carpetas String de recursos para inglés y español_
+
+Las teclas de acceso localizadas se especifican en el archivo resources.resw del proyecto:
+
+![Especificar la propiedad AccessKey especificada en el archivo resources.resw](images/accesskeys/resource-resw-file.png)
+
+_Especificar la propiedad AccessKey especificada en el archivo resources.resw_
+
+Para obtener más información, consulta [Traducir recursos de la interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/Hh965329(v=win.10).aspx).
+
+## <a name="position-key-tips"></a>Ubicar las sugerencias de teclas
+
+Las sugerencias de teclas se muestran como indicaciones flotantes relativas a los elementos correspondientes de la interfaz de usuario, teniendo en cuenta la presencia de otros elementos de la interfaz de usuario, otras sugerencias de teclas y el borde de la pantalla.
+
+Por lo general, alcanza con la ubicación predeterminada de las sugerencias de teclas, que proporciona compatibilidad integrada para la interfaz de usuario adaptable.
+
+![Ejemplo de ubicación automática de sugerencias de teclas](images/accesskeys/auto-keytip-position.png)
+
+_Ejemplo de ubicación automática de sugerencias de teclas_
+
+Sin embargo, en caso de necesitar más control sobre la ubicación de las sugerencias de clave, se recomienda lo siguiente:
+
+1.  **Principio de asociación obvia**: El usuario puede asociar el control a la sugerencia de teclas fácilmente.
+
+    a.  El KeyTip debe estar **cerca** del elemento que tiene la clave de acceso (el propietario).  
+    b.  El KeyTip debe **evitar cubrir los elementos habilitados** que tienen teclas de acceso.   
+    c.  Si no se puede ubicar un KeyTip cerca de su propietario, debe superponerse con este. 
+
+2.  **Detectabilidad**: El usuario puede detectar rápidamente el control con la sugerencia de teclas.
+
+    a.  El KeyTip nunca se **superpone** con otras sugerencias de teclas.  
+
+3.  **Vistazo sencillo:** El usuario puede echar un vistazo fácilmente a las sugerencias de teclas.
+
+    a.  Los KeyTips deben estar **alineados** entre sí y con el elemento de la interfaz de usuario.
+    b.  Los KeyTips deben estar **agrupados** tanto como sea posible. 
+
+### <a name="relative-position"></a>Posición relativa
+
+Usa la propiedad **KeyTipPlacementMode** para personalizar la ubicación de la sugerencia de teclas por elemento o por grupo.
+
+Los modos de ubicación son: Top, Bottom, Right, Left, Hidden, Center y Auto.
+
+![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytip-postion-modes.png)
+
+_Modos de ubicación de sugerencia de teclas_
+
+La línea central del control se usa para calcular la alineación vertical y horizontal del KeyTip.
+
+En el siguiente ejemplo se muestra cómo establecer la ubicación de la sugerencia de teclas de un grupo de controles mediante la propiedad KeyTipPlacementMode de un contenedor StackPanel.
+
+``` xaml
+<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" KeyTipPlacementMode="Top">
+  <Button Content="File" AccessKey="F" />
+  <Button Content="Home" AccessKey="H" />
+  <Button Content="Insert" AccessKey="N" />
+</StackPanel>
+```
+
+### <a name="offsets"></a>Desplazamientos
+
+Usa las propiedades KeyTipHorizontalOffset y KeyTipVerticalOffset de un elemento para tener un control incluso más detallado de la ubicación de la sugerencia de teclas.
 
 > [!NOTE]
-> La información sobre herramientas se usa por motivos de sencillez, pero te recomendamos crear tu propio control para mostrarla mediante, por ejemplo, la clase [Popup](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.popup.aspx).
+> Los desplazamientos no pueden establecerse cuando la propiedad KeyTipPlacementMode se establece en Auto.
 
-El marco XAML llama automáticamente al controlador del evento Click, por lo que no es necesario que controles el evento AccessKeyInvoked. El ejemplo proporciona prestaciones visuales únicamente para los caracteres que quedan para invocar la tecla de acceso mediante la propiedad [AccessKeyDisplayRequestedEventArgs.PressedKeys](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeydisplayrequestedeventargs.pressedkeys.aspx). Por ejemplo, si se muestran tres teclas de acceso, _A1_, _A2_ y _C_, y el usuario presiona _A_, solo las teclas de acceso _A1_ y _A2_ se quedarán sin filtrar y se mostrarán como _1_ y _2_, en lugar de como _A1_ y _A2_.
+La propiedad KeyTipHorizontalOffset indica cuánto mover la sugerencia de teclas a la izquierda o a la derecha. En el ejemplo se muestra cómo establecer los desplazamientos de la sugerencia de teclas para un botón.
 
-```xaml
-<StackPanel
-        VerticalAlignment="Center"
-        HorizontalAlignment="Center"
-        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Press"
-                AccessKey="PB"
-                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"
-                Click="DoSomething" />
-        <TextBlock Text="" x:Name="textBlock" />
-    </StackPanel>
+![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytip-offsets.png)
+
+_Establecer el desplazamiento vertical y horizontal de una sugerencia de teclas_
+
+``` xaml
+<Button
+  Content="File"
+  AccessKey="F"
+  KeyTipPlacementMode="Bottom"
+  KeyTipHorizontalOffset="20"
+  KeyTipVerticalOffset="-8" />
 ```
 
-```csharp
- public sealed partial class ButtonSample : Page
-    {
-        public ButtonSample()
-        {
-            this.InitializeComponent();
-        }
+### <a name="screen-edge-alignment-screen-edge-alignment-listparagraph"></a>Alineación con el borde de la pantalla {#screen-edge-alignment .ListParagraph}
 
-        private void DoSomething(object sender, RoutedEventArgs args)
-        {
-            textBlock.Text = "Access Key is working!";
-        }
+La ubicación de una sugerencia de teclas se ajusta automáticamente según el borde de la pantalla para garantizar que la sugerencia de teclas se vea por completo. Cuando esto ocurre, la distancia entre el control y el punto de alineación de la sugerencia de teclas puede diferir de los valores especificados para el desplazamiento horizontal y vertical.
 
-        private void OnAccessKeyDisplayRequested(UIElement sender, AccessKeyDisplayRequestedEventArgs args)
-        {
-            var tooltip = ToolTipService.GetToolTip(sender) as ToolTip;
+![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytips-screen-edge.png)
 
-            if (tooltip == null)
-            {
-                tooltip = new ToolTip();
-                tooltip.Background = new SolidColorBrush(Windows.UI.Colors.Black);
-                tooltip.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
-                tooltip.Padding = new Thickness(4, 4, 4, 4);
-                tooltip.VerticalOffset = -20;
-                tooltip.Placement = PlacementMode.Bottom;
-                ToolTipService.SetToolTip(sender, tooltip);
-            }
+_El borde de la pantalla hace que la sugerencia de teclas se reubique automáticamente_
 
-            if (string.IsNullOrEmpty(args.PressedKeys))
-            {
-                tooltip.Content = sender.AccessKey;
-            }
-            else
-            {
-                tooltip.Content = sender.AccessKey.Remove(0, args.PressedKeys.Length);
-            }
+## <a name="style-key-tips"></a>Estilos de las sugerencias de teclas
 
-            tooltip.IsOpen = true;
-        }
-        private void OnAccessKeyDisplayDismissed(UIElement sender, AccessKeyDisplayDismissedEventArgs args)
-        {
-            var tooltip = ToolTipService.GetToolTip(sender) as ToolTip;
-            if (tooltip != null)
-            {
-                tooltip.IsOpen = false;
-                //Fix to avoid show tooltip with mouse
-                ToolTipService.SetToolTip(sender, null);
-            }
-        }
-    }
+Recomendamos que uses la compatibilidad integrada de sugerencias de teclas para los temas de la plataforma, incluidos el contraste alto.
+
+Si necesitas especificar tus propios estilos de sugerencias de teclas, usa los recursos de aplicación, como KeyTipFontSize (tamaño de fuente), KeyTipFontFamily (familia de fuentes), KeyTipBackground (fondo), KeyTipForeground (primer plano), KeyTipPadding (relleno), KeyTipBorderBrush(color de borde) y KeyTipBorderThemeThickness (grosor del borde).
+
+![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytip-customization.png)
+
+_Opciones de personalización de las sugerencias de teclas_
+
+En este ejemplo se muestra cómo cambiar estos recursos de aplicación:
+
+ ```xaml  
+<Application.Resources>
+  <SolidColorBrush Color="DarkGray" x:Key="MyBackgroundColor" />
+  <SolidColorBrush Color="White" x:Key="MyForegroundColor" />
+  <SolidColorBrush Color="Black" x:Key="MyBorderColor" />
+  <StaticResource x:Key="KeyTipBackground" ResourceKey="MyBackgroundColor" />
+  <StaticResource x:Key="KeyTipForeground" ResourceKey="MyForegroundColor" />
+  <StaticResource x:Key="KeyTipBorderBrush" ResourceKey="MyBorderColor"/>
+  <FontFamily x:Key="KeyTipFontFamily">Consolas</FontFamily>
+  <x:Double x:Key="KeyTipContentThemeFontSize">18</x:Double>
+  <Thickness x:Key="KeyTipBorderThemeThickness">2</Thickness>
+  <Thickness x:Key="KeyTipThemePadding">4,4,4,4</Thickness>
+</Application.Resources>
 ```
 
-## <a name="example-scoped-access-keys"></a>Ejemplo: Teclas de acceso con ámbito
+## <a name="access-keys-and-narrator"></a>Las teclas de acceso y el Narrador
 
-Este ejemplo muestra cómo crear teclas de acceso con ámbito. La propiedad IsAccessKeyScope de PivotItem impide que se muestren las teclas de acceso de los elementos secundarios de PivotItem cuando el usuario presiona Alt. Estas teclas de acceso se muestran solamente cuando el usuario invoca el PivotItem, porque el marco XAML cambia el ámbito automáticamente. El marco también oculta las teclas de acceso de los otros ámbitos.
+El marco XAML expone las propiedades de automatización que permiten a los clientes de automatización de la interfaz de usuario detectar información sobre los elementos en la interfaz de usuario.
 
-En este ejemplo también se muestra cómo controlar el evento AccessKeyInvoked. El PivotItem no implementa ningún patrón de control, por lo que el marco XAML no invoca ninguna acción de forma predeterminada. Esta implementación muestra cómo seleccionar el PivotItem que se haya invocado mediante la tecla de acceso.
-
-Por último, el ejemplo muestra el evento IsDisplayModeChanged, donde puedes hacer algo cuando cambia el modo de presentación. En este ejemplo, el control Pivot está contraído hasta que el usuario presiona Alt. Cuando el usuario termina de interactuar con Pivot, se contrae nuevamente. Puedes usar IsDisplayModeEnabled para comprobar si el modo de presentación de la tecla de acceso está habilitado o deshabilitado.
-
-```xaml   
-<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Pivot x:Name="MyPivot" VerticalAlignment="Center" HorizontalAlignment="Center" >
-            <Pivot.Items>
-                <PivotItem
-                    x:Name="PivotItem1"
-                    AccessKey="A"
-                    AccessKeyInvoked="OnAccessKeyInvoked"
-                    AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                    AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"
-                    IsAccessKeyScope="True">
-                    <PivotItem.Header>
-                        <TextBlock Text="A Options"/>
-                    </PivotItem.Header>
-                    <StackPanel Orientation="Horizontal" >
-                        <Button Content="ButtonAA" AccessKey="A"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested" />
-                        <Button Content="ButtonAD1" AccessKey="D1"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"  />
-                        <Button Content="ButtonAD2" AccessKey="D2"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"/>
-                    </StackPanel>
-                </PivotItem>
-                <PivotItem
-                    x:Name="PivotItem2"
-                    AccessKeyInvoked="OnAccessKeyInvoked"
-                    AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                    AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"
-                    AccessKey="B"
-                    IsAccessKeyScope="true">
-                    <PivotItem.Header>
-                        <TextBlock Text="B Options"/>
-                    </PivotItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Button AccessKey="B" Content="ButtonBB"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"  />
-                        <Button AccessKey="F1" Content="ButtonBF1"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"  />
-                        <Button AccessKey="F2" Content="ButtonBF2"  
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"/>
-                    </StackPanel>
-                </PivotItem>
-            </Pivot.Items>
-        </Pivot>
-    </Grid>
-```
-
-```csharp
-public sealed partial class ScopedAccessKeys : Page
-    {
-        public ScopedAccessKeys()
-        {
-            this.InitializeComponent();
-            AccessKeyManager.IsDisplayModeEnabledChanged += OnDisplayModeEnabledChanged;
-            this.Loaded += OnLoaded;
-        }
-
-        void OnLoaded(object sender, object e)
-        {
-            //To let the framework discover the access keys, the elements should be realized
-            //on the visual tree. If there are no elements in the visual
-            //tree with access key, the framework won't raise the events.
-            //In this sample, if you define the Pivot as collapsed on the constructor, the Pivot
-            //will have a lazy loading and the access keys won't be enabled.
-            //For this reason, we make it visible when creating the object
-            //and we collapse it when we load the page.
-            MyPivot.Visibility = Visibility.Collapsed;
-        }
-
-        void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
-        {
-            args.Handled = true;
-            MyPivot.SelectedItem = sender as PivotItem;
-        }
-        void OnDisplayModeEnabledChanged(object sender, object e)
-        {
-            if (AccessKeyManager.IsDisplayModeEnabled)
-            {
-                MyPivot.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                MyPivot.Visibility = Visibility.Collapsed;
-
-            }
-        }
-
-        DependencyObject AdjustTarget(UIElement sender)
-        {
-            DependencyObject target = sender;
-            if (sender is PivotItem)
-            {
-                PivotItem pivotItem = target as PivotItem;
-                target = (sender as PivotItem).Header as TextBlock;
-            }
-            return target;
-        }
-
-        void OnAccessKeyDisplayRequested(UIElement sender, AccessKeyDisplayRequestedEventArgs args)
-        {
-            DependencyObject target = AdjustTarget(sender);
-            var tooltip = ToolTipService.GetToolTip(target) as ToolTip;
-
-            if (tooltip == null)
-            {
-                tooltip = new ToolTip();
-                tooltip.Background = new SolidColorBrush(Windows.UI.Colors.Black);
-                tooltip.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
-                tooltip.Padding = new Thickness(4, 4, 4, 4);
-                tooltip.VerticalOffset = -20;
-                tooltip.Placement = PlacementMode.Bottom;
-                ToolTipService.SetToolTip(target, tooltip);
-            }
-
-            if (string.IsNullOrEmpty(args.PressedKeys))
-            {
-                tooltip.Content = sender.AccessKey;
-            }
-            else
-            {
-                tooltip.Content = sender.AccessKey.Remove(0, args.PressedKeys.Length);
-            }
-
-            tooltip.IsOpen = true;
-        }
-        void OnAccessKeyDisplayDismissed(UIElement sender, AccessKeyDisplayDismissedEventArgs args)
-        {
-            DependencyObject target = AdjustTarget(sender);
-
-            var tooltip = ToolTipService.GetToolTip(target) as ToolTip;
-            if (tooltip != null)
-            {
-                tooltip.IsOpen = false;
-                //Fix to avoid show tooltip with mouse
-                ToolTipService.SetToolTip(target, null);
-            }
-        }
-    }
-```
+Si especificas la propiedad AccessKey en un control UIElement o TextElement, puedes usar la propiedad [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) para obtener este valor. Los clientes de accesibilidad, como el Narrador, leen el valor de esta propiedad cada vez que un elemento tiene el foco.

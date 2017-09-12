@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 4A4C2802-E674-4C04-8A6D-D7C1BBF1BD20
 title: "Propiedades de información de dispositivo"
 description: "Cada dispositivo tiene propiedades DeviceInformation asociadas que puedes usar cuando necesites información específica o al compilar un selector de dispositivos."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 68e427a4d94b7c599e1fec375f0f66b5ff2704e0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 37b88b501c3bdb0f38b04f2f7b6d936cb0d201b4
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="device-information-properties"></a>Propiedades de información de dispositivo
 
@@ -77,7 +79,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 |-----------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **System.Devices.Category**       | Cadena\[\] | Lista de descripciones de las categorías a las que pertenece el dispositivo. Esta lista se proporciona como categorías singulares. Por ejemplo, "Mostrar", "Teléfono" o "Dispositivo de Audio".  |
 | **System.Devices.CategoryIds**    | Cadena\[\] | Contiene una lista de las categorías a las que pertenece este dispositivo. Por ejemplo, **Audio.Headphone**, **Display.Monitor** o **Input.Gaming**.                                  |
-| **System.Devices.CateogryPlural** | Cadena\[\] | Lista de descripciones de las categorías a las que pertenece el dispositivo. Esta lista se proporciona como categorías plurales. Por ejemplo, "Muestras", "Teléfonos," o "Dispositivos de audio". |
+| **System.Devices.CategoryPlural** | Cadena\[\] | Lista de descripciones de las categorías a las que pertenece el dispositivo. Esta lista se proporciona como categorías plurales. Por ejemplo, "Muestras", "Teléfonos," o "Dispositivos de audio". |
 | **System.Devices.CompatibleIds**  | Cadena\[\] | Colección de identificadores compatibles para todos los objetos **DeviceInformationKind.Device** secundarios.                                                                       |
 | **System.Devices.Connected**      | Booleano    | Indica si el dispositivo está actualmente conectado al sistema o no.                                                                                          |
 | **System.Devices.GlyphIcon**      | Cadena     | Ruta de acceso del icono para el glifo.                                                                                                                                           |

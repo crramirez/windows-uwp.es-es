@@ -1,17 +1,19 @@
 ---
-author: rmpablos
+author: laurenhughes
 title: "Configurar compilaciones automatizadas para la aplicación para UWP"
 description: "Cómo configurar las compilaciones automatizadas para producir paquetes de instalaciones de prueba o paquetes de la Tienda."
-ms.author: wdg-dev-content
-ms.date: 02/15/2017
+ms.author: lahugh
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
-ms.openlocfilehash: f4c68af97e5d5b11a0c5320c9fa6040b9ab94e5a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c8c1765e2983484ddc57e47a995867aa3b401ad4
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -39,7 +41,7 @@ Si decides crear a un agente de compilación personalizado, necesitarás las her
 
 Para obtener más información, consulta [Implementar un agente en Windows.](https://www.visualstudio.com/docs/build/admin/agents/v2-windows) 
 
-Para ejecutar pruebas unitarias de UWP, tendrás que hacer lo siguiente: •    Implementar e iniciar la aplicación. •    Ejecutar el agente VSTS en modo interactivo. •    Configurar el agente para que inicie sesión automáticamente después de un reinicio.
+Para ejecutar pruebas unitarias de UWP, tendrás que hacer lo siguiente: •   Implementar e iniciar la aplicación. •   Ejecutar el agente VSTS en modo interactivo. •   Configurar el agente para que inicie sesión automáticamente después de un reinicio.
 
 Ahora hablaremos sobre cómo configurar una compilación automatizada.
 
@@ -104,11 +106,11 @@ Los parámetros definidos con la sintaxis $() son variables definidas en la defi
 Para ver todas las variables predefinidas, consulta [Usar variables de compilación.](https://www.visualstudio.com/docs/build/define/variables)
 
 #### <a name="configure-the-publish-artifact-build-task"></a>Configurar la tarea de compilación Publicar artefacto 
-Esta tarea almacena los artefactos generados en VSTS. Puedes verlos en la pestaña Artefactos de la página de resultados de la compilación. VSTS usa la carpeta `$Build.ArtifactStagingDirectory)\AppxPackages` que hemos definido anteriormente.
+Esta tarea almacena los artefactos generados en VSTS. Puedes verlos en la pestaña Artefactos de la página de resultados de la compilación. VSTS usa la carpeta `$(Build.ArtifactStagingDirectory)\AppxPackages` que hemos definido anteriormente.
 
 ![artefactos](images/building-screen6.png)
 
-Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que cargaste en la Tienda (appxupload), así como los paquetes que habilitan la instalación de prueba (appxbundle).
+Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que se recomienda para el envío a la Tienda (.appxupload). Ten en cuenta que también puedes enviar un paquete de la aplicación normal (.appx) o un lote de aplicaciones (.appxbundle) a la Tienda. Para este artículo, usaremos el archivo .appxupload.
 
 
 >Nota: De manera predeterminada, el agente VSTS mantiene los paquetes appx generados más recientes. Si deseas almacenar solo los artefactos de la compilación actual, configura la compilación para limpiar el directorio de archivos binarios. Para ello, agrega una variable llamada `Build.Clean` y, a continuación, establécela en el valor `all`. Para obtener más información, consulta [Especificar el repositorio.](https://www.visualstudio.com/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way)
@@ -172,10 +174,10 @@ En VSTS, la página de resumen de la compilación muestra los resultados de la p
 Si quieres usar la compilación de CI únicamente para supervisar la calidad de los registros, puedes reducir los tiempos de compilación.
 
 #### <a name="to-improve-the-speed-of-a-ci-build"></a>Para mejorar la velocidad de una compilación de CI
-1.    Realiza la compilación para una única plataforma.
-2.    Edita la variable BuildPlatform para usar solo x86. ![configurar ci](images/building-screen10.png) 
-3.    En el paso de la compilación, agrega /p:AppxBundle=Never a la propiedad Argumentos de MSBuild y, a continuación, establece la propiedad Plataforma. ![configurar plataforma](images/building-screen11.png)
-4.    En el proyecto de pruebas unitarias, deshabilita .NET Native. 
+1.  Realiza la compilación para una única plataforma.
+2.  Edita la variable BuildPlatform para usar solo x86. ![configurar ci](images/building-screen10.png) 
+3.  En el paso de la compilación, agrega /p:AppxBundle=Never a la propiedad Argumentos de MSBuild y, a continuación, establece la propiedad Plataforma. ![configurar plataforma](images/building-screen11.png)
+4.  En el proyecto de pruebas unitarias, deshabilita .NET Native. 
 
 Para ello, abre el archivo de proyecto y, en las propiedades del proyecto, establece la propiedad `UseDotNetNativeToolchain` en `false`.
 
@@ -274,16 +276,16 @@ A continuación, debes comprobar que el paso de compilación incluye el parámet
 /p:UapAppxPackageBuildMode=StoreUpload 
 ```
 
-Esto generará el archivo appxupload que se puede enviar a la Tienda.
+Esto generará un archivo appxupload que se puede enviar a la Tienda.
 
 
 #### <a name="configure-automatic-store-submission"></a>Configurar el envío automático a la Tienda
 
-Usa la extensión de Visual Studio Team Services para la Tienda Windows para realizar la integración con la API de la Tienda y enviar el paquete appxupload a la Tienda.
+Usa la extensión de Visual Studio Team Services para la Tienda Windows para realizar la integración con la API de la Tienda y enviar el paquete de la aplicación a la Tienda.
 
 Debes conectar tu cuenta del Centro de desarrollo con Azure Active Directory (AD) y, a continuación, crear una aplicación en tu AD para autenticar las solicitudes. Puedes seguir las instrucciones de la página de extensión para lograrlo. 
 
-Una vez que has configurado la extensión, puedes agregar la tarea de compilación y configurarla con el identificador de tu aplicación y la ubicación del archivo appxupload.
+Una vez que has configurado la extensión, puedes agregar la tarea de compilación y configurarla con el identificador de tu aplicación y la ubicación del archivo .appxupload.
 
 ![configurar el centro de desarrollo](images/building-screen17.png) 
 
@@ -317,7 +319,7 @@ Si deseas distribuir los paquetes appx desde un sitio web como VSTS o HockeyApp,
 
 <span id="certificates-best-practices"/>
 ### <a name="best-practices-for-signing-certificates"></a>Procedimientos recomendados para certificados de firma 
-Visual Studio genera un certificado para cada proyecto. Esto hace que sea difícil mantener una lista protegida de certificados válidos. Si tienes previsto crear varias aplicaciones, puedes crear un único certificado para firmar todas las aplicaciones. A continuación, cada dispositivo que confíe en tu certificado podrá realizar instalaciones de prueba de cualquiera de las aplicaciones sin necesidad de instalar otro certificado. Para obtener más información, consulta [Cómo crear un certificado de firma del paquete de la aplicación.](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)
+Visual Studio genera un certificado para cada proyecto. Esto hace que sea difícil mantener una lista protegida de certificados válidos. Si tienes previsto crear varias aplicaciones, puedes crear un único certificado para firmar todas las aplicaciones. A continuación, cada dispositivo que confíe en tu certificado podrá realizar instalaciones de prueba de cualquiera de las aplicaciones sin necesidad de instalar otro certificado. Para obtener más información, consulta [Crear un certificado para firmar paquetes](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing).
 
 
 #### <a name="create-a-signing-certificate"></a>Crear un certificado de firma
@@ -360,4 +362,4 @@ La forma más sencilla de registrar el certificado es hacer doble clic en el arc
 * [Compilar la aplicación de .NET para Windows](https://www.visualstudio.com/docs/build/get-started/dot-net) 
 * [Empaquetado de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
 * [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
-* [Cómo crear un certificado de firma del paquete de la aplicación](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)
+* [Crear un certificado para firmar paquetes](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)

@@ -4,30 +4,23 @@ Description: "Puedes descargar archivos .tsv que contengan los datos de análisi
 title: "Descargar informes de análisis"
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e8080eb249b684fd1d6427de0f53aa6e2dd1cda9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f18dd0f240644c0a962b73e78c5c4dd9b1bc8682
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="download-analytics-reports"></a>Descargar informes de análisis
 
 
 Puedes descargar archivos que contengan los datos de análisis para que puedas revisar las estadísticas y la información sin conexión.
 
-## <a name="to-download-a-specific-report"></a>Para descargar un informe específico
+Al visualizar los informes de análisis, verás un icono de flecha dentro de cada sección para la que puedes descargar datos. Haz clic en la flecha para generar un archivo .tsv descargable, que puedes abrir en MicrosoftExcel u otro programa que admita archivos de valores separados por tabulaciones (TSV).
 
-1.  En el panel del Centro de desarrollo de Windows, selecciona **Aplicaciones** en el menú de navegación superior.
-2.  En la página **Aplicaciones**, selecciona una de tus aplicaciones.
-3.  En el menú de navegación izquierdo, expande **Análisis**y, a continuación, selecciona uno de los informes disponibles.
-4.  En la página de informe, selecciona **Descargar informe**.
-5.  En la lista desplegable **Seleccionar una aplicación**, comprueba qué aplicación quieres que cubra el informe. Si quieres que el informe cubra todas las aplicaciones, elige **Todas las aplicaciones**.
-6.  En la lista desplegable **Informes disponibles para su descarga**, comprueba qué informe quieres descargar.
-7.  En las listas desplegables **Nivel de agregación** e **Intervalo de fechas**, selecciona las opciones que desees para el informe. Ten en cuenta que las opciones pueden variar según el tipo de informe que selecciones.
-8.  Selecciona el botón **Descargar informes**, guarda el archivo .tsv y, a continuación, abre el archivo en Microsoft Excel u otro programa que admita archivos de valores separados por tabulaciones (TSV).
+También puedes descargar informes para todas las aplicaciones o para una aplicación en concreto, expandiendo **Analizar** en el menú de navegación izquierdo y seleccionando **Descargar informes**. En la lista desplegable **Seleccionar una aplicación**, elige **Todas las aplicaciones** o una aplicación en concreto. Selecciona el informe que deseas descargar y luego elige el nivel de agregación y el intervalo de fechas que desees. Haz clic en el botón **Descargar informes** para generar un archivo .tsv descargable, que puedes abrir en MicrosoftExcel u otro programa que admita archivos de valores separados por tabulaciones (TSV).
 
-## <a name="related-topics"></a>Temas relacionados
-- [Análisis](analytics.md)

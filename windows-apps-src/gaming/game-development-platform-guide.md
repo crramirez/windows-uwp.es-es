@@ -9,14 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, juegos, games, tecnología, technology, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7f6ad043299efa2aae7abdb1f1e0a7e898d40836
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: afbab8d6e38bad7c72d4863f97d90b7eb8ff4cac
+ms.sourcegitcommit: ae20971c4c8276034cd22fd7e10b0e3ddfddf480
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/11/2017
 ---
-
-# <a name="game-technologies-for-universal-windows-platform-uwp-apps"></a>Tecnologías de juegos para las aplicaciones para la Plataforma universal de Windows (UWP)
+# <a name="game-technologies-for-uwp-apps"></a>Tecnologías de juego de aplicaciones para la UWP
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -36,27 +35,27 @@ Además, Windows 10 te ofrece muchas características nuevas que son particularm
 ## <a name="uwp-games-with-c-and-directx"></a>Juegos de UWP con C++ y DirectX
 
 
-Los juegos en tiempo real que requieren un alto rendimiento deben usar las API de DirectX. DirectX es una colección de API nativas para crear juegos y aplicaciones multimedia que requieren un alto rendimiento, como los juegos 3D. Dado que las API de DirectX son nativas, C++ es el único lenguaje compatible con DirectX.
+Los juegos en tiempo real que requieren un alto rendimiento deben usar las API de DirectX. DirectX es una colección de API nativas para crear juegos y aplicaciones multimedia que requieren un alto rendimiento, como los juegos 3D.
 
 ## <a name="development-environment"></a>Entorno de desarrollo
 
 
-Para crear juegos para UWP, necesitarás configurar el entorno de desarrollo instalando una copia de Visual Studio 2015. Visual Studio 2015 te permite crear aplicaciones para UWP y proporciona herramientas para el desarrollo de juegos:
+Para crear juegos para UWP, necesitarás configurar el entorno de desarrollo instalando una copia de Visual Studio2015 y posteriores. Visual Studio 2015 te permite crear aplicaciones para UWP y proporciona herramientas para el desarrollo de juegos:
 
 -   Herramientas de Visual Studio para programación de juegos DX: Visual Studio proporciona herramientas para crear, editar, obtener una vista previa y exportar una imagen, modelo y recursos de sombreador. También puedes usar herramientas para convertir recursos durante la compilación y depurar el código de elementos gráficos de DirectX. Para obtener más información, consulta [Herramientas de Visual Studio para programación de juegos](set-up-visual-studio-for-game-development.md).
 -   Características de diagnóstico de elementos gráficos de Visual Studio: las herramientas de diagnóstico de elementos gráficos ya están disponibles en Windows como una característica opcional. Las herramientas de diagnóstico te permiten depurar elementos gráficos, analizar fotogramas de elementos gráficos y supervisar el uso de la GPU en tiempo real. Para obtener más información, consulta [Usar DirectX en tiempo de ejecución y las características de diagnóstico de elementos gráficos de Visual Studio](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md).
 
-Para obtener más información, consulta Preparar el entorno de programación de juegos de DirectX y la Plataforma universal de Windows.
+Para obtener más información, consulta Preparar la Plataforma universal de Windows y [Programación en DirectX](directx-programming.md).
 
-## <a name="getting-started-with-directx-game-project-templates"></a>Introducción a las plantillas de proyectos de juegos de DirectX
+## <a name="getting-started-with-directx-game-project-templates"></a>Tareas iniciales con las plantillas de proyectos de juegos de DirectX
 
 
 Tras configurar el entorno de desarrollo, puedes usar una de las plantillas de proyectos de DirectX para crear tu juego DirectX de UWP. Visual Studio 2015 incluye tres plantillas para que puedas crear nuevos proyectos DirectX para UWP: la **Aplicación DirectX 11 (universal de Windows)**, la **Aplicación DirectX 12 (universal de Windows)** y la **Aplicación XAML y DirectX 11 (universal de Windows)**. Para obtener más información, consulta [Crear un proyecto de juego de Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
 
-## <a name="windows-10-apis"></a>API de Windows 10
+## <a name="windows-10-apis"></a>API de Windows10
 
 
-Windows 10 proporciona una amplia colección de API que son útiles para el desarrollo de juegos. Hay API para prácticamente todos los aspectos de un juego, incluidos los elementos gráficos 3D, elementos gráficos 2D, audio, entrada, recursos de texto, interfaz de usuario y funciones de red.
+Windows10 proporciona una amplia colección de API que son útiles para el desarrollo de juegos. Hay API para prácticamente todos los aspectos de un juego, incluidos los elementos gráficos 3D, elementos gráficos 2D, audio, entrada, recursos de texto, interfaz de usuario y funciones de red.
 
 Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juegos tienen que usar todas estas API. Por ejemplo, algunos juegos mostrarán únicamente elementos gráficos 3D y solo usarán Direct3D, otros juegos mostrarán únicamente elementos gráficos 2D y solo usarán Direct2D y, además, existen otros juegos pueden usar ambos. El siguiente diagrama muestra las API relacionadas con el desarrollo de juegos agrupadas por tipo de funcionalidad.
 
@@ -80,7 +79,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left">Direct3D 12</td>
     <td align="left"><p>Direct3D 12 presenta la siguiente versión de Direct3D, la API de elementos gráficos 3D en el corazón de DirectX. Esta versión de Direct3D se ha diseñado para ser más rápida y eficiente que las versiones anteriores de Direct3D. La mayor velocidad de Direct3D 12 se ha conseguido gracias a que es de menor nivel y requiere que tú mismo administres los recursos de elementos gráficos, por lo que deberás tener una mayor experiencia en la programación de elementos gráficos para aprovechar esta velocidad.</p>
     <p><strong>Cuándo usarla</strong></p>
-    <p>Usa Direct3D 12 cuando necesites maximizar el rendimiento de tu juego y el juego esté limitado por la CPU.</p>
+    <p>Usa Direct3D12 cuando necesites maximizar el rendimiento de tu juego y el juego esté limitado por la CPU.</p>
     <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [Direct3d 12](https://msdn.microsoft.com/library/windows/desktop/dn899121).</p></td>
     </tr>
@@ -88,7 +87,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left">Direct3D 11</td>
     <td align="left"><p>Direct3D 11 es la versión anterior de Direct3D y te permite crear elementos gráficos 3D mediante un mayor nivel de abstracción de hardware que D3D 12.</p>
     <p><strong>Cuándo usarla</strong></p>
-    <p>Usa Direct3D 11 si ya tienes código de Direct3D 11 existente, tu juego no está limitado por la CPU o quieres disfrutar de las ventajas de que recursos se administren automáticamente.</p>
+    <p>Usa Direct3D11 si ya tienes código de Direct3D11 existente, tu juego no está limitado por la CPU o quieres disfrutar de las ventajas de que recursos se administren automáticamente.</p>
     <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080).</p></td>
     </tr>
@@ -211,7 +210,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Si el juego debe ser compatible con mandos de juegos y no usa el código existente de XInput, o si necesitas usar alguna de las ventajas enumeradas anteriormente, debes usar Windows.Gaming.Input.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la documentación de [<strong>Windows.Gaming.Input</strong>](https://msdn.microsoft.com/library/windows/apps/dn707817).</p></td>
+    <p>Consulta la documentación [<strong>Windows.Gaming.Input</strong>](https://msdn.microsoft.com/library/windows/apps/dn707817).</p></td>
     </tr>
     <tr class="odd">
     <td align="left">Windows.UI.Core.CoreWindow</td>
@@ -288,7 +287,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
 
      
 
--   Utilidades auxiliares: bibliotecas que se basan en las API de Windows 10.
+-   Utilidades auxiliares: bibliotecas que se basan en las API de Windows10.
 
     <table>
     <colgroup>
@@ -304,7 +303,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <tbody>
     <tr class="odd">
     <td align="left">Kit de herramientas de DirectX</td>
-    <td align="left"><p>El kit de herramientas de DirectX (DirectXTK) es una colección de clases auxiliares para escribir código de DirectX 11.x en C++.</p>
+    <td align="left"><p>El kit de herramientas de DirectX (DirectXTK) es una colección de clases auxiliares para escribir código de DirectX11.x en C++.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa el kit de herramientas de DirectX si eres un desarrollador de C++ que busca un sustituto moderno del código de utilidades de D3DX heredado o eres un desarrollador de XNA Game Studio que quiere migrar al C++ nativo.</p>
     <p><strong>Para más información</strong></p>
@@ -325,10 +324,13 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
 
 ## <a name="xbox-live-services"></a>Servicios de Xbox Live
 
+El [Programa de creadores de XboxLive](https://developer.microsoft.com/games/xbox/xboxlive/creator) permite a cualquier desarrollador integrar XboxLive en su juego de UWP y publicarlo en XboxOne y Windows10. Integra experiencias de redes sociales de Xbox Live, como el inicio de sesión, la presencia, los marcadores y mucho más en tu juego, con un tiempo de desarrollo mínimo. Las funciones de redes sociales de Xbox Live están diseñadas para hacer crecer tu audiencia de forma orgánica, difundiendo el conocimiento a más de 55 millones de jugadores activos.
 
-El conjunto de características de Xbox Live (juego cruzado con Xbox, logros, opciones de puntuación y mucho más) llega a Windows 10. Pronto podrás trabajar con ID@Xbox para incluir Live en tus juegos de UWP. En el futuro, también te ayudaremos a enviar tus juegos de la plataforma de aplicación universal en Xbox One. Para obtener más información, consulta la página de [ID@Xbox](http://www.xbox.com/developers/id).
+Si quieres obtener acceso a todavía más funcionalidades de Xbox Live, marketing dedicado y soporte técnico de desarrollo, así como la posibilidad de aparecer destacado en la Tienda principal de Xbox One, presenta la solicitud para el programa [ID@Xbox](http://www.xbox.com/developers/id). Para ver qué funciones están disponibles para el Programa de creadores de Xbox Live y el programa ID@Xbox, consulta la [Tabla de funciones](../xbox-live/developer-program-overview.md#feature-table).
 
-##  <a name="alternatives-to-writing-games-with-directx-and-uwp"></a>Alternativas a la escritura de juegos con DirectX y UWP
+Para obtener más información, consulta [Agregar Xbox Live a tu juego](e2e.md#adding-xbox-live-to-your-game).
+
+##  <a name="alternatives-to-writing-games-with-directx-and-uwp"></a>Alternativas a escribir juegos con DirectX y UWP
 
 
 ### <a name="uwp-games-without-directx"></a>Juegos para UWP sin DirectX
@@ -339,24 +341,23 @@ Es posible escribir juegos más sencillos con requisitos mínimos de rendimiento
 
 Como alternativa a escribir tu propio motor de juego mediante las API de desarrollo de juegos de Windows, tienes disponibles muchos otros motores de juego de alta calidad que se basan en las API de desarrollo de juegos de Windows, para que puedas desarrollar juegos en plataformas de Windows. Al considerar a un motor de juego o una biblioteca, tienes varias opciones:
 
--   Motor de juego completo: un motor de juego completo encapsula la mayoría o todas las API de Windows 10 que necesitarías para escribir un motor de juego desde cero, como los elementos gráficos, audio, entrada y redes. Los motores de juegos completos también pueden incluir funciones de la lógica de juego, como la inteligencia artificial y búsqueda de rutas.
--   Motor de elementos gráficos: los motores gráficos encapsulan las API de gráficos de Windows 10, administran los recursos gráficos y admiten diversos formatos de modelos y mundo.
--   Motor de audio: los motores de audio encapsulan las API de audio de Windows 10, administran los recursos de audio y ofrecen procesamiento de audio avanzado y efectos.
--   Motor de red: los motores de red encapsulan las API para redes de Windows 10 para agregar funciones de multijugador basadas en servidor o entre pares a tu juego, y pueden incluir las funciones de red avanzadas para incorporar a un elevado número de jugadores.
+-   Motor de juego completo: un motor de juego completo encapsula la mayoría o todas las API de Windows10 que necesitarías para escribir un motor de juego desde cero, como los elementos gráficos, audio, entrada y redes. Los motores de juegos completos también pueden incluir funciones de la lógica de juego, como la inteligencia artificial y búsqueda de rutas.
+-   Motor de elementos gráficos: los motores gráficos encapsulan las API de gráficos de Windows10, administran los recursos gráficos y admiten diversos formatos de modelos y mundo.
+-   Motor de audio: los motores de audio encapsulan las API de audio de Windows10, administran los recursos de audio y ofrecen procesamiento de audio avanzado y efectos.
+-   Motor de red: los motores de red encapsulan las API para redes de Windows10 para agregar funciones de multijugador basadas en servidor o entre pares a tu juego, y pueden incluir las funciones de red avanzadas para incorporar a un elevado número de jugadores.
 -   Inteligencia artificial y motor de búsqueda de rutas: los motores de inteligencia artificial y búsqueda de rutas ofrece un marco de trabajo para controlar el comportamiento de los agentes de tu juego
 -   Motores de propósito especial: hay diversos motores adicionales para controlar casi cualquier tarea relacionada con el desarrollo de juegos que pueda surgir, como la creación de árboles de diálogo y los sistemas de inventario.
 
 ## <a name="submitting-a-game-to-the-store"></a>Envío de un juego a la tienda
 
 
-Cuando estés listo para publicar tu juego, tendrás que crear una cuenta de desarrollador y enviar tu juego a la Tienda Windows.
+Cuando estés listo para publicar tu juego, tendrás que crear una cuenta de desarrollador y enviar tu juego a la TiendaWindows.
 
-Para obtener información sobre el envío de tu juego a la Tienda Windows, consulta <https://dev.windows.com/publish>.
-
- 
+Para obtener información sobre el envío de tu juego a la TiendaWindows, consulta [Envío y publicación del juego](e2e.md#submitting-and-publishing-your-game).
 
  
 
+ 
 
 
 

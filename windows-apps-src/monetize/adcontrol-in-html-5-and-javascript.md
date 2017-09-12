@@ -1,34 +1,34 @@
 ---
 author: mcleanbyron
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
-description: "Aprende a usar la clase AdControl para mostrar anuncios en banners en aplicaciones JavaScript y HTML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1."
+description: Aprende a usar la clase AdControl para mostrar anuncios en banner en aplicaciones JavaScript y HTML para Windows10 (UWP), Windows8.1 o Windows Phone8.1.
 title: AdControl en HTML 5 y JavaScript
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP, anuncios, publicidad, AdControl, JavaScript, HTML
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cda74aaf6301f0cc04c5a9ae5c2aad5cf43d8b7e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows 10, UWP, anuncios, publicidad, AdControl, control de anuncios, javaScript, HTML
+ms.openlocfilehash: 44417516d773ea4faf103f6d4cdaf0bc8f290921
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/27/2017
 ---
-
 # <a name="adcontrol-in-html-5-and-javascript"></a>AdControl en HTML 5 y JavaScript
 
-En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para mostrar anuncios en banners en una aplicación JavaScript o HTML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1. En este tutorial no se usa **AdMediatorControl** ni la mediación de anuncios.
+En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para mostrar anuncios en banner en una aplicación JavaScript o HTML para Windows10 (UWP), Windows8.1 o Windows Phone8.1.
 
-Para obtener un ejemplo de proyecto completo que muestre cómo agregar anuncios en banner a una aplicación JavaScript o HTML, consulta los [ejemplos de publicidad en GitHub](http://aka.ms/githubads).
+Para obtener un proyecto de muestra completo que explica cómo agregar anuncios de banner a una aplicación JavaScript o HTML, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 
-* En el caso de las aplicaciones para UWP, instala el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) con Visual Studio 2015.
-* En el caso de las aplicaciones de Windows 8.1 o Windows Phone 8.1, instala [el SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) con Visual Studio 2015 o Visual Studio 2013.
+* Para aplicaciones para UWP: instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) con Visual Studio2015 o una versión posterior.
+* En el caso de las aplicaciones de Windows8.1 o Windows Phone 8.1, instala [el SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) con Visual Studio 2015 o Visual Studio 2013.
 
-> **Nota**&nbsp;&nbsp;Si has instalado Windows 10 Anniversary SDK Preview, compilación 14295 o una versión posterior con Visual Studio 2015, también debes instalar la biblioteca WinJS. Antes, esta biblioteca estaba incluida en versiones anteriores de Windows SDK para Windows 10, pero, desde la compilación 14295 de Windows 10 Anniversary SDK Preview, debe instalarse por separado. Para instalar WinJS, consulta cómo [obtener WinJS](http://try.buildwinjs.com/download/GetWinJS/).
+> [!NOTE]
+> Si vas a agregar anuncios de banners a una aplicación para UWP y has instalado el SDK de Windows 10 versión 10.0.14393 (Actualización de aniversario) o una versión posterior del Windows SDK, también debes instalar la biblioteca WinJS. Antes, esta biblioteca estaba incluida en versiones anteriores de Windows SDK para Windows 10, pero desde la versión 10.0.14393 del SDK de Windows 10 (Actualización de aniversario), debe instalarse por separado. Para instalar WinJS, consulta cómo [obtener WinJS](http://try.buildwinjs.com/download/GetWinJS/).
 
 ## <a name="code-development"></a>Programación de código
 
@@ -44,11 +44,9 @@ Para obtener un ejemplo de proyecto completo que muestre cómo agregar anuncios 
 
     -   Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Microsoft Advertising para Windows 8.1 (JS) nativo**.
 
-    -   Para un proyecto de Windows 8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **SDK de Microsoft Advertising para Windows Phone 8.1 (JS) nativo**.
+    -   Para un proyecto de Windows Phone8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y después selecciona la casilla junto a **SDK de Microsoft Advertising para Windows Phone 8.1 (JS) nativo**.
 
     ![javascriptaddreference](images/13-f7f6d6a6-161e-4f17-995d-1236d0b5d9f2.png)
-
-    > **Nota**&nbsp;&nbsp;Esta imagen corresponde a la creación de un proyecto para UWP para Windows 10 en Visual Studio 2015. Si estás creando una aplicación de Windows 8.1 o Windows Phone 8.1, o si usas Visual Studio 2013, la pantalla tendrá un aspecto diferente.
 
 5.  En el **Administrador de referencias**, haz clic en Aceptar.
 
@@ -56,54 +54,40 @@ Para obtener un ejemplo de proyecto completo que muestre cómo agregar anuncios 
 
 7.  En la sección **&lt;head&gt;**, después de las referencias de JavaScript del proyecto de default.css y main.js, agrega la referencia a ad.js.
 
-  En un proyecto de UWP, agrega el código siguiente.
+    En un proyecto de UWP, agrega el código siguiente.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` html
-  <!-- Microsoft advertising required references -->
-  <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
-  ```
+    ``` HTML
+    <!-- Advertising required references -->
+    <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
+    ```
 
-  En un proyecto de Windows 8.1 o Windows Phone 8.1, agrega el siguiente código.
+    En un proyecto de Windows8.1 o Windows Phone8.1, agrega el siguiente código.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` html
-  <!-- Microsoft advertising required references -->
-  <script src="/MSAdvertisingJS/ads/ad.js"></script>
-  ```
+    ``` HTML
+    <!-- Advertising required references -->
+    <script src="/MSAdvertisingJS/ads/ad.js"></script>
+    ```
 
-  <span/>
-  >**Nota**&nbsp;&nbsp;Esta línea debe colocarse en la sección **&lt;head&gt;** después de incluir main.js. De lo contrario, se producirá un error al compilar el proyecto. Si el proyecto está destinado a Windows 8.1 o Windows Phone 8.1, el archivo HTML predeterminado del proyecto se denomina default.html en lugar de index.html, y el archivo de JavaScript predeterminado del proyecto se denomina default.js en lugar de main.js.
+    > [!NOTE]
+    > Esta línea debe colocarse en la sección **&lt;head&gt;** después de incluir main.js. De lo contrario, se producirá un error al compilar el proyecto. Si el proyecto está destinado a Windows 8.1 o Windows Phone 8.1, el archivo HTML predeterminado del proyecto se denomina default.html en lugar de index.html, y el archivo de JavaScript predeterminado del proyecto se denomina default.js en lugar de main.js.
 
-8.  Modifica la sección **&lt;body&gt;** en el archivo default.html (u otro archivo html adecuado para el proyecto) para que incluya el elemento div para **AdControl**. Asigna las propiedades **applicationId** y **adUnitId** de **AdControl** a los valores de prueba proporcionados en los [Valores del modo de prueba](test-mode-values.md) y ajusta el alto y ancho del control para que tenga uno de los [Tamaños de anuncios admitidos para anuncios de banner](supported-ad-sizes-for-banner-ads.md).
+8.  Modifica la sección **&lt;body&gt;** en el archivo default.html (u otro archivo html adecuado para el proyecto) para que incluya el elemento div para **AdControl**. Asigna las propiedades **applicationId** y **adUnitId** de **AdControl** a los valores de prueba proporcionados en [Valores del modo de prueba](test-mode-values.md). También ajusta el alto y el ancho del control para que se corresponda con uno de los [Tamaños de anuncios admitidos para anuncios de banner](supported-ad-sizes-for-banner-ads.md).
 
-  > **Nota**&nbsp;&nbsp;Deberás reemplazar los valores de **applicationId** y **adUnitId** de prueba por valores dinámicos antes de enviar la aplicación.
+    > [!NOTE]
+    > Cada **AdControl** tiene una *unidad de anuncio* correspondiente que se usa por nuestros servicios para proporcionar anuncios al control y cada unidad de anuncio consta de un *Id. de unidad de anuncio* e *Id. de aplicación*. En estos pasos, asignas los valores del Id. de la unidad de anuncios de prueba y del Id. de aplicación a tu control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la Tienda, debes [reemplazar estos valores de prueba con valores dinámicos](#release) desde el Centro de desarrollo de Windows.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` html
-  <div id="myAd" style="position: absolute; top: 50px; left: 0px; width: 300px; height: 250px; z-index: 1"
+    ``` HTML
+    <div id="myAd" style="position: absolute; top: 50px; left: 0px; width: 300px; height: 250px; z-index: 1"
         data-win-control="MicrosoftNSJS.Advertising.AdControl"
-        data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: '10865270'}">
-  </div>
-  ```
+        data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: 'test'}">
+    </div>
+    ```
 
 9.  Compila y ejecuta la aplicación para verla con un anuncio.
 
-## <a name="release-your-app-with-live-ads-using-windows-dev-center"></a>Publicar la aplicación con anuncios dinámicos mediante el Centro de desarrollo de Windows
+El siguiente ejemplo muestra el archivo index.html completo para una aplicación simple para UWP.
 
-
-1.  En el panel del Centro de desarrollo, ve a la página **Monetización** &gt; **Monetizar con anuncios** correspondiente a la aplicación y [crea una unidad de Microsoft Advertising independiente](../publish/monetize-with-ads.md). Especifica el tipo de unidad de anuncio **Banner**. Anota el identificador de unidad de anuncio y el identificador de la aplicación.
-
-2.  En el código, reemplaza los valores de unidades de anuncio de prueba (**applicationId** y **adUnitId**) con los valores dinámicos generados en el Centro de desarrollo.
-
-3.  [Envía la aplicación](../publish/app-submissions.md) a la Tienda desde el panel del Centro de desarrollo.
-
-4.  Revisa los [informes de rendimiento de la publicidad](../publish/advertising-performance-report.md) en el panel del Centro de desarrollo.
-
-## <a name="complete-indexhtml-for-a-sample-uwp-project"></a>Completar index.html para un proyecto de UWP de ejemplo
-
-> [!div class="tabbedCodeSnippets"]
-``` html
+``` HTML
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,17 +106,35 @@ Para obtener un ejemplo de proyecto completo que muestre cómo agregar anuncios 
 <body>
     <div id="myAd" style="position: absolute; top: 50px; left: 0px; width: 300px; height: 250px; z-index: 1"
       data-win-control="MicrosoftNSJS.Advertising.AdControl"
-      data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: '10865270'}">
+      data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: 'test'}">
     </div>
     <p>Content goes here</p>
 </body>
 </html>
 ```
 
+<span id="release" />
+## <a name="release-your-app-with-live-ads-using-windows-dev-center"></a>Publicar la aplicación con anuncios dinámicos mediante el Centro de desarrollo de Windows
+
+1.  En el panel del Centro de desarrollo, ve a la página [Monetizar con anuncios](../publish/monetize-with-ads.md) correspondiente a la aplicación y [crea una unidad de anuncios](../monetize/set-up-ad-units-in-your-app.md). Especifica el tipo de unidad de anuncio **Banner**. Anota el id. de la unidad de anuncios y el id. de la aplicación.
+
+2. Si la aplicación es una aplicación para UWP para Windows10, tienes la opción de habilitar la mediación de anuncios para **AdControl** mediante la configuración de las opciones en la sección [Mediación de anuncios](../publish/monetize-with-ads.md#mediation) de la página [Monetizar con anuncios](../publish/monetize-with-ads.md). La mediación de anuncios te permite maximizar las capacidades de ingresos por anuncios y de promoción de la aplicación al mostrar anuncios de varias redes de anuncios, incluidos los anuncios de otras redes de anuncios de pago, como Taboola y Smaato, y anuncios de campañas de promoción de aplicaciones de Microsoft.
+
+3.  En el código, reemplaza los valores de unidades de anuncio de prueba (**applicationId** y **adUnitId**) con los valores dinámicos generados en el Centro de desarrollo.
+
+4.  [Envía la aplicación](../publish/app-submissions.md) a la Tienda desde el panel del Centro de desarrollo.
+
+5.  Revisa los [informes de rendimiento de la publicidad](../publish/advertising-performance-report.md) en el panel del Centro de desarrollo.             
+
+<span id="manage" />
+## <a name="manage-ad-units-for-multiple-ad-controls-in-your-app"></a>Administrar unidades de anuncios para varios controles de anuncios en tu aplicación
+
+Puedes usar varios objetos **AdControl** en una sola aplicación (por ejemplo, cada página de la aplicación puede hospedar un objeto **AdControl** diferente). En este escenario, te recomendamos que asignes una unidad de anuncio diferente para cada control. Con unidades de anuncio diferentes para cada control podrás, por separado, [configurar las opciones de mediación](../publish/monetize-with-ads.md#mediation) y obtener discretos [datos de informes](../publish/advertising-performance-report.md) para cada control. Esto también permite a nuestros servicios optimizar mejor los anuncios que publicamos en tu aplicación.
+
+> [!IMPORTANT]
+> Puedes usar cada unidad de anuncios solo en una aplicación. Si usas un unidad de anuncios en más de una aplicación, no se publicarán anuncios para esa unidad de anuncios.
+
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
- 
-
- 
-
+* [Configurar unidades de anuncios para la aplicación](../monetize/set-up-ad-units-in-your-app.md)

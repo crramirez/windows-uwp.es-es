@@ -6,14 +6,16 @@ ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
 label: Controls by function
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 7082b8f81f45d5035cbe2d9b4bf482d0c985bb8f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp
+ms.openlocfilehash: 32e2ba7bc3aebf2d1fae80632f0ea663a203d73c
+ms.sourcegitcommit: 00c3f5a1208bd0125f5b275f972cf2a82d8eb9b6
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/13/2017
 ---
 # <a name="controls-by-function"></a>Controles por función
 
@@ -21,7 +23,7 @@ translationtype: HT
 
 El marco de trabajo de la interfaz de usuario de XAML para Windows proporciona una biblioteca amplia de controles compatibles con el desarrollo de la interfaz de usuario. Algunos de estos controles tienen una representación visual y otros funcionan como contenedores de otros controles o de contenido, como imágenes y multimedia. 
 
-Puedes ver muchos de los controles de interfaz de usuario de Windows si descargas la [**Muestra de conceptos básicos de la interfaz de usuario XAML**](http://go.microsoft.com/fwlink/p/?LinkId=619992). 
+Puedes ver muchos de los controles de interfaz de usuario de Windows si descargas la [Muestra de conceptos básicos de la interfaz de usuario XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992). 
 
 Aquí se muestra una lista por función de los controles de XAML comunes que puedes usar en tu aplicación. 
 
@@ -140,7 +142,7 @@ Referencia: [FlipView](https://msdn.microsoft.com/library/windows/apps/xaml/wind
 Diseño y procedimientos: [Guía de control de invertir vista](flipview.md) 
 
 ### <a name="grid-view"></a>Vista de cuadrícula
-Control que presenta una colección de elementos en filas y columnas por las que podemos desplazarnos horizontalmente.
+Control que presenta una colección de elementos en filas y columnas por las que es posible desplazarse verticalmente.
 
 ```xaml
 <GridView x:Name="gridView1" SelectionChanged="GridView_SelectionChanged">
@@ -354,7 +356,7 @@ Control de contenedor que dibuja un borde, fondo o ambos alrededor de otro objet
         Height="108" Width="64" 
         Padding="8" CornerRadius="4">
     <Canvas>
-        <Rectangle Fill="Yellow"/>
+        <Rectangle Fill="Orange"/>
         <Rectangle Fill="Green" Margin="0,44"/>
     </Canvas>
 </Border>
@@ -372,7 +374,7 @@ Panel de diseño que admite el posicionamiento absoluto de elementos secundarios
     <Rectangle Fill="Red"/>
     <Rectangle Fill="Blue" Canvas.Left="20" Canvas.Top="20"/>
     <Rectangle Fill="Green" Canvas.Left="40" Canvas.Top="40"/>
-    <Rectangle Fill="Yellow" Canvas.Left="60" Canvas.Top="60"/>
+    <Rectangle Fill="Orange" Canvas.Left="60" Canvas.Top="60"/>
 </Canvas>
 ```
 
@@ -396,7 +398,7 @@ Un panel de diseño que permite reorganizar los elementos secundarios en filas y
     <Rectangle Fill="Red"/>
     <Rectangle Fill="Blue" Grid.Row="1"/>
     <Rectangle Fill="Green" Grid.Column="1"/>
-    <Rectangle Fill="Yellow" Grid.Row="1" Grid.Column="1"/>
+    <Rectangle Fill="Orange" Grid.Row="1" Grid.Column="1"/>
 </Grid>
 ```
 
@@ -452,7 +454,7 @@ Panel de diseño en el que los elementos secundarios se organizan en una sola l�
     <Rectangle Fill="Red"/>
     <Rectangle Fill="Blue"/>
     <Rectangle Fill="Green"/>
-    <Rectangle Fill="Yellow"/>
+    <Rectangle Fill="Orange"/>
 </StackPanel>
 ```
 
@@ -470,7 +472,7 @@ Un panel de diseño que permite reorganizar los elementos secundarios en filas y
                VariableSizedWrapGrid.RowSpan="2"/>
     <Rectangle Fill="Green" Width="80" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
-    <Rectangle Fill="Yellow" Height="80" Width="80" 
+    <Rectangle Fill="Orange" Height="80" Width="80" 
                VariableSizedWrapGrid.RowSpan="2" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
 </VariableSizedWrapGrid>

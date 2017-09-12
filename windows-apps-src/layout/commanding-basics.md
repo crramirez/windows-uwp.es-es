@@ -7,14 +7,16 @@ label: Command design basics
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: a9e7cda7794b3463ffa567bcf36ebec2d2d02687
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 868221cce04688ea2f7ab50e3062579932fbbd80
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>Conceptos básicos de diseño de los comandos para las aplicaciones para UWP
 
@@ -22,8 +24,9 @@ translationtype: HT
 
 En una aplicación de la Plataforma universal de Windows (UWP), los *elementos de comandos* son los elementos interactivos de la interfaz de usuario que permiten al usuario realizar acciones como enviar un correo electrónico, eliminar un elemento o enviar un formulario. En este artículo se describen los elementos de comandos (como los botones y las casillas), las interacciones que admiten y las superficies de comandos (como las barras de comandos y los menús contextuales) para hospedarlos.
 
-## <a name="provide-the-right-type-of-interactions"></a>Proporcionar el tipo correcto de interacciones
+> **API importantes**: [Interfaz ICommand](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Input.ICommand), [botón clase](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Button), [Clase CommandBar](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.commandbar), [Clase MenuFlyout](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.MenuFlyout)
 
+## <a name="provide-the-right-type-of-interactions"></a>Proporcionar el tipo correcto de interacciones
 
 Al diseñar una interfaz de comandos, la decisión más importante es elegir lo que los usuarios deberían poder hacer. Por ejemplo, si vas a crear una aplicación de fotos, el usuario necesitará herramientas para editar sus fotografías. Sin embargo, si vas a crear una aplicación de redes sociales que muestra fotos, puede que la edición de imágenes no sea una prioridad y, por lo tanto, se pueden omitir las herramientas de edición para ahorrar espacio. Decide lo que quieres que los usuarios lleven a cabo y proporciónales las herramientas para ayudarles a hacerlo.
 

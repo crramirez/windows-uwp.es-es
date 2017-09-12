@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 8c41f85c7d49d9019a2dc3a94242271a6fa9eb9a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: bc0cfc468613429d7989c9c0d93bd98246c0195b
+ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/26/2017
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Procesar fotogramas multimedia con MediaFrameReader
 
@@ -155,6 +157,47 @@ La clase auxiliar **FrameRenderer** implementa los métodos siguientes.
 > Para manipular píxeles en imágenes **SoftwareBitmap**, debes acceder a un búfer de memoria nativo. Para ello, debes usar la interfaz COM IMemoryBufferByteAccess incluida en la siguiente lista de códigos y actualizar las propiedades del proyecto para permitir la compilación del código no seguro. Para obtener más información, consulta [Creación de imágenes](imaging.md).
 
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/FrameRenderer.cs#SnippetFrameRenderer)]
+
+## <a name="use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources"></a>Usa MultiSourceMediaFrameReader para obtener fotogramas correlacionados de tiempo de varios orígenes.
+A partir de Windows 10, versión 1607, puedes usar [**MultiSourceMediaFrameReader**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.multisourcemediaframereader) para recibir fotogramas correlacionados de tiempo de varios orígenes. Con esta API es más fácil realizar el procesamiento, que requiere fotogramas desde varias fuentes y que se han tomado cercanas en el tiempo, como el uso de la clase [**DepthCorrelatedCoordinateMapper**](https://docs.microsoft.com/en-us/uwp/api/windows.media.devices.core.depthcorrelatedcoordinatemapper). Una limitación del uso de este nuevo método es que solo los eventos de llegada de fotogramas se generan a la velocidad de la fuente más lenta de captura. Los fotogramas adicionales de fuentes más rápidas se eliminarán. Además, dado que el sistema espera que los fotogramas lleguen desde orígenes diferentes a diferentes velocidades, no reconoce automáticamente si un origen ha dejado de generar fotogramas por completo. El código de ejemplo en esta sección muestra cómo usar un evento para crear tu propia lógica de tiempo de espera, que se invoca si los fotogramas correlacionados no llegan dentro del límite de tiempo definido por la aplicación.
+
+Los pasos para usar [**MultiSourceMediaFrameReader**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.multisourcemediaframereader) son similares a los pasos para usar [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) descrito anteriormente en este artículo. En este ejemplo se usa una fuente de color y un origen de profundidad. Declara algunas variables de cadena para almacenar los identificadores del origen de fotogramas multimedia que se usan para seleccionar fotogramas de cualquier fuente. A continuación, declara una clase [**ManualResetEventSlim**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim?view=netframework-4.7), una [**CancellationTokenSource**](https://msdn.microsoft.com/library/system.threading.cancellationtokensource.aspx)y una [**EventHandler**](https://msdn.microsoft.com/library/system.eventhandler.aspx) que se usarán para implementar la lógica de tiempo de espera para el ejemplo. 
+
+[!code-cs[MultiFrameDeclarations](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameDeclarations)]
+
+Con las técnicas descritas anteriormente en este artículo, realiza una consulta para la clase [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) que incluya los orígenes de profundidad y color necesarios para este escenario de ejemplo. Después de seleccionar el grupo de orígenes de fotogramas deseado obtén la clase [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) para cada origen de fotograma.
+
+[!code-cs[SelectColorAndDepth](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetSelectColorAndDepth)]
+
+Crea e inicializa un objeto de **MediaCapture**, pasando el grupo de orígenes de fotogramas seleccionado en la configuración de inicialización.
+
+[!code-cs[MultiFrameInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameInitMediaCapture)]
+
+Después de inicializar el objeto de **MediaCapture**, recupera los objetos de [**MediaFrameSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSource) para las cámaras de profundidad y de color. Almacena el ID. para cada fuente para poder seleccionar el fotograma de llegada para el origen correspondiente.
+
+[!code-cs[GetColorAndDepthSource](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetColorAndDepthSource)]
+
+Crea e inicializa la clase **MultiSourceMediaFrameReader** llamando a [**CreateMultiSourceFrameReaderAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture#Windows_Media_Capture_MediaCapture_CreateMultiSourceFrameReaderAsync_Windows_Foundation_Collections_IIterable_Windows_Media_Capture_Frames_MediaFrameSource__) y pasando una matriz de orígenes de fotogramas que usará el lector. Registra un controlador de eventos para el evento [**FrameArrived**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader#Windows_Media_Capture_Frames_MultiSourceMediaFrameReader_FrameArrived). Este ejemplo crea una instancia de la clase auxiliar **FrameRenderer**, descrita anteriormente en este artículo, para representar fotogramas de un control de **imagen**. Inicia el lector de fotogramas llamando a [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader#Windows_Media_Capture_Frames_MultiSourceMediaFrameReader_StartAsync).
+
+Registra un controlador de eventos para el evento **CorellationFailed**, explicado anteriormente en el ejemplo. Señalaremos este evento si uno de los orígenes de fotogramas multimedia utilizados deja de producir fotogramas. Por último, llama a [**Task.Run**](https://msdn.microsoft.com/en-us/library/hh195051.aspx) para llamar al método auxiliar de tiempo de espera, **NotifyAboutCorrelationFailure**, en un subproceso independiente. La implementación de este método se muestra más adelante en este artículo.
+
+[!code-cs[InitMultiFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMultiFrameReader)]
+
+El evento **FrameArrived** se genera siempre que esté disponible un nuevo marco de todos los orígenes de fotogramas multimedia que administran con la clase **MultiSourceMediaFrameReader**. Esto significa que se generará el evento con el ritmo del origen del contenido multimedia más lento. Si un origen produce varios fotogramas en el tiempo en el que una fuente más lenta genera solo uno, estos fotogramas adicionales generadas por el origen rápido se eliminarán. 
+
+Obtén la clase [**MultiSourceMediaFrameReference**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereference) asociada al evento mediante una llamada a [**TryAcquireLatestFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader#Windows_Media_Capture_Frames_MultiSourceMediaFrameReader_TryAcquireLatestFrame). Obtén la clase **MediaFrameReference** asociada a cada origen de fotogramas multimedia llamando a [**TryGetFrameReferenceBySourceId**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereference#Windows_Media_Capture_Frames_MultiSourceMediaFrameReference_TryGetFrameReferenceBySourceId_System_String_) y pasando las cadenas de identificador almacenadas al iniciar el lector de fotogramas.
+
+Llama al método [**Set**](https://msdn.microsoft.com/library/system.threading.manualreseteventslim.set.aspx) del objeto **ManualResetEventSlim** para indicar que los fotogramas han llegado. Comprobaremos este evento en el método **NotifyCorrelationFailure**, que se ejecuta en un subproceso independiente. 
+
+Por último, realiza cualquier tipo de proceso en los fotogramas multimedia correlacionados en el tiempo. Este ejemplo muestra simplemente el fotograma desde el origen de profundidad.
+
+[!code-cs[MultiFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameArrived)]
+
+El método auxiliar **NotifyCorrelationFailure** se ejecutó en un subproceso independiente después de iniciar el lector de fotogramas. En este método, comprueba si el evento de fotograma recibido se ha señalado. Recuerda que en el controlador **FrameArrived** establecemos este evento siempre que llega un conjunto de fotogramas correlacionados. Si el evento no ha sido señalado para la aplicación con un periodo de tiempo predefinido (cinco segundos suele ser un valor razonable) y no se ha cancelado la tarea con **CancellationToken**, es probable que uno de los orígenes de fotogramas multimedia haya dejado de leer los fotogramas. En este caso, es normal que quieras apagar el lector de fotogramas, así que genera el evento definido para la aplicación **CorrelationFailed**. En el controlador para este evento, puedes detener el lector de fotogramas y limpiar sus recursos asociados como se ha mostrado anteriormente en este artículo.
+
+[!code-cs[NotifyCorrelationFailure](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetNotifyCorrelationFailure)]
+
+[!code-cs[CorrelationFailure](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCorrelationFailure)]
 
 ## <a name="related-topics"></a>Temas relacionados
 

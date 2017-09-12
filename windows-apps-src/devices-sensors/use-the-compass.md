@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
 title: "Usar la brújula"
 description: "Aprende a usar la brújula para determinar el rumbo actual."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 04634214aaa32a1beda05b5b127ccc2e0e141bad
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b077d0a38b4146aa84d82c63dbcd3e705c7cd914
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="use-the-compass"></a>Usar la brújula
 
@@ -21,6 +23,10 @@ translationtype: HT
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Brújula**](https://msdn.microsoft.com/library/windows/apps/BR225705)
+
+**Muestra**
+
+-   Para ver una implementación más completa, consulta la [muestra de brújula](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).
 
 \[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
 
@@ -164,7 +170,7 @@ _compass.ReadingChanged += new TypedEventHandler<Compass,
 CompassReadingChangedEventArgs>(ReadingChanged);
 ```
 
-Estos nuevos valores se escriben en los bloques de texto que se encuentran en el código XAML del proyecto.
+Estos nuevos valores se escriben en los TextBlocks que se encuentran en el código XAML del proyecto.
 
 ```xml
  <TextBlock HorizontalAlignment="Left" Height="22" Margin="8,18,0,0" TextWrapping="Wrap" Text="Magnetic Heading:" VerticalAlignment="Top" Width="104" Foreground="#FFFBF9F9"/>
@@ -172,10 +178,6 @@ Estos nuevos valores se escriben en los bloques de texto que se encuentran en el
  <TextBlock x:Name="txtMagnetic" HorizontalAlignment="Left" Height="22" Margin="130,18,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFFBF6F6"/>
  <TextBlock x:Name="txtNorth" HorizontalAlignment="Left" Height="18" Margin="130,58,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFF5F1F1"/>
 ```
-
-## <a name="related-topics"></a>Temas relacionados
-
-* [Muestra de brújula](http://go.microsoft.com/fwlink/p/?linkid=241378)
  
 
  

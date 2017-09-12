@@ -1,17 +1,19 @@
 ---
-author: dbirtolo
+author: mukin
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referencia de API principal de Device Portal
 description: "Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 347d658f346ab14c60a4468c4a9935e555c2e016
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b6df8f361df82ef65098877027cf1857fa575b0b
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/28/2017
 ---
 # <a name="device-portal-core-api-reference"></a>Referencia de API principal de Device Portal
 
@@ -1272,6 +1274,69 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
+## User information
+---
+### <a name="get-the-active-user"></a>Obtener el usuario activo
+
+**Solicitud**
+
+Puedes obtener el nombre del usuario activo en el dispositivo mediante el siguiente formato de solicitud.
+ 
+Método      | URI de solicitud
+:------     | :-----
+GET | /api/users/activeuser
+<br />
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+La respuesta incluye la información del usuario en el siguiente formato. 
+
+Correcto: 
+```
+{
+    "UserDisplayName" : string, 
+    "UserSID" : string
+}
+```
+Error:
+```
+{
+    "Code" : int, 
+    "CodeText" : string, 
+    "Reason" : string, 
+    "Success" : bool
+}
+```
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
+**Familias de dispositivos disponibles**
+
+* Escritorio de Windows
+* HoloLens
+* IoT
+
+---
 ## Performance data
 ---
 ### <a name="get-the-list-of-running-processes"></a>Obtener la lista de procesos en ejecución
@@ -2023,6 +2088,52 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
+### <a name="kill-process-by-pid"></a>Eliminar el proceso por PID
+
+**Solicitud**
+
+Puedes eliminar el proceso mediante el siguiente formato de solicitud.
+ 
+Método      | URI de solicitud
+:------     | :-----
+DELETE | /api/taskmanager/process
+<br />
+
+**Parámetros de URI**
+
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
+
+Parámetro de URI | Descripción
+:---          | :---
+pid   | (**obligatorio**) Identificador de proceso único para detener el proceso.
+<br />
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
+**Familias de dispositivos disponibles**
+
+* Escritorio de Windows
+* HoloLens
+* IoT
+
+---
 ## Networking
 ---
 ### <a name="get-the-current-ip-configuration"></a>Obtener la configuración IP actual
@@ -2263,7 +2374,7 @@ Parámetro de URI | Descripción
 interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para conectarse a la red.
 op   | (**obligatorio**) Indica la acción que se debe realizar. Los valores posibles son connect o disconnect.
 ssid   | (**obligatorio si *op* == connect**) SSID al que se debe conectar.
-clave   | (**necesario si *op* == connect and network requires authentication**) La clave compartida.
+key   | (**obligatorio si *op* == connect and network requires authentication**) La clave compartida.
 createprofile | (**obligatorio**) Crea un perfil de la red en el dispositivo.  Esto hará que el dispositivo se conecte a la red automáticamente en el futuro. Esto puede ser **sí** o **no**. 
 
 **Encabezados de solicitud**
@@ -3290,7 +3401,7 @@ Parámetro de URI | Descripción
 :------     | :-----
 knownfolderid | (**obligatorio**) El directorio de nivel superior donde deseas descargar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. 
 filename | (**obligatorio**) El nombre del archivo que se va a descargar. 
-packagefullname | (**obligatorio si *knownfolderid* == LocalAppData **) El nombre completo del paquete que te interesa. 
+packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete que te interesa. 
 path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente.
 
 **Encabezados de solicitud**

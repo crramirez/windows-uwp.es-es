@@ -7,36 +7,48 @@ label: Intro to UWP app design
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 08/9/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4ca7e133f930ff4663de0cc1769ac26caa9f44ad
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8db6dbe00c20b6371ae7007f07e628d16467ea9d
+ms.sourcegitcommit: 0d5b3daddb3ae74f91178c58e35cbab33854cb7f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/09/2017
 ---
-#  <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP 
+#  <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Una aplicación de la Plataforma universal de Windows (UWP) puede ejecutarse en cualquier dispositivo de Windows, desde el teléfono o la tableta hasta el equipo.
+Una aplicación de la Plataforma universal de Windows (UWP) puede ejecutarse en cualquier dispositivo de Windows, desde el teléfono o la tableta hasta el equipo. 
 
-![dispositivos de Windows](images/1894834-hig-device-primer-01-500.png)
+El diseño de una aplicación que tenga una buena apariencia en una tan amplia variedad de dispositivos puede ser un gran desafío. Afortunadamente, la Plataforma universal de Windows (UWP) proporciona un conjunto de características integradas y bloques de compilación universales que te ayudarán a crear una experiencia de usuario que funcione bien con una diversidad de dispositivos, pantallas y métodos de entrada. Este artículo describe las funciones de la interfaz de usuario y las ventajas de las aplicaciones para UWP, y proporciona una serie de instrucciones generales de diseño para crear tu primera aplicación para UWP. 
 
-Diseñar una aplicación que tenga una buena apariencia en una tan amplia variedad de dispositivos puede ser un gran desafío. Así que, ¿cómo se puede abordar el diseño de una aplicación que ofrezca una excelente experiencia de usuario en dispositivos con tamaños de pantalla muy diferentes y distintos métodos de entrada? Afortunadamente, la Plataforma universal de Windows (UWP) proporciona un conjunto de características integradas y bloques de creación universales que te ayudan a hacer justamente eso. 
+## <a name="video-summary"></a>Resumen en vídeo
 
-![un diseño de una aplicación que se ejecuta en teléfonos Windows, tabletas y PC](images/food-truck-finder/uap-foodtruck--md-detail.png)
+> [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
 
-En este artículo se describen las características de la interfaz de usuario y las ventajas de aplicaciones para UWP, y proporciona instrucciones generales de diseño para crear tu primera aplicación para UWP. Empecemos echando un vistazo a algunas de las funciones que se obtienen al crear una aplicación para UWP. 
 
-## <a name="uwp-app-features"></a>Características de las aplicaciones para UWP
+<!--
+![windows-powered devices](images/1894834-hig-device-primer-01-500.png)
+-->
+
+<!--
+![A design for an app that runs on windows phone, tablets, and pcs](images/food-truck-finder/uap-foodtruck--md-detail.png)
+-->
+
+
+## <a name="uwp-features"></a>Funciones UWP
+
+Empecemos echando un vistazo a algunas de las funciones que se obtienen al crear una aplicación para UWP.
 
 ### <a name="effective-pixels-and-scaling"></a>Escalado y píxeles efectivos
 
-Las aplicaciones para UWP ajustan automáticamente el tamaño de los controles, las fuentes y otros elementos de la interfaz de usuario para que sean legibles en todos los dispositivos.
+Las aplicaciones para UWP ajustan automáticamente el tamaño de los controles, las fuentes y otros elementos de la interfaz de usuario para que sean legibles y fáciles de interaccionar en todos los dispositivos.
 
-Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24px en un Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24px en un teléfono de 5 pulgadas a unos centímetros de distancia.
+Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24 px en un dispositivo Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24 px en un teléfono de 5 pulgadas a unos centímetros de distancia.
 
 ![distancias de visualización para diferentes dispositivos](images/1910808-hig-uap-toolkit-03.png)
 
@@ -44,18 +56,14 @@ Debido al funcionamiento del sistema de escalado, al diseñar la aplicación par
 
 -   Al diseñar, puedes ignorar la densidad de píxeles y la resolución de pantalla real. En su lugar, diseña la resolución efectiva (la resolución en píxeles efectivos) de una clase de tamaño (para obtener más información, consulta el [artículo Tamaños de pantalla y puntos de interrupción](screen-sizes-and-breakpoints-for-responsive-design.md)).
 
--   Cuando el sistema escala la interfaz de usuario, lo hace en múltiplos de 4. Para garantizar un aspecto limpio, ajusta los diseños de la cuadrícula de píxeles de 4 x 4: crea márgenes, tamaños y posiciones de los elementos de la interfaz de usuario, así como la posición (pero no el tamaño, ya que el texto puede ser de cualquier tamaño) del texto de un múltiplo de 4 píxeles efectivos.
+-   Cuando el sistema escala la interfaz de usuario, lo hace en múltiplos de 4. Para garantizar un aspecto nítido, ajusta los diseños a la cuadrícula de 4 x 4 píxeles: convierte los márgenes, los tamaños y las posiciones de los elementos de la interfaz de usuario a un múltiplo de 4 píxeles efectivos. Ten en cuenta que el texto no tiene este requisito; el texto puede tener cualquier tamaño y posición. 
 
 En esta ilustración se muestran elementos de diseño que se asignan a la cuadrícula de 4 x 4 píxeles. El elemento de diseño siempre tendrá bordes nítidos.
 
-![ajuste a la cuadrícula de píxeles de 4 x 4](images/rsp-design/epx-4pixelgood.png)
-
-En la ilustración siguiente se muestran los elementos de diseño que no se asignan a la cuadrícula de 4 x 4. Estos elementos de diseño tendrán bordes borrosos y tenues en algunos dispositivos.
-
-![elementos de diseño que no se alinean a la cuadrícula de píxeles de 4 x 4](images/rsp-design/offthegridillustration.png)
+![ajuste a la cuadrícula de 4 x 4 píxeles](images/rsp-design/epx-4pixelgood.png)
 
 > [!TIP]
-> Al crear bocetos de pantalla en los programas de edición de imágenes, establece el valor de PPP en 72 y las dimensiones de imagen en la resolución eficaz de la clase de tamaño que quieres obtener. (Para obtener una lista de clases de tamaño y resoluciones eficaces, consulta la sección [recomendaciones para las clases de tamaño específico](#sizeclasses) de este artículo).
+> Al crear bocetos de pantalla en los programas de edición de imágenes, establece el valor de PPP en 72 y las dimensiones de imagen en la resolución eficaz de la clase de tamaño que quieres obtener. Para una lista de las clases de tamaño y resoluciones efectivas, consulta el [artículo Tamaños de pantalla y puntos de interrupción](screen-sizes-and-breakpoints-for-responsive-design.md).
 
 
 ### <a name="universal-input-and-smart-interactions"></a>Entrada universal e interacciones inteligentes
@@ -91,10 +99,22 @@ La UWP también proporciona algunos bloques de creación útiles que facilitan e
 
     ![una aplicación meteorológica con su propio estilo visual](images/weather/uwp-weather-tab-phone-700.png)
 
-Ahora que hemos descrito los bloques de creación de aplicaciones para UWP, echemos un vistazo a cómo reunirlos para crear una interfaz de usuario. 
-    
-## <a name="the-anatomy-of-a-typical-uwp-app"></a>Anatomía de una aplicación típica para UWP
+## <a name="uwp-and-the-fluent-design-system"></a>UWP y el sistema de diseño Fluent
 
+ El sistema de diseño Fluent te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. El diseño Fluent se está aplicando en dispositivos y aplicaciones de Windows 10 para crear experiencias atractivas, llamativas e intuitivas. 
+ 
+ ¿Cómo puedes incorporar el diseño Fluent a tu aplicación? Agregamos continuamente nuevos controles y funciones que lo hacen fácil. Esta es una lista de funciones de diseño Fluent actuales para UWP:  
+
+* [Acrílico](../style/acrylic.md) es un tipo de pincel que crea superficies semitransparentes.
+* [Parallax](../style/parallax.md) agrega perspectiva tridimensional, profundidad y movimiento al contenido en desplazamiento, como las listas de desplazamiento.
+* [Mostrar](../style/reveal.md) utiliza luz para crear un efecto de superposición del ratón que ilumina elementos interactivos de la interfaz de usuario. 
+* [Animaciones conectadas](../style/connected-animation.md) proporciona escenas de transición logradas que mejoran la facilidad de uso, manteniendo el contexto y proporcionando continuidad. 
+
+También hemos actualizado nuestras [directrices de diseño](https://developer.microsoft.com/windows/apps/design) (lo que estás leyendo actualmente), de manera que se basen en los principios de diseño Fluent.
+
+## <a name="the-anatomy-of-a-typical-uwp-app"></a>Anatomía de una aplicación para UWP típica
+
+Ahora que hemos descrito los bloques de creación de aplicaciones para UWP, echemos un vistazo a cómo reunirlos para crear una interfaz de usuario.
 
 Una interfaz de usuario moderna es algo complejo que se compone de texto, formas, colores y animaciones formadas en última instancia por píxeles individuales de la pantalla del dispositivo que estás usando. Al empezar a diseñar una interfaz de usuario, la gran cantidad de opciones puede ser abrumadora.
 
@@ -112,7 +132,7 @@ Para que las cosas sean más sencillas, vamos a definir la anatomía de una apli
 <td align="left"><p><img src="images/1895065-hig-anatomyofanapp-02.png" alt="Navigation, command, and content areas of an address book app" /></p>
 <p></p></td>
 <td align="left"><strong>Elementos de navegación</strong>
-<p>Los elementos de navegación ayudan a los usuarios a elegir el contenido que quieren mostrar. Entre algunos ejemplos de elementos de navegación se incluyen [pestañas y tablas dinámicas](../controls-and-patterns/tabs-pivot.md), [hipervínculos](../controls-and-patterns/hyperlinks.md) y [paneles de navegación](../controls-and-patterns/nav-pane.md).</p>
+<p>Los elementos de navegación ayudan a los usuarios a elegir el contenido que quieren mostrar. Entre algunos ejemplos de elementos de navegación se incluyen [pestañas y tablas dinámicas](../controls-and-patterns/tabs-pivot.md), [hipervínculos](../controls-and-patterns/hyperlinks.md) y [paneles de navegación](../controls-and-patterns/navigationview.md).</p>
 <p>Los elementos de navegación se tratan en detalle en el artículo [Conceptos básicos del diseño de navegación](navigation-basics.md).</p>
 <strong>Elementos de comandos</strong>
 <p>Los elementos de comandos inician acciones como manipular, guardar o compartir contenido. Entre algunos ejemplos de elementos de comandos se incluyen el [botón](../controls-and-patterns/buttons.md) y la [barra de comandos](../controls-and-patterns/app-bars.md). Los elementos de comandos también pueden incluir métodos abreviados de teclado que no están visibles en la pantalla.</p>
@@ -131,7 +151,6 @@ Como mínimo, una aplicación tiene una pantalla de presentación y una página 
 Al decidir los elementos de la interfaz de usuario adecuados para la aplicación, también puedes considerar los dispositivos y los tamaños de pantalla en los que se ejecutará la aplicación.
 
 ## <a name="tailoring-your-app-for-specific-devices-and-screen-sizes"></a>Adaptación de la aplicación a dispositivos y tamaños de pantalla específicos.
-
 
 Las aplicaciones para UWP usan píxeles efectivos para garantizar que los elementos de diseño sean legibles y se puedan usar en todos los dispositivos con sistema operativo Windows. Por lo tanto, ¿por qué querría personalizar la interfaz de usuario de la aplicación para una familia de dispositivos específicos?
 
@@ -163,17 +182,17 @@ Cuando se optimiza la interfaz de usuario de la aplicación para anchos de panta
 
 Puedes modificar la ubicación y la posición de los elementos de interfaz de usuario de la aplicación para aprovechar al máximo cada dispositivo. En este ejemplo, la vista vertical en el teléfono o el tabléfono necesita una interfaz de usuario de desplazamiento porque solo está visible un fotograma completo a la vez. Cuando la aplicación se traslada a un dispositivo que permite dos fotogramas completos en pantalla, ya se en orientación vertical u horizontal, el fotograma B puede ocupar un espacio dedicado. Si estás usando una cuadrícula para el posicionamiento, puedes usar la misma cuadrícula al cambiar la posición de los elementos de la interfaz de usuario.
 
-![cambiar la posición](images/rsp-design/rspd-reposition.png)
+![Cambiar la posición](images/rsp-design/rspd-reposition.png)
 
 En este diseño de ejemplo para una aplicación de fotos, la aplicación de fotos recoloca su contenido en las pantallas grandes.
 
-![un diseño de una aplicación que cambia la posición del contenido en las pantallas más grandes](images/rsp-design/rspd-reposition-type1.png)
+![Un diseño de una aplicación que cambia la posición del contenido en las pantallas más grandes](images/rsp-design/rspd-reposition-type1.png)
 
 ### <a name="resize"></a>Cambiar el tamaño
 
 Puedes optimizar el tamaño del marco ajustando los márgenes y el tamaño de los elementos de la interfaz de usuario. Esto te permitiría, como se muestra en el ejemplo, mejorar la experiencia de lectura en una pantalla más grande, aumentando simplemente el marco de contenido.
 
-![cambiar el tamaño de los elementos de diseño](images/rsp-design/rspd-resize.png)
+![Cambiar el tamaño de los elementos de diseño](images/rsp-design/rspd-resize.png)
 
 ### <a name="reflow"></a>Redistribuir
 
@@ -181,15 +200,15 @@ Al cambiar el flujo de elementos de la interfaz de usuario en función del dispo
 
 En este ejemplo se muestra cómo se puede adaptar a una única columna de contenido de desplazamiento vertical en el teléfono o tabléfono a una pantalla mayor para mostrar dos columnas de texto.
 
-![redistribuir los elementos de diseño](images/rsp-design/rspd-reflow.png)
+![Redistribuir los elementos de diseño](images/rsp-design/rspd-reflow.png)
 
-###  <a name="reveal"></a>Mostrar
+### <a name="showhide"></a>Mostrar/ocultar
 
-Puedes mostrar la interfaz de usuario según la superficie de la pantalla o cuando el dispositivo admite funcionalidades adicionales, situaciones específicas u orientaciones de pantalla preferidas.
+Puedes mostrar u ocultar los elementos de una interfaz de usuario según la superficie de la pantalla o cuando el dispositivo admite funcionalidades adicionales, situaciones específicas u orientaciones de pantalla preferidas.
 
-En este ejemplo con pestañas, la pestaña del medio con el icono de la cámara podría ser específica de una aplicación, un teléfono o un tabléfono y no es aplicable a dispositivos más grandes, por lo que se muestra en el dispositivo a la derecha. Otro ejemplo común de mostrar u ocultar la interfaz de usuario se aplica a los controles del reproductor multimedia, donde el botón establecido se reduce en dispositivos pequeños y ampliado en dispositivos más grandes con más espacio en pantalla. El reproductor multimedia del equipo, por ejemplo, puede controlar mucho más la funcionalidad en pantalla de lo que puede en un teléfono.
+En este ejemplo con pestañas, la pestaña del medio con el icono de la cámara podría ser específica de una aplicación, un teléfono o un tabléfono y no es aplicable a dispositivos más grandes, por lo que se muestra en el dispositivo a la derecha. Otro ejemplo común de mostrar u ocultar la interfaz de usuario se aplica a los controles del reproductor multimedia, donde el botón establecido se reduce en dispositivos pequeños y ampliado en dispositivos más grandes con más espacio en pantalla. El reproductor multimedia del equipo, por ejemplo, puede controlar mucho más funcionalidad en pantalla de lo que puede en un teléfono.
 
-![ocultar elementos de diseño](images/rsp-design/rspd-revealhide.png)
+![Ocultar elementos de diseño](images/rsp-design/rspd-revealhide.png)
 
 Parte de la técnica de mostrar u ocultar incluye elegir cuándo se deben mostrar más metadatos. Cuando la superficie es primordial, como en un teléfono o tabléfono, es mejor mostrar una cantidad mínima de metadatos. Con un equipo de sobremesa o un portátil, puede aparecer una gran cantidad de metadatos. Algunos ejemplos de cómo controlar la función de mostrar u ocultar metadatos son:
 
@@ -203,9 +222,9 @@ Parte de la técnica de mostrar u ocultar incluye elegir cuándo se deben mostra
 
 Esta técnica te permite cambiar la interfaz de usuario por una clase de tamaño de dispositivo u orientación específicos. En este ejemplo, el panel de navegación y su interfaz de usuario compacta y transitoria funciona bien para un dispositivo más pequeño, pero en un dispositivo más grande, las pestañas pueden ser una elección mejor.
 
-![reemplazar elementos de diseño](images/rsp-design/rspd-replace.png)
+![Reemplazar elementos de diseño](images/rsp-design/rspd-replace.png)
 
-###  <a name="re-architect"></a>Rediseño
+###  <a name="re-architect"></a>Rediseño de la arquitectura
 
 Puedes contraer o bifurcar la arquitectura de la aplicación para adaptarla mejor a dispositivos específicos. En este ejemplo, ir desde el dispositivo izquierdo al dispositivo de derecho muestra la unión de las páginas.
 
@@ -213,15 +232,17 @@ Puedes contraer o bifurcar la arquitectura de la aplicación para adaptarla mejo
 
 A continuación se muestra un ejemplo de esta técnica aplicado al diseño de una aplicación de casa inteligente.
 
-![ejemplo de un diseño que usa la técnica de diseño con capacidad de respuesta](images/rsp-design/rspd-rearchitect-type1.png)
+![ejemplo de un diseño que usa la técnica de diseño con capacidad de respuesta de rediseño de la arquitectura](images/rsp-design/rspd-rearchitect-type1.png)
 
+## <a name="tools-and-design-toolkits"></a>Herramientas y kits de herramientas de diseño
+
+Proporcionamos una serie de herramientas que te ayudarán a diseñar tu aplicación UWP. Consulta nuestra [página de kits de herramientas de diseño](../design-downloads/index.md) para los kits de herramientas XD, Illustrator, Photoshop, Framer y Sketch, así como las descargas herramientas de diseño y fuentes adicionales. 
+
+Para lograr que el equipo esté configurado para codificar realmente aplicaciones para UWP, consulta nuestro artículo [Introducción &gt; Obtener configuración](../get-started/get-set-up.md). 
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [¿Qué es una aplicación para UWP?](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)
+- [Kits de herramientas de diseño](../design-downloads/index.md)
 
  
-
-
-
-

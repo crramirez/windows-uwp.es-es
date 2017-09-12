@@ -5,39 +5,38 @@ title: Plantillas de elemento de la vista de lista
 label: List view item templates
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: d8eb818d-b62e-4314-a612-f29142dbd93f
-ms.openlocfilehash: b63b3a67db3b07cbfef6a89bdffb436605ab91ed
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+dev-contact: ranjeshj
+doc-status: Published
+ms.openlocfilehash: 50ee45afe29070400c6955436e295d2d75ded984
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="item-containers-and-templates"></a>Plantillas y contenedores de elementos
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Los controles **ListView** y **GridView** administran la organización de sus elementos (horizontal, vertical, ajuste, etc.) y la interacción del usuario con los elementos, pero no la visualización de elementos individuales en la pantalla. Administran la visualización de elementos los contenedores de elementos. Cuando agregas elementos a una vista de lista, estos se colocan automáticamente en un contenedor. El contenedor de elementos predeterminado de ListView es [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listviewitem.aspx); para GridView, es [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridviewitem.aspx).
+Los controles **ListView** y **GridView** administran la organización de sus elementos (horizontal, vertical, ajuste, etc.) y la interacción del usuario con los elementos, pero no la visualización de elementos individuales en la pantalla. Administran la visualización de elementos los contenedores de elementos. Cuando agregas elementos a una vista de lista, estos se colocan automáticamente en un contenedor. El contenedor de elementos predeterminado de ListView es [ListViewItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listviewitem.aspx); para GridView, es [GridViewItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridviewitem.aspx).
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)</li>
-<li>[**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)</li>
-<li>[**Propiedad ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)</li>
-<li>[**Propiedad ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx)</li>
-</ul>
-</div>
+> **API importantes**: [Clase ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [Clase GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx), [Propiedad ItemTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx), [Propiedad ItemContainerStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx)
 
 
-> ListView y GridView derivan ambos de la clase [**ListViewBase**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), por lo que tienen la misma funcionalidad, pero muestran los datos de manera diferente. En este artículo, cuando hablamos de la vista de lista, la información corresponde a ambos controles, ListView y GridView, a menos que se indique lo contrario. Podemos hacer mención a clases como ListView o ListViewItem, pero el prefijo *List* se puede reemplazar por *Grid* para el equivalente de cuadrícula correspondiente (GridView o GridViewItem). 
+> [!NOTE]
+> ListView y GridView derivan ambos de la clase [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), por lo que tienen la misma funcionalidad, pero muestran los datos de manera diferente. En este artículo, cuando hablamos de la vista de lista, la información corresponde a ambos controles, ListView y GridView, a menos que se indique lo contrario. Podemos hacer mención a clases como ListView o ListViewItem, pero el prefijo *List* se puede reemplazar por *Grid* para el equivalente de cuadrícula correspondiente (GridView o GridViewItem). 
 
 Estos controles de contenedor constan de dos partes importantes que se combinan para crear los elementos visuales finales que se muestran para un elemento: la *plantilla de datos* y la *plantilla de control*.
 
-- **Plantilla de datos**: debe asignar una clase [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx) a la propiedad [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) de la vista de lista para especificar cómo se muestran los elementos de datos individuales.
-- **Plantilla de control**: la plantilla de control proporciona la parte de la visualización de elementos de la que el marco es responsable, como los estados visuales. Puedes usar la propiedad [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx) para modificar la plantilla de control. Por lo general, puedes hacerlo para modificar los colores de la vista de lista de modo que coincidan con tu personalización de marca, o bien para cambiar cómo se muestran los elementos seleccionados.
+- **Plantilla de datos**: debe asignar una clase [DataTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx) a la propiedad [ItemTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) de la vista de lista para especificar cómo se muestran los elementos de datos individuales.
+- **Plantilla de control**: la plantilla de control proporciona la parte de la visualización de elementos de la que el marco es responsable, como los estados visuales. Puedes usar la propiedad [ItemContainerStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx) para modificar la plantilla de control. Por lo general, puedes hacerlo para modificar los colores de la vista de lista de modo que coincidan con tu personalización de marca, o bien para cambiar cómo se muestran los elementos seleccionados.
 
 Esta imagen muestra cómo se combinan la plantilla de control y la plantilla de datos para crear la visualización final de un elemento.
 
@@ -54,16 +53,18 @@ Este es el código XAML que crea este elemento. Explicaremos las plantillas más
                     <ColumnDefinition Width="54"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image Source="Assets/placeholder.png" Width="44" Height="44" 
+                <Image Source="Assets/placeholder.png" Width="44" Height="44"
                        HorizontalAlignment="Left"/>
-                <TextBlock Text="{x:Bind}" Foreground="Blue" 
-                           FontSize="36" Grid.Column="1"/>
+                <TextBlock Text="{x:Bind}" Foreground="Black"
+                           FontSize="15" Grid.Column="1"
+                           VerticalAlignment="Center"
+                           Padding="0,0,54,0"/>
             </Grid>
         </DataTemplate>
     </ListView.ItemTemplate>
     <ListView.ItemContainerStyle>
         <Style TargetType="ListViewItem">
-            <Setter Property="Background" Value="Green"/>
+            <Setter Property="Background" Value="LightGreen"/>
         </Style>
     </ListView.ItemContainerStyle>
     <x:String>Item 1</x:String>
@@ -83,7 +84,7 @@ Este es el código XAML que crea este elemento. Explicaremos las plantillas más
 
 Antes de profundizar en cómo mostrar elementos de datos en una vista de lista, es necesario comprender los datos que se van a mostrar. En este ejemplo, se crea un tipo de datos denominado `NamedColor`. Combina un nombre de color, un valor de color y una clase **SolidColorBrush** para el color, que se exponen como las tres propiedades siguientes: `Name`, `Color` y `Brush`.
  
-A continuación, se rellena una **lista** con un objeto `NamedColor` para cada color con nombre en la clase [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors.aspx). La lista se establece como la propiedad [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) de la vista de lista.
+A continuación, se rellena una **List** con un objeto `NamedColor` para cada color con nombre en la clase [Colors](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors.aspx). La lista se establece como la propiedad [ItemsSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) de la vista de lista.
 
 Este es el código para definir la clase y rellenar la lista `NamedColors`.
 
@@ -156,7 +157,7 @@ De manera predeterminada, un elemento de datos se muestra en la vista de lista c
 
 ![vista de lista que muestra la representación de cadena de los elementos](images/listview-no-template.png)
 
-Para mostrar la representación de cadena de una propiedad determinada del elemento de datos, establece [**DisplayMemberPath**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.displaymemberpath.aspx) en dicha propiedad. Aquí, debes establecer DisplayMemberPath en la propiedad `Name` del elemento `NamedColor`.
+Para mostrar la representación de cadena de una propiedad determinada del elemento de datos, establece [DisplayMemberPath](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.displaymemberpath.aspx) en dicha propiedad. Aquí, debes establecer DisplayMemberPath en la propiedad `Name` del elemento `NamedColor`.
 
 **XAML**
 ```xaml
@@ -167,12 +168,12 @@ La vista de lista muestra ahora los elementos por nombre, como se muestra aquí.
 
 ![Vista de lista que muestra la representación de cadena de una propiedad del elemento](images/listview-display-member-path.png)
 
-Seguramente quieras mostrar una presentación más enriquecida de los datos. Para especificar con exactitud cómo se mostrarán los elementos en la vista de lista, debes crear una clase [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx). El lenguaje XAML de la clase DataTemplate define el diseño y la apariencia de los controles usados para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o pueden tener contenido estático definido en línea. Debes asignar la clase DataTemplate a la propiedad [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) del control de lista.
+Seguramente quieras mostrar una presentación más enriquecida de los datos. Para especificar con exactitud cómo se mostrarán los elementos en la vista de lista, debes crear una clase [DataTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx). El lenguaje XAML de la clase DataTemplate define el diseño y la apariencia de los controles usados para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o pueden tener contenido estático definido en línea. Debes asignar la clase DataTemplate a la propiedad [ItemTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) del control de lista.
 
 > [!IMPORTANT]
 > No puedes usar **ItemTemplate** y **DisplayMemberPath** al mismo tiempo. Si se establecen ambas propiedades, se produce una excepción.
 
-Aquí, debes definir una clase DataTemplate que muestre un objeto [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.aspx) con el color del elemento, junto con el nombre del color y los valores RGB. 
+Aquí, debes definir una clase DataTemplate que muestre un objeto [Rectangle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.aspx) con el color del elemento, junto con el nombre del color y los valores RGB. 
 
 > [!NOTE]
 > Cuando uses la [extensión de marcado x:Bind](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) en DataTemplate, debes especificar DataType (`x:DataType`) en DataTemplate.
@@ -300,12 +301,12 @@ La vista de lista combina los elementos de la plantilla de datos y la plantilla 
 
 Como se mencionó anteriormente acerca de las plantillas de datos, el número de elementos XAML que se crean para cada elemento puede tener un impacto significativo en el rendimiento de una vista de lista. Dado que la plantilla de datos y la plantilla de control se combinan para mostrar cada elemento, el número real de elementos necesarios para mostrar un elemento incluye los elementos de ambas plantillas.
 
-Los controles ListView y GridView están optimizados para reducir el número de elementos XAML creados por elemento. Los elementos visuales **ListViewItem** los crea la clase [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.aspx), que es un elemento XAML especial que muestra elementos visuales complejos de foco, selección y otros estados visuales, sin la sobrecarga de numerosas clases UIElement.
+Los controles ListView y GridView están optimizados para reducir el número de elementos XAML creados por elemento. Los elementos visuales **ListViewItem** los crea la clase [ListViewItemPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.aspx), que es un elemento XAML especial que muestra elementos visuales complejos de foco, selección y otros estados visuales, sin la sobrecarga de numerosas clases UIElement.
  
 > [!NOTE]
 > En las aplicaciones para UWP para Windows 10, tanto **ListViewItem** como **GridViewItem** usan la clase **ListViewItemPresenter**; la clase GridViewItemPresenter está en desuso y no debes usarla. Los elementos ListViewItem y GridViewItem establecen diferentes valores de propiedad en la clase ListViewItemPresenter para conseguir distintas apariencias predeterminadas).
 
-Para modificar la apariencia del contenedor de elementos, usa la propiedad [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx) y proporciona una clase [**Style**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) con la propiedad [**TargetType**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.targettype.aspx) establecida en **ListViewItem** o **GridViewItem**.
+Para modificar la apariencia del contenedor de elementos, usa la propiedad [ItemContainerStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx) y proporciona una clase [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) con la propiedad [TargetType](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.targettype.aspx) establecida en **ListViewItem** o **GridViewItem**.
 
 En este ejemplo, debes agregar espaciado interno al elemento ListViewItem para crear algo de espacio entre los elementos en la lista.
 
@@ -327,7 +328,7 @@ Ahora la vista de lista tendrá esta apariencia con espacio entre los elementos.
 
 ![Elementos de la vista de lista con espaciado interno aplicado](images/listview-data-template-1.png)
 
-En el estilo predeterminado ListViewItem, la propiedad **ContentMargin** de ListViewItemPresenter tiene una extensión [**TemplateBinding**](https://msdn.microsoft.com/windows/uwp/xaml-platform/templatebinding-markup-extension) para la propiedad **Padding** de ListViewItem (`<ListViewItemPresenter ContentMargin="{TemplateBinding Padding}"/>`). Cuando se establece la propiedad Padding, ese valor se pasa realmente a la propiedad ContentMargin de ListViewItemPresenter.
+En el estilo predeterminado ListViewItem, la propiedad **ContentMargin** de ListViewItemPresenter tiene una extensión [TemplateBinding](https://msdn.microsoft.com/windows/uwp/xaml-platform/templatebinding-markup-extension) para la propiedad **Padding** de (`<ListViewItemPresenter ContentMargin="{TemplateBinding Padding}"/>`). Cuando se establece la propiedad Padding, ese valor se pasa realmente a la propiedad ContentMargin de ListViewItemPresenter.
 
 Para modificar otras propiedades de ListViewItemPresenter que no están vinculadas mediante plantilla a las propiedades de ListViewItem, debes volver a crear la plantilla de ListViewItem con una nueva clase ListViewItemPresenter en la que puedas modificar las propiedades. 
 
@@ -399,11 +400,11 @@ Ahora puedes modificar las propiedades de la clase ListViewItemPresenter para co
 
 #### <a name="inline-and-overlay-selection-visuals"></a>Elementos visuales de selección Inline y Overlay
 
-ListView y GridView indican los elementos seleccionados de diferentes maneras según el control y la propiedad [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx). Para obtener más información sobre la selección de la vista de lista, consulta [ListView y GridView](listview-and-gridview.md). 
+ListView y GridView indican los elementos seleccionados de diferentes maneras según el control y la propiedad [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx). Para obtener más información sobre la selección de la vista de lista, consulta [ListView y GridView](listview-and-gridview.md). 
 
-Si **SelectionMode** está establecido en **Multiple**, se muestra una casilla de selección como parte de la plantilla de control del elemento. Puedes usar la propiedad [**SelectionCheckMarkVisualEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled.aspx) para desactivar la casilla de selección en el modo de selección Multiple. Sin embargo, esta propiedad se omite en otros modos de selección, por lo que no se puede activar la casilla en el modo de selección Extended o Single.
+Si **SelectionMode** está establecido en **Multiple**, se muestra una casilla de selección como parte de la plantilla de control del elemento. Puedes usar la propiedad [SelectionCheckMarkVisualEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled.aspx) para desactivar la casilla de selección en el modo de selección Multiple. Sin embargo, esta propiedad se omite en otros modos de selección, por lo que no se puede activar la casilla en el modo de selección Extended o Single.
 
-Puedes establecer la propiedad [**CheckMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.checkmode.aspx) para especificar si la casilla debe mostrarse con el estilo en línea o el estilo de superposición.
+Puedes establecer la propiedad [CheckMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.checkmode.aspx) para especificar si la casilla debe mostrarse con el estilo en línea o el estilo de superposición.
 
 - **Inline**: este estilo muestra la casilla a la izquierda del contenido y colorea el fondo del contenedor de elementos para indicar la selección. Este es el estilo predeterminado del control ListView.
 - **Overlay**: este estilo muestra la casilla encima del contenido y colorea solo el borde del contenedor de elementos para indicar la selección. Este es el estilo predeterminado del control GridView.
@@ -448,7 +449,7 @@ Si necesitas realizar más modificaciones de las que se permiten en las propieda
 Como se mencionó anteriormente, el número de propiedades UIElement de una plantilla de elemento tiene un impacto significativo en el rendimiento de la vista de lista. Reemplazar ListViewItemPresenter por las plantillas XAML expandidas aumenta enormemente el recuento de elementos, y no se recomienda si la vista de lista va a mostrar un gran número de elementos o si el rendimiento es una preocupación.
 
 > [!NOTE]
-> **ListViewItemPresenter** se admite solo cuando la propiedad [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) de la vista de lista es [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemswrapgrid.aspx) o [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx). Si cambias la propiedad ItemsPanel para usar [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.variablesizedwrapgrid.aspx), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.wrapgrid.aspx) o [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx), la plantilla de elemento cambiará automáticamente a la plantilla XAML expandida. Para obtener más información, consulta [Optimización de interfaz de usuario de ListView y GridView](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview).
+> **ListViewItemPresenter** se admite solo cuando la propiedad [ItemsPanel](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) de la vista de lista es [ItemsWrapGrid](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemswrapgrid.aspx) o [ItemsStackPanel](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx). Si cambias la propiedad ItemsPanel para usar [VariableSizedWrapGrid](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.variablesizedwrapgrid.aspx), [WrapGrid](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.wrapgrid.aspx) o [StackPanel](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx), la plantilla de elemento cambiará automáticamente a la plantilla XAML expandida. Para obtener más información, consulta [Optimización de interfaz de usuario de ListView y GridView](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview).
 
 Para personalizar una plantilla XAML expandida, debes realizar una copia de esta en la aplicación y establecer la propiedad **ItemContainerStyle** en la copia.
 

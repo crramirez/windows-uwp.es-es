@@ -6,14 +6,20 @@ description: "Un control de vista en dos paneles tiene un panel expandible y con
 label: Split view
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b7488f19109925faa2c9e6b3be528cb2d19846e8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: yulikl
+design-contact: kimsea
+dev-contact: tpaine
+doc-status: Published
+ms.openlocfilehash: 126fab3db9a0728626289788757f576648a43856
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="split-view-control"></a>Control de vista en dos paneles
 
@@ -21,12 +27,7 @@ translationtype: HT
 
 Un control de vista en dos paneles tiene un panel expandible y contraíble y un área de contenido.
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**Clase SplitView**](https://msdn.microsoft.com/library/windows/apps/dn864360)</li>
-</ul>
-</div>
+> **API importantes**: [Clase SplitView](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 Este es un ejemplo de la aplicación Microsoft Edge con SplitView para mostrar su hub.
 
@@ -53,7 +54,7 @@ Este es un ejemplo de la aplicación Microsoft Edge con SplitView para mostrar s
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-El control de vista en dos paneles puede usarse para crear un [panel de navegación](nav-pane.md). Para crear este patrón, agrega un botón de expandir/contraer (botón de "hamburguesa") y una vista de lista que represente los elementos de navegación.
+El control de vista en dos paneles puede usarse para crear un [panel de navegación](navigationview.md). Para crear este patrón, agrega un botón de expandir/contraer (botón de "hamburguesa") y una vista de lista que represente los elementos de navegación.
 
 El control de vista en dos paneles también puede usarse para crear cualquier experiencia de "cajón" donde los usuarios puedan abrir y cerrar el panel complementario.
 
@@ -83,7 +84,7 @@ Este es un control SplitView con un panel abierto que aparece en línea junto al
 
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Patrón de panel de navegación](nav-pane.md)
+* [Patrón de panel de navegación](navigationview.md)
 * [Vista de lista](lists.md)
  
 

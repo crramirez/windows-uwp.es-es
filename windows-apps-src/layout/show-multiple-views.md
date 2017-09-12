@@ -6,34 +6,37 @@ ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
 op-migration-status: ready
-ms.author: jimwalk
-ms.date: 02/08/2017
+ms.author: mijacobs
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 87f3d5e75b361d1ba9d2c304e58542803da66cd4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 629e6b4bc2b192f5e81bf49e2cc4c18fbd9a0d54
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="show-multiple-views-for-an-app"></a>Mostrar varias vistas de una aplicación
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Puedes ayudar a tus usuarios a ser más productivos si les permites ver varias partes independientes de la aplicación en ventanas distintas. Un ejemplo típico es una aplicación de correo electrónico donde la interfaz de usuario principal muestra la lista de mensajes de correo electrónico y una vista previa del correo electrónico seleccionado. No obstante, los usuarios también pueden abrir mensajes en distintas ventanas y verlas en paralelo.
+Ayuda a tus usuarios a ser más productivos al permitirles ver partes independientes de la aplicación en ventanas distintas. Si creas varias ventanas para una aplicación, cada una de ellas se comporta de manera independiente. La barra de tareas muestra cada ventana por separado. Los usuarios pueden mover, cambiar de tamaño, mostrar y ocultar ventanas de la aplicación de manera independiente, así como cambiar entre ventanas de la aplicación como si usaran aplicaciones distintas. Cada ventana funciona en su propio subproceso.
 
-<div class="important-apis" >
-<b>API importantes</b><br/>
-<ul>
-<li>[**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094)</li>
-<li>[**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)</li>
-</ul>
-</div> 
+![Trama reticular que muestra una aplicación con varias ventanas](images/multi-view.png)
 
-Si creas varias ventanas para una aplicación, cada una de ellas se comporta de manera independiente. La barra de tareas muestra cada ventana por separado. Los usuarios pueden mover, cambiar de tamaño, mostrar y ocultar ventanas de la aplicación de manera independiente, así como cambiar entre ventanas de la aplicación como si usaran aplicaciones distintas. Cada ventana funciona en su propio subproceso.
+> **API importantes**: [**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094), [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)
+
+## <a name="when-should-an-app-use-multiple-views"></a>¿Cuándo debe una aplicación usar varias vistas?
+Hay una variedad de escenarios que pueden beneficiarse de varias vistas. Estos son algunos ejemplos:
+ - Una aplicación de correo electrónico que permite a los usuarios ver una lista de mensajes recibidos al redactar un correo electrónico nuevo
+ - Una aplicación de la libreta de direcciones que permite a los usuarios comparar la información de contacto de varias personas en paralelo
+ - Una aplicación de reproducción de música que permite a los usuarios ver lo que se está reproduciendo mientras exploras una lista de otra música disponible
+ - Una aplicación de toma de notas que permite a los usuarios copiar información de una página de notas en otra
+ - Una aplicación de lectura que permite a los usuarios abrir varios artículos para leerlos más tarde, después de la oportunidad de examinar todos los titulares de nivel superior
 
 ## <a name="what-is-a-view"></a>¿Qué es una vista?
-
 
 Una vista de la aplicación es el emparejamiento 1:1 de un subproceso y una ventana que la aplicación usa para mostrar contenido. Está representada por un objeto [**Windows.ApplicationModel.Core.CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017).
 
@@ -45,8 +48,9 @@ De igual modo, el marco XAML encapsula el objeto [**CoreWindow**](https://msdn.m
 
 ## <a name="show-a-new-view"></a>Mostrar una vista nueva
 
+Aunque cada diseño de aplicación es único, te recomendamos que incluyas un botón de "ventana nueva" en una ubicación predecible, como la esquina superior derecha del contenido que se puede abrir en una ventana nueva. También puedes incluir una opción de menú contextual para "Abrir en una nueva ventana".
 
-Antes de avanzar, veamos los pasos para crear una nueva vista. Aquí, la nueva vista se inicia en respuesta al clic de un botón.
+Echemos un vistazo a los pasos para crear una nueva vista. Aquí, la nueva vista se inicia en respuesta al clic de un botón.
 
 ```csharp
 private async void Button_Click(object sender, RoutedEventArgs e)
@@ -131,7 +135,7 @@ Otras vistas, incluidas todas las vistas que se crean llamando a [**CreateNewVie
 
 ## <a name="switch-from-one-view-to-another"></a>Cambiar de una vista a otra
 
-Debes ofrecer al usuario una manera de volver de una ventana secundaria a la ventana principal. Para ello, usa el método [**ApplicationViewSwitcher.SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097). Se llama a este método desde el subproceso de la ventana desde la que se cambia y se pasa el identificador de vista de la ventana a la que se cambia.
+Toma en consideración proporcionar al usuario una manera de navegar desde una ventana secundaria a su ventana principal. Para ello, usa el método [**ApplicationViewSwitcher.SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097). Se llama a este método desde el subproceso de la ventana desde la que se cambia y se pasa el identificador de vista de la ventana a la que se cambia.
 
 ```csharp
 await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
@@ -139,10 +143,16 @@ await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
 
 Cuando uses [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097), puedes elegir si quieres cerrar la ventana inicial y quitarla de la barra de tareas; para ello, especifica el valor de [**ApplicationViewSwitchingOptions**](https://msdn.microsoft.com/library/windows/apps/dn281105).
 
- 
+## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+
+* No proporciones un punto de entrada clara a la vista secundaria usando el glifo de "abrir ventana nueva".
+* No comuniques el objetivo de la vista secundaria a los usuarios.
+* Asegúrate de que tu aplicación es totalmente funcional en una sola vista y que los usuarios solo abrirán una vista secundaria para mayor comodidad.
+* No confíes en la vista secundaria para proporcionar notificaciones u otros tipos de visualizaciones transitorias.
+
+## <a name="related-topics"></a>Temas relacionados
+
+* [ApplicationViewSwitcher](https://msdn.microsoft.com/library/windows/apps/dn281094)
+* [CreateNewView](https://msdn.microsoft.com/library/windows/apps/dn297278)
 
  
-
-
-
-

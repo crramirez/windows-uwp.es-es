@@ -4,19 +4,20 @@ Description: "Cuando termines de crear el envío de la aplicación y hagas clic 
 title: "Proceso de certificación de la aplicación"
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 04/13/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 87fc6e35a2a9818478aca4119850ae20165d2a64
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f075dc6e112a526d7aee71f0f9aa7d4da570d649
+ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="the-app-certification-process"></a>Proceso de certificación de la aplicación
 
-
-Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a la Tienda**, entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Una vez que se haya realizado la certificación del envío, pueden pasar hasta 16 horas antes de que los clientes vean la descripción de la aplicación (o las actualizaciones de una aplicación publicada anteriormente) en la tienda. Verás una notificación cuando el envío esté publicado y disponible para los clientes, y el estado de la aplicación en el panel será **En la Tienda**.
+Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a la Tienda**, entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Una vez que se haya realizado la certificación del envío, pueden pasar hasta 24 horas antes de que los clientes vean la descripción de la aplicación (o las actualizaciones de una aplicación publicada anteriormente) en la tienda. Verás una notificación cuando el envío esté publicado y disponible para los clientes, y el estado de la aplicación en el panel será **En la Tienda**.
 
 ## <a name="preprocessing"></a>Preprocesamiento
 
@@ -40,11 +41,11 @@ Cuando la aplicación aprueba la certificación, está lista para pasar al proce
 
 Los paquetes de la aplicación se firman digitalmente para protegerlos de alteraciones después de su lanzamiento. Una vez iniciada esta fase, ya no puedes cancelar el envío ni cambiar la fecha de lanzamiento.
 
-Mientras la aplicación se encuentra en la fase de publicación, el vínculo **Mostrar detalles** de la columna Estado para el envío de la aplicación te avisará cuando se pongan a disposición de los clientes en cada una de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles del listado de la Tienda. La aplicación permanecerá en la fase de publicación hasta que los nuevos paquetes y los detalles del listado estén disponibles para todos los clientes potenciales de la aplicación, lo que puede tardar hasta 16horas. 
+Mientras la aplicación se encuentra en la fase de publicación, el vínculo **Mostrar detalles** de la columna Estado para el envío de la aplicación te avisará cuando se pongan a disposición de los clientes en cada una de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles del listado de la Tienda. La aplicación permanecerá en la fase de publicación hasta que los nuevos paquetes y los detalles del listado estén disponibles para todos los clientes potenciales de la aplicación, lo que puede tardar hasta 24horas. 
 
 ## <a name="in-the-store"></a>En la Tienda 
 
-Tras completar los pasos anteriores, el estado del envío cambiará de **Publicación** a **En la Tienda**. A continuación, tu envío estará disponible en la Tienda Windows para que lo descarguen los clientes (a menos que hayas elegido otra opción de [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility)). 
+Tras completar los pasos anteriores, el estado del envío cambiará de **Publicación** a **En la Tienda**. A continuación, tu envío estará disponible en la Tienda Windows para que lo descarguen los clientes (a menos que hayas elegido otra opción de [Visibilidad](set-app-pricing-and-availability.md#visibility)). 
 
 **Nota** También se realizan comprobaciones puntuales de aplicaciones después de que se hayan publicado, para poder identificar posibles problemas y garantizar que la aplicación cumple con todas las [directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944). Si encontramos algún problema, se te notificará al respecto y sobre cómo solucionarlo, si corresponde, o bien sobre si la aplicación se ha quitado de la Tienda.
 

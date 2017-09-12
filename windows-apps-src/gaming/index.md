@@ -1,35 +1,32 @@
 ---
 author: mtoepke
-title: Juegos y DirectX
+title: "Programación de juegos"
 description: "La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 ms.author: mtoepke
-ms.date: 02/08/2017
+ms.date: 06/13/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP, juegos, games, DirectX
-ms.openlocfilehash: 934da17db46ae84463dda9704adb4a6f46cc203b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: Windows 10, uwp, juegos, directX
+ms.openlocfilehash: 2f98c038c745615d16227334d7e87426394d5c79
+ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/15/2017
 ---
-# <a name="games-and-directx"></a>Juegos y DirectX
+# <a name="game-programming"></a>Programación de juegos
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente.
+La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Obtén información sobre cómo crear un juego para Windows 10.
 
 | Tema | Descripción |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Guía de desarrollo de juegos para Windows 10](e2e.md) | Una guía completa con los recursos y la información que necesitas para el desarrollo de juegos para UWP. |
 | [Planificación](planning.md) | Este tema contiene una lista de artículos para la fase de planeamiento del juego. |
 | [Programación para UWP](uwp-programming.md) | Aprende a usar las API de Windows Runtime para desarrollar juegos para UWP. |
-| [Programación con DirectX](directx-programming.md) | Aprende a usar DirectX en juegos para UWP. |
-| [Guías de la portabilidad de juegos](porting-guides.md) | Describe cómo portar los juegos existentes a Direct3D 11, UWP y Windows 10. |
-| [Vídeos sobre el desarrollo de juegos](game-development-videos.md) | Una colección de vídeos sobre el desarrollo de juegos de las conferencias y los eventos más importantes. |
+| [Vídeos sobre el desarrollo de juegos](game-development-videos.md) | Una colección de vídeos sobre el desarrollo de juegos de los congresos y eventos más importantes. |
 
- 
+Para obtener información sobre el desarrollo de juegos UWP con DirectX, ve a [Programación con DirectX ](directx-programming.md).
 
 > **Nota**  
 Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
@@ -38,9 +35,9 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo de juegos, debes estar familiarizado con los siguientes temas:
 
--   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias, y es el lenguaje de desarrollo para juegos de UWP con DirectX11.1 o versiones posteriores.
--   Terminología básica de programación de gráficos.
--   Conceptos básicos de programación en Windows.
+-   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias y es el lenguaje de desarrollo para juegos UWP con DirectX11.1 o versiones posteriores.
+-   Terminología básica de programación de gráficos
+-   Conceptos básicos de programación en Windows
 -   Conocimiento básico de las API de Direct3D9 u11.
 
  

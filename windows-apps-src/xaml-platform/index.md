@@ -1,17 +1,19 @@
 ---
 author: jwmsft
 ms.assetid: b632a6cc-3503-4ab8-bfd1-dde731bd89ab
-description: "En esta sección se incluyen temas donde se explican los conceptos de programación que generalmente se aplican a cualquier aplicación que escribas."
+description: "Esta sección incluye temas en los que se explican el marco XAML para aplicaciones de la Plataforma universal de Windows (UWP)."
 title: Plataforma XAML
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 3a5a638a2b8caf63cc3353d7bd6a43068ec61119
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp
+ms.openlocfilehash: 82ef0c06fa706837f5cbd35d3975c464e14315fa
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="xaml-platform"></a>Plataforma XAML
 
@@ -21,8 +23,8 @@ En esta sección se incluyen temas donde se explican los conceptos de programaci
  
 | Tema | Descripción |
 |-------|-------------|
-| [Introducción a XAML](xaml-overview.md) | Se presenta el lenguaje XAML y los conceptos de XAML a la audiencia de desarrolladores de aplicaciones de Windows Runtime y se describen las diversas formas de declarar objetos y establecer atributos en XAML que se usan para crear una aplicación de Windows Runtime. |
-| [Introducción a las propiedades de dependencia](dependency-properties-overview.md) | En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C# o Visual Basic junto con definiciones XAML para la interfaz de usuario. |
+| [Introducción a XAML](xaml-overview.md) | Presentamos el lenguaje XAML y los conceptos de XAML a los desarrolladores de aplicaciones de Windows Runtime y describimos las diversas formas de declarar objetos y establecer atributos en XAML que se usan para crear una aplicación de Windows Runtime. |
+| [Introducción a las propiedades de dependencia](dependency-properties-overview.md) | En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C#, o Visual Basic junto con definiciones XAML para la interfaz de usuario. |
 | [Propiedades de dependencia personalizadas](custom-dependency-properties.md) | Se explica cómo definir e implementar las propiedades de dependencia personalizadas para una aplicación de Windows Runtime con C++, C# o Visual Basic. |
 | [Introducción a las propiedades adjuntas](attached-properties-overview.md) | Se explica el concepto de propiedad adjunta en XAML y se ofrecen algunos ejemplos. |
 | [Propiedades adjuntas personalizadas](custom-attached-properties.md) | Se explica cómo implementar una propiedad adjunta de XAML como una propiedad de dependencia y cómo definir la convención de descriptor de acceso necesaria para que la propiedad adjunta se pueda usar en XAML. |
