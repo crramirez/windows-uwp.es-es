@@ -4,7 +4,8 @@ description: "Los desarrolladores pueden usar la activación de protocolos y la 
 author: listurm
 ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: es-ES
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar el inicio de aplicaciones de Windows 10 para UWP
 

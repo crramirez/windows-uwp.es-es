@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: Windows 10, UWP, juegos, intercambiar escalado de cadenas, superposiciones, directx, games, swap chain scaling, overlays
 ms.openlocfilehash: 02088fce03c88b4166d49cd36754ac956f254199
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: es-ES
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>Intercambiar escalado y superposiciones de cadenas
 

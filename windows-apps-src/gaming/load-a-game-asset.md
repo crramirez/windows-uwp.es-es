@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: Windows 10, UWP, juegos, DirectX, cargar recursos, games, loading resources
 ms.openlocfilehash: 032cde6294093a2c0a1c582312b9353a146e94da
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: es-ES
 ---
 # <a name="load-resources-in-your-directx-game"></a>Cargar recursos en tu juego DirectX
 

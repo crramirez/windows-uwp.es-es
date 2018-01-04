@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 0992c0fc3c6fe9d70b7867275d28e6bba78171ab
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: es-ES
 ---
 # <a name="audio-device-information-properties"></a>Propiedades de información de dispositivo de audio
 

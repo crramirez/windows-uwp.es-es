@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: Windows 10, UWP, juegos, BasicReaderWriter
 ms.openlocfilehash: 1dc7ba0b25ceeb5b27bc718bed1db0e2db39b6c0
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: es-ES
 ---
 # <a name="complete-code-for-basicreaderwriter"></a>Código completo para BasicReaderWriter
 

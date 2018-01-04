@@ -12,7 +12,8 @@ keywords: "Windows 10, UWP, contactos, tarjeta de contacto, anotación, contacts
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.openlocfilehash: e882566fcc81941669dd4844235bcbd899ea3079
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: es-ES
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>Conectar la aplicación a acciones en una tarjeta de contacto
 
