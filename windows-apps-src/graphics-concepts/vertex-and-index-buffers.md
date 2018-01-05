@@ -3,15 +3,18 @@ title: "Búferes de vértices e índices"
 description: "Los búferes de vértices son búferes de memoria que contienen datos de vértice. Los vértices de un búfer se procesan para transformar, iluminar y recortar."
 ms.assetid: 8A39CD23-85FB-4424-9AC3-37919704CD68
 keywords: "Búferes de vértices e índices"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: f06ee013f5c09522df387d69afa0096f7a3f7044
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f7153696f135d8fa559933d4e7a7c6e925850565
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vertex-and-index-buffers"></a>Búferes de vértices e índices
 

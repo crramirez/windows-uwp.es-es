@@ -3,15 +3,18 @@ title: "Introducción a las reglas de rasterización"
 description: "A menudo, los puntos especificados para los vértices no coinciden con precisión con los píxeles en la pantalla. Cuando esto ocurre, Direct3D aplica reglas de rasterización de triángulo para decidir qué píxeles se aplican a un triángulo determinado."
 ms.assetid: 4232CDBA-F669-4417-9378-F9013E83462C
 keywords: "Introducción a las reglas de rasterización"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 1c22f17991462ddf190ece2baa0360fa3e1d12a5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 6eea8810fd1fec9df405e4c16272a468d4272210
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-rasterization-rules"></a>Introducción a las reglas de rasterización
 

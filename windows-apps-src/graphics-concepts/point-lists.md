@@ -3,15 +3,18 @@ title: Listas de puntos
 description: "Una lista de puntos es una colección de vértices que se representan como puntos aislados. La aplicación puede utilizar listas de puntos en escenas 3D para campos de asteriscos, o bien líneas de puntos en la superficie de un polígono."
 ms.assetid: 332954AE-019F-4A91-B773-E3A7C92F3297
 keywords: Listas de puntos
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: d5f2ee1c9a42a0d2f380f4f9a98c204088b1379a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 6b9bff41dd1963bf2703fae63573949d96f7f436
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="point-lists"></a>Listas de puntos
 

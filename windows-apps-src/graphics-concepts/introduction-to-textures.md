@@ -3,15 +3,18 @@ title: "Introducción a las texturas"
 description: "Un recurso de texturas es una estructura de datos para almacenar elementos de textura, que es la unidad más pequeña de una textura que se puede leer o a la que se puede escribir. Cuando un sombreador lee la textura, se puede filtrar por muestrarios de texturas."
 ms.assetid: 6F3C76A8-F762-4296-AE02-BFBD6476A5A8
 keywords: "Introducción a las texturas"
-author: mtoepke
-ms.author: mtoepke
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: d642668a9af1e62f232e13e411e51e6d850de7f5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d2390568efc43e89da8aa8df73767bbd7b752538
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-textures"></a>Introducción a las texturas
 

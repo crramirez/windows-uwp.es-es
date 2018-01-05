@@ -3,15 +3,18 @@ title: "Listas de líneas"
 description: "Una lista de líneas es una lista de segmentos aislados de líneas rectas. Las listas de líneas son útiles para tareas como agregar aguanieve o lluvia torrencial a una escena 3D. Las aplicaciones crean una lista de líneas rellenando una matriz de vértices."
 ms.assetid: 42BF32A1-3535-42A3-82C5-3945CB309F2C
 keywords: "Listas de líneas"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 8ebe6c67bd6b68023f59599cdcbd1f8f44f80e84
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 66e2c6a455e64ce7ac782c268045f4c14dadcf7b
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="line-lists"></a>Listas de líneas
 

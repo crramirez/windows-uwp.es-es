@@ -3,15 +3,18 @@ title: "Niveles de características de los recursos de streaming"
 description: Direct3D admite los recursos de streaming en tres niveles de funcionalidades.
 ms.assetid: 6AE7EA72-3929-4BB4-8780-F0CF26192D87
 keywords: "Niveles de características de los recursos de streaming"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 671c679938860057a5fe8f083eebfe47dc518e05
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 167165d060df098125586292ef00dee8d1c48122
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-resources-features-tiers"></a>Niveles de características de los recursos de streaming
 

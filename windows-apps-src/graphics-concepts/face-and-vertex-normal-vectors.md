@@ -3,15 +3,18 @@ title: "Vectores normales de caras y vértices"
 description: "Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo."
 ms.assetid: 02333579-9749-4612-B121-23F97898A3E0
 keywords: "Vectores normales de caras y vértices"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 04725508694370c1fff20ae34736fbd05948328c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7f8a38eeca0516082a64f5b4d2778f74436bbdb7
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="face-and-vertex-normal-vectors"></a>Vectores normales de caras y vértices
 

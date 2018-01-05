@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 1eb756c794e23a17420c14af7e27ec315305f232
-ms.sourcegitcommit: c5c96ec4b6ccef57f69eb341b06e6280994c9767
+ms.localizationpriority: medium
+ms.openlocfilehash: 2aae0e634ea219ef602eafdb1516d1d42b9c7913
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Escribir un complemento personalizado para Device Portal
 
@@ -187,15 +188,15 @@ Lo que es más importante, el uso de los métodos HttpPost/DeleteExpect200 en we
 Para depurar la tarea en segundo plano, tienes que cambiar la forma en que Visual Studio ejecuta el código. Sigue los pasos siguientes para depurar una conexión de servicio de la aplicación y comprobar cómo el proveedor controla de las solicitudes HTTP:
 
 1.  En el menú Depurar, selecciona Propiedades de DevicePortalProvider. 
-1.  En la pestaña Depurar, en la sección Acción de inicio, selecciona No iniciar, pero depurar mi código al empezar.  
+2.  En la pestaña Depurar, en la sección Acción de inicio, selecciona No iniciar, pero depurar mi código al empezar.  
 ![Colocar el complemento en modo de depuración](images/device-portal/plugin-debug-mode.png)
-1.  Establece un punto de interrupción en la función de controlador RequestReceived.
+3.  Establece un punto de interrupción en la función de controlador RequestReceived.
 ![Punto de interrupción en el controlador RequestReceived](images/device-portal/plugin-requestreceived-breakpoint.png)
-    > [!NOTE]
-    > Asegúrate de que la arquitectura de la compilación coincida exactamente con la arquitectura de destino.  Si estás usando un PC de 64 bits, debes realizar la implementación usando una compilación de AMD64.
-1.  Presionar F5 para implementar la aplicación
-1.  Desactiva Device Portal y vuelve a activarlo para que encuentre la aplicación (solo es necesario hacer esto cuando cambies el manifiesto de la aplicación; el resto de las veces, puede volver a implementarla y omitir este paso). 
-1.  En el explorador, accede al espacio de nombres del proveedor y debería activarse el punto de interrupción.
+> [!NOTE] 
+> Asegúrate de que la arquitectura de la compilación coincida exactamente con la arquitectura de destino. Si estás usando un PC de 64 bits, debes realizar la implementación usando una compilación de AMD64. 
+4.  Presionar F5 para implementar la aplicación
+5.  Desactiva Device Portal y vuelve a activarlo para que encuentre la aplicación (solo es necesario hacer esto cuando cambies el manifiesto de la aplicación; el resto de las veces, puede volver a implementarla y omitir este paso). 
+6.  En el explorador, accede al espacio de nombres del proveedor y debería activarse el punto de interrupción.
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Introducción a Windows Device Portal](device-portal.md)

@@ -3,15 +3,18 @@ title: Fase de Tessellator (TS)
 description: "La fase de Tessellator (TS) crea un patrón de muestreo del dominio que representa la revisión de geometría y genera un conjunto de objetos más pequeños (triángulos, puntos o líneas) que conectan estas muestras."
 ms.assetid: 2F006F3D-5A04-4B3F-8BC7-55567EFCFA6C
 keywords: Fase de Tessellator (TS)
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 0a18a2ba4172fb4c7aad1d4e8a071bf077afeead
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 5f2bdcf77a9c150195a7a4c27a064d26c525472a
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tessellator-ts-stage"></a>Fase de Tessellator (TS)
 

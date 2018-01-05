@@ -3,15 +3,18 @@ title: Ventanillas y recortes
 description: "Una ventanilla es un rectángulo bidimensional (2D) en el que se proyecta una escena 3D."
 ms.assetid: D0DD646E-13AE-452A-AD22-8C35000D0BA9
 keywords: Ventanillas y recortes
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: b392f267c370bd075d5c0d1ac953ee76a9cff0af
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: defea1e9adbb4d0f9edb24c936069191944b94be
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="viewports-and-clipping"></a>Ventanillas y recortes
 

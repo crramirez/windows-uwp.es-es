@@ -3,15 +3,18 @@ title: "Fase de fusión de salida (OM)"
 description: "La fase de fusión de salida (OM) combina varios tipos de datos de salida (valores de sombreador de píxeles, información de profundidad y galería de símbolos) con los contenidos del destino de representación y los búferes de profundidad o galería de símbolos para generar el resultado final de la canalización."
 ms.assetid: ED2DC4A0-2B92-47AF-884A-BFC2183C78B8
 keywords: "Fase de fusión de salida (OM)"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 35d242502441d9f7539a811fbcd376ac6e0b8794
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 47725e562008e2ac948f552107816fa9fe015001
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="output-merger-om-stage"></a>Fase de fusión de salida (OM)
 

@@ -3,15 +3,18 @@ title: "Vectores, vértices y cuaterniones"
 description: "En Direct3D, los vértices describen la posición y la orientación. Cada vértice de un primitivo se describe mediante un vector que proporciona la posición, el color, las coordenadas de textura y un vector normal que da su orientación."
 ms.assetid: 94EC3D59-43FC-4509-A233-916E9FA8381E
 keywords: "Vectores, vértices y cuaterniones"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 7b0fa178db12c421f5964f0dec2b8c6391ee1973
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: fe5a112b9e991f528225421307880d2ac6e1a381
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vectors-vertices-and-quaternions"></a>Vectores, vértices y cuaterniones
 

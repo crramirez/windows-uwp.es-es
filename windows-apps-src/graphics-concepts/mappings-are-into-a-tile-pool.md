@@ -3,15 +3,18 @@ title: Mapas en un grupo de iconos
 description: "Cuando un recurso se crea como un recurso de streaming, los iconos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de iconos. Un grupo de iconos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación)."
 ms.assetid: 58B8DBD5-62F5-4B94-8DD1-C7D57A812185
 keywords: Mapas en un grupo de iconos
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: bc5787333c266491e432abbb3c5039f73bdeb1f2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 91d16dbda474927bc36beaacb255362f6e1840dd
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>Mapas en un grupo de iconos
 

@@ -3,15 +3,18 @@ title: Nivel 2
 description: "La compatibilidad de nivel 2 para los recursos de streaming agrega funcionalidades a las del nivel 1, como garantizar mapas MIP de texturas sin empaquetar cuando el tamaño es al menos una forma de mosaico estándar; instrucciones del sombreador para la compresión de nivel de detalle (LOD) y para obtener el estado de la operación del sombreador; además, la lectura en mosaicos asignados NULL trata el valor de muestra como cero."
 ms.assetid: 111A28EA-661A-4D29-921A-F2E376A46DC5
 keywords: Nivel 2
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: c8a1d1c830c201018c3384096d3eeae3b25962b4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 29031b50bba88a1ee91c4953273b7554bfc4139f
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tier-2"></a>Nivel 2
 

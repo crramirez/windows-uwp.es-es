@@ -3,15 +3,18 @@ title: "Búferes de profundidad y de galerías de símbolos"
 description: "Un búfer de profundidad almacena la información de profundidad para controlar qué áreas de polígonos se representan y no se ocultan de la vista."
 ms.assetid: 98B9D73A-04A7-4758-AC27-33CD4CB24216
 keywords: "Búferes de profundidad y de galerías de símbolos"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 1b94a6e7c7935c74215db3236c31dcf405f5428a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 6c3eb7f9eed2580bfd8a24f3dc833a0ef1f0a640
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="depth-and-stencil-buffers"></a>Búferes de profundidad y de galerías de símbolos
 

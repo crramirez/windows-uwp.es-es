@@ -3,15 +3,18 @@ title: "Series de líneas"
 description: "Una serie de líneas es un tipo de primitivo que se compone de segmentos de líneas conectados. La aplicación puede usar las series de líneas para crear polígonos que no están cerrados. Un polígono cerrado es un polígono cuyo último vértice está conectado a su primer vértice con un segmento de línea."
 ms.assetid: 6E8C58E1-B463-44FD-A69F-81CCBF25D856
 keywords: "Series de líneas"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 316a036ca4460e9f1c9b8cafa7aa7a7f4dfe9174
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7eec406faf1f695a473154dd23322bcdf9189049
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="line-strips"></a>Series de líneas
 

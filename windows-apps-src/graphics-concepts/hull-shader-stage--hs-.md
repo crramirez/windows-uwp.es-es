@@ -3,15 +3,18 @@ title: Fase del sombreador de casco (HS)
 description: "La fase del sombreador de casco (HS) es una de las fases de teselación, que divide de forma eficaz una sola superficie de un modelo en muchos triángulos."
 ms.assetid: C62F6F15-CAD7-4C72-9735-00762E346C4C
 keywords: Fase del sombreador de casco (HS)
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: ea1aaea93e585259eba141c5d23c7a7dcb0dd4c3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 8236ccc1e4f6366778293dfa5b55d7f186d8c48f
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hull-shader-hs-stage"></a>Fase del sombreador de casco (HS)
 
