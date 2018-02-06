@@ -1,21 +1,22 @@
 ---
 author: jnHs
-Description: "Cuando envías un complemento, las opciones de la página Propiedades te ayudan a determinar el comportamiento que tendrá el complemento al ofrecerlo a los clientes."
-title: Especificar las propiedades de complemento
+Description: When submitting an add-on, the options on the Properties page help determine the behavior of your add-on when offered to customers.
+title: Especificar las propiedades de los complementos
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 253e008d3622094dcfe765531d71e5f37b7777b0
-ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+keywords: "windows10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación"
+ms.localizationpriority: high
+ms.openlocfilehash: 63fc414c230e5a988013b1509280bfdb083a93c0
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/12/2018
 ---
-# <a name="enter-add-on-properties"></a>Especificar las propiedades de complemento
+# <a name="enter-add-on-properties"></a>Especificar las propiedades de los complementos
 
 
 Cuando envías un complemento, las opciones de la página **Propiedades** te ayudan a determinar el comportamiento que tendrá el complemento al ofrecerlo a los clientes.
@@ -29,28 +30,31 @@ El tipo de producto se selecciona en el momento de [crear el complemento](set-yo
 
 Los campos que ves en esta página variarán, en función del tipo de producto del complemento.
 
-## <a name="product-lifetime"></a>Duración del producto
 
+## <a name="product-lifetime"></a>Duración del producto
 
 Si has seleccionado **Duradero** para el tipo de producto, aquí se muestra la opción **Duración del producto**. La opción predeterminada de **Duración del producto** para un complemento duradero es **Para siempre**, lo que significa que el complemento no caduca nunca. Si lo prefieres, puedes definir la **Duración del producto** de forma que el complemento expire tras un período establecido (con opciones que van de 1 a 365 días).
 
-## <a name="quantity"></a>Cantidad
 
+## <a name="quantity"></a>Cantidad
 
 Si seleccionaste **Consumible administrado por la Tienda** para el tipo de producto, aquí se muestra la opción **Cantidad**. Debes escribir un número entre 1 y 1000000. Esta cantidad se concederá al cliente cuando adquiera el complemento y la Tienda hará un seguimiento del saldo cuando la aplicación notifique el consumo del complemento por parte del cliente.
 
 
 ## <a name="subscription-period"></a>Período de suscripción
 
-Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Tendrás que elegir una de las opciones disponibles (**Mensualmente**, **3meses**, **6meses**, **Anualmente** o **24meses**) para indicar la frecuencia con la que se le cobrará la suscripción a un cliente. Ten en cuenta que después de publicar el complemento, no podrás cambiar la selección de **Período de suscripción**.
+Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Elige una opción para especificar la frecuencia a la que se le cobrará a un cliente por la suscripción. La opción predeterminada es **Mensualmente, pero también puedes seleccionar **3 meses**, **6 meses**, **Anualmente** o **24 meses** 
 
-> [!NOTE]
-> Actualmente, la capacidad para crear complementos de una suscripción solo está disponible para un conjunto de cuentas de desarrollador que participan en un programa de usuarios pioneros. En el futuro pondremos los complementos de suscripción a disposición de todas las cuentas de desarrollador. Ahora estamos proporcionando esta documentación preliminar para ofrecer a los desarrolladores una vista previa de esta característica. Para obtener más información, consulta [Habilitar complementos de una suscripción para tu aplicación](../monetize/enable-subscription-add-ons-for-your-app.md).
+> [!IMPORTANT]
+> Después de publicar el complemento, no podrás cambiar la selección de **Período de suscripción**.
 
 
 ## <a name="free-trial"></a>Evaluación gratuita
 
-En el caso de complementos de una suscripción, aquí se muestra también la opción **Evaluación gratuita**. Debes seleccionar si deseas permitir que los clientes usen el complemento de forma gratuita durante un período de tiempo establecido (ya sea **1semana** o **1mes**), o si lo ofreces **Sin evaluación gratuita**. Ten en cuenta que después de publicar el complemento, no podrás cambiar la selección de **Evaluación gratuita**.
+Si seleccionaste **Suscripción** para el tipo de producto, aquí también se muestra la opción **Evaluación gratuita**. La opción predeterminada es **Sin prueba gratuita**. Si lo prefieres, puedes permitir que los clientes usen el complemento de forma gratuita durante un período de tiempo establecido (ya sea **1 semana** o **1 mes**). 
+
+> [!IMPORTANT]
+> Después de publicar el complemento, no podrás cambiar la selección de **Evaluación gratuita**.
 
 
 ## <a name="content-type"></a>Tipo de contenido

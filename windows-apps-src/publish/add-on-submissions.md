@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Los complementos se publican a través del panel del Centro de desarrollo de Windows."
+Description: Add-ons are published through the Windows Dev Center dashboard.
 title: "Envíos de complementos"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 ms.author: wdg-dev-content
-ms.date: 06/26/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 85ad5e297eed8daa5205aedc1253191fcff5fd49
-ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+keywords: "windows10, uwp, iap, compra desde la aplicación, producto desde la aplicación, envío de iap"
+ms.localizationpriority: high
+ms.openlocfilehash: 5591542370f8ed47be37c10e8e8b7afd9ac69d65
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="add-on-submissions"></a>Envíos de complementos
 
@@ -21,10 +22,10 @@ Los complementos (a los que a veces se denominan productos desde la aplicación)
 
 Los complementos se publican a través del panel del Centro de desarrollo de Windows. También tendrás que [habilitar los complementos](../monetize/in-app-purchases-and-trials.md) en el código de la aplicación.
 
-El primer paso en el proceso de envío de un complemento es crear dicho complemento en el panel mediante la [definición de su tipo de producto y su id. del producto](set-your-add-on-product-id.md). Después, es posible crear un envío para que el Tienda Windows se pueda adquirir a través de la Tienda Windows. Puedes enviar un app al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-add-on-after-publication) de los complementos una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
+El primer paso en el proceso de envío de un complemento es crear dicho complemento en el panel mediante la [definición de su tipo de producto y su id. del producto](set-your-add-on-product-id.md). Después, es posible crear un envío para que el complemento pueda adquirirse a través de MicrosoftStore. Puedes enviar un complemento al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-add-on-after-publication) de los complementos una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
 
 > [!NOTE]
-> En esta sección de la documentación se describe cómo enviar complementos en el panel de información del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de la Tienda Windows](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de complementos.
+> En esta sección de la documentación se describe cómo enviar complementos en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de complementos.
 
 ## <a name="checklist-for-submitting-an-add-on"></a>Lista de comprobación para el envío de un complemento
 
@@ -33,7 +34,7 @@ A continuación verás una lista de la información que se proporciona al crear 
 ### <a name="create-a-new-add-on-page"></a>Crear la página de un nuevo complemento
 | Nombre del campo                    | Notas                            |
 |-------------------------------|----------------------------------|
-| [**Tipo de producto**](set-your-add-on-product-id.md#product-type)      | Obligatorio. Si es **Duradero**, se necesita una **Duración del producto**. |  
+| [**Tipo de producto**](set-your-add-on-product-id.md#product-type)      | Obligatorio |  
 | [**Id. del producto**](set-your-add-on-product-id.md#product-id)          | Obligatorio |        
 
 <span/>
@@ -42,10 +43,12 @@ A continuación verás una lista de la información que se proporciona al crear 
 | Nombre del campo                    | Notas                              |   
 |-------------------------------|------------------------------------|
 | [**Duración del producto**](enter-add-on-properties.md#product-lifetime)  | Es obligatorio si es el tipo de producto **Duradero**. No se aplica a otros tipos de producto. |
-| [**Cantidad**](enter-add-on-properties.md#quantity)  | Es obligatorio si el tipo de producto es **Consumible administrado por la Tienda**. No se aplica a otros tipos de producto.
-| [**Tipo de contenido**](enter-add-on-properties.md#content-type)          | Obligatorio       |               
+| [**Cantidad**](enter-add-on-properties.md#quantity)  | Es obligatorio si el tipo de producto es **Consumible administrado por la Tienda**. No se aplica a otros tipos de producto. |
+| [**Período de suscripción**](enter-add-on-properties.md#subscription-period)          | Es obligatorio si el tipo de producto es **Suscripción**. No se aplica a otros tipos de producto.       |  
+| [**Evaluación gratuita**](enter-add-on-properties.md#free-trial)          | Es obligatorio si el tipo de producto es **Suscripción**. No se aplica a otros tipos de producto.       |
+| [**Tipo de contenido**](enter-add-on-properties.md#content-type)          | Obligatorio    |               
 | [**Palabras clave**](enter-add-on-properties.md#keywords)                  | Opcional (hasta 10 palabras clave, con un límite de 30 caracteres cada una) |
-| [**Datos del desarrollador personalizados**](enter-add-on-properties.md#custom-developer-data)                               | Opcional (límite de 3000 caracteres)             |
+| [**Datos del desarrollador personalizados**](enter-add-on-properties.md#custom-developer-data)   | Opcional (límite de 3000 caracteres)            |
 
 <span/>
 
@@ -66,9 +69,9 @@ Es obligatoria una descripción de la Tienda. Se recomienda proporcionar descrip
 
 | Nombre del campo                    | Notas                                       |
 |-------------------------------|---------------------------------------------|
-| [**Título**](create-add-on-store-listings.md#title)                    | Obligatorio (límite de 100 caracteres)              |
-| [**Descripción**](create-add-on-store-listings.md#description)       | Opcional (límite de 200 caracteres)              |
-| [**Icono**](create-add-on-store-listings.md#icon)                    | Opcional (.png, 300 x 300 píxeles)             |
+| [**Título**](create-add-on-store-listings.md#title)                    | Obligatorio (límite de 100 caracteres)           |
+| [**Descripción**](create-add-on-store-listings.md#description)       | Opcional (límite de 200 caracteres)            |
+| [**Icono**](create-add-on-store-listings.md#icon)                    | Opcional (.png, 300 x 300 píxeles)            |
 
 <span/>
 
@@ -87,4 +90,4 @@ Puedes realizar cambios en un complemento publicado en cualquier momento. Los ca
 
 Para enviar actualizaciones, ve a la página del complemento en el panel y haz clic en **Actualizar**. Esto creará un nuevo envío para el complemento, con la información de tu envío anterior como punto de partida. Cambia la información que desees y, a continuación, haz clic en **Enviar a la Tienda**.
 
-Para quitar un complemento que has estado ofreciendo anteriormente, crea un nuevo envío y cambia la opción [Distribución y visibilidad](set-add-on-pricing-and-availability.md) a **Ya no está disponible para comprar. No se muestra en la descripción de la aplicación**. Asegúrate de actualizar el código de la aplicación según sea necesario para quitar también las referencias al complemento.
+Para quitar un complemento que has estado ofreciendo anteriormente, crea un nuevo envío y cambia la opción [Distribución y visibilidad](set-add-on-pricing-and-availability.md) a **Oculto en la Tienda** con la opción **Detener la compra**. Asegúrate de actualizar el código de la aplicación según sea necesario para quitar también las referencias al complemento (especialmente si tu aplicación admite Windows 8.1 y versiones anteriores; esta configuración de visibilidad no se aplicará a estos clientes).

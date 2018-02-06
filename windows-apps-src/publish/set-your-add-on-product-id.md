@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: Si se crea un nuevo complemento en el panel del Centro de desarrollo de Windows, es necesario que especifiques un tipo de producto y asignarle a este un id. del producto.
+Description: When you create a new add-on in the Windows Dev Center dashboard, you need to specify a product type and assign it a product ID.
 title: Establecer el tipo del producto de tu complemento y el id. del producto
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
 ms.author: wdg-dev-content
-ms.date: 06/28/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 136077edcf4704f3ea71416719e7c37db43dafda
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: "windows 10, uwp, complementos, iap, duradero, consumible, suscripción, tipo de producto, id. de producto, compra desde la aplicación, producto desde la aplicación"
+ms.localizationpriority: high
+ms.openlocfilehash: 24731a378ddc0defada7a94282afd790dfb5b780
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Establecer el tipo del producto de tu complemento y el id. del producto
 
@@ -49,14 +50,11 @@ Hay dos tipos de complementos consumibles:
 
 Si deseas cobrar a los clientes de forma periódica para el complemento, elige **Suscripción**.
 
-> [!NOTE]
-> Actualmente, la capacidad para crear complementos de una suscripción solo está disponible para un conjunto de cuentas de desarrollador que participan en un programa de usuarios pioneros. En el futuro pondremos los complementos de suscripción a disposición de todas las cuentas de desarrollador. Ahora estamos proporcionando esta documentación preliminar para ofrecer a los desarrolladores una vista previa de esta característica. Para obtener más información, consulta [Habilitar complementos de una suscripción para tu aplicación](../monetize/enable-subscription-add-ons-for-your-app.md).
-
 Después de que un cliente haya adquirido inicialmente un complemento de suscripción, tendrá que seguir pagando en intervalos periódicos para poder seguir usando el complemento. El cliente puede cancelar la suscripción en cualquier momento para evitar más cargos. Tendrás que especificar el período de suscripción y si ofreces una evaluación gratuita en el paso **Propiedades** del envío.
 
 Los complementos de suscripción solo son compatibles con clientes que tienen Windows10, versión 1607 o posterior. La aplicación principal debe compilarse con SDK de Windows 10, versión 14393 o posterior, y debe usar la API de compra desde la aplicación en el espacio de nombres **Windows.Services.Store** en lugar de **Windows.ApplicationModel.Store**. Para obtener más información sobre las diferencias entre estos espacios de nombres, consulta [Pruebas y compras desde la aplicación](../monetize/in-app-purchases-and-trials.md).
 
-Debes enviar el producto principal antes de poder publicar el complemento de suscripción en la Tienda (aunque puedes crear el envío en tu panel de información y empezar a trabajar en cualquier momento).
+Debes enviar el producto principal antes de poder publicar los complementos de suscripción en Store (aunque puedes crear el envío en tu panel y empezar a trabajar en cualquier momento).
 
 ## <a name="product-id"></a>Id. del producto
 
@@ -69,5 +67,5 @@ A continuación, se detallan algunos aspectos que se deben tener en cuenta al el
 -   Un id. del producto no puede tener más de 100 caracteres de longitud.
 -   Un id. del producto no puede incluir ninguno de los caracteres siguientes: **&lt; &gt; \* % & : \\ ? + ,**
 -   Para ofrecer el complemento en todas las versiones del sistema operativo, debes usar solo caracteres alfanuméricos, puntos o guiones bajos. Si usas otros tipos de caracteres, el complemento no estará disponible para su compra para clientes que ejecutan Windows Phone 8.1 o versiones anteriores.
--   Un id. de producto no tiene por qué ser único en la Tienda Windows, pero debe ser exclusivo para tu cuenta de desarrollador.
+-   Un id. de producto no tiene por qué ser único en Microsoft Store, pero debe ser exclusivo para tu cuenta de desarrollador.
  

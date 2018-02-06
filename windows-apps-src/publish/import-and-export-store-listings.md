@@ -1,33 +1,35 @@
 ---
 author: jnHs
-Description: "Puedes crear descripciones de la Tienda para tus aplicaciones sin usar el panel de información del Centro de desarrollo exportando las descripciones en un archivo .csv, introduciendo la información y los activos y luego importando el archivo actualizado."
-title: Importar y exportar descripciones de la Tienda
+Description: You can create Store listings for your apps without using the Dev Center dashboard by exporting your listings in a .csv file, entering your info and assets, and then importing the updated file.
+title: Importar y exportar descripciones de Store
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 12/22/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows10, uwp
-ms.openlocfilehash: 691074727bab67e616541b393468eb70f0b20a05
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+keywords: "windows 10, uwp, importar descripciones de store, exportar descripciones de store, importar exportar, descripción de store csv"
+ms.localizationpriority: high
+ms.openlocfilehash: f003ab35fa968e7b4be8e6e0591d97baafaa8648
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 01/12/2018
 ---
-# <a name="import-and-export-store-listings"></a>Importar y exportar descripciones de la Tienda
+# <a name="import-and-export-store-listings"></a>Importar y exportar descripciones de Store
+En lugar de [escribir información para las descripciones de Store directamente en el panel](create-app-store-listings.md), tienes la opción de añadir o actualizar información exportando descripciones en un archivo .csv, escribiendo tu información y activos e importando el archivo actualizado. Puedes usar este método para crear descripciones desde cero o actualizar descripciones que ya has creado.
 
-Puedes crear [descripciones de la Tienda](create-app-store-listings.md) para tus aplicaciones sin usar el panel de información del Centro de desarrollo exportando las descripciones en un archivo .csv, introduciendo la información y los activos y luego importando el archivo actualizado. Puedes usar este método para crear descripciones desde cero o actualizar descripciones que ya has creado. 
-
-Ten en cuenta que no puedes usar este método para crear o actualizar [descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md) para tu aplicación.
+Esta opción es especialmente útil si quieres crear o actualizar descripciones de Store para el producto en varios idiomas, ya que puedes copiar y pegar la misma información en varios campos y realizar cualquier cambio fácilmente que se deben aplicar a un idioma concreto. Sin embargo, no puedes usar este método para crear o actualizar [descripciones de Store específicas de la plataforma](create-platform-specific-store-listings.md) para tu aplicación. 
 
 > [!TIP]
 > También puedes usar esta característica para importar y exportar descripciones de la Tienda de un complemento. En el caso de los complementos, el proceso funciona igual, salvo que se incluyen [únicamente los campos relevantes de los complementos](#add-ons).
+
+Ten en cuenta que siempre puedes crear o actualizar descripciones directamente en el Panel del Centro de desarrollo (incluso si ya has utilizado el método de importar o exportar). Actualizar directamente en el panel puede resultar la opción más sencilla cuando solo estás realizando un simple cambio, pero puedes usar otro método en cualquier momento.
 
 ## <a name="export-listings"></a>Exportar descripciones
 
 En la página de información general de envíos, haz clic en **Exportar descripción** (en la sección **Descripciones de la Tienda**) para generar un archivo .csv codificado en UTF-8. Guarda este archivo en tu equipo.
 
-Puedes usar MicrosoftExcel u otro editor para editar este archivo. Ten en cuenta que las versiones de Office365 de Excel te permiten guardar un archivo .csv como **CSV UTF-8 (delimitado por comas) (*.csv)**, pero otras versiones no son compatibles. Puedes encontrar información sobre las versiones de Excel compatibles con esta característica en [Boletín de nuevas características de Excel2016](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73), así como más información sobre la codificación de UTF-8 en diversos editores [aquí](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
+Puedes usar MicrosoftExcel u otro editor para editar este archivo. ten en cuenta que las versiones de Office 365 de Excel te permiten guardar un archivo .csv como **CSV UTF-8 (delimitado por comas) (*.csv)**, pero otras versiones no son compatibles. Puedes encontrar información sobre las versiones de Excel compatibles con esta característica en [Boletín de nuevas características de Excel2016](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73), así como más información sobre la codificación de UTF-8 en diversos editores [aquí](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
       
 Si aún no has creado las descripciones para tu producto, el archivo .csv que exportaste no incluirá los datos personalizados. Aparecerán las columnas **Campo**, **ID**, **Tipo** y **predeterminado**, así como las filas que corresponden a cada elemento que puede aparecer en una descripción de la Tienda.
 
@@ -84,7 +86,7 @@ Por ejemplo, si la carpeta raíz se denomina **my_folder** y quieres usar una im
 
 ## <a name="import-listings"></a>Importar descripciones
 
-Una vez que hayas introducido todos los cambios en el archivo .csv (y hayas incluido los activos que quieras cargar), tendrás que guardar el archivo antes de cargarlo. Si usas una versión de MicrosoftExcel compatible con la codificación UTF-8, asegúrate de seleccionar **Guardar como** y usar el formato **CSV UTF-8 (delimitado por comas) (*.csv)**. Si usas un editor diferente para ver y editar el archivo .csv, asegúrate de que el archivo se codifique en UTF-8 antes de cargarlo.
+Una vez que hayas introducido todos los cambios en el archivo .csv (y hayas incluido los activos que quieras cargar), tendrás que guardar el archivo antes de cargarlo. Si usas una versión de Microsoft Excel compatible con la codificación UTF-8, asegúrate de seleccionar **Guardar como** y usar el formato **CSV UTF-8 (delimitado por comas) (*.csv)**. Si usas un editor diferente para ver y editar el archivo .csv, asegúrate de que el archivo se codifique en UTF-8 antes de cargarlo.
 
 Cuando estés listo para cargar el archivo .csv actualizado e importar los datos de la descripción, selecciona **Importar descripciones** en la página de información general de envíos. Si solo vas a importar un archivo .csv, elige **Importar .csv**, busca el archivo y haz clic en **Abrir**. Si vas a importar una carpeta con archivos de imagen, elige Importar carpeta, busca la carpeta y haz clic en **Seleccionar carpeta**. Asegúrate de que hay un solo archivo .csv en la carpeta, junto con todos los activos que estás cargando. 
 

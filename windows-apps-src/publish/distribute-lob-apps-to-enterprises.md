@@ -1,27 +1,31 @@
 ---
 author: jnHs
-Description: "Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que las empresas las compren por volumen a través de la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación, sin necesidad de que las aplicaciones estén disponibles en la Tienda de forma general."
-title: "Distribuir aplicaciones de línea de negocio a empresas"
+Description: You can publish line-of-business (LOB) apps directly to enterprises for volume acquisition via the Microsoft Store for Business or Microsoft Store for Education, without making the apps broadly available in the Store.
+title: Distribuir aplicaciones de LOB a empresas
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows10, uwp, lob, línea de negocio, aplicaciones para empresas, tienda para empresas, tienda para educación"
-ms.openlocfilehash: 5dab364d495334d102e73550e5d879d2f530d44e
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+keywords: "windows10, uwp, lob, línea de negocio, aplicaciones para empresas, store para empresas, store para educación, empresa"
+ms.localizationpriority: high
+ms.openlocfilehash: 3857e8e6e494700233d41832fb9edce6c65b89bc
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 01/12/2018
 ---
-# <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicaciones de línea de negocio a empresas
+# <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicaciones de LOB a empresas
 
 
 Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que las empresas las compren por volumen a través de la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación, sin necesidad de que las aplicaciones estén disponibles en la Tienda de forma general.
 
 > [!NOTE]
-> Por ahora, solo las aplicaciones gratuitas pueden distribuirse de forma exclusiva a las empresas a través de la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación. Si envías una aplicación de pago como LOB, esta no estará disponible para la empresa en este momento. 
+> Por ahora, solo las aplicaciones gratuitas pueden distribuirse de forma exclusiva a las empresas a través de la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación. Si envías una aplicación de pago como LOB, esta no estará disponible para la empresa. 
+
+> [!IMPORTANT]
+> No puedes usar la [API de envío de Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para publicar aplicaciones de LOB directamente en las empresas. Todos los envíos de aplicaciones de LOB deben realizarse mediante el Panel del Centro de desarrollo de Windows.
 
 
 ## <a name="set-up-the-enterprise-association"></a>Configurar la asociación de empresa
@@ -29,16 +33,16 @@ Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que la
 El primer paso para publicar aplicaciones LOB exclusivamente para una empresa es establecer la asociación entre tu cuenta y la tienda privada de la empresa.
 
 > [!IMPORTANT]
-> Este proceso de asociación debe iniciarlo la empresa y debe usarse la dirección de correo electrónico que consta en la **Información de contacto** de tu cuenta. Para obtener más información, consulta el artículo [Working with line-of-business apps (Trabajar con aplicaciones de línea de negocio)](http://go.microsoft.com/fwlink/p/?LinkId=698846).
+> Este proceso de asociación debe comenzarlo la empresa y debe usarse la dirección de correo electrónico asociada a la cuenta de Microsoft que se usó para crear la cuenta de desarrollador. Para obtener más información, consulta el artículo [Trabajar con aplicaciones de línea de negocio](http://go.microsoft.com/fwlink/p/?LinkId=698846).
 
-Si una empresa decide invitarte para que publiques aplicaciones para su uso exclusivo, recibirás un correo electrónico con un vínculo para confirmar la asociación. También puedes confirmar estas asociaciones en la sección **Asociaciones de empresa** de tu **Configuración de la cuenta**.
+Si una empresa decide invitarte para que publiques aplicaciones para su uso exclusivo, recibirás un correo electrónico con un vínculo para confirmar la asociación. También puedes confirmar estas asociaciones si te diriges a la sección **Asociaciones de empresa** de la **Configuración de la cuenta** (siempre que hayas iniciado sesión con la cuenta de Microsoft que usaste para abrir la cuenta de desarrollador).
 
 Para confirmar la asociación, haz clic en **Aceptar**. De este modo, podrás publicar aplicaciones desde tu cuenta para uso exclusivo de la empresa.
 
 
 ## <a name="submit-lob-apps"></a>Enviar aplicaciones de LOB
 
-Cuando estés listo para publicar una aplicación para uso exclusivo de la empresa, el proceso es similar al proceso de envío de aplicaciones. La aplicación pasa por el mismo [proceso de certificación](the-app-certification-process.md), y debe cumplir con todas las [directivas de la Tienda Windows.](https://msdn.microsoft.com/library/windows/apps/dn764944). Solo hay algunas etapas del proceso que son diferentes.
+Cuando estés listo para publicar una aplicación para uso exclusivo de la empresa, el proceso es similar al proceso de envío de aplicaciones. La aplicación pasa por el mismo [proceso de certificación](the-app-certification-process.md), y debe cumplir con todas las [directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/dn764944). Solo hay algunas etapas del proceso que son diferentes.
 
 
 ### <a name="visibility"></a>Visibilidad

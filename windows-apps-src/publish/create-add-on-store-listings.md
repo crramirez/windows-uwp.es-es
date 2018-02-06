@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Cuando envíes un complemento, la información que proporciones en las descripciones de la Tienda se mostrará a tus clientes."
-title: Crear descripciones de la Tienda de los complementos
+Description: When submitting an add-on, the info you provide in the Store listings step will be displayed to your customers.
+title: Crear descripciones de Store de los complementos
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
 ms.author: wdg-dev-content
-ms.date: 06/26/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 873e20039d6bd994f5ee3f42822f18c18ded0537
-ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.localizationpriority: high
+ms.openlocfilehash: 0bd24b7b155a7f0d293e49e34ca92f02d99ea787
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="create-add-on-store-listings"></a>Crear descripciones de la Tienda de los complementos
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 06/27/2017
 Cuando envíes un complemento, la información proporcionada en el paso **Descripciones de la Tienda** se mostrará a los clientes cuando vean la opción para adquirir tu complemento. Revisa la descripción de la Tienda cuidadosamente para que represente el complemento con precisión de forma que sea atractivo para los clientes. Puedes proporcionar descripciones de la Tienda personalizadas para diferentes idiomas.
 
 > [!TIP]
-> También puedes [importar y exportar las descripciones de la Tienda](import-and-export-store-listings.md) para un complemento si quieres escribir la información de descripción sin conexión en un archivo .csv, en lugar de proporcionar esta información directamente en el panel de información. Esto puede ser especialmente útil al crear descripciones en varios idiomas.
+> También puedes [importar y exportar las descripciones de la Tienda](import-and-export-store-listings.md) para un complemento si quieres escribir la información de descripción sin conexión en un archivo .csv, en lugar de proporcionar esta información directamente en el panel de información. Esto puede ser especialmente útil al crear descripciones en varios idiomas. Sin embargo, siempre puedes escribir tu información directamente en el panel en lugar de usar la características importar o exportar.
 
 
 ## <a name="store-listing-languages"></a>Idiomas de la descripción de la Tienda

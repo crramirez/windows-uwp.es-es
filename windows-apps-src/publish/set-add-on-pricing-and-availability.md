@@ -1,27 +1,25 @@
 ---
 author: jnHs
-Description: "Cuando envías un complemento, las opciones de la página Precios y disponibilidad determinan lo que se cobrará por tu complemento y cómo se debe ofrecer a los clientes."
+Description: When submitting an add-on, the options on the Pricing and availability page determine what to charge for your add-on and how it should be offered to customers.
 title: Establecer los precios y la disponibilidad de los complementos
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 09671148e670acbfdbc944558a2738712f848dd5
-ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+keywords: windows 10, uwp, complementos, iap, precio
+ms.localizationpriority: high
+ms.openlocfilehash: 8eb2321ec6d2bc8602438e2dc66ca1d96690a3f8
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Establecer los precios y la disponibilidad de los complementos
 
 
 Cuando envías un complemento, las opciones de la página **Precios y disponibilidad** determinan lo que se cobrará por tu complemento y cómo se debe ofrecer a los clientes.
-
-> [!NOTE]
-> Hemos actualizado recientemente las opciones disponibles de esta página. Si tenías un envío en curso antes de que estas opciones estuvieran disponibles, el envío puede seguir mostrando las opciones más antiguas. Puedes eliminar ese envío y, a continuación, crear uno nuevo si quieres usar las opciones más recientes. De lo contrario, las opciones más recientes estarán disponibles en la siguiente actualización, tras publicar el envío en curso.
 
 ## <a name="markets"></a>Mercados
 
@@ -78,7 +76,7 @@ Si no deseas establecer una fecha de lanzamiento todavía y prefieres que el env
 Elige **No antes del \[fecha\]** para garantizar que el envío no se publique hasta una fecha determinada. Con esta opción, el envío se lanzará lo antes posible en la fecha que especifiques o después de ella. La fecha debe ser al menos 24 horas después del momento actual. Junto con la fecha, también puedes especificar la hora en que el envío debe comenzar a publicarse.
  
 > [!NOTE]
-> Los retrasos durante la certificación o la publicación podrían hacer que la fecha de lanzamiento real sea posterior a la que solicites. La Tienda Windows no puede garantizar que el complemento (o la actualización) esté disponible en una fecha específica.  
+> Los retrasos durante la certificación o la publicación podrían hacer que la fecha de lanzamiento real sea posterior a la que solicites. Microsoft Store no puede garantizar que el complemento (o la actualización) esté disponible en una fecha específica.  
 
 
 
