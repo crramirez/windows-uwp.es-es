@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "En el apartado Resumen de pago se muestran los detalles sobre el dinero que has ganado con tus aplicaciones y complementos. También se muestra información que te permite saber cuándo recibirás los pagos y cuánto te pagarán."
+Description: The Payout summary shows you details about the money you’ve earned with your apps and add-ons. It also lets you know when you’ll receive payments and how much you'll be paid.
 title: Resumen de pago
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: d6a069bab6bc24c6f6388eec7ad63c0c79525fd9
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+keywords: windows 10, uwp, resumen de pago, extracto, pagos, ganancias, pagos, pago, beneficios
+ms.localizationpriority: high
+ms.openlocfilehash: 5be84a7fe6918a0ba272aead83ec26e68669c477
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="payout-summary"></a>Resumen de pago
 
@@ -29,6 +30,7 @@ Si vendes productos en Azure Marketplace, también verás información sobre los
 >
 > Los pagos se realizan mensualmente (siempre que se haya alcanzado cualquier umbral de pago aplicable). Por lo general, enviaremos cualquier pago pendiente a día 15 de un mes determinado. Recuerda que los pagos suelen tardar entre 3 y 10 días laborables adicionales en acreditarse en tu cuenta de pago. Para obtener más información, consulta [Umbrales, métodos y plazos de pago](payment-thresholds-methods-and-timeframes.md).
 
+Para ver tu **Resumen de pago**, haz clic en el icono **Pago** que aparece junto a la esquina superior derecha del Centro de desarrollo y, a continuación, selecciona **Resumen de pago**.
 
 ## <a name="current-proceeds-and-payments"></a>Ganancias y pagos actuales
 
@@ -56,7 +58,7 @@ Debajo de la sección **Total pagado hasta la fecha**, verás los últimos tres 
 
 En la parte superior de cada extracto, verás el importe total de tu pago mensual. Justo debajo, en los **Pagos emitidos**, verás un resumen de cómo se calculó el importe del pago.
 
-Debajo, en la sección **Proceeds breakdown**, puedes ver detalles sobre cuánto dinero se ganó por mercado y por fuente de ingresos (por ejemplo, Tienda de Windows Phone, Tienda de Windows 8, TiendaWindows, etc.) por aplicación. También verás detalles acerca de los [ajustes](#proceeds-by-app-and-adjustments) realizados, incluida la fecha, el importe y el motivo del ajuste.
+Debajo, en la sección **Proceeds breakdown**, puedes ver detalles sobre cuánto dinero se ganó por mercado y por fuente de ingresos (por ejemplo, Microsoft Store, Windows Store 8, Windows Phone Store, etc.) por aplicación. También verás detalles acerca de los [ajustes](#proceeds-by-app-and-adjustments) realizados, incluida la fecha, el importe y el motivo del ajuste.
 
 Ten en cuenta que en las secciones anteriores solo se muestra información sobre tus ganancias (y ajustes) por ventas de aplicaciones; si ganaste dinero mediante publicidad, verás una sección independiente de Microsoft Advertising con detalles sobre los pagos y conversiones de divisas.
 
@@ -80,7 +82,7 @@ En la siguiente tabla se describen los campos que aparecen en el archivo .csv. T
 
 | Nombre del campo              | Descripción                                                                                                                              |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Fuente de ingresos          | La fuente de tus ingresos, que se basa en el lugar en el que se ha producido la transacción (por ejemplo, Tienda Windows, Tienda de Windows Phone, Tienda Windows8, publicidad, etc.). |
+| Fuente de ingresos          | La fuente de tus ingresos, que se basa en el lugar en el que se ha producido la transacción (por ejemplo, Microsoft Store, Windows Phone Store, Windows Store 8, publicidad, etc.) |
 | Id. de pedido                |  Un identificador de pedido exclusivo. Este id. permite identificar las transacciones de compra con sus respectivas transacciones que no son de compra (como las devoluciones, la anulaciones, etc.). Ambas tendrá el mismo id. de pedido. Además, en el caso de un cargo dividido en el que se hayan usado varios métodos de pago para una sola compra, te permitirá vincular las transacciones de compra.                                                                                                          |
 | Id. de transacción          |       Identificador único de la transacción.  |
 | Fecha y hora de transacción   | Fecha y hora en que se realizó la transacción (hora UTC).                                                                                        |
@@ -89,7 +91,7 @@ En la siguiente tabla se describen los campos que aparecen en el archivo .csv. T
 | Nombre del producto principal     | Nombre del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el nombre del producto principal es igual al nombre del producto.   |
 | Nombre del producto            | Nombre del producto.                                                                                                                     |
 | Tipo de producto            | Tipo de producto (por ejemplo aplicación, complemento, juego, etc.)                                                                                        |
-| Cantidad                | Si el valor de Fuente de ingresos es la Tienda Windows para empresas, Cantidad representa el número de licencias adquiridas. Para otras fuentes de ingresos, el valor de Cantidad siempre será 1. Nota: Aunque una misma transacción esté dividida en dos artículos de línea debido al uso de dos métodos de pago distintos, cada artículo de línea mostrará un valor de 1 en Cantidad.    |
+| Cantidad                | Si el valor de Fuente de ingresos es la Microsoft Store para Empresas, Cantidad representa el número de licencias adquiridas. Para otras fuentes de ingresos, el valor de Cantidad siempre será 1. Nota: Aunque una misma transacción esté dividida en dos artículos de línea debido al uso de dos métodos de pago distintos, cada artículo de línea mostrará un valor de 1 en Cantidad.    |
 | Tipo de transacción        | Tipo de transacción (por ejemplo, compra, reembolso, inversión, anulación, etc.)                                                                |
 | Método de pago          | Instrumento de pago del cliente usado para la transacción (por ejemplo, tarjeta, facturación del operador de telefonía móvil, PayPal, etc.)                                 |
 | País o región        | País o región donde se realizó la transacción.                                                                                            |

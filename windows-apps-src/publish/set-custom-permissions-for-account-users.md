@@ -1,20 +1,20 @@
 ---
 author: jnHs
-Description: Set custom permissions for account users.
-title: Establecimiento de permisos personalizados para usuarios de cuentas
+Description: Set roles or custom permissions for account users.
+title: Establecer roles o permisos personalizados para usuarios de cuentas
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar"
+keywords: windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar
 ms.localizationpriority: high
-ms.openlocfilehash: 1fdde4be606abae849ff3350d27afbbced157f75
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: 3c62ff8a028af62512936e51bd81d3f3e229bd24
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuentas
 
@@ -29,7 +29,7 @@ Al determinar los roles o los permisos que desees aplicar, ten en cuenta:
 -   Un usuario con un determinado rol (o un conjunto de permisos personalizados) también puede formar parte de un grupo que tenga un rol diferente (o un conjunto de permisos). En ese caso, el usuario tendrá acceso a toda la funcionalidad asociada con el grupo y con la cuenta individual.
 
 > [!TIP]
-> Este tema es específico del Programa de desarrolladores de aplicaciones de Windows. Para obtener información sobre los roles de usuario del Programa de desarrolladores de hardware, consulta [Administración de roles de usuario](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles).
+> Este tema es específico del Programa de desarrolladores de aplicaciones de Windows. Para obtener información sobre los roles de usuario del Programa de desarrolladores de hardware, consulta [Administración de roles de usuario](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles). Para obtener información sobre los roles de usuario en el Programa de aplicaciones de escritorio de Windows, consulta [Programa de aplicaciones de escritorio de Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504#users).
 
 
 <span id="roles" />
@@ -80,13 +80,13 @@ Si quieres habilitar un permiso para el usuario, activa o desactiva la casilla c
 - **Lectura y escritura**: el usuario tendrá acceso tanto para realizar cambios relacionados con el área como para verla.
 - **Mixto**: no puedes seleccionar esta opción directamente, pero el indicador **Mixto** te mostrará si has permitido a una combinación de acceso de dicho permiso. Por ejemplo, si concedes acceso de **Solo lectura** a **Precios y disponibilidad** para **Todos los productos**, pero luego concedes acceso de **Lectura y escritura** a **Precios y disponibilidad** para un producto específico, el indicador **Precios y disponibilidad** de **Todos los productos** se mostrará como mixto. Lo mismo sucede si algunos productos presentan **Sin acceso** para un permiso y otros, acceso de **Lectura y escritura** o de **Solo lectura**.
 
-En el caso de algunos permisos, como los relacionados con la visualización de datos analíticos, solo se puede conceder acceso de **Solo lectura**. Ten en cuenta que en la implementación actual algunos permisos no distinguen en absoluto entre acceso de **Solo lectura** y de **Lectura y escritura**. Revisa los detalles de cada permiso para comprender las capacidades específicas que concede el acceso de **Solo lectura** o de **Lectura y escritura**.
+En el caso de algunos permisos, como los relacionados con la visualización de datos analíticos, solo se puede conceder acceso de **Solo lectura**. Ten en cuenta que en la implementación actual algunos permisos no distinguen en absoluto entre acceso de **Solo lectura** y de **Lectura y escritura**. Revisa los detalles de cada permiso para comprender las capacidades específicas que concede el acceso de **Solo lectura** y de **Lectura y escritura**.
 
 En las tablas siguientes se describen los datos concretos de cada permiso.
 
 ## <a name="account-level-permissions"></a>Permisos de nivel de cuenta
 
-Los permisos de esta sección no se pueden limitar a productos específicos. La concesión de acceso a estos permisos otorga al usuario permiso para toda la cuenta.
+Los permisos de esta sección no se pueden limitar a productos específicos. La concesión de acceso a uno de estos permisos otorga al usuario permiso para toda la cuenta.
 
 <table>
     <colgroup>
@@ -117,6 +117,7 @@ Los permisos de esta sección no se pueden limitar a productos específicos. La 
 <tr><td align="left">    **Información de contacto**                        </td><td align="left">  Permite ver la [información de contacto](managing-your-profile.md) en la sección de configuración de la cuenta.        </td><td align="left">  Permite ver y editar la [información de contacto](managing-your-profile.md) en la sección de configuración de la cuenta.            </td></tr>
 <tr><td align="left">    **Cumplimiento de COPPA**                    </td><td align="left">  Permite ver selecciones del [cumplimiento de COPPA](in-app-ads.md#coppa-compliance) (que indica si los productos se destinan a niños menores de 13 años) de todos los productos de la cuenta.                                            </td><td align="left">  Permite ver y editar selecciones del [cumplimiento de COPPA](in-app-ads.md#coppa-compliance) (que indica si los productos se destinan a niños menores de 13 años) de todos los productos de la cuenta.         </td></tr>
 <tr><td align="left">    **Grupos de clientes**                     </td><td align="left">  Permite ver [grupos de clientes](create-customer-groups.md) (segmentos y grupos piloto) en la sección **Clientes**.      </td><td align="left">  Permite crear, editar y ver [grupos de clientes](create-customer-groups.md) (segmentos y grupos piloto) en la sección **Clientes**.       </td></tr>
+<tr><td align="left">    **Administrar grupos de productos**&nbsp;\*                            </td><td align="left">  Permite ver la nueva página de creación de grupos de productos, pero en realidad no permite crear nuevos grupos de productos.    </td><td align="left">  Permite crear y editar grupos de productos.     </td></tr>
 <tr><td align="left">    **Nuevas aplicaciones**                            </td><td align="left">  Permite ver la nueva página de creación de aplicaciones, pero en realidad no permite crear nuevas aplicaciones en la cuenta.    </td><td align="left">  Permite [crear nuevas aplicaciones](create-your-app-by-reserving-a-name.md) en la cuenta mediante la reserva de nuevos nombres de aplicación, y crear envíos y enviar aplicaciones a la Tienda.     </td></tr>
 <tr><td align="left">    **Nuevos conjuntos**&nbsp;*                       </td><td align="left">  Permite ver la nueva página de creación de conjuntos, pero en realidad no permite crear nuevos conjuntos en la cuenta.     </td><td align="left">  Permite crear nuevos conjuntos de productos.          </td></tr>
 <tr><td align="left">    **Servicios de partners**&nbsp;*                  </td><td align="left">  Permite ver certificados para la instalación en servicios con el fin de recuperar XTokens.     </td><td align="left">  Permite administrar y ver certificados para la instalación en servicios con el fin de recuperar XTokens.       </td></tr>
@@ -125,7 +126,8 @@ Los permisos de esta sección no se pueden limitar a productos específicos. La 
 <tr><td align="left">    **Usuarios de confianza**&nbsp;*                   </td><td align="left">  Permite ver los usuarios de confianza para recuperar XTokens.    </td><td align="left">  Permite administrar y ver los usuarios de confianza para recuperar XTokens.     </td></tr>
 <tr><td align="left">    **Solicitar discos**&nbsp;*                   </td><td align="left">  Puedes ver las solicitudes de discos de juegos.    </td><td align="left">  Puedes crear y ver las solicitudes de discos de juegos.     </td></tr>
 <tr><td align="left">    **Espacios aislados**&nbsp;*                         </td><td align="left">  Permite acceder a la página de **Espacios aislados** y ver los espacios aislados de la cuenta y cualquier configuración que se aplique a dichos espacios. No permite ver los productos ni los envíos de cada espacio aislado a menos que se otorguen los permisos de nivel de producto oportunos. </td><td align="left">  Permite acceder a la página de **espacios aislados**, y ver y administrar los espacios aislados en la cuenta, incluida la creación y la eliminación de espacios aislados y la administración de sus configuraciones. No permite ver los productos ni los envíos de cada espacio aislado a menos que se otorguen los permisos de nivel de producto oportunos.    </td></tr>
-<tr><td align="left">    **Perfil fiscal**                         </td><td align="left">  Permite ver la [información del perfil fiscal y los formularios](setting-up-your-payout-account-and-tax-forms.md#tax-forms) en **Configuración de la cuenta**.     </td><td align="left">  Permite rellenar formularios fiscales y actualizar la [información del perfil fiscal](setting-up-your-payout-account-and-tax-forms.md#tax-forms) en **Configuración de la cuenta**.     </td></tr>
+<tr><td align="left">    **Eventos de ventas de la Store**&nbsp;\*                            </td><td align="left">  N/C    </td><td align="left">  Permite configurar la opción de incluir productos automáticamente en los eventos de venta de la Store.     </td></tr>
+<tr><td align="left">    **Perfil impositivo**                         </td><td align="left">  Permite ver la [información del perfil fiscal y los formularios](setting-up-your-payout-account-and-tax-forms.md#tax-forms) en **Configuración de la cuenta**.     </td><td align="left">  Permite rellenar formularios fiscales y actualizar la [información del perfil fiscal](setting-up-your-payout-account-and-tax-forms.md#tax-forms) en **Configuración de la cuenta**.     </td></tr>
 <tr><td align="left">    **Cuentas de prueba**&nbsp;*                     </td><td align="left">  Permite ver las cuentas de la configuración de Xbox Live de prueba.      </td><td align="left">  Permite crear, administrar y ver las cuentas de configuración de Xbox Live de prueba.      </td></tr>
 <tr><td align="left">    **Dispositivos Xbox**                        </td><td align="left">  Permite ver las consolas de desarrollo de Xbox habilitadas para la cuenta en la sección **Configuración de la cuenta**.       </td><td align="left">  Permite agregar, eliminar y ver las consolas de desarrollo de Xbox habilitadas para la cuenta en la sección **Configuración de la cuenta**.     </td></tr>
     </tbody>
@@ -166,11 +168,11 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     </thead>
     <tbody>
     <tr><td align="left">    **Adquisiciones**     </td><td>    Permite ver los informes de [adquisiciones](acquisitions-report.md) y de [adquisiciones de complementos](add-on-acquisitions-report.md) del producto.        </td><td>    N/D    </td><td>    N/D (la configuración para el producto principal incluye informes de adquisición de complementos)        </td><td>    N/D                         </td></tr>
-    <tr><td align="left">    **Utilización** </td><td>    Permite ver el [informe de utilización](usage-report.md) del producto.     </td><td>    N/D       </td><td>    N/C     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    **Mantenimiento** </td><td>    Permite ver el [informe Mantenimiento](health-report.md) del producto.    </td><td>    N/D     </td><td>    N/C     </td><td>    N/D         </td></tr>
+    <tr><td align="left">    **Utilización** </td><td>    Permite ver el [informe de utilización](usage-report.md) del producto.     </td><td>    N/D       </td><td>    N/A     </td><td>    N/D         </td></tr>
+    <tr><td align="left">    **Mantenimiento** </td><td>    Permite ver el [informe Mantenimiento](health-report.md) del producto.    </td><td>    N/D     </td><td>    N/A     </td><td>    N/D         </td></tr>
     <tr><td align="left">    **Comentarios del cliente**    </td><td>    Permite ver los informes [Valoraciones](reviews-report.md) y [Comentarios](feedback-report.md) del producto.       </td><td>    N/D (para responder a los comentarios o a las valoraciones, se debe conceder el permiso correspondiente para **ponerse en contacto con los clientes**)   </td><td>    N/D     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    **Análisis de Xbox** </td><td>    Permite ver el informe de análisis de Xbox del producto. (Nota: este informe aún no está disponible).    </td><td>    N/D   </td><td>    N/C       </td><td>    N/D          </td></tr>
-    <tr><td align="left">    **Tiempo real**   </td><td>    Permite ver el informe Tiempo real del producto. (Nota: este informe solo está disponible a través del [Programa Insider del Centro de desarrollo](dev-center-insider-program.md)).      </td><td>    N/D   </td><td>    N/C     </td><td>    N/D                 </td></tr>
+    <tr><td align="left">    **Análisis de Xbox** </td><td>    Permite ver el informe de análisis de Xbox del producto. (Nota: este informe aún no está disponible).    </td><td>    N/C   </td><td>    N/D       </td><td>    N/D          </td></tr>
+    <tr><td align="left">    **Tiempo real**   </td><td>    Permite ver el informe Tiempo real del producto. (Nota: este informe solo está disponible a través del [Programa Insider del Centro de desarrollo](dev-center-insider-program.md)).      </td><td>    N/D   </td><td>    N/A     </td><td>    N/D                 </td></tr>
     </tbody>
     </table>
 
@@ -190,7 +192,8 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     <tr><td align="left">    **Códigos promocionales**     </td><td>    Permite ver pedidos de [código promocional](generate-promotional-codes.md) e información sobre la utilización del producto y sus complementos, y también información sobre su utilización.         </td><td>    Permite ver, administrar y crear pedidos de [código promocional](generate-promotional-codes.md) del producto y sus complementos, y también ver información sobre su utilización.          </td><td>    N/D (la configuración relativa al producto principal se aplicará a todos los complementos)     </td><td>    N/D (la configuración relativa al producto principal se aplicará a todos los complementos)     </td></tr>
     <tr><td align="left">    **Ofertas dirigidas**     </td><td>    Puedes ver las [ofertas dirigidas](use-targeted-offers-to-maximize-engagement-and-conversions.md) del producto.         </td><td>    Permite ver, administrar y crear las [ofertas dirigidas](use-targeted-offers-to-maximize-engagement-and-conversions.md) de la cuenta.          </td><td>    N/D     </td><td>    N/D      </td></tr>
     <tr><td align="left">    **Contacto con el cliente**  </td><td>    Permite ver las [respuestas a los comentarios de los clientes](respond-to-customer-feedback.md) y [a las opiniones de los clientes](respond-to-customer-reviews.md), siempre y cuando también se haya concedido permiso para **Comentarios del cliente**. También permite ver las [notificaciones dirigidas](send-push-notifications-to-your-apps-customers.md) que se han creado para el producto.    </td><td>    Permite [responder a los comentarios de los clientes](respond-to-customer-feedback.md) y [a las opiniones de los clientes](respond-to-customer-reviews.md), siempre y cuando también se haya concedido permiso para **Comentarios del cliente**. También permite [crear y enviar notificaciones dirigidas](send-push-notifications-to-your-apps-customers.md) del producto.                   </td><td>    N/D         </td><td>    N/D                          </td></tr>
-    <tr><td align="left">    **Experimentación**</td><td>    Permite ver [experimentos (pruebas A/B)](../monetize/run-app-experiments-with-a-b-testing.md) y los datos de los experimentos del producto.   </td><td>    Permite crear, administrar y ver [experimentos (pruebas A/B)](../monetize/run-app-experiments-with-a-b-testing.md) del producto y ver datos de los experimentos.     </td><td>    N/D  </td><td>    N/D                 </td></tr>
+    <tr><td align="left">    **Experimentación**</td><td>    Permite ver [experimentos (pruebas A/B)](../monetize/run-app-experiments-with-a-b-testing.md) y los datos de los experimentos del producto.   </td><td>    Permite crear, administrar y ver [experimentos (pruebas A/B)](../monetize/run-app-experiments-with-a-b-testing.md) del producto y ver datos de los experimentos.     </td><td>    N/D  </td><td>    N/C                 </td></tr>
+    <tr><td align="left">    **Eventos de ventas de la Store**&nbsp;\*</td><td>    Permite ver el estado del evento de venta para el producto.   </td><td>    Permite agregar el producto a los eventos de venta y configurar descuentos.      </td><td>    Permite ver el estado del evento de venta para el producto.   </td><td>    Permite agregar el producto a los eventos de venta y configurar descuentos.      </td></tr>
 
     </tbody>
     </table>

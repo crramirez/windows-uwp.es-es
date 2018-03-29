@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: high
-ms.openlocfilehash: b8a70a249a91f654354d27faeffdf5f605fd9c26
-ms.sourcegitcommit: 12cc05b59b2a249a7683a8692ed453da03a91b28
+ms.openlocfilehash: 3cbaa8a8e78ad14472a34e107521d9c966ba434f
+ms.sourcegitcommit: 884b79b4c6fd8014fab9953faca557e56bb8c400
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="desktop-bridge"></a>Puente de dispositivo de escritorio
 
@@ -30,7 +30,7 @@ Este paquete ofrece a tu aplicación una identidad y con esa identidad, tu aplic
 Además del código que usas para destacar las experiencias de Windows 10, la aplicación permanece intacta y puedes seguir distribuyéndola a tu base de usuarios existente de Windows 7, Windows Vista o Windows XP. En Windows 10, la aplicación continúa ejecutándose en el modo de usuario de plena confianza al igual que hace hoy.
 
 >[!IMPORTANT]
->El Puente de dispositivo de escritorio se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a Windows 10 Anniversary Edition (10.0, compilación 14393) o una versión posterior de Visual Studio.
+>El Puente de dispositivo de escritorio se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la Actualización de aniversario de Windows 10 (10.0, compilación 14393) o una versión posterior de Visual Studio.
 
 > [!NOTE]
 > Consulta <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">esta serie</a> de vídeos cortos que publicó Microsoft Virtual Academy. Estos vídeos te proporcionarán información detallada del proceso completo para incorporar una aplicación de escritorio a la Plataforma universal de Windows (UWP).

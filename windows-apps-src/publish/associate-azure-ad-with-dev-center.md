@@ -3,17 +3,17 @@ author: jnHs
 Description: In order to add and manage account users, you must first associate your Dev Center account with your organization's Azure Active Directory.
 title: Asociar AzureActiveDirectory a la cuenta del Centro de desarrollo
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, azure ad, inquilino de azure, inquilino de aad, inquilino de azure ad, administración de inquilinos, inquilinos"
+keywords: windows 10, uwp, azure ad, inquilino de azure, inquilino de aad, inquilino de azure ad, administración de inquilinos, inquilinos
 ms.localizationpriority: high
-ms.openlocfilehash: ef53a8b339f7f6444373d7445721b641926f00a3
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: c430bb279d0b9da6126212a8af7400df8cd1693e
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Asociar AzureActiveDirectory a la cuenta del Centro de desarrollo
 
@@ -22,7 +22,7 @@ Para [agregar y administrar usuarios de la cuenta](add-users-groups-and-azure-ad
 El Centro de desarrollo de Windows saca partido de AzureAD para la administración de cuentas de varios usuarios y su acceso. Si la organización ya usa Office365 u otros servicios empresariales de Microsoft, ya tienes AzureAD. De lo contrario, puedes crear un nuevo inquilino de AzureAD desde el Centro de desarrollo sin ningún coste adicional.
 
 > [!TIP]
-> Este tema es específico del programa de desarrolladores de aplicaciones de Windows, pero la asociación de un inquilino y la administración de usuarios funcionan de forma similar para las cuentas del Programa de desarrolladores de hardware de Windows. En esta sección, las referencias al rol **Administrador** también se aplicarían a las cuentas de hardware con el rol **Administrador**. Para obtener más información sobre la administración de usuarios en el Programa de desarrolladores de hardware, consulta [Administración del panel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration).
+> Este tema es específico del programa de desarrolladores de aplicaciones de Windows, pero la asociación de un inquilino y la administración de usuarios funcionan de forma similar para las cuentas del Programa de aplicaciones de escritorio de Windows (consulta [Programa de aplicaciones de escritorio de Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504#users) para obtener más información) y en el Programa de desarrolladores de hardware de Windows (donde las referencias al rol **Administrador** también se aplican a las cuentas de hardware con el rol **Administrador**; consulta [Administración del panel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obtener más información).
 
 Un solo un inquilino de AzureAD puede asociarse con varias cuentas del Centro de desarrollo. Solo debes tener un inquilino de Azure AD asociado a tu cuenta del Centro de desarrollo para agregar varios usuarios de la cuenta, pero también tienes la opción de agregar varios inquilinos de Azure AD a una sola cuenta del Centro de desarrollo. Cualquier usuario con el rol **Administrador** en la cuenta del Centro de desarrollo tendrá la opción de agregar y quitar inquilinos de Azure AD.
 

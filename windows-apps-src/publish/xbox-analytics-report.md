@@ -1,19 +1,19 @@
 ---
 author: jnHs
 Description: The Xbox analytics report in the Windows Dev Center dashboard shows you statistics about how your customers are engaging with the Xbox features in your product.
-title: "Informe de análisis de Xbox"
+title: Informe de análisis de Xbox
 ms.author: wdg-dev-content
-ms.date: 10/30/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, análisis de xbox, análisis dinámicos de xbox, estadística de xbox"
+keywords: windows 10, uwp, análisis de xbox, análisis dinámicos de xbox, estadística de xbox
 ms.localizationpriority: high
-ms.openlocfilehash: ad40d33d51287126cd1940eb830b1be0c5ba7812
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 2b6ab5c15b4683456502ce1b94b1bf3ca74c239c
+ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xbox-analytics-report"></a>Informe de análisis de Xbox
 
@@ -55,7 +55,6 @@ En esta sección se muestra el número total de clientes que han desbloqueado ca
 En esta sección se incluyen pestañas que puedes seleccionar para mostrar datos diferentes para los clientes de tu juego. Ten en cuenta que las estadísticas de esta sección hacen referencia al uso de características en general y no dentro de tu producto específico.
 
 - En la pestaña **Social usage** se muestran los datos relacionados con la forma de interacción social de tus clientes.
-   - **Centro de juegos** muestra el porcentaje de los clientes que interactúan con los hubs de juego. Estos datos solo están disponibles para los productos en Xbox y hacen referencia a cuántos de tus clientes usan hubs de juegos en general, no solo el hub de juegos de tu producto de manera específica.
    - **Game invites** muestra el porcentaje de tus clientes que han enviado invitaciones (para cualquier juego).
    - **Charla de grupo** muestra el porcentaje de los clientes que usan la charla de grupo (para cualquier juego).
    - **Mensajes de texto** muestra el porcentaje de los clientes que envían mensajes a través del Shell de Xbox (para cualquier juego).

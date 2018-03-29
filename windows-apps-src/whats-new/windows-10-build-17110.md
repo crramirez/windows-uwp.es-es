@@ -1,0 +1,99 @@
+---
+author: QuinnRadich
+title: Novedades de Windows 10 para desarrolladores; herramientas y características
+description: Tanto la compilación 17110 de Windows 10 como las nuevas herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la tecnología de la Plataforma universal de Windows.
+keywords: conoce las novedades, novedades, actualizar, actualización, actualizaciones, características, nuevo, Windows 10, más recientes, desarrolladores, 17110, vista previa
+ms.author: quradic
+ms.date: 3/07/2018
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+ms.localizationpriority: high
+ms.openlocfilehash: 5d416ad13c2e689c5265164c0269244a387a6c7f
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2018
+---
+# <a name="whats-new-in-windows-10-for-developers-sdk-preview-build-17110"></a>Novedades para desarrolladores en Windows 10, versión preliminar del SDK 17110
+
+La versión preliminar del SDK 17110 de Windows 10, en combinación con Visual Studio 2017 y el SDK actualizado, proporciona las herramientas, características y experiencias para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para aprender a usar el [código de aplicación existente en Windows](../porting/index.md).
+
+A continuación te ofrecemos una colección de características e instrucciones nuevas y mejoradas de interés para los desarrolladores de Windows en esta versión preliminar del SDK. Por ahora, estas características son accesibles para los miembros del [Programa Windows Insider](https://insider.windows.com/en-us/) y también estarán disponibles públicamente en la siguiente actualización importante de Windows 10. Para obtener una lista completa de los nuevos espacios de nombres agregados a Windows SDK, consulta los [Cambios en la API de Windows 10, versión 17110](windows-10-build-17110-api-diff.md). Para obtener más información sobre las características destacadas de Windows 10, consulta [Novedades de Windows 10](http://go.microsoft.com/fwlink/?LinkId=823181). También puedes consultar [Funcionalidades de la plataforma de desarrolladores de Windows](https://developer.microsoft.com/windows/platform/features) si quieres tener una descripción general de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
+
+## <a name="design--ui"></a>Diseño e interfaz de usuario
+
+Función | Descripción
+ :------ | :------
+Notificaciones del sistema adaptables e interactivas | Mejora tu aplicación con notificaciones interactivas y adaptables. Empieza con nuestras [directrices actualizadas sobre notificaciones del sistema](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md) y explora la nueva información sobre las restricciones de tamaño de imagen, las barras de progreso y la adición de opciones de entrada.
+Vínculos de contenido | El nuevo control [Vínculos de contenido](../design/controls-and-patterns/content-links.md) proporciona una forma de insertar datos enriquecidos en los controles de texto, lo que permite al usuario encontrar y usar más información acerca de una persona o un lugar sin abandonar el contexto de la aplicación.
+Ejemplos de diseño | El ejemplo de BuildCast se ha agregado a la página [Muestras y kits de herramientas de diseño](../design/downloads/index.md). BuildCast es una muestra descentralizada integrada para presentar Fluent Design System y otras funcionalidades de la Plataforma universal de Windows.
+Escritura a mano incrustada | La característica de entrada de lápiz se ha agregado a [controles de texto](../design/controls-and-patterns/text-controls.md), lo que permite a los usuarios escribir directamente en los cuadros de texto con Windows Ink. Conforme el usuario escribe, el texto se convierte en un script que se parece mucho a la escritura natural.
+Actualizaciones de Fluent Design | Hemos actualizado muchas de nuestras páginas de Fluent Design con información y directrices nuevas: </br> * Se ha actualizado la [introducción a Fluent design](../design/fluent-design-system/index.md) para unificarse con las características de Fluent más recientes. </br> * [Mostrar resaltado](../design/style/reveal.md) tiene nuevas directrices sobre temas y controles personalizados. </br> * [Historial de navegación y navegación hacia atrás](../design/basics/navigation-history-and-backwards-navigation.md) se ha renovado, con ejemplos detallados, directrices para la optimización de dispositivos y directrices para el comportamiento personalizado.
+Diseños de página | Hemos actualizado nuestros documentos de [diseño de página XAML](../design/layout/layouts-with-xaml.md) con nueva información acerca de diseños fluidos y estados visuales. Estas características permiten obtener un mayor control sobre la forma en que la posición de los elementos de la aplicación responden al espacio visual disponible y se adaptan a él.
+Extraer para actualizar | El control [Extraer para actualizar](../design/controls-and-patterns/pull-to-refresh.md) permite a un usuario desplegar una lista de datos para recuperar más datos. Se usa ampliamente en dispositivos con pantalla táctil.
+Vista de navegación | El control de [Vista de navegación](../design/controls-and-patterns/navigationview.md) proporciona un menú de navegación contraíble para la navegación de nivel superior de tu aplicación. Este control implementa el panel de navegación, o menú hamburguesa, y adapta automáticamente el modo de presentación del panel a diferentes tamaños de ventana.
+Reveal focus | El nuevo efecto [Reveal focus](../design/style/reveal-focus.md) proporciona iluminación para experiencias como las pantallas de televisión y la Xbox One. Anima el borde de los elementos activables, como los botones, cuando el usuario mueve el foco del teclado o del controlador para juegos a ellos.
+Sonido | XAML admite ahora 3D Audio con la propiedad **SpatialAudioMode**. Consulta [Sonido](../design/style/sound.md) para obtener información sobre cómo se puede configurar.
+Vista de árbol | El control [TreeView](../design/controls-and-patterns/tree-view.md) permite una lista jerárquica con nodos que se expanden y se contraen, y que contienen elementos anidados. Puede usarse para ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
+Estilo de escritura | Hemos actualizado y ampliado nuestro artículo en lo relativo a la voz y al tono, transformándolo en [directrices de estilo de escritura](../design/style/writing-style.md). Esta nueva información proporciona principios para crear texto eficaz en tu aplicación y recomienda los procedimientos recomendados para la escritura de controles como cuadros de diálogo o mensajes de error.
+
+## <a name="gaming"></a>Juegos
+Función | Descripción
+ :------ | :------
+Introducción al desarrollo de juegos | ¿Te interesa el desarrollo de juegos para Windows 10? La nueva página [Introducción al desarrollo de juegos](../gaming/getting-started.md) te ofrece una introducción completa de lo que necesitas hacer para definir tu configuración, registrarte y prepararte para enviar tus aplicaciones y juegos.
+Adaptadores gráficos | Se han agregado las siguientes API de DXGI, que están relacionadas con la eliminación y la preferencia del adaptador de gráficos: </br> * La interfaz de [IDXGIFactory6](https://msdn.microsoft.com/library/windows/desktop/mt814823) permite un solo método que enumera los adaptadores de gráficos en función de una determinada preferencia de GPU. </br> * La función [DXGIDeclareAdapterRemovalSupport](https://msdn.microsoft.com/library/windows/desktop/mt814821) permite a un proceso indicar que es resistente a cualquiera de sus dispositivos gráficos que se quiten. </br> * La enumeración [DXGI_GPU_PREFERENCE](https://msdn.microsoft.com/library/windows/desktop/mt814822) describe la preferencia de GPU en la que se ejecute la aplicación.
+
+
+## <a name="develop-windows-apps"></a>Desarrollar aplicaciones de Windows
+
+Función | Descripción
+ :------ | :------
+Tarjetas adaptables | Las [Tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/) son formato de intercambio de tarjeta abierta que permite a los desarrolladores intercambiar el contenido de la interfaz de usuario de una manera habitual y coherente. Describen su contenido como un objeto JSON que se puede representar para adaptarse automáticamente a la apariencia de la aplicación host.
+Grupo de recursos de aplicaciones | La clase [AppResourceGroupInfo](https://docs.microsoft.com/uwp/api/windows.system.appresourcegroupinfo) tiene nuevos métodos que puedes usar para iniciar la transición a los estados suspendido, activo (reanudado) y finalizado.
+Amplio acceso de sistema de archivos | La funcionalidad **broadFileSystemAccess** concede a las aplicaciones el mismo acceso al sistema de archivos que el usuario que está ejecutando la aplicación actualmente sin ningún mensaje de estilo de selector de archivos. Para obtener más información, consulta [Permisos de acceso de archivos](../files/file-access-permissions.md) y la entrada **broadFileSystemAccess** [Declaraciones de funcionalidades de las aplicaciones](../packaging/app-capability-declarations.md).
+Aplicaciones para UWP de consola | Ahora ya puedes escribir aplicaciones de consola C++ /WinRT o /CX UWP que se ejecutan en una ventana de consola como una ventana de consola DOS o PowerShell. Las aplicaciones de consola usan la ventana de la consola para entrada y salida. Las aplicaciones de consola UWP pueden publicarse en la Microsoft Store, tener una entrada en la lista de aplicaciones y un icono principal que se puede anclar al menú Inicio. Para obtener más información, consulta [Crear una aplicación de consola de la Plataforma universal de Windows](../launch-resume/console-uwp.md)
+Puntos de referencia y encabezados compatibles con la tecnología accesible (AT) | Los puntos de referencia y los encabezados definen secciones de una interfaz de usuario que ayudan en la navegación eficaz para los usuarios de tecnología de asistencia como lectores de pantalla. Para obtener más información, consulta [Puntos de referencia y encabezados](../design/accessibility/landmarks-and-headings.md).
+Aprendizaje automático | El aprendizaje automático de Windows te permite crear aplicaciones que evalúan modelos de aprendizaje automático previamente capacitados localmente en tus dispositivos Windows 10. Para obtener más información sobre la plataforma, consulta [Aprendizaje automático de Windows ](../machine-learning/index.md). </br> El espacio de nombres [MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview) contiene clases que permiten que las aplicaciones carguen modelos de aprendizaje automático, enlacen datos como entradas y evalúen los resultados.
+Controles de mapa | La clase [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) tiene una nueva propiedad denominada **Región** que puedes usar para mostrar contenido en un control de mapa en función del idioma de una región específica (por ejemplo, el estado o la provincia).
+Elementos de mapa | La clase [MapElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement) tiene una nueva propiedad denominada **IsEnabled** que puedes usar para especificar si los usuarios pueden interactuar con la clase [MapElement ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement).
+Información de ubicación del mapa | La clase [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo) contiene un nuevo método **CreateFromAddress** que puedes usar para crear un elemento [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo) usando un nombre para mostrar y una dirección.
+Servicios de mapa | La clase [MapRouteDrivingOptions](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutedrivingoptions) contiene una nueva propiedad denominada **DepartureTime** que puedes usar para calcular una ruta con el estado del tráfico que es habitual para el día y la hora determinados.
+Aplicaciones para UWP de varias instancias | Una aplicación para UWP puede optar por admitir varias instancias. Si se está ejecutando una instancia de una aplicación para UWP de varias instancias y llega una solicitud de activación posterior, la plataforma no activará la instancia existente. En su lugar, creará una instancia nueva, que se ejecuta en un proceso independiente. Para obtener más información, consulta [Crear una aplicación universal de Windows de varias instancias](../launch-resume/multi-instance-uwp.md).
+PlayReady | Microsoft PlayReady es un conjunto de tecnologías para proteger contenido digital de su uso no autorizado. PlayReady se ejecuta en todo tipo de dispositivos y aplicaciones, y en todos los sistemas operativos. [Obtén información para incorporar PlayReady en tu aplicación.](https://docs.microsoft.com/playready/)
+Captura de pantalla | El [espacio de nombres Windows.Graphics.Capture](https://docs.microsoft.com/uwp/api/windows.graphics.capture) proporciona API para adquirir fotogramas desde una pantalla o ventana de aplicación, para crear secuencias de vídeo o instantáneas para crear experiencias interactivas y de colaboración. Consulta [Captura de pantalla](../audio-video-camera/screen-capture.md) para obtener más información.
+Desencadenadores del sistema | La clase [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger) te permite definir un desencadenador del sistema cuando el sistema operativo no proporciona un desencadenador del sistema que necesitas. Por ejemplo, cuando tanto un controlador de hardware como la aplicación para UWP pertenecen a terceros y el controlador de hardware debe generar un evento personalizado que su aplicación controla. Por ejemplo, una tarjeta de audio que debe notificar a un usuario cuando un conector de audio está conectado.
+Actividades del usuario | La clase **UserActivitySessionHistoryItem** tiene nuevos métodos que recuperan actividades recientes del usuario. Consulta [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel#Windows_ApplicationModel_UserActivities_UserActivityChannel_GetRecentUserActivitiesAsync_System_Int32_) y su sobrecarga, para obtener más información.
+Windows Mixed Reality | Para admitir la creciente plataforma Windows Mixed Reality, se han agregado API nuevas a los espacios de nombres [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) y [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial).
+
+## <a name="publish--monetize-windows-apps"></a>Publicar y monetizar aplicaciones de Windows
+
+Función | Descripción
+ :------ | :------
+Especifique precios de forma libre en la moneda local de un mercado específico | Al invalidar el precio base de tu aplicación para un mercado concreto, ya no estás limitado a elegir una de las franjas de precios estándar; ahora tienes la opción de especificar un precio de forma libre en la moneda local del mercado. Para obtener más información, consulta [Establecer y programar los precios de las aplicaciones](../publish/set-and-schedule-app-pricing.md). **Esta función está disponibles para todos los desarrolladores de Windows y no requiere el SDK actualizado.**
+Contexto de Store | La clase [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) se ha actualizado con una selección de métodos nuevos. Estos métodos administran la descarga y la instalación de las actualizaciones de paquetes y complementos de una aplicación.
+Los complementos de suscripción ahora están disponibles para todos los desarrolladores | Crea y publica complementos de una suscripción para vender productos digitales en tus aplicaciones y juegos (como las características de la aplicación o el contenido digital) con períodos de facturación periódicos automatizados. Para obtener más información, consulta [Habilitar complementos de una suscripción para tu aplicación](../monetize/enable-subscription-add-ons-for-your-app.md). **Esta función está disponible para todos los desarrolladores de Windows y no requiere el SDK actualizado.**
+
+## <a name="videos"></a>Vídeos
+
+Los siguientes vídeos se han publicado desde la Fall Creators Update, resaltando las características nuevas y mejoradas de Windows 10 para desarrolladores.
+
+### <a name="package-a-net-app-in-visual-studio"></a>Empaquetar una aplicación .NET en Visual Studio
+
+Es más fácil que nunca llevar tu aplicación de escritorio a la Plataforma universal de Windows. [Ve el vídeo](https://www.youtube.com/watch?v=fJkbYPyd08w) para descubrir cómo empaquetar tu aplicación .NET para su distribución y luego [echa un vistazo a esta página](../porting/desktop-to-uwp-packaging-dot-net.md) para obtener más información.
+
+### <a name="xbox-live-creators-program"></a>Programa de creadores de XboxLive
+
+El Programa de creadores de Xbox Live permite a los desarrolladores publicar rápidamente sus juegos para UWP en Xbox One y Windows 10. [Ve el vídeo](https://www.youtube.com/watch?v=zpFfHHBkVq4) para obtener información sobre el programa y luego [echa un vistazo a esta página](https://www.xbox.com/developers/creators-program) para empezar a trabajar.
+
+### <a name="creating-3d-app-launchers-for-windows-mixed-reality"></a>Crear iniciadores de aplicaciones 3D para Windows Mixed Reality
+
+Los iniciadores 3D proporcionan una manera única para los usuarios de colocar una representación volumétrica de tu aplicación en su entorno de inicio de realidad mixta. [Ve el vídeo](https://www.youtube.com/watch?v=TxIslHsEXno) para obtener información sobre cómo preparar tu modelo 3D y asignarlo como el iniciador de la aplicación y, a continuación, [lee los documentos de desarrollador](https://developer.microsoft.com/windows/mixed-reality/implementing_3d_app_launchers) y [echa un vistazo a nuestras directrices de diseño](https://developer.microsoft.com/windows/mixed-reality/3d_app_launcher_design_guidance) para obtener más información.
+
+### <a name="motion-controller-tracking"></a>Seguimiento del controlador de movimiento
+
+Los controladores de movimiento representan las manos de un usuario en Windows Mixed Reality. [Ve el vídeo](https://www.youtube.com/watch?v=rkDpRllbLII) para obtener información sobre el funcionamiento de los controladores de movimiento cuando se encuentran tanto dentro como fuera del campo de visión de los auriculares de realidad mixta, y [lee más información acerca del seguimiento del controlador aquí.](https://developer.microsoft.com/windows/mixed-reality/motion_controllers#controller_tracking_state%E2%80%9D)
+
+### <a name="accessibility-tools-for-windows-developers"></a>Herramientas de accesibilidad para los desarrolladores de Windows
+
+El SDK de Windows10 incluye varias herramientas que te ayudarán a probar y mejorar la accesibilidad de tu aplicación. Las herramientas Inspect y AccEvent te ayudarán a garantizar que tus aplicaciones están disponibles para todos. [Ve el vídeo](https://www.youtube.com/watch?v=ce0hKQfY9B8&list=PLWs4_NfqMtoycBFndriDmkQlMLwflyoFF&t=0s&index=1) para obtener información acerca de estas herramientas y, a continuación, [leer más información sobre pruebas de accesibilidad](../design/accessibility/accessibility-testing.md) para obtener más información.

@@ -1,19 +1,19 @@
 ---
 author: QuinnRadich
-title: "Novedades de Windows 10 para desarrolladores; herramientas y características"
-description: "Tanto la compilación 16299 de Windows 10 como las nuevas herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la tecnología de la Plataforma universal de Windows."
-keywords: "novedades, novedad, actualización, actualizaciones, característica, características, nuevo, Windows 10, 1709, octubre, lo último, desarrolladores, 16299, Fall Creators"
+title: Novedades de Windows 10 para desarrolladores; herramientas y características
+description: Tanto la compilación 16299 de Windows 10 como las nuevas herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la tecnología de la Plataforma universal de Windows.
+keywords: novedades, novedad, actualización, actualizaciones, característica, características, nuevo, Windows 10, 1709, octubre, lo último, desarrolladores, 16299, Fall Creators
 ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 852d59433f3dfe24da6509e588e350dbe1011bbf
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 1e61ede3d16d9c92c28a0e40a0dd65951444ef3a
+ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>Novedades para desarrolladores en Windows 10, compilación 16299
 
@@ -31,6 +31,8 @@ Efectos de Fluent Design | Estos nuevos efectos forman parte de Fluent Design Sy
 Aceleradores de teclado | Aumenta la accesibilidad y la facilidad de uso de la aplicación con [aceleradores de teclado](../design/input/keyboard-accelerators.md) o accesos directos. Proporcionan una forma intuitiva para que los usuarios puedan invocar comandos o acciones comunes sin navegar por la interfaz de usuario de la aplicación y puede configurarse para ajustar el ámbito necesario para su función.
 Entrada manuscrita | Las API [CoreIncrementalInkStroke](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.core.coreincrementalinkstroke) permiten crear trazos de lápiz individuales que pueden representarse de forma incremental, con objetos **InkPoint** individuales. </br></br> Las API [CoreInkPresenterHost](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.core.coreinkpresenterhost) te permiten alojar un objeto **InkPresenter** sin un control **InkCanvas** asociado.
 Controlador de radial | Las API [RadialControllerConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerconfiguration) se han actualizado con la capacidad de distribuir el menú **RadialController** a la vista o proceso de una aplicación.
+Iconos dinámicos | Ancla [iconos secundarios desde las aplicaciones Win32 del Puente de dispositivo de escritorio](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md).
+Notificaciones del sistema | Usa [actualización pendiente](../design/shell/tiles-and-notifications/toast-pending-update.md) en los botones para crear interactividad de varios paso en tus notificaciones del sistema.
 Controles de la interfaz de usuario | Gracias a estos nuevos controles te será más fácil crear una interfaz de usuario inigualable. </br>* El [control del selector de colores](../design/controls-and-patterns/color-picker.md) permite a los usuarios examinarlo y seleccionar colores. </br>* El [control de la vista de navegación](../design/controls-and-patterns/navigationview.md) facilita el proceso para agregar la navegación de nivel superior a la aplicación. </br>* El [control de la imagen del usuario](../design/controls-and-patterns/person-picture.md) muestra la imagen de avatar de una persona. </br>* El [control de clasificación](../design/controls-and-patterns/rating.md) permite a los usuarios ver y establecer clasificaciones que reflejan el grado de satisfacción con el contenido y los servicios.
 Voz y tono | Hemos agregado nuevas [instrucciones sobre la voz y el tono de las aplicaciones para UWP](../design/style/voice-and-tone.md) para ofrecerte asesoramiento para escribir un texto en la aplicación. Independientemente de lo que crees, es importante que el lenguaje que uses sea cercano, sencillo e informativo.
 

@@ -1,26 +1,27 @@
 ---
 author: jnHs
-Description: "En el informe de adquisiciones de complementos del panel del Centro de desarrollo de Windows puedes ver cuántos complementos has vendido, junto con los detalles demográficos y de plataforma."
-title: Informe Adquisiciones de complementos
+Description: The Add-on acquisitions report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details.
+title: Informe de adquisiciones de complementos
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
-ms.date: 08/04/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 46d5ee3d0e0ac9c2a3599f51e17ea4d7425ab5af
-ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+keywords: windows 10, uwp, ventas de complementos, adquisiciones de complementos, ventas de iap, productos desde la aplicación, IAP, complementos
+ms.localizationpriority: high
+ms.openlocfilehash: 5b8d0bb140206612a5096f48d87029b2285a0770
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="add-on-acquisitions-report"></a>Informe Adquisiciones de complementos
+# <a name="add-on-acquisitions-report"></a>Informe de adquisiciones de complementos
 
 
-En el informe de **adquisiciones de complementos** del panel del Centro de desarrollo de Windows puedes ver cuántos complementos has vendido, junto con los detalles demográficos y de plataforma. También te permite obtener información de conversión de los clientes de Windows10.
+En el informe de **adquisiciones de complementos** del panel del Centro de desarrollo de Windows puedes ver cuántos complementos has vendido, junto con los detalles demográficos y de plataforma. También te permite obtener información de conversión de los clientes de Windows10 (incluido Xbox).
 
-Puedes visualizar estos datos en tu panel de información o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de complementos](../monetize/get-in-app-acquisitions.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de complementos](../monetize/get-in-app-acquisitions.md) en la [API de REST de análisis de la Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, una adquisición de complemento significa que un cliente te ha comprado un complemento (o lo ha adquirido sin tener que pagar, si lo ofrecías de forma gratuita). Varias compras del mismo complemento consumible realizadas por el mismo cliente se contabilizan como adquisiciones de complementos independientes.
 
@@ -36,7 +37,7 @@ También puedes expandir la opción **Filtros** para filtrar todos los datos de 
 
 -   **Complemento**: el filtro predeterminado es **Todos los complementos**, pero puedes limitar los datos a uno o varios complementos de la aplicación.
 -   **Mercado**: el filtro predeterminado es **Todos los mercados**, pero puedes limitar los datos a adquisiciones de uno o varios mercados.
--   **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Si quieres mostrar los datos de adquisiciones de un determinado tipo de dispositivo únicamente, aquí puedes elegir uno específico.
+-   **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Si quieres mostrar datos de adquisiciones de un determinado tipo de dispositivo únicamente (como PC, consola o tableta), aquí puedes elegir uno específico.
 
 La información de todos los gráficos que aparecen a continuación reflejará el intervalo de fechas y los filtros que hayas seleccionado. Algunas secciones también te permiten aplicar filtros adicionales.
 
@@ -67,7 +68,7 @@ Puedes ver estos datos en forma de **Mapa** visual o cambiar la configuración p
 
 ## <a name="add-on-page-views-and-conversions-by-campaign-id"></a>Vistas de página de complementos y conversiones de la aplicación por identificador de campaña
 
-En el gráfico **Vistas de página de complementos y conversiones de la aplicación por identificador de campaña** se muestra el número total de conversiones de complementos (adquisiciones) por identificador de campaña durante el período de tiempo seleccionado, lo que te permite realizar un seguimiento de las conversiones y vistas de página de los clientes de Windows10 para cada una de tus [campañas de promoción personalizadas](create-a-custom-app-promotion-campaign.md). En este gráfico se muestran solo las conversiones de complementos.
+En el gráfico **Vistas de página de complementos y conversiones de la aplicación por identificador de campaña** se muestra el número total de conversiones de complementos (adquisiciones) por identificador de campaña durante el período de tiempo seleccionado, lo que te permite realizar un seguimiento de las conversiones y vistas de página de los clientes de Windows10 (incluido Xbox) para cada una de tus [campañas de promoción personalizadas](create-a-custom-app-promotion-campaign.md). En este gráfico se muestran solo las conversiones de complementos.
 
 > [!NOTE]
 > Los clientes pudieron llegar a la descripción de la aplicación haciendo clic en una campaña personalizada que no hayas creado tú. Marcamos cada vista de página dentro de una sesión con el identificador de campaña desde el que el cliente entró a la Tienda por primera vez. Luego atribuimos conversiones a dicho identificador de campaña para todas las adquisiciones en un plazo de 24 horas. Por este motivo, puedes ver un número de total de conversiones mayor que el total de conversiones de los identificadores de campañas. También es posible que tengas conversiones o conversiones de complementos que tengan cero vistas de página. 

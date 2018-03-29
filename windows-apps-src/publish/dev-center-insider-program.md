@@ -1,34 +1,36 @@
 ---
 title: Programa Insider del Centro de desarrollo
-description: "Prueba las nuevas características del Centro de desarrollo antes de que estén disponibles para todos los desarrolladores y cuéntanos qué te parecen."
+description: Prueba las nuevas características del Centro de desarrollo antes de que estén disponibles para todos los desarrolladores y cuéntanos qué te parecen.
 author: JnHs
 ms.author: wdg-dev-content
-ms.date: 01/10/18
+ms.date: 01/31/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows10, uwp, insiders, insider centro de desarrollo, características de vista previa"
+keywords: windows10, uwp, insiders, insider centro de desarrollo, características de vista previa
 ms.assetid: 6fa470dd-e46e-4af1-b278-54bb501a69b0
 ms.localizationpriority: high
-ms.openlocfilehash: bb0d2ad33107de8e5e8c1711de6012b73e754cc0
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: bfebdf4985791916f5e91f728f53bd25ef375755
+ms.sourcegitcommit: 22fc8fb72fd0341d4a5c702175be8b42e713dee1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dev-center-insider-program"></a>Programa Insider del Centro de desarrollo
 
-Como [desarrollador registrado](http://go.microsoft.com/fwlink/?LinkID=615100), puedes influir en la funcionalidad que ofrecemos en el panel del Centro de desarrollo. Para ello, debes unirte al Programa Insider del Centro de desarrollo. Este programa permite probar las nuevas características antes de que estén disponibles para todos los desarrolladores. Te animamos a enviarnos tus comentarios sobre estas características mediante el vínculo Comentarios de la esquina inferior derecha del Centro de desarrollo. Todos los comentarios que recibamos por parte de usuarios de Insider del Centro de desarrollo se leerán atentamente y se les dará prioridad.
+Como [desarrollador registrado](http://go.microsoft.com/fwlink/?LinkID=615100), puedes influir en la funcionalidad que ofrecemos en el panel del Centro de desarrollo. Para ello, debes unirte al Programa Insider del Centro de desarrollo. Este programa permite probar las nuevas características antes de que estén disponibles para todos los desarrolladores. Te animamos a enviarnos tus comentarios sobre estas características mediante el vínculo Comentarios que se encuentra debajo del icono del signo de interrogación de la esquina superior derecha del Centro de desarrollo. Todos los comentarios que recibamos por parte de usuarios de Insider del Centro de desarrollo se leerán atentamente y se les dará prioridad.
 
 Para participar en el programa, inscríbete en la página **Configuración de la cuenta** en el panel del Centro de desarrollo. Puedes dejar de participar en cualquier momento.
 
 > [!IMPORTANT]
-> Los términos del [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/windows/apps/hh694058.aspx) se aplican a tu participación en el programa Léelos antes de unirte al programa, especialmente el Anexo I. Ten en cuenta que las características que se ponen a disposición exclusivamente para personas del Programa Insider del Centro de desarrollo pueden incluir servicios de versión preliminar experimentales y anticipados. Esto significa que estas características no suelen tener documentación disponible aún y puedes experimentar resultados inesperados al usarlas.
+> Los términos del [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) se aplican a tu participación en el programa Léelos antes de unirte al programa, especialmente el Anexo I. Ten en cuenta que las características que se ponen a disposición exclusivamente para personas del Programa Insider del Centro de desarrollo pueden incluir servicios de versión preliminar experimentales y anticipados. Esto significa que estas características no suelen tener documentación disponible aún y puedes experimentar resultados inesperados al usarlas.
 
 Estas son algunas de las características que hemos puesto a disposición exclusiva de los miembros del Programa Insider del Centro de desarrollo. Esta lista cambiará con el tiempo a medida que se agreguen nuevas características (y a medida que las características introducidas para el Programa Insider estén disponibles para todos los usuarios).
 
 | Característica del Programa Insider del Centro de desarrollo   | Cómo pueden probarla los usuarios de Insider del Centro de desarrollo | Fecha de adición |
 |--------------------------------------|------------------------------------|------------|
+|**Gráfico Predicción de las renovaciones en el Informe de uso**: consulta el número de usuarios que predecimos que es probable que dejen de usar la aplicación pronto, en función de su uso reciente. | En el informe **Uso**, ve el gráfico **Predicción de las renovaciones** para consultar una predicción de cuántos usuarios dejarán de usar la aplicación (o úsalo durante menos de 10 minutos) en los próximos 15 días. Después de cada ciclo, el gráfico muestra el número de usuarios que dejaron de usar la aplicación, junto con el número que predijimos. Esta información se actualiza dos veces al mes.  | Enero de 2018 |
+|**Detalles de anomalías de un solo vistazo**: echa un vistazo rápido a los cambios importantes en datos de estado, adquisiciones y uso. | En los informes **Adquisiciones**, **Uso** y **Estado**, mostraremos un marcador de círculo al final de una semana si detectamos anomalías (aumentos o disminuciones importantes) en comparación con la semana anterior. Mantén el puntero encima del círculo para ver detalles sobre qué ha cambiado. | Enero de 2018 |
 |**Personalizar tus preferencias de notificación**: elige las notificaciones que quieres recibir sobre tu cuenta del Centro de desarrollo e indica si quieres recibirlas por correo electrónico, en el panel, o ambos. | Usa el icono cerca de la parte superior del panel para ir al **Centro de mensajes** y luego selecciona **Configuración**. Realiza tus selecciones en la sección Preferencias de notificación. También puedes especificar la dirección en la que quieras recibir las notificaciones por correo electrónico.  | Noviembre de 2017 |
 |**Ver más detalles de tu página de información general**: obtén más detalles sobre las aplicaciones resaltadas sin salir de la página de información general. | En la página de información general, busca las casillas que resalten estadísticas clave para tus aplicaciones. Haz clic en cualquiera de las casillas para ver más detalles sobre la aplicación. | Septiembre de 2017 |
 |**Datos sobre estado casi en tiempo real**: el informe **Estado** ahora muestra datos de bloqueos, errores de memoria y excepciones de JavaScript casi en tiempo real al usar la opción de filtro de página **72H**.  | En el informe Estado de la aplicación, elige la opción **72H** en la parte superior de la página. Ten en cuenta que es posible que veas una discrepancia en los datos durante el período de 72 horas al comparar los filtros **72H**y **30D**. Este es un problema conocido que estamos tratando de solucionar.  | Septiembre de 2017|

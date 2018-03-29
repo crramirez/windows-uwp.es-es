@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "La página Clasificaciones por edades del proceso de envío de la aplicación permite proporcionar información acerca de tu aplicación para recibir las clasificaciones por edades apropiadas de la International Age Rating Coalition (IARC)."
+Description: The Age ratings page of the app submission process lets you provide information about your app so it can receive the appropriate age ratings from the International Age Ratings Coalition (IARC).
 title: Clasificaciones por edades
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 4adac59c0508bcdd9c21180a1c6dcb70fc4532b3
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+keywords: windows 10, uwp, clasificación por edades, clasificación de juegos, iarc, clasificación, cuestionario, panel de clasificación, clasificación de contenido
+ms.localizationpriority: high
+ms.openlocfilehash: 0af2d316b0d0c4705c4669ef910f37845ca78aa8
+ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="age-ratings"></a>Clasificaciones por edades
 
@@ -21,10 +22,10 @@ La página **Clasificaciones por edades** del [proceso de envío de la aplicaci�
 
 ## <a name="answering-the-age-ratings-questionnaire"></a>Responder al cuestionario de clasificaciones por edades
 
-La primera vez que envíes una aplicación (o la primera vez que actualices una aplicación publicada con el proceso anterior de clasificación por edades), se te solicitará que completes un cuestionario de elección múltiple para determinar la clasificación por edades de tu aplicación.
+La primera vez que envíes una aplicación (o la primera vez que actualices una aplicación publicada con el proceso anterior de clasificación por edades), se te solicitará que respondas un cuestionario de varias opciones para determinar la clasificación por edades de tu aplicación.
 
 > [!IMPORTANT]
-> Si ya has completado el cuestionario sobre la aplicación en otro escaparate y tienes un identificador de la clasificación de la IARC, puedes seleccionar la opción de proporcionarnos tu identificador de clasificación. Usaremos tu identificador para asociar las clasificaciones existentes con tu aplicación en la Tienda Windows.
+> Si ya has completado el cuestionario sobre la aplicación en otro escaparate y tienes un identificador de la clasificación de la IARC, puedes seleccionar la opción de proporcionarnos tu identificador de clasificación. Usaremos tu id. para asociar las clasificaciones existentes con tu aplicación en la Microsoft Store.
 
 Tienes que responder a las preguntas con precisión. Como parte de este proceso, compartimos con la IARC tu nombre para mostrar de publicador y tu dirección de correo electrónico. Tras completar el cuestionario, el sistema de clasificación de la IARC proporcionará la información de clasificación por edades y contenido en base a tus respuestas. Esta información de clasificación la usaremos a la hora de mostrar tu aplicación a los clientes en diferentes mercados. También recibirás un correo electrónico de la IARC con una confirmación de la clasificación por edades de la aplicación cuando dicha aplicación se haya publicado.
 
@@ -37,7 +38,10 @@ La próxima vez que actualices la aplicación, verás todas las clasificaciones 
 <span id="boards" />
 
 > [!NOTE]
-> La legislación de Corea del Sur exige que los juegos disponibles en Corea del Sur se clasifiquen a través del [Panel de clasificación de juegos](http://go.microsoft.com/fwlink/p/?LinkId=228256) de Corea del Sur. Si la aplicación es un juego y quieres ofrecerlo en Corea del Sur, debes rellenar esta sección adicional y cargar el certificado de clasificación. Ten en cuenta que si la aplicación no es un juego o si no quieres ofrecerla en Corea del Sur, puedes dejar esta sección en blanco.
+> La legislación de Corea del Sur exige que los juegos disponibles en Corea del Sur se clasifiquen a través del [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) de Corea del Sur. Si estás enviando un juego y quieres ofrecerlo en Corea del Sur, debes rellenar esta sección adicional y cargar el certificado de clasificación. Ten en cuenta que si la aplicación no es un juego o si no quieres ofrecerla en Corea del Sur, puedes dejar esta sección en blanco.
+
+> [!NOTE]
+> Si estás enviando un juego que estará disponible en Taiwán, se te exige por ley registrar la clasificación de CSRR proporcionado usando [este formulario](https://go.microsoft.com/fwlink/?linkid=867281). 
 
 <span id="appeal" />
 ## <a name="appealing-ratings-or-refused-classifications"></a>Apelar clasificaciones o clasificaciones rechazadas
@@ -47,9 +51,9 @@ Si tienes dudas sobre la clasificación por edades que ha recibido tu aplicació
 En algunos casos, es posible que la clasificación de tu aplicación haga que esta se clasifique como no adecuada para un país o región determinado. En este caso, verás un mensaje que indicará los mercados en los que no se puede ofrecer tu aplicación. Si no estás de acuerdo con esta clasificación (o con cualquier otra), puedes solicitar una apelación mediante el vínculo que aparece en el correo electrónico de certificado de la clasificación que recibirás de la IARC.
 
 
-## <a name="previous-windows-store-age-ratings"></a>Clasificaciones por edades anteriores de la Tienda Windows
+## <a name="previous-microsoft-store-age-ratings"></a>Clasificaciones por edades anteriores de la Microsoft Store
 
-Anteriormente, los propios desarrolladores especificaban la clasificación por edades de su aplicación, en lugar de completar el cuestionario. A continuación tienes el desglose de clasificaciones por edades anteriores de la Tienda Windows:
+Anteriormente, los propios desarrolladores especificaban la clasificación por edades de su aplicación, en lugar de completar el cuestionario. A continuación tienes el desglose de clasificaciones por edades anteriores de la Microsoft Store:
 
 | Clasificación por edades                           | Descripción                            |
 |--------------------------------------|----------------------------------------|

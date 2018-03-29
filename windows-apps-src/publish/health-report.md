@@ -1,26 +1,27 @@
 ---
 author: jnHs
-Description: "El informe Estado del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden."
-title: Informe Estado
+Description: The Health report in the Windows Dev Center dashboard lets you get data related to the performance and quality of your app, including crashes and unresponsive events.
+title: Informe Mantenimiento
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
 ms.author: wdg-dev-content
-ms.date: 07/10/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 67f87405f7738dec591c71678ecfa5122e673502
-ms.sourcegitcommit: ae93435e1f9c010a054f55ed7d6bd2f268223957
+keywords: windows 10, uwp, mantenimiento, bloqueos, eventos que no responden, estado de la aplicación, datos de estado, seguimiento de la pila, archivo cab, error, errores, pdb, símbolos
+ms.localizationpriority: high
+ms.openlocfilehash: d207110f291636f6bc5f6b63d6e7fccc4578016e
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="health-report"></a>Informe Estado
+# <a name="health-report"></a>Informe Mantenimiento
 
 
 El informe **Mantenimiento** del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden. Puedes visualizar estos datos en tu panel de información o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Si corresponde, puedes ver seguimientos de la pila o archivos CAB para una mayor depuración.
 
-Como alternativa, puedes recuperar mediante programación los datos de este informe con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+Como alternativa, puedes recuperar mediante programación los datos de este informe con la [API de REST de análisis de la Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -30,9 +31,13 @@ Cerca de la parte superior de la página, puedes seleccionar el período de tiem
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por versión de paquete, mercado o tipo de dispositivo.
 
 -   **Versión del paquete**: el valor predeterminado es **Todas**. Si la aplicación incluye más de un paquete, puedes elegir uno concreto aquí.
--   **Mercado**: el filtro predeterminado es **Todos los mercados**, pero puedes limitar los datos a adquisiciones de uno o varios mercados.
--   **Tipo de dispositivo**: el valor predeterminado es **Todos**, pero también puedes mostrar los datos de un determinado tipo de dispositivo.
+-   **Mercado**: el filtro predeterminado es **Todos los mercados**, pero puedes limitar los datos a uno o varios mercados.
+-   **Tipo de dispositivo**: el valor predeterminado es **Todos**, pero también puedes mostrar los datos de un determinado tipo de dispositivo. Ten en cuenta que en la categoría **Otros** se incluyen dispositivos en los que se reconoce la marca o modelo, pero no podemos incluirla en una de las categorías predefinidas que se muestran en este filtro. Para estos dispositivos, el modelo de dispositivo puede verse en la sección **Registro de errores** del informe **Detalles del error**.  
 -   **Versión de SO**: el valor predeterminado es **Todas las versiones de SO**, pero puedes elegir una versión específica de SO.
+-   **Versión de SO**: el valor predeterminado es **Todas las versiones de SO**, pero puedes elegir una versión específica de la **Versión de SO** seleccionada.
+-   **Espacio aislado**: el valor predeterminado es **Comercial**, pero para productos que usan varios espacios aislados de desarrollo (como los juegos que se integran con Xbox Live), puedes elegir uno específico aquí. (Si tu producto no usa espacios aislados, este filtro solo mostrará **Comercial** y no será aplicable.)
+-   **Arquitectura**: el valor predeterminado es **Todas las arquitecturas**, pero puedes elegir un tipo de arquitectura de sistema específico. Este filtro solo está disponible cuando la opción **30D** está seleccionada.
+-   **PRAID**: el ajuste predeterminado es **Todos**, pero si has definido varios id. de la aplicación relativos del paquete (PRAID) al crear el paquete de la aplicación, puedes elegir mostrar solo los datos relacionados con un PRAID. Este filtro no aparecerá si no se han definido varios PRAID.
 
 La información de todos los gráficos que aparecen a continuación reflejará el intervalo de fechas y los filtros que hayas seleccionado. Algunas secciones también te permiten aplicar filtros adicionales.
 
@@ -55,13 +60,16 @@ El gráfico **Versión del paquete** muestra el número total de bloqueos y even
 
 ## <a name="failures"></a>Errores
 
-El gráfico **Errores** muestra el número total de bloqueos y eventos durante el período de tiempo seleccionado por nombre de error. De manera predeterminada, en la parte superior se muestra el error con un mayor número seguido del resto en orden descendente. Puedes invertir el orden alternando la flecha situada en la columna **Aciertos** del gráfico. También te mostramos el porcentaje de cada error del total de errores.
+El gráfico **Errores** muestra el número total de bloqueos y eventos durante el período de tiempo seleccionado por nombre de error. Cada nombre de error se compone de cuatro partes: una o varias clases de problemas, un código de comprobación de errores o excepciones, el nombre de la imagen o del controlador donde se produjo el error y el nombre de función asociada. De manera predeterminada, en la parte superior se muestra el error con un mayor número seguido del resto en orden descendente. Puedes invertir el orden alternando la flecha situada en la columna **Aciertos** del gráfico. También te mostramos el porcentaje de cada error del total de errores.
 
-Para mostrar el informe **Detalles del error** de un error en concreto, selecciona el nombre del error. Si has incluido los archivos de símbolos de PDB, el informe **Detalles del error** incluirá el número de errores del último mes, así como un registro de errores que enumera los detalles de las repeticiones (fecha, versión del paquete, tipo de dispositivo, modelo de dispositivo y compilación del SO) y un vínculo al seguimiento de la pila o al archivo CAB, si estuviera disponible.
+Para mostrar el informe **Detalles del error** de un error en concreto, selecciona el nombre del error. Si has incluido los archivos de símbolos, el informe **Detalles del error** incluirá el número de errores del último mes, así como un registro de errores que enumera los detalles de las repeticiones (fecha, versión del paquete, tipo de dispositivo, modelo de dispositivo y compilación del SO) y un vínculo al seguimiento de la pila o al archivo CAB, si estuviera disponible.
 
 > [!TIP]
 > Los archivos CAB solo estarán disponibles cuando se ha producido un error en un equipo con una compilación de WindowsInsider, por lo tanto, no todos los errores incluirán la opción de descarga de CAB. Puedes hacer clic en el título **Vínculos** de **Registro de errores** para ordenar los resultados de modo que aparezcan los errores que incluyan archivos CAB en la parte superior de la lista.
 
+En ocasiones, es posible que veas una entrada para **Desconocido** en esta sección. Esto ocurre cuando a pesar de nuestros mejores esfuerzos; no podemos recopilar detalles completos para uno o más errores, que se agruparán de manera conjunta en **Desconocido**. A menudo, esto se produce debido a restricciones de almacenamiento, pero también puede ser el resultado de la configuración de privacidad de un dispositivo, los problemas de conexión de red, los volcados de memoria parciales o erróneos, y otros factores.
+
+Si ves **!unknown** como parte del nombre de un error, esto significa que los símbolos no estaban presentes, por lo que no pudimos identificar el nombre del error. Asegúrate de incluir los símbolos en el paquete para obtener análisis de errores precisos. Consulta [Configurar un paquete de la aplicación](../packaging/packaging-uwp-apps.md#configure-an-app-package). En cambio, los nombres de errores que incluyen **!unknown_error_in_** y **!unknown_function** significan que no pudimos recopilar los detalles completos por varios otros motivos.
  
 
  

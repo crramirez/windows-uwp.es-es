@@ -1,26 +1,27 @@
 ---
 author: jnHs
-Description: "El informe Adquisiciones del panel de información del Centro de desarrollo de Windows te permite ver quién ha adquirido e instalado la aplicación, junto con datos demográficos y de la plataforma."
+Description: The Acquisitions report in the Windows Dev Center dashboard lets you see who has acquired and installed your app, along with demographic and platform details.
 title: Informe Adquisiciones
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 08/04/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: d6540db7a3d0a045fa6a2c8fec617f045f4a1bf4
-ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+keywords: windows 10, uwp, adquisiciones, ventas de aplicaciones, descargas de aplicaciones, instalaciones, embudo, adquisición, conversiones, canal, vistas de página de la aplicación
+ms.localizationpriority: high
+ms.openlocfilehash: d1675b3a2ffe879585ea2fd3792b47e7bdc7a8af
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="acquisitions-report"></a>Informe Adquisiciones
 
 
-El informe **Adquisiciones** del panel de información del Centro de desarrollo de Windows te permite ver quién ha adquirido e instalado la aplicación, junto con datos demográficos y de la plataforma. También te permite obtener información sobre cómo los clientes de Windows10 han llegado a la descripción de la aplicación.
+El informe **Adquisiciones** del panel de información del Centro de desarrollo de Windows te permite ver quién ha adquirido e instalado la aplicación, junto con datos demográficos y de la plataforma. También te permite obtener información sobre cómo los clientes de Windows10 (incluido Xbox) han llegado a la descripción de la aplicación.
 
-Puedes visualizar estos datos en tu panel de información o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
+Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, una **adquisición** significa que un cliente nuevo ha obtenido una licencia para tu aplicación (tanto si cobras dinero como si la ofreces gratis). **Instalar** hace referencia a que la aplicación se está instalando en un dispositivo Windows10.
 
@@ -37,7 +38,7 @@ Cerca de la parte superior de la página, puedes seleccionar el período de tiem
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por mercado o por tipo de dispositivo.
 
 -   **Mercado**: el filtro predeterminado es **Todos los mercados**, pero puedes limitar los datos a adquisiciones de uno o varios mercados.
--   **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Si quieres mostrar los datos de adquisiciones de un determinado tipo de dispositivo únicamente, aquí puedes elegir uno específico.
+-   **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Si quieres mostrar datos de adquisiciones de un determinado tipo de dispositivo únicamente (como PC, consola o tableta), aquí puedes elegir uno específico.
 
 La información de todos los gráficos que aparecen a continuación reflejará el intervalo de fechas y los filtros que hayas seleccionado. Algunas secciones también te permiten aplicar filtros adicionales.
 
@@ -55,10 +56,10 @@ También puedes filtrar los resultados por si la adquisición se originó desde 
 
 ## <a name="installs"></a>Instalaciones
 
-En el gráfico **Instalaciones** se muestra cuántas veces hemos detectado que los clientes han instalado correctamente la aplicación en dispositivos Windows10 durante el período de tiempo seleccionado. Se muestra el número total, junto con un gráfico que muestra las instalaciones por día o semana (en función de la duración que hayas seleccionado). También puedes filtrar los resultados por una determinada versión del paquete.
+En el gráfico **Instalaciones** se muestra cuántas veces hemos detectado que los clientes han instalado correctamente la aplicación en dispositivos Windows10 (incluidas las consolas Xbox One) durante el período de tiempo seleccionado. Se muestra el número total, junto con un gráfico que muestra las instalaciones por día o semana (en función de la duración que hayas seleccionado). También puedes filtrar los resultados por una determinada versión del paquete.
 
 El total de instalaciones incluye lo siguiente:
--   **Instalaciones en varios dispositivos Windows10.** Por ejemplo, si el mismo cliente instala tu aplicación en dos equipos con Windows10 y un teléfono con Windows10, cuenta como tres instalaciones.
+-   **Instalaciones en varios dispositivos Windows10.** Por ejemplo, si el mismo cliente instala tu aplicación en dos equipos con Windows10 y una Consola Xbox One, cuenta como tres instalaciones.
 -   **Reinstalaciones.** Por ejemplo, si un cliente instala la aplicación hoy, la desinstala mañana y la vuelve a instalar al mes siguiente, cuenta como dos instalaciones.
 
 El total de instalaciones no incluye ni refleja lo siguiente:
@@ -76,7 +77,7 @@ El total de instalaciones no incluye ni refleja lo siguiente:
 El **Embudo de adquisiciones** te muestra cuántos clientes realizaron cada paso del embudo, desde la visualización de la página de la Tienda hasta el uso de la aplicación, junto con la tasa de conversión. Estos datos pueden ayudarte a identificar las áreas donde podrías invertir más para aumentar tu adquisiciones, instalaciones o uso.
 
 > [!IMPORTANT]
-> El **Embudo de adquisiciones** solo muestra los datos de clientes de Windows10 durante los últimos 90 días.
+> El **Embudo de adquisiciones** solo muestra los datos de clientes de Windows10 (incluida la Xbox) durante los últimos 90 días.
 
 Los pasos del embudo son:
 

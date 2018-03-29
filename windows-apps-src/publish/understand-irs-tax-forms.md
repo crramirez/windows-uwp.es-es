@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Obtén información sobre los formularios fiscales emitidos por Microsoft, incluido quién los recibirá y cuándo estarán disponibles."
-title: "Descripción de los formularios fiscales del IRS emitidos por Microsoft"
+Description: Learn about the tax forms issued by Microsoft, including who will receive them and when they are made available.
+title: Descripción de los formularios fiscales del IRS emitidos por Microsoft
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, impuestos, irs, servicio de impuestos internos, impuesto, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-ms.openlocfilehash: bffb666184f52e6e6491d8651414ecbc269352b8
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: 0bdae8a8489ddf4f2ec7eb7a619631bd4fa26e9e
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 
@@ -39,7 +40,7 @@ A continuación, explicaremos más sobre estos formularios, incluidos sus destin
      <th> Debo recibir este formulario</th>
   </tr>
   <tr> 
-     <td valign="top">Tuve **ventas superiores a 200 aplicaciones** con un importe total de compra de estas ventas **superior a 20000USD** en el año fiscal aplicable (**sin** contar las ventas realizadas en Brasil y China a través de la Tienda de Windows10).</td>
+     <td valign="top">Tuve **ventas superiores a 200 aplicaciones** con un importe total de compra de estas ventas **superior a 20000USD** en el año fiscal aplicable (**sin** contar las ventas realizadas en Brasil y China a través de la Microsoft Store en Windows10).</td>
     <td valign="top">**1099-K**:<br>
 Contribuyente: Microsoft Corporation<br>
 CIF/NIF: \*\*\*\*\*4442<br>
@@ -47,9 +48,9 @@ CIF/NIF: \*\*\*\*\*4442<br>
 **Importante**: El formulario 1099-K contiene importes de **compra bruta**, no los pagos que se te efectuaron.</td>
   </tr>
   <tr> 
-     <td valign="top">Recibí **al menos 10USD por pagos** de ventas de aplicaciones realizadas en Brasil y China a través de la Tienda de Windows10.<br>
+     <td valign="top">Recibí **al menos 10USD por pagos** de (i) ventas de aplicaciones realizadas en Brasil y China a través de la Microsoft Store en Windows10 o (ii) ventas en el Minecraft Marketplace.<br>
 <br>
-**O bien,**<br>
+**O**<br>
 <br>
 Recibí al menos 600USD por pagos no relacionados con las ventas de aplicaciones de Microsoft en el año fiscal aplicable (por ejemplo, pagos de incentivos o pagos de un concurso o una promoción).</td>
     <td valign="top">**1099-MISC**:<br>

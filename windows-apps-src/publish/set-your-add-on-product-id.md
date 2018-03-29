@@ -8,13 +8,13 @@ ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, complementos, iap, duradero, consumible, suscripción, tipo de producto, id. de producto, compra desde la aplicación, producto desde la aplicación"
+keywords: windows 10, uwp, complementos, iap, duradero, consumible, suscripción, tipo de producto, id. de producto, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: high
-ms.openlocfilehash: 24731a378ddc0defada7a94282afd790dfb5b780
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: 12ed8eb58f9f7f7a5fec55c62f19afe0bf6fa2d5
+ms.sourcegitcommit: b6915c7fa2c7292e9b4e3d3e9927dc8746ec1ffb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Establecer el tipo del producto de tu complemento y el id. del producto
 
@@ -39,7 +39,7 @@ La **Duración del producto** predeterminada para un complemento duradero es **P
 <span id="consumable" />
 ### <a name="consumable"></a>Consumible
 
-Si el complemento se puede comprar, usar (consumir) y después se puede volver a comprar, tendrás que seleccionar uno de los tipos de producto **consumibles**. Los complementos consumibles se suelen usar para cosas como dinero de juego (oro, monedas, etc.) que se pueden comprar en cantidades establecidas que luego puede usar el cliente. Para obtener más información sobre cómo incluir complementos consumibles en tu aplicación, consulta [Habilitar compras de complementos consumibles](../monetize/enable-consumable-add-on-purchases.md).
+Si el complemento se puede comprar, usar (consumir) y después se puede volver a comprar, tendrás que seleccionar uno de los tipos de producto **consumibles**. Los complementos consumibles se suelen usar para cosas como dinero de juego (oro, monedas, etc.) que se pueden comprar en cantidades establecidas que luego puede usar el cliente. Para más información, consulta [Habilitar compras de complementos consumibles](../monetize/enable-consumable-add-on-purchases.md).
 
 Hay dos tipos de complementos consumibles:
 - **Consumible administrado por el desarrollador**: el saldo y el suministro deben administrarse dentro de la aplicación. Compatible en todas las versiones de SO.
@@ -52,7 +52,7 @@ Si deseas cobrar a los clientes de forma periódica para el complemento, elige *
 
 Después de que un cliente haya adquirido inicialmente un complemento de suscripción, tendrá que seguir pagando en intervalos periódicos para poder seguir usando el complemento. El cliente puede cancelar la suscripción en cualquier momento para evitar más cargos. Tendrás que especificar el período de suscripción y si ofreces una evaluación gratuita en el paso **Propiedades** del envío.
 
-Los complementos de suscripción solo son compatibles con clientes que tienen Windows10, versión 1607 o posterior. La aplicación principal debe compilarse con SDK de Windows 10, versión 14393 o posterior, y debe usar la API de compra desde la aplicación en el espacio de nombres **Windows.Services.Store** en lugar de **Windows.ApplicationModel.Store**. Para obtener más información sobre las diferencias entre estos espacios de nombres, consulta [Pruebas y compras desde la aplicación](../monetize/in-app-purchases-and-trials.md).
+Los complementos de suscripción solo son compatibles con clientes que tienen Windows10, versión 1607 o posterior. La aplicación principal debe compilarse con SDK de Windows 10, versión 14393 o posterior, y debe usar la API de compra desde la aplicación en el espacio de nombres **Windows.Services.Store** en lugar de **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Habilitar complementos de una suscripción para tu aplicación](../monetize/enable-subscription-add-ons-for-your-app.md).
 
 Debes enviar el producto principal antes de poder publicar los complementos de suscripción en Store (aunque puedes crear el envío en tu panel y empezar a trabajar en cualquier momento).
 

@@ -4,17 +4,17 @@ Description: Add users to your Dev Center account and assign them roles with spe
 title: Administrar usuarios de la cuenta
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
 ms.author: wdg-dev-content
-ms.date: 01/10/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, usuarios de la cuenta, administrar usuarios, azure ad, multiusuario
 ms.localizationpriority: high
-ms.openlocfilehash: e9a08225f0eac5018b3634df3bfb055d38ccb895
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: efc7ad17a7a018b86748c31bc7423e4d841a0b6d
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="manage-account-users"></a>Administrar usuarios de la cuenta
 
@@ -29,4 +29,4 @@ En esta sección se describe cómo hacer lo siguiente:
 -   [Establecer roles y permisos personalizados para usuarios de cuentas](set-custom-permissions-for-account-users.md)
 
 > [!TIP]
-> Esta sección es específica del programa de desarrolladores de aplicaciones de Windows, pero la asociación de un inquilino y la administración de usuarios funcionan de forma similar para las cuentas del Programa de desarrolladores de hardware de Windows. Para obtener más información sobre la administración de usuarios en el Programa de desarrolladores de hardware, consulta [Administración del panel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration).
+> Esta sección es específica del programa de desarrolladores de aplicaciones de Windows, pero la asociación de un inquilino y la administración de usuarios funcionan de forma similar para las cuentas del Programa de desarrolladores de hardware de Windows (consulta [Administración del panel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obtener más información) o en el Programa de aplicaciones de escritorio de Windows (consulta el [Programa de aplicaciones de escritorio de Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504#users) para obtener más información).

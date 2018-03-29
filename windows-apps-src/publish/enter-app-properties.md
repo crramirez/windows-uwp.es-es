@@ -1,29 +1,32 @@
 ---
 author: jnHs
-Description: "La página Propiedades de la aplicación del proceso de envío de aplicaciones te permite definir la categoría de la aplicación e indicar las preferencias de hardware u otras declaraciones."
-title: "Introducir las propiedades de la aplicación"
+Description: The App properties page of the app submission process lets you define your app's category and indicate hardware preferences or other declarations.
+title: Introducir las propiedades de la aplicación
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: e4d391d551cf4e41853a1aac0e4b5be8bf0b0c3f
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+keywords: windows 10, uwp, configuración del juego, modo de presentación, requisitos del sistema, requisitos de hardware, hardware mínimo, hardware recomendado
+ms.localizationpriority: high
+ms.openlocfilehash: 8ecdeb0dd4ebba83a387666ab87067ff419a9303
+ms.sourcegitcommit: 8d9d4f17e272b78e38b346f846b96260c922bbb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="enter-app-properties"></a>Introducir las propiedades de la aplicación
 
-La página **Propiedades** de la aplicación del [proceso de envío de aplicaciones](app-submissions.md) te permite definir la categoría de la aplicación e indicar las preferencias de hardware u otras declaraciones. A continuación, te guiaremos a través de las opciones de esta página y todo lo que debes tener en cuenta al escribir la información.
+La página **Propiedades** del [proceso de envío de aplicaciones](app-submissions.md) es donde defines la categoría de la aplicación y especificas otra información y declaraciones. Asegúrate de proporcionar detalles completos y precisos sobre tu aplicación en esta página.
+
 
 ## <a name="category-and-subcategory"></a>Categoría y subcategoría
 
-En esta sección, debes indicar la categoría (y la subcategoría, si procede) que debe usar la Tienda para clasificar la aplicación. Es necesario especificar una categoría para enviar la aplicación.
+Debes indicar la categoría (y la subcategoría o género, si procede) que debe usar la Store para clasificar la aplicación. Es necesario especificar una categoría para enviar la aplicación.
 
 Para más información, consulta [Tabla de categoría y subcategoría](category-and-subcategory-table.md).
+
 
 ## <a name="game-settings"></a>Configuración del juego
 
@@ -32,6 +35,17 @@ Esta sección solo aparecerán si seleccionaste **Juegos** como la categoría de
 Si tu juego es compatible con cualquiera de las opciones multijugador, asegúrate de indicar el número mínimo y máximo de jugadores para una sesión. No se pueden especificar más de 1000 jugadores como mínimo o como máximo.
 
 **Opción jugador multiplataforma** significa que el juego admite sesiones de varios jugadores entre jugadores en equipos con Windows 10 y Xbox.
+
+
+## <a name="display-mode"></a>Modo de presentación
+
+Esta sección te permite indicar si tu producto está diseñado para ejecutarse en una vista envolvente (no una vista 2D) para [Windows Mixed Reality](https://developer.microsoft.com/windows/mixed-reality) en equipos o dispositivos HoloLens. Si indicas que lo está, también deberás:
+- Seleccionar **Minimum hardware** o **Hardware recomendado** para **Windows Mixed Reality immersive headset** en la sección [Requisitos del sistema](#system-requirements) que aparece más abajo en la página **Propiedades**.
+- Especificar la opción **Boundary setup** (si el equipo está seleccionado) para que los usuarios sepan si se ha diseñado para usarse solo en una posición de sentado o de pie, o si permite (o si requiere) que el usuario se mueva al usarlo. 
+
+Si has seleccionado **Juegos** como categoría del producto, verás opciones adicionales en la selección **Modo de presentación** que te permite indicar si tu producto admite la salida de vídeo de resolución de 4K, salida de vídeo de Alto rango dinámico (HDR) o pantallas de frecuencia de actualización variable.
+
+Si tu producto no admite ninguna de estas opciones de modo de pantalla, deja todas las casillas de verificación desactivadas.
 
 
 ## <a name="product-declarations"></a>Declaraciones de producto
@@ -59,9 +73,12 @@ El comportamiento para los clientes dependerá de los requisitos específicos y 
 - **Para los clientes de Windows 8.x y versiones anteriores, o de Windows Phone 8.x y versiones anteriores:**
      - Si activas la casilla **Requisitos mínimos de hardware** para **Pantalla táctil**, este requisito se mostrará en la descripción de la Tienda de la aplicación y los clientes con dispositivos sin pantalla táctil verán una advertencia si intentan descargar la aplicación. No se comprobarán otros requisitos ni se mostrarán en la descripción de la Tienda.
 
-También recomendamos agregar a la aplicación comprobaciones en tiempo de ejecución para el hardware especificado, dado que la Tienda no siempre puede detectar si al dispositivo de un cliente le faltan las características seleccionadas. De todos modos, el cliente podrá descargar la aplicación, aunque se le muestre una advertencia.
+También recomendamos agregar a la aplicación comprobaciones en tiempo de ejecución para el hardware especificado, dado que la Tienda no siempre puede detectar si al dispositivo de un cliente le faltan las características seleccionadas. De todos modos, el cliente podrá descargar la aplicación, aunque se le muestre una advertencia. Si quieres evitar completamente que tu aplicación para UWP se descargue en un dispositivo que no cumpla con los requisitos mínimos de memoria o nivel de DirectX, puedes designar los requisitos mínimos en un [archivo XML de StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/storemanifestschema2015/schema-root).
 
 > [!TIP]
-> Si quieres evitar completamente que tu aplicación para UWP se descargue en un dispositivo que no cumpla con los requisitos mínimos de memoria o nivel de DirectX, puedes designar los requisitos mínimos en un archivo XML de StoreManifest. Para obtener más información, consulta [Esquema StoreManifest (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
+> Si tu producto requiere elementos adicionales que no se indican en esta sección para que se ejecute correctamente, como impresoras 3D o dispositivos USB, también puedes especificar [requisitos del sistema adicionales](create-app-store-listings.md#additional-system-requirements) cuando creas tu descripción de Microsoft Store.
+
+
+
 
 
