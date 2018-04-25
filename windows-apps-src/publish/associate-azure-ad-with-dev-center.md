@@ -9,11 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, azure ad, inquilino de azure, inquilino de aad, inquilino de azure ad, administración de inquilinos, inquilinos
 ms.localizationpriority: high
-ms.openlocfilehash: c430bb279d0b9da6126212a8af7400df8cd1693e
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: f488a72b916e2950a46a5b48e79be2795806a900
+ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Asociar AzureActiveDirectory a la cuenta del Centro de desarrollo
 
@@ -51,9 +51,9 @@ Si necesitas configurar un nuevo Azure AD para vincular a tu cuenta del Centro d
 1.  Ve a **Configuración de la cuenta** y haz clic en **Inquilinos**.
 2.  Selecciona **Crear nuevo Azure AD**.
 3.  Escribe la información de directorio para el nuevo Azure AD:
- - **Nombre de dominio**: nombre único que usaremos para tu dominio de Azure AD, junto con ".onmicrosoft.com". Por ejemplo, si escribes "ejemplo", el dominio de Azure AD sería "ejemplo.onmicrosoft.com".
- - **Correo electrónico de contacto**: una dirección de correo electrónico donde nos podamos poner en contacto contigo sobre tu cuenta si es necesario.
- - **Global administrator user account info**: nombre, apellido, nombre de usuario y contraseña que quieres usar para la nueva cuenta de administrador global.
+    - **Nombre de dominio**: nombre único que usaremos para tu dominio de Azure AD, junto con ".onmicrosoft.com". Por ejemplo, si escribes "ejemplo", el dominio de Azure AD sería "ejemplo.onmicrosoft.com".
+    - **Correo electrónico de contacto**: una dirección de correo electrónico donde nos podamos poner en contacto contigo sobre tu cuenta si es necesario.
+    - **Global administrator user account info**: nombre, apellido, nombre de usuario y contraseña que quieres usar para la nueva cuenta de administrador global.
 4.  Haz clic en **Crear** para confirmar la nueva información del dominio y de la cuenta.
 5.  Inicia sesión con tu nuevo nombre de usuario y contraseña de administrador global de AzureAD para empezar a [agregar y administrar usuarios de la cuenta adicionales](add-users-groups-and-azure-ad-applications.md).
 

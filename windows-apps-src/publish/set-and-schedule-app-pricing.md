@@ -3,17 +3,17 @@ author: jnHs
 Description: Select the base price for an app and schedule price changes. You can also customize these options for specific markets.
 title: Establecer y programar los precios de las aplicaciones
 ms.author: wdg-dev-content
-ms.date: 02/05/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, precios, precios de las aplicaciones, precio de la aplicación, vender aplicaciones, cambio de precio, precio personalizado, precio, precios, costo, reemplazar el precio base, precio de forma libre, forma libre
 ms.localizationpriority: high
-ms.openlocfilehash: 2be7e664279cb19527a262ad3c170d04f8d026fb
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 44ded7baf563d0253c2cca6b7937cb5c8fea74e3
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="set-and-schedule-app-pricing"></a>Establecer y programar los precios de las aplicaciones
 
@@ -37,8 +37,10 @@ En la sección **Precios**, haz clic en **view conversion table** para ver los p
 
 Recuerda que la franja de precios que seleccionaste puede incluir el impuesto sobre el valor añadido o las ventas que tus clientes deben pagar. Para obtener más información sobre las implicaciones fiscales de la aplicación en los mercados seleccionados, consulta los [detalles de impuestos para aplicaciones de pago](tax-details-for-paid-apps.md). También deberías revisar las [consideraciones relativas a los precios para mercados concretos](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
+> [!NOTE]
+> Si eliges la opción **Detener adquisición** en **Hacer disponible este producto, pero no descubrible, en Store** en la sección [Visibilidad](choose-visibility-options.md#discoverability), no podrás establecer precios para el envío (ya que nadie podrá comprar la aplicación a menos que haya recibido un código promocional para obtener la aplicación de forma gratuita).
 
-## <a name="schedule-price-changes"></a>Cambio de precio de programación
+## <a name="schedule-price-changes"></a>Programar cambios de precio
 
 También puedes programar uno o varios de los cambios de precio si quieres que el precio base de la aplicación cambie en una fecha y hora específica. 
 

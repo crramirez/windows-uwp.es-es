@@ -1,23 +1,24 @@
 ---
 author: jnHs
-Description: "Cuando termines de crear el envío de la aplicación y hagas clic en Enviar a la Tienda, entra en el paso de certificación."
-title: "Proceso de certificación de la aplicación"
+Description: When you finish creating your app's submission and click Submit to the Store, the submission enters the certification step.
+title: Proceso de certificación de la aplicación
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
 ms.author: wdg-dev-content
-ms.date: 04/13/2017
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: f075dc6e112a526d7aee71f0f9aa7d4da570d649
-ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+keywords: windows 10, uwp, publicar, preprocesamiento, certificación, lanzamiento, pendiente, enviar, publicar, estado
+ms.localizationpriority: high
+ms.openlocfilehash: 0b2191808457401a41fe6bb0996d3f5a5ed4943d
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-app-certification-process"></a>Proceso de certificación de la aplicación
 
-Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a la Tienda**, entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Una vez que se haya realizado la certificación del envío, pueden pasar hasta 24 horas antes de que los clientes vean la descripción de la aplicación (o las actualizaciones de una aplicación publicada anteriormente) en la tienda. Verás una notificación cuando el envío esté publicado y disponible para los clientes, y el estado de la aplicación en el panel será **En la Tienda**.
+Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a Store**, el envío entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Una vez que se haya realizado la certificación del envío, pueden pasar hasta 24 horas antes de que los clientes vean la descripción de la aplicación (o las actualizaciones de una aplicación publicada anteriormente) en la tienda. Verás una notificación cuando el envío esté publicado y disponible para los clientes, y el estado de la aplicación en el panel será **En la Tienda**.
 
 ## <a name="preprocessing"></a>Preprocesamiento
 
@@ -31,7 +32,7 @@ Durante esta fase, se llevan a cabo varias pruebas:
 -   **Pruebas de cumplimiento técnico:** el cumplimiento de los requisitos técnicos se prueba con el Kit para la certificación de aplicaciones en Windows. (Debes asegurarte siempre de [probar tu aplicación con el Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviarla a la Tienda).
 -   **Cumplimiento de requisitos de contenido:** el tiempo que tarda depende de la complejidad de la aplicación, la cantidad de contenido visual que tenga y la cantidad de aplicaciones que se hayan enviado recientemente. Asegúrate de proporcionar toda la información que los evaluadores deben conocer en la página [Notas para la certificación](notes-for-certification.md).
 
-Una vez completado el proceso de certificación, obtendrás un informe donde se indicará si la aplicación pasó o no la certificación. Si no la pasó, el informe indicará en qué prueba produjo errores o qué [directiva](https://msdn.microsoft.com/library/windows/apps/dn764944) no se cumplió. Después de solucionar el problema, puedes crear un nuevo envío de la aplicación para volver a iniciar el proceso de certificación.
+Una vez completado el proceso de certificación, obtendrás un informe donde se indicará si la aplicación pasó o no la certificación. Si no la pasó, el informe indicará en qué prueba produjo errores o qué [directiva](https://docs.microsoft.com/legal/windows/agreements/store-policies) no se cumplió. Después de solucionar el problema, puedes crear un nuevo envío de la aplicación para volver a iniciar el proceso de certificación.
 
 ## <a name="release"></a>Versión
 
@@ -41,13 +42,14 @@ Cuando la aplicación aprueba la certificación, está lista para pasar al proce
 
 Los paquetes de la aplicación se firman digitalmente para protegerlos de alteraciones después de su lanzamiento. Una vez iniciada esta fase, ya no puedes cancelar el envío ni cambiar la fecha de lanzamiento.
 
-Mientras la aplicación se encuentra en la fase de publicación, el vínculo **Mostrar detalles** de la columna Estado para el envío de la aplicación te avisará cuando se pongan a disposición de los clientes en cada una de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles del listado de la Tienda. La aplicación permanecerá en la fase de publicación hasta que los nuevos paquetes y los detalles del listado estén disponibles para todos los clientes potenciales de la aplicación, lo que puede tardar hasta 24horas. 
+Mientras la aplicación se encuentra en la fase de publicación, el vínculo **Mostrar detalles** de la columna Estado para el envío de la aplicación te avisará cuando se pongan a disposición de los clientes en cada una de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles del listado de la Tienda. Los pasos que no se hayan completado llevarán la indicación **Pendiente**. La aplicación permanecerá en la fase de publicación hasta que el proceso se haya completado, lo que significa que los nuevos paquetes y los detalles del listado estén disponibles para todos los clientes potenciales de la aplicación. Este proceso puede tardar hasta 24 horas. 
 
-## <a name="in-the-store"></a>En la Tienda 
+## <a name="in-the-store"></a>En Store 
 
-Tras completar los pasos anteriores, el estado del envío cambiará de **Publicación** a **En la Tienda**. A continuación, tu envío estará disponible en la Tienda Windows para que lo descarguen los clientes (a menos que hayas elegido otra opción de [Visibilidad](set-app-pricing-and-availability.md#visibility)). 
+Tras completar satisfactoriamente los pasos anteriores, el estado del envío cambiará de **Publicación** a **En Store**. Entonces, tu envío estará disponible en Microsoft Store para que lo descarguen los clientes (a menos que hayas elegido otra opción de [Visibilidad](choose-visibility-options.md#discoverability)). 
 
-**Nota** También se realizan comprobaciones puntuales de aplicaciones después de que se hayan publicado, para poder identificar posibles problemas y garantizar que la aplicación cumple con todas las [directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944). Si encontramos algún problema, se te notificará al respecto y sobre cómo solucionarlo, si corresponde, o bien sobre si la aplicación se ha quitado de la Tienda.
+> [!NOTE]
+> También se realizan comprobaciones puntuales de aplicaciones después de haberse publicado, para poder identificar posibles problemas y garantizar que la aplicación cumple con todas las [directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies). Si encontramos algún problema, se te notificará al respecto y sobre cómo solucionarlo, si corresponde, o bien sobre si la aplicación se ha quitado de la Tienda.
 
  
 

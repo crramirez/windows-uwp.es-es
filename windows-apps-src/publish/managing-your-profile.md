@@ -1,24 +1,27 @@
 ---
 author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
-title: "Administrar la configuración de la cuenta y la información del perfil"
-description: "Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la información del perfil en la sección Configuración de la cuenta del panel del Centro de desarrollo de Windows unificado."
+title: Administrar la configuración de la cuenta y la información del perfil
+description: Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la información del perfil en la sección Configuración de la cuenta del panel del Centro de desarrollo de Windows unificado.
 ms.author: wdg-dev-content
-ms.date: 01/08/2018
+ms.date: 03/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, centro de desarrollo, configuración de la cuenta, perfil, perfil de cuenta, cuenta de desabollador, configuración de la cuenta de desarrollador"
+keywords: windows 10, uwp, centro de desarrollo, configuración de la cuenta, perfil, perfil de cuenta, cuenta de desabollador, configuración de la cuenta de desarrollador
 ms.localizationpriority: high
-ms.openlocfilehash: 840eb445eaf5cac05201a58140a7ea7f505d7e14
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 5bedc2bb91478d86af95f45d57369f5409e7cea1
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Administrar la configuración de la cuenta y la información del perfil
 
 Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la información del perfil en la sección **Configuración de la cuenta** del [panel del Centro de desarrollo de Windows](using-the-windows-dev-center-dashboard.md). 
+
+> [!NOTE]
+> Las preferencias de notificación (por ejemplo, qué tipo de notificaciones recibir y cómo recibirlas) se pueden administrar en **Centro de mensajes** (a donde puedes acceder seleccionando el icono de mensaje próximo a la parte superior del panel).
 
 ## <a name="account-settings"></a>Configuración de la cuenta
 

@@ -1,8 +1,8 @@
 ---
 author: mijacobs
 Description: Use the ParallaxView control to add depth and movement to your app.
-title: "Cómo usar el control ParallaxView para agregar profundidad y movimiento a la aplicación."
-ms.assetid: 
+title: Cómo usar el control ParallaxView para agregar profundidad y movimiento a la aplicación.
+ms.assetid: ''
 label: Parallax View
 template: detail.hbs
 ms.author: mijacobs
@@ -16,17 +16,17 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: high
-ms.openlocfilehash: ae11bb0c3d2d3230f4111a08d33b4fa839ffedd7
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 69bb202a7e13f087ead7ea2a379f803219bbd2d4
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="parallax"></a>Parallax
 
 Parallax es un efecto visual donde elementos más cercanos al usuario se mueven más rápido que los elementos en el fondo. Parallax crea una sensación de profundidad, perspectiva y movimiento. En una aplicación para UWP, puedes usar el control ParallaxView para crear un efecto de paralaje.  
 
-> **API importantes**: [Clase ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propiedad VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_VerticalShift), [propiedad HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_HorizontalShift)
+> **API importantes**: [Clase ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propiedad VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [propiedad HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
 
 ## <a name="examples"></a>Ejemplos
 
@@ -59,7 +59,7 @@ En una interfaz de usuario, puedes crear un efecto de paralaje si mueves distint
 
 Para crear un efecto de paralaje, usa el control [ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview). Este control vincula la posición de desplazamiento de un elemento en primer plano, como una lista, a un elemento en el fondo, como una imagen. Al desplazarte por el elemento en primer plano, se anima el elemento en el fondo para crear un efecto de paralaje. 
 
-Para usar el control ParallaxView, proporciona un elemento Source, un elemento de fondo y establece las propiedades [VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_VerticalShift) (para el desplazamiento vertical) o [HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_HorizontalShift) (para el desplazamiento horizontal) en un valor mayor que cero. 
+Para usar el control ParallaxView, proporciona un elemento Source, un elemento de fondo y establece las propiedades [VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift) (para el desplazamiento vertical) o [HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift) (para el desplazamiento horizontal) en un valor mayor que cero. 
 * La propiedad Source toma una referencia al elemento en primer plano. Para que se produzca el efecto de paralaje, el primer plano debe ser una clase [ScrollViewer](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) o un elemento que contenga una clase ScrollViewer, como una clase [ListView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listview) o [RichTextBox](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.RichEditBox). 
 
 * Para establecer el elemento de fondo, agrega ese elemento como elemento secundario del control ParallaxView. El elemento de fondo puede ser cualquier [UIElement](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement), como una clase [Image](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Image) o un panel que contenga elementos adicionales de la interfaz de usuario. 

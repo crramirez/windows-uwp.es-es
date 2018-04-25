@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, complementos, iap, duradero, consumible, suscripción, tipo de producto, id. de producto, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: high
-ms.openlocfilehash: 12ed8eb58f9f7f7a5fec55c62f19afe0bf6fa2d5
-ms.sourcegitcommit: b6915c7fa2c7292e9b4e3d3e9927dc8746ec1ffb
+ms.openlocfilehash: f3611f74a33aaed0867df343829312c82dd16785
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Establecer el tipo del producto de tu complemento y el id. del producto
 
@@ -30,6 +30,7 @@ En primer lugar, debes indicar qué tipo de complemento ofreces. Esta selección
 > No podrás cambiar el tipo de producto después de guardar la página para crear el complemento. Si eliges el tipo de producto incorrecto, siempre puedes eliminar el envío del complemento en curso y empezar la creación de un nuevo complemento desde el principio.
 
 <span id="durable" />
+
 ### <a name="durable"></a>Duradero
 
 Selecciona **Duradero** como el tipo de producto si el complemento normalmente se adquiere una sola vez. Estos complementos a menudo se usan para desbloquear funcionalidad adicional en una aplicación.
@@ -37,6 +38,7 @@ Selecciona **Duradero** como el tipo de producto si el complemento normalmente s
 La **Duración del producto** predeterminada para un complemento duradero es **Para siempre**, lo que significa que el complemento no caduca nunca. Tienes la opción de establecer la **Duración del producto** en una duración distinta en el paso [Propiedades](enter-add-on-properties.md) del proceso de envío del complemento. Si lo haces, el complemento caducará después de la duración que especifiques (con opciones de 1 a 365 días), en cuyo caso un cliente podría volver a comprarlo después de que caduque.
 
 <span id="consumable" />
+
 ### <a name="consumable"></a>Consumible
 
 Si el complemento se puede comprar, usar (consumir) y después se puede volver a comprar, tendrás que seleccionar uno de los tipos de producto **consumibles**. Los complementos consumibles se suelen usar para cosas como dinero de juego (oro, monedas, etc.) que se pueden comprar en cantidades establecidas que luego puede usar el cliente. Para más información, consulta [Habilitar compras de complementos consumibles](../monetize/enable-consumable-add-on-purchases.md).
@@ -46,6 +48,7 @@ Hay dos tipos de complementos consumibles:
 - **Consumible administrado por la Tienda:** Microsoft realizará un seguimiento del saldo de todos los dispositivos de clientes que ejecuten la versión 1607 de Windows 10 o posterior. No es compatible con ninguna versión de SO anterior. Para usar esta opción, el producto principal se debe compilar con la versión 14393 del SDK de Windows 10 o posterior. Ten en cuenta que no podrás enviar un complemento consumible administrado por la Tienda a esta hasta que se publique el producto principal (aunque puedes crear el envío en tu panel de información y empezar a trabajar en cualquier momento). Tendrás que escribir la cantidad del complemento consumible administrado por la Tienda en el paso **Propiedades** del envío.
 
 <span id="subscription" />
+
 ### <a name="subscription"></a>Suscripción
 
 Si deseas cobrar a los clientes de forma periódica para el complemento, elige **Suscripción**.

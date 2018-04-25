@@ -3,18 +3,18 @@ title: Programa Insider del Centro de desarrollo
 description: Prueba las nuevas características del Centro de desarrollo antes de que estén disponibles para todos los desarrolladores y cuéntanos qué te parecen.
 author: JnHs
 ms.author: wdg-dev-content
-ms.date: 01/31/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp, insiders, insider centro de desarrollo, características de vista previa
 ms.assetid: 6fa470dd-e46e-4af1-b278-54bb501a69b0
 ms.localizationpriority: high
-ms.openlocfilehash: bfebdf4985791916f5e91f728f53bd25ef375755
-ms.sourcegitcommit: 22fc8fb72fd0341d4a5c702175be8b42e713dee1
+ms.openlocfilehash: b1133fb65ad3b96bf371597a71ce0eb6bb889ed5
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dev-center-insider-program"></a>Programa Insider del Centro de desarrollo
 
@@ -29,13 +29,12 @@ Estas son algunas de las características que hemos puesto a disposición exclus
 
 | Característica del Programa Insider del Centro de desarrollo   | Cómo pueden probarla los usuarios de Insider del Centro de desarrollo | Fecha de adición |
 |--------------------------------------|------------------------------------|------------|
+|**Informe de detalles**: cuando detectemos una anomalía (cambio significativo en tus adquisiciones, estado o datos de uso), mostraremos detalles en este informe.  | En el menú de navegación de la izquierda, expande **Analizar** y después selecciona **Detalles**. | Marzo de 2018 |
 |**Gráfico Predicción de las renovaciones en el Informe de uso**: consulta el número de usuarios que predecimos que es probable que dejen de usar la aplicación pronto, en función de su uso reciente. | En el informe **Uso**, ve el gráfico **Predicción de las renovaciones** para consultar una predicción de cuántos usuarios dejarán de usar la aplicación (o úsalo durante menos de 10 minutos) en los próximos 15 días. Después de cada ciclo, el gráfico muestra el número de usuarios que dejaron de usar la aplicación, junto con el número que predijimos. Esta información se actualiza dos veces al mes.  | Enero de 2018 |
 |**Detalles de anomalías de un solo vistazo**: echa un vistazo rápido a los cambios importantes en datos de estado, adquisiciones y uso. | En los informes **Adquisiciones**, **Uso** y **Estado**, mostraremos un marcador de círculo al final de una semana si detectamos anomalías (aumentos o disminuciones importantes) en comparación con la semana anterior. Mantén el puntero encima del círculo para ver detalles sobre qué ha cambiado. | Enero de 2018 |
-|**Personalizar tus preferencias de notificación**: elige las notificaciones que quieres recibir sobre tu cuenta del Centro de desarrollo e indica si quieres recibirlas por correo electrónico, en el panel, o ambos. | Usa el icono cerca de la parte superior del panel para ir al **Centro de mensajes** y luego selecciona **Configuración**. Realiza tus selecciones en la sección Preferencias de notificación. También puedes especificar la dirección en la que quieras recibir las notificaciones por correo electrónico.  | Noviembre de 2017 |
 |**Ver más detalles de tu página de información general**: obtén más detalles sobre las aplicaciones resaltadas sin salir de la página de información general. | En la página de información general, busca las casillas que resalten estadísticas clave para tus aplicaciones. Haz clic en cualquiera de las casillas para ver más detalles sobre la aplicación. | Septiembre de 2017 |
 |**Datos sobre estado casi en tiempo real**: el informe **Estado** ahora muestra datos de bloqueos, errores de memoria y excepciones de JavaScript casi en tiempo real al usar la opción de filtro de página **72H**.  | En el informe Estado de la aplicación, elige la opción **72H** en la parte superior de la página. Ten en cuenta que es posible que veas una discrepancia en los datos durante el período de 72 horas al comparar los filtros **72H**y **30D**. Este es un problema conocido que estamos tratando de solucionar.  | Septiembre de 2017|
 |**Análisis de uso activo de cohortes**: realiza un seguimiento del uso semanal de los cohortes (grupos de usuarios activos que comenzaron a usar tu aplicación en la misma semana) para obtener información sobre las tendencias de uso.  | En el informe **Uso**, consulta el gráfico **Cohortes por uso activo**.  |Julio de 2017|
-|**Nuevas opciones basadas en el uso para los segmentos de clientes**: crea segmentos de clientes en función de cuánto tiempo han estado utilizando tu aplicación. | En la sección **Interactuar**, selecciona **Grupos de clientes** para crear un nuevo segmento. En la sección de condiciones de inclusión, selecciona **Uso** en el primer menú desplegable y luego elige las nuevas opciones: **Minutos de interacción**, **Sesiones de usuario**, **Fecha en que se usó por primera vez** o **Fecha en que se usó por última vez**. |Julio de 2017|
 |**Opción de predicción de renovación para segmentos de clientes**: crea un segmento de clientes en función de si detectamos que probablemente dejarán de utilizar tu aplicación en breve.  | En la sección **Interactuar**, selecciona **Grupos de clientes** para crear un nuevo segmento. En la sección de condiciones de inclusión, selecciona **Predicción de las renovaciones** en el primer menú desplegable y luego elige **true** o **false** para definir el segmento. |Mayo de 2017|
 |**Notificación de correo electrónico para los cambios de tendencias analíticas**: recibe una notificación sobre los cambios significativos en las adquisiciones de tus aplicaciones. | Si se detecta un cambio importante en los números de adquisición de una aplicación en comparación con sus datos históricos, te enviaremos automáticamente un correo electrónico. |Abril de 2017|
 |**Análisis en tiempo real**: consulta información detallada sobre las adquisiciones y los complementos más recientes de tu aplicación. El nuevo informe usa la recopilación de eventos en tiempo real de tus clientes de Windows10. | Elige **Real time report** en el menú izquierdo en **Análisis**. Selecciona el intervalo de tiempo para revisar los datos sobre los últimos siete días o hasta la última hora, minuto a minuto. Ten en cuenta que el informe incluye solo los datos de clientes en Windows 10.  |Agosto de 2016|

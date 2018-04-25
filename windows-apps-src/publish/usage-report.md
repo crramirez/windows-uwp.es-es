@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, uso, evento personalizado, informe, telemetría, sesiones de usuario
 ms.localizationpriority: high
-ms.openlocfilehash: 35bc42e8a65441d9ee4387b65c60c3a51903142c
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: 68e9643093aa4f5b777f3e5c430edc394838766a
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="usage-report"></a>Informe Uso
 
@@ -38,7 +38,7 @@ La información de todos los gráficos enumerados a continuación reflejará el 
 > Este informe solo incluye los datos de uso de los clientes de Windows 10 (incluida la Xbox) que decidieron no proporcionar información de telemetría. Los datos de uso para juegos de Xbox se incluyen aquí, con independencia de si el cliente ha iniciado sesión o no en Xbox Live. 
 
 
-##<a name="usage"></a>Uso
+## <a name="usage"></a>Uso
 
 El gráfico **Uso** muestra detalles acerca de cómo los clientes están usando tu aplicación durante el período de tiempo seleccionado. Ten en cuenta que este gráfico no realiza un seguimiento de usuarios únicos de tu aplicación ni sesiones de usuario único (es decir, un usuario se representa en este gráfico tanto si usó la aplicación una vez como si lo hizo varias veces).
 

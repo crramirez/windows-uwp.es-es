@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 754fa7c1fe805b45b33be1d560d07c22646d497c
-ms.sourcegitcommit: 444eaccbdcd4be2f1a1e6d4ce5525ba57e363b56
+ms.openlocfilehash: 1810cf1568ab40621ccc981a6ec1f561d0e8a296
+ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="handle-uri-activation"></a>Administrar la activación de los identificadores URI
 
@@ -35,7 +35,7 @@ En estos pasos se muestra cómo registrar un nombre de esquema de URI personaliz
 
 La aplicación recibe eventos de activación solo para los nombres de esquema de URI indicados en el manifiesto del paquete. A continuación se muestra cómo debes indicar que la aplicación controle el nombre de esquema de URI `alsdk`.
 
-1.  En el **Explorador de soluciones**, haz doble clic en package.appxmanifest para abrir el diseñador de manifiestos. Selecciona la pestaña **Declaraciones** y, en la lista desplegable **Declaraciones disponibles**, selecciona **Protocolo** y luego haz clic en **Agregar**.
+1. En el **Explorador de soluciones**, haz doble clic en package.appxmanifest para abrir el diseñador de manifiestos. Selecciona la pestaña **Declaraciones** y, en la lista desplegable **Declaraciones disponibles**, selecciona **Protocolo** y luego haz clic en **Agregar**.
 
     A continuación se muestra una breve descripción de cada uno de los campos que puedes rellenar en el diseñador de manifiestos para el protocolo (para obtener más detalles, consulta [**Manifiesto del paquete AppX**](https://msdn.microsoft.com/library/windows/apps/dn934791)):
 
@@ -50,11 +50,12 @@ La aplicación recibe eventos de activación solo para los nombres de esquema de
 | **Punto de entrada** | Especifica la tarea que administra la extensión del protocolo. Suele ser el nombre completo en el espacio de nombres de un tipo de Windows en tiempo de ejecución. Si no se especifica, se usará el punto de entrada de la aplicación. |
 | **Página de inicio** | La página web que administra el punto de extensibilidad. |
 | **Grupo de recursos** | Una etiqueta que puedes usar para agrupar las activaciones de extensión con fines de administración de recursos. |
-| **Desired View** (solo Windows) | Especifica el campo **Desired View** para indicar la cantidad de espacio que necesita la ventana cuando se inicia para el nombre del esquema de URI. Los posibles valores de **Desired View** son **Default**, **UseLess**, **UseHalf**, **UseMore** o **UseMinimum**. <br/>**Nota** Windows tiene en cuenta diferentes factores a la hora de determinar el tamaño final de la ventana de la aplicación de destino, como, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. El establecimiento de **Desired View** no garantiza un comportamiento de ventanas específico para la aplicación de destino.<br/> **Mobile device family: Desired View** no se admite en la familia de dispositivos móviles. |
-2.  Escribe `images\Icon.png` como el valor de **Logo**.
-3.  Escribe `SDK Sample URI Scheme` como **Display name**.
-4.  Escribe `alsdk` como el valor de **Name**.
-5.  Presiona Ctrl+S para guardar el cambio realizado en package.appxmanifest.
+| **Desired View** (solo Windows) | Especifica el campo **Desired View** para indicar la cantidad de espacio que necesita la ventana cuando se inicia para el nombre del esquema de URI. Los posibles valores de **Desired View** son **Default**, **UseLess**, **UseHalf**, **UseMore** o **UseMinimum**.<br/>**Nota** Windows tiene en cuenta diferentes factores a la hora de determinar el tamaño final de la ventana de la aplicación de destino, como, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. El establecimiento de **Desired View** no garantiza un comportamiento de ventanas específico para la aplicación de destino.<br/>**Familia de dispositivos móviles: Vista deseada** no se admite en la familia de dispositivos móviles. |
+
+2. Escribe `images\Icon.png` como el valor de **Logo**.
+3. Escribe `SDK Sample URI Scheme` como **Display name**.
+4. Escribe `alsdk` como el valor de **Name**.
+5. Presiona Ctrl+S para guardar el cambio realizado en package.appxmanifest.
 
     Esto agrega un elemento [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400) como este al manifiesto del paquete. La categoría **windows.protocol** indica que la aplicación controla el nombre de esquema de URI `alsdk`.
 
@@ -142,7 +143,6 @@ Si las aplicaciones se inician a través de la activación de protocolo, sería 
 Cualquier aplicación o sitio web puede usar tu nombre de esquema de URI, incluidos los malintencionados. Por este motivo, los datos que incluyes en el URI podrían provenir de un origen que no es de confianza. Te desaconsejamos que realices una acción permanente en función de los parámetros que recibes en el URI. Puedes usar parámetros de URI, por ejemplo, para que la aplicación se inicie en una página de la cuenta del usuario, pero no te recomendamos que los uses para modificar directamente la cuenta del usuario.
 
 > **Nota** Si vas a crear un nuevo nombre de esquema de URI para la aplicación, asegúrate de seguir las directrices de [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Esto garantiza que el nombre cumpla los estándares de los esquemas de URI.
-
 > **Nota** Si se inician mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario de regreso a la pantalla que inició la aplicación y no al contenido previo de la aplicación.
 
 Es recomendable que las aplicaciones creen un nuevo elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) de XAML para cada evento de activación que abra un nuevo destino de URI. De esta forma, la navegación hacia atrás del nuevo elemento **Frame** de XAML no incluirá ningún contenido anterior que la aplicación tuviera en la ventana actual al pasar a suspensión.
@@ -153,28 +153,24 @@ Si prefieres que las aplicaciones usen un único elemento [**Frame**](https://ms
 
 **Ejemplo completo**
 
-* [Ejemplo de inicio por asociación](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
+- [Ejemplo de inicio por asociación](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
 
 **Conceptos**
 
-* [Programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [Modelo de asociación de tipos de archivo y URI](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+- [Programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+- [Modelo de asociación de tipos de archivo y URI](https://msdn.microsoft.com/library/windows/desktop/hh848047)
 
 **Tareas**
 
-* [Iniciar la aplicación predeterminada de un URI](launch-default-app.md)
-* [Controlar la activación de archivos](handle-file-activation.md)
+- [Iniciar la aplicación predeterminada de un URI](launch-default-app.md)
+- [Controlar la activación de archivos](handle-file-activation.md)
 
 **Instrucciones**
 
-* [Directrices sobre tipos de archivo y URI](https://msdn.microsoft.com/library/windows/apps/hh700321)
+- [Directrices sobre tipos de archivo y URI](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
 **Referencia**
 
-* [Manifiesto del paquete AppX](https://msdn.microsoft.com/library/windows/apps/dn934791)
-* [Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224742)
-* [Windows.UI.Xaml.Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330)~~
-
- 
-
- 
+- [Manifiesto del paquete AppX](https://msdn.microsoft.com/library/windows/apps/dn934791)
+- [Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224742)
+- [Windows.UI.Xaml.Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330)

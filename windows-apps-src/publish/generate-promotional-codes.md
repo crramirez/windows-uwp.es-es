@@ -4,17 +4,17 @@ Description: You can generate promotional codes for an app or add-on that you ha
 title: Generar códigos de promoción
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ms.author: wdg-dev-content
-ms.date: 01/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, código de promoción, códigos de promoción, token, tokens
 ms.localizationpriority: high
-ms.openlocfilehash: 634c0857982924ca1b588519172d77d97dd74791
-ms.sourcegitcommit: b6915c7fa2c7292e9b4e3d3e9927dc8746ec1ffb
+ms.openlocfilehash: 7043b12dc3b9d6e7a9813fb1d7b81b836902f92f
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="generate-promotional-codes"></a>Generar códigos de promoción
 
@@ -33,7 +33,7 @@ En el panel del Centro de desarrollo de Windows, puedes:
 -   Revisa el uso de códigos promocionales.
 
 > [!NOTE]
-> Puedes generar códigos promocionales incluso si has seleccionado la opción de [Visibilidad](set-app-pricing-and-availability.md#visibility), **Detener la compra: Los clientes con un vínculo directo podrán ver la descripción del producto en la Tienda, pero solo podrán descargarlo si ya lo tienen, tienen un código promocional y están usando un dispositivo Windows 10.**
+> Puedes generar códigos promocionales incluso si has seleccionado **Hacer este producto disponible, pero no descubrible, en Store** con la opción **Detener la compra: los clientes con un vínculo directo pueden ver la descripción de Store del producto, pero solo podrán descargarlo si ya poseían antes el producto o tienen un código promocional y están usando un dispositivo con Windows 10** de la sección [Visibilidad](choose-visibility-options.md#discoverability) de tu envío..
 
 Recuerda que la aplicación debe pasar a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md) antes de que los clientes puedan canjear un código promocional para instalarla.
 
@@ -80,7 +80,7 @@ Para descargar un pedido completado de códigos promocionales y distribuirlos a 
     -   **Nombre del producto**: es el nombre de la aplicación o complemento con el que está asociado el código.
     -   **Nombre del pedido**: es el nombre del pedido con el que se generó este código.
     -   **Código promocional**: es el propio código. Se trata de una cadena de 5 x 5 caracteres alfanuméricos separados por guiones. Por ejemplo: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
-    -   **Dirección URL canjeable**: Es la dirección URL en la que el cliente puede canjear el código e instalar la aplicación o complemento. La dirección URL tiene el siguiente formato: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;código_promocional>
+    -   **Dirección URL canjeable**: Es la dirección URL en la que el cliente puede canjear el código e instalar la aplicación o complemento. La dirección URL tiene el formato siguiente: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;promotional_code>
     -   **Fecha de inicio**: La fecha en la que este código se activó.
     -   **Fecha de expiración**: La fecha de expiración de este código.
     -   **Id. de código**: Un identificador único de este código.
@@ -97,7 +97,7 @@ Para descargar un pedido completado de códigos promocionales y distribuirlos a 
 
 ## <a name="code-redemption-user-experience"></a>Experiencia de usuario del canje de códigos
 
-Después de distribuir un código promocional (o su dirección URL canjeable) a un cliente, este podrán utilizar esa dirección URL para obtener el producto de forma gratuita. Al hacer clic en la dirección URL canjeable, se lanzará una página autentificada **Canjear tu código** en <https://account.microsoft.com/billing/redeem>. Esta página incluye una descripción de la aplicación que el usuario va a canjear. Si el cliente no ha iniciado sesión con su cuenta Microsoft, se le pedirá que lo haga. Tu cliente también puede visitar <https://account.microsoft.com/billing/redeem> y escribir el código directamente.
+Después de distribuir un código promocional (o su dirección URL canjeable) a un cliente, este podrán utilizar esa dirección URL para obtener el producto de forma gratuita. Al hacer clic en la dirección URL canjeable, se abrirá una página **Canjear tu código** en <https://account.microsoft.com/billing/redeem>. Esta página incluye una descripción de la aplicación que el usuario va a canjear. Si el cliente no ha iniciado sesión con su cuenta Microsoft, se le pedirá que lo haga. También puedes visitar <https://account.microsoft.com/billing/redeem> y escribir el código directamente.
 
 > [!IMPORTANT]
 > Te recomendamos que no distribuyas códigos promocionales a los clientes hasta que tu producto no haya completado el proceso de publicación (incluso si seleccionaste **Make this product available but not discoverable in the Store**). Los clientes verán un error si tratan de usar el código promocional de un producto que no se ha publicado aún.
@@ -111,12 +111,12 @@ Después de que el cliente haga clic en **Canjear**, se abrirá la página de in
 ## <a name="review-your-promotional-codes"></a>Revisar los códigos promocionales
 
 Para ver un resumen detallado de pedidos de códigos de promoción para tus aplicaciones y complementos, ve a la página **Promotional codes** (en el menú de navegación izquierdo del panel del Centro de desarrollo, amplía **Atraer** y, a continuación, selecciona **Promo codes**). Puedes revisar la siguiente información para todos tus códigos de promoción actuales e inactivos actuales:
-    -   Nombre del pedido
-    -   Aplicación o complemento
-    -   Fecha de inicio
-    -   Fecha de expiración
-    -   Disponible
-    -   Canjeado
+-   Nombre del pedido
+-   Aplicación o complemento
+-   Fecha de inicio
+-   Fecha de expiración
+-   Disponible
+-   Canjeado
 
 También puedes [descargar](#download-and-distribute-promotional-codes) un pedido de esta tabla.
 

@@ -9,11 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, análisis de xbox, análisis dinámicos de xbox, estadística de xbox
 ms.localizationpriority: high
-ms.openlocfilehash: 2b6ab5c15b4683456502ce1b94b1bf3ca74c239c
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 4f00d400724d07a00970f0145326068e15ea9054
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="xbox-analytics-report"></a>Informe de análisis de Xbox
 
@@ -116,7 +116,7 @@ De manera predeterminada, este gráfico muestra los seis servicios principales p
 
 ### <a name="service-availability"></a>Disponibilidad de servicio
 
-En el gráfico **Disponibilidad del servicio** muestra la disponibilidad diaria en cada servicio de Xbox Live durante el período de tiempo seleccionado. Esto se calcula como *1-(errores de servidor totales (5xx)/respuesta totales)*y es específico de tu producto, no de Xbox Live en su conjunto.
+En el gráfico **Disponibilidad del servicio** muestra la disponibilidad diaria en cada servicio de Xbox Live durante el período de tiempo seleccionado. Esto se calcula como *1-(errores de servidor totales (5xx)/respuesta totales)* y es específico de tu producto, no de Xbox Live en su conjunto.
 
 De manera predeterminada, este gráfico muestra los seis servicios que han tenido la menor disponibilidad. Puedes seleccionar el icono de filtro en la esquina superior derecha de esta sección para elegir diferentes servicios. Puedes ver la disponibilidad para un máximo de seis servicios a la vez. 
 
@@ -131,7 +131,7 @@ En la tabla **Errores de cliente por extremo** se muestra el número de errores 
 También puedes ver solo los errores de limitación de velocidad seleccionando **Rate limiting**. Muestra el número de errores de limitación de velocidad diaria (429) y de exención de limitación de velocidad (429E) en cada servicio de Xbox Live, extremo y código de estado durante el período de tiempo seleccionado.
 
 > [!NOTE]
-Un código de estado 429E se devolvió realmente de manera correcta como código de estado 200, pero habría tenido límite de velocidad si el servicio estuviera teniendo un volumen alto en el momento, por lo que recomendamos que lo trate exactamente igual como si hubiera aplicado (429).
+> Un código de estado 429E se devolvió realmente de manera correcta como código de estado 200, pero habría tenido límite de velocidad si el servicio estuviera teniendo un volumen alto en el momento, por lo que recomendamos que lo trate exactamente igual como si hubiera aplicado (429).
 
 
 

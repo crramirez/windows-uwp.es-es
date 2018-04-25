@@ -4,17 +4,17 @@ Description: The Pricing and availability page of the app submission process let
 title: Establecer los precios y la disponibilidad de las aplicaciones
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.author: wdg-dev-content
-ms.date: 11/22/2017
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, precio, disponible, descubrible, prueba gratuita, pruebas, prueba, aplicaciones, fecha de lanzamiento
 ms.localizationpriority: high
-ms.openlocfilehash: 3e94aadefb418aa7cefa90b8f274868c80f3e480
-ms.sourcegitcommit: 11edca90aaf7856c762e68903483079d30ad3877
+ms.openlocfilehash: 58b70da6a1be4fc52d3f31f0ea7b25b96acfa860
+ms.sourcegitcommit: 9f059b37e45099b4314c96a0b604449e966d3c3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="set-app-pricing-and-availability"></a>Establecer los precios y la disponibilidad de las aplicaciones
 
@@ -31,26 +31,14 @@ Para más información, consulta [Definir la selección de precios y mercados](d
 
 ## <a name="visibility"></a>Visibilidad
 
-La sección **Visibilidad** te permite establecer restricciones sobre cómo se puede detectar y adquirir la aplicación.
+La sección **Visibilidad** te permite establecer restricciones sobre cómo tu aplicación puede ser descubierta y adquirida, incluyendo si las personas pueden encontrar tu aplicación en Store o ver su descripción de Store completa.
 
-El valor predeterminado es **Make this product available and discoverable in the Store**. Esto significa que tu aplicación figurará en la Tienda para que los clientes puedan buscar a través del vínculo directo de la aplicación o por otros métodos, como la búsqueda, la exploración y la inclusión en listas selectas. 
-
-Si quieres ocultar la aplicación en la Tienda pero que esté disponible para determinadas personas, selecciona **Mostrar opciones**, expande la sección y, a continuación, selecciona **Make this product available but not discoverable in the Store**. Esto significa que ningún cliente podrá encontrar la aplicación en la Tienda a través de la búsqueda o exploración, independientemente de su versión del sistema operativo. También debes elegir una de las siguientes versiones para determinar cómo se puede adquirir tu aplicación.
-
->[!IMPORTANT]
-> Cada una de estas opciones limita las versiones de sistema operativo en el que los clientes pueden comprar tu aplicación. Lee las descripciones con cuidado para asegurarte de que conoces qué versiones del sistema operativo son compatibles. Ten en cuenta que los clientes de Windows 8 y Windows 8.1 no podrán obtener la aplicación si eliges una de las opciones de **Make this product available but not discoverable in the Store**. 
-
-- **Solo vínculo directo: Cualquier cliente con un vínculo directo a la descripción del producto puede descargarla, excepto en Windows 8.x.** Cualquier cliente que obtenga la descripción de la aplicación a través de un vínculo directo puede descargarla en dispositivos que ejecuten Windows 10 o Windows Phone 8.1 y versiones anteriores. Los clientes en Windows 8.x no pueden obtener la aplicación con esta opción.
-- **Detener la compra: Los clientes con un vínculo directo podrán ver la descripción de la aplicación en la Tienda, pero solo podrán descargarla si ya tienen el producto, tienen un código promocional y están usando un dispositivo Windows 10.** Incluso si un cliente tiene un vínculo directo, no se puede descargar la aplicación a no ser que tenga un [código promocional](generate-promotional-codes.md) y esté usando un dispositivo Windows 10. Al proporcionar un código a un cliente, este puede usar el vínculo y el código para tu aplicación de forma gratuita (solo en Windows 10), aunque no se la ofrezcas a ningún otro cliente. Además de usar un código promocional, no hay otra manera de acceder a tu aplicación.
-- **Solo usuarios en Windows Phone 8.x: Solo las personas especificadas a continuación puede descargan este producto en un dispositivo con Windows Phone 8.x. Cualquier persona que tenga un vínculo directo y un código promocional puede descargar el producto en un dispositivo con Windows 10** Esta opción puede que no aparezca para todos los envíos. Solo se aplica si tienes paquetes que puedan ejecutarse en Windows Phone 8.x. Solo los clientes cuya dirección de correo electrónico (asociada a sus cuentas Microsoft) escribas en el cuadro (separadas por punto y comas) podrán descargar la aplicación en Windows Phone 8.x mediante un vínculo directo a su descripción. También puedes generar códigos promocionales para distribuirla entre personas concretas en Windows 10 como se ha descrito anteriormente. 
-
-> [!TIP]
-> Si quieres dejar de ofrecer una aplicación a los clientes nuevos, puedes seleccionar **Make app unavailable** desde su página de información general. Después de confirmar que quieres que la aplicación deje de estar disponible, en el plazo de unas horas dejará de estar visible en Microsoft Store y ningún cliente nuevo podrá acceder a ella (a no ser que tengan un [código promocional](generate-promotional-codes.md) y usen un dispositivo Windows 10). Esta acción anulará las selecciones de **Visibilidad** en el envío. Para que la aplicación vuelva a estar disponible para los nuevos clientes (por selecciones de **Visibilidad**), puedes hacer clic en **Make app available** desde la página de información general en cualquier momento. Para obtener más información, consulta [Quitar una aplicación de la Tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+Para obtener más información, consulta [Elegir opciones de visibilidad](choose-visibility-options.md).
 
 
 ## <a name="schedule"></a>Programación
 
-De manera predeterminada (a menos que hayas seleccionado uno de la opciones **Make this app available but not discoverable in the Store** en la sección **Visibilidad**, la aplicación estará disponible para todos los clientes tan pronto como supere la certificación y complete el proceso de publicación. Para elegir otras fechas, seleccione **Mostrar opciones** para expandir la sección. 
+De manera predeterminada (a menos que hayas seleccionado una de la opciones **Hacer disponible esta aplicación, pero no descubrible, en Store** en la sección [Visibilidad](choose-visibility-options.md#discoverability), la aplicación estará disponible para todos los clientes tan pronto como supere la certificación y complete el proceso de publicación. Para elegir otras fechas, seleccione **Mostrar opciones** para expandir la sección. 
 
 Para obtener más información, consulta [Configurar la programación de lanzamiento precisa](configure-precise-release-scheduling.md).
 
@@ -62,7 +50,7 @@ De manera predeterminada, la fecha de lanzamiento de la aplicación será la fec
 
 ## <a name="pricing"></a>Precios
 
-Necesitas seleccionar un precio base de la aplicación (a menos que hayas seleccionado una de las opciones **Make this app available but not discoverable in the Store** de la sección [Visibilidad](#visibility), y seleccionar **Gratis** o una de las franjas de precios disponibles. También puedes programar los cambios de precio para indicar la fecha y la hora en las que el precio de la aplicación debería cambiar. Además, tienes la opción de personalizar estos cambios para mercados específicos. 
+Necesitas seleccionar un precio base de la aplicación (a menos que hayas seleccionado la opción **Detener adquisición** en **Hacer disponible esta aplicación, pero no descubrible, en Store** en la sección [Visibilidad](choose-visibility-options.md#discoverability)), eligiendo entre **Gratis** y uno de los niveles de precio disponibles. También puedes programar los cambios de precio para indicar la fecha y la hora en las que el precio de la aplicación debería cambiar. Además, tienes la opción de personalizar estos cambios para mercados específicos. 
 
 Para obtener más información, consulta [Establecer y programar los precios de las aplicaciones](set-and-schedule-app-pricing.md).
 
@@ -96,7 +84,6 @@ Para establecer las fechas de cuándo se debe ofrecer la prueba a los clientes e
 > A diferencia de la sección [Programación](configure-precise-release-scheduling.md), las fechas que selecciones para tu **evaluación gratuita** no se puede personalizar para mercados específicos. 
 
 
-
 ## <a name="sale-pricing"></a>Precio de oferta
 
 Si quieres ofrecer tu aplicación a un precio reducido durante un período de tiempo limitado, puedes crear y programar una oferta.
@@ -113,16 +100,6 @@ Para obtener más información, consulta [Opciones de licencias organizativas](o
 
 ## <a name="publish-date"></a>Fecha de publicación
 
-De manera predeterminada, tu envío comenzará el proceso de publicación en cuanto supere la certificación, a menos que hayas configurado las fechas en la sección [**Programación**](#schedule) descrita anteriormente. 
+Anteriormente, la sección **Fecha de publicación** aparecía en esta página. Esta funcionalidad ahora puede encontrarse en la página [Opciones de envío](manage-submission-options.md), en la sección **Opciones de suspensión de publicación**. (Ten en cuenta que, para controlar cuándo debe publicarse la aplicación en Store, te recomendamos que uses la sección [Programación](configure-precise-release-scheduling.md) de la página **Precios y disponibilidad**).
 
-Para controlar cuándo debe publicarse la aplicación en la Tienda, usa la sección **Programación**. Para la mayoría de los envíos, debes usar esa sección para programar el lanzamiento de la aplicación y dejar la sección **Fecha de publicación** establecida en la opción predeterminada, **Publish this submission as soon as it passes certification**. Esto evitará que el envío se publique antes de las fechas establecidas en la sección **Programación**. Las fechas que seleccionaste en la sección **Programación** determina cuando la aplicación estará disponible para los clientes en la Tienda.
-
-Si no deseas establecer una fecha de lanzamiento todavía y prefieres que el envío permanezca sin publicar hasta que decidas iniciar manualmente el proceso de publicación, puedes elegir **Publicar este envío manualmente.** Elegir esta opción, significa que la selección no se publicará hasta que tú lo indiques. Cuando la aplicación supere la certificación, puedes publicarla seleccionando **Publicar ahora** en la página de estado de certificación, o seleccionando una fecha específica, como se describe a continuación.
-
-Elige **No antes del \[fecha\]** para garantizar que el envío no se publique hasta una fecha determinada. Con esta opción, el envío se lanzará lo antes posible en la fecha que especifiques o después de ella. La fecha debe ser al menos 24 horas después del momento actual. Junto con la fecha, también puedes especificar la hora en que el envío debe comenzar a publicarse.
- 
-> [!NOTE]
-> Los retrasos durante la certificación o la publicación podrían hacer que la fecha de lanzamiento real sea posterior a la que solicites. La Microsoft Store no puede garantizar que la aplicación (o la actualización) esté disponible en una fecha específica.  
-
-También puedes cambiar la fecha de lanzamiento después de enviar la aplicación, siempre y cuando aún no haya entrado en el paso Publicar. 
 

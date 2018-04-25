@@ -3,17 +3,17 @@ author: jnHs
 Description: After your packages have been successfully uploaded, you'll see a table that indicates which packages will be offered to specific Windows 10 device families (and earlier OS versions, if applicable), in ranked order.
 title: Disponibilidad de familias de dispositivos
 ms.author: wdg-dev-content
-ms.date: 10/12/2017
+ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, paquetes, carga, disponibilidad de familia de dispositivos
 ms.localizationpriority: high
-ms.openlocfilehash: a3ae23a08ec305285569de8b6d55e805beaa86ba
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 44c20c05457669edb31067b6d7ac8bc60f09e72e
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos
 
@@ -36,6 +36,7 @@ Puedes desactivar la casilla para cualquier familia de dispositivos Windows 10 s
 Si tu app las admite, se recomienda dejar estas casillas activadas salvo que tengas un motivo específico para limitar los tipos de dispositivos Windows 10 que pueden comprar tu aplicación. Por ejemplo, si sabes que tu aplicación no ofrece una buena experiencia en [Surface Hub](https://developer.microsoft.com/windows/surfacehub) o [Microsoft HoloLens](http://dev.windows.com/holographic/development_overview), puedes desactivar la casilla **Windows 10 Team** o **Windows 10 Holographic**. Esto impide que los clientes nuevos adquieran la aplicación en esos dispositivos. Si más adelante decides que la aplicación está lista para esos clientes, puedes crear un nuevo envío con las casillas activadas.
 
 <span id="xbox" />
+
 La única familia de dispositivos Windows 10 que no está activada de manera predeterminada para los paquetes Windows.Universal es **Windows 10 Xbox**. Si la aplicación no es un juego (o si es un juego y ya has habilitado el [Programa de creadores de XboxLive](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) o pasado por el proceso de [aprobación de concepto](../gaming/concept-approval.md)) y el envío incluye paquetes para UWP x64 y/o neutrales compilados mediante el SDK de Windows 10 (versión 14393 o posterior), puedes activar la casilla **Windows 10 Xbox** para ofrecer la aplicación a los clientes de Xbox One.
 
 > [!IMPORTANT]
@@ -48,6 +49,8 @@ La única familia de dispositivos Windows 10 que no está activada de manera pre
 >   
 > Si aun así no se soluciona el problema, ponte en contacto con el servicio de soporte técnico.
 
+Si vas a enviar una aplicación para UWP para Windows 10 IoT Core, no debes realizar cambios a las selecciones predeterminadas después de cargar tu paquetes: no hay ninguna casilla de verificación independiente para Windows 10 IoT. Para obtener más información sobre la publicación de aplicaciones para UWP de IoT Core, consulta [soporte técnico de Microsoft Store para aplicaciones para UWP de IoT Core](https://docs.microsoft.com/windows/iot-core/commercialize-your-device/installingandservicing).
+
 Si tu envío incluye paquetes que se pueden ejecutar en **Windows 8/8.1** y **Windows Phone 8.x y anterior**, dichos paquetes estarán disponibles para los clientes, como se muestra en la tabla. No hay ninguna casilla para estas versiones de sistema operativo. Si quieres dejar de ofrecer la aplicación a estos clientes, quita los paquetes correspondientes del envío.
 
 > [!IMPORTANT]
@@ -57,8 +60,7 @@ Es importante tener en cuenta que las selecciones que realices en la sección **
 
 Por ejemplo, si tienes una aplicación publicada con paquetes de Windows Phone 8.1 y más adelante agregas un paquete de Windows 10 (UWP) a la misma aplicación que tiene la familia de dispositivos universal como destino, a los clientes de Windows 10 Mobile que tengan el paquete de Windows Phone 8.1 se les ofrecerá actualizarse a este paquete de Windows 10 (UWP), aunque hayas desmarcado la casilla **Windows 10 Mobile** (ya que no se trata de una nueva compra, sino de una actualización). Sin embargo, si no proporcionas ningún paquete de Windows 10 (UWP) que tenga como destino las familias de dispositivos universal o móvil, tus clientes móviles de Windows 10 permanecerán en el paquete de Windows Phone 8.1.
 
-Para obtener más información acerca de las familias de dispositivos, consulta [Introducción a la Plataforma universal de Windows](../get-started/universal-application-platform-guide.md) y [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily).
-
+Para obtener más información sobre las familias de dispositivos, consulta [**Información general sobre las familias de dispositivos**](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview).
 
 ## <a name="understanding-ranking"></a>Comprender la clasificación
 

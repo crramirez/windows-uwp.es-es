@@ -1,24 +1,25 @@
 ---
 author: jnHs
-Description: "La Tienda Windows aplica ciertas reglas relacionadas con los números de versión, que dependen de la versión del sistema operativo."
-title: "Numeración de la versión del paquete"
+Description: The Microsoft Store enforces certain rules related to version numbers, which work somewhat differently in different OS versions.
+title: Numeración de la versión del paquete
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 67c90f87fe0d02a0a906392409103e93e83103c3
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: a5c9c676a3ccd8ff7f1e7d53d9019d722fefa722
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="package-version-numbering"></a>Numeración de la versión del paquete
 
 
-Cada paquete que proporciones debe tener un número de versión (proporcionado como un valor en el atributo **Version** del elemento **Package/Identity** en el manifiesto de la aplicación). La Tienda Windows aplica ciertas reglas relacionadas con los números de versión que dependen de la versión del sistema operativo.
+Cada paquete que proporciones debe tener un número de versión (proporcionado como un valor en el atributo **Version** del elemento **Package/Identity** en el manifiesto de la aplicación). Microsoft Store aplica ciertas reglas relacionadas con los números de versión que dependen de las diferentes versiones del sistema operativo.
 
 > [!NOTE]
 > Este tema hace referencia a "paquetes", pero, a menos que se indique lo contrario, las mismas reglas se aplican a los números de versión de los archivos .appx y .appxbundle.
@@ -26,12 +27,12 @@ Cada paquete que proporciones debe tener un número de versión (proporcionado c
 
 ## <a name="version-numbering-for-windows-10-packages"></a>Números de versión para paquetes de Windows 10
 
-El número de versión de los paquetes de Windows 10 siempre debe ser mayor que los números de versión de los paquetes de Windows 8, Windows 8.1 o Windows Phone 8.1 que publiques (o paquetes que hayas publicado) para la misma aplicación. (Para obtener más información, consulta [Agregar paquetes para Windows 10 a una aplicación publicada anteriormente](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app)).
+El número de versión de los paquetes de Windows 10 siempre debe ser mayor que los números de versión de los paquetes de Windows 8, Windows 8.1 o Windows Phone 8.1 que publiques (o paquetes que hayas publicado) para la misma aplicación. (Para obtener más información, consulta [Agregar paquetes para Windows 10 a una aplicación publicada anteriormente](https://docs.microsoft.com/en-us/windows/uwp/publish/guidance-for-app-package-management#adding-packages-for-windows-10-to-a-previously-published-app)).
 
 > [!IMPORTANT]
 > La última sección (cuarta) del número de versión se reserva para uso por parte de la Tienda y se debe mantener como 0 (cero) cuando compilas el paquete (aunque es posible que la tienda cambie el valor en esta sección).
 
-Cuando elige un paquete de Windows 10 en el envío publicado, la Tienda Windows siempre usa aquel con el número de versión más alto y que sea compatible con el dispositivo del cliente. Esto te da más flexibilidad y te permite controlar qué paquetes se proporcionan a los clientes en tipos específicos de dispositivo. Es importante señalar que puedes enviar los paquetes en cualquier orden; no es necesario que los paquetes de un envío posterior tengan un número de versión más alto.
+Al elegir un paquete de Windows 10 en el envío publicado, Microsoft Store siempre usará el paquete de la versión más alta que sea compatible con el dispositivo del cliente. Esto te da más flexibilidad y te permite controlar qué paquetes se proporcionan a los clientes en tipos específicos de dispositivo. Es importante señalar que puedes enviar los paquetes en cualquier orden; no es necesario que los paquetes de un envío posterior tengan un número de versión más alto.
 
 Puedes incluso proporcionar varios paquetes de Windows 10 con el mismo número de versión. Sin embargo, los paquetes con el mismo número de versión no pueden tener también la misma arquitectura, ya que la identidad completa que la Tienda usa para cada paquete debe ser exclusiva. Para obtener más información, consulta [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-identity).
 
@@ -65,11 +66,12 @@ Para ello, crea un nuevo envío. Quita el paquete problemático y carga el paque
 
 Para solucionar los problemas de los clientes que ya hayan recibido el paquete problemático, puedes enviar cuanto antes un nuevo paquete de Windows 10 que tenga un número de versión superior al del paquete dañado. Cuando el envío supere el proceso de certificación, todos los clientes se actualizarán al nuevo paquete, ya que su número de versión es mayor.
 
+
 ## <a name="version-numbering-for-windows-81-and-earlier-and-windows-phone-81-packages"></a>Números de versión para Windows 8.1 (y versiones anteriores) y paquetes de Windows Phone 8.1
 
 Para los paquetes .appx destinados a Windows Phone 8.1, el número de versión del paquete en un nuevo envío siempre debe ser mayor que el del paquete incluido en el último envío (o cualquier envío anterior).
 
-Para los paquetes .appx destinados a Windows 8 y Windows 8.1, se aplica la misma regla por arquitectura: el número de versión del paquete de un nuevo envío siempre debe ser mayor que el del último paquete enviado a la Tienda Windows para la misma arquitectura.
+Para los paquetes .appx destinados a Windows 8 y Windows 8.1, se aplica la misma regla según la arquitectura: el número de versión del paquete de un nuevo envío siempre debe ser mayor que el del último paquete publicado en Store para la misma arquitectura.
 
 Asimismo, el número de versión de los paquetes de Windows 8.1 siempre debe ser mayor que los números de versión de los paquetes de Windows 8 de la misma aplicación. Dicho de otro modo, el número de versión de cualquier paquete de Windows 8 que envíes deber ser inferior al número de versión de cualquier paquete de Windows 8.1 que hayas enviado para la misma aplicación.
 
@@ -78,7 +80,7 @@ Asimismo, el número de versión de los paquetes de Windows 8.1 siempre debe ser
 
 Estos son algunos ejemplos de lo que sucede en distintos escenarios de actualización de número de versión para Windows 8 y Windows 8.1.
 
-| Con esta versión de tu aplicación en la Tienda  | Y cargas esta versión | Una vez que la nueva versión esté en la Tienda Windows, se instalará con una nueva compra | Una vez que la nueva versión esté en la Tienda Windows, se actualizará si el cliente ya tiene la aplicación |
+| Con esta versión de tu aplicación en la Tienda  | Después de cargar esta versión | Una vez que la nueva versión esté en Store, se instalará como nueva adquisición | Una vez que la nueva versión esté en Store, se actualizará si algún cliente ya tiene la aplicación |
 |---------------------------------------------|-----------------------------|--------------------------------------------------------------------------------------------|----------|
 | Nada                                     | x86, v1.0.0.0               | x86, v1.0.0.0 en ambos equipos, x86 y x64                                                | Nada |
 | x86, v1.0.0.0                               | x64, v1.0.0.0               | v1.0.0.0 para la arquitectura del cliente                                                   | Nada Los números de versión son los mismos. |
@@ -87,6 +89,6 @@ Estos son algunos ejemplos de lo que sucede en distintos escenarios de actualiza
 | independiente, v1.0.0.1                           | x86, v1.0.0.0 <br> x64, v1.0.0.0 <br> ARM, v1.0.0.0 | v1.0.0.0 para la arquitectura del equipo del cliente          | Nada Aquellos que tengan la versión independiente v1.0.0.1 de la aplicación, podrán seguir usándola. |
 | independiente, v1.0.0.1 <br> x86, v1.0.0.0 <br> x64, v1.0.0.0 <br> ARM, v1.0.0.0 | x86, v1.0.0.1 <br> x64, v1.0.0.1 <br> ARM, v1.0.0.1 | v1.0.0.1 para la arquitectura del equipo del cliente | Nada para clientes que ejecutan la versión independiente v1.0.0.1 de la aplicación. <br> v1.0.0.0 se actualizará a v1.0.0.1 para clientes que ejecutan la versión v1.0.0.0 de la aplicación desarrollada para las arquitecturas específicas de sus equipos. |
 | x86, v1.0.0.1 <br> x64, v1.0.0.1 <br> ARM, v1.0.0.1 | x86, v1.0.0.2 <br> x64, v1.0.0.2 <br> ARM, v1.0.0.2 | v1.0.0.2 para la arquitectura del equipo del cliente  | v1.0.0.1 se actualizará a v1.0.0.2 para los clientes que ejecuten la versión v1.0.0.1 de la aplicación compilada para la arquitectura específica de su equipo. |
- 
+
 > [!NOTE]
 > A diferencia de los paquetes .appx, no se tienen en cuenta los números de versión de ningún paquete .xap al especificar qué paquete proporcionar a un cliente determinado. Para proporcionar a un cliente un paquete .xap a uno más reciente, asegúrate de quitar el antiguo paquete .xap del nuevo envío.

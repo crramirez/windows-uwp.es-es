@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: high
-ms.openlocfilehash: 3cbaa8a8e78ad14472a34e107521d9c966ba434f
-ms.sourcegitcommit: 884b79b4c6fd8014fab9953faca557e56bb8c400
+ms.openlocfilehash: a16f86512a3c33055cb4825966282f1487ea158d
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="desktop-bridge"></a>Puente de dispositivo de escritorio
 
@@ -58,6 +58,7 @@ Si quieres ver una lista completa de las ventajas que se ofrecen, consulta [Puen
 A continuación, lee el artículo [Preparar la aplicación de escritorio para empaquetar](desktop-to-uwp-prepare.md) y soluciona cualquier problema derivado de la aplicación antes de crear un paquete de aplicación de Windows para ella. Es posible que no tengas que realizar muchos cambios en la aplicación antes de crear el paquete. Sin embargo, hay algunas situaciones que tienes que tener en cuenta ya que es posible que tengas que modificar la aplicación antes de crear un paquete para ella.
 
 <a id="convert" />
+
 ## <a name="package"></a>Paquete
 
 Estas son algunas herramientas que puedes usar para crear un paquete de aplicación de Windows para tu aplicación.
@@ -114,6 +115,9 @@ Puedes usar el [Instalador avanzado](http://www.advancedinstaller.com/) para gen
 Del mismo modo, el Instalador avanzado también te proporciona una extensión de Visual Studio 2017 y 2015 que puedes usar para [compilar y depurar aplicaciones de Puente de dispositivo de escritorio](http://www.advancedinstaller.com/debug-desktop-bridge-apps.html).
 
 Consulta este [vídeo](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) para ver una introducción rápida.
+
+> [!TIP]
+> Asegúrate de echar un vistazo a la edición publicada recientemente [Edición exprés para instaladores avanzados](https://www.advancedinstaller.com/express-edition.html).
 
 #### <a name="cloudhouse-compatibility-containers"></a>Contenedores de compatibilidad con Cloudhouse
 

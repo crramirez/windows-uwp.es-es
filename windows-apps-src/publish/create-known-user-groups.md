@@ -1,33 +1,33 @@
 ---
 author: JnHs
-Description: "Descubre cómo crear grupos de usuarios conocidos que se usarán para la distribución de paquetes piloto y mucho más."
+Description: Learn how to create known user groups to use for package flighting and more.
 title: Crear grupos de usuarios conocidos
 ms.author: wdg-dev-content
-ms.date: 08/08/2017
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, segmento, segmentos, grupo dirigido, clientes
-ms.openlocfilehash: fc3986520e55ae0c636eb2db731df065463002b5
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: windows 10, uwp, grupo de destino, clientes, grupo piloto, grupos de usuarios, usuarios conocidos
+ms.localizationpriority: high
+ms.openlocfilehash: 06922ba9cde98f4bdf678dc281d261dda3bce2b0
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-known-user-groups"></a>Crear grupos de usuarios conocidos
 
-Los grupos de usuarios conocidos te permiten agregar personas concretas a un grupo, con la dirección de correo electrónico asociada a su cuenta de Microsoft. Estos grupos de usuarios conocidos suelen usarse con [paquetes piloto](package-flights.md) para distribuir paquetes específicos para un determinado grupo de personas. También se pueden utilizar para enviar [notificaciones dirigidas](send-push-notifications-to-your-apps-customers.md) u [ofertas dirigidas](use-targeted-offers-to-maximize-engagement-and-conversions.md) a un grupo de determinados clientes como parte de tus campañas de participación.
+Los grupos de usuarios conocidos te permiten agregar personas concretas a un grupo, usando la dirección de correo electrónico asociada a su cuenta de Microsoft. Estos grupos de usuarios conocidos se usan por lo general para distribuir paquetes específicos a un grupo seleccionado de personas con [distribuciones de paquetes piloto](package-flights.md), o para la distribución de un envío a una [audiencia privada](choose-visibility-options.md#audience). También se pueden utilizar para campañas de participación, como enviar [notificaciones dirigidas](send-push-notifications-to-your-apps-customers.md) u [ofertas dirigidas](use-targeted-offers-to-maximize-engagement-and-conversions.md) a un grupo de clientes específicos.
 
-Para que se contabilice como miembro del grupo, cada persona debe autenticarse en la Tienda con la cuenta de Microsoft asociada la dirección de correo electrónico que indiques. En el caso de paquetes piloto, el usuario debe utilizar [un dispositivo Windows10 que admita la distribución de paquetes piloto](package-flights.md) para descargar la aplicación.
-
+Para que se contabilice como miembro del grupo, cada persona debe autenticarse en la Tienda con la cuenta de Microsoft asociada la dirección de correo electrónico que indiques. Para descargar la aplicación con distribución de paquetes piloto, los miembros del grupo deben utilizar una versión de Windows 10 compatible con los paquetes piloto (Windows.Desktop, compilación 10586 o posterior, Windows.Mobile, compilación 10586.63 o Xbox One). Con envíos a audiencia privada, los miembros del grupo deben usar Windows 10, versión 1607 o posterior (incluyendo Xbox One).
 
 ## <a name="to-create-a-known-user-group"></a>Para crear un grupo de usuarios conocido
 
-1.  En el panel de información del Centro de desarrollo de Windows, expande **Interactuar** en el panel de navegación izquierdo y luego selecciona **Grupos de clientes**. 
-2.  En la sección **Mis grupos de clientes**, selecciona **Crear nuevo grupo**.
-3.  En la página siguiente, selecciona el botón de opción **Grupo de usuario conocido**.
-4.  En la casilla **Nombre de grupo**, escribe un nombre para el grupo de usuario conocido.
-5.  Escribe las direcciones de correo electrónico de las personas que te gustaría agregar al grupo. Debes incluir al menos un correo electrónico, con un máximo de 10000. Puedes escribir las direcciones de correo electrónico directamente en el campo (separadas por espacios, comas, signos punto y coma o saltos de línea), o puedes hacer clic en el vínculo **Importar .csv** para crear el grupo piloto a partir de una lista de direcciones de correo electrónico en un archivo .csv.
+1. En el panel de información del Centro de desarrollo de Windows, expande **Interactuar** en el panel de navegación izquierdo y luego selecciona **Grupos de clientes**. 
+2. En la sección **Mis grupos de clientes**, selecciona **Crear nuevo grupo**.
+3. En la página siguiente, escribe un nombre para el grupo en el cuadro **Nombre de grupo**.
+4. Asegúrate de que esté seleccionado el botón de radio **Grupo de usuarios conocido**.
+5. Escribe las direcciones de correo electrónico de las personas que te gustaría agregar al grupo. Debes incluir al menos un correo electrónico, con un máximo de 10000. Puedes escribir las direcciones de correo electrónico directamente en el campo (separadas por espacios, comas, signos punto y coma o saltos de línea), o puedes hacer clic en el vínculo **Importar .csv** para crear el grupo piloto a partir de una lista de direcciones de correo electrónico en un archivo .csv.
 6. Selecciona **Guardar**.
 
 El grupo ahora estará disponible para su uso.
@@ -47,7 +47,7 @@ Después de seleccionar el grupo que deseas editar, puedes agregar o quitar las 
 
 Para realizar cambios de mayor magnitud, selecciona **Exportar .csv** para guardar la información de pertenencia a un grupo en un archivo .csv. Realiza los cambios que quieras en este archivo y haz clic en **Importar .csv** para usar la nueva versión para actualizar la pertenencia al grupo.
 
-Ten en cuenta que los cambios de pertenencia pueden tardar hasta 30minutos en implementarse. Si agregas personas a un grupo de usuarios conocido después de haber publicado un paquete piloto para dicho grupo, los paquetes se entregarán a esas nuevas personas de forma automática; no será necesario que crees y publiques un nuevo envío para ese paquete piloto. 
+Ten en cuenta que los cambios de pertenencia pueden tardar hasta 30minutos en implementarse. No necesitas publicar un nuevo envío para que nuevos miembros del grupo nueva puedan acceder a tu envío final a través de paquetes piloto o audiencia privada; tendrán acceso tan pronto como se implementen los cambios. 
 
 
 

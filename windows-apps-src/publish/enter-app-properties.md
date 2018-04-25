@@ -4,17 +4,17 @@ Description: The App properties page of the app submission process lets you defi
 title: Introducir las propiedades de la aplicación
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.author: wdg-dev-content
-ms.date: 01/24/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, configuración del juego, modo de presentación, requisitos del sistema, requisitos de hardware, hardware mínimo, hardware recomendado
+keywords: windows 10, uwp, configuración de juegos, modo de presentación, requisitos del sistema, requisitos de hardware, hardware mínimo, hardware recomendado, directiva de privacidad, información de contacto de soporte técnico, sitio web de aplicaciones, información de soporte técnico
 ms.localizationpriority: high
-ms.openlocfilehash: 8ecdeb0dd4ebba83a387666ab87067ff419a9303
-ms.sourcegitcommit: 8d9d4f17e272b78e38b346f846b96260c922bbb2
+ms.openlocfilehash: 35d7be3aa88ca17219c2f2e4024bd2e692fb1abc
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="enter-app-properties"></a>Introducir las propiedades de la aplicación
 
@@ -26,6 +26,37 @@ La página **Propiedades** del [proceso de envío de aplicaciones](app-submissio
 Debes indicar la categoría (y la subcategoría o género, si procede) que debe usar la Store para clasificar la aplicación. Es necesario especificar una categoría para enviar la aplicación.
 
 Para más información, consulta [Tabla de categoría y subcategoría](category-and-subcategory-table.md).
+
+
+## <a name="support-info"></a>Información de soporte técnico
+
+Esta sección te permite proporcionar información para ayudar a los clientes a saber más sobre tu aplicación y cómo obtener soporte técnico.
+
+### <a name="privacy-policy-url"></a>Dirección URL de la directiva de privacidad
+
+Eres responsable de garantizar que tu aplicación cumpla con las leyes y normas de privacidad aplicables y de proporcionar aquí una dirección URL válida de directiva de privacidad, si se solicita.
+
+En esta sección, debes indicar si tu aplicación accede, recopila, transmite cualquier [información personal](https://docs.microsoft.com/legal/windows/agreements/store-policies#105-personal-information) o no lo hace. Si respondes **Sí**, es necesaria una dirección URL de la directiva de privacidad. En caso contrario, es opcional (aunque si determinamos que la aplicación requiere una directiva de privacidad y no has proporcionado una, puede que tu envío no supere la certificación).
+
+> [!NOTE]
+> Si detectamos que tus paquetes declaran [funcionalidades](../packaging/app-capability-declarations.md) que pudieran permitir que se accediera a información personal, o que se transmitiera o recopilara, marcaremos esta pregunta como **Sí**, y se te requerirá que introduzcas una dirección URL de directiva de privacidad.
+
+Para ayudarte a determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#105-personal-information). 
+
+> [!NOTE]
+> Microsoft no proporciona una directiva de privacidad predeterminada para tu aplicación. De igual modo, tu aplicación no está cubierta por ninguna directiva de privacidad de Microsoft. 
+
+
+### <a name="website"></a>Sitio web
+
+Escribe la dirección URL de la página web de tu aplicación. La dirección URL debe llevar a una página de tu propio sitio web y no a la descripción web de la aplicación de Store. Este campo es opcional, pero recomendado.
+
+### <a name="support-contact-info"></a>Información de contacto de soporte técnico
+
+Introduce la dirección URL de la página web o una dirección de correo electrónico donde los clientes puedan acudir para obtener soporte técnico para la aplicación. Te recomendamos que incluyas esta información para todos los envíos, para que los clientes sepan cómo obtener soporte técnico si lo necesitan. Ten en cuenta que Microsoft no proporciona a tus clientes soporte técnico para tu aplicación.
+
+> [!IMPORTANT]
+> El campo **información de contacto de soporte técnico** es necesario si la aplicación o el juego está disponible en Xbox. En caso contrario, es opcional (pero recomendado).
 
 
 ## <a name="game-settings"></a>Configuración del juego

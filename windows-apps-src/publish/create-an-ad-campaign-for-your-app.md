@@ -1,19 +1,20 @@
 ---
 author: JnHs
-Description: "Puedes crear una campaña publicitaria con el panel del Centro de desarrollo para ayudar a promover tu aplicación y cultivar tu base de usuarios."
-title: "Crear una campaña publicitaria para la aplicación"
+Description: You can create an ad campaign using the Dev Center dashboard to help promote your app and grow your app's user base.
+title: Crear una campaña publicitaria para la aplicación
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, anuncio, campaña, promover"
-ms.openlocfilehash: 04074261b7efd38f0309f08910e4ee1350302e4c
-ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+keywords: Windows 10, UWP, anuncio, campaña, promover
+ms.localizationpriority: high
+ms.openlocfilehash: 7506ee6e793e38a7babbf88ef4f63467fc044182
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para la aplicación
 
@@ -22,7 +23,7 @@ Puedes crear una campaña publicitaria con el panel del Centro de desarrollo par
 Puedes crear campañas de anuncios solo para las aplicaciones que hayan pasado a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md).
 
 > [!NOTE]
-> En esta sección de la documentación se describe cómo crear una campaña publicitaria en el panel del Centro de desarrollo. De manera alternativa, puedes usar la [API de promociones de la Tienda Windows](../monetize/run-ad-campaigns-using-windows-store-services.md) para crear y administrar campañas publicitarias mediante programación.
+> En esta sección de la documentación se describe cómo crear una campaña publicitaria en el panel del Centro de desarrollo. De manera alternativa, puedes usar la [API de promociones de Microsoft Store](../monetize/run-ad-campaigns-using-windows-store-services.md) para crear y administrar campañas publicitarias mediante programación.
 
 ## <a name="instructions"></a>Instrucciones
 
@@ -37,9 +38,9 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 4.  Selecciona la aplicación que quieras promocionar con esta campaña. Ten en cuenta que la aplicación ya debe estar disponible en la Tienda.
 5.  Revisa el nombre proporcionado para la campaña en el campo **Nombre de la campaña** y realiza cambios, si lo deseas.
 6.  En **Tipo de campaña**, elige una de estas opciones:
-        -   **Anuncio pagado**: estos anuncios se ejecutarán en cualquier aplicación que coincida con el dispositivo y la categoría de la aplicación. Para las campañas nuevas creadas a partir del 9 de enero de 2017, estos anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft. Las campañas de promoción de aplicaciones dirigidas a aplicaciones y propiedades premium de Microsoft se conocen como campañas *universales*.
-        -   **Anuncio de la comunidad (gratuito)**: estos anuncios se ejecutarán en aplicaciones publicadas por otros desarrolladores que también crean campañas publicitarias de la comunidad. Para poder seleccionar esta opción, debes optar por mostrar los anuncios de la comunidad en la página **Monetizar con anuncios** de tu aplicación. Para obtener más información, consulta [Acerca de los anuncios de la comunidad](about-community-ads.md).
-        -   **Anuncio interno (gratuito)**: estos anuncios solo se ejecutarán en tus aplicaciones (que coincidan con el tipo de dispositivo de la aplicación anunciada). Los anuncios internos son gratuitos. Para obtener más información, consulta [Acerca de los anuncios internos](about-house-ads.md).
+    -   **Anuncio pagado**: estos anuncios se ejecutarán en cualquier aplicación que coincida con el dispositivo y la categoría de la aplicación. Para las campañas nuevas creadas a partir del 9 de enero de 2017, estos anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft. Las campañas de promoción de aplicaciones dirigidas a aplicaciones y propiedades premium de Microsoft se conocen como campañas *universales*.
+    -   **Anuncio de la comunidad (gratuito)**: estos anuncios se ejecutarán en aplicaciones publicadas por otros desarrolladores que también crean campañas publicitarias de la comunidad. Para poder seleccionar esta opción, debes haber optado por mostrar los anuncios de la comunidad en la página **Monetizar** -> **Anuncios en la aplicación**. Para obtener más información, consulta [Acerca de los anuncios de la comunidad](about-community-ads.md).
+    -   **Anuncio interno (gratuito)**: estos anuncios solo se ejecutarán en tus aplicaciones que coincidan con el tipo de dispositivo de la aplicación anunciada. Los anuncios internos son gratuitos. Para obtener más información, consulta [Acerca de los anuncios internos](about-house-ads.md).
 
 7.  En el caso de campañas publicitarias de pago, confirma la opción **Campaign duration** (el período de tiempo en el que se gastará el presupuesto asignado a la campaña). La opción predeterminada es **Mensualmente**, lo que significa que el presupuesto asignado a la campaña se gastará cada mes de forma recurrente hasta que finalices la campaña. Si tienes una cuenta premium, puedes elegir la opción **Personalizado** para especificar un intervalo de fecha y hora durante el que se gastará el presupuesto asignado a la campaña. Para obtener información sobre las cuentas premium, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign).
 
@@ -75,8 +76,8 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
 10.  En la página **Diseño de anuncios**, elige una de estas opciones:
     -   **Anuncio generado automáticamente**. Esta es la opción predeterminada, que te permite crear un anuncio a partir de nuestras plantillas predeterminadas. Puedes realizar selecciones para personalizar el contenido de tu anuncio y obtendremos una vista previa del aspecto de tu anuncio según tus elecciones (se actualiza automáticamente a medida que realizas las selecciones).
-        -   En el menú desplegable **Idioma**, selecciona el idioma para el anuncio. El texto del distintivo de la Tienda Windows aparecerá en el idioma que selecciones.
-        -   Para agregar una línea de texto adicional al anuncio, escribe el texto en el campo **Lema personalizado**.
+        -   En el menú desplegable **Idioma**, selecciona el idioma para el anuncio. El texto del distintivo de Microsoft Store aparecerá en el idioma que selecciones.
+        -   Para agregar una línea de texto adicional al anuncio, escribe texto en el campo **Lema personalizado**.
             > [!NOTE]
             > El texto que escribas aquí debe estar localizado en el idioma seleccionado. El lema personalizado se rechazará si el texto no cumple las [Directivas de Bing Ads](http://go.microsoft.com/fwlink?LinkId=398341). Consulta esta página para obtener instrucciones sobre el estilo y sobre el contenido no permitido.
 
@@ -94,11 +95,11 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
 11.  Si tienes una [cuenta premium](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign), puedes usar la casilla **Dirección URL de destino** para controlar lo que sucede cuando un cliente hace clic en el anuncio.
     - Si dejas la casilla vacía, cuando un cliente haga clic en el anuncio, se mostrará la descripción de la Tienda de la aplicación.
-    - Si usas Kochava o Tune para medir el análisis de instalación de la aplicación, escribe la dirección URL de seguimiento de instalación desde Kochava o Tune. Al guardar la campaña, se valida la dirección URL de seguimiento para garantizar que se resuelve en la página de descripción de la aplicación de la Tienda Windows. Para obtener más información sobre el seguimiento de la instalación con Kochava y Tune, consulta la documentación de [Kochava](http://support.kochava.com/) y [Tune](https://help.tune.com/).
+    - Si usas Kochava o Tune para medir el análisis de instalación de la aplicación, escribe la dirección URL de seguimiento de instalación desde Kochava o Tune. Al guardar la campaña, se valida la dirección URL de seguimiento para garantizar que se resuelve en la página de descripción de la aplicación en Microsoft Store. Para obtener más información sobre el seguimiento de la instalación con Kochava y Tune, consulta la documentación de [Kochava](http://support.kochava.com/) y [Tune](https://help.tune.com/).
     - Si elegiste **Incrementar el compromiso con la aplicación** como objetivo de la campaña, puedes especificar un [vínculo profundo de URI](../launch-resume/handle-uri-activation.md) para redirigir a los clientes del segmento seleccionado a una página específica dentro de la aplicación.
     - Si especificas cualquier destino que no sea la página de descripción de la aplicación o una página dentro de la aplicación, la campaña se pondrá en pausa automáticamente.
 
-13.  Por último, haz clic en **Revisar** para confirmar la configuración de la campaña publicitaria y, si es una campaña publicitaria de pago, la información de presupuesto y pago. Haz clic en **Confirmar** y tus anuncios empezarán a aparecer en dispositivos en pocas horas.
+12.  Por último, haz clic en **Revisar** para confirmar la configuración de la campaña publicitaria y, si es una campaña publicitaria de pago, la información de presupuesto y pago. Haz clic en **Confirmar** y tus anuncios empezarán a aparecer en dispositivos en pocas horas.
 
 ## <a name="review-ad-campaign-performance"></a>Revisar el rendimiento de una campaña publicitaria
 

@@ -8,17 +8,17 @@ ms.date: 1/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, introducción, inicio, c#, c++, JavaScript
+keywords: Windows 10, uwp, primera aplicación, c#, c++, JavaScript
 ms.localizationpriority: high
-ms.openlocfilehash: 39c9a6c65f5eb6ca828b782e6550d92601165481
-ms.sourcegitcommit: 444eaccbdcd4be2f1a1e6d4ce5525ba57e363b56
+ms.openlocfilehash: 124c5e89923945ae740dfdc3e658b8d20bbd1286
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-your-first-app"></a>Crear tu primera aplicación
 
-¡Bienvenido de nuevo a la plataforma UWP! ([¿Qué era eso de la UWP?](whats-a-uwp.md)) Estos tutoriales te ayudarán a crear tu primera aplicación para UWP en el lenguaje que elijas.
+¡Bienvenido a la [plataforma UWP](universal-application-platform-guide.md)! Estos tutoriales te ayudarán a crear tu primera aplicación para UWP en el lenguaje que elijas.
 
 Para empezar, elige el lenguaje que prefieras.
 
@@ -84,6 +84,6 @@ Las aplicaciones web se pueden empaquetar fácilmente en el marco UWP como las a
 * [Publicar tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
 * [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
 * [Muestras de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
-* [¿Qué es una aplicación universal de Windows?](whats-a-uwp.md)
+* [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md)
 * [Prepárate](get-set-up.md)
 * [Registrarse para obtener una cuenta de Windows](sign-up.md)

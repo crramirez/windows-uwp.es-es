@@ -3,17 +3,17 @@ author: jnHs
 Description: You can add users, groups, and Azure AD applications to your Dev Center account.
 title: Agregar usuarios, grupos y aplicaciones de AzureAD a tu cuenta del Centro de desarrollo
 ms.author: wdg-dev-content
-ms.date: 09/20/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows10, uwp
+keywords: windows 10, uwp, aplicación de azure ad, aad, usuario, grupo
 ms.localizationpriority: high
-ms.openlocfilehash: bf640dbfe642401b9a4f9c767b8c2145fed11d57
-ms.sourcegitcommit: 11edca90aaf7856c762e68903483079d30ad3877
+ms.openlocfilehash: 463117eb14343e7e2bd19502b31774b78e4093eb
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Agregar usuarios, grupos y aplicaciones de AzureAD a tu cuenta del Centro de desarrollo
 
@@ -24,15 +24,16 @@ Después de que los usuarios se hayan agregado a la cuenta, puedes [editar detal
 > [!IMPORTANT]
 > Para agregar usuarios a tu cuenta, primero tienes que [asociar tu cuenta del Centro de desarrollo al inquilino de Azure ActiveDirectory de la organización](associate-azure-ad-with-dev-center.md). 
 
-Al agregar usuarios, tendrás que especificar su acceso a tu cuenta del Centro de desarrollo asignándoles un [rol o conjunto de permisos personalizados](set-custom-permissions-for-account-users.md). Ten en cuenta los siguientes aspectos. (Se aplican a grupos y aplicaciones de AzureAD, así como a usuarios individuales).
+Al agregar usuarios, tendrás que especificar su acceso a tu cuenta del Centro de desarrollo, asignándoles un [rol o conjunto de permisos personalizados](set-custom-permissions-for-account-users.md). 
 
-Ten en cuenta que todos los usuarios del Centro de desarrollo deben tener una cuenta activa en [un inquilino de Azure AD que está asociado a tu cuenta del Centro de desarrollo](associate-azure-ad-with-dev-center.md). La administración de usuarios se realiza en un inquilino cada vez; debes iniciar sesión con una cuenta de administrador para el inquilino en el que quieres agregar o editar usuarios. Al crear un nuevo usuario en el Centro de desarrollo también se creará una cuenta para ese usuario en el inquilino de Azure AD a la que está conectado. Del mismo modo, al realizar cambios en un nombre de usuario en el Centro de desarrollo se realizarán los mismos cambios en el inquilino de Azure AD de tu organización.
+Ten en cuenta que todos los usuarios del Centro de desarrollo (incluyendo grupos y aplicaciones de Azure AD) deben tener una cuenta activa en [un inquilino de Azure AD que esté asociado a tu cuenta del Centro de desarrollo](associate-azure-ad-with-dev-center.md). La administración de usuarios se realiza en un inquilino cada vez; debes iniciar sesión con una cuenta de administrador para el inquilino en el que quieres agregar o editar usuarios. Al crear un nuevo usuario en el Centro de desarrollo también se creará una cuenta para ese usuario en el inquilino de Azure AD a la que está conectado. Del mismo modo, al realizar cambios en un nombre de usuario en el Centro de desarrollo se realizarán los mismos cambios en el inquilino de Azure AD de tu organización.
 
 > [!NOTE]
 > Si tu organización usa la [integración de directorios](http://go.microsoft.com/fwlink/p/?LinkID=724033) para sincronizar el servicio de directorio local con AzureAD, no podrás crear nuevos usuarios, grupos ni aplicaciones de AzureAD en el Centro de desarrollo. Tu (u otro administrador en el directorio local) deberá crearlos directamente en el directorio local para que puedas verlos en el Centro de desarrollo y agregarlos a este.
 
 
 <span id="users" />
+
 ## <a name="add-users-to-your-dev-center-account"></a>Agregar usuarios a tu cuenta del Centro de desarrollo
 
 Para agregar usuarios a tu cuenta del Centro de desarrollo, ve a la página **Usuarios** en **Configuración de la cuenta** y selecciona **Agregar usuarios**. Debes haber iniciado sesión con una cuenta de administrador para el inquilino de Azure AD en el que quieres trabajar. 
@@ -42,11 +43,11 @@ Para agregar usuarios a tu cuenta del Centro de desarrollo, ve a la página **Us
 Puedes seleccionar usuarios que ya existen en el inquilino de tu organización y darles acceso a tu cuenta del Centro de desarrollo. 
 
 <span id="from-directory" />
+
 1.  En la página **Usuarios**, selecciona **Agregar usuarios**. 
 2.  Selecciona uno o varios usuarios de la lista que se muestra. Puedes usar el cuadro de búsqueda para buscar usuarios específicos.
     > [!TIP]
     > Si seleccionas más de un usuario para agregar a tu cuenta del Centro de desarrollo, debes asignarles el mismo rol o conjunto de permisos personalizados. Para agregar varios usuarios con distintos roles y permisos, repite los pasos siguientes para cada rol o conjunto de permisos personalizados.
-
 3.  Cuando hayas terminado de seleccionar usuarios, haz clic en **Agregar seleccionado**.
 4.  En la sección **Roles**, especifica los [roles o permisos personalizados](set-custom-permissions-for-account-users.md) para los usuarios seleccionados.
 5.  Haz clic en **Guardar**.
@@ -61,6 +62,7 @@ Si has iniciado sesión con una cuenta de administrador que también tiene permi
 -   **Invite outside users**: envía invitaciones por correo electrónico a los usuarios que no se encuentran actualmente en el directorio de tu organización. Se les invitará a tener acceso a tu cuenta del Centro de desarrollo y se les creará una nueva cuenta de [usuario invitado](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) en tu inquilino de AzureAD.
 
 <span id="new-user" />
+
 ### <a name="create-new-users"></a>Crear nuevos usuarios
 
 > [!IMPORTANT]
@@ -77,6 +79,7 @@ Si has iniciado sesión con una cuenta de administrador que también tiene permi
 
 
 <span id="email" />
+
 ### <a name="invite-outside-users"></a>Invitar a usuarios externos
 
 > [!IMPORTANT]
@@ -89,6 +92,9 @@ Si has iniciado sesión con una cuenta de administrador que también tiene permi
 Los usuarios que has invitado recibirán una invitación por correo electrónico para unirse a tu cuenta y se les creará una nueva cuenta de [usuario invitado](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) en el inquilino de AzureAD. Cada usuario tendrá que aceptar tu invitación para poder obtener acceso a tu cuenta.
 
 Si tienes que reenviar una invitación, busca al usuario en tu página **Usuarios** y selecciona su dirección de correo electrónico (o el texto que dice **Invitación pendiente**). Luego, en la parte inferior de la página, haz clic en **Volver a enviar invitación**.
+
+> [!IMPORTANT]
+> Los usuarios externos que invites a unirse a tu cuenta del Centro de desarrollo pueden recibir los mismos roles y permisos que otros usuarios. Sin embargo, los usuarios externos no podrán realizar determinadas tareas en Visual Studio, como asociar una aplicación a Store o crear paquetes para cargar a Store. Si un usuario necesita realizar esas tareas, elige **Crear nuevos usuarios** en lugar de **Invitar a usuarios externos**. (Si no quieres agregar estos usuarios a tu inquilino de Azure AD existente, puedes [crear un nuevo inquilino](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-dev-center-account) y, a continuación, crear nuevas cuentas de usuario para ellos en ese inquilino). 
 
 
 ### <a name="changing-a-users-directory-password"></a>Cambiar la contraseña del directorio de un usuario
@@ -103,6 +109,7 @@ Si uno de los usuarios necesita cambiar su contraseña, puede hacerlo él mismo 
     >  Asegúrate de imprimir o copiar dicha información y proporcionársela al usuario, ya que no podrás acceder a la contraseña temporal después de salir de esta página.
 
 <span id="groups" />
+
 ## <a name="add-groups-to-your-dev-center-account"></a>Agregar grupos a tu cuenta del Centro de desarrollo
 
 Puedes agregar un grupo desde el directorio de la organización a tu cuenta del Centro de desarrollo. Al hacerlo, todos los usuarios que pertenezcan a dicho grupo podrán tener acceso a la cuenta, con los permisos asociados al rol asignado al grupo.
@@ -133,9 +140,11 @@ Si quieres conceder acceso al Centro de desarrollo a un nuevo grupo, puedes crea
 
 
 <span id="azure-ad-applications" />
+
 ## <a name="add-azure-ad-applications-to-your-dev-center-account"></a>Agregar aplicaciones de Azure AD a tu cuenta del Centro de desarrollo
 
-Puedes permitir que las aplicaciones o servicios que forman parte de AzureAD de tu organización obtengan acceso a tu cuenta del Centro de desarrollo.
+Puedes permitir que aplicaciones o servicios que formen parte de AzureAD de tu organización puedan acceder a tu cuenta del Centro de desarrollo. Estas cuentas de usuario de la aplicación de Azure AD pueden usarse para llamar a las API de REST proporcionadas por los [servicios de Microsoft Store](../monetize/using-windows-store-services.md).
+
 
 ### <a name="add-azure-ad-applications-from-your-organizations-directory"></a>Agregar aplicaciones de AzureAD desde el directorio de la organización
 
@@ -158,8 +167,8 @@ Si quieres conceder acceso al Centro de desarrollo a una nueva cuenta de aplicac
 
 1.  En la página **Usuarios**, selecciona **Agregar aplicaciones de Azure AD**.
 2.  En la siguiente página, haz clic en **Nueva aplicación de Azure AD**.
-3.  Escribe la **dirección URL de respuesta** para la nueva aplicación de Azure AD. Esta es la dirección URL donde los usuarios pueden iniciar sesión y usar la aplicación de Azure AD (a veces, también conocida como dirección URL de la aplicación o dirección URL de inicio de sesión). La **dirección URL de respuesta** no puede superar los 256 caracteres.
-4.  Escribe el **URI de identificador de aplicación** para la nueva aplicación de Azure AD. Se trata de un identificador lógico para la aplicación de Azure AD que se muestra cuando envía una solicitud de inicio de sesión único a Azure AD. Ten en cuenta que el **URI de identificador de aplicación** debe ser único para cada aplicación de Azure AD del directorio y no puede superar los 256 caracteres.
+3.  Escribe la **dirección URL de respuesta** para la nueva aplicación de Azure AD. Esta es la dirección URL donde los usuarios pueden iniciar sesión y usar la aplicación de Azure AD (a veces, también conocida como dirección URL de la aplicación o dirección URL de inicio de sesión). La **dirección URL de respuesta** no puede superar los 256 caracteres y debe ser única en tu directorio.
+4.  Introduce el **URI de id. de la aplicación** de la nueva aplicación de Azure AD. Se trata de un identificador lógico para la aplicación de Azure AD que se muestra cuando envía una solicitud de inicio de sesión único a Azure AD. Ten en cuenta que el **URI de identificador de aplicación** debe ser único para cada aplicación de Azure AD del directorio y no puede superar los 256 caracteres. Para obtener más información sobre el **URI de id. de aplicación**, consulta [Integración de aplicaciones con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#changing-the-application-registration-to-support-multi-tenant).
 5.  En la sección **Roles**, especifica los [roles o permisos personalizados](set-custom-permissions-for-account-users.md) para la aplicación de AzureAD.
 6.  Haz clic en **Guardar**.
 
@@ -169,6 +178,7 @@ Después de agregar o crear una aplicación de Azure AD, puedes volver a la secc
 > Si tienes previsto usar las API de REST que se incluyen con los [servicios de la Microsoft Store](../monetize/using-windows-store-services.md), necesitarás los valores de Id. de inquilino e Id. de cliente que se muestran en esta página para obtener un token de acceso de AzureAD que te permita autenticar las llamadas a los servicios.   
 
 <span id="manage-keys" />
+
 ### <a name="manage-keys-for-an-azure-ad-application"></a>Administrar claves para una aplicación de AzureAD
 
 Si la aplicación de AzureAD lee y escribe datos en MicrosoftAzureAD, necesitará una clave. Puedes crear claves para una aplicación de Azure AD modificando su información en el Centro de desarrollo. También puedes quitar las claves que ya no sean necesarias.
@@ -185,6 +195,7 @@ Si la aplicación de AzureAD lee y escribe datos en MicrosoftAzureAD, necesitar�
 4.  Si quieres crear más claves, haz clic en **Agregar otra clave**.
 
 <span id="edit" />
+
 ## <a name="edit-a-user-group-or-azure-ad-application"></a>Editar un usuario, grupo o aplicación de AzureAD
 
 Después de agregar usuarios, grupos o aplicaciones de AzureAD a la cuenta del Centro de desarrollo, puedes realizar cambios en la información de su cuenta. 
@@ -209,11 +220,12 @@ Como propietario de la cuenta, puedes ver el historial de exploración detallado
 En la página **Usuarios**, haz clic en el vínculo que se muestra debajo de **Última actividad** del usuario cuyo historial de exploración quieres revisar. Podrás ver las direcciones URL de todas las páginas que el usuario ha visitado en los últimos 30 días.
 
 <span id="remove" />
+
 ## <a name="remove-users-groups-and-azure-ad-applications"></a>Quitar usuarios, grupos y aplicaciones de AzureAD
 
 Para quitar un usuario, un grupo o una aplicación de Azure AD de tu cuenta del Centro de desarrollo, haz clic en el vínculo **Quitar** que aparece junto al nombre en la página **Usuarios**. Después de confirmar que quieres quitarla, ese usuario, grupo o aplicación de Azure AD ya no tendrá acceso a tu cuenta del Centro de desarrollo (a menos que la agregues de nuevo más adelante).
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > La eliminación de un usuario, un grupo o una aplicación de Azure AD significa que ya no tendrá acceso a tu cuenta del Centro de desarrollo. Esto **no** elimina el usuario, grupo o aplicación de AzureAD del directorio de la organización.
 
  

@@ -3,19 +3,20 @@ author: jnHs
 Description: You can create Store listings for your apps without using the Dev Center dashboard by exporting your listings in a .csv file, entering your info and assets, and then importing the updated file.
 title: Importar y exportar descripciones de Store
 ms.author: wdg-dev-content
-ms.date: 12/22/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, importar descripciones de store, exportar descripciones de store, importar exportar, descripción de store csv"
+keywords: windows 10, uwp, importar descripciones de store, exportar descripciones de store, importar exportar, descripción de store csv
 ms.localizationpriority: high
-ms.openlocfilehash: f003ab35fa968e7b4be8e6e0591d97baafaa8648
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: fb9a3e6fd93600392ef724226368d33ed1585c76
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-and-export-store-listings"></a>Importar y exportar descripciones de Store
+
 En lugar de [escribir información para las descripciones de Store directamente en el panel](create-app-store-listings.md), tienes la opción de añadir o actualizar información exportando descripciones en un archivo .csv, escribiendo tu información y activos e importando el archivo actualizado. Puedes usar este método para crear descripciones desde cero o actualizar descripciones que ya has creado.
 
 Esta opción es especialmente útil si quieres crear o actualizar descripciones de Store para el producto en varios idiomas, ya que puedes copiar y pegar la misma información en varios campos y realizar cualquier cambio fácilmente que se deben aplicar a un idioma concreto. Sin embargo, no puedes usar este método para crear o actualizar [descripciones de Store específicas de la plataforma](create-platform-specific-store-listings.md) para tu aplicación. 
@@ -29,7 +30,7 @@ Ten en cuenta que siempre puedes crear o actualizar descripciones directamente e
 
 En la página de información general de envíos, haz clic en **Exportar descripción** (en la sección **Descripciones de la Tienda**) para generar un archivo .csv codificado en UTF-8. Guarda este archivo en tu equipo.
 
-Puedes usar MicrosoftExcel u otro editor para editar este archivo. ten en cuenta que las versiones de Office 365 de Excel te permiten guardar un archivo .csv como **CSV UTF-8 (delimitado por comas) (*.csv)**, pero otras versiones no son compatibles. Puedes encontrar información sobre las versiones de Excel compatibles con esta característica en [Boletín de nuevas características de Excel2016](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73), así como más información sobre la codificación de UTF-8 en diversos editores [aquí](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
+Puedes usar MicrosoftExcel u otro editor para editar este archivo. Ten en cuenta que las versiones de Excel de Office 365 te permiten guardar un archivo .csv como **CSV UTF-8 (delimitado por comas) (*.csv)**, pero otras versiones puede que no lo admitan. Puedes encontrar información sobre las versiones de Excel compatibles con esta característica en [Boletín de nuevas características de Excel2016](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73), así como más información sobre la codificación de UTF-8 en diversos editores [aquí](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
       
 Si aún no has creado las descripciones para tu producto, el archivo .csv que exportaste no incluirá los datos personalizados. Aparecerán las columnas **Campo**, **ID**, **Tipo** y **predeterminado**, así como las filas que corresponden a cada elemento que puede aparecer en una descripción de la Tienda.
 

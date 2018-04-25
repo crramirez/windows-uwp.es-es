@@ -8,13 +8,13 @@ ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación"
+keywords: windows10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: high
-ms.openlocfilehash: 63fc414c230e5a988013b1509280bfdb083a93c0
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: c3f5de17dc090989572d72c30bd9d8b85e385316
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enter-add-on-properties"></a>Especificar las propiedades de los complementos
 
@@ -80,16 +80,18 @@ Estas son las posibles opciones para el tipo de contenido de un complemento:
 Estos campos son opcionales para todos los tipos de complementos.
 
 <span id="keywords" />
+
 ### <a name="keywords"></a>Palabras clave
 
 Tienes la opción de proporcionar hasta diez palabras clave de hasta 30 caracteres cada una para cada complemento que envíes. Tu aplicación podrá, entonces, buscar los complementos que coincidan con estas palabras. Esta función te permite crear pantallas en la aplicación que pueden cargar complementos sin tener que especificar directamente el id. de producto en el código de la aplicación. Puedes cambiar las palabras clave del complemento en cualquier momento, sin tener que realizar cambios en el código de la aplicación ni volver a enviarla.
 
-Para consultar este campo, usa la propiedad [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct#Windows_Services_Store_StoreProduct_Keywords) del [espacio de nombres Windows.Services.Store](https://msdn.microsoft.com/en-us/library/windows/apps/windows.services.store.aspx). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.store.aspx), usa la propiedad [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting#Windows_ApplicationModel_Store_ProductListing_Keywords)).
+Para consultar este campo, usa la propiedad [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) del [espacio de nombres Windows.Services.Store](https://msdn.microsoft.com/en-us/library/windows/apps/windows.services.store.aspx). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.store.aspx), usa la propiedad [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords)).
 
 > [!NOTE]
 > Las palabras clave no están disponibles para su uso en paquetes destinados a Windows8 y Windows8.1.
 
 <span id="custom-developer-data" />
+
 ### <a name="custom-developer-data"></a>Datos del desarrollador personalizados
 
 Es posible escribir hasta 3000 caracteres en el campo **Datos del desarrollador personalizados** (anteriormente denominado **Etiqueta**) para proporcionar contexto adicional para el producto desde la aplicación. A menudo, se realiza con una cadena XML, pero puedes introducir cualquier cosa que quieras en este campo. Tu aplicación puede consultar este campo para leer su contenido (aunque la aplicación no puede editar los datos ni revertir los cambios).

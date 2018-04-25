@@ -1,17 +1,20 @@
 ---
 author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
-title: "Creación de una aplicación &quot;Hello, world&quot; (XAML)"
-description: "En este tutorial se enseña a usar el lenguaje XAML con C# para crear una sencilla aplicación Hello, world para la Plataforma universal de Windows (UWP) de Windows 10."
+title: Aprender a crear una aplicación "Hola mundo" (XAML)
+description: Usa el lenguaje de marcado de aplicaciones extensible (XAML) con C# para crear una sencilla aplicación Hola mundo para la Plataforma universal de Windows (UWP) en Windows 10.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 95e447550705d606483c20ec34cca6c97b03785c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, primera aplicación, hola mundo
+ms.localizationpriority: high
+ms.openlocfilehash: e6fb25572213947aa7c536cde552aca3c572f0cf
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Crear una aplicación "Hello, world" (XAML)
 
@@ -27,8 +30,8 @@ Aquí aprenderás a:
 
 ## <a name="before-you-start"></a>Antes de comenzar...
 
--   [¿Qué es una aplicación universal de Windows](whats-a-uwp.md)?
--   Para realizar este tutorial, debes tener Windows10 y Visual Studio2017. [Prepárate](get-set-up.md).
+-   [¿Qué es una aplicación universal de Windows?](universal-application-platform-guide.md)
+-   [Descarga Visual Studio 2017 (y Windows 10)](https://developer.microsoft.com/windows/downloads). Si necesitas un poco de ayuda, aprende a [prepararte](get-set-up.md).
 -   También se supone que estás usando el diseño de ventana predeterminado de Visual Studio. Si cambias el diseño predeterminado, puedes restablecerlo en el menú **Ventana** con el comando **Restablecer diseño de la ventana**.
 
 > [!NOTE]
@@ -97,7 +100,7 @@ Para ver y editar un archivo de tu proyecto, haz doble clic en el archivo en el 
 
 *Un conjunto de imágenes de logotipo*
 -   Assets/Square150x150Logo.scale-200.png representa tu aplicación en el menú Inicio.
--   Assets/StoreLogo.png representa tu aplicación en la Tienda Windows.
+-   Assets/StoreLogo.png representa tu aplicación en Microsoft Store.
 -   Assets/SplashScreen.scale-200.png es la pantalla de presentación que se muestra cuando se inicia la aplicación.
 
 ## <a name="step-2-adding-a-button"></a>Paso 2: Adición de un botón
@@ -188,7 +191,7 @@ No hace muchas cosas (todavía), pero te felicitamos, has compilado tu primera a
 
    Cierra la ventana de la aplicación.
 
-## <a name="step-3-event-handlers"></a>Paso 3: Controladores de eventos
+## <a name="step-4-event-handlers"></a>Paso 4: Controladores de eventos
 
 Un "controlador de eventos" suena complicado, pero es simplemente otra forma de designar el código que se llama cuando se produce un evento (por ejemplo, cuando el usuario hace clic en tu botón).
 
@@ -231,17 +234,15 @@ Cuando ejecutes la aplicación y hagas clic en el botón, tu equipo (o teléfono
 
 ## <a name="summary"></a>Resumen
 
-
 Enhorabuena, has creado tu primera aplicación para Windows10 y la UWP.
 
-Para aprender a usar XAML para diseñar los controles que usará la aplicación, prueba el [tutorial sobre la cuadrícula](../layout/grid-tutorial.md), o salta directamente a los [pasos siguientes](learn-more.md).
-
+Para aprender a usar XAML para diseñar los controles que usará la aplicación, prueba el [tutorial sobre la cuadrícula](../design/layout/grid-tutorial.md), o salta directamente a los [pasos siguientes](learn-more.md).
 
 ## <a name="see-also"></a>Consulta también
 
 * [Crear tu primera aplicación](your-first-app.md)
-* [Publicar aplicaciones de Windows](https://developer.microsoft.com/store/publish-apps).
+* [Publicación de tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
 * [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
 * [Muestras de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
-* [¿Qué es una aplicación universal de Windows?](whats-a-uwp.md)
+* [¿Qué es una aplicación universal de Windows?](universal-application-platform-guide.md)
 * [Registrarse para obtener una cuenta de Windows](sign-up.md)

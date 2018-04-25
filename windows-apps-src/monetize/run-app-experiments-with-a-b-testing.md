@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
-Description: Puedes usar el panel del Centro de desarrollo de Windows para ejecutar los experimentos para las aplicaciones para la Plataforma universal de Windows (UWP) con pruebas A/B.
-title: Ejecuta experimentos para aplicaciones con pruebas A/B
+Description: You can use the Windows Dev Center dashboard to run experiments for your Universal Windows Platform (UWP) apps with A/B testing.
+title: Ejecutar experimentos de aplicaciones con pruebas A/B
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,9 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
-ms.openlocfilehash: d95f42d7a57c191e371f06b21427d52c5c51773e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: high
+ms.openlocfilehash: 0ed6fab97d5e4172601b3c2e549e8feab4f8db57
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="run-app-experiments-with-ab-testing"></a>Ejecuta experimentos para aplicaciones con pruebas A/B
 
@@ -47,6 +50,7 @@ Para obtener los resultados más útiles, te recomendamos que sigas estas recome
 * Ejecuta experimentos durante un mínimo 2 a 4 semanas para recopilar datos suficientes que sean estadísticamente significativos y usables.
 
 <span id="terms" />
+
 ## <a name="related-terms"></a>Términos relacionados
 
 |  Término  |  Definición  |

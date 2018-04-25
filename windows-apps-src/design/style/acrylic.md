@@ -14,17 +14,17 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: high
-ms.openlocfilehash: 21fccc72081d1825cad91e9d44bdc458c62d99d4
-ms.sourcegitcommit: 9666ef4cf5bb63dd62ee95f89a6ad0ac1bf7ac9d
+ms.openlocfilehash: 3f42a839f29b13d7245770675b1f3eea84ffa5d5
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
 Acrylic es un tipo de [Brush](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush) que crea una textura parcialmente transparente. Puedes aplicar acrílico a las superficies de la aplicación para agregar profundidad y ayudar a establecer una jerarquía visual.  <!-- By allowing user-selected wallpaper or colors to shine through, Acrylic keeps users in touch with the OS personalization they've chosen. -->
 
-> **API importantes**: [clase AcrylicBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [propiedad Background](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_Background)
+> **API importantes**: [clase AcrylicBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [propiedad Background](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
 
 
 ![Acrylic en tema claro](images/Acrylic_DarkTheme_Base.png)
@@ -143,7 +143,7 @@ Hemos creado una colección recursos de temas de pincel para los tipos de acríl
     <tr>
         <th align="center">Clave del recurso</th>
         <th align="center">Opacidad del tono</th>
-        <th align="center">[Color de reversión](color.md)</th>
+        <th align="center"><a href="color.md">Color de reversión</a> </th>
     </tr>
     <tr>
         <td> SystemControlAcrylicWindowBrush, SystemControlAcrylicElementBrush <br/> SystemControlChromeLowAcrylicWindowBrush, SystemControlChromeLowAcrylicElementBrush <br/> SystemControlBaseHighAcrylicWindowBrush, SystemControlBaseHighAcrylicElementBrush <br/> SystemControlBaseLowAcrylicWindowBrush, SystemControlBaseLowAcrylicElementBrush <br/> SystemControlAltHighAcrylicWindowBrush, SystemControlAltHighAcrylicElementBrush <br/> SystemControlAltLowAcrylicWindowBrush, SystemControlAltLowAcrylicElementBrush </td>
@@ -151,7 +151,7 @@ Hemos creado una colección recursos de temas de pincel para los tipos de acríl
         <td> ChromeMedium <br/> ChromeLow <br/><br/> BaseHigh <br/><br/> BaseLow <br/><br/> AltHigh <br/><br/> AltLow </td>
     </tr>
     </tr>
-        <td> **Uso recomendado:** Estos son los recursos de acrílico de uso general que funcionan bien en una amplia variedad de usos. Si la aplicación usa texto secundario de color AltMedium con un tamaño de texto más pequeño que 18px, coloca un recurso acrílico al 80% detrás del texto para [cumplir los requisitos de relación de contraste](../accessibility/accessible-text-requirements.md). </td>
+        <td> <b>Uso recomendado:</b> Estos son los recursos de acrílico de uso general que funcionan bien en una amplia variedad de usos. Si la aplicación usa texto secundario de color AltMedium con un tamaño de texto más pequeño que 18px, coloca un recurso acrílico al 80% detrás del texto para <a href="../accessibility/accessible-text-requirements.md">cumplir los requisitos de relación de contraste</a>. </td>
     </tr>
     <tr>
         <td> SystemControlAcrylicWindowMediumHighBrush, SystemControlAcrylicElementMediumHighBrush <br/> SystemControlBaseHighAcrylicWindowMediumHighBrush, SystemControlBaseHighAcrylicElementMediumHighBrush </td>
@@ -159,7 +159,7 @@ Hemos creado una colección recursos de temas de pincel para los tipos de acríl
         <td> ChromeMedium <br/><br/> BaseHigh </td>
     </tr>
     <tr>
-        <td> **Uso recomendado:** Si la aplicación usa texto secundario de color AltMedium con un tamaño de texto de 18px o más grande, puedes colocar estos recursos acrílicos al 70% más transparentes detrás del texto. Te recomendamos usar estos recursos en las áreas superiores de comandos y navegación horizontal de la aplicación.  </td>
+        <td> <b>Uso recomendado:</b> Si la aplicación usa texto secundario de color AltMedium con un tamaño de texto de 18px o más grande, puedes colocar estos recursos acrílicos al 70% más transparentes detrás del texto. Te recomendamos usar estos recursos en las áreas superiores de comandos y navegación horizontal de la aplicación.  </td>
     </tr>
     <tr>
         <td> SystemControlChromeHighAcrylicWindowMediumBrush, SystemControlChromeHighAcrylicElementMediumBrush <br/> SystemControlChromeMediumAcrylicWindowMediumBrush, SystemControlChromeMediumAcrylicElementMediumBrush <br/> SystemControlChromeMediumLowAcrylicWindowMediumBrush, SystemControlChromeMediumLowAcrylicElementMediumBrush <br/> SystemControlBaseHighAcrylicWindowMediumBrush, SystemControlBaseHighAcrylicElementMediumBrush <br/> SystemControlBaseMediumLowAcrylicWindowMediumBrush, SystemControlBaseMediumLowAcrylicElementMediumBrush <br/> SystemControlAltMediumLowAcrylicWindowMediumBrush, SystemControlAltMediumLowAcrylicElementMediumBrush  </td>
@@ -167,7 +167,7 @@ Hemos creado una colección recursos de temas de pincel para los tipos de acríl
         <td> ChromeHigh <br/><br/> ChromeMedium <br/><br/> ChromeMediumLow <br/><br/> BaseHigh <br/><br/> BaseLow <br/><br/> AltMediumLow </td>
     </tr>
     <tr>
-        <td> **Uso recomendado:** Al colocar solo el texto principal de color AltHigh sobre el acrílico, la aplicación puede usar estos recursos al 60%. Te recomendamos pintar el [panel de navegación vertical](../controls-and-patterns/navigationview.md) de tu aplicación; es decir, el menú de hamburguesa, con acrílico al 60%. </td>
+        <td> <b>Uso recomendado:</b> Al colocar solo el texto principal de color AltHigh sobre el acrílico, la aplicación puede usar estos recursos al 60%. Te recomendamos pintar el <a href="../controls-and-patterns/navigationview.md">panel de navegación vertical</a> de tu aplicación; es decir, el menú de hamburguesa, con acrílico al 60%. </td>
     </tr>
 </table>
 
@@ -176,7 +176,7 @@ Además de acrílico con color neutro, también hemos agregado recursos que ento
     <tr>
         <th align="center">Clave del recurso</th>
         <th align="center">Opacidad del tono</th>
-        <th align="center">[Colores de tono y de reversión](color.md)</th>
+        <th align="center"><a href="color.md">Colores de tono y de reversión</a> </th>
     </tr>
     <tr>
         <td> SystemControlAccentAcrylicWindowAccentMediumHighBrush, SystemControlAccentAcrylicElementAccentMediumHighBrush  </td>
@@ -264,7 +264,7 @@ else
 
 ## <a name="extend-acrylic-into-the-title-bar"></a>Extender Acrylic a la barra de título
 
-Para aportar un aspecto impecable a la ventana de la aplicación, puedes usar Acrylic en el área de barra de título. En este ejemplo se extiende Acrylic en la barra de título estableciendo las propiedades [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar) [ButtonBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar#Windows_UI_ViewManagement_ApplicationViewTitleBar_ButtonBackgroundColor)  y [ButtonInactiveBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar#Windows_UI_ViewManagement_ApplicationViewTitleBar_ButtonInactiveBackgroundColor) del objeto en [Colors.Transparent](https://docs.microsoft.com/uwp/api/Windows.UI.Colors#Windows_UI_Colors_Transparent). 
+Para aportar un aspecto impecable a la ventana de la aplicación, puedes usar Acrylic en el área de barra de título. En este ejemplo se extiende Acrylic en la barra de título estableciendo las propiedades [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar) [ButtonBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonBackgroundColor)  y [ButtonInactiveBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonInactiveBackgroundColor) del objeto en [Colors.Transparent](https://docs.microsoft.com/uwp/api/Windows.UI.Colors.Transparent). 
 
 ```csharp
 /// Extend acrylic into the title bar. 
@@ -277,7 +277,7 @@ private void ExtendAcrylicIntoTitleBar()
 }
 ```
 
-Este código se puede colocar en el método [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) de tu aplicación (_App.xaml.cs_), después de la llamada a [Window.Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window#Windows_UI_Xaml_Window_Activate), tal y como se muestra aquí, o en la primera página de tu aplicación. 
+Este código se puede colocar en el método [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) de tu aplicación (_App.xaml.cs_), después de la llamada a [Window.Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate), tal y como se muestra aquí, o en la primera página de tu aplicación. 
 
 
 ```csharp
