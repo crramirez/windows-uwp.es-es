@@ -2,7 +2,7 @@
 author: Jwmsft
 ms.assetid: 90F07341-01F4-4205-8161-92DD2EB49860
 title: Efectos de perspectiva 3D para interfaces de usuario XAML
-description: "Puedes usar transformaciones de perspectiva para aplicar efectos 3D al contenido de tus aplicaciones de WindowsRuntime. Por ejemplo, puedes crear la ilusión de que un objeto gira hacia ti o se aleja, como se muestra aquí."
+description: Puedes usar transformaciones de perspectiva para aplicar efectos 3D al contenido de tus aplicaciones de WindowsRuntime. Por ejemplo, puedes crear la ilusión de que un objeto gira hacia ti o se aleja, como se muestra aquí.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -15,6 +15,7 @@ ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1396504"
 ---
 # <a name="3-d-perspective-effects-for-xaml-ui"></a>Efectos de perspectiva 3D para interfaces de usuario XAML
 

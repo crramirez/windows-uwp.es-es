@@ -1,7 +1,7 @@
 ---
 author: joannaleecy
-title: "Configuración"
-description: "Aprende a ensamblar la canalización de representación para mostrar gráficos. Representación de juego, configurar y preparar los datos."
+title: Configuración
+description: Aprende a ensamblar la canalización de representación para mostrar gráficos. Representación de juego, configurar y preparar los datos.
 ms.assetid: 7720ac98-9662-4cf3-89c5-7ff81896364a
 ms.author: joanlee
 ms.date: 10/24/2017
@@ -15,6 +15,7 @@ ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1396984"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>Marco de representación II: representación de juego
 

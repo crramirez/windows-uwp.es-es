@@ -1,6 +1,6 @@
 ---
 title: Anexos
-description: "Estas secciones proporcionan información técnica detallada."
+description: Estas secciones proporcionan información técnica detallada.
 ms.assetid: 461CCE6F-BAF0-4965-90A5-FD36B511F72C
 author: michaelfromredmond
 ms.author: mithom
@@ -10,11 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bb32f223daf6cf3633f47a0f537eccbac547f9a
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 5bede5aabec76371ae336b09544cfdfa5b4995bd
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652272"
 ---
 # <a name="appendices"></a>Anexos
 
@@ -36,19 +37,19 @@ Estas secciones proporcionan información técnica detallada.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Reglas de punto flotante](floating-point-rules.md)</p></td>
+<td align="left"><p><a href="floating-point-rules.md">Reglas de punto flotante</a></p></td>
 <td align="left"><p>Direct3D admite varias representaciones de punto flotante. Todos los cálculos de punto flotante funcionan en un subconjunto definido de las reglas 754 IEEE de punto flotante de precisión simple de 32bits.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Conversión de tipos de datos](data-type-conversion.md)</p></td>
+<td align="left"><p><a href="data-type-conversion.md">Conversión de tipos de datos</a></p></td>
 <td align="left"><p>En las secciones siguientes se describe cómo Direct3D controla las conversiones entre tipos de datos.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Reglas de rasterización](rasterization-rules.md)</p></td>
+<td align="left"><p><a href="rasterization-rules.md">Reglas de rasterización</a></p></td>
 <td align="left"><p>las reglas de rasterización definen cómo se asignan los datos de vector en datos de trama. Los datos de trama se ajustan a las ubicaciones de enteros, que luego se seleccionan y recortan (para dibujar el número mínimo de píxeles), y los atributos por píxel se interpolan (a partir de los atributos por vértice) antes de que se pasen a un sombreador de píxeles.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Compresión de bloques de texturas](texture-block-compression.md)</p></td>
+<td align="left"><p><a href="texture-block-compression.md">Compresión de bloques de texturas</a></p></td>
 <td align="left"><p>La compatibilidad de la compresión de bloques (BC) para las texturas se ha ampliado en Direct3D 11 para incluir los algoritmos BC6H y BC7. BC6H admite datos de origen de color de alto rango dinámico, y BC7 proporciona una compresión de calidad mejor que el promedio con menos artefactos para los datos de origen RGB estándar.</p></td>
 </tr>
 </tbody>

@@ -1,20 +1,21 @@
 ---
 author: eliotcowley
 title: API de .NET que faltan en Unity y UWP
-description: "Obtén información sobre las API de .NET que faltan al compilar juegos de UWP en Unity y las soluciones de problemas comunes."
+description: Obtén información sobre las API de .NET que faltan al compilar juegos de UWP en Unity y las soluciones de problemas comunes.
 ms.assetid: 28A8B061-5AE8-4CDA-B4AB-2EF0151E57C1
 ms.author: elcowle
-ms.date: 10/13/2017
+ms.date: 2/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, .net, unity
 ms.localizationpriority: medium
-ms.openlocfilehash: 1140fbfa3590757822c9938f6df6568ac1b4af45
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 10926cbe098d62641e11bd5e1f0576ae5a1e4580
+ms.sourcegitcommit: 14c37e23b8966468e8c28a3b34d21aaa4e6b571b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/23/2018
+ms.locfileid: "1614321"
 ---
 # <a name="missing-net-apis-in-unity-and-uwp"></a>API de .NET que faltan en Unity y UWP
 
@@ -116,7 +117,36 @@ private void UsingThreads()
 }
 ```
 
-## <a name="see-also"></a>Véase también
+### <a name="security"></a>Seguridad
+
+Algunos de los espacios de nombres **System.Security.***, como [System.Security.Cryptography.X509Certificates](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0), no están disponibles al compilar un juego Unity para UWP. En estos casos, usa la API **Windows.Security.***, que abarca gran parte de la misma funcionalidad.
+
+El siguiente ejemplo simplemente obtiene los certificados de un almacén de certificados con el nombre proporcionado:
+
+```cs
+private async void GetCertificatesAsync(string certStoreName)
+    {
+#if NETFX_CORE
+        IReadOnlyList<Certificate> certs = await CertificateStores.FindAllAsync();
+        IEnumerable<Certificate> myCerts = 
+            certs.Where((certificate) => certificate.StoreName == certStoreName);
+#else
+        X509Store store = new X509Store(certStoreName, StoreLocation.CurrentUser);
+        store.Open(OpenFlags.OpenExistingOnly);
+        X509Certificate2Collection certs = store.Certificates;
+#endif
+    }
+```
+
+Para obtener más información acerca de las API de seguridad WinRT, consulta [Seguridad](https://docs.microsoft.com/windows/uwp/security/).
+
+### <a name="networking"></a>Redes
+
+Algunos de los espacios de nombres **System&period;Net.***, como [System.Net.Mail](https://docs.microsoft.com/dotnet/api/system.net.mail?view=netstandard-2.0), tampoco están disponibles al compilar un juego Unity para UWP. Para la mayoría de estas API, usa las correspondientes API **Windows.Networking.*** y **Windows.Web.*** WinRT para obtener una funcionalidad similar. Consulta [Servicios web y redes](https://docs.microsoft.com/windows/uwp/networking/) para obtener más información.
+
+En el caso de **System.Net.Mail**, usa el espacio de nombres [Windows.ApplicationModel.Email](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email). Consulta [Enviar correo electrónico](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) para obtener más información.
+
+## <a name="see-also"></a>Ver también
 
 * [Plataforma universal de Windows: Tipos de .NET que faltan en el back-end de scripting de .NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
 * [.NET para introducción de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/br230302)

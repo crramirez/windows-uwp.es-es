@@ -1,19 +1,20 @@
 ---
 author: laurenhughes
-title: "Instalar un conjunto relacionado con un archivo del Instalador de aplicación"
-description: "En esta sección, revisaremos los pasos que debes tomar para permitir la instalación de un conjunto relacionado a través del Instalador de aplicación. También analizaremos los pasos para crear un archivo *.appinstaller que definirá su conjunto relacionado."
+title: Instalar un conjunto relacionado con un archivo del Instalador de aplicación
+description: En esta sección, revisaremos los pasos que debes tomar para permitir la instalación de un conjunto relacionado a través del Instalador de aplicación. También analizaremos los pasos para crear un archivo *.appinstaller que definirá su conjunto relacionado.
 ms.author: lahugh
-ms.date: 10/10/2017
+ms.date: 1/4/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales"
+keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
-ms.openlocfilehash: 484d69f5f9f0b15b765f6f92eaad787af37134cf
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 45d88f88963f7f4d5aad4b1c48d0e86145be6c81
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/08/2018
+ms.locfileid: "1638469"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>Instalar un conjunto relacionado con un archivo del Instalador de aplicación
 
@@ -196,7 +197,7 @@ En el elemento de dependencias, puedes especificar los paquetes de marco necesar
 ```
 
 ### <a name="step-6-add-update-setting"></a>Paso 6: Agregar configuración de actualización 
-El archivo del Instalador de aplicación también puede especificar la configuración de actualización para que los conjuntos relacionados se puedan actualizar automáticamente cuando se publica un archivo del Instalador de aplicación más reciente. **<UpdateSettings>** es un elemento opcional. 
+El archivo del Instalador de aplicación también puede especificar la configuración de actualización para que los conjuntos relacionados se puedan actualizar automáticamente cuando se publica un archivo del Instalador de aplicación más reciente. **<UpdateSettings>** es un elemento opcional. Dentro de **<UpdateSettings>** la opción OnLaunch especifica que se deben realizar comprobaciones de actualización en el inicio de la aplicación y HoursBetweenUpdateChecks = "12" especifica que se debe realizar una comprobación de actualizaciones cada 12 horas. Si no se especifica HoursBetweenUpdateChecks, el intervalo predeterminado que se usa para buscar actualizaciones es 24 horas.
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
@@ -238,7 +239,7 @@ El archivo del Instalador de aplicación también puede especificar la configura
     </Dependencies>
     
     <UpdateSettings>
-        <OnLaunch />
+        <OnLaunch HoursBetweenUpdateChecks="12" />
     </UpdateSettings>
 
 </AppInstaller>
@@ -248,4 +249,5 @@ Para todos los detalles sobre el esquema XML, consulta [Referencia del archivo d
 
 > [!NOTE]
 > 
-> El tipo de archivo del Instalador de aplicación es nuevo en Windows 10 Fall Creators Update. No hay ninguna compatibilidad con la implementación de aplicaciones para UWP con un archivo del Instalador de aplicación en versiones anteriores de Windows 10. 
+> El tipo de archivo del Instalador de aplicación es nuevo en Windows 10 Fall Creators Update. No hay ninguna compatibilidad con la implementación de aplicaciones para UWP con un archivo del Instalador de aplicación en versiones anteriores de Windows 10.
+> También debes tener en cuenta que el elemento **HoursBetweenUpdateChecks** es nuevo en la siguiente actualización importante de Windows 10.

@@ -1,19 +1,20 @@
 ---
 author: jwmsft
 title: Animaciones basadas en puntero
-description: 
+description: Aprende cómo usar la posición de un puntero para crear experiencias dinámicas "fijadas al cursor".
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, animación"
-localizationpriority: medium
-ms.openlocfilehash: ced80bc3abf4e516bb20d9191167f3baebe4f73e
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+keywords: windows 10, uwp, animación
+ms.localizationpriority: medium
+ms.openlocfilehash: e142f173e6968c111acc0e480aab83d02f04b07d
+ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
+ms.locfileid: "1480761"
 ---
 # <a name="pointer-based-animations"></a>Animaciones basadas en puntero
 

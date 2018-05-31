@@ -1,24 +1,25 @@
 ---
 author: mcleblanc
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
-title: "Introducción al enlace de datos"
-description: "En este tema se muestra cómo enlazar un control (o cualquier otro elemento de interfaz de usuario) a un solo elemento o enlazar un control de elemento a una colección de elementos en una aplicación para la Plataforma universal de Windows (UWP)."
+title: Introducción al enlace de datos
+description: En este tema se muestra cómo enlazar un control (o cualquier otro elemento de interfaz de usuario) a un solo elemento o enlazar un control de elemento a una colección de elementos en una aplicación para la Plataforma universal de Windows (UWP).
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 0acdcf6b9500c017cea70eebf9a41bec78e63ed2
-ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.localizationpriority: medium
+ms.openlocfilehash: fd9b9b4f1c6ddd48db8801d714568ccb011ea7e5
+ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 01/08/2018
+ms.locfileid: "1494052"
 ---
 <a name="data-binding-overview"></a>Introducción al enlace de datos
 =====================
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tema se muestra cómo enlazar un control (o cualquier otro elemento de interfaz de usuario) a un solo elemento o enlazar un control de elementos a una colección de elementos en una aplicación para la Plataforma universal de Windows (UWP). Además, te mostramos cómo controlar la representación de los elementos, implementar una vista de detalles basada en una selección y convertir datos para mostrarlos. Para obtener información más detallada, consulta [Enlace de datos a profundidad](data-binding-in-depth.md).
@@ -109,7 +110,7 @@ namespace Quickstart
                     wstringstream << L", released: " << this->ReleaseDateTime->MonthAsNumericString()->Data();
                     wstringstream << L"/" << this->ReleaseDateTime->DayAsString()->Data();
                     wstringstream << L"/" << this->ReleaseDateTime->YearAsString()->Data();
-                    return ref new Platform::String(wstringstream.str().c-str());
+                    return ref new Platform::String(wstringstream.str().c_str());
                 }
             }
         };

@@ -1,11 +1,14 @@
 ---
 title: Automatizar el inicio de las aplicaciones para la Plataforma universal de Windows (UWP) de Windows 10
-description: "Los desarrolladores pueden usar la activación de protocolos y la activación del inicio para automatizar el inicio de los juegos o aplicaciones para UWP para las pruebas automatizadas."
+description: Los desarrolladores pueden usar la activación de protocolos y la activación del inicio para automatizar el inicio de los juegos o aplicaciones para UWP para las pruebas automatizadas.
 author: listurm
-ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 8e26c181d0cde9ff3e5b2952a8cf1f614d02cb35
+ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 01/08/2018
+ms.locfileid: "1494192"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar el inicio de aplicaciones de Windows 10 para UWP
 
@@ -188,8 +191,8 @@ void OnActivated(IActivatedEventArgs^ args)
         // Check for launch activation
         if (args->Kind == ActivationKind::Launch)
         {
-            auto launchArgs = static_cast<LaunchActivatedEventArgs^>(args);    
-Platform::String^ argval = launchArgs->Arguments;
+            auto launchArgs = static_cast<LaunchActivatedEventArgs^>(args); 
+            Platform::String^ argval = launchArgs->Arguments;
             // Manipulate arguments …
         }
 
@@ -200,7 +203,7 @@ Platform::String^ argval = launchArgs->Arguments;
             Platform::String^ argval = protocolArgs->Uri->ToString();
             // Manipulate arguments …
         }
-    }
+}
 ```
 
 ## <a name="summary"></a>Resumen

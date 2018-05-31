@@ -1,23 +1,23 @@
 ---
-title: "Crear un servicio de inicio de sesión de Windows Hello"
-description: "Esta es la segunda parte de un tutorial completo acerca de cómo usar Windows Hello como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña en aplicaciones para UWP (Plataforma universal de Windows) de Windows 10."
+title: Crear un servicio de inicio de sesión de Windows Hello
+description: Esta es la segunda parte de un tutorial completo acerca de cómo usar Windows Hello como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña en aplicaciones para UWP (Plataforma universal de Windows) de Windows 10.
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
-author: awkoren
-ms.author: alkoren
+author: PatrickFarley
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: e33c7bd29fe8750d81ca1304c3854dc1c93d0929
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: c112b6cd2356f4782f15ed5a43369eccf00af140
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817210"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Crear un servicio de inicio de sesión de Windows Hello
-
-
-\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 \[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, respecto a la información que se ofrece aquí.\]
 
@@ -364,10 +364,10 @@ En este ejercicio, comenzarás con la aplicación Windows Hello integrada en la 
     }
     ```
 
--   En la clase MockStore agrega un método que agregará información relacionada con Windows Hello a una clase UserAccount existente. Este método se llamará PassportUpdateDetails y usará parámetros para identificar al usuario y los detalles de Windows Hello. Se quitó la marca de comentario de KeyAttestationResult al crear un PassportDevice, que en una aplicación real sería obligatoria.
+- En la clase MockStore agrega un método que agregará información relacionada con Windows Hello a una clase UserAccount existente. Este método se llamará PassportUpdateDetails y usará parámetros para identificar al usuario y los detalles de Windows Hello. Se quitó la marca de comentario de KeyAttestationResult al crear un PassportDevice, que en una aplicación real sería obligatoria.
 
-   ```cs
-   using Windows.Security.Credentials;
+    ```cs
+    using Windows.Security.Credentials;
 
     public void PassportUpdateDetails(Guid userId, Guid deviceId, byte[] publicKey, 
         KeyCredentialAttestationResult keyAttestationResult)
@@ -381,7 +381,7 @@ En este ejercicio, comenzarás con la aplicación Windows Hello integrada en la 
                 {
                     DeviceId = deviceId,
                     PublicKey = publicKey,
-                    // KeyAttestationResult = keyAttestationResult,
+                    // KeyAttestationResult = keyAttestationResult
                 });
             }
         }
@@ -389,7 +389,7 @@ En este ejercicio, comenzarás con la aplicación Windows Hello integrada en la 
     }
     ```
 
--   La clase MockStore ahora está completa, ya que representa la base de datos que debería considerarse privada. Para acceder a MockStore se necesita una clase AuthService para manipular los datos de la base de datos. En la carpeta AuthService crea una nueva clase denominada "AuthService.cs". Cambia la definición de clase a pública y agrega un patrón de la instancia singleton para garantizar que siempre se cree una sola instancia.
+- La clase MockStore ahora está completa, ya que representa la base de datos que debería considerarse privada. Para acceder a MockStore se necesita una clase AuthService para manipular los datos de la base de datos. En la carpeta AuthService crea una nueva clase denominada "AuthService.cs". Cambia la definición de clase a pública y agrega un patrón de la instancia singleton para garantizar que siempre se cree una sola instancia.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -542,7 +542,6 @@ En este ejercicio, comenzarás con la aplicación Windows Hello integrada en la 
     ```
 
 ## <a name="exercise-2-client-side-logic"></a>Ejercicio 2: Lógica del lado cliente
-
 
 En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares de la primera práctica para usar la clase AuthService. En el mundo real, la clase AuthService sería el servidor de autenticación y necesitaría usar la API web para enviar y recibir datos del servidor. En este caso, el cliente y el servidor son locales para simplificar la práctica de laboratorio. El objetivo es aprender a usar las API de Windows Hello.
 
@@ -780,8 +779,8 @@ En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares
 
 -   En el archivo Welcome.xaml.cs deberás cambiar la variable privada Account privada en la parte superior de la clase a una variable privada UserAccount. Luego, actualiza el método OnNavigatedTo para usar la clase AuthService y recupera la información de la cuenta actual. Cuando tengas la información de la cuenta, puedes establecer el origen de los elementos de la lista para mostrar los dispositivos. Deberás agregar una referencia al espacio de nombres AuthService.
 
-   ```cs
-   using PassportLogin.AuthService;
+    ```cs
+    using PassportLogin.AuthService;
 
     namespace PassportLogin.Views
     {
@@ -847,8 +846,8 @@ En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares
 
 -   Para poder completar la implementación de la clase de la página Welcome, debes crear un método en MicrosoftPassportHelper.cs que permita quitar un dispositivo. Crea un nuevo método que llame a PassportRemoveDevice en AuthService.
 
-   ```cs
-   public static void RemovePassportDevice(UserAccount account, Guid deviceId)
+    ```cs
+    public static void RemovePassportDevice(UserAccount account, Guid deviceId)
     {
         AuthService.AuthService.Instance.PassportRemoveDevice(account.UserId, deviceId);
     }
@@ -1067,7 +1066,7 @@ En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares
     }
     ```
 
--   Habrás observado que, en el método GetKeyAttestationAsync que acabas de agregar, la última línea estaba comentada. La última línea será un nuevo método que crees, que enviará toda la información de Windows Hello a la clase AuthService. En el mundo real, deberías enviar esta información a un servidor real con una API web.
+-   Habrás observado en el método GetKeyAttestationAsync que acabas de agregar que la última línea estaba comentada. Esta última línea será un método nuevo que crearás que enviará toda la información de Windows Hello a AuthService. En el mundo real, deberías enviar esta información a un servidor real con una API web.
 
     ```cs
     using System.Runtime.InteropServices.WindowsRuntime;

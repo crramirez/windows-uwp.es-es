@@ -1,19 +1,20 @@
 ---
 author: jwmsft
 title: Manipulaciones personalizadas con InteractionTracker
-description: "Usa las API InteractionTracker para crear experiencias de manipulación personalizadas."
+description: Usa las API InteractionTracker para crear experiencias de manipulación personalizadas.
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, animación"
+keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: 49c9e034219b22dd17b03e2b9e8396a5edc38667
 ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1393204"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a>Experiencias de manipulación personalizadas con InteractionTracker
 

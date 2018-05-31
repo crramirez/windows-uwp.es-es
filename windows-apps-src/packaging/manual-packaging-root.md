@@ -1,18 +1,21 @@
 ---
 author: laurenhughes
 ms.assetid: ee51eae3-ed55-419e-ad74-6adf1e1fb8b9
-title: "Empaquetado manual de la aplicación"
-description: "En esta sección se incluyen artículos o vínculos a artículos sobre el empaquetado manual de aplicaciones para la Plataforma universal de Windows (UWP)."
+title: Empaquetado manual de la aplicación
+description: En esta sección se incluyen artículos o vínculos a artículos sobre el empaquetado manual de aplicaciones para la Plataforma universal de Windows (UWP).
 ms.author: lahugh
-ms.date: 03/07/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, packaging, empaquetado
-ms.openlocfilehash: 8eca88588b2e444450daccd997aebb9e838a90d4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 5f8a9c7f504584f64bb561a01170c965aa9d3983
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1815830"
 ---
 # <a name="manual-app-packaging"></a>Empaquetado manual de la aplicación
 
@@ -30,3 +33,18 @@ En esta sección se incluyen artículos o vínculos a artículos sobre el empaqu
 | [Crear un paquete de la aplicación con la herramienta MakeAppx.exe](create-app-package-with-makeappx-tool.md) | MakeAppx.exe crea, cifra, descifra y extrae los archivos de paquetes de aplicaciones y lotes. |
 | [Crear un certificado para firmar paquetes](create-certificate-package-signing.md) | Crea y exporta un certificado para firmar paquetes de la aplicación con herramientas de PowerShell. |
 | [Firmar un paquete de la aplicación con SignTool](sign-app-package-using-signtool.md) | Usa SignTool para firmar manualmente un paquete de la aplicación con un certificado. |
+
+### <a name="advanced-topics"></a>Temas avanzados
+
+Esta sección contiene temas más avanzados para crear componentes de una aplicación grande o compleja para un empaquetado e instalación más eficaces. 
+
+> [!IMPORTANT]
+> Si quieres enviar la aplicación a la Store, debes ponerte en contacto con [Soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support) y obtener su aprobación para usar cualquiera de las características avanzadas de esta sección.
+
+
+| Tema | Descripción |
+|-------|-------------|
+| [Introducción a los paquetes de activos](asset-packages.md) | Los paquetes de activos son un tipo de paquete que actúa como una ubicación centralizada para archivos comunes de la aplicación, lo que elimina la necesidad de archivos duplicados en todos los paquetes de arquitectura. |
+| [Desarrollar con paquetes de activos y plegado de paquete](package-folding.md) | Aprende a organizar de forma eficaz tu aplicación con paquetes de activos y plegado de paquete. |
+| [Paquetes de aplicaciones de lotes planos](flat-bundles.md) | Describe cómo crear un lote plano para empaquetar los archivos de paquete .appx de tu aplicación con referencias a los paquetes de aplicaciones. |
+| [Creación del paquete con el diseño del empaquetado](packaging-layout.md) | El diseño del empaquetado es un solo documento que describe la estructura del empaquetado de la aplicación. Especifica los lotes de una aplicación (principal y opcional), los paquetes de los lotes y los archivos de los paquetes. |

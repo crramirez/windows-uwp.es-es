@@ -1,31 +1,32 @@
 ---
 author: PatrickFarley
 ms.assetid: 95481C7E-E905-4477-955B-90D292634E2E
-title: "Impresión y digitalización"
-description: "En esta sección se describe cómo imprimir y digitalizar desde la aplicación universal de Windows."
+title: Impresión y digitalización
+description: En esta sección se describe cómo imprimir y digitalizar desde la aplicación universal de Windows.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 701c3f5b7efe32971c6c5c9aaa3d6644d31e69f5
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.localizationpriority: medium
+ms.openlocfilehash: 8f02d0c9dc006a77d6b532713f4678d4faa2af3e
+ms.sourcegitcommit: db57a716b1ba680391c167be8ffa42edc0104720
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 02/21/2018
+ms.locfileid: "1610944"
 ---
 # <a name="printing-and-scanning"></a>Impresión y digitalización
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En esta sección se describe cómo imprimir y digitalizar desde la aplicación universal de Windows.
 
 | Tema | Descripción | 
 |-------|-------------|
-| [ESC/POS de Epson con formato](epson-esc-pos-with-formatting.md) | Aprende a usar el lenguaje de comandos ESC/POS para dar formato al texto (como, por ejemplo, aplicar negrita o caracteres de tamaño doble) de la impresora de punto de servicio. |
 | [Imprimir desde la aplicación](print-from-your-app.md) | Aprende a imprimir documentos desde aplicaciones universales de Windows. En este tema también se muestra cómo imprimir páginas específicas. |
-| [Personalizar la interfaz de usuario de la vista previa de impresión](customize-the-print-preview-ui.md) | En esta sección se describe cómo personalizar las opciones de impresión y la configuración de la interfaz de usuario de la vista previa de impresión. |
+| [Personalizar la interfaz de usuario de la vista previa de impresión](customize-the-print-preview-ui.md) | En esta sección se describe cómo personalizar las opciones de impresión y la configuración de la interfaz de usuario de vista previa de impresión. |
+| [Personalizar el flujo de trabajo de impresión](print-workflow-customize.md) | Esta sección describe cómo crear experiencias personalizadas del flujo de trabajo de impresión para satisfacer las necesidades de tu organización.  |
 | [Digitalizar desde la aplicación](scan-from-your-app.md) | Aprende a digitalizar contenido de la aplicación con ayuda de un escáner plano, un dispositivo multifunción o un origen de digitalización configurado automáticamente.|
 
 ## <a name="related-topics"></a>Temas relacionados

@@ -1,18 +1,21 @@
 ---
 author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
-description: "En este artículo se enumeran las propiedades DeviceInformation relacionadas con dispositivos de audio."
-title: "Propiedades de información de dispositivo de audio"
+description: En este artículo se enumeran las propiedades DeviceInformation relacionadas con dispositivos de audio.
+title: Propiedades de información de dispositivo de audio
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 0992c0fc3c6fe9d70b7867275d28e6bba78171ab
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: c221e3d77419ca02b46e8be227f3b943fe8dc241
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2018
+ms.locfileid: "1639015"
 ---
 # <a name="audio-device-information-properties"></a>Propiedades de información de dispositivo de audio
 
@@ -22,7 +25,7 @@ En este artículo se enumeran las propiedades de información de dispositivos re
 |Nombre|Tipo|Descripción|
 |------------------------------------------------------------|------------|------------------------------------------------------|
 |**System.Devices.AudioDevice.Microphone.SensitivityInDbfs**|Doble|Especifica la sensibilidad del micrófono en decibelios en relación con las unidades de la escala completa (dBFS).|
-|**System.Devices.AudioDevice.Microphone.SignalToNoiseRationInDb**|Doble|Especifica la relación de señal/ruido (SNR) del de micrófono medida en unidades de decibelio (dB).|
+|**System.Devices.AudioDevice.Microphone.SignalToNoiseRatioInDb**|Doble|Especifica la relación de señal/ruido (SNR) del de micrófono medida en unidades de decibelio (dB).|
 |**System.Devices.AudioDevice.SpeechProcessingSupported**|Booleano|Indica si el dispositivo de audio admite el procesamiento de voz.|
 |**System.Devices.AudioDevice.RawProcessingSupported**|Booleano|Indica si el dispositivo de audio admite el procesamiento sin formato.|
 |**System.Devices.MicrophoneArray.Geometry**|unsigned char[]|Datos de geometría para varios micrófonos.|

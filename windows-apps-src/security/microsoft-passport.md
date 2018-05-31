@@ -1,22 +1,25 @@
 ---
 title: Windows Hello
-description: "En este artículo se describe la nueva tecnología Windows Hello que se incluirá como parte del sistema operativo Windows10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows10."
+description: En este artículo se describe la nueva tecnología Windows Hello que se incluirá como parte del sistema operativo Windows10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows10.
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
-author: awkoren
-ms.author: alkoren
+author: PatrickFarley
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: e22176049652717af5ad222f7e6c8a30d447ce1b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 35aca08d2febf353a211c1fd7216981f03e1d185
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817220"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe la nueva tecnología Windows Hello que se incluirá como parte del sistema operativo Windows10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows10.
@@ -56,7 +59,7 @@ El método común de usar una dirección de correo como nombre de usuario empeor
 
 Es difícil solucionar los problemas que presentan las contraseñas. Tan solo aumentar las exigencias de las directivas de contraseña no es suficiente, ya que los usuarios pueden simplemente reciclar, compartir o anotar las contraseñas. Aunque la educación de los usuarios es fundamental para la seguridad de autenticación, tampoco elimina el problema por sí sola.
 
-Microsoft Passport reemplaza las contraseñas por autenticación sólida en dos fases (2FA) mediante la comprobación de las credenciales existentes y la creación de una credencial específica protegida por un gesto de usuario basado en PIN. 
+Windows Hello reemplaza las contraseñas por autenticación sólida en dos fases (2FA) mediante la comprobación de las credenciales existentes y la creación de una credencial específica protegida por un gesto de usuario basado en PIN. 
 
 
 ## <a name="2-what-is-windows-hello"></a>2 ¿Qué es Windows Hello?
@@ -183,10 +186,10 @@ static async void RegisterUser(string AccountId)
         var keyAttestationResult = await userKey.GetAttestationAsync();
         IBuffer keyAttestation = null;
         IBuffer certificateChain = null;
-        bool keyAttesttionIncluded = false;
-        bool keyAttestationCanBeRetrievedLAter = false;
+        bool keyAttestationIncluded = false;
+        bool keyAttestationCanBeRetrievedLater = false;
 
-        KeyCredentialAttestationResult keyAttestationResult = await userKey.GetAttestationAsync();
+        keyAttestationResult = await userKey.GetAttestationAsync();
         KeyCredentialAttestationStatus keyAttestationRetryType = 0;
 
         if (keyAttestationResult.Status == KeyCredentialAttestationStatus.Success)
@@ -203,7 +206,7 @@ static async void RegisterUser(string AccountId)
         else if (keyAttestationResult.Status == KeyCredentialAttestationStatus.NotSupported)
         {
             keyAttestationRetryType = KeyCredentialAttestationStatus.NotSupported;
-            keyAttestationCanBeRetrievedLAter = true;
+            keyAttestationCanBeRetrievedLater = true;
         }
     }
     else if (keyCreationResult.Status == KeyCredentialStatus.UserCanceled ||

@@ -1,22 +1,25 @@
 ---
 author: PatrickFarley
 title: Configurar una geovalla
-description: "Configura una geovalla en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano."
+description: Configura una geovalla en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano.
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, mapa, ubicación, geovalla, notificaciones"
-ms.openlocfilehash: 8a143359948e536d30efb425055969ae8ac0987f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, mapa, ubicación, geovalla, notificaciones
+ms.localizationpriority: medium
+ms.openlocfilehash: 02baf078d127f516d57e947145ec639df5ba891b
+ms.sourcegitcommit: 11edca90aaf7856c762e68903483079d30ad3877
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/19/2018
+ms.locfileid: "1594783"
 ---
 # <a name="set-up-a-geofence"></a>Configurar una geovalla
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Configura una [**Geovalla**](https://msdn.microsoft.com/library/windows/apps/dn263587) en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano.
@@ -73,6 +76,7 @@ switch (accessStatus)
         GeofenceMonitor.Current.StatusChanged += OnGeofenceStatusChanged;
         break;
 
+
     case GeolocationAccessStatus.Denied:
         _rootPage.NotifyUser("Access denied.", NotifyType.ErrorMessage);
         break;
@@ -115,6 +119,7 @@ Geocircle geocircle = new Geocircle(position, radius);
 
 // Create the geofence.
 Geofence geofence = new Geofence(fenceId, geocircle);
+
 ```
 
 Puedes ajustar aún más la geovalla mediante uno de los otros constructores. En el siguiente ejemplo, el constructor de geovalla especifica estos parámetros adicionales:
@@ -159,6 +164,17 @@ DateTimeOffset startTime = DateTime.Now;
 
 // Create the geofence.
 Geofence geofence = new Geofence(fenceId, geocircle, monitoredStates, singleUse, dwellTime, startTime, duration);
+```
+
+Después de crear, recuerda que tienes que registrar tu nueva [**Geovalla**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.Geofence) en el monitor.
+
+```csharp
+// Register the geofence
+try {
+   GeofenceMonitor.Current.Geofences.Add(geofence);
+} catch {
+   // Handle failure to add geofence
+}
 ```
 
 ### <a name="step-4-handle-changes-in-location-permissions"></a>Paso 4: Controlar cambios en los permisos de ubicación

@@ -1,19 +1,20 @@
 ---
 author: jwmsft
 title: Animaciones controladas por entradas
-description: 
+description: Más información sobre cómo usar animaciones de entrada en la interfaz de usuario de tu aplicación.
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, animación"
+keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 24e5378d27ea5ce80f317ab951f1a19aa5f87b9b
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 79fae5c890757ebe5daf27734a059bbbe4f693ee
+ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
+ms.locfileid: "1480601"
 ---
 # <a name="input-driven-animations"></a>Animaciones controladas por entradas
 

@@ -2,7 +2,8 @@
 title: Uso compartido recursos de streaming en distintos procesos y dispositivos
 description: Los grupos de iconos pueden compartirse con otros procesos, igual que los recursos tradicionales. Los recursos de streaming que hacen referencia a grupos de iconos no se pueden compartir en diferentes dispositivos y procesos.
 ms.assetid: D035AF4B-D71B-4F20-9A98-7C360BF9B285
-keywords: Uso compartido de los recursos de streaming en distintos procesos y dispositivos
+keywords:
+- Uso compartido de los recursos de streaming en distintos procesos y dispositivos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d08153588ce596af1228fd5bb1e6989396f993c3
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 06161919c0f0eb041d54a351c08674160e894072
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652194"
 ---
 # <a name="span-iddirect3dconceptsstreaming-resource-cross-process-and-device-sharingspanstreaming-resource-cross-process-and-device-sharing"></a><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>Uso compartido de los recursos de streaming en distintos procesos y dispositivos
 
@@ -39,7 +41,7 @@ No se puede cambiar el tamaño de los grupos de iconos compartidos.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Formatos de galerías de símbolos no compatibles con recursos de streaming](stencil-formats-not-supported-with-streaming-resources.md)</p></td>
+<td align="left"><p><a href="stencil-formats-not-supported-with-streaming-resources.md">Formatos de galerías de símbolos no compatibles con recursos de streaming</a></p></td>
 <td align="left"><p>Los formatos que contienen la galería de símbolos no son compatibles con los recursos de streaming.</p></td>
 </tr>
 </tbody>

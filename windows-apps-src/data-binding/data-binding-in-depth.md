@@ -2,22 +2,23 @@
 author: mcleblanc
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Enlace de datos en profundidad
-description: "El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos."
+description: El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos.
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: efa83edaeb649ac5a321a4c1aae14a53f1175b6d
-ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.localizationpriority: medium
+ms.openlocfilehash: 3c77450c3885f8a9bcd698e25ca721c4c3fe1305
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817836"
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -382,6 +383,7 @@ Si enlazas un control de texto con un valor que no es una cadena, el motor de en
 {x: Bind} permite que el paso final de una ruta de acceso de enlace sea una función. Esto puede usarse para realizar conversiones y para realizar enlaces que dependen de más de una propiedad. Consulta [**Extensión de marcado {x:Bind}**](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension).
 
 <span id="resource-dictionaries-with-x-bind"/>
+
 ## <a name="resource-dictionaries-with-xbind"></a>Diccionarios de recursos con {x:Bind}
 
 La [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) depende de la generación de códigos; por lo tanto, necesita un archivo de código subyacente que contenga un constructor que llame a **InitializeComponent** (para inicializar el código generado). Vuelves a usar el diccionario de recursos creando una instancia de su tipo (por lo que se llama a **InitializeComponent**) en lugar de hacer referencia a su nombre de archivo. Aquí un ejemplo de qué hacer si dispones de un diccionario de recursos existente y quieres usar {xBind} en este.
@@ -585,6 +587,7 @@ Un control [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/Hh
 Cuando se enlaza a datos jerárquicos (como subcategorías dentro de las categorías), puedes mostrar los niveles jerárquicos en la interfaz de usuario con una serie de controles de elementos. Una selección en un control de elementos determina el contenido de los controles de elementos posteriores. Puedes mantener las listas sincronizadas, al enlazar cada una de ellas a su propio [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) y al enlazar las instancias de **CollectionViewSource** juntas en una cadena. Esto se denomina una vista maestro/detalles (o la lista y detalles). Para más información, consulta el tema [Cómo enlazar a datos jerárquicos y crear una vista maestro y detalles](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md).
 
 <span id="debugging"/>
+
 ## <a name="diagnosing-and-debugging-data-binding-problems"></a>Diagnóstico y depuración de problemas de enlace de datos
 
 El marcado de enlace contiene los nombres de propiedades (y para C#, a veces campos y métodos). Por lo tanto, cuando cambias el nombre de una propiedad, también tendrás que cambiar cualquier enlace que haga referencia a él. Olvidar hacer que conduce a un ejemplo típico de un error de enlace de datos y la aplicación no compile o no ejecutarse correctamente.
@@ -645,7 +648,7 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | Propiedades de acceso | `{x:Bind Path=a.b.c}` | `{Binding Path=a.b.c}` | En Bind: x, ruta de acceso raíz está en la página de forma predeterminada, no DataContext. | 
 | Indexador | `{x:Bind Groups[2].Title}` | `{Binding Groups[2].Title}` | Enlaza con el elemento especificado en la colección. Se admiten solamente en números enteros índices. | 
 | Propiedades adjuntas | `{x:Bind Button22.(Grid.Row)}` | `{Binding Button22.(Grid.Row)}` | Las propiedades adjuntas se especifican mediante paréntesis. Si la propiedad no está declarada en un espacio de nombres XAML, agrega un prefijo con un espacio de nombres XML, que debe estar asignado a un espacio de nombres de código al principio del documento. | 
-| Conversión | `{x:Bind groups[0].(data:SampleDataGroup.Title)}` | No es necesario< | Las conversiones de tipos se especifican mediante paréntesis. Si la propiedad no está declarada en un espacio de nombres XAML, agrega un prefijo con un espacio de nombres XML, que debe estar asignado a un espacio de nombres de código al principio del documento. | 
+| Conversión | `{x:Bind groups[0].(data:SampleDataGroup.Title)}` | No es necesario. | Las conversiones de tipos se especifican mediante paréntesis. Si la propiedad no está declarada en un espacio de nombres XAML, agrega un prefijo con un espacio de nombres XML, que debe estar asignado a un espacio de nombres de código al principio del documento. | 
 | Convertidor | `{x:Bind IsShown, Converter={StaticResource BoolToVisibility}}` | `{Binding IsShown, Converter={StaticResource BoolToVisibility}}` | Convertidores deben declararse en la raíz del página o ResourceDictionary o en App.xaml. | 
 | ConvertidorParameter, ConvertidorLanguage | `{x:Bind IsShown, Converter={StaticResource BoolToVisibility}, ConverterParameter=One, ConverterLanguage=fr-fr}` | `{Binding IsShown, Converter={StaticResource BoolToVisibility}, ConverterParameter=One, ConverterLanguage=fr-fr}` | Convertidores deben declararse en la raíz del página o ResourceDictionary o en App.xaml. | 
 | TargetNullValue | `{x:Bind Name, TargetNullValue=0}` | `{Binding Name, TargetNullValue=0}` | Se usa cuando la hoja de la expresión de enlace es null. Usar comillas simples para un valor de cadena. | 
@@ -655,6 +658,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | RelativeSource: TemplatedParent | No se admite | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | Enlace de plantilla normal puede usarse en las plantillas de control para la mayoría de usos. Pero usa TemplatedParent donde necesites usar un convertidor o un enlace bidireccional.< | 
 | Origen | No se admite | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Para {x: enlace} usa una propiedad o una ruta de acceso estático. | 
 | Modo | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | El modo puede ser OneTime, OneWay o TwoWay. {x: enlace} el valor predeterminado es OneTime; {Binding} predeterminado OneWay. | 
-| UpdateSourceTrigger | No se admite | `<Binding UpdateSourceTrigger="Default [or] PropertyChanged [or] Explicit"/>` | {x: enlace} usa PropertyChanged comportamiento para todos los casos excepto TextBox.Text donde espera pierde foco actualizar el origen. | 
+| UpdateSourceTrigger | `{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}` | `{Binding UpdateSourceTrigger=PropertyChanged}` | UpdateSourceTrigger puede ser Default, LostFocus o PropertyChanged. {x:Bind} no admite UpdateSourceTrigger=Explicit. {x: enlace} usa el comportamiento PropertyChanged para todos los casos excepto TextBox.Text, donde utiliza el comportamiento LostFocus. | 
 
 

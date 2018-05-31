@@ -1,24 +1,24 @@
 ---
 author: TylerMSFT
-title: "Actualizar un icono dinámico desde una tarea en segundo plano"
-description: "Usa una tarea en segundo plano para actualizar el icono dinámico de tu aplicación con contenido actualizado."
+title: Actualizar un icono dinámico desde una tarea en segundo plano
+description: Usa una tarea en segundo plano para actualizar el icono dinámico de tu aplicación con contenido actualizado.
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 01/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 00cbeca54b67f0f9112fe1a85f5e31faf9fb8560
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e4dcfce2e3eba0875968ad52c7c3195c190fcccf
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/12/2018
+ms.locfileid: "1509182"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Actualizar un icono dinámico desde una tarea en segundo plano
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 **API importantes**
 
@@ -29,15 +29,14 @@ Usa una tarea en segundo plano para actualizar el icono dinámico de tu aplicaci
 
 Este vídeo te muestra cómo agregar iconos dinámicos a tus aplicaciones.
 
-<iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/afb47cc5-edd3-4262-ae45-8f0e3ae664ac/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">One Dev Minute - Updating a live tile from a background task</iframe>
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Updating-a-live-tile-from-a-background-task/player" width="720" height="405" allowFullScreen="true" frameBorder="0"></iframe>
 
-## <a name="create-the-background-task-project"></a>Crear el proyecto de tareas en segundo plano
-
+## <a name="create-the-background-task-project"></a>Crear el proyecto de tareas en segundo plano  
 
 Para habilitar un icono dinámico para tu aplicación, agrega un nuevo proyecto de componente de Windows en tiempo de ejecución a tu solución. Este es un ensamblado independiente que el sistema operativo carga y ejecuta en segundo plano cuando un usuario instala tu aplicación.
 
-1.  En el Explorador de soluciones, haz clic con el botón secundario en la solución, elige **Agregar** y haz clic o pulsa en **Nuevo proyecto**.
-2.  En el cuadro de diálogo **Agregar nuevo proyecto**, selecciona la plantilla **Componente de Windows en tiempo de ejecución** en la sección **Visual C# &gt; Tienda Windows**.
+1.  En el Explorador de soluciones, haz clic con el botón secundario en la solución, haz clic en **Agregar** y luego haz clic en **Nuevo proyecto**.
+2.  En el diálogo **Agregar nuevo proyecto**, selecciona la plantilla **Componente de Windows en tiempo de ejecución** en la sección **Instalado &gt; Otros lenguajes &gt; Visual C# &gt; Windows Universal**
 3.  Asigna el nombre BackgroundTasks al proyecto y haz clic o pulsa **Aceptar**. Microsoft Visual Studio agrega el nuevo proyecto a la solución.
 4.  En el proyecto principal, agrega una referencia al proyecto BackgroundTasks.
 

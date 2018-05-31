@@ -4,17 +4,18 @@ Description: You can select the screenshots, logos, and other art assets (such a
 title: Capturas de pantalla, imágenes y tráileres de aplicaciones
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
 ms.author: wdg-dev-content
-ms.date: 3/13/2018
+ms.date: 4/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
 ms.localizationpriority: high
-ms.openlocfilehash: 56edae8c8af56f45a8901938908dc6064c93b1fd
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: e0ac8e01aab07e68e0a4f22160cb58e558b4dc42
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817786"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -206,6 +207,7 @@ Al proporcionar los tráileres, asegúrate de seguir estos requisitos:
 - La resolución de vídeo debe ser 1920 x 1080 píxeles o 3840 x 2160 píxeles.
 - La vista en miniatura debe ser un archivo PNG con una resolución de 1920 x 1080 píxeles o 3840 x 2160 píxeles.
 - El título no puede superar los 255 caracteres. 
+- No incluyas clasificaciones por edades en tus tráileres.
 
 Al igual que el resto de campos de la página de descripción de Store, los tráileres deben pasar la certificación antes de poder publicarlos en Microsoft Store. Asegúrate de que tus tráileres cumplan con las [directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx).
 

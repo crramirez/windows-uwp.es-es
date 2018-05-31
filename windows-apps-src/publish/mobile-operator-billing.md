@@ -4,17 +4,18 @@ Description: The Microsoft Store offers Mobile Operator Billing as a payment met
 title: Facturación de operadores de telefonía móvil
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 ms.author: wdg-dev-content
-ms.date: 03/09/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, operadores de telefonía móviles, facturación móvil, facturación de operador de telefonía móvil
 ms.localizationpriority: high
-ms.openlocfilehash: bcdf8166804b6778e5e513cf04fd696a428f225e
-ms.sourcegitcommit: 0ee9c6848cb9d624f15cdab1d0c5991ca7245e70
+ms.openlocfilehash: 8e10f3d1cdee250e2d9ca140759a90cbdf0a8773
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817516"
 ---
 # <a name="mobile-operator-billing"></a>Facturación de operadores de telefonía móvil
 
@@ -30,6 +31,7 @@ La facturación de operadores de telefonía móvil se admite actualmente por est
 
 | País o región  | Operadores de telefonía móvil                 |
 |-----------------|----------------------------------|
+| Australia       | Optus                            |
 | Austria         | Hutchison 3G Austria, A1 Telekom, T-Mobile / tele.ring  |
 | Bélgica         | Base, Proximus                   |
 | Canadá          | Telus                            |

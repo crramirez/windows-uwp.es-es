@@ -1,19 +1,20 @@
 ---
 author: jwmsft
 title: Animaciones de movimientos naturales
-description: 
+description: Más información sobre las animaciones de movimiento natural y cómo usarlas en la interfaz de usuario de tu aplicación.
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, animación"
-localizationpriority: medium
-ms.openlocfilehash: 5e941d1115542130a3c1e0974de51210987feb49
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+keywords: windows 10, uwp, animación
+ms.localizationpriority: medium
+ms.openlocfilehash: fe877a6a2c16366d99550a3748ee190fd2a45d3d
+ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
+ms.locfileid: "1480711"
 ---
 # <a name="natural-motion-animations"></a>Animaciones de movimientos naturales
 
@@ -46,7 +47,7 @@ Las [NaturalMotionAnimations](https://docs.microsoft.com/uwp/api/windows.ui.comp
 
 ## <a name="using-naturalmotionanimations"></a>Uso de NaturalMotionAnimations
 
-A partir de la actualización Fall Creator, tienes acceso a una nueva experiencia de movimiento: las **animaciones de muelle**. Consulta [animaciones de muelle](spring-animations.md) para obtener un tutorial más detallado sobre los muelles.
+A partir de la actualización Fall Creators, tienes acceso a una nueva experiencia de movimiento: las **animaciones de muelle**. Consulta [animaciones de muelle](spring-animations.md) para obtener un tutorial más detallado sobre los muelles.
 
 Este tipo de movimiento se consigue mediante la nueva NaturalMotionAnimation: un nuevo tipo de animación centrado en permitir a los desarrolladores integrar un movimiento más natural y familiar en su interfaz de usuario, con un equilibrio entre el control y el dinamismo. Estas son sus capacidades:
 

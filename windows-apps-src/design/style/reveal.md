@@ -14,11 +14,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: high
-ms.openlocfilehash: 2ec95f757b041b74dda8bc0606ad8113881809d5
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: b29de0c1d27f852f2292161331401bb185656c17
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816990"
 ---
 # <a name="reveal-highlight"></a>Características principales de Reveal
 
@@ -167,7 +168,7 @@ Es importante tener en cuenta que Reveal necesita que el brush y los establecedo
 
 Para obtener más información sobre cómo modificar las plantillas de control, consulta el artículo de las [plantillas de control XAML](../controls-and-patterns/control-templates.md).
 
-Hemos creado un conjunto de Reveal brushes del sistema que puedes usar para personalizar tu plantilla. Por ejemplo, puedes usar el brush **ButtonRevealBackground** para crear un fondo de botón personalizado o el brush **ListViewItemRevealBackground** para listas personalizadas, etc. (Para obtener información sobre cómo funcionan los recursos en XAMl, echa un vistazo al artículo [Diccionario de recursos de Xaml](../controls-and-patterns/resourcedictionary-and-xaml-resource-references.md)).
+Hemos creado un conjunto de Reveal brushes del sistema que puedes usar para personalizar tu plantilla. Por ejemplo, puedes usar el brush **ButtonRevealBackground** para crear un fondo de botón personalizado o el brush **ListViewItemRevealBackground** para listas personalizadas, etc. (Para obtener información sobre cómo funcionan los recursos en XAML, echa un vistazo al artículo [Diccionario de recursos de Xaml](../controls-and-patterns/resourcedictionary-and-xaml-resource-references.md)).
 
 ### <a name="full-template-example"></a>Ejemplo de plantilla completa
 

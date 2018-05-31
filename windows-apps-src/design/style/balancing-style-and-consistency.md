@@ -1,7 +1,7 @@
 ---
 author: mijacobs
-description: "Sugerencias para crear aplicaciones coherentes y utilizables que también demuestren originalidad y creatividad."
-title: "Equilibrio entre estilo y coherencia (diseño de aplicaciones para UWP)"
+description: Sugerencias para crear aplicaciones coherentes y utilizables que también demuestren originalidad y creatividad.
+title: Equilibrio entre estilo y coherencia (diseño de aplicaciones para UWP)
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
@@ -15,6 +15,7 @@ ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1394204"
 ---
 # <a name="balancing-style-and-consistency"></a>Equilibrio entre coherencia y estilo
 

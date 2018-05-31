@@ -1,19 +1,20 @@
 ---
 author: jwmsft
-title: "Extracción de actualización con modificadores de origen (SourceModifiers)"
+title: Extracción de actualización con modificadores de origen (SourceModifiers)
 description: Crea controles personalizados Pull-to-Refresh con SourceModifiers
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, animación"
+keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d85dbe89fe90723c3475b77c6057def684bd60d
 ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1394384"
 ---
 # <a name="pull-to-refresh-with-source-modifiers"></a>Extracción de actualización con modificadores de origen
 

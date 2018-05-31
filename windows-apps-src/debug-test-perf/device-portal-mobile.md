@@ -1,19 +1,21 @@
 ---
 author: PatrickFarley
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
-title: "Device Portal para dispositivos móviles"
-description: "Obtén información sobre cómo Windows Device Portal te permite configurar y administrar el dispositivo móvil de forma remota."
+title: Device Portal para dispositivos móviles
+description: Obtén información sobre cómo Windows Device Portal te permite configurar y administrar el dispositivo móvil de forma remota.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d0a85a780bf71bd43a0482494a1de939582a4b56
-ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.localizationpriority: medium
+ms.openlocfilehash: b03d77389ede6a86e652593c19ddc15ca26d4174
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1815730"
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para dispositivos móviles
 
@@ -51,7 +53,7 @@ Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y
 
     Usa esta dirección para conectarte a través de una red local.
 
-    La dirección IP del teléfono se muestra en la configuración de Device Portal en el teléfono. Se necesita HTTPS para la autenticación y la comunicación segura. El nombre de host (que se puede editar en Configuración > Sistema > Acerca de) también puede utilizarse para acceder a Device Portal en la red local (por ejemplo, http://Phone360), lo que resulta útil para los dispositivos que pueden cambiar con frecuencia de redes o direcciones IP o que deben compartirse. 
+    La dirección IP del teléfono se muestra en la configuración de Device Portal en el teléfono. Se necesita HTTPS para la autenticación y la comunicación segura. El nombre de host (que se puede editar en Configuración > Sistema > Acerca de) también puede utilizarse para acceder al Portal de dispositivos en la red local (por ejemplo, http://Phone360), lo que resulta útil para los dispositivos que pueden cambiar con frecuencia de redes o direcciones IP o que deben compartirse. 
 
 2. Presiona el botón Emparejar en el teléfono para generar y mostrar el código de seguridad necesario.
 
@@ -82,3 +84,8 @@ Device Portal en dispositivos móviles proporciona el conjunto estándar de pág
 - Seguimiento del rendimiento (WPR) 
 - Dispositivos
 - Redes
+
+## <a name="see-also"></a>Consulta también
+
+* [Introducción al Portal de dispositivos Windows](device-portal.md)
+* [Referencia de API principales del Portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

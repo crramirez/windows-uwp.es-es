@@ -1,19 +1,20 @@
 ---
 author: laurenhughes
-title: "Instalación de aplicaciones para UWP desde una página web"
-description: "En esta sección, revisaremos los pasos que debes llevar a cabo para permitir que los usuarios instalen tus aplicaciones directamente desde la página web."
+title: Instalación de aplicaciones para UWP desde una página web
+description: En esta sección, revisaremos los pasos que debes llevar a cabo para permitir que los usuarios instalen tus aplicaciones directamente desde la página web.
 ms.author: lahugh
-ms.date: 10/10/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales"
-localizationpriority: medium
-ms.openlocfilehash: 00301a61bf4e47659707af883739de57e238c681
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
+ms.localizationpriority: medium
+ms.openlocfilehash: d0368743e3afa6e9cdb5e5ac95672430416fc824
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
+ms.locfileid: "1434790"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>Instalación de aplicaciones para UWP desde una página web
 
@@ -24,16 +25,16 @@ El Instalador de aplicación puede instalar una app directamente desde un servid
 La instalación de la aplicación directa solo está disponible en Windows 10 Fall Creators Update y versiones más recientes. Las versiones anteriores de Windows (volviendo a la Actualización de aniversario de Windows 10) se admitirán por la [experiencia de instalación web en versiones anteriores de Windows 10](#web-install-experience). Esta experiencia no es tan fluida como la instalación de aplicación directa, pero proporciona mejoras significativas para el procedimiento de instalación de aplicaciones existente.
   
 > [!NOTE]
-> Para admitir las nuevas características, se requiere una versión del Instalador de aplicación superior a la 1.0.12271.0.
+> Para admitir la nueva característica, la versión del Instalador de aplicación debe ser superior a la 1.0.12271.0.
 
-### <a name="protocol-activation-scheme"></a>Esquema de activación de protocolos
+## <a name="protocol-activation-scheme"></a>Esquema de activación de protocolos
 En este mecanismo, el Instalador de aplicación se registra con con el sistema operativo para un esquema de activación de protocolo. Cuando el usuario hace clic en un vínculo web, el navegador comprueba con el sistema operativo las aplicaciones que están registradas para ese vínculo web. Si el esquema coincide con el esquema de activación de protocolo especificado por el Instalador de aplicación, se invoca el Instalador de aplicación. Es importante tener en cuenta que este mecanismo es independiente del navegador. Esto resulta útil para los administradores de sitios que, por ejemplo, no deben tener en cuenta diferencias de navegador al incorporarlo en una página web. 
 
-#### <a name="requirements-for-protocol-activation-scheme"></a>Requisitos para el esquema de activación de protocolos
+### <a name="requirements-for-protocol-activation-scheme"></a>Requisitos para el esquema de activación de protocolos
    - Servidores web que admiten solicitudes de intervalos de bytes (HTTP/1.1)
    - Los paquetes de aplicaciones deben estar hospedados en servidores que admiten el protocolo HTTP/1.1.   
 
-#### <a name="how-to-enable-this-on-a-webpage"></a>Cómo habilitar esto en una página web 
+### <a name="how-to-enable-this-on-a-webpage"></a>Cómo habilitar esto en una página web 
 Los desarrolladores de aplicaciones que quieran hospedar paquetes de aplicaciones en sus sitios web deben seguir este paso:
 
 Asigne un prefijo de sus URI de paquetes de aplicaciones al esquema de activación `'ms-appinstaller:?source='` para el que se registra el Instalador de aplicación cuando hace referencia a ellos en tu página web. Consulta el ejemplo de la **página web de MyApp** para obtener detalles. 
@@ -48,7 +49,12 @@ Asigne un prefijo de sus URI de paquetes de aplicaciones al esquema de activaci�
 </html>
 ```
 
-## La experiencia de instalación web en versiones anteriores de Windows 10<a name="web-install-experience"></a>
+## <a name="signing-the-app-package"></a>Firmar el paquete de la aplicación
+Para que los usuarios instalen la aplicación, deberás firmar el paquete de la aplicación con un certificado de confianza. Para ello puedes utilizar un certificado de terceros de pago de una entidad de certificación de confianza para firmar el paquete de aplicación. Si se usa un certificado de terceros, el usuario deberá tener su dispositivo en modo de instalación de prueba o desarrollador para instalar y ejecutar la aplicación.
+
+Si vas a implementar una aplicación para los empleados de una empresa, puedes usar un certificado emitido por la empresa para firmar la aplicación. Es importante tener en cuenta que el certificado de empresa debe implementarse en todos los dispositivos en los que se instale la aplicación. Para obtener más información sobre cómo implementar aplicaciones de empresa, consulta [Administración de aplicaciones de empresa](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
+
+## Experiencia de instalación web en versiones anteriores de Windows 10<a name="web-install-experience"></a>
 
 La invocación del Instalador de aplicación desde el navegador se admite en todas las versiones de Windows 10 donde el Instalador de aplicación está disponible (a partir de la Actualización de aniversario). Sin embargo, la funcionalidad para instalar directamente desde la web sin necesidad de descargar el paquete primero solo está disponible en Windows 10 Fall Creators Update.  
 

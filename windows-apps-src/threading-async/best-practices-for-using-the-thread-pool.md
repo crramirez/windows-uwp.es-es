@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, subprocesos, grupo de subprocesos
-ms.openlocfilehash: e4203a613fdc1af64a8234ac6fef6b248c01e15c
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 8c202d5f9993bce559b0ef7c3f1e9909336e561e
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 03/08/2018
+ms.locfileid: "1638333"
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>Procedimientos recomendados para usar el grupo de subprocesos
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 En este tema se describen los procedimientos recomendados para trabajar con el grupo de subprocesos.
 
@@ -41,7 +40,7 @@ En este tema se describen los procedimientos recomendados para trabajar con el g
 
 -   Usa elementos de trabajo preasignados cuando no puedes tolerar un error de asignación de recursos en el momento de uso.
 
-## <a name="donts"></a>Cosas que evitar
+## <a name="donts"></a>Qué no hacer
 
 
 -   No crees temporizadores periódicos con un valor *period* de &lt;1 milisegundo (incluido 0). Esto hará que el elemento de trabajo se comporte como un temporizador de único disparo.

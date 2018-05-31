@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
-title: "Difusión y captura de juegos"
-description: "Esta sección proporciona información para agregar capacidades de captura y difusión de juegos a una aplicación para UWP."
+title: Difusión y captura de juegos
+description: Esta sección proporciona información para agregar capacidades de captura y difusión de juegos a una aplicación para UWP.
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -15,6 +15,7 @@ ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1392634"
 ---
 # <a name="game-broadcast-and-capture"></a>Difusión y captura de juegos
 

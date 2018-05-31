@@ -1,38 +1,43 @@
 ---
 author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
-description: "Cada transacción de la Tienda Windows que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción."
+description: Cada transacción de Microsoft Store que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción.
 title: Usar recibos para comprobar la compra de productos
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 04/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, in-app purchases, compras desde la aplicación, IAPs, IAP, receipts, recibos, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store"
-ms.openlocfilehash: 4e167bf24f1f8362e7bd1e343ae34d9e0d2dde1c
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+keywords: windows 10, Windows 10, uwp, UWP, in-app purchases, compras desde la aplicación, IAPs, IAP, receipts, recibos, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
+ms.localizationpriority: medium
+ms.openlocfilehash: c0437d63153f4a765474cf893a8773cd6992ea35
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816240"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para comprobar compras de productos
 
+Cada transacción de Microsoft Store que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción. Este recibo proporciona información sobre el producto enumerado y el coste abonado por el cliente.
 
-> [!NOTE]
-> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para obtener y validar un recibo de una compra desde la aplicación. Si estás usando el espacio de nombres alternativo [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) (introducido en Windows 10, versión 1607), este espacio de nombres no proporciona una API para obtener los recibos para compras desde la aplicación. Sin embargo, puedes usar un método REST en la API de colecciones de la Tienda Windows para obtener los datos de una transacción de compra. Para obtener más información, consulta [Recibos de las compras desde la aplicación](in-app-purchases-and-trials.md#receipts).
+El acceso a esta información resulta útil en aquellos casos en los que la aplicación debe comprobar que un usuario compró tu aplicación o ha realizado una compra complementaria (también llamada compra de productos desde la aplicación o IAP) en Microsoft Store. Por ejemplo, imagina un juego que ofrece contenido descargado. Si el usuario que compró el contenido quiere jugar en otro dispositivo, debes comprobar que ese usuario ya sea propietario del contenido. A continuación se muestra cómo hacerlo.
 
-
-Cada transacción de la Tienda Windows que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción. Este recibo proporciona información sobre el producto enumerado y el coste abonado por el cliente.
-
-El acceso a esta información resulta útil en aquellos casos en los que la aplicación debe comprobar que un usuario compró tu aplicación o ha realizado una compra complementaria (también llamada compra de productos desde la aplicación o IAP) en la TiendaWindows. Por ejemplo, imagina un juego que ofrece contenido descargado. Si el usuario que compró el contenido quiere jugar en otro dispositivo, debes comprobar que ese usuario ya sea propietario del contenido. A continuación se muestra cómo hacerlo.
+> [!IMPORTANT]
+> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) para obtener y validar un recibo de una compra desde la aplicación. Si usas el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store) para compras desde la aplicación (introducidas en Windows 10, versión 1607 y disponibles para proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio), este espacio de nombres no proporciona una API para obtener los recibos de compra para compras desde la aplicación. Sin embargo, puedes usar un método REST en la API de colecciones de Microsoft Store para obtener los datos de una transacción de compra. Para obtener más información, consulta [Recibos de las compras desde la aplicación](in-app-purchases-and-trials.md#receipts).
 
 ## <a name="requesting-a-receipt"></a>Solicitar un recibo
 
 
 El espacio de nombres **Windows.ApplicationModel.Store** admite varias formas de obtener un recibo:
 
-* Cuando realizas una compra usando [CurrentApp.RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) o [CurrentApp.RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh779780.aspx) (o una de las sobrecargas de este método), el valor devuelto contiene el recibo.
-* Puedes llamar al método [CurrentApp.GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) para recuperar la información de recibo actual para tu aplicación y para cualquier complemento de la aplicación.
+* Cuando realizas una compra usando [CurrentApp.RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) o [CurrentApp.RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) (o una de las sobrecargas de este método), el valor devuelto contiene el recibo.
+* Puedes llamar al método [CurrentApp.GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync) para recuperar la información de recibo actual para tu aplicación y para cualquier complemento de la aplicación.
 
 Un recibo de aplicación tiene la siguiente apariencia.
+
+> [!NOTE]
+> Este ejemplo tiene el formato para ayudar a hacer que el código XML sea legible. Los recibos reales de la aplicación no incluyen espacios en blanco entre elementos.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -57,6 +62,9 @@ Un recibo de aplicación tiene la siguiente apariencia.
 ```
 
 Un recibo de producto tiene la siguiente apariencia.
+
+> [!NOTE]
+> Este ejemplo tiene el formato para ayudar a hacer que el código XML sea legible. Los recibos de producto reales no incluyen espacios en blanco entre elementos.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -91,6 +99,7 @@ Este es un ejemplo del proceso de validación. Este código se ejecuta en una ap
 [!code-cs[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
 
 <span id="receipt-descriptions" />
+
 ## <a name="element-and-attribute-descriptions-for-a-receipt"></a>Descripciones de elementos y atributos de un recibo
 
 Esta sección describe los elementos y atributos de un recibo.
@@ -115,6 +124,7 @@ El elemento raíz de este archivo es el elemento **Recibo** que contiene informa
 |  **ReceiptDeviceId**  |   Identifica el dispositivo usado para solicitar este recibo.         |  |
 
 <span id="appreceipt" />
+
 ### <a name="appreceipt-element"></a>Elemento AppReceipt
 
 Este elemento contiene la información de compra de la aplicación actual.
@@ -129,6 +139,7 @@ Este elemento contiene la información de compra de la aplicación actual.
 |  **PurchaseDate**  |    Fecha cuando se adquirió la aplicación.          |  |
 
 <span id="productreceipt" />
+
 ### <a name="productreceipt-element"></a>Elemento ProductReceipt
 
 Este elemento contiene información sobre una compra desde la aplicación de la aplicación actual.

@@ -1,21 +1,23 @@
 ---
-author: mcleblanc
+author: stevewhims
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
-description: "MicrosoftVisual Studio es a Windows lo que Xcode a iOS y MacOS. En este tutorial, te ayudamos a que te sientas cómodo usando Visual Studio."
-title: "Creación de un proyecto en Visual Studio"
-ms.author: markl
+description: MicrosoftVisual Studio es a Windows lo que Xcode a iOS y MacOS. En este tutorial, te ayudamos a que te sientas cómodo usando Visual Studio.
+title: Creación de un proyecto en Visual Studio
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 76307f16fddc094331847f11855d2dbf0467dddf
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 75c85f96537c3a660692bf3c9d910155f39b37a3
+ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/09/2018
+ms.locfileid: "1572872"
 ---
 # <a name="getting-started-creating-a-project"></a>Introducción: creación de un proyecto
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="creating-a-project"></a>Creación de un proyecto
 
@@ -23,7 +25,7 @@ MicrosoftVisual Studio es a Windows lo que Xcode a iOS y MacOS. En este tutorial
 
 En el siguiente vídeo se comparan Xcode y Visual Studio.
 
-<iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/5b7bd91f-6a2f-40b6-9b19-eb2994931d0a/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">Un minuto para el desarrollador: comparar Xcode con Visual Studio</iframe>
+> [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Comparing-Xcode-to-Visual-Studio/player]
 
 También encontrarás este [blog sobre la compilación de aplicaciones para Windows](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/) muy útil.
 
@@ -31,7 +33,7 @@ Crear una aplicación para Windows 10 (denominada más formalmente como aplicaci
 
 **Nota:** Una característica importante de las aplicaciones de Windows 10 es que el mismo código fuente y el mismo conjunto de API estarán disponibles para ti independientemente de la plataforma. Como sabes, cuando escribes una aplicación de iOS universal para iPhone y iPad, puedes determinar en el tiempo de ejecución la plataforma en que se ejecuta la aplicación y realizar la acción apropiada. De manera similar, las aplicaciones de Windows10 saben reconocer en tiempo de ejecución el dispositivo en que se ejecutan. Con una aplicación para UWP, no es necesario usar elementos \#ifdef en el código fuente para crear compilaciones de teléfono frente a compilaciones de escritorio. Para mayor comodidad, las aplicaciones de Windows 10 también usan sus controles de interfaz de usuario de forma inteligente en función del dispositivo: por ejemplo, la aplicación puede hacer referencia a un control de selector de fecha, y el control adoptará automáticamente el aspecto y funcionamiento dependiendo de si la pantalla es de escritorio o de teléfono. Sin embargo, el código fuente no se modifica.
 
-Veamos cómo crear una aplicación de Windows 10. En primer lugar, ejecuta Visual Studio. La primera vez que lo hagas, VisualStudio te pedirá que obtengas una licencia de desarrollador. Una licencia de desarrollador te permite instalar y probar aplicaciones de la Tienda Windows en el equipo local antes de enviarlas a la Tienda Windows. Para obtener una licencia, sigue las instrucciones en pantalla para iniciar sesión con una cuenta Microsoft. Si no tienes una, haz clic en el vínculo **Regístrese** del cuadro de diálogo **Licencia de desarrollador** y sigue las instrucciones en pantalla.
+Veamos cómo crear una aplicación de Windows 10. En primer lugar, ejecuta Visual Studio. La primera vez que lo hagas, VisualStudio te pedirá que obtengas una licencia de desarrollador. Una licencia de desarrollador te permite instalar y probar aplicaciones de UWP en el equipo local antes de enviarlas a Microsoft Store. Para obtener una licencia, sigue las instrucciones en pantalla para iniciar sesión con una cuenta Microsoft. Si no tienes una, haz clic en el vínculo **Regístrese** del cuadro de diálogo **Licencia de desarrollador** y sigue las instrucciones en pantalla.
 
 Si lo comparamos con Xcode, lo primero que ves cuando inicias Xcode es la pantalla de **bienvenida a Xcode**, parecida a la ilustración siguiente.
 

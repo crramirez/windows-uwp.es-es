@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "El objeto de aplicación y DirectX"
+title: El objeto de aplicación y DirectX
 description: Los juegos DirectX para Plataforma universal de Windows (UWP) no usan muchos elementos y objetos de la interfaz de usuario de Windows.
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
 ms.author: mtoepke
@@ -8,13 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, DirectX, objeto de aplicación"
+keywords: Windows 10, UWP, DirectX, objeto de aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: b17147d1b4985c08f49a1a5f6de306e5713e7918
 ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/05/2018
+ms.locfileid: "1488995"
 ---
 # <a name="the-app-object-and-directx"></a>El objeto de aplicación y DirectX
 

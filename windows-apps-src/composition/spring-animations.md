@@ -1,19 +1,20 @@
 ---
 author: jwmsft
 title: Animaciones de muelle
-description: 
+description: Aprende a usar animaciones de muelle con movimiento natural.
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, animación"
+keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: bba677ecaaf5e82f2b0d559ce86604925c546fb8
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 15a9bf1248ae8f5a208120b12f66cbe32f8036ae
+ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
+ms.locfileid: "1480611"
 ---
 # <a name="spring-animations"></a>Animaciones de muelle
 

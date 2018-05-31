@@ -1,7 +1,7 @@
 ---
 author: stevewhims
-Description: "El tema anterior (Cómo compara y elige recursos el sistema de administración de recursos) se ocupa de la coincidencia de calificadores en general. Este tema se centra en la coincidencia de etiqueta de idiomas con más detalle."
-title: "Cómo el sistema de administración de recursos compara etiquetas de idioma"
+Description: The previous topic (How the Resource Management System matches and chooses resources) looks at qualifier-matching in general. This topic focuses on language-tag-matching in more detail.
+title: Cómo el sistema de administración de recursos compara etiquetas de idioma
 template: detail.hbs
 ms.author: stwhi
 ms.date: 11/02/2017
@@ -9,22 +9,23 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
-localizationpriority: medium
-ms.openlocfilehash: ae1c4a3093e978cc054934d991d37c31264f128d
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+ms.localizationpriority: medium
+ms.openlocfilehash: 6c01b3efe77f1933c8d9a8620a60757e14d94bd5
+ms.sourcegitcommit: dd1a2e22eadd2304afee0912fd21772a9d2d8fda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/13/2017
+ms.locfileid: "1437746"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="how-the-resource-management-system-matches-language-tags"></a>Cómo el sistema de administración de recursos compara etiquetas de idioma
 
 El tema anterior (Cómo compara y elige recursos el sistema de administración de recursos[](how-rms-matches-and-chooses-resources.md)) se ocupa de la coincidencia de calificadores en general. Este tema se centra en la coincidencia de etiqueta de idiomas con más detalle.
 
 ## <a name="introduction"></a>Introducción
 
-Los recursos con calificadores de etiqueta de idioma se comparan y califican según la lista de prioridades del usuario final de los idiomas preferidos. El mecanismo de puntuación usa los datos incluidos en el registro de subetiquetas de [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302), así como otros orígenes de datos. Permite establecer un gradiente de puntuación con distintas calidades de coincidencia y, cuando hay varios candidatos disponibles, selecciona el candidato con la mejor puntuación de coincidencia.
+Los recursos con calificadores de etiqueta de idioma se comparan y califican según la lista de idiomas del tiempo de ejecución de la aplicación. Para ver definiciones de las listas de idiomas diferentes, consulta [Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación](../design/globalizing/manage-language-and-region.md). La coincidencia con el primer idioma de la lista se produce antes de la coincidencia con el segundo, incluso para otras variantes regionales. Por ejemplo, se prefiere un recurso para en-GB sobre fr-CA si el idioma del tiempo de ejecución de la aplicación es en-US. Solo si no hay recursos para un formato de en, se elige un recurso para fr-CA (ten en cuenta que, en ese caso, no se pudo establecer el idioma predeterminado de la aplicación en ningún formato de en).
+
+El mecanismo de puntuación usa los datos incluidos en el registro de subetiquetas de [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302), así como otros orígenes de datos. Permite establecer un gradiente de puntuación con distintas calidades de coincidencia y, cuando hay varios candidatos disponibles, selecciona el candidato con la mejor puntuación de coincidencia.
 
 Por ello, puedes etiquetar el contenido de idioma en términos genéricos, pero sigues pudiendo especificar contenido específico cuando sea necesario. Por ejemplo, tu aplicación puede tener muchas cadenas en inglés comunes para las versiones de Estados Unidos, Gran Bretaña y de otras regiones. El etiquetado de estas cadenas simplemente como "en" (inglés) ahorra espacio y reduce la carga de localización. Cuando se deban realizar distinciones, como en una cadena que contenga la palabra "color/colour", las versiones de Estados Unidos y de Gran Bretaña se pueden etiquetar por separado usando las subetiquetas de idioma y región, como "en-US" y "en-GB", respectivamente.
 
@@ -41,7 +42,7 @@ Pueden estar presentes elementos de subetiquetas adicionales, pero tendrán un e
 
 ## <a name="matching-two-languages"></a>Coincidencia de dos idiomas
 
-Cuando en Windows se comparan dos idiomas, generalmente se realiza dentro del contexto de un proceso más grande. Puede tratarse de un contexto donde se evalúan varios idiomas, como cuando Windows genera la lista de idiomas de la aplicación (consulta [Administrar idiomas y regiones](../globalizing/manage-language-and-region.md)). Windows lleva esto a cabo estableciendo coincidencias de varios idiomas entre las preferencias del usuario con los idiomas especificados en el manifiesto de la aplicación. La comparación también podría producirse en el contexto de evaluación de un idioma junto con otros calificadores de un recurso en particular. Un ejemplo de ello es cuando Windows resuelve un recurso de archivo concreto en un contexto de recurso concreto, con la ubicación principal del usuario o la escala actual del dispositivo o ppp como factores adicionales (además del idioma) que se tienen en cuenta en la selección de recurso.
+Cuando en Windows se comparan dos idiomas, generalmente se realiza dentro del contexto de un proceso más grande. Puede tratarse de un contexto donde se evalúan varios idiomas, como cuando Windows genera la lista de idiomas de la aplicación (consulta [Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación](../design/globalizing/manage-language-and-region.md)). Windows lleva esto a cabo estableciendo coincidencias de varios idiomas entre las preferencias del usuario con los idiomas especificados en el manifiesto de la aplicación. La comparación también podría producirse en el contexto de evaluación de un idioma junto con otros calificadores de un recurso en particular. Un ejemplo de ello es cuando Windows resuelve un recurso de archivo concreto en un contexto de recurso concreto, con la ubicación principal del usuario o la escala actual del dispositivo o ppp como factores adicionales (además del idioma) que se tienen en cuenta en la selección de recurso.
 
 Cuando dos etiquetas de idioma se comparan, se asigna una puntuación a la comparación en función de la cercanía de la coincidencia.
 
@@ -61,7 +62,7 @@ Cuando dos etiquetas de idioma se comparan, se asigna una puntuación a la compa
 
 ### <a name="exact-match"></a>Coincidencia exacta
 
-Las etiquetas son exactamente iguales (coinciden todos los elementos de subetiquetas). Una comparación puede promoverse a este tipo de coincidencia desde una coincidencia de variante o de región.
+Las etiquetas son exactamente iguales (coinciden todos los elementos de subetiquetas). Una comparación puede promoverse a este tipo de coincidencia desde una coincidencia de variante o de región. Por ejemplo, en-US coincide con en-US.
 
 ### <a name="variant-match"></a>Coincidencia de variante
 
@@ -69,11 +70,11 @@ Las etiquetas coinciden en las subetiquetas de idioma, de script, de región y d
 
 ### <a name="region-match"></a>Coincidencia de región
 
-Las etiquetas coinciden en las subetiquetas de idioma, de script, de región y de variante, pero difieren en algún otro sentido.
+Las etiquetas coinciden en las subetiquetas de idioma, de script, de región y de variante, pero difieren en algún otro sentido. Por ejemplo, de-DE-1996 coincide con-DE y en-US-x-Pirate coincide con en-US.
 
 ### <a name="partial-matches"></a>Coincidencias parciales
 
-Las etiquetas coinciden en las subetiquetas de idioma y de script, pero difieren en la región o en alguna otra subetiqueta.
+Las etiquetas coinciden en las subetiquetas de idioma y de script, pero difieren en la región o en alguna otra subetiqueta. Por ejemplo, en-US coincide con en o en-US coincide con en-\*.
 
 #### <a name="macro-region-match"></a>Coincidencia de macrorregión
 
@@ -93,7 +94,7 @@ Las etiquetas coinciden en las subetiquetas de idioma y de script, y las subetiq
 
 #### <a name="preferred-region-match"></a>Coincidencia de región preferida
 
-Las etiquetas coinciden en las subetiquetas de idioma y de script, y una de las subetiquetas de región es la subetiqueta de región predeterminada del idioma. Por ejemplo, "fr-FR" es la región predeterminada de la subetiqueta "fr". Esto depende de los datos mantenidos en Windows que definen una región predeterminada para cada idioma en el que se localice Windows.
+Las etiquetas coinciden en las subetiquetas de idioma y de script, y una de las subetiquetas de región es la subetiqueta de región predeterminada del idioma. Por ejemplo, "fr-FR" es la región predeterminada de la subetiqueta "fr". Por tanto, fr-FR es una coincidencia mejor para fr-BE que fr-CA. Esto depende de los datos mantenidos en Windows que definen una región predeterminada para cada idioma en el que se localice Windows.
 
 #### <a name="sibling-match"></a>Coincidencia de elementos del mismo nivel
 
@@ -109,19 +110,19 @@ Cuando las etiquetas coinciden solo en la etiqueta de idioma principal pero no e
 
 ### <a name="no-match"></a>Sin coincidencia
 
-La puntuación de las subetiquetas de idioma principal que no coinciden se establece por debajo del nivel de una coincidencia válida.
+La puntuación de las subetiquetas de idioma principal que no coinciden se establece por debajo del nivel de una coincidencia válida. For example, zh-Hant no coincide con zh-Hans.
 
 ## <a name="examples"></a>Ejemplos
 
 El idioma "zh-Hans-CN" (Chino simplificado de China) de un usuario coincidiría con los siguientes recursos en el orden de prioridad indicado. Una X indica sin coincidencia.
 
-[Coincidencia con Chino simplificado de China](/images/language_matching_1.png)
+![Coincidencia con chino simplificado de China](images/language_matching_1.png)
 
 1. Coincidencia exacta; 2. y 3. Coincidencia de región; 4. Coincidencia principal; 5. Coincidencia de elementos del mismo nivel.
 
-Cuando una subetiqueta de idioma tiene un valor de script de supresión definido en el registro de subetiquetas de BCP-47, se produce la coincidencia correspondiente, tomando el valor del código de script de supresión. En el siguiente ejemplo, el idioma del usuario es "en-AU" (inglés de Australia).
+Cuando una subetiqueta de idioma tiene un valor de script de supresión definido en el registro de subetiquetas de BCP-47, se produce la coincidencia correspondiente, tomando el valor del código de script de supresión. Por ejemplo, en-Latn-US coincide con en-US. En el siguiente ejemplo, el idioma del usuario es "en-AU" (inglés de Australia).
 
-[Coincidencia con inglés de Australia](/images/language_matching_2.png)
+![Coincidencia con inglés de Australia](images/language_matching_2.png)
 
 1. Coincidencia exacta; 2. Coincidencia de macrorregión; 3. Coincidencia independiente de la región; 4. Coincidencia de afinidad ortográfica; 5. Coincidencia de región preferida; 6. Coincidencia de elementos del mismo nivel.
 
@@ -193,5 +194,5 @@ El inglés es un caso aparte. Si una aplicación agrega localización para dos v
 
 * [Cómo compara y elige recursos el sistema de administración](how-rms-matches-and-chooses-resources.md)
 * [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Administrar el idioma y la región](../globalizing/manage-language-and-region.md)
+* [Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación](../design/globalizing/manage-language-and-region.md)
 * [Composición de regiones macrogeográficas (continentales), subregiones geográficas, grupos económicos seleccionados y otras agrupaciones.](http://go.microsoft.com/fwlink/p/?LinkId=247929)

@@ -1,51 +1,66 @@
 ---
-author: mtoepke
+author: joannaleecy
 title: Configurar el proyecto de juego
-description: "El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código."
+description: El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código.
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
-ms.author: mtoepke
-ms.date: 02/08/2017
+ms.author: joanlee
+ms.date: 10/24/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, juegos, el programa de instalación, directx"
-ms.openlocfilehash: 3bf9e6f70f71dc0b70a2f8af148c44acc1a329fb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, juegos, el programa de instalación, directx
+ms.localizationpriority: medium
+ms.openlocfilehash: 6b1a993f16d2d9403f16c1f4cc15805b0c5f36a9
+ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/05/2018
+ms.locfileid: "1488919"
 ---
 # <a name="set-up-the-game-project"></a>Configurar el proyecto de juego
 
+Este artículo analiza cómo configurar un juego de DirectX para UWP sencillo con las plantillas de Visual Studio. El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código. Aprende a ahorrar tiempo de configuración al usar la plantilla adecuada y configurar el proyecto específicamente para desarrollar un juego.
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+## <a name="objectives"></a>Objetivos
 
-El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código. Puedes ahorrarte mucho tiempo y complicaciones si usas la plantilla adecuada y configuras el proyecto específicamente para desarrollar un juego. Vamos a guiarte por los pasos de configuración de un proyecto de juego sencillo.
+* Configura un proyecto de juego Direct3D en Visual Studio usando una plantilla.
+* Comprende el punto de entrada principal del juego examinando los archivos de origen de la **Aplicación**.
+* Revisa el archivo **package.appxmanifest** del proyecto
+* Averigua qué herramientas y asistencia de desarrollo de juegos están incluidos con el proyecto
 
-## <a name="objective"></a>Objetivo
+## <a name="how-to-set-up-the-game-project"></a>Cómo configurar el proyecto de juego
 
+Si no estás familiarizado con el desarrollo de la Plataforma Universal de Windows (UWP), te recomendamos el uso de plantillas de Visual Studio para configurar la estructura de código básica.
 
--   Aprender a configurar un proyecto de juego Direct3D en Visual Studio.
+>[!Note]
+>Este artículo es parte de una serie de tutoriales basados en un juego de muestra. Puedes obtener el código más reciente en [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
-## <a name="setting-up-the-game-project"></a>Configuración del proyecto de juego
+### <a name="use-directx-template-to-create-a-project"></a>Usa la plantilla de DirectX para crear un proyecto
 
+Una plantilla de Visual Studio es una colección de configuraciones y archivos de código para un tipo específico de aplicación basándose en el lenguaje y la tecnología elegidos. En Microsoft Visual Studio 2017, encontrarás varias plantillas que pueden facilitar enormemente el desarrollo de juegos y aplicaciones gráficas. Si no usas una plantilla, debes desarrollar tú mismo casi todo el marco básico de generación de gráficos, lo que puede suponer una ardua tarea para un desarrollador de juegos novel.
 
-Puedes escribir un juego desde cero, solo con un sencillo editor de texto, unas pocas muestras y una gran capacidad mental. Probablemente no sea la forma más eficaz de emplear tu tiempo. Si estás dando tus primeros pasos en el desarrollo para la Plataforma universal de Windows (UWP), ¿por qué no dejar que Visual Studio soporte parte de la carga? Esto es lo que debes hacer para que tu proyecto empiece con buen pie.
+La plantilla usada para este tutorial es la titulada **DirectX 11 App (Universal Windows)**. 
 
-## <a name="1-pick-the-right-template"></a>1. Elige la plantilla adecuada
+Pasos para crear un proyecto de juego DirectX 11 en Visual Studio:
+1.  Selecciona **Archivo...** &gt; **Nuevo**  &gt; **Proyecto...**
+2.  En el panel izquierdo, selecciona **Instalado** &gt; **Plantillas** &gt; **Visual C++** &gt; **Windows Universal**
+3.  En el panel central, selecciona **DirectX 11 App (Universal Windows)**
+4.  Da a tu proyecto un nombre y haz clic en **Aceptar**.
 
+![captura de pantalla que muestra cómo seleccionar la plantilla directx11 para crear un nuevo proyecto de juego](images/simple-dx-game-setup-new-project.png)
 
-Una plantilla de Visual Studio es una colección de configuraciones y archivos de código para un tipo específico de aplicación basándose en el lenguaje y la tecnología elegidos. En Microsoft Visual Studio 2015, encontrarás varias plantillas que pueden facilitar enormemente el desarrollo de juegos y aplicaciones gráficas. Si no usas una plantilla, debes desarrollar tú mismo casi todo el marco básico de generación de gráficos, lo que puede suponer una ardua tarea para un desarrollador de juegos novel.
+Esta plantilla te proporciona el marco básico para una aplicación para UWP usando DirectX con C++. Haz clic en F5 para compilarla y ejecutarla. Fíjate en esa pantalla azul polvo. La plantilla crea varios archivos de código que contienen la funcionalidad básica de una aplicación para UWP con DirectX y C++.
 
-La plantilla adecuada para este tutorial es la titulada DirectX 11 App (Universal Windows). En Visual Studio 2015, haz clic en **Archivo...** &gt; **Nuevo proyecto** y, a continuación:
+## <a name="review-the-apps-main-entry-point-by-understanding-iframeworkview"></a>Revisa el punto de entrada principal de la aplicación entendiendo IFrameworkView
 
-1.  Desde **Plantillas**, selecciona **Visual C++**, **Windows**, **Universal**.
-2.  En el panel central, selecciona **DirectX 11 App (Universal Windows)**.
-3.  Da a tu proyecto un nombre y haz clic en **Aceptar**.
+La clase **App** se hereda de la clase **IFrameworkView**.
 
-![selección de la plantilla de la aplicación Direct3D](images/simple-dx-game-vs-new-proj.png)
+### <a name="inspect-apph"></a>Inspecciona **App.h**.
 
-Esta plantilla te proporciona el marco básico para una aplicación para UWP usando DirectX con C++. Vamos, ¡compila y ejecútalo con F5! Fíjate en esa pantalla azul polvo. Párate un segundo y revisa el código que la plantilla proporciona. La plantilla crea varios archivos de código que contienen la funcionalidad básica de una aplicación para UWP con DirectX y C++. Hablamos más de otros archivos de código en el [paso 3](#3-review-the-included-libraries-and-headers). Ahora, examinemos rápidamente **App.h**.
+Observemos rápidamente estos 5 métodos en **App.h** &mdash; [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) y [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523) al implementar la interfaz [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700469) que define un proveedor de vista. Estos métodos los ejecuta el singleton de la aplicación que se crea al lanzar el juego, y carga todos los recursos de la aplicación, además de conectar los controladores de eventos apropiados.
 
 ```cpp
+    // Main entry point for our app. Connects the app with the Windows shell and handle application lifecycle events.
     ref class App sealed : public Windows::ApplicationModel::Core::IFrameworkView
     {
     public:
@@ -59,34 +74,16 @@ Esta plantilla te proporciona el marco básico para una aplicación para UWP usa
         virtual void Uninitialize();
 
     protected:
-        // Application lifecycle event handlers.
-        void OnActivated(Windows::ApplicationModel::Core::CoreApplicationView^ applicationView, Windows::ApplicationModel::Activation::IActivatedEventArgs^ args);
-        void OnSuspending(Platform::Object^ sender, Windows::ApplicationModel::SuspendingEventArgs^ args);
-        void OnResuming(Platform::Object^ sender, Platform::Object^ args);
-
-        // Window event handlers.
-        void OnWindowSizeChanged(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::WindowSizeChangedEventArgs^ args);
-        void OnVisibilityChanged(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::VisibilityChangedEventArgs^ args);
-        void OnWindowClosed(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::CoreWindowEventArgs^ args);
-
-        // DisplayInformation event handlers.
-        void OnDpiChanged(Windows::Graphics::Display::DisplayInformation^ sender, Platform::Object^ args);
-        void OnOrientationChanged(Windows::Graphics::Display::DisplayInformation^ sender, Platform::Object^ args);
-        void OnDisplayContentsInvalidated(Windows::Graphics::Display::DisplayInformation^ sender, Platform::Object^ args);
-
-    private:
-        std::shared_ptr<DX::DeviceResources> m_deviceResources;
-        std::unique_ptr<MyAwesomeGameMain> m_main;
-        bool m_windowClosed;
-        bool m_windowVisible;
+        ...
     };
 ```
 
-Creas estos cinco métodos ([**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) y [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523)) al implementar la interfaz [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700469) que define un proveedor de vista. Estos métodos los ejecuta el singleton de la aplicación que se crea al lanzar el juego, y carga todos los recursos de la aplicación, además de conectar los controladores de eventos apropiados.
+### <a name="inspect-appcpp"></a>Inspecciona **App.cpp**
 
-Tu método **main** está en el archivo fuente **App.cpp**. Tiene esta apariencia:
+Este es el método **principal** en el archivo de origen **App.cpp**:
 
 ```cpp
+//The main function is only used to initialize our IFrameworkView class.
 [Platform::MTAThread]
 int main(Platform::Array<Platform::String^>^)
 {
@@ -96,9 +93,12 @@ int main(Platform::Array<Platform::String^>^)
 }
 ```
 
-Ahora mismo, crea una instancia del proveedor de vista Direct3D a partir de la fábrica del proveedor de vista (**Direct3DApplicationSource**, definido en **App.h**) y la pasa al singleton de la aplicación para ejecutarse ([**CoreApplication::Run**](https://msdn.microsoft.com/library/windows/apps/hh700469)). Esto significa que el punto de partida de tu juego propiamente dicho vivirá en el cuerpo de la implementación del método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505), en este caso, **App::Run**. Aquí te mostramos el código:
+En este método, crea una instancia del proveedor de vista Direct3D a partir de la fábrica del proveedor de vista (**Direct3DApplicationSource**, definido en **App.h**) y la pasa al singleton de la aplicación llamando a ([**CoreApplication::Run**](https://msdn.microsoft.com/library/windows/apps/hh700469)). Esto significa que el punto de partida de tu juego vivirá en el cuerpo de la implementación del método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) y, en este caso, es el **App::Run**. 
+
+Desplázate hasta encontrar el método **App:: Run** en **App.cpp**. Aquí te mostramos el código:
 
 ```cpp
+//This method is called after the window becomes active.
 void App::Run()
 {
     while (!m_windowClosed)
@@ -122,46 +122,46 @@ void App::Run()
 }
 ```
 
-Si la ventana de tu juego no está cerrada, se distribuirán todos los eventos, se actualizará el temporizador y se representarán los resultados de tu canalización de gráficos. Hablamos más detalladamente de esto en los temas sobre cómo [definir el marco de UWP del juego](tutorial--building-the-games-metro-style-app-framework.md) y [ensamblar la canalización de representación](tutorial--assembling-the-rendering-pipeline.md). Llegados a este punto, deberías tener una idea de la estructura de código básica de un juego DirectX de UWP.
+Lo que hace este método: si la ventana de tu juego no está cerrada, distribuirá todos los eventos, actualizará el temporizador y representará los resultados de tu canalización de gráficos. Hablaremos sobre esto en mayor detalle en [Definir el marco de la aplicación para UWP](tutorial--building-the-games-uwp-app-framework.md), [Marco de representación I: Introducción a la representación](tutorial--assembling-the-rendering-pipeline.md) y [Marco de representación II: Representación de juego](tutorial-game-rendering.md). Llegados a este punto, deberías tener una idea de la estructura de código básica de un juego DirectX de UWP.
 
-## <a name="2-review-and-update-the-packageappxmanifest-file"></a>2. Revisa y actualiza el archivo package.appxmanifest
+## <a name="review-and-update-the-packageappxmanifest-file"></a>Revisa y actualiza el archivo package.appxmanifest
 
 
-La plantilla no solo consiste en archivos de código. El archivo **package.appxmanifest** contiene metadatos de tu proyecto que sirven para empaquetar y lanzar el juego, así como para enviarlo a la TiendaWindows. También contiene información importante que el sistema del jugador usa para proporcionar acceso a los recursos del sistema que el programa necesita para ejecutarse.
+La plantilla no solo consiste en archivos de código. El archivo **Package.appxmanifest** contiene metadatos de tu proyecto que sirven para empaquetar y lanzar el juego, así como para enviarlo a Microsoft Store. También contiene información importante que el sistema del jugador usa para proporcionar acceso a los recursos del sistema que el programa necesita para ejecutarse.
 
-Ejecuta el **Diseñador de manifiestos** haciendo doble clic en el archivo **package.appxmanifest** en el **Explorador de soluciones**. Verás esta vista:
+Ejecuta el **Diseñador de manifiestos** haciendo doble clic en el archivo **Package.appxmanifest** en el **Explorador de soluciones**.
 
-![the package.appx manifest editor.](images/simple-dx-game-vs-app-manifest.png)
+![captura de pantalla del editor del manifiesto package.appx.](images/simple-dx-game-setup-app-manifest.png)
 
 Para más información sobre el archivo **package.appxmanifest** y el empaquetado, consulta el [Diseñador de manifiestos](https://msdn.microsoft.com/library/windows/apps/br230259.aspx). Por ahora, echa un vistazo a la pestaña **Capacidades** y mira las opciones proporcionadas.
 
-![the default capabilities of a direct3d app.](images/simple-dx-game-vs-capabilities.png)
+![captura de pantalla con las capacidades predeterminadas de una aplicación direct3d.](images/simple-dx-game-setup-capabilities.png)
 
 Si no seleccionas las funcionalidades que usa tu juego, como el acceso a **Internet** para los juegos locales guardados, o Internet para ver las puntuaciones más altas globales, no podrás tener acceso a los recursos o características correspondientes. Cuando crees un nuevo juego, asegúrate de que seleccionas las funcionalidades que necesitará el juego para ejecutarse.
 
 Ahora, veamos el resto de archivos que vienen con la plantilla **DirectX11 App (Universal Windows)**.
 
-## <a name="3-review-the-included-libraries-and-headers"></a>3. Revisa las bibliotecas y los encabezados incluidos
+## <a name="review-the-included-libraries-and-headers"></a>Revisa las bibliotecas y los encabezados incluidos
 
+Hay varios archivos que aún no hemos visto. Estos archivos proporcionan herramientas y soporte adicionales comunes a escenarios de desarrollo de juegos Direct3D. Para la lista completa de archivos que se incluyen con el proyecto de juego básico de DirectX, consulta [Plantillas de proyectos de juegos DirectX](user-interface.md#template-structure).
 
-Hay varios archivos que aún no hemos visto. Estos archivos proporcionan herramientas y soporte adicionales comunes a escenarios de desarrollo de juegos Direct3D.
-
-| Archivo de código fuente de plantilla         | Descripción                                                                                                                                                                                                            |
-|------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| StepTimer.h                  | Define un temporizador de alta resolución útil para aplicaciones de representación de juego o interactivas.                                                                                                                                       |
-| Sample3DSceneRenderer.h/.cpp | Define una implementación de representador básica que conecta una cadena de intercambio de Direct3D y un adaptador gráfico a tu aplicación para UWP con DirectX.                                                                                            |
-| DirectXHelper.h              | Implementa un único método, **DX::ThrowIfFailed**, que convierte los valores de errores HRESULT devueltos por las API de DirectX en excepciones de Windows Runtime. Usa este método para colocar un punto de interrupción para depurar errores de DirectX. |
-| pch.h/.cpp                   | Contiene todos los archivos de inclusión del sistema Windows para las API usadas por una aplicación Direct3D, incluidas las API de DirectX11.                                                                                                           |
-| SamplePixelShader.hlsl       | Contiene el código de lenguaje de sombreado de alto nivel (HLSL) para un sombreador de píxeles muy básico.                                                                                                                                     |
-| SampleVertexShader.hlsl      | Contiene el código de lenguaje de sombreado de alto nivel (HLSL) para un sombreador de vértices muy básico.                                                                                                                                    |
-
- 
+| Archivo de código fuente de plantilla         | Carpeta de archivos            | descripción |
+|------------------------------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DeviceResources.h/.cpp       | Común                 | Define un objeto de clase que controla todos los [recursos de dispositivo](tutorial--assembling-the-rendering-pipeline.md#resource) DirectX. También incluye una interfaz para la aplicación que posee DeviceResources para que se le notifique cuando se pierde o se crea el dispositivo.                                                |
+| DirectXHelper.h              | Común                 | Implementa métodos, incluyendo **DX::ThrowIfFailed**, **ReadDataAsync** y **ConvertDipsToPixels. **DX::ThrowIfFailed** convierte los valores de errores HRESULT devueltos por las API de DirectX Win32 en excepciones de Windows Runtime. Usa este método para colocar un punto de interrupción para depurar errores de DirectX. Para obtener más información, consulta [ThrowIfFailed](https://github.com/Microsoft/DirectXTK/wiki/ThrowIfFailed). **ReadDataAsync** lee desde un archivo binario de forma asincrónica. **ConvertDipsToPixels** convierte una longitud en píxeles independientes del dispositivo (DIP) a una longitud en píxeles físicos. |
+| StepTimer.h                  | Común                 | Define un temporizador de alta resolución útil para aplicaciones de representación de juego o interactivas.   |
+| Sample3DSceneRenderer.h/.cpp | contenido                | Define un objeto de clase para crear una instancia de una canalización de representación básica. Crea una implementación de representación básica que conecta una cadena de intercambio Direct3D y un adaptador gráfico a tu UWP con DirectX.   |
+| SampleFPSTextRenderer.h/.cpp | Contenido                | Define un objeto de clase para representar el valor actual de fotogramas por segundo (FPS) en la parte inferior derecha de la pantalla con Direct2D y DirectWrite.  |
+| SamplePixelShader.hlsl       | Contenido                | Contiene el código de lenguaje de sombreado de alto nivel (HLSL) para un sombreador de píxeles muy básico.                                            |
+| SampleVertexShader.hlsl      | Contenido                | Contiene el código de lenguaje de sombreado de alto nivel (HLSL) para un sombreador de vértices muy básico.                                           |
+| ShaderStructures.h           | Contenido                | Contiene las estructuras de sombreador que pueden usarse para enviar las matrices de MVP y los datos por vértice al sombreador de vértices.  |
+| pch.h/.cpp                   | Principal                   | Contiene todos los archivos de inclusión del sistema Windows para las API usadas por una aplicación Direct3D, incluidas las API de DirectX11.| 
 
 ### <a name="next-steps"></a>Pasos siguientes
 
-En este punto, puedes crear un proyecto de juego de UWP con DirectX e identificar los componentes y archivos proporcionados por la plantilla DirectX11 App (Universal Windows).
+En este punto, has aprendido a crear un proyecto de juego de DirectX de UWP mediante la plantilla **DirectX 11 App (Universal Windows)** y has recibido información sobre algunos componentes y archivos proporcionados por el proyecto.
 
-En el próximo tutorial, [Definir el marco de UWP del juego](tutorial--building-the-games-metro-style-app-framework.md), trabajaremos con un juego completo y examinaremos cómo se usan y amplían en él muchos de los conceptos y componentes proporcionados por la plantilla.
+La siguiente sección es [Definir el marco de UWP del juego](tutorial--building-the-games-uwp-app-framework.md). Examinaremos cómo usa y amplía este juego muchos de los conceptos y componentes proporcionados por la plantilla.
 
  
 

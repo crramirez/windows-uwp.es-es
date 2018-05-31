@@ -1,31 +1,34 @@
 ---
 author: JordanRh1
-title: Habilitar el acceso de modo de usuario en Windows 10 IoT Core
-description: "En este tutorial se describe cómo habilitar el acceso de modo de usuario a GPIO, I2C, SPI y UART con Windows 10 IoT Core."
+title: Habilitar el acceso de modo usuario a GPIO, I2C, y SPI
+description: En este tutorial se describe cómo habilitar el acceso de modo usuario a GPIO, I2C, SPI y UART en Windows 10.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, uwp
+ms.technology: acpi
+keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
-ms.openlocfilehash: d96d01216a37c4e8dbcd0fcd0eb83ccb4859b288
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b6a8877d2991f953853339ac8fea3efad6d735c6
+ms.sourcegitcommit: 01760b73fa8cdb423a9aa1f63e72e70647d8f6ab
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/24/2018
+ms.locfileid: "1618430"
 ---
-# <a name="enable-usermode-access-on-windows-10-iot-core"></a>Habilitar el acceso de modo de usuario en Windows 10 IoT Core
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+# <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>Habilitar el acceso de modo usuario a GPIO, I2C, y SPI
 
 
-Windows 10 IoT Core contiene nuevas API para acceder a GPIO, I2C, SPI y UART directamente desde el modo de usuario. Los paneles de desarrollo como Raspberry Pi 2 exponen un subconjunto de estas conexiones que permiten a los usuarios ampliar un módulo de cálculo base con circuitos personalizados para dirigirte a una aplicación particular. Normalmente, estos buses de bajo nivel se comparten con otras funciones incorporadas críticas, con solo un subconjunto de las patillas y buses de GPIO expuestos en los encabezados. Para preservar la estabilidad del sistema, es necesario especificar qué patillas y buses son seguros para modificar las aplicaciones de modo de usuario. 
+
+Windows 10 contiene nuevas API para acceder a GPIO, I2C, SPI y UART directamente desde el modo usuario. Los paneles de desarrollo como Raspberry Pi 2 exponen un subconjunto de estas conexiones que permiten a los usuarios ampliar un módulo de cálculo base con circuitos personalizados para dirigirte a una aplicación particular. Normalmente, estos buses de bajo nivel se comparten con otras funciones incorporadas críticas, con solo un subconjunto de las patillas y buses de GPIO expuestos en los encabezados. Para preservar la estabilidad del sistema, es necesario especificar qué patillas y buses son seguros para modificar las aplicaciones de modo de usuario. 
 
 Este documento describe cómo especificar esta configuración en ACPI y proporciona herramientas para comprobar que la configuración se especificó correctamente. 
 
 > [!IMPORTANT]
 > Los destinatarios de este documento son los desarrolladores de UEFI y ACPI. Se da por hecho que existe cierta familiarización con ACPI, creación de ASL y SpbCx/GpioClx.
 
-El acceso de modo de usuario a buses de nivel bajo en Windows se asocia a través de los marcos `GpioClx` y `SpbCx` existentes. Un nuevo controlador llamado *RhProxy*, solo disponible en Windows 10 IoT Core, expone los recursos `GpioClx` y `SpbCx` en modo de usuario. Para habilitar las API, se debe declarar un nodo de dispositivo para rhproxy en las tablas ACPI con cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario. Este documento es una guía de la creación y comprobación de ASL. 
+El acceso de modo usuario a buses de nivel bajo en Windows se asocia a través de los marcos`GpioClx` `SpbCx`existentes. Un nuevo controlador llamado *RhProxy*, disponible en Windows IoT Core y Windows Enterprise, expone los recursos `GpioClx``SpbCx` en modo usuario. Para habilitar las API, se debe declarar un nodo de dispositivo para rhproxy en las tablas ACPI con cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario. Este documento es una guía de la creación y comprobación de ASL. 
 
 
 ## <a name="asl-by-example"></a>ASL como ejemplo
@@ -41,9 +44,9 @@ Device(RHPX)
     
 ```
 
-* _HID – Id. de hardware Se debe establecer en un id. de hardware específico del proveedor. 
-* _CID – Id. compatible Debe ser “MSFT8000”.  
-* _UID: id. único Establecer en 1.  
+* _HID – Id. de hardware. Se debe establecer en un id. de hardware específico del proveedor. 
+* _CID – Id. compatible. Debe ser “MSFT8000”.  
+* _UID – Id. único. Establecer a 1.  
 
 Después, declaramos cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario. El orden en que se declaran los recursos es importante porque los índices de recursos se usan para asociar las propiedades con los recursos. Si hay varios buses de I2C o SPI expuestos, el primero declarado se considera el bus 'predeterminado' para ese tipo de bus y será la instancia devuelta por los métodos `GetDefaultAsync()` de [Windows.Devices.I2c.I2cController](https://msdn.microsoft.com/library/windows/apps/windows.devices.i2c.i2ccontroller.aspx) y [Windows.Devices.Spi.SpiController](https://msdn.microsoft.com/library/windows/apps/windows.devices.spi.spicontroller.aspx). 
 
@@ -245,9 +248,7 @@ Al declarar las patillas GPIO, se deben tener en cuenta los siguientes requisito
   * Debe ser uno de PullUp, PullDown o PullNone. No puede ser PullDefault.
   * La configuración de extracción debe coincidir con el estado de energía de la patilla. Poner la patilla en el modo de extracción especificado del estado de energía no debe cambiar el estado de la patilla. Por ejemplo, si la hoja de datos especifica que la patilla aparece con una extracción, especifica PinConfig como PullUp.  
 
-Firmware, UEFI y el código de inicialización del controlador no deben cambiar el estado de una patilla desde su estado de energía durante el arranque. Solo el usuario sabe lo que está adjunto a una patilla y, por tanto, las transiciones de estado son seguras. El estado de energía de cada patilla debe estar documentado para que los usuarios puedan diseñar hardware que interactúe correctamente con una patilla. Una patilla no debe cambiar de estado de forma inesperada durante el arranque. 
-
-Si una patilla expuesta tiene varias funciones alternativas, es responsabilidad del firmware inicializar la patilla en la configuración correcta de multiplexación para su uso posterior por parte del sistema operativo. Cambiar dinámicamente la función de una patilla ("multiplexación") no se admite actualmente en Windows. 
+Firmware, UEFI y el código de inicialización del controlador no deben cambiar el estado de una patilla desde su estado de energía durante el arranque. Solo el usuario sabe lo que está adjunto a una patilla y, por tanto, las transiciones de estado son seguras. El estado de energía de cada patilla debe estar documentado para que los usuarios puedan diseñar hardware que interactúe correctamente con una patilla. Una patilla no debe cambiar de estado de forma inesperada durante el arranque.  
 
 #### <a name="supported-drive-modes"></a>Modos de unidad admitidos 
 
@@ -275,7 +276,7 @@ Si una señal GPIO pasa por un desfasador de nivel antes de alcanzar un encabeza
 Windows admite dos esquemas de numeración de patillas: 
 
 * Numeración de patillas secuencial: los usuarios ven números como 0, 1, 2... hasta el número de patillas expuestas. 0 es el primer recurso GpioIo declarado en ASL, 1 es el segundo recurso GpioIo declarado en ASL, y así sucesivamente. 
-* Numeración de patillas nativa: los usuarios verán los números de patilla especificados en los descriptores GpioIo, por ejemplo, 4, 5, 12, 13… .  
+* Numeración de patillas nativa: los usuarios verán los números de patilla especificados en los descriptores GpioIo, por ejemplo, 4, 5, 12, 13…  
 
 ```cpp
 Package (2) { “GPIO-UseDescriptorPinNumbers”, 1 }, 
@@ -301,7 +302,9 @@ Elige el esquema de numeración que sea más compatible con la documentación pu
 
 ### <a name="uart"></a>UART 
 
-UART no se admite en Raspberry Pi en el momento de escribir, por lo que la siguiente declaración UART es desde MinnowBoardMax. 
+Si tu controlador UART usa`SerCx` o `SerCx2`, puedes usar rhproxy para exponer el controlador a modo usuario. Los controladores UART que crean una interfaz de dispositivo de tipo `GUID_DEVINTERFACE_COMPORT` no necesitan usar rhproxy. El controlador de la bandeja de entrada `Serial.sys` es uno de estos casos.
+
+Para exponer un UART tipo `SerCx` a modo usuario, declara un recurso de `UARTSerialBus` de la siguiente manera.
 
 ```cpp
 // Index 2 
@@ -344,7 +347,7 @@ Este documento describe primero las interfaces y los protocolos subyacentes impl
 
 ### <a name="pin-muxing-architecture"></a>Arquitectura de multiplexación de patillas 
 
-Esta sección describe las interfaces y los protocolos subyacentes implicados en la multiplexación de patillas. No es necesario tener conocimiento sobre los protocolos subyacentes para admitir la multiplexación de patillas con controladores SpbCx/GpioClx/SerCx. Para obtener información detallada sobre cómo admitir multiplexación de patillas con controladores SpbCx/GpioCls/SerCx, consulta [implementación de compatibilidad de multiplexación de patillas con controladores de cliente GpioClx](#supporting-muxing-support-in-GpioClx-client-drivers) y [consumo de compatibilidad de multiplexación de patillas en controladores de controladora SpbCx y SerCx](#supporting-muxing-in-SpbCx-and-SerCx-controller-drivers). 
+Esta sección describe las interfaces y los protocolos subyacentes implicados en la multiplexación de patillas. No es necesario tener conocimiento sobre los protocolos subyacentes para admitir la multiplexación de patillas con controladores SpbCx/GpioClx/SerCx. Para obtener información detallada sobre cómo admitir multiplexación de patillas con controladores SpbCx/GpioCls/SerCx, consulta [implementación de compatibilidad de multiplexación de patillas con controladores de cliente GpioClx](#supporting-muxing-support-in-gpioclx-client-drivers) y [consumo de compatibilidad de multiplexación de patillas en controladores de controladora SpbCx y SerCx](#supporting-muxing-in-spbcx-and-sercx-controller-drivers). 
 
 La multiplexación de patillas se logra mediante la cooperación de varios componentes. 
 
@@ -358,17 +361,17 @@ A continuación se muestra la secuencia de operaciones que participan en la mult
 
 ![Interacción del servidor de cliente de multiplexación de patillas](images/usermode-access-diagram-1.png)
 
-1.    El cliente recibe recursos MsftFunctionConfig del firmware ACPI en su devolución de llamada a [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx).
-2.    El cliente usa la función auxiliar del concentrador de recursos `RESOURCE_HUB_CREATE_PATH_FROM_ID()` para crear una ruta de acceso desde el identificador de recurso y, a continuación, abre un identificador para la ruta de acceso (con [ZwCreateFile()](https://msdn.microsoft.com/library/windows/hardware/ff566424.aspx), [IoGetDeviceObjectPointer()](https://msdn.microsoft.com/library/windows/hardware/ff549198.aspx) o [WdfIoTargetOpen()](https://msdn.microsoft.com/library/windows/hardware/ff548634.aspx)).
-3.    El servidor extrae el identificador de concentrador de recursos de la ruta del archivo que usa funciones auxiliares de concentrador de recursos `RESOURCE_HUB_ID_FROM_FILE_NAME()`, a continuación, consulta el concentrador de recursos para obtener el descriptor del recurso.
-4.    El servidor realiza el arbitraje de uso compartido de cada patilla en el descriptor y completa la solicitud IRP_MJ_CREATE.
-5.    El cliente emite una solicitud *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* en el identificador recibido.
-6.    En respuesta a *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*, el servidor realiza la operación de multiplexación de hardware haciendo que la función especificada se active en cada patilla.
-7.    El cliente continúa con operaciones que dependen de la configuración de multiplexación de patillas solicitada.
-8.    Cuando el cliente ya no requiere la multiplexación de patillas, cierra el identificador.
-9.    En respuesta al cierre del identificador, el servidor revierte las patillas a su estado inicial.
+1.  El cliente recibe recursos MsftFunctionConfig del firmware ACPI en su devolución de llamada a [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx).
+2.  El cliente usa la función auxiliar del concentrador de recursos `RESOURCE_HUB_CREATE_PATH_FROM_ID()` para crear una ruta de acceso desde el identificador de recurso y, a continuación, abre un identificador para la ruta de acceso (con [ZwCreateFile()](https://msdn.microsoft.com/library/windows/hardware/ff566424.aspx), [IoGetDeviceObjectPointer()](https://msdn.microsoft.com/library/windows/hardware/ff549198.aspx) o [WdfIoTargetOpen()](https://msdn.microsoft.com/library/windows/hardware/ff548634.aspx)).
+3.  El servidor extrae el identificador de concentrador de recursos de la ruta del archivo que usa funciones auxiliares de concentrador de recursos `RESOURCE_HUB_ID_FROM_FILE_NAME()`, a continuación, consulta el concentrador de recursos para obtener el descriptor del recurso.
+4.  El servidor realiza el arbitraje de uso compartido de cada patilla en el descriptor y completa la solicitud IRP_MJ_CREATE.
+5.  El cliente emite una solicitud *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* en el identificador recibido.
+6.  En respuesta a *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*, el servidor realiza la operación de multiplexación de hardware haciendo que la función especificada se active en cada patilla.
+7.  El cliente continúa con operaciones que dependen de la configuración de multiplexación de patillas solicitada.
+8.  Cuando el cliente ya no requiere la multiplexación de patillas, cierra el identificador.
+9.  En respuesta al cierre del identificador, el servidor revierte las patillas a su estado inicial.
 
-###    <a name="protocol-description-for-pin-muxing-clients"></a>Descripción del protocolo para clientes de multiplexación de patillas
+### <a name="protocol-description-for-pin-muxing-clients"></a>Descripción del protocolo para clientes de multiplexación de patillas
 
 Esta sección describe cómo un cliente consume la funcionalidad de multiplexación de patillas. Esto no se aplica a los controladores de controladora `SerCx` y `SpbCx`, ya que los marcos implementan este protocolo en nombre de los controladores.
 
@@ -517,9 +520,9 @@ El controlador debe almacenar el WDFIOTARGET en una de sus áreas de contexto pa
 
 Cuando el cliente cierra su identificador de recurso, las patillas se vuelven a multiplexar en su estado inicial y ahora puede adquirirlas un cliente diferente.
 
-###    <a name="protocol-description-for-pin-muxing-servers"></a>Descripción del protocolo para servidores de multiplexación de patillas
+### <a name="protocol-description-for-pin-muxing-servers"></a>Descripción del protocolo para servidores de multiplexación de patillas
 
-Esta sección describe cómo un servidor de multiplexación de patillas expone su funcionalidad a los clientes. Esto no se aplica a controladores de minipuerto `GpioClx`, ya que el marco de trabajo implementa este protocolo en nombre de los controladores de cliente. Para obtener información detallada sobre cómo admitir multiplexación de patillas en controladores de cliente `GpioClx`, consulta [implementación de compatibilidad de multiplexación de patillas con controladores de cliente GpioClx](#supporting-muxing-support-in-GpioClx-client-drivers).
+Esta sección describe cómo un servidor de multiplexación de patillas expone su funcionalidad a los clientes. Esto no se aplica a controladores de minipuerto `GpioClx`, ya que el marco de trabajo implementa este protocolo en nombre de los controladores de cliente. Para obtener información detallada sobre cómo admitir multiplexación de patillas en controladores de cliente `GpioClx`, consulta [implementación de compatibilidad de multiplexación de patillas con controladores de cliente GpioClx](#supporting-muxing-support-in-gpioclx-client-drivers).
 
 ####    <a name="handling-irpmjcreate-requests"></a>Controlar solicitudes de IRP_MJ_CREATE
 
@@ -529,11 +532,11 @@ El servidor debe validar el descriptor y extraer el modo de uso compartido y la 
 
 El arbitraje de uso compartido se realiza correctamente de forma general si el arbitraje de uso compartido se realiza de forma correcta en cada patilla de la lista de patillas. Cada patilla se debe arbitrar de la siguiente manera:
 
-*    Si ya no está reservada la patilla, el arbitraje de uso compartido se realiza correctamente.
-*    Si la patilla ya está reservada como exclusiva, se produce un error en el arbitraje de uso compartido.
-*    Si la patilla ya está reservada como compartida
-  *    y se comparte la solicitud entrante, el arbitraje de uso compartido se realiza correctamente.
-  *    y si la solicitud entrante es exclusiva, se produce un error en el arbitraje de uso compartido.
+*   Si ya no está reservada la patilla, el arbitraje de uso compartido se realiza correctamente.
+*   Si la patilla ya está reservada como exclusiva, se produce un error en el arbitraje de uso compartido.
+*   Si la patilla ya está reservada como compartida
+  * y se comparte la solicitud entrante, el arbitraje de uso compartido se realiza correctamente.
+  * y si la solicitud entrante es exclusiva, se produce un error en el arbitraje de uso compartido.
 
 Si se produce un error en el arbitraje de uso compartido, la solicitud debería completarse con *STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE*. Si el arbitraje de uso compartido se realiza correctamente, se debe completar la solicitud con *STATUS_SUCCESS*.
 
@@ -543,8 +546,8 @@ Ten en cuenta que el modo de uso compartido de la solicitud entrante debe obtene
 
 Después de que el cliente haya reservado correctamente un recurso MsftFunctionConfig abriendo un controlador, puede enviar *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para solicitar al servidor que realice la operación de multiplexación de hardware real. Cuando el servidor recibe *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para cada patilla de la lista de patillas debe 
 
-*    Establecer el modo de extracción especificado en el miembro PinConfiguration de la estructura PNP_FUNCTION_CONFIG_DESCRIPTOR en el hardware.
-*    Multiplexar la patilla para la función especificada por el miembro FunctionNumber de la estructura PNP_FUNCTION_CONFIG_DESCRIPTOR.
+*   Establecer el modo de extracción especificado en el miembro PinConfiguration de la estructura PNP_FUNCTION_CONFIG_DESCRIPTOR en el hardware.
+*   Multiplexar la patilla para la función especificada por el miembro FunctionNumber de la estructura PNP_FUNCTION_CONFIG_DESCRIPTOR.
 
 El servidor, a continuación, debe completar la solicitud con *STATUS_SUCCESS*.
 
@@ -556,7 +559,7 @@ Recuerda que cuando se cierra el identificador, el servidor tendrá que revertir
 
 Cuando un cliente ya no necesita un recurso de multiplexación, cierra su identificador. Cuando un servidor recibe una solicitud *IRP_MJ_CLOSE*, debe revertir las patillas al estado en el que estaban cuando se recibió *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*. Si el cliente nunca envía *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*, no es necesario realizar ninguna acción. El servidor debe marcar las patillas como disponible en función del arbitraje de uso compartido y completar la solicitud con *STATUS_SUCCESS*. Asegúrate de sincronizar correctamente el control de *IRP_MJ_CLOSE* con el control de *IRP_MJ_CREATE*.
 
-###    <a name="authoring-guidelines-for-acpi-tables"></a>Directrices para crear tablas ACPI
+### <a name="authoring-guidelines-for-acpi-tables"></a>Directrices para crear tablas ACPI
 
 Esta sección describe cómo proporcionar recursos de multiplexación a los controladores de cliente. Ten en cuenta que necesitarás la versión de compilación de Microsoft ASL 14327 o posterior para compilar tablas que contengan recursos `MsftFunctionConfig()`. `MsftFunctionConfig()` los recursos se proporcionan a los clientes de multiplexación de patillas como recursos de hardware. `MsftFunctionConfig()` los recursos se deben proporcionar a los controladores que requieren cambios de multiplexación de patillas, que generalmente son SPB y controladores de controladora de serie, pero no se deben suministrar SPB y controladores periféricos de serie, ya que el controlador de controladora controla la configuración de multiplexación.
 La macro ACPI `MsftFunctionConfig()` se define del siguiente modo:
@@ -612,7 +615,7 @@ Device(I2C1)
 
 Además de los recursos de memoria e interrupción que suelen requerir los controladores de controladora, también se especifica un recurso `MsftFunctionConfig()`. Este recurso permite que el controlador de controladora I2C ponga patillas 2 y 3 (administrados por el nodo del dispositivo en \\_SB.GPIO0) en la función 4 con la resistencia pull-up habilitada. 
 
-### <a name="supporting-muxing-support-in-gpioclx-client-drivers"></a>Compatibilidad de soporte de multiplexación en los controladores de cliente GpioClx 
+## <a name="supporting-muxing-support-in-gpioclx-client-drivers"></a>Compatibilidad de soporte de multiplexación en los controladores de cliente GpioClx 
 
 `GpioClx` tiene compatibilidad integrada para multiplexación de patillas. Controladores de minipuerto GpioClx (también denominados "Controladores de cliente GpioClx"), hardware del controlador GPIO. A partir de Windows 10 compilación 14327, los controladores de minipuerto GpioClx pueden agregar compatibilidad para multiplexación de patillas implementando dos DDI nuevas: 
 
@@ -628,7 +631,7 @@ Además de estas dos nuevas DDI, deben auditarse DDI existentes para la compatib
 
 Por ejemplo, supongamos que la configuración predeterminada de una patilla sea UART y la patilla también se puede usar como GPIO. Cuando se llama a CLIENT_ConnectIoPins para conectar la patilla para GPIO, debería multiplexar la patilla para el GPIO y, en CLIENT_DisconnectIoPins, debería volver a multiplexar la patilla para UART. En general, las rutinas _Disconnect deben deshacer las operaciones realizadas por las rutinas _Connect. 
 
-### <a name="supporting-muxing-in-spbcx-and-sercx-controller-drivers"></a>Compatibilidad con multiplexación en los controladores de controladora SpbCx y SerCx 
+## <a name="supporting-muxing-in-spbcx-and-sercx-controller-drivers"></a>Compatibilidad con multiplexación en los controladores de controladora SpbCx y SerCx 
 
 A partir de Windows 10 compilación 14327, los marcos `SpbCx` y `SerCx` contienen compatibilidad integrada para multiplexación de patillas, lo que permite que los controladores de controladora `SpbCx` y `SerCx` sean clientes de multiplexación de patillas sin ningún cambio de código en los propios controladores de controladora. Por extensión, cualquier controlador periférico SpbCx/SerCx que se conecte a un controlador de controladora SpbCx/SerCx habilitado para multiplexación desencadenará actividad de multiplexación de patillas. 
 
@@ -651,13 +654,44 @@ La implicación de la multiplexación dinámica de patillas para los controlador
 * EvtDevicePrepareHardware/EvtDeviceReleaseHardware 
 * EvtDeviceD0Entry/EvtDeviceD0Exit 
 
-## <a name="verification"></a>Comprobación 
+## <a name="verification"></a>Verificación 
 
-Cuando hayas terminado de crear tu ASL, debes ejecutar las pruebas de [Hardware Lab Kit (HLK)](https://msdn.microsoft.com/library/windows/hardware/dn930814.aspx) para comprobar que todos los recursos se exponen correctamente y que los buses subyacentes cumplen el contrato funcional de la API. Las siguientes secciones describen cómo cargar el nodo de dispositivo de rhproxy de prueba sin necesidad de recompilar el firmware y cómo ejecutar las pruebas de HLK. 
+Cuando estés listo para probar rhproxy, es útil usar el siguiente procedimiento paso a paso.
 
-### <a name="compile-and-load-asl-with-acpitabldat"></a>Compilar y cargar ASL con ACPITABL.dat 
+1. Comprueba que cada controlador de la controladora `SpbCx`, `GpioClx`, y `SerCx` está cargando y funcionando correctamente
+1. Comprueba que `rhproxy` está en el sistema. Algunas ediciones y compilaciones de Windows no lo tienen.
+1. Compila y carga el nodo de rhproxy usando `ACPITABL.dat`
+1. Comprueba que el nodo del dispositivo `rhproxy` existe
+1. Comprueba que `rhproxy` está cargándose e iniciándose
+1. Comprueba que los dispositivos esperados están expuestos al modo usuario
+1. Comprueba que puedes interactuar con cada dispositivo desde la línea de comandos
+1. Comprueba que puedes interactuar con cada dispositivo desde una aplicación para UWP
+1. Ejecuta las pruebas de HLK
 
-El primer paso es compilar y cargar el archivo ASL en el sistema que se está probando. Te recomendamos que uses ACPITABL.dat durante el desarrollo y la validación cuando no se requiera una reconstrucción completa de UEFI para probar los cambios de ASL. 
+### <a name="verify-controller-drivers"></a>Comprueba los controladores de la controladora
+
+Dado que rhproxy expone otros dispositivos en el sistema en modo usuario, solo funciona si ya están trabajando esos dispositivos. El primer paso es comprobar que esos dispositivos (el I2C, SPI, las controladoras de GPIO que deseas exponer) ya están funcionando.
+
+Al aviso del comando, ejecuta
+```
+devcon status *
+```
+
+Mira el resultado y comprueba que todos los dispositivos de interés se hayan iniciado. Si un dispositivo tiene un código de problema, debes averiguar por qué no se carga ese dispositivo y solucionarlo. Todos los dispositivos deberían haberse habilitado durante el bringup inicial de la plataforma. La resolución de problemas para los controladores de la controladora `SpbCx`, `GpioClx`, o `SerCx` no es el objetivo de este documento.
+
+### <a name="verify-that-rhproxy-is-present-on-the-system"></a>Comprueba que rhproxy está en el sistema
+
+Comprueba que el servicio `rhproxy` está en el sistema.
+
+```
+reg query HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\rhproxy
+```
+
+Si la clave del registro no está presente, no existe rhproxy en el sistema. Rhproxy está presente en todas las compilaciones de IoT Core y Windows Enterprise build 15063 y posteriores.
+
+### <a name="compile-and-load-asl-with-acpitabldat"></a>Compila y carga ASL con ACPITABL.dat 
+
+Ahora que has creado un nodo de ASL rhproxy, es momento de compilar y cargar. Se puede compilar el nodo rhproxy en un archivo AML independiente que se puede anexar a las tablas ACPI del sistema. Como alternativa, si tienes acceso a fuentes ACPI de tu sistema, puedes insertar el nodo rhproxy directamente en las tablas ACPI de la plataforma. Sin embargo, durante el bringup inicial, quizá sea más fácil usar `ACPITABL.dat`.
 
 1. Crea un archivo denominado yourboard.asl y coloca el nodo de dispositivo RHPX dentro de un DefinitionBlock: 
 ```
@@ -672,24 +706,109 @@ DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
     }
 }
 ```
-2.    Descarga el WDK y obtén asl.exe
-3.    Ejecuta el siguiente comando para generar ACPITABL.dat:
+2.  Descarga el [WDK](https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk) y busca `asl.exe` en `C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify`
+3.  Ejecuta el siguiente comando para generar ACPITABL.dat:
 ```
 asl.exe yourboard.asl
 ```
-4.    Copia el archivo ACPITABL.dat resultante en c:\windows\system32 en el sistema que se está probando.
-5.    Activa testsigning en el sistema que se está probando:
+4.  Copia el archivo ACPITABL.dat resultante en c:\windows\system32 en el sistema que se está probando.
+5.  Activa testsigning en el sistema que se está probando:
 ```
 bcdedit /set testsigning on
 ```
-6.    Reiniciar el sistema como prueba. El sistema agregará las tablas ACPI definidas en ACPITABL.dat a las tablas de firmware del sistema. 
-7.    Comprueba que el nodo de dispositivo RHPX se agregó al sistema:
+6.  Reiniciar el sistema como prueba. El sistema agregará las tablas ACPI definidas en ACPITABL.dat a las tablas de firmware del sistema.
+
+### <a name="verify-that-the-rhproxy-device-node-exists"></a>Comprueba que el nodo del dispositivo rhproxy existe
+
+Ejecuta el siguiente comando para enumerar el nodo de dispositivo rhproxy.
 ```
 devcon status *msft8000
 ```
-La salida de devcon debería indicar que el dispositivo está presente, aunque es posible que se haya producido un error en la iniciación del controlador si hay errores en el ASL en el que se necesita trabajar.
+La salida de devcon debería indicar que el dispositivo está presente. Si el nodo del dispositivo no está presente, no se agregaron correctamente las tablas ACPI al sistema.
+
+### <a name="verify-that-rhproxy-is-loading-and-starting"></a>Comprueba que rhproxy está cargándose e iniciándose
+
+Compruebe el estado de rhproxy:
+```
+devcon status *msft8000
+```
+Si el resultado indica que rhproxy se ha iniciado, rhproxy se ha cargado e iniciado correctamente. Si ves un código de problema, debes investigar. Estos son algunos códigos de problemas comunes:
+* Problema 51: `CM_PROB_WAITING_ON_DEPENDENCY` El sistema no está iniciando rhproxy porque una de sus dependencias no se ha podido cargar. Esto significa que los recursos han pasado al punto de rhproxy y a nodos ACPI no válidos, o que no se inician los dispositivos de destino. En primer lugar, vuelve a comprobar que todos los dispositivos se están ejecutando correctamente (consulta la sección anterior 'Comprobar los controladores de controladora'). A continuación, vuelve a comprobar tu ASL, asegúrate de que las rutas de recurso (por ejemplo, `\_SB.I2C1`) son correctas, y apunta a nodos válidos en tu DSDT.
+* Problema 10: `CM_PROB_FAILED_START` Rhproxy no se pudo iniciar, probablemente por un problema en el análisis del recurso. Repasa tu ASL, vuelve a comprobar los índices de recurso en el DSD y verifica que los recursos GPIO se hayan especificado en orden de número de patilla ascendente.
+
+### <a name="verify-that-the-expected-devices-are-exposed-to-usermode"></a>Comprueba que los dispositivos esperados están expuestos al modo usuario
+
+Ahora que se está ejecutando rhproxy, debería haber creado interfaces de dispositivos que se puedan acceder por el modo usuario. Usaremos varias herramientas de líneas de comandos para enumerar los dispositivos y ver si están presentes.
+
+Clona el repositorio [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) y compila las muestras `GpioTestTool`, `I2cTestTool`, `SpiTestTool`, and `Mincomm`. Copia las herramientas al dispositivo que estás probando y usa los siguientes comandos para enumerar los dispositivos.
+```
+I2cTestTool.exe -list
+SpiTestTool.exe -list
+GpioTestTool.exe -list
+MinComm.exe -list
+```
+Deberías ver una lista con tus dispositivos y sus nombres descriptivos. Si no ves los dispositivos y nombres descriptivos correctos, vuelve a comprobar tu ASL.
+
+### <a name="verify-each-device-on-the-command-line"></a>Comprueba cada dispositivo en la línea de comandos
+
+El siguiente paso es usar las herramientas de línea de comandos para abrir e interactuar con los dispositivos.
+
+Ejemplo de I2CTestTool:
+```
+I2cTestTool.exe 0x55 I2C1
+> write {1 2 3}
+> read 3
+> writeread {1 2 3} 3
+```
+
+Ejemplo de SpiTestTool:
+```
+SpiTestTool.exe -n SPI1
+> write {1 2 3}
+> read 3
+```
+
+Ejemplo de GpioTestTool:
+```
+GpioTestTool.exe 12
+> setdrivemode output
+> write 0
+> write 1
+> setdrivemode input
+> read
+> interrupt on
+> interrupt off
+```
+
+Ejemplo de MinComm (serie). Conecta la recepción a la transmisión antes de ejecutar:
+```
+MinComm "\\?\ACPI#FSCL0007#3#{86e0d1e0-8089-11d0-9ce4-08003e301f73}\0000000000000006"
+(type characters and see them echoed back)
+```
+
+### <a name="verify-each-device-from-a-uwp-app"></a>Comprueba cada dispositivo desde una aplicación para UWP
+
+Usa las siguientes muestras para validar que los dispositivos funcionan desde UWP.
+
+| Muestra | Vínculo |
+|------|------|
+| IoT-GPIO | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-GPIO |
+| IoT-I2C | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-I2C | 
+| IoT-SPI | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-SPI |
+| CustomSerialDeviceAccess | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomSerialDeviceAccess |
 
 ### <a name="run-the-hlk-tests"></a>Ejecuta las pruebas de HLK
+
+Descarga el [Hardware Lab Kit (HLK)](https://docs.microsoft.com/windows-hardware/test/hlk/windows-hardware-lab-kit). Las siguientes pruebas están disponibles:
+ * [Pruebas de esfuerzo y funcionales de GPIO WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/f1fc0922-1186-48bd-bfcd-c7385a2f6f96)
+ * [Pruebas de escritura I2C WinRT (EEPROM obligatoria)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2ab0df1b-3369-4aaf-a4d5-d157cb7bf578)
+ * [Pruebas de lectura I2C WinRT (EEPROM obligatoria)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/ca91c2d2-4615-4a1b-928e-587ab2b69b04)
+ * [Pruebas de direcciones subordinadas no existentes I2C WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2746ad72-fe5c-4412-8231-f7ed53d95e71)
+ * [Pruebas funcionales avanzadas I2C WinRT (mbed LPC1768 obligatorio)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/a60f5a94-12b2-4905-8416-e9774f539f1d)
+ * [Pruebas de verificación de frecuencia del reloj SPI WinRT (mbed LPC1768 obligatorio)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/50cf9ccc-bbd3-4514-979f-b0499cb18ed8)
+ * [Pruebas de transferencia E/S SPI WinRT IO (mbed LPC1768 obligatorio)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/00c892e8-c226-4c71-9c2a-68349fed7113)
+ * [Pruebas de verificación de intervalo SPI WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/20c6b079-62f7-4067-953f-e252bd271938)
+ * [Pruebas de detección de intervalos de transferencia SPI WinRT (mbed LPC1768 obligatorio)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/6da79d04-940b-4c49-8f00-333bf0cfbb19)
 
 Cuando selecciones el nodo de dispositivo rhproxy en el administrador de HLK, se seleccionarán automáticamente las pruebas aplicables.
 
@@ -703,35 +822,24 @@ A continuación, haz clic en la pestaña Pruebas y selecciona las pruebas I2C Wi
 
 Haz clic en Ejecutar seleccionados. Hay documentación adicional disponible en cada prueba haciendo clic en la prueba y, luego, en "Descripción de la prueba".
 
-###    <a name="more-testing-resources"></a>Más recursos de prueba
-
-Hay herramientas de línea de comandos simples para Gpio, I2c, Spi y serie disponibles en el repositorio de muestras de ms-iot github (https://github.com/ms-iot/samples). Estas herramientas pueden ser útiles para la depuración manual.
-
-| Herramienta | Vínculo |
-|------|------|
-| GpioTestTool | https://developer.microsoft.com/windows/iot/samples/gpiotesttool |
-| I2cTestTool    | https://developer.microsoft.com/windows/iot/samples/I2cTestTool | 
-| SpiTestTool |    https://developer.microsoft.com/windows/iot/samples/spitesttool |
-| MinComm (serie) |    https://github.com/ms-iot/samples/tree/develop/MinComm |
-
 ## <a name="resources"></a>Recursos
 
 | Destination (Destino) | Link |
 |-------------|------|
 | Especificación de ACPI 5.0 | http://acpi.info/spec.htm |
 | Asl.exe (Microsoft ASL Compiler) | https://msdn.microsoft.com/library/windows/hardware/dn551195.aspx |
-| Windows.Devices.Gpio    | https://msdn.microsoft.com/library/windows/apps/windows.devices.gpio.aspx | 
+| Windows.Devices.Gpio  | https://msdn.microsoft.com/library/windows/apps/windows.devices.gpio.aspx | 
 | Windows.Devices.I2c | https://msdn.microsoft.com/library/windows/apps/windows.devices.i2c.aspx |
 | Windows.Devices.Spi | https://msdn.microsoft.com/library/windows/apps/windows.devices.spi.aspx |
 | Windows.Devices.SerialCommunication | https://msdn.microsoft.com/library/windows/apps/windows.devices.serialcommunication.aspx |
 | Marco de creación y ejecución de pruebas (TAEF) | https://msdn.microsoft.com/library/windows/hardware/hh439725.aspx |
 | SpbCx | https://msdn.microsoft.com/library/windows/hardware/hh450906.aspx |
-| GpioClx    | https://msdn.microsoft.com/library/windows/hardware/hh439508.aspx |
+| GpioClx   | https://msdn.microsoft.com/library/windows/hardware/hh439508.aspx |
 | SerCx | https://msdn.microsoft.com/library/windows/hardware/ff546939.aspx |
 | Pruebas MITT I2C | https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx |
 | GpioTestTool | https://developer.microsoft.com/windows/iot/samples/GPIOTestTool |
-| I2cTestTool    | https://developer.microsoft.com/windows/iot/samples/I2cTestTool | 
-| SpiTestTool |    https://developer.microsoft.com/windows/iot/samples/spitesttool |
+| I2cTestTool   | https://developer.microsoft.com/windows/iot/samples/I2cTestTool | 
+| SpiTestTool | https://developer.microsoft.com/windows/iot/samples/spitesttool |
 | MinComm (serie) |    https://github.com/ms-iot/samples/tree/develop/MinComm |
 | Hardware Lab Kit (HLK) | https://msdn.microsoft.com/library/windows/hardware/dn930814.aspx |
 

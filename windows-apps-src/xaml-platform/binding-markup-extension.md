@@ -1,7 +1,7 @@
 ---
 author: jwmsft
-description: "La extensión de marcado Binding se convierte en tiempo de carga XAML en una instancia de la clase Binding."
-title: "Extensión de marcado Binding"
+description: La extensión de marcado Binding se convierte en tiempo de carga XAML en una instancia de la clase Binding.
+title: Extensión de marcado Binding
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -9,13 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 0358443abbfb753ace9276f1cca8dfa0a4745508
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 9f90821fdadea0939dbad316ad9be4424b31a926
+ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/09/2018
+ms.locfileid: "1573052"
 ---
 # <a name="binding-markup-extension"></a>Extensión de marcado {Binding}
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Nota** En Windows10 se encuentra disponible un nuevo mecanismo de enlace, el cual está optimizado para el rendimiento y la productividad del desarrollador. Consulta [Extensión de marcado {x:Bind}](x-bind-markup-extension.md).
 
@@ -74,7 +77,7 @@ Para obtener más información sobre la sintaxis de cadenas de una ruta de acces
 | [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827) | Especifica un parámetro del convertidor que se puede usar en la lógica del convertidor. (Si estableces [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826)). La mayoría de convertidores usan una lógica simple que obtiene toda la información que necesitan del valor pasado para convertir y no necesitan ningún valor de **ConverterParameter**. El parámetro **ConverterParameter** es para las implementaciones de convertidor más complejas, que disponen de una lógica condicional que controla lo que se pasa en **ConverterParameter**. Puedes escribir un convertidor que use valores que no sean cadenas, aunque no es lo habitual. Consulta las observaciones de **ConverterParameter** para obtener más información. |
 | [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) | Especifica un origen de datos haciendo referencia a otro elemento en la misma construcción XAML que tenga la propiedad **Name** o el [atributo x:Name](x-name-attribute.md). A menudo, se usa para compartir valores relacionados o usar subpropiedades de un elemento de interfaz de usuario para proporcionar un valor específico para otro elemento, por ejemplo, en una plantilla de control XAML. |
 | [**FallbackValue**](https://msdn.microsoft.com/library/windows/apps/dn279345) | Especifica un valor que se mostrará cuando no se puede resolver el origen o la ruta de acceso. |
-| [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209829) | Especifica el modo de enlace como uno de los siguientes valores: "OneTime", "OneWay" o "TwoWay". Estos se corresponden con los nombres de constante de la enumeración de [**BindingMode**](https://msdn.microsoft.com/library/windows/apps/br209822). El valor predeterminado depende del destino de enlace, pero en la mayoría de los casos es "OneWay". Ten en cuenta que esto difiere del valor predeterminado de **{x:Bind}**, que es "OneTime". | 
+| [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209829) | Especifica el modo de enlace como uno de los siguientes valores: "OneTime", "OneWay" o "TwoWay". Estos se corresponden con los nombres de constante de la enumeración de [**BindingMode**](https://msdn.microsoft.com/library/windows/apps/br209822). El valor predeterminado es "OneWay". Ten en cuenta que esto difiere del valor predeterminado de **{x:Bind}**, que es "OneTime". | 
 | [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) | Para especificar un origen de datos, describe la posición del origen del enlace con relación a la posición del destino de enlace. Esto suele usarse en los enlaces dentro de plantillas de control XAML, estableciendo la [extensión de marcado {RelativeSource}](relativesource-markup-extension.md). |
 | [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) | Especifica el origen de datos del objeto. Dentro de la extensión de marcado **Binding**, la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) requiere una referencia de objeto, como una referencia de [extensión de marcado {StaticResource}](staticresource-markup-extension.md). Si no se especifica esta propiedad, el contexto de datos que actúa especifica el origen. Es más habitual no especificar un valor Source en enlaces individuales y, en lugar de ello, basarse en la propiedad **DataContext** compartida para enlaces múltiples. Para más información, consulta [**DataContext**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.datacontext.aspx) o [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946). |
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | Especifica un valor que se mostrará cuando se resuelva el valor de origen, pero es explícitamente **null**. |

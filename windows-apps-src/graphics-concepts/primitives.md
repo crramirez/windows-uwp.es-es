@@ -1,8 +1,9 @@
 ---
 title: Primitivos
-description: "Un primitivo 3D es una colección de vértices que forma una sola entidad 3D."
+description: Un primitivo 3D es una colección de vértices que forma una sola entidad 3D.
 ms.assetid: A1FE6F49-B0D4-4665-90E1-40AD98E668B1
-keywords: Primitivos
+keywords:
+- Primitivos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fd6995e1d34b736f9f8d2844e1d4358446556c9a
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 8f94f859b57a0be9cfbb2d81d635ae7714129256
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652544"
 ---
 # <a name="primitives"></a>Primitivos
 
@@ -37,23 +39,23 @@ Un *primitivo* 3D es una colección de vértices que forma una sola entidad 3D.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Listas de puntos](point-lists.md)</p></td>
+<td align="left"><p><a href="point-lists.md">Listas de puntos</a></p></td>
 <td align="left"><p>Una lista de puntos es una colección de vértices que se representan como puntos aislados. La aplicación puede utilizar listas de puntos en escenas 3D para campos de asteriscos, o bien líneas de puntos en la superficie de un polígono.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Listas de líneas](line-lists.md)</p></td>
+<td align="left"><p><a href="line-lists.md">Listas de líneas</a></p></td>
 <td align="left"><p>Una lista de líneas es una lista de segmentos de línea recta aislados. Las listas de líneas son útiles para tareas como agregar aguanieve o lluvia torrencial a una escena 3D. Para crear una lista de líneas, las aplicaciones rellenan una matriz de vértices.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Series de líneas](line-strips.md)</p></td>
+<td align="left"><p><a href="line-strips.md">Series de líneas</a></p></td>
 <td align="left"><p>Una serie de líneas es un primitivo que se compone de segmentos de línea conectados. La aplicación puede usar las series de líneas para crear polígonos que no están cerrados. Un polígono cerrado es un polígono cuyo último vértice está conectada al primero por un segmento de línea.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Listas de triángulos](triangle-lists.md)</p></td>
+<td align="left"><p><a href="triangle-lists.md">Listas de triángulos</a></p></td>
 <td align="left"><p>Una lista de triángulos es una lista de triángulos aislados. Los triángulos aislados podrían o no estar próximos entre sí. Una lista de triángulos debe tener al menos tres vértices, y el número total de vértices debe ser divisible por tres.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Series de triángulos](triangle-strips.md)</p></td>
+<td align="left"><p><a href="triangle-strips.md">Series de triángulos</a></p></td>
 <td align="left"><p>Una serie de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo.</p></td>
 </tr>
 </tbody>

@@ -1,19 +1,21 @@
 ---
 author: normesta
-Description: "Mejorar tu aplicación de escritorio para los usuarios de Windows 10 mediante las API de la Plataforma universal de Windows."
+Description: Enhance your desktop app for Windows 10 users by using Universal Windows Platform (UWP) APIs.
 Search.Product: eADQiWindows 10XVcnh
-title: "Mejorar tu aplicación de escritorio para Windows 10"
+title: Mejorar tu aplicación de escritorio para Windows 10
 ms.author: normesta
-ms.date: 07/06/2017
+ms.date: 08/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9f1522527825d6580ddf4fc36599352a9ca8a243
-ms.sourcegitcommit: f93e887fbab6c1f824a8f762ba848f64c7f77c49
+ms.localizationpriority: medium
+ms.openlocfilehash: 21dc29758a4622f810a02e7e5bb0ec117e4dbc2a
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 03/08/2018
+ms.locfileid: "1638559"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Mejorar tu aplicación de escritorio para Windows 10
 
@@ -42,7 +44,7 @@ A continuación, agrega una referencia a estos archivos.
 |Windows.Foundation.UniversalApiContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\<*versión de sdk*>\Windows.Foundation.UniversalApiContract\<*versión*>|
 |Windows.Foundation.FoundationContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\<*versión de sdk*>\Windows.Foundation.FoundationContract\<*versión*>|
 
-En la ventana **Propiedades**, establezca el campo **Copia local** de los archivos **Windows.winmd** y **Windows.Foundation.FoundationContract.winmd** en **False**.
+En la ventana **Propiedades**, establece el campo **Copia local** de cada archivo *.winmd* en **False**.
 
 ![copy-local-field](images/desktop-to-uwp/copy-local-field.png)
 
@@ -118,8 +120,8 @@ private void ShowToast()
 {
     string title = "featured picture of the day";
     string content = "beautiful scenery";
-    string image = "https://unsplash.it/360/180?image=104";
-    string logo = "https://unsplash.it/64?image=883";
+    string image = "https://picsum.photos/360/180?image=104";
+    string logo = "https://picsum.photos/64?image=883";
 
     string xmlString =
     $@"<toast><visual>
@@ -150,8 +152,8 @@ void UWP::ShowToast()
 {
     Platform::String ^title = "featured picture of the day";
     Platform::String ^content = "beautiful scenery";
-    Platform::String ^image = "https://unsplash.it/360/180?image=104";
-    Platform::String ^logo = "https://unsplash.it/64?image=883";
+    Platform::String ^image = "https://picsum.photos/360/180?image=104";
+    Platform::String ^logo = "https://picsum.photos/64?image=883";
 
     Platform::String ^xmlString =
         L"<toast><visual><binding template='ToastGeneric'>" +
@@ -169,7 +171,7 @@ void UWP::ShowToast()
     ToastNotificationManager::CreateToastNotifier()->Show(ref new ToastNotification(toastXml));
 }
 ```
-Para obtener más información acerca de notificaciones, consulta [Notificaciones del sistema interactivas y adaptables](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts).
+Para obtener más información acerca de notificaciones, consulta [Notificaciones del sistema interactivas y adaptables](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts).
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Compatibilidad con bases de instalación de Windows XP, Windows Vista y Windows 7/8
 
@@ -236,21 +238,17 @@ La manera más sencilla de agregar comprobaciones en tiempo de ejecución en el 
 
 * [Muestra de ¡Hello World!](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/HelloWorldSample)
 * [Icono secundario](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
-* [Muestra de la API de la Tienda](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/StoreSample)
+* [Muestra de la API de la Store](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/StoreSample)
 * [Aplicación de WinForms que implementa una UpdateTask de UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
 * [Ejemplos de puente de aplicación de escritorio a UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
 ## <a name="support-and-feedback"></a>Soporte técnico y comentarios
 
-**Encuentra respuestas a preguntas específicas**
+**Encuentra respuestas a tus preguntas**
 
-Nuestro equipo supervisa estas [etiquetas de StackOverflow](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Enviar comentarios o realizar sugerencias acerca de las características**
 
-Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)
-
-**Envíanos tus comentarios acerca de este artículo**
-
-Usa la sección comentarios que tienes a continuación.
+Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Plantillas de proyecto de juegos DirectX
-description: "Obtén información acerca de las plantillas para crear un juego de DirectX y la Plataforma universal de Windows (UWP)."
+description: Obtén información acerca de las plantillas para crear un juego de DirectX y la Plataforma universal de Windows (UWP).
 ms.assetid: 41b6cd76-5c9a-e2b7-ef6f-bfbf6ef7331d
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, UWP, games, directx, plantillas
-ms.openlocfilehash: 8b25dcd0de8d82e8bf8b6bf651ac6c264ade48c9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e0252607fcc456a1200231b401ca47132664e9c9
+ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/05/2018
+ms.locfileid: "1488809"
 ---
 # <a name="directx-game-project-templates"></a>Plantillas de proyectos de juegos DirectX
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Las plantillas de DirectX y UWP (Plataforma universal de Windows) te permiten crear rápidamente un proyecto como punto de partida para tu juego.
 
@@ -67,27 +70,14 @@ Las plantillas de DirectX de Windows universal contienen los siguientes archivos
 ## <a name="next-steps"></a>Pasos siguientes
 
 
-Ahora que ya tienes un punto de partida, puedes ir adquiriendo más conocimientos para desarrollar tu juego e ir mejorando tus capacidades de desarrollo de juegos de la TiendaWindows.
+Ahora que ya tienes un punto de partida, puedes ir adquiriendo más conocimientos para desarrollar tu juego e ir mejorando tus capacidades de desarrollo de juegos de Microsoft Store.
 
-Si estás migrando un juego existente, consulta los siguientes temas.
+Si estás haciendo la portabilidad a un juego existente, consulta los siguientes temas.
 
 -   [Migrar desde OpenGL ES 2.0 a Direct3D 11.1](port-from-opengl-es-2-0-to-directx-11-1.md)
 -   [Migrar de DirectX9 a la Plataforma universal de Windows](porting-your-directx-9-game-to-windows-store.md)
 
 Si estás creando un nuevo juego DirectX, consulta los siguientes temas.
 
--   [Crear un juego para UWP sencillo con DirectX](tutorial--create-your-first-metro-style-directx-game.md)
+-   [Crear un juego para UWP sencillo con DirectX](tutorial--create-your-first-uwp-directx-game.md)
 -   [Desarrollo de Marble Maze, un juego para la Plataforma universal de Windows en C++ y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
-
-> **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
- 
-
- 
-
-
-
-
