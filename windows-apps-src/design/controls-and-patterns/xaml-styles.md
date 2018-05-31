@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-description: "Los estilos te permiten establecer propiedades de control y reusar esa configuración para mantener un aspecto uniforme en varios controles."
+description: Los estilos te permiten establecer propiedades de control y reusar esa configuración para mantener un aspecto uniforme en varios controles.
 MS-HAID: dev\_ctrl\_layout\_txt.styling\_controls
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -10,11 +10,12 @@ label: XAML styles
 template: detail.hbs
 ms.author: jimwalk
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d56e7de0ab709584eaadc8176b9e9743450794e
-ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
+ms.openlocfilehash: 67f1086db85dbac732a92670d2b5844c313bc851
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1673862"
 ---
 # <a name="xaml-styles"></a>Estilos XAML
 
@@ -110,7 +111,7 @@ Para crear estilos que sean más fáciles de mantener y optimizar la reutilizaci
 
 ![botones con estilos que usan estilos heredados.](images/styles-buttons-based-on.png)
 
-El estilo base apunta a [ContentControl](https://msdn.microsoft.com/library/windows/apps/br209365) y establece las propiedades [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement#Windows_UI_Xaml_FrameworkElement_Height) y [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement#Windows_UI_Xaml_FrameworkElement_Width). Los estilos basados en este estilo apuntan a [CheckBox](https://msdn.microsoft.com/library/windows/apps/br209316) y [Button](https://msdn.microsoft.com/library/windows/apps/br209265), que derivan de **ContentControl**. Los estilos heredados establecen distintos colores para las propiedades [BorderBrush](https://msdn.microsoft.com/library/windows/apps/br209397) y [Foreground](https://msdn.microsoft.com/library/windows/apps/br209414). (Normalmente no se coloca un borde alrededor de una **Casilla**. Lo hacemos aquí para mostrar los efectos del estilo.)
+El estilo base apunta a [ContentControl](https://msdn.microsoft.com/library/windows/apps/br209365) y establece las propiedades [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) y [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width). Los estilos basados en este estilo apuntan a [CheckBox](https://msdn.microsoft.com/library/windows/apps/br209316) y [Button](https://msdn.microsoft.com/library/windows/apps/br209265), que derivan de **ContentControl**. Los estilos heredados establecen distintos colores para las propiedades [BorderBrush](https://msdn.microsoft.com/library/windows/apps/br209397) y [Foreground](https://msdn.microsoft.com/library/windows/apps/br209414). (Normalmente no se coloca un borde alrededor de una **Casilla**. Lo hacemos aquí para mostrar los efectos del estilo.)
 
 ```XAML
 <Page.Resources>

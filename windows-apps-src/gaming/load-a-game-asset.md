@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Cargar recursos en tu juego DirectX
-description: "La mayoría de los juegos, en algún momento, cargan recursos y activos (como sombreadores, texturas, mallas predefinidas y otros datos de gráficos) del almacenamiento local u otro flujo de datos."
+description: La mayoría de los juegos, en algún momento, cargan recursos y activos (como sombreadores, texturas, mallas predefinidas y otros datos de gráficos) del almacenamiento local u otro flujo de datos.
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,15 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, DirectX, cargar recursos, games, loading resources
-ms.openlocfilehash: 032cde6294093a2c0a1c582312b9353a146e94da
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 7cd2ca426f5a73a6cf8953ab599f8a7332be43a4
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1655617"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Cargar recursos en tu juego DirectX
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 La mayoría de los juegos, en algún momento, cargan recursos y activos (como sombreadores, texturas, mallas predefinidas y otros datos de gráficos) del almacenamiento local u otro flujo de datos. A continuación, te guiamos por un panorama de alto nivel de lo que debes considerar al cargar estos archivos para tu juego de Plataforma universal de Windows (UWP).
 
@@ -57,15 +59,15 @@ Puedes encontrar el código completo de estas muestras en los siguientes víncul
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Código completo para BasicLoader](complete-code-for-basicloader.md)</p></td>
+<td align="left"><p><a href="complete-code-for-basicloader.md">Código completo para BasicLoader</a></p></td>
 <td align="left"><p>Código completo de una clase y sus métodos para convertir y cargar objetos de mallas para gráficos en la memoria.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Código completo para BasicReaderWriter](complete-code-for-basicreaderwriter.md)</p></td>
-<td align="left"><p>Código completo de una clase y sus métodos para leer y escribir archivos de datos binarios en general. Usado por la clase [BasicLoader](complete-code-for-basicloader.md).</p></td>
+<td align="left"><p><a href="complete-code-for-basicreaderwriter.md">Código completo para BasicReaderWriter</a></p></td>
+<td align="left"><p>Código completo de una clase y sus métodos para leer y escribir archivos de datos binarios en general. Usado por la clase <a href="complete-code-for-basicloader.md">BasicLoader</a>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Código completo para DDSTextureLoader](complete-code-for-ddstextureloader.md)</p></td>
+<td align="left"><p><a href="complete-code-for-ddstextureloader.md">Código completo para DDSTextureLoader</a></p></td>
 <td align="left"><p>Código completo de una clase y método para cargar una textura DDS de la memoria.</p></td>
 </tr>
 </tbody>

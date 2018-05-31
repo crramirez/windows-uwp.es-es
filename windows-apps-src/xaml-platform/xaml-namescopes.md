@@ -1,7 +1,7 @@
 ---
 author: jwmsft
-description: "Un ámbito de nombres XAML almacena relaciones entre los nombres de objetos definidos en XAML y sus equivalentes de instancia. Este concepto es similar al significado más amplio del término ámbito de nombres en otros lenguajes y tecnologías de programación."
-title: "Ámbitos de nombres XAML"
+description: Un ámbito de nombres XAML almacena relaciones entre los nombres de objetos definidos en XAML y sus equivalentes de instancia. Este concepto es similar al significado más amplio del término ámbito de nombres en otros lenguajes y tecnologías de programación.
+title: Ámbitos de nombres XAML
 ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -9,13 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 973207d480327ced18b6136796ef92d5d5b81dd5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bd7a7de4c8986bb53acd4fe18c6255086e366ca8
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1673612"
 ---
 # <a name="xaml-namescopes"></a>Ámbitos de nombres XAML
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Un *ámbito de nombres XAML* almacena relaciones entre los nombres de objetos definidos en XAML y sus equivalentes de instancia. Este concepto es similar al significado más amplio del término *ámbito de nombres* en otros lenguajes y tecnologías de programación.
 
@@ -35,7 +38,7 @@ Técnicamente, lo que sucede es que el código XAML se somete a un pase del comp
 
 ## <a name="creating-objects-at-run-time-with-xamlreaderload"></a>Creación de objetos en tiempo de ejecución con XamlReader.Load
 
-XAML también se puede usar como la entrada de cadena del método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048), que actúa de manera similar a la operación de análisis de origen XAML inicial. **XamlReader.Load** crea un nuevo árbol desconectado de objetos en tiempo de ejecución. Después, el árbol desconectado puede conectarse a algún punto del árbol de objetos principal. Debes conectar explícitamente el árbol de objetos creado; para ello, agrégalo a una colección de propiedades de contenido como **Children**, o establece otra propiedad que acepte un valor de objeto (por ejemplo, si cargas un nuevo [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) para un valor de propiedad [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378)).
+XAML también se puede usar como la entrada de cadena del método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048), que actúa de manera similar a la operación de análisis de origen XAML inicial. **XamlReader.Load** crea un nuevo árbol desconectado de objetos en tiempo de ejecución. Después, el árbol desconectado puede conectarse a algún punto del árbol de objetos principal. Debes conectar explícitamente el árbol de objetos creado; para ello, agrégalo a una colección de propiedades de contenido como **Children**, o establece otra propiedad que acepte un valor de objeto (por ejemplo, si cargas un nuevo [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) para un valor de propiedad [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill)).
 
 ### <a name="xaml-namescope-implications-of-xamlreaderload"></a>Implicaciones del ámbito de nombres XAML de XamlReader.Load 
 

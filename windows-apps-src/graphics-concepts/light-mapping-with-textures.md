@@ -1,8 +1,9 @@
 ---
 title: Mapas de luz con texturas
-description: "Un mapa de luz es una textura o un grupo de texturas que contiene información sobre la iluminación de una escena 3D."
+description: Un mapa de luz es una textura o un grupo de texturas que contiene información sobre la iluminación de una escena 3D.
 ms.assetid: 5C7518D2-AC92-4A97-B7AF-4469D213D7BD
-keywords: Mapas de luz con texturas
+keywords:
+- Mapas de luz con texturas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 453cee43a0fca6f8e48e6af17a158dc5be6ba12a
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: d5d4a5e5a9fa656737ae86451a38a00edbe99c92
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652454"
 ---
 # <a name="light-mapping-with-textures"></a>Mapas de luz con texturas
 
@@ -49,19 +51,19 @@ La información sobre cómo usar la combinación de texturas de Direct3D para re
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Mapas de luz monocromática](monochrome-light-maps.md)</p></td>
+<td align="left"><p><a href="monochrome-light-maps.md">Mapas de luz monocromática</a></p></td>
 <td align="left"><p>Los mapas de luz monocromática permiten que los adaptadores antiguos realicen la combinación de texturas multipase, cuando una placa aceleradora 3D anterior no admite la combinación de texturas con el valor alfa del píxel de destino.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Mapas de luz de colores](color-light-maps.md)</p></td>
+<td align="left"><p><a href="color-light-maps.md">Mapas de luz de colores</a></p></td>
 <td align="left"><p>Un mapa de luz de color usa los datos RGB del mapa de luz para su información de iluminación. Una aplicación normalmente representa escenas 3D de forma más realista si usa mapas de luces de colores.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Mapas de luces especulares](specular-light-maps.md)</p></td>
+<td align="left"><p><a href="specular-light-maps.md">Mapas de luces especulares</a></p></td>
 <td align="left"><p>Cuando una fuente de luz los ilumina, los objetos brillantes que usan materiales muy reflectantes reciben resaltados especulares. A veces, puedes obtener resaltados más precisos si aplicas mapas de luces especulares a primitivos, en lugar de usar los resaltados especulares que produce el módulo de iluminación.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Mapas de luces difusas](diffuse-light-maps.md)</p></td>
+<td align="left"><p><a href="diffuse-light-maps.md">Mapas de luces difusas</a></p></td>
 <td align="left"><p>Las superficies mates tienen reflexión de la luz difusa. El brillo de la luz difusa depende de la distancia desde la fuente de luz y el ángulo entre la superficie normal y el vector de dirección de la fuente de luz. Los mapas de luces de textura pueden simular una iluminación difusa compleja.</p></td>
 </tr>
 </tbody>

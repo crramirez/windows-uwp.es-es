@@ -1,32 +1,34 @@
 ---
 author: mcleanbyron
 ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
-description: "Usa este método en la API de envío de la Tienda Windows para crear un nuevo envío para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows."
-title: "Crear un envío de aplicación"
+description: Usa este método en la API de envío de Microsoft Store para crear un nuevo envío para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows.
+title: Crear un envío de aplicación
 ms.author: mcleans
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, create app submission, crear envío de aplicación"
-ms.openlocfilehash: 6ed90a764701e40ed513b623a9ddb5aa6a2be466
-ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create app submission, crear envío de aplicación
+ms.localizationpriority: medium
+ms.openlocfilehash: 8cdcba307fdfb76afdf8d5df18150859d580e2ca
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1664395"
 ---
 # <a name="create-an-app-submission"></a>Crear un envío de aplicación
 
-Usa este método en la API de envío de la Tienda Windows para crear un nuevo envío para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows. Después de crear correctamente un nuevo envío mediante este método, [actualiza el envío](update-an-app-submission.md) para realizar los cambios necesarios a los datos de envío y luego [confirma el envío](commit-an-app-submission.md) para la recopilación y la publicación.
+Usa este método en la API de envío de Microsoft Store para crear un nuevo envío para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows. Después de crear correctamente un nuevo envío mediante este método, [actualiza el envío](update-an-app-submission.md) para realizar los cambios necesarios a los datos de envío y luego [confirma el envío](commit-an-app-submission.md) para la recopilación y la publicación.
 
-Para obtener más información sobre cómo se ajusta este método en el proceso de creación de un envío de aplicación mediante la API de envío de la Tienda Windows, consulta [Administración de envíos de aplicación](manage-app-submissions.md).
+Para obtener más información sobre cómo se ajusta este método en el proceso de creación de un envío de aplicación mediante la API de envío de Microsoft Store, consulta [Administración de envíos de aplicación](manage-app-submissions.md).
 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 * Asegúrate de que la aplicación ya tiene al menos un envío con la información de [clasificación por edades](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) completada.
 
@@ -38,8 +40,6 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` |
 
-<span/>
- 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -47,15 +47,13 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/>
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadena | Obligatorio. Id. de la Tienda de la aplicación para la cual deseas crear un envío. Para obtener más información sobre el Id. de la Tienda, consulta [Visualización de los detalles de identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadena | Obligatorio. Id. de la Store de la aplicación para la cual deseas crear un envío. Para obtener más información sobre el Id. de la Store, consulta [Visualización de los detalles de identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
-<span/>
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
@@ -192,16 +190,14 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 400  | No se pudo crear el envío porque la solicitud no es válida. |
-| 409  | No se pudo crear el envío debido al estado actual de la aplicación o a que esta aplicación usa una función del panel del Centro de desarrollo que [actualmente no admite la API de envío de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
-
-<span/>
+| 409  | No se pudo crear el envío debido al estado actual de la aplicación o a que esta aplicación usa una función del panel del Centro de desarrollo que [actualmente no admite la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-* [Obtención de un envío de aplicación](get-an-app-submission.md)
+* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Obtener un envío de aplicación](get-an-app-submission.md)
 * [Confirmación de un envío de aplicación](commit-an-app-submission.md)
-* [Actualización de un envío de aplicación](update-an-app-submission.md)
+* [Actualizar un envío de aplicación](update-an-app-submission.md)
 * [Eliminar un envío de aplicación](delete-an-app-submission.md)
 * [Get the status of an app submission (Obtener el estado de un envío de aplicación)](get-status-for-an-app-submission.md)

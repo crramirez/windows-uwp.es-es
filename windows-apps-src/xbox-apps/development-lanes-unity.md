@@ -9,9 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: fca3267a-0c0f-4872-8017-90384fb34215
-ms.openlocfilehash: ec26b5533e378cd10517ef8cf766171bc8ef717f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 4c8bebd6b15a58979975180536cf037b2c61e71b
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690421"
 ---
 # <a name="bringing-unity-games-to-uwp-on-xbox"></a>Llevar los juegos Unity a UWP en Xbox
 
@@ -30,7 +34,7 @@ Al instalar Unity, deben seleccionarse los siguientes componentes:
 
 ## <a name="step-1-building-the-uwp-solution"></a>Paso 1: Compilar la solución para UWP
 
-En el proyecto de juego de Unity, abre la ventana **Build Settings** (Configuración de compilación) que se encuentra en **File -> Build Settings** (Archivo -> Configuración de compilación) y ve al menú de opciones de la Tienda Windows.
+En el proyecto de juego de Unity, abre la ventana **Build Settings** (Configuración de compilación) que se encuentra en **File -> Build Settings** (Archivo -> Configuración de compilación) y ve al menú de opciones de Microsoft Store.
 
 ![Ventana de configuración de compilación](images/build-settings.png)
 

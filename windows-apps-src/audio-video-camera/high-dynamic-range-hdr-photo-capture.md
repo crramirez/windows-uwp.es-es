@@ -1,24 +1,27 @@
 ---
 author: drewbatgit
 ms.assetid: 0186EA01-8446-45BA-A109-C5EB4B80F368
-description: "En este artículo se muestra cómo usar la clase AdvancedPhotoCapture para capturar fotos con poca luz y alto rango dinámico (HDR)."
-title: "Captura de fotos con poca luz y alto rango dinámico (HDR)"
+description: En este artículo se muestra cómo usar la clase AdvancedPhotoCapture para capturar fotos con poca luz y alto rango dinámico (HDR).
+title: Captura de fotos con poca luz y alto rango dinámico (HDR)
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 32badfb6cc2a069370623357ba96800cebd11c03
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ffdba499d8e38bb9248071daeddd850f921e931e
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1692230"
 ---
 # <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>Captura de fotos con poca luz y alto rango dinámico (HDR)
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se muestra cómo usar la clase [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) para capturar fotos de alto rango dinámico (HDR). Esta API también te permite obtener un marco de referencia de la captura HDR antes de que finalice el procesamiento de la imagen final.
+En este artículo te muestra cómo usar la clase [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) para capturar fotos de alto rango dinámico (HDR). Esta API también te permite obtener un marco de referencia de la captura HDR antes de que finalice el procesamiento de la imagen final.
 
 Otros artículos relacionados con la captura HDR incluyen:
 
@@ -28,13 +31,14 @@ Otros artículos relacionados con la captura HDR incluyen:
 
 -   Puedes usar la clase [**VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564) para capturar una secuencia de fotos, cada una con configuraciones de captura diferentes, e implementar un tipo de HDR propio u otro algoritmo de procesamiento. Para obtener más información, consulta [Secuencia de fotos variable](variable-photo-sequence.md).
 
-A partir de Windows 10, versión 1607, se puede usar la clase **AdvancedPhotoCapture** para capturar fotos con un algoritmo integrado que mejora la calidad de las fotos que se capturan con configuración de poca luz.
+
 
 > [!NOTE] 
-> No se admite la grabación de vídeo y la captura de fotos simultánea con **AdvancedPhotoCapture**.
+> A partir de Windows 10, versión 1709, se admite la grabación de vídeo y el uso de **AdvancedPhotoCapture** de manera simultánea.  Esto no se admite en versiones anteriores. Este cambio significa que puedes tener un **[LowLagMediaRecording](https://docs.microsoft.com/uwp/api/windows.media.capture.lowlagmediarecording)** y **[AdvancedPhotoCapture](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture)** preparados al mismo tiempo. Puedes iniciar o detener la grabación de vídeo entre llamadas en **[MediaCapture.PrepareAdvancedPhotoCaptureAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.prepareadvancedphotocaptureasync)** y **[AdvancedPhotoCapture.FinishAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.FinishAsync)**. También puedes llamar a **[AdvancedPhotoCapture.CaptureAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.CaptureAsync)** mientras el vídeo se está grabando. Sin embargo, algunos escenarios de **AdvancedPhotoCapture**, como la captura de una foto HDR mientras se graba vídeo provocaría la alteración de algunos fotogramas de vídeo por la captura HDR, lo que provocaría una experiencia negativa del usuario. Por este motivo, la lista de modos devueltos por **[AdvancedPhotoControl.SupportedModes](https://docs.microsoft.com/uwp/api/windows.media.devices.advancedphotocontrol.SupportedModes)** será diferente mientras se está grabando vídeo. Debes comprobar este valor inmediatamente después de iniciar o detener la grabación de vídeo para asegurarte de que se admite el modo deseado en el estado de grabación de vídeo actual.
+
 
 > [!NOTE] 
-> Si la propiedad [**FlashControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.FlashControl.Enabled) se establece en true, se invalidará la configuración de **AdvancedPhotoCapture** y una foto normal se capturará con flash. Si [**Auto**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.FlashControl.Auto) se establece en true, **AdvancedPhotoCapture** se usará según la configuración y no se usará el flash.
+> A partir de Windows 10, versión 1709, cuando **AdvancedPhotoCapture** se establece en modo HDR, se ignora la configuración de la propiedad [**FlashControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.FlashControl.Enabled) y el flash nunca se activa. Para otros modos de captura, si la propiedad **FlashControl.Enabled** se establece en true, se invalidará la configuración de **AdvancedPhotoCapture** y una foto normal se capturará con flash. Si [**automática**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.FlashControl.Auto) se establece en true, **AdvancedPhotoCapture** podrá o no usar el flash, en función del comportamiento predeterminado del controlador de la cámara para las condiciones de la escena actual. En versiones anteriores, la configuración de flash **AdvancedPhotoCapture** siempre invalida la configuración de **FlashControl.Enabled**.
 
 > [!NOTE] 
 > Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. El código que encontrarás en este artículo se ha agregado suponiendo que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
@@ -51,7 +55,7 @@ Los ejemplos de código de este artículo usan las API de los espacios de nombre
 
 ### <a name="determine-if-hdr-photo-capture-is-supported-on-the-current-device"></a>Determinar si se admite la captura de fotos HDR en el dispositivo actual
 
-La técnica de captura HDR descrita en este artículo se realiza mediante el objeto [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386). No todos los dispositivos admiten la captura HDR con **AdvancedPhotoCapture**. Determina si el dispositivo en el que se está ejecutando la aplicación admite la técnica mediante la obtención del elemento [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) del objeto **MediaCapture** y luego la obtención de la propiedad [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840). Compruebe la colección [**SupportedModes**](https://msdn.microsoft.com/library/windows/apps/mt147844) del controlador del dispositivo de vídeo para ver si incluye [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845). Si es así, se admite la captura HDR con **AdvancedPhotoCapture**.
+La técnica de captura HDR descrita en este artículo se realiza mediante el objeto [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386). No todos los dispositivos admiten la captura HDR con **AdvancedPhotoCapture**. Determina si el dispositivo en el que se está ejecutando la aplicación admite la técnica mediante la obtención del elemento [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) del objeto **MediaCapture** y luego la obtención de la propiedad [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840). Comprueba la colección del controlador de dispositivo de vídeo [**SupportedModes**](https://msdn.microsoft.com/library/windows/apps/mt147844) para ver si incluye [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845). Si es así, se admite la captura HDR con **AdvancedPhotoCapture**.
 
 [!code-cs[HdrSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHdrSupported)]
 
@@ -61,7 +65,7 @@ Dado que necesitarás acceder a la instancia de [**AdvancedPhotoCapture**](https
 
 [!code-cs[DeclareAdvancedCapture](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareAdvancedCapture)]
 
-En la aplicación, después de inicializar el objeto **MediaCapture**, crea un objeto [**AdvancedPhotoCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/mt147837) y establece el modo en [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845). Llama al método [**Configure**](https://msdn.microsoft.com/library/windows/apps/mt147841) del objeto [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840) y pasa el objeto **AdvancedPhotoCaptureSettings** que creaste.
+En la aplicación, después de haber inicializado el objeto **MediaCapture**, crea un objeto [**AdvancedPhotoCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/mt147837) y establece el modo en [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845). Llama al método [**Configure**](https://msdn.microsoft.com/library/windows/apps/mt147841) del objeto [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840), pasando el objeto **AdvancedPhotoCaptureSettings** que creaste.
 
 Llama al método [**PrepareAdvancedPhotoCaptureAsync**](https://msdn.microsoft.com/library/windows/apps/mt181403) del objeto **MediaCapture** y pasa un objeto [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) que especifique el tipo de codificación que debe usar la captura. La clase **ImageEncodingProperties** proporciona métodos estáticos para crear las codificaciones de imagen que son compatibles con **MediaCapture**.
 
@@ -112,7 +116,7 @@ Cuando la aplicación haya terminado de capturar, antes de eliminar el objeto **
 
 
 ## <a name="low-light-photo-capture"></a>Captura de fotos con poca luz
-Cuando uses la característica de poca luz de la clase [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.AdvancedPhotoCapture), el sistema evaluará la escena actual y, si es necesario, aplicará un algoritmo para compensar las condiciones de poca luz. Si el sistema determina que el algoritmo no es necesario, se realiza una captura normal en su lugar.
+A partir de Windows 10, versión 1607, se puede usar la clase **AdvancedPhotoCapture** para capturar fotos con un algoritmo integrado que mejora la calidad de las fotos que se capturan con configuración de poca luz. Cuando uses la característica de poca luz de la clase [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.AdvancedPhotoCapture), el sistema evaluará la escena actual y, si es necesario, aplicará un algoritmo para compensar las condiciones de poca luz. Si el sistema determina que el algoritmo no es necesario, se realiza una captura normal en su lugar.
 
 Antes de usar una captura de fotos con poca luz, determina si el dispositivo en el que se está ejecutando la aplicación admite la técnica mediante la obtención del elemento [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) del objeto **MediaCapture** y, luego, la obtención de la propiedad [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840). Comprueba la colección [**SupportedModes**](https://msdn.microsoft.com/library/windows/apps/mt147844) del controlador del dispositivo de vídeo para ver si incluye [**AdvancedPhotoMode.LowLight**](https://msdn.microsoft.com/library/windows/apps/mt147845). Si es así, se admite la captura con poca luz mediante **AdvancedPhotoCapture**. 
 [!code-cs[LowLightSupported1](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetLowLightSupported1)]

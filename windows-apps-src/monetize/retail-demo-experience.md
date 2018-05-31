@@ -1,17 +1,21 @@
 ---
 author: joannaleecy
-title: "Crear una aplicación de experiencia de demostración comercial"
-description: "Crea una aplicación de experiencia de demostración comercial (RDX); es decir, una única aplicación que puede iniciarse en modo de demostración comercial y en modo normal."
+title: Crear una aplicación de experiencia de demostración comercial
+description: Crea una aplicación de experiencia de demostración comercial (RDX); es decir, una única aplicación que puede iniciarse en modo de demostración comercial y en modo normal.
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, aplicación de demostración comercial"
-ms.openlocfilehash: 2fa839c3a559ff0065c98712f73b9bb3ed81b276
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, aplicación de demostración comercial
+ms.localizationpriority: medium
+ms.openlocfilehash: 19a22e09484943d63988cef6bb6a7e7c09e016dd
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691021"
 ---
 #  <a name="create-a-retail-demo-experience-rdx-app"></a>Crear una aplicación de experiencia de demostración comercial (RDX)
 
@@ -23,7 +27,7 @@ Las aplicaciones que se instalan en estos equipos y teléfonos móviles de las t
 Una aplicación de experiencia de demostración comercial viene en una única compilación que puede iniciarse en uno de dos modos diferentes: _normal_ o _comercial_.
 Desde la perspectiva de nuestros clientes, hay una sola aplicación y para ayudarlos a distinguir entre las dos versiones, se recomienda que la aplicación que se ejecuta en el modo comercial muestre la palabra "Comercial" en un lugar destacado en la barra de título o en una ubicación adecuada.
 
-Además de los requisitos de la Tienda para las aplicaciones, las aplicaciones de RDX también deben ser totalmente compatibles con el sistema de configuración, limpieza y actualización de los dispositivos de demostración comercial para garantizar que los clientes tengan una experiencia positiva coherente en la tienda minorista.
+Además de los requisitos de la Store para las aplicaciones, las aplicaciones de RDX también deben ser totalmente compatibles con el sistema de configuración, limpieza y actualización de los dispositivos de demostración comercial para garantizar que los clientes tengan una experiencia positiva coherente en la tienda minorista.
 
 ## <a name="design-principles"></a>Principios de diseño
 
@@ -45,7 +49,7 @@ Permite que el usuario tenga tiempo para asimilar el contenido.  Si bien es impo
 
 ## <a name="technical-requirements"></a>Requisitos técnicos
 
-Dado que las aplicaciones de experiencia de demostración comercial están diseñadas para mostrar lo mejor de la aplicación a los clientes minoristas, es fundamental cumplir los siguientes requisitos técnicos y ajustarse a las normativas de privacidad que la Tienda tiene para todas las aplicaciones de experiencia de demostración comercial.
+Dado que las aplicaciones de experiencia de demostración comercial están diseñadas para mostrar lo mejor de la aplicación a los clientes minoristas, es fundamental cumplir los siguientes requisitos técnicos y ajustarse a las normativas de privacidad que la Store tiene para todas las aplicaciones de experiencia de demostración comercial.
 Esto también puede usarse como una lista de comprobación que te ayudará a prepararte para el proceso de validación y para proporcionar mayor claridad en el proceso de pruebas. Ten en cuenta que estos requisitos deben mantenerse no solo para el proceso de validación, sino para toda la duración de la aplicación de experiencia de demostración comercial, siempre que la aplicación se siga ejecutando en los dispositivos de demostración comercial.
 
 ### <a name="critical-level-requirements"></a>Requisitos de nivel crítico
@@ -103,9 +107,9 @@ Es posible que el equipo de la tienda comercial de Windows se ponga en contacto 
 
 ## <a name="preparing-codebase-for-retail-demo-mode-development"></a>Preparar el código base para el desarrollo del modo de demostración comercial
 
-La propiedad [**IsDemoModeEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.isdemomodeenabled.aspx) de la clase de utilidad [**RetailInfo**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.aspx), que forma parte del espacio de nombres [Windows.System.Profile](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.aspx) en el SDK de Windows 10, se usa como un indicador booleano para especificar en qué ruta de acceso de código se ejecuta la aplicación: el modo _normal_ o el modo _comercial_.
+La propiedad [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) de la clase de utilidad [**RetailInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo), que forma parte del espacio de nombres [Windows.System.Profile](https://docs.microsoft.com/uwp/api/windows.system.profile) en el SDK de Windows 10, se usa como un indicador booleano para especificar en qué ruta de acceso de código se ejecuta la aplicación: el modo _normal_ o el modo _comercial_.
 
-Cuando [**RetailInfo.IsDemoModeEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.isdemomodeenabled.aspx) devuelve "true", puedes consultar un conjunto de propiedades sobre el dispositivo mediante el uso de [**RetailInfo.Properties**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.properties.aspx) para crear una experiencia de demostración comercial más personalizada. Estas propiedades incluyen [**ManufacturerName**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.manufacturername.aspx), [**Screensize**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.screensize.aspx), [**Memory**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.memory.aspx), etcétera.
+Cuando [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) devuelve "true", puedes consultar un conjunto de propiedades sobre el dispositivo mediante el uso de [**RetailInfo.Properties**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.properties) para crear una experiencia de demostración comercial más personalizada. Estas propiedades incluyen [**ManufacturerName**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.manufacturername), [**Screensize**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.screensize), [**Memory**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.memory), etcétera.
 
 
 ## <a name="clean-up-process"></a>Proceso de limpieza
@@ -127,14 +131,14 @@ Después de 60 segundos de tiempo de inactividad, el vídeo de la aplicación de
 ### <a name="what-happens-during-a-default-clean-up-process"></a>¿Qué sucede durante un proceso de limpieza predeterminado?
 
 #### <a name="step-1-clean-up"></a>Paso 1: Limpiar
-* Se cierran todas las aplicaciones de Win32 y de la Tienda.
+* Se cierran todas las aplicaciones de Win32 y de la Store.
 * Se eliminan todos los archivos que se encuentran en carpetas conocidas como __Imágenes__, __Vídeos__, __Música__, __Documentos__, __Imágenes guardadas__, __Álbum de cámara__, __Escritorio__ y __Descargas__.
 * Se eliminan los estados de itinerancia estructurados y no estructurados.
 * Se eliminan los estados locales estructurados.
 
 #### <a name="step-2-set-up"></a>Paso 2: Configurar
 * Para dispositivos sin conexión: las carpetas permanecen vacías
-* Para dispositivos en línea: los activos de demostración comercial pueden insertarse en el dispositivo de la TiendaWindows
+* Para dispositivos en línea: los activos de demostración comercial pueden insertarse en el dispositivo de Microsoft Store
 
 ### <a name="how-to-store-data-across-user-sessions"></a>¿Cómo se almacenan los datos de las sesiones de usuario?
 

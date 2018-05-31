@@ -1,23 +1,25 @@
 ---
 author: mcleanbyron
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
-description: "Usa estos métodos en la API de envío de la Tienda Windows para recuperar los datos de las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows."
-title: "Obtener datos de la aplicación"
+description: Usa estos métodos en la API de envío de Microsoft Store para recuperar los datos de las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
+title: Obtener datos de la aplicación
 ms.author: mcleans
-ms.date: 08/03/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, app data, datos de la aplicación"
-ms.openlocfilehash: 0bb01250756c464113570ece433afe11506a5399
-ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app data, datos de la aplicación
+ms.localizationpriority: medium
+ms.openlocfilehash: 2c8029ca9481761ac4313b24607567f20b3a301c
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1663315"
 ---
 # <a name="get-app-data"></a>Obtener datos de la aplicación
 
-Usa los métodos siguientes de la API de envío de la Tienda Windows para obtener datos de aplicaciones existentes en tu cuenta del Centro de desarrollo. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
+Usa los métodos siguientes de la API de envío de Microsoft Store para obtener datos de aplicaciones existentes en tu cuenta del Centro de desarrollo. Para obtener una introducción a la API de envío de Microsoft Store, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
 Antes de poder usar estos métodos, la aplicación ya debe existir en tu cuenta del Centro de desarrollo. Para crear o administrar envíos de aplicaciones, consulta los métodos de [Administrar envíos de aplicaciones](manage-app-submissions.md).
 
@@ -37,23 +39,23 @@ Antes de poder usar estos métodos, la aplicación ya debe existir en tu cuenta 
 <tbody>
 <tr>
 <td align="left">GET</td>
-<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications```</td>
-<td align="left">[Obtener datos para todas las aplicaciones](get-all-apps.md)</td>
+<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications</td>
+<td align="left"><a href="get-all-apps.md">Obtener datos para todas las aplicaciones</a></td>
 </tr>
 <tr>
 <td align="left">GET</td>
-<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}```</td>
-<td align="left">[Obtener datos para una aplicación específica](get-an-app.md)</td>
+<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}</td>
+<td align="left"><a href="get-an-app.md">Obtener datos para una aplicación específica</a></td>
 </tr>
 <tr>
 <td align="left">GET</td>
-<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts```</td>
-<td align="left">[Obtener complementos para una aplicación](get-add-ons-for-an-app.md)</td>
+<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts</td>
+<td align="left"><a href="get-add-ons-for-an-app.md">Obtener complementos para una aplicación</a></td>
 </tr>
 <tr>
 <td align="left">GET</td>
-<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights```</td>
-<td align="left">[Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md)</td>
+<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights</td>
+<td align="left"><a href="get-flights-for-an-app.md">Obtener paquetes piloto para una aplicación</a></td>
 </tr>
 </tbody>
 </table>
@@ -62,13 +64,14 @@ Antes de poder usar estos métodos, la aplicación ya debe existir en tu cuenta 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de la Tienda Windows antes de intentar usar cualquiera de estos métodos.
+Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store antes de intentar usar cualquiera de estos métodos.
 
 ## <a name="data-resources"></a>Recursos de datos
 
-Los métodos de la API de envío de la Tienda Windows para obtener datos de aplicaciones usan los siguientes recursos de datos de JSON.
+Los métodos de la API de envío de Microsoft Store para obtener datos de aplicaciones usan los siguientes recursos de datos de JSON.
 
 <span id="application_object" />
+
 ### <a name="application-resource"></a>Recurso de aplicación
 
 Este recurso representa una aplicación registrada en tu cuenta.
@@ -89,7 +92,7 @@ Este recurso representa una aplicación registrada en tu cuenta.
     "id": "1152921504621243487",
     "resourceLocation": "applications/9NBLGGH4R315/submissions/1152921504621243487"
   },
-  "hasAdvancedListingPermission": false
+  "hasAdvancedListingPermission": true
 }
 ```
 
@@ -97,7 +100,7 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción       |
 |-----------------|---------|---------------------|
-| id            | cadena  | Id. de la Tienda de la aplicación. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
+| id            | cadena  | Id. de la Store de la aplicación. Para obtener más información sobre el Id. de la Store, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
 | primaryName   | cadena  | Nombre principal de la aplicación.      |
 | packageFamilyName | cadena  | El nombre de familia de paquete de la aplicación.      |
 | packageIdentityName          | cadena  | El nombre de identidad de paquete de la aplicación.                       |
@@ -105,10 +108,11 @@ Este recurso tiene los siguientes valores.
 | firstPublishedDate      | cadena  | La fecha en que se publicó la aplicación por primera vez, en formato ISO 8601.   |
 | lastPublishedApplicationSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para la aplicación.    |
 | pendingApplicationSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   
-| hasAdvancedListingPermission        | objeto  |  Indica si puedes configurar las [gamingOptions](manage-app-submissions.md#gaming-options-object) o los [tráileres](manage-app-submissions.md#trailer-object) para envíos para la aplicación. Para obtener más información, consulta [esta sección](manage-app-submissions.md#advanced-listings). |  |
+| hasAdvancedListingPermission        | booleano  |  Indica si puedes configurar las [gamingOptions](manage-app-submissions.md#gaming-options-object) o los [tráileres](manage-app-submissions.md#trailer-object) para envíos para la aplicación. Este valor es true para envíos creados después de mayo de 2017. |  |
 
 
 <span id="add-on-object" />
+
 ### <a name="add-on-resouce"></a>Recursos de complemento
 
 Este recurso proporciona información sobre un complemento.
@@ -123,10 +127,11 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción         |
 |-----------------|---------|----------------------|
-| inAppProductId            | cadena  | Id. de la Tienda del complemento. Este valor lo proporciona la Tienda. Un ejemplo de Id. de la Tienda sería 9NBLGGH4TNMP.   |
+| inAppProductId            | cadena  | Id. de la Store del complemento. Este valor lo proporciona la Store. Un ejemplo de Id. de la Store sería 9NBLGGH4TNMP.   |
 
 
 <span id="flight-object" />
+
 ### <a name="flight-resource"></a>Recursos de paquete piloto
 
 Este recurso proporciona información sobre un paquete piloto para una aplicación.
@@ -163,6 +168,7 @@ Este recurso tiene los siguientes valores.
 
 
 <span id="submission_object" />
+
 ### <a name="submission-resource"></a>Recurso de envío
 
 Este recurso proporciona información acerca de un envío. En el siguiente ejemplo se muestra el formato de este recurso.
@@ -187,8 +193,8 @@ Este recurso tiene los siguientes valores.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-* [Administrar envíos de aplicaciones con la API de envío de la Tienda Windows](manage-app-submissions.md)
+* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Administrar envíos de aplicaciones con la API de envío de Microsoft Store](manage-app-submissions.md)
 * [Obtener todas las aplicaciones](get-all-apps.md)
 * [Obtener una aplicación](get-an-app.md)
 * [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)

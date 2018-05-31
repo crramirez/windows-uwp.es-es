@@ -1,22 +1,26 @@
 ---
 author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
-description: "Usa este método en la API de colecciones de la Tienda Windows para obtener todos los productos que posee un cliente para las aplicaciones asociadas a tu identificador de cliente de Azure AD. Puedes definir el ámbito de la consulta para un producto concreto, o bien usar otros filtros."
+description: Usa este método en la API de colecciones de Microsoft Store para obtener todos los productos que posee un cliente para las aplicaciones asociadas a tu identificador de cliente de Azure AD. Puedes definir el ámbito de la consulta para un producto concreto, o bien usar otros filtros.
 title: Consultar productos
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, API de colecciones de la Tienda Windows, ver productos, Windows Store collection API, view products
-ms.openlocfilehash: 29db10862533e7b15c7a676fc3aecd4ba58f9514
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, API de colecciones de Microsoft Store, ver productos, Microsoft Store collection API, view products
+ms.localizationpriority: medium
+ms.openlocfilehash: 696d2c0ca4f8d0d92bef66efb9d551a2f19d2aa3
+ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/19/2018
+ms.locfileid: "1664971"
 ---
 # <a name="query-for-products"></a>Consultar productos
 
 
-Usa este método en la API de colecciones de la Tienda Windows para obtener todos los productos que posee un cliente para las aplicaciones asociadas a tu identificador de cliente de Azure AD. Puedes definir el ámbito de la consulta para un producto concreto, o bien usar otros filtros.
+Usa este método en la API de colecciones de Microsoft Store para obtener todos los productos que posee un cliente para las aplicaciones asociadas a tu identificador de cliente de Azure AD. Puedes definir el ámbito de la consulta para un producto concreto, o bien usar otros filtros.
 
 Este método está diseñado para que el servicio lo llame en respuesta a un mensaje de la aplicación. El servicio no debe sondear regularmente a todos los usuarios en una programación.
 
@@ -25,8 +29,8 @@ Este método está diseñado para que el servicio lo llame en respuesta a un men
 
 Para usar este método, necesitarás:
 
-* Un token de acceso de Azure AD creado con el URI de audiencia `https://onestore.microsoft.com`.
-* Una clave de identificador de la Tienda Windows que represente la identidad del usuario cuyos productos quieres obtener.
+* Un token de acceso de Azure AD que tiene el valor de URI de audiencia `https://onestore.microsoft.com`.
+* Una clave de identificador de Microsoft Store que represente la identidad del usuario cuyos productos quieres obtener.
 
 Para obtener más información, consulta [Administrar los derechos de producto de un servicio](view-and-grant-products-from-a-service.md).
 
@@ -38,8 +42,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 |--------|-------------------------------------------------------------|
 | POST   | ```https://collections.mp.microsoft.com/v6.0/collections/query``` |
 
-<span/>
- 
+
 ### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
@@ -49,7 +52,6 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 | Content-Length | number | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
-<span/>
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
@@ -60,30 +62,27 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 | maxPageSize       | number       | Número máximo de productos que puede devolver una respuesta. El valor predeterminado y máximo es de 100.                 | No       |
 | modifiedAfter     | datetime     | Si se especifica, el servicio devuelve solo los productos modificados después de esta fecha.        | No       |
 | parentProductId   | string       | Si se especifica, el servicio devuelve solo los complementos que corresponden a la aplicación especificada.      | No       |
-| productSkuIds     | lista&lt;ProductSkuId&gt; | Si se especifica, el servicio devuelve solo los productos aplicables a los pares de producto o SKU proporcionados. Para obtener más información, consulta la tabla siguiente.      | No       |
+| productSkuIds     | list&lt;ProductSkuId&gt; | Si se especifica, el servicio devuelve solo los productos aplicables a los pares de producto o SKU proporcionados. Para obtener más información, consulta la tabla siguiente.      | No       |
 | productTypes      | string       | Si se especifica, el servicio devuelve solo los productos que coinciden con los tipos de producto especificados. Los tipos de producto admitidos son **Application**, **Durable** y **UnmanagedConsumable**.     | No       |
 | validityType      | string       | Si se establece en **All**, se devolverán todos los productos de un usuario, incluidos los artículos expirados. Si se establece en **Valid**, solo se devolverán los productos que sean válidos en este momento (es decir, que tengan un estado activo, una fecha de inicio anterior a la actual &lt; y una fecha final posterior &gt; a la actual). | No       |
 
-<span/>
 
 El objeto UserIdentity contiene los parámetros siguientes.
 
 | Parámetro            | Tipo   |  Descripción      | Obligatorio |
 |----------------------|--------|----------------|----------|
 | identityType         | cadena | Especifica el valor de cadena **b2b**.    | Sí      |
-| identityValue        | string | La [clave de identificador de la Tienda Windows](view-and-grant-products-from-a-service.md#step-4) que representa la identidad del usuario cuyos productos quieres consultar.  | Sí      |
-| localTicketReference | cadena | El identificador solicitado para los productos devueltos. Los artículos devueltos en el cuerpo de la respuesta tendrán un parámetro *localTicketReference* coincidente. Se recomienda usar el mismo valor que la notificación *userId* de la clave de id. de la Tienda Windows. | Sí      |
+| identityValue        | string | La [clave de identificador de Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa la identidad del usuario cuyos productos quieres consultar.  | Sí      |
+| localTicketReference | cadena | El identificador solicitado para los productos devueltos. Los artículos devueltos en el cuerpo de la respuesta tendrán un parámetro *localTicketReference* coincidente. Se recomienda usar el mismo valor que la notificación *userId* de la clave de id. de Microsoft Store. | Sí      |
 
-<span/> 
 
 El objeto ProductSkuId contiene los parámetros siguientes.
 
 | Parámetro | Tipo   | Descripción          | Obligatorio |
 |-----------|--------|----------------------|----------|
-| productId | string | El [identificador de la Tienda](in-app-purchases-and-trials.md#store-ids) para un [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) del catálogo de la Tienda Windows. Un ejemplo de identificador de la Tienda para un producto es 9NBLGGH42CFD. | Sí      |
-| skuID     | string | El [identificador de la Tienda](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) de un producto del catálogo de la Tienda Windows. Un ejemplo de identificador de la Tienda para un SKU es 0010.       | Sí      |
+| productId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para un [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) del catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un producto es 9NBLGGH42CFD. | Sí      |
+| skuID     | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) de un producto del catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un SKU es 0010.       | Sí      |
 
-<span/>
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
@@ -127,7 +126,6 @@ Content-Type: application/json
 | continuationToken | string                   | Si hay varios conjuntos de productos, este token se devuelve cuando se alcanza el límite de la página. Puedes especificar este token de continuación en llamadas posteriores para recuperar los productos restantes. | No       |
 | elementos             | CollectionItemContractV6 | Matriz de productos para el usuario especificado. Para obtener más información, consulta la tabla siguiente.        | No       |
 
-<span/> 
 
 El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 
@@ -145,28 +143,26 @@ El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 | orderId              | string             | Si está presente, el identificador del objeto del que se obtuvo este artículo.              | No       |
 | orderLineItemId      | string             | Si está presente, el artículo de línea de un pedido concreto para el que se obtuvo el artículo.              | No       |
 | ownershipType        | string             | La cadena *OwnedByBeneficiary*.   | Sí      |
-| productId            | string             | El [identificador de la Tienda](in-app-purchases-and-trials.md#store-ids) para el [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) del catálogo de la Tienda Windows. Un ejemplo de identificador de la Tienda para un producto es 9NBLGGH42CFD.          | Sí      |
+| productId            | string             | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para el [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) del catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un producto es 9NBLGGH42CFD.          | Sí      |
 | productType          | string             | Uno de los siguientes tipos de producto: **Application**, **Durable** y **UnmanagedConsumable**.        | Sí      |
 | purchasedCountry     | string             | N/D   | No       |
 | purchaser            | IdentityContractV6 | Si está presente, representa la identidad del comprador del artículo. Consulta los detalles de este objeto a continuación.        | No       |
 | quantity             | number             | Cantidad del artículo. Actualmente, el valor siempre será 1.      | No       |
-| skuId                | string             | El [identificador de la Tienda](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) del producto del catálogo de la Tienda Windows. Un ejemplo de identificador de la Tienda para un SKU es 0010.     | Sí      |
+| skuId                | string             | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) del producto del catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un SKU es 0010.     | Sí      |
 | skuType              | string             | Tipo de la SKU. Entre los valores posibles se incluyen **Trial**, **Full** y **Rental**.        | Sí      |
 | startDate            | datetime           | Fecha en que el artículo comienza a ser válido.       | Sí      |
 | status               | string             | Estado del artículo. Entre los valores posibles se incluyen **Active**, **Expired**, **Revoked** y **Banned**.    | Sí      |
 | tags                 | string             | N/D    | Sí      |
 | transactionId        | guid               | El identificador de transacción como resultado de la compra de este artículo. Se puede usar para notificar la cumplimentación de un artículo.      | Sí      |
 
-<span/> 
 
 El objeto IdentityContractV6 contiene los parámetros siguientes.
 
 | Parámetro     | Tipo   | Descripción                                                                        | Obligatorio |
 |---------------|--------|------------------------------------------------------------------------------------|----------|
 | identityType  | string | Contiene el valor *pub*.                                                      | Sí      |
-| identityValue | string | El valor de cadena del elemento *publisherUserId* de la clave de id. de la Tienda Windows especificada. | Sí      |
+| identityValue | string | El valor de cadena del elemento *publisherUserId* de la clave de Id. de Microsoft Store especificada. | Sí      |
 
-<span/> 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
@@ -215,4 +211,4 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 * [Administrar los derechos de producto de un servicio](view-and-grant-products-from-a-service.md)
 * [Notificar productos consumibles como completados](report-consumable-products-as-fulfilled.md)
 * [Conceder productos gratuitos](grant-free-products.md)
-* [Renovar una clave de id. de la Tienda Windows](renew-a-windows-store-id-key.md)
+* [Renovar una clave de id. de Microsoft Store](renew-a-windows-store-id-key.md)

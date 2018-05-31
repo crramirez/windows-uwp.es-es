@@ -1,23 +1,25 @@
 ---
-title: "Introducción al desarrollo seguro de aplicaciones de Windows"
-description: "Este artículo de introducción ayuda a los arquitectos y desarrolladores de aplicaciones a comprender las distintas funcionalidades de la plataforma de Windows 10 que aceleran la creación de aplicaciones seguras para la Plataforma universal de Windows (UWP)."
+title: Introducción al desarrollo seguro de aplicaciones de Windows
+description: Este artículo de introducción ayuda a los arquitectos y desarrolladores de aplicaciones a comprender las distintas funcionalidades de la plataforma de Windows 10 que aceleran la creación de aplicaciones seguras para la Plataforma universal de Windows (UWP).
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 1faf53dc2f1d919af072cd52593292fc552317e9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 75731d074be5f4f7fced3444b2d1508c733304c7
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691284"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Introducción al desarrollo seguro de aplicaciones de Windows
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artículo de introducción ayuda a los arquitectos y desarrolladores de aplicaciones a comprender las distintas funcionalidades de la plataforma de Windows 10 que aceleran la creación de aplicaciones seguras para la Plataforma universal de Windows (UWP). En él, se ofrecen detalles sobre cómo usar las funciones de seguridad de Windows disponibles en cada una de las siguientes fases: autenticación, datos en desarrollo y datos en reposo. Encontrarás información más detallada sobre cada tema revisando los recursos adicionales que se incluyen en cada capítulo.
@@ -101,8 +103,8 @@ Si la comunicación es correcta, procesa la cadena de respuesta que ha devuelto 
 Código C# de muestra que, para este proceso, se incluye a continuación. Para obtener información y un tutorial detallado, consulta [WebAuthenticationBroker](web-authentication-broker.md). Para obtener una muestra de código completa, echa un vistazo a la [muestra de WebAuthenticationBroker en GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
 
 ```cs
-string startURL = "https://<providerendpoint>?client_id=<clientid>;
-string endURL = "http://<appendpoint>";
+string startURL = "https://<providerendpoint>?client_id=<clientid>";
+string endURL = "http://<AppEndPoint>";
 
 var startURI = new System.Uri(startURL);
 var endURI = new System.Uri(endURL);

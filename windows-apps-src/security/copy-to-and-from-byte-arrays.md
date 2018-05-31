@@ -1,23 +1,25 @@
 ---
 title: Copiar a la matriz de bytes o desde ella
-description: "Este código de ejemplo muestra cómo copiar a matrices de bytes y desde ellas en una aplicación para la Plataforma universal de Windows (UWP)."
+description: Este código de ejemplo muestra cómo copiar a matrices de bytes y desde ellas en una aplicación para la Plataforma universal de Windows (UWP).
 ms.assetid: C343B08C-1FA1-40FD-8CA5-7FC9B707C5E3
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 6eee2c509956dcc38907334000a35fd9c9344a52
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 066ce6f058bae42144be0ba9523db72716544543
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1689011"
 ---
 # <a name="copy-to-and-from-byte-arrays"></a>Copiar a la matriz de bytes o desde ella
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este código de ejemplo muestra cómo copiar a matrices de bytes y desde ellas en una aplicación para la Plataforma universal de Windows (UWP).
 

@@ -1,8 +1,8 @@
 ---
 author: PatrickFarley
 ms.assetid: 67a46812-881c-404b-9f3b-c6786f39e72b
-title: "Personalizar el flujo de trabajo de impresión"
-description: "Crea experiencias personalizadas del flujo de trabajo de impresión para satisfacer las necesidades de tu organización."
+title: Personalizar el flujo de trabajo de impresión
+description: Crea experiencias personalizadas del flujo de trabajo de impresión para satisfacer las necesidades de tu organización.
 ms.author: pafarley
 ms.date: 08/10/2017
 ms.topic: article
@@ -10,11 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ea40c918ea0326a3ab1b0de92b47ccf9337c93cc
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 470984ce9f9a3304350a3479a01bc31a403bd8af
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1674982"
 ---
 # <a name="customize-the-print-workflow"></a>Personalizar el flujo de trabajo de impresión
 
@@ -41,7 +42,7 @@ Si una aplicación de flujo de trabajo está asociada con la aplicación de orig
 
 ## <a name="do-background-work-on-the-print-ticket"></a>Realización de trabajo en segundo plano en el vale de impresión
 
-Lo primero que hace el sistema de impresión con la aplicación de flujo de trabajo es activar su tarea en segundo plano (en este caso, la clase `WfBackgroundTask` en el espacio de nombres `WFBackgroundTasks`). En el método `Run` de la tarea en segundo plano, debes transmitir los detalles del desencadenador de la tarea como una instancia de **[PrintWorkflowTriggerDetails](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowtriggerdetails)**. Esto proporcionará la funcionalidad especial para una tarea en segundo plano del flujo de trabajo de impresión. Expone la propiedad **[PrintWorkflowSession](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowtriggerdetails#Windows_Graphics_Printing_Workflow_PrintWorkflowTriggerDetails_PrintWorkflowSession)**, es una instancia de **[PrintWorkFlowBackgroundSession](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsession)**. Las clases de la sesión de flujo de trabajo de impresión (las variedades en primer plano y en segundo plano) controlarán los pasos de la secuencia de la aplicación de flujo de trabajo de impresión. 
+Lo primero que hace el sistema de impresión con la aplicación de flujo de trabajo es activar su tarea en segundo plano (en este caso, la clase `WfBackgroundTask` en el espacio de nombres `WFBackgroundTasks`). En el método `Run` de la tarea en segundo plano, debes transmitir los detalles del desencadenador de la tarea como una instancia de **[PrintWorkflowTriggerDetails](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowtriggerdetails)**. Esto proporcionará la funcionalidad especial para una tarea en segundo plano del flujo de trabajo de impresión. Expone la propiedad **[PrintWorkflowSession](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowtriggerdetails.PrintWorkflowSession)**, es una instancia de **[PrintWorkFlowBackgroundSession](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsession)**. Las clases de la sesión de flujo de trabajo de impresión (las variedades en primer plano y en segundo plano) controlarán los pasos de la secuencia de la aplicación de flujo de trabajo de impresión. 
 
 A continuación registra los métodos de controlador para los dos eventos que generará esta clase de sesión. Estos métodos se definen más adelante.
 
@@ -69,7 +70,7 @@ public void Run(IBackgroundTaskInstance taskInstance) {
 }
 ```
 
-Cuando se llama al método `Start`, el administrador de sesiones generará primero el evento **[SetupRequested](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsession#Windows_Graphics_Printing_Workflow_PrintWorkflowBackgroundSession_SetupRequested)**. Este evento expone información general sobre la tarea de impresión, así como el vale de impresión. En esta fase, el vale de impresión se puede editar en segundo plano. 
+Cuando se llama al método `Start`, el administrador de sesiones generará primero el evento **[SetupRequested](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsession.SetupRequested)**. Este evento expone información general sobre la tarea de impresión, así como el vale de impresión. En esta fase, el vale de impresión se puede editar en segundo plano. 
 
 ```csharp
 private void OnSetupRequested(PrintWorkflowBackgroundSession sessionManager, PrintWorkflowBackgroundSetupRequestedEventArgs printTaskSetupArgs) {
@@ -107,7 +108,7 @@ Es importante tener en cuenta que es en el control de **SetupRequested** donde l
 
 ## <a name="do-foreground-work-on-the-print-job-optional"></a>Realización de trabajo en primer plano en el trabajo de impresión (opcional)
 
-Si SetRequiresUI se ha llamado al método **[](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsetuprequestedeventargs#Windows_Graphics_Printing_Workflow_PrintWorkflowBackgroundSetupRequestedEventArgs_SetRequiresUI)**, el sistema de impresión examinará el archivo de manifiesto en busca del punto de entrada para la aplicación en primer plano. El elemento `Application/Extensions` de tu archivo *package.appxmanifest* debe tener las siguientes líneas. Sustituya el valor de `EntryPoint` por el nombre de la aplicación en primer plano.
+Si SetRequiresUI se ha llamado al método **[](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsetuprequestedeventargs.SetRequiresUI)**, el sistema de impresión examinará el archivo de manifiesto en busca del punto de entrada para la aplicación en primer plano. El elemento `Application/Extensions` de tu archivo *package.appxmanifest* debe tener las siguientes líneas. Sustituya el valor de `EntryPoint` por el nombre de la aplicación en primer plano.
 
 ```xml
 <uap:Extension Category="windows.printWorkflowForegroundTask"  
@@ -154,7 +155,7 @@ protected override void OnActivated(IActivatedEventArgs args){
 }
 ```
 
-Una vez que la interfaz de usuario ha adjuntado controladores de eventos y el método **OnActivated** ha salido, el sistema de impresión activará el evento **[SetupRequested](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowforegroundsession#Windows_Graphics_Printing_Workflow_PrintWorkflowForegroundSession_SetupRequested)** para que la interfaz de usuario lo controle. Este evento proporciona los mismos datos que ha proporcionado el evento de configuración de la tarea en segundo plano, lo que incluye la información del trabajo de impresión y el documento del vale de impresión, pero sin la capacidad de solicitar el inicio de una interfaz de usuario adicional. En el archivo _WorkflowPage.xaml.cs_:
+Una vez que la interfaz de usuario ha adjuntado controladores de eventos y el método **OnActivated** ha salido, el sistema de impresión activará el evento **[SetupRequested](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowforegroundsession.SetupRequested)** para que la interfaz de usuario lo controle. Este evento proporciona los mismos datos que ha proporcionado el evento de configuración de la tarea en segundo plano, lo que incluye la información del trabajo de impresión y el documento del vale de impresión, pero sin la capacidad de solicitar el inicio de una interfaz de usuario adicional. En el archivo _WorkflowPage.xaml.cs_:
 
 ```csharp
 internal void OnSetupRequested(PrintWorkflowForegroundSession sessionManager, PrintWorkflowForegroundSetupRequestedEventArgs printTaskSetupArgs) {
@@ -188,7 +189,7 @@ internal void OnSetupRequested(PrintWorkflowForegroundSession sessionManager, Pr
 }
 ```
 
-A continuación, el sistema de impresión generará el evento **[XpsDataAvailable](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowforegroundsession#Windows_Graphics_Printing_Workflow_PrintWorkflowForegroundSession_XpsDataAvailable)** para la interfaz de usuario. En el controlador de este evento, la aplicación de flujo de trabajo puede tener acceso a todos los datos disponibles para el evento de configuración y además puede leer los datos XPS directamente, como una secuencia de bytes sin procesar o como un modelo de objetos. El acceso a los datos XPS permite a la interfaz de usuario proporcionar servicios de vista previa de impresión y suministrar información adicional al usuario acerca de las operaciones que la aplicación de flujo de trabajo ejecutará en los datos. 
+A continuación, el sistema de impresión generará el evento **[XpsDataAvailable](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowforegroundsession.XpsDataAvailable)** para la interfaz de usuario. En el controlador de este evento, la aplicación de flujo de trabajo puede tener acceso a todos los datos disponibles para el evento de configuración y además puede leer los datos XPS directamente, como una secuencia de bytes sin procesar o como un modelo de objetos. El acceso a los datos XPS permite a la interfaz de usuario proporcionar servicios de vista previa de impresión y suministrar información adicional al usuario acerca de las operaciones que la aplicación de flujo de trabajo ejecutará en los datos. 
 
 Como parte de este controlador de eventos, la aplicación de flujo de trabajo debe adquirir un objeto de aplazamiento si va a seguir interactuando con el usuario. Sin un aplazamiento, el sistema de impresión considerará que la tarea de la interfaz de usuario se ha completado cuando el controlador de eventos **XpsDataAvailable** salga o cuando llame a un método asincrónico. Cuando la aplicación ha recopilado toda la información necesaria de la interacción del usuario con la interfaz de usuario, debe completar el aplazamiento para que el sistema de impresión pueda avanzar.
 
@@ -227,7 +228,7 @@ Además, la instancia de **[PrintWorkflowSubmittedOperation](https://docs.micros
 
 ## <a name="do-final-background-work-on-the-print-content"></a>Realización del trabajo en segundo plano final en el contenido de impresión
 
-Cuando la interfaz de usuario haya finalizado el aplazamiento en el evento **PrintTaskXpsDataAvailable** (o si se ha omitido el paso de la interfaz de usuario), el sistema de impresión activará el evento **[Submitted](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsession#Windows_Graphics_Printing_Workflow_PrintWorkflowBackgroundSession_Submitted)** para la tarea en segundo plano. En el controlador de este evento, la aplicación de flujo de trabajo puede tener acceso a los mismos datos proporcionados por el evento **XpsDataAvailable**. Sin embargo, a diferencia de los eventos anteriores, el evento **Submitted** también proporciona acceso de *escritura* al contenido final del trabajo de impresión a través de una instancia de **[PrintWorkflowTarget](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowtarget)**. 
+Cuando la interfaz de usuario haya finalizado el aplazamiento en el evento **PrintTaskXpsDataAvailable** (o si se ha omitido el paso de la interfaz de usuario), el sistema de impresión activará el evento **[Submitted](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowbackgroundsession.Submitted)** para la tarea en segundo plano. En el controlador de este evento, la aplicación de flujo de trabajo puede tener acceso a los mismos datos proporcionados por el evento **XpsDataAvailable**. Sin embargo, a diferencia de los eventos anteriores, el evento **Submitted** también proporciona acceso de *escritura* al contenido final del trabajo de impresión a través de una instancia de **[PrintWorkflowTarget](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowtarget)**. 
 
 El objeto usado para poner en cola los datos para la impresión final depende de si se accede a los datos de origen como una secuencia de bytes sin procesar o como el modelo de objetos XPS. Cuando la aplicación de flujo de trabajo tiene acceso a los datos de origen mediante una secuencia de bytes, se proporciona una secuencia de bytes de salida en la que escribir los datos del trabajo final. Cuando la aplicación de flujo de trabajo tiene acceso a los datos de origen mediante el modelo de objetos, se proporciona un escritor de documentos para escribir objetos en el trabajo de salida. En cualquier caso, la aplicación de flujo de trabajo debe leer todos los datos de origen, modificar los datos necesarios y escribir los datos modificados en el destino de la salida.
 

@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Asignar OpenGL ES2.0 a Direct3D11
-description: "Cuando comiences el proceso de migrar tu arquitectura de gráficos desde OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las diferencias clave entre las API."
+description: Cuando comiences el proceso de migrar tu arquitectura de gráficos desde OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las diferencias clave entre las API.
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,15 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, OpenGL, Direct3D, portar, games, porting
-ms.openlocfilehash: 1298f165444b31c75ca9d98f04eb82a58be46e5b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a00a24d2c270e1c4f3aa3b8b716a6637d5da4af1
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652214"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Asignar OpenGL ES2.0 a Direct3D11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Cuando comiences el proceso de migrar tu arquitectura de gráficos desde OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las diferencias clave entre las API. Los temas de esta sección te ayudarán a planear tu estrategia de migración y los cambios de API que debes realizar cuando traslades el procesamiento de gráficos a Direct3D.
 ## 
@@ -34,20 +36,20 @@ Cuando comiences el proceso de migrar tu arquitectura de gráficos desde OpenGL 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Planear la migración de OpenGL ES 2.0 a Direct3D](compare-opengl-es-2-0-api-design-to-directx.md)</p></td>
+<td align="left"><p><a href="compare-opengl-es-2-0-api-design-to-directx.md">Planear la migración de OpenGL ES 2.0 a Direct3D</a></p></td>
 <td align="left"><p>Si vas a migrar un juego de plataformas iOs o Android, probablemente has hecho una gran inversión en OpenGL ES 2.0. Cuando te preparas para trasladar el código base de la canalización de gráficos a Direct3D 11 y Windows Runtime, debes considerar algunas cosas antes de empezar.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Comparar código EGL con DXGI y Direct3D](moving-from-egl-to-dxgi.md)</p></td>
+<td align="left"><p><a href="moving-from-egl-to-dxgi.md">Comparar código EGL con DXGI y Direct3D</a></p></td>
 <td align="left"><p>DirectX Graphics Interface (DXGI) y varias API de Direct3D cumplen el mismo rol que EGL. Este tema ayuda a comprender DXGI y Direct3D 11 desde la perspectiva de EGL.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D](porting-uniforms-and-attributes.md)</p></td>
+<td align="left"><p><a href="porting-uniforms-and-attributes.md">Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D</a></p></td>
 <td align="left"><p>Durante el proceso de migración de OpenGL ES 2.0 a Direct3D 11, debes cambiar la sintaxis y el comportamiento de API para pasar datos entre la aplicación y los programas sombreadores.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D](change-your-shader-loading-code.md)</p></td>
-<td align="left"><p>En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0. Sin embargo, en términos de diseño de API, los principales componentes para crear y administrar las fases de sombreador son partes de dos interfaces importantes: [<strong>ID3D11Device1</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404575) y [<strong>ID3D11DeviceContext1</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404598). En este tema intentamos asignar patrones comunes de API para la canalización de sombreador de OpenGL ES 2.0 a sus equivalentes en Direct3D 11 en estas interfaces.</p></td>
+<td align="left"><p><a href="change-your-shader-loading-code.md">Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D</a></p></td>
+<td align="left"><p>En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0. En términos de diseño de API, sin embargo, los principales componentes para crear y administrar las fases de sombreador forman parte de dos interfaces importantes: <a href="https://msdn.microsoft.com/library/windows/desktop/hh404575"><strong>ID3D11Device1</strong></a> y <a href="https://msdn.microsoft.com/library/windows/desktop/hh404598"><strong>ID3D11DeviceContext1</strong></a>. En este tema intentamos asignar patrones comunes de API para la canalización de sombreador de OpenGL ES 2.0 a sus equivalentes en Direct3D 11 en estas interfaces.</p></td>
 </tr>
 </tbody>
 </table>

@@ -1,8 +1,9 @@
 ---
-title: "Búferes de vértices e índices"
-description: "Los búferes de vértices son búferes de memoria que contienen datos de vértice. Los vértices de un búfer se procesan para transformar, iluminar y recortar."
+title: Búferes de vértices e índices
+description: Los búferes de vértices son búferes de memoria que contienen datos de vértice. Los vértices de un búfer se procesan para transformar, iluminar y recortar.
 ms.assetid: 8A39CD23-85FB-4424-9AC3-37919704CD68
-keywords: "Búferes de vértices e índices"
+keywords:
+- Búferes de vértices e índices
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f7153696f135d8fa559933d4e7a7c6e925850565
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 120e15762a0c9c8fb0313ec756dc64e469c9b37b
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652914"
 ---
 # <a name="vertex-and-index-buffers"></a>Búferes de vértices e índices
 
@@ -41,11 +43,11 @@ La flexibilidad de los búferes de vértices los convierte en puntos de parada i
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Introducción a los búferes](introduction-to-buffers.md)</p></td>
+<td align="left"><p><a href="introduction-to-buffers.md">Introducción a los búferes</a></p></td>
 <td align="left"><p>Un recurso de búfer es una colección de datos completos, agrupados en elementos. Los búferes almacenan datos, como coordenadas de textura en un <em>búfer de vértices</em>, índices en una <em>búfer de índices</em>, datos de constantes del sombreador en un <em>búfer de constantes</em>, vectores de posición, vectores normales o el estado del dispositivo.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Búferes de índices](index-buffers.md)</p></td>
+<td align="left"><p><a href="index-buffers.md">Búferes de índices</a></p></td>
 <td align="left"><p>Los <em>búferes de índices</em> son búferes de memoria que contienen datos de índice, que son desplazamientos de enteros en búferes de vértices y se usan para representar primitivos.</p></td>
 </tr>
 </tbody>

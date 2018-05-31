@@ -1,8 +1,9 @@
 ---
 title: Dispositivos
-description: "Un dispositivo de Direct3D es el componente de representación de Direct3D. Un dispositivo encapsula y almacena el estado de representación, transforma, ilumina y rasteriza una imagen en una superficie."
+description: Un dispositivo de Direct3D es el componente de representación de Direct3D. Un dispositivo encapsula y almacena el estado de representación, transforma, ilumina y rasteriza una imagen en una superficie.
 ms.assetid: BC903462-A32A-46BA-8411-FB294F5D2CD9
-keywords: Dispositivos
+keywords:
+- Dispositivos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b45f7289660ae59745660d8f8cfa42ce41f969c
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 2676c59251a4aadb0f97a1180238ec076bf45229
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652894"
 ---
 # <a name="devices"></a>Dispositivos
 
@@ -56,23 +58,23 @@ Dado que el comportamiento de los dispositivos de referencia y de software propo
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Tipos de dispositivos](device-types.md)</p></td>
+<td align="left"><p><a href="device-types.md">Tipos de dispositivos</a></p></td>
 <td align="left"><p>Los tipos de dispositivos de Direct3D incluyen dispositivos de la capa de abstracción de hardware (HAL) y el rasterizador de referencia.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Modo de ventana frente a modo de pantalla completa](windowed-vs--full-screen-mode.md)</p></td>
+<td align="left"><p><a href="windowed-vs--full-screen-mode.md">Modo de ventana frente a modo de pantalla completa</a></p></td>
 <td align="left"><p>Las aplicaciones de Direct3D pueden ejecutarse en cualquiera de los dos modos de pantalla: completa o de ventana. En el <em>modo de ventana</em>, la aplicación comparte el espacio de pantalla del escritorio disponible con todas las aplicaciones en ejecución. En el <em>modo de pantalla completa</em>, la ventana en la que la aplicación se ejecuta abarca todo el escritorio, ocultando todas las aplicaciones en ejecución (incluido el entorno de desarrollo).</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Dispositivos perdidos](lost-devices.md)</p></td>
+<td align="left"><p><a href="lost-devices.md">Dispositivos perdidos</a></p></td>
 <td align="left"><p>Un dispositivo de Direct3D puede estar en un estado operativo o perdido. El estado <em>operativo</em> es el estado normal del dispositivo, en el que el dispositivo ejecuta y presenta toda la representación según lo esperado. El dispositivo realiza una transición al estado <em>perdido</em> cuando un evento, como la pérdida de foco del teclado en una aplicación de pantalla completa, hace que la representación sea imposible.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Cadenas de intercambio](swap-chains.md)</p></td>
+<td align="left"><p><a href="swap-chains.md">Cadenas de intercambio</a></p></td>
 <td align="left"><p>Una cadena de intercambio es una colección de búferes que se usan para mostrar fotogramas al usuario. Cada vez que una aplicación presenta un nuevo marco para mostrar, el primer búfer de la cadena de intercambio toma el lugar del búfer que se muestra. Este proceso se denomina <em>intercambio</em> o <em>inversión</em>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Introducción a las reglas de rasterización](introduction-to-rasterization-rules.md)</p></td>
+<td align="left"><p><a href="introduction-to-rasterization-rules.md">Introducción a las reglas de rasterización</a></p></td>
 <td align="left"><p>A menudo, los puntos especificados para los vértices no coinciden con precisión con los píxeles en la pantalla. Cuando esto ocurre, Direct3D aplica reglas de rasterización de triángulo para decidir qué píxeles se aplican a un triángulo determinado.</p></td>
 </tr>
 </tbody>

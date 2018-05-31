@@ -1,36 +1,38 @@
 ---
-author: muhsinking
-title: "Introducción al punto de servicio"
-description: "En este artículo se incluye información sobre la introducción a las API de UWP del punto de servicio."
-ms.author: mukin
-ms.date: 08/2/2017
+author: TerryWarwick
+title: Tareas iniciales con punto de servicio
+description: En este artículo se incluye información sobre la introducción a las API de UWP del punto de servicio.
+ms.author: jken
+ms.date: 05/1/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, punto de servicio, pos
-ms.openlocfilehash: 9fb23d1b52938a364c7ad8dd2b01b3dade9046e1
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.localizationpriority: medium
+ms.openlocfilehash: 64a7fdbb0cfbeeedb0d129c809e05f9926a8a71d
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832299"
 ---
-# <a name="getting-started-with-point-of-service"></a>Introducción al punto de servicio
+# <a name="getting-started-with-point-of-service"></a>Tareas iniciales con punto de servicio
 
-Los dispositivos de punto de servicio, punto de venta o POS son periféricos del equipo usados para facilitar las transacciones comerciales. Entre los dispositivos de POS se incluyen cajas registradoras, escáneres de códigos de barras, lectores de bandas magnéticas e impresoras de recibos.
+Los dispositivos de punto de servicio o punto de venta son periféricos del equipo usados para facilitar las transacciones comerciales. Entre los dispositivos de punto de servicio se incluyen cajas registradoras electrónicas, escáneres de códigos de barras, lectores de bandas magnéticas e impresoras de recibos.
 
-Aquí aprenderás los conceptos básicos a la hora de interactuar con dispositivos de POS mediante el uso de las API de POS de la Plataforma universal de Windows (UWP). Hablaremos sobre la enumeración de dispositivos, la comprobación de las funcionalidades del dispositivo así como de la reclamación de dispositivos y el uso compartido. Usamos un dispositivo de escáner de códigos de barras, pero casi todas estas directrices se aplican a cualquier dispositivo de POS compatible con UWP. (Para obtener una lista de dispositivos compatibles, consulta [Soporte técnico de POS](pos-device-support.md)).
+Aquí aprenderás los conceptos básicos a la hora de interactuar con dispositivos de punto de servicio mediante el uso de las API de punto de servicio de la Plataforma universal de Windows (UWP). Hablaremos sobre la enumeración de dispositivos, la comprobación de las funcionalidades del dispositivo así como de la reclamación de dispositivos y el uso compartido. Usamos como ejemplo un dispositivo de escáner de código de barras, pero casi todas estas directrices se aplican a cualquier dispositivo de punto de servicio compatible con UWP. (Para obtener una lista de dispositivos compatibles, consulta [Compatibilidad con dispositivos de punto de servicio](pos-device-support.md)).
 
-## <a name="finding-and-connecting-to-pos-peripherals"></a>Buscar y conectar a los periféricos de POS
+## <a name="finding-and-connecting-to-point-of-service-peripherals"></a>Búsqueda y conexión de periféricos de punto de servicio
 
-Antes de que una aplicación use un dispositivo de POS, debe estar emparejado con el PC en el que se ejecuta la aplicación. Hay varias formas de conectarse a los dispositivos de POS, a través de la programación o a través de la aplicación Configuración.
+Antes de que una aplicación pueda usar un dispositivo de punto de servicio, debe estar emparejado con el equipo en el que se ejecuta la aplicación. Hay varias formas de conectarse a dispositivos de punto de servicio, ya sea a través de la programación o a través de la aplicación Configuración.
 
 ### <a name="connecting-to-devices-by-using-the-settings-app"></a>Conectarse a dispositivos a través de la aplicación Configuración
-Al conectar un dispositivo de POS como un escáner de códigos de barras en un PC, se mostrará como cualquier otro dispositivo. Puedes encontrarlo en la sección **Dispositivos > Bluetooth y otros dispositivos** de la aplicación Configuración. Ahí podrás emparejarlo con un dispositivo de POS seleccionando **Agregar Bluetooth u otro dispositivo**.
+Al conectar un dispositivo de punto de servicio, como un escáner de código de barras, en un PC, aparecerá como cualquier otro dispositivo. Puedes encontrarlo en la sección **Dispositivos > Bluetooth y otros dispositivos** de la aplicación Configuración. Ahí podrás emparejarlo con un dispositivo de punto de servicio seleccionando **Agregar Bluetooth u otro dispositivo**.
 
-Algunos dispositivos de POS pueden no aparecer en la aplicación Configuración hasta que se enumeren a través de la programación usando las API de un POS.
+Algunos dispositivos de punto de servicio pueden no aparecer en la aplicación Configuración hasta que se enumeren a través de la programación usando las API de un punto de servicio.
 
-### <a name="getting-a-single-pos-device-with-getdefaultasync"></a>Obtener un solo dispositivo de POS con GetDefaultAsync
-En caso de uso sencillo, es posible tener solo un periférico de POS conectado al PC en el que se ejecuta la aplicación y configurarlo tan pronto como sea posible. Para ello, recupera el dispositivo "predeterminado" con el método **GetDefaultAsync** como se muestra aquí.
+### <a name="getting-a-single-point-of-service-device-with-getdefaultasync"></a>Obtener un solo dispositivo de punto de servicio con GetDefaultAsync
+En un caso de uso sencillo, es posible que solo tengas un periférico de punto de servicio conectado al PC en el que se ejecuta la aplicación, y que quieras configurarlo lo más rápido posible. Para ello, recupera el dispositivo "predeterminado" con el método **GetDefaultAsync** como se muestra aquí.
 
 ```Csharp
 using Windows.Devices.PointOfService;
@@ -41,7 +43,7 @@ BarcodeScanner barcodeScanner = await BarcodeScanner.GetDefaultAsync();
 Si se encuentra el dispositivo predeterminado, el objeto de dispositivo recuperado está listo para reclamarse. "Reclamar" un dispositivo le da a la aplicación acceso exclusivo, evitando los comandos conflictivos de múltiples procesos.
 
 > [!NOTE] 
-> Si hay más de un dispositivo de POS conectado al equipo, **GetDefaultAsync** devolverá el primer dispositivo que encuentre. Por ello, usa **FindAllAsync** a menos que estés seguro de que solo hay un dispositivo de POS visible para la aplicación.
+> Si hay más de un dispositivo de punto de servicio conectado al PC, **GetDefaultAsync** devolverá el primer dispositivo que encuentre. Por este motivo, usa **FindAllAsync** a menos que estés seguro de que solo hay un dispositivo de punto de servicio visible para la aplicación.
 
 ### <a name="enumerating-a-collection-of-devices-with-findallasync"></a>Enumerar una colección de dispositivos con FindAllAsync
 
@@ -65,7 +67,7 @@ foreach (DeviceInformation devInfo in deviceCollection)
 ```
 
 ### <a name="scoping-the-device-selection"></a>Ámbito de la selección del dispositivo
-Cuando te conectas a un dispositivo, puedes limitar la búsqueda a un subconjunto de periféricos de POS a las que tu aplicación tenga acceso. Con el método **GetDeviceSelector**, puedes definir el ámbito de la selección para recuperar los dispositivos conectados únicamente por un método determinado (Bluetooth, USB, etc.). Puedes crear un selector que busque dispositivos en **Bluetooth**, **IP**, **Local** o **Todos los tipos de conexión**. Esto puede ser útil, ya que la detección de dispositivos inalámbricos tarda mucho tiempo en comparación con la detección local (con cable). Puedes garantizar un tiempo de espera determinista para la conexión del dispositivo local limitando **FindAllAsync** a **Local** para los tipos de conexión. Por ejemplo, este código recupera todos los escáneres de códigos de barras accesibles a través de una conexión local. 
+Cuando te conectas a un dispositivo, puedes limitar la búsqueda a un subconjunto de periféricos de punto de servicio a las que tu aplicación tenga acceso. Con el método **GetDeviceSelector**, puedes definir el ámbito de la selección para recuperar los dispositivos conectados únicamente por un método determinado (Bluetooth, USB, etc.). Puedes crear un selector que busque dispositivos en **Bluetooth**, **IP**, **Local** o **Todos los tipos de conexión**. Esto puede ser útil, ya que la detección de dispositivos inalámbricos tarda mucho tiempo en comparación con la detección local (con cable). Puedes garantizar un tiempo de espera determinista para la conexión del dispositivo local limitando **FindAllAsync** a **Local** para los tipos de conexión. Por ejemplo, este código recupera todos los escáneres de códigos de barras accesibles a través de una conexión local. 
 
 ```Csharp
 string selector = BarcodeScanner.GetDeviceSelector(PosConnectionTypes.Local);
@@ -98,8 +100,8 @@ void DeviceWatcher_Updated(DeviceWatcher sender, DeviceInformationUpdate args)
 }
 ```
 
-## <a name="checking-the-capabilities-of-a-pos-device"></a>Comprobar las funcionalidades de un dispositivo de POS
-Incluso dentro de una clase de dispositivo, como escáneres de códigos de barras, los atributos de cada dispositivo pueden variar considerablemente entre los modelos. Si la aplicación requiere un atributo de dispositivo específico, deberás inspeccionar cada objeto de dispositivo conectado para determinar si el atributo es compatible. Por ejemplo, quizás tu empresa necesita que las etiquetas se creen usando un patrón de impresión específica de códigos de barras. Aquí te mostramos cómo se puede comprobar para ver si un escáner de códigos de barras conectado admite un simbología particular. 
+## <a name="checking-the-capabilities-of-a-point-of-service-device"></a>Comprobar las funcionalidades de un dispositivo de punto de servicio
+Incluso dentro de una clase de dispositivo, como escáneres de códigos de barras, los atributos de cada dispositivo pueden variar considerablemente entre los modelos. Si la aplicación requiere un atributo de dispositivo específico, deberás inspeccionar cada objeto de dispositivo conectado para determinar si el atributo es compatible. Por ejemplo, quizás tu empresa necesita que las etiquetas se creen usando un patrón de impresión específica de códigos de barras. Aquí te mostramos cómo se puede comprobar para ver si un escáner de códigos de barras conectado admite un simbología. 
 
 > [!NOTE]
 > Una simbología es la asignación de idioma que utiliza un código de barras para codificar mensajes.
@@ -120,7 +122,7 @@ catch (Exception ex)
 ```
 
 ### <a name="using-the-devicecapabilities-class"></a>Uso de la clase Device.Capabilities
-La clase **Device.Capabilities** es un atributo de todas las clases de dispositivos de POS y puede usarse para obtener información general sobre cada dispositivo. Por ejemplo, en este ejemplo se determina si un dispositivo es compatible con los informes de estadísticas y, si es así, recuperar las estadísticas de todos los tipos compatibles.
+La clase **Device.Capabilities** es un atributo de todas las clases de dispositivos de punto de servicio y puede usarse para obtener información general sobre cada dispositivo. Por ejemplo, en este ejemplo se determina si un dispositivo es compatible con los informes de estadísticas y, si es así, recuperar las estadísticas de todos los tipos compatibles.
 
 ```Csharp
 try
@@ -139,8 +141,8 @@ catch (Exception ex)
 }
 ```
 
-## <a name="claiming-a-pos-device"></a>Reclamar un dispositivo de POS
-Antes de poder usar un dispositivo de POS de entrada o salida activa, debes reclamarlo, concediendo así a la aplicación acceso exclusivo a muchas de sus funciones. Este código muestra cómo reclamar un dispositivo de escáner de códigos de barras, una vez que hayas encontrado el dispositivo mediante uno de los métodos descritos anteriormente.
+## <a name="claiming-a-point-of-service-device"></a>Reclamar un dispositivo de punto de servicio
+Antes de poder usar un dispositivo de punto de servicio de entrada o salida activa, debes reclamarlo, concediendo así a la aplicación acceso exclusivo a muchas de sus funciones. Este código muestra cómo reclamar un dispositivo de escáner de códigos de barras, una vez que hayas encontrado el dispositivo mediante uno de los métodos descritos anteriormente.
 
 ```Csharp
 try
@@ -154,7 +156,7 @@ catch (Exception ex)
 ```
 
 ### <a name="retaining-the-device"></a>Conservar el dispositivo
-Al usar un dispositivo de POS mediante una red o la conexión Bluetooth, puedes compartir el dispositivo con otras aplicaciones de la red. (Para obtener más información, consulta Compartir dispositivos[enlace]). En otros casos, puede mantener este dispositivo para un uso prolongado. Este ejemplo muestra cómo conservar un escáner de códigos de barras reclamado, después de que otra aplicación haya solicitado que se libere el dispositivo.
+Al usar un dispositivo de punto de servicio mediante una red o la conexión Bluetooth, puedes compartir el dispositivo con otras aplicaciones de la red. (Para obtener más información, consulta [Compartir dispositivos](#sharing-a-device-between-apps)). En otros casos, puedes mantener este dispositivo para un uso prolongado. Este ejemplo muestra cómo conservar un escáner de códigos de barras reclamado, después de que otra aplicación haya solicitado que se libere el dispositivo.
 
 ```Csharp
 claimedBarcodeScanner.ReleaseDeviceRequested += claimedBarcodeScanner_ReleaseDeviceRequested;
@@ -196,7 +198,7 @@ void claimedBarcodeScanner_DataReceived(ClaimedBarcodeScanner sender, BarcodeSca
 
 ## <a name="sharing-a-device-between-apps"></a>Compartir un dispositivo entre aplicaciones
 
-Los dispositivos de POS se suelen usar en casos donde se necesita más de una aplicación para acceder a ellos en un período breve.  Un dispositivo puede compartirse cuando se conecta a múltiples aplicaciones locales (USB u otra conexión con cables) o a través de Bluetooth o de una red IP. Según las necesidades de cada aplicación, un proceso puede eliminar su reclamación en el dispositivo. Este código elimina nuestro dispositivo de escáner de códigos de barras reclamado y permite a otras aplicaciones reclamarlo y que lo usen.
+Los dispositivos de punto de servicio se suelen usar en casos donde se necesita más de una aplicación para acceder a ellos en un período breve.  Un dispositivo puede compartirse cuando se conecta a múltiples aplicaciones locales (USB u otra conexión con cables) o a través de Bluetooth o de una red IP. Según las necesidades de cada aplicación, un proceso puede eliminar su reclamación en el dispositivo. Este código elimina nuestro dispositivo de escáner de códigos de barras reclamado y permite a otras aplicaciones reclamarlo y que lo usen.
 
 ```Csharp
 if (claimedBarcodeScanner != null)
@@ -207,12 +209,12 @@ if (claimedBarcodeScanner != null)
 ```
 
 > [!NOTE]
-> Tanto las clases de dispositivos de POS reclamados como los que no implementan la [interfaz IClosable](https://docs.microsoft.com/en-us/uwp/api/windows.foundation.iclosable). Si un dispositivo está conectado a una aplicación a través de Bluetooth o de la red, tantos los objetos reclamados como los que no deben eliminarse antes de que otra aplicación pueda conectarse.
+> Tanto las clases de dispositivos de punto de servicio reclamados como los que no implementan la [interfaz IClosable](https://docs.microsoft.com/uwp/api/windows.foundation.iclosable). Si un dispositivo está conectado a una aplicación a través de Bluetooth o de la red, tantos los objetos reclamados como los que no deben eliminarse antes de que otra aplicación pueda conectarse.
 
 ## <a name="see-also"></a>Consulta también
 + [Ejemplo de escáner de códigos de barras](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
 + [Ejemplo de caja registradora]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
 + [Ejemplo de visualización de líneas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
 + [Ejemplo de lector de bandas magnéticas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
-+ [Ejemplo de impresora POS](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
++ [Ejemplo de impresora de punto de servicio](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
 

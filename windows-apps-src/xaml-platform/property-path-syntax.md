@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "Puedes usar la clase PropertyPath y la sintaxis de cadena para crear una instancia de un valor PropertyPath en XAML o en código."
+description: Puedes usar la clase PropertyPath y la sintaxis de cadena para crear una instancia de un valor PropertyPath en XAML o en código.
 title: Sintaxis de PropertyPath
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ms.author: jimwalk
@@ -9,13 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 3209028f151608c83e69d6750e978132a6c8b83c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 2939150e1ca15dfc910d92ea669e794026ef8685
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1674682"
 ---
 # <a name="property-path-syntax"></a>Sintaxis de PropertyPath
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Puedes usar la clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) y la sintaxis de cadena para crear una instancia de un valor **PropertyPath** en XAML o en código. El enlace de datos usa los valores de **PropertyPath**. Una sintaxis similar se usa para seleccionar el destino de las animaciones de guión gráfico. Para los dos escenarios, una ruta de acceso de propiedades describe un cruce seguro de una o más relaciones de propiedades de objeto que finalmente se resuelven en una sola propiedad.
 
@@ -77,7 +80,7 @@ Para obtener más información sobre cómo definir animaciones en XAML, consulta
 
 ## <a name="simple-targeting"></a>Selección de destino simple
 
-Si vas a animar una propiedad que ya existe en el propio objeto de destino y al tipo de esa propiedad se le puede aplicar directamente una animación (en vez de aplicársela a una subpropiedad del valor de una propiedad), entonces podrás asignar un nombre a la propiedad que se va a animar sin una cualificación adicional. Por ejemplo, si seleccionas como destino una subclase [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243377) como [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371), y aplicas una estructura [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) animada a la propiedad [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378), la ruta de acceso de la propiedad podrá ser "Fill".
+Si vas a animar una propiedad que ya existe en el propio objeto de destino y al tipo de esa propiedad se le puede aplicar directamente una animación (en vez de aplicársela a una subpropiedad del valor de una propiedad), entonces podrás asignar un nombre a la propiedad que se va a animar sin una cualificación adicional. Por ejemplo, si seleccionas como destino una subclase [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape) como [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle), y aplicas una estructura [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) animada a la propiedad [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill), la ruta de acceso de la propiedad podrá ser "Fill".
 
 ## <a name="indirect-property-targeting"></a>Selección indirecta del destino de propiedades
 

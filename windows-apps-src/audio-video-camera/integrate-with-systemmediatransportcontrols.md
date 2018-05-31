@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: eb690f2b-3bf8-4a65-99a4-2a3a8c7760b7
-description: "En este artículo se muestra cómo interactuar con los controles de transporte multimedia del sistema."
+description: En este artículo se muestra cómo interactuar con los controles de transporte multimedia del sistema.
 title: Integrar con los controles de transporte de contenido multimedia del sistema
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,9 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: ca8910129ba0993597be905a24fb5b2c5c4061a4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 044d8aa8f777f6cb159c3488fdcf81c2b2c48d2d
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690301"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>Integrar con los controles de transporte de contenido multimedia del sistema
 
@@ -19,7 +23,7 @@ En este artículo se muestra cómo interactuar con los controles de transporte m
 
 Para obtener una muestra completa que demuestre la integración con los SMTC, consulta la [muestra de controles de transporte multimedia del sistema en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls).
                     
-##<a name="automatic-integration-with-smtc"></a>Integración automática con los SMTC
+## <a name="automatic-integration-with-smtc"></a>Integración automática con los SMTC
 A partir de Windows 10, versión 1607, las aplicaciones para UWP que usan la clase [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) para reproducir contenido multimedia se integran automáticamente con los SMTC de manera predeterminada. Solo tienes que crear una nueva instancia de **MediaPlayer** y asignar un objeto [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) o [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList) a la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) del reproductor. El usuario verá el nombre de tu aplicación en los SMTC y podrá reproducir, pausar y recorrer tus listas de reproducción mediante los controles SMTC. 
 
 La aplicación puede crear y usar varios objetos **MediaPlayer** a la vez. Para cada instancia de **MediaPlayer** activa en la aplicación, se crea una pestaña independiente en los SMTC que permite al usuario cambiar entre los reproductores multimedia activos y los de otras aplicaciones en ejecución. El reproductor multimedia seleccionado actualmente en los SMTC es el que se verá afectado por los controles.
@@ -28,14 +32,14 @@ Para obtener más información sobre el uso de **MediaPlayer** en tu aplicación
 
 Para obtener más información sobre el uso de **MediaSource**, **MediaPlaybackItem** y **MediaPlaybackList**, consulta [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md).
 
-##<a name="add-metadata-to-be-displayed-by-the-smtc"></a>Agregar los metadatos que deben mostrar los SMTC
+## <a name="add-metadata-to-be-displayed-by-the-smtc"></a>Agregar los metadatos que deben mostrar los SMTC
 Si quieres agregar o modificar los metadatos que se muestran para los elementos multimedia en los SMTC, como el título de un vídeo o una canción, deberás actualizar las propiedades de visualización del objeto **MediaPlaybackItem** que representa el elemento multimedia. Primero, obtén una referencia al objeto [**MediaItemDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties) llamando a [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties). Después, establece el tipo de contenido multimedia, música o vídeo, del elemento con la propiedad [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type). A continuación, puedes rellenar los campos de [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) o [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties), según el tipo de contenido multimedia especificado. Por último, actualiza los metadatos del elemento multimedia mediante una llamada a [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923).
 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
 [!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
 
-##<a name="use-commandmanager-to-modify-or-override-the-default-smtc-commands"></a>Usar CommandManager para modificar o invalidar los comandos de SMTC predeterminados
+## <a name="use-commandmanager-to-modify-or-override-the-default-smtc-commands"></a>Usar CommandManager para modificar o invalidar los comandos de SMTC predeterminados
 La aplicación puede modificar o invalidar completamente el comportamiento de los controles SMTC con la clase [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager). Se puede obtener una instancia del administrador de comandos para cada instancia de la clase **MediaPlayer** mediante el acceso a la propiedad [**CommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.CommandManager).
 
 Para cada comando, como el comando *Next* (que salta al siguiente elemento de forma predeterminada en un objeto **MediaPlaybackList**), el administrador de comandos expone un evento recibido, como [**NextReceived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.NextReceived) y un objeto que administra el comportamiento del comando, como [**NextBehavior**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.NextBehavior). 
@@ -69,8 +73,8 @@ A continuación, se comprueba la propiedad [**Handled**](https://msdn.microsoft.
 Por último, se llama a [**Complete**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral.Complete) en el objeto de aplazamiento para que el sistema sepa que terminaste de procesar el comando.
 
 [!code-cs[PreviousReceived](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetPreviousReceived)]
-                 
-##<a name="manual-control-of-the-smtc"></a>Control manual de los SMTC
+                
+## <a name="manual-control-of-the-smtc"></a>Control manual de los SMTC
 Como se mencionó anteriormente en este artículo, los SMTC detectarán y mostrarán automáticamente la información de todas las instancias de **MediaPlayer** que cree la aplicación. Si quieres usar varias instancias de **MediaPlayer**, pero quieres que los SMTC proporcionen una sola entrada para la aplicación, debes controlar manualmente el comportamiento de los SMTC en lugar de usar la integración automática. Además, si usas [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) para controlar uno o más reproductores multimedia, debes usar la integración de SMTC manual. Asimismo, si la aplicación usa una API distinta de **MediaPlayer**, como la clase [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph), para reproducir contenido multimedia, debes implementar la integración de SMTC manual para que el usuario emplee los SMTC para controlar la aplicación. Para obtener información sobre cómo controlar manualmente los SMTC, consulta [Control manual de los controles de transporte de multimedia del sistema](system-media-transport-controls.md).
 
 

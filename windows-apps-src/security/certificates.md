@@ -1,23 +1,25 @@
 ---
-title: "Introducción a los certificados"
-description: "En este artículo se describe el uso de certificados en las aplicaciones para la Plataforma universal de Windows (UWP)."
+title: Introducción a los certificados
+description: En este artículo se describe el uso de certificados en las aplicaciones para la Plataforma universal de Windows (UWP).
 ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 1fb3424b56da696aa5fa99603209b379c1a5b66e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 0be07af5c8770ce540cbbce23e53df6ea9495911
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1689831"
 ---
 # <a name="intro-to-certificates"></a>Introducción a los certificados
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe el uso de certificados en las aplicaciones de la Plataforma universal de Windows (UWP). Los certificados digitales se usan en criptografía de clave pública para enlazar una clave pública a una persona, un equipo o una organización. Las identidades enlazadas suelen usarse para autenticar una entidad a otra. Por ejemplo, los certificados se suelen usar para autenticar un servidor web a un usuario y un usuario a un servidor web. Puedes crear solicitudes de certificados e instalar o importar certificados emitidos. También puedes inscribir un certificado en una jerarquía de certificados.
@@ -59,46 +61,43 @@ Algunos de estos campos y extensiones se pueden especificar directamente al usar
 
 ### <a name="version-1-fields"></a>Campos de la versión 1
 
-| Campo               | Descripción                                                                                                                                                                                                                                                                 |
-|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Versión             | Especifica el número de versión del certificado codificado. Actualmente, los valores posibles de este campo son 0, 1 o 2.                                                                                                                                                       |
-| Número de serie       | Contiene un entero positivo único asignado por la entidad de certificación (CA) al certificado.                                                                                                                                                                        |
-| Algoritmo de firma | Contiene un identificador de objeto (OID) que especifica el algoritmo usado por la CA para firmar el certificado. Por ejemplo, 1.2.840.113549.1.1.5 especifica un algoritmo hash SHA-1 combinado con el algoritmo de cifrado RSA de RSA Laboratories.                            |
-| Emisor              | Contiene el nombre distintivo (DN) X.500 de la entidad de certificación que creó y firmó el certificado.                                                                                                                                                                               |
-| Validez            | Especifica el intervalo de tiempo durante el cual el certificado es válido. Las fechas hasta el final de 2049 usan el formato de Hora universal coordinada (Hora del meridiano de Greenwich) (aammddhhmmssz). Las fechas a partir del 1 de enero de 2050 usan el formato de hora generalizada (aaaammddhhmmssz). |
-| Sujeto             | Contiene un nombre distintivo X.500 de la entidad asociada con la clave pública contenida en el certificado.                                                                                                                                                             |
-| Clave pública          | Contiene la clave pública y la información de algoritmo asociada.                                                                                                                                                                                                               |
-
- 
+| Campo | Descripción |
+|-------|-------------|
+| Versión | Especifica el número de versión del certificado codificado. Actualmente, los valores posibles de este campo son 0, 1 o 2. |
+| Número de serie | Contiene un entero positivo único asignado por la entidad de certificación (CA) al certificado. |
+| Algoritmo de firma | Contiene un identificador de objeto (OID) que especifica el algoritmo usado por la CA para firmar el certificado. Por ejemplo, 1.2.840.113549.1.1.5 especifica un algoritmo hash SHA-1 combinado con el algoritmo de cifrado RSA de RSA Laboratories. |
+| Emisor | Contiene el nombre distintivo (DN) X.500 de la entidad de certificación que creó y firmó el certificado. |
+| Validez | Especifica el intervalo de tiempo durante el cual el certificado es válido. Las fechas hasta el final de 2049 usan el formato de Hora universal coordinada (Hora del meridiano de Greenwich) (aammddhhmmssz). Las fechas a partir del 1 de enero de 2050 usan el formato de hora generalizada (aaaammddhhmmssz). |
+| Sujeto | Contiene un nombre distintivo X.500 de la entidad asociada con la clave pública contenida en el certificado. |
+| Clave pública | Contiene la clave pública y la información de algoritmo asociada. |
 
 ### <a name="version-2-fields"></a>Campos de la versión 2
 
 Un certificado X.509 versión 2 contiene los campos básicos definidos en la versión 1 y, además, agrega los siguientes campos.
 
-| Campo                     | Descripción                                                                                                                                         |
-|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Identificador único de emisor  | Contiene un valor único que se puede utilizar para hacer que el nombre X.500 de la CA no sea ambiguo si lo reutilizan distintas entidades a lo largo del tiempo.                  |
+| Campo | Descripción |
+|-------|-------------|
+| Identificador único de emisor | Contiene un valor único que se puede utilizar para hacer que el nombre X.500 de la CA no sea ambiguo si lo reutilizan distintas entidades a lo largo del tiempo. |
 | Identificador único de firmante | Contiene un valor único que se puede utilizar para hacer que el nombre X.500 del firmante del certificado no sea ambiguo si lo reutilizan distintas entidades a lo largo del tiempo. |
- 
 
 ### <a name="version-3-extensions"></a>Extensiones de la versión 3
 
 Un certificado X.509 versión 3 contiene los campos definidos en la versión 1 y la versión 2, y además agrega extensiones de certificado.
 
-| Campo                        | Descripción                                                                                                                                                                                              |
-|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Identificador de clave de entidad emisora     | Identifica la clave pública de la entidad de certificación (CA) correspondiente a la clave privada de CA utilizada para firmar el certificado.                                                                              |
-| Restricciones básicas            | Especifica si la entidad se puede utilizar como una CA y, en caso afirmativo, el número de CA subordinadas que pueden existir por debajo en la cadena de certificados.                                                           |
-| Directivas del certificado         | Especifica las directivas con las que se ha emitido el certificado y los fines para los que se puede utilizar.                                                                                            |
-| Puntos de distribución CRL      | Contiene el URI de la lista de revocación de certificados (CRL) de base.                                                                                                                                          |
-| Uso mejorado de claves           | Especifica la manera en que se puede utilizar la clave pública contenida en el certificado.                                                                                                                   |
-| Nombre alternativo del emisor      | Especifica una o más formas de nombre alternativas para el emisor de la solicitud de certificado.                                                                                                                  |
-| Uso de claves                    | Especifica restricciones en las operaciones que puede realizar la clave pública contenida en el certificado.                                                                                           |
-| Restricciones de nombre             | Especifica el espacio de nombres en el que deben encontrarse todos los nombres de firmantes en una jerarquía de certificados. La extensión solo se utiliza en un certificado de CA.                                                       |
-| Restricciones de directiva           | Restringen la validación de rutas prohibiendo la asignación de directivas o exigiendo que cada certificado de la jerarquía contenga un identificador de directiva aceptable. La extensión solo se utiliza en un certificado de CA. |
-| Asignaciones de directiva              | Especifica las directivas de una CA subordinada correspondientes a directivas de la CA emisora.                                                                                                                |
-| Período de uso de clave privada     | Especifica un período de validez distinto para la clave privada que para el certificado con el que la clave privada está asociada.                                                                             |
-| Nombre alternativo del firmante     | Especifica una o más formas de nombre alternativas para el firmante de la solicitud de certificado. Algunos ejemplos de formas alternativas son direcciones de correo electrónico, nombres DNS, direcciones IP y URI.                           |
-| Atributos de directorio de firmantes | Contiene atributos de identificación, como la nacionalidad del firmante del certificado. El valor de extensión es una secuencia de pares de valores OID.                                                              |
-| Identificador de clave del firmante       | Diferencia entre varias claves públicas de las que el firmante del certificado es titular. El valor de extensión suele ser un hash SHA-1 de la clave.                                                                   |
+| Campo  | Descripción |
+|--------|-------------|
+| Identificador de clave de entidad emisora | Identifica la clave pública de la entidad de certificación (CA) correspondiente a la clave privada de CA utilizada para firmar el certificado. |
+| Restricciones básicas | Especifica si la entidad se puede utilizar como una CA y, en caso afirmativo, el número de CA subordinadas que pueden existir por debajo en la cadena de certificados. |
+| Directivas del certificado | Especifica las directivas con las que se ha emitido el certificado y los fines para los que se puede utilizar. |
+| Puntos de distribución CRL | Contiene el URI de la lista de revocación de certificados (CRL) de base. |
+| Uso mejorado de claves | Especifica la manera en que se puede utilizar la clave pública contenida en el certificado. |
+| Nombre alternativo del emisor | Especifica una o más formas de nombre alternativas para el emisor de la solicitud de certificado. |
+| Uso de claves | Especifica restricciones en las operaciones que puede realizar la clave pública contenida en el certificado.|
+| Restricciones de nombre  | Especifica el espacio de nombres en el que deben encontrarse todos los nombres de firmantes en una jerarquía de certificados. La extensión solo se utiliza en un certificado de CA. |
+| Restricciones de directiva | Restringen la validación de rutas prohibiendo la asignación de directivas o exigiendo que cada certificado de la jerarquía contenga un identificador de directiva aceptable. La extensión solo se utiliza en un certificado de CA. |
+| Asignaciones de directiva | Especifica las directivas de una CA subordinada correspondientes a directivas de la CA emisora. |
+| Período de uso de clave privada | Especifica un período de validez distinto para la clave privada que para el certificado con el que la clave privada está asociada. |
+| Nombre alternativo del firmante | Especifica una o más formas de nombre alternativas para el firmante de la solicitud de certificado. Algunos ejemplos de formas alternativas son direcciones de correo electrónico, nombres DNS, direcciones IP y URI. |
+| Atributos de directorio de firmantes | Contiene atributos de identificación, como la nacionalidad del firmante del certificado. El valor de extensión es una secuencia de pares de valores OID. |
+| Identificador de clave del firmante | Diferencia entre varias claves públicas de las que el firmante del certificado es titular. El valor de extensión suele ser un hash SHA-1 de la clave. |
 

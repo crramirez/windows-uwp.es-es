@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, games, directx, interoperabilidad de xaml, xaml interop
-ms.openlocfilehash: 8d260d4cd08c50a289749122f18693489f6d3193
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 107501bb06af62035e78ef1ac65291b2bdec5c62
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1674992"
 ---
 # <a name="directx-and-xaml-interop"></a>Interoperabilidad de DirectX y XAML
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Puedes usar el lenguaje XAML y Microsoft DirectX juntos en tu juego para la Plataforma universal de Windows (UWP). La combinación de XAML y DirectX te permite crear marcos de interfaz de usuario flexibles que interoperan con el contenido representado en DirectX; además, es especialmente útil para aplicaciones que hacen un uso intensivo de los elementos gráficos. En este tema explicamos la estructura de una aplicación para UWP que usa DirectX y enumeramos los tipos importantes que se deben usar al generar una aplicación para UWP de modo que funcione con DirectX.
 
@@ -37,7 +40,7 @@ Si vas a implementar interoperabilidad entre XAML y DirectX personalizada, debes
 
 Piensa para qué vas a usar DirectX. ¿Lo usarás para componer o animar un control único que se ajuste a las dimensiones de la ventana de presentación? ¿Contiene salida que tenga que representarse y controlarse en tiempo real, como sucede en un juego? Si es así, probablemente tendrás que implementar una cadena de intercambio. De lo contrario, debería bastar con usar una superficie compartida.
 
-Una vez que hayas determinado cómo quieres usar DirectX, usarás uno de estos tipos de Windows en tiempo de ejecución para incorporar la representación de DirectX a la aplicación de la Tienda Windows:
+Una vez que hayas determinado cómo quieres usar DirectX, usarás uno de estos tipos de Windows Runtime para incorporar la representación de DirectX en tu aplicación para UWP:
 
 -   Si quieres componer una imagen estática o dibujar una imagen compleja en intervalos controlados por eventos, dibuja en una superficie compartida con [Windows::UI::Xaml::Media::Imaging::SurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702041). Este tipo controla una superficie de dibujo de DirectX de un tamaño definido. Normalmente se usa este tipo al crear una imagen o textura, como un mapa de bits, que luego se mostrará en un documento o elemento de interfaz de usuario. Recuerda que no funciona bien con la interactividad en tiempo real como, por ejemplo, un juego de alto rendimiento. Esto se debe a que las actualizaciones de un objeto **SurfaceImageSource** se sincronizan con las actualizaciones de la interfaz de usuario XAML; por ello, se puede producir una latencia en la información visual que se proporciona al usuario como, por ejemplo, una velocidad de fotogramas fluctuante o una respuesta deficiente para las entradas en tiempo real. De todos modos, las actualizaciones son lo suficientemente rápidas como para realizar controles dinámicos o simulaciones de datos.
 
@@ -167,11 +170,11 @@ El procedimiento básico para crear y actualizar un objeto [SurfaceImageSource](
     brush->ImageSource = surfaceImageSource;
     ```
 
-    > [!NOTE]   
+    > [!NOTE]
     > Actualmente, si llamas a [SurfaceImageSource::SetSource](https://msdn.microsoft.com/library/windows/apps/br243255) (heredado de **IBitmapSource::SetSource**), se inicia una excepción. No lo llames desde el objeto [SurfaceImageSource](https://msdn.microsoft.com/library/windows/apps/hh702041).
 
     > [!NOTE]
-    > Las aplicaciones deben evitar dibujar en **SurfaceImageSource** mientras su elemento [Window](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) asociado está oculto, de lo contrario se producirá un error en las API de **ISurfaceImageSourceNativeWithD2D**. Para ello, regístrate como escucha de eventos para el evento [Window.VisibilityChanged](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window#Windows_UI_Xaml_Window_VisibilityChanged) para realizar un seguimiento de los cambios de visibilidad.
+    > Las aplicaciones deben evitar dibujar en **SurfaceImageSource** mientras su elemento [Window](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) asociado está oculto, de lo contrario se producirá un error en las API de **ISurfaceImageSourceNativeWithD2D**. Para ello, regístrate como escucha de eventos para el evento [Window.VisibilityChanged](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window.VisibilityChanged) para realizar un seguimiento de los cambios de visibilidad.
 
 ## <a name="virtualsurfaceimagesource"></a>VirtualSurfaceImageSource
 
@@ -360,7 +363,7 @@ A continuación, encontrarás el procedimiento básico para crear y actualizar u
     3.  Llama a **ISurfaceImageSourceNativeWithD2D::EndDraw**. El resultado es un mapa de bits.
 
 > [!NOTE]
-> Las aplicaciones deben evitar dibujar en **SurfaceImageSource** mientras su elemento [Window](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) asociado está oculto, de lo contrario se producirá un error en las API de **ISurfaceImageSourceNativeWithD2D**. Para ello, regístrate como escucha de eventos para el evento [Window.VisibilityChanged](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window#Windows_UI_Xaml_Window_VisibilityChanged) para realizar un seguimiento de los cambios de visibilidad.
+> Las aplicaciones deben evitar dibujar en **SurfaceImageSource** mientras su elemento [Window](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) asociado está oculto, de lo contrario se producirá un error en las API de **ISurfaceImageSourceNativeWithD2D**. Para ello, regístrate como escucha de eventos para el evento [Window.VisibilityChanged](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window.VisibilityChanged) para realizar un seguimiento de los cambios de visibilidad.
 
 ## <a name="swapchainpanel-and-gaming"></a>SwapChainPanel y juegos
 
@@ -380,7 +383,7 @@ Debes actualizar la clase [SwapChainPanel](https://msdn.microsoft.com/library/wi
 Si tienes que recibir una entrada de puntero de latencia baja en tu **SwapChainPanel**, usa [SwapChainPanel::CreateCoreIndependentInputSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.swapchainpanel.createcoreindependentinputsource). Este método devuelve un objeto [CoreIndependentInputSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coreindependentinputsource) que puede usarse para recibir eventos de entrada con una latencia mínima en un subproceso en segundo plano. Ten en cuenta que, cuando se llama a este método, no se desencadenará eventos normales de entrada de puntero XAML para **SwapChainPanel**, dado que todas las entradas se redirigirán al subproceso en segundo plano.
 
 
-> **Nota** En general, las aplicaciones DirectX deben crear cadenas de intercambio con orientación horizontal y con el mismo tamaño que la ventana de presentación (que suele ser la resolución de la pantalla nativa en la mayoría de juegos de la Tienda Windows). De esta forma, se garantiza que la aplicación implemente de manera óptima la cadena de intercambio cuando no tenga ninguna superposición de XAML visible. Si la aplicación se gira y se coloca en modo vertical, esta debería llamar a [IDXGISwapChain1::SetRotation](https://msdn.microsoft.com/library/windows/desktop/hh446801) en la cadena de intercambio existente, aplicar una transformación al contenido si fuera necesario y luego llamar de nuevo a [SetSwapChain](https://msdn.microsoft.com/library/windows/desktop/dn302144) en la misma cadena de intercambio. De forma similar, la aplicación debe llamar de nuevo a **SetSwapChain** en la misma cadena de intercambio, siempre que se cambie el tamaño de la cadena de intercambio mediante una llamada a [IDXGISwapChain::ResizeBuffers](https://msdn.microsoft.com/library/windows/desktop/bb174577).
+> **Nota**	En general, las aplicaciones DirectX deben crear cadenas de intercambio con orientación horizontal y con el mismo tamaño que la ventana de presentación (que suele ser la resolución de la pantalla nativa en la mayoría de juegos de Microsoft Store). De esta forma, se garantiza que la aplicación implemente de manera óptima la cadena de intercambio cuando no tenga ninguna superposición de XAML visible. Si la aplicación se gira y se coloca en modo vertical, esta debería llamar a [IDXGISwapChain1::SetRotation](https://msdn.microsoft.com/library/windows/desktop/hh446801) en la cadena de intercambio existente, aplicar una transformación al contenido si fuera necesario y luego llamar de nuevo a [SetSwapChain](https://msdn.microsoft.com/library/windows/desktop/dn302144) en la misma cadena de intercambio. De forma similar, la aplicación debe llamar de nuevo a **SetSwapChain** en la misma cadena de intercambio, siempre que se cambie el tamaño de la cadena de intercambio mediante una llamada a [IDXGISwapChain::ResizeBuffers](https://msdn.microsoft.com/library/windows/desktop/bb174577).
 
 
  

@@ -1,23 +1,22 @@
 ---
-title: "Agregar compatibilidad con Mis allegados a una aplicación"
-description: "Explica cómo agregar compatibilidad con Mis allegados a una aplicación y cómo anclar y Desanclar contactos"
-author: mukin
+title: Agregar compatibilidad con Mis allegados a una aplicación
+description: Explica cómo agregar compatibilidad con Mis allegados a una aplicación y cómo anclar y Desanclar contactos
+author: muhsinking
 ms.author: mukin
 ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 61f73fd2fc0d14d0d1d478d67763c9b0e252cd36
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 92a75227331269a59986f93163850c5ea4043ce9
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1673462"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Agregar compatibilidad con Mis allegados a una aplicación
-
-> [!IMPORTANT]
-> **VERSIÓN PREVIA | Requiere la actualización Fall Creators Update**: Debes elegir el [SDK 16225 de Insider](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewSDK) y estar ejecutando la [Compilación 16226 de Insider](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/) o superior para poder usar las API de Mis allegados.
 
 La función Mis allegados permite a los usuarios a anclar contactos desde una aplicación directamente a la barra de tareas, creando un nuevo objeto de contacto con el que pueden interactuar de varias maneras. Este artículo muestra cómo se puede agregar compatibilidad para esta función, permitiendo a los usuarios anclar contactos directamente desde tu aplicación. Cuando se anclan contactos se dispone de nuevos tipos de interacción, como [Compartir con Mis allegados](my-people-sharing.md) y [notificaciones](my-people-notifications.md).
 
@@ -98,7 +97,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
     // Add appId and contact panel support to the annotation
     String appId = "MyApp_vqvv5s4y3scbg!App";
     annotation.ProviderProperties.Add("ContactPanelAppID", appId);
-    annotation.SupportedOperations = ContactAnnotationOperations::ContactProfile;
+    annotation.SupportedOperations = ContactAnnotationOperations.ContactProfile;
 
     // Save annotation to contact annotation list
     // Windows.ApplicationModel.Contacts.ContactAnnotationList 
@@ -106,7 +105,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el nombre de familia de paquete, abre **Package.appxmanifest** mediante el editor predeterminado y busca en la pestaña "Empaquetado". Aquí, "Aplicación" es la clase activable correspondiente a la vista de inicio de la aplicación.
+El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el Nombre de familia de paquete, abre **Package.appxmanifest** mediante el editor predeterminado y busca en la pestaña "Empaquetado". Aquí, "Aplicación" es la clase activable correspondiente a la vista de inicio de la aplicación.
 
 ## <a name="allow-contacts-to-invite-new-potential-users"></a>Permitir a los contactos invitar a nuevos usuarios potenciales
 
@@ -182,7 +181,34 @@ El objeto ContactPanel tiene dos eventos a los que la aplicación debe escuchar:
 
 El objeto ContactPanel también te permite establecer el color de fondo del encabezado del panel de contacto (si no se establece, tomará como predeterminado el tema del sistema) y cerrar mediante programación el panel de contactos.
 
+## <a name="supporting-notification-badging"></a>Compatibilidad con distintivos de notificación
 
+Si quieres que los contactos anclados a la barra de tareas se identifiquen cuando las nuevas notificaciones lleguen de la aplicación relacionada a dicha persona, debes incluir el parámetro **hint-people** en tus [notificaciones del sistema](https://docs.microsoft.com/en-us/windows/uwp/shell/tiles-and-notifications/adaptive-interactive-toasts) y la expresión [Notificaciones de Mis allegados](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications).
+
+![Distintivos de notificación de Contactos](images/my-people-badging.png)
+
+Para identificar un contacto, el nodo del sistema de nivel superior debe incluir el parámetro hint-people para indicar el contacto remitente o relacionado. Este parámetro puede tener cualquiera de los valores siguientes:
++ **Dirección de correo electrónico** 
+    + P. ej. mailto:johndoe@mydomain.com
++ **Número de teléfono** 
+    + P. ej. tel:888-888-8888
++ **ID remoto** 
+    + P. ej. remoteid:1234
+
+Este es un ejemplo de cómo identificar una notificación del sistema relacionada con una persona determinada:
+```XML
+<toast hint-people="mailto:johndoe@mydomain.com">
+    <visual lang="en-US">
+        <binding template="ToastText01">
+            <text>John Doe posted a comment.</text>
+        </binding>
+    </visual>
+</toast>
+```
+
+> [!NOTE]
+> Si tu aplicación utiliza las [API ContactStore](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) y la propiedad [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para vincular contactos almacenados en el PC con contactos almacenados de forma remota, es esencial que el valor de la propiedad RemoteId sea único y estable. Esto significa que el identificador remoto debe identificar de forma consistente una sola cuenta de usuario y debería contener una etiqueta única que no entre en conflicto con los identificadores remotos de otros contactos del PC, incluidos los contactos propiedad de otras aplicaciones.
+> Si no se garantiza que los identificadores remotos utilizados por tu aplicación sean únicos y estables, puedes utilizar la clase RemoteIdHelper mostrada más adelante en este tema para agregar una etiqueta única a todos tus identificadores remotos antes de agregarlos al sistema. O puedes decidir no utilizar en absoluto la propiedad RemoteId y en su lugar crear una propiedad personalizada extendida en la que almacenar los identificadores remotos de tus contactos.
 
 ## <a name="the-pinnedcontactmanager-class"></a>Clase PinnedContactManager
 
@@ -229,5 +255,8 @@ async Task PinMultipleContacts(Contact[] contacts)
 ## <a name="see-also"></a>Consulta también
 + [Uso compartido de Mis allegados](my-people-sharing.md)
 + [Notificaciones de Mis allegados](my-people-notifications.md)
++ [Vídeo de Channel 9 sobre incluir compatibilidad con Mis allegados a una aplicación](https://channel9.msdn.com/Events/Build/2017/P4056)
++ [Ejemplo de integración de Mis allegados](http://aka.ms/mypeoplebuild2017)
 + [Muestra de tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [Documentación de la clase PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
++ [Conectar la aplicación a acciones en una tarjeta de contacto](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

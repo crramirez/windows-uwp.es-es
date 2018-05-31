@@ -1,6 +1,6 @@
 ---
-title: "Introducción a las transformaciones"
-description: "Las transformaciones matriciales controlan muchos de los cálculos de bajo nivel de los gráficos 3D."
+title: Introducción a las transformaciones
+description: Las transformaciones matriciales controlan muchos de los cálculos de bajo nivel de los gráficos 3D.
 ms.assetid: B5220EE8-2533-4B55-BF58-A3F9F612B977
 author: michaelfromredmond
 ms.author: mithom
@@ -10,16 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 02c23d7ff41f45edcb2a1f4f0ae8b18c25b9843f
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 32beeae8d2398457311a14fa53afe330acdc75f2
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/03/2018
+ms.locfileid: "1700851"
 ---
 # <a name="transform-overview"></a>Introducción a las transformaciones
 
-
-\[Parte de la información hace referencia a la versión preliminar del producto, que puede sufrir modificaciones importantes antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, respecto a la información que se ofrece aquí.\]
 
 Las transformaciones matriciales controlan muchos de los cálculos de bajo nivel de los gráficos 3D.
 

@@ -1,6 +1,6 @@
 ---
 author: PatrickFarley
-Description: "Obtén información sobre cómo usar la eficaz característica Visits Tracking para un seguimiento de ubicación más práctico."
+Description: Learn how to use the powerful Visits Tracking feature for more practical location tracking.
 title: Directrices para usar Visits tracking
 ms.assetid: 0c101684-48a9-4592-9ed5-6c20f3b830f2
 ms.author: pafarley
@@ -8,13 +8,14 @@ ms.date: 05/18/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, mapa, ubicación, geovisit, geovisits"
-localizationpriority: medium
-ms.openlocfilehash: 51dadf59508ce2e0bac91a78fc1f69187be075fe
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+keywords: windows 10, uwp, mapa, ubicación, geovisit, geovisits
+ms.localizationpriority: medium
+ms.openlocfilehash: 9152cf934e53557daef7d971c1d4227105cd77fe
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1675082"
 ---
 # <a name="guidelines-for-using-visits-tracking"></a>Directrices para usar Visits tracking
 
@@ -22,7 +23,7 @@ La característica Visitas simplifica el proceso de seguimiento de ubicación pa
 
 ## <a name="preliminary-setup"></a>Configuración preliminar
 
-Antes de ir más allá, asegúrate de que tu aplicación puede tener acceso a la ubicación del dispositivo. Tendrás que declarar la funcionalidad `Location` en el manifiesto y llamar al método **[Geolocator.RequestAccessAsync](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator#Windows_Devices_Geolocation_Geolocator_RequestAccessAsync)** para asegurarte de que los usuarios dan permisos a la ubicación de la aplicación. Consulta [Obtener la ubicación del usuario](get-location.md) para obtener más información sobre cómo hacerlo. 
+Antes de ir más allá, asegúrate de que tu aplicación puede tener acceso a la ubicación del dispositivo. Tendrás que declarar la funcionalidad `Location` en el manifiesto y llamar al método **[Geolocator.RequestAccessAsync](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator.RequestAccessAsync)** para asegurarte de que los usuarios dan permisos a la ubicación de la aplicación. Consulta [Obtener la ubicación del usuario](get-location.md) para obtener más información sobre cómo hacerlo. 
 
 Recuerda agregar el espacio de nombres `Geolocation` a la clase. Esto será necesario para que todos los fragmentos de código de esta guía funcionen.
 

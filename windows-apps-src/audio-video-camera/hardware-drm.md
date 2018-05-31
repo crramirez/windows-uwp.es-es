@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
-description: "En este tema se ofrece una descripción general sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware de PlayReady a una aplicación para la Plataforma universal de Windows (UWP)."
+description: En este tema se ofrece una descripción general sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware de PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
 title: DRM de hardware
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,17 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 98e1732b3c32f302a37899c58e94f7342f8221f0
-ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.localizationpriority: medium
+ms.openlocfilehash: 63dfd179fbc90be41b162d31e52e5c6b25956323
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691904"
 ---
 # <a name="hardware-drm"></a>DRM de hardware
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-En este tema se ofrece una descripción general sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
+En este tema se ofrece una introducción sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware de PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
 
 > [!NOTE] 
 > La DRM basada en hardware PlayReady se admite en una gran variedad de dispositivos, incluidos dispositivos Windows y que no son Windows, como televisores, teléfonos y tabletas. Para que un dispositivo Windows admita la DRM de hardware PlayReady, debe ejecutar Windows10 y tener una configuración de hardware compatible.
@@ -94,13 +95,25 @@ En esta sección se describe cómo detectar qué tipo de DRM de hardware se admi
 
 Puedes usar el método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) para determinar si el sistema admite una característica específica de DRM de hardware. Por ejemplo:
 
-```cpp
-boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures enum);
+```csharp
+bool isFeatureSupported = PlayReadyStatics.CheckSupportedHardware(PlayReadyHardwareDRMFeatures.HEVC);
 ```
 
 La enumeración [**PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/library/windows/apps/dn986265) contiene la lista válida de los valores de características de DRM de hardware que se pueden consultar. Para determinar si se admite DRM de hardware, usa el miembro **HardwareDRM** en la consulta. Para determinar si el hardware admite el códec de codificación de vídeo de alta eficiencia (HEVC)/H.265, usa el miembro **HEVC** en la consulta.
 
 También puedes usar la propiedad [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](https://msdn.microsoft.com/library/windows/apps/windows.media.protection.playready.playreadystatics.playreadycertificatesecuritylevel.aspx) para conseguir el nivel de seguridad del certificado de cliente para determinar si se admite DRM de hardware. A menos que el nivel de seguridad del certificado devuelto sea mayor o igual a 3000, o bien el cliente no está individualizado o aprovisionado (en cuyo caso esta propiedad devuelve 0) o DRM de hardware no está en uso (en cuyo caso esta propiedad devuelve un valor que es menor de 3.000).
 
-## <a name="see-also"></a>Consulta también
+### <a name="detecting-support-for-aes128cbc-hardware-drm"></a>Detección de la compatibilidad para DRM de hardware AES128CBC
+A partir de Windows 10, versión 1709, para detectar la compatibilidad para el cifrado de hardware AES128CBC en un dispositivo, llama a **[PlayReadyStatics.CheckSupportedHardware](https://msdn.microsoft.com/library/windows/apps/dn986441)** y especifica el valor de enumeración [**PlayReadyHardwareDRMFeatures.Aes128Cbc**](https://msdn.microsoft.com/library/windows/apps/dn986265). En versiones anteriores de Windows 10, la especificación de este valor hará que se genere una excepción. Por este motivo, debes comprobar la presencia del valor de enumeración llamando a **[ApiInformation.IsApiContractPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent)** y especificando la versión 5 de contrato principal antes de llamar a **CheckSupportedHardware**.
+
+```csharp
+bool supportsAes128Cbc = ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 5);
+
+if (supportsAes128Cbc)
+{
+    supportsAes128Cbc = PlayReadyStatics.CheckSupportedHardware(PlayReadyHardwareDRMFeatures.Aes128Cbc);
+}
+```
+
+## <a name="see-also"></a>Ver también
 - [DRM de PlayReady](playready-client-sdk.md)

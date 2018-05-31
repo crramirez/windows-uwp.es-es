@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: Controlar una tarea en segundo plano cancelada
-description: "Aprende a crear una tarea en segundo plano que reconozca solicitudes de cancelación y detenga el trabajo, y que informe de la cancelación a la aplicación a través del almacenamiento persistente."
+description: Aprende a crear una tarea en segundo plano que reconozca solicitudes de cancelación y detenga el trabajo, y que informe de la cancelación a la aplicación a través del almacenamiento persistente.
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,13 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 41a089ca2cd5269204e3f67df8fed7081ce57ff9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 767280b3f3a073a55a4f489fd99229e42dd8140f
+ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/19/2018
+ms.locfileid: "1664848"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Controlar una tarea en segundo plano cancelada
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -27,7 +30,7 @@ Aprende a crear una tarea en segundo plano que reconozca una solicitud de cancel
 
 En este tema se da por hecho que ya has creado una clase de tarea en segundo plano, incluido el método Run que se usa como punto de entrada de la tarea en segundo plano. Para comenzar rápidamente a crear una tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md) o [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md). Para obtener información más detallada acerca de las condiciones y los desencadenadores, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
-Este tema también se aplica a las tareas en segundo plano dentro de proceso. Pero, en lugar del método Run(), sustituye OnBackgroundActivated(). Las tareas en segundo plano dentro de proceso no requieren que uses almacenamiento persistente para señalar la cancelación porque puedes comunicarla con el estado de la aplicación dado que la tarea en segundo plano se ejecuta en el mismo proceso que la aplicación en primer plano.
+Este tema también se aplica a las tareas en segundo plano dentro de proceso. Pero, en lugar del método **Run()**, sustituye **OnBackgroundActivated()**. Las tareas en segundo plano dentro de proceso no requieren que uses almacenamiento persistente para señalar la cancelación porque puedes comunicarla con el estado de la aplicación dado que la tarea en segundo plano se ejecuta en el mismo proceso que la aplicación en primer plano.
 
 ## <a name="use-the-oncanceled-method-to-recognize-cancellation-requests"></a>Usar el método OnCanceled para reconocer solicitudes de cancelación
 
@@ -35,7 +38,7 @@ Escribe un método para controlar el evento de cancelación.
 
 > **Nota** Para todas las familias de dispositivos (excepto la de equipos de escritorio), si el dispositivo dispone de poca memoria, las tareas en segundo plano pueden finalizarse. Si no se expone una excepción de falta de memoria o la aplicación no la controla, la tarea en segundo plano finalizará sin que se muestre ninguna advertencia y sin que se genere el evento OnCanceled. Esto contribuye a garantizar la experiencia del usuario de la aplicación en primer plano. La tarea en segundo plano debe estar diseñada para controlar este escenario.
 
-Crea un método llamado OnCanceled como se describe a continuación. Este método es el punto de entrada al que llama Windows Runtime cuando se realiza una solicitud de cancelación para la tarea en segundo plano.
+Crea un método llamado **OnCanceled** como se describe a continuación. Este método es el punto de entrada al que llama Windows Runtime cuando se realiza una solicitud de cancelación para la tarea en segundo plano.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -90,7 +93,7 @@ El método OnCanceled del [ejemplo de tarea en segundo plano]( http://go.microso
 >     }
 > ```
 
-En el método Run de la tarea en segundo plano, registra el método del controlador de eventos OnCanceled antes de empezar a trabajar. En una tarea en segundo plano dentro de proceso, puedes hacer este registro como parte de la inicialización de la aplicación. Por ejemplo, usa la siguiente línea de código:
+En el método Run de la tarea en segundo plano, registra el método del controlador de eventos **OnCanceled** antes de empezar a trabajar. En una tarea en segundo plano dentro de proceso, puedes hacer este registro como parte de la inicialización de la aplicación. Por ejemplo, usa la siguiente línea de código:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -102,7 +105,7 @@ En el método Run de la tarea en segundo plano, registra el método del controla
 
 ## <a name="handle-cancellation-by-exiting-your-background-task"></a>Controlar la cancelación al salir de la tarea en segundo plano
 
-Cuando se recibe una solicitud de cancelación, el método que realiza el trabajo en segundo plano necesita detener el trabajo y finalizarse cuando **\_cancelRequested** se establezca en **true**. Para tareas en segundo plano dentro de proceso, esto significa volver del método `OnBackgroundActivated()`. Para tareas en segundo plano fuera de proceso, esto significa volver del método `Run()`.
+Cuando se recibe una solicitud de cancelación, el método que realiza el trabajo en segundo plano necesita detener el trabajo y finalizarse cuando **\_cancelRequested** se establezca en **true**. Para tareas en segundo plano en proceso, esto significa volver del método **OnBackgroundActivated()**. Para tareas en segundo plano fuera de proceso, esto significa volver del método **Run()**.
 
 Modifica el código de la clase de tarea en segundo plano para comprobar la variable de marca mientras está en funcionamiento. Si el valor **\_cancelRequested** está establecido en true, detén el trabajo.
 
@@ -331,20 +334,18 @@ El método Run completo y el código de la devolución de llamada del temporizad
 > }
 > ```
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+## <a name="related-topics"></a>Artículos relacionados
 
-## <a name="related-topics"></a>Temas relacionados
-
-* [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
-* [Crear y registrar una tarea en segundo plano fuera del proceso.](create-and-register-a-background-task.md)
-* [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
-* [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
-* [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
-* [Registrar una tarea en segundo plano](register-a-background-task.md)
-* [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
-* [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
-* [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
-* [Actualizar un icono dinámico desde una tarea en segundo plano](update-a-live-tile-from-a-background-task.md)
-* [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
-* [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+- [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
+- [Crear y registrar una tarea en segundo plano fuera del proceso.](create-and-register-a-background-task.md)
+- [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
+- [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
+- [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
+- [Registrar una tarea en segundo plano](register-a-background-task.md)
+- [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
+- [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
+- [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
+- [Actualizar un icono dinámico desde una tarea en segundo plano](update-a-live-tile-from-a-background-task.md)
+- [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
+- [Depurar una tarea en segundo plano](debug-a-background-task.md)
+- [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)

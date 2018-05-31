@@ -1,6 +1,6 @@
 ---
 author: stevewhims
-Description: "Existen varios esquemas de URI (identificador uniforme de recursos) que puedes usar para hacer referencia a archivos que provienen del paquete de la aplicación, las carpetas de datos de la aplicación o la nube. También puedes usar un esquema de URI para hacer referencia a cadenas cargadas desde archivos de recursos (.resw) de la aplicación."
+Description: There are several URI (Uniform Resource Identifier) schemes that you can use to refer to files that come from your app's package, your app's data folders, or the cloud. You can also use a URI scheme to refer to strings loaded from your app's Resources Files (.resw).
 title: Esquemas de URI
 template: detail.hbs
 ms.author: stwhi
@@ -9,26 +9,25 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
-localizationpriority: medium
-ms.openlocfilehash: 7cbd4a6fea3ca7d179eae9857c6e98010d11439e
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+ms.localizationpriority: medium
+ms.openlocfilehash: 445f053b0243f1b9c2e54e6e9fcfa332d49cbec5
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1674522"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="uri-schemes"></a>Esquemas de URI
 
 Existen varios esquemas de URI (identificador uniforme de recursos) que puedes usar para hacer referencia a archivos que provienen del paquete de la aplicación, las carpetas de datos de la aplicación o la nube. También puedes usar un esquema de URI para hacer referencia a cadenas cargadas desde archivos de recursos (.resw) de la aplicación. Puedes usar estos esquemas de URI en el código, en el marcado XAML, en el manifiesto del paquete de la aplicación, o en la ventana y las plantillas de notificación del sistema.
 
-## <a name="common-features-of-the-uri-schemes"></a>Funciones comunes de los esquemas de URI
+## <a name="common-features-of-the-uri-schemes"></a>Características comunes de los esquemas de URI
 
-Todos los esquemas descritos en este tema siguen las reglas de esquema de URI típicas para la normalización y la recuperación de recursos. Consulta [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444) para conocer la sintaxis genérica de un URI.
+Todos los esquemas descritos en este tema siguen las reglas de esquema URI típicas para la normalización y la recuperación de recursos. Consulta [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444) para conocer la sintaxis genérica de un URI.
 
 Todos los esquemas de URI definen la parte jerárquica conforme a [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444), como los componentes de ruta y de autoridad del URI.
 
-```
+```syntax
 URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
 hier-part   = "//" authority path-abempty
             / path-absolute
@@ -36,7 +35,7 @@ hier-part   = "//" authority path-abempty
             / path-empty
 ```
 
-Esto significa que básicamente hay tres componentes de un URI. Inmediatamente después de las dos barras inclinadas deI *esquema* de URI se encuentra un componente (que puede estar vacío) denominado *autoridad *. Y, justo después del mismo, está la *ruta de acceso *. Tomando el URI `http://www.contoso.com/welcome.png` como ejemplo, el esquema es "`http://`", la autoridad es "`www.contoso.com`" y la ruta de acceso es "`/welcome.png`". Otro ejemplo es el URI `ms-appx:///logo.png`, donde los componentes de la autoridad está vacío y toma un valor predeterminado.
+Esto significa que básicamente hay tres componentes de un URI. Inmediatamente después de las dos barras inclinadas deI *esquema* de URI se encuentra un componente (que puede estar vacío) denominado *autoridad*. Y, justo después, está la *ruta de acceso*. Tomando el URI `http://www.contoso.com/welcome.png` como ejemplo, el esquema es "`http://`", la autoridad es "`www.contoso.com`" y la ruta de acceso es "`/welcome.png`". Otro ejemplo es el URI `ms-appx:///logo.png`, donde los componentes de la autoridad están vacío y toman un valor predeterminado.
 
 El procesamiento específico del esquema de los URI mencionados en este tema ignora el componente de fragmento. Durante la recuperación y la comparación de recursos, el componente de fragmento no tiene aceptación. Sin embargo, las capas por encima de una implementación específica pueden interpretar el fragmento para recuperar un recurso secundario.
 
@@ -44,13 +43,13 @@ La comparación tiene lugar byte a byte después de la normalización de todos l
 
 ## <a name="case-insensitivity-and-normalization"></a>Independencia entre mayúsculas y minúsculas y normalización
 
-Todos los esquemas de URI descritos en este tema siguen las reglas de esquema de URI (RFC 3986)típicas para la normalización y la recuperación de recursos. La forma normalizada de estos URI mantiene el uso de mayúsculas y minúsculas, y descodifica mediante el símbolo de porcentaje los caracteres RFC 3986 no reservados.
+Todos los esquemas de URI descritos en este tema siguen las reglas de esquema de URI (RFC 3986)típicas para la normalización y la recuperación de recursos. La forma normalizada de estos URI mantiene el uso de mayúsculas y minúsculas, y decodifica mediante el símbolo de porcentaje los caracteres RFC 3986 no reservados.
 
 Para todos los esquemas de URI descritos en este tema, *esquema*, *autoridad* y *ruta de acceso* no distinguen entre mayúsculas y minúsculas de manera estándar, o bien los procesa el sistema sin distinguir entre mayúsculas y minúsculas. **Nota** La única excepción a esa regla es la *autoridad* de `ms-resource`, que distingue entre mayúsculas y minúsculas.
 
 ## <a name="ms-appx-and-ms-appx-web"></a>ms-appx y ms-appx-web
 
-Usa el `ms-appx` o el esquema de URI `ms-appx-web` para hacer referencia a un archivo que procede del paquete de la aplicación (consulta [Empaquetado de aplicaciones](../packaging/index.md)). Los archivos del paquete de aplicaciones son normalmente imágenes estáticas, datos, código y archivos de distribución. El esquema `ms-appx-web` accede a los mismos archivos que `ms-appx`, pero en el compartimiento web. Para ver ejemplos y obtener más información, consulta [Hacer referencia a una imagen u otro activo de código y marcado XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code).
+Usa el `ms-appx` o el esquema de URI `ms-appx-web` para hacer referencia a un archivo que procede del paquete de la aplicación (consulta [Empaquetado de aplicaciones](../packaging/index.md)). Los archivos del paquete de aplicaciones son normalmente imágenes estáticas, datos, código y archivos de distribución. El esquema `ms-appx-web` accede a los mismos archivos que `ms-appx`, pero en el compartimiento web. Para ver ejemplos y obtener más información, consulta [Referenciar a una imagen u otro activo de código y marcado XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code).
 
 ### <a name="scheme-name-ms-appx-and-ms-appx-web"></a>Nombre de esquema (ms-appx y ms-appx-web)
 
@@ -109,14 +108,13 @@ El URI anterior puede recuperar en realidad un archivo del paquete de la aplicac
 
 Por supuesto, podrías recuperar también ese mismo archivo físico haciendo referencia al mismo directamente por su nombre completo.
 
-**XAML**
-```xml
+```xaml
 <Image Source="ms-appx:///images/fr-FR/logo.scale-100_contrast-white.png"/>
 ```
 
 El componente de ruta de acceso de `ms-appx(-web)` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. Sin embargo, cuando el sistema de archivos subyacente mediante el cual se accede al recurso distingue entre mayúsculas y minúsculas, como para NTFS, la recuperación del recurso se realiza sin distinguir entre mayúsculas y minúsculas.
 
-La forma normalizada del URI mantiene mayúsculas y minúsculas y descodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y '”' (carácter de comilla doble) deben codificarse con símbolos de porcentaje en las rutas de acceso para representar datos como los nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se descodifican antes de la recuperación. De esta manera, para recuperar un archivo llamado Hello#World.html, usa este URI.
+La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y '”' (carácter de comilla doble) deben codificarse con caracteres de porcentaje en las rutas de acceso para representar datos como los nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. De esta manera, para recuperar un archivo llamado Hello#World.html, usa este URI.
 
 ```xml
 ms-appx:///Hello%23World.html
@@ -128,9 +126,9 @@ Los parámetros de consulta se ignoran durante la recuperación de recursos. La 
 
 ## <a name="ms-appdata"></a>ms-appdata
 
-Usa el esquema de URI `ms-appdata` para hacer referencia a archivos provenientes de las carpetas de datos temporales, móviles y locales de la aplicación. Para más información sobre estas carpetas de datos de la aplicación, consulta [Almacenar y recuperar la configuración y otros datos de aplicaciones](../app-settings/store-and-retrieve-app-data.md).
+Usa el esquema de URI `ms-appdata` para hacer referencia a archivos provenientes de las carpetas de datos temporales, móviles y locales de la aplicación. Para más información sobre estas carpetas de datos de la aplicación, consulta [Almacenar y recuperar la configuración y otros datos de aplicaciones](../design/app-settings/store-and-retrieve-app-data.md).
 
-El esquema de URI `ms-appdata` no realiza la negociación de contenido en tiempo de ejecución que hacen [ms-appx y ms-appx-web](#ms-appx-and-ms-appx-web). Pero puedes responder al contenido de [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_QualifierValues) y cargar los activos adecuados desde los datos de la aplicación mediante sus nombre completos de archivo físico del URI.
+El esquema de URI `ms-appdata` no realiza la negociación de contenido en tiempo de ejecución que hacen [ms-appx y ms-appx-web](#ms-appx-and-ms-appx-web). Pero puedes responder al contenido de [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) y cargar los activos adecuados desde los datos de la aplicación mediante sus nombre completos de archivo físico del URI.
 
 ### <a name="scheme-name-ms-appdata"></a>Nombre de esquema (ms-appdata)
 
@@ -189,7 +187,7 @@ ms-appdata:///roaming/
 
 El componente de ruta de acceso de `ms-appdata` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. Sin embargo, cuando el sistema de archivos subyacente mediante el cual se accede al recurso distingue entre mayúsculas y minúsculas, como para NTFS, la recuperación del recurso se realiza sin distinguir entre mayúsculas y minúsculas.
 
-La forma normalizada del URI mantiene mayúsculas y minúsculas y descodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y '”' (carácter de comilla doble) deben codificarse con caracteres de porcentaje en las rutas de acceso para representar datos como los nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se descodifican antes de la recuperación. De esta manera, para recuperar un archivo local denominado Hello#World.html, usa este URI.
+La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y '”' (carácter de comilla doble) deben codificarse con caracteres de porcentaje en las rutas de acceso para representar datos como los nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. De esta manera, para recuperar un archivo local denominado Hello#World.html, usa este URI.
 
 ```xml
 ms-appdata://local/Hello%23World.html
@@ -253,9 +251,9 @@ ms-resource://john:password@contoso.myapp:8080/Resources/String1
 
 ### <a name="path-ms-resource"></a>Ruta (ms-resource)
 
-La ruta de acceso identifica la ubicación jerárquica del subárbol [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live) (consulta el [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)) y [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResourcebranch=live) dentro de él. En general, esto corresponde al nombre de archivo (no se incluye la extensión) de un archivo de recursos (.resw) y el identificador de un recurso de cadena dentro de él.
+La ruta de acceso identifica la ubicación jerárquica del subárbol [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live) (consulta el [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)) y [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live) dentro de él. En general, esto corresponde al nombre de archivo (no se incluye la extensión) de un archivo de recursos (.resw) y el identificador de un recurso de cadena dentro de él.
 
-Para obtener ejemplos y más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md) y [Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto](tile-toast-language-scale-contrast.md).
+Para obtener ejemplos y más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md) y [Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).
 
 El componente de ruta de acceso de `ms-resource` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. No es así cuando la recuperación subyacente efectúa un [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) con *ignoreCase* establecido en `true`.
 
@@ -276,7 +274,7 @@ Los desarrolladores de componentes específicos con capas por encima de este an�
 * [Identificador uniforme de recursos (URI): Sintaxis genérica](http://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [Empaquetado de aplicaciones](../packaging/index.md)
 * [Hacer referencia a una imagen u otros activos de código y marcado XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
-* [Almacenar y recuperar la configuración y otros datos de aplicación](../app-settings/store-and-retrieve-app-data.md)
+* [Almacenar y recuperar la configuración y otros datos de aplicación](../design/app-settings/store-and-retrieve-app-data.md)
 * [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md)
 * [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)
-* [Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.](tile-toast-language-scale-contrast.md)
+* [Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

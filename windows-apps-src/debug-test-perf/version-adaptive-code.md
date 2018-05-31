@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-title: "Código adaptativo para versiones"
+title: Código adaptativo para versiones
 description: Usa la clase ApiInformation para aprovechar las nuevas API mientras mantienes la compatibilidad con versiones anteriores.
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -9,11 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
-ms.openlocfilehash: d5b9a3b02c5acbb2ad7bcd00b9af4f7d6edd91de
-ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.localizationpriority: medium
+ms.openlocfilehash: f9a5425e0d14b2ded4d14a986a622a0aceda1b3c
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 04/03/2018
+ms.locfileid: "1700771"
 ---
 # <a name="version-adaptive-code"></a>Código adaptativo para versiones
 
@@ -25,7 +27,7 @@ Para obtener más información general acerca de ApiInformation, contratos de AP
 
 Se usa la clase [Windows.Foundation.Metadata.ApiInformation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx) en una condición del código para probar la presencia de la API que se desee llamar. Esta condición se evaluará donde se ejecute la aplicación, pero solo se evaluará como **true** en los dispositivos en los que la API esté presente y en los que, por lo tanto, se encuentre disponible para llamarla. Esto permite escribir código adaptativo para versiones con el fin de crear aplicaciones que usen las API que solo estén disponibles en algunas versiones del sistema operativo.
 
-Aquí analizamos ejemplos específicos para orientar a nuevas características en Windows Insider Preview. Para obtener una descripción general sobre el uso de **ApiInformation**, consulta la [Guía de aplicaciones para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) y la entrada del blog [Dynamically detecting features with API contracts](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (Detección dinámica de funciones con contratos de API).
+Aquí analizamos ejemplos específicos para orientar a nuevas características en Windows Insider Preview. Para obtener una descripción general sobre el uso de **ApiInformation**, consulta [Device families overview](https://docs.microsoft.com/en-us/uwp/extension-sdks/device-families-overview#writing-code) (Información general sobre las familias de dispositivos) y la entrada de blog [Dynamically detecting features with API contracts](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (Detección dinámica de funciones con contratos de API).
 
 > [!TIP]
 > Si se realizan numerosas comprobaciones de API en tiempo de ejecución, el rendimiento de la aplicación puede verse afectado. En estos ejemplos te mostramos las comprobaciones incorporadas. En el código de producción, debes realizar la comprobación una vez, almacenar el resultado en caché y, a continuación, utilizar el resultado en caché en toda la aplicación. 
@@ -447,5 +449,5 @@ class IsEnumPresentTrigger : StateTriggerBase
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Guía de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [Información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 - [Detección dinámica de funciones con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)

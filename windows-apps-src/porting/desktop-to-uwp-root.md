@@ -11,11 +11,12 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: high
-ms.openlocfilehash: a16f86512a3c33055cb4825966282f1487ea158d
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 3c4285d6717c27e78c13ac6588fe634c566138d9
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832376"
 ---
 # <a name="desktop-bridge"></a>Puente de dispositivo de escritorio
 
@@ -233,7 +234,7 @@ Para probar la aplicación en una configuración realista mientras la preparas p
 
 Para que la aplicación tenga posibilidades de publicarse en Microsoft Store u obtener la [certificación de Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666), debes validarla y probarla localmente antes de enviarla para su certificación.
 
-Si estás usando DAC para empaquetar la aplicación, puedes usar la nueva marca ``-Verify`` para validar el paquete con los requisitos del Puente de dispositivo de escritorio y la Tienda. Consulta [Empaquetar una aplicación, firmarla y prepararla para su envío a la Tienda](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters).
+Si estás usando DAC para empaquetar la aplicación, puedes usar la nueva marca ``-Verify`` para validar el paquete con los requisitos del Puente de dispositivo de escritorio y la Store. Consulta [Empaquetar una aplicación, firmarla y prepararla para su envío a la Store](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters).
 
 Si usas Visual Studio, puedes validar la aplicación desde el asistente **Crear paquetes de aplicaciones**. Consulta [Crear un archivo de carga del paquete de aplicación](../packaging/packaging-uwp-apps.md#create-an-app-package-upload-file).
 

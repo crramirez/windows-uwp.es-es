@@ -1,19 +1,21 @@
 ---
 author: GrantMeStrength
 ms.assetid: 3a17e682-40be-41b4-8bd3-fbf0b15259d6
-title: Create a "Hello, world" app (JS)
-description: This tutorial teaches you how to use JavaScript and HTML to create a simple &\#0034;Hello, world&\#0034; app that targets the Universal Windows Platform (UWP) on Windows 10.
+title: Crear una aplicación Hello, world (JS)
+description: Este tutorial te enseña a usar JavaScript y HTML para crear una aplicación sencilla Hello, world para la Plataforma universal de Windows (UWP) en Windows 10.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: bf63108a7afd5558b57a03ffcdd251c2460d3a9a
-ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+keywords: Windows 10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: b541f2388fd4980af4b405a89ee6a04b700a3e84
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1692746"
 ---
 # <a name="create-a-hello-world-app-js"></a>Crear una aplicación Hello, world (JS)
 
@@ -31,7 +33,7 @@ Aquí aprenderás a:
 
 ## <a name="before-you-start"></a>Antes de comenzar...
 
--   [¿Qué es una aplicación universal de Windows](whats-a-uwp.md)?
+-   [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md).
 -   Para realizar este tutorial, debes tener Windows10 y Visual Studio2017. [Prepárate](get-set-up.md).
 -   También se supone que estás usando el diseño de ventana predeterminado de Visual Studio. Si cambias el diseño predeterminado, puedes restablecerlo en el menú **Ventana** con el comando **Restablecer diseño de la ventana**.
 
@@ -83,7 +85,7 @@ Para ver y editar un archivo de tu proyecto, haz doble clic en el archivo en el 
 
 *Conjunto de imágenes de logotipo*
 -   Assets/Square150x150Logo.scale-200.png representa tu aplicación en el menú Inicio.
--   Assets/StoreLogo.png representa tu aplicación en la Tienda Windows.
+-   Assets/StoreLogo.png representa tu aplicación en Microsoft Store.
 -   Assets/SplashScreen.scale-200.png es la pantalla de presentación que se muestra cuando se inicia la aplicación.
 
 ## <a name="step-2-adding-a-button"></a>Paso 2: Adición de un botón
@@ -159,7 +161,7 @@ Ahora puedes ejecutar la aplicación presionando F5. La aplicación se cargará 
 
 Enhorabuena, has creado una aplicación de JavaScript para Windows10 y la UWP. Este es un ejemplo extremadamente sencillo; sin embargo, ya puedes empezar a agregar tus bibliotecas de JavaScript y marcos favoritos para crear tu propia aplicación. Y como se trata de una aplicación para UWP, puedes publicarla en la Tienda. Para obtener ejemplos de cómo agregar marcos de terceros, consulta estos proyectos:
 
-* [Un sencillo juego en 2D para UWP para la Tienda Windows, escrito en JavaScript y CreateJS](get-started-tutorial-game-js2d.md)
-* [Un juego en 3D para UWP para la Tienda Windows, escrito en JavaScript y threeJS](get-started-tutorial-game-js3d.md)
+* [Un sencillo juego en 2D para UWP para Microsoft Store, escrito en JavaScript y CreateJS](get-started-tutorial-game-js2d.md)
+* [Un juego en 3D para UWP para Microsoft Store, escrito en JavaScript y threeJS](get-started-tutorial-game-js3d.md)
 
 

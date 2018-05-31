@@ -1,30 +1,34 @@
 ---
 author: mcleanbyron
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
-description: "Usa este método en la API de promociones de la Tienda Windows para administrar los perfiles objetivo para las campañas de anuncios promocionales."
+description: Usa este método en la API de promociones de Microsoft Store para administrar los perfiles objetivo para las campañas de anuncios promocionales.
 title: Administrar perfiles objetivo
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store promotions API, API de promociones de la Tienda Windows, ad campaigns, campañas de anuncios"
-ms.openlocfilehash: 30fb160e389edd18fb3782d332b5603fc6207757
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
+ms.localizationpriority: medium
+ms.openlocfilehash: 692da5c2cc45e64d3feeab6136c1e50c72a7b0b0
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1664195"
 ---
 # <a name="manage-targeting-profiles"></a>Administrar perfiles objetivo
 
 
-Usa estos métodos en la API de promociones de la Tienda Windows para seleccionar los usuarios, las zonas geográficas y los tipos de inventario que quieres como destino de cada línea de entrega de una campaña de anuncios promocionales. Los perfiles de destino se pueden crear y volver a usar en varias líneas de entrega.
+Usa estos métodos en la API de promociones de Microsoft Store para seleccionar los usuarios, las zonas geográficas y los tipos de inventario que quieres como destino de cada línea de entrega de una campaña de anuncios promocionales. Los perfiles de destino se pueden crear y volver a usar en varias líneas de entrega.
 
-Para obtener más información sobre la relación entre los perfiles de destino y las campañas de anuncios, las líneas de entrega y los creativos, consulta [Run ad campaigns using Windows Store services (Ejecutar campañas de anuncios con servicios de la Tienda Windows)](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
+Para obtener más información sobre la relación entre los perfiles objetivo y las campañas de anuncios, las líneas de entrega y los creativos, consulta [Ejecutar campañas de anuncios con los servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar estos métodos, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
@@ -37,7 +41,7 @@ Estos métodos tienen los siguientes URI.
 | PUT    | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/targeting-profile/{targetingProfileId}``` |  Edita el perfil de destino especificado por *targetingProfileId*.  |
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/targeting-profile/{targetingProfileId}``` |  Obtiene el perfil de destino especificado por *targetingProfileId*.  |
 
-<span/> 
+
 ### <a name="header"></a>Encabezado
 
 | Encabezado        | Tipo   | Descripción         |
@@ -46,12 +50,11 @@ Estos métodos tienen los siguientes URI.
 | Id. de seguimiento   | GUID   | Opcional. Un id. que realiza un seguimiento del flujo de llamadas.                                  |
 
 
-<span/>
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
 Los métodos POST y PUT necesitan un cuerpo de la solicitud JSON con los campos obligatorios de un objeto de [perfil de destino](#targeting-profile) y los campos adicionales que quieras establecer o cambiar.
 
-<span/>
+
 ### <a name="request-examples"></a>Ejemplos de solicitud
 
 En el siguiente ejemplo se muestra cómo llamar al método POST para crear un perfil de destino.
@@ -93,6 +96,7 @@ Authorization: Bearer <your access token>
 ```
 
 <span/>
+
 ## <a name="response"></a>Respuesta
 
 Estos métodos devuelven un cuerpo de respuesta JSON con un objeto de [perfil de destino](#targeting-profile) que contiene información sobre el perfil de destino que se creó, actualizó o recuperó. En el siguiente ejemplo se muestra un cuerpo de respuesta para estos métodos.
@@ -134,6 +138,7 @@ Estos métodos devuelven un cuerpo de respuesta JSON con un objeto de [perfil de
 ```
 
 <span id="targeting-profile"/>
+
 ## <a name="targeting-profile-object"></a>Objeto de perfil de destino
 
 Los cuerpos de solicitud y respuesta para estos métodos contienen los siguientes campos. En esta tabla se muestran los campos que son de solo lectura (es decir, no se pueden cambiar en el método PUT) y los campos que son obligatorios en el cuerpo de la solicitud para el método POST.
@@ -152,6 +157,7 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 
 
 <span id="age-values"/>
+
 ### <a name="age-values"></a>Valores de edad
 
 El campo *age* del objeto [TargetingProfile](#targeting-profile) contiene uno o varios de los siguientes enteros que identifican los intervalos de edad de los usuarios de destino.
@@ -188,6 +194,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta para este método.
 ```
 
 <span id="gender-values"/>
+
 ### <a name="gender-values"></a>Valores de sexo
 
 El campo *gender* del objeto [TargetingProfile](#targeting-profile) contiene uno o varios de los siguientes enteros que identifican los sexos de los usuarios de destino.
@@ -219,6 +226,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta para este método.
 
 
 <span id="osversion-values"/>
+
 ### <a name="os-version-values"></a>Valores de versión de sistema operativo
 
 El campo *osVersion* del objeto [TargetingProfile](#targeting-profile) contiene uno o varios de los siguientes enteros que identifican las versiones del sistema operativo de los usuarios de destino.
@@ -266,6 +274,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta para este método.
 
 
 <span id="devicetype-values"/>
+
 ### <a name="device-type-values"></a>Valores de tipo de dispositivo
 
 El campo *deviceType* del objeto [TargetingProfile](#targeting-profile) contiene uno o varios de los siguientes enteros que identifican los tipos de dispositivos de los usuarios de destino.
@@ -297,6 +306,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta para este método.
 
 
 <span id="supplytype-values"/>
+
 ### <a name="supply-type-values"></a>Valores de tipo de suministro
 
 El campo *supplyType* del objeto [TargetingProfile](#targeting-profile) contiene uno o varios de los siguientes enteros que identifican el tipo de inventario en el que se mostrarán los anuncios de la campaña.
@@ -327,6 +337,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta para este método.
 ```
 
 <span id="country-code-values"/>
+
 ### <a name="country-code-values"></a>Valores de código de país
 
 El campo *country* del objeto [TargetingProfile](#targeting-profile) contiene uno o varios de los siguientes enteros que identifican los códigos de país [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) de los usuarios de destino.
@@ -612,7 +623,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta para este método.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejecutar campañas de anuncios con los servicios de la Tienda Windows](run-ad-campaigns-using-windows-store-services.md)
+* [Ejecutar campañas de anuncios con los servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
 * [Administrar campañas de anuncios](manage-ad-campaigns.md)
 * [Administrar líneas de entrega de campañas de anuncios](manage-delivery-lines-for-ad-campaigns.md)
 * [Administrar creativos de campañas de anuncios](manage-creatives-for-ad-campaigns.md)

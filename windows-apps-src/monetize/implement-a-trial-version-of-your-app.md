@@ -1,28 +1,30 @@
 ---
 author: mcleanbyron
 ms.assetid: 571697B7-6064-4C50-9A68-1374F2C3F931
-description: "Aprende a usar el espacio de nombres Windows.Services.Store para implementar una versión de prueba de tu aplicación."
-title: "Implementar una versión de prueba de la aplicación"
-keywords: "Windows 10, uwp, prueba, compras desde la aplicación, Windows.Services.Store"
+description: Aprende a usar el espacio de nombres Windows.Services.Store para implementar una versión de prueba de tu aplicación.
+title: Implementar una versión de prueba de la aplicación
+keywords: Windows 10, uwp, prueba, compras desde la aplicación, Windows.Services.Store
 ms.author: mcleans
-ms.date: 06/26/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 2419c78e74a69d986ae23e70ced86683a7543cb4
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.localizationpriority: medium
+ms.openlocfilehash: 402d2c584732611d79a74fbc24e11f590e029171
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690101"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementar una versión de prueba de la aplicación
 
 Si configuras la aplicación como una [prueba gratuita en el panel del Centro de desarrollo de Windows](../publish/set-app-pricing-and-availability.md#free-trial) para que los clientes pueden usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando ciertas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
 
-En este artículo se muestra cómo usar miembros de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para determinar si el usuario tiene una licencia de prueba para tu aplicación y recibir una notificación si cambia el estado de la licencia mientras se ejecuta la aplicación. Este espacio de nombres está disponible para aplicaciones dirigidas a Windows 10, versión 1607 o posterior. 
+En este artículo se muestra cómo usar miembros de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para determinar si el usuario tiene una licencia de prueba para tu aplicación y recibir una notificación si cambia el estado de la licencia mientras se ejecuta la aplicación. 
 
 > [!NOTE]
-> Este artículo es aplicable a las aplicaciones dirigidas a Windows 10, versión 1607 o posterior. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [este artículo](exclude-or-limit-features-in-a-trial-version-of-your-app.md).
+> El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [este artículo](exclude-or-limit-features-in-a-trial-version-of-your-app.md).
 
 ## <a name="guidelines-for-implementing-a-trial-version"></a>Directrices para implementar una versión de prueba
 
@@ -47,7 +49,7 @@ Para la mayoría de las aplicaciones que no sean juegos, definir una fecha de ex
 
 -   **La licencia de prueba expira antes de que se inicie la aplicación**
 
-    Si la prueba expira antes de que el usuario inicie la aplicación, esta no se iniciará. En lugar de ello, aparecerá un cuadro de diálogo y los usuarios tendrán la posibilidad de comprar tu aplicación en la Tienda Windows.
+    Si la prueba expira antes de que el usuario inicie la aplicación, esta no se iniciará. En lugar de ello, aparecerá un cuadro de diálogo y los usuarios tendrán la posibilidad de comprar tu aplicación en la Store Windows.
 
 -   **El cliente compra la aplicación mientras se está ejecutando**
 
@@ -62,8 +64,8 @@ Explica cómo se comportará la aplicación durante el período de prueba gratui
 ## <a name="prerequisites"></a>Requisitos previos
 
 Este ejemplo tiene los siguientes requisitos previos:
-* Un proyecto de Visual Studio de una aplicación para la Plataforma universal de Windows (UWP) destinado a Windows 10, versión 1607 o posterior.
-* Has creado una aplicación en el panel del Centro de desarrollo de Windows que está configurada como una [prueba gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) sin límite de tiempo y esta aplicación está publicada en la Tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Tienda mientras la pruebas. Para obtener más información, consulta la [guía para prueba](in-app-purchases-and-trials.md#testing).
+* Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o un versión posterior.
+* Has creado una aplicación en el panel del Centro de desarrollo de Windows que está configurada como una [prueba gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) sin límite de tiempo y esta aplicación está publicada en la Store. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en Microsoft Store mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
 
 El código de este ejemplo supone que:
 * El código se ejecuta en el contexto de una [página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contiene un elemento [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` y un elemento [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Estos objetos se usan para indicar que se está produciendo una operación asincrónica y para mostrar mensajes de salida, respectivamente.
@@ -75,14 +77,14 @@ El código de este ejemplo supone que:
 
 ## <a name="code-example"></a>Ejemplo de código
 
-Si tu aplicación se está inicializando, obtén el objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx) para esta y controla el evento [OfflineLicensesChanged](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.offlinelicenseschanged.aspx) para recibir notificaciones si cambia la licencia mientras la aplicación se está ejecutando. Por ejemplo, la licencia de la aplicación puede cambiar si expira el período de prueba o si el cliente compra la aplicación a través de una Tienda. Si la licencia cambia, obtén la nueva licencia y habilita o deshabilita una característica de tu aplicación en consecuencia.
+Si tu aplicación se está inicializando, obtén el objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx) para esta y controla el evento [OfflineLicensesChanged](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.offlinelicenseschanged) para recibir notificaciones si cambia la licencia mientras la aplicación se está ejecutando. Por ejemplo, la licencia de la aplicación puede cambiar si expira el período de prueba o si el cliente compra la aplicación a través de una Tienda. Si la licencia cambia, obtén la nueva licencia y habilita o deshabilita una característica de tu aplicación en consecuencia.
 
 En este punto, si el usuario compró la aplicación, se recomienda proporcionar información al usuario sobre los cambios de estado de licencia. Es posible que necesites pedirle al usuario que reinicie la aplicación, si así la has codificado. Esta transición debe ser lo más sencilla y fácil posible.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
 
-Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para una aplicación de muestra completa, consulta la [muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -91,4 +93,4 @@ Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tie
 * [Obtener información de licencia para aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar compras desde la aplicación para aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md)
-* [Muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
+* [Muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)

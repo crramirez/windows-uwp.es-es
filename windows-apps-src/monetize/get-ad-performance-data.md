@@ -1,22 +1,26 @@
 ---
 author: mcleanbyron
 ms.assetid: 235EBA39-8F64-4499-9833-4CCA9C737477
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de rendimiento de los anuncios de una aplicación durante un intervalo de fechas concreto y según otros filtros opcionales."
+description: Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados de rendimiento de los anuncios de una aplicación durante un intervalo de fechas concreto y según otros filtros opcionales.
 title: Obtener los datos de rendimiento de los anuncios
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, anuncios, ads, rendimiento, performance"
-ms.openlocfilehash: a4d907e60ddcd6a1ff093c9feccdefdda9551d09
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de la Store Windows, Microsoft Store analytics API, anuncios, ads, rendimiento, performance
+ms.localizationpriority: medium
+ms.openlocfilehash: 5e7439b8602f8b6900b747d26add2914f8685526
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1663608"
 ---
 # <a name="get-ad-performance-data"></a>Obtener los datos de rendimiento de los anuncios
 
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de rendimiento de los anuncios de tus aplicaciones durante un intervalo de fechas concreto y según otros filtros opcionales. Este método devuelve los datos en formato JSON.
+Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados de rendimiento de los anuncios de tus aplicaciones durante un intervalo de fechas concreto y según otros filtros opcionales. Este método devuelve los datos en formato JSON.
 
 Este método devuelve los mismos datos que proporciona el [Informe de rendimiento de la publicidad](../publish/advertising-performance-report.md) en el panel del Centro de desarrollo de Windows.
 
@@ -25,10 +29,10 @@ Este método devuelve los mismos datos que proporciona el [Informe de rendimient
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
-Para obtener más información, consulta [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md).
+Para obtener más información, consulta [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md).
 
 ## <a name="request"></a>Solicitud
 
@@ -39,7 +43,6 @@ Para obtener más información, consulta [Acceder a los datos de análisis media
 |--------|--------------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/adsperformance``` |
 
-<span />
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -47,7 +50,6 @@ Para obtener más información, consulta [Acceder a los datos de análisis media
 |---------------|--------|--------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span />
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
@@ -55,18 +57,17 @@ Para recuperar los datos de rendimiento de anuncios de una aplicación en concre
 
 | Parámetro     | Tipo   | Descripción     | Obligatorio |
 |---------------|--------|-----------------|----------|
-| applicationId   | cadena    | El identificador de la Tienda de la aplicación para la que quieres recuperar datos de rendimiento de anuncios. El identificador de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un identificador de la Tienda es 9NBLGGH4R315. |    No      |
+| applicationId   | cadena    | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que quieres recuperar datos de rendimiento de anuncios.  |    No      |
 | startDate   | fecha    | La fecha de inicio del intervalo de fechas de los datos de rendimiento de anuncios que quieres recuperar en formato AAAA/MM/DD. El valor predeterminado es la fecha 30 días posterior al día en curso. |    No      |
 | endDate   | fecha    | La fecha de finalización del intervalo de fechas de los datos de rendimiento de anuncios que quieres recuperar en formato AAAA/MM/DD. El valor predeterminado es la fecha del día anterior. |    No      |
 | top   | entero    | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |    No      |
 | skip   | entero    | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |    No      |
 | filter   | cadena    | Una o más instrucciones que filtran las filas en la respuesta. Para obtener más información, consulta la sección [filtrar campos](#filter-fields) a continuación. |    No      |
 | aggregationLevel   | cadena    | Especifica el intervalo de tiempo necesario para recuperar los datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>. |    No      |
-| orderby   | cadena    | Instrucción que ordena los valores de datos resultantes. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>fecha</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>adUnitId</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |    No      |
+| orderby   | cadena    | Instrucción que ordena los valores de datos resultantes. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>date</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>adUnitId</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |    No      |
 | groupby   | cadena    | Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:</p><ul><li><strong>applicationId</strong></li><li><strong>applicationName</strong></li><li><strong>fecha</strong></li><li><strong>accountCurrencyCode</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>adUnitName</strong></li><li><strong>adUnitId</strong></li><li><strong>pubCenterAppName</strong></li><li><strong>adProvider</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=applicationId&amp;aggregationLevel=week</em></p> |    No      |
 
-<span />
- 
+
 ### <a name="filter-fields"></a>Campos de filtro
 
 El parámetro *filter* del cuerpo de la solicitud contiene una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un campo y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Este es un ejemplo del parámetro *filter*:
@@ -84,11 +85,10 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 | adProvider    | Cadena que especifica un nombre de proveedor de anuncios que aplicar al filtro. |
 | fecha    | Cadena que especifica una fecha en formato AAAA/MM/DD que aplicar al filtro. |
 
-<span /> 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-El siguiente ejemplo muestra varias solicitudes mediante las que obtener los datos de rendimiento de anuncios. Reemplaza el valor *applicationId* por el identificador de la Tienda de la aplicación.
+El siguiente ejemplo muestra varias solicitudes mediante las que obtener los datos de rendimiento de anuncios. Reemplaza el valor *applicationId* por el identificador de la Store de la aplicación.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/adsperformance?applicationId=9NBLGGH4R315&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0  HTTP/1.1
@@ -107,9 +107,9 @@ Authorization: Bearer <your access token>
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Valor      | matriz  | Matriz de objetos que contiene datos agregados de rendimiento de anuncios. Para más información sobre los datos de cada objeto, consulta la sección de [valores de rendimiento de anuncios](#ad-performance-values) que encontrarás a continuación.                                                                                                                      |
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 5, pero resulta que hay más de 5 elementos de datos de la consulta. |
-| TotalCount | entero    | Número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                             |
+| TotalCount | entero    | Número total de filas del resultado de datos de la consulta.                          |
 
-<span id="ad-performance-values" />
+
 ### <a name="ad-performance-values"></a>Valores de rendimiento de anuncios
 
 Los elementos de la matriz *Value* contienen los siguientes valores.
@@ -117,7 +117,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | Valor               | Tipo   | Descripción                                                                                                                                                                                                                              |
 |---------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | fecha                | cadena | La primera fecha del intervalo de fechas de los datos de rendimiento de anuncios. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
-| applicationId       | cadena | El identificador de la Tienda de la aplicación para la que quieres recuperar datos de rendimiento de anuncios.     |
+| applicationId       | cadena | El identificador de la Store de la aplicación para la que quieres recuperar datos de rendimiento de anuncios.     |
 | applicationName     | cadena | Nombre para mostrar de la aplicación.                         |
 | adUnitId           | cadena | Identificador de la unidad de anuncio.        |
 | adUnitName           | cadena | Nombre de la unidad de anuncio según lo especifica el desarrollador en el panel del Centro de desarrollo.              |
@@ -132,7 +132,6 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | revenueInAccountCurrency       | número | Ingresos en la moneda del país o región de la cuenta.       |
 | requests              | entero | Número de solicitudes de anuncio.                 |
 
-<span />
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
@@ -179,4 +178,4 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Informe de rendimiento de la publicidad](../publish/advertising-performance-report.md)
-* [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
+* [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)

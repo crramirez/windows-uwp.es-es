@@ -1,8 +1,8 @@
 ---
 author: Jwmsft
-title: "Animaciones de fotograma clave y animaciones de función de aceleración"
+title: Animaciones de fotograma clave y animaciones de función de aceleración
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
-description: "Las animaciones de fotograma clave lineales, las animaciones de fotograma clave con un valor KeySpline o las funciones de aceleración son tres técnicas distintas para prácticamente el mismo escenario."
+description: Las animaciones de fotograma clave lineales, las animaciones de fotograma clave con un valor KeySpline o las funciones de aceleración son tres técnicas distintas para prácticamente el mismo escenario.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -10,11 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e37cdfde5db4315d175c2cc404dc77a44a7bcb8
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 3f48bdb41859fb5a2ba438d4f74143598b0e1342
+ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/19/2018
+ms.locfileid: "1665061"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>Animaciones de fotograma clave y animaciones de función de aceleración
 
@@ -73,13 +74,12 @@ Aquí te mostramos cómo usar una animación de fotograma clave para escalar el 
 
 Los fotogramas clave discretos no usan ninguna interpolación. Cuando se llega a un valor **KeyTime**, simplemente se aplica el nuevo **Value**. Según la propiedad de interfaz de usuario que se está animando, por lo general, esto genera una animación que simula un "salto". Asegúrate de que este sea el comportamiento estético que realmente quieres. Puedes minimizar los saltos aparentes al aumentar la cantidad de fotogramas clave declarados, pero si tu objetivo es una animación suave, lo mejor es que uses en cambio fotogramas clave lineales o spline.
 
-**Nota** Los fotogramas clave discretos son la única forma de animar un valor que no sea del tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) y [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) con la clase [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132). Analizaremos esto en mayor detalle más adelante en este tema.
-
- 
+> [!NOTE]
+> Los fotogramas clave discretos son la única forma de animar un valor que no sea del tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) y [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) con un [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132). Analizaremos esto en mayor detalle más adelante en este tema.
 
 ### <a name="spline-key-frames"></a>Fotogramas clave spline
 
-Un fotograma clave spline crea una transición variable entre valores de acuerdo con el valor de la propiedad **KeySpline**. Esta propiedad especifica el primer y el segundo punto de control de una curva Bézier, que describen la aceleración de la animación. Básicamente, [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) define una función sobre una relación de tiempo en la que el gráfico de tiempo de la función tiene la forma de la curva Bézier. Por lo general, se especifica un valor de **KeySpline** en una cadena de atributos XAML abreviada que tiene cuatro valores [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) separados por espacios o comas. Estos valores son pares "X,Y" para dos puntos de control de la curva Bézier. X representa al tiempo e Y es el modificador de función para el valor. Cada valor debe estar comprendido siempre entre 0 y 1, ambos inclusive. Sin una modificación del punto de control a un valor **KeySpline**, la línea recta de 0,0 a 1,1 es la representación de una función a lo largo del tiempo para una interpolación lineal. Los puntos de control cambian la forma de la curva y, por ende, el comportamiento de la función a lo largo del tiempo para la animación spline. Lo mejor es verlo en un gráfico. Puedes ejecutar la [muestra del visualizador de spline clave de Silverlight](http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) en un explorador para ver de qué manera los puntos de control modifican la curva y cómo se ejecuta una animación de muestra cuando se la usa como un valor **KeySpline**.
+Un fotograma clave spline crea una transición variable entre valores de acuerdo con el valor de la propiedad **KeySpline**. Esta propiedad especifica el primer y el segundo punto de control de una curva Bézier, que describen la aceleración de la animación. Básicamente, un [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) define una función sobre una relación de tiempo en la que el gráfico de tiempo de la función tiene la forma de la curva Bézier. Normalmente especificas un valor de **KeySpline** en una cadena de atributos XAML abreviada que tiene cuatro valores [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) separados por espacios o comas. Estos valores son pares "X,Y" para dos puntos de control de la curva Bézier. X representa al tiempo e Y es el modificador de función para el valor. Cada valor debe estar comprendido siempre entre 0 y 1, ambos inclusive. Sin una modificación del punto de control a un valor **KeySpline**, la línea recta de 0,0 a 1,1 es la representación de una función a lo largo del tiempo para una interpolación lineal. Los puntos de control cambian la forma de la curva y, por ende, el comportamiento de la función a lo largo del tiempo para la animación spline. Lo mejor es verlo en un gráfico. Puedes ejecutar la [muestra del visualizador de spline clave de Silverlight](http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) en un explorador para ver de qué manera los puntos de control modifican la curva y cómo se ejecuta una animación de muestra cuando se la usa como un valor **KeySpline**.
 
 El ejemplo que sigue muestra tres fotogramas clave diferentes aplicados a una animación. El último es una animación spline clave para un valor [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) ([**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446)). Observa la cadena "0.6,0.0 0.9,0.00" que se aplica a **KeySpline**. Esta produce una curva en la que la animación parece ejecutarse lentamente al principio, pero luego alcanza con velocidad el valor justo antes de que se llegue **KeyTime**.
 
@@ -133,7 +133,7 @@ En este ejemplo se aplica [**CubicEase**](https://msdn.microsoft.com/library/win
             </EasingDoubleKeyFrame.EasingFunction>
         </EasingDoubleKeyFrame>
 
-        !-- This keyframe animates the ellipse back down and makes
+        <!-- This keyframe animates the ellipse back down and makes
             it bounce. -->
         <EasingDoubleKeyFrame Value="0" KeyTime="00:00:06">
             <EasingDoubleKeyFrame.EasingFunction>

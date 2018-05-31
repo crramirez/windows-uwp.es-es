@@ -1,21 +1,23 @@
 ---
 author: normesta
-Description: "Esta guía te ayuda a optimizar tu aplicación para controlar los datos de empresa administrados por la directiva de Windows Information Protection (WIP) así como los datos personales."
+Description: This guide helps you enlighten your app to handle enterprise data managed by Windows Information Protection (WIP) policy as well as personal data.
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: "Guía para desarrolladores sobre Windows Information Protection (WIP)"
+title: Guía para desarrolladores sobre Windows Information Protection (WIP)
 ms.author: normesta
 ms.date: 06/21/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, trabajo en curso, Windows Information Protection, datos empresariales, protección de datos empresariales, edp, aplicaciones habilitadas"
+keywords: windows 10, uwp, trabajo en curso, Windows Information Protection, datos empresariales, protección de datos empresariales, edp, aplicaciones habilitadas
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
-ms.openlocfilehash: 23604e4ca549bbb11885e681500f4f41531c2b6f
-ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.localizationpriority: medium
+ms.openlocfilehash: c9d58f787d93a2a658a473a0bf852b859daaca37
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1664175"
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a>Guía para desarrolladores sobre Windows Information Protection (WIP)
 
@@ -53,19 +55,24 @@ Para ello deberás hacer lo siguiente:
 
 * [Agregar espacios de nombres a los archivos de código](#add-namespaces)
 
-<span id="install-assistant" />
+<a id="install-assistant" />
+
 ### <a name="install-the-wip-setup-developer-assistant-onto-your-test-vm"></a>Instalar WIP Setup Developer Assistant en la VM de prueba
 
  Usa esta herramienta para configurar una directiva de Windows Information Protection en la VM de prueba.
 
  Descarga la herramienta aquí: [WIP Setup Developer Assistant](https://www.microsoft.com/store/p/wip-setup-developer-assistant/9nblggh526jf).
-<span id="create-protection-policy" />
+
+<a id="create-protection-policy" />
+
 ### <a name="create-a-protection-policy"></a>Crear una directiva de protección
 
 Para definir la directiva, agrega información a cada sección del asistente del desarrollador para la configuración de WIP. Elige el icono de ayuda junto a cualquier configuración para obtener más información sobre cómo usarla.
 
 Para obtener instrucciones más generales sobre cómo usar esta herramienta, consulta la sección de notas de la versión en la página de descarga de la aplicación.
-<span id="setup-vs-project" />
+
+<a id="setup-vs-project" />
+
 ### <a name="setup-a-visual-studio-project"></a>Configuración de un proyecto de Visual Studio
 
 1. Abre el proyecto en tu equipo de desarrollo.
@@ -93,13 +100,17 @@ Para obtener instrucciones más generales sobre cómo usar esta herramienta, con
     ```
 
     De esta forma, si la aplicación se ejecuta en una versión del sistema operativo Windows que no sea compatible con las funcionalidades restringidas, Windows ignorará la funcionalidad ``enterpriseDataPolicy``.
-<span id="setup-remote-debugging" />
+
+<a id="setup-remote-debugging" />
+
 ### <a name="setup-remote-debugging"></a>Configurar la depuración remota
 
 Instala Herramientas remotas para Visual Studio en la VM de prueba solo si vas a desarrollar tu aplicación en un equipo que no sea la VM. A continuación, inicia el depurador remoto en el equipo de desarrollo y comprueba si tu aplicación se ejecuta en la VM de prueba.
 
 Consulta [Instrucciones del equipo remoto](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#remote-pc-instructions).
-<span id="add-namespaces" />
+
+<a id="add-namespaces" />
+
 ### <a name="add-these-namespaces-to-your-code-files"></a>Agregar estos espacios de nombres a los archivos de código
 
 Agrégalos usando estas instrucciones en la parte superior de los archivos de código (los fragmentos de código utilizados en esta guía):
@@ -155,9 +166,10 @@ Windows Information Protection da a tu aplicación permiso si esta se encuentra 
 * [Leer datos desde un archivo](#read-file)
 * [Leer los datos desde el punto de conexión de red](#read-network)
 * [Leer datos desde el Portapapeles](#read-clipboard)
-* [Leer datos desde un contrato para contenido compartido](#read-contract)
+* [Leer datos desde un contrato para contenido compartido](#read-share)
 
-<span id="read-file" />
+<a id="read-file" />
+
 ### <a name="read-data-from-a-file"></a>Leer datos desde un archivo
 
 **Paso 1: Obtener el identificador de archivo**
@@ -212,7 +224,8 @@ var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
 ```csharp
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(file);
 ```
-<span id="read-network" />
+<a id="read-network" />
+
 ### <a name="read-data-from-a-network-endpoint"></a>Leer los datos desde el punto de conexión de red
 
 Crea un contexto de subproceso protegido para leer desde un punto de conexión de empresa.
@@ -376,7 +389,8 @@ private static async Task<IBuffer> GetDataFromNetworkRedirectHelperMethod(Uri re
 [ProtectionPolicyManager.GetForCurrentView](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview.aspx)<br>
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)
 
-<span id="read-clipboard" />
+<a id="read-clipboard" />
+
 ### <a name="read-data-from-the-clipboard"></a>Leer datos desde el Portapapeles
 
 **Obtener permiso para usar los datos del Portapapeles**
@@ -473,7 +487,8 @@ private async void PasteText(bool isNewEmptyDocument)
 [ProtectionPolicyEvaluationResult](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicyevaluationresult.aspx)<br>
 [ProtectionPolicyManager.TryApplyProcessUIPolicy](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy.aspx)
 
-<span id="read-share" />
+<a id="read-share" />
+
 ### <a name="read-data-from-a-share-contract"></a>Leer datos desde un contrato para contenido compartido
 
 Cuando los empleados elijan tu aplicación para compartir su información, tu aplicación abrirá un nuevo elemento con ese contenido.
@@ -544,7 +559,8 @@ Protege los datos de empresa que se usan fuera de la aplicación. Los datos se u
 * [Proteger los archivos que copies en otra ubicación](#protect-other-location)
 * [Proteger los datos de empresa cuando la pantalla del dispositivo esté bloqueada](#protect-locked)
 
-<span id="protect-pages" />
+<a id="protect-pages" />
+
 ### <a name="protect-data-that-appears-in-pages"></a>Proteger los datos que aparecen en las páginas
 
 Al mostrar datos en una página, tendrás que informar a Windows de qué tipo de datos se tratan (personal o de empresa). Para ello, *etiqueta* la vista actual de la aplicación o todo su proceso.
@@ -562,7 +578,7 @@ Realiza esta acción si tu aplicación tiene varias vistas y algunas usarán dat
 ProtectionPolicyManager.GetForCurrentView().Identity = identity;
 
 // tag as personal data.
-ProtectionPolicyManager.GetForCurrentView().Identity = String.Empty();
+ProtectionPolicyManager.GetForCurrentView().Identity = String.Empty;
 ```
 
 > **API** <br>
@@ -584,14 +600,14 @@ bool result =
             ProtectionPolicyManager.TryApplyProcessUIPolicy(identity);
 
 // tag as personal data.
-bool result =
-            ProtectionPolicyManager.TryApplyProcessUIPolicy(String.Empty());
+ProtectionPolicyManager.ClearProcessUIPolicy();
 ```
 
 > **API** <br>
 [ProtectionPolicyManager.TryApplyProcessUIPolicy](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy.aspx)
 
-<span id="protect-file" />
+<a id="protect-file" />
+
 ### <a name="protect-data-to-a-file"></a>Proteger datos en un archivo
 
 Crea un archivo protegido y escribe en él.
@@ -659,7 +675,8 @@ FileProtectionInfo fileProtectionInfo =
 [FileProtectionInfo](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.aspx)<br>
 [FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx)<br>
 
-<span id="protect-background" />
+<a id="protect-background" />
+
 ### <a name="protect-data-to-a-file-as-a-background-process"></a>Proteger datos en un archivo como un proceso en segundo plano
 
 Este código puede ejecutarse mientras la pantalla del dispositivo está bloqueada. Si el administrador ha configurado una directiva de "protección de datos con la pantalla bloqueada (DPL)", Windows eliminará las claves de cifrado necesarias para acceder a los recursos protegido desde la memoria del dispositivo. Esto impide la pérdida de datos en caso de pérdida del dispositivo. La misma función también quita las claves asociadas con los archivos protegidos cuando se cierran sus identificadores.
@@ -723,7 +740,8 @@ else if (protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus
 [FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx)<br>
 [ProtectedFileCreateResult.Stream](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectedfilecreateresult.stream.aspx)<br>
 
-<span id="protect-part-file" />
+<a id="protect-part-file" />
+
 ### <a name="protect-part-of-a-file"></a>Proteger parte de un archivo
 
 En la mayoría de los casos, es más limpio almacenar los datos personales y de empresa por separado, pero puedes almacenarlos en el mismo archivo si lo deseas. Por ejemplo, Microsoft Outlook puede almacenar correos electrónicos de la empresa junto a correos electrónicos personales en un archivo de almacenamiento único.
@@ -799,7 +817,8 @@ await Windows.Storage.FileIO.WriteTextAsync
     (metaDataFile, "<EnterpriseDataMarker start='0' end='" + enterpriseData.Length.ToString() +
     "'></EnterpriseDataMarker>");
 ```
-<span id="read-protected" />
+<a id="read-protected" />
+
 ### <a name="read-the-protected-part-of-a-file"></a>Leer la parte protegida de un archivo
 
 Aquí te mostramos cómo podrías leer los datos de empresa de ese archivo.
@@ -879,7 +898,8 @@ else if (dataProtectionInfo.Status == DataProtectionStatus.Revoked)
 [DataProtectionInfo](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.dataprotectioninfo.aspx)<br>
 [DataProtectionManager.GetProtectionInfoAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.dataprotectionmanager.getstreamprotectioninfoasync.aspx)<br>
 
-<span id="protect-folder" />
+<a id="protect-folder" />
+
 ### <a name="protect-data-to-a-folder"></a>Proteger datos en una carpeta
 
 Puedes crear una carpeta y protegerla. De esta forma cualquier elemento que añadas a la carpeta estará automáticamente protegido.
@@ -913,7 +933,8 @@ Asegúrate de que la carpeta esté vacía antes de protegerla. No puedes protege
 [FileProtectionInfo.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.identity.aspx)<br>
 [FileProtectionInfo.Status](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.status.aspx)
 
-<span id="protect-network" />
+<a id="protect-network" />
+
 ### <a name="protect-data-to-a-network-end-point"></a>Proteger los datos en un punto de conexión de red
 
 Crea un contexto de subproceso protegido para enviar datos a un punto de conexión de empresa.  
@@ -966,7 +987,8 @@ else
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)<br>
 [ProtectionPolicyManager.CreateCurrentThreadNetworkContext](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.createcurrentthreadnetworkcontext.aspx)
 
-<span id="protect-share" />
+<a id="protect-share" />
+
 ### <a name="protect-data-that-your-app-shares-through-a-share-contract"></a>Proteger los datos que tu aplicación comparte a través de un contrato para contenido compartido
 
 Si quieres que los usuarios compartan contenido desde tu aplicación, tendrás que implementar un contrato para contenido compartido y controlar el evento [**DataTransferManager.DataRequested**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.datarequested).
@@ -998,7 +1020,8 @@ private void OnDataRequested(DataTransferManager sender, DataRequestedEventArgs 
 [ProtectionPolicyManager.GetForCurrentView](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview.aspx)<br>
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)
 
-<span id="protect-other-location" />
+<a id="protect-other-location" />
+
 ### <a name="protect-files-that-you-copy-to-another-location"></a>Proteger los archivos que copies en otra ubicación
 
 ```csharp
@@ -1020,7 +1043,8 @@ private async void CopyProtectionFromOneFileToAnother
 > **API** <br>
 [FileProtectionManager.CopyProtectionAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.copyprotectionasync.aspx)<br>
 
-<span id="protect-locked" />
+<a id="protect-locked" />
+
 ### <a name="protect-enterprise-data-when-the-screen-of-the-device-is-locked"></a>Proteger los datos de empresa cuando la pantalla del dispositivo esté bloqueada
 
 Elimina todos los datos confidenciales de la memoria si el dispositivo está bloqueado. Una vez que el usuario desbloquee el dispositivo, la aplicación podrá volver a agregar esos datos de forma segura.

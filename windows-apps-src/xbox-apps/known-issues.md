@@ -2,16 +2,20 @@
 author: Mtoepke
 title: Problemas conocidos de UWP en el Programa para desarrolladores de Xbox
 description: Se indican los problemas conocidos con la UWP en el Programa para desarrolladores de Xbox.
-ms.author: mtoepke
-ms.date: 02/08/2017
+ms.author: mstahl
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
-ms.openlocfilehash: 203d1abede2607617e0175103f54bf3068d53ff4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b93da1603056a75c746e0e5c2a8ebe1d4044a1e5
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690401"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Problemas conocidos de UWP en el Programa para desarrolladores de Xbox
 
@@ -25,20 +29,6 @@ La siguiente lista destaca algunos problemas conocidos que puedes encontrarte, a
 
 Si sigues teniendo problemas, lee la información de este tema, consulta las [preguntas más frecuentes](frequently-asked-questions.md) y usa los foros para pedir ayuda.
 
-
-<!--## Developing games-->
-
-## <a name="issue-when-leaving-dev-mode"></a>Problema al salir del modo de desarrollo
-En ocasiones, es posible que no puedas salir del modo del desarrollador ni usando DevHome ni desde la Configuración del desarrollador.
-Hay dos soluciones alternativas posibles: 
-1. Desactiva la casilla con la etiqueta **Delete side loaded games and apps** al salir del modo del desarrollador
-2. Ve a Mis juegos y aplicaciones, y desinstala cualquier aplicación de desarrollador que instalaste en la consola
- 
-<!--## Memory limits for background apps are partially enforced
- 
-The maximum memory footprint for apps running in the background is 128 megabytes. In the current version of UWP on Xbox One, your app will be suspended if it is above this limit when it is moved to the background. This limit is not currently enforced if your app exceeds the limit while it is already running in the background—this means that if your app exceeds 128 MB while running in the background, it will still be able to allocate memory.
- 
-There is currently no workaround for this issue. Apps should govern their memory usage accordingly and continue to stay under the 128 MB limit while running in the background.-->
  
 ## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>La implementación desde VS sufre un error si el control parental está activado
 
@@ -66,51 +56,7 @@ System.UnauthorizedAccessException: Access is denied. (Excep_FromHResult 0x80070
 ```
 
 Esto puede afectar a los desarrolladores de Xbox que quieran copiar en otra ubicación los archivos que se implementan como parte de su paquete de la aplicación. El motivo es que el contenido del paquete está cifrado en una consola Xbox en el modo comercial, pero no en el modo de desarrollo. Como resultado, es posible que parezca que la aplicación funciona según lo esperado durante el desarrollo y pruebas, pero presente un error cuando se publique y luego instale en una consola Xbox en modo comercial.
-
-<!--### x86 vs. x64
-
-By the time we release later this year, we will have great support for both x86 and x64, and we do support x86 in this preview. 
-However, x64 has had much more testing to date (the Xbox shell and all of the apps running on the console today are x64), and so we recommend using x64 for your projects. 
-This is particularly true for games.
-
-If you decide to use x86, please report any issues you see on the forum.
-
-Also see [Switching build flavors can cause deployment failures](known-issues.md#switching-build-flavors-can-cause-deployment-failures) later on this page.-->
-
-<!--### Game engines
-
-We have tested some popular game engines, but not all of them, and our test coverage for this preview has not been comprehensive. 
-Your mileage may vary. 
-
-The following game engines have been confirmed to work:
-* [Construct 2](https://www.scirra.com/)
-
-There are likely others that are working too. We would love to get your feedback on what you find. 
-Please use the forum to report any issues you see.-->
-
-## <a name="directx-12-support"></a>Compatibilidad con DirectX 12
-
-UWP en Xbox One admite el nivel de característica 10 de DirectX 11. De momento no se admite DirectX 12. 
-
-Xbox One, al igual que todas las consolas de juegos tradicionales, es una herramienta de hardware especializada que requiere un SDK específico para alcanzar su potencial máximo. Si estás trabajando en un juego que requiere acceso al máximo potencial del hardware de Xbox One, puedes inscribirte en el programa [ID@XBOX](http://www.xbox.com/Developers/id) para obtener acceso a ese SDK, que incluye la compatibilidad con DirectX 12.
-
-<!-- ### Xbox One Developer Preview disables game streaming to Windows 10
-
-Activating the Xbox One Developer Preview on your console will prevent you from streaming games from your Xbox One to the Xbox app on Windows 10, even if your console is set to retail mode. 
-To restore the game streaming feature, you must leave the developer preview. -->
-
-<!--## System resources for UWP apps and games on Xbox One
-
-UWP apps and games running on Xbox One share resources with the system and other apps, and so the system governs the resources that are available to any one game or app. 
-If you are running into memory or performance issues, this may be why. 
-For more details, see [System resources for UWP apps and games on Xbox One](system-resource-allocation.md).-->
-
-<!--
-## Networking using traditional sockets
-
-In this developer preview, inbound and outbound network access from the console that uses traditional TCP/UDP sockets (WinSock, Windows.Networking.Sockets) is not available. 
-Developers can still use HTTP and WebSockets.
---> 
+ 
 
 ## <a name="blocked-networking-ports-on-xbox-one"></a>Puertos de red bloqueados en Xbox One
 
@@ -120,66 +66,6 @@ Las aplicaciones para la Plataforma universal de Windows (UWP) en dispositivos X
 
 En Xbox no se admiten todas las API de UWP. Para ver la lista de las API que sabemos que no funcionan, consulta [UWP features that aren't yet supported on Xbox](http://go.microsoft.com/fwlink/p/?LinkId=760755) (Características UWP que aún no se admiten en Xbox). Si encuentras problemas con otras API, notifícalo en los foros. 
 
-<!--## XAML controls do not look like or behave like the controls in the Xbox One shell
-
-In this developer preview, the XAML controls are not in their final form. In particular:
-* Gamepad X-Y navigation does not work reliably for all controls.
-* Controls do not look like controls in the Xbox shell. This includes the control focus rectangle.
-* Navigating between controls does not automatically make “navigation sounds.”
-
-These issues will be addressed in a future developer preview.-->
-
-<!--## Visual Studio and deployment issues
-
-### Switching build flavors can cause deployment failures
-
-Switching between Debug and Release builds, or between x86 and x64, or between Managed and .Net Native builds, can cause deployment failures. 
-
-The simplest way to avoid these issues for this preview is to stick to Debug and one architecture. 
-
-If you do hit this issue, uninstalling your app in the Collections app on your Xbox One will typically resolve it.
-
-> ****&nbsp;&nbsp;Uninstalling your app from Windows Device Portal (WDP) will not resolve the issue.
-
-If your issues persist, uninstall your app or game in the Collections app, leave Developer Mode, restart to Retail Mode and then switch back to Developer Mode.
-You may also need to restart Visual Studio and clean your solution.
-
-For more information, see the “Fixing deployment failures” section in [Frequently asked questions](frequently-asked-questions.md).
-
-### Uninstalling an app while you are debugging it in Visual Studio will cause it to fail silently
-
-Attempting to uninstall an app that is running under the debugger via the WDP “Installed Apps” tool will cause it to silently fail. 
-The workaround is to stop debugging the app in Visual Studio before attempting to remove it via WDP.
-
-### Visual Studio/Xbox PIN pairing failures
-
-It is possible to get into a state where the PIN pairing between Visual Studio and your Xbox One gets out of sync. 
-If PIN pairing fails, use the “Remove all pairings” button in Dev Home, restart Xbox One, restart your development PC, and then try again.--> 
-
-
-<!--## Windows Device Portal (WDP) preview-->
-
-<!--### Starting WDP from Dev Home crashes Dev Home
-
-When you start WDP in Dev Home, it will cause Dev Home to crash after you have entered your user name and password and selected **Save**. 
-The credentials are saved but WDP is not started. 
-You can start WDP by restarting Xbox One.--> 
-
-<!--### Disabling WDP in Dev Home does not work
-
-If you disable WDP in Dev Home, it will be turned off. 
-However, when you restart your Xbox One, WDP will be started again. 
-You can work around this issue by using **Reset and keep my games & apps** to delete any stored state on your Xbox One. 
-Go to Settings > System > Console info & updates > Reset console, and then select the **Reset and keep my games & apps** button.
-
-> **Caution**&nbsp;&nbsp;Doing this will delete all saved settings on your Xbox One including wireless settings, user accounts and any game progress that has not been saved to cloud storage.
-
-> **Caution**&nbsp;&nbsp;DO NOT select the **Reset and remove everything** button.
-This will delete all of your games, apps, settings and content, deactivate Developer Mode, and remove you console from the Developer Preview group.
-
-### The columns in the “Running Apps” table do not update predictably. 
-
-Sometimes this is resolved by sorting a column on the table.-->
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>Desplazarse a WDP genera una advertencia de certificado
 
@@ -187,10 +73,6 @@ Recibirás una advertencia acerca del certificado proporcionado, similar a la si
 
 ![Advertencia de certificado de seguridad de sitio web](images/security_cert_warning.jpg)
 
-<!--## Dev Home
-
-Occasionally, selecting the “Manage Windows Device Portal” option in Dev Home will cause Dev Home to silently exit to the Home screen. 
-This is caused by a failure in the WDP infrastructure on the console and can be resolved by restarting the console.-->
 
 ## <a name="knownfoldersmediaserverdevices-caveat-on-xbox"></a>Advertencia de KnownFolders.MediaServerDevices en Xbox
 

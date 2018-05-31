@@ -2,20 +2,23 @@
 author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
-description: "Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) desde un equipo con Windows10 a cualquier dispositivo con Windows10."
+description: Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) desde un equipo con Windows10 a cualquier dispositivo con Windows10.
 ms.author: lahugh
 ms.date: 03/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: eb4ad93f60c2e5062c2f5d99d852538484f965da
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 664b2e92c40fa619150a2c3fd527194e8e983039
+ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/21/2018
+ms.locfileid: "1673012"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) desde un equipo con Windows10 a cualquier dispositivo con Windows10. Puedes usar esta herramienta para implementar un paquete .appx si el dispositivo con Windows10 está conectado mediante USB o disponible en la misma subred sin necesidad de Microsoft Visual Studio ni de la solución para dicha aplicación. También puedes implementar la aplicación sin empaquetarla primero en un equipo remoto o en Xbox One. Este artículo describe cómo instalar aplicaciones para UWP con esta herramienta.
 
@@ -23,7 +26,11 @@ Solo necesitas el SDK de Windows 10 instalado para ejecutar la herramienta WinAp
 
 Para implementar en dispositivos móviles, primero debes crear un paquete. Puedes obtener más información [aquí](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-La herramienta **WinAppDeployCmd.exe** se encuentra aquí en tu equipo con Windows10: **C:\\Archivos de programa (x86)\\Windows Kits\\10\\bin\\x86\\WinAppDeployCmd.exe** (en función de la ruta de acceso de instalación del SDK). En primer lugar, conecta el dispositivo con Windows10 a la misma subred o directamente al equipo con Windows10 mediante una conexión USB. A continuación, usa la siguiente sintaxis y los ejemplos de este comando que se incluyen más adelante en este artículo para implementar la aplicación para UWP:
+La herramienta **WinAppDeployCmd.exe** se encuentra aquí en tu equipo con Windows10: **C:\\Archivos de programa (x86)\\Windows Kits\\10\\bin<SDK Version>\\x86\\WinAppDeployCmd.exe** (en función de la ruta de acceso de instalación del SDK). 
+> [!NOTE]
+> En la versión 15063 y posteriores del SDK, el SDK se instala en paralelo dentro de carpetas específicas de la versión.  Los SDK anteriores (antes de 14393 incluido) se escriben directamente en la carpeta principal.
+
+En primer lugar, conecta el dispositivo con Windows10 a la misma subred o directamente al equipo con Windows10 mediante una conexión USB. A continuación, usa la siguiente sintaxis y los ejemplos de este comando que se incluyen más adelante en este artículo para implementar la aplicación para UWP:
 
 ## <a name="winappdeploycmd-syntax-and-options"></a>Opciones y sintaxis de WinAppDeployCmd
 
@@ -70,25 +77,26 @@ La siguiente tabla describe los comandos de **WinAppDeployCmd.exe**.
 | getcreds     | Obtiene credenciales de red para los usos de destino cuando se ejecuta una aplicación desde un recurso compartido de red.|
 | deletecreds  | Elimina credenciales de red que el destino usa cuando ejecuta una aplicación desde un recurso compartido de red.|
 
- 
+
 La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
 
-| **Comando**  | **Descripción**                                                     |
-|--------------|---------------------------------------------------------------------|
-| -h (-help)       | Muestra los comandos, las opciones y los argumentos.|
-| -ip              | Dirección IP del dispositivo de destino.|
+
+| **Comando**  | **Descripción**  |
+|--------------|------------------|
+| -h (-help)       | Muestra los comandos, las opciones y los argumentos. |
+| -ip              | Dirección IP del dispositivo de destino. |
 | -g (-guid)       | Identificador único del dispositivo de destino.|
-| -d (-dependency) | (Opcional) Especifica la ruta de dependencia de cada una de las dependencias del paquete. <br />Si no se especifica ninguna ruta, la herramienta busca dependencias en el directorio raíz del paquete de la aplicación y los directorios del SDK.|
+| -d (-dependency) | (Opcional) Especifica la ruta de dependencia de cada una de las dependencias del paquete. Si no se especifica ninguna ruta, la herramienta busca dependencias en el directorio raíz del paquete de la aplicación y los directorios del SDK.|
 | -f (-file)       | Ruta de archivo del paquete de la aplicación que se va a instalar, actualizar o desinstalar.|
-| -p (-package)    | Nombre completo del paquete de la aplicación que se va a desinstalar. <br />(Puedes usar el comando de la lista para encontrar los nombres completos de los paquetes ya instalados en el dispositivo).|
-| -pin             | Pin si es necesario para establecer una conexión con el dispositivo de destino. <br />(Se te pedirá que vuelvas a intentarlo con la opción -pin si se requiere autenticación).|
-| -credserver      | El nombre del servidor de las credenciales de red para su uso por parte del destino.|
-| -credusername    | El nombre de usuario de las credenciales de red para su uso por parte del destino.|
-| -credpassword    | La contraseña de las credenciales de red para su uso por parte del destino.|
-| -connecttimeout  | El tiempo de espera en segundos que se usa para conectar con el dispositivo.|
-| -remotedeploydir | La ruta o el nombre del directorio relativo donde copiar archivos en el dispositivo remoto. <br />Esta será una carpeta de implementación remota conocida y determinada automáticamente.|
-| -deleteextrafile | Cambia para indicar si se deben purgar los archivos existentes en el directorio remoto para que coincidan con los del directorio de origen.|
- 
+| -p (-package)    | Nombre completo del paquete de la aplicación que se va a desinstalar. (Puedes usar el comando de la lista para encontrar los nombres completos de los paquetes ya instalados en el dispositivo) |
+| -pin             | Pin si es necesario para establecer una conexión con el dispositivo de destino. (Se te pedirá que vuelvas a intentarlo con la opción -pin si se requiere autenticación) |
+| -credserver      | El nombre del servidor de las credenciales de red para su uso por parte del destino. |
+| -credusername    | El nombre de usuario de las credenciales de red para su uso por parte del destino. |
+| -credpassword    | La contraseña de las credenciales de red para su uso por parte del destino. |
+| -connecttimeout  | El tiempo de espera en segundos que se usa para conectar con el dispositivo. |
+| -remotedeploydir | Ruta de acceso y nombre del directorio relativo en la que copiar los archivos en el dispositivo remoto; se trata de una carpeta de implementación remota conocida determinada automáticamente. |
+| -deleteextrafile | Cambia para indicar si se deben purgar los archivos existentes en el directorio remoto para que coincidan con los del directorio de origen. |
+
 
 La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
 

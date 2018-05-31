@@ -1,32 +1,38 @@
 ---
 author: mcleanbyron
 ms.assetid: c5246681-82c7-44df-87e1-a84a926e6496
-description: "Usa este método en la API de promociones de la Tienda Windows para administrar los creativos para las campañas de anuncios promocionales."
+description: Usa este método en la API de promociones de Microsoft Store para administrar los creativos para las campañas de anuncios promocionales.
 title: Administrar creativos
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store promotions API, API de promociones de la Tienda Windows, ad campaigns, campañas de anuncios"
-ms.openlocfilehash: d94ff7863de620beab2ef67c4a6e5c4a50cf273d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
+ms.localizationpriority: medium
+ms.openlocfilehash: f29920bba22be689c79f2264836ebcee6d8dfe5c
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1664025"
 ---
 # <a name="manage-creatives"></a>Administrar creativos
 
-Usa estos métodos en la API de promociones de la Tienda Windows para cargar tus propios creativos personalizados y usarlos en las campañas de anuncios promocionales u obtener un creativo existente. Un creativo puede estar asociado a una o varias líneas de entrega, incluso entre campañas de anuncios, siempre que represente siempre a la misma aplicación.
+Usa estos métodos en la API de promociones de Microsoft Store para cargar tus propios creativos personalizados y usarlos en las campañas de anuncios promocionales u obtener un creativo existente. Un creativo puede estar asociado a una o varias líneas de entrega, incluso entre campañas de anuncios, siempre que represente siempre a la misma aplicación.
 
-Para obtener más información sobre la relación entre los creativos y las campañas de anuncios, las líneas de entrega y los perfiles objetivo, consulta [Ejecutar campañas de anuncios con los servicios de la Tienda Windows](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
+Para obtener más información sobre la relación entre los creativos y las campañas de anuncios, las líneas de entrega y los perfiles objetivo, consulta [Ejecutar campañas de anuncios con los servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 
->**Nota**&nbsp;&nbsp;Al usar esta API para cargar tu propio creativo, el tamaño máximo permitido para el creativo es 40 KB. Si envías un archivo creativo más grande, esta API no emitirá un error, pero la campaña no se creará correctamente.
+> [!NOTE]
+> Al usar esta API para cargar tu propio creativo, el tamaño máximo permitido para el creativo es 40 KB. Si envías un archivo creativo más grande, esta API no emitirá un error, pero la campaña no se creará correctamente.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar estos métodos, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+
 
 ## <a name="request"></a>Solicitud
 
@@ -37,9 +43,10 @@ Estos métodos tienen los siguientes URI.
 | POST   | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative``` |  Crea a un nuevo creativo.  |
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative/{creativeId}``` |  Obtiene el creativo especificado por *creativeId*.  |
 
->**Nota**&nbsp;&nbsp;esta API no admite actualmente un método PUT.
+> [!NOTE]
+> Esta API no admite actualmente un método PUT.
 
-<span/> 
+
 ### <a name="header"></a>Encabezado
 
 | Encabezado        | Tipo   | Descripción         |
@@ -48,12 +55,11 @@ Estos métodos tienen los siguientes URI.
 | Id. de seguimiento   | GUID   | Opcional. Un id. que realiza un seguimiento del flujo de llamadas.                                  |
 
 
-<span/>
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
 El método POST necesita un cuerpo de la solicitud JSON con los campos obligatorios de un objeto de [creativo](#creative).
 
-<span/>
+
 ### <a name="request-examples"></a>Ejemplos de solicitud
 
 En el siguiente ejemplo se muestra cómo llamar al método POST para crear un creativo. En este ejemplo, el valor *content* se acortó por razones de brevedad.
@@ -81,7 +87,7 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/creative/106851  HT
 Authorization: Bearer <your access token>
 ```
 
-<span/>
+
 ## <a name="response"></a>Respuesta
 
 Estos métodos devuelven un cuerpo de respuesta JSON con un objeto de [creativo](#creative) que contiene información sobre el creativo que se creó o recuperó. En el siguiente ejemplo se muestra un cuerpo de respuesta para estos métodos. En este ejemplo, el valor *content* se acortó por razones de brevedad.
@@ -104,7 +110,9 @@ Estos métodos devuelven un cuerpo de respuesta JSON con un objeto de [creativo]
 }
 ```
 
+
 <span id="creative"/>
+
 ## <a name="creative-object"></a>Objeto de creativo
 
 Los cuerpos de solicitud y respuesta para estos métodos contienen los siguientes campos. En esta tabla se muestran los campos que son de solo lectura (es decir, no se pueden cambiar en el método PUT) y los campos que son obligatorios en el cuerpo de la solicitud para el método POST.
@@ -119,9 +127,11 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 |  landingUrl   |  cadena   |  Si usas un servicio de seguimiento de campañas como Kochava, AppsFlyer o Tune para medir el análisis de instalación de la aplicación, asigna la dirección URL de seguimiento en este campo al llamar el método POST (si se especifica, este valor debe ser un URI válido). Si no usas un servicio de seguimiento de campañas, omite este valor al llamar al método (en este caso, esta dirección URL se creará automáticamente).   |  No    |     |   Sí    |       
 |  format   |  cadena   |   El formato del anuncio. Actualmente, el único valor admitido es **Banner**.    |   No    |  Pancarta   |  No     |       
 |  imageAttributes   | [ImageAttributes](#image-attributes)    |   Proporciona los atributos del creativo.     |   No    |      |   Sí    |       
-|  storeProductId   |  cadena   |   El [id. de la Tienda](in-app-purchases-and-trials.md#store-ids) de la aplicación a la que está asociada esta campaña de anuncios. Un ejemplo de id. de la Tienda para un producto es 9nblggh42cfd.    |   No    |    |  No     |   |  
+|  storeProductId   |  cadena   |   El [id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación a la que está asociada esta campaña de anuncios. Un ejemplo de id. de la Store para un producto es 9nblggh42cfd.    |   No    |    |  No     |   |  
+
 
 <span id="image-attributes"/>
+
 ## <a name="imageattributes-object"></a>Objeto ImageAttributes
 
 | Campo        | Tipo   |  Descripción      |  Solo lectura  | Valor predeterminado  | Obligatorio para POST |  
@@ -131,7 +141,7 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejecutar campañas de anuncios con los servicios de la Tienda Windows](run-ad-campaigns-using-windows-store-services.md)
+* [Ejecutar campañas de anuncios con los servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
 * [Administrar campañas de anuncios](manage-ad-campaigns.md)
 * [Administrar líneas de entrega de campañas de anuncios](manage-delivery-lines-for-ad-campaigns.md)
 * [Administrar perfiles de destino de las campañas de anuncios](manage-targeting-profiles-for-ad-campaigns.md)

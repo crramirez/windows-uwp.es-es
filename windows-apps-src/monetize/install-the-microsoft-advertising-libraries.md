@@ -4,28 +4,28 @@ ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
 description: Aprende a instalar el SDK de Microsoft Advertising.
 title: Instalar el SDK de Microsoft Advertising
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, anuncios, publicidad, instalar, SDK, biblioteca de publicidad
-ms.openlocfilehash: e953b327a32bc8385cc45190e5fd11dd5acee4b8
-ms.sourcegitcommit: c5c96ec4b6ccef57f69eb341b06e6280994c9767
+ms.localizationpriority: medium
+ms.openlocfilehash: 17c12d09fdc7643a2d2ac1c13fa2a4e6c92cad03
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1654884"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instalar el SDK de Microsoft Advertising
 
-Para mostrar anuncios en tus aplicaciones de Windows, instala uno de los siguientes SDK:
-
-* En el caso de las aplicaciones para UWP en Windows10, instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Este SDK es una extensión de Visual Studio 2015 y versiones posteriores.
-* Para aplicaciones de Windows 8.1 y Windows Phone 8.x, instala el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk). Este SDK es una extensión de Visual Studio2015 y Visual Studio2013.
+Para mostrar anuncios en las aplicaciones para UWP en Windows10, instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Este SDK es una extensión de Visual Studio 2015 y versiones posteriores.
 
 > [!NOTE]
-> Si está desarrollando un aplicación para UWP HTML o JavaScript, e instalaste el SDK de Windows10 (14393) o una versión posterior, debes instalar también la biblioteca WinJS. Esta biblioteca estaba incluida en versiones anteriores de Windows 10 SDK, pero a partir de Windows 10 SDK (14339), debe instalarse por separado. Para instalar WinJS, consulta cómo [obtener WinJS](http://try.buildwinjs.com/download/GetWinJS/).
+> Si está desarrollando un aplicación para UWP HTML o JavaScript, e instalaste el SDK de Windows10, versión 10.0.14393 (Actualización de aniversario), debes instalar también la biblioteca WinJS. Antes, esta biblioteca estaba incluida en versiones anteriores del SDK de Windows 10 pero desde la versión 10.0.14393 del SDK de Windows 10 (Actualización de aniversario), debe instalarse por separado. Para instalar WinJS, consulta cómo [obtener WinJS](http://try.buildwinjs.com/download/GetWinJS/).
 
 <span id="install-msi" />
+
 ## <a name="install-via-msi"></a>Instalación a través de MSI
 
 Para instalar el SDK de Microsoft Advertising mediante el instalador MSI:
@@ -39,7 +39,7 @@ Para instalar el SDK de Microsoft Advertising mediante el instalador MSI:
   MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
   ```
 
-3.  Descarga e instalar el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp), (para aplicaciones para UWP para Windows 10) o el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) (para XAML y aplicaciones JavaScript/HTML para Windows 8.1 y Windows Phone 8.x). Puede tardar unos minutos en instalarse. Espera a que finalice el proceso.
+3.  Descarga e instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Puede tardar unos minutos en instalarse. Espera a que finalice el proceso.
 
 4.  Reinicia Visual Studio.
 
@@ -48,7 +48,8 @@ Para instalar el SDK de Microsoft Advertising mediante el instalador MSI:
   De lo contrario, si es la primera vez que utilizas el SDK de Microsoft Advertising en el proyecto, ya estás listo para [agregar una referencia al SDK de Microsoft Advertising](#reference).
 
 <span id="install-nuget" />
-## <a name="install-via-nuget-uwp-only"></a>Instalar a través de NuGet (solo UWP)
+
+## <a name="install-via-nuget"></a>Instalar a través de NuGet
 
 Para instalar el SDK de Microsoft Advertising en un proyecto de UWP específico a través de NuGet:
 
@@ -78,6 +79,7 @@ Para instalar el SDK de Microsoft Advertising en un proyecto de UWP específico 
   De lo contrario, si es la primera vez que utilizas el SDK en el proyecto, ya estás listo para [agregar una referencia al SDK de Microsoft Advertising](#reference).
 
 <span id="reference" />
+
 ## <a name="add-a-reference-to-the-microsoft-advertising-sdk"></a>Agregar una referencia al SDK de Microsoft Advertising
 
 Después de instalar el SDK de Microsoft Advertising, sigue estas instrucciones para hacer referencia al SDK en tu proyecto para usar las API de publicidad.
@@ -86,15 +88,9 @@ Después de instalar el SDK de Microsoft Advertising, sigue estas instrucciones 
     > [!NOTE]
     > Si el destino del proyecto es **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica por arquitectura (por ejemplo, **x86**). Si el destino del proyecto es **Cualquier CPU**, no podrás agregar una referencia al SDK de Microsoft Advertising correctamente a través de los siguientes pasos. Para obtener más información, consulta [Errores de referencia derivados de orientar el proyecto a Cualquier CPU](known-issues-for-the-advertising-libraries.md#reference_errors).
 
-2. En el **Explorador de soluciones**, haz clic con el botón secundario en **Referencias** y selecciona **Agregar referencia...**
+2. En el **Explorador de soluciones**, haz clic con el botón derecho en **Referencias** y selecciona **Agregar referencia…**
 
-3. En el **Administrador de referencias**, selecciona una de las siguientes referencias según el tipo de proyecto:
-
-    -   Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows universal**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Microsoft Advertising para XAML** (para aplicaciones XAML) o **SDK de Microsoft Advertising para JavaScript** (para aplicaciones compiladas con JavaScript y HTML).
-
-    -   Para un proyecto de Windows8.1: expande **Windows 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows8.1 XAML** (para aplicaciones XAML) o **SDK de Microsoft Advertising para Windows8.1 (JS) nativo** (para aplicaciones compiladas con JavaScript y HTML).
-
-    -   Para un proyecto de Windows Phone8.1: expande **Windows Phone8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows Phone8.1 XAML** (para aplicaciones XAML) o **SDK de Microsoft Advertising para Windows Phone8.1 (JS) nativo** (para aplicaciones compiladas con JavaScript y HTML).
+3. En **Administrador de referencias**, amplía **Universal de Windows**, haz clic en **Extensiones** y luego selecciona la casilla de verificación junto a **SDK de Microsoft Advertising para XAML** (para aplicaciones XAML) o **SDK de Microsoft Advertising para JavaScript** (para aplicaciones compiladas con JavaScript y HTML).
 
 4.  En el **Administrador de referencias**, haz clic en Aceptar.
 
@@ -106,10 +102,11 @@ Para ver tutoriales que muestran cómo comenzar a usar las API de publicidad, co
 * [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md)
 
 <span id="framework" />
-## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk-uwp-only"></a>Descripción de los paquetes de marcos en el SDK de Microsoft Advertising (solo UWP)
+
+## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk"></a>Descripción de los paquetes de marcos en el SDK de Microsoft Advertising
 
 La biblioteca Microsoft.Advertising.dll en el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) (para aplicaciones para UWP) está configurada como un *paquete de marcos*. Esta biblioteca contiene las API de publicidad en los espacios de nombres [Microsoft.Advertising](https://msdn.microsoft.com/library/windows/apps/mt313187.aspx) y [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aspx).
 
 Dado que esta biblioteca es un paquete de marcos, después de que un usuario instale una versión de tu aplicación que use esta biblioteca, esta se actualizará automáticamente en su dispositivo a través de Windows Update cada vez que publiquemos una nueva versión de la biblioteca con correcciones y mejoras de rendimiento. Esto ayuda a garantizar que tus clientes tengan siempre instalada en sus dispositivos la versión más reciente de la biblioteca.
 
-Si publicamos una nueva versión del SDK que incorpore nuevas API o características en esta biblioteca, tendrás que instalar la versión más reciente del SDK para usar dichas características. En este escenario, también necesitarás publicar la aplicación actualizada en la Tienda.
+Si publicamos una nueva versión del SDK que incorpore nuevas API o características en esta biblioteca, tendrás que instalar la versión más reciente del SDK para usar dichas características. En este escenario, también necesitarás publicar la aplicación actualizada en la Store.

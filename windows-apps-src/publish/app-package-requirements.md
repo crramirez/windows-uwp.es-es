@@ -1,27 +1,29 @@
 ---
 author: jnHs
-Description: "Sigue estas instrucciones para preparar los paquetes de la aplicación para enviarlos a la Tienda Windows."
-title: "Requisitos del paquete de la aplicación"
+Description: Follow these guidelines to prepare your app's packages for submission to the Microsoft Store.
+title: Requisitos del paquete de la aplicación
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 39926699a81ce6882a46f4ec89b863d6147717dd
-ms.sourcegitcommit: bfa61aae632cca0c68dbfb0168424d38fd607f84
+keywords: windows 10, uwp, requisitos del paquete, paquetes, formato del paquete, versión compatible, enviar
+ms.localizationpriority: high
+ms.openlocfilehash: 76dd0a5f9ebcb1e92ac7874b535d286cb051df22
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832319"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
-Sigue estas instrucciones para preparar los paquetes de la aplicación para enviarlos a la Tienda Windows.
+Sigue estas instrucciones para preparar los paquetes de la aplicación para enviarlos a Microsoft Store.
 
-## <a name="before-you-build-your-apps-package-for-the-windows-store"></a>Antes de compilar el paquete de la aplicación para la Tienda Windows
+## <a name="before-you-build-your-apps-package-for-the-microsoft-store"></a>Antes de compilar el paquete de la aplicación para Microsoft Store
 
-Asegúrate de [probar tu aplicación con el Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md). También te recomendamos que pruebes la aplicación en distintos tipos de hardware. Ten en cuenta que hasta que no certifiquemos la aplicación y hagamos que esté disponible en la Tienda Windows, esta solo podrá instalarse y ejecutarse en equipos que tengan licencias de desarrollador.
+Asegúrate de [probar tu aplicación con el Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md). También te recomendamos que pruebes la aplicación en distintos tipos de hardware. Ten en cuenta que hasta que no certifiquemos la aplicación y hagamos que esté disponible en Microsoft Store, esta solo podrá instalarse y ejecutarse en equipos que tengan licencias de desarrollador.
 
 ## <a name="building-the-app-package-using-microsoft-visual-studio"></a>Compilar el paquete de la aplicación con Microsoft Visual Studio
 
@@ -32,7 +34,7 @@ Si usas MicrosoftVisual Studio como entorno de desarrollo, ya cuentas con herram
 
 Cuando crees el paquete en Visual Studio, asegúrate de iniciar sesión con la misma cuenta asociada con tu cuenta de desarrollador. Algunas partes del manifiesto del paquete tienen detalles específicos relacionados con tu cuenta. Esta información se detecta y se agrega automáticamente. Sin la información adicional agregada al manifiesto, se pueden producir errores al cargar el paquete. 
 
-Cuando compilas los paquetes de la aplicación, Visual Studio puede crear un archivo .appx o un archivo .appxupload (o un archivo .xap para Windows Phone 8.1 y versiones anteriores). Para aplicaciones destinadas a Windows 10, carga siempre el archivo .appxupload en la página [Paquetes](upload-app-packages.md). Para más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar aplicaciones universales de Windows para Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=620193 ).
+Cuando compilas los paquetes de la aplicación, Visual Studio puede crear un archivo .appx o un archivo .appxupload (o un archivo .xap para Windows Phone 8.1 y versiones anteriores). Para aplicaciones destinadas a Windows 10, carga siempre el archivo .appxupload en la página [Paquetes](upload-app-packages.md). Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Store, consulta [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).
 
 No es necesario que los paquetes de la aplicación estén firmados con un certificado con la raíz en una entidad de certificación de confianza.
 
@@ -49,9 +51,9 @@ Con un lote de la aplicación, un usuario solo descargará los archivos relevant
 
 ## <a name="building-the-app-package-manually"></a>Compilar el paquete de la aplicación manualmente
 
-Si no usas Visual Studio para crear tu paquete, debes [crear el manifiesto de tu paquete manualmente](https://msdn.microsoft.com/library/windows/apps/br211476).
+Si no usas Visual Studio para crear tu paquete, debes [crear el manifiesto de tu paquete manualmente](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-create-a-package-manifest-manually).
 
-Asegúrate de revisar la documentación del [manifiesto del paquete de la aplicación](https://msdn.microsoft.com/library/windows/apps/br211474) para conocer los requisitos y detalles completos del manifiesto. El manifiesto debe seguir el esquema de manifiesto de paquetes a fin de aprobar la certificación.
+Asegúrate de revisar la documentación del [manifiesto del paquete de la aplicación](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest) para conocer los requisitos y detalles completos del manifiesto. El manifiesto debe seguir el esquema de manifiesto de paquetes a fin de aprobar la certificación.
 
 El manifiesto debe incluir información específica sobre tu cuenta y tu aplicación. Puedes encontrar esta información en [Ver detalles de identidad de la aplicación](view-app-identity-details.md) en la sección **Administración de aplicaciones** de la página de introducción a la aplicación en el panel.
 
@@ -66,9 +68,9 @@ Los lotes de la aplicación usan un manifiesto diferente. Revisa la documentaci�
 
 Si la aplicación tiene más de un paquete, estos elementos del manifiesto de la aplicación deben ser iguales en cada paquete (por SO de destino):
 
--   [**Paquete y funcionalidades**](https://msdn.microsoft.com/library/windows/apps/br211422)
--   [**Paquete y dependencias**](https://msdn.microsoft.com/library/windows/apps/br211428)
--   [**Paquete y recursos**](https://msdn.microsoft.com/library/windows/apps/br211462)
+-   [**Paquete y funcionalidades**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-capabilities)
+-   [**Paquete y dependencias**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-dependencies)
+-   [**Paquete y recursos**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-resources)
 
 
 ## <a name="package-format-requirements"></a>Requisitos de formato del paquete
@@ -79,11 +81,20 @@ Los paquetes de la aplicación deben cumplir con estos requisitos.
 |----------------------|----------------------------------------------------------------------|
 | Tamaño del paquete         | .appxbundle: 25 GB como máximo por paquete <br>Paquetes .appx destinados a Windows10: 25 GB como máximo por paquete<br>Paquetes .appx destinados a Windows8.1: 8 GB como máximo por paquete <br> Paquetes .appx destinados a Windows8: 2 GB como máximo por paquete <br> Paquetes .appx destinados a WindowsPhone 8.1: 4 GB como máximo por paquete <br> Paquetes .xap: 1 GB como máximo por paquete                                                                           |
 | Hash de asignación de bloque     | Algoritmo SHA2-256                                                   |
- 
+
+
+## <a name="supported-versions"></a>Versiones compatibles
+
+Para aplicaciones para UWP, todos los paquetes deben dirigirse a una versión de Windows 10 admitida por la Store. Las versiones que admite tu paquete deben indicarse en los atributos **MinVersion** y **MaxVersionTested** del elemento [TargetDeviceFamily](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) del manifiesto de la aplicación.
+
+El rango de versiones actualmente admitido de: 
+- Mínima: 10.0.10240.0
+- Máxima: 10.0.17134.0
+
 
 ## <a name="storemanifest-xml-file"></a>Archivo XML de StoreManifest
 
-StoreManifest.xml es un archivo de configuración opcional que se puede incluir en paquetes de la aplicación. Su objetivo es habilitar características como, por ejemplo, declarar tu aplicación como una aplicación para dispositivo de la Tienda Windows o declarar los requisitos de los que depende un paquete para que se pueda aplicar a un dispositivo, que no incluye el manifiesto del paquete. StoreManifest.xml se envía con el paquete de la aplicación y debe estar en la carpeta raíz del proyecto principal de la aplicación. Para obtener más información, consulta [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
+StoreManifest.xml es un archivo de configuración opcional que se puede incluir en paquetes de la aplicación. Su objetivo es habilitar características como, por ejemplo, declarar tu aplicación como una aplicación para dispositivo de Microsoft Store o declarar los requisitos de los que depende un paquete para que se pueda aplicar a un dispositivo, que no incluye el manifiesto del paquete. StoreManifest.xml se envía con el paquete de la aplicación y debe estar en la carpeta raíz del proyecto principal de la aplicación. Para obtener más información, consulta [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
 
  
 

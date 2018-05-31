@@ -1,19 +1,20 @@
 ---
 author: laurenhughes
-description: "En este artículo se explica cómo usar la clase LowLightFusion para procesar mapas de bits."
+description: En este artículo se explica cómo usar la clase LowLightFusion para procesar mapas de bits.
 title: Procesar mapas de bits la API Low Light Fusion
 ms.author: lahugh
-ms.date: 11/02/2017
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, fusión de poca luz, low light fusion, mapas de bits, procesamiento de imágenes"
-localizationpriority: medium
-ms.openlocfilehash: 989571063603a7133f39961b4b32bdc60fc373dc
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+keywords: windows 10, uwp, fusión de poca luz, low light fusion, mapas de bits, procesamiento de imágenes
+ms.localizationpriority: medium
+ms.openlocfilehash: e884a895a9fed4a932eaef760faf88271e752b67
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690531"
 ---
 # <a name="process-bitmaps-with-the-lowlightfusion-api"></a>Procesar mapas de bits la API LowLightFusion
 
@@ -42,7 +43,7 @@ Ahora que hemos seleccionado el número correcto de fotogramas, debemos descodif
 
 ## <a name="fuse-the-bitmaps-into-a-single-bitmap"></a>Fusión de los mapas de bits en un único mapa de bits
 
-Ahora que tenemos un número correcto de fotogramas en un formato aceptable, podemos usar el método **[FuseAsync](https://docs.microsoft.com/uwp/api/windows.media.core.lowlightfusion#Windows_Media_Core_LowLightFusion_FuseAsync_Windows_Foundation_Collections_IIterable_Windows_Graphics_Imaging_SoftwareBitmap__)** para aplicar el algoritmo de Low Light Fusion. El resultado será la imagen procesada, con la claridad mejorada, con la forma de un SoftwareBitmap. 
+Ahora que tenemos un número correcto de fotogramas en un formato aceptable, podemos usar el método **[FuseAsync](https://docs.microsoft.com/uwp/api/windows.media.core.lowlightfusion.fuseasync)** para aplicar el algoritmo de Low Light Fusion. El resultado será la imagen procesada, con la claridad mejorada, con la forma de un SoftwareBitmap. 
 
 [!code-cs[SnippetFuseFrames](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetFuseFrames)]
 
@@ -53,14 +54,14 @@ Por último, limpiaremos el SoftwareBitmap resultante mediante codificación y l
 
 ## <a name="before-and-after"></a>Antes y después
 
-Este es un ejemplo de dos imágenes de entrada y la imagen de salida resultante después de aplicar el algoritmo de Low Light Fusion.
+Este es un ejemplo de una imagen de entrada y la imagen de salida resultante después de aplicar el algoritmo de Low Light Fusion.
 
 > [!div class="mx-tableFixed"] 
-| Fotograma 1 | Fotograma 2 | Salida de fusión de poca luz | 
-|---------|---------|-------------------------|
-| ![Primer fotograma de entrada para el algoritmo de Low Light Fusion](./images/LLF-Input1.png) | ![Segundo fotograma de entrada para el algoritmo de Low Light Fusion](./images/LLF-Input2.png) | ![Fotograma resultante del algoritmo de Low Light Fusion](./images/LLF-Output.png) |
+| Fotograma de entrada | Salida de fusión de poca luz | 
+|-------------|-------------------------|
+| ![Fotograma de entrada para el algoritmo de Low Light Fusion](./images/LLF-Input.png) | ![Fotograma resultante del algoritmo de Low Light Fusion](./images/LLF-Output.png) |
 
-En los fotogramas de entrada y el fotograma de salida puede ver que se han mejorado la iluminación y la claridad de la copa, así como la claridad del entorno, como la moldura junto a la alfombra.
+Puedes ver desde el fotograma de entrada que se ha mejorado la iluminación y la claridad de las sombras que rodean el banner.
 
 ## <a name="related-topics"></a>Temas relacionados 
 [Clase LowLightFusion](https://docs.microsoft.com/uwp/api/windows.media.core.lowlightfusion)  

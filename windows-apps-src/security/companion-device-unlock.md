@@ -1,19 +1,21 @@
 ---
 title: Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hello
-description: "Un dispositivo complementario Windows Hello es un dispositivo que puede actuar de forma conjunta con tu escritorio Windows 10 para mejorar la experiencia de autenticación del usuario. Con el marco del dispositivo complementario de Windows Hello, un dispositivo complementario puede proporcionar una experiencia enriquecida para Windows Hello, incluso cuando la biometría no está disponible (por ejemplo, si el equipo con Windows 10 no tiene una cámara para la autenticación facial o un dispositivo lector de huellas digitales)."
-author: awkoren
-ms.author: alkoren
+description: Un dispositivo complementario Windows Hello es un dispositivo que puede actuar de forma conjunta con tu escritorio Windows 10 para mejorar la experiencia de autenticación del usuario. Con el marco del dispositivo complementario de Windows Hello, un dispositivo complementario puede proporcionar una experiencia enriquecida para Windows Hello, incluso cuando la biometría no está disponible (por ejemplo, si el equipo con Windows 10 no tiene una cámara para la autenticación facial o un dispositivo lector de huellas digitales).
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
-ms.openlocfilehash: bf1928d7e2d96ecafa092ab6dc1ca1bc8c1f8073
-ms.sourcegitcommit: bfa61aae632cca0c68dbfb0168424d38fd607f84
+ms.localizationpriority: medium
+ms.openlocfilehash: 3d458f66034e61db97fcd281f7c8a6cec9b812cc
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691061"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueo de Windows con dispositivos complementarios (IoT) de Windows Hello
 
@@ -390,7 +392,7 @@ Los detalles de cada uno de los estados son los siguientes:
 | SuspendingAuthentication      | Cuando la aplicación del dispositivo complementario Windows Hello recibe este estado, significa que el servicio de autenticación complementario ha dejado de aceptar solicitudes de autenticación.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | CredentialCollected           | Significa que otra aplicación del dispositivo complementario Windows Hello ha llamado a la segunda API y que el servicio de autenticación complementario está comprobando lo que se envió. En este punto, el servicio de autenticación complementario no aceptará ninguna otra solicitud de autenticación hasta que la que se envió no pase la comprobación. La aplicación del dispositivo complementario Windows Hello debe permanecer conectada hasta que se alcance el siguiente estado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | CredentialAuthenticated       | Significa que la credencial enviada funcionó. CredentialAuthenticated tiene un identificador del dispositivo complementario Windows Hello que se conectó correctamente. La aplicación del dispositivo complementario Windows Hello debe comprobarlo para ver si su dispositivo asociado fue el ganador. Si no es así, la aplicación del dispositivo complementario Windows Hello debe evitar mostrar cualquier flujo de autenticación posterior (como mensajes de confirmación en el dispositivo complementario o vibraciones en el dispositivo). Ten en cuenta que si la credencial enviada no funcionó, el estado cambiará a CollectingCredential.                                                                                                                                                                                                                                                                                                                                                                                       |
-| StoppingAuthentication        | La autenticación fue correcta y el usuario vio el escritorio. Hora de terminar la tarea en segundo plano                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| StoppingAuthentication        | La autenticación fue correcta y el usuario vio el escritorio. Es hora de terminar la tarea en segundo plano. Antes de salir de la tarea en segundo plano, anula explícitamente el registro del controlador StageEvent. Esto ayudará a la tarea en segundo plano a salir rápidamente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 
 

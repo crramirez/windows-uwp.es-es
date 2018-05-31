@@ -3,26 +3,27 @@ author: jnHs
 Description: You can set the precise date and time that your app should become available in the Store, giving you greater flexibility and the ability to customize dates for different markets.
 title: Configurar la programación precisa del lanzamiento
 ms.author: wdg-dev-content
-ms.date: 03/28/2017
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, programación, fecha de lanzamiento, fechas, inicio
 ms.localizationpriority: high
-ms.openlocfilehash: 7c6f39622c4b64e787a7d9a226121dac7dcefdfa
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.openlocfilehash: 87beb3d3e5303528f8b80049aacecedb0212b9a7
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832069"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar la programación precisa del lanzamiento
 
-La sección **Programación** en la página [Precios y disponibilidad](set-app-pricing-and-availability.md) te permite establecer la fecha y hora precisas a la que la aplicación debe estar disponible en la Tienda, ofreciéndote más flexibilidad y la capacidad de personalizar fechas para los diferentes mercados.
+La sección **Programación** en la página [Precios y disponibilidad](set-app-pricing-and-availability.md) te permite establecer la fecha y hora precisas a la que la aplicación debe estar disponible en la Store, ofreciéndote más flexibilidad y la capacidad de personalizar fechas para los diferentes mercados.
 
 > [!NOTE]
 > Aunque este tema hace referencia a las aplicaciones, la programación de lanzamiento de envíos de complementos utiliza el mismo proceso.
 
-Además, puedes establecer una fecha en la que el producto dejará de estar disponible en la Tienda. Recuerda que esto significa que el producto ya no podrá encontrarse en la Tienda mediante búsqueda o exploración, pero los clientes con un vínculo directo podrán ver la descripción del producto en la Tienda. Solo pueden descargarlo si ya tienen el producto o si tienen un [código promocional](generate-promotional-codes.md) y estás usando un dispositivo Windows 10.
+Además, puedes establecer una fecha en la que el producto dejará de estar disponible en la Store. Recuerda que esto significa que el producto ya no podrá encontrarse en la Store mediante búsqueda o exploración, pero los clientes con un vínculo directo podrán ver la descripción del producto en la Store. Solo pueden descargarlo si ya tienen el producto o si tienen un [código promocional](generate-promotional-codes.md) y estás usando un dispositivo Windows 10.
 
 De manera predeterminada (a menos que hayas seleccionado uno de la opciones **Make this app available but not discoverable in the Store** en la sección [Visibilidad](choose-visibility-options.md#discoverability), la aplicación estará disponible para todos los clientes tan pronto como supere la certificación y complete el proceso de publicación. Para elegir otras fechas, seleccione **Mostrar opciones** para expandir la sección.
 
@@ -42,20 +43,18 @@ Verás dos opciones aquí: **Lanzamiento** y **Detener la compra**.
 
 ## <a name="release"></a>Lanzamiento
 
-En la lista desplegable de **Lanzamiento**, puedes establecer cuando quieres que tu aplicación esté disponible en la Tienda. Esto significa que la aplicación es reconocible en la Tienda mediante búsqueda o exploración, y que los clientes pueden ver su descripción en la Tienda y comprar la aplicación.
+En la lista desplegable de **Lanzamiento**, puedes establecer cuando quieres que tu aplicación esté disponible en la Store. Esto significa que la aplicación es reconocible en la Store mediante búsqueda o exploración, y que los clientes pueden ver su descripción en la Store y comprar la aplicación.
 
 >[!NOTE]
-> Una vez que la aplicación se ha publicado y está disponible en la Tienda, ya no podrás seleccionar una fecha de **lanzamiento** (ya que la aplicación se habrá publicado).
+> Una vez que la aplicación se ha publicado y está disponible en la Store, ya no podrás seleccionar una fecha de **lanzamiento** (ya que la aplicación se habrá publicado).
 
 Estas son las opciones que se puede configurar para la programación del **lanzamiento** de un producto:
 - **Tan pronto como sea posible**: El producto se publicará tan pronto como se certifique y se publique. Esta es la opción predeterminada.
 - **En**: El producto se publicará en la fecha y hora que selecciones. Tienes dos opciones adicionales:
    - **UTC**: El tiempo que selecciones será el Horario universal coordinado (UTC), para que la aplicación se lance al mismo tiempo en todos los lugares.
    - **Local**: El tiempo que selecciones se usará en cada zona horaria asociada con un mercado. (Ten en cuenta para los mercados que tengan más de una zona horaria, se usará solo una zona horaria para ese mercado. Para los Estados Unidos, se usará la zona horario del Este).
-- **No programada**: La aplicación no estará disponible en la Tienda. Si eliges esta opción, puede realizar la aplicación disponible en la Tienda creando más tarde un nuevo envío y eligiendo una de las otras opciones.
+- **No programada**: La aplicación no estará disponible en la Store. Si eliges esta opción, puede realizar la aplicación disponible en la Store creando más tarde un nuevo envío y eligiendo una de las otras opciones.
 
-> [!TIP]
-> También tienes la opción de [especificar una fecha de lanzamiento diferente](set-app-pricing-and-availability.md#display-release-date) para que aparezca en la descripción de la aplicación en la Tienda. 
 
 ## <a name="stop-acquisition"></a>Detener la compra
 
@@ -63,7 +62,7 @@ En el menú desplegable **Detener la compra**, puedes establecer una fecha y hor
 
 De manera predeterminada, **Detener la compra** siempre está establecida en "Nunca". Para cambiar esta opción, selecciona **En** en la lista desplegable y especifica una fecha y hora, como se ha descrito anteriormente. En la fecha y hora que selecciones, los clientes ya no podrán comprar la aplicación.
 
-Es importante comprender que esta opción tiene el mismo impacto que seleccionar **Make this app discoverable but not available** en la sección [Visibilidad](choose-visibility-options.md#discoverability) y eligiendo **Detener la compra: Los clientes con un vínculo directo podrán ver la descripción del producto en la Tienda, pero solo podrán descargarlo si ya lo tienen, tienen un código promocional y están usando un dispositivo Windows 10.** Para dejar de ofrecer completamente una aplicación a los clientes nuevos, haz clic en **Make app unavailable** desde la página Información general de la aplicación. Para obtener más información, consulta [Quitar una aplicación de la Tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+Es importante comprender que esta opción tiene el mismo impacto que seleccionar **Make this app discoverable but not available** en la sección [Visibilidad](choose-visibility-options.md#discoverability) y eligiendo **Detener la compra: Los clientes con un vínculo directo podrán ver la descripción del producto en la Store, pero solo podrán descargarlo si ya lo tienen, tienen un código promocional y están usando un dispositivo Windows 10.** Para dejar de ofrecer completamente una aplicación a los clientes nuevos, haz clic en **Make app unavailable** desde la página Información general de la aplicación. Para obtener más información, consulta [Quitar una aplicación de la Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 > [!TIP]
 > Si seleccionas una fecha para **detener la compra** y, más adelante decides que te gustaría que la aplicación estuviera disponible de nuevo, puedes crear un nuevo envío y cambiar la opción **impedir la compra** a **Nunca**. La aplicación volverá a estar disponible una vez que tu envío actualizado se publique.

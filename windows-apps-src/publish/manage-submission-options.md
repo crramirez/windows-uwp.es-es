@@ -3,17 +3,18 @@ author: jnHs
 Description: Manage submission options such as publishing hold options, notes for certification, and more.
 title: Administrar las opciones de envío
 ms.author: wdg-dev-content
-ms.date: 04/03/2018
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, suspensión de publicación, fecha de publicación, realizar un envío para publicar
+keywords: windows 10, uwp, suspensión de publicación, fecha de publicación, realizar un envío para publicar, aprobación de funcionalidad restringida
 ms.localizationpriority: high
-ms.openlocfilehash: 4f18a4cae88f78b16ea43856cc6166c67a228c2c
-ms.sourcegitcommit: 9f059b37e45099b4314c96a0b604449e966d3c3c
+ms.openlocfilehash: b2d4942917d7ab60ff54d557d698c4cc507982d9
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832653"
 ---
 # <a name="manage-submission-options"></a>Administrar las opciones de envío
 
@@ -34,7 +35,7 @@ Para la mayoría de los envíos, se recomienda dejar la sección **Opciones de s
 
 ### <a name="publish-your-submission-manually"></a>Publicar el envío manualmente
 
-Si no deseas establecer todavía una fecha de lanzamiento y prefieres que el envío permanezca sin publicar hasta que decidas iniciar manualmente el proceso de publicación, puedes elegir **No publicar este envío hasta que seleccione Publicar ahora**. Elegir esta opción significa que la selección no se publicará hasta que tú indiques que debe ser así. Cuando la aplicación supere la certificación, puedes publicarla seleccionando **Publicar ahora** en la página de estado de certificación, o seleccionando una fecha específica en la misma forma que se describe a continuación.
+Si no deseas establecer todavía una fecha de lanzamiento y prefieres que el envío permanezca sin publicar hasta que decidas iniciar manualmente el proceso de publicación, puedes elegir **No publicar este envío hasta que seleccione Publicar ahora**. Elegir esta opción significa que el envío no se publicará hasta que tú indiques que debe ser así. Cuando la aplicación supere la certificación, puedes publicarla seleccionando **Publicar ahora** en la página de estado de certificación, o seleccionando una fecha específica en la misma forma que se describe a continuación.
 
 
 ### <a name="start-publishing-your-submission-on-a-certain-date"></a>Empezar a publicar el envío en una fecha determinada
@@ -48,7 +49,18 @@ Como se indicó anteriormente, si quieres especificar determinadas fechas para q
 
 ## <a name="notes-for-certification"></a>Notas para la certificación
 
-Cuando envías tu aplicación, tienes la opción de usar la página **Notas para la certificación** para proporcionar información adicional a los evaluadores de certificación. Esta información puede ayudarte a asegurarte de que tu aplicación se pruebe correctamente. 
+Cuando envías tu aplicación, tienes la opción de usar la sección **Notas para la certificación** para proporcionar información adicional a los evaluadores de certificación. Esta información puede ayudarte a asegurarte de que tu aplicación se pruebe correctamente. 
 
 Para obtener más información, consulta [Notas para la certificación](notes-for-certification.md).
+
+
+## <a name="restricted-capabilities"></a>Funcionalidades restringidas
+
+Si detectamos que los paquetes declaran [funcionalidades restringidas](../packaging/app-capability-declarations.md#special-and-restricted-capabilities), tendrás que proporcionar información en esta sección para recibir la aprobación. Para cada funcionalidad, indícanos por qué tu aplicación tiene que declarar la funcionalidad y cómo se utiliza. Asegúrate de incluir tantos detalles como sea posible para ayudarnos a comprender por qué el producto tiene que declarar la funcionalidad. 
+
+Durante el proceso de certificación, nuestros evaluadores revisarán la información que proporciones para determinar si se aprueba el envío para usar la funcionalidad. Ten en cuenta que esto demora el envío para completar el proceso de certificación. Si aprobamos el uso de la funcionalidad, tu aplicación continuará el resto del proceso de certificación. Por lo general, no tendrás que repetir el proceso de aprobación de funcionalidad al enviar actualizaciones realizadas en la aplicación (a menos que declares funcionalidades adicionales). 
+
+Si no aprobamos el uso de la funcionalidad, tu envío no pasará la certificación e incluiremos comentarios en el informe de certificación. A continuación, tienes la opción de crear un nuevo envío y cargar los paquetes que no declaren la funcionalidad o, si procede, solucionar los problemas relacionados con el uso de la funcionalidad y solicitar la autorización en un nuevo envío.
+
+Ten en cuenta que hay algunas funcionalidades restringidas que muy rara vez se aprueban. Para obtener más información sobre cada funcionalidad restringida , consulta [Declaraciones de funcionalidades de las aplicaciones](../packaging/app-capability-declarations.md#special-and-restricted-capabilities).
 

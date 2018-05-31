@@ -1,7 +1,7 @@
 ---
 author: jwmsft
-description: "Aquí describimos el concepto de programación de eventos en una aplicación de Windows Runtime cuando se usa C#, Visual Basic o extensiones de componentes de Visual C++ (C++/CX), como lenguaje de programación y XAML, para la definición de la interfaz de usuario."
-title: "Introducción a eventos y eventos enrutados"
+description: Aquí describimos el concepto de programación de eventos en una aplicación de Windows Runtime cuando se usa C#, Visual Basic o extensiones de componentes de Visual C++ (C++/CX), como lenguaje de programación y XAML, para la definición de la interfaz de usuario.
+title: Introducción a eventos y eventos enrutados
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -9,13 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d01cabe3b92e3a1e4df0062334a6c7a1d54beaac
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 61e55fa85e54970ba48413767ccf5a65b05af471
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691194"
 ---
 # <a name="events-and-routed-events-overview"></a>Introducción a eventos y eventos enrutados
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
@@ -63,7 +66,7 @@ Private Sub showUpdatesButton_Click(ByVal sender As Object, ByVal e As RoutedEve
 End Sub
 ```
 ```cpp
-void MyNamespace::BlankPage::showUpdatesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::Input::RoutedEventArgs^ e) {
+void MyNamespace::BlankPage::showUpdatesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e) {
     Button^ b = (Button^) sender;
     //more logic to do here...
 }
@@ -148,7 +151,7 @@ En C++, también se usa la sintaxis **+=**, pero ten en cuenta las siguientes di
 
 ```cpp
 textBlock1->PointerEntered += 
-ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerExited);
+ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerEntered);
 ```
 
 ### <a name="removing-event-handlers-in-code"></a>Quitar controladores de eventos del código
@@ -227,7 +230,7 @@ En algunos casos, *sender* ya no será el objeto que te interesa, sino que querr
 
 Varias clases de datos de evento pertenecientes a eventos enrutados específicos contienen una propiedad llamada **Handled**. Si quieres ver algún ejemplo, consulta las propiedades [**PointerRoutedEventArgs.Handled**](https://msdn.microsoft.com/library/windows/apps/hh943079), [**KeyRoutedEventArgs.Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073), [**DragEventArgs.Handled**](https://msdn.microsoft.com/library/windows/apps/br242375). En todos los casos, **Handled** es una propiedad booleana configurable.
 
-Si configuras la propiedad **Handled** como **true**, esta influirá en el comportamiento del sistema de eventos. Si **Handled** se establece en **true**, el enrutamiento se detiene para la mayoría de los controladores de eventos; esto es, el evento no continúa a lo largo de la ruta para notificar a otros controladores adjuntos de ese caso de evento en particular. De ti dependen el significado de la acción "controlar" en el contexto del evento y el modo en que la aplicación responde a ella. Básicamente, **Handled** es un protocolo simple que permite que el código de la aplicación declare que la instancia de un evento no necesita propagarse en ningún contenedor, ya que la lógica de la aplicación se encarga de realizar las acciones necesarias. Por otro lado, debes tener cuidado de no controlar eventos que quizás tengan que propagarse para que puedan tener lugar comportamientos de control o del sistema integrados. Por ejemplo, controlar eventos de bajo nivel en partes o elementos de un control de selección puede ser perjudicial. El control de selección podría estar buscando eventos de entrada para determinar si la selección debe cambiar.
+Si configuras la propiedad **Handled** como **true**, esta influirá en el comportamiento del sistema de eventos. Si **Handled** se establece en **true**, el enrutamiento se detiene para la mayoría de los controladores de eventos; esto es, el evento no continúa a lo largo de la ruta para notificar a otros controladores adjuntos de ese caso de evento en particular. De ti dependen el significado de la acción "controlar" en el contexto del evento y el modo en que la aplicación responde a ella. Básicamente, **Handled** es un protocolo simple que permite que el código de la aplicación declare que la instancia de un evento no necesita propagarse en ningún contenedor, ya que la lógica de la aplicación se encarga de realizar las acciones necesarias. Por el contrario, tienes que tener cuidado de no controlar eventos que probablemente tengan que propagarse para que puedan actuar comportamientos de control o del sistema integrados. Por ejemplo, controlar eventos de bajo nivel en partes o elementos de un control de selección puede ser perjudicial. El control de selección podría estar buscando eventos de entrada para determinar si la selección debe cambiar.
 
 No todos los eventos enrutados pueden cancelar una ruta de esta forma; sabrás cuáles son porque no tendrán la propiedad **Handled**. Por ejemplo, [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927) y [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943) se propagan, pero siempre lo hacen siguiendo todo el recorrido hasta la raíz; asimismo, sus clases de datos de evento no tienen una propiedad **Handled** que pueda influir en ese comportamiento.
 
@@ -250,9 +253,9 @@ Ciertos objetos participan en una relación con el árbol visual principal que c
 La determinación de si un elemento es visible para la entrada táctil, la entrada de ratón o la entrada de lápiz y de dónde está visible se denomina *prueba de acceso*. En el caso de las acciones táctiles y también de los eventos de manipulación o específicos de la interacción que son consecuencia de una acción táctil, un elemento debe ser visible en la prueba de acceso para poder ser origen de eventos y generar el evento que está asociado a la acción. De lo contrario, la acción pasa a través del elemento a cualquier elemento subyacente o elemento principal del árbol visual que pueda interaccionar con esos datos. Hay varios factores que afectan a la prueba de posicionamiento, pero puedes determinar si un elemento específico puede generar eventos de entrada comprobando la propiedad [**IsHitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933). Esta propiedad solo devuelve **true** si el elemento cumple con los siguientes criterios:
 
 -   El valor de la propiedad [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) del elemento es [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006).
--   El valor de la propiedad **Background** o **Fill** del elemento no es **null**. Un valor **null** de la clase [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) provoca transparencia e invisibilidad en la prueba de posicionamiento. (Para que un elemento sea transparente pero se pueda someter a la prueba de posicionamiento, usa un pincel cuya propiedad sea [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) en lugar de **null**).
+-   El valor de la propiedad **Background** o **Fill** del elemento no es **null**. Un valor **null** de la clase [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) provoca transparencia e invisibilidad en la prueba de posicionamiento. (Para que un elemento sea transparente pero se pueda someter a la prueba de posicionamiento, usa un pincel cuya propiedad sea [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) en lugar de **null**).
 
-**Nota** [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) no define **Background** ni **Fill**. Definen estas propiedades diferentes clases derivadas como [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) y [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243377). Sin embargo, las implicaciones de los pinceles que uses en las propiedades de primer plano y segundo plano, son las mismas tanto para la prueba de posicionamiento como para los eventos de entrada, independientemente de qué subclase implemente las propiedades.
+**Nota** [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) no define **Background** ni **Fill**. Definen estas propiedades diferentes clases derivadas como [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) y [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape). Sin embargo, las implicaciones de los pinceles que uses en las propiedades de primer plano y segundo plano, son las mismas tanto para la prueba de posicionamiento como para los eventos de entrada, independientemente de qué subclase implemente las propiedades.
 
 -   Si el elemento es un control, el valor de la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) debe ser **true**.
 -   El elemento debe tener dimensiones reales en el diseño. Un elemento cuyas propiedades [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) y [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) tengan un valor 0, no generarán eventos de entrada.

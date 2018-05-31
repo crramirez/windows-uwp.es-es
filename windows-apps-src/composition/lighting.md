@@ -1,19 +1,21 @@
 ---
 author: jebishop
 ms.assetid: fb8ae71d-5c88-4c85-9257-a9607d5179b1
-title: "lighting, iluminación"
-description: "Los objetos de luz se usan junto con el objeto SceneLightingEffect para simular la reflexión e iluminación dinámicas."
+title: lighting, iluminación
+description: Los objetos de luz se usan junto con el objeto SceneLightingEffect para simular la reflexión e iluminación dinámicas.
 ms.author: jimwalk
 ms.date: 03/29/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 3f922cae8aa0787f8be6496997df1021dda8e142
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.localizationpriority: medium
+ms.openlocfilehash: 316b79fa9fc9a700d606f0881a89a299523330b1
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1673712"
 ---
 # <a name="lighting"></a>Iluminación
 
@@ -87,11 +89,12 @@ public sealed class FancyOrangeSpotLight : XamlLight
     protected override void OnConnected(UIElement newElement)
     {
         // OnConnected is called when the first target UIElement is shown on the screen. This enables delaying composition object creation until it's actually necessary.
-        CompositionLight = Window.Current.Compositor.CreateSpotLight();
-        CompositionLight.InnerConeColor = Colors.Orange;
-        CompositionLight.OuterConeColor = Colors.Yellow;
-        CompositionLight.InnerConeAngleInDegrees = 30;
-        CompositionLight.OuterConeAngleInDegrees = 45;
+        var spotLight = Window.Current.Compositor.CreateSpotLight();
+        spotLight.InnerConeColor = Colors.Orange;
+        spotLight.OuterConeColor = Colors.Yellow;
+        spotLight.InnerConeAngleInDegrees = 30;
+        spotLight.OuterConeAngleInDegrees = 45;
+        CompositionLight = spotLight;
     }
 
     protected override void OnDisconnected(UIElement oldElement)

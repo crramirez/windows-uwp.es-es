@@ -1,6 +1,6 @@
 ---
 author: PatrickFarley
-Description: "Sigue estos procedimientos recomendados para el uso de geovallas en tu aplicación."
+Description: Follow these best practices for geofencing in your app.
 title: Directrices para usar geovallas en aplicaciones
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
 ms.author: pafarley
@@ -8,15 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, mapa, map, ubicación, location, geovalla, geofencing"
-ms.openlocfilehash: e21b5b89c95a6b4988e1e95fc924ec3eefd46942
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, mapa, map, ubicación, location, geovalla, geofencing
+ms.localizationpriority: medium
+ms.openlocfilehash: e781ff1fbcf5c39f03fb7b2c5f713a881b36e4b2
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1689501"
 ---
 # <a name="guidelines-for-geofencing-apps"></a>Directrices para usar geovallas en aplicaciones
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -33,6 +36,7 @@ Sigue estos procedimientos recomendados para el uso de [**geovallas**](https://m
     -   Si la aplicación no tiene acceso a Internet, puedes pedir al usuario que se conecte a Internet antes de configurar la geovalla.
     -   Si no es posible el acceso a Internet, evita el consumo de energía necesario para las comprobaciones de la ubicación de geovalla.
 -   Asegúrate de que las notificaciones de geovalla sean relevantes, mediante la comprobación de la marca de tiempo y la ubicación actual cuando un evento de geovalla indique que se ha cambiado al estado [**Entered**](https://msdn.microsoft.com/library/windows/apps/dn263660) o al estado **Exited**. Consulta **Comprobar la marca de tiempo y la ubicación actual** para más información.
+(#timestamp) abajo para más información.
 -   Crea excepciones para administrar los casos en los que un dispositivo no pueda acceder a la información local y notifica al usuario si fuese necesario. Puede que no esté disponible la información de ubicación porque los permisos estén desactivados, el dispositivo no disponga de un adaptador GPS, la señal GPS esté bloqueada o la señal Wi-Fi no sea lo suficientemente intensa.
 -   En general, no es necesario escuchar los eventos de geovalla en primer y segundo plano al mismo tiempo. Sin embargo, si la aplicación debe escuchar eventos de geovalla tanto en primer como en segundo plano:
 
@@ -129,7 +133,6 @@ Si tu aplicación debe usar una geovalla con un radio pequeño, aconseja a los u
 
 * [Configurar una geovalla](https://msdn.microsoft.com/library/windows/apps/mt219702)
 * [Obtener la ubicación actual](https://msdn.microsoft.com/library/windows/apps/mt219698)
-<!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
 * [Ejemplo de ubicación de UWP (geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
  
 

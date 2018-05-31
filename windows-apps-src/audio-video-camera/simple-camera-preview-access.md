@@ -1,21 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
-description: "En este artículo se describe cómo mostrar rápidamente la secuencia de vista previa de la cámara en una página XAML en una aplicación para la Plataforma universal de Windows (UWP)."
-title: "Mostrar la vista previa de la cámara"
+description: En este artículo se describe cómo mostrar rápidamente la secuencia de vista previa de la cámara en una página XAML en una aplicación para la Plataforma universal de Windows (UWP).
+title: Mostrar la vista previa de la cámara
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 5e6a38c34f080310eeca7e904ef21e399639de71
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bba681a60d51167d1fc3d6bf8bf4050a7db2152f
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1692956"
 ---
 # <a name="display-the-camera-preview"></a>Mostrar la vista previa de la cámara
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este artículo se describe cómo mostrar rápidamente la secuencia de vista previa de la cámara en una página XAML en una aplicación para la Plataforma universal de Windows (UWP). La creación de una aplicación que capture fotos y vídeos con la cámara requiere que realices tareas, como controlar la orientación del dispositivo y de la cámara o establecer opciones de codificación para el archivo capturado. En algunos escenarios de la aplicación, es posible que solo quieras mostrar la secuencia de vista previa de la cámara sin preocuparte por estas otras consideraciones. En este artículo se muestra cómo hacerlo con la cantidad de código mínima. Ten en cuenta que siempre debes apagar la secuencia de vista previa correctamente cuando termines mediante el procedimiento siguiente.
 
@@ -39,7 +42,7 @@ Usa una clase [**CaptureElement**](https://msdn.microsoft.com/library/windows/ap
 
 
 
-## <a name="use-mediacapture-to-start-the-preview-stream"></a>Usar MediaCapture para iniciar el flujo de vista previa
+## <a name="use-mediacapture-to-start-the-preview-stream"></a>Usar MediaCapture para iniciar la emisión de vista previa
 
 El objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) es la interfaz de la aplicación para la cámara del dispositivo. Esta clase es un miembro del espacio de nombres Windows.Media.Capture. En el ejemplo de este artículo también se usan las API de los espacios de nombres [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) y [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx), además de las que se incluyen con la plantilla de proyecto predeterminada.
 
@@ -55,16 +58,24 @@ Declara una variable de tipo [**DisplayRequest**](https://msdn.microsoft.com/lib
 
 [!code-cs[DeclareDisplayRequest](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetDeclareDisplayRequest)]
 
+Crea un método auxiliar para iniciar la vista previa de la cámara, denominada **StartPreviewAsync** en este ejemplo. Según el escenario de la aplicación, es posible que quieras llamar a este método desde el controlador de eventos **OnNavigatedTo** que se llama cuando la página se carga o espera e inicia la vista previa en respuesta a los eventos de IU.
+
 Crea una nueva instancia de la clase **MediaCapture** y llama a [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) para inicializar el dispositivo de captura. Este método puede presentar errores en los dispositivos que no tienen una cámara, por ejemplo, por lo que debe llamarlo desde un bloque **probar**. Se iniciará una **UnauthorizedAccessException** si intenta inicializar la cámara y el usuario deshabilitó el acceso a la cámara en la configuración de privacidad del dispositivo. También verá esta excepción durante el desarrollo si ignoró agregar las funcionalidades adecuadas al manifiesto de la aplicación.
 
 **Importante** En algunas familias de dispositivos, se muestra al usuario una petición de consentimiento antes de que se conceda acceso a la aplicación para usar la cámara del dispositivo. Por este motivo, solo debes llamar a [**MediaCapture.InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) desde la conversación principal de la interfaz de usuario. Intentar inicializar la cámara desde otra conversación puede producir errores de inicialización.
 
-Para conectar el control **MediaCapture** a la clase **CaptureElement**, establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280). Llama al método [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613) para iniciar la vista previa. Llama al método [**RequestActive**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestActive) para asegurarte de que el dispositivo no entra en suspensión mientras se ejecuta la vista previa. Por último, establece la propiedad [**DisplayInformation.AutoRotationPreferences**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayInformation.AutoRotationPreferences) en [**Landscape**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayOrientations) para evitar que la interfaz de usuario y el objeto **CaptureElement** giren cuando el usuario cambia la orientación del dispositivo. Para obtener más información sobre cómo controlar los cambios de orientación del dispositivo, consulta [**Controlar la orientación del dispositivo con MediaCapture**](handle-device-orientation-with-mediacapture.md).  
+Para conectar el control **MediaCapture** a la clase **CaptureElement**, establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280). Llama al método [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613) para iniciar la vista previa. Este método lanzará una excepción **FileLoadException** si otra aplicación tiene control exclusivo del dispositivo de captura. Consulta la siguiente sección para obtener información sobre cómo estar a la escucha de cambios en el control exclusivo.
+
+Llama al método [**RequestActive**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestActive) para asegurarte de que el dispositivo no entra en suspensión mientras se ejecuta la vista previa. Por último, establece la propiedad [**DisplayInformation.AutoRotationPreferences**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayInformation.AutoRotationPreferences) en [**Landscape**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Display.DisplayOrientations) para evitar que la interfaz de usuario y el objeto **CaptureElement** giren cuando el usuario cambia la orientación del dispositivo. Para obtener más información sobre cómo controlar los cambios de orientación del dispositivo, consulta [**Controlar la orientación del dispositivo con MediaCapture**](handle-device-orientation-with-mediacapture.md).  
 
 [!code-cs[StartPreviewAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStartPreviewAsync)]
 
+## <a name="handle-changes-in-exclusive-control"></a>Controlar los cambios en el control exclusivo
+Como se indicó en la sección anterior, **StartPreviewAsync** producirá una excepción **FileLoadException** si otra aplicación tiene control exclusivo del dispositivo de captura. A partir de Windows 10, versión 1703, puedes registrar un controlador para el evento [MediaCapture.CaptureDeviceExclusiveControlStatusChanged](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture.CaptureDeviceExclusiveControlStatusChanged), que se genera siempre que cambie el estado del control exclusivo del dispositivo. En el controlador para este evento, comprueba la propiedad [MediaCaptureDeviceExclusiveControlStatusChangedEventArgs.Status](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapturedeviceexclusivecontrolstatuschangedeventargs.Status) para ver el estado actual. Si es el nuevo estado es **SharedReadOnlyAvailable**, sabes que actualmente no puedes iniciar la vista previa y es recomendable actualizar la interfaz de usuario para alertar al usuario. Si es el nuevo estado es **ExclusiveControlAvailable**, puedes intentar iniciar de nuevo la vista previa de cámara.
 
-## <a name="shut-down-the-preview-stream"></a>Apagar la secuencia de vista previa
+[!code-cs[ExclusiveControlStatusChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetExclusiveControlStatusChanged)]
+
+## <a name="shut-down-the-preview-stream"></a>Apagar la emisión de vista previa
 
 Cuando termines de usar la secuencia de vista previa, debes apagar siempre esa secuencia y deshacerte correctamente de los recursos asociados para garantizar la disponibilidad de la cámara para otras aplicaciones del dispositivo. Los pasos necesarios para cerrar la secuencia de vista previa son:
 
@@ -80,7 +91,7 @@ Debes apagar la secuencia de vista previa cuando el usuario abandone la página.
 
 [!code-cs[OnNavigatedFrom](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetOnNavigatedFrom)]
 
-También debes apagar el flujo de vista previa correctamente cuando la aplicación se suspenda. Para ello, registra un controlador para el evento [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860) en el constructor de la página.
+También debes apagar la emisión de vista previa correctamente cuando la aplicación se suspenda. Para ello, registra un controlador para el evento [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860) en el constructor de la página.
 
 [!code-cs[RegisterSuspending](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetRegisterSuspending)]
 

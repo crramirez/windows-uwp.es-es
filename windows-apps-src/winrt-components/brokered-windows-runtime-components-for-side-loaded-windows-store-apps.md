@@ -1,7 +1,7 @@
 ---
 author: msatranjr
-title: Componentes de Windows Runtime
-description: "En este documento se describe la función orientada a empresas que cuentan con asistencia de Windows10, que permite a las aplicaciones táctiles de .NET usar el código existente responsable de importantes operaciones fundamentales de la empresa."
+title: Componentes negociados de Windows Runtime para una aplicación de prueba para UWP
+description: En este documento se describe la función orientada a empresas que cuentan con asistencia de Windows10, que permite a las aplicaciones táctiles de .NET usar el código existente responsable de importantes operaciones fundamentales de la empresa.
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,28 +9,32 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
-ms.openlocfilehash: e3acc609e5db083bda023643ef4dae4c5d9d0248
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 71fd511a109022d265d13b575bd696e8c346567b
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832406"
 ---
-#<a name="brokered-windows-runtime-components-for-a-side-loaded-windows-store-app"></a>Componentes negociados de Windows Runtime para una aplicación de prueba de la Tienda Windows
+# <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes negociados de Windows Runtime para una aplicación de prueba para UWP
 
 En este artículo se describe la función orientada a empresas que cuentan con asistencia de Windows10, que permite a las aplicaciones táctiles de .NET usar el código existente responsable de importantes operaciones fundamentales de la empresa.
 
-##<a name="introduction"></a>Introducción
+## <a name="introduction"></a>Introducción
 
->**Nota** El código de muestra que acompaña este documento se puede [descargar desde esta ubicación](http://go.microsoft.com/fwlink/p/?LinkID=393655), y la plantilla de Microsoft Visual Studio para compilar Componentes negociados de Windows Runtime se puede descargar aquí: [Plantilla de Visual Studio de 2015 destinada a las aplicaciones universales de Windows para Windows10](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
+>**Nota**  El código de ejemplo que acompaña a este documento puede descargarse para [Visual Studio 2015 y 2017](https://aka.ms/brokeredsample). La plantilla de Microsoft Visual Studio para compilar Componentes negociados de Windows Runtime se puede descargar aquí: [Plantilla de Visual Studio 2015 destinada a las aplicaciones universales de Windows para Windows10](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
 
 Windows incluye una nueva característica llamada *Componentes negociados de Windows Runtime para aplicaciones de prueba*. Usamos el término IPC (comunicación entre procesos) para describir la capacidad de ejecutar activos de software de escritorio existentes en un proceso (componente de escritorio) mientras se interactúa con este código en una aplicación para UWP. Este es un modelo que resultará familiar para los desarrolladores empresariales porque las aplicaciones de base de datos y las aplicaciones que usan servicios NT en Windows comparten una arquitectura multiproceso similar.
 
 La instalación de prueba de la aplicación es un componente fundamental de esta característica.
-Las aplicaciones específicas de empresa no tienen cabida en la Tienda Windows para el público general, y las corporaciones tienen requisitos muy específicos de seguridad, privacidad, distribución, instalación y servicio. Por lo tanto, el modelo de prueba es tanto un requisito de aquellos que usen esta característica como un aspecto fundamental de la implementación.
+Las aplicaciones específicas de empresa no tienen cabida en la Microsoft Store para el público general y las corporaciones tienen requisitos muy específicos de seguridad, privacidad, distribución, instalación y servicio. Por lo tanto, el modelo de prueba es tanto un requisito de aquellos que usen esta característica como un aspecto fundamental de la implementación.
 
 Las aplicaciones centradas en datos son un objetivo clave de esta arquitectura de aplicación. Se sabe que las reglas empresariales existentes que encontramos, por ejemplo, en SQL Server serán una parte común del componente de escritorio. Por supuesto, este no es el único tipo de funcionalidad que el componente de escritorio propone, pero una gran parte de la demanda de esta característica está relacionada con los datos y la lógica empresarial existentes.
 
-Por último, dada la arrolladora implantación del tiempo de ejecución de .NET y del lenguaje C\# en el desarrollo empresarial, esta característica se desarrolló enfatizando el uso de .NET tanto para las aplicaciones de la Tienda Windows como para los componentes de escritorio. Aunque hay otros lenguajes y tiempos de ejecución posibles para la aplicación de la Tienda Windows, la muestra correspondiente solo ilustra C\# y se limita al tiempo de ejecución .NET exclusivamente.
+Por último, dada la arrolladora implantación del tiempo de ejecución de .NET y del lenguaje C\# en el desarrollo empresarial, esta característica se desarrolló enfatizando el uso de .NET tanto para las aplicaciones para UWP como para los componentes de escritorio. Aunque hay otros lenguajes y tiempos de ejecución posibles para la aplicación para UWP, la muestra correspondiente solo ilustra C\# y se limita al tiempo de ejecución .NET exclusivamente.
 
-##<a name="application-components"></a>Componentes de aplicación
+## <a name="application-components"></a>Componentes de aplicación
 
 >**Nota** Esta característica es exclusivamente para el uso de .NET. La aplicación cliente y el componente de escritorio deben estar creados con .NET.
 
@@ -50,10 +54,9 @@ El contrato entre la aplicación de prueba y el componente de escritorio se desc
 
 **Aplicación de prueba**
 
-La aplicación de prueba es una aplicación para UWP normal en todos los aspectos excepto en uno: se instala mediante una instalación de prueba en lugar de instalarse mediante la aplicación de la Tienda Windows. La mayoría de los mecanismos de instalación son idénticos: el manifiesto y el paquete de la aplicación son similares (más adelante se describe una incorporación al manifiesto). Cuando se habilita la instalación de prueba, un sencillo script de PowerShell puede instalar los certificados necesarios y la propia aplicación. El procedimiento recomendado es que la aplicación de prueba pase la prueba de certificación del WACK que se incluye en el menú Proyecto/Tienda de Visual Studio
+La aplicación de prueba es una aplicación para UWP normal en todos los aspectos excepto en uno: se instala mediante una aplicación de prueba en lugar de mediante la Microsoft Store. La mayoría de los mecanismos de instalación son idénticos: el manifiesto y el paquete de la aplicación son similares (más adelante se describe una incorporación al manifiesto). Cuando se habilita la instalación de prueba, un sencillo script de PowerShell puede instalar los certificados necesarios y la propia aplicación. El procedimiento recomendado es que la aplicación de prueba pase la prueba de certificación del WACK que se incluye en el menú Proyecto/Tienda de Visual Studio
 
->**Nota** La instalación de prueba puede activarse en Configuración -&gt; Actualización y seguridad -&gt;
-Para desarrolladores.
+>**Nota** La instalación de prueba puede activarse en Configuración -&gt; Actualización y seguridad -&gt;Para desarrolladores.
 
 Un aspecto importante a tener en cuenta es que el mecanismo Agente de aplicación que se incluye en Windows 10 es solo de 32 bits. El componente de escritorio debe ser de 32 bits.
 Las aplicaciones de prueba pueden ser de 64 bits (siempre que haya registrados tanto proxies de 64 bits como de 32 bits), pero no será lo normal. Cuando se crea una aplicación de prueba en C\# usando la configuración "neutra" normal y el valor predeterminado "preferencia de 32 bits", se crean aplicaciones de prueba de 32 bits de forma natural.
@@ -64,7 +67,7 @@ Cada aplicación de prueba recibe su propia instancia de un servidor de Agente d
 
 Varias instancias del servidor de Agente de aplicación pueden compartir la implementación del código de servidor haciendo que varias aplicaciones apunten al mismo directorio de servidor. Seguirá habiendo varias instancias del servidor de Agente de aplicación, pero ejecutarán un código idéntico. Todos los componentes de la implementación que se usan en una sola aplicación deben existir en la misma ruta de acceso.
 
-##<a name="defining-the-contract"></a>Definición del contrato
+## <a name="defining-the-contract"></a>Definición del contrato
 
 El primer paso para crear una aplicación usando esta característica es crear el contrato entre la aplicación de prueba y el componente de escritorio. Esto debe hacerse exclusivamente con tipos Windows Runtime.
 Por suerte, son fáciles de declarar con las clases de C\#. Sin embargo, hay consideraciones de rendimiento importantes cuando se definen estas conversaciones (se trata en una sección posterior).
@@ -96,7 +99,7 @@ namespace Fabrikam
             throw new NotImplementedException();
         }
         
-        public event EventHandler&lt;string&gt; PeriodicEvent;
+        public event EventHandler<string> PeriodicEvent;
     }
 }
 ```
@@ -107,7 +110,7 @@ Esto define una clase "EnterpriseServer" de la que se puede crear instancias des
 
 Para hacer esto en Visual Studio, haz clic con el botón derecho en el proyecto recién creado y selecciona "Descargar el proyecto", a continuación, haz clic otra vez con el botón derecho y selecciona "Editar EnterpriseServer.csproj" para abrir el archivo de proyecto, un archivo XML, para editarlo.
 
-En el archivo abierto, busca la etiqueta <OutputType> y cambia su valor a "winmdobj".
+En el archivo abierto, busca la etiqueta \<OutputType\> y cambia su valor a "winmdobj".
 
 **Paso 3:** Crear una regla de compilación que cree un archivo de metadatos de Windows de "referencia" (archivo .winmd), es decir, no tiene ninguna implementación.
 
@@ -117,31 +120,54 @@ Esto se realiza con los siguientes scripts. Agrega los scripts a la línea de co
 
 > **Nota** El script es diferente en función de la versión de Windows de destino (Windows10) y la versión de Visual Studio en uso.
 
+**Visual Studio 2015**
 ```cmd
-call "$(DevEnvDir)..\..\vc\vcvarsall.bat" x86 10.0.10240.0
+    call "$(DevEnvDir)..\..\vc\vcvarsall.bat" x86 10.0.14393.0
 
-md "$(TargetDir)"\impl
-md "$(TargetDir)"\reference
+    md "$(TargetDir)"\impl    md "$(TargetDir)"\reference
 
-erase "$(TargetDir)\impl\*.winmd"
-erase "$(TargetDir)\impl\*.pdb"
-erase "$(TargetDir)\reference\*.winmd"
+    erase "$(TargetDir)\impl\*.winmd"
+    erase "$(TargetDir)\impl\*.pdb"
+    rem erase "$(TargetDir)\reference\*.winmd"
 
-xcopy /y "$(TargetPath)" "$(TargetDir)impl"
-xcopy /y "$(TargetDir)*.pdb" "$(TargetDir)impl"
+    xcopy /y "$(TargetPath)" "$(TargetDir)impl"
+    xcopy /y "$(TargetDir)*.pdb" "$(TargetDir)impl"
 
-cd "$(TargetDir)impl"
+    winmdidl /nosystemdeclares /metadata_dir:C:\Windows\System32\Winmetadata "$(TargetPath)"
 
-winmdidl /nosystemdeclares /metadata_dir:"%WindowsSdkDir%UnionMetadata" "$(TargetName).winmd"
+    midl /metadata_dir "%WindowsSdkDir%UnionMetadata" /iid "$(SolutionDir)BrokeredProxyStub\$(TargetName)_i.c" /env win32 /x86 /h   "$(SolutionDir)BrokeredProxyStub\$(TargetName).h" /winmd "$(TargetName).winmd" /W1 /char signed /nologo /winrt /dlldata "$(SolutionDir)BrokeredProxyStub\dlldata.c" /proxy "$(SolutionDir)BrokeredProxyStub\$(TargetName)_p.c"  "$(TargetName).idl"
+    mdmerge -n 1 -i "$(ProjectDir)bin\$(ConfigurationName)" -o "$(TargetDir)reference" -metadata_dir "%WindowsSdkDir%UnionMetadata" -partial
 
-midl /metadata_dir "%WindowsSdkDir%UnionMetadata" /iid "$(SolutionDir)SampleProxy\$(TargetName)_i.c" /env win32 /h "$(SolutionDir)SampleProxy\$(TargetName).h" /winmd "$(TargetName).winmd" /W1 /char signed /nologo /winrt /dlldata "$(SolutionDir)SampleProxy\dlldata.c" /proxy "$(SolutionDir)SampleProxy\$(TargetName)_p.c"  "$(TargetName).idl"
+    rem erase "$(TargetPath)"
 
-mdmerge -n 1 -i "$(TargetDir)\impl" -o "$(TargetDir)reference" -metadata_dir "%WindowsSdkDir%UnionMetadata" -partial
+```
+
+
+**Visual Studio 2017**
+```cmd
+    call "$(DevEnvDir)..\..\vc\auxiliary\build\vcvarsall.bat" x86 10.0.16299.0
+
+    md "$(TargetDir)"\impl
+    md "$(TargetDir)"\reference
+
+    erase "$(TargetDir)\impl\*.winmd"
+    erase "$(TargetDir)\impl\*.pdb"
+    rem erase "$(TargetDir)\reference\*.winmd"
+
+    xcopy /y "$(TargetPath)" "$(TargetDir)impl"
+    xcopy /y "$(TargetDir)*.pdb" "$(TargetDir)impl"
+
+    winmdidl /nosystemdeclares /metadata_dir:C:\Windows\System32\Winmetadata "$(TargetPath)"
+
+    midl /metadata_dir "%WindowsSdkDir%UnionMetadata" /iid "$(SolutionDir)BrokeredProxyStub\$(TargetName)_i.c" /env win32 /x86 /h "$(SolutionDir)BrokeredProxyStub\$(TargetName).h" /winmd "$(TargetName).winmd" /W1 /char signed /nologo /winrt /dlldata "$(SolutionDir)BrokeredProxyStub\dlldata.c" /proxy "$(SolutionDir)BrokeredProxyStub\$(TargetName)_p.c"  "$(TargetName).idl"
+    mdmerge -n 1 -i "$(ProjectDir)bin\$(ConfigurationName)" -o "$(TargetDir)reference" -metadata_dir "%WindowsSdkDir%UnionMetadata" -partial
+
+    rem erase "$(TargetPath)"
 ```
 
 Una vez creado el archivo de referencia **winmd** (en la carpeta "referencia" de la carpeta de destino del proyecto), se copia en cada proyecto de aplicación de prueba de consumo y se hace referencia a él. Esto se describirá con más detalle en la siguiente sección. La estructura del proyecto que expresan las reglas de compilación anteriores garantiza que los archivos de implementación y de referencia **winmd** estén en directorios claramente segregados de la jerarquía de compilación para evitar confusiones.
 
-##<a name="side-loaded-applications-in-detail"></a>Aplicaciones de prueba en detalle
+## <a name="side-loaded-applications-in-detail"></a>Aplicaciones de prueba en detalle
 Como se indicó anteriormente, la aplicación de prueba se crea como cualquier otra aplicación para UWP, pero hay un detalle adicional: hay que declarar la disponibilidad de las clases RuntimeClass en el manifiesto de la aplicación de prueba. Esto permite a la aplicación simplemente escribir new para acceder a la funcionalidad del componente de escritorio. Un nuevo manifiesto en la sección <Extension> describe la clase RuntimeClass implementada en el componente de escritorio e incluye información sobre dónde está ubicada. Este contenido de la declaración en el manifiesto de la aplicación es el mismo para las aplicaciones destinadas a Windows 10. Por ejemplo:
 
 ```XML
@@ -165,7 +191,7 @@ Como se indicó en la sección "Definición del contrato", se debe crear una ref
 
 Se pueden usar variables de entorno (especialmente %ProgramFiles%) en <ActivatableClassAttribute Value="path">. Como se indicó anteriormente, el Agente de aplicación solo admite 32 bits por lo que %ProgramFiles% se resolverá en C:\\Archivos de programa (x86) si la aplicación se ejecuta en un sistema operativo de 64 bits.
 
-##<a name="desktop-ipc-server-detail"></a>Detalles sobre el servidor IPC de escritorio
+## <a name="desktop-ipc-server-detail"></a>Detalles sobre el servidor IPC de escritorio
 
 En las dos secciones anteriores se describe la declaración de la clase y los mecanismos para transportar el archivo **winmd** de referencia al proyecto de aplicación de prueba. Gran parte del trabajo restante en el componente de escritorio está relacionado con la implementación. Como el objetivo del componente de escritorio es poder llamar al código de escritorio (normalmente para reutilizar activos de código existentes), el proyecto debe configurarse de una manera especial.
 Normalmente, un proyecto de Visual Studio con .NET usa uno de dos "perfiles".
@@ -379,12 +405,12 @@ Normalmente solo se realizan otras referencias entre proyectos. Sin embargo, un 
       <HintPath>$(MsBuildProgramFiles32)\Windows Kits\10\References\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract\1.0.0.0\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract.winmd</HintPath>
       <Private>False</Private>
     </Reference>
-
+</ItemGroup>
 ```
 
 Las referencias anteriores son una mezcla cuidadosa de referencias fundamentales para el correcto funcionamiento de este servidor híbrido. El protocolo es abrir el archivo .csproj (como se describe en cómo editar el proyecto OutputType) y agregar las referencias según sea necesario.
 
-Cuando las referencias están correctamente configuradas, la siguiente tarea es implementar la funcionalidad del servidor. Consulta el tema de MSDN [Procedimientos recomendados para la interoperabilidad con componentes de Windows Runtime (aplicaciones de la Tienda Windows con C\#/VB/C++ y XAML)](https://msdn.microsoft.com/library/windows/apps/hh750311.aspx).
+Cuando las referencias están correctamente configuradas, la siguiente tarea es implementar la funcionalidad del servidor. Consulta el tema de MSDN [Best practices for interoperability with Windows Runtime Components (UWP apps using C\#/VB/C++ and XAML](https://msdn.microsoft.com/library/windows/apps/hh750311.aspx) (Procedimientos recomendados para la interoperabilidad con componentes de Windows Runtime (aplicaciones para UWP con C\#/VB/C++ y XAML)).
 La tarea consiste en crear un archivo DLL del componente de Windows Runtime que pueda llamar al código de escritorio como parte de la implementación. La muestra correspondiente incluye los principales patrones que se usan en Windows en tiempo de ejecución:
 
 -   Llamadas a métodos
@@ -448,13 +474,13 @@ Los clientes de este método asincrónico pueden esperar esta operación como cu
 
 Como es típico que la misma organización escriba tanto el cliente como el servidor, se puede adoptar un procedimiento de programación para que todas las llamadas al servidor las realice un subproceso en segundo plano en la aplicación de prueba. Desde un subproceso en segundo plano se puede realizar una llamada directa que recopila uno o varios lotes de datos del servidor. Cuando los resultados se recuperan por completo, el lote de datos que está en memoria en el proceso de la aplicación normalmente se puede recuperar directamente del subproceso de interfaz de usuario. Los objetos de C\# son ágiles por naturaleza entre los subprocesos en segundo plano y los subprocesos de interfaz de usuario, por lo que resultan especialmente útiles para este tipo de patrón de llamada.
 
-##<a name="creating-and-deploying-the-windows-runtime-proxy"></a>Crear e implementar el proxy de Windows en tiempo de ejecución
+## <a name="creating-and-deploying-the-windows-runtime-proxy"></a>Crear e implementar el proxy de Windows en tiempo de ejecución
 
 Como el enfoque de IPC implica calcular referencias a las interfaces de Windows en tiempo de ejecución entre dos procesos, se debe usar un proxy y código auxiliar de Windows en tiempo de ejecución registrados globalmente.
 
 **Crear el proxy en Visual Studio**
 
-El proceso para crear y registrar proxies y código auxiliar para usarlos dentro de un paquete de aplicación de la Tienda Windows normal se describe en el tema [Generar eventos de componentes de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/dn169426.aspx).
+El proceso para crear y registrar proxies y código auxiliar para usarlos dentro de un paquete de aplicación para UWP normal se describe en el tema [Raising Events in Windows Runtime Components](https://msdn.microsoft.com/library/windows/apps/dn169426.aspx) (Generar eventos de componentes de Windows en tiempo de ejecución).
 Los pasos que se describen en este artículo son más complicados que el proceso que se describe a continuación, porque implican registrar el proxy o el código auxiliar dentro del paquete de la aplicación (en lugar de registrarlo globalmente).
 
 **Paso 1:** Usa la solución para el proyecto de componente de escritorio para crear un proyecto de proxy/código auxiliar en Visual Studio:
@@ -519,7 +545,7 @@ Se debe realizar otro paso de configuración adicional. Para que el proceso de p
 
 *icacls . /T /grant \*S-1-15-2-1:RX*
 
-##<a name="patterns-and-performance"></a>Patrones y rendimiento
+## <a name="patterns-and-performance"></a>Patrones y rendimiento
 
 Es muy importante supervisar detenidamente el rendimiento del transporte entre procesos. Una llamada entre procesos cuesta el doble que una llamada dentro del proceso. Crear conversaciones "banales" entre procesos o realizar transferencias repetidas de objetos grandes, como imágenes de mapa de bits, puede provocar un rendimiento inesperado y no deseado de la aplicación.
 
@@ -543,7 +569,7 @@ struct PersonStruct
 }
 ```
 
-Después, devuelve* PersonStruct\[\]* en lugar de *List&lt;PersonObject&gt;*.
+A continuación, devuelve* PersonStruct\[\]* en lugar de *List&lt;PersonObject&gt;*.
 Así se obtienen todos los datos en un "salto" entre procesos.
 
 Al igual que en todas las consideraciones de rendimiento, medir y probar es fundamental. Lo ideal es insertar telemetría en las diversas operaciones para determinar cuánto tardan. Es importante medir un intervalo: por ejemplo, ¿cuánto tarda en realidad en consumir todos los objetos *People* de una consulta determinada en la aplicación en prueba?
@@ -551,11 +577,11 @@ Al igual que en todas las consideraciones de rendimiento, medir y probar es fund
 Otra técnica es las pruebas de carga variable. Se pueden hacer poniendo enlaces a pruebas de rendimiento en la aplicación, que introducen cargas retrasadas variables en el procesamiento del servidor. Así se pueden simular diversos tipos de cargas y la reacción de la aplicación al rendimiento variable del servidor.
 La muestra ilustra cómo insertar retrasos de tiempo en el código usando las técnicas asincrónicas adecuadas. La cantidad exacta de retraso que se inserta y el intervalo de aleatorización que se asigna a esa carga artificial variará según el diseño de cada aplicación y del entorno anticipado en el que se ejecute la aplicación.
 
-##<a name="development-process"></a>Proceso de desarrollo
+## <a name="development-process"></a>Proceso de desarrollo
 
 Cuando se realizan cambios en el servidor, hay que procurar que cualquier instancia que se ejecutara anteriormente ya no se ejecuta. En última instancia, COM se encargará de dar con esto en el proceso, pero el temporizador de resumen tardará más tiempo y reducirá la eficacia del desarrollo iterativo. En consecuencia, eliminar una instancia que se ejecutara anteriormente constituye un paso normal durante el desarrollo. Esto conlleva que el desarrollador lleve un seguimiento de la instancia de dllhost que hospeda el servidor.
 
-El proceso de servidor se puede detectar y eliminar mediante el Administrador de tareas o cualquier otra aplicación externa. La herramienta de línea de comandos **TaskList.exe **también se incluye y presenta una sintaxis flexible, por ejemplo:
+El proceso de servidor se puede detectar y eliminar mediante el Administrador de tareas o cualquier otra aplicación externa. La herramienta de línea de comandos **TaskList.exe** también se incluye y presenta una sintaxis flexible; por ejemplo:
 
   
  | **Comando** | **Acción** |
@@ -566,18 +592,17 @@ El proceso de servidor se puede detectar y eliminar mediante el Administrador de
 
 En la lista de módulos cargados de un servidor de Agente de sesiones debe figurar *clrhost.dll*.
 
-##<a name="resources"></a>Recursos
+## <a name="resources"></a>Recursos
 
 -   [Plantillas de proyecto de componente de WinRT negociado para Windows 10 y VS 2015](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
 
 -   [Muestra de componente de WinRT negociado NorthwindRT](http://go.microsoft.com/fwlink/p/?LinkID=397349)
 
--   [Entrega de aplicaciones de la Tienda Windows confiables y de confianza](http://go.microsoft.com/fwlink/p/?LinkID=393644)
+-   [Entrega de aplicaciones de Microsoft Store confiables y de confianza](http://go.microsoft.com/fwlink/p/?LinkID=393644)
 
 -   [Contratos y extensiones de aplicaciones (aplicaciones de la Tienda Windows)](https://msdn.microsoft.com/library/windows/apps/hh464906.aspx)
 
 -   [Cómo instalar aplicaciones en Windows 10](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#GroupPolicy)
 
--   [Implementar aplicaciones de la Tienda Windows en empresas](http://go.microsoft.com/fwlink/p/?LinkID=264770)
-
+-   [Implementar aplicaciones para UWP en empresas](http://go.microsoft.com/fwlink/p/?LinkID=264770)
 

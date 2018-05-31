@@ -1,17 +1,21 @@
 ---
 author: drewbatgit
 ms.assetid: b7333924-d641-4ba5-92a2-65925b44ccaa
-description: "En este artículo se muestra cómo reproducir elementos multimedia mientras la aplicación se está ejecutando en segundo plano."
-title: "Reproducción de contenidos multimedia en segundo plano"
+description: En este artículo se muestra cómo reproducir elementos multimedia mientras la aplicación se está ejecutando en segundo plano.
+title: Reproducción de contenidos multimedia en segundo plano
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 148bb77f9386864a1b127341aa875beb7123bae9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f8fdc99355ef5a024757cc2e415b1d259965c1ce
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690501"
 ---
 # <a name="play-media-in-the-background"></a>Reproducción de contenidos multimedia en segundo plano
 En este artículo se muestra cómo configurar la aplicación para que sigan reproduciéndose los elementos multimedia cuando la aplicación se mueva del primer plano al segundo plano. Esto significa que incluso después de que el usuario haya minimizado la aplicación, haya regresado a la pantalla principal o haya salido de la aplicación de alguna otra manera, la aplicación podrá seguir reproduciendo audio. 
@@ -65,7 +69,7 @@ A continuación, agrega la funcionalidad *backgroundMediaPlayback* al elemento *
 </Capabilities>
 ```
 
-##<a name="handle-transitioning-between-foreground-and-background"></a>Controlar la transición entre el primer plano y el segundo plano
+## <a name="handle-transitioning-between-foreground-and-background"></a>Controlar la transición entre el primer plano y el segundo plano
 Cuando la aplicación se mueve del primer plano al segundo plano, se genera el evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground). Y cuando la aplicación vuelve al primer plano, se genera el evento [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Dado que estos son eventos de ciclo de vida de la aplicación, debes registrar controladores para estos eventos al crear la aplicación. En la plantilla de proyecto predeterminada, esto significa agregarlos al constructor de clase **App** en App.xaml.cs. 
 
 [!code-cs[RegisterEvents](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetRegisterEvents)]
@@ -78,7 +82,7 @@ Cuando se genera el evento [**EnteredBackground**](https://msdn.microsoft.com/li
 
 [!code-cs[EnteredBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetEnteredBackground)]
 
-En el controlador del evento [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground), debes establecer la variable de seguimiento para indicar que la aplicación ya no se ejecuta en segundo plano.
+En el controlador de eventos [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground), debes establecer la variable de seguimiento para indicar que la aplicación ya no se ejecuta en segundo plano.
 
 [!code-cs[LeavingBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetLeavingBackground)]
 
@@ -88,7 +92,7 @@ La parte más importante de controlar la transición entre el primer y segundo p
 ## <a name="network-availability-for-background-media-apps"></a>Disponibilidad de la red para las aplicaciones multimedia en segundo plano
 Todos los orígenes multimedia con reconocimiento de red, aquellos que no se crean a partir de una emisión o un archivo, mantendrán la conexión de red activa mientras recuperan contenido remoto y la liberarán cuando no lo estén haciendo. [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaStreamSource), específicamente, depende de la aplicación para notificar a la plataforma de forma correcta el rango en búfer mediante [**SetBufferedRange**](https://msdn.microsoft.com/library/windows/apps/dn282762). Una vez que todo el contenido esté almacenado en búfer, la red ya no estará reservada en nombre de la aplicación.
 
-Si necesitas realizar llamadas de red que se produzcan en segundo plano cuando no se está descargando contenido multimedia, estas deben estar encapsuladas en una tarea apropiada, como [**ApplicationTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.ApplicationTrigger), [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.MaintenanceTrigger) o [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.TimeTrigger). Para obtener más información, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks).
+Si necesitas realizar llamadas de red que se produzcan en segundo plano cuando no se está descargando contenido multimedia, estas deben estar encapsuladas en una tarea apropiada, como [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.MaintenanceTrigger) o [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.TimeTrigger). Para obtener más información, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks).
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Reproducción de contenido multimedia](media-playback.md)

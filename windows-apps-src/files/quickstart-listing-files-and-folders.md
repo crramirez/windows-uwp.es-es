@@ -2,28 +2,32 @@
 author: laurenhughes
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar y consultar archivos y carpetas
-description: "Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas."
+description: Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas.
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 7da7002a95c107e64278e8bc67064542ed183d8b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 04cd59c454f0cd1561f35125f394c68bc5753002
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652864"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Enumerar y consultar archivos y carpetas
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas.
 
-Para obtener información detallada sobre cómo almacenar los datos de la aplicación para la plataforma universal de Windows, consulta la clase [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx).
+Para obtener información sobre cómo almacenar los datos de la aplicación para la Plataforma universal de Windows, consulta la clase [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx).
 
-**Nota:** Consulta también la [muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993).
+> [!NOTE]
+> Consulta también [Muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
 ## <a name="prerequisites"></a>Requisitos previos
@@ -38,7 +42,8 @@ Para obtener información detallada sobre cómo almacenar los datos de la aplica
 
 ## <a name="enumerate-files-and-folders-in-a-location"></a>Enumerar archivos y carpetas en una ubicación
 
-> **Nota**  Recuerda declarar la funcionalidad **picturesLibrary**.
+> [!NOTE]
+> Recuerda declarar la funcionalidad **picturesLibrary**.
 
 En este ejemplo, se usa primero el método [**StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276) para obtener todos los archivos en la carpeta raíz de la propiedad [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (no en las subcarpetas) y se muestra el nombre de cada archivo. Después, se usa el método [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227280) para obtener todas las subcarpetas en **PicturesLibrary** y se muestra el nombre de cada subcarpeta.
 
@@ -81,7 +86,7 @@ En este ejemplo, se usa primero el método [**StorageFolder.GetFilesAsync**](htt
 >        return picturesFolder->GetFoldersAsync();
 >    })
 >    // Capture "this" to access m_OutputTextBlock from within the lambda.
->    .then([this, outputString](IVectorView\<StorageFolder^>^ folders)
+>    .then([this, outputString](IVectorView/<StorageFolder^>^ folders)
 >    {        
 >        *outputString += L"Folders:\n";
 >
@@ -99,8 +104,7 @@ En este ejemplo, se usa primero el método [**StorageFolder.GetFilesAsync**](htt
 > StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
 > StringBuilder outputText = new StringBuilder();
 >
-> IReadOnlyList<StorageFile> fileList =
->     await picturesFolder.GetFilesAsync();
+> IReadOnlyList<StorageFile> fileList = await picturesFolder.GetFilesAsync();
 >
 > outputText.AppendLine("Files:");
 > foreach (StorageFile file in fileList)
@@ -108,8 +112,7 @@ En este ejemplo, se usa primero el método [**StorageFolder.GetFilesAsync**](htt
 >     outputText.Append(file.Name + "\n");
 > }
 >
-> IReadOnlyList<StorageFolder> folderList =
->     await picturesFolder.GetFoldersAsync();
+> IReadOnlyList<StorageFolder> folderList = await picturesFolder.GetFoldersAsync();
 >            
 > outputText.AppendLine("Folders:");
 > foreach (StorageFolder folder in folderList)
@@ -143,7 +146,8 @@ En este ejemplo, se usa primero el método [**StorageFolder.GetFilesAsync**](htt
 > ```
 
 
-> **Nota**  En C# o Visual Basic, recuerda poner la palabra clave **async** en la declaración del método de cualquier método en el que uses el operador **await**.
+> [!NOTE]
+> En C# o Visual Basic, recuerda poner la palabra clave **async** en la declaración del método de cualquier método en el que uses el operador **await**.
  
 
 Como alternativa, puedes usar el método [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286) para obtener todos los elementos (archivos y subcarpetas) en una ubicación en particular. En el siguiente ejemplo se usa el método **GetItemsAsync** para obtener todos los archivos y subcarpetas en la carpeta raíz de [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (no en las subcarpetas). Después, en el ejemplo se muestra el nombre de cada archivo y subcarpeta. Si el elemento es una subcarpeta, el ejemplo anexa `"folder"` al nombre.
@@ -176,8 +180,7 @@ Como alternativa, puedes usar el método [**GetItemsAsync**](https://msdn.micros
 > StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
 > StringBuilder outputText = new StringBuilder();
 >
-> IReadOnlyList<IStorageItem> itemsList =
->     await picturesFolder.GetItemsAsync();
+> IReadOnlyList<IStorageItem> itemsList = await picturesFolder.GetItemsAsync();
 >
 > foreach (var item in itemsList)
 > {
@@ -189,7 +192,6 @@ Como alternativa, puedes usar el método [**GetItemsAsync**](https://msdn.micros
 >     else
 >     {
 >         outputText.Append(item.Name + "\n");
->
 >     }
 > }
 > ```
