@@ -1,18 +1,20 @@
 ---
 author: QuinnRadich
 title: 'Novedades en los documentos de Windows de julio de 2017: desarrollar aplicaciones para UWP'
-description: "En la documentación de desarrollador de Windows 10 de julio de 2017, se han agregado nuevas características, muestras y directrices para los desarrolladores."
-keywords: "novedades, actualización, características, directrices para los desarrolladores, Windows 10"
+description: En la documentación de desarrollador de Windows 10 de julio de 2017, se han agregado nuevas características, muestras y directrices para los desarrolladores.
+keywords: novedades, actualización, características, directrices para los desarrolladores, Windows 10
 ms.author: quradic
 ms.date: 07/05/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: ffe88f522e261b37652a4ed339ef3c379e045113
-ms.sourcegitcommit: f93e887fbab6c1f824a8f762ba848f64c7f77c49
+ms.localizationpriority: medium
+ms.openlocfilehash: e439c0b1c20f03c9519d29a24979e5008f3de94e
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691844"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novedades en los documentos de los desarrolladores de Windows de julio de 2017
 
@@ -26,41 +28,41 @@ La documentación del desarrollador de Windows se actualiza constantemente con i
 
 Disponible para [Windows Insiders](https://insider.windows.com/) en las versiones preliminares del SDK, estos nuevos efectos usan la profundidad, la perspectiva y el movimiento para que los usuarios puedan centrarse en los elementos de interfaz de usuario más importantes.
 
-[Material acrílico](../style/acrylic.md) es un tipo de pincel que crea texturas transparentes. 
+[Material acrílico](../design/style/acrylic.md) es un tipo de pincel que crea texturas transparentes. 
 
-![Tema acrílico en claro](../style/images/Acrylic_DarkTheme_Base.png)
+![Tema acrílico en claro](../design/style/images/Acrylic_DarkTheme_Base.png)
 
-El [efecto Parallax](../style/parallax.md) agrega profundidad tridimensional y perspectiva a la aplicación.
+El [efecto Parallax](../design/motion/parallax.md) agrega profundidad tridimensional y perspectiva a la aplicación.
 
-![Ejemplo de efecto parallax con la lista y una imagen en segundo plano](../style/images/_Parallax_v2.gif)
+![Ejemplo de efecto parallax con la lista y una imagen en segundo plano](../design/style/images/_Parallax_v2.gif)
 
-[Mostrar](../style/reveal.md) resalta los elementos importantes de la aplicación. 
+[Mostrar](../design/style/reveal.md) resalta los elementos importantes de la aplicación. 
 
-![Elemento visual de Mostrar](../style/images/Nav_Reveal_Animation.gif)
+![Elemento visual de Mostrar](../design/style/images/Nav_Reveal_Animation.gif)
 
 ### <a name="ui-controls"></a>Controles de la interfaz de usuario
 
 Disponible para [Windows Insider](https://insider.windows.com/) en las versiones preliminares del SDK, estos nuevos controles hacen más fácil poder crear rápidamente una interfaz de usuario inigualable.
 
-El [control del selector de colores](../controls-and-patterns/color-picker.md) permite a los usuarios examinarlo y seleccionar colores.  
+El [control del selector de colores](../design/controls-and-patterns/color-picker.md) permite a los usuarios examinarlo y seleccionar colores.  
 
-![Selector de colores predeterminado](../controls-and-patterns/images/color-picker-default.png)
+![Selector de colores predeterminado](../design/controls-and-patterns/images/color-picker-default.png)
 
-El [control de la vista de navegación](../controls-and-patterns/navigationview.md) facilita el proceso para agregar la navegación de nivel superior a la aplicación.
+El [control de la vista de navegación](../design/controls-and-patterns/navigationview.md) facilita el proceso para agregar la navegación de nivel superior a la aplicación.
 
-![Secciones de NavigationView](../controls-and-patterns/images/navview_sections.png)
+![Secciones de NavigationView](../design/controls-and-patterns/images/navview_sections.png)
 
-El [control de la imagen del usuario](../controls-and-patterns/person-picture.md) muestra la imagen de avatar de una persona.
+El [control de la imagen del usuario](../design/controls-and-patterns/person-picture.md) muestra la imagen de avatar de una persona.
 
-![Control de imagen del usuario](../controls-and-patterns/images/person-picture/person-picture_hero.png)
+![Control de imagen del usuario](../design/controls-and-patterns/images/person-picture/person-picture_hero.png)
 
-El [control de clasificación](../controls-and-patterns/rating.md) permite a los usuarios ver y establecer clasificaciones que reflejan el grado de satisfacción con el contenido y los servicios.
+El [control de clasificación](../design/controls-and-patterns/rating.md) permite a los usuarios ver y establecer clasificaciones que reflejan el grado de satisfacción con el contenido y los servicios.
 
-![Ejemplo de control de clasificaciones](../controls-and-patterns/images/rating_rs2_doc_ratings_intro.png)
+![Ejemplo de control de clasificaciones](../design/controls-and-patterns/images/rating_rs2_doc_ratings_intro.png)
 
 ### <a name="design-toolkits"></a>Kits de herramientas de diseño
 
-Las [herramientas de diseño y los recursos para aplicaciones para UWP](../design-downloads/index.md) se han expandido con la incorporación de los kits de herramientas de bocetos y de Adobe XD. Los kits de herramientas ya existentes también se han actualizado y renovado, proporcionando controles más sólidos y plantillas de diseño para las aplicaciones para UWP.
+Las [herramientas de diseño y los recursos para aplicaciones para UWP](../design/downloads/index.md) se han expandido con la incorporación de los kits de herramientas de bocetos y de Adobe XD. Los kits de herramientas ya existentes también se han actualizado y renovado, proporcionando controles más sólidos y plantillas de diseño para las aplicaciones para UWP.
 
 ### <a name="dashboard-monetization-and-store-services"></a>Panel de información, monetización y servicios de la Tienda
 
@@ -68,7 +70,7 @@ Las siguientes nuevas características están disponibles:
 
 * El SDK de Microsoft Advertising ahora te permite mostrar [anuncios nativos](../monetize/native-ads.md) en tus aplicaciones. Un anuncio nativo es un formato de anuncio basados en componentes, donde cada parte del anuncio creativo (por ejemplo, el título, la imagen, la descripción y el texto de llamada a la acción) se entrega a la aplicación como un elemento individual. Los anuncios nativos están únicamente disponibles actualmente a los desarrolladores que se unan a un programa piloto, pero queremos que esta característica esté disponible para todos los desarrolladores pronto.
 
-* La [API de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md) ahora proporciona un método que puedes usar para [descargar el archivo CAB para un error de la aplicación](../monetize/download-the-cab-file-for-an-error-in-your-app.md).
+* La [API de análisis de Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) ahora proporciona un método que puedes usar para [descargar el archivo CAB para un error de la aplicación](../monetize/download-the-cab-file-for-an-error-in-your-app.md).
 
 * [Ofertas dirigidas](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md) te permiten centrarte en segmentos específicos de los clientes con contenido personalizado y atractivo para aumentar la interacción, retención y monetización. 
 
@@ -94,7 +96,7 @@ Disponible para [Windows Insider](https://insider.windows.com/) en las versiones
 
 ### <a name="pin-to-taskbar"></a>Anclar a la barra de tareas
 
-Disponible para [Windows Insider](https://insider.windows.com/) en las versiones preliminares del SDK, con la nueva clase TaskbarManager, puedes pedir al usuario que [ancle tu aplicación a la barra de tareas](../controls-and-patterns/pin-to-taskbar.md).
+Disponible para [Windows Insider](https://insider.windows.com/) en las versiones preliminares del SDK, con la nueva clase TaskbarManager, puedes pedir al usuario que [ancle tu aplicación a la barra de tareas](../design/shell/pin-to-taskbar.md).
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
@@ -108,7 +110,7 @@ El artículo [Procesar fotogramas multimedia con MediaFrameReader](../audio-vide
 
 ### <a name="scoped-search"></a>Ámbito de búsqueda
 
-Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-started/whats-a-uwp.md) y de la [referencia de API](https://docs.microsoft.com/en-us/uwp/api/) sobre docs.microsoft.com. A menos que este ámbito está desactivado, las búsquedas realizadas dentro de estas áreas devolverán solo documentos de UWP.
+Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-started/universal-application-platform-guide.md) y de [referencia de la API](https://docs.microsoft.com/en-us/uwp/api/) en docs.microsoft.com. A menos que este ámbito esté desactivado, las búsquedas que se realicen desde dentro de estas áreas devolverán solo documentos UWP.
 
 ![Ámbito de búsqueda](images/scoped-search.png)
 

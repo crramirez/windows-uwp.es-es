@@ -1,23 +1,25 @@
 ---
-title: "Comparar búferes"
-description: "En este código de ejemplo se muestra cómo comparar búferes en una aplicación para la Plataforma universal de Windows (UWP)."
+title: Comparar búferes
+description: En este código de ejemplo se muestra cómo comparar búferes en una aplicación para la Plataforma universal de Windows (UWP).
 ms.assetid: CB086E51-544A-470D-B7C8-C055271CD615
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: d5f84ce00026c9e2381e7b90213b3dcdd8aad9ff
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 2fd9875028d6751bb03e353db8d8ce28afd0a979
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690211"
 ---
 # <a name="compare-buffers"></a>Comparar búferes
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este código de ejemplo muestra cómo comparar búferes en una aplicación para la Plataforma universal de Windows (UWP).
 

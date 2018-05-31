@@ -1,21 +1,25 @@
 ---
 author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
-description: "Usa este método en la API de colecciones de la Tienda Windows para notificar un producto consumible como completado para un cliente determinado. Para que un usuario pueda volver a comprar un producto consumible, la aplicación o el servicio debe notificar el producto consumible como completado para dicho usuario."
+description: Usa este método en la API de colecciones de Microsoft Store para notificar un producto consumible como completado para un cliente determinado. Para que un usuario pueda volver a comprar un producto consumible, la aplicación o el servicio debe notificar el producto consumible como completado para dicho usuario.
 title: Notificar productos consumibles como completados
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, API de colecciones de la Tienda Windows, completar, consumible, Windows Store collection API, fulfill, consumable
-ms.openlocfilehash: 201e4fedc5f36202cba4c495ae9344d5a7975d62
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, API de colecciones de Microsoft Store, completar, consumible, Microsoft Store collection API, fulfill, consumable
+ms.localizationpriority: medium
+ms.openlocfilehash: cd3b060961271d834a165a8cc8fa4ca8beba047c
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690111"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Notificar productos consumibles como completados
 
-Usa este método en la API de colecciones de la Tienda Windows para notificar un producto consumible como completado para un cliente determinado. Para que un usuario pueda volver a comprar un producto consumible, la aplicación o el servicio debe notificar el producto consumible como completado para dicho usuario.
+Usa este método en la API de colecciones de Microsoft Store para notificar un producto consumible como completado para un cliente determinado. Para que un usuario pueda volver a comprar un producto consumible, la aplicación o el servicio debe notificar el producto consumible como completado para dicho usuario.
 
 Existen dos formas de usar este método para notificar un producto consumible como completado:
 
@@ -27,8 +31,8 @@ Existen dos formas de usar este método para notificar un producto consumible co
 
 Para usar este método, necesitarás:
 
-* Un token de acceso de Azure AD que se creó con el URI de audiencia `https://onestore.microsoft.com`.
-* Una clave de identificador de la Tienda Windows que representa la identidad del usuario para el que quieres notificar un producto consumible como completado.
+* Un token de acceso de Azure AD que tiene el valor de URI de audiencia `https://onestore.microsoft.com`.
+* Una clave de identificador de Microsoft Store que representa la identidad del usuario para el que quieres notificar un producto consumible como completado.
 
 Para obtener más información, consulta [Administrar los derechos de producto de un servicio](view-and-grant-products-from-a-service.md).
 
@@ -41,7 +45,6 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 |--------|---------------------------------------------------------------|
 | POST   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
 
-<span/> 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -52,7 +55,6 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 | Content-Length | number | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
-<span/>
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
@@ -62,20 +64,17 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 | itemId        | string       | Valor *itemId* devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con *trackingId*.      | No       |
 | trackingId    | guid         | Identificador de seguimiento único proporcionado por el desarrollador. Usa este parámetro con *itemId*.         | No       |
 | productId     | string       | Valor *productId* devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con *transactionId*.   | No       |
-| transactionId | guid         | El valor de identificador de transacción que se obtiene de uno de los siguientes orígenes. Usa este parámetro con *productId*.  <br/><br/><ul><li>La propiedad [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) de la clase [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).</li><li>El recibo de la aplicación o del producto devuelto por [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) o [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811).</li><li>El parámetro *transactionId* devuelto por una [consulta de productos](query-for-products.md).</li></ul>   | No       |
+| transactionId | guid         | El valor de identificador de transacción que se obtiene de uno de los siguientes orígenes. Usa este parámetro con *productId*.<ul><li>La propiedad [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) de la clase [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).</li><li>El recibo de la aplicación o del producto devuelto por [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) o [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync).</li><li>El parámetro *transactionId* devuelto por una [consulta de productos](query-for-products.md).</li></ul>   | No       |
 
- 
-<span/>
 
 El objeto UserIdentity contiene los parámetros siguientes.
 
 | Parámetro            | Tipo   | Descripción       | Obligatorio |
 |----------------------|--------|-------------------|----------|
 | identityType         | cadena | Especifica el valor de cadena **b2b**.    | Sí      |
-| identityValue        | string | La [clave de identificador de la Tienda Windows](view-and-grant-products-from-a-service.md#step-4) que representa la identidad del usuario para el que quieres notificar un producto consumible como completado.      | Sí      |
-| localTicketReference | cadena | El identificador solicitado para la respuesta devuelta. Se recomienda usar el mismo valor que la [notificación](view-and-grant-products-from-a-service.md#claims-in-a-windows-store-id-key) *userId* de la clave de identificador de la Tienda Windows. | Sí      |
+| identityValue        | string | La [clave de id. de Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa la identidad del usuario para el que quieres notificar un producto consumible como completado.      | Sí      |
+| localTicketReference | cadena | El identificador solicitado para la respuesta devuelta. Se recomienda usar el mismo valor que la [notificación](view-and-grant-products-from-a-service.md#claims-in-a-microsoft-store-id-key) *userId* de la clave de id. de Microsoft Store. | Sí      |
 
-<span/> 
 
 ### <a name="request-examples"></a>Ejemplos de solicitud
 
@@ -119,8 +118,8 @@ Host: collections.md.mp.microsoft.com
 }
 ```
 
-## <a name="response"></a>Respuesta
 
+## <a name="response"></a>Respuesta
 
 Si el consumo se ejecutó correctamente, no se devolverá ningún contenido.
 
@@ -143,7 +142,7 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 |------|--------------|----------------------------|-----------------------|
 | 401  | No autorizado | AuthenticationTokenInvalid | El token de acceso de Azure AD no es válido. En algunos casos, los detalles del código ServiceError contendrán más información, como la fecha de expiración del token o si falta la notificación *appid*. |
 | 401  | No autorizado | PartnerAadTicketRequired   | No se pasó un token de acceso de Azure AD al servicio en el encabezado de autorización.                                                                                                   |
-| 401  | No autorizado | InconsistentClientId       | La notificación *clientId* de la clave de id. de la Tienda Windows del cuerpo de la solicitud y la notificación *appid* del token de acceso de Azure AD del encabezado de autorización no coinciden.                     |
+| 401  | No autorizado | InconsistentClientId       | La notificación *clientId* de la clave de id. de Microsoft Store del cuerpo de la solicitud y la notificación *appid* del token de acceso de Azure AD del encabezado de autorización no coinciden.                     |
 
 <span/> 
 
@@ -152,4 +151,4 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 * [Administrar los derechos de producto de un servicio](view-and-grant-products-from-a-service.md)
 * [Consultar productos](query-for-products.md)
 * [Conceder productos gratuitos](grant-free-products.md)
-* [Renovar una clave de id. de la Tienda Windows](renew-a-windows-store-id-key.md)
+* [Renovar una clave de id. de Microsoft Store](renew-a-windows-store-id-key.md)

@@ -1,27 +1,28 @@
 ---
 author: mcleanbyron
-Description: "Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba."
-title: "Excluir o limitar las características de una versión de prueba"
+Description: If you enable customers to use your app for free during a trial period, you can entice your customers to upgrade to the full version of your app by excluding or limiting some features during the trial period.
+title: Excluir o limitar las funciones de una versión de prueba
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: "windows 10, Windows 10, uwp, UWP, trial, prueba, in-app purchase, compra desde la aplicación, IAP, IAP, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store"
+keywords: windows 10, Windows 10, uwp, UWP, trial, prueba, in-app purchase, compra desde la aplicación, IAP, IAP, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: badb14e5c915db68fb262002a8ee3321b62e2778
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f382f6ddb2666fe546ba2180e56fb8cd028253ec
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690461"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>Excluir o limitar las características de una versión de prueba
 
+Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua que solo se muestren durante la prueba antes de que el cliente compre la aplicación.
 
-> [!NOTE]
-> En este artículo se muestra cómo usar miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está orientada a Windows 10, versión 1607 o posterior, es recomendable que uses miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para implementar una versión de prueba, en lugar del espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md).
-
-Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, también puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
-
-Veamos cómo puedes agregar esto a tu aplicación.
+> [!IMPORTANT]
+> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para implementar la funcionalidad de prueba. Este espacio de nombres ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como las suscripciones y los complementos de consumibles administrados por Microsoft Store, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y Microsoft Store. El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Para obtener más información sobre cómo implementar la funcionalidad de prueba con el espacio de nombres **Windows.Services.Store**, consulta [este artículo](implement-a-trial-version-of-your-app.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -50,7 +51,7 @@ Para la mayoría de las aplicaciones que no sean juegos, definir una fecha de ex
 
 -   **La licencia de prueba expira antes de que se inicie la aplicación**
 
-    Si la prueba expira antes de que el usuario inicie la aplicación, esta no se iniciará. En lugar de ello, aparecerá un cuadro de diálogo y los usuarios tendrán la posibilidad de comprar tu aplicación en la Tienda Windows.
+    Si la prueba expira antes de que el usuario inicie la aplicación, esta no se iniciará. En lugar de ello, aparecerá un cuadro de diálogo y los usuarios tendrán la posibilidad de comprar tu aplicación en la Store Windows.
 
 -   **El cliente compra la aplicación mientras se está ejecutando**
 
@@ -80,16 +81,16 @@ A continuación, agrega un controlador de eventos para recibir notificaciones cu
 
 Cuando se genere el evento de cambio de la licencia, la aplicación debe llamar a la API de licencia para determinar si el estado de prueba se ha modificado. En el código de este paso se muestra cómo estructurar el controlador para este evento. En este punto, si el usuario compró la aplicación, se recomienda proporcionar información al usuario sobre los cambios de estado de licencia. Es posible que necesites pedirle al usuario que reinicie la aplicación, si así la has codificado. Esta transición debe ser lo más sencilla y fácil posible.
 
-En este ejemplo se muestra cómo evaluar el estado de la licencia de una aplicación para que puedas habilitar o deshabilitar una característica de la aplicación adecuadamente.
+En este ejemplo se muestra cómo evaluar el estado de licencia de una aplicación para que puedas habilitar o deshabilitar una característica de la aplicación adecuadamente.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#ReloadLicense)]
 
-## <a name="step-4-get-an-apps-trial-expiration-date"></a>Paso 4: Obtener la fecha de caducidad de la prueba de una aplicación
+## <a name="step-4-get-an-apps-trial-expiration-date"></a>Paso 4: Obtener la fecha de expiración de la prueba de una aplicación
 
 Incluye el código para determinar la fecha de caducidad de la prueba de la aplicación.
 
-El código de este ejemplo define una función para obtener la fecha de expiración de la licencia de prueba de la aplicación. Si la licencia sigue siendo válida, muestra la fecha de caducidad con el número de días que quedan para que caduque la prueba.
+El código de este ejemplo define una función para obtener la fecha de expiración de la licencia de prueba de la aplicación. Si la licencia sigue siendo válida, muestra la fecha de expiración con el número de días que quedan para que expire la prueba.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#DisplayTrialVersionExpirationTime)]
@@ -98,14 +99,14 @@ El código de este ejemplo define una función para obtener la fecha de expiraci
 
 Ahora, prueba la aplicación con datos simulados. **CurrentAppSimulator** obtiene información de licencia específica de la versión de prueba de un archivo XML llamado WindowsStoreProxy.xml, que se encuentra en %perfilusuario%\\AppData\\local\\packages\\&lt;nombre_paquete&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Puedes editar WindowsStoreProxy.xml para cambiar las fechas de caducidad simuladas para la aplicación y para sus características. Prueba todas las configuraciones de licencia y caducidad posibles para asegurarte de que todo funciona correctamente. Para obtener más información, consulta [Uso del archivo WindowsStoreProxy.xml con CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy).
 
-Si esta ruta de acceso y este archivo no existen, deberás crearlos durante la instalación o durante el tiempo de ejecución. Si intentas acceder a la propiedad [CurrentAppSimulator.LicenseInformation](https://msdn.microsoft.com/library/windows/apps/hh779768) sin el archivo WindowsStoreProxy.xml en esa ubicación específica, obtendrás un mensaje de error.
+Si esta ruta de acceso y este archivo no existen, deberás crearlos durante la instalación o durante el tiempo de ejecución. Si intentas acceder a la propiedad [CurrentAppSimulator.LicenseInformation](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.licenseinformation) sin el archivo WindowsStoreProxy.xml en esa ubicación específica, obtendrás un mensaje de error.
 
 ## <a name="step-6-replace-the-simulated-license-api-methods-with-the-actual-api"></a>Paso 6: Reemplazar los métodos API de licencia simulados por las API reales.
 
 Después de probar tu aplicación con el servidor de licencias simuladas, y antes de enviar la aplicación a una Tienda para su certificación, sustituye **CurrentAppSimulator** por **CurrentApp**, tal y como se muestra en la siguiente muestra de código.
 
 > [!IMPORTANT]
-> La aplicación debe usar el objeto **CurrentApp** cuando la envíes a una Tienda o no logrará la certificación.
+> La aplicación debe usar el objeto **CurrentApp** cuando la envíes a una Store o no logrará la certificación.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
@@ -118,7 +119,7 @@ Para obtener más información sobre cómo describir tu aplicación, consulta [C
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
+* [Muestra de la Store (muestra pruebas y compras desde la aplicación)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [Establecer los precios y la disponibilidad de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt148548)
 * [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765)
 * [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)
