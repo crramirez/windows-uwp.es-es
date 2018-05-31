@@ -1,8 +1,9 @@
 ---
 title: Mapas en un grupo de iconos
-description: "Cuando un recurso se crea como un recurso de streaming, los iconos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de iconos. Un grupo de iconos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación)."
+description: Cuando un recurso se crea como un recurso de streaming, los iconos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de iconos. Un grupo de iconos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación).
 ms.assetid: 58B8DBD5-62F5-4B94-8DD1-C7D57A812185
-keywords: Mapas en un grupo de iconos
+keywords:
+- Mapas en un grupo de iconos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 91d16dbda474927bc36beaacb255362f6e1840dd
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 45062f82955b1e353def2eadbeae36d1c9e81ce6
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652664"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>Mapas en un grupo de iconos
 
@@ -61,15 +63,15 @@ El contenido inicial de la tabla de página es **nulo** para todas las entradas.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Creación de grupos de iconos](tile-pool-creation.md)</p></td>
+<td align="left"><p><a href="tile-pool-creation.md">Creación de grupos de iconos</a></p></td>
 <td align="left"><p>Las aplicaciones pueden crear uno o varios grupos de iconos por dispositivo de Direct3D. El tamaño total de cada grupo de iconos está restringido al límite de tamaño del recurso de Direct3D 11, que es aproximadamente 1/4 de RAM de GPU.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Cambio del tamaño de los grupos de iconos](tile-pool-resizing.md)</p></td>
+<td align="left"><p><a href="tile-pool-resizing.md">Cambio del tamaño de los grupos de iconos</a></p></td>
 <td align="left"><p>Cambia el tamaño de un grupo de iconos para aumentar un grupo de iconos si la aplicación necesita más espacio de trabajo para los recursos de streaming asignados. También puedes reducirlo si se necesita menos espacio.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Seguimiento de peligros frente a recursos de grupos de iconos](hazard-tracking-versus-tile-pool-resources.md)</p></td>
+<td align="left"><p><a href="hazard-tracking-versus-tile-pool-resources.md">Seguimiento de peligros frente a recursos de grupos de iconos</a></p></td>
 <td align="left"><p>Para recursos que no son de streaming, Direct3D puede impedir ciertas condiciones de riesgo durante la representación, pero, ya que el seguimiento de riesgos sería a nivel de iconos para los recursos de streaming, las condiciones de riesgo de seguimiento durante la representación de los recursos de streaming pueden ser demasiado altas.</p></td>
 </tr>
 </tbody>

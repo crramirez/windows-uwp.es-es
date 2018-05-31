@@ -1,8 +1,9 @@
 ---
-title: "Cálculos de iluminación"
-description: "El modelo de luz de Direct3D cubre la iluminación de ambiente, difusa, especular y de emisión. Es suficiente flexibilidad para resolver una gran variedad de situaciones de iluminación. La cantidad total de luz en una escena se conoce como iluminación global."
+title: Cálculos de iluminación
+description: El modelo de luz de Direct3D cubre la iluminación de ambiente, difusa, especular y de emisión. Es suficiente flexibilidad para resolver una gran variedad de situaciones de iluminación. La cantidad total de luz en una escena se conoce como iluminación global.
 ms.assetid: D0521F56-050D-4EDF-9BD1-34748E94B873
-keywords: "Cálculos de iluminación"
+keywords:
+- Cálculos de iluminación
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 74d6caed069327efd0262158d7d3781cb5a5c02e
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: a3d28f3a1197ba915bf145cdac77c709cebd3fa2
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653374"
 ---
 # <a name="mathematics-of-lighting"></a>Cálculos de iluminación
 
@@ -59,27 +61,27 @@ Todos los cálculos de iluminación se realizan en el espacio de modelo al trans
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Iluminación de ambiente](ambient-lighting.md)</p></td>
+<td align="left"><p><a href="ambient-lighting.md">Iluminación de ambiente</a></p></td>
 <td align="left"><p>La luz de ambiente proporciona iluminación constante a una escena. Ilumina todos los vértices de un objeto del mismo modo porque no depende de ningún otro factor de iluminación, como las normales de los vértices, la dirección de la luz, la posición de la luz, el alcance o la atenuación. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcula con rapidez, pero deja objetos con una apariencia plana y poco realista.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Luz difusa](diffuse-lighting.md)</p></td>
+<td align="left"><p><a href="diffuse-lighting.md">Luz difusa</a></p></td>
 <td align="left"><p><em>La iluminación difusa</em> depende de la dirección de la luz y la superficie normal del objeto. La iluminación difusa varía por la superficie de un objeto como resultado de los cambios de la dirección de la luz y el vector numeral de la superficie. Lleva más tiempo calcular la iluminación difusa porque cambia para cada vértice del objeto. Sin embargo, la ventaja de usarla es que sombrea objetos y les da profundidad tridimensional (3D).</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Luz especular](specular-lighting.md)</p></td>
+<td align="left"><p><a href="specular-lighting.md">Luz especular</a></p></td>
 <td align="left"><p><em>La iluminación especular</em> identifica los resaltados especulares brillantes que se producen cuando la luz alcanza la superficie de un objeto y se refleja hacia la cámara. La iluminación especular es más intensa que la luz difusa y sale más rápidamente por la superficie del objeto. Lleva más tiempo calcular la iluminación especular que la iluminación difusa. Sin embargo, la ventaja de usarla es que agrega detalles importantes a una superficie.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Luz de emisión](emissive-lighting.md)</p></td>
+<td align="left"><p><a href="emissive-lighting.md">Luz de emisión</a></p></td>
 <td align="left"><p><em>La iluminación de emisión</em> es la luz que emite un objeto; por ejemplo, un resplandor. La emisión hace que un objeto representado parezca que sea luminoso por sí mismo. La emisión afecta al color de un objeto y, por ejemplo, puede hacer que un material oscuro sea más brillante y absorba parte del color emitido.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Transformaciones del espacio de cámara](camera-space-transformations.md)</p></td>
+<td align="left"><p><a href="camera-space-transformations.md">Transformaciones del espacio de cámara</a></p></td>
 <td align="left"><p>Los vértices del espacio de cámara se calculan al transformar los vértices del objeto con la matriz de vista del mundo.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md)</p></td>
+<td align="left"><p><a href="attenuation-and-spotlight-factor.md">Atenuación y factor de foco de luz</a></p></td>
 <td align="left"><p>Los componentes de iluminación difusa y especular de la ecuación global de iluminación contienen términos que describen la atenuación de la luz y el cono del foco de luz.</p></td>
 </tr>
 </tbody>

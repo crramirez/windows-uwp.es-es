@@ -2,20 +2,23 @@
 author: laurenhughes
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Archivos, carpetas y bibliotecas
-description: "Obtén información sobre la lectura y escritura de la configuración de la aplicación, los selectores de archivos y carpetas y las ubicaciones de espacios aislados como, por ejemplo, la biblioteca de vídeos y música."
+description: Obtén información sobre la lectura y escritura de la configuración de la aplicación, los selectores de archivos y carpetas y las ubicaciones de espacios aislados como, por ejemplo, la biblioteca de vídeos y música.
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 77969b423ba955c50937a45955e2e490118b2c13
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows10, uwp
+ms.localizationpriority: medium
+ms.openlocfilehash: 5c29a14c91b66e10f4f23e8305eb7781e682eba6
+ms.sourcegitcommit: 97b47dafbd0593d19d96f9722f35052f13e591a9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/10/2018
+ms.locfileid: "1502919"
 ---
  # <a name="files-folders-and-libraries"></a>Archivos, carpetas y bibliotecas
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/br227346), [Windows.Storage.Streams](https://msdn.microsoft.com/library/windows/apps/br241791) y [Windows.Storage.Pickers](https://msdn.microsoft.com/library/windows/apps/br207928) para leer y escribir texto y otros formatos de datos en archivos, además de para administrar archivos y carpetas. En esta sección también aprenderás sobre la lectura y escritura de la configuración de la aplicación, los selectores de archivos y carpetas, así como las ubicaciones de espacios aislados como, por ejemplo, como la biblioteca de vídeos o música.
 
@@ -32,6 +35,7 @@ Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.
 | [Realizar un seguimiento de los archivos y carpetas usados recientemente](how-to-track-recently-used-files-and-folders.md) | Realiza un seguimiento de los archivos a los que el usuario accede con mayor frecuencia agregándolos a la lista de elementos usados recientemente (MRU) de la aplicación. La plataforma administra la lista MRU automáticamente ordenando los elementos según la hora del último acceso y eliminando los más antiguos cuando se alcanza el límite de 25 elementos en la lista. Todas las aplicaciones tienen sus propias listas de MRU. |
 | [Acceder a la tarjeta SD](access-the-sd-card.md) | Puedes almacenar y tener acceso a datos no esenciales en una tarjeta microSD, especialmente en los dispositivos móviles de bajo costo que tienen un almacenamiento interno limitado. |
 | [Permisos de acceso a archivos](file-access-permissions.md) | Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades. |
+| [Acceso rápido a las propiedades de archivo en UWP](fast-file-properties.md) | Recopila de forma eficaz una lista de archivos y sus propiedades de una biblioteca para usarlos en una aplicación para UWP. |
 
 ## <a name="related-samples"></a>Muestras relacionadas
 [Muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993)

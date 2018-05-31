@@ -1,18 +1,21 @@
 ---
 author: mithom
-title: "Controlador de navegación de la interfaz de usuario"
-description: "Usa las API de controlador de navegación de la interfaz de usuario Windows.Gaming.Input para detectar y leer los distintos tipos de dispositivos de entrada destinados a la navegación de la interfaz de usuario."
+title: Controlador de navegación de la interfaz de usuario
+description: Usa las API de controlador de navegación de la interfaz de usuario Windows.Gaming.Input para detectar y leer los distintos tipos de dispositivos de entrada destinados a la navegación de la interfaz de usuario.
 ms.assetid: 5A14926D-8C2E-4DE8-AAFB-BEEB9BFE91A5
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, juegos, interfaz de usuario, navegación"
-ms.openlocfilehash: 5b5789b90cefb6ba22c2a3d8b5ebbb45be5b0dad
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+keywords: windows 10, uwp, juegos, interfaz de usuario, navegación
+ms.localizationpriority: medium
+ms.openlocfilehash: cae9d515ba5925ce81c90dfe5eb3785491128010
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1656140"
 ---
 # <a name="ui-navigation-controller"></a>Controlador de navegación de la interfaz de usuario
 
@@ -36,7 +39,7 @@ Dado que el número y la diversidad de controles compatibles con cada tipo de di
 
 Los dispositivos de navegación deben admitir todos los comandos de navegación del _conjunto necesario_. Se trata de los comandos direccionales (arriba, abajo, izquierda y derecha) y los comandos ver, menú, aceptar y cancelar.
 
-Los comandos direccionales están destinados a la [navegación con foco XY](..\input-and-devices\designing-for-tv.md#xy-focus-navigation-and-interaction) principal entre elementos únicos de la interfaz de usuario. Los comandos "ver" y "menú" están pensados para mostrar información de juego (suelen ser momentáneos, a veces de forma modal) y para cambiar entre los contextos de juego y menú, respectivamente. Los comandos "aceptar" y "cancelar" están destinados a las respuestas afirmativa (sí) y negativa (no), respectivamente.
+Los comandos direccionales están destinados a la [navegación con foco XY](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction) principal entre elementos únicos de la interfaz de usuario. Los comandos "ver" y "menú" están pensados para mostrar información de juego (suelen ser momentáneos, a veces de forma modal) y para cambiar entre los contextos de juego y menú, respectivamente. Los comandos "aceptar" y "cancelar" están destinados a las respuestas afirmativa (sí) y negativa (no), respectivamente.
 
 En la siguiente tabla se muestra un resumen de estos comandos y sus usos previstos, con ejemplos.
 | Comando | Uso previsto

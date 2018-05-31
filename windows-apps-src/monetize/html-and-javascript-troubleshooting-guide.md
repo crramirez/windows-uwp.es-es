@@ -2,16 +2,20 @@
 author: mcleanbyron
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: Lee sobre las soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de JavaScript y HTML.
-title: "Guía de solución de problemas de HTML y JavaScript"
+title: Guía de solución de problemas de HTML y JavaScript
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, anuncios, ads, publicidad, advertising, AdControl, solución de problemas, troubleshooting, HTML, JavaScript"
-ms.openlocfilehash: 068ba245475aa03b0772e8f38017c93783fdb6ce
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: Windows 10, UWP, anuncios, ads, publicidad, advertising, AdControl, solución de problemas, troubleshooting, HTML, JavaScript
+ms.localizationpriority: medium
+ms.openlocfilehash: 1a2d94b769783bdc28c2218dcb9c07f678ba7bc9
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1654874"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>Guía de solución de problemas de HTML y JavaScript
 
@@ -30,13 +34,12 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 ## <a name="html"></a>HTML
 
 <span id="html-notappearing"/>
+
 ### <a name="adcontrol-not-appearing"></a>AdControl no aparece
 
 1.  Asegúrate de que la funcionalidad **Internet (Client)** está seleccionada en Package.appxmanifest.
 
 2.  Asegúrate de que la referencia de JavaScript esté presente. Sin la referencia de ad.js en la sección &lt;head&gt; (después de la referencia de default.js), **AdControl** no podrá mostrarse y se producirá un error durante la compilación.
-
-    Windows 10:
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -47,18 +50,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     </head>
     ```
 
-    Windows 8.x:
-
-    > [!div class="tabbedCodeSnippets"]
-    ``` html
-    <head>
-        ...
-        <script src="//Microsoft.Advertising.JavaScript/ads/ad.js"></script>
-        ...
-    </head>
-    ```
-
-3.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md) (Configurar unidades de anuncios en tu aplicación).
+3.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units) (Configurar unidades de anuncios en tu aplicación).
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -148,9 +140,10 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 11. Asegúrate de que **AdControl** no esté oculto en la ventanilla. **AdControl** debe ser visible para que los anuncios se muestren correctamente.
 
-12. Los valores activos para [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) y [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los identificadores de prueba tanto para **ApplicationId** como para **AdUnitId** que se encuentran en [Valores del modo de prueba](test-mode-values.md).
+12. Los valores activos para [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) y [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) tanto para **ApplicationId** como para **AdUnitId**.
 
 <span id="html-blackboxblinksdisappears"/>
+
 ### <a name="black-box-blinks-and-disappears"></a>La caja negra parpadea y desaparece
 
 1.  Vuelve a comprobar todos los pasos anteriores en la sección [AdControl no aparece](#html-notappearing).
@@ -177,6 +170,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 3.  **AdControl** se comporta con normalidad. De manera predeterminada, **AdControl** se contraerá cuando no pueda mostrar un anuncio. Si otros elementos son elementos secundarios del mismo elemento principal, pueden moverse para rellenar el espacio de **AdControl** contraído y expandirse cuando se realice la siguiente solicitud.
 
 <span id="html-adsnotrefreshing"/>
+
 ### <a name="ads-not-refreshing"></a>Los anuncios no se actualizan
 
 1.  Comprueba la propiedad **isAutoRefreshEnabled**. Esta propiedad opcional está establecida en true de manera predeterminada. Cuando se establece en false, debe usarse el método **refresh** para recuperar otro anuncio.
@@ -226,9 +220,11 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 3.  **AdControl** se comporta con normalidad. A veces el mismo anuncio aparecerá más de una vez en una fila, lo que da la apariencia de que los anuncios no se actualizan.
 
 <span id="js"/>
+
 ## <a name="javascript"></a>JavaScript
 
 <span id="js-adcontrolnotappearing"/>
+
 ### <a name="adcontrol-not-appearing"></a>AdControl no aparece
 
 1.  Asegúrate de que la funcionalidad **Internet (Client)** esté seleccionada en Package.appxmanifest.
@@ -279,7 +275,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     });  
     ```
 
-4.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md) (Configurar unidades de anuncios en tu aplicación).
+4.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units) (Configurar unidades de anuncios en tu aplicación).
 
     > [!div class="tabbedCodeSnippets"]
     ``` javascript
@@ -291,9 +287,10 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 5.  Comprueba el elemento primario de **AdControl**. El elemento primario debe estar activo y visible.
 
-6.  Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los identificadores de prueba tanto para **ApplicationId** como para **AdUnitId** que se encuentran en [Valores del modo de prueba](test-mode-values.md).
+6.  Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) tanto para **ApplicationId** como para **AdUnitId**.
 
 <span id="js-blackboxblinksdisappears"/>
+
 ### <a name="black-box-blinks-and-disappears"></a>La caja negra parpadea y desaparece
 
 1.  Vuelve a comprobar todos los pasos en la sección [AdControl no aparece](#js-adcontrolnotappearing).
@@ -342,6 +339,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 3.  **AdControl** se comporta con normalidad. A veces el mismo anuncio aparecerá más de una vez en una fila, lo que da la apariencia de que los anuncios no se actualizan.
 
 <span id="js-adsnotrefreshing"/>
+
 ### <a name="ads-not-refreshing"></a>Los anuncios no se actualizan
 
 1.  Comprueba si la propiedad [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) de tu **AdControl** está establecida en false. Esta propiedad opcional está establecida en **true** de manera predeterminada. Cuando se establece en **false**, debe usarse el método **Refresh** para recuperar otro anuncio.

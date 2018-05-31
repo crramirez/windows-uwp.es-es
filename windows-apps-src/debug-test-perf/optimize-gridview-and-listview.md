@@ -1,23 +1,24 @@
 ---
 author: jwmsft
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
-title: "Optimización de la interfaz de usuario de ListView y GridView"
-description: "Mejora el rendimiento y el tiempo de inicio de ListView y GridView mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos."
+title: Optimización de la interfaz de usuario de ListView y GridView
+description: Mejora el rendimiento y el tiempo de inicio de ListView y GridView mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 6b0b1d3672d236c535cb3abdf57c6b599368892b
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 5cff6e2785434eb4fdb922d8b89b55aca242655f
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816910"
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>Optimización de la interfaz de usuario de ListView y GridView
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Nota**  
 Para más información, consulta la sesión de //build/ [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView (Aumentar considerablemente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de GridView y ListView)](https://channel9.msdn.com/events/build/2013/3-158).
@@ -72,6 +73,7 @@ Las plantillas de control predeterminadas para [**ListViewItem**](https://msdn.m
 Existen aproximadamente 25 propiedades con nombres descriptivos similares a [**SelectionCheckMarkVisualEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled.aspx) y [**SelectedBackground**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectedbackground.aspx). En el caso de que los tipos de presentador resultaran no ser lo suficientemente personalizables para tu caso de uso, puedes editar una copia de la plantilla de control `ListViewItemExpanded` o `GridViewItemExpanded`. Estas se encuentran en `\Program Files (x86)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\<version>\Generic\generic.xaml`. Ten en cuenta que el uso de estas plantillas significa conceder algo de rendimiento para el aumento de la personalización.
 
 <span id="update-items-incrementally"/>
+
 ## <a name="update-listview-and-gridview-items-progressively"></a>Actualizar los elementos ListView and GridView de forma progresiva
 
 Si estás usando la virtualización de datos, puedes conseguir que la capacidad de respuesta de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) siga siendo alta, configurando el control para representar elementos de la interfaz de usuario temporales de los elementos que aún se estén descargando o cargando. Los elementos temporales se reemplazan progresivamente con la interfaz de usuario real a medida que se cargan los datos.
@@ -91,7 +93,7 @@ Aquí mostramos cómo usar el [atributo x:Phase](https://msdn.microsoft.com/libr
 1.  Este es el aspecto que tiene el origen del enlace (es decir, el origen al que enlazaremos).
 
     ```csharp
-namespace LotsOfItems
+    namespace LotsOfItems
     {
         public class ExampleItem
         {

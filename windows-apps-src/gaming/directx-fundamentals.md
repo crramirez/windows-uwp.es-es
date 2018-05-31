@@ -1,7 +1,7 @@
 ---
 author: joannaleecy
-title: "Conceptos básicos de programación con DirectX"
-description: "Conceptos básicos de la programación con DirectX."
+title: Conceptos básicos de programación con DirectX
+description: Conceptos básicos de la programación con DirectX.
 ms.assetid: 05a1bc59-f32e-44a0-8902-94cf1e099b1b
 ms.author: joanlee
 ms.date: 02/08/2017
@@ -9,10 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, load, carga, rasterize, rasterizar, mesh, malla, bitmap, mapa de bits, 2D, 2D, 3D, 3D
-ms.openlocfilehash: 2633bba5425ca78c3f109a4571fd8c0529f17b56
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 2d820b8d8417ed22e2671060783e0f838d092b34
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652674"
 ---
 # <a name="fundamentals-of-directx-programming"></a>Conceptos básicos de programación con DirectX
 
@@ -39,19 +42,19 @@ El tema sobre la carga de recursos en el juego DirectX te guía por los pasos b�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Elementos gráficos 2D para juegos DirectX](working-with-2d-graphics-in-your-directx-game.md)</p></td>
+<td align="left"><p><a href="working-with-2d-graphics-in-your-directx-game.md">Elementos gráficos 2D para juegos DirectX</a></p></td>
 <td align="left"><p>Crea elementos gráficos 2D con DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Guía de aprendizaje de elementos gráficos Direct3D](https://msdn.microsoft.com/windows/uwp/graphics-concepts/index)</p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/windows/uwp/graphics-concepts/index">Guía de aprendizaje de elementos gráficos Direct3D</a></p></td>
 <td align="left"><p>Comprende los conceptos de elementos gráficos Direct3D.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Elementos gráficos 3D básicos para juegos DirectX](an-introduction-to-3d-graphics-with-directx.md)</p></td>
+<td align="left"><p><a href="an-introduction-to-3d-graphics-with-directx.md">Elementos gráficos 3D básicos para juegos DirectX</a></p></td>
 <td align="left"><p>Crea elementos gráficos 3D básicos con DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Cargar recursos en el juego DirectX](load-a-game-asset.md)</p></td>
+<td align="left"><p><a href="load-a-game-asset.md">Cargar recursos en el juego DirectX</a></p></td>
 <td align="left"><p>Carga mallas en el juego DirectX.</p></td>
 </tr>
 </tbody>

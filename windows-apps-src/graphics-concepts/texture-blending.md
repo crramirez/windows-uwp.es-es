@@ -1,8 +1,9 @@
 ---
-title: "Combinación de texturas"
+title: Combinación de texturas
 description: Direct3D puede combinar hasta ocho texturas en primitivos en un solo pase.
 ms.assetid: 9AD388FA-B2B9-44A9-B73E-EDBD7357ACFB
-keywords: "Combinación de texturas"
+keywords:
+- Combinación de texturas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 248b4576ee12df72a59442a5bc3425d2899f6663
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: f1014ed205c5cf0eda2c9b71c8406a98394b1463
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652904"
 ---
 # <a name="texture-blending"></a>Combinación de texturas
 
@@ -62,11 +64,11 @@ Si la aplicación varía la cantidad de fases que usa para diferentes situacione
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Fases de combinación](blending-stages.md)</p></td>
+<td align="left"><p><a href="blending-stages.md">Fases de combinación</a></p></td>
 <td align="left"><p>Una fase de fusión es un conjunto de operaciones de textura y sus argumentos que definen la forma en que se combinan las texturas.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Combinación de texturas multipase](multipass-texture-blending.md)</p></td>
+<td align="left"><p><a href="multipass-texture-blending.md">Combinación de texturas multipase</a></p></td>
 <td align="left"><p>Las aplicaciones de Direct3D pueden lograr numerosos efectos especiales mediante la aplicación de varias texturas a un primitivo a lo largo de varios pases de representación. El término habitual para esto es <em>combinación de texturas multipase</em>. Un uso habitual de la combinación de texturas multipase es emular los efectos de modelos complejos de iluminación y sombreado con la aplicación de varios colores de distintas texturas diferentes. Esto se denomina <em>mapa de luces</em>.</p></td>
 </tr>
 </tbody>

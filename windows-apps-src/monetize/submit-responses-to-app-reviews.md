@@ -1,34 +1,39 @@
 ---
 author: mcleanbyron
 ms.assetid: 038903d6-efab-4da6-96b5-046c7431e6e7
-description: "Usa este método en la API de opiniones de la Tienda Windows para enviar respuestas a las opiniones sobre tu aplicación."
+description: Usa este método en la API de opiniones de Microsoft Store para enviar respuestas a las opiniones sobre tu aplicación.
 title: Enviar respuestas a opiniones
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP, Store services, servicios de la Tienda, Windows Store reviews API, API de opiniones de la Tienda Windows, add-on acquisitions, adquisiciones de complementos
-ms.openlocfilehash: d418e64bf1608591e877da8339d1dda308611285
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store reviews API, API de opiniones de Microsoft Store, add-on acquisitions, adquisiciones de complementos
+ms.localizationpriority: medium
+ms.openlocfilehash: 6a757743bec947a5e8b0edf8c7a0d02e7c00942d
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1662605"
 ---
 # <a name="submit-responses-to-reviews"></a>Enviar respuestas a opiniones
 
 
-Usa este método en la API de opiniones de la Tienda Windows para responder mediante programación a las opiniones sobre tu aplicación. Cuando se llama a este método, es necesario especificar los identificadores de las opiniones a las que quieres responder. Los identificadores de las opiniones están disponibles en los datos de respuesta del método de [obtención de las opiniones de la aplicación](get-app-reviews.md) en la API de análisis de la tienda Windows y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).
+Usa este método en la API de opiniones de Microsoft Store para responder mediante programación a las opiniones sobre tu aplicación. Cuando se llama a este método, es necesario especificar los identificadores de las opiniones a las que quieres responder. Los identificadores de opinión están disponibles en los datos de respuesta del método [obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de Microsoft Store y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).
 
 Cuando un cliente envía una opinión, puede elegir no recibir respuestas a dicha opinión. Si se intenta responder a una opinión para la que el cliente ha elegido no recibir respuestas, el cuerpo de la respuesta de este método indicará que el intento de respuesta no ha tenido éxito. Antes de llamar a este método, tienes la opción de determinar si puedes responder a una opinión determinada mediante el método [obtener información sobre la respuesta a las opiniones sobre la aplicación](get-response-info-for-app-reviews.md).
 
->**Nota**&nbsp;&nbsp;Además de usar este método para responder mediante programación a las opiniones, tienes la alternativa de responder a las opiniones [mediante el panel del Centro de desarrollo de Windows](../publish/respond-to-customer-reviews.md).
+> [!NOTE]
+> Además de usar este método para responder mediante programación a las opiniones, tienes la alternativa de responder a las opiniones [mediante el panel del Centro de desarrollo de Windows](../publish/respond-to-customer-reviews.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](respond-to-reviews-using-windows-store-services.md#prerequisites) para la API de opiniones de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](respond-to-reviews-using-windows-store-services.md#prerequisites) para la API de opiniones de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
-* Obtén los identificadores de las opiniones a las que quieres responder. Los identificadores de las opiniones están disponibles en los datos de respuesta del método de [obtención de las opiniones de la aplicación](get-app-reviews.md) en la API de análisis de la tienda Windows y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).
+* Obtén los identificadores de las opiniones a las que quieres responder. Los identificadores de opinión están disponibles en los datos de respuesta del método [obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de Microsoft Store y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).
 
 ## <a name="request"></a>Solicitud
 
@@ -38,7 +43,6 @@ Para usar este método, primero debes hacer lo siguiente:
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/reviews/responses``` |
 
-<span/> 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -46,13 +50,11 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/> 
 
 ### <a name="request-parameters"></a>Parámetros de la solicitud
 
 Este método no tiene parámetros de la solicitud.
 
-<span/> 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
@@ -62,15 +64,17 @@ El cuerpo de la solicitud tiene los siguientes valores.
 |---------------|--------|-----------------------------------------|
 | Responses | Matriz | Una matriz de objetos que contiene los datos de la respuesta que quieras enviar. Para obtener más información sobre los datos de cada objeto, consulta la tabla siguiente. |
 
+
 Cada objeto de la matriz *Responses* contiene los siguientes valores.
 
 | Valor        | Tipo   | Descripción           |  Obligatorio  |
 |---------------|--------|-----------------------------|-----|
-| ApplicationId | Cadena |  El id. de la Tienda de la aplicación que contiene la opinión a la que deseas responder. El id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8.   |  Sí  |
-| ReviewId | Cadena |  El id. de la opinión a la que deseas responder (es un GUID). Los identificadores de las opiniones están disponibles en los datos de respuesta del método de [obtención de las opiniones de la aplicación](get-app-reviews.md) en la API de análisis de la tienda Windows y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).   |  Sí  |
+| ApplicationId | Cadena |  El id. de la Store de la aplicación que contiene la opinión a la que deseas responder. El id. de la Store está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8.   |  Sí  |
+| ReviewId | Cadena |  El id. de la opinión a la que deseas responder (es un GUID). Los identificadores de opinión están disponibles en los datos de respuesta del método [obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de Microsoft Store y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).   |  Sí  |
 | ResponseText | Cadena | La respuesta que quieres enviar. La respuesta debe seguir [estas directrices](../publish/respond-to-customer-reviews.md#guidelines-for-responses).   |  Sí  |
 | SupportEmail | Cadena | La dirección de correo electrónico del soporte técnico de la aplicación, que el cliente puede usar para ponerse en contacto contigo directamente. Debe ser una dirección de correo electrónico válida.     |  Sí  |
-| IsPublic | Booleano |  El valor **true** indica que la respuesta se mostrará en descripción de la Tienda de la aplicación, justo debajo de la opinión del cliente, y será visible para todos los clientes. El valor **false** indica que la respuesta se enviará al cliente por correo electrónico y no será visible para los demás clientes en descripción de la Tienda de la aplicación.     |  Sí  |
+| IsPublic | Booleano |  El valor **true** indica que la respuesta se mostrará en descripción de la Store de la aplicación, justo debajo de la opinión del cliente, y será visible para todos los clientes. El valor **false** indica que la respuesta se enviará al cliente por correo electrónico y no será visible para los demás clientes en descripción de la Store de la aplicación.     |  Sí  |
+
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
@@ -108,14 +112,16 @@ Content-Type: application/json
 |---------------|--------|---------------------|
 | Result | Matriz | Una matriz de objetos que contienen datos sobre cada respuesta que has enviado. Para obtener más información sobre los datos de cada objeto, consulta la tabla siguiente.  |
 
+
 Cada objeto de la matriz *Result* contiene los siguientes valores.
 
 | Valor        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------|
-| ApplicationId | Cadena |  El id. de la Tienda de la aplicación que contiene la opinión a la que has respondido. Un ejemplo de un id. de la Tienda sería 9WZDNCRFJ3Q8.   |
+| ApplicationId | Cadena |  El id. de la Store de la aplicación que contiene la opinión a la que has respondido. Un ejemplo de un id. de la Store sería 9WZDNCRFJ3Q8.   |
 | ReviewId | Cadena |  El identificador de la opinión a la que has respondido. Se trata de un GUID.   |
 | Successful | Cadena | El valor **true** indica que la respuesta se envió correctamente. El valor **false** indica que la respuesta no tuvo éxito.    |
 | FailureReason | Cadena | Si **Successful** es **false**, este valor contiene un motivo del error. Si **Successful** es **true**, este valor está vacío.      |
+
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
@@ -143,6 +149,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Responder a las opiniones de los clientes mediante el panel del Centro de desarrollo](../publish/respond-to-customer-reviews.md)
-* [Responder a las opiniones mediante servicios de la Tienda de Windows](respond-to-reviews-using-windows-store-services.md)
+* [Responder a las opiniones con servicios de Microsoft Store](respond-to-reviews-using-windows-store-services.md)
 * [Obtención de información acerca de las respuesta a las opiniones sobre la aplicación](get-response-info-for-app-reviews.md)
 * [Obtener las opiniones de la aplicación](get-app-reviews.md)

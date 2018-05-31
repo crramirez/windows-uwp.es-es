@@ -8,11 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, input, entrada, mouse, mouse, touch, táctil, control, control"
-ms.openlocfilehash: d0494015e4cd2811cc0f21ccc983f621575f1de4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+keywords: windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, input, entrada, mouse, mouse, touch, táctil, control, control
+ms.localizationpriority: medium
+ms.openlocfilehash: 0380f81cdc171a3eac721c0d3d609d3ba18fb534
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652714"
 ---
 # <a name="game-input-for-directx-games"></a>Entrada para juegos DirectX
 
@@ -37,15 +40,15 @@ En el tema sobre los controles táctiles para juegos se explica cómo agregar co
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md)</p></td>
+<td align="left"><p><a href="tutorial--adding-move-look-controls-to-your-directx-game.md">Controles de movimiento y vista para juegos</a></p></td>
 <td align="left"><p>Agrega controles de movimiento y vista.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Movimiento relativo del mouse](relative-mouse-movement.md)</p></td>
+<td align="left"><p><a href="relative-mouse-movement.md">Movimiento relativo del mouse</a></p></td>
 <td align="left"><p>Controla el movimiento relativo del mouse.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md)</p></td>
+<td align="left"><p><a href="tutorial--adding-touch-controls-to-your-directx-game.md">Controles táctiles para juegos</a></p></td>
 <td align="left"><p>Agrega controles táctiles básicos a tu juego.</p></td>
 </tr>
 </tbody>

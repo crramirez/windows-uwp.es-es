@@ -10,11 +10,12 @@ ms.topic: article
 keywords: introducción, windows 10, uwp, xaml, c#
 ms.technology: uwp
 ms.localizationpriority: high
-ms.openlocfilehash: a6a7fd3b16316c7ee0a5d162fc1d0aff5813a81f
-ms.sourcegitcommit: 1d479842a5410f8ba3f286b972504f57bbc97ed1
+ms.openlocfilehash: 9e2cd95cfc74273f4c9f6c949a5a618542b99acf
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1815750"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introducción a las aplicaciones de Windows 10 
  
@@ -54,8 +55,7 @@ Crea aplicaciones que funcionen en todos los dispositivos con Windows 10, o mejo
                     <h3>Prepárate</h3>
                     <p>Visual Studio Community y el SDK de Windows 10 te proporcionan todo lo necesario para crear magníficas aplicaciones, y son gratuitos.</p>
                     <ul>
-                        <li><a href="//developer.microsoft.com/windows/downloads">Descargar las herramientas y el SDK</a></li>
-                        <li><a href="//docs.microsoft.com/windows/uwp/get-started/get-set-up">¿Necesitas un poco de ayuda?</a></li>
+                        <li><a href="//docs.microsoft.com/windows/uwp/get-started/get-set-up">Descargar las herramientas y el SDK</a></li>
                     </ul>
                   </div>
                 </div>

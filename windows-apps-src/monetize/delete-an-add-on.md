@@ -1,33 +1,32 @@
 ---
 author: mcleanbyron
 ms.assetid: 16D4C3B9-FC9B-46ED-9F87-1517E1B549FA
-description: "Usa este método en la API de envío de la Tienda Windows para eliminar un complemento de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows."
+description: Usa este método en la API de envío de Microsoft Store para eliminar un complemento de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows.
 title: Eliminar un complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, add-on, complemento, delete, eliminar, in-app product, producto desde la aplicación, IAP, IAP"
-ms.openlocfilehash: 74149837e43b65998069c8724b5cd6c55df8703b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on, complemento, delete, eliminar, in-app product, producto desde la aplicación, IAP, IAP
+ms.localizationpriority: medium
+ms.openlocfilehash: 95743f600b2f688a09f3fe96bd7e58acc93da5d2
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1661995"
 ---
 # <a name="delete-an-add-on"></a>Eliminar un complemento
 
-
-
-
-Usa este método en la API de envío de la Tienda Windows para eliminar un complemento (también conocido como producto desde la aplicación o IAP) de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows.
+Usa este método en la API de envío de Microsoft Store para eliminar un complemento (también conocido como producto desde la aplicación o IAP) de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
-
->**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
 ## <a name="request"></a>Solicitud
 
@@ -37,8 +36,6 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |--------|------------------------------------------------------------------|
 | DELETE    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` |
 
-<span/>
- 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -46,21 +43,18 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/>
 
-### <a name="request-parameters"></a>Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de la solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | cadena | Obligatorio. El Id. de la Tienda del complemento que se va a eliminar. El Id. de la Tienda está disponible en el panel del Centro de desarrollo.  |
+| id | cadena | Obligatorio. El Id. de la Store del complemento que se va a eliminar. El Id. de la Store está disponible en el panel del Centro de desarrollo.  |
 
-<span/>
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
 No incluyas un cuerpo de la solicitud para este método.
 
-<span/>
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
@@ -83,13 +77,12 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | La solicitud no es válida. |
 | 404  | No se pudo encontrar el complemento especificado.  |
-| 409  | Se encontró el complemento especificado, pero no se ha podido eliminar en su estado actual o el complemento usa una función de panel del Centro de desarrollo que [actualmente no es compatible con la API de envío de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Se encontró el complemento especificado, pero no se ha podido eliminar en su estado actual o el complemento usa una función de panel del Centro de desarrollo que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
-<span/>
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
-* [Create and manage submissions using Windows Store services (Crear y administrar envíos mediante el uso de servicios de la Tienda Windows)](create-and-manage-submissions-using-windows-store-services.md)
-* [Obtener todos los complementos](get-all-add-ons.md)
+* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Obtención de todos los complementos](get-all-add-ons.md)
 * [Obtención de un complemento](get-an-add-on.md)
 * [Crear un complemento](create-an-add-on.md)

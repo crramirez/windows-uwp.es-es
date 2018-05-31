@@ -1,17 +1,21 @@
 ---
 author: TylerMSFT
 ms.assetid: 3a3ea86e-fa47-46ee-9e2e-f59644c0d1db
-description: "En este artículo se muestra cómo reducir el uso de memoria cuando la aplicación pasa al estado de segundo plano."
-title: "Reducir el uso de memoria cuando la aplicación pasa al estado de segundo plano"
+description: En este artículo se muestra cómo reducir el uso de memoria cuando la aplicación pasa al estado de segundo plano.
+title: Reducir el uso de memoria cuando la aplicación pasa al estado de segundo plano
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 7c8b8eb3ae3c097a346144c57d7899cb5e9584f5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 983eb3e69e170054fcc7bc87a5f2035cd0541753
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1655497"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memoria cuando la aplicación pasa a segundo plano
 
@@ -36,11 +40,11 @@ El evento [MemoryManager.AppMemoryUsageDecreased](https://msdn.microsoft.com/lib
 
 Cuando la aplicación pasa de primer plano a segundo plano, se genera el evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground). Cuando la aplicación vuelve al primer plano, se genera el evento [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Puedes registrar controladores para estos eventos cuando creas la aplicación. En la plantilla de proyecto predeterminada, esto se realiza en el constructor de clase **App** en App.xaml.cs.
 
-Dado que la ejecución en segundo plano reducirá los recursos de memoria que la aplicación tiene permitido conservar, también debes registrar los eventos [**AppMemoryUsageIncreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageIncreased) y [**AppMemoryUsageLimitChanging**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageLimitChanging), que puedes usar para comprobar el uso actual de memoria de la aplicación y el límite actual. En los siguientes ejemplos se muestran los controladores de estos eventos. Para obtener más información sobre el ciclo de vida de las aplicaciones para UWP, consulta [Ciclo de vida de la aplicación](../\launch-resume\app-lifecycle.md).
+Dado que la ejecución en segundo plano reducirá los recursos de memoria que la aplicación tiene permitido conservar, también debes registrar los eventos [**AppMemoryUsageIncreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageIncreased) y [**AppMemoryUsageLimitChanging**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageLimitChanging), que puedes usar para comprobar el uso actual de memoria de la aplicación y el límite actual. En los siguientes ejemplos se muestran los controladores de estos eventos. Para obtener más información sobre el ciclo de vida de las aplicaciones para UWP, consulta [Ciclo de vida de la aplicación](..//launch-resume/app-lifecycle.md).
 
 [!code-cs[RegisterEvents](./code/ReduceMemory/cs/App.xaml.cs#SnippetRegisterEvents)]
 
-Cuando se genera el evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground), establece la variable de seguimiento para indicar que actualmente estás ejecutando en segundo plano. Esto será útil cuando escribas el código para reducir el uso de memoria.
+Cuando se genera el evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground), establece la variable de seguimiento para indicar que actualmente se está ejecutando en segundo plano. Esto será útil cuando escribas el código para reducir el uso de memoria.
 
 [!code-cs[EnteredBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetEnteredBackground)]
 
@@ -61,14 +65,14 @@ Comprueba si el valor de [**AppMemoryUsageLevel**](https://msdn.microsoft.com/li
 
 [!code-cs[MemoryUsageIncreased](./code/ReduceMemory/cs/App.xaml.cs#SnippetMemoryUsageIncreased)]
 
-**ReduceMemoryUsage** es un método auxiliar que puedes implementar para liberar memoria cuando la aplicación supera el límite de uso mientras se ejecuta en segundo plano. La manera de liberar memoria depende de los detalles específicos de la aplicación, pero una forma recomendada es desechar la interfaz de usuario y los demás recursos asociados con la vista de la aplicación. Para ello, comprueba que estés ejecutando en el estado de segundo plano y luego establece la propiedad [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content) de la ventana de la aplicación en `null`, anula el registro de los controladores de eventos de la interfaz de usuario y quita todas las referencias que pudieras tener a la página. Si no logras anular el registro de los controladores de eventos de la interfaz de usuario ni borrar todas las referencias que pudieras tener a la página, no podrás liberar los recursos de la página. A continuación, llama a **GC.Collect** para recuperar la memoria liberada inmediatamente.
+**ReduceMemoryUsage** es un método auxiliar que puedes implementar para liberar memoria cuando la aplicación supera el límite de uso mientras se ejecuta en segundo plano. La manera de liberar memoria depende de los detalles específicos de la aplicación, pero una forma recomendada es desechar la interfaz de usuario y los demás recursos asociados con la vista de la aplicación. Para ello, comprueba que estés ejecutando en el estado de segundo plano y luego establece la propiedad [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content) de la ventana de la aplicación en `null`, anula el registro de los controladores de eventos de la interfaz de usuario y quita todas las referencias que pudieras tener a la página. Si no logras anular el registro de los controladores de eventos de la interfaz de usuario ni borrar todas las referencias que pudieras tener a la página, no podrás liberar los recursos de la página. A continuación, llama a **GC.Collect** para recuperar la memoria liberada inmediatamente. Por lo general, no hay que forzar la recolección de elementos no utilizados porque el sistema se encarga automáticamente. En este caso concreto, estamos reduciendo la cantidad de memoria que se carga a esta aplicación cuando va en segundo plano para reducir la probabilidad de que el sistema determine que debe finalizar la aplicación para recuperar la memoria.
 
 [!code-cs[UnloadViewContent](./code/ReduceMemory/cs/App.xaml.cs#SnippetUnloadViewContent)]
 
 Cuando se recopila el contenido de la ventana, cada fotograma comienza su proceso de desconexión. Si hay objetos Page en el árbol de objetos visuales en el contenido de la ventana, iniciarán la generación del evento Unloaded. Los objetos Pages no se puede borrar completamente de la memoria, a menos que se eliminen todas las referencias a ellos. En la devolución de llamada de Unloaded, realiza los siguientes pasos para garantizar que la memoria se libere rápidamente:
 * Borra y establece cualquier estructura de datos de gran tamaño de Page en `null`.
 * Anula el registro de todos los controladores de eventos que tienen métodos de devolución de llamada dentro de Page. Asegúrate de registrar esas devoluciones de llamada durante el controlador del evento Loaded correspondiente a Page. El evento Loaded se genera si la interfaz de usuario se ha reconstituido y el objeto Page se ha agregado al árbol de objetos visuales.
-* Llama a `GC.Collect` al final de la devolución de llamada de Unloaded para efectuar rápidamente la recolección de elementos no utilizados de cualquiera de las estructuras de datos de gran tamaño que estableciste recién en `null`.
+* Llama a `GC.Collect` al final de la devolución de llamada de Unloaded para efectuar rápidamente la recolección de elementos no utilizados de cualquiera de las estructuras de datos de gran tamaño que estableciste recién en `null`. Una vez más, por lo general, no hay que forzar la recolección de elementos no utilizados porque el sistema se encarga automáticamente. En este caso concreto, estamos reduciendo la cantidad de memoria que se carga a esta aplicación cuando va en segundo plano para reducir la probabilidad de que el sistema determine que debe finalizar la aplicación para recuperar la memoria.
 
 [!code-cs[MainPageUnloaded](./code/ReduceMemory/cs/App.xaml.cs#SnippetMainPageUnloaded)]
 

@@ -1,21 +1,25 @@
 ---
 author: mcleanbyron
 ms.assetid: AE3E003F-BDEC-438B-A80A-3CE1675B369C
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados del informe de errores de hardware para un intervalo de fechas y otros filtros opcionales. Este método está previsto solo para OEM."
+description: Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados del informe de errores de hardware para un intervalo de fechas y otros filtros opcionales. Este método está previsto solo para OEM.
 title: Obtener datos de informes de errores de hardware OEM
 ms.author: mcleans
-ms.date: 03/17/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Store services, servicios de la Tienda, Windows Store analytics API, API de análisis de la Tienda Windows, errors, errores"
-ms.openlocfilehash: d35c405ae3e8a2f5e4d7fdd70594b51cdf9941c1
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis de la Store Windows, errors, errores
+ms.localizationpriority: medium
+ms.openlocfilehash: 4e1e7d83b8094a79cb87a6611e2e6d8b8f05159e
+ms.sourcegitcommit: b7032f083bcbb71f5a7dd1a200dcc81dba496a81
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/19/2018
+ms.locfileid: "1527343"
 ---
 # <a name="get-oem-hardware-error-reporting-data"></a>Obtener datos de informes de errores de hardware OEM
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de informes de los errores de hardware OEM para un intervalo de fechas dado y según otros filtros opcionales. Puedes recuperar información adicional de los errores con el método para [obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md).
+Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados de informes de los errores de hardware OEM para un intervalo de fechas dado y según otros filtros opcionales. Puedes recuperar información adicional de los errores con el método para [obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md).
 
 > [!NOTE]
 > Solo las cuentas de desarrollador que pertenecen al [programa Centro de desarrollo de hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) pueden usar este método.
@@ -24,7 +28,7 @@ Usa este método en la API de análisis de la Tienda Windows para obtener los da
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
@@ -56,7 +60,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
 | filter |cadena  | Una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Puedes especificar los siguientes campos:<p/><ul><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>moduleName</strong></li><li><strong>moduleVersion</strong></li><li><strong>mode</strong></li><li><strong>architecture</strong></li><li><strong>model</strong></li><li><strong>baseboard</strong></li><li><strong>modelFamily</strong></li><li><strong>flightRing</strong></li></ul> | No   |
 | aggregationLevel | cadena | Especifica el intervalo de tiempo necesario para recuperar los datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>. Si especificas los valores <strong>semana</strong> o <strong>mes</strong>, los valores <em>failureName</em> y <em>failureHash</em> se limitarán a 1000 depósitos. | No |
-| orderby | cadena | Una instrucción que ordena los valores de datos de resultados. La sintaxis es <em>orderby=field [order],field [order],...</em>. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>date</strong></li><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>moduleName</strong></li><li><strong>moduleVersion</strong></li><li><strong>mode</strong></li><li><strong>architecture</strong></li><li><strong>model</strong></li><li><strong>baseboard</strong></li><li><strong>modelFamily</strong></li><li><strong>flightRing</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
+| orderby | cadena | Una instrucción que ordena los valores de datos de resultados. La sintaxis es <em>orderby=field [order],field [order],....</em>. Puede especificar los siguientes campos desde el cuerpo de la respuesta:<p/><ul><li><strong>date</strong></li><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>moduleName</strong></li><li><strong>moduleVersion</strong></li><li><strong>mode</strong></li><li><strong>architecture</strong></li><li><strong>model</strong></li><li><strong>baseboard</strong></li><li><strong>modelFamily</strong></li><li><strong>flightRing</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
 | groupby | cadena | Una instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>moduleName</strong></li><li><strong>moduleVersion</strong></li><li><strong>mode</strong></li><li><strong>architecture</strong></li><li><strong>model</strong></li><li><strong>baseboard</strong></li><li><strong>modelFamily</strong></li><li><strong>flightRing</strong></li></ul><p>Las filas de datos que se devuelvan, contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>date</strong></li><li><strong>eventCount</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=failureName,market&amp;aggregationLevel=week</em></p></p> |  No  |
 
 <span/>
@@ -93,7 +97,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 |-----------------|---------|---------------------|
 | fecha            | cadena  | La primera fecha del intervalo de fechas de los datos del error. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | sellerId   | cadena  | El valor del id. del vendedor asociado con la cuenta de desarrollador (coincide con el valor del **Id. del vendedor** de la configuración de la cuenta del Centro de desarrollo). |
-| failureName     | cadena  | El nombre del error.  |
+| failureName     | cadena  | El nombre del error, que se compone de cuatro partes: una o varias clases de problemas, un código de comprobación de errores o excepciones, el nombre de la imagen/controlador donde se produjo el error y el nombre de función asociada.  |
 | failureHash     | cadena  | Identificador único del error.   |
 | symbol          | cadena  | Símbolo que se asigna al error. |
 | osVersion       | cadena  | La versión de compilación de cuatro partes del sistema operativo en el que se produjo el error.  |

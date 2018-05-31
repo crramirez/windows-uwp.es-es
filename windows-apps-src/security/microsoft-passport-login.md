@@ -1,22 +1,25 @@
 ---
-title: "Crear una aplicación de inicio de sesión de Windows Hello"
-description: "Esta es primera parte de un tutorial completo acerca de cómo crear una aplicación para UWP (Plataforma universal de Windows) de Windows 10 que use Windows Hello como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña."
+title: Crear una aplicación de inicio de sesión de Windows Hello
+description: Esta es primera parte de un tutorial completo acerca de cómo crear una aplicación para UWP (Plataforma universal de Windows) de Windows 10 que use Windows Hello como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña.
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
-author: awkoren
-ms.author: alkoren
+author: PatrickFarley
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 336bb3b58e9f6cfeb3c173a8bb1c9e72bc7929b7
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 23a4bd392689a71191e19ea245f984a6984839e3
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817333"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Crear una aplicación de inicio de sesión de Windows Hello
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
@@ -352,7 +355,7 @@ En este ejercicio aprenderás a comprobar si Windows Hello está configurado en 
                 }
      
                 return true;
-            }<
+            }
     ```
 
 -   Lo siguiente que debes hacer es controlar una solicitud de inicio de sesión del usuario. En Login.xaml.cs, crea una nueva variable privada que contendrá la cuenta actual con la que se está iniciando sesión. A continuación, agrega una nueva llamada de método SignInPassport. Esta acción validará las credenciales de cuenta con el método AccountHelper.ValidateAccountCredentials. Este método devolverá un valor booleano si el nombre de usuario escrito es el mismo que el valor de cadena codificado de forma rígida que estableció en el paso anterior. El valor codificado de forma rígida de esta muestra es "sampleUsername".
@@ -649,7 +652,7 @@ En este ejercicio, partirás del ejercicio anterior. Cuando una persona inicia s
 
         <Button x:Name="AddUserButton" Content="+" FontSize="36" Width="60" Click="AddUserButton_Click" HorizontalAlignment="Center"/>
       </StackPanel>
-    </Grid><
+    </Grid>
     ```
 
 -   En UserSelection.xaml.cs implementa el método cargado que navegará a la página de inicio de sesión si no hay cuentas en la lista local. También implementa el evento SelectionChanged para el control ListView y un evento de clic para el control Button.

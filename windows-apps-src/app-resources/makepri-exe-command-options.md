@@ -1,23 +1,22 @@
 ---
 author: stevewhims
-Description: 'MakePri.exe tiene el conjunto de comandos siguiente: createconfig, dump, new, resourcepack y versioned. En este tema se detalla su uso.'
-title: "Opciones de línea de comandos de MakePri.exe"
+Description: MakePri.exe has the set of commands createconfig, dump, new, resourcepack, and versioned. This topic details their use.
+title: Opciones de línea de comandos de MakePri.exe
 template: detail.hbs
 ms.author: stwhi
-ms.date: 10/18/2017
+ms.date: 04/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
-localizationpriority: medium
-ms.openlocfilehash: e269984134c7313b6ea6464cd04a3ef60254d537
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: fbfb5f6626f799878c294b0a4e21efb673147a50
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817546"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="makepriexe-command-line-options"></a>Opciones de línea de comandos de MakePri.exe
 
 [MakePri.exe](compile-resources-manually-with-makepri.md) tiene el conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` y `versioned`. En este tema se detallan las opciones de línea de comandos para su uso.
@@ -113,6 +112,9 @@ Help:
 ## <a name="dump-command"></a>Comando Dump (Volcar)
 
 El comando `dump` genera un archivo xml volcado que contiene una lista de todos los recursos de un archivo PRI especificado. Ejecuta `MakePri.exe dump /?` para ver ayuda detallada para este comando.
+
+> [!NOTE]
+> Un paquete de recursos sin esquemas es el que se creó con el conmutador *omitSchemaFromResourcePacks* del archivo de configuración PRI. Para volcar un paquete de recursos sin esquema, usa el conmutador `/es <main_package_PRI_file>`. Si no especificas el archivo principal, verás el mensaje de error "*The resources.pri in the package was corrupted so encryption failed (error PRI222: 0xdef0000f - Unspecified error occurred)*".
 
 ```
 C:\>makepri dump /?

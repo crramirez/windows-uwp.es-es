@@ -1,8 +1,9 @@
 ---
 title: Recursos de texturas comprimidas
-description: "Los mapas de texturas son imágenes digitalizadas que se dibujan en formas tridimensionales para agregar detalles visuales."
+description: Los mapas de texturas son imágenes digitalizadas que se dibujan en formas tridimensionales para agregar detalles visuales.
 ms.assetid: 2DD5FF94-A029-4694-B103-26946C8DFBC1
-keywords: Recursos de texturas comprimidas
+keywords:
+- Recursos de texturas comprimidas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 79bb9d7ea52dbb34645db3284836b73b26a416a3
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 1a26679bab35590d61f9188f64df977fbaf78d90
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653234"
 ---
 # <a name="compressed-texture-resources"></a>Recursos de texturas comprimidas
 
@@ -53,19 +55,19 @@ Direct3D proporciona servicios para comprimir superficies que se usan para model
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Texturas alfa de 1 bit y opacas](opaque-and-1-bit-alpha-textures.md)</p></td>
+<td align="left"><p><a href="opaque-and-1-bit-alpha-textures.md">Texturas alfa de 1 bit y opacas</a></p></td>
 <td align="left"><p>El formato de textura BC1 es para texturas opacas o que tienen un único color transparente.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Texturas con canales alfa](textures-with-alpha-channels.md)</p></td>
+<td align="left"><p><a href="textures-with-alpha-channels.md">Texturas con canales alfa</a></p></td>
 <td align="left"><p>Hay dos formas de codificar mapas de texturas que exhiben una transparencia más compleja. En cada caso, un bloque que describe la transparencia precede el bloque de 64bits ya descrito. La transparencia se representa como un mapa de bits de 4×4 con 4bits por píxel (codificación explícita), o con menos bits y una interpolación lineal que es similar a la que se usa para la codificación del color.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Compresión de bloques](block-compression.md)</p></td>
+<td align="left"><p><a href="block-compression.md">Compresión de bloques</a></p></td>
 <td align="left"><p>La compresión de bloques es una técnica de compresión de texturas con pérdida de información para reducir la superficie de memoria y el tamaño de la textura, lo que da un aumento del rendimiento. Una textura comprimida en bloques puede ser menor que una textura con 32bits por color.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Formatos de texturas comprimidos](compressed-texture-formats.md)</p></td>
+<td align="left"><p><a href="compressed-texture-formats.md">Formatos de texturas comprimidos</a></p></td>
 <td align="left"><p>Esta sección contiene información sobre la organización interna de formatos de texturas comprimidos. No necesitas estos detalles para usar texturas comprimidas, porque puedes usar las funciones de Direct3D para la conversión desde y hacia los formatos comprimidos. Sin embargo, esta información resulta útil si quieres trabajar directamente sobre los datos de superficies comprimidos.</p></td>
 </tr>
 </tbody>

@@ -1,8 +1,9 @@
 ---
-title: "Niveles de características de los recursos de streaming"
+title: Niveles de características de los recursos de streaming
 description: Direct3D admite los recursos de streaming en tres niveles de funcionalidades.
 ms.assetid: 6AE7EA72-3929-4BB4-8780-F0CF26192D87
-keywords: "Niveles de características de los recursos de streaming"
+keywords:
+- Niveles de características de los recursos de streaming
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 167165d060df098125586292ef00dee8d1c48122
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 35fcedcdfa6470a4c17c964cd0ae341e1ccf3b3a
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652874"
 ---
 # <a name="streaming-resources-features-tiers"></a>Niveles de características de los recursos de streaming
 
@@ -45,16 +47,16 @@ Existen funciones de consulta disponibles en las versiones de Direct3D para vali
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Nivel 1](tier-1.md)</p></td>
+<td align="left"><p><a href="tier-1.md">Nivel 1</a></p></td>
 <td align="left"><p>Esta sección describe la compatibilidad del nivel 1.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Nivel 2](tier-2.md)</p></td>
+<td align="left"><p><a href="tier-2.md">Nivel 2</a></p></td>
 <td align="left"><p>La compatibilidad de nivel 2 para los recursos de streaming agrega funcionalidades a las del nivel 1, como garantizar mapas MIP de texturas sin empaquetar cuando el tamaño es al menos una forma de icono estándar; instrucciones del sombreador para la compresión de nivel de detalle (LOD) y para obtener el estado de la operación del sombreador; además, la lectura en iconos asignados NULL tratan el valor de muestra como cero.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Nivel 3](tier-3.md)</p></td>
-<td align="left"><p>El nivel 3 agrega compatibilidad para Texture3D para los recursos de streaming, además de las funcionalidades del [nivel 2](tier-2.md).</p></td>
+<td align="left"><p><a href="tier-3.md">Nivel 3</a></p></td>
+<td align="left"><p>El nivel 3 agrega compatibilidad para Texture3D para los recursos de streaming, además de las funcionalidades del <a href="tier-2.md">nivel 2</a>.</p></td>
 </tr>
 </tbody>
 </table>

@@ -8,10 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, game, juego, planning, planeamiento, accessibility, accesibilidad, cloud, nube, monetize, monetizar, package, paquete, technology, tecnología, concept, concepto, approval, aprobación"
-ms.openlocfilehash: 1191a188e2f06c83f3807c2bbf880950b79a6352
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, Windows 10, uwp, UWP, game, juego, planning, planeamiento, accessibility, accesibilidad, cloud, nube, monetize, monetizar, package, paquete, technology, tecnología, concept, concepto, approval, aprobación
+ms.localizationpriority: medium
+ms.openlocfilehash: 0bf5a5333203e9f9246987ae22df45aad736699d
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652774"
 ---
 # <a name="planning-for-uwp-games"></a>Planeamiento de juegos para UWP
 
@@ -30,27 +34,27 @@ En esta sección se proporciona información sobre cómo planear tu juego para U
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Tecnologías de juego](game-development-platform-guide.md)</p></td>
+<td align="left"><p><a href="game-development-platform-guide.md">Tecnologías de juego</a></p></td>
 <td align="left"><p>Una lista de tecnologías que te ayudarán a desarrollar juegos.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Accesibilidad para juegos](accessibility-for-games.md)</p></td>
+<td align="left"><p><a href="accessibility-for-games.md">Accesibilidad para juegos</a></p></td>
 <td align="left"><p>Aprende a hacer que los juegos sean más accesibles.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Nube para juegos](cloud-for-games.md)</p></td>
+<td align="left"><p><a href="cloud-for-games.md">Nube para juegos</a></p></td>
 <td align="left"><p>Usa la nube para juegos.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Monetización para juegos](monetization-for-games.md)</p></td>
+<td align="left"><p><a href="monetization-for-games.md">Monetización para juegos</a></p></td>
 <td align="left"><p>Formas para monetizar tu juego.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Empaquetar el juego](package-your-windows-store-directx-game.md)</p></td>
-<td align="left"><p>Prepara el paquete del juego para la Tienda Windows.</p></td>
+<td align="left"><p><a href="package-your-windows-store-directx-game.md">Empaquetar el juego</a></p></td>
+<td align="left"><p>Prepara el paquete del juego para Microsoft Store.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Aprobación del concepto](concept-approval.md)</p></td>
+<td align="left"><p><a href="concept-approval.md">Aprobación del concepto</a></p></td>
 <td align="left"><p>Obtén la aprobación de tu concepto de juego.</p></td>
 </tr>
 </tbody>

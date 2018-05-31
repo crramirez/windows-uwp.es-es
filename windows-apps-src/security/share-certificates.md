@@ -1,22 +1,25 @@
 ---
 title: Compartir certificados entre aplicaciones
-description: "Las aplicaciones para la Plataforma universal de Windows (UWP) que necesitan una autenticación segura que vaya más allá de una combinación de id. de usuario y contraseña pueden usar certificados para la autenticación."
+description: Las aplicaciones para la Plataforma universal de Windows (UWP) que necesitan una autenticación segura que vaya más allá de una combinación de id. de usuario y contraseña pueden usar certificados para la autenticación.
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
-author: awkoren
-ms.author: alkoren
+author: PatrickFarley
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8231d8a531098783a6b62383f4a64d61d0a61902
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 6f16dce7c708f096053ac33ff5cdb77983d03f0a
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817736"
 ---
 # <a name="share-certificates-between-apps"></a>Compartir certificados entre aplicaciones
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las aplicaciones para la Plataforma universal de Windows (UWP) que necesitan una autenticación segura que vaya más allá de una combinación de id. de usuario y contraseña pueden usar certificados para la autenticación. La autenticación de certificado ofrece un alto grado de confianza al autenticar a un usuario. En algunos casos, un grupo de servicios querrá autenticar un usuario en varias aplicaciones. En este artículo se muestra cómo puedes autenticar varias aplicaciones usando el mismo certificado, y cómo facilitar un práctico código para que un usuario importe un certificado ofrecido para obtener acceso a servicios web protegidos.
@@ -61,14 +64,14 @@ En este artículo se usa Microsoft Internet Information Services (IIS) como ejem
 1.  Ejecuta el **Administrador de Internet Information Services (IIS)**.
 2.  Expande los sitios de tu servidor IIS. En **Sitio web predeterminado**, selecciona el nuevo servicio web "FirstContosoBank". En la sección **Acciones**, selecciona **Configuración avanzada...**.
 3.  Establece **Grupo de aplicaciones** en **.NET v2.0** y haz clic en **Aceptar**.
-4.  En el **Administrador de Internet Information Services (IIS)**, selecciona tu servidor IIS y haz doble clic en **Certificados de servidor**. En la sección **Acciones**, selecciona **Crear certificado autofirmado...**. Escribe "ContosoBank" como nombre descriptivo para el certificado y haz clic en **Aceptar**. Esto creará un nuevo certificado para que lo use el servidor IIS, con el formato "&lt;nombre_de_servidor&gt;.&lt;nombre_de_dominio&gt;".
-5.  En el **Administrador de Internet Information Services (IIS)**, selecciona el sitio web predeterminado. En la sección **Acciones**, selecciona **Enlace** y haz clic en **Agregar...**. Selecciona "https" como tipo, establece el puerto en "443" y especifica el nombre de host completo del servidor IIS ("&lt;nombre_de_servidor&gt;.&lt;nombre_de_dominio&gt;"). Establece el certificado SSL en "ContosoBank". Haz clic en **Aceptar**. Haz clic en **Cerrar** en la ventana **Enlaces de sitios**.
+4.  En el **Administrador de Internet Information Services (IIS)**, selecciona tu servidor IIS y haz doble clic en **Certificados de servidor**. En la sección **Acciones**, selecciona **Crear certificado autofirmado... **. Escribe "ContosoBank" como nombre descriptivo para el certificado y haz clic en **Aceptar**. Esto creará un nuevo certificado para que lo use el servidor IIS, con el formato "&lt;nombre_de_servidor&gt;.&lt;nombre_de_dominio&gt;".
+5.  En el **Administrador de Internet Information Services (IIS)**, selecciona el sitio web predeterminado. En la sección **Acciones**, selecciona **Enlace** y luego haz clic en **Agregar...**. Selecciona "https" como tipo, establece el puerto en "443" y especifica el nombre de host completo del servidor IIS ("&lt;nombre-servidor&gt;.&lt;nombre-dominio&gt;"). Establece el certificado SSL en "ContosoBank". Haz clic en **Aceptar**. Haz clic en **Cerrar** en la ventana **Enlaces de sitios**.
 6.  En el **Administrador de Internet Information Services (IIS)**, selecciona el servicio web "FirstContosoBank". Haz doble clic en **Configuración de SSL**. Activa **Requerir SSL**. En **Certificados de cliente**, selecciona **Requerir**. En la sección **Acciones**, haz clic en **Aplicar**.
 7.  Para comprobar que el servicio web está correctamente configurado, abre el explorador web y escribe la siguiente dirección web: "https://&lt;nombre_de_servidor&gt;.&lt;nombre_de_dominio&gt;/FirstContosoBank/Service1.asmx". Por ejemplo, "https://myserver.example.com/FirstContosoBank/Service1.asmx". Si tu servicio web está correctamente configurado, se te pedirá que selecciones un certificado de cliente para poder acceder al servicio web.
 
 Puedes repetir los pasos anteriores para crear varios servicios web a los que se pueda acceder con el mismo certificado de cliente.
 
-## <a name="create-a-windows-store-app-that-uses-certificate-authentication"></a>Crear una aplicación de la TiendaWindows que use autenticación de certificado
+## <a name="create-a-uwp-app-that-uses-certificate-authentication"></a>Crear una aplicación para UWP que use autenticación de certificado
 
 
 Ahora que tienes uno o varios servicios web protegidos, tus aplicaciones pueden usar certificados para autenticar en esos servicios web. Cuando se realiza una solicitud a un servicio web autenticado usando el objeto [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639), la solicitud inicial no contendrá un certificado de cliente. El servicio web autenticado responderá con una solicitud para autenticar el cliente. Cuando esto ocurre, el cliente de Windows consultará automáticamente los certificados de cliente disponibles en el almacén de certificados. El usuario puede seleccionar uno de estos certificados para autenticarse en el servicio web. Algunos certificados están protegidos por contraseña, por lo que necesitarás proporcionar al usuario una manera de especificar la contraseña del certificado.

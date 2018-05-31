@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Código completo para BasicLoader"
-description: "Código completo de una clase y sus métodos para convertir y cargar recursos gráficos comunes; como mallas, texturas y varios objetos del sombreador."
+title: Código completo para BasicLoader
+description: Código completo de una clase y sus métodos para convertir y cargar recursos gráficos comunes; como mallas, texturas y varios objetos del sombreador.
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,15 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, BasicLoader
-ms.openlocfilehash: d6714030031a4986c8a5495fc02a5c68fb0aa4d8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 9f602b9f3007bc4c58209648820a5062e728a905
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653414"
 ---
 # <a name="complete-code-for-basicloader"></a>Código completo para BasicLoader
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Código completo de una clase y sus métodos para convertir y cargar recursos gráficos comunes; como mallas, texturas y varios objetos de sombreador.
 
@@ -28,6 +30,7 @@ Este tema contiene estas secciones:
 -   [Ver el código (C++)](#view-the-code-c)
 
 <span id="download_locations"></span>
+
 ## <a name="download-location"></a>Ubicación de descarga
 
 

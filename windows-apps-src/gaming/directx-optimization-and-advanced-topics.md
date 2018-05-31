@@ -1,18 +1,21 @@
 ---
 author: joannaleecy
-title: "Optimización y temas avanzados para juegos DirectX"
-description: "Optimización y temas avanzados para la programación de juegos DirectX."
+title: Optimización y temas avanzados para juegos DirectX
+description: Optimización y temas avanzados para la programación de juegos DirectX.
 ms.assetid: b5f29fb2-3bcf-43b2-9a68-f8819473bf62
 ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, optimizar, muestreo múltiple, cadenas de intercambio"
-ms.openlocfilehash: 9fb2c8c92cdf5a498f3e3db4d9250c9dcdfe204f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+keywords: windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, optimizar, muestreo múltiple, cadenas de intercambio
+ms.localizationpriority: medium
+ms.openlocfilehash: ab9de7f9275322d02c73184a59180e580ed37928
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652984"
 ---
 # <a name="optimization-and-advanced-topics-for-directx-games"></a>Optimización y temas avanzados para juegos DirectX
 
@@ -43,27 +46,27 @@ En el tema sobre el escalado y superposiciones de cadenas de intercambio se expl
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Programación asincrónica para juegos](asynchronous-programming-directx-and-cpp.md)</p></td>
+<td align="left"><p><a href="asynchronous-programming-directx-and-cpp.md">Programación asincrónica para juegos</a></p></td>
 <td align="left"><p>Comprende la programación asincrónica y los subprocesos con DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Controlar escenarios cuando se quitan dispositivos en Direct3D11](handling-device-lost-scenarios.md)</p></td>
+<td align="left"><p><a href="handling-device-lost-scenarios.md">Controlar escenarios cuando se quitan dispositivos en Direct3D11</a></p></td>
 <td align="left"><p>Recrea la cadena de la interfaz de dispositivo Direct3D y DXGI cuando se quita o reinicializa el adaptador de gráficos.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Muestreo múltiple en aplicaciones para UWP](multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md)</p></td>
+<td align="left"><p><a href="multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md">Muestreo múltiple en aplicaciones para UWP</a></p></td>
 <td align="left"><p>Usa el muestreo múltiple en juegos para UWP compilados con Direct3D.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Optimizar la entrada y el bucle de representación](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md)</p></td>
+<td align="left"><p><a href="optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md">Optimizar la entrada y el bucle de representación</a></p></td>
 <td align="left"><p>Reduce la latencia de entrada y optimiza el bucle de representación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Reducir la latencia con cadenas de intercambio DXGI1.3](reduce-latency-with-dxgi-1-3-swap-chains.md)</p></td>
+<td align="left"><p><a href="reduce-latency-with-dxgi-1-3-swap-chains.md">Reducir la latencia con cadenas de intercambio DXGI1.3</a></p></td>
 <td align="left"><p>Usa DXGI 1.3 para reducir la latencia efectiva de los fotogramas.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Escalado y superposiciones de cadenas de intercambio](multisampling--scaling--and-overlay-swap-chains.md)</p></td>
+<td align="left"><p><a href="multisampling--scaling--and-overlay-swap-chains.md">Escalado y superposiciones de cadenas de intercambio</a></p></td>
 <td align="left"><p>Crea cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas y usa cadenas de intercambio de superposición para mejorar la calidad visual.</p></td>
 </tr>
 </tbody>

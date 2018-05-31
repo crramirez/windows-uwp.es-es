@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
-description: "Para el primer ejercicio de migración, empezaremos con lo más básico - traer un representador simple de OpenGL ES 2.0 a Direct3D para un cubo giratorio con vértices sombreados, de modo tal que coincida con la plantilla DirectX 11 App (Universal Windows) de Visual Studio 2015."
+description: Para el primer ejercicio de migración, empezaremos con lo más básico - traer un representador simple de OpenGL ES 2.0 a Direct3D para un cubo giratorio con vértices sombreados, de modo tal que coincida con la plantilla DirectX 11 App (Universal Windows) de Visual Studio 2015.
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, opengl, direct3d 11, port, portar
-ms.openlocfilehash: 71b4b42d2665cbeb43cbdbe2dbab9119a8f68ce9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 63a0baee79873203f9f52fd1e9acae03c7647240
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652814"
 ---
-# <a name="how-to-port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
+# <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Para este ejercicio de migración, empezaremos con algo básico: llevar un representador simple de un cubo giratorio con vértices sombreados de OpenGL ES 2.0 a Direct3D, de modo que coincida con la plantilla Aplicación DirectX 11 (Windows universal) de Visual Studio 2015. A medida que avancemos en este proceso de migración, aprenderás a hacer lo siguiente:
 
@@ -113,19 +116,19 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Portar objetos de sombreador](port-the-shader-config.md)</p></td>
+<td align="left"><p><a href="port-the-shader-config.md">Portar objetos de sombreador</a></p></td>
 <td align="left"><p>Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es configurar los objetos equivalentes del sombreador de fragmentos y vértices en Direct3D 11, y asegurarte de que el programa principal pueda comunicarse con los objetos del sombreador después de su compilación.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Portar datos y búferes de vértices](port-the-vertex-buffers-and-data-config.md)</p></td>
+<td align="left"><p><a href="port-the-vertex-buffers-and-data-config.md">Portar datos y búferes de vértices</a></p></td>
 <td align="left"><p>En este paso, definirás los búferes de vértices que contendrán las mallas, y los búferes de índices que permitirán a los sombreadores recorrer los vértices en un orden especificado.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Portar GLSL](port-the-glsl.md)</p></td>
+<td align="left"><p><a href="port-the-glsl.md">Portar GLSL</a></p></td>
 <td align="left"><p>Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código a esos sombreadores: del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Dibujar en la pantalla](draw-to-the-screen.md)</p></td>
+<td align="left"><p><a href="draw-to-the-screen.md">Dibujar en la pantalla</a></p></td>
 <td align="left"><p>Por fin hemos portado el código que dibuja un cubo giratorio en la pantalla.</p></td>
 </tr>
 </tbody>

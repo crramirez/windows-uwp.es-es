@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: d566bac72b9e3a7e00adb9225342017168ca5f43
-ms.sourcegitcommit: 90fbdc0e25e0dff40c571d6687143dd7e16ab8a8
+ms.localizationpriority: medium
+ms.openlocfilehash: d99a37ce6d49889439998f8ad8217ae4360500e5
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653954"
 ---
 # <a name="create-write-and-read-a-file"></a>Crear, escribir y leer archivos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -29,7 +30,7 @@ ms.lasthandoff: 07/06/2017
 
 Leer y escribir un archivo con un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
-> [!NOTE] 
+> [!NOTE]
 > Consulta también la [Muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Requisitos previos
@@ -396,7 +397,3 @@ Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
     Dim numBytesLoaded As UInteger = Await dataReader.LoadAsync(CUInt(size))
     Dim text As String = dataReader.ReadString(numBytesLoaded)
     ```
-
- 
-
- 

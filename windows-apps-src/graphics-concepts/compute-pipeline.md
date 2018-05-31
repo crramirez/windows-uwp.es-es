@@ -1,21 +1,22 @@
 ---
-title: "Canalización del proceso"
-description: "La canalización del proceso de Direct3D está diseñada para controlar los cálculos que se pueden llevar a cabo principalmente en paralelo con la canalización de gráficos."
+title: Canalización del proceso
+description: La canalización del proceso de Direct3D está diseñada para controlar los cálculos que se pueden llevar a cabo principalmente en paralelo con la canalización de gráficos.
 ms.assetid: 355B66C6-C0DF-47BA-A9C9-7AFA50B5B614
-author: mtoepke
-ms.author: mtoepke
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e6c2fdf148e582360a125c3cd98013dc6b424535
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: ee55a932857611e19dc24170d5b61c9c26b51c13
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652724"
 ---
-
 # <a name="compute-pipeline"></a>Canalización del proceso
 
 
@@ -43,7 +44,7 @@ La canalización del proceso de Direct3D está diseñada para controlar los cál
 <tbody>
 <tr class="odd">
 <td align="left">Purpose</td>
-<td align="left">Like other programmable shaders, [Compute Shader (CS) stage](#compute-shader-stage--cs-.md) is designed and implemented with HLSL. A compute shader provides high-speed general purpose computing and takes advantage of the large numbers of parallel processors on the graphics processing unit (GPU). The compute shader provides memory sharing and thread synchronization features to allow more effective parallel programming methods.</td>
+<td align="left">Like other programmable shaders, <a href="#compute-shader-stage--cs-.md">Compute Shader (CS) stage</a> is designed and implemented with HLSL. A compute shader provides high-speed general purpose computing and takes advantage of the large numbers of parallel processors on the graphics processing unit (GPU). The compute shader provides memory sharing and thread synchronization features to allow more effective parallel programming methods.</td>
 </tr>
 <tr class="even">
 <td align="left">Input</td>
@@ -65,4 +66,3 @@ La canalización del proceso de Direct3D está diseñada para controlar los cál
  
 
  
-

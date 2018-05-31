@@ -1,32 +1,34 @@
 ---
 author: mcleanbyron
 ms.assetid: 24C5F796-5FB8-4B5D-B428-C3154B3098BD
-description: "Usa este método en la API de envío de la Tienda Windows para actualizar un envío ya existente de un paquete piloto."
-title: "Actualizar un envío de paquete piloto"
+description: Usa este método en la API de envío de Microsoft Store para actualizar un envío ya existente de un paquete piloto.
+title: Actualizar un envío de paquete piloto
 ms.author: mcleans
-ms.date: 08/03/2017
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, flight submission, envío piloto, update, actualizar"
-ms.openlocfilehash: 3763dcce71ee634d3234280187ac89741e7aed2a
-ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submission, envío piloto, update, actualizar
+ms.localizationpriority: medium
+ms.openlocfilehash: fa8f8c90257f78d46afe7d4dbe4b261ab88501fc
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816440"
 ---
 # <a name="update-a-package-flight-submission"></a>Actualizar un envío de paquete piloto
 
 
-Usa este método en la API de envío de la Tienda Windows para actualizar un envío ya existente de un paquete piloto. Después de actualizar correctamente un envío mediante este método, debes [confirmar el envío](commit-a-flight-submission.md) para su ingesta y publicación.
+Usa este método en la API de envío de Microsoft Store para actualizar un envío ya existente de un paquete piloto. Después de actualizar correctamente un envío mediante este método, debes [confirmar el envío](commit-a-flight-submission.md) para su ingesta y publicación.
 
-Para obtener más información sobre cómo se ajusta este método en el proceso de creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows, consulta [Manage package flight submissions (Administrar envíos de paquetes piloto)](manage-flight-submissions.md).
+Para obtener más información sobre cómo se ajusta este método en el proceso de creación de un envío de paquete piloto mediante la API de envío de Microsoft Store, consulta [Administración de envíos de paquetes piloto](manage-flight-submissions.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 * Crea un envío de paquete piloto para una aplicación de tu cuenta del Centro de desarrollo. Para hacer esto, puedes usar el panel del Centro de desarrollo o el método [crear un envío de paquete piloto](create-a-flight-submission.md).
 
@@ -36,10 +38,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
-| PUT    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions{submissionId}``` |
+| PUT    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` |
 
-<span/>
- 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -47,17 +47,15 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/>
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadena | Obligatorio. Id. de la Tienda de la aplicación para la cual quieres actualizar un envío de paquete piloto. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | cadena | Obligatorio. Id. del paquete piloto para el cual quieres actualizar un envío. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
-| submissionId | cadena | Obligatorio. Identificador del envío que se debe actualizar. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes de [creación de un envío de paquete piloto](create-a-flight-submission.md).  |
+| applicationId | cadena | Obligatorio. Id. de la Store de la aplicación para la cual quieres actualizar un envío de paquete piloto. Para obtener más información sobre el identificador de la Store, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | cadena | Obligatorio. Id. del paquete piloto para el cual quieres actualizar un envío. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un piloto creado en el panel del Centro de desarrollo, este id. también está disponible en la URL de la página de piloto del panel.  |
+| submissionId | cadena | Obligatorio. Identificador del envío que se debe actualizar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de paquete piloto](create-a-flight-submission.md). Para un envío creado en el panel del Centro de desarrollo, este id. también está disponible en la URL de la página de envío del panel.  |
 
-<span/>
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
@@ -71,7 +69,6 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
 | notesForCertification           | string  |  Proporciona información adicional de los evaluadores de certificación como, por ejemplo, las credenciales de la cuenta de prueba y los pasos para obtener acceso y comprobar las características. Para obtener más información, consulta [Notes for certification (Notas de certificación)](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification). |
 
-<span/>
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
@@ -156,15 +153,13 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 400  | No se pudo actualizar el envío del paquete piloto porque la solicitud no es válida. |
-| 409  | No se pudo actualizar el envío del paquete piloto debido al estado actual de la aplicación o a que esta aplicación usa una característica del panel del Centro de desarrollo que [no admite la API de envío de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
-
-<span/>
+| 409  | No se pudo actualizar el envío del paquete piloto debido al estado actual de la aplicación o a que esta aplicación usa una característica del panel del Centro de desarrollo que [no admite la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
-* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage package flight submissions (Administrar envíos de paquetes piloto)](manage-flight-submissions.md)
+* [Creación y administración de envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Administración de envíos de paquetes piloto](manage-flight-submissions.md)
 * [Get a package flight submission (Obtener un envío de paquete piloto)](get-a-flight-submission.md)
 * [Crear un envío de paquete piloto](create-a-flight-submission.md)
 * [Confirmar un envío de paquete piloto](commit-a-flight-submission.md)

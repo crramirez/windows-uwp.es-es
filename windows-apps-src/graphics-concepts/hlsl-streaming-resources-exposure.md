@@ -1,8 +1,9 @@
 ---
-title: "Exposición de recursos de streaming de HLSL"
-description: "Se necesita una sintaxis específica del lenguaje High Level Shader Language (HLSL) de Microsoft para admitir los recursos de streaming en Shader Model 5."
+title: Exposición de recursos de streaming de HLSL
+description: Se necesita una sintaxis específica del lenguaje High Level Shader Language (HLSL) de Microsoft para admitir los recursos de streaming en Shader Model 5.
 ms.assetid: 00A40D82-0565-43DC-82AB-0675B7E772E3
-keywords: "Exposición de recursos de streaming de HLSL"
+keywords:
+- Exposición de recursos de streaming de HLSL
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 49e199c06cd3d1e4bd1eb9596e392116d896f993
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: aa775262fa6c3da499693ac41fbf5fb0348c7de9
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653604"
 ---
 # <a name="hlsl-streaming-resources-exposure"></a>Exposición de recursos de streaming de HLSL
 
@@ -58,7 +60,7 @@ En esta tabla se resumen los métodos HLSL que se modifican para admitir los com
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">[Objetos HLSL](https://msdn.microsoft.com/library/windows/desktop/ff471359)</th>
+<th align="left"><a href="https://msdn.microsoft.com/library/windows/desktop/ff471359">Objetos HLSL</a> </th>
 <th align="left">Métodos intrínsecos con la opción de comentarios (*); también hay la opción de restricción</th>
 </tr>
 </thead>
