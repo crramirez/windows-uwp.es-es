@@ -1,31 +1,32 @@
 ---
 author: mtoepke
-title: "Tecnologías de juegos para las aplicaciones para la Plataforma universal de Windows (UWP)"
-description: "En esta guía, encontrarás información sobre las tecnologías disponibles para desarrollar juegos para la Plataforma universal de Windows (UWP)."
+title: Tecnologías de juegos para las aplicaciones para la Plataforma universal de Windows (UWP)
+description: En esta guía, encontrarás información sobre las tecnologías disponibles para desarrollar juegos para la Plataforma universal de Windows (UWP).
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, juegos, games, tecnología, technology, directx"
-ms.openlocfilehash: afbab8d6e38bad7c72d4863f97d90b7eb8ff4cac
-ms.sourcegitcommit: ae20971c4c8276034cd22fd7e10b0e3ddfddf480
+keywords: windows 10, uwp, juegos, games, tecnología, technology, directx
+ms.localizationpriority: medium
+ms.openlocfilehash: 496e0f8386b60247090035d4c4d1f7aa986f8560
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690761"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>Tecnologías de juego de aplicaciones para la UWP
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En esta guía, encontrarás información sobre las tecnologías disponibles para desarrollar juegos para la Plataforma universal de Windows (UWP).
 
 ##  <a name="benefits-of-windows-10-for-game-development"></a>Ventajas de Windows 10 para el desarrollo de juegos
 
 
-Con la introducción de UWP en Windows 10, tus títulos para Windows 10 podrán llegar a todas las plataformas de Microsoft. Con la migración gratuita de las versiones anteriores de Windows, hay un constante aumento en el número de clientes que usan Windows 10. La combinación de estas dos cosas significa que tus títulos para Windows 10 podrán llegar a un elevado número de clientes a través de la Tienda Windows.
+Con la introducción de UWP en Windows 10, tus títulos para Windows 10 podrán llegar a todas las plataformas de Microsoft. Con la migración gratuita de las versiones anteriores de Windows, hay un constante aumento en el número de clientes que usan Windows 10. La combinación de estas dos cosas significa que tus títulos para Windows 10 podrán llegar a un elevado número de clientes a través de Microsoft Store.
 
 Además, Windows 10 te ofrece muchas características nuevas que son particularmente beneficiosas para los juegos:
 
@@ -50,7 +51,7 @@ Para obtener más información, consulta Preparar la Plataforma universal de Win
 ## <a name="getting-started-with-directx-game-project-templates"></a>Tareas iniciales con las plantillas de proyectos de juegos de DirectX
 
 
-Tras configurar el entorno de desarrollo, puedes usar una de las plantillas de proyectos de DirectX para crear tu juego DirectX de UWP. Visual Studio 2015 incluye tres plantillas para que puedas crear nuevos proyectos DirectX para UWP: la **Aplicación DirectX 11 (universal de Windows)**, la **Aplicación DirectX 12 (universal de Windows)** y la **Aplicación XAML y DirectX 11 (universal de Windows)**. Para obtener más información, consulta [Crear un proyecto de juego de Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
+Tras configurar tu entorno de desarrollo, puedes usar una de las plantillas de proyectos de DirectX para crear tu juego DirectX de UWP. Visual Studio 2015 incluye tres plantillas para que puedas crear nuevos proyectos DirectX para UWP: la **Aplicación DirectX 11 (universal de Windows)**, la **Aplicación DirectX 12 (universal de Windows)** y la **Aplicación XAML y DirectX 11 (universal de Windows)**. Para obtener más información, consulta [Crear un proyecto de juego de Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
 
 ## <a name="windows-10-apis"></a>API de Windows10
 
@@ -81,7 +82,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa Direct3D12 cuando necesites maximizar el rendimiento de tu juego y el juego esté limitado por la CPU.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la documentación de [Direct3d 12](https://msdn.microsoft.com/library/windows/desktop/dn899121).</p></td>
+    <p>Consulta la documentación de <a href="https://msdn.microsoft.com/library/windows/desktop/dn899121">Direct3d 12</a>.</p></td>
     </tr>
     <tr class="even">
     <td align="left">Direct3D 11</td>
@@ -89,7 +90,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa Direct3D11 si ya tienes código de Direct3D11 existente, tu juego no está limitado por la CPU o quieres disfrutar de las ventajas de que recursos se administren automáticamente.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la documentación de [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080).</p></td>
+    <p>Consulta la documentación de <a href="https://msdn.microsoft.com/library/windows/desktop/ff476080">Direct3D 11</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -116,7 +117,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Puedes usar Direct2D en lugar de Direct3D para ofrecer elementos gráficos para juegos que sean estrictamente en 2D, como los juegos de desplazamiento lateral o juegos de mesa; además, puedes usarlo con Direct3D para simplificar la creación de elementos gráficos 2D en un juego 3D, como una interfaz de usuario o una pantalla de visualización frontal.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la documentación de [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990).</p></td>
+    <p>Consulta la documentación de <a href="https://msdn.microsoft.com/library/windows/desktop/dd370990">Direct2D</a>.</p></td>
     </tr>
     <tr class="even">
     <td align="left">DirectWrite</td>
@@ -124,7 +125,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p></p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la documentación de [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038).</p></td>
+    <p>Consulta la documentación de <a href="https://msdn.microsoft.com/library/windows/desktop/dd368038">DirectWrite</a>.</p></td>
     </tr>
     <tr class="odd">
     <td align="left">DirectComposition</td>
@@ -132,7 +133,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>DirectComposition está diseñada para simplificar el proceso de crear objetos visuales y transiciones animadas. Si tu juego requiere interfaces de usuario complejas, puedes usar DirectComposition para simplificar la creación y administración de la interfaz de usuario.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la documentación de [DirectComposition](https://msdn.microsoft.com/library/windows/desktop/hh437371).</p></td>
+    <p>Consulta la documentación de <a href="https://msdn.microsoft.com/library/windows/desktop/hh437371">DirectComposition</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -159,7 +160,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa XAudio2 cuando tu juego necesite reproducir sonidos con una mínima sobrecarga y retardo.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la documentación de [XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049).</p></td>
+    <p>Consulta la documentación de <a href="https://msdn.microsoft.com/library/windows/desktop/hh405049">XAudio2</a>.</p></td>
     </tr>
     <tr class="even">
     <td align="left">Media Foundation</td>
@@ -167,7 +168,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Media Foundation es especialmente útil para escenas cinematográficas o componentes no interactivos de tu juego. Media Foundation también es útil para la descodificación de archivos de audio para su reproducción con XAudio2.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la [Introducción a Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197).</p></td>
+    <p>Consulta la introducción a <a href="https://msdn.microsoft.com/library/windows/desktop/ms694197">Microsoft Media Foundation</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -194,7 +195,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Si tu juego debe admitir la entrada de controladores de juegos y ya tienes código XInput, puedes seguir usando XInput. Se ha reemplazado XInput por Windows.Gaming.Input para UWP, y si estás escribiendo el nuevo código de entrada, debes usar Windows.Gaming.Input en lugar de XInput.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la documentación de [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053).</p></td>
+    <p>Consulta la documentación de <a href="https://msdn.microsoft.com/library/windows/desktop/hh405053">XInput</a>.</p></td>
     </tr>
     <tr class="even">
     <td align="left">Windows.Gaming.Input</td>
@@ -202,15 +203,15 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <ul>
     <li>Menor uso de recursos</li>
     <li>Menor latencia de llamada a la API para recuperar la entrada</li>
-    <li>Posibilidad de trabajar con más de 4 mandos de juegos a la vez</li>
-    <li>Posibilidad de obtener acceso a las funciones adicionales del mando de Xbox One, como desencadenar los motores de vibración</li>
+    <li>La posibilidad de trabajar con más de 4 controladores para juegos a la vez</li>
+    <li>La posibilidad de obtener acceso a las funciones adicionales del controlador para juegos de Xbox One, como desencadenar los motores de vibración</li>
     <li>Posibilidad de recibir notificaciones cuando se conecten o desconecten dispositivos mediante eventos en lugar de sondeo</li>
     <li>Posibilidad de atribuir la entrada a un determinado usuario (Windows.System.User)</li>
     </ul>
     <p><strong>Cuándo usarla</strong></p>
     <p>Si el juego debe ser compatible con mandos de juegos y no usa el código existente de XInput, o si necesitas usar alguna de las ventajas enumeradas anteriormente, debes usar Windows.Gaming.Input.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la documentación [<strong>Windows.Gaming.Input</strong>](https://msdn.microsoft.com/library/windows/apps/dn707817).</p></td>
+    <p>Consulta la documentación <a href="https://msdn.microsoft.com/library/windows/apps/dn707817">Windows.Gaming.Input</a>.</p></td>
     </tr>
     <tr class="odd">
     <td align="left">Windows.UI.Core.CoreWindow</td>
@@ -218,7 +219,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa los eventos de Windows.UI.Core.CoreWindows cuando necesites realizar un seguimiento del mouse o las pulsaciones de las teclas en el juego.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) para obtener más información sobre cómo usar el mouse o el teclado en tu juego.</p></td>
+    <p>Consulta <a href="https://docs.microsoft.com/windows/uwp/gaming/tutorial--adding-move-look-controls-to-your-directx-game">Controles de movimiento y vista para juegos</a> para obtener más información sobre cómo usar el mouse o el teclado en tu juego.</p></td>
     </tr>
     </tbody>
     </table>
@@ -245,7 +246,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>El uso de DirectXMath es opcional y simplifica las operaciones matemáticas comunes.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la documentación de [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833).</p></td>
+    <p>Consulta la documentación de <a href="https://msdn.microsoft.com/library/windows/desktop/hh437833">DirectXMath</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -272,7 +273,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa Windows.Networking.Sockets si tu juego necesita comunicarse con otros equipos o dispositivos a través de la red.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta [Trabajar con funciones de red en tu juego](work-with-networking-in-your-directx-game.md).</p></td>
+    <p>Consulta <a href="https://docs.microsoft.com/windows/uwp/gaming/work-with-networking-in-your-directx-game">Trabajar con funciones de red en tu juego</a>.</p></td>
     </tr>
     <tr class="even">
     <td align="left">Windows.Web.HTTP</td>
@@ -280,7 +281,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa Windows.Web.HTTP cuando tu juego necesite obtener acceso a un sitio web para recuperar o almacenar información.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta [Trabajar con funciones de red en tu juego](work-with-networking-in-your-directx-game.md).</p></td>
+    <p>Consulta <a href="https://docs.microsoft.com/windows/uwp/gaming/work-with-networking-in-your-directx-game">Trabajar con funciones de red en tu juego</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -307,7 +308,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa el kit de herramientas de DirectX si eres un desarrollador de C++ que busca un sustituto moderno del código de utilidades de D3DX heredado o eres un desarrollador de XNA Game Studio que quiere migrar al C++ nativo.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la página del proyecto del kit de herramientas de DirectX, [https://github.com/Microsoft/DirectXTK](https://github.com/Microsoft/DirectXTK).</p></td>
+    <p>Consulta la página de proyecto del Kit de herramientas de DirectX, <a href="https://github.com/Microsoft/DirectXTK">https://github.com/Microsoft/DirectXTK</a>.</p></td>
     </tr>
     <tr class="even">
     <td align="left">Win2D</td>
@@ -315,7 +316,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa Win2D si eres un desarrollador de C++ y quieres un contenedor de WinRT más fácil de usar para Direct2D y DirectWrite, o si eres un desarrollador de C# y quieres usar Direct2D y DirectWrite.</p>
     <p><strong>Para más información</strong></p>
-    <p>Consulta la página del proyecto Win2D, [https://github.com/Microsoft/Win2D](https://github.com/Microsoft/Win2D).</p></td>
+    <p>Consulta la página de proyecto Win2D, <a href="https://github.com/Microsoft/Win2D">https://github.com/Microsoft/Win2D</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -351,9 +352,9 @@ Como alternativa a escribir tu propio motor de juego mediante las API de desarro
 ## <a name="submitting-a-game-to-the-store"></a>Envío de un juego a la tienda
 
 
-Cuando estés listo para publicar tu juego, tendrás que crear una cuenta de desarrollador y enviar tu juego a la TiendaWindows.
+Cuando estés listo para publicar tu juego, tendrás que crear una cuenta de desarrollador y enviar tu juego a Microsoft Store.
 
-Para obtener información sobre el envío de tu juego a la TiendaWindows, consulta [Envío y publicación del juego](e2e.md#submitting-and-publishing-your-game).
+Para obtener información sobre el envío de tu juego a Microsoft Store, consulta [Enviar y publicar juegos](e2e.md#submitting-and-publishing-your-game).
 
  
 

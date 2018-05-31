@@ -1,34 +1,31 @@
 ---
 author: normesta
-title: "Superponer imágenes en mosaico en un mapa"
-description: "Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo."
+title: Superponer imágenes en mosaico en un mapa
+description: Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer"
-ms.openlocfilehash: d6def6405c8a5d731259b4522dff10cb996d178c
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer
+ms.localizationpriority: medium
+ms.openlocfilehash: fb2fafb3feeb5242c9069ea9e871eebc90351714
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691071"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Superponer imágenes en mosaico en un mapa
 
+Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+**Sugerencia** Para más información sobre el uso de mapas en tu aplicación, descarga el ejemplo de mapa para la [Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) en GitHub.
 
-
-Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante los orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
-
-**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra siguiente del [repositorio de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub.
-
--   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+<a id="tileintro" />
 
 ## <a name="tiled-image-overview"></a>Información general de la imagen en mosaico
-
 
 Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256x256píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
@@ -200,6 +197,8 @@ El ejemplo siguiente carga iconos almacenados como archivos en la carpeta de ins
             MapControl1.TileSources.Add(tileSource);
         }
 ```
+
+<a id="customuri" />
 
 ## <a name="provide-a-custom-uri"></a>Proporcionar un URI personalizado
 

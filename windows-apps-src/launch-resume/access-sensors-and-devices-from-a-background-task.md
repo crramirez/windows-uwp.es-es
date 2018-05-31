@@ -1,7 +1,7 @@
 ---
-author: mukin
+author: muhsinking
 title: Acceder a sensores y dispositivos desde una tarea en segundo plano
-description: "DeviceUseTrigger permite que aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, incluso cuando la aplicación en primer plano esté suspendida."
+description: DeviceUseTrigger permite que aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, incluso cuando la aplicación en primer plano esté suspendida.
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 ms.author: mukin
 ms.date: 02/08/2017
@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 0b09237f0e1e010d1dfa8fd5e1b5ce4f890d919e
-ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.localizationpriority: medium
+ms.openlocfilehash: c0501d981bc626001b7ecb78e271bd3ec1bf868b
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1663985"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>Acceder a sensores y dispositivos desde una tarea en segundo plano
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que la aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, aunque la aplicación en primer plano esté suspendida. Por ejemplo, en función de dónde se ejecute la aplicación, podrías usar una tarea en segundo plano para sincronizar datos con dispositivos o sensores de monitores. Para ahorrar batería y garantizar el consentimiento apropiado por parte del usuario, el uso de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) está sujeto a las directivas descritas en este tema.
@@ -36,14 +37,14 @@ Cuando la aplicación deje de ser visible para el usuario, Windows la suspender�
 
 ### <a name="limitation-critical-device-operations"></a>Limitación: operaciones críticas del dispositivo
 
-Algunas operaciones críticas del dispositivo, como las actualizaciones del firmware que se ejecutan durante mucho tiempo, no se pueden realizar con [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Esas operaciones solo se pueden realizar en el equipo y solo las puede realizar una aplicación privilegiada que use [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Una *aplicación privilegiada* es una aplicación que ha recibido la autorización del fabricante del dispositivo para realizar esas operaciones. Los metadatos del dispositivo se usan para especificar qué aplicación, si es el caso, se ha designado como aplicación privilegiada para un dispositivo. Para obtener más información, consulta el tema sobre [sincronización y actualización de dispositivos para aplicaciones de dispositivo de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=306619).
+Algunas operaciones críticas del dispositivo, como las actualizaciones del firmware que se ejecutan durante mucho tiempo, no se pueden realizar con [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Esas operaciones solo se pueden realizar en el equipo y solo las puede realizar una aplicación privilegiada que use [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Una *aplicación privilegiada* es una aplicación que ha recibido la autorización del fabricante del dispositivo para realizar esas operaciones. Los metadatos del dispositivo se usan para especificar qué aplicación, si es el caso, se ha designado como aplicación privilegiada para un dispositivo. Para obtener más información, consulta [Device sync and update for Microsoft Store device apps](http://go.microsoft.com/fwlink/p/?LinkId=306619) (Sincronización y actualización de dispositivos para aplicaciones para dispositivo de Microsoft Store).
 
 ## <a name="protocolsapis-supported-in-a-deviceusetrigger-background-task"></a>Protocolos o API admitidos en una tarea en segundo plano DeviceUseTrigger
 
 Las tareas en segundo plano que usan [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permiten que tu aplicación se comunique a través de un gran número de protocolos o API, cuando muchos de ellos no se admiten en tareas en segundo plano desencadenadas por el sistema. Los siguientes componentes son compatibles con una aplicación universal de Windows.
 
 | Protocolo         | DeviceUseTrigger en una aplicación universal de Windows                                                                                                                                                    |
-|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | USB              | ![este protocolo es compatible.](images/ap-tools.png)                                                                                                                                            |
 | HID              | ![este protocolo es compatible.](images/ap-tools.png)                                                                                                                                            |
 | Bluetooth RFCOMM | ![este protocolo es compatible.](images/ap-tools.png)                                                                                                                                            |
@@ -116,7 +117,7 @@ Windows aplica directivas cuando la aplicación usa una tarea en segundo plano d
 En la siguiente tabla se indican las directivas de inicio de tareas que se aplican a una aplicación universal de Windows.
 
 | Directiva | DeviceUseTrigger en una aplicación universal de Windows |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+|--------|---------------------------------------------|
 | La tarea se encuentra en primer plano al desencadenar la tarea en segundo plano. | ![se aplica la directiva](images/ap-tools.png) |
 | El dispositivo está conectado al sistema (o dentro del alcance en el caso de un dispositivo inalámbrico). | ![se aplica la directiva](images/ap-tools.png) |
 | La aplicación puede acceder al dispositivo con las API de periféricos de dispositivos compatibles (las API de Windows en tiempo de ejecución para USB, HID, Bluetooth, sensores, etc.). Si la aplicación no puede acceder al dispositivo o sensor, se deniega el acceso a la tarea en segundo plano. | ![se aplica la directiva](images/ap-tools.png) |
@@ -125,7 +126,7 @@ En la siguiente tabla se indican las directivas de inicio de tareas que se aplic
 | Todavía no se ha alcanzado la cantidad máxima de tareas en segundo plano de [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337) en el dispositivo (en el que se ejecuta la aplicación). | **Familia de dispositivos de escritorio**: se puede registrar y ejecutar en paralelo una cantidad ilimitada de tareas. **Familia de dispositivos móviles**: 1 tarea en un dispositivo de 512MB; de lo contrario, pueden registrarse 2 tareas y ejecutarse en paralelo. |
 | La cantidad máxima de dispositivos periféricos o sensores a los que puede acceder la aplicación desde una sola tarea en segundo plano de [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337) al usar las API o los protocolos compatibles. | Ilimitada |
 | La tarea en segundo plano consume 400ms de tiempo de CPU (dando por hecho una CPU a 1GHz) cada minuto cuando la pantalla está bloqueada o cada 5 minutos cuando la pantalla no está bloqueada. Si no se cumple esta directiva, se puede cancelar la tarea. | ![se aplica la directiva](images/ap-tools.png) |
- 
+
 ### <a name="runtime-policy-checks"></a>Comprobaciones de directivas en tiempo de ejecución
 
 Windows aplica los siguientes requisitos de directivas en tiempo de ejecución mientras la tarea se ejecuta en segundo plano. Si cualquiera de los requisitos en tiempo de ejecución deja de cumplirse, Windows cancelará la tarea en segundo plano del dispositivo.
@@ -133,7 +134,7 @@ Windows aplica los siguientes requisitos de directivas en tiempo de ejecución m
 En esta tabla se indican las directivas en tiempo de ejecución que se aplican a una aplicación universal de Windows.
 
 | Comprobación de directivas | DeviceUseTrigger en una aplicación universal de Windows |
-|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+|--------------|:-------------------------------------------:|
 | El dispositivo está conectado al sistema (o dentro del alcance en el caso de un dispositivo inalámbrico). | ![La comprobación de directiva se aplica.](images/ap-tools.png) |
 | La tarea realiza E/S regular en el dispositivo (1 E/S cada 5 segundos). | ![La comprobación de directiva se aplica.](images/ap-tools.png) |
 | La aplicación no ha cancelado la tarea. | ![La comprobación de directiva se aplica.](images/ap-tools.png) |

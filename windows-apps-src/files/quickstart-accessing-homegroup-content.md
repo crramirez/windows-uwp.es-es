@@ -2,20 +2,23 @@
 author: laurenhughes
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Acceso a contenido de Grupo Hogar
-description: "Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos."
+description: Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos.
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: e67a373b5e36d6e1a8a5e738f8c0964c5df8489b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 09dcf1ace7c5d00509e54cd6fa936a2aa5ef7820
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653884"
 ---
 # <a name="accessing-homegroup-content"></a>Acceso a contenido de Grupo Hogar
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -34,9 +37,8 @@ Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye im�
 
     Para acceder al contenido del Grupo Hogar, el equipo del usuario debe tener un Grupo Hogar configurado y la aplicación debe contar con al menos una de las siguientes funcionalidades: **picturesLibrary**, **musicLibrary** o **videosLibrary**. Cuando la aplicación obtiene acceso a la carpeta Grupo Hogar, podrá ver solamente las bibliotecas que corresponden a las funcionalidades declaradas en el manifiesto de la aplicación. Para más información, consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
-    **Nota**  El contenido de la biblioteca de documentos de un Grupo Hogar no está visible para la aplicación independientemente de las funcionalidades declaradas en el manifiesto de la aplicación y de la configuración de uso compartido del usuario.
-
-     
+    > [!NOTE]
+    >  El contenido de la biblioteca de documentos de un Grupo Hogar no está visible para la aplicación independientemente de las funcionalidades declaradas en el manifiesto de la aplicación y de la configuración de uso compartido del usuario.     
 
 -   **Comprender cómo usar los selectores de archivos**
 
@@ -55,7 +57,7 @@ Sigue estos pasos para abrir una instancia del selector de archivos que permite 
     Usa [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para crear el selector de archivos y después establece la propiedad [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) del selector en [**PickerLocationId.HomeGroup**](https://msdn.microsoft.com/library/windows/apps/br207890). O bien, establece otras propiedades que sean relevantes para los usuarios y la aplicación. Para obtener directrices que te ayuden a decidir cómo personalizar el selector de archivos, consulta [Directrices y lista de comprobación para selectores de archivos](https://msdn.microsoft.com/library/windows/apps/hh465182)
 
     En este ejemplo se crea un selector de archivos que se abre en el Grupo Hogar, incluye archivos de cualquier tipo y muestra los archivos como imágenes en miniatura:
-    ```csharp
+    ```cs
     Windows.Storage.Pickers.FileOpenPicker picker = new Windows.Storage.Pickers.FileOpenPicker();
     picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
     picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.HomeGroup;
@@ -68,7 +70,7 @@ Sigue estos pasos para abrir una instancia del selector de archivos que permite 
     Después de crear y personalizar el selector de archivos, permite que el usuario seleccione un archivo llamando a [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275), o varios archivos llamando a [**FileOpenPicker.PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851).
 
     En este ejemplo se muestra el selector de archivos que permite al usuario seleccionar un archivo:
-    ```csharp
+    ```cs
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
 
     if (file != null)
@@ -88,7 +90,7 @@ En esta sección se muestra cómo buscar elementos del Grupo Hogar que coinciden
 1.  **Obtener el término de consulta del usuario.**
 
     Aquí obtenemos un término de consulta que el usuario especificó en un control [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) llamado `searchQueryTextBox`:
-    ```csharp
+    ```cs
     string queryTerm = this.searchQueryTextBox.Text;    
     ```
 
@@ -97,7 +99,7 @@ En esta sección se muestra cómo buscar elementos del Grupo Hogar que coinciden
     Las opciones de consulta determinan de qué manera se ordenan los resultados de la búsqueda, mientras que el filtro de búsqueda determina qué elementos se incluyen en los resultados de la búsqueda.
 
     En este ejemplo se establecen las opciones de consulta que ordenan los resultados de la búsqueda por relevancia y luego por la fecha de modificación. El filtro de búsqueda es el término de la consulta que el usuario especificó en el paso anterior:
-    ```csharp
+    ```cs
     Windows.Storage.Search.QueryOptions queryOptions =
             new Windows.Storage.Search.QueryOptions
                 (Windows.Storage.Search.CommonFileQuery.OrderBySearchRank, null);
@@ -109,7 +111,7 @@ En esta sección se muestra cómo buscar elementos del Grupo Hogar que coinciden
 3.  **Ejecutar la consulta y procesar los resultados.**
 
     En el siguiente ejemplo se ejecuta la consulta de búsqueda en el Grupo Hogar y se guardan los nombres de cualquier archivo coincidente como una lista de cadenas.
-    ```csharp
+    ```cs
     System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFile> files =
         await queryResults.GetFilesAsync();
 
@@ -131,7 +133,7 @@ En esta sección se muestra cómo buscar archivos del Grupo Hogar que comparte u
 1.  **Obtén una colección de usuarios del Grupo Hogar.**
 
     Cada una de las carpetas de primer nivel del Grupo Hogar representa un usuario de Grupo Hogar individual. Por lo tanto, para obtener una colección de usuarios de Grupo Hogar, llama a [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227279) para recuperar las carpetas de Grupo Hogar de nivel superior.
-    ```csharp
+    ```cs
     System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFolder> hgFolders =
         await Windows.Storage.KnownFolders.HomeGroup.GetFoldersAsync();    
     ```
@@ -139,7 +141,7 @@ En esta sección se muestra cómo buscar archivos del Grupo Hogar que comparte u
 2.  **Busca la carpeta del usuario de destino y crea una consulta de archivo específica para la carpeta del usuario en particular.**
 
     El ejemplo siguiente itera a través de las carpetas recuperadas para buscar la carpeta del usuario de destino. Después, establece las opciones de consulta para buscar todos los archivos de la carpeta, ordenados primero por importancia y posteriormente por la fecha de modificación. El ejemplo crea una cadena que informa acerca del número de archivos encontrados, junto con los nombres de los archivos.
-    ```csharp
+    ```cs
     bool userFound = false;
     foreach (Windows.Storage.StorageFolder folder in hgFolders)
     {
@@ -185,7 +187,7 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
 2.  **Abre un selector de archivos en el Grupo Hogar y aplica un filtro que incluya archivos de vídeo con los formatos que admite tu aplicación.**
 
     Este ejemplo incluye archivos .mp4 y .wmv en el selector para abrir archivos.
-    ```csharp
+    ```cs
     Windows.Storage.Pickers.FileOpenPicker picker = new Windows.Storage.Pickers.FileOpenPicker();
     picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
     picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.HomeGroup;
@@ -196,7 +198,7 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
     ```
 
 3.  **Abre la selección de archivos del usuario para obtener acceso de lectura y establece la secuencia de archivos como origen de** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) y luego reproduce el archivo.
-    ```csharp
+    ```cs
     if (file != null)
     {
         var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
@@ -209,7 +211,3 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
         // No file selected. Handle the error here.
     }    
     ```
-
- 
-
- 

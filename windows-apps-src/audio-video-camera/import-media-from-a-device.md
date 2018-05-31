@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: dd2a1e01-c284-4d62-963e-f59f58dca61a
-description: "En este artículo se describe cómo importar contenido multimedia de un dispositivo, incluida la búsqueda de orígenes de medios disponibles, la importación de archivos como fotos y archivos sidecar, y la eliminación de los archivos importados del dispositivo de origen."
+description: En este artículo se describe cómo importar contenido multimedia de un dispositivo, incluida la búsqueda de orígenes de medios disponibles, la importación de archivos como fotos y archivos sidecar, y la eliminación de los archivos importados del dispositivo de origen.
 title: Importar contenido multimedia
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,9 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 588367c1e4c1676641d57bbd33df6bdaf0c854da
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d456c2030180c73aba39a1e9a613bb68254384bd
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1692210"
 ---
 # <a name="import-media-from-a-device"></a>Importar contenido multimedia desde un dispositivo
 
@@ -79,7 +83,7 @@ Agrega variables de miembro de clase de tipo [**PhotoImportSession**](https://ms
 
 [!code-cs[DeclareImport](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImport)]
 
-En el método FindItems, inicializa la variable **CancellationTokenSource** para que pueda usarse para cancelar la operación de búsqueda si es necesario. En un bloque **try**, llama a [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession) en el objeto [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) seleccionado por el usuario para crear una nueva sesión de importación. Crea un nuevo objeto [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx) para proporcionar una devolución de llamada y mostrar el progreso de la operación de búsqueda. Luego, llama a [**FindItemsAsync**](https://docs.microsoft.com/uwp/api/windows.media.import.photoimportsession#Windows_Media_Import_PhotoImportSession_FindItemsAsync_Windows_Media_Import_PhotoImportContentTypeFilter_Windows_Media_Import_PhotoImportItemSelectionMode_) para iniciar la operación de búsqueda. Proporciona un valor [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter) para especificar si se deben devolver fotos, vídeos o ambos. Proporciona un valor [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode) para especificar si deben devolverse todos los elementos multimedia, ninguno o solo los nuevos con su propiedad [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected) establecida en true. Esta propiedad está enlazada a una casilla para cada elemento multimedia de nuestra plantilla de elementos ListBox.
+En el método **FindItems**, inicializa la variable **CancellationTokenSource** para que pueda usarse para cancelar la operación de búsqueda si es necesario. En un bloque **try**, llama a [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession) en el objeto [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) seleccionado por el usuario para crear una nueva sesión de importación. Crea un nuevo objeto [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx) para proporcionar una devolución de llamada y mostrar el progreso de la operación de búsqueda. Luego, llama a **[FindItemsAsync](https://docs.microsoft.com/uwp/api/windows.media.import.photoimportsession.finditemsasync)** para iniciar la operación de búsqueda. Proporciona un valor [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter) para especificar si se deben devolver fotos, vídeos o ambos. Proporciona un valor [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode) para especificar si deben devolverse todos los elementos multimedia, ninguno o solo los nuevos con su propiedad [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected) establecida en true. Esta propiedad está enlazada a una casilla para cada elemento multimedia de nuestra plantilla de elementos ListBox.
 
 **FindItemsAsync** devuelve una interfaz [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/br206594.aspx). El método de extensión [**AsTask**](https://msdn.microsoft.com/library/hh779750.aspx) se usa para crear una tarea que se pueda esperar, que se pueda cancelar con el token de cancelación y que notifique el progreso mediante el objeto **Progress** proporcionado.
 

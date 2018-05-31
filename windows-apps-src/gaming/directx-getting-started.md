@@ -1,7 +1,7 @@
 ---
 author: joannaleecy
-title: "Introducción a DirectX"
-description: "Introducción a la programación con DirectX."
+title: Introducción a DirectX
+description: Introducción a la programación con DirectX.
 ms.assetid: 7e7b95ef-faf9-48e1-8b53-a143be3b08e9
 ms.author: joanlee
 ms.date: 06/23/2017
@@ -10,11 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 56c1d097c97a88cf6fc6bbaf72fa6958704a5843
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
+ms.openlocfilehash: 31bfa3c65518d87966ab0a35aeeebcc77180ca3f
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652824"
 ---
 # <a name="directx-getting-started"></a>DirectX: introducción
 
@@ -39,15 +40,15 @@ En el tema sobre el inicio y reanudación de aplicaciones se explica cómo defin
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Objeto de aplicación y DirectX](about-the-uwp-user-interface-and-directx.md)</p></td>
+<td align="left"><p><a href="about-the-uwp-user-interface-and-directx.md">Objeto de aplicación y DirectX</a></p></td>
 <td align="left"><p>Accede e interactúa con el objeto aplicación directamente.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Plantillas de proyectos y herramientas para juegos](prepare-your-dev-environment-for-windows-store-directx-game-development.md)</p></td>
+<td align="left"><p><a href="prepare-your-dev-environment-for-windows-store-directx-game-development.md">Plantillas de proyectos y herramientas para juegos</a></p></td>
 <td align="left"><p>Prepara tu entorno para el desarrollo de un juego DirectX para UWP.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Inicio y reanudación de aplicaciones](launching-and-resuming-apps-directx-and-cpp.md)</p></td>
+<td align="left"><p><a href="launching-and-resuming-apps-directx-and-cpp.md">Inicio y reanudación de aplicaciones</a></p></td>
 <td align="left"><p>Inicia, suspende y reanuda tu juego DirectX para UWP.</p></td>
 </tr>
 </tbody>

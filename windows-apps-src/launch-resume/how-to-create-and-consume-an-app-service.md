@@ -1,23 +1,24 @@
 ---
 author: TylerMSFT
-title: "Crear y usar un servicio de aplicación"
-description: "Obtén información sobre cómo escribir una aplicación para la Plataforma universal de Windows (UWP) que pueda proporcionar servicios a otras aplicaciones para UWP y cómo usar esos servicios."
+title: Crear y usar un servicio de aplicación
+description: Obtén información sobre cómo escribir una aplicación para la Plataforma universal de Windows (UWP) que pueda proporcionar servicios a otras aplicaciones para UWP y cómo usar esos servicios.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: "comunicación entre aplicaciones comunicación entre procesos, IPC, mensajería en segundo plano comunicación en segundo plano, entre aplicaciones"
+keywords: comunicación entre aplicaciones comunicación entre procesos, IPC, mensajería en segundo plano comunicación en segundo plano, entre aplicaciones
 ms.author: twhitney
-ms.date: 08/17/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 29a2bbfc1e7fbdd8e4d51c7929bd923281b8dae6
-ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.localizationpriority: medium
+ms.openlocfilehash: e119a161d054a88665494d76b03a3c5fd8f331d1
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1656160"
 ---
 # <a name="create-and-consume-an-app-service"></a>Crear y usar un servicio de aplicaciones
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Obtén información sobre cómo escribir una aplicación para la Plataforma universal de Windows (UWP) que pueda proporcionar un servicio a otras aplicaciones para UWP y cómo consumir ese servicio.
 
@@ -30,7 +31,9 @@ Para más muestras de servicio de aplicación, consulta [Muestras de aplicacione
 En este procedimiento, lo crearemos todo en una solución para hacerlo más sencillo.
 
 -   En Microsoft Visual Studio, crea un nuevo proyecto de aplicación para UWP y llámalo **AppServiceProvider**. (En el cuadro de diálogo **Nuevo proyecto**, selecciona **Plantillas &gt; Otros idiomas &gt; Visual C# &gt; Windows &gt; Windows universal &gt; Aplicación vacía (Windows Universal)**). Esta será la aplicación que dejará disponible el servicio de la aplicación para otras aplicaciones para UWP.
--   Cuando se pida seleccionar una **versión de destino** para el proyecto, selecciona al menos **10.0.14393**. Si quieres usar el nuevo atributo `SupportsMultipleInstances`, debes estar usando Visual Studio 2017 y seleccionar la actualización **Windows 10 Creators Update** (**10.0.15063**) o superior.
+-   Cuando se pida seleccionar una **versión de destino** para el proyecto, selecciona al menos **10.0.14393**. Si deseas usar el nuevo atributo `SupportsMultipleInstances`, debes usar Visual Studio 2017 y seleccionar **10.0.15063** (**Windows 10 Creators Update**) o superior.
+
+<span id="appxmanifest"/>
 
 ## <a name="add-an-app-service-extension-to-packageappxmanifest"></a>Agregar una extensión de servicio de aplicaciones a package.appxmanifest
 
@@ -63,12 +66,12 @@ El atributo **Category** identifica esta aplicación como proveedor de servicios
 
 El atributo **EntryPoint** identifica la clase cualificada de espacio de nombres que implementa el servicio, y que se implementará a continuación.
 
-El atributo **SupportsMultipleInstances** indica que cada vez que se llama al servicio de aplicaciones se debe ejecutar en un nuevo proceso. Esto no es necesario, pero está disponible si necesitas esa funcionalidad y estás seleccionando la `10.0.15063` SDK (**Windows 10 Creators Update**) o superior. También debe ser precedido por el espacio de nombres `uap4`.
+El atributo **SupportsMultipleInstances** indica que cada vez que se llama al servicio de aplicaciones se debe ejecutar en un nuevo proceso. Esto no es necesario, pero está disponible si necesitas esa funcionalidad y seleccionas el `10.0.15063` SDK (**Windows 10 Creators Update**) o superior. También debe ser precedido por el espacio de nombres `uap4`.
 
 ## <a name="create-the-app-service"></a>Crear el servicio de aplicaciones
 
 1.  Un servicio de aplicaciones puede implementarse como una tarea en segundo plano. Esto permite que una aplicación en primer plano invoque un servicio de aplicaciones en otra aplicación. Para crear un servicio de aplicaciones como tarea en segundo plano, agrega un nuevo proyecto de componente de Windows Runtime a la solución (**Archivo &gt; Agregar &gt; Nuevo proyecto**) denominado MyAppService. (En el cuadro de diálogo **Agregar nuevo proyecto** elige **Instalado &gt; Otros idiomas &gt; Visual C# &gt; Windows &gt; Windows universal &gt; Componente de Windows Runtime (Windows universal)**
-2.  En el proyecto AppServiceProvider, agrega una referencia de proyecto a proyecto al nuevo proyecto MyAppService. Este paso es fundamental porque, aunque no podrás ver los errores de compilación si no agregas la referencia, el servicio de aplicaciones no se conectará en el momento de ejecución.
+2.  En el proyecto **AppServiceProvider**, agrega una referencia de proyecto a proyecto en el nuevo proyecto **MyAppService** (en el Explorador de soluciones, haz clic con el botón derecho en el proyecto **AppServiceProvider** > **Agregar** > **Referencia** > **Proyectos** > **Solución** y selecciona **MyAppService** > **Aceptar**). Este paso es fundamental porque, si no agregas la referencia, el servicio de aplicaciones no se conectará en el momento de ejecución.
 3.  En el proyecto MyappService, agrega las siguientes instrucciones **usando** declaraciones a la parte superior de Class1.cs:
     ```cs
     using Windows.ApplicationModel.AppService;
@@ -173,16 +176,26 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
         returnData.Add("Status", "Fail: Index out of range");
     }
 
-    await args.Request.SendResponseAsync(returnData); // Return the data to the caller.
-    // Complete the deferral so that the platform knows that we're done responding to the app service call.
-    // Note for error handling: this must be called even if SendResponseAsync() throws an exception.
-    messageDeferral.Complete();
+    try
+    {
+        await args.Request.SendResponseAsync(returnData); // Return the data to the caller.
+    }
+    catch (Exception e)
+    {
+        // your exception handling code here
+    }
+    finally
+    {
+        // Complete the deferral so that the platform knows that we're done responding to the app service call.
+        // Note for error handling: this must be called even if SendResponseAsync() throws an exception.
+        messageDeferral.Complete();
+    }
 }
 ```
 
 Ten en cuenta que **OnRequestReceived()** es de tipo **async** porque en este ejemplo se realiza una llamada de método que admite espera a [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722).
 
-Se toma un aplazamiento para que el servicio pueda usar métodos **async** en el controlador OnRequestReceived. Esto asegura que la llamada a **OnRequestReceived** no finalizará hasta que termine de procesar el mensaje.  [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722) se usa para enviar una respuesta junto con la finalización. **SendResponseAsync** no indica la finalización de la llamada. Es la finalización del aplazamiento que indica a [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712) que se ha completado **OnRequestReceived**. Tal vez quieras encapsular la llamada **SendMessageAsync()** en un bloque try/finally, porque debas llamar a **Complete()** en el aplazamiento, aunque **SendMessageAsync()** provoque una excepción.
+Se toma un aplazamiento para que el servicio pueda usar métodos **async** en el controlador OnRequestReceived. Esto asegura que la llamada a **OnRequestReceived** no finalizará hasta que termine de procesar el mensaje.  [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722) envía el resultado a la persona que llama. **SendResponseAsync** no indica la finalización de la llamada. Es la finalización del aplazamiento que indica a [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712) que **OnRequestReceived** se ha completado. La llamada a **SendResponseAsync()** se ajusta en un bloque try/finally porque debes completar el aplazamiento incluso si **SendResponseAsync()** inicia una excepción.
 
 Los servicios de aplicaciones usan un elemento [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) para intercambiar información. El tamaño de los datos que se pueden pasar solo está limitado por los recursos del sistema. No hay claves predefinidas para su uso en el elemento **ValueSet**. Debes determinar qué valores clave usarás para definir el protocolo del servicio de aplicaciones. Debes escribirse el llamador teniendo ese protocolo presente. En este ejemplo, hemos elegido una clave denominada `Command` que tiene un valor que indica si queremos que el servicio de aplicaciones proporcione el nombre del elemento de inventario o su precio. El índice del nombre de inventario se almacena en la clave `ID`. El valor devuelto se almacena en la clave `Result`.
 
@@ -307,9 +320,9 @@ Si encuentras un estado **AppUnavailable** después de intentar conectarte a un 
 
 - Asegúrate de que el proyecto de proveedor de servicio de aplicaciones y el proyecto de servicio de aplicaciones estén implementados. Ambos deben implementarse antes de ejecutar el cliente ya que, de lo contrario, el cliente no tendrá nada a lo que conectarse. Puedes implementar desde Visual Studio usando **Compilar** > **solución de implementación**.
 - En el explorador de soluciones, asegúrate de que el proyecto de proveedor de servicio de aplicaciones tiene una referencia proyecto a proyecto al proyecto que implementa el servicio de aplicaciones.
-- Comprueba que la entrada `<Extensions>` y sus elementos secundarios se hayan agregado al archivo Package.appxmanifest que pertenece al proyecto de proveedor de servicio de aplicaciones especificado anteriormente en [Agregar una extensión de servicio de aplicaciones a package.appxmanifest](#add-an-app-service-extension-to-package-appxmanifest).
+- Comprueba que la entrada `<Extensions>` y sus elementos secundarios se hayan agregado al archivo Package.appxmanifest que pertenece al proyecto de proveedor de servicio de aplicaciones especificado anteriormente en [Agregar una extensión de servicio de aplicaciones a package.appxmanifest](#appxmanifest).
 - Asegúrate de que la cadena `AppServiceConnection.AppServiceName` del cliente que llama el proveedor de servicios de aplicaciones coincide con el `<uap3:AppService Name="..." />` especificado en el archivo Package.appxmanifest del proyecto del proveedor de servicio de aplicaciones.
-- Asegúrate de que la `AppServiceConnection.PackageFamilyName` coincide con el nombre de familia de paquete del componente del proveedor de servicio de aplicaciones como se especifica más arriba en [Agregar una extensión de servicio de aplicaciones a package.appxmanifest](#add-an-app-service-extension-to-package-appxmanifest)
+- Asegúrate de que la `AppServiceConnection.PackageFamilyName` coincide con el nombre de familia de paquete del componente del proveedor de servicio de aplicaciones como se especifica más arriba en [Agregar una extensión de servicio de aplicaciones a package.appxmanifest](#appxmanifest)
 - Para los servicios de aplicaciones de fuera de proceso, como el de este ejemplo, comprueba que la `EntryPoint` especificada en el elemento `<uap:Extension ...>` del archivo Package.appxmanifest del proyecto del proveedor de servicios de aplicaciones se corresponda con el espacio de nombres y el nombre de la clase pública que implementa `IBackgroundTask` en el proyecto de servicio de aplicaciones.
 
 ### <a name="troubleshoot-debugging"></a>Solucionar problemas de depuración
@@ -418,4 +431,4 @@ namespace MyAppService
 
 * [Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host](convert-app-service-in-process.md)
 * [Compatibilidad de la aplicación con tareas en segundo plano](support-your-app-with-background-tasks.md)
-* [Muestras de aplicaciones para la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)
+* [Ejemplo de código de servicio de aplicación (C#, C++ y VB)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)

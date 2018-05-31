@@ -2,29 +2,31 @@
 author: jnHs
 ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Tipos de cuenta, ubicaciones y precios
-description: "Microsoft ofrece cuentas de desarrollador individuales y corporativas en muchos países y regiones."
+description: Microsoft ofrece cuentas de desarrollador individuales y corporativas en muchos países y regiones.
 ms.author: wdg-dev-content
-ms.date: 08/17/2017
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 25ae63638a76df2d064dbbc6334d5793cdadbedf
-ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
+ms.localizationpriority: high
+ms.openlocfilehash: e337c5fe18089bfd39981c04647ca1386c3a5b40
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832416"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
-Microsoft ofrece dos tipos de cuentas de desarrollador: cuentas individuales y cuentas de empresa. Las cuentas de desarrollador se ofrecen en [varios países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona acceso para publicar aplicaciones en la Tienda y participar en otros programas de Microsoft para desarrolladores.
+Microsoft ofrece cuentas de individuales y corporativas en muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona acceso para publicar aplicaciones en la Store y participar en otros programas de Microsoft para desarrolladores.
 
 > [!NOTE]
 > Al suscribirte a una cuenta, asegúrate de que inicias sesión con la cuenta Microsoft que quieres usar para tu cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
 
 Cuando [comiences el proceso de suscripción](http://go.microsoft.com/fwlink/p/?LinkId=615100), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, juegos, complementos y servicios.
 
-Las cuentas de empresa están diseñadas para las organizaciones y empresas y permiten tener acceso a algunas funcionalidades de aplicaciones adicionales. Para las cuentas de empresa, debemos [comprobar](#account-verification) con más atención para confirmar que tienes autorización para configurar la cuenta de tu empresa. Las cuentas individuales son normalmente adecuadas para un único desarrollador que trabaja por su cuenta, aunque tienes la opción de agregar usuarios adicionales a cualquier tipo de cuenta.
+Las cuentas de empresa están pensadas para empresas y organizaciones. Para las cuentas de empresa, debemos [comprobar](#account-verification) con más atención para confirmar que tienes autorización para configurar la cuenta de tu empresa. Las cuentas individuales son normalmente adecuadas para un único desarrollador que trabaja por su cuenta, aunque tienes la opción de agregar usuarios adicionales a cualquier tipo de cuenta.
 
 > [!IMPORTANT]
 > No puedes cambiar el tipo de cuenta después de haberla seleccionado, así que asegúrate de que eliges el tipo adecuado.
@@ -33,21 +35,9 @@ Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 
 | Cuenta individual | Cuenta de empresa |
 |--------------------|-----------------|
-| <ul><li>No puede usar funcionalidades específicas de las aplicaciones</li><li>Cuesta aproximadamente 19USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li></ul> | <ul><li>Requiere realizar una comprobación con más atención</li><li>Más acceso a las funcionalidades de las aplicaciones</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Cuesta aproximadamente 99USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li></ul> |
+| <ul><li>Cuesta aproximadamente 19USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
 
-Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Además, las cuentas de empresa te permiten enviar aplicaciones en las que se proporcionan [declaraciones de funcionalidad de las aplicaciones](../packaging/app-capability-declarations.md).
-
-Concretamente, debes tener una cuenta de empresa para poder publicar aplicaciones que usen estas tres funcionalidades:
-
--   **enterpriseAuthentication**: Usa las credenciales de Windows para acceder a una intranet corporativa. Normalmente se utiliza en aplicaciones de línea de negocio que se conectan a los servidores de una empresa. (No necesitas esta funcionalidad para la comunicación genérica a través de Internet).
--   **sharedUserCertificates**: Permite el acceso de una aplicación a certificados de software y hardware como, por ejemplo, los certificados almacenados en una tarjeta inteligente. Suele usarse para aplicaciones empresariales o financieras que requieren una tarjeta inteligente para la autenticación.
--   **documentsLibrary**: Proporciona acceso mediante programación a los documentos del usuario, filtrados por las asociaciones de tipo de archivo declaradas en el manifiesto del paquete. (No necesitas declarar esta funcionalidad para acceder a los Documentos de un usuario con el [selector de archivos](../files/quickstart-using-file-and-folder-pickers.md)). Ten en cuenta que las aplicaciones destinadas a Windows Phone 8.1 o versiones anteriores no pueden usar la funcionalidad documentsLibrary.
-
-> [!NOTE]
-> Además, debes ponerte en contacto con soporte técnico y obtener su aprobación para poder enviar aplicaciones que declaren la funcionalidad **documentsLibrary**.
-
-Tener una cuenta de la empresa no garantiza que las aplicaciones que usan estas funcionalidades aprobarán la certificación. Estas funcionalidades están destinadas a escenarios muy específicos, y la mayoría de las aplicaciones no deberían declararlas. Para obtener más información, consulta [Declaraciones de funcionalidad de las aplicaciones](../packaging/app-capability-declarations.md).
-
+Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. De acuerdo con las [Directivas de la Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), se necesita una cuenta de empresa para publicar aplicaciones con ciertas funciones, como las aplicaciones que tienen acceso a información de cuentas financieras o que requieren autenticación para acceder a la funcionalidad principal (sin usar un proveedor de autenticación de terceros dedicado seguro).
 
 ## <a name="account-verification"></a>Comprobación de cuentas
 

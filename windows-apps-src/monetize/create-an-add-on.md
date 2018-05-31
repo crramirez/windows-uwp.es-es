@@ -1,35 +1,35 @@
 ---
 author: mcleanbyron
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
-description: "Usa este método en la API de envío de la Tienda Windows para crear un complemento de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows."
+description: Usa este método en la API de envío de Microsoft Store para crear un complemento de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows.
 title: Crear un complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, create add-on, crear complemento, in-app product, producto desde la aplicación, IAP, IAP"
-ms.openlocfilehash: 903bbaf0ad515dcf23c4248744b428876805082e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create add-on, crear complemento, in-app product, producto desde la aplicación, IAP, IAP
+ms.localizationpriority: medium
+ms.openlocfilehash: d463fb1f2e40b8556d9f2c57847dae5420ec3b21
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1662545"
 ---
 # <a name="create-an-add-on"></a>Crear un complemento
 
+Usa este método en la API de envío de Microsoft Store para crear un complemento (también conocido como producto desde la aplicación o IAP) para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows.
 
-
-
-Usa este método en la API de envío de la Tienda Windows para crear un complemento (también conocido como producto desde la aplicación o IAP) para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows.
-
->**Nota**&nbsp;&nbsp;Este método crea un complemento sin envíos. Para crear un envío de un complemento, consulta los métodos en [Administración de envíos de complementos](manage-add-on-submissions.md).
+> [!NOTE]
+> Este método crea un complemento sin envíos. Para crear un envío de un complemento, consulta los métodos en [Administrar envíos de complementos](manage-add-on-submissions.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
-
->**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
 ## <a name="request"></a>Solicitud
 
@@ -39,8 +39,6 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
 
-<span/>
- 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -48,19 +46,17 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Token del** &lt;*portador*&gt;. |
 
-<span/>
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
 El cuerpo de la solicitud tiene los siguientes parámetros.
- 
+
 |  Parámetro  |  Tipo  |  Descripción  |  Obligatorio  |
 |------|------|------|------|
-|  applicationIds  |  matriz  |  Una matriz que contiene la Id. de la tienda de la aplicación asociada con este complemento. Solo se admite un elemento en esta matriz.   |  Sí  |
+|  applicationIds  |  matriz  |  Una matriz que contiene la Id. de Store de la aplicación asociada con este complemento. Solo se admite un elemento en esta matriz.   |  Sí  |
 |  productId  |  string  |  La Id. de producto del complemento. Esto es un identificador que puede usarse en el código para hacer referencia al complemento. Para obtener más información, consulta [Establecimiento del tipo de producto y la Id. del producto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id).  |  Sí  |
 |  productType  |  string  |  El tipo de producto del complemento. Se admiten los siguientes valores: **Duradero** y **Consumible**.  |  Sí  |
 
-<span/>
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
@@ -105,14 +101,13 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción                                                                                                                                                                           |
 |--------|------------------|
 | 400  | La solicitud no es válida. |
-| 409  | No se pudo crear el complemento debido a su estado actual o a que este complemento usa una función del panel del Centro de desarrollo que [actualmente no admite la API de envío de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | No se pudo crear el complemento debido a su estado actual o a que este complemento usa una función del panel del Centro de desarrollo que [actualmente no admite la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
-<span/>
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
-* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-* [Administración de envíos de complementos](manage-add-on-submissions.md)
-* [Obtención de todos los complementos](get-all-add-ons.md)
+* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Administrar envíos de complementos](manage-add-on-submissions.md)
+* [Obtener todos los complementos](get-all-add-ons.md)
 * [Obtención de un complemento](get-an-add-on.md)
 * [Eliminación de un complemento](delete-an-add-on.md)

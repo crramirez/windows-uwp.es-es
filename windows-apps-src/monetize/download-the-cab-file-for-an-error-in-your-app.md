@@ -1,23 +1,25 @@
 ---
 author: mcleanbyron
-ms.assetid: 
-description: "Usa este método en la API de análisis de la Tienda Windows para descargar el archivo .cab para un error de la aplicación."
-title: "Descargar el archivo .cab para un error de la aplicación"
+ms.assetid: ''
+description: Usa este método en la API de análisis de Microsoft Store para descargar el archivo .cab para un error de la aplicación.
+title: Descargar el archivo .cab para un error de la aplicación
 ms.author: mcleans
 ms.date: 06/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store analytics API, API de análisis de la Tienda Windows, download CAB, descargar .cab"
-ms.openlocfilehash: 6c9e3f024a0b222be89ede5cf81a14bc923b7af4
-ms.sourcegitcommit: 7aabd2e59d45bbc5512dd4ddd9110ae62b79d552
+keywords: windows 10, uwp, Microsoft Store analytics API, API de análisis de Microsoft Store, download CAB, descargar .cab
+ms.localizationpriority: medium
+ms.openlocfilehash: a74a72e1d02a73d2b930179d9d2cb99ea09c7c40
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1662065"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a>Descargar el archivo .cab para un error de la aplicación
 
-Usa este método en la API de análisis de la Tienda Windows para descargar el archivo .cab que está asociado con un error concreto de la aplicación que se notificó al Centro de desarrollo. Este método solo puede descargar el archivo .cab para un error en la aplicación que se haya producido en los últimos 30 días. Las descargas del archivo .cab también están disponibles en la sección **Errores** del [informe de estado](../publish/health-report.md) en el panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para descargar el archivo .cab que está asociado con un error concreto de la aplicación que se notificó al Centro de desarrollo. Este método solo puede descargar el archivo .cab para un error en la aplicación que se haya producido en los últimos 30 días. Las descargas del archivo .cab también están disponibles en la sección **Errores** del [informe de estado](../publish/health-report.md) en el panel del Centro de desarrollo de Windows.
 
 Antes de poder usar este método, tienes que emplear primero el método para [obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md) y recuperar el id. del archivo .cab que quieres descargar.
 
@@ -26,7 +28,7 @@ Antes de poder usar este método, tienes que emplear primero el método para [ob
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 * Obtén el id. del archivo .cab que quieres descargar. Para obtener este identificador, usa el método [obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md) para recuperar los detalles de un error específico de tu aplicación y usa el valor **cabId** en el cuerpo de la respuesta de ese método.
 
@@ -39,7 +41,6 @@ Para usar este método, primero debes hacer lo siguiente:
 |--------|----------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/cabdownload``` |
 
-<span/> 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -47,16 +48,14 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/> 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  |
 |---------------|--------|---------------|------|
-| applicationId | string | El Id. de la Tienda de la aplicación para la que quieres descargar un archivo CAB. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8. |  Sí  |
+| applicationId | string | El Id. de la Store de la aplicación para la que quieres descargar un archivo CAB. El Id. de la Store está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8. |  Sí  |
 | cabId | cadena | El id. exclusivo del archivo .cab que quieres descargar. Para obtener este identificador, usa el método [obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md) para recuperar los detalles de un error específico de tu aplicación y usa el valor **cabId** en el cuerpo de la respuesta de ese método. |  Sí  |
 
-<span/>
  
 ### <a name="request-example"></a>Ejemplo de solicitud
 
@@ -74,7 +73,7 @@ Este método devuelve un código de respuesta 302 (redirigir) y el encabezado **
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Informe de estado](../publish/health-report.md)
-* [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
+* [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
 * [Obtener los datos del informe de errores](get-error-reporting-data.md)
 * [Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)
 * [Obtener el seguimiento de la pila de un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)

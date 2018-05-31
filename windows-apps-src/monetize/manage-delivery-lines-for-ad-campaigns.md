@@ -1,23 +1,27 @@
 ---
 author: mcleanbyron
 ms.assetid: dc632a4c-ce48-400b-8e6e-1dddbd13afff
-description: "Usa este método en la API de promociones de la Tienda Windows para administrar las líneas de entrega para las campañas de anuncios promocionales."
-title: "Administrar las líneas de entrega"
+description: Usa este método en la API de promociones de Microsoft Store para administrar las líneas de entrega para las campañas de anuncios promocionales.
+title: Administrar las líneas de entrega
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store promotions API, API de promociones de la Tienda Windows, ad campaigns, campañas de anuncios"
-ms.openlocfilehash: 419dbc2ef8de66b0cb8cf51b483174f5c086a092
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
+ms.localizationpriority: medium
+ms.openlocfilehash: a7dca49ee1ecaeb675127ea19191a028f6f7846f
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1664105"
 ---
 # <a name="manage-delivery-lines"></a>Administrar las líneas de entrega
 
-Usa estos métodos en la API de promociones de la Tienda Windows para crear una o varias *líneas de entrega* para comprar inventario y entregar tus anuncios para una campaña de anuncios promocionales. Para cada línea de entrega, puedes establecer la selección del destino, el precio de oferta y decidir cuánto quieres gastar. Para ello, establece un presupuesto y vincular los creativos que quieres usar.
+Usa estos métodos en la API de promociones de Microsoft Store para crear una o varias *líneas de entrega* para comprar inventario y entregar tus anuncios para una campaña de anuncios promocionales. Para cada línea de entrega, puedes establecer la selección del destino, el precio de oferta y decidir cuánto quieres gastar. Para ello, establece un presupuesto y vincular los creativos que quieres usar.
 
-Para obtener más información sobre la relación entre las líneas de entrega y las campañas de anuncios, los perfiles objetivo y los creativos, consulta [Ejecutar campañas de anuncios con los servicios de la Tienda Windows](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
+Para obtener más información sobre la relación entre las líneas de entrega y las campañas de anuncios, los perfiles objetivo y los creativos, consulta [Ejecutar campañas de anuncios con los servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 
 >**Nota**&nbsp;&nbsp;Antes de poder crear correctamente líneas de entrega para campañas publicitarias con esta API, primero tienes que [crear una campaña de anuncios de pago con la página **Promocionar la aplicación** en el panel del Centro de desarrollo](../publish/create-an-ad-campaign-for-your-app.md), y tienes que agregar al menos un instrumento de pago en esta página. Después de hacer esto, podrás crear correctamente líneas de entrega facturables para campañas publicitarias con esta API. Las campañas de anuncios que crees con la API facturarán siempre automáticamente al instrumento de pago elegido en la página **Promocionar la aplicación** del panel.
 
@@ -25,9 +29,10 @@ Para obtener más información sobre la relación entre las líneas de entrega y
 
 Para usar estos métodos, primero tienes que hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de Microsoft Store.
 
-  >**Nota**&nbsp;&nbsp;Como parte de los requisitos previos, asegúrate de [crear al menos una campaña de anuncios de pago en el panel del Centro de desarrollo](../publish/create-an-ad-campaign-for-your-app.md) y de agregar al menos un instrumento de pago para la campaña de anuncios en el panel. Las líneas de entrega que creas con esta API facturarán siempre automáticamente al instrumento de pago elegido en la página **Promocionar la aplicación** del panel.
+  > [!NOTE]
+  > Como parte de los requisitos previos, asegúrate de [crear al menos una campaña de anuncios de pago en el panel del Centro de desarrollo](../publish/create-an-ad-campaign-for-your-app.md) y de agregar al menos un instrumento de pago para la campaña de anuncios en el panel. Las líneas de entrega que creas con esta API facturarán siempre automáticamente al instrumento de pago elegido en la página **Promocionar la aplicación** del panel.
 
 * [Obtén un token de acceso de Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para estos métodos. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
@@ -41,7 +46,7 @@ Estos métodos tienen los siguientes URI.
 | PUT    | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/line/{lineId}``` |  Edita la línea de entrega especificada por *lineId*.  |
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/promotion/line/{lineId}``` |  Obtiene la línea de entrega especificada por *lineId*.  |
 
-<span/> 
+
 ### <a name="header"></a>Encabezado
 
 | Encabezado        | Tipo   | Descripción         |
@@ -49,12 +54,12 @@ Estos métodos tienen los siguientes URI.
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 | Id. de seguimiento   | GUID   | Opcional. Un id. que realiza un seguimiento del flujo de llamadas.                                  |
 
-<span/>
+
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
 Los métodos POST y PUT necesitan un cuerpo de la solicitud JSON con los campos obligatorios de un objeto de [línea de entrega](#line) y los campos adicionales que quieras establecer o cambiar.
- 
-<span/>
+
+
 ### <a name="request-examples"></a>Ejemplos de solicitud
 
 En el siguiente ejemplo se muestra cómo llamar al método POST para crear una línea de entrega.
@@ -90,7 +95,6 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/promotion/line/31019990  HTTP
 Authorization: Bearer <your access token>
 ```
 
-<span/> 
 ## <a name="response"></a>Respuesta
 
 Estos métodos devuelven un cuerpo de respuesta JSON con un objeto de [línea de entrega](#line) que contiene información sobre la línea de entrega que se creó, actualizó o recuperó. En el siguiente ejemplo se muestra un cuerpo de respuesta para estos métodos.
@@ -128,7 +132,9 @@ Estos métodos devuelven un cuerpo de respuesta JSON con un objeto de [línea de
 
 ```
 
+
 <span id="line"/>
+
 ## <a name="delivery-line-object"></a>Objeto de línea de entrega
 
 Los cuerpos de solicitud y respuesta para estos métodos contienen los siguientes campos. En esta tabla se muestran los campos que son de solo lectura (es decir, no se pueden cambiar en el método PUT) y los campos que son obligatorios en el cuerpo de la solicitud para los métodos POST o PUT.
@@ -157,7 +163,7 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejecutar campañas de anuncios con los servicios de la Tienda Windows](run-ad-campaigns-using-windows-store-services.md)
+* [Ejecutar campañas de anuncios con los servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
 * [Administrar campañas de anuncios](manage-ad-campaigns.md)
 * [Administrar perfiles de destino de las campañas de anuncios](manage-targeting-profiles-for-ad-campaigns.md)
 * [Administrar creativos de campañas de anuncios](manage-creatives-for-ad-campaigns.md)

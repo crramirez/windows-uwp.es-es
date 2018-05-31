@@ -1,23 +1,25 @@
 ---
 title: MAC, hash y firmas
-description: "En este artículo se describe cómo se pueden utilizar los códigos de autenticación de mensaje (MAC), los hash y las firmas en las aplicaciones de la Plataforma universal de Windows (UWP) para detectar mensajes manipulados."
+description: En este artículo se describe cómo se pueden utilizar los códigos de autenticación de mensaje (MAC), los hash y las firmas en las aplicaciones de la Plataforma universal de Windows (UWP) para detectar mensajes manipulados.
 ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 4de3b93cb6f86f409d6f915386b9d763056e89fa
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 9d0bce286381e8bd4704283e1a9601530f6d06fd
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1689551"
 ---
 # <a name="macs-hashes-and-signatures"></a>MAC, hash y firmas
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo se pueden utilizar los códigos de autenticación de mensaje (MAC), los hash y las firmas en las aplicaciones de la Plataforma universal de Windows (UWP) para detectar mensajes manipulados.

@@ -1,19 +1,21 @@
 ---
-author: TylerMSFT
+author: PatrickFarley
 title: Aplicaciones y dispositivos conectados (Project Rome)
-description: "Esta sección describe cómo usar la plataforma de sistemas remotos para descubrir dispositivos remotos, iniciar una aplicación en un dispositivo remoto y comunicarse con un servicio de aplicaciones en un dispositivo remoto."
-ms.author: twhitney
+description: Esta sección describe cómo usar la plataforma de sistemas remotos para descubrir dispositivos remotos, iniciar una aplicación en un dispositivo remoto y comunicarse con un servicio de aplicaciones en un dispositivo remoto.
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
-ms.openlocfilehash: 29b7db48f2dbd699f9c4f674a8870fe8f8ca446d
-ms.sourcegitcommit: 73c61e8e409b071365a2f6ebd89bd8a769b2a7c1
+ms.localizationpriority: medium
+ms.openlocfilehash: dfefe78ced067b21c60ca98e8642cb6b6b923588
+ms.sourcegitcommit: 12cc283e821cbf978debf24914490982f076b4b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 03/16/2018
+ms.locfileid: "1657928"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Aplicaciones y dispositivos conectados (Project Rome)
 
@@ -31,6 +33,7 @@ Consulta la [muestra de sistemas remotos](https://github.com/Microsoft/Windows-u
 
 | Tema | Descripción |
 |-------|-------------|
-| [Detectar dispositivos remotos](discover-remote-devices.md)  | Obtén información sobre cómo detectar dispositivos a los que te puedas conectar. |
 | [Iniciar una aplicación en un dispositivo remoto](launch-a-remote-app.md) | Aprende a iniciar una aplicación en un dispositivo remoto.  |
+| [Detectar dispositivos remotos](discover-remote-devices.md)  | Obtén información sobre cómo detectar dispositivos a los que te puedas conectar. |
 | [Comunicarse con un servicio de aplicaciones remoto](communicate-with-a-remote-app-service.md) | Obtén información sobre cómo interactuar con una aplicación en un dispositivo remoto. |
+| [Conectar dispositivos a través de sesiones remotas](remote-sessions.md) | Cree experiencias compartidas en varios dispositivos uniéndolos en una sesión remota. |

@@ -1,5 +1,6 @@
 ---
 author: jnHs
+layout: LandingPage
 Description: See how to publish your Windows apps to the Microsoft Store.
 title: Publicar aplicaciones de Windows
 ms.author: wdg-dev-content
@@ -7,36 +8,269 @@ ms.date: 01/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, publicación, publicar, venta, vender, distribuir, distribución, store, panel"
+keywords: windows 10, uwp, publicación, publicar, venta, vender, distribuir, distribución, store, dashboard, panel
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: high
-ms.openlocfilehash: cd454ce7ead04e4e36811ddbb8c786dab566c822
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 37cfce48a60f95109dfff99b45750fa8fbe1f220
+ms.sourcegitcommit: 4e39a2bdb5b895ed09b64957dc1a86ccf1f8e1af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
+ms.locfileid: "1718669"
 ---
-# <a name="publish-windows-apps"></a>Publicar aplicaciones de Windows
-
-Puedes usar el Panel del Centro de desarrollo de Windows para publicar tus aplicaciones en Microsoft Store. 
-
-> [!NOTE]
-> Debes disponer de una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acceder al Panel del Centro de desarrollo de Windows y enviar aplicaciones.
-
-Esta sección contiene información sobre cómo publicar y administrar tus aplicaciones.
-
-| **Tema** | **Descripción** |
-|-----------|-----------------|
-| [Usar el panel del Centro de desarrollo de Windows](using-the-windows-dev-center-dashboard.md) | Obtén información sobre [cómo registrarse para obtener una cuenta](opening-a-developer-account.md) y obtener una visión general de lo que puedes hacer en el panel del Centro de desarrollo. |
-| [Administrar usuarios de la cuenta](manage-account-users.md) | Agrega usuarios, grupos y aplicaciones de Azure Active Directory a tu cuenta del Centro de desarrollo con permisos designados. |
-| [Crear la aplicación reservando un nombre](create-your-app-by-reserving-a-name.md) | Aprende a reservar nombres y busca sugerencias para elegir un buen nombre de aplicación. |
-| [Envíos de aplicaciones](app-submissions.md) | Un envío de una aplicación incluye [detalles de precios y disponibilidad](set-app-pricing-and-availability.md), [propiedades](enter-app-properties.md), [clasificación por edades](age-ratings.md), [paquetes](upload-app-packages.md) y [detalles de la descripción de la Tienda](create-app-store-listings.md). Tu envío pasará por el [proceso de certificación](the-app-certification-process.md) antes de que se publique en la Tienda. Algunas características opcionales que puedes usar son la [distribución de paquetes piloto](package-flights.md), [las pruebas beta](beta-testing-and-targeted-distribution.md), [lanzamiento de paquete gradual](gradual-package-rollout.md) y la [distribución de LOB directamente en las empresas](distribute-lob-apps-to-enterprises.md). |
-| [Envíos de complementos](add-on-submissions.md) | Aprende a publicar complementos (productos desde la aplicación) a través del Panel del Centro de desarrollo de Windows. |
-| [Anuncios desde la aplicación](in-app-ads.md) | Administra el uso de los anuncios en tus aplicación, incluidas las configuraciones de mediación de anuncios. |
-| [Administración y servicios de aplicaciones](app-management-and-services.md) | Usa servicios como pruebas A/B (experimentación) y los mapas, y aprende a [ver los detalles de la identidad de aplicación](view-app-identity-details.md) y [reservar nombres de aplicación adicionales](manage-app-names.md). |
-| [Atraer a clientes y promocionar las aplicaciones](attract-customers-and-promote-your-apps.md) | Promociona tus productos y aumenta tu base de clientes gracias a opciones como [campañas publicitarias](create-an-ad-campaign-for-your-app.md), [códigos de promoción](generate-promotional-codes.md), [precios de oferta](put-apps-and-add-ons-on-sale.md) y mucho más. |
-| [Interactuar con tus clientes](engage-with-your-customers.md) | Genera interacción y satisfacción en los clientes con características como las [notificaciones](send-push-notifications-to-your-apps-customers.md), las [ofertas dirigidas](use-targeted-offers-to-maximize-engagement-and-conversions.md), las respuestas a [valoraciones](respond-to-customer-reviews.md) y [comentarios](respond-to-customer-feedback.md) y mucho más. 
-| [Analizar el rendimiento de la aplicación](analytics.md) | Ver datos analíticos detallados de tus aplicaciones para ver cómo lo están haciendo. Obtén detalles sobre a cuántos clientes has llegado, cómo usan la aplicación, lo que tienen que decir sobre ella y mucho más.|
-| [Recibir pagos](getting-paid-apps.md) | Obtén información detallada sobre cómo recibir ganancias a partir de las aplicaciones, los complementos y publicidad. |
-| [Directivas de la Tienda y Código de conducta](https://docs.microsoft.com/legal/windows/agreements/store-policies-and-code-of-conduct) | En esta sección se incluyen las [directivas de la Tienda](https://docs.microsoft.com/legal/windows/agreements/store-policies) y los criterios de [calidad de la aplicación](https://docs.microsoft.com/legal/windows/agreements/store-app-quality) que se aplican al contenido y a las aplicaciones de Windows, así como el [Código de conducta](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct) que deben seguir los desarrolladores. |
+# <a name="publish-windows-apps-and-games"></a>Publicar aplicaciones y juegos de Windows  
  
+Puedes usar el Panel del Centro de desarrollo de Windows para publicar tus aplicaciones y juegos en Microsoft Store. <a href="//developer.microsoft.com/store/register">¡Regístrate hoy!</a>
+<br>
+<ul id="cardtypes-K" class="cardsK panelContent">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage bgdAccent1">
+                            <img src="//docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt="App submission illustration" data-linktype="external" class="x-hidden-focus">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Envíos de aplicaciones</h3>
+                        <p>Descubre lo que necesitas para crear un envío y obtener la certificación de la aplicación.</p>
+                        <ul>
+                        <li><a href="app-submissions.md">Lista de comprobación de envío de aplicaciones</a></li>
+                        <li><a href="the-app-certification-process.md">Proceso de certificación</a></li>                      
+                        <li><a href="//docs.microsoft.com/legal/windows/agreements/store-policies">Directivas de Microsoft Store</a></li>   
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage bgdAccent1">
+                            <img src="//docs.microsoft.com/media/illustrations/bcs-partner-advanced-management- billing-7.svg" alt="Pricing illustration" data-linktype="external" class="x-hidden-focus">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                    <h3>Precios y disponibilidad</h3>
+                    <p>Personaliza la disponibilidad de la aplicación con la programación y el precio de cada mercado, las opciones de visibilidad, el precio de venta y mucho más.</p>
+                    <ul>
+                        <li><a href="define-pricing-and-market-selection.md">Elegir tus mercados</a></li>
+                        <li><a href="set-and-schedule-app-pricing.md">Establecer y programar los precios </a></li>
+                        <li><a href="configure-precise-release-scheduling.md">Configurar fechas de lanzamiento precisas</a></li>
+                        <li><a href="set-app-pricing-and-availability.md">Ver todas las opciones de disponibilidad</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage bgdAccent1">
+                            <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="Store listing illustration" data-linktype="external" class="x-hidden-focus">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Opciones de descripción de Store</h3>
+                        <p>Ofrece texto y activos visuales que hagan que los clientes quieran probar tu aplicación.</p>
+                        <ul>
+                            <li><a href="create-app-store-listings.md">Introducción a la descripción de Store</a></li>
+                            <li><a href="app-screenshots-and-images.md">Capturas de pantalla, imágenes y tráileres</a></li>
+                              <li><a href="import-and-export-store-listings.md">Administrar descripciones en masa </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<ul class="panelContent cardsF">
+<li>
+    <div class="cardSize">
+        <div class="cardPadding">
+            <div class="card">
+                <div class="cardImageOuter">
+                    <div class="cardImage">
+                        <img src="//docs.microsoft.com/media/common/i_billing.svg" alt="Payment icon"/>
+                    </div>
+                </div>
+                <div class="cardText">
+                    <h3>Pagos e informes</h3>                  
+                    <p><a href="getting-paid-apps.md">Recibir pagos</a></p>
+                    <p><a href="in-app-ads.md">Anuncios desde la aplicación</a></p>
+                    <p><a href="analytics.md">Informes analíticos</a></p>                   
+                </div>
+            </div>
+        </div>
+    </div>
+  </li>
+  <li>
+    <div class="cardSize">
+        <div class="cardPadding">
+            <div class="card">
+                <div class="cardImageOuter">
+                    <div class="cardImage">
+                        <img src="//docs.microsoft.com/media/common/i_whats-new.svg" alt="Promote icon"/>
+                    </div>
+                </div>
+                <div class="cardText">
+                    <h3>Promocionar tus aplicaciones</h3>   
+                    <p><a href="generate-promotional-codes.md">Generar códigos de promoción</a></p>
+                    <p><a href="create-an-ad-campaign-for-your-app.md">Crear campañas publicitarias</a></p>
+                    <p><a href="put-apps-and-add-ons-on-sale.md">Ofrecer precios de venta</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </li>
+<li>
+    <div class="cardSize">
+        <div class="cardPadding">
+            <div class="card">
+                <div class="cardImageOuter">
+                    <div class="cardImage">
+                        <img src="//docs.microsoft.com/media/common/i_multi-connect.svg" alt="Multi-connect icon"/>
+                    </div>
+                </div>
+                <div class="cardText">
+                    <h3>Interactuar con los clientes</h3>
+                    <p><a href="create-customer-groups.md">Crear grupos de clientes</a></p>
+                    <p><a href="send-push-notifications-to-your-apps-customers.md">Enviar notificaciones de inserción</a></p>
+                    <p><a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">Crear ofertas dirigidas</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </li>
+  <li>
+</ul>
+
+<ul class="panelContent cardsF">
+<li>
+    <div class="cardSize">
+        <div class="cardPadding">
+            <div class="card">
+                <div class="cardImageOuter">
+                    <div class="cardImage">
+                        <img src="//docs.microsoft.com/media/common/i_configure-teams.svg" alt="Account icon"/>
+                    </div>
+                </div>
+                <div class="cardText">
+                    <h3>Administrar cuentas de usuario</h3>                    
+                    <p><a href="associate-azure-ad-with-dev-center.md">Configurar Azure AD</a></p>
+                    <p><a href="add-users-groups-and-azure-ad-applications.md">Agregar usuarios de la cuenta</a></p>
+                    <p><a href="set-custom-permissions-for-account-users.md">Roles y permisos</a></p>                   
+                </div>
+            </div>
+        </div>
+    </div>
+  </li>
+  <li>
+    <div class="cardSize">
+        <div class="cardPadding">
+            <div class="card">
+                <div class="cardImageOuter">
+                    <div class="cardImage">
+                        <img src="//docs.microsoft.com/media/common/i_extend.svg" alt="Shopping cart icon"/>
+                    </div>
+                </div>
+                <div class="cardText">
+                    <h3>Complementos (productos desde la aplicación)</h3>      
+                    <p><a href="add-on-submissions.md">Envíos de complementos</a></p>
+                    <p><a href="../monetize/in-app-purchases-and-trials.md">Habilitar complementos en el código de la aplicación</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </li>
+<li>
+    <div class="cardSize">
+        <div class="cardPadding">
+            <div class="card">
+                <div class="cardImageOuter">
+                    <div class="cardImage">
+                        <img src="//docs.microsoft.com/media/common/i_continuous-testing.svg" alt="Test icon"/>
+                    </div>
+                </div>
+                <div class="cardText">
+                    <h3>Estrategias de pruebas</h3>
+                    <p><a href="beta-testing-and-targeted-distribution.md">Pruebas beta y distribución dirigida</a></p>
+                    <p><a href="choose-visibility-options.md#audience">Audiencia privada</a></p>
+                    <p><a href="package-flights.md">Paquetes piloto</a></p>
+                     <p><a href="gradual-package-rollout.md">Lanzamiento gradual</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </li>
+  <li>
+</ul>
+
+<div class="container">
+    <ul class="cardsY panelContent featuredContent">
+       <li>
+            <a href="dev-center-insider-program.md">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="//docs.microsoft.com//media/common/i_preview.svg" src="//docs.microsoft.com//media/common/i_preview.svg" alt="Preview icon" />
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Programa Insider del Centro de desarrollo</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="distribute-lob-apps-to-enterprises.md">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="//docs.microsoft.com/media/common/i_portal.svg" src="//docs.microsoft.com/media/common/i_portal.svg" alt="Web portal icon" />
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Distribución de LOB</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="//docs.microsoft.com/legal/windows/agreements/app-developer-agreement">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="//docs.microsoft.com/media/common/i_learn-about.svg" src="//docs.microsoft.com//media/common/i_learn-about.svg" alt="Agreement icon" />
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Acuerdo para desarrolladores de aplicaciones</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+---

@@ -1,8 +1,9 @@
 ---
-title: "Fase de fusión de salida (OM)"
-description: "La fase de fusión de salida (OM) combina varios tipos de datos de salida (valores de sombreador de píxeles, información de profundidad y galería de símbolos) con los contenidos del destino de representación y los búferes de profundidad o galería de símbolos para generar el resultado final de la canalización."
+title: Fase de fusión de salida (OM)
+description: La fase de fusión de salida (OM) combina varios tipos de datos de salida (valores de sombreador de píxeles, información de profundidad y galería de símbolos) con los contenidos del destino de representación y los búferes de profundidad o galería de símbolos para generar el resultado final de la canalización.
 ms.assetid: ED2DC4A0-2B92-47AF-884A-BFC2183C78B8
-keywords: "Fase de fusión de salida (OM)"
+keywords:
+- Fase de fusión de salida (OM)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 47725e562008e2ac948f552107816fa9fe015001
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 7106b36b367716fdb53af3da506e60d019ac4e8e
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653854"
 ---
 # <a name="output-merger-om-stage"></a>Fase de fusión de salida (OM)
 
@@ -110,7 +112,7 @@ Puedes usar cualquier combinación de ranuras de destinos de representación (ha
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Configurar la funcionalidad de la galería de símbolos de profundidad](configuring-depth-stencil-functionality.md)</p></td>
+<td align="left"><p><a href="configuring-depth-stencil-functionality.md">Configurar la funcionalidad de la galería de símbolos de profundidad</a></p></td>
 <td align="left"><p>En esta sección se describen los pasos para configurar el búfer de galería de símbolos de profundidad y el estado de la galería de símbolos de profundidad para la fase de fusión de salida.</p></td>
 </tr>
 </tbody>

@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 ms.assetid: DE5B084C-DAC1-430B-A15B-5B3D5FB698F7
-title: "Optimizar las animaciones, multimedia e imágenes."
+title: Optimizar las animaciones, multimedia e imágenes.
 description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con animaciones suaves, alta velocidad de fotogramas, y capturas multimedia y reproducciones de alto rendimiento.
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 74f8b5a47a0ebee123ccad13bee2177870630a27
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 72b6ee6c57b9b4bebcda16b8e65a663c0e51788d
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1675512"
 ---
 # <a name="optimize-animations-media-and-images"></a>Optimizar las animaciones, multimedia e imágenes
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Crea aplicaciones para la Plataforma universal de Windows (UWP) con animaciones suaves, alta velocidad de fotogramas y capturas multimedia y reproducciones de alto rendimiento.
 
@@ -34,8 +35,8 @@ Está garantizado que todos estos tipos de animaciones son independientes:
 -   Animaciones de objetos que usan fotogramas clave
 -   Animaciones cuya duración es cero
 -   Animaciones de las propiedades [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) y [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772)
--   Animaciones de la propiedad [**UIElement.Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962)
--   Animaciones de las propiedades de tipo [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076), cuando se selecciona como destino la subpropiedad [**SolidColorBrush.Color**](https://msdn.microsoft.com/library/windows/apps/BR242963)
+-   Animaciones de la propiedad [**UIElement.Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)
+-   Animaciones de las propiedades de tipo [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush), cuando se selecciona como destino la subpropiedad [**SolidColorBrush.Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color)
 -   Animaciones de las siguientes propiedades [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) cuando tienen como destino las subpropiedades de esos tipos de valores devueltos:
 
     -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.rendertransform)
@@ -43,11 +44,11 @@ Está garantizado que todos estos tipos de animaciones son independientes:
     -   [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
     -   [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
 
-Las animaciones dependientes afectan al diseño y, por tanto, no se pueden calcular sin una entrada adicional desde el subproceso de interfaz de usuario. Asimismo, las animaciones dependientes incluyen modificaciones en propiedades como [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) y [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718). De manera predeterminada, las animaciones dependientes no se ejecutan y requieren que el desarrollador de la aplicación decida usarlas. Cuando se habilitan, se ejecutan de manera fluida si el subproceso de interfaz de usuario permanece desbloqueado, pero comienzan a trastabillar si el marco o la aplicación están realizando una gran cantidad de trabajo adicional en el suproceso de interfaz de usuario.
+Las animaciones dependientes afectan al diseño y, por tanto, no se pueden calcular sin una entrada adicional desde el subproceso de interfaz de usuario. Asimismo, las animaciones dependientes incluyen modificaciones en propiedades como [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) y [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height). De manera predeterminada, las animaciones dependientes no se ejecutan y requieren que el desarrollador de la aplicación decida usarlas. Cuando se habilitan, se ejecutan de manera fluida si el subproceso de interfaz de usuario permanece desbloqueado, pero comienzan a trastabillar si el marco o la aplicación están realizando una gran cantidad de trabajo adicional en el suproceso de interfaz de usuario.
 
 Casi todas las animaciones del marco XAML son independientes de manera predeterminada, pero puedes llevar a cabo algunas acciones para deshabilitar esta optimización. Ten cuidado si se producen estos escenarios en particular:
 
--   Establecer la propiedad [**EnableDependentAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210356) para permitir que una animación dependiente se ejecute en el subproceso de interfaz de usuario. Esto convierte esas animaciones a una versión independiente. Por ejemplo, anima [**ScaleTransform.ScaleX**](https://msdn.microsoft.com/library/windows/apps/BR242946) y [**ScaleTransform.ScaleY**](https://msdn.microsoft.com/library/windows/apps/BR242948) en lugar de las propiedades [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) y [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) de un objeto. No tengas miedo de escalar objetos como imágenes y texto. El marco solo aplica el escalado bilineal mientras se está animando [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940). La imagen y el texto se volverán a rasterizar a su tamaño final para garantizar que siempre sean claros.
+-   Establecer la propiedad [**EnableDependentAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210356) para permitir que una animación dependiente se ejecute en el subproceso de interfaz de usuario. Esto convierte esas animaciones a una versión independiente. Por ejemplo, anima [**ScaleTransform.ScaleX**](https://msdn.microsoft.com/library/windows/apps/BR242946) y [**ScaleTransform.ScaleY**](https://msdn.microsoft.com/library/windows/apps/BR242948) en lugar de las propiedades [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) y [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) de un objeto. No tengas miedo de escalar objetos como imágenes y texto. El marco solo aplica el escalado bilineal mientras se está animando [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940). La imagen y el texto se volverán a rasterizar a su tamaño final para garantizar que siempre sean claros.
 -   Realizar actualizaciones por fotograma, que son, de hecho, animaciones dependientes. Un ejemplo de esto es la aplicación de transformaciones en el controlador del evento [**CompositonTarget.Rendering**](https://msdn.microsoft.com/library/windows/apps/BR228127).
 -   Ejecutar cualquier animación que se considere independiente en un elemento con la propiedad [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.cachemode) establecida en **BitmapCache**. Esta acción se considera dependiente porque debe volver a rasterizarse la memoria caché de cada fotograma.
 
@@ -84,7 +85,7 @@ El audio, el vídeo y las imágenes son tipos de contenido atractivos que usan l
 
 Los archivos multimedia son algunos de los recursos más habituales y con mayor uso de memoria que suelen usarse en las aplicaciones. Como los recursos de archivos multimedia pueden aumentar considerablemente el tamaño de la superficie de memoria de la aplicación, no debes olvidar liberar el control de los elementos multimedia cuando la aplicación deje de usarlos.
 
-Por ejemplo, si la aplicación trabaja con un objeto [**RandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/BR241747) o [**IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718), asegúrate de llamar al método "Close" en el objeto cuando la aplicación haya dejado de usarlo, para liberar el objeto subyacente.
+Por ejemplo, si la aplicación trabaja con un objeto [**RandomAccessStream**](/uwp/api/Windows.Storage.Streams.RandomAccessStream) o [**IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718), asegúrate de llamar al método "Close" en el objeto cuando la aplicación haya dejado de usarlo, para liberar el objeto subyacente.
 
 ### <a name="display-full-screen-video-playback-when-possible"></a>Mostrar la reproducción de vídeo en pantalla completa siempre que sea posible
 
@@ -190,7 +191,7 @@ En caso de que no establezcas un tamaño de descodificación explícito, el leng
 
 -   La clase [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) está conectada al árbol XAML activo después de configurar el contenido con [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) o con [**UriSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.urisource.aspx).
 -   Se descodifica la imagen mediante la descodificación sincrónica, como sucede con [**SetSource**](https://msdn.microsoft.com/library/windows/apps/BR243255).
--   La imagen se oculta al establecer la propiedad [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) en 0 o [**Visibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility) en **Collapsed** en el elemento de imagen host, en el pincel o en cualquier elemento primario.
+-   La imagen se oculta al establecer la propiedad [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) en 0 o [**Visibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility) en **Collapsed** en el elemento de imagen host, en el pincel o en cualquier elemento primario.
 -   El control o el pincel de la imagen usan una enumeración [**Stretch**](https://msdn.microsoft.com/library/windows/apps/BR242968) establecida en **None**.
 -   La imagen se usa como una propiedad [**NineGrid**](https://msdn.microsoft.com/library/windows/apps/BR242756).
 -   `CacheMode="BitmapCache"` Se establece en el elemento de imagen o en cualquier elemento primario.

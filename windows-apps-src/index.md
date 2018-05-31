@@ -1,24 +1,51 @@
 ---
 author: mijacobs
 layout: LandingPage
-description: "La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows: PC, teléfonos, Xbox One, HoloLens y mucho más y publicarlas en la Tienda."
-title: "Documentación de UWP: desarrollador de aplicaciones UWP | Documentos de Microsoft"
+description: 'La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows: PC, teléfonos, Xbox One, HoloLens y mucho más y publicarlas en la Tienda.'
+title: 'Documentación de UWP: desarrollador de aplicaciones UWP | Documentos de Microsoft'
 ms.prod: windows
-ms.topic: article
+ms.topic: landing-page
 ms.author: mijacobs
 ms.date: 08/4/2017
 ms.technology: uwp
-keywords: "windows uwp, plataforma universal de windows, API de windows runtime, api de windows, referencia de api de windows, api de winrt, referencia de api de windows, api de uwp, referencia de api de uwp, desarrollar uwp, diseñar uwp, publicar uwp"
-ms.openlocfilehash: 92d80e140ee77ca29b04303e226056324e774eeb
-ms.sourcegitcommit: 0ebc8dca2fd9149ea163b7db9daa14520fc41db4
+keywords: windows uwp, plataforma universal de windows, API de windows runtime, api de windows, referencia de api de windows, api de winrt, referencia de api de windows, api de uwp, referencia de api de uwp, desarrollar uwp, diseñar uwp, publicar uwp
+ms.localizationpriority: medium
+ms.openlocfilehash: 48faa2eb29e29dd95028d8404190a7add2536352
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1692340"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentación de la Plataforma universal de Windows
-La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows: PC, teléfonos, Xbox One, HoloLens y mucho más y publicarlas en la Tienda.
+La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows (equipos, teléfonos, Xbox One, HoloLens y mucho más) y publicarlas en la Microsoft Store.
 
 <ul class="panelContent cardsF">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_whats-new.svg" alt="What's new icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Novedades</h3>
+                        <p>
+                            <a href="whats-new/windows-10-version-latest.md">Nuevas API y características</a>
+                        </p>
+                        <p>
+                            <a href="whats-new/windows-docs-latest.md">Novedades en la documentación</a>
+                        </p>
+                        <p>
+                            <a href="whats-new/experimental-apis.md">API experimentales</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -31,7 +58,7 @@ La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cual
                     <div class="cardText">
                         <h3>Introducción</h3>
                         <p>
-                            <a href="get-started/whats-a-uwp.md">¿Qué es una aplicación para UWP?</a>
+                            <a href="get-started/universal-application-platform-guide.md">¿Qué es una aplicación para UWP?</a>
                         </p>
                         <p>
                             <a href="get-started/sign-up.md">Registrarse para obtener una cuenta de desarrollador</a>
@@ -59,20 +86,17 @@ La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cual
                     <div class="cardText">
                         <h3>Diseño e interfaz de usuario</h3>
                         <p>
-                            <a href="layout/index.md">Diseño</a>
+                            <a href="design/basics/design-and-ui-intro.md">Conceptos básicos de diseño</a>
+                        </p>
+                         <p>
+                            <a href="design/fluent-design-system/index.md">Sistema FluentDesign</a>
                         </p>
                         <p>
-                            <a href="style/index.md">Estilo</a>
+                            <a href="design/controls-and-patterns/index.md">Controles y patrones</a>
                         </p>
                         <p>
-                            <a href="controls-and-patterns/index.md">Controles y patrones</a>
-                        </p>
-                        <p>
-                            <a href="design-downloads/index.md">Kits de herramientas de diseño</a>
-                        </p>
-                        <p>
-                            <a href="input-and-devices/index.md">Entrada y dispositivos</a>
-                        </p>
+                            <a href="design/downloads/index.md">Kits de herramientas de diseño</a>
+                        </p>                      
                     </div>
                 </div>
             </div>
@@ -88,9 +112,15 @@ La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cual
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Desarrollar magníficas aplicaciones</h3>
+                        <h3>Desarrollar aplicaciones</h3>
+                        <p>
+                            <a href="enterprise/index.md">Aplicaciones empresariales</a>
+                        </p>
                         <p>
                             <a href="packaging/index.md">Empaquetado de aplicaciones</a>
+                        </p>
+                        <p>
+                            <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Kit de herramientas de la comunidad de UWP</a>
                         </p>
                         <p>
                             <a href="porting/index.md">Migración de aplicaciones a Windows 10</a>
@@ -99,16 +129,47 @@ La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cual
                             <a href="winrt-components/index.md">Componentes de Windows Runtime</a>
                         </p>
                         <p>
-                            <a href="xbox-apps/index.md">UWP en Xbox One</a>
+                            <a href="apps-for-education/index.md">Aplicaciones educativas</a>
                         </p>
                         <p>
-                            <a href="apps-for-education/index.md">Aplicaciones educativas para UWP</a>
+                            <a href="porting/apps-on-arm.md">Windows10 en ARM</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_build.svg" alt="Develop Games icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Desarrollar juegos</h3>
+                        <p>
+                            <a href="gaming/e2e.md">Guía de desarrollo de juegos para Windows 10</a>
+                        </p>
+                        <p>
+                            <a href="gaming/index.md">Programación de juegos</a>
+                        </p>
+                        <p>
+                            <a href="gaming/directx-programming.md">Programación con DirectX</a>
+                        </p>
+                        <p>
+                            <a href="xbox-apps/index.md">UWP en Xbox One</a>
+                        </p>
+                        <p>
+                            <a href="xbox-live/index.md">XboxLive</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>    
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -152,10 +213,16 @@ La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cual
                     <div class="cardText">
                         <h3>Referencia de API</h3>
                         <p>
-                            <a href="whats-new/windows-10-version-1703.md">Novedades</a>
+                            <a href="//docs.microsoft.com/uwp/">API de la Plataforma universal de Windows</a>
                         </p>
                         <p>
-                            <a href="//docs.microsoft.com/uwp/">API de la Plataforma universal de Windows</a>
+                            <a href="//docs.microsoft.com/uwp/API">Espacios de nombres UWP de Windows</a>
+                        </p>
+                        <p>
+                            <a href="//docs.microsoft.com/uwp/extension-sdks">SDK de extensión</a>
+                        </p>
+                        <p>
+                            <a href="//docs.microsoft.com/uwp/schemas">Esquemas</a>
                         </p>
                     </div>
                 </div>
@@ -183,7 +250,7 @@ La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cual
                             <a href="//msdn.microsoft.com/library/windows/apps/mt691886.aspx">API de Microsoft Store Services SDK</a>
                         </p>
                         <p>
-                            <a href="//docs.microsoft.com/en-us/uwp/extension-sdks">Contratos de API y los SDK de extensión de familia de dispositivos</a>
+                            <a href="//docs.microsoft.com/uwp/extension-sdks">Contratos de API y los SDK de extensión de familia de dispositivos</a>
                         </p>
                         <p>
                             <a href="//docs.microsoft.com/uwp/schemas/">Especificaciones del esquema de archivo y XML para aplicaciones para UWP.</a>

@@ -1,8 +1,8 @@
 ---
 author: GrantMeStrength
-Description: "Compara las características de plataforma entre iOS, Android y Windows 10."
+Description: Compare platform features between iOS, Android, and Windows 10.
 Search.Product: eADQiWindows 10XVcnh
-title: "Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS"
+title: Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
 ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
@@ -10,11 +10,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
-ms.openlocfilehash: 72bb41939b0676dab7c212770cc9eddaef538c3f
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.localizationpriority: medium
+ms.openlocfilehash: 8ddf2066273439f14b63b0594a146927dec23ef6
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691464"
 ---
 #<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
 
@@ -382,16 +384,16 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <td align="left"><strong>Compras desde la aplicación.</strong> <br><br>Características de la plataforma que permiten al usuario realizar compras desde las aplicaciones.</td>
 <td align="left">La <strong>facturación desde la aplicación</strong> la proporciona Google Services. Los productos se agregan a la <strong>Consola para Desarrolladores de Google Play</strong>. Las compras desde la aplicación se implementan con la <strong>Google Play Billing Library</strong>.</td>
 <td align="left">Los productos se agregan a <strong>iTunes Connect</strong>. Las compras desde la aplicación se implementan mediante el marco <strong>StoreKit</strong>.<br/><br/>Los productos se compran mediante <strong>SKMutablePayment</strong> y <strong>SKPaymentQueue</strong>.</td>
-<td align="left">Las compras de productos desde la aplicación de la aplicación se crean <a href="https://msdn.microsoft.com/library/windows/apps/mt148551.aspx">agregándolas a tu aplicación y enviándolas a la Tienda</a>. <br/><br/>La <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx">clase CurrentApp</a></strong> se usa para definir las compras desde la aplicación. <br/><br/>El objeto <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.requestproductpurchaseasync.aspx">CurrentApp.RequestProductPurchaseAsync</a></strong> se usa para mostrar la interfaz de usuario que permite a los clientes comprar el producto.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219684.aspx">Habilitar compras de productos desde la aplicación</a></td>
+<td align="left">Las compras de productos desde la aplicación de la aplicación se crean <a href="https://msdn.microsoft.com/library/windows/apps/mt148551.aspx">agregándolas a tu aplicación y enviándolas a la Store</a>. <br/><br/>La <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx">clase CurrentApp</a></strong> se usa para definir las compras desde la aplicación. <br/><br/>El objeto <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.requestproductpurchaseasync.aspx">CurrentApp.RequestProductPurchaseAsync</a></strong> se usa para mostrar la interfaz de usuario que permite a los clientes comprar el producto.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219684.aspx">Habilitar compras de productos desde la aplicación</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Compras desde la aplicación consumibles.</strong> <br><br>Productos desde la aplicación que se pueden comprar, usar y luego volver a comprar.</td>
 <td align="left">Las compras consumibles se habilitan al realizar una compra normal y luego consumir con el objeto <strong>consumePurchase</strong>, lo que permite comprar, usar y luego volver a comprar.</td>
 <td align="left">Los productos consumibles se <strong>definen como productos consumibles</strong> en iTunes Connect.</td>
-<td align="left">Puedes admitir consumibles al <a href="https://msdn.microsoft.com/library/windows/apps/mt148534.aspx">definir su tipo de producto como Consumible cuando los envíes</a> a la Tienda. Luego, llamas a <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.reportconsumablefulfillmentasync.aspx">CurrentApp.ReportConsumableFulfillmentAsync</a></strong> después de que se haya realizado una compra de consumible para permitir que el cliente acceda a él.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219683.aspx">Habilitar compras de productos consumibles desde la aplicación</a></td>
+<td align="left">Puedes admitir consumibles al <a href="https://msdn.microsoft.com/library/windows/apps/mt148534.aspx">definir su tipo de producto como Consumible cuando los envíes</a> a la Store. Luego, llamas a <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.reportconsumablefulfillmentasync.aspx">CurrentApp.ReportConsumableFulfillmentAsync</a></strong> después de que se haya realizado una compra de consumible para permitir que el cliente acceda a él.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219683.aspx">Habilitar compras de productos consumibles desde la aplicación</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>Probar compras desde la aplicación.</strong> <br><br>Se permite probar el código de compra desde la aplicación sin poner la aplicación en la Tienda.</td>
+<td align="left"><strong>Probar compras desde la aplicación.</strong> <br><br>Se permite probar el código de compra desde la aplicación sin poner la aplicación en la Store.</td>
 <td align="left">Para realizar pruebas, se usa el <strong>espacio aislado de facturación desde la aplicación</strong>.</td>
 <td align="left">Para realizar pruebas, se usan <strong>cuentas de evaluador del espacio aislado</strong>.</td>
 <td align="left">Puedes probar las compras desde la aplicación mediante la clase <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx">CurrentAppSimulator</a></strong> en lugar del objeto CurrentApp.<br/><br/></td>
@@ -400,7 +402,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <td align="left"><strong>Pruebas.</strong> <br><br>Se permite limitar fácilmente el contenido o quitar la publicidad según una versión de prueba de una aplicación.</td>
 <td align="left">Google Play <strong>no admite oficialmente las pruebas de aplicación</strong>. Las pruebas o la eliminación de publicidad se logran creando una compra desde la aplicación y tomando la ruta de acceso al código correspondiente al confirmar que la compra se ha realizado correctamente.</td>
 <td align="left">La App Store<strong> no admite oficialmente las pruebas de aplicación</strong>. Las pruebas o la eliminación de publicidad se logran creando una compra desde la aplicación y tomando la ruta de acceso al código correspondiente al confirmar que la compra se ha realizado correctamente.</td>
-<td align="left">Para ofrecer una versión de prueba gratuita de la aplicación, usa la <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt148548.aspx">opción 'Prueba gratuita'</a></strong> al enviar la aplicación a la Tienda. Luego, puedes usar el objeto <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.licenseinformation.istrial.aspx">LicenseInformation.IsTrial</a></strong> para comprobar el estado de prueba de la aplicación y presentar distintas rutas de código, según corresponda. Puedes registrar el <a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.licenseinformation.licensechanged">evento LicenseChanged</a> para que reciba notificación cuando el usuario cambia el estado de prueba mientras se ejecuta la aplicación.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219685.aspx">Excluir o limitar las características de una versión de prueba</a></td>
+<td align="left">Para ofrecer una versión de prueba gratuita de la aplicación, usa la <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt148548.aspx">opción 'Prueba gratuita'</a></strong> al enviar la aplicación a la Store. Luego, puedes usar el objeto <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.licenseinformation.istrial.aspx">LicenseInformation.IsTrial</a></strong> para comprobar el estado de prueba de la aplicación y presentar distintas rutas de código, según corresponda. Puedes registrar el <a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.licenseinformation.licensechanged">evento LicenseChanged</a> para que reciba notificación cuando el usuario cambia el estado de prueba mientras se ejecuta la aplicación.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219685.aspx">Excluir o limitar las características de una versión de prueba</a></td>
 </tr>
 </tbody>
 </table>
@@ -473,7 +475,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Iconos y distintivos.</strong> <br><br>Presenta actualizaciones a los usuarios en la pantalla principal.</td>
 <td align="left">Los <strong>widgets de aplicación</strong> son vistas de la aplicación que se pueden integrar en la pantalla principal y pueden recibir actualizaciones periódicas. En Android no existe ningún <strong>sistema de distintivos</strong>. No existe ningún sistema idéntico a los iconos.</td>
-<td align="left">En iOS no existen <strong>iconos ni widgets</strong>. Puedes agregar un <strong>distintivo</strong> al icono con un número que puede cambiar en respuesta a notificaciones locales o remotas.</td>
+  <td align="left">Los <strong>Widgets</strong> en iOS aparecen en el Centro de notificaciones y se implementan como <strong>extensiones de la aplicación</strong>. Puedes también agregar un <strong>distintivo</strong> al icono con un número que puede cambiar en respuesta a notificaciones locales o remotas. No hay ningún sistema de iconos.</td>
 <td align="left">La aplicación tiene un <strong>icono</strong>, que se pueden anclar a la pantalla Inicio y se usa para mostrar la selección de texto, imágenes y un <strong>distintivo</strong> con glifos y números. Puedes actualizar el contenido de los iconos de la aplicación a través de notificaciones de inserción o programaciones predefinidas. Los iconos pueden ser adaptativos y pueden cambiar en función de dónde se muestran.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt185605.aspx">Crear iconos</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt590880.aspx">Crear iconos adaptables</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt187193.aspx">Elegir un método de notificación</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465403.aspx">Directrices sobre iconos y distintivos</a></td>
 </tr>
 <tr class="even">
@@ -485,7 +487,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Programar notificaciones locales.</strong> <br><br>Notificaciones locales que tu aplicación envía en una hora programada.</td>
 <td align="left">Las notificaciones y acciones se definen mediante un objeto <strong>NotificationCompat.Builder</strong> y se pueden programar y controlar desde la aplicación mediante los objetos <strong>AlarmManager</strong> y <strong>BroadcastReceiver</strong>.</td>
-<td align="left">Las notificaciones locales se crean mediante <strong>UILocalNotification</strong> y se pueden programar con ** UILocalNotification.scheduleLocalNotification:<strong>. | Puedes programar una notificación de sistema mediante </strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.scheduledtoastnotification.aspx">ScheduledToastNotification</a><strong>. Puedes enviar una notificación de icono desde la aplicación mediante la </strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.tilenotification.aspx">clase TileNotification</a><strong> o programar una notificación de icono con <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.scheduledtilenotification.aspx">ScheduledTileNotification</a>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt631604.aspx">Notificaciones del sistema interactivas y adaptables</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt593299.aspx">Enviar una notificación de icono local</a> | | </strong>Enviar notificaciones push.* * Una notificación enviada desde un servidor de notificaciones push y, opcionalmente, controlada desde la aplicación.</td>
+<td align="left">Las notificaciones locales se crean mediante <strong>UILocalNotification</strong> y se pueden programar con <b> UILocalNotification.scheduleLocalNotification:<strong>. | Puedes programar una notificación de sistema mediante </strong> <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.scheduledtoastnotification.aspx">ScheduledToastNotification</a><strong>. Puedes enviar una notificación de icono desde la aplicación mediante la clase </strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.tilenotification.aspx">TileNotification</a><strong> o programar una notificación de icono con <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.scheduledtilenotification.aspx">ScheduledTileNotification</a>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt631604.aspx">Notificaciones del sistema interactivas y adaptables</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt593299.aspx">Enviar una notificación de icono local</a> | | </strong>Enviar notificaciones push.</b> Notificación que se envía desde un servidor de notificación de inserción y, opcionalmente, controlada desde la aplicación.</td>
 <td align="left"><strong>Google Cloud Messaging</strong> proporciona compatibilidad con notificaciones de inserción para Android.</td>
 </tr>
 </tbody>

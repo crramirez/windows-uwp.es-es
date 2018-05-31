@@ -1,5 +1,5 @@
 ---
-description: "Este artículo explica cómo admitir las funciones copiar y pegar en aplicaciones para la Plataforma universal de Windows (UWP) usando el portapapeles."
+description: Este artículo explica cómo admitir las funciones copiar y pegar en aplicaciones para la Plataforma universal de Windows (UWP) usando el portapapeles.
 title: Copiar y pegar
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: msatranjr
@@ -9,18 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: f49a417e87199a625a023f7aa867f855cbd5d3c9
-ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.localizationpriority: medium
+ms.openlocfilehash: ca01be87619dc88cc39b0c2906d9689768c0fa46
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1662575"
 ---
-#<a name="copy-and-paste"></a>Copiar y pegar
+# <a name="copy-and-paste"></a>Copiar y pegar
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-Este artículo explica cómo admitir las funciones copiar y pegar en aplicaciones para la Plataforma universal de Windows (UWP) usando el portapapeles. Copiar y pegar es la forma clásica de intercambiar datos entre aplicaciones o dentro de una aplicación, y casi todas las aplicaciones admiten operaciones del portapapeles hasta cierto punto.
+En este artículo se explica cómo admitir las funciones copiar y pegar en aplicaciones para la Plataforma universal de Windows (UWP) usando el portapapeles. Copiar y pegar es la forma clásica de intercambiar datos entre aplicaciones o dentro de una aplicación, y casi todas las aplicaciones admiten operaciones del portapapeles hasta cierto punto.
 
 ## <a name="check-for-built-in-clipboard-support"></a>Comprobar la compatibilidad integrada del portapapeles
 

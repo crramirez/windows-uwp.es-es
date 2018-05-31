@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
-title: "Iniciar la aplicación predeterminada de un archivo"
-description: "Obtén información sobre cómo iniciar la aplicación predeterminada de un archivo."
+title: Iniciar la aplicación predeterminada de un archivo
+description: Obtén información sobre cómo iniciar la aplicación predeterminada de un archivo.
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 9727aa78a4df0ab204574b12e827f279144d3fe1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 294ab01d03fd407e8aa52a4e37f17f8ff6409ff3
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1663405"
 ---
 # <a name="launch-the-default-app-for-a-file"></a>Iniciar la aplicación predeterminada para un archivo
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 **API importantes**
 
@@ -27,7 +27,6 @@ Aprende cómo iniciar la aplicación predeterminada de un archivo. Muchas aplica
 
 ## <a name="get-the-file-object"></a>Obtener un objeto de archivo
 
-
 Primero, obtén un objeto [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) para el archivo.
 
 Si el archivo está incluido en el paquete de la aplicación, puedes usar la propiedad [**Package.InstalledLocation**](https://msdn.microsoft.com/library/windows/apps/br224681) para obtener un objeto [**Windows.Storage.StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) y el método [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para obtener el objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
@@ -36,16 +35,15 @@ Si el archivo está en una carpeta conocida, puedes usar las propiedades de la c
 
 ## <a name="launch-the-file"></a>Inicia el archivo
 
-
 Windows proporciona varias opciones distintas para iniciar el controlador predeterminado de un archivo. Estas opciones se explican en este gráfico y en las secciones que siguen.
 
 | Opción | Método | Descripción |
-|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------|--------|-------------|
 | Inicio predeterminado | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | Inicia el archivo especificado con el controlador predeterminado. |
 | Abrir con inicio | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicia el archivo especificado dejando que el usuario elija el controlador mediante el cuadro de diálogo Abrir con. |
 | Iniciar con una reserva de aplicación recomendada | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicia el archivo especificado con el controlador predeterminado. Si el sistema no tiene ningún controlador instalado, recomienda al usuario una aplicación de la tienda. |
-| Inicio con una vista deseada permanente | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (solo para Windows) | Inicia el archivo especificado con el controlador predeterminado. Especifica una preferencia para que permanezca en la pantalla después de iniciar y solicitar un tamaño de ventana específico. [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no se admite en la familia de dispositivos móviles.   |
- 
+| Inicio con una vista deseada permanente | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (solo para Windows) | Inicia el archivo especificado con el controlador predeterminado. Especifica una preferencia para que permanezca en la pantalla después de iniciar y solicitar un tamaño de ventana específico. [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no se admite en la familia de dispositivos móviles. |
+
 ### <a name="default-launch"></a>Inicio predeterminado
 
 Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) para iniciar la aplicación predeterminada. En este ejemplo, se usa el método [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para iniciar un archivo de imagen, test.png, incluido en el paquete de la aplicación.
@@ -350,9 +348,9 @@ En algunos casos, el usuario podría no tener instalada una aplicación para adm
 
 Las aplicaciones de origen que llaman a [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) pueden solicitar que permanezcan en pantalla después de iniciarse un archivo. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el archivo. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. También puedes usar el elemento **DesiredRemainingView** para indicar que la aplicación de origen no necesita permanecer en pantalla después de iniciar un archivo y que la aplicación de destino puede sustituirla por completo. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
 
-> **Nota** Windows tiene en cuenta diferentes factores a la hora de determinar el tamaño final de la ventana de la aplicación de origen como, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. Aunque establezcas la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), no podrás garantizar un comportamiento de ventanas específico para la aplicación de origen.
+> **Nota** Windows tiene en cuenta diferentes factores a la hora de determinar el tamaño final de la ventana de la aplicación de origen como, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. Establecer [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no garantiza un comportamiento de ventanas específico para la aplicación de origen.
 
-**Familia de dispositivos móviles: **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no se admite en la familia de dispositivos móviles.
+**Mobile device family:  **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no se admite en la familia de dispositivos móviles.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cpp
@@ -432,10 +430,9 @@ No puedes iniciar tipos de archivo que contengan código o script, como archivos
 
 Si intentas iniciar un tipo de archivo restringido, se producirá un error en el inicio y se invocará a la devolución de llamada de error. Si tu aplicación controla una gran cantidad de tipos de archivo y esperas que este error pueda detectarse, conviene que proveas al usuario de una experiencia de reserva. Por ejemplo, puedes ofrecerle la posibilidad de guardar el archivo en el escritorio para poder abrirlo desde allí.
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
 
 **Tareas**

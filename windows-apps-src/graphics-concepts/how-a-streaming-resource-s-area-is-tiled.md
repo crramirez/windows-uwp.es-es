@@ -1,11 +1,11 @@
 ---
-title: "Cómo se organiza en iconos el área de un recurso de streaming"
-description: "Cuando creas un recurso de streaming, las dimensiones, el tamaño del elemento de formato y el número de mapas MIP o los segmentos de matriz (si procede) determinan el número de iconos que son necesarios para cubrir toda la superficie."
+title: Cómo se organiza en iconos el área de un recurso de streaming
+description: Cuando creas un recurso de streaming, las dimensiones, el tamaño del elemento de formato y el número de mapas MIP o los segmentos de matriz (si procede) determinan el número de iconos que son necesarios para cubrir toda la superficie.
 ms.assetid: 3485FD8D-2A06-4B0A-8810-ECF37736F94B
 keywords:
-- "Cómo se organiza en iconos el área de un recurso de streaming"
-- "área de recursos, en iconos"
-- "tablas de tamaño, size tables, recursos, resources, iconos, tiled"
+- Cómo se organiza en iconos el área de un recurso de streaming
+- área de recursos, en iconos
+- tablas de tamaño, size tables, recursos, resources, iconos, tiled
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -13,11 +13,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 257522f8d00596aa6bb60a87277d4e1a5ccdcf89
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: d9bf664da5223ff62f0e3612587e4572dab58e68
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653155"
 ---
 # <a name="how-a-streaming-resources-area-is-tiled"></a>Cómo se organiza en iconos el área de un recurso de streaming
 
@@ -48,19 +49,19 @@ El diseño de los datos dentro de un icono no depende de dónde se asigna el ico
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Icono de subrecurso Texture2D y Texture2DArray](texture2d-and-texture2darray-subresource-tiling.md)</p></td>
-<td align="left"><p>Estas tablas muestran cómo los subrecursos [<strong>Texture2D</strong>](https://msdn.microsoft.com/library/windows/desktop/ff471525) y [<strong>Texture2DArray</strong>](https://msdn.microsoft.com/library/windows/desktop/ff471526) se colocan en iconos.</p></td>
+<td align="left"><p><a href="texture2d-and-texture2darray-subresource-tiling.md">Icono de subrecurso Texture2D y Texture2DArray</a></p></td>
+<td align="left"><p>Estas tablas muestran cómo los subrecursos <a href="https://msdn.microsoft.com/library/windows/desktop/ff471525"><strong>Texture2D</strong></a> y <a href="https://msdn.microsoft.com/library/windows/desktop/ff471526"><strong>Texture2DArray</strong></a> se organizan en mosaico.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Icono de subrecurso Texture3D](texture3d-subresource-tiling.md)</p></td>
-<td align="left"><p>En esta tabla se muestra cómo los subrecursos [<strong>Texture3D</strong>](https://msdn.microsoft.com/library/windows/desktop/ff471562) se colocan en iconos.</p></td>
+<td align="left"><p><a href="texture3d-subresource-tiling.md">Icono de subrecurso Texture3D</a></p></td>
+<td align="left"><p>Esta tabla muestra cómo los subrecursos <a href="https://msdn.microsoft.com/library/windows/desktop/ff471562"><strong>Texture3D</strong></a> se organizan en mosaico.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Icono de búfer](buffer-tiling.md)</p></td>
-<td align="left"><p>Un recurso de [búfer](introduction-to-buffers.md) se divide en iconos de 64KB, con algo de espacio vacío en el último icono si el tamaño no es un múltiplo de 64KB.</p></td>
+<td align="left"><p><a href="buffer-tiling.md">Icono de búfer</a></p></td>
+<td align="left"><p>Un recurso de <a href="introduction-to-buffers.md">búfer</a> se divide en iconos de 64KB, con algo de espacio vacío en el último icono si el tamaño no es un múltiplo de 64KB.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Empaquetado de mapas MIP](mipmap-packing.md)</p></td>
+<td align="left"><p><a href="mipmap-packing.md">Empaquetado de mapas MIP</a></p></td>
 <td align="left"><p>Se pueden empaquetar algunos MIP (por segmento de matriz) en un determinado número de iconos, según las dimensiones, el formato, el número de mapas MIP y los segmentos de matriz de un recurso de streaming.</p></td>
 </tr>
 </tbody>

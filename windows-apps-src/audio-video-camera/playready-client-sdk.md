@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: DD8FFA8C-DFF0-41E3-8F7A-345C5A248FC2
-description: "En este tema se describe cómo agregar contenido multimedia protegido con PlayReady, a una aplicación para la Plataforma universal de Windows (UWP)."
+description: En este tema se describe cómo agregar contenido multimedia protegido con PlayReady, a una aplicación para la Plataforma universal de Windows (UWP).
 title: DRM de PlayReady
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 803070143a3d07bfbdbb4f3e1b7b70858b75e0f9
-ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.localizationpriority: medium
+ms.openlocfilehash: c466587a9e1d190368de0f142fea9d902e731aba
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1692200"
 ---
 # <a name="playready-drm"></a>DRM de PlayReady
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tema se describe cómo agregar contenido multimedia protegido con PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
@@ -80,7 +81,7 @@ Se agregaron a la tecnología DRM de PlayReady las siguientes nuevas interfaces,
 -   Clase [**PlayReadySecureStopIterator**](https://msdn.microsoft.com/library/windows/apps/dn986375)
 -   Enumerador [**PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/library/windows/apps/dn986265)
 
-Se ha creado una nueva muestra para mostrar cómo usar las nuevas características de la tecnología DRM de PlayReady. Dicha muestra se puede descargar desde [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](http://go.microsoft.com/fwlink/p/?linkid=331670).
+Se ha creado una nueva muestra para ilustrar cómo usar las nuevas características de la tecnología DRM de PlayReady. La muestra puede descargarse en [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](http://go.microsoft.com/fwlink/p/?linkid=331670).
 
 ## <a name="things-to-consider"></a>Cosas a tener en cuenta
 
@@ -157,8 +158,8 @@ En la siguiente tabla se muestran las asignaciones entre varios OPL en la licenc
     </tr>
     <tr>
         <th>270</th>
-        <td>**SWDRM**: intenta usar HDCP. Si no se puede usar HDCP, el equipo restringirá la resolución eficaz a 520 000 píxeles por fotograma y pasará el contenido.</td>
-        <td>**HWDRM**: pasa contenido con HDCP. Si no se puede usar HDCP, se bloquea la reproducción en los puertos HDMI/DVI.</td>
+        <td><b>SWDRM</b>: intenta usar HDCP. Si no se puede usar HDCP, el equipo restringirá la resolución eficaz a 520 000 píxeles por fotograma y pasará el contenido.</td>
+        <td><b>HWDRM</b>: pasa contenido con HDCP. Si no se puede usar HDCP, se bloquea la reproducción en los puertos HDMI/DVI.</td>
     </tr>
     <tr>
         <th>300</th>
@@ -173,7 +174,7 @@ En la siguiente tabla se muestran las asignaciones entre varios OPL en la licenc
     </tr>
     <tr>
         <th>400</th>
-        <td rowspan="2">Windows10 nunca pasa contenido de vídeo digital comprimido a salidas, independientemente del valor del OPL posterior. Para obtener más información sobre el contenido de vídeo digital comprimido, consulta [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/) (Reglas de cumplimiento para productos PlayReady).</td>
+        <td rowspan="2">Windows10 nunca pasa contenido de vídeo digital comprimido a salidas, independientemente del valor del OPL posterior. Para obtener más información sobre el contenido de vídeo digital comprimido, consulta <a href="https://www.microsoft.com/playready/licensing/compliance/">Compliance Rules for PlayReady Products</a> (Reglas de cumplimiento para productos PlayReady).</td>
         <td colspan="2" rowspan="2">N/A\*</td>
     </tr>
     <tr>
@@ -273,7 +274,7 @@ La DRM de PlayReady permite reproducir contenido a través de la salida Miracast
     <tr>
         <th>400</th>
         <td rowspan="2" colspan="2">N/A\*</td>
-        <td rowspan="2">Windows10 nunca pasa contenido de vídeo digital comprimido a salidas, independientemente del valor del OPL posterior. Para obtener más información sobre el contenido de vídeo digital comprimido, consulta [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/) (Reglas de cumplimiento para productos PlayReady).</td>
+        <td rowspan="2">Windows10 nunca pasa contenido de vídeo digital comprimido a salidas, independientemente del valor del OPL posterior. Para obtener más información sobre el contenido de vídeo digital comprimido, consulta <a href="https://www.microsoft.com/playready/licensing/compliance/">Compliance Rules for PlayReady Products</a> (Reglas de cumplimiento para productos PlayReady).</td>
         <td rowspan="2">N/A\*</td>
     </tr>
     <tr>
@@ -331,15 +332,15 @@ La siguiente tabla describe la implementación de la DRM de PlayReady para Windo
         <th>Monitor de PC analógico</th>
         <td>D783A191-E083-4BAF-B2DA-E69F910B3772</td>
         <td>La salida conectada es: VGA, DVI&ndash;analógica, etc..</td>
-        <td>**SWDRM:** el equipo restringirá la resolución eficaz a 520 000epx por fotograma y pasará contenido.</td>
-        <td>**HWDRM:** NO pasa contenido.</td>
+        <td><b>SWDRM:</b> el equipo restringirá la resolución eficaz a 520 000epx por fotograma y pasará contenido.</td>
+        <td><b>HWDRM:</b> NO pasa contenido.</td>
     </tr>
     <tr>
         <th>Componente analógico</th>
         <td>811C5110-46C8-4C6E-8163-C0482A15D47E</td>
         <td>La salida conectada es: Componente</td>
-        <td>**SWDRM:** el equipo restringirá la resolución eficaz a 520 000epx por fotograma y pasará contenido.</td>
-        <td>**HWDRM:** NO pasa contenido.</td>
+        <td><b>SWDRM:</b> el equipo restringirá la resolución eficaz a 520 000epx por fotograma y pasará contenido.</td>
+        <td><b>HWDRM:</b> NO pasa contenido.</td>
     </tr>
     <tr>
         <th rowspan="2">Salidas de TV analógica</th>
@@ -383,15 +384,15 @@ La siguiente tabla describe la implementación de la DRM de PlayReady para Windo
         <th>Salida desconocida</th>
         <td>786627D8-C2A6-44BE-8F88-08AE255B01A7</td>
         <td>Si no se puede determinar la salida de un modo razonable o no se puede establecer OPM con el controlador de gráficos.</td>
-        <td>**SWDRM:** pasa contenido.</td>
-        <td>**HWDRM:** NO pasa contenido.</td>
+        <td><b>SWDRM:</b> pasa contenido.</td>
+        <td><b>HWDRM:</b> NO pasa contenido.</td>
     </tr>
     <tr>
         <th>Salida desconocida con restricción.</th>
         <td>B621D91F-EDCC-4035-8D4B-DC71760D43E9</td>
         <td>Si no se puede determinar la salida de un modo razonable o no se puede establecer OPM con el controlador de gráficos.</td>
-        <td>**SWDRM:** el equipo restringirá la resolución eficaz a 520 000epx por fotograma y pasará contenido.</td>
-        <td>**HWDRM:** NO pasa contenido.</td>
+        <td><b>SWDRM:</b> el equipo restringirá la resolución eficaz a 520 000epx por fotograma y pasará contenido.</td>
+        <td><b>HWDRM:</b> NO pasa contenido.</td>
     </tr>
 </table>
 <br/>
@@ -401,12 +402,12 @@ La siguiente tabla describe la implementación de la DRM de PlayReady para Windo
 Antes de empezar a crear la aplicación para UWP protegida con PlayReady, es necesario instalar el siguiente software en el sistema:
 
 -   Windows 10.
--   Debes usar Microsoft Visual Studio 2015 o una versión posterior si pretendes compilar cualquiera de las muestras para aplicaciones para UWP para DRM de PlayReady. Todavía se puede usar Microsoft Visual Studio 2013 para compilar cualquiera de las muestras de la tecnología DRM de PlayReady para aplicaciones de la Tienda Windows 8.1.
+-   Debes usar Microsoft Visual Studio 2015 o una versión posterior si pretendes compilar cualquiera de las muestras para aplicaciones para UWP para DRM de PlayReady. Todavía se puede usar Microsoft Visual Studio 2013 para compilar cualquiera de las muestras de la tecnología DRM de PlayReady para aplicaciones de la Store de Windows 8.1.
 
 <!--This is no longer available-->
 <!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).-->
 
-## <a name="playready-windows-store-app-migration-guide"></a>Guía de migración de la aplicación de la Tienda Windows PlayReady
+## <a name="playready-uwp-app-migration-guide"></a>Guía de migración de la aplicación para UWP de PlayReady
 
 Esta sección incluye información sobre cómo migrar las aplicaciones PlayReady de la Tienda Windows8.x existentes a Windows10.
 
@@ -421,14 +422,14 @@ En lo relacionado con el administrador de protección multimedia, asegúrate de 
 ```cs
 var mediaProtectionManager = new Windows.Media.Protection.MediaProtectionManager();
 
-mediaProtectionManager.properties["Windows.Media.Protection.MediaProtectionSystemId"] = 
+mediaProtectionManager.Properties["Windows.Media.Protection.MediaProtectionSystemId"] = 
              '{F4637010-03C3-42CD-B932-B48ADF3A6A54}'
 var cpsystems = new Windows.Foundation.Collections.PropertySet();
 cpsystems["{F4637010-03C3-42CD-B932-B48ADF3A6A54}"] = 
                 "Windows.Media.Protection.PlayReady.PlayReadyWinRTTrustedInput";
-mediaProtectionManager.properties["Windows.Media.Protection.MediaProtectionSystemIdMapping"] = cpsystems;
+mediaProtectionManager.Properties["Windows.Media.Protection.MediaProtectionSystemIdMapping"] = cpsystems;
 
-mediaProtectionManager.properties["Windows.Media.Protection.MediaProtectionContainerGuid"] = 
+mediaProtectionManager.Properties["Windows.Media.Protection.MediaProtectionContainerGuid"] = 
                 "{9A04F079-9840-4286-AB92-E65BE0885F95}";
 ```
 
@@ -473,7 +474,7 @@ En versiones anteriores del DRM de PlayReady, las licencias no persistentes solo
     ```
     
 ## <a name="query-for-protection-capabilities"></a>Consultar las capacidades de protección
-A partir de Windows 10, versión 1703, puedes consultar las funcionalidades de DRM de hardware, como descodificar códecs, la resolución y las protecciones de salida (HDCP). Las consultas se realizan con el método [**IsTypeSupported**](https://docs.microsoft.com/uwp/api/windows.media.protection.protectioncapabilities#Windows_Media_Protection_ProtectionCapabilities_IsTypeSupported_System_String_System_String_) que toma una cadena que representa las funcionalidades para las que se consulta al soporte técnico y una cadena que especifica el sistema de claves al que se aplica la consulta. Para una lista de los valores de cadena compatibles, consulta la página de referencia de la API para [**IsTypeSupported**](https://docs.microsoft.com/uwp/api/windows.media.protection.protectioncapabilities#Windows_Media_Protection_ProtectionCapabilities_IsTypeSupported_System_String_System_String_). En el siguiente ejemplo de código se muestra el uso de este método.  
+A partir de Windows 10, versión 1703, puedes consultar las funcionalidades de DRM de hardware, como descodificar códecs, la resolución y las protecciones de salida (HDCP). Las consultas se realizan con el método [**IsTypeSupported**](https://docs.microsoft.com/uwp/api/windows.media.protection.protectioncapabilities.istypesupported) que toma una cadena que representa las funcionalidades para las que se consulta al soporte técnico y una cadena que especifica el sistema de claves al que se aplica la consulta. Para una lista de los valores de cadena compatibles, consulta la página de referencia de la API para [**IsTypeSupported**](https://docs.microsoft.com/uwp/api/windows.media.protection.protectioncapabilities.istypesupported). En el siguiente ejemplo de código se muestra el uso de este método.  
 
     ```cs
     using namespace Windows::Media::Protection;
