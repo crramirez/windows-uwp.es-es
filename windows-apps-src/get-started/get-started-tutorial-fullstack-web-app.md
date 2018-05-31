@@ -1,26 +1,28 @@
 ---
 author: libbymc
-title: "Tutorial de introducción: aplicación web de una sola página con back-end de API de REST"
-description: "Usa las tecnologías web populares para crear una aplicación web hospedada para la Tienda Windows"
-keywords: "hosted web app, aplicación web hospedada, HWA, HWA, REST API, API de REST, single-page app, aplicación de una sola página, SPA, SPA"
+title: Crear una web de una sola página con back-end de API de REST
+description: Usa las tecnologías web populares para crear una aplicación web hospedada para Microsoft Store
+keywords: hosted web app, aplicación web hospedada, HWA, HWA, REST API, API de REST, single-page app, aplicación de una sola página, SPA, SPA
 ms.author: libbymc
 ms.date: 05/10/2017
 ms.topic: article
 ms.prod: Microsoft Edge, Azure, Visual Studio Code
 ms.technology: web
-ms.openlocfilehash: 9dd2232f17e31a92f8cbf6fbffeebc0c21a798c5
-ms.sourcegitcommit: 6b772d2a224f8a9c557dc517c6ec0592545e9a43
+ms.localizationpriority: medium
+ms.openlocfilehash: 5d20d0b8f9c3e14bf341d2cc507af45b9138b014
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691254"
 ---
-# <a name="get-started-tutorial---single-page-web-app-with-rest-api-backend"></a>Tutorial de introducción: aplicación web de una sola página con back-end de API de REST
+# <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Crea una web de una sola página con back-end de API de REST
 
-**Crear una aplicación web hospedada para la Tienda Windows con tecnologías web populares de apilamiento completo**
+**Crea una aplicación web hospedada para Microsoft Store con tecnologías web populares de apilamiento completo**
 
 ![Juego de memoria sencillo como aplicación web de una sola página](images/fullstack.png)
 
-En este tutorial de dos partes se ofrece paseo rápido por el desarrollo web de apilamiento completo moderno mientras creas un juego de memoria sencillo que funciona en el explorador y como aplicación web hospedada para la Tienda Windows. En la parte I vas a crear un servicio sencillo de API de REST para el back-end del juego. Al hospedar la lógica del juego en la nube como servicio de API, se conserva el estado del juego y el usuario puede seguir jugando en la misma instancia de juego en diferentes dispositivos. En la parte II crearás la interfaz de usuario de front-end como aplicación web de una sola página con diseño dinámico.
+Este tutorial de dos partes te ofrece una descripción rápida del desarrollo web de apilamiento completo moderno mientras creas un juego de memoria sencillo que funciona en el explorador y como aplicación web hospedada para Microsoft Store. En la parte I vas a crear un servicio sencillo de API de REST para el back-end del juego. Al hospedar la lógica del juego en la nube como servicio de API, se conserva el estado del juego y el usuario puede seguir jugando en la misma instancia de juego en diferentes dispositivos. En la parte II crearás la interfaz de usuario de front-end como aplicación web de una sola página con diseño dinámico.
 
 Usaremos algunas de las tecnologías web más populares, incluido el tiempo de ejecución [Node.js](https://nodejs.org/en/) y [Express](http://expressjs.com/) para el desarrollo del lado servidor, el marco de trabajo de la interfaz de usuario [Bootstrap](http://getbootstrap.com/), el motor de plantillas [Pug](https://www.npmjs.com/package/pug) y [Swagger](http://swagger.io/tools/) para la creación de las API de RESTful. También podrás ganar experiencia en [Azure Portal](https://ms.portal.azure.com/) para el hospedaje y trabajo en la nube con el editor [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -36,13 +38,13 @@ Si todavía no tienes estos recursos en la máquina, sigue estos vínculos de de
 
 Si quieres completar los pasos finales del hospedaje del servicio de API y la aplicación de juego de memoria en Microsoft Azure, tendrás que [crear una cuenta gratuita de Azure](https://azure.microsoft.com/en-us/free/) si todavía no lo has hecho.
 
-Si decides dejar (o posponer) la parte de Azure, simplemente omite las secciones finales de las partes I y II, que abarcan el hospedaje y el empaquetado de la aplicación en Azure para la Tienda Windows. El servicio de API y la aplicación web que crees se podrán ejecutar localmente (desde `http://localhost:8000` y `http://localhost:3000`, respectivamente) en tu máquina.
+Si decides dejar (o posponer) la parte de Azure, simplemente omite las secciones finales de las partes I y II, que abarcan el hospedaje y el empaquetado de la aplicación en Azure para Microsoft Store. El servicio de API y la aplicación web que crees se podrán ejecutar localmente (desde `http://localhost:8000` y `http://localhost:3000`, respectivamente) en tu máquina.
 
 ## <a name="part-i-build-a-rest-api-backend"></a>Parte I: crear un back-end de API de REST
 
 Primero, crearemos una API del juego de memoria sencillo para iniciar nuestra aplicación web de juego de memoria. Usaremos [Swagger](http://swagger.io/) para definir nuestra API y generar código scaffolding y una interfaz de usuario web para la prueba manual.
 
-Si quieres omitir esta parte e ir directamente a [Parte II: crear una aplicación web de una sola página](#part-ii-build-a-single-page-web-application), aquí tienes el [código terminado para la parte I](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend). Sigue las instrucciones de *LÉAME* para que el código funcione de forma local o consulta *5. Hospedar el servicio de API en Azure y habilitar CORS* para ejecutarlo desde Azure.
+Si quieres omitir esta parte e ir directamente a [Parte II: crear una aplicación web de una sola página](#part-ii-build-a-single-page-web-appl), aquí tienes el [código terminado para la parte I](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend). Sigue las instrucciones de *LÉAME* para que el código funcione de forma local o consulta *5. Hospedar el servicio de API en Azure y habilitar CORS* para ejecutarlo desde Azure.
 
 ### <a name="game-overview"></a>Introducción al juego
 
@@ -211,7 +213,7 @@ Con esto, ha llegado el momento de ejecutar el servidor. Vamos a configurar Visu
 ]
 ```
 
-Ahora presiona F5 y abre el explorador en [http://localhost:8000](http://localhost:8000). La página debe abrirse en la interfaz de usuario Swagger para nuestra API del juego de memoria y desde allí puedes expandir los detalles y los campos de entrada para cada uno de los métodos. Incluso puedes intentar llamar a las API, aunque sus respuestas contendrán solamente datos ficticios (proporcionados por el módulo [Swagmock](https://www.npmjs.com/package/swagmock)). Es el momento de agregar la lógica del juego para que estas API sean reales.
+Ahora pulsa F5 y abre el explorador en [http://localhost:8000](http://localhost:8000). La página debe abrirse en la interfaz de usuario Swagger para nuestra API del juego de memoria y desde allí puedes expandir los detalles y los campos de entrada para cada uno de los métodos. Incluso puedes intentar llamar a las API, aunque sus respuestas contendrán solamente datos ficticios (proporcionados por el módulo [Swagmock](https://www.npmjs.com/package/swagmock)). Es el momento de agregar la lógica del juego para que estas API sean reales.
 
 ### <a name="3-set-up-your-route-handlers"></a>3. Configurar los controladores de rutas
 
@@ -237,7 +239,7 @@ En este nivel de nuestro programa se representan las cartas de memoria y se prop
 
 Por cuestiones de simplicidad, almacenamos nuestro tablero del juego en una variable global (`global.board`) en nuestro servidor Node. Pero en realidad deberías usar almacenamiento en la nube (como Google [Cloud Datastore](https://cloud.google.com/datastore/) o Azure [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/)) para convertirlo en un servicio de API de juego de memoria viable que admita simultáneamente varios juegos y jugadores.
 
-Asegúrate de haber guardado todos los cambios en VS Code, vuelve a iniciar el servidor (F5 en VS Code o `npm start` desde el shell y, a continuación, ves hasta [http://localhost:8000](http://localhost:8000)) para probar la API del juego.
+Asegúrate de haber guardado todos los cambios en código VS, vuelve a iniciar el servidor (F5 en código VS o `npm start` desde el shell y, a continuación, ve a [http://localhost:8000](http://localhost:8000)) para probar la API del juego.
 
 Cada vez que pulses el botón **Pruébalo** en una de las operaciones **/game**, **/guess** o **/new**, comprueba el **Cuerpo de la respuesta** resultante y el **Código de respuesta** más abajo, para comprobar que todo funciona como se espera.
 
@@ -245,15 +247,15 @@ Intenta:
 
 1. Crear un nuevo juego `size=2`.
 
-    ![Iniciar un nuevo juego de memoria desde la interfaz de usuario Swagger](images\swagger_new.png)
+    ![Iniciar un nuevo juego de memoria desde la interfaz de usuario Swagger](images/swagger_new.png)
 
 2. Adivinar un par de valores.
 
-    ![Adivinar una carta desde la interfaz de usuario Swagger](images\swagger_guess.png)
+    ![Adivinar una carta desde la interfaz de usuario Swagger](images/swagger_guess.png)
 
 3. Comprobar el tablero del juego a medida que avanza el juego.
 
-    ![Comprobar el estado del juego en la interfaz de usuario Swagger](images\swagger_game.png)
+    ![Comprobar el estado del juego en la interfaz de usuario Swagger](images/swagger_game.png)
 
 Si todo parece correcto, tu servicio de API está listo para hospedarse en Azure. Si te encuentras con problemas, intenta comentar las siguientes líneas en \data\game.js.
 
@@ -276,11 +278,11 @@ Con este cambio, el método **GET /game** devolverá todos los valores de carta 
 
 Los documentos de Azure te guiarán en los procedimientos siguientes:
 
- - [Registro de una nueva *Aplicación de API* en el Azure Portal](https://docs.microsoft.com/en-us/azure/app-service-api/app-service-api-nodejs-api-app#a-idcreateapiappa-create-a-new-api-app)
- - [Configuración de la aplicación de API para la implementación de Git](https://docs.microsoft.com/en-us/azure/app-service-api/app-service-api-nodejs-api-app#set-up-your-new-api-app-for-git-deployment) e
- - [Implementación de código de aplicación de API en Azure](https://docs.microsoft.com/en-us/azure/app-service-api/app-service-api-nodejs-api-app#deploy-your-api-code-to-azure)
+ - [Registro de una nueva *Aplicación de API* en el Azure Portal](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#createapiapp)
+ - [Configuración de la aplicación de API para la implementación de Git](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git) e
+ - [Implementación de código de aplicación de API en Azure](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
 
-Al registrar la aplicación, intenta diferenciar tu *Nombre de la aplicación* (para evitar conflictos de nomenclatura con otras personas que soliciten variaciones la dirección URL *http://memorygameapi.azurewebsites.net*).
+Al registrar la aplicación, intenta diferenciar tu *Nombre de la aplicación* (para evitar conflictos de nomenclatura con otras personas que soliciten variaciones en la URL *http://memorygameapi.azurewebsites.net*).
 
 Si has llegado hasta aquí y Azure te sirve ahora la interfaz de usuario Swagger, queda solo un paso final para el back-end del juego de memoria. Desde [Azure Portal](https://portal.azure.com), selecciona tu *App Service* recién creado y, a continuación, selecciona o busca la opción **CORS** (uso compartido de recursos entre orígenes). En **Orígenes permitidos**, agrega un asterisco (`*`) y haz clic en **Guardar**. Esto te permite realizar llamadas entre orígenes a tu servicio de API desde el front-end del juego de memoria mientras lo desarrollas en tu máquina local. Después de finalizar el front-end del juego de memoria e implementarlo en Azure, puedes reemplazar esta entrada por la dirección URL específica de la aplicación web.
 
@@ -305,7 +307,7 @@ En la parte II de este tutorial adquirirás experiencia con:
 * [Node.js](https://nodejs.org/en/): para crear el servidor que hospeda el juego
 * [jQuery](http://jquery.com/): una biblioteca JavaScript
 * [Express](http://expressjs.com/): para el marco de trabajo de la aplicación web
-* [Pug](https://pugjs.org/): (formalmente Jade) para el motor de plantillas
+* [Pug](https://pugjs.org/): (antes Jade) para el motor de plantillas
 * [Bootstrap](http://getbootstrap.com/): para el diseño dinámico
 * [Visual Studio Code](https://code.visualstudio.com/): para la creación, markdown, visualización y depuración del código
 
@@ -335,9 +337,9 @@ Empecemos por crear el proyecto de Node.js con Express.
     npm start
     ```
 
-5. Para ver la aplicación, ve a [http://localhost:3000/](http://localhost:3000/).
+5. Puedes ver tu aplicación yendo a [http://localhost:3000/](http://localhost:3000/).
 
-    ![Captura de pantalla de http://localhost:3000/](./images/express.png)
+    ![Una captura de pantalla de http://localhost:3000/](./images/express.png)
 
 6. Cambia el título predeterminado de la aplicación web editando index.js en el directorio memory\routes. Cambia `Express` en la línea de abajo a `Memory Game` (u otro título de tu elección).
 
@@ -379,24 +381,24 @@ Puedes encontrar los archivos que necesitas para esta mitad del tutorial en la c
 
 3. A continuación, rellena la función `restoreGame()` que restaura el último juego que se ha jugado. Para simplificar, la aplicación siempre carga el último juego. Si no hay ningún juego almacenado en el servidor, usa el menú desplegable para iniciar un nuevo juego. 
 
-Copia y pega este código en `restoreGame()`.
+    Copia y pega este código en `restoreGame()`.
 
-    ``` javascript 
-    // reset the game
-    gameBoardSize = 0;
-    cardsFlipped = 0;
+   ``` javascript 
+   // reset the game
+   gameBoardSize = 0;
+   cardsFlipped = 0;
 
-    // fetch the game state from the server 
-    $.get("http://localhost:8000/game", function (response) {
-        // store game board size
-        gameBoardSize = response.length;
+   // fetch the game state from the server 
+   $.get("http://localhost:8000/game", function (response) {
+       // store game board size
+       gameBoardSize = response.length;
 
-        // draw the game board
-        drawGameBoard(response);
-    });
-    ```
+       // draw the game board
+       drawGameBoard(response);
+   });
+   ```
 
-    The game will now fetch the game state from the server. For more information about the [`/game`](#part-i-build-a-rest-api-backend) method being used in this step, see Part I of this tutorial. If you are using Azure (or another service) to host the backend API, replace the *localhost* address above with your production URL.
+    Ahora el juego obtendrá el estado del juego desde el servidor. Para obtener más información sobre el método [`/game`](#part-i-build-a-rest-api-backend) que se usa en este paso, consulta la parte I de este tutorial. Si usas Azure (u otro servicio) para hospedar la API backend, reemplaza la dirección *localhost* anterior con tu URL de producción.
 
 4. Ahora crearemos la función `drawGameBoard()`.  Esta función:
 
@@ -632,17 +634,17 @@ La adición de un movimiento de volteo con [transformaciones CSS](https://docs.m
 
 ### <a name="going-further"></a>Ir más allá
 
-Ahora puedes implementar la aplicación en Azure (o en cualquier otro servicio de hospedaje en la nube) para probar diferentes factores de forma de dispositivo, como móvil, tableta y escritorio. (No olvides probar en diferentes exploradores también) Una vez que la aplicación está lista para producción, puedes empaquetarla fácilmente como *Aplicación web hospedada* (HWA) para la *Plataforma universal de Windows* (UWP) y distribuirla desde la Tienda Windows.
+Ahora puedes implementar la aplicación en Azure (o en cualquier otro servicio de hospedaje en la nube) para probar diferentes factores de forma de dispositivo, como móvil, tableta y escritorio. (No olvides probar en diferentes exploradores también) Una vez que la aplicación esté lista para producción, puedes empaquetarla fácilmente como *Aplicación web hospedada* (HWA) para la *Plataforma universal de Windows* (UWP) y distribuirla desde Microsoft Store.
 
-Los pasos básicos para publicarla en la Tienda Windows son:
+Los pasos básicos para publicarla en Microsoft Store son:
 
- 1. Crear una cuenta de [desarrollador de Windows](https://developer.microsoft.com/en-us/store/register).
+ 1. Crear una cuenta de [Desarrollador de Windows](https://developer.microsoft.com/en-us/store/register).
  2. Usar la [lista de comprobación de envío de aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-submissions).
  3. Enviar la aplicación para su [certificación](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process).
 
 Estos son algunos recursos útiles para ir más allá:
 
- - [Implementar el proyecto de desarrollo de aplicaciones en Azure Websites](https://docs.microsoft.com/en-us/azure/documentdb/documentdb-nodejs-application#a-nametoc395783182aPart-7-deploy-your-application-development-project-to-azure-websites)
+ - [Implementar el proyecto de desarrollo de aplicaciones en Azure Websites](https://docs.microsoft.com/azure/cosmos-db/documentdb-nodejs-application#_Toc395783182)
 
  - [Convertir tu aplicación web en una aplicación para la Plataforma universal de Windows (UWP)](https://docs.microsoft.com/en-us/windows/uwp/porting/hwa-create-windows)
 

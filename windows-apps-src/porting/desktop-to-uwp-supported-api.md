@@ -1,20 +1,22 @@
 ---
 author: normesta
-Description: "Las aplicaciones de escritorio empaquetadas pueden usar una amplia gama de API de Plataforma universal de Windows (UWP), incluso si no se realizó la transición a una aplicación para UWP. En este artículo se enumeran las clases disponibles que puede usar tu aplicación empaquetada."
+Description: Packaged desktop apps can use a wide range of Universal Windows Platform (UWP) APIs, even if they have not fully transitioned to a UWP app. This article lists the available classes your packaged app can use.
 Search.Product: eADQiWindows 10XVcnh
-title: "API de UWP disponibles para una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)"
+title: API de UWP disponibles para una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)
 ms.author: normesta
-ms.date: 05/25/2017
+ms.date: 10/27/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
-ms.openlocfilehash: 796e47167c8462357764c78223dca34a11888aaf
-ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.localizationpriority: medium
+ms.openlocfilehash: 8562059fb8a786882a91404f513f2b0c8cdbacd6
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691454"
 ---
 # <a name="uwp-apis-available-to-a-packaged-desktop-app-desktop-bridge"></a>API de UWP disponibles para una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)
 
@@ -25,7 +27,7 @@ La mayoría de las API de UWP funcionan bien en aplicaciones de escritorio empaq
 <table><tr><th>Área de función</th><th>Detalles</th><tr>
 <tr><td>Citas, contactos y mensajes de correo electrónico</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Autenticación e identidad de usuario</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
-<tr><td>Tareas en segundo plano</td><td>Mientras que las aplicaciones empaquetadas pueden registrar tareas en segundo plano, solo las aplicaciones que sean completamente para UWP se pueden ejecutar *como* una tarea en segundo plano. Para obtener más información, consulta la [muestra de tarea en segundo plano en GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample).</td></tr>
+<tr><td>Tareas en segundo plano</td><td>Mientras que las aplicaciones empaquetadas pueden registrar tareas en segundo plano, solo las aplicaciones que sean completamente para UWP se pueden ejecutar <i>como</i> una tarea en segundo plano. Para obtener más información, consulta la <a href="https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample">muestra de tarea en segundo plano en GitHub</a>.</td></tr>
 <tr><td>Bluetooth</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Chat y llamadas de teléfono</td><td>Las aplicaciones empaquetadas no se pueden ejecutar en dispositivos móviles hasta que se porten completamente a UWP.</td></tr>
 <tr><td>Activación del contrato</td><td>Solo las aplicaciones que sean completamente para UWP pueden activarse con un contrato.</td></tr>
@@ -52,9 +54,11 @@ La siguiente es una lista completa de las API para UWP que se admiten en aplicac
 
 Para obtener ejemplos sobre cómo usar las API de WinRT, consulta las [muestras del Puente de dispositivo de escritorio](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) y las [muestras de aplicaciones para Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) disponibles en GitHub. También puedes consultar la aplicación de compilación de la entrada de blog de Windows [Calling Windows 10 APIs From a Desktop Application (Llamar a API de Windows 10 desde una aplicación de escritorio)](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application).
 
-<span id="new" />
+<a id="new" />
+
 ### <a name="apis-supported-in-newly-packaged-apps"></a>API que se admiten en aplicaciones recién empaquetadas
 
+* [Windows.ApplicationModel.AppService.AppServiceConnection](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceConnection)
 * [Windows.ApplicationModel.DataTransfer.DataProviderHandler](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataProviderHandler)
 * [Windows.ApplicationModel.DataTransfer.DataRequest](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest)
 * [Windows.ApplicationModel.DataTransfer.DataRequestDeferral](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequestDeferral)
@@ -377,7 +381,8 @@ Para obtener ejemplos sobre cómo usar las API de WinRT, consulta las [muestras 
 * [Windows.UI.StartScreen.JumpList](https://msdn.microsoft.com/library/windows/apps/Windows.UI.StartScreen.JumpList)
 * [Windows.UI.StartScreen.JumpListItem](https://msdn.microsoft.com/library/windows/apps/Windows.UI.StartScreen.JumpListItem)
 
-<span id="both" />
+<a id="both" />
+
 ### <a name="apis-supported-in-both-packaged-apps-and-desktop-applications"></a>API admitidas tanto en aplicaciones empaquetadas como en aplicaciones de escritorio
 
 * [Windows.ApplicationModel.Core.AppListEntry](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.AppListEntry)
@@ -1044,3 +1049,13 @@ Para obtener ejemplos sobre cómo usar las API de WinRT, consulta las [muestras 
 * [Windows.Web.Syndication.SyndicationPerson](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationPerson)
 * [Windows.Web.Syndication.SyndicationText](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationText)
 * [Windows.Web.WebError](https://msdn.microsoft.com/library/windows/apps/Windows.Web.WebError)
+
+## <a name="next-steps"></a>Pasos siguientes
+
+**Encuentra respuestas a tus preguntas**
+
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+
+**Enviar comentarios o realizar sugerencias acerca de las características**
+
+Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

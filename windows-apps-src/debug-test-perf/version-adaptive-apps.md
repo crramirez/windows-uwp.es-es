@@ -3,16 +3,18 @@ author: jwmsft
 title: Aplicaciones adaptables para versiones
 description: Aprende a sacar partido de las nuevas API mientras mantienes la compatibilidad con versiones anteriores
 ms.author: jimwalk
-ms.date: 07/08/2017
+ms.date: 10/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2cfcf98937bb943919ac2c796f3cf47129cf4bb7
-ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.localizationpriority: medium
+ms.openlocfilehash: d43cd9d03977e34b57d78e1f22bd7e8b340ff4ab
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 04/03/2018
+ms.locfileid: "1701041"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicaciones adaptables para versiones: Usa las nuevas API mientras mantienes la compatibilidad con versiones anteriores
 
@@ -27,6 +29,7 @@ Es necesario llevar a cabo 3 pasos para asegurarse de que la aplicación admite 
 ## <a name="configure-your-visual-studio-project"></a>Configura el proyecto de Visual Studio.
 
 El primer paso para admitir varias versiones de Windows 10 es especificar las versiones *de destino* y *mínimas* del sistema operativo/SDK que se admiten en el proyecto de Visual Studio.
+
 - *Destino*: es la versión del SDK en la que Visual Studio compila el código de la aplicación y ejecuta todas las herramientas. Todas las API y todos los recursos de esta versión del SDK están disponibles en el código de la aplicación en el momento de la compilación.
 - *Mínima*: es la versión del SDK que admite la versión más antigua del sistema operativo en la que se puede ejecutar la aplicación (y que la Tienda implementará) y la versión para la que Visual Studio compila el código de marcado de la aplicación. 
 
@@ -52,10 +55,10 @@ Como referencia, la siguiente tabla muestra los números de compilación de cada
 Nombre descriptivo | Versión | Sistema operativo/compilación de SDK | Notas
 ---- | ---- | ---- | ----
 RTM | 1507 | 10240 | Consulta información importante sobre la [compatibilidad](https://support.microsoft.com/help/4015562/windows-10-version-1507-will-no-longer-receive-security-updates).
-Actualización de noviembre | 1511 | 10586 |
+Actualización de noviembre | 1511 | 10586 | Consulta información importante sobre la [compatibilidad](https://support.microsoft.com/help/4035050/windows-10-version-1511-will-no-longer-receive-security-updates).
 Actualización de aniversario | 1607 | 14393 |
 Creators Update | 1703 | 15063 |
-*Fall Creators Update* |  | *16225* | SDK de Insider Preview
+Fall Creators Update | 1709 | 16299 |
 
 Puedes descargar cualquier versión publicada del SDK desde [Windows SDK y el archivo del emulador](https://developer.microsoft.com/downloads/sdk-archive). Puedes descargar el Windows Insider Preview SDK más reciente desde la sección para desarrolladores del sitio [Windows Insider](https://insider.windows.com/Home/BuildWithWindows).
 
@@ -86,7 +89,7 @@ El contrato de API más grande y más comúnmente usado es el **Windows.Foundati
 
 En todas las versiones de Windows 10, puedes usar la clase ApiInformation en una condición del código para probar la presencia de la API que se desee llamar. En el código adaptable, puedes usar distintos métodos de la clase, como IsTypePresent, IsEventPresent, IsMethodPresent y IsPropertyPresent, para probar las API en el nivel de detalle que necesitas.
 
-Para obtener más información ejemplos, consulta **[Código adaptativo para versiones](version-adaptive-code.md)**.
+Para obtener más información y ejemplos, consulta **[Código adaptativo para versiones](version-adaptive-code.md)**.
 
 Si la versión mínima de tu aplicación es la compilación 15063 (Creators Update) o posterior, puedes usar *XAML condicional* para establecer propiedades y crear instancias de objetos en el marcado sin tener que usar código subyacente. El XAML condicional proporciona una forma de usar el método ApiInformation.IsApiContractPresent en el marcado.
 
@@ -101,6 +104,6 @@ Para obtener más información sobre la depuración remota, consulta [Implementa
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Guía de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [Qué es una aplicación para UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
 - [Detección dinámica de funciones con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (Vídeo de compilación de 2015)

@@ -1,39 +1,36 @@
 ---
 author: mcleanbyron
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
-description: "Obtén información sobre cómo habilitar las pruebas y compras desde la aplicación en aplicaciones para UWP orientadas a versiones anteriores a Windows 10, versión 1607."
-title: "Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store"
+description: Obtén información sobre cómo habilitar las pruebas y compras desde la aplicación en aplicaciones para UWP orientadas a versiones anteriores a Windows 10, versión 1607.
+title: Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, Windows.ApplicationModel.Store"
-ms.openlocfilehash: 06ee6eba5e4dc2f13b1ca8f8555b0e29770d1ec8
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, Windows.ApplicationModel.Store
+ms.localizationpriority: medium
+ms.openlocfilehash: ccefb07b5eb0881979d91b656159f82ef050ac91
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691204"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store
 
 Puedes usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para agregar las funcionalidades de pruebas y compras desde la aplicación a tu aplicación para la Plataforma universal de Windows (UWP) con el fin de rentabilizar la aplicación y agregar nuevas funcionalidades. Estas API también proporcionan acceso a la información de licencia de la aplicación.
 
-En los artículos de esta sección se ofrecen instrucciones detalladas y ejemplos de código para usar los miembros del espacio de nombres **Windows.ApplicationModel.Store** para varios escenarios comunes. Para obtener una introducción a los conceptos básicos relacionados con las compras desde la aplicación en las aplicaciones para UWP, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
+En los artículos de esta sección se ofrecen instrucciones detalladas y ejemplos de código para usar los miembros del espacio de nombres **Windows.ApplicationModel.Store** para varios escenarios comunes. Para obtener una introducción a los conceptos básicos relacionados con las compras desde la aplicación en las aplicaciones para UWP, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md). Para obtener una muestra completa que demuestre cómo implementar pruebas y compras desde la aplicación con el espacio de nombres **Windows.ApplicationModel.Store**, consulta la [muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
 
-Para obtener una muestra completa que demuestre cómo implementar pruebas y compras desde la aplicación con el espacio de nombres **Windows.ApplicationModel.Store**, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
-
-> [!NOTE]
-> Si la aplicación está destinada a Windows 10, versión 1607 o una versión posterior, se recomienda usar los miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en lugar de los de **Windows.ApplicationModel.Store**. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como los complementos de consumibles administrados por la Tienda, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y la Tienda. El espacio de nombres **Windows.Services.Store** también está diseñado para ofrecer un mejor rendimiento. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
-
-> [!NOTE]
-> El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop). Estas aplicaciones deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
+> [!IMPORTANT]
+> El espacio de nombres **Windows.ApplicationModel.Store** ya no se está actualizando con las nuevas características. Si el proyecto de la aplicación está destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio (es decir, está destinado a Windows 10, versión 1607 o posterior), te recomendamos que uses uno el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. Para obtener más información, consulta [Pruebas y compras desde la aplicación](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en aplicaciones o juegos que usan un espacio aislado de desarrollo en el Centro de desarrollo (por ejemplo, este es el caso de los juegos que se integran con Xbox Live). Estos productos deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Introducción a las clases CurrentApp y CurrentAppSimulator
 
 El punto de entrada principal al espacio de nombres **Windows.ApplicationModel.Store** es la clase [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx). Esta clase proporciona métodos y propiedades estáticas que puedes usar para obtener información acerca de la aplicación actual y sus complementos disponibles, obtener información de licencia de la aplicación actual o sus complementos, comprar una aplicación o un complemento para el usuario actual y realizar otras tareas.
 
-La clase [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) obtiene los datos de la Tienda Windows, por lo que debes tener una cuenta de desarrollador y la aplicación debe publicarse en la Tienda antes de poder usar esta clase correctamente en la aplicación. Antes de enviar tu aplicación a la Tienda, puedes probar el código con una versión simulada de esta clase denominada [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx). Tras probar la aplicación y antes de enviarla a la Tienda Windows, debes reemplazar las instancias de **CurrentAppSimulator** por **CurrentApp**. La aplicación no conseguirá la certificación si usa **CurrentAppSimulator**.
+La clase [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) obtiene los datos de Microsoft Store, por lo que debes tener una cuenta de desarrollador y la aplicación debe publicarse en la Store antes de poder usar esta clase correctamente en la aplicación. Antes de enviar tu aplicación a la Store, puedes probar el código con una versión simulada de esta clase denominada [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx). Tras probar la aplicación y antes de enviarla a Microsoft Store, debes reemplazar las instancias de **CurrentAppSimulator** por **CurrentApp**. La aplicación no conseguirá la certificación si usa **CurrentAppSimulator**.
 
 Cuando se usa **CurrentAppSimulator**, el estado inicial de la licencias y los productos desde la aplicación de tu aplicación se describe en un archivo local en el equipo de desarrollo denominado WindowsStoreProxy.xml. Para obtener más información sobre este archivo, consulta [Uso del archivo WindowsStoreProxy.xml con CurrentAppSimulator](#proxy).
 
@@ -43,24 +40,26 @@ Para obtener más información sobre las tareas comunes que puedes realizar con 
 |----------------------------|-----------------------------|
 | [Excluir o limitar las características de una versión de prueba](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba. |
 | [Habilitar compras de productos desde la aplicación](enable-in-app-product-purchases.md)      |  Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.  |
-| [Habilitar compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)      | Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar) a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas. |
+| [Habilitar compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)      | Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar) a través de la plataforma de comercio de la Store para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas. |
 | [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md)      |   Si tu aplicación ofrece un catálogo de productos de gran tamaño en la aplicación, también puedes seguir el proceso descrito en este tema para ayudar a administrar dicho catálogo.    |
-| [Usar recibos para comprobar compras de productos](use-receipts-to-verify-product-purchases.md)      |   Cada transacción de la Tienda Windows que tiene como resultado una compra de producto satisfactoria también puede devolver un recibo de transacción que proporcione información sobre el producto enumerado y el coste abonado por el cliente. El acceso a esta información resulta útil en aquellos casos en los que la aplicación debe comprobar que un usuario compró tu aplicación o ha realizado compras de productos desde la aplicación en la TiendaWindows. |
+| [Usar recibos para verificar compras de productos](use-receipts-to-verify-product-purchases.md)      |   Cada transacción de Microsoft Store que tiene como resultado una compra de producto satisfactoria también puede devolver un recibo de transacción que proporcione información sobre el producto enumerado y el coste abonado por el cliente. El acceso a esta información resulta útil en aquellos casos en los que la aplicación debe comprobar que un usuario compró tu aplicación o ha realizado compras de productos desde la aplicación en Microsoft Store. |
 
 <span id="proxy" />
+
 ## <a name="using-the-windowsstoreproxyxml-file-with-currentappsimulator"></a>Uso del archivo WindowsStoreProxy.xml con CurrentAppSimulator
 
 Cuando se usa **CurrentAppSimulator**, el estado inicial de la licencias y los productos desde la aplicación de tu aplicación se describe en un archivo local en el equipo de desarrollo denominado WindowsStoreProxy.xml. Los métodos de **CurrentAppSimulator** que modifican el estado de la aplicación, por ejemplo al comprar una licencia o al controlar una compra desde la aplicación, solo actualizan el estado del objeto **CurrentAppSimulator** en la memoria. El contenido de WindowsStoreProxy.xml no cambia. Cuando se vuelve a inicia la aplicación, el estado de licencia se revierte a lo que se describe en WindowsStoreProxy.xml.
 
 Se crea un archivo WindowsStoreProxy.xml de manera predeterminada en la siguiente ubicación: %Perfil_usuario%\AppData\Local\Packages\\&lt;carpeta del paquete de la aplicación&gt;\LocalState\Microsoft\Windows Store\ApiData. Puedes editar este archivo para definir el escenario que quieres simular las propiedades **CurrentAppSimulator**.
 
-Aunque se pueden modificar los valores de este archivo, te recomendamos que crees tu propio archivo WindowsStoreProxy.xml (en una carpeta de datos de tu proyecto de Visual Studio) para que **CurrentAppSimulator** lo use en su lugar. Al simular la transacción, llama a [ReloadSimulatorAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync.aspx) para cargar el archivo. Si no llamas a **ReloadSimulatorAsync** para cargar tu propio archivo WindowsStoreProxy.xml, **CurrentAppSimulator** creará o cargará (pero no sobrescribirá) siempre el archivo WindowsStoreProxy.xml.
+Aunque se pueden modificar los valores de este archivo, te recomendamos que crees tu propio archivo WindowsStoreProxy.xml (en una carpeta de datos de tu proyecto de Visual Studio) para que **CurrentAppSimulator** lo use en su lugar. Al simular la transacción, llama a [ReloadSimulatorAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync) para cargar el archivo. Si no llamas a **ReloadSimulatorAsync** para cargar tu propio archivo WindowsStoreProxy.xml, **CurrentAppSimulator** creará o cargará (pero no sobrescribirá) siempre el archivo WindowsStoreProxy.xml.
 
 > [!NOTE]
-> Ten en cuenta que **CurrentAppSimulator** no se inicializa completamente hasta que se completa **ReloadSimulatorAsync**. Y, dado que **ReloadSimulatorAsync** es un método asincrónico, debe tenerse cuidado para evitar la condición de carrera de consultar **CurrentAppSimulator** en un subproceso mientras se inicializa en otro. Una técnica es usar una marca para indicar que la inicialización se ha completado. Debes usar una aplicación que se instale desde la Tienda Windows debe usar **CurrentApp** en lugar de **CurrentAppSimulator**, y en ese caso, no se llama a **ReloadSimulatorAsync** y, por tanto, la condición de carrera recién mencionada no se aplica. Por este motivo, diseña el código para que funcione en ambos casos, tanto de forma asincrónica como sincrónica.
+> Ten en cuenta que **CurrentAppSimulator** no se inicializa completamente hasta que se completa **ReloadSimulatorAsync**. Y, dado que **ReloadSimulatorAsync** es un método asincrónico, debe tenerse cuidado para evitar la condición de carrera de consultar **CurrentAppSimulator** en un subproceso mientras se inicializa en otro. Una técnica es usar una marca para indicar que la inicialización se ha completado. Debes usar una aplicación que se instale desde Microsoft Store debe usar **CurrentApp** en lugar de **CurrentAppSimulator**, y en ese caso, no se llama a **ReloadSimulatorAsync** y, por tanto, la condición de carrera recién mencionada no se aplica. Por este motivo, diseña el código para que funcione en ambos casos, tanto de forma asincrónica como sincrónica.
 
 
 <span id="proxy-examples" />
+
 ### <a name="examples"></a>Ejemplos
 
 Este ejemplo es un archivo WindowsStoreProxy.xml (con codificación UTF-16) que describe una aplicación con un modo de prueba que expira a las 05:00 (UTC) del 19 de enero de 2015.
@@ -148,6 +147,7 @@ El siguiente ejemplo es un archivo WindowsStoreProxy.xml (con codificación UTF-
 
 
 <span id="proxy-schema" />
+
 ### <a name="schema"></a>Esquema
 
 Esta sección muestra el archivo XSD que define la estructura del archivo WindowsStoreProxy.xml. Para aplicar este esquema al editor XML de Visual Studio cuando trabajes con el archivo WindowsStoreProxy.xml, haz lo siguiente:
@@ -352,6 +352,7 @@ Una vez hayas hecho esto, las modificaciones que realices en WindowsStoreProxy.x
 
 
 <span id="proxy-descriptions" />
+
 ### <a name="element-and-attribute-descriptions"></a>Descripciones de los elementos y los atributos
 
 Esta sección describe los elementos y atributos del archivo WindowsStoreProxy.xml.
@@ -366,6 +367,7 @@ El elemento raíz de este archivo es el elemento **CurrentApp**, que representa 
 |  [Simulation](#simulation)  |     No       |      0 o 1      |   Describe cómo las llamadas a diversos métodos [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx) funcionarán en la aplicación durante las pruebas.    |
 
 <span id="listinginformation" />
+
 #### <a name="listinginformation-element"></a>Elemento ListingInformation
 
 Este elemento contiene datos de la descripción de la aplicación. **ListingInformation** es un elemento secundario obligatorio del elemento **CurrentApp**.
@@ -378,6 +380,7 @@ Este elemento contiene datos de la descripción de la aplicación. **ListingInfo
 |  [Product](#product-child-of-listinginformation)  |    No  |  0 o más   |      Describe un complemento de la aplicación.     |     |
 
 <span id="app-child-of-listinginformation"/>
+
 #### <a name="app-element-child-of-listinginformation"></a>Elemento de la aplicación (elemento secundario de ListingInformation)
 
 Este elemento describe la licencia de la aplicación. **App** es un elemento secundario obligatorio del elemento [ListingInformation](#listinginformation).
@@ -386,13 +389,14 @@ Este elemento describe la licencia de la aplicación. **App** es un elemento sec
 
 |  Elemento  |  Obligatorio  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
-|  **AppId**  |    Sí   |  1   |   El GUID que identifica la aplicación en la Tienda. Puede ser cualquier GUID para pruebas.        |
-|  **LinkUri**  |    Sí  |  1   |    El URI de la página de descripción en la Tienda. Puede ser cualquier identificador URI válido para pruebas.         |
+|  **AppId**  |    Sí   |  1   |   El GUID que identifica la aplicación en la Store. Puede ser cualquier GUID para pruebas.        |
+|  **LinkUri**  |    Sí  |  1   |    El URI de la página de descripción en la Store. Puede ser cualquier identificador URI válido para pruebas.         |
 |  **CurrentMarket**  |    Sí  |  1   |    El país o la región del cliente.         |
-|  **AgeRating**  |    Sí  |  1   |     Un número entero que representa la clasificación por edades mínima de la aplicación. Este es el mismo valor que se especificaría en el panel del Centro de desarrollo al enviar la aplicación. Los valores usados por la Tienda son: 3, 7, 12 y 16. Para obtener más información sobre estas clasificaciones, consulta [Clasificación por edades](../publish/age-ratings.md).        |
+|  **AgeRating**  |    Sí  |  1   |     Un número entero que representa la clasificación por edades mínima de la aplicación. Este es el mismo valor que se especificaría en el panel del Centro de desarrollo al enviar la aplicación. Los valores usados por la Store son: 3, 7, 12 y 16. Para obtener más información sobre estas clasificaciones, consulta [Clasificación por edades](../publish/age-ratings.md).        |
 |  [MarketData](#marketdata-child-of-app)  |    Sí  |  1 o más      |    Contiene información sobre la aplicación para un país o una región determinados. Para cada país o región en que se muestra la aplicación, debes incluir un elemento **MarketData**.       |    |
 
 <span id="marketdata-child-of-app"/>
+
 #### <a name="marketdata-element-child-of-app"></a>Elemento MarketData (elemento secundario del elemento App)
 
 Este elemento, proporciona información acerca de la aplicación para un país o una región determinados. Para cada país o región en que se muestra la aplicación, debes incluir un elemento **MarketData**. **MarketData** es un elemento secundario obligatorio del elemento [App](#app-child-of-listinginformation).
@@ -414,6 +418,7 @@ Este elemento, proporciona información acerca de la aplicación para un país o
 |  **xml:lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
 <span id="product-child-of-listinginformation"/>
+
 #### <a name="product-element-child-of-listinginformation"></a>Elemento Product (elemento secundario de ListingInformation)
 
 Este elemento describe un complemento de la aplicación. **Product** es un elemento secundario opcional del elemento [ListingInformation](#listinginformation) y contiene uno o más elementos [MarketData](#marketdata-child-of-product).
@@ -427,6 +432,7 @@ Este elemento describe un complemento de la aplicación. **Product** es un eleme
 |  **ProductType**  |    No        |    Contiene un valor para identificar la persistencia del producto desde la aplicación. Los valores admitidos son **Durable** (el predeterminado) y **Consumible**. En el caso de los tipos duraderos (Durable), un elemento [Product](#product-child-of-licenseinformation) identifica información adicional bajo [LicenseInformation](#licenseinformation); en el caso los tipos consumibles, un elemento [Product](#product-child-of-consumableinformation) muestra información adicional bajo [ConsumableInformation](#consumableinformation).           |  |
 
 <span id="marketdata-child-of-product"/>
+
 #### <a name="marketdata-element-child-of-product"></a>Elemento MarketData (elemento secundario del elemento Product)
 
 Este elemento, proporciona información acerca del complemento para un país o una región determinados. Para cada país o región en que se muestra el complemento, debes incluir un elemento **MarketData**. **MarketData** es un elemento secundario obligatorio del elemento [Product](#product-child-of-listinginformation).
@@ -451,6 +457,7 @@ Este elemento, proporciona información acerca del complemento para un país o u
 |  **xml:lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
 <span id="licenseinformation"/>
+
 #### <a name="licenseinformation-element"></a>Elemento LicenseInformation
 
 Este elemento describe las licencias disponibles para esta aplicación y sus productos desde la aplicación duraderos. **LicenseInformation** es un elemento secundario obligatorio del elemento **CurrentApp**.
@@ -472,6 +479,7 @@ La tabla siguiente muestra cómo simular algunas condiciones comunes mediante la
 |  No válido  |    false  | false       |     &lt;cualquier valor o se omite&gt;          |  |
 
 <span id="app-child-of-licenseinformation"/>
+
 #### <a name="app-element-child-of-licenseinformation"></a>Elemento App (elemento secundario de LicenseInformation)
 
 Este elemento describe la licencia de la aplicación. **App** es un elemento secundario obligatorio del elemento [LicenseInformation](#licenseinformation).
@@ -485,6 +493,7 @@ Este elemento describe la licencia de la aplicación. **App** es un elemento sec
 |  **ExpirationDate**  |    No  |  0 o 1       |     La fecha en la que expira el período de prueba de esta aplicación, en hora universal coordinada (UTC). La fecha debe expresarse como: aaaa-mm-ddThh:mm:ss.ssZ. Por ejemplo, las 05:00 del 19 de enero de 2015 se especificaría como 2015-01-19T05:00:00.00Z. Este elemento es obligatorio si **IsTrial** es **true**. De lo contrario, no es obligatorio.          |  |
 
 <span id="product-child-of-licenseinformation"/>
+
 #### <a name="product-element-child-of-licenseinformation"></a>Elemento Product (elemento secundario de LicenseInformation)
 
 Este elemento describe el estado de la licencia de un complemento duradero en la aplicación. **Product** es un elemento secundario opcional del elemento [LicenseInformation](#licenseinformation).
@@ -504,6 +513,7 @@ Este elemento describe el estado de la licencia de un complemento duradero en la
 |  **OfferId**  |     No       |   Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el complemento. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
 
 <span id="simulation"/>
+
 #### <a name="simulation-element"></a>Elemento Simulation
 
 Este elemento describe cómo las llamadas a diversos métodos [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx) funcionarán en la aplicación durante las pruebas. **Simulation** es un elemento secundario opcional del elemento **CurrentApp** y contiene cero o más elementos [DefaultResponse](#defaultresponse).
@@ -515,6 +525,7 @@ Este elemento describe cómo las llamadas a diversos métodos [CurrentAppSimulat
 |  **SimulationMode**  |    No        |      Los valores pueden ser **Interactive** o **Automatic**. Cuando este atributo se establece en **Automatic**, los métodos devolverán automáticamente los códigos de error HRESULT especificados. Esto puede usarse cuando se ejecutan casos de prueba automatizados.       |
 
 <span id="defaultresponse"/>
+
 #### <a name="defaultresponse-element"></a>Elemento DefaultResponse
 
 Este elemento describe el código de error predeterminado devuelto por un método **CurrentAppSimulator**. **DefaultResponse** es un elemento secundario opcional del elemento [Simulation](#simulation).
@@ -523,15 +534,17 @@ Este elemento describe el código de error predeterminado devuelto por un métod
 
 |  Atributo  |  Obligatorio  |  Descripción   |
 |-------------|------------|----------------|
-|  **MethodName**  |    Sí        |   Asigna este atributo a uno de los valores de enumeración que se muestran para el tipo **StoreMethodName** en el [esquema](#schema). Cada uno de estos valores de enumeración representa un método **CurrentAppSimulator** para el que deseas simular un valor devuelto de código de error en la aplicación durante las pruebas. Por ejemplo, el valor **RequestAppPurchaseAsync_GetResult** indica que deseas simular el valor devuelto de código de error del método [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.requestapppurchaseasync.aspx).            |
+|  **MethodName**  |    Sí        |   Asigna este atributo a uno de los valores de enumeración que se muestran para el tipo **StoreMethodName** en el [esquema](#schema). Cada uno de estos valores de enumeración representa un método **CurrentAppSimulator** para el que deseas simular un valor devuelto de código de error en la aplicación durante las pruebas. Por ejemplo, el valor **RequestAppPurchaseAsync_GetResult** indica que deseas simular el valor devuelto de código de error del método [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.requestapppurchaseasync).            |
 |  **HResult**  |     Sí       |   Asigna este atributo a uno de los valores de enumeración que se muestran para el tipo **ResponseCodes** en el [esquema](#schema). Cada uno de estos valores de enumeración representa el código de error que deseas recuperar para el método asignado al atributo **MethodName** para este elemento **DefaultResponse**.           |
 
 <span id="consumableinformation"/>
+
 #### <a name="consumableinformation-element"></a>Elemento ConsumableInformation
 
 Este elemento describe los complementos consumibles disponibles para esta aplicación. **ConsumableInformation** es un elemento secundario opcional del elemento **CurrentApp** y puede contener cero o más elementos [Product](#product-child-of-consumableinformation).
 
 <span id="product-child-of-consumableinformation"/>
+
 #### <a name="product-element-child-of-consumableinformation"></a>Elemento Product (elemento secundario de ConsumableInformation)
 
 Este elemento describe un complemento consumible. **Product** es un elemento secundario opcional del elemento [ConsumableInformation](#consumableinformation).

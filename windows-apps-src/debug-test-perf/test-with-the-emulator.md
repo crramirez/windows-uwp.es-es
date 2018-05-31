@@ -2,26 +2,27 @@
 author: PatrickFarley
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
-description: "Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows10 Mobile."
+description: Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows10 Mobile.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8eadf3ecc099e1f622ec49db4efa8f4f67c52d13
-ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.localizationpriority: medium
+ms.openlocfilehash: 98908855acbc341c14464881aeb058a331e7b2a3
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691214"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows10 Mobile
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows10 Mobile. El emulador es una aplicación de escritorio que simula un dispositivo móvil que ejecuta Windows10. Proporciona un entorno virtualizado en el que puedes depurar y probar aplicaciones de Windows sin un dispositivo físico. También proporciona un entorno aislado para prototipos de la aplicación.
 
-El emulador ha sido diseñado para proporcionar unas prestaciones comparables a las de un dispositivo real. No obstante, antes de publicar tu aplicación en la Tienda Windows, te recomendamos que la pruebes en un dispositivo físico.
+El emulador ha sido diseñado para proporcionar unas prestaciones comparables a las de un dispositivo real. No obstante, antes de publicar tu aplicación en la Microsoft Store, te recomendamos que la pruebes en un dispositivo físico.
 
 Puedes probar tu aplicación universal con una imagen de emulador de Windows 10 Mobile para diversas resoluciones de pantalla y configuraciones de tamaño de pantalla. Puedes simular la interacción en el mundo real con un dispositivo y probar varias funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft.
 
@@ -47,9 +48,9 @@ Sistema operativo
 
 Para comprobar los requisitos de BIOS, consulta [Cómo habilitar Hyper-V para el emulador de Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/jj863509.aspx).
 
-Para comprobar los requisitos de RAM y sistema operativo, en el Panel de control, haz clic en **Sistema y seguridad**y, a continuación, haz clic en **Sistema**.
+Para comprobar los requisitos de RAM y del sistema operativo, en el Panel de control, selecciona **Sistema y seguridad**y, a continuación, selecciona **Sistema**.
 
-Microsoft Emulator para Windows 10 Mobile requiere Visual Studio 2015; no es compatible con versiones anteriores de Visual Studio.
+Emulador de Microsoft para Windows 10 Mobile requiere Visual Studio 2015; no es compatible con versiones anteriores de Visual Studio.
 
 Emulador de Microsoft para Windows 10 Mobile no puede cargar las aplicaciones orientadas a versiones del Windows Phone OS anteriores a Windows Phone OS 7.1.
 
@@ -57,17 +58,17 @@ Emulador de Microsoft para Windows 10 Mobile no puede cargar las aplicaciones or
 
 -   **Instalación**.
 
-    El Emulador de Microsoft para Windows 10 Mobile se incluye como parte del SDK de Windows 10. El SDK de Windows 10 y el emulador se pueden instalar como parte de Visual Studio 2015. Consulta la [página de descarga de Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
+    El Emulador de Microsoft para Windows 10 Mobile se incluye como parte del SDK de Windows 10. El SDK de Windows 10 y el emulador se pueden instalar como parte de la instalación de Visual Studio. Consulta la [página de descarga de Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
 
-    También puedes instalar el Emulador de Microsoft para Windows 10 Mobile con el programa de configuración de Microsoft Emulator. Consulta la [página de descarga de herramientas de Windows 10](https://go.microsoft.com/fwlink/p/?LinkID=534189).
+    También puedes instalar el Emulador de Microsoft para Windows 10 Mobile con el [programa de configuración del Emulador de Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=615095).
 
 -   **Desinstalación**.
 
     Puedes desinstalar el Emulador de Microsoft para Windows 10 Mobile con el programa de configuración/reparación de Visual Studio. O puedes usar **Programas y características** de **Panel de control** para quitar el emulador.
 
-    Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador virtual de Ethernet para Hyper-V que se creó para que lo use el emulador no se elimina automáticamente. Puedes eliminar manualmente este adaptador virtual desde **Conexiones de red** en **Panel de control**.
+    Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador virtual de Ethernet para Hyper-V que se creó para que lo use el emulador no se elimina automáticamente. Puedes quitar manualmente este adaptador virtual desde **Conexiones de red** en **Panel de control**.
 
-## <a name="whats-new-in-microsoft-emulator-for-windows-10-mobile"></a>Novedades en el Emulador de Microsoft para Windows 10 Mobile
+## <a name="whats-new-in-microsoft-emulator-for-windows-10-mobile"></a>Novedades del Emulador de Microsoft para Windows 10 Mobile
 
 Además de proporcionar soporte para la Plataforma universal de Windows (UWP), el emulador ha agregado la funcionalidad siguiente:
 
@@ -231,7 +232,7 @@ En el modo de Emulación de tarjeta basada en host (HCE) puedes probar la aplica
 -   Elimina los scripts seleccionando el script en el menú desplegable y presionando el botón **Eliminar**.
 -   La herramienta del emulador no comprueba la sintaxis de los scripts hasta que se ejecuta el script usando el botón **Reproducir**. Los mensajes enviados por el script dependen de la implementación de la aplicación de emulación de la tarjeta.
 
-También puedes usar la herramienta del simulador del terminal de MasterCard ([https://www.terminalsimulator.com/ ](https://www.terminalsimulator.com/ )) para las pruebas de la aplicación de pagos.
+También puedes usar la herramienta del simulador del terminal de MasterCard ([https://www.terminalsimulator.com/](https://www.terminalsimulator.com/ )) para las pruebas de la aplicación de pagos.
 
 -   Marca la casilla del agente de escucha **Habilitar MasterCard** debajo de las ventanas del editor de scripts e inicia el simulador desde MasterCard.
 -   Mediante la herramienta, puedes generar comandos que se transmiten a la aplicación que se está ejecutando en el emulador a través de la herramienta de NFC.
@@ -638,7 +639,7 @@ Cuando instalas el emulador, se instala una imagen VHD de Windows 10 Mobile, que
 
 En la versión actual, tendrás que eliminar manualmente el archivo VHD para el emulador. Si el emulador se ha instalado en la ruta predeterminada, el archivo VHD se encuentra en C:\\Archivos de programa (x86)\\Windows Kits\\10\\Emulation\\Mobile\\<version>\\flash.vhd.
 
-###<a name="how-to-disable-hardware-accelerated-graphics"></a>Cómo deshabilitar los gráficos acelerados por hardware
+### <a name="how-to-disable-hardware-accelerated-graphics"></a>Cómo deshabilitar los gráficos acelerados por hardware
 
 De forma predeterminada, el emulador de Windows 10 Mobile usa gráficos acelerados de hardware. Si tienes problemas para iniciar el emulador con la aceleración de hardware habilitada, puedes desactivar estableciendo un valor del Registro.
 

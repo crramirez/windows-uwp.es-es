@@ -1,319 +1,313 @@
 ---
-author: TylerMSFT
-Description: "La API de JavaScript de la aplicación &quot;Hacer un examen&quot; de Microsoft, te permite proteger los exámenes. Gracias a &quot;Hacer un examen&quot;, tendrás a mano un navegador seguro que evitará que los estudiantes usen otro equipo o Internet durante un examen."
-title: API de JavaScript &quot;Hacer un examen&quot;.
-ms.author: twhitney
-ms.date: 02/08/2017
+Description: The JavaScript API for the Microsoft Take a Test app allows you to do secure assessments. Take a Test provides a secure browser that prevents students from using other computer or internet resources during a test.
+title: API de JavaScript "Hacer un examen".
+author: PatrickFarley
+ms.author: pafarley
+ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
+ms.date: 10/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-ms.openlocfilehash: e308280fcecf825061ddf503ce91f8607fcece72
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 43edadfba169ddae85818f8ef1dbd1e7f4adba64
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691364"
 ---
 # <a name="take-a-test-javascript-api"></a>API de JavaScript "Hacer un examen"
 
-[Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación basada en el navegador que te permite realizar exámenes en línea bloqueados para pruebas en las que hay mucho en juego. Asimismo, admite el estándar API de los navegadores SBAC en pruebas importantes en las que hay mucho en juego y te permite centrarte en el contenido del examen en vez de dedicar tu tiempo a bloquear Windows.
+[Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación basada en explorador que representa evaluaciones en línea bloqueadas para examen decisivo, lo que permite a los educadores centrarse en el contenido de la evaluación en lugar de en cómo proporcionar un entorno de pruebas seguro. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
 
-Hacer un examen usa la tecnología del navegador Microsoft Edge y proporciona una API de JavaScript que las aplicaciones web pueden usar para bloquear la administración de otras experiencias mientras se realiza un examen.
-
-La API (basada en la [API fundamental de SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) proporciona la funcionalidad texto a voz, así como la capacidad de realizar consultas para saber si el dispositivo está bloqueado, cuáles son los procesos del usuario y del sistema en ejecución y mucho más.
-
-Si quieres obtener información acerca de la propia aplicación, consulta [Take a Test app technical reference (Referencia técnica de la aplicación Hacer un examen)](https://technet.microsoft.com/edu/windows/take-a-test-app-technical).
-
-> [!Important]
-> Estas API no funcionan en una sesión remota.  
+Si quieres obtener información acerca de la propia aplicación, consulta [Referencia técnica de la aplicación Hacer un examen)](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396).
 
 Para solucionar cualquier problema, consulta [Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos](troubleshooting.md).
 
 ## <a name="reference-documentation"></a>Documentación de referencia
-La API de Hacer un examen consta de los siguientes espacios de nombres. 
+Las APIs de Hacer un examen existen en los siguientes espacios de nombres. Ten en cuenta que todas las API dependen de un objeto `SecureBrowser` global.
 
 | Espacio de nombres | Descripción |
 |-----------|-------------|
-|[espacio de nombres de seguridad](#security-namespace)|Te permite bloquear el dispositivo.|
-|[espacio de nombres TTS](#tts-namespace)|Funcionalidad Texto a voz.|
+|[espacio de nombres de seguridad](#security-namespace)|Contiene API que te permiten bloquear el dispositivo para pruebas y aplicar un entorno de pruebas. |
 
+> [!NOTE]
+> El espacio de nombres de texto a voz (TTS) se quitó a partir de Windows 10 versión 1709. La [API de síntesis de voz de Microsoft Edge](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/), una implementación de la [Speech Api de W3C](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html), es ahora la solución recomendada para la implementación de texto a voz.
 
- ### <a name="security-namespace"></a>Espacio de nombres de seguridad
+### <a name="security-namespace"></a>Espacio de nombres de seguridad
 
 El espacio de nombres de seguridad te permite bloquear el dispositivo, consultar la lista de procesos de usuario y de sistema, obtener direcciones IP y MAC y borrar los recursos web en caché.
 
 | Método | Descripción   |
 |--------|---------------|
-|[clearCache](#clearCache) | Borra los recursos web guardados en caché |
-|[cerrar](#close) | Cierra el explorador y se desbloquea el dispositivo |
-|[enableLockDown](#enableLockDown) | Bloquea el dispositivo. También se usa para desbloquear el dispositivo |
-|[getIPAddressList](#getIPAddressList) | Obtiene la lista de direcciones IP del dispositivo |
-|[getMACAddress](#getMACAddress)|Obtiene la lista de direcciones MAC del dispositivo|
-|[getProcessList](#getProcessList)|Obtiene la lista de procesos del usuario y del sistema en ejecución|
-|[isEnvironmentSecure](#isEnvironmentSecure)|Determina si el contexto de bloqueo aún se aplica al dispositivo|  
+|[lockDown](#lockDown) | Bloquea el dispositivo para pruebas. |
+|[isEnvironmentSecure](#isEnvironmentSecure) | Determina si el contexto de bloqueo aún se aplica al dispositivo. |
+|[getDeviceInfo](#getDeviceInfo) | Obtén información acerca de la plataforma en el que se ejecuta la aplicación de prueba. |
+|[examineProcessList](#examineProcessList)|Obtiene la lista de procesos del usuario y del sistema en ejecución.|
+|[cerrar](#close) | Cierra el explorador y se desbloquea el dispositivo. |
+|[getPermissiveMode](#getPermissiveMode)|Comprueba si el modo permisivo está activado o desactivado.|
+|[setPermissiveMode](#setPermissiveMode)|Activa o desactiva el modo permisivo.|
+|[emptyClipBoard](#emptyClipBoard)|Borra el portapapeles del sistema.|
+|[getMACAddress](#getMACAddress)|Obtiene la lista de direcciones MAC del dispositivo.|
+|[getStartTime](#getStartTime) | Obtiene la hora en que se inició la aplicación de prueba. |
+|[getCapability](#getCapability) | Realiza una consulta de si una funcionalidad está habilitada o deshabilitada. |
+|[setCapability](#setCapability)|Habilita o deshabilita la funcionalidad especificada.| 
+|[isRemoteSession](#isRemoteSession) | Comprueba si la sesión actual se registra de manera remota. |
+|[isVMSession](#isVMSession) | Comprueba si la sesión actual se ejecuta en una máquina virtual. |
 
 ---
-<span id="clearCache"/>
-### <a name="void-clearcache"></a>void clearCache()
-Borra los recursos web guardados en caché.
+
+<span id="lockDown"/>
+
+### <a name="lockdown"></a>lockDown
+Bloquea el dispositivo. También se usa para desbloquear el dispositivo. La aplicación web de pruebas invocará a esta llamada antes de permitir a los estudiantes que inicien las pruebas. El implementador es necesario para realizar todas las acciones necesarias para proteger el entorno de pruebas. Los pasos realizados para proteger el entorno son específicos de dispositivo y, por ejemplo, incluyen aspectos como deshabilitar capturas de pantalla, deshabilitar el chat de voz cuando se está en modo seguro, borrar el Portapapeles del sistema, entrar en un modo de pantalla completa, espacios en dispositivos OSX 10.7, etc. La aplicación de prueba habilitará el bloqueo antes de que comience una evaluación y deshabilitará el bloqueo cuando el estudiante haya completado la evaluación y se encuentre fuera de la prueba segura.
 
 **Sintaxis**  
-`browser.security.clearCache();`
+`void SecureBrowser.security.lockDown(Boolean enable, Function onSuccess, Function onError);`
 
 **Parámetros**  
-`None`
-
-**Valor devuelto**  
-`None`
+* `enable` - **true** para ejecutar la aplicación Hacer un examen pasando por alto la pantalla de bloqueo y aplicar las directivas descritas en este [documento](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). **false** detiene la ejecución de Hacer un examen pasando por alto la pantalla de bloqueo y se cierra a menos que la aplicación no esté bloqueada, en cuyo caso el parámetro no tendrá ningún efecto.  
+* `onSuccess` - [opcional] Se ha habilitado o deshabilitado correctamente la función para llamar después del bloqueo. Debe tener la forma `Function(Boolean currentlockdownstate)`.  
+* `onError` - [opcional] La función para llamar si la operación de bloqueo generó error. Debe tener la forma `Function(Boolean currentlockdownstate)`.  
 
 **Requisitos**  
-Windows 10, versión 1607
-
----
-
-<span id="close"/>
-### <a name="closeboolean-restart"></a>close(boolean restart)
-Cierra el explorador y se desbloquea el dispositivo.
-
-**Sintaxis**  
-`browser.security.close(false);`
-
-**Parámetros**  
-`restart` - Este parámetro se pasa por alto, pero debe proporcionarse.
-
-**Valor devuelto**  
-`None`
-
-**Requisitos**  
-Windows 10, versión 1607
-
----
-
-<span id="enableLockDown"/>
-### <a name="enablelockdownboolean-lockdown"></a>enableLockdown(boolean lockdown)
-Bloquea el dispositivo. También se usa para desbloquear el dispositivo.
-
-**Sintaxis**  
-`browser.security.enableLockDown(true|false);`
-
-**Parámetros**  
-`lockdown` - `true` para ejecutar la aplicación Hacer un examen pasando por alto la pantalla de bloqueo y aplicar las directivas descritas en este [documento](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). `False` detiene la ejecución de Hacer un examen pasando por alto la pantalla de bloqueo y se cierra a menos que la aplicación no esté bloqueada, en cuyo caso el parámetro no tendrá ningún efecto.
-
-**Valor devuelto**  
-`None`
-
-**Requisitos**  
-Windows 10, versión 1607
-
----
-
-<span id="getIPAddressList"/>
-### <a name="string-getipaddresslist"></a>string[] getIPAddressList()
-Obtiene la lista de direcciones IP del dispositivo.
-
-**Sintaxis**  
-`browser.security.getIPAddressList();`
-
-**Parámetros**  
-`None`
-
-**Valor devuelto**  
-`An array of IP addresses.`
-
----
-
-<span id="getMACAddress" />
-### <a name="string-getmacaddress"></a>string[] getMACAddress()
-Obtiene la lista de direcciones MAC del dispositivo.
-
-**Sintaxis**  
-`browser.security.getMACAddress();`
-
-**Parámetros**  
-`None`
-
-**Valor devuelto**  
-`An array of MAC addresses.`
-
-**Requisitos**  
-Windows 10, versión 1607
-
----
-
-<span id="getProcessList" />
-### <a name="string-getprocesslist"></a>string[] getProcessList()
-Obtiene la lista de los procesos en ejecución del usuario.
-
-**Sintaxis**  
-`browser.security.getProcessList();`
-
-**Parámetros**  
-`None`
-
-**Valor devuelto**  
-`An array of running process names.`
-
-**Observaciones** La lista no incluye los procesos del sistema.
-
-**Requisitos**  
-Windows 10, versión 1607
+Windows 10, versión 1709
 
 ---
 
 <span id="isEnvironmentSecure" />
-### <a name="boolean-isenvironmentsecure"></a>boolean isEnvironmentSecure()
-Determina si el contexto de bloqueo aún se aplica al dispositivo.
+
+### <a name="isenvironmentsecure"></a>isEnvironmentSecure
+Determina si el contexto de bloqueo aún se aplica al dispositivo. La aplicación web de pruebas invocará esto antes de permitir a los estudiantes que inicien las pruebas y periódicamente, cuando se esté dentro de la prueba.
 
 **Sintaxis**  
-`browser.security.isEnvironmentSecure();`
+`void SecureBrowser.security.isEnvironmentSecure(Function callback);`
 
 **Parámetros**  
-`None`
+* `callback` - La función para llamar cuando esta función finaliza. Debe tener la forma `Function(String state)` donde `state` es una cadena JSON que contiene dos campos. El primero es el campo `secure`, que solo mostrará `true` si se han habilitado todos los bloqueos necesarios (o se han deshabilitado las características) para habilitar un entorno de prueba seguro y ninguno de estos se ha puesto en peligro puesto que la aplicación entró en el modo de bloqueo. El otro campo, `messageKey`, incluye otros detalles o información que son específicos del proveedor. El objetivo aquí es permitir que los proveedores coloquen información adicional que aumenta la marca `secure` booleana:
 
-**Valor devuelto**  
-`True indicates that the lockdown context is applied to the device; otherwise false.`
-
-**Requisitos**  
-Windows 10, versión 1607
-
----
-
-### <a name="tts-namespace"></a>Espacio de nombres TTS
-
-El espacio de nombres TTS controla la funcionalidad de texto a voz de la aplicación.
-
-| Método | Descripción |
-|--------|-------------|
-|[getStatus](#getStatus) | Obtiene el estado de la reproducción de voz.|
-|[getVoices](#getVoices) | Obtiene una lista de paquetes de voz disponibles|
-|[pause](#pause)|Pausa la síntesis de voz|
-|[resume](#resume)|Reanuda la síntesis de voz en pausa.|
-|[speak](#speak)|Síntesis del lado cliente de la opción texto a voz.|
-|[stop](#stop)|Detiene la síntesis de voz.|
-
-> [!Tip]
-> La [API de síntesis de voz de Microsoft Edge](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/) es una implementación de la [API de voz de W3C](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html) y recomendamos a los desarrolladores que la usen cuando les sea posible.
-
----
-
-<span id="getStatus" />
-### <a name="string-getstatus"></a>string getStatus()
-Obtiene el estado de la reproducción de voz.
-
-**Sintaxis**  
-`browser.tts.getStatus();`
-
-**Parámetros**  
-`None`
-
-**Valor devuelto**  
-`The speech playback status. Possible values are: “available”, “idle”, “paused”, and “speaking”.`
-
-**Requisitos**  
-Windows 10, versión 1607
-
----
-
-<span id="getVoices" />
-### <a name="string-getvoices"></a>string[] getVoices()
-Obtiene una lista de paquetes de voz disponibles.
-
-**Sintaxis**  
-`browser.tts.getVoices();`
-
-**Parámetros**  
-`None`
-
-**Valor devuelto**  
-`The available voice packs. For example: “Microsoft Zira Mobile”, “Microsoft Mark Mobile”`
-
-**Requisitos**  
-Windows 10, versión 1607
-
----
-
-<span id="pause" />
-### <a name="void-pause"></a>void pause()
-
-Pausa la síntesis de voz.
-
-**Sintaxis**  
-`browser.tts.pause();`
-
-**Parámetros**
-
-`None`
-
-**Valor devuelto**
-
-`None`
-
-**Requisitos**  
-Windows 10, versión 1607
-
----
-
-<span id="resume" />
-### <a name="void-resume"></a>void resume()
-Reanuda la síntesis de voz en pausa.
-
-**Sintaxis**  
-`browser.tts.resume();`
-
-**Parámetros**
-`None`
-
-**Valor devuelto**
-`None`
-
-**Requisitos**  
-Windows 10, versión 1607
-
----
-
-<span id="speak" />
-### <a name="void-speakstring-text-object-options-function-callback"></a>void speak(texto de cadena, opciones de objeto, devolución de llamada de la función)
-Inicia la síntesis del lado cliente de la opción texto a voz.
-
-**Sintaxis**  
-`void browser.tts.speak(“Hello world”, options, callback);`
-
-**Parámetros**  
-`Speech options such as gender, pitch, rate, volume. For example:`  
-```
-var options = {
-   'gender': this.currentGender,
-   'language': this.currentLanguage,
-   'pitch': 1,
-   'rate': 1,
-   'voice': this.currentVoice,
-   'volume': 1
-};
+```JSON
+{
+    'secure' : "true/false",
+    'messageKey' : "some message"
+}
 ```
 
-**Valor devuelto**  
-`None`
-
-**Observaciones** Las variables de la opción deben escribirse en minúscula. El género, idioma y los parámetros de voz forman parte de las cadenas.
-El volumen, el tono y la velocidad deben estar indicadas en el archivo de lenguaje de marcado de la síntesis de voz (SSML) y no en el objeto de opciones.
-El objeto de opciones debe seguir el orden, la nomenclatura y el uso de mayúsculas y minúsculas que se muestra en el ejemplo anterior.
-
 **Requisitos**  
-Windows 10, versión 1607
+Windows 10, versión 1709
 
 ---
 
-<span id="stop" />
-### <a name="void-stop"></a>void stop()
-Detiene la síntesis de voz.
+<span id="getDeviceInfo" />
+
+### <a name="getdeviceinfo"></a>getDeviceInfo
+Obtén información acerca de la plataforma en la que se ejecuta la aplicación de prueba. Esto se utiliza para ampliar cualquier información que sea apreciable desde el agente de usuario.
 
 **Sintaxis**  
-`void browser.tts.speak(“Hello world”, options, callback);`
+`void SecureBrowser.security.getDeviceInfo(Function callback);`
 
 **Parámetros**  
-`None`
-
-**Valor devuelto**  
-`None`
+* `callback` - La función para llamar cuando esta función finaliza. Debe tener la forma `Function(String infoObj)` donde `infoObj` es una cadena JSON que contiene varios campos. Se deben admitir los siguientes campos:
+    * `os` representa el tipo de sistema operativo (por ejemplo: Windows, macOS, Linux, iOS, Android, etc.)
+    * `name` representa el nombre de la versión del sistema operativo, si la hay (por ejemplo: Sierra, Ubuntu).
+    * `version` representa la versión del sistema operativo (por ejemplo: 10,1, 10 Pro, etc.)
+    * `brand` representa la personalización de marca de explorador seguro (por ejemplo: OAKS, CA, SmarterApp, etc.)
+    * `model` representa el modelo de dispositivo para dispositivos móviles. nulo o no se usa para exploradores de escritorio.
 
 **Requisitos**  
-Windows 10, versión 1607
+Windows 10, versión 1709
+
+---
+
+<span id="examineProcessList" />
+
+### <a name="examineprocesslist"></a>examineProcessList
+Obtiene la lista de todos los procesos que se ejecutan en el equipo cliente propiedad del usuario. La aplicación de prueba invocará esto para examinar la lista y compararla con una lista de procesos que se han considerado de la lista negra durante el ciclo de pruebas. Esta llamada se debe invocar tanto al inicio de una evaluación como periódicamente mientras el alumno realiza la evaluación. Si se detecta un proceso incluido en la lista negra, se deberá detener la evaluación para conservar la integridad de la prueba.
+
+**Sintaxis**  
+`void SecureBrowser.security.examineProcessList(String[] blacklistedProcessList, Function callback);`
+
+**Parámetros**  
+* `blacklistedProcessList` - La lista de procesos que la aplicación de prueba ha incluido en la lista negra.  
+`callback` - La función que se invocará una vez que se han encontrado los procesos activos. Debe tener el formato: `Function(String foundBlacklistedProcesses)` donde `foundBlacklistedProcesses` tiene el formato: `"['process1.exe','process2.exe','processEtc.exe']"`. Estará vacío si no se encontró ningún proceso de la lista negra. Si es nulo, esto indica que se ha producido un error en la llamada de función original.
+
+**Observaciones** La lista no incluye los procesos del sistema.
+
+**Requisitos**  
+Windows 10, versión 1709
+
+---
+
+<span id="close"/>
+
+### <a name="close"></a>cerrar
+Cierra el explorador y se desbloquea el dispositivo. La aplicación de prueba debe invocar esto cuando el usuario elige salir del explorador.
+
+**Sintaxis**  
+`void SecureBrowser.security.close(restart);`
+
+**Parámetros**  
+* `restart` - Este parámetro se pasa por alto, pero debe proporcionarse.
+
+**Comentarios** En Windows 10, versión 1607, el dispositivo debe bloquearse inicialmente. En versiones posteriores, este método cierra el explorador, independientemente de si el dispositivo está bloqueado.
+
+**Requisitos**  
+Windows 10, versión 1709
+
+---
+
+<span id="getPermissiveMode" />
+
+### <a name="getpermissivemode"></a>getPermissiveMode
+La aplicación web de prueba debe invocar esto para determinar si el modo permisivo está activado o desactivado. En el modo permisivo, se espera que los exploradores relajen algunos de sus ganchos de seguridad más estrictos para permitir que la tecnología de asistencia funcione con el explorador seguro. Por ejemplo, es posible que los exploradores que impiden de manera agresiva que otras interfaces de usuario de aplicación se presenten encima de ellos quieran relajar esto cuando se encuentren en el modo permisivo. 
+
+**Sintaxis**  
+`void SecureBrowser.security.getPermissiveMode(Function callback)`
+
+**Parámetros**  
+* `callback` - La función para invocar cuando esta llamada finalice. Debe tener el formato: `Function(Boolean permissiveMode)` donde `permissiveMode` indica si el explorador se encuentra actualmente en el modo permisivo. Si no está definido o es nulo, se produjo un error en la operación get.
+
+**Requisitos**  
+Windows 10, versión 1709
+
+---
+
+<span id="setPermissiveMode" />
+
+### <a name="setpermissivemode"></a>setPermissiveMode
+La aplicación web de prueba debe invocar esto para pasar de la activación a la desactivación, o viceversa, del modo permisivo. En el modo permisivo, se espera que los exploradores relajen algunos de sus ganchos de seguridad más estrictos para permitir que la tecnología de asistencia funcione con el explorador seguro. Por ejemplo, es posible que los exploradores que impiden de manera agresiva que otras interfaces de usuario de aplicación se presenten encima de ellos quieran relajar esto cuando se encuentren en el modo permisivo. 
+
+**Sintaxis**  
+`void SecureBrowser.security.setPermissiveMode(Boolean enable, Function callback)`
+
+**Parámetros**  
+* `enable` - El valor booleano que indica el estado del modo permisivo previsto.  
+* `callback` - La función para invocar cuando esta llamada finalice. Debe tener el formato: `Function(Boolean permissiveMode)` donde `permissiveMode` indica si el explorador se encuentra actualmente en el modo permisivo. Si no está definido o es nulo, se produjo un error en la operación set.
+
+**Requisitos**  
+Windows 10, versión 1709
+
+---
+
+<span id="emptyClipBoard"/>
+
+### <a name="emptyclipboard"></a>emptyClipBoard
+Borra el portapapeles del sistema. La aplicación de prueba debe invocar esto para forzar el borrado de datos que se pueden guardar en el Portapapeles del sistema. La función **[lockDown](#lockDown)** también realiza esta operación.
+
+**Sintaxis**  
+`void SecureBrowser.security.emptyClipBoard();`
+
+**Requisitos**  
+Windows 10, versión 1709
+
+---
+
+<span id="getMACAddress" />
+
+### <a name="getmacaddress"></a>getMACAddress
+Obtiene la lista de direcciones MAC del dispositivo. L aplicación de prueba debe invocar esto para ayudar en el diagnóstico. 
+
+**Sintaxis**  
+`void SecureBrowser.security.getMACAddress(Function callback);`
+
+**Parámetros**  
+* `callback` - La función para invocar cuando esta llamada finalice. Debe tener el formato: `Function(String addressArray)` donde `addressArray` tiene el formato: `"['00:11:22:33:44:55','etc']"`.
+
+**Comentarios**  
+Es difícil depender de las direcciones IP de origen para distinguir entre los equipos de usuario final dentro de los servidores de pruebas porque los firewalls/NAT/servidores proxy se usan habitualmente en las escuelas. Las direcciones MAC permiten que la aplicación distinga entre equipos de cliente final detrás de un firewall común para fines de diagnóstico.
+
+**Requisitos**  
+Windows 10, versión 1709
+
+---
+
+<span id="getStartTime" />
+
+### <a name="getstarttime"></a>getStartTime
+Obtiene la hora en que se inició la aplicación de prueba.
+
+**Sintaxis**  
+`DateTime SecureBrowser.settings.getStartTime();`
+
+**Return**  
+Un objeto DateTime que indica la hora en que se inició la aplicación de prueba.
+
+**Requisitos**  
+Windows 10, versión 1709
+
+---
+
+<span id="getCapability"/>
+
+### <a name="getcapability"></a>getCapability
+Realiza una consulta de si una funcionalidad está habilitada o deshabilitada. 
+
+**Sintaxis**  
+`Object SecureBrowser.security.getCapability(String feature)`
+
+**Parámetros**  
+`feature` - La cadena para determinar qué capacidad se debe consultar. Las cadenas de funcionalidad válidas son "screenMonitoring", "printing" y "textSuggestions" (no distingue mayúsculas de minúsculas).
+
+**Valor devuelto**  
+Esta función devuelve un objeto JavaScript o literal con el formato: `{<feature>:true|false}`. **true** si la funcionalidad consultada está habilitada, **false** si la capacidad no está habilitada o la cadena de funcionalidad no es válida.
+
+**Requisitos** Windows 10, versión 1703
+
+---
+
+<span id="setCapability"/>
+
+### <a name="setcapability"></a>setCapability
+Habilita o deshabilita una funcionalidad específica del explorador.
+
+**Sintaxis**  
+`void SecureBrowser.security.setCapability(String feature, String value, Function onSuccess, Function onError)`
+
+**Parámetros**  
+* `feature` - La cadena para determinar qué capacidad se debe establecer. Las cadenas de funcionalidad válidas son `"screenMonitoring"`, `"printing"` y `"textSuggestions"` (no distingue mayúsculas de minúsculas).  
+* `value` - La configuración prevista para la característica. Debe ser `"true"` o `"false"`.  
+* `onSuccess` - [opcional] La función para llamar después de la operación set ha finalizado correctamente. Debe tener el formato `Function(String jsonValue)` donde *jsonValue* tiene el formato: `{<feature>:true|false|undefined}`.  
+* `onError` - [opcional] La función para llamar si la operación set generó error. Debe tener el formato `Function(String jsonValue)` donde *jsonValue* tiene el formato: `{<feature>:true|false|undefined}`.
+
+**Comentarios**  
+Si el explorador desconoce la característica específica, esta función pasará un valor de `undefined` a la función de devolución de llamada.
+
+**Requisitos** Windows 10, versión 1703
+
+---
+
+<span id="isRemoteSession"/>
+
+### <a name="isremotesession"></a>isRemoteSession
+Comprueba si la sesión actual se registra de manera remota.
+
+**Sintaxis**  
+`Boolean SecureBrowser.security.isRemoteSession();`
+
+**Valor devuelto**  
+**true** si la sesión actual es remota; de lo contrario, **false**.
+
+**Requisitos**  
+Windows 10, versión 1709
+
+---
+
+<span id="isVMSession"/>
+
+### <a name="isvmsession"></a>isVMSession
+Comprueba si la sesión actual se ejecuta en una máquina virtual.
+
+**Sintaxis**  
+`Boolean SecureBrowser.security.isVMSession();`
+
+**Valor devuelto**  
+**true** si la sesión actual se ejecuta en una máquina virtual; de lo contrario, **false**.
+
+**Comentarios**  
+Esta comprobación de API solo puede detectar sesiones de VM que se ejecutan en determinados hipervisores que implementan las API adecuadas
+
+**Requisitos**  
+Windows 10, versión 1709
+
+---
