@@ -1,33 +1,32 @@
 ---
 author: mcleanbyron
 ms.assetid: 78278741-09A4-4406-A112-9AF3C73F5C16
-description: "Usa este método en la API de envío de la Tienda Windows para recuperar información sobre un complemento de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows."
+description: Usa este método en la API de envío de Microsoft Store para recuperar información sobre un complemento de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows.
 title: Obtener un complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, add-on, complemento, in-app product, producto desde la aplicación, IAP, IAP"
-ms.openlocfilehash: a79c93c1ed7d38b4de1da2bbd05456fd0884692e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on, complemento, in-app product, producto desde la aplicación, IAP, IAP
+ms.localizationpriority: medium
+ms.openlocfilehash: ace256fa10035f79cb050e431d5ffc71344f2ff3
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1664365"
 ---
 # <a name="get-an-add-on"></a>Obtener un complemento
 
-
-
-
-Usa este método en la API de envío de la Tienda Windows para recuperar información sobre un complemento (también conocido como producto desde la aplicación o IAP) de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows.
+Usa este método en la API de envío de Microsoft Store para recuperar información sobre un complemento (también conocido como producto desde la aplicación o IAP) de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
-
->**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
 ## <a name="request"></a>Solicitud
 
@@ -37,8 +36,6 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` |
 
-<span/>
- 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -46,21 +43,18 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/>
 
-### <a name="request-parameters"></a>Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de la solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | cadena | Obligatorio. El Id. de la Tienda del complemento que se va a recuperar. El Id. de la Tienda está disponible en el panel del Centro de desarrollo.  |
+| id | cadena | Obligatorio. El Id. de la Store del complemento que se va a recuperar. El Id. de la Store está disponible en el panel del Centro de desarrollo.  |
 
-<span/>
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
 No incluyas un cuerpo de la solicitud para este método.
 
-<span/>
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
@@ -107,14 +101,13 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se pudo encontrar el complemento especificado. |
-| 409  | El complemento usa una característica del panel del Centro de desarrollo que [la API de envío de la Tienda Windows no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | El complemento usa una característica del panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
-<span/>
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
-* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-* [Administración de envíos de complementos](manage-add-on-submissions.md)
+* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Administrar envíos de complementos](manage-add-on-submissions.md)
 * [Obtener todos los complementos](get-all-add-ons.md)
 * [Crear un complemento](create-an-add-on.md)
 * [Eliminar un complemento](delete-an-add-on.md)

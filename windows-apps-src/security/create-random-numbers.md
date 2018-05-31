@@ -1,23 +1,25 @@
 ---
-title: "Crear números aleatorios"
-description: "Este código de ejemplo muestra cómo crear un número aleatorio o búfer para usarlo en criptografía en una aplicación para la Plataforma universal de Windows (UWP)."
+title: Crear números aleatorios
+description: Este código de ejemplo muestra cómo crear un número aleatorio o búfer para usarlo en criptografía en una aplicación para la Plataforma universal de Windows (UWP).
 ms.assetid: 15746824-F93A-4DC7-836E-EBA916D2CFD3
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 251bd58d36ea1c6d9aa54d68034cfe819acdf72e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: da60dd982ab378bc71ecbc1f485ca3127cefc9dd
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1689231"
 ---
 # <a name="create-random-numbers"></a>Crear números aleatorios
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este código de ejemplo muestra cómo crear un número aleatorio o búfer para usarlo en criptografía en una aplicación para la Plataforma universal de Windows (UWP).
 

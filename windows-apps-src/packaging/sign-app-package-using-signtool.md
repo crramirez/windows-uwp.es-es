@@ -1,7 +1,7 @@
 ---
 author: laurenhughes
-title: "Firmar un paquete de aplicación con SignTool"
-description: "Usa SignTool para firmar manualmente un paquete de aplicación con un certificado."
+title: Firmar un paquete de aplicación con SignTool
+description: Usa SignTool para firmar manualmente un paquete de aplicación con un certificado.
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,13 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
-ms.openlocfilehash: 5cbff0011a4a96c61d7f7bad7e57bd130e09c39b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b0aab34b187e06ba2b87a1537d6e30df09b35d7e
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1663015"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>Firmar un paquete de aplicación con SignTool
 
-\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **SignTool** es una herramienta de línea de comandos que se usa para firmar un paquete de aplicación o un lote de aplicaciones con un certificado. El certificado puede crearlo el usuario (con fines de prueba) o emitirlo una empresa (para distribución). Firmar un paquete de aplicación proporciona al usuario la verificación de que los datos de la aplicación no se han modificado después de haberse firmado, a la vez que confirma la identidad del usuario o la empresa que la firmara. **SignTool** puede firmar paquetes de aplicación y lotes de aplicaciones cifrados o sin cifrar.
 
@@ -50,13 +53,16 @@ HashMethod="http://www.w3.org/2001/04/xmlenc#sha256">
 ```
 
 Esta tabla muestra cada valor de HashMethod y su algoritmo hash correspondiente:
+
+
 | Valor de HashMethod                              | Algoritmo hash |
 |-----------------------------------------------|----------------|
 | http://www.w3.org/2001/04/xmlenc#sha256       | SHA256         |
 | http://www.w3.org/2001/04/xmldsig-more#sha384 | SHA384         |
 | http://www.w3.org/2001/04/xmlenc#sha512       | SHA512         |
 
-> **Nota** Como el algoritmo predeterminado de **SignTool** es SHA1 (no disponible en **MakeAppx.exe**), siempre debes especificar un algoritmo hash al usar **SignTool**.
+> [!NOTE]
+> Como el algoritmo predeterminado de **SignTool** es SHA1 (no disponible en **MakeAppx.exe**), siempre debes especificar un algoritmo hash al usar **SignTool**.
 
 ### <a name="sign-the-app-package"></a>Firma del paquete de la aplicación
 
@@ -87,7 +93,7 @@ SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.appx
 
 Ten en cuenta que algunos certificados no usan contraseña. Si el certificado no tiene ninguna contraseña, omite "/p &lt;Your Password&gt;" de los comandos de muestra.
 
-Cuando el paquete de la aplicación está firmado con un certificado válido, estarás listo para cargar el paquete en la Tienda. Para obtener más orientación sobre cómo cargar y enviar aplicaciones a la Tienda, consulta [Envíos de aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/app-submissions).
+Cuando el paquete de la aplicación está firmado con un certificado válido, estarás listo para cargar el paquete en la Store. Para obtener más orientación sobre cómo cargar y enviar aplicaciones a la Store, consulta [Envíos de aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/app-submissions).
 
 ## <a name="common-errors-and-troubleshooting"></a>Errores comunes y solución de problemas
 Los tipos más comunes de errores al usar **SignTool** son internos y por lo general tienen este aspecto:

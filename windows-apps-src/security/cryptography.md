@@ -1,22 +1,25 @@
 ---
-title: "Criptografía"
-description: "El artículo ofrece una descripción general de las características de criptografía disponibles para aplicaciones de la Plataforma universal de Windows (UWP). Para obtener información detallada sobre tareas determinadas, consulta la tabla al final de este artículo."
+title: Criptografía
+description: El artículo ofrece una descripción general de las características de criptografía disponibles para aplicaciones de la Plataforma universal de Windows (UWP). Para obtener información detallada sobre tareas determinadas, consulta la tabla al final de este artículo.
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 952e6381fc46fc2cfbc91a2f4219f69219d8435c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 0b102d84a428555b05d475368ef08bb4999fa392
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1689921"
 ---
 # <a name="cryptography"></a>Criptografía
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 El artículo ofrece una descripción general de las características de criptografía disponibles para aplicaciones de la Plataforma universal de Windows (UWP). Para obtener información detallada sobre tareas determinadas, consulta la tabla al final de este artículo.
@@ -146,7 +149,7 @@ En los siguientes artículos se ofrecen más detalles sobre los escenarios de se
 | [Claves criptográficas](cryptographic-keys.md)                                   | En este artículo se muestra cómo usar funciones de derivación de claves estándar para derivar claves y cómo cifrar contenido mediante claves simétricas y asimétricas.                                                                                                                                                                                                                                                                                                                                                                             |
 | [Protección de datos](data-protection.md)                                         | En este artículo se explica cómo usar la clase [DataProtectionProvider](https://msdn.microsoft.com/library/windows/apps/br241559) en el espacio de nombres [Windows.Security.Cryptography.DataProtection](https://msdn.microsoft.com/library/windows/apps/br241585) para cifrar y descifrar datos digitales en una aplicación para UWP.                                                                                                                                                                                                                  |
 | [MAC, hash y firmas](macs-hashes-and-signatures.md)               | En este artículo se describe cómo se pueden usar los códigos de autenticación de mensajes (MAC), los hash y las firmas en las aplicaciones para UWP para detectar mensajes manipulados.                                                                                                                                                                                                                                                                                                                                                                                |
-| [Restricciones de exportación sobre la criptografía](export-restrictions-on-cryptography.md) | Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Tienda Windows.                                                                                                                                                                                                                                                                                                                                                                                            |
+| [Restricciones de exportación sobre la criptografía](export-restrictions-on-cryptography.md) | Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Microsoft Store.                                                                                                                                                                                                                                                                                                                                                                                            |
 | [Tareas comunes de criptografía](common-cryptography-tasks.md)                     | En estos artículos se ofrece código de ejemplo para tareas comunes de criptografía de UWP, como crear números aleatorios, comparar búferes, convertir entre cadenas y datos binarios, copiar a matrices de bytes y desde ellas, y codificar y descodificar datos.                                                                                                                                                                                                                                                                                    |
 
  

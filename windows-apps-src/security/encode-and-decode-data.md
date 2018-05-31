@@ -1,24 +1,27 @@
 ---
 title: Codificar y descodificar datos
-description: "En este código de ejemplo se muestra cómo codificar y descodificar datos hexadecimales y base64 en una aplicación para la Plataforma universal de Windows (UWP)."
+description: En este código de ejemplo se muestra cómo codificar y descodificar datos hexadecimales y base64 en una aplicación para la Plataforma universal de Windows (UWP).
 ms.assetid: 2CC23863-E840-48F4-B087-0479045743AC
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e7b80edf6f0434e336b6b146ca4a9bc737d262ba
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 5c826edcd8f7ce625f3cb42df69136f500e93f4e
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690361"
 ---
 # <a name="encode-and-decode-data"></a>Codificar y descodificar datos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este código de ejemplo muestra cómo codificar y descodificar datos hexadecimales y base64 en una aplicación para la Plataforma universal de Windows (UWP).
+En este código de ejemplo, se muestra cómo codificar y descodificar datos hexadecimales y base64 en una aplicación para la Plataforma universal de Windows (UWP).
 
 ```cs
 public void EncodeDecodeBase64()

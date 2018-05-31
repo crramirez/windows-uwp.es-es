@@ -2,16 +2,20 @@
 author: mcleanbyron
 ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
 description: Aprende a iniciar un anuncio intersticial con JavaScript/HTML.
-title: "Código de ejemplo de anuncios intersticiales en JavaScript"
+title: Código de ejemplo de anuncios intersticiales en JavaScript
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, anuncios, publicidad, intersticial, javascript, código de muestra, ads, advertising, interstitial, sample code"
-ms.openlocfilehash: 192ea42e9d55bbafcd6c6dbd463681832ac28c86
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: Windows 10, UWP, anuncios, publicidad, intersticial, javascript, código de muestra, ads, advertising, interstitial, sample code
+ms.localizationpriority: medium
+ms.openlocfilehash: f0cd50a8d3a08053f04dd0e6e8afbfafc8ef34dd
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690351"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>Código de ejemplo de anuncios intersticiales en JavaScript
 
@@ -19,23 +23,19 @@ En este tema se proporciona el código de ejemplo completo para una aplicación 
 
 ## <a name="code-example"></a>Ejemplo de código
 
-En esta sección se muestra el contenido de los archivos HTML y JavaScript en una aplicación básica que muestra un anuncio intersticial. Para usar estos ejemplos, copia este código en un proyecto **WinJS App (Windows universal)** en JavaScript de Visual Studio 2015.
+En esta sección se muestra el contenido de los archivos HTML y JavaScript en una aplicación básica que muestra un anuncio intersticial. Para usar estos ejemplos, copia este código en un proyecto **WinJS App (Windows universal)** de JavaScript en Visual Studio.
 
 Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar un anuncio intersticial. Los archivos main.js y index.html generados por Visual Studio se han modificado y se muestran a continuación. El archivo script.js que se muestra a continuación contiene la mayor parte del código de la muestra y debes agregar este archivo a la carpeta **js** del proyecto.
 
->**Nota para Windows 8.x y Windows Phone 8.1**&nbsp;&nbsp;Si el proyecto está dirigido a Windows 8.1 o Windows Phone 8.1, el archivo HTML predeterminado del proyecto se denomina default.html en lugar de index.html y el archivo JavaScript predeterminado del proyecto se denomina default.js en lugar de main.js.
+Reemplaza los valores de las variables ```applicationId``` y ```adUnitId``` por valores dinámicos del Centro de desarrollo de Windows antes de enviar tu aplicación a Microsoft Store. Para más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
-Reemplaza los valores de las variables ```applicationId``` y ```adUnitId``` por valores dinámicos del Centro de desarrollo de Windows antes de enviar la aplicación a la Tienda. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md).
-
->**Nota**&nbsp;&nbsp;Para modificar este ejemplo y mostrar un anuncio de banner intersticial en lugar de un anuncio de vídeo intersticial, pasa el valor **InterstitialAdType.display** al primer parámetro del método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) en lugar de **InterstitialAdType.video**. Para más información, consulta [Anuncios intersticiales](interstitial-ads.md).
+> [!NOTE]
+> Para modificar este ejemplo y mostrar un anuncio de banner intersticial en lugar de un anuncio de vídeo intersticial, pasa el valor **InterstitialAdType.display** al primer parámetro del método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) en lugar de **InterstitialAdType.video**. Para más información, consulta [Anuncios intersticiales](interstitial-ads.md).
 
 ### <a name="indexhtml"></a>index.html
 
 > [!div class="tabbedCodeSnippets"]
 [!code-html[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/index.html#L1-L21)]
-
-<span/>
->**Nota para Windows 8.x y Windows Phone 8.1**&nbsp;&nbsp;Si el proyecto está destinado a Windows 8.1 o Windows Phone 8.1, reemplaza la línea ```<script src="//Microsoft.Advertising.JavaScript/ad.js"></script>``` del ejemplo por ```<script src="/MSAdvertisingJS/ads/ad.js"></script>```.
 
 ### <a name="scriptjs"></a>script.js
 
@@ -47,7 +47,7 @@ Reemplaza los valores de las variables ```applicationId``` y ```adUnitId``` por 
 > [!div class="tabbedCodeSnippets"]
 [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/main.js#main)]
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
 * [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
 

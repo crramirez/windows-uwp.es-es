@@ -1,7 +1,7 @@
 ---
 author: jwmsft
-description: "Proporciona un medio para especificar el origen de un enlace en términos de una relación relativa en el gráfico de objetos en tiempo de ejecución."
-title: "Extensión de marcado RelativeSource"
+description: Proporciona un medio para especificar el origen de un enlace en términos de una relación relativa en el gráfico de objetos en tiempo de ejecución.
+title: Extensión de marcado RelativeSource
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -9,13 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 8827e579a595146b72fd71092609aebb90e3c211
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: c89793dd92a458c47a33aac4f7d4c728088cf1dc
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1674362"
 ---
 # <a name="relativesource-markup-extension"></a>Extensión de marcado {RelativeSource}
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Proporciona un medio para especificar el origen de un enlace en términos de una relación relativa en el gráfico de objetos en tiempo de ejecución.
 
@@ -48,9 +51,9 @@ Un [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) puede
 
 **RelativeSource** es similar a [Extensión de marcado {Binding}](binding-markup-extension.md).  Se trata de una extensión de marcado capaz de devolver instancias de sí misma y que admite una construcción basada en cadenas que fundamentalmente pasa un argumento al constructor. En este caso, el argumento que se pasa es el valor [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209915).
 
-El modo **Self** es útil para enlazar una propiedad de un elemento con otra propiedad del mismo elemento y es una variación en el enlace de [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828), pero no requiere la definición de nombres y que luego el elemento haga referencia a sí mismo. Si vinculas una propiedad de un elemento a otra propiedad del mismo elemento, las propiedades deben usar el mismo tipo de propiedad, o debes usar también un [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826) en el enlace para convertir los valores. Por ejemplo, podrías usar [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) como origen de [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) sin conversión, pero necesitarías un convertidor para usar [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) como un origen de [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006).
+El modo **Self** es útil para enlazar una propiedad de un elemento con otra propiedad del mismo elemento y es una variación en el enlace de [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828), pero no requiere la definición de nombres y que luego el elemento haga referencia a sí mismo. Si vinculas una propiedad de un elemento a otra propiedad del mismo elemento, las propiedades deben usar el mismo tipo de propiedad, o debes usar también un [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826) en el enlace para convertir los valores. Por ejemplo, podrías usar [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) como origen de [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) sin conversión, pero necesitarías un convertidor para usar [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) como un origen de [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006).
 
-A continuación te mostramos un ejemplo. Este [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371) usa una [extensión de marcado {Binding}](binding-markup-extension.md) para que su [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) y [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) siempre sean iguales y se represente como un cuadrado. Solo Height se establece como un valor fijo. Para este **Rectangle**, su valor predeterminado [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) es **null**, no **this**. Por eso, para establecer que el origen del contexto de datos sea el propio objeto (y permitir el enlace con sus otras propiedades), empleamos el argumento `RelativeSource={RelativeSource Self}` en el uso de la extensión de marcado {Binding}.
+A continuación te mostramos un ejemplo. Este [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) usa una [extensión de marcado {Binding}](binding-markup-extension.md) para que su [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) y [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) siempre sean iguales y se represente como un cuadrado. Solo Height se establece como un valor fijo. Para este **Rectangle**, su valor predeterminado [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) es **null**, no **this**. Por eso, para establecer que el origen del contexto de datos sea el propio objeto (y permitir el enlace con sus otras propiedades), empleamos el argumento `RelativeSource={RelativeSource Self}` en el uso de la extensión de marcado {Binding}.
 
 ```XML
 <Rectangle

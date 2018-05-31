@@ -1,17 +1,22 @@
 ---
 title: Recursos
-description: "Un recurso es una área en la memoria a la que puede obtener acceso la canalización de Direct3D."
+description: Un recurso es una área en la memoria a la que puede obtener acceso la canalización de Direct3D.
 ms.assetid: 2E68E5A8-83DA-4DC8-B7F3-B8988CF8090C
-keywords: Recursos
-author: mtoepke
-ms.author: mtoepke
+keywords:
+- Recursos
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 361e5e1489e976776015ec9401f1473b9d3c8bdd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b4984ca7ffb434123a13a695e8c74622c6b270f4
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653674"
 ---
 # <a name="resources"></a>Recursos
 
@@ -42,20 +47,20 @@ Una vista de recursos proporciona un modelo general para acceder a un recurso (c
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Tipos de recursos](resource-types.md)</p></td>
-<td align="left"><p>Los distintos tipos de recursos tienen un diseño (o una superficie de memoria) diferente. Todos los recursos que utiliza la canalización de Direct3D derivan de dos tipos de recursos básicos: [búferes](resource-types.md#buffer-resources) y [texturas](resource-types.md#texture-resources). Un búfer es una colección de datos sin procesar (elementos); una textura es una colección de elementos de textura.</p></td>
+<td align="left"><p><a href="resource-types.md">Tipos de recursos</a></p></td>
+<td align="left"><p>Los distintos tipos de recursos tienen un diseño (o una superficie de memoria) diferente. Todos los recursos que utiliza la canalización de Direct3D derivan de dos tipos de recursos básicos: <a href="resource-types.md#buffer-resources">búferes</a> y <a href="resource-types.md#texture-resources">texturas</a>. Un búfer es una colección de datos sin procesar (elementos); una textura es una colección de elementos de textura.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Elección de un recurso](choosing-a-resource.md)</p></td>
+<td align="left"><p><a href="choosing-a-resource.md">Elección de un recurso</a></p></td>
 <td align="left"><p>Un recurso es una colección de datos que se usa en la canalización 3D. La creación de recursos y la definición de su comportamiento constituyen el primer paso para la programación de la aplicación. En esta guía se tratan los aspectos básicos para elegir los recursos necesarios para la aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Copia y acceso a datos de recursos](copying-and-accessing-resource-data.md)</p></td>
+<td align="left"><p><a href="copying-and-accessing-resource-data.md">Copia y acceso a datos de recursos</a></p></td>
 <td align="left"><p>Los indicadores de uso indican cómo la aplicación pretende utilizar los datos de recursos para colocar recursos en el área de mayor rendimiento de memoria posible. Los datos de recursos se copian en los recursos para que la CPU o la GPU puedan acceder a estos sin que ello afecte al rendimiento.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Vistas de texturas](texture-views.md)</p></td>
-<td align="left"><p>En Direct3D, se accede a los recursos de texturas con una vista, que es un mecanismo para la interpretación de hardware de un recurso en memoria. Una vista permite que una fase de la canalización concreta acceda solo a los [subrecursos](resource-types.md) que necesita, en la representación que desea la aplicación.</p></td>
+<td align="left"><p><a href="texture-views.md">Vistas de texturas</a></p></td>
+<td align="left"><p>En Direct3D, se accede a los recursos de texturas con una vista, que es un mecanismo para la interpretación de hardware de un recurso en memoria. Una vista permite que una fase de la canalización concreta acceda solo a los <a href="resource-types.md">subrecursos</a> que necesita, en la representación que desea la aplicación.</p></td>
 </tr>
 </tbody>
 </table>

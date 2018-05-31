@@ -1,28 +1,31 @@
 ---
-title: "Restricciones de exportación sobre la criptografía"
-description: "Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Tienda Windows."
+title: Restricciones de exportación sobre la criptografía
+description: Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Microsoft Store.
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a2d2582150146ed8f7eb416e9d6e2c8f990ff818
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 38d5bddf2883667954f17b927ae328f70c7507b7
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690181"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Restricciones de exportación sobre la criptografía
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Tienda Windows.
+Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Microsoft Store.
 
-La Oficina de Industria y Seguridad del Departamento de Comercio de Estados Unidos regula las exportaciones de tecnología que usan determinados tipos de cifrado. Todas las aplicaciones que se muestran en la Tienda Windows deben cumplir con estas leyes y reglamentos porque los archivos de la aplicación podrían almacenarse en Estados Unidos. Incluso las aplicaciones cargadas por desarrolladores de otros países para su distribución fuera de Estados Unidos deben cumplir con estas normas. Por lo tanto, cuando cualquier desarrollador de aplicaciones envíe una aplicación a la Tienda Windows, deberá asegurarse de que sus aplicaciones no contienen ninguna tecnología restringida según estas normas.
+La Oficina de Industria y Seguridad del Departamento de Comercio de Estados Unidos regula las exportaciones de tecnología que usan determinados tipos de cifrado. Todas las aplicaciones que se muestran en la Microsoft Store deben cumplir estas leyes y reglamentos, porque los archivos de la aplicación podrían almacenarse en Estados Unidos. Incluso las aplicaciones cargadas por desarrolladores de otros países para su distribución fuera de Estados Unidos deben cumplir estas normas. Por lo tanto, cuando cualquier desarrollador de aplicaciones envíe una aplicación a la Microsoft Store, deberá asegurarse de que sus aplicaciones no contienen ninguna tecnología restringida según estas normas.
 
-> **Nota** La información que se proporciona aquí es orientativa, pero es tu responsabilidad como desarrollador que publica aplicaciones en la Tienda Windows comprobar que la aplicación cumpla todas las leyes y normativas aplicables.
+> **Nota** La información que se proporciona aquí es orientativa, pero es tu responsabilidad como desarrollador que publica aplicaciones en la Microsoft Store comprobar que la aplicación cumpla todas las leyes y normativas aplicables.
 
  
 

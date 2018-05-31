@@ -1,36 +1,37 @@
 ---
 author: mcleanbyron
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
-description: "Consulta las notas de la versión de las bibliotecas de Microsoft Advertising en Microsoft Store Services SDK."
-title: "Notas de la versión de las bibliotecas de publicidad"
+description: Revisa las notas de la versión de las bibliotecas de Microsoft Advertising.
+title: Notas de la versión de las bibliotecas de publicidad
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, release notes, notas de la versión"
-ms.openlocfilehash: f3d07df6e64c96e9070cb82bd7ac6e96b9cad1ee
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, release notes, notas de la versión
+ms.localizationpriority: medium
+ms.openlocfilehash: 41966827b02f95b8c34b4c13158c542e04b0c09f
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690231"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de la versión de las bibliotecas de publicidad
 
 
 
 
-En esta sección se proporcionan notas de la versión destinadas a la versión actual de las bibliotecas de Microsoft Advertising incluidas en Microsoft Store Services SDK (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x). Estas bibliotecas admiten aplicaciones de XAML y JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 y Windows Phone 8.
+En esta sección se proporcionan las notas de la versión para la versión actual de las bibliotecas de Microsoft Advertising. Estas bibliotecas admiten aplicaciones de XAML y JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 y Windows Phone 8.
 
 ## <a name="installation"></a>Instalación
 
 
-Las bibliotecas de Microsoft Advertising están disponibles como parte de [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) (para aplicaciones para UWP) y [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) (para aplicaciones de Windows 8.1 y Windows Phone 8.x). Para obtener más información sobre cómo instalar los SDK y las bibliotecas incluidas en ellos, consulta [Instalar las bibliotecas de Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
-
-Para obtener los ensamblados de Microsoft Advertising para proyectos de Windows Phone 8.x Silverlight, instala el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk), abre el proyecto en Visual Studio y, después, ve a **Proyecto** > **Agregar servicio conectado** > **Ad Mediator** para descargar automáticamente los ensamblados. Después de hacer esto, puedes quitar las referencias de Ad Mediator del proyecto si no quieres usar la mediación de anuncios. Para obtener más información, consulta [AdControl en Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).
-
+Las bibliotecas de publicidad de Microsoft están disponibles como parte del [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Para más información sobre cómo instalar el SDK, consulta [Instalar el SDK de Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="uninstall-previous-versions"></a>Desinstalar versiones anteriores
 
-Antes de instalar Microsoft Store Services SDK (para aplicaciones para UWP) o el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x), se recomienda encarecidamente desinstalar todas las instancias anteriores del SDK de Microsoft Universal Ad Client o el SDK de Microsoft Advertising.
+Antes de instalar el SDK de Microsoft Advertising más reciente, se recomienda encarecidamente desinstalar todas las instancias anteriores del SDK. Para más información, consulta [Instalar el SDK de Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="target-architecture-specific-build-outputs"></a>Establecer el destino en las salidas de compilación específicas de la arquitectura
 
@@ -38,11 +39,11 @@ Al usar las bibliotecas de Microsoft Advertising, no puedes dirigirte a **Cualqu
 
 ## <a name="c-support"></a>Compatibilidad con C++
 
-Las bibliotecas de Microsoft Advertising (que incluyen las clases **AdControl** e **InterstitialAd**) admiten aplicaciones escritas en C++ y DirectX mediante la interoperabilidad de Windows Runtime (*interoperabilidad*). Para obtener más información y ejemplos acerca de la programación con XAML y C++, consulta [Sistema de tipos](https://msdn.microsoft.com/library/windows/apps/xaml/hh755822.aspx).
+Las bibliotecas de Microsoft Advertising (que incluyen las clases **AdControl** e **InterstitialAd**) admiten aplicaciones escritas en C++ y DirectX mediante la interoperabilidad de Windows Runtime (*interoperabilidad*). Para obtener más información y ejemplos acerca de la programación con XAML y C++, consulta [Sistema de tipos](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx).
 
 ## <a name="no-toolbox-control"></a>Ningún control de cuadro de herramientas
 
-En la versión actual de las bibliotecas de Microsoft Advertising incluidas en Microsoft Store Services SDK o en el SDK de Microsoft Advertising para Windows y Windows Phone 8.x, no hay ningún control de cuadro de herramientas para arrastrar un objeto **AdControl** o **InterstitialAd** a una superficie de diseño de la aplicación. Para obtener instrucciones sobre cómo agregar estos controles en el marcado y el código, consulta los [tutoriales de desarrollo](developer-walkthroughs.md).
+En la versión actual de las bibliotecas de publicidad de Microsoft en el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp), no hay ningún control de cuadro de herramientas para arrastrar una clase **AdControl** o **InterstitialAd** a una superficie de diseño de la aplicación. Para obtener instrucciones sobre cómo agregar estos controles en el marcado y el código, consulta los [tutoriales de desarrollo](developer-walkthroughs.md).
 
 ## <a name="latitude-and-longitude-properties-no-longer-available"></a>Las propiedades de latitud y longitud ya no está disponibles
 

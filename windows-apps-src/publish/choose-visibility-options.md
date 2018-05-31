@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: TSet restrictions on how your app can be discovered and acquired, including whether people can find your app in the Store or see its Store listing at all.
+Description: Set restrictions on how your app can be discovered and acquired, including whether people can find your app in the Store or see its Store listing at all.
 title: Elegir las opciones de visibilidad
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, visibilidad, audiencia privada, disponible, descubrible
 ms.localizationpriority: high
-ms.openlocfilehash: ae4e467305f91f9faedd7aa1a28a591216a93ee1
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.openlocfilehash: 548b25d4e74945eadfcc8ebe8a5cb2f8d870d38f
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832089"
 ---
 # <a name="choose-visibility-options"></a>Elegir las opciones de visibilidad
 
@@ -61,8 +62,8 @@ Estas son algunas cosas importantes que debes tener en cuenta al elegir distribu
 - La aplicación no estará disponible a través de Microsoft Store para Empresas y/o Microsoft Store para Educación, independientemente de la configuración de licencias de organización, incluso para las personas de tu público privado.
 - Mientras que Store garantizará que tu aplicación solo será visible y estará disponible para las personas que hayan iniciado sesión con una cuenta de Microsoft que hayas agregado a tu audiencia privada, no podemos impedir que esas personas compartan información o capturas de pantalla fuera de tu audiencia privada. Cuando la confidencialidad es fundamental, asegúrate de que tu audiencia privada incluya solo las personas que confíes que no compartirán detalles sobre la aplicación con otras personas.
 - Asegúrate de que los evaluadores sepan cómo enviarte sus comentarios. Probablemente no quieras que dejen comentarios en el Centro de opiniones, porque cualquier otro cliente podría verlos. Plantéate incluir un vínculo para que ellos envíen correos electrónicos o proporcionen comentarios de cualquier otra forma.
-- Cualquier reseña escritas por los evaluadores será visible en el [Informe de reseñas](reviews-report.md). Sin embargo, estas reseñas no se publicarán en la descripción de Store de tu aplicación, incluso después de que el envío se pase a **Audiencia pública**.  
-- Al mover una aplicación de **Audiencia privada** a **Audiencia pública**, la **Fecha de lanzamiento** que se mostrará en la descripción de Store será la fecha en la que se publicó por primera vez para la audiencia pública (a menos que hayas especificado una [fecha de lanzamiento diferente](set-app-pricing-and-availability.md#display-release-date)).
+- Cualquier opinión escrita por personas de tu audiencia privada estará disponible para que puedas verla. Sin embargo, estas reseñas no se publicarán en la descripción de Store de tu aplicación, incluso después de que el envío se pase a **Audiencia pública**. Puedes leer críticas escritas de tu audiencia privada viendo el [Informe de críticas](reviews-report.md) en el Centro de desarrollo, pero no se pueden descargar estos datos ni usar la [API de análisis de Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) para acceder programáticamente a estas críticas.
+- Al mover una aplicación de **Audiencia privada** a **Audiencia pública**, la **Fecha de lanzamiento** que se mostrará en la descripción de Store será la fecha en la que se publicó por primera vez para la audiencia pública.
 
 ## <a name="discoverability"></a>Detectabilidad
 
@@ -90,7 +91,7 @@ También debes elegir una de las siguientes opciones para especificar cómo se p
 > Cada una de estas opciones limita las versiones de sistema operativo en el que los clientes pueden comprar tu aplicación. Lee las descripciones con cuidado para asegurarte de que conoces qué versiones del sistema operativo son compatibles. 
 
 - **Solo vínculo directo: Cualquier cliente con un vínculo directo a la descripción del producto puede descargarla, excepto en Windows 8.x.** Cualquier cliente que obtenga la descripción de la aplicación a través de un vínculo directo puede descargarla en dispositivos que ejecuten Windows 10, o en dispositivos que ejecuten Windows Phone 8.1 o versiones anteriores (pero no en dispositivos que ejecuten Windows 8.x).
-- **Detener la compra: Los clientes con un vínculo directo podrán ver la descripción de la aplicación en la Tienda, pero solo podrán descargarla si ya tienen el producto, tienen un código promocional y están usando un dispositivo Windows 10.** Incluso si un cliente tiene un vínculo directo, no se puede descargar la aplicación a no ser que tenga un [código promocional](generate-promotional-codes.md) y esté usando un dispositivo Windows 10. Si un cliente dispone de un código promocional, puede usarlo para obtener tu aplicación de forma gratuita (solo en Windows 10), aunque no se la ofrezcas a ningún otro cliente. Además de usar un código promocional, no existe manera alguna de que otra persona pueda acceder a tu aplicación.
+- **Detener la compra: Los clientes con un vínculo directo podrán ver la descripción de la aplicación en la Store, pero solo podrán descargarla si ya tienen el producto, tienen un código promocional y están usando un dispositivo Windows 10.** Incluso si un cliente tiene un vínculo directo, no se puede descargar la aplicación a no ser que tenga un [código promocional](generate-promotional-codes.md) y esté usando un dispositivo Windows 10. Si un cliente dispone de un código promocional, puede usarlo para obtener tu aplicación de forma gratuita (solo en Windows 10), aunque no se la ofrezcas a ningún otro cliente. Además de usar un código promocional, no existe manera alguna de que otra persona pueda acceder a tu aplicación.
 
 > [!TIP]
 > Si quieres dejar de ofrecer una aplicación a los nuevos clientes, puedes seleccionar **Hacer la aplicación no disponible** desde su página de información general. Después de confirmar que quieres que la aplicación deje de estar disponible, en el plazo de unas horas dejará de estar visible en Microsoft Store y ningún cliente nuevo podrá acceder a ella (a no ser que tengan un [código promocional](generate-promotional-codes.md) y usen un dispositivo Windows 10). Esta acción anulará las selecciones de **Visibilidad** en el envío. Para que la aplicación vuelva a estar disponible para los nuevos clientes (por selecciones de **Visibilidad**), puedes hacer clic en **Make app available** desde la página de información general en cualquier momento. Para obtener más información, consulta [Quitar una aplicación de Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).

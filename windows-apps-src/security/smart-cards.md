@@ -1,23 +1,25 @@
 ---
 title: Tarjetas inteligentes
-description: "En este tema se explica la manera en que las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar tarjetas inteligentes para conectar a los usuarios para proteger los servicios de red, incluido cómo obtener acceso a los lectores de tarjetas inteligentes físicas, crear tarjetas inteligentes virtuales, comunicarse con tarjetas inteligentes, autenticar usuarios, restablecer los PIN de usuario y quitar o desconectar tarjetas inteligentes."
+description: En este tema se explica la manera en que las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar tarjetas inteligentes para conectar a los usuarios para proteger los servicios de red, incluido cómo obtener acceso a los lectores de tarjetas inteligentes físicas, crear tarjetas inteligentes virtuales, comunicarse con tarjetas inteligentes, autenticar usuarios, restablecer los PIN de usuario y quitar o desconectar tarjetas inteligentes.
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
-author: awkoren
-ms.author: alkoren
+author: PatrickFarley
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9eb45cd5e8f30e530cd88e05c7e7ed5f3d5ac1cd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 879923c68a356e7f3fac59facf2eb1d24a4e3378
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817240"
 ---
 # <a name="smart-cards"></a>Tarjetas inteligentes
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tema se explica la manera en que las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar tarjetas inteligentes para conectar a los usuarios para proteger los servicios de red, incluido cómo obtener acceso a los lectores de tarjetas inteligentes físicas, crear tarjetas inteligentes virtuales, comunicarse con tarjetas inteligentes, autenticar usuarios, restablecer los PIN de usuario y quitar o desconectar tarjetas inteligentes. 

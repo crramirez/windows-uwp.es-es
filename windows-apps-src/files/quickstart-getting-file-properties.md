@@ -2,22 +2,23 @@
 author: laurenhughes
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obtener las propiedades de archivos
-description: "Obtén las propiedades (de nivel superior, básicas y extendidas) de un archivo representado mediante un objeto StorageFile."
+description: Obtén las propiedades (de nivel superior, básicas y extendidas) de un archivo representado mediante un objeto StorageFile.
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e564c44a99419f1900ab6c322af4ea6dedb195cb
-ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.localizationpriority: medium
+ms.openlocfilehash: f3edb012f04026251d151da99f34accb9e1848c3
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1662735"
 ---
 # <a name="get-file-properties"></a>Obtener las propiedades de archivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -28,7 +29,8 @@ ms.lasthandoff: 06/27/2017
 
 Obtiene las propiedades —de nivel superior, básicas y extendidas— de un archivo representado mediante un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
-**Nota**  Consulta también la [muestra de acceso a archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
+> [!NOTE]
+> Consulta también la [Muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
  
 

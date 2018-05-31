@@ -1,32 +1,28 @@
 ---
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
-description: "Obtén información sobre los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising."
-title: Problemas conocidos de las bibliotecas de publicidad
+description: Obtén información sobre los problemas conocidos de la versión actual del SDK de Microsoft Advertising.
+title: Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
 ms.author: mcleans
-ms.date: 07/20/2017
+ms.date: 04/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, known issues, problemas conocidos
-ms.openlocfilehash: b18c4568770afb70bcca991c79d59a9912981705
-ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+keywords: windows 10, uwp, anuncios, publicidad, problemas conocidos, solución de problemas
+ms.localizationpriority: medium
+ms.openlocfilehash: aaf2db68df9de3f397a0cbc677e18f4ed544cf4b
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817536"
 ---
-# <a name="known-issues-for-the-advertising-libraries"></a>Problemas conocidos de las bibliotecas de publicidad
+# <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
 
+En este tema se muestran los problemas conocidos con la versión actual del SDK de Microsoft Advertising. Para obtener una guía sobre la solución de problemas, consulta los temas siguientes.
 
-
-
-En este tema se enumeran los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Advertising (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone8.x (para aplicaciones de Windows8.1 y Windows Phone8.x).
-
-## <a name="windows-phone-8x-silverlight-projects"></a>Proyectos de Windows Phone 8.x Silverlight
-
-El SDK de Microsoft Advertising para Windows y Windows Phone 8.x ofrece compatibilidad limitada con los proyectos de Windows Phone 8.x Silverlight. Para obtener más información, consulta [Compatibilidad de publicidad para proyectos de Windows Phone 8.x Silverlight](adcontrol-in-windows-phone-silverlight.md#silverlight_support).
-
-Para obtener los ensamblados de Microsoft Advertising para proyectos de Windows Phone 8.x Silverlight, instala el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk), abre el proyecto en Visual Studio y, después, ve a **Proyecto** > **Agregar servicio conectado** > **Ad Mediator** para descargar automáticamente los ensamblados. Después de hacer esto, puedes quitar las referencias de Ad Mediator del proyecto si no quieres usar la mediación de anuncios. Para obtener más información, consulta [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md) (AdControl en Windows Phone Silverlight).
+* [Guía de solución de problemas de HTML y JavaScript](html-and-javascript-troubleshooting-guide.md)
+* [Guía de solución de problemas de XAML y C#](xaml-and-c-troubleshooting-guide.md)
 
 ## <a name="adcontrol-interface-unknown-in-xaml"></a>Interfaz de AdControl desconocida en XAML
 
@@ -50,11 +46,11 @@ Existen muchos motivos para que no veas anuncios, incluidos errores de red. Entr
 
 * Seleccionar una unidad de anuncios en el Centro de desarrollo de Windows con un tamaño mayor o menor que el tamaño de **AdControl** en el código de la aplicación.
 
-* Los anuncios no aparecerán si usas un [valor del modo de prueba](test-mode-values.md) para tu identificador de unidad de anuncio cuando se ejecuta una aplicación dinámica.
+* Los anuncios no aparecerán si usas un [valor del modo de prueba](set-up-ad-units-in-your-app.md#test-ad-units) para tu identificador de unidad de anuncio cuando se ejecuta una aplicación dinámica.
 
 * Si has creado un nuevo identificador de unidad de anuncio en última media hora, puede que no veas un anuncio hasta que los servidores propaguen nuevos datos a través del sistema. Los identificadores existentes que han mostrado anuncios antes deberían mostrar anuncios de inmediato.
 
-Si puedes ver anuncios de prueba en la aplicación, el código funciona y es capaz de mostrar anuncios. Si tienes problemas, ponte en contacto con [soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331508). En esa página, elige **Publicidad en la aplicación**.
+Si puedes ver anuncios de prueba en la aplicación, el código funciona y es capaz de mostrar anuncios. Si tienes problemas, ponte en contacto con [soporte técnico](https://developer.microsoft.com/en-us/windows/support). En esa página, elige **Anuncios desde la aplicación**.
 
 También puedes publicar una pregunta en el [foro](http://go.microsoft.com/fwlink/p/?LinkId=401266).
 
@@ -62,27 +58,18 @@ También puedes publicar una pregunta en el [foro](http://go.microsoft.com/fwlin
 
 Pueden mostrarse anuncios de prueba, incluso cuando esperas anuncios dinámicos. Esto puede suceder en los siguientes escenarios:
 
-* Nuestra plataforma de publicidad no puede comprobar o encontrar el identificador de la aplicación dinámica usado en la Tienda. En este caso, cuando un usuario crea una unidad de anuncio, su estado puede empezar como dinámico (no de prueba), pero se moverá al estado de prueba dentro de las 6 horas posteriores a la primera solicitud del anuncio. Volverá a ser dinámico si no hay ninguna solicitud de las aplicaciones de prueba durante 10 días.
+* Nuestra plataforma de publicidad no puede comprobar o encontrar el identificador de la aplicación dinámica usado en la Store. En este caso, cuando un usuario crea una unidad de anuncio, su estado puede empezar como dinámico (no de prueba), pero se moverá al estado de prueba dentro de las 6 horas posteriores a la primera solicitud del anuncio. Volverá a ser dinámico si no hay ninguna solicitud de las aplicaciones de prueba durante 10 días.
 
 * Las aplicaciones de prueba o las aplicaciones que se ejecutan en el emulador no mostrará anuncios dinámicos.
 
 Cuando una unidad de anuncios dinámicos envía anuncios de prueba, el estado de la unidad de anuncios muestra **Active and serving test ads** en el Centro de desarrollo de Windows. Esto no corresponde actualmente a las aplicaciones para teléfonos.
 
-## <a name="obsolete-test-values-for-ad-unit-id-and-application-id-no-longer-working"></a>Los valores de prueba obsoletos para el identificador de unidad de anuncios y el identificador de aplicación ya no funcionan
-
-Los siguientes valores de prueba para aplicaciones de Windows Phone Silverlight están obsoletos y dejarán de funcionar. Si tienes un proyecto existente que usa estos valores de prueba, actualiza el proyecto para usar los valores proporcionados en [Test mode values](test-mode-values.md) (Valores del modo de prueba).
-
-| Id. de aplicación  |  Id. de unidad de anuncio    |
-|-----------------|----------------|
-| test_client     |  Image320_50   |
-| test_client     |  Image300_50   |
-| test_client     |  TextAd   |
-| test_client     |  Image480_80   |
 
 <span id="reference_errors"/>
+
 ## <a name="reference-errors-caused-by-targeting-any-cpu-in-your-project"></a>Errores de referencia provocados por dirigirse a Cualquier CPU en el proyecto
 
-Al usar las bibliotecas de Microsoft Advertising, no puedes dirigirte a **Cualquier CPU** en tu proyecto. Si el proyecto se dirige a la plataforma **Cualquier CPU**, puede que veas una advertencia después de agregar la referencia similar a esta.
+Al usar el SDK de Microsoft Advertising, no puedes dirigirte a **Cualquier CPU** en tu proyecto. Si el proyecto se dirige a la plataforma **Cualquier CPU**, puede que veas una advertencia después de agregar la referencia similar a esta.
 
 ![referenceerror\-solutionexplorer](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
 
@@ -101,19 +88,14 @@ Cuando crees los paquetes de la aplicación para el envío a la tienda (como se 
 Las aplicaciones de JavaScript/HTML no deben colocar elementos en el intervalo MAX-10 reservado de orden z. La única excepción es una superposición de interrupción, como una notificación de llamada entrante para una aplicación de Skype.
 
 <span id="bkmk-ui"/>
+
 ## <a name="do-not-use-borders"></a>No uses bordes
 
 Establecer las propiedades relacionadas con los bordes heredados por **AdControl** de su clase primaria hará que la colocación del anuncio sea incorrecta.
 
 ## <a name="more-information"></a>Más información
 
-
-Para obtener más información acerca de los últimos problemas conocidos y para publicar preguntas relacionadas con las bibliotecas de Microsoft Advertising, visita el [foro](http://go.microsoft.com/fwlink/p/?LinkId=401266).
-
-## <a name="support"></a>Soporte técnico
-
-
-Para ponerte en contacto con soporte técnico para problemas relacionados con las bibliotecas de Microsoft Advertising, visita la [página de soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331508) y elige **Publicidad en la aplicación**.
+Para obtener más información acerca de los últimos problemas conocidos y para publicar preguntas relacionadas con el SDK de Microsoft Advertising, visita el [foro](http://go.microsoft.com/fwlink/p/?LinkId=401266).
 
  
 

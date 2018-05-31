@@ -1,32 +1,31 @@
 ---
 author: mcleanbyron
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
-description: "Usa este método en la API de envío de la Tienda Windows para recuperar los datos de todos los complementos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows."
+description: Usa este método en la API de envío de Microsoft Store para recuperar los datos de todos los complementos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
 title: Obtener todos los complementos
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, add-ons, complementos, in-app products, productos desde la aplicación, IAPs, IAP"
-ms.openlocfilehash: 82d05e49f087dda903a0bc5c1010df98ae64c016
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-ons, complementos, in-app products, productos desde la aplicación, IAPs, IAP
+ms.localizationpriority: medium
+ms.openlocfilehash: 69ec59a39c91152788f757beb56afc75e7191922
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1663125"
 ---
 # <a name="get-all-add-ons"></a>Obtener todos los complementos
 
-
-
-
-Usa este método en la API de envío de la Tienda Windows para recuperar datos para todos los complementos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
+Usa este método en la API de envío de Microsoft Store para recuperar datos para todos los complementos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos.
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
@@ -37,8 +36,6 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
 
-<span/>
- 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -46,18 +43,16 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/>
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 Todos los parámetros de solicitud son opcionales para este método. Si llamas a este método sin parámetros, la respuesta contiene datos de todos los complementos de todas las aplicaciones registradas en tu cuenta.
- 
+
 |  Parámetro  |  Tipo  |  Descripción  |  Obligatorio  |
 |------|------|------|------|
 |  top  |  entero  |  El número de elementos que se devolverán en la solicitud (es decir, el número de complementos que se devolverán). Si los complementos de la cuenta superan el valor especificado en la consulta, el cuerpo de la respuesta incluye una ruta de acceso al URI relativa que puedes anexar al URI del método para solicitar la siguiente página de datos.  |  No  |
 |  skip  |  entero  |  El número de elementos que se omitirán en la consulta antes de devolver los elementos restantes. Usa este parámetro para consultar conjuntos de datos. Por ejemplo, top = 10 y skip = 0 recuperan los elementos del 1 al 10, mientras que top = 10 y skip = 10 recuperan los elementos del 11 al 20, y así sucesivamente.  |  No  |
 
-<span/>
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
@@ -144,8 +139,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de la solicitud inicial se establece en 10, pero hay 100 complementos registrados en la cuenta, el cuerpo de la respuesta incluirá un valor @nextLink de ```inappproducts?skip=10&top=10```, lo que indica que puedes llamar a ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10``` para solicitar los 10 complementos siguientes. |
 | value            | matriz  |  Una matriz que contiene objetos que proporcionan información sobre cada complemento. Para obtener más información, consulta [Recurso de complemento](manage-add-ons.md#add-on-object).   |
-| totalCount   | entero  | Número de objetos de la aplicación en la matriz *value* del cuerpo de la respuesta.                                                                                                                                                 |
-
+| totalCount   | entero  | Número de objetos de la aplicación en la matriz *value* del cuerpo de la respuesta.     |
 
 
 ## <a name="error-codes"></a>Códigos de error
@@ -155,13 +149,12 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se encontraron complementos. |
-| 409  | Las aplicaciones o complementos usan características de panel del Centro de desarrollo que [la API de envío de la Tienda Windows no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | Las aplicaciones o complementos usan características de panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
-<span/>
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de complemento](manage-add-on-submissions.md)
 * [Obtener un complemento](get-an-add-on.md)
 * [Crear un complemento](create-an-add-on.md)

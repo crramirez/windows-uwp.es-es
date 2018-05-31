@@ -1,7 +1,7 @@
 ---
 author: PatrickFarley
-title: "Conectar dispositivos a través de sesiones remotas"
-description: "Cree experiencias compartidas en varios dispositivos uniéndolos en una sesión remota."
+title: Conectar dispositivos a través de sesiones remotas
+description: Cree experiencias compartidas en varios dispositivos uniéndolos en una sesión remota.
 ms.assetid: 1c8dba9f-c933-4e85-829e-13ad784dd3e2
 ms.author: pafarley
 ms.date: 06/28/2017
@@ -10,11 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9096a93005c628a5cf1f3271fbab3cca2399b75d
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 0539c9b50196d98809fc01ea3f2a1950cbf27599
+ms.sourcegitcommit: 12cc283e821cbf978debf24914490982f076b4b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/16/2018
+ms.locfileid: "1658091"
 ---
 # <a name="connect-devices-through-remote-sessions"></a>Conectar dispositivos a través de sesiones remotas
 
@@ -26,7 +27,7 @@ Las sesiones remotas se pueden crear por cualquier dispositivo Windows y cualqui
 
 ### <a name="add-the-remotesystem-capability"></a>Agregar la funcionalidad remoteSystem
 
-Para que la aplicación pueda iniciar una aplicación en un dispositivo remoto, debes agregar la funcionalidad `remoteSystem` al manifiesto del paquete de la aplicación. Si quieres usar el diseñador de manifiestos del paquete para agregarla, selecciona **Sistema remoto** en la pestaña **Funcionalidades**, o bien puedes agregar manualmente la siguiente línea al archivo Package.appxmanifest del proyecto.
+Para que la aplicación pueda iniciar una aplicación en un dispositivo remoto, debes agregar la funcionalidad `remoteSystem` al manifiesto del paquete de la aplicación. Si quieres usar el diseñador de manifiestos del paquete para agregarla, selecciona **Sistema remoto** en la pestaña **Funcionalidades**, o bien puedes agregar manualmente la siguiente línea al archivo _Package.appxmanifest_ del proyecto.
 
 ``` xml
 <Capabilities>

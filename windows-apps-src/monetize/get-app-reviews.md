@@ -1,30 +1,34 @@
 ---
 author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de opiniones de un intervalo de fechas proporcionado y otros filtros opcionales."
-title: "Obtener las opiniones de la aplicación"
+description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de opiniones de un intervalo de fechas proporcionado y otros filtros opcionales.
+title: Obtener las opiniones de la aplicación
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, servicios de la Tienda, API de análisis de la Tienda Windows, opiniones, reviews"
-ms.openlocfilehash: 79ba971e64958ab83e2674a91be37be754d2d9b6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: Windows 10, UWP, servicios de Microsoft Store, API de análisis de Microsoft Store, opiniones
+ms.localizationpriority: medium
+ms.openlocfilehash: 1f1e71fc0fb96344ab73c503de6fcc741673d8d9
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1663855"
 ---
 # <a name="get-app-reviews"></a>Obtener las opiniones de la aplicación
 
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos de opiniones en formato JSON de un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de opiniones](../publish/reviews-report.md) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener los datos de opiniones en formato JSON de un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de opiniones](../publish/reviews-report.md) del panel del Centro de desarrollo de Windows.
 
-Después de recuperar las revisiones, puedes usar los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md) de la API de opiniones de la Tienda Windows para responder mediante programación a opiniones.
+Después de recuperar las revisiones, puedes usar los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md) de la API de opiniones de Microsoft Store para responder mediante programación a opiniones.
 
 ## <a name="prerequisites"></a>Requisitos previos.
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
@@ -35,7 +39,6 @@ Para usar este método, primero debes hacer lo siguiente:
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews``` |
 
-<span/> 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -43,13 +46,12 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|---------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/> 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | cadena | El Id. de la Tienda de la aplicación sobre la que quieres recuperar los datos de revisión. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8. |  Sí  |
+| applicationId | cadena | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) de la aplicación sobre la que quieres recuperar los datos de revisión.  |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de revisión que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de revisión que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
@@ -57,8 +59,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | filter |cadena  | Una o más instrucciones que filtran las filas en la respuesta. Para obtener más información, consulta la sección [filtrar campos](#filter-fields) a continuación. | No   |
 | orderby | cadena | Una instrucción que ordena los valores de datos resultantes. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>date</strong></li><li><strong>osVersion</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>isRevised</strong></li><li><strong>packageVersion</strong></li><li><strong>deviceModel</strong></li><li><strong>productFamily</strong></li><li><strong>deviceScreenResolution</strong></li><li><strong>isTouchEnabled</strong></li><li><strong>reviewerName</strong></li><li><strong>reviewTitle</strong></li><li><strong>reviewText</strong></li><li><strong>helpfulCount</strong></li><li><strong>notHelpfulCount</strong></li><li><strong>responseDate</strong></li><li><strong>responseText</strong></li><li><strong>deviceRAM</strong></li><li><strong>deviceStorageCapacity</strong></li><li><strong>rating</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
 
-<span/>
- 
+
 ### <a name="filter-fields"></a>Campos de filtro
 
 El parámetro *filter* de la solicitud contiene una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un campo y un elemento que se asocian a los operadores **eq** o **ne**; asimismo, algunos campos también son compatibles con los operadores **contains**, **gt**, **lt**, **ge**, y **le**. Las instrucciones se pueden combinar mediante **and** u **or**.
@@ -90,11 +91,10 @@ Para obtener una lista de los campos y operadores compatibles de cada campo, con
 | responseText  | eq, ne, contains  | El contenido de texto de la respuesta.  |
 | id  | eq, ne  | El identificador de la revisión (es un GUID).        |
 
-<span/> 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-Los ejemplos siguientes muestran varias solicitudes para obtener datos de opiniones. Reemplaza el valor *applicationId* por el Id. de la Tienda de la aplicación.
+Los ejemplos siguientes muestran varias solicitudes para obtener datos de opiniones. Reemplaza el valor *applicationId* por el Id. de la Store de la aplicación.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -113,9 +113,8 @@ Authorization: Bearer <your access token>
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Valor      | matriz  | Matriz de objetos que contienen los datos de revisión. Para más información sobre los datos de cada objeto, consulta la sección [valores de revisión](#review-values) que encontrarás a continuación.                                                                                                                                      |
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de opiniones de la solicitud. |
-| TotalCount | entero    | El número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                             |
+| TotalCount | entero    | El número total de filas del resultado de datos de la consulta.                                    |
 
-<span/>
  
 ### <a name="review-values"></a>Valores de revisión
 
@@ -124,7 +123,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | Valor                  | Tipo    | Descripción                                                                                                                                                                                                                          |
 |------------------------|---------|---------------------|
 | fecha                   | cadena  | La primera fecha del intervalo de fechas de los datos de opiniones. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.  |
-| applicationId          | cadena  | El Id. de la Tienda de la aplicación sobre la que estás recuperando los datos de opiniones.        |
+| applicationId          | cadena  | El Id. de la Store de la aplicación sobre la que estás recuperando los datos de opiniones.        |
 | applicationName        | cadena  | Nombre para mostrar de la aplicación.   |
 | market                 | cadena  | El código de país ISO 3166 del mercado desde el cual se ha enviado la opinión.       |
 | osVersion              | cadena  | La versión del sistema operativo desde el cual se ha enviado la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [Campos de filtro](#filter-fields).         |
@@ -145,9 +144,8 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | notHelpfulCount        | número  | El número de veces que la opinión se ha marcado como no útil.               |
 | responseDate           | cadena  | La fecha en la que se envió una respuesta.                 |
 | responseText           | cadena  | El contenido del texto de la respuesta.        |
-| id                     | string  | El identificador de la revisión (es un GUID). Puedes usar este identificador en los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md).       |
-
-<span/> 
+| id                     | cadena  | El identificador de la revisión (es un GUID). Puedes usar este identificador en los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md).       |
+ 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
@@ -190,7 +188,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Informe Críticas](../publish/reviews-report.md)
-* [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
+* [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
 * [Obtener información de respuesta de opiniones de la aplicación](get-response-info-for-app-reviews.md)
 * [Enviar respuestas a opiniones de la aplicación](submit-responses-to-app-reviews.md)
 * [Obtener los datos de las adquisiciones de la aplicación](get-app-acquisitions.md)
