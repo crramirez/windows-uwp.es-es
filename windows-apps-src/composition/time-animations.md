@@ -7,13 +7,14 @@ ms.date: 10/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, animación"
+keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: f0c95b981d046ba6150c35ae5a33ee449604dac9
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: c2b349938b22ca1097299bd4c80b75cff2629f07
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1673752"
 ---
 # <a name="time-based-animations"></a>Animaciones basadas en tiempo
 
@@ -101,7 +102,7 @@ Luego vamos a definir las propiedades de la KeyFrameAnimation para describir su 
 Por último, para poder ejecutar una animación, debes iniciarla en una propiedad de un CompositionObject.
 
 ```csharp
-redVisual.StartAnimation("Translation", animation);
+redVisual.StartAnimation("Offset.X", animation);
 ```
 
 Este es el código completo.
@@ -115,6 +116,6 @@ private void AnimateSquare(Compositor compositor, SpriteVisual redSquare)
     animation.Direction = Windows.UI.Composition.AnimationDirection.Alternate;
     // Run animation for 10 times
     animation.IterationCount = 10;
-    visual.StartAnimation("Translation", animation);
+    visual.StartAnimation("Offset.X", animation);
 } 
 ```

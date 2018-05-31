@@ -1,7 +1,7 @@
 ---
 author: stevewhims
-Description: "Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El Sistema de administración de recursos analizará todos los candidatos y determinará cuál es el mejor candidato a devolver. Este tema describe con detalle ese proceso y proporciona ejemplos."
-title: "Cómo compara y elige recursos el sistema de administración"
+Description: When a resource is requested, there may be several candidates that match the current resource context to some degree. The Resource Management System will analyze all of the candidates and determine the best candidate to return. This topic describes that process in detail and gives examples.
+title: Cómo compara y elige recursos el sistema de administración de recursos
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/23/2017
@@ -9,20 +9,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
-localizationpriority: medium
-ms.openlocfilehash: 4731ae7add7d5b969ab98da60b3f6740dbbbee1b
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: bb1168401aaa715f8d1c459691dfa1b1ca38ccbe
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690431"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Cómo compara y elige recursos el sistema de administración
-
 Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El Sistema de administración de recursos analizará todos los candidatos y determinará cuál es el mejor candidato que se va a devolver. Para ello, se tienen en cuenta todos los calificadores para clasificar a todos los candidatos.
 
 En este proceso de clasificación, se asignan prioridades diferentes a los distintos calificadores: el idioma tiene el mayor impacto en la clasificación global, seguido del contraste, la escala, etc. Para cada calificador, se comparan los calificadores de los candidatos con el valor del calificador de contexto para determinar una calidad de coincidencia. El modo en que se realiza la comparación depende del calificador.
+
+Para conocer detalles más concretos sobre cómo se realiza la coincidencia de la etiqueta de idiomas, consulta [Cómo compara etiquetas de idioma el sistema de administración de recursos](how-rms-matches-lang-tags.md).
 
 En algunos calificadores, como la escala y el contraste, siempre hay un grado mínimo de coincidencia. Por ejemplo, un candidato calificado como "escala-100" coincide en cierta medida con un contexto de "escala-400", aunque no tanto como un candidato calificado como "escala-200" o (para coincidencia perfecta) "escala-400".
 
@@ -41,7 +41,6 @@ Para todos los candidatos de recursos que sigan teniéndose en cuenta, el cargad
 Si hay un empate, se inspeccionará el valor de calificador de contexto de mayor prioridad siguiente y el proceso continuará hasta que se encuentre la mejor coincidencia.
 
 ## <a name="example-of-choosing-a-resource-candidate"></a>Ejemplo de elección de un candidato de recurso
-
 Supónganse estos archivos.
 
 ```
@@ -85,7 +84,7 @@ A continuación, el sistema de administración de recursos usa el calificador de
 en/images/logo.scale-400.jpg
 ```
 
-Puedes usar el método avanzado [**NamedResource.ResolveAll**](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live#Windows_ApplicationModel_Resources_Core_NamedResource_ResolveAll_Windows_ApplicationModel_Resources_Core_ResourceContext_) para recuperar todos los candidatos en el orden en que coincidan con la configuración de contexto. Para el ejemplo en el que nos hemos desenvuelto, **ResolveAll** devuelve candidatos en este orden.
+Puedes usar el método avanzado [**NamedResource.ResolveAll**](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live) para recuperar todos los candidatos en el orden en que coincidan con la configuración de contexto. Para el ejemplo en el que nos hemos desenvuelto, **ResolveAll** devuelve candidatos en este orden.
 
 ```
 en/images/logo.scale-400.jpg
@@ -95,7 +94,6 @@ fr/images/logo.scale-100.jpg
 ```
 
 ## <a name="example-of-producing-a-fallback-choice"></a>Ejemplo de producción de una elección de reserva
-
 Supónganse estos archivos.
 
 ```
@@ -138,9 +136,7 @@ de/images/contrast-standard/logo.jpg
 ```
 
 ## <a name="important-apis"></a>API importantes
-
-* [NamedResource.ResolveAll](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live#Windows_ApplicationModel_Resources_Core_NamedResource_ResolveAll_Windows_ApplicationModel_Resources_Core_ResourceContext_)
+* [NamedResource.ResolveAll](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live)
 
 ## <a name="related-topics"></a>Temas relacionados
-
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)

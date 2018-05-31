@@ -1,30 +1,31 @@
 ---
 author: laurenhughes
-title: "Crear un paquete de la aplicación con la herramienta MakeAppx.exe"
+title: Crear un paquete de la aplicación con la herramienta MakeAppx.exe
 description: MakeAppx.exe crea, cifra, descifra y extrae los archivos de paquetes de aplicaciones y lotes.
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 03/07/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: windows 10, uwp, packaging, empaquetado
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 616340bcc5159dce12d3b888697ac4f60d30f175
-ms.lasthandoff: 02/08/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 94972915e5fc80a477d8d647212ab3b91e0aa384
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817796"
 ---
-
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Crear un paquete de la aplicación con la herramienta MakeAppx.exe
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **MakeAppx.exe** crea tanto paquetes de aplicaciones como lotes de paquetes de aplicaciones. **MakeAppx.exe** también extrae los archivos de un paquete de aplicaciones o un lote y cifra o descifra los paquetes de aplicaciones y lotes. Esta herramienta se incluye en el SDK de Windows 10 y puede usarse desde un símbolo del sistema o un archivo de script.
 
-Si quieres usar el asistente de Microsoft Visual Studio para crear un paquete de aplicación, o si quieres obtener una guía completa sobre cómo configurar, crear y probar el paquete de aplicación para la Tienda, consulta [Empaquetado de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+> [!IMPORTANT] 
+> Si usaste Visual Studio para desarrollar tu aplicación, es recomendable usar el Asistente de Visual Studio para crear el paquete de la aplicación. Para más información, consulta [Empaquetado de aplicaciones para UWP con Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-Ten en cuenta que **MakeAppx.exe** no crea ningún archivo .appxupload. El archivo .appxupload, se crea como parte del proceso de empaquetado de Visual Studio y contiene otros dos archivos: .appx y .appxsym. El archivo .appxsym es un archivo .pdb comprimido que contiene los símbolos públicos de la aplicación usados para el [análisis de bloqueos](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/) en el Centro de desarrollo de Windows. También se puede enviar un archivo .appx normal, pero no habrá disponible ninguna información de análisis o de depuración de bloqueos. Para obtener más información sobre el envío de paquetes a la Tienda, consulta [Cargar paquetes de aplicación](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages). 
+Ten en cuenta que **MakeAppx.exe** no crea ningún archivo .appxupload. El archivo .appxupload, se crea como parte del proceso de empaquetado de Visual Studio y contiene otros dos archivos: .appx y .appxsym. El archivo .appxsym es un archivo .pdb comprimido que contiene los símbolos públicos de la aplicación usados para el [análisis de bloqueos](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/) en el Centro de desarrollo de Windows. También se puede enviar un archivo .appx normal, pero no habrá disponible ninguna información de análisis o de depuración de bloqueos. Para obtener más información sobre el envío de paquetes a la Store, consulta [Cargar paquetes de aplicación](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages). 
 
 Para crear un archivo .appxupload manualmente:
 - Coloca los archivos .appx y .appxsym en una carpeta
@@ -57,6 +58,7 @@ La siguiente tabla describe los comandos de **MakeAppx.exe**.
 | unbundle      | Desempaqueta todos los paquetes a un subdirectorio en la ruta de acceso de salida especificada, cuyo nombre es el nombre completo del paquete. |
 | encrypt       | Crea un paquete o un lote de aplicación cifrado desde el paquete o lote de entrada en el paquete o lote de salida especificado. |
 | decrypt       | Crea un paquete o un lote de aplicación descifrado desde el paquete o lote de aplicación de entrada en el paquete o lote de salida especificado. |
+| build         |  |
 
 
 Esta lista de opciones se aplica a todos los comandos:
@@ -228,9 +230,25 @@ MakeAppx.exe decrypt /p MyPackage.appx /ep MyEncryptedPackage.eappx /kt
 MakeAppx.exe decrypt p MyPackage.appx /ep MyEncryptedPackage.eappx /kf MyKeyFile.txt
 ```
 
+### <a name="build-an-app-package"></a>Compilar un paquete de aplicación 
+
+**MakeAppx.exe** puede compilar una aplicación basada en el archivo de distribución del paquete de aplicación. Para obtener información sobre cómo crear un archivo de distribución de paquete y cómo usar **MakeAppx.exe** para compilarlo, consulta [Creación del paquete con el diseño del empaquetado](packaging-layout.md).  
+
+Opciones específicas para el comando **build**:
+
+| **Opción**    | **Descripción**                       |
+|---------------|---------------------------------------|
+| /bc           | Especifica los paquetes secundarias en la familia de paquetes que se va a compilar.  |
+| /id           | Se usa para seleccionar paquetes que se compilara basándose en el atributo **ID** del paquete. |
+| /ip           | Indica la ubicación de las versiones anteriores de un paquete de aplicación. |
+| /iv           | Incrementa automáticamente la versión de los paquetes que se están compilando. |
+| /f            | Especifica el archivo de distribución de empaquetado. |
+| /nbp          | Indica que no se debe compilar un paquete de aplicación. |
+| /op           | El destino del paquete de salida. |
+
 ## <a name="key-files"></a>Archivos de clave
 
-Los archivos de clave deben comenzar con una línea que contenga la cadena "[Keys]" seguida de líneas que describan las claves con las que cifrar cada paquete. Cada clave se representa mediante un par de cadenas entre comillas, separadas por espacios o tabuladores. La primera cadena representa el Id. de clave de 32 bits codificado en base64, y la segunda representa la clave de cifrado de 32 bits codificada en base64. Un archivo de clave debe ser un archivo de texto sencillo.
+Los archivos de clave deben comenzar con una línea que contenga la cadena "[Keys]" seguida de líneas que describan las claves con las que cifrar cada paquete. Cada clave se representa mediante un par de cadenas entre comillas, separadas por espacios o tabuladores. La primera cadena representa el Id. de clave de 32bits codificado en base64, y la segunda representa la clave de cifrado de 32bits codificada en base64. Un archivo de clave debe ser un archivo de texto sencillo.
 
 Ejemplo de un archivo de clave:
 

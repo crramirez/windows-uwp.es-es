@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "Se explica cómo definir e implementar las propiedades de dependencia personalizadas para una aplicación de Windows Runtime con C++, C# o Visual Basic."
+description: Se explica cómo definir e implementar las propiedades de dependencia personalizadas para una aplicación de Windows Runtime con C++, C# o Visual Basic.
 title: Propiedades de dependencia personalizadas
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
 ms.author: jimwalk
@@ -9,13 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: b26ee59be9c309326eeb93546d3702bc161513f3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 9f1b17f4ea61e28b1ba43d886455d8a3373efb79
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1675632"
 ---
 # <a name="custom-dependency-properties"></a>Propiedades de dependencia personalizadas
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aquí te explicamos la manera de definir e implementar tus propias propiedades de dependencia para una aplicación de Windows Runtime con C++, C# o Visual Basic. Enumeramos los motivos por los que los desarrolladores de aplicaciones y los creadores de componentes podrían querer crear propiedades personalizadas. También describimos los pasos para implementar una propiedad de dependencia personalizada, así como los procedimientos recomendados que pueden mejorar el rendimiento, la capacidad de uso o la versatilidad de la propiedad de dependencia.
 
@@ -29,7 +32,7 @@ Damos por sentado que has leído la [introducción a las propiedades de dependen
 
 Para admitir estilos, enlaces de datos, animaciones y valores predeterminados para una propiedad, se deberían implementar como propiedad de dependencia. Los valores de propiedad de dependencia no se almacenan como campos en la clase, los almacena el marco xaml y se hace referencia a ellos con una clave que se recupera cuando la propiedad se registra con el sistema de propiedades de Windows Runtime mediante una llamada al método [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829).   Solo pueden usar las propiedades de dependencia los tipos que deriven de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356), aunque **DependencyObject** está en una posición bastante alta de la jerarquía de clases, por lo que la mayoría de las clases diseñadas para soporte de interfaz de usuario y de presentación pueden admitir las propiedades de dependencia. Para obtener más información acerca de las propiedades de dependencia y alguna de la terminología y las convenciones usadas para describirlas en esta documentación, consulta [Introducción a las propiedades de dependencia](dependency-properties-overview.md).
 
-Algunos ejemplos de las propiedades de dependencia en Windows Runtime son [**Control.Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751) y [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/br209702), entre otros muchos.
+Algunos ejemplos de las propiedades de dependencia en Windows Runtime son [**Control.Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**FrameworkElement.Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) y [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/br209702), entre otros muchos.
 
 La convención es que cada propiedad de dependencia expuesta por una clase tiene una propiedad **public static readonly** correspondiente del tipo [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) que se expone en esa misma clase que proporciona el identificador de la propiedad de dependencia. El nombre del identificador sigue esta convención: el nombre de la propiedad de dependencia, con la cadena "Property" agregada al final del nombre. Por ejemplo, el identificador **DependencyProperty** correspondiente de la propiedad **Control.Background** es [**Control.BackgroundProperty**](https://msdn.microsoft.com/library/windows/apps/br209396). El identificador almacena la información acerca de la propiedad de dependencia con la que se registró, y se puede usar para otras operaciones que implican a la propiedad de dependencia, como llamar a [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361).
 

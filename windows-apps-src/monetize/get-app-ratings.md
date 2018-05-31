@@ -1,28 +1,32 @@
 ---
 author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de clasificación agregados de un intervalo de fechas y otros filtros opcionales."
-title: "Obtener las valoraciones de la aplicación"
+description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de clasificación agregados de un intervalo de fechas y otros filtros opcionales.
+title: Obtener las valoraciones de la aplicación
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, valoraciones, ratings"
-ms.openlocfilehash: ccd3b8660f476ee6734b987c6652d91cf0cd42f5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, UWP, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, valoraciones, ratings
+ms.localizationpriority: medium
+ms.openlocfilehash: 902f8852edb0955f1499963efbbe41bc1affb147
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1664245"
 ---
 # <a name="get-app-ratings"></a>Obtener las valoraciones de la aplicación
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de clasificación en formato JSON pertenecientes a un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de clasificaciones](../publish/ratings-report.md) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados de clasificación en formato JSON pertenecientes a un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de críticas](../publish/reviews-report.md) del panel del Centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 
@@ -35,7 +39,6 @@ Para usar este método, primero debes hacer lo siguiente:
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings``` |
 
- 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -43,13 +46,12 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/> 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | cadena | El Id. de la Tienda de la aplicación sobre la que quieres recuperar los datos de clasificación. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8. |  Sí  |
+| applicationId | cadena | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) de la aplicación sobre la que quieres recuperar los datos de clasificación.  |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de clasificación que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de clasificación que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
@@ -59,7 +61,6 @@ Para usar este método, primero debes hacer lo siguiente:
 | orderby | cadena | Instrucción que ordena los valores de datos resultantes de cada clasificación. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>date</strong></li><li><strong>osVersion</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>isRevised</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
 | groupby | cadena | Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<ul><li><strong>fecha</strong></li><li><strong>applicationName</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>isRevised</strong></li></ul><p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>fecha</strong></li><li><strong>applicationId</strong></li><li><strong>fiveStars</strong></li><li><strong>fourStars</strong></li><li><strong>threeStars</strong></li><li><strong>twoStars</strong></li><li><strong>oneStar</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=osVersion,market&amp;aggregationLevel=week</em></p> |  No  |
 
-<span/>
  
 ### <a name="filter-fields"></a>Campos de filtro
 
@@ -76,11 +77,10 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 | deviceType | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul> |
 | isRevised | Especifica <strong>true</strong> para filtrar las clasificaciones que hayan sido revisadas; de lo contrario, especifica <strong>false</strong>. |
 
-<span/> 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-Los ejemplos siguientes muestran varias solicitudes para obtener datos de clasificación. Reemplaza el valor *applicationId* por el Id. de la Tienda de la aplicación.
+Los ejemplos siguientes muestran varias solicitudes para obtener datos de clasificación. Reemplaza el valor *applicationId* por el Id. de la Store de la aplicación.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -99,9 +99,8 @@ Authorization: Bearer <your access token>
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Valor      | matriz  | Matriz de objetos que contienen datos de clasificación agregados. Para más información sobre los datos de cada objeto, consulta la sección [valores de clasificación](#rating-values) que encontrarás a continuación.                                                                                                                           |
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de clasificación de la solicitud. |
-| TotalCount | entero    | El número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                             |
+| TotalCount | entero    | El número total de filas del resultado de datos de la consulta.                               |
 
-<span/>
 
 ### <a name="rating-values"></a>Valores de clasificación
 
@@ -110,7 +109,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | fecha            | cadena  | Es la primera fecha del intervalo de fechas de los datos de clasificación. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
-| applicationId   | cadena  | El Id. de la Tienda de la aplicación sobre la que estás recuperando los datos de clasificación.                                                                                                                                                                 |
+| applicationId   | cadena  | El Id. de la Store de la aplicación sobre la que estás recuperando los datos de clasificación.                                                                                                                                                                 |
 | applicationName | cadena  | Nombre para mostrar de la aplicación.                                                                                                                                                                                                         |
 | market          | cadena  | Código de país ISO 3166 del mercado desde el cual se envió la clasificación.                                                                                                                                                              |
 | osVersion       | cadena  | Versión del sistema operativo desde el cual se envió la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                               |
@@ -120,9 +119,8 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | twoStars        | número  | Número de clasificaciones de dos estrellas.                                                                                                                                                                                                      |
 | threeStars      | número  | Número de clasificaciones de tres estrellas.                                                                                                                                                                                                    |
 | fourStars       | número  | Número de clasificaciones de cuatro estrellas.                                                                                                                                                                                                     |
-| fiveStars       | número  | Número de clasificaciones de cinco estrellas.                                                                                                                                                                                                     |
- 
-<span/>
+| fiveStars       | número  | Número de clasificaciones de cinco estrellas.            |
+
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
@@ -154,9 +152,9 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Informe Valoración](../publish/ratings-report.md)
-* [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
-* [Obtener los datos de compra de la aplicación](get-app-acquisitions.md)
+* [Informe Clasificaciones](../publish/reviews-report.md)
+* [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Obtener adquisiciones de aplicaciones](get-app-acquisitions.md)
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
 * [Obtener los datos del informe de errores](get-error-reporting-data.md)
 * [Obtener opiniones de la aplicación](get-app-reviews.md)

@@ -2,14 +2,22 @@
 author: PatrickFarley
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Device Portal para HoloLens
-description: "Obtén información sobre cómo Windows Device Portal para HoloLens te permite configurar y administrar de forma remota tu dispositivo HoloLens."
-ms.openlocfilehash: 5272d6e1de4f684bac84d8eda6a5c56e08a58e24
-ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+description: Obtén información sobre cómo Windows Device Portal para HoloLens te permite configurar y administrar de forma remota tu dispositivo HoloLens.
+ms.author: pafarley
+ms.date: 09/26/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows10, uwp
+ms.localizationpriority: medium
+ms.openlocfilehash: 1e73519f57d9b08e08a7400f322367b6634cf945
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817726"
 ---
-# <a name="device-portal-for-hololens"></a>Device Portal para HoloLens
+# <a name="device-portal-for-hololens"></a>El Portal de dispositivos para HoloLens
 
 
 ## <a name="set-up-device-portal-on-hololens"></a>Configurar Device Portal en HoloLens
@@ -159,7 +167,7 @@ Ten en cuenta que la aplicación se ejecutará en el inicio, incluso si no está
 
 Te permite grabar y reproducir datos de entrada para las pruebas.
 - **Capture room**: se usa para descargar un archivo de espacio simulado que contiene la malla espacial de asignación del entorno del usuario. Asigna un nombre al espacio y, a continuación, haz clic en Capturar para guardar los datos como un archivo .xef en tu equipo. Puedes cargar este archivo de espacio en el emulador HoloLens.
-- **Grabación**: activa las secuencias para que graben, asigna un nombre a la grabación y haz clic o pulsa en Grabar para iniciar la grabación. Realiza acciones con HoloLens y, a continuación, haz clic en Detener para guardar los datos como un archivo .xef en tu equipo. Este archivo se puede cargar en el dispositivo o emulador HoloLens.
+- **Grabación**: Activa las secuencias para que graben, asigna un nombre a la grabación y haz clic o pulsa en Grabar para iniciar la grabación. Realiza acciones con HoloLens y a continuación haz clic en Detener para guardar los datos como un archivo .xef en tu equipo. Este archivo se puede cargar en el dispositivo o emulador HoloLens.
 - **Reproducción**: haz clic o pulsa en Cargar grabación para seleccionar un archivo .xef desde tu equipo y enviar los datos a HoloLens.
 - **Modo de control**: selecciona Valor predeterminado o Simulación en la lista desplegable y pulsa o haz clic en el botón Establecer para seleccionar el modo en HoloLens. Si eliges "Simulación", se deshabilitan los sensores reales de HoloLens y se usan los datos simulados cargados en su lugar. Si cambias a "Simulación", HoloLens no responderá al usuario real hasta que vuelva al "Valor predeterminado".
 
@@ -168,4 +176,10 @@ Te permite grabar y reproducir datos de entrada para las pruebas.
 
 Envía la entrada de teclado desde la máquina remota a HoloLens.
 
-Haz clic o pulsa en la región de debajo del teclado virtual para habilitar el envío de pulsaciones de teclas a HoloLens. Escribe texto de entrada en el cuadro de texto y haz clic o pulsa en Enviar para enviar las pulsaciones de teclas a la aplicación activa.
+Haz clic o pulsa en la región de debajo del teclado virtual para habilitar el envío de pulsaciones de teclas a HoloLens. Escribe el texto de entrada en el cuadro de texto y haz clic o pulsa en Enviar para enviar las pulsaciones de teclas a la aplicación activa.
+
+## <a name="see-also"></a>Consulta también
+
+* [Introducción al Portal de dispositivos Windows](device-portal.md)
+* [Referencia de API de principales del Portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core) (API comunes a todos los dispositivos Windows10)
+* [Referencia de API de realidad mixta del Portal de dispositivos](https://docs.microsoft.com/windows/mixed-reality/device-portal-api-reference) (una lista ampliada de todas las API de REST disponibles para HoloLens)

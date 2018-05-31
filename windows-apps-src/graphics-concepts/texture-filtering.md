@@ -1,8 +1,9 @@
 ---
 title: Filtrado de texturas
-description: "El filtrado de texturas produce un color para cada píxel en la imagen representada en 2D del primitivo cuando un primitivo se representa mediante la asignación de un primitivo en 3D a una pantalla 2D."
+description: El filtrado de texturas produce un color para cada píxel en la imagen representada en 2D del primitivo cuando un primitivo se representa mediante la asignación de un primitivo en 3D a una pantalla 2D.
 ms.assetid: 1CCF4138-5D48-4B07-9490-996844F994D8
-keywords: Filtrado de texturas
+keywords:
+- Filtrado de texturas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 42d184b15de4fdeac18549b41447da81580d6b99
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: 27d19e794e7760208b1ec587bf36a3f3bba68cb8
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653834"
 ---
 # <a name="texture-filtering"></a>Filtrado de texturas
 
@@ -50,19 +52,19 @@ Direct3D admite los siguientes métodos de filtrado de texturas.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Muestreo de punto más cercano](nearest-point-sampling.md)</p></td>
+<td align="left"><p><a href="nearest-point-sampling.md">Muestreo de punto más cercano</a></p></td>
 <td align="left"><p>Las aplicaciones no tienen que usar el filtrado de texturas. Direct3D puede establecerse para que calcule la dirección de los elementos de textura, que a menudo no evalúa como enteros, y copia el color del elemento de textura con la dirección del número entero más cercano. Este proceso se denomina <em>muestreo de punto más cercano</em>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Filtrado de texturas bilineal](bilinear-texture-filtering.md)</p></td>
+<td align="left"><p><a href="bilinear-texture-filtering.md">Filtrado de texturas bilineal</a></p></td>
 <td align="left"><p>El <em>filtrado bilineal</em> calcula el promedio ponderado de los 4 elementos de textura más cercanos al punto de muestreo. Este enfoque filtrado es más precisos y común que el filtrado por punto más cercano. Este método es eficaz, porque se implementa en el hardware gráfico actual.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Filtrado de texturas anisotrópico](anisotropic-texture-filtering.md)</p></td>
+<td align="left"><p><a href="anisotropic-texture-filtering.md">Filtrado de texturas anisotrópico</a></p></td>
 <td align="left"><p>La <em>anisotropía</em> es la distorsión visible en los elementos de textura de un objeto 3D cuya superficie está orientada en un ángulo con respecto al plano de la pantalla. Cuando un píxel de un primitivo anisotrópico se asigna a elementos de textura, su forma se distorsiona.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Filtrado de texturas con mapas MIP](texture-filtering-with-mipmaps.md)</p></td>
+<td align="left"><p><a href="texture-filtering-with-mipmaps.md">Filtrado de texturas con mapas MIP</a></p></td>
 <td align="left"><p>Un <em>mapa MIP</em> es una secuencia de texturas, cada una de las cuales es una representación de la misma imagen con una resolución progresivamente inferior. El alto y ancho de cada imagen, o nivel, en el mapa MIP es una potencia de dos inferior al nivel anterior.</p></td>
 </tr>
 </tbody>

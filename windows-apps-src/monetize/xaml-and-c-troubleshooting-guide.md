@@ -1,17 +1,21 @@
 ---
 author: mcleanbyron
 ms.assetid: 141900dd-f1d3-4432-ac8b-b98eaa0b0da2
-description: "Obtén información sobre las soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones XAML."
-title: "Guía de solución de problemas de XAML y C#"
+description: Obtén información sobre las soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones XAML.
+title: Guía de solución de problemas de XAML y C#
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, anuncios, publicidad, AdControl, solución de problemas, XAML, c#"
-ms.openlocfilehash: c48b265ded1ef5030a1e038806751f0f3379679b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, anuncios, publicidad, AdControl, solución de problemas, XAML, c#
+ms.localizationpriority: medium
+ms.openlocfilehash: a971aa26ceab462fedc37ebb7cdba584c55efe93
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1655637"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>Guía de solución de problemas de XAML y C#
 
@@ -28,14 +32,16 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
   * [Los anuncios no se actualizan](#csharp-adsnotrefreshing)
 
 <span id="xaml"/>
+
 ## <a name="xaml"></a>XAML
 
 <span id="xaml-notappearing"/>
+
 ### <a name="adcontrol-not-appearing"></a>AdControl no aparece
 
 1.  Asegúrate de que la funcionalidad **Internet (Client)** esté seleccionada en Package.appxmanifest.
 
-2.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md).
+2.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -87,9 +93,10 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 8.  Asegúrate de que **AdControl** no esté oculto en la ventanilla. **AdControl** debe ser visible para que los anuncios se muestren correctamente.
 
-9.  Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los identificadores de prueba tanto para **ApplicationId** como para **AdUnitId** que se encuentran en [Valores del modo de prueba](test-mode-values.md).
+9.  Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) tanto para **ApplicationId** como para **AdUnitId**.
 
 <span id="xaml-blackboxblinksdisappears"/>
+
 ### <a name="black-box-blinks-and-disappears"></a>La caja negra parpadea y desaparece
 
 1.  Vuelve a comprobar todos los pasos de la sección [AdControl no aparece](#xaml-notappearing) anterior.
@@ -114,7 +121,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     private void adControl_ErrorOccurred(object sender,               
         Microsoft.Advertising.WinRT.UI.AdErrorEventArgs e)
     {
-        TextBlock1.Text = e.Error.Message;
+        TextBlock1.Text = e.ErrorMessage;
     }
     ```
 
@@ -125,6 +132,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     De manera predeterminada, **AdControl** se contraerá cuando no pueda mostrar un anuncio. Si otros elementos son elementos secundarios del mismo elemento principal, pueden moverse para rellenar el espacio de **AdControl** contraído y expandirse cuando se realice la siguiente solicitud.
 
 <span id="xaml-adsnotrefreshing"/>
+
 ### <a name="ads-not-refreshing"></a>Los anuncios no se actualizan
 
 1.  Comprueba la propiedad [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx). De manera predeterminada, esta propiedad opcional está establecida en **True**. Cuando se establece en **False**, debe usarse el método [Refresh](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) para recuperar otro anuncio.
@@ -165,9 +173,11 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 3.  **AdControl** se comporta con normalidad. A veces el mismo anuncio aparecerá más de una vez en una fila, lo que da la apariencia de que los anuncios no se actualizan.
 
 <span id="csharp"/>
+
 ## <a name="c"></a>C\# #
 
 <span id="csharp-adcontrolnotappearing"/>
+
 ### <a name="adcontrol-not-appearing"></a>AdControl no aparece
 
 1.  Asegúrate de que la funcionalidad **Internet (Client)** esté seleccionada en Package.appxmanifest.
@@ -177,7 +187,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
 
-3.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md).
+3.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
@@ -232,9 +242,10 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 9.  Comprueba el elemento primario de **AdControl**. El elemento primario debe estar activo y visible.
 
-10. Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los identificadores de prueba tanto para **ApplicationId** como para **AdUnitId** que se encuentran en [Valores del modo de prueba](test-mode-values.md).
+10. Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) tanto para **ApplicationId** como para **AdUnitId**.
 
 <span id="csharp-blackboxblinksdisappears"/>
+
 ### <a name="black-box-blinks-and-disappears"></a>La caja negra parpadea y desaparece
 
 1.  Vuelve a comprobar todos los pasos de la sección [AdControl no aparece](#csharp-adcontrolnotappearing) anterior.
@@ -248,7 +259,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     <TextBlock x:Name="TextBlock1" TextWrapping="Wrap" Width="500" Height="250" />
     ```
 
-    Este código de C# recupera el mensaje de error y lo muestra en **TextBlock**.
+    Este código de C# recupera el mensaje de error y lo muestra en el **TextBlock**.
 
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet2)]
@@ -258,6 +269,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 3.  **AdControl** funciona con normalidad. A veces el mismo anuncio aparecerá más de una vez en una fila, lo que da la apariencia de que los anuncios no se actualizan.
 
 <span id="csharp-adsnotrefreshing"/>
+
 ### <a name="ads-not-refreshing"></a>Los anuncios no se actualizan
 
 1.  Comprueba si la propiedad [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) de tu **AdControl** está establecida en false. Esta propiedad opcional está establecida en **true** de manera predeterminada. Cuando se establece en **false**, debe usarse el método **Refresh** para recuperar otro anuncio.
