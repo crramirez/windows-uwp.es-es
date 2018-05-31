@@ -1,27 +1,32 @@
 ---
 title: Caja de seguridad de credenciales
-description: "En este artículo se describe cómo las aplicaciones de la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario."
+description: En este artículo se describe cómo las aplicaciones de la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario.
 ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 86862ae7eb630515f45ca2a5705c325e235e9bc0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f77d70be11f2a71bd4d6267d169eacc9a4d44ba7
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1689421"
 ---
 # <a name="credential-locker"></a>Caja de seguridad de credenciales
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo las aplicaciones de la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario.
 
 Por ejemplo, tienes una aplicación que se conecta a un servicio para obtener acceso a recursos protegidos como archivos multimedia o redes sociales. Tu servicio necesita la información de inicio de sesión de cada usuario. Has incorporado una interfaz de usuario a tu aplicación que obtiene el nombre de usuario y la contraseña que después se usan para iniciar la sesión del usuario en el servicio. Con la API de la caja de seguridad de credenciales, puedes guardar el nombre de usuario y la contraseña de tu usuario y recuperarlos fácilmente para iniciar la sesión del usuario automáticamente la próxima vez que abra tu aplicación, independientemente del dispositivo en que se encuentre.
+
+Las credenciales de usuario almacenadas en CredentialLocker *no* expiran, *no* les afecta [**ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625) y *no* se borran debido a la inactividad como los datos móviles tradicionales. Sin embargo, solo puedes almacenar hasta 20 credenciales por aplicación en CredentialLocker.
 
 La caja de seguridad de credenciales funciona de forma diferente para cuentas de dominio. Si se guardan credenciales con tu cuenta Microsoft y asocias esa cuenta con una cuenta de dominio (como la cuenta que usas en el trabajo), las credenciales se trasferirán a esa cuenta de dominio. Sin embargo, las nuevas credenciales que se agregan al iniciar sesión con la cuenta de dominio no se incluirán en el perfil móvil. De esta manera se garantiza que las credenciales privadas del dominio no queden expuestas fuera del mismo.
 

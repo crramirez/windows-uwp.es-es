@@ -1,8 +1,8 @@
 ---
 author: normesta
-Description: "Distribuir una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)"
+Description: Distribute a packaged desktop app (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: "Publica una aplicación de escritorio empaquetada en una Tienda Windows o realiza una instalación de prueba en uno o más dispositivos."
+title: Publica una aplicación de escritorio empaquetada en una Tienda Windows o realiza una instalación de prueba en uno o más dispositivos.
 ms.author: normesta
 ms.date: 05/25/2017
 ms.topic: article
@@ -10,11 +10,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
-ms.openlocfilehash: 24a005309271a91d669322787fb8d341e1a6d6ad
-ms.sourcegitcommit: 77bbd060f9253f2b03f0b9d74954c187bceb4a30
+ms.localizationpriority: medium
+ms.openlocfilehash: 8aff2635094064c0758f9d0d2ca56b7aa73cfda1
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816840"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>Distribuir una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)
 
@@ -23,33 +25,32 @@ Publica una aplicación de escritorio empaquetada en una Tienda Windows o realiz
 > [!NOTE]
 > ¿Tienes un plan que te permita realizar la transición de usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación de Puente de dispositivo de escritorio](#transition-users) de esta guía para obtener algunas ideas.
 
-## <a name="distribute-your-app-by-publishing-it-to-the-windows-store"></a>Distribuir la aplicación publicándola en la Tienda Windows
+## <a name="distribute-your-app-by-publishing-it-to-the-microsoft-store"></a>Distribuir la aplicación publicándola en la Microsoft Store
 
-La [Tienda Windows](https://www.microsoft.com/store/apps) es la forma más cómoda para que los clientes obtengan la aplicación.
+[Microsoft Store](https://www.microsoft.com/store/apps) es la forma más cómoda para que los clientes obtengan la aplicación.
 
-<div style="float: left; padding: 10px">
-    ![Icono de la tienda](images/desktop-to-uwp/store.png)
-</div>
-Publica la aplicación en la tienda para llegar al máximo de usuarios. Asimismo, los clientes de empresas pueden comprar la aplicación para distribuirla de manera interna en sus organizaciones mediante la [Tienda Windows para empresas](https://www.microsoft.com/business-store).
+Publica la aplicación en la Store para llegar al máximo de usuarios. Asimismo, los clientes de empresas pueden comprar la aplicación para distribuirla de manera interna en sus organizaciones mediante la [Microsoft Store para empresas](https://www.microsoft.com/business-store).
 
-Si vas a publicar la aplicación en la Tienda Windows y todavía no has contactado con nosotros, rellena [este formulario](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge) y Microsoft se pondrá en contacto contigo para iniciar el proceso de incorporación.
+Si vas a publicar la aplicación en Microsoft Store y todavía no has contactado con nosotros, rellena [este formulario](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge) y Microsoft se pondrá en contacto contigo para iniciar el proceso de incorporación.
 
-No es necesario firmar la aplicación antes de enviarla a la tienda.
+No es necesario firmar la aplicación antes de enviarla a la Store.
 
 >[!IMPORTANT]
-> Si tienes previsto publicar la aplicación en la Tienda Windows, debes asegurarte de que tu aplicación funciona correctamente en dispositivos que ejecutan Windows 10S. Este es un requisito de la tienda. Consulta [Probar la aplicación de Windows en Windows 10 S](desktop-to-uwp-test-windows-s.md).
+> Si tienes previsto publicar la aplicación en Microsoft Store, debes asegurarte de que tu aplicación funciona correctamente en dispositivos que ejecutan Windows 10S. Este es un requisito de Store. Consulta [Probar la aplicación de Windows en Windows 10 S](desktop-to-uwp-test-windows-s.md).
 
-## <a name="distribute-your-app-without-placing-it-onto-the-windows-store"></a>Distribuir la aplicación sin enviarla a la Tienda Windows
+<a id="side-load" />
 
-Si prefieres distribuir la aplicación sin usar la tienda, puedes distribuir aplicaciones en uno o más dispositivos de forma manual.
+## <a name="distribute-your-app-without-placing-it-onto-the-microsoft-store"></a>Distribuir la aplicación sin enviarla a Microsoft Store
 
-Esta opción puede serte de ayuda si quieres controlar mejor la experiencia de distribución o si no quieres realizar el proceso de certificación de la Tienda Windows.
+Si prefieres distribuir la aplicación sin usar la Store, puedes distribuir aplicaciones en uno o más dispositivos de forma manual.
+
+Esta opción puede serte de ayuda si quieres controlar mejor la experiencia de distribución o si no quieres realizar el proceso de certificación de Microsoft Store.
 
 Para distribuir la aplicación a otros dispositivos sin enviarla a la tienda, tienes que obtener un certificado, firmar la aplicación con ese certificado y, a continuación, realizar instalaciones de prueba de la aplicación en esos dispositivos.
 
 Puedes [crear un certificado](../packaging/create-certificate-package-signing.md) u obtenerlo de un proveedor habitual como [Verisign](https://www.verisign.com/).
 
-La Tienda Windows debe firmar la aplicación si vas a distribuirla en dispositivos que ejecutan Windows 10 S. De esta manera, tendrás que realizar el proceso de envío de la Tienda antes de distribuir la aplicación en esos dispositivos.
+La Microsoft Store debe firmar la aplicación si vas a distribuirla en dispositivos que ejecutan Windows 10 S. De esta manera, tendrás que realizar el proceso de envío de la Store antes de distribuir la aplicación en esos dispositivos.
 
 Si decides crear un certificado, tienes que instalarlo en el almacén de certificados **Raíz de confianza** o **Personas de confianza** de cada dispositivo que ejecute la aplicación. Si obtienes un certificado de un proveedor habitual, no tendrás que instalar nada en otros sistemas, además de la aplicación.  
 
@@ -62,11 +63,12 @@ Para transferir localmente la aplicación a otros dispositivos, consulta [Sidelo
 
 **Vídeos**
 
-|Publicar la aplicación en la Tienda Windows |Distribuir una aplicación de empresa  |
+|Publicar la aplicación en Microsoft Store |Distribuir una aplicación de empresa  |
 |---|---|
 |<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Windows-Store-Publication-3cWyG5WhD_5506218965"      width="426" height="472" allowFullScreen frameBorder="0"></iframe>|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Video-Distribution-for-Enterprise-Apps-XJ5Hd5WhD_1106218965" width="426" height="472" allowFullScreen frameBorder="0"></iframe>|
 
-<span id="transition-users" />
+<a id="transition-users" />
+
 ## <a name="transition-users-to-your-desktop-bridge-app"></a>Realizar la transición de usuarios a la aplicación de Puente de dispositivo de escritorio
 
 Antes de distribuir la aplicación, es buena idea agregar algunas extensiones al manifiesto de paquete para que los usuarios se acostumbren a usar la aplicación de Puente de dispositivo de escritorio. Aquí te mostramos algunas cosas que puedes hacer.
@@ -178,10 +180,12 @@ private void RemoveDesktopApp()
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Encuentra respuestas a preguntas específicas**
+**Encuentra respuestas a tus preguntas**
 
-Nuestro equipo supervisa estas [etiquetas de StackOverflow](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
-**Envíanos tus comentarios acerca de este artículo**
+Si tienes problemas al publicar la aplicación en la Store, esta [entrada de blog](https://blogs.msdn.microsoft.com/appconsult/2017/09/25/preparing-a-desktop-bridge-application-for-the-store-submission/) contiene algunos consejos útiles.
 
-Usa la sección comentarios que tienes a continuación.
+**Enviar comentarios o realizar sugerencias acerca de las características**
+
+Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

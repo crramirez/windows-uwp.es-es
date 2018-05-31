@@ -4,17 +4,18 @@ Description: The Store listings section of the app submission process is where y
 title: Creación de descripciones de Store de aplicaciones
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 04/02/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, enumeración, descripción, página de store, notas de la versión, título
 ms.localizationpriority: high
-ms.openlocfilehash: 91242f7bd5f43b9d8af605b3b814e80006c90ce4
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
+ms.openlocfilehash: 871eb3cd8b8bdfd0cf12859dcb401df2158bf5b7
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816950"
 ---
 # <a name="create-app-store-listings"></a>Crear descripciones de Store de aplicaciones
 
@@ -28,25 +29,25 @@ Muchos de los campos de una **descripción de Store** son opcionales, pero recom
 
 De manera predeterminada, usaremos la misma descripción de Store (por idioma) para todos los sistemas operativos de destino. Si quieres usar una descripción de Store personalizada para un sistema operativo específico que admita tu envío, puedes [crear descripciones de Store específicas de la plataforma](create-platform-specific-store-listings.md). La descripción predeterminada siempre se mostrará a los clientes en Windows 10.
 
-## <a name="store-listing-languages"></a>Idiomas de la descripción de la Tienda
+## <a name="store-listing-languages"></a>Idiomas de la descripción de la Store
 
-Debes completar la página **Descripción de la Tienda** para al menos un idioma. Te recomendamos que proporciones una descripción de la Tienda en cada idioma que admiten los paquetes, pero que dispongas de flexibilidad para eliminar idiomas para los que no quieres proporcionar una descripción de la Tienda. También puedes crear descripciones de la Tienda en otros idiomas que no son compatibles con los paquetes.
+Debes completar la página **Descripción de la Store** para al menos un idioma. Te recomendamos que proporciones una descripción de la Store en cada idioma que admiten los paquetes, pero que dispongas de flexibilidad para eliminar idiomas para los que no quieres proporcionar una descripción de la Store. También puedes crear descripciones de la Store en otros idiomas que no son compatibles con los paquetes.
 
 > [!NOTE]
 > Si tu envío ya incluye paquetes, te mostraremos los [idiomas](supported-languages.md) compatibles para tus paquetes en la página de descripción del envío (a menos que quites alguno).
 
-Para agregar o eliminar idiomas para tus descripciones de la Tienda, haz clic en **Agregar/eliminar idiomas** desde la página de información general de envíos. Si ya has cargado paquetes, verás los idiomas enumerados en la sección **Idiomas admitidos por los paquetes**. Para quitar uno o más de estos idiomas, haz clic en **Quitar**. Si más adelante decides incluir un idioma que anteriormente eliminaste de esta sección, puedes hacer clic en **Agregar**.
+Para agregar o eliminar idiomas para tus descripciones de la Store, haz clic en **Agregar/eliminar idiomas** desde la página de información general de envíos. Si ya has cargado paquetes, verás los idiomas enumerados en la sección **Idiomas admitidos por los paquetes**. Para quitar uno o más de estos idiomas, haz clic en **Quitar**. Si más adelante decides incluir un idioma que anteriormente eliminaste de esta sección, puedes hacer clic en **Agregar**.
 
-En la sección **Idiomas de descripción de la Tienda adicionales**, puedes hacer clic en **Administrar idiomas adicionales** para agregar o quitar idiomas que *no* están incluidos en los paquetes. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas adicionales de descripción de la Tienda**. Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas adicionales** y desactiva la casilla para los idiomas que quieres quitar).
+En la sección **Idiomas de descripción de la Store adicionales**, puedes hacer clic en **Administrar idiomas adicionales** para agregar o quitar idiomas que *no* están incluidos en los paquetes. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas adicionales de descripción de la Store**. Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas adicionales** y desactiva la casilla para los idiomas que quieres quitar).
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
 
 > [!NOTE]
-> Al crear una descripción de la Tienda en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción de la Tienda, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplicará a la descripción de la Tienda para este idioma y no afectará al nombre que se muestra cuando un usuario instala la aplicación.
+> Al crear una descripción de la Store en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción de la Store, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplicará a la descripción de la Store para este idioma y no afectará al nombre que se muestra cuando un usuario instala la aplicación.
 
-Para editar una descripción de la Tienda, haz clic en el nombre del idioma en la información general del envío.
+Para editar una descripción de la Store, haz clic en el nombre del idioma en la información general del envío.
 
-En la parte superior de la página **Descripción de la Tienda** se encuentran los campos asociados a tu descripción de la Tienda predeterminada para el idioma seleccionado. Estos campos se mostrarán a todos los clientes, a menos que tengas paquetes destinados a versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores; Windows Phone 8.x o versiones anteriores) y crees descripciones de la Tienda específicas de la plataforma para incluir diferentes capturas de pantalla o informaciones para mostrar a los clientes con las versiones específicas del sistema operativo. Para obtener más información, consulta [Creación de descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md).
+En la parte superior de la página **Descripción de la Store** se encuentran los campos asociados a tu descripción de la Store predeterminada para el idioma seleccionado. Estos campos se mostrarán a todos los clientes, a menos que tengas paquetes destinados a versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores; Windows Phone 8.x o versiones anteriores) y crees descripciones de la Store específicas de la plataforma para incluir diferentes capturas de pantalla o informaciones para mostrar a los clientes con las versiones específicas del sistema operativo. Para obtener más información, consulta [Creación de descripciones de la Store específicas de la plataforma](create-platform-specific-store-listings.md).
 
 ## <a name="description"></a>Descripción
 
@@ -74,14 +75,14 @@ Es necesaria una captura de pantalla para poder enviar la aplicación. Recomenda
 Para obtener más información, consulta [capturas de pantalla e imágenes de aplicaciones](app-screenshots-and-images.md#screenshots).
 
 
-## <a name="store-logos"></a>Logotipos de la Tienda 
+## <a name="store-logos"></a>Logotipos de la Store 
 
-Los logotipos de la Tienda son imágenes opcionales que puedes subir para mejorar la forma en que la aplicación se muestra a los clientes. Además, también puedes especificar opcionalmente que solo las imágenes que subas aquí se deberían usar en la descripción de Store de la aplicación para clientes de Windows 10, en vez de permitir que Store use las imágenes de logotipos de tus paquetes de aplicaciones.
+Los logotipos de la Store son imágenes opcionales que puedes subir para mejorar la forma en que la aplicación se muestra a los clientes. Además, también puedes especificar opcionalmente que solo las imágenes que subas aquí se deberían usar en la descripción de Store de la aplicación para clientes de Windows 10, en vez de permitir que Store use las imágenes de logotipos de tus paquetes de aplicaciones.
 
 > [!IMPORTANT]
-> Si tu aplicación admite Xbox, o si es compatible con Windows Phone 8.1 o versiones anteriores, debes proporcionar determinadas imágenes aquí para que la descripción aparezca correctamente en la Tienda. 
+> Si tu aplicación admite Xbox, o si es compatible con Windows Phone 8.1 o versiones anteriores, debes proporcionar determinadas imágenes aquí para que la descripción aparezca correctamente en la Store. 
 
-Para obtener más información, consulta [Logotipos de la Tienda](app-screenshots-and-images.md#store-logos).
+Para obtener más información, consulta [Logotipos de la Store](app-screenshots-and-images.md#store-logos).
 
 
 ## <a name="additional-art-assets"></a>Activos de imágenes adicionales
@@ -93,13 +94,13 @@ Para obtener más información, consulta [Activos gráficos adicionales](app-scr
 
 ## <a name="supplemental-information"></a>Información complementaria
 
-Los campos de esta sección son todos opcionales. Las funciones de la aplicación y los requisitos del sistema pueden ayudar a los clientes a saber más sobre qué hace la aplicación y qué se necesita para obtener la mejor experiencia. Otras opciones ayudan a proporcionar una experiencia óptima para tu producto en diferentes escenarios. Revisa la información siguiente para determinar si proporcionar esta información sirve para tu envío.
+Los campos de esta sección son todos opcionales. Revisa la información siguiente para determinar si proporcionar esta información sirve para tu envío. En particular, se recomienda la **Descripción corta** para la mayoría de los envíos. Los otros campos pueden ayudar a proporcionar una experiencia óptima para tu producto en diferentes escenarios.
 
 ### <a name="short-title"></a>Título corto
 
 Se trata de una versión más corta del nombre de tu producto. Si se facilita, este nombre más corto puede aparecer en varios lugares de Xbox One (durante la instalación, en los logros, etc.) en lugar del título completo del producto.
 
-El **título corto** tiene un límite de 50 caracteres.
+Este campo tiene un límite de 50 caracteres.
 
 
 ### <a name="sort-title"></a>Ordenar título
@@ -118,7 +119,9 @@ Este campo tiene un límite de 255 caracteres.
 
 ### <a name="short-description"></a>Descripción corta
 
-Solo se usa para juegos Esta descripción aparece en la sección de información del hub de juegos en Xbox One y ayuda a los clientes a saber más acerca de tu juego.
+Una descripción más corta y pegadizo que se puede usar en la parte superior de la descripción de Store del producto. Si no se facilita, se utilizará en su lugar el primer párrafo (hasta 500 caracteres) de la [descripción](#description) más larga. Dado que la descripción también aparece debajo de este texto, te recomendamos que proporciones una descripción corta con otro texto para que la descripción de Store no sea repetitiva.
+
+Para los juegos, la descripción corta también puede aparecer en la sección Información del Hub de juegos de Xbox One.
 
 Este campo tiene un límite de 500 caracteres.
 
@@ -137,7 +140,7 @@ Puedes introducir hasta 11 elementos para **Hardware mínimo** y **Hardware reco
 
 ## <a name="additional-information"></a>Información adicional
 
-Los elementos que se describen a continuación ayudan a los clientes a descubrir y comprender el producto. La información que se describe aquí se aplicarán a todas las descripciones de la Tienda en un idioma determinado, independientemente del sistema operativo, incluso si [creas descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md). (Esta sección se llamaba antes **Campos compartidos**).
+Los elementos que se describen a continuación ayudan a los clientes a descubrir y comprender el producto. La información que se describe aquí se aplicarán a todas las descripciones de la Store en un idioma determinado, independientemente del sistema operativo, incluso si [creas descripciones de la Store específicas de la plataforma](create-platform-specific-store-listings.md). (Esta sección se llamaba antes **Campos compartidos**).
 
 ### <a name="search-terms"></a>Términos de búsqueda
 
@@ -163,7 +166,7 @@ También puedes escribir hasta 10.000 caracteres de texto en este campo. Si lo h
 
 ### <a name="developed-by"></a>Desarrollado por
 
-Escribe texto aquí si quieres incluir un campo **Desarrollado por** en la descripción de la Tienda de la aplicación. (El valor **Publicado por** indicará el nombre para mostrar del publicador asociado a tu cuenta, independientemente de si proporcionas un valor para el campo **Desarrollado por**).
+Escribe texto aquí si quieres incluir un campo **Desarrollado por** en la descripción de la Store de la aplicación. (El valor **Publicado por** indicará el nombre para mostrar del publicador asociado a tu cuenta, independientemente de si proporcionas un valor para el campo **Desarrollado por**).
 
 Este campo tiene un límite de 255 caracteres.
  

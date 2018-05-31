@@ -1,8 +1,9 @@
 ---
-title: "Acceso de canalización a recursos de streaming"
-description: "Los recursos de streaming se pueden utilizar en vistas de recurso de sombreador (SRV), vistas de destino de representación (RTV), vistas de galería de símbolos de profundidad (DSV) y vistas de acceso sin ordenar (UAV), así como en algunos puntos de enlace donde no se utilizan vistas, como los enlaces de búfer de vértices."
+title: Acceso de canalización a recursos de streaming
+description: Los recursos de streaming se pueden utilizar en vistas de recurso de sombreador (SRV), vistas de destino de representación (RTV), vistas de galería de símbolos de profundidad (DSV) y vistas de acceso sin ordenar (UAV), así como en algunos puntos de enlace donde no se utilizan vistas, como los enlaces de búfer de vértices.
 ms.assetid: 18DA5D61-930D-4466-8EFE-0CED566EA4A6
-keywords: "Acceso de canalización a recursos de streaming"
+keywords:
+- Acceso de canalización a recursos de streaming
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -10,11 +11,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2eabbe1b5b7ffc848243f75237e90bc69d8a43dc
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: b650188f6e4306a8dbdaae58e333128408d0f076
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1652704"
 ---
 # <a name="pipeline-access-to-streaming-resources"></a>Acceso de canalización a recursos de streaming
 
@@ -41,28 +43,28 @@ Si todos los iconos detrás de una superficie de acceso de memoria de un sombrea
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Comportamiento SRV con iconos sin asignar](srv-behavior-with-non-mapped-tiles.md)</p></td>
+<td align="left"><p><a href="srv-behavior-with-non-mapped-tiles.md">Comportamiento SRV con iconos sin asignar</a></p></td>
 <td align="left"><p>El comportamiento de las lecturas de vistas de recurso de sombreador (SRV) que implican iconos no asignados depende del nivel de compatibilidad del hardware.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Comportamiento UAV con iconos sin asignar](uav-behavior-with-non-mapped-tiles.md)</p></td>
+<td align="left"><p><a href="uav-behavior-with-non-mapped-tiles.md">Comportamiento UAV con iconos sin asignar</a></p></td>
 <td align="left"><p>El comportamiento de las lecturas y escrituras de las vistas de acceso sin ordenar (UAV) dependen del nivel de compatibilidad del hardware.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Comportamiento de rasterizador con iconos sin asignar](rasterizer-behavior-with-non-mapped-tiles.md)</p></td>
+<td align="left"><p><a href="rasterizer-behavior-with-non-mapped-tiles.md">Comportamiento de rasterizador con iconos sin asignar</a></p></td>
 <td align="left"><p>En esta sección se describe un comportamiento de rasterizador con iconos sin asignar.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Limitaciones de acceso de iconos con asignaciones duplicadas](tile-access-limitations-with-duplicate-mappings.md)</p></td>
+<td align="left"><p><a href="tile-access-limitations-with-duplicate-mappings.md">Limitaciones de acceso de iconos con asignaciones duplicadas</a></p></td>
 <td align="left"><p>Existen limitaciones sobre el acceso de iconos con asignaciones duplicadas, como al copiar recursos de streaming con el origen y el destino superpuestos, o al realizar representaciones en iconos compartidos dentro del área de representación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Características de muestreo de texturas de recursos de streaming](streaming-resources-texture-sampling-features.md)</p></td>
+<td align="left"><p><a href="streaming-resources-texture-sampling-features.md">Características de muestreo de texturas de recursos de streaming</a></p></td>
 <td align="left"><p>Las características de muestreo de texturas de recursos de streaming incluyen obtener comentarios de estado del sombreador sobre las áreas asignadas, comprobar si todos los datos a los que se accede estaban asignados al recurso, realizar la compresión para ayudar a los sombreadores a evitar áreas en recursos de streaming con mapas MIP de los que se sabe que no están asignados, y detectar cuál será el LOD mínimo asignado completamente a toda una superficie de filtro de textura.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Exposición de recursos de streaming de HLSL](hlsl-streaming-resources-exposure.md)</p></td>
-<td align="left"><p>Se necesita una sintaxis específica del lenguaje High Level Shader Language (HLSL) de Microsoft para admitir los recursos de streaming en [Shader Model 5](https://msdn.microsoft.com/library/windows/desktop/ff471356).</p></td>
+<td align="left"><p><a href="hlsl-streaming-resources-exposure.md">Exposición de recursos de streaming de HLSL</a></p></td>
+<td align="left"><p>Se necesita una sintaxis específica del lenguaje High Level Shader Language (HLSL) de Microsoft para admitir los recursos de streaming en <a href="https://msdn.microsoft.com/library/windows/desktop/ff471356">Shader Model 5</a>.</p></td>
 </tr>
 </tbody>
 </table>

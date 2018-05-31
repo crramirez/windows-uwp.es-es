@@ -1,157 +1,90 @@
 ---
 author: normesta
-Description: "En esta guía se explica cómo configurar la solución de Visual Studio para editar, depurar y empaquetar la aplicación de escritorio para el Puente de dispositivo de escritorio."
+Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop app for the Desktop Bridge.
 Search.Product: eADQiWindows 10XVcnh
-title: "Empaquetar una aplicación mediante Visual Studio (Puente de dispositivo de escritorio a UWP)"
+title: Empaquetar una aplicación mediante Visual Studio (Puente de dispositivo de escritorio)
 ms.author: normesta
-ms.date: 07/20/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
-ms.openlocfilehash: d8919448b965f18ff7f8fdaeda325889e495ef85
-ms.sourcegitcommit: f6dd9568eafa10ee5cb2b849c0d82d84a1c5fb93
+ms.localizationpriority: medium
+ms.openlocfilehash: d7ae77c499cb8398aa5557f0d422899fbe8b252d
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816260"
 ---
 # <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a>Empaquetar una aplicación mediante Visual Studio (Puente de dispositivo de escritorio a UWP)
 
-Puedes usar Visual Studio para generar un paquete para tu aplicación de escritorio. Luego, puedes publicar que ese paquete en la Tienda Windows o transferirlo localmente a uno o más equipos.
+Puedes usar Visual Studio para generar un paquete para tu aplicación de escritorio. Luego, puedes publicar que ese paquete en Microsoft Store o transferirlo localmente a uno o más equipos.
 
-Esta guía le muestra cómo configurar la solución y generar luego un paquete de la aplicación de escritorio.
+La versión más reciente de Visual Studio proporciona una nueva versión del proyecto de empaquetado que elimina todos los pasos manuales se solían ser necesarios para empaquetar tu aplicación. Tan solo tienes que agregar un proyecto de empaquetado, hacer referencia al proyecto de escritorio y luego presionar F5 para depurar la aplicación. No es necesario realizar ajustes manuales. Esta nueva experiencia optimizada es una gran mejora de la experiencia que estaba disponible en la versión anterior de Visual Studio.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>En primer lugar, piensa la manera de distribuir la aplicación.
+>[!IMPORTANT]
+>El Puente de dispositivo de escritorio se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la Actualización de aniversario de Windows 10 (10.0, compilación 14393) o una versión posterior de Visual Studio.
 
-Si vas a publicar la aplicación en la [Tienda Windows](https://www.microsoft.com/store/apps), comienza rellenando [este formulario](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). Microsoft se pondrá en contacto contigo para iniciar el proceso de incorporación. Como parte de este proceso, podrás reservar un nombre en la tienda y obtener la información que necesitas para empaquetar la aplicación.
+## <a name="first-consider-how-youll-distribute-your-app"></a>En primer lugar, piensa en la manera de distribuir la aplicación.
 
-## <a name="add-a-packaging-project-to-your-solution"></a>Agregar un proyecto de empaquetado en tu solución
+Si vas a publicar la aplicación en la [Microsoft Store](https://www.microsoft.com/store/apps), comienza rellenando [este formulario](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). Microsoft se pondrá en contacto contigo para iniciar el proceso de incorporación. Como parte de este proceso, podrás reservar un nombre en la Store y obtener la información que necesitas para empaquetar la aplicación.
+
+Además, asegúrate de consultar esta guía antes de empezar a crear un paquete para tu aplicación: [Preparar para empaquetar una aplicación (Puente de dispositivo de escritorio)](desktop-to-uwp-prepare.md).
+
+<a id="new-packaging-project"/>
+
+## <a name="create-a-package"></a>Crear un paquete
 
 1. En Visual Studio, abre la solución que contiene tu proyecto de aplicación de escritorio.
 
-2. Agrega un proyecto **Aplicación vacía (Windows universal)** de JavaScript a la solución.
+2. Agrega un **Proyecto de paquete de aplicación de Windows** a la solución.
 
    No tendrás que agregarle ningún código. Solo está ahí para generar un paquete para ti. Nos referiremos a este proyecto como el "proyecto de empaquetado".
 
-   ![proyecto de UWP de JavaScript](images/desktop-to-uwp/javascript-uwp-project.png)
+   ![Proyecto de empaquetado](images/desktop-to-uwp/packaging-project.png)
 
-   >[!IMPORTANT]
-   >En general, debes usar la versión de JavaScript de este proyecto.  Las versiones de C#, VB.NET y C++ tienen algunos problemas, pero si quieres usar alguna de ellas, consulta la guía [Problemas conocidos](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-known-issues#known-issues-anchor) antes de hacerlo.
+   >[!NOTE]
+   >Este proyecto aparece solo en Visual Studio 2017 versión 15.5 o posterior.
 
-## <a name="add-the-desktop-application-binaries-to-the-packaging-project"></a>Agregar los archivos binarios de aplicación de escritorio al proyecto de empaquetado
+3. Establece la **versión de destino** de este proyecto a cualquier versión que quieras, pero asegúrate de establecer la **Versión mínima** a **Actualización de aniversario de Windows 10**.
 
-Agrega los archivos binarios directamente al proyecto de empaquetado.
+   ![Cuadro de diálogo del selector de versión de empaquetado](images/desktop-to-uwp/packaging-version.png)
 
-1. En el **Explorador de soluciones**, amplía la carpeta del proyecto de empaquetado, crea una subcarpeta y asígnale el nombre que quieras (por ejemplo: **win32**).
+4. En el proyecto de empaquetado, haz clic con el botón derecho en la carpeta **Applications** y, a continuación, elige **Agregar referencia**.
 
-2. Haz clic con el botón derecho en la subcarpeta y elige **Agregar elemento existente**.
+   ![Agregar referencia de proyecto](images/desktop-to-uwp/add-project-reference.png)
 
-3. En el cuadro de diálogo **Agregar elemento existente**, busca y agrega los archivos de la carpeta de resultados de la aplicación de escritorio. Esto incluye no solo los archivos ejecutables, sino también los archivos .dll o .config que se encuentran en esa carpeta.
+5. Elija el proyecto de aplicación de escritorio y después selecciona el botón **Aceptar**.
 
-   ![Archivo ejecutable de referencia](images/desktop-to-uwp/cpp-exe-reference.png)
+   ![Proyecto de escritorio](images/desktop-to-uwp/reference-project.png)
 
-   Cada vez que realices un cambio en el proyecto de aplicación de escritorio, deberás copiar una nueva versión de esos archivos en el proyecto de empaquetado. Puede automatizar esto agregando un evento posterior a la compilación en el archivo de proyecto del proyecto de empaquetado. A continuación te mostramos un ejemplo.
+   Puedes incluir varias aplicaciones de escritorio en el paquete, pero solo una de ellas puede iniciarse cuando los usuarios elijan el icono de la aplicación. En el nodo **Applications**, haz clic con el botón derecho en la aplicación que quieres que los usuarios inicien cuando elijas el icono de la aplicación y después elige **Establecer como punto de entrada**.
 
-   ```XML
-   <Target Name="PostBuildEvent">
-     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyWindowsFormsApplication.exe"
-       DestinationFolder="win32" />
-     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyWindowsFormsApplication.exe.config"
-       DestinationFolder="win32" />
-     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyWindowsFormsApplication.pdb"
-       DestinationFolder="win32" />
-     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyBusinessLogicLibrary.dll"
-       DestinationFolder="win32" />
-     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyBusinessLogicLibrary.pdb"
-       DestinationFolder="win32" />
-   </Target>
-   ```
+   ![Establecer punto de entrada](images/desktop-to-uwp/entry-point-set.png)
 
-## <a name="modify-the-package-manifest"></a>Modificar el manifiesto del paquete
+6. Compila el proyecto de empaquetado para garantizar que no aparece ningún error.
 
-El proyecto de empaquetado contiene un archivo que describe la configuración del paquete. De manera predeterminada, este archivo describe una aplicación para UWP, de modo que deberás modificarlo para que el sistema sepa que el paquete incluye una aplicación de escritorio que se ejecuta en plena confianza.  
+7. Usa el asistente [Crear paquetes de aplicaciones](../packaging/packaging-uwp-apps.md) para generar un archivo appxupload.
 
-1. En el **Explorador de soluciones**, amplía el proyecto de empaquetado, haz clic con el botón derecho en el archivo **package.appxmanifest** y luego elige **Ver código**.
+   Puedes cargar dicho archivo directamente a la Store.
 
-   ![Proyecto de dotnet de referencia](images/desktop-to-uwp/reference-dotnet-project.png)
+**Vídeo**
 
-2. Agrega este espacio de nombres a la parte superior del archivo, y el prefijo del espacio de nombres a la lista de ``IgnorableNamespaces``.
-
-   ```XML
-   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-   ```
-   Cuando hayas terminado, las declaraciones del espacio de nombres tendrán un aspecto similar al siguiente:
-
-   ```XML
-   <Package
-     xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-     xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-     xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-     xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-     IgnorableNamespaces="uap mp rescap">
-   ```
-
-3. Busca el elemento ``TargetDeviceFamily`` y establece el atributo ``Name``en **Windows.Desktop**, el atributo ``MinVersion`` en la versión mínima del proyecto de empaquetado y la ``MaxVersionTested`` en la versión de destino del proyecto de empaquetado.
-
-   ```XML
-   <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.10586.0" MaxVersionTested="10.0.15063.0" />
-   ```
-
-   Encontrarás la versión mínima y la versión de destino en las páginas de propiedades del proyecto de empaquetado.
-
-   ![Configuración de versión mínima y de destino](images/desktop-to-uwp/min-target-version-settings.png)
-
-
-4. Quita el atributo ``StartPage`` del elemento ``Application``. Luego agrega los atributos ``Executable`` y ``EntryPoint``.
-
-   El elemento ``Application`` tendrá el siguiente aspecto.
-
-   ```XML
-   <Application Id="App"  Executable=" " EntryPoint=" ">
-   ```
-
-5. Establece el atributo ``Executable`` en el nombre del archivo ejecutable de tu aplicación de escritorio. Luego establece el atributo ``EntryPoint`` en **Windows.FullTrustApplication **.
-
-   El elemento ``Application`` tendrá un aspecto similar la siguiente.
-
-   ```XML
-   <Application Id="App"  Executable="win32\MyWindowsFormsApplication.exe" EntryPoint="Windows.FullTrustApplication">
-   ```
-6. Agrega la funcionalidad ``runFullTrust`` al elemento ``Capabilities``.
-
-   ```XML
-     <rescap:Capability Name="runFullTrust"/>
-   ```
-   Pueden aparecer marcas onduladas azules debajo de esta declaración, pero puedes ignorarlas sin problemas.
-
-   >[!IMPORTANT]
-   Si está creando un paquete para una aplicación de escritorio de C++, tendrás que realizar algunos cambios adicionales en el archivo de manifiesto para poder implementar los tiempos de ejecución de Visual C++ junto con la aplicación. Consulta [Usar tiempos de ejecución de Visual C++ en un proyecto de Puente de dispositivo de escritorio](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/).
-
-7. Compila el proyecto de empaquetado para garantizar que no aparece ningún error.
-
-8. Si quieres probar el paquete, consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)](desktop-to-uwp-debug.md).
-
-   A continuación, vuelve a esta guía y consulta la siguiente sección para generar el paquete.
-
-## <a name="generate-a-package"></a>Generar un paquete
-
-Para generar un paquete de la aplicación, sigue las instrucciones que se describen en este tema: [Empaquetado de aplicaciones para UWP](..\packaging\packaging-uwp-apps.md).
-
-Cuando llegues a la pantalla **Seleccionar y configurar paquetes**, dedica un momento a pensar qué tipo de archivos binarios vas a incluir en el paquete antes de seleccionar cualquiera de las casillas.
-
-* Si has [ampliado](desktop-to-uwp-extend.md) la aplicación de escritorio mediante la adición de un proyecto de Plataforma universal de Windows basado en C#, C++ o VB.NET-sa la solución, activas las casillas **x86** y **x64**.  
-
-* De lo contrario, elige la casilla **Neutro**.
-
->[!NOTE]
-El motivo por el que tendrías que elegir de manera explícita cada plataforma compatible es porque una solución que has ampliado contiene dos tipos de archivos binarios: uno para el proyecto de UWP y otro para el proyecto de escritorio. Dado que estos son diferentes tipos de archivos binarios, .NET Native debe producir explícitamente archivos binarios nativos para cada plataforma.
-
-Si recibes errores al intentar generar el paquete, consulta la guía [Problemas conocidos](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-known-issues#known-issues-anchor) y si el problema no aparece en la lista, comparte el problema con nosotros [aquí](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
+<iframe src="https://www.youtube.com/embed/fJkbYPyd08w" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Ejecutar la aplicación o buscar y corregir problemas**
+**Encuentra respuestas a tus preguntas**
+
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+
+**Enviar comentarios o realizar sugerencias acerca de las características**
+
+Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
+
+**Ejecutar, depurar o probar la aplicación**
 
 Consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)](desktop-to-uwp-debug.md)
 
@@ -159,18 +92,10 @@ Consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada (
 
 Consulta [Mejorar tu aplicación de escritorio para Windows 10](desktop-to-uwp-enhance.md).
 
-**Ampliar tu aplicación de escritorio agregando los componentes de UWP**
+**Amplía tu aplicación de escritorio agregando proyectos UWP y Componentes de Windows Runtime**
 
 Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](desktop-to-uwp-extend.md).
 
 **Distribuir la aplicación**
 
 Consulta [Distribuir una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)](desktop-to-uwp-distribute.md)
-
-**Encuentra respuestas a preguntas específicas**
-
-Nuestro equipo supervisa estas [etiquetas de StackOverflow](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
-
-**Envíanos tus comentarios acerca de este artículo**
-
-Usa la sección comentarios que tienes a continuación.

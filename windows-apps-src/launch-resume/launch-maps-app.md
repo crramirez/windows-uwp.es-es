@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
-title: "Iniciar la aplicación Mapas de Windows"
-description: "Obtén información sobre cómo iniciar la aplicación Mapas de Windows desde la aplicación."
+title: Iniciar la aplicación Mapas de Windows
+description: Obtén información sobre cómo iniciar la aplicación Mapas de Windows desde la aplicación.
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 3d36708b5b11a089ffa126b760f0990f2da39e38
-ms.sourcegitcommit: f6dd9568eafa10ee5cb2b849c0d82d84a1c5fb93
+ms.localizationpriority: medium
+ms.openlocfilehash: 27b458c7ec5cabdc27ebd90c9eb024df2f35e402
+ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 03/19/2018
+ms.locfileid: "1664958"
 ---
 # <a name="launch-the-windows-maps-app"></a>Iniciar la aplicación Mapas de Windows
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Aprende a iniciar la aplicación Mapas de Windows desde la aplicación. En este tema se describen los esquemas de identificador uniforme de recursos (URI) **bingmaps:, *ms-drive-to:, ms-walk-to:** y **ms-settings:**. Usa estos esquemas de URI para iniciar la aplicación Mapas de Windows para especificar mapas, indicaciones y resultados de búsqueda o para descargar mapas sin conexión de Mapas de Windows desde la aplicación Configuración.
@@ -136,16 +137,12 @@ Puedes mostrar indicaciones entre dos puntos con el parámetro *rtp*; estos punt
 | bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=w                      | Muestra indicaciones para ir andando desde Mountain View, California, hasta el aeropuerto internacional de San Francisco, CA.                                                                  |
 | bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=t                      | Muestra indicaciones de transporte público ahora desde Mountain View, California, hasta el aeropuerto internacional de San Francisco, CA.                                                                  |
 
- 
-
 ## <a name="display-turn-by-turn-directions"></a>Mostrar indicaciones paso a paso
 
 
 Los esquemas de URI **ms-drive-to:** y **ms-walk-to:** te permiten iniciar directamente en una vista paso a paso de una ruta. Estos esquemas URI solo pueden proporcionar indicaciones desde la ubicación actual del usuario. Si debes proporcionar indicaciones entre los puntos que no incluyen la ubicación actual del usuario, usa el esquema de URI **bingmaps:** como se describe en la sección anterior. Para obtener más información sobre estos esquemas de URI, consulta la referencia de los parámetros [ms-drive-to:](#ms-drive-to-param-reference) y [ms-walk-to:](#ms-walk-to-param-reference) .
 
 > **Importante** Cuando los esquemas de URI **ms-drive-to:** o **ms-walk-to:** se inicien, la aplicación Mapas comprobará si el dispositivo tuvo alguna vez una corrección de la ubicación GPS. Si es así, la aplicación Mapas procederá a realizar indicaciones paso a paso. En caso contrario, la aplicación mostrará la información general de la ruta, tal como se describe en [Mostrar indicaciones y tráfico](#display-directions-and-traffic).
-
- 
 
 ![Un ejemplo de indicaciones paso a paso](images/windowsmapsappdirections.png)
 
@@ -157,17 +154,15 @@ Los esquemas de URI **ms-drive-to:** y **ms-walk-to:** te permiten iniciar direc
 
 ## <a name="download-offline-maps"></a>Descargar mapas sin conexión
 
-
 El esquema de URI **ms-settings:** te permite ir directamente a una página determinada de la aplicación Configuración. Aunque el esquema de URI **ms-settings:** no se inicie en la aplicación Mapas, te permite iniciar directamente la página Mapas sin conexión en la aplicación Configuración y muestra un cuadro de diálogo de confirmación para descargar los mapas sin conexión que usa la aplicación Mapas. El esquema de URI acepta un punto especificado por una latitud y longitud y determina automáticamente si hay mapas sin conexión disponibles para una región que contenga ese punto.  Si la latitud y longitud pasadas se incluyen en varias regiones de descarga, el cuadro de diálogo de confirmación permite al usuario elegir cuál de las regiones descargar. Si los mapas sin conexión no están disponibles para una región que contenga ese punto, se muestra la página Mapas sin conexión en la aplicación Configuración con un cuadro de diálogo de error.
 
-| Ejemplo de URI                                                                                                | Resultados                                                                                       |
-|-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| Ejemplo de URI  | Resultados |
+|-------------|---------|
 | ms-settings:maps-downloadmaps?latlong=47.6,-122.3 | Abre la aplicación Configuración en la página Mapas sin conexión con un cuadro de diálogo de confirmación que se muestra para descargar mapas para la región que contiene el punto especificado de latitud y longitud. |
- 
 
 <span id="bingmaps-param-reference"/>
-## <a name="bingmaps-parameter-reference"></a>Referencia de parámetro bingmaps:
 
+## <a name="bingmaps-parameter-reference"></a>Referencia de parámetro bingmaps:
 
 La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de Backus-Naur aumentada (ABNF).
 
@@ -188,7 +183,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**cp**</p></td>
+<td align="left"><p><b>cp</b></p></td>
 <td align="left"><p>Punto central</p></td>
 <td align="left"><p>cp = "cp=" cpval</p>
 <p>cpval = degreeslat "~" degreeslon</p>
@@ -196,12 +191,12 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>degreeslon = ["-"] 1*2DIGIT ["." 1*7DIGIT]</p>
 <p>Ejemplo:</p>
 <p>cp=40.726966~-74.006076</p></td>
-<td align="left"><p>Ambos valores se deben expresar en grados decimales y deben estar separados por una tilde de la ñ (**~**).</p>
+<td align="left"><p>Ambos valores se deben expresar en grados decimales y deben estar separados por una tilde de la ñ (<b>~</b>).</p>
 <p>Los valores de longitud válidos están entre -180 y +180 incluidos.</p>
 <p>Los valores de latitud válidos están entre -90 y +90 incluidos.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**bb**</p></td>
+<td align="left"><p><b>bb</b></p></td>
 <td align="left"><p>Cuadro de límite</p></td>
 <td align="left"><p>bb = "bb=" southlatitude "_" westlongitude "~" northlatitude "_" eastlongitude</p>
 <p>southlatitude = degreeslat</p>
@@ -212,21 +207,21 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</p>
 <p>Ejemplo:</p>
 <p>bb=39.719_-74.52~41.71_-73.5</p></td>
-<td align="left"><p>Área rectangular que especifica el cuadro de límite expresado en grados decimales y con una tilde en la ñ (**~**) para separar la esquina inferior izquierda de la esquina superior derecha. La latitud y longitud de cada uno se separan con un carácter de subrayado (**_**).</p>
+<td align="left"><p>Área rectangular que especifica el cuadro de límite expresado en grados decimales y con una tilde en la ñ (<b>~</b>) para separar la esquina inferior izquierda de la esquina superior derecha. La latitud y longitud de cada uno se separan con un carácter de subrayado (<b>_</b>).</p>
 <p>Los valores de longitud válidos están entre -180 y +180 incluidos.</p>
 <p>Los valores de latitud válidos están entre -90 y +90 incluidos.</p><p>Los parámetros cp y lvl se omiten cuando se proporciona un cuadro de límite.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**Donde**</p></td>
+<td align="left"><p><b>Donde</b></p></td>
 <td align="left"><p>Ubicación</p></td>
 <td align="left"><p>where = "where=" whereval</p>
-<p>whereval = 1*( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "*" / "+" / "," / ";" / ":" / "@" / "/" / "?")</p>
+<p>whereval = 1 *( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "*" / "+" / "," / ";" / ":" / "@" / "/" / "?")</p>
 <p>Ejemplo:</p>
 <p>where=1600%20Pennsylvania%20Ave,%20Washington,%20DC</p></td>
 <td align="left"><p>Término de búsqueda para una ubicación, un punto de referencia o un lugar específicos.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**q**</p></td>
+<td align="left"><p><b>q</b></p></td>
 <td align="left"><p>Término de consulta</p></td>
 <td align="left"><p>q = "q="</p>
 <p>whereval</p>
@@ -235,15 +230,15 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <td align="left"><p>Término de búsqueda para empresas locales o categorías de empresas.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**lvl**</p></td>
+<td align="left"><p><b>lvl</b></p></td>
 <td align="left"><p>Nivel de zoom</p></td>
-<td align="left"><p>lvl = "lvl=" 1*2DIGIT ["." 1*2DIGIT]</p>
+<td align="left"><p>lvl = "lvl=" 1<i>2DIGIT ["." 1</i>2DIGIT]</p>
 <p>Ejemplo:</p>
 <p>lvl=10.50</p></td>
 <td align="left"><p>Define el nivel de zoom de la vista de mapa. Los valores válidos son 1-20 donde 1 es el nivel de zoom más alejado.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**sty**</p></td>
+<td align="left"><p><b>sty</b></p></td>
 <td align="left"><p>Estilo</p></td>
 <td align="left"><p>sty = "sty=" ("a" / "r"/"3d")</p>
 <p>Ejemplo:</p>
@@ -263,7 +258,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**rad**</p></td>
+<td align="left"><p><b>rad</b></p></td>
 <td align="left"><p>Radio</p></td>
 <td align="left"><p>rad = "rad=" 1*8DIGIT</p>
 <p>Ejemplo:</p>
@@ -271,7 +266,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <td align="left"><p>Un área circular que especifica la vista de mapa deseada. El valor de radio se mide en metros.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**pit**</p></td>
+<td align="left"><p><b>pit</b></p></td>
 <td align="left"><p>Rotación alrededor del eje x (pitch)</p></td>
 <td align="left"><p>pit = "pit=" rotación alrededor del eje x (pitch)</p>
 <p>Ejemplo:</p>
@@ -279,7 +274,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <td align="left"><p>Indica el ángulo en el que se ve el mapa, donde 90 es mirando al horizonte (máximo) y 0 es mirando hacia abajo (mínimo).</p><p>Los valores de rotación alrededor del eje x (pitch) válidos están entre -0 y +90 incluidos.</td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**hdg**</p></td>
+<td align="left"><p><b>hdg</b></p></td>
 <td align="left"><p>Encabezado</p></td>
 <td align="left"><p>hdg = "hdg=" encabezado</p>
 <p>Ejemplo:</p>
@@ -287,12 +282,12 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <td align="left"><p>Indica la dirección que usa el mapa en grados, donde 0 o 360 = Norte, 90 = este, 180 = sur y 270 = oeste.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**ss**</p></td>
+<td align="left"><p><b>ss</b></p></td>
 <td align="left"><p>Streetside</p></td>
 <td align="left"><p>ss = "ss=" BIT</p>
 <p>Ejemplo:</p>
 <p>ss=1</p></td>
-<td align="left"><p>Indica que se muestran las imágenes de nivel de calle cuando <code>ss=1</code>. Si se omite el parámetro **ss**, se obtiene el mismo resultado que <code>ss=0</code>. Se usa conjuntamente con el parámetro **cp** para especificar la ubicación de la vista de nivel de calle.</p>
+<td align="left"><p>Indica que se muestran las imágenes de nivel de calle cuando <code>ss=1</code>. Si se omite el parámetro <b>ss</b>, se obtiene el mismo resultado que <code>ss=0</code>. Se usa conjuntamente con el parámetro <b>cp</b> para especificar la ubicación de la vista de nivel de calle.</p>
 <div class="alert">
 **Nota** Las imágenes en el nivel de calle no están disponibles en todas las regiones.
 </div>
@@ -301,7 +296,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**trfc**</p></td>
+<td align="left"><p><b>trfc</b></p></td>
 <td align="left"><p>Tráfico</p></td>
 <td align="left"><p>trfc = "trfc=" BIT</p>
 <p>Ejemplo:</p>
@@ -315,7 +310,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**rtp**</p></td>
+<td align="left"><p><b>rtp</b></p></td>
 <td align="left"><p>Ruta</p></td>
 <td align="left"><p>rtp = "rtp=" (waypoint "~" [waypoint]) / ("~" waypoint)</p>
 <p>waypoint = ("pos." point ) / ("adr." whereval)</p>
@@ -330,7 +325,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>Ejemplos:</p>
 <p>rtp=adr.Mountain%20View,%20CA~adr.SFO</p>
 <p>rtp=adr.One%20Microsoft%20Way,%20Redmond,%20WA~pos.45.23423_-122.1232 _My%20Picnic%20Spot</p></td>
-<td align="left"><p>Define el inicio y el final de una ruta para dibujar en el mapa, separados por una tilde en la ñ (**~**). Cada uno de los puntos de referencia se define mediante una posición con latitud, longitud y un título opcional o un identificador de dirección.</p>
+<td align="left"><p>Define el inicio y el final de una ruta para dibujar en el mapa, separados por una tilde en la ñ (<b>~</b>). Cada uno de los puntos de referencia se define mediante una posición con latitud, longitud y un título opcional o un identificador de dirección.</p>
 <p>Una ruta completa contiene exactamente dos puntos de referencia. Por ejemplo, una ruta con dos puntos de referencia se define mediante <code>rtp="A"~"B"</code>.</p>
 <p>También se puede especificar una ruta incompleta. Por ejemplo, puedes definir únicamente el inicio de una ruta con <code>rtp="A"~</code>. En este caso, la entrada de indicaciones se muestra con el punto de referencia proporcionado en el campo **Desde:** y el campo **A:** con enfoque.</p>
 <p>Si solo se especifica el final de una ruta, como con <code>rtp=~"B"</code>, el panel de indicaciones se muestra con el punto de referencia proporcionado en el campo **A:**. Si hay una ubicación precisa actual disponible, la ubicación actual se rellena previamente en el campo **Desde** con enfoque.</p>
@@ -344,7 +339,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**mode**</p></td>
+<td align="left"><p><b>mode</b></p></td>
 <td align="left"><p>Modo de transporte</p></td>
 <td align="left"><p>mode = "mode=" ("d" / "t" / "w")</p>
 <p>Ejemplo:</p>
@@ -359,7 +354,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </tr>
 
 <tr class="even">
-<td align="left"><p>**colección**</p></td>
+<td align="left"><p><b>colección</b></p></td>
 <td align="left"><p>Colección</p></td>
 <td align="left"><p>collection = "collection="(name"~"/)point["~"point]</p>
 <p>name = "name." whereval </p>
@@ -384,7 +379,8 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 
   
 <span id="ms-drive-to-param-reference"/>
-## Referencia del parámetro ms-drive-to:
+
+## <a name="ms-drive-to-parameter-reference"></a>Referencia del parámetro ms-drive-to:
 
 
 El URI para iniciar una solicitud de indicaciones paso a paso de conducción no necesita codificación y tiene el siguiente formato.
@@ -401,6 +397,7 @@ El URI para iniciar una solicitud de indicaciones paso a paso de conducción no 
 
  
 <span id="ms-walk-to-param-reference"/>
+
 ## <a name="ms-walk-to-parameter-reference"></a>Referencia del parámetro ms-walk-to:
 
 
@@ -415,17 +412,10 @@ El URI para iniciar una solicitud de indicaciones paso a paso para ir a pie no n
 | **destination.longitude** | Longitud del destino | Ejemplo: destination.longitude=-122.141964733601 | La longitud del destino. Los valores de longitud válidos están entre -180 y +180 incluidos. |
 | **destination.name** | Nombre del destino | Ejemplo: destination.name=Redmond, WA | El nombre del destino. No tienes que codificar el URI ni el valor de **destination.name**. |
 
- 
 ## <a name="ms-settings-parameter-reference"></a>ms-settings: referencia del parámetro
 
-
-La sintaxis de los parámetros específicos de la aplicación Mapas para el esquema de URI **ms-settings:** se define a continuación. **maps-downloadmaps** se especifica junto con el URI **ms-settings:** en forma de **ms-settings:maps-downloadmaps?** para indicar la página de configuración de mapas sin conexión.
-
- 
+La sintaxis de los parámetros específicos de la aplicación Mapas para el esquema de URI **ms-settings:** se define a continuación. **maps-downloadmaps** se especifica junto con el URI **ms-settings:** en forma de **ms-settings:maps-downloadmaps?** para indicar la página de configuración de mapas sin conexión. 
 
 | Parámetro | Definición | Ejemplo | Detalles |
 |-----------|------------|---------|----------|
 | **latlong** | Punto que define la región de Mapa sin conexión. | Ejemplo: latlong=47.6,-122.3 | El GeoPoint se especifica mediante una latitud y una longitud separados por comas. Los valores de latitud válidos están entre -90 y +90 incluidos. Los valores de longitud válidos están entre -180 y +180 incluidos. |
- 
-
- 

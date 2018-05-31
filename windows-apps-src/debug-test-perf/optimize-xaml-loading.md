@@ -2,24 +2,25 @@
 author: jwmsft
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
 title: Optimizar el marcado XAML
-description: "El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo para una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación."
+description: El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo para una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación.
 ms.author: jimwalk
 ms.date: 08/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 007b86717c4bfbbcdc711aa63a7bb45dd06a1132
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 7e6e664e7d549ecc2fc3db28609c99ca477b3d58
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1674092"
 ---
 # <a name="optimize-your-xaml-markup"></a>Optimizar el marcado XAML
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo en una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis y el tiempo de carga del marcado XAML y la eficiencia de la memoria de tu aplicación.
+El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo para una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis y el tiempo de carga del marcado XAML y la eficiencia de la memoria de tu aplicación.
 
 Al iniciar la aplicación, limita el marcado XAML que se carga para que la interfaz de usuario inicial use solo lo que es necesario. Examina el marcado en la página inicial (incluidos los recursos de página) y confirma que no se están cargando elementos adicionales que no se necesitan inmediatamente. Estos elementos pueden proceder de una variedad de orígenes, como los diccionarios de recursos, los elementos que inicialmente están contraídos y elementos que se dibujan sobre otros elementos.
 
@@ -39,10 +40,10 @@ Aquí vamos a ver algunas otras maneras de reducir el número de elementos que l
 
 Si el marcado XAML contiene elementos que no muestran inmediatamente, puedes posponer la carga de esos elementos hasta que se muestren. Por ejemplo, puedes retrasar la creación de contenido no visible, como una pestaña secundaria en una interfaz de usuario similar a una pestaña. O bien, puedes mostrar elementos en una vista de cuadrícula de forma predeterminada, pero debes proporcionar una opción para que el usuario pueda ver los datos en una lista. Puedes retrasar la carga de la lista hasta que se necesite.
 
-Usa [x:Load attribute](../xaml-platform/x-load-attribute.md) en lugar de la propiedad [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_Visibility) para controlar cuándo se muestra un elemento. Cuando la visibilidad de un elemento se marca como **Contraído**, se omitirá durante el pase de representación, pero todavía pagas los costos de la instancia del objeto en la memoria. Si usas x:Load en su lugar, el marco no creará la instancia del objeto hasta que se necesite, por lo que los costos de memoria son más bajos aún. El inconveniente es el costo de una pequeña sobrecarga de memoria (unos 600bytes) cuando no se puede cargar la interfaz de usuario.
+Usa [x:Load attribute](../xaml-platform/x-load-attribute.md) en lugar de la propiedad [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.Visibility) para controlar cuándo se muestra un elemento. Cuando la visibilidad de un elemento se marca como **Contraído**, se omitirá durante el pase de representación, pero todavía pagas los costos de la instancia del objeto en la memoria. Si usas x:Load en su lugar, el marco no creará la instancia del objeto hasta que se necesite, por lo que los costos de memoria son más bajos aún. El inconveniente es el costo de una pequeña sobrecarga de memoria (unos 600bytes) cuando no se puede cargar la interfaz de usuario.
 
 > [!NOTE]
-> Puedes retrasar la carga de elementos mediante el atributo [x:Load](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md). El atributo x:Load está disponible a partir de Windows 10 Creators Update (versión 1703, compilación de SDK 15063). Para poder usar x:Load, la versión mínima del proyecto de Visual Studio debe ser *Windows 10 Creators Update (10.0, compilación 15063)*. Para seleccionar versiones anteriores, usa x:DeferLoadStrategy.
+> Puedes retrasar la carga de elementos mediante el atributo [x:Load](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md). El atributo x:Load está disponible a partir de Windows10 Creators Update (versión 1703, compilación de SDK 15063). Para poder usar x:Load, la versión mínima del proyecto de Visual Studio debe ser *Windows10 Creators Update (10.0, compilación 15063)*. Para seleccionar versiones anteriores, usa x:DeferLoadStrategy.
 
 Los siguientes ejemplos muestran la diferencia en el recuento de elementos y el uso de memoria cuando se usan técnicas diferentes para ocultar elementos de la interfaz de usuario. Los controles ListView y GridView que contienen elementos idénticos se colocan en la Grid de la página de la raíz. La ListView no está visible pero se muestra la GridView. El código XAML en cada uno de estos ejemplos produce la misma interfaz de usuario en la pantalla. Usamos las herramientas de Visual Studio [de generación de perfiles y rendimiento](tools-for-profiling-and-performance.md) para comprobar el uso de memoria y el recuento de elementos.
 
@@ -127,7 +128,7 @@ ListView y sus elementos secundarios no se cargan en la memoria.
 
 ### <a name="use-layout-panel-properties"></a>Usar propiedades del panel de diseño
 
-Los paneles de diseño tienen una propiedad [Background](https://msdn.microsoft.com/library/windows/apps/BR227512), por lo tanto, no es necesario colocar una clase [Rectangle](https://msdn.microsoft.com/library/windows/apps/BR243371) delante de un panel solo para colorearlo.
+Los paneles de diseño tienen una propiedad [Background](https://msdn.microsoft.com/library/windows/apps/BR227512), por lo tanto, no es necesario colocar una clase [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) delante de un panel solo para colorearlo.
 
 **Ineficaz**
 
@@ -152,7 +153,7 @@ Si debes volver a usar el mismo elemento basado en vectores numerosas veces, te 
 
 ## <a name="optimize-resources-and-resource-dictionaries"></a>Optimizar los recursos y los diccionarios de recursos
 
-Normalmente se usan [diccionarios de recursos](../controls-and-patterns/resourcedictionary-and-xaml-resource-references.md) para almacenar, en un nivel algo global, recursos que a los que quieras hacer referencia en varios lugares en la aplicación. Por ejemplo, estilos, pinceles, plantillas, etc.
+Normalmente se usan [diccionarios de recursos](../design/controls-and-patterns/resourcedictionary-and-xaml-resource-references.md) para almacenar, en un nivel algo global, recursos que a los que quieras hacer referencia en varios lugares en la aplicación. Por ejemplo, estilos, pinceles, plantillas, etc.
 
 En general, hemos optimizado el elemento [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) para que no cree instancias de los recursos a menos que se pidan. Pero hay situaciones en las que debes evitar para que no se cree una instancia de recursos de forma innecesaria.
 
@@ -292,7 +293,7 @@ Si un elemento no es visible porque es transparente o está oculto detrás de ot
 
 ### <a name="composite-elements"></a>Elementos compuestos
 
-Usa un elemento compuesto en lugar de disponer varios elementos para crear un efecto. En este ejemplo, el resultado es una forma de dos tonos donde la mitad superior es negra (del fondo de [Grid](https://msdn.microsoft.com/library/windows/apps/BR242704)) y la inferior es gris (blanco semitransparente de la clase [Rectangle](https://msdn.microsoft.com/library/windows/apps/BR243371) con combinación alfa sobre el fondo negro de **Grid**). Aquí, se rellena el 150 % de los píxeles necesarios para lograr el resultado.
+Usa un elemento compuesto en lugar de disponer varios elementos para crear un efecto. En este ejemplo, el resultado es una forma de dos tonos donde la mitad superior es negra (del fondo de [Grid](https://msdn.microsoft.com/library/windows/apps/BR242704)) y la inferior es gris (blanco semitransparente de la clase [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) con combinación alfa sobre el fondo negro de **Grid**). Aquí, se rellena el 150 % de los píxeles necesarios para lograr el resultado.
 
 **Ineficaz.**
 

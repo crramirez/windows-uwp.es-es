@@ -1,21 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: "En este artículo se describe cómo usar perfiles de cámara para detectar y administrar las funcionalidades de los diferentes dispositivos de captura de vídeo. Esto incluye tareas como la selección de perfiles que admiten resoluciones específicas o velocidades de fotogramas, perfiles que admiten el acceso simultáneo con varias cámaras y perfiles que admiten HDR."
-title: "Descubrir y seleccionar las funcionalidades de cámara con los perfiles de cámara"
+description: En este artículo se describe cómo usar perfiles de cámara para detectar y administrar las funcionalidades de los diferentes dispositivos de captura de vídeo. Esto incluye tareas como la selección de perfiles que admiten resoluciones específicas o velocidades de fotogramas, perfiles que admiten el acceso simultáneo con varias cámaras y perfiles que admiten HDR.
+title: Descubrir y seleccionar las funcionalidades de cámara con los perfiles de cámara
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: f45fea396c775a7d9e783be1d0a821ff68716279
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f842b10ce056d02d1c30c2fe285a87d5fe20dca8
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832259"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>Descubrir y seleccionar las funcionalidades de cámara con los perfiles de cámara
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo usar perfiles de cámara para detectar y administrar las funcionalidades de los diferentes dispositivos de captura de vídeo. Esto incluye tareas como la selección de perfiles que admiten resoluciones específicas o velocidades de fotogramas, perfiles que admiten el acceso simultáneo con varias cámaras y perfiles que admiten HDR.
@@ -61,21 +64,18 @@ Tras rellenar **MediaCaptureInitializationSettings** con el perfil de cámara de
 
 [!code-cs[InitCaptureWithProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitCaptureWithProfile)]
 
-## <a name="select-a-profile-that-supports-concurrence"></a>Seleccionar un perfil que admita la simultaneidad
+## <a name="use-media-frame-source-groups-to-get-profiles"></a>Usar grupo de origen de fotogramas multimedia para obtener perfiles
 
-Puedes usar los perfiles de cámara para determinar si un dispositivo admite la captura de vídeo desde varias cámaras al mismo tiempo. Para este escenario, debes crear dos conjuntos de objetos de captura, uno para la cámara frontal y otro para la posterior. Por cada cámara, crea un objeto **MediaCapture**, un objeto **MediaCaptureInitializationSettings** y una cadena que contenga el identificador de dispositivo de captura. Además, agrega una variable booleana que realizará un seguimiento de si se admite la simultaneidad.
+A partir de Windows 10, versión 1803, puedes usar la clase [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup) para obtener perfiles de cámara con las capacidades específicas antes de inicializar el objeto **MediaCapture**. Los grupos de origen de fotogramas permiten a los fabricantes de dispositivos representar grupos de sensores o capturar funcionalidades como un dispositivo virtual único. Esto permite escenarios de fotografía computacional como el uso de cámaras de profundidad y color juntas, pero también se pueden usar para seleccionar perfiles de cámara para escenarios de captura sencillos. Para obtener más información acerca del uso de **MediaFrameSourceGroup**, consulta [Procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md).
 
-[!code-cs[ConcurrencySetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetConcurrencySetup)]
+En el método de ejemplo siguiente se muestra cómo usar objetos **MediaFrameSourceGroup** para encontrar un perfil de cámara que admita un perfil de vídeo conocido, como uno que admita HDR o secuencia fotográfica variable. En primer lugar, llama a [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obtener una lista de todos los grupos de origen de fotogramas multimedia disponibles en el dispositivo actual. Recorra cada grupo de origen y llame a [**MediaCapture.FindKnownVideoProfiles**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.findknownvideoprofiles) para obtener una lista de todos los perfiles de vídeo para el grupo de origen actual que admiten el perfil especificado, en este caso, HDR con fotografía WCG. Si se encuentra un perfil que cumpla con los criterios, crea un nuevo objeto **MediaCaptureInitializationSettings** y establece el **VideoProfile** en el perfil de selección y el **VideoDeviceId** en la propiedad **Id** del grupo de origen de fotogramas multimedia actual. Por tanto, por ejemplo, podrías pasar el valor **KnownVideoProfile.HdrWithWcgVideo** a este método para obtener opciones de configuración de captura multimedia que admiten vídeo HDR. Pasa **KnownVideoProfile.VariablePhotoSequence** para obtener la configuración que admite la secuencia de fotografías variable.
 
-El método estático [**MediaCapture.FindConcurrentProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926709) devuelve una lista de los perfiles de cámara que son compatibles con el dispositivo de captura especificado que también admite la simultaneidad. Usa una consulta Linq para encontrar un perfil que admita la simultaneidad y que sea compatible con la cámara frontal y posterior. Si se encuentra un perfil que cumpla estos requisitos, establece el perfil en cada uno de los objetos **MediaCaptureInitializationSettings** y define la variable de seguimiento de simultaneidad booleano como true.
+ [!code-cs[FindKnownVideoProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindKnownVideoProfile)]
 
-[!code-cs[FindConcurrencyDevices](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindConcurrencyDevices)]
+## <a name="use-known-profiles-to-find-a-profile-that-supports-hdr-video-legacy-technique"></a>Usar perfiles conocidos para encontrar un perfil que admita vídeo HDR (técnica heredada)
 
-Llama a **MediaCapture.InitializeAsync** para la cámara principal del escenario de la aplicación. Si se admite la simultaneidad, inicializa también la segunda cámara.
-
-[!code-cs[InitConcurrentMediaCaptures](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitConcurrentMediaCaptures)]
-
-## <a name="use-known-profiles-to-find-a-profile-that-supports-hdr-video"></a>Usa perfiles conocidos para encontrar un perfil que admita vídeo HDR
+> [!NOTE] 
+> Las API descritas en esta sección están en desuso a partir de Windows 10, versión 1803. Consulta la sección anterior, **Usar grupo de origen de fotogramas multimedia para obtener perfiles**.
 
 La selección de un perfil que admita HDR comienza como los otros escenarios. Crea un **MediaCaptureInitializationSettings** y una cadena que contenga el identificador de dispositivo de captura. Agrega una variable booleana que realizará un seguimiento de si se admite vídeo HDR.
 

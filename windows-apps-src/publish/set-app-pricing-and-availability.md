@@ -4,17 +4,18 @@ Description: The Pricing and availability page of the app submission process let
 title: Establecer los precios y la disponibilidad de las aplicaciones
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, precio, disponible, descubrible, prueba gratuita, pruebas, prueba, aplicaciones, fecha de lanzamiento
 ms.localizationpriority: high
-ms.openlocfilehash: 58b70da6a1be4fc52d3f31f0ea7b25b96acfa860
-ms.sourcegitcommit: 9f059b37e45099b4314c96a0b604449e966d3c3c
+ms.openlocfilehash: 6c411572bbcf048b82ff27c284dc8f9343ef4fc4
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1831999"
 ---
 # <a name="set-app-pricing-and-availability"></a>Establecer los precios y la disponibilidad de las aplicaciones
 
@@ -43,11 +44,6 @@ De manera predeterminada (a menos que hayas seleccionado una de la opciones **Ha
 Para obtener más información, consulta [Configurar la programación de lanzamiento precisa](configure-precise-release-scheduling.md).
 
 
-## <a name="display-release-date"></a>Mostrar fecha de lanzamiento
-
-De manera predeterminada, la fecha de lanzamiento de la aplicación será la fecha en la que aparezca en la Tienda. Si quieres reemplazarla y proporcionar una fecha de lanzamiento personalizada, activa la casilla de esta sección y, a continuación, escribe la fecha de lanzamiento deseada. Ten en cuenta que la fecha de lanzamiento no siempre se muestra en la descripción de la Tienda.
-
-
 ## <a name="pricing"></a>Precios
 
 Necesitas seleccionar un precio base de la aplicación (a menos que hayas seleccionado la opción **Detener adquisición** en **Hacer disponible esta aplicación, pero no descubrible, en Store** en la sección [Visibilidad](choose-visibility-options.md#discoverability)), eligiendo entre **Gratis** y uno de los niveles de precio disponibles. También puedes programar los cambios de precio para indicar la fecha y la hora en las que el precio de la aplicación debería cambiar. Además, tienes la opción de personalizar estos cambios para mercados específicos. 
@@ -57,7 +53,7 @@ Para obtener más información, consulta [Establecer y programar los precios de 
 
 ## <a name="free-trial"></a>Prueba gratuita
 
-Muchos desarrolladores eligen permitir que los clientes prueben su aplicación de forma gratuita con la funcionalidad de prueba proporcionada por la Tienda. De manera predeterminada, **Sin prueba gratuita** está seleccionada, y no habrá ninguna versión de prueba de la aplicación. Si quieres ofrecer una versión de prueba, puedes seleccionar un valor en la lista desplegable **Evaluación gratuita**.
+Muchos desarrolladores eligen permitir que los clientes prueben su aplicación de forma gratuita con la funcionalidad de prueba proporcionada por la Store. De manera predeterminada, **Sin prueba gratuita** está seleccionada, y no habrá ninguna versión de prueba de la aplicación. Si quieres ofrecer una versión de prueba, puedes seleccionar un valor en la lista desplegable **Evaluación gratuita**.
 
 Hay dos tipos de prueba que puedes elegir y tienes la opción para configurar la fecha y hora en las que la versión de prueba empieza y acaba.
 

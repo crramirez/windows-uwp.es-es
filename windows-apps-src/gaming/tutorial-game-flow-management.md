@@ -1,7 +1,7 @@
 ---
 author: joannaleecy
-title: "Administración del flujo de los juegos"
-description: "Obtén información sobre cómo inicializar estados de juegos, controlar eventos y establecer el bucle de actualización del juego."
+title: Administración del flujo de los juegos
+description: Obtén información sobre cómo inicializar estados de juegos, controlar eventos y establecer el bucle de actualización del juego.
 ms.assetid: 6c33bf09-b46a-4bb5-8a59-ca83ce257eb3
 ms.author: joanlee
 ms.date: 10/24/2017
@@ -10,11 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 583ceda7551223ab1a1bf3b198fab3b3eb89c505
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 57763c25d1fe9bd4f1e55aa9083e755f7f257029
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1655124"
 ---
 # <a name="game-flow-management"></a>Administración del flujo de los juegos
 
@@ -286,48 +287,48 @@ Estos son los controladores de eventos usados en esta muestra y los eventos que 
 <tbody>
 <tr class="odd">
 <td align="left">OnActivated</td>
-<td align="left">Controla [<strong>CoreApplicationView::Activated</strong>] (https://msdn.microsoft.com/library/windows/apps/br225018). La aplicación del juego se coloca en primer plano, de modo que la ventana principal está activa.</td>
+<td align="left">Controla <a href="https://msdn.microsoft.com/library/windows/apps/br225018"><strong>CoreApplicationView::Activated</strong></a>. La aplicación del juego se coloca en primer plano, de modo que la ventana principal está activa.</td>
 </tr>
 <tr class="even">
 <td align="left">OnDpiChanged</td>
-<td align="left">Controla [<strong>Graphics::Display::DisplayInformation::DpiChanged</strong>](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DpiChanged). Los PPP de la pantalla han cambiado, por lo que la aplicación del juego ajusta sus recursos en consonancia.
+<td align="left">Controla <a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DpiChanged"><strong>Graphics::Display::DisplayInformation::DpiChanged</strong></a>. Los PPP de la pantalla han cambiado, por lo que la aplicación del juego ajusta sus recursos en consonancia.
 <div class="alert">
-<strong>Nota</strong>  Las coordenadas de [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) vienen en DIP (píxeles independientes del dispositivo) para [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Como resultado, se debe notificar a Direct2D del cambio en PPP para mostrar cualquier primitivo o activo 2D correctamente.
+<strong>Nota</strong>  [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) Las coordenadas son en DIP (píxeles independientes de dispositivo) para [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Como resultado, se debe notificar a Direct2D del cambio en PPP para mostrar cualquier primitivo o activo 2D correctamente.
 </div>
 <div>
 </div></td>
 </tr>
 <tr class="odd">
 <td align="left">OnOrientationChanged</td>
-<td align="left">Controla [<strong>Graphics::Display::DisplayInformation::OrientationChanged</strong>](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_OrientationChanged). La orientación de los cambios de pantalla y la representación debe actualizarse.</td>
+<td align="left">Controla <a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_OrientationChanged"><strong>Graphics::Display::DisplayInformation::OrientationChanged</strong></a>. La orientación de los cambios de pantalla y la representación debe actualizarse.</td>
 </tr>
 <tr class="even">
 <td align="left">OnDisplayContentsInvalidated</td>
-<td align="left">Controla [<strong>Graphics::Display::DisplayInformation::DisplayContentsInvalidated</strong>](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DisplayContentsInvalidated). La pantalla requiere volver a dibujar y tu juego necesita volver a representarse.</td>
+<td align="left">Controla <a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DisplayContentsInvalidated"><strong>Graphics::Display::DisplayInformation::DisplayContentsInvalidated</strong></a>. La pantalla requiere volver a dibujar y tu juego necesita volver a representarse.</td>
 </tr>
 <tr class="odd">
 <td align="left">OnResuming</td>
-<td align="left">Controla [<strong>CoreApplication::Resuming</strong>] (https://msdn.microsoft.com/library/windows/apps/br205859). La aplicación del juego restaura el juego desde un estado suspendido.</td>
+<td align="left">Controla <a href="https://msdn.microsoft.com/library/windows/apps/br205859"><strong>CoreApplication::Resuming</strong></a>. La aplicación del juego restaura el juego desde un estado suspendido.</td>
 </tr>
 <tr class="even">
 <td align="left">OnSuspending</td>
-<td align="left">Controla [<strong>CoreApplication::Suspending</strong>](https://msdn.microsoft.com/library/windows/apps/br205860). La aplicación del juego guarda su estado en disco. Tiene 5 segundos para guardar el estado en el almacenamiento.</td>
+<td align="left">Controla <a href="https://msdn.microsoft.com/library/windows/apps/br205860"><strong>CoreApplication::Suspending</strong></a>. La aplicación del juego guarda su estado en disco. Tiene 5 segundos para guardar el estado en el almacenamiento.</td>
 </tr>
 <tr class="odd">
 <td align="left">OnVisibilityChanged</td>
-<td align="left">Controla [<strong>CoreWindow::VisibilityChanged</strong>](https://msdn.microsoft.com/library/windows/apps/hh701591). La aplicación del juego ha cambiado la visibilidad y ha pasado a ser visible u otra aplicación visible la ha convertido en invisible.</td>
+<td align="left">Controla <a href="https://msdn.microsoft.com/library/windows/apps/hh701591"><strong>CoreWindow::VisibilityChanged</strong></a>. La aplicación del juego ha cambiado la visibilidad y ha pasado a ser visible u otra aplicación visible la ha convertido en invisible.</td>
 </tr>
 <tr class="even">
 <td align="left">OnWindowActivationChanged</td>
-<td align="left">Controla [<strong>CoreWindow::Activated</strong>](https://msdn.microsoft.com/library/windows/apps/br208255). La ventana principal de la aplicación del juego se ha desactivado o activado, por lo que debe quitar el foco y pausar el juego, o recuperar el foco. En ambos casos, la superposición indica que el juego está en pausa.</td>
+<td align="left">Controla <a href="https://msdn.microsoft.com/library/windows/apps/br208255"><strong>CoreWindow::Activated</strong></a>. La ventana principal de la aplicación del juego se ha desactivado o activado, por lo que debe quitar el foco y pausar el juego, o recuperar el foco. En ambos casos, la superposición indica que el juego está en pausa.</td>
 </tr>
 <tr class="odd">
 <td align="left">OnWindowClosed</td>
-<td align="left">Controla [<strong>CoreWindow::Closed</strong>](https://msdn.microsoft.com/library/windows/apps/br208261). La aplicación del juego cierra la ventana principal y suspende el juego.</td>
+<td align="left">Controla <a href="https://msdn.microsoft.com/library/windows/apps/br208261"><strong>CoreWindow::Closed</strong></a>. La aplicación del juego cierra la ventana principal y suspende el juego.</td>
 </tr>
 <tr class="even">
 <td align="left">OnWindowSizeChanged</td>
-<td align="left">Controla [<strong>CoreWindow::SizeChanged</strong>](https://msdn.microsoft.com/library/windows/apps/br208283). La aplicación del juego reasigna los recursos gráficos y la superposición para ajustarse al cambio de tamaño y después actualiza el destino de representación.</td>
+<td align="left">Controla <a href="https://msdn.microsoft.com/library/windows/apps/br208283"><strong>CoreWindow::SizeChanged</strong></a>. La aplicación del juego reasigna los recursos gráficos y la superposición para ajustarse al cambio de tamaño y después actualiza el destino de representación.</td>
 </tr>
 </tbody>
 </table>

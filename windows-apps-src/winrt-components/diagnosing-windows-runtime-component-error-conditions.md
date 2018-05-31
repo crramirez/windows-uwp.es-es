@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: Diagnosticar condiciones de error del componente de Windows Runtime
-description: "En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado."
+description: En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado.
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
 ms.author: misatran
 ms.date: 02/08/2017
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 55baba42a011197814a01d476fcb062fe6bf2ebf
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7f1dba2c60ce480b0aa89115f1cf9e72b1bb454f
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691234"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnosticar condiciones de error del componente de Windows Runtime
 
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado. Expande la información que se proporciona en los mensajes de error de [Winmdexp.exe (herramienta de exportación de metadatos Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)y complementa la información sobre las restricciones que se proporciona en [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
@@ -28,11 +31,9 @@ En este artículo no se abarcan todos los errores. Los errores que se tratan aqu
 
 Los componentes administrados de Windows Runtime no pueden implementar las interfaces de la Plataforma universal de Windows (UWP) que representan operaciones o acciones asincrónicas ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx) o [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). En su lugar, .NET Framework proporciona la clase [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para generar operaciones asincrónicas en componentes de Windows Runtime. El mensaje de error que Winmdexp.exe muestra cuando intentas implementar una interfaz asincrónica incorrectamente hace referencia a esta clase por su nombre anterior, AsyncInfoFactory. .NET Framework ya no incluye la clase AsyncInfoFactory.
 
-| Número de error | Texto de mensaje                                                                                                                                                                                                                                                          |
-|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Número de error | Texto de mensaje|       
+|--------------|-------------|
 | WME1084      | El tipo '{0}' implementa la interfaz asincrónica de Windows Runtime '{1}'. Los tipos de Windows Runtime no pueden implementar interfaces asincrónicas. Usa la clase System.Runtime.InteropServices.WindowsRuntime.AsyncInfoFactory para generar las operaciones asincrónicas para exportar a Windows Runtime. |
-
- 
 
 > **Nota** Los mensajes de error que hacen referencia a Windows Runtime usan una terminología antigua. Esta se denomina ahora Plataforma universal de Windows (UWP). Por ejemplo, los tipos de Windows Runtime ahora se denominan tipos UWP.
 
@@ -244,10 +245,12 @@ En el UWP, los valores devueltos se considera que son parámetros de salida y lo
 El código de JavaScript puede acceder a los parámetros de salida de un método por nombre, incluido el valor devuelto. Por ejemplo, consulta el atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx).
 
 | Número de error | Texto de mensaje |
-|---------------|------------|
+|--------------|--------------|
 | WME1091 | El método '\{0}' tiene el valor devuelto denominado '\{1}', que es el mismo que el nombre de un parámetro. Los parámetros de método de Windows Runtime y el valor devuelto deben tener nombres únicos. |
-| WME1092 | El método '\{0}' tiene un parámetro denominado '\{1}', que es el mismo que el nombre de un valor de retorno predeterminado. Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto.<br/>**Nota**  El nombre predeterminado es "returnValue" para los descriptores de acceso de propiedad y "value" para todos los otros métodos. |
- 
+| WME1092 | El método '\{0}' tiene un parámetro denominado '\{1}', que es el mismo que el nombre de un valor de retorno predeterminado. Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto. |
+
+**Nota**  El nombre predeterminado es "returnValue" para los descriptores de acceso de propiedad y "value" para todos los otros métodos.
+
 
 ## <a name="related-topics"></a>Temas relacionados
 

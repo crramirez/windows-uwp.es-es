@@ -1,21 +1,25 @@
 ---
-author: GrantMeStrength
+author: QuinnRadich
 ms.assetid: 16AB1111-4BA8-4352-B796-E97AA9243E31
-title: "¿Estás listo para registrarte?"
-description: "Regístrate ahora para obtener una cuenta de desarrollador; de este modo, podrás incluir tus aplicaciones en la Tienda Windows y participar en otros programas de Microsoft."
-ms.author: jken
-ms.date: 02/08/2017
+title: Crea una cuenta de desarrollador
+description: Regístrate ahora para obtener una cuenta de desarrollador y, de este modo, lograr que tus aplicaciones se incluyan en Microsoft Store y participar en otros programas de Microsoft.
+ms.author: quradic
+ms.date: 4/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 399a84c10c4e28353f5d229ed3b3226d7cc1a1dc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, registro, cuenta de desarrollador
+ms.localizationpriority: high
+ms.openlocfilehash: 3ce1ccdb336c4d1d29656c58e571e8c81a610781
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816070"
 ---
-# <a name="ready-to-sign-up"></a>¿Estás listo para registrarte?
+# <a name="create-a-developer-account"></a>Crea una cuenta de desarrollador
 
-Regístrate ahora para obtener una cuenta de desarrollador y, de este modo, lograr que tus aplicaciones se incluyan en la Tienda Windows y participar en otros programas de Microsoft.
+Regístrate ahora para obtener una cuenta de desarrollador y, de este modo, lograr que tus aplicaciones se incluyan en Microsoft Store y participar en otros programas de Microsoft.
 
 [Registrarse ahora](http://go.microsoft.com/fwlink/p/?LinkId=615100)
 

@@ -1,23 +1,27 @@
 ---
 author: mcleanbyron
 ms.assetid: E64030CA-EC00-4113-9939-26D5688C61BC
-description: "Usa este método en la API de análisis de la Tienda Windows para descargar el archivo .cab para un error de hardware. Este método está previsto solo para OEM."
+description: Usa este método en la API de análisis de Microsoft Store para descargar el archivo .cab para un error de hardware. Este método está previsto solo para OEM.
 title: Descargar el archivo .cab para un error de hardware OEM
 ms.author: mcleans
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store analytics API, API de análisis de la Tienda Windows, download CAB, descargar .cab"
-ms.openlocfilehash: fca846b2a7ec117a99aff1764eb0acffb1a9f11f
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+keywords: windows 10, uwp, Microsoft Store analytics API, API de análisis de Microsoft Store, download CAB, descargar .cab
+ms.localizationpriority: medium
+ms.openlocfilehash: 0be709136ed5875d69431f0ab60efd76f5bbc80b
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1662825"
 ---
 # <a name="download-the-cab-file-for-an-oem-hardware-error"></a>Descargar el archivo .cab para un error de hardware OEM
 
-Usa este método en la API de análisis de la Tienda Windows para descargar el archivo .cab que está asociado con un error concreto de hardware OEM. Antes de poder usar este método, tienes que emplear primero el método para [obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md) y recuperar el id. del archivo .cab que quieres descargar.
+Usa este método en la API de análisis de Microsoft Store para descargar el archivo .cab que está asociado con un error concreto de hardware OEM. Antes de poder usar este método, tienes que emplear primero el método para [obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md) y recuperar el id. del archivo .cab que quieres descargar.
 
-Puedes obtener otra información sobre errores de hardware OEM con los métodos para [obtener datos de informes de errores de hardware OEM](get-oem-hardware-error-reporting-data.md) y [obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md) en la API de análisis de la Tienda Windows.
+Puedes obtener otra información sobre errores de hardware OEM con los métodos para [obtener datos de informes de errores de hardware OEM](get-oem-hardware-error-reporting-data.md) y [obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md) en la API de análisis de Microsoft Store.
 
 > [!NOTE]
 > Solo las cuentas de desarrollador que pertenecen al [programa Centro de desarrollo de hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) pueden usar este método.
@@ -26,7 +30,7 @@ Puedes obtener otra información sobre errores de hardware OEM con los métodos 
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 * Obtén el id. del archivo .cab que quieres descargar. Para obtener este id., usa el método para [obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md) para recuperar los detalles de un error específico de hardware y usa el valor **cabIdHash** en el cuerpo de la respuesta de ese método.
 
@@ -39,7 +43,6 @@ Para usar este método, primero debes hacer lo siguiente:
 |--------|----------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/hardware/cabdownload``` |
 
-<span/> 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -47,7 +50,6 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/> 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
@@ -55,7 +57,6 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|---------------|------|
 | cabIdHash | cadena | El id. exclusivo del archivo .cab que quieres descargar. Para obtener este id., usa el método para [Obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md) para recuperar los detalles de un error específico de tu aplicación y usa el valor **cabIdHash** en el cuerpo de la respuesta de ese método. |  Sí  |
 
-<span/>
  
 ### <a name="request-example"></a>Ejemplo de solicitud
 

@@ -1,26 +1,25 @@
 ---
 author: normesta
-Description: "Compartir código entre una aplicación de escritorio y una aplicación para UWP"
+Description: Share code between a desktop app and a UWP app
 Search.Product: eADQiWindows 10XVcnh
-title: "Compartir código entre una aplicación de escritorio y una aplicación para UWP"
+title: Compartir código entre una aplicación de escritorio y una aplicación para UWP
 ms.author: normesta
 ms.date: 10/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-localizationpriority: medium
-ms.openlocfilehash: 7afb516e6ef3f8d50928af3a766f42ef69635213
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: ec676446562d5d97ff2a7020fc494f248323450b
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691944"
 ---
 # <a name="share-code-between-a-desktop-app-and-a-uwp-app"></a>Compartir código entre una aplicación de escritorio y una aplicación para UWP
 
 Puedes mover el código a las bibliotecas de .NET Standard y, a continuación, crear una app de la Plataforma universal de Windows (UWP) para tener acceso a todos los dispositivos de Windows 10. Aunque no hay ninguna herramienta que pueda convertir una aplicación de escritorio en una aplicación para UWP, puedes reutilizar gran parte de tu código existente, lo que disminuirá el costo de la creación de uno. Esta guía te muestra cómo hacerlo.
-
-![Dispositivos Windows](images/desktop-to-uwp/windows-devices.png)
 
 ## <a name="share-code-in-a-net-standard-20-library"></a>Compartir código en una biblioteca de .NET Standard 2.0
 
@@ -207,7 +206,7 @@ public sealed partial class MainPage : Page
 ```
 
 
-Para empezar con UWP, consulta [Introducción a la Plataforma universal de Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
+Para comenzar con UWP, consulta [¿Qué es una aplicación para UWP?](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
 
 ## <a name="reach-ios-and-android-devices"></a>Llegar a dispositivos iOS y Android
 
@@ -276,4 +275,8 @@ Para comenzar con proyectos Android, iOS y multiplataforma, consulta el [portal 
 
 **Encuentra respuestas a tus preguntas**
 
-¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+
+**Enviar comentarios o realizar sugerencias acerca de las características**
+
+Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

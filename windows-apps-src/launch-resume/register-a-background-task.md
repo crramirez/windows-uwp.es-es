@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: Registrar una tarea en segundo plano
-description: "Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano."
+description: Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano.
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,13 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: b81432add0448de768377ead634a071a687040db
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: a4763dfae1bf5aa22c2d66baadd060fec757c285
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832109"
 ---
 # <a name="register-a-background-task"></a>Registrar una tarea en segundo plano
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -40,7 +43,7 @@ Para garantizar que la aplicación universal de Windows continúe funcionando co
 Este método toma el punto de entrada de la tarea, el nombre de la tarea y un desencadenador de tarea en segundo plano preconstruido y, de forma opcional, un objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) para la tarea en segundo plano. Este método devuelve un objeto [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).
 
 > [!Important]
-> `taskEntryPoint` - para las tareas en segundo plano que se ejecutan fuera de proceso, esto se debe construir como el nombre del espacio de nombres ('.') y el nombre de la clase que contiene la clase de segundo plano. La cadena distingue mayúsculas de minúsculas.  Por ejemplo, si tuvieses un espacio de nombres "MyBackgroundTasks" y una clase "BackgroundTask1" que contenga el código de la clase de segundo plano, la cadena para `taskEntryPoint` sería "MyBackgroundTasks.BackgruondTask1".
+> `taskEntryPoint` - para las tareas en segundo plano que se ejecutan fuera de proceso, esto se debe construir como el nombre del espacio de nombres ('.') y el nombre de la clase que contiene la clase de segundo plano. La cadena distingue mayúsculas de minúsculas.  Por ejemplo, si tuvieses un espacio de nombres "MyBackgroundTasks" y una clase "BackgroundTask1" que contenga el código de la clase de segundo plano, la cadena para `taskEntryPoint` sería "MyBackgroundTasks.BackgroundTask1".
 > Si la tarea en segundo plano se ejecuta en el mismo proceso que la aplicación (es decir, una tarea en segundo plano en proceso), no se debe establecer `taskEntryPoint`.
 
 > [!div class="tabbedCodeSnippets"]
@@ -177,7 +180,7 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
->     
+>
 >     //
 >     // Register the background task.
 >     //
@@ -214,26 +217,26 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 >     //
 >     // Check for existing registrations of this background task.
 >     //
->     
+>
 >     auto iter   = BackgroundTaskRegistration::AllTasks->First();
 >     auto hascur = iter->HasCurrent;
->     
+>
 >     while (hascur)
 >     {
 >         auto cur = iter->Current->Value;
->         
+>
 >         if(cur->Name == name)
 >         {
 >             //
 >             // The task is registered.
 >             //
->             
+>
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
->         
+>
 >         hascur = iter->MoveNext();
 >     }
->     
+>
 >     //
 >     // Register the background task.
 >     //
@@ -256,7 +259,6 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 > ```
 
 ## <a name="complete-background-task-registration-utility-function"></a>Completar la función de utilidad de registro de tareas en segundo plano
-
 
 Ese ejemplo muestra la función de registro de tareas en segundo plano completa. Esta función puede usarse para registrar la mayoría de las tareas en segundo plano, a excepción de las tareas en red.
 
@@ -292,7 +294,7 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
->     
+>
 >     //
 >     // Register the background task.
 >     //
@@ -333,23 +335,23 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 >     //
 >     // Check for existing registrations of this background task.
 >     //
->     
+>
 >     auto iter   = BackgroundTaskRegistration::AllTasks->First();
 >     auto hascur = iter->HasCurrent;
->     
+>
 >     while (hascur)
 >     {
 >         auto cur = iter->Current->Value;
->         
+>
 >         if(cur->Name == name)
 >         {
 >             //
 >             // The task is registered.
 >             //
->             
+>
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
->         
+>
 >         hascur = iter->MoveNext();
 >     }
 >
@@ -365,7 +367,7 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 >     builder->SetTrigger(trigger);
 >
 >     if (condition != nullptr) {
->         
+>
 >         builder->AddCondition(condition);
 >     }
 >
@@ -375,11 +377,7 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 > }
 > ```
 
-> **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
-## <a name="related-topics"></a>Temas relacionados
-
-****
+## <a name="related-topics"></a>Artículos relacionados
 
 * [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)
 * [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md)
@@ -393,8 +391,4 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
- 
-
- 
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)

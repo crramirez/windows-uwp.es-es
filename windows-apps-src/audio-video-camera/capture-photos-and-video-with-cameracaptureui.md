@@ -1,21 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
-description: "En este artículo se describe cómo usar la clase CameraCaptureUI para capturar fotos o vídeos con la interfaz de usuario de la cámara integrada en Windows."
-title: "Capturar fotos y vídeos con la interfaz de usuario de la cámara integrada en Windows"
+description: En este artículo se describe cómo usar la clase CameraCaptureUI para capturar fotos o vídeos con la interfaz de usuario de la cámara integrada en Windows.
+title: Capturar fotos y vídeos con la interfaz de usuario de la cámara integrada en Windows
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 7be9a38bdb4d9489c08cd53c5b24348e16d7a74f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: acd14b63bb877dca2f801423f9d0de73ec994acf
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691974"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Capturar fotos y vídeos con la interfaz de usuario de la cámara integrada en Windows
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo usar la clase CameraCaptureUI para capturar fotos o vídeos con la interfaz de usuario de la cámara integrada en Windows. Esta característica es fácil de usar y permite a la aplicación obtener una foto o un vídeo capturado por el usuario con tan solo unas pocas líneas de código.
@@ -75,40 +78,16 @@ Realiza una llamada a [**CaptureFileAsync**](https://msdn.microsoft.com/library/
 
 [!code-cs[CaptureVideo](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCaptureVideo)]
 
-Qué hacer con el archivo de vídeo capturado depende del escenario para la aplicación. El resto de este artículo muestra cómo crear rápidamente una composición multimedia de uno o más vídeos capturados y mostrarla en la interfaz de usuario.
+Qué hacer con el archivo de vídeo capturado depende el escenario para tu aplicación. El resto de este artículo muestra cómo crear rápidamente una composición multimedia de uno o más vídeos capturados y mostrarla en la interfaz de usuario.
 
-Primero, agrega un control [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926), en el que se mostrará la composición de vídeo en la página XAML.
+En primer lugar, agrega un control [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) en el que se mostrará la composición de vídeo en la página XAML.
 
 [!code-xml[MediaElement](./code/CameraCaptureUIWin10/cs/MainPage.xaml#SnippetMediaElement)]
 
-Agrega los espacios de nombres [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) y [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) al proyecto.
 
+Con el archivo de vídeo devuelto desde la interfaz de usuario de captura de cámara, crea una clase [**MediaSource**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource) nueva llamando a **[CreateFromStorageFile](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfromstoragefile)**. Llama al método **[Play](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Play)** del **[MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer)** predeterminado asociado al **MediaPlayerElement** para reproducir el vídeo.
 
-[!code-cs[UsingMediaComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingMediaComposition)]
-
-Declara las variables de miembro para un objeto [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) y una clase [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn282716) que quieras mantener en el ámbito durante la duración de la página.
-
-[!code-cs[DeclareMediaComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetDeclareMediaComposition)]
-
-Una vez, antes de capturar vídeos, debes crear una nueva instancia de la clase **MediaComposition**.
-
-[!code-cs[InitComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetInitComposition)]
-
-Con el archivo de vídeo devuelto desde la interfaz de usuario de captura de cámara, crea una clase [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) nueva llamando a [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607). Agrega el clip multimedia a la colección [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) de la composición.
-
-Llama a [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) para crear el objeto **MediaStreamSource** desde la composición.
-
-[!code-cs[AddToComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetAddToComposition)]
-
-Finalmente, define el origen de la secuencia para usar el método [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) del elemento multimedia para mostrar la composición en la interfaz de usuario.
-
-[!code-cs[SetMediaElementSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSetMediaElementSource)]
-
-Puedes continuar capturando clips de vídeo y agregarlos a la composición. Para más información sobre las composiciones multimedia, consulta [Composiciones multimedia y edición](media-compositions-and-editing.md).
-
-> [!NOTE] 
-> Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
+[!code-cs[PlayVideo](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetPlayVideo)]
  
 
 ## <a name="related-topics"></a>Temas relacionados

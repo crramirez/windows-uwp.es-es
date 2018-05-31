@@ -1,25 +1,27 @@
 ---
 author: mcleanbyron
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener conversiones agregadas por datos de canal de un complemento durante un intervalo de fechas concreto y según otros filtros opcionales."
+description: Usa este método en la API de análisis de Microsoft Store para obtener conversiones agregadas por datos de canal de un complemento durante un intervalo de fechas concreto y según otros filtros opcionales.
 title: Obtener conversiones de complementos por canal
 ms.author: mcleans
 ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, servicios de la Tienda, API de análisis de la Tienda Windows, conversiones de complementos, canal"
-ms.openlocfilehash: cf8e87e93dd71b9c96691eeb5867e308043833cf
-ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+keywords: windows 10, uwp, servicios de Microsoft Store, API de análisis de Microsoft Store, conversiones de complementos, canal
+ms.localizationpriority: medium
+ms.openlocfilehash: 43c32cc30d65c798c09592ac46d64c2c1c550b64
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1663425"
 ---
 # <a name="get-add-on-conversions-by-channel"></a>Obtener conversiones de complementos por canal
 
-Usa este método en la API de análisis de la Tienda Windows para obtener conversiones agregadas por canal de un complemento durante un intervalo de fechas concreto y según otros filtros opcionales.
+Usa este método en la API de análisis de Microsoft Store para obtener conversiones agregadas por canal de un complemento durante un intervalo de fechas concreto y según otros filtros opcionales.
 
 * Una *conversión* significa que un cliente (que ha iniciado sesión con una cuenta de Microsoft) acaba de obtener una licencia para tu complemento (tanto si cobras dinero como si la ofreces gratis).
-* El *canal* es el método en que un cliente llegó a la página de descripción de tu aplicación (por ejemplo, a través de la Tienda o una [campaña de promoción de la aplicación personalizada](../publish/create-a-custom-app-promotion-campaign.md)).
+* El *canal* es el método en que un cliente llegó a la página de descripción de tu aplicación (por ejemplo, a través de la Store o una [campaña de promoción de la aplicación personalizada](../publish/create-a-custom-app-promotion-campaign.md)).
 
 Esta información también está disponible en el [informe de adquisiciones de complementos](../publish/add-on-acquisitions-report.md#add-on-page-views-and-conversions-by-campaign-id) del panel del Centro de desarrollo de Windows.
 
@@ -27,7 +29,7 @@ Esta información también está disponible en el [informe de adquisiciones de c
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
 * [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
@@ -39,7 +41,6 @@ Para usar este método, primero debes hacer lo siguiente:
 |--------|----------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappchannelconversions``` |
 
-<span/>
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
@@ -47,14 +48,13 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|-----------------------------------------------------------------------------|
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
-<span/> 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | string | El [identificador de la Tienda](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que quieres recuperar los datos de conversión de complementos. Un ejemplo de un id. de la Tienda sería 9WZDNCRFJ3Q8. |  Sí  |
-| inAppProductId | string | El [Id. de la Tienda](in-app-purchases-and-trials.md#store-ids) del complemento para el que quieres recuperar los datos de conversión.  | Sí  |
+| applicationId | string | El [identificador de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que quieres recuperar los datos de conversión de complementos. Un ejemplo de un id. de la Store sería 9WZDNCRFJ3Q8. |  Sí  |
+| inAppProductId | string | El [Id. de la Store](in-app-purchases-and-trials.md#store-ids) del complemento para el que quieres recuperar los datos de conversión.  | Sí  |
 | startDate | date | La fecha de inicio del intervalo de fechas de los datos conversión que se van a recuperar. El valor predeterminado es 1/1/2016. |  No  |
 | endDate | date | Fecha de finalización del intervalo de fechas de los datos de conversión que se van a recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
@@ -64,11 +64,10 @@ Para usar este método, primero debes hacer lo siguiente:
 | orderby | string | Instrucción que ordena los valores de datos resultantes de cada conversión. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>date</strong></li><li><strong>applicationName</strong></li><li><strong>inAppProductName</strong></li><li><strong>appType</strong></li><li><strong>customCampaignId</strong></li><li><strong>referrerUriDomain</strong></li><li><strong>channelType</strong></li><li><strong>storeClient</strong></li><li><strong>deviceType</strong></li><li><strong>market</strong></li></ul><p>El parámetro <em>order</em> es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
 | groupby | cadena | Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<p/><ul><li><strong>fecha</strong></li><li><strong>applicationName</strong></li><li><strong>inAppProductName</strong></li><li><strong>appType</strong></li><li><strong>customCampaignId</strong></li><li><strong>referrerUriDomain</strong></li><li><strong>channelType</strong></li><li><strong>storeClient</strong></li><li><strong>deviceType</strong></li><li><strong>market</strong></li></ul><p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>fecha</strong></li><li><strong>applicationId</strong></li><li><strong>inAppProductId</strong></li><li><strong>inAppProductName</strong></li><li><strong>conversionCount</strong></li><li><strong>clickCount</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con el parámetro <em>aggregationLevel</em>. Por ejemplo: <em>groupby=ageGroup,market&amp;aggregationLevel=week</em></p> |  No  |
 
-<span/>
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-El siguiente ejemplo muestra varias solicitudes para obtener los datos de conversión de la aplicación. Sustituye el valor *applicationId* por el id. de la Tienda de la aplicación.
+El siguiente ejemplo muestra varias solicitudes para obtener los datos de conversión de la aplicación. Sustituye el valor *applicationId* por el id. de la Store de la aplicación.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappchannelconversions?applicationId=9NBLGGGZ5QDR&startDate=1/1/2017&endDate=2/1/2017&top=10&skip=0  HTTP/1.1
@@ -89,8 +88,6 @@ Authorization: Bearer <your access token>
 | @nextLink  | string | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de datos de conversión de la solicitud. |
 | TotalCount | entero    | Número total de filas en el resultado de datos de la consulta.                                                                                                                                                                                                                             |
 
-<span/>
- 
 ### <a name="conversion-values"></a>Valores de conversión
 
 Los objetos de la matriz *Value* contienen los siguientes valores.
@@ -98,22 +95,20 @@ Los objetos de la matriz *Value* contienen los siguientes valores.
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
 | fecha                | string | La primera fecha del intervalo de fechas de los datos de conversión. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
-| inAppProductId      | string  | El [id. de la Tienda](in-app-purchases-and-trials.md#store-ids) del complemento para el que quieres recuperar datos de conversión.     |
+| inAppProductId      | string  | El [id. de la Store](in-app-purchases-and-trials.md#store-ids) del complemento para el que quieres recuperar datos de conversión.     |
 | inAppProductName    | string  | El nombre para mostrar del complemento para el que quieres recuperar datos de conversión.   |
-| applicationId       | string | El [Id. de la Tienda](in-app-purchases-and-trials.md#store-ids) de la aplicación sobre la que estás recuperando los datos de conversión.     |
+| applicationId       | string | El [Id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación sobre la que estás recuperando los datos de conversión.     |
 | applicationName     | string | El nombre para mostrar de la aplicación para la que quieres recuperar datos de conversión.        |
 | appType          | string |  Tipo de producto para el que recuperas los datos de conversión. Para este método, el único valor admitido es **Add-On**.            |
 | customCampaignId           | string |  La cadena de identificador para una [campaña de promoción de la aplicación personalizada](../publish/create-a-custom-app-promotion-campaign.md) que está asociada a la aplicación.   |
 | referrerUriDomain           | string |  Especifica el dominio donde se activó la descripción de la aplicación con el identificador de la campaña de promoción de la aplicación personalizada.   |
-| channelType           | string |  Una de las siguientes cadenas que especifica el canal para la conversión:<ul><li><strong>CustomCampaignId</strong></li><li><strong>Tráfico de la Tienda</strong></li><li><strong>Otros</strong></li></ul>    |
-| storeClient         | string | Versión de la Tienda donde se realizó la conversión. Actualmente, el único valor admitido es **SFC**.    |
-| deviceType          | string | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconocido</strong></li></ul>            |
+| channelType           | string |  Una de las siguientes cadenas que especifica el canal para la conversión:<ul><li><strong>CustomCampaignId</strong></li><li><strong>Tráfico de la Store</strong></li><li><strong>Otros</strong></li></ul>    |
+| storeClient         | string | Versión de la Store donde se realizó la conversión. Actualmente, el único valor admitido es **SFC**.    |
+| deviceType          | string | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul>            |
 | market              | string | Código de país ISO 3166 del mercado donde se realizó la conversión.    |
 | clickCount              | number  |     Número de clics del cliente en el vínculo descriptivo de la aplicación.      |           
-| conversionCount            | number  |   Número de conversiones del cliente.         |          |
+| conversionCount            | number  |   Número de conversiones del cliente.         |         
 
-
-<span/> 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
@@ -147,5 +142,5 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Informe de adquisiciones de complementos](../publish/add-on-acquisitions-report.md)
-* [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
+* [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
 * [Obtener adquisiciones de complementos](get-in-app-acquisitions.md)

@@ -1,29 +1,36 @@
 ---
 author: normesta
-Description: "Probar la aplicación para Windows 10 S sin tener que instalar Windows 10 S."
+Description: Test your app for Windows 10 S without having to install Windows 10 S.
 Search.Product: eADQiWindows 10XVcnh
-title: "Probar la aplicación de Windows en Windows 10 S"
+title: Probar la aplicación de Windows en Windows 10 S
 ms.author: normesta
 ms.date: 05/11/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10 S, uwp
-ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
-ms.openlocfilehash: 52cd0a7cadbedc3a843d6ce21ba5b985cfef4db8
-ms.sourcegitcommit: 77bbd060f9253f2b03f0b9d74954c187bceb4a30
+ms.localizationpriority: medium
+ms.openlocfilehash: a5810789ab2457ed14964a61bf278c84e7deb416
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1662715"
 ---
 # <a name="test-your-windows-app-for-windows-10-s"></a>Probar la aplicación de Windows en Windows 10 S
 
-Puedes probar la aplicación de Windows para garantizar que funcionará correctamente en dispositivos que ejecutan Windows 10S. De hecho, si vas a publicar la aplicación en la tienda Windows, debes hacerlo porque es un requisito de la tienda. Para probar la aplicación, puedes aplicar una directiva de integridad de código de Device Guard en un dispositivo que ejecute Windows 10 Pro. Esta directiva aplica las reglas que las aplicaciones deben cumplir para poder ejecutarse en Windows 10 S.
+Puedes probar la aplicación de Windows para garantizar que funcionará correctamente en dispositivos que ejecutan Windows 10S. De hecho, si vas a publicar la aplicación en Microsoft Store, debes hacerlo porque es un requisito de la Store. Para probar la aplicación, puedes aplicar una directiva de integridad de código de Device Guard en un dispositivo que ejecute Windows 10 Pro.
+
+> [!NOTE]
+> El dispositivo en el que aplica la directiva de integridad de código de Device Guard debe ejecutar Windows 10 Creators Edition (10.0; Build 15063) o posterior.
+
+La directiva de integridad de código de Device Guard aplica las reglas que las aplicaciones deben cumplir para poder ejecutarse en Windows 10 S.
 
 > [!IMPORTANT]
 >Te recomendamos que apliques estas directivas en una máquina virtual, pero si quieres aplicarlas en el equipo local, asegúrate de revisar nuestras directrices de procedimientos recomendados en la sección "A continuación, instala la directiva y reinicia el sistema" que encontrarás en este artículo antes de aplicar una directiva.
 
-<span id="choose-policy" />
+<a id="choose-policy" />
+
 ## <a name="first-download-the-policies-and-then-choose-one"></a>En primer lugar, descarga las directivas y elige una
 
 Descarga las directivas de integridad de código de Device Guard [aquí](https://go.microsoft.com/fwlink/?linkid=849018).
@@ -47,6 +54,7 @@ Para encontrar estos registros, abre el **Visor de eventos** y, a continuación,
 
 ![code-integrity-event-logs](images/desktop-to-uwp/code-integrity-logs.png)
 
+Este modo es seguro y no impedirá que el sistema se inicie.
 
 #### <a name="optional-find-specific-failure-points-in-the-call-stack"></a>(Opcional) Encontrar puntos de error específicos en la pila de llamadas
 Para buscar puntos específicos en la pila de llamadas dónde se producen los problemas de bloqueo, tienes que agrega esta clave del Registro y luego [configurar un entorno de depuración del modo kernel](https://docs.microsoft.com/windows-hardware/drivers/debugger/getting-started-with-windbg--kernel-mode-#span-idsetupakernel-modedebuggingspanspan-idsetupakernel-modedebuggingspanspan-idsetupakernel-modedebuggingspanset-up-a-kernel-mode-debugging).
@@ -59,16 +67,16 @@ Para buscar puntos específicos en la pila de llamadas dónde se producen los pr
 ![reg-setting](images/desktop-to-uwp/ci-debug-setting.png)
 
 ### <a name="production-mode-policy"></a>Directiva del modo de producción
-Esta directiva aplica las reglas de integridad de código que coinciden con Windows 10, para que puedas simular la ejecución en Windows 10 S. Esta es la directiva más estricta y es excelente para probar la producción final. En este modo, la aplicación está sujeta a las mismas restricciones que tendría si estuviera en el dispositivo del usuario. Para usar este modo, la aplicación debe estar firmada por la Tienda Windows.
+Esta directiva aplica las reglas de integridad de código que coinciden con Windows 10, para que puedas simular la ejecución en Windows 10 S. Esta es la directiva más estricta y es excelente para probar la producción final. En este modo, la aplicación está sujeta a las mismas restricciones que tendría si estuviera en el dispositivo del usuario. Para usar este modo, la aplicación debe estar firmada por Microsoft Store.
 
 ### <a name="production-mode-policy-with-self-signed-apps"></a>Directiva del modo de producción con aplicaciones autofirmadas
-Este modo es similar a la directiva del modo de producción, pero también permite ejecutar contenido firmado con el certificado de prueba que se incluye en el archivo zip. Instala el archivo PFX que se incluye en la carpeta **AppxTestRootAgency** de este archivo zip. A continuación, firma la aplicación con él. De este modo, puedes iterar rápidamente sin tener la firma de la Tienda.
+Este modo es similar a la directiva del modo de producción, pero también permite ejecutar contenido firmado con el certificado de prueba que se incluye en el archivo zip. Instala el archivo PFX que se incluye en la carpeta **AppxTestRootAgency** de este archivo zip. A continuación, firma la aplicación con él. De este modo, puedes iterar rápidamente sin tener la firma de la Store.
 
 Como el nombre del publicador del certificado debe coincidir con el nombre del publicador de la aplicación, tendrás que cambiar temporalmente el valor del atributo **Editor** del elemento **Identidad** a "CN=Appx Test Root Agency Ex". Puedes cambiar este atributo de nuevo a su valor original después de completar las pruebas.
 
 ## <a name="next-install-the-policy-and-restart-your-system"></a>A continuación, instala la directiva y reinicia el sistema
 
-Te recomendamos que apliques estas directivas a una máquina virtual, ya que estas directivas podrían provocar errores de arranque. Eso es porque estas directivas bloquean la ejecución del código que no haya firmado la Tienda Windows (controladores incluidos).
+Te recomendamos que apliques estas directivas a una máquina virtual, ya que estas directivas podrían provocar errores de arranque. Eso es porque estas directivas bloquean la ejecución del código que no haya firmado Microsoft Store (controladores incluidos).
 
 Si quieres aplicar estas directivas en el equipo local, es mejor comenzar con la directiva del modo de auditoría. Con esta directiva, puedes revisar los registros de eventos de integridad de código para garantizar que nada importante se bloquee en la directiva aplicada.
 
@@ -76,7 +84,18 @@ Cuando estés listo para aplicar una directiva, busca el archivo .P7B de la dire
 
 A continuación, reinicia el sistema.
 
+>[!NOTE]
+>Para quitar una directiva del sistema, elimina el archivo .P7B y, a continuación, reinicia el sistema.
+
 ## <a name="next-steps"></a>Pasos siguientes
+
+**Encuentra respuestas a tus preguntas**
+
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+
+**Enviar comentarios o realizar sugerencias acerca de las características**
+
+Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
 
 **Revisar un artículo de blog detallado que publicó nuestro equipo de consultas de aplicaciones**
 
@@ -85,11 +104,3 @@ Consulta [Portar y probar sus aplicaciones de escritorio clásicas en Windows 10
 **Obtener información acerca de las herramientas que facilitan las pruebas para Windows S**
 
 Consulta [Desempaquetar, modificar, volver a empaquetar, firmar un APPX](https://blogs.msdn.microsoft.com/appconsult/2017/08/07/unpack-modify-repack-sign-appx/).
-
-**Encuentra respuestas a preguntas específicas**
-
-Nuestro equipo supervisa estas [etiquetas de StackOverflow](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
-
-**Envíanos tus comentarios acerca de este artículo**
-
-Usa la sección comentarios que tienes a continuación.

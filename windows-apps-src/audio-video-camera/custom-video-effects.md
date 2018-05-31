@@ -1,10 +1,10 @@
 ---
 author: drewbatgit
-Description: "En este artículo se describe cómo crear un componente de Windows Runtime que implemente la interfaz IBasicVideoEffect para permitir la creación de efectos personalizados para las secuencias de vídeo."
+Description: This article describes how to create a Windows Runtime component that implements the IBasicVideoEffect interface to allow you to create custom effects for video streams.
 MS-HAID: dev\_audio\_vid\_camera.custom\_video\_effects
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: "Efectos de vídeo personalizados"
+title: Efectos de vídeo personalizados
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
@@ -12,14 +12,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
-ms.openlocfilehash: 5a2e44448877ddc7906a8d4e41ec9c0b809f9a7e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 9a1f53bb1165561865124a960940fab3f4325061
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1655407"
 ---
 # <a name="custom-video-effects"></a>Efectos de vídeo personalizados
 
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo crear un componente de Windows Runtime que implemente la interfaz [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) para permitir la creación de efectos personalizados para las secuencias de vídeo. Se pueden usar efectos personalizados con distintas API de Windows Runtime, como [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), que proporciona acceso a la cámara del dispositivo, y [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), que permite crear composiciones complejas a partir de clips multimedia.
@@ -56,7 +59,7 @@ El efecto de vídeo debe implementar todos los métodos y propiedades de la inte
 
 El sistema llamará al método [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764789) en la clase cuando se deba apagar el efecto. Debes usar este método para eliminar todos los recursos que hayas creado. El argumento del método es un valor [**MediaEffectClosedReason**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.MediaEffectClosedReason) que te permite saber si se cerró el efecto con normalidad, si se produjo un error o si el efecto no admite el formato de codificación necesario.
 
-[!code-cs[Cerrar](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetClose)]
+[!code-cs[Close](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetClose)]
 
 
 ### <a name="discardqueuedframes-method"></a>Método DiscardQueuedFrames
@@ -75,8 +78,8 @@ La propiedad [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn
 > [!TIP]
 > Cuando la propiedad [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) se define como true, el sistema copia el fotograma de entrada al fotograma de salida antes de llamar a [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794). Definir la propiedad **IsReadOnly** como true no te impide escribir en los fotogramas de salida del efecto en **ProcessFrame**.
 
-[!code-cs[IsReadOnly](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetIsReadOnly)] 
 
+[!code-cs[IsReadOnly](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetIsReadOnly)]
 
 ### <a name="setencodingproperties-method"></a>Método SetEncodingProperties
 
@@ -146,7 +149,7 @@ Agrega el siguiente código dentro del espacio de nombres para que el efecto imp
 
 
 > [!NOTE]
-> Dado que esta técnica accede a un búfer de imagen nativo sin administrar, tendrás que configurar el proyecto para permitir un código no seguro.
+> Dado que esta técnica obtiene acceso a un búfer de imagen nativo sin administrar, tendrás que configurar el proyecto para permitir un código no seguro.
 > 1.  En el Explorador de soluciones, haz clic con el botón derecho en el proyecto VideoEffectComponent y selecciona **Propiedades**.
 > 2.  Selecciona la pestaña **Compilación**.
 > 3.  Activa la casilla **Permitir código no seguro**.
@@ -244,8 +247,3 @@ Para obtener instrucciones generales sobre la creación de composiciones multime
 * [Composiciones y edición multimedia](media-compositions-and-editing.md)
 * [Documentación de Win2D](http://go.microsoft.com/fwlink/p/?LinkId=519078)
 * [Reproducción de contenido multimedia](media-playback.md)
-
- 
-
-
-

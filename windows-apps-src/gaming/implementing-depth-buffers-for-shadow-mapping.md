@@ -1,22 +1,25 @@
 ---
 author: mtoepke
-title: "Tutorial: búferes de profundidad de volumen de sombra de Direct3D 11"
-description: "En este tutorial se muestra cómo representar volúmenes de sombra mediante mapas de profundidad en Direct3D 11 en dispositivos de todos los niveles de característica de Direct3D."
+title: 'Tutorial: búferes de profundidad de volumen de sombra de Direct3D 11'
+description: En este tutorial se muestra cómo representar volúmenes de sombra mediante mapas de profundidad en Direct3D 11 en dispositivos de todos los niveles de característica de Direct3D.
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, juegos, games, directx, volúmenes de sombra, shadow volumes, búferes de profundidad, depth buffers, directx 11"
-ms.openlocfilehash: e68f0d559e6dbd7791104310a985ca99e0131c99
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, juegos, games, directx, volúmenes de sombra, shadow volumes, búferes de profundidad, depth buffers, directx 11
+ms.localizationpriority: medium
+ms.openlocfilehash: 369fd133ffba2947b06a3fc9391979c17973ea52
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653704"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tutorial se muestra cómo representar volúmenes de sombra mediante mapas de profundidad en Direct3D 11 en dispositivos de todos los niveles de característica de Direct3D.
 ## 
@@ -33,19 +36,19 @@ En este tutorial se muestra cómo representar volúmenes de sombra mediante mapa
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Crear recursos de dispositivo para búferes de profundidad](create-depth-buffer-resource--view--and-sampler-state.md)</p></td>
+<td align="left"><p><a href="create-depth-buffer-resource--view--and-sampler-state.md">Crear recursos de dispositivo para búferes de profundidad</a></p></td>
 <td align="left"><p>Aprende cómo crear los recursos de dispositivo Direct3D necesarios para admitir la realización de pruebas de profundidad para volúmenes de sombra.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Representar el mapa de sombras en el búfer de profundidad](render-the-shadow-map-to-the-depth-buffer.md)</p></td>
+<td align="left"><p><a href="render-the-shadow-map-to-the-depth-buffer.md">Representar el mapa de sombras en el búfer de profundidad</a></p></td>
 <td align="left"><p>Representa desde el punto de vista de la luz para crear un mapa de profundidad de dos dimensiones representando el volumen de sombra.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Representar la escena con prueba de profundidad](render-the-scene-with-depth-testing.md)</p></td>
+<td align="left"><p><a href="render-the-scene-with-depth-testing.md">Representar la escena con prueba de profundidad</a></p></td>
 <td align="left"><p>Crea un efecto de sombra agregando pruebas de profundidad al sombreador de vértices (o geometría) y al sombreador de píxeles.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Compatibilidad con mapas de sombras en una variedad de hardware](target-a-range-of-hardware.md)</p></td>
+<td align="left"><p><a href="target-a-range-of-hardware.md">Compatibilidad con mapas de sombras en una variedad de hardware</a></p></td>
 <td align="left"><p>Representa sombras de alta fidelidad en dispositivos más rápidos, y sombras más rápidas en dispositivos menos eficaces.</p></td>
 </tr>
 </tbody>

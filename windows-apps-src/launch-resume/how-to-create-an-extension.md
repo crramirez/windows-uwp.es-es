@@ -1,19 +1,20 @@
 ---
 author: TylerMSFT
-title: "Crear y usar una extensión de aplicación"
-description: "Crea y hospeda las extensiones de aplicaciones de la Plataforma universal de Windows (UWP) que te permiten ampliar tu aplicación mediante paquetes que los usuarios pueden instalar desde la Microsoft Store."
-keywords: "extensión de aplicación, servicio de la aplicación, en segundo plano"
+title: Crear y usar una extensión de aplicación
+description: Crea y hospeda las extensiones de aplicaciones de la Plataforma universal de Windows (UWP) que te permiten ampliar tu aplicación mediante paquetes que los usuarios pueden instalar desde la Microsoft Store.
+keywords: extensión de aplicación, servicio de la aplicación, en segundo plano
 ms.author: twhitney
 ms.date: 10/05/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 02fc8046096670e7aa8bd921f0debd255f8d8fdb
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: e54af14d23b255718f5247605b9bdd611f172308
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1663845"
 ---
 # <a name="create-and-host-an-app-extension"></a>Crear y hospedar una extensión de aplicación
 
@@ -117,7 +118,7 @@ _Package.appxmanifest del proyecto MathExtension:_
 </Package>
 ```
 
-De nuevo, observe la línea `xmlns:uap3="http://..."` y la presencia de `uap3` en `IgnorableNamespaces`. Son necesarios porque estamos usando el espacio de nombres uap3.
+De nuevo, observe la línea `xmlns:uap3="http://..."` y la presencia de `uap3` en `IgnorableNamespaces`. Son necesarios porque estamos usando el espacio de nombres `uap3`.
 
 `<uap3:Extension Category="windows.appExtension">` Identifica esta app como extensión.
 
@@ -130,6 +131,7 @@ El significado de los atributos `<uap3:AppExtension>` son los que se muestran a 
 |**DisplayName**| Se puede usar desde la app host para identificar la extensión al usuario. Se puede consultar desde, y puede usar, el [nuevo sistema de administración de recursos](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para la localización. El contenido localizado se carga desde el paquete de extensión de app, no desde la app host. | |
 |**Description** | Se puede usar desde la app host para describir la extensión al usuario. Se puede consultar desde, y puede usar, el [nuevo sistema de administración de recursos](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para la localización. El contenido localizado se carga desde el paquete de extensión de app, no desde la app host. | |
 |**PublicFolder**|El nombre de una carpeta, en relación con la raíz del paquete, donde puedes compartir contenido con el host de extensión. Por convención, el nombre es "Public", pero puedes usar cualquier nombre que coincida con una carpeta de la extensión.|:heavy_check_mark:|
+
 `<uap3:Properties>` es un elemento opcional que contiene metadatos personalizados que los hosts pueden leer en tiempo de ejecución. En el ejemplo de código, la extensión se implementa como servicio de app para que el host necesite una manera de obtener el nombre de dicho servicio de app para que pueda llamarle. El nombre del servicio de la app se define en el elemento <Service>, que hemos definido (podríamos haberlo llamado de cualquier manera que quisiéramos). El host del ejemplo de código busca esta propiedad en tiempo de ejecución para obtener el nombre del servicio de la app.
 
 ## <a name="decide-how-you-will-implement-the-extension"></a>Decida cómo implementará la extensión.

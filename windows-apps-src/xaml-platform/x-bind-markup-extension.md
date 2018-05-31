@@ -1,7 +1,7 @@
 ---
 author: jwmsft
-description: "La extensión de marcado xBind es una alternativa a Binding. xBind carece de algunas de las características de Binding, pero se ejecuta en menos tiempo y usa menos memoria que Binding, además de admitir una mejor depuración."
-title: "Extensión de marcado xBind"
+description: La extensión de marcado xBind es una alternativa a Binding. xBind carece de algunas de las características de Binding, pero se ejecuta en menos tiempo y usa menos memoria que Binding, además de admitir una mejor depuración.
+title: Extensión de marcado xBind
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -9,21 +9,26 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 0adc0789c4e52e8b9943f774d786aea6efb60c91
-ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.localizationpriority: medium
+ms.openlocfilehash: 340f8e72c5015fad341810ef335dea73f77fc82f
+ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 03/21/2018
+ms.locfileid: "1672892"
 ---
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Nota** Para obtener información general sobre el uso del enlace de datos en la aplicación con **{x:Bind}** y para realizar una comparación total entre **{x:Bind}** y **{Binding}**, consulta el tema [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 La extensión de marcado **{x:Bind}** (nueva para Windows 10) es una alternativa a **{Binding}**. **{x:Bind}** carece de algunas de las características de **{Binding}**, pero se ejecuta en menos tiempo y usa menos memoria que **{Binding}** y admite una depuración mejor.
 
-Durante el tiempo de compilación de XAML, **{x:Bind}** se convierte en un código que obtendrá un valor de la propiedad del origen de datos y lo establecerá en la propiedad especificada en el marcado. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad del origen de datos y se actualiza en función de los cambios. Opcionalmente, también puede configurarse para insertar los cambios en su propio valor de nuevo en la propiedad de origen. Los objetos de enlace creados por **{x: enlace}** y **{Binding}** son prácticamente funcionalmente equivalentes. Pero **{x:Bind}** ejecuta el código con propósito especial, que genera en el momento de la compilación y **{Binding}** usa la inspección de objetos en el tiempo de ejecución con un propósito general. En consecuencia, los enlaces **{x:Bind}** (a menudo denominados enlaces compilados) tienen un rendimiento óptimo, proporcionan la validación de tiempo de compilación de las expresiones de enlace y admiten depuración al permitirte establecer puntos de interrupción en los archivos de código que se generan como la clase parcial de la página. Estos archivos pueden encontrarse en la carpeta `obj`, con nombres como (para C#) `<view name>.g.cs`.
+Durante el tiempo de compilación de XAML, **{x:Bind}** se convierte en un código que obtendrá un valor de la propiedad del origen de datos y lo establecerá en la propiedad especificada en el marcado. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad del origen de datos y se actualiza en función de los cambios (`Mode="OneWay"`). Opcionalmente, también puede configurarse para insertar los cambios en su propio valor de nuevo en la propiedad de origen (`Mode="TwoWay"`).
+
+Los objetos de enlace creados por **{x: enlace}** y **{Binding}** son prácticamente funcionalmente equivalentes. Pero **{x:Bind}** ejecuta el código con propósito especial, que genera en el momento de la compilación y **{Binding}** usa la inspección de objetos en el tiempo de ejecución con un propósito general. En consecuencia, los enlaces **{x:Bind}** (a menudo denominados enlaces compilados) tienen un rendimiento óptimo, proporcionan la validación de tiempo de compilación de las expresiones de enlace y admiten depuración al permitirte establecer puntos de interrupción en los archivos de código que se generan como la clase parcial de la página. Estos archivos pueden encontrarse en la carpeta `obj`, con nombres como (para C#) `<view name>.g.cs`.
+
+> [!TIP]
+> **{x: Bind}** tiene un modo predeterminado de **OneTime**, a diferencia de **{Binding}**, que tiene un modo predeterminado de **OneWay**. Esto se escogió por motivos de rendimiento, ya que usar **OneWay** provocará que se genere más código para enlazar y gestionar la detección del cambio. Puedes especificar explícitamente un modo para utilizar el enlace OneWay o TwoWay. También puedes usar [x:DefaultBindMode](x-defaultbindmode-attribute.md) para cambiar el modo predeterminado de **{x:Bind}** para un segmento específico del árbol de marcado. El modo especificado ser aplica a las expresiones de **{x:Bind}** en ese elemento y sus elementos secundarios, que no especifican explícitamente un modo como parte del enlace.
 
 **Aplicaciones de ejemplo que muestran {x:Bind}**
 
@@ -49,7 +54,7 @@ Durante el tiempo de compilación de XAML, **{x:Bind}** se convierte en un códi
 | _bindingProperties_ |
 | _propName_=_value_\[, _propName_=_value_\]* | Una o más propiedades de enlace que se especifican con una sintaxis de par de nombre-valor. |
 | _propName_ | El nombre de cadena de la propiedad que se establecerá en el objeto Binding. Por ejemplo, "Converter". |
-| _value_ | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad que se establece. A continuación, se muestra un ejemplo de uso de _propName_=_value_ en el que el valor es en sí mismo una extensión de marcado: `Converter={StaticResource myConverterClass}`. Para obtener más información, consulta la sección [Propiedades que se pueden establecer con {x: enlace}](#properties-that-you-can-set-with-xbind) que se incluye más adelante. | 
+| _value_ | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad que se establece. A continuación, se muestra un ejemplo de uso de _propName_=_value_ en el que el valor es en sí mismo una extensión de marcado: `Converter={StaticResource myConverterClass}`. Para obtener más información, consulta la sección [Propiedades que se pueden establecer con {x: enlace}](#properties-you-can-set) que se incluye más adelante. |
 
 ## <a name="property-path"></a>Ruta de acceso de propiedades
 
@@ -89,6 +94,7 @@ _Nota: la sintaxis de conversión de estilo C# es más flexible que la sintaxis 
 ## <a name="functions-in-binding-paths"></a>Funciones en rutas de acceso de enlace
 
 A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esto te permite lo siguiente:
+
 - Lograr la conversión de valores de una forma más sencilla
 - Obtener una manera de que los enlaces dependan de más de un parámetro
 
@@ -97,14 +103,15 @@ A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una f
 
 En el siguiente ejemplo, el primer y segundo planos del elemento están enlazados a las funciones dedicadas a realizar la conversión según el parámetro de color.
 
-``` Xamlmarkup
+```xaml
 <DataTemplate x:DataType="local:ColorEntry">
-    <Grid Background="{x:Bind Brushify(Color)}" Width="240">
+    <Grid Background="{x:Bind local:ColorEntry.Brushify(Color)}" Width="240">
         <TextBlock Text="{x:Bind ColorName}" Foreground="{x:Bind TextColor(Color)}" Margin="10,5" />
     </Grid>
 </DataTemplate>
 ```
-``` C#
+
+```csharp
 class ColorEntry
 {
     public string ColorName { get; set; }
@@ -115,20 +122,23 @@ class ColorEntry
         return new SolidColorBrush(c);
     }
 
-    public static SolidColorBrush TextColor(Color c)
+    public SolidColorBrush TextColor(Color c)
     {
         return new SolidColorBrush(((c.R * 0.299 + c.G * 0.587 + c.B * 0.114) > 150) ? Colors.Black : Colors.White);
     }
 }
 
 ```
+
 ### <a name="function-syntax"></a>Sintaxis de la función
+
 ``` Syntax
 Text="{x:Bind MyModel.Order.CalculateShipping(MyModel.Order.Weight, MyModel.Order.ShipAddr.Zip, 'Contoso'), Mode=OneTime}"
              |      Path to function         |    Path argument   |       Path argument       | Const arg |  Bind Props
 ```
 
 ### <a name="path-to-the-function"></a>Ruta de acceso a la función
+
 La ruta de acceso a la función se especifica como otras tantas rutas de acceso de propiedades y puede incluir puntos (.), indexadores o conversiones para localizar la función.
 
 Las funciones estáticas pueden especificarse mediante la sintaxis XMLNamespace:ClassName.MethodName. Por ejemplo, **&lt;CalendarDatePicker Date="\{x:Bind sys:DateTime.Parse(TextBlock1.Text)\}" /&gt;** se asignará a la función DateTime.Parse, suponiendo que **xmlns:sys="using:System"** se especificó en la parte superior de la página.
@@ -136,14 +146,16 @@ Las funciones estáticas pueden especificarse mediante la sintaxis XMLNamespace:
 Si el modo es OneWay/TwoWay, se cambiará el proceso de detección realizado en la ruta de acceso de la función y se volverá a evaluar el enlace si se realizaron cambios en esos objetos.
 
 La función a enlazar debe tener en cuenta lo siguiente:
+
 - Debe ser accesible al código y a los metadatos, por lo que los métodos de trabajo interno o privado en C# (pero no en C++ o CX) deberán ser métodos públicos de WinRT.
 - La sobrecarga debe basarse en el número de argumentos, no en el tipo; se intentará hacer coincidir la primera sobrecarga con el número de argumentos que haya.
 - Los tipos de argumento deben coincidir con los datos que se pasan; no se realizan conversiones de restricción.
 - El tipo de devolución de la función debe coincidir con el tipo de propiedad que está usando el enlace.
 
-
 ### <a name="function-arguments"></a>Argumentos de función
+
 Se pueden especificar varios argumentos de función separados por comas (,)
+
 - Ruta de acceso: debe tener la misma sintaxis que al enlazar directamente con el objeto.
   - Si el modo es OneWay/TwoWay, se realizará la detección de cambios y se volverá a evaluar el enlace en cuanto cambien los objetos.
 - La cadena de la constante debe estar entre comillas: es necesario usar las comillas para designarla como una cadena. Asimismo, puedes usar el acento circunflejo (^) para evitar las comillas de las cadenas.
@@ -151,6 +163,7 @@ Se pueden especificar varios argumentos de función separados por comas (,)
 - Elemento booleano: especificado como "x:True" o "x:False".
 
 ### <a name="two-way-function-bindings"></a>Enlaces de funciones bidireccionales
+
 En un escenario con un enlace bidireccional, es necesario especificar una segunda función para la dirección inversa del enlace. Esto se hace mediante la propiedad de enlace **BindBack**; por ejemplo, **Text="\{x:Bind a.MyFunc(b), BindBack=a.MyFunc2\}"**. La función debe tomar un argumento que se corresponda con el valor que debe volver al modelo.
 
 ## <a name="event-binding"></a>Enlace de eventos
@@ -159,16 +172,15 @@ El enlace de eventos es una característica única del enlace compilado. Te perm
 
 Para los eventos, el método de destino no debe estar sobrecargado y también debe:
 
--   Coincidir con la firma del evento.
--   O bien, no tener parámetros.
--   O bien, tener el mismo número de parámetros de tipos que se pueden asignar de los tipos de los parámetros de evento.
+- Coincidir con la firma del evento.
+- O bien, no tener parámetros.
+- O bien, tener el mismo número de parámetros de tipos que se pueden asignar de los tipos de los parámetros de evento.
 
 En el código subyacente generado, el enlace compilado controla el evento y lo enruta al método en el modelo, evaluando de la ruta de acceso de la expresión de enlace cuando se produce el evento. Esto significa que, a diferencia de los enlaces de propiedad, no controla los cambios en el modelo.
 
 Para obtener más información sobre la sintaxis de cadena de una ruta de acceso de propiedades, consulta [Property-path syntax](property-path-syntax.md) y ten en cuenta las diferencias que se describen aquí para **{x:Bind}**.
 
-##  <a name="properties-that-you-can-set-with-xbind"></a> Propiedades que se pueden establecer con {x: enlace}
-
+## <a name="properties-that-you-can-set-with-xbind"></a> Propiedades que se pueden establecer con {x: enlace}
 
 **{x:Bind}** se explica a través de la sintaxis de marcadores de posición *bindingProperties*, ya que hay muchas propiedades de lectura y escritura que se pueden establecer en la extensión de marcado. Las propiedades pueden establecerse en cualquier orden con pares separados por comas *propName*=*value*. Ten en cuenta que no puedes incluir saltos de línea en la expresión de enlace. Algunas de las propiedades requieren tipos que no tienen una conversión de tipos, por lo que requieren sus propias extensiones de marcado anidadas dentro de **{x:Bind}**.
 
@@ -184,11 +196,14 @@ Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedade
 | **Modo** | Especifica el modo de enlace como una de las siguientes cadenas: "OneTime", "OneWay" o "TwoWay". El valor predeterminado es "OneTime". Ten en cuenta que esto difiere del valor predeterminado de **{Binding}**, que es "OneWay" en la mayoría de los casos. |
 | **TargetNullValue** | Especifica el valor que se mostrará cuando se resuelva el valor de origen, pero es explícitamente **null**. |
 | **BindBack** | Especifica una función que se usará en la dirección inversa de un enlace bidireccional. |
-| **UpdateSourceTrigger** | Especifica cuándo volver a insertar los cambios desde el control al modelo en los enlaces de TwoWay. El valor predeterminado para todas las propiedades excepto TextBox.Text es PropertyChanged, para TextBox.Text es LostFocus.| 
+| **UpdateSourceTrigger** | Especifica cuándo volver a insertar los cambios desde el control al modelo en los enlaces de TwoWay. El valor predeterminado para todas las propiedades excepto TextBox.Text es PropertyChanged, para TextBox.Text es LostFocus.|
 
-**Nota** Si quieres convertir el marcado de **{Binding}** a **{x:Bind}**, debes tener en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
+> [!NOTE]
+> Si quieres convertir el marcado de **{Binding}** a **{x:Bind}**, debes tener en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
  
-## <a name="remarks"></a>Observaciones
+> [**x:DefaultBindMode**](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute) puede usarse para cambiar el modo predeterminado de x:Bind para un segmento específico del árbol de marcado. El modo seleccionado aplicará las expresiones de x:Bind en ese elemento y sus elementos secundarios, que no especifican explícitamente un modo como parte del enlace. OneTime tiene un mejor rendimiento que OneWay ya que utilizar OneWay hará que se genere más código para el enlace y gestión de la detección de cambios.
+
+## <a name="remarks"></a>Comentarios
 
 Dado que **{x:Bind}** usa código generado para lograr sus ventajas, necesita la información de tipo en el momento de compilación. Esto significa que no puedes enlazar a propiedades de las que no conoces el tipo antes de tiempo. Por este motivo, no puedes usar **{x:Bind}** con la propiedad **DataContext**, que es de tipo **Object** y también está sujeta a cambios en el tiempo de ejecución.
 
@@ -197,12 +212,13 @@ Al usar **{x:Bind}** con plantillas de datos, debes indicar el tipo al que se en
 Los enlaces compilados dependen de la generación de código. Por tanto, si usas **{x:Bind}** en un diccionario de recursos, entonces el diccionario de recursos debe tener una clase de código subyacente. Consulta [Diccionarios de recursos con {x:Bind}](../data-binding/data-binding-in-depth.md#resource-dictionaries-with-x-bind) para ver un ejemplo de código.
 
 Las páginas y los controles de usuario que incluyen enlaces de tipo Compiled, tendrán una propiedad "Bindings" en el código generado. Esto incluye los siguientes métodos:
+
 - **Update()**: este método actualizará los valores de todos los enlaces compilados. Cualquier enlace unidireccional o bidireccional tendrá agentes de escucha conectados para detectar cualquier cambio.
 - **Initialize()**: si los enlaces no se han inicializado, se llamará al método Update() para inicializar esos enlaces.
 - **StopTracking()**: este método desconectará todos los agentes de escucha creados para los enlaces tanto unidireccionales como bidireccionales. Recuerda que puedes volver a inicializarlos mediante el método Update().
 
 > [!NOTE]
-> A partir de la versión 1607 de Windows 10, el marco XAML proporciona un valor booleano integrado para el convertidor Visibility. El convertidor asigna **true** al valor de la enumeración **Visible** y **false** a **Collapsed**, para que puedas enlazar una propiedad Visibility a un valor booleano sin necesidad de crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir de la versión 1607 de Windows 10, el marco XAML proporciona un valor booleano integrado para el convertidor Visibility. El convertidor asigna **true** al valor de la enumeración **Visible** y **false** a **Collapsed**, para que puedas enlazar una propiedad Visibility a un valor booleano sin necesidad de crear un convertidor. Ten en cuenta que esta no es una característica de enlace de función, solo enlace de propiedad. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 **Sugerencia** Si tienes que especificar una llave para un valor, como en [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) o [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), debe ir precedida por una barra diagonal inversa: `\{`. Como alternativa, escribe la cadena completa que contiene las llaves que necesitan escape entre un conjunto de comillas secundario, por ejemplo, `ConverterParameter='{Mix}'`.
 
