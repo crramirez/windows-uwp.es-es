@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, juegos, games, desarrollo de juegos, game development
 ms.localizationpriority: medium
-ms.openlocfilehash: de899d95e25489fa815f099d696752389cc3f94e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: b351b5072c6bba228d81a65b51656a81bd564daf
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817456"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862264"
 ---
 # <a name="windows-10-game-development-guide"></a>Guía de desarrollo de juegos para Windows 10
 
@@ -93,12 +93,12 @@ A lo largo de esta guía, encontrarás vínculos profundos a documentación impo
         <td><a href="../xbox-live/index.md">Guía del desarrollador de Xbox Live</a></td>
     </tr>
     <tr>
-        <td>Documentación para desarrolladores de Xbox One (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/documentation/Pages/home.aspx">Documentación sobre Xbox One XDK</a></td>
+        <td>Documentación para desarrollo de Xbox One (XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-home">Desarrollo de Xbox One</a></td>
     </tr>
     <tr>
-        <td>Notas del producto para desarrolladores de Xbox One (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/education/Pages/WhitePapers.aspx">Notas del producto</a></td>
+        <td>Notas del producto para desarrollo de Xbox One (XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-whitepapers">Notas del producto</a></td>
     </tr>
     <tr>
         <td>Documentación interactiva de mezclador</td>
@@ -227,8 +227,8 @@ Hay muchas muestras de juegos y aplicaciones para Windows 10 disponibles que te 
         <td><a href="https://github.com/Microsoft/xbox-live-samples">muestras de Xbox Live.</a></td>
     </tr>
     <tr>
-        <td>Muestras de juego para Xbox One (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx">Muestras</a></td>
+        <td>Muestras de juego para Xbox One (XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-samples">Muestras</a></td>
     </tr>
     <tr>
         <td>Muestras de juegos para Windows (galería de códigos de MSDN)</td>

@@ -4,18 +4,18 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: Usa la API de envío de Microsoft Store para crear y administrar mediante programación los envíos para las aplicaciones que estén registradas en tu cuenta del Centro de desarrollo de Windows.
 title: Crear y administrar envíos
 ms.author: mcleans
-ms.date: 02/28/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 037f76e9d0c7c9751786ba501478057687bfa910
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 9bd8d2f800969102d6957cafa92e04f482323611
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663685"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976470"
 ---
 # <a name="create-and-manage-submissions"></a>Crear y administrar envíos
 
@@ -68,13 +68,13 @@ Antes de empezar a escribir código para llamar a la API de envío de Microsoft 
 Antes de poder usar la API de envío de Microsoft Store, debes asociar una aplicación de Azure AD con tu cuenta del Centro de desarrollo, recuperar el identificador de inquilino y de cliente para la aplicación y generar una clave. La aplicación de Azure AD representa la aplicación o el servicio desde donde quieres originar la llamada a la API de envío de Microsoft Store. Necesitas el identificador de inquilino, el identificador de cliente y la clave para obtener un token de acceso de Azure AD que se pasa a la API.
 
 > [!NOTE]
-> Solo debes realizar esta tarea una vez. Una vez que tengas el identificador de inquilino, de cliente y la clave, puedes volver a usarlos cuando necesites crear un nuevo token de acceso de Azure AD.
+> Solo debes realizar esta tarea una vez. Una vez que tengas el identificador de inquilino, el identificador de cliente y la clave, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.
 
-1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y [asocia la cuenta del Centro de desarrollo de tu organización al directorio de AzureAD de tu organización](../publish/associate-azure-ad-with-dev-center.md).
+1.  En el Centro de desarrollo, [asocia tu cuenta del Centro de desarrollo de la organización con tu directorio de Azure AD de la organización](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  En la página **Administración de usuarios**, haz clic en **Agregar aplicaciones de Azure AD**, agrega la aplicación de Azure AD que representa la aplicación o el servicio que usarás para acceder a los envíos de tu cuenta del Centro de desarrollo y asígnale el rol **Administrador**. Si esta aplicación ya existe en el directorio de Azure AD, puedes seleccionarla en la página **Agregar aplicaciones de Azure AD** para agregarla a tu cuenta del Centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Adición de aplicaciones de Azure AD**. Para obtener más información, consulta [Agregar aplicaciones de Azure AD a tu cuenta del Centro de desarrollo](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications).
+2.  A continuación, desde la página **Usuarios** en la sección **Configuración de la cuenta** del Centro de desarrollo, [añada la aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account) que representa la aplicación o el servicio que usarás para acceder a los envíos de tu cuenta del Centro de desarrollo. Asegúrate de que se asignas a esta aplicación el rol de **Administrador**. Si la aplicación no existe aún en el directorio de Azure AD, puedes [crear una nueva aplicación de Azure AD en el Centro de desarrollo](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account).  
 
-3.  Vuelve a la página **Administración de usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copia los valores de **Identificador de inquilino** e **Identificador de cliente**.
+3.  Vuelve a la página **Usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copia los valores de **Identificador de inquilino** e **Identificador de cliente**.
 
 4. Haz clic en **Agregar nueva clave**. En la siguiente pantalla, copia el valor **Clave**. No podrás acceder a esta información de nuevo después de salir de la página. Para obtener más información, consulta [Administrar claves para una aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 
@@ -116,7 +116,7 @@ Una vez que tengas un token de acceso de Azure AD, podrás llamar a métodos en 
 |---------------|----------------------------------------------------------------------|
 | Aplicaciones |  Recupera los datos de todas las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows y crea envíos para aplicaciones. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Obtención de datos de la aplicación](get-app-data.md)</li><li>[Administración de envíos de aplicaciones](manage-app-submissions.md)</li></ul> |
 | Complementos | Obtén, crea, elimina complementos para las aplicaciones y, a continuación, obtén, crea o elimina envíos para los complementos. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Administración de complementos](manage-add-ons.md)</li><li>[Administrar envíos de complementos](manage-add-on-submissions.md)</li></ul> |
-| Paquetes piloto | Obtén, crea, elimina paquetes piloto para las aplicaciones y, a continuación, obtén, crea o elimina envíos para los paquetes piloto. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Administración de paquetes piloto](manage-flights.md)</li><li>[Administrar envíos de paquetes piloto](manage-flight-submissions.md)</li></ul> |
+| Paquetes piloto | Obtén, crea, elimina paquetes piloto para las aplicaciones y, a continuación, obtén, crea o elimina envíos para los paquetes piloto. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Administración de paquetes piloto](manage-flights.md)</li><li>[Administración de envíos de paquetes piloto](manage-flight-submissions.md)</li></ul> |
 
 <span id="code-samples"/>
 
@@ -157,4 +157,4 @@ Si tienes preguntas sobre la API de envío de Microsoft Store o necesitas ayuda 
 * [Administración de complementos](manage-add-ons.md)
 * [Administrar envíos de complementos](manage-add-on-submissions.md)
 * [Administración de paquetes piloto](manage-flights.md)
-* [Administrar envíos de paquetes piloto](manage-flight-submissions.md)
+* [Administración de envíos de paquetes piloto](manage-flight-submissions.md)

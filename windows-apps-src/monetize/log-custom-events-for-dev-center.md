@@ -1,17 +1,21 @@
 ---
 author: mcleanbyron
-Description: "Puedes registrar eventos personalizados desde la aplicación para UWP y revisar los eventos en el informe de uso en el panel del Centro de desarrollo de Windows."
+Description: You can log custom events from your UWP app and review those events in the Usage report on the Windows Dev Center dashboard.
 title: Registrar eventos personalizados para el Centro de desarrollo
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store Services SDK, registrar eventos, log events
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
-ms.openlocfilehash: b2fad3ea78a2007b2519e4b0b27276f9f003af2c
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.localizationpriority: high
+ms.openlocfilehash: 9828f948d0245ee23a3e309951b38c61765973e9
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935575"
 ---
 # <a name="log-custom-events-for-dev-center"></a>Registrar eventos personalizados para el Centro de desarrollo
 
@@ -28,20 +32,24 @@ Para poder revisar los eventos de registro personalizado en el **informe de uso*
 
 ## <a name="how-to-log-custom-events"></a>Cómo registrar eventos personalizados
 
-1. Si aún no lo has hecho, [instala el Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk) en el equipo de desarrollo. Además de la API para registrar eventos personalizados, este SDK también proporciona API para otras características, como ejecutar experimentos en las aplicaciones con pruebas A/B y mostrar anuncios.
+1. Si aún no lo has hecho, [instala el Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk) en el equipo de desarrollo.
+
 2. Abre el proyecto en Visual Studio.
+
 3. En el Explorador de soluciones, haz clic con el botón secundario en el nodo **Referencias** del proyecto y haz clic en **Agregar referencia**.
+
 4. En el cuadro de diálogo **Administrador de referencias**, expande **Windows Universal** y haz clic en **Extensiones**.
+
 5. En la lista de los SDK, haz clic en la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar**.
-7. Agrega la siguiente instrucción en la parte superior de cada archivo de código en el que quieras registrar eventos personalizados.
 
-  > [!div class="tabbedCodeSnippets"]
-  [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
+6. Agrega la siguiente instrucción en la parte superior de cada archivo de código donde quieras registrar eventos personalizados.
+    [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
 
-8. En cada sección del código en la que quieras registrar un evento personalizado, obtén un objeto [StoreServicesCustomEventLogger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) y, a continuación, llama al método [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx). Pasa la cadena de eventos personalizada al método.
+7. En cada sección del código en la que quieras registrar un evento personalizado, obtén un objeto [StoreServicesCustomEventLogger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) y, a continuación, llama al método [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx). Pasa la cadena de eventos personalizada al método.
+    [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
 
-  > [!div class="tabbedCodeSnippets"]
-  [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
+    > [!NOTE]
+    > E [Informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) puede tardar mucho tiempo en cargarse si tu aplicación registra muchos eventos personalizados con nombres largos. Te recomendamos que uses nombres breves para tus eventos personalizados. 
 
 ## <a name="related-topics"></a>Temas relacionados
 

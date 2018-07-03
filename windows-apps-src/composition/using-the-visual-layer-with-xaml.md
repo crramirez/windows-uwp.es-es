@@ -2,18 +2,20 @@
 author: jaster
 ms.assetid: b7a4ac8a-d91e-461b-a060-cc6fcea8e778
 title: Uso de la capa visual con XAML
-description: "Obtén información sobre las técnicas de uso de las API de la capa visual en combinación con contenido XAML ya existente para crear animaciones y efectos avanzados."
+description: Obtén información sobre las técnicas de uso de las API de la capa visual en combinación con contenido XAML ya existente para crear animaciones y efectos avanzados.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 393e4fa7bbe5e18e0bec76eab463c10c5318ca5c
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.localizationpriority: medium
+ms.openlocfilehash: 643a5abf22bfbeb9e7ace48bc430ab6e0d446ae1
+ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "2018581"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>Uso de la capa visual con XAML
 
@@ -33,7 +35,7 @@ Las animaciones de diseño, las sombras y los efectos de desenfoque se tratan en
 
 La clase **XamlCompositionBrush** proporciona una clase base para los pinceles XAML para pintan un área con un objeto **CompositionBrush**. Esto puede usarse para aplicar fácilmente efectos de composición, como desenfoque o cristal esmerilado, a los elementos de interfaz de usuario de XAML.
 
-Consulta la sección [**Pinceles**](../graphics/using-brushes.md#xamlcompositionbrushbase) para más información sobre cómo usar pinceles con la interfaz de usuario de XAML.
+Consulta la sección [**Pinceles**](/windows/uwp/design/style/brushes#xamlcompositionbrushbase) para más información sobre cómo usar pinceles con la interfaz de usuario de XAML.
 
 Para ver ejemplos de código, consulta [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase) en la página de referencia.
 
@@ -98,7 +100,7 @@ ElementCompositionPreview.GetElementVisual(MyImage).StartAnimation("Offset", par
 
 ## <a name="getalphamask-methods"></a>Métodos **GetAlphaMask**
 
-[**Image**](https://msdn.microsoft.com/library/windows/apps/br242752), [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) y [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243377) implementan un método llamado **GetAlphaMask**, el cual devuelve un objeto **CompositionBrush** que representa una imagen en escala de grises con la forma del elemento. Este objeto **CompositionBrush** puede servir como entrada para una composición **DropShadow**, de modo que la sombra pueda reflejar la forma del elemento en lugar de un rectángulo. Esto permite sombras con píxeles perfectos basadas en contornos para texto, imágenes con alfa y formas. Consulta *Sombra paralela* más adelante para obtener un ejemplo de esta API.
+[**Image**](https://msdn.microsoft.com/library/windows/apps/br242752), [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) y [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape) implementan un método llamado **GetAlphaMask**, el cual devuelve un objeto **CompositionBrush** que representa una imagen en escala de grises con la forma del elemento. Este objeto **CompositionBrush** puede servir como entrada para una composición **DropShadow**, de modo que la sombra pueda reflejar la forma del elemento en lugar de un rectángulo. Esto permite sombras con píxeles perfectos basadas en contornos para texto, imágenes con alfa y formas. Consulta *Sombra paralela* más adelante para obtener un ejemplo de esta API.
 
 ## <a name="recipes"></a>Recetas
 
@@ -153,7 +155,7 @@ Aplica una sombra paralela con píxeles perfectos a un **UIElement**, por ejempl
 3. Configura la **DropShadow** para que obtenga su forma del elemento de destino a través de una máscara.
     - De manera predeterminada, la **DropShadow** es rectangular, por lo que esto no es necesario si el destino es rectangular.
 4. Adjunta la sombras a un nuevo objeto **SpriteVisual**y establece dicho objeto **SpriteVisual** como elemento secundario del elemento host.
-5. Enlaza el tamaño del objeto **SpriteVisual** con el tamaño del host, mediante **ExpressionAnimation**.
+5. Enlaza el tamaño del objeto **SpriteVisual** con el tamaño del host mediante **ExpressionAnimation**.
 
 ```xaml
 <Grid Width="200" Height="200">
@@ -201,7 +203,50 @@ private void InitializeDropShadow(UIElement shadowHost, Shape shadowTarget)
 }
 ```
 
-Este es el equivalente en [C++/CX](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx) del código C&#35; anterior usando la misma estructura XAML.
+Las siguientes dos descripciones muestran los equivalentes [C++ / WinRT](https://aka.ms/cppwinrt) y [C++ / CX](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx) del código de C&#35 anterior con la misma estructura XAML.
+
+```cppwinrt
+#include <winrt/Windows.UI.Composition.h>
+#include <winrt/Windows.UI.Xaml.h>
+#include <winrt/Windows.UI.Xaml.Hosting.h>
+#include <winrt/Windows.UI.Xaml.Shapes.h>
+...
+MainPage()
+{
+    InitializeComponent();
+    InitializeDropShadow(ShadowHost(), CircleImage());
+}
+
+int32_t MyProperty();
+void MyProperty(int32_t value);
+
+void InitializeDropShadow(Windows::UI::Xaml::UIElement const& shadowHost, Windows::UI::Xaml::Shapes::Shape const& shadowTarget)
+{
+    auto hostVisual{ Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetElementVisual(shadowHost) };
+    auto compositor{ hostVisual.Compositor() };
+
+    // Create a drop shadow
+    auto dropShadow{ compositor.CreateDropShadow() };
+    dropShadow.Color(Windows::UI::ColorHelper::FromArgb(255, 75, 75, 80));
+    dropShadow.BlurRadius(15.0f);
+    dropShadow.Offset(Windows::Foundation::Numerics::float3{ 2.5f, 2.5f, 0.0f });
+    // Associate the shape of the shadow with the shape of the target element
+    dropShadow.Mask(shadowTarget.GetAlphaMask());
+
+    // Create a Visual to hold the shadow
+    auto shadowVisual = compositor.CreateSpriteVisual();
+    shadowVisual.Shadow(dropShadow);
+
+    // Add the shadow as a child of the host in the visual tree
+    Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetElementChildVisual(shadowHost, shadowVisual);
+
+    // Make sure size of shadow host and shadow visual always stay in sync
+    auto bindSizeAnimation{ compositor.CreateExpressionAnimation(L"hostVisual.Size") };
+    bindSizeAnimation.SetReferenceParameter(L"hostVisual", hostVisual);
+
+    shadowVisual.StartAnimation(L"Size", bindSizeAnimation);
+}
+```
 
 ```cpp
 #include "WindowsNumerics.h"

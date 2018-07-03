@@ -12,15 +12,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 910920c1f5eb5bdc3e55b51d7886be1632559c14
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: f59675c3feaab47ee79eaf160c5592876b7564a2
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396614"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862104"
 ---
 # <a name="interaction-primer"></a>Información básica sobre interacción
-
 
 ![Tipos de entrada de Windows](images/input-interactions/icons-inputdevices03.png)
 
@@ -30,14 +29,34 @@ UWP usa un sistema "inteligente" de interacción contextual que, en la mayoría 
 
 Familiarízate con cada tipo de dispositivo de entrada y sus comportamientos, capacidades y limitaciones con determinados factores de forma. Esto puede ayudarte a decidir si los controles de plataforma y las prestaciones son suficientes para tu aplicación o requieren que proporciones experiencias de interacción personalizadas.
 
-## <a name="surface-dial"></a>Surface Dial
+## <a name="gaze"></a>Mirada
 
-Para la Actualización de aniversario de Windows 10, presentamos una nueva categoría de dispositivo de entrada llamado rueda de Windows. Surface Dial es el primer dispositivo de esta clase. 
+Para la **Actualización de abril de 2018 de Windows 10**, hemos introducido soporte para entrada de mirada usando dispositivos de entrada de seguimiento de ojos y cabeza. 
+
+> [!NOTE]
+> La compatibilidad con el hardware de seguimiento de ojos se introdujo en **Windows 10 Fall Creators Update** junto con [Control ocular](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control), una característica integrada que permite usar los ojos para controlar el puntero en pantalla, escribir con el teclado en pantalla y comunicarse con personas utilizando texto a voz.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
--   Tableta
--   PC y portátiles
+- Tableta
+- PC y portátiles
+
+### <a name="typical-usage"></a>Uso típico
+
+Realiza un seguimiento de la mirada, la atención y la presencia del usuario en función de la ubicación y del movimiento de sus ojos. Este eficaz modo nuevo de usar e interactuar con tus aplicaciones para UWP es especialmente útil como tecnología de asistencia para usuarios con enfermedades neuromusculares (por ejemplo, ELA) y otras limitaciones que implican discapacidades musculares o nerviosas. La entrada de mirada también ofrece atractivas oportunidades tanto para juegos (incluida adquisición y seguimiento del objetivo) y aplicaciones de productividad tradicionales, quioscos y otros escenarios interactivos donde dispositivos de entrada tradicionales (teclado, mouse, pantalla táctil) no están disponibles, o donde podría resultar útil/de ayuda liberar manos del usuario para otras tareas (por ejemplo, sujetar bolsas de compra).
+
+### <a name="more-info"></a>Más información
+
+[Interacciones de mirada y seguimiento de ojos](gaze-interactions.md)
+
+## <a name="surface-dial"></a>SurfaceDial
+
+Para la **Actualización de aniversario de Windows 10**, presentamos la categoría de rueda de Windows de dispositivo de entrada. Surface Dial es el primer dispositivo de esta clase.
+
+### <a name="device-support"></a>Compatibilidad con dispositivos
+
+- Tableta
+- PC y portátiles
 
 ### <a name="typical-usage"></a>Uso típico
 
@@ -46,7 +65,6 @@ Con un factor de forma que se basa en una acción (o gesto) de giro, Surface Dia
 ### <a name="more-info"></a>Más información
 
 [Directrices de diseño de Surface Dial](windows-wheel-interactions.md)
-
 
 ## <a name="cortana"></a>Cortana
 

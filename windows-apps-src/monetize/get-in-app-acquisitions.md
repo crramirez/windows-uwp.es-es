@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, adquisiciones de complementos, add-on acquisitions
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f6da2ae68ab2b40f11d1a9d092eb8ff447f2844
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: b881d3bdaa9adec28b78a72e127dcebd49ee1df6
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664015"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976430"
 ---
 # <a name="get-add-on-acquisitions"></a>Obtener los datos de las adquisiciones de complementos
 
@@ -26,7 +26,7 @@ Usa este método en la API de análisis de Microsoft Store para obtener los dato
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
@@ -49,7 +49,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 El parámetro *applicationId* o *inAppProductId* es obligatorio. Para recuperar los datos de compra de todos los complementos registrados en la aplicación, especifica el parámetro *applicationId*. Para recuperar los datos de compra de un solo complemento, especifica el parámetro *inAppProductId*. Si especificas ambos, el parámetro *applicationId* se ignorará.
 
-| Parámetro        | Tipo   |  Descripción      |  Obligatorio  
+| Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
 | applicationId | cadena | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que quieres recuperar los datos de compra de complementos.  |  Sí  |
 | inAppProductId | cadena | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del complemento para el que quieres recuperar los datos de compra.  | Sí  |
@@ -60,7 +60,7 @@ El parámetro *applicationId* o *inAppProductId* es obligatorio. Para recuperar 
 | filter |cadena  | Una o más instrucciones que filtran las filas en la respuesta. Para obtener más información, consulta la sección [filtrar campos](#filter-fields) a continuación. | No   |
 | aggregationLevel | cadena | Especifica el intervalo de tiempo necesario para recuperar los datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>. | No |
 | orderby | cadena | Instrucción que ordena los valores de datos resultantes de cada compra de complemento. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>fecha</strong></li><li><strong>acquisitionType</strong></li><li><strong>ageGroup</strong></li><li><strong>storeClient</strong></li><li><strong>gender</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>orderName</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
-| groupby | cadena | Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<ul><li><strong>date</strong></li><li><strong>applicationName</strong></li><li><strong>inAppProductName</strong></li><li><strong>acquisitionType</strong></li><li><strong>ageGroup</strong></li><li><strong>storeClient</strong></li><li><strong>gender</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>orderName</strong></li></ul><p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>fecha</strong></li><li><strong>applicationId</strong></li><li><strong>inAppProductId</strong></li><li><strong>acquisitionQuantity</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p> |  No  |
+| groupby | cadena | Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<ul><li><strong>fecha</strong></li><li><strong>applicationName</strong></li><li><strong>inAppProductName</strong></li><li><strong>acquisitionType</strong></li><li><strong>ageGroup</strong></li><li><strong>storeClient</strong></li><li><strong>gender</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>orderName</strong></li></ul><p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>fecha</strong></li><li><strong>applicationId</strong></li><li><strong>inAppProductId</strong></li><li><strong>acquisitionQuantity</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p> |  No  |
 
 
 ### <a name="filter-fields"></a>Campos de filtro
@@ -132,7 +132,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | gender              | cadena  | Género del usuario que realizó la compra. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                                    |
 | ageGroup            | cadena  | Grupo de edad del usuario que realizó la compra. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                                 |
 | acquisitionType     | cadena  | Tipo de compra (gratuita, de pago, etc.). Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                                    |
-| acquisitionQuantity | número | Número de compras que se realizaron.                        |
+| acquisitionQuantity | entero | Número de compras que se realizaron.                        |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta

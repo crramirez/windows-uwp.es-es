@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Código completo para DDSTextureLoader"
-description: "Código completo de una clase y método para cargar una textura DDS de la memoria."
+title: Código completo para DDSTextureLoader
+description: Código completo de una clase y método para cargar una textura DDS de la memoria.
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,17 +9,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, DDSTextureLoader
-ms.openlocfilehash: 7daf10ad577b2b67c6ca5554f6555deb89f16229
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a06e3624ba7caed8f51a5ff9fe0c5b6100d0f77c
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: es-ES
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983305"
 ---
 # <a name="complete-code-for-ddstextureloader"></a>Código completo para DDSTextureLoader
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Código completo de una clase y método para cargar una textura DDS de la memoria.
+Consulta [Cargar recursos en el juego DirectX](load-a-game-asset.md) para obtener información sobre las texturas y el uso de este ejemplo.
 
 Este tema contiene estas secciones:
 

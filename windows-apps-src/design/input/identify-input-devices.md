@@ -12,12 +12,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c61de6dbeb8b1c455c1312cc993d0eee7b1bba7
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 40abeae4048784599deadd9a1a62a995447159be
+ms.sourcegitcommit: 03a3c02c7b3b0b0a3d1b14705cc1fd73788ac034
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653994"
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "1903199"
 ---
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 
@@ -90,8 +90,6 @@ private void GetTouchProperties()
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) que se usa para recuperar si hay dispositivos detectados compatibles con la entrada de puntero (táctil, teclado táctil, mouse o pluma). Solo tienes que crear un nuevo objeto **PointerDevice** y obtener las propiedades que te interesan.
 
 **Nota** Los valores que devuelven las propiedades que se describen aquí se basan en todos los dispositivos de puntero detectados: las propiedades booleanas devuelven un valor distinto de cero si hay al menos un digitalizador que es compatible con una funcionalidad específica. Por otro lado, las propiedades numéricas devuelven el valor máximo expuesto por cualquiera de los dispositivos de puntero.
-
- 
 
 En el código siguiente se usa una tabla para mostrar las propiedades y los valores correspondientes a cada dispositivo señalador.
 

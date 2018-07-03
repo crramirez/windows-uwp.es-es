@@ -1,35 +1,39 @@
 ---
-author: mithom
+author: eliotcowley
 title: Volante y fuerza de respuesta
 description: Usa las API de volante Windows.Gaming.Input para detectar y leer comandos de fuerza de respuesta, para enviarlos a los volantes y para determinar sus funcionalidades.
 ms.assetid: 6287D87F-6F2E-4B67-9E82-3D6E51CBAFF9
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, racing wheel, volante, force feedback, fuerza de respuesta
-ms.openlocfilehash: ca8413a857fd4d8925a6767280a32a8336eeba19
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bab652322e1a744dc82ce318b3be0f4a4a9d63ec
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874363"
 ---
 # <a name="racing-wheel-and-force-feedback"></a>Volante y fuerza de respuesta
 
 En esta página se describen los conceptos básicos de programación de los volantes de Xbox One usando [Windows.Gaming.Input.RacingWheel][racingwheel] y las API relacionadas para la Plataforma universal de Windows (UWP).
 
 En esta página encontrarás información sobre:
-* Cómo obtener una lista de los volantes conectados y sus usuarios.
-* Cómo detectar que se ha agregado o quitado un volante.
-* Cómo leer la entrada de uno o más volantes.
-* Cómo enviar comandos de fuerza de respuesta
-* El comportamiento de los volantes como dispositivos de navegación.
 
+* Cómo obtener una lista de los volantes conectados y sus usuarios
+* Cómo detectar que se ha agregado o quitado un volante
+* Cómo leer la entrada de uno o más volantes
+* Cómo enviar comandos de fuerza de respuesta
+* El comportamiento de los volantes como dispositivos de navegación de interfaz de usuario
 
 ## <a name="racing-wheel-overview"></a>Información general sobre los volantes
 
 Los volantes son dispositivos de entrada cuya apariencia se parece mucho a la cabina de un coche de carreras real. Los volantes son el dispositivo de entrada perfecto para los juegos de carreras de estilo Arcade y simulación que representan coches o camiones. Los volantes son compatibles con aplicaciones para UWP de Windows 10 y Xbox One en el espacio de nombres [Windows.Gaming.Input][].
 
-Los volantes de Xbox One se ofrecen en distintas gamas de precios, por lo general con más y mejores funcionalidades de entrada y fuerza de respuesta cuanto más alto es el precio. Todos los volantes están equipados con un volante analógico, controles de acelerador y freno analógicos y algunos botones en el volante. Además, algunos volantes están equipados con controles de embrague y freno de mano analógicos, palancas de cambios y funcionalidades de fuerza de respuesta. No todos los volantes están equipados con los mismos conjuntos de características y también pueden variar en la compatibilidad de determinadas características; por ejemplo, los volantes pueden admitir distintos rangos de rotación y las palancas de cambios pueden admitir un número distinto de velocidades.
+Los volantes de Xbox One se ofrecen en distintas gamas de precios, por lo general con más y mejores funcionalidades de entrada y fuerza de respuesta cuanto más alto es el precio. Todos los volantes están equipados con un volante analógico, controles de acelerador y freno analógicos, y algunos botones en el volante. Además, algunos volantes están equipados con controles de embrague y freno de mano analógicos, palancas de cambios y funcionalidades de fuerza de respuesta. No todos los volantes están equipados con los mismos conjuntos de características y también pueden variar en la compatibilidad de determinadas características; por ejemplo, los volantes pueden admitir distintos rangos de rotación y las palancas de cambios pueden admitir un número distinto de velocidades.
 
 ### <a name="device-capabilities"></a>Funcionalidades del dispositivo
 
@@ -39,7 +43,7 @@ Para obtener más información, consulta [Determinar las funcionalidades del vol
 
 ### <a name="force-feedback"></a>Fuerza de respuesta
 
-Algunos volantes de Xbox One ofrecen fuerza de respuesta real; es decir, pueden aplicar fuerzas reales en el eje de control, como el volante, no tan solo vibración. Los juegos usan esta capacidad para crear una sensación de inmersión mayor (_daños de impacto simulado_, _"sensación de la carretera"_) y para incrementar el reto de conducir bien.
+Algunos volantes de Xbox One ofrecen fuerza de respuesta real, es decir, pueden aplicar fuerzas reales en el eje de control, como el volante, no tan solo vibración. Los juegos usan esta capacidad para crear una sensación de inmersión mayor (_daños de impacto simulado_, "sensación de la carretera") y para incrementar el reto de conducir bien.
 
 Para obtener más información, consulta [Información general sobre la fuerza de respuesta](#force-feedback-overview).
 
@@ -47,9 +51,9 @@ Para obtener más información, consulta [Información general sobre la fuerza d
 
 Para aliviar la carga de la compatibilidad con los diferentes dispositivos de entrada para la navegación de la interfaz de usuario y fomentar la coherencia entre dispositivos y juegos, la mayoría de dispositivos de entrada _física_ actúan simultáneamente como dispositivo independiente de entrada _lógica_, llamado [controlador de navegación de la interfaz de usuario](ui-navigation-controller.md). El controlador de navegación de la interfaz de usuario proporciona un vocabulario común para los comandos de navegación de la interfaz de usuario entre los dispositivos de entrada.
 
-Debido a su enfoque único en los controles analógicos y en el grado de variación entre los distintos volantes, suelen estar equipados con una cruceta digital, y con los botones de **vista**, **menú**, **A**, **B**, **X** e **Y**, parecidos a los de un [controlador para juegos](gamepad-and-vibration.md); estos botones no están destinados a admitir comandos de juego y no se puede acceder a ellos tan fácilmente como a los botones del volante.
+Debido a su enfoque único en los controles analógicos y en el grado de variación entre los distintos volantes, suelen estar equipados con una cruceta digital, y con los botones de **Vista**, **Menú**, **A**, **B**, **X** e **Y**, parecidos a los de un [controlador para juegos](gamepad-and-vibration.md); estos botones no están destinados a admitir comandos de juego y no se puede acceder a ellos tan fácilmente como a los botones del volante.
 
-Como controladores de navegación de la interfaz de usuario, los volantes asignan el [conjunto necesario](ui-navigation-controller.md#required-set) de comandos de navegación al stick analógico izquierdo, la cruceta y los botones de **vista**, **menú**, **A** y **B**.
+Como controladores de navegación de la interfaz de usuario, los volantes asignan el [conjunto necesario](ui-navigation-controller.md#required-set) de comandos de navegación al stick analógico izquierdo, la cruceta y los botones de **Vista**, **Menú**, **A** y **B**.
 
 | Comando de navegación | Entrada del volante |
 | ------------------:| ------------------ |
@@ -79,16 +83,17 @@ Además, algunos volantes pueden asignar algún [conjunto opcional](ui-navigatio
 |          Contexto 3 | _varía_              |
 |          Contexto 4 | _varía_              |
 
-
 ## <a name="detect-and-track-racing-wheels"></a>Detectar y realizar un seguimiento de los volantes
 
-El sistema administra los volantes, por lo que no tendrás que crearlos ni inicializarlos. El sistema proporciona una lista de volantes conectados y eventos para informarte cuando se agrega o quita un volante.
+La detección y el seguimiento de volantes funciona exactamente del mismo modo que para los controladores para juegos, solo que con la clase [RacingWheel][] en lugar de la clase [Gamepad](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) clase. Para obtener más información, consulta [Controlador para juegos y vibración](gamepad-and-vibration.md).
 
-### <a name="the-racing-wheels-list"></a>Lista de volantes
+<!-- Racing wheels are managed by the system, therefore you don't have to create or initialize them. The system provides a list of connected racing wheels and events to notify you when a racing wheel is added or removed.
 
-La clase [RacingWheel][] proporciona una propiedad estática, [RacingWheels][], que es una lista de solo lectura de los volantes que están actualmente conectados. Dado que probablemente solo te interesen algunos de los volantes conectados, se recomienda mantener la propia colección en lugar de acceder a ellos a través de la propiedad `RacingWheels`.
+### The racing wheels list
 
-En el siguiente ejemplo se copian todos los volantes conectados en una nueva colección.
+The [RacingWheel][] class provides a static property, [RacingWheels][], which is a read-only list of racing wheels that are currently connected. Because you might only be interested in some of the connected racing wheels, it's recommended that you maintain your own collection instead of accessing them through the `RacingWheels` property.
+
+The following example copies all connected racing wheels into a new collection.
 ```cpp
 auto myRacingWheels = ref new Vector<RacingWheel^>();
 
@@ -99,11 +104,11 @@ for (auto racingwheel : RacingWheel::RacingWheels)
 }
 ```
 
-### <a name="adding-and-removing-racing-wheels"></a>Agregar y quitar volantes
+### Adding and removing racing wheels
 
-Cuando se agrega o quita un volante, se generan los eventos [RacingWheelAdded][] y [RacingWheelRemoved][]. Puedes registrar controladores de estos eventos para realizar un seguimiento de los volantes que están conectados actualmente.
+When a racing wheel is added or removed the [RacingWheelAdded][] and [RacingWheelRemoved][] events are raised. You can register handlers for these events to keep track of the racing wheels that are currently connected.
 
-En el siguiente ejemplo se inicia el seguimiento de un volante que se ha agregado.
+The following example starts tracking an racing wheels that's been added.
 ```cpp
 RacingWheel::RacingWheelAdded += ref new EventHandler<RacingWheel^>(Platform::Object^, RacingWheel^ args)
 {
@@ -112,7 +117,7 @@ RacingWheel::RacingWheelAdded += ref new EventHandler<RacingWheel^>(Platform::Ob
 }
 ```
 
-En el siguiente ejemplo se deja de realizar el seguimiento de un volante que se ha quitado.
+The following example stops tracking a racing wheel that's been removed.
 ```cpp
 RacingWheel::RacingWheelRemoved += ref new EventHandler<RacingWheel^>(Platform::Object^, RacingWheel^ args)
 {
@@ -125,21 +130,22 @@ RacingWheel::RacingWheelRemoved += ref new EventHandler<RacingWheel^>(Platform::
 }
 ```
 
-### <a name="users-and-headsets"></a>Usuarios y auriculares
+### Users and headsets
 
-Cada volante puede asociarse con una cuenta de usuario para vincular su identidad al juego y puede tener conectados unos auriculares para facilitar el chat de voz o las funciones en el juego. Para obtener más información sobre cómo trabajar con usuarios y auriculares, consulta [Seguimiento de usuarios y sus dispositivos](input-practices-for-games.md#tracking-users-and-their-devices) y [Auriculares](headset.md).
+Each racing wheel can be associated with a user account to link their identity to their gameplay, and can have a headset attached to facilitate voice chat or in-game features. To learn more about working with users and headsets, see [Tracking users and their devices](input-practices-for-games.md#tracking-users-and-their-devices) and [Headset](headset.md). -->
 
 ## <a name="reading-the-racing-wheel"></a>Lectura del volante
 
-Después de identificar los volantes que te interesan, puedes recopilar datos de ellos. Sin embargo, a diferencia de algunos otros tipos de entrada con los que puedes estar familiarizado, los volantes no comunican el cambio de estado mediante la generación de eventos. En su lugar, tienes que realizar lecturas regulares de su estado actual mediante _sondeos_.
+Después de identificar los volantes que te interesan, puedes recopilar datos de ellos. Sin embargo, a diferencia de algunos otros tipos de entrada con los que puedes estar familiarizado, los volantes no comunican el cambio de estado mediante la generación de eventos. En cambio, tienes que realizar lecturas periódicas de sus estados actuales mediante _sondeos_.
 
 ### <a name="polling-the-racing-wheel"></a>Sondeo del volante
 
-El sondeo captura una instantánea del volante en un momento preciso en el tiempo. Este enfoque de recopilación de entrada es una buena opción para la mayoría de los juegos porque su lógica normalmente se ejecuta en un bucle determinista en lugar de controlarse mediante eventos. También suele ser más sencillo interpretar los comandos de juego de la entrada recopilada de una vez que de muchas entradas individuales recopiladas a lo largo del tiempo.
+El sondeo captura una instantánea del volante en un momento preciso en el tiempo. Este enfoque de la recopilación de entrada es una buena opción para la mayoría de los juegos porque su lógica normalmente se ejecuta en un bucle determinista en lugar de controlarse mediante eventos; también suele ser más sencillo interpretar comandos de juego de la entrada recopilada de una vez que de muchas entradas individuales recopiladas a lo largo del tiempo.
 
 El sondeo de un volante se realiza llamando a [GetCurrentReading][]; esta función devuelve una estructura [RacingWheelReading][] que contiene el estado del volante.
 
 En el siguiente ejemplo se realiza el sondeo del estado actual de un volante.
+
 ```cpp
 auto racingwheel = myRacingWheels[0];
 
@@ -171,7 +177,7 @@ if (racingwheel->HasPatternShifter)
 }
 ```
 
-Además, los controles que pueden variar son el volante y la palanca de cambios. El volante pueden variar según el grado de giro físico que puede admitir el volante real, mientras que la palanca de cambios puede variar según el número de velocidades que admita. Para determinar el máximo ángulo de rotación que admite el volante real, lee la propiedad `MaxWheelAngle` del volante; su valor es el ángulo físico máximo que se admite en grados positivos, igual al valor en grados negativos. Puedes determinar la máxima velocidad que admite la palanca de cambios mediante la lectura de la propiedad `MaxPatternShifterGear` del volante; su valor incluye la máxima velocidad admitida, es decir, si el valor es el 4, la palanca de cambios admite la marcha atrás, el punto muerto y las marchas primera, segunda, tercera y cuarta.
+Además, los controles que pueden variar son el volante y la palanca de cambios. El volante pueden variar según el grado de giro físico que puede admitir el volante real, mientras que la palanca de cambios puede variar según el número de velocidades que admita. Para determinar el máximo ángulo de rotación que admite el volante real, lee la propiedad `MaxWheelAngle` del volante; su valor es el ángulo físico máximo que se admite en grados positivos, igual al valor en grados negativos. Puedes determinar la máxima velocidad que admite la palanca de cambios mediante la lectura de la propiedad `MaxPatternShifterGear` del volante; su valor incluye la máxima velocidad admitida inclusive, es decir, si el valor es 4, la palanca de cambios admite la marcha atrás, el punto muerto y las marchas primera, segunda, tercera y cuarta.
 
 ```cpp
 auto maxWheelDegrees = racingwheel->MaxWheelAngle;
@@ -193,11 +199,13 @@ Para obtener información sobre cómo usar la funcionalidad de fuerza de respues
 
 Cada uno de los botones del volante (las cuatro direcciones de la cruceta, los botones **Previous Gear** y **Next Gear** y los 16 botones adicionales) proporcionan una lectura digital que indica si está presionado o sin presionar. Por motivos de eficacia, las lecturas de los botones no se representan como valores booleanos individuales; en su lugar, se empaquetan todas en un único campo de bits que se representa mediante la enumeración [RacingWheelButtons][].
 
-> **Nota**    Los volantes están equipados con botones adicionales que se usan para la navegación de la interfaz de usuario, como los botones de **vista** y **menú**. Estos botones no forman parte de la enumeración `RacingWheelButtons` y solo se pueden leer accediendo al volante como dispositivo de navegación de la interfaz de usuario. Para obtener más información, consulta [UI Navigation Device (Dispositivo de navegación de la interfaz de usuario)](ui-navigation-controller.md).
+> [!NOTE]
+> Los volantes están equipados con botones adicionales que se usan para la navegación de la interfaz de usuario, como los botones de **Vista** y **Menú**. Estos botones no forman parte de la enumeración `RacingWheelButtons` y solo se pueden leer accediendo al volante como dispositivo de navegación de la interfaz de usuario. Para obtener más información, consulta [UI Navigation Device (Dispositivo de navegación de la interfaz de usuario)](ui-navigation-controller.md).
 
-Los valores de los botones se leen en la propiedad `Buttons` de la estructura [RacingWheelReading][]. Dado que esta propiedad es un campo de bits, se usa el enmascaramiento bit a bit para aislar el valor del botón que te interesa. El botón está presionado (abajo) cuando se establece el bit correspondiente; de lo contrario, no lo está (arriba).
+Los valores de los botones se leen en la propiedad `Buttons` de la estructura [RacingWheelReading][]. Dado que esta propiedad es un campo de bits, se usa el enmascaramiento bit a bit para aislar el valor del botón que te interesa. El botón está presionado (abajo) cuando se establece el bit correspondiente; de lo contrario no lo está (arriba).
 
 En el ejemplo siguiente, se determina si el botón **Next Gear** está presionado.
+
 ```cpp
 if (RacingWheelButtons::NextGear == (reading.Buttons & RacingWheelButtons::NextGear))
 {
@@ -206,6 +214,7 @@ if (RacingWheelButtons::NextGear == (reading.Buttons & RacingWheelButtons::NextG
 ```
 
 En el ejemplo siguiente, se determina si el botón Next Gear está liberado.
+
 ```cpp
 if (RacingWheelButtons::None == (reading.Buttons & RacingWheelButtons::NextGear))
 {
@@ -213,7 +222,7 @@ if (RacingWheelButtons::None == (reading.Buttons & RacingWheelButtons::NextGear)
 }
 ```
 
-A veces, tal vez quieras determinar si se libera un botón que está presionado o si se presiona un botón que no lo estaba, si se presionan o liberan varios botones o si un conjunto de botones tiene una disposición determinada (algunos presionados y otros no). Para obtener información sobre cómo detectar estas condiciones, consulta [Detección de transiciones de botón](input-practices-for-games.md#detecting-button-transitions) y [Detección disposiciones de botones complejas](input-practices-for-games.md#detecting-complex-button-arrangements).
+A veces, es posible que quieras determinar si se suelta un botón que está presionado o si se presiona un botón que no lo estaba, si se presionan o sueltan varios botones o si un conjunto de botones tiene una disposición determinada; algunos presionados y otros no. Para obtener información sobre cómo detectar estas condiciones, consulta [Detección de transiciones de botón](input-practices-for-games.md#detecting-button-transitions) y [Detección disposiciones de botones complejas](input-practices-for-games.md#detecting-complex-button-arrangements).
 
 ### <a name="reading-the-wheel"></a>Lectura del volante
 
@@ -258,13 +267,14 @@ if(racingwheel->HasClutch)
 La palanca de cambios es un control opcional que proporciona una lectura digital entre -1 y [MaxPatternShifterGear][], que se representa como un valor entero con signo. Un valor de -1 o 0 corresponde a la _marcha atrás_ y el _punto muerto_, respectivamente; los valores más altos positivos corresponden a velocidades superiores hasta [MaxPatternShifterGear][], inclusive. El valor de la palanca de cambios se lee en la propiedad `PatternShifterGear` de la estructura [RacingWheelReading][].
 
 ```cpp
-if(racingwheel->HasPatternShifter)
+if (racingwheel->HasPatternShifter)
 {
-    gear = reading.PatternShifterGear
+    gear = reading.PatternShifterGear;
 }
 ```
 
-> **Nota**    La palanca de cambios, si se admite, se encuentra junto a los botones necesarios de marcha anterior y marcha siguiente que también afectan a la velocidad actual del vehículo del jugador. Una estrategia simple para unificar estas entradas en que ambos elementos están presentes es ignorar la palanca de cambios (y el embrague) cuando un jugador elige el cambio automático para su vehículo, o bien ignorar los botones de marcha anterior y marcha siguiente cuando un jugador elige el cambio manual si su volante está equipado con un control de palanca de cambios. Puedes implementar una estrategia de unificación diferente si esta no te resulta adecuada para el juego.
+> [!NOTE]
+> La palanca de cambios, si se admite, se encuentra junto a los botones necesarios de **marcha anterior** y **marcha siguiente** que también afectan a la velocidad actual del vehículo del jugador. Una estrategia simple para unificar estas entradas en que ambos elementos están presentes es ignorar la palanca de cambios (y el embrague) cuando un jugador elige el cambio automático para su vehículo, o bien ignorar los botones de **marcha anterior** y **marcha siguiente** cuando un jugador elige el cambio manual si su volante está equipado con un control de palanca de cambios. Puedes implementar una estrategia de unificación diferente si esta no te resulta adecuada para el juego.
 
 ## <a name="run-the-inputinterfacing-sample"></a>Ejecución de la muestra de InputInterfacing
 
@@ -274,7 +284,8 @@ La [muestra InputInterfacingUWP _(GitHub)_](https://github.com/Microsoft/Xbox-AT
 
 Muchos volantes tienen funcionalidad de fuerza de respuesta para proporcionar una experiencia de conducción más envolvente y estimulante. Los volantes que admiten la fuerza de respuesta suelen estar equipados con un motor único que aplica fuerza al volante a lo largo de un solo eje: el eje de rotación del volante. La fuerza de respuesta se admite en Windows 10 y en las aplicaciones para UWP de Xbox One a través del espacio de nombres [Windows.Gaming.Input.ForceFeedback][].
 
-> **Nota**    Las API de fuerza de respuesta son capaces de admitir varios ejes de fuerza, pero ningún volante de Xbox One admite actualmente ningún eje de respuesta que no sea el de rotación del volante.
+> [!NOTE]
+> Las API de fuerza de respuesta son capaces de admitir varios ejes de fuerza, pero ningún volante de Xbox One admite actualmente ningún eje de respuesta que no sea el de rotación del volante.
 
 ## <a name="using-force-feedback"></a>Uso de la fuerza de respuesta
 
@@ -316,7 +327,6 @@ Los efectos de la fuerza de respuesta se cargan en el dispositivo de respuesta d
 | ConstantForceEffect  | Efecto que aplica una fuerza constante a lo largo de un vector.                                  |
 | PeriodicForceEffect  | Efecto que aplica una fuerza variable definida por una forma de onda, a lo largo de un vector.           |
 | RampForceEffect      | Efecto que aplica una fuerza linealmente creciente o decreciente a lo largo de un vector.          |
-
 
 ```cpp
 using FFLoadEffectResult = ForceFeedback::ForceFeedbackLoadEffectResult;
@@ -364,9 +374,10 @@ else
 Por último, se puede habilitar, deshabilitar o restablecer de forma asincrónica todo el sistema de fuerza de respuesta en un volante concreto cuando sea necesario.
 
 ## <a name="see-also"></a>Consulta también
-[Windows.Gaming.Input.UINavigationController][]
-[Windows.Gaming.Input.IGameController][]
 
+* [Windows.Gaming.Input.UINavigationController][]
+* [Windows.Gaming.Input.IGameController][]
+* [Prácticas de entrada para juegos](input-practices-for-games.md)
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.UINavigationController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx

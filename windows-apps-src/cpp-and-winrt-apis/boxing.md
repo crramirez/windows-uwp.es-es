@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, control, conversión boxing, escalar, valor
 ms.localizationpriority: medium
-ms.openlocfilehash: 61d5c7a35fb7a6ff9952f3fe768f4faa3f6c6347
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 9548776fe1be06c9b622870c4d3331b04a943789
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832011"
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935793"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Conversión boxing y unboxing de valores escalar a IInspectable con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 
 La [**interfaz IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821) es la interfaz de raíz de cada clase en tiempo de ejecución de Windows Runtime (WinRT). Esto es una idea análoga de [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) que se encuentra en la raíz de cada interfaz y clase COM; y **System.Object** que se encuentra en la raíz de cada clase con [sistema de tipo común](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system).
@@ -30,7 +30,7 @@ La función de descriptor de acceso [**LaunchActivatedEventArgs::Arguments**](/u
 void App::OnLaunched(LaunchActivatedEventArgs const& e)
 {
     ...
-    rootFrame.Navigate(xaml_typename<BlankApp1::MainPage>(), winrt::box_value(e.Arguments()));
+    rootFrame.Navigate(winrt::xaml_typename<BlankApp1::MainPage>(), winrt::box_value(e.Arguments()));
     ...
 }
 ```
@@ -41,13 +41,13 @@ Para establecer la propiedad de contenido de un [**Button**](/uwp/api/windows.ui
 Button().Content(winrt::box_value(L"Clicked"));
 ```
 
-Primero, el constructor de cadenas **hstring** convierte la cadena literal en un **hstring**. A continuación, se invoca la sobrecarga de **winrt::box_value** que toma un **hstring**.
+Primero, el constructor de cadenas [**hstring**](/uwp/cpp-ref-for-winrt/hstring) convierte la cadena literal en un **hstring**. A continuación, se invoca la sobrecarga de **winrt::box_value** que toma un **hstring**.
 
 ## <a name="examples-of-unboxing-an-iinspectable"></a>Ejemplos de conversiones unboxing de una IInspectable
 En tus propias funciones que esperan **IInspectable**, puedes usar [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) para realizar una conversión unboxing, y puedes usar [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or) para realizar una conversión unboxing con un valor predeterminado.
 
 ```cppwinrt
-void Unbox(Windows::Foundation::IInspectable const& object)
+void Unbox(winrt::Windows::Foundation::IInspectable const& object)
 {
     hstring hstringValue = unbox_value<hstring>(object); // Throws if object is not a boxed string.
     hstringValue = unbox_value_or<hstring>(object, L"Default"); // Returns L"Default" if object is not a boxed string.
@@ -55,8 +55,19 @@ void Unbox(Windows::Foundation::IInspectable const& object)
 }
 ```
 
+## <a name="determine-the-type-of-a-boxed-value"></a>Determinar el tipo de un valor empaquetado
+Si recibes un valor empaquetado y no estás seguro de qué tipo contiene (es necesario conocer su tipo para aplicar la conversión unboxing), a continuación, puedes consultar el valor empaquetado para su interfaz [**IPropertyValue**](/uwp/api/windows.foundation.ipropertyvalue) interfaz y llamar a **Type** en él. Aquí tienes un ejemplo de código.
+
+```cppwinrt
+float pi = 3.14f;
+auto piInspectable = winrt::box_value(pi);
+auto piPropertyValue = piInspectable.as<winrt::Windows::Foundation::IPropertyValue>();
+WINRT_ASSERT(piPropertyValue.Type() == winrt::Windows::Foundation::PropertyType::Single);
+```
+
 ## <a name="important-apis"></a>API importantes
 * [Interfaz IInspectable](https://msdn.microsoft.com/library/windows/desktop/br205821)
 * [Plantilla de función winrt::box_value](/uwp/cpp-ref-for-winrt/box-value)
+* [Estructura winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
 * [Plantilla de función winrt::unbox_value](/uwp/cpp-ref-for-winrt/unbox-value)
 * [Plantilla de función winrt::unbox_value_or](/uwp/cpp-ref-for-winrt/unbox-value-or)

@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp, win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar notificación del sistema local, puente de dispositivo de escritorio, C#, c sharp
 ms.localizationpriority: medium
-ms.openlocfilehash: e869ebb4fad7be55ef4f31c1c7e544ce8c290e4a
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 44457221d7b108563e7df030125a909da6609cbe
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816670"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983461"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
 
@@ -101,7 +101,7 @@ Si estás usando el Puente de dispositivo de escritorio (o, si admites ambos) en
 1. Declaración para **xmlns:com**
 2. Declaración para **xmlns:desktop**
 3. En el atributo **IgnorableNamespaces**, **com** y **escritorio**.
-4. **com:Extension** para el servidor COM utilizando el GUID del paso n.º4. Asegúrate de incluir el valor de `Arguments="-ToastActivated"` para que sepas que tu inicio procedía de una notificación del sistema.
+4. **com:Extension** para el activador COM utilizando el GUID del paso n.º4. Asegúrate de incluir el valor de `Arguments="-ToastActivated"` para que sepas que tu inicio procedía de una notificación del sistema.
 5. **desktop:Extension** para **windows.toastNotificationActivation** para declarar el CLSID del activador de la notificación del sistema (el GUID del paso n.º4).
 
 **Package.appxmanifest**
@@ -238,6 +238,9 @@ var toast = new ToastNotification(doc);
 DesktopNotificationManagerCompat.CreateToastNotifier().Show(toast);
 ```
 
+> [!IMPORTANT]
+> Las aplicaciones de Win32 clásicas no pueden usar plantillas de notificación del sistema heredadas (como ToastText02). Se producirá un error en la activación de las plantillas heredadas cuando se especifique el CLSID COM. Debes usar las plantillas ToastGeneric de Windows 10 como se muestra arriba.
+
 
 ## <a name="step-8-handling-activation"></a>Paso 8: Control de la activación
 
@@ -260,7 +263,7 @@ public class MyNotificationActivator : NotificationActivator
         Application.Current.Dispatcher.Invoke(delegate
         {
             // Tapping on the top-level header launches with empty args
-            if (arguments.Length = 0)
+            if (arguments.Length == 0)
             {
                 // Perform a normal launch
                 OpenWindowIfNeeded();
@@ -406,4 +409,6 @@ Si has instalado tanto el Puente de dispositivo de escritorio como la aplicació
 ## <a name="resources"></a>Recursos
 
 * [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/desktop-toasts)
+* [Notificaciones del sistema desde aplicaciones de escritorio](toast-desktop-apps.md)
 * [Documentación del contenido de la notificación del sistema](adaptive-interactive-toasts.md)
+

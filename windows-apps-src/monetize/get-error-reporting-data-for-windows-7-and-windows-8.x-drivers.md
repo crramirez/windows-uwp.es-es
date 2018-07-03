@@ -4,18 +4,18 @@ ms.assetid: 2F30E68B-B643-4387-9430-793D08AAF0E7
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados del informe de errores de controladores de Windows 7 y Windows 8.x para un intervalo de fechas y otros filtros opcionales. Este método está previsto solo para IHV.
 title: Obtener datos de informes de errores para controladores de Windows 7 y Windows 8.x
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis de la Store Windows, errors, errores
 ms.localizationpriority: medium
-ms.openlocfilehash: 71a816f9665cdaa5673adad1a4de5e976c0cd0c1
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 75a1b16e8882e961ccd0a10e99e94038948f59fd
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663375"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989599"
 ---
 # <a name="get-error-reporting-data-for-windows-7-and-windows-8x-drivers"></a>Obtener datos de informes de errores para controladores de Windows 7 y Windows 8.x
 
@@ -29,7 +29,7 @@ Usa este método en la API de análisis de Microsoft Store para obtener los dato
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
@@ -53,11 +53,11 @@ Para usar este método, primero debes hacer lo siguiente:
 | Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
-| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
+| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor siempre es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
 | filter | cadena  | Una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>date</strong></li><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>driverName</strong></li><li><strong>driverVersion</strong></li><li><strong>oemName</strong></li><li><strong>oemModel</strong></li><li><strong>flightRing</strong></li><li><strong>architecture</strong></li></ul> | No   |
-| aggregationLevel | cadena | Especifica el intervalo de tiempo para el que se han de recuperar los datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>. Si especificas los valores <strong>semana</strong> o <strong>mes</strong>, los valores <em>failureName</em> y <em>failureHash</em> se limitarán a 1000 depósitos. | No |
+| aggregationLevel | cadena | Especifica el intervalo de tiempo necesario para recuperar los datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>. Si especificas los valores <strong>semana</strong> o <strong>mes</strong>, los valores <em>failureName</em> y <em>failureHash</em> se limitarán a 1000 depósitos. | No |
 | orderby | cadena | Una instrucción que ordena los valores de datos de resultados. La sintaxis es <em>orderby=field [order],field [order],....</em>. Puede especificar los siguientes campos desde el cuerpo de la respuesta:<p/><ul><li><strong>date</strong></li><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>osName</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>driverName</strong></li><li><strong>driverVersion</strong></li><li><strong>oemName</strong></li><li><strong>oemModel</strong></li><li><strong>flightRing</strong></li><li><strong>architecture</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
 | groupby | cadena | Una instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>driverName</strong></li><li><strong>driverVersion</strong></li><li><strong>oemName</strong></li><li><strong>oemModel</strong></li><li><strong>flightRing</strong></li><li><strong>architecture</strong></li></ul><p>Las filas de datos que se devuelvan, contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>date</strong></li><li><strong>eventCount</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=failureName,market&amp;aggregationLevel=week</em></p></p> |  No  |
 
@@ -83,7 +83,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Valor      | matriz   | Una matriz de objetos que contienen los datos agregados del informe de errores. Para más información sobre los datos de cada objeto, consulta la tabla siguiente.     |
 | @nextLink  | cadena  | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de errores de la solicitud. |
-| TotalCount | número | El número total de filas del resultado de datos de la consulta.     |
+| TotalCount | entero | El número total de filas en el resultado de datos de la consulta.     |
 
 
 Los elementos de la matriz *Value* contienen los siguientes valores.
@@ -106,7 +106,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | oemName | cadena | El nombre de OEM del dispositivo en el que se produjo el error. |
 | oemModel | cadena | El nombre del modelo de dispositivo en el que se produjo el error. |
 | flightRing | cadena | El nombre del piloto de SO en el que se produjo el error. |
-| eventCount      | número | El número de eventos atribuidos a este error del nivel de agregación especificado.      |
+| eventCount      | entero | El número de eventos atribuidos a este error del nivel de agregación especificado.      |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta

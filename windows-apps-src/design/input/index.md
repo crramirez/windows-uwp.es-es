@@ -13,12 +13,12 @@ ms.prod: windows
 ms.technology: uwp
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: d1e28445a665e9d805b8633963784c08b63af6ca
-ms.sourcegitcommit: 4e39a2bdb5b895ed09b64957dc1a86ccf1f8e1af
+ms.openlocfilehash: 1699efed48c4b62a4c7d145bb2f0903cddd5897e
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "1718755"
+ms.lasthandoff: 05/18/2018
+ms.locfileid: "1896925"
 ---
 # <a name="input-and-interactions"></a>Entrada e interacciones
 
@@ -63,8 +63,8 @@ Las instrucciones de diseño y codificación de esta sección te ayudan a person
                         </div>
                     </div> -->
                     <div class="cardText">
-                        <h3><a href="identify-input-devices.md">Identificar dispositivos de entrada</a></h3>
-                        <p>Identifica los dispositivos de entrada que se conectan a un dispositivo de UWP e identifica sus capacidades y atributos.</p>
+                        <h3><a href="gaze-interactions.md">NUEVO Entrada de mirada</a></h3>
+                        <p>Realiza un seguimiento de la mirada del usuario en función de la ubicación y del movimiento de sus ojos y de su cabeza.</p>
                     </div>
                 </div>
             </div>
@@ -85,6 +85,7 @@ See our <b>[Input primer](index.md)</b> to familiarize yourself with each input 
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
                         <h3>Entrada</h3>
+                        <p style="display: block;"><a  href="/windows/uwp/design/input/identify-input-devices">Identificar dispositivos de entrada</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/handle-pointer-input">Puntero</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/pen-and-stylus-interactions">Lápiz y Windows Ink</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/touch-interactions">Función táctil</a></p>
@@ -94,6 +95,7 @@ See our <b>[Input primer](index.md)</b> to familiarize yourself with each input 
                         <p style="display: block;"><a  href="/windows/uwp/design/input/touchpad-interactions">Panel táctil</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/windows-wheel-interactions">SurfaceDial</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/multiple-input-design-guidelines">Varias entradas</a></p>
+                        <p style="display: block;"><a  href="/windows/uwp/design/input/input-injection">Inserción de entradas</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/custom-text-input">Entrada de texto personalizado</a></p>                        
                     </div>
                 </div>

@@ -4,18 +4,18 @@ ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: Obtén las directrices de la interfaz de usuario y de la experiencia del usuario para los anuncios en aplicaciones.
 title: Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
 ms.author: mcleans
-ms.date: 08/23/2017
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, guidelines, directrices, best practices, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: 6eaeacdb24428b8870e941e5f93ca40dfa554903
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 026ec28c609d62f59958f6ca804c67bb9ca3e109
+ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690811"
+ms.lasthandoff: 05/14/2018
+ms.locfileid: "1881076"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
 
@@ -23,6 +23,17 @@ En este artículo se proporcionan directrices para ofrecer magníficas experienc
 
 > [!IMPORTANT]
 > Todo uso de publicidad en tu aplicación debe regirse por las Directivas de Microsoft Store, que incluyen, entre otras, la [directiva 10.10](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) (Conducta y contenido de publicidad). En concreto, la implementación de anuncios de banner o anuncios intersticiales de la aplicación debe cumplir los requisitos de directiva de Microsoft Store [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content). En este artículo se incluyen ejemplos de implementaciones que infringirían dicha directiva. Tales ejemplos se proporcionan para fines informativos solamente, como una forma de ayudarte a comprender mejor la directiva. Estos ejemplos no son integrales y es posible que haya muchas otras formas de infringir las Directivas de Microsoft Store que no se muestran en este artículo.
+
+## <a name="general-best-practices"></a>Procedimientos recomendados generales
+
+Antes de revisar nuestras directrices para diferentes tipos de anuncios en este artículo, revisa estos procedimientos recomendados generales para mejorar tus ingresos por anuncios.
+
+* [Planear la colocación de anuncios detenidamente](https://blogs.windows.com/buildingapps/2017/04/10/monetizing-app-advertisement-placement/). Consulta nuestras directrices relacionadas acerca de la [optimización la capacidad de visualización de las unidades de anuncio](optimize-ad-unit-viewability.md).
+* [Usar anuncios de banner intersticiales como reserva para anuncios intersticiales en vídeo](https://blogs.windows.com/buildingapps/2017/04/17/monetizing-app-use-interstitial-banner-fallback-interstitial-video).
+* [Conocer a los usuarios para proporcionar anuncios más dirigidos](https://blogs.windows.com/buildingapps/2017/05/17/monetize-app-know-user-serve-better-targeted-ads/).
+* [Usar las bibliotecas de publicidad más recientes](https://blogs.windows.com/buildingapps/2017/05/22/earn-money-moving-latest-advertising-libraries/).
+* [Establecer la configuración de COPPA correcta para tu aplicación](https://blogs.windows.com/buildingapps/2017/06/21/monetizing-app-set-coppa-settings-app).
+
 
 ## <a name="guidelines-for-banner-ads"></a>Directrices para anuncios de banner
 
@@ -32,19 +43,17 @@ En las siguientes secciones se proporcionan recomendaciones sobre cómo implemen
 
 Te recomendamos que sigas los siguientes procedimientos recomendados a la hora de implementar anuncios de banner en tu aplicación:
 
+* [Usar tamaños de Interactive Advertising Bureau](https://blogs.windows.com/buildingapps/2017/04/03/monetizing-app-use-interactive-advertising-bureau-ad-sizes) que se ajusten correctamente al diseño del dispositivo.
+
 * Dedica la mayor parte de la interfaz de usuario de la aplicación al contenido y los controles funcionales.
 
 * Diseña la publicidad en la experiencia. Ofrece a tus diseñadores un anuncio de muestra para planear el aspecto que tendrá la publicidad. Dos ejemplos de anuncios bien planeados en las aplicaciones son el diseño de anuncios como contenido y el diseño de división.
 
   Para ver el aspecto y el funcionamiento de los distintos tamaños de anuncio en la aplicación, puedes usar nuestras [unidades de anuncios de prueba](set-up-ad-units-in-your-app.md#test-ad-units) durante la etapa de desarrollo y pruebas. Cuando termines con las unidades de anuncio del modo de prueba, recuerda [actualizar la aplicación con unidades de anuncios dinámicos](set-up-ad-units-in-your-app.md#live-ad-units) antes de enviar la aplicación para su certificación.
 
-* Usa [tamaños de anuncio](supported-ad-sizes-for-banner-ads.md) que se ajusten correctamente al diseño del dispositivo en ejecución.
-
 * Planea las ocasiones en que no haya anuncios disponibles. Puede que haya ocasiones en que no se envíen anuncios a la aplicación. Diseña las páginas de manera que tengan un magnífico aspecto tanto si muestran un anuncio como si no. Para obtener más información, consulta [Controlar errores de anuncios](error-handling-with-advertising-libraries.md).
 
 * Si tienes un escenario para alertar al usuario que se controla mejor con una superposición, haz una llamada a [AdControl.Suspend](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.suspend.aspx) mientras se muestra la superposición y, luego, a [AdControl.Resume](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.resume.aspx) cuando termine el escenario de alerta.
-
-<span />
 
 ### <a name="practices-to-avoid"></a>Procedimientos que deben evitarse
 
@@ -55,8 +64,6 @@ Te recomendamos que evites los siguientes procedimientos cuando implementes anun
 * No incluir publicidad excesiva ni saturar la aplicación. Demasiados anuncios en la aplicación desmerecerán su apariencia y facilidad de uso. El objetivo de la publicidad es ganar dinero, pero no a costa de la propia aplicación.
 
 * No distraer al usuario de sus tareas principales. La aplicación siempre debe ser el foco principal. El espacio de anuncios debe incluirse de modo que sea un foco secundario.
-
-<span />
 
 ### <a name="examples-of-policy-violations"></a>Ejemplos de infracciones de directivas
 
@@ -74,7 +81,7 @@ En esta sección se proporcionan ejemplos de escenarios de anuncios de banner qu
 
 * Interactuar con interfaces no documentadas u objetos secundarios creados por las bibliotecas de Microsoft Advertising, por ejemplo, **WebView** o **MediaElement**.
 
-<span id="interstitialbestpractices10">
+<span id="interstitialbestpractices10" />
 
 ## <a name="guidelines-for-interstitial-ads"></a>Directrices para anuncios intersticiales
 
@@ -112,13 +119,9 @@ Te recomendamos que sigas los siguientes procedimientos recomendados a la hora d
 
 * Usa el tiempo de espera predeterminado (30 segundos), a menos que haya una razón válida para cambiarlo, pero no uses menos de 10 segundos. Los anuncios intersticiales tardan mucho más tiempo en descargarse que los anuncios de banner estándar, especialmente en los mercados que no tienen conexiones de alta velocidad.
 
-<span/>
-
 * Ten en cuenta el plan de datos del usuario. Por ejemplo, no lo muestres o advierte al usuario, antes de presentar un anuncio de vídeo intersticial en un dispositivo móvil que supere o se acerque al límite de datos. Existen algunas API en la clase [ConnectionProfile](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.ConnectionProfile) que pueden resultarte útiles.
 
 * Mejora continuamente tu aplicación después del envío inicial. Consulta los [informes de anuncios](../publish/advertising-performance-report.md) y realiza cambios de diseño para mejorar las velocidades de relleno y finalización de vídeo intersticial.
-
-<span />
 
 ### <a name="practices-to-avoid"></a>Procedimientos que deben evitarse
 
@@ -141,8 +144,6 @@ Te recomendamos que evites los siguientes procedimientos cuando implementes anun
     * La aplicación debe incluir una funcionalidad integrada que genere el mismo beneficio que un anuncio real.
 
 * No uses anuncios intersticiales para permitir que el usuario obtenga una ventaja competitiva en un juego de varios jugadores. Por ejemplo, no seduzcas al usuario con un arma de fuego superior en un juego de tiros en primera persona a condición de que vea un anuncio intersticial. Una camisa personalizada para el avatar del jugador está bien, siempre y cuando no proporcione camuflaje.
-
-<span />
 
 ### <a name="examples-of-policy-violations"></a>Ejemplos de infracciones de directivas
 
@@ -170,23 +171,23 @@ Los [anuncios nativos](native-ads.md) te proporcionan mucho control sobre la man
 
 ### <a name="register-the-container-for-your-native-ad"></a>Registrar el contenedor para el anuncio nativo
 
-En el código, debes llamar al método [RegisterAdContainer](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.registeradcontainer.aspx) del objeto **NativeAd** para registrar el elemento de interfaz de usuario que actúa como contenedor para el anuncio nativo y, opcionalmente, los controles que quieras registrar como destinos seleccionables para el anuncio. Esto es necesario para realizar un seguimiento adecuado de los clics y de las impresiones de anuncios.
+En el código, debes llamar al método [RegisterAdContainer](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.registeradcontainer.aspx) del objeto **NativeAdV2** para registrar el elemento de interfaz de usuario que actúa como contenedor para el anuncio nativo y, opcionalmente, los controles que quieras registrar como destinos seleccionables para el anuncio. Esto es necesario para realizar un seguimiento adecuado de los clics y de las impresiones de anuncios.
 
 Hay dos sobrecargas para el método **RegisterAdContainer** que puedes usar:
 
-* Si quieres que sea seleccionable el contenedor completo para todos los elementos de anuncios nativos individuales, llama al método [RegisterAdContainer(FrameworkElement)](https://msdn.microsoft.com/library/windows/apps/mt809188.aspx) y pasa el control del contenedor al método. Por ejemplo, si muestras todos los elementos de anuncios nativos en controles independientes que se hospedan en un **StackPanel** y quieres que sea seleccionable todo el **StackPanel**, pasa el **StackPanel** a este método.
+* Si quieres que sea seleccionable el contenedor completo para todos los elementos de anuncios nativos individuales, llama al método **RegisterAdContainer(FrameworkElement)** y pasa el control del contenedor al método. Por ejemplo, si muestras todos los elementos de anuncios nativos en controles independientes que se hospedan en un **StackPanel** y quieres que sea seleccionable todo el **StackPanel**, pasa el **StackPanel** a este método.
 
-* Si quieres que solo sean seleccionables determinados elementos de anuncios nativos, llama al método [RegisterAdContainer(FrameworkElement, IVector(FrameworkElement))](https://msdn.microsoft.com/library/windows/apps/mt809189.aspx). Solo serán seleccionables los controles que pases al segundo parámetro.
+* Si quieres que solo sean seleccionables determinados elementos de anuncios nativos, llama al método **RegisterAdContainer(FrameworkElement, IVector(FrameworkElement))**. Solo serán seleccionables los controles que pases al segundo parámetro.
 
 ### <a name="required-native-ad-elements"></a>Elementos de anuncios nativos necesarios
 
-Como mínimo, siempre debes mostrar los siguientes elementos de anuncios nativos al usuario en el diseño de anuncio nativo. Si no incluyes estos elementos, puedes ver un rendimiento deficiente y bajas rentabilidades para tu unidad de anuncio.
+Como mínimo, siempre debes mostrar los siguientes elementos de anuncios nativos proporcionados por las propiedades del objeto **NativeAdV2** al usuario en el diseño de anuncio nativo. Si no incluyes estos elementos, puedes ver un rendimiento deficiente y bajas rentabilidades para tu unidad de anuncio.
 
-1. Muestra siempre el título del anuncio nativo (disponible en la propiedad [Título](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.title.aspx) del objeto **NativeAd**). Proporciona espacio suficiente para mostrar 25 caracteres como mínimo. Si el título es más largo, reemplaza el texto adicional por puntos suspensivos.
+1. Muestra siempre el título del anuncio nativo (disponible en la propiedad **Título**). Proporciona espacio suficiente para mostrar 25 caracteres como mínimo. Si el título es más largo, reemplaza el texto adicional por puntos suspensivos.
 2. Muestra siempre al menos uno de los siguientes elementos para ayudar a diferenciar la experiencia de anuncios nativos del resto de la aplicación y destacar claramente que el contenido lo proporciona un anunciante:
-  * El icono *ad* diferenciable (disponible en la propiedad [AdIcon](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.adicon.aspx) del objeto **NativeAd**). Este icono lo proporciona Microsoft.
-  * El texto *patrocinado por* (disponible en la propiedad [SponsoredBy](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.sponsoredby.aspx) del objeto **NativeAd**). Este texto lo proporciona el anunciante.
-  * Como alternativa al texto *patrocinado por*, puedes elegir mostrar algún otro texto que ayude a diferenciar la experiencia de anuncios nativos del resto de la aplicación, como "Contenido patrocinado", "Contenido promocional", "Contenido recomendado", etc.
+    * El icono *ad* diferenciable (disponible en la propiedad **AdIcon**). Este icono lo proporciona Microsoft.
+    * El texto *patrocinado por* (disponible en la propiedad **SponsoredBy**). Este texto lo proporciona el anunciante.
+    * Como alternativa al texto *patrocinado por*, puedes elegir mostrar algún otro texto que ayude a diferenciar la experiencia de anuncios nativos del resto de la aplicación, como "Contenido patrocinado", "Contenido promocional", "Contenido recomendado", etc.
 
 ### <a name="user-experience"></a>Experiencia del usuario
 
@@ -194,11 +195,11 @@ El anuncio nativo se debe delinear claramente del resto de la aplicación y tien
 
 ### <a name="description"></a>Descripción
 
-Si eliges mostrar la descripción para la propiedad (disponible en la [Descripción](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.description.aspx) del anuncio del objeto **NativeAd**), proporciona suficiente espacio para mostrar 75 caracteres como mínimo. Te recomendamos que uses una animación para mostrar el contenido completo de la descripción del anuncio.
+Si eliges mostrar la descripción para la propiedad (disponible en la **Descripción** del anuncio del objeto **NativeAdV2**), proporciona suficiente espacio para mostrar 75 caracteres como mínimo. Te recomendamos que uses una animación para mostrar el contenido completo de la descripción del anuncio.
 
 ### <a name="call-to-action"></a>Llamada a la acción
 
-El texto de la *llamada a la acción* (disponible en la propiedad [CallToAction](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.calltoaction.aspx) del objeto **NativeAd**) es un componente fundamental del anuncio. Si decides mostrar este texto, sigue estas directrices:
+El texto de la *llamada a la acción* (disponible en la propiedad **CallToAction** del objeto **NativeAdV2**) es un componente fundamental del anuncio. Si decides mostrar este texto, sigue estas directrices:
 
 * Muestra siempre el texto de la *llamada a la acción* al usuario en un control interactivo como un botón o hipervínculo.
 * Muestra siempre el texto de la *llamada a la acción* en su totalidad.

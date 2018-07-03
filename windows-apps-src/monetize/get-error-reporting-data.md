@@ -4,18 +4,18 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados del informe de errores de un intervalo de fechas y otros filtros opcionales.
 title: Obtener datos de informes de errores para la aplicación
 ms.author: mcleans
-ms.date: 03/06/2018
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Store, Windows Store analytics API, API de análisis de Microsoft Store, errors, errores
 ms.localizationpriority: medium
-ms.openlocfilehash: 42f6926e8252f761ed54d30c410ffabe135e9c4a
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 2937d0d9ebfc8c9450692a01e77e57e68c896dba
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664095"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989479"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Obtener datos de informes de errores para la aplicación
 
@@ -29,7 +29,7 @@ Puedes recuperar información adicional de los errores con los métodos para [ob
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
@@ -50,7 +50,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Parámetro        | Tipo   |  Descripción      |  Obligatorio  
+| Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
 | applicationId | cadena | El Id. de la Store de la aplicación sobre la que quieres recuperar los datos del informe de errores. El Id. de la Store está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8. |  Sí  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor predeterminado es la fecha actual. Si *aggregationLevel* es **day**, **week** o **month**, este parámetro debe especificar una fecha con el formato ```mm/dd/yyyy```. Si *aggregationLevel* es **hour**, este parámetro puede especificar una fecha con el formato ```mm/dd/yyyy``` o una fecha y hora con el formato ```yyyy-mm-dd hh:mm:ss```.  |  No  |
@@ -84,7 +84,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Valor      | matriz   | Matriz de objetos que contienen los datos agregados del informe de errores. Para más información sobre los datos de cada objeto, consulta la sección [valores de error](#error-values) que encontrarás a continuación.     |
 | @nextLink  | cadena  | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de errores de la solicitud. |
-| TotalCount | número | Número total de filas en el resultado de datos de la consulta.     |
+| TotalCount | entero | El número total de filas en el resultado de datos de la consulta.     |
 
 
 ### <a name="error-values"></a>Valores de error
@@ -100,14 +100,14 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | failureHash     | cadena  | Identificador único del error.   |
 | symbol          | cadena  | Símbolo que se asigna al error. |
 | osVersion       | cadena  | Una de las cadenas siguientes que especifica la versión del sistema operativo en la que se produjo el error:<ul><li>**Windows Phone 7.5**</li><li>**Windows Phone 8**</li><li>**Windows Phone 8.1**</li><li>**Windows Phone 10**</li><li>**Windows 8**</li><li>**Windows 8.1**</li><li>**Windows 10**</li><li>**Unknown**</li></ul>  |
-| osRelease       | cadena  |  Una de las siguientes cadenas que especifica la versión del sistema operativo o el canal de actualizaciones (como una subpoblación dentro de la versión del sistema operativo) en el que se ha instalado la aplicación de escritorio.<p/><p>Para Windows10:</p><ul><li><strong>Versión 1507</strong></li><li><strong>Versión 1511</strong></li><li><strong>Versión 1607</strong></li><li><strong>Versión 1703</strong></li><li><strong>Versión 1709</strong></li><li><strong>Vista previa de versión</strong></li><li><strong>Modo anticipado de Insider</strong></li><li><strong>Modo aplazado de Insider</strong></li></ul><p/><p>Para Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Para Windows Server 2016:</p><ul><li><strong>Versión 1607</strong></li></ul><p>Para Windows8.1:</p><ul><li><strong>Update 1</strong></li></ul><p>Para Windows7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Si se desconoce la versión del sistema operativo o el canal de actualizaciones, este campo tiene el valor <strong>Unknown</strong>.</p>    |
+| osRelease       | cadena  |  Una de las siguientes cadenas que especifica la versión del sistema operativo o el canal de actualizaciones (como una subpoblación dentro de la versión del sistema operativo) en el que se ha producido el error.<p/><p>Para Windows10:</p><ul><li><strong>Versión 1507</strong></li><li><strong>Versión 1511</strong></li><li><strong>Versión 1607</strong></li><li><strong>Versión 1703</strong></li><li><strong>Versión 1709</strong></li><li><strong>Versión 1803</strong></li><li><strong>Vista previa de versión</strong></li><li><strong>Modo anticipado de Insider</strong></li><li><strong>Modo aplazado de Insider</strong></li></ul><p/><p>Para Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Para Windows Server 2016:</p><ul><li><strong>Versión 1607</strong></li></ul><p>Para Windows8.1:</p><ul><li><strong>Update 1</strong></li></ul><p>Para Windows7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Si se desconoce la versión del sistema operativo o el canal de actualizaciones, este campo tiene el valor <strong>Unknown</strong>.</p>    |
 | eventType       | cadena  | Una de las cadenas siguientes:<ul><li>**bloquear**</li><li>**colgar**</li><li>**memoria**</li><li>**jse**</li></ul>      |
 | market          | cadena  | El código de país ISO 3166 del mercado del dispositivo.   |
 | deviceType      | cadena  | Una de las siguientes cadenas que indica el tipo de dispositivo en el que se produjo el error:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**IoT**</li><li>**Holographic**</li><li>**Unknown**</li></ul>    |
 | packageName     | cadena  | Nombre único del paquete de la aplicación que está asociado al error.      |
 | packageVersion  | cadena  | Versión del paquete de la aplicación que está asociado al error.   |
-| deviceCount     | número | Número de dispositivos únicos que corresponden a este error del nivel de agregación especificado.  |
-| eventCount      | número | El número de eventos atribuidos a este error del nivel de agregación especificado.      |
+| deviceCount     | entero | Número de dispositivos únicos que corresponden a este error del nivel de agregación especificado.  |
+| eventCount      | entero | El número de eventos atribuidos a este error del nivel de agregación especificado.      |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
@@ -151,4 +151,4 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Obtener adquisiciones de aplicaciones](get-app-acquisitions.md)
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
 * [Obtener la clasificación de la aplicación](get-app-ratings.md)
-* [Obtener opiniones de la aplicación](get-app-reviews.md)
+* [Obtener las opiniones de la aplicación](get-app-reviews.md)

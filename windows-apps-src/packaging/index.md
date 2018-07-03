@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, packaging, empaquetado
 ms.localizationpriority: medium
-ms.openlocfilehash: cdb49ba0082c24c00bc77d8ce2a392d9a6090ce2
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 263a0b7ce4eaeb3bac132789d4970fbf2c7ccc1f
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815590"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842492"
 ---
 # <a name="packaging-apps"></a>Empaquetado de aplicaciones
 
@@ -31,6 +31,7 @@ Esta sección contiene o menciona artículos sobre los paquetes de aplicaciones 
 | [Arquitecturas de paquetes de aplicaciones](device-architecture.md) | Obtén más información sobre qué arquitecturas de procesador debes usar al compilar el paquete de aplicación para UWP. |
 | [Instalación en streaming de aplicaciones para UWP](streaming-install.md) | La instalación en streaming de la Plataforma universal de Windows (UWP) te permite especificar qué partes de la aplicación deben descargarse primero de Microsoft Store. Al descargar primero los archivos esenciales de la aplicación, el usuario puede iniciarla e interactuar con ella mientras el resto de archivos terminan de descargarse en segundo plano. |
 | [Paquetes opcionales y creación de conjuntos relacionados](optional-packages.md) | Los paquetes opcionales tienen contenido que se puede integrar con un paquete principal. Estos son útiles para el contenido descargable (DLC), para dividir una aplicación grande que tenga restricciones de tamaño o para enviar cualquier contenido adicional aparte de la aplicación original. |
+| [Paquetes opcionales con código ejecutable](optional-packages-with-executable-code.md) | Aprende a usar Visual Studio para crear un paquete opcional con código ejecutable. |
 | [Instalar aplicaciones para UWP con el Instalador de aplicación](appinstaller-root.md) | El Instalador de aplicación permite la instalación de las aplicaciones para UWP haciendo doble clic en el paquete de la aplicación. |
 | [Instalar aplicaciones con la herramienta WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para UWP desde un equipo con Windows10 en cualquier dispositivo con Windows10 Mobile. Puedes usar esta herramienta para implementar un paquete .appx si el dispositivo con Windows10 Mobile está conectado mediante USB o disponible en la misma subred sin necesidad de Microsoft Visual Studio o la solución para dicha aplicación. Este artículo describe cómo instalar aplicaciones para UWP con esta herramienta. |
 | [Configurar compilaciones automatizadas para la aplicación para UWP](auto-build-package-uwp-apps.md) | Si quieres empaquetar tu aplicación dentro de un proceso de compilación automatizado, este tema muestra cómo hacerlo con Visual Studio Team Services (VSTS). |

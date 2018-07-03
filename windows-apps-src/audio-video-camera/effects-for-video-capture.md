@@ -1,21 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-description: "Este tema muestra cómo aplicar efectos a la vista previa de la cámara y a las secuencias de grabación de vídeo, y muestra cómo usar el efecto de estabilización de vídeo."
-title: "Efectos para la captura de vídeo"
+description: Este tema muestra cómo aplicar efectos a la vista previa de la cámara y a las secuencias de grabación de vídeo, y muestra cómo usar el efecto de estabilización de vídeo.
+title: Efectos para la captura de vídeo
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7e8d65576347308eea7dd2f445961ba366557fa3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 6a3c6efd0abc4061ffc567ec088171c62528e7ff
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843285"
 ---
 # <a name="effects-for-video-capture"></a>Efectos para la captura de vídeo
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tema muestra cómo aplicar efectos a la vista previa de la cámara y a las secuencias de grabación de vídeo, y muestra cómo usar el efecto de estabilización de vídeo.
 
@@ -86,7 +89,7 @@ Establece la propiedad [**Video**](https://msdn.microsoft.com/library/windows/ap
 
 [!code-cs[SetUpVideoStabilizationRecommendationAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetSetUpVideoStabilizationRecommendationAsync)]
 
-### <a name="handle-the-video-stabilization-effect-being-disabled"></a>Controlar el efecto de estabilización de vídeo que se va a deshabilitar
+### <a name="handle-the-video-stabilization-effect-being-disabled"></a>El controlador del efecto de estabilización de vídeo está deshabilitado
 
 El sistema puede deshabilitar automáticamente el efecto de estabilización de vídeo si el rendimiento de píxeles es demasiado alto para que el efecto pueda controlarlo, o si detecta que el efecto se está ejecutando lentamente. Si esto ocurre, se genera el evento EnabledChanged. La instancia **VideoStabilizationEffect** del parámetro *sender* indica el nuevo estado del efecto: habilitado o deshabilitado. La clase [**VideoStabilizationEffectEnabledChangedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948979) tiene un valor [**VideoStabilizationEffectEnabledChangedReason**](https://msdn.microsoft.com/library/windows/apps/dn948981) que indica por qué se habilitó o deshabilitó el efecto. Ten en cuenta que este evento también se genera, si mediante programación, habilitas o deshabilitas el efecto; en tal caso, el motivo será **Programmatic**.
 
@@ -100,7 +103,7 @@ Para limpiar el efecto de estabilización de vídeo, llama al método [**RemoveE
 
 [!code-cs[CleanUpVisualStabilizationEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetCleanUpVisualStabilizationEffect)]
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)

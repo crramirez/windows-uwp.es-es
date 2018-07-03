@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Usa este método en la API de análisis de Microsoft Store para obtener información detallada acerca de un error específico de tu aplicación de escritorio.
 title: Obtener los detalles de un error en la aplicación de escritorio
 ms.author: mcleans
-ms.date: 03/06/2018
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis Microsoft Store, errors, errores, details, detalles
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e24d3c44743cae77fdbf2c42dcf0792d0ce11b4
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 5c7836119b99e885bd0328a8ea313409a6fcf6dc
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663835"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989549"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>Obtener los detalles de un error en la aplicación de escritorio
 
@@ -50,7 +50,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Parámetro        | Tipo   |  Descripción      |  Obligatorio  
+| Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
 | applicationId | cadena | El identificador de producto de la aplicación de escritorio de la cual quieres recuperar los detalles de errores. Para obtener el id. del producto de una aplicación de escritorio, abra cualquier [informe de análisis del Centro de desarrollo de tu aplicación de escritorio](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como el **Informe de estado**) y recuperara el id. del producto desde la dirección URL. |  Sí  |
 | failureHash | cadena | El identificador exclusivo del error sobre el que quieres obtener información detallada. Para obtener este valor respecto al error que te interesa, usa el método para [obtener los datos del informe de errores](get-error-reporting-data.md) y utiliza el valor **failureHash** del cuerpo de la respuesta de ese método. |  Sí  |
@@ -59,7 +59,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10 y skip=0 recuperan las primeras 10 filas de datos, los valores top=10 y skip=10 recuperan las siguientes 10 filas de datos, y así sucesivamente. |  No  |
 | filter |cadena  | Una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>market</strong></li><li><strong>date</strong></li><li><strong>cabIdHash</strong></li><li><strong>cabExpirationTime</strong></li><li><strong>deviceType</strong></li><li><strong>deviceModel</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li><li><strong>applicationVersion</strong></li><li><strong>osBuild</strong></li><li><strong>fileName</strong></li></ul> | No   |
-| orderby | cadena | Una instrucción que ordena los valores de datos de resultado. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>market</strong></li><li><strong>date</strong></li><li><strong>cabIdHash</strong></li><li><strong>cabExpirationTime</strong></li><li><strong>deviceType</strong></li><li><strong>deviceModel</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li><li><strong>applicationVersion</strong></li><li><strong>osBuild</strong></li><li><strong>fileName</strong></li></ul><p>El parámetro <em>order</em> es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
+| orderby | cadena | Una instrucción que ordena los valores de los datos de resultado. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>market</strong></li><li><strong>date</strong></li><li><strong>cabIdHash</strong></li><li><strong>cabExpirationTime</strong></li><li><strong>deviceType</strong></li><li><strong>deviceModel</strong></li><li><strong>osVersion</strong></li><li><strong>osRelease</strong></li><li><strong>applicationVersion</strong></li><li><strong>osBuild</strong></li><li><strong>fileName</strong></li></ul><p>El parámetro <em>order</em> es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -83,7 +83,7 @@ Authorization: Bearer <your access token>
 |------------|---------|------------|
 | Valor      | matriz   | Una matriz de objetos que contienen los datos detallados del error. Para más información sobre los datos de cada objeto, consulta la sección sobre los [valores detallados del error](#error-detail-values) que encontrarás a continuación.          |
 | @nextLink  | cadena  | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de errores de la solicitud. |
-| TotalCount | número | El número total de filas del resultado de datos de la consulta.        |
+| TotalCount | entero | El número total de filas en el resultado de datos de la consulta.        |
 
 
 <span id="error-detail-values"/>
@@ -105,7 +105,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | applicationVersion         | cadena  |   La versión de la aplicación ejecutable en la que se produjo el error.     |
 | deviceModel           | cadena  | Una cadena que especifica el modelo del dispositivo en el que se estaba ejecutando la aplicación cuando se produjo el error.   |
 | osVersion       | cadena  | Una de las cadenas siguientes que especifica la versión del sistema operativo en la que se realizó la instalación de la aplicación de escritorio:<p/><ul><li><strong>Windows7</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>WindowsServer2016</strong></li><li><strong>WindowsServer1709</strong></li><li><strong>Unknown</strong></li></ul>    |
-| osRelease       | cadena  |  Una de las siguientes cadenas que especifica la versión del sistema operativo o el canal de actualizaciones (como un subpoblación dentro de la versión del sistema operativo) en el que se ha instalado la aplicación de escritorio.<p/><p>Para Windows10:</p><ul><li><strong>Versión 1507</strong></li><li><strong>Versión 1511</strong></li><li><strong>Versión 1607</strong></li><li><strong>Versión 1703</strong></li><li><strong>Versión 1709</strong></li><li><strong>Vista previa de versión</strong></li><li><strong>Modo anticipado de Insider</strong></li><li><strong>Modo aplazado de Insider</strong></li></ul><p/><p>Para Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Para Windows Server 2016:</p><ul><li><strong>Versión 1607</strong></li></ul><p>Para Windows8.1:</p><ul><li><strong>Update 1</strong></li></ul><p>Para Windows7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Si se desconoce la versión del sistema operativo o el canal de actualizaciones, este campo tiene el valor <strong>Unknown</strong>.</p>    |
+| osRelease       | cadena  |  Una de las siguientes cadenas que especifica la versión del sistema operativo o el canal de actualizaciones (como una subpoblación dentro de la versión del sistema operativo) en el que se ha producido el error.<p/><p>Para Windows10:</p><ul><li><strong>Versión 1507</strong></li><li><strong>Versión 1511</strong></li><li><strong>Versión 1607</strong></li><li><strong>Versión 1703</strong></li><li><strong>Versión 1709</strong></li><li><strong>Versión 1803</strong></li><li><strong>Vista previa de versión</strong></li><li><strong>Modo anticipado de Insider</strong></li><li><strong>Modo aplazado de Insider</strong></li></ul><p/><p>Para Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Para Windows Server 2016:</p><ul><li><strong>Versión 1607</strong></li></ul><p>Para Windows8.1:</p><ul><li><strong>Update 1</strong></li></ul><p>Para Windows7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Si se desconoce la versión del sistema operativo o el canal de actualizaciones, este campo tiene el valor <strong>Unknown</strong>.</p>    |
 | deviceType      | cadena  | Una de las siguientes cadenas que indica el tipo de dispositivo en el que se produjo el error: <p/><ul><li><strong>PC</strong></li><li><strong>Servidor</strong></li><li><strong>Unknown</strong></li></ul>     |
 | cabDownloadable           | Booleano  | Indica si el usuario puede descargar el archivo .cab.   |
 | fileName           | cadena  | El nombre del archivo ejecutable de la aplicación de escritorio de la cual recuperaste los detalles de errores.  |

@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cce355ab6f571f932d9dc10a1b185821118266c
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: a6442857f8d7914ab423c0981ae97598084f0068
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690321"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862847"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Activación del modo de desarrollador de Xbox One
 
@@ -61,9 +61,9 @@ El modo de desarrollador se puede habilitar en cualquier consola Xbox One comerc
 ## <a name="switch-between-retail-and-developer-mode"></a>Alternar entre el modo comercial y el de desarrollador
 Una vez que se haya habilitado el modo de desarrollador en la consola, usa **Dev Home** para cambiar entre el modo comercial y el modo de desarrollador. Para obtener más información sobre cómo iniciar y usar Dev Home, consulta [Introducción a las herramientas de Xbox One](introduction-to-xbox-tools.md).
 
-* Para cambiar al modo comercial, abre **Dev Home** y desplázate a la pestaña **Settings**. En **Console settings**, selecciona **Leave Dev Mode**. La consola se reiniciará en modo comercial.    
+* Para cambiar al modo comercial, abre **Dev Home**. En **Quick Actions**, selecciona **Leave Dev Mode**. La consola se reiniciará en modo comercial.    
 
-  ![Paso de activación 13](images/activation-step-13-rs2.png)  
+  ![Paso de activación 13](images/activation-step-13-rs4.png)  
   
 * Para cambiar al modo de desarrollador, usa la aplicación Dev Mode Activation. Abre la aplicación y selecciona **Switch and restart**. La consola se reiniciará en modo de desarrollador.  
 

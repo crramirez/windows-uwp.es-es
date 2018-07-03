@@ -4,17 +4,18 @@ Description: To understand your tax considerations for price selection, payout i
 title: Detalles de impuestos para aplicaciones de pago
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
 ms.author: wdg-dev-content
-ms.date: 1/1/2018
+ms.date: 6/1/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, impuestos, impuestos de aplicación, requisitos fiscales, expansión comercial, tipo impositivo"
+keywords: windows 10, uwp, impuestos, impuestos de aplicación, requisitos fiscales, expansión comercial, tipo impositivo
 ms.localizationpriority: high
-ms.openlocfilehash: 17d922c3b32ebaf697be250ce34f0238fb741605
-ms.sourcegitcommit: aca78f1c5207efe61242f5fadd5aa0c41c786550
+ms.openlocfilehash: 7e269a8cd4c0f4203a1117a23ec3f7b6e5833723
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935825"
 ---
 # <a name="tax-details-for-paid-apps"></a>Detalles de impuestos para aplicaciones de pago
 
@@ -208,13 +209,13 @@ Para conocer tus consideraciones fiscales para la selección de precios, la impl
 | Tonga                            | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Trinidad y Tobago              | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Túnez                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
-| Turquía                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
+| Turquía                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% de (precio seleccionado menos el 18% de impuestos) | Microsoft          |
 | Turkmenistán                     | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Tuvalu                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Uganda                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Ucrania                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Emiratos Árabes Unidos             | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado menos el 5% de impuestos                 | Microsoft          |
-| Reino Unido                   | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70% del precio seleccionado menos el 21% de impuestos | Microsoft          |
+| Reino Unido                   | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.            | 70% del precio seleccionado menos el 21% de impuestos | Microsoft          |
 | Estados Unidos (incluye Puerto Rico)  | Los impuestos se suman al precio seleccionado.                                                                                                      | 70% del precio seleccionado                 | Microsoft          |
 | Uruguay                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Uzbekistán                       | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |

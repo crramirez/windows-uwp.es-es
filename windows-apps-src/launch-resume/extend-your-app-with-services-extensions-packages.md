@@ -3,35 +3,37 @@ author: TylerMSFT
 title: Ampliar la aplicación con servicios de aplicaciones, extensiones y paquetes
 description: Aprende a crear una tarea en segundo plano que se ejecute cuando se actualice la aplicación de la tienda de la Plataforma universal de Windows (UWP).
 ms.author: twhitney
-ms.date: 05/21/2017
+ms.date: 05/7/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, ampliar, separar por componentes, servicio de aplicaciones, paquete, ampliación
 ms.localizationpriority: medium
-ms.openlocfilehash: 2721f9d8f768cabb0e07c0cd2cfcfcbf9255cd70
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 6920b448146f25433335234ec67fde473e096cbd
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689621"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843658"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Ampliar tu aplicación con servicios de aplicaciones, extensiones y paquetes
 
 Hay distintas tecnologías en Windows 10 que te ayudarán a ampliar y separar tu aplicación por componentes. Esta tabla debe ayudarte a determinar qué tecnología debes usas para tu escenario. Le sigue un breve descripción de los escenarios y las tecnologías.
 
+| Escenario                           | Paquete de recursos   | Paquete de activos      | Paquete opcional   | Lote plano        | Extensión de aplicación      | Servicio de aplicaciones        | Instalación en streaming  |
+|------------------------------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
+| Complementos de código de terceros            |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
+| Complementos de código dentro del proceso              |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |
+| Activos de la experiencia de usuario (cadenas o imágenes)         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Contenido a petición <br/> (por ejemplo, niveles adicionales) |      |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Licencias independientes y adquisición |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
+| Adquisición desde la aplicación                 |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    |                    |
+| Optimizar el tiempo de instalación              | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Reducir la superficie del disco              | :heavy_check_mark: |                    | :heavy_check_mark: |                    |                    |                    |                    |
+| Optimizar el empaquetado                 |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |
+| Reducir el tiempo de publicación             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |
 
-| Escenario                           | Paquete de recursos | Paquete opcional | Extensión de aplicación    | Servicio de aplicaciones      | Instalación en streaming |
-|------------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:-----------------:|
-| Complementos de código de terceros            |                  |                  | :heavy_check_mark: |                  |                   |
-| Complementos de código dentro del proceso              |                  | :heavy_check_mark: |                  |                  |                   |
-| Activos de la experiencia de usuario (cadenas o imágenes)         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                  | :heavy_check_mark: |
-| Contenido a petición <br/> (por ejemplo, niveles adicionales) |    | :heavy_check_mark: | :heavy_check_mark: |                  | :heavy_check_mark: |
-| Licencias independientes y adquisición |                  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                   |
-| Adquisición desde la aplicación                 |                  | :heavy_check_mark: | :heavy_check_mark: |                  |                   |
-| Optimizar el tiempo de instalación              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                  | :heavy_check_mark: |
-
-## <a name="scenario-descriptions-rows-in-the-table"></a>Descripciones de escenarios (filas de la tabla)
+## <a name="scenario-descriptions-the-rows-in-the-table-above"></a>Descripciones de escenarios (filas de la tabla anterior)
 
 **Complementos de terceros**  
 
@@ -61,15 +63,26 @@ Indica si hay soporte de programación para adquirir el contenido desde dentro d
 
 Proporciona funcionalidad para reducir el tiempo que tarda en adquirir la aplicación en la tienda y empezar la ejecución.
 
-## <a name="technology-descriptions-columns-in-the-table"></a>Descripciones de tecnología (columnas de la tabla)
+**Reducir la superficie del disco** Reduce el tamaño de una aplicación incluyendo solo las aplicaciones o los recursos necesarios.
+
+**Optimizar el empaquetado** Optimiza el proceso de empaquetado de la aplicación para aplicaciones complejas o a gran escala.
+
+**Reducir el tiempo de publicación** Minimizar la cantidad de tiempo que se tarda en publicar la aplicación en la Store, el recurso compartido local o el servidor web.
+
+## <a name="technology-descriptions-the-columns-in-the-table-above"></a>Descripciones de tecnología (las columnas de la tabla anterior)
 
 **Paquete de recursos**
 
 Los paquetes de recursos son paquetes únicamente de activos que permiten a tu aplicación adaptarse a varios tamaños de pantalla e idiomas del sistema. El paquete de recursos tiene como objetivo el idioma del usuario, la escala de sistema y características de DirectX, lo que permite a la aplicación adaptarse a una variedad de escenarios de usuario. Aunque un paquete de la aplicación puede contener varios recursos, el sistema operativo solo descargará los recursos pertinentes por dispositivo de usuario, lo que ahorrará espacio en disco y ancho de banda.
 
+**Paquete de activos** Los paquetes de activos tienen una fuente centralizada común de archivos ejecutables o no ejecutable usados por la aplicación. Estos son normalmente archivos específicos de idioma o no de procesador. Por ejemplo, esto podría incluir una colección de imágenes en un paquete de activos y vídeos de otro paquete de activos, ambos usados por la aplicación. Por ejemplo, esto podría incluir una colección de imágenes en un paquete de activos y vídeos de otro paquete de activos. Si tu aplicación admite varias arquitecturas y varios idiomas, estos activos podrían incluirse en el paquete de la arquitectura o el paquete de recursos, pero eso también significa que los activos se duplicarían varias veces en los paquetes de arquitectura diferentes ocupando espacio en disco. Si se usan paquetes de activos, solo hay que incluirlos una vez en el paquete general de la aplicación. Consulta [Introducción a los paquetes de activos](../packaging/asset-packages.md) para obtener más información.
+
 **Paquete opcional**
 
 Los paquetes opcionales se usan para complementar o ampliar la funcionalidad original de un paquete de la aplicación. Es posible publicar una aplicación, seguida de la publicación de paquetes opcionales posteriormente, o publicar tanto la aplicación como paquetes opcionales al mismo tiempo. Al ampliar la aplicación mediante un paquete opcional, tienes las ventajas de distribuir y rentabilizar el contenido como paquete de la aplicación independiente. Los paquetes opcionales está pensados normalmente para ser desarrollados por el desarrollador de aplicaciones, ya que se ejecutan con la identidad de la aplicación principal (a diferencia de las extensiones de para aplicaciones). En función de cómo definas el paquete opcional, puedes cargar el código, los activos, o el código y los activos desde el paquete opcional a la aplicación principal. Si buscas mejorar tu aplicación con contenido que se pueda rentabilizar, para el que se pueda conceder licencia y distribuirse por separado, los paquetes opcionales podrían ser la elección correcta para ti. Para obtener detalles de implementación, consulta [Paquetes opcionales y creación de conjuntos relacionados](https://docs.microsoft.com/windows/uwp/packaging/optional-packages).
+
+**Lote plano**
+[Paquetes de aplicación de lote plano](../packaging/flat-bundles.md) son similares a los lotes de aplicaciones normales, salvo que en lugar de incluir todos los paquetes de aplicación dentro de la carpeta, el lote plano solo contiene *referencias* a esos paquetes de la aplicación. Al contener referencias a los paquetes de la aplicación en lugar de los propios archivos, un lote plano reducirá la cantidad de tiempo que se tarda en empaquetar y descargar una aplicación.
 
 **Extensión de aplicación**
 
@@ -89,10 +102,14 @@ Los servicios de aplicaciones son aplicaciones para UWP que ofrecen servicios a 
 
 La transmisión en streaming es una forma de optimizar la forma en que se entrega la aplicación a los usuarios. En lugar de esperar a que se descargue toda la aplicación antes de usarla, los usuarios pueden interactuar con la aplicación tan pronto como se haya descargado una parte necesaria. Depende de ti, como desarrollador, segmentar la aplicación en una sección requerida para el lanzamiento y la activación básica y contenido adicional para el resto de la aplicación. Consulta [Instalación en streaming para aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/packaging/streaming-install) para obtener más detalles de implementación e información.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Ver también
 
 [Crear y usar un servicio de aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
-[Paquetes opcionales y creación de conjuntos relacionados](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)  
-[Espacio de nombres de Windows.ApplicationModel.Extensions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions)  
+[Introducción a los paquetes de activos](../packaging/asset-packages.md)  
+[Creación del paquete con el diseño del empaquetado](../packaging/packaging-layout.md)  
+[Creación de paquetes opcionales y de conjuntos relacionados](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)  
+[Desarrollar con paquetes de activos y plegado de paquete](../packaging/package-folding.md)  
 [Instalación en streaming de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/packaging/streaming-install)  
-[Espacio de nombres Windows.ApplicationModel.AppService](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService)    
+[Paquetes de aplicaciones de lotes planos](../packaging/flat-bundles.md)  
+[Espacio de nombres Windows.ApplicationModel.AppService](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService)  
+[Espacio de nombres de Windows.ApplicationModel.Extensions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions)  

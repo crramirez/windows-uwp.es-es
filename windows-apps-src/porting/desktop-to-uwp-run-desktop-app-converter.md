@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
-ms.openlocfilehash: f867861537ddfb7fe346011cd637156854e2f7d8
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 141d87bf48b5b4835055375320f1e4a79498a42f
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817190"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989679"
 ---
 # <a name="package-an-app-using-the-desktop-app-converter-desktop-bridge"></a>Empaquetar una aplicación con Desktop App Converter (Puente de dispositivo de escritorio)
 
@@ -60,10 +60,9 @@ Para obtener una lista completa de estas opciones, consulta la sección [Paráme
 
 Si estás listo para crear tu paquete, comencemos.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>En primer lugar, piensa en la manera de distribuir la aplicación.
-Si vas a publicar la aplicación en la [Microsoft Store](https://www.microsoft.com/store/apps), comienza rellenando [este formulario](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). Microsoft se pondrá en contacto contigo para iniciar el proceso de incorporación. Como parte de este proceso, podrás reservar un nombre en la Store y obtener la información que necesitas para empaquetar la aplicación.
+## <a name="first-prepare-your-application"></a>Primero, prepara tu aplicación
 
-Además, asegúrate de consultar esta guía antes de empezar a crear un paquete para tu aplicación: [Preparar para empaquetar una aplicación (Puente de dispositivo de escritorio)](desktop-to-uwp-prepare.md).
+Consulta esta guía antes de empezar a crear un paquete para tu aplicación: [Preparar para empaquetar una aplicación (Puente de dispositivo de escritorio)](desktop-to-uwp-prepare.md).
 
 ## <a name="make-sure-that-your-system-can-run-the-converter"></a>Asegúrate de que el sistema puede ejecutar el convertidor
 
@@ -74,7 +73,6 @@ Asegúrate de que el sistema cumple los requisitos siguientes:
 * Virtualización asistida por hardware
 * Traducción de direcciones de segundo nivel (SLAT)
 * [Kit de desarrollo de software de Windows (SDK) para Windows 10](https://go.microsoft.com/fwlink/?linkid=821375).
-
 
 ## <a name="start-the-desktop-app-converter"></a>Inicia Desktop App Converter
 

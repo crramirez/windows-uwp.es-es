@@ -1,23 +1,24 @@
 ---
-author: mukin
+author: muhsinking
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
-title: "Orientación del sensor"
-description: "Los datos de sensor procedentes de las clases Accelerometer, Gyrometer, Compass, Inclinometer y OrientationSensor se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea."
+title: Orientación del sensor
+description: Los datos de sensor procedentes de las clases Accelerometer, Gyrometer, Compass, Inclinometer y OrientationSensor se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea.
 ms.author: mukin
 ms.date: 05/24/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a91e38aa11f7fa25804d6d6f11cc030ee1613311
-ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.localizationpriority: medium
+ms.openlocfilehash: 307601836bc0a734c78adffd5403468d714d6b44
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989439"
 ---
 # <a name="sensor-orientation"></a>Orientación del sensor
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -64,12 +65,12 @@ Además, algunos dispositivos no disponen de una pantalla. Con estos dispositivo
 
 El encabezado de brújula depende de los ejes de referencia, de modo que cuando la orientación del dispositivo lo hace. La compensación se efectúa siguiendo esta tabla (suponiendo que el usuario mira al norte).
 
-| Orientación de la pantalla | Eje de referencia y encabezado de brújula | Encabezado de brújula de API al mirar al norte | Compensación del encabezado de brújula | 
-|---------------------|------------------------------------|---------------------------------------|------------------------------|
-| Landscape           | -Z | 0   | Encabezado               |
-| Portrait            |  Y | 90  | (Encabezado+270) % 360 | 
-| LandscapeFlipped    |  Z | 180 | (Encabezado+180) % 360 |
-| PortraitFlipped     |  Y | 270 | (Encabezado+90) % 360  |
+| Orientación de la pantalla | Eje de referencia y encabezado de brújula | Encabezado de brújula de API al mirar al norte (landscape-first) | Encabezado de brújula de API al mirar al norte (portrait-first) |Compensación del encabezado de brújula (landscape-first) | Compensación del encabezado de brújula (portrait-first) |
+|---------------------|------------------------------------|---------------------------------------------------------|--------------------------------------------------------|------------------------------------------------|-----------------------------------------------|
+| Horizontal           | -Z | 0   | 270 | Encabezado               | (Encabezado+90) % 360  |
+| Retrato            |  Y | 90  | 0   | (Encabezado+270) % 360 |  Encabezado              |
+| LandscapeFlipped    |  Z | 180 | 90  | (Encabezado+180) % 360 | (Encabezado+270) % 360 |
+| PortraitFlipped     |  Y | 270 | 180 | (Encabezado+90) % 360  | (Encabezado+180) % 360 |
 
 Modifica el encabezado de brújula como se indica en la tabla para que dicho encabezado se muestre correctamente. En el siguiente fragmento de código, se muestra cómo hacerlo.
 

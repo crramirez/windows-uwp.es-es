@@ -1,62 +1,60 @@
 ---
 author: mcleanbyron
 ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
-description: "Aprende a detectar errores de AdControl en la aplicación."
+description: Aprende a detectar errores de AdControl en la aplicación.
 title: Tutorial de control de errores en XAML y C#
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, anuncios, publicidad, control de errores, error handling, XAML, c#
-ms.openlocfilehash: d6c048397a5f7fd6c9a6cd625a7ff5ce0b6c29bf
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, anuncios, publicidad, control de errores, XAML, c#
+ms.localizationpriority: medium
+ms.openlocfilehash: 5bb793e5ca9bb44e888581f1d5dd3142d0b09ee8
+ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/14/2018
+ms.locfileid: "1880796"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tutorial de control de errores en XAML y C#
 
-En este tema se muestra cómo detectar errores de [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) en la aplicación.
+En este tutorial se muestra cómo detectar errores relacionados con los anuncios en la aplicación. Este tutorial usa un objeto [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para mostrar un anuncio de banner, pero los conceptos generales en él también se aplican a anuncios intersticiales y anuncios nativos.
 
-En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que contiene un objeto **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md). Para un proyecto de muestra completo que muestra cómo agregar anuncios en banners a una aplicación XAML con C# y C++, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
+En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que contiene un objeto **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md). 
 
 1.  En el archivo MainPage.xaml, busca la definición de **AdControl**. El código tiene esta apariencia.
-
-  > [!div class="tabbedCodeSnippets"]
-  ``` xml
-  <UI:AdControl
+    ``` xml
+    <UI:AdControl
       ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
-      AdUnitId="10865270"
+      AdUnitId="test"
       HorizontalAlignment="Left"
       Height="250"
       Margin="10,10,0,0"
       VerticalAlignment="Top"
       Width="300" />
-  ```
+    ```
 
 2.   Después de la propiedad **Width**, pero antes de la etiqueta de cierre, asigna un nombre de un controlador de evento de error a el evento[ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.erroroccurred.aspx). En este tutorial, el nombre del controlador de evento de error es **OnAdError**.
-
-  > [!div class="tabbedCodeSnippets"]
-  ``` xml
-  <UI:AdControl
+    ``` xml
+    <UI:AdControl
       ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
-      AdUnitId="10865270"
+      AdUnitId="test"
       HorizontalAlignment="Left"
       Height="250"
       Margin="10,10,0,0"
       VerticalAlignment="Top"
       Width="300"
       ErrorOccurred="OnAdError"/>
-  ```
+    ```
 
-2.  Para generar un error en tiempo de ejecución, crea un segundo objeto **AdControl** con un id. de la aplicación diferente. Dado que todos los objetos **AdControl** de una aplicación deben usar el mismo id. de la aplicación, al crear un objeto **AdControl** adicional con un id. de la aplicación diferente se producirá un error.
+3.  Para generar un error en tiempo de ejecución, crea un segundo objeto **AdControl** con un id. de la aplicación diferente. Dado que todos los objetos **AdControl** de una aplicación deben usar el mismo id. de la aplicación, al crear un objeto **AdControl** adicional con un id. de la aplicación diferente se producirá un error.
 
     Define un segundo objeto **AdControl** en MainPage.xaml justo después del primer **AdControl**y establece la propiedad [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) en cero ("0").
-
-    > [!div class="tabbedCodeSnippets"]
     ``` xml
     <UI:AdControl
         ApplicationId="0"
-        AdUnitId="10865270"
+        AdUnitId="test"
         HorizontalAlignment="Left"
         Height="250"
         Margin="10,265,0,0"
@@ -65,26 +63,20 @@ En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que conti
         ErrorOccurred="OnAdError" />
     ```
 
-3.  En el archivo MainPage.xaml.cs, agrega el siguiente controlador de eventos **OnAdError** a la clase **MainPage**. Este controlador de eventos escribe información en la ventana **Resultados** de Visual Studio.
-
-  > [!div class="tabbedCodeSnippets"]
-  ``` csharp
-  private void OnAdError(object sender, AdErrorEventArgs e)
-  {
-      System.Diagnostics.Debug.WriteLine("AdControl error (" + ((AdControl)sender).Name +
-          "): " + e.ErrorMessage + " ErrorCode: " + e.ErrorCode.ToString());
-  }
-  ```
+4.  En el archivo MainPage.xaml.cs, agrega el siguiente controlador de eventos **OnAdError** a la clase **MainPage**. Este controlador de eventos escribe información en la ventana **Resultados** de Visual Studio.
+    ``` csharp
+    private void OnAdError(object sender, AdErrorEventArgs e)
+    {
+        System.Diagnostics.Debug.WriteLine("AdControl error (" + ((AdControl)sender).Name +
+            "): " + e.ErrorMessage + " ErrorCode: " + e.ErrorCode.ToString());
+    }
+    ```
 
 4.  Compilar y ejecutar el proyecto. Una vez que se ejecute la aplicación, verás un mensaje similar al siguiente en la ventana **Resultados** de Visual Studio.
-
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  AdControl error (): MicrosoftAdvertising.Shared.AdException: all ad requests must use the same application ID within a single application (0, d25517cb-12d4-4699-8bdc-52040c712cab) ErrorCode: ClientConfiguration
-  ```
+    ```
+    AdControl error (): MicrosoftAdvertising.Shared.AdException: all ad requests must use the same application ID within a single application (0, d25517cb-12d4-4699-8bdc-52040c712cab) ErrorCode: ClientConfiguration
+    ```
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Ejemplos de publicidad de GitHub](http://aka.ms/githubads)
-
- 

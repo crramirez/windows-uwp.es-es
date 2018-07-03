@@ -4,18 +4,18 @@ ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Usa la API de análisis de Microsoft Store para recuperar datos de análisis mediante programación para las aplicaciones que se registran en tu cuenta del Centro de desarrollo de Windows o la de tu organización.
 title: Acceder a los datos de análisis mediante los servicios de la Store
 ms.author: mcleans
-ms.date: 03/23/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a8523acb06a0bda48f85221f384d8a3d554c7dc
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: f7ca3c23179d97816fc54fdbacb951915aecf71f
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707160"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976400"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Store
 
@@ -41,11 +41,11 @@ Antes de empezar a escribir código para llamar a la API de análisis de Microso
 
 Para asociar una aplicación de Azure AD con la cuenta del Centro de desarrollo y recuperar los valores requeridos:
 
-1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y [asocia la cuenta del Centro de desarrollo de tu organización al directorio de AzureAD de tu organización](../publish/associate-azure-ad-with-dev-center.md).
+1.  En el Centro de desarrollo, [asocia tu cuenta del Centro de desarrollo de la organización con tu directorio de Azure AD de la organización](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  En la página **Administrar usuarios**, haz clic en **Agregar aplicaciones de Azure AD**, agrega la aplicación de Azure AD que representa la aplicación o el servicio que usarás para acceder a los datos de análisis de tu cuenta del Centro de desarrollo y asígnale el rol **Administrador**. Si esta aplicación ya existe en el directorio de Azure AD, puedes seleccionarla en la página **Agregar aplicaciones de Azure AD** para agregarla a tu cuenta del Centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Adición de aplicaciones de Azure AD**. Para obtener más información, consulta [Agregar aplicaciones de Azure AD a tu cuenta del Centro de desarrollo](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications).
+2.  A continuación, desde la página **Usuarios** en la sección **Configuración de la cuenta** del Centro de desarrollo, [añada la aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account) que representa la aplicación o el servicio que usarás para acceder a datos de análisis de tu cuenta del Centro de desarrollo. Asegúrate de que se asignas a esta aplicación el rol de **Administrador**. Si la aplicación no existe aún en el directorio de Azure AD, puedes [crear una nueva aplicación de Azure AD en el Centro de desarrollo](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account).
 
-3.  Vuelve a la página **Administración de usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copia los valores de **Identificador de inquilino** e **Identificador de cliente**.
+3.  Vuelve a la página **Usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copia los valores de **Identificador de inquilino** e **Identificador de cliente**.
 
 4. Haz clic en **Agregar nueva clave**. En la siguiente pantalla, copia el valor **Clave**. No podrás acceder a esta información de nuevo después de salir de la página. Para obtener más información, consulta [Administrar claves para una aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 
@@ -98,16 +98,6 @@ Los siguientes métodos de análisis están disponibles para que las cuentas de 
 | Instalaciones |  <ul><li>[Obtener instalaciones de aplicaciones de escritorio](get-desktop-app-installs.md)</li></ul> |
 | Errores de aplicaciones |  <ul><li>[Obtener datos de informes de errores para la aplicación de escritorio](get-desktop-application-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obtener el seguimiento de la pila de un error en la aplicación de escritorio](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Descargar el archivo .cab para un error en tu aplicación de escritorio](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
 
-### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware y controladores
-
-Los siguientes métodos de análisis están disponibles para que las cuentas de desarrollador que pertenecen al [programa Centro de desarrollo de hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) puedan usarlos.
-
-| Escenario       | Métodos      |
-|---------------|--------------------|
-| Errores en controladores de Windows 10 (para IHV) |  <ul><li>[Obtener datos de informes de errores para controladores de Windows 10](get-error-reporting-data-for-windows-10-drivers.md)</li><li>[Obtener los detalles de un error de controlador de Windows 10](get-details-for-a-windows-10-driver-error.md)</li><li>[Descargar el archivo .cab para un error de controlador de Windows 10](download-the-cab-file-for-a-windows-10-driver-error.md)</li></ul> |
-| Errores en controladores de Windows 7 y Windows 8.x (para IHV) |  <ul><li>[Obtener datos de informes de errores para controladores de Windows 7 y Windows 8.x](get-error-reporting-data-for-windows-7-and-windows-8.x-drivers.md)</li><li>[Obtener los detalles para un error de controlador de Windows 7 o Windows 8.x](get-details-for-a-windows-7-or-windows-8.x-driver-error.md)</li><li>[Descargar el archivo .cab para un error de controlador de Windows 7 o Windows 8.x](download-the-cab-file-for-a-windows-7-or-windows-8.x-driver-error.md)</li></ul> |
-| Errores de hardware (para OEM) |  <ul><li>[Obtener datos de informes de errores de hardware OEM](get-oem-hardware-error-reporting-data.md)</li><li>[Obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md)</li><li>[Descargar el archivo .cab para un error de hardware OEM](download-the-cab-file-for-an-oem-hardware-error.md)</li></ul> |
-
 ### <a name="methods-for-xbox-live-services"></a>Métodos para los servicios de Xbox Live
 
 Los siguientes métodos adicionales están disponibles para que las usen las cuentas de desarrollador con los juegos que usan [servicios de Xbox Live ](../xbox-live/developer-program-overview.md).
@@ -125,6 +115,16 @@ Los siguientes métodos adicionales están disponibles para que los utilicen cue
 | Escenario       | Métodos      |
 |---------------|--------------------|
 | Adquisiciones |  <ul><li>[Obtener adquisiciones de juegos de Xbox One](get-xbox-one-game-acquisitions.md)</li></ul> |
+
+### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware y controladores
+
+Los siguientes métodos de análisis están disponibles para que las cuentas de desarrollador que pertenecen al [programa Centro de desarrollo de hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) puedan usarlos.
+
+| Escenario       | Métodos      |
+|---------------|--------------------|
+| Errores en controladores de Windows 10 (para IHV) |  <ul><li>[Obtener datos de informes de errores para controladores de Windows 10](get-error-reporting-data-for-windows-10-drivers.md)</li><li>[Obtener los detalles de un error de controlador de Windows 10](get-details-for-a-windows-10-driver-error.md)</li><li>[Descargar el archivo .cab para un error de controlador de Windows 10](download-the-cab-file-for-a-windows-10-driver-error.md)</li></ul> |
+| Errores en controladores de Windows 7 y Windows 8.x (para IHV) |  <ul><li>[Obtener datos de informes de errores para controladores de Windows 7 y Windows 8.x](get-error-reporting-data-for-windows-7-and-windows-8.x-drivers.md)</li><li>[Obtener los detalles para un error de controlador de Windows 7 o Windows 8.x](get-details-for-a-windows-7-or-windows-8.x-driver-error.md)</li><li>[Descargar el archivo .cab para un error de controlador de Windows 7 o Windows 8.x](download-the-cab-file-for-a-windows-7-or-windows-8.x-driver-error.md)</li></ul> |
+| Errores de hardware (para OEM) |  <ul><li>[Obtener datos de informes de errores de hardware OEM](get-oem-hardware-error-reporting-data.md)</li><li>[Obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md)</li><li>[Descargar el archivo .cab para un error de hardware OEM](download-the-cab-file-for-an-oem-hardware-error.md)</li></ul> |
 
 ## <a name="code-example"></a>Ejemplo de código
 

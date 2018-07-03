@@ -1,19 +1,21 @@
 ---
 author: GrantMeStrength
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
-title: "Crear una aplicación Hello World en C++ (Windows 10)"
-description: "Con Microsoft Visual Studio 2015, puedes usar C++ para desarrollar una aplicación que se ejecute en Windows 10, incluidos los teléfonos con Windows 10. Estas aplicaciones tienen una interfaz de usuario que se define en lenguaje XAML."
+title: Crear una aplicación Hello World en C++ (Windows 10)
+description: Con Microsoft Visual Studio 2017, puedes usar C++ para desarrollar una aplicación que se ejecute en Windows 10, incluidos los teléfonos con Windows 10. Estas aplicaciones tienen una interfaz de usuario que se define en lenguaje de marcado de aplicaciones extensibles (XAML).
 ms.author: jken
 ms.date: 03/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c6c351227eacf924314cfaa2157135a8a893704d
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.localizationpriority: medium
+ms.openlocfilehash: 0701266e67be8fde53d4436f0461cb362d6d67df
+ms.sourcegitcommit: 3522d888781ff6f063b129b54760a5cbefd38139
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "1937051"
 ---
 # <a name="create-a-hello-world-app-in-c"></a>Crear una aplicación "Hello world" en C++
 
@@ -44,11 +46,11 @@ Si has trabajado en un entorno de programación de escritorio de Windows en C++,
 
 -   Continúas usando el depurador, generador de perfiles y otras herramientas de desarrollo de Visual Studio.
 
--   Sigues creando aplicaciones que se compilan en el código máquina nativo mediante el compilador de Visual C++. Las aplicaciones de la Tienda Windows en C++ no se ejecutan en un entorno de tiempo de ejecución administrado.
+-   Sigues creando aplicaciones que se compilan en el código máquina nativo mediante el compilador de Visual C++. Las aplicaciones para UWP en C++ no se ejecutan en un entorno de tiempo de ejecución administrado.
 
 ### <a name="whats-new"></a>Novedades
 
--   Los principios de diseño para las aplicaciones de la Tienda Windows y las aplicaciones universales de Windows son muy distintos de los principios para las aplicaciones de escritorio. Se quita énfasis a los bordes, etiquetas, cuadros de diálogo, etc. de las ventanas. El contenido es lo más importante. Las grandes aplicaciones universales de Windows incorporan estos principios desde el comienzo de la etapa de planeación.
+-   Los principios de diseño para las aplicaciones para UWP y las aplicaciones universales de Windows son muy distintos de los principios para las aplicaciones de escritorio. Se quita énfasis a los bordes, etiquetas, cuadros de diálogo, etc. de las ventanas. El contenido es lo más importante. Las grandes aplicaciones universales de Windows incorporan estos principios desde el comienzo de la etapa de planeación.
 
 -   Toda la interfaz de usuario se define con XAML. La separación entre la interfaz de usuario y la lógica de programa principal es mucho más clara en una aplicación universal para Windows que en una aplicación de MFC o Win32. Puede haber otras personas trabajando en la apariencia de la interfaz de usuario en el archivo XAML mientras tú trabajas en el comportamiento en el archivo de código.
 
@@ -58,7 +60,7 @@ Si has trabajado en un entorno de programación de escritorio de Windows en C++,
 
 -   La aplicación se compila en un paquete que también contiene metadatos sobre los tipos que incluye la aplicación, los recursos que usa y las funcionalidades que necesita (acceso a los archivos, acceso a Internet, acceso a la cámara, etc.).
 
--   En la Tienda Windows y la Tienda de Windows Phone, se comprueba que la aplicación sea segura mediante un proceso de certificación y se hace que millones de clientes potenciales puedan detectarla.
+-   En Microsoft Store y la Store de Windows Phone, se comprueba que la aplicación sea segura mediante un proceso de certificación y se hace que millones de clientes potenciales puedan detectarla.
 
 ## <a name="hello-world-store-app-in-c"></a>Aplicación Hello World de la Tienda en C++
 
@@ -107,7 +109,7 @@ Cada archivo .xaml de una carpeta de proyecto tiene asociados un archivo .xaml.h
 Veamos primero los archivos del proyecto.
 
 -   **App.xaml, App.xaml.h, App.xaml.cpp:** representan el objeto Application, que es un punto de entrada de la aplicación. App.xaml no contiene marcado de interfaz de usuario de la página, pero puedes agregar estilos de interfaz de usuario y otros elementos a los que desees que se pueda acceder desde cualquier página. Los archivos de código subyacente contienen controladores para los eventos **OnLaunched** y **OnSuspending**. Por lo general, aquí tienes que agregar código personalizado para que inicialice tu aplicación cuando se inicie y realice la limpieza cuando se suspenda o finalice.
--   **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:**contienen el marcado XAML y el código subyacente para la página de "inicio" predeterminada de una aplicación. No dispone de compatibilidad de navegación ni de controles integrados.
+-   **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:** contienen el marcado XAML y el código subyacente para la página de "inicio" predeterminada de una aplicación. No dispone de compatibilidad de navegación ni de controles integrados.
 -   **pch.h, pch.cpp:** un archivo de encabezado precompilado y el archivo que lo incluye en tu proyecto. En pch.h, puedes incluir cualquier encabezado que no cambie a menudo y que se incluyan en otros archivos de la solución.
 -   **Package.appxmanifest:** un archivo XML que describe las capacidades del dispositivo que requiere tu aplicación, así como la información de versión de la aplicación y otros metadatos. Para abrir este archivo en el **Diseñador de manifiestos**, solo tienes que hacer doble clic en él.
 -   **HelloWorld\_TemporaryKey.pfx:** una clave que permite la implementación de la aplicación en este equipo desde Visual Studio.
@@ -233,7 +235,7 @@ Primero aparece la pantalla de presentación predeterminada. Muestra una imagen 
 
 Cuando desaparezca la pantalla de presentación, aparecerá tu aplicación. Muestra la página principal de la aplicación.
 
-![Pantalla de la aplicación de la Tienda Windows con controles](images/xaml-hw-app2.png)
+![Pantalla de la aplicación para UWP con controles](images/xaml-hw-app2.png)
 
 Aunque todavía no hace muchas cosas, te felicitamos por haber compilado tu primera aplicación para la Plataforma universal de Windows.
 
@@ -246,7 +248,7 @@ En la aplicación puedes escribir en el [**TextBox**](https://msdn.microsoft.com
 ## <a name="step-2-create-an-event-handler"></a>Paso 2: Crear un controlador de eventos
 
 1.  En MainPage.xaml, en la vista de diseño o XAML, selecciona el [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) "Saluda" del [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635) que agregaste anteriormente.
-2.  Abre la **ventana de propiedades** presionando Alt+Entrar y después elige el botón Eventos (![botón Eventos](images/eventsbutton.png)).
+2.  Abre la **Ventana de propiedades** presionando F4 y después elige el botón Eventos (![Botón Eventos](images/eventsbutton.png)).
 3.  Encuentra el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737). En su cuadro de texto, escribe el nombre de la función que controla el evento **Click**. Para este ejemplo, escribe "Button\_Click".
 
     ![Ventana de propiedades, vista Eventos](images/xaml-hw-event.png)
@@ -259,9 +261,9 @@ En la aplicación puedes escribir en el [**TextBox**](https://msdn.microsoft.com
     <Button Content="Say &quot;Hello&quot;" Click="Button_Click"/>
     ```
 
-    Podrías haber agregado esto simplemente al código xaml de forma manual, lo cual puede resultar útil si no se carga el diseñador. Si escribes esto manualmente, escribe "Click" y deja que IntelliSense haga aparecer la opción para agregar un nuevo controlador de eventos. De este modo, Visual Studio creará la declaración del método y el código auxiliar necesarios.
+   Podrías haber agregado esto simplemente al código xaml de forma manual, lo cual puede resultar útil si no se carga el diseñador. Si escribes esto manualmente, escribe "Click" y deja que IntelliSense haga aparecer la opción para agregar un nuevo controlador de eventos. De este modo, Visual Studio creará la declaración del método y el código auxiliar necesarios.
 
-    El diseñador no se puede cargar si se produce una excepción no controlada durante la representación. La representación en el diseñador implica ejecutar una versión en tiempo de diseño de la página. Puede ser útil deshabilitar la ejecución de código de usuario. Puedes hacerlo cambiando la configuración en el cuadro de diálogo **Herramientas, Opciones**. En **Diseñador XAML**, desactiva la casilla **Ejecutar código del proyecto en el diseñador XAML (si se admite)**.
+   El diseñador no se puede cargar si se produce una excepción no controlada durante la representación. La representación en el diseñador implica ejecutar una versión en tiempo de diseño de la página. Puede ser útil deshabilitar la ejecución de código de usuario. Puedes hacerlo cambiando la configuración en el cuadro de diálogo **Herramientas, Opciones**. En **Diseñador XAML**, desactiva la casilla **Ejecutar código del proyecto en el diseñador XAML (si se admite)**.
 
 5.  En MainPage.xaml.cpp, agrega el siguiente código al controlador de eventos **Button\_Click** que acabas de crear. Este código recupera el nombre de usuario del control `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y lo usa para crear un saludo. El `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) muestra el resultado.
 

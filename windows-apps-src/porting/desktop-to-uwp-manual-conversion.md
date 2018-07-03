@@ -4,19 +4,19 @@ Description: Shows how to manually package a Windows desktop application (like W
 Search.Product: eADQiWindows 10XVcnh
 title: Empaquetar una aplicación de forma manual (Puente de dispositivo de escritorio)
 ms.author: normesta
-ms.date: 05/25/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 81d5b9b0b52ef0f7529b277215e7fe0b95683f0a
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: eeadd41debcfcf5cfde23948c52bdfe1ce32e9df
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689771"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989649"
 ---
 # <a name="package-an-app-manually-desktop-bridge"></a>Empaquetar una aplicación de forma manual (Puente de dispositivo de escritorio)
 
@@ -31,8 +31,9 @@ Si no estás seguro de qué cambios realiza el instalador en el sistema o si pre
 >[!IMPORTANT]
 >El Puente de dispositivo de escritorio se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la Actualización de aniversario de Windows 10 (10.0, compilación 14393) o una versión posterior de Visual Studio.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>En primer lugar, piensa en la manera de distribuir la aplicación.
-Si vas a publicar la aplicación en la [Microsoft Store](https://www.microsoft.com/store/apps), comienza rellenando [este formulario](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). Microsoft se pondrá en contacto contigo para iniciar el proceso de incorporación. Como parte de este proceso, podrás reservar un nombre en la tienda y obtener la información que necesitas para empaquetar la aplicación.
+## <a name="first-prepare-your-application"></a>Primero, prepara tu aplicación
+
+Consulta esta guía antes de empezar a crear un paquete para tu aplicación: [Preparar para empaquetar una aplicación (Puente de dispositivo de escritorio)](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Crear un manifiesto de paquete
 
@@ -111,7 +112,7 @@ Este es un ejemplo del nodo [Resources](https://docs.microsoft.com/uwp/schemas/a
 ```
 ### <a name="dependencies"></a>Dependencias
 
-Para las aplicaciones de Puente de dispositivo de escritorio, establece siempre el atributo ``Name`` en ``Windows.Desktop``.
+Para aplicaciones de escritorio que se empaquetan mediante el puente de escritorio, establece siempre atributo ``Name`` en ``Windows.Desktop``.
 
 ```XML
 <Dependencies>
@@ -120,7 +121,7 @@ Para las aplicaciones de Puente de dispositivo de escritorio, establece siempre 
 ```
 
 ### <a name="capabilities"></a>Funcionalidades
-En cuanto a las aplicaciones de Puente de dispositivo de escritorio, tendrás que agregar la funcionalidad ``runFullTrust``.
+Para aplicaciones de escritorio que se empaquetan mediante el puente de escritorio, tendrás que añadir la capacidad ``runFullTrust``.
 
 ```XML
 <Capabilities>
@@ -133,7 +134,7 @@ Rellena esta plantilla con la información que describe la aplicación.
 
 ### <a name="application-element"></a>Elemento de la aplicación
 
-Para las aplicaciones de Puente de dispositivo de escritorio, el atributo ``EntryPoint`` del elemento Application siempre es ``Windows.FullTrustApplication``.
+Para aplicaciones de escritorio que se empaquetan mediante el puente de escritorio, establece siempre el atributo ``EntryPoint`` del elemento de la aplicación es siempre ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>

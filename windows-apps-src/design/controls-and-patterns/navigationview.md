@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fc365a7dbc69819ce88a22db2490b327412c8b4
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: c7817bf7ff60a52ea48c988bdebd6d4d2eeacdb7
+ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675372"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "1992154"
 ---
 # <a name="navigation-view"></a>Vista de navegación
 
@@ -151,9 +151,9 @@ De manera predeterminada, el sistema selecciona automáticamente el modo óptimo
 
 NavigationView cambia automáticamente su modo de pantalla en función de la cantidad de espacio en pantalla disponible para ella.
 
-> [!NOTE] 
-NavigationView debe servir como el contenedor raíz de la aplicación, ya que este control está diseñado para ocupar todo el ancho y el alto de la ventana de la aplicación.
-Puedes invalidar los anchos en los que la vista de navegación cambia los modos de visualización usando las propiedades [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) y [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth). 
+> [!NOTE]
+> NavigationView debe servir como el contenedor raíz de la aplicación, ya que este control está diseñado para ocupar todo el ancho y el alto de la ventana de la aplicación.
+Puedes invalidar los anchos en los que la vista de navegación cambia los modos de visualización usando las propiedades [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) y [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth).
 
 Ten en cuenta los siguientes escenarios que muestran cuándo es posible que quieras personalizar el comportamiento del modo de pantalla.
 
@@ -448,13 +448,13 @@ Dibujar en la barra de título tiene el efecto secundario de ocultar el título 
 
 ```xaml
 <Grid>
-
-    <TextBlock x:Name="AppTitle" 
+    <TextBlock x:Name="AppTitle"
         xmlns:appmodel="using:Windows.ApplicationModel"
-        Text="{x:Bind appmodel:Package.Current.DisplayName}" 
-        Style="{StaticResource CaptionTextBlockStyle}" 
-        IsHitTestVisible="False" 
+        Text="{x:Bind appmodel:Package.Current.DisplayName}"
+        Style="{StaticResource CaptionTextBlockStyle}"
+        IsHitTestVisible="False"
         Canvas.ZIndex="1"/>
+    
 
     <NavigationView Canvas.ZIndex="0" ... />
 
@@ -464,6 +464,10 @@ Dibujar en la barra de título tiene el efecto secundario de ocultar el título 
 También deberás ajustar los márgenes del AppTitle según la visibilidad del botón Atrás. Y cuando la aplicación está en FullScreenMode, deberás quitar el espacio de la flecha atrás, aunque la barra de título le reserve espacio.
 
 ```csharp
+var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+Window.Current.SetTitleBar(AppTitle);
+coreTitleBar.ExtendViewIntoTitleBar = true;
+
 void UpdateAppTitle()
 {
     var full = (ApplicationView.GetForCurrentView().IsFullScreenMode);

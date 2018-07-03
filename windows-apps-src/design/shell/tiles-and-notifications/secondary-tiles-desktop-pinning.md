@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, puente de dispositivo de escritorio, iconos secundarios, anclar, anclado, inicio rápido, muestra de código, ejemplo, secondarytile, aplicación de escritorio, win32, winforms, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b0015a74750e08d575cad9d0ae78f8c864b7c09
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 4fcce21608bf8711a97f9272a800d73c0476cdcb
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "1573212"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976613"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Anclar iconos secundarios desde una aplicación de escritorio
 
@@ -26,12 +26,9 @@ Gracias al [Puente de dispositivo de escritorio](https://developer.microsoft.com
 ![Captura de pantalla de iconos secundarios](images/secondarytiles.png)
 
 > [!IMPORTANT]
-> **Requiere la actualización de otoño Creators Update**: debes utilizar SDK 15063 y estar ejecutando la compilación 16299 o superior para anclar iconos secundarios desde las aplicaciones de Puente de dispositivo de escritorio.
+> **Requiere la actualización de otoño Creators Update**: debes utilizar SDK 16299 y estar ejecutando la compilación 16299 o posterior para anclar iconos secundarios desde las aplicaciones de Puente de dispositivo de escritorio.
 
 Agregar un icono secundario desde tu aplicación WPF o WinForms es muy similar a una aplicación para UWP pura. La única diferencia es que debes especificar el identificador de la ventana principal (HWND). Esto es porque al anclar un icono, Windows muestra un cuadro de diálogo modal que pide al usuario que confirme si quiere anclar el icono. Si la aplicación de escritorio no configura el objeto SecondaryTile con la ventana de propietario, Windows no sabe dónde se debe dibujar el cuadro de diálogo y se producirá un error en la operación.
-
-> [!IMPORTANT]
-> Las notificaciones de icono no se admiten actualmente en los iconos secundarios que se crean mediante el Puente de dispositivo de escritorio. Estamos trabajando para habilitar esta característica. 
 
 
 ## <a name="package-your-app-with-desktop-bridge"></a>Agregar tu aplicación con Puente de dispositivo de escritorio
@@ -96,7 +93,10 @@ bool isPinned = await tile.RequestCreateAsync();
 
 ## <a name="send-tile-notifications"></a>Enviar notificaciones de iconos
 
-Las notificaciones enviadas a iconos secundarios no se admiten actualmente por las aplicaciones del Puente de dispositivo de escritorio. Si intentas enviar una notificación de icono a un icono secundario, recibirás una excepción *Elemento no encontrado* con HResult 0x80070490. Estamos trabajando para habilitar esta característica.
+> [!IMPORTANT]
+> **Requiere la actualización de abril de 2018, versión 17134.81 o posterior**: debes ejecutar la versión 17134.81 o posterior para enviar notificaciones de icono o distintivo a ventanas secundarias desde aplicaciones del Puente de dispositivo de escritorio. Antes de esta actualización de mantenimiento .81, se producía una excepción 0x80070490 *Elemento no encontrado* al enviar notificaciones de icono o distintivo a iconos secundarios desde las aplicaciones del Puente de dispositivo de escritorio.
+
+Enviar notificaciones de iconos o distintivos es los mismo que las aplicaciones para UWP. Consulta [Enviar una notificación de icono local](sending-a-local-tile-notification.md) para empezar.
 
 
 ## <a name="resources"></a>Recursos

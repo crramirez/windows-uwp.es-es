@@ -4,18 +4,18 @@ ms.assetid: 8e6c3d3d-0120-40f4-9f90-0b0518188a1a
 description: Usa la API de promociones de Microsoft Store para administrar las campañas de anuncios promocionales mediante programación para las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows o en la de tu organización.
 title: Ejecutar campañas de anuncios con los servicios de la Store
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: dd90b970a126495d7a1035256f4bdd219aee9ee5
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 45869b96d17fa51fbdf22e417c7e7f43a8c90a9b
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655287"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976230"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Ejecutar campañas de anuncios con los servicios de la Store
 
@@ -48,11 +48,11 @@ Antes de empezar a escribir código para llamar a la API de promociones de Micro
 
 Para asociar una aplicación de Azure AD con la cuenta del Centro de desarrollo y recuperar los valores requeridos:
 
-1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y [asocia la cuenta del Centro de desarrollo de tu organización al directorio de AzureAD de tu organización](../publish/associate-azure-ad-with-dev-center.md).
+1.  En el Centro de desarrollo, [asocia tu cuenta del Centro de desarrollo de la organización con tu directorio de Azure AD de la organización](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  En la página **Administrar usuarios**, haz clic en **Agregar aplicaciones de Azure AD**, agrega la aplicación de Azure AD que represente la aplicación o el servicio que usarás para administrar las campañas promocionales de tu cuenta del Centro de desarrollo y asígnale el rol **Administrador**. Si esta aplicación ya existe en el directorio de Azure AD, puedes seleccionarla en la página **Agregar aplicaciones de Azure AD** para agregarla a tu cuenta del Centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Adición de aplicaciones de Azure AD**. Para obtener más información, consulta [Agregar aplicaciones de Azure AD a tu cuenta del Centro de desarrollo](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications).
+2.  A continuación, desde la página **Usuarios** en la sección **Configuración de la cuenta** del Centro de desarrollo, [añada la aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account) que representa la aplicación o el servicio que usarás para gestionar campañas de promoción para tu cuenta del Centro de desarrollo. Asegúrate de que se asignas a esta aplicación el rol de **Administrador**. Si la aplicación no existe aún en el directorio de Azure AD, puedes [crear una nueva aplicación de Azure AD en el Centro de desarrollo](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account). 
 
-3.  Vuelve a la página **Administración de usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copia los valores de **Identificador de inquilino** e **Identificador de cliente**.
+3.  Vuelve a la página **Usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copia los valores de **Identificador de inquilino** e **Identificador de cliente**.
 
 4. Haz clic en **Agregar nueva clave**. En la siguiente pantalla, copia el valor **Clave**. No podrás acceder a esta información de nuevo después de salir de la página. Para obtener más información, consulta [Administrar claves para una aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 

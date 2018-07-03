@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c39243217f28dd4f88c4776c058a1b93c145c50
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 68a8a812c6e5080630254014552a8bb05747749b
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393534"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983526"
 ---
 # <a name="masterdetails-pattern"></a>Patrón de maestro y detalles
 
@@ -99,7 +99,7 @@ Para crear un diseño adaptativo, define diferentes [**VisualStates**](https://d
 Las siguientes muestras implementan el patrón de maestro y detalles con diseños adaptativos y muestran datos enlazados a recursos estáticos, de bases de datos y en línea: 
 - [Muestra de maestro y detalles](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
 - [Muestra de panel maestro y detalles con selección](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
-- [Muestra de panel maestro y detalles de Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Pages/MasterDetail)
+- [Muestra de panel maestro y detalles de Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
 - [Muestra de base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
 - [Muestra de lector RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
 

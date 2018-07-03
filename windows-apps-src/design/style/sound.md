@@ -16,16 +16,16 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: dbe59b422a83ad31727928c406a1f4a6dd550301
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: c6e85bcbf131755af6909fd0ae7ee42bc36544b8
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638399"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842805"
 ---
 # <a name="sound"></a>Sonido
 
- 
+![imagen principal](images/header-sound.svg)
 
 Hay muchas formas de usar sonido para mejorar tu aplicación. Puedes usar sonido para complementar otros elementos de interfaz de usuario, esto permitirá que los usuarios puedan reconocer eventos de forma audible. El sonido puede ser un elemento de interfaz de usuario eficaz para personas con discapacidades visuales. Puedes usar sonido para crear una atmósfera que sumerge al usuario; por ejemplo, puedes reproducir una banda sonora divertida en segundo plano en un puzle o usar efectos de sonido inquietantes para un juego de miedo o supervivencia.
 

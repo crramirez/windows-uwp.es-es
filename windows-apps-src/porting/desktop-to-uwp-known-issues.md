@@ -4,19 +4,19 @@ Description: This article contains known issues with the Desktop Bridge.
 Search.Product: eADQiWindows 10XVcnh
 title: Problemas conocidos (Puente de dispositivo de escritorio)
 ms.author: normesta
-ms.date: 07/18/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: 78e5ffddfa1c5005bb640baeafed7023ebdd74a3
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 76ff4fb4b7933c54e5137507e7996eefa7b46d5a
+ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662855"
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "1905386"
 ---
 # <a name="known-issues-desktop-bridge"></a>Problemas conocidos (Puente de dispositivo de escritorio)
 
@@ -95,7 +95,7 @@ Se publicó una [actualización de Windows (versión 14393.351 - KB3197954)](htt
 
 Si la actualización no soluciona el problema o no estás seguro de cómo recuperar tu equipo, ponte en contacto con el [Soporte técnico de Microsoft](https://support.microsoft.com/contactus/).
 
-Si eres un desarrollador, quizá quieras impedir la instalación de tus aplicaciones de puente de escritorio en las versiones de Windows que no incluyen esta actualización. Ten en cuenta que, al hacerlo, la aplicación no estará disponible para los usuarios que aún no han instalado la actualización. Para limitar la disponibilidad de la aplicación a los usuarios que han instalado esta actualización, modifica el archivo AppxManifest.xml de la siguiente manera:
+Si eres un desarrollador, quizá quieras impedir la instalación de tu aplicación empaquetada en las versiones de Windows que no incluyen esta actualización. Ten en cuenta que, al hacerlo, la aplicación no estará disponible para los usuarios que aún no han instalado la actualización. Para limitar la disponibilidad de la aplicación a los usuarios que han instalado esta actualización, modifica el archivo AppxManifest.xml de la siguiente manera:
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 

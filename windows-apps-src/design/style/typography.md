@@ -9,16 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dd5e6f3dbddca2f6a944ee18e32463afe029f89
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 505167775b61908be7f47068dbf3221c293f6112
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816780"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843375"
 ---
 # <a name="typography"></a>Tipografía
 
-![Imagen de encabezado de tipografía](images/type/header-typography.svg)
+![imagen principal](images/header-typography.svg)
 
 Como representación visual del lenguaje, la tarea principal de la tipografía es comunicar la información. Su estilo nunca debe obstaculizar ese objetivo. En este artículo hablaremos de cómo aplicar estilo a la tipografía de tu aplicación para UWP para ayudar a los usuarios a comprender el contenido de forma sencilla y eficaz.
 

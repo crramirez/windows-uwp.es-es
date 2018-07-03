@@ -1,20 +1,21 @@
 ---
-author: GrantMeStrength
+author: QuinnRadich
 ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: Habilitar el dispositivo para el desarrollo
 description: Configura el dispositivo Windows 10 para el desarrollo y la depuración.
 keywords: Introducción a Visual Studio con licencia de desarrollador, dispositivo con licencia de desarrollador habilitada
-ms.author: jken
-ms.date: 03/12/2017
+ms.author: quradic
+ms.date: 05/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 09a5fd69d0a2f38adc6ba5f1b241df06211465b6
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.openlocfilehash: cf8f0e0c7382d52eddb783b7fbbaa6ccc23a2a15
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935783"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -41,7 +42,7 @@ Para habilitar el modo de desarrollador u obtener acceso a otras opciones de con
 2.  Lee el aviso de declinación de responsabilidades para la configuración elegida y, luego, haz clic en **Sí** para aceptar el cambio.
 
 > [!NOTE]
-> Si el dispositivo pertenece a una organización, puede que esta haya deshabilitado algunas opciones.
+> Habilitar el modo de desarrollador requiere acceso de administrador. Si el dispositivo pertenece a una organización, puede que se deshabilite esa opción.
 
 Esta es la página de configuración de la familia de dispositivos de escritorio:
 
@@ -240,9 +241,9 @@ Error : DEP0700 : Error en el registro de la operación.
 
 ## <a name="see-also"></a>Consulta también
 
-* [Tu primera aplicación](your-first-app.md)
-* [Publicar tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
+* [Crear tu primera aplicación](your-first-app.md)
+* [Publicación de tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
 * [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
-* [Muestras de código para desarrolladores para UWP](https://developer.microsoft.com/windows/samples)
+* [Muestras de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
 * [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md)
 * [Registrarse para obtener una cuenta de Windows](sign-up.md)

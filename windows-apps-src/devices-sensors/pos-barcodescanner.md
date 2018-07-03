@@ -9,22 +9,23 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: d158d4615ed1e53806dbc970c3709a3a2e6743a7
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: c6021b00b9ec993aa6c09df93b8845dcc789678c
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833350"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874393"
 ---
 # <a name="barcode-scanner"></a>Escáner de código de barras
 
 Esta sección proporciona instrucciones para crear aplicaciones de la Plataforma universal de Windows (UWP) que usan un escáner de código de barras.
 
-## <a name="in-this-section"></a>En esta sección:
+## <a name="in-this-section"></a>En esta sección
 
 |Tema |Descripción |
 |------|------------|
 | [Tareas iniciales](pos-barcodescanner-get-started.md)  |  |
-| [Escáner de código de barras basado en cámara](pos-camerabarcode.md) | A partir de la versión 1803 de Windows 10, se pueden leer códigos de barras a través del objetivo de una cámara estándar desde una aplicación Universal de Windows. |
+| [El trabajo con simbologías](pos-barcodescanner-symbologies.md) | Aprende a determinar los tipos de códigos de barras que admite un escáner de códigos de barras y a controlar qué tipos de códigos de barras reconoce el escáner de códigos de barras de la aplicación. |
+| [Escáner de código de barras basado en cámara](pos-camerabarcode.md) | Lee códigos de barras a través de una lente de cámara estándar desde una aplicación de la Plataforma universal de Windows. Requiere la Actualización de abril de 2018 de Windows 10 (compilación 17134 o posterior). |
 |
  

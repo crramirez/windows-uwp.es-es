@@ -3,18 +3,18 @@ author: stevewhims
 description: Este tema muestra dos funciones auxiliares que pueden usarse para convertir entre objetos C++/CX y C++/WinRT.
 title: Interoperabilidad entre C++/WinRT y C++/CX
 ms.author: stwhi
-ms.date: 04/10/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migar, interoperabilidad, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 616bd9ea8c4b89599e703ef9467206b028fd596b
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 5e1e939f6df9bd35e3717b9cc0ce810e97275494
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831789"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912923"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a>Interoperabilidad entre [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) y C++/CX
 Este tema muestra dos funciones auxiliares que pueden usarse para convertir entre objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) y C++/WinRT. Puedes usarlos para interoperar entre el código que usa las dos proyecciones de lenguaje, o puedes usar las funciones a medida que muevas el código desde C++/CX a C++/WinRT.
@@ -27,11 +27,11 @@ template <typename T>
 T from_cx(Platform::Object^ from)
 {
     T to{ nullptr };
- 
+
     winrt::check_hresult(reinterpret_cast<::IUnknown*>(from)
         ->QueryInterface(winrt::guid_of<T>(),
-                         reinterpret_cast<void**>(winrt::put_abi(to))));
- 
+            reinterpret_cast<void**>(winrt::put_abi(to))));
+
     return to;
 }
 ```
@@ -47,7 +47,7 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 ```
 
 ## <a name="code-example"></a>Ejemplo de código
-Aquí tienes un ejemplo de código (basado en la plantilla de proyecto **Blank App** C++/CX) que muestra las dos funciones auxiliares en uso. También muestra cómo puedes abordar las colisiones de espacio de nombres a través de las dos proyecciones.
+Aquí tienes un ejemplo de código (basado en la plantilla de proyecto **Blank App** C++/CX) que muestra las dos funciones auxiliares en uso. También muestra cómo puedes usar los alias de espacio de nombre para las diferentes islas para abordar las posibles colisiones de espacio de nombres entre la proyección de C++/WinRT y la proyección de C++/CX.
 
 ```cppwinrt
 // MainPage.xaml.cpp

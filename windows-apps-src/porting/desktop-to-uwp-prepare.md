@@ -4,19 +4,19 @@ Description: This article lists things you need to know before packaging your ap
 Search.Product: eADQiWindows 10XVcnh
 title: Preparar para empaquetar una aplicación (Puente de dispositivo de escritorio)
 ms.author: normesta
-ms.date: 02/21/2018
+ms.date: 05/18/20188
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a4836992675f65773e9b5c890aca243e2a9e172
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 46e71812acdad92a5d017cee44490e7d8cc0de32
+ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832549"
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "1905396"
 ---
 # <a name="prepare-to-package-an-app-desktop-bridge"></a>Preparar para empaquetar una aplicación (Puente de dispositivo de escritorio)
 
@@ -105,7 +105,7 @@ Las dependencias no se instalarán si la aplicación se instala mediante el mét
 
 + __La aplicación inicia una utilidad para realizar tareas__. Evita iniciar utilidades de comando como PowerShell y Cmd.exe. De hecho, si los usuarios instalan la aplicación en un sistema que ejecuta Windows 10 S, la aplicación no podrá iniciar estas utilidades. Esto podría bloquear la aplicación del envío a Microsoft Store, ya que todas las aplicaciones enviadas a Microsoft Store deben ser compatibles con Windows 10S.
 
-Si inicias una utilidad, puedes obtener una forma sencilla de conseguir información del sistema operativo, acceder al registro o acceder a las funcionalidades del sistema. Sin embargo, puedes usar las API de UWP para llevar a cabo a este tipo de tareas en su lugar. Estas API son más eficaces porque no necesitan usar un archivo ejecutable independiente y, aún mejor, evitan que la aplicación salga del paquete. El diseño de la aplicación mantiene su coherencia gracias al aislamiento, confiabilidad y seguridad que proporciona una aplicación de puente de dispositivo, y la aplicación se comportará según lo esperado en aquellos sistemas que ejecuten Windows 10 S.
+Si inicias una utilidad, puedes obtener una forma sencilla de conseguir información del sistema operativo, acceder al registro o acceder a las funcionalidades del sistema. Sin embargo, puedes usar las API de UWP para llevar a cabo a este tipo de tareas en su lugar. Estas API son más eficaces porque no necesitan usar un archivo ejecutable independiente y, aún mejor, evitan que la aplicación salga del paquete. El diseño de la aplicación mantiene su coherencia gracias al aislamiento, confiabilidad y seguridad que proporciona una aplicación que ha empaquetado con el puente de dispositivo, y la aplicación se comportará según lo esperado en aquellos sistemas que ejecuten Windows 10 S.
 
 + __La aplicación contiene complementos, módulos o extensiones__.   En muchos casos, las extensiones de estilo COM siguen funcionando siempre y cuando la extensión no se haya empaquetado y se instale como extensión de plena confianza. Esto es debido a que los instaladores pueden usar las funcionalidades de plena confianza para modificar el registro y colocar archivos de extensión donde se espera que la aplicación host los encuentre.
 

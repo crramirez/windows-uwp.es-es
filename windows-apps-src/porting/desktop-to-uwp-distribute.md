@@ -4,26 +4,26 @@ Description: Distribute a packaged desktop app (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
 title: Publica una aplicación de escritorio empaquetada en una Tienda Windows o realiza una instalación de prueba en uno o más dispositivos.
 ms.author: normesta
-ms.date: 05/25/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 8aff2635094064c0758f9d0d2ca56b7aa73cfda1
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 682d7dfcef1ea8037b113499362f0664c388d987
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816840"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989629"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>Distribuir una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)
 
 Publica una aplicación de escritorio empaquetada en una Tienda Windows o realiza una instalación de prueba en uno o más dispositivos.  
 
 > [!NOTE]
-> ¿Tienes un plan que te permita realizar la transición de usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación de Puente de dispositivo de escritorio](#transition-users) de esta guía para obtener algunas ideas.
+> ¿Tienes un plan que te permita realizar la transición de usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
 
 ## <a name="distribute-your-app-by-publishing-it-to-the-microsoft-store"></a>Distribuir la aplicación publicándola en la Microsoft Store
 
@@ -31,9 +31,9 @@ Publica una aplicación de escritorio empaquetada en una Tienda Windows o realiz
 
 Publica la aplicación en la Store para llegar al máximo de usuarios. Asimismo, los clientes de empresas pueden comprar la aplicación para distribuirla de manera interna en sus organizaciones mediante la [Microsoft Store para empresas](https://www.microsoft.com/business-store).
 
-Si vas a publicar la aplicación en Microsoft Store y todavía no has contactado con nosotros, rellena [este formulario](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge) y Microsoft se pondrá en contacto contigo para iniciar el proceso de incorporación.
+Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicionales como parte del proceso de envío. Eso es porque el manifiesto del paquete declara una funcionalidad restringida denominada **runFullTrust**, y necesitamos aprobar el uso de esa funcionalidad en la aplicación. Puedes leer más acerca de este requisito aquí: [Capacidades restringidas](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#restricted-capabilities.html).
 
-No es necesario firmar la aplicación antes de enviarla a la Store.
+No tienes que firmar la aplicación antes de enviarla a la Store.
 
 >[!IMPORTANT]
 > Si tienes previsto publicar la aplicación en Microsoft Store, debes asegurarte de que tu aplicación funciona correctamente en dispositivos que ejecutan Windows 10S. Este es un requisito de Store. Consulta [Probar la aplicación de Windows en Windows 10 S](desktop-to-uwp-test-windows-s.md).
@@ -69,19 +69,19 @@ Para transferir localmente la aplicación a otros dispositivos, consulta [Sidelo
 
 <a id="transition-users" />
 
-## <a name="transition-users-to-your-desktop-bridge-app"></a>Realizar la transición de usuarios a la aplicación de Puente de dispositivo de escritorio
+## <a name="transition-users-to-your-packaged-app"></a>Traslado de los usuarios a la aplicación empaquetada
 
-Antes de distribuir la aplicación, es buena idea agregar algunas extensiones al manifiesto de paquete para que los usuarios se acostumbren a usar la aplicación de Puente de dispositivo de escritorio. Aquí te mostramos algunas cosas que puedes hacer.
+Antes de distribuir la aplicación, es buena idea agregar algunas extensiones al manifiesto de paquete para que los usuarios se acostumbren a usar la aplicación empaquetada. Aquí te mostramos algunas cosas que puedes hacer.
 
-* Incluir los iconos de inicio y los botones de la barra de tareas en la aplicación de Puente de dispositivo de escritorio.
+* Incluir los iconos de inicio y los botones de la barra de tareas existentes en la aplicación empaquetada.
 * Asociar la aplicación empaquetada con un conjunto de tipos de archivo.
-* Hacer que la aplicación de Puente de dispositivo de escritorio abra determinados tipos de archivos de manera predeterminada.
+* Hacer que la aplicación empaquetada abra determinados tipos de archivos de manera predeterminada.
 
 Para obtener la lista completa de las extensiones y las instrucciones que indican cómo usarlas, consulta [Transition users to your app (Realizar la transición de usuarios a la aplicación)](desktop-to-uwp-extensions.md#transition-users-to-your-app).
 
-Asimismo, puedes agregar código a la aplicación de Puente de dispositivo de escritorio que te permitirá realizar estas tareas:
+Asimismo, puedes agregar código a la aplicación empaquetada que te permitirá realizar estas tareas:
 
-* Migrar los datos de usuario asociados a la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación de Puente de dispositivo de escritorio.
+* Migrar los datos de usuario asociados a la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación empaquetada.
 * Ofrecer a los usuarios la opción de desinstalar la versión de escritorio de la aplicación.
 
 Hablemos un poco sobre estas tareas. Comenzaremos con la migración de datos de usuario.
@@ -90,7 +90,7 @@ Hablemos un poco sobre estas tareas. Comenzaremos con la migración de datos de 
 
 Si vas a agregar código que te permita migrar los datos de usuario, lo mejor es que ese código se ejecute solamente cuando se inicie la aplicación. Antes de migrar los datos de los usuarios, puedes mostrar un cuadro de diálogo al usuario donde se explica lo que sucede, por qué se recomienda y lo que va a suceder con sus datos.
 
-Aquí tienes un ejemplo que te muestra cómo puedes llevar a cabo esta acción en una aplicación de Puente de dispositivo de escritorio basada en .NET.
+Aquí tienes un ejemplo que te muestra cómo puedes llevar a cabo esta acción en una aplicación empaquetada basada en .NET.
 
 ```csharp
 private void MigrateUserData()
@@ -100,11 +100,9 @@ private void MigrateUserData()
 
     if (sourceDir != null)
     {
-        String migrateMessage =
-            "Would you like to migrate your data from the previous version of this app?";
-
         DialogResult migrateResult = MessageBox.Show
-            (migrateMessage, "Data Migration", MessageBoxButtons.YesNo);
+            ("Would you like to migrate your data from the previous version of this app?",
+             "Data Migration", MessageBoxButtons.YesNo);
 
         if (migrateResult.Equals(DialogResult.Yes))
         {
@@ -131,7 +129,7 @@ private void MigrateUserData()
 
 Es mejor no desinstalar la aplicación de escritorio de los usuarios sin antes solicitar su permiso. Muestra un cuadro de diálogo que le pida al usuario permiso para realizar la acción. Es posible que los usuarios decidan no desinstalar la versión de escritorio de la aplicación. Si es así, tendrás que decidir si quieres bloquear el uso de la aplicación de escritorio o permitir el uso en paralelo de ambas aplicaciones.
 
-Aquí tienes un ejemplo que te muestra cómo puedes llevar a cabo esta acción en una aplicación de Puente de dispositivo de escritorio basada en .NET.
+Aquí tienes un ejemplo que te muestra cómo puedes llevar a cabo esta acción en una aplicación empaquetada basada en .NET.
 
 Para ver el contexto completo de este fragmento de código, consulta el archivo **MainWindow.cs** de este ejemplo [Visor de imágenes WPF con transición/migración/desinstalación](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition).
 
@@ -146,11 +144,10 @@ private void RemoveDesktopApp()
     //Detect if the previous version of the Desktop App is installed.
     if (uninstallString != null)
     {
-        String uninstallMessage = "To have the best experience, consider uninstalling the "
-            +" previous version of this app. Would you like to do that now?";
-
         DialogResult uninstallResult = MessageBox.Show
-            (uninstallMessage, "Uninstall the previous version", MessageBoxButtons.YesNo);
+            ("To have the best experience, consider uninstalling the "
+              + " previous version of this app. Would you like to do that now?",
+              "Uninstall the previous version", MessageBoxButtons.YesNo);
 
         if (uninstallResult.Equals(DialogResult.Yes))
         {
