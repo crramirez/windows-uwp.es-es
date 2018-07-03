@@ -5,17 +5,17 @@ description: Aprende a usar el espacio de nombres Windows.Services.Store para tr
 title: Habilitar compras de complementos consumibles
 keywords: windows 10, uwp, consumibles, consumable, complementos, add-ons, compras desde la aplicación, in-app purchases, IAP, Windows.Services.Store
 ms.author: mcleans
-ms.date: 08/25/2017
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b327327448b47416e3ba113a65aa8a7b755f1f0
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: c7c36abe2d1332e5b6c94cbb936ad00769314d07
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689311"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874423"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumibles
 
@@ -28,13 +28,13 @@ En este artículo se demuestra cómo usar los métodos de la clase [StoreContext
 
 Las aplicaciones pueden ofrecer dos tipos de complementos consumibles que difieren en la forma en que se administran los suministros:
 
-* **Consumible administrado por el desarrollador**. Para este tipo de consumible, eres responsable de realizar un seguimiento del saldo del usuario de los elementos que representa el complemento, así como de notificar la compra del complemento cuando se complete en la Store y una vez que el usuario haya consumido todos los elementos. El usuario no puede comprar el complemento otra vez hasta que la aplicación notifique que la compra del complemento anterior se ha completado.
+* **Consumible administrado por el desarrollador**. Para este tipo de consumible, eres responsable de realizar un seguimiento del saldo del usuario de los elementos que representa el complemento, así como de notificar la compra del complemento cuando se complete en la Tienda y una vez que el usuario haya consumido todos los elementos. El usuario no puede comprar el complemento otra vez hasta que la aplicación notifique que la compra del complemento anterior se ha completado.
 
   Por ejemplo, si el complemento representa 100 monedas en un juego y el usuario consume 10 monedas, la aplicación o el servicio debe mantener el nuevo saldo restante de 90 monedas para el usuario. Cuando el usuario haya consumido las 100 monedas, la aplicación debe notificar el complemento como completado y, a continuación, el usuario puede volver a comprar el complemento de 100 monedas.
 
-* **Consumible administrado por la Store**. Para este tipo de consumible, la Store realiza un seguimiento del saldo del usuario de los elementos que representa el complemento. Cuando el usuario consume algún elemento, debes notificar dichos elementos como completados en la Store, tras lo cual la Store actualiza el saldo del usuario. La aplicación puede consultar el saldo actual del usuario en cualquier momento. Cuando el usuario haya consumido todos los elementos, el usuario puede volver a comprar el complemento.
+* **Consumible administrado por la Tienda**. Para este tipo de consumible, la Tienda realiza un seguimiento del saldo del usuario de los elementos que representa el complemento. Cuando el usuario consume algún elemento, debes notificar dichos elementos como completados en la Tienda, tras lo cual la Tienda actualiza el saldo del usuario. Los usuarios pueden adquirir el complemento tantas veces como quieran (no necesitan consumir los elementos antes). La aplicación puede consultar en la Store el saldo actual del usuario en cualquier momento.
 
-  Por ejemplo, si el complemento representa una cantidad inicial de 100 monedas en un juego y el usuario consume 10 monedas, la aplicación notifica a la Store que se han completado 10 unidades del complemento, y la Store actualiza el saldo restante. Cuando el usuario ha consumido las 100 monedas, puede volver a comprar el complemento de 100 monedas.
+  Por ejemplo, si el complemento representa una cantidad inicial de 100 monedas en un juego y el usuario consume 50 monedas, la aplicación notifica a la Store que se han completado 50 unidades del complemento y la Store actualiza el saldo restante. Si el usuario vuelve a comprar el complemento para adquirir 100 monedas más, ahora tendrá 150 monedas totales.
     > [!NOTE]
     > Los consumibles administrados por Microsoft Store se introdujeron en Windows 10, versión 1607.
 
@@ -57,7 +57,7 @@ El código de estos ejemplos supone que:
 * El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
 * La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
 
-Para una aplicación de ejemplo completa, consulta la [muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 > [!NOTE]
 > Si tienes una aplicación de escritorio que usa el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop), puede que tengas que agregar código adicional que no se muestra en estos ejemplos para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
@@ -68,10 +68,10 @@ Para una aplicación de ejemplo completa, consulta la [muestra de la Store](http
 
 Después de que el usuario [compre el complemento](enable-in-app-purchases-of-apps-and-add-ons.md) desde la aplicación y de consumir el complemento, la aplicación debe notificar el complemento como completado llamando al método [ReportConsumableFulfillmentAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.reportconsumablefulfillmentasync) de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Debes pasar la siguiente información a este método:
 
-* El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del complemento que quieres notificar como completado.
+* El [Id. de la tienda](in-app-purchases-and-trials.md#store-ids) del complemento que quieres notificar como completado.
 * Las unidades del complemento que quieres notificar como completadas.
-  * Para los consumibles administrados por el desarrollador, especifica 1 para el parámetro *cantidad*. Esto alerta a la Store de que el consumible se ha suministrado y el cliente puede, a continuación, volver a comprar el consumible. El usuario no puede volver a comprar el consumible hasta que la aplicación haya notificado a la Store que se suministró.
-  * Para un consumible administrado por la Store, especifica el número real de unidades que se hayan consumido. La Tienda actualizará el saldo restante para el consumible.
+  * Para los consumibles administrados por el desarrollador, especifica 1 para el parámetro *cantidad*. Esto alerta a la Tienda de que el consumible se ha suministrado y el cliente puede, a continuación, volver a comprar el consumible. El usuario no puede volver a comprar el consumible hasta que la aplicación haya notificado a la Tienda que se suministró.
+  * Para un consumible administrado por la Tienda, especifica el número real de unidades que se hayan consumido. La Tienda actualizará el saldo restante para el consumible.
 * El identificador de seguimiento del suministro. Este es un GUID proporcionado por el desarrollador que identifica la transacción específica a la que la operación de suministro está asociada para realizar un seguimiento. Para obtener más información, consulta las observaciones de [ReportConsumableFulfillmentAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.reportconsumablefulfillmentasync).
 
 Este ejemplo muestra cómo notificar un consumible administrado por la Store como completado.
@@ -81,9 +81,9 @@ Este ejemplo muestra cómo notificar un consumible administrado por la Store com
 
 <span id="get_balance" />
 
-## <a name="get-the-remaining-balance-for-a-store-managed-consumable"></a>Obtener el saldo restante para un consumible administrado por la Store
+## <a name="get-the-remaining-balance-for-a-store-managed-consumable"></a>Obtener el saldo restante para un consumible administrado por la Tienda
 
-En este ejemplo se muestra cómo usar el método [GetConsumableBalanceRemainingAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getconsumablebalanceremainingasync) de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para obtener el saldo restante para un complemento consumible administrado por la Store.
+En este ejemplo se muestra cómo usar el método [GetConsumableBalanceRemainingAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getconsumablebalanceremainingasync) de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para obtener el saldo restante para un complemento consumible administrado por la Tienda.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs#GetRemainingAddOnBalance)]
@@ -95,4 +95,4 @@ En este ejemplo se muestra cómo usar el método [GetConsumableBalanceRemainingA
 * [Obtener información de licencia para aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar compras desde la aplicación para aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md)
-* [Muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
+* [Muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)

@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e54af14d23b255718f5247605b9bdd611f172308
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 424ca52020bd5b9aeab745030dd6eef4cd4430b6
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663845"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862424"
 ---
 # <a name="create-and-host-an-app-extension"></a>Crear y hospedar una extensión de aplicación
 
@@ -27,7 +27,7 @@ Este artículo se incluye con un ejemplo de código:
 
 ## <a name="introduction-to-app-extensions"></a>Introducción a las extensiones para aplicaciones
 
-Complementos, módulos, plug-ins, add-ins y add-ons son nombres con los que es posible que estés familiarizado y que se refieren a las extensiones para aplicaciones en la Plataforma universal de Windows (UWP). Las extensiones de Microsoft Edge son extensiones de la aplicación para UWP. Las extensiones de aplicaciones para UWP se introdujeron en la Windows 10 Anniversary Edition (versión 1607, compilación 10.0.14393).
+En la Plataforma universal de Windows (UWP), las extensiones para aplicaciones proporcionan una funcionalidad similar a la de los complementos en otras plataformas. Las extensiones de Microsoft Edge son extensiones de la aplicación para UWP, por ejemplo. Las extensiones de aplicaciones para UWP se introdujeron en la Windows 10 Anniversary Edition (versión 1607, compilación 10.0.14393).
 
 Las extensiones de aplicaciones para UWP son aplicaciones para UWP que tienen una declaración de extensión que les permite compartir eventos de contenido e implementación con una aplicación host. Una aplicación de extensión puede proporcionar varias extensiones.
 
@@ -423,6 +423,7 @@ En este tema se proporciona una introducción a extensiones de aplicaciones. Los
 
 ## <a name="related-topics"></a>Temas relacionados
 
+* [Introducción a las extensiones para aplicaciones](https://blogs.msdn.microsoft.com/appinstaller/2017/05/01/introduction-to-app-extensions/)
 * [Sesión de la compilación 2016 sobre las extensiones para aplicaciones](https://channel9.msdn.com/Events/Build/2016/B808)
 * [Ejemplo de código de extensión de aplicación de la compilación 2016](https://github.com/Microsoft/App-Extensibility-Sample)
 * [Compatibilidad de la aplicación con tareas en segundo plano](support-your-app-with-background-tasks.md)

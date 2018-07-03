@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "Proporciona un identificador único para los elementos de marcado. En XAML de la Plataforma universal de Windows (UWP), este identificador único se usa en los procesos y herramientas de localización de XAML, por ejemplo, en el uso de recursos de un archivo de recursos .resw."
+description: Proporciona un identificador único para los elementos de marcado. En XAML de la Plataforma universal de Windows (UWP), este identificador único se usa en los procesos y herramientas de localización de XAML, por ejemplo, en el uso de recursos de un archivo de recursos .resw.
 title: Directiva xUid
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
 ms.author: jimwalk
@@ -9,13 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 21d73b60ba3856f81a6d93331982135e188e122e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3a32bd0bee8180f2675763f1a131e0b0c60b7594
+ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "1992071"
 ---
 # <a name="xuid-directive"></a>Directiva x:Uid
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Proporciona un identificador único para los elementos de marcado. En XAML de la plataforma universal de Windows (UWP), este identificador único se usa en los procesos y herramientas de localización de XAML, por ejemplo, en el uso de recursos de un archivo de recursos .resw.
 
@@ -39,11 +42,11 @@ Usa **x:Uid** para identificar un elemento de objeto en tu código XAML. Este el
 <Button x:Uid="GoButton" Content="Go"/>
 ```
 
-Para especificar contenido para reemplazar el texto para mostrar **Go**, debes especificar un nuevo recurso procedente de un archivo de recursos. El archivo de recursos debería contener una entrada para el recurso denominada "GoButton.Content". [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366) es, en este caso, una propiedad específica heredada por la clase [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265). También podrías proporcionar valores localizados para otras propiedades de este botón; por ejemplo, podrías proporcionar un valor basado en recursos para "GoButton.FlowDirection". Para obtener más información sobre cómo usar conjuntamente **x:Uid** y los archivos de recursos, consulta [Inicio rápido: traducción de recursos de interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
+Para especificar contenido para reemplazar el texto para mostrar **Go**, debes especificar un nuevo recurso procedente de un archivo de recursos. El archivo de recursos debería contener una entrada para el recurso denominada "GoButton.Content". [**Content**](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) es, en este caso, una propiedad específica heredada por la clase [**Button**](/uwp/api/windows.ui.xaml.controls.button). También podrías proporcionar valores localizados para otras propiedades de este botón; por ejemplo, podrías proporcionar un valor basado en recursos para "GoButton.FlowDirection". Para obtener más información acerca de cómo usar **x:Uid** y archivos de recursos juntos, consulta [Localizar las cadenas de la interfaz de usuario y el manifiesto de paquete de la aplicación](../app-resources/localize-strings-ui-manifest.md).
 
 Desde un punto de vista práctico, la validez de las cadenas que pueden usarse para un valor de **x:Uid** se determina según las cadenas que son legales como identificador en un archivo de recursos y una ruta de acceso de recurso.
 
-**x:Uid** se diferencia de **x:Name** por el escenario de localización de XAML establecido; gracias a esto, los identificadores que se usan para la localización no tienen dependencias en las implicaciones del modelo de programación de **x:Name**. Además, **x:Name** está sometido al concepto de ámbito de nombres XAML, mientras que la exclusividad de **x:Uid** se controla mediante el sistema de índice de recursos del paquete (PRI). Para obtener más información, consulta [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/jj552947).
+**x:Uid** se diferencia de **x:Name** por el escenario de localización de XAML establecido; gracias a esto, los identificadores que se usan para la localización no tienen dependencias en las implicaciones del modelo de programación de **x:Name**. Además, **x:Name** está sometido al concepto de ámbito de nombres XAML, mientras que la exclusividad de **x:Uid** se controla mediante el sistema de índice de recursos del paquete (PRI). Para obtener más información, consulta [Sistema de administración de recursos](../app-resources/resource-management-system.md).
 
 El lenguaje XAML de UWP tiene algunas reglas para la exclusividad de **x:Uid** diferentes de las tecnologías anteriores que usaban XAML. En XAML de UWP, es legal que exista el mismo valor de ID **x:Uid** como directiva en varios elementos XAML. Sin embargo, cada uno de estos elementos debe compartir la misma lógica de resolución para resolver los recursos de un archivo de recursos. Por otra parte, todos los archivos XAML de un proyecto comparten un único ámbito de recursos con fines de resolución de **x:Uid**; no existe el concepto de ámbitos **x:Uid** que se alinean con archivos XAML individuales.
 

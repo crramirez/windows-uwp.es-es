@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, aprendizaje automático de windows
 ms.localizationpriority: medium
-ms.openlocfilehash: 0aea463503c53d7533354412e5840f94619fd056
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 49af45236d262f682c5f5f28e57120c0bb209e81
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689371"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842692"
 ---
 # <a name="windows-ml-samples"></a>Muestras de Windows ML
 
@@ -30,4 +30,4 @@ Las siguientes aplicaciones UWP de muestra muestran cómo usar Windows ML y est�
 
 ## <a name="windows-machine-learning-explorer"></a>Windows Machine Learning Explorer
 
-[Este ejemplo](https://github.com/Microsoft/Windows-Machine-Learning/tree/master/Samples/UWP/WinMLExplorer) es una aplicación genérica controlada mediante datos que arranque modelos ML que puedan detectar defectos en paneles de circuito desde imágenes o feed de cámara en tiempo real. Puedes obtener más información en la entrada de blog [Cómo tres líneas de código y aprendizaje automático de Windows permiten a los desarrolladores de .NET ejecutar AI localmente en dispositivos de Windows 10](https://aka.ms/winmlfordevsblog). 
+[Este ejemplo](https://github.com/Microsoft/Windows-Machine-Learning/tree/master/Samples/UWP/WinMLExplorer) es una aplicación genérica controlada mediante datos que arranque modelos ML que puedan detectar defectos en paneles de circuito desde imágenes o feed de cámara en tiempo real. Puedes obtener más información en la entrada de blog [Cómo tres líneas de código y aprendizaje automático de Windows permiten a los desarrolladores de .NET ejecutar AI localmente en dispositivos de Windows 10](https://aka.ms/winmlfordevsblog).

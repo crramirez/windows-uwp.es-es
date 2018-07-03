@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 0309c7a1-8e4c-4326-813a-cbd9f8b8300d
-description: "En este artículo se muestra cómo crear, programar y administrar las interrupciones multimedia en tu aplicación de reproducción de contenido multimedia."
+description: En este artículo se muestra cómo crear, programar y administrar las interrupciones multimedia en tu aplicación de reproducción de contenido multimedia.
 title: Crear, programar y administrar interrupciones multimedia
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,9 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 439d39dab1b628ff484de587f47a3cf9129d639f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 5b8d25047435ece1c55a982e69be45fa0e6efb74
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843668"
 ---
 # <a name="create-schedule-and-manage-media-breaks"></a>Crear, programar y administrar interrupciones multimedia
 
@@ -98,7 +102,7 @@ En el siguiente ejemplo se registra un controlador para **evento BufferingProgre
 
 [!code-cs[BufferingProgressChanged](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBufferingProgressChanged)]
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 * [Reproducción de contenido multimedia](media-playback.md)
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
 * [Control manual de los controles de transporte de contenido multimedia del sistema](system-media-transport-controls.md)

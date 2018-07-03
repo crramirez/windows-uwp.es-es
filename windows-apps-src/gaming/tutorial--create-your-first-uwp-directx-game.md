@@ -10,12 +10,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 564f59dfd7b27e3ece1aa6811ac667cd438aae68
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
+ms.openlocfilehash: c043b20cb00873bf115ff2d65306bc727d23a02a
+ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488994"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1877227"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>Crear un juego sencillo para la plataforma universal de Windows (UWP) con DirectX
 
@@ -55,10 +55,9 @@ La muestra hace una demostración de los siguientes conceptos de juego:
 
 ![muestra de juego en acción](images/simple-dx-game-overview.png)
 
-
 | Tema | Description |
-|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Configurar el proyecto de juego](tutorial--setting-up-the-games-infrastructure.md) | El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código. Puedes ahorrarte mucho tiempo y complicaciones si usas la plantilla adecuada y configuras el proyecto específicamente para desarrollar un juego. Vamos a guiarte por los pasos de configuración de un proyecto de juego sencillo. |
+|-------|-------------|
+|[Configurar el proyecto de juego](tutorial--setting-up-the-games-infrastructure.md) | El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código. Puedes ahorrarte mucho tiempo y complicaciones si usas la plantilla adecuada y configuras el proyecto específicamente para desarrollar un juego. Vamos a guiarte por los pasos de configuración de un proyecto de juego sencillo. |
 | [Definir el marco de la aplicación para UWP del juego](tutorial--building-the-games-uwp-app-framework.md) | Crea un marco que permita que el objeto del juego DirectX de UWP interactúe con Windows. Esto incluye las propiedades de Windows Runtime como suspender o reanudar el control de eventos, el foco de ventanas y el acoplamiento.  |
 | [Administración del flujo de los juegos](tutorial-game-flow-management.md) | Define la máquina de estado de alto nivel para habilitar al jugador y la interacción del sistema. Obtén información sobre cómo interactúa la interfaz de usuario con la máquina de estado del juego general y sobre cómo crear controladores de eventos para juegos UWP. |
 | [Define el objeto principal del juego](tutorial--defining-the-main-game-loop.md) | Define cómo se juega creando reglas. |
@@ -68,12 +67,3 @@ La muestra hace una demostración de los siguientes conceptos de juego:
 | [Agregar controles](tutorial--adding-controls.md) | Agregar controles de movimiento y vista en el juego &mdash; controles táctiles básicos, de mouse y de dispositivos de juego. |
 | [Agregar sonido](tutorial--adding-sound.md) | Aprende a crear los sonidos de juego usando API [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813). |
 | [Ampliar el ejemplo de juego](tutorial-resources.md) | Recursos para ampliar tu conocimiento del desarrollo de juegos DirectX, incluyendo el uso de XAML para crear superposiciones. |
- 
-
- 
-
- 
-
-
-
-

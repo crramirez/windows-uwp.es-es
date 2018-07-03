@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, SQL Server, base de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: 461e3578aad11dea0d9afcd7c93dfda9a246bb10
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 31a173efbe30cffed85336a302ced504a4cad50d
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662185"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983496"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Usar una base de datos de SQL Server en una aplicación para UWP
 Tu aplicación puede conectarse directamente a una base de datos de SQL Server y a continuación almacenar y recuperar datos mediante las clases del espacio de nombres [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx).
@@ -68,7 +68,7 @@ sealed partial class App : Application
     private string connectionString =
         @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
 
-    public string ConnectionString { get => connectionString; set => connectionString = value;  
+    public string ConnectionString { get => connectionString; set => connectionString = value; }
 
     ...
 }
@@ -222,6 +222,16 @@ Inicia el proyecto y verás que los productos de la base de datos de muestra de 
 ![Productos Northwind](images/products-northwind.png)
 
 Explora el espacio de nombres [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) para ver qué otras cosas que puedes hacer con los datos en tu base de datos de SQL Server.
+
+## <a name="trouble-connecting-to-your-database"></a>¿Tienes problemas para conectarte a tu base de datos?
+
+En la mayoría de los casos, es necesario cambiar algún aspecto de la configuración de SQL Server. Si puedes conectarte a tu base de datos desde otro tipo de aplicación de escritorio como una aplicación WPF o Windows Forms, asegúrate de que has habilitado TCP/IP para SQL Server. Puedes hacerlo en la consola de **Administración de equipos**.
+
+![Administración de equipos](images/computer-management.png)
+
+A continuación, asegúrate de que se está ejecutando el servicio de SQL Server Browser.
+
+![Servicio de SQL Server Browser](images/sql-browser-service.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

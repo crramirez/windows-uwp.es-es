@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 66a9cfe2-b212-4c73-8a36-963c33270099
-description: "En este artículo se enumeran las etiquetas del protocolo HTTP Live Streaming (HLS) que se admiten en las aplicaciones para UWP."
+description: En este artículo se enumeran las etiquetas del protocolo HTTP Live Streaming (HLS) que se admiten en las aplicaciones para UWP.
 title: Compatibilidad con etiquetas HTTP Live Streaming (HLS)
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,9 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7bf47b166dfd05b906b37deded909d5a3b26ac6e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d47a5f755d9ba18f8e95362d254239499d29b9e5
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843688"
 ---
 # <a name="http-live-streaming-hls-tag-support"></a>Compatibilidad con etiquetas HTTP Live Streaming (HLS)
 En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplicaciones para UWP.
@@ -76,7 +80,7 @@ En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplica
 | 4.3.5.1.  EXT-X-INDEPENDENT-SEGMENTS |6|13|OPCIONAL|No se admite|Se admite|Se admite|
 | 4.3.5.2.  EXT-X-START  |6|12|OPCIONAL|No se admite|Se admite parcialmente|Se admite parcialmente|
 |&nbsp;&nbsp;&nbsp;  TIME-OFFSET|6|12|Atributo|No se admite|Se admite|Se admite|
-|&nbsp;&nbsp;&nbsp;  PRECISO|6|12|Atributo|No se admite|Se admite "NO" predeterminado|Se admite "NO" predeterminado|
+|&nbsp;&nbsp;&nbsp;  PRECISE|6|12|Atributo|No se admite|Se admite "NO" predeterminado|Se admite "NO" predeterminado|
 
 
 

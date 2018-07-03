@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, aprendizaje automático de windows
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ef6ea1a4e1dab23f5ff6a09aec9b8c49c135f5e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: a2470cff6b5c7f07c720a38d0bff00486e4c6b27
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817666"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842875"
 ---
 # <a name="windows-ml-overview"></a>Introducción a Windows ML
 
@@ -54,7 +54,7 @@ Algunos aspectos importantes de Windows ML incluyen:
 
 ### <a name="system-requirements"></a>Requisitos del sistema
 
-Para compilar aplicaciones que usan Windows ML, necesitarás [Windows SDK - Compilación 17110 o posterior](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewSDK).
+Para compilar aplicaciones que usan Windows ML, necesitarás [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) - Compilación 17110 o posterior
 
 ### <a name="onnx-models"></a>Modelos ONNX
 
@@ -76,6 +76,8 @@ También puedes usar [WinMLTools](https://pypi.org/project/winmltools/) para con
 - LibSVM
 
 Para aprender a instalar y usar WinMLTools, consulta [Convertir un modelo](conversion-samples.md).
+
+Con la extensión Visual Studio Tools for AI también puedes usar WinMLTools dentro del IDE de Visual Studio para una experiencia más sencilla mediante clics para convertir tus modelos en formato ONNX. Para obtener más información, visita [Herramientas VS para AI](https://github.com/Microsoft/vs-tools-for-ai/).
 
 ### <a name="onnx-operators"></a>Operadores de ONNX
 
@@ -106,7 +108,7 @@ Windows ML admite todos los operadores definidos en la documentación de v1.0 ON
 
 Con un archivo de modelo ONNX, el generador de código de Windows ML crea una interfaz para interactuar con el modelo en la aplicación. La interfaz generada incluye clases de contenedor que representan el modelo, las entradas y las salidas. El código generado llama a la [API de Windows ML](/uwp/api/windows.ai.machinelearning.preview), lo que permite cargar fácilmente, enlazar y evaluar el modelo en el proyecto. Actualmente, el generador de código admite C# y C++/CX.
 
-Para los desarrolladores de UWP, el generador de código automático de Windows ML está integrado originalmente con [Visual Studio (versión 15.7 - Preview 1)](https://www.visualstudio.com/vs/preview/).. (**Nota**: Dentro del Instalador de Visual Studio, tendrás que deshabilitar Windows 10 Insider Preview SDK, Compilación 17110 opcional.) Dentro de tu proyecto de Visual Studio, solo tienes que agregar el archivo ONNX como un elemento existente y VS generará clases de contenedor de Windows ML en un nuevo archivo de interfaz.
+Para los desarrolladores de UWP, el generador de código automático de Windows ML está integrado originalmente con [Visual Studio](https://developer.microsoft.com/windows/downloads). Dentro de tu proyecto de Visual Studio, solo tienes que agregar el archivo ONNX como un elemento existente y VS generará clases contenedoras de Windows ML en un nuevo archivo de interfaz.
 
 También puedes usar la herramienta de línea de comandos `mlgen.exe`, que se incluye con Windows SDK para generar las clases de contenedor de Windows ML. La herramienta se encuentra en `(SDK_root)\bin\<version>\x64` o `(SDK_root)\bin\<version>\x86`, donde SDK_root es el directorio de instalación de SDK. Para ejecutar la herramienta, usa el comando que se incluye a continuación.
 

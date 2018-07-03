@@ -10,17 +10,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ac00104917d41a48abda97c2d5d37c0ced3ab5e9
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: ae99a7a92ce933c8536dc30f9807d60a1441a809
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816650"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912973"
 ---
 # <a name="adaptive-streaming"></a>Streaming adaptable
 
 
-En este artículo se describe cómo agregar la reproducción de contenido multimedia de streaming adaptable a una aplicación para la Plataforma universal de Windows (UWP). Actualmente, esta característica admite la reproducción de contenido HTTP Live Streaming (HLS) y Dynamic Adaptive Streaming over HTTP (DASH).
+En este artículo se describe cómo agregar la reproducción de contenido multimedia de streaming adaptable a una aplicación para la Plataforma universal de Windows (UWP). Esta característica admite la reproducción de contenido HTTP Live Streaming (HLS) y Dynamic Adaptive Streaming over HTTP (DASH). A partir de Windows 10, versión 1803, Smooth Streaming se admite en **[AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource)**.
 
 Para obtener una lista de las etiquetas de protocolo HLS admitidas, consulta [Compatibilidad con etiquetas HLS](hls-tag-support.md). 
 

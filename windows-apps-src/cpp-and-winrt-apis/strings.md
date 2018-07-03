@@ -3,26 +3,25 @@ author: stevewhims
 description: Con C++/WinRT, puedes llamar a las API de Windows Runtime usando tipos de cadena de caracteres anchos de C++ estándar, o puedes usar el tipo winrt::hstring.
 title: Control de cadenas en C++/WinRT
 ms.author: stwhi
-ms.date: 04/10/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, cadena
 ms.localizationpriority: medium
-ms.openlocfilehash: 433b3423c27910f1c680bba4ae2ede5a1e13f8ea
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 6e41abffdfa79847353af4de47bcbfa050c00627
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832059"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912943"
 ---
 # <a name="string-handling-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Control de cadenas en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Con C++/WinRT, puedes llamar a las API de Windows Runtime mediante tipos de cadenas de caracteres anchos de la biblioteca estándar de C++ como **std:: wstring** (nota: no con tipos de cadenas de caracteres estrechos **std:: String**). C++/WinRT tiene un tipo de cadena personalizada denominado [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (definido en la biblioteca de base de C++/WinRT, que es `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`). Y este es el tipo de cadena que los constructores, funciones y propiedades de Windows Runtime toman y devuelven realmente. Pero, en muchos casos&mdash;gracias a los constructores de conversión y operadores de conversión de**hstring**&mdash;puedes tener en cuenta **hstring** o no en tu código cliente. Si vas a *crear* API, es probable que necesites saber sobre **hstring**.
 
-Hay muchos tipos de cadena en C++. Las variantes existen en muchas bibliotecas además de **std::basic_string** de la biblioteca estándar de C++. C++17 tiene utilidades de conversión de cadena y **std::basic_string_view** para enlazar las separaciones entre todos los tipos de cadena. **hstring** proporciona convertibilidad con **std::wstring_view** para proporcionar la interoperabilidad para la que se ha diseñado **std::basic_string_view**.
+Hay muchos tipos de cadena en C++. Las variantes existen en muchas bibliotecas además de **std::basic_string** de la biblioteca estándar de C++. C++17 tiene utilidades de conversión de cadena y **std::basic_string_view** para enlazar las separaciones entre todos los tipos de cadena.  [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) proporciona convertibilidad con **std::wstring_view** para proporcionar la interoperabilidad para la que se ha diseñado **std::basic_string_view**.
 
 ## <a name="using-stdwstring-and-optionally-winrthstringuwpcpp-ref-for-winrthstring-with-uriuwpapiwindowsfoundationuri"></a>Con **std:: wstring** (y opcionalmente [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)) con [**Uri**](/uwp/api/windows.foundation.uri)
-
 [**Windows::Foundation::URI**](/uwp/api/windows.foundation.uri) se ha construido a partir de un [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring).
 
 ```cppwinrt
@@ -64,7 +63,7 @@ public:
     winrt::hstring Domain();
 ```
 
-Pero, nuevamente, tener en cuenta este detalle es opcional gracias al [operador de conversión a**std::wstring_view**](/uwp/api/windows.foundation.uri#hstringoperator-stdwstringview) de **hstring**.
+Pero, nuevamente, tener en cuenta este detalle es opcional gracias al [operador de conversión a**std::wstring_view**](/uwp/api/hstring#hstringoperator-stdwstringview) de **hstring**.
 
 ```cppwinrt
 // Access a property of type hstring, via a conversion operator to a standard type.
@@ -95,7 +94,7 @@ hstring tostringHstring{ contosoUri.ToString() }; // L"http://www.contoso.com/"
 tostringHstring = awUri.ToString(); // L"http://www.adventure-works.com/"
 ```
 
-Puedes usar la [función hstring::c_str](/uwp/api/windows.foundation.uri#hstringcstr-function) para obtener una cadena estándar de caracteres anchos de un **hstring** (del mismo modo que desde un **std:: wstring**).
+Puedes usar la función [**hstring::c_str function**](/uwp/api/windows.foundation.uri#hstringcstr-function) para obtener una cadena estándar de caracteres anchos de un **hstring** (del mismo modo que desde un **std::wstring**).
 
 ```cppwinrt
 #include <iostream>
@@ -135,18 +134,20 @@ void Print(winrt::hstring const& hstring)
 ```
 
 ## <a name="winrthstring-functions-and-operators"></a>Funciones y operadores de **winrt::hstring**
-Se ha implementado una gran cantidad de constructores, operadores, funciones e iteradores para **hstring**.
+Se ha implementado una gran cantidad de constructores, operadores, funciones e iteradores para [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring).
 
-Un **hstring** es un intervalo, así que puedes usarlo con `for` basado en intervalo o con `std::for_each`. También proporciona los operadores de comparación para compararlos de forma natural y eficaz con sus homólogos en la biblioteca estándar de C++. E incluye todo lo que necesitas para usar **hstring** como clave para contenedores asociativos. Reconocemos que muchas de las bibliotecas de C++ usan **std::basic_string**y funcionan exclusivamente con texto UTF-8. Para mayor comodidad, proporcionamos aplicaciones auxiliares para convertir adelante y atrás.
+Un **hstring** es un intervalo, así que puedes usarlo con `for` basado en intervalo o con `std::for_each`. También proporciona los operadores de comparación para compararlos de forma natural y eficaz con sus homólogos en la biblioteca estándar de C++. E incluye todo lo que necesitas para usar **hstring** como clave para contenedores asociativos.
+
+Reconocemos que muchas de las bibliotecas de C++ usan **std::string**y funcionan exclusivamente con texto UTF-8. Para mayor comodidad, proporcionamos aplicaciones auxiliares, como [**winrt::to_string**](/uwp/cpp-ref-for-winrt/to-string) y [**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring), para convertir adelante y atrás.
 
 ```cppwinrt
-hstring w{ L"hello world" };
- 
-std::string c = to_string(w);
-assert(c == "hello world");
- 
-w = to_hstring(c);
-assert(w == L"hello world");
+winrt::hstring w{ L"Hello, World!" };
+
+std::string c = winrt::to_string(w);
+WINRT_ASSERT(c == "Hello, World!");
+
+w = winrt::to_hstring(c);
+WINRT_ASSERT(w == L"Hello, World!");
 ```
 
 Para obtener más ejemplos e información sobre las funciones y los operadores **hstring**, consulta el tema de referencia de API [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring).
@@ -175,3 +176,5 @@ void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
 
 ## <a name="important-apis"></a>API importantes
 * [Estructura winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
+* [winrt::to_string](/uwp/cpp-ref-for-winrt/to-string)
+* [winrt::to_hstring](/uwp/cpp-ref-for-winrt/to-hstring)

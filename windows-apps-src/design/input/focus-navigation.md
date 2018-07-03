@@ -15,14 +15,16 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1737408386628ea7ecf1bb42256976c5fd28cb77
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 73b1c73fdd971eb4448aea62bc8c64ceac17a2b4
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707246"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843355"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>Navegación con foco para teclado, controlador para juegos, control remoto y herramientas de accesibilidad
+
+![Teclado, control remoto y pad-D](images/dpad-remote/dpad-remote-keyboard.png)
 
 Usa la navegación con foco para ofrecer experiencias de interacción completas y coherentes en tus aplicaciones para UWP y controles personalizados para usuarios avanzados de teclado, aquellos que tienen discapacidades y otros requisitos de accesibilidad, así como la experiencia de 10 pies de pantallas de televisión y la Xbox One.
 

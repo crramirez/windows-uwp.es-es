@@ -3,33 +3,33 @@ author: mcleanbyron
 description: Usa este método en la API de análisis de Microsoft Store para obtener datos del hub de juegos de Xbox Live.
 title: Obtener datos del hub de juegos de Xbox Live
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, Game Hubs, hubs de juegos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d34c95e615a10131b3e7f3ffe9ceb246b652727
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 70a76f82c37a4cfba6e0a562c8a6295da38976db
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815790"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976200"
 ---
 # <a name="get-xbox-live-game-hub-data"></a>Obtener datos del hub de juegos de Xbox Live
 
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de hub de juegos de tu [juego habilitado para Xbox Live](../xbox-live/index.md). Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de hub de juegos de tu [juego habilitado para Xbox Live](../xbox-live/index.md). Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) del Panel del Centro de desarrollo de Windows.
 
 > [!IMPORTANT]
-> Este método actualmente no admite juegos habilitados para Xbox Live publicados por [partners de Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) o enviados a través del [programa ID@Xbox](../xbox-live/developer-program-overview.md#id). No devuelve datos para juegos que enviaran a través del [Programa de creadores de Xbox Live](../xbox-live/developer-program-overview.md#xbox-live-creators-program).
+> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](../xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
@@ -50,7 +50,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Parámetro        | Tipo   |  Descripción      |  Obligatorio  
+| Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
 | applicationId | cadena | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de hub de juegos de Xbox Live.  |  Sí  |
 | metricType | cadena | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **communitymanagergamehub**.  |  Sí  |
@@ -88,6 +88,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | gameHubLikeCount     | número |   El número de "Me gusta" agregados a la página del hub de juegos en la fecha especificada.   |
 | gameHubCommentCount          | número |  El número de comentarios agregados a la página del hub de juegos en la fecha especificada.  |
 | gameHubShareCount           | número | El número de veces que la página del hub de juegos de tu aplicación fue compartida por los clientes en la fecha especificada.   |
+| gameHubFollowerCount          | number | El número de seguidores de siempre para la página del hub de juegos para la aplicación.   |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
@@ -102,14 +103,16 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
       "applicationId": "9NBLGGGZ5QDR",
       "gameHubLikeCount": 10,
       "gameHubCommentCount": 1,
-      "gameHubShareCount": 0
+      "gameHubShareCount": 0,
+      "gameHubFollowerCount": 15924
     },
     {
       "date": "2018-01-05",
       "applicationId": "9NBLGGGZ5QDR",
       "gameHubLikeCount": 12,
       "gameHubCommentCount": 1,
-      "gameHubShareCount": 0
+      "gameHubShareCount": 0,
+      "gameHubFollowerCount": 15931
     }
   ],
   "@nextLink": null,

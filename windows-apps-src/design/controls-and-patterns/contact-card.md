@@ -13,12 +13,12 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 434229c7d66ccd4c1a16750750d592c5bc4a89e6
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: 9ed520c8ad71203a2f2f9888f775d7ca51d0089f
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673682"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874343"
 ---
 # <a name="contact-card"></a>Tarjeta de contacto
 
@@ -70,7 +70,7 @@ Usa la tarjeta de contacto cuando quieras mostrar la información de contacto de
 1. Por lo general, se muestra una tarjeta de contacto porque el usuario hizo clic en algo: un botón o quizás el [control de imagen de la persona](person-picture.md). No queremos ocultar el elemento. Para evitar ocultarla, necesitamos crear una [Rect](/uwp/api/windows.foundation.rect) que describa la ubicación y el tamaño del elemento. 
 
     Vamos a crear una función de utilidad que lo haga por nosotros: la usaremos más adelante.
-    ``` C#
+    ```csharp
     // Gets the rectangle of the element 
     public static Rect GetElementRectHelper(FrameworkElement element) 
     { 
@@ -83,7 +83,7 @@ Usa la tarjeta de contacto cuando quieras mostrar la información de contacto de
     ```
 
 2. Determina si puedes mostrar la tarjeta de contacto mediante una llamada al método [ContactManager.IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported). Si no es compatible, muestra un mensaje de error. (En este ejemplo se supone que se va a mostrar la tarjeta de contacto en respuesta a un evento de clic.)
-    ``` C#
+    ```csharp
     // Contact and Contact Managers are existing classes 
     private void OnUserClickShowContactCard(object sender, RoutedEventArgs e) 
     { 
@@ -94,13 +94,13 @@ Usa la tarjeta de contacto cuando quieras mostrar la información de contacto de
 
 3. Usa la función de utilidad que creaste en el paso 1 para obtener los límites del control que provocó el evento (para no taparlo con la tarjeta de contacto).
 
-    ``` C#
+    ```csharp
             Rect selectionRect = GetElementRect((FrameworkElement)sender); 
     ```
 
 4. Obtén el objeto [Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) que quieres mostrar. Este ejemplo solo crea un contacto simple, pero el código debe recuperar un contacto real. 
 
-    ``` C#
+    ```csharp
                 // Retrieve the contact to display
                 var contact = new Contact(); 
                 var email = new ContactEmail(); 
@@ -109,7 +109,7 @@ Usa la tarjeta de contacto cuando quieras mostrar la información de contacto de
     ```
 5. Muestra la tarjeta de contacto mediante una llamada al método [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_). 
 
-    ``` C#
+    ```csharp
             ContactManager.ShowFullContactCard(
                 contact, selectionRect, Placement.Default); 
         } 
@@ -118,7 +118,7 @@ Usa la tarjeta de contacto cuando quieras mostrar la información de contacto de
 
 Este es el ejemplo de código completo:
 
-``` C#
+```csharp
 // Gets the rectangle of the element 
 public static Rect GetElementRect(FrameworkElement element) 
 { 
@@ -152,7 +152,7 @@ private void OnUserClickShowContactCard(object sender, RoutedEventArgs e)
 
 Para mostrar la tarjeta de contacto completa, llama al método [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_) en lugar de [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_).
 
-``` C#
+```csharp
 private void onUserClickShowContactCard() 
 { 
    

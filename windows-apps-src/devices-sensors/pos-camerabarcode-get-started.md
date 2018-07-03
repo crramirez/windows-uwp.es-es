@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bbb26fb3c977917732a079f28d274f7f2bfba41
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 861233de6967a6199bae5d81c1a3938bf8645246
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833363"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976037"
 ---
 # <a name="getting-started-with-a-camera-barcode-scanner"></a>Tareas iniciales con un escáner de código de barras basado en cámara
 ## <a name="step-1-add-capability-declarations-to-your-app-manifest"></a>Paso 1: agregar declaraciones de funcionalidad al manifiesto de la aplicación
@@ -84,7 +84,7 @@ Si la cámara está integrada en el chasis del equipo, el nombre puede diferenci
 Usa [BarcodeScanner.ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync#Windows_Devices_PointOfService_BarcodeScanner_ClaimScannerAsync) para obtener el uso exclusivo del escáner de código de barras basado en cámara.
 
 ## <a name="step-7-system-provided-preview"></a>Paso 7: vista previa proporcionada por el sistema
-Una vista previa de cámara es necesaria para que el usuario apunte correctamente a los códigos de barras con la cámara.  Windows proporciona una sencilla vista previa de cámara que iniciará un cuadro de diálogo para ofrecer un control básico del escáner de código de barras basado en cámara.  Basta con llamar a [ClaimedBarcodeScanner.ShowideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.showvideopreviewasync) para abrir el cuadro de diálogo y a [ClaimedBarcodeScanner.HideVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.hidevideopreview) para cerrarlo al finalizar.
+Una vista previa de cámara es necesaria para que el usuario apunte correctamente a los códigos de barras con la cámara.  Windows proporciona una sencilla vista previa de cámara que iniciará un cuadro de diálogo para ofrecer un control básico del escáner de código de barras basado en cámara.  Basta con llamar a [ClaimedBarcodeScanner.ShowVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.showvideopreviewasync) para abrir el cuadro de diálogo y a [ClaimedBarcodeScanner.HideVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.hidevideopreview) para cerrarlo al finalizar.
 
 > [!TIP]
 > Consulta [Vista previa de hospedaje](pos-camerabarcode-hosting-preview.md) para hospedar en tu aplicación la vista previa del escáner de código de barras basado en cámara.

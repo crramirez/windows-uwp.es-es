@@ -10,18 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, juegos, DirectX, cargar recursos, games, loading resources
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cd2ca426f5a73a6cf8953ab599f8a7332be43a4
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 12dd2fd39ff0b39e747488952779cfeb180f06fa
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655617"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983558"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Cargar recursos en tu juego DirectX
 
 
 
-La mayoría de los juegos, en algún momento, cargan recursos y activos (como sombreadores, texturas, mallas predefinidas y otros datos de gráficos) del almacenamiento local u otro flujo de datos. A continuación, te guiamos por un panorama de alto nivel de lo que debes considerar al cargar estos archivos para tu juego de Plataforma universal de Windows (UWP).
+La mayoría de los juegos, en algún momento, cargan recursos y activos (como sombreadores, texturas, mallas predefinidas y otros datos de gráficos) del almacenamiento local u otro flujo de datos. A continuación, te guiamos por un panorama de alto nivel de lo que debes considerar al cargar estos archivos para tu juego de Plataforma universal de Windows (UWP) de DirectX C/C++.
 
 Por ejemplo, es probable que las mallas para objetos poligonales en el juego estén creadas con otra herramienta y exportadas a un formato específico. Lo mismo ocurre con las texturas y otros elementos: aunque un mapa de bits plano no comprimido se pueda escribir con la mayoría de las herramientas y comprender en la mayoría de las API de gráficos, podría resultar extremadamente ineficaz en tu juego. A continuación te guiamos en los pasos básicos para cargar tres tipos distintos de recursos gráficos para usar con Direct3D: mallas (modelos), texturas (mapas de bits) y objetos de sombreador compilados.
 

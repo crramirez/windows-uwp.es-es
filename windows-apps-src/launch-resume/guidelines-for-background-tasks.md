@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: Directrices para tareas en segundo plano
-description: "Asegúrate de que tu aplicación cumple los requisitos para ejecutar tareas en segundo plano."
+description: Asegúrate de que tu aplicación cumple los requisitos para ejecutar tareas en segundo plano.
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 457c31a0657839632cbc60db0c908dca2cc4fafd
-ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.localizationpriority: medium
+ms.openlocfilehash: 86bc0f616cef32fc217621ddbb9730c6cf4a620a
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862274"
 ---
 # <a name="guidelines-for-background-tasks"></a>Directrices para tareas en segundo plano
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Asegúrate de que tu aplicación cumple los requisitos para ejecutar tareas en segundo plano.
 
@@ -47,6 +48,14 @@ Si usas una tarea en segundo plano para reproducir contenido multimedia en segun
 Como alternativa, solicita un solo aplazamiento y usa **async/await** para completar las llamadas a métodos asincrónicos. Cierra el aplazamiento después de las llamadas al método **await**.
 
 **Actualización del manifiesto de la aplicación:** en el caso de las tareas que se ejecutan fuera de proceso, declara todas las tareas en segundo plano en el manifiesto de la aplicación, junto con el tipo de desencadenadores con que se usan. En caso contrario, tu aplicación no podrá registrar la tarea en segundo plano en tiempo de ejecución.
+
+Si tienes varias tareas en segundo plano, piensa si deberían ejecutarse en el mismo proceso de host o dividirse en diferentes procesos de host. Colócalas en procesos de host independientes si te preocupa que un error de una tarea en segundo plano pudiera eliminar otras tareas en segundo plano.  Usa la entrada **Grupo de recursos** en el diseñador de manifiestos para agrupar tareas en segundo plano en procesos de host diferentes. 
+
+Para establecer el **Grupo de recursos**, abre el diseñador Package.appxmanifest, elige **Declaraciones** y agrega una declaración de **Servicio de aplicaciones**:
+
+![Configuración del grupo de recursos](images/resourcegroup.png)
+
+Consulta la [referencia del esquema de aplicación](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) para obtener más información acerca de la configuración del grupo de recursos.
 
 Las tareas en segundo plano que se ejecutan en el mismo proceso que la aplicación en primer plano no necesitan declararse a sí mismas en el manifiesto de la aplicación. Para obtener más información sobre cómo declarar tareas en segundo plano que se ejecutan fuera de proceso en el manifiesto, consulta [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md).
 
@@ -83,9 +92,6 @@ Todas las aplicaciones para la Plataforma universal de Windows (UWP) pueden ejec
 -   Escribe tareas en segundo plano de corta duración. Las tareas en segundo plano se limitan a 30 segundos de uso.
 -   No confíes en la interacción con el usuario en las tareas en segundo plano.
 
-**Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
@@ -101,7 +107,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 * [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 

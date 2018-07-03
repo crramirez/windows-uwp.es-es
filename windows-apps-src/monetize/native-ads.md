@@ -3,27 +3,24 @@ author: mcleanbyron
 description: Obtén información sobre cómo agregar anuncios nativos a tu aplicación para UWP.
 title: Anuncios nativos
 ms.author: mcleans
-ms.date: 03/22/2018
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anuncios, publicidad, control de anuncios, anuncio nativo
 ms.localizationpriority: medium
-ms.openlocfilehash: ff7c9249989526a454ffd702f3f95d1ebc4b4566
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 5479efef22d31c5a23086b7e596553542e6e9e51
+ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690551"
+ms.lasthandoff: 05/14/2018
+ms.locfileid: "1881116"
 ---
 # <a name="native-ads"></a>Anuncios nativos
 
 Un anuncio nativo es un formato de anuncio basado en componentes, donde cada parte del anuncio creativo (por ejemplo, el título, la imagen, la descripción y el texto de llamada a la acción) se entrega a la aplicación como un elemento individual. Puedes integrar estos elementos en la aplicación con tus propias fuentes, colores, animaciones y otros componentes de interfaz de usuario para unir una experiencia de usuario discreta que se ajuste a la apariencia de la aplicación a la vez que también se obtiene un alto rendimiento de los anuncios.
 
 Para los anunciantes, los anuncios nativos proporcionan ubicaciones de alto rendimiento, porque la experiencia de anuncios está estrechamente integrada en la aplicación y, por lo tanto, los usuarios tienden a interactuar más con estos tipos de anuncios.
-
-> [!NOTE]
-> Para proporcionar anuncios nativos para la versión pública de la aplicación en la Store, debes crear un unidad de anuncio **Nativo** en la página **Monetizar** &gt; **Anuncios desde la aplicación** en el panel del Centro de desarrollo. La capacidad para crear unidades de anuncios **Nativo** solo está disponible actualmente para seleccionar los desarrolladores que participan en un programa piloto, pero queremos que esta característica esté disponible para todos los desarrolladores pronto. Si estás interesado en unirte a nuestro programa piloto, ponte en contacto con nosotros en aiacare@microsoft.com.
 
 > [!NOTE]
 > Los anuncios nativos solo se admiten actualmente para aplicaciones para UWP basadas en XAML para Windows 10. Está prevista la compatibilidad para aplicaciones para UWP escrita con HTML y JavaScript para una futura versión del SDK de Microsoft Advertising.
@@ -52,21 +49,21 @@ Sigue estas instrucciones para integrar un anuncio nativo en la aplicación y co
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Namespaces)]
 
-5.  En una ubicación adecuada de tu aplicación (por ejemplo, en ```MainPage``` o en otra página), declara un objeto [NativeAdsManager](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.aspx) y varios campos de cadenas que representen el id. de aplicación y el id. de unidad del anuncio nativo. El siguiente código de ejemplo asigna los campos `myAppId` y `myAdUnitId` a set-up-ad-units-in-your-app.md#live-ad-units para anuncios nativos.
+5.  En una ubicación adecuada de tu aplicación (por ejemplo, en ```MainPage``` o en otra página), declara un objeto **NativeAdsManagerV2** y varios campos de cadenas que representen el id. de aplicación y el id. de unidad del anuncio nativo. En el siguiente ejemplo de código, se asignan los campos `myAppId` y `myAdUnitId` a los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) para anuncios nativos.
     > [!NOTE]
-    > Cada **NativeAdsManager** tiene una *unidad de anuncio* correspondiente que se usa por nuestros servicios para proporcionar anuncios al control de anuncio nativo y cada unidad de anuncio consta de un *Id. de unidad de anuncio* e *Id. de aplicación*. En estos pasos, asignas los valores del Id. de la unidad de anuncios de prueba y del Id. de aplicación a tu control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la Store, debes [reemplazar estos valores de prueba por valores dinámicos](#release) desde el Centro de desarrollo de Windows.
+    > Cada **NativeAdsManagerV2** tiene una *unidad de anuncio* correspondiente que se usa por nuestros servicios para proporcionar anuncios al control de anuncio nativo y cada unidad de anuncio consta de un *Id. de unidad de anuncio* e *Id. de aplicación*. En estos pasos, asignas los valores del Id. de la unidad de anuncios de prueba y del Id. de aplicación a tu control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la Store, debes [reemplazar estos valores de prueba por valores dinámicos](#release) desde el Centro de desarrollo de Windows.
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
 
-6.  En el código que se ejecuta en el inicio (por ejemplo, en el constructor de la página), crea una instancia del objeto **NativeAdsManager** y conecta controladores de eventos para los eventos [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.adready.aspx) y [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.erroroccurred.aspx) del objeto.
+6.  En el código que se ejecuta en el inicio (por ejemplo, en el constructor de la página), crea una instancia del objeto **NativeAdsManagerV2** y conecta controladores de eventos para los eventos **AdReady** y **ErrorOccurred** del objeto.
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#ConfigureNativeAd)]
 
-7.  Cuando estés listo para mostrar un anuncio nativo, llama al método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.requestad.aspx) para capturar un anuncio.
+7.  Cuando estés listo para mostrar un anuncio nativo, llama al método **RequestAd** para capturar un anuncio.
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#RequestAd)]
 
-8.  Cuando un anuncio nativo esté listo para tu aplicación, se llama al controlador de eventos **AdReady** y un objeto [NativeAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.aspx) que representa el anuncio nativo se pasa al parámetro *e*. Usa las propiedades **NativeAd** para obtener cada elemento del anuncio nativo y mostrar estos elementos en la página. Asegúrate de llamar también al método [RegisterAdContainer](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.registeradcontainer.aspx) para registrar el elemento de la interfaz de usuario que actúa como un contenedor para el anuncio nativo; esto es necesario para realizar un seguimiento adecuado de los clics y de las impresiones de anuncios.
+8.  Cuando un anuncio nativo esté listo para tu aplicación, se llama al controlador de eventos **AdReady** y un objeto **NativeAdV2** que representa el anuncio nativo se pasa al parámetro *e*. Usa las propiedades **NativeAdV2** para obtener cada elemento del anuncio nativo y mostrar estos elementos en la página. Asegúrate de llamar también al método **RegisterAdContainer** para registrar el elemento de la interfaz de usuario que actúa como un contenedor para el anuncio nativo; esto es necesario para realizar un seguimiento adecuado de los clics y de las impresiones de anuncios.
     > [!NOTE]
     > Algunos de los elementos del anuncio nativo son necesarios y siempre se deben mostrar en la aplicación. Para más información, consulta nuestras [directrices para anuncios nativos](ui-and-user-experience-guidelines.md#guidelines-for-native-ads).
 
@@ -112,7 +109,7 @@ Sigue estas instrucciones para integrar un anuncio nativo en la aplicación y co
 
 ## <a name="release-your-app-with-live-ads"></a>Publicar tu aplicación con anuncios dinámicos
 
-Después de confirmar que la implementación de anuncios nativo muestra correctamente un anuncio de prueba, sigue estas instrucciones para configurar la aplicación para que muestre anuncios reales y envía la aplicación actualizada a la Store.
+Después de confirmar que la implementación de anuncios nativo muestra correctamente un anuncio de prueba, sigue estas instrucciones para configurar la aplicación para que muestre anuncios reales y envía la aplicación actualizada a la Tienda.
 
 1.  Asegúrate de que la implementación de anuncio nativo sigue nuestras [directrices para anuncios nativos](ui-and-user-experience-guidelines.md#guidelines-for-native-ads).
 
@@ -122,7 +119,7 @@ Después de confirmar que la implementación de anuncios nativo muestra correcta
 
 3. También tienes la opción de habilitar la mediación de anuncios para el anuncio nativo mediante la configuración de las opciones de la sección [Configuración de la mediación](../publish/in-app-ads.md#mediation) de la página [Anuncios desde la aplicación](../publish/in-app-ads.md). La mediación de anuncios te permite maximizar las funcionalidades de ingresos por anuncios y de promoción de la aplicación mostrando anuncios de múltiples redes de anuncio.
 
-4.  En el código, reemplaza los valores de unidades de anuncio de prueba (es decir, los parámetros *applicationId* y *adUnitId* del constructor [NativeAdsManager](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.nativeadsmanager.aspx)) por los valores dinámicos generados en el Centro de desarrollo.
+4.  En el código, reemplaza los valores de unidades de anuncio de prueba (es decir, los parámetros *applicationId* y *adUnitId* del constructor **NativeAdsManagerV2**) por los valores dinámicos generados en el Centro de desarrollo.
 
 5.  [Envía la aplicación](../publish/app-submissions.md) a la Store desde el panel del Centro de desarrollo.
 

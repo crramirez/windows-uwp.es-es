@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d6e5d69c2f86c0d57c0c1be938799d5e81bb8f00
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 81205dc7122c75345b686240f79200d8304704b7
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832279"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843425"
 ---
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a>Captura básica de fotos, audio y vídeo con MediaCapture
 
@@ -61,7 +61,7 @@ A partir de Windows, versión 1803, puedes acceder a la propiedad [**BitmapPrope
 
 Para obtener información acerca de cómo usar **BitmapEncoder** y acerca de cómo trabajar con el objeto **SoftwareBitmap**, incluyendo cómo mostrar uno en una página XAML, consulta [**Crear, editar y guardar imágenes de mapa de bits**](imaging.md). 
 
-Para obtener más información sobre los valores de control de dispositivo de captura de configuración, consulta [Capturar los controles del dispositivo para captura de fotos y vídeos](capture-device-controls-for-photo-and-video.md).
+Para obtener más información sobre los valores de control de dispositivo de captura de configuración, consulta [Capturar los controles del dispositivo para captura de fotos y vídeos](capture-device-controls-for-photo-and-video-capture.md).
 
 A partir de Windows 10, versión 1803, puedes obtener los metadatos, como la información de EXIF, para las fotos que se capturan en formato no comprimido mediante el acceso a la propiedad [**BitmapProperties**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.bitmapproperties) del valor de **CapturedFrame** devuelto por **MediaCapture**. En versiones anteriores, estos datos solo eran accesibles en el encabezado de fotos capturados para un formato de archivo comprimido. Puedes proporcionar estos datos a un valor de [**BitmapEncoder**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder) al escribir manualmente un archivo de imagen. Para obtener más información sobre la codificación de mapas de bits, consulta [Crear, editar y guardar imágenes de mapa de bits](imaging.md).  También puedes obtener acceso a los valores de control de fotograma, como la configuración del flash y la configuración, que se usa cuando se capturó la imagen mediante el acceso a la propiedad [**ControlValues**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.capturedframe.controlvalues). Para más información, consulta [Capturar los controles del dispositivo para captura de fotos y vídeos](capture-device-controls-for-photo-and-video-capture.md).
 

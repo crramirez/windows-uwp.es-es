@@ -3,18 +3,18 @@ author: laurenhughes
 title: Instalar aplicaciones para UWP con el Instalador de aplicación
 description: Esta sección contiene o vincula a artículos sobre el Instalador de aplicación y acerca de cómo usar las características del Instalador de aplicación.
 ms.author: lahugh
-ms.date: 10/10/2017
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
-ms.openlocfilehash: 06ccb50e3c1a97a69041ca2d3b4de59a550e3399
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 0f82c319ca812af9296895711f2b546a8b0332c5
+ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831809"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "1992111"
 ---
 # <a name="install-uwp-apps-with-app-installer"></a>Instalar aplicaciones para UWP con el Instalador de aplicación
 
@@ -30,3 +30,14 @@ El Instalador de aplicación permite la instalación de las aplicaciones para UW
 | [Instalar un conjunto relacionado con un archivo del Instalador de aplicación](install-related-set.md) | En esta sección, aprenderás a permitir la instalación de un conjunto relacionado a través del Instalador de aplicación. También analizaremos los pasos para crear un archivo del Instalador de aplicación que definirá su conjunto relacionado. |
 | [Solucionar problemas de instalación con el archivo del Instalador de aplicación](troubleshoot-appinstaller-issues.md) | Problemas y soluciones comunes al instalar aplicaciones de prueba con el archivo del Instalador de aplicación. |
 | [Referencia del archivo (.appinstaller) del Instalador de aplicación](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file) | Ver el esquema XML completo para el archivo del Instalador de aplicación. |
+
+## <a name="tutorials"></a>Tutoriales 
+
+Sigue estos tutoriales y aprende a hospedar e instalar una aplicación para UWP desde varias plataformas de distribución. Estos tutoriales son útiles para empresas y desarrolladores que no desean o necesitan publicar sus aplicaciones en Store, pero quieres sacar provecho de la plataforma de implementación y el paquete de Windows 10.
+
+| Tutorial | Descripción |
+|----------|-------------|
+| [Instalar una aplicación para UWP desde una aplicación Web de Azure](web-install-azure.md) | Crear una aplicación Web de Azure y usarla para hospedar y distribuir tu paquete de aplicación para UWP. |
+| [Instalar una aplicación para UWP desde un servidor IIS](web-install-IIS.md) | Configura un servidor IIS, comprueba que tu aplicación web puede hospedar paquetes de aplicación y usa el Instalador de aplicación de manera eficaz. |
+| [Hospedaje de paquetes de aplicación para UWP en AWS para instalación web](web-install-aws.md) | Obtén información sobre cómo configurar el servicio de almacenamiento sencillo de Amazon para hospedar el paquete de aplicación para UWP desde un sitio Web. |
+

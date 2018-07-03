@@ -6,7 +6,7 @@ label: Access keys design guidelines
 keywords: teclado, tecla de acceso, KeyTip, sugerencia de teclas, accesibilidad, navegación, foco, texto, entrada, interacción del usuario
 template: detail.hbs
 ms.author: kbridge
-ms.date: 02/08/2017
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -15,12 +15,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b335068762dd3999e07526962b0d6629825ad68d
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: a336109e9464052a33f5a0d8548e13b260b387a3
+ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707060"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "2018519"
 ---
 # <a name="access-keys"></a>Teclas de acceso
 
@@ -76,13 +76,11 @@ Por ejemplo, Microsoft Word proporciona dos ámbitos de teclas de acceso: un ám
 
 Las imágenes siguientes muestran los dos ámbitos de teclas de acceso en Word. La primera muestra las teclas de acceso principales que permiten al usuario seleccionar una pestaña y otros comandos de nivel superior, mientras que la segunda muestra las claves de acceso secundarias de la pestaña Inicio.
 
-![Teclas de acceso principales en Microsoft Word](images/accesskeys/primary-access-keys-word.png)
+![Teclas de acceso principal en Microsoft Word](images/accesskeys/primary-access-keys-word.png)
+_Teclas de acceso principal en Microsoft Word_
 
-_Teclas de acceso principales en Microsoft Word_
-
-![Teclas de acceso secundarias en Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
-
-Teclas de acceso secundarias en Microsoft Word
+![Teclas de acceso secundario en Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
+_Teclas de acceso secundario en Microsoft Word_
 
 Las teclas de acceso pueden duplicarse para elementos de distintos ámbitos. En el ejemplo anterior, "2" es la tecla de acceso para Deshacer en el ámbito principal y también es "Cursiva" en el ámbito secundario.
 
@@ -122,10 +120,11 @@ _Ámbito principal de CommandBar y teclas de acceso admitidas_
 
 _Ámbito secundario de CommandBar y teclas de acceso admitidas_
 
-> [!NOTE]
-> Antes de Windows 10 Fall Creators Update, algunos controles como CommandBar no admitían ámbitos integrados de teclas de acceso. En este caso, debes implementar ámbitos de teclas de acceso como se muestra en el siguiente ejemplo.   
->
-> Aquí mostramos cómo admitir SecondaryCommands de CommandBar con las teclas de acceso, que están disponibles una vez que se invoca un comando principal (similar a la Cinta en Word).
+### <a name="windows-10-creators-update-and-older"></a>Windows 10 Fall Creators Update y anteriores
+
+Antes de Windows 10 Fall Creators Update, algunos controles como CommandBar no admitían ámbitos integrados de teclas de acceso.
+
+En el siguiente ejemplo se muestra cómo admitir SecondaryCommands de CommandBar con las teclas de acceso que están disponibles una vez que se invoca un comando principal (similar a la Cinta en Word).
 
 ```xaml
 <local:CommandBarHack x:Name="MainCommandBar" AccessKey="M" >
@@ -178,11 +177,10 @@ public class CommandBarHack : CommandBar
         secondaryItemsControl.AccessKeyScopeOwner = moreButton;
 
         overflowPopup = GetTemplateChild("OverflowPopup") as Popup;
-
     }
+
     private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
     {
-
         if (overflowPopup != null)
         {
             overflowPopup.Opened += SecondaryMenuOpened;

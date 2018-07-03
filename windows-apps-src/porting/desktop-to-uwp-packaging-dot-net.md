@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: d7ae77c499cb8398aa5557f0d422899fbe8b252d
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 5e3dce1950de907462b62967291d456fb062bd9c
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816260"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989277"
 ---
 # <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a>Empaquetar una aplicación mediante Visual Studio (Puente de dispositivo de escritorio a UWP)
 
@@ -27,11 +27,9 @@ La versión más reciente de Visual Studio proporciona una nueva versión del pr
 >[!IMPORTANT]
 >El Puente de dispositivo de escritorio se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la Actualización de aniversario de Windows 10 (10.0, compilación 14393) o una versión posterior de Visual Studio.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>En primer lugar, piensa en la manera de distribuir la aplicación.
+## <a name="first-prepare-your-application"></a>Primero, prepara tu aplicación
 
-Si vas a publicar la aplicación en la [Microsoft Store](https://www.microsoft.com/store/apps), comienza rellenando [este formulario](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). Microsoft se pondrá en contacto contigo para iniciar el proceso de incorporación. Como parte de este proceso, podrás reservar un nombre en la Store y obtener la información que necesitas para empaquetar la aplicación.
-
-Además, asegúrate de consultar esta guía antes de empezar a crear un paquete para tu aplicación: [Preparar para empaquetar una aplicación (Puente de dispositivo de escritorio)](desktop-to-uwp-prepare.md).
+Consulta esta guía antes de empezar a crear un paquete para tu aplicación: [Preparar para empaquetar una aplicación (Puente de dispositivo de escritorio)](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 
@@ -72,7 +70,8 @@ Además, asegúrate de consultar esta guía antes de empezar a crear un paquete 
 
 **Vídeo**
 
-<iframe src="https://www.youtube.com/embed/fJkbYPyd08w" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
+&nbsp;
+> [!VIDEO https://www.youtube.com/embed/fJkbYPyd08w]
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -4,18 +4,18 @@ ms.assetid: AE3E003F-BDEC-438B-A80A-3CE1675B369C
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados del informe de errores de hardware para un intervalo de fechas y otros filtros opcionales. Este método está previsto solo para OEM.
 title: Obtener datos de informes de errores de hardware OEM
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis de la Store Windows, errors, errores
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e1e7d83b8094a79cb87a6611e2e6d8b8f05159e
-ms.sourcegitcommit: b7032f083bcbb71f5a7dd1a200dcc81dba496a81
+ms.openlocfilehash: f8d7a85a37272eb7046ca1e7f64476f94d9556e2
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
-ms.locfileid: "1527343"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989459"
 ---
 # <a name="get-oem-hardware-error-reporting-data"></a>Obtener datos de informes de errores de hardware OEM
 
@@ -29,7 +29,7 @@ Usa este método en la API de análisis de Microsoft Store para obtener los dato
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
@@ -55,7 +55,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
-| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
+| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor siempre es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
 | filter |cadena  | Una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Puedes especificar los siguientes campos:<p/><ul><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>moduleName</strong></li><li><strong>moduleVersion</strong></li><li><strong>mode</strong></li><li><strong>architecture</strong></li><li><strong>model</strong></li><li><strong>baseboard</strong></li><li><strong>modelFamily</strong></li><li><strong>flightRing</strong></li></ul> | No   |
@@ -87,7 +87,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Valor      | matriz   | Una matriz de objetos que contienen los datos agregados del informe de errores. Para más información sobre los datos de cada objeto, consulta la tabla siguiente.     |
 | @nextLink  | cadena  | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de errores de la solicitud. |
-| TotalCount | número | El número total de filas del resultado de datos de la consulta.     |
+| TotalCount | entero | El número total de filas en el resultado de datos de la consulta.     |
 
 <span/>
 
@@ -112,7 +112,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | modelFamily | cadena | El nombre de la familia del modelo de dispositivo en el que se produjo el error. |
 | flightRing | cadena | El nombre del piloto de SO en el que se produjo el error. |
 | mode | cadena | Este valor es siempre *kernel*. |
-| eventCount      | número | El número de eventos atribuidos a este error del nivel de agregación especificado.      |
+| eventCount      | entero | El número de eventos atribuidos a este error del nivel de agregación especificado.      |
 
 <span/> 
 

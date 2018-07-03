@@ -1,6 +1,6 @@
 ---
 author: drewbatgit
-Description: "En este artículo se describe cómo crear un componente de Windows Runtime que implemente la interfaz IBasicAudioEffect para permitir la creación de efectos personalizados para las secuencias de audio."
+Description: This article describes how to create a Windows Runtime component that implements the IBasicAudioEffect interface to allow you to create custom effects for audio streams.
 title: Efectos de audio personalizados
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,9 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
-ms.openlocfilehash: f2754cea4442fd0333b620f82d1db92d8be1c578
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 576277ab4bf3d2ea3bfe679da4039da194aabb70
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843265"
 ---
 # <a name="custom-audio-effects"></a>Efectos de audio personalizados
 
@@ -76,7 +80,7 @@ Para obtener acceso al búfer de datos de un **AudioFrame** se requiere interope
 [!code-cs[ComImport](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetComImport)]
 
 > [!NOTE]
-> Dado que esta técnica obtiene acceso a un búfer de imagen nativo sin administrar, tendrás que configurar el proyecto para permitir un código no seguro.
+> Dado que esta técnica accede a un búfer de imagen nativo sin administrar, tendrás que configurar el proyecto para permitir un código no seguro.
 > 1.  En el Explorador de soluciones, haz clic con el botón secundario en el proyecto AudioEffectComponent y selecciona **Propiedades**.
 > 2.  Selecciona la pestaña **Compilación**.
 > 3.  Activa la casilla **Permitir código no seguro**.
@@ -95,7 +99,7 @@ Ahora que ha se han obtenido los búferes de datos, puedes leer del búfer de en
 
 El sistema llamará al método [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764782) [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764782) en la clase cuando haya que apagar el efecto. Debes usar este método para eliminar todos los recursos que hayas creado. El argumento del método es un valor [**MediaEffectClosedReason**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.MediaEffectClosedReason) que te permite saber si se cerró el efecto con normalidad, si se produjo un error o si el efecto no admite el formato de codificación necesario.
 
-[!code-cs[Cerrar](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetClose)]
+[!code-cs[Close](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetClose)]
 
 ### <a name="discardqueuedframes-method"></a>Método DiscardQueuedFrames
 
@@ -144,7 +148,7 @@ El siguiente fragmento de código muestra cómo agregar el efecto de audio perso
 
 
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-topics"></a>Artículos relacionados
 * [Acceso fácil a la vista previa de cámara](simple-camera-preview-access.md)
 * [Composiciones y edición multimedia](media-compositions-and-editing.md)
 * [Documentación de Win2D](http://go.microsoft.com/fwlink/p/?LinkId=519078)

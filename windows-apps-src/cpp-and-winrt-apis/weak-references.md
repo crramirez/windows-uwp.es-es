@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, débil, referencia
 ms.localizationpriority: medium
-ms.openlocfilehash: 63ffad19c0ae8a52737ae13a54e5657df875d0b5
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 69294115af93ec464abfe908df948c8ff5504efc
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832609"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842459"
 ---
 # <a name="weak-references-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Referencias débiles en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 En la mayoría de los casos deberías poder diseñar tu propia API C++/WinRT de modo que se evite la necesidad de referencias cíclicas y referencias débiles. Sin embargo, cuando se trata de la implementación nativa de frameworkL de la interfaz de usuario basada en XAML&mdash;debido al diseño histórico del marco&mdash;el mecanismo de referencia débil en C++/WinRT es necesario para controlar referencias cíclicas. Fuera de XAML, es poco probable que necesites usar referencias débiles (aunque en teoría, no haya nada específico de XAML en lo que a ellas respecta).

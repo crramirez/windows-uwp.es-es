@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, enviar notificaciones del sistema, notificaciones, enviar notificaciones, notificaciones del sistema, cómo, inicio rápido, introducción, ejemplo de código, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: e59c90bae19116f725b58fc6ec9fdbb41e5dccb3
-ms.sourcegitcommit: 0ee9c6848cb9d624f15cdab1d0c5991ca7245e70
+ms.openlocfilehash: 4f76bc94c80a5191cf7bad86b43230f0d03e81b1
+ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
-ms.locfileid: "1641695"
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "1917714"
 ---
 # <a name="send-a-local-toast-notification"></a>Enviar una notificación de icono local
 
@@ -25,7 +25,7 @@ ms.locfileid: "1641695"
 Una notificación del sistema es un mensaje que una aplicación puede construir y entregar al usuario, mientras que no se encuentre actualmente dentro de la aplicación. Este Inicio rápido le guía por los pasos de crear, entregar y mostrar una notificación del sistema de Windows 10 con las nuevas plantillas adaptables y acciones interactivas. Estas acciones se demuestran mediante una notificación local, que es la notificación más simple de implementar.
 
 > [!IMPORTANT]
-> Las aplicaciones de escritorio (Puente de dispositivo de escritorio y Win32 clásico) tienen distintos pasos para enviar notificaciones y controlar la activación. Consulta la documentación de [C# de Escritorio](send-local-toast-desktop.md) y [WRL de C++ de escritorio](send-local-toast-desktop-cpp-wrl.md) para obtener información acerca de cómo implementar las notificaciones del sistema.
+> Las aplicaciones de escritorio (Puente de dispositivo de escritorio y Win32 clásico) tienen distintos pasos para enviar notificaciones y controlar la activación. Consulta la documentación de [Aplicaciones de escritorio](toast-desktop-apps.md) para obtener información acerca de cómo implementar las notificaciones del sistema.
 
 Pasaremos por las siguientes acciones:
 
@@ -382,7 +382,7 @@ BackgroundAccessStatus status = await BackgroundExecutionManager.RequestAccessAs
 // Create the background task
 BackgroundTaskBuilder builder = new BackgroundTaskBuilder()
 {
-    Name = "MyToastNotificationActionTrigger",
+    Name = taskName
 };
 
 // Assign the toast action trigger

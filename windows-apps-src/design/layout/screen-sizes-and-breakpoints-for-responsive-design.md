@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d84530c1a7c3795c566495c1eae121691b0766a
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 0c61b4076ed2529fddfcec53264c95c8290297a0
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1688941"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843035"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamaños de pantalla y puntos de interrupción
 
@@ -29,31 +29,31 @@ Las aplicaciones para UWP pueden ejecutarse en cualquier dispositivo que ejecute
 ## <a name="breakpoints"></a>Puntos de interrupción
 Esta tabla describe las distintas clases de tamaño y los puntos de interrupción.
 
-![Puntos de interrupción con diseño adaptativo](images/rsp-design/rspd-breakpoints.png)
+![Puntos de interrupción de diseño con capacidad de respuesta](images/breakpoints/size-classes.svg)
 
 <table>
 <thead>
 <tr class="header">
 <th align="left">Clase de tamaño</th>
 <th align="left">Puntos de interrupción</th>
-<th align="left">Tamaño de pantalla (diagonal)</th>
+<th align="left">Tamaño de pantalla habitual (diagonal)</th>
 <th align="left">Dispositivos</th>
 <th align="left">Tamaños de la ventana</th>
 </tr>
 </thead>
 <tbody>
 <tr class="even">
-<td style="vertical-align:top;">Pequeño</td>
+<td style="vertical-align:top;">Pequeña</td>
 <td style="vertical-align:top;">640 píxeles o menos</td>
-<td style="vertical-align:top;">De 4 a 6 pulgadas</td>
-<td style="vertical-align:top;">Teléfonos</td>
+<td style="vertical-align:top;">4&quot; a 6&quot;; 20&quot; a 65&quot;</td>
+<td style="vertical-align:top;">Teléfonos, televisores</td>
 <td style="vertical-align:top;">320x569, 360x640, 480x854</td>
 </tr>
 <tr class="odd">
-<td style="vertical-align:top;">Medio</td>
+<td style="vertical-align:top;">Media</td>
 <td style="vertical-align:top;">De 641 a 1007 píxeles</td>
 <td style="vertical-align:top;">De 7 a 12 pulgadas</td>
-<td style="vertical-align:top;">Tabléfono, tabletas, televisores</td>
+<td style="vertical-align:top;">Tabléfono, tabletas</td>
 <td style="vertical-align:top;">960x540</td>
 </tr>
 <tr class="even">
@@ -66,9 +66,20 @@ Esta tabla describe las distintas clases de tamaño y los puntos de interrupció
 </tbody>
 </table>
 
+## <a name="why-are-tvs-considered-small"></a>¿Por qué los televisores se consideran "pequeños"? 
+
+Aunque la mayoría de los televisores son físicamente bastante grandes (de 40a 65 pulgadas es lo habitual) y tienen resoluciones altas (HD o 4k), el diseño para una televisión de 1080píxeles que se ve a 10m de distancia es diferente del diseño de un monitor de 1080píxeles cuando se está sentado a una distancia de 300m en tu escritorio. Cuando tienes en cuenta la distancia, los 1080píxeles de los televisores son más similares al monitor 540píxeles que está mucho más cerca.
+
+El sistema de píxeles eficaz de UWP tiene en cuenta automáticamente para ti la distancia de visualización. Al especifica un tamaño para un control o un intervalo de punto de interrupción, estás usando realmente píxeles "efectivos". Por ejemplo, si creas código dinámico para 1080píxeles y superior, un monitor1080 usará ese código, pero un televisor de 1080píxeles no lo hará porque aunque un televisor de 1080píxeles tiene 1080 píxeles físicos, solo tiene 540píxeles efectivos. Lo que hace que el diseño para un televisor similar al diseño de un teléfono.
+
+## <a name="effective-pixels-and-scale-factor"></a>Píxeles efectivos y factor de escala
+
+Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para garantizar que tu aplicación sea legible en todos los dispositivos de Windows 10. Windows escala automáticamente cada pantalla en función de su valor de PPP (puntos por pulgada) y la distancia de visualización del dispositivo. Los usuarios pueden anular el valor predeterminado si se dirigen a la página **Configuración** > **Pantalla** > **Escala y distribución**. 
+
+
 ## <a name="general-recommendations"></a>Recomendaciones generales
 
-### <a name="small"></a>Pequeño
+### <a name="small"></a>Pequeña
 - Establece los márgenes de la ventana de la izquierda y derecha en 12 píxeles para crear una separación visual entre los bordes izquierdo y derecho de la ventana de la aplicación.
 - Acopla las [barras de la aplicación](../controls-and-patterns/app-bars.md) a la parte inferior de la ventana para una mejor accesibilidad.
 - Usa una columna o región a la vez.
@@ -94,6 +105,4 @@ Esta tabla describe las distintas clases de tamaño y los puntos de interrupció
 >[!TIP] 
 > Con [**Continuum para teléfonos**](http://go.microsoft.com/fwlink/p/?LinkID=699431), los usuarios pueden conectar dispositivos móviles compatibles con Windows 10 a un monitor, un ratón y un teclado para que los teléfonos funcionen como un portátil. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, un teléfono móvil no se mantendrá siempre en la clase de tamaño pequeño.
 
-## <a name="effective-pixels-and-scale-factor"></a>Píxeles efectivos y factor de escala
 
-Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para garantizar que tu aplicación sea legible en todos los dispositivos de Windows 10. Windows escala automáticamente cada pantalla en función de su valor de PPP (puntos por pulgada) y la distancia de visualización del dispositivo. Los usuarios pueden anular el valor predeterminado si se dirigen a la página **Configuración** > **Pantalla** > **Escala y distribución**. 

@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: Test your app for Windows 10 S without having to install Windows 10 S.
+Description: Test your app for Windows 10 in S mode.
 Search.Product: eADQiWindows 10XVcnh
 title: Probar la aplicación de Windows en Windows 10 S
 ms.author: normesta
@@ -10,16 +10,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10 S, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5810789ab2457ed14964a61bf278c84e7deb416
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 69cceb86710cea0e9066454fba4ef4e1746633d1
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662715"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874323"
 ---
-# <a name="test-your-windows-app-for-windows-10-s"></a>Probar la aplicación de Windows en Windows 10 S
+# <a name="test-your-windows-app-for-windows-10-in-s-mode"></a>Consulta Probar la aplicación de Windows 10 en modo S
 
-Puedes probar la aplicación de Windows para garantizar que funcionará correctamente en dispositivos que ejecutan Windows 10S. De hecho, si vas a publicar la aplicación en Microsoft Store, debes hacerlo porque es un requisito de la Store. Para probar la aplicación, puedes aplicar una directiva de integridad de código de Device Guard en un dispositivo que ejecute Windows 10 Pro.
+Puedes probar la aplicación de Windows para garantizar que funciona correctamente en dispositivos que ejecuten Windows 10 en modo S. De hecho, si vas a publicar la aplicación en la Microsoft Store, debes hacerlo porque es un requisito de la Store. Para probar la aplicación, puedes aplicar una directiva de integridad de código de Device Guard en un dispositivo que ejecute Windows 10 Pro.
 
 > [!NOTE]
 > El dispositivo en el que aplica la directiva de integridad de código de Device Guard debe ejecutar Windows 10 Creators Edition (10.0; Build 15063) o posterior.
@@ -70,7 +70,7 @@ Para buscar puntos específicos en la pila de llamadas dónde se producen los pr
 Esta directiva aplica las reglas de integridad de código que coinciden con Windows 10, para que puedas simular la ejecución en Windows 10 S. Esta es la directiva más estricta y es excelente para probar la producción final. En este modo, la aplicación está sujeta a las mismas restricciones que tendría si estuviera en el dispositivo del usuario. Para usar este modo, la aplicación debe estar firmada por Microsoft Store.
 
 ### <a name="production-mode-policy-with-self-signed-apps"></a>Directiva del modo de producción con aplicaciones autofirmadas
-Este modo es similar a la directiva del modo de producción, pero también permite ejecutar contenido firmado con el certificado de prueba que se incluye en el archivo zip. Instala el archivo PFX que se incluye en la carpeta **AppxTestRootAgency** de este archivo zip. A continuación, firma la aplicación con él. De este modo, puedes iterar rápidamente sin tener la firma de la Store.
+Este modo es similar a la directiva del modo de producción, pero también permite ejecutar contenido firmado con el certificado de prueba que se incluye en el archivo zip. Instala el archivo PFX que se incluye en la carpeta **AppxTestRootAgency** de este archivo zip. A continuación, firma la aplicación con él. De este modo, puedes iterar rápidamente sin tener la firma de la Tienda.
 
 Como el nombre del publicador del certificado debe coincidir con el nombre del publicador de la aplicación, tendrás que cambiar temporalmente el valor del atributo **Editor** del elemento **Identidad** a "CN=Appx Test Root Agency Ex". Puedes cambiar este atributo de nuevo a su valor original después de completar las pruebas.
 
@@ -80,7 +80,7 @@ Te recomendamos que apliques estas directivas a una máquina virtual, ya que est
 
 Si quieres aplicar estas directivas en el equipo local, es mejor comenzar con la directiva del modo de auditoría. Con esta directiva, puedes revisar los registros de eventos de integridad de código para garantizar que nada importante se bloquee en la directiva aplicada.
 
-Cuando estés listo para aplicar una directiva, busca el archivo .P7B de la directiva que hayas elegido, denomínalo **SIPolicy.P7B** y, a continuación, guárdalo en esta ubicación del sistema: **C:\Windows\System32\CodeIntegrity\**.
+Cuando estés listo para aplicar una directiva, busca el archivo .P7B de la directiva que hayas elegido, denomínalo **SIPolicy.P7B** y, a continuación, guárdalo en esta ubicación del sistema: **C:\Windows\System32\CodeIntegrity\\**.
 
 A continuación, reinicia el sistema.
 
@@ -101,6 +101,6 @@ Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 
 Consulta [Portar y probar sus aplicaciones de escritorio clásicas en Windows 10 S con el Puente de dispositivo de escritorio](https://blogs.msdn.microsoft.com/appconsult/2017/06/15/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge/).
 
-**Obtener información acerca de las herramientas que facilitan las pruebas para Windows S**
+**Obtener información acerca de las herramientas que facilitan las pruebas para Windows en modo S**
 
 Consulta [Desempaquetar, modificar, volver a empaquetar, firmar un APPX](https://blogs.msdn.microsoft.com/appconsult/2017/08/07/unpack-modify-repack-sign-appx/).

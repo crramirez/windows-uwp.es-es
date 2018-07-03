@@ -3,33 +3,33 @@ author: mcleanbyron
 description: Usa este método en la API de análisis de Microsoft Store para obtener datos de multijugador de Xbox Live.
 title: Obtener datos de multijugador de Xbox Live
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, multiplayer, multijugador
 ms.localizationpriority: medium
-ms.openlocfilehash: 90ca2b37db16aec9e84ea57793175039c68e2291
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 89c6ea0821a54e0ada8953071072e1e89c57fc2f
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817293"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976673"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a>Obtener datos de multijugador de Xbox Live
 
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de multijugador de tu [juego habilitado para Xbox Live](../xbox-live/index.md) diaria o mensualmente. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de multijugador de tu [juego habilitado para Xbox Live](../xbox-live/index.md) diaria o mensualmente. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) del Panel del Centro de desarrollo de Windows.
 
 > [!IMPORTANT]
-> Este método actualmente no admite juegos habilitados para Xbox Live publicados por [partners de Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) o enviados a través del [programa ID@Xbox](../xbox-live/developer-program-overview.md#id). No devuelve datos para juegos e3nviados a través del [Programa de creadores de Xbox Live](../xbox-live/developer-program-overview.md#xbox-live-creators-program).
+> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](../xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [Requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
@@ -51,7 +51,7 @@ Para usar este método, primero debes hacer lo siguiente:
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 
-| Parámetro        | Tipo   |  Descripción      |  Obligatorio  
+| Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
 | applicationId | cadena | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para el que quieres recuperar los datos de multijugador de Xbox Live.  |  Sí  |
 | metricType | cadena | Una cadena que especifica el tipo de datos de análisis de Xbox Live que se han de recuperar. En este método, especifica el valor **multiplayerdaily** para obtener datos de multijugador diarios o **multiplayermonthly** para obtener datos de multijugador mensuales.  |  Sí  |
@@ -88,13 +88,13 @@ Los elementos de la matriz *Value* contienen los siguientes valores cuando solic
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| date                | cadena | La fecha de los datos de multijugador. |
+| fecha                | cadena | La fecha de los datos de multijugador. |
 | applicationId       | cadena | El Id de Store del juego sobre la que estás recuperando los datos de multijugador.     |
-| applicationName       | cadena |  El nombre del juego sobre el que estás recuperando los datos de multijugador.     |
+| applicationName       | cadena |  El nombre del juego sobre la que estás recuperando los datos de multijugador.     |
 | market       | cadena | El código de país ISO 3166 de dos letras del mercado de donde proceden los datos de multijugador.       |
 | packageVersion     | cadena |  La versión del paquete de cuatro partes del juego.  |
 | deviceType          | cadena | Una de las siguientes cadenas que especifica el tipo de dispositivo del que proceden los datos de multijugador:<p/><ul><li><strong>Consola</strong></li><li><strong>PC</strong></li><li>**Unknown**</li></ul>  |
-| subscriptionName     | cadena |  El nombre de la suscripción usado para los datos de multijugador. Algunos valores incluyen **Xbox Game Pass** y **""** (para no suscripción).  |
+| subscriptionName     | cadena |  El nombre de la suscripción usada para los datos de multijugador. Algunos valores incluyen **Xbox Game Pass** y **""** (para no suscripción).  |
 | dailySessionCount     | número |  El número de sesiones multijugador del juego en la fecha especificada.  |
 | engagementDurationMinutes     | número |  El número total de minutos que los clientes se conectaron en sesiones multijugador en el juego en la fecha especificada.  |
 | dailyActiveUsers     | número |  El número total de usuarios multijugador activos del juego en la fecha especificada.  |
@@ -111,7 +111,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores cuando solic
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| date                | cadena | La primera fecha del mes de los datos de multijugador. |
+| fecha                | cadena | La primera fecha del mes de los datos de multijugador. |
 | applicationId       | cadena | El Id de Store del juego sobre la que estás recuperando los datos de multijugador.     |
 | applicationName       | cadena |  El nombre del juego sobre la que estás recuperando los datos de multijugador.     |
 | market       | cadena | El código de país ISO 3166 de dos letras del mercado de donde proceden los datos de multijugador.       |
