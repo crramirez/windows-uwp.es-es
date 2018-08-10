@@ -1,8 +1,8 @@
 ---
 author: PatrickFarley
 ms.assetid: 551d4e70-312d-4b40-8d3e-336ce934e0ad
-title: "Impresión en 3D"
-description: "En esta sección se describe cómo usar la funcionalidad de impresión en 3D en la aplicación universal de Windows."
+title: Impresión en 3D
+description: En esta sección se describe cómo usar la funcionalidad de impresión en 3D en la aplicación universal de Windows.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: af636e445d2cad70922b8f846140e0886cf7ef28
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238620"
 ---
 # <a name="3d-printing"></a>Impresión 3D
 

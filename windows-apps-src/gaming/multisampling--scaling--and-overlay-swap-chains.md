@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Escalado y superposiciones de cadenas de intercambio
-description: "Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y usa también cadenas de intercambio (si las hay) para mejorar la calidad visual."
+description: Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y usa también cadenas de intercambio (si las hay) para mejorar la calidad visual.
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP, juegos, intercambiar escalado de cadenas, superposiciones, directx, games, swap chain scaling, overlays
 ms.openlocfilehash: 02088fce03c88b4166d49cd36754ac956f254199
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "238601"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>Intercambiar escalado y superposiciones de cadenas
 

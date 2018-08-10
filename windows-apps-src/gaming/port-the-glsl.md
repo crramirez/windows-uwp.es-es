@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Migrar GLSL
-description: "Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código de esos sombreadores, del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11."
+description: Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código de esos sombreadores, del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11.
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, glsl, port, portar
 ms.openlocfilehash: 7416a4dafe24f86243a3a9962d01db1dc7b61031
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238639"
 ---
 # <a name="port-the-glsl"></a>Portar GLSL
 

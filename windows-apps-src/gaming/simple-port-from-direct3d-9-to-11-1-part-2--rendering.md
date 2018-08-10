@@ -1,17 +1,19 @@
 ---
 author: mtoepke
-title: "Convertir el marco de representación"
-description: "Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11."
+title: Convertir el marco de representación
+description: Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11.
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, juegos, marco de representación, convertir, direct3d 9, direct3d 11"
+keywords: windows 10, uwp, juegos, marco de representación, convertir, direct3d 9, direct3d 11
 ms.openlocfilehash: d33a694cf835ba3d997a7c4a111349c117e2493e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238655"
 ---
 # <a name="convert-the-rendering-framework"></a>Convertir el marco de representación
 

@@ -1,19 +1,20 @@
 ---
 author: normesta
-description: "Muestra cómo agregar la aplicación junto a las acciones en una tarjeta de contacto"
+description: Muestra cómo agregar la aplicación junto a las acciones en una tarjeta de contacto
 MSHAttr: PreferredLib:/library/windows/apps
-title: "Conectar la aplicación a acciones en una tarjeta de contacto"
+title: Conectar la aplicación a acciones en una tarjeta de contacto
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, contactos, tarjeta de contacto, anotación, contacts, contact card, annotation"
+keywords: Windows 10, UWP, contactos, tarjeta de contacto, anotación, contacts, contact card, annotation
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.openlocfilehash: e882566fcc81941669dd4844235bcbd899ea3079
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "238645"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>Conectar la aplicación a acciones en una tarjeta de contacto
 

@@ -1,17 +1,19 @@
 ---
 author: mtoepke
 title: Dibujar en la pantalla
-description: "Por fin hemos portado el código que dibuja un cubo giratorio en la pantalla."
+description: Por fin hemos portado el código que dibuja un cubo giratorio en la pantalla.
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, juegos, games, directx, gráficos, graphics"
+keywords: windows 10, uwp, juegos, games, directx, gráficos, graphics
 ms.openlocfilehash: 1fe28d17aa8c943de9a2bcf6c2230237e0c931d0
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238609"
 ---
 # <a name="draw-to-the-screen"></a>Dibujar en la pantalla
 

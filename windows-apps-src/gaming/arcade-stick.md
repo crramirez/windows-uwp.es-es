@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP, juegos, stick arcade, entrada
 ms.openlocfilehash: b0411dcf1fd75ec7dc31d29a39e95f5c26073953
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238647"
 ---
 # <a name="arcade-stick"></a>Stick arcade
 
