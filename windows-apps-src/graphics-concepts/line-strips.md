@@ -1,8 +1,9 @@
 ---
-title: "Series de líneas"
-description: "Una serie de líneas es un tipo de primitivo que se compone de segmentos de líneas conectados. La aplicación puede usar las series de líneas para crear polígonos que no están cerrados. Un polígono cerrado es un polígono cuyo último vértice está conectado a su primer vértice con un segmento de línea."
+title: Series de líneas
+description: Una serie de líneas es un primitivo que se compone de segmentos de línea conectados. La aplicación puede usar las series de líneas para crear polígonos que no están cerrados. Un polígono cerrado es un polígono cuyo último vértice está conectado a su primer vértice con un segmento de línea.
 ms.assetid: 6E8C58E1-B463-44FD-A69F-81CCBF25D856
-keywords: "Series de líneas"
+keywords:
+- Series de líneas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7eec406faf1f695a473154dd23322bcdf9189049
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043164"
 ---
 # <a name="line-strips"></a>Series de líneas
 
 
-Una serie de líneas es un tipo de primitivo que se compone de segmentos de líneas conectados. La aplicación puede usar las series de líneas para crear polígonos que no están cerrados. Un polígono cerrado es un polígono cuyo último vértice está conectado a su primer vértice con un segmento de línea. Si la aplicación realiza polígonos basados en series de líneas, no se garantiza que los vértices estén en el mismo plano.
+Una serie de líneas es un primitivo que se compone de segmentos de línea conectados. La aplicación puede usar las series de líneas para crear polígonos que no están cerrados. Un polígono cerrado es un polígono cuyo último vértice está conectado a su primer vértice con un segmento de línea. Si la aplicación realiza polígonos basados en series de líneas, no se garantiza que los vértices estén en el mismo plano.
 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
 

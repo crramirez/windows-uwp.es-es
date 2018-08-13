@@ -1,21 +1,24 @@
 ---
-author: DelfCo
-description: "Recupera o crea el contenido web más reciente y popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres Windows.Web.Syndication."
+author: stevewhims
+description: Recupera o crea el contenido web más reciente y popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres Windows.Web.Syndication.
 title: Fuentes RSS y Atom
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
-ms.author: bobdel
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: dff718fe6ea3516730079c7533b6a868b8f67280
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 82d01ab6fc70397824b4bd6b267dd5e7cdeac0ee
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "975807"
 ---
 # <a name="rssatom-feeds"></a>Fuentes RSS y Atom
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 

@@ -1,7 +1,7 @@
 ---
 author: jwmsft
-title: "Análisis de la aplicación"
-description: "Analizar la aplicación para problemas de rendimiento"
+title: Análisis de la aplicación
+description: Analizar la aplicación para problemas de rendimiento
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -10,9 +10,10 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: bedd4ce683622935488f9cc210d71f568a167f51
 ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/10/2017
+ms.locfileid: "887957"
 ---
 # <a name="app-analysis-overview"></a>Información general sobre el análisis de la aplicación
 

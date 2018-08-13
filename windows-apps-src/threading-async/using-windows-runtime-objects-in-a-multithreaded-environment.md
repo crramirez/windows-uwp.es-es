@@ -1,6 +1,6 @@
 ---
 title: Usar objetos de Windows Runtime en un entorno multiproceso | Microsoft Docs
-description: "En este artículo se describe la manera en que .NET Framework controla las llamadas de código C# y Visual Basic a los objetos que proporcionan Windows Runtime o los componentes de Windows Runtime."
+description: En este artículo se describe la manera en que .NET Framework controla las llamadas de código C# y Visual Basic a los objetos que proporcionan Windows Runtime o los componentes de Windows Runtime.
 ms.date: 01/14/2017
 ms.prod: windows
 ms.topic: article
@@ -11,9 +11,10 @@ ms.author: normesta
 keywords: windows 10, uwp, temporizador, subprocesos
 ms.openlocfilehash: be517596d6792355e75aeb052b0dab8cb14b8e1e
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665561"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usar objetos de Windows Runtime en un entorno multiproceso
 En este artículo se describe la manera en que .NET Framework controla las llamadas de código C# y Visual Basic a los objetos que proporcionan Windows Runtime o los componentes de Windows Runtime.

@@ -1,7 +1,7 @@
 ---
 author: PatrickFarley
-title: "Pantallas de presentación"
-description: "En esta sección se describe cómo establecer y configurar la pantalla de presentación de la aplicación."
+title: Pantallas de presentación
+description: En esta sección se describe cómo establecer y configurar la pantalla de presentación de la aplicación.
 ms.assetid: 6b954bb3-e5b0-46d1-8afc-fb805536cf6d
 ms.author: pafarley
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 51add4631b807940e051a8f4cbaca92063e41d4a
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239161"
 ---
 # <a name="splash-screens"></a>Pantallas de presentación
 

@@ -1,7 +1,7 @@
 ---
 author: WilliamsJason
 title: Referencia de API de captura multimedia
-description: "Obtén información sobre cómo tener acceso a la API de captura multimedia mediante programación."
+description: Obtén información sobre cómo tener acceso a la API de captura multimedia mediante programación.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ keywords: windows 10, uwp
 ms.assetid: 3f92c8fd-4096-4972-97da-01ae5db6423c
 ms.openlocfilehash: 9236b0cd9ac658a34283e54ba70b7e70d19c6bb3
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239873"
 ---
 # <a name="media-capture-api-reference"></a>Referencia de API de captura multimedia #
 

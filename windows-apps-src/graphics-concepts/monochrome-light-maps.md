@@ -1,8 +1,9 @@
 ---
-title: "Mapas de luz monocromática"
-description: "Los mapas de luz monocromática permiten que los adaptadores antiguos realicen la combinación de texturas multipase, cuando una placa aceleradora 3D anterior no admite la combinación de texturas con el valor alfa del píxel de destino."
+title: Mapas de luz monocromática
+description: Los mapas de luz monocromática permiten que los adaptadores antiguos realicen la combinación de texturas multipase, cuando una placa aceleradora 3D anterior no admite la combinación de texturas con el valor alfa del píxel de destino.
 ms.assetid: 60F8F8F6-9DB7-452B-8DC0-407FFAA4BFE1
-keywords: "Mapas de luz monocromática"
+keywords:
+- Mapas de luz monocromática
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 67029443f59d87c7f3e38560595dca1b7b399632
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043324"
 ---
 # <a name="monochrome-light-maps"></a>Mapas de luz monocromática
 

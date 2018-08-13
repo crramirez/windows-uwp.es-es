@@ -1,8 +1,8 @@
 ---
 author: jwmsft
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
-title: "Elemento visual de composición"
-description: "Los elementos visuales de composición conforman la estructura del árbol visual que todas las demás funciones de la API de composición usarán y ampliarán. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual."
+title: Elemento visual de composición
+description: Los elementos visuales de composición conforman la estructura del árbol visual que todas las demás funciones de la API de composición usarán y ampliarán. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: b0d02dcc4f26ba767c4253f42a20459059829961
 ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/20/2017
+ms.locfileid: "839449"
 ---
 # <a name="composition-visual"></a>Elemento visual de composición
 

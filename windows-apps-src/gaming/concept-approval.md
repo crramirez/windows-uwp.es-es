@@ -1,19 +1,20 @@
 ---
 author: eliotcowley
-title: "Aprobación del concepto"
-description: "Descubre cómo enviar el producto para la aprobación del concepto, lo que será necesario si tu producto se ejecuta en Xbox o usa Xbox Live."
+title: Aprobación del concepto
+description: Descubre cómo enviar el producto para la aprobación del concepto, lo que será necesario si tu producto se ejecuta en Xbox o usa Xbox Live.
 ms.assetid: 850ec988-761b-49d8-9508-da8a83108de3
 ms.author: elcowle
 ms.date: 06/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, aprobación del concepto"
+keywords: windows 10, uwp, aprobación del concepto
 ms.openlocfilehash: f49e27ad5753a8f4074ca3b55bd7cde47a7e6600
 ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/26/2017
+ms.locfileid: "693033"
 ---
 # <a name="concept-approval"></a>Aprobación del concepto
 

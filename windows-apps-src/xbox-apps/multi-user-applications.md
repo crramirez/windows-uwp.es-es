@@ -1,7 +1,7 @@
 ---
 author: Mtoepke
-title: "Introducción a las aplicaciones multiusuario"
-description: "Una introducción sencilla de nivel superior que describe el modelo multiusuario de Xbox."
+title: Introducción a las aplicaciones multiusuario
+description: Una introducción sencilla de nivel superior que describe el modelo multiusuario de Xbox.
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: Windows 10, UWP
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 ms.openlocfilehash: b150b50c1072a96ae0017bae848eeff94bb07ce0
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239866"
 ---
 # <a name="introduction-to-multi-user-applications"></a>Introducción a las aplicaciones multiusuario
 

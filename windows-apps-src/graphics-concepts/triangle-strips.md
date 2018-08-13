@@ -1,8 +1,9 @@
 ---
-title: "Franjas de triángulos"
-description: "Una franja de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo."
+title: Franjas de triángulos
+description: Una serie de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo.
 ms.assetid: BACC74C5-14E5-4ECC-9139-C2FD1808DB82
-keywords: "Franjas de triángulos"
+keywords:
+- Franjas de triángulos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5032ee6cc592be61422903df96c8beabcf4ffe06
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044024"
 ---
 # <a name="triangle-strips"></a>Franjas de triángulos
 
 
-Una franja de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo. Por ejemplo, solo necesitas siete vértices para definir la franja de triángulos siguiente.
+Una serie de triángulos es una serie de triángulos conectados. Dado que los triángulos están conectados, la aplicación no tiene que especificar repetidamente los tres vértices de cada triángulo. Por ejemplo, solo necesitas siete vértices para definir la franja de triángulos siguiente.
 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Por ejemplo:
 

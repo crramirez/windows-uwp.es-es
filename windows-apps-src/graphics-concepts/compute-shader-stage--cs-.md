@@ -1,8 +1,9 @@
 ---
-title: "Fase del sombreador de cálculo (CS)"
-description: "La fase del sombreador de cálculo (CS) proporciona cálculos de uso general de alta velocidad y aprovecha las ventajas de la gran cantidad de procesadores en paralelo de la unidad de procesamiento gráfico (GPU)."
+title: Fase del sombreador de cálculo (CS)
+description: La fase del sombreador de cálculo (CS) proporciona cálculos de uso general de alta velocidad y aprovecha las ventajas de la gran cantidad de procesadores en paralelo de la unidad de procesamiento gráfico (GPU).
 ms.assetid: 300D4C0C-5450-45F8-9F29-E1A101D38F73
-keywords: "Fase del sombreador de cálculo (CS)"
+keywords:
+- Fase del sombreador de cálculo (CS)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2bed0364efc2e32d8130aa50743dcdf03efcda34
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043844"
 ---
 # <a name="compute-shader-cs-stage"></a>Fase del sombreador de cálculo (CS)
 

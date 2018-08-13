@@ -1,8 +1,9 @@
 ---
-title: "Vista de galería de símbolos de profundidad (DSV)"
-description: "Una vista de galería de símbolos de profundidad proporciona el formato y el búfer para la información de profundidad y galería de símbolos."
+title: Vista de galería de símbolos de profundidad (DSV)
+description: Una vista de galería de símbolos de profundidad proporciona el formato y el búfer para la información de profundidad y galería de símbolos.
 ms.assetid: 2E8BFF7F-76F8-408E-B8E6-A71B9DF46281
-keywords: "Vista de galería de símbolos de profundidad (DSV)"
+keywords:
+- Vista de galería de símbolos de profundidad (DSV)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eee30882373513bd352777aff0ae6399f047bbec
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044154"
 ---
 # <a name="depth-stencil-view-dsv"></a>Vista de galería de símbolos de profundidad (DSV)
 

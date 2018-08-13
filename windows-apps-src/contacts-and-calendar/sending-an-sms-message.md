@@ -1,6 +1,6 @@
 ---
 author: normesta
-description: "En este tema se muestra cómo iniciar el cuadro de diálogo de redacción de mensajes SMS para que el usuario pueda enviar un mensaje SMS. Puedes rellenar previamente los campos del SMS con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar."
+description: En este tema se muestra cómo iniciar el cuadro de diálogo de redacción de mensajes SMS para que el usuario pueda enviar un mensaje SMS. Puedes rellenar previamente los campos del SMS con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar.
 title: Enviar un mensaje SMS
 ms.assetid: 4D7B509B-1CF0-4852-9691-E96D8352A4D6
 keywords: contactos, SMS, enviar
@@ -11,9 +11,10 @@ ms.prod: windows
 ms.technology: uwp
 ms.openlocfilehash: e5c3678e6c12a65b6821d2fc2a54e0710f7dcef3
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665361"
 ---
 # <a name="send-an-sms-message"></a>Enviar un mensaje SMS
 

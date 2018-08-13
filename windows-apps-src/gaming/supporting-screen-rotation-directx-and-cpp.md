@@ -1,17 +1,19 @@
 ---
 author: mtoepke
-title: "Compatibilidad con la orientación de pantalla (DirectX y C++)"
-description: "Aquí se comentan los procedimientos recomendados para controlar la rotación de pantalla en una aplicación DirectX para UWP, de modo que el hardware de gráficos del dispositivo Windows 10 se pueda usar de manera eficaz."
+title: Compatibilidad con la orientación de pantalla (DirectX y C++)
+description: Aquí se comentan los procedimientos recomendados para controlar la rotación de pantalla en una aplicación DirectX para UWP, de modo que el hardware de gráficos del dispositivo Windows 10 se pueda usar de manera eficaz.
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, juegos, orientación de pantalla, directx"
+keywords: windows 10, uwp, juegos, orientación de pantalla, directx
 ms.openlocfilehash: 606d32d16ad94e45cb63c73f1869735a9fbd7d25
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240363"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>Compatibilidad con la orientación de pantalla (DirectX y C++)
 

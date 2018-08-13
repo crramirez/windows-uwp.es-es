@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Comparar código de EGL con DXGI y Direct3D"
-description: "DirectX Graphics Interface (DXGI) y varias API de Direct3D cumplen el mismo rol que EGL. Este tema te ayudará a comprender DXGI y Direct3D 11 desde la perspectiva de EGL."
+title: Comparar código de EGL con DXGI y Direct3D
+description: DirectX Graphics Interface (DXGI) y varias API de Direct3D cumplen el mismo rol que EGL. Este tema te ayudará a comprender DXGI y Direct3D 11 desde la perspectiva de EGL.
 ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP, EGL, DXGI, Direct3D
 ms.openlocfilehash: 7d7e4058eccd39911bd84d3967ef07b93b6ee89d
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240402"
 ---
 # <a name="compare-egl-code-to-dxgi-and-direct3d"></a>Comparar código EGL con DXGI y Direct3D
 

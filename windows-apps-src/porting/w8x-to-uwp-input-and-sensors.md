@@ -1,22 +1,25 @@
 ---
-author: mcleblanc
-description: "El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este."
-title: "Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones"
+author: stevewhims
+description: El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este.
+title: Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones
 ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2ccc9b0d81b69a06973feac8d554aa0ab47f2af0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 4fbfba83dc1975b7ecda925d4e221ddaa0d6cc77
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "239185"
 ---
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 El tema anterior era [Migración de XAML y la interfaz de usuario](w8x-to-uwp-porting-xaml-and-ui.md).

@@ -1,8 +1,8 @@
 ---
 author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: "Este caso práctico, que se basa en la información proporcionada en Bookstore, comienza con una aplicación WindowsPhone Silverlight que muestra datos agrupados en un LongListSelector."
-title: "Caso práctico de Windows Phone Silverlight a UWP, Bookstore2"
+description: Este caso práctico, que se basa en la información proporcionada en Bookstore, comienza con una aplicación WindowsPhone Silverlight que muestra datos agrupados en un LongListSelector.
+title: Caso práctico de Windows Phone Silverlight a UWP, Bookstore2
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 7a36649701187a795eb6e75df351af69110bee6b
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240045"
 ---
 # <a name="windows-phone-silverlight-to-uwp-case-study-bookstore2"></a>Caso práctico de Windows Phone Silverlight a UWP: Bookstore2
 

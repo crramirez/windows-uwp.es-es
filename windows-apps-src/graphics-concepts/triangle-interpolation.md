@@ -1,8 +1,9 @@
 ---
-title: "Interpolación de triángulos"
-description: "Durante la representación, la canalización interpola los datos de vértices en cada triángulo."
+title: Interpolación de triángulos
+description: Durante la representación, la canalización interpola los datos de vértices en cada triángulo.
 ms.assetid: 1A76DD78-CED7-42BE-BA81-B9050CD3AF9B
-keywords: "Interpolación de triángulos"
+keywords:
+- Interpolación de triángulos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 26705e9481a96d54eff70d04c004bf62fe049091
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044874"
 ---
 # <a name="triangle-interpolation"></a>Interpolación de triángulos
 

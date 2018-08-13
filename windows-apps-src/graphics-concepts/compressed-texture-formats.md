@@ -1,8 +1,9 @@
 ---
 title: Formatos de texturas comprimidos
-description: "Esta sección contiene información sobre la organización interna de formatos de texturas comprimidos."
+description: Esta sección contiene información sobre la organización interna de formatos de texturas comprimidos.
 ms.assetid: 24D17B9F-8CA7-4006-9E0F-178C6B3CAEC9
-keywords: Formatos de texturas comprimidos
+keywords:
+- Formatos de texturas comprimidos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a37246ff409b0a18992af32172bd4f6a8e535da7
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044904"
 ---
 # <a name="compressed-texture-formats"></a>Formatos de texturas comprimidos
 

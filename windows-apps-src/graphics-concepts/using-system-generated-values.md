@@ -1,8 +1,9 @@
 ---
 title: Uso de valores generados por el sistema
-description: "La fase del ensamblador de entrada (IA) genera valores generados por el sistema (basándose en la semántica de entrada proporcionada por el usuario) para admitir determinadas eficiencias en las operaciones del sombreador."
+description: La fase del ensamblador de entrada (IA) genera valores generados por el sistema (basándose en la semántica de entrada proporcionada por el usuario) para admitir determinadas eficiencias en las operaciones del sombreador.
 ms.assetid: C7CBA81D-68CA-4E9A-95E3-8185C280C843
-keywords: Uso de valores generados por el sistema
+keywords:
+- Uso de valores generados por el sistema
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a99cb28818cd8fc3fd9057b3df72a678c2d1aca
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044894"
 ---
 # <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>Uso de valores generados por el sistema
 

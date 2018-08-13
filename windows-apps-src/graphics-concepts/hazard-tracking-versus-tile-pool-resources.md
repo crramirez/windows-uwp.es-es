@@ -1,8 +1,9 @@
 ---
 title: Seguimiento de peligros frente a recursos de grupos de iconos
-description: "Para recursos que no son de streaming, Direct3D puede impedir ciertas condiciones de riesgo durante la representación, pero, ya que el seguimiento de riesgos sería a nivel de iconos para los recursos de streaming, las condiciones de riesgo de seguimiento durante la representación de los recursos de streaming pueden ser demasiado altas."
+description: Para recursos que no son de streaming, Direct3D puede impedir ciertas condiciones de riesgo durante la representación, pero, ya que el seguimiento de riesgos sería a nivel de iconos para los recursos de streaming, las condiciones de riesgo de seguimiento durante la representación de los recursos de streaming pueden ser demasiado altas.
 ms.assetid: 8B0C73D3-3F77-41E8-B17D-C595DEE39E49
-keywords: Seguimiento de peligros frente a recursos de grupos de iconos
+keywords:
+- Seguimiento de peligros frente a recursos de grupos de iconos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 982a590f602aa1692de91536d50cbadb19f8f1d1
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043054"
 ---
 # <a name="hazard-tracking-versus-tile-pool-resources"></a>Seguimiento de peligros frente a recursos de grupos de iconos
 
@@ -30,7 +32,7 @@ Una aplicación debe informar al controlador de pantalla de que está esperando 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Asignaciones a un grupo de iconos](mappings-are-into-a-tile-pool.md)
+[Asignaciones en un grupo de mosaicos](mappings-are-into-a-tile-pool.md)
 
  
 

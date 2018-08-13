@@ -1,17 +1,22 @@
 ---
 title: Fase de salida de flujo (SO)
-description: "La fase de salida de flujo (SO) saca (o transmite) continuamente datos de vértices desde la fase activa anterior a uno o más búferes de la memoria. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse desde la CPU."
+description: La fase de salida de flujo (SO) saca (o transmite) continuamente datos de vértices desde la fase activa anterior a uno o más búferes de la memoria. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse desde la CPU.
 ms.assetid: DE89E99F-39BC-4B34-B80F-A7D373AA7C0A
-keywords: Fase de salida de flujo (SO)
-author: PeterTurcan
-ms.author: pettur
+keywords:
+- Fase de salida de flujo (SO)
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 07bc125426854bdd82c7cebaed6f3585197353db
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 30c3ed335360d7b259c045722b65bb08a71b6e0c
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044044"
 ---
 # <a name="stream-output-so-stage"></a>Fase de salida de flujo (SO)
 
@@ -42,7 +47,7 @@ Los datos de vértices procedentes de una fase anterior del sombreador.
 
 La fase de salida de flujo (SO) saca (o transmite) continuamente datos de vértices desde la fase activa anterior, como la fase del sombreador de geometría (GS). Si la fase del sombreador de geometría (GS) está inactiva, la fase de salida de flujo (SO) transmite continuamente los datos de vértices procedentes de la fase del sombreador de dominio (DS) a los búferes de la memoria (o si la fase DS también está inactiva, desde la fase del sombreador de vértices [VS]).
 
-Cuando una franja de triángulos o líneas está enlazada con la fase del ensamblador de entrada (IA), cada franja se convierte en una lista antes de transmitirse. Los vértices siempre se escriben como primitivos completos (por ejemplo, 3 vértices cada vez en el caso de los triángulos); los primitivos incompletos nunca se transmiten. Los tipos de primitivos con proximidad descartan los datos de proximidad antes de transmitir los datos.
+Cuando una franja de triángulo o línea está enlazada a la fase de entrada Assembler (IA), cada franja se convierte en una lista antes de que se transmite en secuencias. Los vértices se escriben siempre como primitivas completados (por ejemplo, 3 vértices al mismo tiempo para triángulos); Fundamentos incompletas nunca se transmiten fuera. Tipos primitivos con proximidad descartar los datos de la proximidad antes de transmitir los datos de salida.
 
 La fase de salida de flujo admite hasta 4 búferes al mismo tiempo.
 

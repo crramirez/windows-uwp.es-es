@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 4b76c16d276af295a1b2eed292ebeffc56b2e604
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239939"
 ---
 # <a name="xkey-attribute"></a>atributo x:Key
 

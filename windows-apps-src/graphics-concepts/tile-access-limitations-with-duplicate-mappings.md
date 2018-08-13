@@ -1,8 +1,9 @@
 ---
 title: Limitaciones de acceso a los mosaicos con asignaciones duplicadas
-description: "Existen limitaciones en el acceso a los mosaicos con asignaciones duplicadas, como al copiar recursos de streaming con el origen y el destino superpuestos, o cuando se representa en mosaicos compartidos dentro del área de representación."
+description: Existen limitaciones en el acceso a los mosaicos con asignaciones duplicadas, como al copiar recursos de streaming con el origen y el destino superpuestos, o cuando se representa en mosaicos compartidos dentro del área de representación.
 ms.assetid: 6E40B1DC-BCF1-4B09-82A8-7B2D9B209A61
-keywords: Limitaciones de acceso a los mosaicos con asignaciones duplicadas
+keywords:
+- Limitaciones de acceso a los mosaicos con asignaciones duplicadas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e66fd373f2c1aaa18ca7cd0a7e8a463fce024e14
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044844"
 ---
 # <a name="tile-access-limitations-with-duplicate-mappings"></a>Limitaciones de acceso a los mosaicos con asignaciones duplicadas
 

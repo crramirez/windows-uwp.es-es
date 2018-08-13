@@ -1,19 +1,20 @@
 ---
 author: laurenhughes
 ms.assetid: ff2523cb-8109-42be-9dfc-cb5d09002574
-title: "Crear y convertir una asignación de grupo de contenido de origen"
-description: "Para preparar la aplicación de la Plataforma universal de Windows (UWP) para la instalación en streaming de la aplicación para UWP, tienes que crear una asignación de grupo de contenido. En este artículo encontrarás detalles, recomendaciones y consejos que te serán de utilidad para crear y convertir una asignación de grupo de contenido."
+title: Crear y convertir una asignación de grupo de contenido de origen
+description: Para preparar la aplicación de la Plataforma universal de Windows (UWP) para la instalación en streaming de la aplicación para UWP, tienes que crear una asignación de grupo de contenido. En este artículo encontrarás detalles, recomendaciones y consejos que te serán de utilidad para crear y convertir una asignación de grupo de contenido.
 ms.author: lahugh
 ms.date: 4/05/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, asignación de grupo de contenido, instalación en streaming, instalación en streaming de la app para uwp, asignación de grupo de contenido de origen"
+keywords: Windows 10, uwp, asignación de grupo de contenido, instalación en streaming, instalación en streaming de la app para uwp, asignación de grupo de contenido de origen
 ms.openlocfilehash: d27869f349d7ee813c1418cd0d02f82ada05e155
 ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/26/2017
+ms.locfileid: "617270"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Crear y convertir una asignación de grupo de contenido de origen
 

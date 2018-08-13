@@ -1,8 +1,9 @@
 ---
 title: Mapas de luces difusas
-description: "Las superficies mates tienen reflexión de la luz difusa."
+description: Las superficies mates tienen reflexión de la luz difusa.
 ms.assetid: D02E76DB-1DA8-4B51-86EF-4DDB07C02541
-keywords: Mapas de luces difusas
+keywords:
+- Mapas de luces difusas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c0c5f0ff0e69fd43906895f4ebcd935c86b09e1c
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1042964"
 ---
 # <a name="diffuse-light-maps"></a>Mapas de luces difusas
 
@@ -26,7 +28,7 @@ Los efectos de iluminación difusos que simulan los cálculos de iluminación so
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Mapas de luces con texturas](light-mapping-with-textures.md)
+[Mapas de luz con texturas](light-mapping-with-textures.md)
 
  
 

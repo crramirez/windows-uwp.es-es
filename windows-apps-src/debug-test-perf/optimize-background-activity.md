@@ -2,7 +2,7 @@
 author: jwmsft
 ms.assetid: 24351dad-2ee3-462a-ae78-2752bb3374c2
 title: Optimizar la actividad en segundo plano
-description: "Crea aplicaciones para UWP que colaboren con el sistema para usar tareas en segundo plano con un consumo eficiente de la batería."
+description: Crea aplicaciones para UWP que colaboren con el sistema para usar tareas en segundo plano con un consumo eficiente de la batería.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 630f280d54c29aa80bc310bd88ceddd76b07f8bf
 ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/14/2017
+ms.locfileid: "894661"
 ---
 # <a name="optimize-background-activity"></a>Optimizar la actividad en segundo plano
 

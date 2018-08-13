@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Conexión en red de juegos"
-description: "Aprende a desarrollar e incorporar características de red en un juego DirectX."
+title: Conexión en red de juegos
+description: Aprende a desarrollar e incorporar características de red en un juego DirectX.
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp, juegos, redes, directx
 ms.openlocfilehash: ce94dda0eaf156f1e09fefbd76f50bc764050970
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240293"
 ---
 # <a name="networking-for-games"></a>Conexión en red de juegos
 

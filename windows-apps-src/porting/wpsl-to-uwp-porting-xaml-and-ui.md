@@ -1,21 +1,24 @@
 ---
-author: mcleblanc
-description: "La práctica para definir la interfaz de usuario en forma de marcado XAML declarativo se traslada muy bien tanto para Windows Phone Silverlight como para aplicaciones para la Plataforma universal de Windows (UWP)."
-title: "Migración de XAML y la interfaz de usuario de Windows Phone Silverlight a UWP"
+author: stevewhims
+description: La práctica para definir la interfaz de usuario en forma de marcado XAML declarativo se traslada muy bien tanto para Windows Phone Silverlight como para aplicaciones para la Plataforma universal de Windows (UWP).
+title: Migración de XAML y la interfaz de usuario de Windows Phone Silverlight a UWP
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 83e63d76e0fc1c1b0e8465ad5b5656779ac43f09
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: c655b90b7e79b8246bb0a98a5848409aa32e3c48
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "303941"
 ---
 #  <a name="porting-windows-phone-silverlight-xaml-and-ui-to-uwp"></a>Migración de XAML y la interfaz de usuario de Windows Phone Silverlight a UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 El tema anterior era [Solución de problemas](wpsl-to-uwp-troubleshooting.md).
@@ -75,7 +78,7 @@ En casos sencillos como este, donde se asignan los tipos de un espacio de nombre
 
 Una vez eliminadas todas las directivas using anteriores y después de agregar las nuevas, puedes usar el comando **Organizar instrucciones Using** de Visual Studio para ordenar las directivas y quitar las que no se usan.
 
-En ocasiones, la corrección del código imperativo será tan mínima como cambiar el tipo de un parámetro. Otras veces, necesitarás usar las API de UWP en lugar de las API de .NET para aplicaciones de la Tienda Windows. Para identificar las API compatibles, usa el resto de esta guía de migración en combinación con [Introducción a .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx) y [Referencia de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/br211377).
+En ocasiones, la corrección del código imperativo será tan mínima como cambiar el tipo de un parámetro. Otras veces, debe usar las API de UWP en lugar de las API de .NET para Windows Runtime 8.x aplicaciones. Para identificar qué API son compatibles, use el resto de esta guía traslado en combinación con [información general de aplicaciones de .NET para Windows en tiempo de ejecución 8.x](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx) y la [referencia de tiempo de ejecución de Windows](https://msdn.microsoft.com/library/windows/apps/br211377).
 
 Y, si solo quieres llegar a la etapa donde se crea el proyecto, puedes establecer como comentario o código auxiliar cualquier código que no sea esencial. Después itera, un problema cada vez, y consulta los siguientes temas de esta sección (y el tema anterior: [Solución de problemas](wpsl-to-uwp-troubleshooting.md)), hasta que se zanjen todos los problemas de compilación y de tiempo de ejecución y la migración se complete.
 
@@ -197,7 +200,7 @@ Las aplicaciones WindowsPhone Silverlight usan controles definidos en los espaci
 | Clase ControlTiltEffect.TiltEffect | Las animaciones de la biblioteca de animaciones de UWP están integradas en los estilos predeterminados de los controles comunes. Consulta la [Animación de acciones de puntero](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432). |
 | LongListSelector con los datos agrupados | LongListSelector de WindowsPhone Silverlight funciona de dos maneras, que se pueden usar conjuntamente. En primer lugar, es capaz de mostrar datos agrupados por una clave como, por ejemplo, una lista de nombres agrupados por su letra inicial. En segundo lugar, es capaz de aplicar "zoom" entre dos vistas semánticas: la lista agrupada de elementos (por ejemplo, nombres) y una lista de únicamente las claves de grupo (por ejemplo, letras iniciales). Con el UWP, puedes mostrar datos agrupados con las [Directrices para controles de lista y cuadrícula](https://msdn.microsoft.com/library/windows/apps/mt186889). |
 | LongListSelector con datos planos | Por motivos de rendimiento, en el caso de listas muy largas, recomendamos LongListSelector en lugar de un cuadro de lista de WindowsPhone Silverlight, incluso para datos planos no agrupados. En una aplicación para UWP, se prefiere [GridView](https://msdn.microsoft.com/library/windows/apps/br242705) para listas de elementos largas independientemente de si los datos son susceptibles de agruparse. |
-| Panorámica | El control Panorama de Silverlight Windows Phone se asigna a las [Directrices para controles de navegación centralizada en aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn449149) y directrices para el control de navegación centralizada. <br/> Ten en cuenta que un control Panorama se ajusta automáticamente desde la última sección a la primera y su imagen de fondo se mueve en parallax en relación con las secciones. Las secciones [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843) no se ajustan automáticamente y no se usa parallax. |
+| Panorámica | Se asigna el control de Windows Phone Silverlight panorámico a las [instrucciones para los controles de concentradores en tiempo de ejecución de Windows 8.x aplicaciones](https://msdn.microsoft.com/library/windows/apps/dn449149) y directrices para el control de concentradores. <br/> Ten en cuenta que un control Panorama se ajusta automáticamente desde la última sección a la primera y su imagen de fondo se mueve en parallax en relación con las secciones. Las secciones [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843) no se ajustan automáticamente y no se usa parallax. |
 | Control dinámico | El equivalente de UWP del control dinámico de Windows Phone Silverlight es [Windows.UI.Xaml.Controls.Pivot](https://msdn.microsoft.com/library/windows/apps/dn608241). Está disponible para todas las familias de dispositivos. |
 
 **Nota** El estado visual PointerOver es pertinente en estilos o plantillas personalizados en las aplicaciones de Windows10, pero no en aplicaciones de Windows Phone Silverlight. Existen otros motivos por los que los estilos o plantillas personalizados existentes pueden no ser adecuados para aplicaciones de Windows 10, incluidas las claves de recursos del sistema que usas, los cambios en los conjuntos de estados visuales usados y las mejoras de rendimiento realizadas en los estilos o plantillas predeterminadas de Windows 10. Te recomendamos que editar una nueva copia de una plantilla de control predeterminada para Windows 10 y, a continuación, volverle a aplicar la personalización de plantillas y estilos.
@@ -220,7 +223,7 @@ El tema [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library
 
 Al leer acerca de multimedia y gráficos de UWP, ten en cuenta que los principios de diseño de Windows animan a una reducción feroz de todo lo superfluo, incluidos el desorden y la complejidad gráfica. El diseño de Windows está representado por el movimiento, la tipografía y los elementos visuales limpios y claros. Si la aplicación sigue los mismos principios, se parecerá más a las aplicaciones integradas.
 
-WindowsPhone Silverlight tiene un tipo **RadialGradientBrush** que no está presente en UWP, aunque otros tipos [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) sí lo estén. En algunos casos, podrás obtener un efecto similar con un mapa de bits. Ten en cuenta que puedes [crear un pincel de degradado radial](https://msdn.microsoft.com/library/windows/desktop/dd756679) con Direct2D en una aplicación para UWP C++, XAML y [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) .
+WindowsPhone Silverlight tiene un tipo **RadialGradientBrush** que no está presente en UWP, aunque otros tipos [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) sí lo estén. En algunos casos, podrás obtener un efecto similar con un mapa de bits. Ten en cuenta que puedes [crear un pincel de degradado radial](https://msdn.microsoft.com/library/windows/desktop/dd756679) con Direct2D en una aplicación para UWP C++, XAML y [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) .
 
 WindowsPhone Silverlight tiene la propiedad **System.Windows.UIElement.OpacityMask** pero esta propiedad no es un miembro del tipo [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) de UWP. En algunos casos, podrás obtener un efecto similar con un mapa de bits. Asimismo, puedes [crear una máscara de opacidad](https://msdn.microsoft.com/library/windows/desktop/ee329947) con Direct2D en una aplicación para UWP C++, XAML y [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274). No obstante, un caso de uso habitual para **OpacityMask** es usar un único mapa de bits que se adapte a temas claros y oscuros. Para los gráficos vectoriales, puedes usar pinceles de reconocimiento de tema del sistema (por ejemplo, los gráficos circulares que se muestran a continuación). No obstante, para crear un mapa de bits de reconocimiento de tema (por ejemplo, las marcas de verificación que se muestran a continuación) se requiere un enfoque diferente.
 
@@ -244,7 +247,7 @@ La manera más sencilla de migrar esto a una aplicación para UWP es usar un [**
 
 Aquí, winrt\_check.png es una máscara alfa en forma de un mapa de bits como es wpsl\_check.png y podría ser el mismo archivo. Sin embargo, puede que quieras proporcionar varios tamaños diferentes de winrt\_check.png que se usarán para diferentes factores de escala. Para obtener información sobre esto y para ver una explicación de los cambios en los valores de **Width** y **Height**, consulta [Píxeles de visualización o efectivos, distancia de visualización y factores de escala](#view-or-effective-pixels-viewing-distance-and-scale-factors) en este tema.
 
-Un enfoque más general, que es adecuado si existen diferencias entre la forma de tema claro y oscuro de un mapa de bits, es usar dos recursos de imagen: uno con un primer plano oscuro (para el tema claro) y otro con un primer plano claro (para el tema oscuro). Para obtener más información acerca de cómo asignar un nombre a este conjunto de recursos de mapas de bits, consulta [Cómo asignar nombre a los recursos mediante calificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324). Una vez que se ha asignado correctamente un nombre a los conjuntos de archivos de imagen, puedes hacer referencia a ellos en el resumen, usando su nombre raíz, como este:
+Un enfoque más general, que es adecuado si existen diferencias entre la forma de tema claro y oscuro de un mapa de bits, es usar dos recursos de imagen: uno con un primer plano oscuro (para el tema claro) y otro con un primer plano claro (para el tema oscuro). Para obtener más información acerca de cómo el nombre de este conjunto de activos de mapa de bits, vea [adaptar los recursos de idioma, escala y otros calificadores](../app-resources/tailor-resources-lang-scale-contrast.md). Una vez que se ha asignado correctamente un nombre a los conjuntos de archivos de imagen, puedes hacer referencia a ellos en el resumen, usando su nombre raíz, como este:
 
 ```xml
     <Image Source="Assets/winrt_check.png" Stretch="None"/>
@@ -310,7 +313,7 @@ La bandeja del sistema (establecida en el marcado XAML con `shell:SystemTray.IsV
 
 El texto (o tipografía) es un aspecto importante de una aplicación para UWP y, durante la migración, es aconsejable que vuelvas a visitar los diseños de elementos visuales de las vistas para que estén en consonancia con el nuevo lenguaje de diseño. Usa estas ilustraciones para encontrar los estilos de sistema **TextBlock** de UWP que están disponibles. Encuentra los que corresponden a los estilos de Windows Phone Silverlight usados. Como alternativa, puedes crear tus propios estilos universales y copiar las propiedades de los estilos del sistema de Windows Phone Silverlight en ellos.
 
-![estilos de textblock del sistema para aplicaciones de Windows 10](images/label-uwp10stylegallery.png)  
+![estilos de textblock del sistema para aplicaciones de Windows 10](images/label-uwp10stylegallery.png)
 
 Estilos de TextBlock del sistema para aplicaciones de Windows 10
 
@@ -397,4 +400,3 @@ El siguiente tema es [Migración de modelo de E/S, dispositivos y aplicaciones](
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md)
-

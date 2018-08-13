@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: "En este artículo se ofrece un análisis más profundo sobre cómo funciona el Puente de dispositivo de escritorio en modo no visible."
+Description: En este artículo se ofrece un análisis más profundo sobre cómo funciona el Puente de dispositivo de escritorio en modo no visible.
 title: Segundo plano del Puente de dispositivo de escritorio
 ms.author: normesta
 ms.date: 05/25/2017
@@ -11,9 +11,10 @@ keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.openlocfilehash: 050499baaf383fc135d833ae1e4733c95f2b5fa1
 ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/26/2017
+ms.locfileid: "617360"
 ---
 # <a name="behind-the-scenes-of-the-desktop-bridge"></a>Segundo plano del Puente de dispositivo de escritorio
 

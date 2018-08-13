@@ -2,7 +2,8 @@
 title: Muestra
 description: El muestreo es el proceso de leer los valores de entrada de una textura u otros recursos. Una \ 0034; muestra \ 0034; es cualquier objeto que se lee de recursos.
 ms.assetid: 7ECE13BB-9FC5-44A3-B1B2-2FE163F1D627
-keywords: Muestra
+keywords:
+- Muestra
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ec409f734e2f3e338f6bfe064a0bed29936980f6
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043524"
 ---
 # <a name="sampler"></a>Muestra
 

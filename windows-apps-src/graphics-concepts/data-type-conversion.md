@@ -1,17 +1,22 @@
 ---
-title: "Conversión de tipos de datos"
-description: "En las secciones siguientes se describe cómo Direct3D controla las conversiones entre tipos de datos."
+title: Conversión de tipos de datos
+description: En las secciones siguientes se describe cómo Direct3D controla las conversiones entre tipos de datos.
 ms.assetid: B50AB8DE-CAED-465B-B18C-81F3A984B8AC
-keywords: "Conversión de tipos de datos"
-author: PeterTurcan
-ms.author: pettur
+keywords:
+- Conversión de tipos de datos
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 6813f7b55957c185a85fe82b90297b6ba5a470eb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1c7f68984274cbdb3adec0a88a0c99f7a7342380
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1045118"
 ---
 # <a name="data-type-conversion"></a>Conversión de tipos de datos
 
@@ -233,8 +238,8 @@ Las representaciones de enteros de punto fijo se usan de dos formas en Direct3D.
 <td align="left">Entero de punto fijo</td>
 <td align="left">FLOAT</td>
 <td align="left"><p>Supone que la representación de punto fijo específica que se convierte en tipo float no contiene más de un total de 24 bits de información, de los cuales, menos de 23 bits está en el componente fraccionario. Supone que un número de punto fijo dado, fxp, se encuentra en la forma i.f. (entero de bits i, fracción de bits f). La conversión al valor float es como el siguiente seudocódigo.</p>
-<p>resultado de float = (float)(fxp &gt;&gt; f) + // entero de extracción</p>
-((float)(fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); // fracción de extracción</td>
+<p>se muestran flotando resultado = (float) (fxp &gt; &gt; f) + / / extract entero</p>
+((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); extraer fracción</td>
 </tr>
 </tbody>
 </table>

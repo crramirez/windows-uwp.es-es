@@ -1,8 +1,9 @@
 ---
-title: "Fase del sombreador de vértices (VS)"
-description: "La fase del sombreador de vértices procesa vértices, normalmente realizando ciertas operaciones como transformar, enmascarar e iluminar. Un sombreador de vértices toma un solo vértice de entrada y produce un solo vértice de salida."
+title: Fase del sombreador de vértices (VS)
+description: La fase del sombreador de vértices procesa vértices, normalmente realizando ciertas operaciones como transformar, enmascarar e iluminar. Un sombreador de vértices toma un solo vértice de entrada y produce un solo vértice de salida.
 ms.assetid: 5133C4BB-B4E6-4697-9276-F718AD44869C
-keywords: "Fase del sombreador de vértices (VS)"
+keywords:
+- Fase del sombreador de vértices (VS)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 521b3254fd8f3f86e8b55923627b8560d2991ae6
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044114"
 ---
 # <a name="vertex-shader-vs-stage"></a>Fase del sombreador de vértices (VS)
 

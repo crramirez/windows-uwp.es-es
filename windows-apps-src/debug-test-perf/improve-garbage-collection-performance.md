@@ -1,8 +1,8 @@
 ---
 author: jwmsft
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
-title: "Mejorar el rendimiento de la recolección de elementos no usados"
-description: "La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática mediante el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no utilizados de .NET para las aplicaciones para UWP."
+title: Mejorar el rendimiento de la recolección de elementos no usados
+description: La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática mediante el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no utilizados de .NET para las aplicaciones para UWP.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 3b7dfb274c5a6d55204a467fc894bac5fd044048
 ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/14/2017
+ms.locfileid: "894651"
 ---
 # <a name="improve-garbage-collection-performance"></a>Mejorar el rendimiento de la recolección de elementos no utilizados
 

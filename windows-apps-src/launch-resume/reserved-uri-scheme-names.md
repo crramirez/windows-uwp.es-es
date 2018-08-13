@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: Nombres de esquema de URI y archivo reservados
-description: "En este tema se enumeran los nombres de esquema de URI y de archivo reservados que no están disponibles para la aplicación."
+description: En este tema se enumeran los nombres de esquema de URI y de archivo reservados que no están disponibles para la aplicación.
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 98735ce2d102c1a0b7b054b9d70038fe5f9dc40c
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240234"
 ---
 # <a name="reserved-file-and-uri-scheme-names"></a>Nombres de esquema de URI y archivo reservados
 

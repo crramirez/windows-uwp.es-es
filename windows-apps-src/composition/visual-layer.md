@@ -2,7 +2,7 @@
 author: jwmsft
 ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Capa visual
-description: "La API de Windows.UI.Composition proporciona acceso a la capa de composición entre la capa de marco (XAML) y la capa de elementos gráficos (DirectX)."
+description: La API de Windows.UI.Composition proporciona acceso a la capa de composición entre la capa de marco (XAML) y la capa de elementos gráficos (DirectX).
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: b292be46ccddd4355f3bef13e37da6b6cec452fa
 ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/20/2017
+ms.locfileid: "839489"
 ---
 # <a name="visual-layer"></a>Capa visual
 

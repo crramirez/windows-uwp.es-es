@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "Identifica de forma única elementos de objeto para acceder al objeto con instancia desde el código subyacente o el código general."
+description: Identifica de forma única elementos de objeto para acceder al objeto con instancia desde el código subyacente o el código general.
 title: Atributo xName
 ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
 ms.author: jimwalk
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 9fa472869ed3b81a9f688652a487b1b93986b777
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239794"
 ---
 # <a name="xname-attribute"></a>atributo x:Name
 

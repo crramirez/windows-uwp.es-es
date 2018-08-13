@@ -1,18 +1,19 @@
 ---
 author: mtoepke
-title: "Configuración de recursos de DirectX y visualización de una imagen"
-description: "Aquí te mostramos cómo crear un dispositivo Direct3D, una cadena de intercambio y una vista de destino de representación, y cómo mostrar la imagen representada en la pantalla."
+title: Configuración de recursos de DirectX y visualización de una imagen
+description: Aquí te mostramos cómo crear un dispositivo Direct3D, una cadena de intercambio y una vista de destino de representación, y cómo mostrar la imagen representada en la pantalla.
 ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, juegos, directx, recursos, imágenes"
+keywords: Windows 10, uwp, juegos, directx, recursos, imágenes
 ms.openlocfilehash: 1aeb4ef581254ae914efae4bc38853611dbde488
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "238708"
 ---
 # <a name="set-up-directx-resources-and-display-an-image"></a>Configuración de recursos de DirectX y visualización de una imagen
 

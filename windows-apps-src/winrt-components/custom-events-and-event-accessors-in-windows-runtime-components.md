@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
-description: "La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework."
+description: La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework.
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
 ms.author: misatran
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 8b759684d07c1fa8265ed958ac9c736aa12a488c
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239951"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
 

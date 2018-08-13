@@ -1,7 +1,7 @@
 ---
 author: jwmsft
-description: "Clases de configuración de plantillas"
-title: "Clases de configuración de plantillas"
+description: Clases de configuración de plantillas
+title: Clases de configuración de plantillas
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: ff1b373e2038824c6349961b3b878f5570babceb
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239973"
 ---
 # <a name="template-settings-classes"></a>Clases de configuración de plantillas
 

@@ -1,8 +1,9 @@
 ---
 title: Tipos de luz
-description: "La propiedad de tipo de luz define qué tipo de fuente de luz estás usando. Hay tres tipos de luz en Direct3D: luces puntuales, focos de luz y luces direccionales."
+description: 'La propiedad de tipo de luz define qué tipo de fuente de luz estás usando. Hay tres tipos de luz en Direct3D: luces puntuales, focos de luz y luces direccionales.'
 ms.assetid: 57748CAF-6F08-4D1D-9ED6-8FAA8C5FE314
-keywords: Tipos de luz
+keywords:
+- Tipos de luz
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f3dd8397f92137bbd934b2f5835de703f05c2000
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044684"
 ---
 # <a name="light-types"></a>Tipos de luz
 

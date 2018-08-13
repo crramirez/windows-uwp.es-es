@@ -1,8 +1,9 @@
 ---
-title: "Transformación de proyección"
-description: "Una transformación de proyección controla los aspectos internos de la cámara, como la elección de un objetivo para una cámara. Este es el más complicado de los tres tipos de transformación."
+title: Transformación de proyección
+description: Una transformación de proyección controla los aspectos internos de la cámara, como la elección de un objetivo para una cámara. Este es el más complicado de los tres tipos de transformación.
 ms.assetid: 378F205D-3800-4477-9820-5EBE6528B14A
-keywords: "Transformación de proyección"
+keywords:
+- Transformación de proyección
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bbaa0a6e02529bad55e2d90c90510a2ec1b40dd5
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044354"
 ---
 # <a name="projection-transform"></a>Transformación de proyección
 

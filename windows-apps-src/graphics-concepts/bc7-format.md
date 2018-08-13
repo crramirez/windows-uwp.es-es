@@ -1,8 +1,9 @@
 ---
 title: Formato BC7
-description: "El formato BC7 es un formato de compresión de texturas usado para la compresión de alta calidad de datos RGB y RGBA."
+description: El formato BC7 es un formato de compresión de texturas usado para la compresión de alta calidad de datos RGB y RGBA.
 ms.assetid: 788B6E8C-9A1F-45F9-BE49-742285E8D8A6
-keywords: Formato BC7
+keywords:
+- Formato BC7
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c70293960947070a0a6b94d7a63fd55f503c8e18
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1045074"
 ---
 # <a name="bc7-format"></a>Formato BC7
 

@@ -1,23 +1,24 @@
 ---
-author: mukin
+author: muhsinking
 ms.assetid: 4311D293-94F0-4BBD-A22D-F007382B4DB8
 title: Enumerar dispositivos
-description: "El espacio de nombres de enumeración te permite buscar dispositivos que están conectados en el sistema de forma interna o externa o que se pueden detectar mediante protocolos de redes o de redes inalámbricas."
+description: El espacio de nombres de enumeración te permite buscar dispositivos que están conectados en el sistema de forma interna o externa o que se pueden detectar mediante protocolos de redes o de redes inalámbricas.
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: afd98ed5f522c4227ab199f2405c7976210478c3
-ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1cf6e8fe3205d70479a590bf73f7a01cd7ac3848
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "958920"
 ---
 # <a name="enumerate-devices"></a>Enumerar dispositivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="samples"></a>Muestras
 

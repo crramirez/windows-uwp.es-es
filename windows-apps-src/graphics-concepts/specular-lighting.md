@@ -1,8 +1,9 @@
 ---
 title: Luz especular
-description: "La luz especular identifica la iluminación especular que se produce cuando la luz alcanza la superficie de un objeto y vuelve a reflejarse hacia la cámara."
+description: La luz especular identifica la iluminación especular que se produce cuando la luz alcanza la superficie de un objeto y vuelve a reflejarse hacia la cámara.
 ms.assetid: 71F87137-B00F-48CE-8E6A-F98A139A742A
-keywords: Luz especular
+keywords:
+- Luz especular
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 305924b19914bf4e85366695add2476c3c81c281
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044814"
 ---
 # <a name="specular-lighting"></a>Luz especular
 
 
-La *luz especular* identifica la iluminación especular que se produce cuando la luz alcanza la superficie de un objeto y vuelve a reflejarse hacia la cámara. La iluminación especular es más intensa que la luz difusa y sale más rápidamente por la superficie del objeto. Se tarda más en calcular la luz especular que la luz difusa; sin embargo, la ventaja de usarla es que agrega un nivel importante de detalle a una superficie.
+*La iluminación especular* identifica los resaltados especulares brillantes que se producen cuando la luz alcanza la superficie de un objeto y se refleja hacia la cámara. La iluminación especular es más intensa que la luz difusa y sale más rápidamente por la superficie del objeto. Se tarda más en calcular la luz especular que la luz difusa; sin embargo, la ventaja de usarla es que agrega un nivel importante de detalle a una superficie.
 
 El modelado del reflejo especular requiere que el sistema sepa en qué dirección se desplaza la luz y la dirección respecto a los ojos del espectador. El sistema usa una versión simplificada del modelo de reflejo especular Phong, que emplea un vector medio para aproximar la intensidad de dicho reflejo especular.
 

@@ -1,8 +1,9 @@
 ---
-title: "Cambio del tamaño de los grupos de mosaicos"
-description: "Cambia el tamaño de un grupo de mosaicos para aumentar su tamaño si la aplicación necesita un mayor espacio de trabajo para los recursos de streaming que se le asignan, o para reducirlo si se necesita menos espacio."
+title: Cambio del tamaño de los grupos de mosaicos
+description: Cambia el tamaño de un grupo de mosaicos para aumentar su tamaño si la aplicación necesita un mayor espacio de trabajo para los recursos de streaming que se le asignan, o para reducirlo si se necesita menos espacio.
 ms.assetid: A54A06DC-BDDB-42DC-85E8-C64241100ED5
-keywords: "Cambio del tamaño de los grupos de mosaicos"
+keywords:
+- Cambio del tamaño de los grupos de mosaicos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fba4197a8d290d7677558b82ed2fcdc28a8dbdf2
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043854"
 ---
 # <a name="tile-pool-resizing"></a>Cambio del tamaño de los grupos de mosaicos
 

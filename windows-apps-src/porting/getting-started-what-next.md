@@ -1,8 +1,8 @@
 ---
 author: mcleblanc
-title: "Introducción: ¿y después?"
+title: 'Introducción: ¿y después?'
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
-description: "Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes."
+description: Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes.
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 2ca600085c14c43d9d9d37e80efbae30bae650ef
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239362"
 ---
 # <a name="getting-started-what-next"></a>Introducción: ¿y después?
 

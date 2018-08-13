@@ -1,6 +1,6 @@
 ---
 author: normesta
-description: "Con el espacio de nombres Windows.ApplicationModel.Appointments, puedes crear y administrar citas en la aplicación de calendario de un usuario."
+description: Con el espacio de nombres Windows.ApplicationModel.Appointments, puedes crear y administrar citas en la aplicación de calendario de un usuario.
 title: Administrar citas
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
 ms.author: normesta
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP, citas, calendario, appointments, calendar
 ms.openlocfilehash: d4bc4832dd489508eabbddd486f782ac8b0191a3
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665701"
 ---
 # <a name="manage-appointments"></a>Administrar citas
 

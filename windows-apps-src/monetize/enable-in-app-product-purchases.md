@@ -1,26 +1,28 @@
 ---
 author: mcleanbyron
-Description: "Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación."
-title: "Habilitar compras de productos desde la aplicación"
+Description: Whether your app is free or not, you can sell content, other apps, or new app functionality (such as unlocking the next level of a game) from right within the app. Here we show you how to enable these products in your app.
+title: Habilitar compras de productos desde la aplicación
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
-keywords: "uwp, UWP, add-ons, complementos, in-app purchases, compras desde la aplicación, IAPs, IAP, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store"
+keywords: uwp, UWP, add-ons, complementos, in-app purchases, compras desde la aplicación, IAPs, IAP, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
 ms.author: mcleans
-ms.date: 06/26/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 1f7d4c60d077e3c556f0d369cc41d2e50ab9092b
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1fd54d469898007f4a0435313a64629360816287
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "958468"
 ---
 # <a name="enable-in-app-product-purchases"></a>Habilitar compras de productos desde la aplicación
 
-> [!NOTE]
-> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar las compras de productos desde la aplicación. Si la aplicación está destinada a Windows 10, versión 1607 o una versión posterior, se recomienda usar los miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en lugar de los de **Windows.ApplicationModel.Store**. Para obtener más información, consulta [este artículo](enable-in-app-purchases-of-apps-and-add-ons.md).
+Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.
 
-Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí mostramos cómo habilitar estos productos en la aplicación.
+> [!IMPORTANT]
+> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar las compras de productos desde la aplicación. Este espacio de nombres ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como las suscripciones y los complementos de consumibles administrados por Microsoft Store, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y Microsoft Store. El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Para obtener más información acerca de cómo habilitar compras de producto de aplicación usando el espacio de nombres **Windows.Services.Store** , vea [este artículo](enable-in-app-purchases-of-apps-and-add-ons.md).
 
 > [!NOTE]
 > Los productos desde la aplicación no pueden ofrecerse durante la versión de prueba de una aplicación. Los clientes que usan una versión de prueba de la aplicación solamente pueden comprar un producto desde la aplicación si compran una versión completa de la misma.
@@ -29,7 +31,7 @@ Independientemente de que la aplicación sea gratuita o no, puedes vender conten
 
 -   Una aplicación de Windows en la que se puedan agregar características que los clientes pueden comprar.
 -   Cuando codificas y pruebas nuevos productos desde la aplicación por primera vez, debes usar el objeto [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) en lugar del objeto [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765). De esta manera, puedes comprobar la lógica de la licencia con llamadas simuladas al servidor de licencias, en lugar de llamar al servidor activo. Para ello, debes personalizar el archivo llamado WindowsStoreProxy.xml en %perfil_usuario%\\AppData\\local\\packages\\&lt;nombre_paquete&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. El simulador de Microsoft Visual Studio crea este archivo la primera vez que se ejecuta la aplicación, aunque también puedes cargar un archivo personalizado en el tiempo de ejecución. Para obtener más información, consulta [Uso del archivo WindowsStoreProxy.xml con CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy).
--   Este tema también hace referencia a los ejemplos de código que se proporcionan en la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store). Esta muestra es ideal para conseguir experiencia práctica con las diferentes opciones de monetización que se proporcionan para las aplicaciones para la Plataforma universal de Windows (UWP).
+-   Este tema también hace referencia a los ejemplos de código que se proporcionan en la [muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store). Esta muestra es ideal para conseguir experiencia práctica con las diferentes opciones de monetización que se proporcionan para las aplicaciones para la Plataforma universal de Windows (UWP).
 
 ## <a name="step-1-initialize-the-license-info-for-your-app"></a>Paso 1: Inicializa la información de licencia para la aplicación
 

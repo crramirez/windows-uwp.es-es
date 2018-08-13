@@ -1,7 +1,7 @@
 ---
 author: Mtoepke
 title: UWP en muestras de Xbox One
-description: "Muestras y bibliotecas para ayudarte a crear fantásticas experiencias para Xbox One y para televisión."
+description: Muestras y bibliotecas para ayudarte a crear fantásticas experiencias para Xbox One y para televisión.
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ keywords: windows 10, uwp
 ms.assetid: 9ef40050-7df6-49bd-8563-1bd58bb6e3f0
 ms.openlocfilehash: 98f3704556eb027ecaab1ec135261716ef558eeb
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239853"
 ---
 # <a name="uwp-on-xbox-one-samples"></a>Muestras de UWP en Xbox One
 

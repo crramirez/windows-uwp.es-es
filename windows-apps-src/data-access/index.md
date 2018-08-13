@@ -2,7 +2,7 @@
 author: normesta
 ms.assetid: 76776b0f-3163-48c9-835b-3f4213968079
 title: Acceso a datos
-description: "En esta sección se explica cómo almacenar los datos del dispositivo en una base de datos privada mediante la asignación relacional de objetos en aplicaciones para la Plataforma universal de Windows (UWP)."
+description: En esta sección se explica cómo almacenar los datos del dispositivo en una base de datos privada mediante la asignación relacional de objetos en aplicaciones para la Plataforma universal de Windows (UWP).
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP, datos, base de datos, relacional, tablas, data, database, relational, tables, sqlite
 ms.openlocfilehash: 19690b6877fb4304b7740e6098711ca0b097d567
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665321"
 ---
 # <a name="data-access"></a>Acceso a datos
 

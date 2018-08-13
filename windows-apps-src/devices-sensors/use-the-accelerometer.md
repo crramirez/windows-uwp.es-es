@@ -1,23 +1,24 @@
 ---
-author: mukin
+author: muhsinking
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
-title: "Usar el acelerómetro"
-description: "Aprende a usar el acelerómetro para responder al movimiento del usuario."
+title: Usar el acelerómetro
+description: Aprende a usar el acelerómetro para responder al movimiento del usuario.
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f0a09faebf554fd0d669ecb4fc3c37dd61a742e4
-ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 30de119b7c3a00730b698eb9d4938280669219a7
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "958710"
 ---
 # <a name="use-the-accelerometer"></a>Usar el acelerómetro
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 

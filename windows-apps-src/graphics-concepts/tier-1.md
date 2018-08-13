@@ -1,8 +1,9 @@
 ---
 title: Nivel 1
-description: "Esta sección describe la compatibilidad del nivel 1."
+description: Esta sección describe la compatibilidad del nivel 1.
 ms.assetid: 153DA429-0C99-4691-AEB4-124FD9B17BE2
-keywords: Nivel 1
+keywords:
+- Nivel 1
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 522e2b5e9347b0b26bbd448b1d445037a3889f16
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044674"
 ---
 # <a name="tier-1"></a>Nivel 1
 

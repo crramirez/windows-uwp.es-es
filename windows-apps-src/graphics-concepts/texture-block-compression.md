@@ -1,26 +1,31 @@
 ---
-title: "Compresión por bloques de las texturas"
-description: "La compatibilidad de la compresión por bloques (BC) para las texturas se ha ampliado en Direct3D 11 para incluir los algoritmos BC6H y BC7."
+title: Compresión por bloques de las texturas
+description: La compatibilidad de la compresión por bloques (BC) para las texturas se ha ampliado en Direct3D 11 para incluir los algoritmos BC6H y BC7.
 ms.assetid: 63506C46-BF14-464B-B20C-8B8F359E7AFE
-keywords: "Compresión por bloques de las texturas"
-author: PeterTurcan
-ms.author: pettur
+keywords:
+- Compresión por bloques de las texturas
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 3288232e0010c1b23d58992cfd6c9f038a74a552
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3f3dc2c29f30c32afda71406917afeec95bbd2ec
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044794"
 ---
 # <a name="texture-block-compression"></a>Compresión por bloques de las texturas
 
 
-La compatibilidad de la compresión por bloques (BC) para las texturas se ha ampliado en Direct3D 11 para incluir los algoritmos BC6H y BC7. BC6H admite datos de fuente de color de alto rango dinámico. y BC7 proporciona una compresión de calidad superior a la media con menos artefactos para los datos de origen RGB estándar.
+La compatibilidad de la compresión de bloques (BC) para las texturas se ha ampliado en Direct3D 11 para incluir los algoritmos BC6H y BC7. BC6H admite datos de fuente de color de alto rango dinámico. y BC7 proporciona una compresión de calidad superior a la media con menos artefactos para los datos de origen RGB estándar.
 
 Para obtener información más específica sobre la compatibilidad de los algoritmos de compresión por bloques anteriores a Direct3D 11, incluida la compatibilidad de los formatos de BC1 a BC5, consulta [Compresión por bloques (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb694531) (en inglés).
 
-**Nota sobre los formatos de archivo: **Los formatos de compresión de texturas BC6H y BC7 usan el formato de archivo DDS para almacenar los datos de textura comprimidos. Para obtener más información, consulta la [Guía de programación para DDS](https://msdn.microsoft.com/library/windows/desktop/bb943991) (en inglés) para obtener más información.
+** Nota acerca de los formatos de archivo: ** el BC6H y BC7 formatos de compresión de textura utilizan el formato de archivo DDS para almacenar los datos de textura comprimido. Para obtener más información, consulta la [Guía de programación para DDS](https://msdn.microsoft.com/library/windows/desktop/bb943991) (en inglés) para obtener más información.
 
 ## <a name="span-idblockcompressionformatssupportedindirect3d11spanspan-idblockcompressionformatssupportedindirect3d11spanspan-idblockcompressionformatssupportedindirect3d11spanblock-compression-formats-supported-in-direct3d-11"></a><span id="Block_Compression_Formats_Supported_in_Direct3D_11"></span><span id="block_compression_formats_supported_in_direct3d_11"></span><span id="BLOCK_COMPRESSION_FORMATS_SUPPORTED_IN_DIRECT3D_11"></span>Formatos de compresión por bloques admitidos en Direct3D 11
 

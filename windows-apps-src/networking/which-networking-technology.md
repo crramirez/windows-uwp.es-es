@@ -1,8 +1,8 @@
 ---
 author: stevewhims
 ms.assetid: 2CC2E526-DACB-4008-9539-DA3D0C190290
-description: "Una introducción rápida de las tecnologías de redes disponibles para un desarrollador UWP, con sugerencias sobre cómo elegir las tecnologías que son adecuadas para la aplicación."
-title: "¿Qué tecnología de redes?"
+description: Una introducción rápida de las tecnologías de redes disponibles para un desarrollador UWP, con sugerencias sobre cómo elegir las tecnologías que son adecuadas para la aplicación.
+title: ¿Qué tecnología de redes?
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,10 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 70ac6eb26c13d8fca3196fa64bfce2bb76f9d1b2
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "975607"
 ---
 # <a name="which-networking-technology"></a>¿Qué tecnología de redes?
 

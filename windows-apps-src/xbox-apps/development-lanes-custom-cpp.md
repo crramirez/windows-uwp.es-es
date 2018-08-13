@@ -9,11 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
-ms.openlocfilehash: 7fd316ba63d0b5e6a98e96841905b13d3680a39f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 2871e9f1a17bb96ddb601ab6d8446641e05b8ead
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "300371"
 ---
-# <a name="bringing-custom-c-games-to-uwp-on-xbox"></a>Llevar los juegos C++ personalizados a UWP en Xbox
+# <a name="bring-custom-c-games-to-uwp-on-xbox"></a>Traer juegos C++ personalizado a UWP en Xbox
 
 Si vas a escribir un motor de C++ personalizado, Xbox One ofrece compatibilidad completa con C++. 
 

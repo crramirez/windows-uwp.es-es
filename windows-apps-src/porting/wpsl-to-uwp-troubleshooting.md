@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
-description: "Se recomienda leer hasta el final esta guía de migración, aunque somos conscientes de que estás deseando seguir avanzando y llegar a la fase de compilación y ejecución de tu proyecto."
-title: "Solución de problemas de la migración de Windows Phone Silverlight a UWP"
+description: Se recomienda leer hasta el final esta guía de migración, aunque somos conscientes de que estás deseando seguir avanzando y llegar a la fase de compilación y ejecución de tu proyecto.
+title: Solución de problemas de la migración de Windows Phone Silverlight a UWP
 ms.assetid: d9a9a2a7-9401-4990-a992-4b13887f2661
 ms.author: markl
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 97b19021745c8a9e7200262ad7103bd890813d64
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239948"
 ---
 #  <a name="troubleshooting-porting-windows-phone-silverlight-to-uwp"></a>Solución de problemas de la migración de Windows Phone Silverlight a UWP
 

@@ -1,7 +1,7 @@
 ---
 author: jwmsft
-description: "Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso ya definido. Los recursos se definen en un ResourceDictionary, y el uso de StaticResource hace referencia a la clave de ese recurso en el ResourceDictionary."
-title: "Extensión de marcado StaticResource"
+description: Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso ya definido. Los recursos se definen en un ResourceDictionary, y el uso de StaticResource hace referencia a la clave de ese recurso en el ResourceDictionary.
+title: Extensión de marcado StaticResource
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 234d90382fb62e6f0be9683dfb7b01d9fa80a185
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239915"
 ---
 # <a name="staticresource-markup-extension"></a>Extensión de marcado {StaticResource}
 

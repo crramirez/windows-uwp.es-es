@@ -1,23 +1,24 @@
 ---
 author: jwmsft
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
-title: "Planeación del rendimiento"
-description: "Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería."
+title: Planeación del rendimiento
+description: Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: d25620c0fc86f76b8c0d4de6e606250186b9ce37
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 083d4fea92526954e3166c496521cd01507608f4
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "894791"
 ---
 # <a name="planning-for-performance"></a>Planeación del rendimiento
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, puedes realizar mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos.
@@ -174,7 +175,7 @@ Usa estas técnicas y herramientas para probar la aplicación con respecto a los
     -   Ejecuta la aplicación varias veces para eliminar las variables aleatorias de prueba y garantizar medidas coherentes.
 -   Prueba si se ha reducido la disponibilidad de consumo de energía. El dispositivo de tus usuarios podría tener mucha menos energía que el equipo de desarrollo. Windows se ha diseñado teniendo en cuenta los dispositivos de baja energía, como los dispositivos móviles. Debes asegurarte de que las aplicaciones que se ejecutan en la plataforma funcionan correctamente en estos dispositivos. Como heurístico, cuenta con que un dispositivo de bajo consumo funciona, aproximadamente, a un cuarto de la velocidad de un equipo de escritorio, y define tus objetivos en consecuencia.
 -   Combina herramientas, como Microsoft Visual Studio y el Windows Performance Analyzer, para medir el rendimiento de la aplicación. Visual Studio está diseñado para proporcionar un análisis centrado en la aplicación, como la vinculación del código de origen. Windows Performance Analyzer está diseñado para proporcionar un análisis centrado en el sistema, como la información del sistema, información sobre los eventos de manipulación táctil e información sobre la entrada y salida en disco y el coste de la unidad de procesamiento gráfico (GPU). Ambas herramientas proporcionan captura y exportación de seguimiento y pueden reabrir seguimientos compartidos y finales.
--   Antes de enviar la aplicación a la Tienda para su certificación, asegúrate de incorporar en los planes de prueba los casos relacionados con el rendimiento, como se describe en la sección "Pruebas de rendimiento" de las [Pruebas del Kit para la certificación de aplicaciones en Windows](windows-app-certification-kit-tests.md) y en la sección "Rendimiento y estabilidad" de los [casos de pruebas de aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Dn275879).
+-   Antes de enviar la aplicación a la tienda de certificación, asegúrese de incorporar en sus planes de pruebas los casos de prueba relacionada con el rendimiento, tal como se describe en la sección "Pruebas de rendimiento" de [las pruebas de Kit de certificación de aplicación de Windows](windows-app-certification-kit-tests.md) y en el "rendimiento y sección de estabilidad"UWP app de [casos](https://msdn.microsoft.com/library/windows/apps/Dn275879)de prueba.
 
 Para más información, consulta estos recursos y herramientas de generación de perfiles.
 

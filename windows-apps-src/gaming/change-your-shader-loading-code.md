@@ -1,17 +1,19 @@
 ---
 author: mtoepke
-title: "Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D"
-description: "En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0."
+title: Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D
+description: En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0.
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, juegos, OpenGL, Direct3D, canalización de sombreador"
+keywords: Windows 10, UWP, juegos, OpenGL, Direct3D, canalización de sombreador
 ms.openlocfilehash: 20d02d9b9724c0cfd8120d4d38fa476b9efa3bb3
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240215"
 ---
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D
 

@@ -1,19 +1,20 @@
 ---
 author: mcleanbyron
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
-description: "Usa los ejemplos de código de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows."
-title: "Ejemplos de código para la API de envío"
+description: Usa los ejemplos de código de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows.
+title: Ejemplos de código para la API de envío
 ms.author: mcleans
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, code examples, ejemplos de código"
+keywords: windows 10, Windows 10, uwp, UWP, Windows Store submission API, API de envío de la Tienda Windows, code examples, ejemplos de código
 ms.openlocfilehash: c5344667922a7445ad7694f36a542b3ff35c4bdb
 ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/11/2017
+ms.locfileid: "772310"
 ---
 # <a name="code-examples-for-the-submission-api"></a>Ejemplos de código para la API de envío
 

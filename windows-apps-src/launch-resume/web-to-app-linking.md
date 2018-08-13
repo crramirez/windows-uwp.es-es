@@ -1,26 +1,33 @@
 ---
 author: TylerMSFT
-title: "Admitir la vinculación de un sitio web con la aplicación mediante los controladores de URI de la aplicación"
-description: "Controla la relación de los usuarios con tu aplicación mediante los controladores de URI de la aplicación."
-keywords: "Vinculación en profundidad de Windows"
+title: Habilitar aplicaciones para sitios Web con los controladores URI de aplicación
+description: Unidad compromiso de usuario con la aplicación mediante el soporte de las aplicaciones para la característica de sitios Web.
+keywords: Vinculación en profundidad de Windows
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
-ms.openlocfilehash: df5d232cc997c0c888b3a2f092efeb937e991a85
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 8482c3b14a6845dc3bfd5912c8260b5cd3214249
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "958318"
 ---
-# <a name="support-web-to-app-linking-with-app-uri-handlers"></a>Admitir la vinculación de un sitio web con la aplicación mediante los controladores de URI de la aplicación
+# <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Habilitar aplicaciones para sitios Web con los controladores URI de aplicación
 
-Aprende a controlar la relación del usuario con tu aplicación incorporando la compatibilidad de la vinculación de web a aplicación. La vinculación de web a aplicación te permite asociar una aplicación con un sitio web. Cuando los usuarios abran un vínculo http o https a tu sitio web, en lugar de abrirse el navegador, se iniciará la aplicación. Si la aplicación no está instalada, se proporcionará un vínculo para abrir el sitio web en el navegador. Los usuarios pueden confiar en esta experiencia porque solo los propietarios con contenido comprobado pueden registrarse para obtener un vínculo.
+Aplicaciones para sitios Web asocia la aplicación a un sitio Web para que cuando alguien abre un vínculo a su sitio Web, se inicia la aplicación en lugar de abrir el explorador. Si no está instalada la aplicación, su sitio Web se abre en el explorador como de costumbre. Los usuarios pueden confiar en esta experiencia porque solo los propietarios con contenido comprobado pueden registrarse para obtener un vínculo. Los usuarios podrán comprobar todos sus vínculos web-app registrados, vaya a Configuración > aplicaciones > aplicaciones para sitios Web.
 
-Para poder habilitar la vinculación de web a aplicación, necesitarás:
+Para habilitar la vinculación web-a-app necesitará:
 - Identificar en el archivo de manifiesto los URI que la aplicación controlará.
-- Un archivo JSON con el nombre de familia de paquete de la aplicación en la misma raíz de host que la declaración de manifiesto de la aplicación.
+- Un archivo JSON que define la asociación entre la aplicación y su sitio Web. con la aplicación de nombre de la familia de paquete en la misma raíz de host como la aplicación de manifiesto de la declaración.
 - Administrar la activación en la aplicación.
+
+> [!Note]
+> A partir de la actualización de Windows 10 creadores, vínculos compatibles hizo clic en Microsoft Edge iniciará la aplicación correspondiente. Vínculos compatibles hace clic en otros exploradores (por ejemplo, Internet Explorer, etc.), mantienen en la experiencia de exploración.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registro para controlar los vínculos http y https en el manifiesto de la aplicación.
 
@@ -30,15 +37,16 @@ Por ejemplo, si la dirección del sitio web es "msn.com", realizarías la siguie
 
 ```xml
 <Applications>
-    ...
-  <Extensions>
-     <uap3:Extension Category="windows.appUriHandler">
-      <uap3:AppUriHandler>
-        <uap3:Host Name="msn.com" />
-      </uap3:AppUriHandler>
-    </uap3:Extension>
-  </Extensions>
-    ...
+  <Application ... >
+      ...
+      <Extensions>
+         <uap3:Extension Category="windows.appUriHandler">
+          <uap3:AppUriHandler>
+            <uap3:Host Name="msn.com" />
+          </uap3:AppUriHandler>
+        </uap3:Extension>
+      </Extensions>
+  </Application>
 </Applications>
 ```
 
@@ -55,7 +63,7 @@ Crea un archivo JSON (sin la extensión de archivo .json) denominado **windows-a
 
 ``` JSON
 [{
-  "packageFamilyName": "YourAppsPFN",
+  "packageFamilyName": "Your app's package family name, e.g MyApp_9jmtgj1pbbz6e",
   "paths": [ "*" ],
   "excludePaths" : [ "/news/*", "/blog/*" ]
  }]
@@ -72,8 +80,7 @@ El ejemplo de archivo JSON anterior muestra el uso de caracteres comodín. Los c
 | **\***       | Representa cualquier subcadena      |
 | **?**        | Representa un carácter único |
 
-Por ejemplo, si tomamos `"excludePaths" : [ "/news/*", "/blog/*" ]` en el ejemplo anterior, la aplicación admitirá todas las rutas de acceso que empiecen por la dirección de tu sitio web (por ejemplo, msn.com) **excepto** las que estén bajo `/news/` y `/blog/`. Se admitirá **msn.com/weather.html**, pero no ****msn.com/news/topnews.html****.
-
+Por ejemplo, dada `"excludePaths" : [ "/news/*", "/blog/*" ]` en el ejemplo anterior, la aplicación será compatible con todas las rutas de acceso que comienzan con la dirección de su sitio Web (por ejemplo, msn.com), **excepto** los que están en `/news/` y `/blog/`. Se admitirá **msn.com/weather.html**, pero no ****msn.com/news/topnews.html****.
 
 ### <a name="multiple-apps"></a>Varias aplicaciones
 
@@ -81,12 +88,12 @@ Si tienes dos aplicaciones que quieres vincular a tu sitio web, lista ambos nomb
 
 ``` JSON
 [{
-  "packageFamilyName": "YourAppsPFN",
+  "packageFamilyName": "Your apps's package family name, e.g MyApp_9jmtgj1pbbz6e",
   "paths": [ "*" ],
   "excludePaths" : [ "/news/*", "/blog/*" ]
  },
  {
-  "packageFamilyName": "Your2ndAppsPFN",
+  "packageFamilyName": "Your second app's package family name, e.g. MyApp2_8jmtgj2pbbz6e",
   "paths": [ "/example/*", "/links/*" ]
  }]
 ```
@@ -161,6 +168,15 @@ Prueba la configuración de la aplicación y el sitio web mediante la ejecución
 -   Nombre de familia de paquete (PFN): El PFN de la aplicación
 -   Ruta de acceso del archivo: El archivo JSON para la validación local (por ejemplo, C:\\UnaCarpeta\\windows-app-web-link)
 
+Si la herramienta no devuelve nada, validación funcionará en ese archivo cuando se cargan. Si hay un código de error, no funcionará.
+
+Puede habilitar la siguiente clave del registro forzar la ruta de acceso coincidente para aplicaciones cargados por el lado como parte de validación locales:
+
+`HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
+AppModel\SystemAppData\YourApp\AppUriHandlers`
+
+Nombre de clave: `ForceValidation` valor: `1`
+
 ## <a name="test-it-web-validation"></a>Prueba de la aplicación: Validación web
 
 Cierra la aplicación para comprobar que se activa al hacer clic en un vínculo. A continuación, copia la dirección de una de las rutas de acceso admitidas en tu sitio web. Por ejemplo, si la dirección de tu sitio web es "msn.com" y una de las rutas admitidas es "path1", usarías: `http://msn.com/path1`
@@ -171,28 +187,19 @@ Además, puedes probar tu aplicación si la inicias desde otra aplicación media
 
 Si quieres seguir la lógica de activación de protocolo, establece un punto de interrupción en el controlador de eventos **OnActivated**.
 
-**Nota:** Si haces clic en un vínculo del navegador Microsoft Edge, no iniciará la aplicación, sino que te llevará al sitio web.
-
 ## <a name="appurihandlers-tips"></a>Sugerencias sobre AppUriHandlers:
 
 - Asegúrate de especificar solo los vínculos que tu aplicación pueda controlar.
-
 - Lista todos los hosts que admitirás.  Ten en cuenta que www.example.com y example.com son hosts diferentes.
-
 - Los usuarios pueden elegir qué aplicación prefieren para controlar los sitios web en Configuración.
-
 - El archivo JSON debe cargarse en un servidor https.
-
 - Si necesitas cambiar las rutas de acceso que deseas admitir, puedes volver a publicar el archivo JSON sin tener que volver a publicar la aplicación. Los usuarios verán los cambios en un plazo de 1 a 8 días.
-
 - Todas las aplicaciones transferidas localmente con AppUriHandlers contarán con vínculos validados para el host en su instalación. No es necesario cargar un archivo JSON para probar la característica.
-
 - Esta característica funciona siempre que la aplicación sea una aplicación para UWP iniciada con [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) o una aplicación de escritorio de Windows que se inicie con [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx). Si la dirección URL se corresponde con un controlador de URI de aplicación registrado, se iniciará dicha aplicación en lugar del navegador.
 
 ## <a name="see-also"></a>Consulta también
 
-[Registro de windows.protocol](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
-
+[Ejemplo de aplicación de Web de un proyecto](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
+[windows.protocol registro](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
 [Controlar la activación de URI](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-
-[Association Launching sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra cómo usar la API LaunchUriAsync().
+[Inicio de asociación de ejemplo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra cómo utilizar la API de LaunchUriAsync().

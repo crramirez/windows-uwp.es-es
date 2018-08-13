@@ -1,30 +1,30 @@
 ---
-author: mcleblanc
+author: stevewhims
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
-description: "En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT 8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10."
-title: "Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame"
-ms.author: markl
+description: En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows10.
+title: Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2756fc75b7a780ae0361671127423dcb898cae4b
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, Windows 10, uwp, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: 5513a4536f4df77be93a099cf826d85212621622
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "303020"
 ---
-
-# <a name="windows-runtime-8x-to-uwp-case-study-quizgame-peer-to-peer-sample-app"></a>Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+# <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Tiempo de ejecución de Windows 8.x a UWP caso práctico: aplicación de ejemplo de QuizGame
 
 
-En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT 8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10.
 
-Una aplicación Universal 8.1 es aquella que crea dos versiones de la misma aplicación: un paquete de la aplicación para Windows 8.1 y otro paquete de la aplicación distinto para Windows Phone 8.1. La versión para WinRT 8.1 de QuizGame usa una organización de proyecto de aplicación universal de Windows, pero toma un enfoque distinto y crea una aplicación funcionalmente distinta para las dos plataformas. El paquete de la aplicación de Windows 8.1 actúa como el host de una sesión del juego de preguntas, mientras el paquete de la aplicación de Windows Phone 8.1 asume el rol del cliente al host. Las dos partes de la sesión del juego de preguntas se comunican a través de redes de punto a punto.
+
+En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows10.
+
+Una aplicación Universal 8.1 es aquella que crea dos versiones de la misma aplicación: un paquete de la aplicación para Windows 8.1 y otro paquete de la aplicación distinto para Windows Phone 8.1. La versión para WinRT8.1 de QuizGame usa una organización de proyecto de aplicación universal de Windows, pero toma un enfoque distinto y crea una aplicación funcionalmente distinta para las dos plataformas. El paquete de la aplicación de Windows 8.1 actúa como el host de una sesión del juego de preguntas, mientras el paquete de la aplicación de Windows Phone 8.1 asume el rol del cliente al host. Las dos partes de la sesión del juego de preguntas se comunican a través de redes de punto a punto.
 
 La adaptación de las dos partes al equipo y al teléfono, respectivamente, tiene sentido. Pero, ¿no sería aún mejor si se pudieran ejecutar el host y el cliente en prácticamente cualquier dispositivo que quisieras? En este caso práctico, se portarán las dos aplicaciones a Windows 10, donde se compilarán en un único paquete de la aplicación que los usuarios podrán instalar en una amplia gama de dispositivos.
 
@@ -46,7 +46,7 @@ La aplicación usa patrones que usan vistas y modelos de vista. Como resultado d
 
 [Consulta la versión más reciente de esta muestra en GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
 
-## <a name="the-winrt-81-solution"></a>La solución de WinRT 8.1
+## <a name="the-winrt-81-solution"></a>La solución de WinRT8.1
 
 
 Este es el aspecto de QuizGame (la aplicación que vamos a portar).
@@ -85,8 +85,8 @@ QuizGame tiene las siguientes partes.
 
 -   P2PHelper. Se trata de una biblioteca de clases portable que contiene la lógica de red punto a punto.
 -   QuizGame.Windows. Este es el proyecto que crea el paquete de la aplicación para la aplicación host, que está destinado a Windows 8.1.
--   QuizGame.WindowsPhone. Este es el proyecto que crea el paquete de la aplicación para la aplicación cliente, que está destinado a Windows Phone 8.1.
--   QuizGame.Shared. Este es el proyecto que contiene código fuente, archivos de marcado y otros activos y recursos, que usan los otros dos proyectos.
+-   QuizGame.WindowsPhone. Este es el proyecto que crea el paquete de la aplicación para la aplicación cliente, que está destinado a Windows Phone8.1.
+-   QuizGame.Shared. Este es el proyecto que contiene código fuente, archivos de marcado y otros activos y recursos que usan los otros dos proyectos.
 
 Para este caso práctico, tenemos las opciones habituales que se describen en [Si ya tienes una aplicación Universal 8.1](w8x-to-uwp-root.md) con respecto a los dispositivos que se admiten.
 
@@ -199,5 +199,4 @@ Con ese último retoque, la aplicación se comportará y tendrá el mismo aspect
 
 ## <a name="conclusion"></a>Conclusión
 
-La aplicación que migramos en este caso práctico era relativamente compleja e incluía varios proyectos, una biblioteca de clases y una gran cantidad de código e interfaz de usuario. Aun así, la migración resultó sencilla. Parte de la facilidad de la migración corresponde directamente a la similitud entre la plataforma para desarrollador de Windows 10 y las plataformas de Windows 8.1 y Windows Phone 8.1. En parte también se debe a la forma en que la aplicación original se diseñó para separar los modelos, los modelos de vista y las vistas.
-
+La aplicación que migramos en este caso práctico era relativamente compleja e incluía varios proyectos, una biblioteca de clases y una gran cantidad de código e interfaz de usuario. Aun así, la migración resultó sencilla. Parte de la facilidad de la migración corresponde directamente a la similitud entre la plataforma para desarrollador de Windows10 y las plataformas de Windows8.1 y Windows Phone8.1. En parte también se debe a la forma en que la aplicación original se diseñó para separar los modelos, los modelos de vista y las vistas.

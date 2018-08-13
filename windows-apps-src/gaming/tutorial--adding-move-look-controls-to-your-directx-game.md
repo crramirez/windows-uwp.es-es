@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Controles de movimiento y vista para juegos
-description: "Aprende a agregar controles de movimiento y vista tradicionales de mouse y teclado (también conocidos como controles mouselook) a un juego DirectX."
+description: Aprende a agregar controles de movimiento y vista tradicionales de mouse y teclado (también conocidos como controles mouselook) a un juego DirectX.
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp, juegos, controles, movimiento y vista
 ms.openlocfilehash: 40af05538aa6a6fff6e159fe8aa8812090e8b44b
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240214"
 ---
 # <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles de movimiento y vista para juegos
 

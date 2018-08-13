@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: Anuncios de Bluetooth
-description: "En esta sección se incluyen artículos acerca de cómo integrar anuncios de Bluetooth de bajo consumo (LE) en aplicaciones para la Plataforma universal de Windows (UWP) a través de las API AdvertisementWatcher y AdvertisementPublisher."
+description: En esta sección se incluyen artículos acerca de cómo integrar anuncios de Bluetooth de bajo consumo (LE) en aplicaciones para la Plataforma universal de Windows (UWP) a través de las API AdvertisementWatcher y AdvertisementPublisher.
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,13 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
-ms.openlocfilehash: dbd68ceb310a53932108291cad3a33ea944b4d08
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1be2aad5a6a0fe76caefa4710ebf946e418cf151
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "300441"
 ---
 # <a name="bluetooth-le-advertisements"></a>Anuncios de Bluetooth de bajo consumo (LE)
 
-\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -44,7 +47,7 @@ Para usar la funcionalidad básica de Bluetooth LE en una aplicación para la Pl
 
 Los anuncios de Bluetooth LE permiten que tu dispositivo señalice constantemente una carga específica, denominada anuncio. Este anuncio puede verse en cualquier otro dispositivo cercano compatible con Bluetooth LE, si está configurado para escuchar este anuncio específico.
 
-**Nota** Para proteger la privacidad del usuario, la vida útil de tu anuncio está vinculada a la de tu aplicación. Puedes crear un BluetoothLEAdvertisementPublisher y llamar a Inicio en una tarea en segundo plano para un anuncio en segundo plano. Para obtener más información sobre las tareas en segundo plano, consulta [Inicio, reanudación y tareas en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
+> **Nota**: para la privacidad del usuario, la vida útil de sus anuncios está asociada a la de la aplicación. Puedes crear un BluetoothLEAdvertisementPublisher y llamar a Inicio en una tarea en segundo plano para un anuncio en segundo plano. Para obtener más información sobre las tareas en segundo plano, consulta [Inicio, reanudación y tareas en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Publicación básica
 
@@ -90,7 +93,7 @@ El siguiente código enseña cómo crear un monitor de anuncios de Bluetooth LE,
 BluetoothLEAdvertisementWatcher watcher = new BluetoothLEAdvertisementWatcher();
 watcher.Received += OnAdvertisementReceived;
 watcher.Start();
-```    
+``` 
 
 ```csharp
 private async void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watcher, BluetoothLEAdvertisementReceivedEventArgs eventArgs)

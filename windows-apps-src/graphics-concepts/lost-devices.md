@@ -2,7 +2,8 @@
 title: Dispositivos perdidos
 description: Un dispositivo de Direct3D puede estar en un estado operativo o perdido.
 ms.assetid: 1639CC02-8000-4208-AA95-91C1F0A3B08D
-keywords: Dispositivos perdidos
+keywords:
+- Dispositivos perdidos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e46adf3826749bd974951a54166a6e2afa3702e8
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044584"
 ---
 # <a name="lost-devices"></a>Dispositivos perdidos
 

@@ -1,8 +1,9 @@
 ---
-title: "Reglas de rasterización"
-description: "Las reglas de rasterización definen cómo se asignan los datos de vector en datos de trama."
+title: Reglas de rasterización
+description: Las reglas de rasterización definen cómo se asignan los datos de vector en datos de trama.
 ms.assetid: B604725F-96A5-4DB6-B597-9EC57FBBC024
-keywords: "Reglas de rasterización"
+keywords:
+- Reglas de rasterización
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3781c5c907ad90cc3f587e26cdece9d1646db53e
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044934"
 ---
 # <a name="rasterization-rules"></a>Reglas de rasterización
 
 
-Las reglas de rasterización definen cómo se asignan los datos de vector en datos de trama. Los datos de trama se ajustan a las ubicaciones de enteros, que luego se seleccionan y recortan (para dibujar el número mínimo de píxeles), y los atributos por píxel se interpolan (a partir de los atributos por vértice) antes de que se pasen a un sombreador de píxeles.
+las reglas de rasterización definen cómo se asignan los datos de vector en datos de trama. Los datos de trama se ajustan a las ubicaciones de enteros, que luego se seleccionan y recortan (para dibujar el número mínimo de píxeles), y los atributos por píxel se interpolan (a partir de los atributos por vértice) antes de que se pasen a un sombreador de píxeles.
 
 Existen varios tipos de reglas, que dependen del tipo de primitivo que se está asignando y de si los datos utilizan el muestreo múltiple para reducir el suavizado de contorno. Las siguientes ilustraciones demuestran cómo se controlan los casos extremos.
 

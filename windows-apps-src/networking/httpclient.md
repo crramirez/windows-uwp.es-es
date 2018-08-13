@@ -1,21 +1,24 @@
 ---
-author: DelfCo
-description: "Usa HttpClient y el resto de la API del espacio de nombres Windows.Web.Http para enviar y recibir información mediante los protocolos HTTP 2.0 y HTTP 1.1."
+author: stevewhims
+description: Usa HttpClient y el resto de la API del espacio de nombres Windows.Web.Http para enviar y recibir información mediante los protocolos HTTP 2.0 y HTTP 1.1.
 title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
-ms.author: bobdel
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c29d1d0a9595958aaa2872488f131b59ee278161
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f6b56d9ac156dabc17be3245a77cb6c126317aa9
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "975767"
 ---
 # <a name="httpclient"></a>HttpClient
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -59,7 +62,7 @@ El espacio de nombres [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/
 
 ## <a name="send-a-simple-get-request-over-http"></a>Enviar una solicitud GET sencilla a través de HTTP
 
-Como se mencionó anteriormente en este artículo, el espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) permite que las aplicaciones para UWP envíen solicitudes GET. En el siguiente fragmento de código se muestra cómo enviar una solicitud GET a http://www.contoso.com mediante la clase [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y la clase [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) para leer la respuesta de la solicitud GET.
+Como se mencionó anteriormente en este artículo, el espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) permite que las aplicaciones para UWP envíen solicitudes GET. El siguiente fragmento de código muestra cómo enviar una solicitud GET a http://www.contoso.com con la clase [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y la clase [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) para leer la respuesta de la solicitud GET.
 
 ```csharp
 //Create an HTTP client object

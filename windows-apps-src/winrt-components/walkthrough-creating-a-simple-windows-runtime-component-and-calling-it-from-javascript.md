@@ -1,7 +1,7 @@
 ---
 author: msatranjr
-title: "Creación de un componente simple de Windows Runtime y llamada a este desde JavaScript"
-description: "En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente de tu aplicación universal de Windows creada para Windows mediante JavaScript."
+title: Creación de un componente simple de Windows Runtime y llamada a este desde JavaScript
+description: En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente de tu aplicación universal de Windows creada para Windows mediante JavaScript.
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 ms.author: misatran
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 381e1d264e27d2b68e644895d0b795128540a5d7
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240112"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Tutorial: Creación de un componente simple de Windows Runtime y llamarlo desde JavaScript
 
@@ -38,7 +40,7 @@ En este tutorial se explican las tareas siguientes. Una vez completada la primer
 En esta sección se crea una aplicación universal de Windows compilada para Windows con JavaScript y se agrega un proyecto de componente de Windows Runtime en C# o Visual Basic. Se muestra cómo definir un tipo administrado de Windows Runtime, crear una instancia del tipo desde JavaScript y llamar a miembros estáticos y de instancia. La aplicación de ejemplo se ha representado deliberadamente en mate para centrar la atención en el componente. No dudes en mejorarla.
 
 1.  En Visual Studio, crea un nuevo proyecto de JavaScript: en la barra de menús, selecciona **Archivo, Nuevo, Proyecto**. En la sección **Plantillas instaladas** del cuadro de diálogo **Nuevo proyecto**, selecciona **JavaScript**y, a continuación, elige **Windows** y después **Universal**. (Si Windows no está disponible, asegúrate de que estás usando Windows 8 o versiones posteriores). Elige la plantilla **Aplicación vacía** y escribe SampleApp como nombre del proyecto.
-2.  Crea el proyecto de componente: en el Explorador de soluciones, abre el menú contextual para la solución SampleApp y selecciona **Agregar**y, a continuación, elige **Nuevo proyecto** para agregar un nuevo proyecto de C# o Visual Basic a la solución. En la sección **Plantillas instaladas** del cuadro de diálogo **Agregar nuevo proyecto**, selecciona **Visual Basic** o **Visual C#**y, a continuación, elige **Windows** y después **Universal**. Selecciona la plantilla **Componente de Windows Runtime** y escribe **SampleComponent** en el nombre del proyecto.
+2.  Crea el proyecto de componente: en el Explorador de soluciones, abre el menú contextual para la solución SampleApp y selecciona **Agregar**y, a continuación, elige **Nuevo proyecto** para agregar un nuevo proyecto de C# o Visual Basic a la solución. En la sección **Plantillas instaladas** del cuadro de diálogo **Agregar nuevo proyecto**, selecciona **Visual Basic** o **Visual C#** y, a continuación, elige **Windows** y después **Universal**. Selecciona la plantilla **Componente de Windows Runtime** y escribe **SampleComponent** en el nombre del proyecto.
 3.  Cambia el nombre de la clase por **Example**. Ten en cuenta que, de manera predeterminada, la clase se marca como **public sealed** (**Public NotInheritable** en Visual Basic). Todas las clases de Windows Runtime que expongas desde tu componente deben estar selladas.
 4.  Agrega dos miembros simples a la clase, un método **static** (método **Shared** en Visual Basic) y una propiedad de instancia:
 

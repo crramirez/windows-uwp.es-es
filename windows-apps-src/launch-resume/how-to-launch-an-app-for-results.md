@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
-title: "Iniciar una aplicación para obtener resultados"
-description: "Aprende a iniciar una aplicación desde otra aplicación y a intercambiar datos entre las dos. Esto se denomina iniciar una aplicación para obtener resultados."
+title: Iniciar una aplicación para obtener resultados
+description: Aprende a iniciar una aplicación desde otra aplicación y a intercambiar datos entre las dos. Esto se denomina iniciar una aplicación para obtener resultados.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 8aa2070606f7ef077dfa4392d576f212b2f8ea84
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240189"
 ---
 # <a name="launch-an-app-for-results"></a>Iniciar una aplicación para obtener resultados
 

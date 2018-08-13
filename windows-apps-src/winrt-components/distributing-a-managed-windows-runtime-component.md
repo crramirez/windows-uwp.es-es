@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 70ef1ab7bc31fde2f0d4744394c1ae69c8caf7fd
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239829"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>Distribuir un componente de Windows Runtime administrado
 

@@ -1,8 +1,9 @@
 ---
-title: "Búferes de índices"
-description: "Los búferes de índices son búferes de memoria que contienen datos de índice, que son desplazamientos de enteros en búferes de vértices y se usan para representar primitivos."
+title: Búferes de índices
+description: Los búferes de índices son búferes de memoria que contienen datos de índice, que son desplazamientos de enteros en búferes de vértices y se usan para representar primitivos.
 ms.assetid: 14D3DEC5-CF74-488B-BE41-16BF5E3201BE
-keywords: "Búferes de índices"
+keywords:
+- Búferes de índices
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f79b6982ccb6a938f88a289a823dd5da855e57e2
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044014"
 ---
 # <a name="index-buffers"></a>Búferes de índices
 

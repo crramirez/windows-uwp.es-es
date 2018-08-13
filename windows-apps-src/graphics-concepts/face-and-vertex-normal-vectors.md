@@ -1,8 +1,9 @@
 ---
-title: "Vectores normales de caras y vértices"
-description: "Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo."
+title: Vectores normales de caras y vértices
+description: Cada cara de una malla tiene un vector normal a la unidad. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.
 ms.assetid: 02333579-9749-4612-B121-23F97898A3E0
-keywords: "Vectores normales de caras y vértices"
+keywords:
+- Vectores normales de caras y vértices
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f8a38eeca0516082a64f5b4d2778f74436bbdb7
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044744"
 ---
 # <a name="face-and-vertex-normal-vectors"></a>Vectores normales de caras y vértices
 
 
-Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.
+Cada cara de una malla tiene un vector normal a la unidad. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.
 
 ## <a name="span-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanperpendicular-unit-normal-vector-for-a-front-face"></a><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>Vector normal de unidad perpendicular de una cara anterior.
 

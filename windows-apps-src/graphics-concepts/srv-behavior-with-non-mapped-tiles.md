@@ -2,7 +2,8 @@
 title: Comportamiento de la SRV con iconos sin asignar
 description: El comportamiento de las lecturas de la vista de recurso de sombreador (SRV) que implican iconos sin asignar depende del nivel de compatibilidad del hardware.
 ms.assetid: 0E1D64BE-EB09-4F9D-9800-BD23A3B374EE
-keywords: Comportamiento de la SRV con iconos sin asignar
+keywords:
+- Comportamiento de la SRV con iconos sin asignar
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a97afde2314a220465a7c2b840c9959a7edb4030
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043564"
 ---
 # <a name="span-iddirect3dconceptssrvbehaviorwithnon-mappedtilesspansrv-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.srv_behavior_with_non-mapped_tiles"></span>Comportamiento de la SRV con iconos sin asignar
 
@@ -28,7 +30,7 @@ Algún hardware de [nivel 2](tier-2.md) de primera generación no cumple este re
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Acceso de canalización a los recursos de streaming](pipeline-access-to-streaming-resources.md)
+[Acceso de canalización a recursos de streaming](pipeline-access-to-streaming-resources.md)
 
  
 

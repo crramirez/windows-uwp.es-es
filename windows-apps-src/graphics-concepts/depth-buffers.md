@@ -1,8 +1,9 @@
 ---
-title: "Búferes de profundidad"
-description: "Un búfer de profundidad, o búfer Z, almacena la información de profundidad para controlar qué áreas de polígonos se representan y no se ocultan de la vista."
+title: Búferes de profundidad
+description: Un búfer de profundidad, o búfer Z, almacena la información de profundidad para controlar qué áreas de polígonos se representan y no se ocultan de la vista.
 ms.assetid: BE83A1D7-D43D-4013-8817-EFD2B24DC58E
-keywords: "Búferes de profundidad"
+keywords:
+- Búferes de profundidad
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bbdd567a6ed9af523c720b6ad5a7136a5c59d1cd
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044334"
 ---
 # <a name="depth-buffers"></a>Búferes de profundidad
 

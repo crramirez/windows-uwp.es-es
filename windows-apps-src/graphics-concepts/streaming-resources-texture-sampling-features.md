@@ -1,8 +1,9 @@
 ---
-title: "Características de muestreo de texturas de los recursos de streaming"
-description: "Las características de muestreo de texturas de los recursos de streaming incluyen la obtención de los comentarios de estado del sombreador sobre las áreas asignadas, la comprobación de si todos los datos a los que se accede se han asignado en el recurso, la compresión para ayudar a los sombreadores a evitar áreas de recursos de streaming con mapas MIP que se sabe que no se han asignado y la detección de que el LOD mínimo se ha asignado completamente para la totalidad de una superficie de filtro de texturas."
+title: Características de muestreo de texturas de los recursos de streaming
+description: Las características de muestreo de texturas de los recursos de streaming incluyen la obtención de los comentarios de estado del sombreador sobre las áreas asignadas, la comprobación de si todos los datos a los que se accede se han asignado en el recurso, la compresión para ayudar a los sombreadores a evitar áreas de recursos de streaming con mapas MIP que se sabe que no se han asignado y la detección de que el LOD mínimo se ha asignado completamente para la totalidad de una superficie de filtro de texturas.
 ms.assetid: C2B2DD69-8354-417A-894D-6235A8B48B53
-keywords: "Características de muestreo de texturas de los recursos de streaming"
+keywords:
+- Características de muestreo de texturas de los recursos de streaming
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ee5dc703fe52b0ac8b7163a8067e8b8b87ac8103
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044834"
 ---
 # <a name="streaming-resources-texture-sampling-features"></a>Características de muestreo de texturas de los recursos de streaming
 
@@ -75,7 +77,7 @@ La compatibilidad de esta característica depende de la compatibilidad de [nivel
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Acceso de canalización a los recursos de streaming](pipeline-access-to-streaming-resources.md)
+[Acceso de canalización a recursos de streaming](pipeline-access-to-streaming-resources.md)
 
  
 

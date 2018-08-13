@@ -1,6 +1,6 @@
 ---
-title: "Introducción a la iluminación"
-description: "Cuando usas la iluminación de Direct3D, permites que Direct3D controle los detalles de iluminación en tu lugar. Los usuarios avanzados pueden realizar la iluminación ellos mismos, si lo prefieren."
+title: Introducción a la iluminación
+description: Cuando usas la iluminación de Direct3D, permites que Direct3D controle los detalles de iluminación en tu lugar. Los usuarios avanzados pueden realizar la iluminación ellos mismos, si lo prefieren.
 ms.assetid: FCBF6A92-4EAC-4CCC-A76C-79985AF348AE
 author: michaelfromredmond
 ms.author: mithom
@@ -11,10 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 47280437ad902d0679e0ef266bbd7ad9b6b635af
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044764"
 ---
 # <a name="lighting-overview"></a>Introducción a la iluminación
 

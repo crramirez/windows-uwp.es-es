@@ -1,23 +1,24 @@
 ---
-author: mukin
+author: muhsinking
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
-title: "Dispositivos, sensores y energía"
-description: "Para proporcionar a los usuarios una experiencia enriquecida, puede que sea necesario integrar sensores o dispositivos externos en la aplicación."
+title: Dispositivos, sensores y energía
+description: Para proporcionar a los usuarios una experiencia enriquecida, puede que sea necesario integrar sensores o dispositivos externos en la aplicación.
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: a15ed83ccb7571b772ce77669646e58894e71842
-ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 8227de880fd6e467bb015be9affa764d405c4546
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1018128"
 ---
 # <a name="devices-sensors-and-power"></a>Dispositivos, sensores y energía
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Para proporcionar a los usuarios una experiencia enriquecida, puede que sea necesario integrar sensores o dispositivos externos en la aplicación. Estos son algunos ejemplos de características que se pueden agregar a tu aplicación con la tecnología descrita en esta sección.
 
@@ -31,7 +32,7 @@ Para proporcionar a los usuarios una experiencia enriquecida, puede que sea nece
 | [Habilitar el acceso de modo de usuario para Windows IoT](enable-usermode-access.md) | En este tutorial se describe cómo habilitar el acceso de modo de usuario a GPIO, I2C, SPI y UART con Windows 10 IoT Core. |
 | [Enumerar dispositivos](enumerate-devices.md) | El espacio de nombres de enumeración te permite buscar dispositivos que están conectados en el sistema de forma interna o externa o que se pueden detectar mediante protocolos de redes o de redes inalámbricas. |
 | [Emparejar dispositivos](pair-devices.md) | Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio de nombres [<strong>Windows.Devices.Enumeration</strong>](https://msdn.microsoft.com/library/windows/apps/BR225459) admite tres modos de emparejar dispositivos. |
-| [Emparejamientos fuera de banda](out-of-band-pairing.md) | En esta sección se describe cómo el emparejamiento fuera de banda permite que las aplicaciones puedan conectarse a determinados dispositivos sin necesidad de detección. | 
+| [Punto de servicio](point-of-service.md) | En esta sección se describe cómo interactuar con punto de periféricos de servicio, como escáneres de código de barras, impresoras de recibos, cajones de efectivo, etcetera. | 
 | [Sensores](sensors.md) | Los sensores permiten que las aplicaciones conozcan cuál es la relación entre un dispositivo y el entorno físico. Pueden indicar a la aplicación la dirección, la orientación y el movimiento del dispositivo. |
 | [Bluetooth](bluetooth.md) | Esta sección contiene artículos acerca de cómo integrar Bluetooth en aplicaciones de la Plataforma universal de Windows (UWP) y cómo usar anuncios de bajo consumo (LE), RFCOMM y GATT. | 
 | [Impresión y digitalización](printing-and-scanning.md) | En esta sección se describe cómo imprimir y digitalizar desde la aplicación universal de Windows. | 

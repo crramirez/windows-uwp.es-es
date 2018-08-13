@@ -1,6 +1,6 @@
 ---
 author: PatrickFarley
-Description: "Describe la estructura del tipo de archivo de formato de fabricación 3D y cómo puede crearse y manipularse con la API de Windows.Graphics.Printing3D."
+Description: Describes the structure of the 3D Manufacturing Format file type and how it can be created and manipulated with the Windows.Graphics.Printing3D API.
 MS-HAID: dev\_devices\_sensors.generate\_3mf
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -12,14 +12,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2b1f15534e1388bfd61ba09faeb590464e44d8fd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: c48e054a0b00300df10a676b5d185411de06b505
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "301791"
 ---
 # <a name="generate-a-3mf-package"></a>Generar un paquete 3MF
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -51,7 +54,7 @@ La clase **Printing3D3MFPackage** representa un documento 3MF completo y en el c
 
 El componente de modelo de un documento 3MF puede contener metadatos en forma de pares clave-valor de cadenas almacenadas en la propiedad **Metadata**. Hay una serie de nombres predefinidos de metadatos, pero hay otros pares que se pueden agregar como parte de una extensión (se describe con más detalle en [3MF specification [Especificación 3MF]](http://3mf.io/what-is-3mf/3mf-specification/)). El receptor del paquete (un dispositivo de fabricación 3D) es el que determina si se administran los metadatos y la forma de hacerlo, pero te recomendamos incluir tanta información básica como sea posible en el paquete 3MF:
 
-[!code-cs[Metadatos](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetMetadata)]
+[!code-cs[Metadata](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetMetadata)]
 
 ## <a name="mesh-data"></a>Datos de malla
 
@@ -59,7 +62,7 @@ En el contexto de esta guía, una malla es un cuerpo de geometría de 3 dimensio
 
 En el siguiente método se agregan los vértices a una malla y luego se les proporciona ubicaciones en el espacio 3D:
 
-[!code-cs[Vértices](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetVertices)]
+[!code-cs[Vertices](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetVertices)]
 
 En el método siguiente se definen todos los triángulos que deben dibujarse a través de estos vértices:
 
@@ -130,7 +133,7 @@ Por ejemplo, es posible que un modelo de un coche conste de un elemento **Printi
 
 Se debe hacer referencia directamente a todos los objetos **Printing3DComponent** en la propiedad **Components** del modelo. El componente concreto que se debe usar en el trabajo de impresión se almacena en la propiedad **Build**.
 
-[!code-cs[Componentes](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetComponents)]
+[!code-cs[Components](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetComponents)]
 
 ## <a name="save-package"></a>Guardar el paquete
 Ahora que tenemos un modelo con materiales y componentes definidos, podemos guardarlo en el paquete.

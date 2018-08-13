@@ -1,17 +1,22 @@
 ---
-title: "Atenuación y factor de foco de luz"
-description: "Los componentes de iluminación difusa y especular de la ecuación global de iluminación contienen términos que describen la atenuación de la luz y el cono del foco de luz."
+title: Atenuación y factor de foco de luz
+description: Los componentes de iluminación difusa y especular de la ecuación global de iluminación contienen términos que describen la atenuación de la luz y el cono del foco de luz.
 ms.assetid: F61D4ACB-09AB-4087-9E2D-224E472D6196
-keywords: "Atenuación y factor de foco de luz"
-author: PeterTurcan
-ms.author: pettur
+keywords:
+- Atenuación y factor de foco de luz
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 41b2b16e6eea6eb3edceb523b4db7cf207af48fb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 18746ef231f7d2b387866fba82e4f12a44476001
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044624"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>Atenuación y factor de foco de luz
 
@@ -41,7 +46,7 @@ Donde:
 
 La distancia entre la luz y la posición del vértice siempre es positiva.
 
-d = | L<sub>dir</sub> |
+d. = | L<sub>dir</sub> |
 
 Donde:
 

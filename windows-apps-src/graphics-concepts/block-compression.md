@@ -1,8 +1,9 @@
 ---
-title: "Compresión de bloques"
-description: "La compresión de bloques es una técnica de compresión de texturas con pérdida de información para reducir la superficie de memoria y el tamaño de la textura, lo que da un aumento del rendimiento. Una textura comprimida en bloques puede ser menor que una textura con 32bits por color."
+title: Compresión de bloques
+description: La compresión de bloques es una técnica de compresión de texturas con pérdida de información para reducir la superficie de memoria y el tamaño de la textura, lo que da un aumento del rendimiento. Una textura comprimida en bloques puede ser menor que una textura con 32bits por color.
 ms.assetid: 2FAD6BE8-C6E4-4112-AF97-419CD27F7C73
-keywords: "Compresión de bloques"
+keywords:
+- Compresión de bloques
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b0b87f827e7a878b1952ca1970841c3fd5584db
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1045158"
 ---
 # <a name="block-compression"></a>Compresión de bloques
 

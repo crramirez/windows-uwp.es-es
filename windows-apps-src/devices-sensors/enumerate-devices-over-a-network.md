@@ -1,23 +1,24 @@
 ---
-author: mukin
+author: muhsinking
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
-title: "Enumerar dispositivos a través de una red"
-description: "Además de la detección de dispositivos conectados localmente, puedes usar las API Windows.Devices.Enumeration para enumerar dispositivos a través de protocolos de red e inalámbricos."
+title: Enumerar dispositivos a través de una red
+description: Además de la detección de dispositivos conectados localmente, puedes usar las API Windows.Devices.Enumeration para enumerar dispositivos a través de protocolos de red e inalámbricos.
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4f7f6d9e7e92b7b40e23e835394b372358fb41f9
-ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: fa2e206bdfde0d1399086af2a2424718ceba6ac8
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "958910"
 ---
 # <a name="enumerate-devices-over-a-network"></a>Enumerar dispositivos a través de una red
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**

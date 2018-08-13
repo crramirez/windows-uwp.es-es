@@ -1,8 +1,9 @@
 ---
 title: Empaquetado de mapas MIP
-description: "Se pueden empaquetar algunos MIP (por segmento de matriz) en un determinado número de iconos, según las dimensiones, el formato, el número de mapas MIP y los segmentos de matriz de un recurso de streaming."
+description: Se pueden empaquetar algunos MIP (por segmento de matriz) en un determinado número de iconos, según las dimensiones, el formato, el número de mapas MIP y los segmentos de matriz de un recurso de streaming.
 ms.assetid: 906C3CAC-4E84-4947-B508-06788551BE85
-keywords: Empaquetado de mapas MIP
+keywords:
+- Empaquetado de mapas MIP
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 88c8c42dbf466b0e41125fd1b616e5eba950ba8f
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043454"
 ---
 # <a name="mipmap-packing"></a>Empaquetado de mapas MIP
 

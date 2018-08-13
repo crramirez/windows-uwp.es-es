@@ -1,7 +1,7 @@
 ---
 author: m-stahl
-title: "Referencia de API de configuración de desarrollador de Xbox de Device Portal"
-description: "Obtén información sobre cómo tener acceso a la configuración de desarrollador de Xbox."
+title: Referencia de API de configuración de desarrollador de Xbox de Device Portal
+description: Obtén información sobre cómo tener acceso a la configuración de desarrollador de Xbox.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.openlocfilehash: dfde4c45a4aa5a520e0aa98cd7f31f7d84854e08
 ms.sourcegitcommit: 0e44f197e7e649d542ec3f67cd790a61dbe1226f
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/07/2017
+ms.locfileid: "662507"
 ---
 # <a name="developer-settings-api-reference"></a>Referencia de API de la configuración de desarrollador   
 Puede obtener acceso a la configuración de Xbox One que es útil para desarrollar mediante esta API.

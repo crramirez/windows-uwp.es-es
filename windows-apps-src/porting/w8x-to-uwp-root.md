@@ -1,6 +1,6 @@
 ---
 author: mcleblanc
-description: "Si tienes una aplicación Universal 8.1 (tanto si tiene como destino Windows8.1, Windows Phone8.1 o ambos), comprobarás que el código fuente y las habilidades se portarán sin dificultad a Windows10."
+description: Si tienes una aplicación Universal 8.1 (tanto si tiene como destino Windows8.1, Windows Phone8.1 o ambos), comprobarás que el código fuente y las habilidades se portarán sin dificultad a Windows10.
 title: Portar de Windows Runtime 8.x a UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 ms.author: markl
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 37da1d6385bf18fcf44f6425b843715e1a462379
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239950"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Mover de Windows Runtime8.x a UWP
 

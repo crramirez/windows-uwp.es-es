@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 82ab5fc9-3a7f-4d9e-9882-077ccfdd0ec9
 title: Escribir un complemento personalizado para Device Portal
-description: "Obtén información sobre cómo escribir una aplicación para UWP que usa Windows Device Portal para hospedar una página web y proporcionar información de diagnóstico."
+description: Obtén información sobre cómo escribir una aplicación para UWP que usa Windows Device Portal para hospedar una página web y proporcionar información de diagnóstico.
 ms.author: pafarley
 ms.date: 03/24/2017
 ms.topic: article
@@ -11,10 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2aae0e634ea219ef602eafdb1516d1d42b9c7913
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1026001"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Escribir un complemento personalizado para Device Portal
 

@@ -1,24 +1,23 @@
 ---
 author: normesta
-description: "Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrónico para que el usuario pueda enviar un mensaje de correo electrónico. Puedes rellenar previamente los campos del correo electrónico con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar."
-title: "Enviar correo electrónico"
+description: Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrónico para que el usuario pueda enviar un mensaje de correo electrónico. Puedes rellenar previamente los campos del correo electrónico con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar.
+title: Enviar correo electrónico
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
-keywords: "contactos, correo electrónico, enviar"
+keywords: contactos, correo electrónico, enviar
 ms.author: normesta
-ms.date: 02/08/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: bfeec341b0b4e63b4fe37118c1f7daac67929018
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 39b8ce349af89dbbfe3f4f5fce869b83c38abb0e
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "665391"
 ---
 # <a name="send-email"></a>Enviar correo electrónico
-
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrónico para que el usuario pueda enviar un mensaje de correo electrónico. Puedes rellenar previamente los campos del correo electrónico con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar.
 
@@ -34,34 +33,25 @@ Crea un nuevo objeto [**EmailMessage**](https://msdn.microsoft.com/library/windo
 
 ``` cs
 private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient,
-    string messageBody,
-    StorageFile attachmentFile)
+    string subject, string messageBody)
 {
     var emailMessage = new Windows.ApplicationModel.Email.EmailMessage();
     emailMessage.Body = messageBody;
-
-    if (attachmentFile != null)
-    {
-        var stream = Windows.Storage.Streams.RandomAccessStreamReference.CreateFromFile(attachmentFile);
-
-        var attachment = new Windows.ApplicationModel.Email.EmailAttachment(
-            attachmentFile.Name,
-            stream);
-
-        emailMessage.Attachments.Add(attachment);
-    }
 
     var email = recipient.Emails.FirstOrDefault<Windows.ApplicationModel.Contacts.ContactEmail>();
     if (email != null)
     {
         var emailRecipient = new Windows.ApplicationModel.Email.EmailRecipient(email.Address);
         emailMessage.To.Add(emailRecipient);
+        emailMessage.Subject = subject;
     }
 
     await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(emailMessage);
-
 }
 ```
+
+>[!NOTE]
+> Los datos adjuntos que se agregue a un correo electrónico mediante el uso de la clase [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) aparecen sólo en la aplicación de correo. Si los usuarios tienen cualquier otro programa de correo configurado como su programa de correo predeterminado, aparecerá la ventana de redacción sin los datos adjuntos. Este es un problema conocido.
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 

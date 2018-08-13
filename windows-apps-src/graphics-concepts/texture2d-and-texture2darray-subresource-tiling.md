@@ -1,8 +1,9 @@
 ---
-title: "Organización en mosaico de los subrecursos Texture2D y Texture2DArray"
-description: "Estas tablas muestran cómo los subrecursos Texture2D y Texture2DArray se organizan en mosaico."
+title: Organización en mosaico de los subrecursos Texture2D y Texture2DArray
+description: Estas tablas muestran cómo los subrecursos Texture2D y Texture2DArray se organizan en mosaico.
 ms.assetid: 2DC14DFC-5299-44D9-895F-5A223D3FD530
-keywords: "Organización en mosaico de los subrecursos Texture2D y Texture2DArray"
+keywords:
+- Organización en mosaico de los subrecursos Texture2D y Texture2DArray
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 292adb2f06022fbb8fc063c49442cd69ccf64534
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044144"
 ---
 # <a name="texture2d-and-texture2darray-subresource-tiling"></a>Organización en mosaico de los subrecursos Texture2D y Texture2DArray
 

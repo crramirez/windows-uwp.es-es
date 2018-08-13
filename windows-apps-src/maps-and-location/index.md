@@ -1,19 +1,20 @@
 ---
 author: normesta
-title: "Introducción a ubicación y mapas"
-description: "En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos."
+title: Introducción a ubicación y mapas
+description: En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, mapa, ubicación, servicios de mapa, map, location, map services"
+keywords: Windows 10, UWP, mapa, ubicación, servicios de mapa, map, location, map services
 ms.openlocfilehash: 9f2c15c8d4bab5a764b8973c4eecb220ed6d8f38
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665341"
 ---
 # <a name="maps-and-location-overview"></a>Introducción a ubicación y mapas
 

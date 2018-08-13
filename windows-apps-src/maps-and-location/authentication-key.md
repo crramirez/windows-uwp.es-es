@@ -1,24 +1,25 @@
 ---
 author: normesta
-title: "Solicitar una clave de autenticación de mapas"
-description: "La aplicación universal de Windows debe autenticarse para poder usar MapControl y los servicios de mapa en el espacio de nombres Windows.Services.Maps."
+title: Solicitar una clave de autenticación de mapas
+description: La aplicación universal de Windows debe autenticarse para poder usar MapControl y los servicios de mapa en el espacio de nombres Windows.Services.Maps.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, clave de autenticación de mapa, control de mapa"
-ms.openlocfilehash: 7b964c19933db460b8f6b0cc7791165ad86adb6c
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+keywords: Windows 10, UWP, clave de autenticación de mapa, control de mapa
+ms.localizationpriority: medium
+ms.openlocfilehash: 74a72ac3a309ab7ee1590d40c8e8f415558ef9b1
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "665601"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar una clave de autenticación de mapas
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 La [aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) debe autenticarse para poder usar [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este tema se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación.
@@ -34,7 +35,7 @@ Usa el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal
 
 Para crear una nueva clave
 
-1.  En el explorador, ve al Centro para desarrolladores de Mapas de Bing ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
+1.  En el explorador, navegue hasta el Centro para desarrolladores de mapas de Bing ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
 
 2.  Si se te pide que inicies sesión, escribe tu cuenta de Microsoft y haz clic en **Iniciar sesión**.
 

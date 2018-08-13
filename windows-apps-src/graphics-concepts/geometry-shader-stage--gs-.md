@@ -1,8 +1,9 @@
 ---
-title: "Fase del sombreador de geometría (GS)"
-description: "La fase del sombreador de geometría (GS) procesa primitivos completos: triángulos, líneas y puntos, junto con sus vértices adyacentes."
+title: Fase del sombreador de geometría (GS)
+description: 'La fase del sombreador de geometría (GS) procesa primitivos completos: triángulos, líneas y puntos, junto con sus vértices adyacentes.'
 ms.assetid: 8A1350DD-B006-488F-9DAF-14CD2483BA4E
-keywords: "Fase del sombreador de geometría (GS)"
+keywords:
+- Fase del sombreador de geometría (GS)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c04f07da60e6814703a8aff27eb038b43a2b5ad4
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044704"
 ---
 # <a name="geometry-shader-gs-stage"></a>Fase del sombreador de geometría (GS)
 

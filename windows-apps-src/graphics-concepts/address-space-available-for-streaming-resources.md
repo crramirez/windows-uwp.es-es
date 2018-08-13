@@ -1,8 +1,9 @@
 ---
 title: Espacio de direcciones disponible para recursos de streaming
-description: "En esta sección se especifica el espacio de direcciones virtuales que está disponible para los recursos de streaming."
+description: En esta sección se especifica el espacio de direcciones virtuales que está disponible para los recursos de streaming.
 ms.assetid: 145EB4A3-3910-4126-BC7E-A4CF53E2A098
-keywords: Espacio de direcciones disponible para recursos de streaming
+keywords:
+- Espacio de direcciones disponible para recursos de streaming
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d3ae9729270967269d6543ed80bb136a04dc9edc
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1042884"
 ---
 # <a name="address-space-available-for-streaming-resources"></a>Espacio de direcciones disponible para recursos de streaming
 

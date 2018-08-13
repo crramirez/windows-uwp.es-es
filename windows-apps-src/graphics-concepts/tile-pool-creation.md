@@ -1,8 +1,9 @@
 ---
-title: "Creación de grupos de mosaicos"
-description: "Las aplicaciones pueden crear uno o varios grupos de mosaicos por cada dispositivo Direct3D. El tamaño total de cada grupo de mosaicos está restringido al límite del tamaño de recursos de Direct3D 11, que es aproximadamente 1/4 de la RAM de la unidad de procesamiento gráfico (GPU)."
+title: Creación de grupos de mosaicos
+description: Las aplicaciones pueden crear uno o varios grupos de mosaicos por cada dispositivo Direct3D. El tamaño total de cada grupo de mosaicos está restringido al límite del tamaño de recursos de Direct3D 11, que es aproximadamente 1/4 de la RAM de la unidad de procesamiento gráfico (GPU).
 ms.assetid: BD51EDD3-4AD3-4733-B014-DD77B9D743BB
-keywords: "Creación de grupos de mosaicos"
+keywords:
+- Creación de grupos de mosaicos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4336d38bca354da3c30cfe2d7e4b092cff15af83
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043594"
 ---
 # <a name="tile-pool-creation"></a>Creación de grupos de mosaicos
 

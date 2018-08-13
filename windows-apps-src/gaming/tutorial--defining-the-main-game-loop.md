@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Definir el objeto principal del juego
-description: "Vamos a ver los detalles del objeto principal de la muestra de juego y cómo las reglas que implementa se traducen en interacciones con el mundo del juego."
+description: Vamos a ver los detalles del objeto principal de la muestra de juego y cómo las reglas que implementa se traducen en interacciones con el mundo del juego.
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp, juegos, objeto principal
 ms.openlocfilehash: f81b3eaa9b896295386232f99b789dc3857b3bad
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240562"
 ---
 # <a name="define-the-main-game-object"></a>Definir el objeto principal del juego
 

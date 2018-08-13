@@ -1,8 +1,9 @@
 ---
-title: "Vista de destino de representación (RTV)"
-description: "Los destinos de representación permiten representar una escena en un búfer intermedio temporal, en lugar de hacerlo en el búfer de reserva que se representará en la pantalla."
+title: Vista de destino de representación (RTV)
+description: Los destinos de representación permiten representar una escena en un búfer intermedio temporal, en lugar de hacerlo en el búfer de reserva que se representará en la pantalla.
 ms.assetid: 9BA8FC35-9A51-438D-BFEA-02E254D6C93E
-keywords: "Vista de destino de representación (RTV)"
+keywords:
+- Vista de destino de representación (RTV)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ee9f7eec5a76d2a4cbea1106570d82c273d2758
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044324"
 ---
 # <a name="render-target-view-rtv"></a>Vista de destino de representación (RTV)
 

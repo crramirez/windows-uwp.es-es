@@ -1,7 +1,7 @@
 ---
 author: PatrickFarley
-description: "Herramientas y técnicas para depurar y probar cómo funciona tu aplicación con Administración del ciclo de vida de los procesos."
-title: "Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)"
+description: Herramientas y técnicas para depurar y probar cómo funciona tu aplicación con Administración del ciclo de vida de los procesos.
+title: Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,10 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
 ms.openlocfilehash: 1936d7fa789e99a475cbf82c3c0096060f23c4b4
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "975637"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)
 

@@ -1,6 +1,6 @@
 ---
 title: Modos de direccionamiento de las texturas
-description: "La aplicación de Direct3D puede asignar coordenadas de textura a todos los vértices de cualquier primitivo."
+description: La aplicación de Direct3D puede asignar coordenadas de textura a todos los vértices de cualquier primitivo.
 ms.assetid: 925E8F2E-43EC-404E-8870-03E39155F697
 keywords:
 - Modos de direccionamiento de las texturas
@@ -16,10 +16,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 75aa946f3a0f1259adf1207e9568ca6da783883e
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044754"
 ---
 # <a name="texture-addressing-modes"></a>Modos de direccionamiento de las texturas
 

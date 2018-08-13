@@ -1,8 +1,9 @@
 ---
 title: Fase del sombreador de dominios (DS)
-description: "La fase del sombreador de dominios (DS) calcula la posición del vértice de un punto subdividido en la revisión de salida; calcula la posición del vértice correspondiente a cada muestra de dominio."
+description: La fase del sombreador de dominios (DS) calcula la posición del vértice de un punto subdividido en la revisión de salida; calcula la posición del vértice correspondiente a cada muestra de dominio.
 ms.assetid: 673CC04A-A74F-495F-AFB7-49157538749C
-keywords: Fase del sombreador de dominios (DS)
+keywords:
+- Fase del sombreador de dominios (DS)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a1d229f38511196e96c2282a1665071e8e74af72
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044034"
 ---
 # <a name="domain-shader-ds-stage"></a>Fase del sombreador de dominios (DS)
 

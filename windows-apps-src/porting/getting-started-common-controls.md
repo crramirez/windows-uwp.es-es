@@ -1,21 +1,24 @@
 ---
-author: mcleblanc
+author: stevewhims
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: Tareas iniciales con controles habituales
-title: "Introducción a los controles habituales"
-ms.author: markl
+title: Introducción a los controles habituales
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4df9785b0d8ccea0561a780fa2b807201332cda8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 5b02bd99fdb93fdaaba5dce8f0bb6d25bb190188
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "239266"
 ---
 # <a name="getting-started-common-controls"></a>Introducción: controles habituales
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="common-controls-list"></a>Lista de controles habituales
 
@@ -23,7 +26,7 @@ En la sección anterior, trabajaste con tan solo dos controles: botones y bloque
 
 Los controles de UWP son inteligentes en el sentido de que pueden detectar el tipo de dispositivo en el que se ejecutan y cambiar su apariencia y funcionalidad según corresponda. Por ejemplo, si el proyecto usa el control [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681), funciona de manera suficientemente inteligente para optimizarse solo y adoptar un aspecto y comportamiento en un equipo de sobremesa y otros diferentes en un teléfono. No necesitas hacer nada: los controles se ajustan solos en tiempo de ejecución.
 
-| Control de iOS (clase/protocolo) | Control de una aplicación de la Tienda Windows equivalente |
+| Control de iOS (clase/protocolo) | Control UWP equivalente |
 |------------------------------|--------------------------------------|
 | Indicador de actividad (**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> Consulta también [Inicio rápido: agregar controles de progreso](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) |
 | Vista de banner de publicidad (**ADBannerView**) y delegado de vista de banner de publicidad (**ADBannerViewDelegate**) | [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) <br/> Consulta también [Mostrar anuncios en tu aplicación](../monetize/display-ads-in-your-app.md) |
@@ -31,7 +34,7 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 | Selector de fecha (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | Vista de imagen (UIImageView) | [Imagen](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Consulta también [Image e ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
 | Etiqueta (UILabel) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/> Consulta también [Inicio rápido: mostrar texto](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) |
-| Vista de mapa (MKMapView) y delegado de vista de mapa (MKMapViewDelegate) | Consulta [Mapas de Bing para aplicaciones de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
+| Vista de mapa (MKMapView) y delegado de vista de mapa (MKMapViewDelegate) | Vea [mapas de Bing para aplicaciones UWP](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
 | Controlador de navegación (UINavigationController) y delegado de controlador de navegación (UINavigationControllerDelegate) | [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) <br/> Consulta también [Navegación](https://msdn.microsoft.com/library/windows/apps/mt187344). |
 | Control de páginas (UIPageControl) | [Page](https://msdn.microsoft.com/library/windows/apps/br227503) <br/> Consulta también [Navegación](https://msdn.microsoft.com/library/windows/apps/mt187344). |
 | Vista de selector (UIPickerView) y delegado de vista de selector (UIPickerViewDelegate) | [ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348) <br/> Consulta también [Agregar cuadros combinados y cuadros de lista](https://msdn.microsoft.com/library/windows/apps/xaml/hh780616) |
@@ -52,7 +55,7 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 
 Para ver aún más controles, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406).
 
-**Nota:** Para ver la lista de controles para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/hh465453).
+**Nota**  Para obtener una lista de controles para aplicaciones UWP con JavaScript y el código HTML, vea la [lista de controles](https://msdn.microsoft.com/library/windows/apps/hh465453).
 
 ### <a name="next-step"></a>Paso siguiente
 

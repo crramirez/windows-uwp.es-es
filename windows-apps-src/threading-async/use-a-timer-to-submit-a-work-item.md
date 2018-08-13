@@ -2,7 +2,7 @@
 author: normesta
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
 title: Enviar un elemento de trabajo con un temporizador
-description: "Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador."
+description: Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador.
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: windows 10, uwp, temporizador, subprocesos
 ms.openlocfilehash: 214a3ad9d84ffb8bc26a4aa02d79d0b1c06f2bfe
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665351"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Enviar un elemento de trabajo con un temporizador
 

@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Agregar una interfaz de usuario
-description: "Has visto cómo el juego de muestra implementa el objeto principal del juego, así como el marco de representación básico."
+description: Has visto cómo el juego de muestra implementa el objeto principal del juego, así como el marco de representación básico.
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp, juegos, interfaz de usuario, directx
 ms.openlocfilehash: cb8cb8eae3328a9010553b7f3e041b8f2dbd8c02
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240343"
 ---
 # <a name="add-a-user-interface"></a>Agregar una interfaz de usuario
 

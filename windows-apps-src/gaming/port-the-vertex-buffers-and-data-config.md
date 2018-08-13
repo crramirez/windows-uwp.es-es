@@ -1,17 +1,19 @@
 ---
 author: mtoepke
-title: "Migrar datos y búferes de vértices"
-description: "En este paso, definirás los búferes de vértices que contendrán las mallas, y los búferes de índices que permitirán a los sombreadores recorrer los vértices en un orden especificado."
+title: Migrar datos y búferes de vértices
+description: En este paso, definirás los búferes de vértices que contendrán las mallas, y los búferes de índices que permitirán a los sombreadores recorrer los vértices en un orden especificado.
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, games, juegos, port, portar, vertex buffers, búferes de vértices, data, datos, direct3d"
+keywords: Windows 10, UWP, games, juegos, port, portar, vertex buffers, búferes de vértices, data, datos, direct3d
 ms.openlocfilehash: 85e8a47da525c0f5de7e957a0048e245e374dedc
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238707"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a>Portar datos y búferes de vértices
 

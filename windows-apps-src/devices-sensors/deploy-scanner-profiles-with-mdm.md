@@ -1,13 +1,21 @@
 ---
-title: "Implementar perfiles de escáner de códigos de barras con MDM"
+title: Implementar perfiles de escáner de códigos de barras con MDM
 author: PatrickFarley
-description: "Es posible implementar perfiles de escáner de códigos de barras con un servidor MDM."
+description: Es posible implementar perfiles de escáner de códigos de barras con un servidor MDM.
 ms.assetid: 99ED3BD8-022C-40C2-9C65-F599186548FE
-ms.openlocfilehash: a63a09e64b6e2b935963a3f49ed7cbc6b82bdcef
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
-ms.translationtype: HT
+ms.author: pafarley
+ms.date: 09/26/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, Windows 10, uwp, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: ef7f1029573d2ff98e744ceb44b108a67a7c0d0b
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1018088"
 ---
 # <a name="deploy-barcode-scanner-profiles-with-mdm"></a>Implementar perfiles de escáner de códigos de barras con MDM
 
@@ -18,6 +26,5 @@ Es posible implementar perfiles de escáner de códigos de barras con un servido
 Microsoft no define los detalles de un perfil de escáner o cómo implementarlos.
 
 ## <a name="related-topics"></a>Temas relacionados
-[Escáner de códigos de barras](barcode-scanner.md)
-
-[EnterpriseExtFileSystem CSP](https://msdn.microsoft.com/library/windows/hardware/mt157025)
+- [EnterpriseExtFileSystem CSP](https://msdn.microsoft.com/library/windows/hardware/mt157025)
+- [Compatibilidad con dispositivos de escáner de código de barras](https://docs.microsoft.com/en-us/windows/uwp/devices-sensors/pos-device-support#barcode-scanner)

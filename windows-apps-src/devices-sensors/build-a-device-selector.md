@@ -1,23 +1,24 @@
 ---
-author: mukin
+author: muhsinking
 ms.assetid: D06AA3F5-CED6-446E-94E8-713D98B13CAA
 title: Crear un selector de dispositivos
-description: "La creación de un selector de dispositivos permite limitar los dispositivos en los que se realizan búsquedas al enumerar los dispositivos."
+description: La creación de un selector de dispositivos permite limitar los dispositivos en los que se realizan búsquedas al enumerar los dispositivos.
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: e8f22c6e3ab813bd97a060931c056404181611c1
-ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: c80f604e9b8dc31eec1fe684f073bceb2337d91f
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "959170"
 ---
 # <a name="build-a-device-selector"></a>Crear un selector de dispositivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**

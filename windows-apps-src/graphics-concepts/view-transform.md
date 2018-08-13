@@ -1,8 +1,9 @@
 ---
-title: "Transformación de vista"
-description: "Una Transformación de vista localiza el visor en el espacio de mundo, transformando los vértices en espacio de cámara."
+title: Transformación de vista
+description: Una Transformación de vista localiza el visor en el espacio de mundo, transformando los vértices en espacio de cámara.
 ms.assetid: DA4C2051-4C28-4ABF-8C06-241C8CB87F2F
-keywords: "Transformación de vista"
+keywords:
+- Transformación de vista
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b7e0fdf265bdbc28d4d81e3a2ead8ca0ee7ca35d
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044004"
 ---
 # <a name="view-transform"></a>Transformación de vista
 

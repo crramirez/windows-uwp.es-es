@@ -1,8 +1,9 @@
 ---
-title: "Vista de búfer de constantes (CBV)"
-description: "Los búferes de constantes contienen datos de constantes de sombreador. Su valor radica en que los datos persisten, y cualquier sombreador de la GPU puede acceder a ellos, hasta que sea necesario cambiar los datos."
+title: Vista de búfer de constantes (CBV)
+description: Los búferes de constantes contienen datos de constantes de sombreador. Su valor radica en que los datos persisten, y cualquier sombreador de la GPU puede acceder a ellos, hasta que sea necesario cambiar los datos.
 ms.assetid: 99AEC6B0-A43B-4B61-8C3A-ECC8DE1B69A7
-keywords: "Vista de búfer de constantes (CBV)"
+keywords:
+- Vista de búfer de constantes (CBV)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e26a446bdd1e5a692e826d2c0ba303688bbd3d7
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044204"
 ---
 # <a name="constant-buffer-view-cbv"></a>Vista de búfer de constantes (CBV)
 

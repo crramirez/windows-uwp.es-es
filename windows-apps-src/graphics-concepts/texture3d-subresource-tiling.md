@@ -1,8 +1,9 @@
 ---
-title: "Organización en mosaico de los subrecursos Texture3D"
-description: "Esta tabla muestra cómo los subrecursos Texture3D se organizan en mosaico."
+title: Organización en mosaico de los subrecursos Texture3D
+description: Esta tabla muestra cómo los subrecursos Texture3D se organizan en mosaico.
 ms.assetid: 210D03E4-CF12-47E0-BA2F-C8D059B17D3E
-keywords: "Organización en mosaico de los subrecursos Texture3D"
+keywords:
+- Organización en mosaico de los subrecursos Texture3D
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d51d20ddaeca5aa0689104b3dd71e36b1a5d4132
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043994"
 ---
 # <a name="texture3d-subresource-tiling"></a>Organización en mosaico de los subrecursos Texture3D
 

@@ -1,8 +1,9 @@
 ---
-title: "Combinación de texturas multipase"
-description: "Las aplicaciones de Direct3D pueden lograr numerosos efectos especiales al aplicar varias texturas a un primitivo a lo largo de varios pasos de representación."
+title: Combinación de texturas multipase
+description: Las aplicaciones de Direct3D pueden lograr numerosos efectos especiales al aplicar varias texturas a un primitivo a lo largo de varios pasos de representación.
 ms.assetid: FB4D6E3F-4EF5-4D20-BF7E-1008E790E30C
-keywords: "Combinación de texturas multipase"
+keywords:
+- Combinación de texturas multipase
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 36af11829728e07c00b3306d5a997764db130c9f
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043094"
 ---
 # <a name="multipass-texture-blending"></a>Combinación de texturas multipase
 
 
-Las aplicaciones de Direct3D pueden lograr numerosos efectos especiales al aplicar varias texturas a un primitivo a lo largo de varios pasos de representación. El término habitual para esto es *combinación de texturas multipase*. Un uso típico de una combinación de texturas multipase es emular los efectos de los modelos complejos de iluminación y sombreado aplicando varios colores desde varias texturas distintas. Este tipo de aplicaciones se conocen como *mapas de luz*. Consulta [Mapas de luz con texturas](light-mapping-with-textures.md).
+Las aplicaciones de Direct3D pueden lograr numerosos efectos especiales mediante la aplicación de varias texturas a un primitivo a lo largo de varios pases de representación. El término habitual para esto es *combinación de texturas multipase*. Un uso habitual de la combinación de texturas multipase es emular los efectos de modelos complejos de iluminación y sombreado con la aplicación de varios colores de distintas texturas diferentes. Este tipo de aplicaciones se conocen como *mapas de luz*. Consulta [Mapas de luz con texturas](light-mapping-with-textures.md).
 
 **Nota** algunos dispositivos pueden aplicar varias texturas a primitivos en un solo paso. Consulta [Combinación de texturas](texture-blending.md).
 

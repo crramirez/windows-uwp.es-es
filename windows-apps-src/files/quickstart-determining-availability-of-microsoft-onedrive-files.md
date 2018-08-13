@@ -2,20 +2,22 @@
 author: laurenhughes
 ms.assetid: 3604524F-112A-474F-B0CA-0726DC8DB885
 title: Determinar la disponibilidad de los archivos de Microsoft OneDrive
-description: "Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad StorageFile.IsAvailable."
+description: Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad StorageFile.IsAvailable.
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 5c4a4d27e53229524414dd566386251f74577701
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3c5de157d320b401fdc0e542eb0f1bdc241e2f21
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "459764"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Determinar la disponibilidad de los archivos de Microsoft OneDrive
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -60,7 +62,7 @@ Los pasos siguientes ilustran cómo determinar si un archivo está disponible ac
 
 El siguiente método genérico muestra cómo enumerar cualquier carpeta y devolver la colección de objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) para dicha carpeta. El método que llama itera en la colección devuelta haciendo referencia a la propiedad [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) en cada archivo.
 
-```CSharp
+```cs
 /// <summary>
 /// Generic function that retrieves all files from the specified folder.
 /// </summary>
@@ -71,8 +73,6 @@ async Task<System.Collections.Generic.IReadOnlyList<StorageFile>> GetLibraryFile
     var query = folder.CreateFileQuery();
     return await query.GetFilesAsync();
 }
-
-...
 
 private async void CheckAvailabilityOfFilesInPicturesLibrary()
 {
@@ -90,7 +90,3 @@ private async void CheckAvailabilityOfFilesInPicturesLibrary()
     }
 }
 ```
-
- 
-
- 

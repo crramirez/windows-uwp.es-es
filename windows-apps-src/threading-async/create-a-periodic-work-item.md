@@ -1,19 +1,20 @@
 ---
 author: normesta
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
-title: "Crear un elemento de trabajo periódico"
-description: "Obtén información sobre cómo crear un elemento de trabajo que se repita periódicamente."
+title: Crear un elemento de trabajo periódico
+description: Obtén información sobre cómo crear un elemento de trabajo que se repita periódicamente.
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, elemento de trabajo periódico, subprocesos, temporizadores"
+keywords: Windows 10, UWP, elemento de trabajo periódico, subprocesos, temporizadores
 ms.openlocfilehash: 59dd19692143b155c33f8fdd7f3197f724ebb0ac
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665281"
 ---
 # <a name="create-a-periodic-work-item"></a>Crear un elemento de trabajo periódico
 

@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "Obtén información sobre las reglas de procesamiento de espacios en blanco que usa XAML."
+description: Obtén información sobre las reglas de procesamiento de espacios en blanco que usa XAML.
 title: XAML y espacio en blanco
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
 ms.author: jimwalk
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 88d4b155acb38a3ab11cc180d112fb3434af87a0
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239782"
 ---
 # <a name="xaml-and-whitespace"></a>XAML y espacio en blanco
 

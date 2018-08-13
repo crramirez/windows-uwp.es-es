@@ -1,18 +1,19 @@
 ---
 author: laurenhughes
 title: Arquitecturas de paquetes de aplicaciones
-description: "Obtén más información sobre qué arquitecturas de procesador debes usar al compilar el paquete de aplicación para UWP."
+description: Obtén más información sobre qué arquitecturas de procesador debes usar al compilar el paquete de aplicación para UWP.
 ms.author: lahugh
 ms.date: 7/13/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, empaquetado, arquitectura, configuración de paquete"
+keywords: windows 10, uwp, empaquetado, arquitectura, configuración de paquete
 ms.openlocfilehash: 70188734e7fc26f66b68d0c31921071c47e8b7a8
 ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/09/2017
+ms.locfileid: "884056"
 ---
 # <a name="app-package-architectures"></a>Arquitecturas de paquetes de aplicaciones
 

@@ -1,8 +1,9 @@
 ---
 title: Ajuste de texturas
-description: "El ajuste de texturas cambia la forma básica en la que Direct3D rasteriza los polígonos texturizados mediante las coordenadas de textura especificadas para cada vértice."
+description: El ajuste de texturas cambia la forma básica en la que Direct3D rasteriza los polígonos texturizados mediante las coordenadas de textura especificadas para cada vértice.
 ms.assetid: C28FB369-9A91-4D57-A96D-4A5D36484B35
-keywords: Ajuste de texturas
+keywords:
+- Ajuste de texturas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bd24fc0ad14657e503feeab2a89ec7e6d4eb7ee0
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044444"
 ---
 # <a name="texture-wrapping"></a>Ajuste de texturas
 

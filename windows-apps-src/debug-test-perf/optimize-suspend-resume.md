@@ -1,8 +1,8 @@
 ---
 author: jwmsft
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
-title: "Optimizar la suspensión y reanudación"
-description: "Crea aplicaciones para la Plataforma universal de Windows (UWP) que optimicen el uso del sistema del ciclo de vida de los procesos, para reanudarlo de forma eficaz tras su suspensión o finalización."
+title: Optimizar la suspensión y reanudación
+description: Crea aplicaciones para la Plataforma universal de Windows (UWP) que optimicen el uso del sistema del ciclo de vida de los procesos, para reanudarlo de forma eficaz tras su suspensión o finalización.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: f9e045c381fc6c51a769be31403114ad15cf06bd
 ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/14/2017
+ms.locfileid: "894691"
 ---
 # <a name="optimize-suspendresume"></a>Optimizar la suspensión y reanudación
 

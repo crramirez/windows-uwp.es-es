@@ -1,8 +1,9 @@
 ---
 title: Sistemas de coordenadas
-description: "Por lo general, las aplicaciones de gráficos 3D usan uno de dos tipos de sistemas de coordenadas cartesianas: diestro o zurdo. En ambos sistemas de coordenadas, el eje x positivo apunta a la derecha y el eje y positivo apunta arriba."
+description: 'Por lo general, las aplicaciones de gráficos 3D usan uno de dos tipos de sistemas de coordenadas cartesianas: diestro o zurdo. En ambos sistemas de coordenadas, el eje x positivo apunta a la derecha y el eje y positivo apunta arriba.'
 ms.assetid: 138D9B81-146F-4E9F-B742-1EDED8FBF2AE
-keywords: Sistemas de coordenadas
+keywords:
+- Sistemas de coordenadas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 738f9f5852642bdc1431358979f633cd91d1399d
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1045024"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 

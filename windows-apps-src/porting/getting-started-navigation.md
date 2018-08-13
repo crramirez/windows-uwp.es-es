@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
-title: "Introducción a la navegación"
-description: "Introducción a la navegación"
+title: Introducción a la navegación
+description: Introducción a la navegación
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
 ms.author: markl
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 5cf5fa2ca6abe8b4bc53867587490bae3ab6d551
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239238"
 ---
 # <a name="getting-started-navigation"></a>Introducción: navegación
 

@@ -1,8 +1,9 @@
 ---
 title: Vistas de texturas
-description: "En Direct3D, se accede a los recursos de textura con una vista, que es un mecanismo para la interpretación de hardware de un recurso en la memoria."
+description: En Direct3D, se accede a los recursos de textura con una vista, que es un mecanismo para la interpretación de hardware de un recurso en la memoria.
 ms.assetid: 18DABFCE-8A36-4C4E-B08E-10428B05D701
-keywords: Vistas de texturas
+keywords:
+- Vistas de texturas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 78263272c0a150bf7ccf06aa29cc66f13770ad19
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043634"
 ---
 # <a name="texture-views"></a>Vistas de texturas
 
 
-En Direct3D, se accede a los recursos de textura con una vista, que es un mecanismo para la interpretación de hardware de un recurso en la memoria. Una vista permite a una fase de canalización concreta acceder solo a los [subrecursos](resource-types.md) que necesita, en la representación deseada por la aplicación.
+En Direct3D, se accede a los recursos de texturas con una vista, que es un mecanismo para la interpretación de hardware de un recurso en memoria. Una vista permite a una fase de canalización concreta acceder solo a los [subrecursos](resource-types.md) que necesita, en la representación deseada por la aplicación.
 
 Una vista admite la noción de un recurso sin tipo. Un recurso sin tipo es un recurso creado con un tamaño específico pero sin un tipo de datos específico. Los datos se interpretan de forma dinámica cuando se enlazan a la canalización.
 

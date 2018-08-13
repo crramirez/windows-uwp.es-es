@@ -1,8 +1,9 @@
 ---
-title: "Muestreo de punto más cercano"
+title: Muestreo de punto más cercano
 description: Las aplicaciones no tienen que usar el filtrado de textura.
 ms.assetid: D7F88320-2C61-47E9-9B92-EC31D48DB079
-keywords: "Muestreo de punto más cercano"
+keywords:
+- Muestreo de punto más cercano
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 048ff2755343e5e6230900ea9acb819e85ba654b
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044414"
 ---
 # <a name="span-iddirect3dconceptsnearest-pointsamplingspannearest-point-sampling"></a><span id="direct3dconcepts.nearest-point_sampling"></span>Muestreo de punto más cercano
 
 
-Las aplicaciones no tienen que usar el filtrado de textura. Direct3D puede establecerse para que calcule la dirección de elementos de textura, que a menudo no se evalúa como enteros, y para que copie el color del elemento de textura con la dirección de entero más próxima. Este proceso se denomina *muestreo de punto más cercano*. El muestreo de punto más cercano puede ser una forma rápida y eficiente de procesar texturas si el tamaño de la textura es similar al tamaño de la imagen del primitivo en la pantalla. De lo contrario, se debe ampliar o minimizar la textura. El resultado de no hacer coincidir los tamaños de textura con el tamaño de la imagen del primitivo puede ser una imagen cortada, que no coincide o borrosa.
+Las aplicaciones no tienen que usar el filtrado de textura. Direct3D puede establecerse para que calcule la dirección de los elementos de textura, que a menudo no evalúa como enteros, y copia el color del elemento de textura con la dirección del número entero más cercano. Este proceso se denomina *muestreo de punto más cercano*. El muestreo de punto más cercano puede ser una forma rápida y eficiente de procesar texturas si el tamaño de la textura es similar al tamaño de la imagen del primitivo en la pantalla. De lo contrario, se debe ampliar o minimizar la textura. El resultado de no hacer coincidir los tamaños de textura con el tamaño de la imagen del primitivo puede ser una imagen cortada, que no coincide o borrosa.
 
 Usa el muestreo de punto más cercano con cuidado: a veces, puede causar artefactos gráficos cuando se muestrea una textura que está en el límite entre dos elementos de textura. Este límite es la posición a lo largo de la textura (u o v) en la que el elemento de textura de muestra cambia de un elemento de textura al siguiente. Cuando se usa el muestreo de punto, el sistema elige un elemento de textura de muestra u otro y el resultado puede cambiar repentinamente de un elemento de textura al siguiente si se cruzan los límites. Este efecto puede aparecer como artefactos gráficos no deseados en la textura mostrada. Cuando se usa el filtrado lineal, el elemento de textura resultante se calcula a partir de ambos elementos de textura admitidos y los combina sin problemas porque el índice de texturas se mueve a través del límite.
 

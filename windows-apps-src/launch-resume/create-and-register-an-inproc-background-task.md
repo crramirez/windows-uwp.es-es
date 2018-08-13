@@ -1,17 +1,21 @@
 ---
 author: TylerMSFT
 title: Crear y registrar una tarea en segundo plano dentro del proceso
-description: "Crea y registra una tarea dentro del proceso que se ejecuta en el mismo proceso que la aplicación en primer plano."
+description: Crea y registra una tarea dentro del proceso que se ejecuta en el mismo proceso que la aplicación en primer plano.
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
-ms.openlocfilehash: f89537416b409642adab894ba9e3a413e4b0b828
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 85efbcca10786af8b4c9f16c58405fef4ad7a9a0
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "566077"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>Crear y registrar una tarea en segundo plano dentro de proceso
 
@@ -23,7 +27,7 @@ translationtype: HT
 
 Este tema muestra cómo crear y registrar una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación.
 
-Las tareas en segundo plano dentro del proceso son más fáciles de implementar que las tareas en segundo plano fuera del proceso. No obstante, son menos resistentes. Si se bloquea el código que se ejecuta en una tarea en segundo plano dentro del proceso, la aplicación también se bloqueará. Ten en cuenta también que [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) y **IoTStartupTask** no pueden usarse con el modelo dentro del proceso. Activar una tarea en segundo plano de VoIP dentro de la aplicación tampoco es posible. Estas tareas y los desencadenadores aún son compatibles con el modelo de tarea en segundo plano fuera del proceso.
+Las tareas en segundo plano dentro del proceso son más fáciles de implementar que las tareas en segundo plano fuera del proceso. No obstante, son menos resistentes. Si se bloquea el código que se ejecuta en una tarea en segundo plano dentro del proceso, la aplicación también se bloqueará. Ten en cuenta también que [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) y **IoTStartupTask** no pueden usarse con el modelo dentro del proceso. Activar una tarea en segundo plano de VoIP dentro de la aplicación tampoco es posible. Estas tareas y los desencadenadores aún son compatibles con el modelo de tarea en segundo plano fuera del proceso.
 
 Ten en cuenta que la actividad en segundo plano puede finalizarse incluso cuando se ejecuta dentro del proceso en primer plano de la aplicación si se ejecuta más allá de los límites de tiempo de ejecución. Para algunos fines sigue siendo útil la resistencia de separar el trabajo en una tarea en segundo plano que se ejecuta en un proceso independiente. Mantener el trabajo en segundo plano como una tarea independiente de la aplicación en primer plano puede ser la mejor opción para el trabajo que no requiere la comunicación con la aplicación en primer plano.
 
@@ -68,7 +72,27 @@ El siguiente código de muestra asigna una condición que requiere que el usuari
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>Colocación del código de la actividad en segundo plano en OnBackgroundActivated()
 
-Introduce el código de la actividad en segundo plano en [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx)** para responder al desencadenador en segundo plano cuando se activa. **OnBackgroundActivated ** puede tratarse solo como [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). El método tiene un parámetro [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx), que contiene todo lo que ofrece el método Run.
+Coloque el código de actividad de fondo en [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) para responder a su desencadenador de fondo cuando se desencadena. Puede tratar **OnBackgroundActivated** como [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). El método tiene un parámetro [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) , que todo lo que ofrece el método **Run** contiene. Por ejemplo, en App.xaml.cs:
+
+``` cs
+using Windows.ApplicationModel.Background;
+
+...
+
+sealed partial class App : Application
+{
+  ...
+
+  protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
+  {
+      base.OnBackgroundActivated(args);
+      IBackgroundTaskInstance taskInstance = args.TaskInstance;
+      DoYourBackgroundWork(taskInstance);  
+  }
+}
+```
+
+Para obtener un ejemplo de **OnBackgroundActivated** más completo, vea [convertir un servicio de aplicación para que se ejecute en el mismo proceso que su aplicación host](convert-app-service-in-process.md).
 
 ## <a name="handle-background-task-progress-and-completion"></a>Administración del progreso y la finalización de tareas en segundo plano
 
@@ -107,7 +131,7 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
 **Referencia de API de tareas en segundo plano**
 

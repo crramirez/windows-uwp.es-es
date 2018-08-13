@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
-description: "El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este."
-title: "Migración de modelo de E/S, dispositivos y aplicaciones de Windows Phone Silverlight a UWP"
+description: El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este.
+title: Migración de modelo de E/S, dispositivos y aplicaciones de Windows Phone Silverlight a UWP
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
 ms.author: markl
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 5df57d0bd5d2104278f653d78b1e478a034a38ac
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239988"
 ---
 #  <a name="porting-windows-phone-silverlight-to-uwp-for-io-device-and-app-model"></a>Migración de modelo de E/S, dispositivos y aplicaciones de Windows Phone Silverlight a UWP
 

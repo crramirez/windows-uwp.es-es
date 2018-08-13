@@ -1,19 +1,20 @@
 ---
 author: PatrickFarley
-title: "Obtener la ubicación del usuario"
-description: "Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario."
+title: Obtener la ubicación del usuario
+description: Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario.
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, mapa, map, ubicación, location, funcionalidad de ubicación, location capability"
+keywords: windows 10, uwp, mapa, map, ubicación, location, funcionalidad de ubicación, location capability
 ms.openlocfilehash: f5af2815783568cb234f1196e065f18b145c7e68
 ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/27/2017
+ms.locfileid: "695749"
 ---
 # <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 

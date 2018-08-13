@@ -1,23 +1,22 @@
 ---
 title: Uso compartido de Mis allegados
-description: "Explica cómo agregar compatibilidad para el uso compartido de Mis allegados"
-author: mukin
+description: Explica cómo agregar compatibilidad para el uso compartido de Mis allegados
+author: muhsinking
 ms.author: mukin
 ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 1f841c0c58e209f1dfb318d31108b6fe8fc66b4f
-ms.sourcegitcommit: 214a1dcb24e0811811bd7a4a07bfe707ecd93b18
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 00cea51c673f64725c6ada4f1cfb403e2949ed12
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "958568"
 ---
 # <a name="my-people-sharing"></a>Uso compartido de Mis allegados
-
-> [!IMPORTANT]
-> **VERSIÓN PREVIA | Requiere la actualización Fall Creators Update**: Debes elegir el [SDK 16225 de Insider](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewSDK) y estar ejecutando la [Compilación 16226 de Insider](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/) o superior para poder usar las API de Mis allegados.
 
 La función Mis allegados permite a los usuarios anclar contactos a su barra de tareas, lo que les permite mantenerse en contacto fácilmente desde cualquier lugar de Windows, sin importar mediante qué aplicación están conectados. Los usuarios pueden ahora compartir contenido con sus contactos anclados, arrastrando archivos desde el Explorador de archivos a su ancla Mis allegados. También pueden compartir con todos los contactos del almacén de contactos de Windows, mediante el acceso a compartir estándar. Sigue leyendo para obtener información sobre cómo habilitar la aplicación como destino de uso compartido de Mis allegados.
 
@@ -108,11 +107,11 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el nombre de familia de paquete, abre **Package.appxmanifest** mediante el editor predeterminado y busca en la pestaña "Empaquetado". Aquí, "Aplicación" es la clase activable correspondiente a la vista de destino de contenido compartido.
+El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el nombre de la familia de paquete, abra **Package.appxmanifest** mediante el editor de forma predeterminada y busque en la ficha "Empaquetado". En este caso, "Aplicación" es la clase activable correspondiente a la vista de destino del recurso compartido.
 
 ## <a name="running-as-a-my-people-share-target"></a>Ejecución como destino de contenido compartido de Mis allegados
 
-Por último, para ejecutar la aplicación, invalida el método [OnShareTargetActivated](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Application#Windows_UI_Xaml_Application_OnShareTargetActivated_Windows_ApplicationModel_Activation_ShareTargetActivatedEventArgs_) en la clase principal de tu aplicación para controlar la activación de destino de contenido compartido. La propiedad [ShareTargetActivatedEventArgs.ShareOperation.Contacts](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation#properties_) contendrá los contactos con los que se está compartiendo o estará vacía si se trata de una operación de compartir estándar (no un uso compartido de Mis allegados).
+Por último, para ejecutar la aplicación, invalida el método [OnShareTargetActivated](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Application#Windows_UI_Xaml_Application_OnShareTargetActivated_Windows_ApplicationModel_Activation_ShareTargetActivatedEventArgs_) en la clase principal de tu aplicación para controlar la activación de destino de contenido compartido. La propiedad [ShareTargetActivatedEventArgs.ShareOperation.Contacts](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation#Properties) contendrá los contactos con los que se está compartiendo o estará vacía si se trata de una operación de compartir estándar (no un uso compartido de Mis allegados).
 
 ```Csharp
 protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)

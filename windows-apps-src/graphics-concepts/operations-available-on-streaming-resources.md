@@ -1,8 +1,9 @@
 ---
 title: Operaciones disponibles en recursos de streaming
-description: "En esta sección, se enumeran las operaciones que puedes realizar en recursos de streaming."
+description: En esta sección, se enumeran las operaciones que puedes realizar en recursos de streaming.
 ms.assetid: 700D8C54-0E20-4B2B-BEA3-20F6F72B8E24
-keywords: Operaciones disponibles en recursos de streaming
+keywords:
+- Operaciones disponibles en recursos de streaming
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ee9f6b3744b038d9f4ae0f5b490cbd763eda08ee
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043134"
 ---
 # <a name="operations-available-on-streaming-resources"></a>Operaciones disponibles en recursos de streaming
 

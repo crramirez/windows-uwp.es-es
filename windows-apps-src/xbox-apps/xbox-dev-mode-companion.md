@@ -1,7 +1,7 @@
 ---
 author: payzer
 title: Complemento del modo de desarrollo de Xbox
-description: "Proporciona información sobre la aplicación Complemento del modo de desarrollo de Xbox."
+description: Proporciona información sobre la aplicación Complemento del modo de desarrollo de Xbox.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: windows 10, uwp
 ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
 ms.openlocfilehash: 38bafd7c63b101e495748c169a1b566115c2a1e6
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239992"
 ---
 # <a name="xbox-dev-mode-companion"></a>Complemento del modo de desarrollo de Xbox
 

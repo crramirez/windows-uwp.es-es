@@ -1,8 +1,9 @@
 ---
-title: "Fase del sombreador de píxeles (PS)"
-description: "La fase del sombreador de píxeles (PS) recibe datos interpolados de un primitivo y genera datos por píxel, como el color."
+title: Fase del sombreador de píxeles (PS)
+description: La fase del sombreador de píxeles (PS) recibe datos interpolados de un primitivo y genera datos por píxel, como el color.
 ms.assetid: 0AEBFDFB-0AD8-4633-AE4E-A44004B57745
-keywords: "Fase del sombreador de píxeles (PS)"
+keywords:
+- Fase del sombreador de píxeles (PS)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b5a318a9fc5667beda26ef77d5795697b2383eb
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044484"
 ---
 # <a name="pixel-shader-ps-stage"></a>Fase del sombreador de píxeles (PS)
 

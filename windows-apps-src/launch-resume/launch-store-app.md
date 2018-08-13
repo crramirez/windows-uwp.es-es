@@ -1,24 +1,33 @@
 ---
 author: TylerMSFT
-title: "Iniciar la aplicación de la Tienda Windows"
-description: "En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación de la Tienda Windows en páginas específicas en la Tienda."
+title: Iniciar la aplicación Microsoft Store
+description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store a páginas específicas en el almacén.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 48ca3f21a114c54146065e6ba971ccb30bd33351
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, Windows 10, uwp, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: 0b97e4da92a7cd4066ca555189f052e3e82006fe
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "975657"
 ---
-# <a name="launch-the-windows-store-app"></a>Iniciar la aplicación de la Tienda Windows
+# <a name="launch-the-microsoft-store-app"></a>Iniciar la aplicación Microsoft Store
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede usar este esquema de URI para iniciar la aplicación de la Tienda Windows en páginas específicas en la tienda.
+En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede utilizar este esquema de URI para iniciar la aplicación de Microsoft Store a páginas específicas en el almacén mediante el método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
+
+En este ejemplo se muestra cómo abrir el almacén de la página de juegos:
+
+```cs
+bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
+```
 
 ## <a name="ms-windows-store-uri-scheme-reference"></a>referencia del esquema de URI ms-windows-store:
 

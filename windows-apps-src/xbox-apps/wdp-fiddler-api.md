@@ -1,7 +1,7 @@
 ---
 author: WilliamsJason
 title: Referencia de API de Fiddler de Device Portal
-description: "Descubre cómo habilitar o deshabilitar el seguimiento de Fiddler mediante programación."
+description: Descubre cómo habilitar o deshabilitar el seguimiento de Fiddler mediante programación.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,12 +9,52 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
-ms.openlocfilehash: 02b1a056cd7e711b1fc4533c353570209153f9e8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 819f039f04d1e0a7fd035b10e3cbe408645e8f4d
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "409947"
 ---
 # <a name="fiddler-settings-api-reference"></a>Referencia de API de configuración de Fiddler   
 Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de desarrollo con esta API de REST.
+
+## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar si está habilitado el seguimiento de Fiddler
+
+**Solicitud**
+
+Puede comprobar para ver si se habilita el seguimiento de Fiddler en el dispositivo con la siguiente solicitud.
+
+Método      | URI de solicitud
+:------     | :-----
+GET | /ext/fiddler
+<br />
+**Parámetros del URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**   
+
+- Ninguno
+
+**Respuesta**   
+
+- Propiedad de bool JSON IsProxyEnabled qué especificadores si el proxy está habilitado o no.
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Correcto
+4XX | Códigos de error
+5XX | Códigos de error
 
 ## <a name="enable-fiddler-tracing"></a>Habilitar el seguimiento de Fiddler
 

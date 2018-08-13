@@ -1,8 +1,9 @@
 ---
 title: Operaciones disponibles en grupos de iconos
-description: "Las operaciones en grupos de iconos incluyen cambiar el tamaño de un grupo de iconos, ofrecer recursos (ceder memoria temporalmente al sistema para todo el grupo de iconos) y recuperar recursos."
+description: Las operaciones en grupos de iconos incluyen cambiar el tamaño de un grupo de iconos, ofrecer recursos (ceder memoria temporalmente al sistema para todo el grupo de iconos) y recuperar recursos.
 ms.assetid: 90347F7F-C991-4287-BD70-494533ECDC8A
-keywords: Operaciones disponibles en grupos de iconos
+keywords:
+- Operaciones disponibles en grupos de iconos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ae2c34a6df243914fdef6b2cbb990d8be94ec33
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043604"
 ---
 # <a name="operations-available-on-tile-pools"></a>Operaciones disponibles en grupos de iconos
 

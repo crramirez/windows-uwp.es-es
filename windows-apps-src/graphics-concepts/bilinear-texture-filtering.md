@@ -1,8 +1,9 @@
 ---
 title: Filtrado bilineal de texturas
-description: "El filtrado bilineal calcula el promedio ponderado de los 4 elementos de textura más cercanos al punto de muestreo."
+description: El filtrado bilineal calcula el promedio ponderado de los 4 elementos de textura más cercanos al punto de muestreo.
 ms.assetid: 0851AD28-8246-4547-A663-47884DDDFC3E
-keywords: Filtrado bilineal de texturas
+keywords:
+- Filtrado bilineal de texturas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8dcbd5b96dfb3e32ec2621df98cffd9e871ed8b3
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043984"
 ---
 # <a name="bilinear-texture-filtering"></a>Filtrado bilineal de texturas
 

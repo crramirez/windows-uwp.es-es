@@ -2,7 +2,8 @@
 title: Modo de ventana frente a modo de pantalla completa
 description: 'Las aplicaciones de Direct3D pueden ejecutarse en cualquiera de los dos modos de pantalla: completa o de ventana.'
 ms.assetid: EE8B9F87-822B-4576-A446-CA603E786862
-keywords: Modo de ventana frente a modo de pantalla completa
+keywords:
+- Modo de ventana frente a modo de pantalla completa
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c08f879ec783c8065fe539dbefd3698c44bb608
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044364"
 ---
 # <a name="span-iddirect3dconceptswindowedvsfull-screenmodespanwindowed-vs-full-screen-mode"></a><span id="direct3dconcepts.windowed_vs__full-screen_mode"></span>Modo de ventana frente a modo de pantalla completa
 

@@ -1,8 +1,8 @@
 ---
 author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
-description: "En este artículo se describe cómo usar las clases SceneAnalysisEffect y FaceDetectionEffect para analizar el contenido de la secuencia de vista previa de captura de multimedia."
-title: "Efectos para analizar fotogramas de cámara"
+description: En este artículo se describe cómo usar las clases SceneAnalysisEffect y FaceDetectionEffect para analizar el contenido de la secuencia de vista previa de captura de multimedia.
+title: Efectos para analizar fotogramas de cámara
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 3fc55919942c1edc82f7c2e5da2608b5f1b1445b
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238735"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>Efectos para analizar fotogramas de cámara
 

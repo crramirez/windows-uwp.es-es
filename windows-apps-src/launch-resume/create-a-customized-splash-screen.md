@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
-title: "Mostrar una pantalla de presentación durante más tiempo"
-description: "Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación que aparece al iniciar la aplicación, pero se puede personalizar."
+title: Mostrar una pantalla de presentación durante más tiempo
+description: Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación que aparece al iniciar la aplicación, pero se puede personalizar.
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 83551438a629e39407c24cfd98d4a761ba3c039b
 ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/26/2017
+ms.locfileid: "693233"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>Mostrar una pantalla de presentación durante más tiempo
 

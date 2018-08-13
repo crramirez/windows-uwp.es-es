@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
-description: "La práctica para definir la interfaz de usuario en forma de marcado XAML declarativo se traduce muy bien tanto para aplicaciones de tipo Universal 8.1 como para aplicaciones para la Plataforma universal de Windows (UWP)."
-title: "Migración de XAML y la interfaz de usuario de Windows Runtime 8.x a UWP"
+description: La práctica para definir la interfaz de usuario en forma de marcado XAML declarativo se traduce muy bien tanto para aplicaciones de tipo Universal 8.1 como para aplicaciones para la Plataforma universal de Windows (UWP).
+title: Migración de XAML y la interfaz de usuario de Windows Runtime 8.x a UWP
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
 ms.author: markl
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 19a6ef29265c22d1bb02464a76ab20e487c67ce4
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240527"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Migración de XAML y la interfaz de usuario de Windows Runtime 8.x a UWP
 

@@ -3,7 +3,7 @@ author: normesta
 description: Mediante el espacio de nombres Windows.ApplicationModel.Contacts, tienes varias opciones para seleccionar contactos.
 title: Seleccionar contactos
 ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
-keywords: "contactos, selección seleccionar un solo contacto seleccionar varios contactos contactos, selecciona varios seleccionar contacto datos de contacto, seleccionar datos específicos contacto, seleccionar campos específicos"
+keywords: contactos, selección seleccionar un solo contacto seleccionar varios contactos contactos, selecciona varios seleccionar contacto datos de contacto, seleccionar datos específicos contacto, seleccionar campos específicos
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.prod: windows
 ms.technology: uwp
 ms.openlocfilehash: 861d3d7a68596cbec289050391775d665ac6979d
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665101"
 ---
 # <a name="select-contacts"></a>Seleccionar contactos
 

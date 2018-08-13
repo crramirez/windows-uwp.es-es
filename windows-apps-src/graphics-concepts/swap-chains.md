@@ -1,22 +1,27 @@
 ---
 title: Cadenas de intercambio
-description: "Una cadena de intercambio es un conjunto de búferes que se usan para mostrar fotogramas al usuario."
+description: Una cadena de intercambio es un conjunto de búferes que se usan para mostrar fotogramas al usuario.
 ms.assetid: A38E8BB7-1E77-4D93-B321-D3572A80D5DD
-keywords: Cadenas de intercambio
-author: PeterTurcan
-ms.author: pettur
+keywords:
+- Cadenas de intercambio
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 1598811ce05536c3396ef72bb9d1b06ddbba0fdc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 6b24b50c18716f14c58244e52bbb77668760b042
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1045044"
 ---
 # <a name="swap-chains"></a>Cadenas de intercambio
 
 
-Una cadena de intercambio es un conjunto de búferes que se usan para mostrar fotogramas al usuario. Cada vez que una aplicación presenta un nuevo fotograma para mostrar, el primer búfer de la cadena de intercambio ocupa el lugar del búfer visualizado. Este proceso se denomina *intercambio* o *desplazamiento*.
+Una cadena de intercambio es una colección de búferes que se usan para mostrar fotogramas al usuario. Cada vez que una aplicación presenta un nuevo marco para mostrar, el primer búfer de la cadena de intercambio toma el lugar del búfer que se muestra. Este proceso se denomina *intercambio* o *desplazamiento*.
 
 Un adaptador de gráficos mantiene un puntero en una superficie que representa la imagen que se muestra en el monitor, llamado búfer frontal. Cuando se actualiza el monitor, la tarjeta gráfica envía el contenido del búfer frontal al monitor para que se muestre. Sin embargo, esto produce un problema de "división" a la hora de representar gráficos en tiempo real. El problema principal es que las frecuencias de actualización de los monitores son muy lentas en comparación con el resto del equipo. Las frecuencias de actualización habituales van de los 60Hz (60 veces por segundo) a los 100Hz.
 
@@ -29,7 +34,7 @@ Direct3D implementa dos opciones para evitar las divisiones:
 
 -   Una opción para permitir solamente las actualizaciones del monitor en la operación de retrazado vertical (o sincronización vertical). Un monitor normalmente actualiza su imagen moviendo un punto de luz horizontalmente, en zigzag desde la parte superior izquierda del monitor hasta la parte inferior derecha. Cuando el punto de luz llega al final, el monitor vuelve a calibrar dicho punto de la luz moviéndolo hacia atrás hasta la parte superior izquierda, para que el proceso pueda empezar de nuevo.
 
-    Esta recalibración se denomina sincronización vertical. Durante una sincronización vertical, el monitor no dibuja nada, por lo que no se ven las actualizaciones en el búfer frontal hasta que el monitor comienza a dibujar otra vez. La sincronización vertical es relativamente lenta; sin embargo, no es tan lenta como para representar una escena compleja mientras se espera. Lo que se necesita para evitar las divisiones y poder representar escenas complejas es un proceso denominado almacenamiento en búfer de reserva.
+    Este recalibración se denomina una sincronización vertical. Durante una sincronización vertical, el monitor no está obteniendo nada, por lo que cualquier actualización en el búfer frontal no se verán hasta que se inicia el monitor para que se vuelva a dibujar. La sincronización vertical es relativamente lenta; sin embargo, no es tan lenta como para representar una escena compleja mientras se espera. Lo que se necesita para evitar las divisiones y poder representar escenas complejas es un proceso denominado almacenamiento en búfer de reserva.
 
 -   Una opción es usar una técnica llamada almacenamiento en búfer de reserva. El almacenamiento en búfer de reserva es el proceso de dibujar una escena en una superficie fuera de la pantalla, denominada búfer de reserva. Cualquier superficie que no sea el búfer frontal se conoce como superficie fuera de la pantalla, ya que el monitor nunca la ve directamente.
 

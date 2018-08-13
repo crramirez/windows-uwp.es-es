@@ -1,8 +1,9 @@
 ---
 title: Texturas alfa de 1 bit y opacas
-description: "El formato de textura BC1 es para texturas opacas o que tienen un único color transparente."
+description: El formato de textura BC1 es para texturas opacas o que tienen un único color transparente.
 ms.assetid: 8C53ACDD-72ED-4307-B4F3-2FCF9A9F53EC
-keywords: Texturas alfa de 1 bit y opacas
+keywords:
+- Texturas alfa de 1 bit y opacas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b882c70701d2ea2f8abef14a7d3319616696ea4
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044734"
 ---
 # <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas alfa de 1 bit y opacas
 

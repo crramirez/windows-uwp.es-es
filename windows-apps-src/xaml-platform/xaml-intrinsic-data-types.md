@@ -1,7 +1,7 @@
 ---
 author: jwmsft
-description: "Describe la compatibilidad en el nivel de lenguaje de XAML para Windows Runtime para determinados tipos de datos de Common Language Runtime (CLR) y otros lenguajes de programación como C++."
-title: "Tipos de datos intrínsecos de XAML"
+description: Describe la compatibilidad en el nivel de lenguaje de XAML para Windows Runtime para determinados tipos de datos de Common Language Runtime (CLR) y otros lenguajes de programación como C++.
+title: Tipos de datos intrínsecos de XAML
 ms.assetid: D50E6127-395D-4E27-BAA2-2FE627F4B711
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 9f6c8ebe6285981e0af74448b88e0290de3a66ee
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239946"
 ---
 # <a name="xaml-intrinsic-data-types"></a>Tipos de datos intrínsecos de XAML
 

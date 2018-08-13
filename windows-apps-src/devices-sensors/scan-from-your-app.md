@@ -1,8 +1,8 @@
 ---
 author: PatrickFarley
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
-title: "Digitalizar desde tu aplicación"
-description: "Aprende a digitalizar contenido desde tu aplicación con ayuda de un escáner plano, un alimentador o un origen de digitalización configurado automáticamente."
+title: Digitalizar desde tu aplicación
+description: Aprende a digitalizar contenido desde tu aplicación con ayuda de un escáner plano, un alimentador o un origen de digitalización configurado automáticamente.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: c1db020b242c43808d356076641e375cb1581ed3
 ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/28/2017
+ms.locfileid: "696162"
 ---
 # <a name="scan-from-your-app"></a>Digitalizar desde tu aplicación
 

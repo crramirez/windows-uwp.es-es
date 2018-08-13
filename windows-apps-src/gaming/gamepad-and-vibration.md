@@ -1,19 +1,20 @@
 ---
 author: mithom
-title: "Controlador para juegos y vibración"
-description: "Usa las API de controlador para juegos Windows.Gaming.Input para detectar, leer y enviar comandos de impulso y vibración a controladores para juegos."
+title: Controlador para juegos y vibración
+description: Usa las API de controlador para juegos Windows.Gaming.Input para detectar, leer y enviar comandos de impulso y vibración a controladores para juegos.
 ms.assetid: BB03BB8E-255F-4AE8-AC43-1E519CA860FE
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, juegos, games, controlador para juegos, gamepad, vibración, vibration"
+keywords: windows 10, uwp, juegos, games, controlador para juegos, gamepad, vibración, vibration
 ms.openlocfilehash: d09bfcd3dae004f07e07401f4e6ba65ac5027b32
 ms.sourcegitcommit: ae93435e1f9c010a054f55ed7d6bd2f268223957
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/10/2017
+ms.locfileid: "771548"
 ---
 # <a name="gamepad-and-vibration"></a>Controlador para juegos y vibración
 

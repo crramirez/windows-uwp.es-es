@@ -1,8 +1,9 @@
 ---
-title: "Introducción a las texturas"
-description: "Un recurso de texturas es una estructura de datos para almacenar elementos de textura, que es la unidad más pequeña de una textura que se puede leer o a la que se puede escribir. Cuando un sombreador lee la textura, se puede filtrar por muestrarios de texturas."
+title: Introducción a las texturas
+description: Un recurso de textura es una estructura de datos para almacenar elementos de textura, que son las unidades más pequeñas de una textura que pueden leerse o en las que se puede escribir. Cuando un sombreador lee la textura, se puede filtrar por muestrarios de texturas.
 ms.assetid: 6F3C76A8-F762-4296-AE02-BFBD6476A5A8
-keywords: "Introducción a las texturas"
+keywords:
+- Introducción a las texturas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d2390568efc43e89da8aa8df73767bbd7b752538
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044784"
 ---
 # <a name="introduction-to-textures"></a>Introducción a las texturas
 
 
-Un recurso de texturas es una estructura de datos para almacenar elementos de textura, que es la unidad más pequeña de una textura que se puede leer o a la que se puede escribir. Cuando un sombreador lee la textura, se puede filtrar por muestrarios de texturas.
+Un recurso de textura es una estructura de datos para almacenar elementos de textura, que son las unidades más pequeñas de una textura que pueden leerse o en las que se puede escribir. Cuando un sombreador lee la textura, se puede filtrar por muestrarios de texturas.
 
 Un recurso de textura es una colección estructurada de datos diseñada para almacenar elementos de textura. Un elemento de textura representa la unidad más pequeña de una textura que puede leer una canalización o a la que puede escribir. A diferencia de los búferes, las texturas se pueden filtrar por muestrarios de texturas, ya que las leen las unidades del sombreador. El tipo de textura afecta a cómo se filtra la textura. Cada elemento de textura contiene de 1 a 4 componentes, organizados en uno de los formatos DXGI definidos por la enumeración DXGI\_FORMAT.
 

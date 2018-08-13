@@ -1,23 +1,24 @@
 ---
-author: mukin
+author: muhsinking
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
-title: "Usar la brújula"
-description: "Aprende a usar la brújula para determinar el rumbo actual."
+title: Usar la brújula
+description: Aprende a usar la brújula para determinar el rumbo actual.
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b077d0a38b4146aa84d82c63dbcd3e705c7cd914
-ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 069f13926fda125ebb383f16bf96eab333a28523
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "958660"
 ---
 # <a name="use-the-compass"></a>Usar la brújula
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 

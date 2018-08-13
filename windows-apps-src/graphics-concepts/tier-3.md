@@ -1,8 +1,9 @@
 ---
 title: Nivel 3
-description: "El nivel 3 agrega compatibilidad para Texture3D para los recursos de streaming, además de las funcionalidades del nivel 2."
+description: El nivel 3 agrega compatibilidad para Texture3D para los recursos de streaming, además de las funcionalidades del nivel 2.
 ms.assetid: 86E2F311-A221-4C87-BA89-642FF388FAEB
-keywords: Nivel 3
+keywords:
+- Nivel 3
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d30af696fe92576dee79c4203fb0ec2c959dd346
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043194"
 ---
 # <a name="tier-3"></a>Nivel 3
 

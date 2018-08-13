@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-Description: "En este tutorial, podrás crear, ejecutar y administrar el primer experimento con pruebas A/B."
+Description: In this walkthrough, you will create, run, and manage your first experiment with A/B testing.
 title: Crear y ejecutar tu primer experimento
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
 ms.author: mcleans
@@ -9,9 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
-ms.openlocfilehash: 8da21ae0968540cf43994673ceeeefa92cf56b18
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: dfd19034a8bf775e9a317d1ddb4f54223eb4a5ed
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "476911"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Crear y ejecutar tu primer experimento
 
@@ -44,7 +48,7 @@ Para seguir con este tutorial, debes tener una cuenta del Centro de desarrollo d
 
 ## <a name="code-the-experiment-in-your-app"></a>Codificación del experimento en la aplicación
 
-1. En Visual Studio 2015, crea un nuevo proyecto de la Plataforma universal de Windows con Visual C#. Nombra este proyecto **SampleExperiment**.
+1. En Visual Studio, cree un nuevo proyecto de plataforma Universal de Windows mediante Visual C#. Nombra este proyecto **SampleExperiment**.
 2. En el Explorador de soluciones, expande el nodo del proyecto, haz clic con el botón derecho en **Referencias** y en **Agregar referencia**.
 3. En **Administrador de referencias**, expande **Windows Universal** y haz clic en **Extensiones**.
 4. En la lista de los SDK, selecciona la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar**.
@@ -52,28 +56,27 @@ Para seguir con este tutorial, debes tener una cuenta del Centro de desarrollo d
 6. Arrastra un **botón** de **Herramientas** a la página.
 7. Haz doble clic en el botón del diseñador para abrir el archivo de código y agregar un controlador de eventos para el evento **Click**.  
 8. Reemplaza todo el contenido del archivo de código por el siguiente código. Asigna la variable ```projectId``` al valor [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms) que obtuviste en el panel del Centro de desarrollo en la sección anterior.
+    [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
-  [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
-
-10. Guarda el archivo de código y crea el proyecto.
+9. Guarda el archivo de código y crea el proyecto.
 
 ## <a name="create-the-experiment-in-windows-dev-center"></a>Creación del experimento en el Centro de desarrollo de Windows
 
 1. Vuelve a la página de proyecto de **Experimentos de clics de botón** en el panel del Centro de desarrollo de Windows.
 2. En la sección **Experimentos**, haz clic en el botón **Nuevo experimento**.
-5. En la sección **Datos del experimento**, escribe el nombre **Optimizar clics de botón** en el campo **Nombre del experimento**.
-6. En la sección **Evento de visualización** , escribe **userViewedButton** en el campo de **Nombre del evento de visualización**. Ten en cuenta que este nombre coincida con la cadena de evento de visualización en la que has iniciado sesión en el código que agregaste en la sección anterior.
-7. En la sección **Objetivos y eventos de conversión**, escribe los siguientes valores:
+3. En la sección **Datos del experimento**, escribe el nombre **Optimizar clics de botón** en el campo **Nombre del experimento**.
+4. En la sección **Evento de visualización** , escribe **userViewedButton** en el campo de **Nombre del evento de visualización**. Ten en cuenta que este nombre coincida con la cadena de evento de visualización en la que has iniciado sesión en el código que agregaste en la sección anterior.
+5. En la sección **Objetivos y eventos de conversión**, escribe los siguientes valores:
   * En el campo **Nombre de objetivo**, escribe **Aumentar clics de botón**.
   * En el campo **Nombre de evento de conversión**, escribe el nombre **userClickedButton**. Ten en cuenta que este nombre coincida con la cadena de evento de conversión en la que has iniciado sesión en el código que agregaste en la sección anterior.
   * En el campo **Objetivo**, elige **Maximizar**.
-8. En la sección **Variables remotas y variaciones** , confirma que la casilla **Distribuir de forma equitativa** está activada para que las variaciones se distribuyan por igual en la aplicación.
-9. Agrega variables para tu experimento:
-  9. Haz clic en el control de la lista desplegable, elige **buttonText**y haz clic en **Agregar variable**. La cadena **Botón gris** debe aparecer automáticamente en la columna **Variación A** (este valor se deriva de la configuración del proyecto). En la columna **Variación B**, escribe **Botón azul**.
-  9. Haz clic de nuevo en el control de la lista desplegable, elige **r**y haz clic en **Agregar variable**. La cadena **128** debe aparecer automáticamente en la columna **Variación A**. En la columna **Variación B**, escribe **1**.
-  9. Haz clic de nuevo en el control de la lista desplegable, elige **g**y haz clic en **Agregar variable**. La cadena **128** debe aparecer automáticamente en la columna **Variación A**. En la columna **Variación B**, escribe **1**.  
-  9. Haz clic de nuevo en el control de la lista desplegable, elige **b**y haz clic en **Agregar variable**. La cadena **128** debe aparecer automáticamente en la columna **Variación A**. En la columna **Variación B**, escribe **255**.  
-10. Haz clic en **Guardar** y luego en **Activar**.
+6. En la sección **Variables remotas y variaciones** , confirma que la casilla **Distribuir de forma equitativa** está activada para que las variaciones se distribuyan por igual en la aplicación.
+7. Agrega variables para tu experimento:
+    1. Haz clic en el control de la lista desplegable, elige **buttonText**y haz clic en **Agregar variable**. La cadena **Botón gris** debe aparecer automáticamente en la columna **Variación A** (este valor se deriva de la configuración del proyecto). En la columna **Variación B**, escribe **Botón azul**.
+    2. Haz clic de nuevo en el control de la lista desplegable, elige **r**y haz clic en **Agregar variable**. La cadena **128** debe aparecer automáticamente en la columna **Variación A**. En la columna **Variación B**, escribe **1**.
+    3. Haz clic de nuevo en el control de la lista desplegable, elige **g**y haz clic en **Agregar variable**. La cadena **128** debe aparecer automáticamente en la columna **Variación A**. En la columna **Variación B**, escribe **1**.  
+    4. Haz clic de nuevo en el control de la lista desplegable, elige **b**y haz clic en **Agregar variable**. La cadena **128** debe aparecer automáticamente en la columna **Variación A**. En la columna **Variación B**, escribe **255**.  
+8. Haz clic en **Guardar** y luego en **Activar**.
 
 > [!IMPORTANT]
 > Después de activar un experimento, ya no se pueden modificar sus parámetros a menos que hayas hecho clic en la casilla **Experimento editable** al crear el experimento. Normalmente, recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento.

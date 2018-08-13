@@ -1,8 +1,9 @@
 ---
-title: "Transformación de mundos"
-description: "Una transformación de mundos cambia las coordenadas de un espacio de modelo, donde se definen los vértices con respecto al origen local de un modelo, a un espacio de mundo."
+title: Transformación de mundos
+description: Una transformación de mundos cambia las coordenadas de un espacio de modelo, donde se definen los vértices con respecto al origen local de un modelo, a un espacio de mundo.
 ms.assetid: 767B032C-69D0-4583-8FEB-247F4C41E31D
-keywords: "Transformación de mundos"
+keywords:
+- Transformación de mundos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f4d40360833596b9ef9eed97c426a5ec90db353
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043964"
 ---
 # <a name="world-transform"></a>Transformación de mundos
 

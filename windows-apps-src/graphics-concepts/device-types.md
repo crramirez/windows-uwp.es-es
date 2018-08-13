@@ -1,8 +1,9 @@
 ---
 title: Tipos de dispositivos
-description: "Los tipos de dispositivos de Direct3D incluyen dispositivos de la capa de abstracción de hardware (HAL) y el rasterizador de referencia."
+description: Los tipos de dispositivos de Direct3D incluyen dispositivos de la capa de abstracción de hardware (HAL) y el rasterizador de referencia.
 ms.assetid: 64084B23-10C0-4541-8E93-FB323385D2F0
-keywords: Tipos de dispositivos
+keywords:
+- Tipos de dispositivos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1aff4fed2f69c455157b21b6cce93e37a1b48c39
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043214"
 ---
 # <a name="device-types"></a>Tipos de dispositivos
 

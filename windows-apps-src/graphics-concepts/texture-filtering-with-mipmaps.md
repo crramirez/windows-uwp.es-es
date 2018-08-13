@@ -1,8 +1,9 @@
 ---
 title: Filtrado de texturas con mapas MIP
-description: "Un mapa MIP es una secuencia de texturas, cada una de las cuales es una representación de la misma imagen con una resolución progresivamente inferior. El alto y ancho de cada imagen, o nivel, en el mapa MIP es una potencia de dos inferior al nivel anterior."
+description: Un mapa MIP es una secuencia de texturas, cada una de las cuales es una representación de la misma imagen con una resolución progresivamente inferior. El alto y ancho de cada imagen, o nivel, en el mapa MIP es una potencia de dos inferior al nivel anterior.
 ms.assetid: 28E863A2-C776-40E4-8551-9851DF7EC93E
-keywords: Filtrado de texturas con mapas MIP
+keywords:
+- Filtrado de texturas con mapas MIP
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af0c9c7013b663bceb5c3747ff5d5250f62c54c7
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044574"
 ---
 # <a name="texture-filtering-with-mipmaps"></a>Filtrado de texturas con mapas MIP
 

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial de introducción: un juego para UWP en 3D en JavaScript"
+title: 'Tutorial de introducción: un juego para UWP en 3D en JavaScript'
 description: Un juego para UWP para la Tienda Windows escrito en JavaScript con three.js
 author: abbycar
 ms.author: abigailc
@@ -11,7 +11,9 @@ keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.openlocfilehash: bb72e7787764fd549891651df47794dfe1948247
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240364"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Crear un juego en 3D en JavaScript con three.js
 

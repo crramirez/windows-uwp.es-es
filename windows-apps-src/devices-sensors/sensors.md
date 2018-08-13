@@ -1,32 +1,29 @@
 ---
-author: mukin
+author: muhsinking
 ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: Sensores
-description: "Los sensores permiten que las aplicaciones conozcan cuál es la relación entre un dispositivo y el entorno físico. Pueden indicar a la aplicación la dirección, la orientación y el movimiento del dispositivo."
+description: Los sensores permiten que las aplicaciones conozcan cuál es la relación entre un dispositivo y el entorno físico. Pueden indicar a la aplicación la dirección, la orientación y el movimiento del dispositivo.
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: eee6bb0c70c39a6676639f5b6da0f5465811dbad
-ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3bf1d905874fc420dc0a39c1082e213e4ea4c327
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "959180"
 ---
 # <a name="sensors"></a>Sensores
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Los sensores permiten que las aplicaciones conozcan cuál es la relación entre un dispositivo y el entorno físico. Pueden indicar a la aplicación la dirección, la orientación y el movimiento del dispositivo. Pueden ayudarte a crear un juego, una aplicación de realidad aumentada o aplicación de utilidad de forma más útil e interactiva proporcionando una forma exclusiva de entrada, como el uso del movimiento del dispositivo para ordenar los caracteres en la pantalla o para simular que te encuentras en una cabina y el dispositivo es el volante.
 
 Como regla general, decide desde el comienzo si la aplicación dependerá exclusivamente de sensores o si estos solamente ofrecerán un mecanismo de control adicional. Por ejemplo, un juego de conducción que usa un dispositivo como volante virtual puede controlarse también a través de una GUI en pantalla. De este modo, la aplicación funciona sin importar cuáles son los sensores disponibles en el sistema. Por otro lado, un laberinto de canicas puede codificarse para que funcione solamente en los sistemas que tienen los sensores apropiados. Debes tomar la decisión estratégica de si confías por completo en los sensores. Ten en cuenta que el esquema de control táctil o por mouse resigna la inmersión en pos de un mayor control.
-
-El vídeo siguiente muestra algunos de los sensores disponibles al compilar la aplicación. No es una lista exhaustiva, pero muestra algunos de los sensores más comunes junto con su propósito.
-
-<iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/acea5c8e-8699-483b-87f0-f65f80065470/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">Un minuto para el desarrollador: introducción a sensores</iframe>
 
 | Tema                                                       | Descripción  |
 |-------------------------------------------------------------|--------------|
@@ -115,7 +112,7 @@ El sensor [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR2
 
 Las aplicaciones que cambian la vista para coincidir con la orientación del dispositivo pueden usar el sensor de inclinómetro. También, las aplicaciones que muestran un avión que coincide con la rotación alrededor del eje x, la rotación alrededor del eje y la rotación alrededor del eje z del dispositivo podrían usar las lecturas del inclinómetro.
 
-Para un ejemplo de implementación, consulta la muestra de inclinómetro [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
+Para una implementación de ejemplo, vea el ejemplo de inclinometer [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
 
 ## <a name="light-sensor"></a>Sensor de luz
 

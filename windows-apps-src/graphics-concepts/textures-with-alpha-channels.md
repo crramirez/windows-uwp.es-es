@@ -1,8 +1,9 @@
 ---
 title: Texturas con canales alfa
-description: "Hay dos formas de codificar asignaciones de textura con una transparencia más compleja."
+description: Hay dos formas de codificar asignaciones de textura con una transparencia más compleja.
 ms.assetid: 768A774A-4F21-4DDE-B863-14211DA92926
-keywords: Texturas con canales alfa
+keywords:
+- Texturas con canales alfa
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a2a619c32e7d6a7f2fff768c9cec5b7986c3c1
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044716"
 ---
 # <a name="textures-with-alpha-channels"></a>Texturas con canales alfa
 
 
-Hay dos formas de codificar asignaciones de textura con una transparencia más compleja. En cada caso, un bloque que describe la transparencia precede el bloque de 64bits ya descrito. La transparencia se representa como un mapa de bits de 4 x 4 con 4 bits por píxel (codificación explícita) o con menos bits e interpolación lineal, que es similar a lo que se usa para la codificación del color.
+Hay dos formas de codificar mapas de texturas que exhiben una transparencia más compleja. En cada caso, un bloque que describe la transparencia precede el bloque de 64bits ya descrito. La transparencia se representa como un mapa de bits de 4 x 4 con 4 bits por píxel (codificación explícita) o con menos bits e interpolación lineal, que es similar a lo que se usa para la codificación del color.
 
 El bloque de transparencia y el bloque de color se organizan tal como se muestra en la siguiente tabla.
 

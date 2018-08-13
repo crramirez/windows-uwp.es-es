@@ -1,8 +1,9 @@
 ---
-title: "Parámetros de creación de grupos de mosaicos"
-description: "Usa los parámetros de esta sección para definir grupos de mosaicos al crear un búfer."
+title: Parámetros de creación de grupos de mosaicos
+description: Usa los parámetros de esta sección para definir grupos de mosaicos al crear un búfer.
 ms.assetid: FDC1AD88-BC41-49EE-881E-F21743D407DB
-keywords: "Parámetros de creación de grupos de mosaicos"
+keywords:
+- Parámetros de creación de grupos de mosaicos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a41e37e9483521877cfd5787f47e989c2d5cdcb2
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043644"
 ---
 # <a name="tile-pool-creation-parameters"></a>Parámetros de creación de grupos de mosaico
 

@@ -1,8 +1,9 @@
 ---
 title: Luz ambiente
-description: "La luz ambiente proporciona iluminación constante a una escena."
+description: La luz ambiente proporciona iluminación constante a una escena.
 ms.assetid: C34FA65A-3634-4A4B-B183-4CDA89F4DC95
-keywords: Luz ambiente
+keywords:
+- Luz ambiente
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 08b44ae8348e7b9d1d8dff0b98e5f1c553ec79b2
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044134"
 ---
 # <a name="ambient-lighting"></a>Luz ambiente
 
 
-La luz ambiente proporciona iluminación constante a una escena. Ilumina todos los vértices de un objeto del mismo modo porque no depende de ningún otro factor de iluminación, como las normales de los vértices, la dirección de la luz, la posición de la luz, el alcance o la atenuación. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcular con rapidez, pero deja objetos con una apariencia plana y poco realista.
+La luz de ambiente proporciona iluminación constante a una escena. Ilumina todos los vértices de un objeto del mismo modo porque no depende de ningún otro factor de iluminación, como las normales de los vértices, la dirección de la luz, la posición de la luz, el alcance o la atenuación. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcular con rapidez, pero deja objetos con una apariencia plana y poco realista.
 
 La luz ambiente es el tipo de iluminación más rápido, pero obtienen los resultados menos realistas. Direct3D contiene una sola propiedad de luz ambiente global que puedes usar sin tener que crear ninguna luz. Como alternativa, puedes establecer cualquier objeto de luz para que proporcione luz ambiente.
 
@@ -35,7 +37,7 @@ Donde:
 | Gₐ                | (0,0,0,0)     | D3DCOLORVALUE | Color ambiente global                                                                                              |
 | Atten<sub>i</sub> | (0,0,0,0)     | D3DCOLORVALUE | Atenuación lumínica de la luz i. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md). |
 | Spot<sub>i</sub>  | (0,0,0,0)     | D3DVECTOR     | Factor del foco de luz de la luz i. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md).  |
-| sum               | N/C           | N/C           | Suma de la luz ambiente                                                                                          |
+| sum               | N/A           | N/C           | Suma de la luz ambiente                                                                                          |
 | L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | Color de luz ambiente de la luz i.                                                                              |
 
  

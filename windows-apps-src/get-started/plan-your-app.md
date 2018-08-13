@@ -1,7 +1,7 @@
 ---
 author: GrantMeStrength
-title: "Planear tu aplicación de Plataforma universal de Windows (UWP)"
-description: "En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco etapas diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar."
+title: Creación de una aplicación compleja de plataforma de Windows Universal (UWP)
+description: 'En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco etapas diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar.'
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
 ms.author: jken
 ms.date: 02/08/2017
@@ -9,13 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f9e14be4ef0e92378d4b6f1e4f5c1066c56fbdd8
-ms.sourcegitcommit: ae20971c4c8276034cd22fd7e10b0e3ddfddf480
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7f2dbbf2d8cb653f0783c3e2655278b6d65634b6
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1015541"
 ---
-#  <a name="plan-your-universal-windows-platform-uwp-app"></a>Planear la aplicación para la Plataforma universal de Windows (UWP)
+#  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Creación de una aplicación compleja de plataforma de Windows Universal (UWP)
 
 En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco etapas diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar.
 
@@ -67,9 +69,9 @@ El término "embudo" se debe a su forma. En la parte ancha del embudo entran muc
 
 Cuando estés contento con tu concepto, estarás preparado para la siguiente etapa: crear el plano de la aplicación. La arquitectura de información (AI) proporciona al contenido la integridad estructural que necesita. Te ayudará a definir el modelo de navegación de la aplicación y, en última instancia, la identidad de la aplicación. Si planeas la organización de tu contenido y cómo descubrirán los usuarios dicho contenido, podrás hacerte una idea más aproximada del modo en que los usuarios usarán tu aplicación.
 
-Una buena AI no solo facilita los escenarios de usuario, sino que también te ayuda a prever las pantallas clave con las que empezar. La aplicación [Audible](http://go.microsoft.com/fwlink/p/?LinkID=268089), por ejemplo, se inicia directamente en un concentrador que proporciona acceso a las estadísticas, noticias, tienda y biblioteca del usuario. La experiencia se ha concretado con el fin de que los usuarios puedan obtener libros sonoros y disfrutar de ellos rápidamente. Los niveles más profundos de la aplicación se centran en tareas más específicas.
+Una buena AI no solo facilita los escenarios de usuario, sino que también te ayuda a prever las pantallas clave con las que empezar. Por ejemplo, inicia la aplicación [Audible](http://go.microsoft.com/fwlink/p/?LinkID=268089) , directamente a un concentrador que proporciona acceso a la biblioteca, almacenamiento, noticias y estadísticas del usuario. Se centra la experiencia, por lo que los usuarios pueden obtener y disfrute audiobooks rápidamente. Los niveles más profundos de la aplicación se centran en tareas más específicas.
 
-Para obtener directrices relacionadas, consulta [Patrones de diseño básicos](../layout/navigation-basics.md).
+Para obtener directrices relacionadas, consulta [Patrones de diseño básicos](../design/basics/navigation-basics.md).
 
 ## <a name="dynamics"></a>Dynamics
 
@@ -139,18 +141,18 @@ Para más información, consulta el tema sobre las [extensiones y los contratos 
 
 Por ejemplo, un zoom semántico es un modo optimizado para funcionalidad táctil que permite navegar por un conjunto extenso de contenido. Los usuarios pueden desplazarse de lado a lado o de arriba a abajo por las categorías del contenido y acercar la vista de las categorías para ver más información y con más detalle. Puedes usarlo para presentar el contenido de una manera más táctil, visual e informativa que con los modelos tradicionales de navegación y diseño, como las pestañas.
 
-Por supuesto, puedes usar diferentes interacciones táctiles, como girar, pasar el dedo, etc. Obtén más información sobre [Función táctil y otras interacciones de usuario](../input-and-devices/input-primer.md).
+Por supuesto, puedes usar diferentes interacciones táctiles, como girar, pasar el dedo, etc. Obtén más información sobre [Función táctil y otras interacciones de usuario](../design/input/input-primer.md).
 
 **Atractiva y original**  Asegúrate de que tu aplicación sea original y atraiga a los usuarios con estas experiencias estándar:
 
 -   **Animaciones**  Usa nuestra biblioteca de animaciones para que la aplicación resulte rápida y fluida para los usuarios. Ayuda a los usuarios a comprender cambios contextuales y relaciona las experiencias entre sí con transiciones visuales. Obtén más información sobre [cómo animar la interfaz de usuario](../graphics/animations-overview.md).
--   **Notificaciones del sistema**  Informa a los usuarios sobre contenido personalmente importante o que esté sujeto a una limitación temporal a través de notificaciones del sistema, para atraerlos a la aplicación incluso cuando esté cerrada. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../controls-and-patterns/tiles-badges-notifications.md).
--   **Iconos de la aplicación**  Ofrece actualizaciones nuevas y oportunas para que los usuarios quieran volver a la aplicación. Hay más información en la siguiente sección. Obtén más información sobre los [iconos de la aplicación](../controls-and-patterns/tiles-and-notifications-creating-tiles.md).
+-   **Notificaciones del sistema**  Informa a los usuarios sobre contenido personalmente importante o que esté sujeto a una limitación temporal a través de notificaciones del sistema, para atraerlos a la aplicación incluso cuando esté cerrada. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../design/shell/tiles-and-notifications/index.md).
+-   **Iconos de la aplicación**  Ofrece actualizaciones nuevas y oportunas para que los usuarios quieran volver a la aplicación. Hay más información en la siguiente sección. Obtén más información sobre los [iconos de la aplicación](../design/shell/tiles-and-notifications/creating-tiles.md).
 
 **Personalización**
 
--   **Configuración**  Permite guardar la configuración de la aplicación para que los usuarios puedan crear la experiencia que quieran. Consolida toda la configuración en una pantalla y a continuación los usuarios podrán configurar la aplicación con un mecanismo común con el que ya están familiarizados. Obtén más información sobre cómo [agregar la configuración de la aplicación](../app-settings/app-settings-and-data.md).
--   **Itinerancia**  Crea una experiencia continua entre dispositivos mediante la itinerancia de datos. Esto permite al usuario retomar una tarea exactamente donde la dejó y preserva la experiencia que más interesa al usuario, independientemente del dispositivo que esté usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094).
+-   **Configuración**  Permite guardar la configuración de la aplicación para que los usuarios puedan crear la experiencia que quieran. Consolida toda la configuración en una pantalla y a continuación los usuarios podrán configurar la aplicación con un mecanismo común con el que ya están familiarizados. Obtén más información sobre cómo [agregar la configuración de la aplicación](../design/app-settings/app-settings-and-data.md).
+-   **Itinerancia**  Crea una experiencia continua entre dispositivos mediante la itinerancia de datos. Esto permite al usuario retomar una tarea exactamente donde la dejó y preserva la experiencia que más interesa al usuario, independientemente del dispositivo que esté usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../design/app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094).
 -   **Iconos de usuario**  Haz que la aplicación sea más personal para los usuarios: carga su imagen como icono de usuario o permite que establezcan contenido de la aplicación como su icono personal en Windows.
 
 **Funcionalidades del dispositivo**  Asegúrate de que la aplicación aproveche al máximo las funcionalidades de los dispositivos actuales.
@@ -205,7 +207,7 @@ Examinemos el flujo "Compartir itinerarios para que los sigan amigos y familiare
 
 Durante este proceso, comienzas a ver qué interfaz de usuario necesitas crear y los detalles adicionales en los que debes pensar (por ejemplo, redactar un correo electrónico estándar reutilizable para los amigos que aún no usan la aplicación). También puedes comenzar a eliminar pasos innecesarios. Quizás, el usuario en realidad no necesite ver los detalles del viaje antes de compartirlo, por ejemplo. Cuanto más claro sea el flujo, más fácil será usarlo.
 
-Para obtener información detallada sobre cómo usar superficies distintas, consulta <!--[Command design basics](../layout/commanding-basics.md)-->.
+Para obtener información detallada sobre cómo usar superficies distintas, consulta <!--[Command design basics](../design/basics/commanding-basics.md)-->.
 
 **¿Cómo debería ser el flujo?** Una vez que hayas definido los pasos que seguirá el usuario, puedes convertir ese flujo en objetivos de rendimiento. Para obtener más información, consulta [Planear el rendimiento](../debug-test-perf/planning-and-measuring-performance.md).
 
@@ -238,6 +240,6 @@ Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicie
 
 ## <a name="validate-your-design"></a>Valida tu diseño
 
-Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada función cuenta con un conjunto de directrices de experiencia del usuario que te ayudan a pulir la aplicación, así como un conjunto de requisitos de la Tienda que debes cumplir para vender la aplicación en la Tienda Windows. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
+Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada característica tiene un conjunto de instrucciones de experiencia de usuario que le ayudarán a perfeccionar su aplicación y un conjunto de requisitos de almacenamiento que se deben cumplir para publicar la aplicación en el Microsoft Store. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
 
 Usa las [directrices detalladas de la experiencia de usuario para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh465424) para mantenerte centrado en las características importantes. Usa las herramientas que encontrarás en [Visual Studio performance tools (Herramientas de rendimiento de Visual Studio)](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx) para analizar el rendimiento de cada uno de los escenarios de la aplicación.

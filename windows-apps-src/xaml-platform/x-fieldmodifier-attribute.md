@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "Modifica el comportamiento de la compilación de XAML, por ejemplo, los campos para referencias a objetos con nombre se definen con el acceso público en lugar del comportamiento privado predeterminado."
+description: Modifica el comportamiento de la compilación de XAML, por ejemplo, los campos para referencias a objetos con nombre se definen con el acceso público en lugar del comportamiento privado predeterminado.
 title: Atributo xFieldModifier
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
 ms.author: jimwalk
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: cad84be24836bc6a33a4ab08f1ca4fa2d9e97512
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239916"
 ---
 # <a name="xfieldmodifier-attribute"></a>Atributo x:FieldModifier
 

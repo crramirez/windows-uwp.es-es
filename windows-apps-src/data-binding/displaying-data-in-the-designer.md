@@ -1,8 +1,8 @@
 ---
 author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
-title: "Datos de muestra sobre la superficie de diseño y para la creación de prototipos"
-description: "Quizás no sea posible o no desees (puede que por motivos de privacidad o rendimiento) que la aplicación muestre datos dinámicos sobre la superficie de diseño en Microsoft Visual Studio o Blend para Visual Studio."
+title: Datos de muestra sobre la superficie de diseño y para la creación de prototipos
+description: Quizás no sea posible o no desees (puede que por motivos de privacidad o rendimiento) que la aplicación muestre datos dinámicos sobre la superficie de diseño en Microsoft Visual Studio o Blend para Visual Studio.
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 00a6bbf06f918c0b86bcaed7ae7891b474baefe8
 ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/27/2017
+ms.locfileid: "852881"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Datos de muestra sobre la superficie de diseño y para la creación de prototipos
 =============================================================================================

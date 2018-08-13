@@ -1,8 +1,8 @@
 ---
 author: jwmsft
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
-title: "Componentes de la Plataforma universal de Windows y optimización de la interoperabilidad"
-description: "Crea aplicaciones para la Plataforma universal de Windows (UWP) que usen componentes UWP e interactúen con tipos administrados y nativos al mismo tiempo que evitan problemas de rendimiento de interoperabilidad."
+title: Componentes de la Plataforma universal de Windows y optimización de la interoperabilidad
+description: Crea aplicaciones para la Plataforma universal de Windows (UWP) que usen componentes UWP e interactúen con tipos administrados y nativos al mismo tiempo que evitan problemas de rendimiento de interoperabilidad.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 8562454b976362ebc65884203775b3891216d8b7
 ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/14/2017
+ms.locfileid: "894551"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a>Componentes de UWP y optimización de la interoperabilidad
 

@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 description: En el marcado XAML, especifica un valor null para una propiedad.
-title: "Extensión de marcado xNull"
+title: Extensión de marcado xNull
 ms.assetid: E6A4038E-4ADA-4E82-9824-582FC16AB037
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: a367594cab5e1f29ce6c5f45ee869b025c4bf47e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239983"
 ---
 # <a name="xnull-markup-extension"></a>Extensión de marcado {x:Null}
 

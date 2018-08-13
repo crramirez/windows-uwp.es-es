@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: Pasar matrices a un componente de Windows Runtime
-description: "En la Plataforma universal de Windows (UWP), los parámetros son o bien para la entrada, o bien para la salida, nunca para ambas. Esto significa que el contenido de una matriz que se pasa a un método, así como de la propia matriz, es, o bien para la entrada, o bien para la salida."
+description: En la Plataforma universal de Windows (UWP), los parámetros son o bien para la entrada, o bien para la salida, nunca para ambas. Esto significa que el contenido de una matriz que se pasa a un método, así como de la propia matriz, es, o bien para la entrada, o bien para la salida.
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
 ms.author: misatran
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: e9f0a148238b8f91c4643954c7f575e742f69d5e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239895"
 ---
 # <a name="passing-arrays-to-a-windows-runtime-component"></a>Pasar matrices a un componente de Windows Runtime
 

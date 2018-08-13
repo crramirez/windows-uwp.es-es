@@ -1,8 +1,9 @@
 ---
-title: "Transformaciones del espacio de cámara"
-description: "Los vértices del espacio de cámara se calculan al transformar los vértices del objeto con la matriz de vista global."
+title: Transformaciones del espacio de cámara
+description: Los vértices del espacio de cámara se calculan al transformar los vértices del objeto con la matriz de vista global.
 ms.assetid: 86EDEB95-8348-4FAA-897F-25251B32B076
-keywords: "Transformaciones del espacio de cámara"
+keywords:
+- Transformaciones del espacio de cámara
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 032518fe793db99309d098b28f2f8e94bbb072ba
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043934"
 ---
 # <a name="camera-space-transformations"></a>Transformaciones del espacio de cámara
 
@@ -47,10 +49,10 @@ L<sub>dir</sub> = norm(V \* Lₚ), donde los parámetros se definen en la siguie
 
 | Parámetro       | Valor predeterminado | Tipo                                          | Descripción                                               |
 |-----------------|---------------|-----------------------------------------------|-----------------------------------------------------------|
-| L<sub>dir</sub> | N/C           | Vector 3D (valores de punto flotante x, y, z) | Vector de dirección de los vértices del objeto a la luz          |
+| L<sub>dir</sub> | N/A           | Vector 3D (valores de punto flotante x, y, z) | Vector de dirección de los vértices del objeto a la luz          |
 | V               | N/C           | Vector 3D (valores de punto flotante x, y, z) | Posición del vértice en el espacio de cámara                           |
 | wvMatrix        | Identidad      | Matriz de 4×4 de valores de punto flotante           | Matriz compuesto que contiene las transformaciones global y de vista |
-| N               | N/C           | Vector 3D (valores de punto flotante x, y, z) | Normal de los vértices                                             |
+| N               | N/A           | Vector 3D (valores de punto flotante x, y, z) | Normal de los vértices                                             |
 | Lₚ              | N/C           | Vector 3D (valores de punto flotante x, y, z) | Posición de la luz en el espacio de cámara                            |
 | vMatrix         | Identidad      | Matriz de 4×4 de valores de punto flotante           | Matriz que contiene la transformación de vista                      |
 

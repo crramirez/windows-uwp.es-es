@@ -1,8 +1,9 @@
 ---
 title: Fase del rasterizador (RS)
-description: "El rasterizador recorta primitivos que no están en la vista, los prepara para la fase del sombreador de píxeles (PS) y determina cómo invocar sombreadores de píxeles."
+description: El rasterizador recorta primitivos que no están en la vista, los prepara para la fase del sombreador de píxeles (PS) y determina cómo invocar sombreadores de píxeles.
 ms.assetid: 7E80724B-5696-4A99-91AF-49744B5CD3A9
-keywords: Fase del rasterizador (RS)
+keywords:
+- Fase del rasterizador (RS)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b707356b2d90ad4839fdc7f6e52370b74ea4857a
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044054"
 ---
 # <a name="rasterizer-rs-stage"></a>Fase del rasterizador (RS)
 

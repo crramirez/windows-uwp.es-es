@@ -1,8 +1,9 @@
 ---
 title: Tipos de recursos
-description: "Los distintos tipos de recursos tienen un diseño (o una superficie de memoria) diferente."
+description: Los distintos tipos de recursos tienen un diseño (o una superficie de memoria) diferente.
 ms.assetid: BCDDF227-1837-44DA-ABD4-E39BCFF2B8EF
-keywords: Tipos de recursos
+keywords:
+- Tipos de recursos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1412ce6567687a5ee95ca4df384b8cf109809754
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1045148"
 ---
 # <a name="resource-types"></a>Tipos de recursos
 

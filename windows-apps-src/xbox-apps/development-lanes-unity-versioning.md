@@ -4,7 +4,9 @@ title: 'Unity: Control de versiones del proyecto para UWP'
 description: Control de versiones del proyecto para UWP.
 ms.openlocfilehash: 3b796c31e6b284cea628ba68a34799cf9317ee2e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240022"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: Control de versiones del proyecto para UWP
 

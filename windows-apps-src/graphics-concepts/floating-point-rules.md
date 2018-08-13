@@ -1,8 +1,9 @@
 ---
 title: Reglas de punto flotante
-description: "Direct3D admite varias representaciones de punto flotante. Todos los cálculos de punto flotante funcionan en un subconjunto de las reglas de punto flotante IEEE 754 de precisión simple de 32 bits."
+description: Direct3D admite varias representaciones de punto flotante. Todos los cálculos de punto flotante funcionan en un subconjunto de las reglas de punto flotante IEEE 754 de precisión simple de 32 bits.
 ms.assetid: 3B0C95E2-1025-4F70-BF14-EBFF2BB53AFF
-keywords: Reglas de punto flotante
+keywords:
+- Reglas de punto flotante
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8706b10756eeec5d4b8a872c0d436a157ef74970
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044944"
 ---
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>Reglas de punto flotante
 

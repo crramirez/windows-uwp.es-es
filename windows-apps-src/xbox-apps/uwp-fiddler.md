@@ -1,7 +1,7 @@
 ---
 author: WilliamsJason
-title: "Cómo usar Fiddler con Xbox One al desarrollar para la UWP"
-description: "Describe cómo usar la herramienta Fiddler de software gratuito para ver el tráfico de red en un kit de desarrollo para UWP de Xbox One."
+title: Cómo usar Fiddler con Xbox One al desarrollar para la UWP
+description: Describe cómo usar la herramienta Fiddler de software gratuito para ver el tráfico de red en un kit de desarrollo para UWP de Xbox One.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: windows 10, uwp
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 ms.openlocfilehash: bbf916145107b465ddd2fe7e4805e6139f4597d3
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "240030"
 ---
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>Cómo usar Fiddler con Xbox One al desarrollar para la UWP
 

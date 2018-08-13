@@ -1,25 +1,26 @@
 ---
 author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
-title: "Pruebas del Kit para la certificación de aplicaciones en Windows"
-description: "El Kit para la certificación de aplicaciones en Windows contiene diversas pruebas que pueden ayudarte a garantizar que tu aplicación esté lista para publicarse en la Tienda Windows."
+title: Pruebas del Kit para la certificación de aplicaciones en Windows
+description: El Kit de certificación de la aplicación de Windows contiene un número de pruebas que pueden ayudar a garantizar que la aplicación está lista ser publicado en el Microsoft Store.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 5e3ae74ba4392b5021159f9fcb825009137701d3
-ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f5c28b17147ac285cefb0b93e36ac6f00b115f3a
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "927760"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Pruebas del Kit para la certificación de aplicaciones en Windows
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-El Kit para la certificación de aplicaciones en Windows contiene diversas pruebas que pueden ayudarte a garantizar que tu aplicación esté lista para publicarse en la Tienda Windows.
+El [Kit de certificación de aplicación de Windows](windows-app-certification-kit.md) contiene un número de pruebas que ayudan a asegurar que la aplicación está lista para su publicación en el Microsoft Store. Las pruebas se enumeran a continuación con sus criterios, obtener información detallada y sugiere acciones en caso de error.
 
 ## <a name="deployment-and-launch-tests"></a>Implementación y pruebas de inicio
 
@@ -59,7 +60,7 @@ Comprueba que la aplicación de Windows puede ejecutarse en una versión futura 
 
 ### <a name="background"></a>Antecedentes
 
-La información de versión del sistema operativo limitaba el uso de la Tienda Windows. A menudo, las aplicaciones usaban esta restricción de forma incorrecta para comprobar la versión del SO para que la aplicación pudiera proporcionar a los usuarios una funcionalidad específica de una versión del sistema operativo.
+Información de versión de sistema operativo tiene restricciones de uso para el Microsoft Store. A menudo, las aplicaciones usaban esta restricción de forma incorrecta para comprobar la versión del SO para que la aplicación pudiera proporcionar a los usuarios una funcionalidad específica de una versión del sistema operativo.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
@@ -127,7 +128,7 @@ Examina el manifiesto de la aplicación para comprobar que el contenido sea corr
 
 -   **Comprobación de la comunicación entre procesos (IPC)**
 
-    Esta prueba impone el requisito de que las aplicaciones de la TiendaWindows no se comunican fuera del contenedor de la aplicación con componentes del escritorio. La comunicación entre procesos está pensada exclusivamente para las aplicaciones de prueba. Las aplicaciones en las que el nombre especificado en [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) sea "DesktopApplicationPath" no superarán esta prueba.
+    Esta prueba aplica el requisito de que no se comunican UWP aplicaciones fuera del contenedor de la aplicación a los componentes de escritorio. La comunicación entre procesos está pensada exclusivamente para las aplicaciones de prueba. Las aplicaciones en las que el nombre especificado en [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) sea "DesktopApplicationPath" no superarán esta prueba.
 
 ### <a name="corrective-action"></a>Acción correctiva
 
@@ -221,7 +222,7 @@ Habilita la opción /DYNAMICBASE en el comando enlazador cuando diseñes tu apli
 
 Normalmente, ASLR no afecta al rendimiento. Pero en algunos escenarios, hay una pequeña mejora de rendimiento en sistemas de 32bits. Es posible que el rendimiento pueda afectar a un sistema muy congestionado con imágenes cargadas en muchas ubicaciones diferentes de la memoria.
 
-Esta prueba se realiza solamente en aquellas aplicaciones escritas en código administrado, como mediante el uso de C# o .NET Framework.
+Esta prueba se realiza solamente en aplicaciones escritas en lenguajes no administrados, como C o C++.
 
 ### <a name="span-idbinscope-5spanreadwrite-shared-pe-section"></a><span id="binscope-5"></span>Sección PE compartida de lectura y escritura
 
@@ -247,7 +248,7 @@ AppContainerCheck comprueba que esté establecido el bit **appcontainer** en el 
 
 Si un archivo ejecutable nativo no pasa la prueba, asegúrate de haber usado los compiladores y enlazadores más recientes para compilarlo y de haber usado la marca */appcontainer* en el enlazador.
 
-Si un archivo ejecutable administrado no pasa la prueba, asegúrate de haber usado el compilador y enlazador más recientes (como Microsoft Visual Studio) para compilar la aplicación de la Tienda Windows.
+Si un archivo ejecutable administrado se produce un error de la prueba, asegúrese de que usa el compilador más reciente y el vinculador, como Microsoft Visual Studio, para crear la aplicación UWP.
 
 **Observaciones**
 
@@ -307,22 +308,22 @@ Prueba la aplicación para detectar el uso de cualquier API no compatible.
 
 ### <a name="background"></a>Antecedentes
 
-Para lograr la certificación de la TiendaWindows, las aplicaciones deben usar las API para las aplicaciones de la Tienda Windows (es decir, API de Windows en tiempo de ejecución o API de Win32 compatibles). Esta prueba también identifica situaciones en las que un binario administrado toma una dependencia de una función fuera del perfil aprobado.
+Aplicaciones deben usar la API para aplicaciones UWP (tiempo de ejecución de Windows o las API de Win32 compatibles) a estar certificadas para el Microsoft Store. Esta prueba también identifica situaciones en las que un binario administrado toma una dependencia de una función fuera del perfil aprobado.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
--   Examina la tabla de direcciones de importación de cada uno de los binarios del paquete de la aplicación para asegurarte de que ninguno tenga una dependencia en una API de Win32 no compatible con el desarrollo de aplicaciones de la Tienda Windows.
+-   Comprueba que cada binario dentro del paquete de aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones de UWP mediante la comprobación de la tabla de direcciones de importación del binario.
 -   Comprueba que cada binario administrado en el paquete de la aplicación no toma una dependencia de una función fuera del perfil aprobado.
 
 ### <a name="corrective-actions"></a>Acciones correctivas
 
 Asegúrate de que la aplicación se haya compilado como una versión de lanzamiento y no con una versión de depuración.
 
-> **Nota** La versión de depuración de una aplicación no pasará esta prueba aunque la aplicación use solamente las [API de aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+> **Nota**  La versión de depuración de una aplicación se producirá un error de esta prueba, incluso si la aplicación utiliza sólo [las API para aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-Revisa los mensajes de error para identificar la API que usa la aplicación y que no es una [API para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+Revise los mensajes de error para identificar la API de los usos de aplicación que no es una [API para aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> **Nota** Las aplicaciones C++ creadas en una configuración de depuración no pasarán esta prueba aunque la configuración use solo las API de Windows SDK para aplicaciones de la Tienda Windows. Consulta el tema sobre [alternativas a las API de Windows en aplicaciones de la TiendaWindows](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
+> **Nota**  Aplicaciones de C++ que se crean en una configuración de depuración se producirá un error de esta prueba, incluso si la configuración sólo usa las API de SDK de Windows para las aplicaciones UWP. Vea, [alternativas a las API de Windows en las aplicaciones UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
 
 ## <a name="performance-tests"></a>Pruebas de rendimiento
 
@@ -432,7 +433,7 @@ Usa esta tabla como guía.
 <tr><td>
 <p>El archivo "resources.pri" no debe tener habilitado Combinar automáticamente.</p>
 </td><td>
-<p>MakePRI.exe admite una opción denominada <strong>Combinar automáticamente</strong>. El valor predeterminado de <strong>Combinar automáticamente</strong> es <strong>desactivado</strong>. Cuando está habilitado, <strong>Combinar automáticamente</strong> combina los recursos del paquete de idioma de una aplicación en un solo resources.pri en tiempo de ejecución. No recomendamos esto para aplicaciones que intentas distribuir a través de la Tienda Windows. El archivo resources.pri de una aplicación que se distribuye a través de la Tienda Windows debe estar en la raíz del paquete de la aplicación y contener todas las referencias de idiomas que esa aplicación admite.</p>
+<p>MakePRI.exe admite una opción denominada <strong>Combinar automáticamente</strong>. El valor predeterminado de <strong>Combinar automáticamente</strong> es <strong>desactivado</strong>. Cuando está habilitado, <strong>Combinar automáticamente</strong> combina los recursos del paquete de idioma de una aplicación en un solo resources.pri en tiempo de ejecución. No se recomienda esto para las aplicaciones que se va a distribuir a través de la Microsoft Store. El resources.pri de una aplicación que se distribuye a través de la Microsoft Store debe estar en la raíz del paquete de la aplicación de y contienen todas las referencias de idioma que admite la aplicación.</p>
 </td></tr>
 <tr><td>
 <p>La cadena {string} no cumple la restricción de longitud máxima de {number} caracteres.</p>
@@ -484,7 +485,7 @@ Usa esta tabla como guía.
 
 ### <a name="branding-validation"></a>Validación de la personalización de marca
 
-Se espera que las aplicaciones de la Tienda Windows estén completas y sean absolutamente funcionales. Las aplicaciones que usan imágenes predeterminadas (de plantillas o muestras del SDK) ofrecen una experiencia mediocre al usuario y son difíciles de identificar en el catálogo de la tienda.
+Aplicaciones UWP se esperan que sea completa y totalmente funcional. Las aplicaciones que usan imágenes predeterminadas (de plantillas o muestras del SDK) ofrecen una experiencia mediocre al usuario y son difíciles de identificar en el catálogo de la tienda.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
@@ -500,7 +501,7 @@ Prueba la aplicación para asegurarte de que no sea una versión de depuración.
 
 ### <a name="background"></a>Antecedentes
 
-Para certificarse para la Tienda Windows, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
+Para conseguir la certificación para la Store Microsoft, no se deben compilar aplicaciones para depurar y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
@@ -508,7 +509,7 @@ Prueba la aplicación para asegurarte de que no sea una versión de depuración 
 
 ### <a name="corrective-actions"></a>Acciones correctivas
 
--   Compila la aplicación como una versión de lanzamiento antes de enviarla a la Tienda Windows.
+-   Crear la aplicación como una versión de lanzamiento antes de enviar a la Store Microsoft.
 -   Asegúrate de tener instalada la versión correcta de .NET Framework.
 -   Asegúrate de que la aplicación no esté vinculada a versiones de depuración de un marco de trabajo y que esté creada con una versión de lanzamiento. Si la aplicación incluye componentes .NET, comprueba si has instalado la versión correcta de .NET Framework.
 
@@ -536,7 +537,7 @@ Prueba las aplicaciones de Microsoft Direct3D para garantizar que no se bloquear
 
 ### <a name="background"></a>Antecedentes
 
-La Tienda Windows exige que todas las aplicaciones que usan Direct3D se representen de manera adecuada o finalicen correctamente en las tarjetas gráficas con el nivel de función 9\-1.
+Microsoft Store requiere todas las aplicaciones con Direct3D para representar correctamente o producir un error leve en las tarjetas de gráficos de nivel 1 de 9\ de característica.
 
 Debido a que los usuarios pueden cambiar el hardware gráfico de sus dispositivos después de instalar la aplicación, si eliges un nivel de función mínimo mayor de 9\-1, tu aplicación debe detectar al iniciarse si el hardware actual cumple los requisitos mínimos. Si no se cumplen los requisitos mínimos, la aplicación debe mostrar un mensaje al usuario en el que se detallan todos los requisitos de Direct3D. Asimismo, si se descarga una aplicación en un dispositivo con el que no es compatible, debe detectarlo en el inicio y mostrar al cliente un mensaje en el que se detallan los requisitos.
 
@@ -550,7 +551,7 @@ Asegúrate de que la aplicación se represente correctamente en el nivel de func
 
 ### <a name="direct3d-trim-after-suspend"></a>Recorte Direct3D tras suspensión
 
-> **Nota** Esta prueba solo se aplica a aplicaciones de la Tienda Windows desarrolladas para Windows 8.1 y versiones posteriores.
+> **Nota**  Esta prueba sólo se aplica a aplicaciones UWP desarrolladas para Windows 8.1 y versiones posteriores.
 
 ### <a name="background"></a>Antecedentes
 
@@ -585,7 +586,6 @@ Si se declara alguna de estas funcionalidades, la prueba muestra una advertencia
 ### <a name="corrective-actions"></a>Acciones correctivas
 
 Piensa en la posibilidad de quitar la función de uso especial si la aplicación no la necesita. Además, el uso de estas funcionalidades está sujeto a otras revisiones de las directivas de incorporación.
-<!--TODO: after migrating dev-packaging, link to [if your app doesn't require it](dev-packaging.app-capability-declarations#special-and-restricted-capabilities)-->
 
 ## <a name="windows-runtime-metadata-validation"></a>Validación de metadatos de Windows Runtime
 
@@ -668,10 +668,9 @@ Si la aplicación no cuenta con un archivo de tareas en segundo plano especifica
 
 Actualiza el código JavaScript en segundo plano para que llame a Close() correctamente.
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para UWP. Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Pruebas de aplicación Puente de dispositivo de escritorio de Windows](windows-desktop-bridge-app-tests.md)
-* [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
  

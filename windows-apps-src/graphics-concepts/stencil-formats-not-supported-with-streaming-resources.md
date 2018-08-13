@@ -1,8 +1,9 @@
 ---
-title: "Formatos de galerías de símbolos no compatibles con recursos de streaming"
-description: "Los formatos que contienen la galería de símbolos no son compatibles con los recursos de streaming."
+title: Formatos de galerías de símbolos no compatibles con recursos de streaming
+description: Los formatos que contienen la galería de símbolos no son compatibles con los recursos de streaming.
 ms.assetid: 90A572A4-3C76-4795-BAE9-FCC72B5F07AD
-keywords: "Formatos de galerías de símbolos no compatibles con recursos de streaming"
+keywords:
+- Formatos de galerías de símbolos no compatibles con recursos de streaming
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 330b768c0f00f36ce8ce539b9ce41c7ac812e6fc
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043234"
 ---
 # <a name="stencil-formats-not-supported-with-streaming-resources"></a>Formatos de galerías de símbolos no compatibles con recursos de streaming
 

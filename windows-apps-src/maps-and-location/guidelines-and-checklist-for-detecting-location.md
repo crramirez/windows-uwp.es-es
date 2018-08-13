@@ -1,17 +1,19 @@
 ---
 author: msatranjr
-Description: "En este tema se describen las directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario."
-title: "Directrices para las aplicaciones con reconocimiento de ubicación"
+Description: En este tema se describen las directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario.
+title: Directrices para las aplicaciones con reconocimiento de ubicación
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, ubicación, location, mapa, map, ubicación geográfica, geolocation"
+keywords: windows 10, uwp, ubicación, location, mapa, map, ubicación geográfica, geolocation
 ms.openlocfilehash: f2035762fe99e1692d8b8b5eea5260aeb39b8d2a
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "240355"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Directrices para las aplicaciones con reconocimiento de ubicación
 

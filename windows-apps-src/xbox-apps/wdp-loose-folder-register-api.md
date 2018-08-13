@@ -1,7 +1,7 @@
 ---
 author: WilliamsJason
-title: "Referencia de API de registro de carpeta dinámica de Device Portal"
-description: "Obtén información acerca de cómo tener acceso a las API de registro de carpeta dinámica mediante programación."
+title: Referencia de API de registro de carpeta dinámica de Device Portal
+description: Obtén información acerca de cómo tener acceso a las API de registro de carpeta dinámica mediante programación.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: windows 10, uwp
 ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
 ms.openlocfilehash: 59ecdb1994ffe1fe80da9301cea5d91c7e4e3a8d
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239913"
 ---
 # <a name="register-an-app-in-a-loose-folder"></a>Registrar una aplicación en una carpeta dinámica  
 

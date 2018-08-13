@@ -1,23 +1,24 @@
 ---
-author: mukin
+author: muhsinking
 ms.assetid: 4A4C2802-E674-4C04-8A6D-D7C1BBF1BD20
-title: "Propiedades de información de dispositivo"
-description: "Cada dispositivo tiene propiedades DeviceInformation asociadas que puedes usar cuando necesites información específica o al compilar un selector de dispositivos."
+title: Propiedades de información de dispositivo
+description: Cada dispositivo tiene propiedades DeviceInformation asociadas que puedes usar cuando necesites información específica o al compilar un selector de dispositivos.
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 37b88b501c3bdb0f38b04f2f7b6d936cb0d201b4
-ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: c8fe51fd98f70e6f920a7421a9932e69bba11377
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "959251"
 ---
 # <a name="device-information-properties"></a>Propiedades de información de dispositivo
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -34,7 +35,10 @@ Un objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/app
 
 Un objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) tiene algunas propiedades básicas como, por ejemplo, [**Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) y [**Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx), aunque la mayoría de las propiedades se almacenan en un contenedor de propiedades en [**Properties**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx). Por este motivo, el contenedor de propiedades contiene las propiedades que se usan para tomar como origen las propiedades del contenedor de propiedades. Por ejemplo, usa [System.ItemNameDisplay](https://msdn.microsoft.com/library/windows/desktop/Bb760770) para tomar como origen la propiedad [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name). Este es un caso de una propiedad habitual y conocida que tiene un nombre descriptivo. Windows proporciona varios nombres descriptivos con el fin de facilitar las consultas de propiedades.
 
-Cuando solicites propiedades, no estás limitado a las propiedades comunes con nombres descriptivos. Puedes especificar el GUID subyacente y el identificador de la propiedad (PID) para solicitar cualquier propiedad disponible, incluso las propiedades personalizadas proporcionadas por controladores o dispositivos individuales. El formato para especificar una propiedad personalizada es "`{GUID} PID`". Por ejemplo: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`"
+Cuando solicites propiedades, no estás limitado a las propiedades comunes con nombres descriptivos. Puedes especificar el GUID subyacente y el identificador de la propiedad (PID) para solicitar cualquier propiedad disponible, incluso las propiedades personalizadas proporcionadas por controladores o dispositivos individuales. El formato para especificar una propiedad personalizada es "`{GUID} PID`". Por ejemplo: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`". 
+
+> [!Note]
+> Puede encontrar la lista de GUID de propiedad en el archivo de encabezado de clave de propiedad de dispositivo del controlador del dispositivo.
 
 Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind), aunque la mayoría son únicas para un tipo específico. En las secciones siguientes se muestran algunas propiedades comunes que se ordenan por la enumeración individual **DeviceInformationKind**. Para obtener más información sobre cómo se relacionan los diferentes tipos entre sí, consulta **DeviceInformationKind**.
 

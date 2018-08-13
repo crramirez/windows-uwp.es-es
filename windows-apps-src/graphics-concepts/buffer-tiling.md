@@ -1,8 +1,9 @@
 ---
-title: "Mosaico de búfer"
-description: "Un recurso de búfer se divide en mosaicos de 64KB, con algo de espacio vacío en el último mosaico si el tamaño no es un múltiplo de 64KB."
+title: Mosaico de búfer
+description: Un recurso de búfer se divide en mosaicos de 64KB, con algo de espacio vacío en el último mosaico si el tamaño no es un múltiplo de 64KB.
 ms.assetid: 577DC6B0-F373-4748-AD80-2784C597C366
-keywords: "Mosaico de búfer"
+keywords:
+- Mosaico de búfer
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 03769964bfe3eff13314e62b8594edd5509b26fb
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044254"
 ---
 # <a name="buffer-tiling"></a>Mosaico de búfer
 

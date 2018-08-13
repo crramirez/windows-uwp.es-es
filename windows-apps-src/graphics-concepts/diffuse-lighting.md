@@ -1,8 +1,9 @@
 ---
 title: Luz difusa
-description: "La iluminación difusa depende de la dirección de la luz y la superficie normal del objeto."
+description: La iluminación difusa depende de la dirección de la luz y la superficie normal del objeto.
 ms.assetid: 8AF78742-76B1-4BBB-86E3-94AE6F48B847
-keywords: Luz difusa
+keywords:
+- Luz difusa
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 84036edd2071d9545b3a492ea5cf0b397d9e722e
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044434"
 ---
 # <a name="diffuse-lighting"></a>Luz difusa
 

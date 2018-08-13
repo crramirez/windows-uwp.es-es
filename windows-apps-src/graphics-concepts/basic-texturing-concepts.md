@@ -1,8 +1,9 @@
 ---
-title: "Conceptos básicos de texturas"
-description: "Las primeras imágenes 3D generadas por PC, si bien en general eran avanzadas para su época, solían tener una apariencia de plástico brillante."
+title: Conceptos básicos de texturas
+description: Las primeras imágenes 3D generadas por PC, si bien en general eran avanzadas para su época, solían tener una apariencia de plástico brillante.
 ms.assetid: 3CA3905D-E837-48EB-A81F-319AA1C6537E
-keywords: "Conceptos básicos de texturas"
+keywords:
+- Conceptos básicos de texturas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,15 +12,16 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7bbcdd17643f64ada02ff1045e57c873f40b2c36
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044694"
 ---
 # <a name="basic-texturing-concepts"></a>Conceptos básicos de texturas
 
 
-Las primeras imágenes 3D generadas por PC, si bien en general eran avanzadas para su época, solían tener una apariencia de plástico brillante. Carecían de los tipos de marcas (como rayas, fisuras, huellas digitales y manchas) que dan a los objetos 3D una complejidad visual realista. Las texturas se han vuelvo populares gracias a que mejoran el realismo de las imágenes 3D generadas por PC.
+Las primeras imágenes en 3D generadas por PC, aunque en general eran avanzadas para su época, solían tener una apariencia plástica y brillante. Carecían de los tipos de marcas (como rayas, fisuras, huellas digitales y manchas) que dan a los objetos 3D una complejidad visual realista. Las texturas se han vuelvo populares gracias a que mejoran el realismo de las imágenes 3D generadas por PC.
 
 En su uso cotidiano, la palabra "textura" hace referencia a la suavidad o rugosidad de un objeto. Sin embargo, en los gráficos para PC, una textura es un mapa de bits de colores de píxeles que dan a un objeto la apariencia de textura.
 

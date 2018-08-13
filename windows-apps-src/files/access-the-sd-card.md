@@ -2,7 +2,7 @@
 author: laurenhughes
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: Acceso a la tarjeta SD
-description: "Puedes almacenar datos no esenciales en una tarjeta microSD opcional y luego acceder a ellos, especialmente en los dispositivos móviles de bajo costo que tienen un almacenamiento interno limitado."
+description: Puedes almacenar datos no esenciales en una tarjeta microSD opcional y luego acceder a ellos, especialmente en los dispositivos móviles de bajo costo que tienen un almacenamiento interno limitado.
 ms.author: lahugh
 ms.date: 03/08/2017
 ms.topic: article
@@ -11,10 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, sd card, storage, tarjeta sd, almacenamiento
 ms.localizationpriority: medium
 ms.openlocfilehash: 44354bbacd5ea775c8a973fe7f82aaf65b3f70db
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "301941"
 ---
 # <a name="access-the-sd-card"></a>Acceder a la tarjeta SD
 

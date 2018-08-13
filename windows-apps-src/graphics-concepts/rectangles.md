@@ -1,8 +1,9 @@
 ---
-title: "Rectángulos"
-description: "En la programación de Direct3D y Windows, se hace referencia a los objetos de la pantalla en términos de rectángulos delimitadores."
+title: Rectángulos
+description: En la programación de Direct3D y Windows, se hace referencia a los objetos de la pantalla en términos de rectángulos delimitadores.
 ms.assetid: 3B78AE66-2C1A-4191-BDCA-D737E33460BA
-keywords: "Rectángulos"
+keywords:
+- Rectángulos
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c493b6189cfc8c396568ca42faa4162e40501f5
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043124"
 ---
 # <a name="rectangles"></a>Rectángulos
 

@@ -1,21 +1,24 @@
 ---
-author: mcleblanc
-description: "Tienes dos opciones cuando empieza el proceso de migración."
-title: "Migración de un proyecto de Windows Runtime 8.x a un proyecto de UWP"
+author: stevewhims
+description: Tienes dos opciones cuando empieza el proceso de migración.
+title: Migración de un proyecto de Windows Runtime 8.x a un proyecto de UWP
 ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d711d981a674d1516b12ee11c379e679c45dcb60
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d11bb56dab250a5dc6c5f32cf442a29f054d4fba
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "239203"
 ---
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Migración de un proyecto de Windows Runtime 8.x a un proyecto de UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Tienes dos opciones cuando empieza el proceso de migración. Una es editar una copia de los archivos de proyecto existentes, entre los que se incluye el manifiesto del paquete de la aplicación (para esta opción, consulta la información sobre cómo actualizar los archivos de proyecto en [Migrar aplicaciones a la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/mt148501.aspx)). La otra opción es crear un nuevo proyecto de Windows 10 en Visual Studio y copiar los archivos en él. En la primera sección de este tema se describe esa segunda opción, pero el resto del tema contiene información adicional aplicable a ambas opciones. También puedes mantener tu nuevo proyecto de Windows10 en la misma solución que tus proyectos existentes y compartir archivos de código fuente mediante un proyecto compartido. También puedes mantener el nuevo proyecto en una solución específica y compartir archivos de código fuente mediante la característica de archivos vinculados de Visual Studio.
@@ -24,7 +27,7 @@ Tienes dos opciones cuando empieza el proceso de migración. Una es editar una c
 
 Estos pasos se centran en la opción de crear un nuevo proyecto de Windows 10 en Visual Studio y copiar los archivos en él. Algunos de los aspectos específicos relacionados con el número de proyectos que creas y qué archivos copias, dependerán de los factores y decisiones descritos en [Si tienes una aplicación Universal 8.1](w8x-to-uwp-root.md) y las secciones siguientes. Estos pasos suponen el caso más simple.
 
-1.  Inicia Microsoft Visual Studio 2015 y crea un nuevo proyecto de aplicación vacía (universal de Windows). Para obtener más información, consulta [Cómo empezar a desarrollar rápidamente aplicaciones de la Tienda Windows mediante plantillas (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Tu nuevo proyecto crea un paquete de la aplicación (un archivo appx) que se ejecutará en todas las familias de dispositivo.
+1.  Inicia Microsoft Visual Studio 2015 y crea un nuevo proyecto de aplicación vacía (universal de Windows). Para obtener más información, vea [la aplicación de tiempo de ejecución de Windows 8.x Jumpstart uso de plantillas (C#, en C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Tu nuevo proyecto crea un paquete de la aplicación (un archivo appx) que se ejecutará en todas las familias de dispositivo.
 2.  En tu proyecto de aplicación Universal 8.1, identifica todos los archivos de código fuente y los archivos de activos visuales que quieres reutilizar. Con el Explorador de archivos, copia los modelos de datos, los modelos de vista, los recursos visuales, los diccionarios de recursos, la estructura de carpetas y cualquier otro elemento que quieras reutilizar en tu nuevo proyecto. Copia o crea subcarpetas en el disco según sea necesario.
 3.  Copia vistas (por ejemplo, MainPage.xaml y MainPage.xaml.cs) en el nuevo proyecto también. De nuevo, crea nuevas subcarpetas según sea necesario y quita las vistas existentes del proyecto. Pero antes de sobrescribir o quitar una vista que Visual Studio ha generado, conserva una copia, ya que puede resultar útil consultarla más adelante. La primera fase de migración de una aplicación Universal 8.1 se centra en que tenga un buen aspecto y funcione correctamente en una familia de dispositivos. Más adelante, desviarás tu atención a asegurarte de que las vistas de adaptan correctamente a todos los factores de forma y, opcionalmente, a agregar código adaptable para obtener el máximo partido de una familia de dispositivos en particular.
 4.  En el **Explorador de soluciones**, asegúrate de que **Mostrar todos los archivos** esté activado. Selecciona los archivos que has copiado, haz clic con el botón secundario en ellos y haz clic en **Incluir en el proyecto**. Esto incluirá automáticamente sus carpetas contenedoras. Entonces puedes desactivar **Mostrar todos los archivos** si quieres. Un flujo de trabajo alternativo, si lo prefieres, es usar el comando **Agregar elemento existente**, después de crear las subcarpetas necesarias en el **Explorador de soluciones** de Visual Studio. Vuelve a comprobar que los recursos visuales tienen la opción **Acción de compilación** establecida en **Contenido** y la opción **Copiar en el directorio de resultados** establecida en **No copiar**.
@@ -174,7 +177,7 @@ El siguiente tema es [Solución de problemas](w8x-to-uwp-troubleshooting.md).
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Desarrollar aplicaciones para la Plataforma universal de Windows.](http://msdn.microsoft.com/library/dn975273.aspx)
-* [Impulso de aplicaciones de la Tienda Windows con plantillas (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
+* [JumpStart su tiempo de ejecución de Windows aplicación 8.x uso de plantillas (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Creación de componentes de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [Desarrollo multiplataforma con la biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391.aspx)
 

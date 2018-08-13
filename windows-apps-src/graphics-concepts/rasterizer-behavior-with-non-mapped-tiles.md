@@ -1,8 +1,9 @@
 ---
 title: Comportamiento de rasterizador con iconos sin asignar
-description: "En esta sección se describe un comportamiento de rasterizador con iconos sin asignar."
+description: En esta sección se describe un comportamiento de rasterizador con iconos sin asignar.
 ms.assetid: AC7B818D-E52B-4727-AEA2-39CFDC279CE7
-keywords: Comportamiento de rasterizador con iconos sin asignar
+keywords:
+- Comportamiento de rasterizador con iconos sin asignar
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 218b53872fc8fd99a961dceefd2bfbd091c52511
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1043674"
 ---
 # <a name="span-iddirect3dconceptsrasterizerbehaviorwithnon-mappedtilesspanrasterizer-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.rasterizer_behavior_with_non-mapped_tiles"></span>Comportamiento de rasterizador con iconos sin asignar
 

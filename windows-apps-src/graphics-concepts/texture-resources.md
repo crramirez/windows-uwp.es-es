@@ -1,8 +1,9 @@
 ---
 title: Recursos de texturas
-description: "Las texturas son un tipo de recurso usado para la representación."
+description: Las texturas son un tipo de recurso usado para la representación.
 ms.assetid: 016F6CDA-D361-4E6B-BA99-49E915A19364
-keywords: Recursos de texturas
+keywords:
+- Recursos de texturas
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,10 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7991d4e611bc27c59f9d63b5ff1d34823f60ed60
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044464"
 ---
 # <a name="texture-resources"></a>Recursos de texturas
 
