@@ -2,7 +2,7 @@
 author: mcleblanc
 ms.assetid: 83b4be37-6613-4d00-a48a-0451a24a30fb
 title: Enlace de datos
-description: "El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos."
+description: El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos.
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 9af7c4a3bf5cfacf8fcdddc276c4cff127ae9ea8
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238403"
 ---
 # <a name="data-binding"></a>Enlace de datos
 
