@@ -1,8 +1,8 @@
 ---
 author: mcleblanc
-title: "Elección de un lenguaje de programación"
+title: Elección de un lenguaje de programación
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
-description: "Elección de un lenguaje de programación"
+description: Elección de un lenguaje de programación
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: b20066ffbd32984d20fdbdcc0915ef10332c6f12
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239214"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>Introducción: elección de un lenguaje de programación
 

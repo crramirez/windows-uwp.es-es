@@ -1,8 +1,8 @@
 ---
 author: mcleblanc
-title: "Tareas iniciales con animación"
+title: Tareas iniciales con animación
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
-description: "En este proyecto, moveremos un rectángulo, le aplicaremos un efecto de atenuación y después lo volveremos a mostrar."
+description: En este proyecto, moveremos un rectángulo, le aplicaremos un efecto de atenuación y después lo volveremos a mostrar.
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: a45de584c4374afefe0fdca198eb7234351ac42d
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239317"
 ---
 # <a name="getting-started-animation"></a>Introducción: animación
 

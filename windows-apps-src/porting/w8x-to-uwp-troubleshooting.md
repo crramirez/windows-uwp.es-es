@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
-description: "Se recomienda leer hasta el final esta guía de migración, aunque somos conscientes de que estás deseando seguir avanzando y llegar a la fase de compilación y ejecución de tu proyecto."
-title: "Solución de problemas de migración de Windows Runtime 8.x a UWP"
+description: Se recomienda leer hasta el final esta guía de migración, aunque somos conscientes de que estás deseando seguir avanzando y llegar a la fase de compilación y ejecución de tu proyecto.
+title: Solución de problemas de migración de Windows Runtime 8.x a UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
 ms.author: markl
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: b30d26041718a74b9e2f3b9b93440e8fdf02b6c5
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239887"
 ---
 # <a name="troubleshooting-porting-windows-runtime-8x-to-uwp"></a>Solución de problemas de migración de Windows Runtime 8.x a UWP
 

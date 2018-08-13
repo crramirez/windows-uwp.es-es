@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
-description: "Introducción a UWP para desarrolladores de iOS"
-title: "Introducción a UWP para desarrolladores de iOS"
+description: Introducción a UWP para desarrolladores de iOS
+title: Introducción a UWP para desarrolladores de iOS
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
 ms.author: markl
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 8b1d7259d16ba963d19c7656ff2572fa659a1710
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239177"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Introducción a UWP para desarrolladores de iOS
 

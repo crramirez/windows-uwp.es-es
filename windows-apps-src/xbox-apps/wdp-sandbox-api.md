@@ -1,7 +1,7 @@
 ---
 author: payzer
 title: Referencia de API de espacio aislado de Xbox Live de Device Portal
-description: "Obtén información sobre cómo tener acceso al espacio aislado de Xbox Live mediante programación."
+description: Obtén información sobre cómo tener acceso al espacio aislado de Xbox Live mediante programación.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: windows 10, uwp
 ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 ms.openlocfilehash: d31c943336b36c325218b0b2a8830daf54ed25ca
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239742"
 ---
 # <a name="xbox-live-sandbox-api-reference"></a>Referencia de API de espacio aislado de Xbox Live   
 Puedes obtener y configurar el espacio aislado de Xbox Live con esta API de REST.

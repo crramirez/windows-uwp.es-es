@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Optimizar la latencia de entrada para juegos de DirectX para UWP
-description: "La latencia de entrada puede influir considerablemente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida."
+description: La latencia de entrada puede influir considerablemente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida.
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, DirectX, input latency, latencia de entrada
 ms.openlocfilehash: cf83b02a6388f71f94641e7c24e011a540790fa0
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238728"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
 

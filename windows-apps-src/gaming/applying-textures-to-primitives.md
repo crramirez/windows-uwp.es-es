@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Aplicar texturas en primitivos
-description: "Aquí te mostramos cómo cargar datos de texturas sin procesar y cómo aplicar esos datos a un primitivo 3D, mediante el cubo que creamos en Usar profundidad y efectos en primitivos."
+description: Aquí te mostramos cómo cargar datos de texturas sin procesar y cómo aplicar esos datos a un primitivo 3D, mediante el cubo que creamos en Usar profundidad y efectos en primitivos.
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP, juegos, texturas, DirectX
 ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "238742"
 ---
 # <a name="apply-textures-to-primitives"></a>Aplicar texturas en primitivos
 

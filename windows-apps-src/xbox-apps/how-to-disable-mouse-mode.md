@@ -1,6 +1,6 @@
 ---
 author: payzer
-title: "Cómo deshabilitar el modo de mouse"
+title: Cómo deshabilitar el modo de mouse
 description: Instrucciones para deshabilitar el modo de mouse predeterminado.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ keywords: windows 10, uwp
 ms.assetid: e57ee4e6-7807-4943-a933-c2b4dc80fc01
 ms.openlocfilehash: 980779b110523ceecf608b5077cb8446fb9a1e2b
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239850"
 ---
 # <a name="how-to-disable-mouse-mode"></a>Cómo deshabilitar el modo de mouse
 El modo de mouse está activado de manera predeterminada para todas las aplicaciones, lo que significa que todas las aplicaciones que no lo hayan deshabilitado voluntariamente tendrán un puntero de mouse (similar al que se muestra en el navegador Edge en la consola). Te recomendamos encarecidamente que lo desactives y optimices la navegación con el mando de dirección.   

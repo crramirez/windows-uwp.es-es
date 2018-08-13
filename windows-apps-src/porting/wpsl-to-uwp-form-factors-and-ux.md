@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
-description: "Las aplicaciones de Windows comparten una apariencia común entre PC, dispositivos móviles y muchos otros tipos de dispositivos. La interfaz de usuario, las entradas y los patrones de interacción son muy similares, y un usuario que se mueve entre dispositivos agradecerá la experiencia familiar."
-title: "Migración de Windows Phone Silverlight a UWP para factor de forma y experiencia del usuario"
+description: Las aplicaciones de Windows comparten una apariencia común entre PC, dispositivos móviles y muchos otros tipos de dispositivos. La interfaz de usuario, las entradas y los patrones de interacción son muy similares, y un usuario que se mueve entre dispositivos agradecerá la experiencia familiar.
+title: Migración de Windows Phone Silverlight a UWP para factor de forma y experiencia del usuario
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
 ms.author: markl
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 23afad0c6499950d13d9771a5f0286403a5fe886
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239781"
 ---
 #  <a name="porting-windows-phone-silverlight-to-uwp-for-form-factor-and-ux"></a>Migración de Windows Phone Silverlight a UWP para factor de forma y experiencia del usuario
 

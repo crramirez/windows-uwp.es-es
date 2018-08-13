@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 30849b23e9fbdca38f8401afe0f6f7df4b498121
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "239304"
 ---
 # <a name="getting-started-getting-around-in-visual-studio"></a>Tareas iniciales: desplazamiento por Visual Studio
 

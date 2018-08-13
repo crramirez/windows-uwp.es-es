@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: Convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso
-description: "Puedes convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso que se ejecuta en el proceso de la aplicación en primer plano."
+description: Puedes convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso que se ejecuta en el proceso de la aplicación en primer plano.
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: Windows 10, UWP
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.openlocfilehash: 390e7255e381bdbb004bfe5e0e95f3ccbcbeb490
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "239097"
 ---
 # <a name="convert-an-out-of-process-background-task-to-an-in-process-background-task"></a>Convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso
 

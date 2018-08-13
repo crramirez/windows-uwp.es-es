@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
-description: "En este artículo se muestra cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows."
+description: En este artículo se muestra cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows.
 title: Transmitir contenido multimedia
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 8ba90e1538962fdb7ef1434698ea52845713c634
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238764"
 ---
 # <a name="media-casting"></a>Transmitir contenido multimedia
 
