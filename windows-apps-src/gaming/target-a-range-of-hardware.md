@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Compatibilidad con mapas de sombras en una variedad de hardware
-description: "Representa sombras de mayor fidelidad en dispositivos más veloces, y sombras más rápidas en dispositivos menos eficaces."
+description: Representa sombras de mayor fidelidad en dispositivos más veloces, y sombras más rápidas en dispositivos menos eficaces.
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp, juegos, mapas de sombras, directx
 ms.openlocfilehash: e4cffcf1e9655d5bc5dacbfc17cb64b5671d7551
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "238694"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a>Compatibilidad con mapas de sombras en una variedad de hardware
 

@@ -1,22 +1,25 @@
 ---
 author: mtoepke
-title: "Recursos de programación de juegos"
-description: "Para obtener más información sobre la programación de juegos en Windows, consulta los siguientes recursos."
+title: Recursos de programación de juegos
+description: Para obtener más información sobre la programación de juegos en Windows, consulta los siguientes recursos.
 ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, juegos, programación"
-ms.openlocfilehash: 736f5f5864edc9c7a976e8e0f062779ddd1f86c5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: Windows 10, UWP, juegos, programación
+ms.localizationpriority: medium
+ms.openlocfilehash: e842350b7fd81c3f617d5e5a27c9f2f9466b64f6
+ms.sourcegitcommit: 81c4c44c42c629a7ad5a82abdc2f4bbd6515f314
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "238687"
 ---
 # <a name="game-programming-resources"></a>Recursos de programación de juegos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Para obtener más información sobre la programación de juegos en Windows, consulta los siguientes recursos.
@@ -30,7 +33,7 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 ## <a name="game-design-guidance"></a>Guía de diseño de juegos
 
 
--   [Índice de las directrices sobre la experiencia del usuario para aplicaciones de la TiendaWindows](https://msdn.microsoft.com/library/windows/apps/hh465424)
+-   [Instrucciones del índice de experiencia de usuario para las aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/hh465424)
 
 ## <a name="blogs"></a>Blogs
 
@@ -46,7 +49,7 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 -   [Biblioteca de procesamiento de texturas de DirectXTex](  http://go.microsoft.com/fwlink/p/?LinkID=248926)
 -   [Diagnóstico de gráficos](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx) de Microsoft Visual Studio
 -   [Win2D](https://github.com/Microsoft/Win2D): Una API de Windows Runtime fácil de usar para la representación de elementos gráficos 2D de modo inmediato con aceleración de GPU.
--   [ANGLE for Windows Store](http://go.microsoft.com/fwlink/p/?linkid=618387) (ANGLE para la Tienda Windows): Ejecuta contenido OpenGL ES en Windows mediante la conversión de llamadas a la API de OpenGL ES a llamadas a la API de DirectX 11.
+-   [Ángulo de almacenamiento de Microsoft](http://go.microsoft.com/fwlink/p/?linkid=618387) - contenido ES de OpenGL se ejecuta en Windows mediante la traducción de las llamadas de API de ES de OpenGL llamadas a la API de DirectX 11.
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Vídeos de las sesiones de GDC 2015 sobre el desarrollo de juegos
 

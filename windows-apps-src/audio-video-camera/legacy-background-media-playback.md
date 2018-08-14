@@ -1,8 +1,8 @@
 ---
 author: drewbatgit
 ms.assetid: 3848cd72-eccd-400e-93ff-13649cd81b6c
-description: "En este artículo se proporciona compatibilidad para las aplicaciones que usan el modelo multimedia heredado en segundo plano para la reproducción y se ofrecen instrucciones para la migración al nuevo modelo."
-title: "Reproducción de contenido multimedia heredado en segundo plano"
+description: En este artículo se proporciona compatibilidad para las aplicaciones que usan el modelo multimedia heredado en segundo plano para la reproducción y se ofrecen instrucciones para la migración al nuevo modelo.
+title: Reproducción de contenido multimedia heredado en segundo plano
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 68695125c2056adca8186120db7875cb3a68baf8
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238677"
 ---
 # <a name="legacy-background-media-playback"></a>Reproducción de contenido multimedia heredado en segundo plano
 

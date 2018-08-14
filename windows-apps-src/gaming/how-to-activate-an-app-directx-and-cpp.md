@@ -1,18 +1,19 @@
 ---
 author: mtoepke
-title: "Cómo activar una aplicación (DirectX y C++)"
-description: "En este tema se muestra cómo definir la experiencia de activación de una aplicación DirectX para la Plataforma universal de Windows (UWP)."
+title: Cómo activar una aplicación (DirectX y C++)
+description: En este tema se muestra cómo definir la experiencia de activación de una aplicación DirectX para la Plataforma universal de Windows (UWP).
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, juegos, games, directx, activación, activation"
+keywords: windows 10, uwp, juegos, games, directx, activación, activation
 ms.openlocfilehash: 4d3585e28ca4a3665a881df4f16a3cc3f82fcc52
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "238509"
 ---
 # <a name="how-to-activate-an-app-directx-and-c"></a>Cómo activar una aplicación (DirectX y C++)
 

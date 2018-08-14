@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Crear sombreadores y dibujar primitivos
-description: "Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla."
+description: Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla.
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP, juegos, sombreadores, primitivos, DirectX
 ms.openlocfilehash: 62f4b9b641a3c365659e44893a8a7801f2c1f6c0
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "238661"
 ---
 # <a name="create-shaders-and-drawing-primitives"></a>Crear sombreadores y dibujar primitivos
 

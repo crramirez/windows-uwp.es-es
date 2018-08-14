@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Usar profundidad y efectos en primitivos
-description: "Aquí te mostramos cómo usar la profundidad, la perspectiva, el color y otros efectos en primitivos."
+description: Aquí te mostramos cómo usar la profundidad, la perspectiva, el color y otros efectos en primitivos.
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp, juegos, profundidad, efectos, primitivos, directx
 ms.openlocfilehash: 923bce3dd5f340b97fd6d4e7b31c4ed2e949ca94
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "238709"
 ---
 # <a name="use-depth-and-effects-on-primitives"></a>Usar profundidad y efectos en primitivos
 

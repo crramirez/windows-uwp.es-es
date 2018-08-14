@@ -1,17 +1,19 @@
 ---
 author: mtoepke
-title: "Programación asincrónica (DirectX y C++)"
-description: "En este tema se tratan diversos aspectos que deben tenerse en cuenta al usar la programación asincrónica y los subprocesos con DirectX."
+title: Programación asincrónica (DirectX y C++)
+description: En este tema se tratan diversos aspectos que deben tenerse en cuenta al usar la programación asincrónica y los subprocesos con DirectX.
 ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, juegos, programación asincrónica, DirectX"
+keywords: Windows 10, UWP, juegos, programación asincrónica, DirectX
 ms.openlocfilehash: fe3798e475654d4d0ae7773ac26889906d40b3df
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238595"
 ---
 # <a name="asynchronous-programming-directx-and-c"></a>Programación asincrónica (DirectX y C++)
 

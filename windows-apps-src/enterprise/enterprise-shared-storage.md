@@ -2,7 +2,7 @@
 author: mcleblanc
 ms.assetid: B48E21AB-0EA5-444B-8333-393DD8D1B76D
 title: Almacenamiento compartido de empresa
-description: "El almacenamiento compartido de empresa define las ubicaciones de los datos locales de las aplicaciones de línea de negocio para compartir datos."
+description: El almacenamiento compartido de empresa define las ubicaciones de los datos locales de las aplicaciones de línea de negocio para compartir datos.
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 3f04d00da3fce4674f344129910917e9585e8723
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.locfileid: "238436"
 ---
 # <a name="enterprise-shared-storage"></a>Almacenamiento compartido de empresa
 

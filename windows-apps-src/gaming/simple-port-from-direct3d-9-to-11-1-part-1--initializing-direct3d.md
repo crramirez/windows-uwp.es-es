@@ -1,17 +1,19 @@
 ---
 author: mtoepke
 title: Inicializar Direct3D 11
-description: "Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio."
+description: Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio.
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, juegos, direct3d 11, inicialización, migrar, direct3d 9"
+keywords: windows 10, uwp, juegos, direct3d 11, inicialización, migrar, direct3d 9
 ms.openlocfilehash: d4c4c905ad7d7452251ad13d95cbdc53b137c6c8
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238566"
 ---
 # <a name="initialize-direct3d-11"></a>Inicializar Direct3D11
 

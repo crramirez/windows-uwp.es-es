@@ -1,17 +1,19 @@
 ---
 author: mtoepke
-title: "Cómo suspender una aplicación (DirectX y C++)"
-description: "En este tema verás cómo guardar datos importantes de la aplicación y del estado del sistema cuando el sistema suspende la aplicación DirectX para la Plataforma universal de Windows (UWP)."
+title: Cómo suspender una aplicación (DirectX y C++)
+description: En este tema verás cómo guardar datos importantes de la aplicación y del estado del sistema cuando el sistema suspende la aplicación DirectX para la Plataforma universal de Windows (UWP).
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, juegos, games, suspensión, suspend, directx"
+keywords: Windows 10, uwp, juegos, games, suspensión, suspend, directx
 ms.openlocfilehash: 028350f3e4bf6bda5a72663c009e8117c9311b3e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238545"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>Cómo suspender una aplicación (DirectX y C++)
 

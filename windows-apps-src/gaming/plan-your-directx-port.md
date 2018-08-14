@@ -1,17 +1,19 @@
 ---
 author: mtoepke
-title: "Planear la migración de DirectX"
-description: "Planea un proyecto para migrar un juego de DirectX 9 a DirectX 11 y a la Plataforma universal de Windows (UWP): actualiza el código de gráficos y coloca el juego en el entorno de Windows Runtime."
+title: Planear la migración de DirectX
+description: 'Planea un proyecto para migrar un juego de DirectX 9 a DirectX 11 y a la Plataforma universal de Windows (UWP): actualiza el código de gráficos y coloca el juego en el entorno de Windows Runtime.'
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, DirectX, port, migración"
+keywords: Windows 10, UWP, DirectX, port, migración
 ms.openlocfilehash: e255bceae44ace0722a2df0c53d60ec0f8fa35fe
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238548"
 ---
 # <a name="plan-your-directx-port"></a>Planear la migración de DirectX
 

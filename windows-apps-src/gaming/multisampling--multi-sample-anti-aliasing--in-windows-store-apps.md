@@ -1,17 +1,19 @@
 ---
 author: mtoepke
-title: "Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)"
-description: "Obtén información sobre cómo usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D."
+title: Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)
+description: Obtén información sobre cómo usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, juegos, muestreo múltiple, direct3d, games, multisampling"
+keywords: Windows 10, UWP, juegos, muestreo múltiple, direct3d, games, multisampling
 ms.openlocfilehash: 7748bf4c2d1654dad77d5971487330d3530d9e84
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238606"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)
 

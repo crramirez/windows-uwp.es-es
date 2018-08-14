@@ -1,7 +1,7 @@
 ---
 author: laurenhughes
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
-description: "En este artículo se muestra cómo leer y escribir propiedades de metadatos de imagen y cómo incluir geoetiquetas en archivos mediante la clase de utilidad GeotagHelper."
+description: En este artículo se muestra cómo leer y escribir propiedades de metadatos de imagen y cómo incluir geoetiquetas en archivos mediante la clase de utilidad GeotagHelper.
 title: Metadatos de imagen
 ms.author: lahugh
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: e69508ae558d93281e0170913fa0ccdc5891cc64
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238569"
 ---
 # <a name="image-metadata"></a>Metadatos de imagen
 

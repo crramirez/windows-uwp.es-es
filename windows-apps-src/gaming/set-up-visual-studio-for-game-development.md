@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Herramientas de Visual Studio para programación de juegos"
-description: "Aquí encontrarás información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio."
+title: Herramientas de Visual Studio para programación de juegos
+description: Aquí encontrarás información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio.
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, uwp, juegos, visual studio, herramientas, directx
 ms.openlocfilehash: 5f5c1ef45dd476565d302ef10f8d47ab2b819993
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238577"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Herramientas de Visual Studio para la programación de juegos
 

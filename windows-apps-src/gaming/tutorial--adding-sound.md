@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Agregar sonido
-description: "En este paso, examinaremos el modo en que la muestra del juego de disparos crea un objeto para la reproducción de sonido usando las API de XAudio2."
+description: En este paso, examinaremos el modo en que la muestra del juego de disparos crea un objeto para la reproducción de sonido usando las API de XAudio2.
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp, juegos, sonidos
 ms.openlocfilehash: 11553a22274a36094a3e839e8fda648f78cfaaf8
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.locfileid: "238697"
 ---
 # <a name="add-sound"></a>Agregar sonido
 
