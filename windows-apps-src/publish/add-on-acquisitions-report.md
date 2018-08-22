@@ -4,22 +4,23 @@ Description: The Add-on acquisitions report in the Windows Dev Center dashboard 
 title: Informe de adquisiciones de complementos
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
-ms.date: 02/13/2018
+ms.date: 05/24/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, ventas de complementos, adquisiciones de complementos, ventas de iap, productos desde la aplicación, IAP, complementos
-ms.localizationpriority: high
-ms.openlocfilehash: 5b8d0bb140206612a5096f48d87029b2285a0770
-ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2790164"
 ---
 # <a name="add-on-acquisitions-report"></a>Informe de adquisiciones de complementos
 
 
-En el informe de **adquisiciones de complementos** del panel del Centro de desarrollo de Windows puedes ver cuántos complementos has vendido, junto con los detalles demográficos y de plataforma. También te permite obtener información de conversión de los clientes de Windows10 (incluido Xbox).
+El informe de **adquisiciones de complemento** en el panel del centro de desarrollo de Windows le permite ver cómo muchos complementos ha vendido, junto con demográficos y detalles de plataforma y muestra información de conversión para los clientes en 10 de Windows (incluidos Xbox). También puede ver cerca de datos en tiempo real de adquisición para el último período o 72 horas.
 
 Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de complementos](../monetize/get-in-app-acquisitions.md) en la [API de REST de análisis de la Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
@@ -31,7 +32,7 @@ En este informe, una adquisición de complemento significa que un cliente te ha 
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques.
+Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puede seleccionar **1 H** o **H 72** para mostrar datos de adquisición en casi en tiempo real para una hora o 72 horas; estos períodos de tiempo sólo se aplican a la ficha **complementos diariamente** del gráfico **adquisiciones de complemento** y a la ficha **adquisiciones** del gráfico **mercados** . 
 
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por complementos específicos, por mercado o por tipo de dispositivo.
 

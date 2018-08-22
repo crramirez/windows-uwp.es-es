@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.localizationpriority: high
-ms.openlocfilehash: 0bd24b7b155a7f0d293e49e34ca92f02d99ea787
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d6132c2ede9f14cd1f4d29195916c8b484abfe9f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801739"
 ---
 # <a name="create-add-on-store-listings"></a>Crear descripciones de la Tienda de los complementos
 

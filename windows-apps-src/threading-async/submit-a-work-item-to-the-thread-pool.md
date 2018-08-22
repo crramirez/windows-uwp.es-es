@@ -2,18 +2,20 @@
 author: normesta
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: Enviar un elemento de trabajo al grupo de subprocesos
-description: "Obtén información acerca de cómo trabajar en un subproceso distinto mediante el envío de un elemento de trabajo al grupo de subprocesos."
+description: Obtén información acerca de cómo trabajar en un subproceso distinto mediante el envío de un elemento de trabajo al grupo de subprocesos.
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, subprocesos, grupo de subprocesos
-ms.openlocfilehash: eb1bcccb9657750c434a2090e22fbd3fc89dc0fa
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 29d7fc361e446207c8e14f83ca3f663bd5072e6e
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800022"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
@@ -32,170 +34,244 @@ Crea un elemento de trabajo mediante una llamada a [**RunAsync**](https://msdn.m
 
 Hay tres versiones de [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) disponibles para que puedas especificar opcionalmente la prioridad del elemento de trabajo, así como controlar si se ejecuta simultáneamente con otros elementos de trabajo.
 
-**Nota** Usa [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+>[!NOTE]
+>Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para tener acceso el subproceso de la interfaz de usuario y mostrar progreso desde el elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda para que realice el trabajo:
 
-> [!div class="tabbedCodeSnippets"]
-> ``` cpp
-> // The nth prime number to find.
-> const unsigned int n = 9999;
->
-> // A shared pointer to the result.
-> // We use a shared pointer to keep the result alive until the
-> // thread is done.
-> std::shared_ptr<unsigned long> nthPrime = make_shared<unsigned long int>(0);
->
-> // Simulates work by searching for the nth prime number. Uses a
-> // naive algorithm and counts 2 as the first prime number.
-> auto workItem = ref new WorkItemHandler(
->     \[this, n, nthPrime](IAsyncAction^ workItem)
-> {
->     unsigned int progress = 0; // For progress reporting.
->     unsigned int primes = 0;   // Number of primes found so far.
->     unsigned long int i = 2;   // Number iterator.
->
->     if ((n >= 0) && (n <= 2))
->     {
->         *nthPrime = n;
->         return;
->     }
->
->     while (primes < (n - 1))
->     {
->         if (workItem->Status == AsyncStatus::Canceled)
->         {
->             break;
->         }
->
->         // Go to the next number.
->         i++;
->
->         // Check for prime.
->         bool prime = true;
->         for (unsigned int j = 2; j < i; ++j)
->         {
->             if ((i % j) == 0)
->             {
->                 prime = false;
->                 break;
->             }
->         };
->
->         if (prime)
->         {
->             // Found another prime number.
->             primes++;
->
->             // Report progress at every 10 percent.
->             unsigned int temp = progress;
->             progress = static_cast<unsigned int>(10.f*primes / n);
->
->             if (progress != temp)
->             {
->                 String^ updateString;
->                 updateString = "Progress to " + n + "th prime: "
->                     + (10 * progress).ToString() + "%\n";
->
->                 // Update the UI thread with the CoreDispatcher.
->                 CoreApplication::MainView->CoreWindow->Dispatcher->RunAsync(
->                     CoreDispatcherPriority::High,
->                     ref new DispatchedHandler([this, updateString]()
->                 {
->                     UpdateUI(updateString);
->                 }));
->             }
->         }
->     }
->     // Return the nth prime number.
->     *nthPrime = i;
-> });
->
-> auto asyncAction = ThreadPool::RunAsync(workItem);
->
-> // A reference to the work item is cached so that we can trigger a
-> // cancellation when the user presses the Cancel button.
-> m_workItem = asyncAction;
-> ```
-> ``` csharp
-> // The nth prime number to find.
-> const uint n = 9999;
->
-> // A shared pointer to the result.
-> // We use a shared pointer to keep the result alive until the
-> // thread is done.
-> ulong nthPrime = 0;
->
-> // Simulates work by searching for the nth prime number. Uses a
-> // naive algorithm and counts 2 as the first prime number.
-> IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync(
->     (workItem) =>
-> {
->     uint  progress = 0; // For progress reporting.
->     uint  primes = 0;   // Number of primes found so far.
->     ulong i = 2;        // Number iterator.
->
->     if ((n >= 0) && (n <= 2))
->     {
->         nthPrime = n;
->         return;
->     }
->
->     while (primes < (n - 1))
->     {
->         if (workItem.Status == AsyncStatus.Canceled)
->         {
->             break;
->         }
->
->         // Go to the next number.
->         i++;
->
->         // Check for prime.
->         bool prime = true;
->         for (uint j = 2; j < i; ++j)
->         {
->             if ((i % j) == 0)
->             {
->                 prime = false;
->                 break;
->             }
->         };
->
->         if (prime)
->         {
->             // Found another prime number.
->             primes++;
->
->             // Report progress at every 10 percent.
->             uint temp = progress;
->             progress = (uint)(10.0*primes/n);
->
->             if (progress != temp)
->             {
->                 String updateString;
->                 updateString = "Progress to " + n + "th prime: "
->                     + (10 * progress) + "%\n";
->
->                 // Update the UI thread with the CoreDispatcher.
->                 CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
->                     CoreDispatcherPriority.High,
->                     new DispatchedHandler(() =>
->                 {
->                     UpdateUI(updateString);
->                 }));
->             }
->         }
->     }
->
->     // Return the nth prime number.
->     nthPrime = i;
-> });
->
-> // A reference to the work item is cached so that we can trigger a
-> // cancellation when the user presses the Cancel button.
-> m_workItem = asyncAction;
-> ```
+```csharp
+// The nth prime number to find.
+const uint n = 9999;
+
+// A shared pointer to the result.
+// We use a shared pointer to keep the result alive until the
+// thread is done.
+ulong nthPrime = 0;
+
+// Simulates work by searching for the nth prime number. Uses a
+// naive algorithm and counts 2 as the first prime number.
+IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync(
+    (workItem) =>
+{
+    uint  progress = 0; // For progress reporting.
+    uint  primes = 0;   // Number of primes found so far.
+    ulong i = 2;        // Number iterator.
+
+    if ((n >= 0) && (n <= 2))
+    {
+        nthPrime = n;
+        return;
+    }
+
+    while (primes < (n - 1))
+    {
+        if (workItem.Status == AsyncStatus.Canceled)
+        {
+            break;
+        }
+
+        // Go to the next number.
+        i++;
+
+        // Check for prime.
+        bool prime = true;
+        for (uint j = 2; j < i; ++j)
+        {
+            if ((i % j) == 0)
+            {
+                prime = false;
+                break;
+            }
+        };
+
+        if (prime)
+        {
+            // Found another prime number.
+            primes++;
+
+            // Report progress at every 10 percent.
+            uint temp = progress;
+            progress = (uint)(10.0*primes/n);
+
+            if (progress != temp)
+            {
+                String updateString;
+                updateString = "Progress to " + n + "th prime: "
+                    + (10 * progress) + "%\n";
+
+                // Update the UI thread with the CoreDispatcher.
+                CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
+                    CoreDispatcherPriority.High,
+                    new DispatchedHandler(() =>
+                {
+                    UpdateUI(updateString);
+                }));
+            }
+        }
+    }
+
+    // Return the nth prime number.
+    nthPrime = i;
+});
+
+// A reference to the work item is cached so that we can trigger a
+// cancellation when the user presses the Cancel button.
+m_workItem = asyncAction;
+```
+
+```cppwinrt
+// The nth prime number to find.
+const unsigned int n{ 9999 };
+
+unsigned long nthPrime{ 0 };
+
+// Simulates work by searching for the nth prime number. Uses a
+// naive algorithm and counts 2 as the first prime number.
+
+// A reference to the work item is cached so that we can trigger a
+// cancellation when the user presses the Cancel button.
+m_workItem = Windows::System::Threading::ThreadPool::RunAsync([&](Windows::Foundation::IAsyncAction const& workItem)
+{
+    unsigned int progress = 0; // For progress reporting.
+    unsigned int primes = 0;   // Number of primes found so far.
+    unsigned long int i = 2;   // Number iterator.
+
+    if ((n >= 0) && (n <= 2))
+    {
+        nthPrime = n;
+        return;
+    }
+
+    while (primes < (n - 1))
+    {
+        if (workItem.Status() == Windows::Foundation::AsyncStatus::Canceled)
+        {
+            break;
+        }
+
+        // Go to the next number.
+        i++;
+
+        // Check for prime.
+        bool prime = true;
+        for (unsigned int j = 2; j < i; ++j)
+        {
+            if ((i % j) == 0)
+            {
+                prime = false;
+                break;
+            }
+        };
+
+        if (prime)
+        {
+            // Found another prime number.
+            primes++;
+
+            // Report progress at every 10 percent.
+            unsigned int temp = progress;
+            progress = static_cast<unsigned int>(10.f*primes / n);
+
+            if (progress != temp)
+            {
+                std::wstringstream updateString;
+                updateString << L"Progress to " << n << L"th prime: " << (10 * progress) << std::endl;
+
+                // Update the UI thread with the CoreDispatcher.
+                Windows::ApplicationModel::Core::CoreApplication::MainView().CoreWindow().Dispatcher().RunAsync(
+                    Windows::UI::Core::CoreDispatcherPriority::High,
+                    Windows::UI::Core::DispatchedHandler([&]()
+                {
+                    UpdateUI(updateString.str());
+                }));
+            }
+        }
+    }
+    // Return the nth prime number.
+    nthPrime = i;
+});
+```
+
+```cpp
+// The nth prime number to find.
+const unsigned int n = 9999;
+
+// A shared pointer to the result.
+// We use a shared pointer to keep the result alive until the
+// thread is done.
+std::shared_ptr<unsigned long> nthPrime = make_shared<unsigned long int>(0);
+
+// Simulates work by searching for the nth prime number. Uses a
+// naive algorithm and counts 2 as the first prime number.
+auto workItem = ref new WorkItemHandler(
+    \[this, n, nthPrime](IAsyncAction^ workItem)
+{
+    unsigned int progress = 0; // For progress reporting.
+    unsigned int primes = 0;   // Number of primes found so far.
+    unsigned long int i = 2;   // Number iterator.
+
+    if ((n >= 0) && (n <= 2))
+    {
+        *nthPrime = n;
+        return;
+    }
+
+    while (primes < (n - 1))
+    {
+        if (workItem->Status == AsyncStatus::Canceled)
+       {
+           break;
+       }
+
+       // Go to the next number.
+       i++;
+
+       // Check for prime.
+       bool prime = true;
+       for (unsigned int j = 2; j < i; ++j)
+       {
+           if ((i % j) == 0)
+           {
+               prime = false;
+               break;
+           }
+       };
+
+       if (prime)
+       {
+           // Found another prime number.
+           primes++;
+
+           // Report progress at every 10 percent.
+           unsigned int temp = progress;
+           progress = static_cast<unsigned int>(10.f*primes / n);
+
+           if (progress != temp)
+           {
+               String^ updateString;
+               updateString = "Progress to " + n + "th prime: "
+                   + (10 * progress).ToString() + "%\n";
+
+               // Update the UI thread with the CoreDispatcher.
+               CoreApplication::MainView->CoreWindow->Dispatcher->RunAsync(
+                   CoreDispatcherPriority::High,
+                   ref new DispatchedHandler([this, updateString]()
+               {
+                   UpdateUI(updateString);
+               }));
+           }
+       }
+   }
+   // Return the nth prime number.
+   *nthPrime = i;
+});
+
+auto asyncAction = ThreadPool::RunAsync(workItem);
+
+// A reference to the work item is cached so that we can trigger a
+// cancellation when the user presses the Cancel button.
+m_workItem = asyncAction;
+```
 
 Después de la llamada a [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593), el grupo de subprocesos pone el elemento de trabajo en cola y este se ejecuta cuando hay un subproceso disponible. Los elementos de trabajo del grupo de subprocesos se ejecutan de manera asincrónica en cualquier orden, de manera que debes asegurarte de que los elementos de trabajo funcionen de manera independiente.
 
@@ -207,51 +283,72 @@ Proporciona un controlador de finalización mediante la configuración de la pro
 
 En el siguiente ejemplo se actualiza la interfaz de usuario con el resultado del elemento de trabajo enviado en el paso 1:
 
-> [!div class="tabbedCodeSnippets"]
-> ``` cpp
-> asyncAction->Completed = ref new AsyncActionCompletedHandler(
->     \[this, n, nthPrime](IAsyncAction^ asyncInfo, AsyncStatus asyncStatus)
-> {
->     if (asyncStatus == AsyncStatus::Canceled)
->     {
->         return;
->     }
->
->     String^ updateString;
->     updateString = "\n" + "The " + n + "th prime number is "
->         + (*nthPrime).ToString() + ".\n";
->
->     // Update the UI thread with the CoreDispatcher.
->     CoreApplication::MainView->CoreWindow->Dispatcher->RunAsync(
->         CoreDispatcherPriority::High,
->         ref new DispatchedHandler([this, updateString]()
->     {
->         UpdateUI(updateString);
->     }));
-> });
-> ```
-> ``` csharp
-> asyncAction.Completed = new AsyncActionCompletedHandler(
->     (IAsyncAction asyncInfo, AsyncStatus asyncStatus) =>
-> {
->     if (asyncStatus == AsyncStatus.Canceled)
->     {
->         return;
->     }
->
->     String updateString;
->     updateString = "\n" + "The " + n + "th prime number is "
->         + nthPrime + ".\n";
->
->     // Update the UI thread with the CoreDispatcher.
->     CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
->         CoreDispatcherPriority.High,
->         new DispatchedHandler(()=>
->     {
->         UpdateUI(updateString);
->     }));
-> });
-> ```
+```cpp
+asyncAction->Completed = ref new AsyncActionCompletedHandler(
+    \[this, n, nthPrime](IAsyncAction^ asyncInfo, AsyncStatus asyncStatus)
+{
+    if (asyncStatus == AsyncStatus::Canceled)
+    {
+        return;
+    }
+
+    String^ updateString;
+    updateString = "\n" + "The " + n + "th prime number is "
+        + (*nthPrime).ToString() + ".\n";
+
+    // Update the UI thread with the CoreDispatcher.
+    CoreApplication::MainView->CoreWindow->Dispatcher->RunAsync(
+        CoreDispatcherPriority::High,
+        ref new DispatchedHandler([this, updateString]()
+    {
+        UpdateUI(updateString);
+    }));
+});
+```
+
+```cppwinrt
+m_workItem.Completed([&](Windows::Foundation::IAsyncAction const& asyncInfo, Windows::Foundation::AsyncStatus const& asyncStatus)
+{
+    if (asyncStatus == Windows::Foundation::AsyncStatus::Canceled)
+    {
+        return;
+    }
+
+    std::wstringstream updateString;
+    updateString << std::endl << L"The " << n << L"th prime number is " << nthPrime << std::endl;
+
+    // Update the UI thread with the CoreDispatcher.
+    Windows::ApplicationModel::Core::CoreApplication::MainView().CoreWindow().Dispatcher().RunAsync(
+        Windows::UI::Core::CoreDispatcherPriority::High,
+        Windows::UI::Core::DispatchedHandler([&]()
+    {
+        UpdateUI(updateString.str());
+    }));
+});
+```
+
+```c#
+asyncAction.Completed = new AsyncActionCompletedHandler(
+    (IAsyncAction asyncInfo, AsyncStatus asyncStatus) =>
+{
+    if (asyncStatus == AsyncStatus.Canceled)
+    {
+        return;
+    }
+
+    String updateString;
+    updateString = "\n" + "The " + n + "th prime number is "
+        + nthPrime + ".\n";
+
+    // Update the UI thread with the CoreDispatcher.
+    CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
+        CoreDispatcherPriority.High,
+        new DispatchedHandler(()=>
+    {
+        UpdateUI(updateString);
+    }));
+});
+```
 
 Ten en cuenta que el controlador de finalización comprueba si el elemento de trabajo se ha cancelado antes de enviar una actualización de interfaz de usuario.
 

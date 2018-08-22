@@ -1,7 +1,7 @@
 ---
 author: jnHs
-Description: "Si es necesario que proporciones un número de identificación a efectos de IVA durante el proceso de registro del Centro de desarrollo, a continuación encontrarás información que te ayudará a ponerte en marcha."
-title: "Información sobre el IVA"
+Description: If you’re required to provide a VAT ID number during the Dev Center registration process, here’s some info to get you started.
+title: Información sobre el IVA
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
 ms.author: wdg-dev-content
 ms.date: 06/19/2017
@@ -9,11 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: fa4099c1b1253a45acd29d918cb5c63627fe6798
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: eaf9ee9bb6d9c949e34d9095edc7054a3a57a4dc
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2797740"
 ---
 # <a name="vat-info"></a>Información sobre el IVA
 

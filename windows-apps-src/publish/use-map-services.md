@@ -1,32 +1,32 @@
 ---
 author: jnHs
-Description: "Para usar servicios de mapa en aplicaciones para Windows Phone 8.1 y versiones anteriores, necesitas un identificador de aplicación del servicio de mapas y un token para incluirlo en el código de la aplicación. Puedes obtener este token en el panel de información del Centro de desarrollo."
+Description: To use map services in apps for Windows Phone 8.1 and earlier, you need a map service application ID and a token to include in your app's code. You can get this token in the Dev Center dashboard.
 title: Usar servicios de mapa
 ms.assetid: E5EE6B56-B86F-4D62-B16A-F023FE98EFAB
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 875d3efd6e9b27d7fced140f3d53a473fad1ae3c
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d322a22898f2f45a89b4cd30051149133bc3e2bf
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2797537"
 ---
 # <a name="use-map-services"></a>Usar servicios de mapa
 
+Para usar los servicios de mapa en aplicaciones destinadas a Windows10 o Windows8.x, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Para información sobre cómo solicitar una clave de autenticación mapas desde el Centro para desarrolladores de mapas de Bing y agregarlo a su aplicación, vea la [solicitud de una clave de mapas de autenticación](../maps-and-location/authentication-key.md) para obtener más información. 
 
-Para usar servicios de mapa en aplicaciones para Windows Phone 8.1 y versiones anteriores, necesitas un identificador de aplicación del servicio de mapas y un token para incluirlo en el código de la aplicación. Puedes obtener este token en el panel de información del Centro de desarrollo desplazándote a la página **Mapas** de la sección **Servicios** de la aplicación.
+Para usar servicios de mapa en aplicaciones para Windows Phone 8.1 y versiones anteriores, tiene que solicitar un identificador de aplicación de servicio de mapa y un símbolo (token) para incluir en el código de su aplicación en el panel del centro de desarrollo.
 
-> **Nota** Para usar los servicios de mapa en aplicaciones destinadas a otros sistemas operativos, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Consulta [Solicitar una clave de autenticación de mapas](https://msdn.microsoft.com/library/windows/apps/mt219694) para obtener más información.
+Cualquier momento después de haber [reservado el nombre de su aplicación](create-your-app-by-reserving-a-name.md), puede desplazarse a esa aplicación en el panel, expanda la sección **Servicios** en el menú de navegación izquierdo y seleccione **mapas**. Al hacer clic en **obtener símbolo (token)**, se podrá generar un identificador de aplicación (**ApplicationID**) del servicio de mapas y asignar el servicio de Token de autenticación (**AuthenticationToken**) para la aplicación. Estos valores se guardarán en esta página, para que pueda volver en cualquier momento para verlas.
 
-Una vez que hayas [reservado el nombre de la aplicación](create-your-app-by-reserving-a-name.md), busca la sección **Servicios** en el menú de navegación izquierdo y expándela para mostrar la página **Mapas**. Al hacer clic en **Obtener token**, se generarán **ApplicationID** y **AuthenticationToken** y aparecerán en esta página.
-
-> **Nota** No tienes que finalizar el envío de la aplicación en este momento. Después de solicitar un token y el id., la información se guardará en esta página. Puedes volver a la página en cualquier momento para ver esta información.
-
-También tendrás que asegurarte de agregar **ApplicationID** y **AuthenticationToken** al código antes de empaquetar y enviar la aplicación. Para obtener más información, consulta [Cómo agregar un control de mapa a una página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
+> [!IMPORTANT]
+> Asegúrese de agregar el **ApplicationID** y **AuthenticationToken** a su código antes de empaquetar y enviar la aplicación. Para obtener más información, consulta [Cómo agregar un control de mapa a una página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
 
  
 

@@ -1,26 +1,28 @@
 ---
 author: jnHs
-Description: "La Tienda Windows llega a clientes de más de 200 países y regiones de todo el mundo."
-title: "Definir la selección del mercado"
+Description: The Microsoft Store reaches customers in over 200 countries and regions around the world.
+title: Definir la selección del mercado
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 06/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows10, uwp, mercados, países, regiones"
-ms.openlocfilehash: 8cce339a57c60eadfb277893902c9e72afc1b4ae
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
-ms.translationtype: HT
+keywords: windows10, uwp, mercados, países, regiones
+ms.localizationpriority: medium
+ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801146"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
 
-La Tienda Windows llega a clientes de más de 200 países y regiones de todo el mundo. Puedes elegir los mercados en los que quieres ofrecer tu aplicación, con la opción de personalizar muchas [precios y disponibilidad](set-app-pricing-and-availability.md) características por mercado o por grupo de los mercados.
+La Microsoft Store llega a clientes de más de 200 países y regiones de todo el mundo. Puedes elegir los mercados en los que quieres ofrecer tu aplicación, con la opción de personalizar muchas [precios y disponibilidad](set-app-pricing-and-availability.md) características por mercado o por grupo de los mercados.
 
-Asegúrate de tener en cuenta nuestras [directrices, que te ayudarán a globalizar tu aplicación](../globalizing/guidelines-and-checklist-for-globalizing-your-app.md).
+Para que información que ayuda a lograr que su aplicación adecuada para los clientes de todo el mundo, vea [directrices para problemas de globalización](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) y [lograr que su aplicación localizable](../design/globalizing/prepare-your-app-for-localization.md).
 
 > [!NOTE]
 > Aunque este tema hace referencia a las aplicaciones, la selección del mercado para envíos de complementos utiliza el mismo proceso.
@@ -46,375 +48,376 @@ Ten en cuenta que incluso si seleccionas todos los mercados, las leyes y restric
 También verás una casilla que te permitirá indicar si ofreces tu aplicación en cualquier mercado que la Tienda pueda agregar en un futuro. Si dejas esta casilla marcada y, a más adelante, añadimos nuevos mercados, el precio base y la fecha de disponibilidad general de tu envío se usarán para tu aplicación en estos mercados. Si no quieres que esto ocurra, puedes desactivar esta casilla y, en ese caso, no mostraremos tu aplicación en los futuros mercados (aunque siempre puedes agregarlos más tarde).
  
 
-## <a name="windows-store-consumer-markets"></a>Mercados de consumidores de la Tienda Windows
+## <a name="microsoft-store-consumer-markets"></a>Mercados de consumidor de Microsoft Store
 
+Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes: Los mercados con un asterisco admiten la Store Microsoft en Xbox uno; verá **Xbox** junto a sus nombres en la ventana emergente de **selección de la cuota de mercado** .
 
-Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes: Los mercados con un asterisco compatibles con la Tienda en Xbox; verás **Xbox** junto a sus nombres en la ventana emergente **Selección de mercado**.
 
 <table>
+  
   <tr>
     <td>Afganistán</td>
+    <td>Islas Åland</td>
     <td>Albania</td>
     <td>Argelia</td>
-    <td>Samoa Americana</td>
   </tr>
   <tr>
+    <td>Samoa Americana</td>
     <td>Andorra</td>
     <td>Angola</td>
     <td>Anguila</td>
-    <td>Antártida</td>
   </tr>
   <tr>
+    <td>Antártida</td>
     <td>Antigua y Barbuda</td>
     <td>Argentina</td>
     <td>Armenia</td>
-    <td>Aruba</td>
   </tr>
   <tr>
+    <td>Aruba</td>
     <td>Australia</td>
     <td>Austria</td>
     <td>Azerbaiyán</td>
-    <td>Bahamas</td>
   </tr>
   <tr>
+    <td>Bahamas</td>
     <td>Baréin</td>
     <td>Bangladesh</td>
     <td>Barbados</td>
-    <td>Belarús</td>
   </tr>
   <tr>
+    <td>Belarús</td>
     <td>Bélgica</td>
     <td>Belice</td>
     <td>Benín</td>
-    <td>Bermudas</td>
   </tr>
   <tr>
+    <td>Bermudas</td>
     <td>Bután</td>
     <td>Bolivia</td>
     <td>Bonaire</td>
-    <td>Bosnia y Herzegovina</td>
   </tr>
   <tr>
+    <td>Bosnia y Herzegovina</td>
     <td>Botsuana</td>
     <td>Isla Bouvet</td>
     <td>Brasil</td>
-    <td>Territorio Británico del Océano Índico</td>
   </tr>
   <tr>
+    <td>Territorio Británico del Océano Índico</td>
     <td>Islas Vírgenes Británicas</td>
     <td>Brunéi</td>
     <td>Bulgaria</td>
-    <td>Burkina Faso</td>
   </tr>
   <tr>
+    <td>Burkina Faso</td>
     <td>Burundi</td>
     <td>Cabo Verde</td>
     <td>Camboya</td>
-    <td>Camerún</td>
   </tr>
   <tr>
+    <td>Camerún</td>
     <td>Canadá</td>
     <td>Islas Caimán</td>
     <td>República Centroafricana</td>
-    <td>Chad</td>
   </tr>
   <tr>
+    <td>Chad</td>
     <td>Chile</td>
     <td>China</td>
     <td>Isla Christmas</td>
-    <td>Islas Cocos</td>
   </tr>
   <tr>
+    <td>Islas Cocos</td>
     <td>Colombia *</td>
     <td>Comoras</td>
     <td>Congo</td>
-    <td>Congo (RDC)</td>
   </tr>
   <tr>
+    <td>Congo (RDC)</td>
     <td>Islas Cook</td>
     <td>Costa Rica</td>
+    <td>Côte d’Ivoire</td>
+  </tr>
+  <tr>
     <td>Croacia</td>
     <td>Curazao</td>
-  </tr>
-  <tr>
     <td>Chipre</td>
     <td>República Checa *</td>
-    <td>Côte d’Ivoire</td>
-    <td>Dinamarca *</td>
   </tr>
   <tr>
+    <td>Dinamarca *</td>
     <td>Yibuti</td>
     <td>Dominica</td>
     <td>República Dominicana</td>
-    <td>Ecuador</td>
   </tr>
   <tr>
+    <td>Ecuador</td>
     <td>Egipto</td>
     <td>El Salvador</td>
     <td>Guinea Ecuatorial</td>
-    <td>Eritrea</td>
   </tr>
   <tr>
+    <td>Eritrea</td>
     <td>Estonia</td>
     <td>Etiopía</td>
     <td>Islas Malvinas</td>
-    <td>Islas Feroe</td>
   </tr>
   <tr>
+    <td>Islas Feroe</td>
     <td>Fiyi</td>
     <td>Finlandia *</td>
     <td>Francia *</td>
-    <td>Guayana Francesa</td>
   </tr>
   <tr>
+    <td>Guayana Francesa</td>
     <td>Polinesia Francesa</td>
     <td>Tierras Australes y Antárticas Francesas</td>
     <td>Gabón</td>
-    <td>Gambia</td>
   </tr>
   <tr>
+    <td>Gambia</td>
     <td>Georgia</td>
     <td>Alemania *</td>
     <td>Ghana</td>
-    <td>Gibraltar</td>
   </tr>
   <tr>
+    <td>Gibraltar</td>
     <td>Grecia *</td>
     <td>Groenlandia</td>
     <td>Granada</td>
-    <td>Guadalupe</td>
   </tr>
   <tr>
+    <td>Guadalupe</td>
     <td>Guam</td>
     <td>Guatemala</td>
     <td>Guernesey</td>
-    <td>Guinea</td>
   </tr>
   <tr>
+    <td>Guinea</td>
     <td>Guinea-Bisáu</td>
     <td>Guyana</td>
     <td>Haití</td>
-    <td>Islas Heard y McDonald</td>
   </tr>
   <tr>
+    <td>Islas Heard y McDonald</td>
     <td>Honduras</td>
     <td>RAE de Hong Kong *</td>
     <td>Hungría *</td>
-    <td>Islandia</td>
   </tr>
   <tr>
+    <td>Islandia</td>
     <td>India *</td>
     <td>Indonesia</td>
     <td>Iraq</td>
-    <td>Irlanda *</td>
   </tr>
   <tr>
+    <td>Irlanda *</td>
     <td>Isla de Man</td>
     <td>Israel *</td>
     <td>Italia *</td>
-    <td>Jamaica</td>
   </tr>
   <tr>
+    <td>Jamaica</td>
     <td>Japón *</td>
     <td>Jersey</td>
     <td>Jordania</td>
-    <td>Kazajistán</td>
   </tr>
   <tr>
+    <td>Kazajistán</td>
     <td>Kenia</td>
     <td>Kiribati</td>
     <td>Corea *</td>
-    <td>Kirguistán</td>
   </tr>
   <tr>
     <td>Kuwait</td>
+    <td>Kirguistán</td>
     <td>Laos</td>
     <td>Letonia</td>
-    <td>Líbano</td>
   </tr>
   <tr>
+    <td>Líbano</td>
     <td>Lesoto</td>
     <td>Liberia</td>
     <td>Libia</td>
-    <td>Liechtenstein</td>
   </tr>
   <tr>
+    <td>Liechtenstein</td>
     <td>Lituania</td>
     <td>Luxemburgo</td>
     <td>RAE de Macao</td>
-    <td>Macedonia (ERYM)</td>
   </tr>
   <tr>
+    <td>Macedonia (ERYM)</td>
     <td>Madagascar</td>
     <td>Malawi</td>
     <td>Malasia</td>
-    <td>Maldivas</td>
   </tr>
   <tr>
+    <td>Maldivas</td>
     <td>Malí</td>
     <td>Malta</td>
     <td>Islas Marshall</td>
-    <td>Martinica</td>
   </tr>
   <tr>
+    <td>Martinica</td>
     <td>Mauritania</td>
     <td>Mauricio</td>
     <td>Mayotte</td>
-    <td>México *</td>
   </tr>
   <tr>
+    <td>México *</td>
     <td>Micronesia</td>
     <td>Moldova</td>
     <td>Mónaco</td>
-    <td>Mongolia</td>
   </tr>
   <tr>
+    <td>Mongolia</td>
     <td>Montenegro</td>
     <td>Montserrat</td>
     <td>Marruecos</td>
-    <td>Mozambique</td>
   </tr>
   <tr>
+    <td>Mozambique</td>
     <td>Myanmar</td>
     <td>Namibia</td>
     <td>Nauru</td>
-    <td>Nepal</td>
   </tr>
   <tr>
+    <td>Nepal</td>
     <td>Países Bajos *</td>
     <td>Nueva Caledonia</td>
     <td>Nueva Zelanda *</td>
-    <td>Nicaragua</td>
   </tr>
   <tr>
+    <td>Nicaragua</td>
     <td>Níger</td>
     <td>Nigeria</td>
     <td>Niue</td>
-    <td>Isla Norfolk</td>
   </tr>
   <tr>
+    <td>Isla Norfolk</td>
     <td>Islas Marianas del Norte</td>
     <td>Noruega *</td>
     <td>Omán</td>
-    <td>Pakistán</td>
   </tr>
   <tr>
+    <td>Pakistán</td>
     <td>Palaos</td>
     <td>Autoridad Palestina</td>
     <td>Panamá</td>
-    <td>Papúa Nueva Guinea</td>
   </tr>
   <tr>
+    <td>Papúa Nueva Guinea</td>
     <td>Paraguay</td>
     <td>Perú</td>
     <td>Filipinas</td>
-    <td>Islas Pitcairn</td>
   </tr>
   <tr>
+    <td>Islas Pitcairn</td>
     <td>Polonia *</td>
     <td>Portugal *</td>
     <td>Qatar</td>
-    <td>Rumanía</td>
   </tr>
   <tr>
+    <td>Reunión</td>
+    <td>Rumanía</td>
     <td>Rusia *</td>
     <td>Ruanda</td>
-    <td>Reunión</td>
-    <td>San Bartolomé</td>
   </tr>
   <tr>
+    <td>San Bartolomé</td>
     <td>Santa Elena, Ascensión y Tristán de Acuña</td>
     <td>San Cristóbal y Nieves</td>
     <td>Santa Lucía</td>
-    <td>San Martín (zona francesa)</td>
   </tr>
   <tr>
+    <td>San Martín (zona francesa)</td>
     <td>San Pedro y Miquelón</td>
     <td>San Vicente y las Granadinas</td>
     <td>Samoa</td>
-    <td>San Marino</td>
   </tr>
   <tr>
+    <td>San Marino</td>
+    <td>Santo Tomé y Príncipe</td>
     <td>Arabia Saudí *</td>
     <td>Senegal</td>
+  </tr>
+  <tr>
     <td>Serbia</td>
     <td>Seychelles</td>
-  </tr>
-  <tr>
     <td>Sierra Leona</td>
     <td>Singapur *</td>
+  </tr>
+  <tr>
     <td>Sint Maarten (zona neerlandesa)</td>
     <td>Eslovaquia *</td>
-  </tr>
-  <tr>
     <td>Eslovenia</td>
     <td>Islas Salomón</td>
+  </tr>
+  <tr>
     <td>Somalia</td>
     <td>Sudáfrica *</td>
-  </tr>
-  <tr>
     <td>Georgia del Sur e Islas Sandwich del Sur</td>
     <td>España *</td>
+  </tr>
+  <tr>
     <td>Sri Lanka</td>
     <td>Surinam</td>
-  </tr>
-  <tr>
     <td>Svalbard y Jan Mayen</td>
     <td>Suazilandia</td>
+  </tr>
+  <tr>
     <td>Suecia *</td>
     <td>Suiza *</td>
-  </tr>
-  <tr>
-    <td>Santo Tomé y Príncipe</td>
     <td>Taiwán *</td>
     <td>Tayikistán</td>
-    <td>Tanzania</td>
   </tr>
   <tr>
+    <td>Tanzania</td>
     <td>Tailandia</td>
     <td>Timor-Leste</td>
     <td>Togo</td>
-    <td>Tokelau</td>
   </tr>
   <tr>
+    <td>Tokelau</td>
     <td>Tonga</td>
     <td>Trinidad y Tobago</td>
     <td>Túnez</td>
-    <td>Turquía *</td>
   </tr>
   <tr>
+    <td>Turquía *</td>
     <td>Turkmenistán</td>
     <td>Islas Turcas y Caicos</td>
     <td>Tuvalu</td>
-    <td>Islas menores alejadas de los EE. UU.</td>
   </tr>
   <tr>
+    <td>Islas menores alejadas de los EE. UU.</td>
     <td>Islas Vírgenes de los Estados Unidos de América</td>
     <td>Uganda</td>
     <td>Ucrania</td>
-    <td>Emiratos Árabes Unidos *</td>
   </tr>
   <tr>
+    <td>Emiratos Árabes Unidos *</td>
     <td>Reino Unido *</td>
     <td>Estados Unidos *</td>
     <td>Uruguay</td>
-    <td>Uzbekistán</td>
   </tr>
   <tr>
+    <td>Uzbekistán</td>
     <td>Vanuatu</td>
     <td>Ciudad del Vaticano</td>
     <td>Venezuela</td>
-    <td>Vietnam</td>
   </tr>
   <tr>
+    <td>Vietnam</td>
     <td>Wallis y Futuna</td>
     <td>Sáhara Occidental (en conflicto)</td>
     <td>Yemen</td>
-    <td>Zambia</td>
   </tr>
   <tr>
+    <td>Zambia</td>
     <td>Zimbabue</td>
-    <td>Islas Åland</td>
     <td></td>
     <td></td>
   </tr>
@@ -423,15 +426,14 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
 
 ## <a name="price-considerations-for-specific-markets"></a>Consideraciones relativas a los precios para mercados concretos
 
-Los métodos de pago tales como tarjetas de regalo y la facturación de operador de telefonía móvil pueden ayudarte a aumentar las ventas de las aplicaciones de pago y las compras desde la aplicación en los mercados en los que el uso de las tarjetas de crédito es reducido. Debido a los elevados costos de activación de tales métodos de pago, se suma un ajuste de expansión comercial a los honorarios de la Tienda, deducido de los recibos netos para calcular las ganancias de la aplicación que se pagarán para las aplicaciones de pago y las transacciones de compra desde la aplicación en los países/regiones y con los métodos de pago indicados en las siguientes tablas. Puede que desees considerar si el ajuste de expansión comercial se aplica en un país/región en el que tu aplicación está disponible y tenerlo en cuenta para la estrategia de precios de mercado. Puedes encontrar más información sobre el ajuste de expansión comercial en el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058).
+Los métodos de pago tales como tarjetas de regalo y la facturación de operador de telefonía móvil pueden ayudarte a aumentar las ventas de las aplicaciones de pago y las compras desde la aplicación en los mercados en los que el uso de las tarjetas de crédito es reducido. Debido a los elevados costos de activación de tales métodos de pago, se suma un ajuste de expansión comercial a los honorarios de la Tienda, deducido de los recibos netos para calcular las ganancias de la aplicación que se pagarán para las aplicaciones de pago y las transacciones de compra desde la aplicación en los países/regiones y con los métodos de pago indicados en las siguientes tablas. Puede que desees considerar si el ajuste de expansión comercial se aplica en un país/región en el que tu aplicación está disponible y tenerlo en cuenta para la estrategia de precios de mercado. Puedes encontrar más información sobre el ajuste de expansión comercial en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
 
 El ajuste de expansión comercial se aplicará a todas las transacciones procesadas para el país/región y los métodos de pago especificados a partir de la fecha efectiva. Esta información se actualizará mensualmente y se incluirán nuevos países/regiones y métodos de pago en un plazo de treinta (30) días a partir de la entrada en vigor del ajuste de expansión comercial para dicho país/región y método de pago.
 
 &nbsp;
 
-| País o región       | Método de pago          | Ajuste de expansión comercial | Fecha de entrada en vigor |
-|----------------------|-------------------------|-------------------------------|----------------|
-| Sudáfrica         | Facturación de operadores de telefonía móvil | 13,9%                         | Marzo de 2014     |
+| País o región       | Método de pago  | Ajuste de expansión comercial | Fecha efectiva |
+|----------------------|-----------------|-------------------------------|----------------|
 | Argentina            | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Australia            | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Austria              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
@@ -478,11 +480,12 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Mercados "Resto del mundo" para Windows 8.x
 
-Si la aplicación incluye paquetes destinados a Windows 8.x, es importante que tengas en cuenta que una serie de mercados se tratan como un solo mercado "Resto del mundo" para los clientes que usan la Tienda en Windows 8.x, aunque se muestren como mercados individuales en el panel del Centro de desarrollo de Windows (en contraposición con el anterior panel de la Tienda Windows, donde había una opción seleccionable de mercado "Resto del mundo").
+Si su aplicación incluye paquetes de identificación Windows 8.x, es importante tener en cuenta que un número de mercados se trata como un mercado único "Rest de World" para los clientes que usen el almacén en Windows 8.x, incluso aunque se muestran como mercados individuales en el centro de desarrollo de Windows panel (a diferencia del panel de almacén anterior, donde se ha producido una opción de la cuota de mercado "Rest de World" para agrupar todos estos mercados).
 
 Si dejas la selección predeterminada al enviar la aplicación, no tienes que preocuparte de esto y la aplicación estará disponible para todos los mercados posibles. Sin embargo, si quieres excluir determinados mercados, ten en cuenta que la exclusión de solo uno de estos mercados "Resto del mundo" significa que la aplicación no estará disponible en cualquiera de los mercados "Resto del mundo" para clientes en Windows 8 o Windows 8.1.
 
 Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los siguientes:
+
 
 <table>
   <tr>

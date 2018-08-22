@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, simultaneidad, async, asincrónico, asincronía
 ms.localizationpriority: medium
-ms.openlocfilehash: ef8b1676b910e86869a4a60496033a10f4ba40db
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: fe43eaa233d3384eecb5e8755190efc1a109bbb9
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976140"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800395"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Operaciones simultáneas y asincrónicas con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -68,6 +68,9 @@ Una llamada a **get** ofrece una codificación cómoda y es ideal para aplicacio
 ## <a name="write-a-coroutine"></a>Escribir una corrutina
 C++/WinRT integra las corrutinas de C++ en el modelo de programación para proporcionar una forma natural de esperar de forma cooperativa un resultado. Puedes producir tu propia operación asincrónica de Windows Runtime escribiendo un corrutina. En el ejemplo de código siguiente, **ProcessFeedAsync** es la corrutina.
 
+> [!NOTE]
+> La función **obtener** existe en C + + / WinRT proyección escriba **winrt::Windows::Foundation::IAsyncAction**, por lo que puede llamar la función desde dentro de cualquier C + + / proyecto WinRT. No se encuentra la función aparece como un miembro de la interfaz [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) , debido a que **obtener** no forma parte de la superficie de interfaz binaria (ABI) de la aplicación del tipo de tiempo de ejecución de Windows **IAsyncAction**real.
+
 ```cppwinrt
 // main.cpp
 
@@ -92,7 +95,7 @@ IAsyncAction ProcessFeedAsync()
 {
     Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
     SyndicationClient syndicationClient;
-    SyndicationFeed syndicationFeed = co_await syndicationClient.RetrieveFeedAsync(rssFeedUri);
+    SyndicationFeed syndicationFeed{ co_await syndicationClient.RetrieveFeedAsync(rssFeedUri) };
     PrintFeed(syndicationFeed);
 }
 

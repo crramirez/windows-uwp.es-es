@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, personalizada, aplicación, promoción, campaña
-ms.localizationpriority: high
-ms.openlocfilehash: 52ddd56117b139585e3515982c1640bf04af709d
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 13ee8d7482a2ce0716d4e133af329cd0ea42c184
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789144"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Crear una campaña de promoción de la aplicación personalizada
 
@@ -105,7 +106,7 @@ Puedes usar distintas API en función de la versión de Windows 10 a la que se d
 
 * Windows 10, versión 1607 o posterior: usa la clase [**StoreContext**](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) del espacio de nombres **Windows.Services.Store**. Al usar esta API, puedes recuperar identificadores de campaña personalizados para todas las [conversiones calificadas](#conversions), independientemente de si el usuario ha iniciado sesión con una cuenta de Microsoft reconocida.
 
-* Windows 10, versión 1511 o anterior: usa la clase [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) del espacio de nombres **Windows.ApplicationModel.Store**. Al usar esta API, solo puedes recuperar identificadores de campaña personalizados para las [conversiones calificadas](#conversions) en las que el usuario ha iniciado sesión en una cuenta de Microsoft reconocida.
+* Windows 10, versión 1511 o anterior: usa la clase [**CurrentApp**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) del espacio de nombres **Windows.ApplicationModel.Store**. Al usar esta API, solo puedes recuperar identificadores de campaña personalizados para las [conversiones calificadas](#conversions) en las que el usuario ha iniciado sesión en una cuenta de Microsoft reconocida.
 
 > [!NOTE]
 > Aunque el espacio de nombres **Windows.ApplicationModel.Store** está disponible en todas las versiones de Windows10, recomendamos que uses las API del espacio de nombres **Windows.Services.Store** si tu aplicación se dirige a Windows10, versión 1607 o versiones posteriores. Para más información sobre las diferencias entre estos espacios de nombres, consulta [Pruebas y compras desde la aplicación](../monetize/in-app-purchases-and-trials.md#choose-namespace). En el siguiente ejemplo de código se muestra cómo estructurar el código para que use ambas API en el mismo proyecto.
@@ -171,7 +172,7 @@ Este código realiza lo siguiente:
 2. Luego, intenta obtener el identificador de campaña personalizado para el escenario en el que el usuario actual tiene una cuenta de Microsoft reconocida. Para ello, el código obtiene un objeto [**StoreSku**](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StoreSku) que representa la SKU de la aplicación actual y luego accede a la propiedad [**CampaignId**](https://docs.microsoft.com/uwp/api/windows.services.store.storecollectiondata.CampaignId) para recuperar el identificador de campaña, si hay un disponible.
 3. El código luego intenta recuperar el identificador de campaña para el caso en el que el usuario actual no tiene una cuenta de Microsoft reconocida. En este caso, el identificador de campaña se integra en la licencia de la aplicación. El código recupera la licencia mediante el método [**GetAppLicenseAsync**](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetAppLicenseAsync) y luego analiza el contenido JSON de la licencia para obtener el valor de una clave llamada *customPolicyField1*. Este valor contiene el identificador de campaña.
 
-4. Si la clase [**StoreContext**](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) del espacio de nombres **Windows.Services.Store** no está disponible, el código usa entonces el método [**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.getapppurchasecampaignidasync.aspx) del espacio de nombres **Windows.ApplicationModel.Store** para recuperar el id. de campaña personalizado (este espacio de nombres está disponible en todas las versiones de Windows 10, incluyendo la versión 1511 y las anteriores). Ten en cuenta que cuando usas este método, solo puedes recuperar identificadores de campaña personalizados para las [conversiones calificadas](#conversions) en las que el usuario tiene una cuenta de Microsoft reconocida.
+4. Si la clase [**StoreContext**](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) del espacio de nombres **Windows.Services.Store** no está disponible, el código usa entonces el método [**GetAppPurchaseCampaignIdAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp#Windows_ApplicationModel_Store_CurrentApp_GetAppPurchaseCampaignIdAsync) del espacio de nombres **Windows.ApplicationModel.Store** para recuperar el id. de campaña personalizado (este espacio de nombres está disponible en todas las versiones de Windows 10, incluyendo la versión 1511 y las anteriores). Ten en cuenta que cuando usas este método, solo puedes recuperar identificadores de campaña personalizados para las [conversiones calificadas](#conversions) en las que el usuario tiene una cuenta de Microsoft reconocida.
 
 ### <a name="specify-the-campaign-id-in-the-proxy-file-for-the-windowsapplicationmodelstore-namespace"></a>Especifica el id. de campaña en el archivo proxy del espacio de nombres Windows.ApplicationModel.Store
 

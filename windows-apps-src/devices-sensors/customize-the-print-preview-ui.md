@@ -2,23 +2,23 @@
 author: PatrickFarley
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
 title: Personalizar la interfaz de usuario de vista previa de impresión
-description: En esta sección se describe cómo personalizar la configuración y las opciones de impresión en la interfaz de usuario de la vista previa de impresión.
+description: En esta sección se describe cómo personalizar las opciones de impresión y la configuración de la interfaz de usuario de vista previa de impresión.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 6a4088c24f801db3b25dc1d9740d261e12853d63
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+keywords: Windows 10, uwp, impresión
+ms.localizationpriority: medium
+ms.openlocfilehash: fe4086cc87699083304594eb4ccc8e7bb137b19f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2017
-ms.locfileid: "696112"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2797471"
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar la interfaz de usuario de la vista previa de impresión
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**

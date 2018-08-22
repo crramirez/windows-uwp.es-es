@@ -4,24 +4,30 @@ title: Responder a eventos del sistema con tareas en segundo plano
 description: Aprende a crear una tarea en segundo plano que responda a eventos SystemTrigger.
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 07/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 750dd44b6f10e527e6bd6db04a9588a87e84de0c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: Windows 10, uwp, tareas en segundo plano
+ms.localizationpriority: medium
+dev_langs:
+- csharp
+- cppwinrt
+- cpp
+ms.openlocfilehash: 45f6e10bc355e3a2dc054d54fef35fbeb1095dc7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792461"
 ---
 # <a name="respond-to-system-events-with-background-tasks"></a>Responder a eventos del sistema con tareas en segundo plano
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 **API importantes**
 
--   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
--   [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)
+- [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
+- [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
+- [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)
 
 Aprende a crear una tarea en segundo plano que responda a eventos [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
@@ -29,45 +35,60 @@ En este tema se supone que tienes una clase de tareas en segundo plano escrita p
 
 ## <a name="create-a-systemtrigger-object"></a>Crear un objeto SystemTrigger
 
--   En el código de tu aplicación, crea un nuevo objeto [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838). El primer parámetro, *triggerType*, especifica el tipo de desencadenador de eventos del sistema que activará esta tarea en segundo plano. Para ver una lista de los tipos de eventos, consulta [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839).
+En el código de tu aplicación, crea un nuevo objeto [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838). El primer parámetro, *triggerType*, especifica el tipo de desencadenador de eventos del sistema que activará esta tarea en segundo plano. Para ver una lista de los tipos de eventos, consulta [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-    El segundo parámetro, *OneShot*, especifica si la tarea en segundo plano se ejecutará solo una vez la próxima ocasión que ocurra el evento del sistema o cada vez que ocurra el evento del sistema hasta que se elimine el registro de la tarea.
+El segundo parámetro, *OneShot*, especifica si la tarea en segundo plano se ejecutará solo una vez la próxima ocasión que ocurra el evento del sistema o cada vez que ocurra el evento del sistema hasta que se elimine el registro de la tarea.
 
-    El siguiente código especifica que la tarea en segundo plano se ejecuta siempre que Internet vuelva a estar disponible:
+El siguiente código especifica que la tarea en segundo plano se ejecuta siempre que Internet vuelva a estar disponible:
 
-    > [!div class="tabbedCodeSnippets"]
-    > ```cs
-    > SystemTrigger internetTrigger = new SystemTrigger(SystemTriggerType.InternetAvailable, false);
-    > ```
-    > ```cpp
-    > SystemTrigger ^ internetTrigger = ref new SystemTrigger(SystemTriggerType::InternetAvailable, false);
-    > ```
+```csharp
+SystemTrigger internetTrigger = new SystemTrigger(SystemTriggerType.InternetAvailable, false);
+```
+
+```cppwinrt
+Windows::ApplicationModel::Background::SystemTrigger internetTrigger{
+    Windows::ApplicationModel::Background::SystemTriggerType::InternetAvailable, false};
+```
+
+```cpp
+SystemTrigger ^ internetTrigger = ref new SystemTrigger(SystemTriggerType::InternetAvailable, false);
+```
 
 ## <a name="register-the-background-task"></a>Registrar la tarea en segundo plano
 
--   Registra la tarea en segundo plano llamando a tu función de registro de tareas en segundo plano. Para obtener más información sobre el registro de tareas en segundo plano, consulta [Registrar una tarea en segundo plano](register-a-background-task.md).
+Registra la tarea en segundo plano llamando a tu función de registro de tareas en segundo plano. Para obtener más información sobre el registro de tareas en segundo plano, consulta [Registrar una tarea en segundo plano](register-a-background-task.md).
 
-    El siguiente código registra la tarea en segundo plano para un proceso en segundo plano que se ejecuta fuera de proceso. Si estuvieras llamando a una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación host, no establecerías `entrypoint`:
+El siguiente código registra la tarea en segundo plano para un proceso en segundo plano que se ejecuta fuera de proceso. Si estuvieras llamando a una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación host, no establecerías `entrypoint`:
 
-    > [!div class="tabbedCodeSnippets"]
-    > ```cs
-    > string entryPoint = "Tasks.ExampleBackgroundTaskClass"; // Namespace name, '.', and the name of the class containing the background task
-    > string taskName   = "Internet-based background task";
-    >
-    > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
-    > ```
-    > ```cpp
-    > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass"; // don't set for in-process background tasks
-    > String ^ taskName   = "Internet-based background task";
-    >
-    > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
-    > ```
+```csharp
+string entryPoint = "Tasks.ExampleBackgroundTaskClass"; // Namespace name, '.', and the name of the class containing the background task
+string taskName   = "Internet-based background task";
 
-    > **Nota** Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
+BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
+```
 
-    Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
+```cppwinrt
+std::wstring entryPoint{ L"Tasks.ExampleBackgroundTaskClass" }; // don't set for in-process background tasks.
+std::wstring taskName{ L"Internet-based background task" };
 
-    > **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
+Windows::ApplicationModel::Background::BackgroundTaskRegistration task{
+    RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition) };
+```
+
+```cpp
+String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass"; // don't set for in-process background tasks
+String ^ taskName   = "Internet-based background task";
+
+BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
+```
+
+> [!NOTE]
+> Aplicaciones de plataforma Windows universales deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquiera de los tipos de desencadenador de fondo.
+
+Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
+
+> [!NOTE]
+> Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
  
 ## <a name="remarks"></a>Observaciones
 
@@ -77,11 +98,7 @@ Las tareas en segundo plano pueden ejecutarse en respuesta a los eventos [**Syst
 
 Las aplicaciones pueden registrar tareas en segundo plano que respondan a los eventos [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) y [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831), lo que les permite proporcionar una comunicación en tiempo real con el usuario aunque la aplicación no esté en el primer plano. Para obtener más información, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
 ## <a name="related-topics"></a>Temas relacionados
-
-****
 
 * [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)
 * [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md)
@@ -95,4 +112,4 @@ Las aplicaciones pueden registrar tareas en segundo plano que respondan a los ev
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones para UWP (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)

@@ -4,22 +4,23 @@ Description: The Acquisitions report in the Windows Dev Center dashboard lets yo
 title: Informe Adquisiciones
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 02/13/2018
+ms.date: 08/15/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, adquisiciones, ventas de aplicaciones, descargas de aplicaciones, instalaciones, embudo, adquisición, conversiones, canal, vistas de página de la aplicación
-ms.localizationpriority: high
-ms.openlocfilehash: d1675b3a2ffe879585ea2fd3792b47e7bdc7a8af
-ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e6b4a3d8a10234e5f95e70f397a4de962a29c929
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795276"
 ---
 # <a name="acquisitions-report"></a>Informe Adquisiciones
 
 
-El informe **Adquisiciones** del panel de información del Centro de desarrollo de Windows te permite ver quién ha adquirido e instalado la aplicación, junto con datos demográficos y de la plataforma. También te permite obtener información sobre cómo los clientes de Windows10 (incluido Xbox) han llegado a la descripción de la aplicación.
+El informe de **adquisiciones** en el panel del centro de desarrollo de Windows le permite ver quién ha adquirido y se instala la aplicación, junto con demográficos y detalles de plataforma y muestra información acerca de cómo los clientes en 10 de Windows (incluidos Xbox) han llegado a su aplicación listado. También puede ver cerca de datos en tiempo real de adquisición para el último período o 72 horas. 
 
 Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
@@ -33,7 +34,7 @@ En este informe, una **adquisición** significa que un cliente nuevo ha obtenido
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques.
+Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. Casi en tiempo real se mostrarán los datos para todas las opciones (excepto en los datos de la **aplicación acumulativa** ). El tiempo **1** y **72 horas** períodos solo se aplican a la ficha **aplicación diariamente** del gráfico **adquisiciones** y a la ficha **adquisiciones** del gráfico **mercados** . 
 
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por mercado o por tipo de dispositivo.
 
@@ -45,14 +46,19 @@ La información de todos los gráficos que aparecen a continuación reflejará e
 
 ## <a name="acquisitions"></a>Adquisiciones
 
-En el gráfico **Adquisiciones** se muestra el número de adquisiciones diarias o semanales (un nuevo cliente que obtiene una licencia para tu aplicación) durante el período de tiempo seleccionado. (Si usas **Aplicar filtros** para mostrar los datos durante más tiempo, los datos de adquisición se agruparán por semana). En este gráfico solo se incluyen las adquisiciones realizadas por los clientes que han iniciado sesión con una cuenta de Microsoft válida.
+En el gráfico **Adquisiciones** se muestra el número de adquisiciones diarias o semanales (un nuevo cliente que obtiene una licencia para tu aplicación) durante el período de tiempo seleccionado. (Si usas **Aplicar filtros** para mostrar los datos durante más tiempo, los datos de adquisición se agruparán por semana). En este gráfico solo se incluyen las adquisiciones realizadas por los clientes que han iniciado sesión con una cuenta de Microsoft válida. 
 
-También puedes ver el número de adquisiciones del ciclo de vida de la aplicación seleccionando **Aplicación acumulativa**. Muestra el total acumulado de todas las adquisiciones desde que la aplicación se publicó por primera vez.
+De forma predeterminada, se muestra la vista de la **aplicación diariamente** , que incluye cerca de datos en tiempo real. También puedes ver el número de adquisiciones del ciclo de vida de la aplicación seleccionando **Aplicación acumulativa**. Muestra el total acumulado de todas las adquisiciones desde que la aplicación se publicó por primera vez.
 
 También puedes filtrar los resultados por si la adquisición se originó desde el cliente, la Tienda web o la versión del sistema operativo.
 
 > [!NOTE]
 > También puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de la aplicación](../monetize/get-app-acquisitions.md) en nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
+
+En la vista de la **aplicación diariamente** , cuando la **D 30** se selecciona el período de tiempo, es posible que vea marcadores circulares. Estos representan un aumento significativo o disminución en un valor determinado que pensamos que desea conocer. La fecha en la que aparece el círculo representa el final de la semana en el que se detecta un aumento significativo o una disminución en comparación con la semana antes de que. Para ver más detalles sobre qué ha cambiado, mantenga el mouse sobre el círculo.  
+
+> [!TIP]
+> Puede ver más conocimientos relacionados con cambios significativos durante los últimos 30 días en el [informe de conocimientos](insights-report.md).
 
 ## <a name="installs"></a>Instalaciones
 

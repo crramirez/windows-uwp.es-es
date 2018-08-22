@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, control, enlace, colección
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d9f74e6d0c755e0a247a65751bdab65964ac1f7
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.openlocfilehash: 9337c0625c68970d9e68df74fa13228369e8bf41
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935731"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800335"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>Controles de elementos XAML; enlazar a una colección [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -39,7 +39,7 @@ El control de elementos XAML puede enlazarse a estos eventos y controlarlos medi
 Es aconsejable tener una plantilla de vector observable para que actúe como una implementación útil de uso general de [**IObservableVector&lt;T &gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_). A continuación se incluye una lista de una clase denominada **single_threaded_observable_vector\<T\>**.
 
 > [!NOTE]
-> Si has instalado la [versión preliminar del SDK de Windows 10 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK), o posterior, puedes directamente usar el tipo **winrt::single_threaded_observable_vector\<T\>** en lugar de la lista de códigos que se incluye a continuación.</T\> Si ya no estás en esa versión del SDK, es fácil cambiar de usar la versión del listado de códigos al tipo **winrt** cuando estás.
+> Si ha instalado el [SDK de vista previa generar 17661 de 10 de Windows](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK), o más adelante, a continuación, puede simplemente directamente use la función de la fábrica de **winrt::single_threaded_observable_vector\ < T\ >** en lugar de la lista debajo de código. Si no está ya en esa versión del SDK, será fácil cambiar a través del uso de la versión del listado de código a la función **winrt** cuando se encuentre. Recuerde que en lugar de llamar a [**winrt::make**]() con el tipo de enumerados a continuación, en su lugar, llame a la función **winrt::single_threaded_observable_vector\ < T\ >** .
 
 ```cppwinrt
 // single_threaded_observable_vector.h
@@ -310,6 +310,8 @@ Guarda y compila. Copia los códigos auxiliares de descriptor desde `BookstoreVi
 
 ```cppwinrt
 // BookstoreViewModel.h
+...
+#include "single_threaded_observable_vector.h"
 ...
     struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
     {

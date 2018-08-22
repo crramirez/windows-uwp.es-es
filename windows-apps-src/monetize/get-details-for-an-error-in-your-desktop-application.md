@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis Microsoft Store, errors, errores, details, detalles
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c7836119b99e885bd0328a8ea313409a6fcf6dc
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: 31b7684878eb0f8921d81c8fda9d262a21e12132
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989549"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792729"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>Obtener los detalles de un error en la aplicación de escritorio
 
@@ -54,7 +54,7 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|---------------|------|
 | applicationId | cadena | El identificador de producto de la aplicación de escritorio de la cual quieres recuperar los detalles de errores. Para obtener el id. del producto de una aplicación de escritorio, abra cualquier [informe de análisis del Centro de desarrollo de tu aplicación de escritorio](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como el **Informe de estado**) y recuperara el id. del producto desde la dirección URL. |  Sí  |
 | failureHash | cadena | El identificador exclusivo del error sobre el que quieres obtener información detallada. Para obtener este valor respecto al error que te interesa, usa el método para [obtener los datos del informe de errores](get-error-reporting-data.md) y utiliza el valor **failureHash** del cuerpo de la respuesta de ese método. |  Sí  |
-| startDate | fecha | La fecha de inicio del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
+| startDate | fecha | La fecha de inicio del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es 30 días antes de la fecha actual.<p/><p/>**Nota:**&nbsp;&nbsp;este método sólo puede recuperar detalles de errores producidos en los últimos 30 días. |  No  |
 | endDate | fecha | La fecha de finalización del intervalo de fechas de los datos detallados del error que se quieren recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10 y skip=0 recuperan las primeras 10 filas de datos, los valores top=10 y skip=10 recuperan las siguientes 10 filas de datos, y así sucesivamente. |  No  |
@@ -143,7 +143,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Informe Estado](../publish/health-report.md)
+* [Informe de estado](../publish/health-report.md)
 * [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
 * [Obtener datos de informes de errores para la aplicación de escritorio](get-desktop-application-error-reporting-data.md)
 * [Obtener el seguimiento de la pila de un error en la aplicación de escritorio](get-the-stack-trace-for-an-error-in-your-desktop-application.md)

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: f7ca3c23179d97816fc54fdbacb951915aecf71f
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: f36facd8ba89fbaccb7c61ad937c2ce005922aa8
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976400"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791210"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Store
 
@@ -86,6 +86,7 @@ Los siguientes métodos de análisis están disponibles para aplicaciones para U
 |---------------|--------------------|
 | Adquisiciones, conversiones e instalaciones |  <ul><li>[Obtener adquisiciones de la aplicación](get-app-acquisitions.md)</li><li>[Obtener datos de embudo de adquisiciones de aplicaciones](get-acquisition-funnel-data.md)</li><li>[Obtener conversiones de aplicaciones por canal](get-app-conversions-by-channel.md)</li><li>[Obtener adquisiciones de complementos](get-in-app-acquisitions.md)</li><li>[Obtener adquisiciones de complementos de suscripción](get-subscription-acquisitions.md)</li><li>[Obtener conversiones de complementos por canal](get-add-on-conversions-by-channel.md)</li><li>[Obtener instalaciones de la aplicación](get-app-installs.md)</li></ul> |
 | Errores de la aplicación | <ul><li>[Obtener datos de informes de errores](get-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)</li><li>[Obtener el seguimiento de la pila de un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Descargar el archivo .cab para un error en tu aplicación](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
+| Conocimientos | <ul><li>[Obtener datos de perspectivas de su aplicación](get-insights-data-for-your-app.md)</li></ul>  |
 | Calificaciones y opiniones | <ul><li>[Obtener clasificaciones de la aplicación](get-app-ratings.md)</li><li>[Obtener opiniones de la aplicación](get-app-reviews.md)</li></ul> |
 | Anuncios en la aplicación y campañas de anuncios | <ul><li>[Obtener los datos de rendimiento de los anuncios](get-ad-performance-data.md)</li><li>[Obtener los datos de rendimiento de la campaña publicitaria](get-ad-campaign-performance-data.md)</li></ul> |
 
@@ -96,7 +97,9 @@ Los siguientes métodos de análisis están disponibles para que las cuentas de 
 | Escenario       | Métodos      |
 |---------------|--------------------|
 | Instalaciones |  <ul><li>[Obtener instalaciones de aplicaciones de escritorio](get-desktop-app-installs.md)</li></ul> |
+| Bloques de |  <ul><li>[Obtener bloques de actualización para su aplicación de escritorio](get-desktop-block-data.md)</li><li>[Obtener detalles del bloqueo de actualización para su aplicación de escritorio](get-desktop-block-data-details.md)</li></ul> |
 | Errores de aplicaciones |  <ul><li>[Obtener datos de informes de errores para la aplicación de escritorio](get-desktop-application-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obtener el seguimiento de la pila de un error en la aplicación de escritorio](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Descargar el archivo .cab para un error en tu aplicación de escritorio](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
+| Conocimientos | <ul><li>[Obtener datos de perspectivas para su aplicación de escritorio](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Métodos para los servicios de Xbox Live
 
@@ -118,13 +121,7 @@ Los siguientes métodos adicionales están disponibles para que los utilicen cue
 
 ### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware y controladores
 
-Los siguientes métodos de análisis están disponibles para que las cuentas de desarrollador que pertenecen al [programa Centro de desarrollo de hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) puedan usarlos.
-
-| Escenario       | Métodos      |
-|---------------|--------------------|
-| Errores en controladores de Windows 10 (para IHV) |  <ul><li>[Obtener datos de informes de errores para controladores de Windows 10](get-error-reporting-data-for-windows-10-drivers.md)</li><li>[Obtener los detalles de un error de controlador de Windows 10](get-details-for-a-windows-10-driver-error.md)</li><li>[Descargar el archivo .cab para un error de controlador de Windows 10](download-the-cab-file-for-a-windows-10-driver-error.md)</li></ul> |
-| Errores en controladores de Windows 7 y Windows 8.x (para IHV) |  <ul><li>[Obtener datos de informes de errores para controladores de Windows 7 y Windows 8.x](get-error-reporting-data-for-windows-7-and-windows-8.x-drivers.md)</li><li>[Obtener los detalles para un error de controlador de Windows 7 o Windows 8.x](get-details-for-a-windows-7-or-windows-8.x-driver-error.md)</li><li>[Descargar el archivo .cab para un error de controlador de Windows 7 o Windows 8.x](download-the-cab-file-for-a-windows-7-or-windows-8.x-driver-error.md)</li></ul> |
-| Errores de hardware (para OEM) |  <ul><li>[Obtener datos de informes de errores de hardware OEM](get-oem-hardware-error-reporting-data.md)</li><li>[Obtener detalles para un error de hardware OEM](get-details-for-an-oem-hardware-error.md)</li><li>[Descargar el archivo .cab para un error de hardware OEM](download-the-cab-file-for-an-oem-hardware-error.md)</li></ul> |
+Las cuentas de para desarrolladores que pertenecen al [programa del centro de desarrollo de Hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tienen acceso a un conjunto de métodos para recuperar datos de análisis de hardware y controladores adicional. Para obtener más información, vea [panel Hardware API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Ejemplo de código
 

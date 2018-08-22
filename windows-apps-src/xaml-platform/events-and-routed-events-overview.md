@@ -4,21 +4,20 @@ description: Aquí describimos el concepto de programación de eventos en una ap
 title: Introducción a eventos y eventos enrutados
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 61e55fa85e54970ba48413767ccf5a65b05af471
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 6ca58613a5874cde10d2bb5322c3f930e1fbce44
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691194"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788800"
 ---
 # <a name="events-and-routed-events-overview"></a>Introducción a eventos y eventos enrutados
-
 
 **API importantes**
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
@@ -40,39 +39,50 @@ Una de las tareas de programación más comunes de una aplicación de Windows Ru
 
 La interfaz de usuario de la aplicación de Windows Runtime se define al generar el código XAML. Este XAML suele ser el resultado de una superficie de diseño en VisualStudio. Asimismo, el código XAML también se puede escribir en un editor de texto sin formato o en un editor XAML de terceros. Mientras generas ese código XAML, puedes conectar controladores de eventos para elementos individuales de la interfaz de usuario y, al mismo tiempo, definir todos los demás atributos XAML que establecen los valores de propiedad de ese elemento de la interfaz de usuario.
 
-Para conectar eventos en XAML, tienes que especificar el nombre en cadena del método del controlador que ya has definido o que vas a definir más tarde en el código subyacente. Por ejemplo, este XAML define un objeto [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) con otras propiedades ([x:Name attribute](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366)) asignadas como atributos, y conecta un controlador para el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) del botón, mediante una referencia al método `showUpdatesButton_Click`:
+Para conectar eventos en XAML, tienes que especificar el nombre en cadena del método del controlador que ya has definido o que vas a definir más tarde en el código subyacente. Por ejemplo, este XAML define un objeto [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) con otras propiedades ([x:Name attribute](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366)) asignadas como atributos, y conecta un controlador para el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) del botón, mediante una referencia al método `ShowUpdatesButton_Click`:
 
-```XML
+```xaml
 <Button x:Name="showUpdatesButton"
   Content="{Binding ShowUpdatesText}"
-  Click="showUpdatesButton_Click"/>
+  Click="ShowUpdatesButton_Click"/>
 ```
 
 **Sugerencia** La *conexión de eventos* es un término de programación. Hace referencia al proceso o al código que se usa para indicar que las instancias de un evento deben invocar a un método de controlador con nombre. En la mayoría de modelos de código de procedimiento, la conexión de eventos es el código "AddHandler", implícito o explícito, que da nombre tanto al evento como al método y que normalmente implica una instancia de objeto de destino. En XAML, el código "AddHandler" está implícito y la conexión de eventos consiste en su totalidad en utilizar el nombre de atributo de un elemento de objeto como nombre del evento y el valor de ese atributo como nombre del controlador.
 
-Escribe el controlador real en el lenguaje de programación que estés usando para todo el código de la aplicación y el código subyacente. Con el atributo `Click="showUpdatesButton_Click"`, creaste un contrato por el cual cuando se compila y se analiza el código XAML para marcado, tanto el proceso de compilación del marcado XAML de la acción de compilación del IDE como el proceso de análisis del XAML final cuando se carga la aplicación, pueden encontrar un método `showUpdatesButton_Click` dentro del código de la aplicación. `showUpdatesButton_Click` debe ser un método que implemente una firma de método compatible (basada en un delegado) para cualquier controlador del evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Por ejemplo, este código define el controlador `showUpdatesButton_Click`.
+Escribe el controlador real en el lenguaje de programación que estés usando para todo el código de la aplicación y el código subyacente. Con el atributo `Click="ShowUpdatesButton_Click"`, creaste un contrato por el cual cuando se compila y se analiza el código XAML para marcado, tanto el proceso de compilación del marcado XAML de la acción de compilación del IDE como el proceso de análisis del XAML final cuando se carga la aplicación, pueden encontrar un método `ShowUpdatesButton_Click` dentro del código de la aplicación. `ShowUpdatesButton_Click` debe ser un método que implemente una firma de método compatible (basada en un delegado) para cualquier controlador del evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Por ejemplo, este código define el controlador `ShowUpdatesButton_Click`.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
-private void showUpdatesButton_Click (object sender, RoutedEventArgs e) {
+private void ShowUpdatesButton_Click (object sender, RoutedEventArgs e) 
+{
     Button b = sender as Button;
     //more logic to do here...
 }
 ```
+
 ```vb
-Private Sub showUpdatesButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+Private Sub ShowUpdatesButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
     Dim b As Button = CType(sender, Button)
     '  more logic to do here...
 End Sub
 ```
+
+```cppwinrt
+void winrt::MyNamespace::implementation::BlankPage::ShowUpdatesButton_Click(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::RoutedEventArgs const& e)
+{
+    auto b{ sender.as<Windows::UI::Xaml::Controls::Button>() };
+    // More logic to do here.
+}
+```
+
 ```cpp
-void MyNamespace::BlankPage::showUpdatesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e) {
+void MyNamespace::BlankPage::ShowUpdatesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e) 
+{
     Button^ b = (Button^) sender;
     //more logic to do here...
 }
 ```
 
-En este ejemplo, el método `showUpdatesButton_Click` se basa en el delegado [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812). Sabrás que este es el delegado que hay que usar, porque verás su nombre en la sintaxis del método [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) en la página de referencia de MSDN.
+En este ejemplo, el método `ShowUpdatesButton_Click` se basa en el delegado [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812). Sabrás que este es el delegado que hay que usar, porque verás su nombre en la sintaxis del método [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) en la página de referencia de MSDN.
 
 **Sugerencia** Visual Studio ofrece una manera cómoda de asignar un nombre al controlador de eventos y de definir el método del controlador mientras editas código XAML. Cuando proporciones el nombre de atributo del evento en el editor de texto XAML, espera un momento hasta que se muestre una lista de Microsoft IntelliSense. Si haces clic en **&lt;Nuevo controlador de eventos&gt;** en la lista, Microsoft Visual Studio sugerirá un nombre de método basado en el **x:Name** (o nombre de tipo) del elemento, el nombre del evento y un sufijo numérico. Es entonces cuando puedes hacer clic en el nombre del controlador de eventos seleccionado y hacer clic en **Navegar al controlador de eventos**. De esta manera, irás directamente a la definición del controlador de eventos recién insertada, tal como se ve en la vista del editor de código del archivo de código subyacente de la página XAML. El controlador de eventos ya tiene la firma correcta, incluido el parámetro *sender* y la clase de datos de evento que el evento usa. Además, si ya existe un método de controlador con la firma correcta en tu código subyacente, aparecerá ese nombre de método en la lista desplegable con autocompletar, junto con la opción **&lt;Nuevo controlador de eventos&gt;**. Asimismo, también puedes presionar la tecla Tab como método abreviado, en lugar de hacer clic en los elementos de la lista de IntelliSense.
 
@@ -104,7 +114,7 @@ En C#, la sintaxis es usar el operador `+=`. El controlador se registra haciendo
 
 Si usas un código para agregar controladores de eventos a los objetos que aparecen en la interfaz de usuario en tiempo de ejecución, se recomienda agregar esos controladores en respuesta a una devolución de llamada o evento de duración del objeto, como [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) o [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737), de manera que los controladores de eventos del objeto correspondiente estén listos para los eventos que inicie el usuario en tiempo de ejecución. En este ejemplo se muestra un esquema XAML de la estructura de página y se proporciona la sintaxis del lenguaje C# para agregar un controlador de eventos a un objeto.
 
-```xml
+```xaml
 <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
   <StackPanel>
     <TextBlock Name="textBlock1">Put the pointer over this text</TextBlock>
@@ -143,15 +153,19 @@ End Sub
 
 **Nota** Visual Studio y su superficie de diseño XAML suelen promover la técnica de control de instancias, en lugar de la palabra clave **Handles**. Esto se debe a que establecer la conexión del controlador de eventos en XAML forma parte del flujo de trabajo del desarrollador y diseñador, y la técnica de la palabra clave **Handles** es incompatible con la conexión de los controladores de eventos en XAML.
 
-En C++, también se usa la sintaxis **+=**, pero ten en cuenta las siguientes diferencias respecto al formato C# básico:
+En C + + / CX, también utiliza el **+=** sintaxis, pero hay diferencias en la forma básica de C#:
 
 -   No existe inferencia de delegado, por lo que debes usar **ref new** en la instancia de delegado.
 -   El constructor delegado tiene dos parámetros y debe tener el objeto de destino como primer parámetro. Como norma general, especificas **this**.
 -   El constructor delegado requiere la dirección del método como segundo parámetro para que el operador de referencia de **&** preceda al nombre del método.
 
+```cppwinrt
+textBlock1().PointerEntered({this, &MainPage::TextBlock1_PointerEntered });
+```
+
 ```cpp
 textBlock1->PointerEntered += 
-ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerEntered);
+ref new PointerEventHandler(this, &BlankPage::textBlock1_PointerEntered);
 ```
 
 ### <a name="removing-event-handlers-in-code"></a>Quitar controladores de eventos del código
@@ -170,10 +184,10 @@ En ocasiones excepcionales, querrás quitar los controladores de eventos de form
 
 Por ejemplo, puedes quitar un controlador de eventos denominado **textBlock1\_PointerEntered** del objeto de destino **textBlock1** mediante este código.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 textBlock1.PointerEntered -= textBlock1_PointerEntered;
 ```
+
 ```vb
 RemoveHandler textBlock1.PointerEntered, AddressOf textBlock1_PointerEntered
 ```
@@ -294,5 +308,3 @@ La definición de un evento personalizado suele realizarse como parte del ejerci
 * [Eventos y funciones delegadas de .NET](http://go.microsoft.com/fwlink/p/?linkid=214364)
 * [Crear componentes de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399)
- 
-

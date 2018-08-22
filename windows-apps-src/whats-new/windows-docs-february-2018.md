@@ -8,12 +8,13 @@ ms.date: 2/5/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: f5f9318c631c4ebf8d854d01ec5bd531dc867329
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b55649b5a4fb0927b03d3fcaf55545a7852d6526
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794354"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>Novedades de la documentación de los desarrolladores de Windows de febrero de 2018
 

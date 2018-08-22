@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, primera aplicación, c#, c++, JavaScript
-ms.localizationpriority: high
-ms.openlocfilehash: 124c5e89923945ae740dfdc3e658b8d20bbd1286
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e8e2272ab761e1fa0bc9514f226a73a66a10662b
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2796776"
 ---
 # <a name="create-your-first-app"></a>Crear tu primera aplicación
 
@@ -80,10 +81,7 @@ Las aplicaciones web se pueden empaquetar fácilmente en el marco UWP como las a
 
 ## <a name="see-also"></a>Consulta también
 
-* [Tutoriales de UWP](create-uwp-apps.md)
-* [Publicar tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
-* [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
-* [Muestras de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
+* [Empezar a programar](create-uwp-apps.md)
 * [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md)
 * [Prepárate](get-set-up.md)
 * [Registrarse para obtener una cuenta de Windows](sign-up.md)

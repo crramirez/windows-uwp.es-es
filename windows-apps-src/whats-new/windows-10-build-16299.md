@@ -8,12 +8,13 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: e6d9f03fc638581272cca5895c8949209a71e594
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ffe7de94e4a8564b4971fda0b64f6648d9b6088b
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789844"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>Novedades para desarrolladores en Windows 10, compilación 16299
 

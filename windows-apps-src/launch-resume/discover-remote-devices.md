@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: los dispositivos de Windows 10, uwp, conectados, sistemas remotos, Roma, Roma de project
 ms.localizationpriority: medium
-ms.openlocfilehash: 724e2ce05dc439ba440f46697b736faabb1e8df0
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: 02d04074ece0033da8c3454a95bc35af201903f3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018499"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794666"
 ---
 # <a name="discover-remote-devices"></a>Detectar dispositivos remotos
 Tu aplicación puede usar la red inalámbrica, Bluetooth y conexión de nube para detectar dispositivos Windows en los que se inicie sesión con la misma cuenta de Microsoft que en el dispositivo detectado. Los dispositivos remotos no necesitan tener instalado ningún software especial para que se puedan reconocer.
@@ -60,7 +60,7 @@ Un objeto **RemoteSystem** se recupera si se proporciona un objeto **HostName** 
 
 ## <a name="querying-a-capability-on-a-remote-system"></a>Consultar una funcionalidad en un sistema remoto
 
-Aunque independiente del filtrado de detección, la consulta de las funciones de dispositivo puede constituir una parte importante del proceso de detección. Con el método [**RemoteSystem.GetCapabilitySupportedAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem#Windows_System_RemoteSystems_RemoteSystem_GetCapabilitySupportedAsync_System_String_), puedes consultar sistemas remotos detectados para admitir determinadas funciones como la conectividad de sesión remota o el uso compartido de la entidad espacial (holográfica). Consulta la clase [**KnownRemoteSystemCapabilities**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.knownremotesystemcapabilities) para la lista de funcionalidades consultables.
+Aunque independiente del filtrado de detección, la consulta de las funciones de dispositivo puede constituir una parte importante del proceso de detección. Con el método [**RemoteSystem.GetCapabilitySupportedAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem.GetCapabilitySupportedAsync), puedes consultar sistemas remotos detectados para admitir determinadas funciones como la conectividad de sesión remota o el uso compartido de la entidad espacial (holográfica). Consulta la clase [**KnownRemoteSystemCapabilities**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.knownremotesystemcapabilities) para la lista de funcionalidades consultables.
 
 ```csharp
 // Check to see if the given remote system can accept LaunchUri requests

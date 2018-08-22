@@ -8,23 +8,21 @@ ms.date: 09/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows10, uwp
+keywords: Windows 10, uwp, portal de dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e73519f57d9b08e08a7400f322367b6634cf945
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: e70ab7c7fba8b8da9a0115a86a13f08e4ef3ebe2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817726"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792485"
 ---
-# <a name="device-portal-for-hololens"></a>El Portal de dispositivos para HoloLens
+# <a name="device-portal-for-hololens"></a>Device Portal para HoloLens
 
 
 ## <a name="set-up-device-portal-on-hololens"></a>Configurar Device Portal en HoloLens
 
 ### <a name="enable-device-portal"></a>Habilitar Device Portal
-
-**Para habilitar Device Portal**
 
 1. Enciende HoloLens y colócalo en el dispositivo.
 2. Realiza el gesto [nástico](https://dev.windows.com/holographic/Gestures.html#Bloom) para iniciar el menú principal.
@@ -37,7 +35,7 @@ ms.locfileid: "1817726"
 
 ### <a name="pair-your-device"></a>Emparejar el dispositivo
 
-### <a name="connect-over-wi-fi"></a>Conectarse a través de Wi-Fi 
+#### <a name="connect-over-wi-fi"></a>Conectarse a través de Wi-Fi 
 
 1. Conecta HoloLens a una red Wi-Fi.
 2. Busca la dirección IP del dispositivo.- Busca la dirección IP en el dispositivo en Configuración > Red e Internet > Wi-Fi > Opciones avanzadas.
@@ -46,18 +44,21 @@ ms.locfileid: "1817726"
 3. Desde un explorador web de tu equipo, ve a `https://<YOUR_HOLOLENS_IP_ADDRESS>`
     - En el explorador se mostrará el mensaje siguiente: "Hay un problema con el certificado de seguridad de este sitio web". Esto ocurre porque el certificado emitido en Device Portal es un certificado de prueba. Puedes ignorar este error de certificado por ahora y continuar.
 
-### <a name="connect-over-usb"></a>Conectarse a través de USB 
+#### <a name="connect-over-usb"></a>Conectarse a través de USB 
 
 1. Instala las herramientas para asegurarte de que tienes Visual Studio Update 1 con las Herramientas de desarrollo de Windows 10 instaladas en el equipo. Esto permite la conectividad USB.
 2. Conecta HoloLens en el equipo con un cable micro-USB.
 3. Desde un explorador web de tu equipo, ve a `http://127.0.0.1:10080`.
 
-### <a name="connect-to-an-emulator"></a>Conectarse a un emulador 
+> [!IMPORTANT]
+> Si su PC no puede encontrar el dispositivo, intente utilizar la dirección IP de red real del dispositivo de HoloLens, en lugar de `http://127.0.0.1:10080`.
+
+#### <a name="connect-to-an-emulator"></a>Conectarse a un emulador 
 
 También puedes usar Device Portal con el emulador. Para conectarte a Device Portal, usa la barra de herramientas. Haz clic en este icono:
 - Abrir Device Portal: abre Windows Device Portal para el sistema operativo de HoloLens en el emulador.
 
-### <a name="create-a-username-and-password"></a>Crear un nombre de usuario y una contraseña. 
+#### <a name="create-a-username-and-password"></a>Crear un nombre de usuario y una contraseña. 
 
 La primera vez que te conectes a Device Portal en HoloLens, debes crear un nombre de usuario y una contraseña.
 1. En un explorador web de tu equipo, escribe la dirección IP de HoloLens. Se abrirá la página de acceso Configuración.
@@ -69,7 +70,7 @@ La primera vez que te conectes a Device Portal en HoloLens, debes crear un nombr
 
 Si quieres cambiar este nombre de usuario o contraseña en cualquier momento, puedes repetir este proceso. Para ello, visita la página de seguridad del dispositivo haciendo clic en el vínculo de seguridad a lo largo de la parte superior derecha, o bien navega a: `https://<YOUR_HOLOLENS_IP_ADDRESS>/devicesecurity.htm`.
 
-### <a name="security-certificate"></a>Certificado de seguridad 
+#### <a name="security-certificate"></a>Certificado de seguridad 
 
 Si ves un "error de certificado" en el explorador, puedes corregirlo mediante la creación de una relación de confianza con el dispositivo.
 

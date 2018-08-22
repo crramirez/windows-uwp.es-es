@@ -1,17 +1,21 @@
 ---
 author: jnHs
-Description: "Si se producen errores después de enviar la aplicación a la Tienda, tienes que resolverlos para poder continuar el proceso de certificación."
-title: "Resolver errores de envío"
+Description: If you encounter errors after submitting your app to the Store, you must resolve them in order to continue the certification process.
+title: Resolver errores de envío
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: b72b5593f4266a015b14e2b61a70c87ce199cdfd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 9d027e35f8fe76a0d4139301f1a7dabc7798348a
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2790094"
 ---
 # <a name="resolve-submission-errors"></a>Resolver errores de envío
 
@@ -19,9 +23,13 @@ Si se producen errores después de enviar la aplicación a la Tienda, tienes que
 
 ## <a name="uwp-apps"></a>Aplicaciones para UWP
 
-Si envías una aplicación para UWP, es posible que veas un error durante el procesamiento previo si el archivo de paquete no es un archivo .appxupload generado por Visual Studio para la Tienda. Asegúrate de seguir los pasos de [Empaquetado de aplicaciones universales de Windows para Windows 10](../packaging/packaging-uwp-apps.md) al crear el archivo de paquete de la aplicación y carga solo el archivo .appxupload en la página [Paquetes](upload-app-packages.md) del envío, no un appx o .appxbundle.
+Si envías una aplicación para UWP, es posible que veas un error durante el procesamiento previo si el archivo de paquete no es un archivo .appxupload generado por Visual Studio para la Tienda. Asegúrese de que siga los pasos descritos en el [paquete de una aplicación de UWP con Visual Studio](../packaging/packaging-uwp-apps.md) al crear el archivo del paquete de la aplicación y sólo cargar el archivo .appxupload en la página de [paquetes](upload-app-packages.md) de la presentación, no un appx o .appxbundle.
 
 Si se muestra un error de compilación, asegúrate de que eres capaz de generar correctamente la aplicación en modo de lanzamiento. Para obtener más información, consulta [Errores de compilador interno nativo .NET](http://go.microsoft.com/fwlink/p/?LinkID=613098).
+
+## <a name="desktop-application"></a>Aplicación de escritorio
+
+Si va a enviar un paquete que contiene los archivos binarios de Win32 y UWP, asegúrese de cree que el paquete mediante el proyecto de empaquetado de Windows que está disponible en Visual Studio 2017 actualización 4. Si crea el paquete mediante el uso de una plantilla de proyecto UWP, es posible que no pueda enviar que empaquetar para la tienda o sideload en otros equipos. Incluso si el paquete se publica correctamente, es posible que se comporte de manera inesperada en el PC del usuario. Para obtener más información, vea el [paquete de una aplicación mediante el uso de Visual Studio (puente de escritorio)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 ## <a name="windows-phone-apps"></a>Aplicaciones de Windows Phone
 
@@ -44,7 +52,8 @@ Si aparece un error que dice **El nombre encontrado en el paquete no es uno de l
 - Ve a la página de la aplicación [Identidad de la aplicación](view-app-identity-details.md) (en **Administración de aplicaciones**) para confirmar si la aplicación tiene una identidad asignada. Si no la tiene, verás una opción para crear una. Debes reservar un nombre para tu aplicación con el fin de crear la identidad. Asegúrate de que este sea el nombre que usaste en el paquete.
 - Si la aplicación ya tiene una identidad, puede significar que aún tienes que reservar el nombre que quieras usar en el paquete. En **Administración de aplicaciones**, haz clic en [Administrar nombres de la aplicación](manage-app-names.md). Escribe el nombre que te gustaría usar y haz clic en **Reservar nombre de aplicación**.
 
-> **Importante**: Si el nombre que quieres usar no está disponible, es posible que otra aplicación ya haya reservado ese nombre. Si la aplicación ya está publicada con ese nombre o si crees que tienes derecho a usar ese nombre, [ponte en contacto con soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
+> [!IMPORTANT]
+>  Si el nombre que desea usar no está disponible, otra aplicación podría haber ya reservado ese nombre. Si la aplicación se ha publicado en ese nombre, o si cree que tiene derecho a utilizar, [póngase en contacto con soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
 
  
 

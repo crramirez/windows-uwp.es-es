@@ -15,12 +15,13 @@ pm-contact: abarlow
 design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
-ms.localizationpriority: high
-ms.openlocfilehash: 69bb202a7e13f087ead7ea2a379f803219bbd2d4
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b144c7e790d0462688795d9e1a6c4f076b569eb3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795706"
 ---
 # <a name="parallax"></a>Parallax
 

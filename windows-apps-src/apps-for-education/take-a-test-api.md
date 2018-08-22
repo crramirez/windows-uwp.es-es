@@ -4,26 +4,24 @@ title: API de JavaScript "Hacer un examen".
 author: PatrickFarley
 ms.author: pafarley
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-ms.date: 10/06/2017
+ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, educación
 ms.localizationpriority: medium
-ms.openlocfilehash: 43edadfba169ddae85818f8ef1dbd1e7f4adba64
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691364"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792589"
 ---
 # <a name="take-a-test-javascript-api"></a>API de JavaScript "Hacer un examen"
 
-[Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación basada en explorador que representa evaluaciones en línea bloqueadas para examen decisivo, lo que permite a los educadores centrarse en el contenido de la evaluación en lugar de en cómo proporcionar un entorno de pruebas seguro. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
+[Realice una prueba](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación de UWP basado en explorador que represente bloqueado la evaluación en línea para probar la alta apuestas, lo que permite educadores para centrarse en la evaluación de contenido en lugar de cómo proporcionar un entorno de prueba seguro. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
 
-Si quieres obtener información acerca de la propia aplicación, consulta [Referencia técnica de la aplicación Hacer un examen)](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396).
-
-Para solucionar cualquier problema, consulta [Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos](troubleshooting.md).
+Si quieres obtener información acerca de la propia aplicación, consulta [Referencia técnica de la aplicación Hacer un examen)](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). Para solucionar cualquier problema, consulta [Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos](troubleshooting.md).
 
 ## <a name="reference-documentation"></a>Documentación de referencia
 Las APIs de Hacer un examen existen en los siguientes espacios de nombres. Ten en cuenta que todas las API dependen de un objeto `SecureBrowser` global.
@@ -32,12 +30,9 @@ Las APIs de Hacer un examen existen en los siguientes espacios de nombres. Ten e
 |-----------|-------------|
 |[espacio de nombres de seguridad](#security-namespace)|Contiene API que te permiten bloquear el dispositivo para pruebas y aplicar un entorno de pruebas. |
 
-> [!NOTE]
-> El espacio de nombres de texto a voz (TTS) se quitó a partir de Windows 10 versión 1709. La [API de síntesis de voz de Microsoft Edge](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/), una implementación de la [Speech Api de W3C](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html), es ahora la solución recomendada para la implementación de texto a voz.
-
 ### <a name="security-namespace"></a>Espacio de nombres de seguridad
 
-El espacio de nombres de seguridad te permite bloquear el dispositivo, consultar la lista de procesos de usuario y de sistema, obtener direcciones IP y MAC y borrar los recursos web en caché.
+El espacio de nombres de seguridad le permite bloquear el dispositivo, compruebe la lista de los procesos de usuario y del sistema, obtener direcciones IP y MAC y desactive recursos web almacenados en caché.
 
 | Método | Descripción   |
 |--------|---------------|

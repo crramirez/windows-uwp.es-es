@@ -1,6 +1,6 @@
 ---
 title: Introducción a los certificados
-description: En este artículo se describe el uso de certificados en las aplicaciones para la Plataforma universal de Windows (UWP).
+description: En este artículo se describe el uso de certificados en las aplicaciones de la Plataforma universal de Windows (UWP).
 ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
 author: msatranjr
 ms.author: misatran
@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
-ms.openlocfilehash: 0be07af5c8770ce540cbbce23e53df6ea9495911
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 1db3af004831f010a3dd4918898ce5f7cf70bb1a
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689831"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795105"
 ---
 # <a name="intro-to-certificates"></a>Introducción a los certificados
 

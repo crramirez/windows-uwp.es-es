@@ -9,13 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, universal
-ms.localizationpriority: high
-ms.openlocfilehash: 12d207550066615baa301c26d1bf5f35335db83d
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7f0168f0a1baef5e68bccdf0a33c3ac7eb7683a7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832529"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800945"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>¿Qué es una aplicación para Plataforma universal de Windows (UWP)?
 
@@ -151,3 +151,12 @@ Para obtener más material de introducción, consulta [An Introduction to Buildi
 - Para obtener una lista de tipos de .NET que puedes usar en una aplicación para UWP, consulta [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/mt185501.aspx)
 - [.NET Native - What it means for Universal Windows Platform (UWP) developers (.NET Native: qué supone para los desarrolladores de la Plataforma universal de Windows [UWP])](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
 - Aprende a agregar experiencias modernas para los usuarios de Windows 10 a tu aplicación de escritorio existente y distribuirla en Microsoft Store con el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop).
+
+## <a name="how-the-universal-windows-platform-relates-to-windows-runtime-apis"></a>Cómo se relaciona con la plataforma Windows Universal a Windows Runtime APIs
+Si va a crear una aplicación de plataforma de Windows Universal (UWP), a continuación, puede obtener una gran cantidad de mileage y comodidad fuera de los términos "plataforma de Windows Universal (UWP)" y "Tiempo de ejecución de Windows (WinRT)" se trata como sinónimo más o menos. Pero *es* posible buscar en el interior de la tecnología y determinar sólo lo que está la diferencia entre las ideas. Si tiene curiosidad en saber, a continuación, esta última sección es para usted.
+
+El tiempo de ejecución de Windows y APIs WinRT, son una evolución de las API de Windows. Originalmente, Windows se programó a través de plano, las API de Win32 de estilo C. A los que se han agregado APIs COM ([DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) que se va a un ejemplo destacado). Su propia forma de escribir aplicaciones de Windows y su propio tipo de tecnología de la API de la mano de formularios Windows Forms, WPF, .NET y lenguajes administrados. El tiempo de ejecución de Windows es, en realidad, la siguiente fase de COM. En el nivel de interfaz binaria (ABI) aplicación real, sus raíces en COM se convierten en visibles. Pero el tiempo de ejecución de Windows se ha diseñado para ser que se puede llamar desde una gran gama de diferentes lenguajes de programación. Y que se puede llamar de forma que es muy natural a cada uno de esos idiomas. Con este fin, el acceso al tiempo de ejecución de Windows está disponible a través de lo que se conoce como proyecciones de idioma. No hay una proyección de idioma de tiempo de ejecución de Windows en C#, en Visual Basic, en el estándar de C++, en JavaScript y así sucesivamente. Además, una vez empaquetadas adecuadamente (consulte el [Puente de escritorio](/windows/uwp/porting/desktop-to-uwp-root)), puede llamar a APIs WinRT desde una aplicación que se basa en uno de una gran gama de modelos de aplicaciones: Win32,. NET, formularios Windows Forms y WPF.
+
+Y, por supuesto, puede llamar a APIs WinRT desde su aplicación UWP. UWP es un modelo de aplicaciones que se fundamentan en el tiempo de ejecución de Windows. Técnicamente, el modelo de aplicación UWP se basa en [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication), aunque ese detalle puede estar oculta, dependiendo del lenguaje de programación. Tal y como se ha explicado en este tema, desde un punto de vista de la propuesta de valor, el UWP se presta a la escritura de un archivo binario único que, debe elegir, se puede publicar en el Microsoft Store y ejecutar en cualquiera de una gran gama de factores de forma de dispositivo. El alcance de dispositivo de su aplicación UWP depende el subconjunto de las API de UWP que limitan su aplicación a las llamadas o llamar condicionalmente.
+
+Espero que, en esta sección se realizó correctamente en la descripción de la diferencia entre la tecnología subyacente en tiempo de ejecución de Windows APIs y el mecanismo y valor empresarial de la plataforma Windows Universal.

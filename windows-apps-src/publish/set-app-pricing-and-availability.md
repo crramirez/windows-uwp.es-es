@@ -4,18 +4,18 @@ Description: The Pricing and availability page of the app submission process let
 title: Establecer los precios y la disponibilidad de las aplicaciones
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, precio, disponible, descubrible, prueba gratuita, pruebas, prueba, aplicaciones, fecha de lanzamiento
-ms.localizationpriority: high
-ms.openlocfilehash: 6c411572bbcf048b82ff27c284dc8f9343ef4fc4
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 20c52687b375f9bf33dd491eeb37d4142acace99
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831999"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794814"
 ---
 # <a name="set-app-pricing-and-availability"></a>Establecer los precios y la disponibilidad de las aplicaciones
 
@@ -74,10 +74,7 @@ De manera predeterminada, la versión de prueba estará disponible en cuanto se 
 >[!NOTE]
 > Estas fechas solo se aplican para los clientes de Windows 10 (incluida la Xbox). Si la aplicación está disponible para los clientes con versiones anteriores del sistema operativo, se ofrecerá la prueba a estos clientes siempre que tu producto esté disponible. 
 
-Para establecer las fechas de cuándo se debe ofrecer la prueba a los clientes en Windows 10, cambia el menú desplegable **Comienza en** o **finaliza en** a **hasta** y, a continuación, elige la fecha y la hora. Si lo haces, puede elegir **UTC** para que el tiempo que selecciones sea el Horario universal coordinado (UTC), o elige **Local** para que estas horas se usen en cada zona asociada a un mercado. (Ten en cuenta para los mercados que tengan más de una zona horaria, se usará solo una zona horaria para ese mercado. Para los Estados Unidos, se usará la zona horario del Este). 
-
->[!NOTE]
-> A diferencia de la sección [Programación](configure-precise-release-scheduling.md), las fechas que selecciones para tu **evaluación gratuita** no se puede personalizar para mercados específicos. 
+Para establecer las fechas de cuándo se debe ofrecer la prueba a los clientes en Windows 10, cambia el menú desplegable **Comienza en** o **finaliza en** a **hasta** y, a continuación, elige la fecha y la hora. Si lo haces, puede elegir **UTC** para que el tiempo que selecciones sea el Horario universal coordinado (UTC), o elige **Local** para que estas horas se usen en cada zona asociada a un mercado. (Ten en cuenta para los mercados que tengan más de una zona horaria, se usará solo una zona horaria para ese mercado. Para los Estados Unidos, la zona hora oriental se usa.) Si desea definir fechas diferentes para los mercados de referencia, se puede seleccionar **Personalizar para mercados específicos** .
 
 
 ## <a name="sale-pricing"></a>Precio de oferta

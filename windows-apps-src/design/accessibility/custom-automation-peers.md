@@ -6,18 +6,18 @@ title: Automatización del mismo nivel personalizada
 label: Custom automation peers
 template: detail.hbs
 ms.author: mhopkins
-ms.date: 09/25/2017
+ms.date: 07/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bab0ac8b89815a67be2c963979b3712f022248b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a2f9caf8519aa76ef9487e5318a238a6e1d53fe2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656570"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800541"
 ---
 # <a name="custom-automation-peers"></a>Automatización del mismo nivel personalizada  
 
@@ -122,7 +122,6 @@ Si estás escribiendo una clase de control personalizada y pretendes suministrar
 
 Por ejemplo, el siguiente código declara que el control personalizado `NumericUpDown` debe usar `NumericUpDownPeer` del mismo nivel para fines de Automatización de la interfaz de usuario.
 
-C#
 ```csharp
 using Windows.UI.Xaml.Automation.Peers;
 ...
@@ -138,7 +137,6 @@ public class NumericUpDown : RangeBase {
 }
 ```
 
-Visual Basic
 ```vb
 Public Class NumericUpDown
     Inherits RangeBase
@@ -151,7 +149,29 @@ Public Class NumericUpDown
 End Class
 ```
 
-C++
+```cppwinrt
+// NumericUpDown.idl
+namespace MyNamespace
+{
+    runtimeclass NumericUpDown : Windows.UI.Xaml.Controls.Primitives.RangeBase
+    {
+        NumericUpDown();
+        Int32 MyProperty;
+    }
+}
+
+// NumericUpDown.h
+...
+struct NumericUpDown : NumericUpDownT<NumericUpDown>
+{
+    ...
+    Windows::UI::Xaml::Automation::Peers::AutomationPeer OnCreateAutomationPeer()
+    {
+        return winrt::make<MyNamespace::implementation::NumericUpDownAutomationPeer>(*this);
+    }
+};
+```
+
 ```cpp
 //.h
 public ref class NumericUpDown sealed : Windows::UI::Xaml::Controls::Primitives::RangeBase
@@ -160,7 +180,7 @@ public ref class NumericUpDown sealed : Windows::UI::Xaml::Controls::Primitives:
 protected:
     virtual AutomationPeer^ OnCreateAutomationPeer() override
     {
-         return ref new NumericUpDown(this);
+         return ref new NumericUpDownAutomationPeer(this);
     }
 };
 ```
@@ -193,20 +213,38 @@ Si derivas directamente de [**ContentControl**](https://msdn.microsoft.com/libra
 ## <a name="initialization-of-a-custom-peer-class"></a>Inicialización de una clase del mismo nivel personalizada  
 El sistema de automatización del mismo nivel debe definir un constructor con seguridad de tipos que use una instancia del control propietario para la inicialización base. En el siguiente ejemplo, la implementación pasa el valor *owner* a la base [**RangeBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242506) y, finalmente, [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472) usa *owner* para establecer [**FrameworkElementAutomationPeer.Owner**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.owner).
 
-C#
 ```csharp
 public NumericUpDownAutomationPeer(NumericUpDown owner): base(owner)
 {}
 ```
 
-Visual Basic
 ```vb
 Public Sub New(owner As NumericUpDown)
     MyBase.New(owner)
 End Sub
 ```
 
-C++
+```cppwinrt
+// NumericUpDownAutomationPeer.idl
+import "NumericUpDown.idl";
+namespace MyNamespace
+{
+    runtimeclass NumericUpDownAutomationPeer : Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    {
+        NumericUpDownAutomationPeer(NumericUpDown owner);
+        Int32 MyProperty;
+    }
+}
+
+// NumericUpDownAutomationPeer.h
+...
+struct NumericUpDownAutomationPeer : NumericUpDownAutomationPeerT<NumericUpDownAutomationPeer>
+{
+    ...
+    NumericUpDownAutomationPeer(MyNamespace::NumericUpDown const& owner);
+};
+```
+
 ```cpp
 //.h
 public ref class NumericUpDownAutomationPeer sealed :  Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer
@@ -225,7 +263,6 @@ Cuando se implemente un sistema del mismo nivel para un control personalizado, i
 
 Como mínimo, siempre que definas una nueva clase del mismo nivel, implementa el método [**GetClassNameCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getclassnamecore), como se muestra en el ejemplo siguiente.
 
-C#
 ```csharp
 protected override string GetClassNameCore()
 {
@@ -244,7 +281,6 @@ Algunas tecnologías de asistencia usan el valor [**GetAutomationControlType**](
 
 La implementación de [**GetAutomationControlTypeCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltypecore) describe el control con el valor [**AutomationControlType**](https://msdn.microsoft.com/library/windows/apps/BR209182). Si bien puedes devolver **AutomationControlType.Custom**, deberías devolver uno de los tipos de control más específicos si alguno de ellos describe con mayor precisión los escenarios principales de tu control. Aquí tienes un ejemplo.
 
-C#
 ```csharp
 protected override AutomationControlType GetAutomationControlTypeCore()
 {
@@ -268,7 +304,7 @@ Si una clase de sistemas del mismo nivel hereda otro sistema del mismo nivel, y 
 
 Aunque no es el código literal, este ejemplo se acerca a la implementación de [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) ya presente en [**RangeBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242506).
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -288,7 +324,7 @@ Un sistema del mismo nivel puede informar que admite más de un patrón. En ese 
 
 Este es un ejemplo de una invalidación [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) para un sistema del mismo nivel personalizado. Notifica la compatibilidad de dos patrones: [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) y [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653). Este control es un control de visualización de medios que se puede mostrar en pantalla completa (modo de conmutación) y que tiene una barra de progreso en la que los usuarios pueden seleccionar una posición (el control de intervalo). Este código procedía de la [muestra de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570).
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -311,7 +347,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 ### <a name="forwarding-patterns-from-sub-elements"></a>Reenvío de patrones de subelementos  
 Una implementación del método [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) también puede especificar un subelemento o una parte como proveedor de patrones para su host. Este ejemplo imita el modo en que [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) transfiere el control del patrón de desplazamiento al sistema del mismo nivel de su control [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527) interno. Para especificar un subelemento para el control de patrones, este código obtiene el objeto del subelemento, crea un sistema del mismo nivel para el subelemento con el método [**FrameworkElementAutomationPeer.CreatePeerForElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.createpeerforelement) y devuelve el nuevo sistema del mismo nivel.
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -403,7 +439,7 @@ Es útil planear con tiempo la accesibilidad en el diseño de la API de la propi
 
 Una implementación típica es aquella en las que las API de proveedor primero llaman a [**Owner**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.owner) para acceder a la instancia de control en tiempo de ejecución. Después, pueden llamarse a los métodos de comportamiento necesarios en ese objeto.
 
-C#
+
 ```csharp
 public class IndexCardAutomationPeer : FrameworkElementAutomationPeer, IExpandCollapseProvider {
     private IndexCard ownerIndexCard;
@@ -447,7 +483,7 @@ Los clientes de automatización de la interfaz de usuario pueden suscribirse a e
 
 El siguiente ejemplo de código muestra cómo obtener el objeto del sistema del mismo nivel del código de definición de control y llamar a un método para desencadenar un evento desde ese sistema del mismo nivel. Con fines de optimización, el código determina si hay escuchas para este tipo de evento. Desencadenar el evento y crear el objeto del mismo nivel solo cuando hay escuchas evita sobrecargas innecesarias y ayuda al control a mantener su capacidad de respuesta.
 
-C#
+
 ```csharp
 if (AutomationPeer.ListenerExists(AutomationEvents.PropertyChanged))
 {

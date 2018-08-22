@@ -3,19 +3,19 @@ author: JnHs
 Description: Learn how to send notifications from Windows Dev Center to your app to encourage groups of customers to take an action, such as rating an app or buying an add-on.
 title: Enviar notificaciones push dirigidas a los clientes de la aplicación
 ms.author: wdg-dev-content
-ms.date: 04/10/2018
+ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, notificaciones dirigidas, push dirigidas, notificaciones push, notificación del sistema, ventana
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
-ms.localizationpriority: high
-ms.openlocfilehash: 6c59e0856306758412d01e2d32bb312205116e88
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817040"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795119"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificaciones a los clientes de la aplicación
 
@@ -27,7 +27,7 @@ El Centro de desarrollo de Windows ofrece una plataforma de participación basad
 > Estas notificaciones solo pueden usarse con aplicaciones para UWP.
 
 Al considerar el contenido de las notificaciones, ten en cuenta lo siguiente:
-- El contenido de tus notificaciones debe cumplir con las [Directivas de contenido](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#content_policies) de la Store.
+- El contenido de tus notificaciones debe cumplir con las [Directivas de contenido](https://docs.microsoft.com/legal/windows/agreements/store-policies#content_policies) de la Store.
 - El contenido de notificación no debe incluir información potencialmente confidencial.
 - Si bien haremos todos los esfuerzos para enviar la notificación como esté programada, en ocasiones, es posible que problemas de latencia afecten a la entrega.
 - Asegúrate de no enviar notificaciones con demasiada frecuencia. Más de una vez cada 30 minutos puede parecer intrusivo (y en muchos casos, se prefiere una frecuencia menor).
@@ -40,7 +40,7 @@ Al considerar el contenido de las notificaciones, ten en cuenta lo siguiente:
 En un nivel elevado, deberás seguir tres pasos para usar las notificaciones con el propósito de interactuar con los clientes.
 
 1. **Registra la aplicación para recibir notificaciones push.** Para ello, agrega una referencia a Microsoft Store Services SDK en tu aplicación y, a continuación, agrega unas líneas de código que registre un canal de notificación entre el Centro de desarrollo y la aplicación. Usaremos ese canal para entregar las notificaciones a tus clientes. Para obtener más detalles, consulta [Configurar la aplicación para notificaciones push dirigidas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
-2. **Decide a qué clientes quieres dirigirlas.** Puedes enviar la notificación a todos los clientes de la aplicación, o (para las notificaciones creadas para una sola aplicación) a un grupo de clientes denominado un *segmento*, que se puede definir en función de los datos demográficos o de ingresos. Para obtener más información, consulta [Crear segmentos de clientes](create-customer-segments.md). 
+2. **Decide a qué clientes quieres dirigirlas.** Puedes enviar la notificación a todos los clientes de la aplicación, o (para las notificaciones creadas para una sola aplicación) a un grupo de clientes denominado un *segmento*, que se puede definir en función de los datos demográficos o de ingresos. Para obtener más información, consulta [Crear segmentos de clientes](create-customer-segments.md).
 3. **Crea tu contenido de notificación y enviarlo.** Por ejemplo, puedes crear una notificación que anime a los clientes nuevos a clasificar la aplicación o enviar una notificación que promueva una oferta especial para adquirir un complemento.
 
 
@@ -49,12 +49,12 @@ En un nivel elevado, deberás seguir tres pasos para usar las notificaciones con
 Sigue estos pasos para crear una notificación push en el panel de información y enviarla a un segmento de cliente en particular.
 
 > [!NOTE]
-> Antes de que una aplicación pueda recibir notificaciones del Centro de desarrollo, primero debes llamar al método [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) en tu aplicación para registrar esta de modo que reciba notificaciones. Este método está disponible en el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Para obtener más información sobre cómo llamar a este método, con un ejemplo de código, consulta [Configurar la aplicación para recibir notificaciones push dirigidas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+> Antes de que una aplicación pueda recibir notificaciones del Centro de desarrollo, primero debes llamar al método [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) en tu aplicación para registrar esta de modo que reciba notificaciones. Este método está disponible en el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Para obtener más información sobre cómo llamar a este método, con un ejemplo de código, consulta [Configurar la aplicación para recibir notificaciones push dirigidas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
-1. En el [panel de información del Centro de desarrollo de Windows](https://developer.microsoft.com/dashboard/overview), expande la sección **Interactuar** y luego selecciona **Notificaciones**.
+1. En el [panel de información del Centro de desarrollo de Windows](https://partner.microsoft.com/dashboard/), expande la sección **Interactuar** y luego selecciona **Notificaciones**.
 2. En la página **Notificaciones**, selecciona **Nueva notificación**.
-3. En la sección **Seleccionar una plantilla**, elige el tipo de notificación que quieras enviar. Para obtener más información, consulta [Tipos de plantilla de notificación](#notification-template-types).
-4. En la siguiente página, usa el menú desplegable para elegir una **Aplicación única** o **Varias aplicaciones** para las que se va a generar una notificación. Selecciona la aplicación o aplicaciones (que debe estar configurada para recibir las notificaciones mediante el Microsoft Store Services SDK).
+3. En la sección **Seleccionar una plantilla** , elija el [tipo de notificación](#notification-template-types) que desea enviar y, a continuación, haga clic en **Aceptar**.
+4. En la siguiente página, usa el menú desplegable para elegir una **Aplicación única** o **Varias aplicaciones** para las que se va a generar una notificación. Sólo puede seleccionar las aplicaciones que se han [configurado para recibir notificaciones con el SDK de servicios de almacenamiento de Microsoft](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 5. En la sección **Configuración de notificaciones**, elige un **Nombre** para la notificación y, si es aplicable, elige el **grupo de clientes** al que quieres enviar la notificación. (Las notificaciones enviadas a varias aplicaciones solo se pueden enviar a todos los clientes de dichas aplicaciones.) Si deseas usar un segmento que aún no hayas creado, selecciona **Crear nuevo grupo de clientes**. Ten en cuenta que deben transcurrir 24 horas para poder usar un nuevo segmento para notificaciones. Para obtener más información, consulta [Crear segmentos de clientes](create-customer-segments.md).
 6. Si quieres especificar cuándo enviar la notificación, desactiva la casilla **Send notification immediately** y elige una fecha y hora específicas (en UTC para todos los clientes, a menos que especifiques usar la zona horaria local de cada cliente).
 7. Si quieres que la notificación expire en algún momento, desactiva la casilla **Notification never expires**, y elige una fecha y una hora de expiración específicas (en UTC).
@@ -62,20 +62,22 @@ Sigue estos pasos para crear una notificación push en el panel de información 
 8. **Para las notificaciones a varias aplicaciones:** Especifica si enviar la notificación solo a la última aplicación activa de cada dispositivo (por cliente), o a todas las aplicaciones de cada dispositivo.
 10. En la sección **Contenido de notificaciones**, en el menú **Idioma**, elige los idiomas en los que quieres que se muestre la notificación. Para obtener más información, consulta [Traducir las notificaciones)](#translate-your-notifications).
 11. En la sección **Options (Opciones)**, escribe un texto y configura las opciones que quieras. Si has usado alguna plantilla, algunas de estas se proporcionarán de manera predeterminada, pero puedes realizar los cambios que quieras.
-   Las opciones disponibles varían según el tipo de notificación que uses. Estas son algunas de las opciones:
-   - **Activation type (Tipo de activación)** (tipo de notificación del sistema interactiva). Puedes elegir **Foreground (Primer plano)**, **Background (Segundo plano)** o **Protocol (Protocolo)**.
-   - **Launch (Iniciar)** (tipo de notificación del sistema interactiva). Puedes elegir que la notificación abra una aplicación o un sitio web.
-   - **Track app launch rate (Seguir tasa de inicio de la aplicación)** (tipo de notificación del sistema interactiva). Si quieres medir el rendimiento de tu interacción con los clientes a través de cada notificación, selecciona esta casilla. Para obtener más información, consulta [Medir el rendimiento de las notificaciones](#measure-notification-performance).
-   - **Duration (Duración)** (tipo de notificación del sistema interactiva). Puedes elegir **Short (Breve)** o **Long (Larga)**.
-   - **Scenario (Escenario)** (tipo de notificación del sistema interactiva). Puedes elegir **Default (Predeterminado)**, **Alarm (Alarma)**, **Reminder (Aviso)** o **Incoming call (Llamada entrante)**.
-   - **Base URI (URI base)** (tipo de notificación del sistema interactiva). Para obtener más información, consulta [BaseUri](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.baseuri#Windows_UI_Xaml_FrameworkElement_BaseUri).
-   - **Add image query (Agregar consulta de imagen)** (tipo de notificación del sistema interactiva). Para obtener más información, consulta [addImageQuery](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual#attributes-and-elements).
-   - **Visual (Objeto visual)**. Una imagen, un vídeo o un sonido. Para obtener más información, consulta [visual](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual).
-   - **Input (Entrada)**/**Action (Acción)**/**Selection (Selección)** (tipo de notificación del sistema interactivas). De esta forma puedes permitir a los usuarios interactuar con la notificación. Para obtener más información, consulta [Notificaciones del sistema interactivas y adaptables](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md).
-   - **Binding (Enlace)** (tipo de icono interactivo). La plantilla de la notificación del sistema. Para obtener más información, consulta [binding](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding) (en inglés).
 
-   > [!TIP]
-   > Prueba la aplicación [Notifications Visualizer](https://www.microsoft.com/store/apps/9nblggh5xsl1) para diseñar y probar tus iconos adaptables y notificaciones del sistema interactivas.
+    Las opciones disponibles varían según el tipo de notificación que uses. Estas son algunas de las opciones:
+
+    * **Activation type (Tipo de activación)** (tipo de notificación del sistema interactiva). Puedes elegir **Foreground (Primer plano)**, **Background (Segundo plano)** o **Protocol (Protocolo)**.
+    * **Launch (Iniciar)** (tipo de notificación del sistema interactiva). Puedes elegir que la notificación abra una aplicación o un sitio web.
+    * **Track app launch rate (Seguir tasa de inicio de la aplicación)** (tipo de notificación del sistema interactiva). Si quieres medir el rendimiento de tu interacción con los clientes a través de cada notificación, selecciona esta casilla. Para obtener más información, consulta [Medir el rendimiento de las notificaciones](#measure-notification-performance).
+    * **Duration (Duración)** (tipo de notificación del sistema interactiva). Puedes elegir **Short (Breve)** o **Long (Larga)**.
+    * **Scenario (Escenario)** (tipo de notificación del sistema interactiva). Puedes elegir **Default (Predeterminado)**, **Alarm (Alarma)**, **Reminder (Aviso)** o **Incoming call (Llamada entrante)**.
+    * **Base URI (URI base)** (tipo de notificación del sistema interactiva). Para obtener más información, consulta [BaseUri](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.baseuri#Windows_UI_Xaml_FrameworkElement_BaseUri).
+    * **Add image query (Agregar consulta de imagen)** (tipo de notificación del sistema interactiva). Para obtener más información, consulta [addImageQuery](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual#attributes-and-elements).
+    * **Visual (Objeto visual)**. Una imagen, un vídeo o un sonido. Para obtener más información, consulta [visual](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual).
+    * **Input (Entrada)**/**Action (Acción)**/**Selection (Selección)** (tipo de notificación del sistema interactivas). De esta forma puedes permitir a los usuarios interactuar con la notificación. Para obtener más información, consulta [Notificaciones del sistema interactivas y adaptables](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md).
+    * **Binding (Enlace)** (tipo de icono interactivo). La plantilla de la notificación del sistema. Para obtener más información, consulta [binding](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding) (en inglés).
+
+    > [!TIP]
+    > Prueba la aplicación [Notifications Visualizer](https://www.microsoft.com/store/apps/9nblggh5xsl1) para diseñar y probar tus iconos adaptables y notificaciones del sistema interactivas.
 
 12. Selecciona **Save as draft (Guardar como borrador)** para seguir trabajando más adelante en la notificación, o **Send (Enviar)** si ya has terminado.
 
@@ -88,16 +90,17 @@ Puedes elegir entre una variedad de plantillas de notificación.
 -   **En blanco (icono).** Empieza con una notificación de icono vacía que puedes personalizar. Los iconos son una representación de la aplicación en la pantalla Inicio. Los iconos pueden ser "dinámicos", lo que significa que el contenido que muestran puede cambiar en las respuestas a las notificaciones.
 -   **Ask for ratings (Pedir calificaciones) (notificación del sistema).** Una notificación del sistema que pide a los clientes que califiquen la aplicación. Cuando el cliente selecciona la notificación, se muestra la página de calificaciones de la Store de tu aplicación.
 -   **Ask for feedback (Pedir comentarios) (notificación del sistema).** Una notificación del sistema que pide a los clientes que escriban un comentario de la aplicación. Cuando el cliente selecciona la notificación, se muestra la página del Centro de opiniones de tu aplicación.
+    > [!NOTE]
+    > Si eliges este tipo de plantilla, recuerda que en la casilla **Launch** (Iniciar) debes reemplazar el valor de marcador de posición {PACKAGE_FAMILY_NAME} por el Nombre de familia de paquete (PFN) real de la aplicación. Encontrarás el PFN de tu aplicación en la página [App identity (Identidad de la aplicación)](view-app-identity-details.md) (**App management [Administración de la aplicación]** > **App identity [Identidad de la aplicación]**).
 
-   > [!NOTE]
-   > Si eliges este tipo de plantilla, recuerda que en la casilla **Launch** (Iniciar) debes reemplazar el valor de marcador de posición {PACKAGE_FAMILY_NAME} por el Nombre de familia de paquete (PFN) real de la aplicación. Encontrarás el PFN de tu aplicación en la página [App identity (Identidad de la aplicación)](view-app-identity-details.md) (**App management [Administración de la aplicación]** > **App identity [Identidad de la aplicación]**).
+    ![Cuadro "Launch" de la notificación del sistema de solicitud de comentarios](images/push-notifications-feedback-toast-launch-box.png)
 
-   ![Cuadro "Launch" de la notificación del sistema de solicitud de comentarios](images/push-notifications-feedback-toast-launch-box.png)
 -   **Cross-promote (Promocionar de manera cruzada) (notificación del sistema).** Una notificación del sistema para promocionar otra aplicación de tu elección. Cuando el cliente selecciona la notificación, se muestra la descripción de la aplicación en la Store.
-   > [!NOTE]
-   > Si eliges este tipo de plantilla, recuerda que en la casilla **Launch** (Iniciar) debes reemplazar el valor de marcador de posición **{ProductId you want to promote here}** por el identificador de la Store real del elemento que quieras promocionar. Encontrarás el identificador de la Store en la página [App identity (Identidad de la aplicación)](view-app-identity-details.md) (**App management [Administración de la aplicación]** > **App identity [Identidad de la aplicación]**).
+    > [!NOTE]
+    > Si eliges este tipo de plantilla, recuerda que en la casilla **Launch** (Iniciar) debes reemplazar el valor de marcador de posición **{ProductId you want to promote here}** por el identificador de la Store real del elemento que quieras promocionar. Encontrarás el identificador de la Store en la página [App identity (Identidad de la aplicación)](view-app-identity-details.md) (**App management [Administración de la aplicación]** > **App identity [Identidad de la aplicación]**).
 
-  ![Cuadro "Launch" de la notificación del sistema de promoción cruzada](images/push-notifications-promote-toast-launch-box.png)
+    ![Cuadro "Launch" de la notificación del sistema de promoción cruzada](images/push-notifications-promote-toast-launch-box.png)
+
 -   **Promote a sale (Promocionar una oferta) (notificación del sistema).** Una notificación del sistema que puedes usar para anunciar una oferta de tu aplicación. Cuando el cliente selecciona la notificación, se muestra la descripción de la Store de tu aplicación.
 -   **Prompt for update (Solicitar actualización) (notificación del sistema).** Una notificación del sistema que recomienda a los clientes con una versión anterior de la aplicación que instalen la última versión. Cuando el cliente seleccione la notificación, se iniciará la aplicación Store, con la lista **Descargas y actualizaciones**. Ten en cuenta que solo se puede usar esta plantilla con una sola aplicación, pero no puedes tener como objetivo un segmento de clientes concreto o definir un momento para enviarlo; siempre programaremos esta notificación para que se envíe en un plazo de 24 horas y nos esforzaremos por tener como objetivo todos los usuarios que no estén ejecutando aún la versión más reciente de la aplicación.
 
@@ -110,23 +113,32 @@ Puedes medir cuál es el rendimiento de tu interacción con los clientes mediant
 ### <a name="to-measure-notification-performance"></a>Medir el rendimiento de las notificaciones
 
 1.  Cuando crees una notificación, en la sección **Notification content (Contenido de la notificación)**, selecciona la casilla **Track app launch rate (Seguir tasa de inicio de la aplicación)**.
-2.  En la aplicación, llama al método [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx) para notificar al Centro de desarrollo de que tu aplicación se ha iniciado como respuesta a una notificación dirigida. Este método lo proporciona el Microsoft Store Services SDK. Para obtener más información acerca de cómo llamar a este método, consulta [Configure your app to receive Dev Center notifications (Configurar la aplicación para recibir notificaciones push del Centro de desarrollo)](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+2.  En la aplicación, llama al método [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) para notificar al Centro de desarrollo de que tu aplicación se ha iniciado como respuesta a una notificación dirigida. Este método lo proporciona el Microsoft Store Services SDK. Para obtener más información acerca de cómo llamar a este método, consulta [Configure your app to receive Dev Center notifications (Configurar la aplicación para recibir notificaciones push del Centro de desarrollo)](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 
 ### <a name="to-view-notification-performance"></a>Ver el rendimiento de una notificación
 
 Cuando hayas configurado la notificación y la aplicación para medir el rendimiento de las notificaciones como se ha indicado anteriormente, puedes usar el panel para ver cuál es el rendimiento de tus notificaciones.
 
-1.  En el Panel del Centro de desarrollo de Windows, expande la sección **Interactuar** y selecciona **Notificaciones**.
-2.  En la página **Targeted push notifications (Notificaciones push dirigidas)**, selecciona **In progress (En curso)** o **Completed (Completada)** y luego mira las columnas **Delivery rate (Tasa de entrega)** y **App launch rate (Tasa de inicio de aplicación)** para comprobar el rendimiento de alto nivel de cada notificación.
-3.  Para ver datos de rendimiento más detallados, selecciona el nombre de una notificación. En la sección **Delivery statistics**, puedes ver **recuento** y **porcentaje** de los siguientes tipos de **estados** de las notificaciones:
- - **Failed (Erróneo)**: la notificación no se ha entregado por algún motivo. Esto puede suceder, por ejemplo, si se produce algún problema en el servicio de notificaciones de Windows.
- - **Channel expiration failure (Error de expiración del canal)**: la notificación no se ha entregado porque ha expirado el canal entre la aplicación y el Centro de desarrollo. Por ejemplo, esto puede suceder si el cliente no abre la aplicación en mucho tiempo.
- - **Sending (Enviando)**: la notificación está en la cola de envío.
- - **Sent (Enviada)**: la notificación se ha enviado.
- - **Launched (Iniciada)**: se ha enviado la notificación, el cliente ha hecho clic en ella y, como resultado, se ha abierto la aplicación. Ten en cuenta solo se realiza el seguimiento de los inicios de las aplicaciones. Las notificaciones que invitan al cliente a realizar otras acciones, como iniciar la Store para dejar una calificación, no se incluyen en este estado.
- - **Unknown (Unknown)**: no se ha podido determinar el estado de esta notificación.
+Para revisar los datos detallados para cada notificación:
 
+1.  En el Panel del Centro de desarrollo de Windows, expande la sección **Interactuar** y selecciona **Notificaciones**.
+2.  En la tabla de notificaciones existentes, seleccione **en curso** o **completado**y, a continuación, mire en las columnas de la **tasa de entrega** y la **tasa de inicio de la aplicación** para ver el rendimiento de alto nivel de cada notificación.
+3.  Para ver datos de rendimiento más detallados, selecciona el nombre de una notificación. En la sección **Delivery statistics**, puedes ver **recuento** y **porcentaje** de los siguientes tipos de **estados** de las notificaciones:
+    * **Failed (Erróneo)**: la notificación no se ha entregado por algún motivo. Esto puede suceder, por ejemplo, si se produce algún problema en el servicio de notificaciones de Windows.
+    * **Channel expiration failure (Error de expiración del canal)**: la notificación no se ha entregado porque ha expirado el canal entre la aplicación y el Centro de desarrollo. Por ejemplo, esto puede suceder si el cliente no abre la aplicación en mucho tiempo.
+    * **Sending (Enviando)**: la notificación está en la cola de envío.
+    * **Sent (Enviada)**: la notificación se ha enviado.
+    * **Launched (Iniciada)**: se ha enviado la notificación, el cliente ha hecho clic en ella y, como resultado, se ha abierto la aplicación. Ten en cuenta solo se realiza el seguimiento de los inicios de las aplicaciones. Las notificaciones que invitan al cliente a realizar otras acciones, como iniciar la Store para dejar una calificación, no se incluyen en este estado.
+    * **Unknown (Unknown)**: no se ha podido determinar el estado de esta notificación.
+
+Para analizar los datos de actividad de usuario para todas las notificaciones:
+
+1.  En el Panel del Centro de desarrollo de Windows, expande la sección **Interactuar** y selecciona **Notificaciones**.
+2.  En la página de **notificaciones** , haga clic en la ficha **analizar** . Esta ficha muestra los siguientes datos:
+    * Vistas de gráficos de los distintos Estados de acción de usuario para sus notificaciones del sistema y las notificaciones del centro de acción.
+    * Vistas de mapa para el mundo de los haga clic en a través de tipos de notificaciones del sistema y de la acción del centro de notificaciones.
+3. Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es 30D (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puede expandir **filtros** para filtrar todos los datos por aplicación y cuota de mercado.
 
 ## <a name="translate-your-notifications"></a>Traducir las notificaciones
 
@@ -146,4 +158,4 @@ Debes tener lo siguiente en cuenta sobre las traducciones:
 - [Iconos de aplicaciones para UWP](../design/shell/tiles-and-notifications/creating-tiles.md)
 - [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
 - [Aplicación Notifications Visualizer](https://www.microsoft.com/store/apps/9nblggh5xsl1)
-- [Método StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx)
+- [Método StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync()](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync)

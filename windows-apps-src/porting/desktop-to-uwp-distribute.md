@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 682d7dfcef1ea8037b113499362f0664c388d987
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: fe36fec72645558c539dd8270fd15d35d92b66b5
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989629"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792684"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>Distribuir una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)
 
@@ -31,7 +31,7 @@ Publica una aplicación de escritorio empaquetada en una Tienda Windows o realiz
 
 Publica la aplicación en la Store para llegar al máximo de usuarios. Asimismo, los clientes de empresas pueden comprar la aplicación para distribuirla de manera interna en sus organizaciones mediante la [Microsoft Store para empresas](https://www.microsoft.com/business-store).
 
-Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicionales como parte del proceso de envío. Eso es porque el manifiesto del paquete declara una funcionalidad restringida denominada **runFullTrust**, y necesitamos aprobar el uso de esa funcionalidad en la aplicación. Puedes leer más acerca de este requisito aquí: [Capacidades restringidas](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#restricted-capabilities.html).
+Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicionales como parte del proceso de envío. Eso es porque el manifiesto del paquete declara una funcionalidad restringida denominada **runFullTrust**, y necesitamos aprobar el uso de esa funcionalidad en la aplicación. Puedes leer más acerca de este requisito aquí: [Capacidades restringidas](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
 No tienes que firmar la aplicación antes de enviarla a la Store.
 

@@ -4,18 +4,18 @@ Description: The Store listings section of the app submission process is where y
 title: Creación de descripciones de Store de aplicaciones
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 04/30/2018
+ms.date: 06/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, enumeración, descripción, página de store, notas de la versión, título
-ms.localizationpriority: high
-ms.openlocfilehash: 871eb3cd8b8bdfd0cf12859dcb401df2158bf5b7
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816950"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795815"
 ---
 # <a name="create-app-store-listings"></a>Crear descripciones de Store de aplicaciones
 
@@ -42,12 +42,22 @@ En la sección **Idiomas de descripción de la Store adicionales**, puedes hacer
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
 
-> [!NOTE]
-> Al crear una descripción de la Store en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción de la Store, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplicará a la descripción de la Store para este idioma y no afectará al nombre que se muestra cuando un usuario instala la aplicación.
+## <a name="add-and-edit-store-listing-info"></a>Agregar y editar el almacén de información de inscripción
 
-Para editar una descripción de la Store, haz clic en el nombre del idioma en la información general del envío.
+Para editar una lista de la tienda, seleccione el nombre de idioma de la página de información general de envío.
 
 En la parte superior de la página **Descripción de la Store** se encuentran los campos asociados a tu descripción de la Store predeterminada para el idioma seleccionado. Estos campos se mostrarán a todos los clientes, a menos que tengas paquetes destinados a versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores; Windows Phone 8.x o versiones anteriores) y crees descripciones de la Store específicas de la plataforma para incluir diferentes capturas de pantalla o informaciones para mostrar a los clientes con las versiones específicas del sistema operativo. Para obtener más información, consulta [Creación de descripciones de la Store específicas de la plataforma](create-platform-specific-store-listings.md).
+
+## <a name="product-name"></a>Nombre del producto
+
+Este cuadro de lista desplegable permite especificar el nombre que se debe usar en el listado de almacén (si lo ha reservado más de un nombre para la aplicación).
+
+Si se han cargado paquetes en el mismo idioma que el listado de almacén que está trabajando, se seleccionará el nombre que se usa en los paquetes. Si necesita cambiar el nombre de [la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) después de que ya se han publicado, puede seleccionar un nombre reservado diferente cuando se crea una nueva presentación con paquetes que utilizan el nuevo nombre.
+
+Si aún no ha cargado paquetes para el idioma que está trabajando y ha reservado más de un nombre, debe seleccionar uno de los nombres reservados de aplicación, ya que no hay un paquete asociado en ese idioma desde el que se van a extraer el nombre.
+
+> [!NOTE]
+> El **nombre del producto** , que seleccione sólo se aplica a la lista de la tienda en el idioma que está trabajando en. No afecta el nombre que se muestra cuando un cliente instala la aplicación; ese nombre proviene el manifiesto del paquete que se instala. Para evitar confusiones, se recomienda que cada idioma paquetes y tienda de usan el mismo nombre.
 
 ## <a name="description"></a>Descripción
 
@@ -91,8 +101,9 @@ Puedes enviar activos adicionales para tu producto, incluyendo los tráileres e 
 
 Para obtener más información, consulta [Activos gráficos adicionales](app-screenshots-and-images.md#additional-art-assets).
 
+<a id="supplemental-information" />
 
-## <a name="supplemental-information"></a>Información complementaria
+## <a name="supplemental-fields"></a>Campos adicionales
 
 Los campos de esta sección son todos opcionales. Revisa la información siguiente para determinar si proporcionar esta información sirve para tu envío. En particular, se recomienda la **Descripción corta** para la mayoría de los envíos. Los otros campos pueden ayudar a proporcionar una experiencia óptima para tu producto en diferentes escenarios.
 
@@ -123,7 +134,7 @@ Una descripción más corta y pegadizo que se puede usar en la parte superior de
 
 Para los juegos, la descripción corta también puede aparecer en la sección Información del Hub de juegos de Xbox One.
 
-Este campo tiene un límite de 500 caracteres.
+Para obtener mejores resultados, mantenga la descripción breve caracteres en 270. El campo tiene un límite de 500 caracteres, pero en algunas vistas, se mostrarán sólo los caracteres en primer lugar 270 (con un vínculo disponible para ver el resto de la descripción breve).
 
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionales del sistema
@@ -155,7 +166,7 @@ Si quieres proporcionar información adicional de copyright o marcas comerciales
 
 ### <a name="additional-license-terms"></a>Términos de licencia adicionales
 
-Deja este campo en blanco si quieres que la aplicación se licencie a los clientes en virtud de los términos establecidos en los **Términos de licencia de aplicaciones estándar** (a los que se vincula desde el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058)).
+Deja este campo en blanco si quieres que la aplicación se licencie a los clientes en virtud de los términos establecidos en los **Términos de licencia de aplicaciones estándar** (a los que se vincula desde el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)).
 
 Si los términos de licencia son diferentes a los **Términos de licencia de aplicaciones estándar**, escríbelos aquí.
 

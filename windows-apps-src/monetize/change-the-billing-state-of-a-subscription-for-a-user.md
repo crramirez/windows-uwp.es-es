@@ -4,18 +4,18 @@ ms.assetid: F37C2CEC-9ED1-4F9E-883D-9FBB082504D4
 description: Usa este método en la API de compra de Microsoft Store para cambiar el estado de facturación de la suscripción de un usuario.
 title: Cambiar el estado de facturación de la suscripción de un usuario
 ms.author: mcleans
-ms.date: 03/16/2018
+ms.date: 08/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de compra de Microsoft Store, suscripciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fb4a3de45d19b1a43af1de06a46f0b440fe53e6
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664888"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2796326"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Cambiar el estado de facturación de la suscripción de un usuario
 
@@ -57,7 +57,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Nombre         | Tipo  | Descripción   |  Requerido  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | cadena | El identificador de la suscripción que quieres cambiar. Para obtener este identificador, llama al método [obtener suscripciones para un usuario](get-subscriptions-for-a-user.md), identifica la entrada del cuerpo de la respuesta que representa el complemento de la suscripción que quieres cambiar y usa el valor del campo **Id** para la entrada.     | Sí      |
+| recurrenceId | cadena | El identificador de la suscripción que quieres cambiar. Para obtener este identificador, llame al método [obtener suscripciones para un usuario](get-subscriptions-for-a-user.md) , identificar la entrada del cuerpo de la respuesta que representa el complemento de suscripción que desee cambiar y utilice el valor del campo de **identificador** para la entrada.     | Sí      |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -74,7 +74,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 El siguiente ejemplo muestra cómo usar este método para ampliar el período de suscripción 5 días. Reemplaza el valor *b2bKey* por la [clave de Id. de Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa la identidad del usuario cuya suscripción quieres cambiar.
 
 ```json
-POST https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/query HTTP/1.1
+POST https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/mdr:0:bc0cb6960acd4515a0e1d638192d77b7:77d5ebee-0310-4d23-b204-83e8613baaac/change HTTP/1.1
 Authorization: Bearer <your access token>
 Content-Type: application/json
 Host: https://purchase.mp.microsoft.com
@@ -120,12 +120,13 @@ El cuerpo de la respuesta contiene los siguientes datos.
 | autoRenew | booleano |  Indica si la suscripción está configurada para renovarse automáticamente al final del período de suscripción actual.   |
 | beneficiary | cadena |  El identificador del beneficiario del derecho que está asociado con esta suscripción.   |
 | expirationTime | cadena | La fecha y la hora a las que expirará la suscripción, en formato ISO8601. Este campo solo está disponible cuando la suscripción esté en determinados estados. El momento de expiración normalmente indica cuándo expira el estado actual. Por ejemplo, para una suscripción activa, la fecha de expiración indica cuándo se producirá la próxima renovación automática.    |
+| expirationTimeWithGrace | cadena | La fecha y hora de que caducidad de la suscripción incluido el período de gracia, en formato ISO 8601. Este valor indica que cuando el usuario pierde el acceso a la suscripción a después de la suscripción no ha podido renovar automáticamente.    |
 | id | cadena |  El identificador de la suscripción. Usa este valor para indicar qué suscripción quieres modificar cuando llamas al método [cambiar el estado de facturación de la suscripción de un usuario](change-the-billing-state-of-a-subscription-for-a-user.md).    |
 | isTrial | booleano |  Indica si la suscripción es una versión de prueba.     |
 | lastModified | cadena |  La fecha y la hora de la última modificación de la suscripción, en formato ISO8601.      |
 | market | cadena | El código de país (en formato de dos letras ISO3166-1 alfa 2) en el que el usuario compró la suscripción.      |
 | productId | cadena | El [identificador de la Store](in-app-purchases-and-trials.md#store-ids) para el [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) que representa el complemento de la suscripción en el catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un producto es 9NBLGGH42CFD.     |
-| skuId | cadena |  El [identificador de la Store](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) que representa el complemento de la suscripción en el catálogo de Microsoft Store. Un ejemplo de identificador de la Store para una SKU es 0010.    |
+| skuId | cadena |  El [identificador de la Store](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) que representa el complemento de la suscripción en el catálogo de Microsoft Store. Un ejemplo de Id. de Store para una SKU es 0010.    |
 | startTime | cadena |  La fecha y hora de inicio de la suscripción, en formato ISO8601.     |
 | recurrenceState | cadena  |  Uno de los siguientes valores:<ul><li>**None**:&nbsp;&nbsp;Indica una suscripción permanente.</li><li>**Active**:&nbsp;&nbsp;La suscripción está activa y el usuario tiene derecho a usar los servicios.</li><li>**Inactive**:&nbsp;&nbsp;La suscripción superó la fecha de expiración, y el usuario deshabilitó la opción de renovación automática de la suscripción.</li><li>**Canceled**:&nbsp;&nbsp;La suscripción se terminó a propósito antes de la fecha de expiración, con o sin reembolso.</li><li>**InDunning**:&nbsp;&nbsp;La suscripción está en *notificación* (es decir, la suscripción está próxima a la expiración, y Microsoft está intentando adquirir fondos para renovar la suscripción).</li><li>**Failed**:&nbsp;&nbsp;El período de notificación terminó y no se pudo renovar la suscripción después de varios intentos.</li></ul><p>**Nota:**</p><ul><li>**Inactive**/**Canceled**/**Failed** son estados terminales. Cuando una suscripción entra en uno de estos estados, el usuario debe comprar la suscripción para volver a activarla. El usuario no tiene derecho a usar los servicios de estos estados.</li><li>Cuando una suscripción está en estado **Canceled**, se actualizará expirationTime con la fecha y la hora de la cancelación.</li><li>El identificador de la suscripción seguirá siendo el mismo durante toda su vida. No cambiará si la opción de renovación automática está activada o desactivada. Si un usuario vuelve a comprar una suscripción después de alcanzar un estado terminal, se creará un nuevo identificador de suscripción.</li><li>El identificador de una suscripción debe usarse para ejecutar cualquier operación en una suscripción individual.</li><li>Cuando un usuario vuelve a comprar una suscripción después de cancelarla o interrumpirla, si consultas los resultados para el usuario, obtendrás dos entradas: una con el identificador de suscripción antiguo en un estado terminal y otra con el nuevo identificador de la suscripción en un estado activo.</li><li>Siempre resulta recomendable comprobar tanto recurrenceState como expirationTime, ya que las actualizaciones de recurrenceState potencialmente pueden retrasarse unos pocos minutos (o, en ocasiones, horas).       |
 | cancellationDate | cadena   |  La fecha y la hora a las que se canceló la suscripción del usuario, en formato ISO8601.     |

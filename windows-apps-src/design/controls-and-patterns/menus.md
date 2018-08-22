@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 68c22c12ac5c5dbd90878e8828160e0f56831898
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
-ms.translationtype: HT
+ms.openlocfilehash: e38e9d61e8546d412cc30bad26680243f3a188e4
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638995"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792348"
 ---
 # <a name="menus-and-context-menus"></a>Menús y menús contextuales
 
@@ -78,7 +78,7 @@ Si quieres agregar comandos (como cortar, copiar y pegar) a un elemento de texto
 <ul>
 <li>Tienen un solo punto de entrada (un menú Archivo en la parte superior de la pantalla, por ejemplo) que se muestra siempre.</li>
 <li>Por lo general, se adjuntan a un botón o un elemento de menú principal.</li>
-<li>Se invocan mediante un clic con el botón izquierdo (o una acción equivalente, como pulsar con el dedo).</li><li>Se asocian con un elemento a través de sus propiedades [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) o [FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx).</li>
+<li>Se invocan mediante un clic con el botón izquierdo (o una acción equivalente, como pulsar con el dedo).</li><li>Se asocian con un elemento a través de sus propiedades <a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx">Flyout</a> o <a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx">FlyoutBase.AttachedFlyout</a>.</li>
 </ul>
 </div>
   <div class="side-by-side-content-right">
@@ -86,7 +86,7 @@ Si quieres agregar comandos (como cortar, copiar y pegar) a un elemento de texto
 
 <ul>
 <li>Se adjuntan a un solo elemento y muestran comandos secundarios.</li>
-<li>Se invocan al hacer clic con el botón derecho (o una acción equivalente, como pulsar y sostener con el dedo).</li><li>Se asocian con un elemento a través de su propiedad [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx).</li>
+<li>Se invocan al hacer clic con el botón derecho (o una acción equivalente, como pulsar y sostener con el dedo).</li><li>Se asocian con un elemento a través de su propiedad <a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx">ContextFlyout</a>.</li>
 </ul>
   </div>
 </div>

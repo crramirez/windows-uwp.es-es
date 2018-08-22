@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, código de promoción, códigos de promoción, token, tokens
-ms.localizationpriority: high
-ms.openlocfilehash: 7043b12dc3b9d6e7a9813fb1d7b81b836902f92f
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b74b0ea0304cd1d0c33b226b6582411f5a3b2c41
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795656"
 ---
 # <a name="generate-promotional-codes"></a>Generar códigos de promoción
 
@@ -80,7 +81,7 @@ Para descargar un pedido completado de códigos promocionales y distribuirlos a 
     -   **Nombre del producto**: es el nombre de la aplicación o complemento con el que está asociado el código.
     -   **Nombre del pedido**: es el nombre del pedido con el que se generó este código.
     -   **Código promocional**: es el propio código. Se trata de una cadena de 5 x 5 caracteres alfanuméricos separados por guiones. Por ejemplo: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
-    -   **Dirección URL canjeable**: Es la dirección URL en la que el cliente puede canjear el código e instalar la aplicación o complemento. La dirección URL tiene el formato siguiente: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;promotional_code>
+    -   **Dirección URL canjeable**: Es la dirección URL en la que el cliente puede canjear el código e instalar la aplicación o complemento. La dirección URL tiene el siguiente formato: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt; promotional_code >
     -   **Fecha de inicio**: La fecha en la que este código se activó.
     -   **Fecha de expiración**: La fecha de expiración de este código.
     -   **Id. de código**: Un identificador único de este código.

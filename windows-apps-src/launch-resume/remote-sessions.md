@@ -8,14 +8,14 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: los dispositivos de Windows 10, uwp, conectados, sistemas remotos, Roma, Roma de project
 ms.localizationpriority: medium
-ms.openlocfilehash: 0539c9b50196d98809fc01ea3f2a1950cbf27599
-ms.sourcegitcommit: 12cc283e821cbf978debf24914490982f076b4b4
-ms.translationtype: HT
+ms.openlocfilehash: 8e5226b23a454bf48add22d590a3ff247c629e4f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "1658091"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794888"
 ---
 # <a name="connect-devices-through-remote-sessions"></a>Conectar dispositivos a través de sesiones remotas
 
@@ -124,7 +124,7 @@ RemoteSystemSessionController manager = new RemoteSystemSessionController("Bob's
 //...
 ```
 
-Para enviar una invitación, debes tener una referencia para el sistema remoto receptor (adquirida a través de la detección del sistema remoto normal). Solo tienes que pasar esta referencia al método **[SendInvitationAsync](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsession#remotesystemsession_sendinvitationasync_1664759118)** del objeto de la sesión. Todos los participantes de una sesión tienen una referencia a la sesión remota (consulta la sección siguiente), por lo que cualquier participante puede enviar una invitación.
+Para enviar una invitación, debes tener una referencia para el sistema remoto receptor (adquirida a través de la detección del sistema remoto normal). Solo tienes que pasar esta referencia al método **[SendInvitationAsync](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsession.sendinvitationasync)** del objeto de la sesión. Todos los participantes de una sesión tienen una referencia a la sesión remota (consulta la sección siguiente), por lo que cualquier participante puede enviar una invitación.
 
 ```csharp
 // "currentSession" is a reference to a RemoteSystemSession.

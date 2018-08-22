@@ -9,12 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, impuestos, irs, servicio de impuestos internos, impuesto, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-ms.localizationpriority: high
-ms.openlocfilehash: 747d79bb3f271638bcf08bb06965c56340771b73
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ffefc1d645a79296989e95c2fa033b8848e91c3b
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794316"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 

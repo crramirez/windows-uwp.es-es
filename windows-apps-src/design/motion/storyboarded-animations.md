@@ -4,22 +4,20 @@ ms.assetid: 0CBCEEA0-2B0E-44A1-A09A-F7A939632F3A
 title: Animaciones con guion gráfico
 description: Las animaciones con guion gráfico no son simples animaciones en el sentido visual.
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e5fad5bdea602767484fa55e943d262e7a1798fa
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 8c03d99781114c4fefff04cc25930748ec16182f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675582"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2797869"
 ---
 # <a name="storyboarded-animations"></a>Animaciones con guion gráfico
-
-
 
 Las animaciones de guión gráfico no son solo animaciones en un sentido visual. Una animación de guión gráfico es una forma de cambiar el valor de una propiedad de dependencia como una función de tiempo. Una de las razones principales por las que quizás necesites una animación con guión gráfico que no provenga de la Biblioteca de animaciones es para definir el estado visual de un control, como parte de una plantilla de control o una definición de página.
 
@@ -49,17 +47,23 @@ La mayoría de las veces, defines una animación de guión gráfico al escribir 
 Veamos un ejemplo simple. En este ejemplo de XAML, la propiedad [**Opacidad**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) se anima en un objeto [**Rectángulo**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) determinado.
 
 ```xaml
-<!-- Animates the rectangle's opacity. -->
-<Storyboard x:Name="myStoryboard">
-  <DoubleAnimation
-    Storyboard.TargetName="MyAnimatedRectangle"
-    Storyboard.TargetProperty="Opacity"
-    From="1.0" To="0.0" Duration="0:0:1"/>
-</Storyboard>
+<Page ...>
+  <Page.Resources>
+    <!-- Storyboard resource: Animates a rectangle's opacity. -->
+    <Storyboard x:Name="myStoryboard">
+      <DoubleAnimation
+        Storyboard.TargetName="MyAnimatedRectangle"
+        Storyboard.TargetProperty="Opacity"
+        From="1.0" To="0.0" Duration="0:0:1"/>
+    </Storyboard>
+  </Page.Resources>
 
-<!-- A different area of the XAML. -->
-<Rectangle x:Name="MyAnimatedRectangle"
-  Width="300" Height="200" Fill="Blue"/>
+  <!--Page root element, UI definition-->
+  <Grid>
+    <Rectangle x:Name="MyAnimatedRectangle"
+      Width="300" Height="200" Fill="Blue"/>
+  </Grid>
+</Page>
 ```
 
 ### <a name="identifying-the-object-to-animate"></a>Identificar el objeto que se va a animar
@@ -213,10 +217,10 @@ En el ejemplo siguiente, se muestra de qué manera en el ejemplo anterior el [**
     </Storyboard>
   </Page.Resources>
   <!--Page root element, UI definition-->
-  <StackPanel>
+  <Grid>
     <Rectangle x:Name="MyAnimatedRectangle"
       Width="300" Height="200" Fill="Blue"/>
-  </StackPanel>
+  </Grid>
 </Page>
 ```
 
@@ -291,6 +295,10 @@ El controlador de eventos inicia la clase [**Storyboard**](https://msdn.microsof
 
 ```csharp
 myStoryboard.Begin();
+```
+
+```cppwinrt
+myStoryboard().Begin();
 ```
 
 ```cpp

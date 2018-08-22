@@ -9,13 +9,13 @@ ms.date: 05/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: cf8f0e0c7382d52eddb783b7fbbaa6ccc23a2a15
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ad817bbae2fb8b28b95095880aa1a65c391720f3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935783"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800517"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -56,7 +56,7 @@ Esta es la página de configuración de la familia de dispositivos móviles:
 
  Puedes habilitar un dispositivo para el desarrollo o solo para transferir aplicaciones localmente.
 
--   El valor predeterminado es *aplicaciones para UWP*. Si no estás desarrollando aplicaciones ni usando aplicaciones internas especiales emitidas por tu compañía, mantén esta configuración activa.
+-   *Aplicaciones de la tienda de Microsoft* es la configuración predeterminada. Si no estás desarrollando aplicaciones ni usando aplicaciones internas especiales emitidas por tu compañía, mantén esta configuración activa.
 -   *Instalación de prueba* consiste en instalar y después ejecutar o probar una aplicación que no ha certificado Microsoft Store. Por ejemplo, una aplicación interna de tu empresa solamente.
 -   El *Modo de desarrollador* permite transferir localmente aplicaciones y también ejecutar aplicaciones desde Visual Studio en modo de depuración. 
 
@@ -148,6 +148,9 @@ Hay varias herramientas que puedes usar para implementar una aplicación desde u
 En ocasiones, debido a problemas de red o administrativos, el modo de desarrollador no se instalará correctamente. Es necesario el paquete de modo de desarrollador para la implementación **remota** en este PC, con Device Portal desde un navegador o la detección de dispositivos para habilitar SSH, pero no para el desarrollo local.  Incluso si te encuentras estos problemas, puedes seguir implementando la aplicación localmente con Visual Studio, o desde este dispositivo a otro. 
 
 Consulta el foro [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos y otros problemas. 
+
+> [!NOTE]
+> Si el modo de programador no se instala correctamente, le recomendamos que en una solicitud de comentarios de archivos. En la aplicación de **Concentrador de comentarios** , seleccione **Agregar nuevo comentarios**y elija la categoría de **Plataforma para desarrolladores** y la subcategoría de **Modo para programadores** . Envío de comentarios le ayudará a Microsoft a resolver el problema que se ha producido.
 
 ### <a name="failed-to-locate-the-package"></a>No se pudo ubicar el paquete
 

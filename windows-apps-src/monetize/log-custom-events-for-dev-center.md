@@ -9,19 +9,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store Services SDK, registrar eventos, log events
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
-ms.localizationpriority: high
-ms.openlocfilehash: 9828f948d0245ee23a3e309951b38c61765973e9
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 2b9cd4d7c527001bb382596c9c805be4ad5e7b08
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935575"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792873"
 ---
 # <a name="log-custom-events-for-dev-center"></a>Registrar eventos personalizados para el Centro de desarrollo
 
 El [informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) del panel Centro de desarrollo de Windows te permite obtener información sobre los eventos personalizados que definiste en tu aplicación para la Plataforma universal de Windows (UWP). Un evento personalizado es una cadena arbitraria que representa un evento o una actividad en tu aplicación. Por ejemplo, un juego podría definir eventos personalizados denominados *firstLevelPassed*, *secondLevelPassed*, y así sucesivamente, que se registren cuando el usuario supere los distintos niveles del juego.
 
-Para registrar un evento personalizado de tu aplicación, pasa la cadena de eventos personalizados al método [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) proporcionado por el Microsoft Store Services SDK. Puedes revisar el total de repeticiones para los eventos personalizados en la sección **Eventos personalizados** del informe de [uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) en el panel del Centro de desarrollo.
+Para registrar un evento personalizado de tu aplicación, pasa la cadena de eventos personalizados al método [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) proporcionado por el Microsoft Store Services SDK. Puedes revisar el total de repeticiones para los eventos personalizados en la sección **Eventos personalizados** del informe de [uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) en el panel del Centro de desarrollo.
 
 > [!NOTE]
 > Los eventos personalizados que registras en el Centro de desarrollo no están relacionados con los [eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx) y no aparecen en el **Visor de eventos**.
@@ -45,7 +45,7 @@ Para poder revisar los eventos de registro personalizado en el **informe de uso*
 6. Agrega la siguiente instrucción en la parte superior de cada archivo de código donde quieras registrar eventos personalizados.
     [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
 
-7. En cada sección del código en la que quieras registrar un evento personalizado, obtén un objeto [StoreServicesCustomEventLogger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) y, a continuación, llama al método [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx). Pasa la cadena de eventos personalizada al método.
+7. En cada sección del código en la que quieras registrar un evento personalizado, obtén un objeto [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) y, a continuación, llama al método [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log). Pasa la cadena de eventos personalizada al método.
     [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
 
     > [!NOTE]
@@ -54,5 +54,5 @@ Para poder revisar los eventos de registro personalizado en el **informe de uso*
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Informe de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report)
-* [Método de registro](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)
+* [Método de registro](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log)
 * [Microsoft Store Services SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)

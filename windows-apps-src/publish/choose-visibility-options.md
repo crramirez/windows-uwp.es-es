@@ -3,18 +3,18 @@ author: jnHs
 Description: Set restrictions on how your app can be discovered and acquired, including whether people can find your app in the Store or see its Store listing at all.
 title: Elegir las opciones de visibilidad
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 08/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, visibilidad, audiencia privada, disponible, descubrible
-ms.localizationpriority: high
-ms.openlocfilehash: 548b25d4e74945eadfcc8ebe8a5cb2f8d870d38f
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 07986353be41fcc9ef9dd9406fb0b30c4aa3d7f2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832089"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801861"
 ---
 # <a name="choose-visibility-options"></a>Elegir las opciones de visibilidad
 
@@ -75,7 +75,7 @@ Las selecciones de la sección **Detectabilidad** indican cómo los clientes pue
 
 ### <a name="make-this-product-available-and-discoverable-in-the-store"></a>Hacer ese producto disponible y detectable en Store
 
-Esta es la opción predeterminada. Deja esta opción seleccionada si quieres que tu aplicación se describa en Store para que los clientes la encuentren a través del vínculo directo a la aplicación y/o por otros métodos, como la búsqueda, la exploración y la inclusión en listas seleccionadas. 
+Esta es la opción predeterminada. Deje seleccionada esta opción si desea que la aplicación que se mostrarán en el almacén para los clientes buscar a través de vínculo directo de la aplicación o mediante otros métodos, incluidas búsqueda, navegación y su inclusión en las listas de curated. 
 
 ### <a name="make-this-product-available-but-not-discoverable-in-the-store"></a>Hacer ese producto disponible pero no detectable en Store
 

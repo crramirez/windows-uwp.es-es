@@ -1,7 +1,7 @@
 ---
 author: JnHs
-Description: "Preguntas comunes sobre las campañas publicitarias"
-title: "Preguntas comunes sobre las campañas publicitarias"
+Description: Common questions about ad campaigns
+title: Preguntas comunes sobre las campañas publicitarias
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
 ms.author: wdg-dev-content
 ms.date: 06/19/2017
@@ -9,11 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: c4b46dbb30afd9cdfdaa218af460dd9872c960ef
-ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794741"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Preguntas comunes sobre las campañas publicitarias
 
@@ -39,7 +41,7 @@ Si usas una de las plantillas de anuncio predeterminadas, puedes elegir el tama�
 
 ### <a name="where-will-my-ad-appear"></a>¿Dónde aparecerá el anuncio?
 
-El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Estas propiedades se establecen al publicar la aplicación en la TiendaWindows. Para campañas "Universal", tus anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
+El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Establecer estas propiedades cuando se publica la aplicación en el Microsoft Store. Para campañas "Universal", tus anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
 
 Actualmente, se admiten campañas publicitarias en estos países y regiones:
 
@@ -61,7 +63,7 @@ Si no quieres esperar a que te facturen, puedes pagar la factura inmediatamente 
 
 ### <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a>¿Cómo puedo eliminar una tarjeta de crédito o editar los detalles de una tarjeta de crédito?
 
-Ve a <http://commerce.microsoft.com>, inicia sesión con las credenciales de la cuenta Microsoft y aplica los cambios necesarios.
+Vaya a <http://commerce.microsoft.com>, inicie sesión con sus credenciales de cuenta de Microsoft y realice los cambios necesarios.
 
 ### <a name="related-topics"></a>Temas relacionados
 

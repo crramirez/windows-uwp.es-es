@@ -1,25 +1,25 @@
 ---
 author: JnHs
-title: "Informe Campaña publicitaria"
+title: Informe Campaña publicitaria
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
-description: "El informe Campaña publicitaria en el panel de información del Centro de desarrollo de Windows te permite ver el rendimiento de las campañas de anuncios de promoción de tu aplicación."
+description: El informe Campaña publicitaria en el panel de información del Centro de desarrollo de Windows te permite ver el rendimiento de las campañas de anuncios de promoción de tu aplicación.
 ms.author: wdg-dev-content
-ms.date: 08/04/2017
+ms.date: 11/21/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, promote, promoción, app, aplicación, campaign, campaña, report, informe, installs, instalaciones"
-ms.openlocfilehash: 27c05d0c1742ece134ac0380c3f3692d94b5f0f5
-ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
-ms.translationtype: HT
+keywords: Windows 10, UWP, promote, promoción, app, aplicación, campaign, campaña, report, informe, installs, instalaciones
+ms.localizationpriority: medium
+ms.openlocfilehash: b5f63b53fca8a97c4f6e61aa38f45a749ca0621b
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791806"
 ---
 # <a name="ad-campaign-report"></a>Informe Campaña publicitaria
 
-El informe **Campaña publicitaria** en el panel de información del Centro de desarrollo de Windows te permite ver el rendimiento de las campañas de anuncios de promoción de tu aplicación.
-
-Para ver el informe, expande **Atraer** en el menú de navegación izquierdo y selecciona **Campañas de anuncios** (o desde una aplicación, expande **Monetización** y selecciona **Promocionar la aplicación**). 
+El informe **campaña de anuncios** en el panel del centro de desarrollo de Windows le permite ver cómo va a realizar la promoción de aplicación [campañas de anuncios](create-an-ad-campaign-for-your-app.md) . Para ver el informe, expanda **atraiga** en el menú de navegación izquierdo y seleccione **las campañas de Ad**.
 
 ## <a name="definitions"></a>Definiciones
 
@@ -78,9 +78,13 @@ En consecuencia, es posible que el seguimiento de instalaciones de la aplicació
 
 Para ver todas las transacciones de campañas publicitarias asociadas con tu cuenta, selecciona **Historial de facturación** en el menú de navegación izquierdo.
 
-Para cada transacción, mostramos los datos de **Fecha de la transacción**, **Nombre de la campaña** correspondiente, **Método de pago** cargado, **Id. de pago**, **Fecha de inicio de la facturación**, **Fecha de finalización de la facturación**, **Importe total** del cargo y **Estado del pago**. 
+Para cada transacción, mostramos los datos de **Fecha de la transacción**, **Nombre de la campaña** correspondiente, **Método de pago** cargado, **Id. de pago**, **Fecha de inicio de la facturación**, **Fecha de finalización de la facturación**, **Importe total** del cargo y **Estado del pago**.
 
 Puedes descargar el historial de facturación de la cuenta como un documento de Microsoft Word, haciendo clic en el vínculo **Descargar**.
+
+## <a name="related-topics"></a>Temas relacionados
+
+* [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
 
  
 

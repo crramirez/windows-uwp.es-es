@@ -4,17 +4,18 @@ Description: To view performance data for the ad units in your apps, use the adv
 title: Informe Rendimiento de la publicidad
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 ms.author: wdg-dev-content
-ms.date: 01/02/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.localizationpriority: high
-ms.openlocfilehash: b19ed22e00721bd06f902ea3087a52eb58e5ab8a
-ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: a1a82c91aeafa253427d8e526b38b8ac304591a2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800298"
 ---
 # <a name="advertising-performance-report"></a>Informe Rendimiento de la publicidad
 
@@ -61,6 +62,7 @@ El informe **Rendimiento de publicidad** incluye los datos de las siguientes mé
 | Velocidad de relleno  | El porcentaje de solicitudes de anuncio enviadas desde la aplicación en las que se ha mostrado un anuncio.  |
 | Clics  |  El número de veces que alguien ha hecho clic en un anuncio en la aplicación. |
 | CTR  |  La tasa de clics, es decir, el número de veces que se ha hecho clic en un anuncio dividido por el número de impresiones. |
+| Capacidad de visualización | El porcentaje de impresiones de anuncios que se pueden ver en su aplicación. Para obtener más información acerca de cómo se calcula este valor, consulte [optimizar la capacidad de visualización de las unidades de ad](../monetize/optimize-ad-unit-viewability.md). |
 | Créditos ganados  | Si estás realizando una campaña de [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has ganado por el espacio de anuncios promocionales al mostrar anuncios de la comunidad en tu aplicación.  |
 | Créditos gastados  | Si estás realizando una campaña de [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has gastado en los anuncios para tu aplicación.  |
 
@@ -68,6 +70,7 @@ El informe **Rendimiento de publicidad** incluye los datos de las siguientes mé
 
 * [Anuncios desde la aplicación](in-app-ads.md)
 * [Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising](../monetize/display-ads-in-your-app.md)
+* [Optimizar la visualización de tus unidades de anuncios](../monetize/optimize-ad-unit-viewability.md)
 
 
  

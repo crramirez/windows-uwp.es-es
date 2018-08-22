@@ -4,17 +4,18 @@ Description: When submitting an add-on, the options on the Pricing and availabil
 title: Establecer los precios y la disponibilidad de los complementos
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, complementos, iap, precio
-ms.localizationpriority: high
-ms.openlocfilehash: 8eb2321ec6d2bc8602438e2dc66ca1d96690a3f8
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b5b7a6424fea3d62849e992f56b0b40ab72a55f5
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789451"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Establecer los precios y la disponibilidad de los complementos
 
@@ -53,9 +54,12 @@ Para obtener más información, consulta [Configurar la programación de lanzami
 
 ## <a name="pricing"></a>Precios
 
-Debes seleccionar un precio base del complemento (a menos que hayas seleccionado la opción **Detener la compra** de la sección **Visibilidad**), seleccionando **Gratis** o una de las franjas de precios disponibles (a partir de 0,99USD).
+Debe seleccionar un precio base para el complemento (a menos que se ha seleccionado la opción **Detener adquisición** en la sección de **visibilidad** ). La selección predeterminada es **gratuita**, por lo que si desea cobran por el complemento, asegúrese de elegir uno de los niveles de precio disponibles (empezando por.99 USD).
 
 También puedes programar los cambios de precio para indicar la fecha y la hora en las que el precio del complemento debería cambiar. Además, tienes la opción de personalizar estos cambios para mercados específicos. 
+
+> [!TIP]
+> Para los complementos de suscripción, no puede provocar el precio después de publicar el complemento, seleccionando un precio base superior en una presentación posterior o mediante la programación de un cambio de precios que aumenta el precio. Puede seleccionar un precio menor con cualquiera de estos métodos, pero una vez que se reduce el precio no podrá elevar mayor que el precio nuevo. Por este motivo, es especialmente importante para garantizar que seleccione el nivel de precio adecuado para los complementos de suscripción. 
 
 Para obtener más información, consulta [Establecer y programar los precios de las aplicaciones](set-and-schedule-app-pricing.md).
 
@@ -63,25 +67,6 @@ Para obtener más información, consulta [Establecer y programar los precios de 
 ## <a name="sale-pricing"></a>Precio de oferta
 
 Si quieres ofrecer tu complemento a un precio reducido durante un período de tiempo limitado, puedes crear y programar una oferta. Para obtener más información, consulta [Poner aplicaciones y complementos en oferta](put-apps-and-add-ons-on-sale.md).
-
-
-## <a name="publish-date"></a>Fecha de publicación
-
-De manera predeterminada, tu envío comenzará el proceso de publicación en cuanto supere la certificación, a menos que hayas configurado las fechas en la [sección **Programación**](#schedule) descrita anteriormente. 
-
-Para controlar cuándo debe publicarse el complemento en la Tienda, usa la sección **Programación**. Para la mayoría de los envíos, debes usar esa sección para programar el lanzamiento y dejar la sección **Fecha de publicación** establecida en la opción predeterminada, **Publish this submission as soon as it passes certification**. Esto evitará que el envío se publique antes de las fechas establecidas en la sección **Programación**. Las fechas que seleccionaste en la sección **Programación** determinarán cuándo el complemento estará disponible para los clientes en la Tienda.
-
-Si no deseas establecer una fecha de lanzamiento todavía y prefieres que el envío permanezca sin publicar hasta que decidas iniciar manualmente el proceso de publicación, puedes elegir **Publicar este envío manualmente**. Elegir esta opción, significa que la selección no se publicará hasta que tú lo indiques. Cuando el complemento supere la certificación, puedes publicarlo seleccionando **Publicar ahora** en la página de estado de certificación, o seleccionando una fecha específica, como se describe a continuación.
-
-Elige **No antes del \[fecha\]** para garantizar que el envío no se publique hasta una fecha determinada. Con esta opción, el envío se lanzará lo antes posible en la fecha que especifiques o después de ella. La fecha debe ser al menos 24 horas después del momento actual. Junto con la fecha, también puedes especificar la hora en que el envío debe comenzar a publicarse.
- 
-> [!NOTE]
-> Los retrasos durante la certificación o la publicación podrían hacer que la fecha de lanzamiento real sea posterior a la que solicites. Microsoft Store no puede garantizar que el complemento (o la actualización) esté disponible en una fecha específica.  
-
-
-
- 
-
 
 
 

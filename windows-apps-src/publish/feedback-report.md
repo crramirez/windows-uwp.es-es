@@ -1,19 +1,21 @@
 ---
 author: jnHs
-Description: "El informe de comentarios del panel del Centro de desarrollo de Windows te permite ver los problemas, sugerencias y votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones."
+Description: The Feedback report in the Windows Dev Center dashboard lets you see the problems, suggestions, and upvotes that your Windows 10 customers have submitted through Feedback Hub.
 title: Informe de comentarios
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 11/3/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e78ab0ac31bd41c3fb7b05039b14f422e4c9071b
-ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2799496"
 ---
 # <a name="feedback-report"></a>Informe de comentarios
 
@@ -24,12 +26,12 @@ El informe **Comentarios** del panel del Centro de desarrollo de Windows te perm
 
 Animar a los clientes a que envíen comentarios sobre la aplicación es una excelente manera de obtener información sobre los problemas y las características que más les importan. Cuando los clientes saben que pueden enviar comentarios directamente, es menos probable que dejen comentarios con una revisión negativa en la Tienda.
 
-Puedes usar la API de comentarios de [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que los clientes [inicien directamente el Centro de opiniones desde la aplicación](../monetize/launch-feedback-hub-from-your-app.md). Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
+Puedes usar la API de comentarios de [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que los clientes [inicien directamente el Centro de opiniones desde la aplicación](../monetize/launch-feedback-hub-from-your-app.md). Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella mediante la aplicación Centro de opiniones. Por este motivo, es posible que vea los comentarios del cliente en este informe incluso si no ha solicitado específicamente para recibir comentarios desde dentro de la aplicación.
 
 Los comentarios también pueden ser especialmente útiles si usas la [distribución de paquetes piloto](package-flights.md), ya que el informe Comentarios te muestra el paquete específico que cada cliente tenía instalado en su dispositivo en el momento de enviar los comentarios.
 
 > [!TIP]
-> Para obtener una vista rápida de las valoraciones, clasificaciones y comentarios de los usuarios de todas las aplicaciones en los últimos 30 días, expande **Interactuar** en el menú de navegación izquierdo y selecciona **Valoraciones y comentarios**. 
+> Para un vistazo rápido a las revisiones, clasificaciones y comentarios de los usuarios a través de todos sus aplicaciones en los últimos 30 días, expanda **implique** en el menú de navegación izquierdo y seleccione **revisiones y comentarios.** 
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -56,14 +58,14 @@ En este informe, encontrarás los comentarios individuales que dejaron los clien
 - **Tendencias**: muestra los comentarios a favor de los cuales han votado otros clientes en los últimos siete días, empezando por los comentarios con actividad más reciente.
 - **Más recientes**: muestra todos los comentarios, empezando por los comentarios que se han enviado más recientemente.
 
-Junto a cada comentario, verás la fecha en que se envió el comentario y el tipo de comentario. También verás ver el mercado del cliente, el paquete específico de la aplicación instalado en el dispositivo en el momento de enviar los comentarios, el tipo de dispositivo y **Windows Insider**, si el cliente que envía los comentarios es miembro del Programa Windows Insider.
+Junto a cada comentario, verás la fecha en que se envió el comentario y el tipo de comentario. También verá la cuota de mercado del cliente, el paquete específico que se ha instalado en el dispositivo que estaban utilizando cuando izquierda sobre los comentarios, el tipo de ese dispositivo y la **Información confidencial de Windows** si el envío de los comentarios de cliente es un miembro de la información confidencial de Windows programa.
 
 También verás una opción aquí para [responder a los comentarios](respond-to-customer-feedback.md).
 
 
 ## <a name="translating-feedback"></a>Comentarios sobre traducciones
 
-De manera predeterminada, se traducen los comentarios que no se escribieron en tu idioma preferido. Si lo prefieres, para deshabilitar la traducción de los comentarios, desactiva la casilla **Traducir comentarios** situada en la esquina superior derecha, cerca de los filtros de página.
+De forma predeterminada, los comentarios que no se ha escrito en su idioma preferido se traducen para usted. Si lo prefieres, para deshabilitar la traducción de los comentarios, desactiva la casilla **Traducir comentarios** situada en la esquina superior derecha, cerca de los filtros de página.
 
 Ten en cuenta que los comentarios los traduce un sistema de traducción automática y que la traducción resultante no siempre será precisa. Se te proporciona el texto original por si quieres compararlo con la traducción o traducirlo por otros medios.
 

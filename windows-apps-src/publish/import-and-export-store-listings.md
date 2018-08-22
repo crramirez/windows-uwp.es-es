@@ -8,12 +8,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, importar descripciones de store, exportar descripciones de store, importar exportar, descripción de store csv
-ms.localizationpriority: high
-ms.openlocfilehash: fb9a3e6fd93600392ef724226368d33ed1585c76
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 0e9b23f21f87bf6caeb2cbee97a854bc8202c0b3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2799556"
 ---
 # <a name="import-and-export-store-listings"></a>Importar y exportar descripciones de Store
 

@@ -10,16 +10,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: d9c2ac6ad4de6dc67cc4c661e055ad43ecb143ec
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 43545f2a8e1965124560479d399df79d247c5f05
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692806"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789810"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Usar la Open Source Computer Vision Library (OpenCV) con MediaFrameReader
 
-En este artículo se muestra cómo usar la Open Source Computer Vision Library (OpenCV), una biblioteca de código nativo que proporciona una amplia variedad de algoritmos de procesamiento de imágenes con la clase [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) que puede leer fotogramas multimedia de varias fuentes de forma simultánea. El código de ejemplo de este artículo te guía a través de la creación de una aplicación sencilla que obtiene los fotogramas de un sensor de color, desenfoca cada fotograma mediante la biblioteca de OpenCV y, luego, muestra la imagen procesada en un control **Image** XAML.
+En este artículo se muestra cómo usar la Open Source Computer Vision Library (OpenCV), una biblioteca de código nativo que proporciona una amplia variedad de algoritmos de procesamiento de imágenes con la clase [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) que puede leer fotogramas multimedia de varias fuentes de forma simultánea. El código de ejemplo de este artículo te guía a través de la creación de una aplicación sencilla que obtiene los fotogramas de un sensor de color, desenfoca cada fotograma mediante la biblioteca de OpenCV y, luego, muestra la imagen procesada en un control **Image** XAML. 
+
+>[!NOTE]
+>OpenCV.Win.Core y OpenCV.Win.ImgProc no se actualizan periódicamente, pero siguen siendo recomendables para crear un valor de OpenCVHelper tal como se describe en esta página.
 
 Este artículo se basa en el contenido de los otros dos artículos:
 
@@ -29,7 +32,8 @@ Este artículo se basa en el contenido de los otros dos artículos:
 
 Además de estos artículos, para ver y descargar una muestra de código completa e integral del escenario descrito en este artículo, consulta el [Fotogramas de Cámara+ Muestra de OpenCV](https://go.microsoft.com/fwlink/?linkid=854003) en el repositorio de GitHub de muestras universales de Windows.
 
-Incluye la biblioteca de OpenCV en un proyecto de aplicación para UWP mediante paquetes de NuGet. El ejemplo de este artículo usa los paquetes de OpenCV.Win.Core y OpenCV.Win.ImgProc NuGet. El artículo [Procesar mapas de bits con OpenCV](process-software-bitmaps-with-opencv.md) incluye instrucciones para agregar estos paquetes a la solución. Podrás encontrar información sobre el desarrollo con OpenCV en [http://opencv.org](http://opencv.org).
+Para empezar a desarrollar rápidamente, puede incluir la biblioteca de OpenCV en un proyecto de aplicación UWP mediante el uso de paquetes de NuGet, pero estos paquetes no es posible que pase el proceso de certficication de aplicación al enviar su aplicación a la tienda, por lo que se recomienda que descargue el OpenCV biblioteca de código fuente y generar los archivos binarios antes de enviar la aplicación. Podrás encontrar información sobre el desarrollo con OpenCV en [http://opencv.org](http://opencv.org).
+
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>Implementar el Componente de Windows Runtime nativo de OpenCVHelper
 Sigue los pasos indicados en [Procesar mapas de bits de software con OpenCV](process-software-bitmaps-with-opencv.md) para crear el Componente auxiliar de Windows Runtime de OpenCV y agregar una referencia al proyecto del componente a la solución de aplicación para UWP.

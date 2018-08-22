@@ -5,25 +5,29 @@ title: Envíos de aplicaciones
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: lista de comprobación, windows, uwp, envío, enviar, juego, aplicación, enviar
 ms.author: wdg-dev-content
-ms.date: 04/03/2018
+ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 1ec4201060adf4a9f5c2916d605b3c995cd44fc6
-ms.sourcegitcommit: 9f059b37e45099b4314c96a0b604449e966d3c3c
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: cf1e647931b6e7680fb65ddcf200bf2a74be716a
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795837"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
 
 Una vez que hayas [creado tu aplicación reservando un nombre](create-your-app-by-reserving-a-name.md), puedes empezar a trabajar en conseguir que se publique. El primer paso es crear un **envío**.
 
-Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. El envío se guardará en el panel para que puedas trabajar en él cuando estés listo.
+Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Se guardan las actualizaciones que realice su envío, para que pueda volver y trabajar en él cada vez que esté listo.
 
-Después de publicar la aplicación, puedes publicar una versión actualizada creando otro envío en el panel. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío de una aplicación publicada, haz clic en **Actualizar** junto al envío más reciente que se muestre en la página de información general de la aplicación.
+> [!NOTE]
+> Debe tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) para poder tener acceso al [Centro de desarrollo de Windows](https://partner.microsoft.com/dashboard) y enviar aplicaciones a la Store Microsoft.
+
+Después de publicar la aplicación, puedes publicar una versión actualizada creando otro envío en el panel. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío de una aplicación publicada, haz clic en **Actualizar** junto al envío más reciente que se muestre en la página de información general de la aplicación. También puede [quitar una aplicación desde el almacén](guidance-for-app-package-management.md#removing-an-app-from-the-store) si necesita hacerlo (y, a continuación, permitir que esté disponible más tarde, si así lo desea).
 
 > [!NOTE]
 > En esta sección de la documentación se describe cómo crear un envío de aplicación en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.
@@ -32,12 +36,12 @@ Después de publicar la aplicación, puedes publicar una versión actualizada cr
 
 A continuación se incluyen los detalles que puedes proporcionar al crear el envío de tu aplicación, con vínculos a más información.
 
-Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees.
+Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees. No es necesario para que funcione en estas secciones en el orden que se muestra aquí.
 
 ### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
 | Nombre del campo                    | Notas                                       | Más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Mercados**                   | Predeterminado: Todos los mercados posibles.  | [Definir los precios y la selección del mercado](define-pricing-and-market-selection.md)         |
+| **Mercados**                   | Opción predeterminada: Todos los mercados posibles  | [Definir los precios y la selección del mercado](define-pricing-and-market-selection.md)         |
 | **Audiencia**                | Valor predeterminado: Audiencia pública | [Audiencia](choose-visibility-options.md#audience) |
 | **Detectabilidad**                | Valor predeterminado: Hacer esta aplicación disponible y detectable en Store | [Detectabilidad](choose-visibility-options.md#discoverability) |
 | **Programación**                  | Predeterminado: Se lanzará lo antes posible        | [Configurar la programación de lanzamiento precisa](configure-precise-release-scheduling.md) |
@@ -94,7 +98,7 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 | **Logotipos de Store**               | Recomendado; necesario para algunas versiones de sistemas operativos | [Logotipos de Store](app-screenshots-and-images.md#store-logos)             |
 | **Activos gráficos adicionales**     | Recomendado (especialmente para algunas versiones de sistemas operativos)         | [Activos de imágenes adicionales](app-screenshots-and-images.md#additional-art-assets) |
 | **Tráileres**                  | Opcional                                    | [Tráileres](app-screenshots-and-images.md#trailers)                | 
-| **Información complementaria**  | Opcional                                    | [Información complementaria](create-app-store-listings.md#supplemental-information) 
+| **Campos adicionales**  | Opcional                                    | [Información complementaria](create-app-store-listings.md#supplemental-fields) 
 | **Términos de búsqueda**              | Opcional                                    | [Términos de búsqueda](create-app-store-listings.md#search-terms)         |
 | **Información de copyright y marca comercial** | Opcional                                 | [Información de copyright y marca comercial](create-app-store-listings.md#copyright-and-trademark-info) |
 | **Términos de licencia adicionales**  | Opcional                                    | [Términos de licencia adicionales](create-app-store-listings.md#additional-license-terms) |
@@ -107,8 +111,9 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 
 | Nombre del campo                    | Notas                                       | Para obtener más información                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
-| **Opciones de suspensión de publicación**                | Valor predeterminado: Publicar este envío tan pronto como supere la certificación (o siguiendo las fechas seleccionadas en la sección Programación)      | [Opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options)    
-| **Notas para la certificación**                     | Recomendado                                    | [Notas para la certificación](notes-for-certification.md)             |
+| **Opciones de suspensión de publicación**     | Valor predeterminado: Publicar este envío tan pronto como supere la certificación (o siguiendo las fechas seleccionadas en la sección Programación)      | [Opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options)    
+| **Notas para la certificación**     | Recomendado          | [Notas para la certificación](notes-for-certification.md)             |
+| **Funcionalidades restringidas**     | Requerido si su producto declara cualquier [capacidades restringidas] (.. /Packaging/App-Capability-Declarations.MD#Restricted-Capabilities    | [Funcionalidades restringidas](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

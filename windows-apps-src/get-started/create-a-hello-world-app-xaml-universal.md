@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, primera aplicación, hola mundo
-ms.localizationpriority: high
-ms.openlocfilehash: e6fb25572213947aa7c536cde552aca3c572f0cf
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 950b2f3fac44c8350a51fd5c1b7071f05c92d746
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789673"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Crear una aplicación "Hello, world" (XAML)
 
@@ -47,11 +48,11 @@ Aquí aprenderás a:
 
 1.  Inicia Visual Studio 2017.
 
-2.  En el menú **Archivo**, selecciona **Nuevo > Proyecto...** para abrir el cuadro de diálogo *Nuevo proyecto*.
+2.  En el menú **archivo** , seleccione **Nuevo > proyecto** para abrir el cuadro de diálogo *Nuevo proyecto* .
 
-3.  En la lista de plantillas del lado izquierdo, abre **Instalado > Plantillas > Visual C# > Windows** y, a continuación, elige **Universal** para ver la lista de plantillas de proyecto para UWP.
+3.  En la lista de plantillas de la izquierda, elija **Installed > Visual C# > Windows Universal** para ver la lista de plantillas de proyecto UWP.
 
-    (Si no ves ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP. Puedes repetir el proceso de instalación y agregar compatibilidad con UWP haciendo clic en **Abrir el instalador de Visual Studio** en el diálogo *Nuevo proyecto*. Consulta [Prepárate](get-set-up.md).
+    (Si no ves ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP. Puedes repetir el proceso de instalación y agregar compatibilidad con UWP haciendo clic en **Abrir el instalador de Visual Studio** en el diálogo *Nuevo proyecto*. Vea [Configurar la aplicación](get-set-up.md)).
 
     ![Cómo repetir el proceso de instalación](images/win10-cs-install.png)
 
@@ -66,7 +67,7 @@ Aquí aprenderás a:
 
 5.  Se visualiza el cuadro de diálogo de versión mínima/de destino. La configuración predeterminada es correcta para este tutorial, por lo tanto, selecciona **Aceptar** para crear el proyecto.
 
-    ![Ventana de Explorador de soluciones](images/win10-cs-02.png)
+    ![La ventana de Explorador de soluciones](images/win10-cs-02.png)
 
 6.  Cuando se abra el nuevo proyecto, sus archivos se muestran en el panel **Explorador de soluciones** de la derecha. Es posible que debas elegir la pestaña **Explorador de soluciones** en lugar de la pestaña **Propiedades** para ver los archivos.
 
@@ -204,7 +205,7 @@ Un "controlador de eventos" suena complicado, pero es simplemente otra forma de 
 3.  Edita el código del controlador de eventos en *MainPage.xaml.cs*, la página de código subyacente. Aquí es cuando se pone interesante. El controlador de eventos predeterminado tiene este aspecto:
 
 ```C#
-private void Button_Click(object sender, RouteEventArgs e)
+private void Button_Click(object sender, RoutedEventArgs e)
 {
 
 }

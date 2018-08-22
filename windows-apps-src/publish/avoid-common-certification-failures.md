@@ -1,7 +1,7 @@
 ---
 author: jnHs
-Description: "Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplicaciones no se puedan certificar o problemas que pueden detectarse durante una comprobación puntual después de que la aplicación se haya publicado."
-title: "Evitar errores de certificación comunes"
+Description: Review this list to help avoid issues that frequently prevent apps from getting certified, or that might be identified during a spot check after the app is published.
+title: Evitar errores de certificación comunes
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 ms.author: wdg-dev-content
 ms.date: 06/19/2017
@@ -9,11 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 92e1b35c8eba7f1f3d3a32f0c994d3353a065419
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 283856ad163d2e67078c61559f6f8ec667e92b87
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2797780"
 ---
 # <a name="avoid-common-certification-failures"></a>Evitar errores de certificación comunes
 
@@ -21,7 +23,7 @@ ms.lasthandoff: 06/21/2017
 Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplicaciones no se puedan certificar o problemas que pueden detectarse durante una comprobación puntual después de que la aplicación se haya publicado.
 
 > [!NOTE]
-> Asegúrate de revisar las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944) para garantizar que la aplicación cumple los requisitos establecidos en ellas.
+> Asegúrese de revisar las [Directivas de almacén de Microsoft](https://docs.microsoft.com/legal/windows/agreements/store-policies) para asegurarse de que la aplicación cumple todos los requisitos enumerados ahí.
 
 -   Envía la aplicación solamente cuando esté terminada. Puedes usar la descripción de la aplicación para mencionar las próximas funciones, pero asegúrate de que no contenga secciones incompletas, vínculos a páginas web en construcción o cualquier elemento que pueda dar al cliente la impresión de que la aplicación está incompleta.
 
@@ -33,7 +35,7 @@ Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplic
 
 -   No te olvides de [proporciona toda la información necesaria](notes-for-certification.md) que se requiere para usar tu aplicación, como el nombre de usuario y contraseña para una cuenta de prueba en el caso de que tu aplicación necesite que los usuarios se registren en un servicio, o todos los pasos necesarios para acceder a funciones ocultas o bloqueadas.
 
--   Incluye una [directiva de privacidad](create-app-store-listings.md#privacy-policy) si tu aplicación requiere una; por ejemplo, si la aplicación tiene acceso a cualquier tipo de información personal de cualquier modo o si lo exige la ley por cualquier otro motivo. Para ayudarte a determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944).
+-   Incluye una [directiva de privacidad](create-app-store-listings.md#privacy-policy) si tu aplicación requiere una; por ejemplo, si la aplicación tiene acceso a cualquier tipo de información personal de cualquier modo o si lo exige la ley por cualquier otro motivo. Para ayudar a determinar si la aplicación requiere una directiva de privacidad, revise el [Contrato para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de almacén de Microsoft](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 -   Asegúrate de que la descripción de la aplicación refleja fielmente lo que hace la aplicación. Para obtener ayuda, consulta nuestras directrices sobre cómo [escribir una buena descripción de la aplicación](write-a-great-app-description.md).
 

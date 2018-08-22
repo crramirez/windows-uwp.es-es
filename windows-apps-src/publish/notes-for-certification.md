@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, notas para los evaluadores
-ms.localizationpriority: high
-ms.openlocfilehash: db1c7025a29b46833d4b93a79f3b67347ac32905
-ms.sourcegitcommit: 9f059b37e45099b4314c96a0b604449e966d3c3c
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 741925a3ac49273bd7ba826dfbadd2e18724f307
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792269"
 ---
 # <a name="notes-for-certification"></a>Notas para la certificación
 

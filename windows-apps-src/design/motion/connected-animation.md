@@ -1,7 +1,7 @@
 ---
 author: mijacobs
-description: "Las animaciones conectadas te permiten crear una experiencia de navegación dinámica y atractiva al animar la transición de un elemento entre dos vistas distintas."
-title: "Animación conectada"
+description: Las animaciones conectadas te permiten crear una experiencia de navegación dinámica y atractiva al animar la transición de un elemento entre dos vistas distintas.
+title: Animación conectada
 template: detail.hbs
 ms.author: jimwalk
 ms.date: 10/25/2017
@@ -12,12 +12,13 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
-ms.localizationpriority: high
-ms.openlocfilehash: 15ac48df577da27e23f795b01bfb49a1e04f6e4e
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: a789a8f082192b79b3e96990827f9a4f6a0eacbc
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801189"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>Animación conectada para aplicaciones para UWP
 
@@ -30,7 +31,7 @@ En una animación conectada, un elemento parece "continuar" entre dos vistas dur
 
 En este breve vídeo, una aplicación usa una animación conectada para animar la imagen de un elemento en la medida en que "continúa" para formar parte del encabezado de la página siguiente. El efecto te ayuda a mantener al usuario en contexto a través de la transición.
 
-![Animación conectada](images/connected-animations/example.gif)
+![Ejemplo de interfaz de usuario de movimiento continuo](images/continuous3.gif)
 
 <!-- 
 <iframe width=640 height=360 src='https://microsoft.sharepoint.com/portals/hub/_layouts/15/VideoEmbedHost.aspx?chId=552c725c%2De353%2D4118%2Dbd2b%2Dc2d0584c9848&amp;vId=b2daa5ee%2Dbe15%2D4503%2Db541%2D1328a6587c36&amp;width=640&amp;height=360&amp;autoPlay=false&amp;showInfo=true' allowfullscreen></iframe>
@@ -224,8 +225,6 @@ Consulta la [muestra de animaciones conectadas](https://github.com/Microsoft/Win
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-[ConnectedAnimation](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimation)
-
-[ConnectedAnimationService](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.connectedanimation.aspx)
-
-[NavigationThemeTransition](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.navigationthemetransition.aspx)
+- [ConnectedAnimation](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimation)
+- [ConnectedAnimationService](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.connectedanimation.aspx)
+- [NavigationThemeTransition](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.navigationthemetransition.aspx)

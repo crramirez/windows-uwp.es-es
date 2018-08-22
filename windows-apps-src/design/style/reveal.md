@@ -1,34 +1,36 @@
 ---
 author: mijacobs
 description: Reveal es un efecto de iluminación que te ayuda a dar profundidad y foco a los elementos interactivos de tu aplicación.
-title: Características principales de Reveal
+title: Revelar resaltado
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 08/9/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, Windows 10, uwp, UWP
 pm-contact: kisai
 design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
-ms.localizationpriority: high
-ms.openlocfilehash: b29de0c1d27f852f2292161331401bb185656c17
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816990"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800286"
 ---
-# <a name="reveal-highlight"></a>Características principales de Reveal
+# <a name="reveal-highlight"></a>Revelar resaltado
 
-Mostrar resaltado es un efecto de iluminación que resalta los elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
+![imagen principal](images/header-reveal-highlight.svg)
+
+Revelar que resaltado es un efecto de iluminación que resalta elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
 
 > **API importantes**: [clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [clase RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [clase RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [clase RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [clase VisualState](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Así es cómo funciona
-Mostrar resaltado llama la atención respecto a elementos interactivos mostrando el contenedor del elemento cuando el puntero está cerca, como se muestra en la siguiente ilustración:
+Revelar la atención de llamadas de resaltado a elementos interactivos por contenedor del elemento y se muestra cuando el puntero está cercano, como se muestra en esta ilustración:
 
 ![Elemento visual de Reveal](images/Nav_Reveal_Animation.gif)
 
@@ -56,7 +58,7 @@ Al exponer los bordes ocultos alrededor de los objetos, Reveal permite a los usu
 
 ## <a name="how-to-use-it"></a>Cómo usarla
 
-Mostrar funciona automáticamente para algunos controles. Para otros controles, puedes habilitar la función de mostrar asignando un estilo especial al control, como se describe en las secciones [Habilitar Reveal en otros controles comunes](#enabling-reveal-on-other-controls) y [Habilitar Reveal en controles personalizados](#enabling-reveal-on-custom-controls) de este artículo.
+Mostrar funciona automáticamente para algunos controles. Para otros controles, puede habilitar Reveal asignando un estilo especial para el control, como se describe en las secciones [Habilitar revelar en otros controles](#enabling-reveal-on-other-controls) y [Habilitar revelar en controles personalizados](#enabling-reveal-on-custom-controls) de este artículo.
 
 ## <a name="controls-that-automatically-use-reveal"></a>Controles que usan Reveal automáticamente
 
@@ -67,7 +69,7 @@ Mostrar funciona automáticamente para algunos controles. Para otros controles, 
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estas ilustraciones muestran el efecto de Reveal en varios controles diferentes:
+Estos ejemplos muestran revelar resaltar en varios controles distintos:
 
 ![Ejemplos de Reveal](images/RevealExamples_Collage.png)
 
@@ -132,8 +134,8 @@ Puedes agregar Reveal a controles personalizados. Antes de hacerlo, es útil sab
 
 
 Estos efectos se definen mediante dos pinceles: 
-* Border Reveal se define mediante **RevealBorderBrush**.
-* Hover Reveal se define mediante **RevealBackgroundBrush**.
+* Borde de revelar se define mediante **RevealBorderBrush**
+* Reveal activable se define mediante **RevealBackgroundBrush**
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -257,17 +259,20 @@ Esta es una plantilla completa del aspecto de un botón Reveal:
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Ajustar el efecto Reveal en un control personalizado 
 
-Al habilitar mostrar en un control personalizado o nuevamente basado en modelo o una superficie de comandos personalizada, estas sugerencias pueden ayudarte a optimizar el efecto:
+Cuando se habilita Reveal en un control personalizado o con plantilla re o una superficie de comandos personalizada, estos consejos pueden ayudarle a optimizar el efecto:
  
 * En los elementos adyacentes con tamaños que no se alinean en alto o ancho (especialmente en las listas): quita el comportamiento del enfoque de borde y mantén los bordes mostrados solo al mantener el puntero.
 * Para elementos dominantes que a menudo entran y salen del estado deshabilitado: coloca el pincel del enfoque de borde en placas traseras de los elementos, así como sus bordes para hacer hincapié en su estado.
 * Para los elementos dominantes adyacentes que están tan cerca que se tocan: agrega un margen de 1 píxel entre los dos elementos. 
 
 ## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+### <a name="do"></a>Hacer:
 - Usar Reveal en elementos donde el usuario puede realizar muchas acciones (barras de comandos, menús de navegación)
 - Usar Reveal en agrupaciones de elementos interactivos que no tienen separadores visuales de manera predeterminada (listas, cintas de opciones)
 - Usar Reveal en áreas con una alta densidad de elementos interactivos (escenarios dominantes)
 - Poner espacios de márgenes de 1 píxel entre los elementos Reveal
+
+### <a name="dont"></a>Cosas que evitar
 - No usar Reveal en contenido estático (fondos, texto)
 - No usar Reveal en elementos emergentes, controles flotantes o listas desplegables
 - No usar Reveal en situaciones aisladas y de uso único

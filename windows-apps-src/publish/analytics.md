@@ -4,17 +4,18 @@ Description: Get detailed analytics for your Windows apps, in the dashboard or v
 title: Analizar el rendimiento de las aplicaciones
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 ms.author: wdg-dev-content
-ms.date: 10/13/2017
+ms.date: 07/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP, análisis, informes, panel, aplicaciones
-ms.localizationpriority: high
-ms.openlocfilehash: 20e168b022ae8e9d35e0dfba39864d99e6ba22e8
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+keywords: Windows 10, uwp, análisis, informes, paneles, aplicaciones, datos, métricas
+ms.localizationpriority: medium
+ms.openlocfilehash: 090ddfdfbed1ae49e87f4dc419765e006913764f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795630"
 ---
 # <a name="analyze-app-performance"></a>Analizar el rendimiento de la aplicación
 
@@ -31,14 +32,17 @@ Para ver un análisis clave sobre tus aplicaciones más descargadas, amplía **A
 En esta sección encontrarás detalles sobre la información presentada en cada uno de los siguientes informes:
 
 -   [Informe Adquisiciones](acquisitions-report.md)
--   [Informe de adquisiciones de complementos](add-on-acquisitions-report.md)
+-   [Informe Adquisiciones de complementos](add-on-acquisitions-report.md)
 -   [Informe de uso](usage-report.md)
--   [Informe de estado](health-report.md)
--   [Informe Críticas](reviews-report.md)
+-   [Informe Mantenimiento](health-report.md)
+-   [Informe de clasificaciones](ratings-report.md)
+-   [Informe de críticas](reviews-report.md)
 -   [Informe de comentarios](feedback-report.md)
--   [Informe Rendimiento de la publicidad](advertising-performance-report.md)
--   [Informe de campaña publicitaria](promote-your-app-report.md)
--   [Informe de Análisis de Xbox](xbox-analytics-report.md)
+-   [Informe de análisis de Xbox](xbox-analytics-report.md)
+-   [Informe de conocimientos](insights-report.md)
+-   [Informe de rendimiento de la publicidad](advertising-performance-report.md)
+-   [Informe Campaña publicitaria](promote-your-app-report.md)
+
 
 > [!NOTE]
 > Según las funciones y la implementación específicas de la aplicación, es posible que no veas datos en todos estos informes.

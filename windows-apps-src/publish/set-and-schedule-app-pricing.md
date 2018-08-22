@@ -3,24 +3,25 @@ author: jnHs
 Description: Select the base price for an app and schedule price changes. You can also customize these options for specific markets.
 title: Establecer y programar los precios de las aplicaciones
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, precios, precios de las aplicaciones, precio de la aplicación, vender aplicaciones, cambio de precio, precio personalizado, precio, precios, costo, reemplazar el precio base, precio de forma libre, forma libre
-ms.localizationpriority: high
-ms.openlocfilehash: 44ded7baf563d0253c2cca6b7937cb5c8fea74e3
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ca37d0b360679a878cff3aeabd96f82016c36fde
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800350"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Establecer y programar los precios de las aplicaciones
 
 La sección **Precios** de la página [Precios y disponibilidad](set-app-pricing-and-availability.md) te permite seleccionar el precio base para una aplicación. También puedes [programar los cambios de precio](#schedule-price-changes) para indicar la fecha y la hora en las que el precio de la aplicación debería cambiar. Además, tienes la opción de [invalidar el precio base para mercados específicos](#override-base-price-for-specific-markets), ya sea seleccionando una nueva franja de precios o escribiendo un precio de forma libre en la moneda local del mercado.
 
 > [!NOTE]
-> Aunque este tema hace referencia a las aplicaciones, la selección de precios para envíos de complementos utiliza el mismo proceso.
+> Aunque este tema hace referencia a las aplicaciones, la selección de precios para envíos de complementos utiliza el mismo proceso. Tenga en cuenta que para [los complementos de suscripción](../monetize/enable-subscription-add-ons-for-your-app.md), el precio de base que seleccione no se nunca puede aumentar (si cambiando el precio base o mediante la programación de un cambio de precios), aunque se puede disminuir.
 
 ## <a name="base-price"></a>Precio base
 

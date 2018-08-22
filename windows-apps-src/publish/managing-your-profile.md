@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, centro de desarrollo, configuración de la cuenta, perfil, perfil de cuenta, cuenta de desabollador, configuración de la cuenta de desarrollador
-ms.localizationpriority: high
-ms.openlocfilehash: 5bedc2bb91478d86af95f45d57369f5409e7cea1
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794326"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Administrar la configuración de la cuenta y la información del perfil
 
@@ -25,9 +26,9 @@ Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la inf
 
 ## <a name="account-settings"></a>Configuración de la cuenta
 
-Selecciona el icono de engranaje ubicado en la esquina superior derecha del panel y luego haz clic en **Configuración de la cuenta**. Aquí encontrarás los detalles de tu cuenta y vínculos a otras páginas donde puedes ver o actualizar información y realizar diversas tareas relacionadas con la cuenta.
+Para ver las opciones de cuenta, haga clic en el icono del engranaje en la esquina superior derecha del panel y, a continuación, seleccione **la configuración de desarrollador**. Aquí encontrará información detallada sobre su cuenta y vínculos a otras páginas donde puede ver la información y realizar diversas tareas relacionadas con la cuenta.
 
-En la sección **Detalles de la cuenta**, puedes ver el estado y el tipo de tu cuenta. También puedes ver la información del identificador del editor, incluidos los Id. del vendedor, del editor de Windows y del editor de WindowsPhone. Estos valores los asigna Microsoft para identificar de manera exclusiva la cuenta de desarrollador. No puedes editar estos valores.
+En la sección **Detalles de la cuenta**, puedes ver el estado y el tipo de tu cuenta. También puede ver el identificador del vendedor y otra información de identificador de publisher. Estos valores se asignan por Microsoft para identificar de forma exclusiva su cuenta de desarrollador y no podrán modificarse.
 
 > [!NOTE]
 > Los detalles de identidad de las aplicaciones individuales pueden encontrarse en la página [Identidad de la aplicación](view-app-identity-details.md) de cada aplicación.
@@ -43,20 +44,18 @@ Es posible que al cambiar esta información de contacto debamos comprobar de nue
 Al cambiar el nombre para mostrar del editor, tendremos que volver a comprobar tu cuenta. Si decides hacerlo después de publicar una aplicación, deberás modificar el nombre para mostrar del publicador en los paquetes de la aplicación y luego enviar la aplicación nuevamente mediante los paquetes actualizados después de que volvamos a comprobar tu cuenta.
 
 
-
 ## <a name="additional-settings-and-info"></a>Información y opciones de configuración adicionales
 
 A continuación se muestran algunos de los otros elementos que encontrarás en la sección **Configuración de la cuenta**.
 
-- **Estado de verificación**: cuando la cuenta se someta al proceso de verificación (por ejemplo, cuando inicias sesión por primera vez o actualizas significativamente tu información de contacto), puedes revisar el estado de verificación aquí.
-- **Programa Insider del Centro de desarrollo**: puedes decidir participar o no en el [Programa Insider del Centro de desarrollo](dev-center-insider-program.md) en la página principal de **Configuración de la cuenta**.
-- **Usuarios**: agrega usuarios a la cuenta del Centro de desarrollo y asígnales roles y permisos. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md)
-- **Canjear código**: algunos programas pueden ofrecer un código que te permita ampliar las capacidades de tu cuenta. Si tienes dicho código, escríbelo aquí.
+- **Estado de comprobación**: cuando su cuenta está llevando a cabo la comprobación de proceso (por ejemplo, al registrarse por primera vez o después de actualizar considerablemente la información de contacto), puede revisar el estado de la verificación.
+- **Programa de información confidencial de centro de desarrollo**: que pueden participar en o el [Programa de información confidencial de centro de desarrollo](dev-center-insider-program.md) en la página principal fuera de la página de **configuración de la cuenta** .
 - **Cuenta de pago** y **Perfil fiscal**: en esta sección puedes [configurar la cuenta de pago y los formularios fiscales](setting-up-your-payout-account-and-tax-forms.md). Deberás hacer esto para poder cobrar dinero por las aplicaciones o los complementos.
+- **Asociaciones de empresa**: puedes aceptar invitaciones de empresas que quieren que publiques aplicaciones para su uso exclusivo. Para obtener más información, consulta [Distribuir aplicaciones de LOB en las empresas](distribute-lob-apps-to-enterprises.md).
+- **Usuarios**: agrega usuarios a la cuenta del Centro de desarrollo y asígnales roles y permisos. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
+- **Los inquilinos**: administrar las asociaciones del inquilino de Azure AD. Para obtener más información, consulte [asociar Azure AD con su cuenta del centro de desarrollo](associate-azure-ad-with-dev-center.md).
 - **Programas**: puedes ver detalles sobre los programas en los que participas y obtener más información sobre otros programas que podrían interesarte.
 - **Contratos**: puedes ver los contratos que tu cuenta ha aceptado.
-- **Asociaciones de empresa**: puedes aceptar invitaciones de empresas que quieren que publiques aplicaciones para su uso exclusivo. Para obtener más información, consulta [Distribuir aplicaciones de LOB en las empresas](distribute-lob-apps-to-enterprises.md).
-- **WindowsPhone desbloqueados**: puedes ver detalles de los [dispositivos WindowsPhone8 o WindowsPhone8.1 que has desbloqueado para realizar pruebas](http://go.microsoft.com/fwlink/p/?LinkId=533897).
-- **Consolas de desarrollo Xbox One**: puedes ver y administrar tus [consolas Xbox One habilitadas para el desarrollo](../xbox-apps/devkit-activation.md). 
+- **Dispositivos de desarrollo**: ver y administrar [dispositivos de 8.x de Windows Phone que usted lo haya desbloqueado para las pruebas](http://go.microsoft.com/fwlink/p/?LinkId=533897) y [consolas Xbox uno habilitadas para el desarrollo](../xbox-apps/devkit-activation.md). 
 
 

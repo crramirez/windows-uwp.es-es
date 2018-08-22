@@ -11,23 +11,23 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, maps, mapas, map style sheet, hoja de estilo de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fb80bc28900ee695ecf3b9e62b5dafc8f1a8cb3
-ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
-ms.translationtype: HT
+ms.openlocfilehash: 984741de5be585f7d6d726ec4c736e6ebce78830
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "1917778"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801572"
 ---
 # <a name="map-style-sheet-reference"></a>Referencia de hoja de estilo de mapa
 
-Puedes crear hojas de estilo de mapa mediante la notación de objetos JavaScript (JSON).
+Uso de tecnologías de asignación de Microsoft asignar hojas de estilos para definir la apariencia de los mapas de.  Una hoja de estilos de mapa se define mediante JavaScript Object Notation (JSON) y se puede usar en diversos incluidos formas en la aplicación de almacenamiento de Windows [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) a través del método [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) .
 
 Por ejemplo, deberías usar la siguiente notación JSON para hacer que las zonas de agua aparezcan en color rojo, las etiquetas de agua aparezcan en verde y las zonas de tierra aparezcan en azul:
 
 ```json
     {"version":"1.*",
         "settings":{"landColor":"#0000FF"},
-        "elements":{"water":{"fillColor":"#FF0000", "labelColor":"#00FF00"}}
+        "elements":{"water":{"fillColor":"#FF0000","labelColor":"#00FF00"}}
     }
 ```
 También podrías usar la notación JSON para quitar todas las etiquetas y los puntos de un mapa.
@@ -51,90 +51,104 @@ En este tema se muestran las entradas y [propiedades](#properties) JSON que pued
 <a id="entries" />
 
 ## <a name="entries"></a>Entradas
-En esta tabla se usan caracteres ">" para representar los niveles de la jerarquía de entradas.   
+En esta tabla se usan caracteres ">" para representar los niveles de la jerarquía de entradas.  También se muestran las versiones de Windows que admiten cada entrada y que pasar por alto.
 
-| Nombre                         | Grupo de propiedades            | Descripción    |
-|------------------------------|---------------------------|----------------|
-| version                      | [Version](#version)       | La versión de hoja de estilo que quieres usar. |
-| settings                     | [Settings](#settings)     | La configuración que se aplica a toda la hoja de estilo. |
-| mapElement                   | [MapElement](#mapelement) | La entrada principal para todas las entradas de mapa. |
-| > baseMapElement             | [MapElement](#mapelement) | La entrada principal para todas las entradas que no sean del usuario. |
-| >> area                      | [MapElement](#mapelement) | Las zonas de uso de tierra (no deben confundirse con la entrada de estructura). |
-| >>> airport                  | [MapElement](#mapelement) | Zonas que abarcan un aeropuerto. |
-| >>> areaOfInterest           | [MapElement](#mapelement) | Áreas en que hay una alta concentración de empresas o puntos interesantes. |
-| >>> cemetery                 | [MapElement](#mapelement) | Zonas de cementerios. |
-| >>> continent                | [MapElement](#mapelement) | Zonas de continentes enteros. |
-| >>> education                | [MapElement](#mapelement) |  |
-| >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  |
-| >>> industrial               | [MapElement](#mapelement) | Zonas de tierra que se usan para fines industriales. |
-| >>> island                   | [MapElement](#mapelement) | Etiquetas en zonas de isla. |
-| >>> medical                  | [MapElement](#mapelement) | Zonas de tierra que se usan para fines médicos (por ejemplo: un campus de hospital). |
-| >>> military                 | [MapElement](#mapelement) | Zonas de bases militares. |
-| >>> nautical                 | [MapElement](#mapelement) | Zonas de tierra que se usan para fines marítimos. |
-| >>> neighborhood             | [MapElement](#mapelement) | Etiquetas en zonas definidas como vecindarios. |
-| >>> runway                   | [MapElement](#mapelement) | Zonas de tierra que están cubiertas por una pista. |
-| >>> sand                     | [MapElement](#mapelement) | Zonas de arena, como playas. |
-| >>> shoppingCenter           | [MapElement](#mapelement) | Zonas de suelo asignadas para centros comerciales. |
-| >>> stadium                  | [MapElement](#mapelement) | Zona de un estadio. |
-| >>> underground              | [MapElement](#mapelement) | Áreas subterráneas (por ejemplo: la superficie de una estación de metro). |
-| >>> vegetation               | [MapElement](#mapelement) | Bosques, prados, etc. |
-| >>>> forest                  | [MapElement](#mapelement) | Zonas de tierra forestada. |
-| >>>> golfCourse              | [MapElement](#mapelement) |  |
-| >>>> park                    | [MapElement](#mapelement) | Zonas de parque. |
-| >>>> playingField            | [MapElement](#mapelement) | Campos extraídos, como un campo de fútbol o pista de tenis. |
-| >>>> reserve                 | [MapElement](#mapelement) | Zonas de reservas naturales. |
-| >> point                     | [PointStyle](#pointstyle) | Todas las características de punto que se representan con un icono de algún tipo. |
-| >>> address                  | [PointStyle](#pointstyle) | Números de direcciones. |
-| >>> naturalPoint             | [PointStyle](#pointstyle) |  |
-| >>>> peak                    | [PointStyle](#pointstyle) | Iconos que representan cumbres. |
-| >>>>> volcanicPeak           | [PointStyle](#pointstyle) | Iconos que representan picos de volcán. |
-| >>>> waterPoint              | [PointStyle](#pointstyle) | Iconos que representan ubicaciones de agua, como una cascada. |
-| >>> pointOfInterest          | [PointStyle](#pointstyle) | Restaurantes, hospitales, escuelas, puertos deportivos, zonas de esquí, etc. |
-| >>>> business                | [PointStyle](#pointstyle) | Restaurantes, hospitales, escuelas, etc. |
-| >>>>> foodPoint              | [PointStyle](#pointstyle) | Restaurantes, cafés, etc. |
-| >>> populatedPlace           | [PointStyle](#pointstyle) | Iconos que representan el tamaño de un lugar poblado (por ejemplo: una ciudad o pueblo). |
-| >>>> capital                 | [PointStyle](#pointstyle) | Iconos que representan la capital de un lugar poblado. |
-| >>>>> adminDistrictCapital   | [PointStyle](#pointstyle) | Iconos que representan la capital de un estado o provincia. |
-| >>>>> countryRegionCapital   | [PointStyle](#pointstyle) | Iconos que representan la capital de un país o región. |
-| >>> roadShield               | [PointStyle](#pointstyle) | Carteles que representan el nombre compacto de una carretera. (Por ejemplo: I-5). Usa solo valores de paleta si estableces la propiedad **ImageFamily** de la entrada de configuración en un valor *Palette*. |
-| >>> roadExit                 | [PointStyle](#pointstyle) | Iconos que representan salidas, normalmente desde una autopista de acceso controlado. |
-| >>> transit                  | [PointStyle](#pointstyle) | Iconos que representan paradas de autobús, paradas de tren, aeropuertos, etc. |
-| >> political                 | [BorderedMapElement](#borderedmapelement) | Regiones políticas, como países, regiones y estados o provincias. |
-| >>> countryRegion            | [BorderedMapElement](#borderedmapelement) |  |
-| >>> adminDistrict            | [BorderedMapElement](#borderedmapelement) | Admin1, estados, provincias, etc. |
-| >>> district                 | [BorderedMapElement](#borderedmapelement) | Admin2, condados, etc. |
-| >> structure                 | [MapElement](#mapelement) | Edificios y otras estructuras edificadas similares. |
-| >>> building                 | [MapElement](#mapelement) |  |
-| >>>> educationBuilding       | [MapElement](#mapelement) |  |
-| >>>> medicalBuilding         | [MapElement](#mapelement) |  |
-| >>>> transitBuilding         | [MapElement](#mapelement) |  |
-| >> transportation            | [MapElement](#mapelement) | Líneas que forman parte de la red de transporte (por ejemplo: carreteras, trenes y transbordadores). |
-| >>> road                     | [MapElement](#mapelement) | Líneas que representan todas las carreteras. |
-| >>>> controlledAccessHighway | [MapElement](#mapelement) |  |
-| >>>>> highSpeedRamp          | [MapElement](#mapelement) | Líneas que representan rampas. Estas tablas normalmente aparecen junto a autopistas de acceso controlado. |
-| >>>> highway                 | [MapElement](#mapelement) |  |
-| >>>> majorRoad               | [MapElement](#mapelement) |  |
-| >>>> arterialRoad            | [MapElement](#mapelement) |  |
-| >>>> street                  | [MapElement](#mapelement) |  |
-| >>>>> ramp                   | [MapElement](#mapelement) | Líneas que representan la entrada y salida de una autopista. |
-| >>>>> unpavedStreet          | [MapElement](#mapelement) |  |
-| >>>> tollRoad                | [MapElement](#mapelement) | Carreteras con peaje. |
-| >>> railway                  | [MapElement](#mapelement) | Líneas de ferrocarriles. |
-| >>> trail                    | [MapElement](#mapelement) | Caminos por parques o senderos. |
-| >>> waterRoute               | [MapElement](#mapelement) | Líneas de ruta de transbordador. |
-| >> water                     | [MapElement](#mapelement) | Todo lo que parezca a agua. Esto incluye océanos y riachuelos. |
-| >>> river                    | [MapElement](#mapelement) | Ríos, riachuelos u otros recorridos de agua.  Ten en cuenta que esto puede ser una línea o polígono y puede conectarse a masas de agua que no sean ríos. |
-| > routeMapElement            | [MapElement](#mapelement) | Todas las entradas de enrutamiento bajo esta entrada. |
-| >> routeLine                 | [MapElement](#mapelement) | El estilo de todas las líneas de ruta. |
-| >>> drivingRoute             | [MapElement](#mapelement) |  |
-| >>> scenicRoute              | [MapElement](#mapelement) |  |
-| >>> walkingRoute             | [MapElement](#mapelement) |  |
-| > userMapElement             | [MapElement](#mapelement) | Todas las entradas de usuario bajo esta entrada. |
-| >> userBillboard             | [MapElement](#mapelement) | El estilo de las instancias [MapBillboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard) predeterminadas. |
-| >> userLine                  | [MapElement](#mapelement) | El estilo de las instancias [MapPolyline](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mappolyline) predeterminadas. |
-| >> userModel3D               | [MapElement3D](#mapelement3d) | El estilo de las instancias [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) predeterminadas.  Esto va dirigido principalmente al juste de renderAsSurface. |
-| >> userPoint                 | [PointStyle](#pointstyle) | El estilo de las instancias [MapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon) predeterminadas. |
+| Versión | Nombre de la versión de Windows |
+|-------|----------------------|
+| 1506  | Creators Update      |
+| 1629  | Fall Creators Update |
+| 1713  | Actualización de abril de 2018    |
 
+| Nombre                         | Grupo de propiedades            | 1506 | 1629 | 1713 | Siguiente | Descripción    |
+|------------------------------|---------------------------|------|------|------|------|----------------|
+| version                      | [Version](#version)       |  ✔   |  ✔   |  ✔   |  ✔   | La versión de hoja de estilo que quieres usar. |
+| settings                     | [Settings](#settings)     |  ✔   |  ✔   |  ✔   |  ✔   | La configuración que se aplica a toda la hoja de estilo. |
+| mapElement                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | La entrada principal para todas las entradas de mapa. |
+| > baseMapElement             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | La entrada principal para todas las entradas que no sean del usuario. |
+| >> area                      | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usan las áreas que describe land.  Estos no se deben para confundir con los edificios físicos que se encuentran en la entrada de la estructura. |
+| >>> airport                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abarcan los aeropuertos. |
+| >>> areaOfInterest           | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Áreas en que hay una alta concentración de empresas o puntos interesantes. |
+| >>> cemetery                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abarcan cementerios. |
+| >>> continent                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Etiquetas de área continente. |
+| >>> education                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abarcan escuelas y demás instalaciones educativas. |
+| >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Se reserva áreas que abarcan las poblaciones indígenas. |
+| >>> industrial               | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Áreas que se usan con fines industrial. |
+| >>> island                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Etiquetas de área isla. |
+| >>> medical                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que se usan para fines médicos (por ejemplo: un campus hospital). |
+| >>> military                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abarcan bases militares o tienen usos militares. |
+| >>> nautical                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que se usan con fines náuticas relacionados. |
+| >>> neighborhood             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Etiquetas de área de entorno. |
+| >>> runway                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que se usa como una pista de avión. |
+| >>> sand                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Zonas de arena, como playas. |
+| >>> shoppingCenter           | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Zonas de suelo asignadas para centros comerciales. |
+| >>> stadium                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abarcan estadios. |
+| >>> underground              | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Áreas subterráneas (por ejemplo: la superficie de una estación de metro). |
+| >>> vegetation               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bosques, prados, etc. |
+| >>>> forest                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Zonas de tierra forestada. |
+| >>>> golfCourse              | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abarcan de golf. |
+| >>>> park                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abarcan parques. |
+| >>>> playingField            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Campos extraídos, como un campo de fútbol o pista de tenis. |
+| >>>> reserve                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abarcan reservas naturales. |
+| >> point                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Todas las características de punto que se dibujan con un icono de algún tipo. |
+| >>> address                  | [PointStyle](#pointstyle) |      |      |  ✔   |  ✔   | Etiquetas de números de la dirección. |
+| >>> naturalPoint             | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan las características naturales. |
+| >>>> peak                    | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan cumbres. |
+| >>>>> volcanicPeak           | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan picos de volcán. |
+| >>>> waterPoint              | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan ubicaciones de agua, como una cascada. |
+| >>> pointOfInterest          | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan cualquier ubicación interesante. |
+| >>>> business                | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan cualquier locaiton empresarial. |
+| >>>>> attractionPoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan atracciones turísticas como museos, zoológicos, etcetera. |
+| >>>>> communityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan las ubicaciones de uso general a la Comunidad. |
+| >>>>> educationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Los iconos que representan las escuelas y otras actividades de enseñanza relacionadas con las ubicaciones. |
+| >>>>> entertainmentPoint     | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan los lugares de entretenimiento, como teatros, salas de cine, etcetera. |
+| >>>>> essentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan servicios esenciales, como estacionamiento, bancos, gas, etcetera. |
+| >>>>> foodPoint              | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan los restaurantes, cafés, etcetera. |
+| >>>>> lodgingPoint           | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan los hoteles y otras empresas de presentación. |
+| >>>>> realEstatePoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan a empresas de bienes inmuebles. |
+| >>>>> shoppingPoint          | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan los hoteles y otras empresas de presentación. |
+| >>> populatedPlace           | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan el tamaño de un lugar poblado (por ejemplo: una ciudad o pueblo). |
+| >>>> capital                 | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan la capital de un lugar poblado. |
+| >>>>> adminDistrictCapital   | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan la capital de un estado o provincia. |
+| >>>>> countryRegionCapital   | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan la capital de un país o región. |
+| >>> roadShield               | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Carteles que representan el nombre compacto de una carretera. (Por ejemplo: I-5). Usa solo valores de paleta si estableces la propiedad **ImageFamily** de la entrada de configuración en un valor *Palette*. |
+| >>> roadExit                 | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan salidas, normalmente desde una autopista de acceso controlado. |
+| >>> transit                  | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan paradas de autobús, paradas de tren, aeropuertos, etc. |
+| >> political                 | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Regiones políticas, como países, regiones y estados o provincias. |
+| >>> countryRegion            | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bordes de región de país y etiquetas. |
+| >>> adminDistrict            | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Admin1, Estados, provincias, etc., bordes y etiquetas. |
+| >>> district                 | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Admin2, provincias, etc., bordes y etiquetas. |
+| >> structure                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Edificios y otras estructuras edificadas similares. |
+| >>> building                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Edificios. |
+| >>>> educationBuilding       | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Edificios utilizados para el ámbito educativo. |
+| >>>> medicalBuilding         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Edificios utilizados para fines médicos como hospitales. |
+| >>>> transitBuilding         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Edificios en tránsito como aeropuertos. |
+| >> transportation            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que forman parte de la red de transporte (por ejemplo: carreteras, trenes y transbordadores). |
+| >>> road                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que representan todas las carreteras. |
+| >>>> controlledAccessHighway | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que representan carreteras de acceso controlado y grandes. |
+| >>>>> highSpeedRamp          | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Las líneas que representan las pendientes de alta velocidad que normalmente se conectan a controlan carreteras de acceso. |
+| >>>> highway                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que representan carreteras. |
+| >>>> majorRoad               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que representan las carreteras principales. |
+| >>>> arterialRoad            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que representan las carreteras arterial. |
+| >>>> street                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que representan calles. |
+| >>>>> ramp                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que representan las pendientes que normalmente se conectan a carreteras. |
+| >>>>> unpavedStreet          | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que representan calles unpaved. |
+| >>>> tollRoad                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que representan carreteras que costo dinero a usar. |
+| >>> railway                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas de ferrocarriles. |
+| >>> trail                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Caminos por parques o senderos. |
+| >>> existe un pasillo                  | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Existe un pasillo con privilegios elevados. |
+| >>> waterRoute               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas de ruta de transbordador. |
+| >> water                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Todo lo que parezca a agua. Esto incluye océanos y riachuelos. |
+| >>> river                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Ríos, riachuelos u otros recorridos de agua.  Ten en cuenta que esto puede ser una línea o polígono y puede conectarse a masas de agua que no sean ríos. |
+| > routeMapElement            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Todas las entradas enrutamiento relacionadas. |
+| >> routeLine                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Enrutar línea entradas relacionadas. |
+| >>> drivingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Líneas que representan las rutas de fuerzas. |
+| >>> scenicRoute              | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Líneas que representan rutas fuerzas escénicos. |
+| >>> walkingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Las líneas que representan las rutas de transformación. |
+| > userMapElement             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Todas las entradas de usuario. |
+| >> userBillboard             | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | El estilo de las instancias [MapBillboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard) predeterminadas. |
+| >> userLine                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | El estilo de las instancias [MapPolyline](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mappolyline) predeterminadas. |
+| >> userModel3D               | [MapElement3D](#mapelement3d) |      |  ✔   |  ✔   |  ✔   | El estilo de las instancias [MapModel3D](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapmodel3d) predeterminadas.  Esto va dirigido principalmente al juste de renderAsSurface. |
+| >> userPoint                 | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | El estilo de las instancias [MapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapicon) predeterminadas. |
 
 <a id="properties" />
 
@@ -154,43 +168,44 @@ En esta sección se describen las propiedades que puedes usar para cada entrada.
 
 ### <a name="settings-properties"></a>Propiedades de la configuración
 
-| Propiedad                     | Tipo    | Descripción                                                                                                                                                                                                                 |
-|------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| atmosphereVisible            | Bool    | Marcador que indica si la atmósfera aparece en el control 3D.                                                                                                                                                     |
-| buildingTexturesVisible      | Bool    | Una marca que indica si se debe o no mostrar texturas en edificios 3D simbólicos que tienen texturas.                                                                                                                          |
-| fogColor                     | Color   | El valor de color ARGB de la niebla de distancia que aparece en el control 3D.                                                                                                                                                    |
-| glowColor                    | Color   | El valor de color ARGB que se podría aplicarse para etiquetar resplandor y resplandor de icono.                                                                                                                                                     |
-| imageFamily                  | Cadena  | El nombre de la imagen establecida para usar con este estilo. Establece este valor en *Default* para carteles que usan colores fijos basados en el cartel del mundo real. Establece este valor en *Palette* para carteles que usan colores de paleta configurables. |
-| landColor                    | Color   | El valor de color ARGB de la tierra antes de que se dibuje algún elemento en ella.                                                                                                                                                     |
-| logosVisible                 | Bool    | Un marcador que indica si los elementos que tienen una propiedad **Organization** deben dibujar los logotipos adecuados o usar un icono genérico.                                                                                         |
-| officialColorVisible         | Bool    | Un marcador que indica si los elementos que tienen una propiedad de color oficial (por ejemplo, las líneas de transporte público de China) deben dibujar ese color. Por ejemplo, desactiva este valor para un mapa en blanco y negro.                               |
-| rasterRegionsVisible         | Bool    | Un marcador que indica si se deben o no dibujar regiones de trama en las que las representaciones no se hacen por vectores (por ejemplo: Japón y Corea del sur).                                                                                                |
-| shadedReliefVisible          | Bool    | Un marcador que indica si se va a dibujar o no el sombreado de elevación en el mapa.                                                                                                                                                  |
-| shadedReliefDarkColor        | Color   | El color del lado oscuro del relieve sombreado.  El canal alfa representa el valor alfa máximo. value.                                                                                                                            |
-| shadedReliefLightColor       | Color   | El color del lado claro del relieve sombreado.  El canal alfa representa el valor alfa máximo. value.                                                                                                                           |
-| spaceColor                   | Color   | El valor de color ARGB para la zona que rodea el mapa.                                                                                                                                                                               |
-| useDefaultImageColors        | Bool    | Un marcador que indica si se deben usar los colores originales en SVG en lugar de buscar la entrada de la paleta de colores en una imagen.                                                                                |
+| Propiedad                     | Tipo    | 1506 | 1629 | 1713 | Siguiente | Descripción |
+|------------------------------|---------|------|------|------|------|-------------|
+| atmosphereVisible            | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Marcador que indica si la atmósfera aparece en el control 3D. |
+| buildingTexturesVisible      | Bool    |      |      |  ✔   |  ✔   | Una marca que indica si se debe o no mostrar texturas en edificios 3D simbólicos que tienen texturas. |
+| fogColor                     | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El valor de color ARGB de la niebla de distancia que aparece en el control 3D. |
+| glowColor                    | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El valor de color ARGB que se podría aplicarse para etiquetar resplandor y resplandor de icono. |
+| imageFamily                  | Cadena  |  ✔   |  ✔   |  ✔   |  ✔   | El nombre de la imagen establecida para usar con este estilo. Establece este valor en *Default* para carteles que usan colores fijos basados en el cartel del mundo real. Establece este valor en *Palette* para carteles que usan colores de paleta configurables. |
+| landColor                    | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El valor de color ARGB de la tierra antes de que se dibuje algún elemento en ella. |
+| logosVisible                 | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Un marcador que indica si los elementos que tienen una propiedad **Organization** deben dibujar los logotipos adecuados o usar un icono genérico. |
+| officialColorVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Un marcador que indica si los elementos que tienen una propiedad de color oficial (por ejemplo, las líneas de transporte público de China) deben dibujar ese color. Por ejemplo, desactiva este valor para un mapa en blanco y negro. |
+| rasterRegionsVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Marca que indica si se va a dibujar las regiones de la trama que tienen una representación mejor que vectores (Japón y Corea). |
+| shadedReliefVisible          | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Un marcador que indica si se va a dibujar o no el sombreado de elevación en el mapa. |
+| shadedReliefDarkColor        | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color del lado oscuro del relieve sombreado.  Canal alfa representa el valor de alfa máximo. |
+| shadedReliefLightColor       | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color del lado claro del relieve sombreado.  Canal alfa representa el valor de alfa máximo. |
+| shadowColor                  | Color   |      |      |      |  ✔️   | El color de la sombra detrás de iconos que utilizar sombras. |
+| spaceColor                   | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El valor de color ARGB para la zona que rodea el mapa. |
+| useDefaultImageColors        | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Marca que indica si los colores originales en la SVG deben ser usados en lugar de buscar la entrada de la paleta de colores en una imagen. |
 
 <a id="mapelement" />
 
 ### <a name="mapelement-properties"></a>Propiedades de MapElement
 
-| Propiedad                     | Tipo    | Descripción                                                                                                                       |
-|------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------|
-| backgroundScale              | Flotante   | Cantidad en que se debe escalar el elemento en segundo plano de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
-| fillColor                    | Color   | El color que se usa para rellenar polígonos, el fondo de los iconos de punto y para el centro de líneas si se han dividido.       |
-| fontFamily                   | Cadena  |                                                                                                                                   |
-| iconColor                    | Color   | El color del glifo que se muestra en el medio de un icono de punto.                                                                       |
-| iconScale                    | Flotante   | Cantidad en que se debe escalar el glifo de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño.              |
-| labelColor                   | Color   |                                                                                                                                   |
-| labelOutlineColor            | Color   |                                                                                                                                   |
-| labelScale                   | Flotante   | La cantidad según la cual se aplicará escala a los tamaños de etiqueta predeterminados. Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño.                  |
-| labelVisible                 | Bool    |                                                                                                                                   |
-| overwriteColor               | Bool    | Hace que el valor alfa del elemento **FillColor** sobrescriba el elemento **StrokeColor** en lugar de combinarse con él.                               |
-| scale                        | Flotante   | La cantidad según la cual se aplicará escala al tamaño de todo el punto. Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño.                |
-| strokeColor                  | Color   | El color que se usará para el contorno de polígonos, el contorno alrededor de los iconos de punto y el color de las líneas.                         |
-| strokeWidthScale             | Flotante   | La cantidad según la cual se aplicará escala al trazado de las líneas. Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño.                  |
-| visible                      | Bool    |                                                                                                                                   |
+| Propiedad                     | Tipo    | 1506 | 1629 | 1713 | Siguiente | Descripción |
+|------------------------------|---------|------|------|------|------|-------------|
+| backgroundScale              | Flotante   |  ✔   |  ✔   |  ✔   |  ✔   | Cantidad en que se debe escalar el elemento en segundo plano de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
+| fillColor                    | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color que se usa para rellenar polígonos, el fondo de los iconos de punto y para el centro de líneas si se han dividido. |
+| fontFamily                   | Cadena  |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| iconColor                    | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color del glifo que se muestra en el medio de un icono de punto. |
+| iconScale                    | Flotante   |      |  ✔   |  ✔   |  ✔   | Cantidad en que se debe escalar el glifo de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
+| labelColor                   | Color   |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| labelOutlineColor            | Color   |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| labelScale                   | Flotante   |  ✔   |  ✔   |  ✔   |  ✔   | La cantidad según la cual se aplicará escala a los tamaños de etiqueta predeterminados. Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
+| labelVisible                 | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| overwriteColor               | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Hace que el valor alfa del elemento **FillColor** sobrescriba el elemento **StrokeColor** en lugar de combinarse con él. |
+| scale                        | Flotante   |  ✔   |  ✔   |  ✔   |  ✔   | La cantidad según la cual se aplicará escala al tamaño de todo el punto. Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
+| strokeColor                  | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color que se usará para el contorno de polígonos, el contorno alrededor de los iconos de punto y el color de las líneas. |
+| strokeWidthScale             | Flotante   |  ✔   |  ✔   |  ✔   |  ✔   | La cantidad según la cual se aplicará escala al trazado de las líneas. Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
+| visible                      | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  |
 
 <a id="borderedmap" />
 
@@ -198,12 +213,12 @@ En esta sección se describen las propiedades que puedes usar para cada entrada.
 
 Este grupo de propiedades hereda los valores del grupo de propiedades [MapElement](#mapelement).
 
-| Propiedad                     | Tipo    | Descripción                                                           |
-|------------------------------|---------|-----------------------------------------------------------------------|
-| borderOutlineColor           | Color   | El color de línea secundaria o de marco del borde de un polígono rellenado. |
-| borderStrokeColor            | Color   | El color de la línea principal del borde de un polígono rellenado.             |
-| borderVisible                | Bool    |                                                                       |
-| borderWidthScale             | Flotante   |                                                                       |
+| Propiedad                     | Tipo    | 1506 | 1629 | 1713 | Siguiente | Descripción |
+|------------------------------|---------|------|------|------|------|-------------|
+| borderOutlineColor           | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color de línea secundaria o de marco del borde de un polígono rellenado. |
+| borderStrokeColor            | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color de la línea principal del borde de un polígono rellenado. |
+| borderVisible                | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| borderWidthScale             | Flotante   |  ✔   |  ✔   |  ✔   |  ✔   | La cantidad por la que se escalan el trazo de bordes. Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
 
 <a id="pointstyle" />
 
@@ -211,13 +226,14 @@ Este grupo de propiedades hereda los valores del grupo de propiedades [MapElemen
 
 Este grupo de propiedades hereda los valores del grupo de propiedades [MapElement](#mapelement).
 
-| Propiedad                     | Tipo    | Descripción                                                                                                                      |
-|------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------|
-| stemAnchorRadiusScale        | Flotante   | Cantidad en que se debe escalar el punto de anclaje del eje de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
-| stemColor                    | Color   | El color de la barra que sale de la parte inferior del icono en modo 3D.                                                           |
-| stemHeightScale              | Flotante   | Cantidad en que se debe escalar la longitud del eje de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble de longitud. |
-| stemWidthScale               | Flotante   | Cantidad en que se debe escalar la anchura del eje de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble de longitud.  |
-| stemOutlineColor             | Color   | El color del contorno alrededor de la barra que sale de la parte inferior del icono en modo 3D.                                        |
+| Propiedad                     | Tipo    | 1506 | 1629 | 1713 | Siguiente | Descripción |
+|------------------------------|---------|------|------|------|------|-------------|
+| Fondo de la forma             | Flotante   |      |      |      |  ✔️   | Forma que se utilizará como el fondo del icono--reemplazando cualquier forma que existe. |
+| stemAnchorRadiusScale        | Flotante   |      |      |  ✔   |  ✔   | Cantidad en que se debe escalar el punto de anclaje del eje de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
+| stemColor                    | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color de la barra que sale de la parte inferior del icono en modo 3D. |
+| stemHeightScale              | Flotante   |      |      |  ✔   |  ✔   | Cantidad en que se debe escalar la longitud del eje de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble de longitud. |
+| stemOutlineColor             | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color del contorno alrededor de la barra que sale de la parte inferior del icono en modo 3D. |
+| stemWidthScale               | Flotante   |  ✔   |  ✔   |  ✔   |  ✔   | Cantidad en que se debe escalar la anchura del eje de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble de longitud. |
 
 <a id="mapelement3d" />
 
@@ -225,6 +241,6 @@ Este grupo de propiedades hereda los valores del grupo de propiedades [MapElemen
 
 Este grupo de propiedades hereda los valores del grupo de propiedades [MapElement](#mapelement).
 
-| Propiedad                     | Tipo    | Descripción                                                                                                                      |
-|------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------|
-| renderAsSurface              | Bool    | Una marca que indica que un modelo 3D se debe representar como un edificio, sin fundido de profundidad contra el suelo.               |
+| Propiedad                     | Tipo    | 1506 | 1629 | 1713 | Siguiente | Descripción |
+|------------------------------|---------|------|------|------|------|------------|
+| renderAsSurface              | Bool    |      |      |  ✔   |  ✔   | Una marca que indica que un modelo 3D se debe representar como un edificio, sin fundido de profundidad contra el suelo. |

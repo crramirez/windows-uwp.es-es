@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, resumen de pago, extracto, pagos, ganancias, pagos, pago, beneficios
-ms.localizationpriority: high
-ms.openlocfilehash: 5be84a7fe6918a0ba272aead83ec26e68669c477
-ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1d9845fdbd9c8dad77c8599a04850a47573858e8
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794766"
 ---
 # <a name="payout-summary"></a>Resumen de pago
 
@@ -26,7 +27,7 @@ Si usas publicidad para ganar dinero, también podrás ver la información de pa
 Si vendes productos en Azure Marketplace, también verás información sobre los pagos efectuados en **Resumen de pago**. Para obtener más detalles sobre el pago en Azure Marketplace, consulta la página [Microsoft Azure Marketplace Participation Policies (Directivas de participación de Microsoft Azure Marketplace)](http://go.microsoft.com/fwlink/p/?LinkId=722436) y el documento [Microsoft Azure Marketplace Publisher Agreement (Acuerdo del publicador de Microsoft Azure Marketplace)](http://go.microsoft.com/fwlink/p/?LinkID=699560 ). Puedes encontrar más información sobre cómo generar informes de pagos de Azure Marketplace [aquí](http://go.microsoft.com/fwlink/p/?LinkID=722439).
 
 > [!NOTE]
-> Para ser apto para el pago, las ganancias deben alcanzar el [umbral de pago](payment-thresholds-methods-and-timeframes.md) aplicable. Si las ganancias son inferiores al umbral de pago, estas permanecerán en la categoría **Reservado** hasta que se alcance el umbral. Para obtener información detallada sobre el umbral de pago correspondiente a las ganancias por la aplicación, consulta el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058). Para las ganancias de publicidad, el umbral de pago es de 50USD (o su equivalente en moneda local). 
+> Para ser apto para el pago, las ganancias deben alcanzar el [umbral de pago](payment-thresholds-methods-and-timeframes.md) aplicable. Si las ganancias son inferiores al umbral de pago, estas permanecerán en la categoría **Reservado** hasta que se alcance el umbral. Para obtener información detallada sobre el umbral de pago correspondiente a las ganancias por la aplicación, consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Para las ganancias de publicidad, el umbral de pago es de 50USD (o su equivalente en moneda local). 
 >
 > Los pagos se realizan mensualmente (siempre que se haya alcanzado cualquier umbral de pago aplicable). Por lo general, enviaremos cualquier pago pendiente a día 15 de un mes determinado. Recuerda que los pagos suelen tardar entre 3 y 10 días laborables adicionales en acreditarse en tu cuenta de pago. Para obtener más información, consulta [Umbrales, métodos y plazos de pago](payment-thresholds-methods-and-timeframes.md).
 

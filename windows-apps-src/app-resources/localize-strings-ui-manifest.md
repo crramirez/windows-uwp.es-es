@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: d1c95c530cb8e62b5ac228798d69bfb6d0871218
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989639"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791740"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
@@ -92,7 +92,17 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 Puedes usar este mismo código desde dentro de una biblioteca de clases (Windows Universal) o un proyecto [Biblioteca de Windows Runtime (Windows Universal)](../winrt-components/index.md). En el momento de ejecución, se cargan los recursos de la aplicación que aloja la biblioteca. Te recomendamos que las bibliotecas carguen recursos de la aplicación que alojan, dado que es probable que la aplicación tenga un mayor grado de localización. Cuando una biblioteca tiene que proporcionar recursos, debería proporcionar a su aplicación alojada la opción de sustituir esos recursos como si fueran una entrada.
 
-**Nota** Solo puedes cargar el valor de un único identificador de recursos de cadena, no de un identificador de propiedad. Por lo tanto, podemos cargar el valor de "Farewell" con código como este, pero no podemos hacer lo mismo para "Greeting.Text". Al intentar hacerlo, se devolverá una cadena vacía.
+Si un nombre de recurso es segmentado (contiene "." caracteres), a continuación, reemplazar los puntos con barra diagonal ("/") caracteres en el nombre del recurso. Identificadores de propiedades, por ejemplo, contengan puntos; por lo que necesitará realizar esta sustitución con el fin de cargar uno de ellos desde el código.
+
+```csharp
+this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
+```
+
+Si tiene alguna duda, puede usar [MakePri.exe](makepri-exe-command-options.md) para volcar archivo PRI de su aplicación. Cada recurso `uri` se muestra en el archivo de objeto de dumping.
+
+```xml
+<ResourceMapSubtree name="Fare"><NamedResource name="Well" uri="ms-resource://<GUID>/Resources/Fare/Well">...
+```
 
 ## <a name="refer-to-a-string-resource-identifier-from-your-app-package-manifest"></a>Hacer referencia a un identificador de recursos de cadena desde el manifiesto del paquete de la aplicación
 1. Abre el archivo de origen del manifiesto de paquete de la aplicación (el archivo `Package.appxmanifest`), en el que de manera predeterminada, el nombre para mostrar de la aplicación se expresa como un literal de cadena.
@@ -164,6 +174,18 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 ```
 
 Si fueras a mover el recurso "AppDisplayName" fuera de `Resources.resw` y adentro de `ManifestResources.resw`, en ese caso, en el manifiesto del paquete de aplicación cambiarías `ms-resource:AppDisplayName` a `ms-resource:/ManifestResources/AppDisplayName`.
+
+Si un nombre de archivo de recursos es segmentado (contiene "." caracteres), a continuación, deje los puntos en el nombre cuando se hace referencia a él. **No** reemplazar puntos por caracteres de barra diagonal ("/"), como lo haría para un nombre de recurso.
+
+```csharp
+var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
+```
+
+Si tiene alguna duda, puede usar [MakePri.exe](makepri-exe-command-options.md) para volcar archivo PRI de su aplicación. Cada recurso `uri` se muestra en el archivo de objeto de dumping.
+
+```xml
+<ResourceMapSubtree name="Err.Msgs"><NamedResource name="MismatchedPasswords" uri="ms-resource://<GUID>/Err.Msgs/MismatchedPasswords">...
+```
 
 ## <a name="load-a-string-for-a-specific-language-or-other-context"></a>Cargar una cadena para un idioma u otro contexto específicos
 El valor predeterminado [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live) (obtenido de [**ResourceContext.GetForCurrentView**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.GetForCurrentView)) contiene un valor de calificador para cada nombre de calificador, que representa el contexto en tiempo de ejecución predeterminado (en otras palabras, la configuración de la máquina y usuario actuales). Los archivos de recursos (.resw) se comparan, en función de los calificadores de sus nombres, con los valores de calificador de ese contexto de tiempo de ejecución.
@@ -242,12 +264,24 @@ Los recursos de cadena de una biblioteca de clases (Windows Universal) referenci
 Una biblioteca puede obtener un ResourceLoader para sus propios recursos. Por ejemplo, el siguiente código muestra cómo una biblioteca o una aplicación que haga referencia a ella puede obtener un ResourceLoader para recursos de cadena de la biblioteca.
 
 ```csharp
-var resourceLoader = new Windows.ApplicationModel.Resources.ResourceLoader("ContosoControl/Resources");
-resourceLoader.GetString("string1");
+var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ContosoControl/Resources");
+this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
+```
+
+Para una biblioteca de tiempo de ejecución de Windows (Universal Windows), si el espacio de nombres predeterminado es segmentado (contiene "." caracteres), a continuación, usar puntos en el nombre de la asignación de recursos.
+
+```csharp
+var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
+```
+
+No es necesario hacer para una biblioteca de clases (Windows Universal). Si tiene alguna duda, puede usar [MakePri.exe](makepri-exe-command-options.md) para volcar el componente o archivo PRI de la biblioteca. Cada recurso `uri` se muestra en el archivo de objeto de dumping.
+
+```xml
+<NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>Cargar cadenas desde otros paquetes
-Los recursos de un paquete de la aplicación se administran y se accede a ellos a través del paquete propietario de nivel superior [ResourceMap](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) que es accesible desde el actual [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live). Dentro de cada paquete, diversos componentes pueden tener sus propios subárboles ResourceMap, a los que se puede tener acceso a través de [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
+Los recursos para un paquete de aplicación se administran y se tiene acceso a través del paquete propietario de nivel superior [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) que sea accesible desde [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)actual. Dentro de cada paquete, diversos componentes pueden tener sus propios subárboles ResourceMap, a los que se puede tener acceso a través de [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
 
 Un paquete de marcos puede tener acceso a sus propios recursos con un URI de identificador de recursos absoluto. Consulta también [esquemas URI](uri-schemes.md).
 

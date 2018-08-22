@@ -9,18 +9,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, targeted push notifications, notificaciones push dirigidas, Dev Center, Centro de desarrollo
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
-ms.localizationpriority: high
-ms.openlocfilehash: 5cd29ee3e04d2165a1aaea2d1d30215e75430214
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d44d4491d8f5f0a7cde65adbe8241a74e36e1506
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794566"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>Configurar la aplicación para notificaciones push dirigidas
 
 Puedes usar la página **Notificaciones de inserción** del panel del Centro de desarrollo de Windows para interactuar directamente con los clientes mediante el envío de notificaciones push dirigidas a los dispositivos en los que está instalada la aplicación para la Plataforma universal de Windows (UWP). Por ejemplo, puedes usar las notificaciones push dirigidas para sugerir a los clientes que realicen una determinada acción, como valorar tu aplicación o probar una nueva característica. Puedes enviar diferentes tipos de notificaciones de inserción, incluidas notificaciones del sistema, notificaciones de icono y notificaciones XML sin formato. También puedes supervisar la tasa de inicios de la aplicación que se derivan de las notificaciones de inserción. Para obtener más información acerca de esta característica, consulta [Enviar notificaciones de inserción a los clientes de la aplicación](../publish/send-push-notifications-to-your-apps-customers.md).
 
-Para poder enviar notificaciones push dirigidas a los clientes del Centro de desarrollo, debes usar un método de la clase [StoreServicesEngagementManager](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.aspx) en el Microsoft Store Services SDK para registrar la aplicación para la recepción de notificaciones. Puedes usar métodos adicionales de esta clase para notificar al Centro de desarrollo que la aplicación se ha iniciado en respuesta a una notificación push dirigida (si quieres hacer un seguimiento de la tasa de inicios de la aplicación que se derivan de las notificaciones) y para dejar de recibir notificaciones.
+Para poder enviar notificaciones push dirigidas a los clientes del Centro de desarrollo, debes usar un método de la clase [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) en el Microsoft Store Services SDK para registrar la aplicación para la recepción de notificaciones. Puedes usar métodos adicionales de esta clase para notificar al Centro de desarrollo que la aplicación se ha iniciado en respuesta a una notificación push dirigida (si quieres hacer un seguimiento de la tasa de inicios de la aplicación que se derivan de las notificaciones) y para dejar de recibir notificaciones.
 
 ## <a name="configure-your-project"></a>Configurar tu proyecto
 
@@ -41,15 +42,15 @@ Para registrar tu aplicación para que reciba notificaciones push dirigidas del 
 
     [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#EngagementNamespace)]
 
-3. Obtén un objeto [StoreServicesEngagementManager](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.aspx) y llama a una de las sobrecargas [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync.aspx) del código de inicio que identificaste anteriormente. Se llamará a este método cada vez que se inicie la aplicación.
+3. Obtén un objeto [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) y llama a una de las sobrecargas [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) del código de inicio que identificaste anteriormente. Se llamará a este método cada vez que se inicie la aplicación.
 
-  * Si quieres que el Centro de desarrollo cree su propio URI de canal para las notificaciones, llama a la sobrecarga [RegisterNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx).
+  * Si quieres que el Centro de desarrollo cree su propio URI de canal para las notificaciones, llama a la sobrecarga [RegisterNotificationChannelAsync()](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync).
 
       [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync1)]
       > [!IMPORTANT]
-      > Si tu aplicación también llama a [CreatePushNotificationChannelForApplicationAsync](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) para crear un canal de notificación de WNS, asegúrate de que el código no llama a [CreatePushNotificationChannelForApplicationAsync](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) y a la sobrecarga [RegisterNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) al mismo tiempo. Si necesitas llamar a estos dos métodos, llámalos secuencialmente y espera la devolución de un método antes de llamar al otro.
+      > Si tu aplicación también llama a [CreatePushNotificationChannelForApplicationAsync](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) para crear un canal de notificación de WNS, asegúrate de que el código no llama a [CreatePushNotificationChannelForApplicationAsync](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) y a la sobrecarga [RegisterNotificationChannelAsync()](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) al mismo tiempo. Si necesitas llamar a estos dos métodos, llámalos secuencialmente y espera la devolución de un método antes de llamar al otro.
 
-  * Si quieres especificar el URI de canal que se usará para las notificaciones push dirigidas del Centro de desarrollo, llama a la sobrecarga [RegisterNotificationChannelAsync(StoreServicesNotificationChannelParameters)](https://msdn.microsoft.com/library/windows/apps/mt771191.aspx). Por ejemplo, es posible que quieras hacer esto si tu aplicación ya usa Servicios de notificaciones de inserción de Windows (WNS) y quieres usar el mismo URI de canal. Primero debes crear un objeto [StoreServicesNotificationChannelParameters](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.aspx) y asignar la propiedad [CustomNotificationChannelUri](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri.aspx) al URI de tu canal.
+  * Si quieres especificar el URI de canal que se usará para las notificaciones push dirigidas del Centro de desarrollo, llama a la sobrecarga [RegisterNotificationChannelAsync(StoreServicesNotificationChannelParameters)](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync). Por ejemplo, es posible que quieras hacer esto si tu aplicación ya usa Servicios de notificaciones de inserción de Windows (WNS) y quieres usar el mismo URI de canal. Primero debes crear un objeto [StoreServicesNotificationChannelParameters](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters) y asignar la propiedad [CustomNotificationChannelUri](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri) al URI de tu canal.
 
       [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync2)]
 
@@ -62,7 +63,7 @@ Para registrar tu aplicación para que reciba notificaciones push dirigidas del 
 
 Cuando la aplicación llama a **RegisterNotificationChannelAsync**, este método toma la cuenta de Microsoft del cliente que ha iniciado sesión en el dispositivo. Posteriormente, cuando envías una notificación push dirigida a un segmento que incluye este cliente, el Centro de desarrollo envía la notificación a los dispositivos que están asociados a la cuenta de Microsoft de este cliente.
 
-Ten en cuenta que, si el cliente que ha iniciado la aplicación cede su dispositivo a otra persona para que lo use mientras todavía está conectado en el dispositivo con su cuenta de Microsoft, esa persona podrá ver la notificación que estaba dirigida al cliente original. Esto puede tener consecuencias imprevistas, en particular para las aplicaciones que ofrecen servicios a los que los clientes pueden conectarse para usarlos. Para impedir que otros usuarios vean tus notificaciones dirigidas en este escenario, llama al método [UnregisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) cuando los clientes cierren sesión en la aplicación. Para más información, consulta [Anular el registro para notificaciones push](#unregister) más tarde en este artículo.
+Ten en cuenta que, si el cliente que ha iniciado la aplicación cede su dispositivo a otra persona para que lo use mientras todavía está conectado en el dispositivo con su cuenta de Microsoft, esa persona podrá ver la notificación que estaba dirigida al cliente original. Esto puede tener consecuencias imprevistas, en particular para las aplicaciones que ofrecen servicios a los que los clientes pueden conectarse para usarlos. Para impedir que otros usuarios vean tus notificaciones dirigidas en este escenario, llama al método [UnregisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) cuando los clientes cierren sesión en la aplicación. Para más información, consulta [Anular el registro para notificaciones push](#unregister) más tarde en este artículo.
 
 ### <a name="how-your-app-responds-when-the-user-launches-your-app"></a>Cómo responde la aplicación cuando el usuario la inicia
 
@@ -76,9 +77,9 @@ Por ejemplo, es posible que quieras recompensar a los usuarios de la aplicación
 
 ## <a name="notify-dev-center-of-your-app-launch"></a>Notificar al Centro de desarrollo el inicio de la aplicación
 
-Si seleccionas la opción **Seguir tasa de inicio de la aplicación** para la notificación push dirigida en el Centro de desarrollo, llama al método [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx) desde el punto de entrada correspondiente de la aplicación para notificar al Centro de desarrollo que la aplicación se ha iniciado en respuesta a una notificación push.
+Si seleccionas la opción **Seguir tasa de inicio de la aplicación** para la notificación push dirigida en el Centro de desarrollo, llama al método [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) desde el punto de entrada correspondiente de la aplicación para notificar al Centro de desarrollo que la aplicación se ha iniciado en respuesta a una notificación push.
 
-Este método devuelve también los argumentos de inicio originales de la aplicación. Cuando elijas realizar un seguimiento de la tasa de inicio de la aplicación para tu notificación push, se agregará un id. de seguimiento opaco a los argumentos de inicio para el seguimiento del inicio de la aplicación en el Centro de desarrollo. Debes pasar los argumentos de inicio para tu aplicación al método [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx), que enviará el identificador de seguimiento al Centro de desarrollo, eliminará el identificador de seguimiento de los argumentos de inicio y devolverá los argumentos de inicio originales a tu código.
+Este método devuelve también los argumentos de inicio originales de la aplicación. Cuando elijas realizar un seguimiento de la tasa de inicio de la aplicación para tu notificación push, se agregará un id. de seguimiento opaco a los argumentos de inicio para el seguimiento del inicio de la aplicación en el Centro de desarrollo. Debes pasar los argumentos de inicio para tu aplicación al método [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch), que enviará el identificador de seguimiento al Centro de desarrollo, eliminará el identificador de seguimiento de los argumentos de inicio y devolverá los argumentos de inicio originales a tu código.
 
 La forma de llamar al método depende del tipo de activación de la notificación push:
 
@@ -94,7 +95,7 @@ La forma de llamar al método depende del tipo de activación de la notificació
 
 ## <a name="unregister-for-push-notifications"></a>Anular el registro para notificaciones push
 
-Si quieres que tu aplicación deje de recibir notificaciones push dirigidas del Centro de desarrollo, llama al método [UnregisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync).
+Si quieres que tu aplicación deje de recibir notificaciones push dirigidas del Centro de desarrollo, llama al método [UnregisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync).
 
 [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#UnregisterNotificationChannelAsync)]
 

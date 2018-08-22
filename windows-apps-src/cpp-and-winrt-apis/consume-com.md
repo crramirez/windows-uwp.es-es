@@ -1,0 +1,482 @@
+---
+author: stevewhims
+description: En este tema se usa un ejemplo de código completo de Direct2D para mostrar cómo usar C + + / WinRT para consumir COM clases e interfaces.
+title: Consumir DirectX y otras API COM con C + + / WinRT
+ms.author: stwhi
+ms.date: 07/23/2018
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, COM, componente, clase, interfaz
+ms.localizationpriority: medium
+ms.openlocfilehash: b87eb90ed5ecf731cc851e81e81ad016956e5fea
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800076"
+---
+# <a name="consume-directx-and-other-com-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Consumir DirectX y otras API COM con [C + + / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
+
+Puede usar las funciones de C + + / biblioteca WinRT para consumir componentes COM, como los gráficos 2D y 3D de alto rendimiento de las APIs DirectX. C + + / WinRT es la forma más sencilla de usar DirectX sin comprometer el rendimiento. En este tema se utiliza un ejemplo de código de Direct2D para mostrar cómo usar C + + / WinRT para consumir COM clases e interfaces. Por supuesto, puede mezclar programación de tiempo de ejecución de Windows y COM dentro de la misma C + + / proyecto WinRT.
+
+Al final de este tema, encontrará una lista de código fuente completo de una aplicación Direct2D mínima. Se le levante extractos de ese código y utilizarlos para ilustrar cómo consumir componentes COM mediante C + + / WinRT con diversas instalaciones de C + + / biblioteca WinRT.
+
+## <a name="com-smart-pointers-winrtcomptruwpcpp-ref-for-winrtcom-ptr"></a>Punteros inteligentes COM ([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
+
+Programar con COM, se trabaja directamente con interfaces en lugar de con objetos (que también s true en segundo plano para APIs de tiempo de ejecución de Windows, que son una evolución de COM). Para llamar a una función en una clase COM, por ejemplo, se activa la clase, obtener una interfaz back y, a continuación, llamar a funciones en dicha interfaz. Para obtener acceso al estado de un objeto, se no tengan acceso a sus miembros de datos directamente; en su lugar, llame a las funciones de descriptor de acceso y mutación en una interfaz.
+
+Para que sea más específico, estamos hablando sobre cómo interactuar con *punteros*a la interfaz. Y para que, se benefician de la existencia del tipo de puntero inteligente COM en C + + / WinRT&mdash;el tipo de [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) .
+
+```cppwinrt
+winrt::com_ptr<ID2D1Factory1> factory;
+```
+
+El código anterior muestra cómo declarar un puntero inteligente no inicializado a un interfaz COM de [**ID2D1Factory1**](https://msdn.microsoft.com/library/Hh404596) . El puntero inteligente se ha inicializado, por lo que aún no está apuntando a una interfaz **ID2D1Factory1** que pertenecen a cualquier objeto real (no señala a una interfaz en absoluto). Pero tiene el potencial para ello; y (que se va a un puntero inteligente) tiene la capacidad de a través de referencia COM recuento para administrar la duración del objeto propietario de la interfaz que señale a y para el medio por el que se llama a funciones en dicha interfaz.
+
+## <a name="com-functions-that-return-an-interface-pointer-as-void"></a>Funciones de COM que devuelven un puntero de interfaz como **void\ * \ ***
+
+Puede llamar a la función [**com_ptr::put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function) para escribir en un puntero inteligente no inicializado subyacentes de puntero sin formato.
+
+```cppwinrt
+D2D1CreateFactory(
+    D2D1_FACTORY_TYPE_SINGLE_THREADED,
+    __uuidof(factory),
+    &options,
+    factory.put_void()
+);
+```
+
+El código anterior llama a la función [**D2D1CreateFactory**](/windows/desktop/api/d2d1/nf-d2d1-d2d1createfactory) , que devuelve un puntero de interfaz **ID2D1Factory1** a través de su último parámetro, que tiene **void\ * \ *** tipo. Muchas de las funciones COM devuelven un **void\ * \ ***. Para dichas funciones, use [**com_ptr::put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function) como se muestra.
+
+## <a name="com-functions-that-return-a-specific-interface-pointer"></a>Funciones de COM que devuelven un puntero de interfaz específica
+
+La función [**D3D11CreateDevice**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) devuelve un puntero de interfaz [**ID3D11Device**](https://msdn.microsoft.com/library/Hh404596) a través de su parámetro antepenultimate, que tiene **ID3D11Device\ * \ *** tipo. Para las funciones que devuelven un puntero de interfaz específica como ésta, use [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function).
+
+```cppwinrt
+winrt::com_ptr<ID3D11Device> device;
+D3D11CreateDevice(
+    ...
+    device.put(),
+    ...);
+```
+
+El ejemplo de código en la sección antes de este proyecto muestra cómo llamar a la función **D2D1CreateFactory** sin procesar. Pero, de hecho, cuando el ejemplo de código de este tema llama a **D2D1CreateFactory**, usa una plantilla de función auxiliar que encapsula la API sin formato y, por lo que el ejemplo de código utiliza realmente [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function).
+
+```cppwinrt
+winrt::com_ptr<ID2D1Factory1> factory;
+D2D1CreateFactory(
+    D2D1_FACTORY_TYPE_SINGLE_THREADED,
+    options,
+    factory.put());
+```
+
+## <a name="com-functions-that-return-an-interface-pointer-as-iunknown"></a>Funciones de COM que devuelven un puntero de interfaz como **IUnknown\ * \ ***
+
+La función [**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) devuelve un puntero de interfaz de fábrica de DirectWrite a través de su último parámetro, que tiene **IUnknown\ * \ *** tipo. Para este tipo de función, usar [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function), pero reinterpret que se va a convertir **IUnknown\ * \ ***.
+
+```cppwinrt
+DWriteCreateFactory(
+    DWRITE_FACTORY_TYPE_SHARED,
+    __uuidof(dwriteFactory2),
+    reinterpret_cast<IUnknown**>(dwriteFactory2.put()));
+```
+
+## <a name="re-seat-a-winrtcomptr"></a>Volver a colocar un **winrt::com_ptr**
+
+> [!IMPORTANT]
+> Si tiene un [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que ya está colocado (su puntero sin formato interno ya tiene un destino) y desea volver a asiento para que señale a un objeto diferente, a continuación, en primer lugar debe asignar `nullptr` a ella&mdash;tal como se muestra en el ejemplo de código siguiente. Si no lo hace, a continuación, un colocado ya **com_ptr** dibujará el problema para su atención (cuando se llame a [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) o [**com_ptr::put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)) por la aserción que su puntero interno no es null.
+
+```cppwinrt
+winrt::com_ptr<ID2D1SolidColorBrush> brush;
+...
+    brush.put()
+...
+brush = nullptr; // Important because we're about to re-seat
+target->CreateSolidColorBrush(
+    color_orange,
+    D2D1::BrushProperties(0.8f),
+    brush.put()));
+```
+
+## <a name="handle-hresult-error-codes"></a>Controlar los códigos de error HRESULT
+
+Para comprobar que el valor de un HRESULT devuelto de una función COM e inicia una excepción en caso de que representa un código de error, llame a [**winrt::check_hresult**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult).
+
+```cppwinrt
+winrt::check_hresult(D2D1CreateFactory(
+    D2D1_FACTORY_TYPE_SINGLE_THREADED,
+    __uuidof(factory),
+    options,
+    factory.put_void()));
+```
+
+## <a name="com-functions-that-take-a-specific-interface-pointer"></a>Funciones de COM que tienen un puntero de interfaz específica
+
+Puede llamar a la función [**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#comptrget-function) para pasar su **com_ptr** a una función que toma un puntero de interfaz específica del mismo tipo.
+
+```cppwinrt
+... ExampleFunction(
+    winrt::com_ptr<ID2D1Factory1> const& factory,
+    winrt::com_ptr<IDXGIDevice> const& dxdevice)
+{
+    ...
+    winrt::check_hresult(factory->CreateDevice(dxdevice.get(), ...));
+    ...
+}
+```
+
+## <a name="com-functions-that-take-an-iunknown-interface-pointer"></a>Funciones de COM que tienen un puntero de interfaz **IUnknown**
+
+Puede llamar a la función de [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#getunknown-function) gratuita para pasar su **com_ptr** a una función que toma un puntero de interfaz **IUnknown** .
+
+```cppwinrt
+winrt::check_hresult(factory->CreateSwapChainForCoreWindow(
+    ...
+    winrt::get_unknown(CoreWindow::GetForCurrentThread()),
+    ...));
+```
+
+## <a name="passing-and-returning-com-smart-pointers"></a>Pasar y devolver COM inteligentes punteros
+
+Una función que toma un puntero inteligente COM en forma de una **winrt::com_ptr** debe hacerlo por referencia constante, o por referencia.
+
+```cppwinrt
+... GetDxgiFactory(winrt::com_ptr<ID3D11Device> const& device) ...
+
+... CreateDevice(..., winrt::com_ptr<ID3D11Device>& device) ...
+```
+
+Una función que devuelve un **winrt::com_ptr** debe hacerlo por su valor.
+
+```cppwinrt
+winrt::com_ptr<ID2D1Factory1> CreateFactory() ...
+```
+
+## <a name="query-a-com-smart-pointer-for-a-different-interface"></a>Un puntero inteligente COM para una interfaz diferente de consulta
+
+Puede usar la función [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#comptras-function) para consultar un puntero inteligente COM para una interfaz diferente. La función produce una excepción si la consulta no se realiza correctamente.
+
+```cppwinrt
+void ExampleFunction(winrt::com_ptr<ID3D11Device> const& device)
+{
+    ...
+    winrt::com_ptr<IDXGIDevice> const dxdevice{ device.as<IDXGIDevice>() };
+    ...
+}
+```
+
+Como alternativa, use [**com_ptr::try_as**](/uwp/cpp-ref-for-winrt/com-ptr#comptrtryas-function), que devuelve un valor que puede comprobar contra `nullptr` para ver si la consulta se ha realizado correctamente.
+
+## <a name="full-source-code-listing-of-a-minimal-direct2d-application"></a>Lista de código de origen completa de una aplicación Direct2D mínima
+
+Si desea compilar y ejecutar este ejemplo de código de origen, a continuación, en primer lugar, en Visual Studio, cree un nuevo **aplicación principal (C + + / WinRT)**. `Direct2D` es un nombre adecuado para el proyecto, pero puede darle el nombre que desee. Open `App.cpp`, eliminar todo su contenido y pegar en el listado siguiente.
+
+```cppwinrt
+#include "pch.h"
+
+using namespace winrt;
+
+using namespace Windows;
+using namespace Windows::ApplicationModel::Core;
+using namespace Windows::UI;
+using namespace Windows::UI::Core;
+using namespace Windows::Graphics::Display;
+
+namespace
+{
+    winrt::com_ptr<ID2D1Factory1> CreateFactory()
+    {
+        D2D1_FACTORY_OPTIONS options{};
+
+#ifdef _DEBUG
+        options.debugLevel = D2D1_DEBUG_LEVEL_INFORMATION;
+#endif
+
+        winrt::com_ptr<ID2D1Factory1> factory;
+
+        winrt::check_hresult(D2D1CreateFactory(
+            D2D1_FACTORY_TYPE_SINGLE_THREADED,
+            options,
+            factory.put()));
+
+        return factory;
+    }
+
+    HRESULT CreateDevice(D3D_DRIVER_TYPE const type, winrt::com_ptr<ID3D11Device>& device)
+    {
+        WINRT_ASSERT(!device);
+
+        return D3D11CreateDevice(
+            nullptr,
+            type,
+            nullptr,
+            D3D11_CREATE_DEVICE_BGRA_SUPPORT,
+            nullptr, 0,
+            D3D11_SDK_VERSION,
+            device.put(),
+            nullptr,
+            nullptr);
+    }
+
+    winrt::com_ptr<ID3D11Device> CreateDevice()
+    {
+        winrt::com_ptr<ID3D11Device> device;
+        HRESULT hr{ CreateDevice(D3D_DRIVER_TYPE_HARDWARE, device) };
+
+        if (DXGI_ERROR_UNSUPPORTED == hr)
+        {
+            hr = CreateDevice(D3D_DRIVER_TYPE_WARP, device);
+        }
+
+        winrt::check_hresult(hr);
+        return device;
+    }
+
+    winrt::com_ptr<ID2D1DeviceContext> CreateRenderTarget(
+        winrt::com_ptr<ID2D1Factory1> const& factory,
+        winrt::com_ptr<ID3D11Device> const& device)
+    {
+        WINRT_ASSERT(factory);
+        WINRT_ASSERT(device);
+
+        winrt::com_ptr<IDXGIDevice> const dxdevice{ device.as<IDXGIDevice>() };
+
+        winrt::com_ptr<ID2D1Device> d2device;
+        winrt::check_hresult(factory->CreateDevice(dxdevice.get(), d2device.put()));
+
+        winrt::com_ptr<ID2D1DeviceContext> target;
+        winrt::check_hresult(d2device->CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS_NONE, target.put()));
+        return target;
+    }
+
+    winrt::com_ptr<IDXGIFactory2> GetDxgiFactory(winrt::com_ptr<ID3D11Device> const& device)
+    {
+        WINRT_ASSERT(device);
+
+        winrt::com_ptr<IDXGIDevice> const dxdevice{ device.as<IDXGIDevice>() };
+
+        winrt::com_ptr<IDXGIAdapter> adapter;
+        winrt::check_hresult(dxdevice->GetAdapter(adapter.put()));
+
+        winrt::com_ptr<IDXGIFactory2> factory;
+        winrt::check_hresult(adapter->GetParent(__uuidof(factory), factory.put_void()));
+        return factory;
+    }
+
+    void CreateDeviceSwapChainBitmap(
+        winrt::com_ptr<IDXGISwapChain1> const& swapchain,
+        winrt::com_ptr<ID2D1DeviceContext> const& target)
+    {
+        WINRT_ASSERT(swapchain);
+        WINRT_ASSERT(target);
+
+        winrt::com_ptr<IDXGISurface> surface;
+        winrt::check_hresult(swapchain->GetBuffer(0, __uuidof(surface), surface.put_void()));
+
+        D2D1_BITMAP_PROPERTIES1 const props{ D2D1::BitmapProperties1(
+            D2D1_BITMAP_OPTIONS_TARGET | D2D1_BITMAP_OPTIONS_CANNOT_DRAW,
+            D2D1::PixelFormat(DXGI_FORMAT_B8G8R8A8_UNORM, D2D1_ALPHA_MODE_IGNORE)) };
+
+        winrt::com_ptr<ID2D1Bitmap1> bitmap;
+
+        winrt::check_hresult(target->CreateBitmapFromDxgiSurface(surface.get(),
+            props,
+            bitmap.put()));
+
+        target->SetTarget(bitmap.get());
+    }
+
+    winrt::com_ptr<IDXGISwapChain1> CreateSwapChainForCoreWindow(winrt::com_ptr<ID3D11Device> const& device)
+    {
+        WINRT_ASSERT(device);
+
+        winrt::com_ptr<IDXGIFactory2> const factory{ GetDxgiFactory(device) };
+
+        DXGI_SWAP_CHAIN_DESC1 props{};
+        props.Format = DXGI_FORMAT_B8G8R8A8_UNORM;
+        props.SampleDesc.Count = 1;
+        props.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+        props.BufferCount = 2;
+        props.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL;
+
+        winrt::com_ptr<IDXGISwapChain1> swapChain;
+
+        winrt::check_hresult(factory->CreateSwapChainForCoreWindow(
+            device.get(),
+            winrt::get_unknown(CoreWindow::GetForCurrentThread()),
+            &props,
+            nullptr, // all or nothing
+            swapChain.put()));
+
+        return swapChain;
+    }
+
+    constexpr D2D1_COLOR_F color_white{ 1.0f,  1.0f,  1.0f,  1.0f };
+    constexpr D2D1_COLOR_F color_orange{ 0.92f,  0.38f,  0.208f,  1.0f };
+}
+
+struct App : implements<App, IFrameworkViewSource, IFrameworkView>
+{
+    winrt::com_ptr<ID2D1Factory1> m_factory;
+    winrt::com_ptr<ID2D1DeviceContext> m_target;
+    winrt::com_ptr<IDXGISwapChain1> m_swapChain;
+    winrt::com_ptr<ID2D1SolidColorBrush> m_brush;
+    float m_dpi{};
+
+    IFrameworkView CreateView()
+    {
+        return *this;
+    }
+
+    void Initialize(CoreApplicationView const&)
+    {
+    }
+
+    void Load(hstring const&)
+    {
+        CoreWindow const window{ CoreWindow::GetForCurrentThread() };
+
+        window.SizeChanged([&](auto&&...)
+        {
+            if (m_target)
+            {
+                ResizeSwapChainBitmap();
+                Render();
+            }
+        });
+
+        DisplayInformation const display{ DisplayInformation::GetForCurrentView() };
+        m_dpi = display.LogicalDpi();
+
+        display.DpiChanged([&](DisplayInformation const& display, IInspectable const&)
+        {
+            if (m_target)
+            {
+                m_dpi = display.LogicalDpi();
+                m_target->SetDpi(m_dpi, m_dpi);
+                CreateDeviceSizeResources();
+                Render();
+            }
+        });
+
+        m_factory = CreateFactory();
+        CreateDeviceIndependentResources();
+    }
+
+    void Uninitialize()
+    {
+    }
+
+    void Run()
+    {
+        CoreWindow const window{ CoreWindow::GetForCurrentThread() };
+        window.Activate();
+
+        Render();
+        CoreDispatcher const dispatcher{ window.Dispatcher() };
+        dispatcher.ProcessEvents(CoreProcessEventsOption::ProcessUntilQuit);
+    }
+
+    void SetWindow(CoreWindow const&) {}
+
+    void Draw()
+    {
+        m_target->Clear(color_white);
+
+        D2D1_SIZE_F const size{ m_target->GetSize() };
+        D2D1_RECT_F const rect{ 100.0f, 100.0f, size.width - 100.0f, size.height - 100.0f };
+        m_target->DrawRectangle(rect, m_brush.get(), 100.0f);
+
+        WINRT_TRACE("Draw %.2f x %.2f @ %.2f\n", size.width, size.height, m_dpi);
+    }
+
+    void Render()
+    {
+        if (!m_target)
+        {
+            winrt::com_ptr<ID3D11Device> const device{ CreateDevice() };
+            m_target = CreateRenderTarget(m_factory, device);
+            m_swapChain = CreateSwapChainForCoreWindow(device);
+
+            CreateDeviceSwapChainBitmap(m_swapChain, m_target);
+
+            m_target->SetDpi(m_dpi, m_dpi);
+
+            CreateDeviceResources();
+            CreateDeviceSizeResources();
+        }
+
+        m_target->BeginDraw();
+        Draw();
+        m_target->EndDraw();
+
+        HRESULT const hr{ m_swapChain->Present(1, 0) };
+
+        if (S_OK != hr && DXGI_STATUS_OCCLUDED != hr)
+        {
+            ReleaseDevice();
+        }
+    }
+
+    void ReleaseDevice()
+    {
+        m_target = nullptr;
+        m_swapChain = nullptr;
+
+        ReleaseDeviceResources();
+    }
+
+    void ResizeSwapChainBitmap()
+    {
+        WINRT_ASSERT(m_target);
+        WINRT_ASSERT(m_swapChain);
+
+        m_target->SetTarget(nullptr);
+
+        if (S_OK == m_swapChain->ResizeBuffers(0, // all buffers
+            0, 0, // client area
+            DXGI_FORMAT_UNKNOWN, // preserve format
+            0)) // flags
+        {
+            CreateDeviceSwapChainBitmap(m_swapChain, m_target);
+            CreateDeviceSizeResources();
+        }
+        else
+        {
+            ReleaseDevice();
+        }
+    }
+
+    void CreateDeviceIndependentResources()
+    {
+    }
+
+    void CreateDeviceResources()
+    {
+        winrt::check_hresult(m_target->CreateSolidColorBrush(
+            color_orange,
+            D2D1::BrushProperties(0.8f),
+            m_brush.put()));
+    }
+
+    void CreateDeviceSizeResources()
+    {
+    }
+
+    void ReleaseDeviceResources()
+    {
+        m_brush = nullptr;
+    }
+};
+
+int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
+{
+    CoreApplication::Run(App());
+}
+```
+
+## <a name="important-apis"></a>API importantes
+* [winrt::check_hresult](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)
+* [winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
+* [estructura winrt::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)

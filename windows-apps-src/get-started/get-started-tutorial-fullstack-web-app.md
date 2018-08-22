@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: Microsoft Edge, Azure, Visual Studio Code
 ms.technology: web
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d20d0b8f9c3e14bf341d2cc507af45b9138b014
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 42f11cbdd749a44c4ba0d8bc1a0397a4f2882257
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691254"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792172"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Crea una web de una sola página con back-end de API de REST
 
@@ -298,7 +298,7 @@ Estos son algunos recursos útiles para ir más allá:
 
  - [Documentos Azure DocumentDB](https://docs.microsoft.com/en-us/azure/documentdb/index)
 
-## <a name="part-ii-build-a-single-page-web-appl"></a>Parte II: crear una aplicación web de una sola página
+## <a name="part-ii-build-a-single-page-web-application"></a>Parte II: Crear una aplicación web de la página de un solo
 
 Ahora que has creado (o [descargado](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend)) el [back-end de la API de REST](#part-i-build-a-rest-api-backend) de la parte I, estás listo para crear el front-end del juego de memoria de una sola página con [Node](https://nodejs.org/en/), [Express](http://expressjs.com/) y [Bootstrap](http://getbootstrap.com/).
 

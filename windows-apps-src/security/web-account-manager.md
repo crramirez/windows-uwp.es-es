@@ -7,15 +7,15 @@ ms.date: 12/6/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, seguridad
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 30a072ddc3489ca310875a6fc4a2d00902986277
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 2de5c969610aa6b4fa1a3af01af565d35854b5f2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674822"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792140"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
@@ -173,12 +173,13 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 }
 ```
 
-En este ejemplo, pasamos la cadena "wl.basic" al parámetro _scope_. El ámbito representa el tipo de información que estás solicitando desde el servicio proveedor en un usuario específico. Ciertos ámbitos proporcionan acceso solo a la información básica de un usuario, como la dirección de correo electrónico y el nombre, mientras que otros ámbitos pueden conceder acceso a información confidencial, como las fotos del usuario o la bandeja de entrada de correo electrónico. Por lo general, la aplicación debe usar el ámbito menos permisivo necesario para lograr su función.
-
-Los proveedores de servicios proporcionarán documentación sobre los ámbitos que son necesarios para obtener tokens para usarlos con sus servicios. 
+En este ejemplo, pasamos la cadena "wl.basic" al parámetro _scope_. El ámbito representa el tipo de información que estás solicitando desde el servicio proveedor en un usuario específico. Ciertos ámbitos proporcionan acceso solo a la información básica de un usuario, como la dirección de correo electrónico y el nombre, mientras que otros ámbitos pueden conceder acceso a información confidencial, como las fotos del usuario o la bandeja de entrada de correo electrónico. Por lo general, la aplicación debe usar el ámbito menos permisivo necesario para lograr su función. Los proveedores de servicios proporcionarán documentación sobre los ámbitos que son necesarios para obtener tokens para usarlos con sus servicios. 
 
 * Para ámbitos de Office 365 y Outlook.com, consulta [Authenticate Office 365 and Outlook.com APIs using the v2.0 authentication endpoint](https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2) (Autenticar las API de Office 365 y Outlook.com mediante el punto de conexión de autenticación v2.0). 
 * Para ámbitos de OneDrive, consulta [OneDrive authentication and sign-in](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes) (Autenticación e inicio de sesión de OneDrive). 
+
+> [!TIP]
+> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminada) u otra propiedad especial relacionadas con la experiencia de inicio de sesión, aparezca en la propiedad **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema para que omita la propiedad al almacenamiento en caché de la cuenta de web, lo que evita que los errores de coincidencia de cuenta en la memoria caché.
 
 Si estás desarrollando una aplicación de empresa, probablemente querrás conectarte a una instancia de Azure Active Directory (AAD) y usar la API de Microsoft Graph en lugar de los servicios de MSA habituales. En este escenario, usa el siguiente código en su lugar: 
 

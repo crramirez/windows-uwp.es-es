@@ -12,29 +12,27 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2355d9f655e1eb4e38557b11797aff1784eb8ea6
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 6f8f86a6988e68e3ff8d2dfef32512633b3761fd
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393654"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800379"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introducción a los controles y patrones
-
- 
 
 En el desarrollo de aplicaciones para UWP, un *control* es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario.
 
 > **API importantes**: [Espacio de nombres Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 
-Un *patrón* es una receta para modificar un control o combinar varios controles con el fin de hacer algo nuevo. Por ejemplo, el patrón del [Panel de navegación](navigationview.md) es una forma de usar un control [SplitView](split-view.md) para la navegación de la aplicación. Del mismo modo, puedes personalizar la plantilla de un control de [Pivote](tabs-pivot.md) para implementar el patrón de la pestaña.
+Un *patrón* es una receta para modificar un control o combinar varios controles con el fin de hacer algo nuevo. Por ejemplo, el patrón de [maestro/detalles](master-details.md) es una forma que puede usar un control [SplitView](split-view.md) para la navegación de aplicación. De forma similar, puede personalizar la plantilla de un control de [NavigationView](navigationview.md) para implementar el modelo de la ficha.
 
 En muchos casos, puedes usar el control tal cual. Sin embargo, los controles de XAML separan la función de la estructura y la apariencia, por lo que puedes realizar varios niveles de modificaciones que se adapten a tus necesidades. En la sección [Estilo](../style/index.md), aprenderás cómo usar [Estilos XAML](xaml-styles.md) y [plantillas de control](control-templates.md) para modificar un control.
 
-En esta sección, se proporcionan instrucciones para cada uno de los controles XAML que puedes usar para crear la interfaz de usuario de la aplicación. Para empezar, en este artículo se muestra cómo agregar controles a tu aplicación. Hay 3 pasos clave para usar controles en la aplicación: 
+En esta sección, se proporcionan instrucciones para cada uno de los controles XAML que puedes usar para crear la interfaz de usuario de la aplicación. Para empezar, en este artículo se muestra cómo agregar controles a tu aplicación. Hay 3 pasos clave para usar controles en la aplicación:
 
-- Agrega un control a la interfaz de usuario de la aplicación. 
-- Establece las propiedades para el control, como el ancho, el alto o el color de primer plano. 
+- Agrega un control a la interfaz de usuario de la aplicación.
+- Establece las propiedades para el control, como el ancho, el alto o el color de primer plano.
 - Agrega código a los controladores de eventos del control para que realice una acción. 
 
 ## <a name="add-a-control"></a>Agregar controles
@@ -54,9 +52,9 @@ El Cuadro de herramientas de Visual Studio muestra muchos de los controles que p
 
 También puedes arrastrar el control desde el Cuadro de herramientas hasta el diseñador XAML.
 
-## <a name="set-the-name-of-a-control"></a>Establecer el nombre de un control 
+## <a name="set-the-name-of-a-control"></a>Establecer el nombre de un control
 
-Para trabajar con un control en el código, hay que establecer su atributo [x:Name](../../xaml-platform/x-name-attribute.md) y hacer referencia a este por su nombre en el código. Puedes definir el nombre en la ventana Propiedades de VisualStudio o en XAML. Esta es la forma de establecer el nombre del control seleccionado actualmente usando el cuadro de texto Nombre de la parte superior de la ventana Propiedades. 
+Para trabajar con un control en el código, hay que establecer su atributo [x:Name](../../xaml-platform/x-name-attribute.md) y hacer referencia a este por su nombre en el código. Puedes definir el nombre en la ventana Propiedades de VisualStudio o en XAML. Esta es la forma de establecer el nombre del control seleccionado actualmente usando el cuadro de texto Nombre de la parte superior de la ventana Propiedades.
 
 Para definir el nombre de un control
 1. Selecciona el elemento que quieras denominar.

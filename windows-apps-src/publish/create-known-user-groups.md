@@ -8,12 +8,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, grupo de destino, clientes, grupo piloto, grupos de usuarios, usuarios conocidos
-ms.localizationpriority: high
-ms.openlocfilehash: 06922ba9cde98f4bdf678dc281d261dda3bce2b0
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e15b5a4a2f76cbfc33db593c3110ac6f2d054b5b
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2793044"
 ---
 # <a name="create-known-user-groups"></a>Crear grupos de usuarios conocidos
 

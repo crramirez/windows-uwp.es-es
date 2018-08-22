@@ -3,24 +3,25 @@ author: jnHs
 Description: The Xbox analytics report in the Windows Dev Center dashboard shows you statistics about how your customers are engaging with the Xbox features in your product.
 title: Informe de análisis de Xbox
 ms.author: wdg-dev-content
-ms.date: 02/06/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, análisis de xbox, análisis dinámicos de xbox, estadística de xbox
-ms.localizationpriority: high
-ms.openlocfilehash: 4f00d400724d07a00970f0145326068e15ea9054
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 9e69c41ec2ae6dface93b9f3148e699e448faa18
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794576"
 ---
 # <a name="xbox-analytics-report"></a>Informe de análisis de Xbox
 
 En el informe de **análisis de Xbox** del Panel del centro de desarrollo de Windows se muestran estadísticas sobre la manera en que tus clientes interactúan con las características de Xbox en tu juego. También proporciona información sobre el estado del servicio para ayudarte a solucionar errores de cliente.
- 
+
 > [!IMPORTANT]
-> Solo verás este informe si publicas un juego para Xbox o un juego que usa servicios de Xbox Live. Para ello, debes habilitar el [Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) o pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md). 
+> Solo verás este informe si publicas un juego para Xbox o un juego que usa servicios de Xbox Live. Para ello, debe ir a través del [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [los socios de Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través de la [ ID@Xbox programa](../xbox-live/developer-program-overview.md#id). Juegos publicados a través del [Programa de los creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) no están visibles actualmente en este informe.
 
 Para ver el informe de **Análisis de Xbox** en el menú de navegación izquierdo para tu juego, expande **Análisis** y selecciona **Análisis de Xbox**.  Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
@@ -77,7 +78,7 @@ Estos datos no indican los clientes que han instalado tu producto en unidades de
 ### <a name="connection-type"></a>Tipo de conexión
 
 En este gráfico se muestran los porcentajes de los clientes de tu producto que usan conexiones a Internet **Por cable** frente a las conexiones a Internet de tipo **Inalámbrico** (en Xbox).
- 
+
 
 ## <a name="xbox-live-service-health-tab"></a>Pestaña Estado del servicio de XboxLive
 
@@ -99,7 +100,7 @@ También puedes expandir la opción **Filtros** para filtrar todos los datos de 
 La información de todos los gráficos que aparecen a continuación reflejará el intervalo de fechas y los filtros que hayas seleccionado. Algunas secciones también te permiten aplicar filtros adicionales.
 
 
-### <a name="client-errors-by-service"></a>Errores de cliente por servicio 
+### <a name="client-errors-by-service"></a>Errores de cliente por servicio
 
 El gráfico **Client errors by service** muestra el número de errores de cliente diarios (4xx) por cada servicio de Xbox Live durante el período de tiempo seleccionado.
 
@@ -108,7 +109,7 @@ También puedes ver solo los errores de limitación de velocidad seleccionando *
 > [!NOTE]
 > Un código de estado 429E se devolvió realmente de manera correcta como código de estado 200, pero habría tenido límite de velocidad si el servicio estuviera teniendo un volumen alto en el momento, por lo que recomendamos que lo trate exactamente igual como si hubiera aplicado (429).
 
-De manera predeterminada, este gráfico muestra los seis servicios principales por número de errores. Puedes seleccionar el icono de filtro en la esquina superior derecha de esta sección para elegir diferentes servicios. Puedes ver errores para un máximo de seis servicios a la vez. 
+De manera predeterminada, este gráfico muestra los seis servicios principales por número de errores. Puedes seleccionar el icono de filtro en la esquina superior derecha de esta sección para elegir diferentes servicios. Puedes ver errores para un máximo de seis servicios a la vez.
 
 > [!NOTE]
 > La leyenda solo muestra el prefijo distintivo para cada servicio (por ejemplo, **presence** en lugar de **presence.xboxlive.com**). Encontrarás la dirección de servicio completo en la tabla **Client errors by endpoint** que se encuentra debajo de la pestaña **Estado del servicio de XboxLive**.
@@ -118,13 +119,13 @@ De manera predeterminada, este gráfico muestra los seis servicios principales p
 
 En el gráfico **Disponibilidad del servicio** muestra la disponibilidad diaria en cada servicio de Xbox Live durante el período de tiempo seleccionado. Esto se calcula como *1-(errores de servidor totales (5xx)/respuesta totales)* y es específico de tu producto, no de Xbox Live en su conjunto.
 
-De manera predeterminada, este gráfico muestra los seis servicios que han tenido la menor disponibilidad. Puedes seleccionar el icono de filtro en la esquina superior derecha de esta sección para elegir diferentes servicios. Puedes ver la disponibilidad para un máximo de seis servicios a la vez. 
+De manera predeterminada, este gráfico muestra los seis servicios que han tenido la menor disponibilidad. Puedes seleccionar el icono de filtro en la esquina superior derecha de esta sección para elegir diferentes servicios. Puedes ver la disponibilidad para un máximo de seis servicios a la vez.
 
 > [!NOTE]
 > La leyenda solo muestra el prefijo distintivo para cada servicio (por ejemplo, **presence** en lugar de **presence.xboxlive.com**). Encontrarás la dirección de servicio completo en la tabla **Client errors by endpoint** que se encuentra debajo de la pestaña **Estado del servicio de XboxLive**.
 
 
-### <a name="client-errors-by-endpoint"></a>Errores de cliente por extremo 
+### <a name="client-errors-by-endpoint"></a>Errores de cliente por extremo
 
 En la tabla **Errores de cliente por extremo** se muestra el número de errores de cliente diarios (4xx) desglosados por cada servicio de Xbox Live, extremo y código de estado durante el período de tiempo seleccionado. De manera predeterminada, la tabla se ordena por el número total de respuestas de servicio en orden descendente, pero puedes cambiar el criterio de ordenación haciendo clic en cualquiera de los encabezados de columna.
 

@@ -8,13 +8,13 @@ ms.date: 4/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 7652e45cd4c5fc416429248929889eeffc04dba3
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e2f12190c405ad611cf5b884b82c4a430aa5264f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832579"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792082"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novedades de Windows 10 para desarrolladores, compilación 17134
 
@@ -38,7 +38,7 @@ Extraer para actualizar | El control [Extraer para actualizar](../design/control
 Vista de navegación | El control de [Vista de navegación](../design/controls-and-patterns/navigationview.md) proporciona un menú de navegación contraíble para la navegación de nivel superior de tu aplicación. Este control implementa el panel de navegación, o menú hamburguesa, y adapta automáticamente el modo de presentación del panel a diferentes tamaños de ventana.
 Reveal focus | El nuevo efecto [Reveal focus](../design/style/reveal-focus.md) proporciona iluminación para experiencias como las pantallas de televisión y la Xbox One. Anima el borde de los elementos activables, como los botones, cuando el usuario mueve el foco del teclado o del controlador para juegos a ellos.
 Sonido | XAML admite ahora 3D Audio con la propiedad **SpatialAudioMode**. Consulta [Sonido](../design/style/sound.md) para obtener información sobre cómo se puede configurar.
-Iconos | Ahora, las [notificaciones de iconos rastreables](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) son compatibles con aplicaciones para UWP basadas en JavaScript.
+Iconos | Ahora, las [notificaciones de iconos rastreables](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) son compatibles con aplicaciones para UWP basadas en JavaScript.<br><br>Notificaciones de mosaico y tarjeta secundarias son [ahora admite desde aplicaciones de escritorio puente](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
 Vista de árbol | El control [TreeView](../design/controls-and-patterns/tree-view.md) permite una lista jerárquica con nodos que se expanden y se contraen, y que contienen elementos anidados. Puede usarse para ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
 Estilo de escritura | Hemos actualizado y ampliado nuestro artículo en lo relativo a la voz y al tono, transformándolo en [directrices de estilo de escritura](../design/style/writing-style.md). Esta nueva información proporciona principios para crear texto eficaz en tu aplicación y recomienda los procedimientos recomendados para la escritura de controles como cuadros de diálogo o mensajes de error.
 
@@ -59,7 +59,7 @@ C++/WinRT | [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-api
 Aplicaciones para UWP de consola | Ahora ya puedes escribir aplicaciones de consola C++ /WinRT o /CX UWP que se ejecutan en una ventana de consola como una ventana de consola DOS o PowerShell. Las aplicaciones de consola usan la ventana de la consola para entrada y salida. Las aplicaciones de consola UWP pueden publicarse en la Microsoft Store, tener una entrada en la lista de aplicaciones y un icono principal que se puede anclar al menú Inicio. Para obtener más información, consulta [Crear una aplicación de consola de la Plataforma universal de Windows](../launch-resume/console-uwp.md)
 Funcionalidades ampliadas del manifiesto de la aplicación | Se han agregado varias características al esquema del manifiesto del paquete de aplicación, lo que incluye: amplio acceso al sistema de archivos, habilitación de escáneres de códigos de barras para dispositivos de punto de servicio, definición de una aplicación de consola UWP y mucho más. Consulta [cambios de manifiesto de aplicación en Windows 10](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/what-s-changed-in-windows-10) para obtener más información.
 Puntos de referencia y encabezados compatibles con la tecnología accesible (AT) | Los puntos de referencia y los encabezados definen secciones de una interfaz de usuario que ayudan en la navegación eficaz para los usuarios de tecnología de asistencia como lectores de pantalla. Para obtener más información, consulta [Puntos de referencia y encabezados](../design/accessibility/landmarks-and-headings.md).
-Aprendizaje automático | El aprendizaje automático de Windows te permite crear aplicaciones que evalúan modelos de aprendizaje automático previamente capacitados localmente en tus dispositivos Windows 10. Para obtener más información sobre la plataforma, consulta [Aprendizaje automático de Windows ](../machine-learning/index.md). </br> El espacio de nombres [MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview) contiene clases que permiten que las aplicaciones carguen modelos de aprendizaje automático, enlacen datos como entradas y evalúen los resultados.
+Aprendizaje automático | El aprendizaje automático de Windows te permite crear aplicaciones que evalúan modelos de aprendizaje automático previamente capacitados localmente en tus dispositivos Windows 10. Para obtener más información sobre la plataforma, consulta [Aprendizaje automático de Windows ](https://docs.microsoft.com/windows/ai/). </br> El espacio de nombres [MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview) contiene clases que permiten que las aplicaciones carguen modelos de aprendizaje automático, enlacen datos como entradas y evalúen los resultados.
 Controles de mapa | La clase [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) tiene una nueva propiedad denominada **Región** que puedes usar para mostrar contenido en un control de mapa en función del idioma de una región específica (por ejemplo, el estado o la provincia).
 Elementos de mapa | La clase [MapElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement) tiene una nueva propiedad denominada **IsEnabled** que puedes usar para especificar si los usuarios pueden interactuar con la clase [MapElement ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement).
 Información de ubicación del mapa | La clase [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo) contiene un nuevo método **CreateFromAddress** que puedes usar para crear un elemento [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo) usando un nombre para mostrar y una dirección.
@@ -73,7 +73,7 @@ Captura de pantalla | El [espacio de nombres Windows.Graphics.Capture](https://d
 Desencadenadores del sistema | La clase [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger) te permite definir un desencadenador del sistema cuando el sistema operativo no proporciona un desencadenador del sistema que necesitas. Por ejemplo, cuando tanto un controlador de hardware como la aplicación para UWP pertenecen a terceros y el controlador de hardware debe generar un evento personalizado que su aplicación controla. Por ejemplo, una tarjeta de audio que debe notificar a un usuario cuando un conector de audio está conectado.
 Actividades del usuario | La nueva [documentación de UserActivity](../launch-resume/useractivities.md) explica cómo ayudar a los usuarios a reanudar lo que estaban haciendo en tu aplicación, incluso en varios dispositivos.</br>La clase **UserActivitySessionHistoryItem** tiene nuevos métodos que recuperan actividades recientes del usuario. Consulta [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync) y su sobrecarga para obtener más información.
 API de Windows Mixed Reality | Para admitir la creciente plataforma Windows Mixed Reality, se han agregado API nuevas a los espacios de nombres [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) y [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial).
-Documentos de Windows Mixed Reality | La guía del desarrollador de Windows Mixed Reality [ahora está hospedada en docs.microsoft.com.](https://docs.microsoft.com/windows/mixed-reality/) Al igual que en estos documentos sobre UWP, ahora puedes enviar tus comentarios sobre problemas de GitHub o enviar tus propias contribuciones a través de una solicitud de incorporación de cambios.
+Documentos de Windows Mixed Reality | Las instrucciones para desarrolladores de la realidad mixto de Windows son [ahora se hospedan en docs.microsoft.com.](https://docs.microsoft.com/windows/mixed-reality/) Al igual que en estos documentos UWP, ahora puede comentarios con problemas de depósito de archivos o enviar sus propios contribuciones a través de una solicitud de extracción.
 
 ## <a name="publish--monetize-windows-apps"></a>Publicar y monetizar aplicaciones de Windows
 

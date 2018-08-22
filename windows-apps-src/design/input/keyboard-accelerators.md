@@ -14,12 +14,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 051d3d5251a135dcb1a41e1cd005f462fb074c3b
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983642"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792203"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -355,35 +355,98 @@ Ten en cuenta que algunas de las combinaciones no son válidas para las versione
 
 Como los aceleradores de teclado no suelen detectarse directamente en la interfaz de usuario de tu aplicación para UWP, puedes mejorar la capacidad de detección a través de [información sobre herramientas](../controls-and-patterns/tooltips.md), que se muestra de forma automática cuando el usuario mueve el foco al control, lo mantiene presionado o cuando pasa sobre él con el puntero del mouse. La información sobre herramientas puede identificar si un control tiene un acelerador de teclado asociado y, en caso afirmativo, cuál es la combinación de teclas del acelerador.
 
-A partir de Windows 10, versión 1803, cuando KeyboardAccelerators se declaran, los controles presentan las combinaciones de teclas correspondientes en una información sobre herramientas de manera predeterminada (a menos que se asocien a los objetos [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) y [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem), consulta las [Etiquetas]()). Si un control tiene más de un acelerador definido, solo el primero se presenta en la información sobre herramientas.
+**10 de Windows, versión 1803 (actualización de abril de 2018) y más reciente**
+
+De forma predeterminada, cuando se declaran los aceleradores de teclado, todos los controles (excepto [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) y [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) presentan las combinaciones de teclas correspondientes en una información sobre herramientas.
+
+> [!NOTE] 
+> Si un control tiene más de un acelerador definida, se presenta sólo la primera.
 
 ![Información sobre herramientas de la tecla aceleradora](images/accelerators/accelerators_tooltip_savebutton_small.png)
 
 *Combinación de teclas aceleradoras en la información sobre herramientas*
 
-En el caso de los objetos [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) y [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton), el acelerador de teclado se anexa a la etiqueta.
+Para objetos [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)y [botón](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), la tecla de aceleración se anexa a la información sobre herramientas del control de forma predeterminada. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) y [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, se muestra la tecla de aceleración con el texto emergente.
+
+> [!NOTE]
+> Especificación de información sobre herramientas (vea Button1 en el siguiente ejemplo) reemplaza este comportamiento.
 
 ```xaml
-<AppBarButton Label="Save" Icon="Save">
-  <Button.KeyboardAccelerators>
-    <KeyboardAccelerator Key="S" Modifiers="Control" />
-  </Button.KeyboardAccelerators>
+<StackPanel x:Name="Container" Grid.Row="0" Background="AliceBlue">
+    <Button Content="Button1" Margin="20"
+            Click="OnSave" 
+            KeyboardAcceleratorPlacementMode="Auto" 
+            ToolTipService.ToolTip="Tooltip">
+        <Button.KeyboardAccelerators>
+            <KeyboardAccelerator  Key="A" Modifiers="Windows"/>
+        </Button.KeyboardAccelerators>
+    </Button>
+    <Button Content="Button2"  Margin="20"
+            Click="OnSave" 
+            KeyboardAcceleratorPlacementMode="Auto">
+        <Button.KeyboardAccelerators>
+            <KeyboardAccelerator  Key="B" Modifiers="Windows"/>
+        </Button.KeyboardAccelerators>
+    </Button>
+    <Button Content="Button3"  Margin="20"
+            Click="OnSave" 
+            KeyboardAcceleratorPlacementMode="Auto">
+        <Button.KeyboardAccelerators>
+            <KeyboardAccelerator  Key="C" Modifiers="Windows"/>
+        </Button.KeyboardAccelerators>
+    </Button>
+</StackPanel>
+```
+
+![Información sobre herramientas de la tecla aceleradora](images/accelerators/accelerators-button-small.png)
+
+*Combinado de clave de acelerador que se anexa a la información sobre herramientas de un botón de forma predeterminada*
+
+```xaml
+<AppBarButton Icon="Save" Label="Save">
+    <AppBarButton.KeyboardAccelerators>
+        <KeyboardAccelerator Key="S" Modifiers="Control"/>
+    </AppBarButton.KeyboardAccelerators>
 </AppBarButton>
 ```
 
 ![Información sobre herramientas de la tecla aceleradora](images/accelerators/accelerators-appbarbutton-small.png)
 
-*Combinación de teclas aceleradoras anexadas a la etiqueta de control*
+*Combinado de clave de acelerador que se anexa a la información sobre herramientas del AppBarButton predeterminada*
+
+```xaml
+<AppBarButton AccessKey="R" Icon="Refresh" Label="Refresh" IsAccessKeyScope="True">
+    <AppBarButton.Flyout>
+        <MenuFlyout>
+            <MenuFlyoutItem AccessKey="A" Icon="Refresh" Text="Refresh A">
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="R" Modifiers="Control"/>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem AccessKey="B" Icon="Globe" Text="Refresh B" />
+            <MenuFlyoutItem AccessKey="C" Icon="Globe" Text="Refresh C" />
+            <MenuFlyoutItem AccessKey="D" Icon="Globe" Text="Refresh D" />
+            <ToggleMenuFlyoutItem AccessKey="E" Icon="Globe" Text="ToggleMe">
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Q" Modifiers="Control"/>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </ToggleMenuFlyoutItem>
+        </MenuFlyout>
+    </AppBarButton.Flyout>
+</AppBarButton>
+```
+
+![Información sobre herramientas de la tecla aceleradora](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
+
+*Combinado de clave de acelerador anexada al texto del MenuFlyoutItem*
 
 Controla el comportamiento de la presentación con la propiedad [KeyboardAcceleratorPlacementMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAcceleratorPlacementMode), que acepta dos valores: [Auto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode) o [Hidden](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode).    
 
 ```xaml
-<Button Content="Save" Click="OnSave">
-  <Button.KeyboardAccelerators> 
-    <KeyboardAccelerator 
-      Key="S" Modifiers="Control" 
-      KeyboardAcceleratorPlacementMode="Hidden" /> 
-  </Button.KeyboardAccelerators>  
+<Button Content="Save" Click="OnSave" KeyboardAcceleratorPlacementMode="Auto">
+    <Button.KeyboardAccelerators>
+        <KeyboardAccelerator Key="S" Modifiers="Control" />
+    </Button.KeyboardAccelerators>
 </Button>
 ```
 
@@ -393,10 +456,12 @@ Aquí te enseñamos a usar la propiedad KeyboardAcceleratorPlacementTarget para 
 
 ```xaml
 <Grid x:Name="Container" Padding="30">
-  <Button Content="Save" Click="OnSave">
+  <Button Content="Save"
+    Click="OnSave"
+    KeyboardAcceleratorPlacementMode="Auto"
+    KeyboardAcceleratorPlacementTarget="{x:Bind Container}">
     <Button.KeyboardAccelerators>
-      <KeyboardAccelerator  Key="S" Modifiers="Control" 
-        KeyboardAcceleratorPlacementTarget="{x:Bind Container}"/>
+      <KeyboardAccelerator  Key="S" Modifiers="Control" />
     </Button.KeyboardAccelerators>
   </Button>
 </Grid>
@@ -547,3 +612,15 @@ public class MyListView : ListView
   …
 }
 ```
+
+## <a name="related-articles"></a>Artículos relacionados
+
+* [Interacciones de teclado](keyboard-interactions.md)
+* [Teclas de acceso](access-keys.md)
+
+**Muestras**
+* [Galería de controles de XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+
+
+ 
+

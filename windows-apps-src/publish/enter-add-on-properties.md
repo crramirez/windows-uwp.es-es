@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
-ms.localizationpriority: high
-ms.openlocfilehash: c3f5de17dc090989572d72c30bd9d8b85e385316
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800002"
 ---
 # <a name="enter-add-on-properties"></a>Especificar las propiedades de los complementos
 
@@ -43,7 +44,7 @@ Si seleccionaste **Consumible administrado por la Tienda** para el tipo de produ
 
 ## <a name="subscription-period"></a>Período de suscripción
 
-Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Elige una opción para especificar la frecuencia a la que se le cobrará a un cliente por la suscripción. La opción predeterminada es **Mensualmente, pero también puedes seleccionar **3 meses**, **6 meses**, **Anualmente** o **24 meses** 
+Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Elige una opción para especificar la frecuencia a la que se le cobrará a un cliente por la suscripción. La opción predeterminada es **mensual**, pero también puede seleccionar **3 meses**, **6 meses**, **anualmente**o **24 meses**.
 
 > [!IMPORTANT]
 > Después de publicar el complemento, no podrás cambiar la selección de **Período de suscripción**.
@@ -85,7 +86,7 @@ Estos campos son opcionales para todos los tipos de complementos.
 
 Tienes la opción de proporcionar hasta diez palabras clave de hasta 30 caracteres cada una para cada complemento que envíes. Tu aplicación podrá, entonces, buscar los complementos que coincidan con estas palabras. Esta función te permite crear pantallas en la aplicación que pueden cargar complementos sin tener que especificar directamente el id. de producto en el código de la aplicación. Puedes cambiar las palabras clave del complemento en cualquier momento, sin tener que realizar cambios en el código de la aplicación ni volver a enviarla.
 
-Para consultar este campo, usa la propiedad [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) del [espacio de nombres Windows.Services.Store](https://msdn.microsoft.com/en-us/library/windows/apps/windows.services.store.aspx). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.store.aspx), usa la propiedad [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords)).
+Para consultar este campo, usa la propiedad [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) del [espacio de nombres Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), usa la propiedad [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords)).
 
 > [!NOTE]
 > Las palabras clave no están disponibles para su uso en paquetes destinados a Windows8 y Windows8.1.
@@ -98,7 +99,7 @@ Es posible escribir hasta 3000 caracteres en el campo **Datos del desarrollador 
 
 Por ejemplo, supongamos que tienes un juego y que vendes un complemento que permite al cliente tener acceso a niveles adicionales. Con el campo **Datos del desarrollador personalizados**, la aplicación puede realizar una consulta para ver qué niveles están disponibles cuando un cliente tiene este complemento. Puedes ajustar el valor en cualquier momento (en este caso, los niveles que se incluyen), sin tener que realizar cambios en el código de la aplicación ni volver a enviar la aplicación, simplemente actualizando la información del campo **Datos del desarrollador personalizados** y publicando un envío actualizado para el complemento.
 
-Para consultar este campo, usa la propiedad [StoreSku.CustomDeveloperData](https://msdn.microsoft.com/en-us/library/windows/apps/windows.services.store.storesku.customdeveloperdata.aspx) del [espacio de nombres Windows.Services.Store](https://msdn.microsoft.com/en-us/library/windows/apps/windows.services.store.aspx). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.store.aspx), usa la propiedad [ProductListing.Tag](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.store.productlisting.tag.aspx)).
+Para consultar este campo, usa la propiedad [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) del [espacio de nombres Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), usa la propiedad [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag)).
 
 > [!NOTE]
 > El campo **Datos del desarrollador personalizados** no está disponible para su uso en paquetes destinados a Windows8 y Windows8.1.

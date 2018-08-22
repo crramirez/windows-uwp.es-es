@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-Description: "Después de definir el experimento en el panel del Centro de desarrollo y codificar el experimento en la aplicación, estás listo para activar el experimento y usar el panel del Centro de desarrollo para revisar los resultados del experimento."
+Description: After you define your experiment in the Dev Center dashboard and code your experiment in your app, you are ready to active your experiment and use the Dev Center dashboard to review the results of your experiment.
 title: Administrar tu experimento en el panel
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
 ms.author: mcleans
@@ -9,9 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
-ms.openlocfilehash: 67f09d20f937d86319e9f27362c69dea21d579ae
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 073d5ec67bb012cbfe21c279ee97ec3c50b8458f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791253"
 ---
 # <a name="manage-your-experiment-in-the-dashboard"></a>Administrar tu experimento en el panel
 

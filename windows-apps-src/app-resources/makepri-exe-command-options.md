@@ -10,16 +10,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: fbfb5f6626f799878c294b0a4e21efb673147a50
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: c0a3892348baff56bbef8d40dd9aade4e612c50d
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817546"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792630"
 ---
 # <a name="makepriexe-command-line-options"></a>Opciones de línea de comandos de MakePri.exe
 
 [MakePri.exe](compile-resources-manually-with-makepri.md) tiene el conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` y `versioned`. En este tema se detallan las opciones de línea de comandos para su uso.
+
+> [!NOTE]
+> MakePri.exe se instala al comprobar la opción de **SDK de Windows para las aplicaciones administradas de UWP** al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en carpetas con el nombre de las otras arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 ## <a name="makepri-commands"></a>Comandos MakePri
 

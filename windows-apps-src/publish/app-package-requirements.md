@@ -4,18 +4,18 @@ Description: Follow these guidelines to prepare your app's packages for submissi
 title: Requisitos del paquete de la aplicación
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
 ms.author: wdg-dev-content
-ms.date: 04/30/2018
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, requisitos del paquete, paquetes, formato del paquete, versión compatible, enviar
-ms.localizationpriority: high
-ms.openlocfilehash: 76dd0a5f9ebcb1e92ac7874b535d286cb051df22
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d7d748f36dafd93066928f01f9aa42414f2ffc1f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832319"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791380"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
@@ -41,7 +41,7 @@ No es necesario que los paquetes de la aplicación estén firmados con un certif
 
 ### <a name="app-bundles"></a>Paquetes de aplicaciones
 
-En el caso de aplicaciones destinadas a Windows8.1, Windows Phone 8.1 y versiones posteriores, Visual Studio puede generar un lote de aplicaciones (.appxbundle) para reducir el tamaño de la aplicación que descargarán los usuarios. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
+Para las aplicaciones que estén destinados a 10 de Windows, Windows 8.1 o Windows Phone 8.1, Visual Studio puede generar un paquete de aplicación (.appxbundle) para reducir el tamaño de la aplicación que los usuarios descargar. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
 
 > [!NOTE]
 > Un paquete de aplicaciones puede contener tus paquetes para todas las arquitecturas. Debes enviar solo un paquete por cada SO de destino.
@@ -61,16 +61,10 @@ El manifiesto debe incluir información específica sobre tu cuenta y tu aplicac
 > Los valores del manifiesto distinguen mayúsculas de minúsculas. También deben coincidir los espacios y otras puntuaciones. Escribe los valores cuidadosamente y revísalos para asegurarte de que son correctos.
 
 
-Los lotes de la aplicación usan un manifiesto diferente. Revisa la documentación del [manifiesto de lotes](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para conocer los requisitos y detalles para los manifiestos de lotes de la aplicación.
+Paquetes de aplicación (.appxbundle) utilizar un manifiesto diferente. Revisa la documentación del [manifiesto de lotes](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para conocer los requisitos y detalles para los manifiestos de lotes de la aplicación. Tenga en cuenta que en un .appxbundle, el .appxmanifest de cada paquete incluido debe usar los mismos elementos y atributos, salvo el atributo **ProcessorArchitecture** del elemento de [identidad](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
 
 > [!TIP]
 > Asegúrate de ejecutar el [Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar tus paquetes. Esto puede ayudarte a determinar si tu manifiesto tiene algún problema que pueda causar errores de certificación o envío.
-
-Si la aplicación tiene más de un paquete, estos elementos del manifiesto de la aplicación deben ser iguales en cada paquete (por SO de destino):
-
--   [**Paquete y funcionalidades**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-capabilities)
--   [**Paquete y dependencias**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-dependencies)
--   [**Paquete y recursos**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-resources)
 
 
 ## <a name="package-format-requirements"></a>Requisitos de formato del paquete
@@ -94,7 +88,7 @@ El rango de versiones actualmente admitido de:
 
 ## <a name="storemanifest-xml-file"></a>Archivo XML de StoreManifest
 
-StoreManifest.xml es un archivo de configuración opcional que se puede incluir en paquetes de la aplicación. Su objetivo es habilitar características como, por ejemplo, declarar tu aplicación como una aplicación para dispositivo de Microsoft Store o declarar los requisitos de los que depende un paquete para que se pueda aplicar a un dispositivo, que no incluye el manifiesto del paquete. StoreManifest.xml se envía con el paquete de la aplicación y debe estar en la carpeta raíz del proyecto principal de la aplicación. Para obtener más información, consulta [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
+StoreManifest.xml es un archivo de configuración opcional que se puede incluir en paquetes de la aplicación. Su objetivo es habilitar características como, por ejemplo, declarar tu aplicación como una aplicación para dispositivo de Microsoft Store o declarar los requisitos de los que depende un paquete para que se pueda aplicar a un dispositivo, que no incluye el manifiesto del paquete. Si se usa, StoreManifest.xml se envía con el paquete de la aplicación y debe estar en la carpeta raíz del proyecto principal de su aplicación. Para obtener más información, consulta [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
 
  
 

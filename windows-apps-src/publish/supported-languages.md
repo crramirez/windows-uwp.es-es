@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Puedes enviar aplicaciones a la Tienda Windows en más de 100 idiomas."
+Description: You can submit apps to the Microsoft Store in over 100 languages.
 title: Idiomas admitidos
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 ms.author: wdg-dev-content
@@ -9,21 +9,25 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: dcf74918f00f4e13d85e9eecc2570451354097e8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800425"
 ---
 # <a name="supported-languages"></a>Idiomas admitidos
 
 
-Puedes enviar aplicaciones a la Tienda Windows en más de 100 idiomas.
+Puede enviar las aplicaciones a la Store Microsoft en más de 100 idiomas.
 
-Para obtener más información sobre la configuración de idiomas en tus aplicaciones, consulta [Globalización y la localización](../globalizing/globalizing-portal.md) y [Administrar idiomas y regiones](../globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
+Para obtener más información acerca de la configuración de idiomas en sus aplicaciones, vea [problemas de globalización y localización](../design/globalizing/globalizing-portal.md) y [comprenda el funcionamiento idiomas de perfiles de usuario y los idiomas del manifiesto de aplicación](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
 
 ## <a name="supported-languages"></a>Idiomas admitidos
 
 
-Son los idiomas que admite la Tienda Windows. La aplicación debe admitir al menos uno de estos idiomas y no debe especificar ningún código de idioma que no se incluya aquí.
+Estos son los idiomas que admite el Microsoft Store. La aplicación debe admitir al menos uno de estos idiomas y no debe especificar ningún código de idioma que no se incluya aquí.
 
 | Nombre de idioma         | Códigos de idiomas admitidos                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

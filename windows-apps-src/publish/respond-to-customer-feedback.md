@@ -9,11 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
-ms.openlocfilehash: 6b562064cbdbc1a539a2a65a33a6e11027923b21
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7c9819890dffcf70f56f6c0b09d9a1a24a8818db
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791520"
 ---
 # <a name="respond-to-customer-feedback"></a>Responder a los comentarios de los clientes
 

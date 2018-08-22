@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a175ad48255c0179335ce9204f51a0a62fd2b4f3
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
-ms.translationtype: HT
+ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707226"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795171"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Diseños adaptativos con XAML
 
@@ -98,7 +98,8 @@ Puedes mostrar u ocultar un elemento si estableces su propiedad [**Visibility**]
 
 Puedes cambiar la propiedad Visibility de un elemento en código o en un estado visual. Cuando el objeto Visibility de un elemento cambia, también cambian todos sus elementos secundarios. Puedes reemplazar secciones de la interfaz de usuario al mostrar un panel mientras contraes otro.
 
-> **Sugerencia**&nbsp;&nbsp;Si tienes elementos en la interfaz de usuario con el estado **Collapsed** de manera predeterminada, los objetos se seguirán creando en el inicio, aunque no sean visibles. Puedes postergar la carga de estos elementos hasta que se muestren si estableces el **atributo x:DeferLoadStrategy** en "Lazy". Esto puede mejorar el rendimiento del inicio. Para obtener más información, consulta [atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
+> [!Tip]
+> Cuando haya elementos en la interfaz de usuario que son **Collapsed** de forma predeterminada, los objetos aún se crean en el inicio, aunque no son visibles. Puedes postergar la carga de estos elementos hasta que se muestren si estableces el **atributo x:DeferLoadStrategy** en "Lazy". Esto puede mejorar el rendimiento del inicio. Para obtener más información, consulta [atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### <a name="style-resources"></a>Recursos de estilo
 
@@ -138,7 +139,7 @@ Para aplicar un estado visual a partir de código, llama al método [**VisualSta
 Aquí, un [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx) contiene dos definiciones VisualState. La primera, `DefaultState`, está vacía. Cuando se aplica, se aplican los valores definidos en la página XAML. La segunda, `WideState`, cambia la propiedad [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx) de la [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) a **Inline** y abre el panel. Este estado se aplica en el controlador de eventos SizeChanged si la ventana tiene un ancho superior a 640 píxeles efectivos.
 
 > [!NOTE]
-Windows no proporciona un método para que la aplicación detecte el dispositivo específico en el que esta se ejecuta. Puede indicar la familia de dispositivos (móvil, de escritorio, etc.) en que se ejecuta la aplicación, la resolución efectiva y la cantidad de espacio de pantalla disponible en la aplicación (el tamaño de la ventana de la aplicación). Te recomendamos definir estados visuales para [tamaños de pantalla y puntos de interrupción](screen-sizes-and-breakpoints-for-responsive-design.md).
+> Windows no proporciona un método para que la aplicación detecte el dispositivo específico en el que esta se ejecuta. Puede indicar la familia de dispositivos (móvil, de escritorio, etc.) en que se ejecuta la aplicación, la resolución efectiva y la cantidad de espacio de pantalla disponible en la aplicación (el tamaño de la ventana de la aplicación). Te recomendamos definir estados visuales para [tamaños de pantalla y puntos de interrupción](screen-sizes-and-breakpoints-for-responsive-design.md).
 
 
 ```xaml
@@ -234,7 +235,8 @@ En este ejemplo se hace lo mismo que en el ejemplo anterior, pero se usa la sint
 </Page>
 ```
 
-> **Importante**&nbsp;&nbsp;En el ejemplo anterior, la propiedad adjunta VisualStateManager.VisualStateGroups está establecida en el elemento **Grid**. Cuando usas objetos StateTrigger, para que los desencadenadores se apliquen automáticamente, asegúrate siempre de que VisualStateGroups se adjunte al primer elemento secundario de la raíz. (Aquí, **Grid** es el primer elemento secundario del elemento **Page** raíz).
+> [!Important]
+> En el ejemplo anterior, se establece la propiedad adjunta VisualStateManager.VisualStateGroups en el elemento de **cuadrícula** . Cuando usas objetos StateTrigger, para que los desencadenadores se apliquen automáticamente, asegúrate siempre de que VisualStateGroups se adjunte al primer elemento secundario de la raíz. (Aquí, **Grid** es el primer elemento secundario del elemento **Page** raíz).
 
 ### <a name="attached-property-syntax"></a>Sintaxis de propiedad adjunta
 

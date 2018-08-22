@@ -10,16 +10,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 24ba76549053ef0f88612249eb903278d8554167
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 512880b7a7ea955a45697762cbbdb7f74ac70102
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393524"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801252"
 ---
 # <a name="makepriexe-configuration-file"></a>Archivo de configuración de MakePri.exe
 
 En este tema se describe el esquema del archivo de configuración XML de [MakePri.exe](compile-resources-manually-with-makepri.md), también conocido como archivo de configuración PRI. La herramienta MakePri.exe tiene un [comando createconfig](makepri-exe-command-options.md#createconfig-command) que puedes usar para crear un nuevo archivo de configuración PRI inicializado.
+
+> [!NOTE]
+> MakePri.exe se instala al comprobar la opción de **SDK de Windows para las aplicaciones administradas de UWP** al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en carpetas con el nombre de las otras arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 El archivo de configuración PRI controla qué recursos se indizan y cómo lo hacen. El XML de configuración debe ajustarse al siguiente esquema.
 
