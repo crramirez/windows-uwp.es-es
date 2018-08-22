@@ -4,17 +4,18 @@ title: Administración de la activación de URI
 description: Aprende a registrar una aplicación para convertirla en el controlador predeterminado de un nombre de esquema de identificador uniforme de recursos (URI).
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
 ms.author: twhitney
-ms.date: 10/12/2017
+ms.date: 07/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 1810cf1568ab40621ccc981a6ec1f561d0e8a296
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 41c7286493e08fd62ad4b207d0e014dd4fbd5318
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788570"
 ---
 # <a name="handle-uri-activation"></a>Administrar la activación de los identificadores URI
 
@@ -29,7 +30,8 @@ Te recomendamos que la registres para un nombre de esquema de URI solo si espera
 
 En estos pasos se muestra cómo registrar un nombre de esquema de URI personalizado, `alsdk://`, y cómo activar la aplicación cuando el usuario inicia un URI `alsdk://`.
 
-> **Nota** En las aplicaciones para UWP, algunas extensiones de archivo y URI se reservan para que las usen aplicaciones integradas y el sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista alfabética de esquemas de Uri que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos.
+> [!NOTE]
+> En las aplicaciones de UWP, determinadas extensiones de archivo y los identificadores URI están reservadas para uso por el sistema operativo y aplicaciones integradas. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista alfabética de esquemas de Uri que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos.
 
 ## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Paso 1: Especificar el punto de extensión en el manifiesto del paquete
 
@@ -59,7 +61,7 @@ La aplicación recibe eventos de activación solo para los nombres de esquema de
 
     Esto agrega un elemento [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400) como este al manifiesto del paquete. La categoría **windows.protocol** indica que la aplicación controla el nombre de esquema de URI `alsdk`.
 
-    ```xml
+```xml
     <Applications>
         <Application Id= ... >
             <Extensions>
@@ -73,7 +75,7 @@ La aplicación recibe eventos de activación solo para los nombres de esquema de
           ...
         </Application>
    <Applications>
-    ```
+```
 
 ## <a name="step-2-add-the-proper-icons"></a>Paso 2: Agregar los iconos adecuados
 
@@ -83,50 +85,64 @@ Las aplicaciones que se convierten en predeterminadas para un nombre de esquema 
 
 El controlador de eventos [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) recibe todos los eventos de activación. La propiedad **Kind** indica el tipo de evento de activación. Este ejemplo está configurado para controlar eventos de activación de [**Protocol**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.activation.activationkind.aspx#Protocol).
 
-> [!div class="tabbedCodeSnippets"]
-> ```cs
-> public partial class App
-> {
->    protected override void OnActivated(IActivatedEventArgs args)
->   {
->       if (args.Kind == ActivationKind.Protocol)
->       {
->          ProtocolActivatedEventArgs eventArgs = args as ProtocolActivatedEventArgs;
->          // TODO: Handle URI activation
->          // The received URI is eventArgs.Uri.AbsoluteUri
->       }
->    }
-> }
-> ```
-> ```vb
-> Protected Overrides Sub OnActivated(ByVal args As Windows.ApplicationModel.Activation.IActivatedEventArgs)
->    If args.Kind = ActivationKind.Protocol Then
->       ProtocolActivatedEventArgs eventArgs = args As ProtocolActivatedEventArgs
->       
->       ' TODO: Handle URI activation
->       ' The received URI is eventArgs.Uri.AbsoluteUri
->  End If
-> End Sub
-> ```
-> ```cpp
-> void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs^ args)
-> {
->    if (args->Kind == Windows::ApplicationModel::Activation::ActivationKind::Protocol)
->    {
->       Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^ eventArgs =
->           dynamic_cast<Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^>(args);
->       
->       // TODO: Handle URI activation  
->       // The received URI is eventArgs->Uri->RawUri
->    }
-> }
-> ```
+```csharp
+public partial class App
+{
+   protected override void OnActivated(IActivatedEventArgs args)
+  {
+      if (args.Kind == ActivationKind.Protocol)
+      {
+         ProtocolActivatedEventArgs eventArgs = args as ProtocolActivatedEventArgs;
+         // TODO: Handle URI activation
+         // The received URI is eventArgs.Uri.AbsoluteUri
+      }
+   }
+}
+```
 
-> **Nota** Si se inician mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario de regreso a la pantalla que inició la aplicación y no al contenido previo de la aplicación.
+```vb
+Protected Overrides Sub OnActivated(ByVal args As Windows.ApplicationModel.Activation.IActivatedEventArgs)
+   If args.Kind = ActivationKind.Protocol Then
+      ProtocolActivatedEventArgs eventArgs = args As ProtocolActivatedEventArgs
+      
+      ' TODO: Handle URI activation
+      ' The received URI is eventArgs.Uri.AbsoluteUri
+ End If
+End Sub
+```
+
+```cppwinrt
+void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs const& args)
+{
+    if (args.Kind() == Windows::ApplicationModel::Activation::ActivationKind::Protocol)
+    {
+        auto protocolActivatedEventArgs{ args.as<Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs>() };
+        // TODO: Handle URI activation  
+        auto receivedURI{ protocolActivatedEventArgs.Uri().RawUri() };
+    }
+}
+```
+
+```cpp
+void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs^ args)
+{
+   if (args->Kind == Windows::ApplicationModel::Activation::ActivationKind::Protocol)
+   {
+      Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^ eventArgs =
+          dynamic_cast<Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^>(args);
+      
+      // TODO: Handle URI activation  
+      // The received URI is eventArgs->Uri->RawUri
+   }
+}
+```
+
+> [!NOTE]
+> Cuando se inicia mediante Protocolo de contrato, asegúrese de que ese botón Atrás lleva al usuario a la pantalla que inicia la aplicación y no a contenido anterior de la aplicación.
 
 El siguiente código inicia mediante programación la aplicación a través de su URI:
 
-```cs
+```csharp
    // Launch the URI
    var uri = new Uri("alsdk:");
    var success = await Windows.System.Launcher.LaunchUriAsync(uri)
@@ -142,8 +158,11 @@ Si las aplicaciones se inician a través de la activación de protocolo, sería 
 
 Cualquier aplicación o sitio web puede usar tu nombre de esquema de URI, incluidos los malintencionados. Por este motivo, los datos que incluyes en el URI podrían provenir de un origen que no es de confianza. Te desaconsejamos que realices una acción permanente en función de los parámetros que recibes en el URI. Puedes usar parámetros de URI, por ejemplo, para que la aplicación se inicie en una página de la cuenta del usuario, pero no te recomendamos que los uses para modificar directamente la cuenta del usuario.
 
-> **Nota** Si vas a crear un nuevo nombre de esquema de URI para la aplicación, asegúrate de seguir las directrices de [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Esto garantiza que el nombre cumpla los estándares de los esquemas de URI.
-> **Nota** Si se inician mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario de regreso a la pantalla que inició la aplicación y no al contenido previo de la aplicación.
+> [!NOTE]
+> Si va a crear un nuevo nombre de esquema URI para su aplicación, asegúrese de seguir las instrucciones en [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Esto garantiza que el nombre cumpla los estándares de los esquemas de URI.
+
+> [!NOTE]
+> Cuando se inicia mediante Protocolo de contrato, asegúrese de que ese botón Atrás lleva al usuario a la pantalla que inicia la aplicación y no a contenido anterior de la aplicación.
 
 Es recomendable que las aplicaciones creen un nuevo elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) de XAML para cada evento de activación que abra un nuevo destino de URI. De esta forma, la navegación hacia atrás del nuevo elemento **Frame** de XAML no incluirá ningún contenido anterior que la aplicación tuviera en la ventana actual al pasar a suspensión.
 
@@ -151,25 +170,25 @@ Si prefieres que las aplicaciones usen un único elemento [**Frame**](https://ms
 
 ## <a name="related-topics"></a>Temas relacionados
 
-**Ejemplo completo**
+### <a name="complete-sample-app"></a>Aplicación de ejemplo completo
 
 - [Ejemplo de inicio por asociación](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
 
-**Conceptos**
+### <a name="concepts"></a>Conceptos
 
 - [Programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154)
 - [Modelo de asociación de tipos de archivo y URI](https://msdn.microsoft.com/library/windows/desktop/hh848047)
 
-**Tareas**
+### <a name="tasks"></a>Tareas
 
 - [Iniciar la aplicación predeterminada de un URI](launch-default-app.md)
 - [Controlar la activación de archivos](handle-file-activation.md)
 
-**Instrucciones**
+### <a name="guidelines"></a>Instrucciones
 
 - [Directrices sobre tipos de archivo y URI](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
-**Referencia**
+### <a name="reference"></a>Referencia
 
 - [Manifiesto del paquete AppX](https://msdn.microsoft.com/library/windows/apps/dn934791)
 - [Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224742)

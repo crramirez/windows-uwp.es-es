@@ -4,17 +4,17 @@ title: 'Novedades de Windows documentos en agosto de 2018: desarrollar aplicacio
 description: Se han agregado nuevas características, vídeos, ejemplos y orientación para el programador la documentación para desarrolladores de Windows 10 de 2018 de agosto.
 keywords: ¿Qué es nuevo, actualización, funciones, instrucciones de desarrollo, 10 de Windows, agosto
 ms.author: quradic
-ms.date: 8/9/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06eef0c115675ba9673a81459c91e0f08f6fab71
-ms.sourcegitcommit: be5b71a8ec7b686d5f93d56d10cb9a50c3c5bb4a
+ms.openlocfilehash: c294dedc8e19605bc2cee0308022bed8624df57e
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "2748878"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2787790"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novedades en los documentos para desarrolladores de Windows en agosto de 2018
 
@@ -30,17 +30,17 @@ Se han agregado las siguientes características a las ventanas compilaciones de 
 
 * La [Biblioteca de la interfaz de usuario de Windows](https://aka.ms/winui-docs) es un conjunto de paquetes de NuGet que proporcionan controles y otros elementos del usuario para las aplicaciones UWP. Estos paquetes también son compatibles con versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tienen la versión más reciente del sistema operativo.
 
-* [DropDownButton, botón de división y ToggleSplitButton](../design/controls-and-patterns/buttons.md) proporcionan controles de botón con características especializadas para mejorar la experiencia del usuario de la aplicación.
-
-* NavigationView ahora admite la [navegación superior,](../design/controls-and-patterns/navigationview.md) para los casos en que la aplicación tiene un número menor de opciones de navegación y requieren más espacio para el contenido de su aplicación.
-
-* TreeView se ha mejorado para admitir [enlace de datos, plantillas de elementos y dragón y drop.](../design/controls-and-patterns/tree-view.md)
+* [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [botón de división](../design/controls-and-patterns/buttons.md#create-a-split-button)y [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) proporcionan controles de botón con características especializadas para mejorar la interfaz de usuario de su aplicación.
 
 ![Un botón de expansión para seleccionar el color de primer plano](../design/controls-and-patterns/images/split-button-rtb.png)
 
+* NavigationView ahora admite la [navegación superior](../design/controls-and-patterns/navigationview.md), para los casos en que la aplicación tiene un número menor de opciones de navegación y requieren más espacio para el contenido de su aplicación.
+
+* TreeView se ha mejorado para admitir [enlace de datos, plantillas, de elemento y arrastrar y colocar.](../design/controls-and-patterns/tree-view.md)
+
 ### <a name="package-support-framework"></a>Marco de apoyo de paquete
 
-El marco de soporte técnico de paquete es un kit de código abierto que le ayudará a aplicar revisiones a la aplicación de win32 cuando no tiene acceso al código fuente, por lo que se puede ejecutar en un contenedor MSIX.  
+El marco de soporte técnico de paquete es un kit de código abierto que le ayudará a aplicar revisiones a la aplicación de win32 cuando no tiene acceso al código fuente, por lo que se puede ejecutar en un contenedor MSIX.
 
 Para obtener más información, vea [en tiempo de ejecución de aplicar revisiones a un paquete de MSIX mediante el marco de soporte técnico de paquete](../porting/package-support-framework.md).
 
@@ -52,7 +52,7 @@ Una lista de [extensiones de API de Microsoft heredadas](https://developer.mozil
 
 ### <a name="cwinrt-code-examples"></a>C + + / ejemplos de código WinRT
 
-Hemos agregado 250 [C + + / WinRT](../cpp-and-winrt-apis/index.md) código fragmentos de código a los temas en nuestros documentos, que acompaña a existente C + + / ejemplos de código de CX.
+Hemos agregado 250 [C + + / WinRT](../cpp-and-winrt-apis/index.md) código listados temas en nuestros documentos, que acompaña a existente C + + / ejemplos de código de CX.
 
 ### <a name="project-rome"></a>Proyecto Roma
 

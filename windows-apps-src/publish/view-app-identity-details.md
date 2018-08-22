@@ -1,24 +1,26 @@
 ---
 author: jnHs
-Description: "Visualiza los detalles relacionados con la identidad única que la Tienda Windows asigna a la aplicación y obtén un vínculo a la descripción de la Tienda de la aplicación."
+Description: View details related to the unique identity assigned to your app by the Microsoft Store, and get a link to your app's Store listing.
 title: Ver detalles de identidad de las aplicaciones
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d509189ae6392be3d4335732965b70fbc9c77436
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: cf2c10fd8fa581e29fe20c5bdcb2683c5246af1d
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788690"
 ---
 # <a name="view-app-identity-details"></a>Ver detalles de identidad de las aplicaciones
 
 
-Al trabajar con una aplicación en el panel de información del Centro de desarrollo de Windows, puedes ver los detalles relacionados con la identidad única que la Tienda Windows asigna a la aplicación. También puedes obtener un vínculo a la descripción de la Tienda de la aplicación.
+Cuando se trabaja con una aplicación en el panel del centro de desarrollo de Windows, puede ver los detalles relacionados con la identidad única asignada por el Microsoft Store. También puedes obtener un vínculo a la descripción de la Tienda de la aplicación.
 
 Para encontrar esta información, ve a una de las aplicaciones y expande **Administración de aplicaciones** en el menú de navegación izquierdo. Selecciona **Identidad de aplicación** para ver los detalles.
 
@@ -31,7 +33,7 @@ Los valores siguientes se deben incluir en el manifiesto del paquete de la aplic
 -   **Paquete/identidad/publicador**
 -   **Package/Properties/PublisherDisplayName**
 
-Para obtener más información, consulta [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-identity) en la [referencia del esquema del manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/schema-root).
+Para obtener más información, consulta [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) en la [referencia del esquema del manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root).
 
 Juntos, estos elementos declaran la identidad de la aplicación y establecen la "familia del paquete" a la que pertenecen todos sus paquetes. Los paquetes individuales tendrán detalles adicionales, como la versión y la arquitectura.
 
@@ -41,7 +43,7 @@ Juntos, estos elementos declaran la identidad de la aplicación y establecen la 
 Los siguientes valores son valores adicionales que hacen referencia a la familia del paquete de la aplicación, pero que no se incluyen en el manifiesto.
 
 -   **Nombre de familia de paquete (PFN)**: este valor se usa con ciertas API de Windows.
--   **SID de paquete**: necesitarás este valor para enviar notificaciones de WNS a la aplicación. Para más información, consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](../controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview.md).
+-   **SID de paquete**: necesitarás este valor para enviar notificaciones de WNS a la aplicación. Para más información, consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
 
 
 ## <a name="link-to-your-apps-listing"></a>Vincular a la descripción de la aplicación

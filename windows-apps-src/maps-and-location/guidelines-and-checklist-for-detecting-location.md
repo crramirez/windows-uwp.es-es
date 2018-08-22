@@ -1,6 +1,6 @@
 ---
 author: msatranjr
-Description: En este tema se describen las directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario.
+Description: This topic describes performance guidelines for apps that require access to a user's location.
 title: Directrices para las aplicaciones con reconocimiento de ubicación
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
 ms.author: misatran
@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, ubicación, location, mapa, map, ubicación geográfica, geolocation
-ms.openlocfilehash: f2035762fe99e1692d8b8b5eea5260aeb39b8d2a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "240355"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2786881"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Directrices para las aplicaciones con reconocimiento de ubicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -50,7 +51,7 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
 
     Libera el objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) si el usuario desactiva el acceso a la información de ubicación a través de Configuración. La aplicación recibirá entonces resultados **ACCESS\_DENIED** para las llamadas a la API de ubicación. Si la aplicación guarda datos de ubicación o los almacena en caché, borra todos los datos de la memoria caché cuando el usuario revoque el acceso a la información de ubicación. Proporciona un modo alternativo para introducir manualmente información de ubicación cuando los datos de ubicación no estén disponibles a través de servicios de localización.
 
--   Proporciona una interfaz de usuario para volver a habilitar los servicios de localización. Por ejemplo, proporciona un botón de actualización que vuelva a crear una instancia del objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) e intente obtener la información de ubicación de nuevo.
+-   Proporciona una interfaz de usuario para volver a habilitar los servicios de localización. Por ejemplo, proporcionar un botón de actualización que vuelve a crear instancias del objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) e intenta obtener información de ubicación de nuevo.
 
     La aplicación debe proporcionar una interfaz de usuario que permita volver a habilitar los servicios de ubicación:
 
@@ -90,7 +91,7 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
         Por ejemplo:
 
         -   Si tu aplicación obtiene la ubicación para mostrar anuncios personalizados, información meteorológica, noticias, etc., por lo general, basta con una precisión de 5000 metros.
-        -   Si tu aplicación muestra ofertas cercanas en los alrededores, una precisión de 300 metros permite, por lo general, proporcionar resultados de forma adecuada.
+        -   Si la aplicación muestra cercanos acuerdos de negocio en el entorno, es buena generalmente para proporcionar resultados de una precisión de metro de 300.
         -   Si el usuario quiere ver los restaurantes cercanos recomendados, deberíamos obtener una posición en la manzana en la que se encuentre, por lo que una precisión de 100 metros es suficiente.
         -   Si el usuario intenta compartir su posición, la aplicación debería solicitar una precisión de unos 10 metros.
     -   Usa la propiedad [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) si la aplicación tiene requisitos de precisión específicos. Por ejemplo, las aplicaciones de navegación deberían usar la propiedad **Geocoordinate.accuracy** para determinar si los datos de ubicación disponibles cumplen los requisitos de la aplicación.

@@ -8,14 +8,14 @@ ms.date: 02/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, portal de dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: fd196c76afe8f8cb1841ba7a7869de725177969a
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 404db3963d2f9508d7c81053abf96b0e742103f7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816930"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788670"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -196,6 +196,12 @@ Aquí puedes cambiar el espacio aislado de Xbox Live en el que está el disposit
 Se trata de un área de trabajo en blanco que puedes personalizar a tu gusto. Puedes usar el menú (haz clic en el botón Menú en la parte superior izquierda) para agregar herramientas (selecciona **Agregar herramientas al área de trabajo**, luego las herramientas que quieras agregar y finalmente **Agregar**). Ten en cuenta que puedes usar este menú para agregar herramientas a cualquier área de trabajo, así como para administrar las propias áreas de trabajo.
 
 ![Agregar herramientas al área de trabajo](images/device-portal-xbox-13.png)
+
+### <a name="game-event-data"></a>Datos del evento juego
+
+En la página de **datos del evento juego** , puede ver un gráfico en tiempo real que secuencias en el número de eventos de juego de seguimiento de eventos para Windows (ETW) actualmente registrada en su Xbox uno. Si hay eventos juego registrados en el sistema, también puede ver los detalles (nombre del evento, ocurrencia de evento y el título de juego) que describe cada evento en una tabla de datos bajo el gráfico de datos. En la tabla sólo está disponible si hay eventos registrados.
+
+![Datos del evento juego](images/device-portal-xbox-22.PNG)
 
 ## <a name="see-also"></a>Consulta también
 

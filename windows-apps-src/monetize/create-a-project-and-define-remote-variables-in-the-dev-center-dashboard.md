@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-Description: "Antes de poder ejecutar un experimento en tu aplicación para la Plataforma universal de Windows (UWP) con pruebas A/B, debes crear un proyecto y definir tus variables remotas en el panel del Centro de desarrollo."
+Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must create a project and define your remote variables in the Dev Center dashboard.
 title: Crear un proyecto de experimento en el panel
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
 ms.author: mcleans
@@ -9,9 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
-ms.openlocfilehash: bc38e5cc7438ff2dede5267b60bc925369defa51
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 25400d892f069f2536285a400cb850bedc2f09b3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2787870"
 ---
 # <a name="create-an-experiment-project-in-the-dashboard"></a>Crear un proyecto de experimento en el panel
 

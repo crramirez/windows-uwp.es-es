@@ -4,18 +4,18 @@ Description: You can select the screenshots, logos, and other art assets (such a
 title: Capturas de pantalla, imágenes y tráileres de aplicaciones
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
 ms.author: wdg-dev-content
-ms.date: 4/30/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
-ms.localizationpriority: high
-ms.openlocfilehash: e0ac8e01aab07e68e0a4f22160cb58e558b4dc42
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817786"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788440"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -85,11 +85,13 @@ Esta imagen puede aparecer en varias páginas de Store para Windows 10 (incluida
 
 Esta imagen es necesaria para la visualización correcta en Windows Phone 8.1 y versiones anteriores. Si tu aplicación es compatible con Windows Phone 8.1 o versiones anteriores y no proporcionas esta imagen, los clientes en cuestión verán un icono en blanco junto con la descripción de la aplicación. (Esto también se aplica a los clientes de Windows10, solo si tu aplicación tiene paquetes destinados a WindowsPhone8.1 o versiones anteriores). Si tu envío *solo* incluye paquetes para UWP, no tienes que proporcionar esta imagen. (Ten en cuenta que si tu envío incluye paquetes tanto de Windows Phone 8.x como para UWP y proporcionas esta imagen, se podrá usar en Windows 10, en algunos diseños de Store. Para evitar esto, puedes crear una [descripción específica de la plataforma](create-platform-specific-store-listings.md) para las versiones de Windows Phone con las que sea compatible tu aplicación y solo incluir allí el icono de la aplicación).
 
-Además, tienes la opción de evitar que Store utilice las imágenes del logotipo en tus paquetes de la aplicación al mostrar la descripción a los clientes de Windows10 (incluyendo Xbox) y, en cambio, hacer que Store utilice solo las imágenes que cargues. Esto te ofrece más control sobre la apariencia de la aplicación en diversas pantallas por todo Store, para los clientes de Windows10 (incluyendo Xbox).
+### <a name="display-only-uploaded-logo-images-in-the-store"></a>Para mostrar sólo carga imágenes de logotipo en el almacén
 
-Para usar únicamente imágenes cargadas para mostrar Store en Windows10 (incluyendo Xbox), comprueba la casilla que indica **Para clientes de Windows10, mostrar imágenes de logotipo cargadas en lugar de las imágenes de mis paquetes**. (Si no activas esta casilla, se usarán imágenes de tus paquetes de la aplicación).
+Tiene la opción de impedir que el almacén de uso de las imágenes de logotipo en paquetes de su aplicación cuando se muestra el anuncio a los clientes en 10 de Windows (incluidos Xbox) y, en su lugar que tengan el almacén sólo las imágenes que se cargan. Esto te ofrece más control sobre la apariencia de la aplicación en diversas pantallas por todo Store, para los clientes de Windows10 (incluyendo Xbox). (Si su producto es compatible con versiones anteriores del sistema operativo, los clientes es posible que aún vea imágenes de los paquetes, incluso si usa esta opción).
 
-Al marcar esta casilla, aparecerá una nueva sección denominada **Uploaded Store logos**. Aquí, puedes cargar 3 imágenes, incluido el tamaño de 300 x 300 del "icono de la aplicación" (si marcas la casilla, el campo para proporcionar esa imagen, se moverá a esta sección). Te recomendamos que proporciones los tres tamaños de imagen si usas esta opción: 71 x 71, 300 x 300 y 150 x 150 píxeles. Sin embargo, solo el tamaño de 300 x 300 es obligatorio.
+Para que el almacén de usar sólo las imágenes que se carga (para clientes en 10 de Windows, incluidos Xbox), y no usar todas las imágenes de los paquetes, active la casilla que dice **para los clientes en 10 de Windows y Xbox, mostrar cargan imágenes de logotipo en lugar de las imágenes de Mis paquetes **.
+
+Cuando se activa esta casilla, aparece una nueva sección denominada **almacén de mostrar imágenes** . En este caso, puede cargar 3 imágenes, incluido el tamaño de la **aplicación de 1:1 Mosaico icono (300 x 300 píxeles)** (si se activa la casilla, el campo para proporcionar que dicha imagen se moverán en esta sección). Te recomendamos que proporciones los tres tamaños de imagen si usas esta opción: 71 x 71, 300 x 300 y 150 x 150 píxeles. Sin embargo, solo el tamaño de 300 x 300 es obligatorio.
 
 
 <span id="promotional-images" />
@@ -209,7 +211,7 @@ Al proporcionar los tráileres, asegúrate de seguir estos requisitos:
 - El título no puede superar los 255 caracteres. 
 - No incluyas clasificaciones por edades en tus tráileres.
 
-Al igual que el resto de campos de la página de descripción de Store, los tráileres deben pasar la certificación antes de poder publicarlos en Microsoft Store. Asegúrate de que tus tráileres cumplan con las [directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx).
+Al igual que el resto de campos de la página de descripción de Store, los tráileres deben pasar la certificación antes de poder publicarlos en Microsoft Store. Asegúrate de que tus tráileres cumplan con las [directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 Existen requisitos adicionales según el tipo de archivo.
 

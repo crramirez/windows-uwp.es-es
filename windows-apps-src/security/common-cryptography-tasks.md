@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
-ms.openlocfilehash: b96aed65712ce6d5e11b83fb66bd40401ed497e0
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: a2c2acc8351e8b646353a05e8d408dee57e633b0
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1688851"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789537"
 ---
 # <a name="common-cryptography-tasks"></a>Tareas comunes de criptografía
 

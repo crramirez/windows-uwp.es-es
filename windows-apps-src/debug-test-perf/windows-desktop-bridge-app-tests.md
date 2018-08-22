@@ -2,26 +2,27 @@
 author: PatrickFarley
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Pruebas de aplicación Puente de dispositivo de escritorio de Windows
-description: Por determinar
+description: Realice pruebas integradas del puente de escritorio para asegurarse de que su aplicación de escritorio está optimizada para su conversión a una aplicación UWP.
 ms.author: pafarley
-ms.date: 06/30/2017
+ms.date: 12/18/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: f97b406d534315fcc1128d23059a2a10e6bdb9d2
-ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+keywords: Windows 10, uwp, certificación de la aplicación
+ms.localizationpriority: medium
+ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2017
-ms.locfileid: "700236"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788500"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
 
-[Las aplicaciones Puente de dispositivo de escritorio](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) son aplicaciones de escritorio de Windows convertidas en una aplicación para la Plataforma universal de Windows (UWP) mediante [Puente de dispositivo de escritorio](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows10.
+[Aplicaciones de escritorio puente](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) son aplicaciones de escritorio de Windows va a convertir a aplicaciones de la plataforma de Windows Universal (UWP) mediante el [Puente de escritorio](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows10.
 
 ## <a name="required-versus-optional-tests"></a>Pruebas obligatorias vs. pruebas opcionales
-Hay un nuevo concepto de pruebas opcionales para las aplicaciones Puente de dispositivo de escritorio de Windows que solo son informativas y no se usarán para evaluar la aplicación durante la incorporación de la Tienda Windows. Es recomendable investigar estos resultados de la prueba para crear aplicaciones de mejor calidad. Los criterios de aprobación o no aprobación general para la incorporación de la tienda se determinan según las pruebas obligatorias y no según estas pruebas opcionales.
+Pruebas opcionales para las aplicaciones de escritorio de Windows Bridge sólo son informativas y no se podrá utilizar para evaluar la aplicación durante la incorporación de Microsoft Store. Se recomienda investigar estos resultados para generar aplicaciones de mejor calidad de las pruebas. Los criterios de aprobación o no aprobación general para la incorporación de la tienda se determinan según las pruebas obligatorias y no según estas pruebas opcionales.
 
 ## <a name="current-optional-tests"></a>Pruebas opcionales actuales
 
@@ -49,13 +50,13 @@ Consulta [Puente de dispositivo de escritorio a UWP: extensiones de aplicación]
 Esta prueba verifica que la appx no es una versión de depuración.
  
 **Antecedentes**  
-Para certificarse para la Tienda Windows, las aplicaciones no deben compilarse para depuración y no deben hacer referencia a versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
+Para conseguir la certificación para la Store Microsoft, no se deben compilar aplicaciones para depurar y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
  
 **Detalles de la prueba**  
 Prueba la aplicación para asegurarte de que no sea una versión de depuración y no esté vinculada con ningún marco de depuración.
  
 **Acciones correctivas**  
-* Compila la aplicación como una versión de lanzamiento antes de enviarla a la Tienda Windows.
+* Crear la aplicación como una versión de lanzamiento antes de enviar a la Store Microsoft.
 * Asegúrate de tener instalada la versión correcta de .NET Framework.
 * Asegúrate de que la aplicación no esté vinculada a versiones de depuración de un marco de trabajo y que esté creada con una versión de lanzamiento. Si la aplicación incluye componentes .NET, comprueba si has instalado la versión correcta de .NET Framework.
 
@@ -63,7 +64,7 @@ Prueba la aplicación para asegurarte de que no sea una versión de depuración 
 #### <a name="41-archive-files-usage"></a>4.1 Uso de los archivos de almacenamiento
 
 **Antecedentes**  
-Esta prueba te ayuda a crear aplicaciones mejoradas del Puente de dispositivo de escritorio para que se ejecuten en equipos con [Windows 10 S](https://www.microsoft.com/windows/windows-10-s).
+Esta prueba te ayuda a crear aplicaciones mejoradas del Puente de dispositivo de escritorio para ejecutarse en equipos con [Windows 10 S](https://www.microsoft.com/windows/windows-10-s).
 
 **Detalles de la prueba**  
 Esta prueba busca todos los archivos ejecutables dentro de los archivos almacenados o con contenido autoextraíble. Como los archivos ejecutables dentro de este tipo de contenido no están firmados durante la incorporación a la Tienda Windows, es posible que la aplicación no funcione como está previsto en sistemas con Windows 10 S.
@@ -124,7 +125,7 @@ La imagen "BadgeLogo" tiene un valor ABGR {value} en la posición (x, y) que no 
 La imagen debe definir al menos una variante sin un calificador TargetSize. Debe definir un calificador Scale o dejar Scale y TargetSize sin especificar, para que de manera predeterminada se establezca Scale-100.  | Para más información, consulta las guías sobre el [diseño adaptativo](https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx) y los [recursos de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data). 
 Al paquete le falta un archivo "resources.pri".  | Si tienes contenido localizable en el manifiesto de la aplicación, asegúrate de que el paquete de la aplicación incluya un archivo resources.pri válido. 
 El archivo "resources.pri" debe tener un mapa de recursos cuyo nombre coincida con el nombre del paquete {package full name}.  | Este error puede obtenerse si el manifiesto cambió y el nombre del mapa de recursos del archivo resources.pri deja de coincidir con el nombre del paquete en el manifiesto. En el mensaje en sí, {package full name} contiene el nombre del paquete que resources.pri debe tener. Para corregir esto, debes reconstruir resources.pri y la forma más fácil de hacerlo es reconstruyendo el paquete de la aplicación. 
-El archivo "resources.pri" no debe tener habilitado Combinar automáticamente.  | MakePRI.exe admite una opción denominada Combinar automáticamente. El valor predeterminado de Combinar automáticamente es desactivado. Cuando está habilitado, Combinar automáticamente combina los recursos del paquete de idioma de una aplicación en un solo resources.pri en tiempo de ejecución. No recomendamos esto para aplicaciones que intentas distribuir a través de la Tienda Windows. El archivo resources.pri de una aplicación que se distribuye a través de la Tienda Windows debe estar en la raíz del paquete de la aplicación y contener todas las referencias de idiomas que esa aplicación admite. 
+El archivo "resources.pri" no debe tener habilitado Combinar automáticamente.  | MakePRI.exe admite una opción denominada Combinar automáticamente. El valor predeterminado de Combinar automáticamente es desactivado. Cuando está habilitado, Combinar automáticamente combina los recursos del paquete de idioma de una aplicación en un solo resources.pri en tiempo de ejecución. No se recomienda esto para las aplicaciones que se va a distribuir a través de la Microsoft Store. El resources.pri de una aplicación que se distribuye a través de la Microsoft Store debe estar en la raíz del paquete de la aplicación de y contienen todas las referencias de idioma que admite la aplicación. 
 La cadena {string} no cumple la restricción de longitud máxima de {number} caracteres.  | Consulta los [requisitos de metadatos del paquete](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). En el mensaje en sí, {string} se reemplaza por la cadena que tiene el error y {number} contiene la longitud máxima. 
 La cadena {string} no debe tener espacios en blanco iniciales ni finales.  | El esquema de los elementos en el manifiesto de la aplicación no permite caracteres de espacio en blanco inicial ni final. En el mensaje en sí, {string} se reemplaza por la cadena que tiene el error. Asegúrate de que ninguno de los valores localizados en los campos del manifiesto en resources.pri tenga caracteres de espacio en blanco inicial o final. 
 La cadena debe ser no vacía (mayor que cero en longitud).  | Consulta el tema sobre los [requisitos del paquete de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements) para más información. 
@@ -213,17 +214,17 @@ Las aplicaciones Puente de dispositivo de escritorio pueden aprovechar algunas A
  
 **Detalles de la prueba**  
 Esta prueba verifica todos los componentes para UWP en la aplicación:
-* Examina la tabla de direcciones de importación de cada uno de los binarios administrados del paquete de la aplicación para asegurarte de que ninguno tenga una dependencia en una API de Win32 no compatible con el desarrollo de aplicaciones de la Tienda Windows.
+* Comprueba que cada archivo binario administrado dentro del paquete de aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones de UWP mediante la comprobación de la tabla de direcciones de importación del binario.
 * Comprueba que cada binario administrado en el paquete de la aplicación no toma una dependencia de una función fuera del perfil aprobado. 
 
 **Acciones correctivas**  
 Esto puede corregirse al asegurarte de que la aplicación se haya compilado como una versión de lanzamiento y no como una versión de depuración. 
 
 > [!NOTE]
-> La versión de depuración de una aplicación no superará esta prueba, incluso si la aplicación usa solamente [API para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx). Revisa los mensajes de error para identificar la API presente que no sea una API permitida para aplicaciones de la Tienda Windows. 
+> La versión de depuración de una aplicación se producirá un error de esta prueba, incluso si la aplicación utiliza sólo [las API para aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx). Revise los mensajes de error para identificar la API presente que no es una API para aplicaciones UWP permitida. 
 
 > [!NOTE]
-> Las aplicaciones C++ creadas en una configuración de depuración no superarán esta prueba, incluso cuando la configuración use solo las API de Windows SDK para aplicaciones de la TiendaWindows. Consulta el [Alternativas a las API de Windows en aplicaciones de la TiendaWindows](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) para más información.
+> Aplicaciones de C++ que se crean en una configuración de depuración se producirá un error de esta prueba, incluso si la configuración sólo usa las API de SDK de Windows para las aplicaciones UWP. Para obtener más información, vea [alternativas a las API de Windows en las aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) .
 
 ### <a name="6-user-account-control-uac-test"></a>6. Prueba de control de cuentas de usuario (UAC)  
 
@@ -231,7 +232,7 @@ Esto puede corregirse al asegurarte de que la aplicación se haya compilado como
 Asegura que la aplicación no solicita el control de cuentas de usuario en tiempo de ejecución.
 
 **Detalles de la prueba**  
-Según la directiva de la Tienda Windows, una aplicación no puede solicitar la elevación de administrador o UIAccess. No se admiten permisos de seguridad con privilegios elevados. 
+Una aplicación no puede solicitar la elevación de administración o UIAccess por la directiva de Microsoft Store. No se admiten permisos de seguridad con privilegios elevados. 
 
 **Acciones correctivas**  
 Las aplicaciones deben ejecutarse como usuario interactivo. Para más información, consulta [UI Automation Security Overview (Introducción a la seguridad de la automatización de la interfaz de usuario](https://go.microsoft.com/fwlink/?linkid=839440).
@@ -272,7 +273,7 @@ La comprobación de archivos prohibidos del Kit para la certificación de aplica
 Esta comprobación suele producir un error cuando una aplicación usa una versión preliminar del archivo en lugar de la versión oficial más reciente. 
 
 **Acciones correctivas**  
-Para corregirlo, usa la versión más reciente del [SDK de Mapas de Bing](http://go.microsoft.com/fwlink/p/?linkid=614880) para aplicaciones de la Tienda Windows.
+Para corregir este problema, use la versión más reciente del [SDK de mapas de Bing](http://go.microsoft.com/fwlink/p/?linkid=614880) para aplicaciones UWP.
 
 #### <a name="82-private-code-signing"></a>8.2 Firma de código privado
 Prueba la existencia de archivos binarios de firma de código privado en el paquete de la aplicación. 
@@ -289,4 +290,4 @@ Quita todas las claves de firma de código privado (por ejemplo, archivos .pfx y
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)

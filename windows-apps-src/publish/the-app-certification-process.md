@@ -4,21 +4,22 @@ Description: When you finish creating your app's submission and click Submit to 
 title: Proceso de certificación de la aplicación
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
 ms.author: wdg-dev-content
-ms.date: 03/09/2018
+ms.date: 07/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, publicar, preprocesamiento, certificación, lanzamiento, pendiente, enviar, publicar, estado
-ms.localizationpriority: high
-ms.openlocfilehash: 0b2191808457401a41fe6bb0996d3f5a5ed4943d
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+keywords: Windows 10, uwp, publicación, preprocesamiento, certificación, liberar, pendientes, enviar, publicar, estado, tiempo
+ms.localizationpriority: medium
+ms.openlocfilehash: 8372f316786d83d72dff8ef7a0a8fd53e5390743
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788861"
 ---
 # <a name="the-app-certification-process"></a>Proceso de certificación de la aplicación
 
-Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a Store**, el envío entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Una vez que se haya realizado la certificación del envío, pueden pasar hasta 24 horas antes de que los clientes vean la descripción de la aplicación (o las actualizaciones de una aplicación publicada anteriormente) en la tienda. Verás una notificación cuando el envío esté publicado y disponible para los clientes, y el estado de la aplicación en el panel será **En la Tienda**.
+Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a Store**, el envío entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Después de que su envío pase certificación, puede tardar hasta 24 horas para que los clientes vean el listado de la aplicación para una nueva presentación, o para una presentación actualizada con los cambios a los paquetes. Si la actualización sólo cambia la lista de detalles de la tienda, el proceso de publicación se completará en menos de una hora.  Se le notificará cuando se publica su envío y estado de la aplicación en el panel estará **En el almacén**.
 
 ## <a name="preprocessing"></a>Preprocesamiento
 
@@ -36,13 +37,21 @@ Una vez completado el proceso de certificación, obtendrás un informe donde se 
 
 ## <a name="release"></a>Versión
 
-Cuando la aplicación aprueba la certificación, está lista para pasar al proceso de **Publicación**. Si has indicado que el envío se debe publicar lo antes posible, ocurrirá inmediatamente. Si has indicado que no se debe lanzar hasta una fecha determinada, esperaremos hasta esa fecha, a menos que hagas clic en el vínculo a **Cambiar fecha de lanzamiento**. Si has indicado que deseas publicar el envío manualmente, no la publicaremos hasta que indiques que debemos hacer clic en el botón **Publicar ahora** o si haces clic en el vínculo **Cambiar fecha de lanzamiento** y seleccionas una fecha específica.
+Cuando la aplicación pasa certificación, está preparado para pasar al proceso de **publicación** .
+
+- Si ha indicado que se debe publicar su envío tan pronto como sea posible (opción predeterminada), el proceso de publicación comenzará inmediatamente.
+- Si se trata de la primera vez que ha publicado la aplicación y especifica una **fecha de lanzamiento** en la sección [programación](configure-precise-release-scheduling.md#release) , la aplicación se convertirán en disponible en función de las selecciones de **fecha de lanzamiento** .
+- Si ha utilizado la [publicación mantenga las opciones](manage-submission-options.md#publishing-hold-options) para especificar que no deben ser liberar hasta una fecha determinada, se debe esperar hasta esa fecha para comenzar el proceso de publicación, a menos que seleccione la **fecha de lanzamiento de cambio**.
+- Si ha utilizado la [publicación mantenga las opciones](manage-submission-options.md#publishing-hold-options) para especificar que desea publicar la presentación manualmente, se no se inicia el proceso de publicación hasta que seleccione **Publicar ahora** (o seleccione la **fecha de lanzamiento de cambio** y seleccionar una fecha específica).
+
 
 ## <a name="publishing"></a>Publicación
 
 Los paquetes de la aplicación se firman digitalmente para protegerlos de alteraciones después de su lanzamiento. Una vez iniciada esta fase, ya no puedes cancelar el envío ni cambiar la fecha de lanzamiento.
 
-Mientras la aplicación se encuentra en la fase de publicación, el vínculo **Mostrar detalles** de la columna Estado para el envío de la aplicación te avisará cuando se pongan a disposición de los clientes en cada una de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles del listado de la Tienda. Los pasos que no se hayan completado llevarán la indicación **Pendiente**. La aplicación permanecerá en la fase de publicación hasta que el proceso se haya completado, lo que significa que los nuevos paquetes y los detalles del listado estén disponibles para todos los clientes potenciales de la aplicación. Este proceso puede tardar hasta 24 horas. 
+Para nuevas aplicaciones y actualizaciones que se incluyen los cambios realizados en los paquetes de la aplicación, el proceso de publicación se completará dentro de 24 horas. Para las actualizaciones que sólo cambiar opciones como almacén de detalles del anuncio, pero no cambian los paquetes de la aplicación, el proceso de publicación tardará menos de una hora.
+
+Mientras la aplicación se encuentra en la fase de publicación, el vínculo **Mostrar detalles** en la columna Estado para el envío de la aplicación le permite saber cuándo están disponibles para los clientes en cada uno de sus versiones compatibles del sistema operativo los nuevos paquetes y almacén de detalles del anuncio. Los pasos que no se hayan completado llevarán la indicación **Pendiente**. La aplicación permanecerá en la fase de publicación hasta que haya finalizado el proceso, lo que significa que los nuevos paquetes o detalles del anuncio están disponibles para todos los clientes potenciales de su aplicación.
 
 ## <a name="in-the-store"></a>En Store 
 

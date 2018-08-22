@@ -4,17 +4,18 @@ Description: The Windows Dev Center dashboard gives you the option to make your 
 title: Pruebas beta y distribución dirigida
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, prueba beta, distribución limitada, beta, versiones beta, pruebas, evaluadores
-ms.localizationpriority: high
-ms.openlocfilehash: f52848a43e654223f69014901ab516945a2ce278
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e453be22d752ed78263cb34011cdf9a333057e03
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788090"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Pruebas beta y distribución dirigida
 
@@ -32,9 +33,9 @@ Sea cual sea el método que elijas, estas son algunas cosas que debes tener en c
 
 ## <a name="private-audience"></a>Audiencia privada
 
-Si quieres permitir que los evaluadores usen tu aplicación antes de que esté disponible para otras personas y asegurarte de que nadie más pueda ver su descripción, usa la opción **Audiencia privada** en [visibilidad](choose-visibility-options.md) (en la página **Precios y disponibilidad** de tu envío). Este es el único método que te permite distribuir tu aplicación a los evaluadores mientras que impide por completo que el resto pueda ver una descripción de Store de la aplicación, incluso si pudieran escribirla en su vínculo directo.
+Si quieres permitir que los evaluadores usen tu aplicación antes de que esté disponible para otras personas y asegurarte de que nadie más pueda ver su descripción, usa la opción **Audiencia privada** en [visibilidad](choose-visibility-options.md) (en la página **Precios y disponibilidad** de tu envío). Este es el único método que te permite distribuir tu aplicación a los evaluadores mientras que impide por completo que el resto pueda ver una descripción de Store de la aplicación, incluso si pudieran escribirla en su vínculo directo. 
 
-La opción **Audiencia privada** puede usarse con aplicaciones destinadas a cualquier versión de sistema operativo, pero los evaluadores deben ejecutar Windows 10, versión 1607 o posterior (incluyendo Xbox One) y deben iniciar sesión con la cuenta de Microsoft asociada con la dirección de correo electrónico que proporciones.
+La **audiencia privada** opción puede sólo se puede usar cuando ya no publica la aplicación a una audiencia pública. Puede usar esta opción con aplicaciones de identificación de cualquier versión del sistema operativo, pero los evaluadores deben ejecutar Windows 10, versión 1607 o posterior (incluido el Xbox uno) y deben haber iniciado sesión con la cuenta de Microsoft asociada con la dirección de correo electrónico que usted proporcione.
 
 Para obtener más información, consulta [Audiencia privada](choose-visibility-options.md#audience).
 
@@ -50,9 +51,9 @@ Para obtener más información, consulta [Paquetes piloto](package-flights.md).
 
 <span id="hide" />
 
-### <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>Ocultación de la aplicación en Store y uso de códigos promocionales
+## <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>Ocultación de la aplicación en Store y uso de códigos promocionales
 
-Esta opción ofrece otra forma de limitar la distribución de una aplicación a solo un determinado grupo de evaluadores, sin publicar primero un envío disponible de manera amplia. Sin embargo, a diferencia de la opción de audiencia pública, podría ser posible para cualquiera ver la descripción de tu aplicación si dispone del vínculo directo. Si la confidencialidad es fundamental para el envío, se recomienda por el contrario publicar para una audiencia privada.
+Esta opción ofrece otra manera de limitar la distribución de una aplicación a sólo un determinado grupo de evaluadores, mientras se impide que alguien más detección de la aplicación en el almacén (o adquisición sin un código promocional). Sin embargo, a diferencia de la opción de audiencia pública, podría ser posible para cualquiera ver la descripción de tu aplicación si dispone del vínculo directo. Si la confidencialidad es fundamental para el envío, se recomienda por el contrario publicar para una audiencia privada.
 
 La ocultación de la aplicación y el uso de códigos promocionales pueden usarse con aplicaciones destinadas a cualquier versión del sistema operativo, pero los evaluadores solo podrán obtener la aplicación si ejecutan Windows 10.
 
@@ -63,7 +64,7 @@ Para usar esta opción:
 - Cuando estés listo para poner la aplicación a disposición del público, crea un nuevo envío y cambia la opción **Visibilidad** a **Hacer disponible y descubrible esta aplicación en Store** (junto con cualquier otro cambio que quieras realizar).
 
 
-### <a name="targeted-distribution-with-a-link-to-your-apps-listing"></a>Distribución dirigida con un vínculo a la descripción de la aplicación
+## <a name="targeted-distribution-with-a-link-to-your-apps-listing"></a>Distribución dirigida con un vínculo a la descripción de la aplicación
 
 A diferencia de las opciones descritas anteriormente, esta opción funciona para los clientes de Windows Phone 8.1, así como de Windows 10 (pero no en Windows 8 .x). Ningún cliente podrá encontrar la aplicación mediante búsqueda o exploración en Store, pero quienes dispongan del vínculo directo a su descripción de Store podrán descargarla en un dispositivo que ejecute Windows Phone 8.1 (o versiones anteriores) o Windows 10. No olvides que, para que tus evaluadores puedan descargar la aplicación sin costo, debes fijar su precio al valor **Gratis**.
 
@@ -73,7 +74,7 @@ Para usar esta opción:
 - Cuando estés listo para poner la aplicación a disposición del público, crea un nuevo envío y cambia la opción **Visibilidad** a **Hacer disponible y descubrible esta aplicación en Store** (junto con cualquier otro cambio que quieras realizar).
 
 
-### <a name="targeted-distribution-to-windows-phone-customers-with-specified-email-addresses"></a>Distribución dirigida a clientes de Windows Phone con direcciones de correo electrónico específicas
+## <a name="targeted-distribution-to-windows-phone-customers-with-specified-email-addresses"></a>Distribución dirigida a clientes de Windows Phone con direcciones de correo electrónico específicas
 
 > [!IMPORTANT]
 > Esta opción no está disponible para nuevos envíos. Si hubieras seleccionado previamente esta opción para una aplicación destinada a Windows Phone 8.1 o versiones anteriores, podrás seguir usándola para esa aplicación. Puedes realizar cambios en la lista de evaluadores (hasta 10.000) creando un nuevo envío. 

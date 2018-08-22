@@ -1,7 +1,7 @@
 ---
 author: laurenhughes
 title: Crear un certificado para firmar paquetes
-description: "Crea y exporta un certificado para firmar paquetes de la aplicación con herramientas de PowerShell."
+description: Crea y exporta un certificado para firmar paquetes de la aplicación con herramientas de PowerShell.
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,13 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
-ms.openlocfilehash: 47bd2d7db1517c7cb54b018ee014e3714e71cf3e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: db2c360a881071db14a1e65ffe2cd9a5bb16f0fe
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788080"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>Crear un certificado para firmar paquetes
 
-\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este artículo se explica cómo crear y exportar un certificado para firmar paquetes de la aplicación con herramientas de PowerShell. Se recomienda usar Visual Studio para el [empaquetado de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps), pero aún puedes empaquetar una aplicación de la Tienda manualmente si no usas Visual Studio para desarrollar la aplicación.
 
@@ -28,7 +31,7 @@ En este artículo se explica cómo crear y exportar un certificado para firmar p
 Una aplicación que contiene un archivo AppxManifest.xml. Debes hacer referencia al archivo de manifiesto al crear el certificado que se usará para firmar el paquete final de la aplicación. Para obtener más información acerca de cómo empaquetar una aplicación manualmente, consulta [Crear un paquete de la aplicación con la herramienta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool).
 
 - **Cmdlets de la infraestructura de clave pública (PKI)**  
-Necesitas cmdlets de PKI para crear y exportar el certificado de firma. Para obtener más información, consulta [Cmdlets de la Infraestructura de clave pública](https://technet.microsoft.com/library/hh848636.aspx).
+Necesitas cmdlets de PKI para crear y exportar el certificado de firma. Para obtener más información, consulta [Cmdlets de la Infraestructura de clave pública](https://docs.microsoft.com/powershell/module/pkiclient/).
 
 ## <a name="create-a-self-signed-certificate"></a>Crear un certificado autofirmado
 
@@ -48,14 +51,14 @@ Por ejemplo, la sección "Identity" en el archivo AppxManifest.xml de tu aplicac
 En este caso, "Publisher" es "CN = Contoso Software, O = Contoso Corporation, C = US", que debe usarse para crear el certificado. 
 
 ### <a name="use-new-selfsignedcertificate-to-create-a-certificate"></a>Usa **New-SelfSignedCertificate** para crear un certificado
-Usa el cmdlet de PowerShell **New-SelfSignedCertificate** para crear un certificado autofirmado. **New-SelfSignedCertificate** tiene varios parámetros que deben personalizarse, pero, a los efectos de este artículo, nos centraremos en cómo crear un certificado sencillo que funcione con **SignTool**. Para obtener más ejemplos y usos de este cmdlet, consulta [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633.aspx).
+Usa el cmdlet de PowerShell **New-SelfSignedCertificate** para crear un certificado autofirmado. **New-SelfSignedCertificate** tiene varios parámetros que deben personalizarse, pero, a los efectos de este artículo, nos centraremos en cómo crear un certificado sencillo que funcione con **SignTool**. Para obtener más ejemplos y usos de este cmdlet, consulta [New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/New-SelfSignedCertificate).
 
 En función del archivo AppxManifest.xml del ejemplo anterior, debes usar la siguiente sintaxis para crear un certificado. En un símbolo del sistema de PowerShell con privilegios elevados:
 ```
 New-SelfSignedCertificate -Type Custom -Subject "CN=Contoso Software, O=Contoso Corporation, C=US" -KeyUsage DigitalSignature -FriendlyName <Your Friendly Name> -CertStoreLocation "Cert:\LocalMachine\My"
 ```
 
-Después de ejecutar este comando, el certificado se agregará al almacén local de certificados, como se especifica en el parámetro "-CertStoreLocation". El resultado de los comandos también generarán la huella digital del certificado.  
+Después de ejecutar este comando, el certificado se agregará al almacén local de certificados, como se especifica en el parámetro "-CertStoreLocation". El resultado del comando también producirá la huella digital del certificado.  
 
 **Nota**  
 Puedes ver el certificado en una ventana de PowerShell mediante los siguientes comandos:

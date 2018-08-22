@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f533ab00cd80838d630a78f6f877f65fc1d617ba
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: fb273b6a37cb2f6322b0c9e3842b69676f82c616
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691494"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788630"
 ---
 # <a name="background-transfers"></a>Transferencias en segundo plano
 Usa la API de transferencia en segundo plano para copiar archivos de forma confiable en la red. La API de transferencia en segundo plano proporciona funciones de carga y descarga avanzadas que se ejecutan en segundo plano durante la suspensión de la aplicación y que persisten tras la finalización de esta. La API supervisa el estado de red, y suspende y reanuda automáticamente las transferencias cuando se pierde la conexión. Además, las transferencias son compatibles con el sensor de datos y el de batería, lo que significa que la actividad de descarga se ajusta según la conectividad y el estado de la batería actuales del dispositivo. La API es ideal para cargar y descargar archivos grandes mediante HTTP(S). También se admite FTP, pero solo para descargas.
@@ -29,9 +29,10 @@ Si descargas recursos pequeños que probablemente se completen rápidamente, deb
 ### <a name="how-does-the-background-transfer-feature-work"></a>¿Cómo funciona la característica de transferencia en segundo plano?
 Cuando una aplicación usa una transferencia en segundo plano para iniciar una transferencia, la solicitud se configura e inicializa con objetos de clase [**BackgroundDownloader**](https://msdn.microsoft.com/library/windows/apps/br207126) o [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140). El sistema controla cada operación de transferencia por separado y la separa de la aplicación que llama. Dispones de información del progreso si quieres indicar el estado del usuario en la interfaz de usuario de la aplicación. Tu aplicación puede pausar, reanudar, cancelar o incluso leer los datos mientras se realiza la transferencia. La manera en que el sistema controla las transferencias promueve el uso inteligente de energía y evita los problemas que pueden surgir ante eventos que afectan a la aplicación conectada, como la suspensión inesperada de la aplicación, la finalización o cambios repentinos en el estado de red.
 
-Además, la transferencia en segundo plano usa eventos de System Event Broker. Como tal, el número de descargas está limitado por el número de eventos disponibles en el sistema. De forma predeterminada, son 500eventos, pero esos eventos se comparten entre todos los procesos. Por lo tanto, una sola aplicación no debe crear más de 100 transferencias en segundo plano cada vez.
+> [!NOTE]
+> Debido a restricciones de recursos por aplicación, una aplicación no debe tener más de 200 transferencias (DownloadOperations + UploadOperations) en cualquier momento. La superación de ese límite puede dejar la cola de transferencia de la aplicación en un estado irrecuperable.
 
-Cuando una aplicación inicia una transferencia en segundo plano, la aplicación debe llamar a [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) en todos los objetos [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) existentes. No hacerlo puede provocar una fuga de esos eventos y, por consiguiente, hacer que la característica de transferencia en segundo plano sea inútil.
+Cuando se inicia una aplicación, debe llamar a [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) en todos los objetos existentes de [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) y [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) . De esta forma no provocará la pérdida de transferencias ya ha realizado y finalmente representará el uso de la característica de transferencia en segundo plano inútil.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>Realización de solicitudes de archivos autenticadas con la transferencia en segundo plano
 La transferencia en segundo plano proporciona métodos que admiten credenciales básicas de proxy y servidor, así como el uso de encabezados HTTP personalizados (mediante [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)) para cada operación de transferencia.
@@ -167,8 +168,6 @@ Después de que se finalice o cancele una [**UploadOperation**](https://msdn.mic
 Al usar la transferencia en segundo plano, cada descarga existe como una [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) que expone varios métodos de control que se usan para pausar, reanudar, reiniciar o cancelar la operación. El sistema controla automáticamente los eventos de la aplicación (por ejemplo, suspensión o finalización) y los cambios en la conectividad por **DownloadOperation**; las descargas continuarán durante los periodos de suspensión o pausa de la aplicación y se mantendrán tras la finalización de la misma. En escenarios de red móvil, al establecer la propiedad [**CostPolicy**](https://msdn.microsoft.com/library/windows/apps/hh701018), se indica si tu aplicación iniciará o continuará las descargas mientras se usa una red de uso medido para la conexión a Internet.
 
 Si descargas recursos pequeños que probablemente se completen rápidamente, debes usar las API [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) en vez de una transferencia en segundo plano.
-
-Debido a restricciones de recursos por aplicación, una aplicación no debe tener más de 200 transferencias (DownloadOperations + UploadOperations) en cualquier momento. La superación de ese límite puede dejar la cola de transferencia de la aplicación en un estado irrecuperable.
 
 En los siguientes ejemplos, te explicaremos cómo crear e inicializar una descarga básica y cómo enumerar y volver a introducir operaciones persistentes de una sesión anterior de la aplicación.
 

@@ -1,7 +1,7 @@
 ---
 author: jnHs
-Description: "El tiempo estimado para transferir pagos, los umbrales de pago aplicables y los catálogos de soluciones de Microsoft desde los que puedes recibir pagos pueden variar según el país o la región y el tipo de cuenta de pago."
-title: "Umbrales, métodos y plazos de pago"
+Description: The estimated time to transfer payments, applicable payment thresholds, and Microsoft marketplaces from which you can receive payments can vary depending on your country/region and payout account type.
+title: Umbrales, métodos y plazos de pago
 ms.author: wdg-dev-content
 ms.date: 06/19/2017
 ms.topic: article
@@ -9,11 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
-ms.openlocfilehash: 0d0e421108de5daecb552c606b3f2c00b722fb89
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 8a7428b9278e4fc3264f652030f0409cab056d31
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2787385"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Umbrales, métodos y plazos de pago
 
@@ -44,12 +46,12 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 > [!NOTE]
 > Los umbrales de pago se expresan aquí en USD. En algunos mercados, se usa el equivalente en moneda local. 
 
-- [TiendaWindows](#windows-store)
+- [Microsoft Store](#microsoft-store)
 - [Microsoft Advertising](#microsoft-advertising)
 - [Azure Marketplace](#azure-marketplace)
 - [Tienda Office](#office-store)
 
-### <a name="windows-store"></a>TiendaWindows 
+### <a name="microsoft-store"></a>Microsoft Store 
 
 <table>
   <tr>

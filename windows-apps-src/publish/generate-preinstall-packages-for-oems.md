@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Si tu cuenta de desarrollador tiene los permisos adecuados, puedes generar y descargar paquetes de preinstalación para que un OEM pueda incluir tu aplicación en su imagen de SO."
+Description: If your developer account has been granted the appropriate permissions, you can generate and download preinstall packages so that an OEM can include your app in their OS image.
 title: Generar paquetes preinstalados para OEM
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
 ms.author: wdg-dev-content
@@ -9,11 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 076223a8407468dd34d8b24fec44288f3be67456
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 598a73b291d5f8b3c004f1e9adeddf0b92b841ab
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2787950"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a>Generar paquetes preinstalados para OEM
 

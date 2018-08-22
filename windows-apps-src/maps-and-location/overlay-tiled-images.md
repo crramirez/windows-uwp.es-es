@@ -4,18 +4,18 @@ title: Superponer imágenes en mosaico en un mapa
 description: Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
 ms.author: normesta
-ms.date: 02/08/2017
+ms.date: 07/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer
 ms.localizationpriority: medium
-ms.openlocfilehash: fb2fafb3feeb5242c9069ea9e871eebc90351714
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: ba1f7d52a1b16fbb421202229ce724dab384ffa0
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691071"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788640"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Superponer imágenes en mosaico en un mapa
 
@@ -34,11 +34,9 @@ Al usar la opción de orígenes de icono, no tienes que escribir código para so
 
 Este es un ejemplo de la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) de una clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) que muestra los parámetros reemplazables para las coordenadas X e Y, y el nivel de zoom.
 
-``` syntax
-    http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
+```syntax
+http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
 ```
-
- 
 
 (Las coordenadas X e Y representan la ubicación del icono individual en el mapa del mundo con el nivel de detalle especificado. El sistema de numeración del icono empieza desde {0, 0} en la esquina superior izquierda del mapa. Por ejemplo, el icono en {1, 2} es la segunda columna de la tercera fila de la cuadrícula de iconos).
 
@@ -58,7 +56,7 @@ Superpón imágenes en mosaico desde un origen de iconos en un mapa mediante [**
 
     El siguiente ejemplo crea una instancia de una clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986). Este ejemplo especifica el valor de [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) en el constructor de la clase **HttpMapTileDataSource**.
 
-    ```cs
+    ```csharp
         HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
           "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
     ```
@@ -67,7 +65,7 @@ Superpón imágenes en mosaico desde un origen de iconos en un mapa mediante [**
 
     En el siguiente ejemplo se especifica la propiedad [**DataSource**](https://msdn.microsoft.com/library/windows/apps/dn637149) en el constructor de la clase [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144).
 
-    ```cs
+    ```csharp
         MapTileSource tileSource = new MapTileSource(dataSource);
     ```
 
@@ -80,7 +78,7 @@ Superpón imágenes en mosaico desde un origen de iconos en un mapa mediante [**
 
 3.  Agrega la clase [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144) a la colección [**TileSources**](https://msdn.microsoft.com/library/windows/apps/dn637053) de [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-    ```cs
+    ```csharp
          MapControl1.TileSources.Add(tileSource);
     ```
 
@@ -93,7 +91,7 @@ Superpón imágenes en mosaico recuperadas desde un servicio web mediante la cla
 2.  Especifica el formato del URI que el servicio web espera, como el valor de la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992). Para crear este valor, inserta los parámetros reemplazables en el URI base. Por ejemplo, en la siguiente muestra de código, el valor de **UriFormatString** es:
 
     ``` syntax
-        http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
+    http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
     ```
 
     El servicio web debe admitir un URI que contenga los parámetros reemplazables {x}, {y}, y {zoomlevel}. La mayoría de los servicios web (Nokia, Bing o Google, por ejemplo) admiten URI con este formato. Si el servicio web requiere argumentos adicionales que no estén disponibles con la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control de los eventos [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#customuri) que figura más adelante en este tema.
@@ -103,47 +101,71 @@ Superpón imágenes en mosaico recuperadas desde un servicio web mediante la cla
 El siguiente ejemplo, se superponen los iconos de un servicio web ficticio en un mapa de Norteamérica. El valor de la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) se especifica en el constructor de la clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986). En este ejemplo, solo se muestran los iconos dentro de los límites geográficos especificados en la propiedad opcional [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147).
 
 ```csharp
-        private void AddHttpMapTileSource()
-        {
-            // Create the bounding box in which the tiles are displayed.
-            // This example represents North America.
-            BasicGeoposition northWestCorner =
-                new BasicGeoposition() { Latitude = 48.38544, Longitude = -124.667360 };
-            BasicGeoposition southEastCorner =
-                new BasicGeoposition() { Latitude = 25.26954, Longitude = -80.30182 };
-            GeoboundingBox boundingBox = new GeoboundingBox(northWestCorner, southEastCorner);
+private void AddHttpMapTileSource()
+{
+    // Create the bounding box in which the tiles are displayed.
+    // This example represents North America.
+    BasicGeoposition northWestCorner =
+        new BasicGeoposition() { Latitude = 48.38544, Longitude = -124.667360 };
+    BasicGeoposition southEastCorner =
+        new BasicGeoposition() { Latitude = 25.26954, Longitude = -80.30182 };
+    GeoboundingBox boundingBox = new GeoboundingBox(northWestCorner, southEastCorner);
 
-            // Create an HTTP data source.
-            // This example retrieves tiles from a fictitious web service.
-            HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
-                "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
+    // Create an HTTP data source.
+    // This example retrieves tiles from a fictitious web service.
+    HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
+        "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
 
-            // Optionally, add custom HTTP headers if the web service requires them.
-            dataSource.AdditionalRequestHeaders.Add("header name", "header value");
+    // Optionally, add custom HTTP headers if the web service requires them.
+    dataSource.AdditionalRequestHeaders.Add("header name", "header value");
 
-            // Create a tile source and add it to the Map control.
-            MapTileSource tileSource = new MapTileSource(dataSource);
-            tileSource.Bounds = boundingBox;
-            MapControl1.TileSources.Add(tileSource);
-        }
+    // Create a tile source and add it to the Map control.
+    MapTileSource tileSource = new MapTileSource(dataSource);
+    tileSource.Bounds = boundingBox;
+    MapControl1.TileSources.Add(tileSource);
+}
+```
+
+```cppwinrt
+...
+#include <winrt/Windows.Devices.Geolocation.h>
+#include <winrt/Windows.UI.Xaml.Controls.Maps.h>
+...
+void MainPage::AddHttpMapTileSource()
+{
+    Windows::Devices::Geolocation::BasicGeoposition northWest{ 48.38544, -124.667360 };
+    Windows::Devices::Geolocation::BasicGeoposition southEast{ 25.26954, -80.30182 };
+    Windows::Devices::Geolocation::GeoboundingBox boundingBox{ northWest, southEast };
+
+    Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource dataSource{
+        L"http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}" };
+
+    dataSource.AdditionalRequestHeaders().Insert(L"header name", L"header value");
+
+    Windows::UI::Xaml::Controls::Maps::MapTileSource tileSource{ dataSource };
+    tileSource.Bounds(boundingBox);
+
+    MapControl1().TileSources().Append(tileSource);
+}
+...
 ```
 
 ```cpp
 void MainPage::AddHttpMapTileSource()
 {
-       BasicGeoposition northWest = { 48.38544, -124.667360 };
-       BasicGeoposition southEast = { 25.26954, -80.30182 };
-       GeoboundingBox^ boundingBox = ref new GeoboundingBox(northWest, southEast);
+    BasicGeoposition northWest = { 48.38544, -124.667360 };
+    BasicGeoposition southEast = { 25.26954, -80.30182 };
+    GeoboundingBox^ boundingBox = ref new GeoboundingBox(northWest, southEast);
 
-       auto dataSource = ref new Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource(
-             "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
+    auto dataSource = ref new Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource(
+        "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
 
-       dataSource->AdditionalRequestHeaders->Insert("header name", "header value");
+    dataSource->AdditionalRequestHeaders->Insert("header name", "header value");
 
-       auto tileSource = ref new Windows::UI::Xaml::Controls::Maps::MapTileSource(dataSource);
-       tileSource->Bounds = boundingBox;
+    auto tileSource = ref new Windows::UI::Xaml::Controls::Maps::MapTileSource(dataSource);
+    tileSource->Bounds = boundingBox;
 
-       this->MapControl1->TileSources->Append(tileSource);
+    this->MapControl1->TileSources->Append(tileSource);
 }
 ```
 
@@ -202,7 +224,6 @@ El ejemplo siguiente carga iconos almacenados como archivos en la carpeta de ins
 
 ## <a name="provide-a-custom-uri"></a>Proporcionar un URI personalizado
 
-
 Si los parámetros reemplazables disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) de la clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) o la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) de la clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994) no son suficientes para recuperar los iconos, deberás crear un URI personalizado. Crea y devuelve un URI personalizado al proporcionar un controlador personalizado para el evento **UriRequested**. El evento **UriRequested** se genera para cada icono individual.
 
 1.  En el controlador personalizado del evento **UriRequested**, se combinan los argumentos personalizados requeridos con las propiedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn610743), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn610744) y [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn610745) de la clase [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177), para crear el URI personalizado.
@@ -247,7 +268,6 @@ using System.Threading.Tasks;
 ```
 
 ## <a name="overlay-tiles-from-a-custom-source"></a>Superponer iconos desde un origen personalizado
-
 
 Superpón iconos personalizados mediante la clase [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983). Crea iconos mediante programación en la memoria sobre la marcha o escribe tu propio código para cargar los iconos existentes de otro origen.
 
@@ -316,47 +336,87 @@ using System.Threading.Tasks;
         }
 ```
 
-```cpp
-InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
+```cppwinrt
+...
+#include <winrt/Windows.Storage.Streams.h>
+...
+Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::InMemoryRandomAccessStream> MainPage::CustomRandomAccessStream()
 {
-       int pixelHeight = 256;
-       int pixelWidth = 256;
-       int bpp = 4;
+    constexpr int pixelHeight{ 256 };
+    constexpr int pixelWidth{ 256 };
+    constexpr int bpp{ 4 };
 
-       Array<byte>^ bytes = ref new Array<byte>(pixelHeight * pixelWidth * bpp);
+    std::array<uint8_t, pixelHeight * pixelWidth * bpp> bytes;
 
-       for (int y = 0; y < pixelHeight; y++)
-       {
-              for (int x = 0; x < pixelWidth; x++)
-              {
-                     int pixelIndex = y * pixelWidth + x;
-                     int byteIndex = pixelIndex * bpp;
+    for (int y = 0; y < pixelHeight; y++)
+    {
+        for (int x = 0; x < pixelWidth; x++)
+        {
+            int pixelIndex{ y * pixelWidth + x };
+            int byteIndex{ pixelIndex * bpp };
 
-                     // Set the current pixel bytes.
-                     bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
-                     bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
-                     bytes[byteIndex + 2] = (byte)(std::rand() % 256);    // Blue
-                     bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
-              }
-       }
+            // Set the current pixel bytes.
+            bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
+            bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
+            bytes[byteIndex + 2] = (byte)(std::rand() % 256);    // Blue
+            bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
+        }
+    }
 
-       // Create RandomAccessStream from byte array.
-       InMemoryRandomAccessStream^ randomAccessStream = ref new InMemoryRandomAccessStream();
-       IOutputStream^ outputStream = randomAccessStream->GetOutputStreamAt(0);
-       DataWriter^ writer = ref new DataWriter(outputStream);
-       writer->WriteBytes(bytes);
+    // Create RandomAccessStream from byte array.
+    Windows::Storage::Streams::InMemoryRandomAccessStream randomAccessStream;
+    Windows::Storage::Streams::IOutputStream outputStream{ randomAccessStream.GetOutputStreamAt(0) };
+    Windows::Storage::Streams::DataWriter writer{ outputStream };
+    writer.WriteBytes(bytes);
 
-       create_task(writer->StoreAsync()).then([writer](unsigned int)
-       {
-              create_task(writer->FlushAsync());
-       });
+    co_await writer.StoreAsync();
+    co_await writer.FlushAsync();
 
-       return randomAccessStream;
+    co_return randomAccessStream;
+}
+...
+```
+
+```cpp
+InMemoryRandomAccessStream^ TileSources::CustomRandomAccessStream::get()
+{
+    int pixelHeight = 256;
+    int pixelWidth = 256;
+    int bpp = 4;
+
+    Array<byte>^ bytes = ref new Array<byte>(pixelHeight * pixelWidth * bpp);
+
+    for (int y = 0; y < pixelHeight; y++)
+    {
+        for (int x = 0; x < pixelWidth; x++)
+        {
+            int pixelIndex = y * pixelWidth + x;
+            int byteIndex = pixelIndex * bpp;
+
+            // Set the current pixel bytes.
+            bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
+            bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
+            bytes[byteIndex + 2] = (byte)(std::rand() % 256);    // Blue
+            bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
+        }
+    }
+
+    // Create RandomAccessStream from byte array.
+    InMemoryRandomAccessStream^ randomAccessStream = ref new InMemoryRandomAccessStream();
+    IOutputStream^ outputStream = randomAccessStream->GetOutputStreamAt(0);
+    DataWriter^ writer = ref new DataWriter(outputStream);
+    writer->WriteBytes(bytes);
+
+    create_task(writer->StoreAsync()).then([writer](unsigned int)
+    {
+        create_task(writer->FlushAsync());
+    });
+
+    return randomAccessStream;
 }
 ```
 
 ## <a name="replace-the-default-map"></a>Reemplazo del mapa predeterminado
-
 
 Reemplazar todo el mapa con iconos personalizados o de terceros:
 

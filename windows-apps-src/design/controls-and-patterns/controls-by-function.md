@@ -12,22 +12,35 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 21539d625dc70ded7bec77b9916c7ea4bff72536
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396814"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788530"
 ---
 # <a name="controls-by-function"></a>Controles por función
 
- 
-
 El marco de trabajo de la interfaz de usuario de XAML para Windows proporciona una biblioteca amplia de controles compatibles con el desarrollo de la interfaz de usuario. Algunos de estos controles tienen una representación visual y otros funcionan como contenedores de otros controles o de contenido, como imágenes y multimedia. 
 
-Puedes ver muchos de los controles de interfaz de usuario de Windows si descargas la [Muestra de conceptos básicos de la interfaz de usuario XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992). 
+Puedes ver muchos de los controles de interfaz de usuario de Windows si descargas la [Muestra de conceptos básicos de la interfaz de usuario XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992).
 
-Aquí se muestra una lista por función de los controles de XAML comunes que puedes usar en tu aplicación. 
+<table>
+<th align="left">Galería de controles XAML<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td>
+    <p>Si tiene la aplicación de la <strong style="font-weight: semi-bold">Galería de controles de XAML</strong> instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/NavigationView">Abrir la aplicación y vea la NavigationView en acción</a> </p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
+    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtener el código fuente (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
+
+Aquí se muestra una lista por función de los controles de XAML comunes que puedes usar en tu aplicación.
 
 ## <a name="appbars-and-commands"></a>Barras de la aplicación y comandos
 
@@ -257,7 +270,7 @@ Muestra un mensaje que requiere la intervención del usuario. (Al contrario que 
 
 Referencia: [Control flotante](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
 
-Diseño y procedimientos: [Menús contextuales y cuadros de diálogo](dialogs.md) 
+Diseño y procedimientos: [menús emergentes](dialogs-and-flyouts/flyouts.md) 
 
 ### <a name="menu-flyout"></a>Control flotante de menú
 Muestra de forma temporal una lista de comandos u opciones relacionados con lo que está haciendo el usuario.
@@ -277,7 +290,7 @@ Muestra de forma temporal una lista de comandos u opciones relacionados con lo q
 
 Referencia: [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyout.aspx), [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) 
 
-Diseño y procedimientos: [Menús contextuales y cuadros de diálogo](dialogs.md) 
+Diseño y procedimientos: [menús y menús contextuales](menus.md) 
 
 Código de muestra: [Muestra del menú contextual XAML](http://go.microsoft.com/fwlink/p/?LinkId=620021)
 
@@ -286,7 +299,7 @@ Menú personalizado que presenta los comandos que especifiques.
 
 Referencia: [PopupMenu](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
 
-Diseño y procedimientos: [Menús contextuales y cuadros de diálogo](dialogs.md) 
+Diseño y procedimientos: [cuadros de diálogo](dialogs-and-flyouts/dialogs.md) 
 
 ### <a name="tooltip"></a>Información sobre herramientas
 Ventana emergente que muestra información para un elemento. 
@@ -540,58 +553,16 @@ Consulta Elemento multimedia
 
 ## <a name="navigation"></a>Navegación
 
-### <a name="hub"></a>Centralizada
-Control contenedor que permite al usuario ver y navegar a distintas secciones de contenido.
+### <a name="navigationview"></a>NavigationView
 
-```xaml
-<Hub>
-    <HubSection>
-        <!--- hub section content -->
-    </HubSection>
-    <HubSection>
-        <!--- hub section content -->
-    </HubSection>
-</Hub>
-```
+Un contenedor adaptable y el modelo de navegación flexible que implementa el panel de navegación izquierdo, la navegación superior y el patrón de fichas.
 
-Referencia: [Concentrador](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.hub.aspx) 
+Referencia: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-Diseño y procedimientos: [Guía de control de navegación centralizada](hub.md) 
-
-Código de muestra: [Muestra del control de navegación centralizada XAML](http://go.microsoft.com/fwlink/p/?LinkID=309828)
-
-### <a name="pivot"></a>Dinámica
-Un modelo de contenedor y navegación de pantalla completa que, además, proporciona una forma rápida de moverse entre distintos elementos dinámicos (vistas o filtros), normalmente en el mismo conjunto de datos.
-
-Se puede aplicar un estilo al control dinámico para que tenga un diseño de "pestaña".
-
-Referencia: [Control dinámico](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) 
-
-Diseño y procedimientos: [Guía de control de pestañas y control dinámico](tabs-pivot.md) 
-
-Código de muestra: [Muestra de control dinámico](http://go.microsoft.com/fwlink/p/?LinkId=619903&amp;clcid=0x409)
-
-### <a name="semantic-zoom"></a>Zoom semántico
-Control de contenedor que permite al usuario acercarse entre dos vistas de una colección de elementos.
-
-```xaml
-<SemanticZoom>
-    <ZoomedInView>
-        <GridView></GridView>
-    </ZoomedInView>
-    <ZoomedOutView>
-        <GridView></GridView>
-    </ZoomedOutView>
-</SemanticZoom>
-```
-
-Referencia: [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.aspx) 
-
-Diseño y procedimientos: [Guía de control de zoom semántico](semantic-zoom.md) 
-
-Código de muestra: [Muestra de agrupación de GridView y SemanticZoom XAML](http://go.microsoft.com/fwlink/p/?linkid=226564)
+Diseño y procedimientos: [Guía de control de NavigationView](navigationview.md)
 
 ### <a name="splitview"></a>SplitView
+
 Control de contenedor con dos vistas; una vista para el contenido principal y otra vista que se usa normalmente para un menú de navegación.
 
 ![Control de vista en dos paneles](images/controls/split-view.png) 
@@ -612,6 +583,7 @@ Referencia: [SplitView](https://msdn.microsoft.com/library/windows/apps/xaml/win
 Diseño y procedimientos: [Guía de control de vista en dos paneles](split-view.md)
 
 ### <a name="web-view"></a>Vista web
+
 Control de contenedor que hospeda el contenido web.
 
 ```xaml
@@ -624,6 +596,27 @@ Referencia: [WebView](https://msdn.microsoft.com/library/windows/apps/xaml/windo
 Diseño y procedimientos: Directrices para vistas web 
 
 Código de muestra: [Muestra de control WebView de XAML](http://go.microsoft.com/fwlink/p/?linkid=238582)
+
+### <a name="semantic-zoom"></a>Zoom semántico
+
+Control de contenedor que permite al usuario acercarse entre dos vistas de una colección de elementos.
+
+```xaml
+<SemanticZoom>
+    <ZoomedInView>
+        <GridView></GridView>
+    </ZoomedInView>
+    <ZoomedOutView>
+        <GridView></GridView>
+    </ZoomedOutView>
+</SemanticZoom>
+```
+
+Referencia: [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.aspx) 
+
+Diseño y procedimientos: [Guía de control de zoom semántico](semantic-zoom.md)
+
+Código de muestra: [Muestra de agrupación de GridView y SemanticZoom XAML](http://go.microsoft.com/fwlink/p/?linkid=226564)
 
 ## <a name="progress-controls"></a>Controles de progreso
 

@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, promocional, promoción, destacados, presentar, store
-ms.localizationpriority: high
-ms.openlocfilehash: 3c24e9ee9690553f2900fe6e00ce60149f812ae2
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 18b2212a0b063611a546c3f627016fc7d3179071
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788222"
 ---
 # <a name="make-your-app-easier-to-promote"></a>Facilitar la promoción de la aplicación
 

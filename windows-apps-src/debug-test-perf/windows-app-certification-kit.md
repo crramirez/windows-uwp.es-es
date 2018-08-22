@@ -2,26 +2,26 @@
 author: PatrickFarley
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Kit para la certificación de aplicaciones en Windows
-description: Para que la aplicación tenga posibilidades de publicarse en la Tienda Windows, o de obtener la certificación de Windows, debes validarla y probarla localmente antes de enviarla para su certificación. En este tema explicamos cómo instalar y ejecutar el Kit para la certificación de aplicaciones en Windows.
+description: Para conceder a la aplicación la mejor posibilidad de que se publica en Microsoft Store, o se están convirtiendo en certificados de Windows, validar y probar localmente antes de enviar para una certificación. En este tema explicamos cómo instalar y ejecutar el Kit para la certificación de aplicaciones en Windows.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: fb5303898bfb0d7021ba4c0aa48afd5038bcad4d
-ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+keywords: Windows 10, uwp, certificación de la aplicación
+ms.localizationpriority: medium
+ms.openlocfilehash: b7a72a89704aa3768cc43cdfbb75b620bae303e3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2017
-ms.locfileid: "695469"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788470"
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Para que la aplicación tenga posibilidades de [publicarse en la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Hh694062), o de obtener la [certificación de Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx), debes validarla y probarla localmente antes de enviarla para su certificación. En este tema explicamos cómo instalar y ejecutar el [Kit para la certificación de aplicaciones en Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666).
+Para obtener la aplicación [Windows certificada](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) o preparar para [su publicación en el almacén de Microsoft](https://msdn.microsoft.com/library/windows/apps/Hh694062), debe validar y probar localmente en primer lugar. En este tema se muestra cómo instalar y ejecutar el [Kit de certificación de aplicación de Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) para asegurarse de que la aplicación es seguro y eficaz.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -46,7 +46,7 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 3.  Después de introducir o seleccionar la aplicación que deseas probar, haz clic en **Siguiente**.
 
-4.  En la siguiente pantalla, verás el flujo de trabajo de prueba que se alinea con el tipo de aplicación que se está probando. Si una prueba aparece atenuada en la lista, significa que no es aplicable a tu entorno. Por ejemplo, si estás probando una aplicación de Windows 10 en Windows 7, solo las pruebas estáticas se aplicarán al flujo de trabajo. Ten en cuenta que es posible que la Tienda Windows aplique todas las pruebas desde este flujo de trabajo. Selecciona las pruebas que deseas ejecutar y haz clic en **Siguiente**.
+4.  En la siguiente pantalla, verás el flujo de trabajo de prueba que se alinea con el tipo de aplicación que se está probando. Si una prueba aparece atenuada en la lista, significa que no es aplicable a tu entorno. Por ejemplo, si estás probando una aplicación de Windows 10 en Windows 7, solo las pruebas estáticas se aplicarán al flujo de trabajo. Tenga en cuenta que la Store Microsoft puede aplicar todas las pruebas de este flujo de trabajo. Selecciona las pruebas que deseas ejecutar y haz clic en **Siguiente**.
 
     El Kit para la certificación de aplicaciones de Windows inicia la validación de la aplicación.
 
@@ -90,14 +90,14 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 Los umbrales de la prueba de rendimiento del Kit para la certificación de aplicaciones en Windows se basan en el rendimiento de un equipo de bajo consumo.
 
-Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumple con las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Dn764944), te recomendamos probarla en un equipo de bajo consumo; por ejemplo, un equipo basado en un procesador IntelAtom con una resolución de pantalla de 1366x768 (o superior) y un disco duro giratorio (en lugar de un disco duro de estado sólido).
+Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de su aplicación cumpla las [Directivas de almacén de Microsoft](https://msdn.microsoft.com/library/windows/apps/Dn764944), le recomendamos que pruebe su aplicación en un equipo de baja potencia, como un Atom Intel basadas en el procesador equipo con una resolución de pantalla de 1366 x 768 (o superior) y una rotación disco duro unidad (a diferencia de una unidad de disco duro de estado sólida).
 
-A medida que evolucionan los equipos de bajo consumo, las características de rendimiento podrían cambiar con el tiempo. Consulta las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Dn764944) más recientes y prueba la aplicación con la versión más reciente del Kit para la certificación de aplicaciones en Windows para asegurarte de que cumple los últimos requisitos de rendimiento.
+A medida que evolucionan los equipos de bajo consumo, las características de rendimiento podrían cambiar con el tiempo. Consulte las últimas [Directivas de almacén de Microsoft](https://msdn.microsoft.com/library/windows/apps/Dn764944) y probar la aplicación con la versión más reciente del Kit de certificación de aplicación de Windows para asegurarse de que la aplicación cumple con los requisitos de rendimiento más recientes.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Pruebas del Kit para la certificación de aplicaciones en Windows](windows-app-certification-kit-tests.md)
-* [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
  
 
  

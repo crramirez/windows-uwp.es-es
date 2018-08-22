@@ -1,7 +1,7 @@
 ---
 author: jnHs
 Description: You can download .tsv files that contain your analytics data so that you can review your stats and info offline.
-title: "Descargar informes de análisis"
+title: Descargar informes de análisis
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
 ms.author: wdg-dev-content
 ms.date: 01/02/2018
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 72dcf823c62065514cceb0744b4efcd705209a75
-ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b32ebcff59e89046c45d1a0f23d3bca1c268a6b9
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789026"
 ---
 # <a name="download-analytics-reports"></a>Descargar informes de análisis
 

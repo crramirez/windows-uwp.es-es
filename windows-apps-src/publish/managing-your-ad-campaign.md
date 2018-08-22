@@ -1,7 +1,7 @@
 ---
 author: jnHs
-Description: "Administrar campañas publicitarias para las aplicaciones en el panel de información del Centro de desarrollo de Windows."
-title: "Administrar la campaña publicitaria"
+Description: Manage ad campaigns for your apps in the Windows Dev Center dashboard.
+title: Administrar la campaña publicitaria
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
 ms.author: wdg-dev-content
 ms.date: 06/19/2017
@@ -9,11 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 40d82d9b3ed1b450972d69e04df511496de31f67
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e0d63cac488e294629d430c7470dc58ad64059f9
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2787820"
 ---
 # <a name="manage-your-ad-campaign"></a>Administrar la campaña publicitaria
 

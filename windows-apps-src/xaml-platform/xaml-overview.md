@@ -1,22 +1,28 @@
 ---
 author: jwmsft
-description: "Presentamos el lenguaje XAML y los conceptos de XAML a los desarrolladores de aplicaciones de Windows Runtime y describimos las diversas formas de declarar objetos y establecer atributos en XAML que se usan para crear una aplicación de Windows Runtime."
-title: "Introducción a XAML"
+description: Presentamos el lenguaje XAML y los conceptos de XAML a los desarrolladores de aplicaciones de Windows Runtime y describimos las diversas formas de declarar objetos y establecer atributos en XAML que se usan para crear una aplicación de Windows Runtime.
+title: Introducción a XAML
 ms.assetid: 48041B37-F1A8-44A4-BB8E-1D4DE30E7823
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 60b47a2c2c072efbf3ccedfcc48b9cba1611a370
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.localizationpriority: medium
+dev_langs:
+- csharp
+- vb
+- cppwinrt
+- cpp
+ms.openlocfilehash: d28f6bca5a0d849661f158e25767f27586ace101
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788770"
 ---
 # <a name="xaml-overview"></a>Introducción a XAML
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Presentamos el lenguaje XAML y los conceptos de XAML a los desarrolladores de aplicaciones de Windows Runtime y describimos las diversas formas de declarar objetos y establecer atributos en XAML que se usan para crear una aplicación de Windows Runtime.
 
@@ -70,7 +76,7 @@ El espacio de nombres XAML del lenguaje XAML o prefijo "x" contiene varias const
 | [x:Class](x-class-attribute.md) | Especifica el espacio de nombres del código y el nombre de clase del código para la clase que proporciona el código subyacente de una página XAML. Asigna un nombre a la clase creada o unida mediante acciones de compilación cuando se compila la aplicación. Estas acciones de compilación admiten el compilador de marcado XAML y combinan el marcado y el código subyacente cuando se compila la aplicación. Debes contar con una clase como esta para admitir código subyacente para una página XAML. [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/br209051) en el modelo de activación predeterminado de Windows Runtime. |
 | [x:Name](x-name-attribute.md) | Especifica un nombre de objeto en tiempo de ejecución para la instancia que existe en el código en tiempo de ejecución después de procesar un elemento de objeto definido en XAML. Puedes equiparar la definición de **x:Name** en XAML a declarar una variable con nombre en código. Como verás más adelante, eso es exactamente lo que ocurre cuando se carga tu XAML como componente de una aplicación de Windows Runtime. <br/><div class="alert">**Nota** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) es una propiedad similar del marco, pero no todos los elementos la admiten. Así que puedes usar **x:Name** para la identificación de elementos, siempre que no se admita **FrameworkElement.Name** en ese tipo de elemento. |
 | [x:Uid](x-uid-directive.md) | Identifica los elementos que deben usar recursos localizados para algunos de sus valores de propiedad. Para obtener más información sobre cómo usar **x:Uid**, consulta [Inicio rápido: traducción de recursos de interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329). |
-| [Tipos de datos intrínsecos de XAML](xaml-intrinsic-data-types.md) | Estos tipos pueden especificar valores para tipos valor simple cuando sean necesarios para un atributo o un recurso. Estos tipos intrínsecos se corresponden con tipos de valores simples que suelen definirse como parte de las definiciones intrínsecas de cada lenguaje de programación. Por ejemplo, es posible que necesites usar un objeto que represente un valor booleano **true** en un estado visual con guión gráfico de [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320). Para ese valor en XAML, usarías el tipo intrínseco **x:Boolean** como el elemento del objeto, como indicamos a continuación: <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
+| [Tipos de datos intrínsecos de XAML](xaml-intrinsic-data-types.md) | Estos tipos pueden especificar valores para tipos valor simple cuando sean necesarios para un atributo o un recurso. Estos tipos intrínsecos se corresponden con tipos de valores simples que suelen definirse como parte de las definiciones intrínsecas de cada lenguaje de programación. Por ejemplo, es posible que necesites usar un objeto que represente un valor booleano **true** en un estado visual con guión gráfico de [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320). Para ese valor en XAML, puedes usar el tipo intrínseco **x:Boolean** como el elemento del objeto, tal como indicamos a continuación: <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
 
 Existen otras construcciones de programación en el espacio de nombres XAML del lenguaje XAML, pero no son tan comunes.
 
@@ -147,29 +153,41 @@ Este es un ejemplo sencillo. La clase [**Button**](https://msdn.microsoft.com/li
 
 A la hora de compilar, el compilador espera que haya un método denominado `showUpdatesButton-Click` definido en el archivo de código subyacente, en el espacio de nombres declarado en el valor [x:Class](x-class-attribute.md) de la página XAML. Además, ese método debe cumplir el contrato delegado del evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Por ejemplo:
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 namespace App1
 {
     public sealed partial class MainPage: Page {
         ...
-        private void showUpdatesButton-Click (object sender, RoutedEventArgs e) {
+        private void showUpdatesButton_Click (object sender, RoutedEventArgs e) {
             //your code
         }
     }
 }
 ```
+
 ```vb
 ' Namespace included at project level
 Public NotInheritable Class MainPage
     Inherits Page
         ...
-        Private Sub showUpdatesButton-Click (sender As Object, e As RoutedEventArgs e)
+        Private Sub showUpdatesButton_Click (sender As Object, e As RoutedEventArgs e)
             ' your code
         End Sub
     ...
 End Class
 ```
+
+```cppwinrt
+namespace winrt::App1::implementation
+{
+    struct MainPage : MainPageT<MainPage>
+    {
+        ...
+        void showUpdatesButton_Click(Windows::Foundation::IInspectable const&, Windows::UI::Xaml::RoutedEventArgs const&);
+    };
+}
+```
+
 ```cpp
 // .h
 namespace App1
@@ -177,7 +195,7 @@ namespace App1
     public ref class MainPage sealed {
         ...
     private:
-        void showUpdatesButton-Click (Object^ sender, RoutedEventArgs^ e);
+        void showUpdatesButton_Click(Object^ sender, RoutedEventArgs^ e);
     };
 }
 ```
@@ -242,4 +260,3 @@ Cuando la aplicación se ejecuta realmente, si se han pasado por alto errores de
 **Nota** Las aplicaciones que usan C++/CX para el código no obtienen la clase específica [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774). pero el mensaje de la excepción aclara que el origen del error está relacionado con el código XAML e incluye información de contexto como los números de línea de un archivo XAML, igual que hace **XamlParseException**.
 
 Para obtener más información sobre la depuración de una aplicación de Windows Runtime, consulta [Iniciar una sesión de depuración](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx).
-

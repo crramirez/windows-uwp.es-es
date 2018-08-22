@@ -4,17 +4,18 @@ Description: The Age ratings page of the app submission process lets you provide
 title: Clasificaciones por edades
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, clasificación por edades, clasificación de juegos, iarc, clasificación, cuestionario, panel de clasificación, clasificación de contenido
-ms.localizationpriority: high
-ms.openlocfilehash: 8ee0b2dd91de7cf18fc71ace8b97abc795e22e6b
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 2cf7a3c3a57c4d892de2438967d995ee18470cae
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788254"
 ---
 # <a name="age-ratings"></a>Clasificaciones por edades
 
@@ -29,7 +30,7 @@ La primera vez que envíes una aplicación (o la primera vez que actualices una 
 
 Tienes que responder a las preguntas con precisión. Para obtener más información acerca de cualquier pregunta, haz clic en el icono de información que aparece junto a ella. Como parte de este proceso, compartimos con la IARC tu nombre de editor y tu dirección de correo electrónico. Tras completar el cuestionario, el sistema de clasificación de la IARC proporcionará la información de clasificación por edades y contenido en base a tus respuestas. Esta información de clasificación la usaremos a la hora de mostrar tu aplicación a los clientes en diferentes mercados. También recibirás un correo electrónico de la IARC con una confirmación de la clasificación por edades de la aplicación cuando dicha aplicación se haya publicado.
 
-La primera pregunta te pide que elijas la categoría que mejor describa la aplicación (y sus metadatos). Una vez que hagas una selección, verá más preguntas. Las preguntas específicas que verás variarán en función de tus respuestas anteriores. Si te equivocas en algo, puedes retroceder o comenzar el cuestionario de nuevo para proporcionar las respuestas correctas.
+La primera pregunta te pide que elijas la categoría que mejor describa la aplicación (y sus metadatos). Una vez que hagas una selección, verá más preguntas. Las preguntas específicas que verás variarán en función de tus respuestas anteriores. Para obtener más detalles que pueden ayudarle a comprender cómo responder a cualquier pregunta, haga clic en el icono de información junto a esa pregunta. Si te equivocas en algo, puedes retroceder o comenzar el cuestionario de nuevo para proporcionar las respuestas correctas.
 
 Cuando termines de responder a las preguntas, haz clic en **Save and generate**. A continuación, verás las clasificaciones asignadas de la aplicación y podrás seguir con el envío. También puedes hacer clic en **Editar** corregir las respuestas al cuestionario.
 
@@ -62,4 +63,4 @@ Anteriormente, los propios desarrolladores especificaban la clasificación por e
 | 7+ (Apto para mayores de 7años)   | Las aplicaciones con esta clasificación por edades tienen los mismos criterios que las aplicaciones clasificadas como 3+, excepto que pueden incluir contenido que podría asustar a público más joven y pueden tener desnudez parcial, siempre y cuando esta no tenga connotaciones sexuales. Esta clasificación solo debe usarse para aplicaciones donde el contenido es adecuado para niños.                                                                                   |
 | 12+ (Apto para mayores de 12años) | Las aplicaciones con esta clasificación por edad pueden contener un mayor nivel de desnudez que no sea de carácter sexual, violencia gráfica leve hacia personajes irreales o violencia no gráfica hacia personajes realistas de humanos o animales. Esta clasificación por edad también puede incluir lenguaje soez, pero este no puede tener carácter sexual. Además, las aplicaciones a partir de esta clasificación por edad pueden permitir los siguientes usos no controlados: (i) acceso a redes sociales en línea o (ii) uso compartido de información personal con terceros, incluidos otros jugadores o personas conocidas en línea. (Para que esta actividad se considere controlada, la aplicación debe incluir funciones de control parental que requieran permiso paterno para usar dichas funciones de uso compartido, y deberás identificar y explicar su funcionalidad en las [notas para certificación](notes-for-certification.md)). |
 | 16+ (Apto para mayores de 16años) | Las aplicaciones con esta clasificación por edad pueden describir violencia realista con cantidades de sangre mínimas y pueden describir actividades sexuales. También pueden hacer referencia al consumo de drogas o tabaco y a actividades criminales, y pueden tener un lenguaje más soez que el permitido en las aplicaciones clasificadas como 12+, dentro de los límites estipulados en las directivas de la Tienda.                                                                                                                           |
-| 18+ (Apto para adultos)            | Los juegos con esta clasificación por edades pueden contener escenas de sangre y violencia extrema, desagradable o explicita, solo adecuada para un público adulto. Todo el contenido debe cumplir con los criterios de las [directivas de contenido](https://msdn.microsoft.com/library/windows/apps/dn764944).                                                                                                                                                            |
+| 18+ (Apto para adultos)            | Los juegos con esta clasificación por edades pueden contener escenas de sangre y violencia extrema, desagradable o explicita, solo adecuada para un público adulto. Todo el contenido debe cumplir con los criterios de las [directivas de contenido](https://docs.microsoft.com/legal/windows/agreements/store-policies).                                                                                                                                                            |

@@ -5,24 +5,29 @@ title: Crear la aplicación reservando un nombre
 keywords: windows 10, uwp, reserva de nombre, nombre de la aplicación, nombres de aplicaciones, nombres, nombre de producto, nomenclatura, nombre reservado, título, nombres, títulos
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
 ms.author: wdg-dev-content
-ms.date: 3/19/2018
+ms.date: 8/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 78578acd8a38faecac5ff69c0f613fa1bdb527d0
-ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 83f2ab8a27810635b569d44961ff532ce3240e28
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788340"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Crear la aplicación reservando un nombre
 
-El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Cada nombre reservado (a veces se denomina como *título* de la aplicación) debe ser único en todo Microsoft Store.
+El primer paso en la creación de una aplicación nueva en el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard) es reservar un nombre de la aplicación. Cada nombre reservado (a veces se denomina como *título* de la aplicación) debe ser único en todo Microsoft Store.
 
 Puedes reservar un nombre para tu aplicación incluso si aún no has empezado a crearla. Recomendamos hacerlo lo antes posible para que nadie más pueda usar el nombre. Ten en cuenta que necesitarás enviar la aplicación en un plazo de tres meses para poder mantener ese nombre reservado para tu uso.
 
-Cuando [cargas los paquetes de la aplicación](upload-app-packages.md), el valor [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-displayname) debe coincidir con el nombre que reservaste para la aplicación. Si usas Microsoft Visual Studio para crear el paquete de la aplicación, este atributo se rellenará automáticamente.
+Cuando [cargas los paquetes de la aplicación](upload-app-packages.md), el valor [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) debe coincidir con el nombre que reservaste para la aplicación. Si usas Microsoft Visual Studio para crear el paquete de la aplicación, este atributo se rellenará automáticamente.
+
+> [!IMPORTANT]
+> Puede reservar nombres adicionales para una aplicación y decide usar uno de los de la versión publicada de la aplicación en lugar del que reservar al crear la aplicación en el panel. Sin embargo, tenga en cuenta que el nombre que especifique aquí se utilizará en la parte de [Detalles de identidad](view-app-identity-details.md), como el **Nombre de la familia de paquete (PFN) su aplicación**. Estos valores pueden ser visibles para algunos usuarios y no se puede cambiar, por lo que debe asegurarse de que el nombre reservado es apropiado para este uso.
+
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>Crear la aplicación reservando un nuevo nombre
 
@@ -32,7 +37,7 @@ Reservar un nombre es el primer paso para crear una aplicación en el panel.
 2.  En el cuadro de texto, escribe el nombre que quieres usar y luego selecciona **Comprobar disponibilidad**. Si el nombre está disponible, verás una marca de verificación verde. (Si el nombre que escribiste ya está reservado o lo usa otro desarrollador, verás un mensaje que indica que el nombre no está disponible).
 3.  Haz clic en **Reservar nombre de producto**.
 
-Ahora el nombre se ha reservado para ti y puedes empezar a trabajar en el [envío](app-submissions.md) cuando estés listo.
+Ahora el nombre se ha reservado para ti y puedes empezar a trabajar en el [envío](app-submissions.md) cuando estés listo. 
 
 > [!NOTE]
 > Es posible que no puedas reservar un nombre, aunque no veas ninguna aplicación con ese nombre en la Microsoft Store. Por lo general, esto se debe a que otro desarrollador ha reservado el nombre para su aplicación pero aún no la ha enviado. Si no puedes reservar un nombre cuyos derechos de marca comercial u otros te corresponden, o si ves otra aplicación en la Microsoft Store que usa ese nombre, [ponte en contacto con Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).

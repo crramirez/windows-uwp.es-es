@@ -9,15 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migar, interoperabilidad, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e1e939f6df9bd35e3717b9cc0ce810e97275494
-ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
-ms.translationtype: HT
+ms.openlocfilehash: 02aa86231cd611bd20a386d3da2f9d2b6dc5df66
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "1912923"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788265"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a>Interoperabilidad entre [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) y C++/CX
-Este tema muestra dos funciones auxiliares que pueden usarse para convertir entre objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) y C++/WinRT. Puedes usarlos para interoperar entre el código que usa las dos proyecciones de lenguaje, o puedes usar las funciones a medida que muevas el código desde C++/CX a C++/WinRT.
+Este tema muestra dos funciones auxiliares que pueden usarse para convertir entre objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) y C++/WinRT. Puede usar para la interoperabilidad entre el código que usa las proyecciones de idioma de dos, o puede usar las funciones cuando se desplaza gradualmente el código de C + + / CX a C + + / WinRT (vea [mover a C + + / WinRT desde C + + / CX](move-to-winrt-from-cx.md)).
 
 ## <a name="fromcx-and-tocx-functions"></a>Funciones from_cx y to_cx
 La siguiente función auxiliar convierte un objeto C++/CX en un objeto C++/WinRT equivalente. La función convierte un objeto C++/CX en su puntero de interfaz [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) subyacente. Luego llama a [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521) en dicho puntero para consultar la interfaz predeterminada del objeto C++/WinRT. **QueryInterface** es la interfaz binaria (ABI) de la aplicación de Windows Runtime equivalente a la extensión safe_cast ++/CX. Y la función [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) recupera la dirección del puntero de interfaz **IUnknown** subyacente a un objeto C++/WinRT para que pueda establecerse en otro valor.
