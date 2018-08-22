@@ -3,19 +3,19 @@ author: TylerMSFT
 title: Ejecutar en segundo plano de manera indefinida
 description: Usa la funcionalidad extendedExecutionUnconstrained para ejecutar una tarea en segundo plano o una sesión de ejecución extendida en segundo plano de manera indefinida.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: tarea en segundo plano, ejecución extendida, recursos, límites
+keywords: tarea en segundo plano, extendida la ejecución, recursos, límites, tarea en segundo plano
 ms.author: twhitney
 ms.date: 10/3/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d3ab075a5a2c999c2331c62898e5afb345db8291
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: af0f7670f2b131671ce82708d2b0a826db0fcfb1
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673642"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2802076"
 ---
 # <a name="run-in-the-background-indefinitely"></a>Ejecutar en segundo plano de manera indefinida
 

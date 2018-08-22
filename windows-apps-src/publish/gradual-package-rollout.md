@@ -1,23 +1,25 @@
 ---
 author: JnHs
-Description: "Al publicar una actualización para un envío, puedes elegir lanzar gradualmente los paquetes actualizados para un porcentaje de los clientes de la aplicación en Windows 10."
+Description: When you publish an update to a submission, you can choose to gradually roll out the updated packages to a percentage of your app’s customers on Windows 10.
 title: Lanzamiento gradual del paquete
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 12/05/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 65d578a6-4e26-484c-90af-b2cd916f3634
-ms.openlocfilehash: 88eea7d7909b6189b175f4a4d549eff03b323646
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 407ffb5fdebdc90a63ed7f65b4e97f8358dc58c8
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801537"
 ---
 # <a name="gradual-package-rollout"></a>Lanzamiento gradual del paquete
 
-Al publicar una actualización para un envío, puedes elegir lanzar gradualmente los paquetes actualizados para un porcentaje de los clientes de la aplicación en Windows 10. Esto te permite supervisar los comentarios y los datos analíticos de los paquetes específicos para asegurarte de que estás seguro sobre la actualización antes de hacer un lanzamiento más amplio. Asimismo, puedes incrementar el porcentaje (o detener la actualización) en cualquier momento, sin tener que crear un nuevo envío. 
+Cuando se publica una actualización a una presentación, puede elegir gradualmente desplegar los paquetes actualizados a un porcentaje de los clientes de su aplicación en 10 de Windows (incluidos Xbox). Esto te permite supervisar los comentarios y los datos analíticos de los paquetes específicos para asegurarte de que estás seguro sobre la actualización antes de hacer un lanzamiento más amplio. Asimismo, puedes incrementar el porcentaje (o detener la actualización) en cualquier momento, sin tener que crear un nuevo envío. 
 
 > [!IMPORTANT]
 > Tus selecciones de lanzamiento se aplican a todos los paquetes, pero solo se aplicarán a los clientes que ejecuten versiones de sistema operativo compatibles con los paquetes piloto (Windows.Desktop compilación 10586 o posteriores y Xbox), incluidos los clientes que obtienen la aplicación a través de una [licencia administrada desde la Tienda (en línea)](organizational-licensing.md) mediante la [Tienda Microsoft para Empresas](https://businessstore.microsoft.com/store) o mediante la [Tienda Microsoft para Educación](https://educationstore.microsoft.com/store). Al usar el lanzamiento de paquete gradual, los clientes con versiones anteriores del sistema operativo no recibirán paquetes del envío más reciente hasta que finalice el lanzamiento del paquete, como se describe a continuación.
@@ -25,7 +27,7 @@ Al publicar una actualización para un envío, puedes elegir lanzar gradualmente
 Ten en cuenta que todos los clientes verán los detalles de la descripción de la Tienda que especifiques con el envío más reciente. La configuración de lanzamiento solo se aplica a los paquetes que reciben los clientes, tanto en las adquisiciones nuevas como en las actualizaciones para clientes existentes.
 
 > [!TIP]
-> El lanzamiento del paquete distribuye paquetes a una selección aleatoria de clientes en los porcentajes que especifiques. Para distribuir paquetes específicos a los clientes seleccionados que indiques, puedes usar paquetes piloto.  También puedes combinar el lanzamiento con tus paquetes piloto si quieres distribuir una actualización de forma gradual a uno de tus grupos piloto.
+> El lanzamiento del paquete distribuye paquetes a una selección aleatoria de clientes en los porcentajes que especifiques. Para distribuir paquetes específicos a los clientes seleccionados que indiques, puedes usar paquetes piloto. También puedes combinar el lanzamiento con tus paquetes piloto si quieres distribuir una actualización de forma gradual a uno de tus grupos piloto.
 
 
 ## <a name="setting-the-rollout-percentage"></a>Establecer el porcentaje de lanzamiento

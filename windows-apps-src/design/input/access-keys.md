@@ -15,12 +15,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a336109e9464052a33f5a0d8548e13b260b387a3
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: 8e842d6c5b8e62a9c043c97849fdf17f524ccfc7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018519"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800812"
 ---
 # <a name="access-keys"></a>Teclas de acceso
 
@@ -358,3 +358,13 @@ En este ejemplo se muestra cómo cambiar estos recursos de aplicación:
 El marco XAML expone las propiedades de automatización que permiten a los clientes de automatización de la interfaz de usuario detectar información sobre los elementos en la interfaz de usuario.
 
 Si especificas la propiedad AccessKey en un control UIElement o TextElement, puedes usar la propiedad [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) para obtener este valor. Los clientes de accesibilidad, como el Narrador, leen el valor de esta propiedad cada vez que un elemento tiene el foco.
+
+## <a name="related-articles"></a>Artículos relacionados
+
+* [Interacciones de teclado](keyboard-interactions.md)
+* [Aceleradores de teclado](keyboard-accelerators.md)
+
+**Muestras**
+* [Galería de controles de XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+
+

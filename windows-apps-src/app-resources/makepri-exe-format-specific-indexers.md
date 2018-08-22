@@ -10,16 +10,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 09c0ff50a3056b986eb3938c34ad61fde7e86f26
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 8ec6b2a31f4f577de30dac1c96a411c6aee6e9dc
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393274"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801502"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Indizadores específicos de formato de MakePri.exe
 
 Este tema describe los indizadores específicos de formato usados por la herramienta [MakePri.exe](compile-resources-manually-with-makepri.md) para generar su índice de recursos.
+
+> [!NOTE]
+> MakePri.exe se instala al comprobar la opción de **SDK de Windows para las aplicaciones administradas de UWP** al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en carpetas con el nombre de las otras arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 MakePri.exe se suele usar con los comandos `new`, `versioned` o `resourcepack`. Consulta [Opciones de línea de comandos de MakePri.exe](makepri-exe-command-options.md). En esos casos indexa los archivos de origen para generar un índice de recursos. MakePri.exe usa diversos indizadores individuales para leer distintos archivos de recursos de origen o contenedores de recursos. El indexador más sencillo es el indizador de carpeta, que indiza el contenido de una carpeta, como imágenes `.jpg` o `.png`.
 
