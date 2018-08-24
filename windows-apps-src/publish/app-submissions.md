@@ -10,24 +10,24 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf1e647931b6e7680fb65ddcf200bf2a74be716a
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2815027"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2832031"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
 
 Una vez que hayas [creado tu aplicación reservando un nombre](create-your-app-by-reserving-a-name.md), puedes empezar a trabajar en conseguir que se publique. El primer paso es crear un **envío**.
 
-Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Se guardan las actualizaciones que realice su envío, para que pueda regresar y trabajar en él siempre que lo desee.
+Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Se guardan las actualizaciones que realice su envío, para que pueda volver y trabajar en él cada vez que esté listo.
 
 > [!NOTE]
 > Debe tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) para poder tener acceso al [Centro de desarrollo de Windows](https://partner.microsoft.com/dashboard) y enviar aplicaciones a la Store Microsoft.
 
-Después de publicar la aplicación, puedes publicar una versión actualizada creando otro envío en el panel. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío de una aplicación publicada, haz clic en **Actualizar** junto al envío más reciente que se muestre en la página de información general de la aplicación. También puede [quitar una aplicación desde la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si necesita hacerlo (y ponerlo a disposición de nuevo más tarde, si lo desea).
+Después de publicar la aplicación, puedes publicar una versión actualizada creando otro envío en el panel. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío de una aplicación publicada, haz clic en **Actualizar** junto al envío más reciente que se muestre en la página de información general de la aplicación. También puede [quitar una aplicación desde el almacén](guidance-for-app-package-management.md#removing-an-app-from-the-store) si necesita hacerlo (y, a continuación, permitir que esté disponible más tarde, si así lo desea).
 
 > [!NOTE]
 > En esta sección de la documentación se describe cómo crear un envío de aplicación en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.
@@ -36,7 +36,7 @@ Después de publicar la aplicación, puedes publicar una versión actualizada cr
 
 A continuación se incluyen los detalles que puedes proporcionar al crear el envío de tu aplicación, con vínculos a más información.
 
-Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees. No tienes que trabajar en estas secciones en el orden indicado aquí.
+Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees. No es necesario para que funcione en estas secciones en el orden que se muestra aquí.
 
 ### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
 | Nombre del campo                    | Notas                                       | Más información                                                             |
@@ -113,7 +113,7 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Opciones de suspensión de publicación**     | Valor predeterminado: Publicar este envío tan pronto como supere la certificación (o siguiendo las fechas seleccionadas en la sección Programación)      | [Opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options)    
 | **Notas para la certificación**     | Recomendado          | [Notas para la certificación](notes-for-certification.md)             |
-| **Funcionalidades restringidas**     | Requerido si el producto declara cualquier [capacidades restringidas] (.. /Packaging/App-Capability-Declarations.MD#Restricted-Capabilities    | [Funcionalidades restringidas](manage-submission-options.md#publishing-hold-options)       
+| **Funcionalidades restringidas**     | Requerido si su producto declara cualquier [capacidades restringidas](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Funcionalidades restringidas](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

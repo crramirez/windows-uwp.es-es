@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a4bba1efb52dc3b25b12c3891d9472f44729c85
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 53aac2375d60df3cd9493f315b20431961378fe8
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818579"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2831127"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continuar la actividad del usuario, incluso en diferentes dispositivos
 
@@ -167,14 +167,13 @@ Puedes usar la API [UserActivity](https://docs.microsoft.com/uwp/api/windows.app
 
 ## <a name="key-apis"></a>API de claves
 
-* [Espacio de nombres UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
+* [Espacio de nombres UserActivities](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Tarjetas adaptables](https://docs.microsoft.com/en-us/adaptive-cards/)
+* [Actividades del usuario (documentos de proyecto Roma)](https://docs.microsoft.com/windows/project-rome/user-activities/)
+* [Tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/)
 * [Visualizador de tarjetas adaptables, muestras](http://adaptivecards.io/)
 * [Administración de la activación de URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 * [Interactuar con los clientes en cualquier plataforma con Microsoft Graph, fuentes de actividades y tarjetas adaptables](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)
-* [Proyecto Rome en Github](https://github.com/microsoft/project-rome)
-* [Proyecto Rome en el Centro de desarrollo de Windows](https://aka.ms/projectrome)
