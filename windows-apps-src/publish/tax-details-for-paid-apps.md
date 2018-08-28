@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, impuestos, impuestos de aplicación, requisitos fiscales, expansión comercial, tipo impositivo
 ms.localizationpriority: medium
 ms.openlocfilehash: 461c9303bbb26e5c4739ca60c03343008377df6c
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2857929"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2882981"
 ---
 # <a name="tax-details-for-paid-apps"></a>Detalles de impuestos para aplicaciones de pago
 
