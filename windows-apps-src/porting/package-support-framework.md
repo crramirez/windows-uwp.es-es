@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 46d5705233af9e8254b9ac89a2d6e9891e90701f
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2861262"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2888224"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar las revisiones de tiempo de ejecución a un paquete MSIX mediante el marco de soporte técnico de paquete
 
@@ -113,7 +113,7 @@ makeappx unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.appx /d PackageContent
 
 ```
 
-This will give you something that looks like the following.
+Esto le proporcionará algo parecido a lo siguiente.
 
 ![Diseño de paquete](images/desktop-to-uwp/package_contents.png)
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
 ms.localizationpriority: medium
 ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2856898"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2891687"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -85,13 +85,13 @@ Esta imagen puede aparecer en varias páginas de Store para Windows 10 (incluida
 
 Esta imagen es necesaria para la visualización correcta en Windows Phone 8.1 y versiones anteriores. Si tu aplicación es compatible con Windows Phone 8.1 o versiones anteriores y no proporcionas esta imagen, los clientes en cuestión verán un icono en blanco junto con la descripción de la aplicación. (Esto también se aplica a los clientes de Windows10, solo si tu aplicación tiene paquetes destinados a WindowsPhone8.1 o versiones anteriores). Si tu envío *solo* incluye paquetes para UWP, no tienes que proporcionar esta imagen. (Ten en cuenta que si tu envío incluye paquetes tanto de Windows Phone 8.x como para UWP y proporcionas esta imagen, se podrá usar en Windows 10, en algunos diseños de Store. Para evitar esto, puedes crear una [descripción específica de la plataforma](create-platform-specific-store-listings.md) para las versiones de Windows Phone con las que sea compatible tu aplicación y solo incluir allí el icono de la aplicación).
 
-### <a name="display-only-uploaded-logo-images-in-the-store"></a>Mostrar sólo carga imágenes de logotipo en el almacén
+### <a name="display-only-uploaded-logo-images-in-the-store"></a>Para mostrar sólo carga imágenes de logotipo en el almacén
 
-Tiene la opción de impedir que el almacén usando las imágenes de logotipo en paquetes de la aplicación al mostrar el anuncio a los clientes de Windows 10 (incluyendo Xbox) y en su lugar, tiene que el almacén utilice sólo imágenes que cargar. Esto te ofrece más control sobre la apariencia de la aplicación en diversas pantallas por todo Store, para los clientes de Windows10 (incluyendo Xbox). (Si su producto es compatible con versiones anteriores del sistema operativo, los clientes quizás siga viendo las imágenes de los paquetes, incluso si utiliza esta opción.)
+Tiene la opción de impedir que el almacén de uso de las imágenes de logotipo en paquetes de su aplicación cuando se muestra el anuncio a los clientes en 10 de Windows (incluidos Xbox) y, en su lugar que tengan el almacén sólo las imágenes que se cargan. Esto te ofrece más control sobre la apariencia de la aplicación en diversas pantallas por todo Store, para los clientes de Windows10 (incluyendo Xbox). (Si su producto es compatible con versiones anteriores del sistema operativo, los clientes es posible que aún vea imágenes de los paquetes, incluso si usa esta opción).
 
-Para que el almacén utilice sólo las imágenes de que carga (para clientes en Windows 10, incluyendo Xbox), y no utilizar las imágenes de los paquetes, marque la casilla que dice **para clientes en 10 de Windows y Xbox, mostrar cargar imágenes de logotipo en lugar de las imágenes de Mis paquetes **.
+Para que el almacén de usar sólo las imágenes que se carga (para clientes en 10 de Windows, incluidos Xbox), y no usar todas las imágenes de los paquetes, active la casilla que dice **para los clientes en 10 de Windows y Xbox, mostrar cargan imágenes de logotipo en lugar de las imágenes de Mis paquetes **.
 
-Cuando se activa esta casilla, aparecerá una nueva sección denominada **almacén de mostrar imágenes** . Aquí, puede cargar 3 imágenes, incluido el tamaño de **icono (300 x 300 píxeles) en mosaico 1:1 de la aplicación** (si activa la casilla, el campo para proporcionar que esa imagen se moverá en esta sección). Te recomendamos que proporciones los tres tamaños de imagen si usas esta opción: 71 x 71, 300 x 300 y 150 x 150 píxeles. Sin embargo, solo el tamaño de 300 x 300 es obligatorio.
+Cuando se activa esta casilla, aparece una nueva sección denominada **almacén de mostrar imágenes** . En este caso, puede cargar 3 imágenes, incluido el tamaño de la **aplicación de 1:1 Mosaico icono (300 x 300 píxeles)** (si se activa la casilla, el campo para proporcionar que dicha imagen se moverán en esta sección). Te recomendamos que proporciones los tres tamaños de imagen si usas esta opción: 71 x 71, 300 x 300 y 150 x 150 píxeles. Sin embargo, solo el tamaño de 300 x 300 es obligatorio.
 
 
 <span id="promotional-images" />

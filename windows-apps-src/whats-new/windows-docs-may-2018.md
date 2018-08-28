@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 322bc056411095019dfc027078cbfef7de0883fb
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2856039"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2887874"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novedades en los documentos para desarrolladores de Windows de mayo de 2018
 
@@ -103,7 +103,7 @@ La característica conjuntos de está disponible en Windows Vista previa se basa
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="get-started"></a>Introducción
+### <a name="get-started"></a>Comenzar
 
 Nos hemos revitalizado nuestro Get a contenido con nuevas pistas de aprendizaje. Estos nuevos temas se pretende proporcionar los nuevos programadores 10 de Windows con información en algunas tareas comunes que es posible que desee realizar. No está tutoriales y no proporciona un tutorial de mano, pero señale donde se encuentra la documentación existente y cómo usarla. Desproteger la actualización de la herramienta [iniciar la codificación](../get-started/create-uwp-apps.md) de página o explore cada pista de aprendizaje individual:
 
