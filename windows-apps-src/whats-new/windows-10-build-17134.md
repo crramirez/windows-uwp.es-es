@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2f12190c405ad611cf5b884b82c4a430aa5264f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2884294"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906205"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novedades de Windows 10 para desarrolladores, compilación 17134
 
@@ -38,7 +38,7 @@ Extraer para actualizar | El control [Extraer para actualizar](../design/control
 Vista de navegación | El control de [Vista de navegación](../design/controls-and-patterns/navigationview.md) proporciona un menú de navegación contraíble para la navegación de nivel superior de tu aplicación. Este control implementa el panel de navegación, o menú hamburguesa, y adapta automáticamente el modo de presentación del panel a diferentes tamaños de ventana.
 Reveal focus | El nuevo efecto [Reveal focus](../design/style/reveal-focus.md) proporciona iluminación para experiencias como las pantallas de televisión y la Xbox One. Anima el borde de los elementos activables, como los botones, cuando el usuario mueve el foco del teclado o del controlador para juegos a ellos.
 Sonido | XAML admite ahora 3D Audio con la propiedad **SpatialAudioMode**. Consulta [Sonido](../design/style/sound.md) para obtener información sobre cómo se puede configurar.
-Iconos | Ahora, las [notificaciones de iconos rastreables](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) son compatibles con aplicaciones para UWP basadas en JavaScript.<br><br>Notificaciones de mosaico y tarjeta secundarias son [ahora admite desde aplicaciones de escritorio puente](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
+Iconos | Ahora, las [notificaciones de iconos rastreables](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) son compatibles con aplicaciones para UWP basadas en JavaScript.<br><br>Las notificaciones de iconos y distintivos secundarias son [ahora admite desde aplicaciones de puente de escritorio](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
 Vista de árbol | El control [TreeView](../design/controls-and-patterns/tree-view.md) permite una lista jerárquica con nodos que se expanden y se contraen, y que contienen elementos anidados. Puede usarse para ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
 Estilo de escritura | Hemos actualizado y ampliado nuestro artículo en lo relativo a la voz y al tono, transformándolo en [directrices de estilo de escritura](../design/style/writing-style.md). Esta nueva información proporciona principios para crear texto eficaz en tu aplicación y recomienda los procedimientos recomendados para la escritura de controles como cuadros de diálogo o mensajes de error.
 
@@ -73,7 +73,7 @@ Captura de pantalla | El [espacio de nombres Windows.Graphics.Capture](https://d
 Desencadenadores del sistema | La clase [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger) te permite definir un desencadenador del sistema cuando el sistema operativo no proporciona un desencadenador del sistema que necesitas. Por ejemplo, cuando tanto un controlador de hardware como la aplicación para UWP pertenecen a terceros y el controlador de hardware debe generar un evento personalizado que su aplicación controla. Por ejemplo, una tarjeta de audio que debe notificar a un usuario cuando un conector de audio está conectado.
 Actividades del usuario | La nueva [documentación de UserActivity](../launch-resume/useractivities.md) explica cómo ayudar a los usuarios a reanudar lo que estaban haciendo en tu aplicación, incluso en varios dispositivos.</br>La clase **UserActivitySessionHistoryItem** tiene nuevos métodos que recuperan actividades recientes del usuario. Consulta [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync) y su sobrecarga para obtener más información.
 API de Windows Mixed Reality | Para admitir la creciente plataforma Windows Mixed Reality, se han agregado API nuevas a los espacios de nombres [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) y [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial).
-Documentos de Windows Mixed Reality | Las instrucciones para desarrolladores de la realidad mixto de Windows son [ahora se hospedan en docs.microsoft.com.](https://docs.microsoft.com/windows/mixed-reality/) Al igual que en estos documentos UWP, ahora puede comentarios con problemas de depósito de archivos o enviar sus propios contribuciones a través de una solicitud de extracción.
+Documentos de Windows Mixed Reality | La Guía del desarrollador de Windows Mixed Reality [ahora está hospedada en docs.microsoft.com.](https://docs.microsoft.com/windows/mixed-reality/) Igual que en estos documentos sobre UWP, ahora podéis comentarios sobre problemas de GitHub o enviar tus propias contribuciones a través de una solicitud de incorporación.
 
 ## <a name="publish--monetize-windows-apps"></a>Publicar y monetizar aplicaciones de Windows
 

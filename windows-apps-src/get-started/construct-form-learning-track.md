@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: introducción, uwp, windows 10, pista de aprendizaje, diseño, formulario
 ms.localizationpriority: medium
 ms.openlocfilehash: c2a851a442cabca4529cd202c90db692c43adcb5
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888384"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916503"
 ---
 # <a name="create-and-customize-a-form"></a>Crear y personalizar un formulario
 
@@ -48,9 +48,9 @@ Lee [esta documentación sobre paneles de diseño](../design/layout/layout-panel
 
 ## <a name="what-goes-in-a-form"></a>Qué se incluye en un formulario
 
-Tendrás que rellenar tu formulario con una gran variedad de [controles XAML](../design/controls-and-patterns/controls-and-events-intro.md). Probablemente ya estás familiarizado con ellos, pero puedes consultar la información si necesitas ponerte al día. En concreto, querrás controles que permiten al usuario escribir texto o elegir de una lista de valores. Esto es una lista básica de opciones que podría agregar: no es necesario leer todo lo relacionado con ellos, simplemente lo suficiente para poder entender qué aspecto tienen y cómo funcionan.
+Tendrás que rellenar tu formulario con una gran variedad de [controles XAML](../design/controls-and-patterns/controls-and-events-intro.md). Probablemente ya estás familiarizado con ellos, pero puedes consultar la información si necesitas ponerte al día. En concreto, querrás controles que permiten al usuario escribir texto o elegir de una lista de valores. Esta es una lista básica de opciones que puedes agregar; no es necesario leer todo sobre ellas, solo lo suficiente para comprender su aspecto y funcionamiento.
 
-* [Cuadro de texto](../design/controls-and-patterns/text-box.md) permite a un texto de entrada del usuario en la aplicación.
+* [TextBox](../design/controls-and-patterns/text-box.md) permite a un texto de entrada de usuario en la aplicación.
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md) permite al usuario elegir entre dos opciones.
 * [DatePicker](../design/controls-and-patterns/date-picker.md) permite al usuario seleccionar un valor de fecha.
 * [TimePicker](../design/controls-and-patterns/time-picker.md) permite al usuario seleccionar un valor de hora.
@@ -136,7 +136,7 @@ Cuando vayas a crear diseños más complejos con más elementos visuales, puedes
 
 ## <a name="going-further"></a>Ir más allá
 
-Aunque hayas creado un formulario, los conceptos de diseños y controles son aplicables en todas las interfaces de usuario de XAML que puedas crear. No dude en volver a través de los documentos se haya vinculado a y experimentar con el formulario que tiene, agregar nuevas características de la interfaz de usuario y restringir aún más la experiencia del usuario. Si desea instrucciones paso a paso a través de características de diseño más detalladas, vea nuestro [tutorial sobre el diseño adaptable](../design/basics/xaml-basics-adaptive-layout.md)
+Aunque hayas creado un formulario, los conceptos de diseños y controles son aplicables en todas las interfaces de usuario de XAML que puedas crear. No dudes en volver a través de los documentos te hemos vinculado y experimenta con el formulario que tienes, agregando nuevas funcionalidades de la interfaz de usuario y refinando la experiencia del usuario. Si quieres obtener instrucciones paso a paso a través de las características de diseño más detalladas, consulta nuestro [tutorial de diseño adaptativo](../design/basics/xaml-basics-adaptive-layout.md)
 
 Los formularios tampoco tienen que existir en vacío: podrías ir un paso más allá e incrustar los tuyos dentro de un [patrón principal/de detalles](../design/controls-and-patterns/master-details.md) o un [control dinámico](../design/controls-and-patterns/tabs-pivot.md). O si quieres ponerte a trabajar en el código subyacente de tu formulario, es posible que quieras empezar con nuestra [introducción a eventos](../xaml-platform/events-and-routed-events-overview.md).
 

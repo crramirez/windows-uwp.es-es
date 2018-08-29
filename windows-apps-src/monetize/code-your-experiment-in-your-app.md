@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: b0931d712ca99b429e2aaa7dec4b855f41ce55ef
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888354"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905868"
 ---
 # <a name="code-your-app-for-experimentation"></a>Programar tu aplicación para los experimentos
 
@@ -29,7 +29,7 @@ Para agregar este comportamiento a tu aplicación, tendrás que usar las API pro
 Las siguientes secciones describen el proceso general de obtención de variaciones del experimento y del registro de eventos en el Centro de desarrollo. Después de programar tu aplicación para los experimentos, puedes [definir un experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md). Para ver un tutorial que muestra de principio a fin el proceso de crear y ejecutar un experimento, consulta [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 > [!NOTE]
-> Algunas de las API en el SDK de servicios de almacenamiento de experimentación usan el [modelo asincrónico](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) para recuperar datos desde el centro de desarrollo. Esto significa que parte de la ejecución de estos métodos puede tener lugar después de la invocación de los métodos, por lo que la interfaz de usuario de la aplicación puede seguir respondiendo mientras se completan las operaciones. El patrón asincrónico requiere que tu aplicación use la palabra clave **async** y el operador **await** al llamar a las API, tal como se muestra en los ejemplos de código de este artículo. Por convención, los métodos asincrónicos terminan con **Async**.
+> Algunas de la API de experimentación de Microsoft Store Services SDK usan el [patrón asincrónico](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) para recuperar los datos del centro de desarrollo. Esto significa que parte de la ejecución de estos métodos puede tener lugar después de la invocación de los métodos, por lo que la interfaz de usuario de la aplicación puede seguir respondiendo mientras se completan las operaciones. El patrón asincrónico requiere que tu aplicación use la palabra clave **async** y el operador **await** al llamar a las API, tal como se muestra en los ejemplos de código de este artículo. Por convención, los métodos asincrónicos terminan con **Async**.
 
 ## <a name="configure-your-project"></a>Configuración de tu proyecto
 
@@ -42,7 +42,7 @@ Para empezar, instala Microsoft Store Services SDK en tu equipo de desarrollo y 
 4. En la lista de los SDK, selecciona la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar**.
 
 > [!NOTE]
-> Los ejemplos de código en este artículo se suponen que el archivo de código tiene instrucciones **using** para los espacios de nombres **System.Threading.Tasks** y **Microsoft.Services.Store.Engagement** .
+> Los ejemplos de código en este artículo se supone que el archivo de código tiene instrucciones **using** para los espacios de nombres **System.Threading.Tasks** y **Microsoft.Services.Store.Engagement** .
 
 ## <a name="get-variation-data-and-log-the-view-event-for-your-experiment"></a>Obtener datos de variación y registrar el evento de vista para tu experimento
 
@@ -60,7 +60,7 @@ Los siguientes pasos describen las partes importantes de este proceso de forma d
 
 2. Declara una variable de cadena que se asigne al [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms) para el experimento que quieras recuperar.
     > [!NOTE]
-    > Obtener un proyecto de identificador de cuándo se [crea un proyecto en el panel del centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md). El Id. de proyecto que se muestra a continuación es solo un ejemplo.
+    > Obtener un proyecto de Id. de cuándo se [crea un proyecto en el panel del centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md). El Id. de proyecto que se muestra a continuación es solo un ejemplo.
 
     [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet2)]
 

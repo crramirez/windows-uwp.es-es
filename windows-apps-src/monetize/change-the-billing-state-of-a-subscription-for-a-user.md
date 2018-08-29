@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de compra de Microsoft Store, suscripciones
 ms.localizationpriority: medium
 ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882971"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905878"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Cambiar el estado de facturación de la suscripción de un usuario
 
@@ -57,7 +57,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Nombre         | Tipo  | Descripción   |  Requerido  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | cadena | El identificador de la suscripción que quieres cambiar. Para obtener este identificador, llame al método [obtener suscripciones para un usuario](get-subscriptions-for-a-user.md) , identificar la entrada del cuerpo de la respuesta que representa el complemento de suscripción que desee cambiar y utilice el valor del campo de **identificador** para la entrada.     | Sí      |
+| recurrenceId | cadena | El identificador de la suscripción que quieres cambiar. Para obtener este identificador, llama al método [obtener suscripciones para un usuario](get-subscriptions-for-a-user.md) , identifica la entrada del cuerpo de respuesta que representa el complemento de suscripción que quieres cambiar y usa el valor del campo **Id.** de la entrada.     | Sí      |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -120,7 +120,7 @@ El cuerpo de la respuesta contiene los siguientes datos.
 | autoRenew | booleano |  Indica si la suscripción está configurada para renovarse automáticamente al final del período de suscripción actual.   |
 | beneficiary | cadena |  El identificador del beneficiario del derecho que está asociado con esta suscripción.   |
 | expirationTime | cadena | La fecha y la hora a las que expirará la suscripción, en formato ISO8601. Este campo solo está disponible cuando la suscripción esté en determinados estados. El momento de expiración normalmente indica cuándo expira el estado actual. Por ejemplo, para una suscripción activa, la fecha de expiración indica cuándo se producirá la próxima renovación automática.    |
-| expirationTimeWithGrace | cadena | La fecha y hora de que caducidad de la suscripción incluido el período de gracia, en formato ISO 8601. Este valor indica que cuando el usuario pierde el acceso a la suscripción a después de la suscripción no ha podido renovar automáticamente.    |
+| expirationTimeWithGrace | cadena | La fecha y hora que expirará la suscripción, incluido el período de gracia, en formato ISO 8601. Este valor indica cuándo el usuario perderán el acceso a la suscripción después de que se produjo un error de la suscripción a la renovación automática.    |
 | id | cadena |  El identificador de la suscripción. Usa este valor para indicar qué suscripción quieres modificar cuando llamas al método [cambiar el estado de facturación de la suscripción de un usuario](change-the-billing-state-of-a-subscription-for-a-user.md).    |
 | isTrial | booleano |  Indica si la suscripción es una versión de prueba.     |
 | lastModified | cadena |  La fecha y la hora de la última modificación de la suscripción, en formato ISO8601.      |

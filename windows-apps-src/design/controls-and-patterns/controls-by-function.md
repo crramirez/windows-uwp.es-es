@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887914"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2908796"
 ---
 # <a name="controls-by-function"></a>Controles por función
 
@@ -30,7 +30,7 @@ Puedes ver muchos de los controles de interfaz de usuario de Windows si descarga
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tiene la aplicación de la <strong style="font-weight: semi-bold">Galería de controles de XAML</strong> instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/NavigationView">Abrir la aplicación y vea la NavigationView en acción</a> </p>
+    <p>Si tienes instalada la aplicación de la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> , haz clic aquí para <a href="xamlcontrolsgallery:/item/NavigationView">Abrir la aplicación y ver NavigationView en acción</a> </p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtener el código fuente (GitHub)</a></li>
@@ -270,7 +270,7 @@ Muestra un mensaje que requiere la intervención del usuario. (Al contrario que 
 
 Referencia: [Control flotante](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
 
-Diseño y procedimientos: [menús emergentes](dialogs-and-flyouts/flyouts.md) 
+Diseño y procedimientos: [los controles flotantes](dialogs-and-flyouts/flyouts.md) 
 
 ### <a name="menu-flyout"></a>Control flotante de menú
 Muestra de forma temporal una lista de comandos u opciones relacionados con lo que está haciendo el usuario.
@@ -555,7 +555,7 @@ Consulta Elemento multimedia
 
 ### <a name="navigationview"></a>NavigationView
 
-Un contenedor adaptable y el modelo de navegación flexible que implementa el panel de navegación izquierdo, la navegación superior y el patrón de fichas.
+Un contenedor adaptable y el modelo de navegación flexible que implementa el panel de navegación izquierdo, la navegación superior y el patrón de pestañas.
 
 Referencia: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 

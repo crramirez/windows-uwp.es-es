@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, enumeración, descripción, página de store, notas de la versión, título
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882548"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910295"
 ---
 # <a name="create-app-store-listings"></a>Crear descripciones de Store de aplicaciones
 
@@ -42,22 +42,22 @@ En la sección **Idiomas de descripción de la Store adicionales**, puedes hacer
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
 
-## <a name="add-and-edit-store-listing-info"></a>Agregar y editar el almacén de información de inscripción
+## <a name="add-and-edit-store-listing-info"></a>Agregar y editar información de descripción de la tienda
 
-Para editar una lista de la tienda, seleccione el nombre de idioma de la página de información general de envío.
+Para editar una descripción de la tienda, selecciona el nombre del idioma de la página de información general del envío.
 
 En la parte superior de la página **Descripción de la Store** se encuentran los campos asociados a tu descripción de la Store predeterminada para el idioma seleccionado. Estos campos se mostrarán a todos los clientes, a menos que tengas paquetes destinados a versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores; Windows Phone 8.x o versiones anteriores) y crees descripciones de la Store específicas de la plataforma para incluir diferentes capturas de pantalla o informaciones para mostrar a los clientes con las versiones específicas del sistema operativo. Para obtener más información, consulta [Creación de descripciones de la Store específicas de la plataforma](create-platform-specific-store-listings.md).
 
 ## <a name="product-name"></a>Nombre del producto
 
-Este cuadro de lista desplegable permite especificar el nombre que se debe usar en el listado de almacén (si lo ha reservado más de un nombre para la aplicación).
+Este cuadro de lista desplegable te permite especificar el nombre que debe usarse en la descripción de la tienda (si lo has hecho en más de un nombre de la aplicación).
 
-Si se han cargado paquetes en el mismo idioma que el listado de almacén que está trabajando, se seleccionará el nombre que se usa en los paquetes. Si necesita cambiar el nombre de [la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) después de que ya se han publicado, puede seleccionar un nombre reservado diferente cuando se crea una nueva presentación con paquetes que utilizan el nuevo nombre.
+Si has cargado paquetes en el mismo idioma que está trabajando en la descripción de la tienda, se seleccionarán el nombre que se usa en esos paquetes. Si es necesario [cambiar el nombre de la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) una vez que se haya publicado, puedes seleccionar un nombre reservado diferente cuando se crea un nuevo envío con los paquetes que usan el nuevo nombre.
 
-Si aún no ha cargado paquetes para el idioma que está trabajando y ha reservado más de un nombre, debe seleccionar uno de los nombres reservados de aplicación, ya que no hay un paquete asociado en ese idioma desde el que se van a extraer el nombre.
+Si no has cargado los paquetes para el idioma que estás trabajando y has reservado más de un nombre, tendrás que seleccionar uno de los nombres de aplicación reservado, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre.
 
 > [!NOTE]
-> El **nombre del producto** , que seleccione sólo se aplica a la lista de la tienda en el idioma que está trabajando en. No afecta el nombre que se muestra cuando un cliente instala la aplicación; ese nombre proviene el manifiesto del paquete que se instala. Para evitar confusiones, se recomienda que cada idioma paquetes y tienda de usan el mismo nombre.
+> El **nombre del producto** que selecciones solo se aplica a la descripción de la tienda en el lenguaje que estás trabajando. No afecta el nombre que aparece cuando un cliente instala la aplicación; ese nombre procedente del manifiesto del paquete que se instala. Para evitar confusiones, te recomendamos que los paquetes y la descripción de la tienda de cada idioma usen el mismo nombre.
 
 ## <a name="description"></a>Descripción
 
@@ -134,7 +134,7 @@ Una descripción más corta y pegadizo que se puede usar en la parte superior de
 
 Para los juegos, la descripción corta también puede aparecer en la sección Información del Hub de juegos de Xbox One.
 
-Para obtener mejores resultados, mantenga la descripción breve caracteres en 270. El campo tiene un límite de 500 caracteres, pero en algunas vistas, se mostrarán sólo los caracteres en primer lugar 270 (con un vínculo disponible para ver el resto de la descripción breve).
+Para obtener resultados óptimos, mantener la descripción breve en 270 caracteres. El campo tiene un límite de 500 caracteres, pero en algunas vistas, se mostrará solo los caracteres en primer lugar 270 (con un vínculo para ver el resto de la descripción breve).
 
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionales del sistema

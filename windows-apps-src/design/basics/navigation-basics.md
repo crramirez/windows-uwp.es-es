@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 464da3dd3a9a181555f7b4bfd1059e9834fe7338
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888264"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909893"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
 
@@ -30,7 +30,7 @@ Contamos con un número elevado de opciones entre las que elegir para la navegac
 
 :::row:::
     :::column:::
-        ![en el ejemplo 1 de navegación](images/nav/nav-1.svg)
+        ![ejemplo de navegación 1](images/nav/nav-1.svg)
 
         Require users to go through a series of pages in order.
     :::column-end:::
@@ -58,7 +58,7 @@ Empecemos con los principios básicos de diseño de buena navegación:
 
 ### <a name="consistency"></a>Coherencia
 
-La navegación debería ser coherente con las expectativas del usuario. Uso de [controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos de, ubicación y el estilo hará navegación intuitiva y predecible para los usuarios.
+La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y el estilo hará navegación intuitiva y predecible para los usuarios.
 
 ![imagen de componentes de la página](images/nav/page-components.svg)
 
@@ -99,7 +99,7 @@ Ahora vamos a tomar nuestros principios de diseño, coherencia, simplicidad y cl
 
 1. Piensa en tus usuarios. Traza rutas habituales que podrían tomar en la aplicación, y en cada página, piensa en por qué está ahí el usuario y dónde podría querer ir.
 
-2. Evite las jerarquías de navegación profundo. Si vas más allá de tres niveles de navegación, existe el riesgo de hacer encallar al usuario en una jerarquía profunda de la que tenga dificultades para salir.
+2. Evita las jerarquías de navegación detallado. Si vas más allá de tres niveles de navegación, existe el riesgo de hacer encallar al usuario en una jerarquía profunda de la que tenga dificultades para salir.
 
 3. Evita el "pogo-sticking". El "pogo-sticking" se produce cuando hay contenido relacionado, pero navegar hasta él requiere que el usuario suba un nivel y después vuelva a bajar.
 
@@ -111,7 +111,7 @@ Ahora que ya conoces los principios generales de navegación, ¿cómo deberías 
     :::column:::
         ![Páginas organizadas en una estructura plana](images/nav/flat-lateral-structure.svg)
     :::column-end:::
-    ::: extensión de columna = "2":::
+    ::: column span = "2":::
         ### Flat/lateral
 
         In a flat/lateral structure, pages exist side-by-side. You can go from one page to another in any order.
@@ -130,7 +130,7 @@ Ahora que ya conoces los principios generales de navegación, ¿cómo deberías 
     :::column:::
         ![Páginas organizadas en una jerarquía](images/nav/hierarchical-structure.svg)
     :::column-end:::
-    ::: extensión de columna = "2":::
+    ::: column span = "2":::
         ### Hierarchical
 
         In a hierarchical structure, pages are organized into a tree-like structure. Each child page has one parent, but a parent can have one or more child pages. To reach a child page, you travel through the parent.
@@ -150,7 +150,7 @@ Ahora que ya conoces los principios generales de navegación, ¿cómo deberías 
     :::column:::
         ![una aplicación con una estructura híbrida](images/nav/combining-structures.svg)
     :::column-end:::
-    ::: extensión de columna = "2":::
+    ::: column span = "2":::
         ### Combining structures
 
         You don't have choose to one structure or the other; many well-design apps use both. An app can use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.
@@ -170,16 +170,16 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
     :::column:::
         ![Imagen de trama](images/nav/thumbnail-frame.svg)
     :::column-end:::
-    ::: extensión de columna = "2"::: [ **marco**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
+    ::: column span = "2"::: [ **fotograma**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
         With few exceptions, any app that has multiple pages uses a frame. Typically, an app has a main page that contains the frame and a primary navigation element, such as a navigation view control. When the user selects a page, the frame loads and displays it.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![las fichas y una imagen dinámica](images/nav/thumbnail-tabs-pivot.svg)
+        ![imagen de pestañas y](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
-    ::: extensión de columna = "2"::: [ **pestañas y navegación superior**](../controls-and-patterns/navigationview.md)
+    ::: column span = "2"::: [ **pestañas y navegación superior**](../controls-and-patterns/navigationview.md)
 
         Displays a horizontal list of links to pages at the same level. The [NavigationView](../controls-and-patterns/navigationview.md) control implements the top navigation and tabs patterns.
         
@@ -200,7 +200,7 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
     :::column:::
         ![imagen de navview](images/nav/thumbnail-navview.svg)
     :::column-end:::
-    ::: extensión de columna = "2"::: [ **exploración izquierda**](../controls-and-patterns/navigationview.md)
+    ::: column span = "2"::: [ **navegación izquierda**](../controls-and-patterns/navigationview.md)
 
         Displays a vertical list of links to top-level pages. Use when:
         
@@ -212,9 +212,9 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
 
 :::row:::
     :::column:::
-        ![Imagen de detalles de maestro](images/nav/thumbnail-master-detail.svg)
+        ![Imagen de maestro y detalles](images/nav/thumbnail-master-detail.svg)
     :::column-end:::
-    ::: extensión de columna = "2"::: [ **maestro/detalles**](../controls-and-patterns/master-details.md)
+    ::: column span = "2"::: [ **maestro y detalles**](../controls-and-patterns/master-details.md)
 
         Displays a list (master view) of items. Selecting an item displays its corresponding page in the details section. Use when:
         
@@ -226,9 +226,9 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
 
 :::row:::
     :::column:::
-        ![Hipervínculos y botones de imagen](images/nav/thumbnail-hyperlinks-buttons.svg)
+        ![Imagen de hipervínculos y botones](images/nav/thumbnail-hyperlinks-buttons.svg)
     :::column-end:::
-    ::: extensión de columna = "2"::: [ **hipervínculos**](../controls-and-patterns/hyperlinks.md)
+    ::: column span = "2"::: [ **hipervínculos**](../controls-and-patterns/hyperlinks.md)
 
         Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
 :::row-end:::

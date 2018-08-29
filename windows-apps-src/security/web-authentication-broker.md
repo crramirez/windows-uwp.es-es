@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: d354f0babec3ec2346c6e76fcae8666f40f3f6be
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887924"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910198"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticación web
 
@@ -159,11 +159,11 @@ Con frecuencia, los registros operativos ayudan a determinar qué no está funci
 
 El depurador web Fiddler puede usarse con aplicaciones.
 
-1.  Dado que el AuthHost se ejecuta en su propio contenedor de aplicación, para proporcionar la capacidad de red privada debe establecer una clave del registro: el Editor del registro de Windows versión 5.00
+1.  Dado que AuthHost se ejecuta en su propio contenedor de aplicación, para darle la funcionalidad de red privada debe establecer una clave del registro: Editor del registro de Windows 5.00
 
     **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Opciones de ejecución del archivo de imágenes**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
 
-    Si no tiene esta clave del registro, puede crear en un símbolo del sistema con privilegios de administrador.
+    Si no tienes esta clave del registro, se puede crear en un símbolo del sistema con privilegios de administrador.
 
     ```cmd 
     REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\authhost.exe" /v EnablePrivateNetwork /t REG_DWORD /d 1 /f

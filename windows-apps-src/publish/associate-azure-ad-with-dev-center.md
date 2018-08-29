@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, azure ad, inquilino de azure, inquilino de aad, inquilino de azure ad, administración de inquilinos, inquilinos
 ms.localizationpriority: medium
 ms.openlocfilehash: dd729d76705849c981516109da39bbd27c140286
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890689"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910437"
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Asociar AzureActiveDirectory a la cuenta del Centro de desarrollo
 
@@ -35,7 +35,7 @@ Un solo un inquilino de AzureAD puede asociarse con varias cuentas del Centro de
 
 Si tu organización ya usa Azure AD, sigue estos pasos para vincular tu cuenta del Centro de desarrollo.
 
-1.  En el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard), seleccione el icono del engranaje (cerca de la esquina superior derecha del panel) y, a continuación, seleccione **configuración de la cuenta**. En el menú **configuración** , seleccione **los inquilinos**.
+1.  En el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard), selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , selecciona **los inquilinos**.
 2.  Selecciona **Asociar Azure AD con tu cuenta del Centro de desarrollo**.
 3.  Escribe tus credenciales de Azure AD del inquilino que quieras asociar.
 4.  Revisa el nombre de la organización y de dominio de tu inquilino de AzureAD. Para completar la asociación, selecciona **Confirmar**.
@@ -49,7 +49,7 @@ Si tu organización ya usa Azure AD, sigue estos pasos para vincular tu cuenta d
 
 Si necesitas configurar un nuevo Azure AD para vincular a tu cuenta del Centro de desarrollo, sigue estos pasos.
 
-1.  En el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard), seleccione el icono del engranaje (cerca de la esquina superior derecha del panel) y, a continuación, seleccione **configuración de la cuenta**. En el menú **configuración** , seleccione **los inquilinos**.
+1.  En el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard), selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , selecciona **los inquilinos**.
 2.  Selecciona **Crear nuevo Azure AD**.
 3.  Escribe la información de directorio para el nuevo Azure AD:
     - **Nombre de dominio**: nombre único que usaremos para tu dominio de Azure AD, junto con ".onmicrosoft.com". Por ejemplo, si escribes "ejemplo", el dominio de Azure AD sería "ejemplo.onmicrosoft.com".
@@ -78,7 +78,7 @@ Cualquier usuario que tenga el rol **Administrador** en una cuenta del Centro de
 > [!IMPORTANT]
 > Cuando se quita un inquilino, todos los usuarios que se han agregado a la cuenta del Centro de desarrollo desde ese inquilino ya no podrán iniciar sesión en la cuenta. 
 
-Para quitar a un inquilino, busque su nombre en la página de **los inquilinos** (en **configuración de la cuenta**) y, a continuación, seleccione **Quitar**. Se te pedirá que confirmes que quieres quitar el inquilino. Una vez que hagas este paso, ningún usuario del Centro de desarrollo de dicho inquilino podrá iniciar sesión en la cuenta del Centro de desarrollo y se quitarán los permisos que hayas configurado para dichos usuarios.
+Para quitar a un inquilino, busca su nombre en la página de **inquilinos** (en la **configuración de la cuenta**) y luego selecciona **Quitar**. Se te pedirá que confirmes que quieres quitar el inquilino. Una vez que hagas este paso, ningún usuario del Centro de desarrollo de dicho inquilino podrá iniciar sesión en la cuenta del Centro de desarrollo y se quitarán los permisos que hayas configurado para dichos usuarios.
 
 > [!TIP]
 > No puedes quitar un inquilino si actualmente has iniciado sesión en el Centro de desarrollo con una cuenta del mismo inquilino. Para quitar un inquilino, debes iniciar sesión en el Centro de desarrollo como **Administrador** para otro inquilino que esté asociado a la cuenta. Si hay solo un inquilino asociado a la cuenta, dicho inquilino solo puede quitarse después de iniciar sesión con la cuenta de Microsoft que abrió dicha cuenta.

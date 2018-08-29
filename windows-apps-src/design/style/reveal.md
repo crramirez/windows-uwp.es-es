@@ -1,7 +1,7 @@
 ---
 author: mijacobs
 description: Reveal es un efecto de iluminación que te ayuda a dar profundidad y foco a los elementos interactivos de tu aplicación.
-title: Revelar resaltado
+title: Mostrar resaltado
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 08/9/2017
@@ -15,22 +15,22 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888904"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2915319"
 ---
-# <a name="reveal-highlight"></a>Revelar resaltado
+# <a name="reveal-highlight"></a>Mostrar resaltado
 
 ![imagen principal](images/header-reveal-highlight.svg)
 
-Revelar que resaltado es un efecto de iluminación que resalta elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
+Mostrar que resaltado es un efecto de iluminación que resalta elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
 
 > **API importantes**: [clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [clase RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [clase RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [clase RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [clase VisualState](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Así es cómo funciona
-Revelar la atención de llamadas de resaltado a elementos interactivos por contenedor del elemento y se muestra cuando el puntero está cercano, como se muestra en esta ilustración:
+Mostrar resaltado llama la atención respecto a los elementos interactivos mostrando el contenedor del elemento cuando el puntero está cercano, como se muestra en la siguiente ilustración:
 
 ![Elemento visual de Reveal](images/Nav_Reveal_Animation.gif)
 
@@ -58,7 +58,7 @@ Al exponer los bordes ocultos alrededor de los objetos, Reveal permite a los usu
 
 ## <a name="how-to-use-it"></a>Cómo usarla
 
-Mostrar funciona automáticamente para algunos controles. Para otros controles, puede habilitar Reveal asignando un estilo especial para el control, como se describe en las secciones [Habilitar revelar en otros controles](#enabling-reveal-on-other-controls) y [Habilitar revelar en controles personalizados](#enabling-reveal-on-custom-controls) de este artículo.
+Mostrar funciona automáticamente para algunos controles. Para otros controles, puedes habilitar Reveal asignando un estilo especial al control, como se describe en las secciones de este artículo [Habilitar Reveal en otros controles](#enabling-reveal-on-other-controls) y [Habilitar Reveal en controles personalizados](#enabling-reveal-on-custom-controls) .
 
 ## <a name="controls-that-automatically-use-reveal"></a>Controles que usan Reveal automáticamente
 
@@ -69,7 +69,7 @@ Mostrar funciona automáticamente para algunos controles. Para otros controles, 
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estos ejemplos muestran revelar resaltar en varios controles distintos:
+Estas ilustraciones muestran Mostrar resaltado en varios controles diferentes:
 
 ![Ejemplos de Reveal](images/RevealExamples_Collage.png)
 
@@ -134,8 +134,8 @@ Puedes agregar Reveal a controles personalizados. Antes de hacerlo, es útil sab
 
 
 Estos efectos se definen mediante dos pinceles: 
-* Borde de revelar se define mediante **RevealBorderBrush**
-* Reveal activable se define mediante **RevealBackgroundBrush**
+* Border Reveal se define mediante **RevealBorderBrush**
+* Hover Reveal se define mediante **RevealBackgroundBrush**
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -259,14 +259,14 @@ Esta es una plantilla completa del aspecto de un botón Reveal:
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Ajustar el efecto Reveal en un control personalizado 
 
-Cuando se habilita Reveal en un control personalizado o con plantilla re o una superficie de comandos personalizada, estos consejos pueden ayudarle a optimizar el efecto:
+Al habilitar Reveal en un control personalizado o nuevamente basado en modelo o una superficie de comandos personalizada, estas sugerencias pueden ayudarte a optimizar el efecto:
  
 * En los elementos adyacentes con tamaños que no se alinean en alto o ancho (especialmente en las listas): quita el comportamiento del enfoque de borde y mantén los bordes mostrados solo al mantener el puntero.
 * Para elementos dominantes que a menudo entran y salen del estado deshabilitado: coloca el pincel del enfoque de borde en placas traseras de los elementos, así como sus bordes para hacer hincapié en su estado.
 * Para los elementos dominantes adyacentes que están tan cerca que se tocan: agrega un margen de 1 píxel entre los dos elementos. 
 
 ## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
-### <a name="do"></a>Hacer:
+### <a name="do"></a>Realiza acciones:
 - Usar Reveal en elementos donde el usuario puede realizar muchas acciones (barras de comandos, menús de navegación)
 - Usar Reveal en agrupaciones de elementos interactivos que no tienen separadores visuales de manera predeterminada (listas, cintas de opciones)
 - Usar Reveal en áreas con una alta densidad de elementos interactivos (escenarios dominantes)

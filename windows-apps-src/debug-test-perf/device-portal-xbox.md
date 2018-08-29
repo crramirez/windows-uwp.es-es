@@ -8,14 +8,14 @@ ms.date: 02/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, portal de dispositivo
+keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 404db3963d2f9508d7c81053abf96b0e742103f7
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888304"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910316"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -197,11 +197,11 @@ Se trata de un área de trabajo en blanco que puedes personalizar a tu gusto. Pu
 
 ![Agregar herramientas al área de trabajo](images/device-portal-xbox-13.png)
 
-### <a name="game-event-data"></a>Datos del evento juego
+### <a name="game-event-data"></a>Datos del evento de juego
 
-En la página de **datos del evento juego** , puede ver un gráfico en tiempo real que secuencias en el número de eventos de juego de seguimiento de eventos para Windows (ETW) actualmente registrada en su Xbox uno. Si hay eventos juego registrados en el sistema, también puede ver los detalles (nombre del evento, ocurrencia de evento y el título de juego) que describe cada evento en una tabla de datos bajo el gráfico de datos. En la tabla sólo está disponible si hay eventos registrados.
+En la página de **datos del evento de juego** , puede ver que las secuencias de un gráfico en tiempo real en el número de eventos del juego de seguimiento de eventos para Windows (ETW) actualmente registradas en tu Xbox One. Si no hay eventos del juego grabados en el sistema, también puedes ver detalles (nombre del evento, la repetición del evento y el título de juego) que describe cada evento en la tabla debajo del gráfico de datos. La tabla solo está disponible si no hay eventos registrados.
 
-![Datos del evento juego](images/device-portal-xbox-22.PNG)
+![Datos del evento de juego](images/device-portal-xbox-22.PNG)
 
 ## <a name="see-also"></a>Consulta también
 

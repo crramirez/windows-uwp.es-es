@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888810"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918816"
 ---
 # <a name="product-declarations"></a>Declaraciones de producto
 
-La sección de **declaraciones del producto** de la página de [Propiedades](enter-app-properties.md) del [proceso de envío](app-submissions.md) de ayuda a asegurarse de que la aplicación se muestra correctamente y que ofrece para el conjunto adecuado de los clientes y ayuda a ellos comprender cómo pueden usar su aplicación.
+La sección **declaraciones de producto** de la página de [Propiedades](enter-app-properties.md) del [proceso de envío](app-submissions.md) de ayuda Asegúrese de que la aplicación se muestra correctamente y se ofrece al conjunto adecuado de los clientes y ayuda a comprender cómo pueden usar la aplicación.
 
-En las secciones siguientes se describen algunas de las declaraciones y qué debe tener en cuenta al determinar si cada declaración se aplica a la aplicación. Tenga en cuenta que dos de estas declaraciones están activadas de forma predeterminada (tal y como se describe a continuación.) Función de la categoría de su producto, también es posible que vea declaraciones adicionales. Asegúrese de revisar todas las declaraciones y asegurarse de que reflejan con precisión su envío.
+Las siguientes secciones describen algunas de las declaraciones y lo que debes tener en cuenta al determinar si cada una de ellas se aplica a la aplicación. Ten en cuenta que dos de estas declaraciones se comprueban de manera predeterminada (tal y como se describe a continuación). Dependiendo de la categoría de producto, también puedes ver las declaraciones de adicionales. Asegúrate de revisar todas las declaraciones y asegúrate de que refleje el envío.
 
-## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Esta aplicación permite a los usuarios realizar compras, pero no utiliza el sistema de comercio de Microsoft Store.
+## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Esta aplicación permite a los usuarios realizar compras, pero no usa el sistema de comercio de Microsoft Store.
 
-Para casi todas las envío, debe dejar esta casilla desactivada, desde aplicaciones que ofrecen la oportunidad de adquirir elementos o pueden ser que consumen o que usa dentro de la aplicación deben usar la adquisición de aplicación de Microsoft Store API para crear y enviar los complementos. Por el [Contrato de aplicación para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), aplicaciones que se han creado y enviado antes del 29 de junio de 2015, podrían continuar ofrecer funcionalidad de compra en la aplicación sin usar el motor de comercio de Microsoft, siempre y cuando la funcionalidad de compra cumple con el [ Las directivas de almacén de Microsoft](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
+Para casi cualquier envío, debes dejar esta casilla sin marcar, dado que las aplicaciones que ofrecen oportunidades para comprar artículos o pueden ser consumidos o que usan dentro de la aplicación deben usar la compra de la aplicación de Microsoft Store API para crear y enviar los complementos. Por el [Acuerdo para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), las aplicaciones que se crearan y enviaran antes del 29 de junio de 2015, podrían continuar ofreciendo en la aplicación sin usar el motor de comercio de Microsoft, siempre que la funcionalidad de compra cumple con los [ Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Esta aplicación se ha probado y cumple las directrices de accesibilidad.
 
@@ -41,30 +41,30 @@ Solo debes activar la casilla si has realizado las acciones siguientes:
 
 Cuando declaras que tu aplicación es accesible, aceptas que será accesible para todos los clientes, incluidas las personas con discapacidades. Esto significa, por ejemplo, que probaste la aplicación con el modo de contraste alto y con el lector de pantalla, y que comprobaste correctamente las funciones de la interfaz de usuario con un teclado, la lupa y otras herramientas de accesibilidad.
 
-Para obtener más información, vea [accesibilidad](../design/accessibility/accessibility.md), [pruebas de accesibilidad](../design/accessibility/accessibility-testing.md)y [accesibilidad en el almacén](../design/accessibility/accessibility-in-the-store.md).
+Para obtener más información, consulta [accesibilidad](../design/accessibility/accessibility.md), [pruebas de accesibilidad](../design/accessibility/accessibility-testing.md)y la [accesibilidad en la tienda](../design/accessibility/accessibility-in-the-store.md).
 
 > [!IMPORTANT]
-> No lista su aplicación como accesibles a menos que específicamente se ha diseñado y probado para ese propósito. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
+> No lista tu aplicación como accesible a menos que se ha diseñado y probado para ese propósito específicamente. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble.
 
-Esta casilla está activada de forma predeterminada, para permitir que los clientes instalar la aplicación de almacenamiento externo o extraíble unidad de medios, como una tarjeta SD o a un volumen que no sea de sistema, como una unidad externa. (Para Windows Phone 8.1, esto se ha anteriormente indicado a través de StoreManifest.xml.)
+Esta casilla está activada de manera predeterminada, para permitir que los clientes instalen tu aplicación en almacenamiento extraíble o externa multimedia como una tarjeta SD, o a un volumen sin sistema unidad como una unidad externa. (Para Windows Phone 8.1, esto se indicaba previamente a través de StoreManifest.xml.)
 
-Si desea impedir que la aplicación se instale a las unidades alternativas o almacenamiento extraíble y sólo permiten la instalación a la unidad de disco duro interno en su dispositivo, desactive esta casilla.
+Si quieres impedir que la aplicación se instale en unidades alternativas o almacenamiento extraíble y solo permiten la instalación en la unidad de disco duro interna en su dispositivo, desactiva esta casilla.
 
-Tenga en cuenta que no hay ninguna opción para restringir la instalación para que una aplicación *sólo* puede instalarse en los medios de almacenamiento extraíble.
+Ten en cuenta que no hay ninguna opción para restringir la instalación para que una aplicación *solo* puede instalarse en un medio de almacenamiento extraíble.
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>Windows puede incluir los datos de la aplicación en copias de seguridad automáticas en OneDrive.
 
-Esta casilla está activada de forma predeterminada para permitir que los datos de la aplicación se incluyan cuando un cliente elige que Windows realice copias de seguridad automáticas en OneDrive. (Para Windows Phone 8.1, esto se ha anteriormente indicado a través de StoreManifest.xml.)
+Esta casilla está activada de forma predeterminada para permitir que los datos de la aplicación se incluyan cuando un cliente elige que Windows realice copias de seguridad automáticas en OneDrive. (Para Windows Phone 8.1, esto se indicaba previamente a través de StoreManifest.xml.)
 
 Si quieres impedir que los datos de la aplicación se incluyan en copias de seguridad automáticas, desactiva la casilla.
 
 
-## <a name="this-app-sends-kinect-data-to-external-services"></a>Esta aplicación envía datos Kinect a los servicios externos. 
+## <a name="this-app-sends-kinect-data-to-external-services"></a>Esta aplicación envía datos de Kinect a los servicios externos. 
 
-Si la aplicación usa Kinect datos y lo envía a cualquier servicio externo, debe Active esta casilla.
+Si la aplicación usa datos de Kinect y envía a cualquier servicio externo, debes marcar esta casilla.
 
 
 

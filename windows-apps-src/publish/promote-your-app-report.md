@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, UWP, promote, promoción, app, aplicación, campaign, campaña, report, informe, installs, instalaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: b5f63b53fca8a97c4f6e61aa38f45a749ca0621b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890734"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906442"
 ---
 # <a name="ad-campaign-report"></a>Informe Campaña publicitaria
 
-El informe **campaña de anuncios** en el panel del centro de desarrollo de Windows le permite ver cómo va a realizar la promoción de aplicación [campañas de anuncios](create-an-ad-campaign-for-your-app.md) . Para ver el informe, expanda **atraiga** en el menú de navegación izquierdo y seleccione **las campañas de Ad**.
+El informe **campaña publicitaria** en el panel del centro de desarrollo de Windows te permite ver cómo se están comportando tu de promoción de la aplicación [las campañas de anuncios](create-an-ad-campaign-for-your-app.md) . Para ver el informe, expande **interactuar** en el menú de navegación izquierdo y selecciona **las campañas de anuncios**.
 
 ## <a name="definitions"></a>Definiciones
 

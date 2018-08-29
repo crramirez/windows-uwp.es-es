@@ -1,38 +1,38 @@
 ---
 author: jnHs
 Description: The Insights report in the Windows Dev Center dashboard
-title: Informe de conocimientos
+title: Informe de información
 ms.author: wdg-dev-content
 ms.date: 06/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, insight, tendencia, anomalías, anomalías, los cambios de datos
+keywords: Windows 10, uwp, insight, tendencia, anomalías, anomalía, cambios de datos
 ms.localizationpriority: medium
 ms.openlocfilehash: be70dccbb7a12b65b9e7bbd07f27ae7ea3a578ff
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913850"
 ---
-# <a name="insights-report"></a>Informe de conocimientos
+# <a name="insights-report"></a>Informe de información
 
 
-El informe de **conocimientos** en el panel del centro de desarrollo de Windows resalta los cambios significativos (aumentos o disminuciones de una métrica específica) que se detectaron durante los últimos 30 días en su adquisiciones, mantenimiento o los datos de uso. Esto le permite obtener un vistazo rápido a los cambios potencialmente importantes sin tener que volver a ver todos los gráficos en cada uno de estos informes.
+El informe de **información** en el panel del centro de desarrollo de Windows resalta cambios importantes (aumentos o disminuciones de una métrica específica) que hemos detectado durante los últimos 30 días en tus adquisiciones, estado o datos de uso. Esto te permite obtener una vista rápida de cambios importantes potencialmente sin tener que ver todos los gráficos en cada uno de estos informes.
 
 > [!NOTE]
-> Datos de este informe tratan los últimos 30 días. No puede seleccionar un período de tiempo diferente para este informe.
+> Datos de este informe tratan los últimos 30 días. No puedes seleccionar un período de tiempo diferente para este informe.
 
-Ordena el informe de los datos en tres fichas: **adquisiciones**, **Mantenimiento**y **uso**. Para ver los conocimientos para una de estas áreas, seleccione la ficha.
+El informe ordena los datos en tres pestañas: **adquisiciones**, **estado**y **uso**. Para ver detalles de una de estas áreas, selecciona su pestaña.
 
-Perspectivas se muestran cuando se detecta un cambio significativo en los datos. Para cada insight, le mostraremos lo siguiente:
-- **Tipo de Insight**: el área en la que se detectó el entendimiento.
-- **Valor**: la métrica específica que cambiado significativamente (o **todos los** si el cambio se aplica a todo el **tipo de Insight**).
-- **Fecha**: la fecha en la que se identificaron el cambio. Esta fecha representa el final de la semana en el que se detecta un aumento significativo o una disminución en comparación con la semana antes de que.
-- **Influir en general**: el porcentaje que el valor se incrementa o se reduce a través de su base de clientes completa. Esto ayuda a comprender el alcance el impacto de un cambio determinado puede ser, especialmente cuando se compara a la información de porcentaje se muestra en **contribuyentes principales.**
-- **Los colaboradores principales**: si procede, el segmento específico, paquete u otro factor de identificación para ayudar a comprender qué clientes el cambio está relacionado con. Por ejemplo, es posible que se detecta un cambio principalmente con los clientes desde un mercado específico o en un determinado tipo de dispositivo. Para los datos de **estado** , esto puede incluir los hashes de error específicas o las versiones del paquete. En su caso, también mostraremos el porcentaje que el valor incrementa o se reduce para ese factor.
+Se muestran detalles cuando se detecta un cambio importante en los datos. Para cada insight, aquí te mostramos lo siguiente:
+- **Tipo de detalles de valoración**: el área en la que se detectó la perspectiva.
+- **Valor**: la métrica específica que cambiado significativamente (o **todos los** si el cambio se aplica a todo el **tipo de información**).
+- **Fecha**: la fecha en la que identificamos el cambio. Esta fecha representa el final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior a que.
+- **Impacto en general**: el porcentaje de que el valor aumenta o disminuye a través de la base de clientes completa. Esto te ayudará a comprender el alcance el impacto de un cambio determinado podrían estar, especialmente cuando comparándola con información de porcentaje se muestra en **colaboradores los valores Top.**
+- **Colaboradores principales**: si procede, el segmento específico, paquete u otro factor identificación para ayudar a comprender qué clientes el cambio está relacionado con. Por ejemplo, es posible que se detecta un cambio principalmente con los clientes de un mercado específico o en un determinado tipo de dispositivo. Para los datos de **estado** , esto puede incluir los hash de error específicos o versiones del paquete. Si corresponde, también se mostrará el porcentaje que el valor aumenta o disminuye para ese factor.
 - **Acción**:
-   - Seleccione **Mostrar tendencia de 14 días** para ver un gráfico que muestra cómo cambia la métrica a través de los 14 días todo lleva a la fecha de insight.
-   - Seleccione **Díganos si esto es preciso** para háganos llegar sus comentarios y háganos saber si el entendimiento Adjuntamos parece preciso. Esta información nos ayudará a seguir mejorar los datos que se proporcionan aquí. 
+   - Selecciona **Mostrar tendencia de 14 días** para ver un gráfico que muestra cómo cambia la métrica a través de los 14 días todo lleva a la fecha de detalles de valoración.
+   - Selecciona **proporcione si esto es precisa** a enviarnos tus comentarios y háznoslo saber si la información que hemos proporcionado parece precisa. Esta información nos ayudarán a seguimos mejorando los datos que proporcionamos aquí. 
 

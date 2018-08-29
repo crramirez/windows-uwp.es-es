@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b707479d11cc7aef62385b476720bff8477ed401
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888613"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916542"
 ---
 # <a name="opening-a-developer-account"></a>Abrir una cuenta de desarrollador
 
@@ -51,7 +51,7 @@ Esta introducción al procedimiento de registro de una cuenta de desarrollador p
 
 9.  Revisa la información de la cuenta y confirma que todo es correcto. Luego, lee y acepta los términos y condiciones del [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Activa la casilla para indicar que has leído y aceptas estos términos.
 
-10.  Haz clic en **Finalizar** para confirmar el registro. El pago se procesará y se podrá enviar un mensaje de confirmación a su dirección de correo electrónico.
+10.  Haz clic en **Finalizar** para confirmar el registro. El pago se procesará y te enviaremos un mensaje de confirmación a su dirección de correo electrónico.
 
 Después de completar el registro, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. Para las cuentas de empresa, el proceso tarda un poco más, ya que también debemos confirmar que tienes autorización para configurar la cuenta de tu empresa. Esta comprobación puede tardar entre unos días y un par de semanas y suele incluir una llamada de teléfono a tu empresa. Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**.
 
@@ -59,15 +59,15 @@ Después de completar el registro, tu cuenta pasará por el proceso de verificac
 ## <a name="additional-guidelines-for-company-accounts"></a>Directrices adicionales para cuentas de empresa
 
 > [!IMPORTANT]
-> Para permitir que varios usuarios tener acceso a su cuenta del centro de desarrollo, se recomienda con Azure Active Directory para asignar roles a usuarios individuales (en lugar de compartir el acceso a la cuenta de Microsoft). Cada usuario puede acceder a la cuenta del Centro de desarrollo, iniciando sesión con sus credenciales individuales de AzureAD. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
+> Para permitir que varios usuarios puedan acceder a su cuenta del centro de desarrollo, se recomienda utilizar Azure Active Directory para asignar roles a usuarios individuales (en lugar de acceso compartido a la cuenta de Microsoft). Cada usuario puede acceder a la cuenta del Centro de desarrollo, iniciando sesión con sus credenciales individuales de AzureAD. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
 
-Al crear una cuenta de empresa, pueden ayudar estas instrucciones si va a necesitar más de una persona tener acceso a la cuenta de iniciando sesión con la cuenta de Microsoft que se abre la cuenta (en lugar de como los usuarios individuales agregados a la cuenta del centro de desarrollo).
+Al crear una cuenta de empresa, estas directrices pueden ayudar si más de una persona tendrá acceso a la cuenta al iniciar sesión con la cuenta de Microsoft que se abrió la cuenta (en lugar de como usuarios individuales que agrega a la cuenta del centro de desarrollo).
 
--   Crea tu cuenta de Microsoft con una dirección de correo electrónico que ya no te pertenece a ti ni a otra persona como MyCompany_DevCenter@outlook.com. No utilice una dirección de correo electrónico en el dominio de su compañía, especialmente si la compañía ya usa Azure AD. (Tal y como se mencionó anteriormente, puede agregar más usuarios desde Azure su compañía AD más adelante.)
+-   Crea tu cuenta de Microsoft con una dirección de correo electrónico que ya no te pertenece a ti ni a otra persona como MyCompany_DevCenter@outlook.com. No utilice una dirección de correo electrónico en el dominio de la empresa, especialmente si su empresa ya utiliza AD Azure. (Como se mencionó anteriormente, puede agregar usuarios adicionales de Azure de su empresa AD más adelante.)
 -   Limita el acceso a esta cuenta Microsoft al menor número posible de usuarios.
--   Configurar una lista de distribución de correo electrónico corporativo que incluye todas las personas que necesita tener acceso a la cuenta de desarrollador y agregue esta dirección de correo electrónico para el [información de seguridad asociada con la cuenta de Microsoft [(https://account.microsoft.com/security). Esto permite que todos los empleados en la lista para recibir los códigos de seguridad enviados a este alias. Si se configura una lista de distribución no es viable, puede agregar la dirección de correo electrónico de una persona a su información de seguridad, pero el propietario de dicha dirección de correo electrónico será la única persona que puede tener acceso y compartir el código de seguridad cuando se le solicite (por ejemplo, cuando se agrega la nueva información de seguridad a t cuenta, o cuando se tiene acceso desde un dispositivo nuevo).
--   Agregar un número de teléfono de la compañía a la información de seguridad de la cuenta de Microsoft. Pruebe a utilizar un número que no requiere una extensión y se puede acceder a los miembros de clave en el equipo.
--   En general, tienen los programadores usar [dispositivos de confianza](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) para iniciar sesión en la cuenta de desarrollador de su compañía. Todos los integrantes principales del equipo deben tener acceso a estos dispositivos de confianza. Así se reducirá la necesidad de enviar códigos de seguridad cuando se acceda a la cuenta. Existe un límite en cuanto al número de códigos que pueden generarse por cuenta, por semana.
+-   Configurar una lista de distribución de correo electrónico corporativo que incluye todos los usuarios que necesitan tener acceso a la cuenta de desarrollador y agregar esta dirección de correo electrónico para el [información de seguridad asociada a la cuenta de Microsoft [(https://account.microsoft.com/security). Esto permite que todos los empleados en la lista para recibir los códigos de seguridad enviados a este alias. Si la configuración de una lista de distribución no es factible, puede agregar direcciones de correo electrónico de una persona a tu información de seguridad, pero el propietario de dicha dirección de correo electrónico será el único que puede acceder y compartir el código de seguridad cuando se le pida (por ejemplo, cuando se agrega nueva información de seguridad a t cuenta de él, o cuando se tiene acceso desde un dispositivo nuevo).
+-   Agregar un número de teléfono de la empresa a la información de seguridad de la cuenta de Microsoft. Pruebe a utilizar un número que no requiere una extensión y es accesible a los miembros clave del equipo.
+-   En general, tienen a los desarrolladores utilizar [dispositivos de confianza](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) para iniciar sesión en la cuenta de desarrollador de su compañía. Todos los integrantes principales del equipo deben tener acceso a estos dispositivos de confianza. Así se reducirá la necesidad de enviar códigos de seguridad cuando se acceda a la cuenta. Existe un límite en cuanto al número de códigos que pueden generarse por cuenta, por semana.
 -   Si tienes que permitir el acceso a la cuenta desde un equipo que no es de confianza, limita ese acceso a un máximo de cinco desarrolladores. Lo ideal es que estos desarrolladores accedan a la cuenta desde equipos que compartan la misma ubicación de red y geográfica.
 -   Revisa con frecuencia la información de seguridad de tu empresa en https://account.microsoft.com/security para asegurarte de que esté actualizada.
 
@@ -76,9 +76,9 @@ Al crear una cuenta de empresa, pueden ayudar estas instrucciones si va a necesi
 
 Usamos la información de seguridad que proporcionas para aumentar el nivel de seguridad de tu cuenta de Microsoft. Para ello, la asociamos con varias formas de identificación. Esto dificulta sustancialmente el acceso no autorizado a tu cuenta Microsoft (y a tu cuenta de desarrollador). Además, si alguna vez olvidas tu contraseña o alguien intenta obtener acceso a tu cuenta, podremos localizarte para que confirmes la titularidad y puedas volver establecer un control apropiado de tu cuenta.
 
-Debes tener al menos dos direcciones de correo electrónico o números de teléfono en la cuenta de Microsoft. Te recomendamos que agregues todas las que puedas. Recuerda que alguna de esta información de seguridad debe confirmarse para ser válida. Asimismo, procura revisar tu información de seguridad con frecuencia, para asegurarte de que esté actualizada. Puedes administrar tu información de seguridad yendo a https://account.microsoft.com/security e iniciando sesión con tu cuenta de Microsoft. Para obtener más información, vea [Security info & códigos de seguridad](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) .
+Debes tener al menos dos direcciones de correo electrónico o números de teléfono en la cuenta de Microsoft. Te recomendamos que agregues todas las que puedas. Recuerda que alguna de esta información de seguridad debe confirmarse para ser válida. Asimismo, procura revisar tu información de seguridad con frecuencia, para asegurarte de que esté actualizada. Puedes administrar tu información de seguridad yendo a https://account.microsoft.com/security e iniciando sesión con tu cuenta de Microsoft. Para obtener más información, vea [información de seguridad y códigos de seguridad](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) .
 
-Al iniciar sesión en el panel del centro de desarrollo de Windows con su cuenta de Microsoft, el sistema puede solicitar que compruebe su identidad mediante el envío de un código de seguridad que debe proporcionar para completar el proceso de inicio de sesión. Se recomienda designar PCs que utilizan con frecuencia como *dispositivos de confianza*. Cuando inicia sesión desde un dispositivo de confianza, normalmente no se le para un código, si bien es posible que deba ocasionalmente en situaciones específicas o si no ha iniciado sesión ese dispositivo en mucho tiempo. Para obtener más información, vea [Agregar un dispositivo de confianza a su cuenta de Microsoft](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) .
+Al iniciar sesión el escritorio de Windows Dev Center utilizando su cuenta de Microsoft, el sistema solicite que compruebe su identidad mediante el envío de un código de seguridad que debe proporcionar para completar el proceso de inicio de sesión. Se recomienda designar los equipos que utilizan con frecuencia como *dispositivos de confianza*. Al iniciar la sesión desde un dispositivo de confianza, normalmente no se le para un código, aunque puede que en ocasiones se le en situaciones específicas, o si no te has suscrito ese dispositivo en mucho tiempo. Para obtener más información, vea [Agregar un dispositivo de confianza a su cuenta de Microsoft](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) .
 
 
 ## <a name="closing-your-account"></a>Cerrar la cuenta

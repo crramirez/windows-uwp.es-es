@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, complementos, iap, precio
 ms.localizationpriority: medium
 ms.openlocfilehash: b5b7a6424fea3d62849e992f56b0b40ab72a55f5
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888234"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909525"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Establecer los precios y la disponibilidad de los complementos
 
@@ -54,12 +54,12 @@ Para obtener más información, consulta [Configurar la programación de lanzami
 
 ## <a name="pricing"></a>Precios
 
-Debe seleccionar un precio base para el complemento (a menos que se ha seleccionado la opción **Detener adquisición** en la sección de **visibilidad** ). La selección predeterminada es **gratuita**, por lo que si desea cobran por el complemento, asegúrese de elegir uno de los niveles de precio disponibles (empezando por.99 USD).
+Debes seleccionar un precio base para el complemento (a menos que hayas seleccionado la opción de **Detener la compra** en la sección **visibilidad** ). La selección predeterminada es **gratuita**, por lo tanto, si quieres cobrar dinero por el complemento, asegúrate de elegir una de las franjas de precios disponibles (a partir de.99 USD).
 
 También puedes programar los cambios de precio para indicar la fecha y la hora en las que el precio del complemento debería cambiar. Además, tienes la opción de personalizar estos cambios para mercados específicos. 
 
 > [!TIP]
-> Para los complementos de suscripción, no puede provocar el precio después de publicar el complemento, seleccionando un precio base superior en una presentación posterior o mediante la programación de un cambio de precios que aumenta el precio. Puede seleccionar un precio menor con cualquiera de estos métodos, pero una vez que se reduce el precio no podrá elevar mayor que el precio nuevo. Por este motivo, es especialmente importante para garantizar que seleccione el nivel de precio adecuado para los complementos de suscripción. 
+> Para los complementos de suscripción, no puedes Subir el precio de después de publicar el complemento, al seleccionar un precio base superior en envíos posteriores o mediante programación un cambio de precio que aumenta el precio. Puedes seleccionar un precio más bajo usar cualquiera de estos métodos, pero una vez que se reduce el precio que no podrás generarlo mediante ese precio nuevo. Por este motivo, es especialmente importante para estar seguro de que seleccionas la franja de precios adecuados para los complementos de suscripción. 
 
 Para obtener más información, consulta [Establecer y programar los precios de las aplicaciones](set-and-schedule-app-pricing.md).
 

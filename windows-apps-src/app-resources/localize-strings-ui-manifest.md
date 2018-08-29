@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886127"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913589"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
@@ -92,13 +92,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 Puedes usar este mismo código desde dentro de una biblioteca de clases (Windows Universal) o un proyecto [Biblioteca de Windows Runtime (Windows Universal)](../winrt-components/index.md). En el momento de ejecución, se cargan los recursos de la aplicación que aloja la biblioteca. Te recomendamos que las bibliotecas carguen recursos de la aplicación que alojan, dado que es probable que la aplicación tenga un mayor grado de localización. Cuando una biblioteca tiene que proporcionar recursos, debería proporcionar a su aplicación alojada la opción de sustituir esos recursos como si fueran una entrada.
 
-Si un nombre de recurso es segmentado (contiene "." caracteres), a continuación, reemplazar los puntos con barra diagonal ("/") caracteres en el nombre del recurso. Identificadores de propiedades, por ejemplo, contengan puntos; por lo que necesitará realizar esta sustitución con el fin de cargar uno de ellos desde el código.
+Si se segmenta un nombre de recurso (que contiene "." caracteres), a continuación, reemplazar puntos con barra diagonal ("/") caracteres en el nombre del recurso. Por ejemplo, los identificadores de propiedad, contener puntos; por lo tanto, tendrías que hacer este sustitución con el fin de cargar uno de ellos desde el código.
 
 ```csharp
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
 ```
 
-Si tiene alguna duda, puede usar [MakePri.exe](makepri-exe-command-options.md) para volcar archivo PRI de su aplicación. Cada recurso `uri` se muestra en el archivo de objeto de dumping.
+En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar archivos PRI de la aplicación. Cada recurso `uri` se muestra en el archivo de volcado.
 
 ```xml
 <ResourceMapSubtree name="Fare"><NamedResource name="Well" uri="ms-resource://<GUID>/Resources/Fare/Well">...
@@ -175,13 +175,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 Si fueras a mover el recurso "AppDisplayName" fuera de `Resources.resw` y adentro de `ManifestResources.resw`, en ese caso, en el manifiesto del paquete de aplicación cambiarías `ms-resource:AppDisplayName` a `ms-resource:/ManifestResources/AppDisplayName`.
 
-Si un nombre de archivo de recursos es segmentado (contiene "." caracteres), a continuación, deje los puntos en el nombre cuando se hace referencia a él. **No** reemplazar puntos por caracteres de barra diagonal ("/"), como lo haría para un nombre de recurso.
+Si se segmenta un nombre de archivo de recursos (que contiene "." caracteres), a continuación, dejar los puntos en el nombre al hacer referencia a él. **No** reemplaza puntos con caracteres de barra diagonal ("/"), igual que harías para un nombre de recurso.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
 ```
 
-Si tiene alguna duda, puede usar [MakePri.exe](makepri-exe-command-options.md) para volcar archivo PRI de su aplicación. Cada recurso `uri` se muestra en el archivo de objeto de dumping.
+En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar archivos PRI de la aplicación. Cada recurso `uri` se muestra en el archivo de volcado.
 
 ```xml
 <ResourceMapSubtree name="Err.Msgs"><NamedResource name="MismatchedPasswords" uri="ms-resource://<GUID>/Err.Msgs/MismatchedPasswords">...
@@ -268,20 +268,20 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
 ```
 
-Para una biblioteca de tiempo de ejecución de Windows (Universal Windows), si el espacio de nombres predeterminado es segmentado (contiene "." caracteres), a continuación, usar puntos en el nombre de la asignación de recursos.
+Para una biblioteca de Windows Runtime (Windows Universal), si se segmenta el espacio de nombres predeterminado (que contiene "." caracteres), a continuación, usa puntos en el nombre del mapa de recursos.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-No es necesario hacer para una biblioteca de clases (Windows Universal). Si tiene alguna duda, puede usar [MakePri.exe](makepri-exe-command-options.md) para volcar el componente o archivo PRI de la biblioteca. Cada recurso `uri` se muestra en el archivo de objeto de dumping.
+No tienes que hacerlo para una biblioteca de clases (Windows Universal). En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar tu componente o archivo PRI de la biblioteca. Cada recurso `uri` se muestra en el archivo de volcado.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>Cargar cadenas desde otros paquetes
-Los recursos para un paquete de aplicación se administran y se tiene acceso a través del paquete propietario de nivel superior [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) que sea accesible desde [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)actual. Dentro de cada paquete, diversos componentes pueden tener sus propios subárboles ResourceMap, a los que se puede tener acceso a través de [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
+Los recursos para un paquete de la aplicación se administran y se accede a través del paquete propietario de nivel superior [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) que es accesible desde el actual [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live). Dentro de cada paquete, diversos componentes pueden tener sus propios subárboles ResourceMap, a los que se puede tener acceso a través de [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
 
 Un paquete de marcos puede tener acceso a sus propios recursos con un URI de identificador de recursos absoluto. Consulta también [esquemas URI](uri-schemes.md).
 

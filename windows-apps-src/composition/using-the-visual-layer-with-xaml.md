@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 643a5abf22bfbeb9e7ace48bc430ab6e0d446ae1
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: d45881ace6be3b0af88f14692837e96ab9b58d18
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018581"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2914520"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>Uso de la capa visual con XAML
 
@@ -43,7 +43,7 @@ Para ver ejemplos de código, consulta [**XamlCompositionBrushBase**](https://do
 
 La clase **XamlLight** una clase base para los efectos de iluminación de XAML que iluminan de forma dinámica un área con un objeto **CompositionLight**.
 
-Consulta la sección [**Iluminación**](lighting.md) para más información sobre el uso de luces, incluidos los elementos de la interfaz de usuario de XAML de iluminación.
+Consulta la sección [**Iluminación**](xaml-lighting.md) para más información sobre el uso de luces, incluidos los elementos de la interfaz de usuario de XAML de iluminación.
 
 Para ver ejemplos de código, consulta [**XamlLight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamllight) en la página de referencia.
 

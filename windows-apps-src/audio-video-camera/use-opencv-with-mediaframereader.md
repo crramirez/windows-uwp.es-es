@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
 ms.openlocfilehash: 43545f2a8e1965124560479d399df79d247c5f05
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886645"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913042"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Usar la Open Source Computer Vision Library (OpenCV) con MediaFrameReader
 
@@ -32,7 +32,7 @@ Este artículo se basa en el contenido de los otros dos artículos:
 
 Además de estos artículos, para ver y descargar una muestra de código completa e integral del escenario descrito en este artículo, consulta el [Fotogramas de Cámara+ Muestra de OpenCV](https://go.microsoft.com/fwlink/?linkid=854003) en el repositorio de GitHub de muestras universales de Windows.
 
-Para empezar a desarrollar rápidamente, puede incluir la biblioteca de OpenCV en un proyecto de aplicación UWP mediante el uso de paquetes de NuGet, pero estos paquetes no es posible que pase el proceso de certficication de aplicación al enviar su aplicación a la tienda, por lo que se recomienda que descargue el OpenCV biblioteca de código fuente y generar los archivos binarios antes de enviar la aplicación. Podrás encontrar información sobre el desarrollo con OpenCV en [http://opencv.org](http://opencv.org).
+Para empezar a desarrollar rápidamente, puedes incluir la biblioteca de OpenCV en un proyecto de aplicación para UWP mediante el uso de paquetes de NuGet, pero estos paquetes no pueden pasar el proceso de certficication de la aplicación al enviar la aplicación a la tienda, por lo que se recomienda que descargues el OpenCV biblioteca de código fuente y crear los archivos binarios antes de enviar tu aplicación. Podrás encontrar información sobre el desarrollo con OpenCV en [http://opencv.org](http://opencv.org).
 
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>Implementar el Componente de Windows Runtime nativo de OpenCVHelper

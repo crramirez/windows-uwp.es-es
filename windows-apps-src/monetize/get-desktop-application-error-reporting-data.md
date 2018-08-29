@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis Microsoft Store, errors, errores, desktop application, aplicación de escritorio
 ms.localizationpriority: medium
 ms.openlocfilehash: 71c566ff375f36108d724f3c550570b3332f4c6b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887784"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905788"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>Obtener datos de informes de errores para la aplicación de escritorio
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de informes de error adicionales de una aplicación de escritorio que agregaste al [Programa de aplicaciones de escritorio de Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método sólo puede recuperar los errores que se produjeron en los últimos 30 días. Esta información también está disponible en el [informe Mantenimiento](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicaciones de escritorio del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de informes de error adicionales de una aplicación de escritorio que agregaste al [Programa de aplicaciones de escritorio de Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método solo puede recuperar los errores que se han producido en los últimos 30 días. Esta información también está disponible en el [informe Mantenimiento](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicaciones de escritorio del panel del Centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -49,7 +49,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
 | applicationId | cadena | El id. del producto de la aplicación de escritorio de la cual quieres recuperar los datos del informe de errores. Para obtener el id. del producto de una aplicación de escritorio, abra cualquier [informe de análisis del Centro de desarrollo de tu aplicación de escritorio](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como el **Informe de estado**) y recuperara el id. del producto desde la dirección URL. |  Sí  |
-| startDate | fecha | La fecha de inicio del intervalo de fechas de los datos del informe de errores que se han de recuperar con el formato ```mm/dd/yyyy```. El valor siempre es la fecha actual.<p/><p/>**Nota:**&nbsp;&nbsp;este método sólo puede recuperar los errores que se produjeron en los últimos 30 días.  |  No  |
+| startDate | fecha | La fecha de inicio del intervalo de fechas de los datos del informe de errores que se han de recuperar con el formato ```mm/dd/yyyy```. El valor siempre es la fecha actual.<p/><p/>**Nota:**&nbsp;&nbsp;este método solo puede recuperar los errores que se han producido en los últimos 30 días.  |  No  |
 | endDate | fecha | La fecha final del intervalo de fechas de los datos del informe de errores que se han de recuperar con el formato ```mm/dd/yyyy```. El valor siempre es la fecha actual.   |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |

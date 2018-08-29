@@ -11,15 +11,15 @@ keywords: windows 10, uwp
 ms.assetid: 65d578a6-4e26-484c-90af-b2cd916f3634
 ms.localizationpriority: medium
 ms.openlocfilehash: 407ffb5fdebdc90a63ed7f65b4e97f8358dc58c8
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890864"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2915125"
 ---
 # <a name="gradual-package-rollout"></a>Lanzamiento gradual del paquete
 
-Cuando se publica una actualización a una presentación, puede elegir gradualmente desplegar los paquetes actualizados a un porcentaje de los clientes de su aplicación en 10 de Windows (incluidos Xbox). Esto te permite supervisar los comentarios y los datos analíticos de los paquetes específicos para asegurarte de que estás seguro sobre la actualización antes de hacer un lanzamiento más amplio. Asimismo, puedes incrementar el porcentaje (o detener la actualización) en cualquier momento, sin tener que crear un nuevo envío. 
+Al publicar una actualización para un envío, puedes elegir lanzar gradualmente los paquetes actualizados para un porcentaje de clientes de la aplicación en Windows 10 (incluyendo Xbox). Esto te permite supervisar los comentarios y los datos analíticos de los paquetes específicos para asegurarte de que estás seguro sobre la actualización antes de hacer un lanzamiento más amplio. Asimismo, puedes incrementar el porcentaje (o detener la actualización) en cualquier momento, sin tener que crear un nuevo envío. 
 
 > [!IMPORTANT]
 > Tus selecciones de lanzamiento se aplican a todos los paquetes, pero solo se aplicarán a los clientes que ejecuten versiones de sistema operativo compatibles con los paquetes piloto (Windows.Desktop compilación 10586 o posteriores y Xbox), incluidos los clientes que obtienen la aplicación a través de una [licencia administrada desde la Tienda (en línea)](organizational-licensing.md) mediante la [Tienda Microsoft para Empresas](https://businessstore.microsoft.com/store) o mediante la [Tienda Microsoft para Educación](https://educationstore.microsoft.com/store). Al usar el lanzamiento de paquete gradual, los clientes con versiones anteriores del sistema operativo no recibirán paquetes del envío más reciente hasta que finalice el lanzamiento del paquete, como se describe a continuación.

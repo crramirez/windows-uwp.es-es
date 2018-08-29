@@ -10,21 +10,21 @@ ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ca47bfb26649f2e8a9fc1344c3264d90548eb836
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886754"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918786"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>Atraer a clientes y promocionar las aplicaciones
 
-Una vez que la aplicación está en Microsoft Store, es el momento de obtener delante de los clientes tantos como sea posible. Tenemos a tu disposición muchas características que te ayudarán a promocionar tus productos y aumentar tu base de clientes, entre las que se incluyen campañas publicitarias, códigos de promoción, precios de oferta y mucho más.
+Una vez que la aplicación está en la Microsoft Store, es el momento de mostrarla al máximo número de clientes como sea posible. Tenemos a tu disposición muchas características que te ayudarán a promocionar tus productos y aumentar tu base de clientes, entre las que se incluyen campañas publicitarias, códigos de promoción, precios de oferta y mucho más.
 
 -   [Generar códigos promocionales](generate-promotional-codes.md)
 -   [Crear una campaña publicitaria para la aplicación](create-an-ad-campaign-for-your-app.md)
 -   [Crear una campaña de promoción de la aplicación personalizada](create-a-custom-app-promotion-campaign.md)
 -   [Poner aplicaciones y complementos a la venta](put-apps-and-add-ons-on-sale.md)
--   [Store Microsoft directrices para aplicaciones de marketing](app-marketing-guidelines.md)
+-   [Directrices para aplicaciones de marketing de Microsoft Store](app-marketing-guidelines.md)
 -   [Vincular a la aplicación](link-to-your-app.md)
 -   [Facilitar la promoción de la aplicación](make-your-app-easier-to-promote.md)
 
