@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, educación
 ms.localizationpriority: medium
 ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894252"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917621"
 ---
 # <a name="take-a-test-javascript-api"></a>API de JavaScript "Hacer un examen"
 
-[Realice una prueba](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación de UWP basado en explorador que represente bloqueado la evaluación en línea para probar la alta apuestas, lo que permite educadores para centrarse en la evaluación de contenido en lugar de cómo proporcionar un entorno de prueba seguro. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
+[Realice una prueba](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación UWP basada en navegador que representa bloqueada la evaluación en línea para pruebas de alto riesgo, permitiendo educadores para centrarse en la evaluación de contenido en lugar de cómo proporcionar un entorno de prueba seguro. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
 
 Si quieres obtener información acerca de la propia aplicación, consulta [Referencia técnica de la aplicación Hacer un examen)](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). Para solucionar cualquier problema, consulta [Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos](troubleshooting.md).
 
@@ -32,7 +32,7 @@ Las APIs de Hacer un examen existen en los siguientes espacios de nombres. Ten e
 
 ### <a name="security-namespace"></a>Espacio de nombres de seguridad
 
-El espacio de nombres de seguridad le permite bloquear el dispositivo, compruebe la lista de los procesos de usuario y del sistema, obtener direcciones IP y MAC y desactive recursos web almacenados en caché.
+El espacio de nombres de seguridad le permite bloquear el dispositivo, compruebe la lista de procesos del sistema y del usuario, obtener las direcciones IP y MAC y borrar recursos de web en caché.
 
 | Método | Descripción   |
 |--------|---------------|

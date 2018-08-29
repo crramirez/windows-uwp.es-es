@@ -11,18 +11,18 @@ keywords: windows 10, uwp, versión, compilación, versiones, windows, elegir, a
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bb9aad1fa9da79708b3c785da80811006153767
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882257"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918936"
 ---
 # <a name="choose-a-uwp-version"></a>Elegir una versión de UWP
 
 Cada versión de Windows10 ha aportado características nuevas y mejoradas a la plataforma UWP. Al crear una aplicación para UWP en Microsoft Visual Studio, puedes elegir la versión de destino. Los proyectos que usen [.NET 2.0 estándar](https://docs.microsoft.com/dotnet/standard/net-standard) debe tener un **versión mínima** de la compilación 16299 o posterior.
 
 > [!WARNING]
-> Proyectos UWP creados en las versiones actuales de Visual Studio no se pueden abrir en Visual Studio de 2015.
+> No se puede abrir proyectos UWP creados en las versiones actuales de Visual Studio en Visual Studio 2015.
 
 En la tabla siguiente se describen las versiones disponibles de Windows10. Ten en cuenta que esta tabla solo se aplica a la creación de aplicaciones para UWP, que solo son compatibles con Windows10. No puedes desarrollar aplicaciones para UWP para versiones anteriores de Windows, y tienes que haber [instalado la versión adecuada del SDK](http://go.microsoft.com/fwlink/?LinkId=821431) con el fin de seleccionar esa versión como destino. 
 
@@ -43,13 +43,13 @@ En cada versión sucesiva de Windows10 están disponibles API nuevas y modificad
 
 Para ver los temas de consulta que enumeran todas las familias de dispositivos y sus versiones, así como todos los contratos de API y sus versiones, consulta [Familias de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) y [Contratos de API](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx).
 
-## <a name="net-api-availability-in-uwp-versions"></a>Disponibilidad de la API de .NET en las versiones UWP
+## <a name="net-api-availability-in-uwp-versions"></a>Disponibilidad de la API de .NET en versiones UWP
 
-UWP admite un subconjunto limitado de API. NET, que están disponibles, independientemente de la **Versión de destino** o la **Versión mínima** de su proyecto. [Esta página proporciona más información sobre los tipos disponibles](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
+UWP admite un subconjunto limitado de las API de .NET que están disponibles independientemente de la **Versión de destino** o la **Versión mínima** del proyecto. [Esta página proporciona más información sobre los tipos disponibles](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
 
-Si desea crear bibliotecas reutilizables de multiplataforma, .NET Standard es compatible con UWP. La [documentación estándar de .NET](https://docs.microsoft.com/dotnet/standard/net-standard) proporciona información en el que .NET Standard es compatible con las versiones que UWP.
+Si desea crear bibliotecas reutilizables de multiplataforma, .NET Standard es compatible con UWP. La [documentación estándar de .NET](https://docs.microsoft.com/dotnet/standard/net-standard) proporciona información en la que .NET Standard se admite las versiones UWP.
 
-Si está desarrollando una aplicación de escritorio, vea en su lugar, [las dependencias y las versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) para obtener información detallada sobre la disponibilidad de .NET framework.
+Si está desarrollando una aplicación de escritorio, ver en su lugar [las dependencias y las versiones de.NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) para obtener información detallada sobre la disponibilidad de .NET framework.
 
 ## <a name="choose-which-version-to-use-for-your-app"></a>Elegir la versión que usarás para la aplicación
 

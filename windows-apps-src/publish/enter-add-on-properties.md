@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885592"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917213"
 ---
 # <a name="enter-add-on-properties"></a>Especificar las propiedades de los complementos
 

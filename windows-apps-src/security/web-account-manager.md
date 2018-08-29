@@ -11,11 +11,11 @@ keywords: Windows 10, uwp, seguridad
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
 ms.openlocfilehash: 2de5c969610aa6b4fa1a3af01af565d35854b5f2
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882558"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917278"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
@@ -179,7 +179,7 @@ En este ejemplo, pasamos la cadena "wl.basic" al parámetro _scope_. El ámbito 
 * Para ámbitos de OneDrive, consulta [OneDrive authentication and sign-in](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes) (Autenticación e inicio de sesión de OneDrive). 
 
 > [!TIP]
-> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminada) u otra propiedad especial relacionadas con la experiencia de inicio de sesión, aparezca en la propiedad **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema para que omita la propiedad al almacenamiento en caché de la cuenta de web, lo que evita que los errores de coincidencia de cuenta en la memoria caché.
+> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminada) u otras propiedades especiales relacionadas con la experiencia de inicio de sesión, la lista en la propiedad **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema omitir la propiedad al almacenamiento en caché de la cuenta de web, lo que impide que las discrepancias de la cuenta en la memoria caché.
 
 Si estás desarrollando una aplicación de empresa, probablemente querrás conectarte a una instancia de Azure Active Directory (AAD) y usar la API de Microsoft Graph en lugar de los servicios de MSA habituales. En este escenario, usa el siguiente código en su lugar: 
 

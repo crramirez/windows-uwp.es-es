@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881838"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917173"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Preguntas comunes sobre las campañas publicitarias
 
@@ -41,7 +41,7 @@ Si usas una de las plantillas de anuncio predeterminadas, puedes elegir el tama�
 
 ### <a name="where-will-my-ad-appear"></a>¿Dónde aparecerá el anuncio?
 
-El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Establecer estas propiedades cuando se publica la aplicación en el Microsoft Store. Para campañas "Universal", tus anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
+El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Estas propiedades se establecen cuando se publica la aplicación en la Store de Microsoft. Para campañas "Universal", tus anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
 
 Actualmente, se admiten campañas publicitarias en estos países y regiones:
 

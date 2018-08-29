@@ -18,11 +18,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 7372f296658f9213ccc50bd6388a4f25ad47a946
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890531"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918946"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementar la navegación entre dos páginas
 
@@ -300,7 +300,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 ```
 
 > [!NOTE]
-> El código aquí usa el valor devuelto de [**navegar**](https://msdn.microsoft.com/library/windows/apps/br242694) a producir una excepción de aplicación si se produce un error en el panel de navegación para el marco de ventana inicial de la aplicación. Cuando **Navigate** devuelve **true**, se produce la navegación.
+> Aquí, el código utiliza el valor devuelto de [**navegar**](https://msdn.microsoft.com/library/windows/apps/br242694) para producir una excepción de aplicación si se produce un error en la barra de navegación del marco de ventana inicial de la aplicación. Cuando **Navigate** devuelve **true**, se produce la navegación.
 
 Ahora, compila y ejecuta la aplicación. Haz clic en el vínculo que dice "Haz clic para ir a la página 2". La segunda página que muestra "Página 2" en la parte superior, se debería cargar y mostrar en el marco.
 
