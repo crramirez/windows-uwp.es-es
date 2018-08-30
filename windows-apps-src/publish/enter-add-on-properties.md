@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2917213"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3117412"
 ---
 # <a name="enter-add-on-properties"></a>Especificar las propiedades de los complementos
 
@@ -44,7 +44,7 @@ Si seleccionaste **Consumible administrado por la Tienda** para el tipo de produ
 
 ## <a name="subscription-period"></a>Período de suscripción
 
-Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Elige una opción para especificar la frecuencia a la que se le cobrará a un cliente por la suscripción. La opción predeterminada es **mensual**, pero también puede seleccionar **3 meses**, **6 meses**, **anualmente**o **24 meses**.
+Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Elige una opción para especificar la frecuencia a la que se le cobrará a un cliente por la suscripción. La opción predeterminada es **mensual**, pero también puedes seleccionar **3 meses**, **6 meses**, **anualmente**o **24 meses**.
 
 > [!IMPORTANT]
 > Después de publicar el complemento, no podrás cambiar la selección de **Período de suscripción**.

@@ -11,18 +11,20 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, maps, mapas, map style sheet, hoja de estilo de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 984741de5be585f7d6d726ec4c736e6ebce78830
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905748"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118891"
 ---
 # <a name="map-style-sheet-reference"></a>Referencia de hoja de estilo de mapa
 
-Uso de las tecnologías de asignación de Microsoft se asignan las hojas de estilo para definir la apariencia de mapas.  Una hoja de estilo de mapa se define mediante la notación de objetos JavaScript (JSON) y puede usarse en diversas formas que incluya en la aplicación de la tienda Windows [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) a través del método [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) .
+Tecnologías de asignación de Microsoft usan _hojas de estilo de mapa_ para definir la apariencia de mapas.  Una hoja de estilo de mapa se define mediante la notación de objetos JavaScript (JSON) y puede usarse en diversas formas que incluya en la aplicación de la tienda Windows [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) a través del método [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) .
 
-Por ejemplo, deberías usar la siguiente notación JSON para hacer que las zonas de agua aparezcan en color rojo, las etiquetas de agua aparezcan en verde y las zonas de tierra aparezcan en azul:
+Hojas de estilo pueden crearse de forma interactiva mediante la aplicación de [Editor de hojas de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
+
+Se puede usar la siguiente notación JSON para hacer que las zonas de agua aparezcan en color rojo, las etiquetas de agua aparezcan en verde y tierra aparezcan en azul:
 
 ```json
     {"version":"1.*",
@@ -30,7 +32,8 @@ Por ejemplo, deberías usar la siguiente notación JSON para hacer que las zonas
         "elements":{"water":{"fillColor":"#FF0000","labelColor":"#00FF00"}}
     }
 ```
-También podrías usar la notación JSON para quitar todas las etiquetas y los puntos de un mapa.
+
+Este JSON puede usarse para quitar todas las etiquetas y los puntos de un mapa.
 
 ```json
 
