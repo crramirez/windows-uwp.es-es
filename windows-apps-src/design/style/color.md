@@ -1,8 +1,8 @@
 ---
-author: serenaz
+author: QuinnRadich
 description: Aprende a usar colores de énfasis y temas en tus aplicaciones para UWP.
 title: Color en las aplicaciones para UWP
-ms.author: sezhen
+ms.author: quradic
 ms.date: 4/7/2018
 ms.topic: article
 ms.prod: windows
@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 design-contact: karenmui
 ms.localizationpriority: medium
-ms.openlocfilehash: fc348dc4f4733feae86a94e0ada1693326a201d8
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 19f4d9cde6ee2bc9615f044f18bc5e8828ca1985
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843195"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3123434"
 ---
 # <a name="color"></a>Color
 
@@ -27,17 +27,27 @@ En aplicaciones para UWP, los colores vienen determinados principalmente por col
 
 ## <a name="color-principles"></a>Principios de color
 
-:::row::: :::column::: **Usar color significativamente**.
+:::row:::
+    :::column:::
+        **Usar color significativamente.**
 Cuando se usa color con moderación para resaltar elementos importantes, puede ayudar a crear una interfaz de usuario que sea fluida e intuitiva.
-:::column-end::: :::column::: **Usar color para indicar interactividad**.
+    :::column-end:::
+    :::column:::
+        **Usar color para indicar interactividad.**
 Es aconsejable elegir un color para indicar elementos de tu aplicación que son interactivos. Por ejemplo, muchas páginas web usa texto azul para indicar un hipervínculo.
-:::column-end::: :::row-end:::
+    :::column-end:::
+:::row-end:::
 
-:::row::: :::column::: **El color es personal**.
+:::row:::
+    :::column:::
+        **El color es personal.**
 En Windows, los usuarios pueden elegir un color de énfasis y un tema claro u oscuro, que se reflejan a lo largo de su experiencia. Puedes elegir cómo incorporar el tema y el color de énfasis del usuario en la aplicación, personalizando su experiencia.
-:::column-end::: :::column::: **El color is cultural**.
+    :::column-end:::
+    :::column:::
+        **El color es cultural.**
 Ten en cuenta cómo se interpretarán los colores que usas por parte de personas de diferentes culturas. Por ejemplo, en algunas culturas el color azul se asocia a virtud y protección, mientras que en otras representa duelo.
-:::column-end::: :::row-end:::
+    :::column-end:::
+:::row-end:::
 
 ## <a name="themes"></a>Temas
 
@@ -96,7 +106,9 @@ Los pinceles de temas se usan para los siguientes fines:
 
 ### <a name="using-theme-brushes"></a>Usar pinceles de temas
 
-:::row::: :::column::: Al crear plantillas para controles personalizados, usa pinceles de temas en lugar de valores de color codificados. De esta forma, tu aplicación se puede adaptar con facilidad a cualquier tema.
+:::row:::
+    :::column:::
+        Al crear plantillas para controles personalizados, usa pinceles de temas en lugar de valores de color codificados. De esta forma, tu aplicación se puede adaptar con facilidad a cualquier tema.
 
         For example, these [item templates for ListView](../controls-and-patterns/item-templates-listview.md) demonstrate how to use theme brushes in a custom template.
     :::column-end:::
@@ -133,7 +145,14 @@ Los controles comunes usan un color de énfasis para transmitir información de 
 
 ![controles de Windows](images/color/windows-controls.svg)
 
-:::row::: :::column::: ![encabezado de énfasis seleccionado por el usuario](images/color/user-accent.svg) ![color de énfasis seleccionado por el usuario](images/color/user-selected-accent.svg) :::column-end::: :::column::: ![encabezado de énfasis personalizado](images/color/custom-accent.svg) ![color de énfasis de marca personalizado](images/color/brand-color.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![encabezado de énfasis seleccionado por el usuario](images/color/user-accent.svg) ![color de énfasis seleccionado por el usuario](images/color/user-selected-accent.svg)
+    :::column-end:::
+    :::column:::
+        ![encabezado de énfasis personalizado](images/color/custom-accent.svg) ![color de énfasis de marca personalizada](images/color/brand-color.svg)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="overriding-the-accent-color"></a>Reemplazar el color de énfasis
 
@@ -237,7 +256,11 @@ Para obtener más información acerca de cómo usar pinceles, consulta [Pinceles
 
 ## <a name="usability"></a>Facilidad de uso
 
-:::row::: :::column::: ![ilustración de contraste](images/color/illo-contrast.svg) :::column-end::: :::column span="2"::: **Contraste**
+:::row:::
+    :::column:::
+        ![ilustración de contraste](images/color/illo-contrast.svg)
+    :::column-end:::
+    ::: column span = "2"::: **contraste**
 
         Make sure that elements and images have sufficient contrast to differentiate between them, regardless of the accent color or theme.
 
@@ -245,13 +268,21 @@ Para obtener más información acerca de cómo usar pinceles, consulta [Pinceles
     :::column-end:::
 :::row-end:::
 
-:::row::: :::column::: ![ilustración de contraste](images/color/illo-lighting.svg) :::column-end::: :::column span="2"::: **Iluminación**
+:::row:::
+    :::column:::
+        ![ilustración de contraste](images/color/illo-lighting.svg)
+    :::column-end:::
+    ::: column span = "2"::: **iluminación**
 
         Be aware that variation in ambient lighting can affect the useability of your app. For example, a page with a black background might unreadable outside due to screen glare, while a page with a white background might be painful to look at in a dark room.
     :::column-end:::
 :::row-end:::
 
-:::row::: :::column::: ![ilustración de contraste](images/color/illo-colorblindness.svg) :::column-end::: :::column span="2"::: **Daltonismo**
+:::row:::
+    :::column:::
+        ![ilustración de contraste](images/color/illo-colorblindness.svg)
+    :::column-end:::
+    ::: column span = "2"::: **daltonismo**
 
         Be aware of how colorblindness could affect the useability of your application. For example, a user with red-green colorblindness will have difficulty distinguishing red and green elements from each other. About **8 percent of men** and **0.5 percent of women** are red-green colorblind, so avoid using these color combinations as the sole differentiator between application elements.
     :::column-end:::

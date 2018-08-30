@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ca58613a5874cde10d2bb5322c3f930e1fbce44
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2918306"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3128572"
 ---
 # <a name="events-and-routed-events-overview"></a>Introducción a eventos y eventos enrutados
 
@@ -153,7 +153,7 @@ End Sub
 
 **Nota** Visual Studio y su superficie de diseño XAML suelen promover la técnica de control de instancias, en lugar de la palabra clave **Handles**. Esto se debe a que establecer la conexión del controlador de eventos en XAML forma parte del flujo de trabajo del desarrollador y diseñador, y la técnica de la palabra clave **Handles** es incompatible con la conexión de los controladores de eventos en XAML.
 
-En C + + / CX, utiliza también el **+=** sintaxis, pero hay diferencias en la forma básica de C#:
+En C++ / CX, también puedes usar el **+=** sintaxis, pero existen diferencias respecto al formato C# básico:
 
 -   No existe inferencia de delegado, por lo que debes usar **ref new** en la instancia de delegado.
 -   El constructor delegado tiene dos parámetros y debe tener el objeto de destino como primer parámetro. Como norma general, especificas **this**.

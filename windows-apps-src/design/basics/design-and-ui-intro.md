@@ -1,21 +1,21 @@
 ---
-author: serenaz
-Description: An overview of the universal design features that are included in every UWP app to help you build apps that scale beautifully across a range of devices.
+author: mijacobs
+Description: The universal design features included in every UWP app help you build apps that scale beautifully across a range of devices.
 title: Introducción al diseño de aplicaciones para la Plataforma universal de Windows (aplicaciones de Windows)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
-ms.author: sezhen
+ms.author: mijacobs
 ms.date: 05/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e6f5d17a9fbdc044c3e1c0fcd152e6bafe2705a7
-ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
-ms.translationtype: HT
+ms.openlocfilehash: 952db87d0dabdb927a472de17f0c0d7b345bde4e
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1877277"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3126752"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP
 
@@ -48,9 +48,10 @@ Al diseñar, puedes ignorar la densidad de píxeles y la resolución de pantalla
 
 ### <a name="multiples-of-four"></a>Múltiplos de cuatro
 
-:::row::: :::column span::: Cuando el sistema escala la interfaz de usuario de la aplicación, lo hace en múltiplos de 4.
+:::row:::
+    ::: column span::: los tamaños, márgenes y posiciones de los elementos de la interfaz de usuario siempre deberían estar en **múltiplos de 4 epx** en las aplicaciones para UWP.
 
-        As a result, the sizes, margins, and positions of **UI elements should always be in multiples of 4 epx**. This results in the best rendering by aligning with whole pixels. It also ensures that UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
+        UWP scales across a range of devices with scaling plateaus of 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350%, and 400%. The base unit is 4 because it's the only integer that can be scaled by non-whole numbers (e.g. 4*1.5 = 6). Using multiples of four aligns all UI elements with whole pixels and ensures UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
     :::column-end:::
     :::column:::
         ![grid](images/4epx.svg)
@@ -63,10 +64,18 @@ Dado que las aplicaciones para UWP automáticamente escalan en todos los disposi
 
 ### <a name="windows-frames-and-pages"></a>Ventanas, marcos y páginas
 
-:::row::: :::column::: Cuando se inicia una aplicación para UWP en cualquier dispositivo de Windows 10, se inicia en una [Ventana](/uwp/api/Windows.UI.Xaml.Controls.Window) con un [Marco](/uwp/api/Windows.UI.Xaml.Controls.Frame), lo que permite navegar entre instancias de [Página](/uwp/api/Windows.UI.Xaml.Controls.Page).
-:::column-end::: :::column::: ![Marco](images/frame.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Cuando se inicia una aplicación para UWP en cualquier dispositivo Windows 10, inicia en una [ventana](/uwp/api/Windows.UI.Xaml.Controls.Window) con un [fotograma](/uwp/api/Windows.UI.Xaml.Controls.Frame), que puede navegar entre instancias de la [página](/uwp/api/Windows.UI.Xaml.Controls.Page) .
+    :::column-end:::
+    :::column:::
+        ![Marco](images/frame.svg)
+    :::column-end:::
+:::row-end:::
 
-:::row::: :::column::: Puedes considerar la interfaz de usuario de tu aplicación como una colección de páginas. Depende de ti decidir qué debe ir en cada página y las relaciones entre las páginas.
+:::row:::
+    :::column:::
+        La interfaz de usuario de la aplicación se puede considerar como una colección de páginas. Depende de ti decidir qué debe ir en cada página y las relaciones entre las páginas.
 
         To learn how you can organize your pages, see [Navigation basics](navigation-basics.md).
     :::column-end:::
@@ -107,7 +116,9 @@ Los controles comunes son altamente personalizables: puedes cambiar el color de 
 
 ## <a name="shell"></a>Shell
 
-:::row::: :::column::: Tu aplicación para UWP interactuará con la experiencia más amplia de Windows con iconos y notificaciones en la [Shell](../shell/tiles-and-notifications/creating-tiles.md) de Windows.
+:::row:::
+    :::column:::
+        La aplicación para UWP interactuará con la experiencia más amplia de Windows con iconos y notificaciones en el [Shell](../shell/tiles-and-notifications/creating-tiles.md)de Windows.
 
         Tiles are displayed in the Start menu and when your app launches, and they provide a glimpse of what's going on in your app. Their power comes from the content behind them, and the intelligence and craft with which they're offered up.
 
@@ -120,8 +131,14 @@ Los controles comunes son altamente personalizables: puedes cambiar el color de 
 
 ## <a name="inputs"></a>Entradas
 
-:::row::: :::column::: Las aplicaciones para UWP dependen de interacciones inteligentes. Puedes diseñar basándote en una interacción mediante clic sin tener que saber o definir si el clic procede de un mouse o un lápiz, o de la pulsación de un dedo. Sin embargo, también puedes diseñar tus aplicaciones para [modos de entrada específicos](../input/input-primer.md).
-:::column-end::: :::column::: ![entradas](images/inputs.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Las aplicaciones para UWP dependen de interacciones inteligentes. Puedes diseñar basándote en una interacción mediante clic sin tener que saber o definir si el clic procede de un mouse o un lápiz, o de la pulsación de un dedo. Sin embargo, también puedes diseñar tus aplicaciones para [modos de entrada específicos](../input/input-primer.md).
+    :::column-end:::
+    :::column:::
+        ![entradas](images/inputs.svg)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="devices"></a>Dispositivos
 

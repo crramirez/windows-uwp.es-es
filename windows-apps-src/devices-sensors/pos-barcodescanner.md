@@ -3,18 +3,18 @@ author: TerryWarwick
 title: Escáner de código de barras
 description: Este artículo muestra las características del escáner de código de barras que están disponibles para aplicaciones para UWP, así como los vínculos a los artículos de procedimientos que muestran cómo usarlos.
 ms.author: jken
-ms.date: 05/1/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: c6021b00b9ec993aa6c09df93b8845dcc789678c
-ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
-ms.translationtype: HT
+ms.openlocfilehash: 1cd6f8391de9375ddd1c20471dd10c37e99f782f
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1874393"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3129099"
 ---
 # <a name="barcode-scanner"></a>Escáner de código de barras
 
@@ -24,8 +24,10 @@ Esta sección proporciona instrucciones para crear aplicaciones de la Plataforma
 
 |Tema |Descripción |
 |------|------------|
-| [Tareas iniciales](pos-barcodescanner-get-started.md)  |  |
+| [Configurar un escáner de códigos de barras](../devices-sensors/pos-barcodescanner-configure.md)  | Obtén información sobre cómo configurar un escáner de códigos de barras para la aplicación deseada. |
+| [Usar un desencadenador de software](../devices-sensors/pos-barcodescanner-software-trigger.md) | Obtén información sobre cómo controlar la digitalización desde software de. |
 | [El trabajo con simbologías](pos-barcodescanner-symbologies.md) | Aprende a determinar los tipos de códigos de barras que admite un escáner de códigos de barras y a controlar qué tipos de códigos de barras reconoce el escáner de códigos de barras de la aplicación. |
+| [Obtener y comprender los datos de códigos de barras](pos-barcodescanner-scan-data.md) | Obtén información sobre cómo obtener e interpretar los datos de códigos de barras que digitalizar. |
 | [Escáner de código de barras basado en cámara](pos-camerabarcode.md) | Lee códigos de barras a través de una lente de cámara estándar desde una aplicación de la Plataforma universal de Windows. Requiere la Actualización de abril de 2018 de Windows 10 (compilación 17134 o posterior). |
 |
  

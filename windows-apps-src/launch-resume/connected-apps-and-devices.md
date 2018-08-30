@@ -7,15 +7,15 @@ ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, Roma de proyecto
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proyecto rome
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
 ms.openlocfilehash: d3efb7e094ce1464028dadaa14c6f0bfb3f3b214
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2916732"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3127522"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Aplicaciones y dispositivos conectados (Project Rome)
 
@@ -39,5 +39,5 @@ Para obtener más información sobre el proyecto Rome en general, incluidos los 
 | [Detectar dispositivos remotos](discover-remote-devices.md)  | Obtén información sobre cómo detectar dispositivos a los que te puedas conectar. |
 | [Comunicarse con un servicio de aplicaciones remoto](communicate-with-a-remote-app-service.md) | Obtén información sobre cómo interactuar con una aplicación en un dispositivo remoto. |
 | [Conectar dispositivos a través de sesiones remotas](remote-sessions.md) | Cree experiencias compartidas en varios dispositivos uniéndolos en una sesión remota. |
-| [Continuar la actividad del usuario, incluso en diferentes dispositivos](useractivities.md)| Ayudar a los usuarios reanudar lo que estaban haciendo en su aplicación, incluso a través de múltiples dispositivos.|
-| [Mejores prácticas de las actividades del usuario](useractivities-best-practices.md)| Obtenga información acerca de las prácticas recomendadas para crear y actualizar las actividades del usuario.|
+| [Continuar la actividad del usuario, incluso en diferentes dispositivos](useractivities.md)| Ayudar a los usuarios a reanudar lo que estaban haciendo en tu aplicación, incluso en varios dispositivos.|
+| [Procedimientos recomendados de las actividades de usuario](useractivities-best-practices.md)| Obtén información sobre los procedimientos recomendados para crear y actualizar las actividades del usuario.|
