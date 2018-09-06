@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, paquetes, carga, disponibilidad de familia de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0485ef2f884d8957f6d3d1d7544415dd676bf95b
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3236529"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3405017"
 ---
 # <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos
 
