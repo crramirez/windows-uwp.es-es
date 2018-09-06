@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: f36facd8ba89fbaccb7c61ad937c2ce005922aa8
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.openlocfilehash: 26bed64053e8de9a42ac01ed3262c7b0f41d1d42
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3231221"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3400578"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Store
 
@@ -84,7 +84,7 @@ Los siguientes métodos de análisis están disponibles para aplicaciones para U
 
 | Escenario       | Métodos      |
 |---------------|--------------------|
-| Adquisiciones, conversiones e instalaciones |  <ul><li>[Obtener adquisiciones de la aplicación](get-app-acquisitions.md)</li><li>[Obtener datos de embudo de adquisiciones de aplicaciones](get-acquisition-funnel-data.md)</li><li>[Obtener conversiones de aplicaciones por canal](get-app-conversions-by-channel.md)</li><li>[Obtener adquisiciones de complementos](get-in-app-acquisitions.md)</li><li>[Obtener adquisiciones de complementos de suscripción](get-subscription-acquisitions.md)</li><li>[Obtener conversiones de complementos por canal](get-add-on-conversions-by-channel.md)</li><li>[Obtener instalaciones de la aplicación](get-app-installs.md)</li></ul> |
+| Adquisiciones, conversiones, instalaciones y uso |  <ul><li>[Obtener adquisiciones de la aplicación](get-app-acquisitions.md)</li><li>[Obtener datos de embudo de adquisiciones de aplicaciones](get-acquisition-funnel-data.md)</li><li>[Obtener conversiones de aplicaciones por canal](get-app-conversions-by-channel.md)</li><li>[Obtener adquisiciones de complementos](get-in-app-acquisitions.md)</li><li>[Obtener adquisiciones de complementos de suscripción](get-subscription-acquisitions.md)</li><li>[Obtener conversiones de complementos por canal](get-add-on-conversions-by-channel.md)</li><li>[Obtener instalaciones de la aplicación](get-app-installs.md)</li><li>[Obtener uso diario de la aplicación](get-app-usage-daily.md)</li><li>[Obtener mensual uso de la aplicación](get-app-usage-monthly.md)</li></ul> |
 | Errores de la aplicación | <ul><li>[Obtener datos de informes de errores](get-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)</li><li>[Obtener el seguimiento de la pila de un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Descargar el archivo .cab para un error en tu aplicación](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
 | Información | <ul><li>[Obtener los datos de opiniones de la aplicación](get-insights-data-for-your-app.md)</li></ul>  |
 | Calificaciones y opiniones | <ul><li>[Obtener clasificaciones de la aplicación](get-app-ratings.md)</li><li>[Obtener opiniones de la aplicación](get-app-reviews.md)</li></ul> |

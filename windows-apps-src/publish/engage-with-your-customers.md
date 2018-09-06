@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3690e294a3af29d1af261189310dca1a13ac5130
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3232604"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3404717"
 ---
 # <a name="engage-with-your-customers"></a>Interactuar con tus clientes
 

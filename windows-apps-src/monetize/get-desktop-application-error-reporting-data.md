@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados del informe de errores de una aplicación de escritorio para un intervalo de fechas y otros filtros opcionales.
 title: Obtener datos de informes de errores para la aplicación de escritorio
 ms.author: mcleans
-ms.date: 06/05/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis Microsoft Store, errors, errores, desktop application, aplicación de escritorio
 ms.localizationpriority: medium
-ms.openlocfilehash: 71c566ff375f36108d724f3c550570b3332f4c6b
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.openlocfilehash: 66594fd6f59281011fccab21ad5618827db322dd
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3235707"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3402048"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>Obtener datos de informes de errores para la aplicación de escritorio
 
@@ -104,7 +104,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | market          | cadena  | El código de país ISO 3166 del mercado del dispositivo.   |
 | deviceType      | cadena  | Una de las siguientes cadenas que especifica el tipo de dispositivo en el que se produjo el error:<p/><ul><li><strong>PC</strong></li><li><strong>Servidor</strong></li><li><strong>Tableta</strong></li><li><strong>Unknown</strong></li></ul>    |
 | applicationVersion     | cadena  |   La versión de la aplicación ejecutable en la que se produjo el error.    |
-| eventCount      | entero | El número de eventos atribuidos a este error del nivel de agregación especificado.      |
+| eventCount      | número | El número de eventos atribuidos a este error del nivel de agregación especificado.      |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta

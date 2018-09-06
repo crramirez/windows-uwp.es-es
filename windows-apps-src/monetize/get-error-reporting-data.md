@@ -4,18 +4,18 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados del informe de errores de un intervalo de fechas y otros filtros opcionales.
 title: Obtener datos de informes de errores para la aplicación
 ms.author: mcleans
-ms.date: 06/05/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Store, Windows Store analytics API, API de análisis de Microsoft Store, errors, errores
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c03ea17e111f86ad390dafe5360db9d10864edc
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.openlocfilehash: 15dd4d5febe0b57e164f0aadeeb8d7b816dcdd66
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3229444"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3399253"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Obtener datos de informes de errores para la aplicación
 
@@ -106,8 +106,8 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | deviceType      | cadena  | Una de las siguientes cadenas que indica el tipo de dispositivo en el que se produjo el error:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**IoT**</li><li>**Holographic**</li><li>**Unknown**</li></ul>    |
 | packageName     | cadena  | Nombre único del paquete de la aplicación que está asociado al error.      |
 | packageVersion  | cadena  | Versión del paquete de la aplicación que está asociado al error.   |
-| deviceCount     | entero | Número de dispositivos únicos que corresponden a este error del nivel de agregación especificado.  |
-| eventCount      | entero | El número de eventos atribuidos a este error del nivel de agregación especificado.      |
+| deviceCount     | número | Número de dispositivos únicos que corresponden a este error del nivel de agregación especificado.  |
+| eventCount      | número | El número de eventos atribuidos a este error del nivel de agregación especificado.      |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta

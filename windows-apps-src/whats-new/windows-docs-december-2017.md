@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 93ef3de0dc86ab9708f7be99836204c2232dfef4
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3228988"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3403098"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Novedades de la documentación de los desarrolladores de Windows de diciembre de 2017
 
