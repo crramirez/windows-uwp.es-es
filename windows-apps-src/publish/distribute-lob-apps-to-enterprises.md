@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, lob, línea de negocio, aplicaciones para empresas, store para empresas, store para educación, empresa
 ms.localizationpriority: medium
 ms.openlocfilehash: 9149533a12263e105356a1683257c4d9172eefb5
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3414033"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3665533"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicaciones de LOB a empresas
 

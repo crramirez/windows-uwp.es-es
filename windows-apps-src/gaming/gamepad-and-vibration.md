@@ -4,18 +4,18 @@ title: Controlador para juegos y vibración
 description: Usa las API de controlador para juegos Windows.Gaming.Input para detectar, leer y enviar comandos de impulso y vibración a controladores para juegos.
 ms.assetid: BB03BB8E-255F-4AE8-AC43-1E519CA860FE
 ms.author: wdg-dev-content
-ms.date: 8/23/2018
+ms.date: 09/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, games, controlador para juegos, gamepad, vibración, vibration
 ms.localizationpriority: medium
-ms.openlocfilehash: f44d5f4dee8293ed40d22a301f2a3d2a9611e15d
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 2bf78b43bb09f97c196858d7cc4fcdb1e71462fc
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3421707"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3666026"
 ---
 # <a name="gamepad-and-vibration"></a>Controlador para juegos y vibración
 
@@ -120,6 +120,30 @@ for (auto gamepad : Gamepad::Gamepads)
 }
 ```
 
+```cs
+private readonly object myLock = new object();
+private List<Gamepad> myGamepads = new List<Gamepad>();
+private Gamepad mainGamepad;
+
+private void GetGamepads()
+{
+    lock (myLock)
+    {
+        foreach (var gamepad in Gamepad.Gamepads)
+        {
+            // Check if the gamepad is already in myGamepads; if it isn't, add it.
+            bool gamepadInList = myGamepads.Contains(gamepad);
+
+            if (!gamepadInList)
+            {
+                // This code assumes that you're interested in all gamepads.
+                myGamepads.Add(gamepad);
+            }
+        }
+    }   
+}
+```
+
 ### <a name="adding-and-removing-gamepads"></a>Agregar y quitar controladores para juegos
 
 Cuando se agrega o quita un controlador para juegos, se generan los eventos [GamepadAdded][] y [GamepadRemoved][] . Puedes registrar controladores de estos eventos para realizar un seguimiento de los controladores para juegos que están conectados actualmente.
@@ -142,6 +166,23 @@ Gamepad::GamepadAdded += ref new EventHandler<Gamepad^>(Platform::Object^, Gamep
 }
 ```
 
+```cs
+Gamepad.GamepadAdded += (object sender, Gamepad e) =>
+{
+    // Check if the just-added gamepad is already in myGamepads; if it isn't, add
+    // it.
+    lock (myLock)
+    {
+        bool gamepadInList = myGamepads.Contains(e);
+
+        if (!gamepadInList)
+        {
+            myGamepads.Add(e);
+        }
+    }
+};
+```
+
 El siguiente ejemplo detiene el seguimiento de un controlador para juegos que se ha quitado. También tendrás que controlar lo que sucede con los controladores para juegos que estás realizando un seguimiento cuando se quiten; Por ejemplo, este código solo realiza un seguimiento de entrada de un controlador para juegos y simplemente se establece en `nullptr` cuando se quita. Tendrás que comprobar cada fotograma si el controlador para juegos está activo y qué controlador para juegos está recopilando entrada desde cuando controladores están conectados y desconectados de actualización.
 
 ```cpp
@@ -160,6 +201,26 @@ Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gam
         myGamepads->RemoveAt(indexRemoved);
     }
 }
+```
+
+```cs
+Gamepad.GamepadRemoved += (object sender, Gamepad e) =>
+{
+    lock (myLock)
+    {
+        int indexRemoved = myGamepads.IndexOf(e);
+
+        if (indexRemoved > -1)
+        {
+            if (mainGamepad == myGamepads[indexRemoved])
+            {
+                mainGamepad = null;
+            }
+
+            myGamepads.RemoveAt(indexRemoved);
+        }
+    }
+};
 ```
 
 Para obtener más información, consulte [procedimientos de entrada para juegos](input-practices-for-games.md) .
@@ -186,6 +247,12 @@ auto gamepad = myGamepads[0];
 GamepadReading reading = gamepad->GetCurrentReading();
 ```
 
+```cs
+Gamepad gamepad = myGamepads[0];
+
+GamepadReading reading = gamepad.GetCurrentReading();
+```
+
 Además del estado del controlador para juegos, cada lectura incluye una marca de tiempo que indica con precisión cuándo se recuperó el estado. La marca de tiempo es útil para establecer una relación con los intervalos de lecturas anteriores o la duración de la simulación de juego.
 
 ### <a name="reading-the-thumbsticks"></a>Lectura de los sticks analógicos
@@ -199,6 +266,13 @@ float leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 an
 float leftStickY = reading.LeftThumbstickY;   // returns a value between -1.0 and +1.0
 float rightStickX = reading.RightThumbstickX; // returns a value between -1.0 and +1.0
 float rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
+```
+
+```cs
+double leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 and +1.0
+double leftStickY = reading.LeftThumbstickY;   // returns a value between -1.0 and +1.0
+double rightStickX = reading.RightThumbstickX; // returns a value between -1.0 and +1.0
+double rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
 ```
 
 Al leer los valores del stick analógico, verás que no producen una lectura neutra confiable de 0,0 cuando el stick analógico está en reposo en la posición central; en su lugar, se producen diferentes valores próximos a 0,0 cada vez que se mueve el stick analógico y se devuelve a la posición central. Para mitigar estas variaciones, puedes implementar una pequeña _zona muerta_, que es un intervalo de valores cerca de la posición central ideal que se omiten. Una manera de implementar una zona muerta es determinar la distancia desde el centro que se ha movido el stick analógico y pasar por alto las lecturas más próximas a una cierta distancia que elijas. Puedes calcular la distancia a grandes rasgos&mdash;no es exacta porque las lecturas del stick analógico son básicamente valores polares, no planos&mdash;usando el teorema de Pitágoras. Esto genera un zona muerta radial.
@@ -224,6 +298,25 @@ if ((oppositeSquared + adjacentSquared) > deadzoneSquared)
 }
 ```
 
+```cs
+double leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 and +1.0
+double leftStickY = reading.LeftThumbstickY;   // returns a value between -1.0 and +1.0
+
+// choose a deadzone -- readings inside this radius are ignored.
+const double deadzoneRadius = 0.1;
+const double deadzoneSquared = deadzoneRadius * deadzoneRadius;
+
+// Pythagorean theorem -- for a right triangle, hypotenuse^2 = (opposite side)^2 + (adjacent side)^2
+double oppositeSquared = leftStickY * leftStickY;
+double adjacentSquared = leftStickX * leftStickX;
+
+// accept and process input if true; otherwise, reject and ignore it.
+if ((oppositeSquared + adjacentSquared) > deadzoneSquared)
+{
+    // input accepted, process it
+}
+```
+
 Cada stick analógico también actúa como un botón cuando se presiona; para obtener más información sobre la lectura de esta entrada, consulta [Lectura de los botones](#reading-the-buttons).
 
 ### <a name="reading-the-triggers"></a>Lectura de los gatillos
@@ -233,6 +326,11 @@ Los gatillos se representan como valores de punto flotante entre 0,0 (totalmente
 ```cpp
 float leftTrigger  = reading.LeftTrigger;  // returns a value between 0.0 and 1.0
 float rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1.0
+```
+
+```cs
+double leftTrigger = reading.LeftTrigger;  // returns a value between 0.0 and 1.0
+double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1.0
 ```
 
 ### <a name="reading-the-buttons"></a>Lectura de los botones
@@ -253,12 +351,26 @@ if (GamepadButtons::A == (reading.Buttons & GamepadButtons::A))
 }
 ```
 
+```cs
+if (GamepadButtons.A == (reading.Buttons & GamepadButtons.A))
+{
+    // button A is pressed
+}
+```
+
 En el ejemplo siguiente, se determina si el botón A no está presionado.
 
 ```cpp
 if (GamepadButtons::None == (reading.Buttons & GamepadButtons::A))
 {
-    // button A is pressed
+    // button A is released
+}
+```
+
+```cs
+if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
+{
+    // button A is released
 }
 ```
 
@@ -295,6 +407,19 @@ GamepadVibration vibration;
 gamepad.Vibration = vibration;
 ```
 
+```cs
+// get the first gamepad
+Gamepad gamepad = Gamepad.Gamepads[0];
+
+// create an instance of GamepadVibration
+GamepadVibration vibration = new GamepadVibration();
+
+// ... set vibration levels on vibration struct here
+
+// copy the GamepadVibration struct to the gamepad
+gamepad.Vibration = vibration;
+```
+
 ### <a name="using-the-vibration-motors"></a>Uso de los motores de vibración
 
 Los motores de vibración izquierdo y derecho toman valores de punto flotante entre 0,0 (sin vibración) y 1,0 (la vibración más intensa). La intensidad del motor izquierdo se establece mediante la propiedad `LeftMotor` de la estructura [GamepadVibration][]; la intensidad del motor derecho se establece mediante la propiedad `RightMotor`.
@@ -306,6 +431,13 @@ GamepadVibration vibration;
 vibration.LeftMotor = 0.80;  // sets the intensity of the left motor to 80%
 vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
 gamepad.Vibration = vibration;
+```
+
+```cs
+GamepadVibration vibration = new GamepadVibration();
+vibration.LeftMotor = 0.80;  // sets the intensity of the left motor to 80%
+vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
+mainGamepad.Vibration = vibration;
 ```
 
 Recuerda que estos dos motores no son idénticos; por lo tanto, si se establecen estas propiedades en el mismo valor, no se produce la misma vibración en cada uno de ellos. Cualquier valor, el motor izquierdo genera una vibración más fuerte con una frecuencia inferior de la derecha motor que&mdash;para el mismo valor&mdash;produce una vibración más suave con una frecuencia superior. Incluso en el valor máximo, el motor izquierdo no puede generar las altas frecuencias del motor derecho, ni el motor derecho puede producir las altas fuerzas del motor izquierdo. Aun así, debido a que los motores están conectados de forma rígida por el cuerpo del controlador para juegos, los jugadores no experimentan las vibraciones por separado totalmente, aunque los motores tengan diferentes características y puedan vibrar con intensidades diferentes. Este tipo de disposición permite producir una gama más amplia y expresiva de sensaciones que si los motores fueran idénticos.
@@ -321,6 +453,13 @@ GamepadVibration vibration;
 vibration.LeftTrigger = 0.75;  // sets the intensity of the left trigger to 75%
 vibration.RightTrigger = 0.50; // sets the intensity of the right trigger to 50%
 gamepad.Vibration = vibration;
+```
+
+```cs
+GamepadVibration vibration = new GamepadVibration();
+vibration.LeftTrigger = 0.75;  // sets the intensity of the left trigger to 75%
+vibration.RightTrigger = 0.50; // sets the intensity of the right trigger to 50%
+mainGamepad.Vibration = vibration;
 ```
 
 A diferencia de los otros, los dos motores de vibración dentro de los gatillos son idénticos, por lo que producen la misma vibración en los dos motores con el mismo valor. Sin embargo, como estos motores no están conectados de forma rígida, los jugadores experimentan las vibraciones independientemente. Este tipo de disposición permite dirigir sensaciones totalmente independientes a ambos gatillos al mismo tiempo y les ayuda a transmitir información más específica que los motores del cuerpo del controlador para juegos.

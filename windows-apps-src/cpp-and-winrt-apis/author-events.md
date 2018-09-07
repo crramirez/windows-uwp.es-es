@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, autor, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b52bf8e33bbf111dd02c695d8c3baf77e1338ac
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 1b0aa1a53ce69369c442cef7f3b5912631593242
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3413598"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3660657"
 ---
 # <a name="author-events-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Crear eventos en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -28,7 +28,7 @@ Este tema muestra cómo crear un componente de Windows Runtime con una clase en 
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Crea un componente de Windows Runtime (BankAccountWRC)
 
-Comienza creando un proyecto nuevo en Microsoft Visual Studio Crea un proyecto **componente Visual C++ de Windows Runtime (C++/WinRT)** y asígnale el nombre *BankAccountWRC* (para "componente cuenta bancaria de Windows Runtime").
+Comienza creando un proyecto nuevo en Microsoft Visual Studio Crear un **Visual C++** > **Windows Universal** > **componente de Windows Runtime (C++ / WinRT)** del proyecto y asígnale *BankAccountWRC* (para "componente cuenta bancaria Windows en tiempo de ejecución").
 
 El proyecto recién creado contiene un archivo denominado `Class.idl`. Cambiar el nombre de ese archivo `BankAccount.idl` (cambiar el nombre de la `.idl` archivo cambia automáticamente el nombre dependiente `.h` y `.cpp` archivos, demasiado). Reemplaza el contenido del `BankAccount.idl` con la siguiente lista.
 
@@ -101,7 +101,7 @@ Si las advertencias impiden que puedas edificio, luego resolverlos o establecer 
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>Crea una aplicación principal (BankAccountCoreApp) para probar el componente de Windows Runtime.
 
-Ahora crea un nuevo proyecto (en tu solución `BankAccountWRC` o en una nueva). Crea un proyecto **Visual C++ Core App (C++/WinRT)** y asígnale el nombre *BankAccountCoreApp *.
+Ahora crea un nuevo proyecto (en tu solución `BankAccountWRC` o en una nueva). Crear un **Visual C++** > **Windows Universal** > **Core App (C++ / WinRT)** del proyecto y asígnale el nombre *BankAccountCoreApp*.
 
 Agrega una referencia y busca `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (o agrega una referencia de proyecto a proyecto, si los dos proyectos están en la misma solución). Haz clic en **Agregar** y después en **Aceptar**. Ahora compila BankAccountCoreApp. En el improbable que veas un error que el archivo de carga `readme.txt` no existe, excluya este archivo desde el proyecto de componente de Windows Runtime, generarlo y después volver a compilar BankAccountCoreApp.
 
