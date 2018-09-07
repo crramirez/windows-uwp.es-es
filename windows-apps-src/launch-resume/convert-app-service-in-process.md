@@ -11,11 +11,11 @@ keywords: Windows 10, uwp, servicio de aplicaciones
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
 ms.openlocfilehash: a77ea3cefcc423e710ab0afebb3fa064e61507ec
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3393861"
+ms.locfileid: "3417955"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host
 

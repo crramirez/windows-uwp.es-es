@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3401917"
+ms.locfileid: "3418964"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
 

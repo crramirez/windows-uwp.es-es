@@ -11,11 +11,11 @@ keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Micros
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
 ms.openlocfilehash: d44d4491d8f5f0a7cde65adbe8241a74e36e1506
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3390639"
+ms.locfileid: "3422054"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>Configurar la aplicación para notificaciones push dirigidas
 

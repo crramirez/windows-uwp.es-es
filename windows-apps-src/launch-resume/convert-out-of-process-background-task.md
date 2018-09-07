@@ -11,11 +11,11 @@ keywords: Windows 10, uwp, tarea en segundo plano, servicio de aplicaciones
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: 1144443f943f134991d050dea1457f252eaaf36d
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3393831"
+ms.locfileid: "3418249"
 ---
 # <a name="convert-an-out-of-process-background-task-to-an-in-process-background-task"></a>Convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso
 
