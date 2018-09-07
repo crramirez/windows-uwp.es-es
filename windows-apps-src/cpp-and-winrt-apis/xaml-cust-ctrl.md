@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, XAML, un control personalizado con plantilla,
 ms.localizationpriority: medium
-ms.openlocfilehash: 25e17888c3292cbaf7b84c8a4bdd7c411530b558
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 4354f3371807a7000160976b6f8af5b87e1ad3f8
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3422200"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3664862"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Controles (con plantilla) personalizados de XAML con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -27,7 +27,7 @@ ms.locfileid: "3422200"
 Una de las características más eficaces de la plataforma Universal de Windows (UWP) es la flexibilidad que proporciona la pila de interfaz de usuario (UI) para crear controles personalizados en función del tipo de [**Control**](/uwp/api/windows.ui.xaml.controls.control) XAML. El marco de la UI de XAML proporciona funciones como [Propiedades de dependencia personalizadas](/windows/uwp/xaml-platform/custom-dependency-properties) y las propiedades adjuntas y [plantillas de control](/windows/uwp/design/controls-and-patterns/control-templates), lo que hacen más fácil crear controles enriquecida y personalizables. En este tema se explica los pasos de creación de un control personalizado (con plantilla) con C++ / WinRT.
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>Crear una aplicación vacía (BgLabelControlApp)
-Comienza creando un proyecto nuevo en Microsoft Visual Studio Crear un **Visual C++ Core App (C++ / WinRT)** del proyecto y asígnale el nombre *BgLabelControlApp*.
+Comienza creando un proyecto nuevo en Microsoft Visual Studio Crear un **Visual C++** > **Windows Universal** > **aplicación vacía (C++ / WinRT)** del proyecto y asígnale el nombre *BgLabelControlApp*.
 
 Vamos a crear una nueva clase para representar un control personalizado (con plantilla). Vamos a crear y consumir la clase dentro de la misma unidad de compilación. Pero queremos poder crear una instancia de esta clase desde el marcado XAML y para ello se va a ser una clase en tiempo de ejecución. Y vamos a usar C++/WinRT para crearla y consumirla.
 

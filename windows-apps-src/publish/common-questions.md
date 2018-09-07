@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3413260"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3662916"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Preguntas comunes sobre las campañas publicitarias
 
@@ -45,7 +45,7 @@ El anuncio aparecerá en las aplicaciones que comparten la clasificación por ed
 
 Actualmente, se admiten campañas publicitarias en estos países y regiones:
 
-Algeria, Argentina, Australia, Austria, Bahamas, Bahrain, Barbados, Belgium, Belize, Bolivia, Brazil, Canada, Chile, China, Colombia, Denmark, Dominican Republic, Ecuador, Egypt, El Salvador, Finland, France, Germany, Guatemala, Haiti, Honduras, Hong Kong SAR, India, Indonesia, Iraq, Ireland, Italy, Jamaica, Jordan, Kuwait, Lebanon, Malaysia, Mexico, Morocco, New Zealand, Netherlands, Nicaragua, Norway, Oman, Panama, Paraguay, Peru, Philippines, Puerto Rico, Qatar, Saudi Arabia, Singapore, Spain, South Africa, Sweden, Switzerland, Taiwan, Thailand, Trinidad and Tobago, Tunisia, United Arab Emirates, United Kingdom, United States, Uruguay, Venezuela, Vietnam.
+Alemania, Arabia Saudí, Argelia, Argentina, Australia, Austria, Bahamas, Bahréin, Barbados, Bélgica, Belice, Bolivia, Brasil, Canadá, Chile, China, Colombia, Dinamarca, Ecuador, Egipto, El Salvador, Emiratos Árabes Unidos, España, Filipinas, Finlandia, Francia, Guatemala, Haití, Honduras, India, Indonesia, Irak, Irlanda, Italia, Jamaica, Jordania, Kuwait, Líbano, Malasia, Marruecos, México, Nicaragua, Noruega, Nueva Zelanda, Omán, Países Bajos, Panamá, Paraguay, Perú, Puerto Rico, Catar, RAE de Hong Kong, Reino Estados, Reino Unido, República Dominicana, Singapur, Sudáfrica, Suecia, Suiza, Tailandia, Taiwán, Trinidad y Tobago, Túnez, Uruguay, Venezuela, Vietnam.
 
 ### <a name="what-languages-are-supported-for-ad-campaigns"></a>¿Qué idiomas se admiten para campañas publicitarias?
 
