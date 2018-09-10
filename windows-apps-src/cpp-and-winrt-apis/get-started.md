@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, obtener, obteniendo, iniciado
 ms.localizationpriority: medium
-ms.openlocfilehash: ebb71b91af7e1490099898084f42ce04e698ef20
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 1e1bd5f23f40c5d0238f8089c91ee69c6a52313f
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3658798"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3820979"
 ---
 # <a name="get-started-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Introducción a [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Para ponerte al día con el uso de C++/WinRT, este artículo te guía a través de un ejemplo de código sencillo.
@@ -120,10 +120,10 @@ Como puedes ver, C++/WinRT fomenta expresiones C++ modernas y de clase, como `sy
 Tampoco es necesario controlar códigos de retorno HRESULT. C++/WinRT convierte los errores HRESULT en excepciones como [**winrt::hresult-error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) para lograr un estilo de programación natural y moderno. Para obtener más información acerca del control de errores y los ejemplos de código, consulta [Gestión de errores con C++/WinRT](error-handling.md).
 
 ## <a name="important-apis"></a>API importantes
-* [SyndicationClient::RetrieveFeedAsync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
-* [SyndicationFeed.Items](/uwp/api/windows.web.syndication.syndicationfeed.items)
+* [Método syndicationclient:: Retrievefeedasync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
+* [Propiedad SyndicationFeed.Items](/uwp/api/windows.web.syndication.syndicationfeed.items)
 * [Estructura winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
-* [winrt::hresult-error](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
+* [estructura de error HRESULT](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)

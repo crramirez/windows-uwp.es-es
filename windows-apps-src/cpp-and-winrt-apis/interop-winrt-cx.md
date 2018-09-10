@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migar, interoperabilidad, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 02aa86231cd611bd20a386d3da2f9d2b6dc5df66
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: d265189c338d95a8c8f206fd196e99d5b0a1e068
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3666120"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3823649"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a>Interoperabilidad entre [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) y C++/CX
 Este tema muestra dos funciones auxiliares que pueden usarse para convertir entre objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) y C++/WinRT. Puede usarlos para interoperar entre el código que usa las dos proyecciones de lenguaje, o puedes usar las funciones de medida que muevas tu código desde C++ / CX a C++ / WinRT (consulta [mover a C++ / WinRT desde C++ / CX](move-to-winrt-from-cx.md)).
@@ -111,7 +111,7 @@ MainPage::MainPage()
 
 ## <a name="important-apis"></a>API importantes
 * [Interfaz IUnknown](https://msdn.microsoft.com/library/windows/desktop/ms680509)
-* [QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [Función QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
 * [Función winrt::get_abi](/uwp/cpp-ref-for-winrt/get-abi)
 * [Función winrt::put_abi](/uwp/cpp-ref-for-winrt/put-abi)
 
