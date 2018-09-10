@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: wndows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
-ms.openlocfilehash: 50fde5d3683960ab384d823ace70f910fc1045d8
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.openlocfilehash: 136abd5e3312b7a387ccc3b7c993d4e70d8ef0d4
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935743"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3823589"
 ---
 # <a name="consume-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Consumir API con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tema muestra cómo usar API C++/WinRT, ya formen parte de Windows, se hayan implementado por un proveedor de componentes de terceros o por ti mismo.
@@ -245,12 +245,12 @@ BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::B
 ```
 
 ## <a name="important-apis"></a>API importantes
-* [QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
-* [RoActivateInstance](https://msdn.microsoft.com/library/br224646)
-* [Windows::Foundation::Uri](/uwp/api/windows.foundation.uri)
+* [Interfaz de QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [Función RoActivateInstance](https://msdn.microsoft.com/library/br224646)
+* [Clase Foundation](/uwp/api/windows.foundation.uri)
 * [Plantilla de función winrt::get_activation_factory](/uwp/cpp-ref-for-winrt/get-activation-factory)
 * [Plantilla de función winrt::make](/uwp/cpp-ref-for-winrt/make)
-* [winrt::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
+* [estructura winrt::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
 
 ## <a name="related-topics"></a>Artículos relacionados
 * [Crear eventos en C++/WinRT](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)
