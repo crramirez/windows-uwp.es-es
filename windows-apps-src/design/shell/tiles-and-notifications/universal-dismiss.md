@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to use Universal Dismiss on your toast notifications.
 title: Descartar universal
 label: Universal Dismiss
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, notificación del sistema, centro de actividades en la nube, descartar universal, notificación, entre dispositivos, descartar una vez descartar en todas partes
 ms.localizationpriority: medium
-ms.openlocfilehash: ef7d0c55c902f179f0375a63735c7cc3a6a9f96d
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: 90ad60949504d4478341ff9455fe0f7da90d78a9
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1523355"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3847249"
 ---
 # <a name="universal-dismiss"></a>Descartar universal
 

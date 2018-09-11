@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn about when and where you should use secondary tiles in your UWP app.
 title: Iconos secundarios
 label: Secondary tiles
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, iconos secundarios, instrucciones, directrices, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: da32b32771e2a87235381ee305033febd6d2cf5c
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 1e3d31376b9ac155dab6bffa7739cb880af1cff9
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1392364"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3845669"
 ---
 # <a name="secondary-tile-guidance"></a>Instrucciones sobre los iconos secundarios
 
