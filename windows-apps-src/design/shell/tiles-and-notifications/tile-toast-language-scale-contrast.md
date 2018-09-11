@@ -10,16 +10,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b0992a8d86b17648b748bb792fdf250f29801d0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 87aafe36d05298a8fa157426e39c530190f98908
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673222"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3849449"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.
 
-Las ventanas y notificaciones del sistema pueden cargar cadenas y archivos adaptados al idioma, el [factor de escala de visualización](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), el contraste alto y otros contextos de tiempo de ejecución. Para información general sobre cómo usar calificadores en los nombres de los archivos de recursos, consulta [Adaptar los recursos de idioma, escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md) y [Tablas de tamaño de activos](app-assets.md#asset-size-tables).
+Las ventanas y notificaciones del sistema pueden cargar cadenas y archivos adaptados al idioma, el [factor de escala de visualización](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), el contraste alto y otros contextos de tiempo de ejecución. Para información general sobre cómo usar calificadores en los nombres de los archivos de recursos, consulta [adaptar los recursos de idioma, escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md) y [logotipos e iconos de la aplicación](/windows/uwp/design/style/app-icons-and-logos).
 
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../../globalizing/globalizing-portal.md).
 

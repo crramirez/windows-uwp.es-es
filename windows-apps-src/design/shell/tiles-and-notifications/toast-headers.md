@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to use headers to visually group your toast notifications in Action Center.
 title: Encabezados de notificaciones del sistema
 label: Toast headers
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, notificación del sistema, encabezado, encabezados de notificación del sistema, notificación, notificaciones del sistema de grupo, Centro de actividades
 ms.localizationpriority: medium
-ms.openlocfilehash: c46a875914251217344157172c5b8df52d2293f6
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: 0b3c92a41832729b5a60411308d010c3cbb4470a
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1523356"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3848779"
 ---
 # <a name="toast-headers"></a>Encabezados de notificaciones del sistema
 

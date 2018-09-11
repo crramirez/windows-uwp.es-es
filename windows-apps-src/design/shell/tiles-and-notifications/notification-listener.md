@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to use Notification Listener to access all of the user's notifications.
 title: Agente de escucha de notificaciones
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, agente de escucha de notificaciones, usernotificationlistener, documentación, acceso a las notificaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 00774817574c209826050a084bba77084d404ace
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674622"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3850589"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Agente de escucha de notificaciones: acceder a todas las notificaciones
 
@@ -281,19 +281,17 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Evento en primer plano para una notificación agregada/descartada
 
 > [!IMPORTANT] 
-> Problema conocido: El evento en primer plano no funciona (y no tenemos planes inmediatos para solucionar este problema). 
+> Problema conocido: el evento en primer plano provocarán un bucle de CPU en las versiones recientes de Windows y anteriormente no funcionó antes de que. No uses el evento en primer plano. En una actualización próximas para Windows, solucionaremos esto.
 
-Si tienes un escenario que requiera el evento en primer plano, háznoslo saber. Sin embargo, la mayoría de los escenarios (si no todos) realmente deben usar de todos modos la tarea en segundo plano, ya que la aplicación probablemente deba reactivarse en segundo plano para los eventos de notificaciones. Por ejemplo, tu aplicación para un accesorio transportable rara vez está en primer plano y conocer las nuevas notificaciones desde segundo plano.
-
-Además, gracias al [modelo de proceso único](../../../launch-resume/create-and-register-an-inproc-background-task.md), usar desencadenadores de tarea en segundo plano resulta muy simple desde dentro de la aplicación en primer plano. Por lo tanto, si necesitas recibir eventos en primer plano, utiliza el desencadenador en segundo plano con el modelo de proceso único.
+En lugar de usar el evento en primer plano, usa el código mostrado anteriormente para una tarea en segundo plano de [modelo de proceso único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . La tarea en segundo plano, también podrás recibir notificaciones evento cambio mientras la aplicación está cerrada o se está ejecutando.
 
 ```csharp
-// Subscribe to foreground event
+// Subscribe to foreground event (DON'T USE THIS)
 listener.NotificationChanged += Listener_NotificationChanged;
  
 private void Listener_NotificationChanged(UserNotificationListener sender, UserNotificationChangedEventArgs args)
 {
-    // NOTE: This event DOES NOT WORK. Use the background task instead.
+    // NOTE: This event WILL CAUSE CPU LOOPS, DO NOT USE. Use the background task instead.
 }
 ```
 

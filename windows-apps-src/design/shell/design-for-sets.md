@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 43e727100872421ac519a7c00363e6f6eeaf832c
-ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7c3e0e6ec7331e860c9153e2a2e29a51fb5848bd
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1877137"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3849879"
 ---
 # <a name="designing-for-sets"></a>Diseños para Conjuntos
 
@@ -119,7 +119,7 @@ Si has colocado contenido o funcionalidad en la interfaz de usuario de la barra 
 
 Para asegurarte de que el icono de la aplicación tiene el mejor aspecto en un Conjunto, debes proporcionar un icono alternativo sin placa para tu aplicación. (El icono de la aplicación usado en tu pestaña de la aplicación es el mismo icono usado en la barra de tareas). El propósito del icono alternativo es tener un buen aspecto frente a cualquier color de fondo. Si está disponible, se usará el icono alternativo.
 
-En el manifiesto de la aplicación, especifica un icono sin placa de forma alternativa además del icono normal. Para obtener más información, consulta [Instrucciones de activos de iconos y ventanas](./tiles-and-notifications/app-assets.md) . El icono para especificar que se documenta como "Activos sin placa de la lista de tamaño de destino" en la sección [Tipos de activo](./tiles-and-notifications/app-assets.md#asset-types) del artículo.
+En el manifiesto de la aplicación, especifica un icono sin placa de forma alternativa además del icono normal. Para obtener más información, consulta [logotipos e iconos de la aplicación](/windows/uwp/design/style/app-icons-and-logos). El icono para especificar se documenta como "activos de lista de tamaño de destino sin placa" en la sección [más información acerca de los activos de icono de la aplicación](/windows/uwp/design/style/app-icons-and-logos#more-about-app-icon-assets) del artículo.
 
 Si no especificas un icono alternativo en el manifiesto de la aplicación, el sistema asignará una nueva placa al icono de la ventana con el color de la pestaña y usará esa.
 

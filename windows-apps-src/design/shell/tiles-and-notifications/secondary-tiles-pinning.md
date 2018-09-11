@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to pin a secondary tile from your UWP app.
 title: Anclar iconos secundarios
 label: Pin secondary tiles
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, iconos secundarios, anclar, anclado, inicio rápido, ejemplo de código, ejemplo, secondarytile
 ms.localizationpriority: medium
-ms.openlocfilehash: 67d9090f0abacd1c3003e8427908358d76cdb65e
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: 437d149e22f035fdd0cb1f5251a114b6dd4765e4
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1522974"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3849509"
 ---
 # <a name="pin-secondary-tiles"></a>Anclar iconos secundarios
 
