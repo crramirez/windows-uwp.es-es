@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección
 ms.localizationpriority: medium
 ms.openlocfilehash: 7168ee705114523a324194b89f8450e768cfab22
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3846039"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3933818"
 ---
 # [<a name="cwinrt"></a>C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime, implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows. Con C++/WinRT, puedes crear y consumir API de Windows Runtime usando cualquier compilador de C ++17 compatible con estándares. Windows SDK incluye C++/WinRT. Se introdujo en la versión 10.0.17134.0 (Windows 10, versión 1803).
@@ -56,9 +56,9 @@ C++/WinRT funciona mejor y produce archivos binarios más pequeños que cualquie
 | [Operaciones simultáneas y asincrónicas](concurrency.md) | Este tema muestra cómo puedes crear y consumir objetos asincrónicos de Windows Runtime con C++/WinRT. |
 | [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md) | Una propiedad que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una propiedad *observable*. Este tema muestra cómo implementar y consumir una propiedad observable y cómo enlazar un control XAML a dicha propiedad. |
 | [Controles de elementos XAML; enlazar a una colección C++/WinRT](binding-collection.md) | Una colección que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una colección *observable*. Este tema muestra cómo implementar y consumir una colección observable y cómo enlazar un control de elementos XAML a dicha colección. |
-| [Controles (con plantilla) personalizados de XAML con C++ / WinRT](xaml-cust-ctrl.md) | En este tema te guiará por el proceso de creación de un control personalizado simple con C++ / WinRT. Puede basarse en la información aquí para crear tus propios controles de interfaz de usuario enriquecida y personalizables. |
-| [Usar componentes de COM con C++ / WinRT](consume-com.md) | Este tema usa un ejemplo de código completo de Direct2D para mostrar cómo usar C++ / WinRT para consumir COM clases e interfaces. |
-| [Crear componentes de COM con C++ / WinRT](author-coclasses.md) | C++ / WinRT te permite crear componentes de COM clásicos, al igual que le ayuda a crear clases en tiempo de ejecución de Windows. |
+| [Controles (con plantilla) personalizados de XAML con C++ / WinRT](xaml-cust-ctrl.md) | En este tema te guiará por los pasos de la creación de un control personalizado simple con C++ / WinRT. Se puede generar la información aquí para crear tus propios controles de interfaz de usuario enriquecida y personalizables. |
+| [Consumir componentes de COM con C++ / WinRT](consume-com.md) | Este tema usa un ejemplo de código completo de Direct2D para mostrar cómo usar C++ / WinRT para consumir COM clases e interfaces. |
+| [Crear componentes de COM con C++ / WinRT](author-coclasses.md) | C++ / WinRT puede ayudarte a crear componentes de COM clásicos, al igual que le ayuda a crear clases en tiempo de ejecución de Windows. |
 | [Interoperabilidad entre C++/WinRT y C++/CX](interop-winrt-cx.md) | Este tema muestra dos funciones auxiliares que pueden usarse para convertir entre objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) y C++/WinRT. |
 | [Migrar a C++/WinRT desde C++/CX](move-to-winrt-from-cx.md) | En este tema se muestra cómo migrar código C++/CX a su equivalente en C++/WinRT. |
 | [Interoperabilidad entre C++/WinRT y la ABI](interop-winrt-abi.md) | Este tema muestra cómo convertir entre la interfaz binaria de aplicaciones (ABI) y objetos C++/WinRT. |
@@ -70,7 +70,7 @@ C++/WinRT funciona mejor y produce archivos binarios más pequeños que cualquie
 
 | Tema | Descripción |
 | - | - |
-| [Las categorías de valor y referencias a ellos](cpp-value-categories.md) | En este tema se describe las distintas categorías de valores que existen en C++. Sin duda habrá oído hablar de valores l y valores r, pero hay otros tipos. |
+| [Categorías de valor y hace referencia a ellos](cpp-value-categories.md) | En este tema se describe las distintas categorías de valores que existen en C++. Sin duda habrá oído hablar de valores l y valores r, pero hay otros tipos. |
 
 ## <a name="important-apis"></a>API importantes
 * [Espacio de nombres de winrt](/uwp/cpp-ref-for-winrt/winrt)

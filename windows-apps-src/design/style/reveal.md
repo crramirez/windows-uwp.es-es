@@ -15,22 +15,22 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848899"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935286"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
 ![imagen principal](images/header-reveal-highlight.svg)
 
-Mostrar que resaltado es un efecto de iluminación que resalta elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
+Mostrar que resaltado es un efecto de iluminación que resalta los elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
 
 > **API importantes**: [clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [clase RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [clase RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [clase RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [clase VisualState](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Así es cómo funciona
-Mostrar resaltado llama la atención respecto a los elementos interactivos mostrando el contenedor del elemento cuando el puntero está cercano, como se muestra en la siguiente ilustración:
+Mostrar resaltado llama la atención a los elementos interactivos mostrando el contenedor del elemento cuando el puntero está cercano, como se muestra en la siguiente ilustración:
 
 ![Elemento visual de Reveal](images/Nav_Reveal_Animation.gif)
 
@@ -69,7 +69,7 @@ Mostrar funciona automáticamente para algunos controles. Para otros controles, 
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estas ilustraciones muestran Mostrar resaltado en varios controles diferentes:
+Estas ilustraciones muestran resaltar Reveal en varios controles diferentes:
 
 ![Ejemplos de Reveal](images/RevealExamples_Collage.png)
 
@@ -259,14 +259,14 @@ Esta es una plantilla completa del aspecto de un botón Reveal:
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Ajustar el efecto Reveal en un control personalizado 
 
-Al habilitar Reveal en un control personalizado o nuevamente basado en modelo o una superficie de comandos personalizada, estas sugerencias pueden ayudarte a optimizar el efecto:
+Al habilitar Reveal en un control personalizado o nuevamente modelo o una superficie de comandos personalizada, estas sugerencias pueden ayudarte a optimizar el efecto:
  
 * En los elementos adyacentes con tamaños que no se alinean en alto o ancho (especialmente en las listas): quita el comportamiento del enfoque de borde y mantén los bordes mostrados solo al mantener el puntero.
 * Para elementos dominantes que a menudo entran y salen del estado deshabilitado: coloca el pincel del enfoque de borde en placas traseras de los elementos, así como sus bordes para hacer hincapié en su estado.
 * Para los elementos dominantes adyacentes que están tan cerca que se tocan: agrega un margen de 1 píxel entre los dos elementos. 
 
 ## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
-### <a name="do"></a>Realiza acciones:
+### <a name="do"></a>Hacer:
 - Usar Reveal en elementos donde el usuario puede realizar muchas acciones (barras de comandos, menús de navegación)
 - Usar Reveal en agrupaciones de elementos interactivos que no tienen separadores visuales de manera predeterminada (listas, cintas de opciones)
 - Usar Reveal en áreas con una alta densidad de elementos interactivos (escenarios dominantes)

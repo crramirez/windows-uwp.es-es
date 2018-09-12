@@ -15,11 +15,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 714a1af932dfb8d5b0aab5c84437f92d5c2bd90e
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851215"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3931063"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
 
@@ -33,7 +33,7 @@ El usuario espera que el botón Atrás vaya a la ubicación anterior en el histo
 
 ## <a name="back-button"></a>Botón Atrás
 
-Para crear un botón Atrás, usa el control de [botón](../controls-and-patterns/buttons.md) con el `NavigationBackButtonNormalStyle` aplicar un estilo y coloca el botón en la esquina superior izquierda de la interfaz de usuario de la aplicación (para obtener más información, vea los ejemplos de código XAML más adelante).
+Para crear un botón Atrás, utilice el control de [botón](../controls-and-patterns/buttons.md) con el `NavigationBackButtonNormalStyle` de estilos y coloque el botón en la esquina superior izquierda de la interfaz de usuario de la aplicación (para obtener más información, consulte los siguientes ejemplos de código XAML).
 
 ![Botón Atrás en la parte superior izquierda de la interfaz de usuario de la aplicación](images/back-nav/BackEnabled.png)
 
@@ -174,9 +174,9 @@ namespace winrt::PageNavTest::implementation
 }
 ```
 
-Arriba, hacia atrás controlamos navegación para una sola página. Puedes controlar la navegación en cada página si quieres excluir páginas específicas de navegación hacia atrás, o quieres ejecutar código en el nivel de página antes de mostrar la página.
+Anterior, al revés manejamos de navegación para una sola página. Navegación en cada página se puede controlar si desea excluir determinadas páginas de retroceso de navegación o desea ejecutar código de nivel de página antes de mostrar la página.
 
-Para controlar la navegación para una aplicación completa con versiones anteriores, tendrás registra un agente de escucha global para el evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) en el `App.xaml` archivo de código subyacente.
+Para controlar la exploración para una aplicación completa con versiones anteriores, podrá registrar una escucha global para el evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) en el `App.xaml` archivo de código subyacente.
 
 Código subyacente de App.xaml:
 
@@ -293,24 +293,24 @@ Anteriormente, las aplicaciones para UWP usaban [AppViewBackButtonVisibility](ht
 
 Si la aplicación sigue usando [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), el botón Atrás se representará dentro de la barra de título, como de costumbre.
 
-- Si la aplicación está **no con pestañas**, el botón Atrás se representa dentro de la barra de título. Las interacciones de usuario y la experiencia visual para el botón Atrás no han cambiado desde compilaciones anteriores.
+- Si su aplicación es **no con fichas**, el botón Atrás se representa dentro de la barra de título. Las interacciones de usuario y la experiencia visuales para el botón Atrás se modifican de generaciones anteriores.
 
     ![Botón Atrás de la barra de título](images/nav-back-pc.png)
 
-- Si una aplicación es **con pestañas**, el botón Atrás se representa dentro de un nuevo atrás del sistema barra.
+- Si una aplicación es **con fichas**, el botón Atrás se representa dentro de una copia nueva del sistema barra.
 
-    ![Sistema vuelve dibuja la barra de botones](images/back-nav/tabs.png)
+    ![Sistema dibuja volver la barra de botones](images/back-nav/tabs.png)
 
-### <a name="system-back-bar"></a>Atrás del sistema barra
+### <a name="system-back-bar"></a>Parte posterior del sistema barra
 
 > [!NOTE]
-> "Atrás del sistema barra" es solo una descripción, no un nombre oficial.
+> "Servicios de sistema barra" es sólo una descripción, no un nombre oficial.
 
-Atrás del sistema barra es una banda que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar el tamaño de destino táctil adecuado para el botón Atrás.
+La parte de atrás del sistema barra es una banda que se inserta entre la banda de ficha y el área de contenido de s de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar el tamaño de destino de toque adecuada para el botón Atrás.
 
-La barra Atrás del sistema se muestra dinámicamente, en función de la visibilidad del botón Atrás. Cuando el botón Atrás está visible, Atrás del sistema se inserta la barra, desplazando el contenido de la aplicación por 32 píxeles por debajo de la banda de la pestaña. Cuando se oculta el botón Atrás, Atrás del sistema barra se quita dinámicamente, desplazando el contenido de aplicación 32 píxeles para satisfacer la banda de la pestaña. Para evitar tener que de la aplicación la interfaz de usuario hacia arriba o hacia abajo, te recomendamos dibujar un [botón Atrás en la aplicación](#back-button).
+La barra Atrás del sistema se muestra dinámicamente, en función de la visibilidad del botón Atrás. Cuando está visible el botón Atrás, el sistema de nuevo se inserta barra, desplazando el contenido de la aplicación hacia abajo 32 píxeles por debajo de la banda de ficha. Cuando se oculta el botón Atrás, el sistema de nuevo se quita dinámicamente barra, desplazando el contenido de la aplicación 32 píxeles para satisfacer la banda de ficha. Para evitar que el cambio de interfaz de usuario de la aplicación hacia arriba o hacia abajo, se recomienda dibujar un [botón Atrás en la aplicación](#back-button).
 
-[Personalizaciones de la barra de título](../shell/title-bar.md) se realizan en la pestaña de la aplicación y el sistema vuelve barra. Si la aplicación especifica las propiedades de color de primer plano y en segundo plano con [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), los colores se aplicarán a la parte posterior de tabulación y el sistema barra.
+[Personalizaciones de la barra de título](../shell/title-bar.md) se trasladará a la ficha de la aplicación y el sistema vuelve bar. Si la aplicación especifica propiedades de color de fondo y primer plano con [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), los colores se aplicarán a la parte de atrás de la ficha y el sistema de barra.
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>Directrices para el comportamiento personalizado de la navegación hacia atrás
 
@@ -335,16 +335,16 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>Página a página; mismo grupo del mismo nivel; sin elemento de navegación en pantalla</strong>
-<p>El usuario navega de una página a otra con el mismo grupo del mismo nivel. No hay que no aparecen en pantalla elemento de navegación (por ejemplo, [NavigationView](../controls-and-patterns/navigationview.md)) que proporcione navegación directa a las dos páginas.</p></td>
+<p>El usuario navega de una página a otra con el mismo grupo del mismo nivel. En la pantalla no hay elemento de exploración (como [NavigationView](../controls-and-patterns/navigationview.md)) que ofrece una exploración directa a las dos páginas.</p></td>
 <td style="vertical-align:top;"><strong>Sí</strong>
-<p>En la siguiente ilustración, el usuario navega entre dos páginas en el mismo grupo del mismo nivel y la navegación se debe agregar al historial de navegación.</p>
+<p>En la siguiente ilustración, el usuario navega entre dos páginas en el mismo grupo del mismo nivel y se debe agregar la navegación en el historial de navegación.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>Página a página; mismo grupo del mismo nivel; con un elemento de navegación en pantalla</strong>
-<p>El usuario navega de una página a otra en el mismo grupo del mismo nivel. Ambas páginas se muestran en el mismo elemento de navegación, por ejemplo, [NavigationView](../controls-and-patterns/navigationview.md).</p></td>
+<p>El usuario navega de una página a otra en el mismo grupo del mismo nivel. Ambas páginas se muestran en el mismo elemento de navegación, como [NavigationView](../controls-and-patterns/navigationview.md).</p></td>
 <td style="vertical-align:top;"><strong>Depende.</strong>
-<p>Sí, se agrega al historial de navegación, con dos excepciones importantes. Si esperas que los usuarios de la aplicación para cambiar entre las páginas en el grupo de sistemas de mismo nivel con frecuencia, o si quieres conservar a la jerarquía de navegación, no agregues al historial de navegación. En este caso, cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel. </p>
+<p>Sí, agregar al historial de navegación, con dos excepciones notables. Si espera que los usuarios de su aplicación para cambiar entre páginas con frecuencia del grupo del mismo nivel, o si desea conservar a la jerarquía de navegación, no agregue al historial de navegación. En este caso, cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">

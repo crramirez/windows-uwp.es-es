@@ -11,16 +11,16 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 259b171ea490272241fcef1170e2413cb40d7330
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845329"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935470"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y muestras para aplicaciones para UWP
  
 
-Diseño y las descargas relacionadas con la interfaz de usuario para aplicaciones para UWP/diseño de Fluent. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/downloads">nuestra página de descargas principales</a>. 
+Diseño y descargas relacionadas con la interfaz de usuario para aplicaciones para UWP/diseño de Fluent. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/downloads">nuestra página de descargas principales</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de herramientas de diseño
@@ -30,12 +30,12 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
 :::row:::
     :::column:::
         ![imagen principal](images/adobe-xd.png) <b>Kit de herramientas de Adobe XD</b><br>
-        v1806, junio de 2018<br>
+        v1806, de junio de 2018<br>
         <a href="https://aka.ms/adobexdtoolkit">Descarga</a>
     :::column-end:::
     :::column:::
         ![imagen principal](images/adobe-illustrator.png) <b>Kit de herramientas de Adobe Illustrator</b><br>
-        v1806, junio de 2018<br>
+        v1806, de junio de 2018<br>
         <a href="https://aka.ms/adobeillustratortoolkit">Descarga</a>
     :::column-end:::
     :::column:::
@@ -52,8 +52,8 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
         <a href="https://aka.ms/adobephotoshoptoolkit">Descarga</a>
     :::column-end:::
     :::column:::
-        ![imagen principal](images/framer.png) <b>Kit de herramientas de Framer</b><br>
-        v1806, junio de 2018<br>
+        ![imagen principal](images/framer.png) <b>de herramientas de Framer</b><br>
+        v1806, de junio de 2018<br>
         <a href="https://aka.ms/framertoolkit">Descarga</a>
     :::column-end:::
     :::column:::
@@ -65,7 +65,7 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
 :::row:::
     :::column:::
         ![Miniatura de la biblioteca de WinUI](images/WinUI-library.png) <b>Biblioteca de la interfaz de usuario de Windows</b><br>
-        Controles y otros elementos de interfaz de usuario para aplicaciones para UWP.<br/>
+        Controles y otros elementos de la interfaz de usuario para aplicaciones para UWP.<br/>
         <a href="/uwp/toolkits/winui/getting-started">Instrucciones de instalación</a><br/>
     :::column-end:::
     :::column:::
@@ -97,7 +97,7 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
 
 ![crear la imagen de conversión](images/buildcast.png)
 **BuildCast**<br>
-BuildCast es un ejemplo de principio a fin integrado para presentar Fluent Design System, así como otras funcionalidades de la plataforma Universal de Windows. Permite explorar, descargar y reproducir una selección de podcasts de vídeo, incluyendo una muestra de los más populares de Channel 9 y algunas aportaciones de entusiastas de la tecnología de Windows. También incluye notas manuscritas, marcadores y reproducción remota. Esta muestra se presentó inicialmente en la conferencia de Build de 2017 durante la ponencia <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crear aplicaciones increíbles con Fluent Design</a> hablar. <br>
+BuildCast es una muestra de principio a fin integrada para presentar Fluent Design System, así como otras funcionalidades de la plataforma Universal de Windows. Permite explorar, descargar y reproducir una selección de podcasts de vídeo, incluyendo una muestra de los más populares de Channel 9 y algunas aportaciones de entusiastas de la tecnología de Windows. También incluye notas manuscritas, marcadores y reproducción remota. Esta muestra se presentó inicialmente en la conferencia de Build de 2017 durante la ponencia <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crear aplicaciones increíbles con Fluent Design</a> hablar. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Descargar la muestra de BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Echa un vistazo a la muestra de BuildCast en GitHub</a>
 
 ![Comer programador](images/lunchscheduler.png)

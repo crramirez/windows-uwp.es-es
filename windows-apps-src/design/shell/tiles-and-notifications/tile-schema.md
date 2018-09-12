@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ventana, notificación de ventana, contenido de ventana, esquema, carga de ventana
 ms.localizationpriority: medium
 ms.openlocfilehash: d2baa2e2d7b8d68505159eb480ea3be78750f507
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845859"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935106"
 ---
 # <a name="tile-content-schema"></a>Esquema de contenido de ventana
 

@@ -11,23 +11,23 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3850762"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935136"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
 
 Una vez que hayas [creado tu aplicación reservando un nombre](create-your-app-by-reserving-a-name.md), puedes empezar a trabajar en conseguir que se publique. El primer paso es crear un **envío**.
 
-Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Las actualizaciones que realice el envío se guardan, por lo que puede volver y trabajar en él cuando estés listo.
+Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Las actualizaciones que realice el envío se guardan, para que puedas volver y trabajar en él cuando estés listo.
 
 > [!NOTE]
-> Debes tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) para tener acceso al [Centro de desarrollo de Windows](https://partner.microsoft.com/dashboard) y enviar aplicaciones a la Microsoft Store.
+> Debes tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) para poder acceder al [Centro de desarrollo de Windows](https://partner.microsoft.com/dashboard) y enviar aplicaciones a la Microsoft Store.
 
-Después de publicar la aplicación, puedes publicar una versión actualizada creando otro envío en el panel. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío de una aplicación publicada, haz clic en **Actualizar** junto al envío más reciente que se muestre en la página de información general de la aplicación. También puedes [quitar una aplicación de la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si es necesario hacerlo (y, a continuación, hacer que esté disponible más adelante, si lo deseas).
+Después de publicar la aplicación, puedes publicar una versión actualizada creando otro envío en el panel. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío de una aplicación publicada, haz clic en **Actualizar** junto al envío más reciente que se muestre en la página de información general de la aplicación. También puedes [quitar una aplicación de la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si es necesario hacerlo (y, a continuación, hacer que esté disponible más tarde, si lo deseas).
 
 > [!NOTE]
 > En esta sección de la documentación se describe cómo crear un envío de aplicación en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.

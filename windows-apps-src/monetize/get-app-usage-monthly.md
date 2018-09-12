@@ -2,7 +2,7 @@
 author: Xansky
 ms.assetid: 4E4CB1E3-D213-4324-91E4-7D4A0EA19C53
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de uso de aplicación mensual para un intervalo de fechas dado y según otros filtros opcionales.
-title: Obtener mensual uso de la aplicación
+title: Obtener el uso de la aplicación mensual
 ms.author: mhopkins
 ms.date: 08/15/2018
 ms.topic: article
@@ -11,13 +11,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: ad45422dea9b0c4335fa3cf67a594f819a60ca9c
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848079"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3932574"
 ---
-# <a name="get-monthly-app-usage"></a>Obtener mensual uso de la aplicación
+# <a name="get-monthly-app-usage"></a>Obtener el uso de la aplicación mensual
 
 Usa este método en la API de análisis de Microsoft Store para obtener datos de uso agregados (sin incluir multijugador de Xbox) en formato JSON de una aplicación durante un intervalo de fechas (últimos 90 días solo) y otros filtros opcionales. Esta información también está disponible en el [informe de uso](../publish/usage-report.md) en el panel del centro de desarrollo de Windows.
 
@@ -86,19 +86,19 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | Valor                     | Tipo    | Descripción                                                                                 |
 |---------------------------|---------|---------------------------------------------------------------------------------------------|
 | fecha                      | cadena  | La primera fecha del intervalo de fechas de los datos de uso. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.                          |
-| applicationId             | cadena  | El identificador de la tienda de la aplicación para la que estás recuperando los datos de uso.                            |
+| applicationId             | cadena  | El identificador de la aplicación para la que estás recuperando los datos de uso de la tienda.                            |
 | applicationName           | cadena  | Nombre para mostrar de la aplicación.                                                                |
-| market                    | cadena  | El código de país ISO 3166 del mercado donde el cliente usa la aplicación.                   |
+| market                    | cadena  | El código de país ISO 3166 del mercado donde el cliente usó la aplicación.                   |
 | packageVersion            | cadena  | La versión del paquete donde se produjo el uso.                                            |
-| deviceType                | cadena  | Una de las cadenas siguientes que especifica el tipo de dispositivo donde se produjo uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tableta**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
-| subscriptionName          | cadena  | Indica si estaba el uso de a través de la Xbox Game Pass.                                              |
+| deviceType                | cadena  | Una de las cadenas siguientes que especifica el tipo de dispositivo donde se produjo el uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tableta**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
+| subscriptionName          | cadena  | Indica si estaba el uso de a través de Xbox Game Pass.                                              |
 | monthlySessionCount       | long    | El número de sesiones de usuario durante el mes.                                              |
-| engagementDurationMinutes | double  | Los minutos que los usuarios activamente se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.                               |
+| engagementDurationMinutes | double  | Minutos que los usuarios activamente se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.                               |
 | monthlyActiveUsers        | long    | El número de clientes que usen ese mes de la aplicación.                                           |
-| monthlyActiveDevices      | long    | El número de dispositivos ejecutando la aplicación durante un período de tiempo, a partir de cuando se inicia la aplicación (inicio del proceso) distinto y finaliza cuando finaliza (final del proceso) o después de un período de inactividad.                                                        |
+| monthlyActiveDevices      | long    | El número de dispositivos que ejecutan la aplicación para un distinto período de tiempo, a partir de cuando se inicia la aplicación (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.                                                        |
 | monthlyNewUsers           | long    | El número de clientes que usó la aplicación por primera vez ese mes.                    |
-| averageDailyActiveUsers   | double  | El número medio de clientes que usen la aplicación a diario.                             |
-| averageDailyActiveDevices | double  | El número medio de dispositivos que usan para interactuar con la aplicación todos los usuarios a diario. |
+| averageDailyActiveUsers   | double  | El número medio de los clientes que usan la aplicación a diario.                             |
+| averageDailyActiveDevices | double  | El número medio de los dispositivos que usan para interactuar con la aplicación todos los usuarios a diario. |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 08e7d8fcfbab0d0b22fffa3e3e0aecc38d5b095c
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851065"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935402"
 ---
 # <a name="windows-device-portal-overview"></a>Introducción a Windows Device Portal
 
@@ -56,32 +56,32 @@ Para obtener instrucciones específicas sobre la configuración del dispositivo,
 ### <a name="toolbar-and-navigation"></a>Barra de herramientas y navegación
 
 La barra de herramientas en la parte superior de la página proporciona acceso a características de uso común.
-- **Inicio/apagado**: acceso a las opciones de inicio/apagado.
+- **Inicio/apagado**: acceder a opciones de energía.
   - **Apagar**: apaga el dispositivo.
   - **Reiniciar**: vuelve a iniciar el dispositivo.
 - **Ayuda**: abre la página de ayuda.
 
 Usa los vínculos del panel de navegación en el lado izquierdo de la página para navegar a las herramientas de administración y supervisión disponibles del dispositivo.
 
-A continuación se describen las herramientas que son comunes a las familias de dispositivos. Puede que haya otras opciones disponibles en función del dispositivo. Para obtener más información, consulta la página específica para el tipo de dispositivo.
+Aquí se describen las herramientas que son comunes a las familias de dispositivos. Puede que haya otras opciones disponibles en función del dispositivo. Para obtener más información, consulta la página específica para el tipo de dispositivo.
 
 ### <a name="apps-manager"></a>Administrador de aplicaciones
 
-El Administrador de aplicaciones proporciona instalación o desinstalación de paquetes de funcionalidad de administración de aplicación y empaqueta en el dispositivo host.
+El Administrador de aplicaciones proporciona la instalación o desinstalación y funcionalidad de administración de aplicación de paquetes y lotes en el dispositivo host.
 
-![Página de administrador de aplicaciones de Portal de dispositivos](images/device-portal/wdp-apps.png)
+![Página Administrador de aplicaciones de Portal de dispositivos](images/device-portal/wdp-apps.png)
 
-- **Las aplicaciones instaladas**: usar el menú desplegable para eliminar o iniciar las aplicaciones que están instaladas en el dispositivo. Instalar una nueva aplicación haciendo clic en **Agregar**. Esto inicia la instalación de experiencia de usuario para implementar las aplicaciones empaquetadas desde local, red o web hospeda y registrar en archivos sueltos desde los recursos compartidos de red.
-- **Aplicaciones en ejecución**: obtener información acerca de las aplicaciones que se está ejecutando y ciérralos según sea necesario.
+- **Las aplicaciones instaladas**: usar el menú desplegable para eliminar o iniciar las aplicaciones que están instaladas en el dispositivo. Instalar una nueva aplicación haciendo clic en **Agregar**. Esto inicia la instalación de experiencia de usuario para implementar las aplicaciones empaquetadas desde local, red o web hospeda y registrar en archivos sueltos desde recursos compartidos de red.
+- **Aplicaciones en ejecución**: obtener información acerca de las aplicaciones que se están ejecutando actualmente y ciérralos según sea necesario.
 
 #### <a name="install-an-app"></a>Instalar una aplicación
 
 1.  Cuando hayas creado un paquete de la aplicación, podrás instalarlo remotamente en el dispositivo. Después de compilarlo en Visual Studio, se genera una carpeta de salida.
   ![Instalación de aplicaciones](images/device-portal/iot-installapp0.png)
 2.  En la sección de administrador de aplicaciones de Device Portal, haz clic en **Agregar** y selecciona **instalar el paquete de la aplicación desde el almacenamiento local**.
-3.  Haz clic en **Examinar** y busca el paquete de la aplicación.
+3.  Haga clic en **Examinar** y busca el paquete de aplicación.
 3.  Haz clic en **Examinar** y busca el archivo de certificado (_.cer_) (no es necesario en todos los dispositivos.)
-4.  Casillas de verificación los respectivos si quieres instalar opcional o paquetes de marcos junto con la instalación de la aplicación. Si tienes más de una, agrega cada una de ellas individualmente.     
+4.  Casillas de verificación los respectivos si desea instalar opcional o los paquetes de marcos junto con la instalación de la aplicación. Si tienes más de una, agrega cada una de ellas individualmente.     
 5.  Haz clic en **siguiente** para mover el paso siguiente e **instalar** iniciar la instalación. 
 
 #### <a name="uninstall-an-app"></a>Desinstalar una aplicación
@@ -91,7 +91,7 @@ El Administrador de aplicaciones proporciona instalación o desinstalación de p
 
 ### <a name="running-processes"></a>Procesos en ejecución
 
-Esta página muestra detalles acerca de los procesos que se están ejecutando actualmente en el dispositivo host. Esto incluye aplicaciones y procesos del sistema. En algunas plataformas (escritorio, IoT y HoloLens), puedes finalizar los procesos.
+Esta página muestra detalles acerca de los procesos que se está ejecutando en el dispositivo host. Esto incluye aplicaciones y procesos del sistema. En algunas plataformas (escritorio, IoT y HoloLens), puedes finalizar los procesos.
 
 ![Portal de dispositivos que ejecutan procesos de página](images/device-portal/mob-device-portal-processes.png)
 
@@ -99,7 +99,7 @@ Esta página muestra detalles acerca de los procesos que se están ejecutando ac
 
 Esta página te permite ver y manipular los archivos almacenados por las aplicaciones transferidas localmente. Consulta la entrada de blog [usando el Explorador de archivos de la aplicación](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) para obtener más información sobre el Explorador de archivos y cómo usarla. 
 
-![Página del explorador de archivo del Portal de dispositivo](images/device-portal/mob-device-portal-AppFileExplorer.png)
+![Página de explorador de archivo del Portal de dispositivo](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
 ### <a name="performance"></a>Rendimiento
 
@@ -110,7 +110,7 @@ Estas son las métricas disponibles:
 - **Memoria**: Total, en uso, disponible, confirmada, paginada y no paginada
 - **E/S**: cantidades de datos de lectura y escritura
 - **Red**: envíos y recepciones datos
-- **GPU**: uso del motor de porcentaje del total GPU disponible
+- **GPU**: por ciento de GPU disponible total del motor de utilización
 
 
 ![Página de rendimiento de Portal de dispositivos](images/device-portal/mob-device-portal-perf.png)
@@ -139,7 +139,7 @@ Para obtener más información sobre el uso de registro de ETW, consulta el [Por
 
 ### <a name="performance-tracing"></a>Seguimiento de rendimiento
 
-La página de seguimiento del rendimiento permite ver los seguimientos de [Windows Performance Recorder (WPR)](https://msdn.microsoft.com/library/hh448205.aspx) del dispositivo host.
+La página de seguimiento del rendimiento permite ver los seguimientos de [Windows Performance Recorder (WPR)](https://msdn.microsoft.com/library/hh448205.aspx) desde el dispositivo host.
 
 ![Página de seguimiento de rendimiento de Device Portal](images/device-portal/mob-device-portal-perf-tracing.png)
 
@@ -148,18 +148,18 @@ La página de seguimiento del rendimiento permite ver los seguimientos de [Windo
 
 Para detener el seguimiento, haz clic en **Detener**. Permanece en esta página hasta que el archivo de seguimiento (. ETL) ha terminado de descargar.
 
-Captura. Para un análisis en el [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/desktop/hh448170.aspx), se pueden abrir archivos ETL.
+Captura. Para realizar análisis en el [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/desktop/hh448170.aspx), se pueden abrir archivos ETL.
 
 ### <a name="device-manager"></a>Administrador de dispositivos
 
-La página de administrador de dispositivo enumera todos los periféricos conectados al dispositivo. Puedes hacer clic en los iconos de configuración para ver las propiedades de cada uno.
+La página Administrador de dispositivo enumera todos los periféricos conectados al dispositivo. Puedes hacer clic en los iconos de configuración para ver las propiedades de cada uno.
 
-![Página de administrador de Device Portal de dispositivos](images/device-portal/mob-device-portal-devices.png)
+![Página de administrador de dispositivo Device Portal](images/device-portal/mob-device-portal-devices.png)
 
 ### <a name="networking"></a>Redes
 
-La página de redes administra las conexiones de red en el dispositivo. A menos que estás conectado a Device Portal a través de USB, si modificas esta configuración es probable que le desconectará de Device Portal.
-- **Redes disponibles**: muestra las redes Wi-Fi disponibles para el dispositivo. Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario. Device Portal aún no admite la autenticación de empresa. También puedes usar la lista desplegable de **perfiles** para intentar conectarse a cualquiera de los perfiles de Wi-Fi que se sabe que el dispositivo.
+La página de redes administra las conexiones de red en el dispositivo. A menos que están conectados a Device Portal a través de USB, si modificas esta configuración es probable que le desconectará de Device Portal.
+- **Redes disponibles**: muestra las redes Wi-Fi disponibles para el dispositivo. Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario. Device Portal aún no admite la autenticación de empresa. También puedes usar la lista desplegable de **perfiles** para intentar conectar a cualquiera de los perfiles de Wi-Fi que se sabe que el dispositivo.
 - **Configuración IP**: muestra información de dirección sobre cada uno de lo host de puertos de red del dispositivo.
 
 ![Página de redes de Portal de dispositivos](images/device-portal/mob-device-portal-network.png)
@@ -184,7 +184,7 @@ Se sugiere la conexión en el puerto HTTPS, ya que no todos los dispositivos esc
 A fin de ofrecer protección frente a [ataques CSRF](https://wikipedia.org/wiki/Cross-site_request_forgery), se requiere un token único en todas las solicitudes no GET. Este token, el encabezado de la solicitud X-CSRF-Token, se deriva de una cookie de sesión, CSRF-Token. En la interfaz de usuario web de Device Portal, la cookie CSRF-Token se copia en el encabezado X-CSRF-Token en cada solicitud.
 
 > [!IMPORTANT]
-> Esta protección impide usar de las API de REST desde un cliente independiente (por ejemplo, las herramientas de línea de comandos). Esto puede resolverse de 3 maneras: 
+> Esta protección impide usar las API de REST desde un cliente independiente (por ejemplo, las herramientas de línea de comandos). Esto puede resolverse de 3 maneras: 
 > - Usa un nombre de usuario "auto-". Los clientes que antepongan "auto-" a su nombre de usuario omitirán la protección CSRF. Es importante que este nombre de usuario no se use para iniciar sesión en Device Portal a través del explorador, ya que abrirá el servicio a los ataques CSRF. Ejemplo: Si el nombre de usuario de Device Portal es "admin", debe usarse ```curl -u auto-admin:password <args>``` para omitir la protección CSRF. 
 > - Implementa el esquema de cookie a encabezado en el cliente. Se requiere una solicitud GET para establecer la cookie de sesión y, después, la inclusión del encabezado y la cookie en todas las solicitudes posteriores. 
 > - Deshabilita la autenticación y usa HTTP. La protección CSRF solo se aplica a los extremos HTTPS, para que las conexiones en extremos HTTP no tengan que realizar las acciones anteriores. 

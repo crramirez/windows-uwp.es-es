@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 63dfd179fbc90be41b162d31e52e5c6b25956323
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 160a4ab0ff5bdc40ea46ff6d8fb9fd8e47f560e3
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842752"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934196"
 ---
 # <a name="hardware-drm"></a>DRM de hardware
 
@@ -83,7 +83,7 @@ Para cada reproducción multimedia, debes establecer **MediaProtectionManager** 
 mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = true;
 ```
 
-La mejor manera de saber si estás en DRM de hardware o de software es echar un vistazo a C:\\Usuarios\\&lt;nombre de usuario&gt;\\AppData\\Local\\Packages\\&lt;nombre de la aplicación&gt;\\LocalState\\PlayReady\\\*
+La mejor manera de saber si te encuentras en DRM de hardware o de DRM de software es echar un vistazo a C:\\Users\\&lt;nombre de usuario&gt;\\AppData\\Local\\Packages\\&lt;nombre de la aplicación&gt;\\LocalCache\\PlayReady\\\*
 
 -   Si hay un archivo mspr.hds, significa que te encuentras en DRM de software.
 -   Si tienes otro archivo \*.hds, significa que te encuentras en DRM de hardware.

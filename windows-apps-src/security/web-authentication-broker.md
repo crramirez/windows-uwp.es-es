@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: d354f0babec3ec2346c6e76fcae8666f40f3f6be
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3850449"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934162"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticación web
 
@@ -163,7 +163,7 @@ El depurador web Fiddler puede usarse con aplicaciones.
 
     **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Opciones de ejecución del archivo de imágenes**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
 
-    Si no tienes esta clave del registro, se puede crear en un símbolo del sistema con privilegios de administrador.
+    Si no tienes esta clave del registro, puede crear en un símbolo del sistema con privilegios de administrador.
 
     ```cmd 
     REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\authhost.exe" /v EnablePrivateNetwork /t REG_DWORD /d 1 /f

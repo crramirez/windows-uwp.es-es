@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: ddd8ec979cb6d5a72b48b9b8b6a60adb73c35657
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848929"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934450"
 ---
 # <a name="use-a-software-trigger"></a>Usar un desencadenador de software
 
@@ -33,7 +33,7 @@ Establece el valor deseado de [IsDisabledOnDataReceived](https://docs.microsoft.
 > [!Important]
 > Confirma que el escáner de código de barras es compatible con el uso de desencadenante de software, primero comprobando la propiedad [IsSoftwareTriggerSupported](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannercapabilities.issoftwaretriggersupported#Windows_Devices_PointOfService_BarcodeScannerCapabilities_IsSoftwareTriggerSupported).
 
-El siguiente ejemplo muestra cómo iniciar el análisis mediante un desencadenador de software, que se detendrá el examen cuando explora un código de barras:
+El siguiente ejemplo muestra cómo iniciar el examen con un desencadenador de software, que se detendrá el examen una vez que digitalice un código de barras:
 
 ```cs
 private void SoftwareTrigger(BarcodeScanner barcodeScanner, ClaimedBarcodeScanner claimedBarcodeScanner) 

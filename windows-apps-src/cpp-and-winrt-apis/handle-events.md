@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
 ms.openlocfilehash: 7af66c3f0586f2fb99a2a742f6da0144ed69d253
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851295"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934240"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Controlar eventos usando delegados en [C ++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tema muestra cómo registrar y revocar delegados de control de eventos con C++/WinRT. Puedes controlar un evento usando cualquier objeto tipo función de C++ estándar.
@@ -122,7 +122,7 @@ private:
 
 En lugar de una referencia fuerte, como se muestra en el ejemplo anterior, puedes almacenar una referencia débil al botón (consulta [Referencias débiles en C++/WinRT](weak-references.md)).
 
-Como alternativa, cuando registras un delegado, puedes especificar **auto_revoke** (que es un valor de tipo [**winrt:: auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) para solicitar a un revocador de eventos (de tipo [**winrt::event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)). El revocador de eventos mantiene una referencia débil al origen del evento (el objeto que genera el evento) para TI. Puedes revocar manualmente mediante una llamada a la función de miembro **event_revoker::revoke**, pero el revocador de eventos llama a la propia función automáticamente cuando sale del ámbito. La función **revoke** comprueba si el origen del evento aún existe y, si es así, revoca el delegado. En este ejemplo, no es necesario almacenar el origen del evento y no se necesita ningún destructor.
+Como alternativa, cuando registras un delegado, puedes especificar **winrt:: auto_revoke** (que es un valor de tipo [**winrt:: auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) para solicitar a un revocador de eventos (de tipo [**winrt:: event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)). El revocador de eventos mantiene una referencia débil al origen del evento (el objeto que genera el evento) para TI. Puedes revocar manualmente mediante una llamada a la función de miembro **event_revoker::revoke**, pero el revocador de eventos llama a la propia función automáticamente cuando sale del ámbito. La función **revoke** comprueba si el origen del evento aún existe y, si es así, revoca el delegado. En este ejemplo, no es necesario almacenar el origen del evento y no se necesita ningún destructor.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -264,7 +264,7 @@ void OnCompositionScaleChanged(Windows::UI::Xaml::Controls::SwapChainPanel const
 En la cláusula de captura lamba, se crea una variable temporal que representa una referencia débil a *this*. En el cuerpo del lambda, si puede obtenerse una referencia fuerte a *this*, se llama a la función **OnCompositionScaleChanged**. De esta forma, *this* puede usarse con seguridad dentro de ** OnCompositionScaleChanged**.
 
 ## <a name="important-apis"></a>API importantes
-* [estructura del marcador de winrt:: auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
+* [estructura del marcador winrt:: auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
 * [winrt::implements::get_weak function](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
 * [winrt::implements::get_strong function](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)
 

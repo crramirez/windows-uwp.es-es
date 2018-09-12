@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851265"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3933542"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -77,7 +77,7 @@ Para las aplicaciones con navegación vertical, se recomienda aplicar Acrylic en
 
 [NavigationView](../controls-and-patterns/navigationview.md) es un nuevo control común para agregar navegación a la aplicación e incluye el acrílico en su diseño visual. El panel de NavigationView muestra acrílico en el fondo cuando el panel está abierto en paralelo con el contenido principal y se transforma automáticamente a acrílico en la aplicación cuando el panel se abre como una superposición.
 
-Si la aplicación no es capaz de aprovechar NavigationView y piensas en Agregar acrílico por tu cuenta, te recomendamos usar un acrílico relativamente translúcido con opacidad del tono del 60%.
+Si la aplicación no es capaz de aprovechar NavigationView y piensas en Agregar acrílico por tu cuenta, te recomendamos usar acrílico relativamente translúcido con opacidad de tono del 60%.
  - Cuando el panel se abre como una superposición sobre otro contenido de la aplicación, este debe ser [acrílico en la aplicación al 60%](#acrylic-theme-resources).
  - Cuando el panel abre en paralelo con el contenido principal de la aplicación, este debe ser [acrílico en el fondo al 60%](#acrylic-theme-resources).
 
@@ -106,7 +106,7 @@ Los widgets o las aplicaciones ligeras pueden reforzar su uso como aplicaciones 
 ![Aplicación de utilidad de calculadora con acrílico en todo el fondo](images/acrylic_app-pattern_full.png)
 
 > [!Note]
-> Representación de superficies acrílicas consume GPU, lo que puede aumentar el consumo de energía del dispositivo y reducir la duración de la batería. Los efectos acrílicos se deshabilitan automáticamente cuando los dispositivos entran en el modo de ahorro de batería, los usuarios pueden deshabilitar los efectos acrílicos para todas las aplicaciones, si lo desean.
+> Representación de superficies acrílicas consume GPU, lo que puede aumentar el consumo de energía del dispositivo y reducir la duración de la batería. Los efectos acrílicos se deshabilitan automáticamente cuando los dispositivos entran en modo de ahorro de batería, los usuarios pueden deshabilitar los efectos acrílicos para todas las aplicaciones, si lo desean.
 
 
 ## <a name="acrylic-blend-types"></a>Tipos de fusiones de acrílicos
@@ -124,12 +124,12 @@ La característica más destacable de Acrylic es su transparencia. Hay dos tipos
 ## <a name="usability-and-adaptability"></a>Facilidad de uso y adaptabilidad
 Acrylic adapta automáticamente su apariencia a una amplia variedad de dispositivos y contextos.
 
-En el modo de contraste alto, los usuarios siguen viendo el color de fondo conocido de su elección en lugar del acrílico. Además tanto el acrílico en el fondo como el acrílico en la aplicación aparezcan como un color sólido:
+En el modo de contraste alto, los usuarios siguen viendo el color de fondo conocido de su elección en lugar del acrílico. Además, acrílico en segundo plano y acrílico en la aplicación aparezcan como un color sólido:
  - Cuando el usuario desactiva la transparencia en Configuración > personalización > colores
  - Cuando se activa el modo de ahorro de batería
  - Cuando la aplicación se ejecuta en hardware de gama baja
 
-Además, solo acrílico en el fondo reemplazará su transparencia y textura con un color sólido:
+Además, solo el acrílico en segundo plano reemplazará su transparencia y textura con un color sólido:
  - Cuando se desactiva una ventana de la aplicación en el escritorio
  - Cuando la aplicación para UWP se ejecuta en modo de teléfono, Xbox, HoloLens o tableta
 
@@ -163,7 +163,7 @@ Hemos creado una colección recursos de temas de pincel para los tipos de acríl
         <td> ChromeMedium <br/><br/> BaseHigh </td>
     </tr>
     <tr>
-        <td> <b>Uso recomendado:</b> Si la aplicación usa texto secundario de color AltMedium con un tamaño de texto de 18 px o más grande, puedes colocar estos recursos de acrílico al 70% más translúcidos detrás del texto. Te recomendamos usar estos recursos en las áreas superiores de comandos y navegación horizontal de la aplicación.  </td>
+        <td> <b>Uso recomendado:</b> Si la aplicación usa texto secundario de color AltMedium con un tamaño de texto de 18 px o más grandes, puedes colocar estos recursos de acrílico al 70% más translúcidos detrás del texto. Te recomendamos usar estos recursos en las áreas superiores de comandos y navegación horizontal de la aplicación.  </td>
     </tr>
     <tr>
         <td> SystemControlChromeHighAcrylicWindowMediumBrush, SystemControlChromeHighAcrylicElementMediumBrush <br/> SystemControlChromeMediumAcrylicWindowMediumBrush, SystemControlChromeMediumAcrylicElementMediumBrush <br/> SystemControlChromeMediumLowAcrylicWindowMediumBrush, SystemControlChromeMediumLowAcrylicElementMediumBrush <br/> SystemControlBaseHighAcrylicWindowMediumBrush, SystemControlBaseHighAcrylicElementMediumBrush <br/> SystemControlBaseMediumLowAcrylicWindowMediumBrush, SystemControlBaseMediumLowAcrylicElementMediumBrush <br/> SystemControlAltMediumLowAcrylicWindowMediumBrush, SystemControlAltMediumLowAcrylicElementMediumBrush  </td>
@@ -209,7 +209,7 @@ Para pintar una superficie específica, aplica uno de los recursos de temas ante
 ## <a name="custom-acrylic-brush"></a>Pincel de acrílico personalizado
 Puedes elegir agregar un tono de color al acrílico de tu aplicación para mostrar una personalización de marca o para aportar equilibrio visual con los otros elementos de la página. Para mostrar color en lugar de escala de grises, debes definir tus propios pinceles de acrílico mediante las siguientes propiedades.
  - **TintColor**: La capa de superposición de color o tono. Considera la posibilidad de especificar tanto el valor de color RGB como la opacidad del canal alfa.
- - **TintOpacity**: La opacidad de la capa de tono. Recomendamos una opacidad del 80% como punto de partida, aunque los distintos colores pueden tener una apariencia más atractiva en otras translucencies.
+ - **TintOpacity**: La opacidad de la capa de tono. Se recomienda opacidad del 80% como punto de partida, aunque los distintos colores pueden tener una apariencia más atractiva en otras translucencies.
  - **BackgroundSource**: El indicador para especificar si quieres acrílico en el fondo o en la aplicación.
  - **FallbackColor**: el color sólido que reemplaza al acrílico en el ahorro de batería. Para el acrílico en el fondo, el color de reversión también reemplaza al acrílico cuando la aplicación no está en la ventana activa del escritorio o cuando la aplicación se ejecuta en un teléfono o Xbox.
 

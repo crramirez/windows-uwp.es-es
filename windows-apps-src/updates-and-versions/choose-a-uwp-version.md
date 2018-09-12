@@ -11,11 +11,11 @@ keywords: windows 10, uwp, versión, compilación, versiones, windows, elegir, a
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: c7951098e576047b5c82da72b7c4e9118ffb7569
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848709"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934008"
 ---
 # <a name="choose-a-uwp-version"></a>Elegir una versión de UWP
 
@@ -47,7 +47,7 @@ Para ver los temas de consulta que enumeran todas las familias de dispositivos y
 
 UWP admite un subconjunto limitado de las API de .NET que están disponibles, independientemente de la **Versión de destino** o la **Versión mínima** del proyecto. [Esta página proporciona más información sobre los tipos disponibles](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
 
-Si quieres crear bibliotecas multiplataforma reutilizables, .NET Standard es compatible con UWP. La [documentación de .NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) ofrece información en el que .NET Standard es compatible con las versiones UWP.
+Si quieres crear bibliotecas multiplataforma reutilizables, .NET Standard es compatible con UWP. La [documentación de .NET estándar](https://docs.microsoft.com/dotnet/standard/net-standard) proporciona información en el que .NET Standard es compatible con las versiones UWP.
 
 Si vas a desarrollar una aplicación de escritorio, consulte en su lugar, [las dependencias y las versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) para obtener información detallada sobre la disponibilidad de .NET framework.
 

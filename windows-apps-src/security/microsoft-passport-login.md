@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 284609399f167a7229d0c7bb5858d0f0eda451ce
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3850169"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3931758"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Crear una aplicación de inicio de sesión de Windows Hello
 
@@ -33,7 +33,7 @@ Antes de comenzar, debes leer la introducción a [Windows Hello](microsoft-passp
 ## <a name="get-started"></a>Introducción
 
 
-Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También tendrás que estar usando Visual Studio 2015 (Community Edition o superior), o una versión posterior de Visual Studio, en una máquina de Windows 10. Aunque Visual Studio 2015 es la versión mínima necesaria, te recomendamos que uses la última versión de Visual Studio para las últimas actualizaciones de seguridad y de desarrollador.
+Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También tendrás que usar Visual Studio 2015 (Community Edition o superior), o una versión posterior de Visual Studio, en una máquina de Windows 10. Aunque Visual Studio 2015 es la versión mínima necesaria, te recomendamos que uses la última versión de Visual Studio para las últimas actualizaciones de seguridad y de desarrollador.
 
 -   Abre Visual Studio y selecciona Archivo > Nuevo > proyecto.
 -   Se abrirá una ventana de "Nuevo proyecto". Navegación a Plantillas > Visual C#.

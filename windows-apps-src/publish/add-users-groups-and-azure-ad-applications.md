@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, aplicación de azure ad, aad, usuario, grupo, varios usuarios, multiusuario
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3846019"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934924"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Agregar usuarios, grupos y aplicaciones de AzureAD a tu cuenta del Centro de desarrollo
 
@@ -59,7 +59,7 @@ Puedes seleccionar usuarios que ya existen en el inquilino de tu organización y
 Si has iniciado sesión con una cuenta de administrador que también tiene permisos de [administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el inquilino de Azure AD en el que estás trabajando, tendrás opciones adicionales para agregar usuarios a tu cuenta del Centro de desarrollo. Deberás seleccionar una de las opciones siguientes:
 
 -   **Agregar usuarios existentes**: elige los usuarios que ya existen en el directorio de la organización y darles acceso a tu cuenta del centro de desarrollo, mediante el método que se ha descrito anteriormente.
--   **Crear nuevos usuarios**: crear cuentas de usuario nuevo para agregar a tanto al directorio de la organización y tu cuenta del centro de desarrollo
+-   **Crear nuevos usuarios**: crear cuentas de usuario nuevo para agregar al directorio de la organización tanto y tu cuenta del centro de desarrollo
 -   **Invite outside users**: envía invitaciones por correo electrónico a los usuarios que no se encuentran actualmente en el directorio de tu organización. Se les invitará a tener acceso a tu cuenta del Centro de desarrollo y se les creará una nueva cuenta de [usuario invitado](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) en tu inquilino de AzureAD.
 
 <span id="new-user" />
