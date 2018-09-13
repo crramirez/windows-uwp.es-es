@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: fb273b6a37cb2f6322b0c9e3842b69676f82c616
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3933056"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3964273"
 ---
 # <a name="background-transfers"></a>Transferencias en segundo plano
 Usa la API de transferencia en segundo plano para copiar archivos de forma confiable en la red. La API de transferencia en segundo plano proporciona funciones de carga y descarga avanzadas que se ejecutan en segundo plano durante la suspensión de la aplicación y que persisten tras la finalización de esta. La API supervisa el estado de red, y suspende y reanuda automáticamente las transferencias cuando se pierde la conexión. Además, las transferencias son compatibles con el sensor de datos y el de batería, lo que significa que la actividad de descarga se ajusta según la conectividad y el estado de la batería actuales del dispositivo. La API es ideal para cargar y descargar archivos grandes mediante HTTP(S). También se admite FTP, pero solo para descargas.
@@ -32,7 +32,7 @@ Cuando una aplicación usa una transferencia en segundo plano para iniciar una t
 > [!NOTE]
 > Debido a restricciones de recursos por aplicación, una aplicación no debe tener más de 200 transferencias (DownloadOperations + UploadOperations) en cualquier momento. La superación de ese límite puede dejar la cola de transferencia de la aplicación en un estado irrecuperable.
 
-Cuando se inicia una aplicación, debe llamar [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) en todos los objetos de [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) y [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) existentes. No hacer esto hará que la pérdida de las transferencias ya completado y finalmente representará el uso de la característica de transferencia en segundo plano sea inútil.
+Cuando se inicia una aplicación, debe llamar a [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) en todos los objetos existentes de [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) y [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) . No hacer esto hará que la pérdida de transferencias ya completado y finalmente representará el uso de la característica de transferencia en segundo plano sea inútil.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>Realización de solicitudes de archivos autenticadas con la transferencia en segundo plano
 La transferencia en segundo plano proporciona métodos que admiten credenciales básicas de proxy y servidor, así como el uso de encabezados HTTP personalizados (mediante [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)) para cada operación de transferencia.

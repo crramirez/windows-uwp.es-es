@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
 ms.openlocfilehash: 051c24e0acc645150f4ca7ff74480f7de3ce456b
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928425"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3964819"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Crear API con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -263,9 +263,9 @@ IStringable istringable = winrt::make<MyType>();
 ```
 
 > [!NOTE]
-> Sin embargo, si vas a hacer referencia a tu tipo desde tu interfaz de usuario de XAML, entonces habrá un tipo de implementación y un tipo proyectado en el mismo proyecto. En ese caso, al **hacer que** se devuelve una instancia del tipo proyectado. Para ver un ejemplo de código de este escenario, consulta [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
+> Sin embargo, si vas a hacer referencia a tu tipo desde tu interfaz de usuario de XAML, entonces habrá un tipo de implementación y un tipo proyectado en el mismo proyecto. En ese caso, **hacer que** devuelve una instancia del tipo proyectado. Para ver un ejemplo de código de este escenario, consulta [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
-Solo podemos usar `istringable` (en el ejemplo de código anterior) para llamar a los miembros de la interfaz **IStringable**. Pero una interfaz C++/WinRT (que es una interfaz proyectada) se deriva desde [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Por lo tanto, puedes llamar a [**IUnknown:: As**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (o [**Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) en ella para consultar para otros tipos proyectados o interfaces, que pueden también puedes usar o devolver.
+Solo podemos usar `istringable` (en el ejemplo de código anterior) para llamar a los miembros de la interfaz **IStringable**. Pero una interfaz C++/WinRT (que es una interfaz proyectada) se deriva desde [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Por lo tanto, puedes llamar a [**IUnknown:: As**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (o [**IUnknown:: Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) en ella para consultar para otros tipos proyectados o interfaces, que también pueden usar o devolver.
 
 ```cppwinrt
 istringable.ToString();
@@ -318,7 +318,7 @@ myimpl.Close();
 IClosable ic1 = myimpl.as<IClosable>(); // error
 ```
 
-Si tienes una instancia de tu tipo de implementación y necesitas pasarla a una función que espera el correspondiente tipo proyectado, puedes hacerlo. Existe un operador de conversión en tu tipo de implementación (siempre que el tipo de implementación se ha generado por el `cppwinrt.exe` herramienta) que hace esto posible.
+Si tienes una instancia de tu tipo de implementación y necesitas pasarla a una función que espera el correspondiente tipo proyectado, puedes hacerlo. Existe un operador de conversión en tu tipo de implementación (siempre que el tipo de implementación se ha generado por el `cppwinrt.exe` herramienta) que hace que esto sea posible.
 
 ## <a name="deriving-from-a-type-that-has-a-non-trivial-constructor"></a>Derivar de un tipo que tiene un constructor no trivial
 [**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) es un ejemplo de un constructor no trivial. No hay ningún constructor predeterminado, por lo tanto, para construir un **ToggleButtonAutomationPeer**, necesitas pasar un *propietario*. Como consecuencia, si derivas desde **ToggleButtonAutomationPeer**, tienes que proporcionar un constructor que tome un *propietario* y que lo pase a la base. Veamos cómo se ve esto en la práctica.

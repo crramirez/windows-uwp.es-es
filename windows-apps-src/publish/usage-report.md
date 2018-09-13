@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, uso, evento personalizado, informe, telemetría, sesiones de usuario
 ms.localizationpriority: medium
 ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3930735"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3960955"
 ---
 # <a name="usage-report"></a>Informe Uso
 
@@ -50,10 +50,10 @@ Este gráfico tiene cuatro pestañas independientes que se pueden ver, mostrando
 - **Duración**: muestra el total de horas de interacción (horas en las que un usuario usa la aplicación de forma activa).
 - **Retención**: muestra el número total de **DAU/MAU** (usuarios activos diariamente/usuarios activos mensualmente) durante el período de tiempo seleccionado.
 
-Cuando el **30 D** se selecciona el período de tiempo, verá marcadores circulares al ver las fichas de **los usuarios**, **dispositivos**o la **duración** . Estos representan un aumento significativo o disminuyen en un valor dado que creemos que desea conocer. La fecha en la que aparece el círculo representa el final de la semana en el que se detectó un significativo aumento o disminución en comparación con la semana antes de que. Para ver más detalles acerca de lo que ha cambiado, sitúese sobre el círculo.  
+Cuando la **30D** período de tiempo seleccionado, puede ver los marcadores de círculo al ver las pestañas de **los usuarios**, **dispositivos**o la **duración** . Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa al final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
 
 > [!TIP]
-> Puede ver más información relacionada con cambios significativos durante los últimos 30 días en el [informe de perspectivas](insights-report.md).
+> Puedes ver más detalles relacionados con los cambios importantes a través de los últimos 30 días en el [informe de información](insights-report.md).
 
 
 ## <a name="user-sessions"></a>Sesiones de usuario

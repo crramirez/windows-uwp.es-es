@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 952db87d0dabdb927a472de17f0c0d7b345bde4e
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3936382"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3962059"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP
 
@@ -66,7 +66,7 @@ Dado que las aplicaciones para UWP automáticamente escalan en todos los disposi
 
 :::row:::
     :::column:::
-        Cuando se inicia una aplicación para UWP en cualquier dispositivo Windows 10, inicia en una [ventana](/uwp/api/Windows.UI.Xaml.Controls.Window) con un [fotograma](/uwp/api/Windows.UI.Xaml.Controls.Frame), que puede navegar entre instancias de la [página](/uwp/api/Windows.UI.Xaml.Controls.Page) .
+        Cuando se inicia una aplicación para UWP en cualquier dispositivo Windows 10, se inicia en una [ventana](/uwp/api/Windows.UI.Xaml.Controls.Window) con un [fotograma](/uwp/api/Windows.UI.Xaml.Controls.Frame), que permite navegar entre instancias de la [página](/uwp/api/Windows.UI.Xaml.Controls.Page) .
     :::column-end:::
     :::column:::
         ![Marco](images/frame.svg)

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección
 ms.localizationpriority: medium
 ms.openlocfilehash: 7168ee705114523a324194b89f8450e768cfab22
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3933818"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3961675"
 ---
 # [<a name="cwinrt"></a>C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime, implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows. Con C++/WinRT, puedes crear y consumir API de Windows Runtime usando cualquier compilador de C ++17 compatible con estándares. Windows SDK incluye C++/WinRT. Se introdujo en la versión 10.0.17134.0 (Windows 10, versión 1803).
@@ -52,7 +52,7 @@ C++/WinRT funciona mejor y produce archivos binarios más pequeños que cualquie
 | [Gestión de errores con C++/WinRT](error-handling.md) | Este tema describe estrategias para controlar los errores de programación con C++/WinRT. |
 | [Controlar eventos usando delegados](handle-events.md) | Este tema muestra cómo registrar y revocar delegados de control de eventos con C++/WinRT. |
 | [Crear eventos](author-events.md) | Este tema muestra cómo crear un componente de Windows Runtime con una clase en tiempo de ejecución que genera eventos. También muestra una aplicación que consume el componente y controla los eventos. |
-| [Las colecciones con C++ / WinRT](collections.md) | C++ / WinRT proporciona funciones y clases base que guardar una gran cantidad de tiempo y esfuerzo cuando quieras implementar o pasar colecciones. |
+| [Colecciones con C + + / WinRT](collections.md) | C + + / WinRT proporciona funciones y clases base que se ahorrará mucho tiempo y esfuerzo cuando desee implementar o pasar colecciones. |
 | [Operaciones simultáneas y asincrónicas](concurrency.md) | Este tema muestra cómo puedes crear y consumir objetos asincrónicos de Windows Runtime con C++/WinRT. |
 | [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md) | Una propiedad que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una propiedad *observable*. Este tema muestra cómo implementar y consumir una propiedad observable y cómo enlazar un control XAML a dicha propiedad. |
 | [Controles de elementos XAML; enlazar a una colección C++/WinRT](binding-collection.md) | Una colección que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una colección *observable*. Este tema muestra cómo implementar y consumir una colección observable y cómo enlazar un control de elementos XAML a dicha colección. |
@@ -70,7 +70,7 @@ C++/WinRT funciona mejor y produce archivos binarios más pequeños que cualquie
 
 | Tema | Descripción |
 | - | - |
-| [Categorías de valor y hace referencia a ellos](cpp-value-categories.md) | En este tema se describe las distintas categorías de valores que existen en C++. Sin duda habrá oído hablar de valores l y valores r, pero hay otros tipos. |
+| [Categorías de valor y las referencias a ellos](cpp-value-categories.md) | En este tema se describe las distintas categorías de valores que existen en C++. Sin duda habrá oído hablar de valores l y valores r, pero hay otros tipos. |
 
 ## <a name="important-apis"></a>API importantes
 * [Espacio de nombres de winrt](/uwp/cpp-ref-for-winrt/winrt)

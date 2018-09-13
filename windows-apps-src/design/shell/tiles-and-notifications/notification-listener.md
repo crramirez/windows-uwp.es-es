@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, agente de escucha de notificaciones, usernotificationlistener, documentación, acceso a las notificaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3930191"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957435"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Agente de escucha de notificaciones: acceder a todas las notificaciones
 
@@ -281,9 +281,9 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Evento en primer plano para una notificación agregada/descartada
 
 > [!IMPORTANT] 
-> Problema conocido: el evento en primer plano provocarán un bucle de CPU en las versiones recientes de Windows y anteriormente no funcionó antes de que. No uses el evento en primer plano. En una actualización próximas para Windows, solucionaremos esto.
+> Problema conocido: el evento en primer plano provocará un bucle de CPU en las versiones recientes de Windows y anteriormente no funcionó antes de que. NO uses el evento en primer plano. En una actualización próximas de Windows, se corrige esto.
 
-En lugar de usar el evento en primer plano, usa el código mostrado anteriormente para una tarea en segundo plano de [modelo de proceso único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . La tarea en segundo plano, también podrás recibir notificaciones evento cambio mientras la aplicación está cerrada o se está ejecutando.
+En lugar de usar el evento en primer plano, usa el código que se muestra anteriormente para una tarea en segundo plano de [modelo de proceso único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . La tarea en segundo plano, también podrás recibir notificaciones evento cambio mientras la aplicación está cerrada o se está ejecutando.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)

@@ -8,23 +8,23 @@ ms.date: 08/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10 uwp, revisión, comentario, revisor
+keywords: Windows 10, uwp, revisión, comentario, revisor
 ms.localizationpriority: medium
 ms.openlocfilehash: 8891aecb904f69e3f77ec5892d9234f79db46ff0
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3931590"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3958693"
 ---
 # <a name="reviews-report"></a>Informe Críticas
 
 
-El informe **revisa** en el tablero de mandos del centro de desarrollo de Windows le permite ver los comentarios (comments) que los clientes se introduce al valorar su aplicación en el almacén.
+El informe **de opiniones** en el panel del centro de desarrollo de Windows te permite ver las opiniones (comentarios) que los clientes proporcionaron al clasificar tu aplicación en la tienda.
 
-Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puede recuperar estos datos mediante programación utilizando el método [get app comentarios](../monetize/get-app-reviews.md) en el [almacén de Microsoft analytics API de REST](../monetize/access-analytics-data-using-windows-store-services.md).
+Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener opiniones de la aplicación](../monetize/get-app-reviews.md) en la [API de REST de análisis de Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
-También puede responder a clientes comentarios [directamente desde esta página](respond-to-customer-reviews.md), mediante programación [a través de la API del almacén de Microsoft de comentarios](../monetize/submit-responses-to-app-reviews.md), o mediante el [Centro de desarrollo de la aplicación](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
+También puedes responder a clientes opiniones [directamente desde esta página](respond-to-customer-reviews.md), mediante programación [a través de la API de opiniones de Microsoft Store](../monetize/submit-responses-to-app-reviews.md), o mediante el uso de la [aplicación Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
 
 > [!TIP]
 > Para obtener una vista rápida de las valoraciones, clasificaciones y comentarios de los usuarios de todas las aplicaciones en los últimos 30 días, expande **Interactuar** en el menú de navegación izquierdo y selecciona **Valoraciones y comentarios**. 
@@ -37,14 +37,14 @@ Cerca de la parte superior de la página, puedes seleccionar el período de tiem
 Puedes expandir la opción **Filtros** para filtrar las valoraciones mostradas en esta página mediante las siguientes opciones. Estos filtros no se aplicarán a los gráficos **Desglose de clasificaciones** y **Clasificación promedio con el tiempo**.
 
 -   **Clasificación**: de manera predeterminada se comprueban las valoraciones con clasificaciones por estrellas, pero puedes activar o desactivar clasificaciones específicas (de 1 a 5 estrellas) si quieres ver solo las valoraciones asociadas a una clasificación por estrellas particular.
-- **Revise el contenido**: el valor predeterminado es **clasificaciones con revisión contenido**, lo que significa que se muestren sólo clasificaciones con contenido de revisión. Puede seleccionar **todo** para mostrar todas las clasificaciones, incluso aquellos que no incluya ningún texto escrito de revisión. Tenga en cuenta que el gráfico de **desglose de calificaciones** siempre mostrará todos los comentarios, independientemente de la selección.
+- **Revise el contenido**: el valor predeterminado es **clasificaciones con contenido de crítica**, lo que significa que se mostrará solo clasificaciones con contenido de crítica. Puedes seleccionar **todos los** para mostrar todas las clasificaciones, incluso aquellos que no incluyan cualquier texto de crítica escrita. Ten en cuenta que el gráfico de **desglose de clasificaciones** siempre se mostrará todas las revisiones, independientemente de su selección.
 -   **Versión de SO**: el valor predeterminado es **Todos**. Puedes elegir un tipo de versión de SO específica si quieres que esta página solo muestre valoraciones aportadas por clientes que usen esa versión de SO.
 -   **Versión del paquete**: el valor predeterminado es **Todas**. Si la aplicación incluye más de un paquete, aquí puedes elegir un paquete específico para mostrar solamente valoraciones realizadas por los clientes que tenían ese paquete cuando revisaron la aplicación.
 -   **Respuestas**: el valor predeterminado es **Todas**. Puedes optar por filtrar las críticas para mostrar solamente aquellas donde has [respondido a los clientes](respond-to-customer-reviews.md), o solo aquellas donde aún ha no ha respondido.
 -   **Actualizaciones**: el valor predeterminado es **Todas**. Puedes optar por filtrar las valoraciones para mostrar solamente las que ha actualizado el cliente desde que [respondiste a una valoración](respond-to-customer-reviews.md) o solo aquellas que el cliente aún no ha actualizado.
 -   **Mercado**: El valor predeterminado es **Todos los mercados**. Puedes elegir un mercado específico si quieres que esta página solo muestre críticas de clientes en ese mercado.
 -   **Tipo de dispositivo**: el filtro predeterminado es **Todos los dispositivos**. Puedes elegir un tipo de dispositivo específico si quieres que esta página solo muestre críticas aportadas por clientes que usen ese tipo de dispositivo.
--   **Nombre de la categoría**: el filtro predeterminado es **Todos**. Puede elegir un específico [Revisar categoría insight](#review-insight-categories) para mostrar sólo los comentarios que nos hemos asociado con esa categoría. 
+-   **Nombre de la categoría**: el filtro predeterminado es **Todos**. Puedes elegir un específico [Revisar la categoría de detalles de valoración](#review-insight-categories) para mostrar solo las valoraciones que hemos asociado a esa categoría. 
 
 > [!TIP]
 > Si no ves las valoraciones en la página, comprueba que los filtros no han excluido todas tus valoraciones. Por ejemplo, si filtras por un SO de destino que no sea compatible con la aplicación, no verás ninguna valoración.
@@ -52,7 +52,7 @@ Puedes expandir la opción **Filtros** para filtrar las valoraciones mostradas e
 
 ## <a name="ratings-breakdown"></a>Desglose de clasificaciones
 
-El gráfico de **desglose de clasificación** aparece en la parte superior de este informe para que puedan obtener un rápido vistazo a la siguiente: 
+El gráfico de **desglose de clasificaciones** aparece en la parte superior de este informe para que pueda obtener un vistazo rápido a lo siguiente: 
 - La clasificación promedio por estrellas de la aplicación.
 - El número total de clasificaciones de la aplicación en los últimos 12 meses.
 - El número total de clasificaciones para cada clasificación por estrellas.
@@ -63,16 +63,16 @@ El gráfico de **desglose de clasificación** aparece en la parte superior de es
 > [!TIP]
 > La clasificación promedio que un cliente ve en la Tienda tiene en cuenta el mercado y el tipo de dispositivo del cliente, de modo que puede ser diferente de lo que aparece en este informe.
 
-Observe que este gráfico siempre incluye todas las revisiones, incluso si ha seleccionado la **que clasificación con revisar contenido** en el filtro de página **Revise el contenido** .
+Ten en cuenta que este gráfico siempre incluye todas tus valoraciones, incluso si has seleccionado **que clasificaciones con contenido de crítica** en el filtro de página **Revise el contenido** .
 
-Este gráfico también puede verse en el [informe de calificaciones](ratings-report.md), junto con más detalles acerca de la clasificación de la aplicación.
+Este gráfico también puede verse en el [informe de clasificaciones](ratings-report.md), junto con más detalles acerca de la clasificación de la aplicación.
 
 
-< span id = "categorías de insight revisión / >
+< span id = "revisión categorías de detalles de valoración / >
 
-## <a name="insight-categories"></a>Categorías de Insight
+## <a name="insight-categories"></a>Categorías de detalles de valoración
 
-Los grupos de gráficos de **categorías de Insight** tus comentarios según las categorías que hemos determinado pueden asociarse con la revisión.
+Los grupos de gráficos de **categorías de detalles de valoración** tus valoraciones según las categorías que hemos determinado puede asociarse con la valoración.
 
 > [!NOTE]
 > Valoraciones con menos de 24 horas o en un idioma distinto del inglés no se incluyen al ver valoraciones por categorías.
@@ -88,7 +88,7 @@ Cada valoración de clientes incluye:
 
 -   El título y el texto de la crítica proporcionados por el cliente. (Las críticas escritas por clientes en Windows Phone 8.1 y versiones anteriores no tendrán título).
 -   La fecha de la crítica.
--   El nombre del revisor que aparece en la Store de Microsoft.
+-   El nombre del revisor tal y como aparece en la Microsoft Store.
 -   El país o región del revisor.
 -   La versión del paquete de la aplicación en el dispositivo del cliente en el momento en que se escribió la crítica. (Esta información no está disponible para críticas enviadas en línea o enviadas por los clientes en Windows 8.1 y versiones anteriores).
 -   La versión del SO del dispositivo que estaba usando el cliente cuando se escribió la crítica.
@@ -97,9 +97,9 @@ Cada valoración de clientes incluye:
 
 Ten en cuenta que los clientes pueden dejar una clasificación de la aplicación sin agregar comentarios, por lo que normalmente verás menos valoraciones que clasificaciones.
 
-Puedes ordenar las valoraciones de la página por fecha o por clasificación en orden ascendente o descendente. Haga clic en el enlace **Ordenar por** para ver las opciones para ordenar por **fecha** o **clasificación**.
+Puedes ordenar las valoraciones de la página por fecha o por clasificación en orden ascendente o descendente. Haz clic en el vínculo de **Ordenar por** para ver las opciones para ordenar por **fecha** o **clasificación**.
 
-También puede utilizar el cuadro de búsqueda para buscar palabras o frases en los comentarios de sus aplicaciones específicas. Tenga en cuenta que se busca sólo el texto de revisión original escrito por el cliente, incluso si la revisión se ha escrito en un idioma diferente. No se busca el texto traducido de revisión.
+También puedes usar el cuadro de búsqueda para buscar palabras o frases en las opiniones de la aplicación específicas. Ten en cuenta que se busca solo el texto de crítica original escrito por el cliente, incluso si la opinión se ha escrito en un idioma diferente. No se busca texto de crítica traducidas.
 
 > [!NOTE]
 > Puede que, ocasionalmente, observes que las valoraciones desaparecen de este informe. Esto puede ocurrir porque Microsoft quita opiniones de la Tienda que estén escritas por clientes que ejecutan ciertas compilaciones de Insider y versiones preliminares de Windows 10. Lo hacemos para reducir la posibilidad de que una opinión negativa que se deba a un problema en una compilación de una versión preliminar de Windows. También podremos eliminar opiniones de la Tienda que se hayan identificado como spam, inadecuadas, ofensivas o que infringían las directivas de otra forma. Esperamos que esta acción dé como resultado una mejor experiencia del cliente.
@@ -111,12 +111,12 @@ De manera predeterminada, se traducen las críticas que no se escribieron en tu 
 
 Ten en cuenta que las críticas las traduce un sistema de traducción automática y que la traducción resultante no siempre será precisa. Se te proporciona el texto original por si quieres compararlo con la traducción o traducirlo por otros medios.
 
-Como se mencionó anteriormente, cuando buscar sus comentarios, se busca el texto original dejado por el cliente (y no cualquier texto traducido), incluso si tiene activada la casilla de **comentarios de traducir** .
+Como se indicó anteriormente, cuando buscan en tus valoraciones, busca el texto original del cliente a la izquierda (y no cualquier texto traducido), incluso si tienes activada la casilla **traducir críticas** .
 
 
 ## <a name="responding-to-customer-reviews"></a>Responder a las valoraciones de los clientes
 
-Puede utilizar el tablero de mandos de Microsoft Store Dev Center, el [almacén de Microsoft revisa la API](../monetize/submit-responses-to-app-reviews.md)o el [Centro de desarrollo de la aplicación](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para enviar respuestas a muchos de los comentarios de sus clientes. Para más información, consulta [Responder a las valoraciones de los clientes](respond-to-customer-reviews.md).
+Puedes usar el panel de Microsoft Store Dev Center, la [API de opiniones de Microsoft Store](../monetize/submit-responses-to-app-reviews.md)o la [aplicación Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para enviar respuestas a muchas de las opiniones de los clientes. Para más información, consulta [Responder a las valoraciones de los clientes](respond-to-customer-reviews.md).
 
 Estas son algunas acciones adicionales que puedes considerar según las críticas y clasificaciones que estás viendo.
 

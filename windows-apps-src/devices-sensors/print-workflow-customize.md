@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, impresión
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e53c15b01a08c8c617529fe074929ce89a68ce9
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928461"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3962635"
 ---
 # <a name="customize-the-print-workflow"></a>Personalizar el flujo de trabajo de impresión
 

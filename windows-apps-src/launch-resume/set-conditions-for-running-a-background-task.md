@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 556a787eb1e92e4c8adb7457235afb45c02df2dc
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3936542"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957333"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Establecer condiciones para ejecutar una tarea en segundo plano
 
@@ -31,9 +31,9 @@ ms.locfileid: "3936542"
 
 Aprende a establecer condiciones que controlan cuándo se ejecutará tu tarea en segundo plano.
 
-En ocasiones, tareas en segundo plano requieren ciertas condiciones de cumplirse para que la tarea en segundo plano se desarrolle correctamente. Puedes especificar una o más de las condiciones especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) al registrar tu tarea en segundo plano. La condición se comprobará después de que se ha desencadenado el desencadenador. A continuación, se pondrá en cola la tarea en segundo plano, pero no se ejecutará hasta que se satisfagan todas las condiciones.
+En ocasiones, las tareas en segundo plano requieren ciertas condiciones deben cumplirse para que la tarea en segundo plano se desarrolle correctamente. Puedes especificar una o más de las condiciones especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) al registrar tu tarea en segundo plano. La condición se comprobará después de que se ha desencadenado el desencadenador. La tarea en segundo plano, a continuación, se pondrá en cola, pero no se ejecutará hasta que se satisfagan todas las condiciones.
 
-Establecer condiciones sobre tareas en segundo plano ahorra batería y la CPU evitando que las tareas ejecuten innecesariamente. Por ejemplo, si una tarea en segundo plano se ejecuta en un temporizador y requiere conectividad a Internet, agrega la condición **InternetAvailable** al [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar la tarea. Esto ayudará a impedir que la tarea use recursos del sistema y consuma batería de forma innecesaria al ejecutarse en segundo plano solo cuando haya transcurrido el temporizador *e* Internet esté disponible.
+Establecer condiciones sobre tareas en segundo plano ahorra vida de la batería y la CPU evitando que las tareas se ejecuten innecesariamente. Por ejemplo, si una tarea en segundo plano se ejecuta en un temporizador y requiere conectividad a Internet, agrega la condición **InternetAvailable** al [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar la tarea. Esto ayudará a impedir que la tarea use recursos del sistema y consuma batería de forma innecesaria al ejecutarse en segundo plano solo cuando haya transcurrido el temporizador *e* Internet esté disponible.
 
 También es posible combinar varias condiciones mediante una llamada a **AddCondition** varias veces en el mismo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Procura no agregar condiciones conflictivas, como **UserPresent** y **UserNotPresent**.
 
@@ -80,7 +80,7 @@ taskBuilder->AddCondition(internetCondition);
 
 ## <a name="register-your-background-task"></a>Registro de tu tarea en segundo plano
 
-Ahora puedes registrar la tarea en segundo plano con el método de [**registro**](https://msdn.microsoft.com/library/windows/apps/br224772) y la tarea en segundo plano no comenzará hasta que se cumpla la condición especificada.
+Ahora puedes registrar la tarea en segundo plano con el método [**registrar**](https://msdn.microsoft.com/library/windows/apps/br224772) y la tarea en segundo plano no comenzará hasta que se cumpla la condición especificada.
 
 El siguiente código registra la tarea y almacena el objeto BackgroundTaskRegistration resultante:
 
@@ -182,7 +182,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>Observaciones
 
 > [!NOTE]
-> Elige las condiciones adecuadas para tu tarea en segundo plano para que solo se ejecute cuando es necesario y no se ejecute cuando no deba. Consulta [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para obtener descripciones de las diferentes condiciones de las tareas en segundo plano.
+> Elige las condiciones adecuadas para tu tarea en segundo plano para que solo se ejecuta cuando se necesita y no se ejecute cuando no deba. Consulta [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para obtener descripciones de las diferentes condiciones de las tareas en segundo plano.
 
 ## <a name="related-topics"></a>Temas relacionados
 

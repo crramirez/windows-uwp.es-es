@@ -11,22 +11,22 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83f2ab8a27810635b569d44961ff532ce3240e28
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3936238"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957549"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Crear la aplicación reservando un nombre
 
-El primer paso para crear una nueva aplicación en el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard) es reservar un nombre de la aplicación. Cada nombre reservado (a veces se denomina como *título* de la aplicación) debe ser único en todo Microsoft Store.
+El primer paso para crear una nueva aplicación en el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard) es reservar un nombre de aplicación. Cada nombre reservado (a veces se denomina como *título* de la aplicación) debe ser único en todo Microsoft Store.
 
 Puedes reservar un nombre para tu aplicación incluso si aún no has empezado a crearla. Recomendamos hacerlo lo antes posible para que nadie más pueda usar el nombre. Ten en cuenta que necesitarás enviar la aplicación en un plazo de tres meses para poder mantener ese nombre reservado para tu uso.
 
 Cuando [cargas los paquetes de la aplicación](upload-app-packages.md), el valor [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) debe coincidir con el nombre que reservaste para la aplicación. Si usas Microsoft Visual Studio para crear el paquete de la aplicación, este atributo se rellenará automáticamente.
 
 > [!IMPORTANT]
-> Puedes reservar nombres adicionales para una aplicación y puedes optar por usar uno de ellos en la versión publicada de la aplicación en lugar de la que reserva al crear la aplicación en primer lugar en el panel. Sin embargo, ten en cuenta que el nombre que escribas aquí se usará en la parte de [Detalles de identidad](view-app-identity-details.md), como el **Nombre de familia de paquete (PFN) la aplicación**. Estos valores pueden ser visibles para algunos usuarios y no se puede cambiar, así que asegúrate de que el nombre de la reserva es apropiado para este uso.
+> Puedes reservar nombres adicionales para una aplicación, y puedes optar por usar uno de ellos en la versión publicada de la aplicación en lugar de la que reserva al crear la aplicación en primer lugar en el panel. Sin embargo, ten en cuenta que el nombre que escribas aquí se usará en la parte de [Detalles de identidad](view-app-identity-details.md), por ejemplo, el **Nombre de familia de paquete (PFN) la aplicación**. Estos valores pueden ser visibles para algunos usuarios y no se puede cambiar, así que asegúrate de que el nombre que reservas es apropiado para este uso.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>Crear la aplicación reservando un nuevo nombre

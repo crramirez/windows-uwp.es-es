@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3931225"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957953"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows10 Mobile
 
@@ -29,7 +29,7 @@ Puedes probar tu aplicación universal con una imagen de emulador de Windows 10 
 
 El equipo debe cumplir los siguientes requisitos:
 
-CPU (esta configuración, si está disponible, puede habilitarse en el BIOS)
+CPU (estas opciones de configuración, si está disponible, se pueden habilitar en el BIOS)
 
 -   Virtualización asistida por hardware ([comprobar la compatibilidad](https://www.microsoft.com/download/details.aspx?id=592)).
 -   Traducción de direcciones de segundo nivel (SLAT).
@@ -49,7 +49,7 @@ Para comprobar los requisitos de BIOS, consulta [Cómo habilitar Hyper-V para el
 
 Para comprobar los requisitos de RAM y del sistema operativo, en el Panel de control, selecciona **Sistema y seguridad**y, a continuación, selecciona **Sistema**.
 
-Microsoft Emulator for Windows 10 Mobile requiere Visual Studio 2015 o posterior; no es compatible con versiones anteriores de Visual Studio.
+Microsoft Emulator para Windows 10 Mobile requiere Visual Studio 2015 o posterior; no es compatible con versiones anteriores de Visual Studio.
 
 Emulador de Microsoft para Windows 10 Mobile no puede cargar las aplicaciones orientadas a versiones del Windows Phone OS anteriores a Windows Phone OS 7.1.
 
@@ -68,7 +68,7 @@ Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador vir
 
 ### <a name="running"></a>Running
 
-Para ejecutar una aplicación en el emulador, simplemente seleccione un dispositivo emulado desde el menú desplegable **Ejecutar** en Visual Studio.
+Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado desde el menú desplegable **Ejecutar** en Visual Studio.
 
 ![Emuladores disponibles con resolución, tamaño y memoria](images/em-list.png)
 

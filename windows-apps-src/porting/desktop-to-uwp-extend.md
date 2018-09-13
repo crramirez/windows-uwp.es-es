@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929773"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3956837"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Ampliar tu aplicación de escritorio con componentes de UWP modernos
 
@@ -140,7 +140,7 @@ Agregar una interfaz de usuario de XAML a tu proyecto de UWP Este es el XAML par
 
 ### <a name="add-a-protocol-extension"></a>Agregar una extensión de protocolo
 
-En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución y agrega esta extensión.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución y agrega esta extensión.
 
 ```xml
 <Extensions>
@@ -311,7 +311,7 @@ public sealed class AppServiceTask : IBackgroundTask
 
 <a id="extension" />
 
-### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Agregar una extensión de servicio de aplicaciones al proyecto de empaquetado
+### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Agregar una extensión de servicio de aplicaciones para el proyecto de empaquetado
 
 Abre el archivo **package.appxmanifest** del proyecto de empaquetado y agrega una extensión de servicio de aplicaciones para la ``<Application>`` elemento.
 
@@ -398,7 +398,7 @@ Para que la aplicación sea un destino de recursos compartidos, deberás hacer l
 
 ### <a name="add-a-share-target-extension"></a>Agregar una extensión de destino de recursos compartidos
 
-En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución y agrega la extensión.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución y agrega la extensión.
 
 ```xml
 <Extensions>
@@ -512,7 +512,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ### <a name="configure-the-background-task"></a>Configurar la tarea en segundo plano
 
-En el Diseñador de manifiestos, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución.
+En el Diseñador de manifiestos, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución.
 
 En la pestaña **Declaraciones**, agrega una declaración de **Tareas en segundo plano**.
 

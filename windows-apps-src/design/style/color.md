@@ -11,11 +11,11 @@ keywords: Windows 10, UWP
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f4d9cde6ee2bc9615f044f18bc5e8828ca1985
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929797"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3959903"
 ---
 # <a name="color"></a>Color
 
@@ -33,7 +33,7 @@ En aplicaciones para UWP, los colores vienen determinados principalmente por col
 Cuando se usa color con moderación para resaltar elementos importantes, puede ayudar a crear una interfaz de usuario que sea fluida e intuitiva.
     :::column-end:::
     :::column:::
-        **Usar color para indicar interactividad.**
+        **Usar el color para indicar interactividad.**
 Es aconsejable elegir un color para indicar elementos de tu aplicación que son interactivos. Por ejemplo, muchas páginas web usa texto azul para indicar un hipervínculo.
     :::column-end:::
 :::row-end:::

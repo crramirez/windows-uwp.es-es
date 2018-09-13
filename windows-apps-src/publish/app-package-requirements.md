@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, requisitos del paquete, paquetes, formato del paquete, versión compatible, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: d7d748f36dafd93066928f01f9aa42414f2ffc1f
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3933402"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3961293"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
@@ -61,7 +61,7 @@ El manifiesto debe incluir información específica sobre tu cuenta y tu aplicac
 > Los valores del manifiesto distinguen mayúsculas de minúsculas. También deben coincidir los espacios y otras puntuaciones. Escribe los valores cuidadosamente y revísalos para asegurarte de que son correctos.
 
 
-Los lotes de aplicaciones (.appxbundle) usan un manifiesto diferente. Revisa la documentación del [manifiesto de lotes](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para conocer los requisitos y detalles para los manifiestos de lotes de la aplicación. Ten en cuenta que, en un .appxbundle, debe utilizar la .appxmanifest de cada paquete incluido los mismos elementos y atributos, excepto el atributo **ProcessorArchitecture** el elemento de [identidad](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
+Los lotes de aplicaciones (.appxbundle) usan un manifiesto diferente. Revisa la documentación del [manifiesto de lotes](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para conocer los requisitos y detalles para los manifiestos de lotes de la aplicación. Ten en cuenta que en un .appxbundle, debes usar el .appxmanifest de cada paquete incluye los mismos elementos y atributos, excepto el atributo **ProcessorArchitecture** del elemento de [identidad](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
 
 > [!TIP]
 > Asegúrate de ejecutar el [Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar tus paquetes. Esto puede ayudarte a determinar si tu manifiesto tiene algún problema que pueda causar errores de certificación o envío.

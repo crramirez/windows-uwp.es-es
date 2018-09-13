@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b731910f53a6152554b74e946374234b827f4a86
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929285"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3958785"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
 
@@ -58,7 +58,7 @@ Empecemos con los principios básicos de diseño de buena navegación:
 
 ### <a name="consistency"></a>Coherencia
 
-La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y el estilo hará navegación intuitiva y predecible para los usuarios.
+La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y estilos hará que la navegación intuitiva y predecible para los usuarios.
 
 ![imagen de componentes de la página](images/nav/page-components.svg)
 
@@ -168,7 +168,7 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
 
 :::row:::
     :::column:::
-        ![Imagen de trama](images/nav/thumbnail-frame.svg)
+        ![Imagen de marco](images/nav/thumbnail-frame.svg)
     :::column-end:::
     ::: column span = "2"::: [ **fotograma**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
@@ -177,7 +177,7 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
 
 :::row:::
     :::column:::
-        ![imagen de pestañas y](images/nav/thumbnail-tabs-pivot.svg)
+        ![imagen de pestañas y control dinámico](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
     ::: column span = "2"::: [ **pestañas y navegación superior**](../controls-and-patterns/navigationview.md)
 
@@ -200,7 +200,7 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
     :::column:::
         ![imagen de navview](images/nav/thumbnail-navview.svg)
     :::column-end:::
-    ::: column span = "2"::: [ **navegación izquierda**](../controls-and-patterns/navigationview.md)
+    ::: column span = "2"::: [de **navegación izquierdo**](../controls-and-patterns/navigationview.md)
 
         Displays a vertical list of links to top-level pages. Use when:
         

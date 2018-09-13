@@ -8,14 +8,14 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, Roma de proyecto
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proyecto rome
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e5226b23a454bf48add22d590a3ff247c629e4f
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3931634"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3961531"
 ---
 # <a name="connect-devices-through-remote-sessions"></a>Conectar dispositivos a través de sesiones remotas
 

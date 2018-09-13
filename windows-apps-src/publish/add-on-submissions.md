@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: windows10, uwp, iap, compra desde la aplicación, producto desde la aplicación, envío de iap
 ms.localizationpriority: medium
 ms.openlocfilehash: 37d05722578ed945fbf75040f96360bb569c6d06
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929625"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957239"
 ---
 # <a name="add-on-submissions"></a>Envíos de complementos
 
-Los complementos (a los que a veces se denominan productos desde la aplicación) son elementos complementarios para la aplicación que los clientes pueden adquirir. Un complemento puede ser una divertida nueva característica, un juego nuevo nivel, o cualquier cosa que creas puede mantener a los usuarios interesados. Los complementos no solo son una manera fantástica de ganar dinero, sino que promueven la participación y la interacción del cliente.
+Los complementos (a los que a veces se denominan productos desde la aplicación) son elementos complementarios para la aplicación que los clientes pueden adquirir. Un complemento puede ser una nueva función divertida, un juego nuevo nivel, o cualquier cosa que creas puede mantener a los usuarios interesados. Los complementos no solo son una manera fantástica de ganar dinero, sino que promueven la participación y la interacción del cliente.
 
 Los complementos se publican a través del panel del Centro de desarrollo de Windows. También tendrás que [habilitar los complementos](../monetize/in-app-purchases-and-trials.md) en el código de la aplicación.
 
@@ -85,7 +85,7 @@ Cuando hayas terminado de introducir esta información, haz clic en **Enviar a l
 
 ## <a name="updating-an-add-on-after-publication"></a>Actualizar un complemento después de su publicación
 
-Puedes realizar cambios en un complemento publicado en cualquier momento. Cambios de los complementos se envía y se publican independientemente de la aplicación, por lo que por lo general, no es necesario actualizar toda la aplicación con el fin de realizar cambios en un complemento, como actualizar su precio o su descripción.
+Puedes realizar cambios en un complemento publicado en cualquier momento. Cambios de los complementos se envía y publican independientemente de la aplicación, por lo que por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
 
 > [!IMPORTANT]
 > Si la aplicación está disponible para los clientes de Windows8.x, tendrás que crear y publicar un nuevo envío de aplicación para que las actualizaciones de los complementos sean visibles para dichos clientes. De forma parecida, si agregas nuevos complementos a una aplicación destinada a Windows8.x después que dicha aplicación se haya publicado, tendrás que actualizar el código de la aplicación para hacer referencia a esos complementos y, a continuación, volver a enviar la aplicación. De lo contrario, los nuevos complementos no serán visibles para los clientes de Windows8.x.

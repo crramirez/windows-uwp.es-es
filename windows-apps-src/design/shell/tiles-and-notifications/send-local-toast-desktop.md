@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows10, uwp, win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar notificación del sistema local, puente de dispositivo de escritorio, C#, c sharp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bda3e85fd89ef7a8b819fcd809acea4fd9a276b
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3932006"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3964869"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
 

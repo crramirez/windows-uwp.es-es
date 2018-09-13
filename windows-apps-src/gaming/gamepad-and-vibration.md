@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, juegos, games, controlador para juegos, gamepad, vibración, vibration
 ms.localizationpriority: medium
 ms.openlocfilehash: 2bf78b43bb09f97c196858d7cc4fcdb1e71462fc
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928795"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3958479"
 ---
 # <a name="gamepad-and-vibration"></a>Controlador para juegos y vibración
 
@@ -33,7 +33,7 @@ En esta página encontrarás información sobre:
 
 Los controladores para juegos como el Mando inalámbrico Xbox y el Mando inalámbrico Xbox S son dispositivos de entrada para juegos de propósito general. Son el dispositivo de entrada estándar en Xbox One y una opción habitual para los jugadores de Windows que no prefieran el teclado y el mouse. Los controladores para juegos son compatibles con aplicaciones para UWP de Xbox y Windows 10 en el espacio de nombres [Windows.Gaming.Input][].
 
-Controladores para juegos de Xbox One están equipados con un pad direccional (o Pad-d); **A**, **B**, **X**, **Y**, **vista**y botones de **menú** . las palancas de control derecha e izquierda, reboteadores y los desencadenadores; y un total de cuatro motores de vibración. Ambos sticks analógicos proporcionan lecturas analógicas duales en los ejes X e Y y, además, actúan como botón cuando se presionan. Cada gatillo proporciona una lectura analógica que representa cuánto se extraen atrás.
+Controladores para juegos de Xbox One están equipados con un pad direccional (o cruceta); **A**, **B**, **X**, **Y**, **vista**y los botones de **menú** ; sticks analógicos izquierdo y derecho, reboteadores y los desencadenadores; y un total de cuatro motores de vibración. Ambos sticks analógicos proporcionan lecturas analógicas duales en los ejes X e Y y, además, actúan como botón cuando se presionan. Cada desencadenador proporciona una lectura analógica que representa cuánto se extraen atrás.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **Paddle** buttons on its underside. These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands. -->
@@ -46,13 +46,13 @@ Controladores para juegos de Xbox One están equipados con un pad direccional (o
 Los controladores para juegos de Xbox One proporcionan dos motores independientes para la vibración fuerte y sutil del controlador para juegos, así como dos motores dedicados que proporcionan una vibración nítida a cada gatillo (esta característica única es la razón por la que se hace referencia a los gatillos del controlador para juegos de Xbox One como _gatillos de impulso_).
 
 > [!NOTE]
-> Los controladores para juegos de Xbox 360 no están equipados con _gatillos_.
+> Los controladores para juegos de Xbox 360 no están equipados con _gatillos de impulso_.
 
 Para obtener más información, consulta [Información general sobre los gatillos de impulso y vibración](#vibration-and-impulse-triggers-overview).
 
 ### <a name="thumbstick-deadzones"></a>Zonas muertas del stick analógico
 
-Lo ideal es que un stick analógico en reposo en la posición central produzca la misma lectura neutra en los ejes X e Y siempre. Sin embargo, debido a las fuerzas mecánicas y la sensibilidad del stick analógico, las lecturas reales en la posición central solo se aproximan al valor ideal neutro y pueden variar en lecturas posteriores. Por este motivo, siempre debes usar una pequeña _Zona muerta_&mdash;un intervalo de valores cerca de la posición central ideal que se omiten&mdash;para compensar las diferencias de fabricación, desgaste mecánico u otros problemas del controlador para juegos.
+Lo ideal es que un stick analógico en reposo en la posición central produzca la misma lectura neutra en los ejes X e Y siempre. Sin embargo, debido a las fuerzas mecánicas y la sensibilidad del stick analógico, las lecturas reales en la posición central solo se aproximan al valor ideal neutro y pueden variar en lecturas posteriores. Por este motivo, siempre debes usar un pequeño _Zona muerta_&mdash;un intervalo de valores cerca de la posición central ideal que se omiten&mdash;para compensar las diferencias de fabricación, desgaste mecánico u otros problemas del controlador para juegos.
 
 Las zonas muertas mayores ofrecen una estrategia simple para separar la entrada intencionada de la entrada no intencionada.
 
@@ -62,7 +62,7 @@ Para obtener más información, consulta [Lectura de los sticks analógicos](#re
 
 Para aliviar la carga de la compatibilidad con los diferentes dispositivos de entrada para la navegación de la interfaz de usuario y fomentar la coherencia entre dispositivos y juegos, la mayoría de dispositivos de entrada _física_ actúan simultáneamente como dispositivo independiente de entrada _lógica_, llamado [controlador de navegación de la interfaz de usuario](ui-navigation-controller.md). El controlador de navegación de la interfaz de usuario proporciona un vocabulario común para los comandos de navegación de la interfaz de usuario entre los dispositivos de entrada.
 
-Como un controlador de navegación de la interfaz de usuario, los controladores para juegos asignan el [conjunto necesario](ui-navigation-controller.md#required-set) de comandos de navegación para el stick analógico izquierdo hacia, Pad-d, **Ver**, **menú**, **A**y **B** botones.
+Como un controlador de navegación de la interfaz de usuario, los controladores para juegos asignan el [conjunto necesario](ui-navigation-controller.md#required-set) de comandos de navegación al stick analógico izquierdo, Pad-d, **vista**, **menú**, **A**y **B** botones.
 
 | Comando de navegación | Entrada del controlador para juegos                       |
 | ------------------:| ----------------------------------- |
@@ -98,7 +98,7 @@ El sistema administra los controladores para juegos, por lo tanto, no tendrás q
 
 ### <a name="the-gamepads-list"></a>Lista de controladores para juegos
 
-La clase [Gamepad][] proporciona una propiedad estática, [Gamepads][], que es una lista de solo lectura de los controladores para juegos que están actualmente conectados. Dado que es posible que solo te interesen algunos de los controladores para juegos conectados, se recomienda mantener tu propia colección en lugar de acceder a ellos a través de la `Gamepads` propiedad.
+La clase [Gamepad][] proporciona una propiedad estática, [Gamepads][], que es una lista de solo lectura de los controladores para juegos que están actualmente conectados. Dado que probablemente solo te interesen algunos de los controladores para juegos conectados, se recomienda mantener tu propia colección en lugar de acceder a ellos a través de la `Gamepads` propiedad.
 
 El siguiente ejemplo copia todos los controladores para juegos conectados en una nueva colección. Ten en cuenta que, debido a otros subprocesos en segundo plano tendrán acceso a esta colección (en los eventos [GamepadAdded][] y [GamepadRemoved][] ), debes colocar un bloqueo alrededor de cualquier código que lee o actualiza la colección.
 
@@ -183,7 +183,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-El siguiente ejemplo detiene el seguimiento de un controlador para juegos que se ha quitado. También tendrás que controlar lo que sucede con los controladores para juegos que estás realizando un seguimiento cuando se quiten; Por ejemplo, este código solo realiza un seguimiento de entrada de un controlador para juegos y simplemente se establece en `nullptr` cuando se quita. Tendrás que comprobar cada fotograma si el controlador para juegos está activo y qué controlador para juegos está recopilando entrada desde cuando controladores están conectados y desconectados de actualización.
+El siguiente ejemplo detiene el seguimiento de un controlador para juegos que se ha quitado. También tendrás que controlar lo que sucede con los controladores para juegos que estás realizando un seguimiento cuando se quitan; Por ejemplo, este código solo realiza un seguimiento de la entrada de un controlador para juegos y simplemente se establece en `nullptr` cuando se quita. Tendrás que comprobar cada fotograma si el controlador para juegos está activo y qué controlador para juegos está recopilación entrada desde cuando los controladores estén conectados y desconectados de actualización.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -223,7 +223,7 @@ Gamepad.GamepadRemoved += (object sender, Gamepad e) =>
 };
 ```
 
-Para obtener más información, consulte [procedimientos de entrada para juegos](input-practices-for-games.md) .
+Para obtener más información, consulta [los procedimientos de entrada para juegos](input-practices-for-games.md) .
 
 ### <a name="users-and-headsets"></a>Usuarios y auriculares
 
@@ -275,7 +275,7 @@ double rightStickX = reading.RightThumbstickX; // returns a value between -1.0 a
 double rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
 ```
 
-Al leer los valores del stick analógico, verás que no producen una lectura neutra confiable de 0,0 cuando el stick analógico está en reposo en la posición central; en su lugar, se producen diferentes valores próximos a 0,0 cada vez que se mueve el stick analógico y se devuelve a la posición central. Para mitigar estas variaciones, puedes implementar una pequeña _zona muerta_, que es un intervalo de valores cerca de la posición central ideal que se omiten. Una manera de implementar una zona muerta es determinar la distancia desde el centro que se ha movido el stick analógico y pasar por alto las lecturas más próximas a una cierta distancia que elijas. Puedes calcular la distancia a grandes rasgos&mdash;no es exacta porque las lecturas del stick analógico son básicamente valores polares, no planos&mdash;usando el teorema de Pitágoras. Esto genera un zona muerta radial.
+Al leer los valores del stick analógico, verás que no producen una lectura neutra confiable de 0,0 cuando el stick analógico está en reposo en la posición central; en su lugar, se producen diferentes valores próximos a 0,0 cada vez que se mueve el stick analógico y se devuelve a la posición central. Para mitigar estas variaciones, puedes implementar una pequeña _zona muerta_, que es un intervalo de valores cerca de la posición central ideal que se omiten. Una manera de implementar una zona muerta es determinar la distancia desde el centro que se ha movido el stick analógico y pasar por alto las lecturas más próximas a una cierta distancia que elijas. Puedes calcular la distancia a grandes rasgos&mdash;no es exacta porque las lecturas del stick analógico son básicamente valores polares, no planos&mdash;solo mediante el uso del teorema de Pitágoras. Esto genera un zona muerta radial.
 
 En el siguiente ejemplo se muestra una zona muerta radial básica mediante el teorema de Pitágoras.
 
@@ -335,7 +335,7 @@ double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1
 
 ### <a name="reading-the-buttons"></a>Lectura de los botones
 
-Cada uno de los botones del controlador para juegos&mdash;las cuatro direcciones de la cruceta, reboteadores izquierdo y derecho, presión del stick analógico izquierdo y derecho, **A**, **B**, **X**, **Y**, **vista**y **menú**&mdash;proporciona un digital leerla indica si se ha presionado (abajo) o liberado (arriba). Por motivos de eficacia, las lecturas de botones no se representan como valores booleanos individuales; en su lugar, se empaquetan todas en un único campo de bits que se representa mediante la enumeración [GamepadButtons][] .
+Cada uno de los botones del controlador para juegos&mdash;las cuatro direcciones del PAD-d reboteadores izquierdo y derecho, presión del stick analógico izquierdo y derecho, **A**, **B**, **X**, **Y**, **vista**y **menú**&mdash;proporciona un digital leerla indica si está presionado (abajo) o liberado (arriba). Por motivos de eficacia, las lecturas de botones no se representan como valores booleanos individuales; en su lugar, se empaquetan todas en un único campo de bits que se representa mediante la enumeración [GamepadButtons][] .
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside. These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons. -->
@@ -390,7 +390,7 @@ Los controladores para juegos de Xbox One están equipados con un total de cuatr
 
 La vibración del controlador para juegos se controla mediante la propiedad [Vibration][] de la clase [Gamepad][]. `Vibration` Es una instancia de la estructura [GamepadVibration][] que se compone de cuatro valores de punto flotante. Cada valor representa la intensidad de uno de los motores.
 
-Aunque los miembros de la `Gamepad.Vibration` propiedad puede modificarse directamente, se recomienda inicializar un independiente `GamepadVibration` instancia a los valores que desee y, a continuación, copiarla en el `Gamepad.Vibration` propiedad para cambiar las intensidades del motor reales a la vez.
+Aunque los miembros de la `Gamepad.Vibration` propiedad se puede modificar directamente, se recomienda inicializar un independiente `GamepadVibration` instancia a los valores que desee y, a continuación, copia en el `Gamepad.Vibration` propiedad para cambiar las intensidades del motor reales a la vez.
 
 En el siguiente ejemplo se muestra cómo cambiar todas las intensidades del motor a la vez.
 

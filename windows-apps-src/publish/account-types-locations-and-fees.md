@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928961"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3962621"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
@@ -37,11 +37,11 @@ Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 |--------------------|-----------------|
 | <ul><li>Cuesta aproximadamente 19USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
 
-Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Por las [Directivas de la tienda](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), las aplicaciones con ciertas funciones, como aquellos que tienen acceso cuentas financieras información o que requieren autenticación para acceder a la funcionalidad principal (sin usar un proveedor de autenticación de terceros dedicado seguro), solo se puede publicar por las cuentas de empresa.
+Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Por las [Directivas de la tienda](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), las aplicaciones con ciertas funciones, como aquellos que tienen acceso a cuentas financieras información o que requieren autenticación para acceder a la funcionalidad principal (sin usar un proveedor de autenticación de terceros dedicado seguro), solo se puede publicar por las cuentas de empresa.
 
 ## <a name="account-verification"></a>Comprobación de cuentas
 
-Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de empresa hasta que esté comprobada pero, mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) seguir creando y probando aplicaciones y trabajar en conseguir que tus envíos listo.
+Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de empresa hasta que esté comprobada pero mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) seguir creando y probando aplicaciones y trabajar en conseguir que los envíos listo.
 
 Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**. 
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4645a09a38a76dfd230436e858e222d817eab
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3930437"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3959217"
 ---
 # <a name="in-app-ads"></a>Anuncios desde la aplicación
 
@@ -37,9 +37,9 @@ Para crear una unidad de anuncios para un [anuncio de banner](../monetize/banner
 3.  En el campo **Nombre de la unidad de anuncios**, escribe un nombre para esta. Esto puede ser cualquier cadena descriptiva que quieras usar para identificar la unidad de anuncios para fines informativos.
 4.  En la lista desplegable **Tipo de unidad de anuncio**, selecciona el tipo de anuncio.
 
-    * Si se muestran un anuncio de banner en tu aplicación, selecciona **Banner**.
-    * Si se muestran un anuncio de vídeo intersticial o anuncio de banner intersticial en la aplicación, selecciona **vídeo intersticial** o **Banner intersticial** (Asegúrate de seleccionar la opción adecuada para el tipo de anuncio intersticial que quieras mostrar).
-    * Si un anuncio nativo que muestra en la aplicación, selecciona **nativo**.
+    * Si se muestran un anuncio de banner en la aplicación, selecciona **Banner**.
+    * Si se muestran un anuncio de vídeo intersticial o anuncio de banner intersticial en la aplicación, seleccione **vídeo intersticial** o **Banner intersticial** (Asegúrate de seleccionar la opción adecuada para el tipo de anuncio intersticial que quieras mostrar).
+    * Si un anuncio nativo que muestra en la aplicación, seleccione **nativo**.
 
 5. En la lista desplegable **Familia de dispositivos**, selecciona la familia de dispositivos a la que está dirigida la aplicación en la que se usará la unidad de anuncios. Las opciones disponibles son: **UWP (Windows10)**, **PC o tableta (Windows8.1)** o **Móvil (Windows Phone8.x)**.
 
@@ -71,13 +71,13 @@ Después de crear unidades de anuncios para una o más aplicaciones en tu cuenta
 Para editar la [configuración de mediación](#mediation) para una unidad de anuncios para UWP o el [Cumplimiento de COPPA](#coppa) para la aplicación en la que se usa la unidad de anuncio, haz clic en el nombre de la unidad de anuncios.
 
 > [!NOTE]
-> Si una unidad de anuncios no tiene ninguna actividad durante los últimos seis meses, te se etiqueta como **inactiva**y finalmente la quitaremos de tu panel. Puedes usar filtros para mostrar solo unidades de anuncios que sean de tipo **Activo** o **Inactivo**. Si ves unidades de anuncios que crees que se han marcado erróneamente como **Inactivo**, [ponte en contacto con soporte técnico](http://aka.ms/storesupport).
+> Si una unidad de anuncios no tiene ninguna actividad durante los últimos seis meses, se etiqueta como **inactivo**y finalmente la quitaremos del panel de información. Puedes usar filtros para mostrar solo unidades de anuncios que sean de tipo **Activo** o **Inactivo**. Si ves unidades de anuncios que crees que se han marcado erróneamente como **Inactivo**, [ponte en contacto con soporte técnico](http://aka.ms/storesupport).
 
 <span id="mediation" />
 
 ## <a name="mediation-settings"></a>Configuración de la mediación
 
-Cuando se [crea una nueva unidad de anuncios para UWP](#create-ad-unit) o [Editar una unidad de anuncios para UWP existente](#available-ad-units), usa las opciones de esta sección para configurar [la mediación de anuncios](../monetize/ad-mediation-service.md) de la unidad de anuncio. La mediación de anuncios te permite maximizar las capacidades de ingresos por anuncios y de promoción de la aplicación al mostrar anuncios de varias redes de anuncios, incluidos los anuncios de otras redes de anuncios de pago y anuncios que no generan ingresos para las campañas de promoción de las aplicaciones de Microsoft. Nosotros nos encargamos de arbitrar solicitudes de anuncios de banner desde las redes de anuncios que elijas. Si ya tienes una unidad de anuncios para UWP asociada a un anuncio de banner, intersticial o nativo en tu aplicación, al habilitar la mediación de anuncios no se necesitan cambios de código alguno en tu aplicación.
+Cuando se [crea una nueva unidad de anuncios para UWP](#create-ad-unit) o [Editar una unidad de anuncios para UWP existente](#available-ad-units), usa las opciones de esta sección para configurar [la mediación de anuncios](../monetize/ad-mediation-service.md) de la unidad de anuncios. La mediación de anuncios te permite maximizar las capacidades de ingresos por anuncios y de promoción de la aplicación al mostrar anuncios de varias redes de anuncios, incluidos los anuncios de otras redes de anuncios de pago y anuncios que no generan ingresos para las campañas de promoción de las aplicaciones de Microsoft. Nosotros nos encargamos de arbitrar solicitudes de anuncios de banner desde las redes de anuncios que elijas. Si ya tienes una unidad de anuncios para UWP asociada a un anuncio de banner, intersticial o nativo en tu aplicación, al habilitar la mediación de anuncios no se necesitan cambios de código alguno en tu aplicación.
 
 > [!NOTE]
 > Al habilitar la mediación de anuncios para una unidad de anuncios para UWP, no es necesario obtener una unidad de anuncios de redes de anuncios de terceros. Nuestro servicio de mediación de anuncios creará automáticamente las unidades de anuncios de terceros que sean necesarias.
@@ -85,10 +85,10 @@ Cuando se [crea una nueva unidad de anuncios para UWP](#create-ad-unit) o [Edita
 Configurar la configuración de mediación de anuncios para UWP en tu aplicación:
 
 1. [Crear una unidad de anuncio](#create-ad-unit) o [seleccionar una unidad de anuncio existente](#available-ad-units).
-2. En la página de **anuncios en la aplicación** , ve a la sección de **configuración de mediación** y la configuración la configuración.
+2. En la página de **anuncios en la aplicación** , ve a la sección de **configuración de mediación** y configuración de la configuración.
 
-    * De manera predeterminada, activa la casilla **Permitir a Microsoft que elija la mejor configuración de mediación para tu aplicación** casilla está activada. Te recomendamos que uses esta opción. Esta opción usa algoritmos de aprendizaje automático para elegir automáticamente la configuración de mediación de anuncios para tu aplicación que te ayudará a maximizar los ingresos por anuncios en todos los mercados admitidos por la aplicación. Al usar esta opción, también puedes elegir las redes de anuncios que quieras usar en la configuración. Desactiva las redes de anuncios que no quieres que forman parte de la configuración y nuestro algoritmo garantizará que tu aplicación recibe solamente anuncios desde las redes de anuncios seleccionado.
-    * Si quieres elegir tu propia ad configuración de mediación, elegir **modificar la configuración de forma predeterminada**.
+    * De manera predeterminada, activa la casilla **Permitir a Microsoft que elija la mejor configuración de mediación para tu aplicación** casilla está activada. Te recomendamos que uses esta opción. Esta opción usa algoritmos de aprendizaje automático para elegir automáticamente la configuración de mediación de anuncios para tu aplicación que te ayudará a maximizar los ingresos por anuncios en todos los mercados admitidos por la aplicación. Al usar esta opción, también puedes elegir las redes de anuncios que quieras usar en la configuración. Desactiva las redes de anuncios que no quieres que forman parte de la configuración y nuestro algoritmo garantizará que la aplicación recibe solo anuncios de las redes de anuncios seleccionado.
+    * Si quieres elegir tu propia ad configuración de mediación, elige **modificar la configuración de forma predeterminada**.
 
     > [!NOTE]
     > Los pasos restantes de esta sección solo son aplicables si eliges **modificar la configuración de forma predeterminada**.
@@ -111,10 +111,10 @@ En la tabla siguiente se muestran las redes de pago que admitimos actualmente pa
 
 |  Red de anuncios  |  Descripción  |  Tipos de anuncios admitidos  |
 |--------------|---------------|---------------------|
-| Juramento y AppNexus |  Se trata de una red de anuncios de administrados por Microsoft que proporciona anuncios a través de nuestro socio de redes, jurada y AppNexus.<p/>**Nota**: jurada y AppNexus siempre están clasificadas en primer lugar en la lista de **redes de anuncios de pago** para unidades de anuncios de banner y no se puede cambiar a una clasificación menor para estos tipos de anuncios. | Banner, Vídeo intersticial |
+| Juramento y AppNexus |  Se trata de una red de anuncios de administrados por Microsoft que proporciona anuncios a través de nuestro socio de redes, juramento y AppNexus.<p/>**Nota**: juramento y AppNexus siempre están clasificadas en primer lugar en la lista de **redes de anuncios de pago** para unidades de anuncios de banner y no se puede cambiar a una clasificación menor para estos tipos de anuncios. | Banner, Vídeo intersticial |
 | AppNexus (directo) | Selecciona esta opción para proporcionar anuncios desde [AppNexus](https://www.appnexus.com). | Vídeo intersticial, Nativo  |
 | Anuncios para instalación de aplicaciones de Microsoft | Selecciona esta opción para proporcionar anuncios para instalación de aplicaciones o anuncios para volver a interactuar con la aplicación que han sido creados por otros desarrolladores del ecosistema de Windows que [crean campañas de anuncios promocionales para sus aplicaciones](create-an-ad-campaign-for-your-app.md).  |  Banner, Banner intersticial, Nativo  |
-| Recomendaciones de contenido de MSN |  Selecciona esta opción para proporcionar anuncios desde las recomendaciones de contenido de MSN. |  Banner, Banner intersticial  |
+| Recomendaciones de contenido de MSN |  Selecciona esta opción para proporcionar anuncios desde MSN contenido recomendaciones. |  Banner, Banner intersticial  |
 | Outbrain |  Selecciona esta opción para proporcionar anuncios desde [Outbrain](https://www.outbrain.com/). |  Banner, Banner intersticial  |
 | Revcontent |  Selecciona esta opción para proporcionar anuncios desde [Revcontent](http://www.revcontent.com/). |  Banner, nativo  |
 | Smaato |  Selecciona esta opción para proporcionar anuncios desde [Smaato](https://www.smaato.com/). |  Pancarta  |

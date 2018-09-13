@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, primera aplicación, hola mundo
 ms.localizationpriority: medium
 ms.openlocfilehash: 950b2f3fac44c8350a51fd5c1b7071f05c92d746
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3930649"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957517"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Crear una aplicación "Hello, world" (XAML)
 
@@ -50,7 +50,7 @@ Aquí aprenderás a:
 
 2.  En el menú **archivo** , selecciona **Nuevo > proyecto** para abrir el cuadro de diálogo *Nuevo proyecto* .
 
-3.  En la lista de plantillas del lado izquierdo, elige **Installed > Visual C# > Windows Universal** para ver la lista de plantillas de proyecto UWP.
+3.  En la lista de plantillas de la izquierda, elige **instalado > Visual C# > Windows Universal** para ver la lista de plantillas de proyecto UWP.
 
     (Si no ves ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP. Puedes repetir el proceso de instalación y agregar compatibilidad con UWP haciendo clic en **Abrir el instalador de Visual Studio** en el diálogo *Nuevo proyecto*. Consulta [Prepárate](get-set-up.md)).
 

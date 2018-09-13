@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, control, enlace, colección
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ba935b1a5316c2d7af9c7681705595efea7ca08
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3932950"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3962687"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>Controles de elementos XAML; enlazar a una colección [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -37,7 +37,7 @@ Si una clase en tiempo de ejecución que representa una colección elige generar
 Es aconsejable tener una plantilla de vector observable para que actúe como una implementación útil de uso general de [**IObservableVector&lt;T &gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_). A continuación se incluye una lista de una clase denominada **single_threaded_observable_vector\<T\>**.
 
 > [!NOTE]
-> Si has instalado el [Windows SDK versión preliminar 10 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)o una versión posterior, a continuación, puedes directamente usar la función de fábrica **single_threaded_observable_vector\ < T\ >** en lugar de la siguiente lista de códigos (te mostraremos el código exacto más adelante en este tema). Si aún no eres en esa versión del SDK, será más fácil cambiar de usar la versión del listado de código a la función de **winrt** cuando estés.
+> Si has instalado el [Windows SDK versión preliminar 10 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)o una versión posterior, a continuación, puedes directamente usar la función de fábrica **single_threaded_observable_vector\ < T\ >** en lugar de la siguiente lista de códigos (te mostraremos el código exacto más adelante en este tema). Si aún no eres en esa versión del SDK, será fácil cambiar de usar la versión del listado de código a la función **winrt** cuando estás.
 
 ```cppwinrt
 // single_threaded_observable_vector.h
@@ -305,7 +305,7 @@ runtimeclass BookstoreViewModel
 ```
 
 > [!IMPORTANT]
-> En la descripción de MIDL 3.0 anterior, ten en cuenta que el tipo de la propiedad **BookSkus** es [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) de [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821). En la sección siguiente de este tema, tendrás que enlaza el origen de los elementos de un [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox) a **BookSkus**. Un cuadro de lista es un control de elementos y para configurar correctamente la propiedad [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) , debes establecer en un valor de tipo **IVector** de **IInspectable**, o de un tipo de interoperabilidad como [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector).
+> En la descripción de MIDL 3.0 anterior, ten en cuenta que el tipo de la propiedad **BookSkus** es [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) de [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821). En la siguiente sección de este tema, tendrás que enlaza el origen de los elementos de un [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox) a **BookSkus**. Un cuadro de lista es un control de elementos, y para configurar correctamente la propiedad [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) , debes establecer en un valor de tipo **IVector** de **IInspectable**, o de un tipo de interoperabilidad como [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector).
 
 Guarda y compila. Copia los códigos auxiliares de descriptor desde `BookstoreViewModel.h` y `BookstoreViewModel.cpp` en la carpeta `Generated Files` e impleméntalos.
 
@@ -358,13 +358,13 @@ Si has instalado el [Windows SDK versión preliminar 10 17661](https://www.micro
 m_bookSkus = winrt::make<single_threaded_observable_vector<Windows::Foundation::IInspectable>>();
 ```
 
-Teniendo esto.
+con este.
 
 ```cppwinrt
 m_bookSkus = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>();
 ```
 
-En lugar de llamar a [**MAKE**](https://docs.microsoft.com/en-us/uwp/cpp-ref-for-winrt/make), crear el objeto de colección adecuada mediante una llamada a la función de fábrica **single_threaded_observable_vector\ < T\ >** .
+En lugar de llamar a [**winrt:: Make**](https://docs.microsoft.com/en-us/uwp/cpp-ref-for-winrt/make), crear el objeto de colección adecuada mediante una llamada a la función de fábrica **single_threaded_observable_vector\ < T\ >** .
 
 ## <a name="bind-a-listbox-to-the-bookskus-property"></a>Enlaza un ListBox a la propiedad **BookSkus**.
 Abre `MainPage.xaml`, que contiene la marcación XAML de nuestra página principal de la interfaz de usuario. Agrega la siguiente marcación dentro del mismo **StackPanel** como el **Button**.

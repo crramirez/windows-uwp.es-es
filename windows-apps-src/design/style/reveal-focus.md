@@ -14,11 +14,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5fa84efbe20368be55a50ce20c8e6e5d1fe439
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928251"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3961741"
 ---
 # <a name="reveal-focus"></a>Reveal Focus
 
@@ -69,16 +69,16 @@ Reveal que Focus está desactivada de manera predeterminada. Para habilitarla:
 
 Después de establecer la propiedad **FocusVisualKind** , el sistema aplica automáticamente el efecto Reveal Focus a todos los controles cuya propiedad [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) se establece en **True** (el valor predeterminado para la mayoría de los controles). 
 
-## <a name="why-isnt-reveal-focus-on-by-default"></a>¿Por qué no se encuentra Reveal Focus en predeterminada? 
+## <a name="why-isnt-reveal-focus-on-by-default"></a>¿Por qué no se encuentra Reveal Focus en de manera predeterminada? 
 Como puedes ver, es bastante sencillo activar Reveal Focus cuando la aplicación detecte que se está ejecutando en una consola Xbox. Por lo tanto, ¿por qué no el sistema no lo activa por ti? Porque Reveal Focus aumenta el tamaño del foco visual, que podría causar problemas con el diseño de la interfaz de usuario. En algunos casos, querrás personalizar el efecto de Reveal Focus para optimizarlo para tu aplicación.
 
 ## <a name="customizing-reveal-focus"></a>Personalización de Reveal Focus
 
 Puedes personalizar el efecto Reveal Focus modificando las propiedades visuales de foco para cada control: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)y [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush). Estas propiedades te permiten personalizar el color y el grosor del rectángulo del foco. (Son las mismas propiedades que usas para crear [Elementos visuales de foco de alta visibilidad](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals).) 
 
-Pero antes de empezar la personalización, es útil saber un poco más acerca de los componentes que conforman el foco Reveal.
+Pero antes de empezar la personalización, es útil saber un poco más acerca de los componentes que componen Reveal Focus.
 
-Hay tres partes en los elementos visuales de foco Reveal de predeterminados: el borde principal, el borde secundario y el resplandor de Reveal. El borde principal es de **2px** de espesor y se ejecuta alrededor de la parte de *fuera* del borde secundario. El borde secundario es de **1px** de espesor y se ejecuta alrededor de la parte de *dentro* del borde primario. El resplandor de Reveal Focus tiene un grosor proporcional al grosor del borde principal y se ejecuta alrededor del *fuera* del borde principal.
+Hay tres partes en los elementos visuales de foco Reveal de predeterminados: el borde principal, el borde secundario y el resplandor de Reveal. El borde principal es de **2px** de espesor y se ejecuta alrededor de la parte de *fuera* del borde secundario. El borde secundario es de **1px** de espesor y se ejecuta alrededor de la parte de *dentro* del borde primario. El resplandor de Reveal Focus tiene un grosor proporcional al grosor del borde principal y se ejecuta alrededor de la *fuera* del borde principal.
 
 Además de los elementos estáticos, elementos visuales de foco Reveal presentan una luz animada que late cuando está en y se mueve en la dirección del foco al moverlo.
 
@@ -167,7 +167,7 @@ Si quieres usar solo el resplandor sin el foco visual principal o secundario, so
 
 ## <a name="use-your-own-focus-visuals"></a>Usar tus propios elementos visuales de foco
 
-Otra manera de personalizar Reveal foco es rechazar los elementos visuales de foco proporcionado por el sistema, dibuja los tuyos propios mediante los estados visuales. Para obtener más información, consulta la [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895).
+Otra manera de personalizar Reveal Focus es optar por no los elementos visuales de foco proporcionado por el sistema, dibuja los tuyos propios mediante los estados visuales. Para obtener más información, consulta la [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895).
 
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>Reveal Focus y Fluent Design System

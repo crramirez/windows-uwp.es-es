@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 45f6e10bc355e3a2dc054d54fef35fbeb1095dc7
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928115"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3960273"
 ---
 # <a name="respond-to-system-events-with-background-tasks"></a>Responder a eventos del sistema con tareas en segundo plano
 
@@ -83,7 +83,7 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 ```
 
 > [!NOTE]
-> Aplicaciones universales de la plataforma de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquiera de los tipos de desencadenadores en segundo plano.
+> Aplicaciones de la plataforma de Windows universales deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquiera de los tipos de desencadenadores en segundo plano.
 
 Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
