@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5db1e03ac86768e2b1b1181cd2cc416a151a80
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929399"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3963407"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Hacer que tu aplicación sea compatible con las tareas en segundo plano
 
@@ -30,14 +30,14 @@ A partir de la versión 1607 de Windows 10, la reproducción de audio en segundo
 
 Hay dos enfoques para implementar tareas en segundo plano:
 
-* Dentro del proceso: la aplicación y su proceso en segundo plano se ejecutan en el mismo proceso
+* Dentro de proceso: la aplicación y su proceso en segundo plano se ejecutan en el mismo proceso
 * Fuera de proceso: la aplicación y el proceso en segundo plano se ejecutan en procesos aparte.
 
 Con la versión 1607 de Windows 10, se introdujo la admisión del segundo plano en proceso para simplificar la escritura de las tareas en segundo plano. Pero todavía se pueden escribir tareas fuera del proceso en segundo plano. Consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md) para ver recomendaciones sobre cuándo escribir una tarea en segundo plano en proceso o fuera de proceso.
 
-Tareas en segundo plano fuera de proceso son más resistentes porque el proceso en segundo plano no se puede reducir el proceso de la aplicación si algo va mal. Pero la resistencia a costa de una complejidad mayor para administrar la comunicación entre procesos entre la aplicación y la tarea en segundo plano.
+Tareas en segundo plano fuera de proceso son más resistentes porque el proceso en segundo plano no se puede reducir el proceso de la aplicación si algo va mal. Pero la resistencia se consigue a costa de una complejidad mayor para administrar la comunicación entre procesos entre la aplicación y la tarea en segundo plano.
 
-Tareas fuera de proceso en segundo plano se implementan como clases ligeras que implementan la interfaz de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) que el sistema operativo se ejecuta en un proceso independiente (backgroundtaskhost.exe). Registrar una tarea en segundo plano mediante la clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) . El nombre de la clase se especifica como punto de entrada al registrar la tarea en segundo plano.
+Tareas fuera de proceso en segundo plano se implementan como clases ligeras que implementan la interfaz [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) que el sistema operativo se ejecuta en un proceso independiente (backgroundtaskhost.exe). Registrar una tarea en segundo plano mediante la clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) . El nombre de la clase se especifica como punto de entrada al registrar la tarea en segundo plano.
 
 Con la versión 1607 de Windows 10, puedes habilitar la actividad en segundo plano sin tener que crear una tarea en segundo plano. En su lugar, puede ejecutar el código en segundo plano directamente dentro de proceso de la aplicación en primer plano.
 
@@ -162,7 +162,7 @@ La aplicación puede acceder a sensores y dispositivos periféricos desde una ta
 > [!IMPORTANT]
 > Las clases **DeviceUseTrigger** y **DeviceServicingTrigger** no pueden usarse con tareas en segundo plano dentro de proceso.
 
-Algunas operaciones críticas del dispositivo, como las actualizaciones del firmware que se ejecutan durante mucho tiempo, no se pueden realizar con [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Esas operaciones solo se pueden realizar en el equipo y solo las puede realizar una aplicación privilegiada que use [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Una *aplicación privilegiada* es una aplicación que ha recibido la autorización del fabricante del dispositivo para realizar esas operaciones. Los metadatos del dispositivo se usan para especificar qué aplicación, si es el caso, se ha designado como aplicación privilegiada para un dispositivo. Para obtener más información, consulta [sincronización y actualización de Microsoft Store para aplicaciones para dispositivos](http://go.microsoft.com/fwlink/p/?LinkId=306619)
+Algunas operaciones críticas del dispositivo, como las actualizaciones del firmware que se ejecutan durante mucho tiempo, no se pueden realizar con [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Esas operaciones solo se pueden realizar en el equipo y solo las puede realizar una aplicación privilegiada que use [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Una *aplicación privilegiada* es una aplicación que ha recibido la autorización del fabricante del dispositivo para realizar esas operaciones. Los metadatos del dispositivo se usan para especificar qué aplicación, si es el caso, se ha designado como aplicación privilegiada para un dispositivo. Para obtener más información, consulta la [sincronización y actualización de Microsoft Store para aplicaciones para dispositivos](http://go.microsoft.com/fwlink/p/?LinkId=306619)
 
 ## <a name="managing-background-tasks"></a>Administrar tareas en segundo plano
 
@@ -171,7 +171,7 @@ Las tareas en segundo plano pueden notificar progreso, finalización o cancelaci
 [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)  
 [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 
-Comprueba el registro de tareas en segundo plano durante el inicio de la aplicación. Asegúrate de que las tareas de segundo plano no agrupada de la aplicación estén presentes en BackgroundTaskBuilder.AllTasks. Vuelve a registrar de propiedades que no están presentes. Anular el registro de las tareas que ya no son necesarios. Esto garantiza que todos los registros de tareas en segundo plano están actualizados cada vez que se inicie la aplicación.
+Comprueba el registro de tareas en segundo plano durante el inicio de la aplicación. Asegúrate de que las tareas de segundo plano no agrupada de la aplicación estén presentes en BackgroundTaskBuilder.AllTasks. Vuelve a registrar los que no están presentes. Anular el registro de las tareas que ya no son necesarios. Esto garantiza que todos los registros de tareas en segundo plano están actualizados cada vez que se inicia la aplicación.
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, uwp, paquetes, carga, carga de paquete
 ms.localizationpriority: medium
 ms.openlocfilehash: 6013a238cff8db3b85dd98af58cccaf344a72f51
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3936392"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3963281"
 ---
 # <a name="upload-app-packages"></a>Cargar paquetes de aplicación
 
 La página **Paquetes** es donde se cargan todos los archivos del paquete (.appx, .appxupload, .appxbundle o .xap) de la aplicación que vas a enviar. En este paso puedes cargar paquetes para cualquier sistema operativo de destino de la aplicación. Cada vez que un cliente descarga la aplicación, la Tienda le proporciona automáticamente el paquete que mejor se adapta a su dispositivo. Después de cargar los paquetes, verás una tabla que indica [qué paquetes que se ofrecerán a familias específicas de dispositivos Windows 10](#device-family-availability) (y a versiones anteriores del sistema operativo, si procede) ordenados según su clasificación.
 
-Consulta [Requisitos del paquete de la aplicación](app-package-requirements.md) para obtener más información sobre lo que incluye un paquete y cómo debe estructurarse. También querrás obtener información sobre [cómo los números de versión pueden afectar a los paquetes que se entregan a clientes específicos](package-version-numbering.md) y [cómo se distribuyen los paquetes a diferentes sistemas operativos](guidance-for-app-package-management.md).
+Consulta [Requisitos del paquete de la aplicación](app-package-requirements.md) para obtener más información sobre lo que incluye un paquete y cómo debe estructurarse. También querrás obtener información sobre [cómo los números de versión pueden afectar qué paquetes se entregan a clientes específicos](package-version-numbering.md) y [cómo se distribuyen los paquetes a diferentes sistemas operativos](guidance-for-app-package-management.md).
 
 ## <a name="uploading-packages-to-your-submission"></a>Cargar paquetes en el envío
 
@@ -32,7 +32,7 @@ Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar
 
 Si has creado algún [paquete piloto](package-flights.md) para tu aplicación, verás una lista desplegable con la opción para copiar los paquetes de uno de los paquetes piloto. Selecciona el paquete piloto que tiene los paquetes que quieres extraer. A continuación, podrás seleccionar varios o todos los paquetes, para incluirlos en este envío.
 
-Si se detectan los errores con un paquete durante la validación, se mostrará un mensaje que te permiten saber cuál es el problema. Deberás quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. En otros casos se mostrarán advertencias para informarte de posibles problemas, aunque no se te impedirá que continúes con el envío.
+Si se detectan errores con un paquete durante la validación, se mostrará un mensaje que te permiten saber qué es incorrecto. Debes quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. En otros casos se mostrarán advertencias para informarte de posibles problemas, aunque no se te impedirá que continúes con el envío.
 
 
 ## <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos

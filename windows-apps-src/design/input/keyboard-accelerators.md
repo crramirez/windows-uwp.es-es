@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3932870"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3962945"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -366,7 +366,7 @@ De manera predeterminada, cuando se declaran los aceleradores de teclado, todos 
 
 *Combinación de teclas aceleradoras en la información sobre herramientas*
 
-Para objetos [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)y [botón](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), el Acelerador de teclado se anexa a información sobre herramientas del control de forma predeterminada. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) y [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, el Acelerador de teclado se muestra con el texto de control flotante.
+Para objetos [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)y [botón](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), el Acelerador de teclado se anexa a la información sobre herramientas del control de forma predeterminada. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) y [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, el Acelerador de teclado se muestra con el texto de control flotante.
 
 > [!NOTE]
 > Especificar información sobre herramientas (consulta Button1 en el siguiente ejemplo) reemplaza este comportamiento.

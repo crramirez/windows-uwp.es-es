@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ubicación, location, mapa, map, ubicación geográfica, geolocation
 ms.localizationpriority: medium
 ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928441"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3963069"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Directrices para las aplicaciones con reconocimiento de ubicación
 
@@ -51,7 +51,7 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
 
     Libera el objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) si el usuario desactiva el acceso a la información de ubicación a través de Configuración. La aplicación recibirá entonces resultados **ACCESS\_DENIED** para las llamadas a la API de ubicación. Si la aplicación guarda datos de ubicación o los almacena en caché, borra todos los datos de la memoria caché cuando el usuario revoque el acceso a la información de ubicación. Proporciona un modo alternativo para introducir manualmente información de ubicación cuando los datos de ubicación no estén disponibles a través de servicios de localización.
 
--   Proporciona una interfaz de usuario para volver a habilitar los servicios de localización. Por ejemplo, proporcionar un botón de actualización que vuelva al objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) e intenta obtener información de ubicación de nuevo.
+-   Proporciona una interfaz de usuario para volver a habilitar los servicios de localización. Por ejemplo, proporcionar un botón de actualización que vuelva el objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) e intenta obtener información de ubicación de nuevo.
 
     La aplicación debe proporcionar una interfaz de usuario que permita volver a habilitar los servicios de ubicación:
 

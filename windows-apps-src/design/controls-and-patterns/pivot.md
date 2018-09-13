@@ -15,15 +15,15 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3930389"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3962597"
 ---
 # <a name="pivot"></a>Pivot
 
-El control [dinámico](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite táctil de deslizar rápidamente entre un conjunto reducido de las secciones de contenido.
+El control [dinámico](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite la entrada táctil de deslizar rápidamente entre un conjunto reducido de las secciones de contenido.
 
 > **API importantes**: [clase Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [clase NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
@@ -43,7 +43,7 @@ El control [dinámico](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Contro
 </tr>
 </table>
 
-El control dinámico, igual que [NavigationView](navigationview.md), subraya el elemento seleccionado.
+El control dinámico, al igual que [NavigationView](navigationview.md), subraya el elemento seleccionado.
 
 ![El foco predeterminado subraya el encabezado seleccionado](images/pivot_focus_selectedHeader.png)
 
@@ -51,11 +51,11 @@ El control dinámico, igual que [NavigationView](navigationview.md), subraya el 
 
 Para lograr la navegación superior comunes y patrones de pestañas, te recomendamos que uses [NavigationView](navigationview.md), que se adapta a diferentes tamaños de pantalla y permite la personalización mayor automáticamente.
 
-Sin embargo, si la navegación requiere Deslizar rápidamente la función táctil, recomendamos usar el control dinámico.
+Sin embargo, si la navegación requiere Deslizar rápidamente la entrada táctil, se recomienda usar el control dinámico.
 
 Las otras diferencias clave entre los controles de NavigationView y controles dinámicos son el comportamiento de desbordamiento predeterminada y la API de navegación:
 
-- Desbordamiento carruseles elementos, mientras que NavigationView usa un menú desplegable de desbordamiento para que los usuarios pueden ver todos los elementos de control dinámico.
+- Desbordamiento carruseles elementos, mientras NavigationView usa un menú desplegable de desbordamiento para que los usuarios pueden ver todos los elementos de control dinámico.
 - Control dinámico controla la navegación entre las secciones de contenido, mientras que NavigationView permite tener más control sobre el comportamiento de navegación.
 
 ## <a name="use-navigationview-instead-of-pivot"></a>Usar NavigationView en lugar de control dinámico
@@ -87,7 +87,7 @@ Este código XAML crea un NavigationView con 3 secciones de contenido, como en e
 </Page>
 ```
 
-NavigationView ofrece más control sobre la personalización de navegación y requiere correspondiente de código subyacente. Para anexarlos el código XAML anterior, usa el siguiente código subyacente:
+NavigationView ofrece más control sobre la personalización de navegación y requiere correspondiente de código subyacente. Para anexarlos el XAML anterior, utilice el siguiente código subyacente:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -116,7 +116,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Este código imita la experiencia de exploración integrada del control dinámico, menos la experiencia de deslizar rápidamente táctiles entre las secciones de contenido. Sin embargo, como puedes ver, también se pueden personalizar varios puntos, incluida la transición animada, los parámetros de navegación y las funcionalidades de la pila.
+Este código imita la experiencia de exploración integrada del control dinámico, menos la experiencia de deslizar rápidamente táctil entre las secciones de contenido. Sin embargo, como puedes ver, también se pueden personalizar varios puntos, incluida la transición animada, los parámetros de navegación y las funcionalidades de la pila.
 
 ## <a name="create-a-pivot-control"></a>Crear un control dinámico
 

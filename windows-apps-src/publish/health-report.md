@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, mantenimiento, bloqueos, eventos que no responden, estado de la aplicación, datos de estado, seguimiento de la pila, archivo cab, error, errores, pdb, símbolos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f5bf63eae4b1504642e764265a7936bcd67c645
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3932694"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3962243"
 ---
 # <a name="health-report"></a>Informe Mantenimiento
 
@@ -26,7 +26,7 @@ Como alternativa, puedes recuperar mediante programación los datos de este info
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **72H** (72 horas), pero puedes elegir **30D** en su lugar para mostrar los datos de los últimos 30 días. Ten en cuenta que los datos se muestran en la zona horaria local para la vista de **72 H** y en hora UTC para la vista de **30D** .
+Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **72H** (72 horas), pero puedes elegir **30D** en su lugar para mostrar los datos de los últimos 30 días. Ten en cuenta que los datos se muestran en la zona horaria local para la vista de **72 H** y en hora UTC para la vista **30D** .
 
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por versión de paquete, mercado o tipo de dispositivo.
 
@@ -46,7 +46,7 @@ La información de todos los gráficos que aparecen a continuación reflejará e
 
 El gráfico **Número de errores** muestra el número de bloqueos y eventos diarios que los clientes experimentaron al usar la aplicación durante el período de tiempo seleccionado. De cada tipo de evento que la aplicación experimentó se realiza un seguimiento por separado: bloqueos, cuelgues, excepciones de JavaScript y errores de memoria.
 
-Cuando la **30D** se selecciona el período de tiempo, puedes ver los marcadores de círculo. Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa al final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior a que. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
+Cuando la **30D** se selecciona el período de tiempo, es posible que veas marcadores de círculo. Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa al final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
 
 > [!TIP]
 > Puedes ver más detalles relacionados con los cambios importantes a través de los últimos 30 días en el [informe de información](insights-report.md).
@@ -76,16 +76,16 @@ Para mostrar el informe **Detalles del error** de un error en concreto, seleccio
 > [!TIP]
 > Los archivos CAB solo estarán disponibles cuando se ha producido un error en un equipo con una compilación de WindowsInsider, por lo tanto, no todos los errores incluirán la opción de descarga de CAB. Para mostrar solo los errores que tienen archivos CAB, seleccione **errores con las descargas** en el filtro de sección. También puedes hacer clic en el encabezado de **vínculos** en el **registro de errores** para ordenar los resultados para que aparezcan los errores que incluyan archivos CAB en la parte superior de la lista.
 
-En la página de **Detalles del error** , también verás el gráfico de **prevalencia de la pila** , que muestra la parte superior de pilas que contribuyeron a error, ordenados por el porcentaje y el gráfico de **configuración de dispositivos (30D)** , que proporciona información detallada sobre la configuración de dispositivos que se produjo el error. 
+En la página de **Detalles del error** , también verás el gráfico de **prevalencia de la pila** , que muestra la parte superior de pilas que contribuyeron a error, ordenados por el porcentaje y el gráfico de **Configuración del dispositivo (30D)** , que proporciona información detallada sobre el configuración de dispositivos que funcionan con el error. 
 
 
-## <a name="crash-free-sessions-and-devices-30d"></a>Sesiones libres de bloqueo y dispositivos (30D)
+## <a name="crash-free-sessions-and-devices-30d"></a>Sesiones libre de bloqueo y dispositivos (30D)
 
-El gráfico de **dispositivos y sesiones libres de bloqueo** muestra el porcentaje de dispositivos o sesiones de usuario que no se produjo un error en los últimos 30 días. Esta información ayuda a comprender cómo ampliamente los bloqueos afectan a los usuarios. Por ejemplo, una aplicación podría tener 10.000 bloqueos en un día. Si se ven afectado de un 90% de los dispositivos, probablemente haría clasificar como críticas y actuar para corregirlo al instante. Sin embargo, si solo que represente el 5% de dispositivos mediante la aplicación, la prioridad podría ser inferior.
+El gráfico de **dispositivos y sesiones libre de bloqueo** , muestra el porcentaje de dispositivos o sesiones de usuario que no se produjo un bloqueo en los últimos 30 días. Esta información ayuda a comprender cómo ampliamente los bloqueos afectan a los usuarios. Por ejemplo, una aplicación podría tener 10.000 bloqueos en un día. Si se ven afectado de un 90% de los dispositivos, probablemente haría clasificar como crítica y actuar para corregir de inmediato. Sin embargo, si solo que representa un 5% de los dispositivos que usan la aplicación, la prioridad podría ser inferior.
 
 Este gráfico tiene dos pestañas:
-- **Dispositivos libres de bloqueo**: muestra el porcentaje de dispositivos únicos que no se produjo un error en cada día (durante los últimos 30 días).
-- **Sesiones libres de bloqueo**: muestra el porcentaje de sesiones de usuario único que no se produjo un error en cada día (durante los últimos 30 días).
+- **Libre de bloqueo de dispositivos**: muestra el porcentaje de dispositivos únicos que no se produjo un error en cada día (durante los últimos 30 días).
+- **Sesiones libre de bloqueo**: muestra el porcentaje de sesiones de usuario único que no se produjo un error en cada día (durante los últimos 30 días).
 
 
  

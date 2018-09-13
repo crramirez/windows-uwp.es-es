@@ -11,11 +11,11 @@ keywords: windows 10, uwp, notificaciones dirigidas, push dirigidas, notificacio
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3930405"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3964031"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificaciones a los clientes de la aplicación
 
@@ -53,7 +53,7 @@ Sigue estos pasos para crear una notificación push en el panel de información 
 
 1. En el [panel de información del Centro de desarrollo de Windows](https://partner.microsoft.com/dashboard/), expande la sección **Interactuar** y luego selecciona **Notificaciones**.
 2. En la página **Notificaciones**, selecciona **Nueva notificación**.
-3. En la sección **Seleccionar una plantilla** , elige el [tipo de notificación](#notification-template-types) que quieras enviar y, a continuación, haz clic en **Aceptar**.
+3. En la sección **Seleccionar una plantilla** , elegir el [tipo de notificación](#notification-template-types) que quieras enviar y, a continuación, haz clic en **Aceptar**.
 4. En la siguiente página, usa el menú desplegable para elegir una **Aplicación única** o **Varias aplicaciones** para las que se va a generar una notificación. Solo puede seleccionar las aplicaciones que se han [configurado para recibir las notificaciones mediante el Microsoft Store Services SDK](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 5. En la sección **Configuración de notificaciones**, elige un **Nombre** para la notificación y, si es aplicable, elige el **grupo de clientes** al que quieres enviar la notificación. (Las notificaciones enviadas a varias aplicaciones solo se pueden enviar a todos los clientes de dichas aplicaciones.) Si deseas usar un segmento que aún no hayas creado, selecciona **Crear nuevo grupo de clientes**. Ten en cuenta que deben transcurrir 24 horas para poder usar un nuevo segmento para notificaciones. Para obtener más información, consulta [Crear segmentos de clientes](create-customer-segments.md).
 6. Si quieres especificar cuándo enviar la notificación, desactiva la casilla **Send notification immediately** y elige una fecha y hora específicas (en UTC para todos los clientes, a menos que especifiques usar la zona horaria local de cada cliente).
@@ -123,7 +123,7 @@ Cuando hayas configurado la notificación y la aplicación para medir el rendimi
 Para revisar los datos detallados para cada notificación:
 
 1.  En el Panel del Centro de desarrollo de Windows, expande la sección **Interactuar** y selecciona **Notificaciones**.
-2.  En la tabla de las notificaciones existentes, seleccione **en curso** o **completado**y, a continuación, veremos las columnas de **velocidad de entrega** y la **velocidad de inicio de la aplicación** para ver el rendimiento de alto nivel de cada notificación.
+2.  En la tabla de las notificaciones existentes, seleccione **en curso** o **completado**y luego mira las columnas **tasa de entrega** y la **velocidad de inicio de la aplicación** para ver el rendimiento de alto nivel de cada notificación.
 3.  Para ver datos de rendimiento más detallados, selecciona el nombre de una notificación. En la sección **Delivery statistics**, puedes ver **recuento** y **porcentaje** de los siguientes tipos de **estados** de las notificaciones:
     * **Failed (Erróneo)**: la notificación no se ha entregado por algún motivo. Esto puede suceder, por ejemplo, si se produce algún problema en el servicio de notificaciones de Windows.
     * **Channel expiration failure (Error de expiración del canal)**: la notificación no se ha entregado porque ha expirado el canal entre la aplicación y el Centro de desarrollo. Por ejemplo, esto puede suceder si el cliente no abre la aplicación en mucho tiempo.
@@ -132,13 +132,13 @@ Para revisar los datos detallados para cada notificación:
     * **Launched (Iniciada)**: se ha enviado la notificación, el cliente ha hecho clic en ella y, como resultado, se ha abierto la aplicación. Ten en cuenta solo se realiza el seguimiento de los inicios de las aplicaciones. Las notificaciones que invitan al cliente a realizar otras acciones, como iniciar la Store para dejar una calificación, no se incluyen en este estado.
     * **Unknown (Unknown)**: no se ha podido determinar el estado de esta notificación.
 
-Para analizar los datos de la actividad de usuario para todas las notificaciones:
+Para analizar los datos de actividad de usuario para todas las notificaciones:
 
 1.  En el Panel del Centro de desarrollo de Windows, expande la sección **Interactuar** y selecciona **Notificaciones**.
-2.  En la página de **notificaciones** , haz clic en la pestaña **analizar** . Esta pestaña muestra los siguientes datos:
+2.  En la página de **notificaciones** , haz clic en la ficha **analizar** . Esta pestaña muestra los siguientes datos:
     * Vistas de gráfico de los distintos Estados de acción de usuario para tus notificaciones del sistema y las notificaciones del centro de actividades.
-    * Vistas de mapa de mundo de los clic a través de tipos para tus notificaciones del sistema y la acción el centro de notificaciones.
-3. Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es 30D (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puedes expandir la opción **filtros** para filtrar todos los datos por la aplicación y el mercado.
+    * Vistas de mapa del mundo el clic a través de tasas para tus notificaciones del sistema y la acción de centro de notificaciones.
+3. Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es 30D (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puedes expandir la opción **filtros** para filtrar todos los datos de la aplicación y el mercado.
 
 ## <a name="translate-your-notifications"></a>Traducir las notificaciones
 

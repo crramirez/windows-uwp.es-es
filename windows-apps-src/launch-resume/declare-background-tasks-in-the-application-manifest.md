@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 00e685085c004cced24b9a42ef2261a26eef10bb
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928155"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3960595"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tareas en segundo plano en el manifiesto de la aplicación
 
@@ -213,7 +213,7 @@ En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en u
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>Ejecutar en un nuevo proceso cada vez que un desencadenador se activa con el atributo SupportsMultipleInstances
 
-Este ejemplo declara una tarea en segundo plano que se ejecuta en un proceso nuevo que obtiene sus propios límites de recursos (memoria y CPU) cada vez que se activa un nuevo desencadenador. Ten en cuenta el uso de `SupportsMultipleInstances` que permite este comportamiento. Para poder usar este atributo debes elegir versión de SDK '10.0.15063' (Windows 10 Creators Update) o superior.
+Este ejemplo declara una tarea en segundo plano que se ejecuta en un proceso nuevo que obtiene sus propios límites de recursos (memoria y CPU) cada vez que se activa un nuevo desencadenador. Ten en cuenta el uso de `SupportsMultipleInstances` que permite este comportamiento. Para poder usar este atributo debe destinarse versión de SDK '10.0.15063' (Windows 10 Creators Update) o superior.
 
 ```xml
 <Package
