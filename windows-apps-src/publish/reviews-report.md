@@ -1,7 +1,7 @@
 ---
 author: jnHs
 Description: The Reviews report in the Windows Dev Center dashboard lets you see the reviews (comments) that customers entered when rating your app in the Store.
-title: Informe Críticas
+title: Informe de críticas
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 ms.author: wdg-dev-content
 ms.date: 08/16/2018
@@ -10,14 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, revisión, comentario, revisor
 ms.localizationpriority: medium
-ms.openlocfilehash: 8891aecb904f69e3f77ec5892d9234f79db46ff0
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.openlocfilehash: 4500ebe7406db45a089f3ceba10c1d1e781ea679
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3958693"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3989544"
 ---
-# <a name="reviews-report"></a>Informe Críticas
+# <a name="reviews-report"></a>Informe de críticas
 
 
 El informe **de opiniones** en el panel del centro de desarrollo de Windows te permite ver las opiniones (comentarios) que los clientes proporcionaron al clasificar tu aplicación en la tienda.
@@ -68,7 +68,7 @@ Ten en cuenta que este gráfico siempre incluye todas tus valoraciones, incluso 
 Este gráfico también puede verse en el [informe de clasificaciones](ratings-report.md), junto con más detalles acerca de la clasificación de la aplicación.
 
 
-< span id = "revisión categorías de detalles de valoración / >
+<span id = "review-insight-categories" />
 
 ## <a name="insight-categories"></a>Categorías de detalles de valoración
 
