@@ -4,18 +4,18 @@ Description: The Acquisitions report in the Windows Dev Center dashboard lets yo
 title: Informe Adquisiciones
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 08/15/2018
+ms.date: 09/14/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, adquisiciones, ventas de aplicaciones, descargas de aplicaciones, instalaciones, embudo, adquisición, conversiones, canal, vistas de página de la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: e6b4a3d8a10234e5f95e70f397a4de962a29c929
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.openlocfilehash: 75a3ce152257d10fe392b3f64381b3e82bc79961
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3961353"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3987932"
 ---
 # <a name="acquisitions-report"></a>Informe Adquisiciones
 
@@ -49,6 +49,8 @@ La información de todos los gráficos que aparecen a continuación reflejará e
 En el gráfico **Adquisiciones** se muestra el número de adquisiciones diarias o semanales (un nuevo cliente que obtiene una licencia para tu aplicación) durante el período de tiempo seleccionado. (Si usas **Aplicar filtros** para mostrar los datos durante más tiempo, los datos de adquisición se agruparán por semana). En este gráfico solo se incluyen las adquisiciones realizadas por los clientes que han iniciado sesión con una cuenta de Microsoft válida. 
 
 De manera predeterminada, mostramos la vista de la **aplicación todos los días** , que incluye cerca de datos en tiempo real. También puedes ver el número de adquisiciones del ciclo de vida de la aplicación seleccionando **Aplicación acumulativa**. Muestra el total acumulado de todas las adquisiciones desde que la aplicación se publicó por primera vez.
+
+**Ventas brutas** para la aplicación (de octubre de 2016 - presente) también están disponibles en este gráfico, que muestra el importe total acumulado las ventas de aplicaciones (en USD). Ten en cuenta que no tiene en cuenta esta cantidad para cualquier reembolsos, devoluciones, anulación, etcetera.
 
 También puedes filtrar los resultados por si la adquisición se originó desde el cliente, la Tienda web o la versión del sistema operativo.
 

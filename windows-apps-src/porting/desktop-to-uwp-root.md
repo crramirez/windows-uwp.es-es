@@ -12,11 +12,11 @@ keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ded8fb8a9d391ec48b46b0795b901dc403e1f30
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3962929"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3985912"
 ---
 # <a name="desktop-bridge"></a>Puente de dispositivo de escritorio
 
@@ -74,7 +74,7 @@ Desktop App Converter traduce las acciones del instalador para el archivo virtua
 
 :heavy_check_mark: Registra los servidores COM públicos.
 
-: heavy_check_mark: genera un certificado que puedes usar para ejecutar la aplicación.
+: heavy_check_mark: genera un certificado que se puede utilizar para ejecutar tu aplicación.
 
 :heavy_check_mark: Valida la aplicación con los requisitos del Puente de dispositivo de escritorio y Microsoft Store.
 

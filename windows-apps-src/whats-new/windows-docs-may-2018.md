@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 322bc056411095019dfc027078cbfef7de0883fb
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3963903"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3985554"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novedades en los documentos de Windows de mayo de 2018
 
@@ -103,7 +103,7 @@ La funcionalidad conjuntos está disponible en las versiones preliminares de Win
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="get-started"></a>Comenzar
+### <a name="get-started"></a>Introducción
 
 Nos hemos revitalizado nuestro Get iniciado contenido con nuevas pistas de aprendizaje. Estos temas nuevos se pretende proporcionar nuevos desarrolladores de Windows 10 con información sobre algunas tareas comunes que es posible que quieren para llevar a cabo. No te encuentras tutoriales y no proporcionas un tutorial de mano, pero señale donde existe documentación existente y cómo usarla. Echa un vistazo a la actualización de la herramienta [empezar a codificar](../get-started/create-uwp-apps.md) la página, o para explorar cada pista de aprendizaje individual:
 
@@ -114,7 +114,7 @@ Nos hemos revitalizado nuestro Get iniciado contenido con nuevas pistas de apren
 
 ![Obtener imagen iniciada](../get-started/images/build-your-app.png)
 
-### <a name="advertising-performance-report"></a>Informe de rendimiento de la publicidad
+### <a name="advertising-performance-report"></a>Informe de rendimiento de publicidad
 
 Ahora, el [informe de rendimiento de publicidad](../publish/advertising-performance-report.md) en el panel del centro de desarrollo proporciona métricas de visualización. También hemos agregado el artículo de [optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md) para proporcionar recomendaciones para optimizar la visualización de tus anuncios.
 

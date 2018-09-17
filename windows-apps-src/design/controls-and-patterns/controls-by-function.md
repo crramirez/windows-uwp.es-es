@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3958217"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3986244"
 ---
 # <a name="controls-by-function"></a>Controles por función
 
@@ -30,7 +30,7 @@ Puedes ver muchos de los controles de interfaz de usuario de Windows si descarga
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación de la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> , haz clic aquí para <a href="xamlcontrolsgallery:/item/NavigationView">Abrir la aplicación y ver NavigationView en acción</a> </p>
+    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles de XAML</strong> de la aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/NavigationView">Abrir la aplicación y ver el NavigationView en acción</a> </p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (MicrosoftStore)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtener el código fuente (GitHub)</a></li>
@@ -270,7 +270,7 @@ Muestra un mensaje que requiere la intervención del usuario. (Al contrario que 
 
 Referencia: [Control flotante](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
 
-Diseño y procedimientos: [los controles flotantes](dialogs-and-flyouts/flyouts.md) 
+Diseño y procedimientos: [menús emergentes](dialogs-and-flyouts/flyouts.md) 
 
 ### <a name="menu-flyout"></a>Control flotante de menú
 Muestra de forma temporal una lista de comandos u opciones relacionados con lo que está haciendo el usuario.
@@ -299,7 +299,7 @@ Menú personalizado que presenta los comandos que especifiques.
 
 Referencia: [PopupMenu](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
 
-Diseño y procedimientos: [cuadros de diálogo](dialogs-and-flyouts/dialogs.md) 
+Diseño y procedimientos: [los cuadros de diálogo](dialogs-and-flyouts/dialogs.md) 
 
 ### <a name="tooltip"></a>Información sobre herramientas
 Ventana emergente que muestra información para un elemento. 
@@ -555,11 +555,11 @@ Consulta Elemento multimedia
 
 ### <a name="navigationview"></a>NavigationView
 
-Un contenedor adaptable y el modelo de navegación flexible que implementa el panel de navegación izquierdo, la navegación superior y el patrón de pestañas.
+Un contenedor adaptable y el modelo de navegación flexible que implementa el panel de navegación izquierdo, la exploración superior y la trama de fichas.
 
 Referencia: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-Diseño y procedimientos: [Guía de control de NavigationView](navigationview.md)
+Diseño y procedimientos: [Guía de control NavigationView](navigationview.md)
 
 ### <a name="splitview"></a>SplitView
 
