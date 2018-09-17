@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, personalizar, enumerar, descripción, anteriormente
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f30a825cc7aec1b6f7dbf5cff0ea1c17c43ffd7
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3961009"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3982466"
 ---
 # <a name="create-platform-specific-store-listings"></a>Crear descripciones de Store específicas de la plataforma
 

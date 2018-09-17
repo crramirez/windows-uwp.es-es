@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ca47bfb26649f2e8a9fc1344c3264d90548eb836
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3960129"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3983472"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>Atraer a clientes y promocionar las aplicaciones
 
@@ -23,7 +23,7 @@ Una vez que la aplicación está en la Microsoft Store, es el momento de mostrar
 -   [Generar códigos promocionales](generate-promotional-codes.md)
 -   [Crear una campaña publicitaria para la aplicación](create-an-ad-campaign-for-your-app.md)
 -   [Crear una campaña de promoción de la aplicación personalizada](create-a-custom-app-promotion-campaign.md)
--   [Poner aplicaciones y complementos a la venta](put-apps-and-add-ons-on-sale.md)
+-   [Poner a la venta aplicaciones y complementos](put-apps-and-add-ons-on-sale.md)
 -   [Directrices para aplicaciones de marketing de Microsoft Store](app-marketing-guidelines.md)
 -   [Vincular a la aplicación](link-to-your-app.md)
 -   [Facilitar la promoción de la aplicación](make-your-app-easier-to-promote.md)

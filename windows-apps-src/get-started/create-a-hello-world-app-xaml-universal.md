@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, primera aplicación, hola mundo
 ms.localizationpriority: medium
 ms.openlocfilehash: 950b2f3fac44c8350a51fd5c1b7071f05c92d746
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3957517"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3981460"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Crear una aplicación "Hello, world" (XAML)
 
@@ -241,7 +241,7 @@ Para aprender a usar XAML para diseñar los controles que usará la aplicación,
 
 ## <a name="see-also"></a>Consulta también
 
-* [Crear tu primera aplicación](your-first-app.md)
+* [Tu primera aplicación](your-first-app.md)
 * [Publicación de tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
 * [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
 * [Muestras de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
