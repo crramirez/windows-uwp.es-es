@@ -3,18 +3,18 @@ author: jwmsft
 title: Aplicaciones adaptables para versiones
 description: Aprende a sacar partido de las nuevas API mientras mantienes la compatibilidad con versiones anteriores
 ms.author: jimwalk
-ms.date: 10/10/2017
+ms.date: 09/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d43cd9d03977e34b57d78e1f22bd7e8b340ff4ab
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: f2485eab4b192fe4a65c68d957de1ec9192f8c20
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1701041"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4019651"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicaciones adaptables para versiones: Usa las nuevas API mientras mantienes la compatibilidad con versiones anteriores
 
@@ -48,19 +48,23 @@ Por lo general, recomendamos dejar los valores predeterminados. Sin embargo, si 
 
 Para cambiar la versión mínima y de destino de un proyecto que ya se haya creado en Visual Studio, ve a Proyecto -> Propiedades -> ficha Aplicación -> Destino.
 
-![Cambiar el SDK de destino en Visual Studio](images/vs-target-sdk-2.png) 
+![Cambiar el SDK de destino en Visual Studio](images/vs-target-sdk-2.png)
 
-Como referencia, la siguiente tabla muestra los números de compilación de cada SDK. Para obtener más información acerca de las actualizaciones de Windows 10, consulta [información de versión de Windows 10](https://technet.microsoft.com/windows/release-info) en TechNet.
+Como referencia, la siguiente tabla muestra los números de compilación de cada SDK.
 
-Nombre descriptivo | Versión | Sistema operativo/compilación de SDK | Notas
----- | ---- | ---- | ----
-RTM | 1507 | 10240 | Consulta información importante sobre la [compatibilidad](https://support.microsoft.com/help/4015562/windows-10-version-1507-will-no-longer-receive-security-updates).
-Actualización de noviembre | 1511 | 10586 | Consulta información importante sobre la [compatibilidad](https://support.microsoft.com/help/4035050/windows-10-version-1511-will-no-longer-receive-security-updates).
-Actualización de aniversario | 1607 | 14393 |
-Creators Update | 1703 | 15063 |
-Fall Creators Update | 1709 | 16299 |
+| Nombre descriptivo | Versión | Sistema operativo/compilación de SDK |
+| ---- | ---- | ---- |
+| RTM | 1507 | 10240 |
+| Actualización de noviembre | 1511 | 10586 |
+| Actualización de aniversario | 1607 | 14393 |
+| Creators Update | 1703 | 15063 |
+| Fall Creators Update | 1709 | 16299 |
+| Actualización de abril de 2018 | 1803 | 17134 |
+| Actualización de octubre de 2018 | 1809 | _Versión preliminar de Insider_ |
 
 Puedes descargar cualquier versión publicada del SDK desde [Windows SDK y el archivo del emulador](https://developer.microsoft.com/downloads/sdk-archive). Puedes descargar el Windows Insider Preview SDK más reciente desde la sección para desarrolladores del sitio [Windows Insider](https://insider.windows.com/Home/BuildWithWindows).
+
+ Para obtener más información acerca de las actualizaciones de Windows 10, consulta la [información de versión de Windows 10](https://technet.microsoft.com/windows/release-info). Para obtener información importante sobre Windows 10 admiten el ciclo de vida, consulte la [hoja de datos del ciclo de vida de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 ## <a name="perform-api-checks"></a>Realizar comprobaciones de API
 
