@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, programación, fecha de lanzamiento, fechas, inicio
 ms.localizationpriority: medium
 ms.openlocfilehash: 84466f907bad7e38506e1bf81b89eb631675093c
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3990098"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4015119"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar la programación precisa del lanzamiento
 
