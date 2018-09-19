@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, la tarea en segundo plano, servicio de aplicaciones, los dispositivos, sistemas remotos conectados
 ms.localizationpriority: medium
-ms.openlocfilehash: 142eba8eb919ed25632f44a6f185ae40e16dec6b
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.openlocfilehash: d4aa5a4f379e0791e9da7db4ecd2a27c09cf0a3a
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4021715"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4056979"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Inicio, reanudación y tareas en segundo plano
 
@@ -102,7 +102,7 @@ La sección [Tareas en segundo plano](support-your-app-with-background-tasks.md)
 | [Acceder a sensores y dispositivos desde una tarea en segundo plano](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que la aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, aunque la aplicación en primer plano esté suspendida. |
 | [Crear y registrar una tarea en segundo plano en el proceso](create-and-register-an-inproc-background-task.md)       | Crea y registra una tarea en segundo plano que se ejecute en el mismo proceso que la aplicación en primer plano. |
 | [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)           | Crea y registra una tarea en segundo plano que se ejecute en un proceso independiente de la aplicación y regístralo para que se ejecute cuando tu aplicación no esté en primer plano. |
-| [Convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso](convert-out-of-process-background-task.md) | Aprende a convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso que se ejecute en el mismo proceso que la aplicación en primer plano.|
+| [Migrar una tarea en segundo plano fuera de proceso en una tarea en segundo plano en proceso](convert-out-of-process-background-task.md) | Obtén información sobre cómo migrar una tarea en segundo plano fuera de proceso en una tarea en segundo plano en proceso que se ejecuta en el mismo proceso que la aplicación en primer plano.|
 | [Depurar una tarea en segundo plano](debug-a-background-task.md)                                                       | Aprende a depurar una tarea en segundo plano, incluida la activación y el seguimiento de depuración de la tarea en segundo plano en el registro de eventos de Windows. |
 | [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md) | Habilita el uso de tareas en segundo plano declarándolas como extensiones en el manifiesto de la aplicación. |
 | [Agrupar registro de tarea en segundo plano](group-background-tasks.md)                                             | Aísla el registro de tareas en segundo plano con grupos. |

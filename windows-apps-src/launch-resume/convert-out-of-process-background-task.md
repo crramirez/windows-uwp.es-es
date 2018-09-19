@@ -1,25 +1,25 @@
 ---
 author: TylerMSFT
-title: Convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso
-description: Puedes convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso que se ejecuta en el proceso de la aplicación en primer plano.
+title: Migrar una tarea en segundo plano fuera de proceso en una tarea en segundo plano en proceso
+description: Migra una tarea en segundo plano fuera de proceso en una tarea en segundo plano en proceso que se ejecuta dentro de su proceso de la aplicación en primer plano.
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, tarea en segundo plano, servicio de aplicaciones
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
-ms.openlocfilehash: 1144443f943f134991d050dea1457f252eaaf36d
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.openlocfilehash: b9010f82b0460bd46757bc1e0d58c01dec459104
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4020275"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4055785"
 ---
-# <a name="convert-an-out-of-process-background-task-to-an-in-process-background-task"></a>Convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso
+# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>Migrar una tarea en segundo plano fuera de proceso en una tarea en segundo plano en proceso
 
-La forma más sencilla de convertir tu actividad en segundo plano fuera del proceso en una actividad dentro del proceso consiste en introducir tu código de método [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) en la aplicación e iniciarlo desde [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).
+La forma más sencilla de migrar tu actividad en segundo plano fuera de proceso (OOP) actividad dentro del proceso es llevar tu código de método [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) dentro de la aplicación e iniciarlo en [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated). No es la técnica que se describe aquí sobre cómo crear una corrección de una tarea en segundo plano OOP en una tarea en segundo plano en proceso; su información sobre cómo volver a escribir (o migración) una versión OOP a una versión dentro del proceso.
 
 Si la aplicación tiene varias tareas en segundo plano, la [muestra de activación en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation) muestra cómo usar `BackgroundActivatedEventArgs.TaskInstance.Task.Name` para identificar qué tarea se está iniciando.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, iap, compra desde la aplicación, producto desde la aplicación, envío de iap
 ms.localizationpriority: medium
 ms.openlocfilehash: 37d05722578ed945fbf75040f96360bb569c6d06
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4016157"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4055909"
 ---
 # <a name="add-on-submissions"></a>Envíos de complementos
 

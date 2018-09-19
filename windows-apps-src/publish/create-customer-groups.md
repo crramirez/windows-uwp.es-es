@@ -11,11 +11,11 @@ keywords: windows 10, uwp, grupos de clientes, segmento, grupo piloto, grupo de 
 ms.assetid: ad1a5a02-71aa-47d9-8d03-2d85f4941442
 ms.localizationpriority: medium
 ms.openlocfilehash: 88101d9f8cc7ca40d37f88202667f36ecf5d8a3f
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4023489"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4056681"
 ---
 # <a name="create-customer-groups"></a>Crear grupos de clientes
 
