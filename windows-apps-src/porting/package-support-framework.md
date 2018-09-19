@@ -10,34 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 46d5705233af9e8254b9ac89a2d6e9891e90701f
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.openlocfilehash: 7e5119696498156d36ec63b16b1d76c00b03f4df
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4021525"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4060967"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correcciones en tiempo de ejecución a un paquete MSIX con el marco de soporte técnico de paquete
 
 El marco de soporte técnico de paquete es un kit de código abierto que ayuda a aplicar correcciones a la aplicación de win32 existentes cuando no tienes acceso al código fuente, para que se puede ejecutar en un contenedor MSIX. El marco de soporte técnico de paquete de la ayuda a la aplicación sigue los procedimientos recomendados del entorno de tiempo de ejecución modernos.
 
-Para crear el marco de soporte técnico de paquete, aprovechamos la tecnología [Detours](https://www.microsoft.com/en-us/research/project/detours) que es un marco de código abierto desarrollado por Microsoft Research (MSR) y ayuda con la redirección de API y el enlace.
-
-Este marco es código abierto, ligero, y puedes usarlo para solucionar los problemas de aplicación rápidamente. También te ofrece la oportunidad de consultar con la Comunidad de todo el mundo y basarse en las inversiones de otras personas.
-
-## <a name="a-quick-look-inside-of-the-package-support-framework"></a>Una vista rápida del marco de soporte técnico de paquete
-
-El marco de soporte técnico de paquete contiene un archivo ejecutable, un archivo DLL del Administrador de tiempo de ejecución y un conjunto de correcciones de tiempo de ejecución.
-
-![Marco de soporte técnico de paquete](images/desktop-to-uwp/package-support-framework.png)
-
-Así es como funciona. A crear un archivo de configuración que especifica el fix(s) que quieras aplicar a la aplicación. A continuación, modificarás el paquete para que apunte al archivo ejecutable de selector de corrección.
-
-Cuando los usuarios inicien la aplicación, el selector de corrección es el primer archivo ejecutable que se ejecuta. Lee el archivo de configuración e inserta el fix(s) en tiempo de ejecución y el archivo DLL del Administrador de tiempo de ejecución en el proceso de la aplicación.
-
-![Inserción de DLL de marco de soporte técnico de paquete](images/desktop-to-uwp/package-support-framework-2.png)
-
-El Administrador de tiempo de ejecución aplica la corrección cuando es necesario por la aplicación se ejecute dentro de un contenedor MSIX.
+Para obtener más información, consulta [El marco de trabajo de paquete de soporte técnico](https://docs.microsoft.com/windows/msix/package-support-framework-overview).
 
 Esta guía te ayudará a identificar problemas de compatibilidad de aplicaciones y buscar, aplicar y ampliar en tiempo de ejecución correcciones que se tratan.
 
