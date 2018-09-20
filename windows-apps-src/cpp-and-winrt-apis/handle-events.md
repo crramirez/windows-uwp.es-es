@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
 ms.openlocfilehash: 7af66c3f0586f2fb99a2a742f6da0144ed69d253
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4053167"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4085210"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Controlar eventos usando delegados en [C ++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tema muestra cómo registrar y revocar delegados de control de eventos con C++/WinRT. Puedes controlar un evento usando cualquier objeto tipo función de C++ estándar.

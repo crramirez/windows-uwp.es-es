@@ -4,23 +4,23 @@ title: Crear una aplicación universal de Windows de instancias múltiples
 description: En este tema, se describe cómo escribir aplicaciones para UWP que admiten instancias múltiples.
 keywords: uwp de instancias múltiples
 ms.author: twhitney
-ms.date: 02/22/2018
+ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0717ac9a2af0a0e1078e39af8f7300ac506823
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 9302ed0375739153eb95ac2b54c1ed396b14daee
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816550"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4085194"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crear una aplicación universal de Windows de instancias múltiples
 
 En este tema, se describe cómo crear aplicaciones para la Plataforma universal de Windows (UWP) de instancias múltiples.
 
-Antes de Windows 10, versión 1803, solo se podía ejecutar al mismo tiempo una instancia de una aplicación para UWP. Ahora, puede participar una aplicación para UWP para admitir varias instancias. Si se está ejecutando una instancia de una aplicación para UWP de varias instancias y llega una solicitud de activación posterior, la plataforma no activará la instancia existente. En su lugar, creará una instancia nueva, que se ejecuta en un proceso independiente.
+Desde Windows 10, versión 1803 (10.0; Compilación 17134) en adelante, tu aplicación para UWP puede optar por admitir varias instancias. Si se está ejecutando una instancia de una aplicación para UWP de varias instancias y llega una solicitud de activación posterior, la plataforma no activará la instancia existente. En su lugar, creará una instancia nueva, que se ejecuta en un proceso independiente.
 
 ## <a name="opt-in-to-multi-instance-behavior"></a>Participar en el comportamiento de instancias múltiples
 
@@ -28,7 +28,7 @@ Si vas a crear una nueva aplicación de instancias múltiples, puedes instalar e
 
 Se instalan dos plantillas: **Aplicaciones para UWP de varias instancias**, que proporciona la plantilla para crear una aplicación de instancias múltiples y **Aplicación para UWP de redireccionamiento de instancias múltiples**, que proporciona lógica adicional que se puede generar para iniciar una nueva instancia o para activar de forma selectiva una instancia que ya se ha iniciado. Por ejemplo, quizás solo deseas que un mismo documento solo pueda editarlo una instancia al mismo tiempo, por lo que llevas al primer plano la instancia que tiene abierto el archivo en lugar de iniciar una nueva instancia.
 
-Ambas plantillas agregan `SupportsMultipleInstances` al archivo package.appxmanifest. Fíjate en el prefijo `desktop4` y `iot2`: solo los proyectos destinados al escritorio o los proyectos de Internet de las cosas (IoT) admiten instancias múltiples:
+Ambas plantillas agregan `SupportsMultipleInstances` a la `package.appxmanifest` archivo. Ten en cuenta el prefijo de espacio de nombres `desktop4` y `iot2`: sólo los proyectos destinados al escritorio o proyectos de Internet de las cosas (IoT) admiten instancias múltiples.
 
 ```xml
 <Package
@@ -53,10 +53,13 @@ Ambas plantillas agregan `SupportsMultipleInstances` al archivo package.appxmani
 
  La compatibilidad de instancias múltiples para aplicaciones para UWP es mucho más que simplemente poder iniciar varias instancias de la aplicación. Permite la personalización en los casos que desees seleccionar si se inicia una nueva instancia de la aplicación o se activa una instancia que ya se está ejecutando. Por ejemplo, si la aplicación se inicia para editar un archivo que ya se está editando en otra instancia, puedes redirigir la activación a esa instancia en lugar de abrir otra instancia que ya está editando el archivo.
 
-Para ver esto en acción, mira este vídeo acerca de cómo crear aplicaciones para UWP de instancias múltiples:
+Para ver esto en acción, mira este vídeo acerca de cómo crear aplicaciones para UWP de instancias múltiples.
+
 > [!VIDEO https://www.youtube.com/embed/clnnf4cigd0]
 
-La plantilla **Aplicación para UWP de varias instancias** agrega `SupportsMultipleInstances`al archivo package.appxmanifest, como se ha mostrado anteriormente, y también agrega un **Program.cs** (o **Program.cpp**, si estás usando la versión C++ de la plantilla) al proyecto que contiene una función `Main()`. La lógica para redirigir la activación se incluye en la función `Main`. Este es el aspecto que tiene la plantilla de **Program.cs**:
+La plantilla **Aplicación para UWP de varias instancias** agrega `SupportsMultipleInstances`al archivo package.appxmanifest, como se ha mostrado anteriormente, y también agrega un **Program.cs** (o **Program.cpp**, si estás usando la versión C++ de la plantilla) al proyecto que contiene una función `Main()`. La lógica para redirigir la activación se incluye en la función `Main`. A continuación se muestra la plantilla para **Program.cs** .
+
+La propiedad [AppInstance.RecommendedInstance](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa la instancia preferida siempre shell para esta solicitud de activación, si existe una (o `null` si hay uno). Si el shell proporciona una preferencia, a continuación, puede puede redirigir la activación a esa instancia, o puede omitir si eliges.
 
 ``` csharp
 public static class Program
@@ -73,8 +76,8 @@ public static class Program
         // logic for generating the key for this instance.
         IActivatedEventArgs activatedArgs = AppInstance.GetActivatedEventArgs();
 
-        // In some scenarios, the platform might indicate a recommended instance.
-        // If so, we can redirect this activation to that instance instead, if we wish.
+        // If the Windows shell indicates a recommended instance, then
+        // the app can choose to redirect this activation to that instance instead.
         if (AppInstance.RecommendedInstance != null)
         {
             AppInstance.RecommendedInstance.RedirectActivationTo();
@@ -87,7 +90,7 @@ public static class Program
             // to the first instance. In practice, the app should produce a key
             // that is sometimes unique and sometimes not, depending on its own needs.
             string key = Guid.NewGuid().ToString(); // always unique.
-            //string key = "Some-App-Defined-Key"; // never unique.
+                                                    //string key = "Some-App-Defined-Key"; // never unique.
             var instance = AppInstance.FindOrRegisterInstanceForKey(key);
             if (instance.IsCurrentInstance)
             {
@@ -112,7 +115,6 @@ El código anterior determina si se activa una instancia existente o nueva de la
 
 Si se encuentra una instancia registrada con la clave, esa instancia se activa. Si no se encuentra la clave, la instancia actual (la instancia que actualmente está ejecutando `Main`) crea su objeto de aplicación y comienza a ejecutarse.
 
-
 ## <a name="background-tasks-and-multi-instancing"></a>Tareas en segundo plano e instancias múltiples
 
 - Las tareas en segundo plano fuera del proceso admiten instancias múltiples. Por lo general, cada desencadenador nuevo da como resultado una nueva instancia de la tarea en segundo plano (aunque técnicamente hablando, se pueden ejecutar varias tareas en segundo plano en el mismo proceso de host). No obstante, se crea una instancia diferente de la tarea en segundo plano.
@@ -131,7 +133,7 @@ Si se encuentra una instancia registrada con la clave, esa instancia se activa. 
 
 ## <a name="sample"></a>Muestra
 
-Consulta [Muestra de varias instancias](https://aka.ms/Kcrqst) para ver un ejemplo del redireccionamiento de la activación de instancias múltiples.
+Consulta la [muestra de varias instancias](https://aka.ms/Kcrqst) para obtener un ejemplo del redireccionamiento de activación de instancias múltiples.
 
 ## <a name="see-also"></a>Puedes ver también
 
