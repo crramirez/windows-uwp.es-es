@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de la tienda, API de información de análisis de Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fbd91437e5dc702f8672c6cbadeea32a8a96bf
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4087044"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4117225"
 ---
 # <a name="get-insights-data"></a>Obtener información sobre los datos
 
