@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, solución de problemas, HRESULT, error
 ms.localizationpriority: medium
-ms.openlocfilehash: 4129c50a2273c8ac425f6ea972898aa09fe0fcf3
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.openlocfilehash: cccc58c0b9dd5f922c87d3e6860bb2f2045ea767
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4085732"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4115309"
 ---
 # <a name="troubleshooting-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-issues"></a>Solucionar problemas de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -37,7 +37,7 @@ Si tu aplicación finaliza y todo lo que sabes es que se ha producido una excepc
 | El compilador de C++ produce el error "*intentando hacer referencia a una función eliminada*". | Esto puede suceder cuando se llama a **make** y el tipo de implementación que pasas como el parámetro de plantilla tiene un constructor `= delete` predeterminado. Edita el archivo de encabezado del tipo de implementación y cambia `= delete` a `= default`. También puedes agregar un constructor al archivo IDL para la clase en tiempo de ejecución. |
 | Has implementado [**INotifyPropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged), pero tus enlaces de XAML no se actualizan (y la interfaz de usuario no se suscribe a [**PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)). | Recuerda que tienes que establecer `Mode=OneWay` (o TwoWay) en tu expresión de enlace en marcado XAML. Consulta [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md) |
 | Vas a enlazar un control de elementos XAML a una colección observable, y se produce una excepción en tiempo de ejecución con el mensaje "El parámetro es incorrecto". | En tu IDL e implementación, declara cualquier colección observable como el tipo **Windows.Foundation.Collections.IVector<IInspectable>**. Pero devuelve un objeto que implemente **Windows.Foundation.Collections.IObservableVector<T>**, donde T es tu tipo de elemento. Consulta [Controles de elementos XAML; enlazar a una colección C++/WinRT](binding-collection.md)  |
-| El compilador de C++ produce un error del formulario "*'MyImplementationType_base&lt;MyImplementationType&gt;': no hay ningún constructor predeterminado adecuado disponible*".|Esto puede suceder si has derivado de un tipo que tiene un constructor no trivial. Tu constructor del tipo derivado necesita pasar los parámetros que necesita el constructor del tipo base. Para obtener un ejemplo trabajado, consulta [Derivar de un tipo que tiene un constructor no trivial](author-apis.md#deriving-from-a-type-that-has-a-non-trivial-constructor)|
+| El compilador de C++ produce un error del formulario "*'MyImplementationType_base&lt;MyImplementationType&gt;': no hay ningún constructor predeterminado adecuado disponible*".|Esto puede suceder si has derivado de un tipo que tiene un constructor no trivial. Tu constructor del tipo derivado necesita pasar los parámetros que necesita el constructor del tipo base. Para obtener un ejemplo trabajado, consulta [Derivar de un tipo que tiene un constructor no trivial](author-apis.md#deriving-from-a-type-that-has-a-non-default-constructor)|
 | El compilador de C++ produce el error"*no puede convertirse de 'const std::vector&lt;std::wstring,std::allocator&lt;_Ty&gt;&gt;' a 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'*".|Esto puede suceder cuando se pasa un std::vector de std::wstring a una API de Windows Runtime que espera una colección. Para obtener más información, consulta [Tipos de datos C++ estándar y C++/WinRT](std-cpp-data-types.md).|
 | El compilador de C++ produce el error"*no puede convertirse de 'const std::vector&lt;winrt::hstring,std::allocator&lt;_Ty&gt;&gt;' a 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'*".|Esto puede suceder cuando se pasa un std::vector de winrt::hstring a una API asincrónica de Windows Runtime que espera una colección, y no has copiado ni movido el vector al destinatario asincrónico. Para obtener más información, consulta [Tipos de datos C++ estándar y C++/WinRT](std-cpp-data-types.md).|
 | Al abrir un proyecto, Visual Studio genera el error "*La aplicación del proyecto no está instalada*".|Si no lo has hecho todavía, debes instalar **herramientas de Windows Universal para el desarrollo de C++** desde dentro del diálogo **Nuevo proyecto** de Visual Studio. Si esto no resuelve el problema, el proyecto puede depender de la extensión de Visual Studio (VSIX) C++/WinRT (consulta [Soporte de Visual Studio para C++/WinRT, y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)).|

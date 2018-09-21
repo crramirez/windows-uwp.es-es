@@ -4,18 +4,18 @@ ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: Declaraciones de funcionalidades de las aplicaciones
 description: Las funcionalidades deben declararse en el manifiesto del paquete de la aplicación de la Plataforma universal de Windows (UWP) para acceder a determinadas API o ciertos recursos como imágenes, música o dispositivos, como la cámara o el micrófono.
 ms.author: misatran
-ms.date: 7/17/2018
+ms.date: 09/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 30e4bb7b493e6fb839f300f4c446b7510f28fabb
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.openlocfilehash: 17f40055f22d8d065ac85d207f3ea17a58a14519
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089174"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4110867"
 ---
 # <a name="app-capability-declarations"></a>Declaraciones de funcionalidades de las aplicaciones
 
@@ -25,13 +25,12 @@ Para solicitar acceso a los recursos o API específicos, declara funcionalidades
 
 Algunas funcionalidades otorgan a las aplicaciones acceso a un *recurso con información confidencial*. Estos recursos se consideran confidenciales porque pueden acceder a datos personales del usuario o costarle dinero al usuario. La configuración de privacidad, administrada por la aplicación Configuración, permite al usuario controlar dinámicamente el acceso a recursos con información confidencial. Por lo tanto, es importante que la aplicación no suponga que un recurso con información confidencial está siempre disponible. Para obtener más información sobre cómo acceder a recursos confidenciales, consulta las [Directrices para aplicaciones compatibles con la privacidad](https://msdn.microsoft.com/library/windows/apps/Hh768223). Las funcionalidades que proporcionan las aplicaciones con acceso a un *recurso con información confidencial* están marcadas con un asterisco (\*) junto al escenario de la funcionalidad.
 
-Hay tres tipos de funcionalidades que se describen a continuación:
+Existen varios tipos de funcionalidades.
 
--   Funcionalidades de uso general que se aplican a la mayoría de escenarios de las aplicaciones.
-
--   Funcionalidades de dispositivo que permiten a tu aplicación acceder a los periféricos y dispositivos internos.
-
--   Funcionalidades restringidas que requieren la aprobación de envío de Store o por lo general solo disponibles para Microsoft y determinados partners.
+- [Funcionalidades de uso a general](#general-use-capabilities)que se aplican a los escenarios más habituales de la aplicación.
+- [Funcionalidades del dispositivo](#device-capabilities), lo que permite que la aplicación acceder a periféricos y dispositivos internos.
+- [Las funcionalidades restringidas](#restricted-capabilities)que requieren la aprobación de envío de Microsoft Store o por lo general, solo están disponibles para Microsoft y determinados partners.
+- [Capacidades de personalizada](#custom-capabilities).
 
 ## <a name="general-use-capabilities"></a>Funcionalidades de uso general
 
@@ -96,23 +95,19 @@ Si la aplicación declara funcionalidades restringidas, debes proporcionar infor
 
 Asegúrate de no declarar que estas funcionalidades restringidas, a menos que la aplicación realmente las necesite. Hay casos en los que estas funcionalidades son necesarias y apropiadas, como en aplicaciones de banca con autenticación de dos factores, en las que los usuarios proporcionan una tarjeta inteligente con un certificado digital que confirma su identidad. Es posible que otras aplicaciones se hayan diseñado principalmente para empresas y precisen acceder a recursos corporativos a los que no es posible acceder sin las credenciales de dominio del usuario.
 
-Todas las funcionalidades restringidas deben incluir el espacio de nombres **rescap** cuando se declaran en el manifiesto de paquete de la aplicación. Por ejemplo, aquí se muestra la manera de declarar la funcionalidad **appCaptureSettings**.
+Para declarar una funcionalidad restringida, modificar el archivo de origen [del manifiesto de paquete de la aplicación](https://msdn.microsoft.com/library/windows/apps/BR211474) (`Package.appxmanifest`). Agrega la declaración de espacio de nombres XML **xmlns: rescap** y usar el prefijo **rescap** al declarar la funcionalidad restringida. Por ejemplo, aquí se muestra la manera de declarar la funcionalidad **appCaptureSettings**.
 
 ```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+    ...
+    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+    IgnorableNamespaces="... rescap">
+...
 <Capabilities>
     <rescap:Capability Name="appCaptureSettings"/>
 </Capabilities>
-```
-
-También se debe agregar la declaración del espacio de nombres **xmlns:rescap** en la parte superior del archivo Package.appxmanifest, como se muestra a continuación.
-
-```xml
-<Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-    IgnorableNamespaces="uap mp wincap rescap">
+</Package>
 ```
 
 ### <a name="restricted-capability-approval-process"></a>Proceso de aprobación de la funcionalidad restringida
@@ -123,7 +118,7 @@ Al cargar paquetes para el envío, detectaremos si se declaran funcionalidades r
 
 Durante el proceso de certificación, nuestros evaluadores revisarán la información que proporciones para determinar si se aprueba el envío para usar la funcionalidad. Ten en cuenta que esto demora el envío para completar el proceso de certificación. Si aprobamos el uso de la funcionalidad, tu aplicación continuará el resto del proceso de certificación. Por lo general, no tendrás que repetir el proceso de aprobación de funcionalidad al enviar actualizaciones realizadas en la aplicación (a menos que declares funcionalidades adicionales).
 
-Si no aprobamos el uso de la funcionalidad, tu envío no pasará la certificación e incluiremos comentarios en el informe de certificación. A continuación, tienes la opción de crear un nuevo envío y cargar los paquetes que no declaren la funcionalidad o, si procede, solucionar los problemas relacionados con el uso de la funcionalidad y solicitar la autorización en un nuevo envío.
+Si no aprobamos el uso de la funcionalidad, tu envío pasará certificación e incluiremos comentarios en el informe de certificación. A continuación, tienes la opción de crear un nuevo envío y cargar los paquetes que no declaren la funcionalidad o, si procede, solucionar los problemas relacionados con el uso de la funcionalidad y solicitar la autorización en un nuevo envío.
 
 > [!NOTE]
 > Si tu envío usa un espacio aislado de desarrollo en el Centro de desarrollo (por ejemplo, este es el caso de cualquier juego que se integra con Xbox Live), debes solicitar la aprobación por adelantado en lugar de proporcionar información en la página **Opciones de envío**. Para hacerlo, visita la [página de soporte técnico de desarrolladores de Windows](https://developer.microsoft.com/windows/support). Selecciona el tema de soporte técnico para desarrolladores **problema de panel**, **envíos de aplicaciones**del tipo de problema y subcategoría **otros**. A continuación, se describe cómo usan la funcionalidad y por qué es necesario para el producto. Si no proporcionas toda la información necesaria, tu solicitud se denegará. También es posible que se te pida que proporciones más información. Ten en cuenta que este proceso normalmente tarda 5 días laborables o más, por lo que debes enviar solicitud con antelación.
@@ -219,8 +214,25 @@ La siguiente tabla enumera las funcionalidades restringidas. Puedes solicitar la
 | **Credenciales del dispositivo de equipo de Windows** | La funcionalidad de **teamEditionDeviceCredentials** restringido permite que las aplicaciones accedan a las API que solicitar credenciales de cuenta del dispositivo en un dispositivo de Surface Hub con Windows 10, versión 1703 o posterior.<br/><br/>No recomendamos declarar esta funcionalidad en las aplicaciones enviadas a la Store. Para la mayoría de los desarrolladores, el uso de esta funcionalidad no se aprobará. |
 | **Vista de aplicación del equipo de Windows** | La funcionalidad de **teamEditionView** restringido permite que las aplicaciones accedan a las API para el hospedaje de una vista de la aplicación en un dispositivo de Surface Hub con Windows 10, versión 1703 o posterior.<br/><br/>No recomendamos declarar esta funcionalidad en las aplicaciones enviadas a la Store. Para la mayoría de los desarrolladores, el uso de esta funcionalidad no se aprobará. |
 
+## <a name="custom-capabilities"></a>Capacidades personalizadas
 
+La sección de [las funcionalidades restringidas](#restricted-capabilities) anterior describe el mismo proceso de aprobación de funcionalidad que puedes usar para solicitar la aprobación para utilizar una funcionalidad personalizada. La [SIM incrustado](/uwp/api/windows.networking.networkoperators.esim) API son ejemplos de las API que requieren una funcionalidad personalizada. Si solo quieres ejecutar la aplicación localmente en el modo de desarrollador, no necesitas la funcionalidad personalizada. Pero necesita para publicar la aplicación en Microsoft Store, o para ejecutar fuera del modo de desarrollador.
 
+Si tienes un administrador de cuentas técnico (TAM) de Windows, puede trabajar con su TAM para solicitar acceso. Puedes encontrar más detalles en [contacto su TAM de Microsoft](/windows-hardware/drivers/mobilebroadband/testing-your-desktop-cosa-apn-database-submission#contact-your-microsoft-tam).
+
+Para declarar una funcionalidad personalizada, modificar el archivo de origen [del manifiesto de paquete de la aplicación](https://msdn.microsoft.com/library/windows/apps/BR211474) (`Package.appxmanifest`). Agrega la declaración de espacio de nombres XML **xmlns:uap4** y usar el prefijo **uap4** al declarar la funcionalidad personalizada. Aquí tienes un ejemplo.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+    ...
+    xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4">
+...
+<Capabilities>
+    <uap4:CustomCapability Name="CompanyName.customCapabilityName_PublisherID"/>
+</Capabilities>
+</Package>
+```
 
 ## <a name="related-topics"></a>Artículos relacionados
 

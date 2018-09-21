@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 155b8f67b5cd6080554afb889c7c27c921c998f8
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4085304"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4114149"
 ---
 # <a name="about-house-ads"></a>Acerca de los anuncios internos
 
 
 Puedes crear un anuncio para promocionar una de tus aplicaciones en otras aplicaciones tuyas de forma gratuita. Estos anuncios se denominan *anuncios internos*.
 
-Los anuncios internos solo aparecerán en tus propias aplicaciones que están configuradas para [Mostrar anuncios de Microsoft](../monetize/display-ads-in-your-app.md).
+Anuncios de casa sólo aparecerá en sus propias aplicaciones que están configurados para [Mostrar anuncios de Microsoft](../monetize/display-ads-in-your-app.md).
 
 Para configurar un anuncio interno, selecciona **Anuncio interno (gratuito)** como el **Tipo de campaña** al [crear una campaña publicitaria](create-an-ad-campaign-for-your-app.md). El anuncio será apto automáticamente para aparecer en cualquiera de tus aplicaciones que cumpla los siguientes criterios:
 
