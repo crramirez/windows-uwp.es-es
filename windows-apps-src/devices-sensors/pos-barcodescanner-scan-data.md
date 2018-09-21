@@ -1,7 +1,7 @@
 ---
 author: eliotcowley
 title: Obtener y comprender los datos de código de barras
-description: Obtén información sobre cómo obtener e interpretar los datos de códigos de barras digitalizar.
+description: Aprenda a obtener e interpretar los datos de código de barras que analizan.
 ms.author: elcowle
 ms.date: 08/29/2018
 ms.topic: article
@@ -10,25 +10,25 @@ ms.technology: uwp
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0992ea54092063ba53f23871599905e58f1b456e
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4086394"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4114523"
 ---
 # <a name="obtain-and-understand-barcode-data"></a>Obtener y comprender los datos de código de barras
 
-Una vez que hayas configurado el escáner de códigos de barras, por supuesto necesitan una forma de comprender los datos que digitalizar. Al digitalizar un código de barras, se genera el evento [DataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) . El [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) suscribirte a este evento. El evento **DataReceived** pasa un objeto [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) , que puedes usar para acceder a los datos de código de barras.
+Una vez haya configurado el escáner de código de barras, por supuesto necesita una manera de entender los datos que analizan. Cuando se escanea un código de barras, se provoca el evento [DataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) . El [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) debe suscribirse a este evento. El evento **DataReceived** pasa un objeto [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) , que puede utilizar para tener acceso a los datos de código de barras.
 
 ## <a name="subscribe-to-the-datareceived-event"></a>Suscribirse al evento DataReceived
 
-Una vez que tengas un **ClaimedBarcodeScanner**, tienen suscribirse al evento **DataReceived** :
+Una vez que tenga una **ClaimedBarcodeScanner**, tiene suscribirse al evento **DataReceived** :
 
 ```cs
 claimedBarcodeScanner.DataReceived += ClaimedBarcodeScanner_DataReceived;
 ```
 
-El controlador de eventos se pasarán la **ClaimedBarcodeScanner** y un objeto **BarcodeScannerDataReceivedEventArgs** . Puede acceder a los datos de códigos de barras a través de la propiedad del [informe](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs.report#Windows_Devices_PointOfService_BarcodeScannerDataReceivedEventArgs_Report) de este objeto, que es de tipo [BarcodeScannerReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport).
+El controlador de eventos se pasa un objeto de **BarcodeScannerDataReceivedEventArgs** y el **ClaimedBarcodeScanner** . Puede tener acceso a los datos de código de barras a través de [informe de](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs.report#Windows_Devices_PointOfService_BarcodeScannerDataReceivedEventArgs_Report) propiedad de este objeto, que es de tipo [BarcodeScannerReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport).
 
 ```cs
 private async void ClaimedBarcodeScanner_DataReceived(ClaimedBarcodeScanner sender, BarcodeScannerDataReceivedEventArgs args)
@@ -39,13 +39,13 @@ private async void ClaimedBarcodeScanner_DataReceived(ClaimedBarcodeScanner send
 
 ## <a name="get-the-data"></a>Obtener los datos
 
-Una vez que tengas el **BarcodeScannerReport**, puedes acceder y analizar los datos de código de barras. **BarcodeScannerReport** tiene tres propiedades:
+Una vez que la **BarcodeScannerReport**, puede tener acceso y analizar los datos de código de barras. **BarcodeScannerReport** tiene tres propiedades:
 
-* [ScanData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandata): los datos de códigos de barras completo, sin procesar.
-* [ScanDataLabel](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatalabel): la etiqueta de código de barras descodificada, que no incluye el encabezado, suma de comprobación y otra información.
-* [ScanDataType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatatype): el tipo de etiqueta de código de barras descodificado. Los valores posibles se definen en la clase [BarcodeSymbologies](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) .
+* [ScanData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandata): los datos completos, sin procesar código de barras.
+* [ScanDataLabel](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatalabel): la etiqueta descodificada de código de barras, que no incluye el encabezado, suma de comprobación y otra información.
+* [ScanDataType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatatype): el tipo de etiqueta descodificada de código de barras. Los valores posibles se definen en la clase [BarcodeSymbologies](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) .
 
-Si quieres obtener acceso a **ScanDataLabel** o **ScanDataType**, primero debes establecer [IsDecodeDataEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdecodedataenabled#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDecodeDataEnabled) en **true**.
+Si desea tener acceso a **ScanDataLabel** o **ScanDataType**, primero debe establecer [IsDecodeDataEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdecodedataenabled#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDecodeDataEnabled) en **true**.
 
 ```cs
 claimedBarcodeScanner.IsDecodeDataEnabled = true;
@@ -53,7 +53,7 @@ claimedBarcodeScanner.IsDecodeDataEnabled = true;
 
 ### <a name="get-the-scan-data-type"></a>Obtener el tipo de datos de análisis
 
-Obtener el tipo de etiqueta de código de barras descodificada es bastante trivial&mdash;simplemente llamamos [GetName](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies.getname) en **ScanDataType**.
+Obtener el tipo de etiqueta descodificada de código de barras es bastante trivial&mdash;simplemente llamamos [GetName](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies.getname) en **ScanDataType**.
 
 ```cs
 private string GetSymbology(BarcodeScannerDataReceivedEventArgs args)
@@ -62,9 +62,9 @@ private string GetSymbology(BarcodeScannerDataReceivedEventArgs args)
 }
 ```
 
-### <a name="get-the-scan-data-label"></a>Obtener la etiqueta de datos de análisis
+### <a name="get-the-scan-data-label"></a>La etiqueta de datos de análisis
 
-Para obtener la etiqueta de código de barras descodificada, hay algunas cosas que tienes que tener en cuenta. Solo determinados tipos de datos contienen texto codificado, por lo que debe comprobar si la simbología puede convertirse en una cadena y, a continuación, convertir el búfer obtenemos desde **ScanDataLabel** a una cadena codificada de UTF-8.
+Para obtener la etiqueta descodificada de código de barras, hay algunas cosas que tiene que tener en cuenta. Sólo ciertos tipos de datos contienen texto codificado, por lo que debe comprobar si la simbología puede convertirse en una cadena y, a continuación, convertir el búfer recibimos desde **ScanDataLabel** a cadena codificada UTF-8.
 
 ```cs
 private string GetDataLabel(BarcodeScannerDataReceivedEventArgs args)
@@ -102,9 +102,9 @@ private string GetDataLabel(BarcodeScannerDataReceivedEventArgs args)
 }
 ```
 
-### <a name="get-the-raw-scan-data"></a>Obtener los datos de análisis sin procesar
+### <a name="get-the-raw-scan-data"></a>Obtener los datos de análisis
 
-Para obtener completo, los datos sin procesar desde el código de barras, simplemente convertimos el búfer que obtenemos desde **ScanData** en una cadena.
+Para obtener el completo, los datos sin procesar del código de barras, tan sólo convertimos el búfer que se obtienen de **ScanData** en una cadena.
 
 ```cs
 private string GetRawData(BarcodeScannerDataReceivedEventArgs args)
@@ -123,17 +123,17 @@ private string GetRawData(BarcodeScannerDataReceivedEventArgs args)
 }
 ```
 
-Estos datos son, en general, en el formato que se entregan desde el escáner. Información de encabezado y tráiler del mensaje se quitan, sin embargo, ya que no contienen información útil para una aplicación y están probable que sean específicos de escáner.
+Estos datos son, en general, en el formato tal como se entregan desde el escáner. Información de encabezado y finalizador de mensaje se quitan, sin embargo, puesto que no contienen información útil para una aplicación y están probable que sean específicos de escáner.
 
-Información de encabezado común es un carácter de prefijo (por ejemplo, un carácter STX). Información de tráiler común es un carácter de terminador (por ejemplo, un carácter ETX o CR) y un carácter de comprobación de bloque si uno generado por el analizador.
+Información común de encabezado es un carácter de prefijo (por ejemplo, un carácter STX). Información común de remolque es un carácter de terminador (por ejemplo, un carácter ETX o CR) y un carácter de comprobación de bloque si uno es generada por el analizador.
 
-Esta propiedad debe incluir un carácter de simbología si se devuelve una por el analizador (por ejemplo, una **A** para UPC-A). También se debe incluir dígitos de verificación si están presentes en la etiqueta y devuelto por el analizador. (Ten en cuenta que caracteres simbología y dígitos de verificación pueden o no esté presentes, según la configuración del escáner. El analizador devolverá ellos si está presente, pero no generarán o calcule si están presentes.)
+Esta propiedad debe incluir un carácter de simbología si uno es devuelto por el escáner (por ejemplo, **A** para UPC-A). También debe incluir dígitos de control si están presentes en la etiqueta y devueltos por el analizador. (Tenga en cuenta que los caracteres simbología y dígitos de control pueden o pueden no estar presentes, dependiendo de la configuración del escáner. El analizador volverá ellos si presentes, pero no generarán o calcularlos si están ausentes.)
 
-Algunos productos pueden marcarse con un código de barras adicional. Este código de barras normalmente se coloca a la derecha del código de barras principal y consta de un dos o cinco caracteres adicionales de información. Si el escáner lee los artículos que contiene los códigos de barras adicionales y principales, los caracteres adicionales se anexan a los caracteres principales y el resultado se entrega a la aplicación como una etiqueta. (Ten en cuenta que un escáner puede admitir una configuración que habilita o deshabilita la lectura de códigos adicionales.)
+Productos pueden estar marcado con un código de barras adicional. Este código de barras normalmente se coloca a la derecha del código de barras principal y consiste en un dos o cinco caracteres adicionales de información. Si el analizador lee la mercancía que contiene códigos de barras principal y complementarios, los caracteres adicionales se anexan a los caracteres principales y el resultado se envía a la aplicación como una etiqueta. (Tenga en cuenta que un analizador puede admitir una configuración que habilita o deshabilita la lectura de códigos adicionales.)
 
-Algunos productos pueden marcarse con varias etiquetas, a veces se denomina *multisymbol etiquetas* o *etiquetas en niveles*. Estos códigos de barras normalmente se organizan verticalmente y pueden ser de la simbología iguales o diferente. Si el escáner lee los artículos que contienen varias etiquetas, cada código de barras se entrega a la aplicación como una etiqueta independiente. Esto es necesario debido a la falta de normalización de estos tipos de códigos de barras actual. Uno no es capaz de determinar todas las variaciones en función de los datos de códigos de barras individuales. Por lo tanto determinar cuándo un código de barras de etiqueta varios se ha leído en función de los datos devueltos que la aplicación. (Ten en cuenta que un escáner puede o no es posible que admitan la lectura de varias etiquetas.)
+Algunos productos pueden marcarse con varias etiquetas, a veces llamadas *multisymbol etiquetas* o *etiquetas en niveles*. Estos códigos de barras normalmente se organizan verticalmente y pueden ser de la simbología iguales o distintas. Si el analizador lee la mercancía que contiene varias etiquetas, cada código de barras se entrega a la aplicación como una etiqueta independiente. Esto es necesario debido a la falta de estandarización de estos tipos de código de barras. Uno no es capaz de determinar todas las variaciones en función de los datos de código de barras individuales. Por lo tanto, la aplicación necesitará determinar cuándo un código de barras de la etiqueta varias lee en función de los datos devueltos. (Tenga en cuenta que un escáner puede o no admitir la lectura de varias etiquetas).
 
-Este valor se establece antes de que se genere a la aplicación de un evento de **DataReceived** .
+Este valor se establece antes de un evento **DataReceived** se eleva a la aplicación.
 
 [!INCLUDE [feedback](./includes/pos-feedback.md)]
 

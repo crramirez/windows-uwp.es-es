@@ -15,11 +15,11 @@ dev_langs:
 - cpp
 - cppwinrt
 ms.openlocfilehash: b4e3678e17e7545dfe9cb4049ace7ff864198156
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4086770"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4114691"
 ---
 # <a name="xaml-lighting"></a>Iluminación de XAML
 
@@ -29,7 +29,7 @@ Puedes aplicar luces a [**elementos visuales**](https://msdn.microsoft.com/libra
 
 ## <a name="applying-lights-to-xaml-uielements"></a>Aplicar luces a elementos de interfaz de usuario de XAML
 
-Los objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) se usan para aplicar objetos [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) para iluminar dinámicamente los elementos de interfaz de usuario de XAML. El objeto XamlLight proporciona métodos para dirigirse a UIElements o pinceles de XAML, aplicar luces a los árboles de UIElements, y lo que ayuda a administrar la duración de CompositionLight usan recursos en función de si en este momento.
+Los objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) se usan para aplicar objetos [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) para iluminar dinámicamente los elementos de interfaz de usuario de XAML. XamlLight proporciona métodos para destino UIElements o pinceles de XAML, aplicar las luces a árboles de elementos de IU, y ayudar a administrar la duración de CompositionLight utilizan recursos en función de si en la actualidad.
 
 - Si seleccionas un objeto **Brush** con un objeto XamlLight, la luz iluminará todas las partes de cualesquiera UIElements que usen dicho pincel.
 - Si seleccionas un **UIElement** con un objeto XamlLight, en ese caso la luz iluminará todo el UIElement y sus UIElement secundarios.
@@ -38,7 +38,7 @@ Los objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) se usan pa
 
 [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) es una clase base que se puede usar para crear las luces personalizadas.
 
-En este ejemplo se muestra la definición de un objeto XamlLight personalizado que se aplica un foco de luz varios colores dirigida UIElements y pinceles.
+Este ejemplo muestra la definición de un XamlLight personalizado que se aplica un foco multicolor destino UIElements y pinceles.
 
 ```csharp
 public sealed class OrangeSpotLight : XamlLight
@@ -461,10 +461,10 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-A continuación, puedes aplicar esta luz a cualquier UIElement de XAML o pincel para mejorar su. En este ejemplo se muestra diferentes usos posibles.
+A continuación, puede aplicar esta luz a cualquier XAML UIElement o pincel a la luz de ellos. Este ejemplo muestra diversos usos posibles.
 
 > [!Important]
-> Para [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), quitar las dos repeticiones de `local:OrangeSpotLight.IsTarget="True"` desde el marcado siguiente. Las propiedades adjuntas se establecen ya en el código subyacente.
+> Para [C + + / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), quitar las dos repeticiones de `local:OrangeSpotLight.IsTarget="True"` desde el marcado siguiente. Las propiedades adjuntas ya están establecidas en el código subyacente.
 
 ```xaml
 <StackPanel Width="100">
@@ -493,9 +493,9 @@ A continuación, puedes aplicar esta luz a cualquier UIElement de XAML o pincel 
 </StackPanel>
 ```
 
-Los resultados de este código XAML tiene este aspecto.
+Los resultados de este XAML tiene este aspecto.
 
-![Ejemplos de elementos se iluminan con una luz de xaml](images/orange-spot-light.png)
+![Ejemplos de elementos de una luz de xaml](images/orange-spot-light.png)
 
 > [!Important]
 > El establecimiento del objeto UIElement.Lights en el marcado, como se muestra en el ejemplo anterior, solo se admite para las aplicaciones con una versión mínima igual a Windows 10 Creators Update o una versión posterior. Para las aplicaciones que se dirigen a versiones anteriores, las luces se deben crear en el código subyacente.

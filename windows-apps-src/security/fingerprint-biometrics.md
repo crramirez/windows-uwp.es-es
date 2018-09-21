@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 287b2b0fedac112f57f0342420a7830db5aa13be
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089782"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4115591"
 ---
 # <a name="fingerprint-biometrics"></a>Biometría de huellas digitales
 
