@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 842d26a2bb257dd182813832c5e6480237a9f220
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4114749"
+ms.locfileid: "4129788"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Restricciones de exportación sobre la criptografía
 

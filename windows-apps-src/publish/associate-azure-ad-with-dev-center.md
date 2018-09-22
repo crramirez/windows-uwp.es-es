@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, azure ad, inquilino de azure, inquilino de aad, inquilino de azure ad, administración de inquilinos, inquilinos
 ms.localizationpriority: medium
 ms.openlocfilehash: dd729d76705849c981516109da39bbd27c140286
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4118991"
+ms.locfileid: "4125888"
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Asociar AzureActiveDirectory a la cuenta del Centro de desarrollo
 

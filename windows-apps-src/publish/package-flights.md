@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, distribución de paquetes piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: d5f43173c85bc8a696d7dbc9967e704f79db2b3f
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4119299"
+ms.locfileid: "4122162"
 ---
 # <a name="package-flights"></a>Paquetes piloto
 

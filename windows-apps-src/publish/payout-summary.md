@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, resumen de pago, extracto, pagos, ganancias, pagos, pago, beneficios
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d9845fdbd9c8dad77c8599a04850a47573858e8
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110881"
+ms.locfileid: "4130384"
 ---
 # <a name="payout-summary"></a>Resumen de pago
 

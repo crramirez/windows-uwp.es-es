@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, panel, devcenter, centro de desarrollo
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4111021"
+ms.locfileid: "4129980"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Usar el Panel del Centro de desarrollo de Windows
 

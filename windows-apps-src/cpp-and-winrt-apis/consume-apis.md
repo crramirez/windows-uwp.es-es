@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: wndows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
 ms.openlocfilehash: 136abd5e3312b7a387ccc3b7c993d4e70d8ef0d4
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4113191"
+ms.locfileid: "4128404"
 ---
 # <a name="consume-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Consumir API con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tema muestra cómo usar API C++/WinRT, ya formen parte de Windows, se hayan implementado por un proveedor de componentes de terceros o por ti mismo.

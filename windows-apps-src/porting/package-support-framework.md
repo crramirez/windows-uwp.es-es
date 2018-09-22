@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e5119696498156d36ec63b16b1d76c00b03f4df
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4117175"
+ms.locfileid: "4128390"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correcciones en tiempo de ejecución a un paquete MSIX con el marco de soporte técnico de paquete
 

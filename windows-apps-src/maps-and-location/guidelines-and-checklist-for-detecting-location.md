@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ubicación, location, mapa, map, ubicación geográfica, geolocation
 ms.localizationpriority: medium
 ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4117163"
+ms.locfileid: "4122996"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Directrices para las aplicaciones con reconocimiento de ubicación
 

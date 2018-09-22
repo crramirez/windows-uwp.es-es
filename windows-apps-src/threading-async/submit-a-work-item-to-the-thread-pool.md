@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
 ms.openlocfilehash: 29d7fc361e446207c8e14f83ca3f663bd5072e6e
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4117613"
+ms.locfileid: "4130532"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
