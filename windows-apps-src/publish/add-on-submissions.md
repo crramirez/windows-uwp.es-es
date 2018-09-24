@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, iap, compra desde la aplicación, producto desde la aplicación, envío de iap
 ms.localizationpriority: medium
 ms.openlocfilehash: 37d05722578ed945fbf75040f96360bb569c6d06
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4122276"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155282"
 ---
 # <a name="add-on-submissions"></a>Envíos de complementos
 
@@ -85,7 +85,7 @@ Cuando hayas terminado de introducir esta información, haz clic en **Enviar a l
 
 ## <a name="updating-an-add-on-after-publication"></a>Actualizar un complemento después de su publicación
 
-Puedes realizar cambios en un complemento publicado en cualquier momento. Cambios de los complementos se envía y publican independientemente de la aplicación, por lo que por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
+Puedes realizar cambios en un complemento publicado en cualquier momento. Cambios de los complementos se envía y se publican independientemente de la aplicación, por lo que por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
 
 > [!IMPORTANT]
 > Si la aplicación está disponible para los clientes de Windows8.x, tendrás que crear y publicar un nuevo envío de aplicación para que las actualizaciones de los complementos sean visibles para dichos clientes. De forma parecida, si agregas nuevos complementos a una aplicación destinada a Windows8.x después que dicha aplicación se haya publicado, tendrás que actualizar el código de la aplicación para hacer referencia a esos complementos y, a continuación, volver a enviar la aplicación. De lo contrario, los nuevos complementos no serán visibles para los clientes de Windows8.x.

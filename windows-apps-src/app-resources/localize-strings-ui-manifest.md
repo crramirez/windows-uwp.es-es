@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4128366"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155430"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
@@ -274,7 +274,7 @@ Para una biblioteca de Windows Runtime (Windows Universal), si el espacio de nom
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-No es necesario hacerlo para una biblioteca de clases (Windows Universal). En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar tu componente o archivo PRI de la biblioteca. Cada recurso `uri` se muestra en el archivo de volcado.
+No necesitas hacerlo para una biblioteca de clases (Windows Universal). En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar tu componente o archivo PRI de la biblioteca. Cada recurso `uri` se muestra en el archivo de volcado.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...

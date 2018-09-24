@@ -15,11 +15,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4124940"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4154420"
 ---
 # <a name="pivot"></a>Dinámica
 
@@ -49,16 +49,16 @@ El control dinámico, al igual que [NavigationView](navigationview.md), subraya 
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-Para lograr la navegación superior comunes y patrones de pestañas, te recomendamos que uses [NavigationView](navigationview.md), que se adapta a diferentes tamaños de pantalla y permite la personalización mayor automáticamente.
+Para lograr la navegación superior comunes y patrones de pestañas, se recomienda usar [NavigationView](navigationview.md), que se adapta a diferentes tamaños de pantalla y permite la personalización mayor automáticamente.
 
-Sin embargo, si la navegación requiere Deslizar rápidamente la entrada táctil, se recomienda usar el control dinámico.
+Sin embargo, si la navegación requiere Deslizar rápidamente la entrada táctil, se recomienda usar control dinámico.
 
 Las otras diferencias clave entre los controles de NavigationView y controles dinámicos son el comportamiento de desbordamiento predeterminada y la API de navegación:
 
 - Desbordamiento carruseles elementos, mientras NavigationView usa un menú desplegable de desbordamiento para que los usuarios pueden ver todos los elementos de control dinámico.
 - Control dinámico controla la navegación entre las secciones de contenido, mientras que NavigationView permite tener más control sobre el comportamiento de navegación.
 
-## <a name="use-navigationview-instead-of-pivot"></a>Usar NavigationView en lugar de control dinámico
+## <a name="use-navigationview-instead-of-pivot"></a>Usa NavigationView en lugar de control dinámico
 
 Si la interfaz de usuario de la aplicación usa el control dinámico, a continuación, puedes convertir tabla dinámica a NavigationView con el siguiente código.
 
@@ -87,7 +87,7 @@ Este código XAML crea un NavigationView con 3 secciones de contenido, como en e
 </Page>
 ```
 
-NavigationView ofrece más control sobre la personalización de navegación y requiere correspondiente de código subyacente. Para anexarlos el XAML anterior, utilice el siguiente código subyacente:
+NavigationView ofrece más control sobre la personalización de navegación y requiere correspondiente de código subyacente. Para anexarlos el código XAML anterior, usa el siguiente código subyacente:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -116,7 +116,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Este código imita la experiencia de exploración integrada del control dinámico, menos la experiencia de deslizar rápidamente táctil entre las secciones de contenido. Sin embargo, como puedes ver, también se pueden personalizar varios puntos, incluida la transición animada, los parámetros de navegación y las funcionalidades de la pila.
+Este código imita la experiencia de exploración integrada del control dinámico, menos la experiencia de deslizar rápidamente táctil entre las secciones de contenido. Sin embargo, como puedes ver, también se pueden personalizar varios puntos, incluida la transición animada, los parámetros de navegación y funcionalidades de la pila.
 
 ## <a name="create-a-pivot-control"></a>Crear un control dinámico
 

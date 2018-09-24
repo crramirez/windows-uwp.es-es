@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4125556"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4154846"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Ampliar tu aplicación de escritorio con componentes de UWP modernos
 
@@ -140,7 +140,7 @@ Agregar una interfaz de usuario de XAML a tu proyecto de UWP Este es el XAML par
 
 ### <a name="add-a-protocol-extension"></a>Agregar una extensión de protocolo
 
-En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución y agrega esta extensión.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución y agrega esta extensión.
 
 ```xml
 <Extensions>
@@ -311,7 +311,7 @@ public sealed class AppServiceTask : IBackgroundTask
 
 <a id="extension" />
 
-### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Agregar una extensión de servicio de aplicaciones para el proyecto de empaquetado
+### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Agregar una extensión de servicio de aplicaciones al proyecto de empaquetado
 
 Abre el archivo **package.appxmanifest** del proyecto de empaquetado y agrega una extensión de servicio de aplicaciones para la ``<Application>`` elemento.
 

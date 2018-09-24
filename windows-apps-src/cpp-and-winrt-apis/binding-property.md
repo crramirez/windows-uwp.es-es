@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, control, enlace, propiedad
 ms.localizationpriority: medium
 ms.openlocfilehash: bdf4d3ff17dcdf51dba2e37929228560e2e58fb5
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4122878"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155466"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>Controles XAML; enlazar a una propiedad [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Una propiedad que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una propiedad *observable*. Esta idea se basa en el modelo de diseño de software conocido como el *patrón observador*. Este tema muestra cómo implementar propiedades observables en C++/WinRT y cómo enlazar controles de elementos XAML a dichas propiedades.
@@ -49,11 +49,11 @@ namespace Bookstore
 ```
 
 > [!NOTE]
-> Las clases del modelo de vista&mdash;de hecho, cualquier clase en tiempo de ejecución que se declara en la aplicación&mdash;que se deriva de una clase base. La clase **BookSku** declarada anteriormente es un ejemplo de ello. Implementa una interfaz, pero no deriva de una clase base.
+> Tus clases del modelo de vista&mdash;de hecho, cualquier clase en tiempo de ejecución que se declara en la aplicación&mdash;que se deriva de una clase base. La clase **BookSku** declarada anteriormente es un ejemplo de ello. Implementa una interfaz, pero no deriva de una clase base.
 >
-> Cualquier clase en tiempo de ejecución que se declara en la aplicación que *hace* derivar de una base de la clase se conoce como un *ajustable* clase. Y hay restricciones de las clases. Para una aplicación pase las pruebas del [Kit de certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md) utilizadas por Visual Studio y Microsoft Store para validar envíos (y, por tanto, para que la aplicación se añada correctamente en Microsoft Store), una clase puede componer debe en última instancia, derivar de una clase base de Windows. Lo que significa que la clase en la raíz muy la jerarquía de herencia debe ser un tipo que se origine en un espacio de nombres Windows *. Si es necesario derivar una clase en tiempo de ejecución de una clase base&mdash;por ejemplo, para implementar una clase **BindableBase** para todos los modelos de vista derivar de&mdash;, a continuación, puedes derivar de [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
+> Cualquier clase en tiempo de ejecución que se declara en la aplicación que *hace* derivar de una base de la clase se conoce como un *ajustable* clase. Y hay restricciones alrededor de las clases. Para una aplicación pase las pruebas del [Kit de certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md) utilizadas por Visual Studio y Microsoft Store para validar envíos (y, por tanto, para que la aplicación se añada correctamente en Microsoft Store), una clase puede componer debe en última instancia, derivar de una clase base de Windows. Lo que significa que la clase en la raíz muy la jerarquía de herencia debe ser un tipo que se origine en un espacio de nombres Windows *. Si es necesario derivar una clase en tiempo de ejecución de una clase base&mdash;por ejemplo, para implementar una clase **BindableBase** para todos los modelos de vista derivar de&mdash;, a continuación, puedes derivar de [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
 >
-> Un modelo de vista es una abstracción de una vista y, por lo tanto, está enlazado directamente a la vista (el marcado XAML). Un modelo de datos es una abstracción de datos, y se consume solo desde tus modelos de vista y no se vincula directamente en XAML. Por lo tanto, puedes declarar tus modelos de datos no como clases en tiempo de ejecución, pero como estructuras de C++ o clases. No necesitan estar declarados en MIDL y eres libre de usar cualquier que como la jerarquía de herencia.
+> Un modelo de vista es una abstracción de una vista y, por lo tanto, está enlazado directamente a la vista (el marcado XAML). Un modelo de datos es una abstracción de datos, y se consume solo desde tus modelos de vista y no se vincula directamente en XAML. Por lo tanto, puedes declarar tus modelos de datos no como clases en tiempo de ejecución, pero como clases o estructuras de C++. No necesitan estar declarados en MIDL y eres libre de usar cualquier que como la jerarquía de herencia.
 
 Guarda el archivo y compila el proyecto. Durante el proceso de compilación, la herramienta `midl.exe` se ejecutará para crear un archivo de metadatos de Windows Runtime (`\Bookstore\Debug\Bookstore\Unmerged\BookSku.winmd`) que describe la clase en tiempo de ejecución. Después se ejecutará la herramienta `cppwinrt.exe` para generar archivos de código fuente y ayudarte a crear y consumir tu clase en tiempo de ejecución. Estos archivos incluyen códigos auxiliares para que puedas empezar a implementar la clase en tiempo de ejecución **BookSku** que declaraste en tu archivo IDL. Estos archivos de código auxiliar son `\Bookstore\Bookstore\Generated Files\sources\BookSku.h` y `BookSku.cpp`
 
@@ -146,7 +146,7 @@ namespace Bookstore
 }
 ```
 
-Guarda y compila Copia `BookstoreViewModel.h` y `BookstoreViewModel.cpp` desde la carpeta `Generated Files` en la carpeta del proyecto e inclúyelos en el proyecto. Abre estos archivos e implementa la clase en tiempo de ejecución, como se muestra a continuación. Ten en cuenta cómo, en `BookstoreViewModel.h`, incluimos `BookSku.h`, que declara el tipo de implementación (**winrt::Bookstore::implementation::BookSku**). Y nos estamos restaurar el constructor predeterminado mediante la eliminación `= delete`.
+Guarda y compila Copia `BookstoreViewModel.h` y `BookstoreViewModel.cpp` desde la carpeta `Generated Files` en la carpeta del proyecto e inclúyelos en el proyecto. Abre estos archivos e implementar la clase en tiempo de ejecución, como se muestra a continuación. Ten en cuenta cómo, en `BookstoreViewModel.h`, incluimos `BookSku.h`, que declara el tipo de implementación (**winrt::Bookstore::implementation::BookSku**). Y nos estamos restaurar el constructor predeterminado mediante la eliminación `= delete`.
 
 ```cppwinrt
 // BookstoreViewModel.h
@@ -208,9 +208,9 @@ namespace Bookstore
 }
 ```
 
-Guarda el archivo. No se compilará el proyecto para finalización en ese momento, pero compilar ahora es algo útil hacer porque vuelve a crear los archivos de código de origen en el que se implementa la clase en tiempo de ejecución de **MainPage** (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`). Por lo tanto, seguir adelante y generar ahora. El error de compilación que puede esperar ver en esta etapa es **'MainViewModel': no es un miembro de 'winrt::Bookstore::implementation::MainPage'**.
+Guarda el archivo. No se compilará el proyecto a finalización en ese momento, pero compilar ahora es algo útil hacer porque vuelve a crear los archivos de código de origen en el que se implementa la clase en tiempo de ejecución de **MainPage** (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`). Por lo tanto, seguir adelante y generar ahora. El error de compilación que puede esperar ver en esta etapa es **'MainViewModel': no es un miembro de 'winrt::Bookstore::implementation::MainPage'**.
 
-Si se omite la inclusión de `BookstoreViewModel.idl` (ver la descripción de `MainPage.idl` anteriormente), a continuación, podrás ver el error **se espera \ < cerca de "MainViewModel"**. Otra sugerencia es asegurarse de que deja todos los tipos en el mismo espacio de nombres: el espacio de nombres que se muestra en las listas de código.
+Si se omite la inclusión de `BookstoreViewModel.idl` (ver la descripción de `MainPage.idl` anteriormente), a continuación, podrás ver el error **se espera \ < cerca "MainViewModel"**. Otra sugerencia es asegurarse de que deja todos los tipos en el mismo espacio de nombres: el espacio de nombres que se muestra en las listas de código.
 
 Para resolver el error que esperamos ver, tendrás que ahora copiar los códigos auxiliares de descriptor de acceso para la propiedad **MainViewModel** fuera de los archivos generados (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`) y en `\Bookstore\Bookstore\MainPage.h` y `MainPage.cpp`.
 

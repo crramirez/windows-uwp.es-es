@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 259b171ea490272241fcef1170e2413cb40d7330
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4123018"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155016"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y muestras para aplicaciones para UWP
  
@@ -52,7 +52,7 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
         <a href="https://aka.ms/adobephotoshoptoolkit">Descarga</a>
     :::column-end:::
     :::column:::
-        ![imagen principal](images/framer.png) <b>de herramientas de Framer</b><br>
+        ![imagen principal](images/framer.png) <b>Kit de herramientas de Framer</b><br>
         v1806, de junio de 2018<br>
         <a href="https://aka.ms/framertoolkit">Descarga</a>
     :::column-end:::

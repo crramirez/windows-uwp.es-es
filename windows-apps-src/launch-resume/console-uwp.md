@@ -10,17 +10,17 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4c1b1df8ad29635f38ae5b373685d3504a4eb60
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4129716"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155894"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a>Crear una aplicación de consola de la Plataforma universal de Windows
 
 En este tema se describe cómo crear un [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) o C++ / CX Universal Windows Platform (UWP) aplicación de consola.
 
-A partir de Windows 10, versión 1803, puedes escribir C++ / WinRT o C++ / CX UWP las aplicaciones de consola que se ejecutan en una ventana de consola, como una ventana de consola DOS o PowerShell. Las aplicaciones de consola usan la ventana de consola para entrada y salida y pueden usar las funciones [En tiempo de ejecución de C Universal](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) **printf** y **getchar**. Las aplicaciones de consola UWP pueden publicarse en la Microsoft Store. Tienen una entrada en la lista de aplicaciones y un icono principal que se puede anclar al menú Inicio. Aplicaciones de consola UWP se pueden iniciar desde el menú Inicio, aunque generalmente se inician desde la línea de comandos.
+A partir de Windows 10, versión 1803, puedes escribir C++ / WinRT o C++ / CX UWP las aplicaciones de consola que se ejecutan en una ventana de consola, como una ventana de consola DOS o PowerShell. Las aplicaciones de consola usan la ventana de consola para entrada y salida y pueden usar las funciones de [Universal en tiempo de ejecución de C](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) como **printf** y **getchar**. Las aplicaciones de consola UWP pueden publicarse en la Microsoft Store. Tienen una entrada en la lista de aplicaciones y un icono principal que se puede anclar al menú Inicio. Aplicaciones de consola UWP se pueden iniciar desde el menú Inicio, aunque generalmente se inician desde la línea de comandos.
 
 Para ver una en acción, este es un vídeo sobre cómo crear una aplicación de consola UWP.
 

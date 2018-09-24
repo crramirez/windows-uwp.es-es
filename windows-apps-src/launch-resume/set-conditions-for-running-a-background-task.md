@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 556a787eb1e92e4c8adb7457235afb45c02df2dc
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4125878"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4156236"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Establecer condiciones para ejecutar una tarea en segundo plano
 
@@ -31,9 +31,9 @@ ms.locfileid: "4125878"
 
 Aprende a establecer condiciones que controlan cuándo se ejecutará tu tarea en segundo plano.
 
-En ocasiones, las tareas en segundo plano requieren ciertas condiciones deben cumplirse para que la tarea en segundo plano se desarrolle correctamente. Puedes especificar una o más de las condiciones especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) al registrar tu tarea en segundo plano. La condición se comprobará después de que se ha desencadenado el desencadenador. La tarea en segundo plano, a continuación, se pondrá en cola, pero no se ejecutará hasta que se satisfagan todas las condiciones.
+En ocasiones, tareas en segundo plano requieren ciertas condiciones deben cumplirse para que la tarea en segundo plano se desarrolle correctamente. Puedes especificar una o más de las condiciones especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) al registrar tu tarea en segundo plano. La condición se comprobará después de que el desencadenador. La tarea en segundo plano, a continuación, se pondrá en cola, pero no se ejecutará hasta que se satisfagan todas las condiciones.
 
-Establecer condiciones sobre tareas en segundo plano ahorra vida de la batería y la CPU evitando que las tareas se ejecuten innecesariamente. Por ejemplo, si una tarea en segundo plano se ejecuta en un temporizador y requiere conectividad a Internet, agrega la condición **InternetAvailable** al [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar la tarea. Esto ayudará a impedir que la tarea use recursos del sistema y consuma batería de forma innecesaria al ejecutarse en segundo plano solo cuando haya transcurrido el temporizador *e* Internet esté disponible.
+Establecer condiciones sobre tareas en segundo plano, ahorra batería y la CPU evitando que las tareas se ejecuten innecesariamente. Por ejemplo, si una tarea en segundo plano se ejecuta en un temporizador y requiere conectividad a Internet, agrega la condición **InternetAvailable** al [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar la tarea. Esto ayudará a impedir que la tarea use recursos del sistema y consuma batería de forma innecesaria al ejecutarse en segundo plano solo cuando haya transcurrido el temporizador *e* Internet esté disponible.
 
 También es posible combinar varias condiciones mediante una llamada a **AddCondition** varias veces en el mismo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Procura no agregar condiciones conflictivas, como **UserPresent** y **UserNotPresent**.
 
@@ -45,7 +45,7 @@ Este tema se aplica a las tareas en segundo plano que se ejecutan fuera de proce
 
 Antes de agregar la condición, crea un objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) para representar la condición que debe estar vigente para que ejecutar una tarea en segundo plano. En el constructor, especifica la condición que debe cumplirse con un valor de enumeración [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) .
 
-El siguiente código crea un objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) que especifica la condición de **InternetAvailable** :
+El siguiente código crea un objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) que especifica **la internetavailable** :
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -80,7 +80,7 @@ taskBuilder->AddCondition(internetCondition);
 
 ## <a name="register-your-background-task"></a>Registro de tu tarea en segundo plano
 
-Ahora puedes registrar la tarea en segundo plano con el método [**registrar**](https://msdn.microsoft.com/library/windows/apps/br224772) y la tarea en segundo plano no comenzará hasta que se cumpla la condición especificada.
+Ahora puedes registrar la tarea en segundo plano con el método de [**registro**](https://msdn.microsoft.com/library/windows/apps/br224772) y la tarea en segundo plano no comenzará hasta que se cumpla la condición especificada.
 
 El siguiente código registra la tarea y almacena el objeto BackgroundTaskRegistration resultante:
 

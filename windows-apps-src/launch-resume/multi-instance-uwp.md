@@ -4,17 +4,17 @@ title: Crear una aplicación universal de Windows de instancias múltiples
 description: En este tema, se describe cómo escribir aplicaciones para UWP que admiten instancias múltiples.
 keywords: uwp de instancias múltiples
 ms.author: twhitney
-ms.date: 09/19/2018
+ms.date: 09/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9302ed0375739153eb95ac2b54c1ed396b14daee
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.openlocfilehash: dd4e0ced4de2419858424a88f5fa5ce66f5b4286
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4127000"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4156100"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crear una aplicación universal de Windows de instancias múltiples
 
@@ -22,13 +22,16 @@ En este tema, se describe cómo crear aplicaciones para la Plataforma universal 
 
 Desde Windows 10, versión 1803 (10.0; Compilación 17134) en adelante, tu aplicación para UWP puede optar por admitir varias instancias. Si se está ejecutando una instancia de una aplicación para UWP de varias instancias y llega una solicitud de activación posterior, la plataforma no activará la instancia existente. En su lugar, creará una instancia nueva, que se ejecuta en un proceso independiente.
 
+> [!IMPORTANT]
+> Instancias múltiples se admiten para aplicaciones de JavaScript, pero no es el redireccionamiento de instancias múltiples. Dado que no se admite el redireccionamiento de instancias múltiples para aplicaciones de JavaScript, la clase [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) no es útil para dichas aplicaciones.
+
 ## <a name="opt-in-to-multi-instance-behavior"></a>Participar en el comportamiento de instancias múltiples
 
 Si vas a crear una nueva aplicación de instancias múltiples, puedes instalar el **proyecto de aplicación de instancias múltiples Templates.VSIX**, disponible en [Visual Studio Marketplace ](https://aka.ms/E2nzbv). Después de instalar las plantillas, estarán disponibles en el cuadro de diálogo **Nuevo proyecto** en **Visual C# > Windows Universal** (o **Otros lenguajes > Visual C++ > Windows Universal**).
 
 Se instalan dos plantillas: **Aplicaciones para UWP de varias instancias**, que proporciona la plantilla para crear una aplicación de instancias múltiples y **Aplicación para UWP de redireccionamiento de instancias múltiples**, que proporciona lógica adicional que se puede generar para iniciar una nueva instancia o para activar de forma selectiva una instancia que ya se ha iniciado. Por ejemplo, quizás solo deseas que un mismo documento solo pueda editarlo una instancia al mismo tiempo, por lo que llevas al primer plano la instancia que tiene abierto el archivo en lugar de iniciar una nueva instancia.
 
-Ambas plantillas agregan `SupportsMultipleInstances` a la `package.appxmanifest` archivo. Ten en cuenta el prefijo de espacio de nombres `desktop4` y `iot2`: sólo los proyectos destinados al escritorio o proyectos de Internet de las cosas (IoT) admiten instancias múltiples.
+Ambas plantillas agregan `SupportsMultipleInstances` a la `package.appxmanifest` archivo. Ten en cuenta el prefijo de espacio de nombres `desktop4` y `iot2`: solo proyectos destinados al escritorio o los proyectos de Internet de las cosas (IoT) admiten instancias múltiples.
 
 ```xml
 <Package
@@ -59,7 +62,7 @@ Para ver esto en acción, mira este vídeo acerca de cómo crear aplicaciones pa
 
 La plantilla **Aplicación para UWP de varias instancias** agrega `SupportsMultipleInstances`al archivo package.appxmanifest, como se ha mostrado anteriormente, y también agrega un **Program.cs** (o **Program.cpp**, si estás usando la versión C++ de la plantilla) al proyecto que contiene una función `Main()`. La lógica para redirigir la activación se incluye en la función `Main`. A continuación se muestra la plantilla para **Program.cs** .
 
-La propiedad [AppInstance.RecommendedInstance](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa la instancia preferida siempre shell para esta solicitud de activación, si existe una (o `null` si hay uno). Si el shell proporciona una preferencia, a continuación, puede puede redirigir la activación a esa instancia, o puede omitir si eliges.
+La propiedad [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa la instancia preferida proporcionados shell para esta solicitud de activación, si existe una (o `null` si hay uno). Si el shell proporciona una preferencia, a continuación, puede puede redirigir la activación a esa instancia, o puedes omitirla si eliges.
 
 ``` csharp
 public static class Program
@@ -109,7 +112,7 @@ public static class Program
 }
 ```
 
-`Main()` es lo primero que se ejecuta. Se ejecuta antes de [OnLaunched()](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) y [OnActivated ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Esto permite determinar si hay que activar esta u otra instancia antes de que se ejecute cualquier otro código de inicialización de la aplicación.
+`Main()` es lo primero que se ejecuta. Se ejecuta antes de [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) y [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Esto permite determinar si hay que activar esta u otra instancia antes de que se ejecute cualquier otro código de inicialización de la aplicación.
 
 El código anterior determina si se activa una instancia existente o nueva de la aplicación. Se usa una clave se usa para determinar si hay una instancia que deseas activar. Por ejemplo, si la aplicación se puede iniciar con [Administrar la activación de archivos](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-file-activation), podrías usar el nombre de archivo como clave. A continuación, puedes comprobar si una instancia de la aplicación ya está registrada con esa clave y activarla en lugar de abrir una nueva instancia. Esta es la idea que hay detrás del código: `var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
 
@@ -129,7 +132,7 @@ Si se encuentra una instancia registrada con la clave, esa instancia se activa. 
 - Para evitar problemas de condiciones de carrera y contención, la aplicación de instancias múltiples debe tomar medidas para sincronizar o particionar el acceso a la configuración, el almacenamiento local de la aplicación y cualquier otro recurso (por ejemplo, archivos de usuario, un almacén de datos etc.) que puede compartirse entre varias instancias. Hay disponibles mecanismos de sincronización estándar, como exclusiones mutuas, semáforos, eventos, etc.
 - Si la aplicación tiene `SupportsMultipleInstances` en su archivo Package.appxmanifest, sus extensiones no tienen que declarar `SupportsMultipleInstances`. 
 - Si agregas `SupportsMultipleInstances` a cualquier otra extensión, aparte de las tareas en segundo plano tareas o los servicios de la aplicación, y la aplicación que hospeda la extensión no declara también `SupportsMultipleInstances` en su archivo Package.appxmanifest, se genera un error del esquema.
-- Las aplicaciones pueden usar la declaración [ResourceGroup](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) en su manifiesto para agrupar varias tareas en segundo plano en el mismo host. Esto entra en conflicto con las instancias múltiples, dónde cada activación va a un host independiente. Por lo tanto, una aplicación no puede declarar `SupportsMultipleInstances` y `ResourceGroup` en su manifiesto.
+- Las aplicaciones pueden usar la declaración de [**ResourceGroup**](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) en su manifiesto para agrupar varias tareas en segundo plano en el mismo host. Esto entra en conflicto con las instancias múltiples, dónde cada activación va a un host independiente. Por lo tanto, una aplicación no puede declarar `SupportsMultipleInstances` y `ResourceGroup` en su manifiesto.
 
 ## <a name="sample"></a>Muestra
 

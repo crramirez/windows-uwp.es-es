@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e42ebb2eba7b6465be271e6095100c03798826f
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4130076"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4154650"
 ---
 # <a name="enumerating-point-of-service-devices"></a>Enumeración de dispositivos de punto de servicio
 En esta sección aprenderás cómo [definir un selector de dispositivos](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector) que se usa para consultar los dispositivos disponibles para el sistema y cómo usar este selector para enumerar los dispositivos de punto de servicio mediante uno de los métodos siguientes:
@@ -32,7 +32,7 @@ Mostrar un selector de dispositivos de la interfaz de usuario y que el usuario e
 ## <a name="define-a-device-selector"></a>Definir un selector de dispositivos
 Un selector de dispositivos permite limitar los dispositivos en los que se realizan búsquedas al enumerar los dispositivos.  Esto te permitirá solo obtener los resultados pertinentes y reducir el tiempo que se tarda en enumerar los dispositivos deseados.
 
-Puedes usar el método **GetDeviceSelector** para el tipo de dispositivo que estás buscando para obtener el selector de dispositivos de ese tipo. Por ejemplo, usando [PosPrinter.GetDeviceSelector](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.getdeviceselector#Windows_Devices_PointOfService_PosPrinter_GetDeviceSelector) proporcionará con un selector para enumerar todas las [PosPrinters](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter) conectados al sistema, incluyendo USB, red y las impresoras POS de Bluetooth.
+Puedes usar el método **GetDeviceSelector** para el tipo de dispositivo que estás buscando para obtener el selector de dispositivos de ese tipo. Por ejemplo, usando [PosPrinter.GetDeviceSelector](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.getdeviceselector#Windows_Devices_PointOfService_PosPrinter_GetDeviceSelector) proporcionará con un selector para enumerar todas las [PosPrinters](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter) conectados al sistema, incluyendo USB, red e impresoras POS de Bluetooth.
 
 ```Csharp
 using Windows.Devices.PointOfService;
@@ -62,11 +62,11 @@ string selector = POSPrinter.GetDeviceSelector(PosConnectionTypes.Local);
 ## <a name="method-1-use-a-device-picker"></a>Método 1: Usar un selector de dispositivos
 
 > [!NOTE]
-> Este método requiere el [SDK de Windows Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)más reciente.
+> Este método requiere el más reciente de [Windows SDK Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK).
 
-La clase [DevicePicker](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker) permite mostrar un control flotante del selector que contiene una lista de dispositivos para el usuario puede elegir. Puedes usar la propiedad de [filtro](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter) para elegir qué tipos de dispositivos para mostrar en el selector. Esta propiedad es de tipo [DevicePickerFilter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter). Puedes agregar tipos de dispositivos al filtro mediante la propiedad [SupportedDeviceClasses](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) o [SupportedDeviceSelectors](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors) .
+La clase [DevicePicker](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker) te permite mostrar un control flotante del selector que contiene una lista de dispositivos para el usuario puede elegir. Puedes usar la propiedad de [filtro](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter) para elegir qué tipos de dispositivos para mostrar en el selector. Esta propiedad es de tipo [DevicePickerFilter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter). Puedes agregar tipos de dispositivos al filtro mediante la propiedad [SupportedDeviceClasses](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) o [SupportedDeviceSelectors](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors) .
 
-Cuando estés listo para mostrar el selector de dispositivo, puede llamar el método [PickSingleDeviceAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.picksingledeviceasync) , que se muestra el selector de la interfaz de usuario y devolver el dispositivo seleccionado. Tendrás que especificar [Rect](https://docs.microsoft.com/uwp/api/windows.foundation.rect) que determina dónde aparece el control flotante. Este método devolverá un objeto [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) , por lo tanto, para usarlo con el punto de servicio de API, tendrás que usar el método **FromIdAsync** para la clase de dispositivo en particular que quieras. Puedes pasan la propiedad [DeviceInformation.Id](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) como el parámetro del método *deviceId* y obtén una instancia de la clase de dispositivo como el valor devuelto.
+Cuando estés listo para mostrar el selector de dispositivo, llamar al método [PickSingleDeviceAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.picksingledeviceasync) , que se muestra el selector de la interfaz de usuario y devolver el dispositivo seleccionado. Tendrás que especificar [Rect](https://docs.microsoft.com/uwp/api/windows.foundation.rect) que determina dónde aparece el control flotante. Este método devolverá un objeto [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) , por lo tanto, para usarlo con el punto de servicio de API, tendrás que usar el método **FromIdAsync** para la clase de dispositivo en particular que quieras. Puedes pasan la propiedad [DeviceInformation.Id](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) como el parámetro del método *deviceId* y obtén una instancia de la clase de dispositivo como el valor devuelto.
 
 El siguiente fragmento de código crea un **DevicePicker**, agrega un filtro de escáner de códigos de barras, tiene el usuario elija un dispositivo y, a continuación, crea un objeto **BarcodeScanner** basado en el identificador de dispositivo:
 

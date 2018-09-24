@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4122120"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155616"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -124,7 +124,7 @@ La característica más destacable de Acrylic es su transparencia. Hay dos tipos
 ## <a name="usability-and-adaptability"></a>Facilidad de uso y adaptabilidad
 Acrylic adapta automáticamente su apariencia a una amplia variedad de dispositivos y contextos.
 
-En el modo de contraste alto, los usuarios siguen viendo el color de fondo conocido de su elección en lugar del acrílico. Además, acrílico en segundo plano y acrílico en la aplicación aparezcan como un color sólido:
+En el modo de contraste alto, los usuarios siguen viendo el color de fondo conocido de su elección en lugar del acrílico. Además tanto el acrílico en el fondo como el acrílico en la aplicación aparezcan como un color sólido:
  - Cuando el usuario desactiva la transparencia en Configuración > personalización > colores
  - Cuando se activa el modo de ahorro de batería
  - Cuando la aplicación se ejecuta en hardware de gama baja
