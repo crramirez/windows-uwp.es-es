@@ -8,14 +8,14 @@ ms.date: 8/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, nombres de aplicación, cambiar el nombre de la aplicación, el nombre de la aplicación de actualización, el nombre del juego, nombre del producto
+keywords: Windows 10, uwp, nombres de aplicación, cambian el nombre de la aplicación, el nombre de la aplicación de actualización, el nombre del juego, nombre del producto
 ms.localizationpriority: medium
 ms.openlocfilehash: f0d2c6f72e2f69f0b768af55f9bddeb9bb008027
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4125910"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4153408"
 ---
 # <a name="manage-app-names"></a>Administrar nombres de aplicación
 
@@ -24,7 +24,7 @@ Lo **nombres de aplicación de administrar** le permite ver todos los nombres qu
 
 ## <a name="reserve-additional-names-for-your-app"></a>Reservar más nombres para la aplicación
 
-Puedes reservar varios nombres de aplicación para la misma aplicación. Esto es especialmente útil si ofreces tu aplicación en varios idiomas y deseas usar nombres distintos para diferentes idiomas. También puedes reservar un nombre nuevo para cambiar el nombre de una aplicación, tal como se describe a continuación.
+Puedes reservar varios nombres de aplicación para la misma aplicación. Esto es especialmente útil si ofreces tu aplicación en varios idiomas y deseas usar nombres distintos para diferentes idiomas. También puedes reservar un nombre nuevo para cambiar el nombre de una aplicación, como se describe a continuación.
 
 Para reservar un nombre nuevo de aplicación, busque el cuadro de texto en la sección **reservar más nombres** de la página **Administrar nombres de aplicación** . Escribe el nombre que te gustaría reservar y haz clic en **Comprobar disponibilidad**. Si el nombre está disponible, haz clic en **Reservar nombre de producto**. Puedes reservar varios nombres de aplicación, repita estos pasos, si lo deseas.
 
@@ -38,7 +38,7 @@ Si ya no quieres usar un nombre que has reservado previamente, puedes liberarlo 
 
 Para eliminar uno de los nombres reservados de la aplicación, busca el nombre que quieres dejar de usar y haz clic en **Eliminar**. En el cuadro de diálogo de confirmación, vuelve a hacer clic en **Eliminar** para confirmar.
 
-Ten en cuenta que la aplicación debe tener al menos un nombre reservado. Para completamente quitar una aplicación del panel de información (y liberar todos los nombres reservados de la aplicación), haz clic en **Eliminar esta aplicación** desde la página de **Introducción a la aplicación** . Si tienes un envío de la aplicación en curso, primero deberás eliminarlo. Ten en cuenta que si ya has publicado la aplicación a la tienda, no puedes eliminarla del panel de información (aunque puedes usar la funcionalidad de **Mostrar u ocultar productos** en la página de **Introducción** para ocultarla). 
+Ten en cuenta que la aplicación debe tener al menos un nombre reservado. Para completamente quitar una aplicación del panel (y liberar todos los nombres reservados de la aplicación), haz clic en **Eliminar esta aplicación** desde la página de **Introducción a la aplicación** . Si tienes un envío de la aplicación en curso, primero deberás eliminarlo. Ten en cuenta que si ya has publicado la aplicación a la tienda, no puedes eliminarla del panel de información (aunque puedes usar la funcionalidad de **Mostrar u ocultar productos** en la página de **Introducción** para ocultarla). 
 
 
 ## <a name="rename-an-app-that-has-already-been-published"></a>Cambiar el nombre de una aplicación ya publicada
@@ -51,7 +51,7 @@ Debes actualizar los paquetes de la aplicación para reemplazar el nombre anteri
   > [!IMPORTANT]
   > Asegúrate de actualizar el archivo Package.StoreAssociation.xml antes de cambiar el elemento **Package/Properties/DisplayName** de manifiesto de la aplicación o se puede producir un error.
 
-Para actualizar una descripción de la tienda para que usa el nuevo nombre, ve a la [página de descripción de la tienda](create-app-store-listings.md) para ese idioma y selecciona el nombre de la lista desplegable de **nombre del producto** . Asegúrate de revisar la descripción y otras partes de la descripción de las menciones del nombre y realizar actualizaciones si es necesario.
+Para actualizar una descripción de la tienda para que usa el nuevo nombre, ve a la [página de descripción de la tienda](create-app-store-listings.md) para ese idioma y selecciona el nombre de la lista desplegable de **nombre del producto** . Asegúrate de revisar la descripción y otras partes de la descripción para cualquier menciones del nombre y realizar actualizaciones si es necesario.
 
 > [!NOTE]
 > Si la aplicación tiene paquetes o descripciones de la tienda en varios idiomas, tendrás que actualizar los paquetes o descripciones para cada idioma en el que debe actualizarse el nombre de la tienda.
@@ -59,7 +59,7 @@ Para actualizar una descripción de la tienda para que usa el nuevo nombre, ve a
 Una vez que se ha publicado la aplicación con el nuevo nombre, puedes eliminar cualquier nombre anterior que ya no necesitas usar.
 
 > [!TIP]
-> Cada aplicación aparece en el panel con el nombre que reservado para ella. Si has seguido los pasos anteriores para cambiar el nombre de una aplicación, y quieres que aparezca en el panel con el nuevo nombre, debe eliminar el nombre original (haciendo clic en **Eliminar** en la página **Administrar nombres de aplicación** ). 
+> Cada aplicación aparece en el panel con el nombre que reservaste para ella. Si has seguido los pasos anteriores para cambiar el nombre de una aplicación, y quieres que aparezca en el panel con el nuevo nombre, debe eliminar el nombre original (haciendo clic en **Eliminar** en la página **Administrar nombres de aplicación** ). 
 
  
 

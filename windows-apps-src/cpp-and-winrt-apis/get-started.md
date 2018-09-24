@@ -3,18 +3,18 @@ author: stevewhims
 description: Para ponerte al día con el uso de C++/WinRT, este artículo te guía a través de un ejemplo de código sencillo.
 title: Introducción a C++/WinRT
 ms.author: stwhi
-ms.date: 05/21/2018
+ms.date: 09/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, obtener, obteniendo, iniciado
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e1bd5f23f40c5d0238f8089c91ee69c6a52313f
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.openlocfilehash: f058ece64e6f041b5b0e8731a7891968f573f744
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4124284"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4149768"
 ---
 # <a name="get-started-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Introducción a [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Para ponerte al día con el uso de C++/WinRT, este artículo te guía a través de un ejemplo de código sencillo.
@@ -27,7 +27,6 @@ Crea un nuevo proyecto **Aplicación de consola de Windows (C++/WinRT)**.
 
 > [!IMPORTANT]
 > Si estás usando Visual Studio 2017 (versión 15.8.0 o posterior) y destinada a Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803), a continuación, recién creado C++ / WinRT proyecto puede presentar errores compilar con el error "error*C3861: 'from_abi': identificador no encuentra*"y con otros errores que se origine en *base.h*. La solución consiste en cualquier destino una posterior (más compatible) versión del SDK de Windows o la propiedad de proyecto de conjunto de **C/c ++** > **idioma** > **Conformance mode: No** (Además, si **/ permissive-** aparece en la propiedad de proyecto ** C/C++** > **idioma** > de**línea de comandos** en **Las opciones adicionales**, elimínalo).
-
 
 Edita `pch.h` y `main.cpp` para que tenga este aspecto.
 

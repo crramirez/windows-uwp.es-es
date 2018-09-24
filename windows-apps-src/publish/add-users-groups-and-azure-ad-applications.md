@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, aplicación de azure ad, aad, usuario, grupo, varios usuarios, multiusuario
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4125966"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4152340"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Agregar usuarios, grupos y aplicaciones de AzureAD a tu cuenta del Centro de desarrollo
 
-La sección de **los usuarios** del centro de desarrollo de Windows (en **configuración de la cuenta**) te permite usar Azure Active Directory para agregar usuarios a tu cuenta del centro de desarrollo. A cada usuario se le asigna un rol (o conjunto de permisos personalizados) que define su acceso a la cuenta. También puedes agregar [grupos de usuarios](#groups) y [aplicaciones de AzureAD](#azure-ad-applications) para concederles acceso a tu cuenta del Centro de desarrollo.
+La sección de **los usuarios** del centro de desarrollo de Windows (en la **configuración de la cuenta**) te permite usar Azure Active Directory para agregar usuarios a tu cuenta del centro de desarrollo. A cada usuario se le asigna un rol (o conjunto de permisos personalizados) que define su acceso a la cuenta. También puedes agregar [grupos de usuarios](#groups) y [aplicaciones de AzureAD](#azure-ad-applications) para concederles acceso a tu cuenta del Centro de desarrollo.
 
 Después de que los usuarios se hayan agregado a la cuenta, puedes [editar detalles de la cuenta](#edit), cambiar [roles y permisos](set-custom-permissions-for-account-users.md) o [eliminar usuarios](#remove).
 

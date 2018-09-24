@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ce26242f1f5093afcbfb652a7d1736897975cb3a
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4128250"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4152794"
 ---
 # <a name="custom-attached-properties"></a>Propiedades adjuntas personalizadas
 
@@ -35,7 +35,7 @@ Damos por hecho que conoces las propiedades de dependencia desde el punto de vis
 Puedes crear una propiedad adjunta cuando haya motivos para que las clases que no sean clases definidoras tengan un mecanismo de establecimiento de propiedades. Los escenarios más habituales para esto son diseño y servicios. Algunos ejemplos de propiedades de diseño existentes son [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/hh759773) y [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772). En un escenario de diseño, los elementos que existen como elementos secundarios de elementos de control de diseño pueden expresar los requisitos de diseño a sus elementos primarios individualmente, cada uno de los cuales establece un valor de propiedad que el elemento primario define como propiedad adjunta. Un ejemplo de escenario de servicios en la API de Windows Runtime es establecer las propiedades adjuntas de [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527), como [**ScrollViewer.IsZoomChainingEnabled**](https://msdn.microsoft.com/library/windows/apps/br209561).
 
 > [!WARNING]
-> Una limitación de la implementación de XAML de Windows Runtime es que no se pueden animar las propiedades adjuntas personalizadas.
+> Una limitación de la implementación de XAML de Windows Runtime es que no puedes animar las propiedades adjuntas personalizadas.
 
 ## <a name="registering-a-custom-attached-property"></a>Registro de una propiedad adjunta personalizada
 
@@ -46,7 +46,7 @@ Para definir tu propiedad adjunta como una propiedad de dependencia, declara una
 La principal diferencia entre una propiedad adjunta personalizada y una propiedad de dependencia personalizada es la manera de definir los descriptores de acceso o contenedores. En lugar de usar la técnica de contenedor que se describe en las [Propiedades de dependencia personalizadas](custom-dependency-properties.md), también debes proporcionar estático **obtener *** PropertyName* y **establecer *** PropertyName* estáticos como descriptores de acceso para la propiedad adjunta. Los descriptores de acceso son usados principalmente por el analizador XAML, aunque algunos otros llamadores pueden usarlos para establecer valores en escenarios que no sean de XAML.
 
 > [!IMPORTANT]
-> Si no defines correctamente los descriptores de acceso, el procesador de XAML no puede acceder a la propiedad adjunta y cualquier persona que intente usarla obtendrá un error del analizador XAML. Además, las herramientas de diseño y codificación suelen usar las convenciones "\*Property" para asignar un nombre a los identificadores cuando encuentran una propiedad de dependencia personalizada en un ensamblado al que se hace referencia.
+> Si no defines correctamente los descriptores de acceso, el procesador XAML no puede acceder a la propiedad adjunta y cualquier persona que intente usarla obtendrá un error del analizador XAML. Además, las herramientas de diseño y codificación suelen usar las convenciones "\*Property" para asignar un nombre a los identificadores cuando encuentran una propiedad de dependencia personalizada en un ensamblado al que se hace referencia.
 
 ## <a name="accessors"></a>Descriptores de acceso
 
@@ -71,13 +71,13 @@ En Visual Basic, es esta:
 El objeto *target* puede ser de un tipo más específico en tu implementación, pero debe derivar de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). El objeto *value* y su *valueType* pueden ser de un tipo más específico en tu implementación. Recuerda que el valor de este método es la entrada que procede del procesador XAML cuando encuentra tu propiedad adjunta en el marcado. Debe haber conversión de tipos o compatibilidad existente para extensión de marcado para el tipo que uses, de manera que se pueda crear el tipo apropiado a partir del valor de un atributo (que al final es tan solo una cadena). El tipo **Object** básico es aceptable, pero con frecuencia te interesará una mayor seguridad de tipos. Para ello, pon la aplicación de tipos en los accesorios.
 
 > [!NOTE]
-> También es posible definir una propiedad adjunta que el uso previsto sea mediante sintaxis de elemento de propiedad. En tal caso, no necesita la conversión de tipos para los valores, pero sí que debe asegurarse de que los valores que tiene previstos se puedan construir en XAML. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) es un ejemplo de una propiedad adjunta existente que solo admite el uso de elementos de propiedad.
+> También es posible definir una propiedad adjunta donde el uso previsto sea mediante la sintaxis de elemento de propiedad. En tal caso, no necesita la conversión de tipos para los valores, pero sí que debe asegurarse de que los valores que tiene previstos se puedan construir en XAML. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) es un ejemplo de una propiedad adjunta existente que solo admite el uso de elementos de propiedad.
 
 ## <a name="code-example"></a>Ejemplo de código
 
 Este ejemplo muestra el registro de la propiedad de dependencia (usando el método [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833)), así como los descriptores de acceso **Get** y **Set** para una propiedad adjunta personalizada. En el ejemplo, el nombre de la propiedad adjunta es `IsMovable`. Por consiguiente, los descriptores de acceso deben denominarse `GetIsMovable` y `SetIsMovable`. El propietario de la propiedad adjunta es una clase de servicio denominada `GameService` que no tiene una interfaz de usuario propia; su objetivo es solo proporcionar los servicios de la propiedad adjunta cuando se use la propiedad adjunta **GameService.IsMovable**.
 
-Definir la propiedad adjunta en C++ / CX es un poco más complejo. Tienes que decidir cómo repartir entre el archivo de encabezado y de código. Además, debes exponer el identificador como una propiedad con solo un descriptor de acceso **get**, por los motivos tratados en [Propiedades de dependencia personalizadas](custom-dependency-properties.md). En C++ / CX, debes definir esta relación de campo de la propiedad explícitamente en lugar de confiar en las palabras clave de .NET **readonly** e implícita de respaldo de propiedades simple. También tienes que registrar la propiedad adjunta dentro de una función auxiliar que solo se ejecute una vez: cuando se inicie la aplicación por primera vez pero antes de que se cargue cualquier página XAML que necesite la propiedad adjunta. La ubicación típica para llamar a las funciones auxiliares de registro de propiedades para cualquier propiedad de dependencia o adjunta es desde el constructor **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) en el código del archivo app.xaml.
+Definir la propiedad adjunta en C++ / CX es un poco más complejo. Tienes que decidir cómo repartir entre el archivo de encabezado y de código. Además, debes exponer el identificador como una propiedad con solo un descriptor de acceso **get**, por los motivos tratados en [Propiedades de dependencia personalizadas](custom-dependency-properties.md). En C++ / CX, debes definir esta relación de campo de la propiedad explícitamente en lugar de confiar en las palabras clave de .NET **readonly** e implícito de respaldo de propiedades simple. También tienes que registrar la propiedad adjunta dentro de una función auxiliar que solo se ejecute una vez: cuando se inicie la aplicación por primera vez pero antes de que se cargue cualquier página XAML que necesite la propiedad adjunta. La ubicación típica para llamar a las funciones auxiliares de registro de propiedades para cualquier propiedad de dependencia o adjunta es desde el constructor **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) en el código del archivo app.xaml.
 
 ```csharp
 public class GameService : DependencyObject

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 08e7d8fcfbab0d0b22fffa3e3e0aecc38d5b095c
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4127192"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4152390"
 ---
 # <a name="windows-device-portal-overview"></a>Introducción a Windows Device Portal
 
@@ -69,7 +69,7 @@ Aquí se describen las herramientas que son comunes a las familias de dispositiv
 
 El Administrador de aplicaciones proporciona la instalación o desinstalación y funcionalidad de administración de aplicación de paquetes y lotes en el dispositivo host.
 
-![Página Administrador de aplicaciones de Portal de dispositivos](images/device-portal/wdp-apps.png)
+![Página de administrador de aplicaciones de Portal de dispositivos](images/device-portal/wdp-apps.png)
 
 - **Las aplicaciones instaladas**: usar el menú desplegable para eliminar o iniciar las aplicaciones que están instaladas en el dispositivo. Instalar una nueva aplicación haciendo clic en **Agregar**. Esto inicia la instalación de experiencia de usuario para implementar las aplicaciones empaquetadas desde local, red o web hospeda y registrar en archivos sueltos desde recursos compartidos de red.
 - **Aplicaciones en ejecución**: obtener información acerca de las aplicaciones que se están ejecutando actualmente y ciérralos según sea necesario.
@@ -79,7 +79,7 @@ El Administrador de aplicaciones proporciona la instalación o desinstalación y
 1.  Cuando hayas creado un paquete de la aplicación, podrás instalarlo remotamente en el dispositivo. Después de compilarlo en Visual Studio, se genera una carpeta de salida.
   ![Instalación de aplicaciones](images/device-portal/iot-installapp0.png)
 2.  En la sección de administrador de aplicaciones de Device Portal, haz clic en **Agregar** y selecciona **instalar el paquete de la aplicación desde el almacenamiento local**.
-3.  Haga clic en **Examinar** y busca el paquete de aplicación.
+3.  Haz clic en **Examinar** y busca el paquete de la aplicación.
 3.  Haz clic en **Examinar** y busca el archivo de certificado (_.cer_) (no es necesario en todos los dispositivos.)
 4.  Casillas de verificación los respectivos si desea instalar opcional o los paquetes de marcos junto con la instalación de la aplicación. Si tienes más de una, agrega cada una de ellas individualmente.     
 5.  Haz clic en **siguiente** para mover el paso siguiente e **instalar** iniciar la instalación. 
@@ -133,7 +133,7 @@ Activa **Ocultar proveedores** para mostrar solamente la lista de eventos.
 - **Proveedores personalizados**: selecciona un proveedor ETW personalizado y el nivel de seguimiento. Identifica el proveedor por su GUID. No incluyas corchetes en el GUID.
 - **Proveedores de Enabled**: enumera los proveedores habilitados. Selecciona un proveedor de la lista desplegable y haz clic o pulsa en **Desactivar** para detener el seguimiento. Haz clic o pulsa en **Detener todo** para suspender todos los seguimientos.
 - **Providers history**: muestra los proveedores de ETW que estaban habilitados durante la sesión actual. Haz clic o pulsa en **Activar** para activar un proveedor deshabilitado. Haz clic o pulsa en **Borrar** para borrar el historial.
-- **Filtros / eventos**: la sección de **eventos** enumera los eventos ETW de los proveedores seleccionados en formato de tabla. La tabla se actualiza en tiempo real. Usa el menú de **filtros** para configurar los filtros personalizados para el que se mostrarán los eventos. Haz clic en el botón **Borrar** para eliminar todos los eventos ETW de la tabla. Esta acción no deshabilita ningún proveedor. Puedes hacer clic en **Guardar en archivo** para exportar los eventos ETW recopilados actualmente en un archivo CSV local.
+- **Filtros / eventos**: la sección de **eventos** enumeran los eventos ETW de los proveedores seleccionados en formato de tabla. La tabla se actualiza en tiempo real. Usa el menú de **filtros** para configurar los filtros personalizados para el que se mostrarán los eventos. Haz clic en el botón **Borrar** para eliminar todos los eventos ETW de la tabla. Esta acción no deshabilita ningún proveedor. Puedes hacer clic en **Guardar en archivo** para exportar los eventos ETW recopilados actualmente en un archivo CSV local.
 
 Para obtener más información sobre el uso de registro de ETW, consulta el [Portal de dispositivos de uso para ver los registros de depuración de](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) entrada de blog. 
 
@@ -152,14 +152,14 @@ Captura. Para realizar análisis en el [Windows Performance Analyzer](https://ms
 
 ### <a name="device-manager"></a>Administrador de dispositivos
 
-La página Administrador de dispositivo enumera todos los periféricos conectados al dispositivo. Puedes hacer clic en los iconos de configuración para ver las propiedades de cada uno.
+La página del Administrador de dispositivo enumera todos los periféricos conectados al dispositivo. Puedes hacer clic en los iconos de configuración para ver las propiedades de cada uno.
 
 ![Página de administrador de dispositivo Device Portal](images/device-portal/mob-device-portal-devices.png)
 
 ### <a name="networking"></a>Redes
 
 La página de redes administra las conexiones de red en el dispositivo. A menos que están conectados a Device Portal a través de USB, si modificas esta configuración es probable que le desconectará de Device Portal.
-- **Redes disponibles**: muestra las redes Wi-Fi disponibles para el dispositivo. Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario. Device Portal aún no admite la autenticación de empresa. También puedes usar la lista desplegable de **perfiles** para intentar conectar a cualquiera de los perfiles de Wi-Fi que se sabe que el dispositivo.
+- **Redes disponibles**: muestra las redes Wi-Fi disponibles para el dispositivo. Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario. Device Portal aún no admite la autenticación de empresa. También puedes usar la lista desplegable de **perfiles** para intentar conectarse a cualquiera de los perfiles de Wi-Fi que se sabe que el dispositivo.
 - **Configuración IP**: muestra información de dirección sobre cada uno de lo host de puertos de red del dispositivo.
 
 ![Página de redes de Portal de dispositivos](images/device-portal/mob-device-portal-network.png)
@@ -184,7 +184,7 @@ Se sugiere la conexión en el puerto HTTPS, ya que no todos los dispositivos esc
 A fin de ofrecer protección frente a [ataques CSRF](https://wikipedia.org/wiki/Cross-site_request_forgery), se requiere un token único en todas las solicitudes no GET. Este token, el encabezado de la solicitud X-CSRF-Token, se deriva de una cookie de sesión, CSRF-Token. En la interfaz de usuario web de Device Portal, la cookie CSRF-Token se copia en el encabezado X-CSRF-Token en cada solicitud.
 
 > [!IMPORTANT]
-> Esta protección impide usar las API de REST desde un cliente independiente (por ejemplo, las herramientas de línea de comandos). Esto puede resolverse de 3 maneras: 
+> Esta protección impide usar las API de REST desde un cliente independiente (por ejemplo, utilidades de línea de comandos). Esto puede resolverse de 3 maneras: 
 > - Usa un nombre de usuario "auto-". Los clientes que antepongan "auto-" a su nombre de usuario omitirán la protección CSRF. Es importante que este nombre de usuario no se use para iniciar sesión en Device Portal a través del explorador, ya que abrirá el servicio a los ataques CSRF. Ejemplo: Si el nombre de usuario de Device Portal es "admin", debe usarse ```curl -u auto-admin:password <args>``` para omitir la protección CSRF. 
 > - Implementa el esquema de cookie a encabezado en el cliente. Se requiere una solicitud GET para establecer la cookie de sesión y, después, la inclusión del encabezado y la cookie en todas las solicitudes posteriores. 
 > - Deshabilita la autenticación y usa HTTP. La protección CSRF solo se aplica a los extremos HTTPS, para que las conexiones en extremos HTTP no tengan que realizar las acciones anteriores. 

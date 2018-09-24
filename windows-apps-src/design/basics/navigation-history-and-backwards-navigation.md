@@ -15,11 +15,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4eb8bc40c2e9066487a14d217f53a6433266b308
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4129478"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4152186"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
 
@@ -306,11 +306,11 @@ Si la aplicación sigue usando [AppViewBackButtonVisibility](https://docs.micros
 > [!NOTE]
 > "Atrás del sistema barra" es solo una descripción, no un nombre oficial.
 
-Atrás del sistema barra es una banda que se inserta entre la banda de tabulación y el área de contenido de app s. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar que el tamaño del destino táctil adecuado para el botón Atrás.
+Atrás del sistema barra es una banda que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar que el tamaño del destino táctil adecuado para el botón Atrás.
 
 La barra Atrás del sistema se muestra dinámicamente, en función de la visibilidad del botón Atrás. Cuando el botón Atrás está visible, Atrás del sistema se inserta la barra, desplazando el contenido de la aplicación por 32 píxeles por debajo de la banda de la pestaña. Cuando se oculta el botón Atrás, Atrás del sistema barra se quita dinámicamente, desplazando el contenido de aplicación 32 píxeles para satisfacer la banda de la pestaña. Para evitar tener que de la aplicación la interfaz de usuario hacia arriba o hacia abajo, te recomendamos dibujar un [botón Atrás en la aplicación](#back-button).
 
-[Personalizaciones de la barra de título](../shell/title-bar.md) se realizan en la pestaña de la aplicación y el sistema vuelve barra. Si la aplicación especifica propiedades de color de primer plano y en segundo plano con [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), a continuación, los colores se aplicará a la parte posterior del sistema y la pestaña barra.
+[Personalizaciones de la barra de título](../shell/title-bar.md) se realizan en la pestaña de la aplicación y el sistema vuelve barra. Si la aplicación especifica las propiedades de color de primer plano y en segundo plano con [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), a continuación, los colores se aplicará a la parte posterior del sistema y la pestaña barra.
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>Directrices para el comportamiento personalizado de la navegación hacia atrás
 

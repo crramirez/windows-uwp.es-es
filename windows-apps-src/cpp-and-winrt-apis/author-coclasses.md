@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, autor, COM, componente
 ms.localizationpriority: medium
 ms.openlocfilehash: 729cfae39f302ae6b5bae275d9e28a39f3d9503b
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4126526"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4152098"
 ---
 # <a name="author-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Crear componentes de COM con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
-C++ / WinRT puede ayudar a crear clásico modelo de objetos componentes (COM) componentes (o coclases), al igual que le ayuda a crear clases en tiempo de ejecución de Windows. Esta es una ilustración muy sencilla, que puede probar si se pega en la `main.cpp` de un nuevo **aplicación de consola de Windows (C++ / WinRT)** proyecto.
+C++ / WinRT puede ayudarte a crear clásica modelo de objetos componentes (COM) componentes (o coclases), al igual que le ayuda a crear clases en tiempo de ejecución de Windows. Esta es una ilustración muy sencilla, que puede probar si se pega en la `main.cpp` de un nuevo **aplicación de consola de Windows (C++ / WinRT)** proyecto.
 
 ```cppwinrt
 // main.cpp : Defines the entry point for the console application.
@@ -138,11 +138,11 @@ La implementación de la coclase anterior sigue el mismo patrón que se muestra 
 
 En la coclase en el código anterior, se implementa el método **INotificationActivationCallback::Activate** , que es la función que se llama cuando el usuario hace clic en el botón de devolución de llamada en una notificación del sistema. Pero antes de llamar a esa función, debe crearse una instancia de la coclase y es el trabajo de la función **IClassFactory:: CreateInstance** .
 
-La coclase que hemos implementado solo se conoce como el *activador COM* para las notificaciones y tiene su Id. de clase (CLSID) en forma de la `callback_guid` identificador (de tipo **GUID**) que ves anteriormente. Usaremos ese identificador de una versión posterior, en forma de un acceso directo del menú Inicio y una entrada del registro de Windows. El CLSID del activador COM y la ruta de acceso a su servidor COM asociado (que es la ruta de acceso al archivo ejecutable que estamos creando aquí) es el mecanismo por el que una notificación del sistema sabe qué clase para crear una instancia de cuando se hace clic en el botón de devolución de llamada (si el notificación se ha hecho clic en el centro de actividades o no).
+La coclase que hemos implementado solo se conoce como el *activador COM* para las notificaciones y tiene su identificador de clase (CLSID) en forma de la `callback_guid` identificador (de tipo **GUID**) que ves anteriormente. Usaremos ese identificador de una versión posterior, en forma de un acceso directo del menú Inicio y una entrada del registro de Windows. El CLSID del activador COM y la ruta de acceso a su servidor COM asociado (que es la ruta de acceso al archivo ejecutable que estamos creando aquí) es el mecanismo por el que una notificación del sistema sabe qué clase para crear una instancia de cuando se hace clic en el botón de devolución de llamada (si el notificación se ha hecho clic en el centro de actividades o no).
 
 ## <a name="best-practices-for-implementing-com-methods"></a>Procedimientos recomendados para la implementación de métodos de COM
 
-Técnicas de control de errores y de administración de recursos pueden ir en la mano. Es más cómodo y práctico usar excepciones de códigos de error. Y si se emplee la expresión de recurso adquisición-es-inicialización (RAII), puede evitar explícitamente comprobación de códigos de error y, a continuación, liberar recursos de forma explícita. Dichas comprobaciones explícitas hacer que el código más complicado que sea necesario, y ofrece errores una gran cantidad de lugares para ocultar. En su lugar, usa RAII y produzca/catch excepciones. De este modo, tus asignaciones de recursos son seguro para excepciones y el código es muy sencillo.
+Técnicas de control de errores y de administración de recursos pueden ir en la mano. Es más cómodo y práctico usar excepciones de códigos de error. Y si se emplee la expresión de recurso adquisición-es-inicialización (RAII), a continuación, puede evitar explícitamente comprobación de códigos de error y, a continuación, liberar recursos. Dichas comprobaciones explícitas hacer que el código más complicado que sea necesario, y ofrece errores abundante lugares para ocultar. En su lugar, usa RAII y produzca/catch excepciones. De este modo, las asignaciones de recursos son seguro para excepciones y el código es muy sencillo.
 
 Sin embargo, no permitir excepciones para las implementaciones de método COM de escape. Puedes garantizar que mediante el uso de la `noexcept` especificador en los métodos de COM. Es Aceptar para que se produzcan en cualquier lugar en el gráfico de llamada de su método, excepciones, siempre y controlarlos antes de que el método se cierra. Si usas `noexcept`, pero, a continuación, permite que una excepción a su método de escape, a continuación, la aplicación finalizará.
 
@@ -380,7 +380,7 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 
 ## <a name="how-to-test-the-example-application"></a>Cómo probar la aplicación de ejemplo
 
-Compilar la aplicación y, a continuación, al menos una vez a ejecutarlo como administrador para hacer que el registro y otro programa de instalación, ejecución de código. Si ejecutas como administrador y luego presiona ' t ' para hacer que una notificación del sistema que se muestre. A continuación, hacer clic en el botón de **devolución de llamada ToastAndCallback** directamente desde la notificación del sistema que se iniciará POP hacia arriba, o desde el centro de actividades y la aplicación, la coclase crea una instancia y la **INotificationActivationCallback :: Activar** método ejecutado.
+Compilar la aplicación y, a continuación, al menos una vez a ejecutarlo como administrador para hacer que el registro y otro programa de instalación, ejecución de código. Si ejecutas como administrador y luego presiona ' t ' para hacer que una notificación del sistema que se muestre. A continuación, hacer clic en el botón de **la llamada de ToastAndCallback** directamente desde la notificación del sistema que se iniciará POP hacia arriba, o desde el centro de actividades y la aplicación, la coclase crea una instancia y la **INotificationActivationCallback :: Activar** método ejecutado.
 
 ## <a name="important-apis"></a>API importantes
 * [Interfaz IInspectable](https://msdn.microsoft.com/library/br205821)
@@ -389,5 +389,5 @@ Compilar la aplicación y, a continuación, al menos una vez a ejecutarlo como a
 
 ## <a name="related-topics"></a>Artículos relacionados
 * [Crear API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
-* [Consumir componentes de COM con C++ / WinRT](consume-com.md)
+* [Consumir los componentes de COM con C++ / WinRT](consume-com.md)
 * [Enviar una notificación de icono local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

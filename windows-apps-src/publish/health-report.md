@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, mantenimiento, bloqueos, eventos que no responden, estado de la aplicación, datos de estado, seguimiento de la pila, archivo cab, error, errores, pdb, símbolos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f5bf63eae4b1504642e764265a7936bcd67c645
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4123864"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4153364"
 ---
 # <a name="health-report"></a>Informe Mantenimiento
 
@@ -74,18 +74,18 @@ El gráfico **Errores** muestra el número total de bloqueos y eventos durante e
 Para mostrar el informe **Detalles del error** de un error en concreto, selecciona el nombre del error. Si has incluido los archivos de símbolos, el informe **Detalles del error** incluirá el número de errores del último mes, así como un registro de errores que enumera los detalles de las repeticiones (fecha, versión del paquete, tipo de dispositivo, modelo de dispositivo y compilación del SO) y un vínculo al seguimiento de la pila o al archivo CAB, si estuviera disponible.
 
 > [!TIP]
-> Los archivos CAB solo estarán disponibles cuando se ha producido un error en un equipo con una compilación de WindowsInsider, por lo tanto, no todos los errores incluirán la opción de descarga de CAB. Para mostrar solo los errores que tienen archivos CAB, seleccione **errores con las descargas** en el filtro de sección. También puedes hacer clic en el encabezado de **vínculos** en el **registro de errores** para ordenar los resultados para que aparezcan los errores que incluyan archivos CAB en la parte superior de la lista.
+> Los archivos CAB solo estarán disponibles cuando se ha producido un error en un equipo con una compilación de WindowsInsider, por lo tanto, no todos los errores incluirán la opción de descarga de CAB. Para mostrar solo los errores que tienen archivos CAB, selecciona **errores con las descargas** en el filtro de sección. También puedes hacer clic en el encabezado de **vínculos** en el **registro de errores** para ordenar los resultados para que aparezcan los errores que incluyan archivos CAB en la parte superior de la lista.
 
-En la página de **Detalles del error** , también verás el gráfico de **prevalencia de la pila** , que muestra la parte superior de pilas que contribuyeron a error, ordenados por el porcentaje y el gráfico de **Configuración del dispositivo (30D)** , que proporciona información detallada sobre el configuración de dispositivos que funcionan con el error. 
+En la página de **Detalles del error** , también verás el gráfico de **prevalencia de la pila** , que muestra la parte superior de pilas que contribuyeron a error, ordenados por el porcentaje y el gráfico de **configuración de dispositivos (30D)** , que proporciona información detallada sobre el configuración de dispositivos que funcionan con el error. 
 
 
-## <a name="crash-free-sessions-and-devices-30d"></a>Sesiones libre de bloqueo y dispositivos (30D)
+## <a name="crash-free-sessions-and-devices-30d"></a>Sesiones de libre de bloqueo y dispositivos (30D)
 
-El gráfico de **dispositivos y sesiones libre de bloqueo** , muestra el porcentaje de dispositivos o sesiones de usuario que no se produjo un bloqueo en los últimos 30 días. Esta información ayuda a comprender cómo ampliamente los bloqueos afectan a los usuarios. Por ejemplo, una aplicación podría tener 10.000 bloqueos en un día. Si se ven afectado de un 90% de los dispositivos, probablemente haría clasificar como crítica y actuar para corregir de inmediato. Sin embargo, si solo que representa un 5% de los dispositivos que usan la aplicación, la prioridad podría ser inferior.
+El gráfico de **dispositivos y libre de bloqueo sesiones** muestra el porcentaje de dispositivos o sesiones de usuario que no se produjo un bloqueo en los últimos 30 días. Esta información ayuda a comprender cómo ampliamente los bloqueos afectan a los usuarios. Por ejemplo, una aplicación podría tener 10.000 bloqueos en un día. Si se ven afectado de un 90% de los dispositivos, probablemente haría clasificar como críticas y actuar para corregirlo inmediatamente. Sin embargo, si solo que representa un 5% de los dispositivos que usan la aplicación, la prioridad podría ser inferior.
 
 Este gráfico tiene dos pestañas:
 - **Libre de bloqueo de dispositivos**: muestra el porcentaje de dispositivos únicos que no se produjo un error en cada día (durante los últimos 30 días).
-- **Sesiones libre de bloqueo**: muestra el porcentaje de sesiones de usuario único que no se produjo un error en cada día (durante los últimos 30 días).
+- **Sesiones de libre de bloqueo**: muestra el porcentaje de sesiones de usuario único que no se produjo un error en cada día (durante los últimos 30 días).
 
 
  

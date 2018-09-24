@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4128198"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4153048"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar la cuenta de pago y los formularios fiscales
 
 
 Para poder recibir dinero las ventas de aplicaciones en Microsoft Store, debes configurar tu cuenta de pago y rellenar los formularios fiscales necesarios.
 
-Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer compras desde la aplicación ni usar Microsoft Advertising), no necesitas configurar una cuenta de pago ni rellenar ningún formulario fiscal. Si cambias de opinión más tarde y decides que sí quieres vender aplicaciones (o complementos), puedes configurar tu cuenta de pago y rellenar formularios fiscales en ese momento. No podrás enviar aplicaciones ni complementos de pago hasta que no hayas completado tu cuenta de pago y tu perfil fiscal.
+Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer compras desde la aplicación ni usar Microsoft Advertising), no necesitas configurar una cuenta de pago ni rellenar ningún formulario fiscal. Si cambias de opinión más tarde y decides que quieres vender aplicaciones (o complementos), puedes configurar tu cuenta de pago y rellenar formularios fiscales en ese momento. No podrás enviar aplicaciones ni complementos de pago hasta que no hayas completado tu cuenta de pago y tu perfil fiscal.
 
 > [!NOTE]
 > En [determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets), los desarrolladores solo pueden enviar aplicaciones gratuitas. Si tu cuenta está registrada en uno de esos mercados, no tendrás la opción de configurar una cuenta de pago.
@@ -133,7 +133,7 @@ Después de que tienes que [registrar una cuenta de desarrollador](opening-a-dev
 Puedes completar y enviar tus formularios fiscales por vía electrónica en el panel; en la mayoría de lo casos, no es necesario que imprimas y envíes por correo postal ningún formulario.
 
 > [!IMPORTANT]
-> Diferentes países y regiones tienen distintos requisitos fiscales. El importe exacto que debes pagar en impuestos depende de los países y las regiones donde vendas tus aplicaciones. Consulta el [Acuerdo de desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para conocer en qué países o regiones Microsoft remite ventas e IVA de importación en tu nombre. En otros países o regiones, según el lugar donde te hayas registrado, es posible que debas remitir las ventas y el IVA de importación de tus ventas de aplicaciones directamente a la autoridad fiscal local. Además, es posible que las ganancias por las ventas de aplicaciones estén sujetas a impuestos como ingresos. Te recomendamos que hagas en contacto con la autoridad correspondiente de tu país o región que puede mejor ayudar a determinar la información fiscal correcta para tus actividades de desarrollador de Microsoft Store.
+> Diferentes países y regiones tienen distintos requisitos fiscales. El importe exacto que debes pagar en impuestos depende de los países y las regiones donde vendas tus aplicaciones. Consulta el [Acuerdo de desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para conocer en qué países o regiones Microsoft remite ventas e IVA de importación en tu nombre. En otros países o regiones, según el lugar donde te hayas registrado, es posible que debas remitir las ventas y el IVA de importación de tus ventas de aplicaciones directamente a la autoridad fiscal local. Además, es posible que las ganancias por las ventas de aplicaciones estén sujetas a impuestos como ingresos. Te recomendamos que hagas en contacto con la autoridad correspondiente de tu país o región que mejor te permite determinar la información fiscal correcta para tus actividades de desarrollador de Microsoft Store.
 
  
 **Completar tu perfil fiscal**

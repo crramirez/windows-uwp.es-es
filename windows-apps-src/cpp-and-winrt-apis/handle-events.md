@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: 7af66c3f0586f2fb99a2a742f6da0144ed69d253
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.openlocfilehash: 6b8749b53e28047842343bd2a1e0c005f588d79d
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4130120"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4152530"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Controlar eventos usando delegados en [C ++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tema muestra cómo registrar y revocar delegados de control de eventos con C++/WinRT. Puedes controlar un evento usando cualquier objeto tipo función de C++ estándar.
@@ -122,7 +122,7 @@ private:
 
 En lugar de una referencia fuerte, como se muestra en el ejemplo anterior, puedes almacenar una referencia débil al botón (consulta [Referencias débiles en C++/WinRT](weak-references.md)).
 
-O bien, al registrar un delegado, puede especificar **winrt::auto_revoke** (que es un valor de tipo [**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) para solicitar a un revoker evento (del tipo [**winrt::event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)). El revoker de evento contiene una referencia débil al origen del evento (el objeto que provoca el evento) para usted. Puedes revocar manualmente mediante una llamada a la función de miembro **event_revoker::revoke**, pero el revocador de eventos llama a la propia función automáticamente cuando sale del ámbito. La función **revoke** comprueba si el origen del evento aún existe y, si es así, revoca el delegado. En este ejemplo, no es necesario almacenar el origen del evento y no se necesita ningún destructor.
+Como alternativa, cuando registras un delegado, puedes especificar **winrt:: auto_revoke** (que es un valor de tipo [**winrt:: auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) para solicitar a un revocador de eventos (de tipo [**winrt:: event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)). El revocador de eventos mantiene una referencia débil al origen del evento (el objeto que genera el evento) para TI. Puedes revocar manualmente mediante una llamada a la función de miembro **event_revoker::revoke**, pero el revocador de eventos llama a la propia función automáticamente cuando sale del ámbito. La función **revoke** comprueba si el origen del evento aún existe y, si es así, revoca el delegado. En este ejemplo, no es necesario almacenar el origen del evento y no se necesita ningún destructor.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -187,14 +187,17 @@ void ProcessFeedAsync()
         // use syndicationFeed;
     });
     
-    // or (but this function must then be a coroutine and return IAsyncAction)
+    // or (but this function must then be a coroutine, and return IAsyncAction)
     // SyndicationFeed syndicationFeed{ co_await async_op_with_progress };
 }
 ```
 
 Como sugiere el comentario de corrutina anterior, en lugar de usar un delegado con los eventos completados de acciones y operaciones asincrónicas, posiblemente te resulte más natural usar las corrutinas. Para obtener información detallada y ejemplos de código, consulta [Operaciones simultáneas y asincrónicas con C++/WinRT](concurrency.md).
 
-Pero si te quedas con delegados, puedes optar por una sintaxis más sencilla.
+> [!NOTE]
+> No es correcto implementar más de un *controlador de finalización* para una acción asincrónica o la operación. Puedes tener un solo delegado para su evento completado, o bien puedes `co_await` lo. Si tienes que ambos, se producirá un error en la segunda.
+
+Si se ciña a delegados en lugar de una corrutina, a continuación, puedes optar por una sintaxis más sencilla.
 
 ```cppwinrt
 async_op_with_progress.Completed(
@@ -264,7 +267,7 @@ void OnCompositionScaleChanged(Windows::UI::Xaml::Controls::SwapChainPanel const
 En la cláusula de captura lamba, se crea una variable temporal que representa una referencia débil a *this*. En el cuerpo del lambda, si puede obtenerse una referencia fuerte a *this*, se llama a la función **OnCompositionScaleChanged**. De esta forma, *this* puede usarse con seguridad dentro de ** OnCompositionScaleChanged**.
 
 ## <a name="important-apis"></a>API importantes
-* [estructura de marcador winrt::auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
+* [estructura del marcador de winrt:: auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
 * [winrt::implements::get_weak function](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
 * [winrt::implements::get_strong function](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, insight, tendencia, anomalías, anomalía, cambios de datos
 ms.localizationpriority: medium
 ms.openlocfilehash: be70dccbb7a12b65b9e7bbd07f27ae7ea3a578ff
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4122286"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4152024"
 ---
 # <a name="insights-report"></a>Informe de información
 
@@ -24,7 +24,7 @@ El informe de **información** en el panel del centro de desarrollo de Windows r
 > [!NOTE]
 > Datos de este informe tratan los últimos 30 días. No puedes seleccionar un período de tiempo diferente para este informe.
 
-El informe ordena los datos en tres pestañas: **adquisiciones**, **estado**y **uso**. Para ver detalles de una de estas áreas, seleccione su pestaña.
+El informe ordena los datos en tres pestañas: **adquisiciones**, **estado**y **uso**. Para ver detalles de una de estas áreas, selecciona su pestaña.
 
 Se muestran detalles cuando se detecta un cambio importante en los datos. Para cada insight, te mostraremos lo siguiente:
 - **Tipo de Insight**: el área en la que se detectó la perspectiva.
