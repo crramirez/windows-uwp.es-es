@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c7286493e08fd62ad4b207d0e014dd4fbd5318
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148160"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4178574"
 ---
 # <a name="handle-uri-activation"></a>Administrar la activación de los identificadores URI
 
@@ -31,7 +31,7 @@ Te recomendamos que la registres para un nombre de esquema de URI solo si espera
 En estos pasos se muestra cómo registrar un nombre de esquema de URI personalizado, `alsdk://`, y cómo activar la aplicación cuando el usuario inicia un URI `alsdk://`.
 
 > [!NOTE]
-> En las aplicaciones para UWP, algunas extensiones de archivo y URI se reservan para su uso por las aplicaciones integradas y el sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista alfabética de esquemas de Uri que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos.
+> En aplicaciones para UWP, algunas extensiones de archivo y URI se reservan para su uso por las aplicaciones integradas y el sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista alfabética de esquemas de Uri que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos.
 
 ## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Paso 1: Especificar el punto de extensión en el manifiesto del paquete
 

@@ -16,16 +16,16 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: ec532749fc2dacfc56e80ee2830da36f71c75b2f
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151374"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4178596"
 ---
 # <a name="command-bar-flyout"></a>Control flotante de barra de comandos
 
 > [!IMPORTANT]
-> En este artículo se describe una funcionalidad que no se ha lanzado aún y que puede sufrir importantes modificaciones antes de que se lance la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí. Características de vista previa requieren la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> En este artículo se describe una funcionalidad que no se ha lanzado aún y que puede sufrir importantes modificaciones antes de que se lance la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí. Características de vista previa requieren la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 El control de barra de comandos flotante te permite proporcionar a los usuarios acceso fácil a las tareas comunes al mostrar comandos en una barra de herramientas flotante relacionadas con un elemento en el lienzo de la interfaz de usuario.
 
@@ -33,11 +33,11 @@ El control de barra de comandos flotante te permite proporcionar a los usuarios 
 
 > Para obtener información relacionada, consulta [los controles flotantes](../controls-and-patterns/dialogs-and-flyouts/flyouts.md), [menús y menús contextuales](menus.md)y [las barras de comandos](app-bars.md).
 
-Como [CommandBar](app-bars.md), CommandBarFlyout tiene propiedades **PrimaryCommands** y **SecondaryCommands** , que puedes usar para agregar comandos. Puedes colocar los comandos de colección o ambos. Cuándo y cómo se muestran los comandos principales y secundarios depende en el modo de presentación.
+Como [CommandBar](app-bars.md), CommandBarFlyout tiene propiedades **PrimaryCommands** y **SecondaryCommands** , que puedes usar para agregar comandos. Puedes colocar los comandos de colección, o ambos. Cuándo y cómo se muestran los comandos principales y secundarios depende del modo de presentación.
 
-El control flotante de barra de comandos tiene dos modos de visualización: *contraído* y *expandido*.
+El control flotante de barra de comandos tiene dos modos de pantalla: *contraído* y *expandido*.
 
-- En el modo contraído, se muestran solo los comandos principales. Si el control flotante de barra de comandos tiene principales y secundarias comandos, un botón "ver más", que se representa mediante puntos suspensivos \ [•••\], se muestra. Esto permite al usuario acceder a los comandos secundarios mediante la transición a modo expandido.
+- En el modo contraído, se muestran solo los comandos principales. Si el control de barra de comandos flotante tiene principales y secundarias comandos, un botón "ver más", que se representa mediante un botón de puntos suspensivos \ [•••\], se muestra. Esto permite al usuario acceder a los comandos secundarios mediante la transición a modo expandido.
 - En el modo expandido, se muestran los comandos principales y secundarios. (Si el control tiene solamente los elementos secundarios, que son que muestren de forma similar al control MenuFlyout.)
 
 | **Obtén la biblioteca de la interfaz de usuario de Windows** |
@@ -50,9 +50,9 @@ El control flotante de barra de comandos tiene dos modos de visualización: *con
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-Usa el control CommandBarFlyout para mostrar una colección de comandos para el usuario, como los botones y elementos de menú, en el contexto de un elemento en el lienzo de la aplicación.
+Usa el control de CommandBarFlyout para mostrar una colección de comandos para el usuario, como los botones y elementos de menú, en el contexto de un elemento en el lienzo de la aplicación.
 
-La TextCommandBarFlyout muestra los comandos de texto en los controles de cuadro de texto, TextBlock, RichEditBox, RichTextBlock y PasswordBox. Los comandos se configuran automáticamente de forma adecuada para la selección de texto actual. Usar un CommandBarFlyout para reemplazar los comandos de texto de forma predeterminada en controles de texto.
+La TextCommandBarFlyout muestra los comandos de texto en los controles de cuadro de texto, TextBlock, RichTextBlock, RichEditBox y PasswordBox. Los comandos se configuran automáticamente de forma adecuada para la selección de texto actual. Usar un CommandBarFlyout para reemplazar los comandos de texto predeterminado en controles de texto.
 
 Para mostrar contextuales comandos en los elementos de lista siguen las instrucciones de [contextuales para colecciones y listas de comandos](collection-commanding.md).
 
@@ -80,17 +80,17 @@ Para mostrar comandos en un menú contextual, puedes usar CommandBarFlyout o Men
 
 Por lo general, hay dos formas para invocar un control flotante o un menú que está asociado a un elemento en el lienzo de la interfaz de usuario: _invocación proactiva_ y _reactiva invocación_.
 
-En la invocación proactiva, comandos aparecen automáticamente cuando el usuario interactúa con el elemento que se asocian los comandos. Por ejemplo, los comandos de formato de texto es posible que aparecen cuando el usuario selecciona texto en un cuadro de texto. En este caso, el control flotante de barra de comandos no tiene el foco. En su lugar, presenta relevantes comandos cerca del elemento que el usuario está interactuando con. Si el usuario no interactúa con los comandos, se descarta.
+En la invocación proactiva, comandos aparecen automáticamente cuando el usuario interactúa con el elemento que se asocian los comandos. Por ejemplo, los comandos de formato de texto es posible que aparecen cuando el usuario selecciona texto en un cuadro de texto. En este caso, el control flotante de barra de comandos no tiene el foco. En su lugar, presenta relevantes comandos cerca del elemento que el usuario está interactuando con. Si el usuario no interactuar con los comandos, se descarta.
 
 En la invocación reactiva, los comandos se muestran en respuesta a una acción explícita del usuario para solicitar los comandos; Por ejemplo, un ratón. Esto corresponde al concepto tradicional de un [menú contextual](menus.md).
 
-Puedes usar el CommandBarFlyout de manera o incluso una combinación de ambos.
+Puedes usar el CommandBarFlyout en forma o incluso una combinación de ambos.
 
 ## <a name="create-a-command-bar-flyout"></a>Crear un control flotante de barra de comandos
 
-> **Vista previa**: CommandBarFlyout requiere [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vista previa**: CommandBarFlyout requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Este ejemplo muestra cómo crear un control flotante de barra de comandos y usarla tanto de forma proactiva como reactiva. Cuando se pulsa la imagen, el control flotante se muestra en su modo contraído. Cuando se muestra como un menú contextual, el control flotante se muestra en su modo expandido. En cualquier caso, el usuario puede expandir o contraer el control flotante después de que se abra.
+Este ejemplo muestra cómo crear un control flotante de barra de comandos y usarla tanto de forma proactiva como reactiva. Cuando se pulsa la imagen, el control flotante se muestra en su modo contraída. Cuando se muestra como un menú contextual, el control flotante se muestra en su modo expandido. En cualquier caso, el usuario puede expandir o contraer el control flotante después de que se abra.
 
 :::row:::
     :::column:::
@@ -140,9 +140,9 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 
 ### <a name="show-commands-proactively"></a>Mostrar comandos de forma proactiva
 
-Al mostrar comandos contextuales de forma proactiva, solo los comandos principales deben mostrarse de forma predeterminada (el control flotante de barra de comandos debe ser contraído). Coloca los comandos más importantes de la colección de comandos principales y los comandos adicionales que tradicionalmente colocaba en un menú contextual en la colección de comandos secundarios.
+Al mostrar comandos contextuales de forma proactiva, solo los comandos principales deben mostrarse de forma predeterminada (el control flotante de barra de comandos debe ser contraído). Coloca los comandos más importantes en la colección de comandos principales y los comandos adicionales que tradicionalmente colocaba en un menú contextual en la colección de comandos secundarios.
 
-Para mostrar de forma proactiva los comandos, normalmente se controla el evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) o [Tapped](/uwp/api/windows.ui.xaml.uielement.tapped) para mostrar el control flotante de barra de comandos. Establece el control del flotante [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) en **transitorios** o **TransientWithDismissOnPointerMoveAway** para abrir el control flotante en su modo contraído sin toma el foco.
+Para mostrar de forma proactiva los comandos, normalmente se controla el evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) o [Tapped](/uwp/api/windows.ui.xaml.uielement.tapped) para mostrar el control flotante de barra de comandos. Establece el control del flotante [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) **transitorios** o **TransientWithDismissOnPointerMoveAway** para abrir el control flotante en su modo contraído sin toma el foco.
 
 A partir de Windows 10 Insider Preview, controles de texto tienen una propiedad **SelectionFlyout** . Cuando un control flotante se asigna a esta propiedad, se muestra automáticamente cuando se selecciona el texto.
 
@@ -150,7 +150,7 @@ A partir de Windows 10 Insider Preview, controles de texto tienen una propiedad 
 
 De forma reactiva, como un menú contextual para mostrar comandos contextuales, los comandos secundarios se muestran de forma predeterminada (el control flotante de barra de comandos debe ser expandido). En este caso, el control de barra de comandos flotante podría tener comandos principales y secundarios o solo hay comandos secundarios.
 
-Para mostrar comandos en un menú contextual, por lo general, se asigna el control flotante a la propiedad [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) de un elemento de la interfaz de usuario. De esta forma, abrir el control flotante se controla mediante el elemento y no es necesario hacer nada más.
+Para mostrar comandos en un menú contextual, por lo general, se asigna el control flotante a la propiedad [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) de un elemento de interfaz de usuario. De esta forma, abrir el control flotante se controla mediante el elemento y no es necesario hacer nada más.
 
 Si controlas mostrando el control flotante (por ejemplo, en un evento [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) ), Establece la del control flotante [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) a **estándar** para abrir el control flotante en su modo expandido y asignarle el foco.
 
@@ -167,9 +167,9 @@ También puedes agregar comandos a la colección **SecondaryCommands** . Los com
 
 ### <a name="app-bar-buttons"></a>Botones de la barra de la aplicación
 
-Puedes rellenar las propiedades PrimaryCommands y SecondaryCommands directamente con controles [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx)y [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) .
+Puedes rellenar las propiedades PrimaryCommands y SecondaryCommands directamente con los controles [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx)y [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) .
 
-Los controles de botón de la barra de la aplicación se caracterizan por un icono y una etiqueta de texto. Estos controles están optimizados para usarse en una barra de comandos y su aspecto cambia en función de si el control se muestra en la barra de comandos o el menú de desbordamiento.
+Los controles de botón de la barra de la aplicación se caracterizan por un icono y una etiqueta de texto. Estos controles están optimizados para su uso en una barra de comandos y su aspecto cambia en función de si el control se muestra en la barra de comandos o el menú de desbordamiento.
 
 - Botones de barra de la aplicación usados como comandos principales se muestran en la barra de comandos con solo su icono; no se muestra la etiqueta de texto. Te recomendamos que uses una información sobre herramientas para mostrar una descripción de texto del comando, como se muestra aquí.
     ```xaml
@@ -179,10 +179,10 @@ Los controles de botón de la barra de la aplicación se caracterizan por un ico
 
 ### <a name="other-content"></a>Otro contenido
 
-Para agregar otros controles a un control flotante de barra de comandos por encapsularlos en un AppBarElementContainer. Esto te permite agregar controles como [DropDownButton]() o el [botón de división]()o agregar contenedores como [StackPanel]() para crear la interfaz de usuario más compleja.
+Puedes agregar otros controles a un control flotante de barra de comandos por encapsularlos en un AppBarElementContainer. Esto te permite agregar controles como [DropDownButton]() o el [botón de división]()o agregar contenedores como [StackPanel]() para crear la interfaz de usuario más complejo.
 
 > [!NOTE]
-> Con el fin de agregarse a las colecciones de comando principal o secundario de un control flotante de barra de comandos, un elemento debe implementar la interfaz [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) . AppBarElementContainer es un contenedor que implementa esta interfaz por lo que puedes agregar un elemento a una barra de comandos incluso si no implementa la interfaz de sí mismo.
+> Con el fin de agregarse a las colecciones de comando principal o secundario de un control flotante de barra de comandos, un elemento debe implementar la interfaz de [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) . AppBarElementContainer es un contenedor que implementa esta interfaz para poder agregar un elemento a una barra de comandos incluso si no implementa la interfaz de sí mismo.
 
 Aquí, un AppBarElementContainer se usa para agregar elementos adicionales a un control flotante de barra de comandos. Un botón de división se agrega a los comandos principales para permitir la selección de colores. Un elemento StackPanel se agrega a los comandos secundarios para permitir que un diseño más complejo para los controles de zoom.
 
@@ -313,7 +313,7 @@ También puedes usar un CommandBarFlyout con un DropDownButton para crear un men
 
 ## <a name="command-bar-flyouts-for-text-controls"></a>Controles flotantes de la barra de comandos para los controles de texto
 
-El [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) es un control flotante de barra de comandos especializados que contiene comandos de edición de texto. Cada control de texto muestra el TextCommandBarFlyout automáticamente como un menú contextual (botón secundario), o cuando hay texto seleccionado. El control flotante la barra de comandos de texto se adapta a la selección de texto para mostrar solo los comandos relevantes.
+El [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) es un control flotante de barra de comandos especializados que contiene comandos de edición de texto. Cada control de texto muestra el TextCommandBarFlyout automáticamente como un menú contextual (botón secundario), o cuando hay texto seleccionado. El control flotante la barra de comandos de texto se adapta a la selección de texto para mostrar solo los comandos pertinentes.
 
 :::row:::
     :::column:::
@@ -328,7 +328,7 @@ El [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyo
 
 ### <a name="available-commands"></a>Comandos disponibles
 
-Esta tabla muestra los comandos que se incluyen en una TextCommandBarFlyout y que se muestren.
+Esta tabla muestra los comandos que se incluyen en un TextCommandBarFlyout, y cuando se muestran.
 
 | Comando | Se muestra … |
 | ------- | -------- |
@@ -336,7 +336,7 @@ Esta tabla muestra los comandos que se incluyen en una TextCommandBarFlyout y qu
 | Cursiva | Cuando el control de texto no es de solo lectura (RichEditBox solo). |
 | Subrayado | Cuando el control de texto no es de solo lectura (RichEditBox solo). |
 | Corrección | Cuando IsSpellCheckEnabled es **true** y escrita de texto está seleccionado. |
-| Cortar | Cuando el control de texto no es de solo lectura y texto está seleccionado. |
+| Cortar | Cuando el control de texto no es de solo lectura y texto seleccionado. |
 | Copiar | Cuando se selecciona texto. |
 | Pegar | Cuando el control de texto no es de solo lectura y el Portapapeles tiene contenido. |
 | Deshacer | Cuando se produce una acción que se puede deshacer. |
@@ -346,7 +346,7 @@ Esta tabla muestra los comandos que se incluyen en una TextCommandBarFlyout y qu
 
 TextCommandBarFlyout no se puede personalizar y se administra automáticamente por cada control de texto. Sin embargo, puedes reemplazar el valor predeterminado TextCommandBarFlyout con los comandos personalizados.
 
-- Para reemplazar el valor predeterminado TextCommandBarFlyout que se muestra en la selección de texto, puedes crear un CommandBarFlyout personalizado (u otro tipo de control flotante) y asignar a la propiedad **SelectionFlyout** . Si estableces SelectionFlyout en **"null"**, no hay comandos se muestran en la selección.
+- Para reemplazar el valor predeterminado TextCommandBarFlyout que se muestra en la selección de texto, puedes crear un CommandBarFlyout personalizado (u otro tipo de control flotante) y asignarlo a la propiedad **SelectionFlyout** . Si estableces SelectionFlyout en **"null"**, no hay comandos se muestran en la selección.
 - Para reemplazar el valor predeterminado TextCommandBarFlyout que se muestra como el menú contextual, asignar un CommandBarFlyout personalizado (u otro tipo de control flotante) a la propiedad **ContextFlyout** en un control de texto. Si estableces ContextFlyout en **"null"**, se muestra el menú flotante que se muestra en las versiones anteriores del control de texto en lugar de la TextCommandBarFlyout.
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo

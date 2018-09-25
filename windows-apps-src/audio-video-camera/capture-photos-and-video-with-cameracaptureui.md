@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ba33a1e79a2447c5dac546ce0f1caeaf16929a3
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4149646"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4178880"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Capturar fotos y vídeos con la interfaz de usuario de la cámara integrada en Windows
 
@@ -26,7 +26,7 @@ En este artículo se describe cómo usar la clase CameraCaptureUI para capturar 
 Si deseas proporcionar tu propia interfaz de usuario de la cámara o si tu escenario requiere un control de bajo nivel más sólido de la operación de captura, debes usar el objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) e implementar tu propia experiencia de captura. Para obtener más información, consulta [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
 > [!NOTE]
-> No debe especificar las funcionalidades de **cámara Web** o **micrófono** en el archivo de manifiesto de la aplicación si la aplicación solo usa CameraCaptureUI. Si lo haces, la aplicación se mostrará en la configuración de privacidad de la cámara del dispositivo, pero aunque el usuario deniegue el acceso de la cámara a tu aplicación, no impedirá que CameraCaptureUI capture multimedia. Esto es porque la aplicación de cámara integrada de Windows es una aplicación de origen de confianza que requiere que el usuario inicie la captura de fotos, audio y vídeo con la presión de un botón. La aplicación puede presentar errores de certificación del Kit de certificación de aplicaciones de Windows cuando enviadas a la tienda si se especifican las funcionalidades de cámara Web o micrófono al usar CameraCaptureUI como el único mecanismo de captura de fotos.
+> No debe especificar las funcionalidades de **cámara Web** o **micrófono** en el archivo de manifiesto de la aplicación si la aplicación solo usa CameraCaptureUI. Si lo haces, la aplicación se mostrará en la configuración de privacidad de la cámara del dispositivo, pero aunque el usuario deniegue el acceso de la cámara a tu aplicación, no impedirá que CameraCaptureUI capture multimedia. Esto es porque la aplicación de cámara integrada de Windows es una aplicación de origen de confianza que requiere que el usuario inicie la captura de fotos, audio y vídeo con la presión de un botón. La aplicación puede presentar errores de certificación del Kit de certificación de aplicaciones de Windows cuando enviadas a la tienda si especificas las funcionalidades de cámara Web o micrófono al usar CameraCaptureUI como el único mecanismo de captura de fotos.
 > Debes especificar las funcionalidades de cámara web o micrófono en el archivo de manifiesto de la aplicación si usas MediaCapture para capturar audio, fotos o vídeo mediante programación.
 
 ## <a name="capture-a-photo-with-cameracaptureui"></a>Capturar una foto con CameraCaptureUI
