@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4156382"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4177806"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>Crear componentes de Windows Runtime en C++/CX
 > [!NOTE]
@@ -29,7 +29,7 @@ Hay varias razones para compilar un componente de Windows Runtime.
 
 Al compilar una solución que contiene un proyecto de JavaScript o. NET y un proyecto de componente de Windows Runtime, los archivos de proyecto de JavaScript y la DLL compilada se combinan en un paquete que se puede depurar localmente en el simulador o remotamente en un dispositivo amarrado. También puedes distribuir solo el proyecto del componente como un SDK de extensión. Para obtener más información, consulta [Crear un kit de desarrollo de software](https://msdn.microsoft.com/library/hh768146.aspx).
 
-En general, cuando escribas el código C + / componente CX, usa la biblioteca de C++ regular y los tipos integrados, excepto en los límites de la interfaz binaria abstracta (ABI) donde pasas los datos hacia y desde el código de otro paquete .winmd. Allí, usa los tipos de Windows Runtime y la sintaxis especial que C++ / CX admite para crear y manipular esos tipos. Además, en su C++ / CX en el código, usa tipos como delegate y event para implementar los eventos que se pueden genera desde tu componente y controlar en JavaScript, Visual Basic, C++ o C#. Para obtener más información sobre C++ / sintaxis CX, consulta [referencia del lenguaje Visual C++ (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
+En general, cuando escribas el código C + / componente CX, usa la biblioteca de C++ regular y los tipos integrados, excepto en el límite de la interfaz binaria abstracta (ABI) donde pasas los datos hacia y desde el código de otro paquete .winmd. Allí, usa los tipos de Windows Runtime y la sintaxis especial que C++ / CX admite para crear y manipular esos tipos. Además, en su C++ / CX en el código, usa tipos como delegate y event para implementar los eventos que se pueden genera desde tu componente y controlar en JavaScript, Visual Basic, C++ o C#. Para obtener más información sobre C++ / sintaxis CX, consulta [referencia de lenguaje de Visual C++ (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
 ## <a name="casing-and-naming-rules"></a>Reglas de nomenclatura y del uso de mayúsculas y minúsculas
 
@@ -77,7 +77,7 @@ ResultText.Text = num.ToString();
 ## <a name="ccx-built-in-types-library-types-and-windows-runtime-types"></a>C++ / CX tipos integrados, tipos de la biblioteca y tipos de Windows Runtime
 Una clase activable (también conocida como "clase de referencia") es una clase en torno a la cual se pueden crear instancias desde otro lenguaje, como JavaScript, C# o Visual Basic. Para ser consumible en otro idioma, un componente debe contener al menos una clase activable.
 
-Un componente de Windows Runtime puede contener varias clases activables públicas, así como clases adicionales conocidas solo internamente por el componente. Aplicar el atributo [WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx) a C++ / tipos CX que no están destinados a ser visible para JavaScript.
+Un componente de Windows Runtime puede contener varias clases activables públicas, así como clases adicionales conocidas solo internamente por el componente. Aplicar el atributo [WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx) a C++ / tipos CX que no están destinados a ser visibles para JavaScript.
 
 Todas las clases públicas deben residir en el mismo espacio de nombres de raíz con el mismo nombre que el archivo de metadatos del componente. Por ejemplo, para una clase que se denomina A.B.C.MyClass solo puede crearse una instancia si se define en un archivo de metadatos denominado A.winmd o A.B.winmd o A.B.C.winmd. El nombre de la DLL no es necesario que coincida con el nombre de archivo .winmd.
 
@@ -131,7 +131,7 @@ namespace CppComponent
 }
 ```
 
-Para pasar las estructuras de valor definida por el usuario a través de la ABI, define un objeto de JavaScript que tiene los mismos miembros que la estructura de valor que se define en C++ / CX. A continuación, puedes pasar ese objeto como un argumento a C++ / método CX para que el objeto se convierte implícitamente a C++ / tipo CX.
+Para pasar las estructuras de valor definida por el usuario a través de la ABI, define un objeto de JavaScript que tiene los mismos miembros que la estructura de valor que se define en C++ / CX. Puedes pasar ese objeto como argumento a C++ / método CX para que el objeto se convierta implícitamente a C++ / tipo CX.
 
 ```javascript
 // Get and set the value struct
@@ -150,7 +150,7 @@ function GetAndSetPlayerData() {
 
 Otro enfoque es definir una clase que implemente IPropertySet (no se muestra).
 
-En los lenguajes. NET, solo tienes que crear una variable del tipo que se define en C ++ / componente CX.
+En los lenguajes. NET, solo tienes que crear una variable del tipo que se define en el C++ / componente CX.
 
 ```csharp
 private void GetAndSetPlayerData()
@@ -176,7 +176,7 @@ private void GetAndSetPlayerData()
 ```
 
 ## <a name="overloaded-methods"></a>Métodos sobrecargados
-C++ / clase de referencia pública CX puede contener métodos sobrecargados, pero JavaScript tiene una capacidad para diferenciar los métodos sobrecargados limitada. Por ejemplo, puede distinguir entre estas firmas:
+C++ / clase de referencia pública de CX puede contener métodos sobrecargados, pero JavaScript tiene una capacidad para diferenciar los métodos sobrecargados limitada. Por ejemplo, puede distinguir entre estas firmas:
 
 ```cpp
 public ref class NumberClass sealed
@@ -225,7 +225,7 @@ public:
 };
 ```
 
-Cuando se pasa un valor de DateTime de C++ / CX a JavaScript, JavaScript lo acepta como objeto Date y lo muestra de manera predeterminada como una cadena de fecha de formato largo.
+Cuando se pasa un valor de DateTime de C++ / CX a JavaScript, JavaScript lo acepta como objeto Date y lo muestra de forma predeterminada como una cadena de fecha de formato largo.
 
 ```javascript
 function SetAndGetDate() {
@@ -396,7 +396,7 @@ nativeObject.propertyB = "What is the meaning of the universe?";
 document.getElementById('P9').innerHTML += nativeObject.propertyB;
 ```
 
-Los lenguajes .NET acceden a propiedades en nativo C++ / objeto CX como si estuvieran en un objeto de .NET Framework.
+Los lenguajes .NET a propiedades en nativo C++ / objeto CX como si estuvieran en un objeto de .NET Framework.
 
 ```csharp
 private void GetAProperty()
@@ -556,9 +556,9 @@ Cuando se depura una solución de JavaScript que tiene un archivo DLL del compon
 
 Asegúrate de seleccionar las funcionalidades adecuadas en el diseñador de paquetes. Por ejemplo, si estás intentando abrir un archivo de imagen en la biblioteca de imágenes del usuario mediante las API de Windows Runtime, asegúrate de seleccionar la casilla de la biblioteca de imágenes en el panel de capacidades del diseñador de manifiestos.
 
-Si tu código JavaScript aparentemente no reconoce las propiedades o métodos públicos en el componente, asegúrate de que estás usando la convención Camel de mayúsculas y minúsculas en JavaScript. Por ejemplo, la programada de LogCalc c++ / CX método debe referenciarse como logCalc en JavaScript.
+Si tu código JavaScript aparentemente no reconoce las propiedades o métodos públicos en el componente, asegúrate de que estás usando la convención Camel de mayúsculas y minúsculas en JavaScript. Por ejemplo, el c++ LogCalc / CX método debe referenciarse como logCalc en JavaScript.
 
-Si quitas C++ / CX Windows Runtime proyecto de componente de una solución, debes quitar manualmente la referencia de proyecto del proyecto de JavaScript. De lo contrario, no se efectuará la depuración o las operaciones de compilación posteriores. Si es necesario, a continuación puedes agregar una referencia de ensamblado a la DLL.
+Si quitas C++ / CX Windows Runtime proyecto de componente de una solución, también debes quitar manualmente la referencia de proyecto del proyecto de JavaScript. De lo contrario, no se efectuará la depuración o las operaciones de compilación posteriores. Si es necesario, a continuación puedes agregar una referencia de ensamblado a la DLL.
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Tutorial: Crear un componente básico de Windows Runtime en C++ / CX y llamarlo desde JavaScript o C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)

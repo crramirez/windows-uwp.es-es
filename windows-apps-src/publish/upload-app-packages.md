@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, paquetes, carga, carga de paquete
 ms.localizationpriority: medium
 ms.openlocfilehash: 6013a238cff8db3b85dd98af58cccaf344a72f51
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148606"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4176056"
 ---
 # <a name="upload-app-packages"></a>Cargar paquetes de aplicación
 
@@ -32,7 +32,7 @@ Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar
 
 Si has creado algún [paquete piloto](package-flights.md) para tu aplicación, verás una lista desplegable con la opción para copiar los paquetes de uno de los paquetes piloto. Selecciona el paquete piloto que tiene los paquetes que quieres extraer. A continuación, podrás seleccionar varios o todos los paquetes, para incluirlos en este envío.
 
-Si se detectan errores con un paquete durante la validación, se mostrará un mensaje que te permiten saber qué es incorrecto. Debes quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. En otros casos se mostrarán advertencias para informarte de posibles problemas, aunque no se te impedirá que continúes con el envío.
+Si se detectan los errores con un paquete durante la validación, se mostrará un mensaje que te permiten saber qué es incorrecto. Deberás quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. En otros casos se mostrarán advertencias para informarte de posibles problemas, aunque no se te impedirá que continúes con el envío.
 
 
 ## <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos

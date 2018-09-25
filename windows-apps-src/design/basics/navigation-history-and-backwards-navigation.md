@@ -15,11 +15,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4eb8bc40c2e9066487a14d217f53a6433266b308
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4152186"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4174828"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
 
@@ -306,7 +306,7 @@ Si la aplicación sigue usando [AppViewBackButtonVisibility](https://docs.micros
 > [!NOTE]
 > "Atrás del sistema barra" es solo una descripción, no un nombre oficial.
 
-Atrás del sistema barra es una banda que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar que el tamaño del destino táctil adecuado para el botón Atrás.
+Atrás del sistema barra es una banda que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar el tamaño de destino táctil adecuado para el botón Atrás.
 
 La barra Atrás del sistema se muestra dinámicamente, en función de la visibilidad del botón Atrás. Cuando el botón Atrás está visible, Atrás del sistema se inserta la barra, desplazando el contenido de la aplicación por 32 píxeles por debajo de la banda de la pestaña. Cuando se oculta el botón Atrás, Atrás del sistema barra se quita dinámicamente, desplazando el contenido de aplicación 32 píxeles para satisfacer la banda de la pestaña. Para evitar tener que de la aplicación la interfaz de usuario hacia arriba o hacia abajo, te recomendamos dibujar un [botón Atrás en la aplicación](#back-button).
 
@@ -344,7 +344,7 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 <td style="vertical-align:top;"><strong>Página a página; mismo grupo del mismo nivel; con un elemento de navegación en pantalla</strong>
 <p>El usuario navega de una página a otra en el mismo grupo del mismo nivel. Ambas páginas se muestran en el mismo elemento de navegación, por ejemplo, <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>.</p></td>
 <td style="vertical-align:top;"><strong>Depende.</strong>
-<p>Sí, se agrega al historial de navegación, con dos excepciones importantes. Si esperas que los usuarios de la aplicación para cambiar entre las páginas en el grupo del mismo nivel con frecuencia, o si quieres conservar a la jerarquía de navegación, a continuación, no agregues al historial de navegación. En este caso, cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel. </p>
+<p>Sí, se agrega al historial de navegación, con dos excepciones importantes. Si esperas que los usuarios de la aplicación para cambiar entre páginas en el grupo del mismo nivel con frecuencia, o si quieres conservar a la jerarquía de navegación, a continuación, no agregues al historial de navegación. En este caso, cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">

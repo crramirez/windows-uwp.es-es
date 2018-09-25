@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: 8748b68bf4efbcc79d0bba475db32f3a2d7cc933
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151858"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4177274"
 ---
 # <a name="package-an-app-using-the-desktop-app-converter-desktop-bridge"></a>Empaquetar una aplicación con Desktop App Converter (Puente de dispositivo de escritorio)
 
@@ -271,7 +271,7 @@ También puedes ver toda la lista ejecutando el comando ``Get-Help`` en la venta
 |-InstallerArguments &lt;String&gt; |Opcional |Es una lista separada por comas o una cadena de argumentos para forzar al instalador a que se ejecute de forma desatendida o silenciosa. Este parámetro es opcional si el instalador es un msi. Para obtener un registro a partir del instalador, proporciona aquí el argumento de registro del instalador y usa la ruta de acceso &lt;log_folder&gt;, que es un token que el convertidor reemplaza con la ruta de acceso apropiada. <br><br>**NOTA**: los argumentos de registro y marcas de instalación desatendida o silenciosa varían entre las tecnologías de instalador. <br><br>Un ejemplo de uso de este parámetro: -InstallerArguments "/silent /log &lt;log_folder&gt;\install.log" Otro ejemplo que no produzca un archivo de registro puede tener el siguiente aspecto: ```-InstallerArguments "/quiet", "/norestart"``` De nuevo, se deben dirigir literalmente todos los registros a la ruta de acceso del token &lt;log_folder&gt; si quieres que el convertidor lo capture y lo incluya en la carpeta de registro final.|
 |-InstallerValidExitCodes &lt;Int32&gt; |Opcional |Es una lista separada por comas de códigos de salida que indica que el programa de instalación se ejecutó correctamente (por ejemplo: 0, 1234, 5678).  De forma predeterminada, es 0 si no hay archivos msi y 0, 1641, 3010 si hay archivos msi.|
 |-MakeAppx [&lt;SwitchParameter&gt;]  |Opcional |Es un modificador que, cuando está presente, indica a este script que llame a MakeAppx en la salida. |
-|-MakeMSIX [&lt;SwitchParameter&gt;]  |Opcional |Modificador que, cuando está presente, indica a este script para empaquetar la salida como un paquete MSIX. |
+|-MakeMSIX [&lt;SwitchParameter&gt;]  |Opcional |Modificador que, cuando está presente, indica a este script para empaquetar la salida como un paquete de MSIX. |
 |<a id="identity-params" /><strong>Parámetros de identidad de paquete</strong>||
 |-PackageName &lt;String&gt; |Requerido |El nombre del paquete de la aplicación universal de Windows. Si el centro de desarrollo asigna una identidad al paquete que comienza por un número, asegúrate también de pasar el parámetro <i>- AppId</i> y usa solo el sufijo de cadena (después del separador de punto) como el valor de dicho parámetro. |
 |-Publisher &lt;String&gt; |Necesario |El publicador del paquete de la aplicación universal de Windows |

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151196"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4180690"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows10 Mobile
 
@@ -53,14 +53,14 @@ Microsoft Emulator para Windows 10 Mobile requiere Visual Studio 2015 o posterio
 
 Emulador de Microsoft para Windows 10 Mobile no puede cargar las aplicaciones orientadas a versiones del Windows Phone OS anteriores a Windows Phone OS 7.1.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalar, desinstalar y ejecutar el emulador
+## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalación, desinstalación y ejecuta el emulador
 
 ### <a name="installing"></a>Instalar
 El Emulador de Microsoft para Windows 10 Mobile se incluye como parte del SDK de Windows 10. El SDK de Windows 10 y el emulador se pueden instalar como parte de la instalación de Visual Studio. Consulta la [página de descarga de Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
 
 También puedes instalar el Emulador de Microsoft para Windows 10 Mobile con el [programa de configuración del Emulador de Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=615095).
 
-### <a name="uninstalling"></a>Desinstalar
+### <a name="uninstalling"></a>Desinstalación
 
 Puedes desinstalar el Emulador de Microsoft para Windows 10 Mobile con el programa de configuración/reparación de Visual Studio. O puedes usar **Programas y características** de **Panel de control** para quitar el emulador.
 

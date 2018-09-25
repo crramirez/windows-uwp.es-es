@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, anuncio, campaña, promover
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c7e7c1e2cd9a2ca083cef5fed27a9067cf1e7e7
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4153128"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4173838"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para la aplicación
 

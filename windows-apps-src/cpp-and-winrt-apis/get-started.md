@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, obtener, obteniendo, iniciado
 ms.localizationpriority: medium
 ms.openlocfilehash: f058ece64e6f041b5b0e8731a7891968f573f744
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4149768"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4177166"
 ---
 # <a name="get-started-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Introducción a [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Para ponerte al día con el uso de C++/WinRT, este artículo te guía a través de un ejemplo de código sencillo.
@@ -26,7 +26,7 @@ Para ponerte al día con el uso de C++/WinRT, este artículo te guía a través 
 Crea un nuevo proyecto **Aplicación de consola de Windows (C++/WinRT)**.
 
 > [!IMPORTANT]
-> Si estás usando Visual Studio 2017 (versión 15.8.0 o posterior) y destinada a Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803), a continuación, recién creado C++ / WinRT proyecto puede presentar errores compilar con el error "error*C3861: 'from_abi': identificador no encuentra*"y con otros errores que se origine en *base.h*. La solución consiste en cualquier destino una posterior (más compatible) versión del SDK de Windows o la propiedad de proyecto de conjunto de **C/c ++** > **idioma** > **Conformance mode: No** (Además, si **/ permissive-** aparece en la propiedad de proyecto ** C/C++** > **idioma** > de**línea de comandos** en **Las opciones adicionales**, elimínalo).
+> Si estás usando Visual Studio 2017 (versión 15.8.0 o posterior) y el destino de Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803), a continuación, recién creado C++ / WinRT proyecto puede presentar errores compilar con el error "error*C3861: 'from_abi': identificador no encuentra*"y con otros errores que se origine en *base.h*. La solución consiste en cualquier destino una posterior (más compatible) versión del SDK de Windows, o la propiedad de proyecto conjunto **C/c ++** > **idioma** > **Conformance mode: No** (Además, si **/ permissive-** aparece en la propiedad de proyecto ** C/C++** > **idioma** > de**línea de comandos** en **Las opciones adicionales**, elimínalo).
 
 Edita `pch.h` y `main.cpp` para que tenga este aspecto.
 
@@ -122,7 +122,7 @@ Tampoco es necesario controlar códigos de retorno HRESULT. C++/WinRT convierte 
 * [Método syndicationclient:: Retrievefeedasync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
 * [Propiedad SyndicationFeed.Items](/uwp/api/windows.web.syndication.syndicationfeed.items)
 * [Estructura winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
-* [estructura de error HRESULT](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
+* [estructura de HRESULT-error](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)

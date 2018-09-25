@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151606"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4174140"
 ---
 # <a name="get-daily-app-usage"></a>Obtener el uso diario de la aplicación
 
@@ -91,10 +91,10 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | applicationName           | cadena  | Nombre para mostrar de la aplicación.                                              |
 | deviceType                | cadena  | Una de las cadenas siguientes que especifica el tipo de dispositivo donde se produjo el uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tableta**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                         |
 | packageVersion            | cadena  | La versión del paquete donde se produjo el uso.                          |
-| market                    | cadena  | El código de país ISO 3166 del mercado donde el cliente usó la aplicación. |
+| market                    | cadena  | El código de país ISO 3166 del mercado donde el cliente usa la aplicación. |
 | subscriptionName          | cadena  | Indica si estaba el uso de a través de Xbox Game Pass.                            |
 | dailySessionCount         | long    | El número de sesiones de usuario en ese día.                                  |
-| engagementDurationMinutes | double  | Minutos que los usuarios activamente se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.             |
+| engagementDurationMinutes | double  | Los minutos que los usuarios activamente se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.             |
 | dailyActiveUsers          | long    | El número de clientes que usen la aplicación ese día.                           |
 | dailyActiveDevices        | long    | El número de dispositivos diarios que se usan para interactuar con la aplicación todos los usuarios.  |
 | dailyNewUsers             | long    | El número de clientes que usó la aplicación por primera vez ese día.    |

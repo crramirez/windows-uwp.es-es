@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, autor, COM, componente
 ms.localizationpriority: medium
 ms.openlocfilehash: 729cfae39f302ae6b5bae275d9e28a39f3d9503b
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4152098"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4176518"
 ---
 # <a name="author-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Crear componentes de COM con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -51,7 +51,7 @@ Consulta también [componentes de consumir COM con C++ / WinRT](consume-com.md).
 
 El resto de este tema te guiará a través de crear un proyecto de aplicación de consola mínima que usa C++ / WinRT para implementar una fábrica de coclase y la clase básica. La aplicación de ejemplo muestra cómo enviar una notificación del sistema con un botón de devolución de llamada en él y la coclase (que implementa la interfaz **INotificationActivationCallback** COM) permite que la aplicación se inicia y se denomina atrás cuando el usuario Haga clic en ese botón en la notificación del sistema.
 
-Obtener más información general sobre el área de característica de notificación del sistema puede encontrarse en [Enviar una notificación del sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast). Ninguno de los ejemplos de código en la sección de la documentación de usar C++ / WinRT, sin embargo, por lo tanto, te recomendamos que prefieres que el código se muestra en este tema.
+Más información sobre el área de característica de notificación del sistema puede encontrarse en [Enviar una notificación del sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast). Ninguno de los ejemplos de código en la sección de la documentación de usar C++ / WinRT, sin embargo, por lo tanto, te recomendamos que prefieres que el código se muestra en este tema.
 
 ## <a name="create-a-windows-console-application-project-toastandcallback"></a>Crear un proyecto de aplicación de consola de Windows (ToastAndCallback)
 
@@ -134,9 +134,9 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 };
 ```
 
-La implementación de la coclase anterior sigue el mismo patrón que se muestra en [crear API con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). Ten en cuenta que puedes usar esta técnica no solo para las interfaces de Windows Runtime (es decir, cualquier interfaz que finalmente se deriva del objeto [**IInspectable**](https://msdn.microsoft.com/library/br205821)), sino también para implementar interfaces COM (cualquier interfaz que finalmente se deriva del objeto [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)).
+La implementación de la coclase anterior sigue el mismo patrón que se muestra en [crear API con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). Ten en cuenta que puedes usar esta técnica no solo para las interfaces de Windows Runtime (es decir, cualquier interfaz que finalmente se deriva del objeto [**IInspectable**](https://msdn.microsoft.com/library/br205821)), sino también para implementar las interfaces COM (es decir, cualquier interfaz que finalmente se deriva del objeto [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)).
 
-En la coclase en el código anterior, se implementa el método **INotificationActivationCallback::Activate** , que es la función que se llama cuando el usuario hace clic en el botón de devolución de llamada en una notificación del sistema. Pero antes de llamar a esa función, debe crearse una instancia de la coclase y es el trabajo de la función **IClassFactory:: CreateInstance** .
+En la coclase en el código anterior, se implementa el método **INotificationActivationCallback::Activate** , que es la función que se llama cuando el usuario hace clic en el botón de devolución de llamada en una notificación del sistema. Sin embargo, para poder llamar a esa función, debe crearse una instancia de la coclase y el trabajo de la función **IClassFactory:: CreateInstance** .
 
 La coclase que hemos implementado solo se conoce como el *activador COM* para las notificaciones y tiene su identificador de clase (CLSID) en forma de la `callback_guid` identificador (de tipo **GUID**) que ves anteriormente. Usaremos ese identificador de una versión posterior, en forma de un acceso directo del menú Inicio y una entrada del registro de Windows. El CLSID del activador COM y la ruta de acceso a su servidor COM asociado (que es la ruta de acceso al archivo ejecutable que estamos creando aquí) es el mecanismo por el que una notificación del sistema sabe qué clase para crear una instancia de cuando se hace clic en el botón de devolución de llamada (si el notificación se ha hecho clic en el centro de actividades o no).
 
@@ -144,11 +144,11 @@ La coclase que hemos implementado solo se conoce como el *activador COM* para la
 
 Técnicas de control de errores y de administración de recursos pueden ir en la mano. Es más cómodo y práctico usar excepciones de códigos de error. Y si se emplee la expresión de recurso adquisición-es-inicialización (RAII), a continuación, puede evitar explícitamente comprobación de códigos de error y, a continuación, liberar recursos. Dichas comprobaciones explícitas hacer que el código más complicado que sea necesario, y ofrece errores abundante lugares para ocultar. En su lugar, usa RAII y produzca/catch excepciones. De este modo, las asignaciones de recursos son seguro para excepciones y el código es muy sencillo.
 
-Sin embargo, no permitir excepciones para las implementaciones de método COM de escape. Puedes garantizar que mediante el uso de la `noexcept` especificador en los métodos de COM. Es Aceptar para que se produzcan en cualquier lugar en el gráfico de llamada de su método, excepciones, siempre y controlarlos antes de que el método se cierra. Si usas `noexcept`, pero, a continuación, permite que una excepción a su método de escape, a continuación, la aplicación finalizará.
+Sin embargo, no permitir excepciones para las implementaciones de método COM de escape. Puedes garantizar que mediante el uso de la `noexcept` especificador en los métodos de COM. Es aceptar excepciones se inicie en cualquier lugar en el gráfico de llamada de su método, siempre y cuando controlarlos antes de que el método se cierra. Si usas `noexcept`, pero, a continuación, permite que una excepción en el método de escape, a continuación, la aplicación finalizará.
 
 ## <a name="add-helper-types-and-functions"></a>Agregar funciones y tipos de ayuda
 
-En este paso, vamos a agregar algunas funciones y tipos de ayuda que hace que el resto del código de usan de. Por lo que, antes de `main`, agrega lo siguiente.
+En este paso, vamos a agregar algunas funciones y tipos de ayuda que hace que el resto del código de usan. Por lo que, antes de `main`, agrega lo siguiente.
 
 ```cppwinrt
 struct prop_variant : PROPVARIANT
@@ -220,7 +220,7 @@ std::wstring get_shortcut_path()
 
 ## <a name="implement-the-remaining-functions-and-the-wmain-entry-point-function"></a>Implementar las funciones restantes y la función de punto de entrada de wmain
 
-La plantilla de proyecto genera un `main` función para TI. Eliminar que `main` funcionar y en su lugar, pega este código de la descripción, que incluye código para registrar tu coclase, y, después, para entregar una notificación del sistema capaz de llamar a volver a la aplicación.
+La plantilla de proyecto genera un `main` función para TI. Eliminar que `main` funcionar y en su lugar, pega este código de la descripción, que incluye código para registrar la coclase, y, después, para entregar una notificación del sistema capaz de una llamada a la aplicación.
 
 ```cppwinrt
 void register_callback()

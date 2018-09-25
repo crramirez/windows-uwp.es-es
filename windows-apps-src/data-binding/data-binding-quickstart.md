@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ff104bfb5114cd51eb04d75af3c096f47a7d286d
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4153628"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4180728"
 ---
 # <a name="data-binding-overview"></a>Introducción al enlace de datos
 
@@ -42,7 +42,7 @@ Cada enlace consta de un destino de enlace y de un origen de enlace. Normalmente
 
 Si estás usando C# o C++ / CX, a continuación, agrega una nueva clase al proyecto y asigna el nombre de la clase de **grabación**.
 
-Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, agregar nuevos elementos de **Midl File (.idl)** para el proyecto, denominado como se muestra en C++ / WinRT listado de ejemplo de código siguiente. Reemplaza el contenido de los nuevos archivos con el código de [MIDL 3.0](/uwp/midl-3/intro) se muestra en la descripción, compila el proyecto para generar `Recording.h` y `.cpp` y `RecordingViewModel.h` y `.cpp`y, a continuación, agrega código a los archivos generados para que coincida con la descripción. Para que obtener más información sobre estos archivos generados y cómo copiarlas en el proyecto, consulta [controles XAML; enlazar a C++ / WinRT propiedad](/windows/uwp/cpp-and-winrt-apis/binding-property).
+Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, agregar nuevos elementos de **Midl File (.idl)** para el proyecto, denominado como se muestra en C++ / WinRT listado de ejemplo de código siguiente. Reemplaza el contenido de esos archivos nuevos con el código de [MIDL 3.0](/uwp/midl-3/intro) se muestra en la descripción, compila el proyecto para generar `Recording.h` y `.cpp` y `RecordingViewModel.h` y `.cpp`y, a continuación, agrega código a los archivos generados para que coincida con la descripción. Para que obtener más información sobre estos archivos generados y cómo copiarlas en el proyecto, consulta [controles XAML; enlazar a C++ / WinRT propiedad](/windows/uwp/cpp-and-winrt-apis/binding-property).
 
 ```csharp
 namespace Quickstart
@@ -333,7 +333,7 @@ Este es el resultado.
 
 Un escenario común es enlazar a una colección de objetos profesionales. En C# y Visual Basic, la clase [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) genérica es una buena elección de colección para el enlace de datos porque implementa las interfaces [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx) y [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx). Estas interfaces proporcionan notificación de cambios a los enlaces cuando los elementos se añaden o se eliminan o cuando cambia una propiedad de la lista en sí. Si quieres que los controles enlazados se actualicen con los cambios en las propiedades de objetos de la colección, el objeto profesional también debe implementar **INotifyPropertyChanged**. Para obtener más información, consulta el tema [Enlace de datos en profundidad](data-binding-in-depth.md).
 
-Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, puedes aprender más sobre el enlace a una colección observable en [controles de elementos XAML; enlazar a C++ / WinRT colección](/windows/uwp/cpp-and-winrt-apis/binding-collection). Si leen ese tema en primer lugar, a continuación, la intención de C++ / WinRT listado de código se muestra a continuación será más clara.
+Si estás usando [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), a continuación, puedes aprender más sobre el enlace a una colección observable en [controles de elementos XAML; enlazar a C++ / WinRT colección](/windows/uwp/cpp-and-winrt-apis/binding-collection). Si leen ese tema en primer lugar, a continuación, el propósito de C++ / WinRT listado de código se muestra a continuación serán más claro.
 
 El siguiente ejemplo enlaza una [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) a una colección de objetos `Recording`. Empecemos agregando la colección a nuestro modelo de vista. Solo tienes que agregar estos miembros nuevos a la clase **RecordingViewModel**.
 
@@ -459,7 +459,7 @@ Aún no hemos proporcionado una plantilla de datos para la clase **Recording**, 
 
 ![Enlazar una vista de lista](images/xaml-databinding1.png)
 
-Para solucionar esto, ya sea que podemos omitir [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) para devolver el valor de **OneLineSummary**o podemos proporcionar una plantilla de datos. La opción de plantilla de datos es una solución más habitual y otra más flexible. Estableces una plantilla de datos mediante la propiedad [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) de un control de contenido o la propiedad [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) de un control de elementos. Hay dos formas en las que podríamos diseñar una plantilla de datos para **Recording** junto con una ilustración del resultado.
+Para solucionar esto, ya sea que podemos omitir [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) para devolver el valor de **OneLineSummary**o podemos proporcionar una plantilla de datos. La opción de plantilla de datos es una solución más habitual y uno más flexible. Estableces una plantilla de datos mediante la propiedad [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) de un control de contenido o la propiedad [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) de un control de elementos. Hay dos formas en las que podríamos diseñar una plantilla de datos para **Recording** junto con una ilustración del resultado.
 
 ```xml
 <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
@@ -499,7 +499,7 @@ Para más información sobre la sintaxis XAML, consulta el tema [Crear una inter
 
 Puedes elegir mostrar todos los detalles de objetos **Recording** en los elementos de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878). Pero eso ocupa una gran cantidad de espacio. En su lugar, puedes mostrar solo los datos suficientes en el elemento para identificarlo y luego, cuando el usuario realiza una selección, se pueden mostrar todos los detalles del elemento seleccionado en una parte independiente de la interfaz de usuario conocida como la vista de detalles. Este tipo de organización es también conocido como una vista maestra/detallada o una vista de lista/detalles.
 
-Esto se puede llevar a cabo de dos maneras. Puedes enlazar la vista de detalles a la propiedad [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) de la [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878). O bien, puedes usar un [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), en cuyo caso se enlazar **ListView** y la vista de detalles para el **CollectionViewSource** (realiza por lo que se encarga del elemento seleccionado actualmente para que puedas). A continuación se muestran ambas técnicas y proporcionan los mismos resultados (que se muestra en la ilustración).
+Esto se puede llevar a cabo de dos maneras. Puedes enlazar la vista de detalles a la propiedad [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) de la [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878). O bien, puedes usar un [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), en cuyo caso enlaza tanto **ListView** como la vista de detalles a la **CollectionViewSource** (realiza por lo que se encarga del elemento seleccionado actualmente para que puedas). A continuación se muestran ambas técnicas y proporcionan los mismos resultados (que se muestra en la ilustración).
 
 > [!NOTE]
 > Hasta ahora en este tema solo hemos usado la [Extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), pero ambas técnicas que te mostramos a continuación requieren la extensión más flexible (pero menos eficaz) [Extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782).
@@ -582,13 +582,13 @@ Y luego ajusta los enlaces en la [**ListView**](https://msdn.microsoft.com/libra
 Y este es el resultado idéntico en cada caso.
 
 > [!NOTE]
-> Si estás usando C++, a continuación, la interfaz de usuario no se verá exactamente igual que la siguiente ilustración: la representación de la propiedad **ReleaseDateTime** es diferente. Consulta la sección siguiente para obtener una explicación de este.
+> Si estás usando C++, a continuación, la interfaz de usuario no se verá exactamente igual que en la ilustración siguiente: la representación de la propiedad **ReleaseDateTime** es diferente. Consulta la sección siguiente para obtener una explicación de este.
 
 ![Enlazar una vista de lista](images/xaml-databinding4.png)
 
 ## <a name="formatting-or-converting-data-values-for-display"></a>Formato o conversión de valores de datos para mostrar
 
-Hay un problema con la representación anterior. La propiedad **ReleaseDateTime** no es simplemente una fecha, es una [**fecha y hora**](/uwp/api/windows.foundation.datetime) (si estás usando C++, a continuación, se trata de un [**calendario**](/uwp/api/windows.globalization.calendar)). Por lo tanto, en C#, que se muestra con más precisión que necesitamos. Y en C++ que se represente como un nombre de tipo. Una solución es agregar una propiedad de cadena a la clase de **grabación** que devuelve el equivalente de `this.ReleaseDateTime.ToString("d")`. Darle a esa propiedad **ReleaseDate** indicaría que devuelve una fecha y no una fecha y hora. Darle el nombre **ReleaseDateAsString** indicaría, además, que devuelve una cadena.
+Hay un problema con la representación anterior. La propiedad **ReleaseDateTime** no es simplemente una fecha, es una [**fecha y hora**](/uwp/api/windows.foundation.datetime) (si estás usando C++, a continuación, se trata de un [**calendario**](/uwp/api/windows.globalization.calendar)). Por lo tanto, en C#, que se muestra con más precisión que necesitamos. Y en C++ que se represente como un nombre de tipo. Una solución es agregar una propiedad de cadena a la clase de **grabación** que se devuelve el equivalente de `this.ReleaseDateTime.ToString("d")`. Darle a esa propiedad **ReleaseDate** indicaría que devuelve una fecha y no una fecha y hora. Darle el nombre **ReleaseDateAsString** indicaría, además, que devuelve una cadena.
 
 Una solución más flexible es usar algo conocido como un convertidor de valores. Este es un ejemplo de cómo crear tu propio convertidor de valores. Agrega este código al archivo de código fuente Recording.cs.
 
@@ -721,14 +721,14 @@ Ahora podemos agregar una instancia de **StringFormatter** como un recurso de p�
 ...
 ```
 
-Como puedes ver anteriormente, para dar formato a flexibilidad usamos el marcado para pasar una cadena de formato en el convertidor mediante el parámetro de convertidor. En los ejemplos de código se muestra en este tema, solo el C# convertidor de valores hace uso de dicho parámetro. Pero, fácilmente podría pasar una cadena de formato de estilo de C++ como el parámetro de convertidor y usarlo en el convertidor de valores con una función de formato como **wprintf** o **swprintf**.
+Como puedes ver anteriormente, para dar formato a flexibilidad usamos el marcado para pasar una cadena de formato en el convertidor mediante el parámetro de convertidor. En los ejemplos de código se muestra en este tema, solo el C# convertidor hace uso de dicho parámetro. Pero, fácilmente podría pasar una cadena de formato de estilo de C++ como el parámetro de convertidor y usarlo en el convertidor de valores con una función de formato como **wprintf** o **swprintf**.
 
 Este es el resultado.
 
 ![visualización de una fecha con formato personalizado](images/xaml-databinding5.png)
 
 > [!NOTE]
-> A partir de Windows 10, versión 1607, el marco XAML proporciona un convertidor de valor booleano a visibilidad integrado. El convertidor asigna **true** para el valor de enumeración **Visibility.Visible** y **false** en **Visibility.Collapsed** por lo que se puede enlazar una propiedad Visibility a un valor booleano sin tener que crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información acerca de las versiones de destino, consulta el [código adaptable para la versión](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir de Windows 10, versión 1607, el marco XAML proporciona un convertidor de un valor booleano para visibilidad integrado. El convertidor asigna **true** para el valor de enumeración **Visibility.Visible** y **false** en **Visibility.Collapsed** por lo que se puede enlazar una propiedad Visibility a un valor booleano sin tener que crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información acerca de las versiones de destino, consulta el [código adaptable para la versión](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 ## <a name="see-also"></a>Consulta también
 * [Enlace de datos](index.md)

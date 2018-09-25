@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, código de promoción, códigos de promoción, token, tokens
 ms.localizationpriority: medium
 ms.openlocfilehash: 37263794ffed6660f71c5e16195e992588c16d4a
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4149810"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4177794"
 ---
 # <a name="generate-promotional-codes"></a>Generar códigos de promoción
 
@@ -24,7 +24,7 @@ Puedes generar códigos de promoción para una aplicación o complemento que hay
 
 Cada código promocional contiene una correspondiente URL única y canjeable que un cliente puede hacer clic con el fin de canjear el código e instalar la aplicación o complemento desde Microsoft Store.  Recuerda que la aplicación debe pasar a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md) antes de que los clientes puedan canjear un código promocional para instalarla.
 
-Puedes generar códigos de uso único (y distribuir uno a cada cliente), o puedes elegir generar un código que puede usarse varias veces por un número especificado de los clientes.
+Puedes generar códigos de uso único (y distribuir uno a cada cliente), o puedes elegir generar un código que puede usarse varias veces por un número especificado de clientes.
 
 > [!TIP]
 > Puedes usar [notificaciones push dirigidas](send-push-notifications-to-your-apps-customers.md) para distribuir un código promocional a un segmento de tus clientes. Al hacerlo, asegúrate de usar un código promocional que permita a varios clientes usar el mismo código.
@@ -40,7 +40,7 @@ Ten en cuenta las siguientes directivas para los códigos de promoción:
 -   Debes seguir los requisitos definidos en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), incluida la sección **3k. Códigos promocionales**.
 
 > [!NOTE]
-> Puedes usar códigos promocionales incluso si la aplicación no está disponible para los clientes (es decir, si has seleccionado **hacer este producto disponible, pero no detectable en Store** con la adquisición de detención **: los clientes con un vínculo directo podrán ver la tienda del producto Descripción, pero solo podrán descargarlo si ya tienen el producto, o tienen un código promocional y están usando un dispositivo Windows 10** opción en la sección de [detectabilidad](choose-visibility-options.md#discoverability) de tu envío). Con esta opción, los clientes deben estar en Windows 10 (incluyendo Xbox) para poder adquirir el producto con un código promocional.
+> Puedes usar códigos promocionales incluso si la aplicación no está disponible para los clientes (es decir, si has seleccionado **hacer este producto disponible, pero no detectable en Store** con la adquisición de detención **: los clientes con un vínculo directo podrán ver la tienda del producto Descripción, pero solo podrán descargarlo si ya tienen el producto, o tienen un código promocional y están usando un dispositivo de Windows 10** opción en la sección de [visibilidad](choose-visibility-options.md#discoverability) de tu envío). Con esta opción, los clientes deben estar en Windows 10 (incluyendo Xbox) para poder adquirir el producto con un código promocional.
 
 
 ## <a name="order-promotional-codes"></a>Pedir códigos promocionales

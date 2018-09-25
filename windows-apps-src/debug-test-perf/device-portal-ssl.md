@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 1192c200cd42ab28cc7e763c06fd8a5638aa3400
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148300"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4173702"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>Aprovisionar el Portal de dispositivos con un certificado SSL personalizado
-En Windows 10 Creators Update, Windows Device Portal agregado una forma para que los administradores del dispositivo instalar un certificado personalizado para su uso en comunicaciones HTTPS. 
+En Windows 10 Creators Update, Windows Device Portal agregado una forma para que los administradores del dispositivo instalar un certificado personalizado para su uso en la comunicación de HTTPS. 
 
-Si bien puedes hacerlo en su PC, esta característica está pensada para las empresas que tienen una infraestructura existente de certificado en su lugar.  
+Si bien puedes hacerlo en tu PC, esta característica está pensada para las empresas que tienen una infraestructura de certificado en su lugar.  
 
-Por ejemplo, una compañía podría tener una entidad de certificación (CA) que se usa para firmar los certificados para sitios Web de intranet proporcionados a través de HTTPS. Esta característica de eso significa infraestructura. 
+Por ejemplo, una compañía podría tener una entidad de certificación (CA) que se usa para firmar los certificados para sitios Web de intranet proporcionados a través de HTTPS. Además de eso, esta característica significa infraestructura. 
 
 ## <a name="overview"></a>Información general
-De manera predeterminada, Device Portal genera una CA raíz autofirma y que usará para firmar los certificados SSL para cada punto de conexión está escuchando. Esto incluye `localhost`, `127.0.0.1`, y `::1` (IPv6 localhost).
+De manera predeterminada, Device Portal genera una CA raíz autofirma y que usará para firmar los certificados SSL de cada punto de conexión está escuchando. Esto incluye `localhost`, `127.0.0.1`, y `::1` (IPv6 localhost).
 
 También se incluyen son el nombre de host del dispositivo (por ejemplo, `https://LivingRoomPC`) y cada dirección IP local de vínculo asignada al dispositivo (hasta dos [IPv4, IPv6] para cada adaptador de red). Puedes ver las direcciones IP locales del vínculo para un dispositivo, observemos la herramienta de redes en el Portal de dispositivos. Empezaremos con `10.` o `192.` para IPv4, o `fe80:` para IPv6. 
 
@@ -33,7 +33,7 @@ En la configuración predeterminada, puede aparecer una advertencia de certifica
 
 ## <a name="create-a-root-ca"></a>Crear una entidad de certificación raíz
 
-Esto solo debe hacerse si tu empresa (o home) no tiene una infraestructura de certificados configurar y solo debe realizarse una vez. El siguiente script de PowerShell crea una raíz de CA llamado _WdpTestCA.cer_. Instalación de este archivo para entidades de certificación de raíz de confianza de la máquina local hará que el dispositivo para los certificados SSL que están firmados por esta entidad de certificación raíz de confianza. Puede (y debe) instalar este archivo .cer en cada equipo que quieres conectarte al Portal de dispositivos de Windows.  
+Esto solo debe hacerse si tu empresa (o home) no tiene una infraestructura de certificados configurar y solo debe realizarse una vez. El siguiente script de PowerShell crea una raíz de CA llamado _WdpTestCA.cer_. Instalación de este archivo en las entidades de certificación de raíz de confianza de la máquina local hará que el dispositivo para certificados SSL que están firmados por esta entidad de certificación raíz de confianza. Puede (y debe) instalar este archivo .cer en cada equipo que quieres conectarte al Portal de dispositivos de Windows.  
 
 ```PowerShell
 $CN = "PickAName"
@@ -74,7 +74,7 @@ Cuando se genera el lote de archivos .pfx, tendrás que cargarlos en Windows Dev
 
 ## <a name="provision-device-portal-with-the-certifications"></a>Aprovisionar Device Portal con las certificaciones
 
-Para cada archivo de .pfx que has creado para un dispositivo, debes ejecutar el siguiente comando desde un símbolo del sistema con privilegios elevados.
+Para cada archivo de .pfx que has creado para un dispositivo, tendrás que ejecuta el siguiente comando desde un símbolo del sistema con privilegios elevados.
 
 ```
 WebManagement.exe -SetCert <Path to .pfx file> <password for pfx> 
@@ -96,4 +96,4 @@ sc start webmanagement
 
 > [!TIP]
 > Las direcciones IP pueden cambiar con el tiempo.
-Muchas redes usan DHCP para dar un vistazo a las direcciones IP, por lo que los dispositivos no obtener siempre la misma dirección IP que tenían anteriormente. Si has creado un certificado para una dirección IP en un dispositivo y que ha cambiado la dirección del dispositivo, Windows Device Portal generará un nuevo certificado utilizando el certificado autofirmado existente y dejará de uso creó. Esto hará que la página de advertencia de certificado para volverá a aparecer en el explorador. Por este motivo, te recomendamos conectar a los dispositivos a través de sus nombres de host, puede establecer en el Portal de dispositivos. Estos mantendrá la misma independientemente de las direcciones IP.
+Muchas redes usan DHCP para dar un vistazo a direcciones IP, por lo que los dispositivos no obtener siempre la misma dirección IP que tenían anteriormente. Si has creado un certificado para una dirección IP en un dispositivo y que ha cambiado la dirección del dispositivo, Windows Device Portal se generará un nuevo certificado utilizando el certificado autofirmado existente y dejará de uso creó. Esto hará que la página de advertencia de certificado para volverá a aparecer en el explorador. Por este motivo, te recomendamos conectar a los dispositivos a través de sus nombres de host, que se pueden establecer en el Portal de dispositivos. Estos mantendrá la misma independientemente de las direcciones IP.

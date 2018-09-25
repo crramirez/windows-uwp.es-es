@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4154002"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4174304"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Diseños adaptativos con XAML
 
@@ -99,7 +99,7 @@ Puedes mostrar u ocultar un elemento si estableces su propiedad [**Visibility**]
 Puedes cambiar la propiedad Visibility de un elemento en código o en un estado visual. Cuando el objeto Visibility de un elemento cambia, también cambian todos sus elementos secundarios. Puedes reemplazar secciones de la interfaz de usuario al mostrar un panel mientras contraes otro.
 
 > [!Tip]
-> Cuando tengas los elementos de la interfaz de usuario que son **Collapsed** de manera predeterminada, los objetos se seguirán creando en el inicio, aunque no sean visibles. Puedes postergar la carga de estos elementos hasta que se muestren si estableces el **atributo x:DeferLoadStrategy** en "Lazy". Esto puede mejorar el rendimiento del inicio. Para obtener más información, consulta [atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
+> Cuando tengas los elementos de la interfaz de usuario que son **contraído** de manera predeterminada, los objetos se seguirán creando en el inicio, aunque no sean visibles. Puedes postergar la carga de estos elementos hasta que se muestren si estableces el **atributo x:DeferLoadStrategy** en "Lazy". Esto puede mejorar el rendimiento del inicio. Para obtener más información, consulta [atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### <a name="style-resources"></a>Recursos de estilo
 

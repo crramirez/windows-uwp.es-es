@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83f2ab8a27810635b569d44961ff532ce3240e28
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4150914"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4175988"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Crear la aplicación reservando un nombre
 
@@ -26,7 +26,7 @@ Puedes reservar un nombre para tu aplicación incluso si aún no has empezado a 
 Cuando [cargas los paquetes de la aplicación](upload-app-packages.md), el valor [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) debe coincidir con el nombre que reservaste para la aplicación. Si usas Microsoft Visual Studio para crear el paquete de la aplicación, este atributo se rellenará automáticamente.
 
 > [!IMPORTANT]
-> Puedes reservar nombres adicionales para una aplicación, y puedes optar por usar uno de ellos en la versión publicada de la aplicación en lugar de la que reserva al crear la aplicación en primer lugar en el panel. Sin embargo, ten en cuenta que el nombre que escribas aquí se usará en la parte de [Detalles de identidad](view-app-identity-details.md), por ejemplo, el **Nombre de familia de paquete (PFN) la aplicación**. Estos valores pueden ser visibles para algunos usuarios y no se puede cambiar, así que asegúrate de que el nombre que reservas es apropiado para este uso.
+> Puedes reservar nombres adicionales para una aplicación, y puedes optar por usar uno de ellos en la versión publicada de la aplicación en lugar de la que reserva al crear la aplicación en primer lugar en el panel. Sin embargo, ten en cuenta que el nombre que escribas aquí se usará en la parte de [Detalles de identidad](view-app-identity-details.md), como el **Nombre de familia de paquete (PFN) la aplicación**. Estos valores pueden ser visibles para algunos usuarios y no se puede cambiar, así que asegúrate de que el nombre que reservas es apropiado para este uso.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>Crear la aplicación reservando un nuevo nombre

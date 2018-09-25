@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, uwp, responder, respuestas, revisar
 ms.localizationpriority: medium
 ms.openlocfilehash: 2a043a0b721ee6eabdc3520960ae6da253587c33
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4152034"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4174722"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder a las opiniones de los clientes
 
 
-Puedes responder a las opiniones de la aplicación para permitir que los clientes sepan que lees sus comentarios. Con la respuesta a una crítica, puedes contar a los clientes las funciones que has agregado o los errores que has corregido basándote en sus comentarios, u obtener comentarios más específicos sobre cómo mejorar la aplicación. Sus respuestas se mostrarán en la Microsoft Store para todos los clientes de Windows 10 ver. También puedes enviar tu respuesta por correo electrónico al cliente (si no ha optado por un vistazo a y están usando un dispositivo que ejecuta Windows 10, versión 1803 o posterior).
+Puedes responder a las opiniones de la aplicación para permitir que los clientes sepan que lees sus comentarios. Con la respuesta a una crítica, puedes contar a los clientes las funciones que has agregado o los errores que has corregido basándote en sus comentarios, u obtener comentarios más específicos sobre cómo mejorar la aplicación. Se mostrará en la Microsoft Store para todos los clientes de Windows 10 ver tus respuestas. También puedes enviar tu respuesta por correo electrónico al cliente (si lo no han optado por un vistazo y están usando un dispositivo que ejecuta Windows 10, versión 1803 o posterior).
 
 Para ver las valoraciones sobre la aplicación y proporcionar respuestas, busca la aplicación en el panel de información del Centro de desarrollo de Windows. En el menú de navegación izquierdo, expande **Análisis** y, después, haz clic en **Opiniones** para mostrar el [informe de opiniones](reviews-report.md). Selecciona **responder para revisar** para proporcionar tu respuesta.
 
@@ -33,10 +33,10 @@ Si no quieres que tu respuesta que aparezca en la tienda y, en su lugar quieres 
 
 ## <a name="guidelines-for-responses"></a>Orientación para las respuestas
 
-Al responder a la crítica de un cliente, debes seguir estas instrucciones. Esto se aplica a todas las respuestas, independientemente de si están públicas o no.
+Al responder a la crítica de un cliente, debes seguir estas instrucciones. Se aplican a todas las respuestas, independientemente de si están públicas o no.
 
 > [!IMPORTANT]
-> No podrás cambiar las respuestas que registrar en la tienda (a menos que el cliente revise su valoración original), por lo tanto, revisa la respuesta cuidadosamente. Si un cliente revisa la valoración original, tu respuesta se quitará de la página de descripción de la tienda de la aplicación. A continuación, tienes la opción de enviar una nueva respuesta a la valoración revisada seleccionando **actualizar tu respuesta**.
+> No podrás cambiar las respuestas que publicar en la tienda (a menos que el cliente revise su valoración original), por lo tanto, revisa la respuesta cuidadosamente. Si un cliente revisa la valoración original, tu respuesta se quitará de la página de descripción de la tienda de la aplicación. A continuación, tienes la opción de enviar una nueva respuesta a la valoración revisada seleccionando **actualizar tu respuesta**.
 
 -   Las respuestas no pueden tener más de 1000 caracteres.
 -   No puedes ofrecer a los usuarios ningún tipo de compensación, incluidos productos de aplicaciones digitales, por cambiar la clasificación de la aplicación. Recuerda que no se permiten los intentos de manipular las clasificaciones en virtud del [Acuerdo de desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
@@ -50,7 +50,7 @@ Al responder a la crítica de un cliente, debes seguir estas instrucciones. Esto
 >
 > Microsoft se reserva el derecho a revocar un permiso de desarrollador para enviar respuestas por cualquier motivo, incluso si tus respuestas dan lugar a un número elevado de informes de respuesta inadecuados o si un número elevado de clientes opta por no recibir respuestas a valoraciones.
 
-La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. Sin embargo, si una revisión de la aplicación contiene lenguaje ofensivo, irreverente o abusivo, abre una [solicitud de soporte técnico](http://go.microsoft.com/fwlink/p/?LinkID=401178).
+La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. Sin embargo, si una opinión sobre tu aplicación contiene lenguaje ofensivo, irreverente o abusivo, abre una [solicitud de soporte técnico](http://go.microsoft.com/fwlink/p/?LinkID=401178).
 
 
 ## <a name="use-customer-reviews-to-improve-your-app"></a>Usar las valoraciones de los clientes para mejorar la aplicación

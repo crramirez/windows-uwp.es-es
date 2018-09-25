@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, educación
 ms.localizationpriority: medium
 ms.openlocfilehash: 3193525316d085e56244d6f03da99e3e07c6539f
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148260"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4173286"
 ---
 # <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a>Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos
 

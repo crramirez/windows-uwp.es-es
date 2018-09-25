@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, centro de desarrollo, configuración de la cuenta, perfil, perfil de cuenta, cuenta de desabollador, configuración de la cuenta de desarrollador
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148200"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4177038"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Administrar la configuración de la cuenta y la información del perfil
 
@@ -28,7 +28,7 @@ Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la inf
 
 Para ver la configuración de la cuenta, haz clic en el icono de engranaje ubicado en la esquina superior derecha del panel y, a continuación, selecciona la **configuración de desarrollador**. Aquí encontrarás los detalles de tu cuenta y vínculos a otras páginas donde puedes ver la información y realizar diversas tareas relacionadas con la cuenta.
 
-En la sección **Detalles de la cuenta**, puedes ver el estado y el tipo de tu cuenta. También puedes ver tu Id. del vendedor y otra información de Id. de publicador. Estos valores se asignan por Microsoft para identificar de forma exclusiva la cuenta de desarrollador y no se pueden editar.
+En la sección **Detalles de la cuenta**, puedes ver el estado y el tipo de tu cuenta. También puedes ver tu Id. del vendedor y otra información de Id. de publicador. Estos valores se asignan por Microsoft para identificar de forma exclusiva la cuenta de desarrollador y no puede editarse.
 
 > [!NOTE]
 > Los detalles de identidad de las aplicaciones individuales pueden encontrarse en la página [Identidad de la aplicación](view-app-identity-details.md) de cada aplicación.
@@ -56,6 +56,6 @@ A continuación se muestran algunos de los otros elementos que encontrarás en l
 - **Inquilinos**: administrar las asociaciones de inquilino de Azure AD. Para obtener más información, consulte [asociar Azure AD con tu cuenta del centro de desarrollo](associate-azure-ad-with-dev-center.md).
 - **Programas**: puedes ver detalles sobre los programas en los que participas y obtener más información sobre otros programas que podrían interesarte.
 - **Contratos**: puedes ver los contratos que tu cuenta ha aceptado.
-- **Dispositivos de desarrollo**: ver y administrar [los dispositivos de Windows Phone 8.x que has desbloqueado para realizar pruebas](http://go.microsoft.com/fwlink/p/?LinkId=533897) y [consolas Xbox One habilitadas para el desarrollo](../xbox-apps/devkit-activation.md). 
+- **Dispositivos de desarrollo**: ver y administrar [los dispositivos de Windows Phone 8.x que hayas desbloqueado para realizar pruebas](http://go.microsoft.com/fwlink/p/?LinkId=533897) y [consolas Xbox One habilitadas para el desarrollo](../xbox-apps/devkit-activation.md). 
 
 

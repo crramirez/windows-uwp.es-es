@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 08e7d8fcfbab0d0b22fffa3e3e0aecc38d5b095c
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4152390"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4181446"
 ---
 # <a name="windows-device-portal-overview"></a>Introducción a Windows Device Portal
 
@@ -71,17 +71,17 @@ El Administrador de aplicaciones proporciona la instalación o desinstalación y
 
 ![Página de administrador de aplicaciones de Portal de dispositivos](images/device-portal/wdp-apps.png)
 
-- **Las aplicaciones instaladas**: usar el menú desplegable para eliminar o iniciar las aplicaciones que están instaladas en el dispositivo. Instalar una nueva aplicación haciendo clic en **Agregar**. Esto inicia la instalación de experiencia de usuario para implementar las aplicaciones empaquetadas desde local, red o web hospeda y registrar en archivos sueltos desde recursos compartidos de red.
+- **Aplicaciones instaladas**: usar el menú desplegable para eliminar o iniciar las aplicaciones que están instaladas en el dispositivo. Instalar una nueva aplicación haciendo clic en **Agregar**. Esto inicia la instalación de experiencia de usuario para implementar las aplicaciones empaquetadas desde local, red o web hospeda y registrar en archivos sueltos desde recursos compartidos de red.
 - **Aplicaciones en ejecución**: obtener información acerca de las aplicaciones que se están ejecutando actualmente y ciérralos según sea necesario.
 
 #### <a name="install-an-app"></a>Instalar una aplicación
 
 1.  Cuando hayas creado un paquete de la aplicación, podrás instalarlo remotamente en el dispositivo. Después de compilarlo en Visual Studio, se genera una carpeta de salida.
   ![Instalación de aplicaciones](images/device-portal/iot-installapp0.png)
-2.  En la sección de administrador de aplicaciones de Device Portal, haz clic en **Agregar** y selecciona **instalar el paquete de la aplicación desde el almacenamiento local**.
+2.  En la sección de administrador de aplicaciones del Portal de dispositivos, haz clic en **Agregar** y selecciona **instalar el paquete de la aplicación desde el almacenamiento local**.
 3.  Haz clic en **Examinar** y busca el paquete de la aplicación.
 3.  Haz clic en **Examinar** y busca el archivo de certificado (_.cer_) (no es necesario en todos los dispositivos.)
-4.  Casillas de verificación los respectivos si desea instalar opcional o los paquetes de marcos junto con la instalación de la aplicación. Si tienes más de una, agrega cada una de ellas individualmente.     
+4.  Casillas de verificación los respectivos si quieres instalar opcional o los paquetes de marcos junto con la instalación de la aplicación. Si tienes más de una, agrega cada una de ellas individualmente.     
 5.  Haz clic en **siguiente** para mover el paso siguiente e **instalar** iniciar la instalación. 
 
 #### <a name="uninstall-an-app"></a>Desinstalar una aplicación
@@ -99,7 +99,7 @@ Esta página muestra detalles acerca de los procesos que se está ejecutando en 
 
 Esta página te permite ver y manipular los archivos almacenados por las aplicaciones transferidas localmente. Consulta la entrada de blog [usando el Explorador de archivos de la aplicación](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) para obtener más información sobre el Explorador de archivos y cómo usarla. 
 
-![Página de explorador de archivo del Portal de dispositivo](images/device-portal/mob-device-portal-AppFileExplorer.png)
+![Página del explorador de archivo del Portal de dispositivo](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
 ### <a name="performance"></a>Rendimiento
 
@@ -148,17 +148,17 @@ La página de seguimiento del rendimiento permite ver los seguimientos de [Windo
 
 Para detener el seguimiento, haz clic en **Detener**. Permanece en esta página hasta que el archivo de seguimiento (. ETL) ha terminado de descargar.
 
-Captura. Para realizar análisis en el [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/desktop/hh448170.aspx), se pueden abrir archivos ETL.
+Captura. Para un análisis en el [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/desktop/hh448170.aspx), se pueden abrir archivos ETL.
 
 ### <a name="device-manager"></a>Administrador de dispositivos
 
 La página del Administrador de dispositivo enumera todos los periféricos conectados al dispositivo. Puedes hacer clic en los iconos de configuración para ver las propiedades de cada uno.
 
-![Página de administrador de dispositivo Device Portal](images/device-portal/mob-device-portal-devices.png)
+![Página de administrador de dispositivo de Portal de dispositivo](images/device-portal/mob-device-portal-devices.png)
 
 ### <a name="networking"></a>Redes
 
-La página de redes administra las conexiones de red en el dispositivo. A menos que están conectados a Device Portal a través de USB, si modificas esta configuración es probable que le desconectará de Device Portal.
+La página de redes administra las conexiones de red en el dispositivo. A menos que estás conectado a Device Portal a través de USB, si modificas esta configuración es probable que le desconectará de Device Portal.
 - **Redes disponibles**: muestra las redes Wi-Fi disponibles para el dispositivo. Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario. Device Portal aún no admite la autenticación de empresa. También puedes usar la lista desplegable de **perfiles** para intentar conectarse a cualquiera de los perfiles de Wi-Fi que se sabe que el dispositivo.
 - **Configuración IP**: muestra información de dirección sobre cada uno de lo host de puertos de red del dispositivo.
 

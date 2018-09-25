@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 952db87d0dabdb927a472de17f0c0d7b345bde4e
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.openlocfilehash: 602a0af685e812f5c65f94d07297cac9fc411923
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4154502"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4176186"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP
 
@@ -29,11 +29,11 @@ Esta introducción proporciona una descripción general de las características 
 
 ## <a name="effective-pixels-and-scaling"></a>Escalado y píxeles efectivos
 
-En primer lugar, las aplicaciones para UWP se ejecutan en todos los [dispositivos de Windows 10](../devices/index.md), desde la televisión a tu tableta o PC. ¿Cómo afecta eso a la interfaz de usuario de la aplicación?
+Las aplicaciones para UWP se ejecutan en todos los [dispositivos Windows 10](../devices/index.md), desde la televisión a tu tableta o PC. ¿Cómo se puede diseñar una interfaz de usuario que se vea bien en una amplia variedad de dispositivos y tamaños de pantalla?
 
 ![misma aplicación en varios dispositivos](images/universal-image-1.jpg)
 
-Bien, afortunadamente para ti, las aplicaciones para UWP ajustan automáticamente el tamaño de los controles, las fuentes y otros elementos de la interfaz de usuario para que sean legibles y fáciles de interaccionar en todos los dispositivos y tamaños de pantalla.
+UWP ayuda ajustando automáticamente los elementos de la interfaz de usuario para que sean legibles y fáciles de interaccionar en todos los dispositivos y tamaños de pantalla.
 
 Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24 px en un dispositivo Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24 px en un teléfono de 5 pulgadas a unos centímetros de distancia.
 

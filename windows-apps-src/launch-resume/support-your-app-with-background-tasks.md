@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5db1e03ac86768e2b1b1181cd2cc416a151a80
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4150214"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4175298"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Hacer que tu aplicación sea compatible con las tareas en segundo plano
 
@@ -37,7 +37,7 @@ Con la versión 1607 de Windows 10, se introdujo la admisión del segundo plano 
 
 Tareas en segundo plano fuera de proceso son más resistentes porque el proceso en segundo plano no se puede reducir el proceso de la aplicación si algo va mal. Pero la resistencia se consigue a costa de una complejidad mayor para administrar la comunicación entre procesos entre la aplicación y la tarea en segundo plano.
 
-Tareas fuera de proceso en segundo plano se implementan como clases ligeras que implementan la interfaz [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) que el sistema operativo se ejecuta en un proceso independiente (backgroundtaskhost.exe). Registrar una tarea en segundo plano mediante la clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) . El nombre de la clase se especifica como punto de entrada al registrar la tarea en segundo plano.
+Tareas fuera de proceso en segundo plano se implementan como clases ligeras que implementan la interfaz de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) que el sistema operativo se ejecuta en un proceso independiente (backgroundtaskhost.exe). Registrar una tarea en segundo plano mediante la clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) . El nombre de la clase se especifica como punto de entrada al registrar la tarea en segundo plano.
 
 Con la versión 1607 de Windows 10, puedes habilitar la actividad en segundo plano sin tener que crear una tarea en segundo plano. En su lugar, puede ejecutar el código en segundo plano directamente dentro de proceso de la aplicación en primer plano.
 

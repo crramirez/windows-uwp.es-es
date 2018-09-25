@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 title: 'Novedades en los documentos de Windows en mayo de 2018: desarrollar aplicaciones para UWP'
-description: Se agregaron nuevas características, vídeos y directrices para los desarrolladores a la documentación de desarrollador de Windows 10 de mayo de 2018 y la conferencia de Microsoft Build.
+description: Se agregaron nuevas características, vídeos y directrices para los desarrolladores a la documentación del desarrollador de Windows 10 de mayo de 2018 y la conferencia de Build de Microsoft.
 keywords: Novedades, actualización, características, directrices para los desarrolladores, Windows 10, mayo, compilación
 ms.author: quradic
 ms.date: 5/7/2018
@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 322bc056411095019dfc027078cbfef7de0883fb
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151070"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4174118"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novedades en los documentos de Windows de mayo de 2018
 
@@ -31,13 +31,13 @@ El usuario de movimiento en Fluent Design System evoluciona integrada en los con
 * [Introducción al movimiento](../design/motion/index.md) se ha actualizado para reflejar estos conceptos básicos.
 * [Movimiento en la práctica](../design/motion/motion-in-practice.md) se proporcionan ejemplos de cómo aplicar estos conceptos básicos de dentro de la aplicación.
 * [Direccionalidad y gravedad](../design/motion/directionality-and-gravity.md) solidifica su modelo mental del usuario la aplicación.
-* [Sincronización y aceleración](../design/motion/timing-and-easing.md) agrega realismo para el movimiento en la aplicación.
+* [Sincronización y aceleración](../design/motion/timing-and-easing.md) agrega realismo al movimiento en la aplicación.
 
 ![Movimiento en acción](../design/motion/images/contextual.gif)
 
 ### <a name="fluent-design-updates"></a>Actualizaciones de Fluent Design
 
-Se han realizado actualizaciones Visual y pequeños cambios a las páginas de Fluent Design siguientes:
+Se han realizado las actualizaciones visuales y pequeños cambios a las páginas de Fluent Design siguientes:
 
 * [Alineación, margen, los márgenes](../design/layout/alignment-margin-padding.md)
 * [Color](../design/style/color.md)
@@ -50,9 +50,9 @@ Se han realizado actualizaciones Visual y pequeños cambios a las páginas de Fl
 * [Información general de estilo](../design/style/index.md)
 * [Estilo de escritura](../design/style/writing-style.md)
 
-Además, nos hemos vuelto a escribir las páginas siguientes con nueva información en sus áreas de contenido:
+Además, nos hemos vuelto a escribir las páginas siguientes con nueva información acerca de sus áreas de contenido:
 
-* [Los iconos](../design/style/icons.md) ahora proporciona recomendaciones prácticas para usar iconos y hacer que puede hacer clic.
+* [Los iconos](../design/style/icons.md) ahora proporciona recomendaciones prácticas para usar iconos e invalidadas seleccionables.
 * [Tipografía](../design/style/typography.md) consolida la información de artículos similares, colocar todo el contenido en un único lugar con instrucciones actualizadas e ilustraciones.
 
 ![Imagen de la paleta de colores](../design/style/images/color/accent-color-palette.svg)
@@ -63,27 +63,27 @@ Archivos del instalador de aplicación ahora pueden crearse con Visual Studio 20
 
 ### <a name="edge-webview-control-for-windows-forms-and-wpf-applications"></a>Bordes de control de WebView para aplicaciones de Windows Forms y WPF
 
-Mostrar el contenido web en la aplicación de escritorio mediante el control de WebView anteriormente, solo está disponible para aplicaciones para UWP. Este control usa el motor de insertar una vista que representa el formato enriquecido HTML de representación contenido desde un servidor web remoto, el código generado dinámicamente o archivos de contenido de Microsoft Edge. Busca el control WebView en la versión más reciente de la [Kit de herramientas de comunidad Windows.](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)
+Mostrar el contenido web en la aplicación de escritorio mediante el control de WebView, anteriormente solo está disponible para aplicaciones para UWP. Este control usa el motor de insertar una vista que representa el formato enriquecido HTML de representación contenido desde un servidor web remoto, el código generado dinámicamente o archivos de contenido de Microsoft Edge. Busca el control WebView en la versión más reciente de la [Kit de herramientas de comunidad Windows.](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)
 
-Busca otros controles como WebView en futuras versiones del Kit de herramientas de comunidad Windows. Para obtener más información, consulta [Host UWP controla en aplicaciones de WPF y Windows Forms.](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+Busca otros controles como WebView en futuras versiones del Kit de herramientas de comunidad Windows. Para obtener más información, consulta [UWP de Host de los controles de WPF y Windows Forms.](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="gaze-input-and-interactions"></a>La entrada de mirada e interacciones
 
-[Realiza un seguimiento de la mirada, la atención y la presencia del usuario en función de la ubicación y del movimiento de sus ojos.](../design/input/gaze-interactions.md) Este eficaz modo nuevo usar e interactuar con las aplicaciones para UWP es especialmente útil como una tecnología de asistencia. La entrada de mirada también ofrece atractivas oportunidades para juegos (incluida adquisición de destino y seguimiento) y otros escenarios interactivos donde dispositivos de entrada tradicionales (teclado, mouse, entrada táctil) no están disponibles.
+[Realiza un seguimiento de la mirada, la atención y la presencia del usuario en función de la ubicación y del movimiento de sus ojos.](../design/input/gaze-interactions.md) Este eficaz modo nuevo usar e interactuar con las aplicaciones para UWP es especialmente útil como tecnología de asistencia. La entrada de mirada también ofrece atractivas oportunidades para juegos (incluida adquisición de destino y seguimiento) y otros escenarios interactivos donde dispositivos de entrada tradicionales (teclado, mouse, entrada táctil) no están disponibles.
 
-### <a name="msix-packaging-format"></a>Formato de empaquetado MSIX
+### <a name="msix-packaging-format"></a>Formato de empaquetado de MSIX
 
-Anunció en la conferencia de Microsoft de 2018 de compilación, MSIX es un nuevo formato de paquete de inclusión en contenedores que se aplica a todas las aplicaciones de Windows como Win32, Windows Forms, WPF y UWP. Este nuevo formato hereda excelentes características de UWP:
+Anunciado en la conferencia de Microsoft de 2018 de compilación, MSIX es un nuevo formato de paquete de inclusión en contenedores que se aplica a todas las aplicaciones de Windows como Win32, Windows Forms, WPF y UWP. Este nuevo formato hereda excelentes características de UWP:
 
 * Instalación estable y la actualización. 
 * Administra el modelo de seguridad con un sistema de funcionalidad flexible.
-* Soporte técnico de Microsoft Store, administración empresarial y muchos de los modelos de distribución personalizado.
+* Compatibilidad con Microsoft Store, la administración de la empresa y muchos de los modelos de distribución personalizado.
 
 Herramientas para crear estos paquetes estarán disponibles en una versión futura de Visual Studio y SDK de Windows.
 
-El formato de empaquetado MSIX es un formato de código abierto, lo cual facilita a nuestros partners admitir el ecosistema MSIX con sus soluciones y herramientas. Para obtener más información sobre el formato de empaquetado MSIX, consulte [MSIX SDK](https://github.com/Microsoft/msix-packaging). 
+El formato de empaquetado de MSIX es un formato de código abierto, lo cual facilita a nuestros partners admitir el ecosistema MSIX con sus soluciones y herramientas. Para obtener más información sobre el formato de empaquetado MSIX, consulta [MSIX SDK](https://github.com/Microsoft/msix-packaging). 
 
-![Imagen de empaquetado MSIX](images/msix.png)
+![Imagen de empaquetado de MSIX](images/msix.png)
 
 ### <a name="optional-packages-with-executable-code"></a>Paquetes opcionales con código ejecutable
 
@@ -95,7 +95,7 @@ Paquetes opcionales en la aplicación ahora pueden contener código ejecutable d
 
 ### <a name="project-rome"></a>Proyecto Roma
 
-El equipo de Project Rome ha renovado su iOS y Android SDK, refactorización gran parte de su código para proporcionar una experiencia coherente de programación a través de los diferentes SDK y agregar nuevas características como las actividades del usuario. [Todos los nueva referencia de API y documentos de procedimientos](https://docs.microsoft.com/windows/project-rome/) pasará dinámicos durante la conferencia de desarrolladores de compilación de 2018.
+El equipo de Project Rome ha renovado su iOS y Android SDK, agregando nuevas características como las actividades del usuario y la refactorización de gran parte de su código para proporcionar una experiencia coherente de programación en el SDK de diferentes. [Todos los nueva referencia de API y documentos de procedimientos](https://docs.microsoft.com/windows/project-rome/) pasará dinámicos durante la conferencia de desarrolladores de compilación de 2018.
 
 ### <a name="sets"></a>Conjuntos
 
@@ -105,7 +105,7 @@ La funcionalidad conjuntos está disponible en las versiones preliminares de Win
 
 ### <a name="get-started"></a>Introducción
 
-Nos hemos revitalizado nuestro Get iniciado contenido con nuevas pistas de aprendizaje. Estos temas nuevos se pretende proporcionar nuevos desarrolladores de Windows 10 con información sobre algunas tareas comunes que es posible que quieren para llevar a cabo. No te encuentras tutoriales y no proporcionas un tutorial de mano, pero señale donde existe documentación existente y cómo usarla. Echa un vistazo a la actualización de la herramienta [empezar a codificar](../get-started/create-uwp-apps.md) la página, o para explorar cada pista de aprendizaje individual:
+Nos hemos revitalizado nuestro Get iniciado contenido con nuevas pistas de aprendizaje. Estos temas nuevos se pretende proporcionar nuevos desarrolladores de Windows 10 con información sobre algunas tareas comunes que podría querer realizar. No son tutoriales y no proporciona un tutorial de mano, pero en su lugar señale donde existe documentación existente y cómo usarla. Echa un vistazo a la actualización de la herramienta [empezar a codificar](../get-started/create-uwp-apps.md) la página, o para explorar cada pista de aprendizaje individual:
 
 * [Construir un formulario](../get-started/construct-form-learning-track.md)
 * [Mostrar clientes en una lista](../get-started/display-customers-in-list-learning-track.md)
@@ -130,10 +130,10 @@ C++ / WinRT es una nueva forma de a crear y consumir Windows Runtime APIs. Tiene
 
 ### <a name="multi-instance-uwp-apps"></a>Aplicaciones para UWP de varias instancias
 
-Windows ahora te permite ejecutar varias instancias de la aplicación para UWP, con cada uno en su propio proceso independiente. [Ve el vídeo](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) para obtener información sobre cómo crear una nueva aplicación que es compatible con esta característica, a continuación, [lee a los documentos de desarrollador](../launch-resume/multi-instance-uwp.md) para obtener más información sobre cómo y por qué usar esta característica.
+Windows ahora te permite ejecutar varias instancias de la aplicación para UWP, con cada uno de ellos en su propio proceso independiente. [Ve el vídeo](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) para obtener información sobre cómo crear una nueva aplicación que es compatible con esta característica, a continuación, [lee a los documentos de desarrollador](../launch-resume/multi-instance-uwp.md) para obtener más información sobre cómo y por qué usar esta característica.
 
 ## <a name="samples"></a>Muestras
 
 ### <a name="customer-database-tutorial"></a>Tutorial de base de datos de cliente
 
-En este tutorial se crea una aplicación básica UWP para la administración de una lista de clientes y presenta los conceptos y procedimientos recomendados útiles en el desarrollo empresarial. Te guiará a través de implementar los elementos de la interfaz de usuario y agregar las operaciones frente a una base de datos SQLite local y se proporcionan instrucciones sueltos para la conexión a una base de datos REST remota si lo deseas ir más allá. [Echa un vistazo a este tutorial](../enterprise/customer-database-tutorial.md)
+En este tutorial se crea una aplicación básica de UWP para administrar una lista de clientes y presenta los conceptos y procedimientos recomendados útiles en el desarrollo empresarial. Te guiará a través de implementar los elementos de la interfaz de usuario y agregar las operaciones en una base de datos SQLite local y se proporcionan instrucciones sueltos para la conexión a una base de datos REST remoto si quieres ir más allá. [Echa un vistazo a este tutorial](../enterprise/customer-database-tutorial.md)

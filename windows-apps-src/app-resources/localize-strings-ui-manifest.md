@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4155430"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4176260"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).

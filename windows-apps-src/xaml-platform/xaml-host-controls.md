@@ -9,52 +9,54 @@ ms.prod: windows
 ms.technology: uwp, windows forms, wpf
 keywords: windows 10, uwp, windows forms, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: d5a4865f403685752225a729bf68abb15237dd90
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.openlocfilehash: 6b8c263b030cbb8f945ffb13a24b6dff3af28fcc
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4156588"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4173638"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>Controles de UWP en aplicaciones de escritorio
 
 > [!NOTE]
 > Las API y los controles mencionados en este artículo están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurando y estabilizar en futuras versiones de Windows. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.
 
-En la próxima versión de Windows 10 estamos incorporando controles de UWP en no UWP aplicaciones de escritorio para que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de control de UWP . Esto significa que puedes usar las características de UWP, como el [Sistema Fluent Design](../design/fluent-design-system/index.md) y [Windows Ink](../design/input/pen-and-stylus-interactions.md) en tu existente WPF, Windows Forms y las aplicaciones Win32 de C o C++. Este escenario de desarrollador se conoce como *Islas XAML*.
+Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio no UWP para que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles de UWP. Esto significa que puedes usar las características de UWP, como el [Sistema Fluent Design](../design/fluent-design-system/index.md) y [Windows Ink](../design/input/pen-and-stylus-interactions.md) en tu existente WPF, Windows Forms y aplicaciones de Win32 de C++. Este escenario de desarrollador se conoce como *Islas XAML*.
 
 Ofrecemos varias formas de usar Islas XAML en las aplicaciones de escritorio, dependiendo de la tecnología o el marco que estás usando.
 
 ## <a name="wrapped-controls"></a>Controles ajustados
 
-Proporcionaremos una selección de los controles de UWP ajustados para aplicaciones de WPF y Windows Forms en el [Kit de herramientas de comunidad Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/). Puedes agregar estos controles directamente a la superficie de diseño de tu proyecto WPF o Windows Forms y, a continuación, se usa como cualquier otro control WPF o Windows Forms en el diseñador. Nos referimos a estos controles como *encapsuladas controles* como que ajustan a la interfaz y la funcionalidad de un control UWP específico.
+Aplicaciones de WPF y Windows Forms puede utilizar una selección de los controles de UWP encapsulados en el [Kit de herramientas de comunidad Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/). Puedes agregar estos controles directamente a la superficie de diseño de tu proyecto WPF o Windows Forms y, a continuación, se usa como cualquier otro control WPF o Windows Forms en el diseñador. Nos referimos a estos controles como *encapsuladas controles* como que ajustan a la interfaz y la funcionalidad de un control UWP específico.
 
-Try este fuera hoy con el [WebView](https://docs.microsoft.com/windows/communitytoolkit/controls/webview) controlar en el Kit de herramientas de comunidad Windows. Este control usa el motor de representación de Microsoft Edge para mostrar el contenido web en una aplicación WPF o Windows Forms.  
+Los siguientes controles ajustados admiten Windows 10, versión 1803 y versiones posterior.
 
-También estamos planificando controles UWP ajustados adicionales de WPF y las aplicaciones de Windows Forms en futuras versiones del Kit de herramientas de comunidad de Windows, incluidos:
+* [WebView](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webview). Este control usa el motor de representación de Microsoft Edge para mostrar el contenido web en una aplicación WPF o Windows Forms.
+* [WebViewCompatible](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webviewcompatible). Este control es una versión de **WebView** que sea compatible con Windows 10 y versiones anteriores de Windows. Este control usa el motor de representación de Microsoft Edge para mostrar contenido web en Windows 10 (versión 1803 y versiones posterior) y el motor de representación de Internet Explorer para mostrar contenido web en Windows 7 y Windows 8.x.
 
-* **WebViewCompatible**. Este control es una versión de **WebView** que sea compatible con Windows 10 y versiones anteriores de Windows. Este control usa el motor de representación de Microsoft Edge para mostrar el contenido web en Windows 10 y el motor de representación de Internet Explorer para mostrar el contenido web en versiones anteriores.
-* **Controles InkCanvas** e **InkToolbar**. Estos controles proporcionan las barras de herramientas de una superficie y relacionadas para la interacción de usuario basada en la entrada de lápiz de Windows en la aplicación de escritorio de Windows Forms o WPF.
-* **MediaPlayerElement**. Este control inserta una vista que transmite y representa el contenido multimedia, como vídeo en la aplicación de escritorio de Windows Forms o WPF.
+Los siguientes controles ajustados admiten las versiones de 17709 y versiones posteriores de compilación de Windows 10 Insider Preview SDK.
+
+* [Controles InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) e [InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar). Estos controles proporcionan las barras de herramientas de una superficie y relacionadas para la interacción de usuario basada en la entrada de lápiz de Windows en la aplicación de escritorio de Windows Forms o WPF.
+* [MediaPlayerElement](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mediaplayerelement). Este control inserta una vista que transmite y representa el contenido multimedia, como vídeo en la aplicación de escritorio de Windows Forms o WPF.
 
 UWP más ajustados controles de WPF y las aplicaciones de Windows Forms se tiene previstas para las versiones futuras del Kit de herramientas de comunidad Windows.
 
 > [!NOTE]
-> Controles ajustados no están disponibles para aplicaciones de escritorio de Win32 de C o C++. Estos tipos de aplicaciones deben usar la [API de hospedaje de XAML de UWP](#uwp-xaml-hosting-api).
+> Controles ajustados no están disponibles para aplicaciones de escritorio de Win32 de C++. Estos tipos de aplicaciones deben usar la [API de hospedaje de XAML de UWP](#uwp-xaml-hosting-api).
 
 ## <a name="host-controls"></a>Controles de host
 
-Para los escenarios más allá de los cubiertos por los controles de encapsulado disponibles, WPF y Windows Forms también puede usar el control de [WindowsXamlHost](https://github.com/Microsoft/WindowsCommunityToolkit/blob/master/docs/controls/WindowsXAMLHost.md) en el [Kit de herramientas de comunidad Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/). Este control puede hospedar cualquier control UWP que se deriva de [**Windows.UI.Xaml.UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement), incluido cualquier control UWP proporcionado el SDK de Windows, así como los controles de usuario personalizados.
+Para los escenarios más allá de los cubiertos por los controles de encapsulado disponibles, WPF y Windows Forms también puede usar el control de [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) en el [Kit de herramientas de comunidad Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/). Este control puede hospedar cualquier control UWP que se deriva de [**Windows.UI.Xaml.UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement), incluido cualquier control UWP proporcionado el SDK de Windows, así como los controles de usuario personalizados. Este control es compatible con versiones de 17709 y versiones posteriores de la compilación de Windows 10 Insider Preview SDK.
 
 > [!NOTE]
-> Hospedar los controles no están disponibles para aplicaciones de escritorio de Win32 de C o C++. Estos tipos de aplicaciones deben usar la [API de hospedaje de XAML de UWP](#uwp-xaml-hosting-api).
+> Hospedar los controles no están disponibles para aplicaciones de escritorio de Win32 de C++. Estos tipos de aplicaciones deben usar la [API de hospedaje de XAML de UWP](#uwp-xaml-hosting-api).
 
 ## <a name="uwp-xaml-hosting-api"></a>La API de hospedaje de XAML de UWP
 
-Si tienes una aplicación de C/C ++ WinRT, puedes usar la *API de hospedaje de XAML de UWP* para hospedar cualquier control UWP que se deriva de [**Windows.UI.Xaml.UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) en cualquier elemento de la interfaz de usuario de la aplicación que tiene un identificador de ventana asociada (HWND). Para obtener más información sobre cómo usar esta API, consulta [mediante la API en una aplicación de escritorio de hospedaje de XAML](using-the-xaml-hosting-api.md).
+Si tienes una aplicación Win32 de C++, puedes usar la *API de hospedaje de XAML de UWP* para hospedar cualquier control UWP que se deriva de [**Windows.UI.Xaml.UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) en cualquier elemento de la interfaz de usuario de la aplicación que tiene un identificador de ventana asociada (HWND). Esta API se introdujo en Windows 10 Insider Preview SDK compilación 17709. Para obtener más información sobre cómo usar esta API, consulta [mediante la API en una aplicación de escritorio de hospedaje de XAML](using-the-xaml-hosting-api.md).
 
 > [!NOTE]
-> Las aplicaciones de escritorio de Win32 de C o C++ deben usar la API de hospedaje para hospedar los controles de UWP de XAML de UWP. Controles ajustados y los controles de host no están disponibles para estos tipos de aplicaciones. Para las aplicaciones de WPF y Windows Forms, te recomendamos que uses los controles ajustados y host en el Kit de herramientas de comunidad de Windows en lugar del XAML de UWP API de hospedaje. Estos controles usan el XAML de UWP internamente en la API de hospedaje y proporcionan una experiencia de desarrollo más sencilla. Sin embargo, puedes usar la API de hospedaje directamente en las aplicaciones de WPF y Windows Forms si eliges de XAML de UWP.
+> Las aplicaciones de escritorio de Win32 de C++ deben usar la API de hospedaje para hospedar los controles de UWP de XAML de UWP. Controles ajustados y los controles de host no están disponibles para estos tipos de aplicaciones. Para las aplicaciones de WPF y Windows Forms, te recomendamos que uses los controles ajustados y host en el Kit de herramientas de comunidad de Windows en lugar del XAML de UWP API de hospedaje. Estos controles usan el XAML de UWP internamente en la API de hospedaje y proporcionan una experiencia de desarrollo más sencilla. Sin embargo, puedes usar la API de hospedaje directamente en las aplicaciones de WPF y Windows Forms si eliges de XAML de UWP.
 
 ## <a name="architecture-overview"></a>Introducción a la arquitectura
 

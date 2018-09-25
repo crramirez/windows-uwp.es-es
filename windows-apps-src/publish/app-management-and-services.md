@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151710"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4177668"
 ---
 # <a name="app-management-and-services"></a>Administración y servicios de aplicaciones
 
@@ -50,13 +50,13 @@ Para más información, consulta [Usar servicios de mapa](use-map-services.md).
 
 ## <a name="product-collections-and-purchases"></a>Colecciones y compras de producto
 
-Para usar Microsoft Store API de colecciones y la API de compras de Microsoft Store para obtener acceso a la información de propiedad para aplicaciones y complementos, debes especificar el asociado de cliente de Azure AD identificadores aquí. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
+Para usar Microsoft Store collection API y la API de compras de Microsoft Store para obtener acceso a la información de propiedad para aplicaciones y complementos, debes especificar el asociado de cliente de Azure AD identificadores aquí. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
 
 Para obtener más información, consulta [Administrar los derechos de producto de un servicio](../monetize/view-and-grant-products-from-a-service.md).
 
 ## <a name="administrator-consent"></a>Consentimiento del administrador
 
-f tu producto se integra con Azure AD y llama a las API que solicitan [permisos de la aplicación o los permisos delegados](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requieren el consentimiento del administrador, escribe tu Id. de cliente de Azure AD. Esto permite a los administradores que adquieran la aplicación para su consentimiento de concesión de organización para tu producto actuar en nombre de todos los usuarios del inquilino.
+f tu producto se integra con Azure AD y llama a las API que solicitan los [permisos de la aplicación o los permisos delegados](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requieren el consentimiento del administrador, escribe tu Id. de cliente de Azure AD. Esto permite a los administradores que adquieran la aplicación para su consentimiento de concesión de organización para tu producto actuar en nombre de todos los usuarios del inquilino.
 
 Para obtener más información, consulta [solicitar consentimiento para un inquilino de todo](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 

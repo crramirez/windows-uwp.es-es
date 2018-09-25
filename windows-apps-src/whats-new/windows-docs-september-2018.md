@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f017dbb30586d3ec3c2da54d0f262c4b159328cc
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4149790"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4174560"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novedades en los documentos de Windows de septiembre de 2018
 
@@ -26,7 +26,7 @@ La documentación del desarrollador de Windows se actualiza constantemente con i
 
 ### <a name="windows-machine-learning"></a>Aprendizaje automático de Windows
 
-[Documentos el aprendizaje automático de Windows](https://docs.microsoft.com/windows/ai/) ahora residen en su propio sitio y se actualizan para el SDK más reciente de Insider de Windows. Hay escritorio y tutoriales UWP en C++ y C# para ayudarte a empezar a agregar WinML a la aplicación.
+Ahora [el aprendizaje automático de Windows documentos](https://docs.microsoft.com/windows/ai/) residen en su propio sitio y se actualizan para el SDK más reciente de Insider de Windows. Hay escritorio y tutoriales de UWP en C++ y C# para ayudarte a empezar a agregar WinML a la aplicación.
 
 [Referencia de la API de Windows.AI.MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) se ha actualizado para el SDK más reciente de Insider de Windows.
 
@@ -42,29 +42,29 @@ Para obtener más información sobre la biblioteca de la interfaz de usuario de 
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="how-blur-effects-work"></a>Cómo desenfoque de trabajo de efectos
+### <a name="how-blur-effects-work"></a>Cómo trabajo de efectos de desenfoque
 
-Uno de nuestros escritores, la inestimable Mike Jacobs, ha comenzado a una serie de artículos en medio acerca de desenfoque de fotografía al diseño de juegos y aplicaciones de visión. Si estás interesado en saber más acerca de este efecto visual ubicua, consulta [el artículo de visión y la fotografía primera](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) y [el segundo de suavizado de contorno en los gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Uno de nuestros sistemas de escritura, el Mike Jacobs inestimable, ha comenzado a una serie de artículos en medio acerca de desenfoque de fotografía al diseño de juegos y aplicaciones de visión. Si estás interesado en saber más acerca de este efecto visual ubicua, consulta [el artículo primera de visión y la fotografía](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) y [el segundo de suavizado de contorno en los gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
 ![Desenfoque en acción](images/blur-example.jpg)
 
 ### <a name="contributing-guidance"></a>Instrucciones que contribuyen
 
-Hemos actualizado [nuestras directrices contribución](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) de nuestra documentación para UWP. Esta guía nueva aclara el flujo de trabajo y las expectativas para contribuciones externas para nuestros documentos.
+Hemos actualizado [nuestras directrices contribución](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) de nuestra documentación de UWP. Esta guía nueva aclara el flujo de trabajo y las expectativas para contribuciones externas para nuestros documentos.
 
 ## <a name="videos"></a>Vídeos
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollo
 
-En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Este es el más recientes preguntas que hemos respondido a!
+En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Aquí es que hemos respondido a las preguntas más recientes.
 
 Aaron Gustafson:
 
-* [6 vídeos en aplicaciones Web progresivas](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
+* [vídeos de 6 en aplicaciones Web progresivas](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
 
 Chris Heilmann
 
-* [4 vídeos sobre la herramienta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
+* [vídeos de 4 en la herramienta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
 Larry Osterman:
 

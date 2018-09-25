@@ -14,11 +14,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5fa84efbe20368be55a50ce20c8e6e5d1fe439
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151544"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4174476"
 ---
 # <a name="reveal-focus"></a>Reveal Focus
 
@@ -78,9 +78,9 @@ Puedes personalizar el efecto Reveal Focus modificando las propiedades visuales 
 
 Pero antes de empezar la personalización, es útil saber un poco más acerca de los componentes que componen Reveal Focus.
 
-Hay tres partes en los elementos visuales de foco Reveal de predeterminados: el borde principal, el borde secundario y el resplandor de Reveal. El borde principal es de **2px** de espesor y se ejecuta alrededor de la parte de *fuera* del borde secundario. El borde secundario es de **1px** de espesor y se ejecuta alrededor de la parte de *dentro* del borde primario. El resplandor de Reveal Focus tiene un grosor proporcional al grosor del borde principal y se ejecuta alrededor de la *fuera* del borde principal.
+Hay tres partes en los elementos visuales de foco Reveal de predeterminados: el borde principal, el borde secundario y el resplandor de Reveal. El borde principal es de **2px** de espesor y se ejecuta alrededor de la parte de *fuera* del borde secundario. El borde secundario es de **1px** de espesor y se ejecuta alrededor de la parte de *dentro* del borde primario. El resplandor de Reveal Focus tiene un grosor proporcional al grosor del borde principal y se ejecuta alrededor del *fuera* del borde principal.
 
-Además de los elementos estáticos, elementos visuales de foco Reveal presentan una luz animada que late cuando está en y se mueve en la dirección del foco al moverlo.
+Además de los elementos estáticos, elementos visuales de foco Reveal presentan una luz animada que late cuando está en y se mueve en la dirección del foco al mover el foco.
 
 ![Capas de foco Reveal](images/reveal-breakdown.svg)
 
@@ -167,7 +167,7 @@ Si quieres usar solo el resplandor sin el foco visual principal o secundario, so
 
 ## <a name="use-your-own-focus-visuals"></a>Usar tus propios elementos visuales de foco
 
-Otra manera de personalizar Reveal Focus es optar por no los elementos visuales de foco proporcionado por el sistema, dibuja los tuyos propios mediante los estados visuales. Para obtener más información, consulta la [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895).
+Otra manera de personalizar Reveal Focus es optar por los elementos visuales de foco proporcionado por el sistema, dibuja los tuyos propios mediante los estados visuales. Para obtener más información, consulta la [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895).
 
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>Reveal Focus y Fluent Design System

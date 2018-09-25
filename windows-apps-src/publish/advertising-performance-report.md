@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a1a82c91aeafa253427d8e526b38b8ac304591a2
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4156268"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4178154"
 ---
 # <a name="advertising-performance-report"></a>Informe Rendimiento de la publicidad
 
@@ -62,7 +62,7 @@ El informe **Rendimiento de publicidad** incluye los datos de las siguientes mé
 | Velocidad de relleno  | El porcentaje de solicitudes de anuncio enviadas desde la aplicación en las que se ha mostrado un anuncio.  |
 | Clics  |  El número de veces que alguien ha hecho clic en un anuncio en la aplicación. |
 | CTR  |  La tasa de clics, es decir, el número de veces que se ha hecho clic en un anuncio dividido por el número de impresiones. |
-| Visualización | El porcentaje de las impresiones de anuncios que sean visibles en la aplicación. Para obtener más información acerca de cómo se calcula este valor, consulte [optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md). |
+| Visualización | El porcentaje de las impresiones de anuncios que sean visibles en la aplicación. Para obtener más información sobre cómo se calcula este valor, consulte [optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md). |
 | Créditos ganados  | Si estás realizando una campaña de [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has ganado por el espacio de anuncios promocionales al mostrar anuncios de la comunidad en tu aplicación.  |
 | Créditos gastados  | Si estás realizando una campaña de [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has gastado en los anuncios para tu aplicación.  |
 

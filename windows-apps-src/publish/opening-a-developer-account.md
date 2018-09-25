@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b707479d11cc7aef62385b476720bff8477ed401
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4156296"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4174948"
 ---
 # <a name="opening-a-developer-account"></a>Abrir una cuenta de desarrollador
 
@@ -65,7 +65,7 @@ Al crear una cuenta de empresa, pueden ayudar estas directrices si más de una p
 
 -   Crea tu cuenta de Microsoft con una dirección de correo electrónico que ya no te pertenece a ti ni a otra persona como MyCompany_DevCenter@outlook.com. No uses una dirección de correo electrónico en el dominio de tu empresa, especialmente si tu empresa ya usa Azure AD. (Como se indicó anteriormente, puedes agregar usuarios adicionales de Azure tu empresa AD más adelante.)
 -   Limita el acceso a esta cuenta Microsoft al menor número posible de usuarios.
--   Configurar una lista de distribución de correo electrónico corporativa que incluya todos los que necesita tener acceso a la cuenta de desarrollador y agrega esta dirección de correo electrónico a la [información de seguridad asociada con la cuenta de Microsoft [(https://account.microsoft.com/security). Esto permite que todos los empleados de la lista reciban códigos de seguridad enviados a este alias. Si la configuración de una lista de distribución no es factible, puedes agregar la dirección de correo electrónico de la persona a tu información de seguridad, pero el propietario de dicha dirección de correo electrónico será el único que puede acceder y compartir el código de seguridad cuando se le pida (como cuando se agrega nueva información de seguridad a t la cuenta o cuando se accede a partir de un nuevo dispositivo).
+-   Configurar una lista de distribución de correo electrónico corporativa que incluya todos los que necesita tener acceso a la cuenta de desarrollador y agrega esta dirección de correo electrónico a la [información de seguridad asociada con la cuenta de Microsoft [(https://account.microsoft.com/security). Esto permite que todos los empleados de la lista reciban códigos de seguridad enviados a este alias. Si la configuración de una lista de distribución no es factible, puedes agregar dirección de correo electrónico de la persona a tu información de seguridad, pero el propietario de dicha dirección de correo electrónico será el único que puede acceder y compartir el código de seguridad cuando se le pida (como cuando se agrega nueva información de seguridad para t la cuenta o cuando se accede desde un nuevo dispositivo).
 -   Agrega un número de teléfono de la empresa a la información de seguridad de la cuenta de Microsoft. Intenta usar un número que no requiere una extensión y que puedan acceder los integrantes principales del equipo.
 -   En general, haz que los desarrolladores usen [dispositivos de confianza](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) para iniciar sesión en la cuenta de desarrollador de tu empresa. Todos los integrantes principales del equipo deben tener acceso a estos dispositivos de confianza. Así se reducirá la necesidad de enviar códigos de seguridad cuando se acceda a la cuenta. Existe un límite en cuanto al número de códigos que pueden generarse por cuenta, por semana.
 -   Si tienes que permitir el acceso a la cuenta desde un equipo que no es de confianza, limita ese acceso a un máximo de cinco desarrolladores. Lo ideal es que estos desarrolladores accedan a la cuenta desde equipos que compartan la misma ubicación de red y geográfica.
@@ -78,7 +78,7 @@ Usamos la información de seguridad que proporcionas para aumentar el nivel de s
 
 Debes tener al menos dos direcciones de correo electrónico o números de teléfono en la cuenta de Microsoft. Te recomendamos que agregues todas las que puedas. Recuerda que alguna de esta información de seguridad debe confirmarse para ser válida. Asimismo, procura revisar tu información de seguridad con frecuencia, para asegurarte de que esté actualizada. Puedes administrar tu información de seguridad yendo a https://account.microsoft.com/security e iniciando sesión con tu cuenta de Microsoft. Para obtener más información, consulta [la información de seguridad y códigos de seguridad](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) .
 
-Al iniciar sesión el panel del centro de desarrollo de Windows con tu cuenta de Microsoft, el sistema puede solicitarte que confirmes tu identidad mediante el envío de un código de seguridad que debe proporcionar para completar el proceso de inicio de sesión. Te recomendamos que designes equipos que puedes usar con frecuencia como *dispositivos de confianza*. Cuando inicias sesión un dispositivo de confianza, por lo general, no se le ningún código, aunque es posible que, en ocasiones, se te pida en situaciones específicas o si no has iniciado sesión en ese dispositivo en mucho tiempo. Para obtener más información, consulte [Agregar un dispositivo de confianza a tu cuenta de Microsoft](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) .
+Al iniciar sesión el panel del centro de desarrollo de Windows con tu cuenta de Microsoft, el sistema puede solicitarte que confirmes tu identidad mediante el envío de un código de seguridad que debe proporcionar para completar el proceso de inicio de sesión. Te recomendamos que designes equipos que uses con frecuencia como *dispositivos de confianza*. Cuando inicias sesión un dispositivo de confianza, por lo general, no se le ningún código, aunque es posible que, en ocasiones, se te pida en situaciones específicas o si no has iniciado sesión en ese dispositivo en mucho tiempo. Para obtener más información, consulte [Agregar un dispositivo de confianza a tu cuenta de Microsoft](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) .
 
 
 ## <a name="closing-your-account"></a>Cerrar la cuenta

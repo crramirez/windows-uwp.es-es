@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4156488"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4176774"
 ---
 # <a name="custom-dependency-properties"></a>Propiedades de dependencia personalizadas
 
@@ -170,7 +170,7 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> Para C++ / CX en el código, la razón para tener un campo privado y una propiedad pública de solo lectura que superficies [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) es para que otros llamadores que usan tu propiedad de dependencia también pueden usar la utilidad del sistema de propiedades API que requieren la identificador sea público. Si haces que el identificador sea privado, los usuarios no podrán usar estas API de utilidad. Algunos ejemplos de estas API y escenarios son [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) o [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) a elegir, [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) y [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). No puedes usar un campo público para esto porque las reglas de metadatos de Windows Runtime no admiten campos públicos.
+> Para C++ / CX en el código, la razón para tener un campo privado y una propiedad pública de solo lectura que [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) de superficies es para que otros llamadores que usan tu propiedad de dependencia también pueden usar la utilidad del sistema de propiedades API que requieren la identificador sea público. Si haces que el identificador sea privado, los usuarios no podrán usar estas API de utilidad. Algunos ejemplos de estas API y escenarios son [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) o [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) a elegir, [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) y [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). No puedes usar un campo público para esto porque las reglas de metadatos de Windows Runtime no admiten campos públicos.
 
 ## <a name="dependency-property-name-conventions"></a>Convenciones de nomenclatura para propiedades de dependencia
 
@@ -251,7 +251,7 @@ En los anteriores ejemplos de llamada a [**DependencyProperty.Register**](https:
 Normalmente deberás proporcionar [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) como instancia creada en línea, dentro de los parámetros de [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829).
 
 > [!NOTE]
-> Si vas a definir una implementación [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) , debes usar el método de utilidad [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) en lugar de llamar a un constructor [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir la instancia **PropertyMetadata** .
+> Si vas a definir una implementación de [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) , debes usar el método de utilidad [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) en lugar de llamar a un constructor [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir la instancia **PropertyMetadata** .
 
 El siguiente ejemplo modifica los ejemplos mostrados anteriormente [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) al hacer referencia a una instancia de [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) con un valor de [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770). La implementación de la devolución de llamada "OnLabelChanged" se mostrará más adelante en esta sección.
 
@@ -316,7 +316,7 @@ Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
 ```
 
 > [!NOTE]
-> No realices el registro con un valor predeterminado de [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371). Esto confundirá a los usuarios de la propiedad y tendrá consecuencias imprevistas en el sistema de propiedades.
+> No se registran con un valor predeterminado de [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371). Esto confundirá a los usuarios de la propiedad y tendrá consecuencias imprevistas en el sistema de propiedades.
 
 ### <a name="createdefaultvaluecallback"></a>CreateDefaultValueCallback
 

@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4150538"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4175726"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
@@ -69,7 +69,7 @@ Mostrar funciona automáticamente para algunos controles. Para otros controles, 
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estas ilustraciones muestran resaltar Reveal en varios controles diferentes:
+Estas ilustraciones muestran Mostrar resaltado en varios controles diferentes:
 
 ![Ejemplos de Reveal](images/RevealExamples_Collage.png)
 

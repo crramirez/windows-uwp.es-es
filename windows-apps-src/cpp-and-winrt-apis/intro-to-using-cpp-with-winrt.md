@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, introducción
 ms.localizationpriority: medium
 ms.openlocfilehash: 220c5c7395ed9388b02b74e0cbed5b913971bbba
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4152216"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4174518"
 ---
 # <a name="introduction-to-cwinrt"></a>Introducción a C++/WinRT
 &nbsp;
@@ -41,7 +41,7 @@ Con C++/WinRT, también puedes implementar tus propias clases en tiempo de ejecu
 ## <a name="visual-studio-support-for-cwinrt-and-the-vsix"></a>Soporte de Visual Studio para C++/WinRT y VSIX.
 Para obtener las plantillas de proyecto C++/WinRT en Visual Studio, así como las propiedades y destinos de MSBuild de C++/WinRT, descarga e instala la [extensión de Visual Studio de C++/WinRT](https://aka.ms/cppwinrt/vsix) desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
-Necesitarás Visual Studio 2017 (al menos la versión 15.6; te recomendamos como mínimo la 15.7) y Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803). Si ya no has instalado, tendrás que instalar la opción de **Herramientas de la plataforma Universal de Windows de C++** desde dentro del instalador de Visual Studio. Y, en la **configuración**de Windows > **Update \ & seguridad** > **para desarrolladores**, elige la opción de **modo de desarrollador** , en lugar de la opción de **instalar aplicaciones** .
+Necesitarás Visual Studio 2017 (al menos la versión 15.6; te recomendamos como mínimo la 15.7) y Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803). Si ya no has instalado, tendrás que instalar la opción de **Herramientas de la plataforma Universal de Windows de C++** desde dentro del instalador de Visual Studio. Y, en **configuración**de Windows > **Update \ & seguridad** > **para desarrolladores**, elige la opción de **modo de desarrollador** en lugar de la opción de **instalar aplicaciones** .
 
 A continuación, podrás crear y generar o abrir, C++ / WinRT de proyecto en Visual Studio e implementarla. Como alternativa, puedes convertir un proyecto existente mediante la adición de la `<CppWinRTEnabled>true</CppWinRTEnabled>` propiedad a su `.vcxproj` archivo.
 

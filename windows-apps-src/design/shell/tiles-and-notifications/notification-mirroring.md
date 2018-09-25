@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, notificación del sistema, centro de actividades en la nube, reflejo de notificaciones, notificación, en todos los dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: eb8e2ceb16add551f3c8e3a71a69d36b99f21c62
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4149526"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4173504"
 ---
 # <a name="notification-mirroring"></a>Reflejo de notificaciones
 
@@ -29,7 +29,7 @@ Con el reflejo de notificaciones y Cortana, los usuarios pueden recibir y actuar
 
 <img alt="Notification mirroring diagram" src="images/toast-mirroring.gif" width="350"/>
 
-Los desarrolladores obtienen dos grandes ventajas del reflejo de notificaciones: las notificaciones dan lugar más interacción del usuario con el servicio, y también ayudan a los usuarios descubrir tu aplicación de escritorio de Microsoft Store! Incluso es posible que tus usuarios no sepan que cuentas con una fantástica aplicación para UWP disponible para su escritorio de Windows 10. Cuando los usuarios reciben la notificación reflejada desde su teléfono, los usuarios hacer clic en la notificación del sistema para ir a la Microsoft Store, donde pueden instalar la aplicación de escritorio para UWP.
+Los desarrolladores obtienen dos grandes ventajas del reflejo de notificaciones: las notificaciones dan lugar mayor interacción del usuario con el servicio, y también ayudan a los usuarios descubrir tu aplicación de escritorio de Microsoft Store. Incluso es posible que tus usuarios no sepan que cuentas con una fantástica aplicación para UWP disponible para su escritorio de Windows 10. Cuando los usuarios reciben la notificación reflejada desde su teléfono, los usuarios hacer clic en la notificación del sistema para ir a la Microsoft Store, donde pueden instalar la aplicación de escritorio para UWP.
 
 El reflejo funciona tanto con Windows Phone como con Android. Los usuarios deben haber iniciado sesión en Cortana tanto en el teléfono como en el escritorio para que funcione el reflejo de notificaciones.
 
