@@ -1,21 +1,25 @@
 ---
-title: "Tutorial de introducción: un juego para UWP en MonoGame 2D"
-description: Un sencillo juego para UWP para la Tienda Windows, escrito en C# y MonoGame
-author: mukin
+title: Crear un juego para UWP en MonoGame 2D
+description: Un sencillo juego para UWP para Microsoft Store, escrito en C# y MonoGame
+author: muhsinking
 ms.author: mukin
 ms.date: 03/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
-ms.openlocfilehash: 060c83db4a30b3a273f092effcfd3a82b4c00884
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d38465ce02e0aedf854094ede75fc33701b226a6
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4211533"
 ---
-# <a name="get-started-tutorial-a-uwp-game-in-monogame-2d"></a>Tutorial de introducción: un juego para UWP en MonoGame 2D
+# <a name="create-a-uwp-game-in-monogame-2d"></a>Crear un juego para UWP en MonoGame 2D
 
-## <a name="a-simple-2d-uwp-game-for-the-windows-store-written-in-c-and-monogame"></a>Un sencillo juego en 2D para UWP para la Tienda Windows, escrito en C# y MonoGame
+## <a name="a-simple-2d-uwp-game-for-the-microsoft-store-written-in-c-and-monogame"></a>Un sencillo juego 2D de UWP para Microsoft Store, escrito en C# y MonoGame
 
 
 ![Hoja de sprite de un dinosaurio caminando](images/JS2D_0.png)
@@ -25,26 +29,27 @@ translationtype: HT
 MonoGame es un marco de desarrollo de juegos ligero. En este tutorial se te enseñará lo esencial del desarrollo de juegos en MonoGame, incluido cómo cargar contenido, dibujar sprites, animarlos, así como cómo gestionar las entradas de usuarios. También se discutirán otros conceptos más avanzados, como la detección de colisiones y el escalado vertical para pantallas con valores altos de PPP. Este tutorial dura entre 30 y 60minutos.
 
 ## <a name="prerequisites"></a>Requisitos previos
-+    Windows10 y Microsoft Visual Studio2015. [Haz clic aquí para obtener información acerca de cómo iniciar la configuración con Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+    Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. [Haz clic aquí para obtener información acerca de cómo empezar a trabajar con C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
-+    Familiaridad con conceptos informáticos básicos, como clases, métodos y variables, es una ventaja.
++   Windows 10 y Microsoft Visual Studio 2017.  [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
++ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener se vuelve a ejecutar al instalador de Visual Studio y modificando la instalación de Visual Studio 2017.
++   Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. [Haz clic aquí para obtener información acerca de cómo empezar a trabajar con C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++   Familiaridad con conceptos informáticos básicos, como clases, métodos y variables, es una ventaja.
 
 ## <a name="why-monogame"></a>¿Por qué MonoGame?
-No hay escasez de opciones cuando se trata de entornos de desarrollo de juegos. Desde motores completos, como Unity, a API de multimedia exhaustivas y complejas, como DirectX; puede resultar difícil saber por dónde comenzar. MonoGame es un conjunto de herramientas, con un nivel de complejidad entre un motor de juego y una API resolutiva como DirectX. Proporciona una canalización de contenido fácil de usar y toda la funcionalidad necesaria para crear juegos ligeros que puedan ejecutarse en diferentes plataformas. Lo mejor de todo es que las aplicaciones de MonoGame están escritas en C# y podrás distribuirlas rápidamente a través de la Tienda Windows u otras plataformas similares de distribución.
+No hay escasez de opciones cuando se trata de entornos de desarrollo de juegos. Desde motores completos, como Unity, a API de multimedia exhaustivas y complejas, como DirectX; puede resultar difícil saber por dónde comenzar. MonoGame es un conjunto de herramientas, con un nivel de complejidad entre un motor de juego y una API resolutiva como DirectX. Proporciona una canalización de contenido fácil de usar y toda la funcionalidad necesaria para crear juegos ligeros que puedan ejecutarse en diferentes plataformas. Lo mejor de todo, las aplicaciones de MonoGame están escritas en C# y podrás distribuirlas rápidamente a través de Microsoft Store u otras plataformas similares de distribución.
 
 ## <a name="get-the-code"></a>Obtener el código
 Si no te apetece seguir el tutorial paso a paso y solo quieres ver MonoGame en acción, [haz clic aquí para obtener la aplicación acabada](https://github.com/Microsoft/Windows-appsample-get-started-mg2d).
 
-Abre el proyecto en Visual Studio 2015, y pulsa **F5** para ejecutar la muestra. La primera vez que hagas esto, puede que tarde un rato, ya que Visual Studio debe capturar todos los paquetes de NuGet que faltan de la instalación.
+Abre el proyecto en Visual Studio 2017 y presiona **F5** para ejecutar la muestra. La primera vez que hagas esto, puede que tarde un rato, ya que Visual Studio debe capturar todos los paquetes de NuGet que faltan de la instalación.
 
 Si ya lo hiciste, omite la sección siguiente acerca de cómo configurar MonoGame para ver un tutorial paso a paso del código.
 
-**Nota:** El juego creado en este ejemplo no tiene porque estar completo (ni ser divertido). Su único propósito es demostrar todos los conceptos básicos del desarrollo en 2D de MonoGame. Siéntete libre para usar este código y hacer algo mucho mejor, o bien para empezar desde cero una vez que domines los conceptos básicos.
+**Nota:** El juego creado en este ejemplo no tiene porque estar completo (ni ser divertido). Su único propósito es demostrar todos los conceptos básicos del desarrollo en MonoGame 2D. Siéntete libre para usar este código y hacer algo mucho mejor, o bien para empezar desde cero una vez que domines los conceptos básicos.
 
 ## <a name="set-up-monogame-project"></a>Configurar un proyecto de MonoGame
 1. Instala **MonoGame 3.6** para Visual Studio desde [MonoGame.net](http://www.monogame.net/)
 
-2. Inicia Visual Studio 2015.
+2. Inicia Visual Studio 2017.
 
 3. Ve a **Archivo -> Nuevo -> Proyecto**
 
@@ -112,7 +117,7 @@ Al mismo tiempo que se obtiene al ancho y el alto de la pantalla, también confi
 Para cargar la textura en la variable de césped, agrega lo siguiente al método **LoadContent**:
 
 ```CSharp
-grass = Content.Load<Texture2D>("grass.png");
+grass = Content.Load<Texture2D>("grass");
 ```
 
 ### <a name="6-draw-the-sprite"></a>6. Dibujar el sprite
@@ -217,7 +222,7 @@ Después de esto, tenemos **dX**, **dY** y **dA**, que son las velocidades por s
 Al crear una instancia de **SpriteClass**, proporcionamos el constructor con el dispositivo de gráficas de **Game1.cs**, la ruta de acceso a la textura relativa a la carpeta del proyecto y la escala deseada de la textura relativa a su tamaño original. Configuraremos el resto de las variables de clase después de comenzar el juego, en el método de actualización.
 
 ```CSharp
-public SpriteClass (GraphicsDevice graphicsDevice, string texturePath, float scale)
+public SpriteClass (GraphicsDevice graphicsDevice, string textureName, float scale)
 {
   this.scale = scale;
   if (texture == null)
@@ -256,7 +261,7 @@ El método **Draw** se llama en el método **Draw** de Game1.cs, y se usa para d
 Ahora que ya está creada la clase SpriteClass, la usaremos para crear dos nuevos objetos de juego. El primero es una avatar que el jugador puede controlar con las teclas de dirección y la barra espaciadora. El segundo es un objeto que el jugador debe evitar
 
 ### <a name="1-get-the-textures"></a>1. Obtener las texturas
-Para el avatar del jugador, vamos a usar el gato ninja de Microsoft a hombros de su fiel Tyrannosaurus rex. [Haz clic aquí para descargar la imagen](https://github.com/muhsinking/VeggieJump/blob/master/MonoGame2D/Content/ninja-cat-dino.png).
+Para el avatar del jugador, vamos a usar el gato ninja de Microsoft a hombros de su fiel Tyrannosaurus rex. [Haz clic aquí para descargar la imagen](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/ninja-cat-dino.png).
 
 Ahora, en cuanto al obstáculo que el jugador debe esquivar. ¿Qué es lo que más odian los gatos ninja y los dinosaurios? ¡Comer verduras! [Haz clic aquí para descargar la imagen](https://github.com/Microsoft/Windows-appsample-get-started-mg2d/blob/master/MonoGame2D/Content/broccoli.png).
 
@@ -377,7 +382,8 @@ public void StartGame()
 }
 ```
 
-7. Controlar la entrada del teclado. Es necesario un método nuevo para controlar la entrada de usuario mediante el teclado. Agrega este método a **Game1.cs**:
+### <a name="7-handle-keyboard-input"></a>7. controlar la entrada de teclado
+A continuación, necesitamos un nuevo método para controlar la entrada de usuario mediante el teclado. Agrega este método a **Game1.cs**:
 
 ```CSharp
 void KeyboardHandler()
@@ -650,6 +656,7 @@ Agrega este código al método **KeyboardHandler**, para permitir al usuario res
 
 ```CSharp
 if (gameOver && state.IsKeyDown(Keys.Enter))
+{
   StartGame();
   gameOver = false;
 }
@@ -680,8 +687,8 @@ Aquí usamos el mismo método que antes para dibujar el texto centrado horizonta
 
 ![Fin del juego](images/monogame-tutorial-4.png)
 
-## <a name="publish-to-the-windows-store"></a>Publicar en la TiendaWindows
-Dado que compilamos este juego como una aplicación para UWP, es posible publicar este proyecto en la Tienda Windows. Este proceso tiene diferentes pasos.
+## <a name="publish-to-the-microsoft-store"></a>Publicar en Microsoft Store
+Dado que compilamos este juego como una aplicación para UWP, es posible publicar este proyecto en Microsoft Store. Este proceso tiene diferentes pasos.
 
 Tienes que estar [registrado](https://developer.microsoft.com/en-us/store/register) como desarrollador de Windows.
 
@@ -689,4 +696,4 @@ Debes usar la [lista de comprobación de envío de aplicación](https://docs.mic
 
 La aplicación debe enviarse para su [certificación](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process).
 
-Para obtener más información, consulta [Publishing your Windows Store app (Publicar tu aplicación de la Tienda Windows)](https://developer.microsoft.com/en-us/store/publish-apps).
+Para obtener más información, consulte la [publicación de tu aplicación para UWP](https://developer.microsoft.com/en-us/store/publish-apps).
