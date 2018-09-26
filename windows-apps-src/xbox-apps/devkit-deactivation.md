@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 ms.localizationpriority: medium
-ms.openlocfilehash: 90d1c5a8c5fc65cf591211d6f26cfce099597aad
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: d1df8d475ec27ff3de7e3d6599e53ec3035cffc6
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689091"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4213195"
 ---
 # <a name="xbox-one-developer-mode-deactivation"></a>Desactivación del modo de desarrollador de Xbox One
 
@@ -78,7 +78,7 @@ Para restablecer la consola, realiza los siguientes pasos:
 
 Si no puedes acceder a la consola por cualquier motivo, también puedes desactivar el modo de desarrollador en la consola mediante el Centro de desarrollo de Windows.
 
-1. Desplázate a la página [Administrar consolas Xbox One](https://developer.microsoft.com/xboxdevices) en el Centro de desarrollo. Es posible que se te pida que inicies sesión con la cuenta del Centro de desarrollo.
+1. Desplázate a la página [Administrar consolas Xbox One](https://partner.microsoft.com/xboxdevices) en el Centro de desarrollo. Es posible que se te pida que inicies sesión con la cuenta del Centro de desarrollo.
 
 2. Busca la consola que quieras desactivar en la lista de consolas, comparando el número de serie, el identificador de la consola o el identificador de dispositivo.  
 

@@ -15,24 +15,21 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d68d0a5e6f2a22bc0012b3245ba050df271f7f92
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: fc18db25e6404e5236038badd8169ef7bcfc4817
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817413"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4210997"
 ---
 # <a name="text-controls"></a>Controles de texto
-
- 
 
 Los controles de texto constan de cuadros de entrada de texto, cuadros de contraseña, cuadros de sugerencia automática y bloques de texto. El marco XAML brinda diversos controles para representar e ingresar texto, así como un conjunto de propiedades para aplicar formato al texto.
 
 - Los controles para mostrar texto de solo lectura son [TextBlock](text-block.md) y [RichTextBlock](rich-text-block.md).
-- Los controles de edición y entrada de texto son: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) y [RichEditBox](rich-edit-box.md).
+- Los controles de edición y entrada de texto son: [TextBox](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md)y [PasswordBox](password-box.md).
 
-> **API importantes**: [Clase AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [Clase PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [Clase RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [Clase RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [Clase TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [Clase TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
-
+> **API importantes**: [clase TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [clase RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [clase TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [clase RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [clase AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [clase PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -124,28 +121,13 @@ Consulta estos artículos para obtener directrices de fuentes:
 
 ## <a name="pen-input"></a>Entrada manuscrita
 
-> La característica de entrada manuscrita solo está disponible actualmente en Windows Insider Preview. Los nombres de las características, la terminología y la funcionalidad no son definitivos.
-
 **Se aplica a:** TextBox, RichEditBox, AutoSuggestBox
 
 A partir de Windows 10, versión 1803, los cuadros de entrada de texto XAML cuentan con soporte incrustado para usar una entrada manuscrita [Windows Ink](../input/pen-and-stylus-interactions.md). Cuando un usuario pulsa en un cuadro de entrada de texto con un lápiz de Windows, el cuadro de texto se transforma para permitir al usuario escribir directamente en él con un lápiz, en lugar de abrir un panel de entrada independiente.
 
 ![El cuadro de texto se amplía cuando se pulsa con el lápiz](images/pen-input-expand.gif)
 
-El texto se reconoce cuando el usuario escribe en cualquier parte del cuadro de texto y una ventana candidata muestra los resultados del reconocimiento. El usuario puede pulsar un resultado para elegirlo, o seguir escribiendo para aceptar al candidato propuesto. Los resultados del reconocimiento literal (letra por letra) se incluyen en la ventana candidata, por lo que el reconocimiento no se restringe a las palabras de un diccionario. Conforme el usuario escribe, la entrada de texto aceptada se convierte en una fuente de script que se parece mucho a la escritura natural.
-
-![Cuadro de texto con entrada manuscrita](images/pen-input-1.png)
-
-Un usuario puede editar el texto con acciones y gestos estándar, como:
-
-- _strike through_ o _scratch out_: dibujar atravesando una palabra o parte de ella para eliminarla
-- _join_: dibujar un arco entre las palabras para eliminar el espacio entre ellas
-- _insert_: dibujar un símbolo de intercalación para insertar un espacio
-- _overwrite_: escribir sobre texto existente para sustituirlo
-
-![Sobrescribir una entrada manuscrita](images/pen-input-2.png)
-
-La entrada de texto incrustada está habilitada de manera predeterminada cuando la aplicación está destinada a (y se está ejecutando en) Windows 10, versión 1803 o posterior. Puedes rechazar ir de cuadro en cuadro de texto para deshabilitar la función y volver a un panel de entrada de texto. Para deshabilitar la entrada de texto incrustado, configura la propiedad **IsHandwritingViewEnabled** de control de texto como **false**.
+Para obtener más información, consulta la [entrada de texto con la vista de escritura a mano](text-handwriting-view.md).
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elegir el teclado adecuado para el control de texto
 
