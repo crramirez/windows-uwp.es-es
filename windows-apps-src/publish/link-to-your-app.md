@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, vínculo, protocolo de la tienda windows, vincular a una aplicación, vincular a aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "4178222"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4206775"
 ---
 # <a name="link-to-your-app"></a>Vincular a la aplicación
 

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submission, envío piloto, status, estado
 ms.localizationpriority: medium
-ms.openlocfilehash: ad0d35f348c3ed1a986e6afbaf5dac106a3751a0
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 9dbc15b2418c79aa3dee922a61c70364835afe87
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815640"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4204731"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a>Obtener el estado de un envío de paquete piloto
 
@@ -35,7 +35,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
-| GET   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions{submissionId}/status``` |
+| GET   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status``` |
 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
@@ -100,7 +100,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | 409  | La aplicación usa una característica del panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de paquetes piloto](manage-flight-submissions.md)

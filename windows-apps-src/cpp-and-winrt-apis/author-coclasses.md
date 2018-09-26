@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, autor, COM, componente
 ms.localizationpriority: medium
-ms.openlocfilehash: 729cfae39f302ae6b5bae275d9e28a39f3d9503b
-ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
+ms.openlocfilehash: 227ffcd72150e37a513649e69bc7a6709581d65c
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "4176518"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4205331"
 ---
 # <a name="author-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Crear componentes de COM con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -381,6 +381,127 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 ## <a name="how-to-test-the-example-application"></a>Cómo probar la aplicación de ejemplo
 
 Compilar la aplicación y, a continuación, al menos una vez a ejecutarlo como administrador para hacer que el registro y otro programa de instalación, ejecución de código. Si ejecutas como administrador y luego presiona ' t ' para hacer que una notificación del sistema que se muestre. A continuación, hacer clic en el botón de **la llamada de ToastAndCallback** directamente desde la notificación del sistema que se iniciará POP hacia arriba, o desde el centro de actividades y la aplicación, la coclase crea una instancia y la **INotificationActivationCallback :: Activar** método ejecutado.
+
+## <a name="in-process-com-server"></a>Servidor COM en proceso
+
+La aplicación de ejemplo *ToastAndCallback* por encima de las funciones como servidor COM local (o fuera de proceso). Esto se indica en la clave de registro de Windows de [LocalServer32](/windows/desktop/com/localserver32) que uses registrarlo. Un servidor COM local hospeda su coclass(es) dentro de un binario ejecutable (un `.exe`).
+
+Como alternativa (y posiblemente más probable), puedes elegir hospedar la coclass(es) dentro de una biblioteca de vínculos dinámicos (un `.dll`). Un servidor COM en forma de un archivo DLL se conoce como un servidor COM en proceso, y se indica mediante se registre mediante el uso de la clave del registro de Windows de [InprocServer32](/windows/desktop/com/inprocserver32) .
+
+### <a name="create-a-dynamic-link-library-dll-project"></a>Crear un proyecto de biblioteca de vínculos dinámicos (DLL)
+
+Puedes empezar la tarea de creación de un servidor COM en proceso creando un nuevo proyecto en Microsoft Visual Studio. Crear un **Visual C++** > **Escritorio de Windows** > proyecto de**Biblioteca de vínculos dinámicos (DLL)** .
+
+### <a name="set-project-properties"></a>Establecer las propiedades de proyecto
+
+Ve a **General**de la propiedad de proyecto \> **Versión del SDK de Windows**y selecciona **Todas las configuraciones** y **Todas las plataformas**. Establece la **Versión del SDK de Windows** en *10.0.17134.0 (Windows 10, versión 1803)*, o posterior.
+
+Para agregar soporte de Visual Studio para C++ / WinRT para el proyecto, edita tu `.vcxproj` de archivos, busca `<PropertyGroup Label="Globals">` y, dentro de ese grupo de propiedades, Establece la propiedad `<CppWinRTEnabled>true</CppWinRTEnabled>`.
+
+Dado que C++ / WinRT usa características del estándar C ++ 17, Establece la propiedad de proyecto **C o C++** > **idioma** > **Estándar de lenguaje de C++** a *ISO C ++ 17 Standard (/ STD: c ++ 17)*.
+
+### <a name="the-precompiled-header"></a>El encabezado precompilado
+
+Cambiar el nombre de tu `stdafx.h` y `stdafx.cpp` a `pch.h` y `pch.cpp`, respectivamente. Establece la propiedad de proyecto **C o C++** > **Encabezados precompilados** > **El archivo de encabezado precompilado** en *pch.h*.
+
+Buscar y todas las reemplazar `#include "stdafx.h"` con `#include "pch.h"`.
+
+En `pch.h`, incluyen `winrt/base.h`.
+
+```cppwinrt
+// pch.h
+...
+#include <winrt/base.h>
+```
+
+Confirma que no se ven afectadas por [por qué no compila mi proyecto nuevo?](/windows/uwp/cpp-and-winrt-apis/faq).
+
+### <a name="implement-the-coclass-class-factory-and-in-proc-server-exports"></a>Implementar la coclase, el generador de clases y las exportaciones de servidor dentro del proceso
+
+Abre `dllmain.cpp`y a agregarle el listado de código se muestra a continuación.
+
+Si ya tienes un archivo DLL que implementa C++ / WinRT Windows Runtime clases, a continuación, verá que ya tiene la función **DllCanUnloadNow** se muestra a continuación. Si quieres agregar coclases a ese archivo DLL, a continuación, puedes agregar la función **DllGetClassObject** .
+
+Si no tienes el código existente de [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) que quieras que siga siendo compatible con, a continuación, puedes quitar las partes WRL desde el código de muestra.
+
+```cppwinrt
+// dllmain.cpp
+
+struct MyCoclass : winrt::implements<MyCoclass, IPersist>
+{
+    HRESULT STDMETHODCALLTYPE GetClassID(CLSID* id) noexcept override
+    {
+        *id = IID_IPersist; // Doesn't matter what we return, for this example.
+        return S_OK;
+    }
+};
+
+struct __declspec(uuid("85d6672d-0606-4389-a50a-356ce7bded09"))
+    MyCoclassFactory : winrt::implements<MyCoclassFactory, IClassFactory>
+{
+    HRESULT STDMETHODCALLTYPE CreateInstance(IUnknown *pUnkOuter, REFIID riid, void **ppvObject) noexcept override
+    {
+        try
+        {
+            *ppvObject = winrt::make<MyCoclass>().get();
+            return S_OK;
+        }
+        catch (...)
+        {
+            return winrt::to_hresult();
+        }
+    }
+
+    HRESULT STDMETHODCALLTYPE LockServer(BOOL fLock) noexcept override
+    {
+        // ...
+        return S_OK;
+    }
+
+    // ...
+};
+
+HRESULT __stdcall DllCanUnloadNow()
+{
+#ifdef _WRL_MODULE_H_
+    if (!::Microsoft::WRL::Module<::Microsoft::WRL::InProc>::GetModule().Terminate())
+    {
+        return S_FALSE;
+    }
+#endif
+
+    if (winrt::get_module_lock())
+    {
+        return S_FALSE;
+    }
+
+    winrt::clear_factory_cache();
+    return S_OK;
+}
+
+HRESULT __stdcall DllGetClassObject(GUID const& clsid, GUID const& iid, void** result)
+{
+    try
+    {
+        *result = nullptr;
+
+        if (clsid == __uuidof(MyCoclassFactory))
+        {
+            return winrt::make<MyCoclassFactory>()->QueryInterface(iid, result);
+        }
+
+#ifdef _WRL_MODULE_H_
+        return ::Microsoft::WRL::Module<::Microsoft::WRL::InProc>::GetModule().GetClassObject(clsid, iid, result);
+#else
+        return winrt::hresult_class_not_available().to_abi();
+#endif
+    }
+    catch (...)
+    {
+        return winrt::to_hresult();
+    }
+}
+```
 
 ## <a name="important-apis"></a>API importantes
 * [Interfaz IInspectable](https://msdn.microsoft.com/library/br205821)

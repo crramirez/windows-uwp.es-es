@@ -9,40 +9,37 @@ ms.prod: windows
 ms.technology: uwp, windows forms, wpf
 keywords: windows 10, uwp, windows forms, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b8c263b030cbb8f945ffb13a24b6dff3af28fcc
-ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
+ms.openlocfilehash: 67669dd30f376df823f2f9ad08ad69c193cdb602
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "4173638"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4204677"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>Controles de UWP en aplicaciones de escritorio
 
 > [!NOTE]
 > Las API y los controles mencionados en este artículo están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurando y estabilizar en futuras versiones de Windows. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.
 
-Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio no UWP para que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles de UWP. Esto significa que puedes usar las características de UWP, como el [Sistema Fluent Design](../design/fluent-design-system/index.md) y [Windows Ink](../design/input/pen-and-stylus-interactions.md) en tu existente WPF, Windows Forms y aplicaciones de Win32 de C++. Este escenario de desarrollador se conoce como *Islas XAML*.
+Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio no UWP para que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles de UWP. Esto significa que puedes usar características UWP, como [Entrada de lápiz de Windows](../design/input/pen-and-stylus-interactions.md) y los controles que admiten el [Sistema Fluent Design](../design/fluent-design-system/index.md) en tu existente WPF, Windows Forms y aplicaciones de Win32 de C++. Este escenario de desarrollador se conoce como *Islas XAML*.
 
-Ofrecemos varias formas de usar Islas XAML en las aplicaciones de escritorio, dependiendo de la tecnología o el marco que estás usando.
+Ofrecemos varias formas de usar Islas XAML en las aplicaciones WPF, Windows Forms y Win32 de C++, dependiendo de la tecnología o el marco que estás usando.
 
 ## <a name="wrapped-controls"></a>Controles ajustados
 
-Aplicaciones de WPF y Windows Forms puede utilizar una selección de los controles de UWP encapsulados en el [Kit de herramientas de comunidad Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/). Puedes agregar estos controles directamente a la superficie de diseño de tu proyecto WPF o Windows Forms y, a continuación, se usa como cualquier otro control WPF o Windows Forms en el diseñador. Nos referimos a estos controles como *encapsuladas controles* como que ajustan a la interfaz y la funcionalidad de un control UWP específico.
-
-Los siguientes controles ajustados admiten Windows 10, versión 1803 y versiones posterior.
-
-* [WebView](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webview). Este control usa el motor de representación de Microsoft Edge para mostrar el contenido web en una aplicación WPF o Windows Forms.
-* [WebViewCompatible](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webviewcompatible). Este control es una versión de **WebView** que sea compatible con Windows 10 y versiones anteriores de Windows. Este control usa el motor de representación de Microsoft Edge para mostrar contenido web en Windows 10 (versión 1803 y versiones posterior) y el motor de representación de Internet Explorer para mostrar contenido web en Windows 7 y Windows 8.x.
-
-Los siguientes controles ajustados admiten las versiones de 17709 y versiones posteriores de compilación de Windows 10 Insider Preview SDK.
-
-* [Controles InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) e [InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar). Estos controles proporcionan las barras de herramientas de una superficie y relacionadas para la interacción de usuario basada en la entrada de lápiz de Windows en la aplicación de escritorio de Windows Forms o WPF.
-* [MediaPlayerElement](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mediaplayerelement). Este control inserta una vista que transmite y representa el contenido multimedia, como vídeo en la aplicación de escritorio de Windows Forms o WPF.
-
-UWP más ajustados controles de WPF y las aplicaciones de Windows Forms se tiene previstas para las versiones futuras del Kit de herramientas de comunidad Windows.
+Aplicaciones de WPF y Windows Forms puede utilizar una selección de los controles de UWP encapsulados en el [Kit de herramientas de comunidad Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/). Nos referimos a estos controles como *encapsuladas controles* como que ajustan a la interfaz y la funcionalidad de un control UWP específico. Puedes agregar estos controles directamente a la superficie de diseño de tu proyecto WPF o Windows Forms y, a continuación, usarlos como cualquier otro control WPF o Windows Forms en el diseñador.
 
 > [!NOTE]
 > Controles ajustados no están disponibles para aplicaciones de escritorio de Win32 de C++. Estos tipos de aplicaciones deben usar la [API de hospedaje de XAML de UWP](#uwp-xaml-hosting-api).
+
+Los siguientes controles UWP encapsulados están actualmente disponibles para aplicaciones de WPF y Windows Forms. Controles UWP encapsulada más se tiene previstos para las versiones futuras del Kit de herramientas de comunidad Windows.
+
+| Control | Mínima admitida del sistema operativo | Descripción |
+|-----------------|-------------------------------|-------------|
+| [WebView](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webview) | Windows 10, versión 1803 | Usa el motor de representación de Microsoft Edge para mostrar el contenido web. |
+| [WebViewCompatible](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webviewcompatible) | Windows7 | Proporciona una versión de **WebView** que sea compatible con versiones de sistema operativo más. Este control usa el motor de representación de Microsoft Edge para mostrar contenido web en Windows 10 versión 1803 y versiones posteriores y el motor de representación de Internet Explorer para mostrar contenido web en versiones anteriores de Windows 10, Windows 8.x y Windows 7. |
+| [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas)<br>[InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) | Windows 10 Insider Preview SDK compilación 17709 | Proporcionar las barras de herramientas de una superficie y relacionadas para la interacción de usuario basada en la entrada de lápiz de Windows en la aplicación de escritorio de Windows Forms o WPF. |
+| [MediaPlayerElement](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mediaplayerelement) | Windows 10 Insider Preview SDK compilación 17709 | Inserta una vista que transmite y representa el contenido multimedia, como vídeo en la aplicación de escritorio de Windows Forms o WPF. |
 
 ## <a name="host-controls"></a>Controles de host
 
