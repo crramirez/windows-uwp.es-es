@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, categoría, subcategoría, género, categorías, géneros
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f43ae7c70a9471f279927d87c9d55aac8519d6a
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4261458"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4316073"
 ---
 # <a name="category-and-subcategory-table"></a>Tabla de categorías y subcategorías
 

@@ -3,25 +3,26 @@ author: stevewhims
 description: Con C++/WinRT, puedes llamar a las API de Windows Runtime usando tipos de cadena de caracteres anchos de C++ estándar, o puedes usar el tipo winrt::hstring.
 title: Control de cadenas en C++/WinRT
 ms.author: stwhi
-ms.date: 05/21/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, cadena
 ms.localizationpriority: medium
-ms.openlocfilehash: 332edcf17f2b6bbf595def67c9df7043f21828c7
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 865267a6897a551613479a099d10dd6d5a91c315
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265984"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4315609"
 ---
-# <a name="string-handling-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Control de cadenas en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-Con C++/WinRT, puedes llamar a las API de Windows Runtime mediante tipos de cadenas de caracteres anchos de la biblioteca estándar de C++ como **std:: wstring** (nota: no con tipos de cadenas de caracteres estrechos **std:: String**). C++/WinRT tiene un tipo de cadena personalizada denominado [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (definido en la biblioteca de base de C++/WinRT, que es `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`). Y este es el tipo de cadena que los constructores, funciones y propiedades de Windows Runtime toman y devuelven realmente. Pero, en muchos casos&mdash;gracias a los constructores de conversión y operadores de conversión de**hstring**&mdash;puedes tener en cuenta **hstring** o no en tu código cliente. Si vas a *crear* API, es probable que necesites saber sobre **hstring**.
+# <a name="string-handling-in-cwinrt"></a>Control de cadenas en C++/WinRT
+
+Con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), puedes llamar a Windows en tiempo de ejecución APIs con tipos de cadena de caracteres anchos de la biblioteca estándar de C++ como **std:: wstring** (Nota: no con tipos de cadena de caracteres estrechos como **std:: String**). C++/WinRT tiene un tipo de cadena personalizada denominado [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (definido en la biblioteca de base de C++/WinRT, que es `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`). Y este es el tipo de cadena que los constructores, funciones y propiedades de Windows Runtime toman y devuelven realmente. Pero, en muchos casos&mdash;gracias a los constructores de conversión y operadores de conversión de**hstring**&mdash;puedes tener en cuenta **hstring** o no en tu código cliente. Si vas a *crear* API, es probable que necesites saber sobre **hstring**.
 
 Hay muchos tipos de cadena en C++. Las variantes existen en muchas bibliotecas además de **std::basic_string** de la biblioteca estándar de C++. C++17 tiene utilidades de conversión de cadena y **std::basic_string_view** para enlazar las separaciones entre todos los tipos de cadena.  [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) proporciona convertibilidad con **std::wstring_view** para proporcionar la interoperabilidad para la que se ha diseñado **std::basic_string_view**.
 
-## <a name="using-stdwstring-and-optionally-winrthstringuwpcpp-ref-for-winrthstring-with-uriuwpapiwindowsfoundationuri"></a>Con **std:: wstring** (y opcionalmente [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)) con [**Uri**](/uwp/api/windows.foundation.uri)
+## <a name="using-stdwstring-and-optionally-winrthstring-with-uri"></a>Con **std:: wstring** (y opcionalmente **winrt::hstring**) con **Uri**
 [**Windows::Foundation::URI**](/uwp/api/windows.foundation.uri) se ha construido a partir de un [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring).
 
 ```cppwinrt

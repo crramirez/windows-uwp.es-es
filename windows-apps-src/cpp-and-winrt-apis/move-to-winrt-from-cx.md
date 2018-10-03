@@ -9,15 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migar, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: ac7affb044c6b60a249b154cc62379c7517161b0
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 68a631153c104f14f22839077c4c62d34626ed2a
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "4267120"
+ms.locfileid: "4318067"
 ---
-# <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>Migrar a [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) desde C++/CX
-En este tema se muestra cómo migrar código [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) a su equivalente en C++/WinRT.
+# <a name="move-to-cwinrt-from-ccx"></a>Migrar a C++/WinRT desde C++/CX
+
+En este tema se muestra cómo migrar [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx) código a su equivalente en [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 > [!IMPORTANT]
 > Si quieres migrar gradualmente tu [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx) código a C++ / WinRT, a continuación, se puede. C++ / CX y C++ / WinRT código puede coexistir en el mismo proyecto, a excepción de soporte técnico de compilador XAML y componentes de Windows en tiempo de ejecución. Las excepciones, tendrás que seleccionar como destino cualquier C++ / CX o C++ / WinRT en el mismo proyecto. Pero puedes usar un componente de Windows Runtime factorizar el código fuera de la aplicación XAML como que el puerto. Mover tanta C++ / CX de código que puede en un componente y, a continuación, cambia el proyecto XAML a C++ / WinRT. O else dejar el proyecto XAML como C++ / CX, crea un nuevo C++ / WinRT componente y empezar la migración de C++ / código CX fuera del proyecto XAML y en el componente. También podrías tener C++ / proyecto de componente CX junto con C++ / WinRT el proyecto de componente dentro de la misma solución, ambos referencia desde el proyecto de aplicación y el puerto gradualmente de uno a otro.

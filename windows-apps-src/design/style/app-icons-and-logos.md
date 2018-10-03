@@ -12,12 +12,12 @@ keywords: windows 10, Windows 10, uwp, UWP
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e947b00c3a070a8d95a21e38c56bda07cd45d3c4
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 04263122c1a96aadc5e4d0ad8f804730d3a2a20f
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "4268170"
+ms.locfileid: "4312433"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e iconos de aplicación 
 
@@ -164,7 +164,7 @@ El primer elemento de menú en la pestaña de **Activos visuales** , **Todos los
 
 ![Generar todos los activos visuales en Visual Studio](images/app-icons/all-visual-assets.png)
 
-Todo lo que necesitas hacer es una sola imagen de suministro y Visual Studio generará el icono pequeño icono mediano, icono grande, icono ancho, icono grande, icono de la aplicación, pantalla de presentación y el paquete de activos de logotipo para cada factor de escala.
+Todo lo que necesitas hacer es proporcionar una sola imagen y Visual Studio generará el icono pequeño icono mediano, icono grande, icono ancho, icono grande, icono de la aplicación, pantalla de presentación y el paquete de activos de logotipo para cada factor de escala.
 
 Para generar todos los activos a la vez:
 1. Haga clic en el **** junto al campo de **origen** y seleccionar la imagen que quieras usar. Si estás usando una imagen de mapa de bits, asegúrate de que está al menos 400 por 400 píxeles para que Obtén resultados nítidos. Imágenes vectoriales funcionan mejor; Visual Studio te permite usar AI (Adobe Illustrator) y archivos PDF. 

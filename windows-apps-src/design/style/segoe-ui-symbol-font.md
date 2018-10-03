@@ -13,12 +13,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3480288035d98ab3f68da33f9121e7daaf86180f
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 49ac0b2094b17120af8a0c85505cd03af389f1f4
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4264390"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4336346"
 ---
 # <a name="segoe-mdl2-icons"></a>Iconos de Segoe MDL2
 
@@ -58,6 +58,12 @@ Si quieres usar un glifo de la fuente **Segoe MDL2 Assets** que no está incluid
 ```xaml
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
+
+También puedes usar el recurso estático `SymbolThemeFontFamily` para acceder a **Segoe MDL2 Assets**, en lugar de especificar la fuente por nombre:
+```xaml
+<FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
+```
+
 
 ## <a name="how-do-i-get-this-font"></a>¿Cómo se puede obtener esta fuente?
 * En Windows 10: No hay nada que necesitas hacer, la fuente se incluye con Windows.

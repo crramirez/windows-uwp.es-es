@@ -9,15 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: awndows 10, uwp, estándar, c++, cpp, winrt, proyección, ágil, objeto, agilidad, IAgileObject
 ms.localizationpriority: medium
-ms.openlocfilehash: a9d65fad2b093b64166a6a1b5be033e23bdd905b
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 9af1fb0a9d23727924ae3c165bc8977fb9cc7774
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818559"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4318019"
 ---
-# <a name="agile-objects-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Objetos ágiles en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-En la mayoría de los casos, una instancia de una clase de Windows Runtime&mdash;como un objeto C++estándar&mdash;puede tener acceso desde cualquier subproceso. Dicha clase es *ágil*. Solo un número reducido de clases de Windows Runtime enviados con Windows no es ágil, pero cuando las consumas deberás tener en cuenta su modelo de subprocesos y el comportamiento de serialización (la serialización transmite datos a través de un límite de subprocesos o procesos). Es una buena opción predeterminada para que todos los objetos Windows Runtime sean ágiles, por lo que tus propios tipos C++/WinRT son ágiles de manera predeterminada.
+# <a name="agile-objects-in-cwinrt"></a>Objetos ágiles en C++/WinRT
+En la mayoría de los casos, una instancia de una clase de Windows Runtime&mdash;como un objeto C++estándar&mdash;puede tener acceso desde cualquier subproceso. Dicha clase es *ágil*. Solo un número reducido de clases de Windows Runtime enviados con Windows no es ágil, pero cuando las consumas deberás tener en cuenta su modelo de subprocesos y el comportamiento de serialización (la serialización transmite datos a través de un límite de subprocesos o procesos). Es una buena opción predeterminada para cada objeto de Windows Runtime sean ágiles, por lo que tu propio [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) tipos son ágiles de manera predeterminada.
 
 Sin embargo, puedes optar por rechazarlos. Es posible que tengas una buena razón para requerir un objeto de tu tipo para residir, por ejemplo, en un determinado contenedor uniproceso. Por lo general, esto está relacionado con los requisitos de reentrada. Pero cada vez más, incluso las API de interfaces de usuarios ofrecen objetos ágiles. En general, la agilidad es la opción más sencilla y aporta el mayor rendimiento. Además, cuando se implementa una fábrica de activaciones, debe ser ágil aunque tu correspondiente clase en tiempo de ejecución no lo sea.
 

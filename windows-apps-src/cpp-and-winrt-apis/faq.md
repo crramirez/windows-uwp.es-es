@@ -9,36 +9,22 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, preguntas más frecuentes, P+F
 ms.localizationpriority: medium
-ms.openlocfilehash: eb4b7b78bf3ef0a561d102804a245c59b6519796
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 4f1d2bdfe5ce88ed4e3f5f3e618fb7034f4eb0bb
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4264360"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4313889"
 ---
-# <a name="frequently-asked-questions-about-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Preguntas más frecuentes sobre [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-Respuestas a preguntas que probablemente tengas acerca de la creación y consumo de las API de Windows Runtime con C++/WinRT.
+# <a name="frequently-asked-questions-about-cwinrt"></a>Preguntas más frecuentes sobre C++/WinRT
+Respuestas a preguntas que probablemente tengas acerca de la creación y consumo de Windows en tiempo de ejecución APIs con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 > [!NOTE]
 > Si tu pregunta es sobre un mensaje de error que has visto, consulta también el tema [Solución de problemas de C++/WinRT](troubleshooting.md).
 
 ## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>¿Cómo redestinar mi C++ / WinRT proyecto a una versión posterior del Windows SDK?
 
-La versión más reciente disponible por lo general, del SDK de Windows es 10.0.17763.0 (Windows 10, versión 1809). El método para redestinar tu proyecto que es probable que provocar el problema de compilador y enlazador menor también es la más intensa. Ese método implica crear un proyecto nuevo (destinados a la versión del SDK de Windows de tu elección) y, a continuación, copiar archivos en tu nuevo proyecto del antiguo. Habrá secciones de la antigua `.vcxproj` y `.vcxproj.filters` archivos que has puede copiar más para ahorrar agregando archivos en Visual Studio.
-
-Sin embargo, hay otras dos formas de redirigir el proyecto en Visual Studio.
-
-- Ve a **General**de la propiedad de proyecto \> **Versión del SDK de Windows**y selecciona **Todas las configuraciones** y **Todas las plataformas**. Establece la **Versión del SDK de Windows** en la versión que quieres como destino.
-- En el **Explorador de soluciones**, haz clic en el nodo del proyecto, haz clic en **Proyectos redestinar**, elegir las versiones que quieras seleccionar como destino y, a continuación, haz clic en **Aceptar**.
-
-Si se producen errores del vinculador ni compilador después de usar cualquiera de estos dos métodos, puedes intentar limpiar la solución (**compilación** > **Limpiar solución** o eliminar manualmente todos los archivos y carpetas temporales) antes de intentar volver a compilar.
-
-Si el compilador de C++ produce "*error C2039: 'IUnknown': no es un miembro de ' espacio de nombres \'global''*", a continuación, agrega `#include <unknwn.h>` a la parte superior de tu `pch.h` archivo.
-
-Es posible que también debes agregar `#include <hstring.h>` a continuación.
-
-Si el vinculador C++ produce "*error LNK2019: símbolo externo sin resolver _WINRT_CanUnloadNow@0 hace referencia en función de _VSDesignerCanUnloadNow@0 *", a continuación, se puede resolver que agregando `#define _VSDESIGNER_DONT_LOAD_AS_DLL` a tu `pch.h` archivo.
-
+Consulta [cómo redestinar tu C++ / WinRT proyecto a una versión posterior del Windows SDK](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk).
 
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>¿Por qué no se compilará mi proyecto nuevo? Estoy usando Visual Studio 2017 (versión 15.8.0 o posterior) y el SDK versión 17134
 
@@ -84,7 +70,7 @@ C:\ExperimentWithLLVMClang>type main.cpp
 #pragma comment(lib, "windowsapp")
 #pragma comment(lib, "ole32")
 
-#include "winrt/Windows.Foundation.h"
+#include <winrt/Windows.Foundation.h>
 #include <stdio.h>
 #include <iostream>
 
@@ -167,4 +153,4 @@ a.f();
 El patrón recomendado mostrado anteriormente se aplica no solo a C++ / WinRT, pero para todas las proyecciones de lenguaje de Windows Runtime.
 
 > [!NOTE]
-> Si en este tema no responde a tu pregunta, puedes buscar ayuda mediante la [etiqueta `c++-winrt` en Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).
+> Si en este tema no responde a tu pregunta, a continuación, puedes buscar ayuda visitando la [Comunidad de desarrolladores de Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html), o mediante el [ `c++-winrt` etiqueta en Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

@@ -9,15 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección
 ms.localizationpriority: medium
-ms.openlocfilehash: 7168ee705114523a324194b89f8450e768cfab22
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: e9c5cb8a0f81513038a18522c39f0138bb25ab27
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265066"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4315983"
 ---
-# [<a name="cwinrt"></a>C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime, implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows. Con C++/WinRT, puedes crear y consumir API de Windows Runtime usando cualquier compilador de C ++17 compatible con estándares. Windows SDK incluye C++/WinRT. Se introdujo en la versión 10.0.17134.0 (Windows 10, versión 1803).
+# <a name="cwinrt"></a>C++/WinRT
+
+[C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) es una proyección de totalmente estándar C ++ 17 lenguaje moderno de Windows Runtime (WinRT) de las API, implementada como biblioteca basada en archivos de encabezado y diseñada para darte acceso a la moderna API de Windows. Con C++/WinRT, puedes crear y consumir API de Windows Runtime usando cualquier compilador de C ++17 compatible con estándares. Windows SDK incluye C++/WinRT. Se introdujo en la versión 10.0.17134.0 (Windows 10, versión 1803).
 
 C++/WinRT está destinado a todo desarrollador interesado en la escritura de código atractivo y rápido para Windows. El motivo es el siguiente.
 
@@ -41,6 +42,7 @@ C++/WinRT funciona mejor y produce archivos binarios más pequeños que cualquie
 | - | - |
 | [Introducción a C++/WinRT](intro-to-using-cpp-with-winrt.md) | Una introducción a C++/WinRT&mdash;una proyección de lenguaje C++ estándar para las API de Windows Runtime. |
 | [Introducción a C++/WinRT](get-started.md) | Para ponerte al día con el uso de C++/WinRT, este artículo te guía a través de un ejemplo de código sencillo. |
+| [Novedades en C++ / WinRT](news.md) | Noticias y los cambios a C++ / WinRT. |
 | [Preguntas más frecuentes](faq.md) | Respuestas a preguntas que probablemente tengas acerca de la creación y consumo de las API de Windows Runtime con C++/WinRT. |
 | [Solución de problemas](troubleshooting.md) | La tabla de solución de problemas de síntomas y soluciones de este tema puede resultarte útil si vas a cortar nuevo código o portar una aplicación existente. |
 | [Aplicación de ejemplo de C++/WinRT de Photo Editor](photo-editor-sample.md) | Photo Editor es una aplicación de ejemplo para UWP que muestra el desarrollo con proyección de lenguaje de C++/WinRT. La aplicación de ejemplo permite recuperar fotos desde la biblioteca **Imágenes** y, a continuación, modificar la imagen seleccionada con distintos efectos fotográficos. | 
@@ -63,7 +65,7 @@ C++/WinRT funciona mejor y produce archivos binarios más pequeños que cualquie
 | [Migrar a C++/WinRT desde C++/CX](move-to-winrt-from-cx.md) | En este tema se muestra cómo migrar código C++/CX a su equivalente en C++/WinRT. |
 | [Interoperabilidad entre C++/WinRT y la ABI](interop-winrt-abi.md) | Este tema muestra cómo convertir entre la interfaz binaria de aplicaciones (ABI) y objetos C++/WinRT. |
 | [Mover a C++/WinRT desde WRL](move-to-winrt-from-wrl.md) | En este tema se muestra cómo migrar código de la [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) a su equivalente en C++/WinRT. |
-| [Referencias débiles](weak-references.md) | El soporte de referencia débil C++/WinRT se basa en el sistema de pago pay-to-play, esto es, no te cuesta nada a menos que se consulte tu objeto para [**IWeakReferenceSource**](https://msdn.microsoft.com/library/br224609). |
+| [Referencias fuertes y débiles en C++ / WinRT](weak-references.md) | El tiempo de ejecución de Windows es un sistema de recuento de referencia; y en un sistema es importante saber sobre el significado de y distinción entre, referencias fuertes y débiles. |
 | [Objetos ágiles](agile-objects.md) | Un objeto ágil es aquel al que se puede acceder desde cualquier subproceso. Tus tipos C++/WinRT son ágiles de manera predeterminada, pero puedes optar por rechazarlos. |
 
 ### <a name="topics-about-the-c-language"></a>Temas sobre el lenguaje de C++

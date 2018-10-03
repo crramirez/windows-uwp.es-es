@@ -3,30 +3,29 @@ author: stevewhims
 description: C++ / WinRT proporciona funciones y clases base que guardar una gran cantidad de tiempo y esfuerzo cuando quieras implementar o pasar colecciones.
 title: Las colecciones con C++ / WinRT
 ms.author: stwhi
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, colección
 ms.localizationpriority: medium
-ms.openlocfilehash: c7ac3635a96b8dd3d757f25da1b826ea318c1ad4
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: e6a0cf8c2798adc59ffcf84381d6bbf64f2ce80e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265370"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4312319"
 ---
-# <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Las colecciones con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
+# <a name="collections-with-cwinrt"></a>Las colecciones con C++ / WinRT
 
-> [!NOTE]
-> **Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.**
-
-Internamente, una colección de Windows Runtime tiene una gran cantidad de partes complicadas. Sin embargo, cuando quieres pasar un objeto de colección a una función de Windows Runtime, o para implementar tus propias propiedades de colección y los tipos de colección, hay funciones y clases base en C++ / WinRT para ayudarte. Estas características tomar la complejidad de las manos y guardar una gran cantidad de sobrecarga de tiempo y esfuerzo.
-
-> [!IMPORTANT]
-> Las características descritas en este tema están disponibles si has instalado el [Windows SDK versión preliminar 10 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)o posterior.
+Internamente, una colección de Windows Runtime tiene una gran cantidad de partes complicadas. Sin embargo, cuando quieres pasar un objeto de colección a una función de Windows Runtime, o para implementar tus propias propiedades de colección y los tipos de colección, hay funciones y las clases base en [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) proporcionar soporte técnico. Estas características tomar la complejidad de las manos y guardar una gran cantidad de sobrecarga de tiempo y esfuerzo.
 
 [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) es la interfaz de Windows en tiempo de ejecución implementada por cualquier colección de acceso aleatorio de elementos. Si fueras a implementarla **IVector** , también sería necesario implementar [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_), [**IVectorView**](/uwp/api/windows.foundation.collections.ivectorview_t_)y [**IIterator**](/uwp/api/windows.foundation.collections.iiterator_t_). Incluso si *necesitas* una colección personalizada de tipos, es una gran cantidad de trabajo. Pero si tienes datos en un **std:: vector** (o un **std:: Map**o un **std::unordered_map**) y todo lo que quieras hacer es pasar a una API de Windows en tiempo de ejecución, ¿quieres evitar realizar ese nivel de trabajo, si es posible. Y lo que evita *es* posible, dado que C++ / WinRT te ayuda a crear recopilaciones de manera eficaz y con muy poco esfuerzo.
+
+Consulta también [controles de elementos XAML; enlazar a C++ / WinRT colección](binding-collection.md).
+
+> [!NOTE]
+> Si no has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809) o una versión posterior, a continuación, no tendrás acceso a las funciones y clases base que se documentan en este tema. En su lugar, consulta [Si tienes una versión anterior del SDK de Windows](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector#if-you-have-an-older-version-of-the-windows-sdk) para obtener una lista de una plantilla de vector observable que puedes usar en su lugar.
 
 ## <a name="helper-functions-for-collections"></a>Funciones auxiliares para colecciones
 
