@@ -11,11 +11,11 @@ keywords: Windows 10, uwp, tarea en segundo plano, servicio de aplicaciones
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: b9010f82b0460bd46757bc1e0d58c01dec459104
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207957"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4257942"
 ---
 # <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>Migrar una tarea en segundo plano fuera de proceso en una tarea en segundo plano en proceso
 

@@ -15,11 +15,11 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aeb400da4b3abe61e086732eaceb0e53fd1b005
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209538"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258478"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto con la vista de escritura a mano
 
@@ -27,7 +27,7 @@ ms.locfileid: "4209538"
 
 Personalizar la vista integrada de escritura a mano para entrada de lápiz a la entrada de texto que sea compatible con los controles de texto UWP como [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox)y otros controles que proporcionan una experiencia de entrada de texto similares (por ejemplo, [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)).
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Los cuadros de entrada de texto XAML cuentan con soporte incrustado para usar [Windows Ink](../input/pen-and-stylus-interactions.md)una entrada manuscrita. Cuando un usuario pulsa en un cuadro de entrada de texto con un lápiz de Windows, el cuadro de texto se transforma en una superficie de escritura a mano, en lugar de abrir un panel de entrada independiente.
 
