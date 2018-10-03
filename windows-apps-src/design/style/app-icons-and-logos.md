@@ -13,11 +13,11 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e947b00c3a070a8d95a21e38c56bda07cd45d3c4
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205291"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268170"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e iconos de aplicación 
 
@@ -25,7 +25,13 @@ Todas las aplicaciones tienen un icono o logotipo que lo representa y ese icono 
 
 :::row:::
     :::column:::
-        * La barra de título de la ventana de la aplicación * la lista de aplicaciones en el menú Inicio * el Administrador de tareas y la barra de tareas * los iconos de la aplicación * pantalla de presentación de la aplicación * en la tienda de Microsoft :::column-end:::
+        * La barra de título de la ventana de la aplicación
+        * La lista de aplicaciones en el menú Inicio
+        * El Administrador de tareas y la barra de tareas
+        * Iconos de la aplicación
+        * Pantalla de presentación de la aplicación
+        * En la Microsoft Store
+    :::column-end:::
     :::column:::
         ![windows 10 start and tiles](images/assetguidance01.jpg)
     :::column-end:::
@@ -58,7 +64,7 @@ El factor de escala determina el tamaño de los elementos de la interfaz de usua
 
 :::row:::
     :::column:::
-        Windows establece automáticamente el factor de escala para cada pantalla en función de su valor de PPP (puntos por pulgada) y la distancia de visualización del dispositivo. 
+        Windows automatically sets the scale factor for each display based on its DPI (dots-per-inch) and the viewing distance of the device. 
 
         (Users can override the default value by going to the **Settings &gt; Display &gt; Scale and layout** page.)
     :::column-end:::
@@ -121,7 +127,7 @@ Para iniciar el Diseñador de manifiestos:
 
 :::row:::
     :::column:::
-        1. usar Visual Studio para abrir un proyecto de UWP.
+        1. Usa Visual Studio para abrir un proyecto de UWP.
     :::column-end:::
     :::column:::
         
@@ -129,25 +135,26 @@ Para iniciar el Diseñador de manifiestos:
 :::row-end:::
 :::row:::
     :::column:::
-        2. en el **Explorador de soluciones**, haz doble clic en el archivo Package.appmxanifest.
+        2. En el **Explorador de soluciones**, haz doble clic en el archivo Package.appmxanifest.
     :::column-end:::
     :::column:::
-        ![El Diseñador de manifiesto de Visual Studio 2017](images/icons/vs-solution-explorer.png)
+        ![The Visual Studio 2017 Manifest Designer](images/icons/vs-solution-explorer.png)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-            Visual Studio muestra el Diseñador de manifiestos.
+            Visual Studio displays the Manifest Designer.
     :::column-end:::
     :::column:::
-            ![La pestaña de activos visuales](images/icons/vs-manfiest-designer.png)
+            ![The Visual Assets tab](images/icons/vs-manfiest-designer.png)
     :::column-end:::
 :::row-end:::    
 :::row:::
     :::column:::
-        3. Haz clic en la pestaña de **Activos visuales** . :::column-end:::
+        3. Haz clic en la pestaña de **Activos visuales** .
+    :::column-end:::
     :::column:::
-        ![La pestaña de activos visuales](images/icons/vs-manfiest-designer-visual-assets.png)
+        ![The Visual Assets tab](images/icons/vs-manfiest-designer-visual-assets.png)
     :::column-end:::
 :::row-end:::        
 

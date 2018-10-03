@@ -3,18 +3,18 @@ author: laurenhughes
 title: Introducción a los paquetes de activos
 description: Los paquetes de recurso son un tipo de paquete que actúa como una ubicación centralizada para archivos comunes de la aplicación, lo que elimina la necesidad de archivos duplicados en todos los paquetes de arquitectura.
 ms.author: lahugh
-ms.date: 04/30/2018
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de recursos
 ms.localizationpriority: medium
-ms.openlocfilehash: bfb006e0575d025d9d823981e32b6d0749de0996
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 8aafac1c1217ce082cd9d6176c530967f32e4cdd
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818556"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267994"
 ---
 # <a name="introduction-to-asset-packages"></a>Introducción a los paquetes de activos
 
@@ -30,7 +30,7 @@ Dado que los paquetes de activos contienen todos los archivos independientes de 
 ### <a name="how-do-asset-packages-affect-publishing"></a>¿Cómo afectan los paquetes de activos a la publicación?
 La ventaja más evidente de los paquetes de activos es el tamaño reducido de las aplicaciones empaquetadas. Los paquetes de la aplicación más pequeños aceleran el proceso de publicación de la aplicación al permitir que la Store procese menos archivos; sin embargo, esta no es la principal ventaja de los paquetes de activos.
 
-Cuando se crea un paquete de recursos, puedes especificar si se debe permitir que se ejecute el paquete. Dado que los paquetes de activos solamente contienen archivos independientes de arquitectura, por lo general, no contienen ningún archivo .dll o .exe, por lo que normalmente no hay que ejecutar los paquetes de activos. La importancia de esta distinción es que durante el proceso de publicación, deben analizarse todos los paquetes ejecutables para garantizar que no contienen malware y este proceso de exploración tarda más tiempo para los paquetes más grandes. Sin embargo, si un paquete está designado como no ejecutable, la instalación de la aplicación garantizará que no se puedan ejecutar los archivos contenidos en este paquete. Esta garantía elimina la necesidad de una exploración completa del paquete y reducirá en gran medida el tiempo de exploración de malware durante la publicación de la aplicación (y también en actualizaciones):, por consiguiente, acelera notablemente la publicación en aplicaciones que usan los paquetes de activos. Ten en cuenta que los [paquetes de aplicaciones de recopilación plana](flat-bundles.md) también deben usarse para obtener esta ventaja de publicación, dado que esto es lo que permite a la Store procesar en paralelo cada archivo .appx del paquete. 
+Cuando se crea un paquete de recursos, puedes especificar si se debe permitir que se ejecute el paquete. Dado que los paquetes de activos solamente contienen archivos independientes de arquitectura, por lo general, no contienen ningún archivo .dll o .exe, por lo que normalmente no hay que ejecutar los paquetes de activos. La importancia de esta distinción es que durante el proceso de publicación, deben analizarse todos los paquetes ejecutables para garantizar que no contienen malware y este proceso de exploración tarda más tiempo para los paquetes más grandes. Sin embargo, si un paquete está designado como no ejecutable, la instalación de la aplicación garantizará que no se puedan ejecutar los archivos contenidos en este paquete. Esta garantía elimina la necesidad de una exploración completa del paquete y reducirá en gran medida el tiempo de exploración de malware durante la publicación de la aplicación (y también en actualizaciones):, por consiguiente, acelera notablemente la publicación en aplicaciones que usan los paquetes de activos. Ten en cuenta que [los paquetes de aplicaciones de recopilación plana](flat-bundles.md) también debe usarse para obtener esta ventaja de publicación, dado que esto es lo que permite a la tienda procesar cada archivo de paquete .appx o .msix en paralelo. 
 
 
 ### <a name="should-i-use-asset-packages"></a>¿Debo usar paquetes de activos?
@@ -54,6 +54,11 @@ Usa este comando para crear el paquete de activos con MakeAppx.exe:
 
 ```syntax 
 MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.appx
+
+...
+
+MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.msix
+
 ```
 Aquí se debe tener en cuenta que todos los archivos referenciados en AppxManifest (archivos de logotipos) no se pueden mover en paquetes de activos, estos archivos se deben duplicar en todos los paquetes de arquitectura. Los paquetes de activos no deben contener un resources.pri; MRT no puede usarse para acceder a los archivos de paquetes de activos. Para obtener más información sobre cómo tener acceso a los archivos de recursos y por qué los paquetes de activos necesitan la instalación de tu aplicación en una unidad NTFS, consulta [Desarrollar con paquetes de activos y plegado de paquete](Package-Folding.md).
 

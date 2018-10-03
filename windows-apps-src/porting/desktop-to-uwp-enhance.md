@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: Enhance your desktop app for Windows 10 users by using Universal Windows Platform (UWP) APIs.
+Description: Enhance your desktop application for Windows 10 users by using Universal Windows Platform (UWP) APIs.
 Search.Product: eADQiWindows 10XVcnh
 title: Mejorar tu aplicación de escritorio para Windows 10
 ms.author: normesta
@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aafe2d09fc27a2693ccf2c4c9d8f189aa0164a3c
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 392f8166e16c028a57bc9e27039a9884f1d9714a
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976513"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267770"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Mejorar tu aplicación de escritorio para Windows 10
 
@@ -78,11 +78,11 @@ Ya estás listo para agregar experiencias modernas que dan a conocer cuándo los
 
 :white_check_mark: **En primer lugar, decide qué experiencias quieres agregar**
 
-Hay muchas entre las que elegir. Por ejemplo, puedes simplificar el flujo de pedidos de compra mediante API de rentabilidad o dirigir la atención a tu aplicación cuando tengas algo interesante que compartir, por ejemplo, una nueva imagen que otro usuario ha publicado.
+Hay muchas entre las que elegir. Por ejemplo, puedes simplificar el flujo de pedidos de compra mediante API de rentabilidad o dirigir la atención a la aplicación cuando tengas algo interesante que compartir, por ejemplo, una nueva imagen que otro usuario ha publicado.
 
 ![Notificación del sistema](images/desktop-to-uwp/toast.png)
 
-Incluso si los usuarios ignoran o descartar el mensaje, pueden verlo de nuevo en el centro de actividades y, a continuación, hacer clic en el mensaje para abrir tu aplicación. Esto aumenta la relación con tu aplicación y tiene la ventaja adicional de que la aplicación parezca estrechamente integrada con el sistema operativo. Te mostraremos el código para esa experiencia más adelante.
+Incluso si los usuarios ignoran o descartar el mensaje, pueden verlo de nuevo en el centro de actividades y, a continuación, hacer clic en el mensaje para abrir tu aplicación. Esto aumenta la relación con la aplicación y tiene la ventaja adicional de que la aplicación parezca estrechamente integrada con el sistema operativo. Te mostraremos el código para esa experiencia más adelante.
 
 Visita nuestro [centro para desarrolladores](https://developer.microsoft.com/windows) para obtener ideas.
 
@@ -173,7 +173,7 @@ Para obtener más información acerca de notificaciones, consulta [Notificacione
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Compatibilidad con bases de instalación de Windows XP, Windows Vista y Windows 7/8
 
-Puedes modernizar tu aplicación para Windows 10 sin tener que crear una nueva rama y mantener las bases de código independientes.
+Puedes modernizar tu aplicación para Windows 10 sin tener que crear una nueva rama y mantener las bases de código independiente.
 
 Si quieres compilar archivos binarios independientes para los usuarios de Windows 10, usa la compilación condicional. Si prefieres compilar un conjunto de archivos binarios que implementas en todos los usuarios de Windows, usa las comprobaciones en tiempo de ejecución.
 
@@ -224,7 +224,7 @@ El compilador compila ese código solo si esa constante se define en la configur
 
 ### <a name="runtime-checks"></a>Comprobaciones en tiempo de ejecución
 
-Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. Tu aplicación llama a las API de UWP solo si el usuario ejecuta tu aplicación como una aplicación empaquetada en Windows 10.
+Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. Las llamadas de la aplicación las API de UWP solo si el usuario ejecuta la aplicación como una aplicación empaquetada en Windows 10.
 
 La manera más sencilla de agregar comprobaciones en tiempo de ejecución en el código es instalar este paquete de Nuget: [Aplicaciones auxiliares de Puente de dispositivo de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y usar luego el método ``IsRunningAsUWP()`` para desactivar todo el código UWP. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identificar el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 

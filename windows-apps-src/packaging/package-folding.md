@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de activos
 ms.localizationpriority: medium
-ms.openlocfilehash: ecbba774dd4d22dcfbe3ac33e943bb68b6c727f8
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 31c27430c850f861c8b97863521202a6dcab80f7
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818557"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268092"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Desarrollar con paquetes de activos y plegado de paquete 
 
@@ -29,14 +29,14 @@ Si estás pensando usar paquetes de activos para tu aplicación o ya sabes que q
 
 Para comprender cómo el plegado de paquete no afecta al proceso de desarrollo, vamos a retroceder primero para comprender lo que sucede cuando divides tu aplicación en varios paquetes (con paquetes de activos o paquetes de recursos). 
 
-En un nivel alto, cuando divides algunos de los archivos de la aplicación en otros paquetes (que no sean paquetes de arquitectura), no podrás acceder a esos archivos directamente con respecto al lugar en el que se ejecuta el código. Esto es porque estos paquetes se instalan todos en directorios diferentes con respecto al lugar en el que está instalado el paquete de arquitectura. Por ejemplo, si está creando un juego y tu juego se localizado en francés y alemán y se ha compilado para equipos x86 y x64, deberías tener estos archivos de paquetes .appx dentro de la recopilación de aplicación de tu juego:
+En un nivel alto, cuando divides algunos de los archivos de la aplicación en otros paquetes (que no sean paquetes de arquitectura), no podrás acceder a esos archivos directamente con respecto al lugar en el que se ejecuta el código. Esto es porque estos paquetes se instalan todos en directorios diferentes con respecto al lugar en el que está instalado el paquete de arquitectura. Por ejemplo, si vas a crear un juego y el juego se localizado en francés y alemán y se ha compilado para x86 y x64 equipos, debes tener estos archivos del paquete de aplicación dentro de la recopilación de aplicación de tu juego:
 
 -   MyGame_1.0_x86.appx
 -   MyGame_1.0_x64.appx
 -   MyGame_1.0_language-fr.appx
 -   MyGame_1.0_language-de.appx
 
-Cuando tu juego esté instalado en un equipo del usuario, cada archivo .appx tendrá su propia carpeta en el directorio **WindowsApps**. Por lo tanto, para un usuario francés con Windows de 64 bits, tu juego tendrá este aspecto:
+Cuando tu juego esté instalado en el equipo del usuario, cada archivo de paquete de la aplicación tendrá su propia carpeta en el directorio **WindowsApps** . Por lo tanto, para un usuario francés con Windows de 64 bits, tu juego tendrá este aspecto:
 
 ```example
 C:\Program Files\WindowsApps\
@@ -47,9 +47,9 @@ C:\Program Files\WindowsApps\
 `-- …(other apps)
 ```
 
-Ten en cuenta que el archivo del paquete .appx no aplicable al usuario no se instalará (paquetes de x86 y alemán). 
+Ten en cuenta que el paquete de la aplicación no estará archivos que no son aplicables al usuario instalado (el x86 y paquetes alemán). 
 
-Para este usuario, el archivo ejecutable principal de tu juego estará dentro de la carpeta **MyGame_1.0_x64** y se ejecutará desde allí y, normalmente, solo tendrá acceso a los archivos de esta carpeta. Para obtener acceso a los archivos de la carpeta **MyGame_1.0_language-fr**, tendrías que usar las API de MRT o las API de PackageManager. Las API de MRT pueden seleccionar automáticamente el archivo más adecuado de los idiomas instalados; puedes encontrar más información sobre las API de MRT en [Windows.ApplicationModel.Resources.Core]https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core). Como alternativa, puedes encontrar la ubicación instalada del paquete de idioma francés usando la [clase PackageManager](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager). Nunca debes dar por supuesta la ubicación instalada de los paquetes de la aplicación ya que puede cambiar y puede variar entre usuarios. 
+Para este usuario, el archivo ejecutable principal de tu juego estará dentro de la carpeta **MyGame_1.0_x64** y se ejecutará desde allí y, normalmente, solo tendrá acceso a los archivos de esta carpeta. Para obtener acceso a los archivos de la carpeta **MyGame_1.0_language-fr**, tendrías que usar las API de MRT o las API de PackageManager. Las API de MRT puede seleccionar automáticamente el archivo más adecuado de los idiomas instalados, puedes encontrar más información sobre las API de MRT en [Windows.ApplicationModel.Resources.Core](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core). Como alternativa, puedes encontrar la ubicación instalada del paquete de idioma francés usando la [clase PackageManager](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager). Nunca debes dar por supuesta la ubicación instalada de los paquetes de la aplicación ya que puede cambiar y puede variar entre usuarios. 
 
 ## <a name="asset-package-folding"></a>plegado de paquete de activos
 

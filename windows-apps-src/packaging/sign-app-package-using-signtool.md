@@ -3,19 +3,19 @@ author: laurenhughes
 title: Firmar un paquete de aplicación con SignTool
 description: Usa SignTool para firmar manualmente un paquete de aplicación con un certificado.
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
-ms.openlocfilehash: b0aab34b187e06ba2b87a1537d6e30df09b35d7e
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: c238855f4f018e8e3142509842221c6b9d97fae3
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663015"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267856"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>Firmar un paquete de aplicación con SignTool
 
@@ -79,16 +79,25 @@ Para firmar el paquete de la aplicación con un certificado de un archivo .pfx, 
 ```
 SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.appx
 ```
+```
+SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msix
+```
 Ten en cuenta que la opción `/a` permite a **SignTool** elegir el mejor certificado automáticamente.
 
 Si el certificado no es un archivo .pfx, usa la sintaxis siguiente:
 ```
 SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.appx
 ```
+```
+SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.msix
+```
 
 Como alternativa, puedes especificar el hash SHA1 del certificado deseado en lugar de &lt;Name of Certificate&gt; con esta sintaxis:
 ```
 SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.appx
+```
+```
+SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix
 ```
 
 Ten en cuenta que algunos certificados no usan contraseña. Si el certificado no tiene ninguna contraseña, omite "/p &lt;Your Password&gt;" de los comandos de muestra.
@@ -122,5 +131,5 @@ Normalmente, el error interno 0x8007000B se corresponde a uno de estos valores:
 | **Id. de evento** | **Ejemplo de cadena de evento** | **Sugerencia** |
 |--------------|--------------------------|----------------|
 | 150          | Error 0x8007000B: el nombre del editor del manifiesto de la aplicación (CN = Contoso) debe coincidir con el nombre del sujeto del certificado de firma (CN = Contoso, C = EE. UU.). | El nombre del editor del manifiesto de la aplicación debe coincidir exactamente con el nombre de sujeto de la firma.               |
-| 151          | Error 0x8007000B: El método de hash de la firma especificado (SHA512) debe coincidir con el método de hash usado en la asignación de bloques del paquete de la aplicación (SHA256).     | El hashAlgorithm especificado en el parámetro /fd es incorrecto. Vuevle a ejecutar **SignTool** con un hashAlgorithm que coincida con la asignación de bloques del paquete de la aplicación (se usada para crear el paquete de la aplicación).  |
+| 151.          | Error 0x8007000B: El método de hash de la firma especificado (SHA512) debe coincidir con el método de hash usado en la asignación de bloques del paquete de la aplicación (SHA256).     | El hashAlgorithm especificado en el parámetro /fd es incorrecto. Vuevle a ejecutar **SignTool** con un hashAlgorithm que coincida con la asignación de bloques del paquete de la aplicación (se usada para crear el paquete de la aplicación).  |
 | 152          | Error 0x8007000B: El contenido del paquete de la aplicación debe validarse respecto a su asignación de bloques.                                                           | El paquete de la aplicación está dañado y debe volver a compilarse para generar una nueva asignación de bloques. Para obtener más información sobre cómo crear un paquete de aplicación, consulta [Crear un paquete de la aplicación con la herramienta MakeAppx.exe](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). |

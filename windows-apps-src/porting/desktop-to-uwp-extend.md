@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4204741"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4258396"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Ampliar tu aplicación de escritorio con componentes de UWP modernos
 
@@ -24,7 +24,7 @@ Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usua
 En muchos casos, puedes llamar a las API de UWP directamente desde la aplicación de escritorio, por lo que, antes de revisar esta guía, consulta [Mejorar para Windows 10](desktop-to-uwp-enhance.md).
 
 >[!NOTE]
->Esta guía da por hecho que has creado un paquete de la aplicación de Windows para la aplicación de escritorio mediante el Puente de dispositivo de escritorio. Si aún no has hecho esto, consulta [Puente de dispositivo de escritorio](desktop-to-uwp-root.md).
+>Esta guía se da por hecho que has creado un paquete de aplicación de Windows para la aplicación de escritorio. Si aún no has hecho esto, vea [empaquetar aplicaciones de escritorio](desktop-to-uwp-root.md).
 
 Si estás listo, comencemos.
 
@@ -40,7 +40,7 @@ Esta imagen muestra un ejemplo de solución.
 
 ![Ampliar proyecto de inicio](images/desktop-to-uwp/extend-start-project.png)
 
-Si la solución no contiene un proyecto de empaquetado, consulta [Empaquetar una aplicación mediante Visual Studio](desktop-to-uwp-packaging-dot-net.md).
+Si la solución no contiene un proyecto de empaquetado, consulta el [paquete de la aplicación de escritorio con Visual Studio](desktop-to-uwp-packaging-dot-net.md).
 
 ### <a name="add-a-uwp-project"></a>Agregar un proyecto de UWP
 
@@ -83,6 +83,9 @@ Por ejemplo, con una pequeña cantidad de marcado XAML, puedes ofrecer a los usu
 Esta imagen muestra una aplicación de Windows Forms que abre una interfaz de usuario moderna basada en XAML que contiene un control de mapa.
 
 ![diseño adaptativo](images/desktop-to-uwp/extend-xaml-ui.png)
+
+>[!NOTE]
+>Este ejemplo muestra una UI de XAML mediante la adición de un proyecto de UWP a la solución. Que es el enfoque admitido estable mostrar interfaces de usuario de XAML en una aplicación de escritorio. La alternativa de este enfoque es para agregar controles de XAML de UWP directamente a la aplicación de escritorio mediante el uso de una isla de XAML. Islas de XAML están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurando y estabilizar en futuras versiones de Windows. Para obtener más información sobre cómo islas de XAML, consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>El modelo de diseño
 
@@ -245,7 +248,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ## <a name="provide-services-to-other-apps"></a>Proporcionar servicios a otras aplicaciones
 
-Agrega un servicio que otras aplicaciones pueden consumir. Por ejemplo, puedes agregar un servicio que ofrece a otras aplicaciones acceso controlado a la base de datos subyacente de la aplicación. Al implementar una tarea en segundo plano, las aplicaciones pueden ponerse en contacto con el servicio incluso si no se está ejecutando la aplicación de escritorio.
+Agrega un servicio que otras aplicaciones pueden consumir. Por ejemplo, puedes agregar un servicio que ofrece a otras aplicaciones acceso controlado a la base de datos subyacente de la aplicación. Al implementar una tarea en segundo plano, las aplicaciones pueden llegar al servicio incluso si no se está ejecutando la aplicación de escritorio.
 
 Este es un ejemplo que hace esto.
 
@@ -330,7 +333,7 @@ Asigna un nombre al servicio de aplicaciones y proporciona el nombre de la clase
 
 ### <a name="test-the-app-service"></a>Probar el servicio de aplicaciones
 
-Prueba el servicio llamándole desde otra aplicación. Este código puede ser una aplicación de escritorio como una aplicación de formas de Windows u otra aplicación para UWP.
+Prueba el servicio llamándole desde otra aplicación. Este código puede ser una aplicación de escritorio como una aplicación de Windows forms o de otra aplicación para UWP.
 
 > [!NOTE]
 > Este código solo funciona si se establece correctamente la propiedad ``PackageFamilyName`` de la clase ``AppServiceConnection``. Puedes obtener ese nombre llamando a ``Windows.ApplicationModel.Package.Current.Id.FamilyName`` en el contexto del proyecto de UWP. Consulta [Crear y usar un servicio de aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service).
@@ -376,7 +379,7 @@ Obtén más información sobre los servicios de aplicaciones aquí: [Crear y usa
 
 Puedes hacer la aplicación de escritorio sea un destino de recursos compartidos para que los usuarios puedan compartir con facilidad datos, como imágenes de otras aplicaciones que admiten el uso compartido.
 
-Por ejemplo, los usuarios podrían elegir tu aplicación para compartir imágenes desde Microsoft Edge, la aplicación Fotos. Esta es una aplicación de muestra WPF que tiene esa funcionalidad.
+Por ejemplo, los usuarios podrían elegir tu aplicación para compartir imágenes desde Microsoft Edge, la aplicación fotos. Esta es una aplicación de muestra WPF que tiene esa funcionalidad.
 
 ![destino de uso compartido](images/desktop-to-uwp/share-target.png)
 
@@ -447,7 +450,7 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 
 Se añade una tarea en segundo plano para ejecutar código de aplicación incluso cuando la aplicación está suspendida. Las tareas en segundo plano son geniales para tareas pequeñas que no requieren la interacción del usuario. Por ejemplo, la tarea puede descargar correo, mostrar una notificación del sistema sobre un mensaje de chat entrante o reaccionar a un cambio en una condición del sistema.
 
-A continuación se incluye un ejemplo de aplicación de WPF que registra una tarea en segundo plano.
+Esta es una aplicación de muestra WPF que registra una tarea en segundo plano.
 
 ![tarea en segundo plano](images/desktop-to-uwp/sample-background-task.png)
 

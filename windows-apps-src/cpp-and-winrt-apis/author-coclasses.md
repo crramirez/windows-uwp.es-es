@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, autor, COM, componente
 ms.localizationpriority: medium
-ms.openlocfilehash: 227ffcd72150e37a513649e69bc7a6709581d65c
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 2e273d593d7b2e24cc82063ce25b66771b8221e1
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205331"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267184"
 ---
 # <a name="author-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Crear componentes de COM con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -49,7 +49,7 @@ Consulta también [componentes de consumir COM con C++ / WinRT](consume-com.md).
 
 ## <a name="a-more-realistic-and-interesting-example"></a>Un ejemplo más interesante y realista
 
-El resto de este tema te guiará a través de crear un proyecto de aplicación de consola mínima que usa C++ / WinRT para implementar una fábrica de coclase y la clase básica. La aplicación de ejemplo muestra cómo enviar una notificación del sistema con un botón de devolución de llamada en él y la coclase (que implementa la interfaz **INotificationActivationCallback** COM) permite que la aplicación se inicia y se denomina atrás cuando el usuario Haga clic en ese botón en la notificación del sistema.
+El resto de este tema te guiará a través de crear un proyecto de aplicación de consola mínima que usa C++ / WinRT para implementar una coclase básica (componente COM o clase de COM) y una fábrica de clase. La aplicación de ejemplo muestra cómo enviar una notificación del sistema con un botón de devolución de llamada en él y la coclase (que implementa la interfaz **INotificationActivationCallback** COM) permite que la aplicación se inicia y se denomina atrás cuando el usuario Haga clic en ese botón en la notificación del sistema.
 
 Más información sobre el área de característica de notificación del sistema puede encontrarse en [Enviar una notificación del sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast). Ninguno de los ejemplos de código en la sección de la documentación de usar C++ / WinRT, sin embargo, por lo tanto, te recomendamos que prefieres que el código se muestra en este tema.
 
@@ -134,7 +134,7 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 };
 ```
 
-La implementación de la coclase anterior sigue el mismo patrón que se muestra en [crear API con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). Ten en cuenta que puedes usar esta técnica no solo para las interfaces de Windows Runtime (es decir, cualquier interfaz que finalmente se deriva del objeto [**IInspectable**](https://msdn.microsoft.com/library/br205821)), sino también para implementar las interfaces COM (es decir, cualquier interfaz que finalmente se deriva del objeto [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)).
+La implementación de la coclase anterior sigue el mismo patrón que se muestra en [crear API con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). Por lo tanto, puedes usar la misma técnica para implementar interfaces COM, así como interfaces de Windows Runtime. Componentes de COM y clases de Windows Runtime exponen sus características a través de interfaces. En última instancia, todas las interfaces de COM se deriva de la interfaz de la [**interfaz IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) . El tiempo de ejecución de Windows se basa en COM&mdash;una distinción que se va a interfaces de Windows Runtime en última instancia se derivan de la [**interfaz IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821) (y **IInspectable** se deriva del objeto **IUnknown**).
 
 En la coclase en el código anterior, se implementa el método **INotificationActivationCallback::Activate** , que es la función que se llama cuando el usuario hace clic en el botón de devolución de llamada en una notificación del sistema. Sin embargo, para poder llamar a esa función, debe crearse una instancia de la coclase y el trabajo de la función **IClassFactory:: CreateInstance** .
 
