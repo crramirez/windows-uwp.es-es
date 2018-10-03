@@ -4,18 +4,18 @@ Description: If you encounter errors after submitting your app to the Store, you
 title: Resolver errores de envío
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
 ms.author: wdg-dev-content
-ms.date: 09/13/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d027e35f8fe76a0d4139301f1a7dabc7798348a
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 2aa30af537874f3c3f4845706de6f6788c7b08fb
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210231"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260780"
 ---
 # <a name="resolve-submission-errors"></a>Resolver errores de envío
 
@@ -23,7 +23,7 @@ Si se producen errores después de enviar la aplicación a la Tienda, tienes que
 
 ## <a name="uwp-apps"></a>Aplicaciones para UWP
 
-Si envías una aplicación para UWP, es posible que veas un error durante el procesamiento previo si el archivo de paquete no es un archivo .appxupload generado por Visual Studio para la Tienda. Asegúrate de que seguir los pasos de [paquete de una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md) al crear el archivo de paquete de la aplicación y solo cargar el archivo .appxupload en la página de [los paquetes](upload-app-packages.md) de la presentación, no un appx o .appxbundle.
+Si envías una aplicación para UWP, es posible que veas un error durante el procesamiento previo si el archivo de paquete no es un archivo .msixupload o .appxupload generado por Visual Studio para la tienda. Asegúrate de que seguir los pasos de [paquete de una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md) al crear el archivo de paquete de la aplicación y solo carga el archivo .msixupload o .appxupload en la página de [los paquetes](upload-app-packages.md) del envío, no un appx/.msix o .msixbundle/appxbundle .
 
 Si se muestra un error de compilación, asegúrate de que eres capaz de generar correctamente la aplicación en modo de lanzamiento. Para obtener más información, consulta [Errores de compilador interno nativo .NET](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
@@ -31,7 +31,7 @@ Si se muestra un error de compilación, asegúrate de que eres capaz de generar 
 
 Si vas a enviar un paquete que contiene los archivos binarios de Win32 y UWP, asegúrate de que crees que el paquete utilizando el proyecto de empaquetado de Windows que está disponible en Visual Studio 2017 Update 4. Si el paquete se crea mediante el uso de una plantilla de proyecto UWP, es posible que no podrás enviar que empaquetarla a la tienda o la instalación de prueba en otros equipos. Incluso si el paquete se publica correctamente, es posible que se comportan de forma inesperada en el equipo del usuario. Para obtener más información, consulta el [paquete de una aplicación con Visual Studio (puente de escritorio)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-## <a name="windows-phone-apps"></a>Aplicaciones de Windows Phone
+## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x y versiones anteriores
 
 Es posible que veas **error 2001** cuando se detectan problemas con los paquetes de Windows Phone durante el procesamiento previo. En la mayoría de los casos, necesitarás volver a compilar el paquete de la aplicación para corregir el error. Una vez que lo hayas hecho, reemplaza el paquete antiguo por el nuevo en la página [Paquetes](upload-app-packages.md) del envío antes de hacer clic de nuevo en **Enviar a la Tienda**.
 

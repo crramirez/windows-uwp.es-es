@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: La extensión de marcado xBind es una alternativa a Binding. xBind carece de algunas de las características de Binding, pero se ejecuta en menos tiempo y usa menos memoria que Binding, además de admitir una mejor depuración.
+description: 'La extensión de marcado xBind es una alternativa de alto rendimiento para el enlace. xBind - nuevo para Windows 10: se ejecuta en menos tiempo y usa menos memoria que Binding mejor depuración.'
 title: Extensión de marcado xBind
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
@@ -10,18 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 340f8e72c5015fad341810ef335dea73f77fc82f
-ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
-ms.translationtype: HT
+ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
-ms.locfileid: "1672892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261492"
 ---
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
 **Nota** Para obtener información general sobre el uso del enlace de datos en la aplicación con **{x:Bind}** y para realizar una comparación total entre **{x:Bind}** y **{Binding}**, consulta el tema [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-La extensión de marcado **{x:Bind}** (nueva para Windows 10) es una alternativa a **{Binding}**. **{x:Bind}** carece de algunas de las características de **{Binding}**, pero se ejecuta en menos tiempo y usa menos memoria que **{Binding}** y admite una depuración mejor.
+La extensión de marcado **{x:Bind}** (nueva para Windows 10) es una alternativa a **{Binding}**. **{X: Bind}** se ejecuta en menos tiempo y usa menos memoria que **{Binding}** y admite una depuración mejor.
 
 Durante el tiempo de compilación de XAML, **{x:Bind}** se convierte en un código que obtendrá un valor de la propiedad del origen de datos y lo establecerá en la propiedad especificada en el marcado. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad del origen de datos y se actualiza en función de los cambios (`Mode="OneWay"`). Opcionalmente, también puede configurarse para insertar los cambios en su propio valor de nuevo en la propiedad de origen (`Mode="TwoWay"`).
 
@@ -46,6 +46,8 @@ Los objetos de enlace creados por **{x: enlace}** y **{Binding}** son prácticam
 <object property="{x:Bind bindingProperties}" .../>
 -or-
 <object property="{x:Bind propertyPath, bindingProperties}" .../>
+-or-
+<object property="{x:Bind pathToFunction.functionName(functionParameter1, functionParameter2, ...), bindingProperties}" .../>
 ```
 
 | Término | Descripción |
@@ -55,6 +57,25 @@ Los objetos de enlace creados por **{x: enlace}** y **{Binding}** son prácticam
 | _propName_=_value_\[, _propName_=_value_\]* | Una o más propiedades de enlace que se especifican con una sintaxis de par de nombre-valor. |
 | _propName_ | El nombre de cadena de la propiedad que se establecerá en el objeto Binding. Por ejemplo, "Converter". |
 | _value_ | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad que se establece. A continuación, se muestra un ejemplo de uso de _propName_=_value_ en el que el valor es en sí mismo una extensión de marcado: `Converter={StaticResource myConverterClass}`. Para obtener más información, consulta la sección [Propiedades que se pueden establecer con {x: enlace}](#properties-you-can-set) que se incluye más adelante. |
+
+## <a name="examples"></a>Ejemplos
+
+```XAML
+<Page x:Class="QuizGame.View.HostView" ... >
+    <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
+</Page>
+```
+
+En este XAML de ejemplo se usa **{x:Bind}** con una propiedad **ListView.ItemTemplate**. Observa la declaración de un valor **x:DataType**.
+
+```XAML
+  <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
+    <StackPanel Orientation="Vertical" Height="50">
+      <TextBlock Text="{x:Bind Title}"/>
+      <TextBlock Text="{x:Bind Description}"/>
+    </StackPanel>
+  </DataTemplate>
+```
 
 ## <a name="property-path"></a>Ruta de acceso de propiedades
 
@@ -68,7 +89,8 @@ Por ejemplo: en una página, **Text="{x:Bind Employee.FirstName}"** buscará un 
 
 En el caso de C++/CX, **{x:Bind}** no se puede enlazar a propiedades y campos privados en el modelo de datos o página: debes tener una propiedad pública para que se pueda enlazar. El área de superficie del enlace se debe exponer como clases o interfaces de CX para que podamos obtener los metadatos relevantes. El atributo **\[Bindable\]** no debería ser necesario.
 
-Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. Asimismo, gracias a **x:Bind** puedes usar el nombre del elemento como la primera parte de la ruta de acceso del enlace, ya que los elementos con nombre se convierten en campos de la página o del control de usuario que representan el origen del enlace raíz.
+Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. En su lugar, puedes usar el nombre del elemento como la primera parte de la ruta de acceso del enlace porque los elementos con nombre se convierten en campos de la página o control de usuario que representa el origen del enlace raíz. 
+
 
 ### <a name="collections"></a>Colecciones
 
@@ -93,78 +115,7 @@ _Nota: la sintaxis de conversión de estilo C# es más flexible que la sintaxis 
 
 ## <a name="functions-in-binding-paths"></a>Funciones en rutas de acceso de enlace
 
-A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esto te permite lo siguiente:
-
-- Lograr la conversión de valores de una forma más sencilla
-- Obtener una manera de que los enlaces dependan de más de un parámetro
-
-> [!NOTE]
-> Para usar las funciones con **{x: Bind}**, la versión del SDK de destino mínima de la aplicación debe ser la 14393 o posterior. No puedes usar las funciones si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
-
-En el siguiente ejemplo, el primer y segundo planos del elemento están enlazados a las funciones dedicadas a realizar la conversión según el parámetro de color.
-
-```xaml
-<DataTemplate x:DataType="local:ColorEntry">
-    <Grid Background="{x:Bind local:ColorEntry.Brushify(Color)}" Width="240">
-        <TextBlock Text="{x:Bind ColorName}" Foreground="{x:Bind TextColor(Color)}" Margin="10,5" />
-    </Grid>
-</DataTemplate>
-```
-
-```csharp
-class ColorEntry
-{
-    public string ColorName { get; set; }
-    public Color Color { get; set; }
-
-    public static SolidColorBrush Brushify(Color c)
-    {
-        return new SolidColorBrush(c);
-    }
-
-    public SolidColorBrush TextColor(Color c)
-    {
-        return new SolidColorBrush(((c.R * 0.299 + c.G * 0.587 + c.B * 0.114) > 150) ? Colors.Black : Colors.White);
-    }
-}
-
-```
-
-### <a name="function-syntax"></a>Sintaxis de la función
-
-``` Syntax
-Text="{x:Bind MyModel.Order.CalculateShipping(MyModel.Order.Weight, MyModel.Order.ShipAddr.Zip, 'Contoso'), Mode=OneTime}"
-             |      Path to function         |    Path argument   |       Path argument       | Const arg |  Bind Props
-```
-
-### <a name="path-to-the-function"></a>Ruta de acceso a la función
-
-La ruta de acceso a la función se especifica como otras tantas rutas de acceso de propiedades y puede incluir puntos (.), indexadores o conversiones para localizar la función.
-
-Las funciones estáticas pueden especificarse mediante la sintaxis XMLNamespace:ClassName.MethodName. Por ejemplo, **&lt;CalendarDatePicker Date="\{x:Bind sys:DateTime.Parse(TextBlock1.Text)\}" /&gt;** se asignará a la función DateTime.Parse, suponiendo que **xmlns:sys="using:System"** se especificó en la parte superior de la página.
-
-Si el modo es OneWay/TwoWay, se cambiará el proceso de detección realizado en la ruta de acceso de la función y se volverá a evaluar el enlace si se realizaron cambios en esos objetos.
-
-La función a enlazar debe tener en cuenta lo siguiente:
-
-- Debe ser accesible al código y a los metadatos, por lo que los métodos de trabajo interno o privado en C# (pero no en C++ o CX) deberán ser métodos públicos de WinRT.
-- La sobrecarga debe basarse en el número de argumentos, no en el tipo; se intentará hacer coincidir la primera sobrecarga con el número de argumentos que haya.
-- Los tipos de argumento deben coincidir con los datos que se pasan; no se realizan conversiones de restricción.
-- El tipo de devolución de la función debe coincidir con el tipo de propiedad que está usando el enlace.
-
-### <a name="function-arguments"></a>Argumentos de función
-
-Se pueden especificar varios argumentos de función separados por comas (,)
-
-- Ruta de acceso: debe tener la misma sintaxis que al enlazar directamente con el objeto.
-  - Si el modo es OneWay/TwoWay, se realizará la detección de cambios y se volverá a evaluar el enlace en cuanto cambien los objetos.
-- La cadena de la constante debe estar entre comillas: es necesario usar las comillas para designarla como una cadena. Asimismo, puedes usar el acento circunflejo (^) para evitar las comillas de las cadenas.
-- Número de constante: por ejemplo, -123.456.
-- Elemento booleano: especificado como "x:True" o "x:False".
-
-### <a name="two-way-function-bindings"></a>Enlaces de funciones bidireccionales
-
-En un escenario con un enlace bidireccional, es necesario especificar una segunda función para la dirección inversa del enlace. Esto se hace mediante la propiedad de enlace **BindBack**; por ejemplo, **Text="\{x:Bind a.MyFunc(b), BindBack=a.MyFunc2\}"**. La función debe tomar un argumento que se corresponda con el valor que debe volver al modelo.
+A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esta es una característica eficaz para el enlace de datos que permite que varios escenarios en el marcado. Ver [los enlaces de función](../data-binding/function-bindings.md) para obtener más información.
 
 ## <a name="event-binding"></a>Enlace de eventos
 
@@ -226,21 +177,3 @@ Las páginas y los controles de usuario que incluyen enlaces de tipo Compiled, t
 
 **{x:Bind}** es solo una extensión de marcado; no hay forma de crear o manipular estos enlaces mediante programación. Para obtener más información acerca de las extensiones de marcado, consulta [Introducción a XAML](xaml-overview.md).
 
-## <a name="examples"></a>Ejemplos
-
-```XML
-<Page x:Class="QuizGame.View.HostView" ... >
-    <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
-</Page>
-```
-
-En este XAML de ejemplo se usa **{x:Bind}** con una propiedad **ListView.ItemTemplate**. Observa la declaración de un valor **x:DataType**.
-
-```XML
-  <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
-    <StackPanel Orientation="Vertical" Height="50">
-      <TextBlock Text="{x:Bind Title}"/>
-      <TextBlock Text="{x:Bind Description}"/>
-    </StackPanel>
-  </DataTemplate>
-```

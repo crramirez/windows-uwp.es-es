@@ -5,7 +5,7 @@ title: Botones
 label: Buttons
 template: detail.hbs
 ms.author: quradic
-ms.date: 05/19/2017
+ms.date: 10/2/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -16,17 +16,14 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b52f61a4bb54c3432c3e1544bb690df08c3b891
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: badaefc406daa5f4500c76262d916f47d82e7a52
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263508"
 ---
 # <a name="buttons"></a>Botones
-
-> [!IMPORTANT]
-> En este artículo se describe una funcionalidad que no se ha lanzado aún y que puede sufrir importantes modificaciones antes de que se lance la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí. Características de vista previa requieren la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Un botón ofrece al usuario una forma de desencadenar una acción inmediata. Algunos botones están especializados para tareas particulares, como la navegación, acciones que se repiten o presentar los menús.
 

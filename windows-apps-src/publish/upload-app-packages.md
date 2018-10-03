@@ -4,31 +4,31 @@ Description: The Packages page is where you upload all of the package files (.ap
 title: Cargar paquetes de aplicaciones
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 ms.author: wdg-dev-content
-ms.date: 5/10/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, paquetes, carga, carga de paquete
 ms.localizationpriority: medium
-ms.openlocfilehash: 6013a238cff8db3b85dd98af58cccaf344a72f51
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: d966688110870b669bdd296ec14e145a5d77b74e
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207741"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263034"
 ---
-# <a name="upload-app-packages"></a>Cargar paquetes de aplicación
+# <a name="upload-app-packages"></a>Cargar paquetes de aplicaciones
 
-La página **Paquetes** es donde se cargan todos los archivos del paquete (.appx, .appxupload, .appxbundle o .xap) de la aplicación que vas a enviar. En este paso puedes cargar paquetes para cualquier sistema operativo de destino de la aplicación. Cada vez que un cliente descarga la aplicación, la Tienda le proporciona automáticamente el paquete que mejor se adapta a su dispositivo. Después de cargar los paquetes, verás una tabla que indica [qué paquetes que se ofrecerán a familias específicas de dispositivos Windows 10](#device-family-availability) (y a versiones anteriores del sistema operativo, si procede) ordenados según su clasificación.
+La página **paquetes** es donde se cargan todos los archivos del paquete (.msix, .msixupload, .msixbundle, .appx, .appxupload, .appxbundle o .xap) de la aplicación que vas a enviar. En este paso puedes cargar paquetes para cualquier sistema operativo de destino de la aplicación. Cada vez que un cliente descarga la aplicación, la Tienda le proporciona automáticamente el paquete que mejor se adapta a su dispositivo. Después de cargar los paquetes, verás una tabla que indica [qué paquetes que se ofrecerán a familias específicas de dispositivos Windows 10](#device-family-availability) (y a versiones anteriores del sistema operativo, si procede) ordenados según su clasificación.
 
 Consulta [Requisitos del paquete de la aplicación](app-package-requirements.md) para obtener más información sobre lo que incluye un paquete y cómo debe estructurarse. También querrás obtener información sobre [cómo los números de versión pueden afectar qué paquetes se entregan a clientes específicos](package-version-numbering.md) y [cómo se distribuyen los paquetes a diferentes sistemas operativos](guidance-for-app-package-management.md).
 
 ## <a name="uploading-packages-to-your-submission"></a>Cargar paquetes en el envío
 
-Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar los archivos. La página **Paquetes** te permite cargar archivos .xap, .appx, .appxupload y .appxbundle.
+Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar los archivos. La página **paquetes** te permite cargar archivos .msix, .msixupload, .msixbundle, .appx, .appxupload, .appxbundle o .xap.
 
 > [!IMPORTANT]
-> Para Windows10, se recomienda cargar aquí el archivo .appxupload en lugar de un .appx o .appxbundle.  Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).
+> Para Windows 10, se recomienda cargar el archivo .msixupload o .appxupload aquí en lugar de .msix, .appx, .msixbundle o .appxbundle.  Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).
 
 Si has creado algún [paquete piloto](package-flights.md) para tu aplicación, verás una lista desplegable con la opción para copiar los paquetes de uno de los paquetes piloto. Selecciona el paquete piloto que tiene los paquetes que quieres extraer. A continuación, podrás seleccionar varios o todos los paquetes, para incluirlos en este envío.
 

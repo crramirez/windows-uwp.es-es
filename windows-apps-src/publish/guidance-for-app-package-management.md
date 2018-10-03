@@ -4,18 +4,18 @@ Description: Learn how your app's packages are made available to your customers,
 title: Instrucciones para la administración de paquetes de la aplicación
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b0b6315b1177138c3ede7834e2dbc792ee106dd
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: a43f3b4c5684d93ea6986c4d1f1e4dae46c1a959
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205145"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266200"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientación para administrar paquetes de la aplicación
 
@@ -110,30 +110,11 @@ Ten en cuenta que aunque quites todos los paquetes que admitan una determinada f
 
 ## <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>Agregar paquetes para Windows 10 a una aplicación publicada anteriormente
 
-Si tienes una aplicación en la Tienda dirigida a Windows 8.x o Windows Phone 8.x y quieres actualizarla para Windows 10, crea un nuevo envío y agrega los paquetes .appxupload para UWP en el paso [Paquetes](upload-app-packages.md). Después de que la aplicación pase por el proceso de certificación, los clientes que ya tenían tu aplicación y están ahora en Windows 10 obtendrán el paquete para UWP como una actualización de la tienda. El paquete para UWP también estará disponible en las adquisiciones nuevas para los clientes de Windows 10.
+Si tienes una aplicación de la tienda que solo se incluye paquetes para Windows 8.x o Windows Phone 8.x y quieres actualizarla para Windows 10, crea un nuevo envío y agrega los paquetes de .msixupload o .appxupload para UWP durante el paso de [paquetes](upload-app-packages.md) . Después de que la aplicación pase por el proceso de certificación, el paquete para UWP también estará disponible para nuevas adquisiciones por los clientes de Windows 10.
 
 > [!NOTE]
 > Una vez que un cliente de Windows 10 obtiene el paquete para UWP, no puedes revertirlo para que use un paquete para una versión anterior del sistema operativo. 
 
-Ten en cuenta que el número de versión de los paquetes de Windows10 siempre debe ser mayor que los números de versión de los paquetes de Windows8, Windows8.1 o Windows Phone8.1 que incluyas (o paquetes de la versión del sistema operativo que ya hayas publicado). Para obtener más información, consulta [Numeración de la versión del paquete](package-version-numbering.md).
+Ten en cuenta que el número de versión de los paquetes de Windows 10 debe ser mayor que los de los paquetes de Windows 8, Windows 8.1 o Windows Phone 8.1 que has usado. Para obtener más información, consulta [Numeración de la versión del paquete](package-version-numbering.md).
 
 Para obtener más información sobre cómo empaquetar aplicaciones para UWP para Microsoft Store, consulta [Empaquetado de aplicaciones](../packaging/index.md).
-
-> [!IMPORTANT]
-> Ten en cuenta que si proporcionas paquetes destinados a la familia de dispositivos universal, todos los clientes que ya tuvieran tu aplicación en un sistema operativo anterior (Windows Phone 8, Windows 8.1, etc.) y que actualicen a Windows 10, se actualizarán para obtener el paquete de Windows 10.
-> 
-> Esto ocurre incluso si se ha excluido una familia de dispositivos específica en el paso de la [disponibilidad de familia de dispositivos](device-family-availability.md) de tu envío, desde el que la sección solo se aplica a las nuevas adquisiciones. Si no quieres que todos los clientes anteriores obtengan el nuevo paquete de Windows 10 universal, asegúrate de actualizar el elemento [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) del manifiesto appx para incluir solo la familia de dispositivos concreta que quieras admitir.
-> 
-> Por ejemplo, supongamos que desea que los clientes de Windows 8 y Windows 8.1 que se hayan actualizado a un dispositivo de escritorio de Windows 10 para obtener la nueva aplicación para UWP, pero quieres que los clientes de Windows Phone que ahora se en dispositivos de Windows 10 Mobile para mantener los paquetes que anteriormente realizan availabl e (destinados a Windows Phone 8 o Windows Phone 8.1). Para ello, tendrás que actualizar el [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) en el manifiesto appx para incluir solo **Windows.Desktop** (para la familia de dispositivos de escritorio), en lugar de dejarlo como el valor **Windows.Universal** (correspondiente a la familia de dispositivos universal) Microsoft Visual Studio incluye en el manifiesto de forma predeterminada. No envíes ningún paquete para UWP destinado a las familias de dispositivos Universal o Mobile (**Windows.Universal** o **Windows.Universal**). De esta forma, los clientes de Windows 10 Mobile no obtendrán ninguno de los paquetes para UWP.
-
-
-## <a name="maintaining-package-compatibility-for-windows-phone-81"></a>Mantener la compatibilidad de paquete para Windows Phone 8.1
-
-Se aplican algunos requisitos a los tipos de paquetes al actualizar aplicaciones publicadas anteriormente para Windows Phone 8.1:
-
--   Una vez que una aplicación tiene un paquete publicado de Windows Phone 8.1, todas las actualizaciones posteriores deben contener un paquete de Windows Phone 8.1.
--   Una vez que una aplicación tiene un XAP publicado de Windows Phone 8.1, todas las actualizaciones posteriores deben contener un XAP de Windows Phone 8.1, un .appx de Windows Phone 8.1 o un .appxbundle de Windows Phone 8.1.
--   Una vez que una aplicación tiene un appx publicado de Windows Phone 8.1, todas las actualizaciones posteriores deben contener un .appx de Windows Phone 8.1 o un .appxbundle de Windows Phone 8.1. En otras palabras, no se permite un XAP de Windows Phone 8.1. Esto también se aplica a un .appxupload que contenga un .appx de Windows Phone 8.1.
--   Una vez que una aplicación tiene un .appxbundle publicado de Windows Phone 8.1, todas las actualizaciones posteriores deben contener un .appxbundle de Windows Phone 8.1. En otras palabras, no se permite un XAP de Windows Phone 8.1 o un .appx de Windows Phone 8.1. Esto también se aplica a un .appxupload que contenga un .appxbundle de Windows Phone 8.1.
-
-Si no se siguen estas reglas, es posible que se produzcan errores al cargar el paquete, lo que impedirá que el envío se complete.

@@ -5,7 +5,7 @@ title: Cuadro combinado (lista de desplegable)
 label: Combo box
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 05/19/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -14,17 +14,14 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f7592f584227d9b3a93a0ef4cea3ce53cd203ea
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 518ce49ddb631e3e914a6c7662b4e74de247c29c
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259744"
 ---
 # <a name="combo-box"></a>Cuadro combinado
-
-> [!IMPORTANT]
-> En este artículo se describe una funcionalidad que no se ha lanzado aún y que puede sufrir importantes modificaciones antes de que se lance la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.
 
 Usa un cuadro combinado (también conocido como una lista desplegable) para presentar una lista de elementos que puede seleccionar un usuario. Un cuadro combinado se inicia en un estado compacto y se expande para mostrar una lista de elementos seleccionables.
 

@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
-ms.openlocfilehash: 0afc2c55ab0d0bdd2bee0206f986b2724d331eaf
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: a2923834fd968114a4ed607de214763fb2575697
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261908"
 ---
 # <a name="page-transitions"></a>Transiciones de página
 
@@ -55,6 +55,20 @@ La animación de drill se representa mediante la clase [**DrillInNavigationTrans
 ```csharp
 // Play the drill in animation
 myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
+```
+
+## <a name="horizontal-slide"></a>Deslizamiento horizontal
+
+Usa el deslizamiento horizontal para mostrar que entres las páginas aparecen junto a entre sí. El control [NavigationView](../controls-and-patterns/navigationview.md) usa automáticamente esta animación de navegación superior, pero si vas a crear tu propia experiencia de navegación horizontal, a continuación, puedes implementar el deslizamiento horizontal con SlideNavigationTransitionInfo.
+
+La sensación deseada es que el usuario está navegando entre las páginas que están cerca entre sí. 
+
+```csharp
+// Navigate to the right, ie. from LeftPage to RightPage
+myFrame.Navigate(typeof(RightPage), null, new SlideNavigationTransitionInfo() { SlideNavigationTransitionEffect.FromRight } );
+
+// Navigate to the left, ie. from RightPage to LeftPage
+myFrame.Navigate(typeof(LeftPage), null, new SlideNavigationTransitionInfo() { SlideNavigationTransitionEffect.FromLeft } );
 ```
 
 ## <a name="suppress"></a>Suprimir

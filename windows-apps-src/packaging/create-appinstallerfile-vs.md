@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, app installer, instalador de aplicaciones, AppInstaller, sideload, realizar instalación de prueba
 ms.localizationpriority: medium
-ms.openlocfilehash: f8cd18296e0e443b98d6de586d7103dd2eb6d894
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: 6158b804e1d4ece3c76099a3f8d33d5fa562078d
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833357"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258548"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Crear un archivo de Instalador de aplicación con Visual Studio
 
@@ -34,7 +34,7 @@ Puedes configurar la propiedad `TargetPlatformMinVersion` al crear el proyecto o
 
 ### <a name="create-packages"></a>Crear paquetes
 
-Para distribuir una aplicación a través de instalación de prueba, debes crear un paquete de la aplicación (.appx), una recopilación de aplicación (.appxbundle) y publicarlo en una ubicación compartida.
+Para distribuir una aplicación a través de la instalación de prueba, debes crear un paquete de la aplicación (.appx/.msix) o un lote de aplicaciones (.appxbundle/.msixbundle) y publicarlo en una ubicación compartida.
 
 Para ello, usa el asistente **Crear paquetes de aplicaciones** en Visual Studio con los siguientes pasos.
 

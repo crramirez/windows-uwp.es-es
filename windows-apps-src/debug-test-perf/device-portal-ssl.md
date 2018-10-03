@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 1192c200cd42ab28cc7e763c06fd8a5638aa3400
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4212523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265034"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>Aprovisionar el Portal de dispositivos con un certificado SSL personalizado
 En Windows 10 Creators Update, Windows Device Portal agregado una forma para que los administradores del dispositivo instalar un certificado personalizado para su uso en la comunicación de HTTPS. 
@@ -24,7 +24,7 @@ Si bien puedes hacerlo en tu PC, esta característica está pensada para las emp
 
 Por ejemplo, una compañía podría tener una entidad de certificación (CA) que se usa para firmar los certificados para sitios Web de intranet proporcionados a través de HTTPS. Además de eso, esta característica significa infraestructura. 
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 De manera predeterminada, Device Portal genera una CA raíz autofirma y que usará para firmar los certificados SSL de cada punto de conexión está escuchando. Esto incluye `localhost`, `127.0.0.1`, y `::1` (IPv6 localhost).
 
 También se incluyen son el nombre de host del dispositivo (por ejemplo, `https://LivingRoomPC`) y cada dirección IP local de vínculo asignada al dispositivo (hasta dos [IPv4, IPv6] para cada adaptador de red). Puedes ver las direcciones IP locales del vínculo para un dispositivo, observemos la herramienta de redes en el Portal de dispositivos. Empezaremos con `10.` o `192.` para IPv4, o `fe80:` para IPv6. 

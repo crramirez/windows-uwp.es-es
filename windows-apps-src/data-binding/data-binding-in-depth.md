@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c77450c3885f8a9bcd698e25ca721c4c3fe1305
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 72c7037e9e99ad69ff13c65fb2195bc6e3f8110f
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817836"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259160"
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 
@@ -23,6 +23,7 @@ ms.locfileid: "1817836"
 
 **API importantes**
 
+-   [**Extensión de marcado {x:Bind}**](../xaml-platform/x-bind-markup-extension.md)
 -   [**Clase de enlace**](https://msdn.microsoft.com/library/windows/apps/BR209820)
 -   [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)
 -   [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)
@@ -64,7 +65,8 @@ En las siguientes secciones, se echaremos un vistazo al origen de enlace, el des
 
 Esta es una implementación muy rudimentaria de una clase que podríamos usar como origen de enlace.
 
-**Nota**  Si usas [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) con extensiones de componentes de Visual C++ (C++/CX), tienes que agregar el atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a la clase de origen de enlace. Si estás usando [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), no necesitas este atributo. Consulta [Agregar una vista de detalles](data-binding-quickstart.md#adding-a-details-view) para un fragmento de código.
+> [!Note]
+> Si estás usando [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) con extensiones de componentes de Visual C++ (C++ / CX), a continuación, tendrás que agregar el atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a la clase de origen de enlace. Si estás usando [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), no necesitas este atributo. Consulta [Agregar una vista de detalles](data-binding-quickstart.md#adding-a-details-view) para un fragmento de código.
 
 ```csharp
 public class HostViewModel
@@ -84,7 +86,8 @@ Una manera de hacerlo es derivar la clase que representa el origen de enlace de 
 
 Una manera más ligera de hacer que una clase sea observable, y necesaria para las clases que ya tienen una clase base, es implementar [**System.ComponentModel.INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx). Esto simplemente implica la implementación de un solo evento denominado **PropertyChanged**. A continuación te mostramos un ejemplo usando **HostViewModel**.
 
-**Nota**  Para c++ / CX, implementa [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899), y la clase de origen de enlace debe tener el atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) o implementar la interfaz [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878).
+> [!Note]
+> Para C++ / CX, implementa [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)y la clase de origen de enlace debe tener el [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) o implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878).
 
 ```csharp
 public class HostViewModel : INotifyPropertyChanged
@@ -158,12 +161,11 @@ Con la carga incremental, puedes enlazar controles de lista a orígenes de datos
 
 En los dos ejemplos siguientes, la propiedad **Button.Content** es el destino de enlace y su valor se establece en una extensión de marcado que declara el objeto de enlace. Se muestra el primer [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) y luego [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Declarar enlaces en el marcado es el caso común (es cómodo, legible y administrable). Sin embargo, puedes evitar el marcado y de manera imperativa (mediante programación) crear una instancia de la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) en su lugar, si necesitas.
 
-<!-- XAML lang specifier not yet supported in OP. Using XML for now. -->
-```xml
+```xaml
 <Button Content="{x:Bind ...}" ... />
 ```
 
-```xml
+```xaml
 <Button Content="{Binding ...}" ... />
 ```
 
@@ -189,7 +191,7 @@ namespace QuizGame.View
 
 Una vez que hayas hecho esto, puedes analizar más minuciosamente el marcado que declara el objeto de enlace. El siguiente ejemplo usa el mismo destino de enlace **Button.Content** que usamos en la sección "Destino de enlace" anteriormente, y muestra que está enlazado a la propiedad **HostViewModel.NextButtonText**.
 
-```xml
+```xaml
 <Page x:Class="QuizGame.View.HostView" ... >
     <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
 </Page>
@@ -199,13 +201,14 @@ Observa el valor que especificamos para **Path**. Este valor se interpreta en el
 
 La propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) admite una variedad de opciones de sintaxis para enlazar a propiedades anidadas, propiedades adjuntas e indexadores de cadenas y de enteros. Para más información, consulta [Sintaxis de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). El enlace a indexadores de cadenas te ofrece el mismo efecto que el enlace a propiedades dinámicas sin tener que implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). Para otras opciones de configuración, consulta [Extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783).
 
-**Nota**  Los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlace bidireccional cuando la clase [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco y no después de cada presión de tecla de usuario.
+> [!Note]
+> Los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlazada bidireccional cuando [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco y no después de cada presión de tecla de usuario.
 
 **DataTemplate y x:DataType**
 
 Dentro de [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) (independientemente de si se usa como plantilla de elemento, plantilla de contenido o plantilla de encabezado), el valor de **Path** no se interpreta en el contexto de la página, sino en el contexto del objeto de datos al que se aplica la plantilla. Cuando usas {x:Bind} en la plantilla de datos para que sus enlaces pueden validarse (y un código eficaz generado para ellos) en tiempo de compilación, la clase **DataTemplate** debe declarar el tipo de su objeto de datos mediante **x:DataType**. El ejemplo siguiente puede usarse como **ItemTemplate** de un control de elementos enlazados a una colección de objetos **SampleDataGroup**.
 
-```xml
+```xaml
 <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{x:Bind Title}"/>
@@ -222,15 +225,14 @@ Consideremos, por ejemplo, que tienes un tipo denominado SampleDataGroup, que im
 
 El código para admitir **{x:Bind}** se genera en tiempo de compilación en las clases parciales para tus páginas. Estos archivos pueden encontrarse en la carpeta `obj`, con nombres como (para C#) `<view name>.g.cs`. El código generado incluye un controlador para el evento [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706) de tu página y ese controlador llama al método **Initialize** en una clase generada que representa los enlaces de la página. **Initialize** llama a su vez a **Update** para empezar a mover datos entre el origen de enlace y el destino. **Loading** se genera justo antes del primer paso de medida de la página o del control de usuario. Por lo que si los datos se cargan de forma asincrónica puede que no esté listo en el momento en que se llama a **Initialize**. Por lo tanto, después de cargar los datos, puedes forzar la inicialización de enlaces de un solo uso llamando a `this.Bindings.Update();`. Si solo necesitas enlaces de un solo uso para los datos cargados de forma asincrónica es mucho más barato inicializarlos así que es tener enlaces unidireccionales y escuchar los cambios. Si los datos no sufren cambios específicos y es probable que se actualicen como parte de una acción específica, puedes hacer que tus enlaces sean de un solo uso y forzar una actualización manual en cualquier momento con una llamada a **Update**.
 
-**Limitaciones**
-
-**{x:Bind}** no es apropiado para escenarios enlazados en tiempo de ejecución, como navegar por la estructura de diccionario de un objeto JSON, ni para duck typing (escritura de pato) que es una forma poco segura de escribir basada en coincidencias léxicas en los nombres de propiedad ("si camina, nada y grazna como un pato, es un pato"). Con duck typing, un enlace a la propiedad Edad se cumpliría por igual con un objeto Persona o un objeto Vino. Para estos escenarios, usa **{Binding}**.
+> [!Note]
+> **{x:Bind}** no es apropiado para escenarios enlazados en tiempo de ejecución, como navegar por la estructura de diccionario de un objeto JSON, ni para duck typing (escritura de pato) que es una forma poco segura de escribir basada en coincidencias léxicas en los nombres de propiedad ("si camina, nada y grazna como un pato, es un pato"). Con duck typing, un enlace a la propiedad Edad se cumpliría por igual con un objeto Persona o un objeto Vino. Para estos escenarios, usa **{Binding}**.
 
 ### <a name="binding-object-declared-using-binding"></a>Objeto de enlace que se declara usando {Binding}
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) supone que, de forma predeterminada, se está realizando un enlace a la propiedad [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) de la página de marcado. Por lo tanto, estableceremos el **DataContext** de nuestra página para que sea una instancia de la clase de origen de enlace (de tipo **HostViewModel** en este caso). El siguiente ejemplo muestra el marcado que declara el objeto de enlace. Usamos el mismo destino de enlace **Button.Content** que usamos en la sección "Destino de enlace" anterior, y enlazamos a la propiedad **HostViewModel.NextButtonText**.
 
-```xml
+```xaml
 <Page xmlns:viewmodel="using:QuizGame.ViewModel" ... >
     <Page.DataContext>
         <viewmodel:HostViewModel/>
@@ -248,7 +250,7 @@ Un objeto de enlace tiene una propiedad **Source**, que el valor predeterminado 
 
 Dentro de un [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348), [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) se establece en el objeto de datos con plantilla. El ejemplo siguiente puede usarse como la propiedad **ItemTemplate** de un control de elementos enlazado a una colección de cualquier tipo que tiene propiedades de cadena denominadas **Title** y **Description**.
 
-```xml
+```xaml
 <DataTemplate x:Key="SimpleItemTemplate">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{Binding Title}"/>
@@ -257,7 +259,8 @@ Dentro de un [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/
   </DataTemplate>
 ```
 
-**Nota**  De forma predeterminada, los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlace bidireccional cuando la clase [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco. Para hacer que los cambios se envíen después de cada presión de tecla de usuario, establece **UpdateSourceTrigger** en **PropertyChanged** en el enlace en el marcado. También puede tomar el control completo de cuándo se envían los datos al origen estableciendo **UpdateSourceTrigger** en **Explicit**. Luego puedes controlar eventos en el cuadro de texto (normalmente [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), llamar a [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) en el destino para obtener un [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) y finalmente llamar a [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) para actualizar mediante programación el origen de datos.
+> [!Note]
+> De manera predeterminada, los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlazado bidireccional cuando [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco. Para hacer que los cambios se envíen después de cada presión de tecla de usuario, establece **UpdateSourceTrigger** en **PropertyChanged** en el enlace en el marcado. También puede tomar el control completo de cuándo se envían los datos al origen estableciendo **UpdateSourceTrigger** en **Explicit**. Luego puedes controlar eventos en el cuadro de texto (normalmente [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), llamar a [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) en el destino para obtener un [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) y finalmente llamar a [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) para actualizar mediante programación el origen de datos.
 
 La propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) admite una variedad de opciones de sintaxis para enlazar a propiedades anidadas, propiedades adjuntas e indexadores de cadenas y de enteros. Para más información, consulta [Sintaxis de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). El enlace a indexadores de cadenas te ofrece el mismo efecto que el enlace a propiedades dinámicas sin tener que implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). La propiedad [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname) es útil para el enlace de elemento a elemento. La propiedad [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource) tiene varios usos, uno de los cuales es como una alternativa más eficaz para el enlace de plantilla dentro de un [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391). Para otras opciones de configuración, consulta [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) y la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820).
 
@@ -351,7 +354,7 @@ End Class
 
 Y esta es la forma de consumir ese convertidor de valores en el marcado del objeto de enlace.
 
-```xml
+```xaml
 <UserControl.Resources>
   <local:DateToStringConverter x:Key="Converter1"/>
 </UserControl.Resources>
@@ -369,7 +372,8 @@ El motor de enlace llama a los métodos [**Convert**](https://msdn.microsoft.com
 
 El convertidor también tiene parámetros opcionales: [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterlanguage), que permite especificar el lenguaje que se usará en la conversión, y [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterparameter), que permite pasar un parámetro para la lógica de conversión. Para obtener un ejemplo en el que se use un parámetro de convertidor, consulta [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
 
-**Nota**  Si hay un error en la conversión, no inicies una excepción. En lugar de eso, devuelve [**DependencyProperty.UnsetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.unsetvalue), que detendrá la transferencia de datos.
+> [!Note]
+> Si hay un error en la conversión, no inicies una excepción. En lugar de eso, devuelve [**DependencyProperty.UnsetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.unsetvalue), que detendrá la transferencia de datos.
 
 Para mostrar un valor predeterminado para usar cuando no se pueda resolver el origen del enlace, establece la propiedad **FallbackValue** en el objeto de enlace en el marcado. Esto sirve para controlar los errores de formato y de conversión. También resulta útil para crear un enlace con propiedades de origen que quizás no existen en todos los objetos de una colección enlazada de tipos heterogéneos.
 
@@ -380,7 +384,7 @@ Si enlazas un control de texto con un valor que no es una cadena, el motor de en
 
 ## <a name="function-binding-in-xbind"></a>Enlace de función en {x: Bind}
 
-{x: Bind} permite que el paso final de una ruta de acceso de enlace sea una función. Esto puede usarse para realizar conversiones y para realizar enlaces que dependen de más de una propiedad. Consulta [**Extensión de marcado {x:Bind}**](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension).
+{x: Bind} permite que el paso final de una ruta de acceso de enlace sea una función. Esto puede usarse para realizar conversiones y para realizar enlaces que dependen de más de una propiedad. Consulta [ **las funciones de x: Bind**](function-bindings.md)
 
 <span id="resource-dictionaries-with-x-bind"/>
 
@@ -390,7 +394,7 @@ La [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/a
 
 TemplatesResourceDictionary.xaml
 
-```xml
+```xaml
 <ResourceDictionary
     x:Class="ExampleNamespace.TemplatesResourceDictionary"
     .....
@@ -423,7 +427,7 @@ namespace ExampleNamespace
 
 MainPage.xaml
 
-```xml
+```xaml
 <Page x:Class="ExampleNamespace.MainPage"
     ....
     xmlns:examplenamespace="using:ExampleNamespace">
@@ -453,7 +457,7 @@ MainPage.xaml
 
 Se puede enlazar el evento **Click** de un botón a un método en el objeto **Frame** devuelto por la propiedad **RootFrame como esta**. Ten en cuenta que también enlazamos la propiedad **IsEnabled** del botón a otro miembro del mismo **Frame**.
 
-```xml
+```xaml
     <AppBarButton Icon="Forward" IsCompact="True"
     IsEnabled="{x:Bind RootFrame.CanGoForward, Mode=OneWay}"
     Click="{x:Bind RootFrame.GoForward}"/>
@@ -518,15 +522,13 @@ El siguiente ejemplo muestra el modelo de "tiene un grupo". La clase de página 
     ...
 
     <GridView
-    ItemsSource="{Binding Source={StaticResource AuthorHasACollectionOfBookSku}}" ...>
+    ItemsSource="{x:Bind AuthorHasACollectionOfBookSku}" ...>
         <GridView.GroupStyle>
             <GroupStyle
                 HeaderTemplate="{StaticResource AuthorGroupHeaderTemplateWide}" ... />
         </GridView.GroupStyle>
     </GridView>
 ```
-
-Ten en cuenta que [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828) debe usar [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) (y no [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) porque debe establecer la propiedad **Source** en un recurso. Para ver el ejemplo anterior en el contexto de la aplicación completa, descarga la [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) aplicación de muestra. A diferencia del marcado mostrado arriba, [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) usa {Binding} exclusivamente.
 
 Para implementar el patrón de "es un grupo" en uno de dos maneras. Es una forma crear tu propia clase de grupo. Deriva la clase de **List&lt;T&gt;** (donde *T* es el tipo de los elementos). Por ejemplo: `public class Author : List<BookSku>`. La segunda manera es usar una expresión [LINK](http://msdn.microsoft.com/library/bb397926.aspx) para crear dinámicamente objetos de grupo (y una clase de grupo) desde valores de propiedad similares de los elementos **BookSku**. Este enfoque, mantener solo una lista de elementos y agrupar sobre la marcha, es típico de una aplicación que accede a los datos de un servicio de nube. Obtienes la flexibilidad de agrupar libros según el autor o el género (por ejemplo), sin necesidad de disponer de clases de grupo especiales, como **Author** y **Genre**.
 
@@ -556,13 +558,13 @@ El siguiente ejemplo muestra el uso del patrón "es un grupo" [LINQ](http://msdn
 
 Recuerda que, al usar [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) con plantillas de datos que necesitamos para indicar el tipo enlazado a estableciendo un valor **x:DataType**. Si el tipo es genérico y no podemos declaramos que en el marcado que necesitamos usar [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) en su lugar en la plantilla de encabezado de estilo de grupo.
 
-```xml
+```xaml
     <Grid.Resources>
         <CollectionViewSource x:Name="GenreIsACollectionOfBookSku"
-        Source="{Binding Genres}"
+        Source="{x:Bind Genres}"
         IsSourceGrouped="true"/>
     </Grid.Resources>
-    <GridView ItemsSource="{Binding Source={StaticResource GenreIsACollectionOfBookSku}}">
+    <GridView ItemsSource="{x:Bind GenreIsACollectionOfBookSku}">
         <GridView.ItemTemplate x:DataType="local:BookTemplate">
             <DataTemplate>
                 <TextBlock Text="{x:Bind Title}"/>
@@ -604,7 +606,7 @@ También puedes conectar elementos de la interfaz de usuario a datos usando cód
 
 En el siguiente ejemplo se muestra cómo implementar un enlace en el código.
 
-```xml
+```xaml
 <TextBox x:Name="MyTextBox" Text="Text"/>
 ```
 
@@ -655,8 +657,8 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | FallbackValue | `{x:Bind Name, FallbackValue='empty'}` | `{Binding Name, FallbackValue='empty'}` | Se usa cuando cualquier parte de la ruta de acceso para el enlace (excepto la hoja) es null. | 
 | ElementName | `{x:Bind slider1.Value}` | `{Binding Value, ElementName=slider1}` | Con {x: enlace} que enlace a un campo; Ruta de acceso raíz está en la página de forma predeterminada, por lo que cualquier elemento con nombre se puede acceder mediante su campo. | 
 | RelativeSource: Self | `<Rectangle x:Name="rect1" Width="200" Height="{x:Bind rect1.Width}" ... />` | `<Rectangle Width="200" Height="{Binding Width, RelativeSource={RelativeSource Self}}" ... />` | Con {x: Bind}, nombre del elemento y usar su nombre en la ruta de acceso. | 
-| RelativeSource: TemplatedParent | No se admite | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | Enlace de plantilla normal puede usarse en las plantillas de control para la mayoría de usos. Pero usa TemplatedParent donde necesites usar un convertidor o un enlace bidireccional.< | 
-| Origen | No se admite | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Para {x: enlace} usa una propiedad o una ruta de acceso estático. | 
+| RelativeSource: TemplatedParent | No es necesario | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | Con {x: Bind} TargetType en ControlTemplate indica enlace al elemento primario de la plantilla. Para {Binding} el enlace de plantilla normal puede usarse en las plantillas de control para la mayoría de usos. Pero usa TemplatedParent donde necesites usar un convertidor o un enlace bidireccional.< | 
+| Origen | No es necesario | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Para {x: Bind} puedes directamente usar el elemento con nombre, usa una propiedad o una ruta de acceso estático. | 
 | Modo | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | El modo puede ser OneTime, OneWay o TwoWay. {x: enlace} el valor predeterminado es OneTime; {Binding} predeterminado OneWay. | 
 | UpdateSourceTrigger | `{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}` | `{Binding UpdateSourceTrigger=PropertyChanged}` | UpdateSourceTrigger puede ser Default, LostFocus o PropertyChanged. {x:Bind} no admite UpdateSourceTrigger=Explicit. {x: enlace} usa el comportamiento PropertyChanged para todos los casos excepto TextBox.Text, donde utiliza el comportamiento LostFocus. | 
 

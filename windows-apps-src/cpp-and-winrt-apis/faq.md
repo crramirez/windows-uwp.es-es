@@ -9,18 +9,36 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, preguntas más frecuentes, P+F
 ms.localizationpriority: medium
-ms.openlocfilehash: 9316a29a50970bdaa288a4744f3aab7d873cbe4e
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: eb4b7b78bf3ef0a561d102804a245c59b6519796
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264360"
 ---
 # <a name="frequently-asked-questions-about-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Preguntas más frecuentes sobre [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Respuestas a preguntas que probablemente tengas acerca de la creación y consumo de las API de Windows Runtime con C++/WinRT.
 
 > [!NOTE]
 > Si tu pregunta es sobre un mensaje de error que has visto, consulta también el tema [Solución de problemas de C++/WinRT](troubleshooting.md).
+
+## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>¿Cómo redestinar mi C++ / WinRT proyecto a una versión posterior del Windows SDK?
+
+La versión más reciente disponible por lo general, del SDK de Windows es 10.0.17763.0 (Windows 10, versión 1809). El método para redestinar tu proyecto que es probable que provocar el problema de compilador y enlazador menor también es la más intensa. Ese método implica crear un proyecto nuevo (destinados a la versión del SDK de Windows de tu elección) y, a continuación, copiar archivos en tu nuevo proyecto del antiguo. Habrá secciones de la antigua `.vcxproj` y `.vcxproj.filters` archivos que has puede copiar más para ahorrar agregando archivos en Visual Studio.
+
+Sin embargo, hay otras dos formas de redirigir el proyecto en Visual Studio.
+
+- Ve a **General**de la propiedad de proyecto \> **Versión del SDK de Windows**y selecciona **Todas las configuraciones** y **Todas las plataformas**. Establece la **Versión del SDK de Windows** en la versión que quieres como destino.
+- En el **Explorador de soluciones**, haz clic en el nodo del proyecto, haz clic en **Proyectos redestinar**, elegir las versiones que quieras seleccionar como destino y, a continuación, haz clic en **Aceptar**.
+
+Si se producen errores del vinculador ni compilador después de usar cualquiera de estos dos métodos, puedes intentar limpiar la solución (**compilación** > **Limpiar solución** o eliminar manualmente todos los archivos y carpetas temporales) antes de intentar volver a compilar.
+
+Si el compilador de C++ produce "*error C2039: 'IUnknown': no es un miembro de ' espacio de nombres \'global''*", a continuación, agrega `#include <unknwn.h>` a la parte superior de tu `pch.h` archivo.
+
+Es posible que también debes agregar `#include <hstring.h>` a continuación.
+
+Si el vinculador C++ produce "*error LNK2019: símbolo externo sin resolver _WINRT_CanUnloadNow@0 hace referencia en función de _VSDesignerCanUnloadNow@0 *", a continuación, se puede resolver que agregando `#define _VSDESIGNER_DONT_LOAD_AS_DLL` a tu `pch.h` archivo.
+
 
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>¿Por qué no se compilará mi proyecto nuevo? Estoy usando Visual Studio 2017 (versión 15.8.0 o posterior) y el SDK versión 17134
 

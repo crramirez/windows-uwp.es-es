@@ -5,7 +5,7 @@ title: Control flotante de barra de comandos
 label: Command bar flyout
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 07/19/2018
+ms.date: 10/2/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -15,17 +15,14 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: ec532749fc2dacfc56e80ee2830da36f71c75b2f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: ed17299051ae7da32f238eb57876b81597c8effa
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205177"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258518"
 ---
 # <a name="command-bar-flyout"></a>Control flotante de barra de comandos
-
-> [!IMPORTANT]
-> En este artículo se describe una funcionalidad que no se ha lanzado aún y que puede sufrir importantes modificaciones antes de que se lance la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí. Características de vista previa requieren la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 El control de barra de comandos flotante te permite proporcionar a los usuarios acceso fácil a las tareas comunes al mostrar comandos en una barra de herramientas flotante relacionadas con un elemento en el lienzo de la interfaz de usuario.
 
@@ -94,12 +91,12 @@ Este ejemplo muestra cómo crear un control flotante de barra de comandos y usar
 
 :::row:::
     :::column:::
-        Un control flotante de barra de comandos contraído<br/>
-        ![Ejemplo de un control flotante de barra de comandos contraído](images/command-bar-flyout-img-collapsed.png)
+        A collapsed command bar flyout<br/>
+        ![Example of a collapsed command bar flyout](images/command-bar-flyout-img-collapsed.png)
     :::column-end:::
     :::column:::
-        Un control flotante de barra de comandos expandida<br/>
-        ![Ejemplo de un control flotante de barra de comandos expandida](images/command-bar-flyout-img-expanded.png)
+        An expanded command bar flyout<br/>
+        ![Example of an expanded command bar flyout](images/command-bar-flyout-img-expanded.png)
     :::column-end:::
 :::row-end:::
 
@@ -191,12 +188,12 @@ Aquí, un AppBarElementContainer se usa para agregar elementos adicionales a un 
 
 :::row:::
     :::column:::
-        Un control flotante de barra de comandos contraído con un botón de división abierto<br/>
-        ![Un control flotante de barra de comandos con un botón en dos paneles](images/command-bar-flyout-split-button.png)
+        A collapsed command bar flyout with an open SplitButton<br/>
+        ![A command bar flyout with a split button](images/command-bar-flyout-split-button.png)
     :::column-end:::
     :::column:::
-        Un control de barra de comandos expandida flotante con la interfaz de usuario de zoom personalizado en el menú<br/>
-        ![Un control flotante de barra de comandos con la interfaz de usuario compleja](images/command-bar-flyout-complex-ui.png)
+        An expanded command bar flyout with custom zoom UI in the menu<br/>
+        ![A command bar flyout with complex UI](images/command-bar-flyout-complex-ui.png)
     :::column-end:::
 :::row-end:::
 
@@ -317,12 +314,12 @@ El [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyo
 
 :::row:::
     :::column:::
-        Un control flotante barra de comandos de texto en la selección de texto<br/>
-        ![Un control flotante la barra de comandos de texto contraído](images/command-bar-flyout-text-selection.png)
+        A text command bar flyout on text selection<br/>
+        ![A collapsed text command bar flyout](images/command-bar-flyout-text-selection.png)
     :::column-end:::
     :::column:::
-        Un control flotante la barra de comandos de texto expandido<br/>
-        ![Un control flotante la barra de comandos de texto expandido](images/command-bar-flyout-text-full.png)
+        An expanded text command bar flyout<br/>
+        ![An expanded text command bar flyout](images/command-bar-flyout-text-full.png)
     :::column-end:::
 :::row-end:::
 

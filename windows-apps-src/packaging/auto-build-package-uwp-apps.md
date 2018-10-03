@@ -3,19 +3,19 @@ author: laurenhughes
 title: Configurar compilaciones automatizadas para la aplicación para UWP
 description: Cómo configurar las compilaciones automatizadas para producir paquetes de instalaciones de prueba o paquetes de la Store.
 ms.author: lahugh
-ms.date: 03/30/2018
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 4354254e01333db17f1151c182267c0330a799ba
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832366"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261688"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -81,7 +81,7 @@ Esta tarea restaura los paquetes de NuGet definidos en el proyecto. Algunos paqu
 
 #### <a name="configure-the-build-solution-build-task"></a>Configurar la tarea de compilación de compilación de soluciones
 
-Esta tarea compila cualquier solución que se encuentre en la carpeta de trabajo en archivos binarios y produce el archivo AppX de salida. Esta tarea utiliza argumentos de MSBuild.  Tendrás que especificar el valor de los argumentos. Usa la siguiente tabla como guía. 
+Esta tarea compila cualquier solución que se encuentra en la carpeta de trabajo a los archivos binarios y produce el archivo de paquete de aplicación de salida. Esta tarea utiliza argumentos de MSBuild.  Tendrás que especificar el valor de los argumentos. Usa la siguiente tabla como guía. 
 
 |**Argumento de MSBuild**|**Valor**|**Descripción**|
 |--------------------|---------|---------------|
@@ -111,7 +111,7 @@ Esta tarea almacena los artefactos generados en VSTS. Puedes verlos en la pesta�
 
 ![artefactos](images/building-screen6.png)
 
-Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que se recomienda para el envío a la Store (.appxupload). Ten en cuenta que también puedes enviar un paquete de la aplicación normal (.appx) o un lote de aplicaciones (.appxbundle) a la Store. Para este artículo, usaremos el archivo .appxupload.
+Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que se recomienda para el envío a la Store (.appxupload). Ten en cuenta que también puedes enviar un paquete de aplicación normal (.appx/.msix) o un lote de aplicaciones (.appxbundle/.msixbundle) a la tienda. Para este artículo, usaremos el archivo .appxupload.
 
 
 >[!NOTE]
@@ -216,7 +216,7 @@ Este error aparece porque en el nivel de la solución, no está claro qué aplic
 A continuación, quite el argumento de MSBuild `AppxBundle` desde el paso de compilación.
 
 ## <a name="set-up-a-continuous-deployment-build-for-sideloading"></a>Configurar una compilación de implementación continua para una instalación de prueba
-Cuando se completa este tipo de compilación, los usuarios pueden descargar el archivo .appxbundle desde la sección de artefactos de la página de resultados de la compilación. Si quieres realizar una prueba beta de la aplicación mediante la creación de una distribución más completa, puedes usar el servicio HockeyApp. Este servicio ofrece funcionalidades avanzadas para las pruebas beta, análisis de usuario y diagnósticos de bloqueos.
+Cuando se completa este tipo de compilación, los usuarios pueden descargar el archivo de recopilación de aplicación de la sección de artefactos de la página de resultados de compilación. Si quieres realizar una prueba beta de la aplicación mediante la creación de una distribución más completa, puedes usar el servicio HockeyApp. Este servicio ofrece funcionalidades avanzadas para las pruebas beta, análisis de usuario y diagnósticos de bloqueos.
 
 ### <a name="applying-version-numbers-to-your-builds"></a>Aplicación de números de versión a las compilaciones
 
@@ -256,9 +256,9 @@ En primer lugar, instala la extensión de Visual Studio [HockeyApp](https://mark
 
 A continuación, configura la conexión de HockeyApp usando esta guía: [Cómo usar HockeyApp con Visual Studio Team Services (VSTS) o Team Foundation Server (TFS).](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-use-hockeyapp-with-visual-studio-team-services-vsts-or-team-foundation-server-tfs) Puedes usar tu cuenta de Microsoft, cuenta de medios sociales o solo una dirección de correo electrónico para configurar tu cuenta de HockeyApp. El plan gratuito incluye dos aplicaciones, un propietario y ninguna restricción de datos.
 
-A continuación, puedes crear una aplicación HockeyApp manualmente o cargando un archivo de paquete appx existente. Para obtener más información, consulta [Cómo crear una nueva aplicación](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).  
+A continuación, puedes crear una aplicación HockeyApp manualmente o cargando un archivo de paquete de aplicación existente. Para obtener más información, consulta [Cómo crear una nueva aplicación](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).  
 
-Para usar un archivo de paquete appx existente, agrega un paso de compilación y establece el parámetro de ruta de acceso de archivo binario del paso de compilación. 
+Para usar un archivo de paquete de aplicación existente, agrega un paso de compilación y establece el parámetro de ruta de acceso de archivo binario del paso de compilación. 
 
 ![configurar la aplicación de hockey](images/building-screen15.png) 
 
@@ -268,7 +268,7 @@ Para establecer este parámetro, combina el nombre de aplicación, la variable A
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-Aunque la tarea HockeyApp te permite especificar la ruta de acceso al archivo de símbolos, un procedimiento recomendado consiste en incluir los símbolos (archivos appxsym) con el paquete.
+Aunque la tarea HockeyApp te permite especificar la ruta de acceso al archivo de símbolos, es recomendable incluir los símbolos con la recopilación.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Configurar una compilación de implementación continua que envía un paquete a la Store 
 
@@ -286,7 +286,7 @@ A continuación, debes comprobar que el paso de compilación incluye el parámet
 /p:UapAppxPackageBuildMode=StoreUpload 
 ```
 
-Esto generará un archivo appxupload que se puede enviar a la Store.
+Esto generará un archivo de carga que se puede enviar a la tienda.
 
 
 #### <a name="configure-automatic-store-submission"></a>Configurar el envío automático a la Store
@@ -295,7 +295,7 @@ Usa la extensión de Visual Studio Team Services para Microsoft Store para reali
 
 Debes conectar tu cuenta del Centro de desarrollo con Azure Active Directory (AD) y, a continuación, crear una aplicación en tu AD para autenticar las solicitudes. Puedes seguir las instrucciones de la página de extensión para lograrlo. 
 
-Una vez que has configurado la extensión, puedes agregar la tarea de compilación y configurarla con el identificador de tu aplicación y la ubicación del archivo .appxupload.
+Una vez que hayas configurado la extensión, puedes agregar la tarea de compilación y configurarla con el identificador de la aplicación y la ubicación del archivo de carga.
 
 ![configurar el centro de desarrollo](images/building-screen17.png) 
 
@@ -316,17 +316,17 @@ Tienes que activar manualmente esta compilación. Puedes usarla para actualizar 
 
 Si quieres distribuir tu aplicación sin publicarla en la Store, puedes realizar instalaciones de prueba de la aplicación directamente en dispositivos, siempre que dichos dispositivos confíen en el certificado que se usó para firmar el paquete de la aplicación. 
 
-Usa el script de PowerShell `Add-AppDevPackage.ps1` para instalar aplicaciones. Este script agregará el certificado a la sección de certificación raíz de confianza para el equipo local y, a continuación, instalará o actualizará el archivo appx.
+Usa el script de PowerShell `Add-AppDevPackage.ps1` para instalar aplicaciones. Este script se agrega el certificado a la sección de certificación raíz de confianza para el equipo local y, a continuación, se instala o actualiza el archivo de paquete de la aplicación.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Realizar una instalación de prueba de la aplicación con la Actualización de aniversario de Windows 10
-En la Actualización de aniversario de Windows 10, puedes hacer doble clic en el archivo appxbundle e instalar la aplicación seleccionando el botón de instalación en un cuadro de diálogo. 
+En la actualización de aniversario de Windows 10, puedes haz doble clic en el archivo de paquete de aplicación e instalar la aplicación seleccionando el botón de instalación en un cuadro de diálogo. 
 
 ![instalación de prueba en rs1](images/building-screen18.png) 
 
 >[!NOTE]
 > Este método no instala el certificado ni las dependencias asociadas.
 
-Si deseas distribuir los paquetes appx desde un sitio web como VSTS o HockeyApp, debes agregar ese sitio a la lista de sitios de confianza en el explorador. De lo contrario, Windows marca el archivo como bloqueado. 
+Si quieres distribuir los paquetes de aplicación de Windows desde un sitio Web como VSTS o HockeyApp, tendrás que agregar ese sitio a la lista de sitios de confianza en el explorador. De lo contrario, Windows marca el archivo como bloqueado. 
 
 <span id="certificates-best-practices"/>
 

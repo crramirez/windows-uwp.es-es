@@ -15,11 +15,11 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c75169f118e2c8ef575fa251a7badc8cfe44247
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261662"
 ---
 # <a name="navigation-view-preview-version"></a>Vista de navegación (versión preliminar)
 
@@ -61,10 +61,11 @@ Si la navegación requiere un comportamiento más complejo que no es compatible 
 
 :::row:::
     :::column:::
-        ![Algunos imagen](images/XAML-controls-gallery-app-icon.png)
+        ![Some image](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
-    ::: column span = "2"::: **Galería de controles XAML**<br>
-        Si tienes instalada la aplicación de la Galería de controles XAML, haz clic <a href="xamlcontrolsgallery:/item/NavigationView">aquí</a> para abrir la aplicación y ver NavigationView en acción.
+    :::column span="2":::
+        **XAML Controls Gallery**<br>
+        If you have the XAML Controls Gallery app installed, click <a href="xamlcontrolsgallery:/item/NavigationView">here</a> to open the app and see NavigationView in action.
 
         <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
         <a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Get the source code (GitHub)</a>
@@ -77,11 +78,11 @@ NavigationView se puede establecer en los modos de visualización diferentes, a 
 
 :::row:::
     :::column:::
-    ### Left
-    Displays an expanded left positioned pane.
+    ### <a name="left"></a>Izquierda
+    Muestra un panel de camino izquierdo expandido.
     :::column-end:::
     :::column span="2":::
-    ![left nav pane expanded](images/displaymode-left.png)
+    ![expandidas el panel de navegación izquierdo](images/displaymode-left.png)
     :::column-end:::
 :::row-end:::
 
@@ -92,11 +93,11 @@ Te recomendamos de navegación izquierdo cuando:
 
 :::row:::
     :::column:::
-    ### Top
-    Displays a top positioned pane.
+    ### <a name="top"></a>Top
+    Muestra una parte superior sitúa panel.
     :::column-end:::
     :::column span="2":::
-    ![top navigation](images/displaymode-top.png)
+    ![navegación superior](images/displaymode-top.png)
     :::column-end:::
 :::row-end:::
 
@@ -109,21 +110,21 @@ Te recomendamos navegación superior cuando:
 
 :::row:::
     :::column:::
-    ### LeftCompact
-    Displays a thin sliver with icons on the left.
+    ### <a name="leftcompact"></a>LeftCompact
+    Muestra una franja fina con los iconos de la izquierda.
     :::column-end:::
     :::column span="2":::
-    ![nav pane compact](images/displaymode-leftcompact.png)
+    ![panel de navegación compacto](images/displaymode-leftcompact.png)
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-    ### LeftMinimal
-    Displays only the menu button.
+    ### <a name="leftminimal"></a>LeftMinimal
+    Muestra solo el botón de menú.
     :::column-end:::
     :::column span="2":::
-    ![nav pane minimal](images/displaymode-leftminimal.png)
+    ![panel de navegación mínimo](images/displaymode-leftminimal.png)
     :::column-end:::
 :::row-end:::
 

@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: Share code between a desktop app and a UWP app
+Description: Share code between a desktop application and a UWP app
 Search.Product: eADQiWindows 10XVcnh
 title: Compartir código entre una aplicación de escritorio y una aplicación para UWP
 ms.author: normesta
@@ -10,14 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e0931440977c33642a3154cfa1b0adca42032df0
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: ca5b722ea97202d57f05613bec88ae6bee1db5f2
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018631"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260114"
 ---
-# <a name="share-code-between-a-desktop-app-and-a-uwp-app"></a>Compartir código entre una aplicación de escritorio y una aplicación para UWP
+# <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>Compartir código entre una aplicación de escritorio y una aplicación para UWP
 
 Puedes mover el código a las bibliotecas de .NET Standard y, a continuación, crear una app de la Plataforma universal de Windows (UWP) para tener acceso a todos los dispositivos de Windows 10. Aunque no hay ninguna herramienta que pueda convertir una aplicación de escritorio en una aplicación para UWP, puedes reutilizar gran parte de tu código existente, lo que disminuirá el costo de la creación de uno. Esta guía te muestra cómo hacerlo.
 
@@ -67,7 +67,7 @@ Parte del código será específico de la plataforma y deberá permanecer en el 
 
 ### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>Ejemplo: Migración del código de acceso a datos a una biblioteca de .NET Standard 2.0
 
-Supongamos que tenemos una app de Windows Forms muy básica que muestra los clientes desde nuestra base de datos de muestra Northwind.
+Supongamos que tenemos una aplicación de Windows Forms muy básica que muestra a los clientes desde nuestra base de datos de muestra Northwind.
 
 ![Aplicación de Windows Forms](images/desktop-to-uwp/win-forms-app.png)
 
