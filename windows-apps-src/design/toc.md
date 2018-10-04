@@ -39,6 +39,7 @@
 ## [Botones](controls-and-patterns/buttons.md)
 ## [Casilla](controls-and-patterns/checkbox.md)
 ## [Selector de colores](controls-and-patterns/color-picker.md)
+## [Control flotante de barra de comandos](controls-and-patterns/command-bar-flyout.md)
 ## [Tarjeta de contacto](controls-and-patterns/contact-card.md)
 ## [Fecha y hora](controls-and-patterns/date-and-time.md)
 ### [Selector de fecha del calendario](controls-and-patterns/calendar-date-picker.md)
@@ -56,6 +57,7 @@
 ## [Imágenes y pinceles de imagen](controls-and-patterns/images-imagebrushes.md)
 ## [Controles de entrada de lápiz](controls-and-patterns/inking-controls.md)
 ## [Listas](controls-and-patterns/lists.md)
+### [Cuadro combinado](controls-and-patterns/combo-box.md)
 ### [Vista de lista y vista de cuadrícula](controls-and-patterns/listview-and-gridview.md)
 ### [Plantillas y contenedores de elementos](controls-and-patterns/item-containers-templates.md)
 ### [Plantillas de elemento para vista de lista](controls-and-patterns/item-templates-listview.md)
@@ -100,6 +102,7 @@
 ## [Tipografía](style/typography.md)
 ## Iconos
 ### [Introducción](style/icons.md)
+### [Logotipos e iconos de aplicaciones](style/app-icons-and-logos.md)
 ### [Iconos de Segoe MDL2](style/segoe-ui-symbol-font.md)
 ## [Acrílico](style/acrylic.md)
 ## [Revelar resaltado](style/reveal.md)
@@ -126,8 +129,7 @@
 
 # Shell
 ## [Ventanas](shell/tiles-and-notifications/creating-tiles.md)
-### [Instrucciones de activos de iconos y ventanas](shell/tiles-and-notifications/app-assets.md)
-### [Iconos secundarios](shell/tiles-and-notifications/secondary-tiles.md)
+### [Ventanas secundarias](shell/tiles-and-notifications/secondary-tiles.md)
 #### [Guía](shell/tiles-and-notifications/secondary-tiles-guidance.md)
 #### [Anclar iconos secundarios](shell/tiles-and-notifications/secondary-tiles-pinning.md)
 #### [Aplicaciones de escritorio](shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md)
