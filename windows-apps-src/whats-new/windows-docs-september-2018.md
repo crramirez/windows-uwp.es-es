@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 title: 'Novedades en los documentos de Windows de septiembre de 2018: desarrollar aplicaciones para UWP'
-description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación de desarrollador de Windows 10 de septiembre de 2018.
+description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación del desarrollador de Windows 10 de septiembre de 2018.
 keywords: Novedades, actualización, características, directrices para los desarrolladores, Windows 10, septiembre
 ms.author: quradic
 ms.date: 09/10/2018
@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f017dbb30586d3ec3c2da54d0f262c4b159328cc
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311095"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358515"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novedades en los documentos de Windows de septiembre de 2018
 
@@ -26,7 +26,7 @@ La documentación del desarrollador de Windows se actualiza constantemente con i
 
 ### <a name="windows-machine-learning"></a>Aprendizaje automático de Windows
 
-Ahora [el aprendizaje automático de Windows documentos](https://docs.microsoft.com/windows/ai/) residen en su propio sitio y se actualizan para el SDK más reciente de Insider de Windows. Hay escritorio y tutoriales de UWP en C++ y C# para ayudarte a empezar a agregar WinML a la aplicación.
+[Documentos el aprendizaje automático de Windows](https://docs.microsoft.com/windows/ai/) ahora residen en su propio sitio y se actualizan para el SDK más reciente de Insider de Windows. Hay escritorio y tutoriales UWP en C++ y C# para ayudarte a empezar a agregar WinML a la aplicación.
 
 [Referencia de la API de Windows.AI.MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) se ha actualizado para el SDK más reciente de Insider de Windows.
 
@@ -42,9 +42,9 @@ Para obtener más información sobre la biblioteca de la interfaz de usuario de 
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="how-blur-effects-work"></a>Cómo trabajo de efectos de desenfoque
+### <a name="how-blur-effects-work"></a>Cómo desenfoque trabajo de efectos
 
-Uno de nuestros sistemas de escritura, el Mike Jacobs inestimable, ha comenzado a una serie de artículos en medio acerca de desenfoque de fotografía al diseño de juegos y aplicaciones de visión. Si estás interesado en saber más acerca de este efecto visual ubicua, consulta [el artículo primera de visión y la fotografía](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) y [el segundo de suavizado de contorno en los gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Uno de nuestros sistemas de escritura, el Mike Jacobs inestimable, ha comenzado a una serie de artículos en medio acerca de desenfoque de fotografía al diseño de juegos y aplicaciones de visión. Si estás interesado en saber más acerca de este efecto visual ubicua, echa un vistazo a [la primera artículo sobre Visión y fotografía](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) y [el segundo de suavizado de contorno en los gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
 ![Desenfoque en acción](images/blur-example.jpg)
 
@@ -60,11 +60,11 @@ En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Mic
 
 Aaron Gustafson:
 
-* [vídeos de 6 en aplicaciones Web progresivas](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
+* [6 vídeos en aplicaciones Web progresivas](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
 
 Chris Heilmann
 
-* [vídeos de 4 en la herramienta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
+* [4 vídeos sobre la herramienta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
 Larry Osterman:
 

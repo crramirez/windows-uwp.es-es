@@ -10,18 +10,18 @@ ms.technology: uwp
 keywords: windows 10, uwp, precios, precios de las aplicaciones, precio de la aplicación, vender aplicaciones, cambio de precio, precio personalizado, precio, precios, costo, reemplazar el precio base, precio de forma libre, forma libre
 ms.localizationpriority: medium
 ms.openlocfilehash: ca37d0b360679a878cff3aeabd96f82016c36fde
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4314495"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358854"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Establecer y programar los precios de las aplicaciones
 
 La sección **Precios** de la página [Precios y disponibilidad](set-app-pricing-and-availability.md) te permite seleccionar el precio base para una aplicación. También puedes [programar los cambios de precio](#schedule-price-changes) para indicar la fecha y la hora en las que el precio de la aplicación debería cambiar. Además, tienes la opción de [invalidar el precio base para mercados específicos](#override-base-price-for-specific-markets), ya sea seleccionando una nueva franja de precios o escribiendo un precio de forma libre en la moneda local del mercado.
 
 > [!NOTE]
-> Aunque este tema hace referencia a las aplicaciones, la selección de precios para envíos de complementos utiliza el mismo proceso. Ten en cuenta que para los [complementos de suscripción](../monetize/enable-subscription-add-ons-for-your-app.md), el precio base que selecciones no nunca aumentarse (si cambiando el precio base o programar un cambio de precio), aunque se puede disminuir.
+> Aunque este tema hace referencia a las aplicaciones, la selección de precios para envíos de complementos utiliza el mismo proceso. Ten en cuenta que para los [complementos de suscripción](../monetize/enable-subscription-add-ons-for-your-app.md), el precio base que selecciones no se nunca puede aumentar (si cambiando el precio base o programar un cambio de precio), aunque se puede disminuir.
 
 ## <a name="base-price"></a>Precio base
 

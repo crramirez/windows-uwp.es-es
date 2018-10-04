@@ -12,15 +12,15 @@ keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f14e7f8747639ef139e774416e09af954211940
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4310133"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357803"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empaquetar una aplicación de escritorio de forma manual
 
-En este tema muestra cómo empaquetar su aplicación sin tener que usar herramientas como Visual Studio o Desktop App Converter (DAC).
+Este tema muestra cómo empaquetar la aplicación sin tener que usar herramientas como Visual Studio o Desktop App Converter (DAC).
 
 Para empaquetar la aplicación de forma manual, tienes que crear un archivo de manifiesto de paquete y ejecutar una herramienta de línea de comandos para generar un paquete de la aplicación de Windows.
 
@@ -208,7 +208,7 @@ Puedes ejecutar la aplicación para probarla de forma local sin tener que obtene
 Para actualizar los archivos .exe o .dll de la aplicación, reemplaza los archivos existentes en el paquete con los nuevos, aumenta el número de versión en AppxManifest.xml y, a continuación, vuelve a ejecutar el comando anterior.
 
 > [!NOTE]
-> Una aplicación empaquetada siempre se ejecuta como usuario interactivo y cualquier unidad que instalar la aplicación empaquetada en debe tener el formato al formato NTFS.
+> Una aplicación empaquetada siempre se ejecuta como usuario interactivo y cualquier unidad que se instala la aplicación empaquetada en debe tener el formato al formato NTFS.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -224,6 +224,6 @@ Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 
 Consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](desktop-to-uwp-debug.md)
 
-**Firmar la aplicación y distribuye**
+**Firmar la aplicación y, a continuación, distribuirlo**
 
 Consulta [distribuir una aplicación de escritorio empaquetada](desktop-to-uwp-distribute.md)

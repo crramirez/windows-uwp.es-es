@@ -1,7 +1,7 @@
 ---
 author: stevewhims
-description: C++ / WinRT puede ayudarte a crear componentes de COM clásicos, al igual que le ayuda a crear clases en tiempo de ejecución de Windows.
-title: Crear componentes de COM con C++ / WinRT
+description: C++ / WinRT puede ayudar a crear componentes de COM clásicos, al igual que le ayuda a crear clases en tiempo de ejecución de Windows.
+title: Crear componentes COM con C++ / WinRT
 ms.author: stwhi
 ms.date: 09/06/2018
 ms.topic: article
@@ -9,16 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, autor, COM, componente
 ms.localizationpriority: medium
-ms.openlocfilehash: 2886d2b42d4c192a3f6924a41a4c4dd1483db471
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: 94f59833f4c657445b7135b1158974d8a553813f
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313835"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358423"
 ---
-# <a name="author-com-components-with-cwinrt"></a>Crear componentes de COM con C++ / WinRT
+# <a name="author-com-components-with-cwinrt"></a>Crear componentes COM con C++ / WinRT
 
-[C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) puede ayudar a crear clásica modelo de objetos componentes (COM) componentes (o coclases), al igual que le ayuda a crear clases en tiempo de ejecución de Windows. Esta es una ilustración simple, que puede probar si se pega el código en el `pch.h` y `main.cpp` de un nuevo **aplicación de consola de Windows (C++ / WinRT)** proyecto.
+[C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) puede ayudar a crear clásico modelo de objetos componentes (COM) componentes (o coclases), al igual que le ayuda a crear clases en tiempo de ejecución de Windows. Esta es una ilustración simple, que puede probar si se pega el código en el `pch.h` y `main.cpp` de un nuevo **aplicación de consola de Windows (C++ / WinRT)** proyecto.
 
 ```cppwinrt
 // pch.h
@@ -69,11 +69,11 @@ int main()
 
 Consulta también [componentes de consumir COM con C++ / WinRT](consume-com.md).
 
-## <a name="a-more-realistic-and-interesting-example"></a>Un ejemplo más interesante y realista
+## <a name="a-more-realistic-and-interesting-example"></a>Un ejemplo más realista e interesante
 
-El resto de este tema te guiará a través de crear un proyecto de aplicación de consola mínima que usa C++ / WinRT para implementar una coclase básica (componente COM o clase de COM) y una fábrica de clase. La aplicación de ejemplo muestra cómo enviar una notificación del sistema con un botón de devolución de llamada en él y la coclase (que implementa la interfaz **INotificationActivationCallback** COM) permite que la aplicación se inicia y se denomina atrás cuando el usuario Haga clic en ese botón en la notificación del sistema.
+El resto de este tema te guiará a través de crear un proyecto de aplicación de consola mínima que usa C++ / WinRT para implementar una coclase básica (componente COM o clase de COM) y el generador de clases. La aplicación de ejemplo muestra cómo entregar una notificación del sistema con un botón de devolución de llamada en él, y la coclase (que implementa la interfaz **INotificationActivationCallback** COM) permite que la aplicación se inicia y se denomina atrás cuando el usuario Haga clic en ese botón en la notificación del sistema.
 
-Más información sobre el área de característica de notificación del sistema puede encontrarse en [Enviar una notificación del sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast). Ninguno de los ejemplos de código en la sección de la documentación de usar C++ / WinRT, sin embargo, por lo tanto, te recomendamos que prefieres que el código se muestra en este tema.
+Obtener más información sobre el área de característica de notificación del sistema puede encontrarse en [Enviar una notificación del sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast). Ninguno de los ejemplos de código en la sección de la documentación de usar C++ / WinRT, sin embargo, por lo tanto, te recomendamos que prefieres que el código se muestra en este tema.
 
 ## <a name="create-a-windows-console-application-project-toastandcallback"></a>Crear un proyecto de aplicación de consola de Windows (ToastAndCallback)
 
@@ -109,7 +109,7 @@ using namespace Windows::UI::Notifications;
 
 ## <a name="implement-the-coclass-and-class-factory"></a>Implementar la fábrica coclase y clases
 
-En C++ / WinRT, implementan coclases y fábricas de clase, derivando de la estructura base [**Implements**](/uwp/cpp-ref-for-winrt/implements) . Inmediatamente después de las tres directivas using mostradas anteriormente (y antes de `main`), pega este código para implementar el componente de activador de notificaciones COM de notificación del sistema.
+En C++ / WinRT, implementan coclases y generadores de clases, derivando de la estructura de base de [**winrt:: Implements**](/uwp/cpp-ref-for-winrt/implements) . Inmediatamente después de las tres directivas using mostradas anteriormente (y antes de `main`), pega este código para implementar el componente de activador de notificaciones COM de notificación del sistema.
 
 ```cppwinrt
 static constexpr GUID callback_guid // BAF2FA85-E121-4CC9-A942-CE335B6F917F
@@ -165,21 +165,21 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 };
 ```
 
-La implementación de la coclase anterior sigue el mismo patrón que se muestra en [crear API con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). Por lo tanto, puedes usar la misma técnica para implementar interfaces COM, así como interfaces de Windows Runtime. Componentes de COM y clases de Windows Runtime exponen sus características a través de interfaces. En última instancia, todas las interfaces de COM se deriva de la interfaz de la [**interfaz IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) . El tiempo de ejecución de Windows se basa en COM&mdash;una distinción que se va a interfaces de Windows Runtime en última instancia se derivan de la [**interfaz IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (y **IInspectable** se deriva del objeto **IUnknown**).
+La implementación de la coclase anterior sigue el mismo patrón que se muestra en [crear API con C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). Por lo tanto, puedes usar la misma técnica para implementar interfaces COM, así como interfaces de Windows Runtime. Componentes de COM y clases de Windows Runtime exponen sus características a través de interfaces. Todas las interfaces COM en última instancia se deriva de la interfaz de [**interfaz IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) . El tiempo de ejecución de Windows se basa en COM&mdash;una distinción que se va a que las interfaces de Windows Runtime en última instancia se derivan de la [**interfaz IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (y **IInspectable** se deriva del objeto **IUnknown**).
 
 En la coclase en el código anterior, se implementa el método **INotificationActivationCallback::Activate** , que es la función que se llama cuando el usuario hace clic en el botón de devolución de llamada en una notificación del sistema. Sin embargo, para poder llamar a esa función, debe crearse una instancia de la coclase y el trabajo de la función **IClassFactory:: CreateInstance** .
 
-La coclase que hemos implementado solo se conoce como el *activador COM* para las notificaciones y tiene su identificador de clase (CLSID) en forma de la `callback_guid` identificador (de tipo **GUID**) que ves anteriormente. Usaremos ese identificador de una versión posterior, en forma de un acceso directo del menú Inicio y una entrada del registro de Windows. El CLSID del activador COM y la ruta de acceso a su servidor COM asociado (que es la ruta de acceso al archivo ejecutable que estamos creando aquí) es el mecanismo por el que una notificación del sistema sabe qué clase para crear una instancia de cuando se hace clic en el botón de devolución de llamada (si el notificación se ha hecho clic en el centro de actividades o no).
+La coclase que hemos implementado solo se conoce como el *activador COM* para las notificaciones y tiene su Id. de clase (CLSID) en forma de la `callback_guid` identificador (de tipo **GUID**) que consulta la sección anterior. Usaremos ese identificador de una versión posterior, en forma de un acceso directo del menú Inicio y una entrada del registro de Windows. El CLSID del activador COM y la ruta de acceso a su servidor COM asociado (que es la ruta de acceso al archivo ejecutable que estamos creando aquí) es el mecanismo por el que una notificación del sistema sabe qué clase para crear una instancia de cuando se hace clic en el botón de devolución de llamada (si el notificación se hace clic en el centro de actividades o no).
 
 ## <a name="best-practices-for-implementing-com-methods"></a>Procedimientos recomendados para la implementación de métodos de COM
 
-Técnicas de control de errores y de administración de recursos pueden ir en la mano. Es más cómodo y práctico usar excepciones de códigos de error. Y si se emplee la expresión de recurso adquisición-es-inicialización (RAII), a continuación, puede evitar explícitamente comprobación de códigos de error y, a continuación, liberar recursos. Dichas comprobaciones explícitas hacer que el código más complicado que sea necesario, y ofrece errores abundante lugares para ocultar. En su lugar, usa RAII y produzca/catch excepciones. De este modo, las asignaciones de recursos son seguro para excepciones y el código es muy sencillo.
+Técnicas de control de errores y de administración de recursos pueden ir en la mano. Es más cómodo y práctico usar excepciones de códigos de error. Y si se emplee la expresión de recurso adquisición-es-inicialización (RAII), a continuación, puede evitar explícitamente comprobación de códigos de error y, a continuación, liberar recursos. Dichas comprobaciones explícitas hacer que el código más complicado que sea necesario, y ofrece errores multitud de sitios para ocultar. En su lugar, usa RAII y produzca/catch excepciones. De este modo, tus asignaciones de recursos son seguro para excepciones y el código es muy sencillo.
 
-Sin embargo, no permitir excepciones para las implementaciones de método COM de escape. Puedes garantizar que mediante el uso de la `noexcept` especificador en los métodos de COM. Es aceptar excepciones se inicie en cualquier lugar en el gráfico de llamada de su método, siempre y cuando controlarlos antes de que el método se cierra. Si usas `noexcept`, pero, a continuación, permite que una excepción en el método de escape, a continuación, la aplicación finalizará.
+Sin embargo, no permitir excepciones para las implementaciones de método COM de escape. Puedes garantizar que mediante el uso de la `noexcept` especificador en los métodos de COM. Es Aceptar para que se produzcan en cualquier lugar en el gráfico de llamada de su método, excepciones, siempre y controlarlos antes de que el método se cierra. Si usas `noexcept`, pero, a continuación, permite que una excepción a su método de escape, a continuación, la aplicación finalizará.
 
 ## <a name="add-helper-types-and-functions"></a>Agregar funciones y tipos de ayuda
 
-En este paso, vamos a agregar algunas funciones y tipos de ayuda que hace que el resto del código de usan. Por lo que, antes de `main`, agrega lo siguiente.
+En este paso, vamos a agregar algunas funciones y tipos de aplicación auxiliar que hace que el resto del código de usan. Por lo que, antes de `main`, agrega lo siguiente.
 
 ```cppwinrt
 struct prop_variant : PROPVARIANT
@@ -251,7 +251,7 @@ std::wstring get_shortcut_path()
 
 ## <a name="implement-the-remaining-functions-and-the-wmain-entry-point-function"></a>Implementar las funciones restantes y la función de punto de entrada de wmain
 
-La plantilla de proyecto genera un `main` función para TI. Eliminar que `main` funcionar y en su lugar, pega este código de la descripción, que incluye código para registrar la coclase, y, después, para entregar una notificación del sistema capaz de una llamada a la aplicación.
+La plantilla de proyecto genera un `main` función para TI. Eliminar que `main` funcionar y en su lugar, pega este código de la descripción, que incluye código para registrar tu coclase, y, después, para ofrecer una notificación del sistema capaz de llamar a volver a la aplicación.
 
 ```cppwinrt
 void register_callback()
@@ -411,13 +411,13 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 
 ## <a name="how-to-test-the-example-application"></a>Cómo probar la aplicación de ejemplo
 
-Compilar la aplicación y, a continuación, al menos una vez a ejecutarlo como administrador para hacer que el registro y otro programa de instalación, ejecución de código. Si ejecutas como administrador y luego presiona ' t ' para hacer que una notificación del sistema que se muestre. A continuación, hacer clic en el botón de **la llamada de ToastAndCallback** directamente desde la notificación del sistema que se iniciará POP hacia arriba, o desde el centro de actividades y la aplicación, la coclase crea una instancia y la **INotificationActivationCallback :: Activar** método ejecutado.
+Compilar la aplicación y, a continuación, al menos una vez a ejecutarlo como administrador para hacer que el registro y otro programa de instalación, ejecución de código. Si ejecutas como administrador y luego presiona ' t ' para hacer que una notificación del sistema que se muestre. A continuación, hacer clic en el botón **ToastAndCallback de devolución de llamada** directamente desde la notificación del sistema que se iniciará POP hacia arriba, o desde el centro de actividades y la aplicación, la coclase crea una instancia y la **INotificationActivationCallback :: Activar** método ejecutado.
 
 ## <a name="in-process-com-server"></a>Servidor COM en proceso
 
-La aplicación de ejemplo *ToastAndCallback* por encima de las funciones como servidor COM local (o fuera de proceso). Esto se indica en la clave de registro de Windows de [LocalServer32](/windows/desktop/com/localserver32) que uses registrarlo. Un servidor COM local hospeda su coclass(es) dentro de un binario ejecutable (un `.exe`).
+La aplicación de ejemplo de *ToastAndCallback* anterior funciona como un servidor COM local (o fuera de proceso). Esto se indica en la clave del registro de [LocalServer32](/windows/desktop/com/localserver32) Windows que se usa para registrar el CLSID de su coclase. Un servidor COM local hospeda su coclass(es) dentro de un binario ejecutable (un `.exe`).
 
-Como alternativa (y posiblemente más probable), puedes elegir hospedar la coclass(es) dentro de una biblioteca de vínculos dinámicos (un `.dll`). Un servidor COM en forma de un archivo DLL se conoce como un servidor COM en proceso, y se indica mediante se registre mediante el uso de la clave del registro de Windows de [InprocServer32](/windows/desktop/com/inprocserver32) .
+Como alternativa (y posiblemente más probable), puedes elegir hospedar su coclass(es) dentro de una biblioteca de vínculos dinámicos (un `.dll`). Un servidor COM en forma de un archivo DLL se conoce como un servidor COM en proceso, y se indica mediante CLSID se registre mediante el uso de la clave del registro de Windows de [InprocServer32](/windows/desktop/com/inprocserver32) .
 
 ### <a name="create-a-dynamic-link-library-dll-project"></a>Crear un proyecto de biblioteca de vínculos dinámicos (DLL)
 
@@ -425,15 +425,15 @@ Puedes empezar la tarea de creación de un servidor COM en proceso creando un nu
 
 ### <a name="set-project-properties"></a>Establecer las propiedades de proyecto
 
-Ve a **General**de la propiedad de proyecto \> **Versión del SDK de Windows**y selecciona **Todas las configuraciones** y **Todas las plataformas**. Establece la **Versión del SDK de Windows** en *10.0.17134.0 (Windows 10, versión 1803)*, o posterior.
+Ir a la propiedad **General**project \> **Versión del SDK de Windows**y selecciona **Todas las configuraciones** y **Todas las plataformas**. Establece **Windows SDK versión** *10.0.17134.0 (Windows 10, versión 1803)*, o posterior.
 
-Para agregar soporte de Visual Studio para C++ / WinRT para el proyecto, edita tu `.vcxproj` de archivos, busca `<PropertyGroup Label="Globals">` y, dentro de ese grupo de propiedades, Establece la propiedad `<CppWinRTEnabled>true</CppWinRTEnabled>`.
+Para agregar compatibilidad de Visual Studio para C++ / WinRT a tu proyecto, edita tu `.vcxproj` de archivos, busca `<PropertyGroup Label="Globals">` y, dentro de ese grupo de propiedades, Establece la propiedad `<CppWinRTEnabled>true</CppWinRTEnabled>`.
 
 Dado que C++ / WinRT usa características del estándar C ++ 17, Establece la propiedad de proyecto **C o C++** > **idioma** > **Estándar de lenguaje de C++** a *ISO C ++ 17 Standard (/ STD: c ++ 17)*.
 
 ### <a name="the-precompiled-header"></a>El encabezado precompilado
 
-Cambiar el nombre de tu `stdafx.h` y `stdafx.cpp` a `pch.h` y `pch.cpp`, respectivamente. Establece la propiedad de proyecto **C o C++** > **Encabezados precompilados** > **El archivo de encabezado precompilado** en *pch.h*.
+Cambiar el nombre de tu `stdafx.h` y `stdafx.cpp` a `pch.h` y `pch.cpp`, respectivamente. Establece la propiedad de proyecto **C o C++** > **Encabezados precompilados** > **Archivo de encabezado precompilado** en *pch.h*.
 
 Buscar y todas las reemplazar `#include "stdafx.h"` con `#include "pch.h"`.
 
@@ -447,13 +447,13 @@ En `pch.h`, incluyen `winrt/base.h`.
 
 Confirma que no se ven afectadas por [por qué no compila mi proyecto nuevo?](/windows/uwp/cpp-and-winrt-apis/faq).
 
-### <a name="implement-the-coclass-class-factory-and-in-proc-server-exports"></a>Implementar la coclase, el generador de clases y las exportaciones de servidor dentro del proceso
+### <a name="implement-the-coclass-class-factory-and-in-proc-server-exports"></a>Implementar la coclase, generador de clases y las exportaciones de servidor dentro del proceso
 
 Abre `dllmain.cpp`y a agregarle el listado de código se muestra a continuación.
 
 Si ya tienes un archivo DLL que implementa C++ / WinRT Windows Runtime clases, a continuación, verá que ya tiene la función **DllCanUnloadNow** se muestra a continuación. Si quieres agregar coclases a ese archivo DLL, a continuación, puedes agregar la función **DllGetClassObject** .
 
-Si no tienes el código existente de [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) que quieras que siga siendo compatible con, a continuación, puedes quitar las partes WRL desde el código de muestra.
+Si no tienes el código de [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) existente que desea que siga siendo compatible con, a continuación, puedes quitar las partes WRL desde el código de muestra.
 
 ```cppwinrt
 // dllmain.cpp
@@ -540,7 +540,7 @@ Consulta también [referencias débiles en C++ / WinRT](weak-references.md#weak-
 
 C++ / WinRT (en concreto, la plantilla de estructura base [**Implements**](/uwp/cpp-ref-for-winrt/implements) ) implementa [**IWeakReferenceSource**](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource) automáticamente si el tipo implementa [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (o cualquier interfaz que se deriva de **IInspectable**).
 
-Esto es porque **IWeakReferenceSource** y [**IWeakReference**](/windows/desktop/api/weakreference/nn-weakreference-iweakreference) están diseñados para tipos de Windows Runtime. Por lo tanto, puedes activar soporte de referencia débil para la coclase simplemente agregando el **winrt::Windows::Foundation::IInspectable** (o una interfaz que se deriva de **IInspectable**) a la implementación.
+Esto es porque **IWeakReferenceSource** y [**IWeakReference**](/windows/desktop/api/weakreference/nn-weakreference-iweakreference) están diseñados para tipos de Windows Runtime. Por lo tanto, puedes activar soporte de referencia débil para tu coclase simplemente agregando el **winrt::Windows::Foundation::IInspectable** (o una interfaz que se deriva de **IInspectable**) a la implementación.
 
 ```cppwinrt
 struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows::Foundation::IInspectable>
@@ -556,5 +556,5 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 
 ## <a name="related-topics"></a>Artículos relacionados
 * [Crear API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
-* [Consumir los componentes de COM con C++ / WinRT](consume-com.md)
+* [Consumir componentes COM con C++ / WinRT](consume-com.md)
 * [Enviar una notificación de icono local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

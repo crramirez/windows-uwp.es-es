@@ -12,11 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 885ccc89fcbd4315eeed40c3546ef485c515294e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316053"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357939"
 ---
 # <a name="text-scaling"></a>Ajuste de escala de texto
 
@@ -25,15 +25,15 @@ ms.locfileid: "4316053"
 
 ## <a name="overview"></a>Introducción
 
-Lectura de texto en una pantalla de equipo (de dispositivo móvil en un portátil al monitor de escritorio a la pantalla de un dispositivo Surface Hub giant) puede ser un reto para muchas personas. Por el contrario, algunos usuarios encuentran los tamaños de fuente que se usan en las aplicaciones y sitios web para que sea más grande que es necesario.
+Lectura de texto en una pantalla de equipo (de dispositivos móviles para equipos portátiles y monitor de escritorio a la pantalla de gigante de un dispositivo Surface Hub) puede ser un reto para muchas personas. Por el contrario, algunos usuarios encuentran los tamaños de fuente que se usan en las aplicaciones y sitios web para que sea mayor de lo necesario.
 
-Para garantizar que el texto sea legible como sea posible para la gama más amplia de usuarios, Windows proporciona la capacidad para que los usuarios cambiar el tamaño de fuente relativa en el sistema operativo y en aplicaciones individuales. En lugar de usar una aplicación de lupa (que por lo general, solo se amplía todo el contenido dentro de un área de la pantalla y presenta sus propios problemas de facilidad de uso), cambiar la resolución de pantalla o depender de escalado de PPP (que cambia el tamaño de todo el contenido en función de la pantalla y visualización típico distancia), un usuario puede acceder rápidamente a una opción de configuración para cambiar el tamaño de solo texto, que van desde el 100% (el tamaño predeterminado) hasta 225%.
+Para garantizar que el texto sea legible como sea posible para la gama más amplia de usuarios, Windows proporciona la capacidad para que los usuarios cambiar el tamaño de fuente relativa en el sistema operativo y en aplicaciones individuales. En lugar de usar una aplicación de lupa (que normalmente solo se amplía todo el contenido dentro de un área de la pantalla y presenta sus propios problemas de facilidad de uso), cambiar resolución de pantalla o depender de escalado de PPP (que cambia el tamaño de todo el contenido en función de la pantalla y visualización típico distancia), un usuario puede acceder rápidamente a una opción de configuración para cambiar el tamaño de solo texto, que van desde el 100% (el tamaño predeterminado) hasta 225%.
 
 ## <a name="support"></a>Soporte
 
-Aplicaciones universales de Windows (ambos estándar y PWA), compatibilidad con texto de escala de manera predeterminada.
+Aplicaciones universales de Windows (ambos estándar y PWA), compatible con texto de escala de manera predeterminada.
 
-Si la aplicación para UWP incluye controles personalizados, superficies de texto personalizado, alturas de control codificados de forma rígida, los marcos más antiguos o marcos de terceros 3, es probable que deba realizar algunas actualizaciones para garantizar una experiencia coherente y útil para los usuarios.  
+Si la aplicación para UWP incluye controles personalizados, superficies de texto personalizado, alturas de control codificados de forma rígida, marcos anteriores o los marcos de terceros 3, es probable que deba realizar algunas actualizaciones para garantizar una experiencia coherente y útil para los usuarios.  
 
 DirectWrite, GDI y SwapChainPanels de XAML no admiten de forma nativa escala de texto, mientras que la compatibilidad de Win32 está limitada a los menús, los iconos y las barras de herramientas.  
 
@@ -41,7 +41,7 @@ DirectWrite, GDI y SwapChainPanels de XAML no admiten de forma nativa escala de 
 
 ## <a name="user-experience"></a>Experiencia del usuario
 
-Los usuarios pueden ajustar la escala de texto con el texto de la marca -> control deslizante más grande de la configuración de accesibilidad -> pantalla de visión o la pantalla.
+Los usuarios pueden ajustar la escala de texto con el texto de la marca -> control deslizante más grande en la configuración de accesibilidad -> pantalla de visión o la pantalla.
 
 ![Ejemplo de 100 a 225% de escala de texto](images/coretext/text-scaling-settings-100-small.png)  
 *Escala de texto desde la configuración -> Accesibilidad -> pantalla de visión o la pantalla*
@@ -52,11 +52,11 @@ Cuando se cambia el tamaño de texto, controles y contenedores deben también el
 
 ### <a name="use-the-platform-controls"></a>Usar los controles de plataforma
 
-¿Dijimos esto ya? Vale la pena de repetición: cuando sea posible, siempre usa los controles integrados que se proporcionan con los distintos marcos de aplicación de Windows para obtener la experiencia de usuario más amplia posible el mínimo esfuerzo.
+¿Dijimos esto ya? Es importante destacar: cuando sea posible, usa siempre los controles integrados proporcionados con los distintos marcos de aplicación de Windows para obtener la experiencia de usuario más amplia posible de la menor cantidad de esfuerzo.
 
-Por ejemplo, todos los controles de texto UWP admiten la experiencia sin necesidad de personalización o plantillas de ajuste de escala de texto completo.
+Por ejemplo, todos los controles de texto UWP admiten el texto completo experiencia sin necesidad de personalización o plantillas de ajuste de escala.
 
-Este es un fragmento de una aplicación para UWP básica que incluye un par de controles de texto estándar:
+Este es un fragmento de código desde una aplicación para UWP básica que incluye un par de controles de texto estándar:
 
 ``` xaml
 <Grid>
@@ -103,7 +103,7 @@ Este es un fragmento de una aplicación para UWP básica que incluye un par de c
 
 No se especifica absolutos tamaños para los controles. Siempre que sea posible, permitir que la plataforma de cambiar el tamaño de los controles automáticamente en función de la configuración de usuarios y dispositivos.  
 
-En este fragmento de código del ejemplo anterior, se usa el `Auto` y `*` los valores de ancho de un conjunto de columnas de cuadrícula y dejar la plataforma ajustan el diseño de la aplicación en función del tamaño de los elementos contenidos en la cuadrícula.
+En este fragmento de código del ejemplo anterior, se usa el `Auto` y `*` los valores de ancho de un conjunto de columnas de cuadrícula y dejar la plataforma ajustan el diseño de la aplicación en función del tamaño de los elementos contenidos dentro de la cuadrícula.
 
 ``` xaml
 <Grid.ColumnDefinitions>
@@ -115,26 +115,26 @@ En este fragmento de código del ejemplo anterior, se usa el `Auto` y `*` los va
 
 ### <a name="use-text-wrapping"></a>Usar el ajuste de texto
 
-Para garantizar que el diseño de la aplicación sea lo más flexible y adaptable como sea posible, habilita el ajuste de texto en cualquier control que contiene texto (muchos controles no admiten el ajuste de texto de manera predeterminada).
+Para garantizar que el diseño de la aplicación sea lo más flexible y adaptable como sea posible, habilita el ajuste de texto en cualquier control que contiene texto (muchos controles no admiten el ajuste de texto de forma predeterminada).
 
 Si no se especifica el ajuste de texto, la plataforma usará otros métodos para ajustar el diseño, incluido el recorte (consulta el ejemplo anterior).
 
-Este ejemplo, usamos el `AcceptsReturn` y `TextWrapping` propiedades de cuadro de texto para garantizar que nuestro diseño es flexible como sea posible.
+Este ejemplo, usamos la `AcceptsReturn` y `TextWrapping` propiedades de cuadro de texto para garantizar que nuestro diseño es flexible como sea posible.
 
 ``` xaml
 <TextBox PlaceholderText="Type something here" 
           AcceptsReturn="True" TextWrapping="Wrap" />
 ```
 
-![Animar el texto escala del 100% a 225% con ajuste de texto](images/coretext/text-scaling-textwrap.gif)  
+![Texto de escala del 100% a 225% con ajuste de texto animado](images/coretext/text-scaling-textwrap.gif)  
 *Texto animado escalado con ajuste de texto*
 
 ### <a name="specify-text-trimming-behavior"></a>Especificar el comportamiento de recorte de texto
 
-Si el ajuste de texto no es el comportamiento preferido, la mayoría de los controles de texto permiten el texto de los recortes o especificar puntos suspensivos para el comportamiento de recorte de texto. Recorte es preferible al puntos suspensivos como puntos suspensivos ocupan de espacio a sí mismos.
+Si el ajuste de texto no es el comportamiento preferido, la mayoría de los controles de texto permitir que el texto de los recortes o especificar puntos suspensivos para el comportamiento de recorte de texto. Recorte es preferible al puntos suspensivos como puntos suspensivos ocupan un espacio a sí mismos.
 
 > [!NOTE]
-> Si es necesario recortar texto, imágenes al final de la cadena, y no al principio.
+> Si es necesario el texto de los recortes, recortar al final de la cadena, y no al principio.
 
 En este ejemplo, te mostramos cómo recortar texto en un TextBlock mediante la propiedad [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) .
 
@@ -144,14 +144,14 @@ En este ejemplo, te mostramos cómo recortar texto en un TextBlock mediante la p
 </TextBlock>
 ```
 
-![Texto que se ajuste de escala del 100% a 225% con el recorte de texto](images/coretext/text-scaling-clipping-small.png)  
+![Texto de ajuste de escala del 100% a 225% con el recorte de texto](images/coretext/text-scaling-clipping-small.png)  
 *Texto de escala con el recorte de texto*
 
 ### <a name="use-a-tooltip"></a>Usar una información sobre herramientas
 
 Si recortar texto, usa una información sobre herramientas para proporcionar el texto completo a los usuarios.
 
-Esto, agregamos una información sobre herramientas en un bloque de texto que no es compatible con ajuste de texto:
+Aquí, agregamos una información sobre herramientas a un bloque de texto que no es compatible con ajuste de texto:
 
 ``` xaml
 <TextBlock TextTrimming="Clip">
@@ -170,7 +170,7 @@ Establecer la propiedad [IsTextScaleFactorEnabled](https://docs.microsoft.com/uw
 
 ### <a name="support-text-scaling-natively"></a>Escalado de forma nativa de texto de soporte técnico
 
-Controla el evento de sistema de [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings en tu entorno personalizados y controles. Este evento se genera cada vez que el usuario establece el factor de escala de texto de su sistema.
+Controlar el evento de sistema de [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings en tu entorno personalizados y controles. Este evento se genera cada vez que el usuario establece el factor de escala de texto de su sistema.
 
 ## <a name="summary"></a>Resumen
 

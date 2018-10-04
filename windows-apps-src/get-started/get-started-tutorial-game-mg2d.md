@@ -11,11 +11,11 @@ keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: d38465ce02e0aedf854094ede75fc33701b226a6
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319837"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360386"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Crear un juego para UWP en MonoGame 2D
 
@@ -30,7 +30,7 @@ MonoGame es un marco de desarrollo de juegos ligero. En este tutorial se te ense
 
 ## <a name="prerequisites"></a>Requisitos previos
 +   Windows 10 y Microsoft Visual Studio 2017.  [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener se vuelve a ejecutar al instalador de Visual Studio y modificando la instalación de Visual Studio 2017.
++ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener volver a ejecutar el programa de instalación de Visual Studio y modificando la instalación de Visual Studio 2017.
 +   Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. [Haz clic aquí para obtener información acerca de cómo empezar a trabajar con C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   Familiaridad con conceptos informáticos básicos, como clases, métodos y variables, es una ventaja.
 
@@ -383,7 +383,7 @@ public void StartGame()
 ```
 
 ### <a name="7-handle-keyboard-input"></a>7. controlar la entrada de teclado
-A continuación, necesitamos un nuevo método para controlar la entrada de usuario mediante el teclado. Agrega este método a **Game1.cs**:
+A continuación necesitamos un nuevo método para controlar la entrada de usuario a través del teclado. Agrega este método a **Game1.cs**:
 
 ```CSharp
 void KeyboardHandler()

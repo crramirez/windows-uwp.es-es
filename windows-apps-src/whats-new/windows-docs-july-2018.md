@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 title: 'Novedades en los documentos de Windows de julio de 2018: desarrollar aplicaciones para UWP'
-description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación de desarrollador de Windows 10 de julio de 2018.
+description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación del desarrollador de Windows 10 de julio de 2018.
 keywords: Novedades, actualización, características, directrices para los desarrolladores, Windows 10, julio
 ms.author: quradic
 ms.date: 7/11/2018
@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f41d25fd6757e5d3f80d00de341168de4f34e946
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316735"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359763"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novedades en los documentos de Windows de julio de 2018
 
@@ -26,7 +26,7 @@ La documentación del desarrollador de Windows se actualiza constantemente con i
 
 ### <a name="progressive-web-apps-on-windows"></a>Aplicaciones Web progresivas en Windows
 
-[Aplicaciones Web progresivas (PWA)](https://developer.microsoft.com/windows/pwa) son simplemente aplicaciones web que son las [progresivamente mejorado](https://wikipedia.org/wiki/Progressive_enhancement) con las características nativas de tipo de aplicación sobre la compatibilidad de plataformas y motores de navegador, como la instalación de inicio de homescreen, compatibilidad sin conexión e inserción notificaciones. En Windows 10 con el motor de Microsoft Edge (EdgeHTML), las PWA disfrutan de la ventaja de ejecutar [independientemente de la ventana del explorador que las aplicaciones para UWP.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
+[Aplicaciones Web progresivas (PWA)](https://developer.microsoft.com/windows/pwa) son simplemente aplicaciones web que están [progresivamente mejorada](https://wikipedia.org/wiki/Progressive_enhancement) con las características nativas de tipo de aplicación sobre la compatibilidad de plataformas y motores de navegador, como la instalación de inicio de homescreen, compatibilidad sin conexión e inserción notificaciones. En Windows 10 con el motor de Microsoft Edge (EdgeHTML), las PWA disfrutan de la ventaja adicional de ejecutar [independientemente de la ventana del explorador que las aplicaciones para UWP.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
 
 ![Una imagen de PWA en acción](images/progressive-web-apps.jpg)
 
@@ -44,11 +44,11 @@ Está disponible en Windows 10 Insider Preview Build 17713, [se ha actualizado e
 
 ### <a name="design-landing-page"></a>Página de aterrizaje de diseño
 
-Consulta la [actualiza el diseño de página de inicio](https://developer.microsoft.com/windows/apps/design) para obtener información general de un vistazo de las áreas de diseño UWP y obtener información sobre las adiciones más recientes a Fluent Design.
+Consulta la [actualiza el diseño de página de inicio](https://developer.microsoft.com/windows/apps/design) para obtener información general de un vistazo de las áreas de diseño UWP e información sobre las últimas incorporaciones a Fluent Design.
 
 ### <a name="design-toolkits"></a>Kits de herramientas de diseño
 
-Se han actualizado los kits de herramientas de Adobe XD y Adobe Illustrator con las nuevas características. Estos kits de herramientas de diseño proporcionan controles y plantillas de diseño para diseñar aplicaciones para UWP. [Echa un vistazo a aquí.](../design/downloads/index.md)
+Se han actualizado los kits de herramientas de Adobe XD y Adobe Illustrator con las nuevas características. Estos kits de herramientas de diseño proporcionan controles y plantillas de diseño para diseñar aplicaciones para UWP. [Echa un vistazo aquí.](../design/downloads/index.md)
 
 ### <a name="webvr"></a>WebVR
 
@@ -64,23 +64,23 @@ Hemos agregado varios temas nuevos a la [documentación de WebVR](https://docs.m
 
 * [Demostraciones WebVR](https://docs.microsoft.com/microsoft-edge/webvr/demos): echa un vistazo a algunas demostraciones WebVR con Microsoft Edge y unos cascos envolventes de realidad mixta de Windows.
 
-Además, que hemos realizado algunas actualizaciones a las páginas existentes:
+Además, algunas actualizaciones que hemos realizado a las páginas existentes:
 
 * La tabla de contenido ahora mejor organizada en cuatro depósitos de nivel superior distintos: **conceptos básicos**, **desarrollo**, **recursos**y **demostraciones de versiones**.
 
 * [Guía del desarrollador de WebVR (página de aterrizaje)](https://docs.microsoft.com/microsoft-edge/webvr/): actualiza un aspecto, con imágenes más grandes y los iconos y nueva demostración.
 
-* [Usar WebVR con Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): actualizado para incluir información acerca de Windows 10 de abril de 2018 actualizar.
+* [Usar WebVR con Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): actualizado para incluir información acerca de las ventanas de actualización de 10 de abril de 2018.
 
 ## <a name="videos"></a>Vídeos
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>Introducción para desarrolladores: crear y personalizar un formulario de Windows 10
 
-Nuestros [documentos de introducción](../get-started/index.md) para desarrolladores de Windows ahora proporciona una experiencia práctica con la tarea de desarrollo de la aplicación básica. Este vídeo te guiará a través de uno de los temas y describe los conceptos básicos de creación de un formulario de la interfaz de usuario en la aplicación. [Ve el vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver el código en acción, a continuación, [consultar el tema tú mismo.](http://aka.ms/CreateForms)
+Nuestros [documentos de introducción](../get-started/index.md) para desarrolladores de Windows ahora proporciona experiencia práctica con las tareas de desarrollo de aplicación básica. Este vídeo te guiará a través de uno de los temas y describe los conceptos básicos de creación de un formulario de la interfaz de usuario en la aplicación. [Ve el vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver el código en acción, a continuación, [consultar el tema tú mismo.](http://aka.ms/CreateForms)
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Mejorar tu Bot con chat de personalidad de proyecto
 
-Chat de proyecto personalidad te permite agregar un rol personalizable a sus robots de chat. Mediante la integración con el SDK de Microsoft Bot Framework, puedes agregar capacidades de pequeñas para hablar de una forma más informal interactuar con los clientes. [Ve el vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para obtener información sobre cómo implementar, a continuación, [probar la demostración interactiva](http://aka.ms/PersonalityChat) para obtener experiencia práctica.
+Chat de proyecto personalidad te permite agregar un rol personalizable a sus robots de chat. Mediante la integración con el SDK de Microsoft Bot Framework, puedes agregar capacidades de pequeño para hablar de una forma más informal interactuar con los clientes. [Ve el vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para obtener información sobre cómo implementar, a continuación, [probar la demostración interactiva](http://aka.ms/PersonalityChat) para obtener experiencia práctica.
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollo
 
@@ -92,7 +92,7 @@ Raymond Chen:
 
 Larry Osterman:
 
-* [¿Por qué no se permiten a los desarrolladores cambiar el dispositivo de audio predeterminado?](https://www.youtube.com/watch?v=6aNUoVfbnmg&feature=youtu.be)
+* [¿Por qué no se permiten que los desarrolladores cambiar el dispositivo de audio predeterminado?](https://www.youtube.com/watch?v=6aNUoVfbnmg&feature=youtu.be)
 * [¿Por qué tantas asincrónica de las funciones UWP?](https://www.youtube.com/watch?v=5M724QIy1Mk&feature=youtu.be)
 
 ## <a name="samples"></a>Muestras

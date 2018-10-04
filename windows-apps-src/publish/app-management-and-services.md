@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4312309"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360540"
 ---
 # <a name="app-management-and-services"></a>Administración y servicios de aplicaciones
 
@@ -31,7 +31,7 @@ La sección **Servicios** te permite administrar varios servicios diferentes par
 
 Si va a publicar un juego, puedes habilitar el [Programa de creadores de Xbox Live](http://xbox.com/developers/creators-program) en esta página. Esto te permite empezar a configurar y probar características de Xbox Live y, finalmente publicar un juego de programa de creadores de Xbox Live.
 
-Para obtener más información, consulta [empezar a trabajar con el programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) y [crear un nuevo título de Xbox Live Creators Program y publicarlo en el entorno de prueba](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
+Para obtener más información, consulta [empezar a trabajar con el programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) y [crear un nuevo título de Xbox Live Creators Program y publicar en el entorno de prueba](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
 
 ## <a name="experimentation"></a>Experimentación
 
@@ -50,13 +50,13 @@ Para más información, consulta [Usar servicios de mapa](use-map-services.md).
 
 ## <a name="product-collections-and-purchases"></a>Colecciones y compras de producto
 
-Para usar Microsoft Store collection API y la API de compras de Microsoft Store para obtener acceso a la información de propiedad para aplicaciones y complementos, debes especificar el asociado de cliente de Azure AD identificadores aquí. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
+Para usar Microsoft Store API de colecciones y la API de compras de Microsoft Store para obtener acceso a la información de propiedad para aplicaciones y complementos, debes especificar el asociado de cliente de Azure AD identificadores aquí. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
 
 Para obtener más información, consulta [Administrar los derechos de producto de un servicio](../monetize/view-and-grant-products-from-a-service.md).
 
 ## <a name="administrator-consent"></a>Consentimiento del administrador
 
-f tu producto se integra con Azure AD y llama a las API que solicitan los [permisos de la aplicación o los permisos delegados](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requieren el consentimiento del administrador, escribe tu Id. de cliente de Azure AD. Esto permite a los administradores que adquieran la aplicación para su consentimiento de concesión de organización para tu producto actuar en nombre de todos los usuarios del inquilino.
+f tu producto se integra con Azure AD y llama a las API que solicitan [permisos de la aplicación o los permisos delegados](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requieren el consentimiento del administrador, escribe tu Id. de cliente de Azure AD. Esto permite a los administradores que adquieran la aplicación para su consentimiento de concesión de organización para tu producto actuar en nombre de todos los usuarios del inquilino.
 
 Para obtener más información, consulta [solicitar consentimiento para un inquilino de todo](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 

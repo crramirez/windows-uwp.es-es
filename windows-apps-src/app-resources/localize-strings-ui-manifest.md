@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309395"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358644"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
@@ -175,7 +175,7 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 Si fueras a mover el recurso "AppDisplayName" fuera de `Resources.resw` y adentro de `ManifestResources.resw`, en ese caso, en el manifiesto del paquete de aplicación cambiarías `ms-resource:AppDisplayName` a `ms-resource:/ManifestResources/AppDisplayName`.
 
-Si un nombre de archivo de recursos se segmenta (que contiene "." caracteres), a continuación, salir los puntos en el nombre al hacer referencia a él. **No** reemplaza los puntos con caracteres de barra diagonal ("/"), igual que harías para un nombre de recurso.
+Si un nombre de archivo de recursos se segmenta (que contiene "." caracteres), a continuación, dejar los puntos en el nombre al hacer referencia a él. **No** reemplaza puntos con caracteres de barra diagonal ("/"), igual que harías para un nombre de recurso.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
@@ -268,13 +268,13 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
 ```
 
-Para una biblioteca de Windows Runtime (Windows Universal), si el espacio de nombres predeterminado se segmenta (que contiene "." caracteres), a continuación, usa puntos en el nombre del mapa de recursos.
+Para una biblioteca de Windows Runtime (Windows Universal), si se segmenta el espacio de nombres predeterminado (que contiene "." caracteres), a continuación, usa puntos en el nombre del mapa de recursos.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-No necesitas hacerlo para una biblioteca de clases (Windows Universal). En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar tu componente o archivo PRI de la biblioteca. Cada recurso `uri` se muestra en el archivo de volcado.
+No es necesario hacerlo para una biblioteca de clases (Windows Universal). En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar tu componente o archivo PRI de la biblioteca. Cada recurso `uri` se muestra en el archivo de volcado.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...

@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: 'La extensión de marcado xBind es una alternativa de alto rendimiento para el enlace. xBind - nuevo para Windows 10: se ejecuta en menos tiempo y usa menos memoria que Binding mejor depuración.'
+description: 'La extensión de marcado xBind es una alternativa de alto rendimiento para el enlace. xBind - nuevo en Windows 10: se ejecuta en menos tiempo y usa menos memoria que Binding mejor depuración.'
 title: Extensión de marcado xBind
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313773"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358152"
 ---
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
@@ -89,7 +89,7 @@ Por ejemplo: en una página, **Text="{x:Bind Employee.FirstName}"** buscará un 
 
 En el caso de C++/CX, **{x:Bind}** no se puede enlazar a propiedades y campos privados en el modelo de datos o página: debes tener una propiedad pública para que se pueda enlazar. El área de superficie del enlace se debe exponer como clases o interfaces de CX para que podamos obtener los metadatos relevantes. El atributo **\[Bindable\]** no debería ser necesario.
 
-Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. En su lugar, puedes usar el nombre del elemento como la primera parte de la ruta de acceso del enlace porque los elementos con nombre se convierten en campos de la página o control de usuario que representa el origen del enlace raíz. 
+Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. En su lugar, puedes usar el nombre del elemento como la primera parte de la ruta de acceso para el enlace porque los elementos con nombre se convierten en campos dentro de la página o control de usuario que representa el origen del enlace raíz. 
 
 
 ### <a name="collections"></a>Colecciones
@@ -115,7 +115,7 @@ _Nota: la sintaxis de conversión de estilo C# es más flexible que la sintaxis 
 
 ## <a name="functions-in-binding-paths"></a>Funciones en rutas de acceso de enlace
 
-A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esta es una característica eficaz para el enlace de datos que permite que varios escenarios en el marcado. Ver [los enlaces de función](../data-binding/function-bindings.md) para obtener más información.
+A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esta es una característica eficaz para el enlace de datos que permite que varios escenarios en el marcado. Consulta [los enlaces de función](../data-binding/function-bindings.md) para obtener más información.
 
 ## <a name="event-binding"></a>Enlace de eventos
 

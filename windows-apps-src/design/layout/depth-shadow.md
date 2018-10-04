@@ -13,27 +13,27 @@ pm-contact: chigy
 design-contact: balrayit
 ms.localizationpriority: medium
 ms.openlocfilehash: a1433b131b994ee2b1323909bc7c195e00f43cde
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317213"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360774"
 ---
 # <a name="z-depth-and-shadow"></a>Profundidad Z y sombra
 
 ![profundidad true](images/elevation-shadow/depth.svg)
 
-El sistema de profundidad Fluent usa los conceptos de físicos como 3D posicionamiento, delgada, y sombras convertirse la interfaz de usuario de forma digital pueden considerarse en un entorno físico más en capas. Profundidad Z o relativa a la profundidad y sombras son dos formas de incorporar profundidad en tu aplicación para UWP.
+El sistema de profundidad Fluent usa los conceptos de físicos como 3D posicionamiento, delgada, y sombras convertirse la interfaz de usuario de forma digital pueden considerarse en un entorno físico más en capas. Profundidad Z o relativa a la profundidad y sombras son dos formas de incorporar profundidad a tu aplicación para UWP.
 
 ## <a name="what-is-z-depth"></a>¿Qué profundidad z?
 
-Profundidad Z es la distancia entre dos superficies a lo largo del eje z, y muestra cómo cerrar un objeto es el Visor.
+Profundidad Z es la distancia entre dos superficies a lo largo del eje z, y muestra cómo cerrar es un objeto en el Visor.
 
 ![profundidad z](images/elevation-shadow/elevation.svg)
 
 ### <a name="why-use-z-depth"></a>¿Por qué usar profundidad z?
 
-En el mundo físico, se suele centrarse en los objetos que están más próximos a nosotros. Podemos aplicar este impulso espacial a IU digital. Por ejemplo, si se coloca un elemento más próximo al usuario, el usuario instintivamente se centrará en el elemento. Mover la interfaz de usuario los elementos más cerca en el eje z, puedes establecer una jerarquía visual entre objetos, lo que ayuda a los usuarios a completar las tareas de forma natural y eficaz en la aplicación. 
+En el mundo físico, se suele centrarse en los objetos que están más próximos a nosotros. Podemos aplicar este impulso espacial a IU digital. Por ejemplo, si se coloca un elemento más cerca al usuario, el usuario instintivamente se centrará en el elemento. Mover la interfaz de usuario los elementos más cerca en el eje z, puedes establecer una jerarquía visual entre objetos, lo que ayuda a los usuarios a completar las tareas de forma natural y eficaz en la aplicación. 
 
 ![profundidad z en el menú de contenido](images/elevation-shadow/whyelevation.svg)
 
@@ -43,19 +43,19 @@ Además proporcionar una jerarquía visual significativa, profundidad z también
 
 ### <a name="how-is-z-depth-perceived"></a>¿Cómo se percibe la profundidad z?
 
-En función de cómo se percibe profundidad en el mundo físico, hay varias técnicas que pueden usarse para mostrar la proximidad en la interfaz de usuario digital.
+En función de cómo nos perciben profundidad en el mundo físico, hay varias técnicas que pueden usarse para mostrar la proximidad en la interfaz de usuario digital.
 
-- **Escala** Los objetos más aparecen más pequeños que objetos más cerca del mismo tamaño. Se trata de método es difícil demostrar eficazmente en el espacio 2D, por lo que por lo general, no se recomienda. Sin embargo, puedes usar escala y [sombras](#what-is-shadow) para crear una simulación eficaz de objetos que se mueven más cerca del usuario en 2D.
+- **Escala** Los objetos más aparecen más pequeños que objetos más cerca del mismo tamaño. Se trata de método es difícil demostrar eficazmente en el espacio 2D, por lo que generalmente no se recomienda. Sin embargo, puedes usar escala y [sombras](#what-is-shadow) para crear una simulación eficaz de objetos que se mueven más cerca del usuario en 2D.
 
     ![proximidad con escala](images/elevation-shadow/elevation-scale.svg)
 
-- **Atmósfera** Los objetos pueden aparecer más lejos y desenfocada con una superposición "con humo" u otros efectos atmosférica.
+- **Atmósfera** Los objetos pueden aparecer más lejos y desenfocada con una superposición de "con humo" u otros efectos atmosférica.
 
     ![proximidad con atmósfera](images/elevation-shadow/elevation-atmosphere.svg)
 
 - **Movimiento** Velocidad relativa puede usarse para demostrar la proximidad: objetos más cerca se muevan más rápidamente que los objetos distantes en segundo plano. Para obtener información sobre cómo implementar este efecto, consulta el [efecto Parallax](../motion/parallax.md).
 
-    ![proximidad con movimiento](images/elevation-shadow/elevation-motion.svg)
+    ![proximidad con un movimiento](images/elevation-shadow/elevation-motion.svg)
 
 ### <a name="recommendations-for-z-depth"></a>Recomendaciones para la profundidad z
 
@@ -63,13 +63,13 @@ Reducir el número de planos con privilegios elevados para proporcionar el foco 
 
 ![profundidad z dentro de una aplicación](images/elevation-shadow/app-depth.svg)
 
-## <a name="what-is-shadow"></a>¿Qué es la sombra?
+## <a name="what-is-shadow"></a>¿Qué es sombra?
 
 ![sombra](images/elevation-shadow/shadow.svg)
 
-Sombra es una forma para percibir la elevación. Cuando hay luz por encima de un objeto con privilegios elevados, existe una sombra en la superficie siguiente. Cuanto mayor sea el objeto, el más grande y más suave se convierte en la sombra. Ten en cuenta que los objetos con privilegios elevados no es necesario tener sombras, pero sombras indicar la elevación.
+Sombra es una forma para percibir elevación. Cuando hay luz por encima de un objeto con privilegios elevados, existe una sombra en la superficie a continuación. Cuanto mayor sea el objeto, el más grande y más suave se convierte en la sombra. Ten en cuenta que los objetos con privilegios elevados no es necesario tener sombras, pero sombras indicar la elevación.
 
-En aplicaciones para UWP, sombras deben estar intencionado y no estético. Si las sombras reducen el foco y la productividad, a continuación, limitar el uso de instantáneas.
+En las aplicaciones para UWP, sombras deben solapen, no estéticos. Si las sombras reducen el foco y la productividad, a continuación, limitar el uso de sombra.
 
 Puedes usar las sombras con la ThemeShadow o DropShadow APIs.
 
@@ -102,12 +102,12 @@ Los siguientes controles comunes usará automáticamente ThemeShadow para modela
 
 ### <a name="themeshadow-in-popups"></a>ThemeShadow en los elementos emergentes
 
-ThemeShadow automáticamente proyecta sombras cuando se aplican a cualquier elemento XAML en un [elemento emergente](/uwp/api/windows.ui.xaml.controls.primitives.popup). Transmitirá sombras en el contenido de la aplicación en segundo plano detrás de él y los elementos emergentes otros abiertos por debajo de él.
+ThemeShadow automáticamente proyecta sombras cuando se aplican a cualquier elemento XAML en un [elemento emergente](/uwp/api/windows.ui.xaml.controls.primitives.popup). Transmitirá sombras sobre el contenido de la aplicación en segundo plano detrás de él y los elementos emergentes otros abiertos por debajo de él.
 
 Para usar ThemeShadow con elementos emergentes, usa el `Shadow` propiedad para aplicar un ThemeShadow a un elemento XAML. A continuación, elevar el elemento de otros elementos detrás de ella, por ejemplo, usa el componente z de la `Translation` propiedad.
 Para la mayoría de la interfaz de usuario de elemento emergente, la elevación predeterminada recomendada en relación con el contenido de la aplicación en segundo plano es 32 píxeles efectivos.
 
-En este ejemplo se muestra un rectángulo en un elemento emergente de conversión de una sombra al contenido de la aplicación en segundo plano y los otros elementos emergentes detrás de ella:
+En este ejemplo se muestra un rectángulo en un elemento emergente proyecta su sombra sobre el contenido de la aplicación en segundo plano y los otros elementos emergentes detrás de ella:
 
 ```xaml
 <Popup>
@@ -128,7 +128,7 @@ PopupRectangle.Translation += new Vector3(0, 0, 32);
 
 ### <a name="themeshadow-in-other-elements"></a>ThemeShadow en otros elementos
 
-Para dar sombra de un elemento XAML que no está en un elemento emergente, debes especificar explícitamente los demás elementos que pueden recibir la sombra en el `ThemeShadow.Receivers` colección.
+Para realizar la conversión de una sombra de un elemento XAML que no está en un elemento emergente, debes especificar explícitamente los demás elementos que pueden recibir la sombra en el `ThemeShadow.Receivers` colección.
 
 Este ejemplo muestra dos botones que modelar sombras en una cuadrícula detrás de ellos:
 
@@ -154,7 +154,7 @@ Button2.Translation += new Vector3(0, 0, 32);
 
 ### <a name="performance-best-practices-for-themeshadow"></a>Procedimientos recomendados de rendimiento para ThemeShadow
 
-1. Limita el número de elementos personalizada de receptor al mínimo necesario. 
+1. Limitar el número de elementos personalizada de receptor al mínimo necesario. 
 
 2. Si varios elementos de receptor están en la misma elevación, a continuación, intenta combinarlas, como destino un elemento primario único en su lugar.
 
@@ -174,8 +174,8 @@ DropShadow no es automáticamente con capacidad de respuesta en su entorno y no 
 | **Fuente de luz** | Automática (global de manera predeterminada, pero se puede reemplazar por aplicación) | Ninguna |
 | **Se admiten en entornos 3D** | Sí | No |
 
-- Por lo general, se recomienda usar ThemeShadow, que se adapta automáticamente a su entorno.
+- Por lo general, te recomendamos que uses ThemeShadow, que se adapta automáticamente a su entorno.
 - Si tienen más avanzadas escenarios para sombras personalizadas, a continuación, usar DropShadow, lo que permite una mayor personalización.
 - Para hacia atrás compatibilidad, usar DropShadow.
 - Para dudas acerca del rendimiento, limitar el número de sombras o usar DropShadow.
-- En HMDs en 3D es true, utilice ThemeShadow. Dado que DropShadow dibuja en una posición especificada del elemento visual es secundario, desde el lado, tendrá un aspecto como es que flote en el espacio. Por otro lado, ThemeShadow se representan por encima de los elementos visuales que se definen como receptores.
+- En HMDs en 3D es true, utilice ThemeShadow. Dado que DropShadow dibuja en una posición especificada por el objeto visual es secundario, desde el lado, tendrá un aspecto como es que flote en el espacio. Por otro lado, ThemeShadow se representan por encima de los elementos visuales que se definen como receptores.

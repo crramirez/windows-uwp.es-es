@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, centro de desarrollo, configuración de la cuenta, perfil, perfil de cuenta, cuenta de desabollador, configuración de la cuenta de desarrollador
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317607"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360238"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Administrar la configuración de la cuenta y la información del perfil
 
@@ -26,9 +26,9 @@ Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la inf
 
 ## <a name="account-settings"></a>Configuración de la cuenta
 
-Para ver la configuración de la cuenta, haz clic en el icono de engranaje ubicado en la esquina superior derecha del panel y, a continuación, selecciona la **configuración de desarrollador**. Aquí encontrarás los detalles de tu cuenta y vínculos a otras páginas donde puedes ver la información y realizar diversas tareas relacionadas con la cuenta.
+Para ver la configuración de la cuenta, haz clic en el icono de engranaje ubicado en la esquina superior derecha del panel y, a continuación, selecciona la **configuración de desarrollador**. Aquí encontrarás los detalles de tu cuenta y vínculos a otras páginas donde puedes ver información y realizar diversas tareas relacionadas con la cuenta.
 
-En la sección **Detalles de la cuenta**, puedes ver el estado y el tipo de tu cuenta. También puedes ver tu Id. del vendedor y otra información de Id. de publicador. Estos valores se asignan por Microsoft para identificar de forma exclusiva la cuenta de desarrollador y no puede editarse.
+En la sección **Detalles de la cuenta**, puedes ver el estado y el tipo de tu cuenta. También puedes ver tu Id. del vendedor y otra información de Id. de publicador. Estos valores se asignan por Microsoft para identificar de forma exclusiva la cuenta de desarrollador y no se pueden editar.
 
 > [!NOTE]
 > Los detalles de identidad de las aplicaciones individuales pueden encontrarse en la página [Identidad de la aplicación](view-app-identity-details.md) de cada aplicación.

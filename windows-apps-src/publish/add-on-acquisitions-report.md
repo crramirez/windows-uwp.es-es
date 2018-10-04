@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ventas de complementos, adquisiciones de complementos, ventas de iap, productos desde la aplicación, IAP, complementos
 ms.localizationpriority: medium
 ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317635"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358327"
 ---
 # <a name="add-on-acquisitions-report"></a>Informe de adquisiciones de complementos
 
@@ -32,7 +32,7 @@ En este informe, una adquisición de complemento significa que un cliente te ha 
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puedes seleccionar **1 H** o **72 H** para mostrar los datos de compra en casi en tiempo real para una hora o 72 horas; estos períodos de tiempo solo se aplican a la pestaña de **complemento diario** del gráfico de **adquisiciones de complementos** y a la pestaña de **adquisiciones** del gráfico **mercados** . 
+Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puedes seleccionar **1 H** o **72 H** para mostrar los datos de compra en casi en tiempo real para una hora o 72 horas; estos períodos de tiempo solo se aplican a la pestaña de **complemento diariamente** del gráfico de **adquisiciones de complementos** y a la pestaña de **adquisiciones** del gráfico **mercados** . 
 
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por complementos específicos, por mercado o por tipo de dispositivo.
 

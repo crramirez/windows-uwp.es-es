@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313477"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360560"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar la cuenta de pago y los formularios fiscales
 
@@ -158,7 +158,7 @@ La información proporcionada en los formularios fiscales determina la tasa de r
 
 ### <a name="tax-treaty-benefits"></a>Beneficios por tratado fiscal
 
-Si estás fuera de los Estados Unidos, quizás puedas aprovechar los beneficios por tratado fiscal. Estos beneficios varían de un país a otro y es posible que te permiten reducir la cantidad de impuestos retenidos por Microsoft Store. Para reclamar beneficios por tratado fiscal, completa la Parte II del formulario W-8BEN. Te recomendamos que te comuniques con los recursos correspondientes de tu país o región para determinar si estos beneficios se aplican en tu caso.
+Si estás fuera de los Estados Unidos, quizás puedas aprovechar los beneficios por tratado fiscal. Estos beneficios varían de un país a otro y es posible que te permiten reducir la cantidad de impuestos retenidos por la Microsoft Store. Para reclamar beneficios por tratado fiscal, completa la Parte II del formulario W-8BEN. Te recomendamos que te comuniques con los recursos correspondientes de tu país o región para determinar si estos beneficios se aplican en tu caso.
 
  
 

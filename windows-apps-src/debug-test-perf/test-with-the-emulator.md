@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4320087"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360870"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows10 Mobile
 
@@ -29,7 +29,7 @@ Puedes probar tu aplicación universal con una imagen de emulador de Windows 10 
 
 El equipo debe cumplir los siguientes requisitos:
 
-CPU (estas opciones de configuración, si está disponible, se pueden habilitar en el BIOS)
+CPU (estas opciones de configuración, si está disponible, pueden estar habilitados en el BIOS)
 
 -   Virtualización asistida por hardware ([comprobar la compatibilidad](https://www.microsoft.com/download/details.aspx?id=592)).
 -   Traducción de direcciones de segundo nivel (SLAT).
@@ -53,14 +53,14 @@ Microsoft Emulator para Windows 10 Mobile requiere Visual Studio 2015 o posterio
 
 Emulador de Microsoft para Windows 10 Mobile no puede cargar las aplicaciones orientadas a versiones del Windows Phone OS anteriores a Windows Phone OS 7.1.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalación, desinstalación y ejecuta el emulador
+## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalar, desinstalar y ejecutar el emulador
 
 ### <a name="installing"></a>Instalar
 El Emulador de Microsoft para Windows 10 Mobile se incluye como parte del SDK de Windows 10. El SDK de Windows 10 y el emulador se pueden instalar como parte de la instalación de Visual Studio. Consulta la [página de descarga de Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
 
 También puedes instalar el Emulador de Microsoft para Windows 10 Mobile con el [programa de configuración del Emulador de Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=615095).
 
-### <a name="uninstalling"></a>Desinstalación
+### <a name="uninstalling"></a>Desinstalar
 
 Puedes desinstalar el Emulador de Microsoft para Windows 10 Mobile con el programa de configuración/reparación de Visual Studio. O puedes usar **Programas y características** de **Panel de control** para quitar el emulador.
 
@@ -68,7 +68,7 @@ Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador vir
 
 ### <a name="running"></a>Running
 
-Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado desde el menú desplegable **Ejecutar** en Visual Studio.
+Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado del menú desplegable **de ejecución** en Visual Studio.
 
 ![Emuladores disponibles con resolución, tamaño y memoria](images/em-list.png)
 

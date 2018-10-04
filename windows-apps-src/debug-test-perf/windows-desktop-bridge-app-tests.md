@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Pruebas de aplicación Puente de dispositivo de escritorio de Windows
-description: Usar las pruebas integradas del puente de escritorio para garantizar que la aplicación de escritorio está optimizada para su conversión a una aplicación para UWP.
+description: Usar pruebas integradas del puente de escritorio para garantizar que la aplicación de escritorio está optimizada para su conversión a una aplicación para UWP.
 ms.author: pafarley
 ms.date: 12/18/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316809"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359917"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
 
@@ -214,7 +214,7 @@ Las aplicaciones Puente de dispositivo de escritorio pueden aprovechar algunas A
  
 **Detalles de la prueba**  
 Esta prueba verifica todos los componentes para UWP en la aplicación:
-* Comprueba que cada archivo binario administrado dentro del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP de la tabla de direcciones de importación del código binario.
+* Comprueba que cada archivo binario administrado dentro del paquete de la aplicación no tiene una dependencia en una API de Win32 que no es compatible para el desarrollo de aplicaciones para UWP con la tabla de direcciones de importación del código binario.
 * Comprueba que cada binario administrado en el paquete de la aplicación no toma una dependencia de una función fuera del perfil aprobado. 
 
 **Acciones correctivas**  
@@ -273,7 +273,7 @@ La comprobación de archivos prohibidos del Kit para la certificación de aplica
 Esta comprobación suele producir un error cuando una aplicación usa una versión preliminar del archivo en lugar de la versión oficial más reciente. 
 
 **Acciones correctivas**  
-Para corregir este problema, usa la versión más reciente del [SDK de mapas de Bing](http://go.microsoft.com/fwlink/p/?linkid=614880) para aplicaciones para UWP.
+Para corregir esto, usa la versión más reciente del [SDK de mapas de Bing](http://go.microsoft.com/fwlink/p/?linkid=614880) para aplicaciones para UWP.
 
 #### <a name="82-private-code-signing"></a>8.2 Firma de código privado
 Prueba la existencia de archivos binarios de firma de código privado en el paquete de la aplicación. 

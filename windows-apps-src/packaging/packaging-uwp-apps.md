@@ -14,11 +14,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4320019"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359407"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Empaquetar una aplicación para UWP con Visual Studio
 
@@ -102,7 +102,7 @@ Puedes hacerlo mediante el asistente **Crear paquetes de aplicaciones**. Sigue e
 4.  Inicia sesión con tu cuenta de desarrollador en el Centro de desarrollo de Windows. Si aún no tienes una cuenta de desarrollador, el asistente te ayudará a crear una.
 5.  Selecciona el nombre de aplicación para el paquete o reserva uno nuevo si todavía no lo has hecho en el portal del Centro de desarrollo de Windows.  
     ![Visualización de la ventana Crear paquetes de aplicaciones con la selección del nombre de aplicación](images/packaging-screen4.jpg)
-6.  Asegúrate de seleccionar las tres configuraciones de arquitectura (x86, x64 y ARM) en el diálogo **Seleccionar y configurar paquetes** para garantizar que tu aplicación se puede implementar en la gama de dispositivos más amplia. En el cuadro de lista **Crear lote de aplicaciones**, selecciona **Siempre**. Se prefiere una recopilación de aplicación (.appxbundle) a través de un archivo de paquete de aplicación única porque contiene una colección de paquetes de aplicación configurados para cada tipo de arquitectura de procesador. Cuando eliges generar la recopilación de aplicación, esta se incluirá en el archivo de carga (.appxupload) del paquete final junto con la información de depuración a análisis de bloqueo. Si no estás seguro de qué arquitecturas elegir o quieres obtener más información sobre qué arquitecturas se usan en varios dispositivos, consulta [Arquitecturas de paquete de aplicación](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
+6.  Asegúrate de seleccionar las tres configuraciones de arquitectura (x86, x64 y ARM) en el diálogo **Seleccionar y configurar paquetes** para garantizar que tu aplicación se puede implementar en la gama de dispositivos más amplia. En el cuadro de lista **Crear lote de aplicaciones**, selecciona **Siempre**. Un lote de aplicaciones (.appxbundle) se prefiere un archivo de paquete de aplicación única porque contiene una colección de paquetes de aplicación configurados para cada tipo de arquitectura de procesador. Cuando eliges generar la recopilación de aplicación, esta se incluirá en el archivo de carga (.appxupload) del paquete final junto con la información de depuración a análisis de bloqueo. Si no estás seguro de qué arquitecturas elegir o quieres obtener más información sobre qué arquitecturas se usan en varios dispositivos, consulta [Arquitecturas de paquete de aplicación](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
     ![Visualización de la ventana de Crear paquetes de aplicaciones con la configuración del paquete](images/packaging-screen5.jpg)
 
 
@@ -145,7 +145,7 @@ Introducidos en la Actualización de aniversario de Windows 10, los paquetes de 
 > El instalador de aplicación da por hecho que el dispositivo confía en la aplicación. Si estás realizando la instalación de prueba de una aplicación de desarrollador o empresarial, tendrás que instalar el certificado de firma en el almacén de Entidades de certificación raíz de personas de confianza o editores de confianza en el dispositivo. Si no estás seguro de cómo hacerlo, consulta [Instalar certificados de prueba](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates).
 
 ### <a name="sideload-your-app-on-previous-versions-of-windows"></a>Transferir localmente la aplicación en versiones anteriores de Windows
-Con los paquetes de aplicación para UWP, las aplicaciones no se instalan en un dispositivo ya que están con aplicaciones de escritorio. Por lo general, descargas aplicaciones para UWP desde Microsoft Store, que también instala la aplicación en el dispositivo para ti. Las aplicaciones se pueden instalar sin publicarlas en la Store (instalación de prueba). Esto te permite instalar y aplicaciones de prueba con el paquete de la aplicación de archivos que haya creado. Si tienes una aplicación que no quieres vender en la Store, como una aplicación de línea de negocio (LOB), puedes realizar la instalación de prueba de dicha aplicación para que otros usuarios de la empresa pueden usarla.
+Con los paquetes de aplicación para UWP, las aplicaciones no se instalan en un dispositivo ya que están con aplicaciones de escritorio. Por lo general, descargas aplicaciones para UWP desde Microsoft Store, que también instala la aplicación en el dispositivo para ti. Las aplicaciones se pueden instalar sin publicarlas en la Store (instalación de prueba). Esto te permite instalar y aplicaciones de prueba con el paquete de la aplicación de archivo que haya creado. Si tienes una aplicación que no quieres vender en la Store, como una aplicación de línea de negocio (LOB), puedes realizar la instalación de prueba de dicha aplicación para que otros usuarios de la empresa pueden usarla.
 
 La siguiente lista proporciona los requisitos para la instalación de prueba de la aplicación.
 

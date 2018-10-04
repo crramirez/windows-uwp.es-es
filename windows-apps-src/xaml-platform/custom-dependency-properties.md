@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315915"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360726"
 ---
 # <a name="custom-dependency-properties"></a>Propiedades de dependencia personalizadas
 
@@ -79,7 +79,7 @@ Para que tu propiedad sea una propiedad de dependencia, debes registrarla en un 
 En los lenguajes de Microsoft .NET (C# y Microsoft Visual Basic), llama a [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) en el cuerpo de la clase (dentro de la clase, pero fuera de las definiciones de miembro). La llamada al método [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) proporciona este identificador como valor de retorno. La llamada a [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) se realiza normalmente como un constructor estático o como parte de la inicialización de una propiedad **public static readonly** de tipo [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) como parte de la clase. Esta propiedad expone el identificador de tu propiedad de dependencia. Estos son algunos ejemplos de la llamada a [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829).
 
 > [!NOTE]
-> Registro de la propiedad de dependencia como parte del identificador de la definición de la propiedad es la implementación típica, pero también puede registrar una propiedad de dependencia en el constructor estático de la clase. Este enfoque tiene sentido si necesitas más de una línea de código para inicializar la propiedad de dependencia.
+> Registro de la propiedad de dependencia como parte del identificador de definición de la propiedad es la implementación típica, pero también puede registrar una propiedad de dependencia en el constructor estático de la clase. Este enfoque tiene sentido si necesitas más de una línea de código para inicializar la propiedad de dependencia.
 
 Para C++ / CX, tienes opciones para dividir la implementación entre el encabezado y el archivo de código. La división típica consiste en declarar el propio identificador como propiedad **public static** en el encabezado con una implementación de **get**, pero sin **set**. La implementación **get** hace referencia a un campo privado, que es una instancia de [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) sin inicializar. También puedes declarar los contenedores y las implementaciones **get** y **set** del contenedor. En este caso, el encabezado incluye una implementación mínima. Si el contenedor necesita atribución de Windows Runtime, inclúyela también en el encabezado. Pon la llamada de [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) en el archivo de código, dentro de la función auxiliar que solo se ejecuta cuando la aplicación se inicializa por primera vez. Usa el valor devuelto de **Register** para rellenar los identificadores estáticos pero sin inicializar que has declarado en el encabezado, que estableciste inicialmente en **nullptr**, en el ámbito raíz del archivo de implementación.
 
@@ -170,14 +170,14 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> Para C++ / CX en el código, la razón para tener un campo privado y una propiedad pública de solo lectura que [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) de superficies es para que otros llamadores que usan tu propiedad de dependencia también pueden usar la utilidad del sistema de propiedades API que requieren la identificador sea público. Si haces que el identificador sea privado, los usuarios no podrán usar estas API de utilidad. Algunos ejemplos de estas API y escenarios son [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) o [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) a elegir, [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) y [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). No puedes usar un campo público para esto porque las reglas de metadatos de Windows Runtime no admiten campos públicos.
+> Para C++ / CX en el código, la razón para tener un campo privado y una propiedad pública de solo lectura que superficies [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) es para que otros llamadores que usan tu propiedad de dependencia también pueden usar la utilidad del sistema de propiedades API que requieren la identificador sea público. Si haces que el identificador sea privado, los usuarios no podrán usar estas API de utilidad. Algunos ejemplos de estas API y escenarios son [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) o [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) a elegir, [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) y [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). No puedes usar un campo público para esto porque las reglas de metadatos de Windows Runtime no admiten campos públicos.
 
 ## <a name="dependency-property-name-conventions"></a>Convenciones de nomenclatura para propiedades de dependencia
 
 Existen convenciones de nomenclatura para las propiedades de dependencia; síguelas siempre, salvo en circunstancias excepcionales. La propiedad de dependencia en sí tiene un nombre básico ("Label" en el ejemplo anterior) que se proporciona como el primer parámetro de [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829). El nombre debe ser único en cada tipo de registro, y este requisito también se aplica a todos los miembros heredados. Las propiedades de dependencia heredadas mediante tipos base ya se consideran parte del tipo de registro; los nombres de las propiedades heredadas no se pueden volver a registrar.
 
 > [!WARNING]
-> Aunque el nombre que proporciones que aquí puede ser cualquier identificador de cadena que es válido en la programación del lenguaje que uses, por lo general, quieres poder establecer tu propiedad de dependencia en XAML. Para poder establecerse en XAML, el nombre de propiedad que elijas debe ser un nombre XAML válido. Para obtener más información, consulta [Introducción a XAML](xaml-overview.md).
+> Aunque el nombre que proporciones que aquí puede ser cualquier identificador de cadena que es válido en la programación del lenguaje que uses, normalmente quieres poder establecer tu propiedad de dependencia en XAML. Para poder establecerse en XAML, el nombre de propiedad que elijas debe ser un nombre XAML válido. Para obtener más información, consulta [Introducción a XAML](xaml-overview.md).
 
 Cuando crees la propiedad de identificador, combina el nombre de la propiedad tal y como lo registraste con el sufijo "Property" ("LabelProperty", por ejemplo). Esta propiedad es el identificador de la propiedad de dependencia y se usa como entrada para las llamadas a [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) y [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) que hagas en tus propios contenedores de propiedad. También lo usa el sistema de propiedades y los procesadores XAML como [**{x:Bind}**](x-bind-markup-extension.md)
 
@@ -251,7 +251,7 @@ En los anteriores ejemplos de llamada a [**DependencyProperty.Register**](https:
 Normalmente deberás proporcionar [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) como instancia creada en línea, dentro de los parámetros de [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829).
 
 > [!NOTE]
-> Si vas a definir una implementación de [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) , debes usar el método de utilidad [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) en lugar de llamar a un constructor [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir la instancia **PropertyMetadata** .
+> Si vas a definir una implementación de [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) , debes usar el método de utilidad [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) en lugar de llamar a un constructor del [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir la instancia del **PropertyMetadata** .
 
 El siguiente ejemplo modifica los ejemplos mostrados anteriormente [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) al hacer referencia a una instancia de [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) con un valor de [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770). La implementación de la devolución de llamada "OnLabelChanged" se mostrará más adelante en esta sección.
 

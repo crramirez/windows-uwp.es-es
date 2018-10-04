@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, juegos, games, controlador para juegos, gamepad, vibración, vibration
 ms.localizationpriority: medium
 ms.openlocfilehash: 2bf78b43bb09f97c196858d7cc4fcdb1e71462fc
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319883"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359220"
 ---
 # <a name="gamepad-and-vibration"></a>Controlador para juegos y vibración
 
@@ -100,7 +100,7 @@ El sistema administra los controladores para juegos, por lo tanto, no tendrás q
 
 La clase [Gamepad][] proporciona una propiedad estática, [Gamepads][], que es una lista de solo lectura de los controladores para juegos que están actualmente conectados. Dado que probablemente solo te interesen algunos de los controladores para juegos conectados, se recomienda mantener tu propia colección en lugar de acceder a ellos a través de la `Gamepads` propiedad.
 
-El siguiente ejemplo copia todos los controladores para juegos conectados en una nueva colección. Ten en cuenta que, debido a otros subprocesos en segundo plano tendrán acceso a esta colección (en los eventos [GamepadAdded][] y [GamepadRemoved][] ), debes colocar un bloqueo alrededor de cualquier código que lee o actualiza la colección.
+El siguiente ejemplo copia todos los controladores para juegos conectados en una nueva colección. Ten en cuenta que dado que otros subprocesos en segundo plano tendrán acceso a esta colección (en los eventos [GamepadAdded][] y [GamepadRemoved][] ), debes establecer un bloqueo alrededor de cualquier código que lee o actualiza la colección.
 
 ```cpp
 auto myGamepads = ref new Vector<Gamepad^>();
@@ -146,7 +146,7 @@ private void GetGamepads()
 
 ### <a name="adding-and-removing-gamepads"></a>Agregar y quitar controladores para juegos
 
-Cuando se agrega o se quita un controlador para juegos, se generan los eventos [GamepadAdded][] y [GamepadRemoved][] . Puedes registrar controladores de estos eventos para realizar un seguimiento de los controladores para juegos que están conectados actualmente.
+Cuando se agrega o quita un controlador para juegos, se generan los eventos [GamepadAdded][] y [GamepadRemoved][] . Puedes registrar controladores de estos eventos para realizar un seguimiento de los controladores para juegos que están conectados actualmente.
 
 En el siguiente ejemplo se inicia el seguimiento de un controlador para juegos que se ha agregado.
 
@@ -183,7 +183,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-El siguiente ejemplo detiene el seguimiento de un controlador para juegos que se ha quitado. También tendrás que controlar lo que sucede con los controladores para juegos que estás realizando un seguimiento cuando se quitan; Por ejemplo, este código solo realiza un seguimiento de la entrada de un controlador para juegos y simplemente se establece en `nullptr` cuando se quita. Tendrás que comprobar cada fotograma si el controlador para juegos está activo y qué controlador para juegos está recopilación entrada desde cuando estén conectados y desconecta los controladores de actualización.
+El siguiente ejemplo detiene el seguimiento de un controlador para juegos que se ha quitado. También tendrás que controlar lo que sucede con los controladores para juegos que estás realizando un seguimiento cuando se quiten; Por ejemplo, este código solo realiza un seguimiento de la entrada de un controlador para juegos y simplemente se establece en `nullptr` cuando se quita. Tendrás que comprobar cada fotograma si el controlador para juegos está activo y qué controlador para juegos está recopilación entrada desde cuando los controladores estén conectados y desconectados de actualización.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -374,7 +374,7 @@ if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
 }
 ```
 
-A veces, es posible que quieras determinar si un botón que no o lo estaba, si se presionan o liberan varios botones o si un conjunto de botones está dispuesto de un modo determinado&mdash;algunos presionados y otros no. Para obtener información sobre cómo detectar cada una de estas condiciones, consulta [Detecting button transitions (Detección de transiciones de botón)](input-practices-for-games.md#detecting-button-transitions) y [Detecting complex button arrangements (Detección de disposiciones de botones complejas)](input-practices-for-games.md#detecting-complex-button-arrangements).
+A veces, es posible que quieras determinar si un botón está presionado que no o no estaba, si se presionan o liberan varios botones o si un conjunto de botones está dispuesto de un modo determinado&mdash;algunos presionados y otros no. Para obtener información sobre cómo detectar cada una de estas condiciones, consulta [Detecting button transitions (Detección de transiciones de botón)](input-practices-for-games.md#detecting-button-transitions) y [Detecting complex button arrangements (Detección de disposiciones de botones complejas)](input-practices-for-games.md#detecting-complex-button-arrangements).
 
 ## <a name="run-the-gamepad-input-sample"></a>Ejecutar la muestra de entrada del controlador para juegos
 
@@ -384,13 +384,13 @@ La [muestra de GamepadUWP _(github)_](https://github.com/Microsoft/Xbox-ATG-Samp
 
 Los motores de vibración dentro de un controlador para juegos se usan para proporcionar información táctil al usuario. Los juegos usan esta capacidad para crear una mayor sensación de inmersión, para ayudar a comunicar información de estado (por ejemplo, sufrir daños), para indicar la proximidad de objetos importantes o para otros usos creativos.
 
-Los controladores para juegos de Xbox One están equipados con un total de cuatro motores de vibración independientes. Dos son motores grandes ubicados en el cuerpo del controlador para juegos; el motor izquierdo proporciona una vibración brusca alto, mientras que el motor derecho proporciona una vibración suave, más sutil. Los otros dos son motores pequeños, dentro de cada gatillo, que proporcionan nítidas ráfagas de vibración directamente a los dedos del usuario del gatillo; esta capacidad única de los controladores para juegos de Xbox One es la razón por la que se hace referencia a sus gatillos como _gatillos de impulso_. Al orquestar estos motores, se puede producir una amplia gama de sensaciones táctiles.
+Los controladores para juegos de Xbox One están equipados con un total de cuatro motores de vibración independientes. Dos son motores grandes ubicados en el cuerpo del controlador para juegos; el motor izquierdo proporciona una vibración brusca de alta, mientras que el motor derecho proporciona una vibración suave, más sutil. Los otros dos son motores pequeños, dentro de cada gatillo, que proporcionan nítidas ráfagas de vibración directamente a los dedos del usuario del gatillo; esta capacidad única de los controladores para juegos de Xbox One es la razón por la que se hace referencia a sus gatillos como _gatillos de impulso_. Al orquestar estos motores, se puede producir una amplia gama de sensaciones táctiles.
 
 ## <a name="using-vibration-and-impulse"></a>Uso de vibración e impulso
 
 La vibración del controlador para juegos se controla mediante la propiedad [Vibration][] de la clase [Gamepad][]. `Vibration` Es una instancia de la estructura [GamepadVibration][] que se compone de cuatro valores de punto flotante. Cada valor representa la intensidad de uno de los motores.
 
-Aunque los miembros de la `Gamepad.Vibration` propiedad se puede modificar directamente, se recomienda inicializar independiente `GamepadVibration` instancia a los valores que desee y, a continuación, copia en el `Gamepad.Vibration` propiedad para cambiar las intensidades del motor reales a la vez.
+Aunque los miembros de la `Gamepad.Vibration` propiedad se puede modificar directamente, se recomienda inicializar un independiente `GamepadVibration` instancia a los valores que desee y, a continuación, copiarla en el `Gamepad.Vibration` propiedad para cambiar las intensidades del motor reales a la vez.
 
 En el siguiente ejemplo se muestra cómo cambiar todas las intensidades del motor a la vez.
 

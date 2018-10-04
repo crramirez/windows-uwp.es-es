@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submission, envío piloto, status, estado
 ms.localizationpriority: medium
 ms.openlocfilehash: 9dbc15b2418c79aa3dee922a61c70364835afe87
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319311"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359993"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a>Obtener el estado de un envío de paquete piloto
 
@@ -105,7 +105,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de paquetes piloto](manage-flight-submissions.md)
 * [Obtener un envío de aplicación](get-an-app-submission.md)
-* [Create an app submission (Crear un envío de aplicación)](create-an-app-submission.md)
+* [Crear un envío de aplicación](create-an-app-submission.md)
 * [Confirmar un envío de aplicación](commit-an-app-submission.md)
 * [Actualizar un envío de aplicación](update-an-app-submission.md)
 * [Eliminar un envío de aplicación](delete-an-app-submission.md)

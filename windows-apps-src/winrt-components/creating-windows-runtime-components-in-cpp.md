@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313795"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358384"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>Crear componentes de Windows Runtime en C++/CX
 > [!NOTE]
@@ -29,7 +29,7 @@ Hay varias razones para compilar un componente de Windows Runtime.
 
 Al compilar una solución que contiene un proyecto de JavaScript o. NET y un proyecto de componente de Windows Runtime, los archivos de proyecto de JavaScript y la DLL compilada se combinan en un paquete que se puede depurar localmente en el simulador o remotamente en un dispositivo amarrado. También puedes distribuir solo el proyecto del componente como un SDK de extensión. Para obtener más información, consulta [Crear un kit de desarrollo de software](https://msdn.microsoft.com/library/hh768146.aspx).
 
-En general, cuando escribas el código C + / componente CX, usa la biblioteca de C++ regular y los tipos integrados, excepto en el límite de la interfaz binaria abstracta (ABI) donde pasas los datos hacia y desde el código de otro paquete .winmd. Allí, usa los tipos de Windows Runtime y la sintaxis especial que C++ / CX admite para crear y manipular esos tipos. Además, en su C++ / CX en el código, usa tipos como delegate y event para implementar los eventos que se pueden genera desde tu componente y controlar en JavaScript, Visual Basic, C++ o C#. Para obtener más información sobre C++ / sintaxis CX, consulta [referencia de lenguaje de Visual C++ (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
+En general, cuando escribas el código C + / componente CX, usa la biblioteca de C++ regular y los tipos integrados, excepto en los límites de la interfaz binaria abstracta (ABI) donde pasas los datos hacia y desde el código de otro paquete .winmd. Allí, usa tipos de Windows Runtime y la sintaxis especial que C++ / CX admite para crear y manipular esos tipos. Además, en su C++ / CX en el código, usa tipos como delegate y event para implementar los eventos que se pueden genera desde tu componente y controlar en JavaScript, Visual Basic, C++ o C#. Para obtener más información sobre C++ / sintaxis CX, consulta [referencia de lenguaje de Visual C++ (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
 ## <a name="casing-and-naming-rules"></a>Reglas de nomenclatura y del uso de mayúsculas y minúsculas
 
@@ -131,7 +131,7 @@ namespace CppComponent
 }
 ```
 
-Para pasar las estructuras de valor definida por el usuario a través de la ABI, define un objeto de JavaScript que tiene los mismos miembros que la estructura de valor que se define en C++ / CX. Puedes pasar ese objeto como argumento a C++ / método CX para que el objeto se convierta implícitamente a C++ / tipo CX.
+Para pasar las estructuras de valor definida por el usuario a través de la ABI, define un objeto de JavaScript que tiene los mismos miembros que la estructura de valor que se define en C++ / CX. A continuación, puedes pasar ese objeto como un argumento para C++ / método CX para que el objeto se convierte implícitamente a C++ / tipo CX.
 
 ```javascript
 // Get and set the value struct
@@ -242,7 +242,7 @@ function SetAndGetDate() {
 }
 ```
 
-Cuando un lenguaje .NET pasa System.DateTime a C++ / componente CX, el método lo acepta como un Windows::Foundation::DateTime. Cuando el componente pasa Windows::Foundation::DateTime a un método de .NET Framework, el método Framework lo acepta como DateTimeOffset.
+Cuando un lenguaje .NET pasa System.DateTime a C++ / CX componente, el método acepta como un Windows::Foundation::DateTime. Cuando el componente pasa Windows::Foundation::DateTime a un método de .NET Framework, el método Framework lo acepta como DateTimeOffset.
 
 ```csharp
 private void DateTimeExample()
@@ -396,7 +396,7 @@ nativeObject.propertyB = "What is the meaning of the universe?";
 document.getElementById('P9').innerHTML += nativeObject.propertyB;
 ```
 
-Los lenguajes .NET a propiedades en nativo C++ / objeto CX como si estuvieran en un objeto de .NET Framework.
+Los lenguajes .NET tener acceso a las propiedades de nativo C++ / objeto CX como si estuvieran en un objeto de .NET Framework.
 
 ```csharp
 private void GetAProperty()
@@ -556,9 +556,9 @@ Cuando se depura una solución de JavaScript que tiene un archivo DLL del compon
 
 Asegúrate de seleccionar las funcionalidades adecuadas en el diseñador de paquetes. Por ejemplo, si estás intentando abrir un archivo de imagen en la biblioteca de imágenes del usuario mediante las API de Windows Runtime, asegúrate de seleccionar la casilla de la biblioteca de imágenes en el panel de capacidades del diseñador de manifiestos.
 
-Si tu código JavaScript aparentemente no reconoce las propiedades o métodos públicos en el componente, asegúrate de que estás usando la convención Camel de mayúsculas y minúsculas en JavaScript. Por ejemplo, el c++ LogCalc / CX método debe referenciarse como logCalc en JavaScript.
+Si tu código JavaScript aparentemente no reconoce las propiedades o métodos públicos en el componente, asegúrate de que estás usando la convención Camel de mayúsculas y minúsculas en JavaScript. Por ejemplo, el c++ LogCalc + / CX método debe referenciarse como logCalc en JavaScript.
 
 Si quitas C++ / CX Windows Runtime proyecto de componente de una solución, también debes quitar manualmente la referencia de proyecto del proyecto de JavaScript. De lo contrario, no se efectuará la depuración o las operaciones de compilación posteriores. Si es necesario, a continuación puedes agregar una referencia de ensamblado a la DLL.
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Tutorial: Crear un componente básico de Windows Runtime en C++ / CX y llamarlo desde JavaScript o C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)
+* [Tutorial: Creación de un componente de Windows Runtime básico en C++/CX y llamarlo desde JavaScript o C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)
