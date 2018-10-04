@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, vínculo, protocolo de la tienda windows, vincular a una aplicación, vincular a aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319089"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361330"
 ---
 # <a name="link-to-your-app"></a>Vincular a la aplicación
 
@@ -36,7 +36,7 @@ Puedes vincular directamente a la descripción de la aplicación mediante un dis
 Para crear el distintivo, visita la página de [distintivos de Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkID=534236) . Debes tener el **Id. de la Tienda** de 12 caracteres de la aplicación para generar el distintivo y un vínculo. Encontrarás el **Id. de la Tienda** de la aplicación en la página [Identidad de la aplicación](view-app-identity-details.md) en la sección **Administración de aplicaciones**.
 
 > [!NOTE]
-> Consulta las [directrices de marketing de la aplicación](app-marketing-guidelines.md) para obtener información y requisitos relacionados con el uso de la tarjeta de Microsoft Store.
+> Consulta las [directrices de marketing de aplicación](app-marketing-guidelines.md) para obtener información y requisitos relacionados con el uso de la tarjeta de Microsoft Store.
 
 
 ## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Vincular directamente a la aplicación en Microsoft Store

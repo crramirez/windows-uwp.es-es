@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315787"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355600"
 ---
 # <a name="debug-a-background-task"></a>Depurar una tarea en segundo plano
 
@@ -34,7 +34,7 @@ En este tema se supone que tienes una aplicación existente con una tarea en seg
 
 -   En C# y C++, asegúrate de que el proyecto principal hace referencia al proyecto de tarea en segundo plano. Si esta referencia no se realiza, la tarea en segundo plano no se incluirá en el paquete de la aplicación.
 -   En C# y C++, asegúrate de que el **Tipo de resultado** del proyecto de tarea en segundo plano sea "Componente de Windows Runtime".
--   La clase de segundo plano debe declararse en el atributo de punto de entrada en el manifiesto del paquete.
+-   La clase en segundo plano debe declararse en el atributo de punto de entrada en el manifiesto del paquete.
 
 ## <a name="trigger-background-tasks-manually-to-debug-background-task-code"></a>Desencadenar manualmente tareas en segundo plano para depurar el código de la tarea en segundo plano
 
@@ -83,7 +83,7 @@ La activación de la tarea en segundo plano depende de tres cosas:
 
     1.  Abre el visor de eventos; para ello, ve a la pantalla Inicio y busca eventvwr.exe.
     2.  Ve a **Servicios de registros de aplicaciones y**  - &gt; **Microsoft**  - &gt; **Windows**  - &gt; **BackgroundTaskInfrastructure** en el Visor de eventos.
-    3.  En el panel Acciones, selecciona **vista**  - &gt; **Mostrar Depurar registros analíticos y** para habilitar el inicio de sesión.
+    3.  En el panel Acciones, selecciona **vista**  - &gt; **Mostrar Depurar registros analíticos y** para habilitar el registro de diagnóstico.
     4.  Selecciona el **Registro de diagnóstico** y haz clic en **Habilitar registro**.
     5.  Ahora, intenta usar tu aplicación para registrar y activar de nuevo la tarea en segundo plano.
     6.  Consulta los registros de diagnóstico para obtener información detallada del error. Esto incluirá el punto de entrada registrado para la tarea en segundo plano.
@@ -115,7 +115,7 @@ Para obtener más información sobre cómo usar VS para depurar una tarea en seg
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Cómo desencadenar suspender, reanudar y eventos en aplicaciones para UWP en segundo plano](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
-* [Analizar la calidad del código de aplicaciones para UWP con análisis de código de Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
+* [Analizar la calidad de código de aplicaciones para UWP con análisis de código de Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
 
  
 

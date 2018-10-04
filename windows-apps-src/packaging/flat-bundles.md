@@ -10,23 +10,23 @@ ms.technology: uwp
 keywords: windows 10, packaging, empaquetado, package configuration, configuración de paquete, flat bundle, recopilación plana
 ms.localizationpriority: medium
 ms.openlocfilehash: 63206619d75bedb92ad6c6d05c3188272c0760de
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315049"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355690"
 ---
 # <a name="flat-bundle-app-packages"></a>Paquetes de aplicaciones de recopilaciones planas 
 
 > [!IMPORTANT]
 > Si quieres enviar la aplicación a la Store, debes ponerte en contacto con [Soporte técnico para desarrolladores de Windows](https://developer.microsoft.com/windows/support) para la aprobación para utilizar recopilaciones planas.
 
-Planas son una manera mejorada de empaquetar archivos del paquete de la aplicación. Un archivo de paquete de la aplicación usa una estructura de varios niveles de empaquetado en el que los archivos del paquete de aplicación deben estar contenidos en el lote de Windows típico, recopilaciones planas eliminan esta necesidad haciendo referencia solo los archivos del paquete de aplicación, lo que les permite estén fuera de la recopilación de aplicación. Dado que los archivos del paquete de aplicación ya no están incluidos en la recopilación, pueden ser paralelos procesado, lo que da como resultado, en última instancia rápida y reduce el tiempo, acelera la publicación (puesto que cada archivo de paquete de la aplicación puede procesarse al mismo tiempo) de carga desarrollo iteraciones.
+Planas son una manera mejorada de empaquetar archivos de paquete de la aplicación. Un archivo de paquete de la aplicación usa una estructura de varios niveles de empaquetado en el que deben estar contenidos dentro de la recopilación de los archivos del paquete de aplicación de Windows típico, recopilaciones planas eliminan esta necesidad haciendo referencia solo los archivos del paquete de aplicación, lo que les permite estén fuera de la recopilación de aplicación. Dado que los archivos del paquete de aplicación ya no están incluidos en el lote, pueden procesarse paralelo, lo que en reduce el tiempo, acelera la publicación (puesto que cada archivo de paquete de la aplicación puede procesarse al mismo tiempo) de carga, en última instancia más rápida y desarrollo iteraciones.
 
 ![Diagrama de la recopilación plana](images/bundle-combined.png)
 
 Otra ventaja de las recopilaciones planas es la necesidad de crear menos paquetes. Dado que solo se hace referencia a los archivos del paquete de aplicación, dos versiones de la aplicación pueden hacer referencia el mismo archivo de paquete si el paquete no cambió entre las dos versiones. Esto permite crear solo los paquetes de aplicaciones que han cambiado al compilar los paquetes para la siguiente versión de la aplicación.
-De manera predeterminada, las recopilaciones planas harán referencia a los archivos de paquete de aplicación dentro de la misma carpeta por sí mismos. Sin embargo, esta referencia puede cambiarse a otras rutas de acceso (rutas de acceso relativas, recursos compartidos de red y ubicaciones http). Para ello, debes proporcionar directamente un **BundleManifest** durante la creación de la recopilación plana. 
+De manera predeterminada, las recopilaciones planas harán referencia a archivos de paquete de aplicación dentro de la misma carpeta por sí mismo. Sin embargo, esta referencia puede cambiarse a otras rutas de acceso (rutas de acceso relativas, recursos compartidos de red y ubicaciones http). Para ello, debes proporcionar directamente un **BundleManifest** durante la creación de la recopilación plana. 
 
 ## <a name="how-to-create-a-flat-bundle"></a>Cómo crear una recopilación plana
 

@@ -15,17 +15,17 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309213"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353252"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
 ![imagen principal](images/header-reveal-highlight.svg)
 
-Mostrar que resaltado es un efecto de iluminación que resalta los elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
+Mostrar que resaltado es un efecto de iluminación que resalta elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
 
 > **API importantes**: [clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [clase RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [clase RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [clase RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [clase VisualState](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
@@ -69,7 +69,7 @@ Mostrar funciona automáticamente para algunos controles. Para otros controles, 
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estas ilustraciones muestran Mostrar resaltado en varios controles diferentes:
+Estas ilustraciones muestran resaltar Reveal en varios controles diferentes:
 
 ![Ejemplos de Reveal](images/RevealExamples_Collage.png)
 

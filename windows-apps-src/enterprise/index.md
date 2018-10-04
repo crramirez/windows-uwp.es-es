@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315643"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351189"
 ---
 # <a name="enterprise"></a>Empresa
 
@@ -29,14 +29,14 @@ Cosas vale la pena una llamada a en primer plano:
 
 ## <a name="whats-new-for-enterprise-applications"></a>Novedades para las aplicaciones empresariales
 
-Hay algunas herramientas, bibliotecas y funcionalidades que se han creado bastante recientemente.
+Este es algunas herramientas, las bibliotecas y funcionalidades que se han creado bastante recientemente.
 
 > [!div class="checklist"]
 > * [Windows Template Studio](#template-studio)
 > * [Controles para crear interfaces de usuario de estilo de escritorio](#desktop-style-UI)
 > * [Controles para admitir escenarios empresariales](#enterprise)
 > * [Biblioteca de la interfaz de usuario de Windows](#UI-library)
-> * [Controles de UWP en aplicaciones de escritorio](#xaml-islands)
+> * [Controles UWP en aplicaciones de escritorio](#xaml-islands)
 > * [.NET Standard 2.0](#standard)
 > * [Conectividad de SQL Server](#sql-server)
 > * [Implementación de MSIX](#MSIX)
@@ -45,7 +45,7 @@ Hay algunas herramientas, bibliotecas y funcionalidades que se han creado bastan
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio es una extensión de Visual Studio 2017 que acelera la creación de nuevas aplicaciones de plataforma Universal de Windows (UWP) con una experiencia basada en el asistente. El proyecto de UWP resultante es correcto y legible del código que incorporan las últimas características de Windows 10 durante la implementación de patrones demostrados y procedimientos recomendados.
+Windows Template Studio es una extensión de Visual Studio 2017 que acelera la creación de nuevas aplicaciones de plataforma Universal de Windows (UWP) con una experiencia basada en el asistente. El proyecto UWP resultante es correcto, legible código que incorporan las últimas características de Windows 10 durante la implementación de patrones demostrados y procedimientos recomendados.
 
 ![Windows Template Studio](images/windows-template-studio.png)
 
@@ -67,7 +67,7 @@ Por ejemplo, los nuevos controles de [barra de menús](https://review.docs.micro
 
 [DataGridView](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid) proporciona una forma flexible para mostrar una colección de datos en filas y columnas.
 
-La [vista de árbol](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) permite una lista jerárquica con la expansión y contracción de nodos que contienen elementos anidados. Puede usarse para ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
+La [vista de árbol](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) permite una lista jerárquica con expansión y contracción de nodos que contienen elementos anidados. Puede usarse para ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
 
 ![Control DataGrid](images/DataGrid.gif)
 
@@ -82,17 +82,17 @@ Consulta la [Biblioteca de la interfaz de usuario de Windows (versión prelimina
 
 <a id="xaml-islands" />
 
-### <a name="uwp-controls-in-desktop-applications"></a>Controles de UWP en aplicaciones de escritorio
+### <a name="uwp-controls-in-desktop-applications"></a>Controles UWP en aplicaciones de escritorio
 
-Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio de WPF, Windows Forms y Win32 de C++. Esto significa que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles UWP, como entrada de lápiz de Windows y los controles que admiten el sistema Fluent Design. Esta característica se denomina Islas XAML.
+Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio de WPF, Windows Forms y Win32 de C++. Esto significa que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles UWP, como entrada de lápiz de Windows y los controles que admiten el sistema Fluent Design. Esta función se denomina Islas XAML.
 
-Consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
+Consulta [controles UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
 
 <a id="standard" />
 
 ### <a name="net-standard-20"></a>.NET Standard 2.0
 
-.NET estándar incluye más de 20 000 más API de .NET estándar 1.x. Esto facilita mucho migrar las bibliotecas de .NET Framework existentes y, a continuación, usarlos entre diferentes aplicaciones. NET, incluida la aplicación para UWP.
+.NET estándar incluye más de 20 000 más API de .NET Standard 1.x. Esto facilita mucho migrar las bibliotecas de .NET Framework existentes y, a continuación, usarlos entre diferentes aplicaciones. NET, incluyendo la aplicación para UWP.
 
 ![NET estándar](images/dot-net-standard-project-template.png)
 
@@ -175,13 +175,13 @@ Hoy en día, muchos usuarios llevan su teléfono o tableta personal al trabajo, 
 
 ## <a name="deployment"></a>Implementación
 
-Tienes varias opciones para distribuir aplicaciones a los usuarios de la organización. Puedes usar Microsoft Store para empresas, administración de dispositivos móviles existentes, o bien puedes transferir localmente aplicaciones en dispositivos. Puedes también realizar las aplicaciones disponibles en general pública publicándolas en Microsoft Store.
+Tienes varias opciones para distribuir aplicaciones a los usuarios de la organización. Puedes usar Microsoft Store para empresas, administración de dispositivos móviles existentes, o bien puedes transferir localmente aplicaciones en dispositivos. Puedes también hacer que las aplicaciones disponibles al general pública publicar en Microsoft Store.
 
 | Tema | Descripción |
 |-------|-------------|
 | [Distribuir aplicaciones de línea de negocio a empresas](https://msdn.microsoft.com/library/windows/apps/mt608995) | Puedes publicar aplicaciones de línea de negocio directamente en las empresas por volumen a través de Microsoft Store para empresas, sin que las aplicaciones estén disponibles para el público. |
 | [Instalación de prueba de aplicaciones](https://technet.microsoft.com/library/mt269549) | Al realizar la instalación de prueba de una aplicación, se implementa un paquete de la aplicación firmado en un dispositivo. Es necesario mantener la firma, el hospedaje y la implementación de estas aplicaciones. Se ha simplificado el proceso de instalación de prueba de aplicaciones para Windows 10.             |
-| [Publicar aplicaciones en Microsoft Store](https://dev.windows.com/publish) | La Microsoft Store unificado te permite publicar y administrar todas las aplicaciones para todos los dispositivos Windows. Personalizar la disponibilidad de la aplicación con el precio de cada mercado, la distribución y visibilidad de los controles y otras opciones. |
+| [Publicar aplicaciones en Microsoft Store](https://dev.windows.com/publish) | La Microsoft Store unificado te permite publicar y administrar todas las aplicaciones para todos los dispositivos de Windows. Personalizar la disponibilidad de la aplicación con el precio de cada mercado, la distribución y visibilidad de los controles y otras opciones. |
 
 ## <a name="enterprise-uwp-samples"></a>Muestras de UWP de empresa
 
@@ -191,8 +191,8 @@ Acción: hablar Josh o Karl para obtener más ejemplos de centrado en la empresa
 
 | Tema |  Descripción |
 |------ |--------------|
-| [Muestra de inventario de VanArsdel](https://github.com/Microsoft/InventorySample) | Una aplicación de Windows 10 muestra (con la plataforma Universal de Windows) se centra en escenarios de línea de negocio, que muestra cómo usar las funcionalidades de Windows más recientes en las aplicaciones de escritorio. La muestra se basa en la creación y administración de clientes, pedidos y productos de la empresa ficticia VanArsdel.
-Destaca MVVM, base de datos SQL, Entity Framework. Lista de otras personas.|
+| [Muestra de inventario de VanArsdel](https://github.com/Microsoft/InventorySample) | Una aplicación de Windows 10 de muestra (con la plataforma Universal de Windows) se centra en escenarios de línea de negocio, que muestra cómo usar las características más recientes de Windows en aplicaciones de escritorio. La muestra se basa en la creación y administración de clientes, pedidos y productos de la empresa ficticia VanArsdel.
+Destaca MVVM, base de datos SQL, Entity Framework. Lista de otros usuarios.|
 
 ## <a name="patterns-and-practices"></a>Patrones y prácticas
 

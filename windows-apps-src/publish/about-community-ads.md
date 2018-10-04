@@ -11,19 +11,19 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ada2e0610e81e986deba3ddab5e87547e05fe108
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313135"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361180"
 ---
 # <a name="about-community-ads"></a>Acerca de los anuncios de la comunidad
 
-Si la aplicación [muestra banners o anuncios de banner intersticiales](../monetize/display-ads-in-your-app.md), puedes entre promocionar tu aplicación con otros desarrolladores de aplicaciones en Microsoft Store para libre. Esta función se denomina *anuncios de la comunidad*.  
+Si la aplicación [muestra banners o anuncios de banner intersticiales](../monetize/display-ads-in-your-app.md), puedes entre promocionar tu aplicación con otros desarrolladores de aplicaciones en la Microsoft Store para libre. Esta función se denomina *anuncios de la comunidad*.  
 
 Así es cómo funciona este programa:
 
-* Después de que participación en anuncios de la Comunidad como se describe a continuación, puedes [crear una campaña de anuncios de la Comunidad gratuita](create-an-ad-campaign-for-your-app.md). Luego, la aplicación compartirá el espacio de anuncios promocionales con otros desarrolladores que también participan en anuncios de la Comunidad. Tu aplicación mostrará anuncios de las aplicaciones publicadas por otros desarrolladores que participan en los anuncios de la comunidad y sus aplicaciones mostrarán anuncios de tu aplicación.
+* Después de que participación en anuncios de la Comunidad como se describe a continuación, puedes [crear una campaña de anuncios de la Comunidad gratuita](create-an-ad-campaign-for-your-app.md). La aplicación, a continuación, compartirá el espacio de anuncios promocionales con otros desarrolladores que también participan en anuncios de la Comunidad. Tu aplicación mostrará anuncios de las aplicaciones publicadas por otros desarrolladores que participan en los anuncios de la comunidad y sus aplicaciones mostrarán anuncios de tu aplicación.
 * Puedes conseguir créditos por el espacio de anuncios promocionales en otras aplicaciones si muestras anuncios de la comunidad en tu aplicación. Los créditos se calculan según el siguiente proceso:
   * Para cada país o región en la que haya una aplicación que ofrece anuncios de la comunidad disponible, el valor de eCPM (costo eficaz por mil impresiones) a la tasa de mercado actual del país o la región se multiplica por el número de solicitudes de anuncios de la comunidad que realiza tu aplicación en ese país o región. Este valor corresponde a los créditos que has obtenido por tu aplicación en ese país o región.
   * El total de créditos obtenidos durante un período de tiempo determinado equivale a la suma de todos los créditos obtenidos en cada país o región por cada una de tus aplicaciones que ofrecen anuncios de la comunidad.
@@ -32,12 +32,12 @@ Así es cómo funciona este programa:
 
 ### <a name="opt-in-to-community-ads"></a>Participar en anuncios de la comunidad
 
-Antes de que puedes crear una campaña de anuncios de la Comunidad para una de las aplicaciones, debes participar en el **monetizar** &gt; página de **anuncios en la aplicación** en el panel del centro de desarrollo de Windows.
+Antes de que puede crear una campaña de anuncios de la Comunidad para una de las aplicaciones, debes participar en el **monetizar** &gt; página de **anuncios en la aplicación** en el panel del centro de desarrollo de Windows.
 
 Para participar en anuncios de la Comunidad para una aplicación para UWP:
 
 1. En la sección de **configuración de mediación** en la página de **anuncios en la aplicación** , selecciona una unidad de anuncios que usas en la aplicación.
-2. Si se selecciona la opción de **Permitir que Microsoft elija la mejor configuración de mediación para tu aplicación** , se habilitan automáticamente para tu unidad de anuncio anuncios de la Comunidad. De lo contrario, selecciona la configuración de base de referencia o una configuración específicas del mercado en la lista desplegable de **destino** y, a continuación, activa la casilla de **anuncios de la Comunidad de Microsoft** en la lista de **otras redes de anuncios** .
+2. Si se selecciona la opción de **Permitir que Microsoft elija la mejor configuración de mediación para tu aplicación** , los anuncios de la Comunidad están habilitados para tu unidad de anuncio automáticamente. De lo contrario, selecciona la configuración de base de referencia o una configuración específicas del mercado en la lista desplegable de **destino** y, a continuación, activa la casilla de **anuncios de la Comunidad de Microsoft** en la lista de **otras redes de anuncios** .
 
     > [!NOTE]
     > Puedes usar los campos de **peso** para especificar la relación de anuncios que quieres mostrar de redes de pago y otras redes de anuncios, incluidos los anuncios de la Comunidad.

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: e70ab7c7fba8b8da9a0115a86a13f08e4ef3ebe2
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309781"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353282"
 ---
 # <a name="device-portal-for-hololens"></a>Device Portal para HoloLens
 
@@ -51,7 +51,7 @@ ms.locfileid: "4309781"
 3. Desde un explorador web de tu equipo, ve a `http://127.0.0.1:10080`.
 
 > [!IMPORTANT]
-> Si no puede encontrar el dispositivo tu PC, prueba a usar la dirección IP de red real del dispositivo HoloLens, en lugar de `http://127.0.0.1:10080`.
+> Si el equipo es no se puede encontrar el dispositivo, prueba a usar la dirección IP de red real del dispositivo HoloLens, en lugar de `http://127.0.0.1:10080`.
 
 #### <a name="connect-to-an-emulator"></a>Conectarse a un emulador 
 

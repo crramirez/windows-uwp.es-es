@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, requisitos del paquete, paquetes, formato del paquete, versión compatible, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: f3e294fdf5a9b2d98f09d839fa62499b556de3a5
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318271"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355760"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
@@ -41,7 +41,7 @@ No es necesario que los paquetes de la aplicación estén firmados con un certif
 
 ### <a name="app-bundles"></a>Paquetes de aplicaciones
 
-Las aplicaciones para UWP, Visual Studio puede generar un lote de aplicaciones (.msixbundle o .appxbundle) para reducir el tamaño de la aplicación que descargarán los usuarios. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
+Las aplicaciones para UWP, Visual Studio puede generar un lote de aplicaciones (.msixbundle o .appxbundle) para reducir el tamaño de la aplicación que los usuarios descargar. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
 
 > [!NOTE]
 > Un paquete de aplicaciones puede contener tus paquetes para todas las arquitecturas.

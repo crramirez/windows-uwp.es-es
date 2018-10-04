@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 229f0e9993abc9c5600c55a1a0eddc2e262f1c4c
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4320660"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4356968"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
 
 
-Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) desde un equipo con Windows10 a cualquier dispositivo con Windows10. Puedes usar esta herramienta para implementar un paquete de la aplicación cuando el dispositivo Windows 10 está conectado mediante USB o disponible en la misma subred sin necesidad de Microsoft Visual Studio o la solución para esa aplicación. También puedes implementar la aplicación sin empaquetarla primero en un equipo remoto o en Xbox One. Este artículo describe cómo instalar aplicaciones para UWP con esta herramienta.
+Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) desde un equipo con Windows10 a cualquier dispositivo con Windows10. Puedes usar esta herramienta para implementar un paquete de la aplicación cuando el dispositivo de Windows 10 está conectado mediante USB o disponible en la misma subred sin necesidad de Microsoft Visual Studio o la solución para esa aplicación. También puedes implementar la aplicación sin empaquetarla primero en un equipo remoto o en Xbox One. Este artículo describe cómo instalar aplicaciones para UWP con esta herramienta.
 
 Solo necesitas el SDK de Windows 10 instalado para ejecutar la herramienta WinAppDeployCmd desde un símbolo del sistema o un archivo de script. Cuando se instala una aplicación con WinAppDeployCmd.exe, esta usa el archivo.appx/.msix o AppxManifest (para los archivos sueltos) al lado de carga de la aplicación en un dispositivo Windows 10. Este comando no instala el certificado necesario para la aplicación. Para ejecutar la aplicación, el dispositivo con Windows10 debe estar en modo de desarrollador o tener el certificado instalado.
 

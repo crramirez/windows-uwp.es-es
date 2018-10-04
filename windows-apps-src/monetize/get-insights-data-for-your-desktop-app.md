@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de información de la aplicación de escritorio.
-title: Obtener los datos de información de la aplicación de escritorio
+title: Obtener datos de información de la aplicación de escritorio
 ms.author: mcleans
 ms.date: 07/31/2018
 ms.topic: article
@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de la tienda, API de información de análisis de Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca6eed40af37276b5b4c98ec7b1b709bdadfb9
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316909"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355130"
 ---
-# <a name="get-insights-data-for-your-desktop-application"></a>Obtener los datos de información de la aplicación de escritorio
+# <a name="get-insights-data-for-your-desktop-application"></a>Obtener datos de información de la aplicación de escritorio
 
-Usa este método en la API de análisis de Microsoft Store para obtener información sobre los datos relacionados con las métricas de estado de una aplicación de escritorio que agregaste en el [programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Estos datos también están disponibles en el [informe de estado](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicaciones de escritorio en el panel del centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener información sobre los datos relacionados con las métricas de mantenimiento para una aplicación de escritorio que agregaste al [programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Estos datos también están disponibles en el [informe de estado](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicaciones de escritorio en el panel del centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -81,7 +81,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | applicationId       | cadena | El identificador de producto de la aplicación de escritorio para la que has recuperado los datos de opiniones.     |
 | insightDate                | cadena | La fecha en el que hemos identificado el cambio en una métrica específica. Esta fecha representa el final de la semana en el que hemos detectado un aumento significativo o reducir en una métrica en comparación con la semana anterior. |
 | tipo de datos     | cadena | Una cadena que especifica el área de análisis general que informa esta información. Actualmente, este método solo admite el **estado**.    |
-| insightDetail          | matriz | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de detalles de valoración actual.    |
+| insightDetail          | matriz | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de insight actual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail
@@ -90,12 +90,12 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 |---------------------|--------|-------------------------------------------|
 | FactName           | cadena | Una cadena que indica la métrica que describe la información actual o la dimensión actual. Actualmente, este método solo admite el valor de **recuento de visitas**.  |
 | SubDimensions         | matriz |  Uno o varios objetos que describen una métrica única para la perspectiva.   |
-| CambioPorcentual            | cadena |  El porcentaje que ha cambiado la métrica a través de la base de clientes completa.  |
+| CambioPorcentual            | cadena |  El porcentaje de la métrica ha cambiado a través de la base de clientes completa.  |
 | DimensionName           | cadena |  El nombre de la métrica que se describe en la dimensión actual. Algunos ejemplos son **EventType**, **mercado**, **DeviceType**y **PackageVersion**.   |
 | DimensionValue              | cadena | El valor de la métrica que se describe en la dimensión actual. Por ejemplo, si **DimensionName** es **EventType**, podría ser **DimensionValue** **bloqueo** o **falta de respuesta**.   |
 | FactValue     | cadena | El valor absoluto de la métrica en la fecha en que se detectó la perspectiva.  |
 | Direction | cadena |  La dirección del cambio (**positivo** o **negativo**).   |
-| Date              | cadena |  La fecha en el que hemos identificado el cambio en relacionadas con la información actual o la dimensión actual.   |
+| Date              | cadena |  La fecha en el que hemos identificado el cambio relacionadas con la información actual o la dimensión actual.   |
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 

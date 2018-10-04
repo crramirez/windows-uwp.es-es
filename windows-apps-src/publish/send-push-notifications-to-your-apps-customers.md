@@ -11,11 +11,11 @@ keywords: windows 10, uwp, notificaciones dirigidas, push dirigidas, notificacio
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315295"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352889"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificaciones a los clientes de la aplicación
 
@@ -53,7 +53,7 @@ Sigue estos pasos para crear una notificación push en el panel de información 
 
 1. En el [panel de información del Centro de desarrollo de Windows](https://partner.microsoft.com/dashboard/), expande la sección **Interactuar** y luego selecciona **Notificaciones**.
 2. En la página **Notificaciones**, selecciona **Nueva notificación**.
-3. En la sección **Seleccionar una plantilla** , elegir el [tipo de notificación](#notification-template-types) que quieras enviar y, a continuación, haz clic en **Aceptar**.
+3. En la sección **Seleccionar una plantilla** , elige el [tipo de notificación](#notification-template-types) que quieras enviar y, a continuación, haz clic en **Aceptar**.
 4. En la siguiente página, usa el menú desplegable para elegir una **Aplicación única** o **Varias aplicaciones** para las que se va a generar una notificación. Solo puede seleccionar las aplicaciones que se han [configurado para recibir las notificaciones mediante el Microsoft Store Services SDK](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 5. En la sección **Configuración de notificaciones**, elige un **Nombre** para la notificación y, si es aplicable, elige el **grupo de clientes** al que quieres enviar la notificación. (Las notificaciones enviadas a varias aplicaciones solo se pueden enviar a todos los clientes de dichas aplicaciones.) Si deseas usar un segmento que aún no hayas creado, selecciona **Crear nuevo grupo de clientes**. Ten en cuenta que deben transcurrir 24 horas para poder usar un nuevo segmento para notificaciones. Para obtener más información, consulta [Crear segmentos de clientes](create-customer-segments.md).
 6. Si quieres especificar cuándo enviar la notificación, desactiva la casilla **Send notification immediately** y elige una fecha y hora específicas (en UTC para todos los clientes, a menos que especifiques usar la zona horaria local de cada cliente).
@@ -135,9 +135,9 @@ Para revisar los datos detallados para cada notificación:
 Para analizar los datos de actividad de usuario para todas las notificaciones:
 
 1.  En el Panel del Centro de desarrollo de Windows, expande la sección **Interactuar** y selecciona **Notificaciones**.
-2.  En la página de **notificaciones** , haz clic en la ficha **analizar** . Esta pestaña muestra los siguientes datos:
-    * Vistas de gráfico de los diversos estados de acción de usuario para tus notificaciones del sistema y las notificaciones del centro de actividades.
-    * Vistas de mapa del mundo el clic a través de tasas para tus notificaciones del sistema y la acción de centro de notificaciones.
+2.  En la página de **notificaciones** , haz clic en la ficha **analizar** . Este ficha muestra los siguientes datos:
+    * Vistas de gráfico de los distintos Estados de acción de usuario para tus notificaciones del sistema y las notificaciones del centro de actividades.
+    * Vistas de mapa de mundo de los clic a través de tipos para tus notificaciones del sistema y la acción el centro de notificaciones.
 3. Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es 30D (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puedes expandir la opción **filtros** para filtrar todos los datos de la aplicación y el mercado.
 
 ## <a name="translate-your-notifications"></a>Traducir las notificaciones

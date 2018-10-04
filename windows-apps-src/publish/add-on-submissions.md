@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, iap, compra desde la aplicación, producto desde la aplicación, envío de iap
 ms.localizationpriority: medium
 ms.openlocfilehash: 37d05722578ed945fbf75040f96360bb569c6d06
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315755"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355710"
 ---
 # <a name="add-on-submissions"></a>Envíos de complementos
 
@@ -23,7 +23,7 @@ Los complementos (a los que a veces se denominan productos desde la aplicación)
 
 Los complementos se publican a través del panel del Centro de desarrollo de Windows. También tendrás que [habilitar los complementos](../monetize/in-app-purchases-and-trials.md) en el código de la aplicación.
 
-El primer paso en el proceso de envío de un complemento es crear dicho complemento en el panel mediante la [definición de su tipo de producto y su id. del producto](set-your-add-on-product-id.md). A continuación, crearás un envío para que el complemento se puede comprar a través de Microsoft Store. Puedes enviar un complemento al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-add-on-after-publication) de los complementos una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
+El primer paso en el proceso de envío de un complemento es crear dicho complemento en el panel mediante la [definición de su tipo de producto y su id. del producto](set-your-add-on-product-id.md). Después de eso, crearás un envío para que el complemento se puede comprar a través de Microsoft Store. Puedes enviar un complemento al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-add-on-after-publication) de los complementos una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
 
 > [!NOTE]
 > En esta sección de la documentación se describe cómo enviar complementos en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de complementos.
@@ -85,11 +85,11 @@ Cuando hayas terminado de introducir esta información, haz clic en **Enviar a l
 
 ## <a name="updating-an-add-on-after-publication"></a>Actualizar un complemento después de su publicación
 
-Puedes realizar cambios en un complemento publicado en cualquier momento. Cambios de los complementos se envía y se publican independientemente de la aplicación, por lo que por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
+Puedes realizar cambios en un complemento publicado en cualquier momento. Cambios de los complementos se envía y publican independientemente de la aplicación, por lo que por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
 
 > [!IMPORTANT]
 > Si la aplicación está disponible para los clientes de Windows8.x, tendrás que crear y publicar un nuevo envío de aplicación para que las actualizaciones de los complementos sean visibles para dichos clientes. De forma parecida, si agregas nuevos complementos a una aplicación destinada a Windows8.x después que dicha aplicación se haya publicado, tendrás que actualizar el código de la aplicación para hacer referencia a esos complementos y, a continuación, volver a enviar la aplicación. De lo contrario, los nuevos complementos no serán visibles para los clientes de Windows8.x.
 
-Para enviar actualizaciones, ve a la página del complemento en el panel y haz clic en **Actualizar**. Esto creará un nuevo envío del complemento, con la información de tu envío anterior como punto de partida. Realiza los cambios que desees y, a continuación, haz clic en **Enviar a la tienda**.
+Para enviar actualizaciones, ve a la página del complemento en el panel y haz clic en **Actualizar**. Esto creará un nuevo envío del complemento, con la información de tu envío anterior como punto de partida. Realice los cambios que desees y, a continuación, haz clic en **Enviar a la tienda**.
 
 Para quitar un complemento que has estado ofreciendo anteriormente, crea un nuevo envío y cambia la opción [Distribución y visibilidad](set-add-on-pricing-and-availability.md) a **Oculto en la Tienda** con la opción **Detener la compra**. Asegúrate de actualizar el código de la aplicación según sea necesario para quitar también las referencias al complemento (especialmente si tu aplicación admite Windows 8.1 y versiones anteriores; esta configuración de visibilidad no se aplicará a estos clientes).

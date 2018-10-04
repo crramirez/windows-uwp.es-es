@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de la tienda, API de información de análisis de Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fbd91437e5dc702f8672c6cbadeea32a8a96bf
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4312961"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4356697"
 ---
 # <a name="get-insights-data"></a>Obtener información sobre los datos
 
@@ -79,24 +79,24 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | cadena | El identificador de la aplicación para la que quieres recuperar datos de información de la tienda.     |
+| applicationId       | cadena | El identificador de la aplicación para la que quieres recuperar datos de opiniones de la tienda.     |
 | insightDate                | cadena | La fecha en el que hemos identificado el cambio en una métrica específica. Esta fecha representa el final de la semana en el que hemos detectado un aumento significativo o reducir en una métrica en comparación con la semana anterior. |
-| tipo de datos     | cadena | Una de las siguientes cadenas que especifica el área de análisis general que describe esta información:<p/><ul><li><strong>adquisición</strong></li><li><strong>salud</strong></li><li><strong>uso</strong></li></ul>   |
-| insightDetail          | matriz | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de detalles de valoración actual.    |
+| tipo de datos     | cadena | Una de las siguientes cadenas que especifica el área de análisis general que se describe en este insight:<p/><ul><li><strong>adquisición</strong></li><li><strong>salud</strong></li><li><strong>uso</strong></li></ul>   |
+| insightDetail          | matriz | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de insight actual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | cadena | Uno de los valores siguientes que indica la métrica que describe la información actual o la dimensión actual, según el valor de **tipo de datos** .<ul><li>**Estado**, este valor es siempre **recuento de visitas**.</li><li>Para la **adquisición**, este valor es siempre **AcquisitionQuantity**.</li><li>Para el **uso**, este valor puede ser una de las siguientes cadenas:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
+| FactName           | cadena | Uno de los valores siguientes que indica la métrica que describe la información actual o la dimensión actual, según el valor de **tipo de datos** .<ul><li>**Salud**, este valor es siempre **recuento de visitas**.</li><li>Para la **adquisición**, este valor es siempre **AcquisitionQuantity**.</li><li>Para el **uso**, este valor puede ser una de las siguientes cadenas:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
 | SubDimensions         | matriz |  Uno o varios objetos que describen una métrica única para la perspectiva.   |
-| CambioPorcentual            | cadena |  El porcentaje que ha cambiado la métrica a través de la base de clientes completa.  |
+| CambioPorcentual            | cadena |  El porcentaje de la métrica ha cambiado a través de la base de clientes completa.  |
 | DimensionName           | cadena |  El nombre de la métrica que se describe en la dimensión actual. Algunos ejemplos son **EventType**, **mercado**, **DeviceType**, **PackageVersion**, **AcquisitionType**, **AgeGroup** y **sexo**.   |
 | DimensionValue              | cadena | El valor de la métrica que se describe en la dimensión actual. Por ejemplo, si **DimensionName** es **EventType**, podría ser **DimensionValue** **bloqueo** o **falta de respuesta**.   |
 | FactValue     | cadena | El valor absoluto de la métrica en la fecha en que se detectó la perspectiva.  |
 | Direction | cadena |  La dirección del cambio (**positivo** o **negativo**).   |
-| Date              | cadena |  La fecha en el que hemos identificado el cambio en relacionadas con la información actual o la dimensión actual.   |
+| Date              | cadena |  La fecha en el que hemos identificado el cambio relacionadas con la información actual o la dimensión actual.   |
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 

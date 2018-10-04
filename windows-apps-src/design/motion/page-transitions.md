@@ -12,11 +12,11 @@ keywords: windows10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.openlocfilehash: a2923834fd968114a4ed607de214763fb2575697
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316343"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4356790"
 ---
 # <a name="page-transitions"></a>Transiciones de página
 
@@ -59,7 +59,7 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="horizontal-slide"></a>Deslizamiento horizontal
 
-Usa el deslizamiento horizontal para mostrar que entres las páginas aparecen junto a entre sí. El control [NavigationView](../controls-and-patterns/navigationview.md) usa automáticamente esta animación de navegación superior, pero si vas a crear tu propia experiencia de navegación horizontal, a continuación, puedes implementar el deslizamiento horizontal con SlideNavigationTransitionInfo.
+Usa el deslizamiento horizontal para mostrar que entres las páginas aparecen junto a otra. El control [NavigationView](../controls-and-patterns/navigationview.md) usa automáticamente esta animación de navegación superior, pero si vas a crear tu propia experiencia de navegación horizontal, a continuación, puedes implementar diapositiva horizontal con SlideNavigationTransitionInfo.
 
 La sensación deseada es que el usuario está navegando entre las páginas que están cerca entre sí. 
 

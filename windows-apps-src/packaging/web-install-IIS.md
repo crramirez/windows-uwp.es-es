@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, relacionados con los paquetes opcionales, Establece, servidor IIS
 ms.localizationpriority: medium
 ms.openlocfilehash: 214ddd2b55bca1acecbab0a841cf2048335e7b3a
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4312129"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355780"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Instalar una aplicación para UWP desde un servidor IIS
 
@@ -27,21 +27,21 @@ La aplicación del Instalador de aplicación permite a los desarrolladores y pro
 Para ir correctamente a través de con este tutorial, necesitarás lo siguiente:
 
 1. Visual Studio 2017  
-2. Herramientas de desarrollo Web y de IIS 
+2. Herramientas de desarrollo Web y IIS 
 3. Paquete de la aplicación para UWP: el paquete de la aplicación que vas a distribuir
 
 Opcional: [Proyecto de inicio](https://github.com/AppInstaller/MySampleWebApp) en GitHub. Esto es útil si no tienes paquetes de la aplicación para que funcione con, pero aun así deseas obtener información sobre cómo usar esta característica.
 
 ## <a name="step-1---install-iis-and-aspnet"></a>Paso 1: instalar IIS y ASP.NET 
 
-[Internet Information Services](https://www.iis.net/) es una característica de Windows que se puede instalar a través del menú Inicio. En el **menú Inicio** busca **las características de Windows de activar o desactivar**.
+[Internet Information Services](https://www.iis.net/) es una característica de Windows que se puede instalar a través del menú Inicio. En el **menú Inicio** busca **activar características de Windows activado o desactivado**.
 
 Buscar y seleccionar **Internet Information Services** para instalar IIS.
 
 > [!NOTE]
-> No es necesario seleccionar todas las casillas de verificación Internet Information Services. Solo los que hayas seleccionados al comprobar **Internet Information Services** son suficientes.
+> No es necesario seleccionar todas las casillas de verificación en Internet Information Services. Solo los que hayas seleccionados al comprobar **Internet Information Services** son suficientes.
 
-También debes instalar ASP.NET 4.5 o superior. Para instalarla, busque **Internet Information Services -> World Wide Web Services -> características de desarrollo de aplicaciones**. Selecciona una versión de ASP.NET que sea mayor o igual a ASP.NET 4.5.
+También debes instalar ASP.NET 4.5 o superior. Para instalarla, busque **Internet Information Services -> World Wide Web Services -> características de desarrollo de aplicaciones**. Selecciona una versión de ASP.NET que es mayor o igual a ASP.NET 4.5.
 
 ![Instalar ASP.NET](images/install-asp.png)
 
@@ -55,7 +55,7 @@ Una vez completada la instalación, inicia Visual Studio y crea un nuevo proyect
 
 ## <a name="step-3---build-a-web-app"></a>Paso 3: crear una aplicación Web
 
-Inicia Visual Studio 2017 como **Administrador** y crea un nuevo proyecto de **Aplicación Web Visual C#** con una plantilla de proyecto **vacío** . 
+Inicia Visual Studio 2017 como **Administrador** y crea un nuevo proyecto de **Aplicación Web Visual C#** con una plantilla de proyecto **vacía** . 
 
 ![Nuevo proyecto](images/sample-web-app.png)
 
@@ -63,21 +63,21 @@ Inicia Visual Studio 2017 como **Administrador** y crea un nuevo proyecto de **A
 
 Desde el Explorador de soluciones, haz clic en el proyecto raíz y selecciona **Propiedades**.
 
-En las propiedades de aplicación web, selecciona la pestaña de la **Web** . En la sección de **servidores** , elegir **IIS Local** en el menú desplegable y haz clic en **Crear directorio Virtual**. 
+En las propiedades de aplicación web, selecciona la pestaña de la **Web** . En la sección de **servidores** , elija **IIS Local** en el menú desplegable y haz clic en **Crear directorio Virtual**. 
 
 ![pestaña Web](images/web-tab.png)
 
 ## <a name="step-5---add-an-app-package-to-a-web-application"></a>Paso 5: agregar un paquete de la aplicación a una aplicación web 
 
-Agrega el paquete de la aplicación que vas a distribuir en la aplicación web. Puedes usar el paquete de la aplicación que forma parte de los [paquetes de proyecto de inicio](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) de proporcionado en GitHub si no tienes un paquete de aplicación disponible. El certificado (MySampleApp.cer) con el que se firmó el paquete también está con la muestra en GitHub. Debe tener el certificado instalado en el dispositivo antes de instalar la aplicación (paso 9).
+Agregar el paquete de aplicación que vas a distribuir en la aplicación web. Puedes usar el paquete de la aplicación que forma parte de los [paquetes de proyecto de inicio](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) de proporcionado en GitHub si no tienes un paquete de aplicación disponible. El certificado (MySampleApp.cer) con el que se firmó el paquete también está con la muestra en GitHub. Debe tener el certificado instalado en el dispositivo antes de instalar la aplicación (paso 9).
 
-En la aplicación web del proyecto de inicio, se agregó una nueva carpeta a la aplicación web denominada `packages` que contiene los paquetes de aplicaciones a distribuirse. Para crear la carpeta en Visual Studio, haz clic en la raíz del explorador de soluciones, selecciona **Agregar** -> **Nueva carpeta** y asígnale `packages`. Para agregar paquetes de la aplicación a la carpeta, haz clic en el `packages` carpeta y selecciona **Agregar** -> ubicación del paquete de**Elemento existente** y busca la aplicación. 
+En la aplicación web de proyecto de inicio, se agregó una nueva carpeta a la aplicación web denominada `packages` que contiene los paquetes de aplicaciones a distribuirse. Para crear la carpeta en Visual Studio, haz clic en la raíz del explorador de soluciones, selecciona **Agregar** -> **Nueva carpeta** y asígnale `packages`. Para agregar paquetes de la aplicación a la carpeta, haz clic en el `packages` carpeta y selecciona **Agregar** -> ubicación del paquete de**Elemento existente** y busca la aplicación. 
 
-![Para agregar el paquete](images/add-package.png)
+![Agregar paquete](images/add-package.png)
 
 ## <a name="step-6---create-a-web-page"></a>Paso 6: crear una página Web
 
-Esta aplicación web de muestra usa HTML sencillo. Eres libre para crear la aplicación web según sea necesario por tus necesidades. 
+Esta aplicación web de muestra usa HTML sencillo. Eres libre para crear la aplicación web según sea necesario por sus necesidades. 
 
 Haz clic en el proyecto raíz del explorador de soluciones, selecciona **Agregar** -> **Nuevo elemento**, y agrega una nueva **Página HTML** de la sección de la **Web** .
 
@@ -88,7 +88,7 @@ Haz doble clic en el archivo HTML para abrirlo en la ventana del editor de códi
 Incluir el siguiente código HTML en la página web. La clave para invocar correctamente el instalador de aplicación es usar el esquema personalizado que registra el instalador de aplicación con el sistema operativo: `ms-appinstaller:?source=`. Consulta el ejemplo de código siguiente para obtener más detalles.
 
 > [!NOTE]
-> Asegúrate de que la ruta de acceso de dirección URL especificada después de que el esquema personalizado coincide con la dirección Url de proyecto en la pestaña web de la solución de VS.
+> Asegúrate de que la ruta de acceso de dirección URL especificada después de que el esquema personalizado coincide con la dirección Url de proyecto en la pestaña de web de la solución de VS.
  
 ```HTML
 <html>
@@ -104,7 +104,7 @@ Incluir el siguiente código HTML en la página web. La clave para invocar corre
 
 ## <a name="step-7---configure-the-web-app-for-app-package-mime-types"></a>Paso 7: configurar la aplicación web para tipos MIME de paquete de aplicación
 
-Abre el archivo **Web.config** desde el Explorador de soluciones y agrega las siguientes líneas dentro de la `<configuration>` elemento. 
+Abre el archivo **Web.config** desde el Explorador de soluciones y agrega las siguientes líneas en la `<configuration>` elemento. 
 
 ```xml
 <system.webServer>

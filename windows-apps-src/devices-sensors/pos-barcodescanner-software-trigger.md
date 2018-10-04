@@ -1,7 +1,7 @@
 ---
 author: eliotcowley
 title: Usar un desencadenador de software
-description: Aprende a controlar la digitalización desde software de.
+description: Obtén información sobre cómo controlar la digitalización desde software de.
 ms.author: elcowle
 ms.date: 08/29/2018
 ms.topic: article
@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: ddd8ec979cb6d5a72b48b9b8b6a60adb73c35657
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318213"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361010"
 ---
 # <a name="use-a-software-trigger"></a>Usar un desencadenador de software
 

@@ -1,6 +1,6 @@
 ---
 author: QuinnRadich
-title: Recortes de pantalla de inicio
+title: Iniciar recortes de pantalla
 description: En este tema se describe los esquemas de URI ms-screenclip y ms-screensketch. La aplicación puede usar estos esquemas de URI para iniciar la aplicación de recorte & boceto o abrir un recorte nuevo.
 ms.author: quradic
 ms.date: 8/1/2017
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, uri, recorte, boceto
 ms.localizationpriority: medium
 ms.openlocfilehash: e18662125ef72051a289b3f1d0f3dc09b452d256
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315713"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353292"
 ---
-# <a name="launch-screen-snipping"></a>Recortes de pantalla de inicio
+# <a name="launch-screen-snipping"></a>Iniciar recortes de pantalla
 
 El **ms-screenclip:** y **ms-screensketch:** esquemas de URI te permite iniciar recortes o capturas de pantalla de edición.
 
@@ -24,22 +24,22 @@ El **ms-screenclip:** y **ms-screensketch:** esquemas de URI te permite iniciar 
 
 El **ms-screenclip:** URI permite que la aplicación automáticamente abrir e iniciar un nuevo recorte. El recorte resultante se copia en el Portapapeles del usuario, pero no se pasa automáticamente a la aplicación de apertura.
 
-**ms-screenclip:** toma los siguientes parámetros:
+**ms-screenclip:** acepta los siguientes parámetros:
 
 | Parámetro | Tipo | Obligatorio | Descripción |
 | --- | --- | --- | --- |
 | origen | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
-| delayInSeconds | entero | no | Un valor entero de 1 a 30. Especifica el retraso, en segundos completas, entre la llamada URI y cuando comienza la recortes. |
+| delayInSeconds | entero | no | Un valor entero de 1 a 30. Especifica el retraso en segundos completas, entre la llamada URI y cuando comienza la recortes. |
 
 ## <a name="launching-the-snip--sketch-app"></a>Iniciar el recorte y aplicaciones de bocetos
 
 El **ms-screensketch:** URI te permite iniciar la aplicación de recorte & boceto mediante programación y abrir una imagen específica en esa aplicación para la anotación.
 
-**ms-screensketch:** toma los siguientes parámetros:
+**ms-screensketch:** acepta los siguientes parámetros:
 
 | Parámetro | Tipo | Obligatorio | Descripción |
 | --- | --- | --- | --- |
-| sharedAccessToken | string | no | Un token que identifica el archivo para abrirlo en la aplicación de recorte & boceto. Recupera [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Si se omite este parámetro, se iniciará la aplicación sin un archivo abierto. |
+| sharedAccessToken | string | no | Un token que identifica el archivo para abrirlo en la aplicación de recorte & boceto. Recupera [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Si se omite este parámetro, se iniciará la aplicación sin abrir un archivo. |
 | origen | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
 | isTemporary | bool | no | Si se establece en True, bocetos de pantalla intentará eliminar el archivo después de abrirla. |
 

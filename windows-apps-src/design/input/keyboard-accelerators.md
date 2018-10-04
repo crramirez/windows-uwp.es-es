@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309325"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354116"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -442,7 +442,7 @@ Para objetos [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.
 
 ![Información sobre herramientas de la tecla aceleradora](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
 
-*Teclas aceleradoras anexadas a texto del MenuFlyoutItem*
+*Teclas aceleradoras anexadas al texto del MenuFlyoutItem*
 
 Controla el comportamiento de la presentación con la propiedad [KeyboardAcceleratorPlacementMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAcceleratorPlacementMode), que acepta dos valores: [Auto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode) o [Hidden](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode).    
 

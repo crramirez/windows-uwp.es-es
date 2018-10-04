@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b731910f53a6152554b74e946374234b827f4a86
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317787"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361350"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
 
@@ -58,7 +58,7 @@ Empecemos con los principios básicos de diseño de buena navegación:
 
 ### <a name="consistency"></a>Coherencia
 
-La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y estilos hará que la navegación intuitiva y predecible para los usuarios.
+La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y el estilo hará que la navegación intuitiva y predecible para los usuarios.
 
 ![imagen de componentes de la página](images/nav/page-components.svg)
 
@@ -188,12 +188,12 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
         Use top navigation when:
 
         - Que quieras mostrar todas las opciones de exploración en la pantalla.
-        - Que quieras más espacio para el contenido de la aplicación.
+        - Desean más espacio para el contenido de la aplicación.
         - Iconos claramente no describen las categorías de navegación.
         
         Usa pestañas cuando:
 
-        - Quieres conservar el estado de página y el historial de navegación.
+        - Desea conservar el estado de página y el historial de navegación.
         - Espera que los usuarios cambien entre las pestañas con frecuencia.
 
 :::row-end:::

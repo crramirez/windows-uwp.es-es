@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows10, uwp, mercados, países, regiones
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315185"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357389"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
 
 La Microsoft Store llega a clientes de más de 200 países y regiones de todo el mundo. Puedes elegir los mercados en los que quieres ofrecer tu aplicación, con la opción de personalizar muchas [precios y disponibilidad](set-app-pricing-and-availability.md) características por mercado o por grupo de los mercados.
 
-Para que obtener información ayudar a hacer que la aplicación adecuada para los clientes de todo el mundo, consulta [directrices para globalización](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) y [hacer que la aplicación sea localizable](../design/globalizing/prepare-your-app-for-localization.md).
+Para que obtener información ayudar a hacer que tu aplicación adecuada para los clientes de todo el mundo, consulta [directrices para globalización](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) y [hacer que la aplicación sea localizable](../design/globalizing/prepare-your-app-for-localization.md).
 
 > [!NOTE]
 > Aunque este tema hace referencia a las aplicaciones, la selección del mercado para envíos de complementos utiliza el mismo proceso.
@@ -50,7 +50,7 @@ También verás una casilla que te permitirá indicar si ofreces tu aplicación 
 
 ## <a name="microsoft-store-consumer-markets"></a>Mercados de consumidores de Microsoft Store
 
-Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes: Los mercados con un asterisco compatibles con Microsoft Store en Xbox One; podrás ver **Xbox** junto a sus nombres en la ventana emergente de **selección del mercado** .
+Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes: Los mercados con un asterisco compatibles con la Microsoft Store en Xbox One; podrás ver **Xbox** junto a sus nombres en la ventana emergente de **selección del mercado** .
 
 
 <table>

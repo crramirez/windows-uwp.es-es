@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 255f0bbcdc0e746499a1014ad818a71d90887234
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317812"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361360"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
 
@@ -290,7 +290,7 @@ Anteriormente, las aplicaciones para UWP usaban [AppViewBackButtonVisibility](ht
 
 Si la aplicación sigue usando [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), a continuación, el sistema de la interfaz de usuario representará el sistema de botón Atrás:
 
-- Si la aplicación está **no con pestañas**, el botón Atrás se representa dentro de la barra de título. Las interacciones de usuario y la experiencia visual para el botón Atrás no han cambiado desde compilaciones anteriores.
+- Si la aplicación es **no con pestañas**, el botón Atrás se representa dentro de la barra de título. Las interacciones de usuario y la experiencia visual para el botón Atrás no han cambiado desde compilaciones anteriores.
 
     ![Botón Atrás de la barra de título](images/nav-back-pc.png)
 
@@ -305,7 +305,7 @@ Si la aplicación sigue usando [AppViewBackButtonVisibility](https://docs.micros
 
 Atrás del sistema barra es una "banda" que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar el tamaño de destino táctil adecuado para el botón Atrás.
 
-- Si la aplicación está **no con pestañas**, el botón Atrás se representa dentro de la barra de título. Las interacciones de usuario y la experiencia visual para el botón Atrás no han cambiado desde compilaciones anteriores.
+- Si la aplicación es **no con pestañas**, el botón Atrás se representa dentro de la barra de título. Las interacciones de usuario y la experiencia visual para el botón Atrás no han cambiado desde compilaciones anteriores.
 
     ![Botón Atrás de la barra de título](images/nav-back-pc.png)
 
@@ -349,7 +349,7 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>Página a página; mismo grupo del mismo nivel; sin elemento de navegación en pantalla</strong>
-<p>El usuario navega de una página a otra con el mismo grupo del mismo nivel. En la pantalla no hay elemento de navegación (por ejemplo, <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>) que proporcione navegación directa a las dos páginas.</p></td>
+<p>El usuario navega de una página a otra con el mismo grupo del mismo nivel. No hay que no aparecen en pantalla elemento de navegación (por ejemplo, <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>) que proporcione navegación directa a las dos páginas.</p></td>
 <td style="vertical-align:top;"><strong>Sí</strong>
 <p>En la siguiente ilustración, el usuario navega entre dos páginas en el mismo grupo del mismo nivel y la barra de navegación debe agregarse al historial de navegación.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
@@ -358,7 +358,7 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 <td style="vertical-align:top;"><strong>Página a página; mismo grupo del mismo nivel; con un elemento de navegación en pantalla</strong>
 <p>El usuario navega de una página a otra en el mismo grupo del mismo nivel. Ambas páginas se muestran en el mismo elemento de navegación, por ejemplo, <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>.</p></td>
 <td style="vertical-align:top;"><strong>Depende.</strong>
-<p>Sí, se agrega al historial de navegación, con dos excepciones importantes. Si esperas que los usuarios de la aplicación para cambiar entre páginas en el grupo del mismo nivel con frecuencia, o si quieres conservar a la jerarquía de navegación, a continuación, no agregues al historial de navegación. En este caso, cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel. </p>
+<p>Sí, se agrega al historial de navegación, con dos excepciones importantes. Si esperas que los usuarios de la aplicación para cambiar entre las páginas en el grupo de sistemas de mismo nivel con frecuencia, o si quieres conservar a la jerarquía de navegación, a continuación, no agregues al historial de navegación. En este caso, cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">

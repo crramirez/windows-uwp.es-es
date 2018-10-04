@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319383"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354633"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensión de marcado {TemplateBinding}
 
@@ -63,7 +63,7 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 
 A partir de la siguiente actualización importante a Windows 10, puedes usar extensión de marcado **x: Bind** en cualquier lugar que usaste **TemplateBinding** en [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). 
 
-La propiedad [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) se necesitarán (no opcional) en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) al usar **x: Bind**.
+La propiedad [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) será necesario (no es opcional) en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) al usar **x: Bind**.
 
 Con el soporte de **x: Bind** , ahora puedes usar ambos [enlaces de función](../data-binding/function-bindings.md) como enlaces bidireccionales bien como en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)
 

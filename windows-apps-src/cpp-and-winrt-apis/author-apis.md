@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
 ms.openlocfilehash: 2476161954c1d4d49fcf9f8f74cd1b7cf9180c0a
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309275"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361091"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
@@ -282,12 +282,12 @@ iclosable.Close();
 
 La clase **MyType** no forma parte de la proyección, es la implementación. Pero de este modo puedes llamar a sus métodos de implementación directamente, sin la sobrecarga de una llamada de función virtual. En el ejemplo anterior, aunque **MyType::ToString** usa la misma firma que el método proyectado en **IStringable**, llamamos al método no virtual directamente, sin cruzar la interfaz binaria de la aplicación (ABI) El **com_ptr** simplemente tiene un puntero en la estructura **MyType**, por lo que también puedes acceder a los demás detalles internos de **MyType** a través de la variable `myimpl` y el operador de flecha.
 
-En el caso donde tienes un objeto de interfaz y descubres que es una interfaz en la implementación, a continuación, puedes obtener vuelve a la implementación con la plantilla de función [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) . De nuevo, es una técnica que evita llamadas a funciones virtuales y te permite acceder directamente a la implementación.
+En el caso donde tienes un objeto de interfaz y descubres que es una interfaz en la implementación, a continuación, puede volver a la implementación mediante la plantilla de función [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) . De nuevo, es una técnica que evita llamadas a funciones virtuales y te permite acceder directamente a la implementación.
 
 > [!NOTE]
 > Si no has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809) o una versión posterior, a continuación, tienes que llamar [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) en lugar de [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self).
 
-Aquí tienes un ejemplo. Hay otro ejemplo en [implementa la clase de control personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
+Aquí tienes un ejemplo. Hay otro ejemplo en [implementar la clase de control personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)

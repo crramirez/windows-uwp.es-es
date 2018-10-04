@@ -12,15 +12,15 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311143"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354383"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conocidos de las aplicaciones de escritorio empaquetadas
 
-En este artículo se describen los problemas conocidos que pueden aparecer al crear un paquete de aplicación de Windows para la aplicación de escritorio.
+En este artículo se describen los problemas conocidos que pueden aparecer al crear un paquete de la aplicación de Windows para la aplicación de escritorio.
 
 <a id="app-converter" />
 
@@ -38,7 +38,7 @@ Es posible que se produzca este error al configurar una nueva imagen base. Esto 
 
 Para resolver este problema, prueba a ejecutar el comando `Netsh int ipv4 reset` desde un símbolo del sistema con privilegios elevados y, a continuación, reinicia el equipo.
 
-### <a name="your-net-application-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>La aplicación .NET está compilada con la opción de compilación "AnyCPU" y no se puede instalar
+### <a name="your-net-application-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>Una aplicación .NET está compilada con la opción de compilación "AnyCPU" y no se puede instalar
 
 Esto puede suceder si el archivo ejecutable principal (o cualquiera de las dependencias) está colocado en cualquier lugar de la jerarquía de carpetas **Archivos de programa** o **Windows\System32**.
 
@@ -56,7 +56,7 @@ Esta es una limitación conocida y no existe ninguna solución actualmente. Dich
 
 Esto puede suceder si los archivos ejecutables de la aplicación tienen una extensión **. EXE** escrita en mayúsculas. Aunque las mayúsculas y minúsculas de esta extensión no deberían afectar a la aplicación se ejecuta, esto puede provocar DAC muestre este error.
 
-Para resolver este problema, prueba a especificar la marca **-AppExecutable** cuando realices el empaquetado y usa la extensión ".exe" en minúsculas como extensión principal del archivo ejecutable (por ejemplo: MYAPP.exe).    Como alternativa puedes cambiar las mayúsculas y minúsculas para todos los archivos ejecutables de la aplicación estén en minúsculas en mayúsculas (por ejemplo: desde. EXE .exe).
+Para resolver este problema, prueba a especificar la marca **-AppExecutable** cuando realices el empaquetado y usa la extensión ".exe" en minúsculas como extensión principal del archivo ejecutable (por ejemplo: MYAPP.exe).    Como alternativa puedes cambiar de todos los archivos ejecutables de la aplicación estén en minúsculas en mayúsculas (por ejemplo: desde. EXE a .exe).
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>Firmas Authenticode dañadas o con formato incorrecto
 
@@ -95,7 +95,7 @@ Se publicó una [actualización de Windows (versión 14393.351 - KB3197954)](htt
 
 Si la actualización no soluciona el problema o no estás seguro de cómo recuperar tu equipo, ponte en contacto con el [Soporte técnico de Microsoft](https://support.microsoft.com/contactus/).
 
-Si eres un desarrollador, quizá quieras impedir la instalación de tu aplicación empaquetada en las versiones de Windows que no incluyen esta actualización. Ten en cuenta al hacerlo, la aplicación no estará disponible para los usuarios que aún no han instalado la actualización. Para limitar la disponibilidad de la aplicación para los usuarios que han instalado esta actualización, modifica el archivo AppxManifest.xml como sigue:
+Si eres un desarrollador, quizá quieras impedir la instalación de tu aplicación empaquetada en las versiones de Windows que no incluyen esta actualización. Ten en cuenta al hacerlo, la aplicación no estará disponible para los usuarios que aún no han instalado la actualización. Para limitar la disponibilidad de la aplicación a los usuarios que han instalado esta actualización, modifica el archivo AppxManifest.xml como sigue:
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
@@ -143,19 +143,19 @@ Esto puede suceder cuando el paquete contiene un archivo binario que tiene un ce
 
 * El puntero de certificado no se alinea correctamente para una estructura WIN_CERTIFICATE.
 
-Para buscar archivos que contienen un certificado PE incorrecto, abre un **símbolo del sistema**y establece la variable de entorno denominada `APPXSIP_LOG` a un valor de 1.
+Para buscar archivos que contienen un certificado PE incorrecto, abra un **símbolo del sistema**y establece la variable de entorno denominada `APPXSIP_LOG` a un valor de 1.
 
 ```
 set APPXSIP_LOG=1
 ```
 
-A continuación, desde el **símbolo del sistema**, firma la aplicación de nuevo. Por ejemplo:
+A continuación, desde el **símbolo del sistema**, inicia la aplicación de nuevo. Por ejemplo:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Información sobre los archivos que contienen un certificado PE incorrecto, aparecerán en la **Ventana de consola**. Por ejemplo:
+Obtener información acerca de los archivos que contienen un certificado PE incorrecto, aparecerán en la **Ventana de consola**. Por ejemplo:
 
 ```
 ...

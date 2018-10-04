@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4645a09a38a76dfd230436e858e222d817eab
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319695"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361078"
 ---
 # <a name="in-app-ads"></a>Anuncios desde la aplicación
 
@@ -37,8 +37,8 @@ Para crear una unidad de anuncios para un [anuncio de banner](../monetize/banner
 3.  En el campo **Nombre de la unidad de anuncios**, escribe un nombre para esta. Esto puede ser cualquier cadena descriptiva que quieras usar para identificar la unidad de anuncios para fines informativos.
 4.  En la lista desplegable **Tipo de unidad de anuncio**, selecciona el tipo de anuncio.
 
-    * Si un anuncio de banner que muestra en la aplicación, selecciona el **Banner**.
-    * Si se muestran un anuncio de vídeo intersticial o anuncio de banner intersticial en la aplicación, selecciona **vídeo intersticial** o **Banner intersticial** (Asegúrate de seleccionar la opción adecuada para el tipo de anuncio intersticial que quieras mostrar).
+    * Si se muestran un anuncio de banner en tu aplicación, selecciona **Banner**.
+    * Si se muestran un anuncio de vídeo intersticial o anuncio de banner intersticial en la aplicación, seleccione **vídeo intersticial** o **Banner intersticial** (Asegúrate de seleccionar la opción adecuada para el tipo de anuncio intersticial que quieras mostrar).
     * Si un anuncio nativo que muestra en la aplicación, selecciona **nativo**.
 
 5. En la lista desplegable **Familia de dispositivos**, selecciona la familia de dispositivos a la que está dirigida la aplicación en la que se usará la unidad de anuncios. Las opciones disponibles son: **UWP (Windows10)**, **PC o tableta (Windows8.1)** o **Móvil (Windows Phone8.x)**.

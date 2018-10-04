@@ -11,18 +11,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, maps, mapas, map style sheet, hoja de estilo de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: f0a657ada755b77abe8ffef6a38bfa1f9ece8fcd
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313607"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353402"
 ---
 # <a name="map-style-sheet-reference"></a>Referencia de hoja de estilo de mapa
 
 Tecnologías de asignación de Microsoft usan _hojas de estilo de mapa_ para definir la apariencia de mapas.  Una hoja de estilo de mapa se define mediante la notación de objetos JavaScript (JSON) y puede usarse en diversas formas que incluya en la aplicación de la tienda Windows [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) a través del método [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) .
 
-Hojas de estilo pueden crearse de forma interactiva mediante la aplicación del [Editor de hojas de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
+Hojas de estilo pueden crearse de forma interactiva mediante la aplicación de [Editor de hojas de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
 
 Se puede usar la siguiente notación JSON para hacer que las zonas de agua aparezcan en color rojo, las etiquetas de agua aparezcan en verde y tierra aparezcan en azul:
 
@@ -49,32 +49,33 @@ A veces, el valor de una propiedad se transforma para generar el resultado final
     }
 ```
 
-En este tema se muestran las entradas y [propiedades](#properties) JSON que puedes usar para personalizar la apariencia de tus mapas.
+En este tema se muestran las entradas y [propiedades](#properties) JSON que puedes usar para personalizar la apariencia de tus mapas.  Estas propiedades también pueden aplicarse a los elementos de mapa de usuario a través de la propiedad [MapStyleSheetEntry](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement.mapstylesheetentry) .
 
 <a id="entries" />
 
 ## <a name="entries"></a>Entradas
-En esta tabla se usan caracteres ">" para representar los niveles de la jerarquía de entradas.  También muestra qué versiones de Windows admiten cada entrada y que omitirla.
+En esta tabla se usan caracteres ">" para representar los niveles de la jerarquía de entradas.  También muestra qué versiones de Windows admiten cada entrada y que pasar por alto.
 
-| Versión | Nombre de la versión de Windows |
-|-------|----------------------|
-| 1506  | Creators Update      |
-| 1629  | Fall Creators Update |
-| 1713  | Actualización de abril de 2018    |
+| Version | Nombre de la versión de Windows |
+|---------|----------------------|
+|  1703   | Creators Update      |
+|  1709   | Fall Creators Update |
+|  1803   | Actualización de abril de 2018    |
+|  1809   | Actualización de octubre de 2018  |
 
-| Nombre                         | Grupo de propiedades            | 1506 | 1629 | 1713 | Siguiente | Descripción    |
+| Nombre                         | Grupo de propiedades            | 1703 | 1709 | 1803 | 1809 | Descripción    |
 |------------------------------|---------------------------|------|------|------|------|----------------|
 | version                      | [Version](#version)       |  ✔   |  ✔   |  ✔   |  ✔   | La versión de hoja de estilo que quieres usar. |
 | settings                     | [Settings](#settings)     |  ✔   |  ✔   |  ✔   |  ✔   | La configuración que se aplica a toda la hoja de estilo. |
 | mapElement                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | La entrada principal para todas las entradas de mapa. |
 | > baseMapElement             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | La entrada principal para todas las entradas que no sean del usuario. |
-| >> area                      | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usan áreas que describe la tierra.  Estos deben para que no deben confundirse con los edificios físicos que están en la entrada de la estructura. |
+| >> area                      | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Usan áreas que describe la tierra.  Estos no se deben confundirse con los edificios físicos que están en la entrada de la estructura. |
 | >>> airport                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Zonas que abarcan aeropuerto. |
 | >>> areaOfInterest           | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Áreas en que hay una alta concentración de empresas o puntos interesantes. |
 | >>> cemetery                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Zonas que abarcan cementerios. |
 | >>> continent                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Etiquetas de área Continent. |
 | >>> education                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Zonas que abarcan las escuelas y otras instalaciones educativas. |
-| >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Zonas que abarcan pueblos indígenas naturales. |
+| >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Zonas que abarcan pueblos casos naturales. |
 | >>> industrial               | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Zonas que se usan para fines industriales. |
 | >>> island                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Etiquetas de área de isla. |
 | >>> medical                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Las áreas que se usan para fines médicos (por ejemplo: un campus de hospital). |
@@ -93,7 +94,7 @@ En esta tabla se usan caracteres ">" para representar los niveles de la jerarqu�
 | >>>> playingField            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Campos extraídos, como un campo de fútbol o pista de tenis. |
 | >>>> reserve                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Zonas que abarcan reservas naturales. |
 | >> point                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Todas las características de punto que se dibujan con un icono de algún tipo. |
-| >>> address                  | [PointStyle](#pointstyle) |      |      |  ✔   |  ✔   | Las etiquetas de los números de direcciones. |
+| >>> address                  | [PointStyle](#pointstyle) |      |      |  ✔   |  ✔   | Las etiquetas de los números de la dirección. |
 | >>> naturalPoint             | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan las características naturales. |
 | >>>> peak                    | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan cumbres. |
 | >>>>> volcanicPeak           | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan picos de volcán. |
@@ -102,8 +103,8 @@ En esta tabla se usan caracteres ">" para representar los niveles de la jerarqu�
 | >>>> business                | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan cualquier locaiton de empresas. |
 | >>>>> attractionPoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan atracciones turística como museos, zoos, etcetera. |
 | >>>>> communityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan ubicaciones de uso general a la Comunidad. |
-| >>>>> educationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan las escuelas y otro educación relacionadas con ubicaciones. |
-| >>>>> entertainmentPoint     | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan y lugares de entretenimiento, como teatros, salas de cine, etcetera. |
+| >>>>> educationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan las escuelas y otras actividades de enseñanza relacionadas con ubicaciones. |
+| >>>>> entertainmentPoint     | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan lugares de entretenimiento, como teatros, salas de cine, etcetera. |
 | >>>>> essentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan servicios esenciales como estacionamiento, bancos, gas, etcetera. |
 | >>>>> foodPoint              | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Iconos que representan restaurantes, cafés, etcetera. |
 | >>>>> lodgingPoint           | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Iconos que representan hoteles y otras empresas de presentación. |
@@ -171,7 +172,7 @@ En esta sección se describen las propiedades que puedes usar para cada entrada.
 
 ### <a name="settings-properties"></a>Propiedades de la configuración
 
-| Propiedad                     | Tipo    | 1506 | 1629 | 1713 | Siguiente | Descripción |
+| Propiedad                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descripción |
 |------------------------------|---------|------|------|------|------|-------------|
 | atmosphereVisible            | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Marcador que indica si la atmósfera aparece en el control 3D. |
 | buildingTexturesVisible      | Bool    |      |      |  ✔   |  ✔   | Una marca que indica si se debe o no mostrar texturas en edificios 3D simbólicos que tienen texturas. |
@@ -181,7 +182,7 @@ En esta sección se describen las propiedades que puedes usar para cada entrada.
 | landColor                    | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El valor de color ARGB de la tierra antes de que se dibuje algún elemento en ella. |
 | logosVisible                 | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Un marcador que indica si los elementos que tienen una propiedad **Organization** deben dibujar los logotipos adecuados o usar un icono genérico. |
 | officialColorVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Un marcador que indica si los elementos que tienen una propiedad de color oficial (por ejemplo, las líneas de transporte público de China) deben dibujar ese color. Por ejemplo, desactiva este valor para un mapa en blanco y negro. |
-| rasterRegionsVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Un marcador que indica si se va a dibujar regiones de trama donde tienen una representación mejor que vectores (Japón y Corea del sur) o no. |
+| rasterRegionsVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Un marcador que indica si se debe o no dibujar regiones de trama donde tienen una representación mejor que vectores (Japón y Corea del sur). |
 | shadedReliefVisible          | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Un marcador que indica si se va a dibujar o no el sombreado de elevación en el mapa. |
 | shadedReliefDarkColor        | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color del lado oscuro del relieve sombreado.  Canal alfa representa el valor alfa máximo. |
 | shadedReliefLightColor       | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color del lado claro del relieve sombreado.  Canal alfa representa el valor alfa máximo. |
@@ -193,7 +194,7 @@ En esta sección se describen las propiedades que puedes usar para cada entrada.
 
 ### <a name="mapelement-properties"></a>Propiedades de MapElement
 
-| Propiedad                     | Tipo    | 1506 | 1629 | 1713 | Siguiente | Descripción |
+| Propiedad                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descripción |
 |------------------------------|---------|------|------|------|------|-------------|
 | backgroundScale              | Flotante   |  ✔   |  ✔   |  ✔   |  ✔   | Cantidad en que se debe escalar el elemento en segundo plano de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
 | fillColor                    | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color que se usa para rellenar polígonos, el fondo de los iconos de punto y para el centro de líneas si se han dividido. |
@@ -216,12 +217,12 @@ En esta sección se describen las propiedades que puedes usar para cada entrada.
 
 Este grupo de propiedades hereda los valores del grupo de propiedades [MapElement](#mapelement).
 
-| Propiedad                     | Tipo    | 1506 | 1629 | 1713 | Siguiente | Descripción |
+| Propiedad                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descripción |
 |------------------------------|---------|------|------|------|------|-------------|
 | borderOutlineColor           | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color de línea secundaria o de marco del borde de un polígono rellenado. |
 | borderStrokeColor            | Color   |  ✔   |  ✔   |  ✔   |  ✔   | El color de la línea principal del borde de un polígono rellenado. |
 | borderVisible                | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  |
-| borderWidthScale             | Flotante   |  ✔   |  ✔   |  ✔   |  ✔   | La cantidad en que se escalar el trazo de los bordes. Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
+| borderWidthScale             | Flotante   |  ✔   |  ✔   |  ✔   |  ✔   | El importe por el cual se aplicará escala al trazado de los bordes. Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
 
 <a id="pointstyle" />
 
@@ -229,7 +230,7 @@ Este grupo de propiedades hereda los valores del grupo de propiedades [MapElemen
 
 Este grupo de propiedades hereda los valores del grupo de propiedades [MapElement](#mapelement).
 
-| Propiedad                     | Tipo    | 1506 | 1629 | 1713 | Siguiente | Descripción |
+| Propiedad                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descripción |
 |------------------------------|---------|------|------|------|------|-------------|
 | Fondo de la forma             | Flotante   |      |      |      |  ✔️   | Forma que se usará como el fondo del icono: reemplazar cualquier forma que existe. |
 | stemAnchorRadiusScale        | Flotante   |      |      |  ✔   |  ✔   | Cantidad en que se debe escalar el punto de anclaje del eje de un icono.  Por ejemplo, usa *1* para el valor predeterminado y *2* para el doble del tamaño. |
@@ -244,6 +245,6 @@ Este grupo de propiedades hereda los valores del grupo de propiedades [MapElemen
 
 Este grupo de propiedades hereda los valores del grupo de propiedades [MapElement](#mapelement).
 
-| Propiedad                     | Tipo    | 1506 | 1629 | 1713 | Siguiente | Descripción |
+| Propiedad                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descripción |
 |------------------------------|---------|------|------|------|------|------------|
 | renderAsSurface              | Bool    |      |      |  ✔   |  ✔   | Una marca que indica que un modelo 3D se debe representar como un edificio, sin fundido de profundidad contra el suelo. |

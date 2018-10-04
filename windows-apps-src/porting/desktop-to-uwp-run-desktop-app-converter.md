@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: bde2e58934e24df7db2cb77fb793106aa65e3834
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315925"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357605"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Empaquetar una aplicación de escritorio con Desktop App Converter
 
@@ -209,7 +209,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyApp\ -AppExecutable MyApp.exe 
 
 #### <a name="package-an-app-sign-the-app-and-run-validation-checks-on-the-package"></a>Empaquetar una aplicación, firmarla y ejecutar comprobaciones de validación en el paquete
 
-Este ejemplo es similar al primero, salvo que aquí se muestra cómo puede firmar la aplicación para realizar la prueba local y validarla en la aplicación con la aplicación empaquetada y requisitos de Microsoft Store.
+En este ejemplo es similar al primero, salvo que aquí se muestra cómo puede firmar la aplicación para realizar la prueba local y validarla en la aplicación con la aplicación empaquetada y requisitos de Microsoft Store.
 
 ```cmd
 DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" -Publisher "CN=MyPublisher" -Version 0.0.0.1 -MakeAppx -Sign -Verbose -Verify
@@ -296,7 +296,7 @@ También puedes ver toda la lista ejecutando el comando ``Get-Help`` en la venta
 |-LogFile &lt;String&gt;  |Opcional |Especifica un archivo de registro. Si se omite, se creará una ubicación temporal del archivo de registro. |
 | -Sign [&lt;SwitchParameter&gt;] |Opcional |Indica a este script que debe firmar la salida del paquete de la aplicación de Windows mediante un certificado generado con fines de prueba. Este parámetro debe aparecer junto con el modificador ```-MakeAppx```. |
 |&lt;Parámetros comunes&gt; |Necesario |Este cmdlet admite los parámetros comunes: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable* y *OutVariable*. Para obtener más información, consulta [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216). |
-| -Verify [&lt;SwitchParameter&gt;] |Opcional |Modificador que, cuando está presente, indica a DAC para validar el paquete de aplicación con aplicación empaquetada y requisitos de Microsoft Store. El resultado es un informe de validación "VerifyReport.xml" que se visualiza mejor en un navegador. Este parámetro debe aparecer junto con el modificador `-MakeAppx`. |
+| -Verify [&lt;SwitchParameter&gt;] |Opcional |Modificador que, cuando está presente, indica a DAC para validar el paquete de aplicación aplicación empaquetada y requisitos de Microsoft Store. El resultado es un informe de validación "VerifyReport.xml" que se visualiza mejor en un navegador. Este parámetro debe aparecer junto con el modificador `-MakeAppx`. |
 |-PublishComRegistrations| Opcional| Analiza todos los registros COM públicos que realizó el instalador y publica aquellos que son válidos en el manifiesto. Usa esta marca solo si quieres que estos registros estén disponibles en otras aplicaciones. No debes usar este indicador si solo la aplicación usa estos registros. <br><br>Lee [este artículo](https://blogs.windows.com/buildingapps/2017/04/13/com-server-ole-document-support-desktop-bridge/#lDg5gSFxJ2TDlpC6.97) para asegurarte de que los registros COM se comportan tal y como esperas después de empaquetar la aplicación.
 
 <a id="run-app" />
@@ -307,7 +307,7 @@ Hay dos formas de ejecutar la aplicación.
 
 Una manera es abrir un símbolo del sistema de PowerShell y escribir el siguiente comando: ```Add-AppxPackage –Register AppxManifest.xml```. Es probablemente la forma más sencilla de ejecutar la aplicación porque no tienes que iniciar sesión.
 
-Otra manera es firmar la aplicación con un certificado. Si usas el ```sign``` se generará un parámetro, Desktop App Converter y, a continuación, firmar la aplicación con él. Este archivo se llama **auto-generated.cer** y lo encontrarás en la carpeta raíz de la aplicación empaquetada.
+Otra manera es firmar la aplicación con un certificado. Si usas el ```sign``` parámetro, Desktop App Converter generará uno automáticamente y, a continuación, firmar la aplicación con él. Este archivo se llama **auto-generated.cer** y lo encontrarás en la carpeta raíz de la aplicación empaquetada.
 
 Sigue estos pasos para instalar el certificado generado y así ejecutar la aplicación.
 
@@ -336,7 +336,7 @@ Sigue estos pasos para instalar el certificado generado y así ejecutar la aplic
 
 Es probable que realizaremos cambios en la aplicación empaquetada para solucionar errores, agregar activos visuales o mejorar tu aplicación experiencias tan modernas como iconos dinámicos.
 
-Después de realizar los cambios, no tienes que volver a ejecutar el convertidor. En la mayoría de los casos, volver a empaquetar la aplicación mediante la herramienta MakeAppx y el archivo appxmanifest.xml que DAC genera para tu aplicación. Consulta [Generar un paquete de aplicación de Windows](desktop-to-uwp-manual-conversion.md#make-appx).
+Después de realizar los cambios, no tienes que volver a ejecutar el convertidor. En la mayoría de los casos, puede simplemente volver a empaquetar la aplicación mediante la herramienta MakeAppx y el archivo appxmanifest.xml que DAC genera para tu aplicación. Consulta [Generar un paquete de aplicación de Windows](desktop-to-uwp-manual-conversion.md#make-appx).
 
 * Si modificas cualquiera de los activos visuales de la aplicación, genera un nuevo archivo de índice de recursos del paquete y después ejecuta la herramienta MakeAppx para generar un nuevo paquete. Consulta [Generar un archivo de índice de recursos del paquete (PRI)](desktop-to-uwp-manual-conversion.md#make-pri).
 

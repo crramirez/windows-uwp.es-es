@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: da260b4f9f5f50d97d39af883217dfbae91a566e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309173"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4356843"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Introducción al desarrollo de aplicaciones para UWP en Xbox One
 
@@ -41,9 +41,9 @@ Antes de empezar, debes hacer lo siguiente:
 
     Para obtener más información, consulta [Configurar el UWP en el entorno de desarrollo de Xbox](development-environment-setup.md).
 
-2.  Instalar el [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk)de más reciente.
+2.  Instalar el [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk)más reciente.
 
-3.  Habilitar el modo de desarrollador para el equipo de desarrollo (**configuración / actualización y seguridad / para desarrolladores o usar las funciones para desarrolladores / modo de desarrollador**).
+3.  Habilitar el modo de desarrollador para el equipo de desarrollo (**configuración / actualización y seguridad / para desarrolladores / usar las funciones para desarrolladores / modo de desarrollador**).
 
 Ahora que el PC de desarrollo está listo, ve este vídeo o sigue leyendo para ver cómo configurar tu Xbox One para desarrollar y crear e implementar una aplicación para UWP para ella.
 </br>
@@ -66,17 +66,17 @@ Ahora que el PC de desarrollo está listo, ve este vídeo o sigue leyendo para v
 
 Para obtener más información, consulta [Configurar el UWP en el entorno de desarrollo de Xbox](development-environment-setup.md).
 
-1.  **Para C#**: crear un nuevo proyecto Universal de Windows y en el **Explorador de soluciones**, haz clic en el proyecto y selecciona **Propiedades**. Selecciona la pestaña **Depurar** , cambiar el **dispositivo de destino** a la **Máquina remota**, escribe la dirección IP o el nombre de host de la consola Xbox One en el campo de **máquina remota** y selecciona **Universal (protocolo sin cifrar)** en la ** Modo de autenticación** lista desplegable.   
+1.  **Para C#**: crear un nuevo proyecto Universal de Windows y en el **Explorador de soluciones**, haz clic en el proyecto y selecciona **Propiedades**. Selecciona la pestaña **Depurar** , cambiar el **dispositivo de destino** en el **Equipo remoto**, escribe la dirección IP o el nombre de host de la consola Xbox One en el campo de **máquina remota** y selecciona **Universal (protocolo sin cifrar)** en la ** Modo de autenticación** lista desplegable.   
 
     Para buscar la dirección IP de Xbox One, inicia la Página principal para desarrolladores en la consola (el icono grande del lado derecho de la página principal) y mira a la esquina superior izquierda. Para obtener más información sobre la página principal para desarrolladores, consulta [Introducción a las herramientas de Xbox One](introduction-to-xbox-tools.md).  
 
 2.  **Para C++ y HTML/Javascript proyectos**: sigue una ruta similar a proyectos de C#, pero en las propiedades del proyecto, ve a la pestaña **Depurar** , selecciona **Máquina remota** en el depurador para abrir la lista desplegable, escribe la dirección IP o el nombre de host de la consola en el campo de **Nombre de la máquina** y selecciona **Universal (protocolo sin cifrar)** en el campo de **Tipo de autenticación** .
 
-3. Selecciona **x64** en la lista desplegable a la izquierda del botón verde de reproducción en la barra de menús superior.
+3. Seleccione **x64** en la lista desplegable a la izquierda del botón verde de reproducción en la barra de menús superior.
    
 4.  Al presionar F5, la aplicación se compila y se empieza a implementar en tu Xbox One.
   
-5.  La primera vez que hagas esto, Visual Studio te pedirá un PIN para Xbox One. Puedes obtener un PIN, inicia Dev Home en tu Xbox One y selecciona el botón **Mostrar Visual Studio pin** .
+5.  La primera vez que hagas esto, Visual Studio te pedirá un PIN para Xbox One. Puedes obtener un PIN iniciando Dev Home en tu Xbox One y seleccionando el botón de **pin de mostrar Visual Studio** .
   
 6.  Una vez hayas realizado el emparejamiento, la aplicación empezará a implementarse. La primera vez que lo hagas, es posible que el proceso sea poco lento (tenemos que copiar todas las herramientas en la consola Xbox), pero si el proceso tarda más de unos pocos minutos, probablemente significa que se ha producido un error. Asegúrate de haber seguido los pasos anteriores (especialmente de haber configurado el **Modo de autenticación** en **Universal**) y de usar una conexión de red de cable en tu Xbox One.  
 

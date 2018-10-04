@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b04033fb53a90015427feb820c91d0f4a1de7d5
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4308691"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355331"
 ---
 # <a name="view-app-identity-details"></a>Ver detalles de identidad de las aplicaciones
 
@@ -27,7 +27,7 @@ Para encontrar esta información, ve a una de las aplicaciones y expande **Admin
 
 ## <a name="values-to-include-in-your-app-package-manifest"></a>Valores que se deben incluir en el manifiesto del paquete de la aplicación
 
-Los siguientes valores deben incluirse en el manifiesto del paquete. Si [usas Microsoft Visual Studio para compilar los paquetes](../packaging/packaging-uwp-apps.md) y has iniciado sesión con la misma cuenta de Microsoft asociada a tu cuenta de desarrollador, los detalles se incluyen automáticamente. Si vas a compilar el paquete manualmente, debes agregar estos elementos:
+Los valores siguientes se deben incluir en el manifiesto del paquete. Si [usas Microsoft Visual Studio para compilar los paquetes](../packaging/packaging-uwp-apps.md) y has iniciado sesión con la misma cuenta de Microsoft asociada a tu cuenta de desarrollador, los detalles se incluyen automáticamente. Si vas a compilar el paquete manualmente, debes agregar estos elementos:
 
 -   **Paquete/identidad/nombre**
 -   **Paquete/identidad/publicador**
