@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316431"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351829"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Pruebas del Kit para la certificación de aplicaciones en Windows
 
 
-El [Kit de certificación de aplicaciones de Windows](windows-app-certification-kit.md) contiene diversas pruebas que ayudan a garantizar que la aplicación está lista para publicarse en la Microsoft Store. Las pruebas se enumeran a continuación con los criterios, obtener información detallada y sugeridos acciones en el caso de error.
+El [Kit de certificación de aplicaciones de Windows](windows-app-certification-kit.md) contiene diversas pruebas que ayudan a garantizar que la aplicación está lista para publicarse en la Microsoft Store. Las pruebas se enumeran a continuación con sus criterios, obtener información detallada y sugeridos acciones en el caso de error.
 
 ## <a name="deployment-and-launch-tests"></a>Implementación y pruebas de inicio
 
@@ -248,7 +248,7 @@ AppContainerCheck comprueba que esté establecido el bit **appcontainer** en el 
 
 Si un archivo ejecutable nativo no pasa la prueba, asegúrate de haber usado los compiladores y enlazadores más recientes para compilarlo y de haber usado la marca */appcontainer* en el enlazador.
 
-Si un archivo ejecutable administrado no pasa la prueba, asegúrate de que usa el compilador más reciente y enlazador, como Microsoft Visual Studio, para compilar la aplicación para UWP.
+Si un archivo ejecutable administrado no pasa la prueba, asegúrate de que usa el compilador más reciente y el enlazador, como Microsoft Visual Studio, para compilar la aplicación para UWP.
 
 **Observaciones**
 
@@ -312,7 +312,7 @@ Las aplicaciones deben usar las API para aplicaciones para UWP (Windows Runtime 
 
 ### <a name="test-details"></a>Detalles de la prueba
 
--   Comprueba que cada archivo binario del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP de la tabla de direcciones de importación del código binario.
+-   Comprueba que cada archivo binario del paquete de la aplicación no tiene una dependencia en una API de Win32 que no es compatible para el desarrollo de aplicaciones para UWP con la tabla de direcciones de importación del código binario.
 -   Comprueba que cada binario administrado en el paquete de la aplicación no toma una dependencia de una función fuera del perfil aprobado.
 
 ### <a name="corrective-actions"></a>Acciones correctivas
@@ -537,7 +537,7 @@ Prueba las aplicaciones de Microsoft Direct3D para garantizar que no se bloquear
 
 ### <a name="background"></a>Antecedentes
 
-Microsoft Store requiere todas las aplicaciones con Direct3D se representen correctamente o finalicen correctamente en las tarjetas de gráficos de 9\-1 de nivel de característica.
+Microsoft Store requiere todas las aplicaciones con Direct3D se representen correctamente o finalicen correctamente en tarjetas de gráficos de 9\-1 de nivel de característica.
 
 Debido a que los usuarios pueden cambiar el hardware gráfico de sus dispositivos después de instalar la aplicación, si eliges un nivel de función mínimo mayor de 9\-1, tu aplicación debe detectar al iniciarse si el hardware actual cumple los requisitos mínimos. Si no se cumplen los requisitos mínimos, la aplicación debe mostrar un mensaje al usuario en el que se detallan todos los requisitos de Direct3D. Asimismo, si se descarga una aplicación en un dispositivo con el que no es compatible, debe detectarlo en el inicio y mostrar al cliente un mensaje en el que se detallan los requisitos.
 
@@ -551,7 +551,7 @@ Asegúrate de que la aplicación se represente correctamente en el nivel de func
 
 ### <a name="direct3d-trim-after-suspend"></a>Recorte Direct3D tras suspensión
 
-> **Nota**  Esta prueba solo se aplica a las aplicaciones para UWP desarrolladas para Windows 8.1 y versiones posteriores.
+> **Nota**  Esta prueba solo se aplica a las aplicaciones UWP desarrolladas para Windows 8.1 y versiones posteriores.
 
 ### <a name="background"></a>Antecedentes
 

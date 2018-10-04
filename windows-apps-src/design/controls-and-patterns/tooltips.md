@@ -17,11 +17,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a61b8bdcfcfad490528cdceed5e732a6f5f3a89
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316375"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353136"
 ---
 # <a name="tooltips"></a>Información sobre herramientas
 
@@ -116,7 +116,7 @@ Puedes usar cualquier objeto como el [Contenido](/uwp/api/windows.ui.xaml.contro
 
 De manera predeterminada, una información sobre herramientas aparece centrada encima del puntero. La ubicación no está restringida por la ventana de la aplicación, por lo que es posible que la información sobre herramientas se muestre parcialmente o completamente fuera de los límites de la ventana de la aplicación.
 
-Ajustes de amplia, usa la propiedad de [colocación](/uwp/api/windows.ui.xaml.controls.tooltip.placement) o **ToolTipService.Placement** conectados para especificar si debe dibujar la información sobre herramientas arriba, debajo, a la izquierda o derecha del puntero. Puedes establecer las propiedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) o [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para cambiar la distancia entre el puntero y la información sobre herramientas. Solo uno de los dos valores de desplazamiento influirá en la posición final - VerticalOffset cuando colocación es superior o inferior, HorizontalOffset cuando se deja la colocación o la derecha.
+Ajustes de amplia, usa la propiedad de [colocación](/uwp/api/windows.ui.xaml.controls.tooltip.placement) o **ToolTipService.Placement** conectados para especificar si debe dibujar la información sobre herramientas arriba, debajo, a la izquierda o derecha del puntero. Puedes establecer las propiedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) o [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para cambiar la distancia entre el puntero y la información sobre herramientas. Solo uno de los dos valores de desplazamiento influirá en la posición final - VerticalOffset cuando colocación es superior o inferior, HorizontalOffset cuando se deja colocación o hacia la derecha.
 
 ```xaml
 <!-- An Image with an offset ToolTip. -->
@@ -129,7 +129,7 @@ Ajustes de amplia, usa la propiedad de [colocación](/uwp/api/windows.ui.xaml.co
 </Image>
 ```
 
-Si una información sobre herramientas oculta el contenido que hace referencia a, puedes ajustar su ubicación con precisión con la nueva propiedad **PlacementRect** . PlacementRect ancla la posición de la información sobre herramientas y también actúa como un área que no se tapar la información sobre herramientas, siempre que haya suficiente espacio en pantalla para dibujar la información sobre herramientas fuera del área. Puedes especificar el origen del rectángulo en relación con el propietario de la información sobre herramientas y el alto y ancho del área de exclusión. La propiedad de [colocación](/uwp/api/windows.ui.xaml.controls.tooltip.placement) definirá si se debe dibujar información sobre herramientas arriba, debajo, a la izquierda o derecha de la PlacementRect. 
+Si una información sobre herramientas oculta el contenido que hace referencia a, puedes ajustar su ubicación con precisión con la nueva propiedad **PlacementRect** . PlacementRect fija posición de la información sobre herramientas y también actúa como un área que no se tapar la información sobre herramientas, siempre que haya suficiente espacio en pantalla para dibujar la información sobre herramientas fuera del área. Puedes especificar el origen del rectángulo en relación con el propietario de la información sobre herramientas y el alto y ancho del área de exclusión. La propiedad de [colocación](/uwp/api/windows.ui.xaml.controls.tooltip.placement) definirá si se debe dibujar información sobre herramientas arriba, debajo, a la izquierda o derecha de la PlacementRect. 
 
 ```xaml
 <!-- An Image with a non-occluding ToolTip. -->

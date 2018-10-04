@@ -11,11 +11,11 @@ keywords: Windows 10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4320233"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351338"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -111,7 +111,7 @@ Esta tarea almacena los artefactos generados en VSTS. Puedes verlos en la pesta�
 
 ![artefactos](images/building-screen6.png)
 
-Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que se recomienda para el envío a la Store (.appxupload). Ten en cuenta que también puedes enviar un paquete de aplicación normal (.appx/.msix) o un lote de aplicaciones (.appxbundle/.msixbundle) a la tienda. Para este artículo, usaremos el archivo .appxupload.
+Como hemos establecido la propiedad `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete que se recomienda para el envío a la Store (.appxupload). Ten en cuenta que también puede enviar un paquete de aplicación normal (.appx/.msix) o un lote de aplicaciones (.appxbundle/.msixbundle) a la tienda. Para este artículo, usaremos el archivo .appxupload.
 
 
 >[!NOTE]
@@ -268,7 +268,7 @@ Para establecer este parámetro, combina el nombre de aplicación, la variable A
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-Aunque la tarea HockeyApp te permite especificar la ruta de acceso al archivo de símbolos, es recomendable incluir los símbolos con la recopilación.
+Aunque la tarea HockeyApp te permite especificar la ruta de acceso al archivo de símbolos, es un procedimiento recomendado consiste en incluir los símbolos con el paquete.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Configurar una compilación de implementación continua que envía un paquete a la Store 
 
@@ -316,10 +316,10 @@ Tienes que activar manualmente esta compilación. Puedes usarla para actualizar 
 
 Si quieres distribuir tu aplicación sin publicarla en la Store, puedes realizar instalaciones de prueba de la aplicación directamente en dispositivos, siempre que dichos dispositivos confíen en el certificado que se usó para firmar el paquete de la aplicación. 
 
-Usa el script de PowerShell `Add-AppDevPackage.ps1` para instalar aplicaciones. Este script se agrega el certificado a la sección de certificación raíz de confianza para el equipo local y, a continuación, se instala o actualiza el archivo de paquete de la aplicación.
+Usa el script de PowerShell `Add-AppDevPackage.ps1` para instalar aplicaciones. Este script se agrega el certificado a la sección de certificación raíz de confianza para el equipo local y, a continuación, se instala o actualiza el archivo de paquete de aplicación.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Realizar una instalación de prueba de la aplicación con la Actualización de aniversario de Windows 10
-En la actualización de aniversario de Windows 10, puedes haz doble clic en el archivo de paquete de aplicación e instalar la aplicación seleccionando el botón de instalación en un cuadro de diálogo. 
+En la actualización de aniversario de Windows 10, puedes haga doble clic en el archivo de paquete de aplicación e instalar la aplicación seleccionando el botón de instalación en un cuadro de diálogo. 
 
 ![instalación de prueba en rs1](images/building-screen18.png) 
 

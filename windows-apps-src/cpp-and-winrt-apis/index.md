@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección
 ms.localizationpriority: medium
 ms.openlocfilehash: e9c5cb8a0f81513038a18522c39f0138bb25ab27
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315983"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352439"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -54,25 +54,25 @@ C++/WinRT funciona mejor y produce archivos binarios más pequeños que cualquie
 | [Gestión de errores con C++/WinRT](error-handling.md) | Este tema describe estrategias para controlar los errores de programación con C++/WinRT. |
 | [Controlar eventos usando delegados](handle-events.md) | Este tema muestra cómo registrar y revocar delegados de control de eventos con C++/WinRT. |
 | [Crear eventos](author-events.md) | Este tema muestra cómo crear un componente de Windows Runtime con una clase en tiempo de ejecución que genera eventos. También muestra una aplicación que consume el componente y controla los eventos. |
-| [Las colecciones con C++ / WinRT](collections.md) | C++ / WinRT proporciona funciones y clases base que guardar una gran cantidad de tiempo y esfuerzo cuando quieras implementar o pasar colecciones. |
+| [Colecciones con C++ / WinRT](collections.md) | C++ / WinRT proporciona funciones y clases base que guardar una gran cantidad de tiempo y esfuerzo cuando quieras implementar o pasar colecciones. |
 | [Operaciones simultáneas y asincrónicas](concurrency.md) | Este tema muestra cómo puedes crear y consumir objetos asincrónicos de Windows Runtime con C++/WinRT. |
 | [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md) | Una propiedad que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una propiedad *observable*. Este tema muestra cómo implementar y consumir una propiedad observable y cómo enlazar un control XAML a dicha propiedad. |
 | [Controles de elementos XAML; enlazar a una colección C++/WinRT](binding-collection.md) | Una colección que se puede enlazar de forma eficaz a un control de elementos XAML se conoce como una colección *observable*. Este tema muestra cómo implementar y consumir una colección observable y cómo enlazar un control de elementos XAML a dicha colección. |
 | [Controles (con plantilla) personalizados de XAML con C++ / WinRT](xaml-cust-ctrl.md) | En este tema te guiará por los pasos de la creación de un control personalizado simple con C++ / WinRT. Se puede generar la información aquí para crear tus propios controles de interfaz de usuario enriquecida y personalizables. |
-| [Consumir los componentes de COM con C++ / WinRT](consume-com.md) | Este tema usa un ejemplo de código completo de Direct2D para mostrar cómo usar C++ / WinRT para consumir COM clases e interfaces. |
-| [Crear componentes de COM con C++ / WinRT](author-coclasses.md) | C++ / WinRT puede ayudarte a crear componentes de COM clásicos, al igual que le ayuda a crear clases en tiempo de ejecución de Windows. |
+| [Consumir componentes COM con C++ / WinRT](consume-com.md) | Este tema usa un ejemplo de código completo de Direct2D para mostrar cómo usar C++ / WinRT para consumir COM clases e interfaces. |
+| [Crear componentes COM con C++ / WinRT](author-coclasses.md) | C++ / WinRT puede ayudar a crear componentes de COM clásicos, al igual que le ayuda a crear clases en tiempo de ejecución de Windows. |
 | [Interoperabilidad entre C++/WinRT y C++/CX](interop-winrt-cx.md) | Este tema muestra dos funciones auxiliares que pueden usarse para convertir entre objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) y C++/WinRT. |
 | [Migrar a C++/WinRT desde C++/CX](move-to-winrt-from-cx.md) | En este tema se muestra cómo migrar código C++/CX a su equivalente en C++/WinRT. |
 | [Interoperabilidad entre C++/WinRT y la ABI](interop-winrt-abi.md) | Este tema muestra cómo convertir entre la interfaz binaria de aplicaciones (ABI) y objetos C++/WinRT. |
 | [Mover a C++/WinRT desde WRL](move-to-winrt-from-wrl.md) | En este tema se muestra cómo migrar código de la [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) a su equivalente en C++/WinRT. |
-| [Referencias fuertes y débiles en C++ / WinRT](weak-references.md) | El tiempo de ejecución de Windows es un sistema de recuento de referencia; y en un sistema es importante saber sobre el significado de y distinción entre, referencias fuertes y débiles. |
+| [Referencias fuertes y débiles en C++ / WinRT](weak-references.md) | El tiempo de ejecución de Windows es un sistema de recuento de referencia; y, en un sistema de este tipo es importante saber sobre el significado de y la distinción entre, referencias fuertes y débiles. |
 | [Objetos ágiles](agile-objects.md) | Un objeto ágil es aquel al que se puede acceder desde cualquier subproceso. Tus tipos C++/WinRT son ágiles de manera predeterminada, pero puedes optar por rechazarlos. |
 
 ### <a name="topics-about-the-c-language"></a>Temas sobre el lenguaje de C++
 
 | Tema | Descripción |
 | - | - |
-| [Categorías de valor y hace referencia a ellos](cpp-value-categories.md) | En este tema se describe las diversas categorías de valores que existen en C++. Sin duda habrá oído hablar de valores l y valores r, pero hay otros tipos. |
+| [Categorías de valor y hace referencia a ellos](cpp-value-categories.md) | Este tema describe las distintas categorías de valores que existen en C++. Sin duda habrá oído hablar de valores l y valores r, pero hay otros tipos. |
 
 ## <a name="important-apis"></a>API importantes
 * [Espacio de nombres de winrt](/uwp/cpp-ref-for-winrt/winrt)

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311035"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353476"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Ampliar tu aplicación de escritorio con componentes de UWP modernos
 
@@ -24,7 +24,7 @@ Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usua
 En muchos casos, puedes llamar a las API de UWP directamente desde la aplicación de escritorio, por lo que, antes de revisar esta guía, consulta [Mejorar para Windows 10](desktop-to-uwp-enhance.md).
 
 >[!NOTE]
->Esta guía se da por hecho que has creado un paquete de aplicación de Windows para la aplicación de escritorio. Si aún no has hecho esto, vea [empaquetar aplicaciones de escritorio](desktop-to-uwp-root.md).
+>En esta guía se da por hecho que has creado un paquete de la aplicación de Windows para la aplicación de escritorio. Si aún no has hecho esto, vea [empaquetar aplicaciones de escritorio](desktop-to-uwp-root.md).
 
 Si estás listo, comencemos.
 
@@ -40,7 +40,7 @@ Esta imagen muestra un ejemplo de solución.
 
 ![Ampliar proyecto de inicio](images/desktop-to-uwp/extend-start-project.png)
 
-Si la solución no contiene un proyecto de empaquetado, consulta el [paquete de la aplicación de escritorio con Visual Studio](desktop-to-uwp-packaging-dot-net.md).
+Si la solución no contiene un proyecto de empaquetado, consulta el [paquete de la aplicación de escritorio mediante el uso de Visual Studio](desktop-to-uwp-packaging-dot-net.md).
 
 ### <a name="add-a-uwp-project"></a>Agregar un proyecto de UWP
 
@@ -85,7 +85,7 @@ Esta imagen muestra una aplicación de Windows Forms que abre una interfaz de us
 ![diseño adaptativo](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->Este ejemplo muestra una UI de XAML mediante la adición de un proyecto de UWP a la solución. Que es el enfoque admitido estable mostrar interfaces de usuario de XAML en una aplicación de escritorio. La alternativa de este enfoque es para agregar controles de XAML de UWP directamente a la aplicación de escritorio mediante el uso de una isla de XAML. Islas de XAML están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurando y estabilizar en futuras versiones de Windows. Para obtener más información sobre cómo islas de XAML, consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>En este ejemplo se muestra una UI de XAML mediante la adición de un proyecto de UWP a la solución. Este es el enfoque admitido estable mostrar interfaces de usuario de XAML en una aplicación de escritorio. La alternativa de este enfoque es para agregar controles de XAML de UWP directamente a la aplicación de escritorio mediante el uso de una isla de XAML. Islas de XAML están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurando y estabilizar en futuras versiones de Windows. Para obtener más información sobre cómo islas de XAML, consulta [controles UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>El modelo de diseño
 
@@ -401,7 +401,7 @@ Para que la aplicación sea un destino de recursos compartidos, deberás hacer l
 
 ### <a name="add-a-share-target-extension"></a>Agregar una extensión de destino de recursos compartidos
 
-En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución y agrega la extensión.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución y agrega la extensión.
 
 ```xml
 <Extensions>

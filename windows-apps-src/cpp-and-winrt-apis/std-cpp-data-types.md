@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, datos, tipos
 ms.localizationpriority: medium
 ms.openlocfilehash: f9763e7f69b143dffe8fea611f25ae75284929cb
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316609"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4350974"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>Tipos de datos C++ estándar y C++/WinRT
 
@@ -93,7 +93,7 @@ std::array<byte, 3> theArray{ 99, 98, 97 };
 dataWriter.WriteBytes(theArray); // theArray is converted to an array_view before being passed to WriteBytes.
 ```
 
-C++/WinRT enlaza **std:: vector** como un parámetro de la colección de Windows Runtime. Por lo tanto, puedes pasar un **std:: vector&lt;winrt::hstring&gt;**, y se convertirá a la colección adecuada de Windows Runtime de **winrt::hstring**. Hay un detalle adicional que hay que tener en cuenta si el destinatario es asincrónico. Debido a los detalles de implementación de ese caso, tendrás que proporcionar un valor de r, por lo que debes proporcionar una copia o un movimiento del vector. En el siguiente ejemplo de código, movemos la propiedad del vector al objeto del parámetro de tipo aceptado por el destinatario asincrónico (y, a continuación, estamos cuidados de no tener acceso a `vecH` nuevo tras moverlo). Si quieres saber más sobre los valores r, vea [categorías de valor y referencias a ellos](cpp-value-categories.md).
+C++/WinRT enlaza **std:: vector** como un parámetro de la colección de Windows Runtime. Por lo tanto, puedes pasar un **std:: vector&lt;winrt::hstring&gt;**, y se convertirá a la colección adecuada de Windows Runtime de **winrt::hstring**. Hay un detalle adicional que hay que tener en cuenta si el destinatario es asincrónico. Debido a los detalles de implementación de ese caso, tendrás que proporcionar un valor de r, por lo que debes proporcionar una copia o un movimiento del vector. En el siguiente ejemplo de código, movemos la propiedad del vector al objeto del parámetro de tipo aceptado por el destinatario asincrónico (y, a continuación, estamos cuidados de no tener acceso a `vecH` nuevo tras moverlo). Si quieres saber más acerca de valores r, vea [categorías de valor y las referencias a ellos](cpp-value-categories.md).
 
 ```cppwinrt
 IAsyncAction retrieve_properties_async(StorageFile const storageFile, std::vector<winrt::hstring> vecH)
@@ -102,7 +102,7 @@ IAsyncAction retrieve_properties_async(StorageFile const storageFile, std::vecto
 }
 ```
 
-Pero no puedes pasar un **std:: vector&lt;std:: wstring&gt;** donde se espera una colección de Windows Runtime. Esto se debe a que, al haber convertido a la colección adecuada de Windows Runtime de **std:: wstring**, el lenguaje de C++ no forzará el o los parámetro/s de tipo de dicha colección. Por lo tanto, no se compilará el siguiente ejemplo de código (y la solución es pasar un **std:: vector&lt;winrt:: hstring&gt; ** en su lugar, tal como se muestra anteriormente).
+Pero no puedes pasar un **std:: vector&lt;std:: wstring&gt;** donde se espera una colección de Windows Runtime. Esto se debe a que, al haber convertido a la colección adecuada de Windows Runtime de **std:: wstring**, el lenguaje de C++ no forzará el o los parámetro/s de tipo de dicha colección. Por lo tanto, no se compilará el siguiente ejemplo de código (y la solución consiste en pasar un **std:: vector&lt;winrt:: hstring&gt; ** en su lugar, como se mostró anteriormente).
 
 ```cppwinrt
 IAsyncAction retrieve_properties_async(StorageFile const& storageFile, std::vector<std::wstring> const& vecW)
@@ -133,7 +133,7 @@ Se ha implementado una gran cantidad de constructores, operadores, funciones e i
 Para obtener más ejemplos e información, consulta el tema de referencia de API [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view).
 
 ## <a name="ivectorlttgt-and-standard-iteration-constructs"></a>**IVector&lt;T&gt; ** y construcciones de iteración estándar
-[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) es un ejemplo de una API de Windows Runtime que devuelve una colección de tipo [**IVector&lt;T&gt; **](/uwp/api/windows.foundation.collections.ivector_t_) (proyectados en C++ / WinRT como **winrt::Windows::Foundation::Collections::IVector&lt;T&gt; ** ). Puedes usar este tipo con construcciones de iteración estándar, como basado en intervalo `for`.
+[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) es un ejemplo de una API de Windows Runtime que devuelve una colección de tipo [**IVector&lt;T&gt; **](/uwp/api/windows.foundation.collections.ivector_t_) (proyectados en C++ / WinRT como **winrt::Windows::Foundation::Collections::IVector&lt;T&gt; ** ). Puedes usar este tipo con construcciones de iteración estándar, como basada en intervalo `for`.
 
 ```cppwinrt
 // main.cpp

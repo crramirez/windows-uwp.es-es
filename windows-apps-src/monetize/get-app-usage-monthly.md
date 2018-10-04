@@ -2,7 +2,7 @@
 author: Xansky
 ms.assetid: 4E4CB1E3-D213-4324-91E4-7D4A0EA19C53
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de uso de aplicación mensual para un intervalo de fechas dado y según otros filtros opcionales.
-title: Obtener el uso de la aplicación mensual
+title: Obtener el uso mensual de la aplicación
 ms.author: mhopkins
 ms.date: 08/15/2018
 ms.topic: article
@@ -11,13 +11,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: ad45422dea9b0c4335fa3cf67a594f819a60ca9c
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4310683"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351391"
 ---
-# <a name="get-monthly-app-usage"></a>Obtener el uso de la aplicación mensual
+# <a name="get-monthly-app-usage"></a>Obtener el uso mensual de la aplicación
 
 Usa este método en la API de análisis de Microsoft Store para obtener datos de uso agregados (sin incluir multijugador de Xbox) en formato JSON de una aplicación durante un intervalo de fechas (últimos 90 días solo) y otros filtros opcionales. Esta información también está disponible en el [informe de uso](../publish/usage-report.md) en el panel del centro de desarrollo de Windows.
 

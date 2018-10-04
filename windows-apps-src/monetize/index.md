@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, monetize, monetizar, engage, interactuar, promote, promover, Store services, servicios de la Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 58993f3a62f6fd85589aeac931e3abbb42a6cda6
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 02ef073e319af3fe2cf3bdd7906a7027200c4854
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689051"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352514"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de la Store
 
@@ -36,7 +36,7 @@ Para obtener detalles sobre los aranceles de Microsoft Store y cómo recibir el 
 | [Registrar eventos personalizados para el Centro de desarrollo](log-custom-events-for-dev-center.md)  | Registra eventos personalizados de tu aplicación para UWP y examina los eventos en el [informe de uso](../publish/usage-report.md) del panel del Centro de desarrollo. Esta característica requiere Microsoft Store Services SDK. |
 | [Solicitar valoraciones y opiniones](request-ratings-and-reviews.md) |  Animar a los clientes a evaluar o revisar la aplicación mediante programación mostrando una interfaz de usuario de clasificación y revisión.  |
 | [Servicios de Microsoft Store](using-windows-store-services.md)    |  Obtén información sobre cómo usar las API de RESTful para automatizar envíos a la Store, obtener acceso a datos de análisis de las aplicaciones y automatizar otras tareas relacionadas con la Store.    |
-| [Crear una aplicación de experiencia de demostración comercial (RDX)](retail-demo-experience.md)        |  Aprende a crear una aplicación de experiencia de demostración comercial que pueda instalarse en PC y dispositivos móviles de demostración en un establecimiento minorista.  |
+| [Agregar características de demostración (RDX) comercial a la aplicación](retail-demo-experience.md)        |  Incluir un modo de demostración comercial en la aplicación de Windows, para que los clientes que probar equipos y dispositivos en la superficie de ventas pueden saltar hacia la derecha en.  |
 
 ## <a name="related-topics"></a>Temas relacionados
 

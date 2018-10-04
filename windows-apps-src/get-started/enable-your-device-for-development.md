@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ad817bbae2fb8b28b95095880aa1a65c391720f3
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4314018"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352086"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -56,7 +56,7 @@ Esta es la página de configuración de la familia de dispositivos móviles:
 
  Puedes habilitar un dispositivo para el desarrollo o solo para transferir aplicaciones localmente.
 
--   *Aplicaciones de Microsoft Store* es el valor predeterminado. Si no estás desarrollando aplicaciones ni usando aplicaciones internas especiales emitidas por tu compañía, mantén esta configuración activa.
+-   *Aplicaciones de Microsoft Store* es la configuración predeterminada. Si no estás desarrollando aplicaciones ni usando aplicaciones internas especiales emitidas por tu compañía, mantén esta configuración activa.
 -   *Instalación de prueba* consiste en instalar y después ejecutar o probar una aplicación que no ha certificado Microsoft Store. Por ejemplo, una aplicación interna de tu empresa solamente.
 -   El *Modo de desarrollador* permite transferir localmente aplicaciones y también ejecutar aplicaciones desde Visual Studio en modo de depuración. 
 
@@ -150,7 +150,7 @@ En ocasiones, debido a problemas de red o administrativos, el modo de desarrolla
 Consulta el foro [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos y otros problemas. 
 
 > [!NOTE]
-> Si el modo de desarrollador no se instala correctamente, te animamos a una solicitud de comentarios de archivos. En la aplicación **Centro de opiniones** , selecciona **Agregar comentarios nuevos**y elegir la categoría de la **Plataforma de desarrollador** y la subcategoría de **Modo de desarrollador** . Enviar comentarios ayudará a Microsoft a solucionar el problema que se ha producido.
+> Si el modo de desarrollador no se instala correctamente, te animamos a presentar una solicitud de comentarios. En la aplicación **Centro de opiniones** , selecciona **Agregar comentarios nuevos**y elegir la categoría de la **Plataforma de desarrollador** y la subcategoría de **Modo de desarrollador** . Enviar comentarios ayudará a Microsoft a solucionar el problema que se ha producido.
 
 ### <a name="failed-to-locate-the-package"></a>No se pudo ubicar el paquete
 

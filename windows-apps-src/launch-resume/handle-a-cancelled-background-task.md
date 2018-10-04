@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 2c78f5f43d93002b90902a7f9e5a943c7239946c
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316441"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354277"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Controlar una tarea en segundo plano cancelada
 
@@ -89,7 +89,7 @@ private:
 
 En el método **OnCanceled** que creaste en el paso 1, Establece la variable de marca **\_CancelRequested** en **true**.
 
-[Muestra de tarea en segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509) completa método **OnCanceled** **\_CancelRequested** se establece en **true** y escribe la salida de depuración potencialmente útiles.
+[Muestra de tarea en segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509) completa método **OnCanceled** **\_CancelRequested** se establece en **true** y escribe resultados de depuración potencialmente útiles.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -119,7 +119,7 @@ void ExampleBackgroundTask::OnCanceled(IBackgroundTaskInstance^ taskInstance, Ba
 }
 ```
 
-En el método **Run** de la tarea en segundo plano, registra el método del controlador de eventos **OnCanceled** antes de empezar a trabajar. En una tarea en segundo plano dentro de proceso, puedes hacer este registro como parte de la inicialización de la aplicación. Por ejemplo, usa la siguiente línea de código.
+En el método **Run** de la tarea en segundo plano, registra el método de controlador de eventos **OnCanceled** antes de empezar a trabajar. En una tarea en segundo plano dentro de proceso, puedes hacer este registro como parte de la inicialización de la aplicación. Por ejemplo, usa la siguiente línea de código.
 
 ```csharp
 taskInstance.Canceled += new BackgroundTaskCanceledEventHandler(OnCanceled);
@@ -137,7 +137,7 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 Cuando se recibe una solicitud de cancelación, el método que realiza el trabajo en segundo plano necesita detener el trabajo y finalizarse cuando **\_cancelRequested** se establezca en **true**. Para tareas en segundo plano en proceso, esto significa volver del método **OnBackgroundActivated** . Para tareas en segundo plano fuera de proceso, esto significa volver desde el método **Run** .
 
-Modifica el código de la clase de tarea en segundo plano para comprobar la variable de marca mientras está en funcionamiento. Si **\_cancelRequested** se convierte en establece en true, Detén el trabajo de continuar.
+Modifica el código de la clase de tarea en segundo plano para comprobar la variable de marca mientras está en funcionamiento. Si **\_cancelRequested** pasa a estar establecida en true, Detén el trabajo de continuar.
 
 La [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) se incluye una comprobación que detiene la devolución de llamada del temporizador periódico si se cancela la tarea en segundo plano.
 
@@ -183,7 +183,7 @@ else
 > [!NOTE]
 > El ejemplo de código anterior usa la [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797). Propiedad de [**progreso**](https://msdn.microsoft.com/library/windows/apps/br224800) para registrar el progreso de la tarea en segundo plano. El progreso se notifica a la aplicación mediante la clase [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782).
 
-Modifica el método **Run** de forma que cuando se detenga el trabajo registre si la tarea se completó o se canceló. Este paso se aplica a las tareas en segundo plano que se ejecutan fuera de proceso porque necesitas un medio de comunicación entre procesos cuando se cancela la tarea en segundo plano. Para tareas en segundo plano dentro de proceso, puedes compartir el estado con la aplicación para indicar que la tarea se canceló.
+Modifica el método **Run** de forma que cuando se detenga el trabajo, registra si la tarea se completó o se canceló. Este paso se aplica a las tareas en segundo plano que se ejecutan fuera de proceso porque necesitas un medio de comunicación entre procesos cuando se cancela la tarea en segundo plano. Para tareas en segundo plano dentro de proceso, puedes compartir el estado con la aplicación para indicar que la tarea se canceló.
 
 La [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) registra el estado en LocalSettings.
 

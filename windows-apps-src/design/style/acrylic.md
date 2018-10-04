@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bf91725a62c8d03c37448ddf69b072461288f11
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309972"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352810"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -79,7 +79,7 @@ La característica más destacable de Acrylic es su transparencia. Hay dos tipos
 * Usar acrílico en la aplicación para la compatibilidad con la interfaz de usuario, por ejemplo, NavigationView o los elementos de comandos en línea. 
 * Usar acrílico en segundo plano para elementos transitorios de la interfaz de usuario, como los menús contextuales, los controles flotantes y la interfaz de usuario de la luz dimsissable.<br />Usar acrílico en escenarios transitorios ayuda a mantener una relación visual con el contenido que desencadenó la interfaz de usuario transitoria.
 
-Si estás usando acrílico en la aplicación en las superficies de navegación, considera la posibilidad de extender contenido debajo del panel acrílico para mejorar el flujo de la aplicación. Uso de NavigationView se hace esto automáticamente. Sin embargo, para evitar crear un efecto fragmentado y, a continuación, intenta no colocar varias partes del acrílico de extremo a extremo - Esto puede crear una indeseable no deseada entre las dos superficies borrosas. Acrylic es una herramienta que aporta armonía visual a los diseños, pero cuando se usa de forma incorrecta, puede provocar ruido visual.
+Si estás usando acrílico en la aplicación en las superficies de navegación, considere la posibilidad de extender contenido debajo del panel acrílico para mejorar el flujo de la aplicación. Uso de NavigationView se hace esto automáticamente. Sin embargo, para evitar la creación de un efecto fragmentado, no intente colocar varias partes del acrílico de extremo a extremo - Esto puede crear una indeseable no deseada entre las dos superficies borrosas. Acrylic es una herramienta que aporta armonía visual a los diseños, pero cuando se usa de forma incorrecta, puede provocar ruido visual.
 
 Ten en cuenta los siguientes patrones de uso para decidir la mejor manera de incorporar el acrílico en la aplicación:
 
@@ -89,9 +89,9 @@ Si la aplicación no es capaz de aprovechar NavigationView y piensas en Agregar 
  - Cuando el panel se abre como una superposición sobre otro contenido de la aplicación, este debe ser [acrílico en la aplicación al 60%](#acrylic-theme-resources).
  - Cuando el panel abre en paralelo con el contenido principal de la aplicación, este debe ser [acrílico en el fondo al 60%](#acrylic-theme-resources).
 
-![Aplicación de mapas con comandos horizontal de aplicación](images/Maps_In_App_Acrylic_1.png)
+![Aplicación de mapas con comandos horizontal de la aplicación](images/Maps_In_App_Acrylic_1.png)
 
-Además, tener la extensión de contenido o desplazamiento en el acrílico en la parte superior, la aplicación proporcionará una experiencia más envolvente y sin interrupciones.
+Además, tener la extensión de contenido o desplazamiento bajo el acrílico en la parte superior, la aplicación proporcionará una experiencia más envolvente y sin interrupciones.
 
 ### <a name="vertical-panes"></a>Paneles verticales
 
@@ -116,7 +116,7 @@ En el modo de contraste alto, los usuarios siguen viendo el color de fondo conoc
  - Cuando se activa el modo de ahorro de batería
  - Cuando la aplicación se ejecuta en hardware de gama baja
 
-Además, solo el acrílico en segundo plano reemplazará su transparencia y textura con un color sólido:
+Además, solo acrílico en el fondo reemplazará su transparencia y textura con un color sólido:
  - Cuando se desactiva una ventana de la aplicación en el escritorio
  - Cuando la aplicación para UWP se ejecuta en modo de teléfono, Xbox, HoloLens o tableta
 

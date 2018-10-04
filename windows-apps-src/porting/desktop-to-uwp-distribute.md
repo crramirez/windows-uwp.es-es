@@ -2,7 +2,7 @@
 author: normesta
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Publicar la aplicación de escritorio empaquetada en una tienda Windows o la instalación de prueba en uno o varios dispositivos.
+title: Publicar la aplicación de escritorio empaquetada en un almacén de Windows o la instalación de prueba en uno o varios dispositivos.
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
@@ -12,18 +12,18 @@ keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: c81e8d07efa04e93128089eaec78fb83b822a4b9
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317913"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354050"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Distribuir una aplicación de escritorio empaquetada
 
-Publicar la aplicación de escritorio empaquetada en una tienda Windows o la instalación de prueba en uno o varios dispositivos.  
+Publicar la aplicación de escritorio empaquetada en un almacén de Windows o la instalación de prueba en uno o varios dispositivos.  
 
 > [!NOTE]
-> ¿Tienes un plan de cómo puedes es posible que la transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
+> ¿Tienes un plan es posible que permita realizar la transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
 
 ## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Distribuir la aplicación publicándola en la Microsoft Store
 
@@ -46,7 +46,7 @@ Si prefieres distribuir la aplicación sin tener que usar la tienda, puedes manu
 
 Esta opción puede serte de ayuda si quieres controlar mejor la experiencia de distribución o si no quieres realizar el proceso de certificación de Microsoft Store.
 
-Para distribuir la aplicación a otros dispositivos sin enviarla a la tienda, tienes que obtener un certificado, firma la aplicación con ese certificado y, a continuación, transferir localmente la aplicación en esos dispositivos.
+Para distribuir la aplicación a otros dispositivos sin enviarla a la tienda, tienes que obtener un certificado, firmar la aplicación con ese certificado y, a continuación, transferir localmente la aplicación en esos dispositivos.
 
 Puedes [crear un certificado](../packaging/create-certificate-package-signing.md) u obtenerlo de un proveedor habitual como [Verisign](https://www.verisign.com/).
 
@@ -57,7 +57,7 @@ Si decides crear un certificado, tienes que instalarlo en el almacén de certifi
 > [!IMPORTANT]
 > Asegúrate de que el nombre del publicador del certificado coincide con el de la aplicación.
 
-Para firmar la aplicación con un certificado, vea [firmar un paquete de la aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
+Para firmar la aplicación con un certificado, vea [firmar un paquete de aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
 
 Para transferir localmente la aplicación a otros dispositivos, consulta [transferir localmente aplicaciones LOB en Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
 
@@ -81,7 +81,7 @@ Para obtener la lista completa de las extensiones y las instrucciones que indica
 
 Asimismo, puedes agregar código a la aplicación empaquetada que te permitirá realizar estas tareas:
 
-* Migrar los datos de usuario asociados a la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación empaquetada.
+* Migrar los datos de usuario asociados con la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación empaquetada.
 * Ofrecer a los usuarios la opción de desinstalar la versión de escritorio de la aplicación.
 
 Hablemos un poco sobre estas tareas. Comenzaremos con la migración de datos de usuario.

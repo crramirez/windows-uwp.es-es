@@ -11,13 +11,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, impresión
 ms.localizationpriority: medium
 ms.openlocfilehash: fe4086cc87699083304594eb4ccc8e7bb137b19f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309335"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355356"
 ---
-# <a name="customize-the-print-preview-ui"></a>Personalizar la interfaz de usuario de la vista previa de impresión
+# <a name="customize-the-print-preview-ui"></a>Personalizar la interfaz de usuario de vista previa de impresión
 
 
 

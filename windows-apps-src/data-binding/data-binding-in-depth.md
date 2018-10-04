@@ -4,22 +4,20 @@ ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Enlace de datos en profundidad
 description: El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos.
 ms.author: markl
-ms.date: 02/08/2017
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72c7037e9e99ad69ff13c65fb2195bc6e3f8110f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: 559bbbc3421151a9055b89c94bc1293a950ccb5b
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318469"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351456"
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
-
-
 
 **API importantes**
 
@@ -31,16 +29,15 @@ ms.locfileid: "4318469"
 > [!Note]
 > En este tema se describen detalladamente las características del enlace de datos. Para obtener una introducción breve y práctica, consulta [Introducción al enlace de datos](data-binding-quickstart.md).
 
-
 El enlace de datos es una forma en que la interfaz de usuario de la aplicación muestra los datos y, opcionalmente, se mantiene sincronizada con dichos datos. Enlace de datos permite separar la preocupación de los datos de la preocupación de la interfaz de usuario y que da como resultado un modelo conceptual más sencillo y una mejor legibilidad, comprobación y mantenimiento de la aplicación.
 
-Puedes usar el enlace de datos para simplemente mostrar los valores de un origen de datos aparece en primer lugar la interfaz de usuario, pero no para responder a cambios en dichos valores. Esto se denomina enlace único y funciona de forma perfecta para datos cuyos valores no cambian durante el tiempo de ejecución. Además, puedes elegir "observar" los valores y actualizar la interfaz de usuario cuando cambien. Esto se denomina enlace unidireccional y funciona bien para datos de solo lectura. En última instancia, puedes elegir observar y actualizar para que los cambios que realiza el usuario a los valores de la interfaz de usuario se envíen automáticamente al origen de datos. Esto se denomina enlace bidireccional y funciona bien para datos de lectura/escritura. A continuación se muestran algunos ejemplos.
+Puedes usar el enlace de datos para simplemente mostrar los valores de un origen de datos aparece en primer lugar la interfaz de usuario, pero no para responder a cambios en dichos valores. Este es un modo de enlace de llamada *única*, y funciona bien para un valor que no cambia durante el tiempo de ejecución. Como alternativa, puedes elegir "observar" los valores y actualizar la interfaz de usuario cuando cambien. Esto más se denomina *enlace unidireccional*, y funciona bien para datos de solo lectura. En última instancia, puedes elegir observar y actualizar para que los cambios que realiza el usuario a los valores de la interfaz de usuario se envíen automáticamente al origen de datos. Se llama a este modo *bidireccional*, y funciona bien para datos de lectura y escritura. A continuación se muestran algunos ejemplos.
 
--   Puedes usar el enlace único para enlazar una [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) a la foto del usuario actual.
--   Puedes usar el enlace unidireccional para enlazar una [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) a una colección de artículos de noticias en tiempo real agrupados por sección periódicos.
--   Puedes usar un enlace bidireccional para enlazar un [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) al nombre de un cliente en un formulario.
+-   Puedes usar el modo de un solo uso para enlazar una [**imagen**](https://msdn.microsoft.com/library/windows/apps/BR242752) a la foto del usuario actual.
+-   Puedes usar el modo unidireccional para enlazar una [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) a una colección de artículos de noticias en tiempo real agrupados por sección periódicos.
+-   Usar el modo bidireccional para enlazar un [**cuadro de texto**](https://msdn.microsoft.com/library/windows/apps/BR209683) al nombre de un cliente en un formulario.
 
-Existen dos tipos de enlaces y generalmente ambos se declaran en el marcado de interfaz de usuario. Puedes usar la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) o [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Incluso puedes usar una combinación de ambos en la misma aplicación, aun en el mismo elemento de la interfaz de usuario. {x:Bind} es nuevo para Windows 10 y tiene un mejor rendimiento. Todos los detalles que se describen en este tema se aplican a ambos tipos de enlace, a menos que especifiquemos explícitamente lo contrario.
+Independientemente del modo, hay dos tipos de enlace, y ambos normalmente se declaran en el marcado de la interfaz de usuario. Puedes usar la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) o [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Incluso puedes usar una combinación de ambos en la misma aplicación, aun en el mismo elemento de la interfaz de usuario. {x:Bind} es nuevo para Windows 10 y tiene un mejor rendimiento. Todos los detalles que se describen en este tema se aplican a ambos tipos de enlace, a menos que especifiquemos explícitamente lo contrario.
 
 **Aplicaciones de ejemplo que muestran {x:Bind}**
 
@@ -202,7 +199,7 @@ Observa el valor que especificamos para **Path**. Este valor se interpreta en el
 La propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) admite una variedad de opciones de sintaxis para enlazar a propiedades anidadas, propiedades adjuntas e indexadores de cadenas y de enteros. Para más información, consulta [Sintaxis de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). El enlace a indexadores de cadenas te ofrece el mismo efecto que el enlace a propiedades dinámicas sin tener que implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). Para otras opciones de configuración, consulta [Extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783).
 
 > [!Note]
-> Los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlazada bidireccional cuando [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco y no después de cada presión de tecla de usuario.
+> Los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlazado bidireccional cuando el [**control TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco y no después de cada presión de tecla de usuario.
 
 **DataTemplate y x:DataType**
 
@@ -260,7 +257,7 @@ Dentro de un [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/
 ```
 
 > [!Note]
-> De manera predeterminada, los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlazado bidireccional cuando [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco. Para hacer que los cambios se envíen después de cada presión de tecla de usuario, establece **UpdateSourceTrigger** en **PropertyChanged** en el enlace en el marcado. También puede tomar el control completo de cuándo se envían los datos al origen estableciendo **UpdateSourceTrigger** en **Explicit**. Luego puedes controlar eventos en el cuadro de texto (normalmente [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), llamar a [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) en el destino para obtener un [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) y finalmente llamar a [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) para actualizar mediante programación el origen de datos.
+> De manera predeterminada, los cambios en [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) se envían a un origen de enlazado bidireccional cuando el [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) pierde el foco. Para hacer que los cambios se envíen después de cada presión de tecla de usuario, establece **UpdateSourceTrigger** en **PropertyChanged** en el enlace en el marcado. También puede tomar el control completo de cuándo se envían los datos al origen estableciendo **UpdateSourceTrigger** en **Explicit**. Luego puedes controlar eventos en el cuadro de texto (normalmente [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), llamar a [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) en el destino para obtener un [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) y finalmente llamar a [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) para actualizar mediante programación el origen de datos.
 
 La propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) admite una variedad de opciones de sintaxis para enlazar a propiedades anidadas, propiedades adjuntas e indexadores de cadenas y de enteros. Para más información, consulta [Sintaxis de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). El enlace a indexadores de cadenas te ofrece el mismo efecto que el enlace a propiedades dinámicas sin tener que implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). La propiedad [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname) es útil para el enlace de elemento a elemento. La propiedad [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource) tiene varios usos, uno de los cuales es como una alternativa más eficaz para el enlace de plantilla dentro de un [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391). Para otras opciones de configuración, consulta [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) y la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820).
 
@@ -657,7 +654,7 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | FallbackValue | `{x:Bind Name, FallbackValue='empty'}` | `{Binding Name, FallbackValue='empty'}` | Se usa cuando cualquier parte de la ruta de acceso para el enlace (excepto la hoja) es null. | 
 | ElementName | `{x:Bind slider1.Value}` | `{Binding Value, ElementName=slider1}` | Con {x: enlace} que enlace a un campo; Ruta de acceso raíz está en la página de forma predeterminada, por lo que cualquier elemento con nombre se puede acceder mediante su campo. | 
 | RelativeSource: Self | `<Rectangle x:Name="rect1" Width="200" Height="{x:Bind rect1.Width}" ... />` | `<Rectangle Width="200" Height="{Binding Width, RelativeSource={RelativeSource Self}}" ... />` | Con {x: Bind}, nombre del elemento y usar su nombre en la ruta de acceso. | 
-| RelativeSource: TemplatedParent | No es necesario | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | Con {x: Bind} TargetType en ControlTemplate indica enlace al elemento primario de la plantilla. Para {Binding} el enlace de plantilla normal puede usarse en las plantillas de control para la mayoría de usos. Pero usa TemplatedParent donde necesites usar un convertidor o un enlace bidireccional.< | 
+| RelativeSource: TemplatedParent | No es necesario | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | Con {x: Bind} TargetType en ControlTemplate indica enlace al elemento primario de la plantilla. Para {Binding} enlace de plantilla normal puede usarse en las plantillas de control para la mayoría de usos. Pero usa TemplatedParent donde necesites usar un convertidor o un enlace bidireccional.< | 
 | Origen | No es necesario | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Para {x: Bind} puedes directamente usar el elemento con nombre, usa una propiedad o una ruta de acceso estático. | 
 | Modo | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | El modo puede ser OneTime, OneWay o TwoWay. {x: enlace} el valor predeterminado es OneTime; {Binding} predeterminado OneWay. | 
 | UpdateSourceTrigger | `{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}` | `{Binding UpdateSourceTrigger=PropertyChanged}` | UpdateSourceTrigger puede ser Default, LostFocus o PropertyChanged. {x:Bind} no admite UpdateSourceTrigger=Explicit. {x: enlace} usa el comportamiento PropertyChanged para todos los casos excepto TextBox.Text, donde utiliza el comportamiento LostFocus. | 

@@ -17,11 +17,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 20b6f54f39be116ad77cb5a179ff8c3d188eb8c4
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311989"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351971"
 ---
 # <a name="menus-and-context-menus"></a>Menús y menús contextuales
 
@@ -35,7 +35,7 @@ Los menús y los menús contextuales muestran una lista de opciones o comandos c
 
 | **API de la plataforma** | **API de la biblioteca de la interfaz de usuario de Windows** |
 | - | - |
-| [Clase MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), la [clase de la barra de menús](/uwp/api/windows.ui.xaml.controls.menubar), [propiedad ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propiedad FlyoutBase.AttachedFlyout](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [Clase de la barra de menús](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| [Clase MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [clase de barra de menús](/uwp/api/windows.ui.xaml.controls.menubar), [propiedad ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propiedad FlyoutBase.AttachedFlyout](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [Clase de la barra de menús](/uwp/api/microsoft.ui.xaml.controls.menubar) |
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -53,7 +53,7 @@ Para mostrar un conjunto de varios menús de nivel superior en una fila horizont
 
 Barra de menús y CommandBar ambos representan las superficies que puedes usar para exponer comandos a los usuarios. La barra de menús proporciona una forma rápida y sencilla para exponer un conjunto de comandos para las aplicaciones que puede que tengas más de organización o agrupamiento que permite un control CommandBar.
 
-También puedes usar una barra de menús junto con un control CommandBar. Usar la barra de menús para proporcionar la mayor parte de los comandos y el control CommandBar para resaltar los comandos más usados.
+También puedes usar una barra de menús junto con un control CommandBar. Usar la barra de menús para proporcionar la mayor parte de los comandos y el control CommandBar para resaltar los comandos usados con más.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -73,7 +73,7 @@ También puedes usar una barra de menús junto con un control CommandBar. Usar l
 
 ## <a name="menus-vs-context-menus"></a>Menús frente a menús contextuales
 
-Menús y menús contextuales son similares en su apariencia y lo que pueden contener. De hecho, puedes usar el mismo control, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para crearlos. La diferencia es cómo se permite al usuario acceder a ella.
+Menús y menús contextuales son similares en su apariencia y lo que pueden contener. De hecho, puedes usar el mismo control, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para crearlos. La diferencia es cómo se permite al usuario tener acceso a él.
 
 ¿Cuándo debes usar un menú o un menú contextual?
 
@@ -219,14 +219,14 @@ Los controles de cierre del elemento por cambio de foco, tales como menús, men�
 
 ## <a name="create-a-menu-bar"></a>Crear una barra de menús
 
-> **Vista previa**: barra de menús requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vista previa**: barra de menús requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o en la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Usa los mismos elementos para crear menús en una barra de menús, como se muestra en un control flotante de menú. Sin embargo, en lugar de agrupar los objetos de MenuFlyoutItem en un MenuFlyout, agrupan en un elemento MenuBarItem. Cada MenuBarItem se agrega a la barra de menús como un menú de nivel superior.
 
 ![Ejemplo de una barra de menús](images/menu-bar-submenu.png)
 
 > [!NOTE]
-> En este ejemplo se muestra solo cómo crear la estructura de la interfaz de usuario, pero no muestra la implementación de cualquiera de los comandos.
+> En este ejemplo se muestra cómo solo crear la estructura de la interfaz de usuario, pero no muestra la implementación de cualquiera de los comandos.
 
 ```xaml
 <MenuBar>

@@ -2,7 +2,7 @@
 author: normesta
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 Search.Product: eADQiWindows 10XVcnh
-title: Empaquetar una aplicación de escritorio con Visual Studio
+title: Empaquetar una aplicación de escritorio mediante el uso de Visual Studio
 ms.author: normesta
 ms.date: 08/30/2017
 ms.topic: article
@@ -12,13 +12,13 @@ keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c9b7a30a50c26d2dbdaf6df04e85549addaf181
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313155"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4350870"
 ---
-# <a name="package-a-desktop-application-by-using-visual-studio"></a>Empaquetar una aplicación de escritorio con Visual Studio
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Empaquetar una aplicación de escritorio mediante el uso de Visual Studio
 
 Puedes usar Visual Studio para generar un paquete para tu aplicación de escritorio. Luego, puedes publicar que ese paquete en Microsoft Store o transferirlo localmente a uno o más equipos.
 
@@ -91,7 +91,7 @@ Consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](
 
 Consulta [Mejorar tu aplicación de escritorio para Windows 10](desktop-to-uwp-enhance.md).
 
-**Ampliar la aplicación de escritorio agregando proyectos UWP y componentes de Windows Runtime**
+**Ampliar tu aplicación de escritorio agregando proyectos UWP y componentes de Windows Runtime**
 
 Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](desktop-to-uwp-extend.md).
 
