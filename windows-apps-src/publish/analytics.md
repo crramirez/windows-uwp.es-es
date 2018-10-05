@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, análisis, informes, panel, aplicaciones, datos, las métricas
 ms.localizationpriority: medium
 ms.openlocfilehash: 090ddfdfbed1ae49e87f4dc419765e006913764f
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351371"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4392576"
 ---
 # <a name="analyze-app-performance"></a>Analizar el rendimiento de la aplicación
 

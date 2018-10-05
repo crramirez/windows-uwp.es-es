@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, relacionados con los paquetes opcionales, Establece, servidor IIS
 ms.localizationpriority: medium
 ms.openlocfilehash: 214ddd2b55bca1acecbab0a841cf2048335e7b3a
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4355780"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4388004"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Instalar una aplicación para UWP desde un servidor IIS
 

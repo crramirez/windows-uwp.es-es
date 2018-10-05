@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
 ms.openlocfilehash: f5660649b6f82135cdb45a8678a3f871a0f5e61d
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4361140"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4393497"
 ---
 # <a name="optional-packages-with-executable-code"></a>Paquetes opcionales con código ejecutable
  

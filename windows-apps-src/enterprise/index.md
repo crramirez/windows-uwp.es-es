@@ -1,7 +1,7 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
 description: Esta guía básica proporciona una visión general de las características fundamentales de empresa para las aplicaciones de Windows 10 y las aplicaciones para la Plataforma universal de Windows (UWP).
-title: Empresa
+title: Enterprise
 author: awkoren
 ms.author: alkoren
 ms.date: 08/30/2018
@@ -11,13 +11,13 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351189"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4388044"
 ---
-# <a name="enterprise"></a>Empresa
+# <a name="enterprise"></a>Enterprise
 
 Esta guía básica proporciona una visión general de las características fundamentales de empresa para la Plataforma universal de Windows (UWP) Windows 10.
 
@@ -180,7 +180,7 @@ Tienes varias opciones para distribuir aplicaciones a los usuarios de la organiz
 | Tema | Descripción |
 |-------|-------------|
 | [Distribuir aplicaciones de línea de negocio a empresas](https://msdn.microsoft.com/library/windows/apps/mt608995) | Puedes publicar aplicaciones de línea de negocio directamente en las empresas por volumen a través de Microsoft Store para empresas, sin que las aplicaciones estén disponibles para el público. |
-| [Instalación de prueba de aplicaciones](https://technet.microsoft.com/library/mt269549) | Al realizar la instalación de prueba de una aplicación, se implementa un paquete de la aplicación firmado en un dispositivo. Es necesario mantener la firma, el hospedaje y la implementación de estas aplicaciones. Se ha simplificado el proceso de instalación de prueba de aplicaciones para Windows 10.             |
+| [Aplicaciones en instalación de prueba](https://technet.microsoft.com/library/mt269549) | Al realizar la instalación de prueba de una aplicación, se implementa un paquete de la aplicación firmado en un dispositivo. Es necesario mantener la firma, el hospedaje y la implementación de estas aplicaciones. Se ha simplificado el proceso de instalación de prueba de aplicaciones para Windows 10.             |
 | [Publicar aplicaciones en Microsoft Store](https://dev.windows.com/publish) | La Microsoft Store unificado te permite publicar y administrar todas las aplicaciones para todos los dispositivos de Windows. Personalizar la disponibilidad de la aplicación con el precio de cada mercado, la distribución y visibilidad de los controles y otras opciones. |
 
 ## <a name="enterprise-uwp-samples"></a>Muestras de UWP de empresa

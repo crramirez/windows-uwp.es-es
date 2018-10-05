@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migar, interoperabilidad, ABI
 ms.localizationpriority: medium
 ms.openlocfilehash: 098d182b9cc4cc51bda0a7959702e53accf2699f
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4359558"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4388938"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>Interoperabilidad entre C++/WinRT y la ABI
 
