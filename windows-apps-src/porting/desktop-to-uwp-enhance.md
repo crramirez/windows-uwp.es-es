@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 392f8166e16c028a57bc9e27039a9884f1d9714a
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4393753"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4419865"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Mejorar tu aplicación de escritorio para Windows 10
 
@@ -78,7 +78,7 @@ Ya estás listo para agregar experiencias modernas que dan a conocer cuándo los
 
 :white_check_mark: **En primer lugar, decide qué experiencias quieres agregar**
 
-Hay muchas entre las que elegir. Por ejemplo, puedes simplificar el flujo de pedidos de compra mediante API de rentabilidad o dirigir la atención a la aplicación cuando tengas algo interesante que compartir, por ejemplo, una nueva imagen que otro usuario ha publicado.
+Hay muchas entre las que elegir. Por ejemplo, puedes simplificar el flujo de pedidos de compra mediante el uso de API de rentabilidad o dirigir la atención a la aplicación cuando tengas algo interesante que compartir, por ejemplo, una nueva imagen que otro usuario ha publicado.
 
 ![Notificación del sistema](images/desktop-to-uwp/toast.png)
 

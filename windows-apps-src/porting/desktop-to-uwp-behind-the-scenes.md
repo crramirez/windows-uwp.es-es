@@ -11,23 +11,23 @@ keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e6cd2b305a9d52a2239be46cc7f77650cdd6531
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4384321"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4420654"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>En segundo plano de la aplicación de escritorio empaquetada
 
-En este artículo se proporciona un análisis más profundo sobre lo que sucede con archivos y las entradas del registro cuando se crea un paquete de la aplicación de Windows para la aplicación de escritorio.
+En este artículo se proporciona un análisis más profundo sobre lo que sucede con los archivos y las entradas del registro cuando se crea un paquete de la aplicación de Windows para la aplicación de escritorio.
 
 Un objetivo clave de un paquete moderna es separar el estado de la aplicación del estado del sistema tanto como sea posible mientras mantienes la compatibilidad con otras aplicaciones. Para ello, el puente coloca la aplicación dentro de un paquete de Plataforma universal de Windows (UWP) y, después, detecta y redirige algunos cambios que realiza en el sistema de archivos y en el Registro en tiempo de ejecución.
 
-Los paquetes que se crea para la aplicación de escritorio son solo de escritorio de plena confianza y las aplicaciones no se virtualizan ni. Esto les permite interactuar con otras aplicaciones de la misma forma que las aplicaciones de escritorio clásicas.
+Los paquetes que creas para tu aplicación de escritorio son solo de escritorio de plena confianza y las aplicaciones no se virtualizan ni. Esto les permite interactuar con otras aplicaciones de la misma forma que las aplicaciones de escritorio clásicas.
 
 ## <a name="installation"></a>Instalación
 
-Los paquetes de aplicaciones se instalan en *C:\Archivos de programa\WindowsApps\nombre_paquete*, con el archivo ejecutable denominado *nombre_aplicación.exe*. Cada carpeta de paquete contiene un manifiesto (denominado AppxManifest.xml) que incluye un espacio de nombres XML especial para las aplicaciones empaquetadas. En ese archivo de manifiesto hay un elemento ```<EntryPoint>``` que hace referencia a una aplicación de plena confianza. Cuando se inicia la aplicación, no se ejecuta dentro de un contenedor de aplicación, pero en su lugar, se ejecuta como el usuario lo harías normalmente.
+Los paquetes de aplicaciones se instalan en *C:\Archivos de programa\WindowsApps\nombre_paquete*, con el archivo ejecutable denominado *nombre_aplicación.exe*. Cada carpeta de paquete contiene un manifiesto (denominado AppxManifest.xml) que incluye un espacio de nombres XML especial para las aplicaciones empaquetadas. En ese archivo de manifiesto hay un elemento ```<EntryPoint>``` que hace referencia a una aplicación de plena confianza. Cuando se inicia la aplicación, no se ejecuta dentro de un contenedor de aplicación, pero en su lugar, se ejecuta como el usuario normalidad.
 
 Después de la implementación, el sistema operativo marca los archivos del paquete como de solo lectura y los bloquea completamente. Windows evita que las aplicaciones se inicien en caso de que se manipulen estos archivos.
 
@@ -35,7 +35,7 @@ Después de la implementación, el sistema operativo marca los archivos del paqu
 
 Para incluir el estado de la aplicación, se capturan los cambios que realiza la aplicación en AppData. Todo lo que se escribe en la carpeta AppData del usuario (por ejemplo, *C:\Usuarios\nombre_usuario\AppData*), como las operaciones de creación, eliminación y actualización, se copia en escritura a una ubicación privada por usuario y por aplicación. Esto crea la ilusión de que la aplicación empaquetada está editando AppData real, está modificando realmente una copia privada. Al redireccionar las escrituras de este modo, el sistema puede realizar un seguimiento de todas las modificaciones de archivos que realiza la aplicación. Esto permite que el sistema limpie esos archivos cuando se desinstala la aplicación, por lo tanto, reduce el "deterioro" del sistema y se ofrece un mejor quitar la aplicación experiencia para el usuario.
 
-Además de redirigir AppData, carpetas conocidas de Windows (System32, archivos de programa (x86), etcetera) dinámicamente se combinan con los directorios correspondientes en el paquete de la aplicación. Cada paquete contiene una carpeta denominada "VFS" en su raíz. Las lecturas de directorios o archivos en el directorio VFS se combinan en tiempo de ejecución con sus respectivos equivalentes nativos. Por ejemplo, una aplicación podría contener *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* como parte de su paquete de la aplicación, pero el archivo aparecería pueda instalarse en *C:\Windows\System32\vc10.dll*.  Esto mantiene la compatibilidad con las aplicaciones de escritorio que pudieran esperar que los archivos se encuentren en ubicaciones distintas del paquete.
+Además de redirigir AppData, carpetas conocidas de Windows (System32, archivos de programa (x86), etcetera) dinámicamente se combinan con los directorios correspondientes en el paquete de la aplicación. Cada paquete contiene una carpeta denominada "VFS" en su raíz. Las lecturas de directorios o archivos en el directorio VFS se combinan en tiempo de ejecución con sus respectivos equivalentes nativos. Por ejemplo, una aplicación podría contener *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* como parte de su paquete de la aplicación, pero el archivo aparecería instalado en *C:\Windows\System32\vc10.dll*.  Esto mantiene la compatibilidad con las aplicaciones de escritorio que pudieran esperar que los archivos se encuentren en ubicaciones distintas del paquete.
 
 No se permiten las escrituras en archivos o carpetas del paquete de la aplicación. El puente ignora las escrituras en archivos y carpetas que no forman parte del paquete, y se permiten si el usuario tiene permisos.
 
@@ -52,7 +52,7 @@ Escrituras fuera del paquete | Se permiten si el usuario tiene permisos. | Una o
 
 ### <a name="packaged-vfs-locations"></a>Ubicaciones de VFS empaquetadas
 
-En la tabla siguiente se muestra en qué ubicación del sistema se superponen los archivos que se envían como parte del paquete para la aplicación. La aplicación considerará que estos archivos en las ubicaciones del sistema que se enumeran, en realidad, se encuentran en las ubicaciones redirigidas dentro *De programa\windowsapps\nombre_paquete\vfs C:\Program*. Las ubicaciones de FOLDERID proceden de las constantes [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx).
+En la tabla siguiente se muestra en qué ubicación del sistema se superponen los archivos que se envían como parte del paquete para la aplicación. La aplicación considerará que estos archivos en las ubicaciones del sistema, en realidad, se encuentran en las ubicaciones redirigidas dentro *De programa\windowsapps\nombre_paquete\vfs C:\Program*. Las ubicaciones de FOLDERID proceden de las constantes [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx).
 
 Ubicación del sistema | Ubicación redirigida (en [RutaDelPaquete]\VFS\) | Válido en las arquitecturas
  :--- | :--- | :---
@@ -94,7 +94,7 @@ Escrituras fuera del paquete | Omitidas por el puente. Se permiten si el usuario
 
 ## <a name="uninstallation"></a>Desinstalación
 
-Cuando se desinstala un paquete por el usuario, se quitan todos los archivos y carpetas ubicadas en *C:\Program programa\windowsapps\nombre_paquete* , así como las escrituras redirigidas a AppData o al registro que capturaron durante el proceso de empaquetado.
+Cuando el usuario desinstala un paquete, se quitan todos los archivos y carpetas ubicadas en *C:\Program programa\windowsapps\nombre_paquete* , así como las escrituras redirigidas a AppData o al registro que capturaron durante el proceso de empaquetado.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

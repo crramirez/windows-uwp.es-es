@@ -11,11 +11,11 @@ keywords: Windows 10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4392828"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4432601"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -216,7 +216,7 @@ Este error aparece porque en el nivel de la solución, no está claro qué aplic
 A continuación, quite el argumento de MSBuild `AppxBundle` desde el paso de compilación.
 
 ## <a name="set-up-a-continuous-deployment-build-for-sideloading"></a>Configurar una compilación de implementación continua para una instalación de prueba
-Cuando se completa este tipo de compilación, los usuarios pueden descargar el archivo de recopilación de aplicación de la sección de artefactos de la página de resultados de compilación. Si quieres realizar una prueba beta de la aplicación mediante la creación de una distribución más completa, puedes usar el servicio HockeyApp. Este servicio ofrece funcionalidades avanzadas para las pruebas beta, análisis de usuario y diagnósticos de bloqueos.
+Cuando se completa este tipo de compilación, los usuarios pueden descargar el archivo de paquete de la aplicación desde la sección de artefactos de la página de resultados de compilación. Si quieres realizar una prueba beta de la aplicación mediante la creación de una distribución más completa, puedes usar el servicio HockeyApp. Este servicio ofrece funcionalidades avanzadas para las pruebas beta, análisis de usuario y diagnósticos de bloqueos.
 
 ### <a name="applying-version-numbers-to-your-builds"></a>Aplicación de números de versión a las compilaciones
 
@@ -268,7 +268,7 @@ Para establecer este parámetro, combina el nombre de aplicación, la variable A
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-Aunque la tarea HockeyApp te permite especificar la ruta de acceso al archivo de símbolos, es un procedimiento recomendado consiste en incluir los símbolos con el paquete.
+Aunque la tarea HockeyApp te permite especificar la ruta de acceso al archivo de símbolos, es un procedimiento recomendado para incluir los símbolos con el paquete.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Configurar una compilación de implementación continua que envía un paquete a la Store 
 
@@ -316,10 +316,10 @@ Tienes que activar manualmente esta compilación. Puedes usarla para actualizar 
 
 Si quieres distribuir tu aplicación sin publicarla en la Store, puedes realizar instalaciones de prueba de la aplicación directamente en dispositivos, siempre que dichos dispositivos confíen en el certificado que se usó para firmar el paquete de la aplicación. 
 
-Usa el script de PowerShell `Add-AppDevPackage.ps1` para instalar aplicaciones. Este script se agrega el certificado a la sección de certificación raíz de confianza para el equipo local y, a continuación, se instala o actualiza el archivo de paquete de aplicación.
+Usa el script de PowerShell `Add-AppDevPackage.ps1` para instalar aplicaciones. Este script se agrega el certificado a la sección de certificación raíz de confianza para el equipo local y, a continuación, se instala o actualiza el archivo de paquete de la aplicación.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Realizar una instalación de prueba de la aplicación con la Actualización de aniversario de Windows 10
-En la actualización de aniversario de Windows 10, puedes haga doble clic en el archivo de paquete de aplicación e instalar la aplicación seleccionando el botón de instalación en un cuadro de diálogo. 
+En la actualización de aniversario de Windows 10, puede haz doble clic en el archivo de paquete de aplicación e instalar la aplicación seleccionando el botón de instalación en un cuadro de diálogo. 
 
 ![instalación de prueba en rs1](images/building-screen18.png) 
 

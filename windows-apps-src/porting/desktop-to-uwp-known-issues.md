@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4394199"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4430971"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conocidos de las aplicaciones de escritorio empaquetadas
 
@@ -56,7 +56,7 @@ Esta es una limitación conocida y no existe ninguna solución actualmente. Dich
 
 Esto puede suceder si los archivos ejecutables de la aplicación tienen una extensión **. EXE** escrita en mayúsculas. Aunque las mayúsculas y minúsculas de esta extensión no deberían afectar a la aplicación se ejecuta, esto puede provocar DAC muestre este error.
 
-Para resolver este problema, prueba a especificar la marca **-AppExecutable** cuando realices el empaquetado y usa la extensión ".exe" en minúsculas como extensión principal del archivo ejecutable (por ejemplo: MYAPP.exe).    Como alternativa puedes cambiar de todos los archivos ejecutables de la aplicación estén en minúsculas en mayúsculas (por ejemplo: desde. EXE a .exe).
+Para resolver este problema, prueba a especificar la marca **-AppExecutable** cuando realices el empaquetado y usa la extensión ".exe" en minúsculas como extensión principal del archivo ejecutable (por ejemplo: MYAPP.exe).    También puedes cambiar las mayúsculas y minúsculas para todos los archivos ejecutables en la aplicación en minúsculas en mayúsculas (por ejemplo: desde. EXE .exe).
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>Firmas Authenticode dañadas o con formato incorrecto
 
@@ -95,7 +95,7 @@ Se publicó una [actualización de Windows (versión 14393.351 - KB3197954)](htt
 
 Si la actualización no soluciona el problema o no estás seguro de cómo recuperar tu equipo, ponte en contacto con el [Soporte técnico de Microsoft](https://support.microsoft.com/contactus/).
 
-Si eres un desarrollador, quizá quieras impedir la instalación de tu aplicación empaquetada en las versiones de Windows que no incluyen esta actualización. Ten en cuenta al hacerlo, la aplicación no estará disponible para los usuarios que aún no han instalado la actualización. Para limitar la disponibilidad de la aplicación a los usuarios que han instalado esta actualización, modifica el archivo AppxManifest.xml como sigue:
+Si eres un desarrollador, quizá quieras impedir la instalación de tu aplicación empaquetada en las versiones de Windows que no incluyen esta actualización. Tenga en cuenta que, al hacerlo, la aplicación no estará disponible para los usuarios que aún no han instalado la actualización. Para limitar la disponibilidad de la aplicación a los usuarios que han instalado esta actualización, modifica el archivo AppxManifest.xml de la siguiente manera:
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
@@ -143,19 +143,19 @@ Esto puede suceder cuando el paquete contiene un archivo binario que tiene un ce
 
 * El puntero de certificado no se alinea correctamente para una estructura WIN_CERTIFICATE.
 
-Para buscar archivos que contienen un certificado PE incorrecto, abra un **símbolo del sistema**y establece la variable de entorno denominada `APPXSIP_LOG` a un valor de 1.
+Para buscar archivos que contienen un certificado PE incorrecto, abre un **símbolo del sistema**y establece la variable de entorno denominada `APPXSIP_LOG` a un valor de 1.
 
 ```
 set APPXSIP_LOG=1
 ```
 
-A continuación, desde el **símbolo del sistema**, inicia la aplicación de nuevo. Por ejemplo:
+Desde el **símbolo del sistema**, inicia sesión en tu aplicación de nuevo. Por ejemplo:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Obtener información acerca de los archivos que contienen un certificado PE incorrecto, aparecerán en la **Ventana de consola**. Por ejemplo:
+Información acerca de los archivos que contienen un certificado PE incorrecto, aparecerán en la **Ventana de consola**. Por ejemplo:
 
 ```
 ...

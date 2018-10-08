@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4388557"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4432687"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows10 Mobile
 
@@ -29,7 +29,7 @@ Puedes probar tu aplicación universal con una imagen de emulador de Windows 10 
 
 El equipo debe cumplir los siguientes requisitos:
 
-CPU (estas opciones de configuración, si está disponible, pueden estar habilitados en el BIOS)
+CPU (estas opciones de configuración, si está disponible, se pueden habilitar en el BIOS)
 
 -   Virtualización asistida por hardware ([comprobar la compatibilidad](https://www.microsoft.com/download/details.aspx?id=592)).
 -   Traducción de direcciones de segundo nivel (SLAT).
@@ -68,7 +68,7 @@ Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador vir
 
 ### <a name="running"></a>Running
 
-Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado del menú desplegable **de ejecución** en Visual Studio.
+Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado desde el menú desplegable **Ejecutar** en Visual Studio.
 
 ![Emuladores disponibles con resolución, tamaño y memoria](images/em-list.png)
 

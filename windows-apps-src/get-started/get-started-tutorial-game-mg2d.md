@@ -11,11 +11,11 @@ keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: d38465ce02e0aedf854094ede75fc33701b226a6
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4387514"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4419888"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Crear un juego para UWP en MonoGame 2D
 
@@ -30,12 +30,12 @@ MonoGame es un marco de desarrollo de juegos ligero. En este tutorial se te ense
 
 ## <a name="prerequisites"></a>Requisitos previos
 +   Windows 10 y Microsoft Visual Studio 2017.  [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener volver a ejecutar el programa de instalación de Visual Studio y modificando la instalación de Visual Studio 2017.
++ El marco de trabajo de desarrollo de escritorio de .NET. Si aún no tienes instalado, obtener, vuelve a ejecutar al instalador de Visual Studio y modificar la instalación de Visual Studio 2017.
 +   Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. [Haz clic aquí para obtener información acerca de cómo empezar a trabajar con C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   Familiaridad con conceptos informáticos básicos, como clases, métodos y variables, es una ventaja.
 
 ## <a name="why-monogame"></a>¿Por qué MonoGame?
-No hay escasez de opciones cuando se trata de entornos de desarrollo de juegos. Desde motores completos, como Unity, a API de multimedia exhaustivas y complejas, como DirectX; puede resultar difícil saber por dónde comenzar. MonoGame es un conjunto de herramientas, con un nivel de complejidad entre un motor de juego y una API resolutiva como DirectX. Proporciona una canalización de contenido fácil de usar y toda la funcionalidad necesaria para crear juegos ligeros que puedan ejecutarse en diferentes plataformas. Lo mejor de todo, las aplicaciones de MonoGame están escritas en C# y podrás distribuirlas rápidamente a través de Microsoft Store u otras plataformas similares de distribución.
+No hay escasez de opciones cuando se trata de entornos de desarrollo de juegos. Desde motores completos, como Unity, a API de multimedia exhaustivas y complejas, como DirectX; puede resultar difícil saber por dónde comenzar. MonoGame es un conjunto de herramientas, con un nivel de complejidad entre un motor de juego y una API resolutiva como DirectX. Proporciona una canalización de contenido fácil de usar y toda la funcionalidad necesaria para crear juegos ligeros que puedan ejecutarse en diferentes plataformas. Lo mejor de todo, las aplicaciones de MonoGame están escritas en C# y podrás distribuirlas rápidamente a través de Microsoft Store o de otras plataformas similares de distribución.
 
 ## <a name="get-the-code"></a>Obtener el código
 Si no te apetece seguir el tutorial paso a paso y solo quieres ver MonoGame en acción, [haz clic aquí para obtener la aplicación acabada](https://github.com/Microsoft/Windows-appsample-get-started-mg2d).
@@ -383,7 +383,7 @@ public void StartGame()
 ```
 
 ### <a name="7-handle-keyboard-input"></a>7. controlar la entrada de teclado
-A continuación necesitamos un nuevo método para controlar la entrada de usuario a través del teclado. Agrega este método a **Game1.cs**:
+A continuación, necesitamos un nuevo método para controlar la entrada de usuario mediante el teclado. Agrega este método a **Game1.cs**:
 
 ```CSharp
 void KeyboardHandler()
@@ -696,4 +696,4 @@ Debes usar la [lista de comprobación de envío de aplicación](https://docs.mic
 
 La aplicación debe enviarse para su [certificación](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process).
 
-Para obtener más información, consulte la [publicación de tu aplicación para UWP](https://developer.microsoft.com/en-us/store/publish-apps).
+Para obtener más información, consulta la [publicación de tu aplicación para UWP](https://developer.microsoft.com/en-us/store/publish-apps).

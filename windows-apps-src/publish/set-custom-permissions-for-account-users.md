@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar
 ms.localizationpriority: medium
 ms.openlocfilehash: a4100248857af655f388ad318bb3ae5176aaf046
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4384575"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4418183"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuentas
 
@@ -174,7 +174,7 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     <tr><td align="left">    <b>Utilización</b> </td><td>    Permite ver el <a href="usage-report.md">informe de utilización</a> del producto.     </td><td>    N/D       </td><td>    N/D     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Mantenimiento</b> </td><td>    Permite ver el <a href="health-report.md">informe Mantenimiento</a> del producto.    </td><td>    N/D     </td><td>    N/D     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Comentarios del cliente</b>    </td><td>    Permite ver los informes <a href="reviews-report.md">Valoraciones</a> y <a href="feedback-report.md">Comentarios</a> del producto.       </td><td>    N/D (para responder a los comentarios o a las valoraciones, se debe conceder el permiso correspondiente para <b>ponerse en contacto con los clientes</b>)   </td><td>    N/D     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    <b>Análisis de Xbox</b> </td><td>    Puede ver el [informe de análisis de Xbox](xbox-analytics-report.md) del producto.    </td><td>    N/D   </td><td>    N/D       </td><td>    N/D          </td></tr>
+    <tr><td align="left">    <b>Análisis de Xbox</b> </td><td>    Ver el [informe de análisis de Xbox](xbox-analytics-report.md) del producto.    </td><td>    N/D   </td><td>    N/D       </td><td>    N/D          </td></tr>
     <tr><td align="left">    <b>Tiempo real</b>   </td><td>    Permite ver el informe Tiempo real del producto. (Nota: este informe solo está disponible a través del <a href="dev-center-insider-program.md">Programa Insider del Centro de desarrollo</a>).      </td><td>    N/D   </td><td>    N/D     </td><td>    N/D                 </td></tr>
     </tbody>
     </table>

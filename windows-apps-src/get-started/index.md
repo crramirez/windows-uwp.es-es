@@ -11,11 +11,11 @@ keywords: introducción, windows 10, uwp, xaml, c#
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d7ad7835e56b874c37b9376eb00278fea055dd1
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4385664"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4419136"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introducción a las aplicaciones de Windows 10 
  

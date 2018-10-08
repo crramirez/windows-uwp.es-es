@@ -11,11 +11,11 @@ keywords: Windows 10, UWP
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
 ms.openlocfilehash: 448b4405381c3100f8b92abd0f2889799c0354fc
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4385519"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4415325"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>Crear un certificado para firmar paquetes
 
@@ -58,7 +58,7 @@ En función del archivo AppxManifest.xml del ejemplo anterior, debes usar la sig
 New-SelfSignedCertificate -Type Custom -Subject "CN=Contoso Software, O=Contoso Corporation, C=US" -KeyUsage DigitalSignature -FriendlyName <Your Friendly Name> -CertStoreLocation "Cert:\LocalMachine\My"
 ```
 
-Después de ejecutar este comando, el certificado se agregará al almacén local de certificados, como se especifica en el parámetro "-CertStoreLocation". El resultado del comando también producirá huella digital del certificado.  
+Después de ejecutar este comando, el certificado se agregará al almacén local de certificados, como se especifica en el parámetro "-CertStoreLocation". El resultado del comando también generará huella digital del certificado.  
 
 **Nota**  
 Puedes ver el certificado en una ventana de PowerShell mediante los siguientes comandos:

@@ -8,25 +8,25 @@ ms.date: 06/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, imagen nativa compilador
+keywords: Windows 10, la imagen nativa compilador
 ms.localizationpriority: medium
 ms.openlocfilehash: d98b576fb51a8f9507802796ab359d0d00d21998
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4387730"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4419174"
 ---
 # <a name="optimize-your-net-desktop-apps-with-native-images"></a>Optimizar las aplicaciones de escritorio de .NET con imágenes nativas
 
 > [!NOTE]
 > Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.
 
-Puede mejorar el tiempo de inicio de la aplicación de .NET Framework previamente compilando los archivos binarios. Puedes usar esta tecnología en aplicaciones de gran tamaño que empaquetar y distribuir a través de la tienda Windows. En algunos casos, nos hemos observado una mejora el rendimiento del 20%. Puedes obtener más información sobre esta tecnología en la [Introducción técnica](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
+Puede mejorar el tiempo de inicio de la aplicación de .NET Framework compilando previamente los archivos binarios. Puedes usar esta tecnología en aplicaciones de gran tamaño que empaquetar y distribuir a través de la tienda Windows. En algunos casos, nos hemos observado una mejora de rendimiento del 20%. Para obtener más información sobre esta tecnología en la [Introducción técnica](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
 
-Te hemos publicado una versión preliminar del compilador imagen nativa como un [paquete de NuGet](https://www.nuget.org/packages/Microsoft.DotNet.Framework.NativeImageCompiler). Puedes aplicar este paquete a cualquier aplicación de .NET Framework que está destinada a la versión 4.6.2 .NET Framework o una versión posterior. Este paquete agrega un paso de compilación de post que incluye una carga nativa a todos los archivos binarios de la aplicación usado. Se cargará esta carga optimizada cuando la aplicación se ejecuta en. NET 4.7.2 y anteriormente mientras que las versiones anteriores cargará el código MSIL.
+Hemos hemos publicado una versión preliminar del compilador imagen nativa como un [paquete de NuGet](https://www.nuget.org/packages/Microsoft.DotNet.Framework.NativeImageCompiler). Puedes aplicar este paquete a cualquier aplicación de .NET Framework que está destinada a la versión 4.6.2 .NET Framework o posterior. Este paquete agrega un paso de compilación de post que incluya a todos los archivos binarios de la aplicación usado una carga de nativa. Se cargará esta carga optimizada cuando la aplicación se ejecuta en .NET 4.7.2 y anteriormente mientras que las versiones anteriores cargará el código MSIL.
 
-El [marco de .NET 4.7.2](https://blogs.msdn.microsoft.com/dotnet/2018/04/30/announcing-the-net-framework-4-7-2/) se incluye en la [actualización de Windows 10 de abril de 2018](https://blogs.windows.com/windowsexperience/2018/04/30/how-to-get-the-windows-10-april-2018-update/). También puede instalar esta versión de .NET Framework en PC que ejecutan Windows 7 + y Windows Server 2008 R2 +.
+El [marco de .NET 4.7.2](https://blogs.msdn.microsoft.com/dotnet/2018/04/30/announcing-the-net-framework-4-7-2/) se incluye en la [actualización de Windows 10 de abril de 2018](https://blogs.windows.com/windowsexperience/2018/04/30/how-to-get-the-windows-10-april-2018-update/). También puede instalar esta versión de .NET Framework en el equipo que ejecuta Windows 7 y Windows Server 2008 R2 +.
 
 > [!IMPORTANT]
 > Si quieres generar imágenes nativas de la aplicación empaquetada por el proyecto de empaquetado de aplicaciones de Windows, asegúrate de establecer la versión mínima de la plataforma de destino del proyecto para la actualización de aniversario de Windows.
@@ -45,7 +45,7 @@ Sigue estas instrucciones para configurar los proyectos.
 
 ## <a name="configure-the-target-framework-as-462-or-above"></a>Configurar el marco de trabajo de destino como 4.6.2 o superior
 
-Configurar el proyecto al destino de .NET Framework 4.6.2 necesitarás las herramientas de desarrollo de .NET Framework 4.6.2 o posterior. Estas herramientas están disponibles mediante el instalador de Visual Studio como componentes opcionales en la carga de trabajo de desarrollo de escritorio. NET:
+Configurar el proyecto al destino de .NET Framework 4.6.2 necesitarás las herramientas de desarrollo de .NET Framework 4.6.2 o posterior. Estas herramientas están disponibles mediante el instalador de Visual Studio como componentes opcionales en la carga de trabajo de desarrollo de escritorio de .NET:
 
 ![Instalar .NET 4.6.2 herramientas de desarrollo](images/desktop-to-uwp/install-4.6.2-devpack.png)
 
@@ -81,7 +81,7 @@ PM> Install-Package Microsoft.DotNet.Framework.NativeImageCompiler -Version 0.0.
 ```
 
 > [!NOTE]
-> Los paquetes de vista previa se publican en NuGet.org como en la lista. No encontrarlos NuGet.org exploración o mediante el Administrador de paquetes de UI en Visual Studio. Sin embargo, puede instalar desde la consola de administrador de paquetes y cuándo se restauración desde un equipo diferente. Haremos que los paquetes totalmente accesible cuando se publica la primera versión preliminar no.
+> Los paquetes de vista previa se publican en NuGet.org como en la lista. No encontrarlos NuGet.org exploración o mediante el Administrador de paquetes de UI en Visual Studio. Sin embargo, puede instalar desde la consola del Administrador de paquetes y cuándo puedes restaurar desde un equipo diferente. Haremos que los paquetes totalmente accesible cuando publicamos la primera versión preliminar no.
 
 ## <a name="create-a-release-build"></a>Crear una versión de lanzamiento
 
@@ -94,11 +94,11 @@ Native image obj\x86\Release\\R2R\DesktopApp1.exe generated successfully.
 
 ## <a name="faq"></a>Preguntas más frecuentes
 
-**Q. ¿Los archivos binarios de nuevo funcionan en máquinas sin .NET Framework 4.7.2?**
+**Q. ¿Los nuevos binarios funcionan en máquinas sin .NET Framework 4.7.2?**
 
 A. Archivos binarios optimizados se beneficiarán de las mejoras de cuando se ejecuta con .NET Framework 4.7.2. Los clientes que ejecutan versiones anteriores de .NET framework cargará el código MSIL no optimizadas desde el archivo binario.
 
-**Q. ¿Cómo puedo enviar comentarios o notificar problemas?**
+**Q. ¿Cómo se puede proporcionar comentarios o informar de problemas?**
 
 A. Notificar un problema con la herramienta de comentarios en Visual Studio 2017. [Obtener más información](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
@@ -106,6 +106,6 @@ A. Notificar un problema con la herramienta de comentarios en Visual Studio 2017
 
 A. Los archivos binarios optimizados contienen el código administrado y nativo, con lo que los archivos finales mayor.
 
-**Q. ¿Publicar archivos binarios con esta tecnología?**
+**Q. ¿Publicar los archivos binarios con esta tecnología?**
 
 A. Esta versión incluye una licencia Go Live que puedes usar hoy en día.

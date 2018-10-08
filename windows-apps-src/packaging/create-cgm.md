@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, asignación de grupo de contenido, instalación en streaming, instalación en streaming de la app para uwp, asignación de grupo de contenido de origen
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ce32958d5a99dc9f3f772d6272450a4f2b0f81b
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4393974"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4417891"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Crear y convertir una asignación de grupo de contenido de origen
 
@@ -27,7 +27,7 @@ Tendrás que crear un archivo `SourceAppxContentGroupMap.xml` y, a continuación
 
 Veamos un sencillo escenario en el cual resulta de utilidad la instalación en streaming de la aplicación para UWP. 
 
-Supongamos que has creado un juego para UWP, pero el tamaño de la aplicación final es de más de 100GB. Que se va a tardar mucho tiempo en descargar desde Microsoft Store, que podría resultar poco práctico. Si decides usar la instalación en streaming de la aplicación para UWP, puedes especificar en qué orden se descargarán los archivos de la aplicación. Si indicas a la Tienda que se deben descargar primero los archivos esenciales, el usuario podrá interactuar con tu aplicación mucho antes, mientras que los archivos no esenciales se descargan en segundo plano.
+Supongamos que has creado un juego para UWP, pero el tamaño de la aplicación final es de más de 100GB. Que se va a tardar mucho tiempo en descargar de Microsoft Store, que puede ser conveniente. Si decides usar la instalación en streaming de la aplicación para UWP, puedes especificar en qué orden se descargarán los archivos de la aplicación. Si indicas a la Tienda que se deben descargar primero los archivos esenciales, el usuario podrá interactuar con tu aplicación mucho antes, mientras que los archivos no esenciales se descargan en segundo plano.
 
 > [!NOTE]
 > Recuerda que usar la instalación en streaming de aplicaciones para UWP depende totalmente de la organización de archivos de la aplicación. A la hora de realizar la instalación en streaming de la aplicación para UWP, te recomendamos que tengas en cuenta cuanto antes el diseño del contenido de la aplicación, para que puedas distribuir los archivos de la misma de una manera más sencilla.

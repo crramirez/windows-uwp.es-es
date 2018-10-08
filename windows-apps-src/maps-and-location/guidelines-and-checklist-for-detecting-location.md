@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ubicación, location, mapa, map, ubicación geográfica, geolocation
 ms.localizationpriority: medium
 ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4388856"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4415236"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Directrices para las aplicaciones con reconocimiento de ubicación
 
@@ -91,7 +91,7 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
         Por ejemplo:
 
         -   Si tu aplicación obtiene la ubicación para mostrar anuncios personalizados, información meteorológica, noticias, etc., por lo general, basta con una precisión de 5000 metros.
-        -   Si la aplicación muestra ofertas cercanas en el entorno, es buena por lo general, proporcionar resultados de una precisión de 300 metros.
+        -   Si la aplicación se muestra ofertas cercanas en el entorno, es buena por lo general, proporcionar resultados de una precisión de 300 metros.
         -   Si el usuario quiere ver los restaurantes cercanos recomendados, deberíamos obtener una posición en la manzana en la que se encuentre, por lo que una precisión de 100 metros es suficiente.
         -   Si el usuario intenta compartir su posición, la aplicación debería solicitar una precisión de unos 10 metros.
     -   Usa la propiedad [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) si la aplicación tiene requisitos de precisión específicos. Por ejemplo, las aplicaciones de navegación deberían usar la propiedad **Geocoordinate.accuracy** para determinar si los datos de ubicación disponibles cumplen los requisitos de la aplicación.

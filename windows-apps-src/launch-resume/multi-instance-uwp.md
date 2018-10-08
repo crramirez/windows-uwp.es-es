@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dd4e0ced4de2419858424a88f5fa5ce66f5b4286
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4393733"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4417282"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crear una aplicación universal de Windows de instancias múltiples
 
@@ -31,7 +31,7 @@ Si vas a crear una nueva aplicación de instancias múltiples, puedes instalar e
 
 Se instalan dos plantillas: **Aplicaciones para UWP de varias instancias**, que proporciona la plantilla para crear una aplicación de instancias múltiples y **Aplicación para UWP de redireccionamiento de instancias múltiples**, que proporciona lógica adicional que se puede generar para iniciar una nueva instancia o para activar de forma selectiva una instancia que ya se ha iniciado. Por ejemplo, quizás solo deseas que un mismo documento solo pueda editarlo una instancia al mismo tiempo, por lo que llevas al primer plano la instancia que tiene abierto el archivo en lugar de iniciar una nueva instancia.
 
-Ambas plantillas agregan `SupportsMultipleInstances` a la `package.appxmanifest` archivo. Ten en cuenta el prefijo de espacio de nombres `desktop4` y `iot2`: sólo los proyectos destinados al escritorio o los proyectos de Internet de las cosas (IoT) admiten instancias múltiples.
+Ambas plantillas agregan `SupportsMultipleInstances` a la `package.appxmanifest` archivo. Ten en cuenta el prefijo de espacio de nombres `desktop4` y `iot2`: sólo los proyectos destinados al escritorio o proyectos de Internet de las cosas (IoT) admiten instancias múltiples.
 
 ```xml
 <Package
@@ -62,7 +62,7 @@ Para ver esto en acción, mira este vídeo acerca de cómo crear aplicaciones pa
 
 La plantilla **Aplicación para UWP de varias instancias** agrega `SupportsMultipleInstances`al archivo package.appxmanifest, como se ha mostrado anteriormente, y también agrega un **Program.cs** (o **Program.cpp**, si estás usando la versión C++ de la plantilla) al proyecto que contiene una función `Main()`. La lógica para redirigir la activación se incluye en la función `Main`. A continuación se muestra la plantilla para **Program.cs** .
 
-La propiedad [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa la instancia preferida siempre shell para esta solicitud de activación, si existe una (o `null` si hay uno). Si el shell proporciona una preferencia, a continuación, puede puede redirigir la activación a esa instancia, o puedes omitirla si eliges.
+La propiedad [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa la instancia preferida siempre shell para esta solicitud de activación, si existe una (o `null` si no hay uno). Si el shell proporciona una preferencia, a continuación, puede puede redirigir la activación a esa instancia, o puede omitir si eliges.
 
 ``` csharp
 public static class Program

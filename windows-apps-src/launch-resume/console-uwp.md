@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4c1b1df8ad29635f38ae5b373685d3504a4eb60
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4386629"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4422761"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a>Crear una aplicación de consola de la Plataforma universal de Windows
 
@@ -105,7 +105,7 @@ La plantilla también agrega la funcionalidad `Subsystem="console"` al archivo P
 
 - Solo C++ / WinRT y C++ / CX UWP aplicaciones pueden ser aplicaciones de consola.
 - Las aplicaciones de consola UWP deben tener como destino el escritorio o el tipo de proyecto de IoT.
-- Aplicaciones de consola UWP no pueden crear una ventana. No se usan MessageBox(), o Location() o cualquier otra API que puede crear una ventana por cualquier motivo, como avisos de consentimiento del usuario.
+- Aplicaciones de consola UWP no pueden crear una ventana. No se utilizan MessageBox(), o Location() o cualquier otra API que se puede crear una ventana por cualquier motivo, como los avisos de consentimiento del usuario.
 - Las aplicaciones de consola UWP no pueden usar tareas en segundo plano ni servir como una tarea en segundo plano.
 - Con la excepción de la [activación de línea de comandos](https://blogs.windows.com/buildingapps/2017/07/05/command-line-activation-universal-windows-apps/#5YJUzjBoXCL4MhAe.97), las aplicaciones de consola UWP no son compatibles con contratos de activación de soporte, incluida la asociación de archivos, la asociación de protocolos, etc.
 - Aunque las aplicaciones de consola UWP admiten instancias múltiples, no admiten el [redireccionamiento de instancias múltiples](multi-instance-uwp.md)

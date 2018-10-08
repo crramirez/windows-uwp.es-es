@@ -11,16 +11,16 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 88a07db357125d3f9cb35a5e133e9b0add350069
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4384586"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4419010"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y muestras para aplicaciones para UWP
  
 
-Diseño y descargas relacionadas con la interfaz de usuario para aplicaciones para UWP/diseño de Fluent. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/downloads">nuestra página de descargas principales</a>. 
+Diseño y las descargas relacionadas con la interfaz de usuario para aplicaciones para UWP/diseño de Fluent. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/downloads">nuestra página de descargas principales</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de herramientas de diseño
@@ -105,10 +105,10 @@ En estos kits de herramientas se proporcionan controles y plantillas de diseño 
 
 ![Imagen de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-La aplicación de muestra UWP de principio a fin de Van Arsdel, Ltd. se creó para presentar la próxima serie de Fluent Design System de Microsoft. Hace un uso considerable de la densidad mejorada y nuevos controles en la <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de la interfaz de usuario de Windows</a> , así como eficaces características subyacentes del marco de la experiencia del usuario y la composición. El ejemplo muestra cómo puedes crear una experiencia enriquecida y productiva para administrar y compran dispositivos IoT (en este caso, las luces).<br>
+La aplicación de muestra UWP de principio a fin de Van Arsdel, Ltd. se creó para presentar la próxima serie de Fluent Design System de Microsoft. Hace un uso considerable de la densidad de mejorada y nuevos controles en la <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de la interfaz de usuario de Windows</a> , así como los eficaces características subyacentes del marco de la experiencia del usuario y la composición. El ejemplo muestra cómo crear una experiencia enriquecida y productiva para administrar y compran dispositivos IoT (en este caso, las luces).<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Descargar la muestra de VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Echa un vistazo a la muestra de VanArsdel en GitHub</a>
 
-![imagen de conversión de tipos de compilación](images/buildcast.png)
+![imagen de la conversión de compilación](images/buildcast.png)
 **BuildCast**<br>
 BuildCast es una muestra de principio a fin integrada para presentar el sistema Fluent Design y UWP. Permite explorar, descargar y reproducir una selección de podcasts de vídeo, incluyendo una muestra de los más populares de Channel 9 y algunas aportaciones de entusiastas de la tecnología de Windows. También incluye notas manuscritas, marcadores y reproducción remota. Esta muestra se presentó inicialmente en la conferencia de Build de 2017 durante la ponencia <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crear aplicaciones increíbles con Fluent Design</a> hablar. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Descargar la muestra de BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Echa un vistazo a la muestra de BuildCast en GitHub</a>

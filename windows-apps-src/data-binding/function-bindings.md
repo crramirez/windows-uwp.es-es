@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4388960"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4416062"
 ---
 # <a name="functions-in-xbind"></a>Funciones de x: Bind
 
@@ -108,7 +108,7 @@ La función a enlazar debe tener en cuenta lo siguiente:
 - Los tipos de argumento deben coincidir con los datos que se pasan; no se realizan conversiones de restricción.
 - El tipo de devolución de la función debe coincidir con el tipo de propiedad que está usando el enlace.
 
-A partir de la siguiente actualización importante a Windows 10, el motor de enlace se reaccionar a las notificaciones de cambio de propiedad que se desencadena con el nombre de función y volver a evaluar los enlaces según sea necesario. Por ejemplo: 
+A partir de la siguiente actualización importante a Windows 10, el motor de enlace reaccionar a las notificaciones de cambio de propiedad que se desencadena con el nombre de función y volver a evaluar los enlaces según sea necesario. Por ejemplo: 
 
 ```XAML
 <DataTemplate x:DataType="local:Person">

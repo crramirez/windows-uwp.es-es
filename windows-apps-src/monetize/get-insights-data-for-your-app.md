@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
-description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de información de la aplicación.
-title: Obtener información sobre los datos
+description: Usa este método en la API de análisis de Microsoft Store para obtener datos de opiniones de la aplicación.
+title: Obtener datos de opiniones
 ms.author: mcleans
 ms.date: 07/31/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de la tienda, API de información de análisis de Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fbd91437e5dc702f8672c6cbadeea32a8a96bf
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4387301"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4416072"
 ---
-# <a name="get-insights-data"></a>Obtener información sobre los datos
+# <a name="get-insights-data"></a>Obtener datos de opiniones
 
 Usa este método en la API de análisis de Microsoft Store para obtener información sobre los datos relacionados con adquisiciones, estado y las métricas de uso de una aplicación durante un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de información](../publish/insights-report.md) en el panel del centro de desarrollo de Windows.
 
@@ -49,7 +49,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
-| applicationId | cadena | El [Identificador de la tienda](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que quieres recuperar datos de opiniones. Si no se especifica este parámetro, el cuerpo de respuesta contendrá los datos de detalles de todas las aplicaciones registradas en tu cuenta.  |  No  |
+| applicationId | cadena | El [Identificador de la tienda](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que quieres recuperar datos de opiniones. Si no se especifica este parámetro, el cuerpo de respuesta contendrá los datos de opiniones para todas las aplicaciones registradas en tu cuenta.  |  No  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de opiniones para recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
 | endDate | fecha | La fecha de finalización del intervalo de fechas de los datos de opiniones para recuperar. El valor siempre es la fecha actual. |  No  |
 | filter | cadena  | Una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *filter = dataType eq 'adquisición'*. <p/><p/>Puedes especificar los siguientes campos de filtro:<p/><ul><li><strong>adquisición</strong></li><li><strong>salud</strong></li><li><strong>uso</strong></li></ul> | No   |
@@ -69,7 +69,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | matriz  | Una matriz de objetos que contienen datos de información de la aplicación. Para obtener más información sobre los datos de cada objeto, consulta la sección de [valores de detalles de valoración](#insight-values) a continuación.                                                                                                                      |
+| Valor      | matriz  | Una matriz de objetos que contienen datos de opiniones de la aplicación. Para obtener más información sobre los datos de cada objeto, consulta la sección de [los valores de detalles de valoración](#insight-values) a continuación.                                                                                                                      |
 | TotalCount | entero    | El número total de filas en el resultado de datos de la consulta.                 |
 
 
@@ -81,15 +81,15 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 |---------------------|--------|-------------------------------------------|
 | applicationId       | cadena | El identificador de la aplicación para la que quieres recuperar datos de opiniones de la tienda.     |
 | insightDate                | cadena | La fecha en el que hemos identificado el cambio en una métrica específica. Esta fecha representa el final de la semana en el que hemos detectado un aumento significativo o reducir en una métrica en comparación con la semana anterior. |
-| tipo de datos     | cadena | Una de las siguientes cadenas que especifica el área de análisis general que se describe en este insight:<p/><ul><li><strong>adquisición</strong></li><li><strong>salud</strong></li><li><strong>uso</strong></li></ul>   |
-| insightDetail          | matriz | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de insight actual.    |
+| tipo de datos     | cadena | Una de las siguientes cadenas que especifica el área de análisis general que describe esta información:<p/><ul><li><strong>adquisición</strong></li><li><strong>salud</strong></li><li><strong>uso</strong></li></ul>   |
+| insightDetail          | matriz | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de detalles de valoración actual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | cadena | Uno de los valores siguientes que indica la métrica que describe la información actual o la dimensión actual, según el valor de **tipo de datos** .<ul><li>**Salud**, este valor es siempre **recuento de visitas**.</li><li>Para la **adquisición**, este valor es siempre **AcquisitionQuantity**.</li><li>Para el **uso**, este valor puede ser una de las siguientes cadenas:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
+| FactName           | cadena | Uno de los valores siguientes que indica la métrica que describe la información actual o la dimensión actual, según el valor de **tipo de datos** .<ul><li>**Estado del**, este valor es siempre **recuento de visitas**.</li><li>Para la **adquisición**, este valor es siempre **AcquisitionQuantity**.</li><li>Para el **uso**, este valor puede ser una de las siguientes cadenas:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
 | SubDimensions         | matriz |  Uno o varios objetos que describen una métrica única para la perspectiva.   |
 | CambioPorcentual            | cadena |  El porcentaje de la métrica ha cambiado a través de la base de clientes completa.  |
 | DimensionName           | cadena |  El nombre de la métrica que se describe en la dimensión actual. Algunos ejemplos son **EventType**, **mercado**, **DeviceType**, **PackageVersion**, **AcquisitionType**, **AgeGroup** y **sexo**.   |

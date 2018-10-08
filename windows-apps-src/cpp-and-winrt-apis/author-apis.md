@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
 ms.openlocfilehash: 2476161954c1d4d49fcf9f8f74cd1b7cf9180c0a
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4387173"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4430935"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
-En este tema muestra cómo crear [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) API mediante el uso de la [**Implements**](/uwp/cpp-ref-for-winrt/implements) estructura, de base directa o indirectamente. Algunos sinónimos de *crear* en este contexto son *producir* o *implementar*. Este tema trata las siguientes situaciones de implementación de las API en un tipo C++/WinRT, en este orden.
+En este tema muestra cómo crear [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) estructura, de base de API mediante el uso de la [**Implements**](/uwp/cpp-ref-for-winrt/implements) directa o indirectamente. Algunos sinónimos de *crear* en este contexto son *producir* o *implementar*. Este tema trata las siguientes situaciones de implementación de las API en un tipo C++/WinRT, en este orden.
 
 - *No* vas a crear una clase de Windows Runtime (clase en tiempo de ejecución); tan solo quieres implementar una o más interfaces de Windows Runtime para el consumo local dentro de tu aplicación. Derivas directamente desde **winrt::implements** en este caso e implementas funciones.
 - *Sí* que vas a crear una clase en tiempo de ejecución. Es posible que vayas a crear un componente para consumirse desde una aplicación. O puede que vayas a crear un tipo para consumir desde la interfaz de usuario XAML. En este caso, vas tanto a implementar como a consumir una clase en tiempo de ejecución en la misma unidad de compilación. En estos casos, permites que las herramientas generen clases para ti que derivan desde **winrt::implements**
@@ -34,7 +34,7 @@ El escenario más sencillo es aquel en el que implementas una interfaz de Window
 > [!NOTE]
 > Para obtener información sobre la instalación y uso de la extensión de Visual Studio (VSIX) de C++/WinRT (la cual ofrece soporte para plantillas de proyectos, así como propiedades y destinos de MSBuild de C++/WinRT), consulta el [Soporte de Visual Studio para C++/WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
-En Visual Studio, **Visual C++** > **Windows Universal** > **Core App (C++ / WinRT)** plantilla de proyecto de muestra el modelo de **CoreApplication** . El patrón empieza pasando una implementación de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) a [**CoreApplication: Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
+En Visual Studio, **Visual C++** > **Windows Universal** > **Core App (C++ / WinRT)** plantilla de proyecto muestra el modelo de **CoreApplication** . El patrón empieza pasando una implementación de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) a [**CoreApplication: Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -282,10 +282,10 @@ iclosable.Close();
 
 La clase **MyType** no forma parte de la proyección, es la implementación. Pero de este modo puedes llamar a sus métodos de implementación directamente, sin la sobrecarga de una llamada de función virtual. En el ejemplo anterior, aunque **MyType::ToString** usa la misma firma que el método proyectado en **IStringable**, llamamos al método no virtual directamente, sin cruzar la interfaz binaria de la aplicación (ABI) El **com_ptr** simplemente tiene un puntero en la estructura **MyType**, por lo que también puedes acceder a los demás detalles internos de **MyType** a través de la variable `myimpl` y el operador de flecha.
 
-En el caso donde tienes un objeto de interfaz y descubres que es una interfaz en la implementación, a continuación, puede volver a la implementación mediante la plantilla de función [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) . De nuevo, es una técnica que evita llamadas a funciones virtuales y te permite acceder directamente a la implementación.
+En el caso donde tienes un objeto de interfaz y descubres que es una interfaz en tu implementación, a continuación, puedes obtener vuelve a la implementación mediante la plantilla de función [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) . De nuevo, es una técnica que evita llamadas a funciones virtuales y te permite acceder directamente a la implementación.
 
 > [!NOTE]
-> Si no has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809) o una versión posterior, a continuación, tienes que llamar [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) en lugar de [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self).
+> Si no has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809) o posterior, a continuación, debes llamar a [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) en lugar de [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self).
 
 Aquí tienes un ejemplo. Hay otro ejemplo en [implementar la clase de control personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
 

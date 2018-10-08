@@ -12,17 +12,17 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: fadd9c2b6a35a1418a782ab0a6ef419e3f127f42
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4394536"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4416092"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar la aplicación de escritorio empaquetada con Windows 10
 
 Usa extensiones para integrar la aplicación de escritorio empaquetada con Windows 10 mediante formas predefinidas.
 
-Por ejemplo, usa una extensión para crear una excepción de firewall, hacer que la aplicación de la aplicación predeterminada para un tipo de archivo o incluir iconos de inicio en la versión empaquetada de la aplicación. Para usar una extensión, solo tienes que agregar algunos archivos XML al archivo de manifiesto de paquete de la aplicación. No se requiere ningún tipo de código.
+Por ejemplo, usa una extensión para crear una excepción de firewall, hacer que la aplicación sea la aplicación predeterminada para un tipo de archivo o incluir iconos de inicio en la versión de la aplicación empaquetada. Para usar una extensión, solo tienes que agregar algunos archivos XML al archivo de manifiesto de paquete de la aplicación. No se requiere ningún tipo de código.
 
 En este tema se describen estas extensiones y las tareas que puedes realizar al usarlas.
 
@@ -156,7 +156,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a>Asociar la aplicación empaquetada con un conjunto de tipos de archivo
 
-Puedes asociar la aplicación empaquetada con extensiones de tipo de archivo. Si un usuario hace clic con el botón un archivo y, a continuación, selecciona la opción **Abrir con** , la aplicación aparece en la lista de sugerencias.
+Para asociar la aplicación empaquetada con extensiones de tipo de archivo. Si un usuario hace clic con el botón un archivo y, a continuación, selecciona la opción **Abrir con** , la aplicación aparece en la lista de sugerencias.
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
@@ -245,7 +245,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Categoría | Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
 |Verb |Es el nombre que aparece en el menú contextual del Explorador de archivos. Esta cadena se puede localizar mediante ```ms-resource```.|
-|Id |Es el identificador único del verbo. Si la aplicación es una aplicación para UWP, esto se pasa a la aplicación como parte de los argumentos del evento de activación para que pueda controlar correctamente la selección del usuario. Si la aplicación es una aplicación de plena confianza empaquetada, recibe parámetros en su lugar (consulta el siguiente punto). |
+|Id |Es el identificador único del verbo. Si la aplicación es una aplicación para UWP, se pasa a la aplicación como parte de los argumentos del evento de activación para que pueda controlar la selección del usuario de forma adecuada. Si la aplicación es una aplicación de plena confianza empaquetada, recibe parámetros en su lugar (consulta el siguiente punto). |
 |Parameters |Es la lista de parámetros de argumento y valores asociados con el verbo. Si la aplicación es una aplicación de plena confianza empaquetada, estos parámetros se pasan a la aplicación como argumentos del evento cuando se activa la aplicación. Puedes personalizar el comportamiento de la aplicación en función de los distintos verbos de activación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. Si la aplicación es una aplicación para UWP, no podrás pasar parámetros. En su lugar, la aplicación recibirá el identificador (consulta el punto anterior).|
 |Extended |Especifica que el verbo solo debe aparecer si el usuario mantiene presionada la tecla **Mayús** para mostrar el menú contextual, antes de hacer clic con el botón derecho en el archivo. Este atributo es opcional y su valor predeterminado es **False** (por ejemplo, mostrar siempre el verbo) si no se incluye. Este comportamiento se especifica de forma individual para cada verbo (excepto "Abrir", que siempre es **False**).|
 
@@ -307,7 +307,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |-------|-------------|
 |Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
-|UseUrl |Indica si se deben abrir archivos directamente desde una dirección URL de destino. Si no establece este valor, cualquier intento que realice la aplicación para abrir un archivo mediante una dirección URL, provocará que el sistema descargue el archivo localmente. |
+|UseUrl |Indica si se deben abrir archivos directamente desde una dirección URL de destino. Si no establece este valor, intenta por la aplicación para abrir un archivo mediante una URL, provocará que el sistema descargue el archivo localmente. |
 |Parameters |parámetros opcionales. |
 |FileType |Extensiones de archivo relevantes. |
 
@@ -344,7 +344,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="create-firewall-exception-for-your-app"></a>Crear la excepción de firewall de la aplicación
 
-Si la aplicación requiere la comunicación a través de un puerto, puedes agregar la aplicación a la lista de excepciones del firewall.
+Si la aplicación debe comunicarse a través de un puerto, puedes agregar la aplicación a la lista de excepciones del firewall.
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
@@ -469,7 +469,7 @@ Esta opción permite que los usuarios organicen tus archivos e interactúen con 
 
 ### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a>Definir el comportamiento de la aplicación cuando los usuarios seleccionan y abren varios archivos al mismo tiempo
 
-Especificar cómo se comporta la aplicación cuando un usuario abre varios archivos al mismo tiempo.
+Especificar cómo se comporta la aplicación cuando el usuario abre varios archivos al mismo tiempo.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -911,7 +911,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 ### <a name="start-your-application-by-using-an-alias"></a>Iniciar la aplicación mediante un alias
 
-Los usuarios y otros procesos pueden usar un alias para iniciar la aplicación sin tener que especificar la ruta de acceso completa a la aplicación. Puedes especificar el nombre de ese alias.
+Los usuarios y otros procesos usar un alias para iniciar la aplicación sin tener que especificar la ruta de acceso completa de la aplicación. Puedes especificar el nombre de ese alias.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
@@ -1027,7 +1027,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
 ### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>Permitir que los usuarios iniciar la aplicación cuando conecten un dispositivo a su PC
 
-Reproducción automática puede presentar tu aplicación como una opción cuando un usuario conecta un dispositivo a su PC.
+Reproducción automática puede presentar tu aplicación como una opción cuando un usuario conecte un dispositivo a su PC.
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
@@ -1090,9 +1090,9 @@ Si la aplicación está abierta cuando los usuarios instalar una actualización,
 
 Si quieres que esa aplicación se reinicie una vez completada la actualización, llama a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) en cada proceso que quieras reiniciar.
 
-Cada ventana activa en la aplicación recibe un mensaje [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . En este punto, la aplicación puede llamar a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) nuevo para actualizar la línea de comandos si es necesario.
+Cada ventana activa de la aplicación recibe un mensaje [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . En este punto, la aplicación puede llamar a la función [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) nuevo para actualizar la línea de comandos si es necesario.
 
-Cuando cada ventana activa en la aplicación recibe el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) , la aplicación debe guardar los datos y apagar.
+Cuando cada ventana activa de la aplicación recibe el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) , la aplicación debe guardar datos y apagar.
 
 >[!NOTE]
 Las ventanas activas también reciben el mensaje [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) en caso de que la aplicación no controle el mensaje [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) .
@@ -1137,7 +1137,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |-------|-------------|
 |Categoría |Siempre ``windows.appPrinter``
 |DisplayName |Es el nombre que quieres que aparezcan en la lista de destinos de impresión de una aplicación. |
-|Parameters |Los parámetros que requiere la aplicación para controlar correctamente la solicitud. |
+|Parameters |Los parámetros que necesita la aplicación para controlar correctamente la solicitud. |
 
 #### <a name="example"></a>Ejemplo
 

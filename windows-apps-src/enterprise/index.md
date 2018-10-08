@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4388044"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4421178"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -25,18 +25,18 @@ Esta guía básica proporciona una visión general de las características funda
 
 ¿Hay una versión de esta aplicación que se muestra algunos de los avances en el que se mostrarán en la compilación durante esta presentación [Rápidamente construir las aplicaciones de LOB con UWP y Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502)
 
-Cosas vale la pena una llamada a en primer plano:
+Cosas vale la pena llamadas en primer plano:
 
 ## <a name="whats-new-for-enterprise-applications"></a>Novedades para las aplicaciones empresariales
 
-Este es algunas herramientas, las bibliotecas y funcionalidades que se han creado bastante recientemente.
+Hay algunas herramientas, bibliotecas y funcionalidades que se han creado bastante recientemente.
 
 > [!div class="checklist"]
 > * [Windows Template Studio](#template-studio)
 > * [Controles para crear interfaces de usuario de estilo de escritorio](#desktop-style-UI)
 > * [Controles para admitir escenarios empresariales](#enterprise)
 > * [Biblioteca de la interfaz de usuario de Windows](#UI-library)
-> * [Controles UWP en aplicaciones de escritorio](#xaml-islands)
+> * [Controles de UWP en aplicaciones de escritorio](#xaml-islands)
 > * [.NET Standard 2.0](#standard)
 > * [Conectividad de SQL Server](#sql-server)
 > * [Implementación de MSIX](#MSIX)
@@ -45,7 +45,7 @@ Este es algunas herramientas, las bibliotecas y funcionalidades que se han cread
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio es una extensión de Visual Studio 2017 que acelera la creación de nuevas aplicaciones de plataforma Universal de Windows (UWP) con una experiencia basada en el asistente. El proyecto UWP resultante es correcto, legible código que incorporan las últimas características de Windows 10 durante la implementación de patrones demostrados y procedimientos recomendados.
+Windows Template Studio es una extensión de Visual Studio 2017 que acelera la creación de nuevas aplicaciones de plataforma Universal de Windows (UWP) con una experiencia basada en el asistente. El proyecto UWP resultante es correcto y legible del código que incorporan las últimas características de Windows 10 durante la implementación de patrones demostrados y procedimientos recomendados.
 
 ![Windows Template Studio](images/windows-template-studio.png)
 
@@ -57,7 +57,7 @@ Consulta [Windows Template Studio](https://marketplace.visualstudio.com/items?it
 
 Hemos publicamos nuevos controles de XAML de UWP que rellenar el espacio entre una aplicación de escritorio tradicional la interfaz de usuario y una UI de UWP.
 
-Por ejemplo, los nuevos controles de [barra de menús](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [botón de división](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)y [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) ofrecen maneras más flexible para exponer comandos y el [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) vamos al usuario escribe los valores que no se mencionan en una lista predefinida de opciones.
+Por ejemplo, los nuevos controles de [barra de menús](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [botón de división](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)y [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) ofrecen maneras más flexible para exponer los comandos y el [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) vamos al usuario escribe los valores que no se muestran en una lista predefinida de opciones.
 
 ![Barra de menús](images/menu-bar.png)
 
@@ -65,9 +65,9 @@ Por ejemplo, los nuevos controles de [barra de menús](https://review.docs.micro
 
 ### <a name="controls-to-support-enterprise-scenarios"></a>Controles para admitir escenarios empresariales
 
-[DataGridView](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid) proporciona una forma flexible para mostrar una colección de datos en filas y columnas.
+[DataGridView](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid) proporciona una manera flexible de mostrar una colección de datos en filas y columnas.
 
-La [vista de árbol](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) permite una lista jerárquica con expansión y contracción de nodos que contienen elementos anidados. Puede usarse para ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
+La [vista de árbol](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) permite una lista jerárquica con la expansión y contracción de nodos que contienen elementos anidados. Puede usarse para ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
 
 ![Control DataGrid](images/DataGrid.gif)
 
@@ -82,17 +82,17 @@ Consulta la [Biblioteca de la interfaz de usuario de Windows (versión prelimina
 
 <a id="xaml-islands" />
 
-### <a name="uwp-controls-in-desktop-applications"></a>Controles UWP en aplicaciones de escritorio
+### <a name="uwp-controls-in-desktop-applications"></a>Controles de UWP en aplicaciones de escritorio
 
-Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio de WPF, Windows Forms y Win32 de C++. Esto significa que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles UWP, como entrada de lápiz de Windows y los controles que admiten el sistema Fluent Design. Esta función se denomina Islas XAML.
+Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio de WPF, Windows Forms y Win32 de C++. Esto significa que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles UWP, como entrada de lápiz de Windows y los controles que admiten el sistema Fluent Design. Esta característica se denomina Islas XAML.
 
-Consulta [controles UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
+Consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
 
 <a id="standard" />
 
 ### <a name="net-standard-20"></a>.NET Standard 2.0
 
-.NET estándar incluye más de 20 000 más API de .NET Standard 1.x. Esto facilita mucho migrar las bibliotecas de .NET Framework existentes y, a continuación, usarlos entre diferentes aplicaciones. NET, incluyendo la aplicación para UWP.
+.NET estándar incluye más de 20 000 más API de .NET estándar 1.x. Esto facilita mucho migrar las bibliotecas de .NET Framework existentes y, a continuación, usarlos entre diferentes aplicaciones de .NET incluida tu aplicación para UWP.
 
 ![NET estándar](images/dot-net-standard-project-template.png)
 
@@ -110,7 +110,7 @@ Consulta [Usar una base de datos de SQL Server en una aplicación para UWP](http
 
 ### <a name="msix-deployment"></a>Implementación de MSIX
 
-MSIX es el formato de paquete de aplicación de Windows que proporciona una experiencia de empaquetado modernos a todas las aplicaciones de Windows. El formato del paquete MSIX conserva la funcionalidad de los paquetes de aplicación existentes e instalar archivos además de habilitación de características de empaquetado e implementación nuevas, modernas a las aplicaciones de Win32, WPF y Windows Forms.
+MSIX es el formato de paquete de aplicación de Windows que proporciona una experiencia de empaquetado modernos a todas las aplicaciones de Windows. El formato del paquete MSIX conserva la funcionalidad de los paquetes de aplicación existentes e instalar archivos además de la habilitación de características nuevas de empaquetado e implementación modernas a las aplicaciones de Win32, WPF y Windows Forms.
 
 MSIX es un formato de empaquetado integrado para que sea seguro y fiable, en función de una combinación de MSI, AppX, tecnologías de instalación de App-V y ClickOnce.
 
@@ -175,7 +175,7 @@ Hoy en día, muchos usuarios llevan su teléfono o tableta personal al trabajo, 
 
 ## <a name="deployment"></a>Implementación
 
-Tienes varias opciones para distribuir aplicaciones a los usuarios de la organización. Puedes usar Microsoft Store para empresas, administración de dispositivos móviles existentes, o bien puedes transferir localmente aplicaciones en dispositivos. Puedes también hacer que las aplicaciones disponibles al general pública publicar en Microsoft Store.
+Tienes varias opciones para distribuir aplicaciones a los usuarios de la organización. Puedes usar Microsoft Store para empresas, administración de dispositivos móviles existentes, o bien puedes transferir localmente aplicaciones en dispositivos. Puedes también realizar las aplicaciones disponibles en general pública publicándolas en la Microsoft Store.
 
 | Tema | Descripción |
 |-------|-------------|
@@ -187,12 +187,12 @@ Tienes varias opciones para distribuir aplicaciones a los usuarios de la organiz
 
 Texto de introducción se incluye aquí.
 
-Acción: hablar Josh o Karl para obtener más ejemplos de centrado en la empresa juntos.
+Acción: hablar con Josh o Karl para obtener más ejemplos de centrado en la empresa juntos.
 
 | Tema |  Descripción |
 |------ |--------------|
-| [Muestra de inventario de VanArsdel](https://github.com/Microsoft/InventorySample) | Una aplicación de Windows 10 de muestra (con la plataforma Universal de Windows) se centra en escenarios de línea de negocio, que muestra cómo usar las características más recientes de Windows en aplicaciones de escritorio. La muestra se basa en la creación y administración de clientes, pedidos y productos de la empresa ficticia VanArsdel.
-Destaca MVVM, base de datos SQL, Entity Framework. Lista de otros usuarios.|
+| [Muestra de inventario de VanArsdel](https://github.com/Microsoft/InventorySample) | Una aplicación de Windows 10 de muestra (con la plataforma Universal de Windows) se centra en escenarios de línea de negocio, que muestra cómo usar las funciones más recientes de Windows en aplicaciones de escritorio. La muestra se basa en la creación y administración de clientes, pedidos y productos de la empresa ficticia VanArsdel.
+Destaca MVVM, base de datos SQL, Entity Framework. Lista de otras personas.|
 
 ## <a name="patterns-and-practices"></a>Patrones y prácticas
 

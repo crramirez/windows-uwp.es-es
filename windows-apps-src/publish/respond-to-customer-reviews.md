@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, responder, respuestas, revisar
 ms.localizationpriority: medium
 ms.openlocfilehash: 2a043a0b721ee6eabdc3520960ae6da253587c33
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4394346"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4423684"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder a las opiniones de los clientes
 
@@ -29,7 +29,7 @@ Para ver las valoraciones sobre la aplicación y proporcionar respuestas, busca 
 
 De manera predeterminada, la respuesta se registrará en la tienda, justo debajo de la opinión del cliente original. Estas respuestas será visibles para los clientes que visualicen la tienda en un dispositivo Windows 10. Si el cliente que ha dejado la crítica está usando un dispositivo que ejecuta Windows 10, versión 1803 o posterior, y no han optado por no recibir respuestas de correo electrónico, una copia de la respuesta se enviará también a dicho cliente por correo electrónico.  Tendrás que proporcionar una dirección de correo electrónico válida para poder enviar tu respuesta, que se incluirá en el correo electrónico al cliente. A continuación, pueden utilizar esta dirección de correo electrónico en contacto contigo directamente.
 
-Si no quieres que tu respuesta que aparezca en la tienda y, en su lugar quieres responder únicamente a través de correo electrónico al cliente, desactiva la casilla **hacer pública la respuesta** . Ten en cuenta que no podrás desactivar esta casilla si el cliente ha optado por no recibir respuestas de correo electrónico o si están usando un dispositivo que no se está ejecutando Windows 10, versión 1803 o posterior.
+Si no quieres que tu respuesta que aparezca en la tienda y, en su lugar quieres responder solo por correo electrónico al cliente, desactiva la casilla **hacer pública la respuesta** . Ten en cuenta que no podrás desactivar esta casilla si el cliente ha optado por no recibir respuestas de correo electrónico o si usan un dispositivo que no se está ejecutando Windows 10, versión 1803 o posterior.
 
 ## <a name="guidelines-for-responses"></a>Orientación para las respuestas
 
@@ -46,7 +46,7 @@ Al responder a la crítica de un cliente, debes seguir estas instrucciones. Se a
 -   No incluyas comentarios irreverentes, agresivos, personales ni maliciosos en tu respuesta. Sé siempre educado y recuerda que los clientes que estén contentos serán probablemente tus mayores promotores.
 
 > [!NOTE]
-> Los clientes pueden notificar una respuesta inapropiada a una crítica por parte de un desarrollador a Microsoft. También puede optar por no recibir respuestas a valoraciones por correo electrónico.
+> Los clientes pueden notificar una respuesta inapropiada a una crítica por parte de un desarrollador a Microsoft. También puede optar por no recibir respuestas a la opinión por correo electrónico.
 >
 > Microsoft se reserva el derecho a revocar un permiso de desarrollador para enviar respuestas por cualquier motivo, incluso si tus respuestas dan lugar a un número elevado de informes de respuesta inadecuados o si un número elevado de clientes opta por no recibir respuestas a valoraciones.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4385059"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4415048"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensión de marcado {TemplateBinding}
 
@@ -63,11 +63,11 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 
 A partir de la siguiente actualización importante a Windows 10, puedes usar extensión de marcado **x: Bind** en cualquier lugar que usaste **TemplateBinding** en [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). 
 
-La propiedad [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) será necesario (no es opcional) en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) al usar **x: Bind**.
+La propiedad [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) será necesario (no opcional) en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) al usar **x: Bind**.
 
 Con el soporte de **x: Bind** , ahora puedes usar ambos [enlaces de función](../data-binding/function-bindings.md) como enlaces bidireccionales bien como en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)
 
-En el siguiente ejemplo, el TextBlock.Text se evalúa como Button.Content.ToString(). TargetType en ControlTemplate actúa como el origen de datos y te permitirá realizar el mismo resultado que TemplateBinding al elemento primario.
+En el siguiente ejemplo, el TextBlock.Text se evalúa como Button.Content.ToString(). TargetType en ControlTemplate actúa como el origen de datos y realiza el mismo resultado que TemplateBinding al elemento primario.
 
 ```xaml
 <ControlTemplate TargetType="Button">
