@@ -12,7 +12,7 @@ keywords: Windows 10, UWP, Centro de opiniones, iniciar, Feedback Hub, launch
 ms.localizationpriority: medium
 ms.openlocfilehash: f4a5c6dab627a2022b36a4afee3dc155b345f855
 ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/28/2018
 ms.locfileid: "1689221"

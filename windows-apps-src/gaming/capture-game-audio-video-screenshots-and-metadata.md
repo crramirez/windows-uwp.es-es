@@ -12,7 +12,7 @@ keywords: windows 10, juego, capturar, audio, vídeo, metadatos
 ms.localizationpriority: medium
 ms.openlocfilehash: 04d619853dbe57c52fbb04b3babb37b40466c14f
 ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/28/2018
 ms.locfileid: "1692676"

@@ -11,7 +11,7 @@ keywords: windows 10, uwp, Microsoft Store analytics API, API de análisis de Mi
 ms.localizationpriority: medium
 ms.openlocfilehash: f1aa6c770451676cb1326f95b96bb0d808039880
 ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/17/2018
 ms.locfileid: "1662725"

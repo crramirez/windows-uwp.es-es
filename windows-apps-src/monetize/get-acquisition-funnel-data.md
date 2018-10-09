@@ -11,7 +11,7 @@ keywords: windows 10, uwp, servicios de Store, API de Servicios web de Windows, 
 ms.localizationpriority: medium
 ms.openlocfilehash: 85ffe2219ce7bc1dc47ff92240eeeff1374b5f43
 ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/17/2018
 ms.locfileid: "1663585"
