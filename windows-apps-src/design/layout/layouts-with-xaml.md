@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4385694"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4430493"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Diseños adaptativos con XAML
 
@@ -99,7 +99,7 @@ Puedes mostrar u ocultar un elemento si estableces su propiedad [**Visibility**]
 Puedes cambiar la propiedad Visibility de un elemento en código o en un estado visual. Cuando el objeto Visibility de un elemento cambia, también cambian todos sus elementos secundarios. Puedes reemplazar secciones de la interfaz de usuario al mostrar un panel mientras contraes otro.
 
 > [!Tip]
-> Cuando tengas los elementos de la interfaz de usuario que son **Collapsed** de manera predeterminada, los objetos se seguirán creando en el inicio, aunque no sean visibles. Puedes postergar la carga de estos elementos hasta que se muestren si estableces el **atributo x:DeferLoadStrategy** en "Lazy". Esto puede mejorar el rendimiento del inicio. Para obtener más información, consulta [atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
+> Cuando tengas que los elementos de la interfaz de usuario que son **contraído** de manera predeterminada, los objetos se seguirán creando en el inicio, aunque no sean visibles. Puedes postergar la carga de estos elementos hasta que se muestren si estableces el **atributo x:DeferLoadStrategy** en "Lazy". Esto puede mejorar el rendimiento del inicio. Para obtener más información, consulta [atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### <a name="style-resources"></a>Recursos de estilo
 
@@ -236,7 +236,7 @@ En este ejemplo se hace lo mismo que en el ejemplo anterior, pero se usa la sint
 ```
 
 > [!Important]
-> En el ejemplo anterior, se establece la propiedad adjunta VisualStateManager.VisualStateGroups en el elemento de **cuadrícula** . Cuando usas objetos StateTrigger, para que los desencadenadores se apliquen automáticamente, asegúrate siempre de que VisualStateGroups se adjunte al primer elemento secundario de la raíz. (Aquí, **Grid** es el primer elemento secundario del elemento **Page** raíz).
+> En el ejemplo anterior, la propiedad adjunta VisualStateManager.VisualStateGroups se establece en el elemento de **cuadrícula** . Cuando usas objetos StateTrigger, para que los desencadenadores se apliquen automáticamente, asegúrate siempre de que VisualStateGroups se adjunte al primer elemento secundario de la raíz. (Aquí, **Grid** es el primer elemento secundario del elemento **Page** raíz).
 
 ### <a name="attached-property-syntax"></a>Sintaxis de propiedad adjunta
 
