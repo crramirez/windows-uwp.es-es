@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4387291"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4428825"
 ---
 # <a name="bringing-it-together"></a>Reunión de todo
 
@@ -98,9 +98,9 @@ Implícitamente se pueden animar los cambios en las siguientes propiedades:
 - [Border](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)o [Panel](/uwp/api/windows.ui.xaml.controls.panel)
   - **Segundo plano**
 
-Cada propiedad que puede tener cambios implícitamente animados tiene una propiedad de _transición_ correspondiente. Para animar la propiedad, asigna un tipo de transición a la propiedad de _transición_ correspondiente. Esta tabla muestran las propiedades de _transición_ y el tipo de transición que se usará para cada uno de ellos.
+Cada propiedad que puede tener cambios implícitamente animados tiene una propiedad de _transición_ correspondiente. Para animar la propiedad, asigna un tipo de transición a la propiedad correspondiente de la _transición_ . Esta tabla muestran las propiedades de _transición_ y el tipo de transición que se usará para cada uno de ellos.
 
-| Propiedad animada | Propiedad de transición | Tipo de transición implícita |
+| Propiedad animada | Propiedad de transición | Tipo de transición implícito |
 | -- | -- | -- |
 | [UIElement.Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Rotation](/uwp/api/windows.ui.xaml.uielement.rotation) | [RotationTransition](/uwp/api/windows.ui.xaml.uielement.rotationtransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
@@ -110,7 +110,7 @@ Cada propiedad que puede tener cambios implícitamente animados tiene una propie
 | [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 
-En este ejemplo se muestra cómo usar la propiedad Opacity y transición para crear un botón fundido de entrada cuando se habilita el control y una atenuación cuando está deshabilitado.
+Este ejemplo muestra cómo usar la propiedad Opacity y la transición para crear un botón fundido de entrada cuando se habilita el control y fundido de salida cuando está deshabilitado.
 
 ```xaml
 <Button x:Name="SubmitButton"

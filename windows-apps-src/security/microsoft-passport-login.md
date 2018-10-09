@@ -10,19 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
-ms.openlocfilehash: 284609399f167a7229d0c7bb5858d0f0eda451ce
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.openlocfilehash: 106ea458502a95c53ecbf02d9118f3c31ff43978
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4389449"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4429078"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Crear una aplicación de inicio de sesión de Windows Hello
-
-
-
-
-\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
 
 Esta es primera parte de un tutorial completo acerca de cómo crear una aplicación para UWP (Plataforma universal de Windows) de Windows 10 que use Windows Hello como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña. La aplicación usa un nombre de usuario para iniciar sesión y crear una clave de Hello para cada cuenta. Estas cuentas estarán protegidas por el PIN configurado en Configuración de Windows en la configuración de Windows Hello.
 
@@ -33,7 +28,7 @@ Antes de comenzar, debes leer la introducción a [Windows Hello](microsoft-passp
 ## <a name="get-started"></a>Introducción
 
 
-Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También tendrás que estar usando Visual Studio 2015 (Community Edition o superior), o una versión posterior de Visual Studio, en una máquina de Windows 10. Mientras que Visual Studio 2015 es la versión mínima necesaria, te recomendamos que uses la última versión de Visual Studio para las últimas actualizaciones de seguridad y de desarrollador.
+Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También tendrás que usar Visual Studio 2015 (Community Edition o superior), o una versión posterior de Visual Studio, en una máquina de Windows 10. Mientras que Visual Studio 2015 es la versión mínima necesaria, te recomendamos que uses la última versión de Visual Studio para las últimas actualizaciones de seguridad y de desarrollador.
 
 -   Abre Visual Studio y selecciona Archivo > Nuevo > proyecto.
 -   Se abrirá una ventana de "Nuevo proyecto". Navegación a Plantillas > Visual C#.

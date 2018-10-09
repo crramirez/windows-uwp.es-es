@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, monetize, monetizar, engage, interactuar, promote, promover, Store services, servicios de la Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 02ef073e319af3fe2cf3bdd7906a7027200c4854
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4392796"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4426098"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de la Store
 
@@ -36,7 +36,7 @@ Para obtener detalles sobre los aranceles de Microsoft Store y cómo recibir el 
 | [Registrar eventos personalizados para el Centro de desarrollo](log-custom-events-for-dev-center.md)  | Registra eventos personalizados de tu aplicación para UWP y examina los eventos en el [informe de uso](../publish/usage-report.md) del panel del Centro de desarrollo. Esta característica requiere Microsoft Store Services SDK. |
 | [Solicitar valoraciones y opiniones](request-ratings-and-reviews.md) |  Animar a los clientes a evaluar o revisar la aplicación mediante programación mostrando una interfaz de usuario de clasificación y revisión.  |
 | [Servicios de Microsoft Store](using-windows-store-services.md)    |  Obtén información sobre cómo usar las API de RESTful para automatizar envíos a la Store, obtener acceso a datos de análisis de las aplicaciones y automatizar otras tareas relacionadas con la Store.    |
-| [Agregar características de demostración (RDX) comercial a la aplicación](retail-demo-experience.md)        |  Incluir un modo de demostración comercial en la aplicación de Windows, para que los clientes que probar equipos y dispositivos en la superficie de ventas pueden saltar hacia la derecha en.  |
+| [Agregar características de (RDX) de demostración comercial a la aplicación](retail-demo-experience.md)        |  Incluir un modo de demostración comercial en la aplicación de Windows, para que los clientes que probar equipos y dispositivos en la superficie de ventas pueden ir directamente.  |
 
 ## <a name="related-topics"></a>Temas relacionados
 

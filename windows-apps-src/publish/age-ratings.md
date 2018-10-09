@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, clasificación por edades, clasificación de juegos, iarc, clasificación, cuestionario, panel de clasificación, clasificación de contenido
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cf7a3c3a57c4d892de2438967d995ee18470cae
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4391142"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4425580"
 ---
 # <a name="age-ratings"></a>Clasificaciones por edades
 
@@ -30,7 +30,7 @@ La primera vez que envíes una aplicación (o la primera vez que actualices una 
 
 Tienes que responder a las preguntas con precisión. Para obtener más información acerca de cualquier pregunta, haz clic en el icono de información que aparece junto a ella. Como parte de este proceso, compartimos con la IARC tu nombre de editor y tu dirección de correo electrónico. Tras completar el cuestionario, el sistema de clasificación de la IARC proporcionará la información de clasificación por edades y contenido en base a tus respuestas. Esta información de clasificación la usaremos a la hora de mostrar tu aplicación a los clientes en diferentes mercados. También recibirás un correo electrónico de la IARC con una confirmación de la clasificación por edades de la aplicación cuando dicha aplicación se haya publicado.
 
-La primera pregunta te pide que elijas la categoría que mejor describa la aplicación (y sus metadatos). Una vez que hagas una selección, verá más preguntas. Las preguntas específicas que verás variarán en función de tus respuestas anteriores. Para obtener más detalles que pueden ayudarte a comprender cómo responder a cualquier pregunta, haz clic en el icono de información junto a esta pregunta. Si te equivocas en algo, puedes retroceder o comenzar el cuestionario de nuevo para proporcionar las respuestas correctas.
+La primera pregunta te pide que elijas la categoría que mejor describa la aplicación (y sus metadatos). Una vez que hagas una selección, verá más preguntas. Las preguntas específicas que verás variarán en función de tus respuestas anteriores. Para obtener más detalles que pueden ayudarte a comprender cómo para responder a cualquier pregunta, haz clic en el icono de información junto a esta pregunta. Si te equivocas en algo, puedes retroceder o comenzar el cuestionario de nuevo para proporcionar las respuestas correctas.
 
 Cuando termines de responder a las preguntas, haz clic en **Save and generate**. A continuación, verás las clasificaciones asignadas de la aplicación y podrás seguir con el envío. También puedes hacer clic en **Editar** corregir las respuestas al cuestionario.
 

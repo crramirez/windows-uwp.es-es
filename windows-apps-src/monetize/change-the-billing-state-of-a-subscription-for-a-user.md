@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de compra de Microsoft Store, suscripciones
 ms.localizationpriority: medium
 ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4384820"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4429383"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Cambiar el estado de facturación de la suscripción de un usuario
 
@@ -57,7 +57,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Nombre         | Tipo  | Descripción   |  Requerido  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | cadena | El identificador de la suscripción que quieres cambiar. Para obtener este identificador, llama al método [obtener suscripciones para un usuario](get-subscriptions-for-a-user.md) , identifica la entrada del cuerpo de respuesta que representa el complemento de suscripción que quieres cambiar y usa el valor del campo **Id.** de la entrada.     | Sí      |
+| recurrenceId | cadena | El identificador de la suscripción que quieres cambiar. Para obtener este identificador, llama al método [obtener suscripciones para un usuario](get-subscriptions-for-a-user.md) , identifica la entrada del cuerpo de respuesta que representa el complemento de suscripción que quieres cambiar y usa el valor del campo de **Id.** de la entrada.     | Sí      |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud

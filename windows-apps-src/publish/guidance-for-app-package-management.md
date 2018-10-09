@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a43f3b4c5684d93ea6986c4d1f1e4dae46c1a959
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4392174"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4426359"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientación para administrar paquetes de la aplicación
 
@@ -99,7 +99,7 @@ Después de hacer que la aplicación deje de estar disponible, la seguirás vien
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Quitar paquetes de una familia de dispositivos anteriormente compatibles
 
-Si quitas todos los paquetes de un determinado [familia de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) que anteriormente compatible con la aplicación, se te pedirá que confirme que esta es tu intención antes de poder guardar los cambios en la página de **paquetes** .
+Si quitas todos los paquetes de un determinado de [familia de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) que anteriormente compatible con la aplicación, se te pedirá que confirme que esta es tu intención antes de poder guardar los cambios en la página de **paquetes** .
 
 Al publicar un envío que quite todos los paquetes que podrían ejecutarse en una familia de dispositivos que era compatible con la aplicación, los clientes nuevos no podrán comprar la aplicación en esa familia. Siempre puedes publicar otra actualización más adelante para proporcionar paquetes para esa familia de dispositivos de nuevo.
 
@@ -110,7 +110,7 @@ Ten en cuenta que aunque quites todos los paquetes que admitan una determinada f
 
 ## <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>Agregar paquetes para Windows 10 a una aplicación publicada anteriormente
 
-Si tienes una aplicación de la tienda que solo se incluye paquetes para Windows 8.x o Windows Phone 8.x y quieres actualizarla para Windows 10, crea un nuevo envío y agrega los paquetes de .msixupload o .appxupload para UWP durante el paso de [paquetes](upload-app-packages.md) . Después de que la aplicación pase por el proceso de certificación, el paquete para UWP también estará disponible para nuevas adquisiciones por los clientes de Windows 10.
+Si tienes una aplicación de la tienda que solo se incluye paquetes para Windows 8.x o Windows Phone 8.x y quieres actualizar la aplicación para Windows 10, crea un nuevo envío y agrega los paquetes de .msixupload o .appxupload para UWP durante el paso de [paquetes](upload-app-packages.md) . Después de que la aplicación pase por el proceso de certificación, el paquete para UWP también estará disponible para nuevas adquisiciones por los clientes de Windows 10.
 
 > [!NOTE]
 > Una vez que un cliente de Windows 10 obtiene el paquete para UWP, no puedes revertirlo para que use un paquete para una versión anterior del sistema operativo. 

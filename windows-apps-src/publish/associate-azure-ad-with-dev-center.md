@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, azure ad, inquilino de azure, inquilino de aad, inquilino de azure ad, administración de inquilinos, inquilinos
 ms.localizationpriority: medium
 ms.openlocfilehash: dd729d76705849c981516109da39bbd27c140286
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4385000"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4445636"
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Asociar AzureActiveDirectory a la cuenta del Centro de desarrollo
 
@@ -35,7 +35,7 @@ Un solo un inquilino de AzureAD puede asociarse con varias cuentas del Centro de
 
 Si tu organización ya usa Azure AD, sigue estos pasos para vincular tu cuenta del Centro de desarrollo.
 
-1.  En el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard), selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , selecciona **los inquilinos**.
+1.  Desde el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard), selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , selecciona **los inquilinos**.
 2.  Selecciona **Asociar Azure AD con tu cuenta del Centro de desarrollo**.
 3.  Escribe tus credenciales de Azure AD del inquilino que quieras asociar.
 4.  Revisa el nombre de la organización y de dominio de tu inquilino de AzureAD. Para completar la asociación, selecciona **Confirmar**.
@@ -49,7 +49,7 @@ Si tu organización ya usa Azure AD, sigue estos pasos para vincular tu cuenta d
 
 Si necesitas configurar un nuevo Azure AD para vincular a tu cuenta del Centro de desarrollo, sigue estos pasos.
 
-1.  En el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard), selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , selecciona **los inquilinos**.
+1.  Desde el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard), selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , selecciona **los inquilinos**.
 2.  Selecciona **Crear nuevo Azure AD**.
 3.  Escribe la información de directorio para el nuevo Azure AD:
     - **Nombre de dominio**: nombre único que usaremos para tu dominio de Azure AD, junto con ".onmicrosoft.com". Por ejemplo, si escribes "ejemplo", el dominio de Azure AD sería "ejemplo.onmicrosoft.com".

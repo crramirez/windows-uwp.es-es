@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de información de la aplicación de escritorio.
+description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de opiniones de la aplicación de escritorio.
 title: Obtener datos de información de la aplicación de escritorio
 ms.author: mcleans
 ms.date: 07/31/2018
@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de la tienda, API de información de análisis de Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca6eed40af37276b5b4c98ec7b1b709bdadfb9
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4383722"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4425721"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Obtener datos de información de la aplicación de escritorio
 
@@ -48,14 +48,14 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Necesario  
 |---------------|--------|---------------|------|
-| applicationId | cadena | El identificador de producto de la aplicación de escritorio para la que quieres obtener información sobre los datos. Para obtener el id. del producto de una aplicación de escritorio, abra cualquier [informe de análisis del Centro de desarrollo de tu aplicación de escritorio](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como el **Informe de estado**) y recuperara el id. del producto desde la dirección URL. Si no se especifica este parámetro, el cuerpo de respuesta contendrá los datos de detalles de todas las aplicaciones registradas en tu cuenta.  |  No  |
+| applicationId | cadena | El identificador de producto de la aplicación de escritorio para la que quieres obtener información sobre los datos. Para obtener el id. del producto de una aplicación de escritorio, abra cualquier [informe de análisis del Centro de desarrollo de tu aplicación de escritorio](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como el **Informe de estado**) y recuperara el id. del producto desde la dirección URL. Si no se especifica este parámetro, el cuerpo de respuesta contendrá los datos de opiniones para todas las aplicaciones registradas en tu cuenta.  |  No  |
 | startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de opiniones para recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
 | endDate | fecha | La fecha de finalización del intervalo de fechas de los datos de opiniones para recuperar. El valor siempre es la fecha actual. |  No  |
-| filter | cadena  | Una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *filter = dataType eq 'adquisición'*. <p/><p/>Actualmente, este método solo admite el **estado**de filtro.  | No   |
+| filter | cadena  | Una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *filter = dataType eq 'adquisición'*. <p/><p/>Actualmente este método solo admite el **estado**de filtro.  | No   |
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-El siguiente ejemplo muestra una solicitud para obtener datos de opiniones. Reemplaza el valor de *applicationId* por el valor adecuado para la aplicación de escritorio.
+El siguiente ejemplo muestra una solicitud para obtener datos de opiniones. Reemplaza el valor de *applicationId* con el valor adecuado para la aplicación de escritorio.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/insights?applicationId=10238467886765136388&startDate=6/1/2018&endDate=6/15/2018&filter=dataType eq 'health' HTTP/1.1
@@ -68,7 +68,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | matriz  | Una matriz de objetos que contienen datos de información de la aplicación. Para obtener más información sobre los datos de cada objeto, consulta la sección de [valores de detalles de valoración](#insight-values) a continuación.                                                                                                                      |
+| Valor      | matriz  | Una matriz de objetos que contienen datos de opiniones de la aplicación. Para obtener más información sobre los datos de cada objeto, consulta la sección de [los valores de detalles de valoración](#insight-values) a continuación.                                                                                                                      |
 | TotalCount | entero    | El número total de filas en el resultado de datos de la consulta.                 |
 
 
@@ -81,7 +81,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | applicationId       | cadena | El identificador de producto de la aplicación de escritorio para la que has recuperado los datos de opiniones.     |
 | insightDate                | cadena | La fecha en el que hemos identificado el cambio en una métrica específica. Esta fecha representa el final de la semana en el que hemos detectado un aumento significativo o reducir en una métrica en comparación con la semana anterior. |
 | tipo de datos     | cadena | Una cadena que especifica el área de análisis general que informa esta información. Actualmente, este método solo admite el **estado**.    |
-| insightDetail          | matriz | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de insight actual.    |
+| insightDetail          | matriz | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de detalles de valoración actual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail

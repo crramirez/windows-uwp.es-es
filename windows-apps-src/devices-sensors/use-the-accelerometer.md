@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30de119b7c3a00730b698eb9d4938280669219a7
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 2848b9a7326bdac084120ec9b75f067718f14853
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958710"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4428886"
 ---
 # <a name="use-the-accelerometer"></a>Usar el acelerómetro
 
@@ -28,8 +28,6 @@ ms.locfileid: "958710"
 **Muestra**
 
 -   Para ver una implementación más completa, consulta la [muestra de acelerómetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).
-
-\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
 
 Aprende a usar el acelerómetro para responder al movimiento del usuario.
 

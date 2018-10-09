@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, aplicación de azure ad, aad, usuario, grupo, varios usuarios, multiusuario
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4388567"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4424898"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Agregar usuarios, grupos y aplicaciones de AzureAD a tu cuenta del Centro de desarrollo
 
-La sección de **los usuarios** del centro de desarrollo de Windows (en **configuración de la cuenta**) te permite usar Azure Active Directory para agregar usuarios a tu cuenta del centro de desarrollo. A cada usuario se le asigna un rol (o conjunto de permisos personalizados) que define su acceso a la cuenta. También puedes agregar [grupos de usuarios](#groups) y [aplicaciones de AzureAD](#azure-ad-applications) para concederles acceso a tu cuenta del Centro de desarrollo.
+La sección de **los usuarios** del centro de desarrollo de Windows (en la **configuración de la cuenta**) te permite usar Azure Active Directory para agregar usuarios a tu cuenta del centro de desarrollo. A cada usuario se le asigna un rol (o conjunto de permisos personalizados) que define su acceso a la cuenta. También puedes agregar [grupos de usuarios](#groups) y [aplicaciones de AzureAD](#azure-ad-applications) para concederles acceso a tu cuenta del Centro de desarrollo.
 
 Después de que los usuarios se hayan agregado a la cuenta, puedes [editar detalles de la cuenta](#edit), cambiar [roles y permisos](set-custom-permissions-for-account-users.md) o [eliminar usuarios](#remove).
 
@@ -58,7 +58,7 @@ Puedes seleccionar usuarios que ya existen en el inquilino de tu organización y
 
 Si has iniciado sesión con una cuenta de administrador que también tiene permisos de [administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el inquilino de Azure AD en el que estás trabajando, tendrás opciones adicionales para agregar usuarios a tu cuenta del Centro de desarrollo. Deberás seleccionar una de las opciones siguientes:
 
--   **Agregar usuarios existentes**: elige los usuarios que ya existen en el directorio de la organización y darles acceso a tu cuenta del centro de desarrollo, mediante el método descrito anteriormente.
+-   **Agregar usuarios existentes**: elige los usuarios que ya existen en el directorio de la organización y darles acceso a tu cuenta del centro de desarrollo, mediante el método que se ha descrito anteriormente.
 -   **Crear nuevos usuarios**: crear cuentas de usuario nuevo para agregar al directorio de la organización tanto y tu cuenta del centro de desarrollo
 -   **Invite outside users**: envía invitaciones por correo electrónico a los usuarios que no se encuentran actualmente en el directorio de tu organización. Se les invitará a tener acceso a tu cuenta del Centro de desarrollo y se les creará una nueva cuenta de [usuario invitado](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) en tu inquilino de AzureAD.
 
@@ -69,7 +69,7 @@ Si has iniciado sesión con una cuenta de administrador que también tiene permi
 > [!IMPORTANT]
 > Debes iniciar sesión con una cuenta de administrador global en el inquilino de AzureAD para crear nuevos usuarios.
 
-1.  Desde la página de **usuarios** (en **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **crear nuevos usuarios**.
+1.  En la página de **los usuarios** (en la **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **crear nuevos usuarios**.
 2.  Escribe el nombre, el apellido y el nombre de usuario del nuevo usuario.
 3.  Si quieres que el usuario nuevo tenga una [cuenta de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) en el directorio de la organización, activa la casilla con la etiqueta **Make this user a Global administrator in your Azure AD, with full control over all directory resources**. De esta forma, el usuario podrá obtener acceso a todas las características administrativas en el Azure AD de tu empresa. Podrá agregar y administrar usuarios en el directorio de la organización (aunque no en el Centro de desarrollo, a menos que concedas a la cuenta los [roles/permisos](set-custom-permissions-for-account-users.md) adecuados). Si activas esta casilla, deberás proporcionar un **correo electrónico de recuperación de contraseña** para el usuario.
 4.  Si has activado la casilla **Make this user a Global administrator in your Azure AD**, escribe un correo electrónico que el usuario pueda usar si necesita recuperar su contraseña.
@@ -86,7 +86,7 @@ Si has iniciado sesión con una cuenta de administrador que también tiene permi
 > [!IMPORTANT]
 > Debes iniciar sesión con una cuenta de administrador global en el inquilino de AzureAD para invitar usuarios externos.
 
-1.  Desde la página de **usuarios** (en **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **Invitar a usuarios por correo electrónico**.
+1.  En la página de **los usuarios** (en la **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **Invitar a usuarios por correo electrónico**.
 1.  Escribe una o varias direcciones de correo electrónico (hasta diez), separadas por coma o punto y coma.
 2.  En la sección **Roles**, especifica los [roles o permisos personalizados](set-custom-permissions-for-account-users.md) para el usuario.
 3.  Haz clic en **Guardar**.
@@ -104,7 +104,7 @@ Si tienes que reenviar una invitación, busca al usuario en tu página **Usuario
 Si uno de los usuarios necesita cambiar su contraseña, puede hacerlo él mismo si has proporcionado un **correo electrónico de recuperación de contraseña** al crear la cuenta de usuario. También puedes actualizar la contraseña de un usuario siguiendo los pasos siguientes (si has iniciado sesión con una cuenta de administrador global en tu inquilino de Azure AD para cambiar la contraseña de un usuario). Ten en cuenta que este paso cambiará la contraseña del usuario en el inquilino de AzureAD, junto con la contraseña que utiliza para tener acceso al Centro de desarrollo. 
 
 1.  En la página de **usuarios** (en **configuración de la cuenta**), selecciona el nombre de la cuenta de usuario que quieres editar.
-2.  Selecciona el botón **Restablecer contraseña** en la parte inferior de la página.
+2.  Selecciona el botón de **Restablecer la contraseña** en la parte inferior de la página.
 3.  Aparecerá una página de confirmación con la información de inicio de sesión del usuario, incluida una contraseña temporal.
 
     > [!IMPORTANT]
@@ -133,7 +133,7 @@ Puedes agregar un grupo desde el directorio de la organización a tu cuenta del 
 
 Si quieres conceder acceso al Centro de desarrollo a un nuevo grupo, puedes crear uno en la sección **Usuarios**. Ten en cuenta que el nuevo grupo se creará en el directorio de la organización, no solo en tu cuenta del Centro de desarrollo.
 
-1.  En la página de **usuarios** (en **configuración de la cuenta**), haz clic en **Agregar grupos**.
+1.  En la página de **los usuarios** (en la **configuración de la cuenta**), haz clic en **Agregar grupos**.
 2.  En la página siguiente, selecciona el **nuevo grupo**.
 3.  Escribe el nombre para mostrar del nuevo grupo.
 4.  Especifica los [roles o permisos personalizados](set-custom-permissions-for-account-users.md) para el grupo. Todos los miembros del grupo podrán tener acceso a tu cuenta del Centro de desarrollo con los permisos que apliques al grupo, independientemente de los roles y permisos asociados a sus cuentas individuales.

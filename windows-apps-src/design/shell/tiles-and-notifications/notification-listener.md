@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, agente de escucha de notificaciones, usernotificationlistener, documentación, acceso a las notificaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4389590"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4423729"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Agente de escucha de notificaciones: acceder a todas las notificaciones
 
@@ -281,7 +281,7 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Evento en primer plano para una notificación agregada/descartada
 
 > [!IMPORTANT] 
-> Problema conocido: el evento en primer plano provocarán un bucle de CPU en las versiones recientes de Windows y anteriormente no funcionó antes de que. NO uses el evento en primer plano. En una actualización próximas para Windows, solucionaremos esto.
+> Problema conocido: el evento en primer plano provocarán un bucle de CPU en las versiones recientes de Windows y anteriormente no funcionó antes de que. NO uses el evento en primer plano. En una actualización próximas de Windows, solucionaremos esto.
 
 En lugar de usar el evento en primer plano, usa el código que se muestra anteriormente para una tarea en segundo plano de [modelo de proceso único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . La tarea en segundo plano, también podrás recibir notificaciones evento cambio mientras la aplicación está cerrada o se está ejecutando.
 

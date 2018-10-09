@@ -14,17 +14,17 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4384065"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4426690"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Empaquetar una aplicación para UWP con Visual Studio
 
 Para vender tu aplicación Plataforma universal de Windows (UWP) o distribuirla a otros usuarios, necesitas empaquetarla. Si no quieres distribuir tu aplicación a través de Microsoft Store, puedes transferir localmente el paquete de la aplicación directamente a un dispositivo o distribuirla a través de [Web Install](installing-UWP-apps-web.md). Este artículo describe el proceso de configuración, creación y prueba de un paquete de la aplicación para UWP con Visual Studio. Para obtener más información sobre cómo administrar e implementar aplicaciones de línea de negocio (LOB), consulta [Administración de aplicaciones de empresa](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
 
-En Windows 10, puedes enviar un paquete de aplicación, un lote de aplicaciones o un archivo de carga del paquete de aplicación completa para el centro de desarrollo de Windows. De estas opciones, enviar un archivo de carga del paquete proporcionará la mejor experiencia. 
+En Windows 10, puedes enviar un paquete de la aplicación, un lote de aplicaciones o un archivo de carga del paquete de aplicación completa para el centro de desarrollo de Windows. De estas opciones, enviar un archivo de carga del paquete proporcionará la mejor experiencia. 
 
 ## <a name="types-of-app-packages"></a>Tipos de paquetes de aplicación
 
@@ -137,7 +137,7 @@ Para obtener más información sobre el envío de la aplicación al Centro de de
 
 ## <a name="sideload-your-app-package"></a>Realizar la instalación de prueba del paquete de la aplicación
 
-Introducidos en la Actualización de aniversario de Windows 10, los paquetes de la aplicación se pueden instalar simplemente haciendo doble clic en el archivo de paquete de la aplicación. Para usarlo, ve a tu paquete de la aplicación o el archivo de recopilación de aplicación y haz doble clic en él. El instalador de aplicaciones se inicia y proporciona la información de la aplicación básica, así como un botón de instalación, barra de progreso de instalación y los mensajes de error pertinentes. 
+Introducidos en la Actualización de aniversario de Windows 10, los paquetes de la aplicación se pueden instalar simplemente haciendo doble clic en el archivo de paquete de la aplicación. Para usarlo, ve a tu paquete de la aplicación o el archivo de paquete de aplicación y haz doble clic en él. El instalador de aplicaciones se inicia y proporciona la información de la aplicación básica, así como un botón de instalación, barra de progreso de instalación y los mensajes de error pertinentes. 
 
 ![Pantalla del instalador de aplicaciones para instalar una aplicación de ejemplo llamada Contoso](images/appinstaller-screen.png)
 

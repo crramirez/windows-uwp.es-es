@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b731910f53a6152554b74e946374234b827f4a86
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4389161"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4422487"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
 
@@ -58,7 +58,7 @@ Empecemos con los principios básicos de diseño de buena navegación:
 
 ### <a name="consistency"></a>Coherencia
 
-La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y el estilo hará que la navegación intuitiva y predecible para los usuarios.
+La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y estilos hará que la navegación intuitiva y predecible para los usuarios.
 
 ![imagen de componentes de la página](images/nav/page-components.svg)
 
@@ -187,14 +187,14 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
         
         Use top navigation when:
 
-        - Que quieras mostrar todas las opciones de exploración en la pantalla.
+        - Que quieres mostrar todas las opciones de exploración en la pantalla.
         - Desean más espacio para el contenido de la aplicación.
         - Iconos claramente no describen las categorías de navegación.
         
         Usa pestañas cuando:
 
         - Desea conservar el estado de página y el historial de navegación.
-        - Espera que los usuarios cambien entre las pestañas con frecuencia.
+        - Se esperan que los usuarios cambien entre las pestañas con frecuencia.
 
 :::row-end:::
 

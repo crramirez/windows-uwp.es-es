@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, mercados, países, regiones
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4390310"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4428866"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
@@ -50,7 +50,7 @@ También verás una casilla que te permitirá indicar si ofreces tu aplicación 
 
 ## <a name="microsoft-store-consumer-markets"></a>Mercados de consumidores de Microsoft Store
 
-Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes: Los mercados con un asterisco compatibles con la Microsoft Store en Xbox One; podrás ver **Xbox** junto a sus nombres en la ventana emergente de **selección del mercado** .
+Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes: Los mercados con un asterisco compatibles con la Microsoft Store en Xbox One; verás **Xbox** junto a sus nombres en la ventana emergente de **selección del mercado** .
 
 
 <table>

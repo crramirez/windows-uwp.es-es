@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, panel, devcenter, centro de desarrollo
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4394270"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4426372"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Usar el Panel del Centro de desarrollo de Windows
 
@@ -37,7 +37,7 @@ Al [crear un envío de la aplicación](app-submissions.md) (por primera vez o co
 
 [Complementos (productos desde la aplicación)](add-on-submissions.md) se administran independientemente de envío de la aplicación. Esto te ofrece más flexibilidad y la capacidad de realizar cambios de forma independiente.
 
-Centro de desarrollo de Windows también ofrece funcionalidades de [Agregar varios usuarios de](manage-account-users.md)[administración de aplicaciones y configuración de servicios](app-management-and-services.md), [revisión de datos analíticos](analytics.md), [informes de pago](payout-summary.md), [promoción de aplicaciones](attract-customers-and-promote-your-apps.md), [interactúen con tu los clientes](engage-with-your-customers.md), [las pruebas beta](beta-testing-and-targeted-distribution.md), [distribuir aplicaciones LOB a empresas](distribute-lob-apps-to-enterprises.md)y mucho más.
+Centro de desarrollo de Windows también ofrece funcionalidades para [Agregar varios usuarios de](manage-account-users.md)[administración de aplicaciones y configuración de servicios](app-management-and-services.md), [revisión de datos analíticos](analytics.md), [informes de pago](payout-summary.md), [promoción de aplicaciones](attract-customers-and-promote-your-apps.md), [interactúen con tu los clientes](engage-with-your-customers.md), [las pruebas beta](beta-testing-and-targeted-distribution.md), [distribuir aplicaciones LOB para empresas](distribute-lob-apps-to-enterprises.md)y mucho más.
 
 Tus comentarios nos ayudan a crear las mejores capacidades y experiencias posibles. Mientras trabajas en el panel, usa el vínculo **comentarios** en la esquina superior derecha del panel para compartir tus ideas y recomendaciones.
 

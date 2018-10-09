@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, paquetes, carga, disponibilidad de familia de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: e86b56c09f907e45655a0ef9b94fad30a4959b59
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4386704"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4445538"
 ---
 # <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos
 
@@ -55,7 +55,7 @@ Si vas a enviar una aplicación para UWP para Windows 10 IoT Core, no debes real
 Si tu envío incluye paquetes que se pueden ejecutar en **Windows 8/8.1** y **Windows Phone 8.x y anterior**, dichos paquetes estarán disponibles para los clientes, como se muestra en la tabla. No hay ninguna casilla para estas versiones de sistema operativo. Si quieres dejar de ofrecer la aplicación a estos clientes, quita los paquetes correspondientes del envío.
 
 > [!IMPORTANT]
-> Para impedir totalmente que una determinada familia de dispositivos de Windows 10 obtenga el envío, actualizar el elemento [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) en el manifiesto como destino la familia de dispositivos que quieres admitir (es decir, Windows.Mobile o Windows.Desktop), en su lugar que dejarlo como el valor Windows.Universal (correspondiente a la familia de dispositivos universal) Microsoft Visual Studio incluye en el manifiesto de forma predeterminada.
+> Para impedir totalmente que una determinada familia de dispositivos de Windows 10 obtenga el envío, actualiza el elemento [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) en el manifiesto como destino la familia de dispositivos que quieres admitir (es decir, Windows.Mobile o Windows.Desktop), en su lugar que dejarlo como el valor Windows.Universal (correspondiente a la familia de dispositivos universal) Microsoft Visual Studio incluye en el manifiesto de manera predeterminada.
 
 Es importante tener en cuenta que las selecciones que realices en la sección **Disponibilidad de familia de dispositivos** solo se aplican a las nuevas adquisiciones. Cualquiera que ya tenga la aplicación puede seguir usándola y obtener cualquier actualización que envíes, aunque quites aquí su familia de dispositivos. Esto se aplica incluso a los clientes que adquieren la aplicación antes de actualizar a Windows 10. Por ejemplo, si tienes una aplicación publicada con paquetes de Windows Phone 8.1 y más adelante agregas un paquete de Windows 10 (UWP) a la misma aplicación que tiene la familia de dispositivos universal como destino, a los clientes de Windows 10 Mobile que tengan el paquete de Windows Phone 8.1 se les ofrecerá actualizarse a este paquete de Windows 10 (UWP), aunque hayas desmarcado la casilla **Windows 10 Mobile** (ya que no se trata de una nueva compra, sino de una actualización). Sin embargo, si no proporcionas ningún paquete de Windows 10 (UWP) que tenga como destino las familias de dispositivos universal o móvil, tus clientes móviles de Windows 10 permanecerán en el paquete de Windows Phone 8.1.
 

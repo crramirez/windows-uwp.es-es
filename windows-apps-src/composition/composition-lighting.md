@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e634b18fffc4f601f6512d6ceeed51efbe9c1886
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4385567"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4426426"
 ---
 # <a name="using-lights-in-windows-ui"></a>Uso de luces en la interfaz de usuario de Windows
 
@@ -23,10 +23,10 @@ Las APIs Windows.UI.Composition te permiten crear efectos y animaciones en tiemp
 > [!NOTE]
 > Para leer cómo aplican los objetos de [XamlLight](/uwp/api/windows.ui.xaml.media.xamllight) [CompositionLights](/uwp/api/Windows.UI.Composition.CompositionLight) para iluminar objetos UIElements de XAML, consulta [la iluminación de XAML](xaml-lighting.md).
 
-Iluminación de composición te permite crear interesantes de la interfaz de usuario por lo que permite:
+Iluminación de composición te permite crear interesante de la interfaz de usuario al permitir que:
 
-- Transformación de un independiente de la luz de otros objetos de la escena para habilitar escenarios envolventes como escenas de reproducción de música.
-- La capacidad para emparejar un objeto con una luz para que se muevan juntos independiente del resto de la escena para habilitar escenarios como Fluent [Mostrar](/design/style/reveal.md) resaltado.
+- Transformación de un luz independiente de otros objetos de la escena para habilitar escenarios envolventes como escenas de reproducción de música.
+- La capacidad de emparejar un objeto con una luz para que se muevan juntos independiente del resto de la escena para habilitar escenarios como Fluent [Mostrar](/design/style/reveal.md) resaltado.
 - Transformación de la luz y la escena completa como un grupo para crear materiales y profundidad.
 
 Iluminación de composición admite tres conceptos clave: **luz**, **destinos**y **SceneLightingEffect**.
@@ -42,13 +42,13 @@ Iluminación de composición admite tres conceptos clave: **luz**, **destinos**y
 | [AmbientLight](/uwp/api/windows.ui.composition.ambientlight) | Una fuente de luz que emite luz no direccional que aparece refleja todo el contenido de la escena. |
 | [DistantLight](/uwp/api/windows.ui.composition.distantlight) | Una gran infinitamente distante fuente de luz que emite luz en una sola dirección. Como el sol. |
 | [PointLight](/uwp/api/windows.ui.composition.pointlight) | Un origen de punto de luz que emite luz en todas las direcciones. Al igual que una bombilla. |
-| [Foco de luz](/uwp/api/windows.ui.composition.spotlight) | Una fuente de luz que emite un cono interno y externo de luz. Al igual que una linterna. |
+| [Foco de luz](/uwp/api/windows.ui.composition.spotlight) | Fuente de luz que emite un cono interno y externo de luz. Al igual que una linterna. |
 
 ## <a name="targets"></a>Destinos
 
 Cuando las luces destinados a un elemento Visual (agregar a la lista de [destinos](/uwp/api/windows.ui.composition.compositionlight.targets) ), el objeto Visual y todos sus descendientes conocemos y responder a esta fuente de luz. Esto puede ser algo tan sencillo como una configuración de un origen de PointLight en la raíz de un árbol y todos los elementos visuales siguientes reaccionar a la animación de la dirección de luces de punto.
 
-**ExclusionsFromTargets** te ofrece la capacidad para eliminar la iluminación de un elemento visual o de un subárbol de elementos visuales de manera similar, como agregar destinos. Elementos secundarios en el árbol de raíz de forma el objeto visual que se excluye no están iluminados como resultado.
+**ExclusionsFromTargets** te ofrece la capacidad para eliminar la iluminación de un elemento visual o de un subárbol de elementos visuales de manera similar, como agregar destinos. Elementos secundarios en el árbol de raíz de forma visual que se excluye no están iluminados como resultado.
 
 ### <a name="sample-targets"></a>Muestra (destinos)
 
@@ -75,33 +75,33 @@ Hay varios factores a tener en cuenta al determinar qué contenido estarán ilum
 
 Concepto | Detalles
 --- | ---
-**Luz de ambiente** | Agregar una luz que no sean ambiental a la escena se desactivará toda la luz existente.  Los elementos que no está destinados por una luz que no sean ambiente aparecerá en negros.  Para iluminar elementos visuales que le rodea no dirigidos por la luz en una forma natural, usa la luz de ambiente junto con otras luces.
-**Número de luces** | Puede utilizar cualquier dos luces de composición que no sean ambiente en cualquier combinación de la interfaz de usuario de destino. Las luces de ambiente no están restringidas; manchas, punto y las luces distantes son.
+**Luz de ambiente** | Agregar una luz que no sean ambiental a la escena se desactivará toda la luz existente.  Elementos no dirigidos por una luz que no sean ambiente aparecerá en negros.  Para iluminar elementos visuales que le rodea no dirigidos por la luz en una forma natural, usa la luz de ambiente junto con otras luces.
+**Número de luces** | Puede utilizar cualquier dos luces de composición que no sean ambiente en cualquier combinación de la interfaz de usuario de destino. Las luces de ambiente no están restringidas; punto, punto y las luces distantes son.
 **Ciclo de vida** | CompositionLight puede experimentar condiciones de ciclo de vida (ejemplo: el recolector de elementos no utilizados puede reciclar el objeto de luz antes de que se usa).  Se recomienda mantener una referencia a las luces agregando las luces como un miembro para ayudar a la aplicación a administrar el ciclo de vida.
 **Transformaciones** | Las luces deben colocarse en un nodo por encima de la interfaz de usuario que usa efectos, como [transformaciones de perspectiva](/design/layout/3-d-perspective-effects.md) en la estructura visual se dibujará correctamente.
 **Espacio de coordenadas y destinos** | CoordinateSpace es el espacio visual que todas las propiedades de las luces deben establecerse en. CompositionLight.Targets debe estar dentro del árbol CoordinateSpace.
 
 ## <a name="lighting-properties"></a>Propiedades de iluminación
 
-Según el tipo de luz usa, una luz puede tener propiedades de atenuación y el espacio. No todos los tipos de luces usan todas las propiedades.
+Según el tipo de luz que se usa, una luz puede tener propiedades de atenuación y espacio. No todos los tipos de luces usan todas las propiedades.
 
 Propiedad | Descripción
 --- | ---
 **Color** | El [Color](/uwp/api/windows.ui.color) de la luz. Color difuso, ambiente y especular que define el color que se emite [D3D](https://docs.microsoft.com/windows/uwp/graphics-concepts/light-properties) define valores de iluminación. Iluminación usa valores RGBA para las luces; no se usa el componente de color alfa.
-**Direction** | La dirección de la luz. La dirección en la que apunta la luz se especifica en relación con su Visual [CoordinateSpace](/uwp/api/windows.ui.composition.distantlight.coordinatespace) .
-**Espacio de coordenadas** | Cada Visual tiene un espacio de coordenadas 3D implícito. Dirección del eje X es de izquierda a derecha. Dirección del eje Y es de arriba a abajo. Dirección Z es un punto fuera el plano. El punto original de esta coordenada es la esquina superior izquierda del elemento visual y la unidad es píxeles independientes de dispositivo (DIP). Desplazamiento de la luz definida en esta coordenada.
+**Direction** | La dirección de luz. La dirección en la que apunta la luz se especifica en relación con su Visual [CoordinateSpace](/uwp/api/windows.ui.composition.distantlight.coordinatespace) .
+**Espacio de coordenadas** | Cada Visual tiene un espacio de coordenadas 3D implícito. Dirección X es de izquierda a derecha. Dirección del eje Y es de arriba a abajo. Dirección Z es un punto fuera del plano. El punto original de esta coordenada es la esquina superior izquierda del elemento visual y la unidad es píxeles independientes de dispositivo (DIP). Desplazamiento de la luz definida en esta coordenada.
 **Cono interno y externo** | Los focos de luz emiten un cono de luz que tiene dos partes: un cono interno brillante y un cono externo. Composición permite que controlar a través de color y los ángulos del cono interno y externo.
 **Offset** | Desplazamiento de la fuente de luz con respecto a su espacio de coordenadas Visual.
 
 > [!NOTE]
-> Cuando varios luces visita el mismo objeto Visual o cada vez que se obtiene el valor de color de la luz lo suficientemente grande como para superar 1.0, puede cambiar el color de la luz a causa de compresión de un canal de color de las luces.
+> Cuando varios luces visita el mismo objeto Visual o siempre que sea lo suficientemente grande como para superar 1.0 obtiene el valor de color de la luz, puede cambiar el color de la luz a causa de compresión de un canal de color de las luces.
 
 ### <a name="advanced-lighting-properties"></a>Avanzado de las propiedades de iluminación
 
 Propiedad | Descripción
 --- | ---
 **Intensidad** | Controla el brillo de la luz.
-**Atenuación** | La atenuación controla cómo disminuye la intensidad de la luz hacia la máxima distancia especificada por la propiedad de intervalo.  Constantes, los propiedades de atenuación Quadradic y lineal pueden usarse.
+**Atenuación** | La atenuación controla cómo disminuye la intensidad de la luz hacia la máxima distancia especificada por la propiedad de intervalo.  Constantes, los Quadradic y lineal propiedades de atenuación pueden usarse.
 
 ## <a name="getting-started-with-lighting"></a>Introducción a la luz
 
@@ -109,21 +109,21 @@ Sigue estos pasos generales para agregar las luces:
 
 - Crear y colocar las luces: crear luces y colocarlos en un espacio de coordenadas especificado.
 - Identificar los objetos a la luz: luz en elementos visuales relevantes de destino.
-- [Opcional] Definir objetos individuales cómo reaccionar a las luces: SceneLightingEffect de uso con una EffectBrush para personalizar la reflexión de la luz para mostrar la clase SpriteVisual. Valores predeterminados de reflexión admiten la iluminación de elementos secundarios de CoordinateSpace la fuente de luz.  Un elemento visual de ellas pintado con una SceneLightingEffect sobrescribe la iluminación de forma predeterminada para esa visual.
+- [Opcional] Definir objetos individuales cómo reaccionar a las luces: SceneLightingEffect de uso con una EffectBrush para personalizar la reflexión de la luz para mostrar de la clase SpriteVisual. Valores predeterminados de reflexión admiten la iluminación de elementos secundarios de CoordinateSpace la fuente de luz.  Un elemento visual de ellas pintado con una SceneLightingEffect sobrescribe la iluminación predeterminado para ese elemento visual.
 
 ## <a name="scenelightingeffect"></a>SceneLightingEffect
 
-[SceneLightingEffect](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) se usa para modificar la iluminación predeterminada aplicada al contenido de un [objeto SpriteVisual](/uwp/api/Windows.UI.Composition.SpriteVisual) el objetivo de un [CompositionLight](/uwp/api/windows.ui.composition.compositionlight).
+[SceneLightingEffect](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) se usa para modificar la iluminación predeterminado aplicada al contenido de un [objeto SpriteVisual](/uwp/api/Windows.UI.Composition.SpriteVisual) dirigidas por un [CompositionLight](/uwp/api/windows.ui.composition.compositionlight).
 
-[SceneLightingEffect](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) se usa con frecuencia para la creación de material. Un SceneLightingEffect es un efecto que se usa cuando desea lograr algo más complejo, como la habilitación de las propiedades reflectantes en una imagen o proporcionar una ilusión de profundidad con un mapa normal. Un SceneLightingEffect proporciona la capacidad de personalizar la interfaz de usuario mediante las propiedades de iluminación, como los importes especulares y difusas. Puede personalizar aún más los efectos de iluminación con el resto de la canalización de efectos que te permite individualmente de fusión y redactar reacciones de iluminación diferentes con el contenido.
+[SceneLightingEffect](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) se usa con frecuencia para la creación de material. Un SceneLightingEffect es un efecto que se usa cuando quieres lograr algo más complejos, como las propiedades reflectantes en una imagen de activación y ofrecer una ilusión de profundidad con un mapa normal. Un SceneLightingEffect proporciona la capacidad de personalizar la interfaz de usuario mediante las propiedades de iluminación, como los importes especulares y difusas. Puedes personalizar aún más los efectos de iluminación con el resto de la canalización de efectos que te permite individualmente de fusión y redactar reacciones de iluminación diferentes con el contenido.
 
 > [!NOTE]
-> Iluminación de una escena no producir sombras; es un efecto centrado en la representación 2D.  No tienen en escenarios de iluminación 3D de tener en cuenta que incluyen los modelos de iluminación real, incluidas las sombras.
+> Iluminación de una escena no producir sombras; es un efecto que se centra en la representación 2D.  No se tiene en los escenarios de iluminación 3D de tener en cuenta que incluyen modelos de iluminación real, incluidas las sombras.
 
 
 Propiedad | Descripción
 --- | ---
-**Mapa normal** | NormalMaps crear un efecto de una textura donde un normal apuntando hacia la luz serán más brillante e inmediatamente un apunta normal será más tenue. Para agregar un NormalMap el uso de visual dirigidas un [CompositionSurfaceBrush](/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) con Loadedimagesource para cargar un activo NormalMap.
+**Mapa normal** | NormalMaps crear un efecto de una textura donde un normal apuntando hacia la luz serán más brillante e inmediatamente un apunta normal será más tenue. Para agregar un NormalMap el uso de visual dirigida un [CompositionSurfaceBrush](/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) con Loadedimagesource para cargar un activo NormalMap.
 **Ambiente** | Propiedades de ambiente se usan principalmente para controlar la reflexión de color general.
 **Especular** | Reflejo especular crea especulares en objetos, haciendo que aparezcan brillante. Puedes controlar el nivel de reflejo especular, así como el nivel de brillo.  Estas propiedades se manipulan para crear efectos materiales como shinny metales o papel brillante.
 **Difuso** | Reflejo difuso dispersa la luz en todas las direcciones.
@@ -131,7 +131,7 @@ Propiedad | Descripción
 
 ### <a name="sample-scenelightingeffect"></a>Muestra (SceneLightingEffect)
 
-En el siguiente ejemplo se muestra cómo agregar un mapa normal a un SceneLightingEffect.
+El siguiente ejemplo muestra cómo agregar un mapa normal a un SceneLightingEffect.
 
 ```cs
 CompositionBrush CreateNormalMapBrush(ICompositionSurface normalMapImage)
@@ -168,7 +168,7 @@ CompositionBrush CreateNormalMapBrush(ICompositionSurface normalMapImage)
 
 - [Crear las luces y materiales en la capa Visual](https://blogs.windows.com/buildingapps/2017/08/04/creating-materials-lights-visual-layer/)
 - [Introducción a la iluminación](https://docs.microsoft.com/windows/uwp/graphics-concepts/lighting-overview)
-- [CompositionCapabilities API](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositioncapabilities)
+- [API de CompositionCapabilities](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositioncapabilities)
 - [Cálculos de iluminación](https://docs.microsoft.com/windows/uwp/graphics-concepts/mathematics-of-lighting)
 - [SceneLightingEffect](https://docs.microsoft.com/uwp/api/windows.ui.composition.effects.scenelightingeffect)
 - [Repositorio de GitHub de WindowsUIDevLabs](https://github.com/Microsoft/WindowsUIDevLabs)

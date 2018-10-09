@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c7286493e08fd62ad4b207d0e014dd4fbd5318
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4394476"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4426515"
 ---
 # <a name="handle-uri-activation"></a>Administrar la activación de los identificadores URI
 
@@ -138,7 +138,7 @@ void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs
 ```
 
 > [!NOTE]
-> Cuando se inicia mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario volver a la pantalla que inició la aplicación y no al contenido anterior de la aplicación.
+> Cuando se inicia mediante un contrato de protocolo, asegúrate de que el botón Atrás toma el usuario vuelve a la pantalla que inició la aplicación y no al contenido anterior de la aplicación.
 
 El siguiente código inicia mediante programación la aplicación a través de su URI:
 
@@ -162,7 +162,7 @@ Cualquier aplicación o sitio web puede usar tu nombre de esquema de URI, inclui
 > Si vas a crear un nuevo nombre de esquema URI de la aplicación, asegúrate de seguir las directrices de [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Esto garantiza que el nombre cumpla los estándares de los esquemas de URI.
 
 > [!NOTE]
-> Cuando se inicia mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario volver a la pantalla que inició la aplicación y no al contenido anterior de la aplicación.
+> Cuando se inicia mediante un contrato de protocolo, asegúrate de que el botón Atrás toma el usuario vuelve a la pantalla que inició la aplicación y no al contenido anterior de la aplicación.
 
 Es recomendable que las aplicaciones creen un nuevo elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) de XAML para cada evento de activación que abra un nuevo destino de URI. De esta forma, la navegación hacia atrás del nuevo elemento **Frame** de XAML no incluirá ningún contenido anterior que la aplicación tuviera en la ventana actual al pasar a suspensión.
 

@@ -16,11 +16,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: ad7326acf728aef66f10c72ee04461fd90e5f775
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4393306"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4424879"
 ---
 # <a name="text-controls"></a>Controles de texto
 
@@ -127,7 +127,7 @@ A partir de Windows 10, versión 1803, los cuadros de entrada de texto XAML cuen
 
 ![El cuadro de texto se amplía cuando se pulsa con el lápiz](images/pen-input-expand.gif)
 
-Para obtener más información, consulta [entrada de texto con la vista de escritura a mano](text-handwriting-view.md).
+Para obtener más información, consulta la [entrada de texto con la vista de escritura a mano](text-handwriting-view.md).
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elegir el teclado adecuado para el control de texto
 

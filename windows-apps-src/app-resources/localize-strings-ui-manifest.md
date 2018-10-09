@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4388632"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4423820"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
@@ -92,7 +92,7 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 Puedes usar este mismo código desde dentro de una biblioteca de clases (Windows Universal) o un proyecto [Biblioteca de Windows Runtime (Windows Universal)](../winrt-components/index.md). En el momento de ejecución, se cargan los recursos de la aplicación que aloja la biblioteca. Te recomendamos que las bibliotecas carguen recursos de la aplicación que alojan, dado que es probable que la aplicación tenga un mayor grado de localización. Cuando una biblioteca tiene que proporcionar recursos, debería proporcionar a su aplicación alojada la opción de sustituir esos recursos como si fueran una entrada.
 
-Si un nombre de recurso se segmenta (que contiene "." caracteres), a continuación, reemplazar puntos con barra diagonal ("/") caracteres en el nombre del recurso. Por ejemplo, los identificadores de propiedad, contener puntos; por lo tanto, sería necesario hacer esta sustitución para cargar uno de ellos desde el código.
+Si un nombre de recurso se segmenta (contiene "." caracteres), a continuación, reemplazar puntos con barra diagonal ("/") caracteres en el nombre de recurso. Por ejemplo, los identificadores de propiedad, contener puntos; por lo tanto, sería necesario hacer esta sustitución para cargar uno de ellos desde el código.
 
 ```csharp
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
@@ -175,7 +175,7 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 Si fueras a mover el recurso "AppDisplayName" fuera de `Resources.resw` y adentro de `ManifestResources.resw`, en ese caso, en el manifiesto del paquete de aplicación cambiarías `ms-resource:AppDisplayName` a `ms-resource:/ManifestResources/AppDisplayName`.
 
-Si un nombre de archivo de recursos se segmenta (que contiene "." caracteres), a continuación, dejar los puntos en el nombre al hacer referencia a él. **No** reemplaza puntos con caracteres de barra diagonal ("/"), igual que harías para un nombre de recurso.
+Si un nombre de archivo de recursos se segmenta (contiene "." caracteres), a continuación, salir los puntos en el nombre al hacer referencia a él. **No** reemplaza los puntos con caracteres de barra diagonal ("/"), como lo harías para un nombre de recurso.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
@@ -268,20 +268,20 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
 ```
 
-Para una biblioteca de Windows Runtime (Windows Universal), si se segmenta el espacio de nombres predeterminado (que contiene "." caracteres), a continuación, usa puntos en el nombre del mapa de recursos.
+Para una biblioteca de Windows Runtime (Windows Universal), si el espacio de nombres predeterminado se segmenta (contiene "." caracteres), a continuación, usa puntos en el nombre del mapa de recursos.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-No es necesario hacerlo para una biblioteca de clases (Windows Universal). En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar tu componente o archivo PRI de la biblioteca. Cada recurso `uri` se muestra en el archivo de volcado.
+No necesitas hacerlo para una biblioteca de clases (Windows Universal). En caso de duda, puedes usar [MakePri.exe](makepri-exe-command-options.md) para volcar tu componente o archivo PRI de la biblioteca. Cada recurso `uri` se muestra en el archivo de volcado.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>Cargar cadenas desde otros paquetes
-Los recursos para un paquete de la aplicación se administran y se accede a través del paquete propietario de nivel superior [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) que es accesible desde el actual [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live). Dentro de cada paquete, diversos componentes pueden tener sus propios subárboles ResourceMap, a los que se puede tener acceso a través de [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
+Los recursos de un paquete de la aplicación se administran y se accede a través del paquete propietario de nivel superior [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) es accesible desde el actual [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live). Dentro de cada paquete, diversos componentes pueden tener sus propios subárboles ResourceMap, a los que se puede tener acceso a través de [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
 
 Un paquete de marcos puede tener acceso a sus propios recursos con un URI de identificador de recursos absoluto. Consulta también [esquemas URI](uri-schemes.md).
 

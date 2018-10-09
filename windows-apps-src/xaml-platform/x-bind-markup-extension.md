@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4387897"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4422921"
 ---
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
 **Nota** Para obtener información general sobre el uso del enlace de datos en la aplicación con **{x:Bind}** y para realizar una comparación total entre **{x:Bind}** y **{Binding}**, consulta el tema [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-La extensión de marcado **{x:Bind}** (nueva para Windows 10) es una alternativa a **{Binding}**. **{X: Bind}** se ejecuta en menos tiempo y usa menos memoria que **{Binding}** y admite una depuración mejor.
+La extensión de marcado **{x:Bind}** (nueva para Windows 10) es una alternativa a **{Binding}**. **{X: Bind}** se ejecuta en menos tiempo y usa menos memoria que **{Binding}** mejor depuración.
 
 Durante el tiempo de compilación de XAML, **{x:Bind}** se convierte en un código que obtendrá un valor de la propiedad del origen de datos y lo establecerá en la propiedad especificada en el marcado. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad del origen de datos y se actualiza en función de los cambios (`Mode="OneWay"`). Opcionalmente, también puede configurarse para insertar los cambios en su propio valor de nuevo en la propiedad de origen (`Mode="TwoWay"`).
 
@@ -89,7 +89,7 @@ Por ejemplo: en una página, **Text="{x:Bind Employee.FirstName}"** buscará un 
 
 En el caso de C++/CX, **{x:Bind}** no se puede enlazar a propiedades y campos privados en el modelo de datos o página: debes tener una propiedad pública para que se pueda enlazar. El área de superficie del enlace se debe exponer como clases o interfaces de CX para que podamos obtener los metadatos relevantes. El atributo **\[Bindable\]** no debería ser necesario.
 
-Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. En su lugar, puedes usar el nombre del elemento como la primera parte de la ruta de acceso para el enlace porque los elementos con nombre se convierten en campos dentro de la página o control de usuario que representa el origen del enlace raíz. 
+Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. En su lugar, puedes usar el nombre del elemento como la primera parte de la ruta de acceso del enlace porque los elementos con nombre se convierten en campos dentro de la página o control de usuario que representa el origen del enlace raíz. 
 
 
 ### <a name="collections"></a>Colecciones

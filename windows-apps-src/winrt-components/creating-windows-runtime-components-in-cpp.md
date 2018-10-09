@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4383818"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4428419"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>Crear componentes de Windows Runtime en C++/CX
 > [!NOTE]
@@ -29,7 +29,7 @@ Hay varias razones para compilar un componente de Windows Runtime.
 
 Al compilar una solución que contiene un proyecto de JavaScript o. NET y un proyecto de componente de Windows Runtime, los archivos de proyecto de JavaScript y la DLL compilada se combinan en un paquete que se puede depurar localmente en el simulador o remotamente en un dispositivo amarrado. También puedes distribuir solo el proyecto del componente como un SDK de extensión. Para obtener más información, consulta [Crear un kit de desarrollo de software](https://msdn.microsoft.com/library/hh768146.aspx).
 
-En general, cuando escribas el código C + / componente CX, usa la biblioteca de C++ regular y los tipos integrados, excepto en los límites de la interfaz binaria abstracta (ABI) donde pasas los datos hacia y desde el código de otro paquete .winmd. Allí, usa tipos de Windows Runtime y la sintaxis especial que C++ / CX admite para crear y manipular esos tipos. Además, en su C++ / CX en el código, usa tipos como delegate y event para implementar los eventos que se pueden genera desde tu componente y controlar en JavaScript, Visual Basic, C++ o C#. Para obtener más información sobre C++ / sintaxis CX, consulta [referencia de lenguaje de Visual C++ (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
+En general, cuando escribas el código C + / componente CX, usa la biblioteca de C++ regular y los tipos integrados, excepto en el límite de la interfaz binaria abstracta (ABI) donde pasas los datos hacia y desde el código de otro paquete .winmd. Allí, usa tipos de Windows Runtime y la sintaxis especial que C++ / CX admite para crear y manipular esos tipos. Además, en tu C++ / CX en el código, usa tipos como delegate y event para implementar los eventos que se pueden genera desde tu componente y controlar en JavaScript, Visual Basic, C++ o C#. Para obtener más información sobre C++ / sintaxis CX, consulta [referencia de lenguaje de Visual C++ (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
 ## <a name="casing-and-naming-rules"></a>Reglas de nomenclatura y del uso de mayúsculas y minúsculas
 
@@ -44,7 +44,7 @@ JavaScript distingue mayúsculas de minúsculas. Por lo tanto, debes seguir esta
 Los lenguajes .NET siguen las reglas normales del uso de mayúsculas y minúsculas.
 
 ## <a name="instantiating-the-object"></a>Crear una instancia del objeto
-Solo los tipos de Windows Runtime pueden pasarse a través del límite de la ABI. El compilador generará un error si el componente tiene un tipo como std::wstring como un parámetro o tipo devuelto en un método público. Las extensiones del componente Visual C++ (C++ / CX) tipos integrados incluyen los escalares habituales como int y double así como sus equivalentes typedef int32, float64 y así sucesivamente. Para obtener más información, consulta [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
+Solo los tipos de Windows Runtime pueden pasarse a través del límite de la ABI. El compilador generará un error si el componente tiene un tipo como std::wstring como un parámetro o tipo devuelto en un método público. Las extensiones de componente Visual C++ (C++ / CX) tipos integrados incluyen los escalares habituales como int y double así como sus equivalentes typedef int32, float64 y así sucesivamente. Para obtener más información, consulta [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
 
 ```cpp
 // ref class definition in C++
@@ -77,7 +77,7 @@ ResultText.Text = num.ToString();
 ## <a name="ccx-built-in-types-library-types-and-windows-runtime-types"></a>C++ / CX tipos integrados, tipos de la biblioteca y tipos de Windows Runtime
 Una clase activable (también conocida como "clase de referencia") es una clase en torno a la cual se pueden crear instancias desde otro lenguaje, como JavaScript, C# o Visual Basic. Para ser consumible en otro idioma, un componente debe contener al menos una clase activable.
 
-Un componente de Windows Runtime puede contener varias clases activables públicas, así como clases adicionales conocidas solo internamente por el componente. Aplicar el atributo [WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx) a C++ / tipos CX que no están destinados a ser visibles para JavaScript.
+Un componente de Windows Runtime puede contener varias clases activables públicas, así como clases adicionales conocidas solo internamente por el componente. Aplicar el atributo [WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx) a C++ / tipos CX que no están destinados a ser visible para JavaScript.
 
 Todas las clases públicas deben residir en el mismo espacio de nombres de raíz con el mismo nombre que el archivo de metadatos del componente. Por ejemplo, para una clase que se denomina A.B.C.MyClass solo puede crearse una instancia si se define en un archivo de metadatos denominado A.winmd o A.B.winmd o A.B.C.winmd. El nombre de la DLL no es necesario que coincida con el nombre de archivo .winmd.
 
@@ -131,7 +131,7 @@ namespace CppComponent
 }
 ```
 
-Para pasar las estructuras de valor definida por el usuario a través de la ABI, define un objeto de JavaScript que tiene los mismos miembros que la estructura de valor que se define en C++ / CX. A continuación, puedes pasar ese objeto como un argumento para C++ / método CX para que el objeto se convierte implícitamente a C++ / tipo CX.
+Para pasar las estructuras de valor definida por el usuario a través de la ABI, define un objeto de JavaScript que tiene los mismos miembros que la estructura de valor que se define en C++ / CX. Puedes pasar ese objeto como argumento a C++ / método CX para que el objeto se convierte implícitamente a C++ / tipo CX.
 
 ```javascript
 // Get and set the value struct
@@ -242,7 +242,7 @@ function SetAndGetDate() {
 }
 ```
 
-Cuando un lenguaje .NET pasa System.DateTime a C++ / CX componente, el método acepta como un Windows::Foundation::DateTime. Cuando el componente pasa Windows::Foundation::DateTime a un método de .NET Framework, el método Framework lo acepta como DateTimeOffset.
+Cuando un lenguaje .NET pasa System.DateTime a C++ / componente CX, el método lo acepta como un Windows::Foundation::DateTime. Cuando el componente pasa Windows::Foundation::DateTime a un método de .NET Framework, el método Framework lo acepta como DateTimeOffset.
 
 ```csharp
 private void DateTimeExample()
@@ -263,7 +263,7 @@ private void DateTimeExample()
 ```
 
 ## <a name="collections-and-arrays"></a>Colecciones y matrices
-Las colecciones siempre se pasan a través del límite de la ABI como controladores para los tipos de Windows Runtime como Windows::Foundation::Collections::IVector^ y Windows::Foundation::Collections::IMap^. Por ejemplo, si devuelves un controlador a Platform::Collections::Map, este lo convierte implícitamente a Windows::Foundation::Collections::IMap^. Las interfaces de colección se definen en un espacio de nombres independiente de C ++ / clases CX que proporcionan las implementaciones concretas. Los lenguajes de JavaScript y .NET consumen las interfaces. Para obtener más información, consulta [Colecciones (C++/CX)](https://msdn.microsoft.com//library/windows/apps/hh700103.aspx) y [Matriz y WriteOnlyArray (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh700131.aspx).
+Las colecciones siempre se pasan a través del límite de la ABI como controladores para los tipos de Windows Runtime como Windows::Foundation::Collections::IVector^ y Windows::Foundation::Collections::IMap^. Por ejemplo, si devuelves un controlador a Platform::Collections::Map, este lo convierte implícitamente a Windows::Foundation::Collections::IMap^. Las interfaces de colección se definen en un espacio de nombres independiente de la C++ / clases CX que proporcionan las implementaciones concretas. Los lenguajes de JavaScript y .NET consumen las interfaces. Para obtener más información, consulta [Colecciones (C++/CX)](https://msdn.microsoft.com//library/windows/apps/hh700103.aspx) y [Matriz y WriteOnlyArray (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh700131.aspx).
 
 ## <a name="passing-ivector"></a>Pasar el IVector
 ```cpp
@@ -396,7 +396,7 @@ nativeObject.propertyB = "What is the meaning of the universe?";
 document.getElementById('P9').innerHTML += nativeObject.propertyB;
 ```
 
-Los lenguajes .NET tener acceso a las propiedades de nativo C++ / objeto CX como si estuvieran en un objeto de .NET Framework.
+Los lenguajes .NET a propiedades en nativo C++ / objeto CX igual que lo harían en un objeto de .NET Framework.
 
 ```csharp
 private void GetAProperty()
@@ -546,7 +546,7 @@ Tanto C# como Visual Basic tienen son compatibles con el lenguaje para las enume
 ## <a name="asynchronous-methods"></a>Métodos asincrónicos
 Para consumir métodos asincrónicos expuestos por otros objetos de Windows Runtime, usa la [Clase de tarea (Runtime de simultaneidad)](https://msdn.microsoft.com/library/hh750113.aspx). Para obtener más información, consulta [Paralelismo de tareas (Runtime de simultaneidad)](https://msdn.microsoft.com/library/dd492427.aspx).
 
-Para implementar los métodos asincrónicos en C++ / CX, usa la función [create\_async](https://msdn.microsoft.com/library/hh750102.aspx) que se define en ppltasks.h. Para obtener más información, consulta [crear operaciones asincrónicas en C++ / CX para aplicaciones para UWP](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). Por ejemplo, consulta [Tutorial: crear un componente básico de Windows Runtime en C++ / CX y llamarlo desde JavaScript o C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md). Los lenguajes .NET consumen C++ / métodos asincrónicos de CX como harías con cualquier método asincrónico que se define en .NET Framework.
+Para implementar los métodos asincrónicos en C++ / CX, usa la función de [create\_async](https://msdn.microsoft.com/library/hh750102.aspx) que se define en ppltasks.h. Para obtener más información, consulta [crear operaciones asincrónicas en C++ / CX para aplicaciones para UWP](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). Por ejemplo, consulta [Tutorial: crear un componente básico de Windows Runtime en C++ / CX y llamarlo desde JavaScript o C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md). Los lenguajes .NET consumen C++ / CX asincrónico como harías con cualquier método asincrónico que se define en .NET Framework.
 
 ## <a name="exceptions"></a>Excepciones
 Puedes iniciar cualquier tipo de excepción definido por Windows Runtime. No puedes derivar tipos personalizados de ningún tipo de excepción de Windows Runtime. Sin embargo, puedes iniciar COMException y proporcionar un HRESULT personalizado al que se pueda acceder mediante el código que captura la excepción. No hay ninguna manera de especificar un mensaje personalizado en una COMException.
@@ -556,7 +556,7 @@ Cuando se depura una solución de JavaScript que tiene un archivo DLL del compon
 
 Asegúrate de seleccionar las funcionalidades adecuadas en el diseñador de paquetes. Por ejemplo, si estás intentando abrir un archivo de imagen en la biblioteca de imágenes del usuario mediante las API de Windows Runtime, asegúrate de seleccionar la casilla de la biblioteca de imágenes en el panel de capacidades del diseñador de manifiestos.
 
-Si tu código JavaScript aparentemente no reconoce las propiedades o métodos públicos en el componente, asegúrate de que estás usando la convención Camel de mayúsculas y minúsculas en JavaScript. Por ejemplo, el c++ LogCalc + / CX método debe referenciarse como logCalc en JavaScript.
+Si tu código JavaScript aparentemente no reconoce las propiedades o métodos públicos en el componente, asegúrate de que estás usando la convención Camel de mayúsculas y minúsculas en JavaScript. Por ejemplo, el c++ LogCalc / CX método debe referenciarse como logCalc en JavaScript.
 
 Si quitas C++ / CX Windows Runtime proyecto de componente de una solución, también debes quitar manualmente la referencia de proyecto del proyecto de JavaScript. De lo contrario, no se efectuará la depuración o las operaciones de compilación posteriores. Si es necesario, a continuación puedes agregar una referencia de ensamblado a la DLL.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, enumeración, descripción, página de store, notas de la versión, título
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4394179"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4428366"
 ---
 # <a name="create-app-store-listings"></a>Crear descripciones de Store de aplicaciones
 
@@ -42,7 +42,7 @@ En la sección **Idiomas de descripción de la Store adicionales**, puedes hacer
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
 
-## <a name="add-and-edit-store-listing-info"></a>Agregar y editar información de descripción de la tienda
+## <a name="add-and-edit-store-listing-info"></a>Agregar y editar la descripción de la tienda
 
 Para editar una descripción de la tienda, selecciona el nombre del idioma de la página de información general del envío.
 
@@ -50,14 +50,14 @@ En la parte superior de la página **Descripción de la Store** se encuentran lo
 
 ## <a name="product-name"></a>Nombre del producto
 
-Este cuadro de lista desplegable permite especificar el nombre que debe usarse en la descripción de la tienda (si lo ha reservado más de un nombre de la aplicación).
+Este cuadro de lista desplegable te permite especificar el nombre que debe usarse en la descripción de la tienda (si lo ha reservado más de un nombre de la aplicación).
 
-Si has cargado paquetes en el mismo idioma que está trabajando en la descripción de la tienda, se seleccionará el nombre usado en esos paquetes. Si es necesario [cambiar el nombre de la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) después de que se haya publicado, puedes seleccionar un nombre reservado diferente cuando se crea un nuevo envío con los paquetes que usan el nuevo nombre.
+Si has cargado paquetes en el mismo idioma que está trabajando en la descripción de la tienda, se seleccionará el nombre que se usan en los paquetes. Si es necesario [cambiar el nombre de la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) después de que se haya publicado, puedes seleccionar un nombre reservado diferente al crear un nuevo envío con los paquetes que usan el nuevo nombre.
 
 Si no has cargado paquetes para el idioma que estás trabajando y has reservado más de un nombre, tendrás que seleccionar uno de los nombres de aplicación reservado, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre.
 
 > [!NOTE]
-> El **nombre del producto** que selecciones solo se aplica a la descripción de la tienda en el lenguaje que estás trabajando. No afecta el nombre que aparece cuando un usuario instala la aplicación; ese nombre procedente del manifiesto del paquete que se instala. Para evitar confusiones, te recomendamos que los paquetes y la descripción de la tienda de cada idioma usen el mismo nombre.
+> El **nombre del producto** que selecciones solo se aplica a la descripción de la tienda en el lenguaje que estás trabajando. No afecta el nombre que aparece cuando un usuario instala la aplicación; ese nombre proviene el manifiesto del paquete que se instala. Para evitar confusiones, te recomendamos que los paquetes y descripción de la tienda de cada idioma usen el mismo nombre.
 
 ## <a name="description"></a>Descripción
 
