@@ -8,14 +8,14 @@ ms.date: 07/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d4b4cae2e135f7a66cd68192faabeffdb309a909
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4420370"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4465097"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correcciones de tiempo de ejecución a un paquete MSIX con el marco de soporte técnico de paquete
 
@@ -135,7 +135,7 @@ El contenido del paquete debería ser similar al siguiente.
 
 ### <a name="modify-the-package-manifest"></a>Modificar el manifiesto del paquete
 
-Abre el manifiesto del paquete en un editor de texto y, a continuación, Establece el `Executable` atributo de la `Application` elemento en el nombre del archivo ejecutable de iniciador PSF.  Si sabes que la arquitectura de la aplicación de destino, seleccionar la versión adecuada, PSFLauncher32.exe o PSFLauncher64.exe.  De lo contrario, PSFLauncher32.exe funcionará en todos los casos.  Aquí tienes un ejemplo.
+Abre el manifiesto del paquete en un editor de texto y, a continuación, Establece el `Executable` atributo de la `Application` elemento en el nombre del archivo ejecutable de iniciador PSF.  Si sabes que la arquitectura de la aplicación de destino, seleccionar la versión adecuada, PSFLauncher32.exe o PSFLauncher64.exe.  De lo contrario, PSFLauncher32.exe funcionará en todos los casos.  A continuación te mostramos un ejemplo.
 
 ```xml
 <Package ...>

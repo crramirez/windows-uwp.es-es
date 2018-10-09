@@ -8,18 +8,18 @@ ms.date: 06/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: windows10, uwp
 pm-contact: yulikl
 design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4431167"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4469957"
 ---
 # <a name="pivot"></a>Dinámica
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección
 ms.localizationpriority: medium
 ms.openlocfilehash: e9c5cb8a0f81513038a18522c39f0138bb25ab27
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4422571"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4468956"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 

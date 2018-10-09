@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, análisis, informes, panel, aplicaciones, datos, las métricas
 ms.localizationpriority: medium
 ms.openlocfilehash: 090ddfdfbed1ae49e87f4dc419765e006913764f
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4419708"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4466123"
 ---
 # <a name="analyze-app-performance"></a>Analizar el rendimiento de la aplicación
 
@@ -32,7 +32,7 @@ Para ver un análisis clave sobre tus aplicaciones más descargadas, amplía **A
 En esta sección encontrarás detalles sobre la información presentada en cada uno de los siguientes informes:
 
 -   [Informe Adquisiciones](acquisitions-report.md)
--   [Informe Adquisiciones de complementos](add-on-acquisitions-report.md)
+-   [Informe de adquisiciones de complementos](add-on-acquisitions-report.md)
 -   [Informe de uso](usage-report.md)
 -   [Informe Mantenimiento](health-report.md)
 -   [Informe de clasificaciones](ratings-report.md)

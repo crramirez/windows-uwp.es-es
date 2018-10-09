@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4428196"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4465465"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -622,7 +622,7 @@ public class MyListView : ListView
 * [Interacciones de teclado](keyboard-interactions.md)
 * [Teclas de acceso](access-keys.md)
 
-**Muestras**
+**Ejemplos**
 * [Galería de controles XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 

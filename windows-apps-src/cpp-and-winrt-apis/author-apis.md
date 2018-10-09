@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
 ms.openlocfilehash: 2476161954c1d4d49fcf9f8f74cd1b7cf9180c0a
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4430935"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4463621"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
@@ -287,7 +287,7 @@ En el caso donde tienes un objeto de interfaz y descubres que es una interfaz en
 > [!NOTE]
 > Si no has instalado Windows SDK versión 10.0.17763.0 (Windows 10, versión 1809) o posterior, a continuación, debes llamar a [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) en lugar de [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self).
 
-Aquí tienes un ejemplo. Hay otro ejemplo en [implementar la clase de control personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
+A continuación te mostramos un ejemplo. Hay otro ejemplo en [implementar la clase de control personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)

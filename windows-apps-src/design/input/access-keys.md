@@ -16,11 +16,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e842d6c5b8e62a9c043c97849fdf17f524ccfc7
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4426839"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4466260"
 ---
 # <a name="access-keys"></a>Teclas de acceso
 
@@ -364,7 +364,7 @@ Si especificas la propiedad AccessKey en un control UIElement o TextElement, pue
 * [Interacciones de teclado](keyboard-interactions.md)
 * [Aceleradores de teclado](keyboard-accelerators.md)
 
-**Muestras**
+**Ejemplos**
 * [Galería de controles XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 

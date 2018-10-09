@@ -8,14 +8,14 @@ ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cdfc2beabb640764f85a5ee9f1b24e390b2f87a
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: dff7b641cad99407ce22e7a4d4b58c10e0ae94d1
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664075"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4470005"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar la aplicación predeterminada para un URI
 
@@ -45,6 +45,7 @@ En este tema se describen los siguientes esquemas de URI integrados en Windows:
 |[ms-store:](#store-app-uri-scheme)  | Aplicación de la Tienda |
 |[ms-tonepicker:](#tone-picker-uri-scheme) | Selector de tono |
 |[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | Aplicación de números cercanos |
+|[msnweather:](#weather-app-uri-scheme) | Aplicación de información meteorológica |
 
 <br>
 Por ejemplo, el siguiente URI abre el explorador predeterminado y muestra el sitio web de Bing.
@@ -240,3 +241,11 @@ Usa el esquema de URI **ms-windows-store:** para [iniciar la aplicación para UW
 `ms-windows-store://home/`
 
 Para obtener más información, consulta [Iniciar la aplicación para UWP](launch-store-app.md).
+
+### <a name="weather-app-uri-scheme"></a>Esquema de URI de aplicación de información meteorológica
+
+Usa el **msnweather:** esquema de URI para iniciar la aplicación de información meteorológica.
+
+| Esquema de URI | Resultados |
+|------------|---------|
+| msnweather://Forecast?la= \[latitude\] & lo = \ [longitude\] | Inicia la aplicación de información meteorológica en la página de previsión en función de un coordenadas de ubicación geográfica.<br>`latitude` hace referencia a la latitud de la ubicación.<br> `longitude` hace referencia a la longitud de la ubicación.<br> |

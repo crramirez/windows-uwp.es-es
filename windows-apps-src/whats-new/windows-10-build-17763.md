@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f2d29d94759a4b8fd273c8fdc0cdf5c93311de
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4418141"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4467087"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Novedades de Windows 10 para los desarrolladores, compilación 17763
 
@@ -121,7 +121,7 @@ En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Mic
 
 * [Chris Heilmann en la herramienta webhint](https://www.youtube.com/playlist?list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 ### <a name="customer-orders-database"></a>Base de datos de pedidos de clientes
 

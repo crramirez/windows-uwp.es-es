@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 322bc056411095019dfc027078cbfef7de0883fb
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4423759"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4468674"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novedades de los documentos de Windows de mayo de 2018
 
@@ -132,7 +132,7 @@ C++ / WinRT es una nueva forma de creación y consumo de Windows Runtime APIs. T
 
 Windows ahora te permite ejecutar varias instancias de la aplicación para UWP, con cada en su propio proceso independiente. [Ve el vídeo](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) para obtener información sobre cómo crear una nueva aplicación que admite esta característica, a continuación, [lee a los documentos de desarrollador](../launch-resume/multi-instance-uwp.md) para obtener más información sobre cómo y por qué usar esta característica.
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 ### <a name="customer-database-tutorial"></a>Tutorial de base de datos de cliente
 

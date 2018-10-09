@@ -9,17 +9,17 @@ ms.date: 09/10/18
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: windows10, uwp
 pm-contact: sewen
 design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aeb400da4b3abe61e086732eaceb0e53fd1b005
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4425555"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4466682"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto con la vista de escritura a mano
 

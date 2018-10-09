@@ -8,16 +8,16 @@ ms.date: 02/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: windows10, uwp
 pm-contact: chigy
 design-contact: balrayit
 ms.localizationpriority: medium
 ms.openlocfilehash: a1433b131b994ee2b1323909bc7c195e00f43cde
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4419427"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4470018"
 ---
 # <a name="z-depth-and-shadow"></a>Profundidad Z y sombra
 
@@ -171,7 +171,7 @@ DropShadow no es automáticamente con capacidad de respuesta a su entorno y no u
 | **Min SDK** | RS5 | 14393 |
 | **Capacidad de adaptación** | Sí | No |
 | **Personalización** | No | Sí |
-| **Fuente de luz** | Automática (global de manera predeterminada, pero se puede reemplazar por aplicación) | Ninguna |
+| **Fuente de luz** | Automática (global de manera predeterminada, pero se puede reemplazar por aplicación) | Ninguno |
 | **Se admiten en entornos 3D** | Sí | No |
 
 - Por lo general, te recomendamos que uses ThemeShadow, que se adapta automáticamente a su entorno.

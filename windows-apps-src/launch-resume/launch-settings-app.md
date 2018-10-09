@@ -8,14 +8,14 @@ ms.date: 03/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 03ec6cf478097a6cd00af85d52112555650db35f
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 22727f8d09b3d68970301677cdf632a0981c616a
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817150"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4468754"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar la aplicación de configuración de Windows
 
@@ -70,12 +70,13 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 
 |Página Configuración| URI |
 |-------------|-----|
-|Acceder a la red del trabajo o centro docente | ms-settings:workplace |
-|Cuentas de correo electrónico y aplicaciones  | ms-settings:emailandaccounts |
-|Familia y otras personas | ms-settings:otherusers |
-|Opciones de inicio de sesión | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
-|Sincronizar la configuración | ms-settings:sync |
-|Tu información | ms-settings:yourinfo |
+| Acceder a la red del trabajo o centro docente | ms-settings:workplace |
+| Cuentas de correo electrónico y aplicaciones  | ms-settings:emailandaccounts |
+| Familia y otras personas | ms-settings:otherusers |
+| Opciones de inicio de sesión | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
+| Sincronizar la configuración | ms-settings:sync |
+| Configurar Windows Hello | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
+| Tu información | ms-settings:yourinfo |
 
 ## <a name="apps"></a>Aplicaciones
 
@@ -86,16 +87,21 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Aplicaciones para sitios web | ms-settings:appsforwebsites |
 | Aplicaciones predeterminadas | ms-settings:defaultapps |
 | Administrar características opcionales | ms-settings:optionalfeatures |
+| Mapas sin conexión | ms-settings:maps |
 | Aplicaciones de inicio | ms-settings:startupapps |
+| Reproducción de vídeo | ms-settings:videoplayback |
 
 ## <a name="cortana"></a>Cortana
 
 |Página Configuración| URI |
 |-------------|-----|
-| Permisos e historial de Cortana | ms-settings:cortana-permissions |
+| Permisos e historial | ms-settings:cortana-permissions |
 | Más detalles | ms-settings:cortana-moredetails |
-| Notificaciones | ms-settings:cortana-notifications |
+| Cortana en todos los dispositivos | ms-settings:cortana-notifications |
 | Hablar con Cortana | ms-settings:cortana-language |
+
+> [!NOTE] 
+> En esta sección de configuración en el escritorio se llamará búsqueda cuando el equipo se establece en las regiones donde Cortana no está disponible actualmente o se ha deshabilitado Cortana. En este caso no se mostrarán las páginas específicas de Cortana (Cortana a través de Mis dispositivos) y hablar con Cortana. 
 
 ## <a name="devices"></a>Dispositivos
 
@@ -158,7 +164,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Página principal de configuración | ms-settings: |
 
 
-## <a name="network-wireless--internet"></a>Red, conexión inalámbrica e Internet
+## <a name="network--internet"></a>Redes e Internet
 
 |Página Configuración| URI |
 |-------------|-----|
@@ -189,9 +195,14 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Barra de navegación | ms-settings:personalization-navbar |
 | Personalización (categoría) | ms-settings:personalization |
 | Inicio | ms-settings:personalization-start |
-| Sonidos | ms-settings:sounds |
 | Barra de tareas | ms-settings:taskbar |
 | Temas | ms-settings:themes |
+
+## <a name="phone"></a>Phone
+
+|Página Configuración| URI |
+|-------------|-----|
+| Tu teléfono | ms-settings:mobile-devices  |
 
 ## <a name="privacy"></a>Privacidad
 
@@ -257,7 +268,6 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Mensajes | ms-settings:messaging |
 | Multitarea | ms-settings:multitasking |
 | Ajustes de luz nocturna | ms-settings:nightlight |
-| Mapas sin conexión | ms-settings:maps |
 | Teléfono | ms-settings:phone-defaultapps |
 | Proyección en este PC | ms-settings:project |
 | Experiencias compartidas | ms-settings:crossdevice |
@@ -267,9 +277,9 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Escritorio remoto | ms-settings:remotedesktop |
 | Teléfono | ms-settings:phone |
 | Inicio/apagado y suspensión | ms-settings:powersleep |
+| Sonidos | ms-settings:sounds |
 | Almacenamiento | ms-settings:storagesense |
 | Sensor de almacenamiento | ms-settings:storagepolicies |
-| Reproducción de vídeo | ms-settings:videoplayback |
 
 ## <a name="time-and-language"></a>Hora e idioma
 
@@ -290,21 +300,15 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Copia de seguridad | ms-settings:backup |
 | Optimización de distribución | ms-settings:delivery-optimization |
 | Encuentra mi dispositivo | ms-settings:findmydevice |
+| Para desarrolladores | ms-settings:developers |
 | Recuperación | ms-settings:recovery |
 | Solución de problemas | ms-settings:troubleshoot |
-| Windows Defender | ms-settings:windowsdefender |
-| Configurar Windows Hello | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
+| Seguridad de Windows | ms-settings:windowsdefender |
 | ProgramaWindowsInsider | ms-settings:windowsinsider (solo está disponible si el usuario se inscribe en WIP) |
 | Windows Update | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Windows Update: opciones avanzadas | ms-settings:windowsupdate-options |
 | Windows Update: opciones de reinicio | ms-settings:windowsupdate-restartoptions |
 | Windows Update: ver el historial de actualizaciones | ms-settings:windowsupdate-history |
-
-## <a name="developers"></a>Desarrolladores
-
-|Página Configuración| URI |
-|-------------|-----|
-| Para desarrolladores | ms-settings:developers |
 
 ## <a name="user--accounts"></a>Cuentas de usuario
 

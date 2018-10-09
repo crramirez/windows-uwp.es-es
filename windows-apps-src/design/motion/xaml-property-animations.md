@@ -7,16 +7,16 @@ ms.date: 09/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: windows10, uwp
 pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.openlocfilehash: a03ffc8d5ea78ee6cbdf78feaae7ba1cd1448f37
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4421914"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4466425"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>Animación de elementos XAML con las animaciones de composición
 
