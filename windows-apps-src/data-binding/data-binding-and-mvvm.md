@@ -8,14 +8,14 @@ ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eda370db8b68232066052cca3d0abfa6e3876167
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4431224"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4472634"
 ---
 # <a name="data-binding-and-mvvm"></a>Enlace de datos y MVVM
 
@@ -60,7 +60,7 @@ Para obtener instrucciones adicionales sobre el uso de MVVM básica, de cuadro, 
 [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)  
 [Extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)  
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
 [Muestra de base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database)  
 [Muestra de inventario de VanArsdel](https://github.com/Microsoft/InventorySample)  
