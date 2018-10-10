@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f41d25fd6757e5d3f80d00de341168de4f34e946
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4460986"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501353"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novedades de los documentos de Windows de julio de 2018
 
@@ -95,7 +95,7 @@ Larry Osterman:
 * [¿Por qué no te permiten que los desarrolladores cambiar el dispositivo de audio predeterminado?](https://www.youtube.com/watch?v=6aNUoVfbnmg&feature=youtu.be)
 * [¿Por qué tantas asincrónica de las funciones UWP?](https://www.youtube.com/watch?v=5M724QIy1Mk&feature=youtu.be)
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 ### <a name="photo-editor-cwinrt"></a>Photo Editor C++ / WinRT
 
