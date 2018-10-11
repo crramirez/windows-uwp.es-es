@@ -1,21 +1,21 @@
 ---
-author: mithom
+author: eliotcowley
 title: Controlador de navegación de la interfaz de usuario
 description: Usa las API de controlador de navegación de la interfaz de usuario Windows.Gaming.Input para detectar y leer los distintos tipos de dispositivos de entrada destinados a la navegación de la interfaz de usuario.
 ms.assetid: 5A14926D-8C2E-4DE8-AAFB-BEEB9BFE91A5
-ms.author: wdg-dev-content
+ms.author: elcowle
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, interfaz de usuario, navegación
 ms.localizationpriority: medium
-ms.openlocfilehash: cae9d515ba5925ce81c90dfe5eb3785491128010
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 4f95094ebf31c4b80ee8858ad849da33ff16434a
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656140"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4535089"
 ---
 # <a name="ui-navigation-controller"></a>Controlador de navegación de la interfaz de usuario
 
@@ -215,7 +215,7 @@ A veces, tal vez quieras determinar si se libera un botón que está presionado 
 
 ## <a name="run-the-ui-navigation-controller-sample"></a>Ejecutar la muestra de controlador de navegación de la interfaz de usuario
 
-La [muestra InputInterfacingUWP _(GitHub)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP) evidencia cómo los distintos dispositivos de entrada se comportan como controladores de navegación de la interfaz de usuario.
+La [muestra InputInterfacingUWP _(GitHub)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/InputInterfacingUWP) evidencia cómo los distintos dispositivos de entrada se comportan como controladores de navegación de la interfaz de usuario.
 
 ## <a name="see-also"></a>Consulta también
 [Windows.Gaming.Input.Gamepad][]
