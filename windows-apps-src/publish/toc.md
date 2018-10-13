@@ -74,7 +74,7 @@
 ## [Usar ofertas dirigidas](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)
 # [Analizar el rendimiento de las aplicaciones](../publish/analytics.md)
 ## [Informe de adquisiciones](../publish/acquisitions-report.md)
-## [Informe Adquisiciones de complementos](../publish/add-on-acquisitions-report.md)
+## [Informe de adquisiciones de complementos](../publish/add-on-acquisitions-report.md)
 ## [Informe de uso](../publish/usage-report.md)
 ## [Informe Mantenimiento](../publish/health-report.md)
 ## [Informe de clasificaciones](../publish/ratings-report.md)
