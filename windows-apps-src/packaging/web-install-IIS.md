@@ -1,24 +1,24 @@
 ---
 author: laurenhughes
 title: Instalar una aplicación para UWP desde un servidor IIS
-description: En este tutorial se muestra cómo configurar un servidor IIS, comprueba que la aplicación web puede hospedar paquetes de aplicación, invocar y utilizar al instalador de aplicación de forma eficaz.
+description: Este tutorial muestra cómo configurar un servidor IIS, comprueba que la aplicación web puede hospedar paquetes de aplicación e invocar y utilizar al instalador de aplicación de forma eficaz.
 ms.author: cdon
 ms.date: 05/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, relacionados con los paquetes establecidos, opcionales, servidor IIS
+keywords: Windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, relacionados con los paquetes opcionales, Establece, servidor IIS
 ms.localizationpriority: medium
 ms.openlocfilehash: 214ddd2b55bca1acecbab0a841cf2048335e7b3a
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569401"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610503"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Instalar una aplicación para UWP desde un servidor IIS
 
-En este tutorial se muestra cómo configurar un servidor IIS, comprueba que la aplicación web puede hospedar paquetes de aplicación, invocar y utilizar al instalador de aplicación de forma eficaz.
+Este tutorial muestra cómo configurar un servidor IIS, comprueba que la aplicación web puede hospedar paquetes de aplicación e invocar y utilizar al instalador de aplicación de forma eficaz.
 
 La aplicación del Instalador de aplicación permite a los desarrolladores y profesionales de TI distribuir aplicaciones de Windows 10 hospedándolas en su propia red de entrega de contenido (CDN). Estos es útil para empresas que no desean o necesitan publicar sus aplicaciones en Microsoft Store, pero quieres sacar provecho de la plataforma de implementación y el paquete de Windows 10. 
 
@@ -41,7 +41,7 @@ Buscar y seleccionar **Internet Information Services** para instalar IIS.
 > [!NOTE]
 > No es necesario seleccionar todas las casillas de verificación en Internet Information Services. Solo los que hayas seleccionados al comprobar **Internet Information Services** son suficientes.
 
-También debes instalar ASP.NET 4.5 o superior. Para instalarla, busque **Internet Information Services -> World Wide Web Services -> características de desarrollo de aplicaciones**. Selecciona una versión de ASP.NET que sea mayor o igual a ASP.NET 4.5.
+También debes instalar ASP.NET 4.5 o superior. Para instalarla, busque **Internet Information Services -> World Wide Web Services -> características de desarrollo de aplicaciones**. Selecciona una versión de ASP.NET que es mayor o igual a ASP.NET 4.5.
 
 ![Instalar ASP.NET](images/install-asp.png)
 
@@ -63,15 +63,15 @@ Inicia Visual Studio 2017 como **Administrador** y crea un nuevo proyecto de **A
 
 Desde el Explorador de soluciones, haz clic en el proyecto raíz y selecciona **Propiedades**.
 
-En las propiedades de aplicación web, selecciona la pestaña de la **Web** . En la sección de **servidores** , elige **IIS Local** en el menú desplegable y haz clic en **Crear directorio Virtual**. 
+En las propiedades de la aplicación web, selecciona la pestaña de la **Web** . En la sección de **servidores** , elija **IIS Local** en el menú desplegable y haz clic en **Crear directorio Virtual**. 
 
-![pestaña de la Web](images/web-tab.png)
+![pestaña Web](images/web-tab.png)
 
 ## <a name="step-5---add-an-app-package-to-a-web-application"></a>Paso 5: agregar un paquete de la aplicación a una aplicación web 
 
-Agregar el paquete de la aplicación que se va a distribuir en la aplicación web. Puedes usar el paquete de la aplicación que forma parte de los [paquetes de proyecto de inicio](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) de proporcionado en GitHub si no tienes un paquete de aplicación disponible. El certificado (MySampleApp.cer) con el que se firmó el paquete también está con la muestra en GitHub. Debe tener el certificado instalado en el dispositivo antes de instalar la aplicación (paso 9).
+Agregar el paquete de la aplicación que vas a distribuir en la aplicación web. Puedes usar el paquete de la aplicación que forma parte de los [paquetes de proyecto de inicio](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) de proporcionado en GitHub si no tienes un paquete de aplicación disponible. El certificado (MySampleApp.cer) con el que se firmó el paquete también está con la muestra en GitHub. Debe tener el certificado instalado en el dispositivo antes de instalar la aplicación (paso 9).
 
-En la aplicación web del proyecto de inicio, se agregó una nueva carpeta a la aplicación web denominada `packages` que contiene los paquetes de aplicaciones a distribuirse. Para crear la carpeta en Visual Studio, haz clic con el botón derecho en la raíz del explorador de soluciones, selecciona **Agregar** -> **Nueva carpeta** y asígnale `packages`. Para agregar paquetes de la aplicación a la carpeta, haz clic en el `packages` carpeta y selecciona **Agregar** -> ubicación del paquete de**Elemento existente** y examinar a la aplicación. 
+En la aplicación web del proyecto de inicio, se agregó una nueva carpeta a la aplicación web denominada `packages` que contiene los paquetes de aplicaciones a distribuirse. Para crear la carpeta en Visual Studio, haz clic con el botón derecho en la raíz del explorador de soluciones, selecciona **Agregar** -> **Nueva carpeta** y asígnale `packages`. Para agregar paquetes de la aplicación a la carpeta, haz clic en el `packages` carpeta y selecciona **Agregar** -> ubicación del paquete de**Elemento existente** y busca la aplicación. 
 
 ![Agregar paquete](images/add-package.png)
 
@@ -81,14 +81,14 @@ Esta aplicación web de muestra usa HTML sencillo. Eres libre para crear la apli
 
 Haz clic en el proyecto de la raíz del explorador de soluciones, selecciona **Agregar** -> **Nuevo elemento**, y agrega una nueva **Página HTML** de la sección de la **Web** .
 
-Una vez que se crea la página HTML, haz clic con el botón derecho en la página HTML en el Explorador de soluciones y selecciona **Establecer como página de inicio**.  
+Una vez que se crea la página HTML, haz clic con el botón derecho en la página HTML en el Explorador de soluciones y seleccione **Establecer como página de inicio**.  
 
 Haz doble clic en el archivo HTML para abrirlo en la ventana del editor de código. En este tutorial, se usará solo los elementos de los campos en la página web para invocar la aplicación de instalador de aplicación correctamente para instalar una aplicación de Windows 10. 
 
-Incluir el siguiente código HTML en la página web. La clave para invocar correctamente el instalador de aplicación es usar el esquema personalizado que registra el instalador de aplicación con el sistema operativo: `ms-appinstaller:?source=`. Consulta el ejemplo de código siguiente para obtener más detalles.
+Incluir el siguiente código HTML en la página web. La clave para invocar correctamente el instalador de aplicación es usar el esquema personalizado que registra el instalador de aplicación con el sistema operativo: `ms-appinstaller:?source=`. Vea el ejemplo de código siguiente para obtener más detalles.
 
 > [!NOTE]
-> Asegúrate de que la ruta de acceso de dirección URL especificada después de que el esquema personalizado coincide con la dirección Url de proyecto en la pestaña de la web de la solución de VS.
+> Asegúrate de que la ruta de acceso de dirección URL especificada después de que el esquema personalizado coincide con la dirección Url de proyecto en la pestaña web de la solución de VS.
  
 ```HTML
 <html>
@@ -119,9 +119,9 @@ Abre el archivo **Web.config** desde el Explorador de soluciones y agrega las si
 </system.webServer>
 ```
 
-## <a name="step-8---add-loopback-exemption-for-app-installer"></a>Paso 8: agregar la exención de bucle invertido de instalador de aplicación
+## <a name="step-8---add-loopback-exemption-for-app-installer"></a>Paso 8: agregar exención de bucle invertido de instalador de aplicación
 
-Debido al aislamiento de red, aplicaciones para UWP como instalador de aplicación están restringidas a usar direcciones de bucle invertido IP como http://localhost/. Al usar el servidor IIS local, el instalador de aplicación debe agregarse a la lista de exenciones de bucle invertido. 
+Debido al aislamiento de red, aplicaciones para UWP como instalador de aplicación están restringidas a usar direcciones de bucle invertido IP como http://localhost/. Al usar el servidor IIS local, el instalador de aplicación debe agregarse a la lista de exención de bucle invertido. 
 
 Para ello, abre el **símbolo del sistema** como **Administrador** y escribe lo siguiente: ''' línea de comandos CheckNetIsolation.exe LoopbackExempt - a-n=microsoft.desktopappinstaller_8wekyb3d8bbwe
 ```

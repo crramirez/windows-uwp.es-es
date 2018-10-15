@@ -11,11 +11,11 @@ keywords: Windows 10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: d38465ce02e0aedf854094ede75fc33701b226a6
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572182"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613938"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Crear un juego para UWP en MonoGame 2D
 
@@ -30,7 +30,7 @@ MonoGame es un marco de desarrollo de juegos ligero. En este tutorial se te ense
 
 ## <a name="prerequisites"></a>Requisitos previos
 +   Windows 10 y Microsoft Visual Studio 2017.  [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ El marco de trabajo de desarrollo de escritorio de .NET. Si aún no tienes instalado, obtener, vuelve a ejecutar al instalador de Visual Studio y modificar la instalación de Visual Studio 2017.
++ El marco de trabajo de desarrollo de escritorio. NET. Si aún no tienes instalado, puedes obtener volver a ejecutar el programa de instalación de Visual Studio y modificando la instalación de Visual Studio 2017.
 +   Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. [Haz clic aquí para obtener información acerca de cómo empezar a trabajar con C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   Familiaridad con conceptos informáticos básicos, como clases, métodos y variables, es una ventaja.
 
@@ -696,4 +696,4 @@ Debes usar la [lista de comprobación de envío de aplicación](https://docs.mic
 
 La aplicación debe enviarse para su [certificación](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process).
 
-Para obtener más información, consulta la [publicación de tu aplicación para UWP](https://developer.microsoft.com/en-us/store/publish-apps).
+Para obtener más información, consulte la [publicación de tu aplicación para UWP](https://developer.microsoft.com/en-us/store/publish-apps).

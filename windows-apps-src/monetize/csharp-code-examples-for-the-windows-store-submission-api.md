@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
 description: Usa los ejemplos de código de C# de esta sección para obtener más información sobre cómo usar la API de envío de Microsoft Store.
 title: 'Muestra de C#: envíos de aplicaciones, complementos y pilotos'
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 96040a01b62693d45aec703c332577a3b6bb8eef
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: f5e508bd89c06841009576a0a69cb960a20faa83
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654584"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612542"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>Muestra de C\#: envíos de aplicaciones, complementos y pilotos
 
@@ -122,7 +122,7 @@ En el ejemplo siguiente se implementa una clase que usa varios métodos en la AP
 
 La clase ```IngestionClient``` proporciona métodos auxiliares que otros métodos usan en la aplicación de muestra para realizar las siguientes tareas:
 
-* [Obtener un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) que puede usarse para llamar a métodos en la API de envío de Microsoft Store. Después de obtener un token, tienes 60 minutos para utilizar este token en llamadas a la API de envío de Microsoft Store antes de que el token expire. Después de que el token expire, puedes generar un nuevo token.
+* [Obtener un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) que puede usarse para llamar a métodos en la API de envío de Microsoft Store. Después de obtener un token, tienes 60 minutos para utilizar este token en llamadas a la API de envío de Microsoft Store antes de que el token expire. Después de que el token expire, puedes generar uno nuevo.
 * Carga un archivo ZIP que contenga los nuevos recursos para el envío de una aplicación o complemento a Azure Blob Storage. Para obtener más información sobre cómo cargar un archivo ZIP en Azure Blob Storage para el envío de aplicaciones y complementos, consulta las instrucciones correspondientes en [Crear un envío de aplicación](manage-app-submissions.md#create-an-app-submission) y [Creación de un envío de complemento](manage-add-on-submissions.md#create-an-add-on-submission).
 * Procesa las solicitudes HTTP para la API de envío de Microsoft Store.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572137"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615642"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Ampliar tu aplicación de escritorio con componentes de UWP modernos
 
@@ -24,7 +24,7 @@ Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usua
 En muchos casos, puedes llamar a las API de UWP directamente desde la aplicación de escritorio, por lo que, antes de revisar esta guía, consulta [Mejorar para Windows 10](desktop-to-uwp-enhance.md).
 
 >[!NOTE]
->Esta guía se da por hecho que has creado un paquete de la aplicación de Windows para la aplicación de escritorio. Si aún no has hecho esto, consulta [las aplicaciones de escritorio de paquete](desktop-to-uwp-root.md).
+>Esta guía se da por hecho que has creado un paquete de la aplicación de Windows para la aplicación de escritorio. Si aún no has hecho esto, vea [empaquetar aplicaciones de escritorio](desktop-to-uwp-root.md).
 
 Si estás listo, comencemos.
 
@@ -85,7 +85,7 @@ Esta imagen muestra una aplicación de Windows Forms que abre una interfaz de us
 ![diseño adaptativo](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->Este ejemplo muestra una UI de XAML mediante la adición de un proyecto de UWP a la solución. Este es el enfoque admitido estable para que la muestra de interfaces de usuario de XAML en una aplicación de escritorio. La alternativa de este enfoque es para agregar controles de XAML de UWP directamente a la aplicación de escritorio mediante el uso de una isla de XAML. Islas de XAML están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurando y estabilizar en futuras versiones de Windows. Para obtener más información sobre cómo islas de XAML, consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>Este ejemplo muestra una UI de XAML agregando un proyecto de UWP a la solución. Que es el enfoque admitido estable mostrar interfaces de usuario de XAML en una aplicación de escritorio. La alternativa de este enfoque es para agregar controles de XAML de UWP directamente a la aplicación de escritorio mediante el uso de una isla de XAML. Islas de XAML están actualmente disponibles como una vista previa de desarrollador. Aunque te animamos a probarlas en su propio código prototipo ahora, no recomendamos que uses ellos en el código de producción en este momento. Estas API y los controles seguirán madurez y estabilizar en futuras versiones de Windows. Para obtener más información sobre cómo islas de XAML, consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>El modelo de diseño
 
@@ -143,7 +143,7 @@ Agregar una interfaz de usuario de XAML a tu proyecto de UWP Este es el XAML par
 
 ### <a name="add-a-protocol-extension"></a>Agregar una extensión de protocolo
 
-En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución y agrega esta extensión.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución y agrega esta extensión.
 
 ```xml
 <Extensions>
@@ -314,7 +314,7 @@ public sealed class AppServiceTask : IBackgroundTask
 
 <a id="extension" />
 
-### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Agregar una extensión de servicio de aplicaciones para el proyecto de empaquetado
+### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Agregar una extensión de servicio de aplicaciones al proyecto de empaquetado
 
 Abre el archivo **package.appxmanifest** del proyecto de empaquetado y agrega una extensión de servicio de aplicaciones para la ``<Application>`` elemento.
 
@@ -379,7 +379,7 @@ Obtén más información sobre los servicios de aplicaciones aquí: [Crear y usa
 
 Puedes hacer la aplicación de escritorio sea un destino de recursos compartidos para que los usuarios puedan compartir con facilidad datos, como imágenes de otras aplicaciones que admiten el uso compartido.
 
-Por ejemplo, los usuarios podrían elegir tu aplicación para compartir imágenes desde Microsoft Edge, la aplicación fotos. Esta es una aplicación de muestra WPF que tiene esa funcionalidad.
+Por ejemplo, los usuarios podrían elegir tu aplicación para compartir imágenes desde Microsoft Edge, la aplicación de fotos. Esta es una aplicación de muestra WPF que tiene esa funcionalidad.
 
 ![destino de uso compartido](images/desktop-to-uwp/share-target.png)
 
@@ -401,7 +401,7 @@ Para que la aplicación sea un destino de recursos compartidos, deberás hacer l
 
 ### <a name="add-a-share-target-extension"></a>Agregar una extensión de destino de recursos compartidos
 
-En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución y agrega la extensión.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución y agrega la extensión.
 
 ```xml
 <Extensions>
@@ -515,7 +515,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ### <a name="configure-the-background-task"></a>Configurar la tarea en segundo plano
 
-En el Diseñador de manifiestos, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución.
+En el Diseñador de manifiestos, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución.
 
 En la pestaña **Declaraciones**, agrega una declaración de **Tareas en segundo plano**.
 

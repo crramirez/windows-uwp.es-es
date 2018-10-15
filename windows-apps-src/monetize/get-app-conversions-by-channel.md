@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Usa este método en la API de análisis de Microsoft Store para obtener conversiones agregadas por datos de canal de una aplicación durante un intervalo de fechas concreto y según otros filtros opcionales.
 title: Obtener conversiones de aplicaciones por canal
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, servicios de Microsoft Store, API de análisis de Microsoft Store, conversiones de complementos, canal
 ms.localizationpriority: medium
-ms.openlocfilehash: bc0253c7857c46d6a796da545e93d30805fcda2b
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 720b4a20d6fa46df0118cecb0c65dcef533e1659
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663715"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611559"
 ---
 # <a name="get-app-conversions-by-channel"></a>Obtener conversiones de aplicaciones por canal
 
@@ -62,7 +62,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | filter | string  | Una o más instrucciones que filtran el cuerpo de respuesta. Cada instrucción puede utilizar los operadores **eq** o **ne**, y las instrucciones se pueden combinar mediante **and** u **or**. Puedes especificar las siguientes cadenas en las instrucciones de filtro. Para obtener descripciones, consulta la sección de [valores de conversión](#conversion-values) de este artículo. <ul><li><strong>applicationName</strong></li><li><strong>appType</strong></li><li><strong>customCampaignId</strong></li><li><strong>referrerUriDomain</strong></li><li><strong>channelType</strong></li><li><strong>storeClient</strong></li><li><strong>deviceType</strong></li><li><strong>market</strong></li></ul><p>Este es un parámetro *filter* de ejemplo: <em>filter=deviceType eq 'PC'</em>.</p> | No   |
 | aggregationLevel | cadena | Especifica el intervalo de tiempo necesario para recuperar los datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>. | No |
 | orderby | string | Instrucción que ordena los valores de datos resultantes de cada conversión. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>date</strong></li><li><strong>applicationName</strong></li><li><strong>appType</strong></li><li><strong>customCampaignId</strong></li><li><strong>referrerUriDomain</strong></li><li><strong>channelType</strong></li><li><strong>storeClient</strong></li><li><strong>deviceType</strong></li><li><strong>market</strong></li></ul><p>El parámetro <em>order</em> es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
-| groupby | cadena | Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<ul><li><strong>fecha</strong></li><li><strong>applicationName</strong></li><li><strong>appType</strong></li><li><strong>customCampaignId</strong></li><li><strong>referrerUriDomain</strong></li><li><strong>channelType</strong></li><li><strong>storeClient</strong></li><li><strong>deviceType</strong></li><li><strong>market</strong></li></ul><p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>fecha</strong></li><li><strong>applicationId</strong></li><li><strong>conversionCount</strong></li><li><strong>clickCount</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con el parámetro <em>aggregationLevel</em>. Por ejemplo: <em>groupby=ageGroup,market&amp;aggregationLevel=week</em></p> |  No  |
+| groupby | cadena | Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<ul><li><strong>date</strong></li><li><strong>applicationName</strong></li><li><strong>appType</strong></li><li><strong>customCampaignId</strong></li><li><strong>referrerUriDomain</strong></li><li><strong>channelType</strong></li><li><strong>storeClient</strong></li><li><strong>deviceType</strong></li><li><strong>market</strong></li></ul><p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>date</strong></li><li><strong>applicationId</strong></li><li><strong>conversionCount</strong></li><li><strong>clickCount</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con el parámetro <em>aggregationLevel</em>. Por ejemplo: <em>groupby=ageGroup,market&amp;aggregationLevel=week</em></p> |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -95,13 +95,13 @@ Los objetos de la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| fecha                | string | La primera fecha del intervalo de fechas de los datos de conversión. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| date                | string | La primera fecha del intervalo de fechas de los datos de conversión. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | applicationId       | string | El [Id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación sobre la que estás recuperando los datos de conversión.     |
 | applicationName     | string | El nombre para mostrar de la aplicación para la que quieres recuperar datos de conversión.        |
 | appType          | string |  Tipo de producto para el que recuperas los datos de conversión. Para este método, el único valor admitido es **Aplicación**.            |
 | customCampaignId           | string |  La cadena de identificador para una [campaña de promoción de la aplicación personalizada](../publish/create-a-custom-app-promotion-campaign.md) que está asociada a la aplicación.   |
 | referrerUriDomain           | string |  Especifica el dominio donde se activó la descripción de la aplicación con el identificador de la campaña de promoción de la aplicación personalizada.   |
-| channelType           | string |  Una de las siguientes cadenas que especifica el canal para la conversión:<ul><li><strong>CustomCampaignId</strong></li><li><strong>Tráfico de la tienda</strong></li><li><strong>Otros</strong></li></ul>    |
+| channelType           | string |  Una de las siguientes cadenas que especifica el canal para la conversión:<ul><li><strong>CustomCampaignId</strong></li><li><strong>Tráfico de la Store</strong></li><li><strong>Otros</strong></li></ul>    |
 | storeClient         | string | Versión de la Store donde se realizó la conversión. Actualmente, el único valor admitido es **SFC**.    |
 | deviceType          | string | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul>            |
 | market              | string | Código de país ISO 3166 del mercado donde se realizó la conversión.    |
@@ -138,6 +138,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Informe de adquisiciones](../publish/acquisitions-report.md)
+* [Informe Adquisiciones](../publish/acquisitions-report.md)
 * [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
-* [Obtener adquisiciones de la aplicación](get-app-acquisitions.md)
+* [Obtener adquisiciones de aplicaciones](get-app-acquisitions.md)

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: Usa este método en la API de envío de Microsoft Store para actualizar un envío de aplicación ya existente.
 title: Actualizar un envío de aplicación
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submission, envío de aplicación, update, actualizar
 ms.localizationpriority: medium
-ms.openlocfilehash: ad7830b1d05d386616d4368f59f266cdeafa2e01
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 5f6797c288f3ee85daba9f90f81a3d1d8aa15562
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816450"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615586"
 ---
 # <a name="update-an-app-submission"></a>Actualizar un envío de aplicación
 
@@ -305,7 +305,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener un envío de aplicación](get-an-app-submission.md)
-* [Create an app submission (Crear un envío de aplicación)](create-an-app-submission.md)
+* [Crear un envío de aplicación](create-an-app-submission.md)
 * [Commit an app submission (Confirmar el envío de aplicación)](commit-an-app-submission.md)
 * [Delete an app submission (Eliminar un envío de aplicación)](delete-an-app-submission.md)
 * [Get the status of an app submission (Obtener el estado de un envío de aplicación)](get-status-for-an-app-submission.md)

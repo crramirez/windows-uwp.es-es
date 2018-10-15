@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b04033fb53a90015427feb820c91d0f4a1de7d5
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575114"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612964"
 ---
 # <a name="view-app-identity-details"></a>Ver detalles de identidad de las aplicaciones
 
 
-Puedes ver detalles relacionados con la identidad única que se asigna a la aplicación Microsoft Store en sus páginas de **identidad de la aplicación** . También puedes obtener un vínculo a la tienda de la aplicación de la descripción de esta página.
+Puedes ver los detalles relacionados con la identidad única que se asigna a la aplicación Microsoft Store en sus páginas de **identidad de la aplicación** . También puedes obtener un vínculo a la tienda de la aplicación de la descripción de esta página.
 
 Para encontrar esta información, ve a una de las aplicaciones y expande **Administración de aplicaciones** en el menú de navegación izquierdo. Selecciona **Identidad de aplicación** para ver los detalles.
 
 
 ## <a name="values-to-include-in-your-app-package-manifest"></a>Valores que se deben incluir en el manifiesto del paquete de la aplicación
 
-Los valores siguientes se deben incluir en el manifiesto del paquete. Si [usas Microsoft Visual Studio para compilar los paquetes](../packaging/packaging-uwp-apps.md) y has iniciado sesión con la misma cuenta de Microsoft asociada a tu cuenta de desarrollador, los detalles se incluyen automáticamente. Si vas a compilar el paquete manualmente, debes agregar estos elementos:
+Los siguientes valores deben incluirse en el manifiesto del paquete. Si [usas Microsoft Visual Studio para compilar los paquetes](../packaging/packaging-uwp-apps.md) y has iniciado sesión con la misma cuenta de Microsoft asociada a tu cuenta de desarrollador, los detalles se incluyen automáticamente. Si vas a compilar el paquete manualmente, debes agregar estos elementos:
 
 -   **Paquete/identidad/nombre**
 -   **Paquete/identidad/publicador**

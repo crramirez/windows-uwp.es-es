@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
 description: El Windows SDK, el SDK de Microsoft Advertising, el Microsoft Store Services SDK y la Microsoft Store proporcionan muchas características que permiten ganar más dinero con las aplicaciones y conseguir clientes gracias a la interacción con los usuarios.
 title: Monetización, interacción y servicios de la Store
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 11/29/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, monetize, monetizar, engage, interactuar, promote, promover, Store services, servicios de la Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 02ef073e319af3fe2cf3bdd7906a7027200c4854
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: abd6c772ed84934a54c1755b5d55d398e34fbad9
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573736"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610493"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de la Store
 
@@ -36,7 +36,7 @@ Para obtener detalles sobre los aranceles de Microsoft Store y cómo recibir el 
 | [Registrar eventos personalizados para el Centro de desarrollo](log-custom-events-for-dev-center.md)  | Registra eventos personalizados de tu aplicación para UWP y examina los eventos en el [informe de uso](../publish/usage-report.md) del panel del Centro de desarrollo. Esta característica requiere Microsoft Store Services SDK. |
 | [Solicitar valoraciones y opiniones](request-ratings-and-reviews.md) |  Animar a los clientes a evaluar o revisar la aplicación mediante programación mostrando una interfaz de usuario de clasificación y revisión.  |
 | [Servicios de Microsoft Store](using-windows-store-services.md)    |  Obtén información sobre cómo usar las API de RESTful para automatizar envíos a la Store, obtener acceso a datos de análisis de las aplicaciones y automatizar otras tareas relacionadas con la Store.    |
-| [Agregar características de (RDX) de demostración comercial a la aplicación](retail-demo-experience.md)        |  Incluir un modo de demostración comercial en la aplicación de Windows, para que los clientes que probar equipos y dispositivos en la superficie de ventas pueden ir directamente.  |
+| [Agregar características de demostración (RDX) comercial a la aplicación](retail-demo-experience.md)        |  Incluir un modo de demostración comercial en la aplicación de Windows, para que los clientes que probar equipos y dispositivos en la superficie de ventas pueden ir directamente.  |
 
 ## <a name="related-topics"></a>Temas relacionados
 

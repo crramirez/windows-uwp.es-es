@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f801e9093676ec9fbf55c4ec4af7c5c444ed3ead
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4568037"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612345"
 ---
 # <a name="launch-an-app-with-a-uri"></a>Iniciar una aplicación con un URI
 
@@ -31,8 +31,8 @@ En esta sección describe cómo usar un identificador uniforme de recursos (URI)
 | [Iniciar la aplicación para UWP](launch-store-app.md) | En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación para UWP en páginas específicas en la Store. |
 | [Iniciar la aplicación Mapas de Windows](launch-maps-app.md) | Aprende a iniciar la aplicación Mapas de Windows desde la aplicación. |
 | [Iniciar la aplicación Contactos](launch-people-apps.md) | En este tema se describe el esquema de URI ms-people. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas. |
-| [Iniciar recortes de pantalla](launch-screen-snipping.md) | Obtén información sobre cómo usar los esquemas de URI para abrir un nuevo recorte, o para abrir la aplicación de recorte & boceto. |
-| [Permiten que las aplicaciones para sitios Web con los controladores URI de aplicación](web-to-app-linking.md) | Compatibilidad con las aplicaciones para sitios Web función para controlar la interacción del usuario con la aplicación. |
+| [Recortes de pantalla de inicio](launch-screen-snipping.md) | Obtén información sobre cómo usar los esquemas de URI para abrir un nuevo recorte, o para abrir la aplicación de recorte & boceto. |
+| [Permiten que las aplicaciones para sitios Web con los controladores de URI de aplicación](web-to-app-linking.md) | Compatibilidad con las aplicaciones para sitios Web función para controlar la interacción del usuario con la aplicación. |
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Iniciar una aplicación en un dispositivo remoto](launch-a-remote-app.md)

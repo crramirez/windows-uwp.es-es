@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: 4E4CB1E3-D213-4324-91E4-7D4A0EA19C53
-description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de uso de aplicación mensual para un intervalo de fechas dado y según otros filtros opcionales.
+description: Usa este método en la API de análisis de Microsoft Store para obtener datos de uso mensual de aplicación para un intervalo de fechas dado y según otros filtros opcionales.
 title: Obtener el uso mensual de la aplicación
 ms.author: mhopkins
 ms.date: 08/15/2018
@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: ad45422dea9b0c4335fa3cf67a594f819a60ca9c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574086"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611357"
 ---
 # <a name="get-monthly-app-usage"></a>Obtener el uso mensual de la aplicación
 
-Usa este método en la API de análisis de Microsoft Store para obtener los datos de uso agregados (sin incluir multijugador de Xbox) en formato JSON de una aplicación durante un intervalo de fechas (últimos 90 días solo) y otros filtros opcionales. Esta información también está disponible en el [informe de uso](../publish/usage-report.md) en el panel del centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de uso agregados (sin incluir multijugador de Xbox) en formato JSON de una aplicación durante un intervalo de fechas (últimos 90 días solo) y otros filtros opcionales. Esta información también está disponible en el [informe de uso](../publish/usage-report.md) en el panel del centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -60,7 +60,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-El siguiente ejemplo muestra una solicitud para obtener datos de uso de aplicación mensual. Sustituye el valor *applicationId* por el id. de la Store de la aplicación.
+El siguiente ejemplo muestra una solicitud para obtener datos de uso mensual de aplicación. Sustituye el valor *applicationId* por el id. de la Store de la aplicación.
 
 ```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/usagemonthly?applicationId=XXXXXXXXXXXX&startDate=2018-06-01&endDate=2018-07-01 HTTP/1.1  
@@ -86,18 +86,18 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | Valor                     | Tipo    | Descripción                                                                                 |
 |---------------------------|---------|---------------------------------------------------------------------------------------------|
 | date                      | string  | La primera fecha del intervalo de fechas de los datos de uso. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.                          |
-| applicationId             | string  | El identificador de la aplicación para la que quieres recuperar datos de uso de la tienda.                            |
+| applicationId             | string  | El identificador de la aplicación para la que estás recuperando los datos de uso de la tienda.                            |
 | applicationName           | cadena  | Nombre para mostrar de la aplicación.                                                                |
-| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usó la aplicación.                   |
+| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usa la aplicación.                   |
 | packageVersion            | cadena  | La versión del paquete donde se produjo el uso.                                            |
 | deviceType                | string  | Una de las cadenas siguientes que especifica el tipo de dispositivo donde se produjo el uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tableta**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
 | subscriptionName          | cadena  | Indica si estaba el uso de a través de la Xbox Game Pass.                                              |
 | monthlySessionCount       | long    | El número de sesiones de usuario durante el mes.                                              |
-| engagementDurationMinutes | double  | Minutos que los usuarios activamente se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.                               |
+| engagementDurationMinutes | double  | Los minutos que los usuarios activamente se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.                               |
 | monthlyActiveUsers        | long    | El número de clientes que usen ese mes de la aplicación.                                           |
 | monthlyActiveDevices      | long    | El número de dispositivos que ejecutan la aplicación para un distinto período de tiempo, a partir de cuando se inicia la aplicación (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.                                                        |
 | monthlyNewUsers           | long    | El número de clientes que usó la aplicación por primera vez ese mes.                    |
-| averageDailyActiveUsers   | double  | El número medio de los clientes que usan la aplicación a diario.                             |
+| averageDailyActiveUsers   | double  | El número medio de clientes que usen la aplicación a diario.                             |
 | averageDailyActiveDevices | double  | El número medio de los dispositivos que usan para interactuar con la aplicación todos los usuarios a diario. |
 
 

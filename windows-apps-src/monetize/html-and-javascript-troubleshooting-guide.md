@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: Lee sobre las soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de JavaScript y HTML.
 title: Guía de solución de problemas de HTML y JavaScript
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, anuncios, ads, publicidad, advertising, AdControl, solución de problemas, troubleshooting, HTML, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a2d94b769783bdc28c2218dcb9c07f678ba7bc9
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 5474ac51d57decfe2c4f4d5f1969da5b4436fd14
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654874"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610144"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>Guía de solución de problemas de HTML y JavaScript
 
@@ -74,7 +74,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     </div>
     ```
 
-5.  Comprueba el posicionamiento de elementos. [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) debe estar dentro del área visible.
+5.  Comprueba el posicionamiento de elementos. [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) debe estar dentro del área visible.
 
 6.  Comprueba la propiedad **visibility**. Esta propiedad no debe establecerse en "collapsed" ni "hidden". Esta propiedad puede establecerse en línea (como se muestra a continuación) o en una hoja de estilos externa.
 
@@ -140,7 +140,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 11. Asegúrate de que **AdControl** no esté oculto en la ventanilla. **AdControl** debe ser visible para que los anuncios se muestren correctamente.
 
-12. Los valores activos para [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) y [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) tanto para **ApplicationId** como para **AdUnitId**.
+12. Los valores activos para [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) y [AdUnitId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) tanto para **ApplicationId** como para **AdUnitId**.
 
 <span id="html-blackboxblinksdisappears"/>
 
@@ -342,9 +342,9 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 ### <a name="ads-not-refreshing"></a>Los anuncios no se actualizan
 
-1.  Comprueba si la propiedad [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) de tu **AdControl** está establecida en false. Esta propiedad opcional está establecida en **true** de manera predeterminada. Cuando se establece en **false**, debe usarse el método **Refresh** para recuperar otro anuncio.
+1.  Comprueba si la propiedad [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) de tu **AdControl** está establecida en false. Esta propiedad opcional está establecida en **true** de manera predeterminada. Cuando se establece en **false**, debe usarse el método **Refresh** para recuperar otro anuncio.
 
-2.  Comprueba las llamadas al método [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx). Al usar la actualización automática (**IsAutoRefreshEnabled** es **true**), no puede usarse **Refresh** para recuperar otro anuncio. Al usar la actualización manual (**IsAutoRefreshEnabled** es **false**), debe llamarse a **Refresh** solo después de un mínimo de 30 a 60 segundos, en función de la conexión de datos actual del dispositivo.
+2.  Comprueba las llamadas al método [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx). Al usar la actualización automática (**IsAutoRefreshEnabled** es **true**), no puede usarse **Refresh** para recuperar otro anuncio. Al usar la actualización manual (**IsAutoRefreshEnabled** es **false**), debe llamarse a **Refresh** solo después de un mínimo de 30 a 60 segundos, en función de la conexión de datos actual del dispositivo.
 
     En este ejemplo se muestra cómo crear el elemento **div** para **AdControl**.
 

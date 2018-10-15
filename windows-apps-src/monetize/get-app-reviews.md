@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de opiniones de un intervalo de fechas proporcionado y otros filtros opcionales.
 title: Obtener las opiniones de la aplicación
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, servicios de Microsoft Store, API de análisis de Microsoft Store, opiniones
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f1e71fc0fb96344ab73c503de6fcc741673d8d9
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: ce1f9c3a360209bc9ac7b03ac162460a333c7192
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663855"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613579"
 ---
 # <a name="get-app-reviews"></a>Obtener las opiniones de la aplicación
 
@@ -57,7 +57,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
 | filter |cadena  | Una o más instrucciones que filtran las filas en la respuesta. Para obtener más información, consulta la sección [filtrar campos](#filter-fields) a continuación. | No   |
-| orderby | cadena | Una instrucción que ordena los valores de datos resultantes. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>date</strong></li><li><strong>osVersion</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>isRevised</strong></li><li><strong>packageVersion</strong></li><li><strong>deviceModel</strong></li><li><strong>productFamily</strong></li><li><strong>deviceScreenResolution</strong></li><li><strong>isTouchEnabled</strong></li><li><strong>reviewerName</strong></li><li><strong>reviewTitle</strong></li><li><strong>reviewText</strong></li><li><strong>helpfulCount</strong></li><li><strong>notHelpfulCount</strong></li><li><strong>responseDate</strong></li><li><strong>responseText</strong></li><li><strong>deviceRAM</strong></li><li><strong>deviceStorageCapacity</strong></li><li><strong>rating</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
+| orderby | cadena | Una instrucción que ordena los valores de los datos de resultado. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>date</strong></li><li><strong>osVersion</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>isRevised</strong></li><li><strong>packageVersion</strong></li><li><strong>deviceModel</strong></li><li><strong>productFamily</strong></li><li><strong>deviceScreenResolution</strong></li><li><strong>isTouchEnabled</strong></li><li><strong>reviewerName</strong></li><li><strong>reviewTitle</strong></li><li><strong>reviewText</strong></li><li><strong>helpfulCount</strong></li><li><strong>notHelpfulCount</strong></li><li><strong>responseDate</strong></li><li><strong>responseText</strong></li><li><strong>deviceRAM</strong></li><li><strong>deviceStorageCapacity</strong></li><li><strong>rating</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
 
 
 ### <a name="filter-fields"></a>Campos de filtro
@@ -122,7 +122,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 | Valor                  | Tipo    | Descripción                                                                                                                                                                                                                          |
 |------------------------|---------|---------------------|
-| fecha                   | cadena  | La primera fecha del intervalo de fechas de los datos de opiniones. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.  |
+| date                   | cadena  | La primera fecha del intervalo de fechas de los datos de opiniones. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.  |
 | applicationId          | cadena  | El Id. de la Store de la aplicación sobre la que estás recuperando los datos de opiniones.        |
 | applicationName        | cadena  | Nombre para mostrar de la aplicación.   |
 | market                 | cadena  | El código de país ISO 3166 del mercado desde el cual se ha enviado la opinión.       |
@@ -144,7 +144,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | notHelpfulCount        | número  | El número de veces que la opinión se ha marcado como no útil.               |
 | responseDate           | cadena  | La fecha en la que se envió una respuesta.                 |
 | responseText           | cadena  | El contenido del texto de la respuesta.        |
-| id                     | cadena  | El identificador de la revisión (es un GUID). Puedes usar este identificador en los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md).       |
+| id                     | string  | El identificador de la revisión (es un GUID). Puedes usar este identificador en los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md).       |
  
 
 ### <a name="response-example"></a>Ejemplo de respuesta

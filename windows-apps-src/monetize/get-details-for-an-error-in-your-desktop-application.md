@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Usa este método en la API de análisis de Microsoft Store para obtener información detallada acerca de un error específico de tu aplicación de escritorio.
 title: Obtener los detalles de un error en la aplicación de escritorio
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis Microsoft Store, errors, errores, details, detalles
 ms.localizationpriority: medium
-ms.openlocfilehash: 31b7684878eb0f8921d81c8fda9d262a21e12132
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: b6e8a19b665c5e01ef227e7d5f643a311efa5c58
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565193"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616135"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>Obtener los detalles de un error en la aplicación de escritorio
 

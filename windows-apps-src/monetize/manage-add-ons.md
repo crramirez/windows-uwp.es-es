@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 4F9657E5-1AF8-45E0-9617-45AF64E144FC
 description: Usa estos métodos en la API de envío de Microsoft Store para administrar complementos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows.
 title: Administración de complementos
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-ons, complementos, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d603ab8901eae16da92365042e3244202539586
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: be0d383fc271084fe20a958d20f6fa3a340da187
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663055"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610457"
 ---
 # <a name="manage-add-ons"></a>Administración de complementos
 
@@ -156,12 +156,12 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción     |
 |-----------------|---------|------------------|
-| id            | cadena  | Identificador del envío.    |
+| id            | string  | Identificador del envío.    |
 | resourceLocation   | cadena  | Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para el envío.     |
  
 <span/>
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de complemento con la API de envío de Microsoft Store](manage-add-on-submissions.md)

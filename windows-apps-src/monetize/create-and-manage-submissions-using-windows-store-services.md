@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: Usa la API de envío de Microsoft Store para crear y administrar mediante programación los envíos para las aplicaciones que estén registradas en tu cuenta del Centro de desarrollo de Windows.
 title: Crear y administrar envíos
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 9bd8d2f800969102d6957cafa92e04f482323611
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: a6ba5678fc7b66e15d0e189cd75792f97c2353db
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976470"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614129"
 ---
 # <a name="create-and-manage-submissions"></a>Crear y administrar envíos
 

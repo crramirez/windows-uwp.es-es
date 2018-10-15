@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, vínculo, protocolo de la tienda windows, vincular a una aplicación, vincular a aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567945"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612093"
 ---
 # <a name="link-to-your-app"></a>Vincular a la aplicación
 
@@ -29,7 +29,7 @@ Para obtener la dirección URL de la descripción de la Tienda de tu aplicación
 Cuando un cliente hace clic en este vínculo, se abre la página de descripción basada en web de la aplicación. En los dispositivos Windows, la aplicación Tienda también se iniciará y mostrará la descripción de tu aplicación.
 
 
-## <a name="linking-to-your-apps-store-listing-with-the-microsoft-store-badge"></a>Un vínculo a la descripción de la tienda de la aplicación con el distintivo de Microsoft Store
+## <a name="linking-to-your-apps-store-listing-with-the-microsoft-store-badge"></a>Vincular a la descripción de la tienda de la aplicación con el distintivo de Microsoft Store
 
 Puedes vincular directamente a la descripción de la aplicación mediante un distintivo personalizado para informar a los clientes de que la aplicación está en la Microsoft Store.
 

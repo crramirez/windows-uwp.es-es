@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: Learn about several ways you can programmatically enable customers to rate and review your app.
 title: Solicitar calificaciones y opiniones de tu aplicación
-ms.author: mcleans
-ms.date: 03/22/2018
+ms.author: mhopkins
+ms.date: 06/15/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, calificaciones, opiniones
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f897eeaee835c1c1bcd96e9bd843ed8f6a85612
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: cc3dce673b434673f0e8a72158c2d3a593f02c52
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690381"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610131"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Solicitar calificaciones y opiniones de tu aplicación
 
@@ -23,6 +23,9 @@ Puedes agregar código a la aplicación Plataforma universal de Windows (UWP) pa
 * Puedes abrir mediante programación la página de calificaciones y opiniones para tu aplicación en Microsoft Store.
 
 Cuando estés listo para analizar los datos de calificaciones y opiniones, puedes ver los datos en el panel del Centro de desarrollo de Windows o usar la API de análisis de Microsoft Store para recuperar estos datos mediante programación.
+
+> [!IMPORTANT]
+> Al agregar una función de clasificación dentro de la aplicación, todas las revisiones deben enviar al usuario a los mecanismos de clasificación de la tienda, independientemente por estrellas elegida. Si recopilar comentarios o los comentarios de los usuarios, debe quedar claro que no está relacionada con la clasificación de la aplicación o a las críticas en la tienda pero se envía directamente al desarrollador de la aplicación. Consulta el desarrollador código de conducta para obtener más información relacionada con [Fraudulent o malas intenciones de actividades](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
 
 ## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Mostrar un diálogo de calificaciones y opiniones en la aplicación
 

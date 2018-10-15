@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, uso, evento personalizado, informe, telemetría, sesiones de usuario
 ms.localizationpriority: medium
 ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563743"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624303"
 ---
 # <a name="usage-report"></a>Informe Uso
 
@@ -50,7 +50,7 @@ Este gráfico tiene cuatro pestañas independientes que se pueden ver, mostrando
 - **Duración**: muestra el total de horas de interacción (horas en las que un usuario usa la aplicación de forma activa).
 - **Retención**: muestra el número total de **DAU/MAU** (usuarios activos diariamente/usuarios activos mensualmente) durante el período de tiempo seleccionado.
 
-Cuando el **30D** período de tiempo seleccionado, puede ver los marcadores de círculo al ver las pestañas de **los usuarios**, **dispositivos**o la **duración** . Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa el final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
+Cuando la **30D** período de tiempo seleccionado, puede ver los marcadores de círculo al ver las pestañas de **los usuarios**, **dispositivos**o la **duración** . Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa el final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
 
 > [!TIP]
 > Puedes ver más detalles relacionados con los cambios importantes a través de los últimos 30 días en el [informe de información](insights-report.md).

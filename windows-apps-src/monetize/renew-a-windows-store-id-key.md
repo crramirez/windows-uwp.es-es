@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: Usa este método para renovar una clave de Microsoft Store.
 title: Renovar una clave de id. de Microsoft Store
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, API de compras de Microsoft Store, clave de identificador de Microsoft Store, renovar, Microsoft Store collection API, Microsoft Store purchase API, Microsoft Store ID key, renew
 ms.localizationpriority: medium
-ms.openlocfilehash: 430eaaa040e731e429eba15d58f554e41349a959
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 70bda5022e52c0b18a43563a0492bd56d09b88a0
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664828"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612449"
 ---
 # <a name="renew-a-microsoft-store-id-key"></a>Renovar una clave de id. de Microsoft Store
 
@@ -56,7 +56,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 | Parámetro     | Tipo   | Descripción                       | Obligatorio |
 |---------------|--------|-----------------------------------|----------|
 | serviceTicket | string | Token de acceso de Azure AD.        | Sí      |
-| key           | string | Clave de id. de Microsoft Store expirada. | No       |
+| key           | string | Clave de id. de Microsoft Store expirada. | Sí       |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -78,9 +78,9 @@ Host: collections.mp.microsoft.com
 
 ### <a name="response-body"></a>Cuerpo de la respuesta
 
-| Parámetro | Tipo   | Descripción                                                                                                            | Obligatorio |
-|-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
-| key       | string | Clave de Microsoft Store actualizada que se puede usar en futuras llamadas a la API de colecciones o la API de compras de Microsoft Store. | No       |
+| Parámetro | Tipo   | Descripción                                                                                                            |
+|-----------|--------|------------------------------------------------------------------------------------------------------------------------|
+| key       | string | Clave de Microsoft Store actualizada que se puede usar en futuras llamadas a la API de colecciones o la API de compras de Microsoft Store. |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
@@ -103,8 +103,8 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 ## <a name="error-codes"></a>Códigos de error
 
 
-| Código | Error        | Código de error interno           | Descripción                                                                                                                                                                           |
-|------|--------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Código | Error        | Código de error interno           | Descripción   |
+|------|--------------|----------------------------|---------------|
 | 401  | No autorizado | AuthenticationTokenInvalid | El token de acceso de Azure AD no es válido. En algunos casos, los detalles del código ServiceError contendrán más información, como la fecha de expiración del token o si falta la notificación *appid*. |
 | 401  | No autorizado | InconsistentClientId       | La notificación *clientId* de la clave de Id. de Microsoft Store y la notificación *appid* del token de acceso de Azure AD no coinciden.                                                                     |
 

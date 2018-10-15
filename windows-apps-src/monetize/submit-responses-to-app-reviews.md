@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 038903d6-efab-4da6-96b5-046c7431e6e7
 description: Usa este método en la API de opiniones de Microsoft Store para enviar respuestas a las opiniones sobre tu aplicación.
 title: Enviar respuestas a opiniones
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store reviews API, API de opiniones de Microsoft Store, add-on acquisitions, adquisiciones de complementos
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a757743bec947a5e8b0edf8c7a0d02e7c00942d
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 4ec6661ec0ef65174b6218957450540edceaa5a0
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662605"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614832"
 ---
 # <a name="submit-responses-to-reviews"></a>Enviar respuestas a opiniones
 
@@ -73,7 +73,7 @@ Cada objeto de la matriz *Responses* contiene los siguientes valores.
 | ReviewId | Cadena |  El id. de la opinión a la que deseas responder (es un GUID). Los identificadores de opinión están disponibles en los datos de respuesta del método [obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de Microsoft Store y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).   |  Sí  |
 | ResponseText | Cadena | La respuesta que quieres enviar. La respuesta debe seguir [estas directrices](../publish/respond-to-customer-reviews.md#guidelines-for-responses).   |  Sí  |
 | SupportEmail | Cadena | La dirección de correo electrónico del soporte técnico de la aplicación, que el cliente puede usar para ponerse en contacto contigo directamente. Debe ser una dirección de correo electrónico válida.     |  Sí  |
-| IsPublic | Booleano |  El valor **true** indica que la respuesta se mostrará en descripción de la Store de la aplicación, justo debajo de la opinión del cliente, y será visible para todos los clientes. El valor **false** indica que la respuesta se enviará al cliente por correo electrónico y no será visible para los demás clientes en descripción de la Store de la aplicación.     |  Sí  |
+| IsPublic | Booleano |  Si se especifica **true**, la respuesta se mostrará en Descripción, justo debajo de la opinión del cliente, de la tienda de la aplicación y será visible para todos los clientes. Si especificas **false** y el usuario no ha optado por no recibir respuestas de correo electrónico, la respuesta se enviará al cliente por correo electrónico y no será visible para otros clientes en Descripción de la tienda de la aplicación. Si se especifica **false** y el usuario ha optado por no recibir respuestas de correo electrónico, se devolverá un error.   |  Sí  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud

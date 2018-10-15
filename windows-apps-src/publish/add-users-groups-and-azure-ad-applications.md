@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, aplicación de azure ad, aad, usuario, grupo, varios usuarios, multiusuario
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567845"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610730"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Agregar usuarios, grupos y aplicaciones de AzureAD a tu cuenta del Centro de desarrollo
 
@@ -45,7 +45,7 @@ Puedes seleccionar usuarios que ya existen en el inquilino de tu organización y
 
 <span id="from-directory" />
 
-1.  Selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , selecciona **los usuarios**.
+1.  Selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , seleccionar **usuarios**.
 2.  En la página **Usuarios**, selecciona **Agregar usuarios**. 
 3.  Selecciona uno o varios usuarios de la lista que se muestra. Puedes usar el cuadro de búsqueda para buscar usuarios específicos.
     > [!TIP]
@@ -69,7 +69,7 @@ Si has iniciado sesión con una cuenta de administrador que también tiene permi
 > [!IMPORTANT]
 > Debes iniciar sesión con una cuenta de administrador global en el inquilino de AzureAD para crear nuevos usuarios.
 
-1.  En la página de **los usuarios** (en la **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **crear nuevos usuarios**.
+1.  Desde la página de **usuarios** (en **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **crear nuevos usuarios**.
 2.  Escribe el nombre, el apellido y el nombre de usuario del nuevo usuario.
 3.  Si quieres que el usuario nuevo tenga una [cuenta de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) en el directorio de la organización, activa la casilla con la etiqueta **Make this user a Global administrator in your Azure AD, with full control over all directory resources**. De esta forma, el usuario podrá obtener acceso a todas las características administrativas en el Azure AD de tu empresa. Podrá agregar y administrar usuarios en el directorio de la organización (aunque no en el Centro de desarrollo, a menos que concedas a la cuenta los [roles/permisos](set-custom-permissions-for-account-users.md) adecuados). Si activas esta casilla, deberás proporcionar un **correo electrónico de recuperación de contraseña** para el usuario.
 4.  Si has activado la casilla **Make this user a Global administrator in your Azure AD**, escribe un correo electrónico que el usuario pueda usar si necesita recuperar su contraseña.
@@ -86,7 +86,7 @@ Si has iniciado sesión con una cuenta de administrador que también tiene permi
 > [!IMPORTANT]
 > Debes iniciar sesión con una cuenta de administrador global en el inquilino de AzureAD para invitar usuarios externos.
 
-1.  En la página de **los usuarios** (en la **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **Invitar a usuarios por correo electrónico**.
+1.  Desde la página de **usuarios** (en **configuración de la cuenta**), selecciona **Agregar usuarios**y luego elige **Invitar a usuarios por correo electrónico**.
 1.  Escribe una o varias direcciones de correo electrónico (hasta diez), separadas por coma o punto y coma.
 2.  En la sección **Roles**, especifica los [roles o permisos personalizados](set-custom-permissions-for-account-users.md) para el usuario.
 3.  Haz clic en **Guardar**.
@@ -118,7 +118,7 @@ Puedes agregar un grupo desde el directorio de la organización a tu cuenta del 
 
 ### <a name="add-groups-from-your-organizations-directory"></a>Agregar grupos del directorio de la organización
 
-1.  Selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , selecciona **los usuarios**.
+1.  Selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , seleccionar **usuarios**.
 2. En la página de **usuarios** , selecciona **Agregar grupos**.
 2.  Selecciona uno o varios grupos de la lista que se muestra. Puedes usar el cuadro de búsqueda para buscar grupos específicos.
     > [!TIP]
@@ -133,7 +133,7 @@ Puedes agregar un grupo desde el directorio de la organización a tu cuenta del 
 
 Si quieres conceder acceso al Centro de desarrollo a un nuevo grupo, puedes crear uno en la sección **Usuarios**. Ten en cuenta que el nuevo grupo se creará en el directorio de la organización, no solo en tu cuenta del Centro de desarrollo.
 
-1.  En la página de **los usuarios** (en la **configuración de la cuenta**), haz clic en **Agregar grupos**.
+1.  En la página de **usuarios** (en **configuración de la cuenta**), haz clic en **Agregar grupos**.
 2.  En la página siguiente, selecciona el **nuevo grupo**.
 3.  Escribe el nombre para mostrar del nuevo grupo.
 4.  Especifica los [roles o permisos personalizados](set-custom-permissions-for-account-users.md) para el grupo. Todos los miembros del grupo podrán tener acceso a tu cuenta del Centro de desarrollo con los permisos que apliques al grupo, independientemente de los roles y permisos asociados a sus cuentas individuales.
@@ -151,7 +151,7 @@ Puedes permitir que aplicaciones o servicios que formen parte de AzureAD de tu o
 
 ### <a name="add-azure-ad-applications-from-your-organizations-directory"></a>Agregar aplicaciones de AzureAD desde el directorio de la organización
 
-1.  1.  Selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , selecciona **los usuarios**.
+1.  1.  Selecciona el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, selecciona la **configuración de la cuenta**. En el menú de **configuración** , seleccionar **usuarios**.
 2. En la página **Usuarios**, selecciona **Agregar aplicaciones de Azure AD**.
 3.  Selecciona una o varias aplicaciones de Azure AD en la lista que aparece. Puedes usar el cuadro de búsqueda para buscar aplicaciones de AzureAD específicas.
     > [!TIP]

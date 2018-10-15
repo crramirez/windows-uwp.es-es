@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 08e7d8fcfbab0d0b22fffa3e3e0aecc38d5b095c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572039"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610871"
 ---
 # <a name="windows-device-portal-overview"></a>Introducción a Windows Device Portal
 
 Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB. También proporciona las herramientas de diagnóstico para ayudarte a solucionar problemas y ver el rendimiento en tiempo real de tu dispositivo Windows.
 
-Windows Device Portal es un servidor web en el dispositivo puede conectarse a desde un explorador web en un equipo. Si el dispositivo tiene un explorador web, también puedes conectarte localmente con el explorador en ese dispositivo.
+Windows Device Portal es un servidor web en el dispositivo que se puede conectar a desde un explorador web en un equipo. Si el dispositivo tiene un explorador web, también puedes conectarte localmente con el explorador en ese dispositivo.
 
 Windows Device Portal está disponible en cada familia de dispositivos, pero las características y la configuración varían en función de los requisitos de cada dispositivo. En este artículo se proporciona una descripción general de Device Portal y vínculos a artículos con información más específica para cada familia de dispositivos.
 
@@ -56,7 +56,7 @@ Para obtener instrucciones específicas sobre la configuración del dispositivo,
 ### <a name="toolbar-and-navigation"></a>Barra de herramientas y navegación
 
 La barra de herramientas en la parte superior de la página proporciona acceso a características de uso común.
-- **Energía**: acceder a opciones de energía.
+- **Inicio/apagado**: acceder a opciones de energía.
   - **Apagar**: apaga el dispositivo.
   - **Reiniciar**: vuelve a iniciar el dispositivo.
 - **Ayuda**: abre la página de ayuda.
@@ -67,21 +67,21 @@ Aquí se describen las herramientas que son comunes a las familias de dispositiv
 
 ### <a name="apps-manager"></a>Administrador de aplicaciones
 
-El Administrador de aplicaciones proporciona instalación o desinstalación de paquetes de funcionalidad de administración de aplicación y lotes en el dispositivo host.
+El Administrador de aplicaciones proporciona la instalación o desinstalación y funcionalidad de administración de aplicación de paquetes y lotes en el dispositivo host.
 
-![Página de administrador de aplicaciones de Portal de dispositivo](images/device-portal/wdp-apps.png)
+![Página de administrador de aplicaciones de Portal de dispositivos](images/device-portal/wdp-apps.png)
 
-- **Las aplicaciones instaladas**: usar el menú desplegable para quitar o iniciar las aplicaciones que están instaladas en el dispositivo. Instalar una nueva aplicación haciendo clic en **Agregar**. Esto inicia la instalación de experiencia de usuario para implementar las aplicaciones empaquetadas desde local, red o web hospeda y registrar en archivos sueltos desde recursos compartidos de red.
+- **Aplicaciones instaladas**: usar el menú desplegable para eliminar o iniciar aplicaciones que están instaladas en el dispositivo. Instalar una nueva aplicación haciendo clic en **Agregar**. Esto inicia la instalación de experiencia de usuario para implementar las aplicaciones empaquetadas desde local, red o web hospeda y registrar en archivos sueltos de recursos compartidos de red.
 - **Aplicaciones en ejecución**: obtener información acerca de las aplicaciones que se están ejecutando actualmente y ciérralos según sea necesario.
 
 #### <a name="install-an-app"></a>Instalar una aplicación
 
 1.  Cuando hayas creado un paquete de la aplicación, podrás instalarlo remotamente en el dispositivo. Después de compilarlo en Visual Studio, se genera una carpeta de salida.
   ![Instalación de aplicaciones](images/device-portal/iot-installapp0.png)
-2.  En la sección de administrador de aplicaciones de Device Portal, haz clic en **Agregar** y selecciona **instalar el paquete de la aplicación desde el almacenamiento local**.
-3.  Haga clic en **Examinar** y busca el paquete de la aplicación.
-3.  Haz clic en **Examinar** y busca el archivo de certificado (_.cer_) (no es necesario en todos los dispositivos.)
-4.  Casillas de verificación los respectivos si quieres instalar opcional o los paquetes de marcos junto con la instalación de la aplicación. Si tienes más de una, agrega cada una de ellas individualmente.     
+2.  En la sección de administrador de aplicaciones del Portal de dispositivos, haz clic en **Agregar** y selecciona **instalar el paquete de la aplicación desde el almacenamiento local**.
+3.  Haga clic en **Examinar** y busca el paquete de aplicación.
+3.  Haga clic en **Examinar** y busca el archivo de certificado (_.cer_) (no es necesario en todos los dispositivos.)
+4.  Casillas de verificación los respectivos si desea instalar opcional o los paquetes de marcos junto con la instalación de la aplicación. Si tienes más de una, agrega cada una de ellas individualmente.     
 5.  Haz clic en **siguiente** para mover el paso siguiente e **instalar** iniciar la instalación. 
 
 #### <a name="uninstall-an-app"></a>Desinstalar una aplicación
@@ -91,7 +91,7 @@ El Administrador de aplicaciones proporciona instalación o desinstalación de p
 
 ### <a name="running-processes"></a>Procesos en ejecución
 
-Esta página muestra detalles acerca de los procesos que se está ejecutando actualmente en el dispositivo host. Esto incluye aplicaciones y procesos del sistema. En algunas plataformas (escritorio, IoT y HoloLens), puedes finalizar los procesos.
+Esta página muestra detalles acerca de los procesos que se están ejecutando actualmente en el dispositivo host. Esto incluye aplicaciones y procesos del sistema. En algunas plataformas (escritorio, IoT y HoloLens), puedes finalizar los procesos.
 
 ![Portal de dispositivos que ejecutan procesos de página](images/device-portal/mob-device-portal-processes.png)
 
@@ -99,7 +99,7 @@ Esta página muestra detalles acerca de los procesos que se está ejecutando act
 
 Esta página te permite ver y manipular los archivos almacenados por las aplicaciones transferidas localmente. Consulta la entrada de blog [usando el Explorador de archivos de la aplicación](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) para obtener más información sobre el Explorador de archivos y cómo usarla. 
 
-![Página de explorador de archivos de Portal de dispositivo](images/device-portal/mob-device-portal-AppFileExplorer.png)
+![Página del explorador de archivo del Portal de dispositivo](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
 ### <a name="performance"></a>Rendimiento
 
@@ -110,7 +110,7 @@ Estas son las métricas disponibles:
 - **Memoria**: Total, en uso, disponible, confirmada, paginada y no paginada
 - **E/S**: cantidades de datos de lectura y escritura
 - **Red**: envíos y recepciones datos
-- **GPU**: por ciento de GPU disponible total del motor de utilización
+- **GPU**: utilización del motor por ciento de GPU disponible total
 
 
 ![Página de rendimiento de Portal de dispositivos](images/device-portal/mob-device-portal-perf.png)
@@ -119,7 +119,7 @@ Estas son las métricas disponibles:
 
 La página de registro de ETW administra la información de seguimiento de eventos para Windows (ETW) en tiempo real en el dispositivo.
 
-![Página de registro de ETW del Portal de dispositivos](images/device-portal/mob-device-portal-etw.png)
+![Página de registro de ETW de Portal de dispositivos](images/device-portal/mob-device-portal-etw.png)
 
 Activa **Ocultar proveedores** para mostrar solamente la lista de eventos.
 - **Los proveedores registrados**: selecciona el proveedor de eventos y el nivel de seguimiento. El nivel de seguimiento es uno de estos valores:
@@ -132,16 +132,16 @@ Activa **Ocultar proveedores** para mostrar solamente la lista de eventos.
   Haz clic o pulsa en **Activar** para iniciar el seguimiento. El proveedor se agrega a la lista desplegable de **Proveedores habilitados**.
 - **Proveedores personalizados**: selecciona un proveedor ETW personalizado y el nivel de seguimiento. Identifica el proveedor por su GUID. No incluyas corchetes en el GUID.
 - **Proveedores de Enabled**: enumera los proveedores habilitados. Selecciona un proveedor de la lista desplegable y haz clic o pulsa en **Desactivar** para detener el seguimiento. Haz clic o pulsa en **Detener todo** para suspender todos los seguimientos.
-- **Historial de proveedores**: muestra los proveedores de ETW que estaban habilitados durante la sesión actual. Haz clic o pulsa en **Activar** para activar un proveedor deshabilitado. Haz clic o pulsa en **Borrar** para borrar el historial.
+- **Providers history**: muestra los proveedores de ETW que estaban habilitados durante la sesión actual. Haz clic o pulsa en **Activar** para activar un proveedor deshabilitado. Haz clic o pulsa en **Borrar** para borrar el historial.
 - **Filtros / eventos**: la sección de **eventos** enumera los eventos ETW de los proveedores seleccionados en formato de tabla. La tabla se actualiza en tiempo real. Usa el menú de **filtros** para configurar los filtros personalizados para el que se mostrarán los eventos. Haz clic en el botón **Borrar** para eliminar todos los eventos ETW de la tabla. Esta acción no deshabilita ningún proveedor. Puedes hacer clic en **Guardar en archivo** para exportar los eventos ETW recopilados actualmente en un archivo CSV local.
 
-Para obtener más detalles sobre el uso de registro de ETW, consulta el [Portal de dispositivos de uso para ver los registros de depuración de](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) entrada de blog. 
+Para obtener más información sobre el uso de registro de ETW, consulta el [Portal de dispositivos de uso para ver los registros de depuración de](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) entrada de blog. 
 
 ### <a name="performance-tracing"></a>Seguimiento de rendimiento
 
 La página de seguimiento del rendimiento permite ver los seguimientos de [Windows Performance Recorder (WPR)](https://msdn.microsoft.com/library/hh448205.aspx) desde el dispositivo host.
 
-![Página de seguimiento de rendimiento de Device Portal](images/device-portal/mob-device-portal-perf-tracing.png)
+![Página de seguimiento de rendimiento de Portal de dispositivos](images/device-portal/mob-device-portal-perf-tracing.png)
 
 - **Available profiles**: selecciona el perfil de WPR en la lista desplegable y pulsa o haz clic en **Inicio** para iniciar el seguimiento.
 - **Custom profiles**: haz clic o pulsa en **Examinar** para elegir un perfil de WPR desde tu equipo. Haz clic o pulsa en **Cargar e iniciar** para iniciar el seguimiento.
@@ -154,12 +154,12 @@ Captura. Para un análisis en el [Windows Performance Analyzer](https://msdn.mic
 
 La página del Administrador de dispositivo enumera todos los periféricos conectados al dispositivo. Puedes hacer clic en los iconos de configuración para ver las propiedades de cada uno.
 
-![Página de administrador de dispositivo de Portal de dispositivo](images/device-portal/mob-device-portal-devices.png)
+![Página de administrador de dispositivo de Portal de dispositivos](images/device-portal/mob-device-portal-devices.png)
 
 ### <a name="networking"></a>Redes
 
-La página red administra las conexiones de red en el dispositivo. A menos que están conectados a Device Portal a través de USB, si modificas esta configuración es probable que le desconectará de Device Portal.
-- **Redes disponibles**: muestra las redes Wi-Fi disponibles para el dispositivo. Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario. Device Portal aún no admite la autenticación de empresa. También puedes usar la lista desplegable de **perfiles** para intentar conectarse a cualquiera de los perfiles de Wi-Fi que se sabe que el dispositivo.
+La página de redes administra las conexiones de red en el dispositivo. A menos que estás conectado a Device Portal a través de USB, si modificas esta configuración es probable que le desconectará de Device Portal.
+- **Redes disponibles**: muestra las redes Wi-Fi disponibles para el dispositivo. Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario. Device Portal aún no admite la autenticación de empresa. También puedes usar la lista desplegable de **perfiles** para intentar conectar a cualquiera de los perfiles de Wi-Fi que se sabe que el dispositivo.
 - **Configuración IP**: muestra información de dirección sobre cada uno de lo host de puertos de red del dispositivo.
 
 ![Página de redes de Portal de dispositivos](images/device-portal/mob-device-portal-network.png)

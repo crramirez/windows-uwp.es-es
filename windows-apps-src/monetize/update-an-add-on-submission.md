@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: Usa este método en la API de envío de Microsoft Store para actualizar un envío de complemento ya existente.
 title: Actualizar un envío de complemento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submission, envío de complemento, update, actualizar, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 14a648bc19ef90f91313177f883bb5f4daaea47d
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 9126bae03644fb22f773cbd69cc397456a4cd48f
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817383"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611769"
 ---
 # <a name="update-an-add-on-submission"></a>Actualizar un envío de complemento
 
@@ -48,7 +48,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 
-### <a name="request-parameters"></a>Parámetros de la solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -70,7 +70,7 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 | targetPublishMode           | cadena  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
 | tag           | cadena  |  Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) para el complemento (esta información se denominaba anteriormente *tag*).   |
-| visibility  | cadena  |  Visibilidad del complemento. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
+| visibility  | string  |  Visibilidad del complemento. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -199,7 +199,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 ## <a name="related-topics"></a>Artículos relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Administrar envíos de complementos](manage-add-on-submissions.md)
+* [Administrar envíos de complemento](manage-add-on-submissions.md)
 * [Obtener un envío de complemento](get-an-add-on-submission.md)
 * [Create an add-on submission (Crear un envío de complemento)](create-an-add-on-submission.md)
 * [Commit an add-on submission (Confirmar un envío de complemento)](commit-an-add-on-submission.md)

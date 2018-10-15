@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: El servicio de mediación de anuncios de Microsoft te permite maximizar las funcionalidades de ingresos por anuncios y de promoción de la aplicación mostrando anuncios de múltiples redes de anuncio.
 title: Servicio de mediación de anuncios de Microsoft
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anuncios, publicidad, mediación de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: e2774b44891934e10a72c1a944d6a0dad45872b5
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: cfcb2402a9a0246060a619cbc65337e2b2c69d78
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989276"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610887"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Servicio de mediación de anuncios de Microsoft
 

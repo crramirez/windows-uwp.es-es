@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: Usa este método en la API de envío de Microsoft Store para obtener datos para un envío de complemento existente.
 title: Obtener un envío de complemento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submission, envío de complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: aa8e79cbab0a3cc1805ad35d690242fa04ea4c62
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: e126ce53da515724f5fb1f9992ed8ca27c02ce06
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816270"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613047"
 ---
 # <a name="get-an-add-on-submission"></a>Obtener un envío de complemento
 
@@ -45,7 +45,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 
-### <a name="request-parameters"></a>Parámetros de la solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|

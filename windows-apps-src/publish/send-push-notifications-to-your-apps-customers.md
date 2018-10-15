@@ -11,11 +11,11 @@ keywords: windows 10, uwp, notificaciones dirigidas, push dirigidas, notificacio
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563877"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612190"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificaciones a los clientes de la aplicación
 
@@ -123,7 +123,7 @@ Cuando hayas configurado la notificación y la aplicación para medir el rendimi
 Para revisar los datos detallados para cada notificación:
 
 1.  En el Panel del Centro de desarrollo de Windows, expande la sección **Interactuar** y selecciona **Notificaciones**.
-2.  En la tabla de notificaciones existentes, seleccione **en curso** o **completado**y luego mira las columnas **Delivery rate** y la **velocidad de inicio de la aplicación** para ver el rendimiento de alto nivel de cada notificación.
+2.  En la tabla de las notificaciones existentes, seleccione **en curso** o **completado**y luego mira las columnas **tasa de entrega** y la **velocidad de inicio de la aplicación** para ver el rendimiento de alto nivel de cada notificación.
 3.  Para ver datos de rendimiento más detallados, selecciona el nombre de una notificación. En la sección **Delivery statistics**, puedes ver **recuento** y **porcentaje** de los siguientes tipos de **estados** de las notificaciones:
     * **Failed (Erróneo)**: la notificación no se ha entregado por algún motivo. Esto puede suceder, por ejemplo, si se produce algún problema en el servicio de notificaciones de Windows.
     * **Channel expiration failure (Error de expiración del canal)**: la notificación no se ha entregado porque ha expirado el canal entre la aplicación y el Centro de desarrollo. Por ejemplo, esto puede suceder si el cliente no abre la aplicación en mucho tiempo.
@@ -135,9 +135,9 @@ Para revisar los datos detallados para cada notificación:
 Para analizar los datos de la actividad de usuario para todas las notificaciones:
 
 1.  En el Panel del Centro de desarrollo de Windows, expande la sección **Interactuar** y selecciona **Notificaciones**.
-2.  En la página de **notificaciones** , haz clic en la ficha **analizar** . Esta pestaña muestra los siguientes datos:
+2.  En la página de **notificaciones** , haz clic en la pestaña **analizar** . Esta pestaña muestra los siguientes datos:
     * Vistas de gráfico de los distintos Estados de acción de usuario para tus notificaciones del sistema y las notificaciones del centro de actividades.
-    * Vistas de mapa del mundo de los clic a través de tipos para tus notificaciones del sistema y la acción el centro de notificaciones.
+    * Vistas de mapa del mundo el clic a través de tasas para tus notificaciones del sistema y la acción de centro de notificaciones.
 3. Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es 30D (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puedes expandir la opción **filtros** para filtrar todos los datos de la aplicación y el mercado.
 
 ## <a name="translate-your-notifications"></a>Traducir las notificaciones

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: A26A287C-B4B0-49E9-BB28-6F02472AE1BA
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos agregados de rendimiento de la campaña de anuncios de la aplicación especificada durante un intervalo de fechas indicado y según otros filtros opcionales.
 title: Obtener los datos de rendimiento de la campaña publicitaria
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, servicios de Microsoft Store, Store services, Microsoft Store analytics API, API de análisis de Microsoft Store, campañas publicitarias, ad campaigns
 ms.localizationpriority: medium
-ms.openlocfilehash: 79901ef38ca837ae547f1d25f98bb42a440c2619
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: ce3f51e0eec2356262811bd126f0a63d555c28bd
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663635"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613480"
 ---
 # <a name="get-ad-campaign-performance-data"></a>Obtener los datos de rendimiento de la campaña publicitaria
 
@@ -100,16 +100,16 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción            |
 |---------------------|--------|------------------------|
-| fecha                | cadena | Es la primera fecha del intervalo de fechas de los datos de rendimiento de una campaña de anuncios. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| date                | cadena | Es la primera fecha del intervalo de fechas de los datos de rendimiento de una campaña de anuncios. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | applicationId       | cadena | El identificador de la Store de la aplicación para la que quieres recuperar los datos de rendimiento de campaña de anuncios.                     |
 | campaignId     | cadena | El id. de la campaña de anuncios.           |
-| lineId     | cadena |    El identificador de la [línea de entrega](manage-delivery-lines-for-ad-campaigns.md) de la campaña publicitaria que generó estos datos de rendimiento.        |
+| lineId     | string |    El identificador de la [línea de entrega](manage-delivery-lines-for-ad-campaigns.md) de la campaña publicitaria que generó estos datos de rendimiento.        |
 | currencyCode              | string | El código de divisa del presupuesto de la campaña.              |
 | spend          | cadena |  El presupuesto que se ha invertido en la campaña de anuncios.     |
 | impressions           | largo | El número de impresiones de anuncios de la campaña.        |
 | installs              | largo | El número de instalaciones de aplicaciones relacionadas con la campaña.   |
 | clicks            | largo | El número de clics de anuncios de la campaña.      |
-| iapInstalls            | largo | El número de instalaciones de complementos (también denominados compras desde la aplicación o IAP) relacionados con la campaña.      |
+| iapInstalls            | long | El número de instalaciones de complementos (también denominados compras desde la aplicación o IAP) relacionados con la campaña.      |
 | activeUsers            | long | El número de usuarios que han hecho clic en un anuncio que forma parte de la campaña y han vuelto a la aplicación.      |
 
 

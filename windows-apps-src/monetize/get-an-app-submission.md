@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: BF296C25-A2E6-48E4-9D08-0CCDB5FAE0C8
 description: Usa este método en la API de envío de Microsoft Store para obtener datos para un envío de aplicación existente.
 title: Obtener un envío de aplicación
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submission, envío de aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: c20e2ec72af848d76413d46a3941e10930f073bf
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 9838798778a2d66b2a52fcfe02defce0c9167d2d
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816620"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610108"
 ---
 # <a name="get-an-app-submission"></a>Obtener un envío de aplicación
 

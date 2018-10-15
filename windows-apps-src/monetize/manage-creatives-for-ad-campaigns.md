@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: c5246681-82c7-44df-87e1-a84a926e6496
 description: Usa este método en la API de promociones de Microsoft Store para administrar los creativos para las campañas de anuncios promocionales.
 title: Administrar creativos
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: f29920bba22be689c79f2264836ebcee6d8dfe5c
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 838329101695c21abfb7ac89dd9c83330b7bd26b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664025"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614061"
 ---
 # <a name="manage-creatives"></a>Administrar creativos
 
@@ -143,6 +143,6 @@ Los cuerpos de solicitud y respuesta para estos métodos contienen los siguiente
 
 * [Ejecutar campañas de anuncios con los servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
 * [Administrar campañas de anuncios](manage-ad-campaigns.md)
-* [Administrar líneas de entrega de campañas de anuncios](manage-delivery-lines-for-ad-campaigns.md)
+* [Administración de las líneas de entrega de las campañas publicitarias](manage-delivery-lines-for-ad-campaigns.md)
 * [Administrar perfiles de destino de las campañas de anuncios](manage-targeting-profiles-for-ad-campaigns.md)
 * [Obtener los datos de rendimiento de la campaña de anuncios](get-ad-campaign-performance-data.md)

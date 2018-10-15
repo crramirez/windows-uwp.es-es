@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
 description: Usa este método en la API de envío de Microsoft Store para crear un nuevo complemento para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows.
 title: Crear un envío de complemento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create add-on submission, crear envío de complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ece9403652d02e7d42f33aa4aaacae5a25bd386
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 39af744d8c8e4b9d26cd9d82a9489396857ffa5b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662345"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610342"
 ---
 # <a name="create-an-add-on-submission"></a>Crear un envío de complemento
 
@@ -51,7 +51,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 
-### <a name="request-parameters"></a>Parámetros de la solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -158,10 +158,10 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | 409  | No se pudo crear el envío debido al estado actual de la aplicación o a que esta aplicación usa una función del panel del Centro de desarrollo que [actualmente no admite la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Administrar envíos de complementos](manage-add-on-submissions.md)
+* [Administrar envíos de complemento](manage-add-on-submissions.md)
 * [Obtener un envío de complemento](get-an-add-on-submission.md)
 * [Confirmación de un envío de complemento](commit-an-add-on-submission.md)
 * [Actualizar un envío de complemento](update-an-add-on-submission.md)

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571389"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610401"
 ---
 # <a name="app-management-and-services"></a>Administración y servicios de aplicaciones
 
@@ -29,7 +29,7 @@ La sección **Servicios** te permite administrar varios servicios diferentes par
 
 ## <a name="xbox-live"></a>XboxLive
 
-Si va a publicar un juego, puedes habilitar el [Programa de creadores de Xbox Live](http://xbox.com/developers/creators-program) en esta página. Esto te permite empezar a configurar y probar características de Xbox Live y finalmente publicar tu juego de programa de creadores de Xbox Live.
+Si vas a publicar un juego, puedes habilitar el [Programa de creadores de Xbox Live](http://xbox.com/developers/creators-program) en esta página. Esto te permite empezar a configurar y probar características de Xbox Live y, finalmente publicar un juego de programa de creadores de Xbox Live.
 
 Para obtener más información, consulta [empezar a trabajar con el programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) y [crear un nuevo título de Xbox Live Creators Program y publicar en el entorno de prueba](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
 
@@ -50,13 +50,13 @@ Para más información, consulta [Usar servicios de mapa](use-map-services.md).
 
 ## <a name="product-collections-and-purchases"></a>Colecciones y compras de producto
 
-Para usar Microsoft Store API de colecciones y la API de compras de Microsoft Store para obtener acceso a la información de propiedad para aplicaciones y complementos, debes hacer el cliente de Azure AD identificadores aquí. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
+Para usar Microsoft Store collection API y la API de compras de Microsoft Store para obtener acceso a la información de propiedad para aplicaciones y complementos, debes especificar el asociado Azure AD identificadores de cliente aquí. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
 
 Para obtener más información, consulta [Administrar los derechos de producto de un servicio](../monetize/view-and-grant-products-from-a-service.md).
 
 ## <a name="administrator-consent"></a>Consentimiento del administrador
 
-f tu producto se integra con Azure AD y llama a las API que solicitan [permisos de la aplicación o los permisos delegados](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requieren el consentimiento del administrador, escribe tu Id. de cliente de Azure AD. Esto permite a los administradores que adquieran la aplicación para su consentimiento de concesión de organización para tu producto actuar en nombre de todos los usuarios del inquilino.
+f tu producto se integra con Azure AD y llama a las API que solicitan los [permisos de la aplicación o privilegios](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requieren el consentimiento del administrador, escribe tu Id. de cliente de Azure AD. Esto permite a los administradores que adquieran la aplicación para su consentimiento de concesión de organización para tu producto actuar en nombre de todos los usuarios del inquilino.
 
 Para obtener más información, consulta la [solicitud de consentimiento para un inquilino de todo](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
@@ -92,7 +92,7 @@ Los desarrolladores con permisos de OEM también pueden [generar paquetes de pre
 La sección **WNS/MPNS** proporciona opciones que te ayudarán a crear y enviar notificaciones a clientes de la aplicación. 
 
 > [!TIP]
-> Las aplicaciones para UWP, se recomienda con la opción de **notificaciones** en el panel. Esta característica te permite enviar notificaciones a todos los clientes de la aplicación o a un subconjunto destino de los clientes de Windows 10 que cumplan los criterios que hayas definido en un [segmento de clientes](create-customer-segments.md). Para obtener más información, consulta [Enviar notificaciones a los clientes de la aplicación](send-push-notifications-to-your-apps-customers.md).
+> Las aplicaciones para UWP, se recomienda con la opción de **notificaciones** en el panel. Esta característica te permite enviar notificaciones a todos los clientes de la aplicación o a un subconjunto de destino de los clientes de Windows 10 que cumplan los criterios que hayas definido en un [segmento de clientes](create-customer-segments.md). Para obtener más información, consulta [Enviar notificaciones a los clientes de la aplicación](send-push-notifications-to-your-apps-customers.md).
 
 Según el tipo de paquete de la aplicación y sus requisitos específicos, también puedes usar una de las siguientes opciones: 
 

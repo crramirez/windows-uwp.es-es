@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, adquisiciones, ventas de aplicaciones, descargas de aplicaciones, instalaciones, embudo, adquisición, conversiones, canal, vistas de página de la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 75a3ce152257d10fe392b3f64381b3e82bc79961
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575124"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614980"
 ---
 # <a name="acquisitions-report"></a>Informe Adquisiciones
 
 
-El informe de **adquisiciones** en el panel del centro de desarrollo de Windows te permite ver quién ha adquirido e instalado la aplicación, junto con datos demográficos y detalles de la plataforma y muestra información sobre cómo los clientes de Windows 10 (incluyendo Xbox) han llegado a la aplicación la descripción. También puedes ver cerca de los datos de compra en tiempo real para el último período o de 72 horas. 
+El informe de **adquisiciones** en el panel del centro de desarrollo de Windows te permite ver quién ha adquirido e instalado la aplicación, junto con datos demográficos y los detalles de la plataforma y se muestra información acerca de cómo los clientes de Windows 10 (incluyendo Xbox) han llegado a la aplicación la descripción. También puedes ver cerca de los datos de compra en tiempo real para el último período o de 72 horas. 
 
 Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
@@ -50,7 +50,7 @@ En el gráfico **Adquisiciones** se muestra el número de adquisiciones diarias 
 
 De manera predeterminada, mostramos la vista de la **aplicación todos los días** , que incluye cerca de datos en tiempo real. También puedes ver el número de adquisiciones del ciclo de vida de la aplicación seleccionando **Aplicación acumulativa**. Muestra el total acumulado de todas las adquisiciones desde que la aplicación se publicó por primera vez.
 
-**Ventas brutas** para tu aplicación (de octubre de 2016 - presente) también están disponibles en este gráfico, que muestra el importe total acumulado de ventas de la aplicación (en USD). Ten en cuenta que no tiene en cuenta esta cantidad para cualquier reembolsos, devoluciones, anulación, etcetera.
+**Ventas brutas** para la aplicación (de octubre de 2016 - presente) también están disponibles en este gráfico, que muestra el importe total acumulado de ventas de la aplicación (en USD). Ten en cuenta que no tiene en cuenta esta cantidad para los reembolsos, devoluciones, anulación, etcetera.
 
 También puedes filtrar los resultados por si la adquisición se originó desde el cliente, la Tienda web o la versión del sistema operativo.
 

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 571697B7-6064-4C50-9A68-1374F2C3F931
 description: Aprende a usar el espacio de nombres Windows.Services.Store para implementar una versión de prueba de tu aplicación.
 title: Implementar una versión de prueba de la aplicación
 keywords: Windows 10, uwp, prueba, compras desde la aplicación, Windows.Services.Store
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 402d2c584732611d79a74fbc24e11f590e029171
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 50eced0042cf9c166a7c0c8f73305dec3c1df12d
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690101"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613366"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementar una versión de prueba de la aplicación
 

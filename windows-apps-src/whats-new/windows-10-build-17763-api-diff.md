@@ -1,6 +1,6 @@
 ---
 author: QuinnRadich
-title: Cambios en la API de 17763 de compilación de Windows 10
+title: Cambios en la API de Windows 10 compilación 17763
 description: Los desarrolladores pueden usar la siguiente lista para identificar los espacios de nombres nuevos o cambiados en Windows 10, compilación 17763
 keywords: Novedades, novedad, actualizaciones, Windows 10, más reciente, apis, octubre 17763,
 ms.author: quradic
@@ -10,17 +10,17 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aa3e586e82fc5c2da78cc201f772112699a9035
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567985"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611922"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Nuevas API en Windows 10 compilación 17763
 
 Espacios de nombres de API nuevos y actualizados que se han puesto a disposición para los desarrolladores en Windows 10, compilación 17763 (también conocida como la de 2018 octubre Update o versión 1809). A continuación encontrarás una lista de la documentación que se publicó y que incluye los espacios de nombres que se agregaron o se modificaron en esta versión.
 
-Para obtener información sobre las API que se agregaron en la versión pública anterior, consulta [Las nuevas API en la actualización de abril de Windows 10](windows-10-build-17134-api-diff.md).
+Para obtener información acerca de las API que se agregaron en la versión pública anterior, consulta [Las nuevas API en la actualización de abril de Windows 10](windows-10-build-17134-api-diff.md).
 
 ## <a name="windowsai"></a>Windows.AI
 

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 94B5B2E9-BAEE-4B7F-BAF1-DA4D491427D7
 description: Usa este método en la API de compra de Microsoft Store para obtener las suscripciones que un usuario determinado tiene derecho a usar.
 title: Obtener suscripciones para un usuario
-ms.author: mcleans
-ms.date: 03/16/2018
+ms.author: mhopkins
+ms.date: 07/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de compra de Microsoft Store, suscripciones
 ms.localizationpriority: medium
-ms.openlocfilehash: cebf4105d5e8b08f9b750f2a4938117dcd6fc084
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: c08964b991b0cecaef6d994d399ce97301a7e8e7
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664991"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612908"
 ---
 # <a name="get-subscriptions-for-a-user"></a>Obtener suscripciones para un usuario
 
@@ -118,6 +118,7 @@ Cada objeto de la matriz *items* contiene los siguientes valores.
 | autoRenew | booleano |  Indica si la suscripción está configurada para renovarse automáticamente al final del período de suscripción actual.   |
 | beneficiary | cadena |  El identificador del beneficiario del derecho que está asociado con esta suscripción.   |
 | expirationTime | cadena | La fecha y la hora a las que expirará la suscripción, en formato ISO8601. Este campo solo está disponible cuando la suscripción esté en determinados estados. El momento de expiración normalmente indica cuándo expira el estado actual. Por ejemplo, para una suscripción activa, la fecha de expiración indica cuándo se producirá la próxima renovación automática.    |
+| expirationTimeWithGrace | string | La fecha y hora que expirará la suscripción, incluido el período de gracia, en formato ISO 8601. Este valor indica cuándo el usuario perderán el acceso a la suscripción después de que se produjo un error de la suscripción a la renovación automática.    |
 | id | cadena |  El identificador de la suscripción. Usa este valor para indicar qué suscripción quieres modificar cuando llamas al método [cambiar el estado de facturación de la suscripción de un usuario](change-the-billing-state-of-a-subscription-for-a-user.md).    |
 | isTrial | booleano |  Indica si la suscripción es una versión de prueba.     |
 | lastModified | cadena |  La fecha y la hora de la última modificación de la suscripción, en formato ISO8601.      |

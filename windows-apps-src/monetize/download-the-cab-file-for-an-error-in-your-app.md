@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: ''
 description: Usa este método en la API de análisis de Microsoft Store para descargar el archivo .cab para un error de la aplicación.
 title: Descargar el archivo .cab para un error de la aplicación
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store analytics API, API de análisis de Microsoft Store, download CAB, descargar .cab
 ms.localizationpriority: medium
-ms.openlocfilehash: a74a72e1d02a73d2b930179d9d2cb99ea09c7c40
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 671c5c1b187ac48c12988a00d66acb366cae72f1
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662065"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612711"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a>Descargar el archivo .cab para un error de la aplicación
 
@@ -72,8 +72,8 @@ Este método devuelve un código de respuesta 302 (redirigir) y el encabezado **
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Informe de estado](../publish/health-report.md)
+* [Informe Estado](../publish/health-report.md)
 * [Acceder a los datos de análisis mediante los servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
-* [Obtener los datos del informe de errores](get-error-reporting-data.md)
+* [Obtener datos de informes de errores](get-error-reporting-data.md)
 * [Obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md)
 * [Obtener el seguimiento de la pila de un error en la aplicación](get-the-stack-trace-for-an-error-in-your-app.md)

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a45e89c63ec12cb7b77997eac741ebedc415c54
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571437"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610763"
 ---
 # <a name="alignment-margin-padding"></a>Alineación, margen, espaciado interno
 

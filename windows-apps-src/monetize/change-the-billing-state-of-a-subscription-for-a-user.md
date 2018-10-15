@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: F37C2CEC-9ED1-4F9E-883D-9FBB082504D4
 description: Usa este método en la API de compra de Microsoft Store para cambiar el estado de facturación de la suscripción de un usuario.
 title: Cambiar el estado de facturación de la suscripción de un usuario
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de compra de Microsoft Store, suscripciones
 ms.localizationpriority: medium
-ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 7e6a654897efba1fa66350abaddbacf9791bbbcc
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564952"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615352"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Cambiar el estado de facturación de la suscripción de un usuario
 
@@ -57,7 +57,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Nombre         | Tipo  | Descripción   |  Requerido  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | cadena | El identificador de la suscripción que quieres cambiar. Para obtener este identificador, llama al método [obtener suscripciones para un usuario](get-subscriptions-for-a-user.md) , identifica la entrada del cuerpo de respuesta que representa el complemento de suscripción que quieres cambiar y usa el valor del campo de **Id.** de la entrada.     | Sí      |
+| recurrenceId | cadena | El identificador de la suscripción que quieres cambiar. Para obtener este identificador, llama al método [obtener suscripciones para un usuario](get-subscriptions-for-a-user.md) , identifica la entrada del cuerpo de respuesta que representa el complemento de suscripción que quieres cambiar y usa el valor del campo **Id.** de la entrada.     | Sí      |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud

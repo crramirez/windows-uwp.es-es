@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: F94AF8F6-0742-4A3F-938E-177472F96C00
 description: Usa este método en la API de envío de Microsoft Store para confirmar un envío de paquete piloto nuevo o actualizado al Centro de desarrollo de Windows.
 title: Confirmar un envío de paquete piloto
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envío de MicrosoftStore, confirmar envío piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 60eac407d8f5ad82b9984b5ea3bad36261579ead
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: e3a52bc3a7a815bfde8a4fa8c12b73ab8932e2df
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815840"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610313"
 ---
 # <a name="commit-a-package-flight-submission"></a>Confirmar un envío de paquete piloto
 
@@ -83,7 +83,7 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | cadena  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicación</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>Error de lanz.</li></ul>  |
+| status           | string  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicación</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>Error de lanz.</li></ul>  |
 
 
 ## <a name="error-codes"></a>Códigos de error
@@ -101,7 +101,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de paquetes piloto](manage-flight-submissions.md)
-* [Get a package flight submission (Obtener un envío de paquete piloto)](get-a-flight-submission.md)
+* [Obtener un envío de paquete piloto](get-a-flight-submission.md)
 * [Crear un envío de paquete piloto](create-a-flight-submission.md)
 * [Actualizar un envío de paquete piloto](update-a-flight-submission.md)
 * [Eliminación de un envío de paquete piloto](delete-a-flight-submission.md)

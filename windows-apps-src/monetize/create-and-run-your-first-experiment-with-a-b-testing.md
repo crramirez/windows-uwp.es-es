@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: In this walkthrough, you will create, run, and manage your first experiment with A/B testing.
 title: Crear y ejecutar tu primer experimento
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
 ms.localizationpriority: medium
-ms.openlocfilehash: dfd19034a8bf775e9a317d1ddb4f54223eb4a5ed
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: ac97b8d34ec0f5dbfc42022fc54911f04f09ba3b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "476911"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613882"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Crear y ejecutar tu primer experimento
 
@@ -48,7 +48,7 @@ Para seguir con este tutorial, debes tener una cuenta del Centro de desarrollo d
 
 ## <a name="code-the-experiment-in-your-app"></a>Codificación del experimento en la aplicación
 
-1. En Visual Studio, cree un nuevo proyecto de plataforma Universal de Windows mediante Visual C#. Nombra este proyecto **SampleExperiment**.
+1. En Visual Studio, crea un nuevo proyecto de plataforma Universal de Windows con Visual C#. Nombra este proyecto **SampleExperiment**.
 2. En el Explorador de soluciones, expande el nodo del proyecto, haz clic con el botón derecho en **Referencias** y en **Agregar referencia**.
 3. En **Administrador de referencias**, expande **Windows Universal** y haz clic en **Extensiones**.
 4. En la lista de los SDK, selecciona la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar**.

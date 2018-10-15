@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 89178FD9-850B-462F-9016-1AD86D1F6F7F
 description: Aprende a usar el espacio de nombres Windows.Services.Store para obtener información del producto relacionada con la Store para la aplicación actual o uno de sus complementos.
 title: Obtener información de producto para aplicaciones y complementos
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dd8ab9cb86bfeb645f8d46e313c78c681901508
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 417478df3b82967656d2210b3b532c5341f1fb2e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689291"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612436"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a>Obtener información de producto para aplicaciones y complementos
 
@@ -30,7 +30,7 @@ Para una aplicación de ejemplo completa, consulta la [muestra de Microsoft Stor
 
 Estos ejemplos cumplen los siguientes requisitos:
 * Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o un versión posterior.
-* Has [creado un envío de aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) en el Panel del Centro de desarrollo de Windows, y esta aplicación está publicada y disponible en Microsoft Store. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en Microsoft Store mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
+* Has [creado un envío de aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) en el panel del Centro de desarrollo de Windows, y esta aplicación está publicada y disponible en la Store. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Store mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
 * Si quieres obtener información de producto de un complemento de la aplicación, también debes [crear el complemento en el panel del Centro de desarrollo](../publish/add-on-submissions.md).
 
 El código de estos ejemplos supone que:

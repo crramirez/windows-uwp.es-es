@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567925"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614848"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -29,13 +29,13 @@ Cosas vale la pena llamadas en primer plano:
 
 ## <a name="whats-new-for-enterprise-applications"></a>Novedades para las aplicaciones empresariales
 
-Hay algunas herramientas, bibliotecas y funcionalidades que se han creado bastante recientemente.
+Te mostramos algunas herramientas, las bibliotecas y funcionalidades que se han creado bastante recientemente.
 
 > [!div class="checklist"]
 > * [Windows Template Studio](#template-studio)
 > * [Controles para crear interfaces de usuario de estilo de escritorio](#desktop-style-UI)
 > * [Controles para admitir escenarios empresariales](#enterprise)
-> * [Biblioteca de la interfaz de usuario de Windows](#UI-library)
+> * [Biblioteca de interfaz de usuario de Windows](#UI-library)
 > * [Controles de UWP en aplicaciones de escritorio](#xaml-islands)
 > * [.NET Standard 2.0](#standard)
 > * [Conectividad de SQL Server](#sql-server)
@@ -57,7 +57,7 @@ Consulta [Windows Template Studio](https://marketplace.visualstudio.com/items?it
 
 Hemos publicamos nuevos controles de XAML de UWP que rellenar el espacio entre una aplicación de escritorio tradicional la interfaz de usuario y una UI de UWP.
 
-Por ejemplo, los nuevos controles de [barra de menús](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [botón de división](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)y [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) ofrecen maneras más flexible para exponer los comandos y el [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) vamos al usuario escribe los valores que no se muestran en una lista predefinida de opciones.
+Por ejemplo, los nuevos controles de [barra de menús](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [botón de división](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)y [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) ofrecen maneras más flexible para exponer comandos y el [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) vamos al usuario escribe los valores que no se mencionan en una lista predefinida de opciones.
 
 ![Barra de menús](images/menu-bar.png)
 
@@ -72,11 +72,11 @@ La [vista de árbol](https://docs.microsoft.com/windows/uwp/design/controls-and-
 ![Control DataGrid](images/DataGrid.gif)
 
 
-### <a name="windows-ui-library"></a>Biblioteca de la interfaz de usuario de Windows
+### <a name="windows-ui-library"></a>Biblioteca de interfaz de usuario de Windows
 
 La biblioteca de la interfaz de usuario de Windows es un conjunto de paquetes de NuGet que proporcionan controles y otros elementos de interfaz de usuario para aplicaciones para UWP. También permite la compatibilidad de nivel inferior con versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tengan el sistema operativo más reciente.
 
-![Biblioteca de la interfaz de usuario de Windows](images/win-ui.png)
+![Biblioteca de interfaz de usuario de Windows](images/win-ui.png)
 
 Consulta la [Biblioteca de la interfaz de usuario de Windows (versión preliminar)](https://docs.microsoft.com/en-us/uwp/toolkits/winui/).
 
@@ -86,13 +86,13 @@ Consulta la [Biblioteca de la interfaz de usuario de Windows (versión prelimina
 
 Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio de WPF, Windows Forms y Win32 de C++. Esto significa que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles UWP, como entrada de lápiz de Windows y los controles que admiten el sistema Fluent Design. Esta característica se denomina Islas XAML.
 
-Consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
+Ver [los controles UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
 
 <a id="standard" />
 
 ### <a name="net-standard-20"></a>.NET Standard 2.0
 
-.NET estándar incluye más de 20 000 más API de .NET estándar 1.x. Esto facilita mucho migrar las bibliotecas de .NET Framework existentes y, a continuación, usarlos entre diferentes aplicaciones de .NET incluida tu aplicación para UWP.
+.NET estándar incluye más de 20 000 más API de .NET estándar 1.x. Esto facilita mucho migrar las bibliotecas de .NET Framework existentes y, a continuación, usarlos entre diferentes aplicaciones de .NET incluida la aplicación para UWP.
 
 ![NET estándar](images/dot-net-standard-project-template.png)
 
@@ -110,9 +110,9 @@ Consulta [Usar una base de datos de SQL Server en una aplicación para UWP](http
 
 ### <a name="msix-deployment"></a>Implementación de MSIX
 
-MSIX es el formato de paquete de aplicación de Windows que proporciona una experiencia de empaquetado modernos a todas las aplicaciones de Windows. El formato del paquete MSIX conserva la funcionalidad de los paquetes de aplicación existentes e instalar archivos además de la habilitación de características nuevas de empaquetado e implementación modernas a las aplicaciones de Win32, WPF y Windows Forms.
+MSIX es el formato de paquete de aplicación de Windows que proporciona una experiencia moderna de empaquetado para todas las aplicaciones de Windows. El formato del paquete MSIX conserva la funcionalidad de los paquetes de aplicación existentes e instalar archivos además de la habilitación de características de empaquetado e implementación nuevas, modernas a las aplicaciones de Win32, WPF y Windows Forms.
 
-MSIX es un formato de empaquetado integrado para que sea seguro y fiable, en función de una combinación de MSI, AppX, tecnologías de instalación de App-V y ClickOnce.
+MSIX es un formato de empaquetado integrado para que sea seguro y fiable, en función de una combinación de MSI, AppX, las tecnologías de instalación de App-V y ClickOnce.
 
 ![Icono MSIX](images/WinUI_MSIX_2col_740x417.png)
 
@@ -175,7 +175,7 @@ Hoy en día, muchos usuarios llevan su teléfono o tableta personal al trabajo, 
 
 ## <a name="deployment"></a>Implementación
 
-Tienes varias opciones para distribuir aplicaciones a los usuarios de la organización. Puedes usar Microsoft Store para empresas, administración de dispositivos móviles existentes, o bien puedes transferir localmente aplicaciones en dispositivos. Puedes también realizar las aplicaciones disponibles en general pública publicándolas en la Microsoft Store.
+Tienes varias opciones para distribuir aplicaciones a los usuarios de la organización. Puedes usar Microsoft Store para empresas, administración de dispositivos móviles existentes, o bien puedes transferir localmente aplicaciones en dispositivos. Puedes también realizar las aplicaciones disponibles en general pública publicándolas en Microsoft Store.
 
 | Tema | Descripción |
 |-------|-------------|
@@ -187,12 +187,12 @@ Tienes varias opciones para distribuir aplicaciones a los usuarios de la organiz
 
 Texto de introducción se incluye aquí.
 
-Acción: hablar con Josh o Karl para obtener más ejemplos de centrado en la empresa juntos.
+Acción: hablar Josh o Karl para obtener más ejemplos de centrado en la empresa juntos.
 
 | Tema |  Descripción |
 |------ |--------------|
 | [Muestra de inventario de VanArsdel](https://github.com/Microsoft/InventorySample) | Una aplicación de Windows 10 de muestra (con la plataforma Universal de Windows) se centra en escenarios de línea de negocio, que muestra cómo usar las funciones más recientes de Windows en aplicaciones de escritorio. La muestra se basa en la creación y administración de clientes, pedidos y productos de la empresa ficticia VanArsdel.
-Destaca MVVM, base de datos SQL, Entity Framework. Lista de otras personas.|
+Destaca MVVM, base de datos SQL, Entity Framework. Lista de otros usuarios.|
 
 ## <a name="patterns-and-practices"></a>Patrones y prácticas
 

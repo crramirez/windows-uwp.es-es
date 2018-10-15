@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 24C5F796-5FB8-4B5D-B428-C3154B3098BD
 description: Usa este método en la API de envío de Microsoft Store para actualizar un envío ya existente de un paquete piloto.
 title: Actualizar un envío de paquete piloto
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submission, envío piloto, update, actualizar
 ms.localizationpriority: medium
-ms.openlocfilehash: fa8f8c90257f78d46afe7d4dbe4b261ab88501fc
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 467dae77a7815dba03ce558c7e29e3eea0036d09
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816440"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615596"
 ---
 # <a name="update-a-package-flight-submission"></a>Actualizar un envío de paquete piloto
 
@@ -158,9 +158,9 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 ## <a name="related-topics"></a>Artículos relacionados
 
-* [Creación y administración de envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Administración de envíos de paquetes piloto](manage-flight-submissions.md)
-* [Get a package flight submission (Obtener un envío de paquete piloto)](get-a-flight-submission.md)
+* [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Administrar envíos de paquetes piloto](manage-flight-submissions.md)
+* [Obtener un envío de paquete piloto](get-a-flight-submission.md)
 * [Crear un envío de paquete piloto](create-a-flight-submission.md)
 * [Confirmar un envío de paquete piloto](commit-a-flight-submission.md)
 * [Delete a package flight submission (Eliminar un envío de paquete piloto)](delete-a-flight-submission.md)
