@@ -15,11 +15,11 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 518ce49ddb631e3e914a6c7662b4e74de247c29c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563822"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624273"
 ---
 # <a name="combo-box"></a>Cuadro combinado
 
@@ -111,11 +111,11 @@ Puedes obtener o establecer el cuadro combinado seleccionado el elemento mediant
 Para obtener el valor de una propiedad determinada del elemento de datos seleccionado, puedes usar la propiedad [SelectedValue](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedvalue) . En este caso, Establece el [SelectedValuePath](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedvaluepath) para especificar qué propiedad del elemento seleccionado para obtener el valor.
 
 > [!TIP]
-> Si estableces SelectedItem o SelectedIndex para indicar la selección predeterminada, se produce una excepción si se establece la propiedad antes de que se rellena la colección de elementos del cuadro combinado. A menos que definir los elementos en XAML, es mejor controlar el evento Loaded del cuadro combinado y establecer SelectedItem o SelectedIndex en el controlador de eventos cargados.
+> Si estableces SelectedItem o SelectedIndex para indicar la selección predeterminada, se produce una excepción si se establece la propiedad antes de que se rellena la colección de elementos del cuadro combinado. A menos que defina los elementos en XAML, es mejor controlar el evento Loaded del cuadro combinado y establecer SelectedItem o SelectedIndex en el controlador de eventos cargados.
 
 Puedes enlazar a estas propiedades en XAML o controlar el evento [SelectionChanged](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) para responder a cambios de selección.
 
-En caso de que el código de controlador, puedes obtener el elemento seleccionado desde la propiedad [SelectionChangedEventArgs.AddedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.addeditems) . Puedes obtener el elemento seleccionado previamente (si existe) de la propiedad [SelectionChangedEventArgs.RemovedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.removeditems) . Las colecciones AddedItems y RemovedItems contienen solo 1 artículo porque cuadro combinado no admite la selección múltiple.
+En caso de código del controlador, puedes obtener el elemento seleccionado desde la propiedad [SelectionChangedEventArgs.AddedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.addeditems) . Puedes obtener el elemento seleccionado previamente (si existe) de la propiedad [SelectionChangedEventArgs.RemovedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.removeditems) . Las colecciones AddedItems y RemovedItems contienen solo 1 artículo porque cuadro combinado no admite la selección múltiple.
 
 En este ejemplo se muestra cómo controlar el evento SelectionChanged y también cómo enlazar al elemento seleccionado.
 
@@ -163,23 +163,23 @@ private void ColorComboBox_SelectionChanged(object sender, SelectionChangedEvent
 }
 ```
 
-#### <a name="selectionchanged-and-keyboard-navigation"></a>Navegación SelectionChanged y de teclado
+#### <a name="selectionchanged-and-keyboard-navigation"></a>Navegación de teclado y SelectionChanged
 
-De manera predeterminada, el evento SelectionChanged se produce cuando un usuario hace clic, pulsa o presiona la tecla ENTRAR en un elemento en la lista para confirmar la selección y se cierra el cuadro combinado. Selección no cambia cuando el usuario navega a la lista del cuadro combinado abierto con las teclas de dirección del teclado.
+De manera predeterminada, el evento SelectionChanged se produce cuando un usuario hace clic en, pulsa o presiona la tecla ENTRAR en un elemento en la lista para confirmar la selección y cierra el cuadro combinado. Selección no cambia cuando el usuario navega a la lista del cuadro combinado abierto con las teclas de dirección del teclado.
 
-Para crear un cuadro combinado que "se actualice" mientras el usuario está navegando a la lista Abrir con las teclas de dirección (como una fuente selección desplegable), establece [SelectionChangedTrigger](/uwp/api/windows.ui.xaml.controls.combobox.selectionchangedtrigger) en [siempre](/uwp/api/windows.ui.xaml.controls.comboboxselectionchangedtrigger). Esto hace que el evento SelectionChanged cuando cambia el foco a otro elemento de la lista abierta.
+Para crear un cuadro combinado que "se actualice" mientras el usuario está navegando a la lista Abrir con las teclas de dirección (por ejemplo, una fuente selección desplegable), establece [SelectionChangedTrigger](/uwp/api/windows.ui.xaml.controls.combobox.selectionchangedtrigger) en [siempre](/uwp/api/windows.ui.xaml.controls.comboboxselectionchangedtrigger). Esto hace que el evento SelectionChanged cuando cambia el foco a otro elemento de la lista abierta.
 
 #### <a name="selected-item-behavior-change"></a>Cambio de comportamiento del elemento seleccionado
 
 En RS5 (versión del SDK de Windows 10.0.NNNNN.0 (Windows 10, versión aamm), el comportamiento de los elementos seleccionados se actualiza para admitir los cuadros combinados editable.
 
-Antes de RS5, el valor de la propiedad SelectedItem (y por lo tanto, SelectedValue y SelectedIndex) se necesita para estar en la colección de elementos del cuadro combinado. En el ejemplo anterior, establecer `colorComboBox.SelectedItem = "Pink"` da como resultado:
+Antes de RS5, el valor de la propiedad SelectedItem (y por lo tanto, SelectedValue y SelectedIndex) se necesita para estar en la colección de elementos del cuadro combinado. Con el ejemplo anterior, establecer `colorComboBox.SelectedItem = "Pink"` da como resultado:
 
 - SelectedItem = null
 - SelectedValue = null
 - SelectedIndex = -1
 
-En RS5 y versiones posteriores, el valor de la propiedad SelectedItem (y por lo tanto, SelectedValue y SelectedIndex) no es necesario para estar en la colección de elementos del cuadro combinado. En el ejemplo anterior, establecer `colorComboBox.SelectedItem = "Pink"` da como resultado:
+En RS5 y versiones posteriores, el valor de la propiedad SelectedItem (y por lo tanto, SelectedValue y SelectedIndex) no es necesario para estar en la colección de elementos del cuadro combinado. Con el ejemplo anterior, establecer `colorComboBox.SelectedItem = "Pink"` da como resultado:
 
 - SelectedItem = rosa
 - SelectedValue = rosa
@@ -187,24 +187,24 @@ En RS5 y versiones posteriores, el valor de la propiedad SelectedItem (y por lo 
 
 ### <a name="text-search"></a>Búsqueda de texto
 
-Los cuadros combinados admiten automáticamente la búsqueda dentro de sus colecciones. A medida que los usuarios escriben caracteres en un teclado físico mientras se centran en un cuadro combinado abierto o cerrado, los candidatos que coincidan con la cadena del usuario se incluyen en la vista. Esta funcionalidad es especialmente útil cuando se navega en una lista larga. Por ejemplo, cuando se interactúa con una lista desplegable que contiene una lista de Estados, los usuarios pueden presionar la tecla "w" para mostrar a "Washington" para la selección rápida. La búsqueda de texto no distingue mayúsculas de minúsculas.
+Los cuadros combinados admiten automáticamente la búsqueda dentro de sus colecciones. A medida que los usuarios escriben caracteres en un teclado físico mientras se centran en un cuadro combinado abierto o cerrado, los candidatos que coincidan con la cadena del usuario se incluyen en la vista. Esta funcionalidad es especialmente útil cuando se navega en una lista larga. Por ejemplo, cuando se interactúa con una lista desplegable que contiene una lista de Estados, los usuarios pueden presionar la tecla "w" para mostrar a "Washington" en la vista para la selección rápida. La búsqueda de texto no distingue mayúsculas de minúsculas.
 
 Puedes establecer la propiedad [IsTextSearchEnabled](/uwp/api/windows.ui.xaml.controls.combobox.istextsearchenabled) en **false** para deshabilitar esta funcionalidad.
 
 ## <a name="make-a-combo-box-editable"></a>Hacer que un cuadro combinado editable
 
 > [!IMPORTANT]
-> Esta característica requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/).
+> Esta característica requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/).
 
-De manera predeterminada, un cuadro combinado permite al usuario seleccionar de una lista predefinida de opciones. Sin embargo, hay casos donde la lista contiene solo un subconjunto de los valores válidos y el usuario debe poder especificar otros valores que no se muestran. Para admitir esto, puedes hacer que el cuadro combinado editable.
+De manera predeterminada, un cuadro combinado permite al usuario seleccionar de una lista predefinida de opciones. Sin embargo, hay casos donde la lista contiene solo un subconjunto de los valores válidos y el usuario debe poder especificar otros valores que no se mencionan. Para admitir esto, puedes hacer que el cuadro combinado editable.
 
 Para hacer que un cuadro combinado editable, Establece la propiedad [IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable) en **true**. A continuación, controla el evento de [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) para que funcione con el valor especificado por el usuario.
 
-De manera predeterminada, el valor de SelectedItem se actualiza cuando el usuario confirma texto personalizado. Puedes invalidar este comportamiento estableciendo **Handled** en **true** en los argumentos del evento de TextSubmitted. Cuando el evento se marca como controlados, el cuadro combinado no te llevará realizar ninguna acción adicional después del evento y permanecerá en el estado de edición. No se actualizarán SelectedItem.
+De manera predeterminada, el valor de SelectedItem se actualiza cuando el usuario confirma texto personalizado. Puedes invalidar este comportamiento estableciendo **Handled** en **true** en los argumentos del evento de TextSubmitted. Cuando el evento se marquen como controlados, el cuadro combinado no te llevará realizar ninguna acción adicional después del evento y permanecerá en el estado de edición. No se actualizarán SelectedItem.
 
-En este ejemplo se muestra un cuadro combinado editable simple. La lista contenga cadenas sencillas y se usa cualquier valor especificado por el usuario que escriba.
+En este ejemplo se muestra un cuadro combinado editable simple. La lista contenga cadenas sencillas y se usa cualquier valor introducido por el usuario que escriba.
 
-Un selector de "usados recientemente nombres" permite al usuario escribir cadenas personalizadas. La lista de 'RecentlyUsedNames' contiene algunos valores de que el usuario puede elegir, pero el usuario también puede agregar un nuevo valor personalizado. La propiedad 'CurrentName' representa el nombre introducido actualmente.
+Un selector de "usados recientemente nombres" permite al usuario escribir cadenas personalizadas. La lista de 'RecentlyUsedNames' contiene algunos valores que el usuario puede elegir, pero el usuario también puede agregar un nuevo valor personalizado. La propiedad 'CurrentName' representa el nombre introducido actualmente.
 
 ```xaml
 <ComboBox IsEditable="true"
@@ -212,7 +212,7 @@ Un selector de "usados recientemente nombres" permite al usuario escribir cadena
           SelectedItem="{x:Bind CurrentName, Mode=TwoWay}"/>
 ```
 
-### <a name="text-submitted"></a>Texto enviado
+### <a name="text-submitted"></a>Texto presentado
 
 Puedes controlar el evento [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) para trabajar con el valor especificado por el usuario. En caso de que el controlador, por lo general, se validará que el valor especificado por el usuario es válido, a continuación, usa el valor de la aplicación. Según la situación, también puede agregar el valor a la lista del cuadro combinado de opciones para uso futuro.
 
@@ -226,11 +226,11 @@ El evento TextSubmitted no ocurre si el usuario escribe texto y, a continuación
 
 ### <a name="sample---validate-input-and-use-locally"></a>Ejemplo: validar la entrada y usar localmente
 
-En este examle un selector de tamaño de fuente contiene un conjunto de valores correspondientes a la rampa de tamaño de fuente, pero el usuario puede escribir los tamaños de fuente que no están en la lista.
+En este examle, un selector de tamaño de fuente contiene un conjunto de valores correspondientes a la rampa de tamaño de fuente, pero el usuario puede escribir los tamaños de fuentes que no están en la lista.
 
 Cuando el usuario agrega un valor que no está en la lista, las actualizaciones de tamaño de fuente, pero el valor no se agrega a la lista de tamaños de fuente.
 
-Si el valor introducido recién no es válido, que puedes usar el valor SelectedValue para revertir la propiedad de texto a la última conoce buen valor.
+Si el valor introducido recientemente no es válido, que puedes usar el SelectedValue para volver a la última de la propiedad Text conoce buen valor.
 
 ```xaml
 <ComboBox x:Name="fontSizeComboBox"
@@ -259,7 +259,7 @@ private void FontSizeComboBox_TextSubmitted(ComboBox sender, ComboBoxTextSubmitt
 
 ### <a name="sample---validate-input-and-add-to-list"></a>Ejemplo: validar la entrada y agregar a la lista
 
-Aquí, un selector de color favorito"" contiene los colores favoritos más comunes (rojo, azul, verde, naranja), pero el usuario puede escribir un color favorito que no está en la lista. Cuando el usuario agrega un color válido (como rosa), el color recién introducido es agregado a la lista y se establece como el activo "color favorito".
+Aquí, un selector de color favorito"" contiene los colores favoritos más comunes (rojo, azul, verde, naranja), pero el usuario puede especificar un color favorito que no está en la lista. Cuando el usuario agrega un color válido (como rosa), el color recién escrito es agregado a la lista y se establece como el activo "color favorito".
 
 ```xaml
 <ComboBox x:Name="favoriteColorComboBox"

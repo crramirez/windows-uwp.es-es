@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, proyecto rome, tarea en segundo plano, servicio de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 72a8a02d14a4fa9287c987150a526745b294b65f
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565245"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624253"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>Comunicarse con un servicio de aplicaciones remoto
 
@@ -44,7 +44,7 @@ Junto al elemento **AppService** , agrega el atributo **SupportsRemoteSystems** 
 ...
 ```
 
-Para usar los elementos de este espacio de nombres **uap3** , debes agregar la definición de espacio de nombres en la parte superior del archivo de manifiesto si todavía no existe.
+Para poder usar los elementos en este espacio de nombres **uap3** , debes agregar la definición de espacio de nombres en la parte superior del archivo de manifiesto si todavía no existe.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

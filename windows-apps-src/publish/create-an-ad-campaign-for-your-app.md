@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, anuncio, campaña, promover
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c7e7c1e2cd9a2ca083cef5fed27a9067cf1e7e7
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564628"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623623"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para la aplicación
 
@@ -54,7 +54,7 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
     * Si has recibido un cupón de un representante de Microsoft para pagar una campaña publicitaria, haz clic en **Utilizar un cupón**, escribe el código del cupón y haz clic en **Aplicar** para aplicar el cupón a la campaña.
 
-    Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Audiencia**. Este paso no está disponible para las campañas de anuncios internos, ya que se ejecutan solo en tus aplicaciones.
+    Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Audiencia**. Este paso no está disponible para las campañas de anuncios internos, ya que se ejecutan solo en tus propias aplicaciones.
 
 9.  En la página **Audiencia**, mostraremos la configuración de audiencia que recomendamos para la campaña. También puedes ajustar esta información:
     * **Países/regiones**: elige hasta 5 países o regiones en los que quieras que aparezca tu anuncio. Para obtener una lista de los países o regiones admitidos, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md#where-will-my-ad-appear).
@@ -71,7 +71,7 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
     Esta sección también muestra un gráfico de **Alcance estimado**. Este gráfico muestra la audiencia a la que puedes esperar llegar con tus selecciones actuales de destinatarios como un porcentaje de todos los usuarios de aplicaciones habilitadas para anuncios de Windows en los mercados seleccionados.
 
-10.  Si elegiste el objetivo de campaña **Incrementar el compromiso con la aplicación**, puedes seleccionar uno de los segmentos de clientes como destino. Los anuncios creados con esta campaña solo se mostrarán a los clientes que estén incluidos en el segmento. Solo se puede seleccionar un segmento por campaña publicitaria. Para información sobre los segmentos, consulta [Crear segmentos de clientes](create-customer-segments.md). Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Diseño de anuncios**. Este paso no está disponible para las campañas de anuncios internos, porque se ejecutan solo en tus aplicaciones.
+10.  Si elegiste el objetivo de campaña **Incrementar el compromiso con la aplicación**, puedes seleccionar uno de los segmentos de clientes como destino. Los anuncios creados con esta campaña solo se mostrarán a los clientes que estén incluidos en el segmento. Solo se puede seleccionar un segmento por campaña publicitaria. Para información sobre los segmentos, consulta [Crear segmentos de clientes](create-customer-segments.md). Cuando hayas terminado, haz clic en **Guardar y siguiente** para continuar al paso **Diseño de anuncios**. Este paso no está disponible para las campañas de anuncios internos, porque se ejecutan solo en tus propias aplicaciones.
 
 11.  En la página **Diseño de anuncios**, elige una de estas opciones:
     * **Anuncio generado automáticamente**. Esta es la opción predeterminada y permite crear un anuncio de nuestras plantillas predeterminadas. Puedes realizar selecciones para personalizar el contenido de tu anuncio y obtendremos una vista previa del aspecto de tu anuncio según tus elecciones (se actualiza automáticamente a medida que realizas las selecciones).

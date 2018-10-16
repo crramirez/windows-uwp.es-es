@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
 description: Usa este método en la API de envío de Microsoft Store para crear un nuevo envío de paquetes piloto para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows.
 title: Crear un envío de paquete piloto
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create flight submission, crear envío piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 807fef9170af5c18561d2e1ee0160b9029f77514
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 87e544c2d9d04e62f324fe14cd7aab3e1b7ee500
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664445"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624403"
 ---
 # <a name="create-a-package-flight-submission"></a>Crear un envío de paquete piloto
 
@@ -127,7 +127,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage package flight submissions (Administrar envíos de paquetes piloto)](manage-flight-submissions.md)
+* [Administrar envíos de paquetes piloto](manage-flight-submissions.md)
 * [Obtener un envío de paquete piloto](get-a-flight-submission.md)
 * [Confirmación de un envío de paquete piloto](commit-a-flight-submission.md)
 * [Actualizar un envío de paquete piloto](update-a-flight-submission.md)

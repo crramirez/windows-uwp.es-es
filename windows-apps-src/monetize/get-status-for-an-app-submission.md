@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 039B8810-5C9E-4DB9-A6AF-33E7401311FF
 description: Usa este método en la API de envío de Microsoft Store para obtener el estado de un envío de aplicación.
 title: Obtener el estado de un envío de aplicación
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submission, envío de aplicación, status, estado
 ms.localizationpriority: medium
-ms.openlocfilehash: 546b634333d568482cc41d72bb8985b1070c1ff7
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 7d14ce17f4e6dff08351ca0764f3b6a173550426
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817100"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624153"
 ---
 # <a name="get-the-status-of-an-app-submission"></a>Obtener el estado de un envío de aplicación
 
@@ -26,7 +26,7 @@ Usa este método en la API de envío de Microsoft Store para obtener el estado d
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
@@ -44,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 | Authorization | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 
-### <a name="request-parameters"></a>Parámetros de la solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -84,7 +84,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada co
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | cadena  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicación</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
+| status           | string  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicación</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | objeto  |  Contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores. Para obtener más información, consulta [Recurso de detalles de estado](manage-app-submissions.md#status-details-object). |
 
 
@@ -98,11 +98,11 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | 409  | La aplicación usa una característica del panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener un envío de aplicación](get-an-app-submission.md)
-* [Create an app submission (Crear un envío de aplicación)](create-an-app-submission.md)
+* [Crear un envío de aplicación](create-an-app-submission.md)
 * [Confirmar un envío de aplicación](commit-an-app-submission.md)
 * [Actualizar un envío de aplicación](update-an-app-submission.md)
 * [Eliminar un envío de aplicación](delete-an-app-submission.md)

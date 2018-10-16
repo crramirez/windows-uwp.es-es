@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Usa este método en la API de análisis de Microsoft Store para obtener datos de uso simultáneo de Xbox Live.
 title: Obtener datos de uso simultáneo de Xbox Live
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, concurrent usage, uso simultáneo
 ms.localizationpriority: medium
-ms.openlocfilehash: 47e9a23ba046e70a4d755a3ac9dc1bbf4d62f307
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 0853d3fce7a3af7539cce26229942f2bc31cb1a0
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976180"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623827"
 ---
 # <a name="get-xbox-live-concurrent-usage-data"></a>Obtener datos de uso simultáneo de Xbox Live
 

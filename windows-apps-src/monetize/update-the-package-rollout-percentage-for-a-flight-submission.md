@@ -1,8 +1,8 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Usa este método en la API de envío de Microsoft Store para actualizar el porcentaje de lanzamiento de paquete para un envío de paquete piloto.
 title: Actualizar el porcentaje de lanzamiento de un envío piloto
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, package rollout, lanzamiento de paquete, flight submission, envío piloto, update, actualizar, percentage, porcentaje
 ms.assetid: ee9aa223-e945-4c11-b430-1f4b1e559743
 ms.localizationpriority: medium
-ms.openlocfilehash: f028e1632eb0a330f9d4b282aa3f8968eff647de
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 6cd360f4c4aac0e628699e52534ee3e2f42e49d4
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815980"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623784"
 ---
 # <a name="update-the-rollout-percentage-for-a-flight-submission"></a>Actualizar el porcentaje de lanzamiento de un envío piloto
 
@@ -93,7 +93,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | 409  | Este código indica uno de los siguientes errores:<br/><br/><ul><li>El envío no está en un estado válido para la operación de lanzamiento gradual (antes de llamar a este método, se debe publicar el envío y se debe establecer el valor [packageRolloutStatus](manage-flight-submissions.md#package-rollout-object) en **PackageRolloutInProgress**).</li><li>El envío no pertenece a la aplicación especificada.</li><li>La aplicación usa una característica del panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).</li></ul> |   
 
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Lanzamiento gradual del paquete](../publish/gradual-package-rollout.md)
 * [Administrar envíos de paquete piloto mediante la API de envío de Microsoft Store](manage-flight-submissions.md)

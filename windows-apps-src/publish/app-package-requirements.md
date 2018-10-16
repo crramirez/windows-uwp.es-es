@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, requisitos del paquete, paquetes, formato del paquete, versión compatible, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: f3e294fdf5a9b2d98f09d839fa62499b556de3a5
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563512"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623738"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
@@ -41,7 +41,7 @@ No es necesario que los paquetes de la aplicación estén firmados con un certif
 
 ### <a name="app-bundles"></a>Paquetes de aplicaciones
 
-Las aplicaciones para UWP, Visual Studio puede generar un lote de aplicaciones (.msixbundle o .appxbundle) para reducir el tamaño de la aplicación que los usuarios descargar. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
+Las aplicaciones para UWP, Visual Studio puede generar un lote de aplicaciones (.msixbundle o .appxbundle) para reducir el tamaño de la aplicación que descargarán los usuarios. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
 
 > [!NOTE]
 > Un paquete de aplicaciones puede contener tus paquetes para todas las arquitecturas.
@@ -73,7 +73,7 @@ Los paquetes de la aplicación deben cumplir con estos requisitos.
 
 | Propiedad del paquete de la aplicación | Requisito                                                          |
 |----------------------|----------------------------------------------------------------------|
-| Tamaño del paquete         | .msixbundle o appxbundle: 25 GB como máximo por paquete <br>.msix o .appx paquetes destinados a Windows 10:25 GB como máximo por paquete<br>Paquetes .appx destinados a Windows8.1: 8 GB como máximo por paquete <br> Paquetes .appx destinados a Windows8: 2 GB como máximo por paquete <br> Paquetes .appx destinados a WindowsPhone 8.1: 4 GB como máximo por paquete <br> Paquetes .xap: 1 GB como máximo por paquete                                                                           |
+| Tamaño del paquete         | .msixbundle o appxbundle: 25 GB como máximo por paquete <br>.msix o .appx de los paquetes destinados a Windows 10:25 GB como máximo por paquete<br>Paquetes .appx destinados a Windows8.1: 8 GB como máximo por paquete <br> Paquetes .appx destinados a Windows8: 2 GB como máximo por paquete <br> Paquetes .appx destinados a WindowsPhone 8.1: 4 GB como máximo por paquete <br> Paquetes .xap: 1 GB como máximo por paquete                                                                           |
 | Hash de asignación de bloque     | Algoritmo SHA2-256                                                   |
 
 

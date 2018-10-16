@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: Usa este método en la API de colecciones de Microsoft Store para notificar un producto consumible como completado para un cliente determinado. Para que un usuario pueda volver a comprar un producto consumible, la aplicación o el servicio debe notificar el producto consumible como completado para dicho usuario.
 title: Notificar productos consumibles como completados
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, completar, consumible, Microsoft Store collection API, fulfill, consumable
 ms.localizationpriority: medium
-ms.openlocfilehash: cd3b060961271d834a165a8cc8fa4ca8beba047c
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 2cbacd35a25e8eaf9673d118fcbece835572e289
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690111"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623934"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Notificar productos consumibles como completados
 

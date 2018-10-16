@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Usa la API de análisis de Microsoft Store para recuperar datos de análisis mediante programación para las aplicaciones que se registran en tu cuenta del Centro de desarrollo de Windows o la de tu organización.
 title: Acceder a los datos de análisis mediante los servicios de la Store
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 26bed64053e8de9a42ac01ed3262c7b0f41d1d42
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 4e7b249e5b23c301ba8ec0ad387b9fa38dde2ed0
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574317"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624243"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Store
 
@@ -121,7 +121,7 @@ Los siguientes métodos adicionales están disponibles para que los utilicen cue
 
 ### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware y controladores
 
-Las cuentas de desarrollador que pertenecen al [programa del centro de desarrollo de Hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tienen acceso a un conjunto adicional de métodos para recuperar datos de análisis de hardware y controladores. Para obtener más información, consulta [API del panel de Hardware](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
+Las cuentas de desarrollador que pertenecen al [programa del centro de desarrollo de Hardware de Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tienen acceso a un conjunto adicional de métodos para recuperar datos de análisis de hardware y controladores. Para obtener más información, consulta [el panel de Hardware API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Ejemplo de código
 
