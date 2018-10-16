@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: edc3dc53a7cf536bbabce108647cf54693c3ab05
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572307"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617378"
 ---
 # <a name="data-binding"></a>Enlace de datos
 
@@ -27,4 +27,4 @@ El enlace de datos es una forma para que la interfaz de usuario de la aplicació
 | [Enlace de datos en profundidad](data-binding-in-depth.md) | En este tema se describen detalladamente las características del enlace de datos. |
 | [Datos de muestra sobre la superficie de diseño y para la creación de prototipos](displaying-data-in-the-designer.md) | Para hacer que los controles se rellenen con datos en el diseñador de Visual Studio (de modo que puedas trabajar en el diseño de la aplicación, las plantillas y otras propiedades visuales), puedes usar los datos de ejemplo en tiempo de diseño de distintas maneras. Los datos de ejemplo también pueden ser muy útiles y ahorrarte tiempo si creas una aplicación de diseño de bocetos (o prototipos). Puedes usar los datos de ejemplo del boceto o el prototipo en tiempo de ejecución para ilustrar tus ideas sin tener que conectarte a los datos dinámicos reales. |
 | [Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md) | Puedes hacer una vista de tipo maestro-detalles (también conocida como list-details) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [<strong>CollectionViewSource</strong>](https://msdn.microsoft.com/library/windows/apps/BR209833) que están enlazadas juntas en una cadena. |
-| [Enlace de datos y MVVM](data-binding-and-mvvm.md) | En este tema se describe el patrón de diseño de la arquitectura de la interfaz de usuario de Model-View-ViewModel (MVVM). Enlace de datos es el núcleo de MVVM y permite imprecisa entre el código de la interfaz de usuario y que no son de interfaz de usuario. |
+| [Enlace de datos y MVVM](data-binding-and-mvvm.md) | En este tema se describe el patrón de diseño de la arquitectura de la interfaz de usuario de Model-View-ViewModel (MVVM). Enlace de datos es el núcleo de MVVM y permite imprecisa entre el código de interfaz de usuario y sin interfaz de usuario. |

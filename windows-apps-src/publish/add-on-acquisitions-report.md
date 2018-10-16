@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, ventas de complementos, adquisiciones de complementos, ventas de iap, productos desde la aplicación, IAP, complementos
 ms.localizationpriority: medium
 ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563802"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623177"
 ---
 # <a name="add-on-acquisitions-report"></a>Informe de adquisiciones de complementos
 
 
-El informe de **adquisiciones de complementos** en el panel del centro de desarrollo de Windows te permite ver cuántos complementos has vendido, junto con datos demográficos y detalles de la plataforma y muestra información de conversión para los clientes de Windows 10 (incluyendo Xbox). También puedes ver cerca de los datos de compra en tiempo real para el último período o de 72 horas.
+El informe de **adquisiciones de complementos** en el panel del centro de desarrollo de Windows te permite ver cuántos complementos has vendido, junto con datos demográficos y los detalles de la plataforma y se muestra información de conversión para los clientes de Windows 10 (incluyendo Xbox). También puedes ver cerca de los datos de compra en tiempo real para el último período o de 72 horas.
 
 Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de complementos](../monetize/get-in-app-acquisitions.md) en la [API de REST de análisis de la Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
@@ -32,7 +32,7 @@ En este informe, una adquisición de complemento significa que un cliente te ha 
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puedes seleccionar **1 H** o **72 H** para mostrar los datos de compra en casi en tiempo real para una hora o 72 horas; estos períodos de tiempo solo se aplican a la pestaña de **complemento diariamente** del gráfico de **adquisiciones de complementos** y a la pestaña de **adquisiciones** del gráfico de **mercados** . 
+Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puedes seleccionar **1 H** o **72 H** para mostrar los datos de compra en casi en tiempo real para una hora o de 72 horas; estos períodos de tiempo solo se aplican a la pestaña de **complemento diariamente** del gráfico de **adquisiciones de complementos** y a la pestaña de **adquisiciones** del gráfico de **mercados** . 
 
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por complementos específicos, por mercado o por tipo de dispositivo.
 

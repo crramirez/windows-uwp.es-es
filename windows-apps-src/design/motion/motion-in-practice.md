@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566310"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622925"
 ---
 # <a name="bringing-it-together"></a>Reunión de todo
 
@@ -83,9 +83,9 @@ Hay 3 maneras de aplicar los conceptos básicos del movimiento de Fluent en tu a
 
 ## <a name="implicit-animations"></a>Animaciones implícitas
 
-> **Vista previa**: animación implícita requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/).
+> **Vista previa**: animación implícita requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/).
 
-Las animaciones implícitas son una forma sencilla de lograr el movimiento de Fluent mediante la interpolación automáticamente entre los valores antiguos y nuevos durante un cambio de parámetro.
+Animaciones implícitas son una forma sencilla de lograr el movimiento de Fluent mediante la interpolación automáticamente entre los valores antiguos y nuevos durante un cambio de parámetro.
 
 Implícitamente se pueden animar los cambios en las siguientes propiedades:
 
@@ -100,7 +100,7 @@ Implícitamente se pueden animar los cambios en las siguientes propiedades:
 
 Cada propiedad que puede tener cambios implícitamente animados tiene una propiedad de _transición_ correspondiente. Para animar la propiedad, asigna un tipo de transición a la propiedad correspondiente de la _transición_ . Esta tabla muestran las propiedades de _transición_ y el tipo de transición que se usará para cada uno de ellos.
 
-| Propiedad animada | Propiedad de transición | Tipo de transición implícito |
+| Propiedad animada | Propiedad de transición | Tipo de transición implícita |
 | -- | -- | -- |
 | [UIElement.Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Rotation](/uwp/api/windows.ui.xaml.uielement.rotation) | [RotationTransition](/uwp/api/windows.ui.xaml.uielement.rotationtransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
@@ -110,7 +110,7 @@ Cada propiedad que puede tener cambios implícitamente animados tiene una propie
 | [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 
-Este ejemplo muestra cómo usar la propiedad Opacity y la transición para crear un botón fundido de entrada cuando se habilita el control y fundido de salida cuando está deshabilitado.
+Este ejemplo muestra cómo usar la propiedad Opacity y transición para crear un botón fundido de entrada cuando se habilita el control y una atenuación cuando está deshabilitado.
 
 ```xaml
 <Button x:Name="SubmitButton"

@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574782"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617097"
 ---
 # <a name="product-declarations"></a>Declaraciones de producto
 
-La sección **declaraciones de producto** de la página de [Propiedades](enter-app-properties.md) del [proceso de envío](app-submissions.md) de ayuda a asegurarse de que la aplicación se muestra correctamente y que ofrece al conjunto adecuado de los clientes y ayuda a comprender cómo pueden usar la aplicación.
+La sección de **declaraciones de producto** de la página de [Propiedades](enter-app-properties.md) del [proceso de envío](app-submissions.md) de ayuda a asegurarse de que la aplicación se muestra correctamente y que ofrece al conjunto adecuado de los clientes y ayuda a comprender cómo pueden usar la aplicación.
 
-Las siguientes secciones describen algunas de las declaraciones y lo que debes tener en cuenta al determinar si cada una de ellas se aplica a la aplicación. Ten en cuenta que dos de estas declaraciones se comprueban de manera predeterminada (tal y como se describe a continuación). Según la categoría de producto, también es posible que veas declaraciones adicionales. Asegúrate de revisar todas las declaraciones y asegurarse de que reflejan con precisión el envío.
+Las siguientes secciones describen algunas de las declaraciones y lo que debes tener en cuenta al determinar si cada una de ellas se aplica a la aplicación. Ten en cuenta que dos de estas declaraciones se comprueban de forma predeterminada (tal y como se describe a continuación). Dependiendo de la categoría de producto, también es posible que veas declaraciones adicionales. Asegúrate de revisar todas las declaraciones y asegurarse de que reflejan con precisión el envío.
 
 ## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Esta aplicación permite a los usuarios realizar compras, pero no usa el sistema de comercio de Microsoft Store.
 
-Para casi cualquier envío, debes dejar esta casilla sin marcar, desde las aplicaciones que ofrecen oportunidades para comprar artículos o pueden ser consumidos o que usan dentro de la aplicación deben usar la compra de la aplicación de Microsoft Store API para crear y enviar los complementos. Por el [Acuerdo para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), las aplicaciones que se crearan y enviaran antes del 29 de junio de 2015, podrían continuar ofreciendo en la aplicación sin usar el motor de comercio de Microsoft, siempre que la funcionalidad de compra cumpla con los [ Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
+Para casi cualquier envío, debes dejar esta casilla sin marcar, dado que las aplicaciones que ofrecen oportunidades para comprar artículos o pueden ser consumidos o que se usa dentro de la aplicación deben usar la compra de la aplicación de Microsoft Store API para crear y enviar los complementos. Por el [Acuerdo para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), las aplicaciones que se crearan y enviaran antes del 29 de junio de 2015, podrían continuar ofreciendo en la aplicación sin usar el motor de comercio de Microsoft, siempre que la funcionalidad de compra cumple con los [ Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Esta aplicación se ha probado y cumple las directrices de accesibilidad.
 
@@ -41,14 +41,14 @@ Solo debes activar la casilla si has realizado las acciones siguientes:
 
 Cuando declaras que tu aplicación es accesible, aceptas que será accesible para todos los clientes, incluidas las personas con discapacidades. Esto significa, por ejemplo, que probaste la aplicación con el modo de contraste alto y con el lector de pantalla, y que comprobaste correctamente las funciones de la interfaz de usuario con un teclado, la lupa y otras herramientas de accesibilidad.
 
-Para obtener más información, consulta la [accesibilidad](../design/accessibility/accessibility.md), [pruebas de accesibilidad](../design/accessibility/accessibility-testing.md)y [accesibilidad en la tienda](../design/accessibility/accessibility-in-the-store.md).
+Para obtener más información, consulta la [accesibilidad](../design/accessibility/accessibility.md), [pruebas de accesibilidad](../design/accessibility/accessibility-testing.md)y la [accesibilidad en la tienda](../design/accessibility/accessibility-in-the-store.md).
 
 > [!IMPORTANT]
 > No lista tu aplicación como accesible a menos que se ha diseñado y probado para ese propósito específicamente. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble.
 
-Esta casilla está activada de manera predeterminada, para permitir que los clientes instalen tu aplicación en almacenamiento extraíble o externa multimedia, como una tarjeta SD o a un volumen del sistema que no son de unidad, como una unidad externa. (Para Windows Phone 8.1, esto se indicaba previamente a través de StoreManifest.xml.)
+Esta casilla está activada de manera predeterminada, para permitir que los clientes instalen la aplicación en almacenamiento extraíble o externa multimedia como una tarjeta SD, o a un volumen del sistema que no sea la unidad como una unidad externa. (Para Windows Phone 8.1, esto se indicaba previamente a través de StoreManifest.xml.)
 
 Si quieres impedir que la aplicación se instale en unidades alternativas o almacenamiento extraíble y solo permiten la instalación en la unidad de disco duro interna en su dispositivo, desactiva esta casilla.
 

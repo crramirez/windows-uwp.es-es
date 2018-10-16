@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
 description: Obtén información sobre los tamaños admitidos para los anuncios de banner.
 title: Tamaños admitidos de anuncios de banner
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, sizes, tamaños, banner, banner
 ms.localizationpriority: medium
-ms.openlocfilehash: baeed2fd1bce779a2d7bb08d808e868eb3ababed
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a438f6df66b064004ad9664ce46280475dad83c6
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "927422"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616067"
 ---
 # <a name="supported-banner-ad-sizes"></a>Tamaños admitidos de anuncios de banner
 
-Se admiten los siguientes tamaños de banner ad para las aplicaciones de la plataforma de Windows Universal (UWP). Al crear una instancia del objeto **AdControl** en su aplicación, asegúrese de que establecer las propiedades de alto y ancho para que coincida con uno de estos tamaños admitidos.
+Los siguientes tamaños de anuncios de banner se admiten para aplicaciones de la plataforma Universal de Windows (UWP). Cuando crees una instancia del objeto **AdControl** en la aplicación, asegúrate de que establecer las propiedades de alto y ancho para que coincida con uno de estos tamaños admitidos.
 
 * 160 x 600
 * 300 x 50
@@ -30,9 +30,9 @@ Se admiten los siguientes tamaños de banner ad para las aplicaciones de la plat
 * 728 x 90
 
 > [!NOTE]
-> Para la mejor experiencia, se recomienda usar los siguientes tamaños en dispositivos Windows Mobile de 10: 300 x 50, 320 x 50 y 640 x 100.
+> Para una mejor experiencia, se recomienda usar los siguientes tamaños en dispositivos Windows 10 Mobile: 300 x 50, 320 x 50 y 640 x 100.
 
-En la siguiente tabla proporciona ejemplos que muestran cada tamaño de anuncio banner.
+La siguiente tabla proporciona ejemplos que muestran cada tamaño de anuncio de banner.
 
 <table>
 <colgroup>

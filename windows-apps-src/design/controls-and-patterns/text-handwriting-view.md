@@ -5,7 +5,7 @@ title: Entrada de texto con la vista de escritura a mano
 label: Text input with the handwriting view
 template: detail.hbs
 ms.author: kbridge
-ms.date: 09/10/18
+ms.date: 10/13/18
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -14,18 +14,18 @@ pm-contact: sewen
 design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 3aeb400da4b3abe61e086732eaceb0e53fd1b005
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 3117cde7b8b00973c135fbc759fa99b6a48ec6ac
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569131"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620817"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto con la vista de escritura a mano
 
-![El cuadro de texto se amplía cuando se pulsa con el lápiz](images/pen-input-expand-cropped.gif)
+![El cuadro de texto se amplía cuando se pulsa con el lápiz](images/handwritingview/handwritingview2.gif)
 
-Personalizar la vista integrada de escritura a mano para la entrada de lápiz a la entrada de texto que es compatible con los controles de texto UWP como [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox)y otros controles que proporcionan una experiencia de entrada de texto similares (como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)).
+Personalizar la vista integrada de escritura a mano para la entrada de lápiz a la entrada de texto que sea compatible con los controles de texto UWP como [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox)y otros controles que proporcionan una experiencia de entrada de texto similares (por ejemplo, [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)).
 
 ## <a name="overview"></a>Introducción
 
@@ -36,8 +36,7 @@ Texto se reconoce cuando el usuario las escrituras en cualquier lugar en el cuad
 > [!NOTE]
 > La vista de escritura a mano está habilitada de manera predeterminada, pero puedes deshabilitar por el control y revertir al panel de entrada de texto en su lugar.
 
-
-![Cuadro de texto con entrada manuscrita](images/pen-input-1.png)
+![Cuadro de texto con entrada de lápiz y sugerencias](images/handwritingview/handwritingview-inksuggestion1.gif)
 
 Un usuario puede editar el texto con acciones y gestos estándar, como:
 
@@ -46,7 +45,7 @@ Un usuario puede editar el texto con acciones y gestos estándar, como:
 - _insert_: dibujar un símbolo de intercalación para insertar un espacio
 - _overwrite_: escribir sobre texto existente para sustituirlo
 
-![Sobrescribir una entrada manuscrita](images/pen-input-2.png)
+![Cuadro de texto con la corrección de entrada de lápiz](images/handwritingview/handwritingview-inkcorrection1.gif)
 
 ## <a name="disable-the-handwriting-view"></a>Deshabilitar la vista de escritura a mano
 
@@ -54,7 +53,7 @@ La vista integrada de escritura a mano está habilitada de manera predeterminada
 
 Es posible que quieras deshabilitar la vista de escritura a mano si ya se ha proporcionado una funcionalidad de entrada de lápiz en texto equivalente en la aplicación o tu experiencia de entrada de texto se basa en algún tipo de formato ni un carácter especial (como una pestaña) no están disponible a través de escritura a mano.
 
-En este ejemplo, se deshabilita la vista de escritura a mano estableciendo la propiedad [IsHandwritingViewEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.ishandwritingviewenabled) del control de [cuadro de texto](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) en false. Todos los controles de texto que admiten la vista de escritura a mano admiten una propiedad similar.
+En este ejemplo, se deshabilita la vista de escritura a mano estableciendo la propiedad [IsHandwritingViewEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.ishandwritingviewenabled) del control [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) en "false". Todos los controles de texto que admiten la vista de escritura a mano admiten una propiedad similar.
 
 ```xaml
 <TextBox Name="SampleTextBox"
@@ -71,7 +70,7 @@ La vista de escritura a mano se encuentra encima del control de texto subyacente
 
 La interfaz de usuario de la aplicación no se redistribuye para acomodar el control más grande, por lo que el sistema podría hacer que la vista tapar la interfaz de usuario importante.
 
-Aquí te mostramos cómo usar la propiedad [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) de un [cuadro de texto](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para especificar qué anclaje en el control de texto subyacente se utiliza para alinear la vista de escritura a mano.
+Aquí te mostramos cómo usar la propiedad [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) de un [cuadro de texto](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para especificar qué anclaje en el control de texto subyacente se usa para alinear la vista de escritura a mano.
 
 ```xaml
 <TextBox Name="SampleTextBox"
@@ -103,10 +102,10 @@ Si la aplicación ya proporciona sólida, funcionalidad de reconocimiento person
 
 ## <a name="use-handwriting-font-preferences"></a>Usar las preferencias de fuente de escritura a mano
 
-Un usuario puede elegir una colección predefinida de fuentes basadas en escritura a mano para utilizar al texto de representación en función de reconocimiento de entrada de lápiz (consulta **Configuración -> dispositivos -> lápiz y entrada de lápiz de Windows -> escritura a mano -> fuente al usar la escritura a mano**).
+Un usuario puede elegir entre una colección predefinida de fuentes de escritura a mano cuándo usar texto de representación en función de reconocimiento de entrada de lápiz (consulta **Configuración -> dispositivos -> lápiz y entrada de lápiz de Windows -> escritura a mano -> fuente al usar la escritura a mano**).
 
 > [!NOTE]
-> Los usuarios incluso pueden crear una fuente en función de su propias de escritura a mano.
+> Los usuarios incluso pueden crear una fuente en función de su propia escritura a mano.
 > [!VIDEO https://www.youtube.com/embed/YRR4qd4HCw8]
 
 La aplicación puede acceder a esta configuración y usar la fuente seleccionada para el texto reconocido en el control de texto.
@@ -192,9 +191,9 @@ En el correspondiente código subyacente, te mostramos cómo deshabilitar el [Ha
     }
     ```
 
-## <a name="reposition-the-handwritingview"></a>Cambiar la posición de la HandwritingView
+## <a name="reposition-the-handwritingview"></a>Cambiar la posición del HandwritingView
 
-En algunos casos, es posible que debes asegurarte de que el [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) cubre los elementos de la interfaz de usuario que lo contrario, podría no ser.
+En algunos casos, es posible que debes asegurarte de que el [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) tratan los elementos de la interfaz de usuario que lo contrario, podría no ser.
 
 A continuación, se crea un cuadro de texto que admite el dictado (que se implementa mediante la colocación de un cuadro de texto y un botón de dictado en un elemento StackPanel).
 
@@ -204,7 +203,7 @@ Como el elemento StackPanel ahora es mayor que el cuadro de texto, el [Handwriti
 
 ![Cuadro de texto con dictado](images/handwritingview/textbox-with-dictation-handwritingview.png)
 
-Para solucionar esto, Establece la propiedad de PlacementTarget de la [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) al elemento de interfaz de usuario a la que debe estar alineada.
+Para solucionar esto, Establece la propiedad de PlacementTarget de la [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para el elemento de interfaz de usuario a la que debe estar alineada.
 
 ```xaml
 <StackPanel Name="DictationBox" 
@@ -231,13 +230,13 @@ Para solucionar esto, Establece la propiedad de PlacementTarget de la [Handwriti
 
 ## <a name="resize-the-handwritingview"></a>Cambiar el tamaño de la HandwritingView
 
-También puedes establecer el tamaño de la [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview), lo que puede ser útil cuando, debes asegurarte de que la vista no tapar la interfaz de usuario importante.
+También puedes establecer el tamaño de la [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview), que puede ser útil cuando, debes asegurarte de que la vista no tapar la interfaz de usuario importante.
 
 Como en el ejemplo anterior, creamos un cuadro de texto que admite el dictado (que se implementa mediante la colocación de un cuadro de texto y un botón de dictado en un elemento StackPanel).
 
 ![Cuadro de texto con dictado](images/handwritingview/textbox-with-dictation.png)
 
-En este caso, queremos garantizar que el botón de dictado siempre está visible.
+En este caso, queremos para asegurarse de que el botón de dictado siempre está visible.
 
 ![Cuadro de texto con dictado](images/handwritingview/textbox-with-dictation-handwritingview-resize.png)
 
@@ -275,7 +274,7 @@ Para ello, enlazamos la propiedad MaxWidth de la [HandwritingView](https://docs.
 
 ## <a name="reposition-custom-ui"></a>Cambiar la posición de la interfaz de usuario personalizada
 
-Si tienes una interfaz de usuario personalizada que aparece en respuesta a la entrada de texto, como un elemento emergente informativo, debes cambiar la posición de interfaz de usuario para que no tapar la vista de escritura a mano.
+Si tienes una interfaz de usuario personalizada que aparece en respuesta a la entrada de texto, como un elemento emergente informativo, debes cambiar la posición de esa interfaz de usuario para que no tapar la vista de escritura a mano.
 
 ![Cuadro de texto con la interfaz de usuario personalizada](images/handwritingview/textbox-with-customui.png)
 
@@ -320,7 +319,7 @@ private double GetPopupVerticalOffset()
 
 Al igual que con todos los controles de marco XAML, puedes personalizar la estructura visual y el comportamiento visual de un [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para tus requisitos específicos.
 
-Para ver un ejemplo completo de creación de una plantilla personalizada desproteger los procedimientos de [crear controles de transporte personalizados](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/custom-transport-controls) o la [muestra de Control de edición personalizado](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
+Para ver un ejemplo completo de creación de una plantilla personalizada, consultar los procedimientos de [crear controles de transporte personalizados](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/custom-transport-controls) o la [muestra de Control de edición personalizado](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
 
 
 

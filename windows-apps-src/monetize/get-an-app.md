@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: DAF92881-6AF6-44C7-B466-215F5226AE04
 description: Usa este método en la API de envío de Microsoft Store para recuperar información sobre una aplicación específica registrada en tu cuenta del Centro de desarrollo de Windows.
 title: Obtener una aplicación
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app, aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 87995e0ee50b762f4b626be0b3796cc10390a02d
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: ce52e2d3b844052103f1055674869c19850ef59f
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1661955"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622059"
 ---
 # <a name="get-an-app"></a>Obtener una aplicación
 
@@ -26,7 +26,7 @@ Usa este método en la API de envío de Microsoft Store para recuperar informaci
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 

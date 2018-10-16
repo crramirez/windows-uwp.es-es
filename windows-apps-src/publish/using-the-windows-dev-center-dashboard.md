@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, panel, devcenter, centro de desarrollo
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563398"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615955"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Usar el Panel del Centro de desarrollo de Windows
 
@@ -33,11 +33,11 @@ Algunos aspectos importantes de la experiencia de panel de información son:
 - Una única ubicación en la esquina superior derecha para acceder a toda tu información relevante incluidos los detalles de perfil y de cuenta, extractos de pago, soporte técnico y notificaciones.
 - Acceso inmediato a todos los programas de desarrolladores, sin tener que iniciar y cerrar sesión en cada programa. También te recomendaremos nuevos programas que podrían interesarte en cuanto estén disponibles.
 
-Al [crear un envío de la aplicación](app-submissions.md) (por primera vez o como una actualización), puede [cargar paquetes de aplicación](upload-app-packages.md) para cualquier versión de sistema operativo compatible y la tienda ofrecerá automáticamente a los clientes el paquete que mejor se adapte para ellos.
+Cuando se [crea un envío de la aplicación](app-submissions.md) (por primera vez o como una actualización), puede [cargar paquetes de aplicación](upload-app-packages.md) para cualquier versión de sistema operativo compatible y la tienda ofrecerá automáticamente a los clientes el paquete que mejor se adapte para ellos.
 
 [Complementos (productos desde la aplicación)](add-on-submissions.md) se administran independientemente de envío de la aplicación. Esto te ofrece más flexibilidad y la capacidad de realizar cambios de forma independiente.
 
-Centro de desarrollo de Windows también ofrece funcionalidades para [Agregar varios usuarios de](manage-account-users.md)[administración de aplicaciones y configuración de servicios](app-management-and-services.md), [revisión de datos analíticos](analytics.md), [informes de pago](payout-summary.md), [promoción de aplicaciones](attract-customers-and-promote-your-apps.md), [interactúen con tu los clientes](engage-with-your-customers.md), [las pruebas beta](beta-testing-and-targeted-distribution.md), [distribuir aplicaciones LOB para empresas](distribute-lob-apps-to-enterprises.md)y mucho más.
+Centro de desarrollo de Windows también ofrece funcionalidades para [Agregar varios usuarios de](manage-account-users.md)[administración de aplicaciones y configuración de servicios](app-management-and-services.md), [revisión de datos analíticos](analytics.md), [informes de pago](payout-summary.md), [promoción de aplicaciones](attract-customers-and-promote-your-apps.md), [interactúen con la los clientes](engage-with-your-customers.md), [las pruebas beta](beta-testing-and-targeted-distribution.md), [distribuir aplicaciones LOB a empresas](distribute-lob-apps-to-enterprises.md)y mucho más.
 
 Tus comentarios nos ayudan a crear las mejores capacidades y experiencias posibles. Mientras trabajas en el panel, usa el vínculo **comentarios** en la esquina superior derecha del panel para compartir tus ideas y recomendaciones.
 

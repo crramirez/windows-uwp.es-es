@@ -10,13 +10,13 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f017dbb30586d3ec3c2da54d0f262c4b159328cc
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574166"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619974"
 ---
-# <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novedades de los documentos de Windows de septiembre de 2018
+# <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novedades en los documentos de Windows de septiembre de 2018
 
 La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general de características, directrices para los desarrolladores y vídeos que se han puesto a disposición en el mes de septiembre.
 
@@ -34,7 +34,7 @@ La documentación del desarrollador de Windows se actualiza constantemente con i
 
 ![Gráfico de aprendizaje automático de Windows](images/winml-graphic.png)
 
-### <a name="windows-ui-library"></a>Biblioteca de la interfaz de usuario de Windows
+### <a name="windows-ui-library"></a>Biblioteca de interfaz de usuario de Windows
 
 [La biblioteca de la interfaz de usuario de Windows](https://aka.ms/winui-docs) es un conjunto de paquetes de NuGet que proporcionan controles y otros elementos de interfaz de usuario para aplicaciones para UWP. Estos paquetes también son compatibles con versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tengan la versión más reciente del sistema operativo.
 
@@ -42,9 +42,9 @@ Para obtener más información sobre la biblioteca de la interfaz de usuario de 
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="how-blur-effects-work"></a>Efectos de desenfoque cómo
+### <a name="how-blur-effects-work"></a>Cómo el trabajo de efectos de desenfoque
 
-Uno de nuestros sistemas de escritura, el Mike Jacobs inestimable, ha comenzado a una serie de artículos en medio acerca de desenfoque de fotografía al diseño de juegos y aplicaciones de visión. Si estás interesado en saber más acerca de este efecto visual ubicua, consulta [el artículo primera de visión y la fotografía](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) y [el segundo de suavizado de contorno en los gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Uno de nuestros sistemas de escritura, el Mike Jacobs inestimable, ha comenzado a una serie de artículos en medio acerca de desenfoque de fotografía al diseño de juegos y aplicaciones de visión. Si estás interesado en saber más acerca de este efecto visual ubicua, consulta [el artículo primero en la visión y la fotografía](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) y [el segundo de suavizado de contorno en los gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
 ![Desenfoque en acción](images/blur-example.jpg)
 
@@ -56,15 +56,15 @@ Hemos actualizado [nuestras directrices contribución](https://github.com/Micros
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollo
 
-En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Este es el más recientes preguntas que hemos respondido a!
+En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Este es el preguntas más recientes que hemos respondido a!
 
 Aaron Gustafson:
 
-* [6 vídeos en aplicaciones Web progresivas](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
+* [vídeos de 6 en aplicaciones Web progresivas](https://www.youtube.com/playlist?list=PLWs4_NfqMtoyPHoI-CIB71mEq-om6m35I)
 
 Chris Heilmann
 
-* [4 vídeos sobre la herramienta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
+* [vídeos de 4 en la herramienta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
 Larry Osterman:
 

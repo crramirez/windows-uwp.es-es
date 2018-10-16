@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570228"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616198"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Preguntas comunes sobre las campañas publicitarias
 
@@ -63,7 +63,7 @@ Si no quieres esperar a que te facturen, puedes pagar la factura inmediatamente 
 
 ### <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a>¿Cómo puedo eliminar una tarjeta de crédito o editar los detalles de una tarjeta de crédito?
 
-Ve a <http://commerce.microsoft.com>, iniciar sesión con tus credenciales de cuenta de Microsoft y realizar los cambios necesarios.
+Ve a <http://commerce.microsoft.com>, inicia sesión con tus credenciales de cuenta de Microsoft y realizar los cambios necesarios.
 
 ### <a name="related-topics"></a>Temas relacionados
 

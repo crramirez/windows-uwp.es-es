@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: Obtén las directrices de la interfaz de usuario y de la experiencia del usuario para los anuncios en aplicaciones.
 title: Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, guidelines, directrices, best practices, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: 026ec28c609d62f59958f6ca804c67bb9ca3e109
-ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
-ms.translationtype: HT
+ms.openlocfilehash: c7f5e762593773e529610989741274d9fb5b9be7
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "1881076"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616924"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
 
@@ -37,7 +37,7 @@ Antes de revisar nuestras directrices para diferentes tipos de anuncios en este 
 
 ## <a name="guidelines-for-banner-ads"></a>Directrices para anuncios de banner
 
-En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar [anuncios de banner](banner-ads.md) en tu aplicación mediante [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) de las Directivas de Microsoft Store.
+En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar [anuncios de banner](banner-ads.md) en tu aplicación mediante [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) de las Directivas de Microsoft Store.
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
@@ -53,7 +53,7 @@ Te recomendamos que sigas los siguientes procedimientos recomendados a la hora d
 
 * Planea las ocasiones en que no haya anuncios disponibles. Puede que haya ocasiones en que no se envíen anuncios a la aplicación. Diseña las páginas de manera que tengan un magnífico aspecto tanto si muestran un anuncio como si no. Para obtener más información, consulta [Controlar errores de anuncios](error-handling-with-advertising-libraries.md).
 
-* Si tienes un escenario para alertar al usuario que se controla mejor con una superposición, haz una llamada a [AdControl.Suspend](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.suspend.aspx) mientras se muestra la superposición y, luego, a [AdControl.Resume](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.resume.aspx) cuando termine el escenario de alerta.
+* Si tienes un escenario para alertar al usuario que se controla mejor con una superposición, haz una llamada a [AdControl.Suspend](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.suspend) mientras se muestra la superposición y, luego, a [AdControl.Resume](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.resume) cuando termine el escenario de alerta.
 
 ### <a name="practices-to-avoid"></a>Procedimientos que deben evitarse
 
@@ -69,11 +69,11 @@ Te recomendamos que evites los siguientes procedimientos cuando implementes anun
 
 En esta sección se proporcionan ejemplos de escenarios de anuncios de banner que infringen la [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) de las Directivas de Microsoft Store. Tales ejemplos se proporcionan para fines informativos solamente, como una forma de ayudarte a comprender mejor la directiva. Estos ejemplos no son integrales y es posible que haya muchas otras formas de infringir la directiva 10.10.1 que no se muestran aquí.
 
-* Interferir de algún modo con la capacidad del usuario para ver el anuncio de banner, por ejemplo, cambiando la opacidad de la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) o colocar otro control por encima de **AdControl** (sin antes hacer una llamada a [AdControl.Suspend](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.suspend.aspx)).
+* Interferir de algún modo con la capacidad del usuario para ver el anuncio de banner, por ejemplo, cambiando la opacidad de la clase [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) o colocar otro control por encima de **AdControl** (sin antes hacer una llamada a [AdControl.Suspend](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.suspend)).
 
 * Requerir que los usuarios hagan clic en un banner para realizar una tarea en la aplicación u obligarlos a hacer clic en anuncios de banner como resultado del diseño de la aplicación.
 
-* Omitir, de cualquier manera, el temporizador de actualización mínima integrado para anuncios de banner, lo que incluye, entre otros, intercambiar objetos [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) o forzar una actualización de la página sin interacción del usuario.
+* Omitir, de cualquier manera, el temporizador de actualización mínima integrado para anuncios de banner, lo que incluye, entre otros, intercambiar objetos [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) o forzar una actualización de la página sin interacción del usuario.
 
 * Usar unidades de anuncio dinámicas (es decir, unidades de anuncio que se obtienen a partir del panel del Centro de desarrollo de Windows) durante la etapa de desarrollo y pruebas o en un emulador.
 
@@ -87,7 +87,7 @@ En esta sección se proporcionan ejemplos de escenarios de anuncios de banner qu
 
 Si se usan con elegancia, los [anuncios intersticiales](interstitial-ads.md) pueden aumentar considerablemente los ingresos de la aplicación, sin incidir de forma negativa en la satisfacción del usuario. Si no se usan correctamente, estos anuncios pueden tener el efecto totalmente contrario.
 
-En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar anuncios de vídeo intersticial y de banner intersticial en la aplicación con la clase [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) de las Directivas de Microsoft Store. Dado que conoces tu aplicación mejor que nadie, excepto en lo que a directivas se refiere, la decisión final está en tus manos. Lo más importante que debes tener en cuenta es que las clasificaciones de la aplicación y los ingresos están estrechamente relacionados.
+En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar anuncios de vídeo intersticial y de banner intersticial en la aplicación con la clase [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) de las Directivas de Microsoft Store. Dado que conoces tu aplicación mejor que nadie, excepto en lo que a directivas se refiere, la decisión final está en tus manos. Lo más importante que debes tener en cuenta es que las clasificaciones de la aplicación y los ingresos están estrechamente relacionados.
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
@@ -105,9 +105,9 @@ Te recomendamos que sigas los siguientes procedimientos recomendados a la hora d
 
 * Si la aplicación exige la visualización de un anuncio de vídeo intersticial hasta el final, menciona esa regla de antemano para que no vean un mensaje de error por sorpresa al pulsar el botón Cerrar.
 
-* Realiza la captura previa del anuncio (mediante una llamada a [InterstitialAd.RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx)). Lo ideal es hacerla entre 30 y 60 segundos antes de mostrarlo.
+* Realiza la captura previa del anuncio (mediante una llamada a [InterstitialAd.RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)). Lo ideal es hacerla entre 30 y 60 segundos antes de mostrarlo.
 
-* Suscríbete a los cuatro eventos que se exponen en la clase [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) (**Cancelled**, **Completed**, **AdReady** y **ErrorOccurred**) y úsalos para tomar las decisiones correctas para tu aplicación.
+* Suscríbete a los cuatro eventos que se exponen en la clase [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) (**Cancelled**, **Completed**, **AdReady** y **ErrorOccurred**) y úsalos para tomar las decisiones correctas para tu aplicación.
 
 * Ten alguna funcionalidad integrada para usarla en lugar de un anuncio asociado al servidor. La encontrarás útil en algunos escenarios:
 
@@ -135,11 +135,11 @@ Te recomendamos que evites los siguientes procedimientos cuando implementes anun
 
 * No muestres dos o más anuncios intersticiales consecutivos. Los usuarios se frustrarán al ver que la barra de progreso del anuncio vuelve al punto de partida. Muchos pensarán que se trata de un error de codificación o de presentación del anuncio.
 
-* No captures un anuncio de vídeo intersticial más de cinco minutos antes de la llamada al método [InterstitialAd.Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx). Un buen inventario maximizará la conversión de anuncios capturados previamente en impresiones facturables.
+* No captures un anuncio de vídeo intersticial más de cinco minutos antes de la llamada al método [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show). Un buen inventario maximizará la conversión de anuncios capturados previamente en impresiones facturables.
 
 * No penalices al usuario por errores en la presentación de anuncios, como la ausencia de anuncios disponibles. Por ejemplo, si muestras una opción de la interfaz de usuario destinada a "Ver un anuncio para obtener *xxx*", debes proporcionar *xxx* si el usuario hizo su parte. Existen dos opciones que debes tener en cuenta:
 
-    * No se debe incluir la opción a menos que se desencadene el evento [InterstitialAd.AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx).
+    * No se debe incluir la opción a menos que se desencadene el evento [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready).
 
     * La aplicación debe incluir una funcionalidad integrada que genere el mismo beneficio que un anuncio real.
 
@@ -151,13 +151,13 @@ En esta sección se proporcionan ejemplos de escenarios de anuncios intersticial
 
 * Colocar un elemento de interfaz de usuario sobre el contenedor de anuncio intersticial.
 
-* Hacer una llamada a [InterstitialAd.Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) mientras el usuario está ocupado con la aplicación.
+* Hacer una llamada a [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) mientras el usuario está ocupado con la aplicación.
 
 * Usar anuncios intersticiales para obtener todo lo que pueda usarse como moneda o negociarse con otros usuarios.
 
-* Solicitar un anuncio intersticial nuevo en el contexto del controlador de eventos para el evento [InterstitialAd.ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.erroroccurred.aspx). Esto puede ocasionar un bucle infinito y causar problemas de funcionamiento del servicio de publicidad.
+* Solicitar un anuncio intersticial nuevo en el contexto del controlador de eventos para el evento [InterstitialAd.ErrorOccurred](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.erroroccurred). Esto puede ocasionar un bucle infinito y causar problemas de funcionamiento del servicio de publicidad.
 
-* Solicitar un anuncio intersticial solo para tener un anuncio de copia de seguridad para una secuencia de anuncios en cascada. Si solicitas un anuncio intersticial y luego recibes el evento [InterstitialAd.AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx), el siguiente anuncio intersticial que se muestre en la aplicación debe ser el anuncio que está listo para mostrarse a través del método [InterstitialAd.Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
+* Solicitar un anuncio intersticial solo para tener un anuncio de copia de seguridad para una secuencia de anuncios en cascada. Si solicitas un anuncio intersticial y luego recibes el evento [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready), el siguiente anuncio intersticial que se muestre en la aplicación debe ser el anuncio que está listo para mostrarse a través del método [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
 * Usar unidades de anuncio dinámicas (es decir, unidades de anuncio que se obtienen a partir del panel del Centro de desarrollo de Windows) durante la etapa de desarrollo y pruebas o en un emulador.
 
@@ -171,7 +171,7 @@ Los [anuncios nativos](native-ads.md) te proporcionan mucho control sobre la man
 
 ### <a name="register-the-container-for-your-native-ad"></a>Registrar el contenedor para el anuncio nativo
 
-En el código, debes llamar al método [RegisterAdContainer](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.registeradcontainer.aspx) del objeto **NativeAdV2** para registrar el elemento de interfaz de usuario que actúa como contenedor para el anuncio nativo y, opcionalmente, los controles que quieras registrar como destinos seleccionables para el anuncio. Esto es necesario para realizar un seguimiento adecuado de los clics y de las impresiones de anuncios.
+En el código, debes llamar al método [RegisterAdContainer](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2.registeradcontainer) del objeto [NativeAdV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) para registrar el elemento de interfaz de usuario que actúa como contenedor para el anuncio nativo y, opcionalmente, los controles que quieras registrar como destinos seleccionables para el anuncio. Esto es necesario para realizar un seguimiento adecuado de los clics y de las impresiones de anuncios.
 
 Hay dos sobrecargas para el método **RegisterAdContainer** que puedes usar:
 
@@ -181,7 +181,7 @@ Hay dos sobrecargas para el método **RegisterAdContainer** que puedes usar:
 
 ### <a name="required-native-ad-elements"></a>Elementos de anuncios nativos necesarios
 
-Como mínimo, siempre debes mostrar los siguientes elementos de anuncios nativos proporcionados por las propiedades del objeto **NativeAdV2** al usuario en el diseño de anuncio nativo. Si no incluyes estos elementos, puedes ver un rendimiento deficiente y bajas rentabilidades para tu unidad de anuncio.
+Como mínimo, siempre debes mostrar los siguientes elementos de anuncios nativos proporcionados por las propiedades del objeto [NativeAdV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) al usuario en el diseño de anuncio nativo. Si no incluyes estos elementos, puedes ver un rendimiento deficiente y bajas rentabilidades para tu unidad de anuncio.
 
 1. Muestra siempre el título del anuncio nativo (disponible en la propiedad **Título**). Proporciona espacio suficiente para mostrar 25 caracteres como mínimo. Si el título es más largo, reemplaza el texto adicional por puntos suspensivos.
 2. Muestra siempre al menos uno de los siguientes elementos para ayudar a diferenciar la experiencia de anuncios nativos del resto de la aplicación y destacar claramente que el contenido lo proporciona un anunciante:

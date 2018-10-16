@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, uwp, responder, respuestas, revisar
 ms.localizationpriority: medium
 ms.openlocfilehash: 2a043a0b721ee6eabdc3520960ae6da253587c33
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563595"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617173"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder a las opiniones de los clientes
 
 
-Puedes responder a las opiniones de la aplicación para permitir que los clientes sepan que lees sus comentarios. Con la respuesta a una crítica, puedes contar a los clientes las funciones que has agregado o los errores que has corregido basándote en sus comentarios, u obtener comentarios más específicos sobre cómo mejorar la aplicación. Sus respuestas se mostrarán en la Microsoft Store para todos los clientes de Windows 10 ver. También puedes enviar tu respuesta por correo electrónico al cliente (si no ha optado por un vistazo a y están usando un dispositivo que ejecuta Windows 10, versión 1803 o posterior).
+Puedes responder a las opiniones de la aplicación para permitir que los clientes sepan que lees sus comentarios. Con la respuesta a una crítica, puedes contar a los clientes las funciones que has agregado o los errores que has corregido basándote en sus comentarios, u obtener comentarios más específicos sobre cómo mejorar la aplicación. Se mostrará en la Microsoft Store para todos los clientes de Windows 10 ver tus respuestas. También puedes enviar tu respuesta por correo electrónico al cliente (si lo no han optado por un vistazo y están usando un dispositivo que ejecuta Windows 10, versión 1803 o posterior).
 
 Para ver las valoraciones sobre la aplicación y proporcionar respuestas, busca la aplicación en el panel de información del Centro de desarrollo de Windows. En el menú de navegación izquierdo, expande **Análisis** y, después, haz clic en **Opiniones** para mostrar el [informe de opiniones](reviews-report.md). Selecciona **responder para revisar** para proporcionar tu respuesta.
 
@@ -29,7 +29,7 @@ Para ver las valoraciones sobre la aplicación y proporcionar respuestas, busca 
 
 De manera predeterminada, la respuesta se registrará en la tienda, justo debajo de la opinión del cliente original. Estas respuestas será visibles para los clientes que visualicen la tienda en un dispositivo Windows 10. Si el cliente que ha dejado la crítica está usando un dispositivo que ejecuta Windows 10, versión 1803 o posterior, y no han optado por no recibir respuestas de correo electrónico, una copia de la respuesta se enviará también a dicho cliente por correo electrónico.  Tendrás que proporcionar una dirección de correo electrónico válida para poder enviar tu respuesta, que se incluirá en el correo electrónico al cliente. A continuación, pueden utilizar esta dirección de correo electrónico en contacto contigo directamente.
 
-Si no quieres que tu respuesta que aparezca en la tienda y, en su lugar quieres responder solo por correo electrónico al cliente, desactiva la casilla **hacer pública la respuesta** . Ten en cuenta que no podrás desactivar esta casilla si el cliente ha optado por no recibir respuestas de correo electrónico o si usan un dispositivo que no se está ejecutando Windows 10, versión 1803 o posterior.
+Si no quieres que tu respuesta que aparezca en la tienda y, en su lugar quieres responder únicamente a través de correo electrónico al cliente, desactiva la casilla **hacer pública la respuesta** . Ten en cuenta que no podrás desactivar esta casilla si el cliente ha optado por no recibir respuestas de correo electrónico o si usan un dispositivo que no se está ejecutando Windows 10, versión 1803 o posterior.
 
 ## <a name="guidelines-for-responses"></a>Orientación para las respuestas
 

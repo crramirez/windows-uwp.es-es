@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Pruebas del Kit para la certificación de aplicaciones en Windows
-description: El Kit de certificación de aplicaciones de Windows contiene diversas pruebas que pueden ayudar a garantizar que la aplicación está lista para publicarse en la Microsoft Store.
+description: El Kit de certificación de aplicaciones de Windows contiene diversas pruebas que puede ayudar a garantizar que la aplicación está lista para publicarse en la Microsoft Store.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572195"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623583"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Pruebas del Kit para la certificación de aplicaciones en Windows
 
 
-El [Kit de certificación de aplicaciones de Windows](windows-app-certification-kit.md) contiene diversas pruebas que ayudan a garantizar que la aplicación está lista para publicarse en la Microsoft Store. Las pruebas se enumeran a continuación con los criterios de detalles y sugeridos acciones en el caso de error.
+El [Kit de certificación de aplicaciones de Windows](windows-app-certification-kit.md) contiene diversas pruebas que ayudan a garantizar que la aplicación está lista para publicarse en la Microsoft Store. Las pruebas se enumeran a continuación con los criterios, obtener información detallada y sugeridos acciones en el caso de error.
 
 ## <a name="deployment-and-launch-tests"></a>Implementación y pruebas de inicio
 
@@ -308,7 +308,7 @@ Prueba la aplicación para detectar el uso de cualquier API no compatible.
 
 ### <a name="background"></a>Antecedentes
 
-Las aplicaciones deben usar las API para aplicaciones para UWP (Windows Runtime o API de Win32 compatibles) para lograr la certificación de Microsoft Store. Esta prueba también identifica situaciones en las que un binario administrado toma una dependencia de una función fuera del perfil aprobado.
+Las aplicaciones deben usar las API para aplicaciones para UWP (en tiempo de ejecución de Windows o API de Win32 compatibles) para lograr la certificación de Microsoft Store. Esta prueba también identifica situaciones en las que un binario administrado toma una dependencia de una función fuera del perfil aprobado.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
@@ -323,7 +323,7 @@ Asegúrate de que la aplicación se haya compilado como una versión de lanzamie
 
 Revisa los mensajes de error para identificar la API de la aplicación usa que no es una [API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> **Nota**  Las aplicaciones C++ creadas en una configuración de depuración pasará esta prueba, incluso si la configuración use solo las API del Windows SDK para aplicaciones para UWP. Ver, [alternativas a las API de Windows en aplicaciones para UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
+> **Nota**  Las aplicaciones C++ creadas en una configuración de depuración pasará esta prueba, incluso si la configuración use solo las API de Windows SDK para aplicaciones para UWP. Ver, [alternativas a las API de Windows en aplicaciones para UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
 
 ## <a name="performance-tests"></a>Pruebas de rendimiento
 
@@ -485,7 +485,7 @@ Usa esta tabla como guía.
 
 ### <a name="branding-validation"></a>Validación de la personalización de marca
 
-Las aplicaciones para UWP se espera que estén completas y sean absolutamente funcionales. Las aplicaciones que usan imágenes predeterminadas (de plantillas o muestras del SDK) ofrecen una experiencia mediocre al usuario y son difíciles de identificar en el catálogo de la tienda.
+Se espera que las aplicaciones UWP estén completas y sean absolutamente funcionales. Las aplicaciones que usan imágenes predeterminadas (de plantillas o muestras del SDK) ofrecen una experiencia mediocre al usuario y son difíciles de identificar en el catálogo de la tienda.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
@@ -537,7 +537,7 @@ Prueba las aplicaciones de Microsoft Direct3D para garantizar que no se bloquear
 
 ### <a name="background"></a>Antecedentes
 
-Microsoft Store requiere todas las aplicaciones con Direct3D se representen correctamente o finalicen correctamente en las tarjetas de gráficos de 9\-1 de nivel de característica.
+Microsoft Store requiere todas las aplicaciones con Direct3D se representen correctamente o finalicen correctamente en tarjetas de gráficos de 9\-1 de nivel de característica.
 
 Debido a que los usuarios pueden cambiar el hardware gráfico de sus dispositivos después de instalar la aplicación, si eliges un nivel de función mínimo mayor de 9\-1, tu aplicación debe detectar al iniciarse si el hardware actual cumple los requisitos mínimos. Si no se cumplen los requisitos mínimos, la aplicación debe mostrar un mensaje al usuario en el que se detallan todos los requisitos de Direct3D. Asimismo, si se descarga una aplicación en un dispositivo con el que no es compatible, debe detectarlo en el inicio y mostrar al cliente un mensaje en el que se detallan los requisitos.
 

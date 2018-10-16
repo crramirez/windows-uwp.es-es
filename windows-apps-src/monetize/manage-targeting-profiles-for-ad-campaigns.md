@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
 description: Usa este método en la API de promociones de Microsoft Store para administrar los perfiles objetivo para las campañas de anuncios promocionales.
 title: Administrar perfiles objetivo
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 692da5c2cc45e64d3feeab6136c1e50c72a7b0b0
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 8fa142f1df672703d2f14dc185481bb248efe07b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664195"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619157"
 ---
 # <a name="manage-targeting-profiles"></a>Administrar perfiles objetivo
 
@@ -453,7 +453,7 @@ El campo *country* del objeto [TargetingProfile](#targeting-profile) contiene un
 |     147      |            MZ                  |
 |     148      |            NA                  |
 |     150      |            NP                  |
-|     151      |            NI                  |
+|     151.      |            NI                  |
 |     153      |            NG                  |
 |     154      |            OM                  |
 |     155      |            PK                  |

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
 description: Usa este método en la API de envío de Microsoft Store para crear un complemento de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows.
 title: Crear un complemento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create add-on, crear complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: d463fb1f2e40b8556d9f2c57847dae5420ec3b21
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: a24355ca09380c46d8e648899ca2fe96f9e989c7
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662545"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619097"
 ---
 # <a name="create-an-add-on"></a>Crear un complemento
 
@@ -29,7 +29,7 @@ Usa este método en la API de envío de Microsoft Store para crear un complement
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
@@ -108,6 +108,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de complementos](manage-add-on-submissions.md)
-* [Obtener todos los complementos](get-all-add-ons.md)
+* [Obtención de todos los complementos](get-all-add-ons.md)
 * [Obtención de un complemento](get-an-add-on.md)
 * [Eliminación de un complemento](delete-an-add-on.md)

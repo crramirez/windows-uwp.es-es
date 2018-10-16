@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
 description: Obtén información sobre cómo habilitar las pruebas y compras desde la aplicación en aplicaciones para UWP orientadas a versiones anteriores a Windows 10, versión 1607.
 title: Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: ccefb07b5eb0881979d91b656159f82ef050ac91
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: bb2c242ea4b7e3881751874c096165279854aa5e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691204"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619309"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store
 

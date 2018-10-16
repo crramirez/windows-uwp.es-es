@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Pruebas de aplicación Puente de dispositivo de escritorio de Windows
-description: Usa las pruebas integradas del puente de escritorio para garantizar que la aplicación de escritorio está optimizada para la conversión a una aplicación para UWP.
+description: Usa las pruebas integradas del puente de escritorio para garantizar que la aplicación de escritorio está optimizada para su conversión a una aplicación para UWP.
 ms.author: pafarley
 ms.date: 12/18/2017
 ms.topic: article
@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574199"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619501"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
 
-[Las aplicaciones de puente de dispositivo de escritorio](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) son aplicaciones de escritorio de Windows convertidas a las aplicaciones de la plataforma Universal de Windows (UWP) mediante el [Puente de escritorio](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows10.
+[Las aplicaciones de puente de escritorio](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) son aplicaciones de escritorio de Windows convertidas a las aplicaciones de la plataforma Universal de Windows (UWP) mediante el [Puente de escritorio](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows10.
 
 ## <a name="required-versus-optional-tests"></a>Pruebas obligatorias vs. pruebas opcionales
 Pruebas opcionales para las aplicaciones de puente de escritorio de Windows solo son informativas y no se usará para evaluar la aplicación durante la incorporación de Microsoft Store. Es recomendable investigar estos resultados para crear aplicaciones de mejor calidad de la prueba. Los criterios de aprobación o no aprobación general para la incorporación de la tienda se determinan según las pruebas obligatorias y no según estas pruebas opcionales.
@@ -224,7 +224,7 @@ Esto puede corregirse al asegurarte de que la aplicación se haya compilado como
 > La versión de depuración de una aplicación pasará esta prueba, incluso si la aplicación usa solo [las API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx). Revisa los mensajes de error para identificar la API presentan que no es una API permitida para aplicaciones para UWP. 
 
 > [!NOTE]
-> Las aplicaciones C++ creadas en una configuración de depuración pasará esta prueba, incluso si la configuración use solo las API del Windows SDK para aplicaciones para UWP. Para obtener más información, consulta [alternativas a las API de Windows en aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) .
+> Las aplicaciones C++ creadas en una configuración de depuración pasará esta prueba, incluso si la configuración use solo las API de Windows SDK para aplicaciones para UWP. Para obtener más información, consulta [alternativas a las API de Windows en aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) .
 
 ### <a name="6-user-account-control-uac-test"></a>6. Prueba de control de cuentas de usuario (UAC)  
 
@@ -273,7 +273,7 @@ La comprobación de archivos prohibidos del Kit para la certificación de aplica
 Esta comprobación suele producir un error cuando una aplicación usa una versión preliminar del archivo en lugar de la versión oficial más reciente. 
 
 **Acciones correctivas**  
-Para corregir esto, usa la versión más reciente del [SDK de mapas de Bing](http://go.microsoft.com/fwlink/p/?linkid=614880) para aplicaciones para UWP.
+Para corregir este problema, usa la versión más reciente del [SDK de mapas de Bing](http://go.microsoft.com/fwlink/p/?linkid=614880) para aplicaciones para UWP.
 
 #### <a name="82-private-code-signing"></a>8.2 Firma de código privado
 Prueba la existencia de archivos binarios de firma de código privado en el paquete de la aplicación. 

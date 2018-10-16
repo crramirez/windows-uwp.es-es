@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: Usa estos métodos en la API de envío de Microsoft Store para administrar envíos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows.
 title: Administración de envíos de aplicaciones
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submissions, envíos de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: db74614c9455bfeffb9cfa286e84f4de6d97f52d
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: f0edcde4916311a629d248b800320f6e1c596600
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832436"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617925"
 ---
 # <a name="manage-app-submissions"></a>Administración de envíos de aplicaciones
 
@@ -206,7 +206,7 @@ En los siguientes artículos se proporcionan ejemplos de código detallados que 
 * [Muestra de Java: envíos de aplicaciones, complementos y pilotos](java-code-examples-for-the-windows-store-submission-api.md)
 * [Muestra de Java: envío de aplicación con opciones de juego y tráileres](java-code-examples-for-submissions-game-options-and-trailers.md)
 * [Muestra de Python: envíos de aplicaciones, complementos y pilotos](python-code-examples-for-the-windows-store-submission-api.md)
-* [Ejemplo de Python: envío de aplicación con opciones de juego y tráileres](python-code-examples-for-submissions-game-options-and-trailers.md)
+* [Muestra de Python: envío de aplicación con opciones de juego y tráileres](python-code-examples-for-submissions-game-options-and-trailers.md)
 
 ## <a name="storebroker-powershell-module"></a>Módulo de StoreBroker PowerShell
 
@@ -341,7 +341,7 @@ Este recurso tiene los siguientes valores.
 
 | Valor      | Tipo   | Descripción      |
 |------------|--------|-------------------|
-| id            | cadena  | Identificador del envío. Este identificador está disponible en los datos de respuesta de las solicitudes para [crear un envío de aplicación](create-an-app-submission.md), [obtener todas las aplicaciones](get-all-apps.md) y [obtener una aplicación](get-an-app.md). Para un envío creado en el panel del Centro de desarrollo, este id. también está disponible en la dirección URL de la página de envío del panel.  |
+| id            | string  | Identificador del envío. Este identificador está disponible en los datos de respuesta de las solicitudes para [crear un envío de aplicación](create-an-app-submission.md), [obtener todas las aplicaciones](get-all-apps.md) y [obtener una aplicación](get-an-app.md). Para un envío creado en el panel del Centro de desarrollo, este id. también está disponible en la dirección URL de la página de envío del panel.  |
 | applicationCategory           | string  |   Cadena que especifica la [categoría o subcategoría](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) de la aplicación. Las categorías y subcategorías se combinan en una cadena simple mediante el guion bajo "_" como, por ejemplo, **BooksAndReference_EReader**.      |  
 | pricing           |  object  | Un [recurso de precios](#pricing-object) que contiene información sobre precios para la aplicación.        |   
 | visibility           |  string  |  Visibilidad de la app. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
@@ -358,7 +358,7 @@ Este recurso tiene los siguientes valores.
 | notesForCertification           |  string  |   Contiene [notas para la certificación](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) de la aplicación.    |    
 | status           |   string  |  Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicación</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   object  | Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores.       |    
-| fileUploadUrl           |   cadena  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes, imágenes de descripciones o archivos de tráileres para el envío, carga el archivo ZIP que contiene los paquetes y las imágenes en este URI. Para obtener más información, consulta [Crear un envío de aplicación](#create-an-app-submission).       |    
+| fileUploadUrl           |   string  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes, imágenes de descripciones o archivos de tráileres para el envío, carga el archivo ZIP que contiene los paquetes y las imágenes en este URI. Para obtener más información, consulta [Crear un envío de aplicación](#create-an-app-submission).       |    
 | applicationPackages           |   array  | Una matriz de [recursos de paquete de aplicación](#application-package-object) que proporcionan detalles acerca de cada paquete del envío. |    
 | packageDeliveryOptions    | object  | Un [recurso de opciones de entrega de paquete](#package-delivery-options-object) que contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria para el envío.  |
 | enterpriseLicensing           |  cadena  |  Uno de los [valores de licencia de empresa](#enterprise-licensing) indica el comportamiento de la licencia de empresa de la aplicación.  |    
@@ -427,7 +427,7 @@ Este recurso contiene la información de descripción de base de una aplicación
 |  copyrightAndTrademarkInfo                |   string      |  [Información de copyright o marcas comerciales](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info) opcional.  |
 |  keywords                |  array       |  Matriz de [palabras clave](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) para ayudar a tu aplicación a aparecer en los resultados de búsqueda.    |
 |  licenseTerms                |    string     | [Términos de licencia](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) opcionales para tu aplicación.     |
-|  privacyPolicy                |   cadena      |   Esta valor está obsoleta. Para establecer o cambiar la dirección URL de directiva de privacidad de la aplicación, debes hacer esto en la página [Propiedades](../publish/enter-app-properties.md#privacy-policy-url) en el panel del Centro de desarrollo. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.       |
+|  privacyPolicy                |   string      |   Esta valor está obsoleta. Para establecer o cambiar la dirección URL de directiva de privacidad de la aplicación, debes hacer esto en la página [Propiedades](../publish/enter-app-properties.md#privacy-policy-url) en el panel del Centro de desarrollo. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.       |
 |  supportContact                |   string      |  Esta valor está obsoleta. Para establecer o cambiar la URL de contacto de soporte o la dirección de correo electrónico, debes hacer esto en la página [Propiedades](../publish/enter-app-properties.md#support-contact-info) en el panel del Centro de desarrollo. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se ignorará.        |
 |  websiteUrl                |   string      |  Esta valor está obsoleta. Para establecer o cambiar la dirección URL de la página web de la aplicación, debes hacer esto en la página [Propiedades](../publish/enter-app-properties.md#website) en el panel del Centro de desarrollo. Puedes omitir este valor de las llamadas a la API de envío. Si estableces este valor, se omitirá.      |    
 |  description               |    string     |   [Descripción](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) de la aplicación.   |     
@@ -594,7 +594,7 @@ Este recurso proporciona acceso a los datos del informe de certificación de un 
 
 | Valor           | Tipo    | Descripción             |
 |-----------------|---------|------|
-|     fecha            |    string     |  Fecha y hora en que se generó el informe, en formato ISO 8601.    |
+|     date            |    string     |  Fecha y hora en que se generó el informe, en formato ISO 8601.    |
 |     reportUrl            |    cadena     |  Dirección URL en la que puedes obtener acceso al informe.    |
 
 
@@ -773,7 +773,7 @@ Los valores siguientes representan el código de estado de un envío.
 
 <span/>
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener datos de aplicación mediante la API de envío de Microsoft Store](get-app-data.md)

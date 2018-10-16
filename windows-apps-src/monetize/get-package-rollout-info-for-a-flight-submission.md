@@ -1,8 +1,8 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Usa este método en la API de envío de Microsoft Store para obtener información acerca del lanzamiento de paquetes para el envío de paquete piloto.
 title: Obtener la información de lanzamiento para un envío piloto
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, package rollout, lanzamiento de paquete, flight submission, envío piloto
 ms.assetid: 397f1b99-2be7-4f65-bcf1-9433a3d496ad
 ms.localizationpriority: medium
-ms.openlocfilehash: 1708a9aad92b91170e726b49402b9321fddf3f89
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 9dd9a318ffd80d32f6370709c4ca3463ae6d8cc7
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817060"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620807"
 ---
 # <a name="get-rollout-info-for-a-flight-submission"></a>Obtener la información de lanzamiento para un envío piloto
 

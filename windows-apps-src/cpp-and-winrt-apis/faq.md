@@ -10,14 +10,14 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, preguntas más frecuentes, P+F
 ms.localizationpriority: medium
 ms.openlocfilehash: e00f387c3dd78353158d93d3b4749345936396f5
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566251"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617945"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Preguntas más frecuentes sobre C++/WinRT
-Respuestas a preguntas que probablemente tengas acerca de la creación y el consumo de Windows en tiempo de ejecución APIs con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+Respuestas a preguntas que probablemente tengas acerca de la creación y consumo de Windows en tiempo de ejecución APIs con [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 > [!NOTE]
 > Si tu pregunta es sobre un mensaje de error que has visto, consulta también el tema [Solución de problemas de C++/WinRT](troubleshooting.md).
@@ -26,9 +26,9 @@ Respuestas a preguntas que probablemente tengas acerca de la creación y el cons
 
 Consulta [cómo redestinar tu C++ / WinRT proyecto a una versión posterior del Windows SDK](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk).
 
-## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>¿Por qué no se compilará el nuevo proyecto? Uso Visual Studio 2017 (versión 15.8.0 o superior) y el SDK versión 17134
+## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>¿Por qué no se compilará el nuevo proyecto? Estoy usando Visual Studio 2017 (versión 15.8.0 o posterior) y el SDK versión 17134
 
-Si estás usando Visual Studio 2017 (versión 15.8.0 o superior) y el destino de Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803), a continuación, recién creado C++ / WinRT proyecto puede presentar errores compilar con el error "error*C3861: 'from_abi': identificador no encuentra*"y con otros errores que se origine en *base.h*. La solución es cualquier destino una posterior (más compatible) versión del SDK de Windows o la propiedad de proyecto del conjunto **C o C++** > **idioma** > **Conformance mode: No** (Además, si **/ permissive-** aparece en la propiedad de proyecto ** C/C++** > **idioma** > de**línea de comandos** en **Las opciones adicionales**, elimínela).
+Si estás usando Visual Studio 2017 (versión 15.8.0 o posterior) y el destino de Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803), a continuación, recién creado C++ / WinRT proyecto puede producir un error al compilar con el error "error*C3861: 'from_abi': identificador no encuentra*"y con otros errores que se origine en *base.h*. La solución es cualquier destino una posterior (más compatible) versión del SDK de Windows o la propiedad de proyecto de conjunto de **C/c ++** > **idioma** > **Conformance mode: No** (Además, si **/ permissive-** aparece en la propiedad de proyecto ** C/C++** > **idioma** > de**línea de comandos** en **Las opciones adicionales**, elimínalo).
 
 ## <a name="what-are-the-requirements-for-the-cwinrt-visual-studio-extension-vsixhttpsakamscppwinrtvsix"></a>¿Cuáles son los requisitos para la [extensión de Visual Studio (VSIX) C++/WinRT](https://aka.ms/cppwinrt/vsix)?
 La extensión [VSIX](https://aka.ms/cppwinrt/vsix) exige una versión de destino de Windows SDK mínima de 10.0.17134.0 (Windows 10, versión 1803). También necesitarás Visual Studio 2017 (al menos la versión 15.6; te recomendamos al menos la 15.7). Puedes identificar un proyecto que usa la extensión VSIX mediante la presencia de `<CppWinRTEnabled>true</CppWinRTEnabled>` en `<PropertyGroup Label="Globals">` en el archivo `.vcxproj`. Para obtener más información, consulta [Soporte de Visual Studio para C++/WinRT y VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
@@ -53,7 +53,7 @@ Si el símbolo no resuelto es una función libre de Windows Runtime, como [RoIni
 #pragma comment(lib, "windowsapp")
 ```
 
-Se recomienda que resolver los errores de vinculador que puedes al vincular **WindowsApp.lib**. Pero, si no se necesita la aplicación pase las pruebas del [Kit de certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md) utilizadas por Visual Studio y Microsoft Store para validar envíos (lo que significa que, en consecuencia, no estará posible que la aplicación sea correctamente introducen en Microsoft Store), a continuación, puedes vincular una biblioteca vínculos estáticos alternativa en su lugar. Por ejemplo, si el error del vinculador hace referencia a **CoIncrementMTAUsage** (o **WINRT_CoIncrementMTAUsage**), a continuación, puedes resolver mediante un vínculo Ole32.lib si es absolutamente necesario (por ejemplo, si no la versión de **WindowsApp.lib** exportar la función).
+Te recomendamos que resolver los errores de vinculador que puedes al vincular **WindowsApp.lib**. No obstante, si no se necesita la aplicación pase las pruebas del [Kit de certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md) utilizadas por Visual Studio y Microsoft Store para validar envíos (lo que significa que, en consecuencia, no estará posible que la aplicación sea correctamente introducen en Microsoft Store), a continuación, puedes vincular una biblioteca de vínculos estáticos alternativa en su lugar. Por ejemplo, si el error del vinculador hace referencia a **CoIncrementMTAUsage** (o **WINRT_CoIncrementMTAUsage**), a continuación, puede resolver mediante un vínculo Ole32.lib si es absolutamente necesario (por ejemplo, si no la versión de **WindowsApp.lib** exportar la función).
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>¿Debo implementar [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable)? Y, si es así, ¿cómo?
 Si tienes una clase en tiempo de ejecución que libera recursos en su destructor, y si dicha clase en tiempo de ejecución se ha diseñado para usarse desde fuera de su unidad de compilación de implementación (es un componente de Windows Runtime destinado al consumo general por aplicaciones cliente Windows Runtime), te recomendamos que también implementes **IClosable** para poder admitir el consumo de tu clase en tiempo de ejecución con lenguajes que carecen de finalización determinista. Asegúrate de que tus recursos se liberan si se llama al constructor [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.Close) o a ambos. **IClosable::Close** puede llamarse un número arbitrario de veces.
@@ -99,7 +99,7 @@ Visual Studio es la herramienta de desarrollo que admite y se recomienda para C+
 
 Cuando se declara una propiedad de solo lectura en [MIDL 3.0](/uwp/midl-3/), cabría esperar el `cppwinrt.exe` herramienta para generar una función de implementación para TI que sea `const`-calificado (una función const trata el puntero *this* como const).
 
-En efecto, se recomienda usar const siempre que sea posible, pero la `cppwinrt.exe` propia herramienta no intente razón sobre la implementación de las funciones pudiera podrían ser const y que es posible que no. Puedes realizar cualquiera de las funciones de implementación const, como se muestra en este ejemplo.
+En efecto, se recomienda usar const siempre que sea posible, pero la `cppwinrt.exe` propia herramienta no intente razón sobre la implementación de las funciones pudiera podrían ser const y que es posible que no. También puedes realizar cualquiera de las funciones de implementación const, al igual que en este ejemplo.
 
 ```cppwinrt
 struct MyStringable : winrt::implements<MyStringable, winrt::Windows::Foundation::IStringable>
@@ -129,13 +129,13 @@ Para llamar a **ToString** anterior, el comando de **Ir a la declaración** de V
 winrt::hstring ToString() const;
 ```
 
-Funciones de la proyección son const independientemente de cómo elegir calificar la implementación de ellos. En segundo plano, la proyección, llama a la interfaz binaria de aplicaciones (ABI), que las cantidades a una llamada a través de un puntero de interfaz COM. El único estado que el proyectado **ToString** interactúe con es ese puntero de interfaz COM; y no tiene sin duda, no es necesario modificar ese puntero, por lo que la función es const. Esto ofrece la garantía de que eso no cambia nada sobre la referencia de **IStringable** que estás llamando a través de y garantiza que puedes llamar a **ToString** incluso con una constante de hace referencia a un **IStringable**.
+Funciones de la proyección son const independientemente de cómo elegir calificar la implementación de ellos. En segundo plano, la proyección, llama a la interfaz binaria de aplicaciones (ABI), que las cantidades a una llamada a través de un puntero de interfaz COM. El único estado que el proyectado **ToString** interactúa con es ese puntero de interfaz COM; y no tiene sin duda, no es necesario modificar ese puntero, por lo que la función es const. Esto ofrece la garantía de que eso no cambia nada sobre la referencia de **IStringable** que estás llamando a través de y garantiza que puedes llamar a **ToString** incluso con una constante de hace referencia a un **IStringable**.
 
-Comprender que estos ejemplos de `const` son los detalles de implementación de C++ / WinRT proyecciones e implementaciones; constituyen higiene del código para su beneficio. No hay nada como `const` en el COM ni la ABI de Windows Runtime (para las funciones de miembro).
+Comprender que estos ejemplos de `const` son los detalles de implementación de C++ / WinRT proyecciones e implementaciones; constituyen higiene de código para su beneficio. No hay nada como `const` en el COM ni la ABI de Windows Runtime (para las funciones de miembro).
 
-## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>¿Tienes cualquier recomendaciones para reducir el tamaño del código para C++ / WinRT los archivos binarios?
+## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>¿Tienes las recomendaciones para reducir el tamaño del código para C++ / WinRT los archivos binarios?
 
-Al trabajar con objetos de Windows Runtime, debes evitar el patrón de codificación que se muestra a continuación, porque puede tener un impacto negativo en la aplicación por lo que provoca más código binario lo necesario para que se genere.
+Al trabajar con objetos de Windows Runtime, debes evitar el patrón de codificación que se muestra a continuación, ya que puede tener un impacto negativo en la aplicación por lo que provoca más código binario lo necesario para generarse.
 
 ```cppwinrt
 anobject.b().c().d();
@@ -143,7 +143,7 @@ anobject.b().c().e();
 anobject.b().c().f();
 ```
 
-En el mundo de Windows Runtime, el compilador es no se puede almacenar en caché el valor de `c()` o las interfaces para cada método que se llama a través de direccionamiento indirecto ('. '). A menos que intervenir, que da como resultado más llamadas virtuales y sobrecarga de recuento de referencias. El patrón anterior podría generar fácilmente dos veces mucho código estrictamente como sea necesario. En su lugar, se prefiere el patrón que se muestra a continuación donde pueda. Genera mucho menos código y considerablemente también puede mejorar el rendimiento de tiempo de ejecución.
+En el mundo de Windows Runtime, el compilador es no se puede almacenar en caché el valor de `c()` o las interfaces para cada método que se llama a través de un direccionamiento indirecto ('. '). A menos que intervenir, que da como resultado más llamadas virtuales y sobrecarga de recuento de referencias. El modelo anterior podría generar fácilmente dos veces mucho código estrictamente como sea necesario. En su lugar, se prefiere el patrón que se muestra a continuación donde pueda. Genera mucho menos código y considerablemente también puede mejorar el rendimiento de tiempo de ejecución.
 
 ```cppwinrt
 auto a{ anobject.b().c() };
@@ -152,7 +152,7 @@ a.e();
 a.f();
 ```
 
-Se aplica el patrón recomendado mostrado anteriormente no solo a C++ / WinRT, pero para todas las proyecciones de lenguaje de Windows Runtime.
+El patrón recomendado mostrado anteriormente se aplica no solo a C++ / WinRT, pero para todas las proyecciones de lenguaje de Windows Runtime.
 
 > [!NOTE]
-> Si en este tema no responde a tu pregunta, puedes buscar ayuda visitando la [Comunidad de desarrolladores de Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html), o mediante el [ `c++-winrt` etiqueta en Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).
+> Si en este tema no responde a tu pregunta, a continuación, puedes buscar ayuda visitando la [Comunidad de desarrolladores de Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html), o mediante el [ `c++-winrt` etiqueta en Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

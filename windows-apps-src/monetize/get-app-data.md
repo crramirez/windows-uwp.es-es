@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: Usa estos métodos en la API de envío de Microsoft Store para recuperar los datos de las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
 title: Obtener datos de la aplicación
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app data, datos de la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c8029ca9481761ac4313b24607567f20b3a301c
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 6940c1079c7973bc4fd639345c5d5e3f33b0221f
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663315"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618589"
 ---
 # <a name="get-app-data"></a>Obtener datos de la aplicación
 
@@ -186,7 +186,7 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción                 |
 |-----------------|---------|------------------------------|
-| id            | cadena  | Identificador del envío.    |
+| id            | string  | Identificador del envío.    |
 | resourceLocation   | cadena  | Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para el envío.            |
  
 <span/>

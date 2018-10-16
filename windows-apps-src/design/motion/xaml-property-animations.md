@@ -12,15 +12,15 @@ pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.openlocfilehash: a03ffc8d5ea78ee6cbdf78feaae7ba1cd1448f37
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4568905"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622069"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>Animación de elementos XAML con las animaciones de composición
 
-En este artículo se presentan nuevas propiedades que permiten animar un UIElement de XAML con el rendimiento de las animaciones de composición y la facilidad de establecer las propiedades de XAML.
+En este artículo se presentan nuevas propiedades que te permiten animar un UIElement de XAML con el rendimiento de las animaciones de composición y la facilidad de establecer las propiedades de XAML.
 
 Antes de Windows 10, versión 1809, tenía 2 opciones para crear animaciones en las aplicaciones para UWP:
 
@@ -29,7 +29,7 @@ Antes de Windows 10, versión 1809, tenía 2 opciones para crear animaciones en 
 
 El uso de la capa visual proporciona un mejor rendimiento que se construye con el XAML. Pero mediante [ElementCompositionPreview](/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) para obtener el objeto del elemento subyacente composición [Visual](/uwp/api/windows.ui.composition.visual) y, a continuación, animar el elemento Visual con las animaciones de composición, son más difícil de usar.
 
-A partir de Windows 10, versión 1809, puedes animar las propiedades en un UIElement directamente con las animaciones de composición sin necesidad de obtener el elemento Visual de composición subyacente.
+A partir de Windows 10, versión 1809, puedes animar las propiedades de un UIElement directamente mediante animaciones de composición sin necesidad de obtener el elemento Visual de composición subyacente.
 
 > [!NOTE]
 > Para usar estas propiedades en UIElement, la versión de destino del proyecto UWP debe ser 1809 o posterior. Para obtener más información sobre cómo configurar la versión del proyecto, consulta [aplicaciones adaptables para versiones](../../debug-test-perf/version-adaptive-apps.md).
@@ -44,7 +44,7 @@ Esta tabla muestran las propiedades que puedes usar para modificar la representa
 | [Translation](/uwp/api/windows.ui.xaml.uielement.translation) | Vector3 | Desplazar la posición X, Y, Z del elemento |
 | [TransformMatrix](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | La matriz de transformación para aplicar al elemento |
 | [Scale](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | Escalar el elemento, centrado en el punto central. |
-| [Rotación](/uwp/api/windows.ui.xaml.uielement.rotation) | Flotante | Girar el elemento alrededor de la RotationAxis y el punto central. |
+| [Rotación](/uwp/api/windows.ui.xaml.uielement.rotation) | Flotante | Girar el elemento alrededor del RotationAxis y el punto central. |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | El eje de rotación |
 | [CenterPoint](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | El punto central de la escala y la rotación |
 
@@ -52,7 +52,7 @@ El valor de propiedad TransformMatrix se combina con las propiedades de escala, 
 
 Estas propiedades no afectan al diseño del elemento, por lo tanto, modificar estas propiedades no implica una nueva [medida](/uwp/api/windows.ui.xaml.uielement.measure)/pase de[organización](/uwp/api/windows.ui.xaml.uielement.arrange) .
 
-Estas propiedades tienen el mismo propósito y comportamiento que las propiedades con el mismo nombre en la composición [Visual](/uwp/api/windows.ui.composition.visual) clase (excepto la traducción, lo que no está en Visual).
+Estas propiedades tienen el mismo propósito y comportamiento que las propiedades con el mismo nombre en la clase [Visual](/uwp/api/windows.ui.composition.visual) (excepto la traducción, lo que no está en Visual) de composición.
 
 ### <a name="example-setting-the-scale-property"></a>Ejemplo: Establecer la propiedad de escala
 
@@ -80,7 +80,7 @@ Las propiedades que se pueden animar con una clase CompositionAnimation son reem
 - [Proyección](/uwp/api/windows.ui.xaml.uielement.projection)
 - [Transform3D](/uwp/api/windows.ui.xaml.uielement.transform3d)
 
-Cuando se establece (o animar) cualquiera de las nuevas propiedades, no puedes usar las propiedades antiguas. Por el contrario, si establece (o animar) cualquiera de las propiedades anteriores, no puedes usar las nuevas propiedades.
+Cuando se establece (o animar) cualquiera de las nuevas propiedades, no puedes usar las propiedades anteriores. Por el contrario, si se establece (o animar) cualquiera de las propiedades anteriores, no puedes usar las nuevas propiedades.
 
 También se pueden utilizar las nuevas propiedades si usas ElementCompositionPreview para obtener y administrar el elemento Visual mediante estos métodos:
 
@@ -88,9 +88,9 @@ También se pueden utilizar las nuevas propiedades si usas ElementCompositionPre
 - [ElementCompositionPreview.SetIsTranslationEnabled](/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setistranslationenabled)
 
 > [!IMPORTANT]
-> Intentar mezclar el uso de los dos conjuntos de propiedades, hará que la llamada de API para un error y generar un mensaje de error.
+> Intentar combinar el uso de los dos conjuntos de propiedades, hará que la llamada de API para un error y generar un mensaje de error.
 
-Es posible cambiar de un conjunto de propiedades desactivando, aunque por cuestiones de simplicidad no se recomienda. Si la propiedad está respaldada por un DependencyProperty (por ejemplo, si UIElement.Projection está respaldado por UIElement.ProjectionProperty), a continuación, llama a ClearValue para restaurar el estado "no usados". En caso contrario (por ejemplo, la propiedad de escala), Establece la propiedad a su valor predeterminado.
+Es posible cambiar desde un conjunto de propiedades desactivando, aunque por cuestiones de simplicidad no se recomienda. Si la propiedad está respaldada por un DependencyProperty (por ejemplo, si UIElement.Projection está respaldado por UIElement.ProjectionProperty), a continuación, llama a ClearValue para restaurar el estado "". En caso contrario (por ejemplo, la propiedad de escala), Establece la propiedad a su valor predeterminado.
 
 ## <a name="animating-uielement-properties-with-compositionanimation"></a>Animación de propiedades UIElement con CompositionAnimation
 
@@ -100,7 +100,7 @@ Usa los métodos [StartAnimation](/uwp/api/windows.ui.xaml.uielement.startanimat
 
 ### <a name="example-animating-the-scale-property-with-a-vector3keyframeanimation"></a>Ejemplo: Animación de la propiedad de escala con una Vector3KeyFrameAnimation
 
-Este ejemplo muestra cómo animar la escala de un botón.
+En este ejemplo se muestra cómo animar la escala de un botón.
 
 ```csharp
 var compositor = Window.Current.Compositor;

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: dc632a4c-ce48-400b-8e6e-1dddbd13afff
 description: Usa este método en la API de promociones de Microsoft Store para administrar las líneas de entrega para las campañas de anuncios promocionales.
 title: Administrar las líneas de entrega
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: a7dca49ee1ecaeb675127ea19191a028f6f7846f
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 387b5ccf999452780b89aa7edcc9b58bcc35ea8a
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664105"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622740"
 ---
 # <a name="manage-delivery-lines"></a>Administrar las líneas de entrega
 
@@ -27,7 +27,7 @@ Para obtener más información sobre la relación entre las líneas de entrega y
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para usar estos métodos, primero tienes que hacer lo siguiente:
+Para usar estos métodos, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](run-ad-campaigns-using-windows-store-services.md#prerequisites) de la API de promociones de Microsoft Store.
 

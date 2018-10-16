@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a25980c964e399931a088e281e959df3095ffe9a
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564594"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617301"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Poner a la venta aplicaciones y complementos
 
 Puedes promocionar tu aplicación o complemento en Microsoft Store poniéndola a la venta durante un tiempo limitado. Puedes elegir ofrecer el producto en una franja de precios inferior o con un descuento basado en porcentajes.
 
 > [!NOTE]
-> No se admite el precio de oferta para complementos de suscripción.
+> No se admite el precio de oferta de complementos de suscripción.
 
 Cuando usas la sección **Precio de oferta** de la página **Precios y disponibilidad** de un envío para reducir temporalmente el precio de la aplicación o complemento, los clientes que consulten la descripción de la Tienda verán el precio tachado, lo que indica que se ha reducido el precio (a diferencia de un [cambio de precio programado](set-and-schedule-app-pricing.md#schedule-price-changes), que puede aumentar o disminuir el precio sin que se muestre como un cambio en la Tienda). 
 

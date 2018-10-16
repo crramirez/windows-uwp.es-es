@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de activos
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f8cbb3989b58b726336b4bd757902bd9ea3f8c0
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574337"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623563"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Creación del paquete con el diseño del empaquetado  
 
@@ -55,7 +55,7 @@ Este es un ejemplo del aspecto de un diseño de empaquetado simple:
 Desglosemos este ejemplo para comprender cómo funciona.
 
 ### <a name="packagefamily"></a>PackageFamily
-Este diseño de empaquetado creará un archivo de paquete de aplicación plana única con un x64 paquete de arquitectura y un paquete de activos "Medio". 
+Este diseño de empaquetado creará un archivo de paquete de aplicación plana único con un x64 paquete de arquitectura y un paquete de activos "Media". 
 
 El elemento **PackageFamily** se usa para definir una recopilación de aplicaciones. Debes usar el atributo **ManifestPath** para proporcionar un **AppxManifest** para la recopilación, el **AppxManifest** debe coincidir con el**AppxManifest** para el paquete de arquitectura de la recopilación. El atributo **ID** también debe proporcionarse. Esto se usa con MakeAppx.exe durante la creación del paquete para que puedas crear solo este paquete si quieres, y este será el nombre de archivo del paquete resultante. El atributo **FlatBundle** se usa para describir qué tipo de recopilación quieres crear, **true** para una recopilación plana (aquí puedes leer más sobre ella), y **false** para una recopilación clásica. El atributo **ResourceManager** se usa para especificar si los paquetes de recursos dentro de esta recopilación usarán MRT para acceder a los archivos. De manera predeterminada es **true**, pero a partir de Windows 10, versión 1803, este aún no está listo, por lo que este atributo debe establecerse en **false**.
 
@@ -147,7 +147,7 @@ Los paquetes de recursos se pueden especificar con el elemento **ResourcePackage
 
 Cada paquete opcional tiene su propio nombre de familia de paquete distinto y se debe definir con elementos **PackageFamily**, mientras se especifica el atributo **Optional** para que sea **true **. El atributo **RelatedSet** se usa para especificar si el paquete opcional está dentro del conjunto relacionado (por defecto es true): si el paquete opcional debe actualizarse con el paquete primario.
 
-El elemento **PrebuiltPackage** se usa para agregar paquetes que no están definidos en el diseño de empaquetado para incluirse o referenciarse en los archivos de paquete de la aplicación que se van a. En este caso, otro paquete opcional de DLC se incluye aquí para que pueda hacer referencia a él y tenerlo a formar parte del conjunto relacionado del archivo de recopilación de aplicación principal.
+El elemento **PrebuiltPackage** se usa para agregar paquetes que no están definidos en el diseño de empaquetado para incluirse o referenciarse en los archivos de paquete de aplicación que se van a. En este caso, otro paquete opcional de DLC se incluye aquí para que pueda hacer referencia a él y tenerlo a formar parte del conjunto relacionado del archivo de recopilación de aplicación principal.
 
 
 ## <a name="build-app-packages-with-a-packaging-layout-and-makeappxexe"></a>Compilar paquetes de aplicación con un diseño de empaquetado y MakeAppx.exe

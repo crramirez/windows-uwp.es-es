@@ -1,28 +1,28 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
 description: Aprende a instalar el SDK de Microsoft Advertising.
 title: Instalar el SDK de Microsoft Advertising
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, anuncios, publicidad, instalar, SDK, biblioteca de publicidad
 ms.localizationpriority: medium
-ms.openlocfilehash: 17c12d09fdc7643a2d2ac1c13fa2a4e6c92cad03
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e65b26006cbeb7f7fbd9bf95f83051873e6f1140
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654884"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620199"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instalar el SDK de Microsoft Advertising
 
 Para mostrar anuncios en las aplicaciones para UWP en Windows10, instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Este SDK es una extensión de Visual Studio 2015 y versiones posteriores.
 
 > [!NOTE]
-> Si está desarrollando un aplicación para UWP HTML o JavaScript, e instalaste el SDK de Windows10, versión 10.0.14393 (Actualización de aniversario), debes instalar también la biblioteca WinJS. Antes, esta biblioteca estaba incluida en versiones anteriores del SDK de Windows 10 pero desde la versión 10.0.14393 del SDK de Windows 10 (Actualización de aniversario), debe instalarse por separado. Para instalar WinJS, consulta cómo [obtener WinJS](http://try.buildwinjs.com/download/GetWinJS/).
+> Si vas a desarrollar una aplicación para UWP HTML o JavaScript e instalaste el SDK de Windows 10 versión 10.0.14393 (actualización de aniversario) o una versión posterior, también debes instalar la biblioteca [WinJS](https://github.com/winjs/winjs) . Antes, esta biblioteca estaba incluida en versiones anteriores del SDK de Windows 10 pero desde la versión 10.0.14393 del SDK de Windows 10 (Actualización de aniversario), debe instalarse por separado.
 
 <span id="install-msi" />
 
@@ -33,11 +33,11 @@ Para instalar el SDK de Microsoft Advertising mediante el instalador MSI:
 1.  Cierra todas las instancias de Visual Studio.
 
 2. Si anteriormente habías instalado una versión anterior del SDK de Microsoft Advertising, el SDK de cliente de anuncios universal, la extensión Ad Mediator o el SDK de Microsoft Store Engagement and Monetization, desinstala ahora esas versiones de SDK. Opcionalmente, abre una ventana de **símbolo del sistema** y ejecuta estos comandos para limpiar todas las versiones de SDK de publicidad anteriores que se hayan instalado con Visual Studio, pero que podrían no aparecer en la lista de programas instalados en el equipo:
-  ```
-  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
-  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
-  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
-  ```
+    ```
+    MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+    MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+    MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+    ```
 
 3.  Descarga e instala el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Puede tardar unos minutos en instalarse. Espera a que finalice el proceso.
 
@@ -56,11 +56,11 @@ Para instalar el SDK de Microsoft Advertising en un proyecto de UWP específico 
 1.  Cierra todas las instancias de Visual Studio.
 
 2.  Si anteriormente habías instalado una versión anterior del SDK de Microsoft Advertising, el SDK de cliente de anuncios universal, la extensión Ad Mediator o el SDK de Microsoft Store Engagement and Monetization, desinstala ahora esas versiones de SDK. Opcionalmente, abre una ventana de **símbolo del sistema** y ejecuta estos comandos para limpiar todas las versiones de SDK de publicidad anteriores que se hayan instalado con Visual Studio, pero que podrían no aparecer en la lista de programas instalados en el equipo:
-  ```
-  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
-  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
-  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
-  ```
+    ```
+    MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+    MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+    MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+    ```
 
 3.  Inicia Visual Studio y abre el proyecto en el que quieres usar el SDK de Microsoft Advertising.
     > [!NOTE]
@@ -105,7 +105,7 @@ Para ver tutoriales que muestran cómo comenzar a usar las API de publicidad, co
 
 ## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk"></a>Descripción de los paquetes de marcos en el SDK de Microsoft Advertising
 
-La biblioteca Microsoft.Advertising.dll en el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) (para aplicaciones para UWP) está configurada como un *paquete de marcos*. Esta biblioteca contiene las API de publicidad en los espacios de nombres [Microsoft.Advertising](https://msdn.microsoft.com/library/windows/apps/mt313187.aspx) y [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aspx).
+La biblioteca Microsoft.Advertising.dll en el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) (para aplicaciones para UWP) está configurada como un *paquete de marcos*. Esta biblioteca contiene las API de publicidad en los espacios de nombres [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) y [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui).
 
 Dado que esta biblioteca es un paquete de marcos, después de que un usuario instale una versión de tu aplicación que use esta biblioteca, esta se actualizará automáticamente en su dispositivo a través de Windows Update cada vez que publiquemos una nueva versión de la biblioteca con correcciones y mejoras de rendimiento. Esto ayuda a garantizar que tus clientes tengan siempre instalada en sus dispositivos la versión más reciente de la biblioteca.
 

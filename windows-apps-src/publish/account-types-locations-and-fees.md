@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565216"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623080"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
@@ -41,7 +41,7 @@ Las cuentas de empresa son un poco más caras, principalmente porque es necesari
 
 ## <a name="account-verification"></a>Comprobación de cuentas
 
-Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de empresa hasta que esté comprobada pero mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) seguir creando y probando aplicaciones y trabajar en conseguir que los envíos listo.
+Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No podrás enviar aplicaciones desde una cuenta de empresa hasta que se haya comprobado, pero mientras esperas, puedes [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) seguir creando y probando aplicaciones y trabajar en la preparación de los envíos.
 
 Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**. 
 

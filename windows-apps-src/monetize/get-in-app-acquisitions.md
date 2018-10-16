@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: Usa este método en la API de análisis de Microsoft Store para obtener los datos de compra agregados de un complemento de un intervalo de fechas especificado y otros filtros opcionales.
 title: Obtener los datos de las adquisiciones de complementos
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, adquisiciones de complementos, add-on acquisitions
 ms.localizationpriority: medium
-ms.openlocfilehash: b881d3bdaa9adec28b78a72e127dcebd49ee1df6
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: a09bb4ded7325cd1c5f5091be133ded889322bd9
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976430"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618131"
 ---
 # <a name="get-add-on-acquisitions"></a>Obtener los datos de las adquisiciones de complementos
 

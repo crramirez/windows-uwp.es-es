@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: fb6bb856-7a1b-4312-a602-f500646a3119
 description: Usa este método en la API de opiniones de Microsoft Store para determinar si puedes responder a una opinión particular, o si puedes responder a cualquier opinión de una aplicación determinada.
 title: Obtener información de respuesta de opiniones
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store reviews API, API de opiniones de Microsoft Store, response info, información de respuesta
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cc3bae99aebaf26074ba4f8b8a38e1a6e0ac428
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 0212d7457ab85749fd66397876144acecd5dfcf1
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1701091"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621116"
 ---
 # <a name="get-response-info-for-reviews"></a>Obtener información de respuesta de opiniones
 
@@ -52,7 +52,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | Parámetro        | Tipo   | Descripción                                     |  Obligatorio  |
 |---------------|--------|--------------------------------------------------|--------------|
 | applicationId | string | El identificador de la aplicación que contiene la opinión que quieres determinar si puedes responder. El id. de la Store está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8. |  Sí  |
-| reviewId | string | El identificador de la opinión que quieres responder (es un GUID). Los identificadores de opinión están disponibles en los datos de respuesta del método [obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de Microsoft Store y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md). <br/>Si omites este parámetro, el cuerpo de respuesta de este método indicará si dispones de permisos para responder a opiniones de la aplicación especificada. |  No  |
+| reviewId | string | El id. de la opinión a la que deseas responder (es un GUID). Los identificadores de opinión están disponibles en los datos de respuesta del método [obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de Microsoft Store y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md). <br/>Si omites este parámetro, el cuerpo de respuesta de este método indicará si dispones de permisos para responder a opiniones de la aplicación especificada. |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud

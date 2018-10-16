@@ -12,15 +12,15 @@ keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f14e7f8747639ef139e774416e09af954211940
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566360"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617704"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empaquetar una aplicación de escritorio de forma manual
 
-En este tema se muestra cómo empaquetar la aplicación sin usar herramientas como Visual Studio o Desktop App Converter (DAC).
+Este tema muestra cómo empaquetar la aplicación sin tener que usar herramientas como Visual Studio o Desktop App Converter (DAC).
 
 Para empaquetar la aplicación de forma manual, tienes que crear un archivo de manifiesto de paquete y ejecutar una herramienta de línea de comandos para generar un paquete de la aplicación de Windows.
 
@@ -29,11 +29,11 @@ Considera la posibilidad de empaquetado manual si instala la aplicación mediant
 Si no estás seguro de qué cambios realiza el instalador en el sistema o si prefieres usar herramientas automáticas para crear el manifiesto de paquete, puedes tener en cuenta alguna de estas [opciones](desktop-to-uwp-root.md#convert).
 
 >[!IMPORTANT]
->La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (de lo contrario se conoce como el puente de escritorio se introdujo en Windows 10, versión 1607, y solo puede usarse en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
+>La capacidad para crear un paquete de aplicación de Windows para la aplicación de escritorio (de lo contrario se conoce como el puente de escritorio, se introdujo en Windows 10, versión 1607, y solo se puede usar en proyectos destinados a la actualización de aniversario de Windows 10 (10.0; Compilación 14393) o una versión posterior de Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primero, prepara tu aplicación
 
-Revisar esta guía antes de empezar a crear un paquete para tu aplicación: [Preparar para empaquetar una aplicación de escritorio](desktop-to-uwp-prepare.md).
+Revisar esta guía antes de empezar a crear un paquete de la aplicación: [Preparar para empaquetar una aplicación de escritorio](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Crear un manifiesto de paquete
 
@@ -87,7 +87,7 @@ Este es un ejemplo del elemento **Identity** con texto del marcador de posición
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Si has reservado el nombre de la aplicación en la tienda Windows, puedes obtener el nombre y el publicador mediante el panel del centro de desarrollo de Windows. Si vas a transferir localmente la aplicación en otros sistemas, puedes proporcionar tus propios nombres a estos como el nombre del publicador que elijas coincida con el nombre en el certificado que usas para firmar la aplicación.
+> Si has reservado el nombre de la aplicación en la tienda Windows, puedes obtener el nombre y el publicador mediante el panel del centro de desarrollo de Windows. Si vas a transferir localmente la aplicación en otros sistemas, puedes proporcionar tus propios nombres a estos siempre que el nombre del publicador que elijas coincida con el nombre en el certificado que usas para firmar la aplicación.
 
 ### <a name="properties"></a>Propiedades
 
@@ -121,7 +121,7 @@ Para aplicaciones de escritorio que crear un paquete, establece siempre el ``Nam
 ```
 
 ### <a name="capabilities"></a>Funcionalidades
-Para aplicaciones de escritorio para crear un paquete para, tendrás que agregar la ``runFullTrust`` funcionalidad.
+Para las aplicaciones de escritorio que se crea un paquete para, tendrás que agregar la ``runFullTrust`` funcionalidad.
 
 ```XML
 <Capabilities>
@@ -134,7 +134,7 @@ Rellena esta plantilla con la información que describe la aplicación.
 
 ### <a name="application-element"></a>Elemento de la aplicación
 
-Para aplicaciones de escritorio para crear un paquete, el ``EntryPoint`` atributo del elemento de la aplicación es siempre ``Windows.FullTrustApplication``.
+Para las aplicaciones de escritorio que se crea un paquete, el ``EntryPoint`` atributo del elemento de la aplicación es siempre ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -201,7 +201,7 @@ Consulta [Crear un paquete de la aplicación con la herramienta MakeAppx.exe](ht
 
 ## <a name="run-the-packaged-app"></a>Ejecutar la aplicación empaquetada
 
-Puedes ejecutar la aplicación de prueba de la aplicación localmente sin tener que obtener un certificado y firmarlo. Solo tienes que ejecutar este cmdlet de PowerShell:
+Puedes ejecutar la aplicación para probarla de forma local sin tener que obtener un certificado y firmarlo. Solo tienes que ejecutar este cmdlet de PowerShell:
 
 ```Add-AppxPackage –Register AppxManifest.xml```
 
@@ -224,6 +224,6 @@ Consulta [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 
 Consulta [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](desktop-to-uwp-debug.md)
 
-**Firmar la aplicación y distribuye**
+**Firmar la aplicación y, a continuación, distribuirlo**
 
 Consulta [distribuir una aplicación de escritorio empaquetada](desktop-to-uwp-distribute.md)

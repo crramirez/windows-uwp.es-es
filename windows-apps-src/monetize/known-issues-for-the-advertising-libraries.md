@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
 description: Obtén información sobre los problemas conocidos de la versión actual del SDK de Microsoft Advertising.
 title: Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anuncios, publicidad, problemas conocidos, solución de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: aaf2db68df9de3f397a0cbc677e18f4ed544cf4b
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 1ca7949b3092b03500f25249ce1af3832a9e61ba
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817536"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622147"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
 
@@ -26,7 +26,7 @@ En este tema se muestran los problemas conocidos con la versión actual del SDK 
 
 ## <a name="adcontrol-interface-unknown-in-xaml"></a>Interfaz de AdControl desconocida en XAML
 
-El marcado XAML de un [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) puede mostrar incorrectamente una línea curva azul que indica que la interfaz es desconocida. Esto ocurre solo cuando el destino es x86 y se puede ignorar.
+El marcado XAML de un [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) puede mostrar incorrectamente una línea curva azul que indica que la interfaz es desconocida. Esto ocurre solo cuando el destino es x86 y se puede ignorar.
 
 ## <a name="lasterror-from-previous-ad-request"></a>lastError de una solicitud de anuncio anterior
 
