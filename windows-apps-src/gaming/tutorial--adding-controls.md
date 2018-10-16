@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, juegos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 84230759f03cb60b5b776d3407ac0f96e090d495
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: Auto
+ms.openlocfilehash: 563ca17864f95cfa98313608f5a5c32e64f44a16
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675302"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4680203"
 ---
 # <a name="add-controls"></a>Agregar controles
 
@@ -99,7 +99,7 @@ Estado | Descripción
 El juego entra en el estado **WaitForInput** cuando se ha pausado. Esto ocurre si el jugador mueve el puntero fuera de la ventana principal del juego o presiona el botón de pausa (la tecla P o el botón **Inicio** del controlador para juegos). **MoveLookController** registra dicha presión e informa al bucle de juego cuando llama al método [**IsPauseRequested**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L107-L127). En ese punto, si **IsPauseRequested** devuelve **verdadero**, el bucle de juego llama a **WaitForPress** en **MoveLookController** para mover el controlador al estado **WaitForInput**. 
 
 
-Una vez en el estado **WaitForInput**, el juego detiene el procesamiento de casi todos los eventos de entrada de juego hasta que regrese al estado **Activo**. La excepción es el botón de pausa, al presionarlo, el juego vuelve al estado activo. Con la excepción del botón de pausa, para que el juego vuelva al estado **Activo**, el jugador ha de seleccionar un elemento de menú. 
+Una vez en el estado **WaitForInput**, el juego detiene el procesamiento de casi todos los eventos de entrada de juego hasta que regrese al estado **Activo**. La excepción es el botón de pausa, al presionarlo, el juego vuelve al estado activo. Que no sea el botón de pausa, para el juego vuelve al estado **activo** el jugador debe seleccionar un elemento de menú. 
 
 
 

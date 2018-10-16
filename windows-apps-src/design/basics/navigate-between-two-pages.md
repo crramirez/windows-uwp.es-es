@@ -17,12 +17,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 359c6527c341a08eca23aa6dd28acd27ddb19205
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 7df91069615b77ab54745690accc8f9353ff0163
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4611370"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4679984"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementar la navegación entre dos páginas
 
@@ -320,7 +320,7 @@ Por último, siempre que se cargue una página en el marco, dicha página se agr
 
 Nuestra aplicación ya navega entre dos páginas, pero aún no hace nada interesante. A menudo, cuando una aplicación tiene varias páginas, las páginas necesitan compartir información. Pasemos parte de la información de la primera página a la segunda.
 
-En Page1.xaml, reemplaza el elemento **HyperlinkButton** que agregaste antes por el siguiente [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
+En Page1.xaml, reemplaza el **elemento HyperlinkButton** que agregaste anteriormente con el siguiente [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
 
 Una vez hecho esto, agregamos una etiqueta [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) y una clase [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) `name` para escribir una cadena de texto.
 

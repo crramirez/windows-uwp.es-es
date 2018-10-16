@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 36026eb812c4496f95f6708fd30dc1e1fcb35ca6
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: 78448081b81e7e28c4b97fcfdd7aa71ae32aeb0c
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1895432"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4682159"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -329,7 +329,7 @@ Una limitación general de esta técnica es que la API **AddHandler** toma un pa
 
 Puedes invalidar eventos de tecla para controles específicos (como [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)) para proporcionar navegación con foco homogéneo para diversos dispositivos de entrada, como el teclado y el controlador para juegos.
 
-En el siguiente ejemplo, hemos creado una subclase para el control e invalidamos el comportamiento de KeyDown para mover el foco a GridView cuando se presiona cualquier tecla de flecha.
+En el ejemplo siguiente, hemos creado una subclase el control e invalidamos el comportamiento de KeyDown para mover el foco a GridView de contenido cuando se presiona cualquier tecla de flecha.
 
 ```csharp
 public class CustomGridView : GridView

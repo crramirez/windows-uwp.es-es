@@ -15,12 +15,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: ed17299051ae7da32f238eb57876b81597c8effa
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 22d965d14c4f10f904a4d94a18ce83721c49491c
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4617955"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4680126"
 ---
 # <a name="command-bar-flyout"></a>Control flotante de barra de comandos
 
@@ -149,7 +149,7 @@ Al mostrar comandos contextuales reactiva, como un menú contextual, los comando
 
 Para mostrar comandos en un menú contextual, por lo general, se asigna el control flotante a la propiedad [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) de un elemento de interfaz de usuario. De esta forma, abrir el control flotante se controla mediante el elemento y no tienes que hacer nada más.
 
-Si controlas mostrando el control flotante (por ejemplo, en un evento [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) ), Establece la del control flotante [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) a **estándar** para abrir el control flotante en su modo expandido y asignarle el foco.
+Si controlas mostrando el control flotante (por ejemplo, en un evento [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) ), Establece el control del flotante [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) en **estándar** para abrir el control flotante en su modo expandido y asignarle el foco.
 
 > [!TIP]
 > Para obtener más información acerca de las opciones al mostrar un control flotante y cómo controlar la posición del control flotante, consulta [los controles flotantes](../controls-and-patterns/dialogs-and-flyouts/flyouts.md).

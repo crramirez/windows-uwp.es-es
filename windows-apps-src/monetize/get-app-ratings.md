@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, UWP, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, valoraciones, ratings
 ms.localizationpriority: medium
-ms.openlocfilehash: d3d09aa395f9c0924951a44f5b0abaf9c99cb32e
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 0671015ead96b57515b4b451a06ff3c9cf1a94cb
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4620847"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4694632"
 ---
 # <a name="get-app-ratings"></a>Obtener las valoraciones de la aplicación
 
@@ -106,20 +106,20 @@ Authorization: Bearer <your access token>
 
 Los elementos en la matriz *Value* contienen los siguientes valores.
 
-| Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
-|-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Valor           | Tipo    | Descripción       |
+|-----------------|---------|-------------------|
 | date            | cadena  | Es la primera fecha del intervalo de fechas de los datos de clasificación. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
-| applicationId   | cadena  | El Id. de la Store de la aplicación sobre la que estás recuperando los datos de clasificación.                                                                                                                                                                 |
-| applicationName | cadena  | Nombre para mostrar de la aplicación.                                                                                                                                                                                                         |
-| market          | cadena  | Código de país ISO 3166 del mercado desde el cual se envió la clasificación.                                                                                                                                                              |
-| osVersion       | cadena  | Versión del sistema operativo desde el cual se envió la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                               |
-| deviceType      | cadena  | Tipo de dispositivo desde el cual se envió la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                           |
-| isRevised       | Booleano | El valor **true** indica que la clasificación fue revisada; en caso contrario, será **false**.                                                                                                                                                       |
-| oneStar         | número  | Número de clasificaciones de una estrella.                                                                                                                                                                                                      |
-| twoStars        | número  | Número de clasificaciones de dos estrellas.                                                                                                                                                                                                      |
-| threeStars      | número  | Número de clasificaciones de tres estrellas.                                                                                                                                                                                                    |
-| fourStars       | número  | Número de clasificaciones de cuatro estrellas.                                                                                                                                                                                                     |
-| fiveStars       | número  | Número de clasificaciones de cinco estrellas.            |
+| applicationId   | cadena  | El Id. de la Store de la aplicación sobre la que estás recuperando los datos de clasificación.         |
+| applicationName | cadena  | Nombre para mostrar de la aplicación.    |
+| market          | cadena  | Código de país ISO 3166 del mercado desde el cual se envió la clasificación.        |
+| osVersion       | cadena  | Versión del sistema operativo desde el cual se envió la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).            |
+| deviceType      | cadena  | Tipo de dispositivo desde el cual se envió la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).            |
+| isRevised       | Booleano | El valor **true** indica que la clasificación fue revisada; en caso contrario, será **false**.   |
+| oneStar         | número  | Número de clasificaciones de una estrella.        |
+| twoStars        | número  | Número de clasificaciones de dos estrellas.    |
+| threeStars      | número  | Número de clasificaciones de tres estrellas.   |
+| fourStars       | número  | Número de clasificaciones de cuatro estrellas.    |
+| fiveStars       | número  | Número de clasificaciones de cinco estrellas.    |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
