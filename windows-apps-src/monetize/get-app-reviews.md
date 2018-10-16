@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, servicios de Microsoft Store, API de análisis de Microsoft Store, opiniones
 ms.localizationpriority: medium
-ms.openlocfilehash: ce1f9c3a360209bc9ac7b03ac162460a333c7192
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: c14b2ce6dd9fa7058ef3dbcd8e7e7a17a05fe78e
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4613579"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4686219"
 ---
 # <a name="get-app-reviews"></a>Obtener las opiniones de la aplicación
 
@@ -109,43 +109,43 @@ Authorization: Bearer <your access token>
 
 ### <a name="response-body"></a>Cuerpo de la respuesta
 
-| Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                            |
-|------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Valor      | matriz  | Matriz de objetos que contienen los datos de revisión. Para más información sobre los datos de cada objeto, consulta la sección [valores de revisión](#review-values) que encontrarás a continuación.                                                                                                                                      |
+| Valor      | Tipo   | Descripción      |
+|------------|--------|------------------|
+| Valor      | matriz  | Matriz de objetos que contienen los datos de revisión. Para más información sobre los datos de cada objeto, consulta la sección [valores de revisión](#review-values) que encontrarás a continuación.       |
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de opiniones de la solicitud. |
-| TotalCount | entero    | El número total de filas del resultado de datos de la consulta.                                    |
+| TotalCount | entero    | El número total de filas del resultado de datos de la consulta.  |
 
  
 ### <a name="review-values"></a>Valores de revisión
 
 Los elementos en la matriz *Value* contienen los siguientes valores.
 
-| Valor                  | Tipo    | Descripción                                                                                                                                                                                                                          |
-|------------------------|---------|---------------------|
-| date                   | cadena  | La primera fecha del intervalo de fechas de los datos de opiniones. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas.  |
-| applicationId          | cadena  | El Id. de la Store de la aplicación sobre la que estás recuperando los datos de opiniones.        |
-| applicationName        | cadena  | Nombre para mostrar de la aplicación.   |
-| market                 | cadena  | El código de país ISO 3166 del mercado desde el cual se ha enviado la opinión.       |
-| osVersion              | cadena  | La versión del sistema operativo desde el cual se ha enviado la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [Campos de filtro](#filter-fields).         |
-| deviceType             | cadena  | El tipo de dispositivo desde el cual se ha enviado la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [Campos de filtro](#filter-fields).      |
-| isRevised              | Booleano | El valor **true** indica que la opinión fue revisada; en caso contrario, será **false**.         |
-| packageVersion         | cadena  | Versión del paquete de aplicaciones que se revisó.   |
-| deviceModel            | cadena  | Tipo de dispositivo en el cual se revisó la aplicación.      |
-| productFamily          | cadena  | Nombre de la familia de dispositivos. Para obtener una lista de las cadenas admitidas, consulta la sección previa [Campos de filtro](#filter-fields).  |
-| deviceRAM              | número  | La RAM física, en MB.        |
-| deviceScreenResolution | cadena  | La resolución de la pantalla del dispositivo en el formato "*ancho* x *alto*".        |
-| deviceStorageCapacity  | número  | La capacidad del disco de almacenamiento principal, en GB.   |
-| isTouchEnabled         | Booleano | El valor **true** indica que la función táctil está habilitada; de lo contrario, el valor será **false**.      |
-| reviewerName           | cadena  | El nombre de la persona que ha dado la opinión.      |
-| rating                 | número  | La clasificación de la aplicación, en estrellas.         |
-| reviewTitle            | cadena  | El título de la opinión.       |
-| reviewText             | cadena  | El contenido de texto de la opinión.     |
-| helpfulCount           | número  | El número de veces que la opinión se ha marcado como útil.     |
-| notHelpfulCount        | número  | El número de veces que la opinión se ha marcado como no útil.               |
-| responseDate           | cadena  | La fecha en la que se envió una respuesta.                 |
-| responseText           | cadena  | El contenido del texto de la respuesta.        |
-| id                     | string  | El identificador de la revisión (es un GUID). Puedes usar este identificador en los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md).       |
- 
+| Valor           | Tipo    | Descripción       |
+|-----------------|---------|-------------------|
+| date            | cadena  | La primera fecha del intervalo de fechas de los datos de opiniones. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| applicationId   | cadena  | El Id. de la Store de la aplicación sobre la que estás recuperando los datos de opiniones.         |
+| applicationName | cadena  | Nombre para mostrar de la aplicación.    |
+| market          | cadena  | El código de país ISO 3166 del mercado desde el cual se ha enviado la opinión.        |
+| osVersion       | cadena  | La versión del sistema operativo desde el cual se ha enviado la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [Campos de filtro](#filter-fields).            |
+| deviceType      | cadena  | El tipo de dispositivo desde el cual se ha enviado la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [Campos de filtro](#filter-fields).            |
+| isRevised       | Booleano | El valor **true** indica que la opinión fue revisada; en caso contrario, será **false**.   |
+| packageVersion  | cadena  | Versión del paquete de aplicaciones que se revisó.        |
+| deviceModel        | cadena  |Tipo de dispositivo en el cual se revisó la aplicación.     |
+| productFamily      | cadena  | Nombre de la familia de dispositivos. Para obtener una lista de las cadenas admitidas, consulta la sección previa [Campos de filtro](#filter-fields).   |
+| deviceRAM       | número  | La RAM física, en MB.    |
+| deviceScreenResolution       | cadena  | La resolución de la pantalla del dispositivo en el formato "*ancho* x *alto*".    |
+| deviceStorageCapacity | número | La capacidad del disco de almacenamiento principal, en GB. |
+| isTouchEnabled | Booleano | El valor **true** indica que la función táctil está habilitada; de lo contrario, el valor será **false**. |
+| reviewerName | cadena | El nombre de la persona que ha dado la opinión. |
+| rating | número | La clasificación de la aplicación, en estrellas. |
+| reviewTitle | cadena | El título de la opinión. |
+| reviewText | cadena | El contenido de texto de la opinión. |
+| helpfulCount | número | El número de veces que la opinión se ha marcado como útil. |
+| notHelpfulCount | número | El número de veces que la opinión se ha marcado como no útil. |
+| responseDate | cadena | La fecha en la que se envió una respuesta. |
+| responseText | cadena | El contenido del texto de la respuesta. |
+| id | string | El identificador de la revisión (es un GUID). Puedes usar este identificador en los métodos [Get response info for app reviews (Obtener información de respuesta de las opiniones de la aplicación)](get-response-info-for-app-reviews.md) y [Submit responses to app reviews (Enviar respuestas a las opiniones de la aplicación)](submit-responses-to-app-reviews.md). |
+
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 

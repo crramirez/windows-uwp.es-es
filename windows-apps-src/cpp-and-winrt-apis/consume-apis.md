@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: wndows 10, uwp, estándar, c++, cpp, winrt, proyectado, proyección, implementación, implementar, clase en tiempo de ejecución, activación
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b1cd05f974bf9193e84919a5e679ef996746d7e
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: f0e99d23e54bd096a9dd7fa8d878929086711c81
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4617837"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4684669"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumir API con C++/WinRT
 
@@ -46,7 +46,7 @@ El encabezado incluido `winrt/Windows.Foundation.h` forma parte del SDK, que se 
 
 En el ejemplo de código anterior, tras inicializar C++/WinRT, apilamos/asignamos un valor del tipo proyectado **winrt::Windows::Foundation::Uri** a través de uno de sus constructores públicamente documentados ([**Uri(String)**](/uwp/api/windows.foundation.uri#Windows_Foundation_Uri__ctor_System_String_), en este ejemplo). Para este ejemplo, el caso de uso más común, es normalmente todo lo que tienes que hacer. Una vez que tengas un valor del tipo proyectado de C++/WinRT, puedes tratarlo como si fuera una instancia de Windows Runtime real, ya que tiene los mismos miembros.
 
-De hecho, dicho valor proyectado es un proxy; esencialmente es solo un puntero inteligente a un objeto de respaldo. Los constructores del valor proyectado llaman a [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) para crear una instancia de la clase de Windows Runtime de respaldo (**Windows.Foundation.Uri**, en este caso) y almacenan dicha interfaz predeterminada del objeto dentro del nuevo valor proyectado. Como se ilustra a continuación, las llamadas a los miembros del valor proyectado realmente delegan, a través del puntero inteligente, al objeto de respaldo, que es donde se producen los cambios de estado.
+De hecho, dicho valor proyectado es un proxy; esencialmente es solo un puntero inteligente a un objeto de respaldo. Los constructores del valor proyectado llaman a [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) para crear una instancia de la clase de Windows Runtime de respaldo (**Windows.Foundation.Uri**, en este caso) y almacenan dicha interfaz predeterminada del objeto dentro del nuevo valor proyectado. Como se muestra a continuación, las llamadas a los miembros del valor proyectado realmente delegan, a través del puntero inteligente, al objeto de respaldo; que es donde se producen cambios de estado.
 
 ![El tipo proyectado de Windows::Foundation::Uri](images/uri.png)
 
