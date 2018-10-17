@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, seguimiento de la pila, stack trace, error
 ms.localizationpriority: medium
 ms.openlocfilehash: 54c39d157bc2fcab6a67bd273f5d00eedd80be54
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4690061"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4755896"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>Obtener el seguimiento de la pila de un error en la aplicación
 

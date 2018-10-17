@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Windows Store analytics API, adquisiciones de juegos de Xbox One, Xbox One game acquisitions
 ms.localizationpriority: medium
-ms.openlocfilehash: a175096860fe2d2e73259ab9e82cbd5c33b8b889
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 39d932a49e573d55a0ccb9cb69568006feede8a7
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4686597"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4741692"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Obtener adquisiciones de juegos de Xbox One
 
@@ -93,7 +93,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | date                | cadena | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | applicationId       | cadena | Identificador de producto del juego para Xbox One para el que recuperas los datos de adquisición. |
 | applicationName     | cadena | El nombre para mostrar del juego.       |
-| acquisitionType     | cadena | Una de las siguientes cadenas que indica el tipo de adquisición:<ul><li><strong>Free</strong></li><li><strong>Prueba</strong></li><li><strong>De pago</strong></li><li><strong>Código promocional</strong></li><li><strong>Pedido previo</strong></li><li>**Xbox Game Pass** (o **Game Pass** si la consulta de datos es antes del 23 de marzo de 2018)</li><li><strong>Disco</strong></li><li><strong>Código de prepago</strong></li></ul>    |
+| acquisitionType     | cadena | Una de las siguientes cadenas que indica el tipo de adquisición:<ul><li><strong>Free</strong></li><li><strong>Prueba</strong></li><li><strong>De pago</strong></li><li><strong>Código promocional</strong></li><li><strong>Iap</strong></li><li><strong>Suscripción Iap</strong></li><li><strong>Audiencia privada</strong></li><li><strong>Pedido previo</strong></li><li><strong>Xbox Game Pass</strong> (o <strong>Game Pass</strong> si la consulta de datos es antes del 23 de marzo de 2018)</li><li><strong>Disco</strong></li><li><strong>Código de prepago</strong></li><li><strong>Orden de Pre cargados</strong></li><li><strong>Orden de Pre cancelada</strong></li><li><strong>Orden de Pre con errores</strong></li></ul>    |
 | ageGroup            | cadena | Una de las cadenas siguientes que indica el grupo de edad del usuario que ha realizado la adquisición:<ul><li><strong>menor que 13</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>mayor que 55</strong></li><li><strong>Unknown</strong></li></ul>     |
 | deviceType          | cadena | Una de las cadenas siguientes que especifica el tipo de dispositivo que ha completado la adquisición:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Server</strong></li><li><strong>Tablet</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul>  |
 | gender              | cadena | Una de las cadenas siguientes que especifica el sexo del usuario que ha realizado la adquisición:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Unknown</strong></li></ul>     |

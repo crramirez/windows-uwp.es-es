@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
 ms.openlocfilehash: 8fa142f1df672703d2f14dc185481bb248efe07b
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4681779"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4744292"
 ---
 # <a name="manage-targeting-profiles"></a>Administrar perfiles objetivo
 

@@ -10,11 +10,11 @@ ms.technology: uwp, windows forms, wpf
 keywords: Windows 10, uwp, formularios windows forms, wpf, win32
 ms.localizationpriority: medium
 ms.openlocfilehash: 59072374e19da1c5c7e6e6a5e6a7b8c172d74052
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4686567"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4741979"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usar la API de hospedaje en una aplicación de escritorio de XAML de UWP
 
@@ -317,4 +317,4 @@ La API de hospedaje de XAML comparte las mismas limitaciones que todos los demá
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Controles de UWP en aplicaciones de escritorio](xaml-host-controls.md)
+* [Controles UWP en aplicaciones de escritorio](xaml-host-controls.md)

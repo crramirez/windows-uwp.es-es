@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, opciones de juego, tráileres, descripciones avanzadas, python
 ms.localizationpriority: medium
 ms.openlocfilehash: d3617e7868f62c5d8e430deb4be295bc552dff18
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4692126"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4742376"
 ---
 # <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Muestra de Python: envío de aplicación con opciones de juego y tráileres
 
