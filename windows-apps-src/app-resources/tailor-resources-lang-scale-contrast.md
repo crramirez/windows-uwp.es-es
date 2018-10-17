@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 5309b33e0f65a1a06e1a3c0060a84e4c4a88ef9d
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 8f3aa529e1c292bcea816e21222ca2a5e07f4319
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700801"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4692320"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, la escala, el contraste alto y otros calificadores
 
@@ -48,7 +48,7 @@ Este es un ejemplo del uso de calificadores para dar nombres a carpetas que cont
 \Assets\Images\contrast-white\<logo.png, and other image files>
 ```
 
-Si das nombres a las carpetas como en el ejemplo anterior, la aplicación usa la configuración de contraste alto para cargar archivos de recursos desde la carpeta con el nombre del calificador apropiado. Por lo tanto, si el valor es negro en contraste alto, a continuación se cargan los archivos de recursos de la carpeta `\Assets\Images\contrast-black`. Si el valor es Ninguno (es decir, el equipo no está en modo de contraste alto), a continuación se cargan los archivos de recursos de la carpeta `\Assets\Images\standard`.
+Si das nombres a las carpetas como en el ejemplo anterior, la aplicación usa la configuración de contraste alto para cargar archivos de recursos desde la carpeta con el nombre del calificador apropiado. Por lo tanto, si el valor es negro en contraste alto, a continuación se cargan los archivos de recursos de la carpeta `\Assets\Images\contrast-black`. Si el valor es Ninguno (es decir, el equipo no está en modo de contraste alto), a continuación se cargan los archivos de recursos de la carpeta `\Assets\Images\contrast-standard`.
 
 ## <a name="use-qualifiers-in-file-names"></a>Usar calificadores en nombres de carpetas
 

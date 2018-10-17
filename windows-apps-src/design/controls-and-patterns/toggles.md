@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: daffbc5ff74adc234ac6c2b414a7e1b85763849d
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 796ee4ffaa551c23286110ec7164f511655d6017
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4620735"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4694014"
 ---
 # <a name="toggle-switches"></a>Modificadores para alternar
 
@@ -71,7 +71,7 @@ Para algunas acciones, tanto un modificador para alternar como una casilla podr�
 - Usa una casilla cuando el usuario tiene que realizar algunos pasos más antes de que los cambios surtan efecto. Por ejemplo, si el usuario tiene que hacer clic en un botón "enviar" o "siguiente" para aplicar los cambios, usa una casilla.
 - Usa casillas cuando el usuario pueda seleccionar varios elementos que están relacionados con un único valor o característica.
 
-## <a name="toggle-switches-in-the-the-windows-ui"></a>Modificadores para alternar en la interfaz de usuario de Windows
+## <a name="toggle-switches-in-the-windows-ui"></a>Modificadores para alternar en la interfaz de usuario de Windows
 
 Estas imágenes muestran cómo la interfaz de usuario de Windows usa modificadores para alternar. Así es como la pantalla de configuración de almacenamiento inteligente usa los modificadores para alternar:
 

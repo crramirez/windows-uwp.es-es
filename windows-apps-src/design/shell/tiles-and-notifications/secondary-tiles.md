@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, iconos secundarios
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f11ca4d29f22daf953ce03436c3b786c70a9e04
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: d8d6a79ddd497bc3ada777af25791e9938355c79
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4622881"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4692881"
 ---
 # <a name="secondary-tiles"></a>Iconos secundarios
 
@@ -70,7 +70,7 @@ Sin embargo, los iconos secundarios difieren de los iconos principales en alguno
 * Los usuarios pueden eliminar los iconos secundarios en cualquier momento, sin necesidad de eliminar la aplicación principal.
 * Los iconos secundarios se pueden crear en tiempo de ejecución. Los iconos de la aplicación se pueden crear solo durante la instalación.
 * Un control flotante solicita al usuario confirmación antes de agregar un icono secundario.
-* No pueden seleccionarse mediante programación para la pantalla de bloqueo a través de una solicitud al usuario. El usuario debe agregar manualmente el icono secundario mediante la página Personalizar, en Configuración de PC.
+* No pueden seleccionarse mediante programación para la pantalla de bloqueo a través de una solicitud al usuario. El usuario debe agregar manualmente el icono secundario a través de la página Personalizar en la configuración del equipo.
 
 Para enviar notificaciones, se proporcionan métodos específicos para los actualizadores de iconos y notificaciones y los canales de notificaciones de inserción que se usan con los iconos secundarios. Las versiones van paralelas a las usadas con los iconos primarios. Por ejemplo, CreateBadgeUpdaterForApplication frente a CreateBadgeUpdaterForSecondaryTile.
 
