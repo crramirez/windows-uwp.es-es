@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4680518"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4745078"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -36,7 +36,7 @@ Te mostramos algunas herramientas, las bibliotecas y funcionalidades que se han 
 > * [Controles para crear interfaces de usuario de estilo de escritorio](#desktop-style-UI)
 > * [Controles para admitir escenarios empresariales](#enterprise)
 > * [Biblioteca de interfaz de usuario de Windows](#UI-library)
-> * [Controles de UWP en aplicaciones de escritorio](#xaml-islands)
+> * [Controles UWP en aplicaciones de escritorio](#xaml-islands)
 > * [.NET Standard 2.0](#standard)
 > * [Conectividad de SQL Server](#sql-server)
 > * [Implementación de MSIX](#MSIX)
@@ -82,7 +82,7 @@ Consulta la [Biblioteca de la interfaz de usuario de Windows (versión prelimina
 
 <a id="xaml-islands" />
 
-### <a name="uwp-controls-in-desktop-applications"></a>Controles de UWP en aplicaciones de escritorio
+### <a name="uwp-controls-in-desktop-applications"></a>Controles UWP en aplicaciones de escritorio
 
 Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio de WPF, Windows Forms y Win32 de C++. Esto significa que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles UWP, como entrada de lápiz de Windows y los controles que admiten el sistema Fluent Design. Esta característica se denomina Islas XAML.
 

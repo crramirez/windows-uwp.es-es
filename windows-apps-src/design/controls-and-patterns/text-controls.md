@@ -15,12 +15,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ad7326acf728aef66f10c72ee04461fd90e5f775
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 2cd5f7e7022f246fce3d08286fe77c74503ddc5d
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4691525"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4744880"
 ---
 # <a name="text-controls"></a>Controles de texto
 
@@ -125,7 +125,7 @@ Consulta estos artículos para obtener directrices de fuentes:
 
 A partir de Windows 10, versión 1803, los cuadros de entrada de texto XAML cuentan con soporte incrustado para usar una entrada manuscrita [Windows Ink](../input/pen-and-stylus-interactions.md). Cuando un usuario pulsa en un cuadro de entrada de texto con un lápiz de Windows, el cuadro de texto se transforma para permitir al usuario escribir directamente en él con un lápiz, en lugar de abrir un panel de entrada independiente.
 
-![El cuadro de texto se amplía cuando se pulsa con el lápiz](images/pen-input-expand.gif)
+![El cuadro de texto se amplía cuando se pulsa con el lápiz](images/handwritingview/handwritingview2.gif)
 
 Para obtener más información, consulta la [entrada de texto con la vista de escritura a mano](text-handwriting-view.md).
 

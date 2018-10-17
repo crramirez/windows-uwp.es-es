@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e7b249e5b23c301ba8ec0ad387b9fa38dde2ed0
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4680439"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4745903"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Store
 
@@ -98,7 +98,7 @@ Los siguientes métodos de análisis están disponibles para que las cuentas de 
 |---------------|--------------------|
 | Instalaciones |  <ul><li>[Obtener instalaciones de aplicaciones de escritorio](get-desktop-app-installs.md)</li></ul> |
 | Bloques |  <ul><li>[Obtener bloques de actualización de la aplicación de escritorio](get-desktop-block-data.md)</li><li>[Obtener detalles de bloque de actualización de la aplicación de escritorio](get-desktop-block-data-details.md)</li></ul> |
-| Errores de aplicaciones |  <ul><li>[Obtener datos de informes de errores para la aplicación de escritorio](get-desktop-application-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obtener el seguimiento de la pila de un error en la aplicación de escritorio](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Descargar el archivo .cab para un error en tu aplicación de escritorio](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
+| Errores de aplicaciones |  <ul><li>[Obtener datos de informes de errores para la aplicación de escritorio](get-desktop-application-error-reporting-data.md)</li><li>[Obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obtener el seguimiento de la pila de un error en la aplicación de escritorio](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Descargar el archivo CAB de un error en tu aplicación de escritorio](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
 | Perspectivas | <ul><li>[Obtener datos de información de la aplicación de escritorio](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Métodos para los servicios de Xbox Live
