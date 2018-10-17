@@ -24,77 +24,104 @@
 ## Paneles de diseño
 ### [Introducción](layout/layout-panels.md)
 ### [Tutorial: Usar paneles de diseño](layout/grid-tutorial.md)
+### [Vista en dos paneles](controls-and-patterns/split-view.md)
 ### [Paneles personalizados](layout/custom-panels-overview.md)
 ### [Ejemplo de panel personalizado: BoxPanel](layout/boxpanel-example-custom-panel.md)
 ## Transformaciones
 ### [Introducción](layout/transforms.md)
 ### [Efectos de perspectiva 3D](layout/3-d-perspective-effects.md)
+## [Profundidad Z y sombra](layout/depth-shadow.md)
 
 # Controles
 ## [Introducción](controls-and-patterns/index.md)
 ## [Introducción a los controles y eventos](controls-and-patterns/controls-and-events-intro.md)
 ## [Índice de controles por función](controls-and-patterns/controls-by-function.md)
-## [Barra de la aplicación y barra de comandos](controls-and-patterns/app-bars.md)
-## [Cuadro de sugerencias automáticas](controls-and-patterns/auto-suggest-box.md)
-## [Botones](controls-and-patterns/buttons.md)
-## [Casilla](controls-and-patterns/checkbox.md)
-## [Selector de colores](controls-and-patterns/color-picker.md)
-## [Control flotante de barra de comandos](controls-and-patterns/command-bar-flyout.md)
-## [Tarjeta de contacto](controls-and-patterns/contact-card.md)
-## [Fecha y hora](controls-and-patterns/date-and-time.md)
-### [Selector de fecha del calendario](controls-and-patterns/calendar-date-picker.md)
-### [Vista de calendario](controls-and-patterns/calendar-view.md)
-### [Selector de fecha](controls-and-patterns/date-picker.md)
-### [Selector de hora](controls-and-patterns/time-picker.md)
-## Cuadros de diálogo y controles flotantes
-### [Introducción](controls-and-patterns/dialogs-and-flyouts/index.md)
-### [Cuadros de diálogo](controls-and-patterns/dialogs-and-flyouts/dialogs.md)
-### [Controles flotantes](controls-and-patterns/dialogs-and-flyouts/flyouts.md)
-## [Voltear vista](controls-and-patterns/flipview.md)
-## [Formularios](controls-and-patterns/forms.md)
-## [Hub](controls-and-patterns/hub.md)
-## [Hipervínculos](controls-and-patterns/hyperlinks.md)
-## [Imágenes y pinceles de imagen](controls-and-patterns/images-imagebrushes.md)
-## [Controles de entrada de lápiz](controls-and-patterns/inking-controls.md)
-## [Listas](controls-and-patterns/lists.md)
+
+## Entrada básica
+### [Botones](controls-and-patterns/buttons.md)
+### [Casilla](controls-and-patterns/checkbox.md)
 ### [Cuadro combinado](controls-and-patterns/combo-box.md)
+### [Hipervínculos](controls-and-patterns/hyperlinks.md)
+### [Botón de radio](controls-and-patterns/radio-button.md)
+### [Control de clasificación](controls-and-patterns/rating.md)
+### [Control deslizante](controls-and-patterns/slider.md)
+### [Alternancia](controls-and-patterns/toggles.md)
+
+## Colecciones
+### [Introducción](controls-and-patterns/lists.md)
+### [Voltear vista](controls-and-patterns/flipview.md)
 ### [Vista de lista y vista de cuadrícula](controls-and-patterns/listview-and-gridview.md)
-### [Plantillas y contenedores de elementos](controls-and-patterns/item-containers-templates.md)
-### [Plantillas de elemento para vista de lista](controls-and-patterns/item-templates-listview.md)
-### [Plantillas de elemento para vista de cuadrícula](controls-and-patterns/item-templates-gridview.md)
+#### [Plantillas y contenedores de elementos](controls-and-patterns/item-containers-templates.md)
+#### [Plantillas de elemento para vista de lista](controls-and-patterns/item-templates-listview.md)
+#### [Plantillas de elemento para vista de cuadrícula](controls-and-patterns/item-templates-gridview.md)
 ### [Listas invertidas](controls-and-patterns/inverted-lists.md)
 ### [Extraer para actualizar](controls-and-patterns/pull-to-refresh.md)
 ### [Interfaz de usuario anidada](controls-and-patterns/nested-ui.md)
 ### [Comandos de colecciones](controls-and-patterns/collection-commanding.md)
-## [Patrón de maestro y detalles](controls-and-patterns/master-details.md)
-## [Reproducción de contenido multimedia](controls-and-patterns/media-playback.md)
+### [Deslizar el dedo](controls-and-patterns/swipe.md)
+### [Vista de árbol ](controls-and-patterns/tree-view.md)
+
+## Cuadros de diálogo y controles flotantes
+### [Introducción](controls-and-patterns/dialogs-and-flyouts/index.md)
+### [Cuadros de diálogo](controls-and-patterns/dialogs-and-flyouts/dialogs.md)
+### [Controles flotantes](controls-and-patterns/dialogs-and-flyouts/flyouts.md)
+
+## [Formularios](controls-and-patterns/forms.md)
+
+## Medios, gráficos y formas
+### [Imágenes y pinceles de imagen](controls-and-patterns/images-imagebrushes.md)
+### [Entrada de lápiz](controls-and-patterns/inking-controls.md)
+### [Reproducción de contenido multimedia](controls-and-patterns/media-playback.md)
 ### [Controles de transporte personalizados](controls-and-patterns/custom-transport-controls.md)
-## [Menús y menús contextuales](controls-and-patterns/menus.md)
-## [Vista de navegación](controls-and-patterns/navigationview.md)
-## [Imagen de persona](controls-and-patterns/person-picture.md)
-## [Dinámica](controls-and-patterns/pivot.md)
-## [Progreso](controls-and-patterns/progress-controls.md)
-## [Botón de radio](controls-and-patterns/radio-button.md)
-## [Control de clasificación](controls-and-patterns/rating.md)
-## [Controles de desplazamiento y movimiento panorámico](controls-and-patterns/scroll-controls.md)
-## [Buscar](controls-and-patterns/search.md)
-## [Zoom semántico](controls-and-patterns/semantic-zoom.md)
-## [Formas](controls-and-patterns/shapes.md)
-## [Control deslizante](controls-and-patterns/slider.md)
-## [Vista en dos paneles](controls-and-patterns/split-view.md)
-## [Deslizar el dedo](controls-and-patterns/swipe.md)
-## [Texto](controls-and-patterns/text-controls.md)
-### [Vínculos de contenido](controls-and-patterns/content-links.md)
-### [Etiquetas](controls-and-patterns/labels.md)
-### [Cuadro de contraseña](controls-and-patterns/password-box.md)
-### [Cuadro de texto enriquecido](controls-and-patterns/rich-edit-box.md)
-### [Bloque de texto enriquecido](controls-and-patterns/rich-text-block.md)
+### [Formas](controls-and-patterns/shapes.md)
+### [Vista web](controls-and-patterns/web-view.md)
+
+## Menús y barras de herramientas
+### [Barra de la aplicación y barra de comandos](controls-and-patterns/app-bars.md)
+### [Control flotante de barra de comandos](controls-and-patterns/command-bar-flyout.md)
+### [Menús y menús contextuales](controls-and-patterns/menus.md)
+
+## Navegación
+### [Hub](controls-and-patterns/hub.md)
+### [Maestro/detalles](controls-and-patterns/master-details.md)
+### [Vista de navegación](controls-and-patterns/navigationview.md)
+### [Dinámica](controls-and-patterns/pivot.md)
+
+## Contactos
+### [Tarjeta de contacto](controls-and-patterns/contact-card.md)
+### [Imagen de persona](controls-and-patterns/person-picture.md)
+
+## Selectores
+### [Selector de colores](controls-and-patterns/color-picker.md)
+### [Controles de fecha y hora](controls-and-patterns/date-and-time.md)
+### [Selector de fecha del calendario](controls-and-patterns/calendar-date-picker.md)
+### [Vista de calendario](controls-and-patterns/calendar-view.md)
+### [Selector de fecha](controls-and-patterns/date-picker.md)
+### [Selector de hora](controls-and-patterns/time-picker.md)
+
+## Desplazamiento
+### [Controles de desplazamiento y movimiento panorámico](controls-and-patterns/scroll-controls.md)
+### [Zoom semántico](controls-and-patterns/semantic-zoom.md)
+
+## [Búsqueda](controls-and-patterns/search.md)
+
+## Estado e información
+### [Progreso](controls-and-patterns/progress-controls.md)
+### [Información sobre herramientas](controls-and-patterns/tooltips.md)
+
+## Texto
+### [Introducción](controls-and-patterns/text-controls.md)
+### [Cuadro de sugerencias automáticas](controls-and-patterns/auto-suggest-box.md)
 ### [Bloque de texto](controls-and-patterns/text-block.md)
+### [Bloque de texto enriquecido](controls-and-patterns/rich-text-block.md)
 ### [Cuadro de texto](controls-and-patterns/text-box.md)
-## [Alternancia](controls-and-patterns/toggles.md)
-## [Información sobre herramientas](controls-and-patterns/tooltips.md)
-## [Vista de árbol ](controls-and-patterns/tree-view.md)
-## [Vista web](controls-and-patterns/web-view.md)
+### [Cuadro de texto enriquecido](controls-and-patterns/rich-edit-box.md)
+### [Cuadro de contraseña](controls-and-patterns/password-box.md)
+### [Etiquetas](controls-and-patterns/labels.md)
+### [Vínculos de contenido](controls-and-patterns/content-links.md)
+### [Vista de escritura a mano](controls-and-patterns/text-handwriting-view.md)
+
+
 
 # Estilo
 ## [Introducción](style/index.md)
@@ -124,6 +151,7 @@
 ## [Animación conectada](motion/connected-animation.md)
 ## [Parallax](motion/parallax.md)
 ## [Animaciones en XAML](motion/xaml-animation.md)
+### [Animaciones de propiedad](motion/xaml-property-animations.md)
 ### [Animaciones con guion gráfico](motion/storyboarded-animations.md)
 ### [Fotograma clave y animaciones de función de aceleración](motion/key-frame-and-easing-function-animations.md)
 
@@ -217,6 +245,7 @@
 ## [Inserción de entradas](input/input-injection.md)
 ## [Identificar dispositivos de entrada](input/identify-input-devices.md)
 ## [Entrada de texto personalizado](input/custom-text-input.md)
+## [Ajuste de escala de texto](input/text-scaling.md)
 ## [Arrastrar y soltar](input/drag-and-drop.md)
 ## [Zoom óptico y cambio de tamaño](input/guidelines-for-optical-zoom.md)
 ## [Movimiento panorámico](input/guidelines-for-panning.md)
