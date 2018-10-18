@@ -13,11 +13,11 @@ pm-contact: chigy
 design-contact: balrayit
 ms.localizationpriority: medium
 ms.openlocfilehash: a1433b131b994ee2b1323909bc7c195e00f43cde
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4748517"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4969095"
 ---
 # <a name="z-depth-and-shadow"></a>Profundidad Z y sombra
 
@@ -65,7 +65,7 @@ Reducir el número de planos con privilegios elevados para proporcionar el foco 
 
 ## <a name="what-is-shadow"></a>¿Qué es la sombra?
 
-![sombra](images/elevation-shadow/shadow.svg)
+![shadow](images/elevation-shadow/shadow.svg)
 
 Sombra es una manera percibir la elevación. Cuando se produce la luz de un objeto con privilegios elevados, hay una sombra en la superficie siguiente. Cuanto mayor sea el objeto, más grande y más suave se convierte en la sombra. Ten en cuenta que los objetos con privilegios elevados no es necesario tener sombras, pero sombras indicar la elevación.
 
