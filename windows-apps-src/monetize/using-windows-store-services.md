@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, servicios de la Tienda
 ms.localizationpriority: medium
 ms.openlocfilehash: d53fa39d0c6359e6f081c62a415cbf1874549b8f
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4692545"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4752937"
 ---
 # <a name="microsoft-store-services"></a>Servicios de Microsoft Store
 
@@ -31,5 +31,5 @@ Microsoft Store expone varios servicios que se pueden llamar a través de las AP
 | [Realizar campañas de anuncios](run-ad-campaigns-using-windows-store-services.md) | Usar la *API de promociones de Microsoft Store* para administrar mediante programación campañas de anuncios promocionales para las aplicaciones. Esta API permite crear, actualizar y supervisar las campañas y otros activos relacionados como destino y creativos. Esta API es especialmente útil para los desarrolladores que crean grandes volúmenes de campañas y que quieren hacerlo sin usar el panel del Centro de desarrollo de Windows. |
 | [Crear y administrar usuarios](create-and-manage-submissions-using-windows-store-services.md) | Usa la *API de envío de Microsoft Store* para efectuar consultas mediante programación y crear envíos de aplicaciones, complementos y paquetes piloto para tu cuenta del Centro de desarrollo de Windows o la de tu organización. Esta API es útil si tu cuenta administra muchas aplicaciones o complementos, y quieres automatizar y optimizar el proceso de envío para estos activos. |
 | [Administrar ofertas dirigidas ](manage-targeted-offers-using-windows-store-services.md) | Usar la *API de ofertas dirigidas de Microsoft Store* mediante programación reclamar una oferta dirigida que está asociada con la compra correcta de un complemento en la aplicación. |
-| [Administrar los derechos de producto de un servicio](view-and-grant-products-from-a-service.md)  | Si tienes un catálogo de aplicaciones y complementos en la tienda, puedes usar la *API de colecciones de Microsoft Store* y la *API de compras de Microsoft Store* para acceder a la información de propiedad de estos productos desde tus servicios, notificar un producto consumible como completado para un usuario y conceder un derecho para un producto gratuito a un usuario.  |
+| [Administrar los derechos de producto desde un servicio](view-and-grant-products-from-a-service.md)  | Si tienes un catálogo de aplicaciones y complementos en la tienda, puedes usar la *API de colecciones de Microsoft Store* y la *API de compras de Microsoft Store* para acceder a la información de propiedad de estos productos desde tus servicios, notificar un producto consumible como completado para un usuario y conceder un derecho para un producto gratuito a un usuario.  |
 | [API de metadatos de aplicaciones para redes de publicidad](app-metadata-api-for-advertising-networks.md)  | Las redes de publicidad pueden usar esta API para recuperar mediante programación los metadatos sobre las aplicaciones de Microsoft Store, incluidos detalles como la descripción y la categoría de la descripción de la tienda de la aplicación y si la aplicación está destinada a niños menores de 13 años. El acceso a esta API está actualmente restringido a los desarrolladores a los que Microsoft ha concedido permiso.  |

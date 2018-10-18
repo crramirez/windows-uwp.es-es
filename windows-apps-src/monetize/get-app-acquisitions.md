@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, Microsoft Store analytics API, API de análisis de Microsoft Store, adquisiciones de aplicaciones, app acquisitions
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b712c41f8288502e9e2abd1f05396ef1720390e
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 997f4e088edfced94189c2c0977bcfff60166059
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4690074"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4753710"
 ---
 # <a name="get-app-acquisitions"></a>Obtener los datos de las adquisiciones de la aplicación
 
@@ -101,7 +101,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | market              | cadena | Código de país ISO 3166 del mercado donde se realizó la compra.  |
 | gender              | cadena | Una de las cadenas siguientes que especifica el sexo del usuario que ha realizado la adquisición:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Unknown</strong></li></ul>    |
 | ageGroup            | cadena | Una de las cadenas siguientes que especifica el grupo de edad del usuario que ha realizado la adquisición:<ul><li><strong>menor que 13</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>mayor que 55</strong></li><li><strong>Unknown</strong></li></ul>  |
-| acquisitionType     | cadena | Una de las siguientes cadenas que indica el tipo de adquisición:<ul><li><strong>Free</strong></li><li><strong>Prueba</strong></li><li><strong>De pago</strong></li><li><strong>Código promocional</strong></li><li><strong>Iap</strong></li></ul>   |
+| acquisitionType     | cadena | Una de las siguientes cadenas que indica el tipo de adquisición:<ul><li><strong>Free</strong></li><li><strong>Prueba</strong></li><li><strong>De pago</strong></li><li><strong>Código promocional</strong></li><li><strong>Iap</strong></li><li><strong>Suscripción Iap</strong></li><li><strong>Audiencia privada</strong></li><li><strong>Pedido previo</strong></li><li><strong>Xbox Game Pass</strong> (o <strong>Game Pass</strong> si la consulta de datos es antes del 23 de marzo de 2018)</li><li><strong>Disco</strong></li><li><strong>Código de prepago</strong></li></ul>   |
 | acquisitionQuantity | número | Número de compras que se realizaron durante el nivel de agregación especificado.    |
 
 

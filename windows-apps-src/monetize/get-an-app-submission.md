@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submission, envío de aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 9838798778a2d66b2a52fcfe02defce0c9167d2d
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4689640"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4753222"
 ---
 # <a name="get-an-app-submission"></a>Obtener un envío de aplicación
 
