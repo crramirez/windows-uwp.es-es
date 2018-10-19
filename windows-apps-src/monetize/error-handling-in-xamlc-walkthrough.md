@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, anuncios, publicidad, control de errores, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: e4387ccb8ef7eb02cb0043530a4e683f7917f421
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4752333"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4962080"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tutorial de control de errores en XAML y C#
 

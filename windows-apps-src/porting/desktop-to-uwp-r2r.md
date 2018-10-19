@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, imagen nativa compilador
 ms.localizationpriority: medium
 ms.openlocfilehash: d98b576fb51a8f9507802796ab359d0d00d21998
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4747326"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4960165"
 ---
 # <a name="optimize-your-net-desktop-apps-with-native-images"></a>Optimizar las aplicaciones de escritorio de .NET con imágenes nativas
 
@@ -92,7 +92,7 @@ Para comprobar que la herramienta haya procesado los archivos binarios puedes re
 Native image obj\x86\Release\\R2R\DesktopApp1.exe generated successfully.
 ```
 
-## <a name="faq"></a>Preguntas más frecuentes
+## <a name="faq"></a>Preguntas frecuentes
 
 **Q. ¿Los nuevos binarios funcionan en máquinas sin .NET Framework 4.7.2?**
 

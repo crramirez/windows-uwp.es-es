@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app data, datos de la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 6940c1079c7973bc4fd639345c5d5e3f33b0221f
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4746339"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4962845"
 ---
 # <a name="get-app-data"></a>Obtener datos de la aplicación
 

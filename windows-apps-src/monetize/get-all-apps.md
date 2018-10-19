@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, apps, aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: d4261c984eb992092230425205313d751a351f07
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4743884"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4965930"
 ---
 # <a name="get-all-apps"></a>Obtener todas las aplicaciones
 

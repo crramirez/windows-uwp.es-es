@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4755288"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4966338"
 ---
 # <a name="debug-a-background-task"></a>Depurar una tarea en segundo plano
 
