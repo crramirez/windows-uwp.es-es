@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, portal de dispositivos, Administrador de aplicaciones, implementación, sdk
 ms.localizationpriority: medium
 ms.openlocfilehash: a6a96a78cf03ce4994ddee1c929997b12a2d028f
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4948014"
+ms.locfileid: "5126615"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implementar una aplicación a través de registro de archivos dinámico 
 
