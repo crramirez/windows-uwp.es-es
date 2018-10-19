@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, anuncios, publicidad, banner, control de anuncios, intersticial
 ms.localizationpriority: medium
 ms.openlocfilehash: c0dde67e3f7ab43734ffb0bf2a5826cc54691e17
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4743702"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4956210"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising
 
@@ -35,7 +35,7 @@ Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para l
 <tbody>
 <tr>
 <td align="left"><img src="images/install-sdk.png" alt="Install SDK icon" /></td>
-<td align="left"><b>Comenzar</b><br/><br/>
+<td align="left"><b>Introducción</b><br/><br/>
     <a href="http://aka.ms/ads-sdk-uwp">Instalar el SDK de Microsoft Advertising</a>
 </td>
 <td align="left"><img src="images/write-code.png" alt="Develop icon" /></td>

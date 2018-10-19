@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de activos
 ms.localizationpriority: medium
 ms.openlocfilehash: 31c27430c850f861c8b97863521202a6dcab80f7
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4748080"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4952169"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Desarrollar con paquetes de activos y plegado de paquete 
 

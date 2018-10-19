@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, compras desde la aplicación, IAP, complementos, pruebas, consumible, duradero, suscripción
 ms.localizationpriority: medium
-ms.openlocfilehash: d35e2469fa303a40967cf4c15800786eb2d17aca
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.openlocfilehash: b116e4794f024ecc5cf44d73e22c09ab8ee33ff4
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4750197"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4953173"
 ---
 # <a name="in-app-purchases-and-trials"></a>Pruebas y compras desde la aplicación
 
@@ -162,7 +162,7 @@ Para excluir o limitar características en una versión de prueba de la aplicaci
 
 Si la aplicación usa las API en el espacio de nombres **Windows.Services.Store** para implementar la compra desde la aplicación o la funcionalidad de prueba, debes publicar tu aplicación en Microsoft Store y descargar la aplicación en el dispositivo de desarrollo para usar su licencia para las pruebas. Sigue este proceso para probar el código:
 
-1. Si la aplicación aún no está publicada ni disponible en Microsoft Store, asegúrate de que tu aplicación cumpla con los requisitos mínimos del [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit), [envía la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) al Panel del Centro de desarrollo de Windows y asegúrate de que la aplicación supera el proceso de certificación. Puedes [configurar la aplicación para que no se pueda descubrir en la Tienda](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) mientras la pruebas.
+1. Si la aplicación aún no está publicada ni disponible en Microsoft Store, asegúrate de que tu aplicación cumpla con los requisitos mínimos del [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit), [envía la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) al Panel del Centro de desarrollo de Windows y asegúrate de que la aplicación supera el proceso de certificación. Puedes [configurar la aplicación para que no se pueda descubrir en la Tienda](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) mientras la pruebas. Ten en cuenta la configuración correcta de [paquetes piloto](../publish/package-flights.md). Incorrectamente paquete configurado puede ser piloto no podrán descargarse.
 
 2. Después, asegúrate de haber seguido estos pasos:
 
