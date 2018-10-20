@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, iconos secundarios
 ms.localizationpriority: medium
 ms.openlocfilehash: d8d6a79ddd497bc3ada777af25791e9938355c79
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4742254"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5170371"
 ---
 # <a name="secondary-tiles"></a>Iconos secundarios
 
