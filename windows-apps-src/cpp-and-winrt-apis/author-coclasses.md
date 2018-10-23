@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, autor, COM, componente
 ms.localizationpriority: medium
-ms.openlocfilehash: 94f59833f4c657445b7135b1158974d8a553813f
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.openlocfilehash: 24fd024ee25a6868b8c25b77ce31edc6662bbb6d
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5160027"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5408388"
 ---
 # <a name="author-com-components-with-cwinrt"></a>Crear componentes COM con C++ / WinRT
 
@@ -423,29 +423,7 @@ Como alternativa (y posiblemente más probable), puedes elegir hospedar su cocla
 
 Puede comenzar la tarea de creación de un servidor COM en proceso creando un nuevo proyecto en Microsoft Visual Studio. Crear un **Visual C++** > **Escritorio de Windows** > proyecto de**Biblioteca de vínculos dinámicos (DLL)** .
 
-### <a name="set-project-properties"></a>Establecer las propiedades de proyecto
-
-Ve a **General**de la propiedad de proyecto \> **Versión del SDK de Windows**y selecciona **Todas las configuraciones** y **Todas las plataformas**. Establece la **Versión del SDK de Windows** en *10.0.17134.0 (Windows 10, versión 1803)*, o posterior.
-
-Para agregar soporte de Visual Studio para C++ / WinRT a tu proyecto, edita tu `.vcxproj` de archivos, busca `<PropertyGroup Label="Globals">` y, dentro de ese grupo de propiedades, Establece la propiedad `<CppWinRTEnabled>true</CppWinRTEnabled>`.
-
-Dado que C++ / WinRT usa características del estándar C ++ 17, Establece la propiedad de proyecto **C o C++** > **idioma** > **Estándar de lenguaje de C++** a *ISO C ++ 17 Standard (/ STD: c ++ 17)*.
-
-### <a name="the-precompiled-header"></a>El encabezado precompilado
-
-Cambiar el nombre de tu `stdafx.h` y `stdafx.cpp` a `pch.h` y `pch.cpp`, respectivamente. Establece la propiedad de proyecto **C o C++** > **Encabezados precompilados** > **El archivo de encabezado precompilado** en *pch.h*.
-
-Buscar y todas las reemplazar `#include "stdafx.h"` con `#include "pch.h"`.
-
-En `pch.h`, incluyen `winrt/base.h`.
-
-```cppwinrt
-// pch.h
-...
-#include <winrt/base.h>
-```
-
-Confirma que no se ven afectadas por [¿por qué no compila mi proyecto nuevo?](/windows/uwp/cpp-and-winrt-apis/faq).
+Para agregar C++ / WinRT soporte para el nuevo proyecto, sigue los pasos descritos en [modificar un proyecto de aplicación de escritorio de Windows para agregar C++ / WinRT soporte](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
 ### <a name="implement-the-coclass-class-factory-and-in-proc-server-exports"></a>Implementar la coclase, el generador de clases y las exportaciones de servidor dentro del proceso
 
