@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f1236c2ade0423f6e092024e786741f3f3bf6d11
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443190"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470093"
 ---
 # <a name="masterdetails-pattern"></a>Patrón de maestro y detalles
 
@@ -46,7 +46,7 @@ Al implementar el patrón de maestro y detalles, te recomendamos que uses el est
 | 320epx - 640epx        | Apilado           |
 | 641epx o más ancho       | En paralelo      |
 
- 
+ 
 ## <a name="stacked-style"></a>Estilo apilado
 
 En el estilo apilado, solo hay un panel visible a la vez: el maestro o los detalles.

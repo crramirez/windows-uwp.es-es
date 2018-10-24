@@ -2,7 +2,7 @@
 author: normesta
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Publicar la aplicación de escritorio empaquetada en un almacén de Windows o la instalación de prueba en uno o varios dispositivos.
+title: Publicar la aplicación de escritorio empaquetada en una tienda Windows o la instalación de prueba en uno o varios dispositivos.
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
@@ -12,18 +12,18 @@ keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: c81e8d07efa04e93128089eaec78fb83b822a4b9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436718"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476353"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Distribuir una aplicación de escritorio empaquetada
 
-Publicar la aplicación de escritorio empaquetada en un almacén de Windows o la instalación de prueba en uno o varios dispositivos.  
+Publicar la aplicación de escritorio empaquetada en una tienda Windows o la instalación de prueba en uno o varios dispositivos.  
 
 > [!NOTE]
-> ¿Tienes un plan para la forma de transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
+> ¿Tienes un plan de cómo podría transición a los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
 
 ## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Distribuir la aplicación publicándola en la Microsoft Store
 
@@ -36,7 +36,7 @@ Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicion
 No tienes que firmar la aplicación antes de enviarla a la tienda.
 
 >[!IMPORTANT]
-> Si vas a publicar la aplicación en la Microsoft Store, asegúrate de que la aplicación funciona correctamente en dispositivos que ejecutan Windows 10 S. Este es un requisito de la tienda. Consulta [Probar la aplicación de Windows en Windows 10 S](desktop-to-uwp-test-windows-s.md).
+> Si vas a publicar la aplicación en la Microsoft Store, asegúrate de que la aplicación funciona correctamente en dispositivos que ejecutan Windows 10 S. Este es un requisito de store. Consulta [Probar la aplicación de Windows en Windows 10 S](desktop-to-uwp-test-windows-s.md).
 
 <a id="side-load" />
 
@@ -57,7 +57,7 @@ Si decides crear un certificado, tienes que instalarlo en el almacén de certifi
 > [!IMPORTANT]
 > Asegúrate de que el nombre del publicador del certificado coincide con el de la aplicación.
 
-Para firmar la aplicación con un certificado, vea [firmar un paquete de la aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
+Para firmar la aplicación con un certificado, vea [firmar un paquete de aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
 
 Para transferir localmente la aplicación a otros dispositivos, consulta [transferir localmente aplicaciones LOB en Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
 
@@ -81,7 +81,7 @@ Para obtener la lista completa de las extensiones y las instrucciones que indica
 
 Asimismo, puedes agregar código a la aplicación empaquetada que te permitirá realizar estas tareas:
 
-* Migrar los datos de usuario asociados con la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación empaquetada.
+* Migrar los datos de usuario asociados a la aplicación de escritorio a las ubicaciones de la carpeta correspondiente de la aplicación empaquetada.
 * Ofrecer a los usuarios la opción de desinstalar la versión de escritorio de la aplicación.
 
 Hablemos un poco sobre estas tareas. Comenzaremos con la migración de datos de usuario.
@@ -127,7 +127,7 @@ private void MigrateUserData()
 
 ### <a name="uninstall-the-desktop-version-of-your-app"></a>Desinstalar la versión de escritorio de la aplicación
 
-Es mejor no desinstalar la aplicación de escritorio de los usuarios sin antes solicitar su permiso. Muestra un cuadro de diálogo que le pida al usuario permiso para realizar la acción. Es posible que los usuarios decidan no desinstalar la versión de escritorio de la aplicación. Si esto sucede, tendrás que decidir si quieres bloquear el uso de la aplicación de escritorio o permitir el uso de side-by-side de ambas aplicaciones.
+Es mejor no desinstalar la aplicación de escritorio de los usuarios sin antes solicitar su permiso. Muestra un cuadro de diálogo que le pida al usuario permiso para realizar la acción. Es posible que los usuarios decidan no desinstalar la versión de escritorio de la aplicación. Si esto sucede, tendrás que decidir si quieres bloquear el uso de la aplicación de escritorio o permitir el uso en paralelo de ambas aplicaciones.
 
 Aquí tienes un ejemplo que te muestra cómo puedes llevar a cabo esta acción en una aplicación empaquetada basada en .NET.
 
@@ -151,7 +151,7 @@ private void RemoveDesktopApp()
 
         if (uninstallResult.Equals(DialogResult.Yes))
         {
-                    string[] uninstallArgs = uninstallString.Split(' ');
+                    string[] uninstallArgs = uninstallString.Split(' ');
 
             Process process = new Process();
             process.StartInfo.FileName = uninstallArgs[0];

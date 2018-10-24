@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2848b9a7326bdac084120ec9b75f067718f14853
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444426"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480687"
 ---
 # <a name="use-the-accelerometer"></a>Usar el acelerómetro
 
@@ -35,7 +35,7 @@ Una aplicación de juego sencilla puede usar un único sensor, el acelerómetro,
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
+Debes estar familiarizado con el lenguaje de marcado de aplicaciones Extensible (XAML), Microsoft VisualC # y eventos.
 
 El dispositivo o emulador que estés usando debe ser compatible con un acelerómetro.
 

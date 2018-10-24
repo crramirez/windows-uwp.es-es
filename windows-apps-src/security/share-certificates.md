@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 863658438ce53f2c74faddb845a7d17c6ec3130c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443481"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470860"
 ---
 # <a name="share-certificates-between-apps"></a>Compartir certificados entre aplicaciones
 
@@ -78,9 +78,9 @@ Ahora que tienes uno o varios servicios web protegidos, tus aplicaciones pueden 
 
 Si no hay certificados de cliente disponibles, el usuario tendrá que agregar un certificado al almacén de certificados. En tu aplicación puedes incluir código que permita al usuario seleccionar un archivo PFX que contenga un certificado de cliente y, después, importar ese certificado al almacén de certificados de cliente.
 
-**Sugerencia** Puedes usar makecert.exe para crear un archivo PFX para usarlo con este inicio rápido. Para obtener información sobre cómo usar makecert.exe, consulta [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
+**Sugerencia**puedes usar makecert.exe para crear un archivo PFX para usarlo con este inicio rápido. Para obtener información sobre cómo usar makecert.exe, consulta [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
 
- 
+ 
 
 1.  Abre Visual Studio y crea un proyecto nuevo en la página de inicio. Asigna el nombre "FirstContosoBankApp" al nuevo proyecto. Haz clic en **Aceptar** para crear el nuevo proyecto.
 2.  En el archivo MainPage.xaml, agrega el siguiente código XAML en el elemento **Cuadrícula** predeterminado. Este XAML incluye un botón para buscar el archivo PFX que se va a importar, un cuadro de texto para especificar una contraseña para un archivo PFX protegido por contraseña, un botón para importar un archivo PFX seleccionado, un botón para iniciar sesión en el servicio web protegido, y un bloque de texto para mostrar el estado de la acción actual.

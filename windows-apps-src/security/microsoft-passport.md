@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: b81bf3c55b493d8e36f186ec56b68367c6245cc7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434064"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478192"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -451,7 +451,7 @@ Las opciones de implementación flexibles permiten que Windows Hello reemplace e
 | TPM                 | El Módulo de plataforma segura (TPM) se puede usar para crear pares de claves criptográficas públicas y privadas, de manera que la clave privada nunca se pueda revelar o usar fuera del TPM (es decir, las clave no se pueden migrar).                                                                                                                                                                                                                                                                                                               |
 | Atestación de clave de TPM | Un protocolo que criptográficamente demuestra que una clave está enlazada a TPM. Este tipo de atestación se puede usar para garantizar que una operación criptográfica determinada se produjo en el TPM de un equipo concreto.                                                                                                                                                                                                                                                                                                                       |
 
- 
+ 
 
 ## <a name="related-topics"></a>Temas relacionados
 

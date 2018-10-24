@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
 ms.openlocfilehash: 29d7fc361e446207c8e14f83ca3f663bd5072e6e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435303"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478153"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
@@ -354,11 +354,11 @@ Ten en cuenta que el controlador de finalización comprueba si el elemento de tr
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Puedes obtener más información si descargas el código de este inicio rápido en la página [Crear una muestra de elemento de trabajo en el grupo de subprocesos](http://go.microsoft.com/fwlink/p/?LinkID=328569) creada para Windows 8.1 y vuelves a usar el código fuente en una aplicación de Windows 10 win\_unap.
+Puedes obtener más información, descarga el código de este inicio rápido en la [creación de un grupo de subprocesos funcionan elemento muestra](http://go.microsoft.com/fwlink/p/?LinkID=328569) escrita para Windows8.1 y vuelve a usar el código fuente en una aplicación Windows 10 win\_unap.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Enviar un elemento de trabajo al grupo de subprocesos](submit-a-work-item-to-the-thread-pool.md)
 * [Procedimientos recomendados para usar el grupo de subprocesos](best-practices-for-using-the-thread-pool.md)
 * [Enviar un elemento de trabajo con un temporizador](use-a-timer-to-submit-a-work-item.md)
- 
+ 

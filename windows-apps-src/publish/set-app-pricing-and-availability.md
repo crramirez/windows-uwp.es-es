@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, precio, disponible, descubrible, prueba gratuita, pruebas, prueba, aplicaciones, fecha de lanzamiento
 ms.localizationpriority: medium
 ms.openlocfilehash: 20c52687b375f9bf33dd491eeb37d4142acace99
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433737"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478467"
 ---
 # <a name="set-app-pricing-and-availability"></a>Establecer los precios y la disponibilidad de las aplicaciones
 
@@ -61,7 +61,7 @@ Hay dos tipos de prueba que puedes elegir y tienes la opción para configurar la
 
 Elige **Límite de tiempo** para permitir que los clientes prueben tu aplicación gratis durante un determinado número de días: **1 día**, **7 días**, **15 días**, o **30 días**. Puedes limitar características agregando código para [excluir o limitar funciones en la versión de prueba](../monetize/in-app-purchases-and-trials.md), o puedes permitir que los clientes accedan a toda las funcionalidades durante ese período de tiempo. 
 > [!NOTE]
-> Las versiones de prueba con tiempo limitado no se muestran a los clientes con Windows 10, compilación 10.0.10586 o versiones anteriores o a clientes con Windows Phone 8.1 y versiones anteriores.
+> Las versiones de prueba con tiempo limitado no se muestran a los clientes con Windows 10, compilación 10.0.10586 o versiones anteriores o a clientes con Windows Phone 8.1 y versiones anteriores.
 
 ### <a name="unlimited"></a>Sin límite
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432056"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479723"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Directrices para aplicaciones de marketing de Microsoft Store
 
@@ -41,7 +41,7 @@ También puedes descargar el conjunto completo de imágenes de distintivos (en f
 
 Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se ejecuta en un dispositivo Windows. Tenemos a tu disposición una gran variedad de imágenes de dispositivos, incluidos teléfonos, tabletas, portátiles y equipos. Procedimientos recomendados y especificaciones técnicas sobre cómo usar estas imágenes pueden encontrarse en las [Directrices de Marketing de Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=529769).
 
-[![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Imagen de dispositivo Windows**
+[ ![Botón Descargar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Imagen de dispositivos Windows**
 
 ## <a name="license-to-microsoft-marks"></a>Licencia para las marcas Microsoft
 
@@ -57,9 +57,9 @@ Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se
 
 Microsoft es el único propietario de las marcas de Microsoft y del fondo de comercio asociado, y el único beneficiario del fondo de comercio asociado con tu uso de las marcas de Microsoft. Microsoft puede revocar esta licencia en cualquier momento y a su entera discreción.
 
- 
+ 
 
- 
+ 
 
 
 

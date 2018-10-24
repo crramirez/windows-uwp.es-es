@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, iconos secundarios, instrucciones, directrices, procedimientos recomendados
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e3d31376b9ac155dab6bffa7739cb880af1cff9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431770"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476039"
 ---
 # <a name="secondary-tile-guidance"></a>Instrucciones sobre los iconos secundarios
 

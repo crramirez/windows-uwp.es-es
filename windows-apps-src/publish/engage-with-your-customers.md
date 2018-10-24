@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3690e294a3af29d1af261189310dca1a13ac5130
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439302"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475881"
 ---
 # <a name="engage-with-your-customers"></a>Interactuar con tus clientes
 
@@ -26,4 +26,4 @@ Genera interacción y satisfacción en los clientes con características como la
 -   [Enviar notificaciones a los clientes de la aplicación](send-push-notifications-to-your-apps-customers.md)
 -   [Usar ofertas dirigidas para maximizar la interacción y las conversiones](use-targeted-offers-to-maximize-engagement-and-conversions.md)
 
- 
+ 

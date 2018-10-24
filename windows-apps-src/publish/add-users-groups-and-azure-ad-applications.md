@@ -10,20 +10,20 @@ ms.technology: uwp
 keywords: Windows 10, uwp, aplicación de azure ad, aad, usuario, grupo, varios usuarios, multiusuario
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438467"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473938"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Agregar usuarios, grupos y aplicaciones de AzureAD a tu cuenta del Centro de desarrollo
 
-La sección de **los usuarios** del centro de desarrollo de Windows (en la **configuración de la cuenta**) te permite usar Azure Active Directory para agregar usuarios a tu cuenta del centro de desarrollo. A cada usuario se le asigna un rol (o conjunto de permisos personalizados) que define su acceso a la cuenta. También puedes agregar [grupos de usuarios](#groups) y [aplicaciones de AzureAD](#azure-ad-applications) para concederles acceso a tu cuenta del Centro de desarrollo.
+La sección de **los usuarios** del centro de desarrollo de Windows (en **configuración de la cuenta**) te permite usar Azure Active Directory para agregar usuarios a tu cuenta del centro de desarrollo. A cada usuario se le asigna un rol (o conjunto de permisos personalizados) que define su acceso a la cuenta. También puedes agregar [grupos de usuarios](#groups) y [aplicaciones de AzureAD](#azure-ad-applications) para concederles acceso a tu cuenta del Centro de desarrollo.
 
 Después de que los usuarios se hayan agregado a la cuenta, puedes [editar detalles de la cuenta](#edit), cambiar [roles y permisos](set-custom-permissions-for-account-users.md) o [eliminar usuarios](#remove).
 
 > [!IMPORTANT]
-> Para agregar usuarios a tu cuenta, primero tienes que [asociar tu cuenta del Centro de desarrollo al inquilino de Azure ActiveDirectory de la organización](associate-azure-ad-with-dev-center.md). 
+> Para agregar usuarios a tu cuenta, primero tienes que [asociar tu cuenta del Centro de desarrollo al inquilino de Azure ActiveDirectory de la organización](associate-azure-ad-with-dev-center.md). 
 
 Al agregar usuarios, tendrás que especificar su acceso a tu cuenta del Centro de desarrollo, asignándoles un [rol o conjunto de permisos personalizados](set-custom-permissions-for-account-users.md). 
 
@@ -58,7 +58,7 @@ Puedes seleccionar usuarios que ya existen en el inquilino de tu organización y
 
 Si has iniciado sesión con una cuenta de administrador que también tiene permisos de [administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el inquilino de Azure AD en el que estás trabajando, tendrás opciones adicionales para agregar usuarios a tu cuenta del Centro de desarrollo. Deberás seleccionar una de las opciones siguientes:
 
--   **Agregar usuarios existentes**: elige los usuarios que ya existen en el directorio de la organización y darles acceso a tu cuenta del centro de desarrollo, mediante el método que se ha descrito anteriormente.
+-   **Agregar usuarios existentes**: elige los usuarios que ya existen en el directorio de la organización y darles acceso a tu cuenta del centro de desarrollo, mediante el método descrito anteriormente.
 -   **Crear nuevos usuarios**: crear cuentas de usuario nuevo para agregar al directorio de la organización tanto y tu cuenta del centro de desarrollo
 -   **Invite outside users**: envía invitaciones por correo electrónico a los usuarios que no se encuentran actualmente en el directorio de tu organización. Se les invitará a tener acceso a tu cuenta del Centro de desarrollo y se les creará una nueva cuenta de [usuario invitado](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) en tu inquilino de AzureAD.
 
@@ -104,11 +104,11 @@ Si tienes que reenviar una invitación, busca al usuario en tu página **Usuario
 Si uno de los usuarios necesita cambiar su contraseña, puede hacerlo él mismo si has proporcionado un **correo electrónico de recuperación de contraseña** al crear la cuenta de usuario. También puedes actualizar la contraseña de un usuario siguiendo los pasos siguientes (si has iniciado sesión con una cuenta de administrador global en tu inquilino de Azure AD para cambiar la contraseña de un usuario). Ten en cuenta que este paso cambiará la contraseña del usuario en el inquilino de AzureAD, junto con la contraseña que utiliza para tener acceso al Centro de desarrollo. 
 
 1.  En la página de **usuarios** (en **configuración de la cuenta**), selecciona el nombre de la cuenta de usuario que quieres editar.
-2.  Selecciona el botón de **Restablecer la contraseña** en la parte inferior de la página.
+2.  Selecciona el botón **Restablecer contraseña** en la parte inferior de la página.
 3.  Aparecerá una página de confirmación con la información de inicio de sesión del usuario, incluida una contraseña temporal.
 
     > [!IMPORTANT]
-    >  Asegúrate de imprimir o copiar dicha información y proporcionársela al usuario, ya que no podrás acceder a la contraseña temporal después de salir de esta página.
+    >  Asegúrate de imprimir o copiar dicha información y proporcionársela al usuario, ya que no podrás acceder a la contraseña temporal después de salir de esta página.
 
 <span id="groups" />
 
@@ -189,12 +189,12 @@ Si la aplicación de AzureAD lee y escribe datos en MicrosoftAzureAD, necesitar�
 
 1.  En la página de **usuarios** (en **configuración de la cuenta**), selecciona el nombre de la aplicación de Azure AD.
     > [!TIP]
-    > Al hacer clic en el nombre de la aplicación de Azure AD, verás todas las claves activas de la aplicación de Azure AD, incluida la fecha en la que se creó la clave y en la que expirará. Para quitar una clave que ya no sea necesaria, haz clic en **Quitar**.
+    > Al hacer clic en el nombre de la aplicación de Azure AD, verás todas las claves activas de la aplicación de Azure AD, incluida la fecha en la que se creó la clave y en la que expirará. Para quitar una clave que ya no sea necesaria, haz clic en **Quitar**.
 
 2.  Para agregar una nueva clave, selecciona **Agregar nueva clave**.
 3.  Verás una pantalla que muestra los valores **Id. de cliente** y **Clave**.
     > [!IMPORTANT]
-    > Asegúrate de imprimir o copiar esta información, ya que no podrás volver a acceder a ella después de salir de esta página.
+    > Asegúrate de imprimir o copiar esta información, ya que no podrás volver a acceder a ella después de salir de esta página.
 
 4.  Si quieres crear más claves, selecciona **Agregar otra clave**.
 
@@ -232,5 +232,5 @@ Para quitar un usuario, grupo o aplicación de Azure AD de tu cuenta del centro 
 > [!IMPORTANT]
 > La eliminación de un usuario, un grupo o una aplicación de Azure AD significa que ya no tendrá acceso a tu cuenta del Centro de desarrollo. Esto **no** elimina el usuario, grupo o aplicación de AzureAD del directorio de la organización.
 
- 
+ 
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, personalizar, enumerar, descripción, anteriormente
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f30a825cc7aec1b6f7dbf5cff0ea1c17c43ffd7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438909"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478397"
 ---
 # <a name="create-platform-specific-store-listings"></a>Crear descripciones de Store específicas de la plataforma
 
@@ -23,12 +23,12 @@ ms.locfileid: "5438909"
 Si la aplicación tiene paquetes destinados a diferentes sistemas operativos, tienes la opción de personalizar partes de la descripción de Store para clientes con versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores, o Windows Phone 8.x o versiones anteriores). 
 
 > [!IMPORTANT]
-> Los clientes de Windows 10 siempre verán la [Descripción de Store](create-app-store-listings.md) predeterminada. No verás la opción de crear descripciones de Microsoft Store específicas de la plataforma, a menos que ya hayas cargado paquetes que admitan una o más versiones anteriores del sistema operativo. 
+> Los clientes de Windows 10 siempre verán la [Descripción de la tienda](create-app-store-listings.md)predeterminada. No verás la opción de crear descripciones de Microsoft Store específicas de la plataforma, a menos que ya hayas cargado paquetes que admitan una o más versiones anteriores del sistema operativo. 
 
 Las descripciones de la Tienda específicas de la plataforma son útiles si quieres mencionar las características que solo aparecen en una versión de SO o si quieres proporcionar capturas de pantalla que son específicas de un SO particular (independientemente del tipo de dispositivo), en lugar de que todos los clientes vean la misma descripción de la Tienda.
 
 > [!NOTE]
-> Crear una descripción de Microsoft Store específica de la plataforma en un idioma no crea una descripción de Microsoft Store específica de la plataforma en otros idiomas que la aplicación admite. Deberás crear la descripción de la Tienda específica de la plataforma por separado para cada idioma. Ten en cuenta también que no se pueden importar ni exportar datos de descripciones de Microsoft Store para descripciones específicas de la plataforma.
+> Crear una descripción de Microsoft Store específica de la plataforma en un idioma no crea una descripción de Microsoft Store específica de la plataforma en otros idiomas que la aplicación admite. Deberás crear la descripción de la Tienda específica de la plataforma por separado para cada idioma. Ten en cuenta también que no se pueden importar ni exportar datos de descripciones de Microsoft Store para descripciones específicas de la plataforma.
 
 
 ## <a name="creating-a-platform-specific-store-listing"></a>Creación de una descripción de la Tienda específica de la plataforma
@@ -38,7 +38,7 @@ En la parte superior de tu página **Descripción de Store**, si tu aplicación 
 > [!TIP]
 > No verás la opción de crear descripciones de Microsoft Store específicas de la plataforma hasta después de haber cargado los paquetes.
 
-Después de seleccionar esta opción, se te pedirá que elijas las versiones de SO de destino que admiten el envío. Cuando hayas creado descripciones de Microsoft Store específicas de la plataforma para todas las versiones de SO de destino de tu aplicación, no podrás realizar otra selección. (Windows 10 no está incluido en la lista de opciones, ya que los clientes de Windows 10 siempre verán la descripción de Microsoft Store predeterminada de la aplicación).
+Después de seleccionar esta opción, se te pedirá que elijas las versiones de SO de destino que admiten el envío. Cuando hayas creado descripciones de Microsoft Store específicas de la plataforma para todas las versiones de SO de destino de tu aplicación, no podrás realizar otra selección. (Windows 10 no está incluido en la lista de opciones, ya que los clientes de Windows 10 siempre verán la aplicación de la descripción de la tienda predeterminada.)
 
 Puedes optar por usar tu descripción de Microsoft Store predeterminada como punto de partida, lo que mostrará todo el texto aplicable y las imágenes que hayas introducido para la descripción de Microsoft Store predeterminada; después, podrás realizar las modificaciones que quieras antes de guardar. También puedes empezar con una descripción de la Tienda completamente en blanco si lo prefieres.
 
@@ -57,9 +57,9 @@ Si creas una descripción de Microsoft Store específica de la plataforma y más
 
 Después de confirmar que quieres mostrar a esos clientes la descripción de Microsoft Store predeterminada, selecciona **Aceptar**. Se quitará la descripción de Microsoft Store específica de la plataforma (para todos los idiomas en los que existía) y los clientes de esa versión del sistema operativo ahora verán la descripción predeterminada de Microsoft Store. Si cambias de opinión, puedes seguir los pasos anteriores y crear otra descripción de Microsoft Store específica de la plataforma para ese sistema operativo.
 
- 
+ 
 
- 
+ 
 
 
 

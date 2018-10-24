@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ventas de complementos, adquisiciones de complementos, ventas de iap, productos desde la aplicación, IAP, complementos
 ms.localizationpriority: medium
 ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440952"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5477410"
 ---
 # <a name="add-on-acquisitions-report"></a>Informe de adquisiciones de complementos
 
@@ -32,7 +32,7 @@ En este informe, una adquisición de complemento significa que un cliente te ha 
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puedes seleccionar **1 H** o **72 H** para mostrar los datos de compra en casi en tiempo real para una hora o de 72 horas; estos períodos de tiempo solo se aplican a la pestaña de **complemento diariamente** del gráfico de **adquisiciones de complementos** y a la pestaña de **adquisiciones** del gráfico de **mercados** . 
+Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques. También puedes seleccionar **1 H** o **72 H** para mostrar los datos de compra en casi en tiempo real para una hora o 72 horas; estos períodos de tiempo solo se aplican a la pestaña de **complemento diariamente** del gráfico de **adquisiciones de complementos** y a la pestaña de **adquisiciones** del gráfico de **mercados** . 
 
 También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por complementos específicos, por mercado o por tipo de dispositivo.
 
@@ -90,6 +90,6 @@ En el gráfico **Complementos principales** se muestra el número total de adqui
 
 
 
- 
+ 
 
- 
+ 

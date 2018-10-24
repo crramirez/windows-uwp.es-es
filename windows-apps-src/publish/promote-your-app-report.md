@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, UWP, promote, promoción, app, aplicación, campaign, campaña, report, informe, installs, instalaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: b5f63b53fca8a97c4f6e61aa38f45a749ca0621b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445523"
+ms.locfileid: "5469584"
 ---
 # <a name="ad-campaign-report"></a>Informe Campaña publicitaria
 
-El informe **campaña publicitaria** en el panel del centro de desarrollo de Windows te permite ver el rendimiento de tu de promoción de la aplicación [las campañas de anuncios](create-an-ad-campaign-for-your-app.md) . Para ver el informe, expande **atraer** en el menú de navegación izquierdo y selecciona **las campañas de anuncios**.
+El informe **campaña publicitaria** en el panel del centro de desarrollo de Windows te permite ver el rendimiento de la promoción de aplicación [campañas de anuncios](create-an-ad-campaign-for-your-app.md) . Para ver el informe, expande **atraer** en el menú de navegación izquierdo y selecciona **las campañas de anuncios**.
 
 ## <a name="definitions"></a>Definiciones
 
@@ -86,6 +86,6 @@ Puedes descargar el historial de facturación de la cuenta como un documento de 
 
 * [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
 
- 
+ 
 
- 
+ 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, packaging, empaquetado, package layout, distribución de paquete, asset package, paquete de activos
 ms.localizationpriority: medium
 ms.openlocfilehash: 31c27430c850f861c8b97863521202a6dcab80f7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443748"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475494"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Desarrollar con paquetes de activos y plegado de paquete 
 
@@ -29,7 +29,7 @@ Si estás pensando usar paquetes de activos para tu aplicación o ya sabes que q
 
 Para comprender cómo el plegado de paquete no afecta al proceso de desarrollo, vamos a retroceder primero para comprender lo que sucede cuando divides tu aplicación en varios paquetes (con paquetes de activos o paquetes de recursos). 
 
-En un nivel alto, cuando divides algunos de los archivos de la aplicación en otros paquetes (que no sean paquetes de arquitectura), no podrás acceder a esos archivos directamente con respecto al lugar en el que se ejecuta el código. Esto es porque estos paquetes se instalan todos en directorios diferentes con respecto al lugar en el que está instalado el paquete de arquitectura. Por ejemplo, si vas a crear un juego y el juego se localizado en francés y alemán y se ha compilado para x86 y x64 equipos, debes tener estos archivos del paquete de aplicación dentro de la recopilación de aplicación de tu juego:
+En un nivel alto, cuando divides algunos de los archivos de la aplicación en otros paquetes (que no sean paquetes de arquitectura), no podrás acceder a esos archivos directamente con respecto al lugar en el que se ejecuta el código. Esto es porque estos paquetes se instalan todos en directorios diferentes con respecto al lugar en el que está instalado el paquete de arquitectura. Por ejemplo, si vas a crear un juego y el juego se localizado en francés y alemán y se ha compilado para x86 y x64 equipos, debes tener estos archivos de paquete de la aplicación dentro de la recopilación de aplicación de tu juego:
 
 -   MyGame_1.0_x86.appx
 -   MyGame_1.0_x64.appx

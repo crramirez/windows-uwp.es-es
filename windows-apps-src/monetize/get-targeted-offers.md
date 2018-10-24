@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, servicios Microsoft Store, API de ofertas de destino de Microsoft Store, obtener ofertas dirigidas
 ms.localizationpriority: medium
 ms.openlocfilehash: 1032831492443460bd63671012a09edfceca2690
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436005"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479081"
 ---
 # <a name="get-targeted-offers"></a>Obtener ofertas dirigidas
 
@@ -83,6 +83,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 * [Administrar ofertas dirigidas usando los servicios de la Store](manage-targeted-offers-using-windows-store-services.md)
 
- 
+ 
 
- 
+ 

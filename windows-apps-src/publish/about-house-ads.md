@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 155b8f67b5cd6080554afb889c7c27c921c998f8
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439282"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479759"
 ---
 # <a name="about-house-ads"></a>Acerca de los anuncios internos
 
@@ -34,7 +34,7 @@ Cuando un anuncio interno de la aplicación A aparezca en la aplicación B, no s
 >[!NOTE]
 > Un usuario final específico no verá un anuncio interno determinado más de cinco veces al día.
 
- 
+ 
 
 ### <a name="related-topics"></a>Temas relacionados
 

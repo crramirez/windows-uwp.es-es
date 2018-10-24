@@ -1,6 +1,6 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
-description: Esta guía básica proporciona una visión general de las características fundamentales de empresa para las aplicaciones de Windows 10 y las aplicaciones para la Plataforma universal de Windows (UWP).
+description: Esta guía básica proporciona una visión general de las características fundamentales de empresa para aplicaciones de Windows 10 y la plataforma Universal de Windows (UWP).
 title: Enterprise
 author: awkoren
 ms.author: alkoren
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437512"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476617"
 ---
 # <a name="enterprise"></a>Enterprise
 
-Esta guía básica proporciona una visión general de las características fundamentales de empresa para la Plataforma universal de Windows (UWP) Windows 10.
+Esta guía básica proporciona una visión general de las características empresariales clave para las aplicaciones de la plataforma de Windows Windows10Universal (UWP).
 
-**Nota** Este artículo está dirigido a los desarrolladores que escriben aplicaciones de empresa para UWP. Para el desarrollo general de UWP, consulta las [Guías de procedimientos para aplicaciones Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para el desarrollo de WPF, Windows Forms o Win32, ve al [Centro de desarrollo de escritorio](https://dev.windows.com/desktop). Para los recursos de profesionales de TI como la implementación de Windows 10 o la administración de características de seguridad de la empresa, consulta [Windows 10 en TechNet](https://msdn.microsoft.com/library/dn986868).
+**Nota**en este artículo está dirigido a los desarrolladores que escriban aplicaciones para UWP de empresa. Para el desarrollo general de UWP, consulta las [Guías de procedimientos para aplicaciones Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para el desarrollo de WPF, Windows Forms o Win32, ve al [Centro de desarrollo de escritorio](https://dev.windows.com/desktop). Para los recursos de profesionales de TI como la implementación de Windows 10 o la administración de características de seguridad de la empresa, consulta [Windows 10 en TechNet](https://msdn.microsoft.com/library/dn986868).
 
 ¿Hay una versión de esta aplicación que se muestra algunos de los avances en el que se mostrarán en la compilación durante esta presentación [Rápidamente construir las aplicaciones de LOB con UWP y Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502)
 
@@ -29,13 +29,13 @@ Cosas vale la pena llamadas en primer plano:
 
 ## <a name="whats-new-for-enterprise-applications"></a>Novedades para las aplicaciones empresariales
 
-Te mostramos algunas herramientas, las bibliotecas y funcionalidades que se han creado bastante recientemente.
+Este es algunas herramientas, las bibliotecas y funcionalidades que se han creado bastante recientemente.
 
 > [!div class="checklist"]
 > * [Windows Template Studio](#template-studio)
 > * [Controles para crear interfaces de usuario de estilo de escritorio](#desktop-style-UI)
 > * [Controles para admitir escenarios empresariales](#enterprise)
-> * [Biblioteca de interfaz de usuario de Windows](#UI-library)
+> * [Biblioteca de la interfaz de usuario de Windows](#UI-library)
 > * [Controles UWP en aplicaciones de escritorio](#xaml-islands)
 > * [.NET Standard 2.0](#standard)
 > * [Conectividad de SQL Server](#sql-server)
@@ -65,18 +65,18 @@ Por ejemplo, los nuevos controles de [barra de menús](https://review.docs.micro
 
 ### <a name="controls-to-support-enterprise-scenarios"></a>Controles para admitir escenarios empresariales
 
-[DataGridView](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid) proporciona una manera flexible de mostrar una colección de datos en filas y columnas.
+[DataGridView](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid) proporciona una forma flexible para mostrar una colección de datos en filas y columnas.
 
-La [vista de árbol](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) permite una lista jerárquica con la expansión y contracción de nodos que contienen elementos anidados. Puede usarse para ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
+La [vista de árbol](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) permite una lista jerárquica con expansión y contracción de nodos que contienen elementos anidados. Puede usarse para ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
 
 ![Control DataGrid](images/DataGrid.gif)
 
 
-### <a name="windows-ui-library"></a>Biblioteca de interfaz de usuario de Windows
+### <a name="windows-ui-library"></a>Biblioteca de la interfaz de usuario de Windows
 
 La biblioteca de la interfaz de usuario de Windows es un conjunto de paquetes de NuGet que proporcionan controles y otros elementos de interfaz de usuario para aplicaciones para UWP. También permite la compatibilidad de nivel inferior con versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tengan el sistema operativo más reciente.
 
-![Biblioteca de interfaz de usuario de Windows](images/win-ui.png)
+![Biblioteca de la interfaz de usuario de Windows](images/win-ui.png)
 
 Consulta la [Biblioteca de la interfaz de usuario de Windows (versión preliminar)](https://docs.microsoft.com/en-us/uwp/toolkits/winui/).
 
@@ -84,15 +84,15 @@ Consulta la [Biblioteca de la interfaz de usuario de Windows (versión prelimina
 
 ### <a name="uwp-controls-in-desktop-applications"></a>Controles UWP en aplicaciones de escritorio
 
-Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio de WPF, Windows Forms y Win32 de C++. Esto significa que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles UWP, como entrada de lápiz de Windows y los controles que admiten el sistema Fluent Design. Esta característica se denomina Islas XAML.
+Windows 10 ahora te permite usar los controles UWP en aplicaciones de escritorio de WPF, Windows Forms y Win32 de C++. Esto significa que puede mejorar el aspecto, sensación y la funcionalidad de las aplicaciones de escritorio existentes con las últimas características de la interfaz de usuario de Windows 10 que solo están disponibles a través de los controles UWP, como controles que admiten el sistema Fluent Design y Windows Ink. Esta característica se denomina Islas XAML.
 
-Ver [los controles UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
+Consulta [controles de UWP en aplicaciones de escritorio](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
 
 <a id="standard" />
 
 ### <a name="net-standard-20"></a>.NET Standard 2.0
 
-.NET estándar incluye más de 20 000 más API de .NET estándar 1.x. Esto facilita mucho migrar las bibliotecas de .NET Framework existentes y, a continuación, usarlos entre diferentes aplicaciones de .NET incluida la aplicación para UWP.
+.NET estándar incluye más de 20 000 más API de .NET estándar 1.x. Esto facilita mucho migrar las bibliotecas de .NET Framework existentes y, a continuación, usarlos entre diferentes aplicaciones. NET, incluyendo la aplicación para UWP.
 
 ![NET estándar](images/dot-net-standard-project-template.png)
 
@@ -110,9 +110,9 @@ Consulta [Usar una base de datos de SQL Server en una aplicación para UWP](http
 
 ### <a name="msix-deployment"></a>Implementación de MSIX
 
-MSIX es el formato de paquete de aplicación de Windows que proporciona una experiencia moderna de empaquetado para todas las aplicaciones de Windows. El formato del paquete MSIX conserva la funcionalidad de los paquetes de aplicación existentes e instalar archivos además de la habilitación de características de empaquetado e implementación nuevas, modernas a las aplicaciones de Win32, WPF y Windows Forms.
+MSIX es el formato de paquete de aplicación de Windows que proporciona una experiencia de empaquetado modernos a todas las aplicaciones de Windows. El formato del paquete MSIX conserva la funcionalidad de los paquetes de aplicación existentes e instalar archivos además de habilitación de características de empaquetado e implementación nuevas, modernas a las aplicaciones de Win32, WPF y Windows Forms.
 
-MSIX es un formato de empaquetado integrado para que sea seguro y fiable, en función de una combinación de MSI, AppX, las tecnologías de instalación de App-V y ClickOnce.
+MSIX es un formato de empaquetado integrado para que sea seguro y fiable, en función de una combinación de MSI, AppX, tecnologías de instalación de App-V y ClickOnce.
 
 ![Icono MSIX](images/WinUI_MSIX_2col_740x417.png)
 
@@ -122,7 +122,7 @@ Consulta la [documentación de MSIX](https://docs.microsoft.com/windows/msix/).
 
 ## <a name="security"></a>Seguridad
 
-Windows 10 proporciona un conjunto de características de seguridad para desarrolladores de aplicaciones con el fin de que protejan la identidad de los usuarios, la seguridad de las redes corporativas y todos los datos de la empresa almacenados en dispositivos. Microsoft Passport es una característica nueva en Windows 10, una alternativa de contraseña de dos factores fácil de implementar que se puede acceder mediante el uso de un PIN o Windows Hello. Proporciona una seguridad en el nivel de empresa y admite el reconocimiento de huella digital, rostro e iris.
+Windows 10 proporciona un conjunto de características de seguridad para los desarrolladores de aplicaciones proteger la identidad de sus usuarios, la seguridad de las redes corporativas y todos los datos empresariales almacenados en los dispositivos. Para Windows 10 es una característica nueva Microsoft Passport, una alternativa de contraseña de dos factores fácil de implementar que es accesible mediante el uso de un PIN o Windows Hello, que proporciona seguridad en el nivel empresa y admite la huella digital, rostro y el reconocimiento de iris en función.
 
 | Tema | Descripción |
 |-------|-------------|
@@ -175,13 +175,13 @@ Hoy en día, muchos usuarios llevan su teléfono o tableta personal al trabajo, 
 
 ## <a name="deployment"></a>Implementación
 
-Tienes varias opciones para distribuir aplicaciones a los usuarios de la organización. Puedes usar Microsoft Store para empresas, administración de dispositivos móviles existentes, o bien puedes transferir localmente aplicaciones en dispositivos. Puedes también realizar las aplicaciones disponibles en general pública publicándolas en Microsoft Store.
+Tienes varias opciones para distribuir aplicaciones a los usuarios de la organización. Puedes usar Microsoft Store para empresas, administración de dispositivos móviles existentes, o bien puedes transferir las aplicaciones a los dispositivos. Puedes también realizar las aplicaciones disponibles en general pública publicándolas en la Microsoft Store.
 
 | Tema | Descripción |
 |-------|-------------|
 | [Distribuir aplicaciones de línea de negocio a empresas](https://msdn.microsoft.com/library/windows/apps/mt608995) | Puedes publicar aplicaciones de línea de negocio directamente en las empresas por volumen a través de Microsoft Store para empresas, sin que las aplicaciones estén disponibles para el público. |
 | [Aplicaciones en instalación de prueba](https://technet.microsoft.com/library/mt269549) | Al realizar la instalación de prueba de una aplicación, se implementa un paquete de la aplicación firmado en un dispositivo. Es necesario mantener la firma, el hospedaje y la implementación de estas aplicaciones. Se ha simplificado el proceso de instalación de prueba de aplicaciones para Windows 10.             |
-| [Publicar aplicaciones en Microsoft Store](https://dev.windows.com/publish) | La Microsoft Store unificado te permite publicar y administrar todas las aplicaciones para todos los dispositivos de Windows. Personalizar la disponibilidad de la aplicación con el precio de cada mercado, la distribución y visibilidad de los controles y otras opciones. |
+| [Publicar aplicaciones en Microsoft Store](https://dev.windows.com/publish) | La Microsoft Store unificado te permite publicar y administrar todas las aplicaciones para todos los dispositivos Windows. Personalizar la disponibilidad de la aplicación con el precio de cada mercado, la distribución y visibilidad de los controles y otras opciones. |
 
 ## <a name="enterprise-uwp-samples"></a>Muestras de UWP de empresa
 
@@ -191,15 +191,15 @@ Acción: hablar Josh o Karl para obtener más ejemplos de centrado en la empresa
 
 | Tema |  Descripción |
 |------ |--------------|
-| [Muestra de inventario de VanArsdel](https://github.com/Microsoft/InventorySample) | Una aplicación de Windows 10 de muestra (con la plataforma Universal de Windows) se centra en escenarios de línea de negocio, que muestra cómo usar las funciones más recientes de Windows en aplicaciones de escritorio. La muestra se basa en la creación y administración de clientes, pedidos y productos de la empresa ficticia VanArsdel.
-Destaca MVVM, base de datos SQL, Entity Framework. Lista de otros usuarios.|
+| [Muestra de inventario VanArsdel](https://github.com/Microsoft/InventorySample) | Una aplicación de Windows 10 muestra (con la plataforma Universal de Windows) se centra en escenarios de línea de negocio, que muestra cómo usar las funcionalidades de Windows más recientes en las aplicaciones de escritorio. La muestra se basa en la creación y administración de clientes, pedidos y productos de la empresa ficticia VanArsdel.
+Destaca MVVM, base de datos SQL, Entity Framework. Lista de otras personas.|
 
 ## <a name="patterns-and-practices"></a>Patrones y prácticas
 
-Las bases de código para aplicaciones en el nivel de empresa de gran escala, pueden llegar a ser difíciles de usar. Prism es un marco para compilar aplicaciones de XAML acopladas ligeramente que se pueden mantener y probar en WPF, Windows 10 UWP y Xamarin Forms. Prism proporciona la implementación de una colección de patrones de diseño útiles para escribir aplicaciones de XAML estructuradas y fáciles de mantener, incluidos MVVM, la inserción de dependencias, los comandos, EventAggregator y otros.
+Las bases de código para aplicaciones en el nivel de empresa de gran escala, pueden llegar a ser difíciles de usar. Prism es un marco para compilar imprecisa acopladas, puede mantener y probar aplicaciones de XAML en WPF, Windows 10 UWP y Xamarin Forms. Prism proporciona la implementación de una colección de patrones de diseño útiles para escribir aplicaciones de XAML estructuradas y fáciles de mantener, incluidos MVVM, la inserción de dependencias, los comandos, EventAggregator y otros.
 
 Para obtener más información acerca de Prism, consulta el [repositorio de GitHub](https://github.com/PrismLibrary/Prism).
 
- 
+ 
 
- 
+ 

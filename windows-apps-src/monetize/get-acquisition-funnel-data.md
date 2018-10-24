@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, servicios de Store, API de Servicios web de Windows, adquisición, embudo
 ms.localizationpriority: medium
 ms.openlocfilehash: 362bcc956fa5945f9685aac7d6351b9fda7690de
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443141"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479658"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>Obtener datos de embudo de adquisiciones de aplicaciones
 
@@ -54,7 +54,7 @@ Para usar este método, primero debes hacer lo siguiente:
 | endDate | date | La fecha de finalización del intervalo de fechas de los datos de embudo de adquisiciones que se recuperarán. El valor predeterminado es la fecha actual. |  No  |
 | filter | cadena  | Una o más instrucciones que filtran las filas en la respuesta. Para obtener más información, consulta la sección [filtrar campos](#filter-fields) a continuación. | No   |
 
- 
+ 
 ### <a name="filter-fields"></a>Campos de filtro
 
 El parámetro *filter* de la solicitud contiene una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un campo y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**.

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437688"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475320"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensión de marcado {TemplateBinding}
 
@@ -57,7 +57,7 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 
 **TemplateBinding** es una extensión de marcado. Las extensiones de marcado generalmente se implementan cuando es necesario que los valores de atributo de escape no sean valores literales o nombres de controlador y el requisito sea más global que simplemente colocar convertidores de tipos en ciertos tipos o propiedades. Todas las extensiones de marcado en XAML usan los caracteres "{" y "}" en su sintaxis de atributo, que es la convención mediante la cual un procesador XAML reconoce que una extensión de marcado debe procesar el atributo.
 
-**Nota** En la implementación del procesador XAML de Windows Runtime no hay una representación de clase de respaldo para **TemplateBinding**. **TemplateBinding** se usa exclusivamente en marcado XAML. No hay una forma directa de reproducir el comportamiento en el código.
+**Nota**implementación del procesador en el XAML en tiempo de ejecución de Windows, no hay ninguna representación de clase de respaldo para **TemplateBinding**. **TemplateBinding** se usa exclusivamente en marcado XAML. No hay una forma directa de reproducir el comportamiento en el código.
 
 ### <a name="xbind-in-controltemplate"></a>x: Bind en ControlTemplate
 
@@ -67,7 +67,7 @@ La propiedad [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.con
 
 Con el soporte de **x: Bind** , ahora puedes usar ambos [enlaces de función](../data-binding/function-bindings.md) como enlaces bidireccionales bien como en [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)
 
-En el siguiente ejemplo, el TextBlock.Text se evalúa como Button.Content.ToString(). TargetType en ControlTemplate actúa como el origen de datos y realiza el mismo resultado que TemplateBinding al elemento primario.
+En el siguiente ejemplo, el TextBlock.Text se evalúa como Button.Content.ToString(). TargetType en ControlTemplate actúa como el origen de datos y te permitirá realizar el mismo resultado que TemplateBinding al elemento primario.
 
 ```xaml
 <ControlTemplate TargetType="Button">
@@ -84,5 +84,5 @@ En el siguiente ejemplo, el TextBlock.Text se evalúa como Button.Content.ToStri
 * [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)
 * [Introducción a XAML](xaml-overview.md)
 * [Introducción a las propiedades de dependencia](dependency-properties-overview.md)
- 
+ 
 

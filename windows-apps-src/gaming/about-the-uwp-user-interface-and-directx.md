@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, DirectX, objeto de aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: fcbe68516e3ad8b2643faf68900e3305f18e8bbf
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444301"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475059"
 ---
 # <a name="the-app-object-and-directx"></a>El objeto de aplicación y DirectX
 
@@ -36,9 +36,9 @@ En primer lugar, veamos los espacios de nombres de Windows Runtime que debes inc
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **Nota** Si no pretendes desarrollar una aplicación para UWP, usa los componentes de interfaz de usuario incluidos en las bibliotecas y los espacios de nombres específicos de JavaScript o XAML, en lugar de los tipos proporcionados en estos espacios de nombres.
+> **Nota**  si no estás desarrollando una aplicación para UWP, usa los componentes de interfaz de usuario incluidos en las bibliotecas de JavaScript o XAML específicas y espacios de nombres en lugar de los tipos proporcionados en estos espacios de nombres.
 
- 
+ 
 
 ## <a name="the-windows-runtime-app-object"></a>El objeto de aplicación de Windows Runtime
 
@@ -114,7 +114,7 @@ Puedes determinar el comportamiento de los subprocesos de la distribución de ev
 | [**CoreProcessEventsOption.ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217)        | Espera eventos nuevos y distribuye todos los eventos disponibles. Continúa con este comportamiento hasta que la ventana se cierra o la aplicación llama al método [**Close**](https://msdn.microsoft.com/library/windows/apps/br208260) en la instancia de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). |
 | [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217)     | Distribuye todos los eventos disponibles actualmente en la cola. Si no hay eventos pendientes, se devuelve inmediatamente.                                                                                                                                          |
 
- 
+ 
 
 UWP con DirectX debe usar la opción [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217) para evitar comportamientos de bloqueo que puedan interrumpir las actualizaciones de elementos gráficos.
 
@@ -155,9 +155,9 @@ Si vas a portar el código existente para que se ejecute en el subproceso de AST
 
 En general, cuando diseñes tu aplicación para UWP, usa la clase [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) para la clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) y el método [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) de tu aplicación para controlar todos los subprocesos de interfaz de usuario en vez de intentar crear y administrar tú mismo los subprocesos de MTA. Cuando necesites un subproceso independiente que no puedas controlar con **CoreDispatcher**, usa patrones asincrónicos y sigue las instrucciones mencionadas más arriba para evitar problemas de reentrada.
 
- 
+ 
 
- 
+ 
 
 
 

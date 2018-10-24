@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, servicios de Store, Microsoft Store analytics API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443970"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469741"
 ---
 # <a name="get-daily-app-usage"></a>Obtener el uso diario de la aplicación
 
@@ -60,7 +60,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-El siguiente ejemplo muestra una solicitud para obtener datos de uso diario de aplicación. Sustituye el valor *applicationId* por el id. de la Store de la aplicación.
+En el siguiente ejemplo se muestra una solicitud para obtener datos de uso diario de aplicación. Sustituye el valor *applicationId* por el id. de la Store de la aplicación.
 
 ```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/usagedaily?applicationId=XXXXXXXXXXXX&startDate=2018-08-10&endDate=2018-08-14 HTTP/1.1
@@ -79,7 +79,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de opiniones de la solicitud.                 |
 | TotalCount | entero    | Número total de filas en el resultado de datos de la consulta.                                                                          |
 
- 
+ 
 ### <a name="usage-values"></a>Valores de uso
 
 Los elementos en la matriz *Value* contienen los siguientes valores.
@@ -91,10 +91,10 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | applicationName           | cadena  | Nombre para mostrar de la aplicación.                                              |
 | deviceType                | string  | Una de las cadenas siguientes que especifica el tipo de dispositivo donde se produjo el uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tableta**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                         |
 | packageVersion            | cadena  | La versión del paquete donde se produjo el uso.                          |
-| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usa la aplicación. |
-| subscriptionName          | cadena  | Indica si estaba el uso de a través de la Xbox Game Pass.                            |
+| market                    | string  | El código de país ISO 3166 del mercado donde el cliente usó la aplicación. |
+| subscriptionName          | cadena  | Indica si estaba el uso de a través de Xbox Game Pass.                            |
 | dailySessionCount         | long    | El número de sesiones de usuario en ese día.                                  |
-| engagementDurationMinutes | double  | Los minutos que los usuarios activamente se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad.             |
+| engagementDurationMinutes | double  | Los minutos donde los usuarios se usan la aplicación medida por un período de tiempo, a partir de cuando se inicia la aplicación distinto (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad activamente.             |
 | dailyActiveUsers          | long    | El número de clientes que usen la aplicación ese día.                           |
 | dailyActiveDevices        | long    | El número de dispositivos diarios que se usan para interactuar con la aplicación todos los usuarios.  |
 | dailyNewUsers             | long    | El número de clientes que usó la aplicación por primera vez ese día.    |

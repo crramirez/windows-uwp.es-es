@@ -11,25 +11,25 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a25980c964e399931a088e281e959df3095ffe9a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434309"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472566"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Poner a la venta aplicaciones y complementos
 
 Puedes promocionar tu aplicación o complemento en Microsoft Store poniéndola a la venta durante un tiempo limitado. Puedes elegir ofrecer el producto en una franja de precios inferior o con un descuento basado en porcentajes.
 
 > [!NOTE]
-> No se admite el precio de oferta de complementos de suscripción.
+> No se admite el precio de oferta para complementos de suscripción.
 
 Cuando usas la sección **Precio de oferta** de la página **Precios y disponibilidad** de un envío para reducir temporalmente el precio de la aplicación o complemento, los clientes que consulten la descripción de la Tienda verán el precio tachado, lo que indica que se ha reducido el precio (a diferencia de un [cambio de precio programado](set-and-schedule-app-pricing.md#schedule-price-changes), que puede aumentar o disminuir el precio sin que se muestre como un cambio en la Tienda). 
 
 Durante el período de tiempo que tu producto esté rebajado, los clientes podrán comprarlo a un precio inferior durante el período de tiempo seleccionado. Si reduces el precio a **Gratis**, podrán descargarlo sin pagar nada durante el periodo de oferta.
 
 > [!IMPORTANT]
-> El precio de oferta solo se muestra a tus clientes con dispositivos Windows 10, incluida la Xbox One. Las ofertas ofrecidas a los propietarios de uno de tus otros productos solo se mostrarán a los clientes con dispositivos Windows10, versión 1607 o posterior.
+> Precio de oferta solo se muestra a los clientes en los dispositivos Windows 10, incluida la Xbox One. Las ofertas ofrecidas a los propietarios de uno de tus otros productos solo se mostrarán a los clientes con dispositivos Windows10, versión 1607 o posterior.
 > 
 > En otros sistemas operativos, los clientes verán el precio normal de la aplicación o el complemento y no podrán adquirirlos al precio de oferta. Siempre puedes cambiar un precio eligiendo una franja de precios diferente en un nuevo envío, pero no se mostrará como una oferta por tiempo limitado.
 
@@ -83,7 +83,7 @@ Cuando el envío supere el proceso de certificación, los cambios surtirán efec
 > [!IMPORTANT]
 > Si ya ha iniciado una oferta, no podrás editar la fecha de inicio. Aunque puedes editar la fecha de finalización, te recomendamos que no edites una oferta para que finalice antes de su fecha final original. Puede resultar frustrante para los clientes potenciales si finalizas una oferta antes de la fecha en que se publicó originalmente (dado que los clientes verán la fecha de finalización programada al ver descripción de la aplicación en la Tienda).
 
- **Cancelar una oferta que no se ha iniciado todavía**
+ **Cancelar una oferta que no se ha iniciado todavía**
 
 1.  En la página **Precios y disponibilidad** de un envío en curso de una aplicación o un complemento, ve a la sección **Precio de oferta**.
 2.  Encuentra la oferta que quieres cancelar y haz clic en **Eliminar**.

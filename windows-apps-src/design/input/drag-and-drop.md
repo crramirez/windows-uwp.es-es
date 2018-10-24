@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a4685a891facab39cb984f0b2d5f697e22477233
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5445892"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469469"
 ---
 # <a name="drag-and-drop"></a>Arrastrar y colocar
 
@@ -102,7 +102,7 @@ El sistema mostrará automáticamente las animaciones adecuadas para colocar en 
 
 ## <a name="implementing-custom-drag-and-drop"></a>Implementación de la operación de arrastrar y colocar personalizada
 
-La clase [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) realiza la mayor parte del trabajo de implementación de arrastrar y colocar automáticamente Pero si quieres, puedes implementar su propia versión usando las API en el [espacio de nombres Windows.ApplicationModel.DataTransfer.DragDrop.Core](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
+La clase [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) realiza la mayor parte del trabajo de implementación de arrastrar y colocar automáticamente Pero si quieres, puedes implementar su propia versión usando las API de [espacio de nombres Windows.ApplicationModel.DataTransfer.DragDrop.Core](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
 
 | Funcionalidad | API de WinRT |
 | --- | --- |

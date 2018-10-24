@@ -12,23 +12,23 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e91d4bd481188f4d29af68af2c4572b26d446ae
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432616"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478525"
 ---
 # <a name="send-a-local-tile-notification"></a>Enviar una notificación de icono local
  
 
-Los iconos de la aplicación principal de Windows 10 se definen en el manifiesto de la aplicación, mientras que los iconos secundarios se crean mediante programación y se definen mediante el código de la aplicación. En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables. (Una notificación local es aquella que se envía desde el código de la aplicación frente a la que se envía o extrae de un servidor web).
+Iconos de la aplicación principal en Windows 10 se definen en el manifiesto de la aplicación, mientras que los iconos secundarios se crean y se definen mediante el código de aplicación mediante programación. En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables. (Una notificación local es aquella que se envía desde el código de la aplicación frente a la que se envía o extrae de un servidor web).
 
 ![icono predeterminado e icono con notificación](images/sending-local-tile-01.png)
 
 > [!NOTE] 
 >Obtén información sobre cómo [crear iconos adaptables](create-adaptive-tiles.md) y el [esquema de contenido de ventana](../tiles-and-notifications/tile-schema.md).
 
- 
+ 
 
 ## <a name="install-the-nuget-package"></a>Instalación del paquete NuGet
 
@@ -50,7 +50,7 @@ using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ## <a name="create-the-notification-content"></a>Crear el contenido de la notificación
 
 
-En Windows 10, las cargas de iconos se definen mediante plantillas de iconos adaptables, que te permiten crear diseños visuales personalizados para tus notificaciones. (Para obtener información sobre las posibilidades de los iconos adaptables, consulta los artículos [Crear iconos adaptables](create-adaptive-tiles.md).)
+En Windows 10, las cargas de iconos se definen mediante plantillas de iconos adaptables, que te permiten crear diseños visuales personalizados para las notificaciones. (Para obtener información sobre las posibilidades de los iconos adaptables, consulta los artículos [Crear iconos adaptables](create-adaptive-tiles.md).)
 
 Este ejemplo de código crea el contenido de iconos adaptables para iconos medianos y anchos.
 
@@ -297,9 +297,9 @@ var notification = new TileNotification(doc);
 * [**Espacio de nombres Windows.UI.Notifications**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
 * [Cómo usar la cola de notificaciones (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
 * [Entrega de notificaciones](choosing-a-notification-delivery-method.md)
- 
+ 
 
- 
+ 
 
 
 

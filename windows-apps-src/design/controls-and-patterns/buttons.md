@@ -17,15 +17,15 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: badaefc406daa5f4500c76262d916f47d82e7a52
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435811"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469949"
 ---
 # <a name="buttons"></a>Botones
 
-Un botón ofrece al usuario una forma de desencadenar una acción inmediata. Algunos botones están especializados para tareas específicas, como la navegación, acciones que se repiten o presentar los menús.
+Un botón ofrece al usuario una forma de desencadenar una acción inmediata. Algunos botones están especializados para tareas particulares, como la navegación, acciones que se repiten o presentar los menús.
 
 ![Ejemplo de botones](images/controls/button.png)
 
@@ -35,9 +35,9 @@ Control | Descripción
 ------- | -----------
 [Botón](/uwp/api/windows.ui.xaml.controls.button) | Inicia una acción inmediata. Puede usarse con un enlace de comandos o el evento Click.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Un botón que genera un evento de clic continuamente mientras presionado.
-[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Un botón que haya un estilo como un hipervínculo, que se usan para la navegación. Para obtener más información, consulta [Hipervínculos](hyperlinks.md).
+[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Un botón que haya un estilo como un hipervínculo, se usa para la navegación. Para obtener más información, consulta [Hipervínculos](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | (Versión preliminar) Un botón con comillas angulares para abrir un control flotante adjunto.
-[Botón de división](/uwp/api/windows.ui.xaml.controls.splitbutton) | (Versión preliminar) Un botón con dos caras. Uno de los lados inicia una acción y el otro lado, abre un menú.
+[Botón de división](/uwp/api/windows.ui.xaml.controls.splitbutton) | (Versión preliminar) Un botón con dos caras. Un lado inicia una acción y el otro lado, abre un menú.
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | (Versión preliminar) Un botón de alternancia con dos caras. Activa o desactiva uno de los lados activar/desactivar y el otro lado, abre un menú.
 
 | **Obtén la biblioteca de la interfaz de usuario de Windows** |
@@ -52,12 +52,12 @@ Control | Descripción
 
 Usar un **botón** para permitir al usuario iniciar una acción inmediata, como enviar un formulario.
 
-No uses un botón cuando la acción sea navegar a otra página; usa un [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) en su lugar. Para obtener más información, consulta [Hipervínculos](hyperlinks.md).
+No uses un botón cuando la acción es navegar a otra página; usa un [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) en su lugar. Para obtener más información, consulta [Hipervínculos](hyperlinks.md).
 > Excepción: para la navegación por asistentes, usa los botones llamados "Atrás" y "Siguiente". Para otros tipos de exploración hacia atrás o a un nivel superior, usa un [botón Atrás](../basics/navigation-history-and-backwards-navigation.md).
 
 Usa un **RepeatButton** cuando el usuario quizá quiera desencadenar una acción repetidamente. Por ejemplo, usa un RepeatButton para aumentar o disminuir un valor en un contador.
 
-Usa un **DropDownButton** cuando el botón tiene un control flotante que contiene más opciones. Las comillas angulares de forma predeterminada, proporcionan una indicación visual de que el botón incluye un control flotante.
+Usa un **DropDownButton** cuando el botón tiene un control flotante que contiene más opciones. Las comillas angulares predeterminada proporcionan una indicación visual de que el botón incluye un control flotante.
 
 Usa un **botón de división** cuando quieres que el usuario pueda iniciar una acción inmediata o elegir entre las opciones adicionales de forma independiente.
 
@@ -210,20 +210,20 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-drop-down-button"></a>Crear un botón de lista desplegable
 
-> **Vista previa**: DropDownButton requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vista previa**: DropDownButton requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Un [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) es un botón que muestra un comillas angulares como un indicador visual que tiene un control flotante adjunto que contiene más opciones. Tiene el mismo comportamiento que un botón estándar con un control flotante; solo el aspecto es diferente.
+Un [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) es un botón que muestra comillas angulares como un indicador visual que tiene un control flotante adjunto que contiene más opciones. Tiene el mismo comportamiento que un botón estándar con un control flotante; solo el aspecto es diferente.
 
 El botón de lista desplegable hereda el evento Click, pero normalmente no se usa. En su lugar, usa la propiedad de control flotante para asociar un control flotante e invocar acciones con opciones de menú en el control flotante. El control flotante se abrirá automáticamente cuando se hace clic en el botón.
 
 > [!TIP]
-> Para obtener más información acerca de los controles flotantes, consulta [los menús y menús contextuales](menus.md).
+> Para obtener más información sobre los controles flotantes, consulta [los menús y menús contextuales](menus.md).
 
 ### <a name="example---drop-down-button"></a>Por ejemplo, botón de lista desplegable
 
 Este ejemplo muestra cómo crear un botón de lista desplegable con un control flotante que contiene comandos para la alineación de párrafo en un RichEditBox. (Para obtener más información y código, consulta [cuadro de texto enriquecido](rich-edit-box.md)).
 
-![Un botón de lista desplegable con comandos de alineación](images/drop-down-button-align.png)
+![Un botón de lista desplegable con los comandos de alineación](images/drop-down-button-align.png)
 
 ```xaml
 <DropDownButton ToolTipService.ToolTip="Alignment">
@@ -269,7 +269,7 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-split-button"></a>Crear un botón en dos paneles
 
-> **Vista previa**: botón de división requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vista previa**: botón de división requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Un [botón de división](/uwp/api/windows.ui.xaml.controls.splitbutton) tiene dos partes que se pueden invocar por separado. Una parte se comporta como un botón estándar e invoca una acción inmediata. La otra parte, invoca un control flotante que contiene las opciones adicionales que el usuario puede elegir.
 
@@ -278,17 +278,17 @@ Un [botón de división](/uwp/api/windows.ui.xaml.controls.splitbutton) tiene do
 
 Es el comportamiento típico de un botón de división:
 
-- Cuando el usuario hace clic en la parte de botón, controlar el evento de clic para invocar la opción seleccionada actualmente en la lista desplegable.
-- Cuando se abre el menú desplegable, invocación de identificador de los elementos de la lista desplegable para ambos cambio qué opción está activada y, a continuación, invocarlo. Es importante invocar el elemento de control flotante porque el botón Click evento no se produce cuando con la entrada táctil.
+- Cuando el usuario hace clic en la parte de botón, controlar el evento Click para invocar la opción seleccionada actualmente en la lista desplegable.
+- Cuando se abre el menú desplegable, invocación de identificador de los elementos de la lista desplegable para ambos cambio qué opción está seleccionado y, a continuación, invocarlo. Es importante invocar el elemento de control flotante porque el botón Click evento no se produce cuando con la entrada táctil.
 
 > [!TIP]
-> Existen muchas formas para colocar elementos en la lista desplegable hacia abajo y controlar su invocación. Si usas un control ListView o GridView, es una manera de controlar el evento SelectionChanged. Si haces esto, establece [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) en **false**. Esto permite a los usuarios navegar por las opciones con un teclado sin invocar el elemento en cada cambio.
+> Existen muchas formas de colocar elementos en la lista desplegable hacia abajo y controlar su invocación. Si usas un control ListView o GridView, es una manera de controlar el evento SelectionChanged. Si haces esto, establece [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) en **false**. Esto permite a los usuarios navegar por las opciones con un teclado sin invocar el elemento en cada cambio.
 
-### <a name="example---split-button"></a>Por ejemplo, el botón de en dos paneles
+### <a name="example---split-button"></a>Por ejemplo, botón en dos paneles
 
-Este ejemplo muestra cómo crear un botón de división que se usa para cambiar el color de primer plano del texto seleccionado en un RichEditBox. (Para obtener más información y código, consulta [cuadro de texto enriquecido](rich-edit-box.md)).
+Este ejemplo muestra cómo crear un botón en dos paneles que se usa para cambiar el color de primer plano del texto seleccionado en un RichEditBox. (Para obtener más información y código, consulta [cuadro de texto enriquecido](rich-edit-box.md)).
 
-![Un botón de división para seleccionar el color de primer plano](images/split-button-rtb.png)
+![Un botón en dos paneles para seleccionar el color de primer plano](images/split-button-rtb.png)
 
 ```xaml
 <SplitButton ToolTipService.ToolTip="Foreground color"
@@ -376,11 +376,11 @@ public sealed partial class MainPage : Page
 
 ## <a name="create-a-toggle-split-button"></a>Crear un botón de alternancia en dos paneles
 
-> **Vista previa**: ToggleSplitButton requiere la [última compilación de Windows 10 Insider Preview y SDK](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vista previa**: ToggleSplitButton requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Un [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tiene dos partes que se pueden invocar por separado. Una parte se comporta como un botón de alternancia que puede estar activada o desactivada. La otra parte, invoca un control flotante que contiene las opciones adicionales que el usuario puede elegir.
 
-Un botón de alternancia de división normalmente se usa para habilitar o deshabilitar una característica cuando la característica tiene varias opciones que el usuario puede elegir. Por ejemplo, en un editor de documento, se podría usar para activar las listas o desactivar, mientras se usa la lista desplegable para elegir el estilo de la lista.
+Por lo general, se usa un botón de alternancia en dos paneles para habilitar o deshabilitar una característica cuando la característica tiene varias opciones que el usuario puede elegir. Por ejemplo, en un editor de documento, se podría usar para activar las listas o desactivar, mientras se usa la lista desplegable para elegir el estilo de la lista.
 
 > [!NOTE]
 > Cuando se invoca con la entrada táctil, el botón de división se comporta como un botón de lista desplegable. Con otros métodos de entrada, un usuario puede invocar cualquier mitad del botón por separado. Con la entrada táctil, dos mitades del botón invocan el control flotante. Por lo tanto, debes incluir una opción en el contenido del control flotante para activar o desactivar el botón activado o desactivado.
@@ -389,13 +389,13 @@ Un botón de alternancia de división normalmente se usa para habilitar o deshab
 
 A diferencia de [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton), ToggleSplitButton no tiene un estado indeterminado. Como resultado, debes tener en cuenta estas diferencias:
 
-- ToggleSplitButton no tiene una propiedad **IsThreeState** o evento **indeterminado** .
-- La propiedad [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) es simplemente un **bool**, no **bool que acepta valores NULL**.
-- ToggleSplitButton tiene solo el evento de [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) ; no tiene eventos **Checked** y **Unchecked** independientes.
+- ToggleSplitButton no tiene una propiedad **IsThreeState definida como** o un evento **indeterminado** .
+- La propiedad [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) es simplemente un **bool**, no un **bool acepta valores NULL**.
+- ToggleSplitButton tiene solo el evento [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) ; no tiene eventos **Checked** y **Unchecked** separados.
 
 ### <a name="example---toggle-split-button"></a>Por ejemplo, botón de alternancia de división
 
-En el ejemplo siguiente se muestra cómo se pueden usar para activar o desactivar el formato de lista un botón de división de botón de alternancia y cambiar el estilo de la lista, en un RichEditBox. (Para obtener más información y código, consulta [cuadro de texto enriquecido](rich-edit-box.md)).
+En el siguiente ejemplo se muestra cómo se pueden usar para activar o desactivar el formato de lista un botón de alternancia botón de división y cambiar el estilo de la lista, en un RichEditBox. (Para obtener más información y código, consulta [cuadro de texto enriquecido](rich-edit-box.md)).
 
 ![Un botón de alternancia en dos paneles para seleccionar los estilos de lista](images/toggle-split-button-open.png)
 

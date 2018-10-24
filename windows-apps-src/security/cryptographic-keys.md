@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 24f41ac858e73041e5afb4db596ce52b7d9bf4d8
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436774"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471900"
 ---
 # <a name="cryptographic-keys"></a>Claves criptográficas
 
@@ -79,4 +79,4 @@ Suele ser necesario derivar claves adicionales de un secreto compartido. Para de
 | [**BuildForSP800108**](https://msdn.microsoft.com/library/windows/apps/br241526)  | Crea un objeto KeyDerivationParameters para usarlo en una función de derivación de claves de código de autenticación de mensajes basado en hash (HMAC) en modo de contador. |
 | [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | Crea un objeto KeyDerivationParameters para usarlo en la función de derivación de claves SP800-56A.                                                 |
 
- 
+ 

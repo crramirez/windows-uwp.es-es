@@ -1,6 +1,6 @@
 ---
 author: andrewleader
-Description: Notifications Visualizer is a new Universal Windows Platform (UWP) app in the Store that helps developers design adaptive live tiles for Windows 10.
+Description: Notifications Visualizer is a new Universal Windows Platform (UWP) app in the Store that helps developers design adaptive live tiles for Windows 10.
 title: Notifications Visualizer
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 template: detail.hbs
@@ -12,18 +12,18 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af8b2489346e1ef81c5cae304802814b79b8b950
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432533"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5474003"
 ---
 # <a name="notifications-visualizer"></a>Notifications Visualizer
 
  
 
 
-Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en [la Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables y notificaciones del sistema interactivas para Windows 10.
+Notifications Visualizer es una nueva aplicación de plataforma Universal de Windows (UWP) [en la tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores diseñar iconos dinámicos adaptables y notificaciones del sistema interactivas para Windows 10.
 
 
 ## <a name="overview"></a>Introducción
@@ -34,13 +34,13 @@ Esta captura de pantalla de la aplicación muestra la carga de XML y cómo apare
 
 ![captura de pantalla del editor de la aplicación Notifications Visualizer con código e iconos](images/notif-visualizer-001.png)
 
- 
+ 
 
 Con Notifications Visualizer, puedes crear y probar cargas de notificaciones del sistema e iconos adaptables sin tener que editar e implementar su propia aplicación. Una vez creada una carga con resultados visuales ideales, puedes integrarla en tu aplicación. Consulta [Enviar una notificación de icono local](sending-a-local-tile-notification.md) y [Enviar una notificación del sistema local](send-local-toast.md) para obtener más información.
 
-**Nota** La simulación de Notifications Visualizer del menú Inicio de Windows y las notificaciones del sistema no siempre es totalmente precisa y no es compatible con algunas propiedades de carga como avanzadas. Cuando tengas el icono o la notificación del sistema que desees, pruébalo anclando el icono o haciendo que aparezca la notificación del sistema para comprobar que aparece como deseas.
+**Nota**  la simulación de Notifications Visualizer de las notificaciones del sistema y de menú Inicio de Windows no siempre es totalmente precisa y no es compatible con algunas propiedades de carga como avanzadas. Cuando tengas el icono o la notificación del sistema que desees, pruébalo anclando el icono o haciendo que aparezca la notificación del sistema para comprobar que aparece como deseas.
 
- 
+ 
 
 ## <a name="features"></a>Características
 
@@ -54,7 +54,7 @@ Esta captura de pantalla de la aplicación muestra el editor de iconos:
 
 ![captura de pantalla del editor de Notifications Visualizer con iconos](images/notif-visualizer-004.png)
 
- 
+ 
 
 ## <a name="related-topics"></a>Temas relacionados
 

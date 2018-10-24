@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af0f7670f2b131671ce82708d2b0a826db0fcfb1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5445198"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475836"
 ---
 # <a name="run-in-the-background-indefinitely"></a>Ejecutar en segundo plano de manera indefinida
 
@@ -27,7 +27,7 @@ Sin embargo, los desarrolladores que crean aplicaciones para UWP para uso person
 
 Las aplicaciones para UWP pasan a un estado suspendido cuando no se están ejecutando en primer plano. En el escritorio, esto se produce cuando un usuario minimiza la app. Las aplicaciones usan una sesión de ejecución ampliada para poder continuar en ejecución mientras están minimizadas. Las API de ejecución ampliada que se aceptan por la Microsoft Store se detallan en [Aplazar la suspensión de la aplicación con ejecución ampliada](https://docs.microsoft.com/windows/uwp/launch-resume/run-minimized-with-extended-execution).
 
-Si estás desarrollando una app que no está pensada para enviarse a la Microsoft Store, puedes usar la [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) con la capacidad restringida `extendedExecutionUnconstrained` para que la app puede seguir ejecutándose mientras está minimizada, independientemente del estado de energía del dispositivo.  
+Si estás desarrollando una app que no está pensada para enviarse a la Microsoft Store, puedes usar la [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) con la capacidad restringida `extendedExecutionUnconstrained` para que la app puede seguir ejecutándose mientras está minimizada, independientemente del estado de energía del dispositivo.  
 
 La funcionalidad `extendedExecutionUnconstrained` se agrega como una funcionalidad restringida en el manifiesto de la aplicación. Consulta [Declaraciones de funcionalidades de las aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) para más información sobre las funcionalidades restringidas.
 
@@ -35,30 +35,30 @@ _Package.appxmanifest_
 ```xml
 <Package ...>
 ...
-  <Capabilities>  
-    <rescap:Capability Name="extendedExecutionUnconstrained"/>  
-  </Capabilities>  
+  <Capabilities>  
+    <rescap:Capability Name="extendedExecutionUnconstrained"/>  
+  </Capabilities>  
 </Package>
 ```
 
 Cuando usas la funcionalidad `extendedExecutionUnconstrained`, se usan [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) y [ExtendedExecutionForegroundReason](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason) en lugar de [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) y [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason). Se sigue aplicando el mismo patrón para crear la sesión, establecer los miembros y solicitar la extensión de forma asincrónica: 
 
 ```cs
-var newSession = new ExtendedExecutionForegroundSession();  
-newSession.Reason = ExtendedExecutionForegroundReason.Unconstrained;  
-newSession.Description = "Long Running Processing";  
-newSession.Revoked += SessionRevoked;  
-ExtendedExecutionResult result = await newSession.RequestExtensionAsync();  
-switch (result)  
-{  
-    case ExtendedExecutionResult.Allowed:  
-        DoLongRunningWork();  
-        break;  
+var newSession = new ExtendedExecutionForegroundSession();  
+newSession.Reason = ExtendedExecutionForegroundReason.Unconstrained;  
+newSession.Description = "Long Running Processing";  
+newSession.Revoked += SessionRevoked;  
+ExtendedExecutionResult result = await newSession.RequestExtensionAsync();  
+switch (result)  
+{  
+    case ExtendedExecutionResult.Allowed:  
+        DoLongRunningWork();  
+        break;  
 
-    default:  
-    case ExtendedExecutionResult.Denied:  
-        DoShortRunningWork();  
-        break;  
+    default:  
+    case ExtendedExecutionResult.Denied:  
+        DoShortRunningWork();  
+        break;  
 }
 ```
 
@@ -73,9 +73,9 @@ En la Plataforma universal de Windows, las tareas en segundo plano son procesos 
 _Package.appxmanifest_
 ```xml
 <Package ...>
-   <Capabilities>  
-       <rescap:Capability Name="extendedBackgroundTaskTime"/>  
-   </Capabilities>  
+   <Capabilities>  
+       <rescap:Capability Name="extendedBackgroundTaskTime"/>  
+   </Capabilities>  
 </Package>
 ```
 

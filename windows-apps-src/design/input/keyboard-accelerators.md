@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435992"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468798"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -39,7 +39,7 @@ Normalmente, los aceleradores incluyen las teclas de función F1a F12 o alguna c
 > [!NOTE]
 > Los controles de la plataforma UWP tienen aceleradores de teclado integrados. Por ejemplo, ListView admite CTRL+A para seleccionar todos los elementos de la lista y RichEditBox admite CTRL+TAB para insertar una tabulación en el cuadro de texto. Estos aceleradores de teclado integrado se conocen como **aceleradores de control** y se ejecutan solo si el foco se encuentra en el elemento o en uno de sus elementos secundarios. Los aceleradores definidos por el usuario mediante las API aceleradoras de teclado tratadas aquí se conocen como **aceleradores de la aplicación**.
 
-Los aceleradores de teclado no están disponibles para todas las acciones pero se asocian a menudo con los comandos que se exponen en menús (y se deben especificar con el contenido del elemento de menú). Los aceleradores también pueden asociarse a acciones que no tienen elementos de menú equivalentes. Sin embargo, dado que los usuarios dependen de los menús de una aplicación para descubrir y aprender el conjunto de comandos disponibles, debes intentar descubrir los aceleradores de la manera más sencilla posible (el uso de etiquetas o patrones establecidos puede ayudar con esto).
+Los aceleradores de teclado no están disponibles para todas las acciones pero se asocian a menudo con los comandos que se exponen en menús (y se deben especificar con el contenido del elemento de menú).Los aceleradores también pueden asociarse a acciones que no tienen elementos de menú equivalentes. Sin embargo, dado que los usuarios dependen de los menús de una aplicación para descubrir y aprender el conjunto de comandos disponibles, debes intentar descubrir los aceleradores de la manera más sencilla posible (el uso de etiquetas o patrones establecidos puede ayudar con esto).
 
 ![Aceleradores de teclado que se describen en una etiqueta de elemento de menú](images/accelerators/accelerators_menuitemlabel.png)  
 *Aceleradores de teclado que se describen en una etiqueta de elemento de menú*
@@ -48,11 +48,11 @@ Los aceleradores de teclado no están disponibles para todas las acciones pero s
 
 Te recomendamos que especifiques los aceleradores de teclado siempre que sea adecuado en la interfaz de usuario y admitas aceleradores en todos los controles personalizados.
 
-- Los aceleradores de teclado hacen que tu aplicación sea más accesible para los usuarios que tienen discapacidades motrices, incluidos aquellos usuarios que se pueden presionar solo una tecla a la vez o tienen dificultades para usar un mouse.**
+- Los aceleradores de teclado hacen que tu aplicación más usuarios accessiblefor con discapacidades motrices, incluidos aquellos usuarios que pueden presionar solo una tecla a la vez o tienen dificultades para usar un mouse.* *
 
   Una interfaz de usuario de teclado bien diseñada es un aspecto importante de la accesibilidad del software. Permite a usuarios con dificultades visuales o con ciertas discapacidades motrices navegar por una aplicación e interactuar con sus funciones. Es posible que estos usuarios no puedan controlar un mouse y empleen varias tecnologías de ayuda, como herramientas para la mejora del teclado, teclados en pantalla, ampliadores de pantallas, lectores de pantalla y utilidades de entrada de voz. Para estos usuarios, es fundamental que la cobertura completa de los comandos.
 
-- Los aceleradores de teclado hacen que tu aplicación sea más fácil de usar por usuarios avanzados que prefieren interactuar a través del teclado.
+- Los aceleradores de teclado que tu aplicación más usuarios de inicio/apagado usablefor que prefieren interactuar a través del teclado.
 
   Los usuarios con experiencia suelen tener una fuerte preferencia por el teclado, ya que los comandos se pueden introducir más rápidamente y no requieren apartar las manos de las teclas. Para estos usuarios, la eficacia y la coherencia son cruciales; la exhaustividad es importante solo para los comandos usados con más frecuencia.
 
@@ -206,7 +206,7 @@ En el ejemplo siguiente, Control+S desencadena el evento Click porque el botón 
 ``` xaml 
 <Button Content="Save" Click="OnSave">
   <Button.KeyboardAccelerators>
-    <KeyboardAccelerator Key="S" Modifiers="Control" />
+    <KeyboardAccelerator Key="S" Modifiers="Control" />
   </Button.KeyboardAccelerators>
 </Button>
 ```
@@ -215,7 +215,7 @@ Si un elemento implementa varios patrones de control, solo se puede activar uno 
 1.  Invocar (botón)
 2.  Alternar (casilla)
 3.  Selección (ListView)
-4.  Ampliar/contraer (ComboBox) 
+4.  Ampliar/contraer (ComboBox) 
 
 Si no se identifica ninguna coincidencia, el acelerador no es válido y se proporciona un mensaje de depuración ("No automation patterns for this component found. (No se han encontrado patrones de automatización para este componente.) Implement all desired behavior in the Invoked event. (Implementa todo el comportamiento deseado en el evento Invoked.) Setting Handled to true in your event handler will suppress this message. (Si Handled se establece en true en el controlador de eventos, se suprimirá este mensaje)".
 
@@ -230,10 +230,10 @@ Aquí se muestra cómo definir una colección de aceleradores de teclado y cómo
 ``` xaml
 <ListView x:Name="MyListView">
   <ListView.KeyboardAccelerators>
-    <KeyboardAccelerator Key="A" Modifiers="Control,Shift" Invoked="SelectAllInvoked" />
-    <KeyboardAccelerator Key="F5" Invoked="RefreshInvoked"  />
+    <KeyboardAccelerator Key="A" Modifiers="Control,Shift" Invoked="SelectAllInvoked" />
+    <KeyboardAccelerator Key="F5" Invoked="RefreshInvoked"  />
   </ListView.KeyboardAccelerators>
-</ListView>   
+</ListView>   
 ```
 
 ``` csharp
@@ -252,7 +252,7 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
 
 ## <a name="override-default-keyboard-behavior"></a>Invalidar el comportamiento predeterminado del teclado
 
-En algunos casos, es posible que debes invalidar el comportamiento predeterminado de teclas específicas, como la tecla retroceso o la tecla ENTRAR. Por ejemplo: 
+En algunos casos, es posible que necesites invalidar el comportamiento predeterminado de teclas específicas, como la tecla retroceso o la tecla ENTRAR. Por ejemplo: 
 
 ## <a name="disable-a-keyboard-accelerator"></a>Deshabilitar un acelerador de teclado 
 
@@ -261,7 +261,7 @@ Si se deshabilita un control, también se deshabilita el acelerador asociado. En
 ``` xaml
 <ListView >
   <ListView.KeyboardAccelerators>
-    <KeyboardAccelerator Key="A" 
+    <KeyboardAccelerator Key="A" 
       Modifiers="Control"
       Invoked="CustomListViewSelecAllInvoked" />
   </ListView.KeyboardAccelerators>
@@ -269,10 +269,10 @@ Si se deshabilita un control, también se deshabilita el acelerador asociado. En
   <TextBox>
     <TextBox.KeyboardAccelerators>
       <KeyboardAccelerator 
-        Key="A" 
-        Modifiers="Control" 
-        Invoked="CustomTextSelecAllInvoked" 
-        IsEnabled="False" />
+        Key="A" 
+        Modifiers="Control" 
+        Invoked="CustomTextSelecAllInvoked" 
+        IsEnabled="False" />
     </TextBox.KeyboardAccelerators>
   </TextBox>
 
@@ -292,18 +292,18 @@ En este ejemplo, el valor de AutomationProperty.AcceleratorKey devuelve la caden
   <ListView.KeyboardAccelerators>
 
     <KeyboardAccelerator 
-      Key="A" 
-      Modifiers="Control,Shift" 
-      Invoked="CustomSelectAllInvoked" />
+      Key="A" 
+      Modifiers="Control,Shift" 
+      Invoked="CustomSelectAllInvoked" />
       
     <KeyboardAccelerator 
-      Key="F5" 
-      Modifiers="None" 
-      Invoked="RefreshInvoked" />
+      Key="F5" 
+      Modifiers="None" 
+      Invoked="RefreshInvoked" />
 
   </ListView.KeyboardAccelerators>
 
-</ListView>   
+</ListView>   
 ```
 
 > [!NOTE] 
@@ -342,14 +342,14 @@ Puede que esto no sea siempre posible debido a las diferencias de funcionalidad 
 
 | **Otras acciones** | |
 | ------------- | ----------------------------------- |
-| Agregar favoritos | Ctrl + D | 
-| Actualizar | F5 o Ctrl + R | 
-| Acercar | Ctrl + + | 
-| Alejar | Ctrl + - | 
-| Ampliar a la vista predeterminada | Ctrl + 0 | 
-| Guardar | Ctrl + S | 
-| Cerrar | Ctrl + W | 
-| Imprimir | Ctrl + P | 
+| Agregar favoritos | Ctrl + D | 
+| Actualizar | F5 o Ctrl + R | 
+| Acercar | Ctrl + + | 
+| Alejar | Ctrl + - | 
+| Ampliar a la vista predeterminada | Ctrl + 0 | 
+| Guardar | Ctrl + S | 
+| Cerrar | Ctrl + W | 
+| Imprimir | Ctrl + P | 
 
 Ten en cuenta que algunas de las combinaciones no son válidas para las versiones localizadas de Windows. Por ejemplo, en la versión de Windows en español, CTRL+N se usa para negrita en lugar de Ctrl+B. Te recomendamos que proporciones los aceleradores de teclado localizado si la aplicación está localizada.
 
@@ -370,7 +370,7 @@ De manera predeterminada, cuando se declaran los aceleradores de teclado, todos 
 
 *Combinación de teclas aceleradoras en la información sobre herramientas*
 
-Para objetos [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)y [botón](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), el Acelerador de teclado se anexa a la información sobre herramientas del control de forma predeterminada. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) y [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, el Acelerador de teclado se muestra con el texto de control flotante.
+Para objetos [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)y [botón](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), el Acelerador de teclado se anexa a tooltip de predeterminado del control. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) y [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, el Acelerador de teclado se muestra con el texto del control flotante.
 
 > [!NOTE]
 > Especificar información sobre herramientas (consulta Button1 en el siguiente ejemplo) reemplaza este comportamiento.
@@ -623,8 +623,8 @@ public class MyListView : ListView
 * [Teclas de acceso](access-keys.md)
 
 **Ejemplos**
-* [Galería de controles de XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+* [Galería de controles XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 
- 
+ 
 

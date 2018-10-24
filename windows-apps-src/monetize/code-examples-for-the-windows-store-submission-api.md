@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, API de envío de Microsoft Store, ejemplos de código
 ms.localizationpriority: medium
 ms.openlocfilehash: f728a17d98d53cf1783452ddfd543c1062156200
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437572"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471444"
 ---
 # <a name="code-examples-for-the-submission-api"></a>Ejemplos de código para la API de envío
 
-En esta sección se proporciona ejemplos de código para usar la [API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md) en varios lenguajes de programación.
+En esta sección se proporciona ejemplos de código para usar la [API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md) en varios lenguajes diferentes.
 
 > [!NOTE]
-> Además de ejemplos de código mencionados a continuación, también proporcionamos un módulo de PowerShell de código abierto que implementa una interfaz de línea de comandos por encima de la API de envío de Microsoft Store. Este módulo se denomina [StoreBroker](https://aka.ms/storebroker). Puedes usar este módulo para administrar tus envíos de aplicaciones, paquetes piloto y complementos desde la línea de comandos en lugar de llamar directamente a la API de envío de Microsoft Store o, simplemente, puedes examinar el origen para ver más ejemplos de cómo llamar a esta API. El módulo StoreBroker se usa activamente dentro de Microsoft como método principal para enviar muchas aplicaciones propias a la Store. Para obtener más información, consulta nuestra [página de StoreBroker en GitHub](https://aka.ms/storebroker).
+> Además de ejemplos de código mencionados a continuación, también proporcionamos un módulo de PowerShell de código abierto que implementa una interfaz de línea de comandos encima de la API de envío de Microsoft Store. Este módulo se denomina [StoreBroker](https://aka.ms/storebroker). Puedes usar este módulo para administrar tus envíos de aplicaciones, paquetes piloto y complementos desde la línea de comandos en lugar de llamar directamente a la API de envío de Microsoft Store o, simplemente, puedes examinar el origen para ver más ejemplos de cómo llamar a esta API. El módulo StoreBroker se usa activamente dentro de Microsoft como método principal para enviar muchas aplicaciones propias a la Store. Para obtener más información, consulta nuestra [página de StoreBroker en GitHub](https://aka.ms/storebroker).
 
 ## <a name="app-submissions-add-on-submissions-and-package-flight-submissions"></a>Envíos de aplicaciones, envíos de complementos y envíos de paquetes piloto
 

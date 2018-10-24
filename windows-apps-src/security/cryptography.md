@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: aa01cc3d70db7a94667e944d1a1739e911f94b0c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439154"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469774"
 ---
 # <a name="cryptography"></a>Criptografía
 
@@ -46,7 +46,7 @@ En criptografía e infraestructura de clave pública (PKI) se suele utilizar la 
 | Proveedor de almacenamiento de claves        | Un contenedor para almacenar material de clave. Actualmente, las claves se pueden almacenar en software, tarjetas inteligentes o el módulo de plataforma segura (TPM).                                                                   |
 | Certificado X.509           | Un documento digital, normalmente emitido por una entidad de certificación, que permite a las partes interesadas comprobar la identidad de una persona, sistema o entidad.                                            |
 
- 
+ 
 ## <a name="namespaces"></a>Espacios de nombres
 
 Los siguientes espacios de nombres están disponibles para  usarlos en aplicaciones.
@@ -152,4 +152,4 @@ En los siguientes artículos se ofrecen más detalles sobre los escenarios de se
 | [Restricciones de exportación sobre la criptografía](export-restrictions-on-cryptography.md) | Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Microsoft Store.                                                                                                                                                                                                                                                                                                                                                                                            |
 | [Tareas comunes de criptografía](common-cryptography-tasks.md)                     | En estos artículos se ofrece código de ejemplo para tareas comunes de criptografía de UWP, como crear números aleatorios, comparar búferes, convertir entre cadenas y datos binarios, copiar a matrices de bytes y desde ellas, y codificar y descodificar datos.                                                                                                                                                                                                                                                                                    |
 
- 
+ 

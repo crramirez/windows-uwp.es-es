@@ -17,11 +17,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 78448081b81e7e28c4b97fcfdd7aa71ae32aeb0c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445403"
+ms.locfileid: "5473840"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -116,7 +116,7 @@ Las combinaciones de teclas de método abreviado se detectan usando código en l
 > [!NOTE]
 > La tecla Alt está representada por el valor **VirtualKey.Menu**.
 
- 
+ 
 
 ### <a name="shortcut-keys-example"></a>Ejemplo de teclas de método abreviado
 
@@ -283,7 +283,7 @@ End Sub
 >
 > Establecer **AutomationProperties.AcceleratorKey** o **AutomationProperties.AccessKey** no genera ninguna acción. Deberás adjuntar controladores para los eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) o [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para implementar el comportamiento de método abreviado de teclado en tu aplicación. Además, el detalle de texto subrayado en una tecla de acceso no se proporciona de manera automática. Si quieres mostrar texto subrayado en la interfaz de usuario, debes subrayar explícitamente el texto de la tecla de acceso específica como formato [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) en línea.
 
- 
+ 
 
 ## <a name="keyboard-routed-events"></a>Eventos de teclado enrutados
 
@@ -405,6 +405,6 @@ Es posible conseguir que los usuarios escriban datos en la aplicación de forma 
 * [Entrada: muestra de teclado táctil](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [Muestra de respuesta a la apariencia del teclado en pantalla](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [Muestra de edición de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
- 
+ 
 
- 
+ 

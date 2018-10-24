@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-ons, complementos, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: be0d383fc271084fe20a958d20f6fa3a340da187
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433078"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475167"
 ---
 # <a name="manage-add-ons"></a>Administración de complementos
 
@@ -158,7 +158,7 @@ Este recurso tiene los siguientes valores.
 |-----------------|---------|------------------|
 | id            | string  | Identificador del envío.    |
 | resourceLocation   | cadena  | Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para el envío.     |
- 
+ 
 <span/>
 
 ## <a name="related-topics"></a>Temas relacionados

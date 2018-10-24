@@ -12,11 +12,11 @@ keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: b5110eebde087593f07704e89c2e4708b2fcbb8b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443180"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470825"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Ejecutar, depurar y probar una aplicación de escritorio empaquetada
 
@@ -26,7 +26,7 @@ Ejecutar la aplicación empaquetada y ver su aspecto sin tener que iniciar sesi�
 
 ## <a name="run-your-application"></a>Ejecutar la aplicación
 
-Puedes ejecutar la aplicación para probarla de forma local sin tener que obtener un certificado y firmarlo. Cómo se ejecuta la aplicación dependerá de la herramienta utilizada para crear el paquete.
+Puedes ejecutar la aplicación de prueba de la aplicación localmente sin tener que obtener un certificado y firmarlo. Cómo ejecutar la aplicación dependerá de la herramienta utilizada para crear el paquete.
 
 ### <a name="you-created-the-package-by-using-visual-studio"></a>Has creado el paquete con Visual Studio
 
@@ -68,11 +68,11 @@ Si has creado el paquete utilizando otra herramienta, sigue estos pasos.
 
 #### <a name="modify-your-application-in-between-debug-sessions"></a>Modificar la aplicación entre sesiones de depuración
 
-Si realizas los cambios en la aplicación para corregir errores, vuelve a empaquetarla mediante la herramienta MakeAppx. Consulta [Ejecutar la herramienta MakeAppX](desktop-to-uwp-manual-conversion.md#make-appx)
+Si realizas los cambios en la aplicación para corregir errores, vuelve a empaquetarla mediante el uso de la herramienta MakeAppx. Consulta [Ejecutar la herramienta MakeAppX](desktop-to-uwp-manual-conversion.md#make-appx)
 
 ### <a name="debug-the-entire-application-lifecycle"></a>Depurar el ciclo de vida de toda la aplicación
 
-En algunos casos, es posible que quieras precisa control sobre el proceso de depuración, incluida la posibilidad de depurar la aplicación antes de que empiece.
+En algunos casos, es posible que quieras precisa control sobre el proceso de depuración, incluida la posibilidad de depurar la aplicación antes de que se inicie.
 
 Puedes usar [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) para obtener el control total sobre el ciclo de vida de aplicación incluyendo suspender, reanudar y finalización.
 
@@ -84,7 +84,7 @@ Para probar la aplicación en una configuración realista mientras la preparas p
 
 ### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Probar una aplicación empaquetada con Visual Studio
 
-Visual Studio, firma la aplicación con un certificado de prueba. Encontrarás dicho certificado en la carpeta de salida que genera el asistente **Crear paquetes de aplicaciones**. El archivo de certificado tiene la extensión *.cer* y tendrás que instalar el certificado al almacén de **Entidades de certificación raíz de confianza** en el equipo que quieres probar la aplicación. Consulta [Realizar la instalación de prueba del paquete de la aplicación](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
+Visual Studio, firma la aplicación mediante el uso de un certificado de prueba. Encontrarás dicho certificado en la carpeta de salida que genera el asistente **Crear paquetes de aplicaciones**. El archivo de certificado tiene la extensión *.cer* y tendrás que instalar el certificado al almacén de **Entidades de certificación raíz de confianza** en el equipo que quieres probar la aplicación en. Consulta [Realizar la instalación de prueba del paquete de la aplicación](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
 
 ### <a name="test-an-application-that-you-packaged-by-using-the-desktop-app-converter-dac"></a>Probar una aplicación empaquetada utilizando Desktop App Converter (DAC)
 
@@ -99,7 +99,7 @@ También puedes firmar la aplicación manualmente. A continuación te indicamos 
 
 2. Instala el certificado en el almacén de certificados **Raíz de confianza** o **Personas de confianza** del sistema.
 
-3. Firmar la aplicación con ese certificado, consulta el [signo de un paquete de la aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
+3. Firmar la aplicación con ese certificado, consulta [firmar un paquete de aplicación con SignTool](../packaging/sign-app-package-using-signtool.md).
 
   > [!IMPORTANT]
   > Asegúrate de que el nombre del publicador del certificado coincide con el de la aplicación.
@@ -111,7 +111,7 @@ También puedes firmar la aplicación manualmente. A continuación te indicamos 
 
 ### <a name="test-your-application-for-windows-10-s"></a>Probar la aplicación para Windows 10 S
 
-Antes de publicar la aplicación, asegúrate de que funcionará correctamente en dispositivos que ejecutan Windows 10 S. De hecho, si vas a publicar la aplicación en la Microsoft Store, debes hacerlo porque es un requisito de la tienda. Las aplicaciones que no funcionan correctamente en dispositivos que ejecutan Windows 10S no estarán certificadas.
+Antes de publicar la aplicación, asegúrate de que funcionará correctamente en dispositivos que ejecutan Windows 10 S. De hecho, si vas a publicar la aplicación en la Microsoft Store, debes hacerlo porque es un requisito de store. Las aplicaciones que no funcionan correctamente en dispositivos que ejecutan Windows 10S no estarán certificadas.
 
 Consulta [tu aplicación de Windows para Windows 10 S de prueba](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s).
 

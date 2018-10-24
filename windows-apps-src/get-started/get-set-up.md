@@ -2,7 +2,7 @@
 author: QuinnRadich
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: Preparación
-description: Estar preparado es más fácil de lo que puedas imaginar. Sigue estas instrucciones y empieza a crear aplicaciones para la Plataforma universal de Windows (UWP) para Windows 10.
+description: Estar preparado es más fácil de lo que puedas imaginar. Sigue estas instrucciones y empezar a crear aplicaciones de la plataforma Universal de Windows (UWP) para Windows 10.
 ms.author: quradic
 ms.date: 05/07/2018
 ms.topic: article
@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 378544282981c62d7a57f9abc3f666e8964b7117
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445622"
+ms.locfileid: "5474764"
 ---
 # <a name="get-set-up"></a>Prepárate
 
 ![Prepárate para usar Visual Studio](images/VisualStudio2017Hero_ImageXL-LG.png)
 
-Empezar es más fácil de lo que puedas imaginar. Sigue estas instrucciones y empieza a crear aplicaciones para la Plataforma universal de Windows (UWP) para Windows 10.
+Empezar es más fácil de lo que puedas imaginar. Sigue estas instrucciones y empezar a crear aplicaciones de la plataforma Universal de Windows (UWP) para Windows 10.
 
 ## <a name="1-download-or-update-visual-studio"></a>1. Descarga o actualiza Visual Studio
 
-Microsoft Visual Studio 2017 te ayuda a diseñar, codificar, probar y depurar tus aplicaciones.
+Microsoft Visual Studio2017 te ayuda a diseñar, codificar, probar y depurar tus aplicaciones.
 
-Si todavía no tienes Visual Studio 2017, puedes instalar Microsoft Visual Studio Community 2017 de forma gratuita. Esta descarga incluye simuladores de dispositivo para probar tus aplicaciones:
+Si aún no tienes Visual Studio2017, puedes instalar el Community2017 gratuito de Microsoft Visual Studio. Esta descarga incluye simuladores de dispositivo para probar tus aplicaciones:
 
 -   [Descargar herramientas de desarrollo de Windows10](https://go.microsoft.com/fwlink/p/?LinkID=534189)
 

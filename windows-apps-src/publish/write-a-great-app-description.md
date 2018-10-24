@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, descripción, describir, descripción de Store, marketing
 ms.localizationpriority: medium
 ms.openlocfilehash: 54877e43ced6044e0866f951a653f2b32d040d9d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442231"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472249"
 ---
 # <a name="write-a-great-app-description"></a>Escribir una excelente descripción de la aplicación
 
@@ -30,7 +30,7 @@ Estas son algunas sugerencias para crear la descripción de la aplicación de la
 -   **Usa listas y párrafos cortos.** Es posible que los clientes potenciales echen un vistazo rápido a la descripción de la aplicación. Usar listas y párrafos breves en medio del contenido facilita el análisis.
 
     > [!NOTE]
-    > Agregar una lista de las [funciones de la aplicación](create-app-store-listings.md#app-features) también puede ayudar a mostrar rápidamente lo que hace tu aplicación. La lista aparece directamente debajo de la descripción de la aplicación.
+    > Agregar una lista de las [funciones de la aplicación](create-app-store-listings.md#app-features) también puede ayudar a mostrar rápidamente lo que hace tu aplicación. La lista aparece directamente debajo de la descripción de la aplicación.
 
 -   **Evita un lenguaje seco.** Escribe la descripción con un estilo atractivo. Asegúrate de que el texto describa lo que hace la aplicación, pero hazlo de una manera que no sea aburrida. Para muchas aplicaciones, es óptimo usar un tono informal y agradable.
 -   **Usa una longitud adecuada.** Una buena descripción se lee rápidamente, pero también incluye la suficiente información como para mantener el interés del lector y explicar lo que hace la aplicación. Para describir una aplicación compleja, necesitarás más oraciones; para describir una aplicación sencilla, necesitarás solo unas pocas. En la mayoría de los casos, la longitud correcta tiene entre 200 y 3 000 palabras.
@@ -41,9 +41,9 @@ Estas son algunas sugerencias para crear la descripción de la aplicación de la
 -   **No uses etiquetas HTML.** El código HTML u otros códigos no se representarán. La descripción debe ser de solo texto sin formato.
 -   **Reúne ideas consultando las descripciones de aplicaciones similares en la tienda.** Echa un vistazo a la manera en que otros desarrolladores describen sus aplicaciones. Esto también te ayuda a descubrir lo que diferencia a tu aplicación y que puedes enfatizar.
 
- 
+ 
 
- 
+ 
 
 
 

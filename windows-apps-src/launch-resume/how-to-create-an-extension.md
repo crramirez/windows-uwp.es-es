@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 548f5f5d1810347527c3c9bfe761a766c4a35c7f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445582"
+ms.locfileid: "5473899"
 ---
 # <a name="create-and-host-an-app-extension"></a>Crear y hospedar una extensión de aplicación
 
@@ -411,7 +411,7 @@ El diferenciador clave entre los [paquetes opcionales](https://docs.microsoft.co
 
 Las extensiones de aplicaciones participan en un ecosistema abierto. Si tu aplicación puede hospedar para aplicaciones, cualquiera puede escribir una extensión para tu host siempre que cumpla con tu método de pasar o recibir información de la extensión. Esto es diferente de los paquetes opcionales que participan en un ecosistema cerrado cuando el editor decide a quién se le permite crear un paquete opcional que se puede usar con la aplicación.
 
-Las extensiones de aplicaciones son paquetes independientes y pueden ser aplicaciones independientes. No pueden tener una dependencia de implementación en otra aplicación. Los paquetes opcionales requieren el paquete principal y no se pueden ejecutar sin él.
+Las extensiones de aplicaciones son paquetes independientes y pueden ser aplicaciones independientes. No pueden tener una dependencia de implementación en otra aplicación.Los paquetes opcionales requieren el paquete principal y no se pueden ejecutar sin él.
 
 Un paquete de expansión para un juego sería un buen candidato para un paquete opcional porque está estrechamente enlazado al juego, pero no se puede ejecutar independientemente del juego y quizá no quieras que los paquetes de expansión se creen por cualquier desarrollador del ecosistema.
 

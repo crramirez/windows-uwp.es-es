@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp, juegos, controles, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 563ca17864f95cfa98313608f5a5c32e64f44a16
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436354"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472895"
 ---
 # <a name="add-controls"></a>Agregar controles
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Un buen juego de la plataforma universal de Windows (UWP) admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows10 en una tableta sin botones físicos o un PC con un mando de la Xbox conectado, o la última plataforma de juego de escritorio con un ratón y un teclado de juego de alto rendimiento. En nuestro juego los controles se implementan en la clase [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp). Esta clase concentra los tres tipos de entrada (mouse y teclado, táctil y controlador para juegos) en un único controlador. El resultado final es un tiros en primera persona que usa controles de movimiento y vista estándares en el género y que funcionan con varios dispositivos.
+Un buen juego de la plataforma universal de Windows (UWP) admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows 10 en una tableta sin botones físicos, un equipo con un mando de Xbox conectado, o la última escritorio plataforma de juego con un ratón de alto rendimiento y un teclado. En nuestro juego los controles se implementan en la clase [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp). Esta clase concentra los tres tipos de entrada (mouse y teclado, táctil y controlador para juegos) en un único controlador. El resultado final es un tiros en primera persona que usa controles de movimiento y vista estándares en el género y que funcionan con varios dispositivos.
 
 > [!NOTE]
 > Para obtener más información acerca de los controles, consulta [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) y [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md).
@@ -815,11 +815,11 @@ void MoveLookController::Update()
 
 Ahora que hemos agregado nuestros controles, hay otra característica que es necesario agregar para crear un juego envolvente: ¡sonido!
 La música y los efectos sonoros son importantes en cualquier juego. Hablemos, por tanto, de cómo [agregar sonido](tutorial--adding-sound.md) a continuación.
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

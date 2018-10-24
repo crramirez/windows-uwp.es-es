@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, monetize, monetizar, engage, interactuar, promote, promover, Store services, servicios de la Store
 ms.localizationpriority: medium
 ms.openlocfilehash: abd6c772ed84934a54c1755b5d55d398e34fbad9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431881"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476049"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de la Store
 
@@ -36,7 +36,7 @@ Para obtener detalles sobre los aranceles de Microsoft Store y cómo recibir el 
 | [Registrar eventos personalizados para el Centro de desarrollo](log-custom-events-for-dev-center.md)  | Registra eventos personalizados de tu aplicación para UWP y examina los eventos en el [informe de uso](../publish/usage-report.md) del panel del Centro de desarrollo. Esta característica requiere Microsoft Store Services SDK. |
 | [Solicitar valoraciones y opiniones](request-ratings-and-reviews.md) |  Animar a los clientes a evaluar o revisar la aplicación mediante programación mostrando una interfaz de usuario de clasificación y revisión.  |
 | [Servicios de Microsoft Store](using-windows-store-services.md)    |  Obtén información sobre cómo usar las API de RESTful para automatizar envíos a la Store, obtener acceso a datos de análisis de las aplicaciones y automatizar otras tareas relacionadas con la Store.    |
-| [Agregar características de demostración (RDX) comercial a la aplicación](retail-demo-experience.md)        |  Incluir un modo de demostración comercial en la aplicación de Windows, para que los clientes que probar equipos y dispositivos en la superficie de ventas pueden ir directamente.  |
+| [Agregar características de demostración (RDX) comercial a la aplicación](retail-demo-experience.md)        |  Incluye un modo de demostración comercial en la aplicación de Windows para que los clientes que probar equipos y dispositivos en la superficie de ventas pueden ir directamente.  |
 
 ## <a name="related-topics"></a>Temas relacionados
 
