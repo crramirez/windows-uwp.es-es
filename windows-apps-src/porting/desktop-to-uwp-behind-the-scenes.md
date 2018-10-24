@@ -11,19 +11,19 @@ keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e6cd2b305a9d52a2239be46cc7f77650cdd6531
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441593"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468808"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>En segundo plano de la aplicación de escritorio empaquetada
 
-En este artículo se proporciona un análisis más profundo sobre lo que sucede con los archivos y las entradas del registro cuando se crea un paquete de la aplicación de Windows para la aplicación de escritorio.
+En este artículo se proporciona un análisis más profundo sobre lo que sucede con los archivos y las entradas del registro cuando se crea un paquete de aplicación de Windows para la aplicación de escritorio.
 
 Un objetivo clave de un paquete moderna es separar el estado de la aplicación del estado del sistema tanto como sea posible mientras mantienes la compatibilidad con otras aplicaciones. Para ello, el puente coloca la aplicación dentro de un paquete de Plataforma universal de Windows (UWP) y, después, detecta y redirige algunos cambios que realiza en el sistema de archivos y en el Registro en tiempo de ejecución.
 
-Los paquetes que se crea para la aplicación de escritorio son solo escritorio de plena confianza y las aplicaciones no se virtualizan ni. Esto les permite interactuar con otras aplicaciones de la misma forma que las aplicaciones de escritorio clásicas.
+Los paquetes que se crea para la aplicación de escritorio son solo de escritorio de plena confianza y las aplicaciones no se virtualizan ni. Esto les permite interactuar con otras aplicaciones de la misma forma que las aplicaciones de escritorio clásicas.
 
 ## <a name="installation"></a>Instalación
 
@@ -52,7 +52,7 @@ Escrituras fuera del paquete | Se permiten si el usuario tiene permisos. | Una o
 
 ### <a name="packaged-vfs-locations"></a>Ubicaciones de VFS empaquetadas
 
-En la tabla siguiente se muestra en qué ubicación del sistema se superponen los archivos que se envían como parte del paquete para la aplicación. La aplicación considerará que estos archivos en las ubicaciones del sistema que se enumeran, en realidad, se encuentran en las ubicaciones redirigidas dentro *De programa\windowsapps\nombre_paquete\vfs C:\Program*. Las ubicaciones de FOLDERID proceden de las constantes [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx).
+En la tabla siguiente se muestra en qué ubicación del sistema se superponen los archivos que se envían como parte del paquete para la aplicación. La aplicación considerará que estos archivos para que esté en las ubicaciones del sistema que se enumeran, cuando en realidad están en las ubicaciones redirigidas dentro *De programa\windowsapps\nombre_paquete\vfs C:\Program*. Las ubicaciones de FOLDERID proceden de las constantes [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx).
 
 Ubicación del sistema | Ubicación redirigida (en [RutaDelPaquete]\VFS\) | Válido en las arquitecturas
  :--- | :--- | :---

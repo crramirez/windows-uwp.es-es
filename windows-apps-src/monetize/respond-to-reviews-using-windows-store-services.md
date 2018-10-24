@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store reviews API, API de opiniones de Microsoft Store, respond to reviews, responder a las opiniones
 ms.localizationpriority: medium
 ms.openlocfilehash: 004688612a7cdbebaa904acf7069a8d792f625da
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431131"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468460"
 ---
 # <a name="respond-to-reviews-using-store-services"></a>Responder a opiniones con servicios de la Store Windows
 
@@ -94,4 +94,4 @@ La API de opiniones de Microsoft Store contiene varios métodos que puedes utili
 * [Obtener información de respuesta de opiniones de la aplicación](get-response-info-for-app-reviews.md)
 * [Enviar respuestas a opiniones de la aplicación](submit-responses-to-app-reviews.md)
 
- 
+ 

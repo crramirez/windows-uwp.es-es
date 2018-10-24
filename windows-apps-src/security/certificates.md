@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: 1db3af004831f010a3dd4918898ce5f7cf70bb1a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438124"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468603"
 ---
 # <a name="intro-to-certificates"></a>Introducción a los certificados
 
@@ -26,7 +26,7 @@ En este artículo se describe el uso de certificados en las aplicaciones de la P
 
 ### <a name="shared-certificate-stores"></a>Almacenes de certificados compartidos
 
-Las aplicaciones para UWP usan el nuevo modelo de aplicación aislacionista introducido en Windows 8. En este modelo, las aplicaciones se ejecutan en una estructura de sistema operativo de bajo nivel, denominada contenedor de la aplicación, que prohíbe que la aplicación tenga acceso a recursos o archivos fuera de sí misma a menos que se le permita explícitamente. En las siguientes secciones se describen las implicaciones que esto tiene en la infraestructura de clave pública (PKI).
+Las aplicaciones para UWP usan el nuevo modelo de aplicación aislacionista introducido en Windows8. En este modelo, las aplicaciones se ejecutan en una estructura de sistema operativo de bajo nivel, denominada contenedor de la aplicación, que prohíbe que la aplicación tenga acceso a recursos o archivos fuera de sí misma a menos que se le permita explícitamente. En las siguientes secciones se describen las implicaciones que esto tiene en la infraestructura de clave pública (PKI).
 
 ### <a name="certificate-storage-per-app-container"></a>Almacenamiento de certificados por contenedor de aplicación
 

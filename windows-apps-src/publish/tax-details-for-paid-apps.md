@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, impuestos, impuestos de aplicación, requisitos fiscales, expansión comercial, tipo impositivo
 ms.localizationpriority: medium
 ms.openlocfilehash: 461c9303bbb26e5c4739ca60c03343008377df6c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5444833"
+ms.locfileid: "5474390"
 ---
 # <a name="tax-details-for-paid-apps"></a>Detalles de impuestos para aplicaciones de pago
 
@@ -30,7 +30,7 @@ Para conocer tus consideraciones fiscales para la selección de precios, la impl
 > 
 > La responsabilidad fiscal y las circunstancias de países o regiones de revendedores (tal y como se describe [a continuación](#reseller-countriesregions)) se tratan en el Documento C del [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), sin perjuicio de la información incluida en la siguiente tabla.
 
- 
+ 
 
 | País o región                   | Consideración fiscal sobre la selección de precios                                                                                                             | Implicación en el pago                    | Responsabilidad fiscal |
 |----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|--------------------|
@@ -226,7 +226,7 @@ Para conocer tus consideraciones fiscales para la selección de precios, la impl
 | Zambia                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 | Zimbabue                         | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70% del precio seleccionado                 | Desarrollador          |
 
- 
+ 
 
 ## <a name="mixed-remittance-countriesregions"></a>Países/regiones con ingreso combinado
 
@@ -238,7 +238,7 @@ Determinados socios de facturación de Microsoft pueden cobrar y remitir los imp
 | Sudáfrica                       |
 | Vietnam                            |
 
- 
+ 
 
 ## <a name="reseller-countriesregions"></a>Países o regiones de revendedores
 
@@ -250,11 +250,11 @@ En determinados países o regiones, Microsoft actúa como revendedor, en vez de 
 | China (excepto en los dispositivos de comunicación móvil con Windows Phone 7.x y en equipos con Windows 8.x) |
 | Brasil (solo para las compras realizadas a través de dispositivos con Windows 10)     |
 
- 
+ 
 
 
 
- 
+ 
 
 
 

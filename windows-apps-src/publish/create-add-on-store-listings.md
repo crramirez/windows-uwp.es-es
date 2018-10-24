@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d6132c2ede9f14cd1f4d29195916c8b484abfe9f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435558"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468365"
 ---
 # <a name="create-add-on-store-listings"></a>Crear descripciones de la Tienda de los complementos
 
@@ -50,9 +50,9 @@ Si quieres mostrar más información que solo un título, puedes escribir hasta 
 
 También tienes la opción de proporcionar una imagen que se puede mostrar al cliente. Este icono debe ser un archivo .png que mida exactamente 300 x 300 píxeles.
 
- 
+ 
 
- 
+ 
 
 
 
