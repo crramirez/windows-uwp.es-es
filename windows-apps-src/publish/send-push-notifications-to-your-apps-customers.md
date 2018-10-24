@@ -11,11 +11,11 @@ keywords: windows 10, uwp, notificaciones dirigidas, push dirigidas, notificacio
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5396429"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5437294"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificaciones a los clientes de la aplicación
 

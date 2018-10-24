@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer
 ms.localizationpriority: medium
 ms.openlocfilehash: ba1f7d52a1b16fbb421202229ce724dab384ffa0
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398951"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5433903"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Superponer imágenes en mosaico en un mapa
 

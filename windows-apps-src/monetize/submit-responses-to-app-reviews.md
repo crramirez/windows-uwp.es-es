@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store reviews API, API de opiniones de Microsoft Store, add-on acquisitions, adquisiciones de complementos
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ec6661ec0ef65174b6218957450540edceaa5a0
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403257"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5438243"
 ---
 # <a name="submit-responses-to-reviews"></a>Enviar respuestas a opiniones
 

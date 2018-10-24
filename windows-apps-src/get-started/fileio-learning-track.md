@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: introducción, uwp, windows 10, pista de aprendizaje, archivos, e/s de archivos, leer archivo, escribir archivo, crear archivo, escribir texto, leer texto
 ms.localizationpriority: medium
 ms.openlocfilehash: ae89b5c0e072eceec155009c07b3b3a7cf563a20
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5399561"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5432046"
 ---
 # <a name="work-with-files"></a>Trabajar con archivos
 

@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 322bc056411095019dfc027078cbfef7de0883fb
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.openlocfilehash: 4a9e55de039087ce3fdaae6a003293a50938af90
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400086"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5430991"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novedades en los documentos de Windows de mayo de 2018
 
@@ -99,7 +99,7 @@ El equipo de Project Rome ha renovado su iOS y Android SDK, refactorización gra
 
 ### <a name="sets"></a>Conjuntos
 
-La funcionalidad conjuntos está disponible en las versiones preliminares de Windows Insider. Al usar la característica de conjuntos, tu aplicación se dibuja en una ventana que puede compartirse con otras aplicaciones, donde cada aplicación tiene su propia pestaña en la barra de título. [Diseños para conjuntos](../design/shell/design-for-sets.md) tiene instrucciones sobre cómo optimizar tu aplicación para proporcionar la mejor experiencia en la interfaz de usuario establece.
+La funcionalidad conjuntos está disponible en las versiones preliminares de Windows Insider. Al usar la característica de conjuntos, tu aplicación se dibuja en una ventana que puede compartirse con otras aplicaciones, donde cada aplicación tiene su propia pestaña en la barra de título. 
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submission, envío de complemento, update, actualizar, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9126bae03644fb22f773cbd69cc397456a4cd48f
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5407078"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5437138"
 ---
 # <a name="update-an-add-on-submission"></a>Actualizar un envío de complemento
 

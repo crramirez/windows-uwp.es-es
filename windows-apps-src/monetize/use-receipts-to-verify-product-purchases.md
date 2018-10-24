@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, in-app purchases, compras desde la aplicación, IAPs, IAP, receipts, recibos, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: ee6ca7876588efd8b8a5c86cfc8896d84ede91b9
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5409876"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5439550"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para comprobar compras de productos
 

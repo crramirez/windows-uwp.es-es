@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: a6ba5678fc7b66e15d0e189cd75792f97c2353db
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5407328"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5442284"
 ---
 # <a name="create-and-manage-submissions"></a>Crear y administrar envíos
 

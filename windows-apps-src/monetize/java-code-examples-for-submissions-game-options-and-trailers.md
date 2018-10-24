@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, opciones de juego, tráileres, descripciones avanzadas, java
 ms.localizationpriority: medium
 ms.openlocfilehash: f84dfeb202a86c9b1cb1fa29a8c0dae83f3c54de
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400096"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431825"
 ---
 # <a name="java-sample-app-submission-with-game-options-and-trailers"></a>Muestra de Java: envío de aplicación con opciones de juego y tráileres
 

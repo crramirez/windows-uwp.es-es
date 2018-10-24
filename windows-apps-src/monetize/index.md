@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, monetize, monetizar, engage, interactuar, promote, promover, Store services, servicios de la Store
 ms.localizationpriority: medium
 ms.openlocfilehash: abd6c772ed84934a54c1755b5d55d398e34fbad9
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5399776"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431881"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de la Store
 

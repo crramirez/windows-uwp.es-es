@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales, servidor web de Azure
 ms.localizationpriority: medium
 ms.openlocfilehash: b98ca6316f733210dbdbc5201178b3a89a2b5982
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5401011"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5441613"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Instalar una aplicación para UWP desde una aplicación Web de Azure
 

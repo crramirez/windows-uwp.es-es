@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: b33c1d33fe88a09de36e8f80a3034b915d338861
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404408"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431694"
 ---
 # <a name="configure-a-barcode-scanner"></a>Configurar un escáner de códigos de barras
 
