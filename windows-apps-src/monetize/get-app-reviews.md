@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, servicios de Microsoft Store, API de análisis de Microsoft Store, opiniones
 ms.localizationpriority: medium
 ms.openlocfilehash: c14b2ce6dd9fa7058ef3dbcd8e7e7a17a05fe78e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433400"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480940"
 ---
 # <a name="get-app-reviews"></a>Obtener las opiniones de la aplicación
 
@@ -115,7 +115,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de opiniones de la solicitud. |
 | TotalCount | entero    | El número total de filas del resultado de datos de la consulta.  |
 
- 
+ 
 ### <a name="review-values"></a>Valores de revisión
 
 Los elementos en la matriz *Value* contienen los siguientes valores.

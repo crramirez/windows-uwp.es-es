@@ -10,17 +10,17 @@ ms.technology: uwp
 keywords: Windows 10, uwp, punto de servicio, pos, lector de bandas magnéticas
 ms.localizationpriority: medium
 ms.openlocfilehash: ad954e8c03d92307fa72ead236d5428ac2bdddab
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440181"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481767"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>Obtener y comprender los datos de bandas magnéticas
 
 Una vez que hayas configurado el lector de bandas magnéticas en la aplicación mediante los pasos descritos en la [Introducción de punto de servicio](pos-basics.md), estás listo para comenzar a obtener datos de él.
 
-## <a name="subscribe-to-datareceived-events"></a>Suscribirse a * DataReceived eventos
+## <a name="subscribe-to-datareceived-events"></a>Suscríbete a * DataReceived eventos
 
 Siempre que el lector reconoce una tarjeta deslizada, se genera uno de los tres eventos:
 
@@ -82,7 +82,7 @@ private void Reader_BankCardDataReceived(
 
 Sin embargo, algunos datos, incluidos todos los datos del evento **VendorSpecificDataReceived** , se deben recuperar mediante el objeto de **informe** , que es una propiedad del parámetro de *argumentos* . Esto es de tipo [MagneticStripeReaderReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport).
 
-Puedes usar la propiedad [CardType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) para averiguar qué tipo de tarjeta ha sido pasada y, a continuación, usaremos para informar a cómo interpretan los datos de [Track1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1), [Track2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2), [Track3](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3)y [Track4](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4).
+Puedes usar la propiedad [CardType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) para averiguar qué tipo de tarjeta ha sido deslizó y, a continuación, usarlos para informar a cómo interpretar los datos de [Track1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1), [Track2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2), [Track3](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3)y [Track4](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4).
 
 Los datos de cada una de las pistas se representan como objetos [MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata) . De esta clase, puedes obtener los siguientes tipos de datos:
 
@@ -90,7 +90,7 @@ Los datos de cada una de las pistas se representan como objetos [MagneticStripeR
 * [DiscretionaryData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.discretionarydata): los datos discrecionales. 
 * [EncryptedData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.encrypteddata): los datos cifrados.
 
-El siguiente fragmento de código obtiene el informe y los datos de seguimiento y, a continuación, comprueba el tipo de tarjeta:
+El siguiente fragmento de código obtiene el informe y los datos de la pista y, a continuación, comprueba el tipo de tarjeta:
 
 ```cs
 private void GetTrackData(MagneticStripeReaderBankCardDataReceivedEventArgs args)

@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b388a196e1f5fa6649ac1fb072c80d01bba45e20
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431141"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482749"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
 
@@ -58,7 +58,7 @@ Empecemos con los principios básicos de diseño de buena navegación:
 
 ### <a name="consistency"></a>Coherencia
 
-La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y estilos hará navegación intuitiva y predecible para los usuarios.
+La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y estilos hará que la navegación intuitiva y predecible para los usuarios.
 
 ![imagen de componentes de la página](images/nav/page-components.svg)
 
@@ -189,7 +189,7 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
 
         - Que quieras mostrar todas las opciones de exploración en la pantalla.
         - Desean más espacio para el contenido de la aplicación.
-        - Iconos claramente no describen las categorías de navegación.
+        - Los iconos claramente no describen las categorías de navegación.
         
         Usa pestañas cuando:
 

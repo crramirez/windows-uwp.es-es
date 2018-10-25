@@ -4,18 +4,18 @@ Description: The Usage report in the Windows Dev Center dashboard lets you see h
 title: Informe Uso
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.author: wdg-dev-content
-ms.date: 06/01/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, uso, evento personalizado, informe, telemetría, sesiones de usuario
 ms.localizationpriority: medium
-ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: c5ef2136eaf17fc902dcfc7840ff6dbdac56ef0d
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439128"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480191"
 ---
 # <a name="usage-report"></a>Informe Uso
 
@@ -48,9 +48,10 @@ Este gráfico tiene cuatro pestañas independientes que se pueden ver, mostrando
 - **Usuarios**: muestra el número total de **sesiones de usuario** durante el período de tiempo seleccionado. Cada sesión de usuario representa un período de tiempo distinto, a partir de cuando se inicia la aplicación (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad. Por este motivo, un cliente único podría tener varias sesiones de usuario en el mismo día o semana. El número total de **Usuarios activos** (cualquier cliente que use la aplicación ese día o semana) y **Nuevos usuarios** (un cliente que usó la aplicación por primera vez ese día o semana) también se muestran. Ten en cuenta que si has aplicado filtros a la página, no verás **Nuevos usuarios** en este gráfico.
 - **Dispositivos**: muestra el número de dispositivos que usan cada día todos los usuarios para interactuar con la aplicación.
 - **Duración**: muestra el total de horas de interacción (horas en las que un usuario usa la aplicación de forma activa).
+- **Participación**: muestra los minutos de interacción promedio por usuario (duración promedio de todas las sesiones de usuario). 
 - **Retención**: muestra el número total de **DAU/MAU** (usuarios activos diariamente/usuarios activos mensualmente) durante el período de tiempo seleccionado.
 
-Cuando la **30D** período de tiempo seleccionado, puede ver los marcadores de círculo al ver las pestañas de **los usuarios**, **dispositivos**o la **duración** . Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa el final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
+Cuando la **30D** período de tiempo seleccionado, puede ver los marcadores de círculo al ver las pestañas de **los usuarios**, **dispositivos**o la **duración** . Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa al final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
 
 > [!TIP]
 > Puedes ver más detalles relacionados con los cambios importantes a través de los últimos 30 días en el [informe de información](insights-report.md).
@@ -90,4 +91,4 @@ Para cada evento, verás el nombre del evento y un número de eventos que se cor
 
 
 
- 
+ 

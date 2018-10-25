@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438522"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483532"
 ---
 # <a name="enter-add-on-properties"></a>Especificar las propiedades de los complementos
 
@@ -102,10 +102,10 @@ Por ejemplo, supongamos que tienes un juego y que vendes un complemento que perm
 Para consultar este campo, usa la propiedad [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) del [espacio de nombres Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), usa la propiedad [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag)).
 
 > [!NOTE]
-> El campo **Datos del desarrollador personalizados** no está disponible para su uso en paquetes destinados a Windows8 y Windows8.1.
+> El campo de **datos del desarrollador personalizados** no está disponible para su uso en paquetes destinados a Windows8 y Windows8.1.
 
- 
+ 
 
- 
+ 
 
- 
+ 

@@ -12,21 +12,21 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e408509f4cebbc89587237c6e0dc67bc88b1558
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430941"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481338"
 ---
 # <a name="special-tile-templates"></a>Plantillas de iconos especiales
  
 
-Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. Cada plantilla de iconos especial fue compilada específicamente para Windows 10, excepto la plantilla de iconos icónica, una plantilla especial clásica que ha sido actualizada para Windows 10. En este artículo se abordan tres plantillas de iconos especiales: icónicas, de fotos y de contactos.
+Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. Cada plantilla de iconos especial fue compilada específicamente para Windows 10, excepto la plantilla de iconos icónica, una plantilla especial clásica que se ha actualizado para Windows 10. En este artículo se abordan tres plantillas de iconos especiales: icónicas, de fotos y de contactos.
 
 ## <a name="iconic-tile-template"></a>Plantillas de iconos icónicas
 
 
-La plantilla icónica (también conocida como plantilla "IconWithBadge") te permite mostrar una imagen pequeña en el centro del icono. Windows 10 admite la plantilla tanto en el teléfono como en la tableta o el equipo de escritorio.
+La plantilla icónica (también conocida como plantilla "IconWithBadge") te permite mostrar una imagen pequeña en el centro del icono. Windows 10 es compatible con la plantilla en el teléfono y el escritorio o tableta.
 
 ![iconos de correo pequeños y medianos](images/iconic-template-mail-2sizes.png)
 
@@ -188,7 +188,7 @@ TileContent content = new TileContent()
 ## <a name="people-tile-template"></a>Plantilla de iconos de contactos
 
 
-La aplicación de contactos en Windows 10 usa una plantilla de iconos especial que muestra una colección de imágenes en círculos que se deslizan vertical u horizontalmente en el icono. Esta plantilla de iconos está disponible desde Windows 10 Compilación 10572 y cualquier persona es bienvenida a usarla en su aplicación.
+La aplicación de contactos en Windows 10 usa una plantilla de iconos especial que muestra una colección de imágenes en círculos que se deslizan vertical u horizontalmente en el icono. Esta plantilla de iconos está disponible desde Windows 10 compilación 10572 y cualquier persona es bienvenida a usarla en su aplicación.
 
 Las plantilla de iconos de Contactos funciona en los iconos de estos tamaños:
 
@@ -196,19 +196,19 @@ Las plantilla de iconos de Contactos funciona en los iconos de estos tamaños:
 
 ![icono de contactos mediano](images/people-tile-medium.png)
 
- 
+ 
 
 **Icono ancho** (TileWide)
 
 ![icono de contactos ancho](images/people-tile-wide.png)
 
- 
+ 
 
 **Icono grande (solo escritorio)** (TileLarge)
 
 ![icono de contactos grande](images/people-tile-large.png)
 
- 
+ 
 
 Si estás usando la [biblioteca Notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), todo lo que tienes que hacer para usar la plantilla de iconos de Contactos es un nuevo objeto *TileBindingContentPeople* para tu contenido *TileBinding*. La clase *TileBindingContentPeople* tiene una propiedad de Imágenes donde agregar tus imágenes.
 
@@ -281,9 +281,9 @@ Para enviar la notificación, consulta [Elegir un método de entrega de notifica
 * [Iconos, distintivos y notificaciones](index.md)
 * [Crear iconos adaptables](create-adaptive-tiles.md)
 * [Esquema de contenido de ventana](../tiles-and-notifications/tile-schema.md)
- 
+ 
 
- 
+ 
 
 
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, notas para los evaluadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 741925a3ac49273bd7ba826dfbadd2e18724f307
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441993"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482247"
 ---
 # <a name="notes-for-certification"></a>Notas para la certificación
 
@@ -44,9 +44,9 @@ Cuando estés considerando qué escribir, recuerda que:
 -   **Sé breve y simplifica las instrucciones.** Si tienes que extenderte más en algunos detalles, incluye la dirección URL de una página con más información. Sin embargo, ten en cuenta que los clientes de tu aplicación no verán estas notas. Si crees que necesitas proporcionar instrucciones complicadas para evaluar tu aplicación, piensa si convendría simplificar tu aplicación para que los clientes (y evaluadores) sepan cómo usarla.
 -   **Los servicios y componentes externos deben estar en línea y disponibles.** Si tu aplicación tiene que conectarse a un servicio para poder funcionar, asegúrate de que el servicio esté en línea y disponible. Incluye toda la información que necesitarán los evaluadores sobre el servicio, como la información de inicio de sesión. Si la aplicación no se puede conectar a un servicio que necesite durante las pruebas, puede que no consigas la certificación.
 
- 
+ 
 
- 
+ 
 
 
 

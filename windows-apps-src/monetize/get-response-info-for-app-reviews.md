@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store reviews API, API de opiniones de Microsoft Store, response info, información de respuesta
 ms.localizationpriority: medium
 ms.openlocfilehash: 0212d7457ab85749fd66397876144acecd5dfcf1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437843"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483281"
 ---
 # <a name="get-response-info-for-reviews"></a>Obtener información de respuesta de opiniones
 
@@ -74,7 +74,7 @@ Authorization: Bearer <your access token>
 | CanRespond      | Boolean  | El valor **true** indica que puedes responder a la opinión especificada o que tienes permisos para responder a cualquier opinión de la aplicación especificada. De lo contrario, este valor es **false**.       |
 | DefaultSupportEmail  | string |  La [dirección de correo electrónico de soporte técnico](../publish/enter-app-properties.md#support-contact-info) de tu aplicación según se indica en la lista de aplicaciones de la Store. Si no especificaste ninguna dirección de correo electrónico de soporte técnico, este campo estará vacío.    |
 
- 
+ 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
 En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo realizada para esta solicitud.

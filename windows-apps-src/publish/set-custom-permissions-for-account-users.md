@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar
 ms.localizationpriority: medium
 ms.openlocfilehash: a4100248857af655f388ad318bb3ae5176aaf046
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434434"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480223"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuentas
 
@@ -171,11 +171,11 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     </thead>
     <tbody>
     <tr><td align="left">    <b>Adquisiciones</b>     </td><td>    Permite ver los informes de <a href="acquisitions-report.md">adquisiciones</a> y de <a href="add-on-acquisitions-report.md">adquisiciones de complementos</a> del producto.        </td><td>    N/D    </td><td>    N/D (la configuración para el producto principal incluye el informe de **adquisiciones de complementos** )        </td><td>    N/D                         </td></tr>
-    <tr><td align="left">    <b>Utilización</b> </td><td>    Permite ver el <a href="usage-report.md">informe de utilización</a> del producto.     </td><td>    N/D       </td><td>    N/D     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    <b>Mantenimiento</b> </td><td>    Permite ver el <a href="health-report.md">informe Mantenimiento</a> del producto.    </td><td>    N/D     </td><td>    N/D     </td><td>    N/D         </td></tr>
+    <tr><td align="left">    <b>Utilización</b> </td><td>    Permite ver el <a href="usage-report.md">informe de utilización</a> del producto.     </td><td>    N/D       </td><td>    N/A     </td><td>    N/D         </td></tr>
+    <tr><td align="left">    <b>Mantenimiento</b> </td><td>    Permite ver el <a href="health-report.md">informe Mantenimiento</a> del producto.    </td><td>    N/D     </td><td>    N/A     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Comentarios del cliente</b>    </td><td>    Permite ver los informes <a href="reviews-report.md">Valoraciones</a> y <a href="feedback-report.md">Comentarios</a> del producto.       </td><td>    N/D (para responder a los comentarios o a las valoraciones, se debe conceder el permiso correspondiente para <b>ponerse en contacto con los clientes</b>)   </td><td>    N/D     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    <b>Análisis de Xbox</b> </td><td>    Ver el [informe de análisis de Xbox](xbox-analytics-report.md) del producto.    </td><td>    N/D   </td><td>    N/D       </td><td>    N/D          </td></tr>
-    <tr><td align="left">    <b>Tiempo real</b>   </td><td>    Permite ver el informe Tiempo real del producto. (Nota: este informe solo está disponible a través del <a href="dev-center-insider-program.md">Programa Insider del Centro de desarrollo</a>).      </td><td>    N/D   </td><td>    N/D     </td><td>    N/D                 </td></tr>
+    <tr><td align="left">    <b>Análisis de Xbox</b> </td><td>    Ver el [informe de análisis de Xbox](xbox-analytics-report.md) del producto.    </td><td>    N/A   </td><td>    N/A       </td><td>    N/D          </td></tr>
+    <tr><td align="left">    <b>Tiempo real</b>   </td><td>    Permite ver el informe Tiempo real del producto. (Nota: este informe solo está disponible a través del <a href="dev-center-insider-program.md">Programa Insider del Centro de desarrollo</a>).      </td><td>    N/D   </td><td>    N/A     </td><td>    N/D                 </td></tr>
     </tbody>
     </table>
 

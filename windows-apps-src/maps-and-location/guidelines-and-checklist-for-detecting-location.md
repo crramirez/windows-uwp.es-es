@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ubicación, location, mapa, map, ubicación geográfica, geolocation
 ms.localizationpriority: medium
 ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439990"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480881"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Directrices para las aplicaciones con reconocimiento de ubicación
 
@@ -79,7 +79,7 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
 
         Los dispositivos que proporcionan datos de ubicación pueden realizar un seguimiento del intervalo de informe solicitado por distintas aplicaciones y proporcionar informes de datos según el intervalo solicitado más pequeño. La aplicación con mayor necesidad de precisión recibirá los datos que necesita. Por tanto, es posible que el proveedor de ubicación genere actualizaciones con una frecuencia superior a la solicitada por la aplicación si otra aplicación ha solicitado actualizaciones más frecuentes.
 
-        **Nota:** No se garantiza que el origen de la ubicación atenderá la solicitud para el intervalo de informe indicado. No todos los dispositivos de proveedores de ubicación hacen un seguimiento del intervalo de informe, pero lo debes proporcionar para los que sí lo hacen.
+        **Nota**no se garantiza que el origen de la ubicación atenderá la solicitud para el intervalo de informe indicado. No todos los dispositivos de proveedores de ubicación hacen un seguimiento del intervalo de informe, pero lo debes proporcionar para los que sí lo hacen.
 
     -   Para ahorrar energía, establece la propiedad [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) para indicar a la plataforma de ubicación si la aplicación necesita datos de alta precisión. En caso de que no haya ninguna aplicación que necesite datos de alta precisión, el sistema puede ahorrar energía si no activa los proveedoresGPS.
 
@@ -91,7 +91,7 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
         Por ejemplo:
 
         -   Si tu aplicación obtiene la ubicación para mostrar anuncios personalizados, información meteorológica, noticias, etc., por lo general, basta con una precisión de 5000 metros.
-        -   Si la aplicación se muestra ofertas cercanas en el entorno, es buena por lo general, proporcionar resultados de una precisión de 300 metros.
+        -   Si la aplicación muestra ofertas cercanas en el entorno, es buena por lo general, para proporcionar resultados de una precisión de 300 metros.
         -   Si el usuario quiere ver los restaurantes cercanos recomendados, deberíamos obtener una posición en la manzana en la que se encuentre, por lo que una precisión de 100 metros es suficiente.
         -   Si el usuario intenta compartir su posición, la aplicación debería solicitar una precisión de unos 10 metros.
     -   Usa la propiedad [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) si la aplicación tiene requisitos de precisión específicos. Por ejemplo, las aplicaciones de navegación deberían usar la propiedad **Geocoordinate.accuracy** para determinar si los datos de ubicación disponibles cumplen los requisitos de la aplicación.
@@ -105,7 +105,7 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
     -   Los sensores raw incluyen el acelerómetro, girómetro y magnetómetro.
     -   Los sensores de fusión incluyen orientación, inclinómetro y brújula. Los sensores de fusión obtienen sus datos a partir de combinaciones de sensores raw.
 
-    Las API de Windows Runtime tienen acceso a todos estos sensores, excepto al magnetómetro. Los sensores de fusión son más precisos y estables que los físicos, pero consumen más energía. Usa los sensores adecuados para cada propósito. Para obtener información, consulta [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
+    El RuntimeAPIs de Windows pueden tener acceso a todos estos sensores, excepto al magnetómetro. Los sensores de fusión son más precisos y estables que los físicos, pero consumen más energía. Usa los sensores adecuados para cada propósito. Para obtener información, consulta [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
 **Modo de espera conectado**
 - Cuando el equipo se encuentra en estado de modo de espera conectado, siempre se puede crear una instancia de los objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No obstante, el objeto **Geolocator** no encontrará ningún sensor que pueda agregar, por lo que las llamadas a [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) agotarán el tiempo de espera después de 7 segundos, no se llamará nunca a las escuchas de eventos [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) y se llamará una vez a las escuchas de eventos [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) con el estado **NoData**.
@@ -170,6 +170,6 @@ La ubicación geográfica de un usuario es información de identificación perso
 * [Mostrar mapas con vistas 2D, 3D y Streetside](https://msdn.microsoft.com/library/windows/apps/mt219695)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
 * [Ejemplo de ubicación de UWP (geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
- 
+ 
 
- 
+ 

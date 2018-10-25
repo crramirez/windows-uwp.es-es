@@ -9,14 +9,14 @@ ms.date: 01/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, tarea en segundo plano
+keywords: Windows 10, uwp, tareas en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 3042a6f52453fa4a4c50334b605f637f1dec92aa
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443438"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482327"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Actualizar un icono dinámico desde una tarea en segundo plano
 
@@ -156,7 +156,7 @@ Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declara
 6.  Haz clic o pulsa en la pestaña **IU de la aplicación**.
 7.  Establece **Notificaciones de pantallas de bloqueo** en **Distintivo y texto de imagen**.
 8.  Establece una ruta de acceso en un icono de 24 x 24 píxeles en el campo **Logotipo del distintivo** .
-    **Importante** Este icono debe usar únicamente píxeles transparentes y monocromáticos.
+    **Importante**este icono debe usar únicamente píxeles transparentes y monocromáticos.
 9.  En el campo **Logotipo pequeño**, establece una ruta de acceso en un icono de 30 x 30 píxeles.
 10. En el campo **Logotipo ancho** , establece una ruta de acceso a un icono de 310 x 150 píxeles.
 
@@ -165,8 +165,8 @@ Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declara
 
 Crea un [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para registrar tu tarea.
 
-> **Nota** A partir de Windows 8.1, los parámetros de registro de tareas en segundo plano se validan en el momento de realizar el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. La aplicación debe poder enfrentarse a los escenarios en que se produce un error en el registro de tareas en segundo plano. Por ejemplo, usa una instrucción condicional para comprobar si hay errores de registro y después vuelve a probar el registro con errores con valores de parámetros diferentes.
- 
+> **Nota**a partir de Windows8.1, los parámetros de registro de tareas en segundo plano se validan en el momento del registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. La aplicación debe poder enfrentarse a los escenarios en que se produce un error en el registro de tareas en segundo plano. Por ejemplo, usa una instrucción condicional para comprobar si hay errores de registro y después vuelve a probar el registro con errores con valores de parámetros diferentes.
+ 
 
 En la página principal de tu aplicación, agrega el método **RegisterBackgroundTask** y llámalo en el controlador de eventos **OnNavigatedTo**.
 
@@ -266,6 +266,6 @@ Para depurar la tarea en segundo plano, establece un punto de interrupción en e
 * [Dar soporte a una aplicación con tareas en segundo plano](support-your-app-with-background-tasks.md)
 * [Directrices y lista de comprobación de iconos y distintivos](https://msdn.microsoft.com/library/windows/apps/hh465403)
 
- 
+ 
 
- 
+ 

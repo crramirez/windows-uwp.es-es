@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 104788b98377b55564fcc204ecc161521d071c6b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443497"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480697"
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>Conceptos básicos de diseño de los comandos para las aplicaciones para UWP
 
@@ -96,7 +96,7 @@ Para obtener una lista completa, consulta [Controles y elementos de la interfaz 
 
 Puedes colocar elementos de comandos en un número de superficies de tu aplicación, como el lienzo de la aplicación o contenedores de comandos especiales, como una barra de comandos, el control flotante de barra de comandos, la barra de menús y el cuadro de diálogo.
 
-Ten en cuenta que, siempre que sea posible, debes permitir que los usuarios manipular directamente el contenido, en lugar de utilizar comandos que actúan en el contenido. Por ejemplo, permite a los usuarios reorganicen listas arrastrando y colocando sus elementos, en lugar de con botones de comando para subir y bajar.
+Ten en cuenta que, siempre que sea posible, debes permitir que los usuarios manipular directamente el contenido, en lugar de utilizar comandos que actúen sobre el contenido. Por ejemplo, permite a los usuarios reorganicen listas arrastrando y colocando sus elementos, en lugar de con botones de comando para subir y bajar.
 
 En caso de que los usuarios no puedan manipular directamente el contenido, coloca los elementos de comandos en una superficie de comando de la aplicación. A continuación se incluye una lista de algunas de las superficies de comandos más habituales.
 

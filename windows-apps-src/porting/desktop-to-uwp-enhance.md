@@ -10,16 +10,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ffe3f2a93642911da57d3dd94c09206dc7f5dc94
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 18c3634912633242fdab41ea4d600ee42da80464
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430951"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480239"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Mejorar tu aplicación de escritorio para Windows 10
 
-Puedes usar las API de UWP para agregar modernas experiencias que destacan para los usuarios de Windows 10.
+Puedes usar Windows Runtime APIs para agregar experiencias modernas que destacan para los usuarios de Windows 10.
 
 En primer lugar, configura tu proyecto. A continuación, agrega las experiencias de Windows 10. Puedes compilar por separado para los usuarios de Windows 10 o distribuir los mismos binarios exactos a todos los usuarios independientemente de qué versión de Windows ejecuten.
 
@@ -27,7 +27,7 @@ En primer lugar, configura tu proyecto. A continuación, agrega las experiencias
 
 Tendrás que realizar algunos cambios en tu proyecto para usar las API de UWP.
 
-### <a name="modify-a-net-project-to-use-uwp-apis"></a>Modificar un proyecto de .NET para usar las API de UWP
+### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Modificar un proyecto de .NET para usar Windows Runtime APIs
 
 Abre el cuadro de diálogo **Administrador de referencias**, elige el botón **Examinar** y, a continuación, selecciona **Todos los archivos**.
 
@@ -48,29 +48,11 @@ En la ventana **Propiedades**, establece el campo **Copia local** de cada archiv
 
 ![copy-local-field](images/desktop-to-uwp/copy-local-field.png)
 
-### <a name="modify-a-c-project-to-use-uwp-apis"></a>Modificar un proyecto de C++ para usar las API de UWP
+### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Modificar un proyecto de C++ para usar Windows Runtime APIs
 
-Abre las páginas de propiedades del proyecto.
+Uso [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) consumir Windows Runtime APIs. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows.
 
-En la configuración **General** del grupo de configuración **C/C++**, establece el campo **Usar extensión de Windows Runtime** en **Sí(/ZW)**.
-
-   ![Usar extensión de Windows Runtime](images/desktop-to-uwp/consume-runtime-extensions.png)
-
-Abre el cuadro de diálogo **Directorios #using adicionales** y agrega estos directorios.
-
-* Common7\IDE\VC\vcpackages $(VSInstallDir)
-* C:\Program archivos (x86) \Windows Kits\10\UnionMetadata\ <*SDK versión*> \Facade
-* C:\Program archivos (x86) kits\10\references\ <*SDK versión*> \Windows.Foundation.UniversalApiContract\ <*versión más reciente*>
-* C:\Program archivos (x86) kits\10\references\ <*SDK versión*> \Windows.Foundation.FoundationContract\ <*versión más reciente*>
-
-Abre el cuadro de diálogo **Directorios de inclusión adicionales** y agrega este directorio: C:Archivos de programa (x86)\Windows Kits\10\Include\<*versión más reciente*>\um
-
-![Directorios de inclusión adicionales](images/desktop-to-uwp/additional-include.png)
-
-En la configuración de **Generación de código** del grupo de configuración **C/C++**, establece la configuración **Habilitar recompilación mínima** en **No(/GM-)**.
-
-![Habilitar recompilación mínima](images/desktop-to-uwp/disable-min-build.png)
-
+Configurar el proyecto para C++ / WinRT, consulta [modificar un proyecto de aplicación de escritorio de Windows para agregar C++ / WinRT soporte](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
 ## <a name="add-windows-10-experiences"></a>Agregar experiencias de Windows 10
 
@@ -78,7 +60,7 @@ Ya estás listo para agregar experiencias modernas que dan a conocer cuándo los
 
 :white_check_mark: **En primer lugar, decide qué experiencias quieres agregar**
 
-Hay muchas entre las que elegir. Por ejemplo, puedes simplificar el flujo de pedidos de compra mediante el uso de API de rentabilidad o dirigir la atención a la aplicación cuando tengas algo interesante que compartir, por ejemplo, una nueva imagen que otro usuario ha publicado.
+Hay muchas entre las que elegir. Por ejemplo, puedes simplificar el flujo de pedidos de compra mediante API de rentabilidad o dirigir la atención a la aplicación cuando tengas algo interesante que compartir, por ejemplo, una nueva imagen que otro usuario ha publicado.
 
 ![Notificación del sistema](images/desktop-to-uwp/toast.png)
 
@@ -90,7 +72,7 @@ Visita nuestro [centro para desarrolladores](https://developer.microsoft.com/win
 
 A menudo nos escucharás usar los términos "mejorar" y "ampliar", por lo que vamos a detenernos un momento para explicar exactamente qué significan cada uno de estos términos.
 
-Usamos el término "mejorar" para describir las API de UWP a las que puedes llamar directamente desde tu aplicación de escritorio. Cuando hayas elegido una experiencia de Windows 10, identifica las API que necesitas para crearla y comprueba si esa API aparece en esta [lista](desktop-to-uwp-supported-api.md). Esta es una lista de API a las que puedes llamar directamente desde tu aplicación de escritorio. Si tu API no aparece en esta lista, se debe a que la funcionalidad asociada a esa API solo se puede ejecutar dentro de un proceso de UWP. A menudo, estos incluyen API que muestran interfaces de usuario modernas como un control de mapa de UWP o una advertencia de seguridad de Windows Hello.
+Usamos el término "mejorar" para describir Windows en tiempo de ejecución APIs que puedes llamar directamente desde la aplicación de escritorio. Cuando hayas elegido una experiencia de Windows 10, identifica las API que necesitas para crearla y comprueba si esa API aparece en esta [lista](desktop-to-uwp-supported-api.md). Esta es una lista de API a las que puedes llamar directamente desde tu aplicación de escritorio. Si tu API no aparece en esta lista, se debe a que la funcionalidad asociada a esa API solo se puede ejecutar dentro de un proceso de UWP. A menudo, estos incluyen API que muestran interfaces de usuario modernas como un control de mapa de UWP o una advertencia de seguridad de Windows Hello.
 
 Dicho esto, si quieres incluir estas experiencias en tu aplicación, solo tienes que "ampliar" la aplicación agregando un proyecto de UWP a la solución. El proyecto de escritorio sigue siendo el punto de entrada de tu aplicación, pero el proyecto de UWP le proporciona acceso a todas las API que no aparecen en esta [lista](desktop-to-uwp-supported-api.md). La aplicación de escritorio puede comunicarse con el proceso de UWP mediante un servicio de aplicaciones y tenemos muchos consejos para darte sobre cómo configurarlo. Si quieres agregar una experiencia que requiere un proyecto de UWP, consulta [Ampliar con UWP](desktop-to-uwp-extend.md).
 
@@ -187,7 +169,7 @@ En primer lugar, agrega una nueva configuración de compilación al proyecto.
 
 ![Configuración de compilación](images/desktop-to-uwp/build-config.png)
 
-Para esa configuración de compilación, crea una constante para identificar el código que llama a las API de UWP.  
+Para esa configuración de compilación, crea una constante para identificar el código que llama Windows Runtime APIs.  
 
 Para los proyectos basados en .NET, la constante se llama **constante de compilación condicional**.
 
@@ -224,9 +206,9 @@ El compilador compila ese código solo si esa constante se define en la configur
 
 ### <a name="runtime-checks"></a>Comprobaciones en tiempo de ejecución
 
-Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. Las llamadas API de UWP solo si el usuario de aplicación se ejecuta la aplicación como una aplicación empaquetada en Windows 10.
+Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. La aplicación llama Windows Runtime APIs solo si el usuario se ejecuta la aplicación como una aplicación empaquetada en Windows 10.
 
-La manera más sencilla de agregar comprobaciones en tiempo de ejecución en el código es instalar este paquete de Nuget: [Aplicaciones auxiliares de Puente de dispositivo de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y usar luego el método ``IsRunningAsUWP()`` para desactivar todo el código UWP. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identificar el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
+La forma más sencilla de agregar comprobaciones en tiempo de ejecución en el código es instalar este paquete de Nuget: [Aplicaciones auxiliares de puente de dispositivo de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usa el ``IsRunningAsUWP()`` método para desactivar todo el código que llama Windows Runtime APIs. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identificar el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
 ## <a name="related-video"></a>Vídeo relacionado
 

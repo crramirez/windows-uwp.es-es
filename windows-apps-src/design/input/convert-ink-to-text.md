@@ -13,11 +13,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: de14d35b7a39776f43feeefc94ebe77af0c97373
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442630"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481374"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Reconocer trazos de Windows Ink como texto y formas
 
@@ -477,8 +477,7 @@ Para obtener una lista de idiomas compatibles con [**InkRecognizer**](https://ms
 
 Tu aplicación puede consultar el conjunto de los motores de reconocimiento de escritura a mano instalados y usar uno de ellos, o permitir que los usuarios seleccionen su idioma preferido.
 
-**Nota**  
-Los usuarios pueden ver una lista de los idiomas instalados a través de **Configuración -&gt; Hora e idioma**. Los idiomas instalados se enumeran en **Idiomas**.
+**Nota**  los usuarios pueden ver una lista de idiomas instalados yendo a **configuración -&gt; hora e idioma**. Los idiomas instalados se enumeran en **Idiomas**.
 
 Para instalar nuevos paquetes de idioma y habilitar el reconocimiento de escritura a mano para ese idioma:
 
@@ -488,7 +487,7 @@ Para instalar nuevos paquetes de idioma y habilitar el reconocimiento de escritu
 4.  Haz clic en el idioma y selecciona **Opciones**.
 5.  En la página **Opciones de idioma**, descarga el **motor de reconocimiento de escritura a mano** (aquí también se pueden descargar el paquete de idioma completo, el motor de reconocimiento de voz y la distribución del teclado).
 
- 
+ 
 
 Aquí se muestra cómo usar el motor de reconocimiento de escritura a mano para interpretar un conjunto de trazos en un [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) según el reconocedor seleccionado.
 
@@ -873,4 +872,4 @@ Para este ejemplo, usaremos la misma interfaz de usuario y la misma configuraci�
 * [Muestra de notas familiares](https://aka.ms/cpubsample-familynotessample)
 
 
- 
+ 

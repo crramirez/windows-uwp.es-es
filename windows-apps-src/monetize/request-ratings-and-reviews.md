@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, calificaciones, opiniones
 ms.localizationpriority: medium
 ms.openlocfilehash: cc3dce673b434673f0e8a72158c2d3a593f02c52
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431414"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483695"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Solicitar calificaciones y opiniones de tu aplicación
 
@@ -25,7 +25,7 @@ Puedes agregar código a la aplicación Plataforma universal de Windows (UWP) pa
 Cuando estés listo para analizar los datos de calificaciones y opiniones, puedes ver los datos en el panel del Centro de desarrollo de Windows o usar la API de análisis de Microsoft Store para recuperar estos datos mediante programación.
 
 > [!IMPORTANT]
-> Al agregar una función de clasificación dentro de la aplicación, todas las revisiones deben enviar al usuario a los mecanismos de clasificación de la tienda, independientemente por estrellas elegida. Si recopilar comentarios o los comentarios de los usuarios, debe quedar claro que no está relacionada con la clasificación de la aplicación o a las críticas en la tienda pero se envía directamente al desarrollador de la aplicación. Consulta el desarrollador código de conducta para obtener más información relacionada con [Fraudulent o malas intenciones de actividades](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
+> Al agregar una función de clasificación dentro de la aplicación, todas las revisiones deben enviar al usuario a los mecanismos de clasificación de la tienda, independientemente por estrellas elegida. Si recopilar comentarios o los comentarios de los usuarios, debe quedar claro que no está relacionada con la clasificación de la aplicación o a las críticas de la tienda pero se envía directamente al desarrollador de la aplicación. Consulta el desarrollador de código de conducta para obtener más información relacionada con [Fraudulent o malas intenciones de actividades](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
 
 ## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Mostrar un diálogo de calificaciones y opiniones en la aplicación
 
@@ -65,8 +65,8 @@ Una vez que envíes la solicitud para mostrar el diálogo de calificaciones y op
 El siguiente ejemplo muestra el valor devuelto para esta solicitud después de que el cliente envíe correctamente una calificación o reseña.
 
 ```json
-{ 
-  "status": "success", 
+{ 
+  "status": "success", 
   "data": {
     "updated": false
   },
@@ -77,8 +77,8 @@ El siguiente ejemplo muestra el valor devuelto para esta solicitud después de q
 El siguiente ejemplo muestra el valor devuelto para esta solicitud después de que el cliente no elija enviar una calificación o reseña.
 
 ```json
-{ 
-  "status": "aborted", 
+{ 
+  "status": "aborted", 
   "errorDetails": "Navigation was unsuccessful"
 }
 ```

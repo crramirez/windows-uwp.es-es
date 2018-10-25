@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438253"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483348"
 ---
 # <a name="supported-languages"></a>Idiomas admitidos
 
@@ -135,11 +135,11 @@ Estos son los idiomas que admite Microsoft Store. La aplicación debe admitir al
 | Wolof                 | wo, wo-sn                                                                                                                                                                                             |
 | Yoruba                | yo-latn, yo-ng                                                                                                                                                                                        |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

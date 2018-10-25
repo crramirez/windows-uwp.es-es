@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ee6c767baef64a15ae8483b94dbf4e9c791132cd
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438451"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480554"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
 
@@ -30,7 +30,7 @@ El usuario espera que el botón Atrás vaya a la ubicación anterior en el histo
 
 ## <a name="back-button"></a>Botón Atrás
 
-Para crear un botón Atrás, usa el control de [botón](../controls-and-patterns/buttons.md) con el `NavigationBackButtonNormalStyle` aplicar un estilo y coloca el botón en la esquina superior izquierda de la interfaz de usuario de la aplicación (para obtener más información, consulta los siguientes ejemplos de código XAML).
+Para crear un botón Atrás, usa el control de [botón](../controls-and-patterns/buttons.md) con el `NavigationBackButtonNormalStyle` aplicar un estilo y coloca el botón en la esquina superior izquierda de la interfaz de usuario de la aplicación (para obtener más información, vea los ejemplos de código XAML siguientes).
 
 ![Botón Atrás en la parte superior izquierda de la interfaz de usuario de la aplicación](images/back-nav/BackEnabled.png)
 
@@ -47,7 +47,7 @@ Si la aplicación tiene una [CommandBar](../controls-and-patterns/app-bars.md) s
 Style="{StaticResource NavigationBackButtonNormalStyle}"/>
 ```
 
-Para minimizar los elementos de la interfaz de usuario que se mueven por la aplicación, muestra un botón Atrás deshabilitado cuando no haya nada en la pila de retroceso (consulta el ejemplo de código siguiente). Sin embargo, si se espera que la aplicación nunca tendrá un objeto backstack, no es necesario mostrar el botón Atrás en absoluto.
+Para minimizar los elementos de la interfaz de usuario que se mueven por la aplicación, muestra un botón Atrás deshabilitado cuando no haya nada en la pila de retroceso (consulta el ejemplo de código siguiente). Sin embargo, si esperas que la aplicación nunca tendrá un objeto backstack, no necesitas mostrar el botón Atrás en absoluto.
 
 ![Estados del botón Atrás](images/back-nav/BackDisabled.png)
 
@@ -171,9 +171,9 @@ namespace winrt::PageNavTest::implementation
 }
 ```
 
-Arriba, hacia atrás controlamos navegación para una sola página. Puedes controlar la navegación en cada página si quieres excluir páginas específicas de la navegación hacia atrás, o quieres ejecutar código en el nivel de página antes de mostrar la página.
+Arriba, hacia atrás controlamos navegación para una sola página. Puedes controlar la navegación en cada página si quieres excluir páginas específicas de navegación hacia atrás, o quieres ejecutar código en el nivel de página antes de mostrar la página.
 
-Para controlar hacia atrás la navegación para una aplicación completa, tendrás registra un agente de escucha global para el evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) en el `App.xaml` archivo de código subyacente.
+Para controlar la navegación para una aplicación completa hacia atrás, tendrás registra un agente de escucha global para el evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) en el `App.xaml` archivo de código subyacente.
 
 Código subyacente de App.xaml:
 
@@ -303,7 +303,7 @@ Si la aplicación sigue usando [AppViewBackButtonVisibility](https://docs.micros
 > [!NOTE]
 > "Atrás del sistema barra" es solo una descripción, no un nombre oficial.
 
-Atrás del sistema barra es una "banda" que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar el tamaño de destino táctil adecuado para el botón Atrás.
+Atrás del sistema barra es una "banda" que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar que el tamaño del destino táctil adecuado para el botón Atrás.
 
 - Si la aplicación está **no con pestañas**, el botón Atrás se representa dentro de la barra de título. Las interacciones de usuario y la experiencia visual para el botón Atrás no han cambiado desde compilaciones anteriores.
 
@@ -318,7 +318,7 @@ Atrás del sistema barra es una "banda" que se inserta entre la banda de la pest
 > [!NOTE]
 > "Atrás del sistema barra" es solo una descripción, no un nombre oficial.
 
-Atrás del sistema barra es una "banda" que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar el tamaño de destino táctil adecuado para el botón Atrás.
+Atrás del sistema barra es una "banda" que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar que el tamaño del destino táctil adecuado para el botón Atrás.
 
 La barra Atrás del sistema se muestra dinámicamente, en función de la visibilidad del botón Atrás. Cuando el botón Atrás está visible, Atrás del sistema se inserta la barra, desplazando el contenido de la aplicación por 32 píxeles por debajo de la banda de la pestaña. Cuando se oculta el botón Atrás, Atrás del sistema barra se quita dinámicamente, desplazando el contenido de aplicación 32 píxeles para satisfacer la banda de la pestaña. Para evitar tener que de la aplicación la interfaz de usuario hacia arriba o hacia abajo, te recomendamos dibujar un [botón Atrás en la aplicación](#back-button).
 
@@ -356,9 +356,9 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>Página a página; mismo grupo del mismo nivel; con un elemento de navegación en pantalla</strong>
-<p>El usuario navega de una página a otra en el mismo grupo del mismo nivel. Ambas páginas se muestran en el mismo elemento de navegación, como <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>.</p></td>
+<p>El usuario navega de una página a otra en el mismo grupo del mismo nivel. Ambas páginas se muestran en el mismo elemento de navegación, por ejemplo, <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>.</p></td>
 <td style="vertical-align:top;"><strong>Depende.</strong>
-<p>Sí, se agrega al historial de navegación, con dos excepciones importantes. Si esperas que los usuarios de la aplicación para cambiar entre las páginas en el grupo del mismo nivel con frecuencia, o si quieres conservar a la jerarquía de navegación, a continuación, no agregues al historial de navegación. En este caso, cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel. </p>
+<p>Sí, se agrega al historial de navegación, con dos excepciones importantes. Si esperas que los usuarios de la aplicación para cambiar entre páginas en el grupo del mismo nivel con frecuencia, o si quieres conservar a la jerarquía de navegación, a continuación, no agregues al historial de navegación. En este caso, cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">

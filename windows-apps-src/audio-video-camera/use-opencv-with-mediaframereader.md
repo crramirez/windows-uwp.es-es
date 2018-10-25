@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
 ms.openlocfilehash: 43545f2a8e1965124560479d399df79d247c5f05
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432458"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481319"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Usar la Open Source Computer Vision Library (OpenCV) con MediaFrameReader
 
@@ -32,7 +32,7 @@ Este artículo se basa en el contenido de los otros dos artículos:
 
 Además de estos artículos, para ver y descargar una muestra de código completa e integral del escenario descrito en este artículo, consulta el [Fotogramas de Cámara+ Muestra de OpenCV](https://go.microsoft.com/fwlink/?linkid=854003) en el repositorio de GitHub de muestras universales de Windows.
 
-Para empezar a desarrollar rápidamente, puedes incluir la biblioteca de OpenCV en un proyecto de aplicación para UWP mediante el uso de paquetes de NuGet, pero estos paquetes no pueden pasar el proceso de certficication de la aplicación cuando la envíes a la tienda, por lo que se recomienda que descargues el OpenCV biblioteca de código fuente y compilar los archivos binarios antes de enviar la aplicación. Podrás encontrar información sobre el desarrollo con OpenCV en [http://opencv.org](http://opencv.org).
+Para empezar a desarrollar rápidamente, puedes incluir la biblioteca de OpenCV en un proyecto de aplicación para UWP mediante el uso de paquetes de NuGet, pero estos paquetes no pueden pasar el proceso de aplicación certficication al enviar la aplicación a la tienda, por lo que se recomienda que descargues el OpenCV biblioteca de código fuente y compilar los archivos binarios antes de enviar tu aplicación. Podrás encontrar información sobre el desarrollo con OpenCV en [http://opencv.org](http://opencv.org).
 
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>Implementar el Componente de Windows Runtime nativo de OpenCVHelper
@@ -74,9 +74,9 @@ El evento **FrameArrived** se genera siempre que un nuevo fotograma esté dispon
 * [Procesar mapas de bits de software con OpenCV](process-software-bitmaps-with-opencv.md)
 * [Muestra de fotogramas de cámara](http://go.microsoft.com/fwlink/?LinkId=823230)
 * [Fotogramas de Cámara + Muestra de OpenCV](https://go.microsoft.com/fwlink/?linkid=854003)
- 
+ 
 
- 
+ 
 
 
 

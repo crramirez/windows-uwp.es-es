@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer
 ms.localizationpriority: medium
 ms.openlocfilehash: ba1f7d52a1b16fbb421202229ce724dab384ffa0
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433903"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481797"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Superponer imágenes en mosaico en un mapa
 
@@ -29,8 +29,7 @@ Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante 
 
 Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256x256píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-**Importante**  
-Al usar la opción de orígenes de icono, no tienes que escribir código para solicitar o colocar los iconos individuales. La clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) se encarga de solicitar los iconos a medida que los necesita. Cada solicitud especifica las coordenadas X e Y, y el nivel de zoom para el icono individual. Solo debes indicar el formato del URI o el nombre de archivo que se debe usar para recuperar los iconos en la propiedad **UriFormatString**. Es decir, se insertan los parámetros reemplazables en el URI base o en el nombre de archivo para indicar dónde se deben pasar las coordenadas X e Y, y el nivel de zoom para cada icono.
+**Importante**  al usar orígenes de icono, no tienes que escribir código para solicitar o colocar los iconos individuales. La clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) se encarga de solicitar los iconos a medida que los necesita. Cada solicitud especifica las coordenadas X e Y, y el nivel de zoom para el icono individual. Solo debes indicar el formato del URI o el nombre de archivo que se debe usar para recuperar los iconos en la propiedad **UriFormatString**. Es decir, se insertan los parámetros reemplazables en el URI base o en el nombre de archivo para indicar dónde se deben pasar las coordenadas X e Y, y el nivel de zoom para cada icono.
 
 Este es un ejemplo de la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) de una clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) que muestra los parámetros reemplazables para las coordenadas X e Y, y el nivel de zoom.
 
@@ -196,7 +195,7 @@ Puedes usar los siguientes protocolos y ubicaciones para cargar mosaicos desde u
 | ms-appdata:///temp | Apunta a la carpeta temporal de la aplicación. |
 |  | Esta es la ubicación a la que hace referencia la propiedad [ApplicationData.TemporaryFolder](https://msdn.microsoft.com/library/windows/apps/br241629). |
 
- 
+ 
 
 El ejemplo siguiente carga iconos almacenados como archivos en la carpeta de instalación de la aplicación mediante el protocolo `ms-appx:///`. El valor de [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) se especifica en el constructor de la clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). En este ejemplo, los iconos solo se muestran cuando el nivel de zoom del mapa está dentro del intervalo que especifica la propiedad opcional [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171).
 

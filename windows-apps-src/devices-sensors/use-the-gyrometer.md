@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 25be2cfab15378f14aed61dcaae1e7e85159f36e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445632"
+ms.locfileid: "5479504"
 ---
 # <a name="use-the-gyrometer"></a>Usar el girómetro
 
@@ -35,7 +35,7 @@ Los girómetros complementan los acelerómetros como controladores de juegos. Lo
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
+Debes estar familiarizado con el lenguaje de marcado de aplicaciones Extensible (XAML), Microsoft VisualC # y eventos.
 
 El dispositivo o emulador que uses debe ser compatible con un girómetro.
 

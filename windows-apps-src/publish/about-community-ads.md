@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ada2e0610e81e986deba3ddab5e87547e05fe108
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445433"
+ms.locfileid: "5479514"
 ---
 # <a name="about-community-ads"></a>Acerca de los anuncios de la comunidad
 
@@ -23,7 +23,7 @@ Si la aplicación [muestra banners o anuncios de banner intersticiales](../monet
 
 Así es cómo funciona este programa:
 
-* Después participación en anuncios de la Comunidad como se describe a continuación, puedes [crear una campaña de anuncios de la Comunidad gratuita](create-an-ad-campaign-for-your-app.md). Luego, la aplicación compartirá el espacio de anuncios promocionales con otros desarrolladores que también participan en anuncios de la Comunidad. Tu aplicación mostrará anuncios de las aplicaciones publicadas por otros desarrolladores que participan en los anuncios de la comunidad y sus aplicaciones mostrarán anuncios de tu aplicación.
+* Después de que participación en anuncios de la Comunidad tal como se describe a continuación, puedes [crear una campaña de anuncios de la Comunidad gratuita](create-an-ad-campaign-for-your-app.md). La aplicación, a continuación, compartirá el espacio de anuncios promocionales con otros desarrolladores que también participan en anuncios de la Comunidad. Tu aplicación mostrará anuncios de las aplicaciones publicadas por otros desarrolladores que participan en los anuncios de la comunidad y sus aplicaciones mostrarán anuncios de tu aplicación.
 * Puedes conseguir créditos por el espacio de anuncios promocionales en otras aplicaciones si muestras anuncios de la comunidad en tu aplicación. Los créditos se calculan según el siguiente proceso:
   * Para cada país o región en la que haya una aplicación que ofrece anuncios de la comunidad disponible, el valor de eCPM (costo eficaz por mil impresiones) a la tasa de mercado actual del país o la región se multiplica por el número de solicitudes de anuncios de la comunidad que realiza tu aplicación en ese país o región. Este valor corresponde a los créditos que has obtenido por tu aplicación en ese país o región.
   * El total de créditos obtenidos durante un período de tiempo determinado equivale a la suma de todos los créditos obtenidos en cada país o región por cada una de tus aplicaciones que ofrecen anuncios de la comunidad.
@@ -32,7 +32,7 @@ Así es cómo funciona este programa:
 
 ### <a name="opt-in-to-community-ads"></a>Participar en anuncios de la comunidad
 
-Antes de que puede crear una campaña de anuncios de la Comunidad para una de las aplicaciones, debes participar en el **monetizar** &gt; página de **anuncios en la aplicación** en el panel del centro de desarrollo de Windows.
+Antes de que puedes crear una campaña de anuncios de la Comunidad para una de las aplicaciones, debes participar en el **monetizar** &gt; página de **anuncios en la aplicación** en el panel del centro de desarrollo de Windows.
 
 Para participar en anuncios de la Comunidad para una aplicación para UWP:
 

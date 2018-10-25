@@ -1,6 +1,6 @@
 ---
 title: Seguridad
-description: Esta sección contiene artículos sobre la compilación de aplicaciones para la Plataforma universal de Windows (UWP) seguras para Windows 10.
+description: Esta sección contiene artículos sobre la creación de aplicaciones de plataforma Universal de Windows (UWP) seguras para Windows 10.
 ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: msatranjr
 ms.author: misatran
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: b9858be036732c2894ff3c009233e021b37da040
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438375"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481214"
 ---
 # <a name="security"></a>Seguridad
 
 
 
-Esta sección contiene artículos sobre la compilación de aplicaciones para la Plataforma universal de Windows (UWP) seguras para Windows 10.
+Esta sección contiene artículos sobre la creación de aplicaciones de plataforma Universal de Windows (UWP) seguras para Windows 10.
 
 ## <a name="introduction"></a>Introducción 
 

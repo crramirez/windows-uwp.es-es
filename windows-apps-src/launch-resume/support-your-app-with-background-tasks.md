@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarea en segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5db1e03ac86768e2b1b1181cd2cc416a151a80
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445261"
+ms.locfileid: "5480789"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Hacer que tu aplicación sea compatible con las tareas en segundo plano
 
@@ -37,7 +37,7 @@ Con la versión 1607 de Windows 10, se introdujo la admisión del segundo plano 
 
 Tareas en segundo plano fuera de proceso son más resistentes porque el proceso en segundo plano no se puede reducir el proceso de la aplicación si algo va mal. Pero la resistencia se consigue a costa de una complejidad mayor para administrar la comunicación entre procesos entre la aplicación y la tarea en segundo plano.
 
-Tareas fuera de proceso en segundo plano se implementan como clases ligeras que implementan la interfaz de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) que el sistema operativo se ejecuta en un proceso independiente (backgroundtaskhost.exe). Registrar una tarea en segundo plano mediante la clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) . El nombre de la clase se especifica como punto de entrada al registrar la tarea en segundo plano.
+Tareas fuera de proceso en segundo plano se implementan como clases ligeras que implementan la interfaz [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) que el sistema operativo se ejecuta en un proceso independiente (backgroundtaskhost.exe). Registrar una tarea en segundo plano mediante la clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) . El nombre de la clase se especifica como punto de entrada al registrar la tarea en segundo plano.
 
 Con la versión 1607 de Windows 10, puedes habilitar la actividad en segundo plano sin tener que crear una tarea en segundo plano. En su lugar, puede ejecutar el código en segundo plano directamente dentro de proceso de la aplicación en primer plano.
 
@@ -46,7 +46,7 @@ Para comenzar rápidamente con las tareas en segundo plano dentro de proceso, co
 Para comenzar rápidamente con las tareas en segundo plano fuera de proceso, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md).
 
 > [!TIP]
-> A partir de Windows 10, ya no necesitarás colocar una aplicación en la pantalla de bloqueo como requisito previo para registrarle una tarea en segundo plano.
+> A partir de Windows 10, ya no necesitarás colocar una aplicación en la pantalla de bloqueo como requisito previo para registrarle una tarea en segundo plano.
 
 ## <a name="background-tasks-for-system-events"></a>Tareas en segundo plano para eventos del sistema
 
@@ -75,10 +75,10 @@ Puedes controlar cuándo se ejecuta la tarea en segundo plano, incluso después 
 | **UserNotPresent**       | El usuario debe estar ausente.            |
 | **UserPresent**          | El usuario debe estar presente.         |
 
-Agrega la condición **InternetAvailable** a tu tarea en segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para retrasar la activación de la tarea en segundo plano hasta que la pila de red se ejecute. Esta condición ahorra energía porque no ejecuta la tarea en segundo plano hasta que la red está disponible. Esta condición no proporciona una activación en tiempo real.
+Agrega la condición **InternetAvailable** a tu tarea en segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para retrasar la activación de la tarea en segundo plano hasta que la pila de red se ejecute. Esta condición ahorra energía porque no ejecutará la tarea en segundo plano hasta que la red está disponible. Esta condición no proporciona una activación en tiempo real.
 
 Si la tarea en segundo plano requiere conectividad de red, establece [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para garantizar que la red se mantenga conectada mientras se ejecuta la tarea en segundo plano. Esto indica a la infraestructura de tareas en segundo plano que debe mantener conectada la red mientras se esté ejecutando la tarea, incluso si el dispositivo ha entrado en modo de espera conectado. Si la tarea en segundo plano no establece **IsNetworkRequested**, a continuación, la tarea en segundo plano no podrá acceder a la red cuando esté en modo de espera conectado (por ejemplo, cuando se apague la pantalla del teléfono).
- 
+ 
 Para obtener más información acerca de las condiciones de tarea en segundo plano, consulta [establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md).
 
 ## <a name="application-manifest-requirements"></a>Requisitos del manifiesto de la aplicación
@@ -95,7 +95,7 @@ Los siguientes desencadenadores en tiempo real pueden usarse para ejecutar el c�
 | **Temporizador** | Las tareas en segundo plano se pueden ejecutar cada 15 minutos y se pueden configurar para ejecutarse a una determinada hora mediante el control [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obtener más información, consulta [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md). |
 | **Notificación de inserción** | Las tareas en segundo plano responden a la clase [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) para recibir notificaciones de inserción sin procesar. |
 
-**Nota**  
+**Nota**  
 
 Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
 
@@ -114,7 +114,7 @@ La enumeración [**SystemTriggerType**](https://msdn.microsoft.com/library/windo
 | **ControlChannelReset** | La tarea en segundo plano se desencadena cuando se restablece un canal de control. |
 | **SessionConnected**    | La tarea en segundo plano se desencadena cuando se conecta la sesión,   |
 
-   
+   
 Los siguientes desencadenadores de eventos del sistema indican cuándo el usuario ha movido una aplicación o desactivado la pantalla de bloqueo.
 
 | Nombre del desencadenador                     | Descripción                                  |
@@ -122,7 +122,7 @@ Los siguientes desencadenadores de eventos del sistema indican cuándo el usuari
 | **LockScreenApplicationAdded**   | Un icono dinámico de la aplicación se agrega a la pantalla de bloqueo.     |
 | **LockScreenApplicationRemoved** | Un icono dinámico de la aplicación se quita de la pantalla de bloqueo. |
 
- 
+ 
 ## <a name="background-task-resource-constraints"></a>Restricciones de recursos de las tareas en segundo plano
 
 Las tareas en segundo plano son ligeras. Mantener la ejecución en segundo plano en unos mínimos garantiza la mejor experiencia del usuario con las aplicaciones en primer plano y una mayor vida de la batería. Esto se logra aplicando restricciones de recursos a las tareas en segundo plano.
@@ -171,7 +171,7 @@ Las tareas en segundo plano pueden notificar progreso, finalización o cancelaci
 [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)  
 [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 
-Comprueba el registro de tareas en segundo plano durante el inicio de la aplicación. Asegúrate de que las tareas de segundo plano no agrupada de la aplicación estén presentes en BackgroundTaskBuilder.AllTasks. Vuelve a registrar los que no están presentes. Anular el registro de las tareas que ya no son necesarios. Esto garantiza que todos los registros de tareas en segundo plano están actualizados cada vez que se inicia la aplicación.
+Comprueba el registro de tareas en segundo plano durante el inicio de la aplicación. Asegúrate de que estén presentes en BackgroundTaskBuilder.AllTasks tareas en segundo plano no agrupada la aplicación. Vuelve a registrar los que no están presentes. Anular el registro de las tareas que ya no son necesarios. Esto garantiza que todos los registros de tareas en segundo plano están actualizados cada vez que se inicie la aplicación.
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431608"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483835"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows10 Mobile
 
@@ -60,7 +60,7 @@ El Emulador de Microsoft para Windows 10 Mobile se incluye como parte del SDK de
 
 También puedes instalar el Emulador de Microsoft para Windows 10 Mobile con el [programa de configuración del Emulador de Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=615095).
 
-### <a name="uninstalling"></a>Desinstalar
+### <a name="uninstalling"></a>Desinstalación
 
 Puedes desinstalar el Emulador de Microsoft para Windows 10 Mobile con el programa de configuración/reparación de Visual Studio. O puedes usar **Programas y características** de **Panel de control** para quitar el emulador.
 
@@ -68,7 +68,7 @@ Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador vir
 
 ### <a name="running"></a>Running
 
-Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado del menú desplegable **de ejecución** en Visual Studio.
+Para ejecutar una aplicación en el emulador, simplemente selecciona un dispositivo emulado desde el menú desplegable **Ejecutar** en Visual Studio.
 
 ![Emuladores disponibles con resolución, tamaño y memoria](images/em-list.png)
 
@@ -181,7 +181,7 @@ En todos los modos, la ventana del emulador tiene tres áreas de interés.
 -   En la sección superior derecha se enumeran los registros. Al tocar un par de dispositivos entre sí (o al tocar el terminal POS) se registra el evento de toque y cuando los dispositivos dejan de tocarse, dicho evento queda registrado. En esta sección también se registra si la aplicación respondió antes de que la conexión se interrumpiese o cualquier otra acción que hayas realizado en la interfaz de usuario del emulador mediante marcas de tiempo. Los registros son persistentes entre los cambios de modo y puedes borrar los registros en cualquier momento presionando el botón **Borrar** situado encima de la pantalla **Registros**.
 -   La parte inferior de la pantalla es el registro de mensajes y muestra la transcripción de todos los mensajes enviados o recibidos a través de la conexión seleccionada actualmente, según el modo seleccionado.
 
-> **Importante** Cuando inicies por primera vez la herramienta Tapper, se mostrará un aviso del Firewall de Windows. DEBES seleccionar las 3 casillas y permitir que la herramienta atraviese el firewall o que deje de funcionar de forma silenciosa.
+> **Importante**cuando se inicie por primera vez la herramienta tapper, obtendrás un Firewall de Windows símbolo del sistema. DEBES seleccionar las 3 casillas y permitir que la herramienta atraviese el firewall o que deje de funcionar de forma silenciosa.
 
 Después de iniciar el instalador de inicio rápido, asegúrate de seguir las instrucciones anteriores para seleccionar las 3 casillas del aviso del firewall. Asimismo, la herramienta tapper debe estar instalada y usarse en el mismo equipo host físico que el emulador de Microsoft.
 
@@ -369,7 +369,7 @@ En modo **Route**, puedes seleccionar uno de los perfiles de velocidad siguiente
 | Speed Limit | Límite de velocidad de la ruta | No aplicable   | Atraviesa la ruta con el límite de velocidad publicado. |
 | Walking     | 5 km/h                   | 1,39 m           | Atraviesa la ruta a un ritmo normal a pie de 5 km/h. |
 | Biking      | 25 km/h                  | 6,94 m           | Atraviesa la ruta a un ritmo normal en bicicleta de 25 km/h. |
-| Fast        |                          |                  |Atraviesa la ruta más rápidamente que el límite de velocidad publicado. | 
+| Fast        |                          |                  |Atraviesa la ruta más rápidamente que el límite de velocidad publicado. | 
 
 **Modo Route**
 
@@ -456,7 +456,7 @@ La pestaña **SD Card** usa una carpeta en el equipo de desarrollo para simular 
         -   Al hacer clic en **Cancel sync** mientras la operación de sincronización está en curso, la tarjeta se expulsa y los resultados de la operación de sincronización quedan incompletos.
     -   El botón **Eject SD card** cambia de nuevo a **Insert SD card**.
 
-> **Nota** Dado que la tarjeta SD que se usa en el teléfono tiene un formato de sistema de archivos FAT32, su tamaño máximo es de 32 GB.
+> **Nota**tarjeta SD desde que se usa en el teléfono está formateada con el sistema de archivos FAT32, el tamaño máximo es de 32GB.
 
 La velocidad de lectura y escritura en relación con la tarjeta SD simulada está limitada, para imitar las velocidades del mundo real. La obtención de acceso una tarjeta SD es más lenta que la obtención de acceso a la unidad de disco duro del equipo.
 
@@ -629,13 +629,13 @@ En algunos casos, incluso después de actualizar a un nuevo paquete piloto de Wi
 
 Para recuperar de esta situación, ejecuta "netcfg -d" desde un símbolo del sistema de administrador: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Cuando finalice la ejecución del comando, reinicia tu PC para completar el proceso de recuperación.
 
-**Nota** Este comando eliminará todos los dispositivos de red, no solo los asociados con el emulador. Cuando se vuelva a inicia tu PC, se detectarán automáticamente todos los dispositivos de red de hardware.
- 
+**Nota**este comando eliminará todos los dispositivos de red, no solo los asociados con el emulador. Cuando se vuelva a inicia tu PC, se detectarán automáticamente todos los dispositivos de red de hardware.
+ 
 ### <a name="unable-to-launch-the-emulators"></a>No se pueden iniciar los emuladores
 
 El emulador de Microsoft incluye XDECleanup.exe, una herramienta que elimina todas las máquinas virtuales, discos de diferenciación y conmutadores de red específicos del emulador, y se entrega con los archivos binarios de emulador (XDE) preparados. Debes usar esta herramienta para limpiar las máquinas virtuales del emulador si entran en un estado incorrecto. Ejecuta la herramienta un símbolo del sistema con privilegios de administrador:`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **Nota** XDECleanup.exe elimina todas las máquinas virtuales Hyper-V específicas del emulador y también elimina los puntos de control o estados guardados de las máquinas virtuales.
+> **Nota**XDECleanup.exe elimina todos los emulador específico de máquinas virtuales de Hyper-V y también elimina los puntos de control de la máquina virtual o estados guardados.
 
 ### <a name="uninstall-windows-10-for-mobile-image"></a>Desinstalar la imagen de Windows 10 Mobile
 
@@ -666,5 +666,5 @@ Para encontrar respuestas y solucionar problemas al empezar a trabajar con las h
 
 * [Ejecutar aplicaciones de Windows Phone en el emulador](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Archivo del SDK de Windows y Windows Phone](https://dev.windows.com/downloads/sdk-archive)
- 
+ 
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ca47bfb26649f2e8a9fc1344c3264d90548eb836
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445732"
+ms.locfileid: "5482317"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>Atraer a clientes y promocionar las aplicaciones
 
@@ -28,6 +28,6 @@ Una vez que la aplicación está en la Microsoft Store, es el momento de mostrar
 -   [Vincular a la aplicación](link-to-your-app.md)
 -   [Facilitar la promoción de la aplicación](make-your-app-easier-to-promote.md)
 
- 
+ 
 
- 
+ 

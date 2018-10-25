@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, resumen de pago, extracto, pagos, ganancias, pagos, pago, beneficios
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d9845fdbd9c8dad77c8599a04850a47573858e8
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445284"
+ms.locfileid: "5481670"
 ---
 # <a name="payout-summary"></a>Resumen de pago
 
@@ -72,7 +72,7 @@ Ten en cuenta que en las secciones anteriores solo se muestra información sobre
 | Saldo histórico        | Saldos de pago de un sistema de pagos histórico                                                             |
 | Transferencia de impuestos              | Ajuste de impuestos relacionados con las ventas en Corea                                                                   |
 
- 
+ 
 
 ## <a name="downloading-payment-transactions"></a>Descargar transacciones de pago
 
@@ -112,11 +112,11 @@ En la siguiente tabla se describen los campos que aparecen en el archivo .csv. T
 | Fecha y hora de elegibilidad   | Fecha y hora en las que las ganancias por las transacciones sean aptas para el pago (hora UTC). Cuando se crea un pago, incluye las ganancias de las transacciones que tienen una fecha y hora de elegibilidad anterior a la fecha de creación del pago. (Solo se incluye en el archivo .csv **Reservado**).                                                                     |
 | Cargos                 | Muestra un desglose de todos los detalles de los cargos agregados en la columna Importe de la transacción. (Solo se incluye para Azure Marketplace; no se incluye en el archivo .csv **Reservado**).          |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

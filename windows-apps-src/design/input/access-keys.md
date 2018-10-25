@@ -16,11 +16,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e842d6c5b8e62a9c043c97849fdf17f524ccfc7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435518"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481124"
 ---
 # <a name="access-keys"></a>Teclas de acceso
 
@@ -263,16 +263,16 @@ Sin embargo, en caso de necesitar más control sobre la ubicación de las sugere
 
     a.  El KeyTip debe estar **cerca** del elemento que tiene la tecla de acceso (el propietario).  
     b.  El KeyTip debe **evitar cubrir los elementos habilitados** que tienen teclas de acceso.   
-    c.  Si no se puede ubicar un KeyTip cerca de su propietario, debe superponerse con este. 
+    c.  Si no se puede ubicar un KeyTip cerca de su propietario, debe superponerse con este. 
 
 2.  **Detectabilidad**: El usuario puede detectar rápidamente el control con la sugerencia de teclas.
 
-    a.  El KeyTip nunca se **superpone** con otras sugerencias de teclas.  
+    a.  El KeyTip nunca se **superpone** con otras sugerencias de teclas.  
 
 3.  **Vistazo sencillo:** El usuario puede echar un vistazo fácilmente a las sugerencias de teclas.
 
     a.  Los KeyTips deben estar **alineados** entre sí y con el elemento de la interfaz de usuario.
-    b.  Los KeyTips deben estar **agrupados** tanto como sea posible. 
+    b.  Los KeyTips deben estar **agrupados** tanto como sea posible. 
 
 ### <a name="relative-position"></a>Posición relativa
 
@@ -365,6 +365,6 @@ Si especificas la propiedad AccessKey en un control UIElement o TextElement, pue
 * [Aceleradores de teclado](keyboard-accelerators.md)
 
 **Ejemplos**
-* [Galería de controles de XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+* [Galería de controles XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 

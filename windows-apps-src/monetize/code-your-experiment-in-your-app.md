@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 21c6eab0e021f703c8103462a8459ea190693a10
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444003"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482798"
 ---
 # <a name="code-your-app-for-experimentation"></a>Programar tu aplicación para los experimentos
 
@@ -42,7 +42,7 @@ Para empezar, instala Microsoft Store Services SDK en tu equipo de desarrollo y 
 4. En la lista de los SDK, selecciona la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar**.
 
 > [!NOTE]
-> Los ejemplos de código en este artículo se supone que el archivo de código tiene instrucciones **using** para los espacios de nombres **System.Threading.Tasks** y **Microsoft.Services.Store.Engagement** .
+> Los ejemplos de código de este artículo se suponen que el archivo de código tiene instrucciones **using** para los espacios de nombres **System.Threading.Tasks** y **Microsoft.Services.Store.Engagement** .
 
 ## <a name="get-variation-data-and-log-the-view-event-for-your-experiment"></a>Obtener datos de variación y registrar el evento de vista para tu experimento
 

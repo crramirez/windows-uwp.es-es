@@ -10,18 +10,18 @@ ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, obtener, obteniendo, iniciado
 ms.localizationpriority: medium
 ms.openlocfilehash: b8f8425fa602c844803cc632f523949b8b04d551
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442979"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483805"
 ---
 # <a name="get-started-with-cwinrt"></a>Introducción a C++/WinRT
 
-Para obtener acelerar con el uso de [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), en este tema te guiará a través de un ejemplo de código sencillo basado en un nuevo **aplicación de consola de Windows (C++ / WinRT)** proyecto. En este tema también se muestra cómo [Agregar C++ / WinRT soporte a un proyecto de aplicación de escritorio de Windows](#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
+Para obtener acelerar con el uso de [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), en este tema te guiará a través de un ejemplo de código sencillo basado en un nuevo **aplicación de consola de Windows (C++ / WinRT)** proyecto. En este tema también se muestra cómo [Agregar C++ / WinRT soporte técnico para un proyecto de aplicación de escritorio de Windows](#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
 > [!IMPORTANT]
-> Si estás usando Visual Studio 2017 (versión 15.8.0 o posterior) y el destino de Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803), a continuación, recién creado C++ / WinRT proyecto puede producir un error al compilar con el error "error*C3861: 'from_abi': identificador no encuentra*"y con otros errores que se origine en *base.h*. La solución es cualquier destino una posterior (más compatible) versión del SDK de Windows o la propiedad de proyecto de conjunto de **C/c ++** > **idioma** > **Conformance mode: No** (Además, si **/ permissive-** aparece en la propiedad de proyecto ** C/C++** > **idioma** > de**línea de comandos** en **Las opciones adicionales**, elimínalo).
+> Si estás usando Visual Studio 2017 (versión 15.8.0 o posterior) y el destino de Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803), a continuación, recién creado C++ / WinRT proyecto puede presentar errores compilar con el error "error*C3861: 'from_abi': identificador no encuentra*"y con otros errores que se origine en *base.h*. La solución consiste en cualquier destino una posterior (más compatible) versión del SDK de Windows o la propiedad de proyecto conjunto **C o C++** > **idioma** > **Conformance mode: No** (Además, si **/ permissive-** aparece en la propiedad de proyecto ** C/C++** > **idioma** > de**línea de comandos** en **Las opciones adicionales**, elimínalo).
 
 ## <a name="a-cwinrt-quick-start"></a>Inicio rápido C++/WinRT
 
@@ -122,19 +122,19 @@ Tampoco es necesario controlar códigos de retorno HRESULT. C++/WinRT convierte 
 
 ## <a name="modify-a-windows-desktop-application-project-to-add-cwinrt-support"></a>Modificar un proyecto de aplicación de escritorio de Windows para agregar C++ / WinRT soporte
 
-Esta sección muestra cómo se puede agregar C++ / WinRT soporte a un proyecto de aplicación de escritorio de Windows que es posible que tengas. Si no tienes un proyecto de aplicación de escritorio de Windows existente, puede seguir junto con estos pasos, uno crear primero. Por ejemplo, abre Visual Studio y crear un **Visual C++** \> **Escritorio de Windows** \> proyecto de**Aplicación de escritorio de Windows** .
+Esta sección muestra cómo se puede agregar C++ / WinRT soporte técnico para un proyecto de aplicación de escritorio de Windows que es posible que tengas. Si no tienes un proyecto de aplicación de escritorio de Windows existente, puede seguir junto con estos pasos, uno de ellos crear primero. Por ejemplo, abre Visual Studio y crear un **Visual C++** \> **Escritorio de Windows** \> proyecto de**Aplicación de escritorio de Windows** .
 
 ### <a name="set-project-properties"></a>Establecer las propiedades de proyecto
 
-Ve a **General**de la propiedad de proyecto \> **Versión del SDK de Windows**y selecciona **Todas las configuraciones** y **Todas las plataformas**. Asegúrate de que la **Versión del SDK de Windows** está establecida en 10.0.17134.0 (Windows 10, versión 1803) o superior.
+Ir a la propiedad **General**project \> **Versión del SDK de Windows**y selecciona **Todas las configuraciones** y **Todas las plataformas**. Asegúrate de que la **Versión del SDK de Windows** está establecida en 10.0.17134.0 (Windows 10, versión 1803) o superior.
 
-Confirma que no se ven afectadas por [¿por qué no compila mi proyecto nuevo?](/windows/uwp/cpp-and-winrt-apis/faq).
+Confirma que no se ven afectadas por [por qué no mi nuevo proyecto se compilará?](/windows/uwp/cpp-and-winrt-apis/faq).
 
-Dado que C++ / WinRT usa características del estándar C ++ 17, Establece la propiedad de proyecto **C o C++** > **idioma** > **Estándar de lenguaje de C++** a *ISO C ++ 17 Standard (/ STD: c ++ 17)*.
+Dado que C++ / WinRT usa características del estándar C ++ 17, Establece la propiedad de proyecto de **C o C++** > **idioma** > **Lenguaje de C++ estándar** para *ISO C ++ 17 Standard (/ STD: c ++ 17)*.
 
 ### <a name="the-precompiled-header"></a>El encabezado precompilado
 
-Cambiar el nombre de tu `stdafx.h` y `stdafx.cpp` a `pch.h` y `pch.cpp`, respectivamente. Establece la propiedad de proyecto **C o C++** > **Encabezados precompilados** > **El archivo de encabezado precompilado** en *pch.h*.
+Cambiar el nombre de tu `stdafx.h` y `stdafx.cpp` a `pch.h` y `pch.cpp`, respectivamente. Establece la propiedad de proyecto **C o C++** > **Encabezados precompilados** > **Archivo de encabezado precompilado** en *pch.h*.
 
 Buscar y todas las reemplazar `#include "stdafx.h"` con `#include "pch.h"`.
 
@@ -148,9 +148,9 @@ En `pch.h`, incluyen `winrt/base.h`.
 
 ## <a name="linking"></a>Vinculación
 
-C++ / WinRT proyección de lenguaje depende de determinadas funciones de Windows Runtime libres (no miembro) y puntos de entrada, que requieren un vínculo a la biblioteca de paraguas [WindowsApp.lib](/uwp/win32-and-com/win32-apis) . Esta sección describen tres maneras de satisfacer al enlazador.
+C++ / WinRT proyección de lenguaje depende de determinadas funciones de Windows Runtime libres (no miembro) y puntos de entrada, que requieren un vínculo a la biblioteca de paraguas [WindowsApp.lib](/uwp/win32-and-com/win32-apis) . En esta sección se describe tres maneras de satisfacer al enlazador.
 
-La primera opción es agregar a tu Visual Studio proyecto todas de C++ / WinRT MSBuild propiedades y destinos. Editar la `.vcxproj` de archivos, busca `<PropertyGroup Label="Globals">` y, dentro de ese grupo de propiedades, Establece la propiedad `<CppWinRTEnabled>true</CppWinRTEnabled>`.
+La primera opción es agregar a tu Visual Studio de proyecto todos de C++ / WinRT MSBuild propiedades y destinos. Editar la `.vcxproj` de archivos, busca `<PropertyGroup Label="Globals">` y, dentro de ese grupo de propiedades, Establece la propiedad `<CppWinRTEnabled>true</CppWinRTEnabled>`.
 
 Como alternativa, puedes usar la configuración de vínculo de proyecto para vincular explícitamente `WindowsApp.lib`.
 
@@ -160,7 +160,7 @@ O bien, puedes hacerlo en el código fuente (en `pch.h`, por ejemplo) de la sigu
 #pragma comment(lib, "windowsapp")
 ```
 
-Ahora puede compilar y vincular y agregar C++ / WinRT código al proyecto (por ejemplo, el código se muestra en la [A c++ / WinRT inicio rápido](#a-cwinrt-quick-start) sección posterior)
+Ahora puede compilar y vincular y agregar C++ / WinRT código al proyecto (por ejemplo, el código se muestra en la [A c++ / WinRT inicio rápido](#a-cwinrt-quick-start) sección, anteriormente)
 
 ## <a name="important-apis"></a>API importantes
 * [Método syndicationclient:: Retrievefeedasync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)

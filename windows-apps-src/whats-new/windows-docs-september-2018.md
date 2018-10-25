@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 title: 'Novedades en los documentos de Windows de septiembre de 2018: desarrollar aplicaciones para UWP'
-description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación de desarrollador de Windows 10 de septiembre de 2018.
+description: Se agregaron nuevas características, vídeos, muestras y directrices para los desarrolladores a la documentación del desarrollador de Windows 10 de septiembre de 2018.
 keywords: Novedades, actualización, características, directrices para los desarrolladores, Windows 10, septiembre
 ms.author: quradic
 ms.date: 09/10/2018
@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f017dbb30586d3ec3c2da54d0f262c4b159328cc
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436301"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479253"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novedades en los documentos de Windows de septiembre de 2018
 
@@ -26,7 +26,7 @@ La documentación del desarrollador de Windows se actualiza constantemente con i
 
 ### <a name="windows-machine-learning"></a>Aprendizaje automático de Windows
 
-[Documentos el aprendizaje automático de Windows](https://docs.microsoft.com/windows/ai/) ahora residen en su propio sitio y se actualizan para el SDK más reciente de Insider de Windows. Hay escritorio y tutoriales UWP en C++ y C# para ayudarte a empezar a agregar WinML a la aplicación.
+[Documentos el aprendizaje automático de Windows](https://docs.microsoft.com/windows/ai/) ahora residen en su propio sitio y se actualizan para el SDK más reciente de Insider de Windows. Hay escritorio y tutoriales de UWP en C++ y C# para ayudarte a empezar a agregar WinML a la aplicación.
 
 [Referencia de la API de Windows.AI.MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) se ha actualizado para el SDK más reciente de Insider de Windows.
 
@@ -34,29 +34,29 @@ La documentación del desarrollador de Windows se actualiza constantemente con i
 
 ![Gráfico de aprendizaje automático de Windows](images/winml-graphic.png)
 
-### <a name="windows-ui-library"></a>Biblioteca de interfaz de usuario de Windows
+### <a name="windows-ui-library"></a>Biblioteca de la interfaz de usuario de Windows
 
-[La biblioteca de la interfaz de usuario de Windows](https://aka.ms/winui-docs) es un conjunto de paquetes de NuGet que proporcionan controles y otros elementos de interfaz de usuario para aplicaciones para UWP. Estos paquetes también son compatibles con versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tengan la versión más reciente del sistema operativo.
+[La biblioteca de la interfaz de usuario de Windows](https://aka.ms/winui-docs) es un conjunto de paquetes de NuGet que proporcionan controles y otros elementos de interfaz de usuario para aplicaciones para UWP. Estos paquetes también son compatibles con versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tengan la versión del sistema operativo más reciente.
 
 Para obtener más información sobre la biblioteca de la interfaz de usuario de Windows, consulta [esta lista de espacios de nombres de API incluidas en el paquete de NuGet.](https://docs.microsoft.com/uwp/api/overview/winui/)
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="how-blur-effects-work"></a>Cómo el trabajo de efectos de desenfoque
+### <a name="how-blur-effects-work"></a>Cómo desenfoque trabajo de efectos
 
-Uno de nuestros sistemas de escritura, el Mike Jacobs inestimable, ha comenzado a una serie de artículos en medio acerca de desenfoque de fotografía al diseño de juegos y aplicaciones de visión. Si estás interesado en saber más acerca de este efecto visual ubicua, consulta [el artículo primero en la visión y la fotografía](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) y [el segundo de suavizado de contorno en los gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Uno de nuestros sistemas de escritura, el Mike Jacobs inestimable, ha comenzado a una serie de artículos en medio acerca de desenfoque de fotografía al diseño de juegos y aplicaciones de visión. Si estás interesado en saber más acerca de este efecto visual ubicua, echa un vistazo a [la primera artículo de visión y la fotografía](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) y [el segundo de suavizado de contorno en los gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
 ![Desenfoque en acción](images/blur-example.jpg)
 
 ### <a name="contributing-guidance"></a>Instrucciones que contribuyen
 
-Hemos actualizado [nuestras directrices contribución](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) de nuestra documentación de UWP. Esta guía nueva aclara el flujo de trabajo y las expectativas para contribuciones externas para nuestros documentos.
+Hemos actualizado [nuestras directrices contribución](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) de nuestra documentación para UWP. Esta guía nueva aclara el flujo de trabajo y las expectativas para contribuciones externas para nuestros documentos.
 
 ## <a name="videos"></a>Vídeos
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollo
 
-En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Este es el preguntas más recientes que hemos respondido a!
+En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft siempre cubren una serie de preguntas frecuentes sobre el desarrollo de Windows, referencia cultural de equipo e historial. Aquí es que hemos respondido a las preguntas más recientes.
 
 Aaron Gustafson:
 

@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c7dc6436e1a233a6b0a74a787b5c30de47899eff
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443507"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481144"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Tutorial: Compatibilidad con Surface Dial (y otros dispositivos de rueda) en tu aplicación para UWP
 
@@ -62,7 +62,7 @@ El Dial es compatible con tres gestos básicos:
 6. Vuelve a tu dispositivo Windows y selecciona **Agregar Bluetooth u otro dispositivo**.
 7. En el cuadro de diálogo **Agregar un dispositivo**, selecciona **Bluetooth** > **Surface Dial**. Ahora tu Surface Dial debería conectarse y agregarse a la lista de dispositivos de **Mouse, teclado y lápiz** en la página de configuración de **Bluetooth y otros dispositivos**.
 8. Para probar el Dial, mantenlo presionado durante unos segundos para ver el menú integrado.
-9. Si el menú no se muestra en la pantalla (el Dial también debe Vibrar), vaya a la configuración de Bluetooth, quita el dispositivo y, intenta volver a conectar el dispositivo.
+9. Si el menú no se muestra en la pantalla (el Dial también debe Vibrar), ve a la configuración de Bluetooth, quita el dispositivo e intenta volver a conectar el dispositivo.
 
 > [!NOTE]
 > Los dispositivos de rueda pueden configurarse con la configuración **Rueda**:
