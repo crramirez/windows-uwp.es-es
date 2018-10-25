@@ -14,12 +14,12 @@ pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 64cc534391aae694b80b5750d74ccf98bd5cdc6b
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483000"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5515703"
 ---
 # <a name="bringing-it-together"></a>Reunión de todo
 
@@ -83,7 +83,8 @@ Hay 3 maneras de aplicar los conceptos básicos del movimiento de Fluent en tu a
 
 ## <a name="implicit-animations"></a>Animaciones implícitas
 
-> **Vista previa**: animación implícita requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/).
+> Las animaciones implícitas requieren Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior.
+
 
 Las animaciones implícitas son una forma sencilla de lograr el movimiento de Fluent mediante la interpolación automáticamente entre los valores antiguos y nuevos durante un cambio de parámetro.
 

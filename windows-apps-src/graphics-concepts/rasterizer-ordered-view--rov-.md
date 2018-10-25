@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb75d903bee3990b13e261393f3801b4089ec1b0
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 7327304e2b42ff5ff71be136220b58e99c6228d2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043004"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542512"
 ---
 # <a name="rasterizer-ordered-view-rov"></a>Vista ordenada de rasterizador (ROV)
 
@@ -30,9 +28,9 @@ Las vistas ordenadas de rasterizador permiten aplicar los algoritmos de "transpa
 
 [Vistas](views.md)
 
- 
+ 
 
- 
+ 
 
 
 

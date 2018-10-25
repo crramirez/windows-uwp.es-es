@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 26705e9481a96d54eff70d04c004bf62fe049091
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 56ce3520248a0fca25230d7ee2a822d827d842a3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044874"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572214"
 ---
 # <a name="triangle-interpolation"></a>Interpolación de triángulos
 
@@ -30,7 +28,7 @@ Para algunos datos de vértice, la interpolación depende del modo de sombreado 
 | Plana         | Solo el factor de niebla se interpola en modo de pantalla plana. Para todos los demás valores interpolados, se aplica el color del primer vértice en el triángulo en todo el rostro. |
 | Gouraud      | Se realiza la interpolación lineal entre los tres vértices.                                                                                                               |
 
- 
+ 
 
 El color de difusión y el color especular se tratan de manera diferente, según el modelo de color. En el modelo de color RGB, el sistema usa los componentes de color rojo, verde y azul en la interpolación.
 
@@ -41,9 +39,9 @@ El componente alfa de un color se trata como un valor interpolado diferente porq
 
 [Sistemas de coordenadas y geometría](coordinate-systems-and-geometry.md)
 
- 
+ 
 
- 
+ 
 
 
 

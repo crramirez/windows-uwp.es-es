@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e616f5a04e50b400c4bd7a700981396570a6c1d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 8ddac5d69ce0c562129255832adfc49380946510
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044664"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572384"
 ---
 # <a name="choosing-a-resource"></a>Elección de un recurso
 
@@ -40,7 +38,7 @@ En esta tabla se enumeran los tipos de recursos que pueden enlazarse en cada fas
 | Fusión de salida   | Salida    | Vista de destino de representación     | Buffer, Texture1D, Texture2D, Texture3D |
 | Fusión de salida   | Salida    | Vista de galería de símbolos de profundidad     | Texture1D, Texture2D                    |
 
- 
+ 
 
 ## <a name="span-ididentifyusagespanspan-ididentifyusagespanspan-ididentifyusagespanidentify-how-each-resource-will-be-used"></a><span id="Identify_Usage"></span><span id="identify_usage"></span><span id="IDENTIFY_USAGE"></span>Identificar cómo se usará cada recurso
 
@@ -56,7 +54,7 @@ El hardware en el que se ejecuta la aplicación tendrá un mínimo de una CPU y 
 | Provisional        | GPU                                  | n/d                 |
 | Inmutable      | CPU (solo en tiempo de creación de recursos) | n/d                 |
 
- 
+ 
 
 El uso predeterminado debe usarse para un recurso que se espera sea actualizado por la CPU con poca frecuencia (menos de una vez por fotograma). En teoría, la CPU nunca escribiría directamente en un recurso con el uso predeterminado a fin de evitar posibles disminuciones de rendimiento.
 
@@ -75,7 +73,7 @@ Otra forma de ver este concepto es pensar en lo que hace una aplicación con un 
 | Representar en la textura                     | Predeterminado              |
 | Acceso de CPU a los datos de GPU                | Provisional              |
 
- 
+ 
 
 Si no estás seguro de qué uso elegir, empieza con el uso predeterminado, ya que se espera que se el caso más común. Un búfer de constantes de sombreador es el tipo de recurso que siempre debería tener un uso predeterminado.
 
@@ -95,9 +93,9 @@ La técnica que se incluye en este ejemplo puede mejorar el rendimiento al aisla
 
 [Recursos](resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

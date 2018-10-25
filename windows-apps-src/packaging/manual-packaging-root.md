@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, packaging, empaquetado
 ms.localizationpriority: medium
 ms.openlocfilehash: fcd6d937c7261b5cfa8af954eb5d2ec2869d8afd
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474473"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5518742"
 ---
 # <a name="manual-app-packaging"></a>Empaquetado manual de la aplicación
 
@@ -46,5 +46,5 @@ Esta sección contiene temas más avanzados para crear componentes de una aplica
 |-------|-------------|
 | [Introducción a los paquetes de activos](asset-packages.md) | Los paquetes de activos son un tipo de paquete que actúa como una ubicación centralizada para archivos comunes de la aplicación, lo que elimina la necesidad de archivos duplicados en todos los paquetes de arquitectura. |
 | [Desarrollar con paquetes de activos y plegado de paquete](package-folding.md) | Aprende a organizar de forma eficaz tu aplicación con paquetes de activos y plegado de paquete. |
-| [Paquetes de aplicaciones de lotes planos](flat-bundles.md) | Describe cómo crear una recopilación plana para los archivos de paquete de la aplicación. |
+| [Paquetes de aplicaciones de lotes planos](flat-bundles.md) | Se describe cómo crear una recopilación plana para archivos de paquete de la aplicación. |
 | [Creación del paquete con el diseño del empaquetado](packaging-layout.md) | El diseño del empaquetado es un solo documento que describe la estructura del empaquetado de la aplicación. Especifica los lotes de una aplicación (principal y opcional), los paquetes de los lotes y los archivos de los paquetes. |

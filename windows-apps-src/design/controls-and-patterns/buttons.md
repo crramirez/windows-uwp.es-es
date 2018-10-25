@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: badaefc406daa5f4500c76262d916f47d82e7a52
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: b3afb0cba92e5f3c08de19c926bd5fb949185379
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469949"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5517416"
 ---
 # <a name="buttons"></a>Botones
 
@@ -36,9 +36,9 @@ Control | Descripción
 [Botón](/uwp/api/windows.ui.xaml.controls.button) | Inicia una acción inmediata. Puede usarse con un enlace de comandos o el evento Click.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Un botón que genera un evento de clic continuamente mientras presionado.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Un botón que haya un estilo como un hipervínculo, se usa para la navegación. Para obtener más información, consulta [Hipervínculos](hyperlinks.md).
-[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | (Versión preliminar) Un botón con comillas angulares para abrir un control flotante adjunto.
-[Botón de división](/uwp/api/windows.ui.xaml.controls.splitbutton) | (Versión preliminar) Un botón con dos caras. Un lado inicia una acción y el otro lado, abre un menú.
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | (Versión preliminar) Un botón de alternancia con dos caras. Activa o desactiva uno de los lados activar/desactivar y el otro lado, abre un menú.
+[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Un botón con comillas angulares para abrir un control flotante adjunto.
+[Botón de división](/uwp/api/windows.ui.xaml.controls.splitbutton) | Un botón con dos caras. Un lado inicia una acción y el otro lado, abre un menú.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | Un botón de alternancia con dos caras. Activa o desactiva uno de los lados activar/desactivar y el otro lado, abre un menú.
 
 | **Obtén la biblioteca de la interfaz de usuario de Windows** |
 | - |
@@ -210,7 +210,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-drop-down-button"></a>Crear un botón de lista desplegable
 
-> **Vista previa**: DropDownButton requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> DropDownButton requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior, o en la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Un [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) es un botón que muestra comillas angulares como un indicador visual que tiene un control flotante adjunto que contiene más opciones. Tiene el mismo comportamiento que un botón estándar con un control flotante; solo el aspecto es diferente.
 
@@ -269,7 +269,7 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-split-button"></a>Crear un botón en dos paneles
 
-> **Vista previa**: botón de división requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> Botón de división requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior, o en la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Un [botón de división](/uwp/api/windows.ui.xaml.controls.splitbutton) tiene dos partes que se pueden invocar por separado. Una parte se comporta como un botón estándar e invoca una acción inmediata. La otra parte, invoca un control flotante que contiene las opciones adicionales que el usuario puede elegir.
 
@@ -376,7 +376,7 @@ public sealed partial class MainPage : Page
 
 ## <a name="create-a-toggle-split-button"></a>Crear un botón de alternancia en dos paneles
 
-> **Vista previa**: ToggleSplitButton requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/) o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> ToggleSplitButton requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior, o en la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Un [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tiene dos partes que se pueden invocar por separado. Una parte se comporta como un botón de alternancia que puede estar activada o desactivada. La otra parte, invoca un control flotante que contiene las opciones adicionales que el usuario puede elegir.
 

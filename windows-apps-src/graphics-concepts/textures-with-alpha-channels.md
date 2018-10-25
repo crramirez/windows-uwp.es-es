@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 73a2a619c32e7d6a7f2fff768c9cec5b7986c3c1
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: eef41642d371f3a8be451c2687eee007608c3b2e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044716"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542299"
 ---
 # <a name="textures-with-alpha-channels"></a>Texturas con canales alfa
 
@@ -30,7 +28,7 @@ El bloque de transparencia y el bloque de color se organizan tal como se muestra
 | 3:0          | Bloque de transparencia                |
 | 7:4          | Bloque de 64bits ya descrito |
 
- 
+ 
 
 ## <a name="span-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanexplicit-texture-encoding"></a><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>Codificación de textura explícita
 
@@ -41,9 +39,9 @@ El siguiente diagrama muestra un bloque de transparencia de 64bits.
 
 ![Diagrama de un bloque de transparencia de 64bits](images/colors4.png)
 
-**Nota** El método de compresión de Direct3D usa los 4 bits más importantes.
+**Nota**  el método de compresión de Direct3D usa los 4 bits más importantes.
 
- 
+ 
 
 Las siguientes tablas muestran cómo se coloca la información alfabética en la memoria para cada palabra de 16bits.
 
@@ -56,7 +54,7 @@ Diseño de la palabra 0:
 | 11:8          | \[0\]\[2\] |
 | 15:12 (MSB\*) | \[0\]\[3\] |
 
- 
+ 
 
 \*Bit menos importante (Least-Significant Bit, LSB), bit más importante (Most-Significant Bit, MSB)
 
@@ -69,7 +67,7 @@ Diseño de la palabra 1:
 | 11:8        | \[1\]\[2\] |
 | 15:12 (MSB) | \[1\]\[3\] |
 
- 
+ 
 
 Diseño de la palabra 2:
 
@@ -80,7 +78,7 @@ Diseño de la palabra 2:
 | 11:8        | \[2\]\[2\] |
 | 15:12 (MSB) | \[2\]\[3\] |
 
- 
+ 
 
 Diseño de la palabra 3:
 
@@ -91,7 +89,7 @@ Diseño de la palabra 3:
 | 11:8        | \[3\]\[2\] |
 | 15:12 (MSB) | \[3\]\[3\] |
 
- 
+ 
 
 En este formato no se utiliza la comparación de color usada en BC1 para determinar si el elemento de textura es transparente. Se supone que sin la comparación de color, los datos de color siempre se tratan como si estuvieran en modo de 4 colores.
 
@@ -139,7 +137,7 @@ El diseño de la memoria del bloque alfa es la siguiente:
 | 6    | \[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB) |
 | 7    | \[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSB)                    |
 
- 
+ 
 
 Con estos formatos no se utiliza la comparación de color usada en BC1 para determinar si el elemento de textura es transparente. Se supone que sin la comparación de color, los datos de color siempre se tratan como si estuvieran en modo de 4 colores.
 
@@ -148,9 +146,9 @@ Con estos formatos no se utiliza la comparación de color usada en BC1 para dete
 
 [Recursos de texturas comprimidas](compressed-texture-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

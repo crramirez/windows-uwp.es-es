@@ -6,19 +6,17 @@ description: Aprende a usar el lenguaje de comandos ESC/POS para dar formato al 
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f482f9f44a5f4acb9c5213745da3b8edd3613b62
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.localizationpriority: medium
+ms.openlocfilehash: 3ecc1a61b7db339c7c0c46168255d32bfbc241a1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2017
-ms.locfileid: "696102"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572544"
 ---
 # <a name="epson-escpos-with-formatting"></a>ESC/POS de Epson con formato
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
