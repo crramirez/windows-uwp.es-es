@@ -6,16 +6,14 @@ description: Aprende a usar el sensor de luz ambiental para detectar cambios de 
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bfb0fe768651e76d18c9c88a2dd36032be21977d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: e6f7f838e5640f873593ac2e08c6a9b30f5258e5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958730"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568424"
 ---
 # <a name="use-the-light-sensor"></a>Usar el sensor de luz
 
@@ -35,7 +33,7 @@ El sensor de luz ambiental es uno de los distintos tipos de sensores ambientales
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
+Debes estar familiarizado con el lenguaje de marcado de aplicaciones Extensible (XAML), Microsoft VisualC # y eventos.
 
 El dispositivo o emulador que estés usando debe ser compatible con un sensor de luz ambiental.
 

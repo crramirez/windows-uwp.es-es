@@ -6,16 +6,14 @@ ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, games, directx, volúmenes de sombra, shadow volumes, búferes de profundidad, depth buffers, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 369fd133ffba2947b06a3fc9391979c17973ea52
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: Auto
+ms.openlocfilehash: 269f8423795d7c2515ce555cf8e65f14a8c63431
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653704"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565757"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11
 
@@ -54,12 +52,12 @@ En este tutorial se muestra cómo representar volúmenes de sombra mediante mapa
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="shadow-mapping-application-to-direct3d-9-desktop-porting"></a>Migración de la aplicación de asignación de sombras al escritorio de Direct3D 9
 
 
-Windows8 agregó funciones de comparación de profundidad a los niveles de característica 9\_1 y 9\_3. Ahora puedes migrar el código de representación con volúmenes de sombra a DirectX 11 y el representador de Direct3D 11 ofrecerá compatibilidad con nivel inferior para dispositivos que tengan el nivel de característica 9. En este tutorial se muestra de qué manera cualquier aplicación o juego de Direct3D 11 puede implementar volúmenes de sombra mediante la prueba de profundidad. El código abarca los siguientes procesos:
+Windows8 agregó funciones de comparación de profundidad a característica nivel 9\_1 y 9\_3. Ahora puedes migrar el código de representación con volúmenes de sombra a DirectX 11 y el representador de Direct3D 11 ofrecerá compatibilidad con nivel inferior para dispositivos que tengan el nivel de característica 9. En este tutorial se muestra de qué manera cualquier aplicación o juego de Direct3D 11 puede implementar volúmenes de sombra mediante la prueba de profundidad. El código abarca los siguientes procesos:
 
 1.  Crear recursos de dispositivo Direct3D para asignación de sombras.
 2.  Agregar un pase de representación para crear el mapa de profundidad.
@@ -72,7 +70,7 @@ Cuando termines de leer este tutorial, sabrás cómo implementar una técnica b�
 ## <a name="prerequisites"></a>Requisitos previos
 
 
-Debes [preparar el entorno de desarrollo para el desarrollo de juegos de DirectX para la Plataforma universal de Windows (UWP)](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Todavía no necesitas una plantilla, pero sí necesitarás MicrosoftVisual Studio2015 para compilar el ejemplo de código de este tutorial.
+Debes [preparar el entorno de desarrollo para el desarrollo de juegos de DirectX para la Plataforma universal de Windows (UWP)](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Todavía no necesitas una plantilla, pero tendrás que Microsoft Visual Studio2015 a compilar el ejemplo de código de este tutorial.
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -87,9 +85,9 @@ Debes [preparar el entorno de desarrollo para el desarrollo de juegos de DirectX
 * [Técnicas habituales para mejorar los mapas de profundidad de sombras](https://msdn.microsoft.com/library/windows/desktop/ee416324)
 * [Mapas de instantáneas en cascada](https://msdn.microsoft.com/library/windows/desktop/ee416307)
 
- 
+ 
 
- 
+ 
 
 
 

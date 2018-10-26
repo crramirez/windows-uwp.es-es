@@ -7,15 +7,13 @@ keywords: windows 10, uwp, complementos, add-ons, compras desde la aplicación, 
 ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bf04632c4c99f2d58e3cd936e678af168750ff0
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 6c5a5536ef1853a726421bdc75269f0cb5c1a84b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5482931"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571664"
 ---
 # <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Habilitar compras desde la aplicación de aplicaciones y complementos
 

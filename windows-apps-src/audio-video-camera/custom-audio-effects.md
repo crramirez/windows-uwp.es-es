@@ -5,17 +5,15 @@ title: Efectos de audio personalizados
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: 576277ab4bf3d2ea3bfe679da4039da194aabb70
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: a9c62dac489be07a08acc4ad17ecb79bcc54f57a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843265"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565113"
 ---
 # <a name="custom-audio-effects"></a>Efectos de audio personalizados
 
@@ -85,7 +83,7 @@ Para obtener acceso al búfer de datos de un **AudioFrame** se requiere interope
 > 2.  Selecciona la pestaña **Compilación**.
 > 3.  Activa la casilla **Permitir código no seguro**.
 
- 
+ 
 
 Ahora puedes agregar la implementación del método **ProcessFrame** a tu efecto. Primero, este método obtiene un objeto [**AudioBuffer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.AudioBuffer) de las tramas de audio de entrada y salida. Ten en cuenta que la trama de salida se abre para la escritura y, el de entrada, para la lectura. Luego, se obtiene un valor de [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671) para cada búfer llamando a [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046). A continuación, se obtiene el búfer de datos reales convirtiendo los objetos **IMemoryBufferReference** como la interfaz de interoperabilidad definida anteriormente, **IMemoryByteAccess** y, a continuación, se llama a **GetBuffer**.
 
@@ -154,7 +152,7 @@ El siguiente fragmento de código muestra cómo agregar el efecto de audio perso
 * [Documentación de Win2D](http://go.microsoft.com/fwlink/p/?LinkId=519078)
 * [Reproducción de contenido multimedia](media-playback.md)
 
- 
+ 
 
 
 

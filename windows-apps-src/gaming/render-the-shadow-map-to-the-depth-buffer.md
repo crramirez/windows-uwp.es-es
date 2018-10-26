@@ -6,19 +6,18 @@ ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, rendering, representación, shadow map, mapa de sombras, depth buffer, búfer de profundidad, direct3d
-ms.openlocfilehash: 27b7c9a5fb69a19eed5941bf06068d5237ec101e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a73754fef6d87505751460ec134d853c6bca0530
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238470"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570480"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>Representar el mapa de sombras en el búfer de profundidad
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Representa desde el punto de vista de la luz para crear un mapa de profundidad de dos dimensiones representando el volumen de sombra. El mapa de profundidad enmascara el espacio que se va a representar en la sombra Parte 2 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -153,9 +152,9 @@ PixelShaderInput main(VertexShaderInput input)
 
 En la siguiente parte de este tutorial, aprenderás a agregar sombras mediante la [representación con pruebas de profundidad](render-the-scene-with-depth-testing.md).
 
- 
+ 
 
- 
+ 
 
 
 

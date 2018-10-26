@@ -6,19 +6,17 @@ description: Los usuarios esperan que las aplicaciones sigan respondiendo mientr
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: d5be2a8ea14f35d048b4402f2cfb1018d5998c3d
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 7884c7187bf127e15aaaed38a55e5f9827a3990d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894641"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567028"
 ---
-# <a name="keep-the-ui-thread-responsive"></a>Mantener la capacidad de respuesta de los subprocesos de la interfaz de usuario
+# <a name="keep-the-ui-thread-responsive"></a>Mantener la capacidad de respuesta del subproceso de la interfaz de usuario
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo. Esto significa cosas distintas en función de la aplicación. En el caso de algunas aplicaciones, esto se traduce en la necesidad de proporcionar una física más realista, cargar los datos desde el disco o desde la Web con mayor rapidez, presentar escenas complejas y navegar entre páginas velozmente, encontrar direcciones al instante o procesar datos con rapidez. Independientemente del tipo de cálculo, los usuarios quieren que las aplicaciones respondan a sus entrada y que no haya casos en que estas parezcan que dejen de responder mientras “están pensando”.
 
@@ -26,7 +24,7 @@ La aplicación se controla mediante eventos, lo que significa que el código rea
 
 Deberás usar el subproceso de la interfaz de usuario para que realice casi todos los cambios en el subproceso de la interfaz de usuario, incluida la creación de tipos de interfaz de usuario y el acceso a sus miembros. La interfaz de usuario no se puede actualizar desde un subproceso, aunque puedes publicar un mensaje con [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para hacer que el código se ejecute allí.
 
-> **Nota** La única excepción es que existe un subproceso de representación separado que puede aplicar cambios a la interfaz de usuario que no afectarán el modo en que se controla la entrada o el diseño básico. Por ejemplo, muchas animaciones y transiciones que no afectan al diseño pueden ejecutarse en este subproceso de representación.
+> **Nota**la única excepción es que hay un subproceso de representación separado que puede aplicar cambios a la interfaz de usuario que no afectan a cómo se controla la entrada o el diseño básico. Por ejemplo, muchas animaciones y transiciones que no afectan al diseño pueden ejecutarse en este subproceso de representación.
 
 ## <a name="delay-element-instantiation"></a>Retrasar la creación de instancias de elementos
 
@@ -105,7 +103,7 @@ public class AsyncExample
 
 En este ejemplo, el controlador `NextMove-Click` vuelve a **await** para mantener la capacidad de respuesta del subproceso de la interfaz de usuario. Sin embargo, la ejecución se retoma en dicho controlador después de completar `ComputeNextMove` (que se ejecuta en un subproceso en segundo plano). El código restante del controlador actualiza la interfaz de usuario con los resultados.
 
-> **Nota** También existe una API de [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) y [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para UWP que puede usarse para escenarios similares. Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187340).
+> **Nota**también existe una API de [**grupo de subprocesos**](https://msdn.microsoft.com/library/windows/apps/BR229621) y [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para la UWP, que puede usarse para escenarios similares. Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -6,16 +6,14 @@ ms.assetid: 79f4e177-d8e7-45d3-8a78-31d4c2fe298a
 ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, monetización, games, monetization
 ms.localizationpriority: medium
-ms.openlocfilehash: f6e6be9bf6f8a576a6a4a61fea62c0c055f68741
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 82dd225f25162035b1bb65677c3bd4a7f7503b14
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "877741"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571219"
 ---
 #  <a name="monetization-for-games"></a>Monetización para juegos
 
@@ -24,14 +22,14 @@ Como desarrollador de juegos, debes conocer las opciones de monetización para q
 En el pasado, simplemente hubieses puesto un precio a tu juego y luego hubieses esperado a que las personas lo compraran en una tienda. Pero hoy en día, tienes diferentes opciones. Puedes distribuir un juego en tiendas "físicas", venderlo en línea (copias físicas o electrónicas) o permitir que todas las personas lo usen de forma gratuita, pero incorporar algún tipo de anuncio o artículos dentro del juego que se puedan comprar. Los juegos ya no son simplemente productos independientes. Suelen venir con contenido adicional que se puede comprar además del juego principal.
 
 Puedes promocionar y monetizar un juego para UWP de una o varias de las siguientes maneras:
-* Coloque el juego en el Microsoft Store, que es una oferta de almacenamiento seguro, online [distribución en todo el mundo](#worldwide-distribution-channel). Los jugadores de todo el mundo pueden comprar un juego en línea al [precio que determines](#set-a-price-for-your-game).
+* Coloca el juego en Microsoft Store, que es una oferta de tienda en línea, protegido [distribución en todo el mundo](#worldwide-distribution-channel). Los jugadores de todo el mundo pueden comprar un juego en línea al [precio que determines](#set-a-price-for-your-game).
 * Usa las API de Windows SDK para crear [compras dentro del juego](#in-game-purchases). Los jugadores pueden comprar artículos desde el juego o comprar contenido adicional, por ejemplo, equipo adicional, máscaras, mapas o niveles de juego.
 * Usa las API de [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp) para mostrar anuncios procedentes de redes de anuncios. Puedes [mostrar anuncios en el juego](#display-ads-in-your-game) y ofrecer a los jugadores la opción de ver anuncios en vídeo a cambio de recompensas dentro del juego.
 * [Maximiza el potencial del juego a través de campañas publicitarias](#maximize-your-games-potential-through-ad-campaigns). Promociona tu juego mediante campañas de anuncios de pago, comunitarias (gratuitas) o internas (gratuitas) para aumentar la base de usuarios del juego.
 
 ## <a name="worldwide-distribution-channel"></a>Canal de distribución en todo el mundo
 
-El Store Microsoft puede realizar su juego disponible para su descarga en más de 200 países y regiones en todo el mundo, con soporte para facturación a través de distintas formas de pago incluidas Visa, Mastercard y PayPal. Para obtener una lista completa de los países y las regiones, consulta [Mercados y precios personalizados](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices).
+Microsoft Store pueden hacer que tu juego disponibles para su descarga en más de 200 países y regiones en todo el mundo, con compatibilidad para la facturación a través de diversas formas de pago, como Visa, Mastercard y PayPal. Para obtener una lista completa de los países y las regiones, consulta [Mercados y precios personalizados](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices).
 
 ## <a name="set-a-price-for-your-game"></a>Establecer un precio para el juego
 
@@ -51,13 +49,13 @@ Puedes programar campañas de oferta de antemano al definir la fecha de inicial 
 
 ## <a name="in-game-purchases"></a>Compras desde el juego
 
-Las compras desde el juego son productos que se compran dentro de un juego. También se conocen de forma genérica como _compras desde la aplicación_. En el Microsoft Store, estos productos se denominan _complementos_. [Los complementos se publican](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) a través del panel del Centro de desarrollo de Windows. También tendrás que habilitar los complementos en el código del juego.
+Las compras desde el juego son productos que se compran dentro de un juego. También se conocen de forma genérica como _compras desde la aplicación_. En la Microsoft Store, estos productos se denominan _complementos_. [Los complementos se publican](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) a través del panel del Centro de desarrollo de Windows. También tendrás que habilitar los complementos en el código del juego.
 
 ### <a name="types-of-add-ons"></a>Tipos de complementos
 
 Puedes crear dos tipos de complementos en la Tienda: _duraderos_ o _consumibles_. Los complementos duraderos son artículos que persisten durante un período de tiempo especificado y se pueden comprar una sola vez hasta que expiran. Los complementos consumibles son artículos que se puedan comprar y usar una y otra vez.
 
-Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es decir, si son _administrados por el desarrollador_ o _administrados por la Tienda_ (esta característica está disponible a partir de Windows10, versión 1607). Con un consumibles administrado para desarrolladores, usted es responsable de realizar el seguimiento de saldo del elemento para juegos; con un consumibles almacén administrado, la Store Microsoft realiza un seguimiento de saldo del elemento para usted. Para obtener más información, consulta [Introducción a los complementos consumibles](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es decir, si son _administrados por el desarrollador_ o _administrados por la Tienda_ (esta característica está disponible a partir de Windows10, versión 1607). Con un consumible administrado por el desarrollador, eres responsable de realizar un seguimiento del saldo del artículo para el jugador; con un consumible administrado por la tienda, Microsoft Store realiza un seguimiento de saldo del artículo por TI. Para obtener más información, consulta [Introducción a los complementos consumibles](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Crear compras desde el juego
 
@@ -94,7 +92,7 @@ Para crear un paquete que se puede cargar en la Tienda:
 
 1. Abre la solución de juego en Visual Studio.
 2. En Visual Studio, ve a __Proyecto__ > __Tienda__ > __Crear paquetes de aplicaciones...__
-3. Para el __¿desea crear paquetes para cargar en el Microsoft Store?__ opción, seleccione __Sí__.
+3. Para el __¿desea compilar paquetes para cargarlos en la Microsoft Store?__ opción, selecciona __"Sí"__.
 4. Inicia sesión en tu cuenta de desarrollador del Centro de desarrollo. O bien, [regístrate](https://developer.microsoft.com/store/register) para obtener una cuenta de desarrollador si no tienes ninguna.
 5. Selecciona una aplicación para la que se va a crear el paquete de carga. Si aún no creaste un envío de aplicación, proporciona un nuevo nombre de aplicación para crear un nuevo envío. Para obtener más información, consulta [Crear la aplicación reservando un nombre](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name).
 6. Una vez creado correctamente el paquete, haz clic en __Iniciar el Kit para la certificación de aplicaciones en Windows__ para comenzar el proceso de prueba.
@@ -106,7 +104,7 @@ Para crear un paquete que se puede cargar en la Tienda:
 2. En la página __Información general del panel__ o __Todas las aplicaciones__, haz clic en la aplicación con la que quieres trabajar. Si aún no creaste un envío de aplicación, haz clic en __Crear una nueva aplicación__ y reserva un nombre.
 3. En la página __Información general de la aplicación__, haz clic en __Iniciar el envío__.
 4. Configura este nuevo envío. En la página de envío:
-    * Haz clic en __Precios y disponibilidad__. En la sección de __visibilidad__ , elija '__ocultar esta aplicación y evitar la adquisición...__' para asegurarse de que sólo el equipo de desarrollo tiene acceso para el juego. Para obtener más información, consulta [Distribución y visibilidad](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
+    * Haz clic en __Precios y disponibilidad__. En la sección __visibilidad__ , elige '__ocultar esta aplicación e impedir la compra …__' para asegurarse de que solo el equipo de desarrollo tenga acceso al juego. Para obtener más información, consulta [Distribución y visibilidad](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
     * Haz clic en __Propiedades__. En la sección __Categoría y subcategoría__, elige __Juegos__ y luego elige una subcategoría adecuada para el juego.
     * Haz clic en __Clasificaciones por edades__. Completa el cuestionario con precisión.
     * Haz clic en __Paquetes__. Carga el paquete de juego creado en el paso anterior.
@@ -142,7 +140,7 @@ Otras configuraciones para complementos incluyen lo siguiente:
 * [Precios y disponibilidad](https://msdn.microsoft.com/windows/uwp/publish/set-add-on-pricing-and-availability)
 * [Descripción de la Tienda](https://msdn.microsoft.com/windows/uwp/publish/create-add-on-store-listings)
 
-Si el juego tiene muchos complementos, puede crearlos mediante programación a través del __envío de almacén de Microsoft API__. Para obtener más información, vea [crear y administrar envíos de uso de servicios de Microsoft Store](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
+Si el juego tiene muchos complementos, puedes crearlos mediante programación mediante la __API de envío de Microsoft Store__. Para obtener más información, consulta [crear y administrar envíos mediante el uso de servicios de Microsoft Store](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
 
 ## <a name="display-ads-in-your-game"></a>Mostrar anuncios en el juego
 

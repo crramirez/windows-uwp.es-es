@@ -6,15 +6,13 @@ keywords: UWP, Windows 10, texto, escritura, voz, tono, diseño, IU, UX
 ms.author: quradic
 ms.date: 5/7/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a2feb7f21f9a307632b08714ff617a4ce3aa649
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 8022b3bb5ca312be259c554f46dc9f432ea3caeb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843295"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571490"
 ---
 # <a name="writing-style"></a>Estilo de escritura
 
@@ -42,25 +40,46 @@ La mayoría de las veces, el texto no es el foco de una aplicación. Está ahí 
 
 Los usuarios deben poder leer y comprender el texto de un solo vistazo. No rellenes el texto con introducciones innecesarias. Da la máxima visibilidad a los puntos principales y siempre presenta el fundamento de una idea antes de agregarla.
 
-:::row::: :::column::: ![Qué hacer](images/do.svg) Selecciona **filtros** para agregar efectos a la imagen.
-:::column-end::: :::column::: ![Cosas que evitar](images/dont.svg) Si quieres agregar modificaciones o efectos visuales a la imagen, selecciona **filtros**.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        Select **filters** to add effects to your image.
+    :::column-end:::
+    :::column:::
+        ![Don't](images/dont.svg)
+        If you want to add visual effects or alterations to your image, select **filters.**
+    :::column-end:::
+:::row-end:::
 
 ## <a name="emphasize-action"></a>Enfatiza la acción
 
 Las aplicaciones se definen mediante acciones. Los usuarios realizan una acción cuando usan la aplicación y esta realiza una acción cuando responde a los usuarios. Asegúrate de que el texto usa la *voz activa* en toda la aplicación. Las personas y las funciones deben describirse usando la forma activa, en lugar de la forma pasiva.
 
-:::row::: :::column::: ![Qué hacer](images/do.svg) Reinicia la aplicación para ver los cambios.
-:::column-end::: :::column::: ![Cosas que evitar](images/dont.svg) Los cambios estarán aplicados cuando la aplicación esté reiniciada.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        Restart the app to see your changes.
+    :::column-end:::
+    :::column:::
+        ![Don't](images/dont.svg)
+        The changes will be applied when the app is restarted.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="short-and-sweet"></a>Breve y simple
 
 Los usuarios echan un vistazo al texto y a menudo pasarán por alto bloques más grandes de palabras. No sacrifiques información ni presentaciones necesarias, pero no uses más palabras de las que necesites. En ocasiones, esto significa usar numerosas frases o fragmentos más cortos. Otras veces, esto significa ser muy selectivo a la hora de elegir palabras y estructuras de frases más largas.
 
-:::row::: :::column::: ![Cosas que hacer](images/do.svg) No pudimos cargar la imagen. Si esto sucede de nuevo, prueba a reiniciar la aplicación. Pero no te preocupes, la imagen estará esperando hasta que vuelvas.
-:::column-end::: :::column::: ![Cosas que evitar](images/dont.svg) Se ha producido un error y no hemos podido cargar la imagen. Inténtalo de nuevo y, si se vuelve a producir este problema, puede que tengas que reiniciar la aplicación. Pero no te preocupes, hemos guardado tu trabajo localmente y te estará esperando cuando vuelvas.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        We couldn't upload the picture. If this happens again, try restarting the app. But don't worry — your picture will be waiting when you come back.
+    :::column-end:::
+    :::column:::
+        ![Don't](images/dont.svg)
+        An error occured, and we weren't able to upload the picture. Please try again, and if you encounter this problem again, you may need to restart the app. But don't worry — we've saved your work locally, and it'll be waiting for you when you come back.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="style-conventions"></a>Convenciones de estilo
 
@@ -73,8 +92,14 @@ Habla directamente al usuario.
 * Para hacer referencia a tu propia perspectiva, usa "nosotros". Resulta amable y ayuda al usuario a sentirse parte de la experiencia.
 * No uses "yo" para hacer referencia a la perspectiva de la aplicación, incluso si eres el único que la ha creado.
 
-:::row::: :::column::: ![Qué hacer](images/do.svg) No hemos podido guardar el archivo en esa ubicación.
-:::column-end::: :::column::: :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        We couldn't save your file to that location.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="abbreviations"></a>Abreviaturas
 
@@ -84,8 +109,14 @@ Habla directamente al usuario.
 * No uses abreviaturas muy parecidos entre sí.
 * No uses abreviaturas si estás localizando tu aplicación o si los usuarios hablan inglés como segundo idioma.
 
-:::row::: :::column::: ![Qué hacer](images/do.svg) Las instrucciones sobre diseño para la Plataforma universal de Windows (UWP) son un recurso que te ayudan a diseñar y crear fantásticas aplicaciones. Con las características de diseño que se incluyen en cada aplicación para UWP, puedes crear interfaces de usuario (IU) que se adecúen a una gama de dispositivos.
-:::column-end::: :::column::: :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        The Universal Windows Platform (UWP) design guidance is a resource to help you design and build beautiful, polished apps. With the design features that are included in every UWP app, you can build user interfaces (UI) that scale across a range of devices.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="contractions"></a>Contracciones
 
@@ -93,8 +124,14 @@ Usa un tono informal para dirigirte a los usuarios. Si usas un tono formal, la a
 * Usa contracciones cuando resulten naturales en el texto.
 * No uses contracciones forzadas solo para ahorrar espacio o cuando parezca que, al usarlas, el texto sea menos informal.
 
-:::row::: :::column::: ![Qué hacer](images/do.svg) Cuando estés satisfecho con la imagen, selecciona **guardar** para agregarla a la galería. Desde allí, podrás compartirla con tus amigos.
-:::column-end::: :::column::: :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        When you're happy with your image, select **save** to add it to your gallery. From there, you'll be able to share it with friends.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="periods"></a>Puntos
 
@@ -102,12 +139,18 @@ Usa un tono informal para dirigirte a los usuarios. Si usas un tono formal, la a
 * Usa puntos para terminar oraciones completas en información sobre herramientas, mensajes de error y cuadros de diálogo.
 * No termines con un punto el texto de botones, botones de radio, etiquetas o casillas.
 
-:::row::: :::column::: ![Qué hacer](images/do.svg) <b>No estás conectado</b>
-* Comprueba que tus cables de red están conectados.
-* Asegúrate de que no te encuentras en el modo avión.
-* Consulta si el interruptor inalámbrico está activado.
-* Reinicia el enrutador.
-:::column-end::: :::column::: :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        <b>You’re not connected.</b>
+        * Check that your network cables are plugged in.
+        * Make sure you're not in airplane mode.
+        * See if your wireless switch is turned on.
+        * Restart your router.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="capitalization"></a>Uso de mayúsculas
 
@@ -115,11 +158,17 @@ Aunque las letras mayúsculas son importantes, es fácil caer en un uso excesivo
 * Escribe en mayúscula los nombres propios.
 * Escribe en mayúsculas el comienzo de cada cadena de texto en tu aplicación: el inicio de cada frase, etiqueta y título.
 
-:::row::: :::column::: ![Qué hacer](images/do.svg) <b>¿Qué parte te da problemas?</b>
-* Has olvidado tu contraseña.
-* No acepta mi contraseña.
-* Es posible que otra persona esté usando mi cuenta.
-:::column-end::: :::column::: :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        <b>Which part is giving you trouble?</b>
+        * I forgot your password.
+        * It won't accept password.
+        * Someone else might be using my account.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ## <a name="error-messages"></a>Mensajes de error
 
@@ -133,16 +182,24 @@ Sobre todo, es importante que el mensaje de error no culpe al usuario. Pero tamb
 
 * **Sé claro y nítido**; elimina información superflua.
 
-:::row::: :::column::: ![Qué hacer](images/do.svg) <b>No estás conectado</b>
-* Comprueba que tus cables de red están conectados.
-* Asegúrate de que no te encuentras en el modo avión.
-* Consulta si el interruptor inalámbrico está activado.
-* Reinicia el enrutador.
-:::column-end::: :::column::: :::column-end::: :::row-end::: 
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        <b>You’re not connected.</b>
+        * Check that your network cables are plugged in.
+        * Make sure you're not in airplane mode.
+        * See if your wireless switch is turned on.
+        * Restart your router.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end::: 
 
 ## <a name="dialogs"></a>Cuadros de diálogo
 
-:::row::: :::column::: Para crear el texto de los cuadros de diálogo de la aplicación, se aplican muchos de los mismos consejos que para escribir mensajes de error. Aunque el usuario espera que aparezcan cuadros de diálogo, interrumpen el flujo normal de la aplicación y deben ser útiles y concisos para que el usuario pueda volver a lo que estaba haciendo.
+:::row:::
+    :::column:::
+        Many of the same advice for writing error messages also applies when creating the text for any dialogs in your app. While dialogs are expected by the user, they still interrupt the normal flow of the app, and need to be helpful and concise so the user can get back to what they were doing.
 
         But most important is the "call and response" between the title of a dialog and its buttons. Make sure that your buttons are clear answers to the question posed by the title, and that their format is consistent across your app.
     :::column-end:::
@@ -157,9 +214,17 @@ Sobre todo, es importante que el mensaje de error no culpe al usuario. Pero tamb
 
 ## <a name="buttons"></a>Botones
 
-:::row::: :::column::: El texto de los botones debe ser lo suficientemente conciso como para que los usuarios puedan leerlo todo de un vistazo y lo suficientemente claro para que la función del botón se obvia. La longitud máxima del texto de un botón nunca debe ser superior a un par de palabras breves y muchos deben tener incluso menos.
-Al escribir el texto de botones, recuerda que cada botón representa una acción. Asegúrate de usar la *voz activa* en el texto del botón y de usar palabras que representen acciones en lugar de reacciones.
-:::column-end::: :::column::: ![Qué hacer](images/do.svg) * Instalar ahora * Compartir :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Text on buttons needs to be concise enough that users can read it all at a glance and clear enough that the button's function is immediately obvious. The longest the text on a button should ever be is a couple short words, and many should be shorter than that.
+        When writing the text for buttons, remember that every button represents an action. Be sure to use the *active voice* in button text, to use words that represent actions rather than reactions.
+    :::column-end:::
+    :::column:::
+        ![Do](images/do.svg)
+        * Install now
+        * Share
+    :::column-end:::
+:::row-end:::
 
 ## <a name="spoken-experiences"></a>Experiencias con voz
 

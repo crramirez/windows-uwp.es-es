@@ -1,27 +1,25 @@
 ---
 author: normesta
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase de tarea que se define en el espacio de nombres concurrency en ppltasks.h.
+description: Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes VisualC ++ (C++ / CX) mediante el uso de la clase de tarea definida en el espacio de nombres concurrency en ppltasks.h.
 title: Programación asincrónica en C++
 ms.author: normesta
 ms.date: 05/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, subprocesos, asincrónicos, C++
 ms.localizationpriority: medium
-ms.openlocfilehash: 869ba45929e015f27c5342af57da450f0b99b607
-ms.sourcegitcommit: c104b653601d9b81cfc8bb6032ca434cff8fe9b1
-ms.translationtype: HT
+ms.openlocfilehash: 33b110e713608260cd5c19544292e9211904a730
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "1921213"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571213"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>Programación asincrónica en C++/CX
 > [!NOTE]
 > Este tema existe para ayudar a mantener tu aplicación de C++/CX. Pero te recomendamos que uses [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para nuevas aplicaciones. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime, implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows.
 
-Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase `task` que se define en el espacio de nombres `concurrency` en ppltasks.h.
+Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes VisualC ++ (C++ / CX) mediante el uso de la `task` clase que se define en el `concurrency` espacio de nombres en ppltasks.h.
 
 ## <a name="universal-windows-platform-uwp-asynchronous-types"></a>Tipos asincrónicos de Plataforma universal de Windows (UWP)
 La Plataforma universal de Windows (UWP) cuenta con un modelo bien definido para llamar a métodos asincrónicos y proporciona los tipos que necesitas para consumirlos. Si no estás familiarizado con el modelo asincrónico de UWP, lee [Programación asincrónica][AsyncProgramming] antes de leer el resto de este artículo.
@@ -116,7 +114,7 @@ El ejemplo anterior ilustra cuatro puntos importantes:
 
 -   Dado que la segunda continuación se basa en valores, si la operación que la llamada a [**DeleteAsync**][deleteAsync] comenzó inicia una excepción, la segunda continuación no se ejecuta.
 
-**Nota** La creación de una cadena de tareas constituye tan solo una de las maneras de usar la clase **task** para componer operaciones asincrónicas. También puedes componer operaciones usando los operadores de unión y elección **&&** y **||**. Para obtener más información, consulta [Paralelismo de tareas (tiempo de ejecución de simultaneidad)][taskParallelism].
+**Nota**crear una cadena de tareas es solo uno de las formas de usar la clase **task** para componer operaciones asincrónicas. También puedes componer operaciones usando los operadores de unión y elección **&&** y **||**. Para obtener más información, consulta [Paralelismo de tareas (tiempo de ejecución de simultaneidad)][taskParallelism].
 
 ## <a name="lambda-function-return-types-and-task-return-types"></a>Tipos devueltos de tareas y tipos devueltos de función Lambda
 En una continuación de tarea, el tipo devuelto de la función lambda se incluye en un objeto **task**. Si el lambda devuelve una **double**, el tipo de tarea de continuación es **task<double>**. No obstante, el objeto de tarea está diseñado para que no produzca tipos devueltos anidados sin necesidad. Si un lambda devuelve una **IAsyncOperation<SyndicationFeed^>^**, la continuación devuelve una **task<SyndicationFeed^>**, no una **task<task<SyndicationFeed^>>** o **task<IAsyncOperation<SyndicationFeed^>^>^**. Este proceso se conoce como *desencapsulación asincrónica* y también garantiza que la operación asincrónica dentro de la continuación se complete antes de que se invoque a la siguiente continuación.

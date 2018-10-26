@@ -1,41 +1,41 @@
 ---
 author: TylerMSFT
-title: "Administrar la activación de archivos"
-description: "Una aplicación se puede registrar para convertirse en el controlador predeterminado de un tipo de archivo específico."
+title: Administrar la activación de archivos
+description: Una aplicación se puede registrar para convertirse en el controlador predeterminado de un tipo de archivo específico.
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 07/05/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e05cc939d4a836e2f385a20f63d6ffb2242696db
-ms.sourcegitcommit: 7f03e200ef34f7f24b6f8b6489ecb44aa2b870bc
-ms.translationtype: HT
+ms.localizationpriority: medium
+dev_langs:
+- csharp
+- vb
+- cppwinrt
+- cpp
+ms.openlocfilehash: 9f1e41c3e09d9a711ce9174a5a658a55c7c44abd
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569726"
 ---
 # <a name="handle-file-activation"></a>Administrar la activación de archivos
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 **API importantes**
 
 -   [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
 -   [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
 
-Una aplicación se puede registrar para convertirse en el controlador predeterminado de un tipo de archivo específico. Tanto las aplicaciones de escritorio de Windows como las aplicaciones de la Plataforma universal de Windows (UWP) pueden registrarse para convertirse en el controlador de archivos predeterminado. Si el usuario elige tu aplicación como controlador predeterminado de un tipo de archivo específico, la aplicación se activará cuando se inicie dicho tipo de archivo.
+La aplicación pueda registrar para convertirse en el controlador predeterminado de un tipo de archivo determinado. Tanto las aplicaciones de escritorio de Windows como las aplicaciones de la Plataforma universal de Windows (UWP) pueden registrarse para convertirse en el controlador de archivos predeterminado. Si el usuario elige tu aplicación como controlador predeterminado de un tipo de archivo específico, la aplicación se activará cuando se inicie dicho tipo de archivo.
 
 Te recomendamos que solo registres tu aplicación para un tipo de archivo si tienes previsto administrar todos los inicios de archivos de ese tipo. Si tu aplicación solo necesita usar el tipo de archivo internamente, no tienes que registrarla para que sea el controlador predeterminado. Si, en efecto, eliges registrarla para un tipo de archivo, debes proporcionar al usuario final todas las funciones que se esperan cuando tu aplicación se active para ese tipo de archivo. Por ejemplo, un visor de imágenes puede registrarse para mostrar un archivo .jpg. Para obtener más información sobre las asociaciones de archivos, consulta [Directrices para los tipos de archivo y URI](https://msdn.microsoft.com/library/windows/apps/hh700321).
 
 En estos pasos se muestra cómo realizar el registro de un tipo de archivo personalizado, .alsdk, y cómo se activa una aplicación cuando el usuario inicia un archivo .alsdk.
 
-> **Nota** En las aplicaciones para UWP, algunas extensiones de archivo y URI se reservan para que las usen aplicaciones integradas y el sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Para más información, consulta [Nombres de esquemas de URI y archivos reservados](reserved-uri-scheme-names.md).
+> **Nota**en aplicaciones para UWP, algunas extensiones de archivo y URI se reservan para su uso por las aplicaciones integradas y el sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Para más información, consulta [Nombres de esquemas de URI y archivos reservados](reserved-uri-scheme-names.md).
 
 ## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Paso 1: Especificar el punto de extensión en el manifiesto del paquete
-
 
 La aplicación recibe eventos de activación solo para las extensiones de archivo listadas en el manifiesto del paquete. Aquí se muestra cómo debes indicar que la aplicación controla los archivos con la extensión `.alsdk`.
 
@@ -74,7 +74,6 @@ Los pasos anteriores permiten agregar un elemento [**Extension**](https://msdn.m
 
 ## <a name="step-2-add-the-proper-icons"></a>Paso 2: Agregar los iconos adecuados
 
-
 Las aplicaciones que se convierten en predeterminadas para un tipo de archivo muestran sus iconos en varios lugares del sistema. Por ejemplo, estos iconos se muestran en:
 
 -   Vista de elementos del Explorador de Windows, menús contextuales y la cinta
@@ -82,30 +81,13 @@ Las aplicaciones que se convierten en predeterminadas para un tipo de archivo mu
 -   Selector de archivos
 -   Resultados de búsqueda en la pantalla Inicio
 
-Incluir un icono de 44 x 44 con el proyecto para que tu logotipo puede aparecer en estas ubicaciones. Ajusta el aspecto del logotipo del icono de la aplicación y usa el color de fondo de la aplicación en lugar de hacer que el icono sea transparente. Extiende el logotipo hasta el borde sin que quede espacio. Prueba los iconos sobre fondos blancos. Consulta [Directrices para los activos de iconos](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets) para obtener más información sobre los iconos.
+Incluir un icono de 44 x 44 con el proyecto para que tu logotipo puede aparecer en estas ubicaciones. Ajusta el aspecto del logotipo del icono de la aplicación y usa el color de fondo de la aplicación en lugar de hacer que el icono sea transparente. Extiende el logotipo hasta el borde sin que quede espacio. Prueba los iconos en fondos de color blanco. Consulta [Directrices para los activos de iconos](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/app-assets) para obtener más información sobre los iconos.
 
 ## <a name="step-3-handle-the-activated-event"></a>Paso 3: Administrar el evento activado
 
-
 El controlador de eventos [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331) recibe todos los eventos de activación de archivos.
 
-> [!div class="tabbedCodeSnippets"]
-```vb
-Protected Overrides Sub OnFileActivated(ByVal args As Windows.ApplicationModel.Activation.FileActivatedEventArgs)
-      ' TODO: Handle file activation
-      ' The number of files received is args.Files.Size
-      ' The name of the first file is args.Files(0).Name
-End Sub
-```
-```cpp
-void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEventArgs^ args)
-{
-       // TODO: Handle file activation
-       // The number of files received is args->Files->Size
-       // The first file is args->Files->GetAt(0)->Name
-}
-```
-```cs
+```csharp
 protected override void OnFileActivated(FileActivatedEventArgs args)
 {
        // TODO: Handle file activation
@@ -114,45 +96,63 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-    > **Note**  When launched via File Contract, make sure that Back button takes the user back to the screen that launched the app and not to the app's previous content.
+```vb
+Protected Overrides Sub OnFileActivated(ByVal args As Windows.ApplicationModel.Activation.FileActivatedEventArgs)
+      ' TODO: Handle file activation
+      ' The number of files received is args.Files.Size
+      ' The name of the first file is args.Files(0).Name
+End Sub
+```
 
-Se recomienda que las aplicaciones creen un nuevo elemento Frame de XAML para cada evento de activación que abra una nueva página. Así, la navegación hacia atrás del nuevo marco XAML no incluirá nada del contenido anterior que la aplicación tuviera en la ventana actual al pasar a suspensión. Las aplicaciones que decidan usar un solo elemento Frame de XAML para los contratos Iniciar y Archivo deben borrar las páginas del diario de navegación del elemento Frame antes de ir a una página nueva.
+```cppwinrt
+void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEventArgs const& args)
+{
+    // TODO: Handle file activation.
+    auto numberOfFilesReceived{ args.Files().Size() };
+    auto nameOfTheFirstFile{ args.Files().GetAt(0).Name() };
+}
+```
 
-Si se inician a través de la activación de archivo, las aplicaciones deberían plantearse incluir una interfaz de usuario que permita al usuario volver a la página superior de la aplicación.
+```cpp
+void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEventArgs^ args)
+{
+    // TODO: Handle file activation
+    // The number of files received is args->Files->Size
+    // The name of the first file is args->Files->GetAt(0)->Name
+}
+```
+
+> [!NOTE]
+> Cuando se inicia mediante un contrato de archivo, asegúrate de que el botón Atrás lleve al usuario volver a la pantalla que inició la aplicación y no al contenido anterior de la aplicación.
+
+Te recomendamos que crees un nuevo XAML **fotograma** para cada evento de activación que abra una nueva página. De este modo, el objeto backstack de navegación del nuevo marco de XAML no contiene ningún contenido anterior que la aplicación en la ventana actual al pasar a suspensión. Si decides usar un único **fotograma** de XAML para el inicio y para los contratos de archivo, debe borrar las páginas en el **marco**del diario de navegación antes de ir a una página nueva.
+
+Cuando se inicia la aplicación a través de la activación de archivos, considera la posibilidad de una interfaz de usuario que permita al usuario volver a la página superior de la aplicación.
 
 ## <a name="remarks"></a>Observaciones
 
-
 Los archivos que recibes pueden provenir de un origen que no es de confianza. Se recomienda que valides el contenido de un archivo antes de realizar una acción en él. Para más información, consulta [Escribir código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053).
-
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-**Ejemplo completo**
+### <a name="complete-example"></a>Ejemplo completo
 
 * [Ejemplo de inicio por asociación](http://go.microsoft.com/fwlink/p/?LinkID=231484)
 
-**Conceptos**
+### <a name="concepts"></a>Conceptos
 
 * [Programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154)
 * [Modelo de asociación de tipos de archivo y protocolos](https://msdn.microsoft.com/library/windows/desktop/hh848047)
 
-**Tareas**
+### <a name="tasks"></a>Tareas
 
 * [Iniciar la aplicación predeterminada de un archivo](launch-the-default-app-for-a-file.md)
 * [Controlar la activación de URI](handle-uri-activation.md)
 
-**Instrucciones**
+### <a name="guidelines"></a>Instrucciones
 
 * [Directrices sobre tipos de archivo y URI](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
-**Referencia**
-* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
-* [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
-
- 
-
- 
+### <a name="reference"></a>Referencia
+* [Windows.ApplicationModel.Activation.FileActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224716)
+* [Windows.UI.Xaml.Application.OnFileActivated](https://msdn.microsoft.com/library/windows/apps/br242331)

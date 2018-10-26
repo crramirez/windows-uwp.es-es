@@ -6,19 +6,18 @@ ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, juegos, directx, recursos, imágenes
-ms.openlocfilehash: 1aeb4ef581254ae914efae4bc38853611dbde488
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 24fd038bdd447491da43e5d5803445d00147ba2d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238708"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567710"
 ---
 # <a name="set-up-directx-resources-and-display-an-image"></a>Configuración de recursos de DirectX y visualización de una imagen
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aquí te mostramos cómo crear un dispositivo Direct3D, una cadena de intercambio y una vista de destino de representación, y cómo mostrar la imagen representada en la pantalla.
 
@@ -233,7 +232,7 @@ En este bucle, llamamos a:
 Como antes habíamos establecido la latencia de fotogramas en 1, Windows, por lo general, disminuye la velocidad del bucle de representación a la velocidad de actualización de pantalla, que es normalmente alrededor de 60 Hz. Windows disminuye el bucle sin fin poniendo a la aplicación en modo de suspensión cuando llama a [**Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576). Windows pone a la aplicación en modo de suspensión hasta que se actualiza la pantalla.
 
 ```cpp
-        // Enter the render loop.  Note that Windows Store apps should never exit.
+        // Enter the render loop.  Note that UWP apps should never exit.
         while (true)
         {
             // Process events incoming to the window.
@@ -288,9 +287,9 @@ A continuación, también dibujaremos un triángulo en la pantalla.
 
 [Crear sombreadores y dibujar primitivos](creating-shaders-and-drawing-primitives.md)
 
- 
+ 
 
- 
+ 
 
 
 

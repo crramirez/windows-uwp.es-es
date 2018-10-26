@@ -6,24 +6,23 @@ ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 88d4b155acb38a3ab11cc180d112fb3434af87a0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 560f820ec2ecc7f28145ec29c31a60c1e4573d7e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239782"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565432"
 ---
 # <a name="xaml-and-whitespace"></a>XAML y espacio en blanco
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Obtén información sobre las reglas de procesamiento de espacios en blanco que usa XAML.
 
 ## <a name="whitespace-processing"></a>Procesamiento de espacios en blanco
 
-Al igual que en XML, los espacios en blanco en XAML son espacios, saltos de línea y tabulaciones. Estos corresponden a los valores Unicode 0020, 000A y 0009 respectivamente. De manera predeterminada, se produce la siguiente normalización de los espacios en blanco cuando un procesador XAML procesa el texto interno que se encuentra entre los elementos de un archivo XAML:
+Coherente con XML, espacios en blanco en XAML son espacios, saltos de línea y tabulaciones. Estos corresponden a los valores Unicode 0020, 000A y 0009 respectivamente. De manera predeterminada, se produce la siguiente normalización de los espacios en blanco cuando un procesador XAML procesa el texto interno que se encuentra entre los elementos de un archivo XAML:
 
 -   Se eliminan los saltos de línea entre los caracteres de Asia oriental.
 -   Todos los espacios en blanco (espacio, salto de línea, tabulación) se convierten en espacios.

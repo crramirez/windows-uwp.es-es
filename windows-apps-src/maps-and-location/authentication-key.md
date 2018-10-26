@@ -6,16 +6,14 @@ ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, clave de autenticación de mapa, control de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 74a72ac3a309ab7ee1590d40c8e8f415558ef9b1
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c42255ec42432d0674533492e141c4a48f3bb9ff
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "665601"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571030"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar una clave de autenticación de mapas
 
@@ -35,7 +33,7 @@ Usa el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal
 
 Para crear una nueva clave
 
-1.  En el explorador, navegue hasta el Centro para desarrolladores de mapas de Bing ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
+1.  En el explorador, ve al centro de desarrollo de mapas de Bing ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
 
 2.  Si se te pide que inicies sesión, escribe tu cuenta de Microsoft y haz clic en **Iniciar sesión**.
 

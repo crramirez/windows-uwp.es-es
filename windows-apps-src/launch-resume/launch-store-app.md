@@ -1,29 +1,27 @@
 ---
 author: TylerMSFT
 title: Iniciar la aplicación Microsoft Store
-description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store a páginas específicas en el almacén.
+description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store en páginas específicas en la tienda.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b97e4da92a7cd4066ca555189f052e3e82006fe
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975657"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571946"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar la aplicación Microsoft Store
 
 
 
-En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede utilizar este esquema de URI para iniciar la aplicación de Microsoft Store a páginas específicas en el almacén mediante el método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
+En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store en páginas específicas en la tienda mediante el método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
 
-En este ejemplo se muestra cómo abrir el almacén de la página de juegos:
+En este ejemplo se muestra cómo abrir la tienda a la página de juegos:
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
@@ -139,6 +137,6 @@ Inicia una búsqueda de la consulta especificada. Se permiten los espacios en la
 </tr>
 </table>
 
- 
+ 
 
- 
+ 

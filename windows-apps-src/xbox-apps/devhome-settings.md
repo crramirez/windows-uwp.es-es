@@ -1,37 +1,35 @@
 ---
 author: v-angraf
 ms.assetid: ec3945e7-cfb1-b91a-7ae6-e767a7227f8a
-title: Página de configuración (desarrollo principal)
-description: Proporciona información acerca de la página Configuración de la aplicación principal de desarrollo para Xbox uno.
+title: Página de configuración (Dev Home)
+description: Proporciona información sobre la página de configuración de la aplicación Dev Home para Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e26a5000e6f219f5b617cc806d386cbd9ded298
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: ec27464c2bcece46e4a658cc59ac8ef0b7f390f7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015605"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568183"
 ---
-# <a name="settings-page-dev-home"></a>Página de configuración (desarrollo principal)
+# <a name="settings-page-dev-home"></a>Página de configuración (Dev Home)
    
   
-La página **configuración** de desarrollo principal proporciona acceso a diferentes opciones para la consola de desarrollo.   
- ![Página de configuración de la página principal de desarrollo](images/devhome_settings.png)   
+La página de **configuración** de Dev Home proporciona acceso a diversas opciones de configuración para la consola de desarrollo.   
+ ![Página de configuración de Dev Home](images/devhome_settings.png)   
   
-La página **configuración** contiene los paneles siguientes:   
+La página de **configuración** contiene los paneles siguientes:   
  
    *  [Configuración de la consola](#ID4EEB)  
-   *  [Opciones de actualización de recuperación de sistema operativo](#ID4EOB)  
+   *  [Configuración de actualización de recuperación del sistema operativo](#ID4EOB)  
    *  [Visual Studio](#ID4EYB)  
    *  [Configuración de depuración](#ID4ECC)  
-   *  [Configuración de la secuencia de comandos desatendida](#ID4EMC)  
-   *  [Experiencia de página principal predeterminado](#ID4E3C)  
+   *  [Configuración de script de instalación desatendida](#ID4EMC)  
+   *  [Experiencia principal predeterminada](#ID4E3C)  
 
  
 <a id="ID4EEB"></a>
@@ -41,16 +39,16 @@ La página **configuración** contiene los paneles siguientes:
 ## <a name="console-settings"></a>Configuración de la consola  
    
   
-El panel de **configuración de la consola** proporciona una vista "de un vistazo" de la información y configuración de la consola. Puede usar estas herramientas para ver y editar el nombre de host de la consola, espacio aislado y configuración de seguridad de acceso clave.   
+El panel de **configuración de la consola** proporciona una vista "un vistazo" de configuración de la consola y la información. Puedes usar estas herramientas para ver y editar el nombre de host, espacio aislado y configuración de teclas de acceso de seguridad de la consola.   
   
 <a id="ID4EOB"></a>
 
    
 
-## <a name="os-recovery-update-settings"></a>Opciones de actualización de recuperación de sistema operativo  
+## <a name="os-recovery-update-settings"></a>Configuración de actualización de recuperación del sistema operativo  
    
   
-El panel de **actualización de la recuperación del sistema operativo configuración** configura la configuración de actualización automática de la consola. Tenga en cuenta que los cambios en estas opciones de configuración puede tardar hasta 24 horas para que surtan efecto.   
+El panel de **recuperación del sistema operativo actualizar la configuración** configura las opciones de actualización automática de la consola. Ten en cuenta que los cambios en estas opciones de configuración puede tardar hasta 24 horas surta efecto.   
   
 <a id="ID4EYB"></a>
 
@@ -59,7 +57,7 @@ El panel de **actualización de la recuperación del sistema operativo configura
 ## <a name="visual-studio"></a>Visual Studio  
    
   
-El panel de **Visual Studio** se utiliza para emparejar la consola con Visual Studio. También puede quitar todas las instancias de Visual Studio emparejadas.   
+Se usa el panel de **Visual Studio** para emparejar la consola con Visual Studio. También puedes quitar todas las instancias de Visual Studio emparejadas.   
   
 <a id="ID4ECC"></a>
 
@@ -68,31 +66,31 @@ El panel de **Visual Studio** se utiliza para emparejar la consola con Visual St
 ## <a name="debug-settings"></a>Configuración de depuración  
    
   
-El panel de **configuración de depuración** se usa para ver y alternar comunes configuración de depuración.   
+Se usa el panel de **configuración de depuración** para ver y alternar comunes configuración de depuración.   
   
 <a id="ID4EMC"></a>
 
    
 
-## <a name="unattended-script-configuration"></a>Configuración de la secuencia de comandos desatendida  
+## <a name="unattended-script-configuration"></a>Configuración de script de instalación desatendida  
    
   
-El panel de **configuración de secuencias de comandos Unattended** administra las secuencias de comandos del programa de instalación para consolas Xbox uno.   
+El panel de **configuración de la secuencia de comandos desatendida** administra los scripts de instalación de consolas Xbox One.   
   
 <a id="ID4E3C"></a>
 
    
 
-## <a name="default-home-experience"></a>Experiencia de página principal predeterminado  
+## <a name="default-home-experience"></a>Experiencia principal predeterminada  
    
   
-El panel **Predeterminado Home experiencia** determina si se muestra la pantalla de inicio de venta por menor o la pantalla de [Inicio para desarrolladores en la consola (desarrollo principal)](dev-home.md) cuando se inicia la consola.   
+El panel **Predeterminado experiencia Home** determina si se muestra la pantalla de inicio de la versión comercial o de la pantalla de [Inicio del desarrollador en la consola (Dev Home)](dev-home.md) cuando se inicia la consola.   
   
 <a id="ID4EJD"></a>
 
    
 
-## <a name="see-also"></a>Consulta también  
- [Página principal de desarrollador en la consola (desarrollo principal)](dev-home.md)
+## <a name="see-also"></a>Ver también  
+ [Inicio del desarrollador en la consola (Dev Home)](dev-home.md)
 
   

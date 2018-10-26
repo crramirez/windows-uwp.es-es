@@ -6,18 +6,17 @@ title: Referencia de opciones de BitmapEncoder
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: adfd360c22fd6737d9e95e6e3153f4e2767a4c99
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 13f19ce909703b6748ab00aec1026e30d5c70a64
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238422"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570583"
 ---
 # <a name="bitmapencoder-options-reference"></a>Referencia de opciones de BitmapEncoder
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artículo enumera las opciones de codificación que pueden usarse con [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206). Una opción de codificación se define por su nombre, que es una cadena, y un valor en un determinado tipo de datos ([**Windows.Foundation.PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871)). Para obtener más información sobre el trabajo con imágenes, consulta [Crear, editar y guardar imágenes de mapa de bits](imaging.md).
 
@@ -35,14 +34,14 @@ Este artículo enumera las opciones de codificación que pueden usarse con [**Bi
 | SuppressApp0            | booleano      | Define si se suprime la creación de un bloque de metadatos App0.                                        | JPEG          |
 | EnableV5Header32bppBGRA | booleano      | Define si se debe codificar a una versión de 5 BMP que admita alfa.                                         | BMP           |
 
- 
+ 
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Crear, editar y guardar imágenes de mapa de bits](imaging.md)
 * [Códecs admitidos](supported-codecs.md)
 
- 
+ 
 
 
 

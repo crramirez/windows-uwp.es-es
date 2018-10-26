@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 181b958009a5537f7adccb1b784dacde06fe21d4
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 3c15ff6aa43540b61b410525e6bb20a0de3da821
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044774"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570795"
 ---
 # <a name="span-iddirect3dconceptsconfiguringdepth-stencilfunctionalityspanconfiguring-depth-stencil-functionality"></a><span id="direct3dconcepts.configuring_depth-stencil_functionality"></span>Configurar la funcionalidad de la galería de símbolos de profundidad
 
@@ -87,7 +85,7 @@ Los volúmenes de sombra se usan para dibujar sombras con el búfer de la galer�
 
 La primera representación dibuja polígonos orientados hacia el frente y aumenta los valores del búfer de la galería de símbolos. La segunda representación dibuja los polígonos orientados hacia atrás del volumen de sombra y reduce los valores del búfer de la galería de símbolos.
 
-Normalmente, todos los valores incrementados y reduce cancelan entre sí. Sin embargo, la escena ya se representó con geometría normal, lo que provoca que algunos píxeles se lleve a cabo la prueba del búfer de z mientras se presenta el volumen de instantáneas. Los valores que quedan en el búfer de la galería de símbolos corresponden a los píxeles que se encuentran en la sombra. Estos contenidos del búfer de la galería de símbolos que quedan se usan como máscara, para la combinación alfa de un cuadrado negro grande, que abarca todo en la escena. Con el búfer de la galería de símbolos como máscara, el resultado es oscurecer los píxeles que se encuentran en las sombras.
+Normalmente, todos los valores incrementados y reduce aumentados. Sin embargo, la escena ya estaba representada con la geometría normal, por lo que algunos píxeles no supera la prueba de búfer z a medida que se representa el volumen de sombra. Los valores que quedan en el búfer de la galería de símbolos corresponden a los píxeles que se encuentran en la sombra. Estos contenidos del búfer de la galería de símbolos que quedan se usan como máscara, para la combinación alfa de un cuadrado negro grande, que abarca todo en la escena. Con el búfer de la galería de símbolos como máscara, el resultado es oscurecer los píxeles que se encuentran en las sombras.
 
 Esto significa que la geometría de las sombras se dibuja dos veces por fuente de luz, lo que ejerce presión en el rendimiento de vértices de la GPU. La característica de galería de símbolos a doble cara se ha diseñado para mitigar esta situación. En este enfoque, existen dos conjuntos de estado de la galería de símbolos (nombrados a continuación), un conjunto cada uno para los triángulos orientados al frente y otro para los triángulos orientados hacia atrás. De esta forma, solo se dibuja una única pasada por volumen de sombra, por luz.
 

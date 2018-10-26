@@ -6,16 +6,14 @@ ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, juegos, DirectX, cargar recursos, games, loading resources
 ms.localizationpriority: medium
-ms.openlocfilehash: 12dd2fd39ff0b39e747488952779cfeb180f06fa
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 1bea3f515ba8ff810fc6dfd6281f0488c4f3e235
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983558"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565333"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Cargar recursos en tu juego DirectX
 
@@ -73,7 +71,7 @@ Puedes encontrar el código completo de estas muestras en los siguientes víncul
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="instructions"></a>Instrucciones
 
@@ -216,7 +214,7 @@ Tomemos los datos de bytes del archivo de la malla. El formato del ejemplo supon
 -   Luego, los bits subsiguientes (numVertices \* sizeof(**BasicVertex**)) contienen los datos de vértices.
 -   Los últimos bits (numIndices \* 16) de datos contienen los datos de índice, representados como una secuencia de valores uint16.
 
-Lo importante es que conozcas el diseño del nivel de bits de los datos de la malla que has cargado. También asegúrate de ser coherente con endianness. Todas las plataformas de Windows 8 son little-endian.
+Lo importante es que conozcas el diseño del nivel de bits de los datos de la malla que has cargado. También asegúrate de ser coherente con endianness. Todas las plataformas de Windows8 son little-endian.
 
 En el ejemplo, llamas a un método, CreateMesh, a partir del método **LoadMeshAsync**, para que interprete este nivel de bits.
 
@@ -707,9 +705,9 @@ Llegados a este punto, deberías comprender y poder crear o modificar métodos p
 * [Código completo para BasicReaderWriter](complete-code-for-basicreaderwriter.md)
 * [Código completo para DDSTextureLoader](complete-code-for-ddstextureloader.md)
 
- 
+ 
 
- 
+ 
 
 
 

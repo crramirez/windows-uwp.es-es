@@ -5,16 +5,14 @@ description: Simbologías compatibles con el escáner de código de barras basad
 ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b1a96e0e8f512b59e912ed0898f2f0b03a8c261
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: Auto
+ms.openlocfilehash: c74e72c826687c2b21284c169c345e145505e104
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833355"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565878"
 ---
 # <a name="symbologies"></a>Simbologías
 Este tema proporciona códigos de barras de muestra para cada una de las simbologías admitidas por el descodificador de código de barras de software de Windows 10, incluidos: UPC/EAN, Code 39, Code 128, Interleaved 2 of 5, Databar Omnidirectional, Databar Stacked, Código QR y GS1DWCode.

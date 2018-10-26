@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 84036edd2071d9545b3a492ea5cf0b397d9e722e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 5846edda167823b7ae161d332fbde450ccf20d72
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044434"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572171"
 ---
 # <a name="diffuse-lighting"></a>Luz difusa
 
@@ -41,7 +39,7 @@ Iluminación difusa = sum\[C<sub>d</sub>\*L<sub>d</sub>\*(N<sup>.</sup>L<sub>dir
 | Atten           | N/A           | FLOAT         | Atenuación de la luz. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md). |
 | Spot            | N/A           | FLOAT         | Factor de foco de luz Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md).  |
 
- 
+ 
 
 Para calcular la atenuación (Atten) o las características de foco de luz (Spot), consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md).
 
@@ -73,9 +71,9 @@ La iluminación difusa cuesta más de calcular que la iluminación ambiental. Da
 
 [Cálculos de iluminación](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 213ff4e2a120c91211720d887ab8f777b9265106
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: e98b9942dfc14604c061a036cd3c9803abaf3915
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043544"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567690"
 ---
 # <a name="shader-resource-view-srv-and-unordered-access-view-uav"></a>Vista de recursos del sombreador (SRV) y vista de acceso desordenado (UAV)
 
@@ -32,9 +30,9 @@ Las vistas de acceso desordenado son un poco más costosas en términos de rendi
 
 [Vistas](views.md)
 
- 
+ 
 
- 
+ 
 
 
 

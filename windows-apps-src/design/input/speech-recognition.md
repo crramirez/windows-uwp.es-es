@@ -9,15 +9,13 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e8abeb4cb690f39a5d9145c3975edbb5a5252765
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 7ce8146cc952d22eb0aa365be707cbd2cef7aabf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654524"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567795"
 ---
 # <a name="speech-recognition"></a>Reconocimiento de voz
 
@@ -53,7 +51,7 @@ Puedes usar varios tipos de restricciones para el reconocimiento de voz:
 
     La gramática de búsqueda web, como una gramática de dictado, contiene un gran número de palabras y frases que puede decir un usuario. Sin embargo, está optimizada para reconocer los términos que suelen usar las personas cuando buscan en la web.
 
-    **Nota** Debido a que las gramáticas predefinidas de dictado y búsqueda en Internet pueden ser grandes y se accede a ellas a través de Internet (no se encuentran en el dispositivo), su rendimiento puede no ser tan rápido como el de una gramática personalizada instalada en el dispositivo.     
+    **Nota**dado que las gramáticas predefinidas de dictado y búsqueda en Internet pueden ser grandes, y que están en línea (no en el dispositivo), su rendimiento puede no ser tan rápido como el de una gramática personalizada instalada en el dispositivo.     
 
     Estas gramáticas predefinidas pueden usarse para reconocer hasta 10 segundos de entrada de voz y no requieren ningún esfuerzo de edición por su parte. Sin embargo, sí requieren una conexión a una red.
 
@@ -104,10 +102,10 @@ Puedes usar varios tipos de restricciones para el reconocimiento de voz:
 
     Usa un archivo XML de definición de comando de voz (VCD) para definir los comandos que el usuario puede decir para iniciar acciones al activar tu aplicación. Para obtener más detalles, consulta [Iniciar una aplicación en primer plano con comandos de voz en Cortana (XAML)](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana).
 
-**Nota**  El tipo de restricción que uses dependerá de la complejidad de la funcionalidad de reconocimiento que quieras crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
+**Nota**qué tipo de restricción que uses dependerá de la complejidad de la funcionalidad de reconocimiento que desees crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
 Para comenzar con las restricciones, consulta [Definir restricciones de reconocimiento personalizadas](define-custom-recognition-constraints.md).
 
- 
+ 
 
 La gramática de dictado predefinida de la aplicación para Windows universal reconoce la mayoría de las palabras y frases cortas de un idioma. Se activa de manera predeterminada cuando se crea una instancia a un objeto reconocedor de voz sin restricciones personalizadas.
 
@@ -201,9 +199,9 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 * [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
 **Ejemplos**
 * [Muestra de reconocimiento de voz y síntesis de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

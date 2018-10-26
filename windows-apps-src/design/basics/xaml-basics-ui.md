@@ -6,15 +6,13 @@ keywords: XAML, UWP, Introducción
 ms.author: jimwalk
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ddf4bacbc07eb6d7faccc1a4de2638f7219b562
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
-ms.translationtype: HT
+ms.openlocfilehash: 5d54df07cd5f2ccc32098b17fd7c656900cba978
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1639145"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570944"
 ---
 # <a name="tutorial-create-a-user-interface"></a>Tutorial: Crear una interfaz de usuario
 

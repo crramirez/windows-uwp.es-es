@@ -5,17 +5,15 @@ title: Actualizar el porcentaje de lanzamiento de un envío de aplicación
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, package rollout, lanzamiento de paquete, app submission, envío de la aplicación, update, actualizar, percentage, porcentaje
 ms.assetid: 4c82d837-7a25-4f3a-997e-b7be33b521cc
 ms.localizationpriority: medium
-ms.openlocfilehash: d39507af310c34621d7a4951e426bc6596284234
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: e943e27275f5938960f673ac68572593cf4ece57
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5513653"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567386"
 ---
 # <a name="update-the-rollout-percentage-for-an-app-submission"></a>Actualizar el porcentaje de lanzamiento de un envío de aplicación
 

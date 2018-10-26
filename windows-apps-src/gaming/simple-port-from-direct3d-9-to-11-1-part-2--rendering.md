@@ -6,19 +6,18 @@ ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, marco de representación, convertir, direct3d 9, direct3d 11
-ms.openlocfilehash: d33a694cf835ba3d997a7c4a111349c117e2493e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 044a0dc7bf264a82b849623a53d00268d7b30fd9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238655"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569636"
 ---
 # <a name="convert-the-rendering-framework"></a>Convertir el marco de representación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -100,18 +99,17 @@ En Direct3D 11 aún podemos usar nuestros sombreadores HLSL. Ponemos cada sombre
 
 Después de definir el diseño de entrada, nos aseguramos de que este represente la misma estructura de datos que usamos para almacenar datos de vértice en la memoria del sistema y en la memoria de GPU. De manera similar, la salida de un sombreador de vértices debe coincidir con la estructura que se usó como entrada en el sombreador de píxeles. Las reglas difieren de las de pasar datos de una función a otra en C++. Puedes omitir las variables no usadas al final de la estructura. No obstante, no se puede reorganizar el orden ni omitir contenido en el medio de la estructura de datos.
 
-> **Nota**  
-Las reglas que Direct3D 9 ofrecía para enlazar sombreadores de vértices con sombreadores de píxeles eran menos estrictas que las reglas de Direct3D 11. La organización en Direct3D 9 era flexible pero ineficiente.
+> **Nota**  las reglas en Direct3D 9 para enlazar sombreadores de vértices con sombreadores de píxeles eran menos estrictas que las reglas de Direct3D 11. La organización en Direct3D 9 era flexible pero ineficiente.
 
- 
+ 
 
 Es posible que tus archivos HLSL usen la sintaxis anterior para la semántica de sombreador, por ejemplo, COLOR en lugar de SV\_TARGET. En ese caso, tendrás que habilitar el modo de compatibilidad HLSL (opción del compilador /Gec) o actualizar la [semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647) del sombreador para la sintaxis actual. En este ejemplo, se actualizó el sombreador de vértices con la sintaxis actual.
 
 Este es nuestro sombreador de vértices para la transformación de hardware, esta vez definido en su propio archivo.
 
-> **Nota** Los sombreadores de vértices son necesarios para producir la salida de la semántica del valor del sistema SV\_POSITION. Esta semántica resuelve los datos de posición de vértice para coordinar valores donde: el valor de X está entre -1 y 1; el de Y está entre -1 y 1; el de Z se divide por el valor W de la coordenada homogénea original (Z/W) y el de W es 1 dividido por el valor W original (1/W).
+> **Nota**los sombreadores de vértices son necesarios para el valor del sistema SV\_POSITION de salida. Esta semántica resuelve los datos de posición de vértice para coordinar valores donde: el valor de X está entre -1 y 1; el de Y está entre -1 y 1; el de Z se divide por el valor W de la coordenada homogénea original (Z/W) y el de W es 1 dividido por el valor W original (1/W).
 
- 
+ 
 
 Sombreador de vértices HLSL (nivel de característica 9.1)
 
@@ -156,9 +154,9 @@ VS_OUTPUT main(VS_INPUT input) // main is the default function name
 
 Esto es todo lo que necesitamos para nuestro sombreador de píxeles de paso. Aunque lo llamamos de paso, en verdad obtiene datos de color interpolados en correcta perspectiva para cada píxel. Ten en cuenta que nuestro sombreador de píxeles aplica la semántica del valor del sistema SV\_TARGET a la salida del valor de color, como lo requiere la API.
 
-> **Nota** Los sombreadores de píxeles del nivel 9\_x no se pueden leer en la semántica del valor del sistema SV\_POSITION. Los sombreadores de píxeles de modelo 4.0 (y posterior) pueden usar SV\_POSITION para recuperar la ubicación de píxeles en la pantalla, donde x está entre 0 y el ancho del destino de representación e y está entre 0 y el alto del destino de representación (con desplazamiento de 0,5 cada uno).
+> **Nota**sombreadores de píxeles de sombreador nivel 9\_x no se pueden leer el valor del sistema SV\_POSITION. Los sombreadores de píxeles de modelo 4.0 (y posterior) pueden usar SV\_POSITION para recuperar la ubicación de píxeles en la pantalla, donde x está entre 0 y el ancho del destino de representación e y está entre 0 y el alto del destino de representación (con desplazamiento de 0,5 cada uno).
 
- 
+ 
 
 La mayoría de los sombreadores de píxeles son mucho más complejos que uno de paso. Recuerda que los niveles más altos de característica de Direct3D permiten hacer un mayor número de cálculos por programa sombreador.
 
@@ -240,9 +238,9 @@ m_d3dDevice->CreateVertexShader(
 
 Para incluir el código de bytes del sombreador en el paquete de la aplicación compilado, solo agrega el archivo HLSL al proyecto de Visual Studio. Visual Studio usará la [herramienta compiladora de efectos](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) para compilar archivos HLSL en objetos de sombreador compilado (archivos .CSO) e incluirlos en el paquete de la aplicación.
 
-> **Nota** Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL. Haz clic con el botón derecho en el archivo de origen HLSL en Visual Studio, selecciona Propiedades y cambia la configuración de **Modelo de sombreador** en **Compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
+> **Nota**  Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL: haz clic en el archivo de origen HLSL en Visual Studio, selecciona propiedades y cambiar la configuración de **Modelo de sombreador** en **compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
 
- 
+ 
 
 ![Propiedades de sombreador HLSL](images/hlslshaderpropertiesmenu.png)![Tipo de sombreador HLSL](images/hlslshadertypeproperties.png)
 
@@ -250,9 +248,9 @@ Este es un buen lugar para crear el diseño de entrada, que corresponde a la dec
 
 Los datos de vértice se deben almacenar en tipos compatibles en la memoria del sistema. Los tipos de datos DirectXMath pueden ser útiles, por ejemplo, DXGI\_FORMAT\_R32G32B32\_FLOAT corresponde a [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475).
 
-> **Nota** Los búferes de constantes usan un diseño de entrada fijo que se alinea a cuatro números de punto flotante a la vez. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (y sus derivados) se recomiendan para datos de búferes de constantes.
+> **Nota**  búferes de constantes usan un diseño de entrada fijo que se alinea a cuatro números de punto flotante a la vez. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (y sus derivados) se recomiendan para datos de búferes de constantes.
 
- 
+ 
 
 Establecer el diseño de entrada en Direct3D 11
 
@@ -489,9 +487,9 @@ m_swapChain->Present(1, 0);
 
 La cadena de representación que acabamos de crear recibirá una llamada proveniente de un bucle de juego implementado en el método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505). Esto se muestra en [Parte 3: Ventanilla y bucle del juego](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md).
 
- 
+ 
 
- 
+ 
 
 
 

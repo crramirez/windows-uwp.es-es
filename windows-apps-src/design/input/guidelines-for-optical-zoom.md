@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b49afdd4a9fe1db28c8195bdf166d6a74e153020
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: Auto
+ms.openlocfilehash: f1643638eaf7eb625defe1f25b44cae20faf0a5c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653804"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568271"
 ---
 # <a name="optical-zoom-and-resizing"></a>Zoom óptico y cambio de tamaño
 
@@ -41,10 +39,9 @@ Los siguientes diagramas muestran las diferencias entre cambio de tamaño y zoom
 
 ![juntar los dedos reduce el objeto, y alejarlos lo amplía.](images/objectresize.png)
 
-**Nota**  
-El zoom óptico no debe confundirse con el [zoom semántico](../controls-and-patterns/semantic-zoom.md). Aunque en las dos interacciones se usan los mismos gestos, el zoom semántico se refiere a la presentación y navegación de datos o contenido estructurados en una única vista (como la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos).
+**Nota**  zoom óptico no debe confundirse con [El Zoom semántico](../controls-and-patterns/semantic-zoom.md). Aunque en las dos interacciones se usan los mismos gestos, el zoom semántico se refiere a la presentación y navegación de datos o contenido estructurados en una única vista (como la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos).
 
- 
+ 
 
 ## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 
@@ -70,10 +67,9 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
     -   Las aplicaciones de dibujo en las que pueden aparecer elementos redimensionables en un elemento canvas redimensionable.
     -   Las páginas web con un objeto incrustado, como por ejemplo un mapa.
 
-    **Nota**  
-    En todos los casos, el área de contenido cambia de tamaño a menos que todos los puntos táctiles se encuentren dentro del objeto redimensionable.
+    **Nota**  en todos los casos, el área de contenido cambia de tamaño a menos que todos los puntos táctiles están dentro del objeto redimensionable.
 
-     
+     
 
 ## <a name="related-articles"></a>Artículos relacionados
 
@@ -93,9 +89,9 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
 * [Entrada: muestra de gestos de Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: muestra de manipulaciones y gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Muestra de entrada táctil de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

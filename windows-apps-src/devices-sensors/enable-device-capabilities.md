@@ -6,16 +6,14 @@ description: Este tutorial describe cómo declarar funcionalidades del dispositi
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 693a33bc212f6fe1b35414a20f2a6c44393c0b87
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: a7250c41795373b089f7a4c76b603c169b1e4dc3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989449"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566276"
 ---
 # <a name="enable-device-capabilities"></a>Habilitar funcionalidades de dispositivos
 
@@ -28,8 +26,7 @@ Este tutorial describe cómo declarar funcionalidades del dispositivo en Microso
 
 Las aplicaciones de Windows requieren que especifiques en el manifiesto del paquete de la aplicación cuándo se usan determinados tipos de dispositivos. En Visual Studio puedes declarar la mayoría de las funcionalidades mediante el [Diseñador de manifiestos](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx), o puedes agregarlas manualmente tal como se describe en [Cómo especificar funcionalidades de dispositivos en un manifiesto del paquete (manualmente)](https://msdn.microsoft.com/library/windows/apps/Dn263092). En este tutorial se supone que vas a usar el Diseñador de manifiestos.
 
-**Nota**  
-Algunos tipos de dispositivos como, por ejemplo, las impresoras, los escáneres y los sensores no necesitan estar declarados en el manifiesto del paquete de la aplicación.
+**Nota**  algunos tipos de dispositivos, como impresoras, escáneres y los sensores no necesitan declararse en el manifiesto del paquete de aplicación.
 
 -   En el explorador de soluciones de Visual Studio, haz doble clic en el archivo del manifiesto del paquete **Package.appxmanifest**.
 -   Abre la pestaña **Capacidades**.

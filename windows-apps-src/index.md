@@ -3,19 +3,17 @@ author: mijacobs
 layout: LandingPage
 description: 'La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows: PC, teléfonos, Xbox One, HoloLens y mucho más y publicarlas en la Tienda.'
 title: 'Documentación de UWP: desarrollador de aplicaciones UWP | Documentos de Microsoft'
-ms.prod: windows
 ms.topic: landing-page
 ms.author: mijacobs
 ms.date: 08/4/2017
-ms.technology: uwp
 keywords: windows uwp, plataforma universal de windows, API de windows runtime, api de windows, referencia de api de windows, api de winrt, referencia de api de windows, api de uwp, referencia de api de uwp, desarrollar uwp, diseñar uwp, publicar uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 48c5dc7352a44e3e07b78e78ae0b5e099660ec4f
-ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
-ms.translationtype: HT
+ms.openlocfilehash: 9e7cd5a012204b5b9ccab4e87993273f65c3849c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1893870"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569376"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentación de la Plataforma universal de Windows
 La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cualquier dispositivo Windows (equipos, teléfonos, Xbox One, HoloLens y mucho más) y publicarlas en la Microsoft Store.
@@ -260,4 +258,29 @@ La Plataforma universal de Windows (UWP) te permite crear aplicaciones para cual
             </div>
         </div>
     </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_support.svg" alt=" " />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Comunidad y soporte técnico</h3>
+                        <p>
+                            <a href="https://twitter.com/WindowsDocs">@WindowsDocsen Twitter</a>
+                        </p>
+                        <p>
+                            <a href="http://aka.ms/OneDevMinute">OneDevMinute en YouTube</a>
+                        </p>
+                        <p>
+                            <a href="https://developer.microsoft.com/windows/support">Soporte técnico de desarrolladores de Windows</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>    
 </ul>

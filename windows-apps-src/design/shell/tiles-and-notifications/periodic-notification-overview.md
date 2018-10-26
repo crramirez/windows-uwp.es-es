@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4525cf151d53790a44995bd8a8dd77a88332cdd0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: d02bfb8b8bd112a969895d4f2bd5d324fce9d6b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673452"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567647"
 ---
 # <a name="periodic-notification-overview"></a>Introducción a las notificaciones periódicas
  
@@ -29,9 +27,9 @@ Las notificaciones periódicas, también denominadas notificaciones de sondeo, a
 
 Las notificaciones periódicas permiten a la aplicación obtener actualizaciones activas de icono con niveles mínimos de inversión de clientes y servicio de nube. También son un excelente método para distribuir el mismo contenido a una audiencia amplia.
 
-**Nota** Para obtener más información, descarga [Push and periodic notifications sample (Muestra de notificaciones de inserción y periódicas)](http://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 y vuelve a usar su código fuente en la aplicación de Windows 10.
+**Nota**  puedes aprender más al descargar la [muestra de inserción y las notificaciones periódicas](http://go.microsoft.com/fwlink/p/?linkid=231476) para Windows8.1 y volver a usar su código fuente en la aplicación de Windows 10.
 
- 
+ 
 
 ## <a name="how-it-works"></a>Cómo funciona
 
@@ -110,4 +108,4 @@ Debes proporcionar un URI único para cada notificación que quieras que Windows
 * [Directrices sobre notificaciones periódicas](https://msdn.microsoft.com/library/windows/apps/hh761461)
 * [Cómo configurar notificaciones periódicas para distintivos](https://msdn.microsoft.com/library/windows/apps/hh761476)
 * [Cómo configurar notificaciones periódicas para iconos](https://msdn.microsoft.com/library/windows/apps/hh761476)
- 
+ 

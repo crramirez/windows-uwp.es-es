@@ -6,19 +6,18 @@ ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, rendering, representación, scene, escena, depth testing, pruebas de profundidad, direct3d, shadows, sombras
-ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: dc776a60e771cc8d5961e8c7b9c67eb99fabea3a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238471"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569027"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>Representar la escena con prueba de profundidad
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Crea un efecto de sombra agregando pruebas de profundidad al sombreador de vértices (o geometría) y al sombreador de píxeles. Parte 3 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -161,9 +160,9 @@ return float4(input.color * ambient, 1.f);
 
 En la siguiente parte de este tutorial, aprenderás sobre la [compatibilidad con mapas de sombras en una variedad de hardware](target-a-range-of-hardware.md).
 
- 
+ 
 
- 
+ 
 
 
 

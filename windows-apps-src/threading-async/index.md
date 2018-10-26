@@ -6,16 +6,14 @@ description: El subprocesamiento y la programación asincrónica permiten a tu a
 ms.author: twhitney
 ms.date: 05/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, asincrónico, asincrónica, subprocesos, subprocesamiento
 ms.localizationpriority: medium
-ms.openlocfilehash: 9bdbc9e73d2ffe25ac848a1ed1b88a649214b9f5
-ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
-ms.translationtype: HT
+ms.openlocfilehash: f01142695b676ebadea2f227cf5f8beb65ba6f9c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1893497"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570404"
 ---
 # <a name="threading-and-async-programming"></a>Subprocesamiento y programación asincrónica
 El subprocesamiento y la programación asincrónica permiten a tu aplicación realizar el trabajo de forma asincrónica en subprocesos paralelos.
@@ -34,7 +32,7 @@ El grupo de subprocesos es más eficaz en la administración de subprocesos porq
 
 | Tema                                                                                                          | Descripción                         |
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| [Programación asincrónica (aplicaciones para UWP)](asynchronous-programming-universal-windows-platform-apps.md)              | En este tema se describe la programación asincrónica en la Plataforma universal de Windows (UWP) y su representación en C#, Microsoft Visual Basic .NET, las extensiones de componentes de Visual C++ (C++/CX) y JavaScript. |
+| [Programación asincrónica (aplicaciones para UWP)](asynchronous-programming-universal-windows-platform-apps.md)              | Este tema describe la programación asincrónica en la plataforma Universal de Windows (UWP) y su representación en C#, Microsoft Visual Basic.NET, las extensiones de componentes VisualC ++ (C++ / CX) y JavaScript. |
 | [Programación asincrónica en C++/CX (aplicaciones para UWP)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| En este artículo se describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase <code>task</code><code>concurrency</code> que se define en el espacio de nombres  en ppltasks.h. |
 | [Procedimientos recomendados para usar el grupo de subprocesos](best-practices-for-using-the-thread-pool.md)                         | En este tema se describen los procedimientos recomendados para trabajar con el grupo de subprocesos. |
 | [Llamar a API asincrónicas en C# o Visual Basic](call-asynchronous-apis-in-csharp-or-visual-basic.md)             | La Plataforma universal de Windows (UWP) incluye muchas API asincrónicas para que tu aplicación tenga capacidad de respuesta mientras realiza trabajos que pudieran llevar algún tiempo. En este tema se describe cómo usar métodos asincrónicos desde la UWP en C# o Microsoft Visual Basic. |

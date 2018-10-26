@@ -1,33 +1,32 @@
 ---
-author: mcleblanc
+author: stevewhims
 description: Introducción a UWP para desarrolladores de iOS
 title: Introducción a UWP para desarrolladores de iOS
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8b1d7259d16ba963d19c7656ff2572fa659a1710
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 485dc6f93cb0fd83601b3202ef9965e625b2a0b4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239177"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566043"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Introducción a UWP para desarrolladores de iOS
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Si eres desarrollador de iOS y estás pensando en desarrollar aplicaciones para Windows10, estos documentos son un excelente punto de partida. En ellos se presentan algunos de los conceptos que necesitarás conocer cuando comiences a escribir aplicaciones y se explica cómo publicar tu trabajo en la TiendaWindows.
+Si eres un desarrollador de iOS pensando en desarrollar para Windows 10, estos documentos son un excelente punto de partida. En ellos se presentan algunos de los conceptos que necesitarás conocer cuando comiences a escribir aplicaciones y se explica cómo publicar tu trabajo en Microsoft Store.
 
 En esta sección, empezaremos gradualmente y examinaremos cómo usar Microsoft Visual Studio y el lenguaje de programación C# para crear una aplicación de prueba y, en concreto, explicaremos cómo puede variar el proceso respecto de las herramientas que usas actualmente. (¿No te gusta C#? No te preocupes, hay otros lenguajes de programación y herramientas, que trataremos en [Introducción: elección de un lenguaje de programación](getting-started-choosing-a-programming-language.md)).
 
-Windows10 presenta una nueva plataforma para crear aplicaciones atractivas en equipos de escritorio, portátiles, tabletas, teléfonos, etc. Como las aplicaciones de la plataforma universal de Windows (UWP) proporcionan numerosas funcionalidades exclusivas, una migración directa de tu aplicación de iOS te impedirá usarlas. En consecuencia, te animamos a que pruebes los nuevos controles y habilidades para que veas cómo pueden facilitarte tu labor como desarrollador y permitirte crear nuevas aplicaciones.
+Windows 10 presenta una nueva plataforma para crear aplicaciones atractivas en equipos de escritorio, portátil, tableta, dispositivos de teléfono. Como las aplicaciones de la plataforma universal de Windows (UWP) proporcionan numerosas funcionalidades exclusivas, una migración directa de tu aplicación de iOS te impedirá usarlas. En consecuencia, te animamos a que pruebes los nuevos controles y habilidades para que veas cómo pueden facilitarte tu labor como desarrollador y permitirte crear nuevas aplicaciones.
 
-En conclusión: no te limites a migrar tu aplicación, **reimagina** tu aplicación y aprovecha las nuevas funcionalidades y dispositivos. No te conformes con el mínimo común denominador, crea experiencias enriquecidas que usen las características únicas de Windows10, como iconos dinámicos, notificaciones e interacciones con Cortana.
+En conclusión: no te limites a migrar tu aplicación, **reimagina** tu aplicación y aprovecha las nuevas funcionalidades y dispositivos. No te conformes con el mínimo común denominador, pero crea experiencias enriquecidas que usen características únicas de Windows 10, como iconos dinámicos, notificaciones e interactuar con Cortana.
 
-Para empezar con estos tutoriales, necesitarás un equipo con Windows10 y Microsoft Visual Studio instalados. Puedes descargarlos en la página de [descargas para desarrolladores para programar aplicaciones de la Tienda Windows](https://developer.microsoft.com/en-us/windows/downloads). ¿No tienes PC? No te preocupes, puedes usar tu Mac. Consulta [Instalar Windows y las herramientas de desarrollador en un Mac](setting-up-your-mac-with-windows-10.md).
+Para empezar con estos tutoriales, tendrás que un equipo con Windows 10 y Microsoft Visual Studio instalado. Descargarlos en las [descargas para desarrolladores para programar aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/downloads). ¿No tienes PC? No te preocupes, puedes usar tu Mac. Consulta [Instalar Windows y las herramientas de desarrollador en un Mac](setting-up-your-mac-with-windows-10.md).
 
 | Tema | Descripción |
 |-------|-------------|
@@ -40,8 +39,8 @@ Para empezar con estos tutoriales, necesitarás un equipo con Windows10 y Micros
 | [Introducción: ¿y después?](getting-started-what-next.md) | Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes. Para los próximos pasos, lee los siguientes temas y después abre Visual Studio y empieza a escribir código. |
 | [Asignación del concepto de la aplicación de Windows](https://msdn.microsoft.com//windows/uwp/porting/android-ios-uwp-map) | Qué hay que tener en cuenta de los conceptos de iOS en lo que respecta a las características de Windows (y Android) |
 
- 
+ 
 
- 
+ 
 
- 
+ 

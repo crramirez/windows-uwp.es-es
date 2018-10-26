@@ -6,16 +6,14 @@ ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, juegos, entrada, games, input
 ms.localizationpriority: medium
-ms.openlocfilehash: 26510cac6e4d42ee5eb36a7ae09c9c1518b47089
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: bb7d70c20aeb2b91d8a6db863e165e017810e924
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "300181"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571189"
 ---
 # <a name="input-for-games"></a>Entrada para juegos
 
@@ -45,17 +43,17 @@ Los volantes son dispositivos de entrada que se asemejan mucho a una cabina carr
 
 Para obtener información sobre cómo usar los volantes en tu juego para UWP, consulta [Racing Wheel and force feedback (Volante y retroalimentación de fuerza)](racing-wheel-and-force-feedback.md).
 
-### <a name="flight-sticks"></a>Líneas de vuelo
+### <a name="flight-sticks"></a>Palancas de mandos
 
-Líneas de vuelo son dispositivos de entrada de juegos que reproducir el aspecto de tacos de vuelo que pudieran encontrarse en un plano o cabina de nave espacial. Son el dispositivo de entrada perfecto para un control de vuelo rápido y preciso.
+Las palancas de mandos son dispositivos de entrada de juegos que reproducir la sensación de las palancas de mandos que se encontrarían en un avión o espacial cabina de nave. Son el dispositivo de entrada perfecto para un control de vuelo rápido y preciso.
 
-Para obtener más información sobre cómo usar fijo de vuelo en el juego UWP, vea [pincel de vuelo](flight-stick.md).
+Para obtener más información sobre cómo usar las palancas de mandos en tu juego para UWP, consulta la [palanca de mandos](flight-stick.md).
 
 ### <a name="raw-game-controllers"></a>Dispositivos de juego sin procesar
 
 Un dispositivo de juego sin procesar es una representación genérica de un dispositivo de juego, con entradas que se encuentran en muchos tipos diferentes de dispositivos de juego comunes. Estas entradas se exponen como matrices simples de botones, modificadores y ejes sin nombre. Con un dispositivo de juego sin procesar, puedes permitir a los clientes crear asignaciones de entrada personalizadas independientemente de qué tipo de controlador estén usando.
 
-Para obtener más información acerca de cómo utilizar los dispositivos de juego sin procesar en el juego UWP, vea el [dispositivo de juego sin procesar](raw-game-controller.md).
+Para obtener más información sobre cómo usar los dispositivos de juego sin procesar en tu juego para UWP, consulta el [dispositivo de juego sin procesar](raw-game-controller.md).
 
 ### <a name="ui-navigation-controllers"></a>Controladores de navegación de la interfaz de usuario
 

@@ -6,19 +6,18 @@ ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, mapas de sombras, directx
-ms.openlocfilehash: e4cffcf1e9655d5bc5dacbfc17cb64b5671d7551
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a9c53578fc67c13aafa1c8e39ad1d2910981081d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238694"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568799"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a>Compatibilidad con mapas de sombras en una variedad de hardware
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Representa sombras de alta fidelidad en dispositivos más rápidos, y sombras más rápidas en dispositivos menos eficaces. Parte 4 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -175,9 +174,9 @@ La entrada del archivo del proyecto para la versión de filtro lineal del sombre
 </FxCompile>
 ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,19 +1,19 @@
 ---
 author: eliotcowley
 title: Datos del registro para dispositivos de juego
-description: "Obtén información sobre los datos que se pueden agregar al registro del PC para permitir que tu controlador se use en juegos UWP."
+description: Obtén información sobre los datos que se pueden agregar al registro del PC para permitir que tu controlador se use en juegos UWP.
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
 ms.author: wdg-dev-content
-ms.date: 06/06/2017
+ms.date: 06/25/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, entrada, registro, personalizado
-ms.openlocfilehash: 70d32cffb67fb5b25b6192a6dc76788855915e38
-ms.sourcegitcommit: a93b1da07b386a682435de58a8129d7b4ee90c14
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 4bbd4074c52514b9cb66fd6f2dd189421f61d5ee
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570765"
 ---
 # <a name="registry-data-for-game-controllers"></a>Datos del registro para dispositivos de juego
 
@@ -42,7 +42,7 @@ La siguiente tabla explica los valores esperados en la ubicación raíz del disp
         <td>DWORD</td>
         <td>No</td>
         <td>
-            <p>Indica que la asignación de este dispositivo particular debe omitirse.</p>
+            <p>Indica que este dispositivo particular debe estar deshabilitada.</p>
             <ul>
                 <li><b>0</b>: el dispositivo no está deshabilitado.</li>
                 <li><b>1</b>: el dispositivo está deshabilitado.</li>

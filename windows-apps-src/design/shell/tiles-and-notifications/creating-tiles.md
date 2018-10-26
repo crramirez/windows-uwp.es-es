@@ -8,22 +8,20 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bf07375b3ff27f87fb3f19db3f1f33c26c194e6
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: f4388b67335bce497987ab22e3b281cf86e029af
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1523144"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566176"
 ---
 # <a name="tiles-for-uwp-apps"></a>Iconos de aplicaciones para UWP
 
  
 
-Un *icono* es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación. Windows muestra este icono cuando se instala la aplicación por primera vez. Cuando se instala la aplicación, puedes cambiar el contenido del icono a través de notificaciones; por ejemplo, puedes cambiar el icono para comunicar nueva información al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.
+Un *icono* es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación.Windows muestra este icono cuando se instala la aplicación por primera vez. Cuando se instala la aplicación, puedes cambiar el contenido del icono a través de notificaciones; por ejemplo, puedes cambiar el icono para comunicar nueva información al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.
 
 ## <a name="configure-the-default-tile"></a>Configurar el icono predeterminado
 

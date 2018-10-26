@@ -6,16 +6,14 @@ ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, directx, puerto, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 97cb8341497ad72ab6b4b4f50a7cfbd7bdb4afb7
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: bd0a8c07be58d670e60aa3a23504d3f5119e6b50
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653104"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569141"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Tutorial Portar una aplicación de Direct3D 9 sencilla a DirectX 11 y la Plataforma universal de Windows (UWP)
 
@@ -50,7 +48,7 @@ En este ejercicio de migración se muestra cómo llevar un marco de representaci
 </tbody>
 </table>
 
- 
+ 
 
 En este tema se analizan dos rutas de código que realizan las mismas tareas gráficas básicas: mostrar un cubo de vértice sombreado giratorio. En ambos casos, el código cubre el siguiente proceso:
 
@@ -72,7 +70,7 @@ Ten en cuenta que este tutorial usa [**CoreWindow**](https://msdn.microsoft.com/
 ## <a name="prerequisites"></a>Requisitos previos
 
 
-Debes [preparar tu entorno de desarrollo para el desarrollo de juegos de DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Todavía no necesitas una plantilla, pero sí necesitarás Microsoft Visual Studio 2015 para cargar las muestras de código de este tutorial.
+Debes [preparar tu entorno de desarrollo para el desarrollo de juegos de DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Todavía no necesitas una plantilla, pero tendrás que Microsoft Visual Studio2015 para cargar las muestras de código de este tutorial.
 
 Consulta [Conceptos y consideraciones de migración](porting-considerations.md) para comprender mejor los conceptos de programación de DirectX11 y UWP que se muestran en este tutorial.
 

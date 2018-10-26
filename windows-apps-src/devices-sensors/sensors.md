@@ -6,16 +6,14 @@ description: Los sensores permiten que las aplicaciones conozcan cuál es la rel
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bf1d905874fc420dc0a39c1082e213e4ea4c327
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0e05c18bd2c8fa2ddd7d6a9bc8e474d02f27a93e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959180"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567376"
 ---
 # <a name="sensors"></a>Sensores
 
@@ -112,7 +110,7 @@ El sensor [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR2
 
 Las aplicaciones que cambian la vista para coincidir con la orientación del dispositivo pueden usar el sensor de inclinómetro. También, las aplicaciones que muestran un avión que coincide con la rotación alrededor del eje x, la rotación alrededor del eje y la rotación alrededor del eje z del dispositivo podrían usar las lecturas del inclinómetro.
 
-Para una implementación de ejemplo, vea el ejemplo de inclinometer [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
+Para un ejemplo de implementación, consulta la muestra de inclinómetro [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
 
 ## <a name="light-sensor"></a>Sensor de luz
 

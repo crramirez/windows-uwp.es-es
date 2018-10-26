@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9cc30dbd9fd501d310bb037726414356354af294
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: Auto
+ms.openlocfilehash: 9bffed44921df05a72025e86917901a65fe7ea82
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653424"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565445"
 ---
 # <a name="rotation"></a>Rotación
 
@@ -48,8 +46,7 @@ Usa la rotación para ayudar a los usuarios a rotar directamente elementos de la
 
 ![diagrama en el que se muestran varias posturas de los dedos admitidas por la rotación.](images/ux-rotate-positions.png)
 
-**Nota**  
-Intuitivamente, y en la mayoría de los casos, el punto de rotación es uno de los dos puntos de contacto táctil, a menos que el usuario pueda especificar un punto de rotación que no esté relacionado con esos puntos (por ejemplo, en una aplicación de dibujo o diseño). Las siguientes imágenes muestran cómo puede degradarse la experiencia del usuario si el punto de rotación no está restringido de esa manera.
+**Nota**  intuitivamente y en la mayoría de los casos, el punto de rotación es uno de los dos puntos táctiles, a menos que el usuario puede especificar un punto de rotación que no estén relacionados con los puntos de contacto (por ejemplo, en una aplicación de dibujo o diseño). Las siguientes imágenes muestran cómo puede degradarse la experiencia del usuario si el punto de rotación no está restringido de esa manera.
 
 En la primera imagen se muestran los puntos de contacto táctil inicial (pulgar) y secundario (índice): el índice está tocando un árbol y el pulgar toca un tronco.
 
@@ -64,7 +61,7 @@ En esta última imagen, la aplicación (o el usuario) ha definido que el centro 
 
 ![imagen en la que se muestra una ilustración girada en la que el punto de rotación está restringido al centro del borde izquierdo de la ilustración en lugar de uno de los dos puntos táctiles iniciales.](images/ux-rotate-points4.png)
 
- 
+ 
 
 Windows8 admite tres tipos de rotación: libre, restringida y combinada.
 
@@ -93,16 +90,16 @@ Windows8 admite tres tipos de rotación: libre, restringida y combinada.
 <td align="left">Rotación combinada</td>
 <td align="left"><p>La rotación combinada admite la rotación libre pero con zonas (similares a las guías de las <a href="guidelines-for-panning.md">Instrucciones del movimiento panorámico</a>) en cada uno de los puntos de acoplamiento situados cada 90 grados impuestos en la rotación restringida. Si el usuario libera el objeto fuera de una de las zonas de 90 grados, el objeto permanece en esa posición; de otro modo, el objeto gira de manera automática hasta un punto de acoplamiento.</p>
 <div class="alert">
-<strong>Nota</strong>  Una guía de interfaz de usuario es una función en la que un área que rodea un destino restringe el movimiento a algún valor específico o ubicación para influir en su selección.
+<strong>Nota</strong>una guía de interfaz de usuario es una característica en la que un área que rodea un destino restringe el movimiento a algún valor específico o ubicación para influir en su selección.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -122,9 +119,9 @@ Windows8 admite tres tipos de rotación: libre, restringida y combinada.
 * [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: muestra de manipulaciones y gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Muestra de entrada táctil de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

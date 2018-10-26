@@ -6,16 +6,14 @@ description: Aprende a obtener información detallada sobre la batería mediante
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c191a9f2da29f0ad10d0ba61507873b4fd652ddc
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c745b99104495b4d0b3c60202c378285dbfdd7b6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959080"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565356"
 ---
 # <a name="get-battery-information"></a>Obtener información sobre la batería
 
@@ -32,7 +30,7 @@ Aprende a obtener información detallada sobre la batería mediante las API del 
 
 Algunos dispositivos tienen más de una batería y no siempre resulta obvio saber cómo contribuye cada una de ellas a la capacidad de energía global del dispositivo. Aquí es donde entra en acción la clase [**AggregateBattery**](https://msdn.microsoft.com/library/windows/apps/Dn895011). El *agregado de baterías* representa todos los controladores de la batería conectados al dispositivo y puede proporcionar un único objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) general.
 
-**Nota** La clase [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004), en realidad, corresponde a un controlador de batería. Según el dispositivo, unas veces se adjunta el controlador a la batería física y otras a la carcasa del dispositivo. Por tanto, es posible crear un objeto de batería, incluso cuando no hay baterías presentes. Otras veces, el objeto de batería puede ser **null**.
+**Nota**una clase de [**batería**](https://msdn.microsoft.com/library/windows/apps/Dn895004) realidad, corresponde a un controlador de batería. Según el dispositivo, unas veces se adjunta el controlador a la batería física y otras a la carcasa del dispositivo. Por tanto, es posible crear un objeto de batería, incluso cuando no hay baterías presentes. Otras veces, el objeto de batería puede ser **null**.
 
 Una vez tengas un objeto del agregado de batería, llama a [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport) para obtener la clase [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) correspondiente.
 
@@ -340,7 +338,7 @@ Si la aplicación no se llama **App1**, tendrás que cambiar el nombre del espac
 
 Por último, para ejecutar esta aplicación de batería básica: en el menú **Depurar**, haz clic en **Iniciar depuración** para probar la solución.
 
-**Sugerencia** Para recibir los valores numéricos del objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005), depura la aplicación en la **Máquina local** o en un **Dispositivo** externo (por ejemplo, un Windows Phone). Al depurar en un emulador de dispositivo, el objeto **BatteryReport** devuelve **null** a las propiedades de capacidad y velocidad.
+**Sugerencia**para recibir los valores numéricos del objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) , depurar la aplicación en el **Equipo Local** o un **dispositivo** externo (por ejemplo, un Windows Phone). Al depurar en un emulador de dispositivo, el objeto **BatteryReport** devuelve **null** a las propiedades de capacidad y velocidad.
 
- 
+ 
 

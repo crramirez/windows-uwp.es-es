@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: defea1e9adbb4d0f9edb24c936069191944b94be
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 4dd319c686bebf2a30431017f399f48b08618cb6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044724"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569221"
 ---
 # <a name="viewports-and-clipping"></a>Ventanillas y recortes
 
@@ -49,9 +47,9 @@ Los valores especificados para los miembros X, Y, ancho y alto son las coordenad
 
 Direct3D asume que los intervalos del volumen de recorte de ventanilla son entre -1,0 y 1,0 en X y entre 1.0 y -1.0 en Y. Estos eran los valores usados con más frecuencia por las aplicaciones en el pasado. Puedes ajustar la relación de aspecto de la ventanilla antes de recortar usando la [transformación de proyección](projection-transform.md).
 
-**Nota** MinZ y MaxZ indican los intervalos de profundidad en los que se va a representar la escena y no se usan para el recorte. La mayoría de las aplicaciones establecen estos valores a 0.0 y 1.0, para permitir que el sistema represente todo el rango de valores de profundidad en el búfer de profundidad. En algunos casos, puedes lograr efectos especiales mediante el uso de otros intervalos de profundidad. Por ejemplo, para representar una pantalla de visualización frontal en un juego, puedes establecer los valores en 0.0 para forzar al sistema a representar objetos en una escena en primer plano, o puedes establecerlos en 1.0 para representar un objeto que debería estar siempre en segundo plano.
+**Nota**  MinZ y MaxZ indican los intervalos de profundidad en el que se va a representar la escena y no se usan para el recorte. La mayoría de las aplicaciones establecen estos valores a 0.0 y 1.0, para permitir que el sistema represente todo el rango de valores de profundidad en el búfer de profundidad. En algunos casos, puedes lograr efectos especiales mediante el uso de otros intervalos de profundidad. Por ejemplo, para representar una pantalla de visualización frontal en un juego, puedes establecer los valores en 0.0 para forzar al sistema a representar objetos en una escena en primer plano, o puedes establecerlos en 1.0 para representar un objeto que debería estar siempre en segundo plano.
 
- 
+ 
 
 La dimensión que se usa en los miembros X, Y, ancho, alto de una estructura de ventanilla definen la ubicación y las dimensiones de la ventanilla en la superficie de destino de representación. Estos valores están en coordenadas de pantalla, con respecto a la esquina superior izquierda de la superficie.
 
@@ -61,9 +59,9 @@ Direct3D usa la ubicación de la ventanilla y las dimensiones para escalar los v
 
 Esta matriz escala vértices según las dimensiones de la ventanilla y el intervalo de profundidad deseado y los traslada a la ubicación adecuada en la superficie de destino de representación. La matriz también cambia la coordenada -y para reflejar el origen de la pantalla en la esquina superior izquierda con el aumento de y hacia abajo. Después de aplicar esta matriz, los vértices siguen siendo homogéneos, es decir, siguen existiendo como vértices \[x,y,z,w\], y se deben convertir en coordenadas no homogéneas antes de ser enviadas al rasterizador.
 
-**Nota**   Las aplicaciones normalmente establecen MinZ y MaxZ en 0.0 y 1 respectivamente para hacer que el sistema represente el intervalo de profundidad completo. Sin embargo, puedes usar otros valores para lograr algunos efectos. Por ejemplo, puedes establecer ambos valores en 0.0 para forzar a todos los objetos en primer plano, o establecer ambos en 1.0 para representar todos los objetos en segundo plano.
+**Nota**  las aplicaciones establecen normalmente MinZ y MaxZ a 0.0 y 1.0 respectivamente para hacer que el sistema representar en el intervalo de profundidad completa. Sin embargo, puedes usar otros valores para lograr algunos efectos. Por ejemplo, puedes establecer ambos valores en 0.0 para forzar a todos los objetos en primer plano, o establecer ambos en 1.0 para representar todos los objetos en segundo plano.
 
- 
+ 
 
 ## <a name="span-idclearingaviewportspanspan-idclearingaviewportspanspan-idclearingaviewportspanclearing-a-viewport"></a><span id="Clearing_a_Viewport"></span><span id="clearing_a_viewport"></span><span id="CLEARING_A_VIEWPORT"></span>Borrar una ventanilla
 
@@ -88,9 +86,9 @@ Donde x, y, z y w representan las coordenadas de vértices después de aplicar l
 
 [Sistemas de coordenadas y geometría](coordinate-systems-and-geometry.md)
 
- 
+ 
 
- 
+ 
 
 
 

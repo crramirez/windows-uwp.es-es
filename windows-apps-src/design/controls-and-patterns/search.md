@@ -8,19 +8,17 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 863c5c2df20ba082265aeda2691bafae3e3fe691
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: b506b439ff98da873823bd586bb5388fe360b2ba
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1394104"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571634"
 ---
 # <a name="search-and-find-in-page"></a>Búsqueda y buscar en la página
 
@@ -33,21 +31,21 @@ Buscar es una de las formas principales en que los usuarios pueden buscar conten
 ## <a name="elements-of-the-search-experience"></a>Elementos de la experiencia de búsqueda
 
 
-**Entrada.**  Texto es el modo más común de la entrada de búsqueda y es el objetivo de estas instrucciones. Entre otros modos de entrada comunes se incluyen la voz y la cámara, pero estos por lo general requieren la capacidad de interactuar con el hardware del dispositivo y es posible que necesiten controles adicionales o una interfaz de usuario personalizada en la aplicación.
+**Entrada.** Texto es el modo más común de entrada de búsqueda y es el objetivo de esta guía. Entre otros modos de entrada comunes se incluyen la voz y la cámara, pero estos por lo general requieren la capacidad de interactuar con el hardware del dispositivo y es posible que necesiten controles adicionales o una interfaz de usuario personalizada en la aplicación.
 
-**Entrada cero.**  Una vez que el usuario ha activado el campo de entrada, pero antes de que haya escrito texto, puedes mostrar lo que se denomina un "lienzo de entrada". El lienzo de entrada cero aparecerá comúnmente en el lienzo de la aplicación para que [sugerencia automática](auto-suggest-box.md) sustituya este contenido cuando el usuario empiece a escribir su consulta. Historial de búsquedas recientes, tendencias de búsquedas, sugerencias de búsquedas contextuales, consejos y sugerencias son todos buenos candidatos para el estado de entrada cero.
+**Entrada de cero.** Una vez que el usuario ha activado el campo de entrada, pero antes de que el usuario haya escrito texto, puedes mostrar lo que denomina un "lienzo de entrada cero." El lienzo de entrada cero aparecerá comúnmente en el lienzo de la aplicación para que [sugerencia automática](auto-suggest-box.md) sustituya este contenido cuando el usuario empiece a escribir su consulta. Historial de búsquedas recientes, tendencias de búsquedas, sugerencias de búsquedas contextuales, consejos y sugerencias son todos buenos candidatos para el estado de entrada cero.
 
 ![Ejemplo de Cortana en un lienzo de entrada cero](images/search-cortana-example.png)
 
- 
+ 
 
-**Formulación de consulta/sugerencia automática.**  Formulación de la consulta reemplaza el contenido de entrada cero en cuanto el usuario comienza a escribir. En cuando el usuario escribe una cadena de consulta, se le proporciona un conjunto de opciones de desambiguación o de sugerencias de consulta actualizadas continuamente que los ayudan a acelerar el proceso de entrada y a formular una consulta eficaz. Este comportamiento de sugerencias de consulta está integrado en el [control de sugerencias automáticas](auto-suggest-box.md)y también es una forma de mostrar el icono dentro de la búsqueda (como un micrófono o un icono de confirmación). Cualquier comportamiento distinto entra en la aplicación.
+**Formulación de consulta/auto sugerencia.** Consulta formulación reemplaza el contenido de entrada cero en cuanto el usuario comienza a escribir. En cuando el usuario escribe una cadena de consulta, se le proporciona un conjunto de opciones de desambiguación o de sugerencias de consulta actualizadas continuamente que los ayudan a acelerar el proceso de entrada y a formular una consulta eficaz. Este comportamiento de sugerencias de consulta está integrado en el [control de sugerencias automáticas](auto-suggest-box.md)y también es una forma de mostrar el icono dentro de la búsqueda (como un micrófono o un icono de confirmación). Cualquier comportamiento distinto entra en la aplicación.
 
 ![ejemplo de consulta/formulación de sugerencia automática](images/search-autosuggest-example.png)
 
- 
+ 
 
-**Conjunto de resultados.**  Los resultados de búsqueda suelen aparecer directamente en el campo de entrada de búsqueda. Aunque esto no es un requisito, la yuxtaposición de la entrada y los resultados mantiene el contexto y proporciona al usuario acceso inmediato para editar la consulta anterior o escribir una consulta nueva. Esta conexión se puede comunicar reemplazando el texto de la sugerencia por la consulta que creó el conjunto de resultados.
+**Conjunto de resultados.** Los resultados de búsqueda suelen aparecen directamente en el campo de entrada de búsqueda. Aunque esto no es un requisito, la yuxtaposición de la entrada y los resultados mantiene el contexto y proporciona al usuario acceso inmediato para editar la consulta anterior o escribir una consulta nueva. Esta conexión se puede comunicar reemplazando el texto de la sugerencia por la consulta que creó el conjunto de resultados.
 
 Un método para habilitar el acceso eficaz tanto a la edición de consultas previas como a la creación de una nueva consulta es resaltar la consulta anterior cuando se reactiva el campo. De este modo, cualquier pulsación de tecla reemplazará a la cadena anterior, pero se mantiene la cadena de forma que el usuario pueda colocar un cursor para editar o anexar la cadena anterior.
 
@@ -60,11 +58,11 @@ La búsqueda es una función común y los usuarios encontrarán la interfaz de u
 
 Entre algunos ámbitos comunes de la búsqueda se incluyen:
 
-**Global** y **contextual o refinado.**  Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
+**Global** y **contextual o refinado.** Búsqueda en varias fuentes de contenido local y en la nube. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
 
-**Web.**  Buscar en un índice web. Los resultados incluyen páginas, entidades y respuestas.
+**Web.** Buscar en un índice web. Los resultados incluyen páginas, entidades y respuestas.
 
-**Mis cosas.**  Búsqueda en dispositivos, en la nube, en gráficos sociales, etc. Los resultados son variados, pero están limitados por la conexión a cuentas de usuario.
+**Mis cosas.** Búsqueda en todos los dispositivos, en la nube, gráficos sociales y mucho más. Los resultados son variados, pero están limitados por la conexión a cuentas de usuario.
 
 Usa el texto de la sugerencia para comunicar el ámbito de búsqueda. Algunos ejemplos son:
 
@@ -80,7 +78,7 @@ Usa el texto de la sugerencia para comunicar el ámbito de búsqueda. Algunos ej
 
 ![Ejemplo de texto de la sugerencia de búsqueda](images/search-windowsandweb.png)
 
- 
+ 
 
 Mediante una comunicación eficaz del ámbito de un punto de entrada de búsqueda, puedes ayudar a garantizar que se cumplirán las expectativas del usuario mediante las funcionalidades de la búsqueda que estás realizando y reducir la posibilidad de frustración a la hora de cumplir las expectativas del usuario.
 
@@ -93,13 +91,13 @@ Antes de hacer clic en el icono de búsqueda:
 
 ![Ejemplo de icono de búsqueda y cuadro de búsqueda contraído](images/search-icon-collapsed.png)
 
- 
+ 
 
 Después de hacer clic en el icono de búsqueda:
 
 ![Ejemplo de icono de búsqueda y cuadro de búsqueda expandido](images/search-icon-expanded.png)
 
- 
+ 
 
 La búsqueda siempre usa un glifo de lupa orientado hacia la derecha para el punto de entrada. El glifo que se debe usar es Segoe UI Symbol, el código de carácter hexadecimal 0xE0094, y normalmente con un tamaño de fuente de 15 epx.
 
@@ -120,19 +118,19 @@ Buscar como una acción en la barra de herramientas de Windows:
 
 ![Ejemplo de búsqueda como una acción en la barra de herramientas de Windows](images/search-toolbar-action.png)
 
- 
+ 
 
 Búsqueda como entrada en el lienzo de la aplicación:
 
 ![Ejemplo de búsqueda en un lienzo de la aplicación](images/search-canvas-contacts.png)
 
- 
+ 
 
 Buscar en un panel de navegación:
 
 ![Ejemplo de búsqueda en un menú de navegación](images/search-navmenu.png)
 
- 
+ 
 
 Búsqueda en línea se reserva para casos en los que se accede con poca frecuencia a la búsqueda o es muy contextual:
 
@@ -177,25 +175,25 @@ Proporciona una manera sencilla de acceder a la función de búsqueda en la pág
 
 ![Ejemplo de Buscar en la página 1](images/findinpage-01.png)
 
- 
+ 
 
 Después de seleccionar Buscar en la página, el usuario escribe un término de búsqueda. Pueden aparecer sugerencias de texto mientras se escribe el término de búsqueda:
 
 ![Ejemplo de Buscar en la página 2](images/findinpage-02.png)
 
- 
+ 
 
 Si no hay una coincidencia de texto en la búsqueda, debería aparecer en el cuadro de texto una cadena del tipo "No hay resultados":
 
 ![Ejemplo de Buscar en la página 3](images/findinpage-03.png)
 
- 
+ 
 
 Si hay coincidencia de texto en la búsqueda, el primer término debería resaltarse en un color distinto y las coincidencias posteriores en un tono más sutil de la misma paleta de colores, como se muestra en este ejemplo:
 
 ![Ejemplo de Buscar en la página 4](images/findinpage-04.png)
 
- 
+ 
 
 Buscar en la página tiene un contador de coincidencias:
 
@@ -219,6 +217,6 @@ Para obtener más información sobre cómo agregar comandos a la barra de comand
 * [Cuadro de sugerencias automáticas](auto-suggest-box.md)
 
 
- 
+ 
 
- 
+ 

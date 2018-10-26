@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: af0c9c7013b663bceb5c3747ff5d5250f62c54c7
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: d32d5a77fe9bc840ea676c7156c1b59e498d07e1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044574"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571644"
 ---
 # <a name="texture-filtering-with-mipmaps"></a>Filtrado de texturas con mapas MIP
 
@@ -51,9 +49,9 @@ A continuación, la aplicación debe establecer el método de filtrado que Direc
 
 Las texturas de mapas MIP se usan en escenas en 3D para disminuir el tiempo necesario para representarlas. También mejoran el realismo de la escena. Sin embargo, a menudo requieren grandes cantidades de memoria.
 
-**Nota** Cada superficie de una cadena de mapas MIP tiene dimensiones que son la mitad que la superficie anterior de dicha cadena. Si el mapa MIP de nivel superior tiene unas dimensiones de 256 x 128, las dimensiones del mapa MIP de segundo nivel son de 128 x 64, las del tercer nivel son de 64 x 32, y así sucesivamente hasta 1 x 1. No puedes solicitar un número de niveles de mapa MIP en niveles que haría que el ancho o el alto de cualquier mapa MIP de la cadena fuera inferior a 1. En el caso sencillo de una superficie de mapa MIP de nivel superior de 4 x 2, el valor máximo permitido para los niveles es tres. Las dimensiones del nivel superior son 4 x 2, las dimensiones del segundo nivel son 2 x 1 y las dimensiones del tercer nivel son 1 x 1. Un valor mayor de 3 en los niveles da como resultado un valor fraccional en la altura del mapa MIP del segundo nivel, por lo que no se permite.
+**Nota**  cada superficie de una cadena de mapas MIP tiene dimensiones que son la mitad que la superficie anterior de la cadena. Si el mapa MIP de nivel superior tiene unas dimensiones de 256 x 128, las dimensiones del mapa MIP de segundo nivel son de 128 x 64, las del tercer nivel son de 64 x 32, y así sucesivamente hasta 1 x 1. No puedes solicitar un número de niveles de mapa MIP en niveles que haría que el ancho o el alto de cualquier mapa MIP de la cadena fuera inferior a 1. En el caso sencillo de una superficie de mapa MIP de nivel superior de 4 x 2, el valor máximo permitido para los niveles es tres. Las dimensiones del nivel superior son 4 x 2, las dimensiones del segundo nivel son 2 x 1 y las dimensiones del tercer nivel son 1 x 1. Un valor mayor de 3 en los niveles da como resultado un valor fraccional en la altura del mapa MIP del segundo nivel, por lo que no se permite.
 
- 
+ 
 
 Direct3D puede realizar automáticamente el filtrado de texturas de los mapas MIP. Las aplicaciones pueden recorrer manualmente una cadena de mapas MIP para cargar datos de mapa de bits en cada superficie de la cadena. Esta suele ser la única razón para recorrer la cadena. La generación automática de mapas MIP en el tiempo de creación de la textura aprovecha las ventajas del filtrado por hardware porque el mapa MIP reside en la memoria de vídeo.
 
@@ -62,9 +60,9 @@ Direct3D puede realizar automáticamente el filtrado de texturas de los mapas MI
 
 [Filtrado de texturas](texture-filtering.md)
 
- 
+ 
 
- 
+ 
 
 
 

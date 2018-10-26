@@ -1,23 +1,22 @@
 ---
-author: mcleblanc
+author: stevewhims
 title: 'Introducción: ¿y después?'
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
 description: Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes.
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2ca600085c14c43d9d9d37e80efbae30bae650ef
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 5f8a6165df7bf839154ede4db3fda8a5e1662880
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239362"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568763"
 ---
 # <a name="getting-started-what-next"></a>Introducción: ¿y después?
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -32,7 +31,7 @@ Con esta información básica, ya puedes empezar a crear aplicaciones para la Pl
 
 Además, asegúrate de visitar nuestros [recursos de la comunidad](https://developer.microsoft.com/en-us/windows/support) para obtener información sobre cómo obtener ayuda y conectarte mediante foros de desarrolladores, blogs, encuentros y talleres para desarrolladores, y eventos y contactos locales de Microsoft.
 
-Creemos que Windows10 te ofrecerá nuevas oportunidades de creación de aplicaciones. Esperamos ver pronto las excelentes aplicaciones que crearás.
+Creemos que Windows 10 te ofrecerá nuevas oportunidades de creación de la aplicación. Esperamos ver pronto las excelentes aplicaciones que crearás.
 
 ## <a name="related-topics"></a>Temas relacionados
 

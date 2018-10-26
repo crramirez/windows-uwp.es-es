@@ -6,16 +6,14 @@ description: Para obtener acceso a archivos y carpetas, permite al usuario inter
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f025504d8024a23810a7d5dd2b0b28414fe5a62
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: b79bfa9ecdf76d2d59e3c0991240d88599dbe6dd
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662595"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569406"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>Abrir archivos y carpetas con un selector
 
@@ -28,7 +26,7 @@ ms.locfileid: "1662595"
 Para obtener acceso a archivos y carpetas, permite al usuario interactuar con un selector. Puedes usar las clases [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) y [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para acceder a archivos y la clase [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881) para acceder a una carpeta.
 
 > [!NOTE]
-> Para obtener una muestra completa, consulta la [Muestra de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994).
+> Para obtener una muestra completa, consulta la [Muestra de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

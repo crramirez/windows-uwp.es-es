@@ -6,16 +6,14 @@ title: Integrar con los controles de transporte de contenido multimedia del sist
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 044d8aa8f777f6cb159c3488fdcf81c2b2c48d2d
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 15d7e3b3e822081a751aa791a76e674b07af8d9d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690301"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569756"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>Integrar con los controles de transporte de contenido multimedia del sistema
 
@@ -84,9 +82,9 @@ Como se mencionó anteriormente en este artículo, los SMTC detectarán y mostra
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
 * [Control manual de los controles de transporte de multimedia del sistema](system-media-transport-controls.md)
 * [Muestra de controles de transporte multimedia del sistema en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
- 
+ 
 
- 
+ 
 
 
 

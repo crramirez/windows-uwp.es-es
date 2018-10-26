@@ -6,16 +6,14 @@ ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
 ms.author: twhitney
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b6cff7ce434e219b0d502f384d202c3b708479a
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 143b96171091406fb91954685143e4f86c036ffb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1861894"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570904"
 ---
 # <a name="add-a-splash-screen"></a>Agregar una pantalla de presentación
 
@@ -41,11 +39,11 @@ Cuando usas una plantilla de Visual Studio para crear tu aplicación, se agrega 
 
 4. Para seleccionar una nueva imagen para la pantalla de presentación de una aplicación para UWP, presiona el botón que muestra unos puntos suspensivos, situado junto a la etiqueta **1240 x 600 px** debajo de **Activos a escala**. Elige la imagen de 1240 x 600 píxeles (.png, .jpg o .jpeg) que quieres usar como imagen de la pantalla de presentación.
 
-    **Importante** La imagen de la pantalla de presentación que elijas debe ser de 620 x 300 píxeles con un factor de escala de 1x. Además, al diseñar la pantalla de presentación, ten en cuenta que es menor que la pantalla y que está centrada. No rellena la pantalla como una pantalla de presentación para una aplicación de la Tienda de Windows Phone.
+    **Importante**la imagen de pantalla de presentación que elijas debe ser de 620 x 300 píxeles con un factor de escala de 1. Además, al diseñar la pantalla de presentación, ten en cuenta que es menor que la pantalla y que está centrada. No rellena la pantalla como una pantalla de presentación para una aplicación de la Tienda de Windows Phone.
 
 5. Si quieres seleccionar una nueva imagen para la pantalla de presentación de una aplicación para Tienda de Windows Phone, presiona el botón que muestra unos puntos suspensivos, situado junto a la etiqueta **1152 x 1920 px** debajo de **Activos a escala**. Elige la imagen de 1152 x 1920 píxeles (.png, .jpg o .jpeg) que quieres usar como imagen de la pantalla de presentación.
 
-    **Importante** La imagen de pantalla de presentación que elijas debe ser de 1152 x 1920 píxeles, que es el tamaño correcto para un factor de escala de 2,4x. Si este es el único activo que proporcionas, se reducirá para los factores de escala de 1.4x y 1x.
+    **Importante**la imagen de pantalla de presentación que elijas debe ser de 1152 x 1920 píxeles que es el tamaño correcto para un 2,4 factor de escala. Si este es el único activo que proporcionas, se reducirá para los factores de escala de 1.4x y 1x.
 
 6. En el campo **Color de fondo** de la sección **Pantalla de presentación**, establece el color de fondo que se mostrará con la imagen de la pantalla de presentación. Puedes escribir el nombre de un color o "\#" y el valor hexadecimal de un color. Para obtener una lista de los nombres de colores disponibles, consulta el elemento [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br211467). El establecimiento de un color de fondo para tu pantalla de presentación es opcional. Si no especificas un color para la aplicación para UWP, se establecerá el gris claro (valor hexadecimal \#464646) como color de fondo predeterminado de la pantalla de presentación. Se trata del mismo color que el color de fondo del **Icono** (consulta el campo **Color de fondo** en la sección **Imágenes y logotipos en mosaico** de la pestaña **Activos visuales**). Si no especificas un color para un Windows Phone, o lo estableces en "transparente", el color de fondo de pantalla de presentación será transparente.
 

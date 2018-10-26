@@ -6,16 +6,14 @@ title: Obtener instalaciones de la aplicación
 ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis de Microsoft Store, app installs, instalaciones de la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a5a947d58ecec7ca52a355ef44f8a880864df5d
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 902ff653d0c573ba5ab094fa81607796b4f01aae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483555"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564611"
 ---
 # <a name="get-app-installs"></a>Obtener instalaciones de la aplicación
 

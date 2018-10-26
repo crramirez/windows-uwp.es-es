@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08b44ae8348e7b9d1d8dff0b98e5f1c553ec79b2
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 87b5c72ef99e3802a348ddfd28951bc2865891e5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044134"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565228"
 ---
 # <a name="ambient-lighting"></a>Luz ambiente
 
@@ -40,7 +38,7 @@ Donde:
 | sum               | N/A           | N/C           | Suma de la luz ambiente                                                                                          |
 | L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | Color de luz ambiente de la luz i.                                                                              |
 
- 
+ 
 
 El valor de Cₐ es:
 
@@ -48,9 +46,9 @@ El valor de Cₐ es:
 -   vertex color2, si AMBIENTMATERIALSOURCE = D3DMCS\_COLOR2, y el segundo color del vértice se suministra en la declaración del vértice.
 -   color ambiente del material.
 
-**Nota**   Si se usa una de las opciones de AMBIENTMATERIALSOURCE y no se proporciona el color del vértice, se usa el color ambiente del material.
+**Nota**  si se usan cualquiera de estas opciones de AMBIENTMATERIALSOURCE y no se proporciona el color del vértice, se usa el color ambiente del material.
 
- 
+ 
 
 Para usar el color ambiente del material, usa SetMaterial como se muestra en el siguiente código de ejemplo.
 
@@ -89,9 +87,9 @@ Para dar a los objetos un aspecto más realista, aplica iluminación especular o
 
 [Cálculos de iluminación](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

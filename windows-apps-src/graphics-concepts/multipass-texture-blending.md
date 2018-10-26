@@ -8,24 +8,22 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 36af11829728e07c00b3306d5a997764db130c9f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c55f371e97daba5f81945812f8179eb708bbadd6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043094"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567187"
 ---
 # <a name="multipass-texture-blending"></a>Combinación de texturas multipase
 
 
 Las aplicaciones de Direct3D pueden lograr numerosos efectos especiales mediante la aplicación de varias texturas a un primitivo a lo largo de varios pases de representación. El término habitual para esto es *combinación de texturas multipase*. Un uso habitual de la combinación de texturas multipase es emular los efectos de modelos complejos de iluminación y sombreado con la aplicación de varios colores de distintas texturas diferentes. Este tipo de aplicaciones se conocen como *mapas de luz*. Consulta [Mapas de luz con texturas](light-mapping-with-textures.md).
 
-**Nota** algunos dispositivos pueden aplicar varias texturas a primitivos en un solo paso. Consulta [Combinación de texturas](texture-blending.md).
+**Nota**  algunos dispositivos son capaces de aplicar varias texturas a primitivos en un solo paso. Consulta [Combinación de texturas](texture-blending.md).
 
- 
+ 
 
 Si el hardware del usuario no admite la combinación de varias texturas, la aplicación puede usar la combinación de texturas multipase para lograr los mismos efectos visuales. Sin embargo, la aplicación no puede admitir la posible velocidad de fotogramas cuando usa la combinación de texturas multipase.
 
@@ -43,9 +41,9 @@ Para realizar una combinación de texturas multipase en una aplicación de C o C
 
 [Combinación de texturas](texture-blending.md)
 
- 
+ 
 
- 
+ 
 
 
 

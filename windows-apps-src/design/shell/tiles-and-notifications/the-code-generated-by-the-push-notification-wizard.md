@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 43c90d3d32876bdfd6b91f597ad94eba33907e90
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 6b39211c4b21a68fc0e563f73805805dcf1f4641
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675202"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570371"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>Código generado por el Asistente para notificaciones de inserción
  
@@ -211,9 +209,9 @@ function sendNotifications(request) {
 
 La función sendNotifications envía una sola notificación en forma de notificación del sistema. También puedes usar otros tipos de notificaciones de inserción.
 
-**Sugerencia** Para obtener información sobre cómo obtener ayuda durante la edición de scripts, consulta el tema [Enabling IntelliSense for server-side JavaScript (Habilitar IntelliSense para JavaScript del lado servidor)](http://go.microsoft.com/fwlink/p/?LinkId=309275).
+**Sugerencia**para obtener información sobre cómo obtener ayuda durante la edición de scripts, consulta [Habilitar IntelliSense para JavaScript del lado servidor](http://go.microsoft.com/fwlink/p/?LinkId=309275).
 
- 
+ 
 
 ## <a name="push-notification-types"></a>Tipos de notificaciones de inserción
 
@@ -237,9 +235,9 @@ Puedes llamar a Servicios de notificaciones de inserción de Windows (WNS) direc
 
 También puedes enviar notificaciones de inserción si ejecutas una tarea programada en tu servicio móvil. Consulta [Programación de trabajos periódicos en Servicios móviles](http://go.microsoft.com/fwlink/p/?linkid=301694).
 
-**Advertencia** Cuando hayas ejecutado el asistente para notificaciones de inserción una vez, no es necesario que vuelvas a ejecutarlo de nuevo para agregar el código de registro a otro servicio móvil. Si ejecutas el asistente más de una vez por cada proyecto, se generará código que provocará llamadas superpuestas al método [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), que da lugar a una excepción en tiempo de ejecución. Si quieres registrar notificaciones de inserción para más de un servicio móvil, ejecuta el asistente una sola vez y después vuelve a escribir el código de registro para asegurarte de que las llamadas a **CreatePushNotificationChannelForApplicationAsync** no se ejecutan a la vez. Por ejemplo, para lograrlo puedes mover el código generado por el asistente en push.register.\* (incluida la llamada a **CreatePushNotificationChannelForApplicationAsync**) fuera del evento OnLaunched, pero los detalles de esto dependerán de la arquitectura de la aplicación.
+**Advertencia**una vez que se ha ejecutado el Asistente para notificaciones de inserción una vez, no ejecutar el Asistente una segunda vez para agregar el código de registro para otro servicio móvil. Si ejecutas el asistente más de una vez por cada proyecto, se generará código que provocará llamadas superpuestas al método [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), que da lugar a una excepción en tiempo de ejecución. Si quieres registrar notificaciones de inserción para más de un servicio móvil, ejecuta el asistente una sola vez y después vuelve a escribir el código de registro para asegurarte de que las llamadas a **CreatePushNotificationChannelForApplicationAsync** no se ejecutan a la vez. Por ejemplo, para lograrlo puedes mover el código generado por el asistente en push.register.\* (incluida la llamada a **CreatePushNotificationChannelForApplicationAsync**) fuera del evento OnLaunched, pero los detalles de esto dependerán de la arquitectura de la aplicación.
 
- 
+ 
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -249,9 +247,9 @@ También puedes enviar notificaciones de inserción si ejecutas una tarea progra
 * [Conexión con los Servicios móviles de Microsoft Azure (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263160)
 * [Conexión con los Servicios móviles de Microsoft Azure (C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/dn263175)
 * [Inicio rápido: agregar notificaciones de inserción para un servicio móvil (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263163)
- 
+ 
 
- 
+ 
 
 
 

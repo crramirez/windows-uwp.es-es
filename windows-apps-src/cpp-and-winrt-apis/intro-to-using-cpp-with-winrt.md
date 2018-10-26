@@ -5,16 +5,14 @@ title: Introducción a C++/WinRT
 ms.author: stwhi
 ms.date: 05/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, estándar, c ++ cpp, winrt, proyección, introducción
 ms.localizationpriority: medium
-ms.openlocfilehash: 7848a0b00e2f6a2bbaa84c413dc26f1ea7238e8e
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 8b88eac972cd65b771827d7e3125476265cf671e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474248"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568464"
 ---
 # <a name="introduction-to-cwinrt"></a>Introducción a C++/WinRT
 &nbsp;
@@ -22,7 +20,7 @@ ms.locfileid: "5474248"
 
 C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows. Con C++/WinRT, puedes crear y consumir API de Windows Runtime usando cualquier compilador de C ++17 compatible con estándares. Windows SDK incluye C++/WinRT. Se introdujo en la versión 10.0.17134.0 (Windows 10, versión 1803).
 
-C++ / WinRT es el reemplazo recomendado de Microsoft para la [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) proyección de lenguaje y la [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live). La lista completa de [temas sobre C++ / WinRT](index.md#topics-about-cwinrt) se incluye información sobre la interoperación con tanto a portar desde, C++ / CX y WRL.
+C++ / WinRT es el reemplazo recomendado de Microsoft para la [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) proyección de lenguaje y la [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live). La lista completa de [los temas sobre C++ / WinRT](index.md#topics-about-cwinrt) se incluye información sobre la interoperación con tanto a portar desde, C++ / CX y WRL.
 
 > [!IMPORTANT]
 > Dos de las partes más importantes de C++/WinRT a tener en cuenta se describen en las secciones [Soporte SDK para C++/WinRT](#sdk-support-for-cwinrt) y [Soporte de Visual Studio para C++/WinRT y VSIX](#visual-studio-support-for-cwinrt-and-the-vsix).
@@ -42,13 +40,13 @@ Con C++/WinRT, también puedes implementar tus propias clases en tiempo de ejecu
 Para obtener las plantillas de proyecto C++/WinRT en Visual Studio, así como las propiedades y destinos de MSBuild de C++/WinRT, descarga e instala la [extensión de Visual Studio de C++/WinRT](https://aka.ms/cppwinrt/vsix) desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
 > [!NOTE]
-> Con la versión 1.0.181002.2 (o posterior) de la extensión VSIX instalada, creando un nuevo C++ / WinRT proyecto instala automáticamente el [paquete de Microsoft.Windows.CppWinRT NuGet](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) para ese proyecto. El paquete de Microsoft.Windows.CppWinRT NuGet proporciona mejor C++ / soporte de compilación de proyectos de WinRT, que hace el proyecto portátiles entre un equipo de desarrollo y un agente de compilación (en el que solo el paquete de NuGet y no VSIX, se instala).
+> Con la versión 1.0.181002.2 (o posterior) de la extensión VSIX instalada, crear un nuevo C++ / WinRT proyecto instala automáticamente el [paquete de Microsoft.Windows.CppWinRT NuGet](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) para ese proyecto. Proporciona el paquete de Microsoft.Windows.CppWinRT NuGet mejorada C++ / WinRT soporte para compilación de proyectos, hacer que el proyecto portable entre un equipo de desarrollo y un agente de compilación (en el que solo el paquete de NuGet y no VSIX, se instala).
 >
-> Para un proyecto existente&mdash;después de instalar la versión 1.0.181002.2 (o posterior) de la extensión VSIX&mdash;te recomendamos que abre el proyecto en Visual Studio, haz clic en el **proyecto** \> **Administrar paquetes de NuGet …**  \>  **Examinar**, escribe o pega **Microsoft.Windows.CppWinRT** en el cuadro de búsqueda, selecciona el elemento en los resultados de búsqueda y, a continuación, haz clic en **instalar** para instalar el paquete para el proyecto.
+> Para un proyecto existente&mdash;después de que has instalado versión 1.0.181002.2 (o posterior) de la extensión VSIX&mdash;te recomendamos que abre el proyecto en Visual Studio, haz clic en el **proyecto** \> **Administrar paquetes de NuGet …**  \>  **Examinar**, escribe o pega **Microsoft.Windows.CppWinRT** en el cuadro de búsqueda, selecciona el elemento en los resultados de búsqueda y, a continuación, haz clic en **instalar** para instalar el paquete de ese proyecto.
 
-Tendrás que Visual Studio 2017 (tendrás que al menos la versión 15.6, pero te recomendamos al menos la 15.7) y Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803). Si ya no has instalado, tendrás que instalar la opción de **Herramientas de la plataforma Universal de Windows de C++** desde el instalador de Visual Studio. Y, en **configuración**de Windows > **Update \ & seguridad** > **para desarrolladores**, elige la opción de **modo de desarrollador** en lugar de la opción de **instalar aplicaciones** .
+Tendrás que Visual Studio 2017 (tendrás que al menos la versión 15.6, pero te recomendamos al menos la 15.7) y Windows SDK versión 10.0.17134.0 (Windows 10, versión 1803). Si ya no has instalado, tendrás que instalar la opción de **Herramientas de la plataforma Universal de Windows de C++** desde el instalador de Visual Studio. Y, en la **configuración**de Windows > **Update \ & seguridad** > **para desarrolladores**, elige la opción de **modo de desarrollador** , en lugar de la opción de **instalar aplicaciones** .
 
-A continuación, podrás crear y generar o abrir, C++ / WinRT del proyecto en Visual Studio e implementarla. Como alternativa, puedes convertir un proyecto existente mediante la adición de la `<CppWinRTEnabled>true</CppWinRTEnabled>` propiedad a su `.vcxproj` archivo.
+A continuación, podrás crear y generar o abrir, C++ / WinRT de proyecto en Visual Studio e implementarla. Como alternativa, puedes convertir un proyecto existente mediante la adición de la `<CppWinRTEnabled>true</CppWinRTEnabled>` propiedad a su `.vcxproj` archivo.
 
 ```xml
 <Project ...>
@@ -90,7 +88,7 @@ En un archivo IDL, define las clases en tiempo de ejecución en tu componente, s
 Agrupa el binario compilado de componente de Windows Runtime y su `.winmd` con la aplicación para UWP consumiéndolos.
 
 ## <a name="custom-types-in-the-cwinrt-projection"></a>Tipos personalizados en la proyección C++/WinRT
-En tu programación de C++/WinRT puedes usar características del lenguaje C++ estándar y [tipos de datos C++ estándar y C++/WinRT](std-cpp-data-types.md), incluidos algunos tipos de datos de la biblioteca estándar de C++. Pero también serás consciente de algunos tipos de datos personalizados en la proyección, y podrás optar por usarlos. Por ejemplo, usamos [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) en el ejemplo de código de inicio rápido de [Introducción a C++/WinRT](get-started.md).
+En tu C++ / WinRT de programación, puedes usar características del lenguaje C++ estándar y [tipos de datos C++ estándar y C++ / WinRT](std-cpp-data-types.md)&mdash;incluidos algunos tipos de datos de la biblioteca estándar de C++. Pero también serás consciente de algunos tipos de datos personalizados en la proyección, y podrás optar por usarlos. Por ejemplo, usamos [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) en el ejemplo de código de inicio rápido de [Introducción a C++/WinRT](get-started.md).
 
 [**winrt::com_array**](/uwp/cpp-ref-for-winrt/com-array) es otro tipo que probablemente uses en algún momento. Pero es menos probable que uses directamente un tipo como [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view). O bien puedes optar por no usarlo para no tener ningún código que cambiar si aparece un tipo equivalente en la biblioteca estándar de C++.
 

@@ -1,42 +1,40 @@
 ---
 author: v-angraf
 ms.assetid: a56156e4-7adb-bf37-527b-fc3243e04b46
-title: Página principal de desarrollador en la consola (desarrollo principal)
-description: Proporciona información acerca de la aplicación principal de desarrollo para Xbox uno.
+title: Inicio del desarrollador en la consola (Dev Home)
+description: Proporciona información sobre la aplicación Dev Home para Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/dev-home.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b802b9b53811e03e11ee3afd78f69db4bfd9986
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 232770ab4b746663a105982605d1cedcb92adbe3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015364"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571229"
 ---
-# <a name="developer-home-on-the-console-dev-home"></a>Página principal de desarrollador en la consola (desarrollo principal)
+# <a name="developer-home-on-the-console-dev-home"></a>Inicio del desarrollador en la consola (Dev Home)
    
   
-Página principal de desarrollo es una experiencia de herramientas en el kit de desarrollo de Xbox uno diseñada para ayudar en la productividad del desarrollador. Desarrollo principal ofrece funcionalidad para administrar y configurar el kit de desarrollo, administración de usuarios, inicio títulos instalados y realizar captura y realiza un seguimiento. En futuras versiones que seguiremos para expandir la funcionalidad para habilitar las características adicionales en función de sus comentarios y también para habilitar la extensibilidad y la adición de sus propias herramientas.   
+Dev Home es una experiencia de herramientas en el kit de desarrollo de Xbox One diseñada para ayudar a la productividad del desarrollador. Ofrece funcionalidad para administrar y configurar el kit de desarrollo, administrar usuarios, iniciar títulos instalados y realizar la captura y realiza un seguimiento. En futuras versiones que seguiremos para ampliar la funcionalidad para habilitar características adicionales en función de tus comentarios y también para habilitar la extensibilidad y la adición de sus propias herramientas.   
    
   
-Estamos muy interesados en sus comentarios en el desarrollo principal y los escenarios que más les interesa ver lo admite. Proporcione sus comentarios a través de los métodos descritos en **Enviar comentarios** en el menú principal de la aplicación o a través de su administrador de cuenta para desarrolladores (DAM).   
+Estamos muy interesados en tus comentarios sobre Dev Home y los escenarios que te interesa más lo vean admitir. Proporcione sus comentarios a través de los métodos descritos en **Enviar comentarios** en el menú principal de la aplicación o a través de su administrador de cuenta de desarrollador (DAM).   
    
   
-Para iniciar el desarrollo principal en el de noviembre de 2015 o posterior recuperación:  
+Para iniciar la página principal para desarrolladores en el de noviembre de 2015 o posterior recuperación:  
  
-   1. Abrir a la Guía de moviendo izquierdo en principal o hacer doble clic en el botón nexo  
-   1. Mover hacia abajo a la **configuración** (el icono del engranaje)   
-   1. Seleccione **todas las opciones**  
-   1. Desde la página de **desarrollador** de forma predeterminada, seleccione **Página principal para desarrolladores** (el icono de inicio)   
+   1. Abre a la guía moviendo izquierda en Home o hacer doble clic en el botón de nexo  
+   1. Desplazar hacia abajo para la **configuración** (el icono del engranaje)   
+   1. Seleccionar **todas las configuraciones**  
+   1. En la página de **desarrollador** de forma predeterminada, selecciona **Inicio del desarrollador** (el icono de inicio)   
 
  ![](images/dev_home_icons.png)   
   
-En anteriores recuperaciones seleccione el icono de desarrollo principal en el lado derecho de la pantalla principal en **contenido destacado** o ver la lista de aplicaciones en el Administrador de una Xbox e inicie **Principal de desarrollo**.   
+En versiones anteriores recuperaciones selecciona la ventana de Dev Home en el lado derecho de la pantalla principal de **contenido destacado** o ver la lista de aplicaciones en el Administrador de Xbox One e inicie **Dev Home**.   
  ![](images/dev_home_1.png) 
 <a id="ID4EBC"></a>
 
@@ -45,21 +43,21 @@ En anteriores recuperaciones seleccione el icono de desarrollo principal en el l
 ## <a name="user-interface"></a>Interfaz de usuario  
    
   
-El encabezado de la interfaz de usuario principal de desarrollo contiene las siguientes importantes "de un vistazo" información acerca de la consola de desarrollo:   
+El encabezado de la interfaz de usuario de Dev Home contiene las siguientes importantes "un vistazo" información acerca de la consola de desarrollo:   
  
-   *  **De consola de IP:** La dirección IP actual de la consola.   
+   *  **IP de consola:** La dirección IP actual de la consola.   
    *  **Nombre de la consola:** El nombre de host actual de la consola.  
    *  **Espacio aislado:** El nombre del espacio aislado que se encuentra en la consola.  
-   *  **Versión del sistema operativo:** La versión actual de recuperación que se está ejecutando en la consola.
+   *  **Versión del sistema operativo:** La versión actual de recuperación que se ejecuta en la consola.
    *  Hora actual del sistema.   
 
    
   
-El resto de la UI de desarrollo principal se divide en las siguientes páginas. Para obtener más información acerca de las herramientas en estas páginas, vea sus temas individuales.   
+El resto de la interfaz de Dev Home se divide en las páginas siguientes. Para obtener más información acerca de las herramientas de estas páginas, consulta los temas individuales.   
  
    *  [Casa](devhome-home.md)  
    *  [XboxLive](devhome-live.md)  
-   *  [Settings](devhome-settings.md)  
+   *  [Configuración](devhome-settings.md)  
    *  [Captura multimedia](devhome-capture.md)  
    *  [Redes](devhome-networking.md)  
    *  [Rendimiento](devhome-performance.md)  
@@ -72,19 +70,19 @@ El resto de la UI de desarrollo principal se divide en las siguientes páginas. 
 ## <a name="main-menu"></a>Menú principal  
    
   
-Al presionar el botón de **menú** en el controlador, puede tener acceso el menú principal que permite la configuración de la aplicación del área de trabajo, la capacidad para administrar las credenciales para obtener acceso a las ubicaciones de red y obtener información acerca de proporcionar comentarios sobre la aplicación.   
+Al presionar el botón de **menú** en el controlador, puedes acceder al menú principal que permite la configuración de área de trabajo de aplicación, la capacidad para administrar las credenciales para acceder a ubicaciones de red y obtener información acerca de proporcionar comentarios sobre la aplicación.   
   
 <a id="ID4EUE"></a>
 
    
 
-## <a name="snap-mode-ux"></a>Se ajusta a modo de experiencia de usuario  
+## <a name="snap-mode-ux"></a>Experiencia del usuario de modo acoplado  
    
   
-Varias herramientas existentes y futuras en la página principal de desarrollo, como redes y Multiplayer, están diseñadas para usarse ajustados en el lado mientras se ejecuta su título, por lo que puede tener acceso fácil a herramientas mientras se está probando.   
+Varias herramientas existentes y futuras en Dev Home, por ejemplo, redes y de varios jugadores, están diseñadas para usarse acoplarse a un lado mientras ejecutas el título, por lo que puede tener acceso fácil a las herramientas durante la prueba.   
    
   
-Para obtener acceso a modo de complemento, resalte el título de la herramienta apropiada, presione el botón de **vista** en el controlador y seleccione **se ajusta** en el menú contextual:  
+Para acceder a modo de complemento, resaltar el título de la herramienta adecuada, presiona el botón de **vista** en el controlador y selecciona **de acoplamiento** en el menú contextual:  
  ![](images/dev_home_4.png)   
   
 Dev Home se acoplará a la derecha. Puede cambiar el contexto si presionas dos veces el botón Nexo de la forma habitual.  
@@ -96,16 +94,16 @@ Dev Home se acoplará a la derecha. Puede cambiar el contexto si presionas dos v
 ## <a name="customizing-dev-home"></a>Personalizar Dev Home  
    
   
-Dev Home se diseñó para ser personalizable y cercana. Puede configurar la aplicación para adaptarse a su flujo de trabajo y, a continuación, guarde como un área de trabajo. Esta área de trabajo se puede exportar e importadas, lo que permite copiar el diseño a otras consolas como sea necesario. Estas opciones se encuentran en el menú principal en el **área de trabajo**. El archivo exportado se encuentran en la unidad del sistema borrador en el `Dev Home\Workspaces` Active directory.   
+Dev Home se diseñó para ser personalizable y cercana. Puedes configurar la aplicación para adaptar el flujo de trabajo y, a continuación, guarda como un área de trabajo. Esta área de trabajo se puede exportar e importado, lo que permite copiar el diseño a otras consolas como sea necesario. Estas opciones se encuentran en el menú principal en el **área de trabajo**. El archivo exportado se encontrarán en la unidad temporal del sistema en el `Dev Home\Workspaces` directorio.   
  
 <a id="ID4EVF"></a>
 
    
 
-### <a name="resizing-and-reordering-tools"></a>Cambiar el tamaño y la reordenación de las herramientas  
+### <a name="resizing-and-reordering-tools"></a>Cambiar el tamaño y orden de las herramientas  
    
   
-Para cambiar el tamaño o la posición de una herramienta, use el botón de menú contextual (botón de vista en el controlador) mientras el título tiene el foco. En el menú contextual, seleccione **mover** o **cambiar su tamaño**.   
+Para cambiar el tamaño o la posición de una herramienta, usa el botón de menú contextual (botón de vista en el controlador) mientras el título tiene el foco. En el menú contextual selecciona **mover** o **cambiar el tamaño**.   
  ![](images/dev_home_6.png)  
 <a id="ID4EEG"></a>
 
@@ -114,7 +112,7 @@ Para cambiar el tamaño o la posición de una herramienta, use el botón de men�
 ### <a name="changing-theme-color-and-background-image"></a>Cambiar el color del tema y la imagen de fondo  
    
   
-En el menú principal, puede seleccionar el **área de trabajo** y, a continuación, **cambiar el color de tema**. Seleccione un nuevo color y seleccione **Guardar** para actualizar el color del tema usado para resaltar el foco.   
+En el menú principal, puedes seleccionar **área de trabajo** y, a continuación, **cambiar el color de tema**. Selecciona un color nuevo y selecciona **Guardar** para actualizar el color del tema usado para resaltar el foco.   
  ![](images/dev_home_7.png)  
 <a id="ID4EVG"></a>
 
@@ -123,25 +121,25 @@ En el menú principal, puede seleccionar el **área de trabajo** y, a continuaci
 ### <a name="setting-the-default-application-for-a-package"></a>Configuración de la aplicación predeterminada para un paquete  
    
   
-Si un paquete contiene varias aplicaciones, desarrollo principal le permitirá establecer la aplicación predeterminada que se iniciará. Resalte el paquete en el selector y presione **el botón para abrir la lista de aplicaciones disponibles** . Resaltar aquel en el que desea establecer como predeterminado y presione el botón **vista** y, a continuación, elija **establecer como predeterminado** en el menú contextual.   
+Si un paquete contiene varias aplicaciones, Dev Home te permitirá establecer la aplicación predeterminada se inicie. Resaltar el paquete en el selector y presiona **el botón para abrir la lista de aplicaciones disponibles** . Resaltar aquel en el que deseas establecer como predeterminado y presionar el botón de **vista** y, a continuación, elige **establecer como predeterminado** en el menú contextual.   
  ![](images/dev_home_setdefault.png)  
 <a id="ID4EGH"></a>
 
    
 
-### <a name="using-dev-home-to-register-and-launch-titles-from-a-network-share"></a>Uso de desarrollo principal para registrar e iniciar los títulos de un recurso compartido de red  
+### <a name="using-dev-home-to-register-and-launch-titles-from-a-network-share"></a>Usar Dev Home para registrar e iniciar títulos desde un recurso compartido de red  
    
   
-Desde el iniciador, en la parte inferior de las aplicaciones instaladas y la lista de juegos, puede seleccionar la opción **registrar un juego desde un recurso compartido de red** para ejecutar una versión de archivo separado de un título de forma remota.   
+Desde el selector, en la parte inferior de las aplicaciones instaladas y la lista de juegos, puedes seleccionar la opción de **registrar un juego desde un recurso compartido de red** para ejecutar una versión de archivos sueltos de un título de forma remota.   
  ![](images/dev_home_8.png)   
   
-A continuación, puede escribir la ruta de acceso de red en el archivo appxmanifest.xml para el título que desea registrar. Desarrollo principal se intentará registrar el título con todas las credenciales existentes para ese recurso compartido y si necesita solicitará nuevas credenciales de red. Si necesita tener acceso a recursos compartidos adicionales (por ejemplo a los recursos de acceso simbólicamente vinculado en un servidor independiente) necesitará agregar aquellas a través de la opción que aparece a continuación.   
+A continuación, puedes escribir la ruta de acceso de red en el archivo appxmanifest.xml del título que quieres registrar. Dev Home intentará registrar el título con todas las credenciales existentes para ese recurso compartido y si necesita pedirá las credenciales de red de nuevo. Si es necesario acceder a recursos compartidos adicionales (por ejemplo a los recursos de acceso vinculado medio de símbolos en un servidor independiente), a continuación, tendrás que agregar aquellos a través de la opción a continuación.   
    
   
-Puede administrar estas credenciales almacenadas (y agregar otros nuevos) en la consola a través de la opción de **administrar las credenciales de red** del menú principal.   
+Puedes administrar estas credenciales almacenadas (y agregar otras adicionales) en la consola mediante la opción de **administrar las credenciales de red** del menú principal.   
  ![](images/dev_home_9.png)   
   
-Puede ver las credenciales actualmente en la consola, editar las credenciales, seleccione la ruta de acceso de la credencial y hacer clic en **un** botón y quitar una credencial, seleccione el vínculo quitar y hacer clic en **un** botón.   
+Puede ver las credenciales actualmente en la consola, editar credenciales seleccionando la ruta de acceso de la credencial y hacer clic en **un** botón y quitar una credencial seleccionando el vínculo quitar y hacer clic en **un** botón.   
    
 <a id="ID4EGAAC"></a>
 
@@ -149,38 +147,38 @@ Puede ver las credenciales actualmente en la consola, editar las credenciales, s
 
 ## <a name="in-this-section"></a>En esta sección  
   
-[Página principal (desarrollo principal)](devhome-home.md)  
+[Página principal (Dev Home)](devhome-home.md)  
 
 
-&nbsp;&nbsp;Proporciona acceso rápido a las tareas que se realizan habitualmente en una consola de desarrollo. 
+&nbsp;&nbsp;Proporciona acceso rápido a las tareas que se realizan de forma rutinaria en una consola de desarrollo. 
   
   
-[Xbox Live página (página principal de desarrollo)](devhome-live.md)  
+[Xbox Live página (Dev Home)](devhome-live.md)  
 
 
-&nbsp;&nbsp;Captura información con varios jugadores y muestra el estado actual del servicio Xbox Live. 
+&nbsp;&nbsp;Captura información multijugador y muestra el estado actual del servicio Xbox Live. 
   
   
-[Página de configuración (desarrollo principal)](devhome-settings.md)  
+[Página de configuración (Dev Home)](devhome-settings.md)  
 
 
-&nbsp;&nbsp;Proporciona acceso a diversas opciones para la consola de desarrollo. 
+&nbsp;&nbsp;Proporciona acceso a diversas opciones de configuración para la consola de desarrollo. 
   
   
-[Medios capturan página (página principal de desarrollo)](devhome-capture.md)  
+[Página (Dev Home) de captura multimedia](devhome-capture.md)  
 
 
-&nbsp;&nbsp;La página de **capturan de medios** de desarrollo principal captura vídeo del título que se está ejecutando actualmente en la consola. 
+&nbsp;&nbsp;La página **de captura multimedia** de Dev Home captura de vídeo del título que se está ejecutando actualmente en la consola. 
   
   
-[Página de red (desarrollo principal)](devhome-networking.md)  
+[Página de red (Dev Home)](devhome-networking.md)  
 
 
-&nbsp;&nbsp;Simula diversas condiciones de redes para solucionar problemas. 
+&nbsp;&nbsp;Simula distintas condiciones de redes para solucionar problemas. 
   
   
-[Página de rendimiento (desarrollo principal)](devhome-performance.md)  
+[Página rendimiento (Dev Home)](devhome-performance.md)  
 
 
-&nbsp;&nbsp;Simula diversas condiciones de uso de CPU para fines de solución de problemas y la actividad de disco. 
+&nbsp;&nbsp;Simula varias actividad del disco y condiciones de uso de CPU para solucionar problemas. 
  

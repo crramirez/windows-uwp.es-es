@@ -6,16 +6,14 @@ ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, games, tecnología, technology, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 496e0f8386b60247090035d4c4d1f7aa986f8560
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: c6896bda0498483efb4d77e1fa2a6ef82e0f8789
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690761"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567584"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>Tecnologías de juego de aplicaciones para la UWP
 
@@ -23,12 +21,12 @@ ms.locfileid: "1690761"
 
 En esta guía, encontrarás información sobre las tecnologías disponibles para desarrollar juegos para la Plataforma universal de Windows (UWP).
 
-##  <a name="benefits-of-windows-10-for-game-development"></a>Ventajas de Windows 10 para el desarrollo de juegos
+##  <a name="benefits-of-windows10-for-game-development"></a>Ventajas de Windows 10 para el desarrollo de juegos
 
 
-Con la introducción de UWP en Windows 10, tus títulos para Windows 10 podrán llegar a todas las plataformas de Microsoft. Con la migración gratuita de las versiones anteriores de Windows, hay un constante aumento en el número de clientes que usan Windows 10. La combinación de estas dos cosas significa que tus títulos para Windows 10 podrán llegar a un elevado número de clientes a través de Microsoft Store.
+Con la introducción de UWP en Windows 10, tus títulos de Windows 10 podrán llegar a todas las plataformas de Microsoft. Con la migración gratuita de versiones anteriores de Windows, hay un constante aumento en el número de clientes de Windows 10. La combinación de estas dos cosas significa que tus títulos de Windows 10 podrán llegar a un elevado número de clientes a través de Microsoft Store.
 
-Además, Windows 10 te ofrece muchas características nuevas que son particularmente beneficiosas para los juegos:
+Además, Windows 10 ofrece muchas características nuevas que son particularmente beneficiosas para los juegos:
 
 -   Menor paginación de memoria y menor tamaño del sistema de memoria global
 -   Mejoras en la administración de memoria de elementos gráficos que asigna y protege activamente más memoria para el juego en primer plano
@@ -41,7 +39,7 @@ Los juegos en tiempo real que requieren un alto rendimiento deben usar las API d
 ## <a name="development-environment"></a>Entorno de desarrollo
 
 
-Para crear juegos para UWP, necesitarás configurar el entorno de desarrollo instalando una copia de Visual Studio2015 y posteriores. Visual Studio 2015 te permite crear aplicaciones para UWP y proporciona herramientas para el desarrollo de juegos:
+Para crear juegos para UWP, tendrás que configurar el entorno de desarrollo instalando Visual Studio 2015 o posterior. Te recomendamos que instalar la versión más reciente de Visual Studio, lo que da acceso a las últimas actualizaciones de seguridad y desarrollo. Visual Studio permite crear aplicaciones para UWP y proporciona herramientas de desarrollo de juegos:
 
 -   Herramientas de Visual Studio para programación de juegos DX: Visual Studio proporciona herramientas para crear, editar, obtener una vista previa y exportar una imagen, modelo y recursos de sombreador. También puedes usar herramientas para convertir recursos durante la compilación y depurar el código de elementos gráficos de DirectX. Para obtener más información, consulta [Herramientas de Visual Studio para programación de juegos](set-up-visual-studio-for-game-development.md).
 -   Características de diagnóstico de elementos gráficos de Visual Studio: las herramientas de diagnóstico de elementos gráficos ya están disponibles en Windows como una característica opcional. Las herramientas de diagnóstico te permiten depurar elementos gráficos, analizar fotogramas de elementos gráficos y supervisar el uso de la GPU en tiempo real. Para obtener más información, consulta [Usar DirectX en tiempo de ejecución y las características de diagnóstico de elementos gráficos de Visual Studio](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md).
@@ -95,7 +93,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     </tbody>
     </table>
 
-     
+     
 
 -   Elementos gráficos 2D e interfaz de usuario: API de elementos gráficos 2D como texto e interfaces de usuario. Todas las API de elementos gráficos 2D e interfaces de usuario son opcionales.
 
@@ -138,7 +136,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     </tbody>
     </table>
 
-     
+     
 
 -   Audio: API relativas a la reproducción de audio y la aplicación de efectos de audio. Para obtener información sobre cómo usar las API de audio en tu juego, consulta [Audio para juegos](working-with-audio-in-your-directx-game.md).
 
@@ -173,7 +171,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     </tbody>
     </table>
 
-     
+     
 
 -   Entrada: API relativas a la entrada desde el teclado, mouse, mando de juegos y otras fuentes de entrada del usuario.
 
@@ -224,7 +222,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     </tbody>
     </table>
 
-     
+     
 
 -   Matemáticas: API que ayudan a simplificar operaciones matemáticas frecuentemente usadas.
 
@@ -251,7 +249,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     </tbody>
     </table>
 
-     
+     
 
 -   Funciones de red: API relativas a la comunicación con otros equipos y dispositivos a través de Internet o redes privadas.
 
@@ -286,7 +284,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     </tbody>
     </table>
 
-     
+     
 
 -   Utilidades auxiliares: bibliotecas que se basan en las API de Windows10.
 
@@ -321,11 +319,11 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     </tbody>
     </table>
 
-     
+     
 
 ## <a name="xbox-live-services"></a>Servicios de Xbox Live
 
-El [Programa de creadores de XboxLive](https://developer.microsoft.com/games/xbox/xboxlive/creator) permite a cualquier desarrollador integrar XboxLive en su juego de UWP y publicarlo en XboxOne y Windows10. Integra experiencias de redes sociales de Xbox Live, como el inicio de sesión, la presencia, los marcadores y mucho más en tu juego, con un tiempo de desarrollo mínimo. Las funciones de redes sociales de Xbox Live están diseñadas para hacer crecer tu audiencia de forma orgánica, difundiendo el conocimiento a más de 55 millones de jugadores activos.
+El [Programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) permite a cualquier desarrollador integrar Xbox Live en su juego de UWP y publicarlo en Xbox One y Windows 10. Integra experiencias de redes sociales de Xbox Live, como el inicio de sesión, la presencia, los marcadores y mucho más en tu juego, con un tiempo de desarrollo mínimo. Las funciones de redes sociales de Xbox Live están diseñadas para hacer crecer tu audiencia de forma orgánica, difundiendo el conocimiento a más de 55 millones de jugadores activos.
 
 Si quieres obtener acceso a todavía más funcionalidades de Xbox Live, marketing dedicado y soporte técnico de desarrollo, así como la posibilidad de aparecer destacado en la Tienda principal de Xbox One, presenta la solicitud para el programa [ID@Xbox](http://www.xbox.com/developers/id). Para ver qué funciones están disponibles para el Programa de creadores de Xbox Live y el programa ID@Xbox, consulta la [Tabla de funciones](../xbox-live/developer-program-overview.md#feature-table).
 
@@ -356,9 +354,9 @@ Cuando estés listo para publicar tu juego, tendrás que crear una cuenta de des
 
 Para obtener información sobre el envío de tu juego a Microsoft Store, consulta [Enviar y publicar juegos](e2e.md#submitting-and-publishing-your-game).
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ description: Obtén las propiedades (de nivel superior, básicas y extendidas) d
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f3edb012f04026251d151da99f34accb9e1848c3
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 8fc44300376efb5b56f390457e516f35a3ec4202
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662735"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565465"
 ---
 # <a name="get-file-properties"></a>Obtener las propiedades de archivos
 
@@ -32,7 +30,7 @@ Obtiene las propiedades —de nivel superior, básicas y extendidas— de un arc
 > [!NOTE]
 > Consulta también la [Muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
- 
+ 
 
 
 ## <a name="prerequisites"></a>Requisitos previos
@@ -49,9 +47,9 @@ Obtiene las propiedades —de nivel superior, básicas y extendidas— de un arc
 
 Muchas de las propiedades de archivo de nivel superior son accesibles como miembros de la clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). Estas propiedades incluyen los atributos del archivo, el tipo de contenido, la fecha de creación, el nombre para mostrar, el tipo de archivo, etc.
 
-**Nota**  Recuerda declarar la funcionalidad **picturesLibrary**.
+**Nota**recuerda declarar la funcionalidad de **picturesLibrary** .
 
- 
+ 
 
 Este ejemplo enumera todos los archivos de la biblioteca Imágenes al tener acceso a unas cuantas propiedades de nivel superior de cada archivo.
 
@@ -142,6 +140,6 @@ foreach (Windows.Storage.StorageFile file in files)
 }
 ```
 
- 
+ 
 
- 
+ 

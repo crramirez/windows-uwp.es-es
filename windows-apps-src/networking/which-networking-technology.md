@@ -6,16 +6,14 @@ title: ¿Qué tecnología de redes?
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 70ac6eb26c13d8fca3196fa64bfce2bb76f9d1b2
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 3c617f3ec6d189f3ee75fcf2fd0ff96d386ec32c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975607"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570490"
 ---
 # <a name="which-networking-technology"></a>¿Qué tecnología de redes?
 
@@ -73,7 +71,7 @@ Usa [HttpClient](httpclient.md) (y el resto de la API de espacio de nombres [**W
 
 Usa la [API de transferencia en segundo plano](background-transfers.md) cuando quieras transferir archivos de forma confiable a través de la red. La API de transferencia en segundo plano proporciona funciones de carga y descarga avanzadas que se ejecutan en segundo plano durante la suspensión de la aplicación y que persisten tras la finalización de esta. La API supervisa el estado de red, y suspende y reanuda automáticamente las transferencias cuando se pierde la conexión. Además, las transferencias son compatibles con el sensor de datos y el de batería, lo que significa que la actividad de descarga se ajusta según la conectividad y el estado de la batería actuales del dispositivo. Estas funcionalidades son esenciales cuando la aplicación se ejecuta en dispositivos móviles o con batería. La API es ideal para cargar y descargar archivos grandes mediante HTTP(S). También se admite FTP, pero solo para descargas.
 
-Una nueva característica de transferencia en segundo plano en Windows10 es la capacidad de desencadenar un procesamiento posterior cuando una transferencia de archivos ha finalizado, por lo que puedes actualizar catálogos locales, activar otras aplicaciones o notificar al usuario cuando se completa una descarga.
+Una nueva característica de transferencia en segundo plano en Windows 10 es la capacidad de desencadenar un procesamiento posterior cuando una transferencia de archivos ha finalizado, por lo que puedes actualizar catálogos locales, activar otras aplicaciones o notificar al usuario cuando se completa una descarga.
 
 ### <a name="when-to-use-background-transfers"></a>Cuándo usar transferencias en segundo plano
 
@@ -131,7 +129,7 @@ La API [**Windows.Devices.WiFiDirect.Services**](https://msdn.microsoft.com/libr
 
 ### <a name="mobile-operators"></a>Operadores de telefonía móvil
 
-Windows 10 expone a una audiencia amplia de desarrolladores algunas API que anteriormente solo se exponían a los fabricantes de dispositivos y a los operadores de telefonía móvil. Ten en cuenta que aunque estas API se exponen ahora, también están acompañadas de funcionalidades de aplicaciones específicas que debe aprobar Microsoft antes de que se pueda publicar una aplicación. El uso real de estas API se limita principalmente a los fabricantes de dispositivos y los operadores de telefonía móvil.
+Windows 10 expone a una audiencia amplia de desarrolladores algunas API que anteriormente solo se exponían a los fabricantes de dispositivos y operadores de telefonía móviles. Ten en cuenta que aunque estas API se exponen ahora, también están acompañadas de funcionalidades de aplicaciones específicas que debe aprobar Microsoft antes de que se pueda publicar una aplicación. El uso real de estas API se limita principalmente a los fabricantes de dispositivos y los operadores de telefonía móvil.
 
 ### <a name="network-operations"></a>Operaciones de red
 

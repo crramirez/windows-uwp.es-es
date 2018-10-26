@@ -5,16 +5,14 @@ title: Tipografía en aplicaciones para UWP
 ms.author: mijacobs
 ms.date: 04/06/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 505167775b61908be7f47068dbf3221c293f6112
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 62f5aa7d1089b38131c742c588ae741e88197533
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843375"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565015"
 ---
 # <a name="typography"></a>Tipografía
 
@@ -30,9 +28,16 @@ Debes usar una fuente en toda la interfaz de usuario de la aplicación y te reco
 
 Para mostrar idiomas que no son inglés o para seleccionar una fuente diferente para tu aplicación, consulta [Idiomas](#Languages) y [Fuentes](#Fonts) para nuestras fuentes recomendadas para aplicaciones para UWP.
 
-:::row::: :::column::: ![hacer](images/do.svg) Elige una fuente para tu IU.
-:::column-end::: :::column::: ![no hacer't](images/dont.svg) No mezcles varias fuentes.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Pick one font for your UI.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Don't mix multiple fonts.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="size-and-scaling"></a>Tamaño y ajuste de escala
 
@@ -42,14 +47,27 @@ Los tamaños de fuente en las aplicaciones para UWP ajustan la escala automátic
 
 Debido a cómo funciona el sistema de ajuste de escala, estás diseñando en píxeles efectivos, no píxeles físicos reales y no debes tener que modificar los tamaños de fuente para las resoluciones y los tamaños de pantallas diferentes.
 
-:::row::: :::column::: ![hacer](images/do.svg) Sigue el tamaño de UWP [rampa de tipos](#type-ramp).
-:::column-end::: :::column::: ![no hacer](images/dont.svg) Usa un tamaño de fuente menor de 12px.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Follow the UWP [type ramp](#type-ramp) sizing.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Use a font size smaller than 12 px.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="hierarchy"></a>Jerarquía
 
-:::row::: :::column::: Los usuarios dependen de la jerarquía visual cuando se analiza una página: los encabezados resumen contenido y el texto del cuerpo ofrece más detalles. Para crear una jerarquía visual clara en la aplicación, sigue la tabla de tipos UWP.
-:::column-end::: :::column::: ![estilos de bloque de texto](images/type/type-hierarchy.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Users rely on visual hierarchy when scanning a page: headers summarize content, and body text provides more detail. To create a clear visual hierarchy in your app, follow the UWP type ramp.
+    :::column-end:::
+    :::column:::
+        ![text block styles](images/type/type-hierarchy.svg)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="type-ramp"></a>Rampa de tipografías
 
@@ -59,8 +77,14 @@ La tabla de tipos UWP establece relaciones cruciales entre los estilos de tipos 
 
 ### <a name="using-the-type-ramp"></a>Usar la rampa de tipos
 
-:::row::: :::column::: Puede obtener acceso a los niveles de la tabla de tipos como XAML [recursos estáticos](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp). Los estilos siguen la convención de nomenclatura `*TextBlockStyle`.
-:::column-end::: :::column::: ![estilos de bloque de texto](images/type/text-block-type-ramp.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        You can access levels of the type ramp as XAML [static resources](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp). The styles follow the `*TextBlockStyle` naming convention.
+    :::column-end:::
+    :::column:::
+        ![text block styles](images/type/text-block-type-ramp.svg)
+    :::column-end:::
+:::row-end:::
 
 ```XAML
 <TextBlock Text="Header" Style="{StaticResource HeaderTextBlockStyle}"/>
@@ -72,7 +96,10 @@ La tabla de tipos UWP establece relaciones cruciales entre los estilos de tipos 
 <TextBlock Text="Caption" Style="{StaticResource CaptionTextBlockStyle}"/>
 ```
 
-:::row::: :::column::: ![hacer](images/do.svg) Usa "Body" para la mayor parte del texto.
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Use "Body" for most text.
 
         Use "Base" for titles when space is constrained.
     :::column-end:::
@@ -96,9 +123,16 @@ El valor predeterminado [TextAlignment](https://docs.microsoft.com/uwp/api/windo
 
 ## <a name="character-count"></a>Número de caracteres
 
-:::row::: :::column::: ![hacer](images/do.svg) Mantener de 50a 60 letras por línea para facilitar la lectura.
-:::column-end::: :::column::: ![no hacer](images/dont.svg) Menos de 20 caracteres o más de 60 caracteres por línea resulta difícil de leer.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Keep to 50–60 letters per line for ease of reading.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Less than 20 characters or more than 60 characters per line is difficult to read.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="clipping-and-ellipses"></a>Recortes y puntos suspensivos
 
@@ -110,9 +144,16 @@ Cuando la cantidad de texto se extiende más allá del espacio disponible, se re
 <TextBlock TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
 ```
 
-:::row::: :::column::: ![hacer](images/do.svg) Recortar texto y ajustar si hay varias líneas habilitadas.
-:::column-end::: :::column::: ![no hacer](images/dont.svg) Usar puntos suspensivos para evitar la aglutinación visual.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Clip text, and wrap if multiple lines are enabled.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Use ellipses to avoid visual clutter.
+    :::column-end:::
+:::row-end:::
 
 **Nota**: Si los contenedores no están bien definidos (por ejemplo, no hay ningún color diferenciador de fondo), o cuando hay un vínculo para ver más texto, usa puntos suspensivos.
 

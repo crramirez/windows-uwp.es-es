@@ -9,15 +9,13 @@ keywords: teclado,texto,entrada,interacciones del usuario
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e28d90cdac94f4eafa153de161a338b9d4c7bf5e
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: c0bc236fd3e9e37a759f83e3f24bfcad4817f068
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653894"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564373"
 ---
 # <a name="selecting-text-and-images"></a>Seleccionar texto e imágenes
 
@@ -51,20 +49,20 @@ La selección y la manipulación de texto son particularmente sensibles frente a
 
 **Consideraciones y recomendaciones**
 
-Usa los controles integrados que se exponen a través de los marcos de lenguaje de Windows para crear aplicaciones que proporcionen toda la experiencia de interacción del usuario de la plataforma, incluidos los comportamientos de selección y manipulación. Encontrarás que la funcionalidad de interacción de los controles integrados es suficiente para la mayoría de las aplicaciones para UWP.
+Usa los controles integrados que se exponen a través de los marcos de lenguaje en las aplicaciones de compilación Windowsto que proporcionan la experiencia de interacción del usuario total de la plataforma, incluidos los comportamientos de selección y manipulación. Encontrarás que la funcionalidad de interacción de los controles integrados es suficiente para la mayoría de las aplicaciones para UWP.
 
 Cuando usas controles de texto estándar para UWP, no puedes personalizar los elementos visuales y los comportamientos de selección que se describen en este tema.
 
 **Selección de texto**
 
-Si la aplicación requiere una interfaz de usuario personalizada que admita la selección de texto, es recomendable seguir los comportamientos de selección de Windows que se describen en este artículo.
+Si la aplicación requiere una interfaz de usuario personalizada que admita la selección de texto, te recomendamos que sigas los comportamientos de Windowsselection que se describen aquí.
 
 **Contenido modificable y no modificable**
 
 
-Con la entrada táctil, las interacciones de selección se ejecutan básicamente mediante gestos, como pulsar para establecer un cursor de inserción o seleccionar una palabra y deslizar para modificar una selección. Como ocurre con otras interacciones táctiles en Windows, las interacciones con intervalo están limitadas al gesto de pulsar y sostener para mostrar una interfaz de usuario informativa. Para más información, consulta [Directrices para información visual](guidelines-for-visualfeedback.md).
+Con la entrada táctil, las interacciones de selección se ejecutan básicamente mediante gestos, como pulsar para establecer un cursor de inserción o seleccionar una palabra y deslizar para modificar una selección. Al igual que con otras interacciones Windowstouch, las interacciones temporales están limitadas a la presión y mantenga gesto para mostrar la interfaz de usuario informativa. Para más información, consulta [Directrices para información visual](guidelines-for-visualfeedback.md).
 
-Windows reconoce dos estados posibles para las interacciones de selección, modificables y no modificables, y ajusta la interfaz de usuario, la información y la funcionalidad de selección en función de esa distinción.
+Windowsrecognizes dos posibles estados de las interacciones de selección, modificables y no modificables y ajusta la interfaz de usuario, la información y funcionalidad según corresponda.
 
 **Contenido modificable**
 
@@ -82,9 +80,9 @@ En las imágenes siguientes se muestra cómo invocar el menú contextual pulsand
 
 ![pulsa (o pulsa y sostén) dentro de la selección o en una barra de redimensionamiento para invocar el menú contextual.](images/textselection-show-context.png)
 
-**Nota** Estas interacciones presentan cierta variación en el caso de una palabra con errores ortográficos. Si pulsas una palabra marcada por tener errores ortográficos, la palabra se resalta y se invoca el menú contextual con la ortografía sugerida.
+**Nota**estas interacciones presentan cierta variación en el caso de una palabra mal escrita. Si pulsas una palabra marcada por tener errores ortográficos, la palabra se resalta y se invoca el menú contextual con la ortografía sugerida.
 
- 
+ 
 
 **Contenido no modificable**
 
@@ -130,9 +128,9 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 * [Entrada: muestra de gestos de Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: muestra de manipulaciones y gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Muestra de entrada táctil de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30c3ed335360d7b259c045722b65bb08a71b6e0c
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a86aa5a78bc4df9deaeea239356345c33736d942
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044044"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568848"
 ---
 # <a name="stream-output-so-stage"></a>Fase de salida de flujo (SO)
 
@@ -47,7 +45,7 @@ Los datos de vértices procedentes de una fase anterior del sombreador.
 
 La fase de salida de flujo (SO) saca (o transmite) continuamente datos de vértices desde la fase activa anterior, como la fase del sombreador de geometría (GS). Si la fase del sombreador de geometría (GS) está inactiva, la fase de salida de flujo (SO) transmite continuamente los datos de vértices procedentes de la fase del sombreador de dominio (DS) a los búferes de la memoria (o si la fase DS también está inactiva, desde la fase del sombreador de vértices [VS]).
 
-Cuando una franja de triángulo o línea está enlazada a la fase de entrada Assembler (IA), cada franja se convierte en una lista antes de que se transmite en secuencias. Los vértices se escriben siempre como primitivas completados (por ejemplo, 3 vértices al mismo tiempo para triángulos); Fundamentos incompletas nunca se transmiten fuera. Tipos primitivos con proximidad descartar los datos de la proximidad antes de transmitir los datos de salida.
+Cuando una franja de triángulos o líneas está enlazada a la fase del ensamblador de entrada (IA), cada franja se convierte en una lista antes de transmitirse. Los vértices siempre se escriben como primitivos completos (por ejemplo, 3 vértices a la vez de triángulos); los primitivos incompletos nunca se transmiten. Los tipos primitivos con proximidad descartan los datos de adyacencia antes de transmitir los datos.
 
 La fase de salida de flujo admite hasta 4 búferes al mismo tiempo.
 
@@ -59,9 +57,9 @@ La fase de salida de flujo admite hasta 4 búferes al mismo tiempo.
 
 [Canalización de gráficos](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

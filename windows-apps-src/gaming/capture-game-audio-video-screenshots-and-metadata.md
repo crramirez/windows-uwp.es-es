@@ -6,16 +6,14 @@ title: Capturar audio para juegos, vídeo, capturas de pantalla y metadatos
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, juego, capturar, audio, vídeo, metadatos
 ms.localizationpriority: medium
-ms.openlocfilehash: 04d619853dbe57c52fbb04b3babb37b40466c14f
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: Auto
+ms.openlocfilehash: 6c1641cb4c50b86d7f678bf18fa85ad0215b4b15
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692676"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565081"
 ---
 # <a name="capture-game-audio-video-screenshots-and-metadata"></a>Capturar audio para juegos, vídeo, capturas de pantalla y metadatos
 Este artículo describe cómo capturar vídeo, audio y capturas de pantalla de juegos, y cómo enviar los metadatos que el sistema incrustará en medios capturados y difundidos, permitiendo que tus aplicaciones y otras puedan crear experiencias dinámicas que se sincronizan con eventos de los juegos. 
@@ -167,9 +165,9 @@ En el controlador del evento **MetadataPurged**, puedes liberar algún espacio e
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Juegos](index.md)
- 
+ 
 
- 
+ 
 
 
 

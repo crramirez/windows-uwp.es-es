@@ -6,19 +6,18 @@ ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8aa2070606f7ef077dfa4392d576f212b2f8ea84
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 0fbbe1978cc59afcc7d681331dadc9a06e3eb2d0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "240189"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564446"
 ---
 # <a name="launch-an-app-for-results"></a>Iniciar una aplicación para obtener resultados
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -28,7 +27,7 @@ ms.locfileid: "240189"
 
 Aprende a iniciar una aplicación desde otra aplicación e intercambiar datos entre las dos. Esto se denomina *iniciar una aplicación para obtener resultados*. En el siguiente ejemplo se muestra cómo usar [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) para iniciar una aplicación para obtener resultados.
 
-Las nuevas API de comunicación entre aplicaciones de Windows10 hacen que las aplicaciones de Windows (y las aplicaciones web de Windows) puedan iniciar una aplicación e intercambiar archivos y datos. Esto te permite crear soluciones combinadas a partir de varias aplicaciones. Con estas nuevas API, las tareas complejas que hubieran requerido que el usuario usara varias aplicaciones ahora se pueden controlar sin problemas. Por ejemplo, la aplicación podría iniciar una aplicación de redes sociales para elegir un contacto o iniciar una aplicación de confirmación de compra para completar un proceso de pago.
+Comunicación de aplicación a otra nuevas API en Windows 10 que sea posible para las aplicaciones de Windows (y las aplicaciones Web de Windows) iniciar una aplicación e intercambiar archivos y datos. Esto te permite crear soluciones combinadas a partir de varias aplicaciones. Con estas nuevas API, las tareas complejas que hubieran requerido que el usuario usara varias aplicaciones ahora se pueden controlar sin problemas. Por ejemplo, la aplicación podría iniciar una aplicación de redes sociales para elegir un contacto o iniciar una aplicación de confirmación de compra para completar un proceso de pago.
 
 La aplicación que inicias para obtener resultados se denomina la aplicación iniciada. La aplicación que inicia la aplicación se denomina aplicación que llama. Para este ejemplo escribirás tanto la aplicación que llama como la aplicación iniciada.
 
@@ -204,6 +203,6 @@ Después, pásalo a la aplicación iniciada mediante **LaunchUriForResultsAsync*
 * [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)
 * [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)
 
- 
+ 
 
- 
+ 
