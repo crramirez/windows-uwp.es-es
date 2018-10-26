@@ -6,16 +6,14 @@ ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c74b05974bcfd9dd8c592d18f6f5fe4ff388f03
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 1fe2460dfc5ab11a9168f1d1d87207d2b9490026
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675352"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572604"
 ---
 # <a name="xaml-syntax-guide"></a>Guía de sintaxis XAML
 
@@ -91,7 +89,7 @@ Este ejemplo abreviado usa el texto de inicialización para especificar valores 
 </UserControl ...>
 ```
 
-**Nota** Algunas estructuras no se pueden declarar como elementos de objeto. No se admite el texto de inicialización y no pueden usarse como recursos. Debes usar una sintaxis de atributo para establecer las propiedades en estos valores en XAML. Estos tipos son: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) y [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
+**Nota**algunas estructuras no se pueden declarar como elementos de objeto. No se admite el texto de inicialización y no pueden usarse como recursos. Debes usar una sintaxis de atributo para establecer las propiedades en estos valores en XAML. Estos tipos son: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) y [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
 
 ## <a name="setting-properties"></a>Establecer propiedades
 
@@ -242,7 +240,7 @@ En primer lugar, la presencia del elemento de objeto indica que se debe crear un
 
 Otra regla de XAML es que los atributos de un elemento deben poder establecerse en cualquier orden. Por ejemplo, no existe ninguna diferencia entre `<Rectangle Height="50" Width="100" />` y `<Rectangle Width="100"  Height="50" />`. El orden utilizado es una cuestión de estilo.
 
-**Nota** Los diseñadores XAML suelen promover determinados protocolos de orden cuando se usan superficies de diseño que no sean el editor XML; de todos modos, puedes editar libremente ese código XAML más tarde para reordenar los atributos e introducir otros nuevos.
+**Nota**los diseñadores XAML suelen promoción para ordenar cuando se usan superficies de diseño que no sean el editor XML, pero puedes editar libremente ese código XAML más adelante, para reordenar los atributos e introducir otros nuevos.
 
 ## <a name="attached-properties"></a>Propiedades adjuntas
 
@@ -272,8 +270,8 @@ Para obtener más información, consulta [Introducción a las propiedades adjunt
 
 Ya que la llave de apertura \{ es la apertura de la secuencia de la extensión de marcado, debes usar una secuencia de escape para especificar un valor de cadena literal que comienza con "\{". La secuencia de escape es "\{\}". Por ejemplo, para especificar un valor de cadena que es una única llave de apertura, especifica el valor de atributo como "\{\}\{". También puedes usar otras comillas (por ejemplo, **'** dentro de un valor de atributo delimitado por **""**) para proporcionar un valor "\{" como cadena.
 
-**Nota** "\\}" también funciona si está dentro de un atributo entre comillas.
- 
+**Nota**"{\\}" también funciona si está dentro de un atributo entre comillas.
+ 
 ## <a name="enumeration-values"></a>Valores de enumeración
 
 Muchas propiedades de la API de Windows en tiempo de ejecución usan enumeraciones como valores. Si el miembro es una propiedad de solo lectura puedes establecer dicha propiedad proporcionando un valor de atributo. Para identificar el valor de enumeración que debes usar como valor de la propiedad, debes usar el nombre no completo del nombre de constante. Por ejemplo, [**UIElement.Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) se establecería en XAML así: `<Button Visibility="Visible"/>`. Aquí el "Visible" como una cadena se asigna directamente a una constante con nombre de la enumeración [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006), **Visible**.
@@ -281,7 +279,7 @@ Muchas propiedades de la API de Windows en tiempo de ejecución usan enumeracion
 -   No uses la forma completa, porque no funcionará. Por ejemplo, esto sería un ejemplo de XAML no válido: `<Button Visibility="Visibility.Visible"/>`
 -   No uses el valor de la constante. Es decir, no utilices el valor entero de la enumeración, que se encuentra allí de forma explícita o implícita, en función de cómo se definió la enumeración. Aunque parezca que funcione, se trata de una mala práctica en XAML o en código, ya que estás confiando en un detalle de implementación que podría ser transitorio. Por ejemplo, no uses esto: `<Button Visibility="1"/>`.
 
-**Nota** En los temas de referencia sobre las API que usan XAML y enumeraciones, haz clic en el vínculo del tipo de enumeración de la sección **Valor de propiedad** de **Sintaxis**. Este vínculo lleva a la página de la enumeración, donde puedes encontrar las constantes con nombre para esa enumeración.
+**Nota**en temas de referencia de API que usan XAML y enumeraciones, haz clic en el vínculo del tipo de enumeración en la sección de **valor de propiedad** de **sintaxis**. Este vínculo lleva a la página de la enumeración, donde puedes encontrar las constantes con nombre para esa enumeración.
 
 Las enumeraciones pueden estar basadas en marcas, lo que quiere decir que tienen el atributo **FlagsAttribute**. Si necesitas especificar una combinación de valores para una enumeración basada en marcas como un valor de atributo XAML, usa el nombre de cada constante de enumeración, con una coma (,) entre cada nombre y sin caracteres de espacio entre ellos. Los atributos basados en marcas no son comunes en el vocabulario XAML de Windows Runtime, pero [**ManipulationModes**](https://msdn.microsoft.com/library/windows/apps/br227934) es un ejemplo que admite la configuración de un valor de enumeración basada en marcas en XAML.
 
@@ -291,7 +289,7 @@ En raras ocasiones, verás una sintaxis XAML donde el tipo de una propiedad es u
 
 ## <a name="xaml-placeholder-conventions-in-windows-runtime-reference"></a>Convenciones de marcadores de posición XAML en la referencia de Windows en tiempo de ejecución
 
-Si has consultado la sección **Sintaxis** de los temas de referencia sobre las API de Windows en tiempo de ejecución que usan XAML, probablemente hayas visto en la sintaxis bastantes marcadores de posición. La sintaxis XAML es diferente a la de las extensiones de componentes de C#, Microsoft Visual Basic o VisualC++ (C++/CX), lo que se debe a que la sintaxis XAML es una sintaxis de uso. Indica el uso final en tus archivos XAML, pero sin ser excesivamente preceptiva sobre los valores que puedes usar. Por tanto, normalmente el uso describe un tipo de gramática que mezcla literales y marcadores de posición, y define algunos de los marcadores de posición en la sección **Valores de XAML**.
+Si has consultado la sección **Sintaxis** de los temas de referencia sobre las API de Windows en tiempo de ejecución que usan XAML, probablemente hayas visto en la sintaxis bastantes marcadores de posición. La sintaxis XAML es diferente a las extensiones de componentes de C#, Microsoft Visual Basic o VisualC ++ (C++ / CX) sintaxis porque la sintaxis XAML es una sintaxis de uso. Indica el uso final en tus archivos XAML, pero sin ser excesivamente preceptiva sobre los valores que puedes usar. Por tanto, normalmente el uso describe un tipo de gramática que mezcla literales y marcadores de posición, y define algunos de los marcadores de posición en la sección **Valores de XAML**.
 
 Cuando veas nombres de elementos o de tipos en la sintaxis XAML para una propiedad, el nombre que se muestra es para el tipo que define originalmente la propiedad. Sin embargo, el XAML de Windows Runtime admite un modelo de herencia de clases para las clases basadas en [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). Por tanto, a menudo puedes usar un atributo en una clase que no es literalmente la clase definitoria, sino que se deriva de una clase que definió en primer lugar la propiedad o atributo. Por ejemplo, puedes establecer [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) como atributo en cualquier clase derivada [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) mediante una herencia en profundidad. Por ejemplo: `<Button Visibility="Visible" />`. No tomes el nombre del elemento mostrado en cualquier sintaxis de uso de XAML de forma demasiado literal; puede que la sintaxis sea viable para elementos que representan esa clase y elementos que representan una clase derivada. En aquellos casos en que sea raro o imposible que el tipo mostrado como elemento definitorio se encuentre en un uso de la vida real, ese nombre de tipo se usa de forma deliberada en minúsculas en la sintaxis. Por ejemplo, la sintaxis que ves para **UIElement.Visibility** es:
 
@@ -321,5 +319,5 @@ Las secciones de uso de XAML también utilizan diversos marcadores de posición 
 * [Introducción a XAML](xaml-overview.md)
 * [Espacios de nombres XAML y asignación de espacios de nombres](xaml-namespaces-and-namespace-mapping.md)
 * [Referencias a ResourceDictionary a recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
- 
+ 
 

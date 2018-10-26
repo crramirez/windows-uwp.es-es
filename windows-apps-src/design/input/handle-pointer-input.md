@@ -9,15 +9,13 @@ keywords: lápiz, mouse, panel táctil, función táctil, puntero, entrada, inte
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a0753081af4128cf2cad3eeff9d8c919c42eb596
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: ba685f30eb0cf94314996587073a82440cf6c951
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1895144"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572614"
 ---
 # <a name="handle-pointer-input"></a>Controlar la entrada de puntero
 
@@ -37,7 +35,7 @@ La mayoría de las experiencias de interacción suelen implicar que el usuario i
 
 > [!NOTE]
 > Si la aplicación lo requiere, también se promueve la información específica del dispositivo desde los datos sin procesar de HID.
- 
+ 
 
 Cada punto de entrada (o contacto) de la pila de entrada se representa mediante un objeto [**Pointer**](https://msdn.microsoft.com/library/windows/apps/br227968) que se expone mediante el parámetro [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) en los diversos controladores de eventos de puntero. En el caso de lápices múltiples o entrada multitáctil, cada contacto se trata como un puntero de entrada único.
 
@@ -50,7 +48,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 
 > [!NOTE]
 > Limita la entrada del puntero a un elemento específico de la interfaz de usuario llamando a [**CapturePointer**](https://msdn.microsoft.com/library/windows/apps/br208918) en ese elemento dentro de un controlador de eventos de puntero. Cuando un elemento captura un puntero, solo ese objeto recibe eventos de entrada del puntero, incluso aunque se mueva el puntero fuera del área límite del objeto. [**IsInContact**](https://msdn.microsoft.com/library/windows/apps/br227976) (botón del mouse presionado, función táctil o pluma en contacto) debe ser verdadero para que **CapturePointer** se realice correctamente.
- 
+ 
 
 <table>
 <colgroup>
@@ -79,10 +77,10 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208965"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>Se produce cuando otro elemento de la interfaz de usuario captura el puntero, si se libera el puntero o si se captura otro puntero mediante programación.</p>
 <div class="alert">
-<strong>Nota</strong>  No hay ningún evento de captura de puntero correspondiente.
+<strong>Nota</strong>no hay ningún evento de captura de puntero correspondiente.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -127,7 +125,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 <p>La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [PointerMoved](https://msdn.microsoft.com/library/windows/apps/br208970).</p></td>
 </tr>
 </tbody>
-</table> 
+</table> 
 
 ## <a name="pointer-event-example"></a>Ejemplo de evento de puntero
 
@@ -247,8 +245,7 @@ Después, se usan comentarios de interfaz de usuario para mostrar controladores 
 -   Este controlador administra el evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). Se agrega el evento al registro de eventos, se agrega el puntero al diccionario de puntero activo y se muestran los detalles del puntero.
 
     > [!NOTE]
-    > Los eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) no siempre se producen en parejas. La aplicación debe escuchar y controlar cualquier evento que pueda concluir una acción de puntero hacia abajo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) y [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
-         
+    > Los eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) no siempre se producen en parejas. La aplicación debe escuchar y controlar cualquier evento que pueda concluir una acción de puntero hacia abajo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) y [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).      
 
 ```csharp
 /// <summary>
@@ -330,7 +327,7 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 -   Este controlador administra el evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970). Se agrega el evento al registro de eventos y se actualizan los detalles del puntero.
 
     > [!Important]
-    > La entrada de mouse se asocia con un solo puntero asignado al detectar por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). El evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) solo se desencadena cuando se libera ese mismo botón del mouse (no se puede asociar ningún otro botón con el puntero hasta que se complete este evento). Debido a esta asociación exclusiva, los clics de otros botones del mouse se enrutan a través del evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970).     
+    > La entrada de mouse se asocia con un solo puntero asignado al detectar por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). El evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) solo se desencadena cuando se libera ese mismo botón del mouse (no se puede asociar ningún otro botón con el puntero hasta que se complete este evento). Debido a esta asociación exclusiva, los clics de otros botones del mouse se enrutan a través del evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970).     
 
 ```csharp
 /// <summary>
@@ -536,7 +533,7 @@ private void Target_PointerCanceled(object sender, PointerRoutedEventArgs e)
 -   Este controlador administra el evento [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965). Se agrega el evento al registro de eventos, se quita el puntero de la matriz de punteros y se actualizan los detalles del puntero.
 
     > [!NOTE]
-    > [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) puede producirse en lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). La captura del puntero se puede perder por varios motivos, entre los que se incluyen la interacción del usuario, la captura mediante programación de otro puntero o la llamada a [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972).     
+    > [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) puede producirse en lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). La captura del puntero se puede perder por varios motivos, entre los que se incluyen la interacción del usuario, la captura mediante programación de otro puntero o la llamada a [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972).     
 
 ```csharp
 /// <summary>
