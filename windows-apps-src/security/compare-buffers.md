@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, seguridad
 ms.localizationpriority: medium
 ms.openlocfilehash: f307b459dad90f5204364a8c58a186ffae40c455
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5572594"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5592759"
 ---
 # <a name="compare-buffers"></a>Comparar búferes
 
