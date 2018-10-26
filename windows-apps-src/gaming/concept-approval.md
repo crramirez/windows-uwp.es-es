@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, aprobación del concepto
 ms.localizationpriority: medium
 ms.openlocfilehash: a14a9b3f1e059019afa042a47dcaeb9373a69934
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5596078"
+ms.locfileid: "5641115"
 ---
 # <a name="concept-approval"></a>Aprobación del concepto
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: d31c9fd3a6f8f57f3e78d88d3ad754d4848a9cad
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5551697"
+ms.locfileid: "5694151"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Cómo compara y elige recursos el sistema de administración
 Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El Sistema de administración de recursos analizará todos los candidatos y determinará cuál es el mejor candidato que se va a devolver. Para ello, se tienen en cuenta todos los calificadores para clasificar a todos los candidatos.

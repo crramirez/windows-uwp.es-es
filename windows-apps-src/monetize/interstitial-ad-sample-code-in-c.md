@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, intersticial, c#, código de muestra, ads, advertising, interstitial, sample code
 ms.localizationpriority: medium
 ms.openlocfilehash: 94baaa490859baf57e0bd12bc5a3800ed3b2312a
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5545650"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5684286"
 ---
 # <a name="interstitial-ad-sample-code-in-c"></a>Código de ejemplo de anuncios intersticiales en C\# #  
 

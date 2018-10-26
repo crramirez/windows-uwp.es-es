@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 0482c9a770d23ccebb094c00de7cab08cd6ab1cb
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 29fd7faec6f78b5f01469e7bfa6c01a8831f07eb
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5547053"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5641155"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empaquetar una aplicación de escritorio de forma manual
 
@@ -158,7 +158,7 @@ Este es un ejemplo del nodo [VisualElements](https://docs.microsoft.com/uwp/sche
 
 ## <a name="optional-add-target-based-unplated-assets"></a>(Opcional) Agregar los activos sin placa basados en destino
 
-Los recursos basados en el destino se usan para los iconos y las ventanas que se muestran en la barra de tareas de Windows, la vista de tareas, ALT+TAB, el asistente para el espacio restante y la esquina inferior derecha de las ventanas de Inicio. Puedes leer más sobre ellos [aquí](https://docs.microsoft.com/windows/uwp/shell/tiles-and-notifications/app-assets#target-based-assets).
+Los recursos basados en el destino se usan para los iconos y las ventanas que se muestran en la barra de tareas de Windows, la vista de tareas, ALT+TAB, el asistente para el espacio restante y la esquina inferior derecha de las ventanas de Inicio. Puedes leer más sobre ellos [aquí](https://docs.microsoft.com/windows/uwp/design/style/app-icons-and-logos#unplated-assets).
 
 1. Obtén las imágenes de 44 x 44 correctas y cópialas en la carpeta que contiene las imágenes (es decir, los activos).
 

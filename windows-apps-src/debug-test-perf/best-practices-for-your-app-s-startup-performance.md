@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 25ddcc6c9ceaecd858733a0222c22c18682041b8
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5545252"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5642288"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 
