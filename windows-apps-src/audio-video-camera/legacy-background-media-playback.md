@@ -6,20 +6,22 @@ title: Reproducción de contenido multimedia heredado en segundo plano
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 68695125c2056adca8186120db7875cb3a68baf8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 319343a06eeb49fc4ec0ca2fcd340f655654f718
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238677"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554641"
 ---
 # <a name="legacy-background-media-playback"></a>Reproducción de contenido multimedia heredado en segundo plano
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este artículo se describe el modelo heredado de dos procesos para agregar compatibilidad con audio en segundo plano a tu aplicación para UWP. A partir de Windows 10, versión 1607, se ofrece un modelo de proceso único para audio en segundo plano mucho más fácil de implementar. Para obtener más información sobre las recomendaciones actuales sobre el audio en segundo plano, consulta [Reproducir elementos multimedia en segundo plano](background-audio.md). Este artículo está pensado para proporcionar compatibilidad para las aplicaciones desarrolladas con el modelo de dos procesos heredado.
+
+> [!NOTE]
+> A partir de Windows, versión 1703, **BackgroundMediaPlayer** está en desuso y puede no estar disponible en versiones futuras de Windows.
 
 ## <a name="background-audio-architecture"></a>Arquitectura del audio en segundo plano
 
@@ -121,9 +123,9 @@ La siguiente tabla enumera qué políticas se aplican en los diferentes tipos de
 | **Duración compartida**    | Habilitada  | Deshabilitada | Deshabilitada |
 
 
- 
+ 
 
- 
+ 
 
 
 

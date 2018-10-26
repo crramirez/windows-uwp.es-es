@@ -5,16 +5,14 @@ title: Establecer y programar los precios de las aplicaciones
 ms.author: wdg-dev-content
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, precios, precios de las aplicaciones, precio de la aplicación, vender aplicaciones, cambio de precio, precio personalizado, precio, precios, costo, reemplazar el precio base, precio de forma libre, forma libre
 ms.localizationpriority: medium
-ms.openlocfilehash: ca37d0b360679a878cff3aeabd96f82016c36fde
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 99e11e29c5625d528777046075f01a824f1b0b37
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5514847"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556107"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Establecer y programar los precios de las aplicaciones
 

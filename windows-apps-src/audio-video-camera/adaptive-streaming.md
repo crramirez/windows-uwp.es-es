@@ -6,16 +6,14 @@ title: Streaming adaptable
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ae99a7a92ce933c8536dc30f9807d60a1441a809
-ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
-ms.translationtype: HT
+ms.openlocfilehash: ef8e3ab4abd9ee9159dc7d5aa757f55e00817a51
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "1912973"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551571"
 ---
 # <a name="adaptive-streaming"></a>Streaming adaptable
 
@@ -120,10 +118,10 @@ Si quieres registrar controladores de eventos en el origen multimedia adaptable 
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Reproducción de contenido multimedia](media-playback.md)
-* [Compatibilidad con etiquetas HLS](hls-tag-support.md) 
-* [Soporte técnico de perfil DASH](dash-profile-support.md) 
+* [Compatibilidad con etiquetas HLS](hls-tag-support.md) 
+* [Soporte técnico de perfil DASH](dash-profile-support.md) 
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
-* [Reproducir elementos multimedia en segundo plano](background-audio.md) 
+* [Reproducir elementos multimedia en segundo plano](background-audio.md) 
 
 
 

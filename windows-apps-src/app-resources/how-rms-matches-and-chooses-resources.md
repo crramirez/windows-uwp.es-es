@@ -6,16 +6,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 10/23/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: bb1168401aaa715f8d1c459691dfa1b1ca38ccbe
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: d31c9fd3a6f8f57f3e78d88d3ad754d4848a9cad
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690431"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551697"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Cómo compara y elige recursos el sistema de administración
 Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El Sistema de administración de recursos analizará todos los candidatos y determinará cuál es el mejor candidato que se va a devolver. Para ello, se tienen en cuenta todos los calificadores para clasificar a todos los candidatos.
@@ -24,7 +22,7 @@ En este proceso de clasificación, se asignan prioridades diferentes a los disti
 
 Para conocer detalles más concretos sobre cómo se realiza la coincidencia de la etiqueta de idiomas, consulta [Cómo compara etiquetas de idioma el sistema de administración de recursos](how-rms-matches-lang-tags.md).
 
-En algunos calificadores, como la escala y el contraste, siempre hay un grado mínimo de coincidencia. Por ejemplo, un candidato calificado como "escala-100" coincide en cierta medida con un contexto de "escala-400", aunque no tanto como un candidato calificado como "escala-200" o (para coincidencia perfecta) "escala-400".
+En algunos calificadores, como la escala y el contraste, siempre hay un grado mínimo de coincidencia. Por ejemplo, un candidato calificado como "scale-100"coincide con un contexto de "escala-400" hasta cierto pequeña, aunque no así como un candidato calificado como"escala-200"o (para coincidencia perfecta)"escala-400".
 
 Sin embargo, en el resto de calificadores, como el idioma o la región principal, es posible que haya una comparación no coincidente (además de grados de coincidencia). Por ejemplo, un candidato con la calificación de idioma "en-US" representa una coincidencia parcial en un contexto "en-GB", pero un candidato con la calificación "fr" no es coincidente en modo alguno. De manera similar, un candidato con la calificación de región principal "155" (Europa occidental) coincide bien de alguna manera con un contexto de usuario cuya región principal esté definida en "FR", pero un candidato calificado como "US" no coincide en modo alguno.
 

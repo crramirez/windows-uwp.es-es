@@ -6,18 +6,17 @@ title: Control manual de los controles de transporte de contenido multimedia del
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 1c0b24bce21ed145d61f6b5d05392a6fc3cc30aa
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: b0ece9a25a2fd2892553d66847c39637e7faae70
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238741"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554066"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a>Control manual de los controles de transporte de contenido multimedia del sistema
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A partir de Windows 10, versión 1607, las aplicaciones para UWP que usan la clase [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) para reproducir elementos multimedia se integran automáticamente con los controles de transporte de contenido multimedia del sistema (SMTC) de manera predeterminada. Esta es la forma recomendada de interactuar con los SMTC para la mayoría de los escenarios. Para obtener más información sobre cómo personalizar la integración predeterminada de los SMTC con **MediaPlayer**, consulta [Integrar con los controles de transporte multimedia del sistema](integrate-with-systemmediatransportcontrols.md).
 
@@ -93,7 +92,7 @@ Hay un conjunto de transporte del sistema de propiedades de controles relacionad
 | [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/mt218756)     | [**PlaybackRateChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218757)     |
 | [**ShuffleEnabled**](https://msdn.microsoft.com/library/windows/apps/mt218758) | [**ShuffleEnabledChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218759) |
 
- 
+ 
 Para controlar la interacción del usuario con uno de estos controles, registra primero un controlador para el evento asociado.
 
 [!code-cs[RegisterPlaybackChangedHandler](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetRegisterPlaybackChangedHandler)]
@@ -114,10 +113,10 @@ Para obtener más información sobre la reproducción de audio en segundo plano,
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Reproducción de contenido multimedia](media-playback.md)
-* [Integrar con los controles de transporte de contenido multimedia del sistema](integrate-with-systemmediatransportcontrols.md) 
+* [Integrar con los controles de transporte de contenido multimedia del sistema](integrate-with-systemmediatransportcontrols.md) 
 * [Muestra de transporte de contenido multimedia del sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
- 
+ 
 
 
 

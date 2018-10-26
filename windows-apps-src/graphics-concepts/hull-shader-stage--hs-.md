@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8236ccc1e4f6366778293dfa5b55d7f186d8c48f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: d2aed18d476f966e644fa095aa6a5a518ebbe959
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044604"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554159"
 ---
 # <a name="hull-shader-hs-stage"></a>Fase del sombreador de casco (HS)
 
@@ -79,9 +77,9 @@ Consulta [Crear un sombreador de casco](https://msdn.microsoft.com/library/windo
 
 [Canalización de gráficos](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

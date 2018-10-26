@@ -1,30 +1,31 @@
 ---
 author: drewbatgit
 ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
-description: "En este artículo se muestra cómo enumerar dispositivos MIDI (interfaz digital de instrumentos musicales), y enviar y recibir mensajes MIDI desde una aplicación universal de Windows."
+description: En este artículo se muestra cómo enumerar dispositivos MIDI (interfaz digital de instrumentos musicales), y enviar y recibir mensajes MIDI desde una aplicación universal de Windows.
 title: MIDI
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: bccc087b561699ec72bb99cd160d532b95c49530
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 36d1e4afd620b871d4273699aea5c02cc9faec80
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552957"
 ---
 # <a name="midi"></a>MIDI
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se muestra cómo enumerar dispositivos MIDI (interfaz Digital de instrumentos musicales) y enviar y recibir mensajes MIDI desde una aplicación universal de Windows.
+En este artículo se muestra cómo enumerar dispositivos MIDI (interfaz Digital de instrumentos musicales) y enviar y recibir mensajes MIDI desde una aplicación universal de Windows. Windows 10 admite MIDI a través de USB (controladores compatibles con la clase y más propietarios), MIDI a través de Bluetooth LE (Windows 10 Anniversary Edition y versiones posteriores) y a través de productos de terceros disponible de forma gratuita, MIDI a través de Ethernet y enrutado MIDI.
 
 ## <a name="enumerate-midi-devices"></a>Enumerar dispositivos MIDI
 
 Antes de enumerar y usar dispositivos MIDI, agrega los siguientes espacios de nombres al proyecto.
 
-[!code-cs[Uso](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetUsing)]
+[!code-cs[Using](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetUsing)]
 
 Agrega un control [**ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868) a la página XAML que permitirá que el usuario seleccione uno de los dispositivos de entrada de MIDI conectados al sistema. Agrega otro para enumerar los dispositivos de salida de MIDI.
 
@@ -37,6 +38,8 @@ El método [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br
 Enumerar dispositivos de salida MIDI funciona exactamente igual que la enumeración de dispositivos de entrada, excepto que se debe especificar la cadena de selector devuelta por [**MidiOutPort.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn894845) al llamar a **FindAllAsync**.
 
 [!code-cs[EnumerateMidiOutputDevices](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetEnumerateMidiOutputDevices)]
+
+
 
 ## <a name="create-a-device-watcher-helper-class"></a>Crear una clase auxiliar de monitor de dispositivo
 
@@ -96,17 +99,17 @@ En el código subyacente de la página, debes declarar variables de miembros par
 
 Crea una nueva instancia de las clases auxiliares del monitor, pasando la cadena de selector de dispositivo, la **ListBox** que se va a rellenar y el objeto **CoreDispatcher** al que se pueda acceder a través de la propiedad **Dispatcher** de la página. Después, llama al método para iniciar cada objeto **DeviceWatcher**.
 
-Poco después de que se inicie cada objeto **DeviceWatcher**, finalizará la enumeración de los dispositivos actuales conectados al sistema y se generará su evento [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451), lo que provocará que cada elemento **ListBox** se actualice con los dispositivos MIDI actuales.
+Poco después de que cada objeto **DeviceWatcher** se inicie, finalizará la enumeración de los dispositivos que estén conectados al sistema y se generará su evento [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451); esto hace que cada elemento **ListBox** se actualice con los dispositivos MIDI actuales.
 
 [!code-cs[StartWatchers](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetStartWatchers)]
-
-Poco después de que cada objeto **DeviceWatcher** se inicie, finalizará la enumeración de los dispositivos que estén conectados al sistema y se generará su evento [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451); esto hace que cada elemento **ListBox** se actualice con los dispositivos MIDI actuales.
 
 Cuando el usuario selecciona un elemento en la entrada MIDI **ListBox**, se genera el evento [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776). En el controlador para este evento, obtén acceso a la propiedad **DeviceInformationCollection** de la clase auxiliar para obtener la lista actual de dispositivos. Si hay entradas en la lista, selecciona el objeto **DeviceInformation** con el índice correspondiente a la [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/br209768) del control **ListBox**.
 
 Crear el objeto [**MidiInPort**](https://msdn.microsoft.com/library/windows/apps/dn894770) que representa el dispositivo de entrada seleccionado llamando a [**MidiInPort.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn894776) pasando la propiedad [**Id**](https://msdn.microsoft.com/library/windows/apps/br225437) del dispositivo seleccionado.
 
 Registra un controlador para el evento [**MessageReceived**](https://msdn.microsoft.com/library/windows/apps/dn894781), el cual se genera siempre que recibas un mensaje de MIDI mediante el dispositivo especificado.
+
+[!code-cs[DeclareMidiPorts](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetDeclareMidiPorts)]
 
 [!code-cs[InPortSelectionChanged](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetInPortSelectionChanged)]
 
@@ -139,9 +142,9 @@ Cuando enumeres dispositivos MIDI de salida mediante la técnica descrita anteri
     > [!NOTE] 
     > Si existen varias versiones de la extensión, asegúrate de seleccionar la versión que coincida con el destino de la aplicación. Puedes ver a qué versión del SDK está orientada la aplicación en la pestaña **Aplicación** de las propiedades del proyecto.
 
- 
+ 
 
- 
+ 
 
 
 

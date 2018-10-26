@@ -6,19 +6,17 @@ description: El diseño puede ser una parte costosa de una aplicación XAML; tan
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 40afd15da7e225ea82814ab2fa680a3c95e00488
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: b0dcb3e49bb35902a17f829c0222c570265be8b5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894751"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553865"
 ---
 # <a name="optimize-your-xaml-layout"></a>Optimiza tu diseño XAML
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -28,7 +26,7 @@ El diseño es el proceso de definir la estructura visual de la interfaz de usuar
 
 ## <a name="reduce-layout-structure"></a>Reducir la estructura de diseño
 
-La mayor mejora en el rendimiento de diseño proviene de simplificar la estructura jerárquica del árbol de los elementos de la interfaz de usuario. Los paneles existen en el árbol visual, pero son elementos estructurales, no *elementos productores de píxeles* como sería una clase [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) o [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371). El hecho de simplificar el árbol reduciendo el número de elementos no productores de píxeles, proporciona, por lo general, un aumento significativo del rendimiento.
+La mayor mejora en el rendimiento de diseño proviene de simplificar la estructura jerárquica del árbol de los elementos de la interfaz de usuario. Los paneles existen en el árbol visual, pero son elementos estructurales, no *elementos productores de píxeles* como sería una clase [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) o [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle). El hecho de simplificar el árbol reduciendo el número de elementos no productores de píxeles, proporciona, por lo general, un aumento significativo del rendimiento.
 
 Muchas interfaces de usuario se implementan anidando paneles que dan como resultado árboles de paneles y elementos profundos y complejos. Anidar paneles es práctico pero, en muchos casos, la misma interfaz de usuario se puede lograr con un panel simple más complejo. Usar un panel simple proporciona un mejor rendimiento.
 
@@ -138,7 +136,7 @@ Tal como se muestra en estos ejemplos, existen muchas formas de lograr la misma 
 
 Un requisito común de la interfaz de usuario es tener un diseño en el que los elementos se superpongan entre sí. Por lo general el espaciado interno, los márgenes, las alineaciones y las transformaciones se usan para ubicar los elementos de esta forma. El control [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) de XAML está optimizado para mejorar el rendimiento de diseño de los elementos que se superponen.
 
-**Importante**  Para ver la mejora, usa una clase [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) de una sola celda. No definas las propiedades [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ni [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
+**Importante**para ver la mejora, usa una [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/BR242704)de una sola celda. No definas las propiedades [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ni [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
 
 ### <a name="examples"></a>Ejemplos
 

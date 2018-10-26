@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 305924b19914bf4e85366695add2476c3c81c281
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 283ea63d118f9a61fe745dd3eb60b68594c32279
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044814"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553614"
 ---
 # <a name="specular-lighting"></a>Luz especular
 
@@ -36,7 +34,7 @@ La luz especular se describe mediante la siguiente ecuación.
 |-----------------------------------------------------------------------------|
 | Luz especular = Cₛ \ * sum\ [Lₛ \ * (N · (H)<sup>P</sup> \ * Atten \ * Spot\] |
 
- 
+ 
 
 Las variables, sus tipos y sus intervalos son los siguientes:
 
@@ -51,7 +49,7 @@ Las variables, sus tipos y sus intervalos son los siguientes:
 | Atten        | N/A           | Punto flotante                                                   | El valor de atenuación de la luz. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md). |
 | Spot         | N/A           | Punto flotante                                                   | El factor de foco de luz. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md).        |
 
- 
+ 
 
 El valor de Cₛ es uno de los siguientes:
 
@@ -59,9 +57,9 @@ El valor de Cₛ es uno de los siguientes:
 -   El color del vértice 2, si el origen del material especular es el color del vértice especular y el segundo color del vértice se suministra en la declaración de vértices.
 -   El color del material especular.
 
-**Nota** Si se usa la opción de origen del material especular y no se proporciona el color del vértice, se usa el color del material especular.
+**Nota**  si se usa cualquiera de las opciones origen del material especular y no se proporciona el color del vértice, se usa el color del material especular.
 
- 
+ 
 
 Los componentes especulares se comprimen para ser de 0 a 255 después de que todas las luces se procesen y se interpolen por separado.
 
@@ -74,7 +72,7 @@ El vector medio (H) se encuentra a mitad de camino de dos vectores: el vector de
 |-------------------------------------------|
 | H = norm(norm(Cₚ - Vₚ) + L<sub>dir</sub>) |
 
- 
+ 
 
 | Parámetro       | Valor predeterminado | Tipo                                          | Descripción                                                  |
 |-----------------|---------------|-----------------------------------------------|--------------------------------------------------------------|
@@ -82,7 +80,7 @@ El vector medio (H) se encuentra a mitad de camino de dos vectores: el vector de
 | Vₚ              | N/A           | Vector 3D (valores de punto flotante de x, y y z) | La posición del vértice.                                             |
 | L<sub>dir</sub> | N/A           | Vector 3D (valores de punto flotante de x, y y z) | El vector de dirección de la posición del vértice respecto a la posición de la luz. |
 
- 
+ 
 
 Determinar el vector medio de esta manera puede suponer un alto número de cálculos. Como alternativa, el uso de la iluminación especular ortogonal (en lugar de la iluminación especular relativa a la cámara) le indica al sistema que se comporte como si el punto de vista esté infinitamente distante en el eje z. Esto se refleja en la siguiente fórmula.
 
@@ -90,7 +88,7 @@ Determinar el vector medio de esta manera puede suponer un alto número de cálc
 |-------------------------------------|
 | H = norm((0,0,1) + L<sub>dir</sub>) |
 
- 
+ 
 
 Esta configuración supone un menor número de cálculos, pero resulta mucho menos precisa, por lo que su uso recomendado es en aplicaciones que utilicen la proyección ortogonal.
 
@@ -120,9 +118,9 @@ La luz difusa supone más cálculos que la luz especular. Normalmente se usa par
 
 [Cálculos de iluminación](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

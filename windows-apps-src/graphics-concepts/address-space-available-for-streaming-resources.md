@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d3ae9729270967269d6543ed80bb136a04dc9edc
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0b6e3f8080d33f9aadf22d5d5b1ebdd9a4739e16
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1042884"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554816"
 ---
 # <a name="address-space-available-for-streaming-resources"></a>Espacio de direcciones disponible para recursos de streaming
 
@@ -36,9 +34,9 @@ En los sistemas futuros con una tabla de páginas compartida entre la CPU y la G
 
 [Parámetros de creación de recursos de streaming](streaming-resource-creation-parameters.md)
 
- 
+ 
 
- 
+ 
 
 
 

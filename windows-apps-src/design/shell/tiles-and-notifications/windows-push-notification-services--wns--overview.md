@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c1c73f9b279f9cc3a6854db8a8509ae99904e70
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 2b7d9adfd9e058d4364470b07ef3e9129ade88b3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674852"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555689"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Introducción a los Servicios de notificaciones de inserción de Windows (WNS)
  
@@ -55,7 +53,7 @@ Después de crear correctamente un URI de canal, la aplicación lo envía a su s
 
 ### <a name="important-notes"></a>Notas importantes
 
--   No garantizamos que el URI de canal de notificación de una aplicación siempre sea el mismo. Recomendamos que la aplicación solicite un canal nuevo cada vez que se ejecute y que actualice su servicio cuando el URI cambie. El desarrollador nunca debe cambiar el URI de canal; debe considerarlo como una cadena de caja negra. En este momento, los URI de canal expiran después de 30 días. Si la aplicación de Windows 10 renueva periódicamente su canal en segundo plano, puedes descargar la [Muestra de notificaciones de inserción y periódicas](http://go.microsoft.com/fwlink/p/?linkid=231476) para Windows8.1 y volver a usar su código fuente y el patrón que muestra.
+-   No garantizamos que el URI de canal de notificación de una aplicación siempre sea el mismo. Recomendamos que la aplicación solicite un canal nuevo cada vez que se ejecute y que actualice su servicio cuando el URI cambie. El desarrollador nunca debe cambiar el URI de canal; debe considerarlo como una cadena de caja negra. En este momento, los URI de canal expiran después de 30 días. Si la aplicación de Windows 10 renueva periódicamente su canal en segundo plano, a continuación, puedes descargar la [muestra de inserción y las notificaciones periódicas](http://go.microsoft.com/fwlink/p/?linkid=231476) para Windows8.1 y volver a usar su código fuente y el patrón que muestra.
 -   El desarrollador es quien implementa la interfaz entre el servicio de nube y la aplicación cliente. Recomendamos que la aplicación pase por un proceso de autenticación con su propio servicio y transmita datos en un protocolo seguro, como HTTPS.
 -   Es importante que el servicio de nube siempre asegure que el URI de canal use el dominio "notify.windows.com". El servicio nunca debe insertar notificaciones en un canal en otro dominio. Si alguna vez la devolución de llamada de la aplicación se ve comprometida, un atacante malintencionado podría enviar un URI de canal para suplantar WNS. Si no se inspecciona el dominio, el servicio de nube podría revelar información a este atacante sin saberlo.
 -   Si tu servicio de nube intenta enviar una notificación a un canal expirado, WNS devolverá el [código de respuesta 410](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#WNSResponseCodes). En respuesta a ese código, tu servicio no debe seguir intentando enviar notificaciones a ese URI.
@@ -76,9 +74,9 @@ En un nivel alto, la cadena de información es la siguiente:
 
 En la autenticación con WNS, el servicio de nube envía una solicitud HTTP en una capa de sockets seguros (SSL). Los parámetros se proporcionan en el formato "aplicación/x-www-formato-urlcodificada". Indica tu SID de paquete en el campo "client\_id" y tu clave secreta en el campo "client\_secret". Para obtener detalles de sintaxis, consulta la referencia sobre la [solicitud de token de acceso](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#access_token_request).
 
-**Nota** Esto es solo un ejemplo; no es un código que puedas copiar y pegar para usarlo en tu propio código.
+**Nota**esto es solo un ejemplo, no copiar y pegar el código que puede utilizar correctamente en su propio código.
 
- 
+ 
 
 ``` http
  POST /accesstoken.srf HTTP/1.1
@@ -164,20 +162,20 @@ Por ejemplo, durante un día de gran actividad en el mercado de valores, puedes 
 ## <a name="push-notifications-and-battery-saver"></a>Notificaciones de inserción y ahorro de batería
 
 
-El ahorro de batería amplía la duración de la batería limitando la actividad en segundo plano en el dispositivo. Windows10 permite al usuario establecer el ahorro de batería para que se active automáticamente cuando la batería cae por debajo de un umbral especificado. Cuando el ahorro de batería está activado, se deshabilita la recepción de notificaciones de inserción para ahorrar energía. Sin embargo, hay algunas excepciones. La siguiente configuración de ahorro de batería de Windows 10 (que encontrarás en la aplicación **Configuración**) permite que la aplicación reciba notificaciones de inserción, incluso cuando está activado el ahorro de batería.
+El ahorro de batería amplía la duración de la batería limitando la actividad en segundo plano en el dispositivo. Windows 10 permite al usuario establecer el ahorro de batería que se active automáticamente cuando la batería caiga por debajo de un umbral especificado. Cuando el ahorro de batería está activado, se deshabilita la recepción de notificaciones de inserción para ahorrar energía. Sin embargo, hay algunas excepciones. La siguiente configuración de ahorro de batería de Windows 10 (que se encuentra en la aplicación **configuración** ) permite que la aplicación recibir notificaciones de inserción, incluso cuando el ahorro de batería está activado.
 
--   **Permitir las notificaciones de inserción desde cualquier aplicación en el modo de ahorro de batería**: esta configuración permite que todas las aplicaciones reciban notificaciones de inserción aunque esté activado el ahorro de batería. Ten en cuenta que esta opción se aplica solo a Windows10 para las ediciones de escritorio (Home, Pro, Enterprise y Education).
+-   **Permitir las notificaciones de inserción desde cualquier aplicación en el modo de ahorro de batería**: esta configuración permite que todas las aplicaciones reciban notificaciones de inserción aunque esté activado el ahorro de batería. Ten en cuenta que esta opción se aplica solo a Windows 10 para ediciones de escritorio (Home, Pro, Enterprise y Education).
 -   **Siempre permitido**: esta opción permite que ciertas aplicaciones se ejecuten en segundo plano mientras el ahorro de batería está activado (recepción de notificaciones de inserción incluida). El usuario es quien debe mantener manualmente esta lista.
 
 No hay ninguna forma de comprobar el estado de estos dos valores, pero puedes comprobar el estado del ahorro de batería. En Windows 10, usa la propiedad [**EnergySaverStatus**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatus) para comprobar el estado del ahorro de batería. La aplicación también puede usar el evento [**EnergySaverStatusChanged**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatusChanged) para detectar cambios en el ahorro de batería.
 
-Si la aplicación depende en gran medida de las notificaciones de inserción, te recomendamos que notifiques a los usuarios que no pueden recibir notificaciones mientras esté activado el ahorro de batería y para que les resulte más fácil ajustar la **configuración de ahorro de batería**. Con el esquema URI de configuración de ahorro de batería en Windows 10, `ms-settings:batterysaver-settings`, puedes proporcionar un vínculo práctico a la aplicación Configuración.
+Si la aplicación depende en gran medida de las notificaciones de inserción, te recomendamos que notifiques a los usuarios que no pueden recibir notificaciones mientras esté activado el ahorro de batería y para que les resulte más fácil ajustar la **configuración de ahorro de batería**. Con el esquema URI de configuración de ahorro de batería en Windows 10, `ms-settings:batterysaver-settings`, puedes proporcionar un vínculo práctico a la aplicación configuración.
 
-**Sugerencia** Al notificar al usuario la configuración de ahorro de batería, se recomienda proporcionar una forma de suprimir el mensaje en el futuro. Por ejemplo, la casilla `dontAskMeAgainBox` del siguiente ejemplo guarda la preferencia del usuario en [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
+**Sugerencia**  al notificar al usuario sobre la configuración de ahorro de batería, te recomendamos que proporciones una forma de suprimir el mensaje en el futuro. Por ejemplo, la casilla `dontAskMeAgainBox` del siguiente ejemplo guarda la preferencia del usuario en [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
 
- 
+ 
 
-A continuación, te mostramos un ejemplo de cómo comprobar si el ahorro de batería está activado en Windows 10. En este ejemplo se notifica al usuario y se inicia la aplicación Configuración para la **configuración de ahorro de batería**. La casilla `dontAskAgainSetting` permite al usuario suprimir el mensaje si no desea volver a recibir notificaciones.
+Este es un ejemplo de cómo comprobar si el ahorro de batería está activado en Windows 10. En este ejemplo se notifica al usuario y se inicia la aplicación Configuración para la **configuración de ahorro de batería**. La casilla `dontAskAgainSetting` permite al usuario suprimir el mensaje si no desea volver a recibir notificaciones.
 
 ```cs
 using System;
@@ -256,9 +254,9 @@ Este es el código XAML para la clase [**ContentDialog**](https://docs.microsoft
 * [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](https://msdn.microsoft.com/library/windows/apps/hh465435)
 * [Directrices y lista de comprobación de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
 * [Notificaciones sin procesar](https://msdn.microsoft.com/library/windows/apps/hh761488)
- 
+ 
 
- 
+ 
 
 
 

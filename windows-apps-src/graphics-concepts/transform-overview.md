@@ -6,16 +6,14 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 32beeae8d2398457311a14fa53afe330acdc75f2
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 32f55b0a387221b792e37072f129edddf285195b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700851"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552694"
 ---
 # <a name="transform-overview"></a>Introducción a las transformaciones
 
@@ -32,7 +30,7 @@ La canalización de geometría toma vértices como entrada. El motor de transfor
 | Transformación de la proyección en espacio de proyección    | La siguiente fase es la [Transformación de la proyección](projection-transform.md), que se convierte de espacio de vista en espacio de proyección. En esta parte de la canalización, los objetos se escalan normalmente en relación a la distancia a la que están del visor para crear la ilusión de profundidad en una escena; los objetos cercanos parecen más grandes que los objetos distantes. Por cuestiones de simplicidad, esta documentación se refiere al espacio en el que existen vértices después de la transformación de la proyección en *espacio de proyección*. Algunos libros de gráficos pueden hacer referencia a un espacio de proyección como *espacio homogéneo posterior a la perspectiva*. No todas las transformaciones de proyección modifican a escala el tamaño de los objetos de una escena. Estas proyecciones pueden denominarse *proyecciones afines* o *ortogonales*. |
 | Recorte en el espacio de pantalla                      | En la parte final de la canalización, se quitan los vértices que no estarán visibles en la pantalla, de modo que el rasterizador no pierde tiempo calculando los colores y sombreados de algo que nunca se verá. Este proceso se denomina *recorte*. Después del recorte, los vértices restantes se modifican a escala según los parámetros de ventanilla y se convierten en coordenadas de pantalla. Los vértices resultantes, que se muestran en la pantalla cuando la escena se rasteriza, existen en *espacio de pantalla*.                                                                                                                                                                                                                                                    |
 
- 
+ 
 
 Las transformaciones se usan para convertir la geometría de objetos de un espacio de coordenadas a otro. Direct3D usa matrices para realizar transformaciones 3D. Las matrices crean transformaciones 3D. Puedes combinar matrices para producir una única matriz que abarque varias transformaciones.
 
@@ -163,9 +161,9 @@ Independientemente de qué tipo de matriz vas a crear, recuerda la regla de izqu
 
 [Transformaciones](transforms.md)
 
- 
+ 
 
- 
+ 
 
 
 

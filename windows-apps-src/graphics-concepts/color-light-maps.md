@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e835f9876714c87afc10312f7f88abd9f3766d46
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 757fbf93aa364e4143af0b5d5f2fc3f63a2f9c0c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1042534"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552305"
 ---
 # <a name="color-light-maps"></a>Mapas de luz de colores
 
@@ -28,9 +26,9 @@ Un mapa de luz de color usa los datos RGB del mapa de luz para su información d
 
 [Mapas de luz con texturas](light-mapping-with-textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -9,20 +9,18 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 10/18/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 06931c53ba2670fd27fbf94a204ffd62a97bb184
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: b437055704c307dc3e3fa506a9885ff892585503
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1394784"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554523"
 ---
 # <a name="globalization-and-localization"></a>Globalización y localización
 
-Windows se usa en todo el mundo, lo que incluye a personas de diferentes culturas, regiones e idiomas. Los usuarios hablan varios idiomas diferentes y en una variedad de países y regiones diferentes. Algunos usuarios hablan más de un idioma. Por lo tanto, tu aplicación se ejecuta en configuraciones que implican muchas permutaciones de configuración de sistema para idioma, región y cultura. Puedes aumentar el mercado potencial de la aplicación diseñándola para que sea fácilmente adaptable mediante la *globalización* y la *localización*.
+Windows se usa en todo el mundo, lo que incluye a personas con diferentes culturas, regiones e idiomas. Los usuarios hablan varios idiomas diferentes y en una variedad de países y regiones diferentes. Algunos usuarios hablan más de un idioma. Por lo tanto, tu aplicación se ejecuta en configuraciones que implican muchas permutaciones de configuración de sistema para idioma, región y cultura. Puedes aumentar el mercado potencial de la aplicación diseñándola para que sea fácilmente adaptable mediante la *globalización* y la *localización*.
 
 Este vídeo proporciona una introducción breve sobre cómo preparar la aplicación para todo el mundo: [Introducción a la globalización y la localización](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
 

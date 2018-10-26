@@ -6,18 +6,17 @@ ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 234d90382fb62e6f0be9683dfb7b01d9fa80a185
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 83919cc46694279bc35e046c97acf27c64a196f5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239915"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555224"
 ---
 # <a name="staticresource-markup-extension"></a>Extensión de marcado {StaticResource}
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso ya definido. Los recursos se definen en un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) y el uso de **StaticResource** hace referencia a la clave de ese recurso en el **ResourceDictionary**.
 
@@ -41,8 +40,7 @@ Proporciona un valor para cualquier atributo XAML mediante la evaluación de una
 
 Las reglas por las que un **StaticResource** resuelve un elemento en un diccionario de recursos no se describen en este tema. Eso depende de si la referencia y el recurso existen en una plantilla, de si se usan diccionarios de recursos combinados, etc. Para obtener más información sobre cómo definir recursos y usar correctamente un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), incluida una muestra de código, consulta [Referencias a ResourceDictionary y a recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
 
-**Importante**  
-Un **StaticResource** no debe intentar hacer referencia adelantada a un recurso que se define léxicamente dentro del archivo XAML. Este intento no se admite. Aunque la referencia adelantada no genere un error, intentar llevarla a cabo conlleva una penalización de rendimiento. Para obtener los mejores resultados, ajusta la composición de tus diccionarios de recursos de manera que se eviten las referencias adelantadas.
+**Importante**  **StaticResource** no debe intentar hacer referencia adelantada a un recurso que se define léxicamente dentro del archivo XAML. Este intento no se admite. Aunque la referencia adelantada no genere un error, intentar llevarla a cabo conlleva una penalización de rendimiento. Para obtener los mejores resultados, ajusta la composición de tus diccionarios de recursos de manera que se eviten las referencias adelantadas.
 
 Intentar especificar un **StaticResource** en una clave que no puede resolverse inicia una excepción de análisis XAML en tiempo de ejecución. Las herramientas de diseño también pueden ofrecer advertencias o errores.
 
@@ -79,7 +77,7 @@ Observa cómo el uso de la extensión de marcado {StaticResource} establece una 
 
 ## <a name="design-time-tools-support-for-the-staticresource-markup-extension"></a>Compatibilidad con herramientas en tiempo de diseño para la extensión de marcado **{StaticResource}**
 
-Microsoft Visual Studio 2013 puede incluir posibles valores de clave en los menús desplegables de Microsoft IntelliSense cuando uses la extensión de marcado **{StaticResource}** en una página XAML. Por ejemplo, cuando escribes "{StaticResource", aparece cualquiera de las claves de recurso del ámbito de la consulta actual en los menús desplegables de IntelliSense. Además de los recursos típicos que tendrías en el nivel de página ([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) y el nivel de aplicación ([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338)), también verás [recursos de tema XAML](https://msdn.microsoft.com/library/windows/apps/mt187274) y recursos de cualquier extensión que use el proyecto.
+Microsoft Visual Studio2013 puede incluir posibles valores de clave en los menús desplegables de Microsoft IntelliSense cuando uses la extensión de marcado **{StaticResource}** en una página XAML. Por ejemplo, cuando escribes "{StaticResource", aparece cualquiera de las claves de recurso del ámbito de la consulta actual en los menús desplegables de IntelliSense. Además de los recursos típicos que tendrías en el nivel de página ([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) y el nivel de aplicación ([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338)), también verás [recursos de tema XAML](https://msdn.microsoft.com/library/windows/apps/mt187274) y recursos de cualquier extensión que use el proyecto.
 
 Cuando exista una clave de recurso como parte del uso de cualquier **{StaticResource}**, la característica **Ir a definición** (F12) puede resolver ese recurso y mostrar el diccionario en el que se define. Para los recursos de tema, se dirige a generic.xaml para el tiempo de diseño.
 

@@ -6,18 +6,17 @@ ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: ff1b373e2038824c6349961b3b878f5570babceb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 4d7b08138ab22d4cf2cbf4fb5273759f000a7c94
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239973"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552462"
 ---
 # <a name="template-settings-classes"></a>Clases de configuración de plantillas
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -57,7 +56,7 @@ Este es un ejemplo proveniente de las plantillas predeterminadas iniciales de co
     Fill="{TemplateBinding Foreground}"/>
 ```
 
-El código XAML completo para la plantilla [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) contiene cientos de líneas, por lo que aquí se muestra un pequeño fragmento. Este código XAML define un elemento de control que es uno de los seis elementos [**Elipse**](https://msdn.microsoft.com/library/windows/apps/br243343) que revelan la animación de giro de progreso indeterminado. Como desarrollador, quizá no quieras los círculos y podrías usar otra primitiva gráfica u otra una forma básica para el modo de avance de la animación. Por ejemplo, puedes componer un **ProgressRing** que use un conjunto de elementos [**Rectángulo**](https://msdn.microsoft.com/library/windows/apps/br243371) organizados en un cuadrado. Si así fuera, cada componente de **Rectángulo** de la nueva plantilla podrían tener el aspecto siguiente:
+El código XAML completo para la plantilla [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) contiene cientos de líneas, por lo que aquí se muestra un pequeño fragmento. Este código XAML define un elemento de control que es uno de los seis elementos [**Elipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) que revelan la animación de giro de progreso indeterminado. Como desarrollador, quizá no quieras los círculos y podrías usar otra primitiva gráfica u otra una forma básica para el modo de avance de la animación. Por ejemplo, puedes componer un **ProgressRing** que use un conjunto de elementos [**Rectángulo**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) organizados en un cuadrado. Si así fuera, cada componente de **Rectángulo** de la nueva plantilla podrían tener el aspecto siguiente:
 
 ```xml
 <Rectangle
@@ -98,8 +97,7 @@ Este es otro ejemplo de uso de plantillas predeterminadas de control XAML. Esta 
 
 Una vez más, hay gran cantidad de XAML en la plantilla, por lo que solo mostramos un fragmento. Además, este es solo uno de los diversos estados y animaciones de tema que usan las mismas propiedades [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752). En el caso de [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348), el uso de los valores **ComboBoxTemplateSettings** mediante enlaces exige que las animaciones relacionadas de la plantilla se detengan y se inicien en posiciones basadas en valores compartidos y, por consiguiente, la transición se realiza sin problemas.
 
-**Nota**  
-Cuando uses valores **TemplateSettings** como parte de la plantilla de control, asegúrate de que establecer propiedades que coincidan con el tipo del valor. De lo contrario, tendrías que crear un convertidor de valores para el enlace para poder convertir el tipo de destino del enlace a partir de un tipo de origen diferente del valor **TemplateSettings**. Para obtener más información, consulta [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
+**Nota**  al usar los valores de **TemplateSettings** como parte de la plantilla de control, asegúrate de que establecer propiedades que coincidan con el tipo de valor. De lo contrario, tendrías que crear un convertidor de valores para el enlace para poder convertir el tipo de destino del enlace a partir de un tipo de origen diferente del valor **TemplateSettings**. Para obtener más información, consulta [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
 
 ## <a name="related-topics"></a>Temas relacionados
 

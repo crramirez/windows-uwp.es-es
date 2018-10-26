@@ -6,16 +6,14 @@ ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
 ms.author: joanlee
 ms.date: 04/16/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, juegos, games, desarrollo de juegos, game development
 ms.localizationpriority: medium
-ms.openlocfilehash: b351b5072c6bba228d81a65b51656a81bd564daf
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: d29e647b2932e1d89247da5b91d8f836d11260d6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1862264"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555067"
 ---
 # <a name="windows-10-game-development-guide"></a>Guía de desarrollo de juegos para Windows 10
 
@@ -347,7 +345,7 @@ Los blogs para desarrolladores son otro excelente recurso para obtener la inform
         <td><a href="https://blogs.msdn.microsoft.com/appinstaller/">Crear e implementar un blog del equipo de aplicaciones para UWP</a></td>
     </tr>
 </table>
- 
+ 
 
 ## <a name="concept-and-planning"></a>Concepto y planificación
 
@@ -370,7 +368,7 @@ Si ya tomaste una decisión sobre todas las tecnologías que usarás en tu juego
         <td><a href="game-development-platform-guide.md">Tecnologías de juego de aplicaciones para la UWP</a></td>
     </tr>
 </table>
- 
+ 
 
 Estos tres vídeos sobre GDC 2015 ofrecen información general de gran utilidad sobre el desarrollo de juegos para Windows 10 y la experiencia de juegos para ese sistema operativo.
 
@@ -458,7 +456,7 @@ La gran cantidad de funciones y la profunda integración de la plataforma de Dir
         <td><a href="https://www.youtube.com/channel/UCiaX2B8XiXR70jaN7NK-FpA">Educación sobre elementos gráficos y Microsoft DirectX 12</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="xaml"></a>XAML
 
@@ -478,7 +476,7 @@ XAML es un lenguaje declarativo de interfaz de usuario fácil de usar con práct
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt228348">Controles, diseños y texto</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="html-5"></a>HTML 5
 
@@ -498,7 +496,7 @@ El lenguaje de marcado de hipertexto (HTML) es un lenguaje de marcado de interfa
         <td><a href="http://go.microsoft.com/fwlink/p/?linkid=221374">HTML5</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="combining-presentation-technologies"></a>Combinar tecnologías de presentación
 
@@ -518,7 +516,7 @@ La Infraestructura de gráficos de DirectX (DXGI) de Microsoft proporciona inter
         <td><a href="directx-and-xaml-interop.md">Interoperabilidad de DirectX y XAML</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="c"></a>C++
 
@@ -538,7 +536,7 @@ C++/CX es un lenguaje con poca sobrecarga y de alto rendimiento que proporciona 
         <td><a href="https://docs.microsoft.com/cpp/visual-cpp-in-visual-studio">Visual C++ en Visual Studio 2017</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="c"></a>C#
 
@@ -554,7 +552,7 @@ C# (pronunciado "si sharp") es un lenguaje moderno e innovador, además de senci
         <td><a href="https://msdn.microsoft.com/library/kx37x362.aspx">Referencia de lenguaje C#</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="javascript"></a>JavaScript
 
@@ -592,7 +590,7 @@ Con la Plataforma universal de Windows, es fácil combinar componentes escritos 
 
 ### <a name="which-version-of-directx-should-your-game-use"></a>¿Qué versión de DirectX se debe usar en tu juego?
 
-Si eliges DirectX para tu juego, tendrás que decidir qué versión usar: Microsoft Direct3D 12 o Microsoft Direct3D 11.
+Si eliges DirectX para tu juego, tendrás que decidir qué versión usar: Microsoft Direct3D12 o Microsoft Direct3D11.
 
 DirectX 12 es más rápida y eficiente que ninguna otra versión anterior. Direct3D12 permite crear escenas más vivaces, más objetos, efectos más complejos, así como aprovechar al máximo el hardware de GPU moderno en los PC Windows 10 y en Xbox One. Dado que Direct3D 12 funciona a un nivel muy bajo, puede dar a un equipo de expertos en desarrollo de gráficos o a un equipo de desarrollo de DirectX 11 con experiencia todo el control que necesiten para maximizar la optimización de gráficos.
 
@@ -604,11 +602,11 @@ Direct3D 11.3 es una API de gráficos de bajo nivel que usa el ya familiar model
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Elegir Direct3D 12 o Direct3D 11</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899228">¿Qué es Direct3D 12?</a></td>
+        <td>Elección de Direct3D12 o Direct3D11</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899228">¿Qué es Direct3D12?</a></td>
     </tr>
     <tr>
-        <td>Información general sobre Direct3D 11</td>
+        <td>Introducción a Direct3D11</td>
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/ff476080">Gráficos de Direct3D 11</a></td>
     </tr>
     <tr>
@@ -687,7 +685,7 @@ Ahora como parte de la familia de Microsoft, PlayFab es una plataforma back-end 
         <td><a href="https://community.playfab.com/index.html">Foros de PlayFab</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="unity"></a>Unity
 
@@ -749,7 +747,7 @@ A partir de Unity 5.4, Unity es compatible con el desarrollo de Direct3D 12.
         <td><a href="http://go.microsoft.com/fwlink/?LinkId=722359">Usar Unity con Visual Studio 2015</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="havok"></a>Havok
 
@@ -773,7 +771,7 @@ El conjunto modular de herramientas y tecnologías de Havok ayuda a los creadore
         <td><a href="http://support.havok.com">Havok</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="monogame"></a>MonoGame
 
@@ -958,7 +956,7 @@ Esta es una lista de guías de gran calidad en las que se describen detalladamen
         <td><a href="https://msdn.microsoft.com/library/windows/apps/dn894631">Guía de aplicaciones para UWP</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="getting-started-with-uwp-development"></a>Introducción al desarrollo para UWP
 
@@ -1021,7 +1019,7 @@ Si empiezas a dar tus primeros pasos en la programación para la UWP y estás co
     </tr>
 </table>
 
-### <a name="windows-desktop-apis-to-uwp"></a>API de escritorio de Windows a UWP
+### <a name="windows-desktop-apisto-uwp"></a>APIsto de escritorio de Windows UWP
 
 Estos son algunos vínculos que te ayudarán a pasar tu juego de escritorio de Windows a UWP.
 
@@ -1047,7 +1045,7 @@ Estos son algunos vínculos que te ayudarán a pasar tu juego de escritorio de W
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt592894.aspx">Alternativas a las API de Windows en las aplicaciones de la Plataforma universal de Windows (UWP)</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="process-lifetime-management"></a>Administración del ciclo de vida de los procesos
 
@@ -1067,7 +1065,7 @@ En la Administración del ciclo de vida de los procesos, o ciclo de vida de la a
         <td><a href="https://msdn.microsoft.com/library/hh974425.aspx">Cómo desencadenar la suspensión, reanudación y los eventos en segundo plano para aplicaciones para UWP en Visual Studio</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="designing-game-ux"></a>Diseñar la experiencia de usuario del juego
 
@@ -1099,7 +1097,7 @@ Aparte del diseño de la experiencia de usuario, el diseño mismo del juego (com
         <td><a href="http://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World">Diseñar juegos para un mundo de Windows Core</a></td>
     </tr>   
 </table>
- 
+ 
 
 #### <a name="color-guideline-and-palette"></a>Paleta y pauta de colores
 
@@ -1115,7 +1113,7 @@ El uso de una pauta de colores coherente en tu juego mejora la estética, aceler
         <td><a href="https://assets.windowsphone.com/499cd2be-64ed-4b05-a4f5-cd0c9ad3f6a3/101_BestPractices_Color_InvariantCulture_Default.zip">Procedimientos recomendados: colores</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="typography"></a>Tipografía
 
@@ -1131,7 +1129,7 @@ El uso adecuado de la tipografía mejora muchos aspectos de tu juego, incluida l
         <td><a href="http://go.microsoft.com/fwlink/?LinkId=535007">Procedimientos recomendados: tipografía</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="ui-map"></a>Mapa de la interfaz de usuario
 
@@ -1179,7 +1177,7 @@ Guías y referencias para la implementación de audio en los juegos con XAudio2,
     </tr>
     <tr>
         <td>Obtén información sobre cómo integrar Windows Sonic en tus juegos (vídeo)</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">presentación de las funciones de audio espacial para Xbox y Windows</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Introducción a las funciones de Audio espacial para Xbox de red</a></td>
     </tr>
 </table>
 
@@ -1256,7 +1254,7 @@ Obtén información sobre qué ha cambiado en Direct3D 12 y cómo empezar a prog
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899198.aspx">Administración de la memoria en Direct3D12</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="directx-tool-kit-and-libraries"></a>Kit de herramientas de DirectX y bibliotecas
 
@@ -1292,7 +1290,7 @@ El kit de herramientas de DirectX, la biblioteca de procesamiento de texturas de
         <td><a href="http://go.microsoft.com/fwlink/?LinkID=615560">DirectXMath</a></td>
     </tr>
     <tr>
-        <td>Compatibilidad con Direct3D 12 en DirectXTK (entrada de blog)</td>
+        <td>Compatibilidad con Direct3D12 en DirectXTK (entrada de blog)</td>
         <td><a href="https://github.com/Microsoft/DirectXTK/issues/2">Compatibilidad con DirectX12</a></td>
     </tr>
 </table>
@@ -1368,7 +1366,7 @@ Un icono es una representación de tu juego en el menú Inicio. Los iconos y las
         <td><a href="https://blogs.windows.com/buildingapps/2016/02/15/uwp-tile-generator-extension-for-visual-studio/">Sugerencias sobre el uso de la herramienta de generador de iconos para UWP</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="enable-in-app-product-iap-purchases"></a>Habilitar compras de productos desde la aplicación (IAP)
 
@@ -1396,7 +1394,7 @@ Un IAP (producto desde la aplicación) es un elemento complementario que los jug
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148538">Informe de adquisiciones de IAP</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="debugging-performance-optimization-and-monitoring"></a>Depuración, optimización de rendimiento y monitorización
 
@@ -1462,7 +1460,7 @@ Algunas partes del desarrollo en DirectX pueden ser complejas y matizadas. Cuand
     </tr>
     <tr>
         <td>Herramientas de depuración y validación para el desarrollo de D3D12 (vídeo)</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-003">Ajuste del rendimiento D3D12 y depuración con validación PIX y GPU</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-003">Ajuste del rendimiento D3D12 y depuración con PIX y GPUValidation</a></td>
     </tr>
     <tr>
         <td>Optimización de gráficos y rendimiento (vídeo)</td>
@@ -1584,7 +1582,7 @@ Deberás usar el nuevo panel del Centro de desarrollo de Windows unificado para 
     </colgroup>
     <tr>
         <td>Aprende a usar la instalación de transmisión por secuencias y paquetes opcionales (vídeo)</td>
-        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">Distribución de aplicaciones para UWP Nextgen: creación de aplicaciones ampliables, usables en transmisión por secuencias y con secuencia de componentes</a></td>
+        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">Distribución de aplicaciones de UWP Nextgen: creación de componentizedapps extensible, ampliables,</a></td>
     </tr>
     <tr>
         <td>Dividir y agrupar contenido para habilitar la transmisión por secuencias</td>
@@ -1643,7 +1641,7 @@ No dejes que los problemas de certificación retrasen el lanzamiento de tu juego
         <td><a href="https://msdn.microsoft.com/library/windows/apps/jj657968">Evitar errores de certificación comunes</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="store-manifest-storemanifestxml"></a>Manifiesto de la tienda (StoreManifest.xml)
 
@@ -1659,7 +1657,7 @@ El manifiesto de la tienda (StoreManifest.xml) es un archivo de configuración o
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt617335">Esquema StoreManifest (Windows 10)</a></td>
     </tr>
 </table>
- 
+ 
 
 ## <a name="game-lifecycle-management"></a>Administración del ciclo de vida del juego
 
@@ -1694,7 +1692,7 @@ Después haber terminado el desarrollo y enviado tu juego, todavía no has termi
         <td><a href="https://dev.windows.com/store-promotion">Promocionar tus aplicaciones</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="visual-studio-application-insights"></a>Visual Studio Application Insights
 
@@ -1748,7 +1746,7 @@ Visual Studio Application Insights proporciona análisis de rendimiento, telemet
         <td><a href="https://v.vungle.com/sdk">Obtener el Windows SDK para Vungle</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="creating-and-managing-content-updates"></a>Crear y administrar actualizaciones de contenidos
 
@@ -1915,8 +1913,8 @@ Xbox Live es una red de juegos de calidad que conecta a millones de jugadores en
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
