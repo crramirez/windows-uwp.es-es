@@ -6,16 +6,14 @@ title: Crear, programar y administrar interrupciones multimedia
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b8d25047435ece1c55a982e69be45fa0e6efb74
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 0feb7f6771254bf500e4b64fd0e632daad9817e4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843668"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560028"
 ---
 # <a name="create-schedule-and-manage-media-breaks"></a>Crear, programar y administrar interrupciones multimedia
 
@@ -88,10 +86,6 @@ El siguiente ejemplo usa la propiedad [**Source**](https://msdn.microsoft.com/li
 
 [!code-cs[BreakSeekedOver](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakSeekedOver)]
 
-## <a name="get-information-about-the-current-media-break"></a>Obtener información sobre la interrupción multimedia actual
-Como se mencionó anteriormente en este artículo, la propiedad [**CurrentItemIndex**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.CurrentItemIndex) se puede usar para determinar qué elemento multimedia se está reproduciendo actualmente en una interrupción multimedia. Puedes comprobar periódicamente el elemento que se está reproduciendo actualmente para actualizar la interfaz de usuario. Asegúrate de comprobar en primer lugar si la propiedad [**CurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.CurrentBreak) tiene el valor null. Si la propiedad es null, la interrupción multimedia no se está reproduciendo actualmente.
-
-[!code-cs[GetCurrentBreakItemIndex](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetGetCurrentBreakItemIndex)]
 
 ## <a name="access-the-current-playback-session"></a>Acceso a la sesión de reproducción actual
 El objeto [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) usa la clase **MediaPlayer** para proporcionar datos y eventos relacionados con el contenido multimedia que se esté reproduciendo actualmente. [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) también tiene una **MediaPlaybackSession** a la que puedes acceder para obtener datos y eventos específicamente relacionados con el contenido de la interrupción multimedia que se está reproduciendo. La información a la que puedes acceder desde la sesión de reproducción incluye el estado de reproducción actual, en reproducción o en pausa, y la posición de reproducción actual dentro del contenido. Puedes usar las propiedades [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) y [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight), y el elemento [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged) para ajustar la interfaz de usuario de vídeo si el contenido de la interrupción multimedia tiene una relación de aspecto diferente a la del contenido principal. También puedes recibir eventos como [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded) y [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged), que pueden proporcionar una telemetría valiosa sobre el rendimiento de la aplicación.
@@ -107,9 +101,9 @@ En el siguiente ejemplo se registra un controlador para **evento BufferingProgre
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
 * [Control manual de los controles de transporte de contenido multimedia del sistema](system-media-transport-controls.md)
 
- 
+ 
 
- 
+ 
 
 
 

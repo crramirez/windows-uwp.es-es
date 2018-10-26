@@ -6,16 +6,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/13/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 99c649c6252a13d153414fd9e5d2d5d1f0fb73bb
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 320445022fa836e05d04e93b85d333ef1ad40a53
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395084"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560775"
 ---
 # <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>Solución de problemas y preguntas más frecuentes sobre el kit de herramientas para aplicaciones multilingües 4.0
 

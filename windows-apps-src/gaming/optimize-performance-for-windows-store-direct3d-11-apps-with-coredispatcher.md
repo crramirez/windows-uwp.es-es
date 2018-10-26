@@ -6,19 +6,18 @@ ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, DirectX, input latency, latencia de entrada
-ms.openlocfilehash: cf83b02a6388f71f94641e7c24e011a540790fa0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a2e92dc10dbcdc3a511c1b1a1271ae759cc03c60
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238728"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564634"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 La latencia de entrada puede influir tremendamente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida. Además, una correcta optimización de los eventos de entrada contribuye a mejorar la vida de la batería. Aprende a elegir las opciones adecuadas de procesamiento de eventos de entrada de CoreDispatcher, para garantizar que el juego controle las entradas de la forma más fluida posible.
 
@@ -236,7 +235,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-La plantilla **DirectX 11 and XAML App (Universal Windows)** de Microsoft Visual Studio 2015 divide el bucle del juego en varios subprocesos de una forma similar. Emplea el objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar un subproceso dedicado a controlar la entrada y, de igual modo, crea un subproceso de representación independiente del subproceso de interfaz de usuario XAML. Para más información sobre estas plantillas, te recomendamos que leas [Crear un proyecto de juego para la Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
+La plantilla **DirectX 11 and XAML App (Universal Windows)** en Microsoft Visual Studio2015 divide el bucle del juego en varios subprocesos de una forma similar. Emplea el objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar un subproceso dedicado a controlar la entrada y, de igual modo, crea un subproceso de representación independiente del subproceso de interfaz de usuario XAML. Para más información sobre estas plantillas, te recomendamos que leas [Crear un proyecto de juego para la Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>Otras formas de reducir la latencia de entrada
 
@@ -249,7 +248,7 @@ Figura 1
 
 ![figura 1: latencia de entrada en directx ](images/input-latency1.png)
 
-En Windows 8.1, DXGI incorporó la marca **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** de la cadena de intercambio, que permite que las aplicaciones puedan reducir fácilmente la latencia sin tener que implementar ninguna heurística con la que mantener la cola de eventos presentes vacía. Las cadenas de intercambio creadas con esta etiqueta se conocen como cadenas de intercambio que pueden esperar. En la figura2 se muestran el ciclo de vida y respuesta aproximados a un evento de entrada cuando se usan cadenas de intercambio que pueden esperar:
+En Windows8.1, DXGI introdujo la marca **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** la cadena de intercambio, lo que permite a las aplicaciones reducir esta latencia fácilmente sin tener que implementar la heurística para mantener la cola vacía. Las cadenas de intercambio creadas con esta etiqueta se conocen como cadenas de intercambio que pueden esperar. En la figura2 se muestran el ciclo de vida y respuesta aproximados a un evento de entrada cuando se usan cadenas de intercambio que pueden esperar:
 
 Figura 2
 
@@ -257,9 +256,9 @@ Figura 2
 
 Lo que deducimos de estos diagramas es que existe la posibilidad de reducir la latencia de entrada de los juegos en hasta dos fotogramas completos si son capaces de representar cada fotograma dentro de los 16,7 ms previstos y que están definidos en la frecuencia de actualización de la pantalla. En el ejemplo del juego de puzle se usan cadenas de intercambio que pueden esperar y se controla el límite de la cola de eventos presentes llamando a ` m_deviceResources->SetMaximumFrameLatency(1);`
 
- 
+ 
 
- 
+ 
 
 
 

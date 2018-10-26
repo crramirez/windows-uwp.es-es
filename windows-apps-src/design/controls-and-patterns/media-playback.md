@@ -9,16 +9,14 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d680ddfb1dd121d2b9763c1d8af646db6de4797
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: 113acbe1f4e9bb3814b2f9b61beb79488995d3e3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1494042"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563349"
 ---
 # <a name="media-player"></a>Reproductor multimedia
 
@@ -101,9 +99,9 @@ Se recomienda el diseño de controles de fila doble (a continuación) en la mayo
 ### <a name="set-the-media-source"></a>Establecer el origen del contenido multimedia
 Para reproducir archivos de la red o archivos insertados en la aplicación, establece la propiedad [Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) en [MediaSource](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx) con la ruta de acceso del archivo.
 
-**Sugerencia**  Para abrir archivos desde Internet, tienes que declarar la función **Internet (Client)** en el manifiesto de la aplicación (Package.appxmanifest). Para obtener más información sobre las funciones de declaración, consulta [Declaraciones de funcionalidades de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270968).
+**Sugerencia**para abrir archivos desde internet, debes declarar la funcionalidad de **Internet (cliente)** en el manifiesto de la aplicación (Package.appxmanifest). Para obtener más información sobre las funciones de declaración, consulta [Declaraciones de funcionalidades de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
- 
+ 
 
 En este código se intenta establecer la propiedad [Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) de la clase [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) definida en XAML en la ruta de acceso de un archivo especificado en una clase [TextBox](https://msdn.microsoft.com/library/windows/apps/br209683).
 

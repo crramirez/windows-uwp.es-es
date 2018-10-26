@@ -6,23 +6,21 @@ description: La instalación en streaming de la Plataforma universal de Windows 
 ms.author: lahugh
 ms.date: 04/05/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: aplicación uwp transmisión por secuencias de Windows 10, uwp, transmisión por secuencias de instalación, instalar
+keywords: Windows 10, uwp, instalación, de streaming de instalación de aplicaciones de uwp de streaming
 ms.localizationpriority: medium
-ms.openlocfilehash: 087226cad4bcf7ea0294d8878564c345d6cfb9d0
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: e4915d2fb4d1133cd190d766d38c79934d9f3956
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "305294"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563501"
 ---
 # <a name="uwp-app-streaming-install"></a>Instalación en streaming de aplicaciones para UWP
 La instalación en streaming de la Plataforma universal de Windows (UWP) te permite especificar qué partes de la aplicación deben descargarse primero de Microsoft Store. Al descargar primero los archivos esenciales de la aplicación, el usuario puede iniciarla e interactuar con ella mientras el resto de archivos terminan de descargarse en segundo plano. 
 
-Para usar UWP transmisión por secuencias instalar la aplicación que necesitará para dividir los archivos de su aplicación en las secciones. Para ello, va a crear un mapa de contenido de grupo, que es un archivo XML que se incluye con la aplicación, lo que le permite establecer la prioridad de descarga y orden. Vea el tema vinculado a continuación para obtener más información.
+Para usar la instalación en Streaming UWP debes dividir los archivos de la aplicación en secciones. Para ello, se creará una asignación de grupo de contenido, que es un archivo XML que se empaqueta con tu aplicación, lo que le permite establecer la prioridad de descarga y el orden. Consulta el tema que se vinculan a continuación para obtener más información.
 
-Para obtener una guía completa sobre cómo agregar UWP transmisión por secuencias instalar la aplicación a su aplicación UWP, consulte esta [serie de blog](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
+Para obtener una guía completa sobre cómo agregar instalación en Streaming UWP a tu aplicación para UWP, echa un vistazo a esta [serie de blogs](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
 
 | Tema | Descripción | 
 |-------|-------------|

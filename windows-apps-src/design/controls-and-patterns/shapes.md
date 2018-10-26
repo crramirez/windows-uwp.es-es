@@ -6,16 +6,14 @@ description: Aprende a dibujar formas como elipses, rectángulos, polígonos y t
 ms.author: jimwalk
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 44b89f90abc0930c8f57e14cd112a3c7834bace1
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 984653ad20fc40035528ab7e32b904e64d6ff8c5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675212"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561971"
 ---
 # <a name="draw-shapes"></a>Dibujar formas
 
@@ -106,7 +104,7 @@ Este es el [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) representa
 
 ![Un rectángulo representado.](images/shapes-rectangle.jpg)
 
-**Sugerencia** Hay algunos escenarios para definiciones de UI en los que, en lugar de usar un [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle), es más apropiado usar un [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250). Si quieres crear una forma rectangular en torno a otro contenido, puede ser mejor usar un **Border**, ya que puede tener contenido secundario y su tamaño se ajustará automáticamente en torno a ese contenido, en lugar de tener dimensiones fijas de alto y ancho como un **Rectangle**. Un **Border** también ofrece la opción de tener esquinas redondeadas, a través de la propiedad [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius).
+**Sugerencia**hay algunos escenarios para definiciones de interfaz de usuario donde en lugar de usar un [**rectángulo**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle), un [**borde**](https://msdn.microsoft.com/library/windows/apps/BR209250) podría ser más apropiado. Si quieres crear una forma rectangular en torno a otro contenido, puede ser mejor usar un **Border**, ya que puede tener contenido secundario y su tamaño se ajustará automáticamente en torno a ese contenido, en lugar de tener dimensiones fijas de alto y ancho como un **Rectangle**. Un **Border** también ofrece la opción de tener esquinas redondeadas, a través de la propiedad [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius).
 
 Por otro lado, es probable que un [**Rectángulo**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) sea la mejor opción para la composición de controles. Un **Rectangle** es una forma que se ve en muchas plantillas de control, porque se usa como una parte de "FocusVisual" para los controles activables. Cuando el control esté en un estado visual "Focused", este rectángulo se hará visible; en otros estados, estará oculto.
 
@@ -145,7 +143,7 @@ Y aquí tienes el [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) represe
 
 ![Polígono representado.](images/shapes-polygon.jpg)
 
-**Sugerencia** El valor de [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) se usa a menudo como tipo en XAML para escenarios en los que no se declaran los vértices de las formas. Por ejemplo, un valor **Point** forma parte de los datos del evento referentes a los eventos de entrada táctil; de esta manera, podrás saber con exactitud en qué punto de un espacio de coordenadas se produjo la acción táctil. Para obtener más información sobre el valor **Point** y cómo usarlo en XAML o en código, consulta el tema de referencia de la API para [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
+**Sugerencia**un valor de [**punto**](https://msdn.microsoft.com/library/windows/apps/BR225870) a menudo se usa como un tipo en XAML para escenarios que no se declaran los vértices de formas. Por ejemplo, un valor **Point** forma parte de los datos del evento referentes a los eventos de entrada táctil; de esta manera, podrás saber con exactitud en qué punto de un espacio de coordenadas se produjo la acción táctil. Para obtener más información sobre el valor **Point** y cómo usarlo en XAML o en código, consulta el tema de referencia de la API para [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
 
 ## <a name="line"></a>Línea
 
@@ -173,7 +171,7 @@ layoutRoot.Children.Add(line1);
 
 Una [**Polilínea**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline) es similar a un [**polígono**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) ya que el límite de la forma está definido por un conjunto de puntos, pero hay que tener en cuenta que el último punto de la **polilínea** no está conectado al primero.
 
-**Nota**: Puedes tener un punto inicial y un punto final explícitamente idénticos en la propiedad [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) establecida para la clase [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline), pero en ese caso te recomendamos que uses una clase [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon).
+**Nota**  explícitamente podrías tener un punto de inicio idénticos y establecer punto final en los [**puntos**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) de la [**polilínea**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline), pero en ese caso probablemente podría haber usado un [**polígono**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) en su lugar.
 
 Si especificas la propiedad [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill) de una [**polilínea**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline), la propiedad **Fill** pintará el espacio interior de la forma, incluso si el punto inicial y el punto final de la propiedad [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) establecidos en la **polilínea** no se cruzan. Si no especificas la propiedad **Fill**, la **polilínea** será similar a lo que se habría representado si hubieras especificado varios elementos [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) individuales en los que se cruzan los puntos iniciales y finales de líneas consecutivas.
 

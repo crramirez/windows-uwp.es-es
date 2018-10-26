@@ -1,22 +1,20 @@
 ---
 author: msatranjr
-title: Servidor de GATT Bluetooth
-description: En este artículo se proporciona una visión general del servidor de perfiles de atributo genérico (GATT) de Bluetooth para las aplicaciones de la plataforma de Windows Universal (UWP), junto con el código de ejemplo para casos de uso comunes.
+title: Servidor GATT de Bluetooth
+description: En este artículo se proporciona una visión general de servidor de perfil de atributo genérico (GATT) de Bluetooth para las aplicaciones de la plataforma Universal de Windows (UWP), junto con código de muestra para casos de uso común.
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 27154fbb535b76995fba97702e65a9c0b2a8291c
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: b8a941b7b80bd5d34e88798ec586d9c1d52e2887
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "610770"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560345"
 ---
-# <a name="bluetooth-gatt-server"></a>Servidor de GATT Bluetooth
+# <a name="bluetooth-gatt-server"></a>Servidor GATT de Bluetooth
 
 
 **API importantes**
@@ -24,56 +22,56 @@ ms.locfileid: "610770"
 - [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685)
 
 
-En este artículo se muestra cómo las API de servidor de atributo genérico de Bluetooth (GATT) para las aplicaciones de la plataforma de Windows Universal (UWP), junto con el código de ejemplo para tareas comunes de servidor GATT: 
-- Definir los servicios compatibles
-- Publicar el servidor de modo que puedan ser detectado por los clientes remotos
-- Anunciar la compatibilidad para el servicio
+En este artículo muestra las API de servidor de atributo genérico (GATT) de Bluetooth para las aplicaciones de la plataforma Universal de Windows (UWP), junto con el código de ejemplo para tareas comunes de servidor GATT: 
+- Definir los servicios admitidos
+- Publicar el servidor para que se pueda descubrir los clientes remotos
+- Soporte técnico para el servicio se anuncian
 - Responder para leer y escribir solicitudes
-- Enviar notificaciones a los clientes está suscritos
+- Enviar notificaciones a los clientes suscritos
 
 ## <a name="overview"></a>Introducción
-Windows normalmente funciona en el rol de cliente. No obstante, muchos escenarios surgen que requieren Windows para que actúe como un Bluetooth LE GATT también al servidor. Casi todos los escenarios para los dispositivos IoT, junto con la mayoría de las comunicaciones entre plataformas habilitar requiere Windows para que sea un servidor GATT. Además, el envío de notificaciones a dispositivos wearable cercanos ha convertido en un escenario más popular que requiere esta tecnología así como.  
-> Asegúrese de que todos los conceptos en el [cliente GATT documentos](gatt-client.md) estén borrar antes de continuar.  
+Windows funciona normalmente en el rol de cliente. No obstante, muchos escenarios surgen que requieren Windows para que actúe como Bluetooth LE GATT servidor también. Casi todos los escenarios para dispositivos de IoT, junto con la mayoría de las comunicaciones entre plataformas BLE requiere Windows en un servidor GATT. Además, enviar notificaciones a dispositivos transportable cercanos ha convertido en un escenario popular que requiere esta tecnología también.  
+> Asegúrese de que todos los conceptos de los [documentos de cliente GATT](gatt-client.md) sean claros antes de continuar.  
 
-Las operaciones del servidor girarán en torno al proveedor de servicios y la GattLocalCharacteristic. Estas dos clases proporcionan la funcionalidad necesaria para declarar, implementar y exponer una jerarquía de datos a un dispositivo remoto.
+Las operaciones de servidor se giran alrededor del proveedor de servicios y la GattLocalCharacteristic. Estas dos clases proporcionará la funcionalidad necesaria para declarar, implementar y exponer una jerarquía de datos a un dispositivo remoto.
 
-## <a name="define-the-supported-services"></a>Definir los servicios compatibles
-La aplicación puede declarar uno o más servicios que se publicará por parte de Windows. Cada servicio se identifica mediante un UUID. 
+## <a name="define-the-supported-services"></a>Definir los servicios admitidos
+La aplicación puede declarar uno o varios servicios que se publicará por Windows. Cada servicio se identifica por un UUID. 
 
-### <a name="attributes-and-uuids"></a>Los atributos y los identificadores UUID
-Cada servicio, la característica y el descriptor se definen por es propio UUID único de 128 bits.
-> Todas las API de Windows utilizan el término GUID, pero el estándar Bluetooth define estos como UUID. Para nuestros fines, estos dos términos son intercambiables, por lo que vamos a continuar usando el término UUID. 
+### <a name="attributes-and-uuids"></a>Atributos y UUID
+Cada servicio, la característica y el descriptor se definen por es propio único UUID de 128 bits.
+> Todas las API de Windows usa el término GUID, pero el estándar de Bluetooth define estas tareas como UUID. Para nuestros fines, estos términos de dos son intercambiables, por lo que continuaremos usa el término UUID. 
 
-Si el atributo es estándar y está definido por definido por el SIG de Bluetooth, también tendrá un identificador corto de 16 bits correspondiente (por ejemplo, UUID de nivel de batería es**2A19**de 0000-0000-1000-8000-00805F9B34FB y el identificador corto es 0x2A19). Estos UUID estándar puede verse en [GattServiceUuids](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids.aspx) y [GattCharacteristicUuids](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids.aspx).
+Si el atributo es estándar y están definidos por definido por el SIG de Bluetooth, también tendrán un identificador breve de 16 bits correspondiente (por ejemplo, UUID de nivel de batería es 0000**2A19**-0000-1000-8000-00805F9B34FB y el identificador corto es 0x2A19). Estos UUID estándar puede verse en [GattServiceUuids](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids.aspx) y [GattCharacteristicUuids](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids.aspx).
 
-Si está implementando la aplicación es propio servicio personalizado, tendrá un UUID personalizado que se genere. Esto es fácilmente en Visual Studio a través de herramientas -> CreateGuid (opción de usar 5 para obtener en el formato "xxxxxxxx-xxxx-... xxxx"). Ya se puede usar este uuid para declarar descriptores, características o servicios locales de nuevo.
+Si está implementando la aplicación es propio servicio personalizada, tendrá un UUID personalizado que se genere. Esto es fácilmente en Visual Studio a través de herramientas -> CreateGuid (uso opción 5 para obtener el formato "xxxxxxxx-xxxx-… xxxx"). Este uuid ahora puede usarse para declarar descriptores, las características o nuevos servicios locales.
 
 #### <a name="restricted-services"></a>Servicios restringidos
-Los siguientes servicios están reservados por el sistema y no se pueden publicar en este momento:
+Los siguientes servicios están reservados para el sistema y no se puede publicar en este momento:
 1. Servicio de información de dispositivo (DIS)
-2. Servicio de perfiles de atributo genérico (GATT)
-3. Servicio de perfiles de acceso genérico (espacio)
+2. Servicio de perfil de atributo genérico (GATT)
+3. Servicio de perfil de acceso genérico (BPA)
 4. Servicio de dispositivos de interfaz humana (HOGP)
-5. Analizar los parámetros servicio (SCP)
+5. Analizar parámetros de servicio (SCP)
 
-> Intenta crear un servicio bloqueado, se producirá en BluetoothError.DisabledByPolicy que se devuelven desde la llamada a CreateAsync.
+> Intentar crear un servicio bloqueado dará como resultado BluetoothError.DisabledByPolicy devueltos por la llamada a CreateAsync.
 
 #### <a name="generated-attributes"></a>Atributos generados
-Los descriptores de siguientes son generado automáticamente por el sistema, en función de la GattLocalCharacteristicParameters proporcionado durante la creación de la característica:
-1. Configuración de características de cliente (si la característica está marcada como indicatable u obligatoria).
-2. Característica descripción de usuario (si se establece la propiedad UserDescription). Vea la propiedad GattLocalCharacteristicParameters.UserDescription para obtener más información.
-3. Formato de característica (un descriptor para cada formato de presentación especificado).  Vea la propiedad GattLocalCharacteristicParameters.PresentationFormats para obtener más información.
-4. Formato agregado característicos (si se especifica más de un formato de presentación).  Propiedad GattLocalCharacteristicParameters.See PresentationFormats para obtener más información.
-5. Propiedades extendidas característicos (si la característica está marcada con el bit de las propiedades extendidas).
+Los descriptores de la siguientes son generado automáticamente por el sistema, en función de la GattLocalCharacteristicParameters proporcionado durante la creación de la característica:
+1. Configuración de característica de cliente (si la característica está marcada como indicatable u obligatoria).
+2. Descripción característico de usuario (si se establece la propiedad UserDescription). Consulta la propiedad GattLocalCharacteristicParameters.UserDescription para obtener más información.
+3. Formato característico (un descriptor de cada formato de presentación especificado).  Consulta la propiedad GattLocalCharacteristicParameters.PresentationFormats para obtener más información.
+4. Formato agregados característico (si se especifica más de un formato de presentación).  Propiedad GattLocalCharacteristicParameters.See PresentationFormats para obtener más información.
+5. Propiedades extendidas característico (si la característica está marcada con el bit de las propiedades extendidas).
 
 > El valor del descriptor de propiedades extendidas se determina a través de las propiedades de característica ReliableWrites y WritableAuxiliaries.
 
-> Intenta crear un descriptor de reservado, se producirá una excepción.
+> Intentar crear un descriptor reservado dará como resultado una excepción.
 
-> Tenga en cuenta que de difusión no se admite en este momento.  Especificación de la GattCharacteristicProperty de difusión, se producirá una excepción.
+> Ten en cuenta que la difusión no se admite en este momento.  Especificar el GattCharacteristicProperty difundir dará como resultado una excepción.
 
-### <a name="build-up-the-heirarchy-of-services-and-characteristics"></a>Creación de la jerarquía de servicios y características
-El GattServiceProvider se usa para crear y anunciar la definición del servicio principal raíz.  Cada servicio requiere es propio objeto ServiceProvider que toma un identificador de GUID: 
+### <a name="build-up-the-heirarchy-of-services-and-characteristics"></a>Crea la jerarquía de servicios y características
+El GattServiceProvider se usa para crear y anunciar la definición del servicio principal raíz.  Cada servicio requiere es propio objeto ServiceProvider que toma un GUID: 
 
 ```csharp
 GattServiceProviderResult result = await GattServiceProvider.CreateAsync(uuid);
@@ -84,9 +82,9 @@ if (result.Error == BluetoothError.Success)
     // 
 }
 ```
-> Servicios principales son el nivel superior del árbol de GATT. Servicios principales contienen características, así como otros servicios (denominadas 'Included' o servicios secundarios). 
+> Servicios principales son el nivel superior del árbol GATT. Servicios principales contienen las características, así como otros servicios (denominados 'Incluido' o servicios secundarios). 
 
-Ahora, rellene el servicio con las características necesarias y descriptores de:
+Ahora, rellena el servicio con las características necesarias y descriptores:
 
 ```csharp
 GattLocalCharacteristicResult characteristicResult = await serviceProvider.Service.CreateCharacteristicAsync(uuid1, ReadParameters);
@@ -116,10 +114,10 @@ if (characteristicResult.Error != BluetoothError.Success)
 _notifyCharacteristic = characteristicResult.Characteristic;
 _notifyCharacteristic.SubscribedClientsChanged += SubscribedClientsChanged;
 ```
-Como se indicó anteriormente, también es un buen lugar para declarar controladores de eventos para las operaciones que admite cada característica.  Para responder a las solicitudes de correctamente, una aplicación debe definido y establecer un controlador de eventos para cada tipo de solicitud es compatible con el atributo.  Error al registrar un controlador, se producirá la solicitud se completen inmediatamente con *UnlikelyError* por el sistema.
+Como se indicó anteriormente, también es un buen lugar para declarar los controladores de eventos para las operaciones que admite cada característica.  Para responder a solicitudes correctamente, una aplicación debe definido y establece un controlador de eventos para el atributo es compatible con cada tipo de solicitud.  Si no se registra un controlador dará como resultado la solicitud que se va a completar inmediatamente con *UnlikelyError* por el sistema.
 
-### <a name="constant-characteristics"></a>Características de constantes
-A veces, hay valores característicos que no cambiará durante el transcurso de la duración de la aplicación. En ese caso, es aconsejable declarar una constante característica para evitar que la activación de la aplicación innecesarios: 
+### <a name="constant-characteristics"></a>Características constantes
+A veces, hay valores de características que no cambiará durante el transcurso de ciclo de vida de la aplicación. En ese caso, es aconsejable declarar una característica de constante para evitar la activación de aplicaciones innecesarias: 
 
 ```csharp
 byte[] value = new byte[] {0x21};
@@ -138,7 +136,7 @@ if (characteristicResult.Error != BluetoothError.Success)
 }
 ```
 ## <a name="publish-the-service"></a>Publicar el servicio
-Una vez que el servicio se ha definido totalmente, el siguiente paso es publicar el soporte técnico para el servicio. Esto le informa que el sistema operativo que se debe devolver el servicio cuando dispositivos remotos realizan una detección del servicio.  Tendrá que establecer dos propiedades - IsDiscoverable y IsConnectable:  
+Una vez que el servicio se ha definido por completo, el siguiente paso es publicar soporte técnico para el servicio. Esto informa que el sistema operativo que se debe devolver el servicio cuando dispositivos remotos realizan una detección de servicios.  Tendrás que establecer dos propiedades - IsDiscoverable y IsConnectable:  
 
 ```csharp
 GattServiceProviderAdvertisingParameters advParameters = new GattServiceProviderAdvertisingParameters
@@ -148,18 +146,18 @@ GattServiceProviderAdvertisingParameters advParameters = new GattServiceProvider
 };
 serviceProvider.StartAdvertising(advParameters);
 ```
-- **IsDiscoverable**: anuncia el nombre descriptivo para dispositivos remotos en el anuncio, hacer que el dispositivo que se pueda detectar.
-- **IsConnectable**: anuncia un anuncio conectable para su uso en función de periférico.
+- **IsDiscoverable**: anuncia el nombre descriptivo a dispositivos remotos en el anuncio, hacer que el dispositivo reconocibles.
+- **IsConnectable**: anuncia un anuncio para su uso en la función periférica conectable.
 
-> Cuando un servicio se detectable y Connectable, el sistema agregará el Uuid de servicio para el paquete de anuncio.  Hay sólo 31 bytes en el paquete de anuncios y un UUID de 128 bits ocupa 16 de ellos!
+> Cuando un servicio es reconocible y Connectable, el sistema agregará el Uuid de servicio para el paquete de anuncio.  Hay solo el 31 de bytes en el paquete de anuncios y un UUID de 128 bits ocupa 16 de ellos!
 
-> Tenga en cuenta que cuando se publica un servicio en primer plano, una aplicación debe llamar a StopAdvertising cuando se suspende la aplicación.
+> Ten en cuenta que cuando un servicio se ha publicado en primer plano, una aplicación debe llamar a StopAdvertising cuando se suspende la aplicación.
 
 ## <a name="respond-to-read-and-write-requests"></a>Responder para leer y escribir solicitudes
-Tal y como se ha visto anteriormente mientras que al declarar las características necesarias, GattLocalCharacteristics tener 3 tipos de eventos - ReadRequested, WriteRequested y SubscribedClientsChanged.
+Como hemos visto anteriormente mientras que al declarar las características necesarias, GattLocalCharacteristics tener 3 tipos de eventos - ReadRequested, WriteRequested y SubscribedClientsChanged.
 
 ### <a name="read"></a>Leer
-Cuando un dispositivo remoto intenta leer un valor de una característica (y no es un valor constante), se llama al evento ReadRequested. La característica que se ha llamado en el nivel de lectura, así como args (que contiene información sobre el dispositivo remoto) se pasa al delegado: 
+Cuando un dispositivo remoto intenta leer un valor de una característica (y no es un valor constante), se llama al evento ReadRequested. La característica que se llamó a la lectura en, así como argumentos (que contiene información sobre el dispositivo remoto) se pasa al delegado: 
 
 ```csharp
 characteristic.ReadRequested += Characteristic_ReadRequested;
@@ -182,7 +180,7 @@ async void ReadCharacteristic_ReadRequested(GattLocalCharacteristic sender, Gatt
 ``` 
 
 ### <a name="write"></a>Escritura
-Cuando un dispositivo remoto intenta escribir un valor en una característica, se llama al evento WriteRequested con detalles sobre el dispositivo remoto, qué característica para escribir en y el propio valor: 
+Cuando un dispositivo remoto intenta escribir un valor a una característica, se llama al evento WriteRequested con detalles sobre el dispositivo remoto, qué característica para escribir en y el propio valor: 
 
 ```csharp
 characteristic.ReadRequested += Characteristic_ReadRequested;
@@ -204,10 +202,10 @@ async void WriteCharacteristic_WriteRequested(GattLocalCharacteristic sender, Ga
     deferral.Complete();
 }
 ```
-Existen 2 tipos de escrituras - con y sin respuesta. Use GattWriteOption (una propiedad en el objeto GattWriteRequest) para averiguar qué tipo de escritura que está llevando a cabo el dispositivo remoto. 
+Existen 2 tipos de escrituras - con y sin respuesta. Usar GattWriteOption (una propiedad en el objeto GattWriteRequest) para averiguar qué tipo de escritura que está realizando el dispositivo remoto. 
 
-## <a name="send-notifications-to-subscribed-clients"></a>Enviar notificaciones a los clientes está suscritos
-Más frecuentes de las operaciones de servidor del GATT, las notificaciones de realizan la función de inserción de datos en los dispositivos remotos crítica. A veces, querrá notificar a todos los clientes suscritos pero othertimes es posible que desee elegir qué dispositivos para enviar el nuevo valor para: 
+## <a name="send-notifications-to-subscribed-clients"></a>Enviar notificaciones a los clientes suscritos
+Más frecuente de las operaciones de servidor GATT, las notificaciones de realiza la función crítica de inserción de datos en los dispositivos remotos. En ocasiones, querrás notificar a todos los clientes suscritos pero othertimes es posible que quieras seleccionar qué dispositivos para enviar el nuevo valor: 
 
 ```csharp
 async void NotifyValue()
@@ -236,4 +234,4 @@ void _notifyCharacteristic_SubscribedClientsChanged(GattLocalCharacteristic send
 }
 
 ```
-> Tenga en cuenta que una aplicación puede obtener el tamaño máximo de notificación para un cliente concreto con la propiedad MaxNotificationSize.  Los datos que supera el tamaño máximo se truncarán por el sistema.
+> Ten en cuenta que una aplicación puede obtener el tamaño máximo de notificación para un cliente determinado con la propiedad MaxNotificationSize.  Los datos más grandes que el tamaño máximo, se truncarán por el sistema.

@@ -1,30 +1,28 @@
 ---
 author: v-angraf
 ms.assetid: 67934477-337a-5235-b0de-8ac038177267
-title: Medios capturan página (página principal de desarrollo)
-description: Proporciona información acerca de la página de captura de medios de la aplicación principal de desarrollo para Xbox uno.
+title: Página (Dev Home) de captura multimedia
+description: Proporciona información sobre la página de captura multimedia de la aplicación Dev Home para Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: Windows 10, UWP
 permalink: en-us/docs/xdk/devhome-capture.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 21fe8eeb4ce3b5062aca625537061209e74c503f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 1866c4f94c5ef681080ae2a5658c6edba11ec44b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015253"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562928"
 ---
-# <a name="media-capture-page-dev-home"></a>Medios capturan página (página principal de desarrollo)
+# <a name="media-capture-page-dev-home"></a>Página (Dev Home) de captura multimedia
    
   
-La página de **capturan de medios** de desarrollo principal captura vídeo del título que se está ejecutando actualmente en la consola.   
- ![Página de principal de desarrollo de captura](images/devhome_capture.png)   
+La página **de captura multimedia** de Dev Home captura de vídeo del título que se está ejecutando actualmente en la consola.   
+ ![Página de captura de Dev Home](images/devhome_capture.png)   
   
-La página de **que capturan de medios** contiene los paneles siguientes:   
+La página de **que captura multimedia** contiene los paneles siguientes:   
  
    *  [Captura de vídeo](#ID4EHB)  
 
@@ -36,13 +34,13 @@ La página de **que capturan de medios** contiene los paneles siguientes:
 ## <a name="video-capture"></a>Captura de vídeo  
    
   
-El panel de **captura de vídeo** contiene herramientas que registran una secuencia de vídeo desde la consola del programador. También puede capturar vídeo de los últimos segundos desde la consola.   
+El panel de **captura de vídeo** contiene herramientas que registran una secuencia de vídeo desde la consola de desarrollador. También puede capturar vídeo de los últimos segundos desde la consola.   
   
 <a id="ID4ERB"></a>
 
    
 
-## <a name="see-also"></a>Consulta también  
- [Página principal de desarrollador en la consola (desarrollo principal)](dev-home.md)
+## <a name="see-also"></a>Ver también  
+ [Inicio del desarrollador en la consola (Dev Home)](dev-home.md)
 
   

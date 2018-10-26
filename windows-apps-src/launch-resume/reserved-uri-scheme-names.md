@@ -6,18 +6,17 @@ ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 98735ce2d102c1a0b7b054b9d70038fe5f9dc40c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 91732a6c4abc082283dc397fb87ad38d9de452b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "240234"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559815"
 ---
 # <a name="reserved-file-and-uri-scheme-names"></a>Nombres de esquema de URI y archivo reservados
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Puedes usar las asociaciones de URI para iniciar automáticamente la aplicación cuando otra aplicación inicie un esquema de URI específico. No obstante, hay algunas asociaciones de URI que no se pueden usar porque están reservadas. Si la aplicación se registra para una asociación reservada, se omitirá el registro. Este tema enumera los nombres de esquema de URI y de archivo reservados que no están disponibles para la aplicación.
 
@@ -40,7 +39,7 @@ Tipos de archivo reservados para las aplicaciones integradas
 <tr><td>.htm</td><td>.one</td><td>.url</td><td>.zip</td></tr>
 <tr><td>.html</td><td>.onetoc2</td><td>.vcf</td><td></td></tr>
 <tr><td>.ico</td><td>.p7b</td><td>.wav</td><td></td></tr>
-</table> 
+</table> 
 
 ## <a name="file-types-reserved-for-the-operating-system"></a>Tipos de archivo reservados para el sistema operativo
 

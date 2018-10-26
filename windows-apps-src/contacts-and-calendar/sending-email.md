@@ -7,15 +7,13 @@ keywords: contactos, correo electrónico, enviar
 ms.author: normesta
 ms.date: 10/11/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 39b8ce349af89dbbfe3f4f5fce869b83c38abb0e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0a28809210f71bf523e3cc5f9c8da1db9fbcc90c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "665391"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560937"
 ---
 # <a name="send-email"></a>Enviar correo electrónico
 
@@ -51,7 +49,7 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 ```
 
 >[!NOTE]
-> Los datos adjuntos que se agregue a un correo electrónico mediante el uso de la clase [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) aparecen sólo en la aplicación de correo. Si los usuarios tienen cualquier otro programa de correo configurado como su programa de correo predeterminado, aparecerá la ventana de redacción sin los datos adjuntos. Este es un problema conocido.
+> Los datos adjuntos que agregas a un correo electrónico mediante el uso de la clase [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) aparecerá únicamente en la aplicación de correo. Si los usuarios tienen cualquier otro programa de correo configurado como su programa de correo predeterminada, aparecerá la ventana de la redacción sin los datos adjuntos. Este es un problema conocido.
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
@@ -61,6 +59,6 @@ Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de corre
 
 * [Selección de contactos](selecting-contacts.md)
 * [Cómo continuar la aplicación de Windows Phone después de llamar a un selector de archivos](https://msdn.microsoft.com/library/windows/apps/xaml/Dn614994)
- 
+ 
 
- 
+ 

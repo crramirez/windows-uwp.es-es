@@ -1,23 +1,22 @@
 ---
-author: mcleblanc
+author: stevewhims
 title: Elección de un lenguaje de programación
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
 description: Elección de un lenguaje de programación
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b20066ffbd32984d20fdbdcc0915ef10332c6f12
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 24b374a007bf562b2a1c8ba0afe42e75e04bc63e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239214"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561581"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>Introducción: elección de un lenguaje de programación
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="choosing-a-programming-language"></a>Elección de un lenguaje de programación
 
@@ -27,24 +26,22 @@ Puedes usar C++, C#, MicrosoftVisual Basic y JavaScript para desarrollar. JavaSc
 
 Aunque en este artículo nos centramos en C#, los otros lenguajes ofrecen ventajas únicas que te podrían interesar. Por ejemplo, si uno de los factores de mayor importancia es el rendimiento de la aplicación, especialmente para aplicaciones con muchos gráficos, C++ podría ser la elección correcta. La versión Microsoft .NET de Visual Basic es excelente para desarrolladores de aplicaciones en Visual Basic. JavaScript con HTML5 es excelente para los desarrolladores con experiencia en desarrollo web. Para obtener más información, consulta uno de los recursos siguientes:
 
--   [Crear la primera aplicación de la Tienda Windows con C++](https://msdn.microsoft.com/library/windows/apps/hh974580)
--   [Crear la primera aplicación de la Tienda Windows con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)
--   [Crear la primera aplicación de la Tienda Windows con JavaScript](https://msdn.microsoft.com/library/windows/apps/br211385)
--   [Crear la primera aplicación de la Tienda de Windows Phone con C# o Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=397877)
--   [WinJS en Windows Phone 8.1](http://go.microsoft.com/fwlink/p/?LinkID=397879)
+-   [Crear tu primera aplicación para UWP con C++](../get-started/create-a-basic-windows-10-app-in-cpp.md)
+-   [Crear tu primera aplicación para UWP con C# o Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
+-   [Crear tu primera aplicación para UWP con JavaScript](../get-started/create-a-hello-world-app-js-uwp.md)
 
-**Nota:** Para las aplicaciones que usan elementos gráficos en 3D, los estándares OpenGL y OpenGL ES no están disponibles de forma nativa para las aplicaciones para UWP. Si no quieres reescribir el código OpenGL ES en Microsoft DirectX, tal vez te interese informarte sobre **Angle**. Angle es un proyecto actualmente en curso diseñado para convertir OpenGL a DirectX mediante la traducción de llamadas de la API de OpenGL a llamadas de la API de DirectX. Para conocer más, consulta lo siguiente:
+**Nota**para las aplicaciones que usan elementos gráficos 3D, los estándares OpenGL y OpenGL ES no están disponibles de forma nativa para las aplicaciones para UWP. Si no quieres reescribir el código OpenGL ES en Microsoft DirectX, tal vez te interese informarte sobre **Angle**. Angle es un proyecto actualmente en curso diseñado para convertir OpenGL a DirectX mediante la traducción de llamadas de la API de OpenGL a llamadas de la API de DirectX. Para conocer más, consulta lo siguiente:
 -   [Ángulo](https://code.google.com/p/angleproject/)
--   [Crear tu primera aplicación de la Tienda Windows con DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
--   [Ejemplos de aplicaciones de la Tienda Windows con DirectX](http://go.microsoft.com/fwlink/p/?LinkId=263603)
+-   [Crear tu primera aplicación para UWP con DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
+-   [Muestras de aplicaciones para UWP que usan DirectX](http://go.microsoft.com/fwlink/p/?LinkId=263603)
 -   [¿Dónde está el SDK de DirectX?](https://msdn.microsoft.com/library/windows/desktop/ee663275)
 
 ## <a name="giving-c-a-go"></a>Dale una oportunidad a C#
 
 Como desarrollador de iOS, estás acostumbrado a Objective-C y Swift. El lenguaje de programación de Microsoft que más se les parece es C#. Creemos que C# es el lenguaje más fácil y rápido de aprender y usar para la mayoría de los desarrolladores y las aplicaciones. Por eso la información y los tutoriales de este artículo se centran en este lenguaje. Si quieres obtener más información sobre C#, consulta estos recursos:
 
--   [Crear la primera aplicación de la Tienda Windows con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)
--   [Ejemplos de aplicaciones de la Tienda Windows que usan C#](http://go.microsoft.com/fwlink/p/?LinkId=263453)
+-   [Crear tu primera aplicación para UWP con C# o Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
+-   [Muestras de aplicaciones para UWP que usan C#](http://go.microsoft.com/fwlink/p/?LinkId=263453)
 -   [Visual C#](http://go.microsoft.com/fwlink/p/?LinkId=263450)
 
 A continuación se muestra una clase escrita en Objective-C y C#. Primero se muestra la versión en Objective-C, seguida de la versión en C#.

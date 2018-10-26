@@ -8,20 +8,18 @@ template: detail.hbs
 ms.author: quradic
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: kisai
 design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 796ee4ffaa551c23286110ec7164f511655d6017
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: d166e872af0824c9eb5df15510f9597d0303f483
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468929"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560018"
 ---
 # <a name="toggle-switches"></a>Modificadores para alternar
 
@@ -71,7 +69,7 @@ Para algunas acciones, tanto un modificador para alternar como una casilla podr�
 - Usa una casilla cuando el usuario tiene que realizar algunos pasos más antes de que los cambios surtan efecto. Por ejemplo, si el usuario tiene que hacer clic en un botón "enviar" o "siguiente" para aplicar los cambios, usa una casilla.
 - Usa casillas cuando el usuario pueda seleccionar varios elementos que están relacionados con un único valor o característica.
 
-## <a name="toggle-switches-in-the-windows-ui"></a>Interruptores de palanca en la interfaz de usuario de Windows
+## <a name="toggle-switches-in-the-windows-ui"></a>Modificadores para alternar en la interfaz de usuario de Windows
 
 Estas imágenes muestran cómo la interfaz de usuario de Windows usa modificadores para alternar. Así es como la pantalla de configuración de almacenamiento inteligente usa los modificadores para alternar:
 

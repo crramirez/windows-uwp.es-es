@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: abff26c7f2e874d4a5e8e964fe716fcf2f1592cb
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: be88f06cd5893f2f67697a54754826440bdf7d18
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045098"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563870"
 ---
 # <a name="bc6h-format"></a>Formato BC6H
 
@@ -34,15 +32,15 @@ BC6H se especifica mediante los siguientes valores de enumeración DXGI\_FORMAT:
 -   **DXGI\_FORMAT\_BC6H\_UF16**. Este formato BC6H no usa un bit de signo en los valores de canal de color de punto flotante de 16bits.
 -   **DXGI\_FORMAT\_BC6H\_SF16**. Este formato BC6H usa un bit de signo en los valores de canal de color de punto flotante de 16bits.
 
-**Nota**   El formato de punto flotante de 16bits para los canales de color también se conoce como formato de punto flotante "medio". Este formato tiene el siguiente diseño de bits:
+**Nota**  el formato de punto de canales de color flotante de 16 bits a menudo se conoce como formato de punto flotante "medio". Este formato tiene el siguiente diseño de bits:
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
 | UF16 (float sin signo) | 5 bits de exponente + 11 bits de mantisa              |
 | SF16 (float con signo)   | 1 bit de signo + 5 bits de exponente + 10 bits de mantisa |
 
- 
+ 
 
- 
+ 
 
 El formato BC6H puede usarse para los recursos de textura [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277) (incluidas matrices), Texture3D o TextureCube (incluidas matrices). Del mismo modo, este formato se aplica a las superficies de mapas MIP asociadas a estos recursos.
 
@@ -114,7 +112,7 @@ La tabla siguiente contiene los valores y el número de bits para cada uno de lo
 | 13   | 63 bits           | 0 bits    | 60 bits (12.8, 12.8, 12.8)       | 5 bits (01011) |
 | 14   | 63 bits           | 0 bits    | 60 bits (16.4, 16.4, 16.4)       | 5 bits (01111) |
 
- 
+ 
 
 Cada formato de esta tabla puede identificase de manera exclusiva por los bits de modo. Los primeros diez modos se usan para los mosaicos de dos regiones, y el campo de bits de modo puede tener una longitud de dos o cinco bits. Estos bloques también tienen campos para los extremos de color comprimidos (72 o 75bits), la partición (5bits) y los índices de partición (46bits).
 
@@ -160,7 +158,7 @@ Los nombres de campo en la tabla anterior se definen como sigue:
 | by    | endpt\[1\].A\[2\] |
 | bz    | endpt\[1\].B\[2\] |
 
- 
+ 
 
 Endpt\[i\], donde i es 0 o 1, se refiere al conjunto de extremos 0 o 1, respectivamente.
 ## <a name="span-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspansign-extension-for-endpoint-values"></a><span id="Sign-extension-for-endpoint-values"></span><span id="sign-extension-for-endpoint-values"></span><span id="SIGN-EXTENSION-FOR-ENDPOINT-VALUES"></span>Extensión de signo para valores de extremos
@@ -329,9 +327,9 @@ unsigned short finish_unquantize(int comp)
 
 [Compresión de bloques de texturas](texture-block-compression.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,20 +6,18 @@ ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
-ms.openlocfilehash: 450f95e68c85a325e43127df90ffeddbaa850afa
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488869"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560488"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Marco de representación I: Introducción a la representación
 
-En temas anteriores hemos visto cómo estructurar un juego de la Plataforma universal de Windows (UWP) y cómo definir una máquina de estados para gestionar el flujo del juego. Ahora vamos a ver cómo ensamblar el marco de representación. Echemos un vistazo a cómo representa el ejemplo la escena de juego usando Direct3D 11 (conocido comunmente como DirectX 11).
+En temas anteriores hemos visto cómo estructurar un juego de la Plataforma universal de Windows (UWP) y cómo definir una máquina de estados para gestionar el flujo del juego. Ahora vamos a ver cómo ensamblar el marco de representación. Echemos un vistazo a cómo el juego de muestra representa la escena de juego usando Direct3D11 (conocido comunmente como DirectX 11).
 
 >[!Note]
 >Si no has descargado el código del juego más reciente para esta muestra, ve a [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Ten en cuenta que este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
@@ -620,7 +618,7 @@ Para obtener más información consulta [Introducción a los búferes en Direct3
 
 ### <a name="dxgi"></a>DXGI
 
-La Infraestructura de gráficos de Microsoft DirectX (DXGI) es un subsistema nuevo que se introdujo con Windows Vista y que encapsula algunas de las tareas de nivel bajo que Direct3D 10, 10.1, 11 y 11.1 necesitan. Se debe tener especial cuidado al usar DXGI en una aplicación multiproceso, para garantizar que no se producen interbloqueos. Para obtener más información, consulta [Infraestructura de gráficos DirectX (DXGI): Procedimientos recomendados- Multiproceso](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
+Infraestructura de gráficos de Microsoft DirectX (DXGI) es un subsistema nuevo que se introdujo con Windows Vista que encapsula algunas de las tareas de bajo nivel que se necesitan Direct3D 10, 10.1, 11 y 11.1. Se debe tener especial cuidado al usar DXGI en una aplicación multiproceso, para garantizar que no se producen interbloqueos. Para obtener más información, consulta [Infraestructura de gráficos DirectX (DXGI): Procedimientos recomendados- Multiproceso](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
 
 ### <a name="feature-level"></a>Nivel de características
 
@@ -630,7 +628,7 @@ Cada tarjeta de vídeo implementa un cierto nivel de funcionalidad DirectX, en f
 
 Con el nivel de características, cuando creas un dispositivo, puedes intentar crear un dispositivo para el nivel de características que deseas solicitar. Si la creación de dispositivos funciona, ese nivel de característica existe, si no, el hardware no admite ese nivel de características. Puedes intentar volver a crear un dispositivo a un nivel de características inferior o puedes elegir salir de la aplicación. Por ejemplo, el nivel de característica 12\_0 requiere Direct3D 11.3 o Direct3D 12 y el modelo de sombreador 5.1. Para obtener más información, consulta [Niveles de característica de Direct3D: Introducción para cada nivel de características](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview).
 
-Con los niveles de características puedes desarrollar una aplicación para Direct3D 9, Microsoft Direct3D 10 o Direct3D 11 y, después, ejecutarlo en hardware 9, 10 u 11 (salvo algunas excepciones). Para más información, consulta [Niveles de características Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
+Con los niveles de característica, puedes desarrollar una aplicación para Direct3D9, Microsoft Direct3D10 o Direct3D11 y, a continuación, se ejecuta en hardware 9, 10 u 11 (salvo algunas excepciones). Para más información, consulta [Niveles de características Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
 
 ### <a name="stereo-rendering"></a>Representación en estéreo
 

@@ -6,16 +6,14 @@ description: La creación de un selector de dispositivos permite limitar los dis
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c80f604e9b8dc31eec1fe684f073bceb2337d91f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 036ea8b7d9797112dca9b6594e9bc1e33e923588
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959170"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563151"
 ---
 # <a name="build-a-device-selector"></a>Crear un selector de dispositivos
 
@@ -40,9 +38,9 @@ Al usar la API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/libr
 
 La API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) usa la sintaxis AQS canónica, pero no se admiten todos los operadores. Para obtener una lista de propiedades que están disponibles cuando se construye la cadena de filtro, consulta [Propiedades de información de dispositivo](device-information-properties.md).
 
-**Precaución** Las propiedades personalizadas que se definen con el formato `{GUID} PID` no se pueden usar cuando se construye la cadena de filtro AQS. Esto se debe a que el tipo de propiedad se deriva del nombre de propiedad conocido.
+**Precaución**las propiedades personalizadas que se definen mediante el `{GUID} PID` formato no puede usarse cuando se construye la cadena de filtro AQS. Esto se debe a que el tipo de propiedad se deriva del nombre de propiedad conocido.
 
- 
+ 
 
 En la siguiente tabla se muestran los operadores AQS y los tipos de parámetros que admiten.
 
@@ -64,9 +62,9 @@ En la siguiente tabla se muestran los operadores AQS y los tipos de parámetros 
 | **COP\_APPLICATION\_SPECIFIC** | No compatible                                                               |
 
 
-> **Sugerencia** Puedes especificar **NULL** para **COP\_EQUAL** o **COP\_NOTEQUAL**. Esto se traduce en una propiedad sin ningún valor o en que el valor no existe. En AQS, especifica **NULL** usando corchetes vacíos \[\].
+> **Sugerencia**puede especificar **NULL** para **COP\_EQUAL** o **COP\_NOTEQUAL**. Esto se traduce en una propiedad sin ningún valor o en que el valor no existe. En AQS, especifica **NULL** usando corchetes vacíos \[\].
 
-> **Importante** Al usar los operadores **COP\_VALUE\_CONTAINS** y **COP\_VALUE\_NOTCONTAINS**, estos se comportan de forma diferente con cadenas y matrices de cadenas. En el caso de las cadenas, el sistema realizará una búsqueda sin distinguir entre mayúsculas y minúsculas para ver si el dispositivo contiene la cadena indicada como subcadena. En el caso de las matrices de cadenas, no se buscan las subcadenas. Con la matriz de cadenas, la matriz se busca para ver si contiene toda la cadena especificada. No es posible buscar una matriz de cadena para ver si los elementos de la matriz contienen una subcadena.
+> **Importante**al usar los operadores **COP\_VALUE\_CONTAINS** y **COP\_VALUE\_NOTCONTAINS** , se comportan de forma diferente con cadenas y matrices de cadenas. En el caso de las cadenas, el sistema realizará una búsqueda sin distinguir entre mayúsculas y minúsculas para ver si el dispositivo contiene la cadena indicada como subcadena. En el caso de las matrices de cadenas, no se buscan las subcadenas. Con la matriz de cadenas, la matriz se busca para ver si contiene toda la cadena especificada. No es posible buscar una matriz de cadena para ver si los elementos de la matriz contienen una subcadena.
 
 Si no se puedes crear una única cadena de filtro AQS que defina el ámbito de los resultados de forma adecuada, puedes filtrar los resultados después de recibirlos. Sin embargo, si decides hacerlo, te recomendamos que limites los resultados de la cadena de filtro AQS inicial tanto como puedas cuando la proporciones a la API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459). Esto ayudará a mejorar el rendimiento de la aplicación.
 
@@ -115,6 +113,6 @@ Cuando este filtro está emparejado con una enumeración [**DeviceInformationKin
 System.Devices.IpAddress:=[]
 ```
 
- 
+ 
 
- 
+ 

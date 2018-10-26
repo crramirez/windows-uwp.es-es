@@ -6,16 +6,14 @@ description: Los servicios de extremo de asociación (AEP) proporcionan un contr
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e204da16edd438b045fb753dca538e7fdeaa5a5f
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 5f103ee3c281ca95abcaee76cdc6f88b74a49eb1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690281"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563230"
 ---
 # <a name="aep-service-class-ids"></a>Identificadores de clase de servicio AEP
 
@@ -74,7 +72,7 @@ El protocolo Bluetooth admite varios servicios que siguen el mismo formato bási
 | GATT: datos de usuario                     | **181C0000-0000-1000-8000-00805F9B34FB** |
 | GATT: escala de peso                  | **181D0000-0000-1000-8000-00805F9B34FB** |
 
- 
+ 
 
 Para obtener una lista más completa de los servicios de Bluetooth disponibles, consulta las páginas de servicios y protocolos Bluetooth [aquí](http://go.microsoft.com/fwlink/p/?LinkID=619586) y [aquí](http://go.microsoft.com/fwlink/p/?LinkID=619587). También puedes usar la API [**GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571) para obtener algunos servicios GATT comunes.
 
@@ -105,7 +103,7 @@ En general, todos los servicios UPnP tienen aplicado su nombre con hash en un GU
 | Directorio de contenidos                  | **89e701dd-0597-5279-a31c-235991d0db1c**  |
 | DIAL                               | **085dfa4a-3948-53c7-a0d7-16d8ec26b29b**  |
 
- 
+ 
 
 ## <a name="wsd-services"></a>Servicios WSD
 
@@ -118,7 +116,7 @@ En general, todos los servicios WSD tienen aplicado su nombre con hash en un GUI
 | Impresora      | **65dca7bd-2611-583e-9a12-ad90f47749cf** |
 | Escáner      | **56ec8b9e-0237-5cae-aa3f-d322dd2e6c1e** |
 
- 
+ 
 
 ## <a name="aqs-sample"></a>Ejemplo de AQS
 
@@ -129,6 +127,6 @@ System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" A
 System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D7-16D8EC26B29B}"
 ```
 
- 
+ 
 
- 
+ 

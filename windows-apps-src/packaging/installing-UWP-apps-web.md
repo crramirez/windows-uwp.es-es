@@ -5,16 +5,14 @@ description: En esta sección, revisaremos los pasos que debes llevar a cabo par
 ms.author: lahugh
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, instalador de aplicación, AppInstaller, instalación de prueba, conjunto relacionado, paquetes opcionales
 ms.localizationpriority: medium
-ms.openlocfilehash: d0368743e3afa6e9cdb5e5ac95672430416fc824
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 98a761bf04b56d13745f2505b8d0806fc4fdf3e1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1434790"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560990"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>Instalación de aplicaciones para UWP desde una página web
 
@@ -31,8 +29,11 @@ La instalación de la aplicación directa solo está disponible en Windows 10 Fa
 En este mecanismo, el Instalador de aplicación se registra con con el sistema operativo para un esquema de activación de protocolo. Cuando el usuario hace clic en un vínculo web, el navegador comprueba con el sistema operativo las aplicaciones que están registradas para ese vínculo web. Si el esquema coincide con el esquema de activación de protocolo especificado por el Instalador de aplicación, se invoca el Instalador de aplicación. Es importante tener en cuenta que este mecanismo es independiente del navegador. Esto resulta útil para los administradores de sitios que, por ejemplo, no deben tener en cuenta diferencias de navegador al incorporarlo en una página web. 
 
 ### <a name="requirements-for-protocol-activation-scheme"></a>Requisitos para el esquema de activación de protocolos
-   - Servidores web que admiten solicitudes de intervalos de bytes (HTTP/1.1)
-   - Los paquetes de aplicaciones deben estar hospedados en servidores que admiten el protocolo HTTP/1.1.   
+
+1. Servidores Web que admiten solicitudes de intervalo de bytes (HTTP/1.1)
+    - Los servidores que admiten el protocolo HTTP/1.1 deben tener soporte técnico para las solicitudes de intervalo de bytes 
+2. Servidores Web que conocer acerca de los tipos de contenido del paquete de aplicación de Windows 10
+    - Aquí te mostramos cómo declarar los tipos de contenido nuevos como parte del [archivo de configuración de web](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types)
 
 ### <a name="how-to-enable-this-on-a-webpage"></a>Cómo habilitar esto en una página web 
 Los desarrolladores de aplicaciones que quieran hospedar paquetes de aplicaciones en sus sitios web deben seguir este paso:

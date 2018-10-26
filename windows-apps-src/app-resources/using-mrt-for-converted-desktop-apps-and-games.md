@@ -5,16 +5,14 @@ description: Al empaquetar la aplicación o juego .NET o Win32 como un paquete A
 ms.author: ptorr
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, mrt, pri. recursos, juegos, centennial, convertidor de aplicaciones de escritorio, mui, ensamblado satélite
 ms.localizationpriority: medium
-ms.openlocfilehash: 098ec71f2f3e487b76f9992c297ad7cba9ac5538
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 927e0c5438ea11b751fba40cb76210d0bce112d4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396484"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562076"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Usar el sistema de administración de recursos de Windows 10 en una aplicación o juego heredado.
 
@@ -307,7 +305,7 @@ Ahora que se ha compilado el archivo PRI, puedes compilar y firmar el paquete:
  * `/f` establece el archivo de asignación que se va a usar (creado en el paso anterior). 
  * `/p` establece el nombre del paquete de salida.
  * `/o` lo establece en sobrescribir el archivo de salida, si existe.
-0. Una vez creado el paquete, se tiene que firmar. La forma más fácil de obtener un certificado de firma es crear un proyecto de Windows universal en Visual Studio y copiar el archivo `.pfx` que crea, pero puedes crear uno manualmente con las utilidades `MakeCert` y `Pvk2Pfx`, como se describe en [el tema **Cómo crear un certificado de firma del paquete de la aplicación** en MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
+0. Una vez creado el paquete, se tiene que firmar. La forma más sencilla de obtener un certificado de firma es crear un proyecto Universal de Windows en Visual Studio y copiando el `.pfx` crea el archivo, pero puedes crear uno manualmente con el `MakeCert` y `Pvk2Pfx` utilidades como se describe en [el **cómo crear un certificado de firma del paquete de aplicación** tema en MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
  * **Importante:** Si creas manualmente un certificado de firma, asegúrate de colocar los archivos en un directorio diferente del proyecto de origen o el origen del paquete, de lo contrario, podría incluirse como parte del paquete, incluida la clave privada.
 0. Para firmar el paquete, usa el comando siguiente. Ten en cuenta que el elemento `Publisher` especificado en el elemento `Identity` de `AppxManifest.xml` debe coincidir con el elemento `Subject` del certificado (**no** es el elemento `<PublisherDisplayName>`, que es el nombre localizado que se muestra a los usuarios). Como es habitual, reemplaza los nombres de archivo `contoso_demo...` por los nombres adecuados para el proyecto y (**muy importante**) asegúrate de que el archivo `.pfx` no está en el directorio actual (de lo contrario se habría ha creado como parte del paquete, incluida la clave privada de firma):
 

@@ -1,27 +1,25 @@
 ---
 author: QuinnRadich
-Description: Windows 10 build 10240 and updates to developer tools continue to provide the tools, features, and experiences powered by the Universal Windows Platform.
-title: Novedades de la compilación 10240 de Windows 10; julio de 2015
+Description: Windows 10 build 10240 and updates to developer tools continue to provide the tools, features, and experiences powered by the Universal Windows Platform.
+title: Novedades de Windows 10 compilación 10240 - julio de 2015
 keywords: novedades, novedad, actualizar, actualizaciones, características, nuevo, Windows 10, 1507, 10240
 ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 ms.localizationpriority: medium
-ms.openlocfilehash: c5d3a9cf8a3281e7cd1f7efa460f13f8a17b10bb
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: c38fe989bd854d44bb7dc3c0cba36a4ae145854c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1397144"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564240"
 ---
-# <a name="whats-new-in-windows-10-for-developers-build-10240"></a>Novedades para desarrolladores en Windows 10, compilación 10240
+# <a name="whats-new-in-windows10-for-developers-build-10240"></a>Novedades de Windows 10 para desarrolladores, compilación 10240
 
 Tanto la compilación 10240 de Windows 10 como el SDK actualizado proporcionan las herramientas, características y experiencias necesarias para crear aplicaciones excepcionales de la Plataforma universal de Windows. Después de [instalar las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10, estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
-Aquí podrás echar un vistazo a las novedades de cada característica de la compilación 10240 de Windows 10 (también conocida como Windows 10 versión 1507).
+Este es un vistazo función por función a lo que es nuevo para que puedas en Windows 10 compilación 10240 (también conocida como Windows 10 versión 1507).
 
 ## <a name="adaptive-layouts"></a>Diseños adaptables
 

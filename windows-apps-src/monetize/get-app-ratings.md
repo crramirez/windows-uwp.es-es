@@ -6,16 +6,14 @@ title: Obtener las valoraciones de la aplicación
 ms.author: mhopkins
 ms.date: 11/29/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, UWP, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, valoraciones, ratings
 ms.localizationpriority: medium
-ms.openlocfilehash: 0671015ead96b57515b4b451a06ff3c9cf1a94cb
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 892e3ae8ffcc8277f09afe8d1aef41e9905c2f85
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469326"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564069"
 ---
 # <a name="get-app-ratings"></a>Obtener las valoraciones de la aplicación
 

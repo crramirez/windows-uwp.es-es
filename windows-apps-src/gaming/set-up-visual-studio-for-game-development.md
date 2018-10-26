@@ -6,19 +6,18 @@ ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, juegos, visual studio, herramientas, directx
-ms.openlocfilehash: 5f5c1ef45dd476565d302ef10f8d47ab2b819993
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: eec406fd317abbd0034ba573cc0e791f9e32ba98
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238577"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563685"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Herramientas de Visual Studio para la programación de juegos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -48,9 +47,9 @@ Crea [archivos de personalizaciones de compilación](#build-customizations-for-3
 
 Para obtener más información, consulta [Trabajar con texturas e imágenes](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Nota** El Editor de imágenes no está pensado para reemplazar una aplicación completa de edición de imágenes, pero es apropiado para varios escenarios simples de edición y visualización.
+> **Nota**el Editor de imágenes no está pensado para reemplazar una aplicación de edición de imágenes completo de características, pero es apropiado para escenarios de edición y visualización simple muchos.
 
- 
+ 
 
 ## <a name="model-editor"></a>Editor de modelos
 
@@ -67,9 +66,9 @@ Esta es la captura de pantalla de un modelo en el editor con iluminación aplica
 
 Para obtener más información, consulta [Trabajar con modelos 3D](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> **Nota** El Editor de modelos no está pensado para reemplazar una aplicación completa de edición de modelos, pero es apropiado para varios escenarios simples de edición y visualización.
+> **Nota**el Editor de modelos no está pensado para reemplazar una aplicación de edición de modelos completo de características, pero es apropiado para escenarios de edición y visualización simple muchos.
 
- 
+ 
 
 ## <a name="shader-designer"></a>Diseñador de sombras
 
@@ -119,7 +118,7 @@ Para obtener más información, consulta [Trabajar con sombreadores](https://msd
 
 Puedes agregar personalizaciones de compilación a tu proyecto para que Visual Studio convierta recursos en formatos utilizables. A continuación, puedes cargar los activos en tu aplicación y usarlos al crear y llenar recursos de DirectX tal como lo harías en cualquier otra aplicación de DirectX.
 
-Para agregar una personalización de compilación, haz clic con el botón secundario en el proyecto del **Explorador de soluciones** y selecciona **Personalizaciones de compilación...**. Puedes agregar los siguientes tipos de personalizaciones de compilación a tu proyecto.
+Para agregar una personalización de compilación, haz clic en el proyecto en el **Explorador de soluciones** y selecciona la **Compilación personalizaciones**. Puedes agregar los siguientes tipos de personalizaciones de compilación al proyecto.
 
 -   La canalización de contenido de imagen toma archivos de imagen como entrada y muestra archivos de DirectDraw Surface (.dds) como salida.
 -   La canalización de contenido de malla toma archivos de malla (como .fbx) y muestra archivos de malla .cmo como salida.
@@ -144,13 +143,12 @@ Visual Studio proporciona herramientas de depuración específicas para gráfico
 
 Para obtener más información, consulta [Depurar gráficos DirectX](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

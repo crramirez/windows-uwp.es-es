@@ -6,19 +6,17 @@ description: Aprende a digitalizar contenido desde tu aplicación con ayuda de u
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c1db020b242c43808d356076641e375cb1581ed3
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.localizationpriority: medium
+ms.openlocfilehash: f9128056cbb3b9218d164b243948d9dd16af0786
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2017
-ms.locfileid: "696162"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563220"
 ---
 # <a name="scan-from-your-app"></a>Digitalizar desde tu aplicación
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -28,7 +26,7 @@ ms.locfileid: "696162"
 
 Aprende aquí a digitalizar contenido de tu aplicación con ayuda de un escáner plano, un dispositivo multifunción o un origen de digitalización configurado automáticamente.
 
-**Importante** Las API [**Windows.Devices.Scanner**](https://msdn.microsoft.com/library/windows/apps/Dn264250) forman parte de la [familia de dispositivos](https://msdn.microsoft.com/library/windows/apps/Dn894631) de escritorio. Las aplicaciones solo pueden usar estas API en la versión de escritorio de Windows 10.
+**Importante**las API [**Windows.Devices.Scanner**](https://msdn.microsoft.com/library/windows/apps/Dn264250) forman parte de la [familia de dispositivos](https://msdn.microsoft.com/library/windows/apps/Dn894631)de escritorio. Las aplicaciones pueden usar estas API solo en la versión de escritorio de Windows 10.
 
 Para digitalizar contenido desde tu aplicación, antes deberás enumerar los escáneres disponibles. Para ello, declara un nuevo objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) para obtener el tipo [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381). Solo se mostrarán aquellos escáneres que estén instalados localmente con controladores de WIA y que estén disponibles para tu aplicación.
 
@@ -102,8 +100,8 @@ Para cada tipo de enumeración [**ImageScannerScanSource**](https://msdn.microso
 
 Para digitalizar con la configuración predeterminada, tu aplicación se basa en el nombre de espacios [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) para seleccionar un escáner, y digitaliza desde ese origen. No se cambia la configuración de digitalización. Los escáneres posibles son autoconfigurado, plano o alimentador. Este tipo de digitalización probablemente tendrá como resultado una operación de digitalización correcta, aunque digitalice desde un origen incorrecto, como un escáner plano en vez de alimentador.
 
-**Nota** Si el usuario coloca el documento que quiere digitalizar en el alimentador, en su lugar, la digitalización se realizará desde el escáner plano. Si el usuario intenta digitalizar desde un alimentador vacío, el proceso no generará ningún archivo digitalizado.
- 
+**Nota**si el usuario coloca el documento que quiere digitalizar en el alimentador, el escáner se digitalización desde el plano en su lugar. Si el usuario intenta digitalizar desde un alimentador vacío, el proceso no generará ningún archivo digitalizado.
+ 
 ```csharp
     var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default,
         folder).AsTask(cancellationToken.Token, progress);
@@ -113,7 +111,7 @@ Para digitalizar con la configuración predeterminada, tu aplicación se basa en
 
 Tu aplicación puede usar la [Digitalización autoconfigurada](https://msdn.microsoft.com/library/windows/hardware/Ff539393) del dispositivo, de modo que digitalice usando la configuración óptima. Con esta opción, el propio dispositivo puede determinar la configuración de digitalización, como el modo de color y la resolución, en función del contenido que se vaya a digitalizar. El dispositivo selecciona la configuración de digitalización en tiempo de ejecución para cada trabajo de digitalización nuevo.
 
-**Nota** No todos los escáneres son compatibles con esta característica, por lo que la aplicación debe comprobar que el escáner la admite antes de usar esta configuración.
+**Nota**no todos los escáneres son compatibles con esta característica, por lo que la aplicación debe comprobar si el escáner admite esta característica antes de usar esta configuración.
 
 En este ejemplo, la aplicación comprueba primero si el escáner es capaz de autoconfigurarse y, a continuación, procede a la digitalización. Para especificar un escáner plano o alimentador, basta con que sustituyas **AutoConfigured** por **Flatbed** o **Feeder**.
 

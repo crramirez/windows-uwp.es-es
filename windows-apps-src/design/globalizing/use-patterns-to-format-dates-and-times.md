@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 485d16cb9c40769c123719f8f55e81d804f220a3
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393994"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563461"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar plantillas para dar formato a fechas y horas
 
@@ -29,7 +27,7 @@ La clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatti
 
 Sin embargo, cuando quieras tener aún más control sobre el orden y el formato de los componentes del objeto [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) que quieres mostrar, puedes pasar el patrón de formato al argumento *formatTemplate* del constructor. Un patrón de formato usa una sintaxis especial que te permite obtener los componentes individuales de un objeto **DateTime**&mdash;solo el nombre del mes o el valor del año, por ejemplo&mdash; para mostrarlos en el formato personalizado que desees. Además, el patrón se puede localizar para adaptarse a otros idiomas y regiones.
 
-**Nota** Se trata solo de una descripción general de los patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
+**Nota**esto es solo una descripción general de patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>La diferencia entre los patrones y plantillas de formato
 
@@ -63,7 +61,7 @@ En el ejemplo anterior, hemos introducido una cadena de formato independiente de
 var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("{month.full} {day.integer}");
 ```
 
-El formateador anterior devuelve valores específicos de una referencia cultural para cada componente dentro de los corchetes {}. Pero el orden de los componentes de un patrón de formato no varía. Obtienes exactamente lo que pides, que puede o no ser culturalmente apropiado. Este formateador es válido para inglés (Estados Unidos), pero no para francés (Francia) ni para japonés.
+El formateador anterior devuelve valores específicos de la referencia cultural para los componentes individuales dentro de los corchetes {}. Pero el orden de los componentes de un patrón de formato no varía. Obtienes exactamente lo que pides, que puede o no ser culturalmente apropiado. Este formateador es válido para inglés (Estados Unidos), pero no para francés (Francia) ni para japonés.
 
 ``` syntax
 En-US: January 1
@@ -117,7 +115,7 @@ var time = timeFormatter.Format(dateToFormat);
 string output = string.Format(resourceLoader.GetString("CustomDateTimeFormatString"), date, time);
 ```
 
-`CustomDateTimeFormatString` es un identificador de recursos que hace referencia a un recurso localizable del archivo de recursos (.resw). Para un idioma predeterminado de inglés (Estados Unidos), se debe establecer en un valor de "{0} | {1} "junto con un comentario que indique que "{0}" es la fecha y "{1}" es la hora. De este modo, los traductores pueden ajustar los elementos de formato según sea necesario. Por ejemplo, pueden cambiar el orden de los elementos si parece más natural en algunos idiomas o regiones tener la hora delante de la fecha. O pueden reemplazar "|" con algún otro carácter separador.
+`CustomDateTimeFormatString` es un identificador de recursos que hace referencia a un recurso localizable del archivo de recursos (.resw). Para un idioma predeterminado de inglés (Estados Unidos), se debe establecer en un valor de "{0} | {1}"junto con un comentario que indique que"{0}"es la fecha y"{1}"es el tiempo. De este modo, los traductores pueden ajustar los elementos de formato según sea necesario. Por ejemplo, pueden cambiar el orden de los elementos si parece más natural en algunos idiomas o regiones tener la hora delante de la fecha. O pueden reemplazar "|" con algún otro carácter separador.
 
 Otra forma de implementar este ejemplo es solicitar a los dos formateadores sus patrones de formato, concatenarlos juntos y generar a un tercer formateador a partir del patrón de formato resultante.
 

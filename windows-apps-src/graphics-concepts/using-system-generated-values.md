@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a99cb28818cd8fc3fd9057b3df72a678c2d1aca
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9f187495568892f5b489f6e109669811f4c45ab1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044894"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561531"
 ---
 # <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>Uso de valores generados por el sistema
 
@@ -68,7 +66,7 @@ Las siguientes tablas muestran los valores generados por el sistema para la inst
 | **VertexID**   | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
 | **InstanceID** | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   |
 
- 
+ 
 
 La instancia de la franja de triángulos U tiene 3 primitivos de triángulo, con los siguientes valores generados por el sistema:
 
@@ -77,7 +75,7 @@ La instancia de la franja de triángulos U tiene 3 primitivos de triángulo, con
 | **PrimitiveID** | 0   | 1   | 2   |
 | **InstanceID**  | 0   | 0   | 0   |
 
- 
+ 
 
 Las siguientes tablas muestran los valores generados por el sistema para la instancia V.
 
@@ -86,7 +84,7 @@ Las siguientes tablas muestran los valores generados por el sistema para la inst
 | **VertexID**   | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
 | **InstanceID** | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   |
 
- 
+ 
 
 La instancia de la franja de triángulos V tiene 3 primitivos de triángulo, con los siguientes valores generados por el sistema:
 
@@ -95,7 +93,7 @@ La instancia de la franja de triángulos V tiene 3 primitivos de triángulo, con
 | **PrimitiveID** | 0   | 1   | 2   |
 | **InstanceID**  | 1   | 1   | 1   |
 
- 
+ 
 
 La [fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md) genera los identificadores (vértices, primitivo e instancia); ten en cuenta también que cada instancia recibe un identificador de instancia único. Los datos se acaban con el corte de franja, que separa cada instancia de la franja de triángulos.
 
@@ -104,9 +102,9 @@ La [fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md) genera 
 
 [Fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md)
 
- 
+ 
 
- 
+ 
 
 
 

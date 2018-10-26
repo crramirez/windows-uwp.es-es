@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ee9f6b3744b038d9f4ae0f5b490cbd763eda08ee
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 1289b01e7ffb780c7e3faa52585eb5f002cf519c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043134"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563418"
 ---
 # <a name="operations-available-on-streaming-resources"></a>Operaciones disponibles en recursos de streaming
 
@@ -35,9 +33,9 @@ Los controles de iconos están disponibles en contextos inmediatos o diferidos (
 
 [Creación de recursos de streaming](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

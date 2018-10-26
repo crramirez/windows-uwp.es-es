@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1014ed205c5cf0eda2c9b71c8406a98394b1463
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d4121bd402b048ee6102ed3be30b94a66e274273
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652904"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562203"
 ---
 # <a name="texture-blending"></a>Combinación de texturas
 
@@ -34,9 +32,9 @@ Direct3D admite la combinación de texturas múltiples de un solo paso mediante 
 
 Como se muestra en el diagrama anterior, las fases de la textura combinan dos argumentos mediante el operador especificado. Las operaciones comunes incluyen la modulación simple o la incorporación de los componentes de color o alfa de los argumentos, pero se admiten más de dos docenas de operaciones. Los argumentos de una fase pueden ser una textura asociada, el color o el alfa en iteración (repetidos durante el sombreado Gouraud), un color y un alfa arbitrarios o el resultado de la fase de textura anterior.
 
-**Nota** Direct3D distingue la combinación de colores de la combinación de alfas. Las aplicaciones establecen las operaciones y los argumentos de combinación para el color y el alfa individualmente, y los resultados de estos parámetros de configuración son independientes uno del otro.
+**Nota**  Direct3D distingue la combinación de Alfas de color. Las aplicaciones establecen las operaciones y los argumentos de combinación para el color y el alfa individualmente, y los resultados de estos parámetros de configuración son independientes uno del otro.
 
- 
+ 
 
 La combinación de argumentos y operaciones usados por varias fases de combinación definen un lenguaje de combinación sencillo basado en el flujo. Los resultados de una fase pasan a la siguiente fase, de esa fase a la siguiente, y así sucesivamente. El concepto de resultados que pasan de una fase a otra para finalmente rasterizarse en un polígono se suele denominar "cascada de combinación de texturas". El siguiente diagrama muestra cómo las diversas fases individuales conforman la cascada de combinación de texturas.
 
@@ -74,16 +72,16 @@ Si la aplicación varía la cantidad de fases que usa para diferentes situacione
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
 [Texturas](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

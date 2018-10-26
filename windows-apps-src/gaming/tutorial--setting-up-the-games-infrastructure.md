@@ -6,16 +6,14 @@ ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, el programa de instalación, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b1a993f16d2d9403f16c1f4cc15805b0c5f36a9
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 9100e80e0b4ac436ae872698e94fe29e5c8cab46
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488919"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559631"
 ---
 # <a name="set-up-the-game-project"></a>Configurar el proyecto de juego
 
@@ -37,7 +35,7 @@ Si no estás familiarizado con el desarrollo de la Plataforma Universal de Windo
 
 ### <a name="use-directx-template-to-create-a-project"></a>Usa la plantilla de DirectX para crear un proyecto
 
-Una plantilla de Visual Studio es una colección de configuraciones y archivos de código para un tipo específico de aplicación basándose en el lenguaje y la tecnología elegidos. En Microsoft Visual Studio 2017, encontrarás varias plantillas que pueden facilitar enormemente el desarrollo de juegos y aplicaciones gráficas. Si no usas una plantilla, debes desarrollar tú mismo casi todo el marco básico de generación de gráficos, lo que puede suponer una ardua tarea para un desarrollador de juegos novel.
+Una plantilla de Visual Studio es una colección de configuraciones y archivos de código para un tipo específico de aplicación basándose en el lenguaje y la tecnología elegidos. En Microsoft Visual Studio2017, encontrarás varias plantillas que pueden facilitar enormemente el desarrollo de aplicaciones de juego y los gráficos. Si no usas una plantilla, debes desarrollar tú mismo casi todo el marco básico de generación de gráficos, lo que puede suponer una ardua tarea para un desarrollador de juegos novel.
 
 La plantilla usada para este tutorial es la titulada **DirectX 11 App (Universal Windows)**. 
 
@@ -155,7 +153,7 @@ Hay varios archivos que aún no hemos visto. Estos archivos proporcionan herrami
 | SamplePixelShader.hlsl       | Contenido                | Contiene el código de lenguaje de sombreado de alto nivel (HLSL) para un sombreador de píxeles muy básico.                                            |
 | SampleVertexShader.hlsl      | Contenido                | Contiene el código de lenguaje de sombreado de alto nivel (HLSL) para un sombreador de vértices muy básico.                                           |
 | ShaderStructures.h           | Contenido                | Contiene las estructuras de sombreador que pueden usarse para enviar las matrices de MVP y los datos por vértice al sombreador de vértices.  |
-| pch.h/.cpp                   | Principal                   | Contiene todos los archivos de inclusión del sistema Windows para las API usadas por una aplicación Direct3D, incluidas las API de DirectX11.| 
+| pch.h/.cpp                   | Principal                   | Contiene todos los archivos de inclusión del sistema Windows para las API usadas por una aplicación Direct3D, incluidas las API de DirectX11.| 
 
 ### <a name="next-steps"></a>Pasos siguientes
 
@@ -163,9 +161,9 @@ En este punto, has aprendido a crear un proyecto de juego de DirectX de UWP medi
 
 La siguiente sección es [Definir el marco de UWP del juego](tutorial--building-the-games-uwp-app-framework.md). Examinaremos cómo usa y amplía este juego muchos de los conceptos y componentes proporcionados por la plantilla.
 
- 
+ 
 
- 
+ 
 
 
 

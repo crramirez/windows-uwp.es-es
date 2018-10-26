@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 27db679e653873be4aac3ed9298d7d0e59e99d2b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 31725c6cb9a966f02f8d1f8d62ca980e72c95326
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654404"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561043"
 ---
 # <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
 
@@ -36,9 +34,9 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 
 -   Haz que queden visibles los indicadores de movimiento panorámico y las barras de desplazamiento para ofrecer indicaciones de ubicación y tamaño. Ocúltalos si ofreces una función de navegación personalizada.
 
-    **Nota** A diferencia de las barras de desplazamiento estándares, los indicadores de desplazamiento lateral son meramente informativos. No se exponen a dispositivos de entrada y no es posible manipularlos de ninguna forma.
+    **Nota**a diferencia de desplazamiento estándar barras, indicadores de desplazamiento son meramente informativas. No se exponen a dispositivos de entrada y no es posible manipularlos de ninguna forma.
 
-     
+     
 
 **Movimiento panorámico en un solo eje (desbordamiento de una dimensión)**
 
@@ -80,7 +78,7 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 
 ## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
-El movimiento panorámico de forma táctil, mediante un gesto de deslizar o deslizar rápidamente con uno o varios dedos, es como desplazarse con el mouse. La interacción de movimiento panorámico es más parecida a la acción de girar la rueda del mouse o deslizar el cuadro de desplazamiento que a la de hacer clic en la barra de desplazamiento. A menos que se establezca una distinción en una API o que lo requiera la interfaz de usuario de Windows específica de algún dispositivo, simplemente se hace referencia a las dos interacciones como movimiento panorámico.
+El movimiento panorámico de forma táctil, mediante un gesto de deslizar o deslizar rápidamente con uno o varios dedos, es como desplazarse con el mouse. La interacción de movimiento panorámico es más parecida a la acción de girar la rueda del mouse o deslizar el cuadro de desplazamiento que a la de hacer clic en la barra de desplazamiento. A menos que establezca una distinción en una API o requerida por algunos WindowsUI específica del dispositivo, simplemente se hace referencia a las dos interacciones como movimiento panorámico.
 
 > <div id="main">
 > <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong>
@@ -120,9 +118,9 @@ Hay dos modos de visualización de movimiento panorámico en función del dispos
 -   Indicadores de movimiento panorámico para la entrada táctil.
 -   Barras de desplazamiento para otros dispositivos de entrada, como el mouse, el panel táctil, el teclado y el lápiz.
 
-**Nota** Los indicadores de desplazamiento lateral panorámico solo se ven cuando el contacto táctil se encuentra dentro de la región desplazable. Del mismo modo, la barra de desplazamiento solo se ve cuando el cursor del mouse, el cursor del lápiz o la pluma, o el foco del teclado se encuentran dentro de la región desplazable.
+**Nota**indicadores de desplazamiento solo son visibles cuando el contacto táctil se encuentra dentro de la región desplazable. Del mismo modo, la barra de desplazamiento solo se ve cuando el cursor del mouse, el cursor del lápiz o la pluma, o el foco del teclado se encuentran dentro de la región desplazable.
 
- 
+ 
 
 **Indicadores de desplazamiento** Los indicadores de desplazamiento son similares al cuadro de desplazamiento de una barra de desplazamiento. Indican la proporción del contenido visualizado respecto al área total que puede moverse panorámicamente, así como la posición relativa del contenido mostrado en el área desplazable.
 
@@ -149,7 +147,7 @@ En los siguientes diagramas se muestra que al mover panorámicamente un contenid
 | ![imagen en la que se muestra un área desplazable.](images/ux-panning-snap1.png) | ![imagen en la que se muestra un área desplazable que se desplaza hacia la izquierda.](images/ux-panning-snap2.png) | ![imagen en la que se muestra un área desplazable que detuvo el desplazamiento en un punto de acoplamiento lógico.](images/ux-panning-snap3.png) |
 | Desliza rápidamente para realizar un movimiento panorámico.                                                  | Levanta el contacto táctil.                                                                     | La región desplazable se detiene en el punto de acoplamiento, no cuando se levanta el contacto táctil.                                |
 
- 
+ 
 
 **Guías** El contenido puede ser más alto y más ancho que las dimensiones y la resolución de un dispositivo de pantalla. Por ese motivo, el movimiento panorámico en dos dimensiones (horizontal y vertical) suele ser necesario. En estos casos, las guías mejoran la experiencia del usuario al enfatizar el movimiento panorámico a lo largo del eje de movimiento (vertical u horizontal).
 
@@ -195,9 +193,9 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 * [Entrada: muestra de gestos de Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: muestra de manipulaciones y gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Muestra de entrada táctil de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

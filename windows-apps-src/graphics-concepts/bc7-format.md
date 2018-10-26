@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c70293960947070a0a6b94d7a63fd55f503c8e18
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 70380dd0bd07cfe0c81e8339f8606029663b47d4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045074"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562856"
 ---
 # <a name="bc7-format"></a>Formato BC7
 
@@ -65,7 +63,7 @@ La siguiente tabla enumera los componentes de cada tipo de bloque.
 | color y alfa combinados    | obligatorio  | N/C           | N/C                | opcional       | obligatorio             | opcional | obligatorio           |
 | color y alfa separados | obligatorio  | obligatorio      | opcional           | N/C            | obligatorio             | N/C      | obligatorio           |
 
- 
+ 
 
 BC7 define una paleta de colores en una línea aproximada entre dos extremos. El valor del modo determina el número de pares de extremos de interpolación por bloque. BC7 almacena un índice de paleta por elemento de textura.
 
@@ -356,9 +354,9 @@ En BC7, puedes codificar el componente alfa en una de las siguientes maneras:
 
 [Compresión de bloques de texturas](texture-block-compression.md)
 
- 
+ 
 
- 
+ 
 
 
 

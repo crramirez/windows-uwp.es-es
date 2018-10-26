@@ -6,16 +6,14 @@ ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2939150e1ca15dfc910d92ea669e794026ef8685
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: a94782165027c2194f677dfdbb9f2dec11541080
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674682"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560249"
 ---
 # <a name="property-path-syntax"></a>Sintaxis de PropertyPath
 
@@ -58,7 +56,7 @@ Una ruta de acceso de propiedades para el enlace de datos puede incluir referenc
 
 Por ejemplo, imagina que tienes un objeto empresarial en el que hay una lista denominada "Teams" (lista ordenada) en la cual, cada equipo consta de un diccionario denominado "Players" donde se puede encontrar a cada integrante según su apellido. Un ejemplo de ruta de acceso de propiedades a un integrante específico del segundo equipo sería: "Teams\[1\].Players\[Smith\]". (Debes usar 1 para indicar el segundo elemento en "Teams" porque la lista tiene un índice de cero).
 
-**Nota**  La compatibilidad con la indexación de los orígenes de datos de C++ es limitada; consulta [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Nota**compatibilidad con la indexación de orígenes de datos de C++ es limitada; consulta el [enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### <a name="attached-properties"></a>Propiedades adjuntas
 
@@ -96,7 +94,7 @@ Por ejemplo, para especificar que quieres animar el primer punto de parada de co
 
 No suele ser habitual, pero es posible animar una propiedad adjunta siempre que esta tenga un valor que coincida con un tipo de animación. Como el nombre identificador de una propiedad adjunta ya incluye un punto, deberás encerrar el nombre de la propiedad adjunta entre paréntesis para que el punto no se considere un paso de propiedad de objeto. Por ejemplo, la cadena para especificar que quieres animar la propiedad adjunta [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) en un objeto, usa la ruta de acceso de propiedad "(Grid.Row)".
 
-**Nota**  En este ejemplo, el valor de [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) es un tipo de propiedad **Int32**. Debido a ello, no podrás animarlo con una animación **Double**. En cambio, sí que puedes definir una clase [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tenga componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) en los cuales la propiedad [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) esté establecida como un entero "0" o "1".
+**Nota**para este ejemplo, el valor de [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) es un tipo de propiedad **Int32** . Debido a ello, no podrás animarlo con una animación **Double**. En cambio, sí que puedes definir una clase [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tenga componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) en los cuales la propiedad [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) esté establecida como un entero "0" o "1".
 
 ## <a name="rules-for-the-properties-in-an-animation-targeting-property-path"></a>Reglas de las propiedades en una ruta de acceso de propiedades de selección de destino de animaciones
 

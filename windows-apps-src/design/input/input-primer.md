@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f59675c3feaab47ee79eaf160c5592876b7564a2
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 9babc1f96b83123cef4bf103f4d13696697cc897
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1862104"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562017"
 ---
 # <a name="interaction-primer"></a>Información básica sobre interacción
 
@@ -68,7 +66,7 @@ Con un factor de forma que se basa en una acción (o gesto) de giro, Surface Dia
 
 ## <a name="cortana"></a>Cortana
 
-En Windows 10, la extensibilidad **Cortana** te permite controlar los comandos de voz desde un usuario e iniciar tu aplicación para llevar a cabo una única acción.
+En Windows 10, extensibilidad de **Cortana** te permite controlar los comandos de voz de un usuario e iniciar la aplicación para llevar a cabo una acción única.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -91,7 +89,7 @@ Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de ent
 ### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
- 
+ 
 
 ## <a name="speech"></a>Voz
 
@@ -140,13 +138,13 @@ La función de dictado normalmente se usa cuando una aplicación no necesita com
 ### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de Voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
- 
+ 
 
 ## <a name="pen"></a>Lápiz
 
 Un lápiz (o pluma) puede servir como un dispositivo señalador de precisión de píxeles (por ejemplo, un mouse) y es el dispositivo de entrada ideal para la entrada de lápiz digital.
 
-**Nota**  Hay dos tipos de dispositivos de lápiz: activo y pasivo.
+**Nota**hay dos tipos de dispositivos de lápiz: activo y pasivo.
   -   Los lápices pasivos no contienen electrónica y emulan la entrada táctil de un dedo de forma eficaz. Requieren una pantalla de dispositivo básico que reconozca la entrada basada en la presión por contacto. Dado que los usuarios a menudo sitúan la mano a medida que escriben en la superficie de entrada, los datos de entrada pueden contaminarse debido a un rechazo de palma incorrecto.
   -   Los lápices activos contienen electrónica y pueden funcionar con pantallas de dispositivos complejos para proporcionar datos de entrada mucho más amplios (lo que incluye mantener el puntero sobre un elemento o los datos de proximidad) al sistema y a la aplicación. El rechazo de la palma es mucho más eficaz.
 
@@ -173,7 +171,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 ### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de lápiz](https://msdn.microsoft.com/library/windows/apps/dn456352)
- 
+ 
 
 ## <a name="touch"></a>Función táctil
 
@@ -208,7 +206,7 @@ En general, la función táctil:
 ### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de la función táctil](https://msdn.microsoft.com/library/windows/apps/hh465370)
- 
+ 
 
 ## <a name="touchpad"></a>Panel táctil
 
@@ -232,13 +230,13 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 ### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de panel táctil](https://msdn.microsoft.com/library/windows/apps/dn456353)
- 
+ 
 
 ## <a name="keyboard"></a>Teclado
 
 Un teclado es el principal dispositivo de entrada de texto y, a menudo, resulta indispensable para personas con ciertas discapacidades o para los usuarios que lo consideran una manera más rápida y eficaz de interactuar con una aplicación.
 
-Con [Continuum para teléfonos](http://go.microsoft.com/fwlink/p/?LinkID=699431), una nueva experiencia para dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un mouse y un teclado para que los teléfonos funcionen como un portátil.
+Con [Continuum para teléfonos](http://go.microsoft.com/fwlink/p/?LinkID=699431), una nueva experiencia de dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un mouse y teclado para que los teléfonos funcionen como un portátil.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -260,7 +258,7 @@ El teclado en pantalla es un teclado de software visual que puedes usar en lugar
 
 El teclado táctil es un teclado de software visual que se usa para escribir texto con entrada táctil. El teclado táctil no reemplaza al teclado en pantalla, ya que se usa únicamente para escribir texto (no simula el teclado de hardware) y solo aparece cuando se hace foco en un campo editable o en otro control de texto editable. El teclado táctil no admite comandos de aplicación ni del sistema.
 
-**Nota**  El teclado en pantalla tiene prioridad sobre el teclado táctil, que no se mostrará si el teclado en pantalla está presente.
+**Nota**el teclado en pantalla tiene prioridad sobre el teclado táctil, que no se mostrará si el teclado en pantalla está presente.
 
 En general, un teclado:
 
@@ -272,7 +270,7 @@ En general, un teclado:
 ### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de teclado](https://msdn.microsoft.com/library/windows/apps/hh972345)
- 
+ 
 
 ## <a name="mouse"></a>Mouse
 
@@ -299,7 +297,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 ### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351)
- 
+ 
 
 ## <a name="gesture"></a>Gesto
 
@@ -370,6 +368,6 @@ Al igual que las personas usan una combinación de voz y gestos para comunicarse
 
 
 
- 
+ 
 
- 
+ 

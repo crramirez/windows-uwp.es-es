@@ -6,18 +6,17 @@ title: Establecer el formato, la resolución y la velocidad de fotogramas para M
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: cf46cefc6491178444a13917a3ce2b0ffb73c19a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: ba07f897111e27dc895aa187172841cac4b44f73
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238585"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561872"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Establecer el formato, la resolución y la velocidad de fotogramas para MediaCapture
 
-\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se muestra cómo usar la interfaz [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) para establecer la resolución y la velocidad de fotogramas de la secuencia de vista previa de la cámara, así como de las fotos y los vídeos capturados. También se muestra cómo asegurarse de que la relación de aspecto de la secuencia de vista previa coincida con la de la secuencia multimedia capturada.
@@ -33,8 +32,7 @@ El código de este artículo es una adaptación de la [muestra de CameraResoluti
 
 Crear una clase auxiliar simple para encapsular la funcionalidad de la interfaz [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) facilita la selección de un conjunto de propiedades de codificación que cumplan criterios particulares. Esta clase auxiliar resulta especialmente útil debido al comportamiento de la característica de propiedades de codificación siguiente:
 
-**Advertencia**  
-El método [**VideoDeviceController.GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) toma un miembro de la enumeración [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640), como **VideoRecord** o **Photo** y devuelve una lista de objetos [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) o [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) que transmiten la configuración de codificación de la secuencia, como la resolución de la foto o el vídeo capturado. Los resultados de la llamada a **GetAvailableMediaStreamProperties** puede incluir **ImageEncodingProperties** o **VideoEncodingProperties**, independientemente de qué valor **MediaStreamType** se especifique. Por este motivo, siempre debe comprobar el tipo de cada valor devuelto y convertirlo al tipo apropiado antes de intentar acceder a cualquiera de los valores de propiedad.
+**Advertencia**  el método [**VideoDeviceController.GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) toma un miembro de la enumeración [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640) , como **VideoRecord** o **fotos**y devuelve una lista de cualquier [** ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) o los objetos [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) que transmiten la secuencia de codificación de configuración, como la resolución de la foto o vídeo. Los resultados de la llamada a **GetAvailableMediaStreamProperties** puede incluir **ImageEncodingProperties** o **VideoEncodingProperties**, independientemente de qué valor **MediaStreamType** se especifique. Por este motivo, siempre debe comprobar el tipo de cada valor devuelto y convertirlo al tipo apropiado antes de intentar acceder a cualquiera de los valores de propiedad.
 
 La clase auxiliar que se define a continuación controla la comprobación y la conversión del tipo de [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) o [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) para que el código de la aplicación no tenga que distinguir entre los dos tipos. Además, la clase auxiliar expone las propiedades de la relación de aspecto de las propiedades, la velocidad de fotogramas (solo de las propiedades de codificación de vídeo) y un nombre descriptivo que facilita la visualización de las propiedades de codificación en la interfaz de usuario de la aplicación.
 
@@ -78,17 +76,16 @@ Una aplicación de cámara típica proporcionará la interfaz de usuario para el
 
 -   Selecciona la resolución de vista previa más cercana al tamaño del objeto [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278), de modo que no se canalicen en la secuencia de vista previa más píxeles que los que se necesiten.
 
-**Importante**  
-Es posible, en algunos dispositivos, establecer una relación de aspecto diferente para la secuencia de vista previa y la secuencia de captura de la cámara. El recorte de fotogramas que provoca este error de coincidencia puede dar como resultado contenido presente en los archivos multimedia capturados que no eran visibles en la vista previa, lo que puede provocar una experiencia de usuario negativa. Se recomienda encarecidamente usar la misma relación de aspecto, con un período de tolerancia reducido, para las secuencias de vista previa y captura. Se pueden tener resoluciones totalmente diferentes habilitadas para la captura y la vista previa, siempre que la relación de aspecto sea muy aproximada.
+**Importante**  es posible, en algunos dispositivos, establecer una relación de aspecto diferente para la secuencia de vista previa de la cámara y la secuencia de captura. El recorte de fotogramas que provoca este error de coincidencia puede dar como resultado contenido presente en los archivos multimedia capturados que no eran visibles en la vista previa, lo que puede provocar una experiencia de usuario negativa. Se recomienda encarecidamente usar la misma relación de aspecto, con un período de tolerancia reducido, para las secuencias de vista previa y captura. Se pueden tener resoluciones totalmente diferentes habilitadas para la captura y la vista previa, siempre que la relación de aspecto sea muy aproximada.
 
 
 Para garantizar que las secuencias de captura de foto o vídeo coincidan con la relación de aspecto de la secuencia de vista previa, este ejemplo llama a [**VideoDeviceController.GetMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211995) y pasa el valor de enumeración **VideoPreview** para solicitar las propiedades de secuencia actuales de la secuencia de vista previa. A continuación, se define un período de tolerancia de relación de aspecto reducido para que se puedan incluir relaciones de aspecto que no sean exactamente iguales que las de la secuencia de vista previa, siempre que sean aproximadas. A continuación, se usa un método de extensión Linq para seleccionar solo los objetos **StreamPropertiesHelper** donde la relación de aspecto se encuentra dentro del intervalo de tolerancia definido de la secuencia de vista previa.
 
 [!code-cs[MatchPreviewAspectRatio](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetMatchPreviewAspectRatio)]
 
- 
+ 
 
- 
+ 
 
 
 
