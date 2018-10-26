@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, fusión de poca luz, low light fusion, mapas de bits, procesamiento de imágenes
 ms.localizationpriority: medium
 ms.openlocfilehash: aa1fa0ae298bf9f0403a3a565f44010b022ba1f6
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5553951"
+ms.locfileid: "5596378"
 ---
 # <a name="process-bitmaps-with-the-lowlightfusion-api"></a>Procesar mapas de bits la API LowLightFusion
 
