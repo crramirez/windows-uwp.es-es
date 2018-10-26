@@ -6,19 +6,17 @@ description: Las pruebas beta te ofrecen la posibilidad de mejorar la aplicació
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 6f5a4e7f2961143f44acb533f045783fb4e4b7c1
-ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.localizationpriority: medium
+ms.openlocfilehash: 7d1e60270b43a8c14067df70ff3e8489f4af2887
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2017
-ms.locfileid: "692913"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544751"
 ---
 # <a name="beta-testing"></a>Pruebas beta
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las *pruebas beta* te ofrecen la posibilidad de mejorar tu aplicación en función de los comentarios de los individuos fuera del equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos.
@@ -36,7 +34,7 @@ Con las pruebas beta, puedes:
 -   Probar la aplicación en una variedad de dispositivos.
 -   Identificar problemas de rendimiento y otros errores que de otra forma es posible que no hubiera encontrado.
 -   Obtener información de uso real que se puede usar para mejorar la experiencia del usuario.
--   Recibir comentarios sin que afecte a las clasificaciones públicas de la Tienda Windows.
+-   Recibir comentarios sin que ello afecte a las clasificaciones públicas en Microsoft Store.
 
 ## <a name="when-to-beta-test"></a>Cuando hacer las pruebas beta
 
@@ -48,9 +46,9 @@ En el panel Centro de desarrollo de Windows unificado, podrás limitar la distri
 
 Consulta [Pruebas beta y distribución dirigida](https://msdn.microsoft.com/library/windows/apps/Mt185377) para aprender a enviar la aplicación a la Tienda para realizar pruebas beta.
 
- 
+ 
 
- 
+ 
 
 
 

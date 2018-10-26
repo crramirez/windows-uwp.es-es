@@ -6,19 +6,18 @@ description: La API de Windows.UI.Composition proporciona acceso a la capa de co
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b292be46ccddd4355f3bef13e37da6b6cec452fa
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.localizationpriority: medium
+ms.openlocfilehash: 2dd8c53dad735cf1094410bf97a81f6b0247bdc7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2017
-ms.locfileid: "839489"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545749"
 ---
 # <a name="visual-layer"></a>Capa visual
 
-La capa visual ofrece una API de modo retenido y alto rendimiento para gráficos, efectos y animaciones, y es la base de todas las interfaces de usuario en todos los dispositivos Windows. La interfaz de usuario la defines de forma declarativa, y la capa visual depende de la aceleración de hardware, para garantizar que el contenido, los efectos y las animaciones se representan de manera suave y no entrecortada, independiente del subproceso de interfaz de usuario de la aplicación.
+La capa visual ofrece una API de modo retenido y alto rendimiento para gráficos, efectos y animaciones, y es la base de todas las interfaces de usuario en todos los dispositivos Windows.La interfaz de usuario la defines de forma declarativa, y la capa visual depende de la aceleración de hardware, para garantizar que el contenido, los efectos y las animaciones se representan de manera suave y no entrecortada, independiente del subproceso de interfaz de usuario de la aplicación.
 
 Información destacada:
 
@@ -41,7 +40,7 @@ Las principales funciones de la capa visual son las siguientes:
 
 ### <a name="content"></a>Contenido
 
-El contenido es hospedado, transformado y disponible para su uso por el sistema de animación y efectos mediante elementos visuales. En la base de la jerarquía de clase es la clase [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), un proxy ligero de subprocesos ágiles en el proceso de la aplicación para el estado visual del compositor de objetos. Entre las subclases de nivel visual se incluyen [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810), para permitir a los elementos secundarios crear árboles de objetos visuales, y [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433), que incluye contenido y se puede dibujar con colores sólidos, contenido de dibujo personalizado o efectos visuales. En conjunto, estos tipos de elementos visuales conforman la estructura del árbol visual para la interfaz de usuario 2D y respaldan a los objetos FrameworkElements de XAML más visibles.
+El contenido es hospedado, transformado y disponible para su uso por el sistema de animación y efectos mediante elementos visuales. En la base de la jerarquía de clase es la clase [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), un proxy ligero de subprocesos ágiles en el proceso de la aplicación para el estado visual del compositor de objetos. Subclases de Visual incluyen [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) para permitir elementos secundarios crear árboles de elementos visuales y [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) que contiene contenido y se pueden dibujar con colores sólidos, personalizados dibujados contenido o efectos visuales. En conjunto, estos tipos de elementos visuales conforman la estructura del árbol visual para la interfaz de usuario 2D y respaldan a los objetos FrameworkElements de XAML más visibles.
 
 Para más información, consulta la información general sobre los [objetos visuales de composición](composition-visual-tree.md).
 
@@ -55,7 +54,7 @@ Para más información, consulta la información general sobre los [efectos de c
 
 ### <a name="animations"></a>Animaciones
 
-El sistema de animación de la capa visual te permite mover elementos visuales, animar efectos e impulsar transformaciones, clips y otras propiedades.  Se trata de un sistema independiente de marco que se diseñó desde el principio para mejorar el rendimiento.  Se ejecuta de forma independiente desde el subproceso de interfaz de usuario para garantizar suavidad y escalabilidad.  Si bien te permite usar animaciones de fotograma clave familiares para impulsar los cambios de propiedades a medida que pasa el tiempo, también te permite establecer relaciones matemáticas entre propiedades diferentes, como por ejemplo, la entrada del usuario, lo que te permite crear directamente experiencias coreografiadas ágiles.
+El sistema de animación de la capa visual te permite mover elementos visuales, animar efectos e impulsar transformaciones, clips y otras propiedades.Se trata de un sistema independiente de marco que se diseñó desde el principio para mejorar el rendimiento.Se ejecuta de forma independiente desde el subproceso de interfaz de usuario para garantizar suavidad y escalabilidad.Si bien te permite usar animaciones de fotograma clave familiares para impulsar los cambios de propiedades a medida que pasa el tiempo, también te permite establecer relaciones matemáticas entre propiedades diferentes, como por ejemplo, la entrada del usuario, lo que te permite crear directamente experiencias coreografiadas ágiles.
 
 Para más información, consulta la información general sobre las [animaciones de composición](composition-animation.md).
 

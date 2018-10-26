@@ -6,21 +6,20 @@ title: Transmitir contenido multimedia
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 8ba90e1538962fdb7ef1434698ea52845713c634
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: da0bb4d25166dd62372d5902ff89221d20189c22
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238764"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543303"
 ---
 # <a name="media-casting"></a>Transmitir contenido multimedia
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo te mostramos cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows.
+En este artículo se muestra cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows.
 
 ## <a name="built-in-media-casting-with-mediaplayerelement"></a>Transmisión de contenido multimedia integrada con MediaPlayerElement
 
@@ -156,9 +155,9 @@ Por último, implementa el controlador para el botón Desconectar. Detén la con
 
 [!code-cs[DisconnectButton](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetDisconnectButton)]
 
- 
+ 
 
- 
+ 
 
 
 

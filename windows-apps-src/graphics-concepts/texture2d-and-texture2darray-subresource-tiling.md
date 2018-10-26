@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 292adb2f06022fbb8fc063c49442cd69ccf64534
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 245581e4eb2a8526b242feadb5877590283e24f9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044144"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549932"
 ---
 # <a name="texture2d-and-texture2darray-subresource-tiling"></a>Organización en mosaico de los subrecursos Texture2D y Texture2DArray
 
@@ -38,7 +36,7 @@ En esta tabla se muestra cómo los subrecursos [**Texture2D**](https://msdn.micr
 | BC1, 4                       | 512 x 256                       |
 | BC2, 3, 5, 6 y 7                 | 256 x 256                       |
 
- 
+ 
 
 Los recuentos de bits de formato no admitidos con los recursos de streaming son los formatos de 96 bpp, los formatos de vídeo, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM y DXGI\_FORMAT\_R8R8\_G8B8\_UNORM.
 
@@ -55,7 +53,7 @@ En esta tabla se muestra cómo los subrecursos [**Texture2D**](https://msdn.micr
 | 8                           | 4 x 2                           |
 | 16                          | 4 x 4                           |
 
- 
+ 
 
 Solo son necesarios (y solo se permiten) los recuentos de muestras 1 y 4 para la compatibilidad con los recursos de streaming. Actualmente, los recursos de streaming no admiten 2, 8 y 16, aunque se muestren.
 
@@ -70,9 +68,9 @@ Las restricciones sobre los formatos y recuentos de muestras admitidos se deben 
 
 [Cómo se organiza en mosaico el área de un recurso de streaming](how-a-streaming-resource-s-area-is-tiled.md)
 
- 
+ 
 
- 
+ 
 
 
 

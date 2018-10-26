@@ -6,16 +6,14 @@ ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a66faebf8447253cc158ea8aa2312eb61474bc08
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: d77049cbaa289fe8621e8cf91883952e6edda9b2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675262"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550699"
 ---
 # <a name="move-and-draw-commands-syntax"></a>Sintaxis de comandos de movimiento y dibujo
 
@@ -83,7 +81,7 @@ Especifica el punto de inicio de una nueva figura.
 
 Una **M** mayúscula indica que *startPoint* es una coordenada absoluta; en cambio, una **m** minúscula indica que *startPoint* es el desplazamiento de un punto anterior o (0,0) si no había punto anterior.
 
-**Nota**  Se pueden especificar varios puntos después del comando de movimiento. Se dibuja una línea por esos puntos como si especificaras el comando de línea. Pero no te recomendamos seguir este estilo, mejor usa el comando de línea específico para ello.
+**Nota**es pueden especificar varios puntos después del comando de movimiento. Se dibuja una línea por esos puntos como si especificaras el comando de línea. Pero no te recomendamos seguir este estilo, mejor usa el comando de línea específico para ello.
 
 **Comandos de dibujo**
 
@@ -141,7 +139,7 @@ Crea una curva Bézier cúbica entre el punto actual y el extremo especificado, 
 |------|-------------|
 | *controlPoint1* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el primer punto de control de la curva, que determina la tangente del inicio de la curva. |
 | *controlPoint2* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el segundo punto de control de la curva, que determina la tangente del final de la curva. |
-| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto en el que se dibuja la curva. | 
+| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto en el que se dibuja la curva. | 
 
 **Comando de curva Bézier cuadrática**
 
@@ -197,7 +195,7 @@ Crea un arco elíptico entre el punto actual y el extremo especificado. Define e
 | *isLargeArcFlag* | Se establece en 1 si el arco debe ser de 180 grados o mayor; de lo contrario, se establece en 0. |
 | *sweepDirectionFlag* | Se establece en 1 si el arco se dibuja en una dirección de ángulo positivo; de lo contrario, se establece en 0. |
 | *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto en el que se dibuja el arco.|
- 
+ 
 **Comando de cierre**
 
 Termina la figura actual y crea una línea que conecta el punto actual con el punto de inicio de la figura. Este comando crea una unión de líneas (esquina) entre el último segmento y el primer segmento de la figura.
@@ -231,11 +229,11 @@ En lugar de usar valores decimales o enteros, puedes usar la notación científi
 
 ## <a name="design-tools-that-produce-move-and-draw-commands"></a>Herramientas de diseño que producen comandos de movimiento y dibujo
 
-Al usar la herramienta **Lápiz** y otras herramientas de dibujo en Blend para Microsoft Visual Studio 2015, normalmente se produce un objeto [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) que consta de comandos de movimiento y dibujo.
+Con la herramienta de **lápiz** y otras herramientas de dibujo en Blend para Microsoft Visual Studio2015 suele producir un objeto de [**ruta de acceso**](/uwp/api/Windows.UI.Xaml.Shapes.Path) , con movimiento y comandos de dibujo.
 
 Es posible que encuentres datos de comandos de movimiento y dibujo existentes en algunas partes del control definidas en las plantillas XAML predeterminadas para los controles en Windows Runtime. Por ejemplo, algunos controles usan una clase [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722) que tiene los datos definidos como comandos de movimiento y dibujo.
 
-Asimismo, hay disponibles complementos o exportadores de otras herramientas que normalmente se usan para el diseño con gráficos de vector y que pueden generar el vector en formato XAML. Normalmente crean objetos [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) en un contenedor de diseño junto con comandos de movimiento y dibujo de la propiedad [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Es posible contar con varios elementos **Path** en el XAML para poder aplicar distintos pinceles. Muchos de estos exportadores o complementos se escribieron originalmente para XAML de Windows Presentation Foundation (WPF), pero la sintaxis de path XAML es idéntica a la de XAML de Windows Runtime. Normalmente, es posible usar trozos de XAML de un exportador y pegarlos directamente en una página XAML de Windows Runtime. (No obstante, no podrás usar el pincel **RadialGradientBrush** si este formaba parte del XAML convertido, ya que no es compatible con el lenguaje XAML de Windows Runtime).
+Asimismo, hay disponibles complementos o exportadores de otras herramientas que normalmente se usan para el diseño con gráficos de vector y que pueden generar el vector en formato XAML. Normalmente crean objetos [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) en un contenedor de diseño junto con comandos de movimiento y dibujo de la propiedad [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Es posible contar con varios elementos **Path** en el XAML para poder aplicar distintos pinceles. Muchos de estos exportadores o complementos se escribieron originalmente para XAML de Windows Presentation Foundation (WPF) o Silverlight, pero la sintaxis de ruta de acceso XAML es idéntica a la de XAML de Windows Runtime. Normalmente, es posible usar trozos de XAML de un exportador y pegarlos directamente en una página XAML de Windows Runtime. (No obstante, no podrás usar el pincel **RadialGradientBrush** si este formaba parte del XAML convertido, ya que no es compatible con el lenguaje XAML de Windows Runtime).
 
 ## <a name="related-topics"></a>Temas relacionados
 

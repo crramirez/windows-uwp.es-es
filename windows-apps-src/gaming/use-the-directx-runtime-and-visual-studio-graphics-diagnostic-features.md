@@ -6,23 +6,22 @@ ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, gráficos, diagnósticos, herramientas, directx
-ms.openlocfilehash: 076020d88889a9cc8b417befa2dd54b41d688e5e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: aa1c14d15a966f23b86753cf8e5e62e067d10310
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238638"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545232"
 ---
 # <a name="graphics-diagnostics-tools"></a>Herramientas de diagnóstico de elementos gráficos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Con Windows 10, las herramientas de diagnóstico de elementos gráficos ya están disponibles en Windows como una característica opcional. Para usar las características de diagnóstico de elementos gráficos proporcionadas en tiempo de ejecución y Visual Studio para desarrollar juegos o aplicaciones de DirectX, instala la característica opcional de herramientas de elementos gráficos:
 
-1.  Ve a **Configuración**, selecciona **Sistema**, **Aplicaciones y características** y, a continuación, **Administrar características opcionales**.
+1.  Ve a **configuración**, selecciona **las aplicaciones**y, a continuación, haz clic en **características opcionales de administrar**.
 2.  Haz clic en **Agregar una característica**   
 3.  En la lista **Características opcionales**, selecciona **Herramientas gráficas** y, a continuación, haz clic en **Instalar**.
 
@@ -37,9 +36,9 @@ Entre las características de diagnóstico de elementos gráficos se incluye la 
 
 [Información general de diagnósticos de elementos gráficos en Visual Studio](http://go.microsoft.com/fwlink/p/?LinkID=526382)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ description: Cada dispositivo tiene propiedades DeviceInformation asociadas que 
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c8fe51fd98f70e6f920a7421a9932e69bba11377
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 2ad87bdfa468c98a2e10d57f81b8e8d187bfbcef
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959251"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543372"
 ---
 # <a name="device-information-properties"></a>Propiedades de información de dispositivo
 
@@ -38,7 +36,7 @@ Un objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/app
 Cuando solicites propiedades, no estás limitado a las propiedades comunes con nombres descriptivos. Puedes especificar el GUID subyacente y el identificador de la propiedad (PID) para solicitar cualquier propiedad disponible, incluso las propiedades personalizadas proporcionadas por controladores o dispositivos individuales. El formato para especificar una propiedad personalizada es "`{GUID} PID`". Por ejemplo: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`". 
 
 > [!Note]
-> Puede encontrar la lista de GUID de propiedad en el archivo de encabezado de clave de propiedad de dispositivo del controlador del dispositivo.
+> Puedes encontrar la lista de GUID de propiedad en el archivo de encabezado de clave de propiedad de dispositivo del controlador de dispositivo.
 
 Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind), aunque la mayoría son únicas para un tipo específico. En las secciones siguientes se muestran algunas propiedades comunes que se ordenan por la enumeración individual **DeviceInformationKind**. Para obtener más información sobre cómo se relacionan los diferentes tipos entre sí, consulta **DeviceInformationKind**.
 
@@ -57,7 +55,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 | **System.Devices.Icon**               | Cadena  | Ruta de acceso del icono.                                                                                                                                                                                                                                                                                                                                                                                                |
 | **System.ItemNameDisplay**            | Cadena  | El mejor nombre para mostrar para objeto de dispositivo.                                                                                                                                                                                                                                                                                                                                                              |
 
- 
+ 
 
 ## <a name="device-properties"></a>Propiedades de dispositivo
 
@@ -75,7 +73,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 | **System.Devices.Present**            | Booleano    | Indica si el dispositivo está actualmente presente y disponible.                                                                                                                                                                                                                         |
 | **System.ItemNameDisplay**            | Cadena     | El mejor nombre para mostrar para este objeto de dispositivo. En este caso, este no es necesariamente el mejor nombre para los usuarios. Se encontró un candidato más probable para un nombre descriptivo al hacer referencia a **DeviceContainer** del **DeviceContainer** o **DeviceInterface** asociados. |
 
- 
+ 
 
 ## <a name="devicecontainer-properties"></a>Propiedades de DeviceContainer
 
@@ -95,7 +93,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 | **System.Devices.Paired**         | Booleano    | Indica si alguno de los objetos **DeviceInformationKind.Device** secundarios son dispositivos de red o dispositivos inalámbricos que actualmente están emparejados con el sistema.             |
 | **System.ItemNameDisplay**        | Cadena     | El mejor nombre para mostrar para este dispositivo.                                                                                                                             |
 
- 
+ 
 
 ## <a name="deviceinterfaceclass-properties"></a>Propiedades de DeviceInterfaceClass
 
@@ -103,7 +101,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 |----------------------------|--------|----------------------------------------|
 | **System.ItemNameDisplay** | Cadena | El mejor nombre para mostrar para este dispositivo. |
 
- 
+ 
 
 ## <a name="associationendpoint-properties"></a>Propiedades de AssociationEndpoint
 
@@ -124,7 +122,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 | **System.Devices.Aep.SignalStrength** | Int32      | Intensidad de señal del dispositivo. Esta propiedad solo es aplicable a algunos protocolos.                                                                                                                                                                                                                                                                                                                                                                                                |
 | **System.ItemNameDisplay**            | Cadena     | El mejor nombre para mostrar para el dispositivo.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
- 
+ 
 
 ## <a name="associationendpointcontainer-properties"></a>Propiedades de AssociationEndpointContainer
 
@@ -146,7 +144,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 | **System.Devices.AepContainer.SupportsVideo**       | Booleano    | Indica si este dispositivo admite la conversión de vídeo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **System.ItemNameDisplay**                          | Cadena     | El mejor nombre para mostrar para el dispositivo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
- 
+ 
 
 ## <a name="associationendpointservice-properties"></a>Propiedades de AssociationEndpointService
 
@@ -160,8 +158,8 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 | **System.Devices.AeoService.ServiceId**         | Cadena  | Identidad de este servicio. Este también es el valor de [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id). |
 | **System.ItemNameDisplay**                      | Cadena  | El mejor nombre para mostrar para este servicio.                                                                           |
 
- 
+ 
 
- 
+ 
 
- 
+ 

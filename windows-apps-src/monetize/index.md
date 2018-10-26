@@ -6,16 +6,14 @@ title: Monetización, interacción y servicios de la Store
 ms.author: mhopkins
 ms.date: 11/29/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, Windows 10, uwp, UWP, monetize, monetizar, engage, interactuar, promote, promover, Store services, servicios de la Store
 ms.localizationpriority: medium
-ms.openlocfilehash: abd6c772ed84934a54c1755b5d55d398e34fbad9
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: d35aa246c1eb26751f11132ee5681052ad6e8c2a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5512202"
+ms.locfileid: "5547736"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de la Store
 

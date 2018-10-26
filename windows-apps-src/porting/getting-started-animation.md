@@ -1,23 +1,22 @@
 ---
-author: mcleblanc
+author: stevewhims
 title: Tareas iniciales con animación
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: En este proyecto, moveremos un rectángulo, le aplicaremos un efecto de atenuación y después lo volveremos a mostrar.
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a45de584c4374afefe0fdca198eb7234351ac42d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 4822a436225bea92fdf1e981ad33378996adefe4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239317"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550883"
 ---
 # <a name="getting-started-animation"></a>Introducción: animación
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="adding-animations"></a>Agregar animaciones
 
@@ -129,7 +128,7 @@ Si abres el archivo MainPage.xaml en la vista **XAML**, verás el código XAML q
 
 Puedes modificar este XAML manualmente o regresar a Blend y seguir trabajando desde allí. Con Blend es más divertido crear interfaces de usuario atractivas, y la capacidad para animarlas mediante una herramienta gráfica puede acelerar considerablemente el tiempo de desarrollo. Para obtener más información sobre las animaciones, consulta [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350).
 
-**Nota** Para obtener información acerca cómo realizar animaciones para aplicaciones de la Tienda Windows mediante JavaScript y HTML, consulta [Animación de la interfaz de usuario (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+**Nota**para obtener información sobre las animaciones de <span class="legacy-term">las aplicaciones</span>para UWP con JavaScript y HTML, consulta la [animación de la interfaz de usuario (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
 ### <a name="next-step"></a>Paso siguiente
 

@@ -6,16 +6,14 @@ title: Administrar las líneas de entrega
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store promotions API, API de promociones de Microsoft Store, ad campaigns, campañas de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 387b5ccf999452780b89aa7edcc9b58bcc35ea8a
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 346383504abd7927cf863afa59bcb574ddd2495d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5516690"
+ms.locfileid: "5543788"
 ---
 # <a name="manage-delivery-lines"></a>Administrar las líneas de entrega
 

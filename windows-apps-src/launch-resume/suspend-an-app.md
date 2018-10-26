@@ -1,21 +1,26 @@
 ---
 author: TylerMSFT
-title: "Administrar la suspensión de la aplicación"
-description: "Obtén información sobre cómo guardar datos importantes de la aplicación cuando el sistema la suspende."
+title: Administrar la suspensión de la aplicación
+description: Obtén información sobre cómo guardar datos importantes de la aplicación cuando el sistema la suspende.
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 07/06/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a69bead489f5d155145b7389199e743792f53f85
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+dev_langs:
+- csharp
+- vb
+- cppwinrt
+- cpp
+ms.openlocfilehash: 7cb93c410f583884f75f21d9beda03db87c024f9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543821"
 ---
 # <a name="handle-app-suspend"></a>Administrar la suspensión de aplicaciones
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -23,89 +28,104 @@ translationtype: HT
 
 Aprende a guardar datos importantes de la aplicación cuando el sistema la suspende. El ejemplo registra un controlador de eventos para el evento [**Suspensión**](https://msdn.microsoft.com/library/windows/apps/br242341) y guarda una cadena en un archivo.
 
-## <a name="important-change-introduced-in-windows-10-version-1607"></a>Cambio importante introducido en la versión 1607 de Windows 10
-
-Antes de la versión 1607 de Windows 10 pondrías el código para guardar el estado en el controlador de suspensión. Ahora te recomendamos que guardes tu estado cuando escribes el estado en segundo plano, tal como se describe en el [ciclo de vida de la aplicación para la plataforma universal de Windows 10 ](app-lifecycle.md).
-
 ## <a name="register-the-suspending-event-handler"></a>Registrar el controlador de eventos de suspensión
 
 Haz el registro para controlar el evento [**Suspensión**](https://msdn.microsoft.com/library/windows/apps/br242341), que indica que la aplicación debe guardar sus datos de aplicación antes de que el sistema la suspenda.
 
-> [!div class="tabbedCodeSnippets"]
-> ```cs
-> using System;
-> using Windows.ApplicationModel;
-> using Windows.ApplicationModel.Activation;
-> using Windows.UI.Xaml;
->
-> partial class MainPage
-> {
->    public MainPage()
->    {
->       InitializeComponent();
->       Application.Current.Suspending += new SuspendingEventHandler(App_Suspending);
->    }
-> }
-> ```
-> ```vb
-> Public NotInheritable Class MainPage
->
->    Public Sub New()
->       InitializeComponent()
->       AddHandler Application.Current.Suspending, AddressOf App_Suspending
->    End Sub
->    
-> End Class
-> ```
-> ```cpp
-> using namespace Windows::ApplicationModel;
-> using namespace Windows::ApplicationModel::Activation;
-> using namespace Windows::Foundation;
-> using namespace Windows::UI::Xaml;
-> using namespace AppName;
->
-> MainPage::MainPage()
-> {
->    InitializeComponent();
->    Application::Current->Suspending +=
->        ref new SuspendingEventHandler(this, &MainPage::App_Suspending);
-> }
-> ```
+```csharp
+using System;
+using Windows.ApplicationModel;
+using Windows.ApplicationModel.Activation;
+using Windows.UI.Xaml;
+
+partial class MainPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+      Application.Current.Suspending += new SuspendingEventHandler(App_Suspending);
+   }
+}
+```
+
+```vb
+Public NotInheritable Class MainPage
+
+   Public Sub New()
+      InitializeComponent()
+      AddHandler Application.Current.Suspending, AddressOf App_Suspending
+   End Sub
+   
+End Class
+```
+
+```cppwinrt
+MainPage::MainPage()
+{
+    InitializeComponent();
+    Windows::UI::Xaml::Application::Current().Suspending({ this, &MainPage::App_Suspending });
+}
+```
+
+```cpp
+using namespace Windows::ApplicationModel;
+using namespace Windows::ApplicationModel::Activation;
+using namespace Windows::Foundation;
+using namespace Windows::UI::Xaml;
+using namespace AppName;
+
+MainPage::MainPage()
+{
+   InitializeComponent();
+   Application::Current->Suspending +=
+       ref new SuspendingEventHandler(this, &MainPage::App_Suspending);
+}
+```
 
 ## <a name="save-application-data-before-suspension"></a>Guardar los datos de la aplicación antes de la suspensión
 
 Cuando la aplicación controla el evento [**Suspensión**](https://msdn.microsoft.com/library/windows/apps/br242341), tiene la oportunidad de guardar sus datos de aplicación importantes en la función de controlador. La aplicación debe usar la API de almacenamiento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para guardar los datos de aplicación simples de manera sincrónica.
 
-> [!div class="tabbedCodeSnippets"]
-> ```cs
-> partial class MainPage
-> {
->     async void App_Suspending(
->         Object sender,
->         Windows.ApplicationModel.SuspendingEventArgs e)
->     {
->         // TODO: This is the time to save app data in case the process is terminated
->     }
-> }
-> ```
-> ```vb
-> Public NonInheritable Class MainPage
->
->     Private Sub App_Suspending(
->         sender As Object,
->         e As Windows.ApplicationModel.SuspendingEventArgs) Handles OnSuspendEvent.Suspending
->
->         ' TODO: This is the time to save app data in case the process is terminated
->     End Sub
->
-> End Class
-> ```
-> ```cpp
-> void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
-> {
->     // TODO: This is the time to save app data in case the process is terminated
-> }
-> ```
+```csharp
+partial class MainPage
+{
+    async void App_Suspending(
+        Object sender,
+        Windows.ApplicationModel.SuspendingEventArgs e)
+    {
+        // TODO: This is the time to save app data in case the process is terminated.
+    }
+}
+```
+
+```vb
+Public NonInheritable Class MainPage
+
+    Private Sub App_Suspending(
+        sender As Object,
+        e As Windows.ApplicationModel.SuspendingEventArgs) Handles OnSuspendEvent.Suspending
+
+        ' TODO: This is the time to save app data in case the process is terminated.
+    End Sub
+
+End Class
+```
+
+```cppwinrt
+void MainPage::App_Suspending(
+    Windows::Foundation::IInspectable const& /* sender */,
+    Windows::ApplicationModel::SuspendingEventArgs const& /* e */)
+{
+    // TODO: This is the time to save app data in case the process is terminated.
+}
+```
+
+```cpp
+void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
+{
+    // TODO: This is the time to save app data in case the process is terminated.
+}
+```
 
 ## <a name="release-resources"></a>Liberar recursos
 
@@ -121,11 +141,12 @@ El sistema no notifica a una aplicación cuando se cierra, con lo cual la aplica
 
 Si realizas una llamada asincrónica en el controlador, el control vuelve inmediatamente de esa llamada asincrónica. Eso significa que, a continuación, la ejecución puede volver del controlador de eventos y la aplicación se moverá al siguiente estado aunque aún no haya completado la llamada asincrónica. Usa el método [**GetDeferral**](http://aka.ms/Kt66iv) en el objeto [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4) que se pasa al controlador de eventos para retrasar la suspensión hasta después de llamar al método [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) en el objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) devuelto.
 
-Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes de que finalice la aplicación. Solo retrasa su terminación hasta que se llama al método *Complete* del aplazamiento o hasta que pasa la fecha límite, *lo que ocurra primero*.
+Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes de que finalice la aplicación. Solo retrasa su terminación hasta que se llama al método *Complete*del  aplazamiento o hasta que pasa la fecha límite, *lo que ocurra primero*. Para extender el tiempo en el uso de estado de suspensión [ **ExtendedExecutionSession**](run-minimized-with-extended-execution.md)
 
-> **Nota** Para mejorar la capacidad de respuesta del sistema en Windows 8.1, las aplicaciones tienen acceso de prioridad baja a los recursos después de que entren en suspensión. Para admitir esta nueva prioridad, se ha ampliado el tiempo de espera de la operación de suspensión para que la aplicación tenga el equivalente al tiempo de espera de 5 segundos para la prioridad normal en Windows o entre 1 y 10 segundos en Windows Phone. No puedes ampliar ni modificar este período de tiempo de espera.
+> [!NOTE]
+> Para mejorar la capacidad de respuesta del sistema en Windows8.1, las aplicaciones reciben acceso de prioridad baja a los recursos después de que están suspendidas. Para admitir esta nueva prioridad, se ha ampliado el tiempo de espera de la operación de suspensión para que la aplicación tenga el equivalente al tiempo de espera de 5 segundos para la prioridad normal en Windows o entre 1 y 10 segundos en Windows Phone. No puedes ampliar ni modificar este período de tiempo de espera.
 
-> **Una nota sobre la depuración con Visual Studio:** Visual Studio impide que Windows suspenda una aplicación que está conectada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
+**Una nota sobre la depuración con Visual Studio:** Visual Studio impide que Windows suspenda una aplicación que esté conectada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -133,8 +154,8 @@ Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes 
 * [Controlar la activación de aplicaciones](activate-an-app.md)
 * [Controlar la reanudación de aplicaciones](resume-an-app.md)
 * [Directrices sobre la experiencia del usuario para inicio, suspensión y reanudación](https://msdn.microsoft.com/library/windows/apps/dn611862)
+* [Ejecución ampliada](run-minimized-with-extended-execution.md)
 
+ 
 
- 
-
- 
+ 

@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: ad1ba185e70a34a4e7bfed0609412ac7bbca2d4a
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: Auto
+ms.openlocfilehash: fdaa8cd73bb2f1199e7214206ec2b0b52628a906
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653694"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550926"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Controles y patrones para aplicaciones para UWP
  
@@ -32,20 +30,19 @@ Los artículos de esta sección proporcionan instrucciones de diseño y de codif
 
 Instrucciones generales y ejemplos de código para agregar y aplicar estilos a controles en XAML y C#.
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-   <p><b><a href="controls-and-events-intro.md">Agregar controles y controlar eventos</a></b> <br/>
-Hay 3 pasos clave para agregar controles a la aplicación: agregar un control a la interfaz de usuario de la aplicación, establecer propiedades en el control y agregar código a los controladores de eventos del control para que realice una acción.</li>
-</ul> 
-</p>
-  </div>
-  <div class="side-by-side-content-right">
-   <p><b><a href="xaml-styles.md">Controles de estilo</a></b> <br/>
+:::row:::
+    :::column:::
+      <p><b><a href="controls-and-events-intro.md">Agregar controles y controlar eventos</a></b> <br/>
+Hay 3 pasos clave para agregar controles a la aplicación: agregar un control a la interfaz de usuario de la aplicación, establecer propiedades en el control y agregar código a los controladores de eventos del control para que realice una acción.</p>
+    :::column-end:::
+    :::column:::
+      <p><b><a href="xaml-styles.md">Controles de estilo</a></b> <br/>
 El marco XAML te permite personalizar la apariencia de tus aplicaciones de varias maneras. Los estilos te permiten establecer propiedades de control y reutilizar esa configuración para mantener un aspecto uniforme en varios controles.</p>
-  </div>
-</div>
-</div>
+    :::column-end:::
+:::row-end:::
+
+## <a name="get-the-windows-ui-library"></a>Obtén la biblioteca de la interfaz de usuario de Windows
+Algunos controles solo están disponibles en la biblioteca de la interfaz de usuario de Windows. Para acceder a ella, consulta las [instrucciones de instalación y la información general de la biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/).
 
 ## <a name="alphabetical-index"></a>Índice alfabético 
 
@@ -67,7 +64,7 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 
 <li style="list-style-type: none;"><a href="date-and-time.md">Controles de fecha y hora</a></li>
 
-<li style="list-style-type: none;"><a href="dialogs.md">Cuadros de diálogo y controles flotantes</a></li>
+<li style="list-style-type: none;"><a href="dialogs-and-flyouts/index.md">Cuadros de diálogo y controles flotantes</a></li>
 
 <li style="list-style-type: none;"><a href="flipview.md">Vista invertida</a></li>
 
@@ -95,6 +92,8 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 
 <li style="list-style-type: none;"><a href="person-picture.md">Imagen de persona</a></li>
 
+<li style="list-style-type: none;"><a href="pivot.md">Dinámica</a></li>
+
 <li style="list-style-type: none;"><a href="progress-controls.md">Controles de progreso</a></li>
 
 <li style="list-style-type: none;"><a href="radio-button.md">Botón de radio</a></li>
@@ -112,8 +111,6 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 <li style="list-style-type: none;"><a href="slider.md">Control deslizante</a></li>
 
 <li style="list-style-type: none;"><a href="split-view.md">Vista en dos paneles</a></li>
-
-<li style="list-style-type: none;"><a href="tabs-pivot.md">Pestañas y controles dinámicos</a></li>
 
 <li style="list-style-type: none;"><a href="text-controls.md">Controles de texto</a></li>
 

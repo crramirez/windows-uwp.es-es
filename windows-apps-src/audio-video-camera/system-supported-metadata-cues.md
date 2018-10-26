@@ -6,16 +6,14 @@ title: Indicaciones de metadatos temporizados admitidos por el sistema
 ms.author: drewbat
 ms.date: 04/18/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, metadata, metadatos, cue, indicación, speech, voz, chapter, capítulo
 ms.localizationpriority: medium
-ms.openlocfilehash: 9229e123b5a28cbcf64937cfeb7a57c961e71786
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 1e97c913764db24c68ce7becdba0fc283e1a3b73
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692250"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545265"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>Indicaciones de metadatos temporizados admitidos por el sistema
 En este artículo se describe cómo sacar provecho de los diversos formatos de metadatos temporizados que pueden estar integrados en archivos o secuencias multimedia. Las aplicaciones para UWP pueden registrarse en los eventos que genera la canalización multimedia durante la reproducción cada vez que se encuentren estas indicaciones de metadatos. Con la clase [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue), las aplicaciones pueden implementar sus propias indicaciones de metadatos personalizados, pero en este artículo nos centramos en varios estándares de metadatos que la canalización multimedia detecta automáticamente, por ejemplo:
@@ -126,7 +124,7 @@ Después de registrarse para los eventos de metadatos de M3U, el objeto **MediaI
 
 [!code-cs[EXTM3UCuePlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEXTM3UCuePlay)]
 
-En el método auxiliar **RegisterMetadataHandlerForEXTM3UCues**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Comprueba la propiedad DispatchType de la pista de metadatos, que tendrá un valor de "EXTM3U" si la pista representa comentarios M3U. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) de la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
+En el método auxiliar **RegisterMetadataHandlerForEXTM3UCues**, obtén una instancia de la clase [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** del objeto **MediaPlaybackItem**. Comprueba la propiedad DispatchType de la pista de metadatos, que tendrá un valor de "EXTM3U" si la pista representa comentarios M3U. Regístrate para los eventos [**CueEntered**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y [**CueExited**](https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatatrack.CueExited). Luego, tienes que llamar al objeto [**SetPresentationMode**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación quiere recibir eventos de indicación de metadatos para este elemento de reproducción.
 
 [!code-cs[RegisterMetadataHandlerForEXTM3UCues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForEXTM3UCues)]
 
@@ -189,7 +187,7 @@ En la parte siguiente del ejemplo se muestra el escenario donde se desencadena l
 * [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md)
 
 
- 
+ 
 
 
 

@@ -6,18 +6,17 @@ ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: cad84be24836bc6a33a4ab08f1ca4fa2d9e97512
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: de1d7dedbd2bd3d51bd2e1c1a9652d18f2b78ef0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239916"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547785"
 ---
 # <a name="xfieldmodifier-attribute"></a>Atributo x:FieldModifier
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Modifica el comportamiento de la compilación de XAML, por ejemplo, los campos para referencias a objetos con nombre se definen con el acceso **public** en lugar del comportamiento **private** predeterminado.
 
@@ -33,11 +32,11 @@ El [atributo x:Name](x-name-attribute.md) también debe proporcionarse en el mis
 
 ## <a name="remarks"></a>Observaciones
 
-El valor del atributo **x:FieldModifier** variará según el lenguaje de programación. Los valores válidos son **private**, **public**, **protected**, **internal** o **friend**. En el caso de C#, Microsoft Visual Basic o las extensiones de componentes de Visual C++ (C++/CX), puedes proporcionar el valor de cadena "public" o "Public"; recuerda que el analizador no fuerza la coincidencia de mayúsculas y minúsculas en este valor de atributo.
+El valor del atributo **x:FieldModifier** variará según el lenguaje de programación. Los valores válidos son **private**, **public**, **protected**, **internal** o **friend**. Las extensiones de componentes de C#, Microsoft Visual Basic o VisualC ++ (C++ / CX), puedes proporcionar a la cadena de valor "public" o "Public"; el analizador no mayúsculas y minúsculas en este valor de atributo.
 
 El acceso **Private** es el valor predeterminado.
 
 **x:FieldModifier** solo es relevante para elementos con el [atributo x:Name](x-name-attribute.md), ya que ese nombre se usa para hacer referencia al campo una vez que se hace público.
 
-**Nota** El lenguaje XAML de Windows Runtime no admite los elementos **x:ClassModifier** ni **x:Subclass**.
+**Nota**XAML de Windows Runtime no es compatible con **x: ClassModifier** o **x: Subclass**.
 

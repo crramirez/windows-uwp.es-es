@@ -7,19 +7,17 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 10/02/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, uwp
 pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: b61abf00d5ab8820457742f16feb9b496b7d7d1c
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 09bccec40c25e5eba06ba7a7c428b7b771f84271
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5479363"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552095"
 ---
 # <a name="directionality-and-gravity"></a>Direccionalidad y gravedad
 

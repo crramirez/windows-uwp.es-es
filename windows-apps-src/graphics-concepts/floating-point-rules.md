@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8706b10756eeec5d4b8a872c0d436a157ef74970
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: bcfdb8f6258547ff210d80136a6113e04092aad2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044944"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545838"
 ---
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>Reglas de punto flotante
 
@@ -33,12 +31,10 @@ Existen dos conjuntos de reglas: aquellos que se ajustan a IEEE-754 y los que di
 Algunas de estas reglas son una opción única en que IEEE-754 ofrece posibilidades.
 
 -   La división entre 0 produce +/- INF, excepto 0/0, que da como resultado NaN.
--   El registro de (+/-) 0 genera -INF.
-     
+-   El registro de (+/-) 0 genera -INF.  
 
     El registro de un valor negativo (que no sea -0) da como resultado NaN.
--   La raíz cuadrada recíproca (rsq) o la raíz cuadrada (sqrt) de un número negativo da como resultado NaN.
-     
+-   La raíz cuadrada recíproca (rsq) o la raíz cuadrada (sqrt) de un número negativo da como resultado NaN.  
 
     La excepción es -0; sqrt(-0) da como resultado -0, y rsq(-0) da como resultado -INF.
 -   INF - INF = NaN
@@ -158,9 +154,9 @@ Las reglas de punto flotante de 32 bits también incluyen números de punto flot
 
 [Texturas](https://msdn.microsoft.com/library/windows/desktop/ff476902)
 
- 
+ 
 
- 
+ 
 
 
 

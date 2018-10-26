@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/07/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: c951d8aacef1a327740ca09f19bbc33caa3695df
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 48244889dd927f41d0998214cf1120377c4bb251
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395584"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543527"
 ---
 # <a name="make-your-app-localizable"></a>Haz que tu aplicación sea localizable
 
@@ -54,9 +52,9 @@ Igualmente, una cadena como "text" o "fax" puede usarse tanto como verbo como su
 
 En resumen, factorizar las cadenas en las partes que funcionan en todos los contextos. Habrá casos donde una cadena deberá ser una oración completa.
 
-Échale un vistazo a la siguiente cadena: "The {0} could not be synchronized".
+Ten en cuenta la siguiente cadena: "el {0} no pudo sincronizarse."
 
-Hay varias palabras que podrían reemplazar a {0}, como "una cita", "una tarea" o "un documento". Si bien este ejemplo funciona para el inglés, no lo hará en todos los casos para la misma oración en alemán, por ejemplo. Ten en cuenta que en las siguientes oraciones en alemán, algunas de las palabras de la cadena de plantilla ("Der", "Die", "Das") tienen que coincidir con la palabra parametrizada:
+Hay varias palabras que podrían reemplazar {0}, por ejemplo, "una cita", "tareas" o "un documento". Si bien este ejemplo funciona para el inglés, no lo hará en todos los casos para la misma oración en alemán, por ejemplo. Ten en cuenta que en las siguientes oraciones en alemán, algunas de las palabras de la cadena de plantilla ("Der", "Die", "Das") tienen que coincidir con la palabra parametrizada:
 
 | Inglés                                    | Alemán                                           |
 |:------------------------------------------ |:------------------------------------------------ |
@@ -64,7 +62,7 @@ Hay varias palabras que podrían reemplazar a {0}, como "una cita", "una tarea" 
 | No pudo sincronizarse la tarea.        | Die Aufgabe konnte nicht synchronisiert werden.  |
 | No pudo sincronizarse el documento.    | Das Dokument konnte nicht synchronisiert werden. |
 
-Échale un vistazo a la frase de este otro ejemplo: "Remind me in {0} minute(s)". "Minute(s)" funciona perfectamente en inglés, pero es más que probable que otros idiomas usen términos diferentes. Por ejemplo, en polaco, se usa "minuta", "minuty" o "minut" según el contexto.
+Como otro ejemplo, considera la posibilidad de la frase "Remind me en {0} Minute (s)." "Minute(s)" funciona perfectamente en inglés, pero es más que probable que otros idiomas usen términos diferentes. Por ejemplo, en polaco, se usa "minuta", "minuty" o "minut" según el contexto.
 
 Para resolver este problema, localiza toda la oración en lugar de una única palabra. Aunque hacer esto parezca demandar trabajo extra y que no sea una solución elegante, es la mejor solución porque:
 
@@ -100,7 +98,7 @@ No supongas que todos los idiomas expresan los parámetros en el mismo orden. Po
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-La cadena de formato de este ejemplo funciona para el inglés (Estados Unidos). Pero no es apropiado para el alemán (Alemania), por ejemplo, donde el día y el mes se muestran en orden inverso. Asegúrate de que el traductor sepa el propósito de cada uno de los parámetros para que pueda invertir el orden de los elementos de formato de la cadena de formato (por ejemplo, "{1} {0}") según el idioma de destino.
+La cadena de formato de este ejemplo funciona para el inglés (Estados Unidos). Pero no es apropiado para el alemán (Alemania), por ejemplo, donde el día y el mes se muestran en orden inverso. Asegúrate de que el traductor sepa el propósito de cada uno de los parámetros para que pueda invertir el orden de los elementos de formato de la cadena de formato (por ejemplo, "{1} {0}") según sea adecuado para el idioma de destino.
 
 ## <a name="dont-over-localize"></a>No localices en exceso.
 

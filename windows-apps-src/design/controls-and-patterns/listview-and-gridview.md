@@ -4,11 +4,9 @@ Description: Use ListView and GridView controls to display and manipulate sets o
 title: Vista de lista y vista de cuadrícula
 label: List view and grid view
 template: detail.hbs
-ms.author: mukin
-ms.date: 05/19/2017
+ms.author: jimwalk
+ms.date: 05/20/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, uwp
 ms.assetid: f8532ba0-5510-4686-9fcf-87fd7c643e7b
 pm-contact: predavid
@@ -16,12 +14,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 126fc595a8c010c32849de627b1c341c81a2ba77
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: 1ee00a9af23be945ad27ab4b39eec127ec397894
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1494112"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546710"
 ---
 # <a name="list-view-and-grid-view"></a>Vista de lista y vista de cuadrícula
 
@@ -519,7 +517,7 @@ Para obtener información sobre cómo cambiar la apariencia de los elementos sel
 
 ### <a name="drag-and-drop"></a>Arrastrar y colocar
 
-Los controles ListView y GridView permiten arrastrar y colocar elementos en sí mismos, entre sí y en otros controles ListView y GridView. Para obtener más información acerca de cómo implementar el patrón de arrastrar y colocar, consulta [Arrastrar y colocar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop). 
+Los controles ListView y GridView permiten arrastrar y colocar elementos en sí mismos, entre sí y en otros controles ListView y GridView. Para obtener más información acerca de cómo implementar el patrón de arrastrar y colocar, consulta [Arrastrar y colocar](https://msdn.microsoft.com/windows/uwp/design/input/drag-and-drop). 
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 

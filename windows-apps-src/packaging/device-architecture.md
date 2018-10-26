@@ -5,15 +5,14 @@ description: Obtén más información sobre qué arquitecturas de procesador deb
 ms.author: lahugh
 ms.date: 7/13/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, empaquetado, arquitectura, configuración de paquete
-ms.openlocfilehash: 70188734e7fc26f66b68d0c31921071c47e8b7a8
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.localizationpriority: medium
+ms.openlocfilehash: 3e265df32a8c4168cddced905e7b0712e4601264
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2017
-ms.locfileid: "884056"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548713"
 ---
 # <a name="app-package-architectures"></a>Arquitecturas de paquetes de aplicaciones
 
@@ -27,11 +26,11 @@ Es **muy** recomendable que generes el paquete de la aplicación para todas las 
 ## <a name="windows-10-devices-and-architectures"></a>Dispositivos con Windows 10 y arquitecturas
 
 > [!div class="mx-tableFixed"]
-| Arquitectura de UWP | Escritorio (x86)      | Escritorio (x64)      | Escritorio (ARM)      | Móvil             | HoloLens           | Xbox               | IoT Core (en función del dispositivo) | 
-|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|-----------------------------|
-| x86              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          |
-| x64              | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          |
-| ARM              | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          |
+| Arquitectura de UWP | Escritorio (x86)      | Escritorio (x64)      | Escritorio (ARM)      | Móvil             | HoloLens           | Xbox               | IoT Core (en función del dispositivo) | Surface Hub        |
+|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|-----------------------------|--------------------|
+| x86              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          | :heavy_check_mark: |
+| x64              | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: |
+| ARM              | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
  
 
 Hablemos de estas arquitecturas con más detalle. 

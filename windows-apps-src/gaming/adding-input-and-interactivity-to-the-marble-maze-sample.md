@@ -6,16 +6,14 @@ ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
 ms.author: elcowle
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, juegos, entrada, ejemplo
 ms.localizationpriority: medium
-ms.openlocfilehash: 2be43690726112d8597747ee51dd94baf0f40f0e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 0b7e9a3f655b8be1b93334ed8decf9fe6fa8bbf2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817050"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544476"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Agregar métodos de entrada e interactividad al ejemplo de Marble Maze
 
@@ -27,7 +25,7 @@ Los juegos de la plataforma universal de Windows (UWP) se ejecutan en una varied
 > [!NOTE]
 > El código de ejemplo correspondiente a este documento se encuentra en el [Ejemplo de juego de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
 
- 
+ 
 A continuación se indican algunos de los puntos principales que se tratan en este documento para trabajar con métodos de entrada en el juego:
 
 -   Cuando sea posible, da soporte a varios dispositivos de entrada para que el juego pueda acomodarse a una amplia variedad de preferencias y habilidades entre los clientes. Aunque los dispositivos de juego y el uso del sensor son opcionales, los recomendamos para mejorar la experiencia del jugador. Hemos diseñado API de dispositivo de juego y sensor para que te resulte más fácil integrar estos dispositivos de entrada.
@@ -50,12 +48,12 @@ Marble Maze es compatible con el mando de la Xbox, el mouse y la función tácti
 > [!NOTE]
 > Este documento usa el término táctil para referirse tanto a la entrada táctil como de mouse y el término puntero para referirse a cualquier dispositivo que use eventos de puntero. Dado que la función táctil y el mouse usan eventos de puntero estándar, puedes usar cualquier dispositivo para seleccionar elementos de menú y controlar el juego.
 
- 
+ 
 
 > [!NOTE]
 > El manifiesto de paquete define que la única rotación admitida sea **Landscape** para el juego, ya que así se impide que la orientación cambie al girar el dispositivo para hacer rodar la canica. Para ver el manifiesto de paquete, abre **Package.appxmanifest** en el **Explorador de soluciones** de Visual Studio.
 
- 
+ 
 
 ## <a name="initializing-input-devices"></a>Inicialización de dispositivos de entrada
 
@@ -541,7 +539,7 @@ Comprobamos si la entrada desde el stick analógico izquierdo está fuera de la 
 > [!IMPORTANT]
 > Cuando trabajes con el mando de la Xbox, siempre ten en cuenta la zona muerta. La zona muerta se refiere a la varianza entre mandos y sus sensibilidades para el movimiento inicial. En algunos mandos, es posible que un pequeño movimiento no genere ninguna lectura, pero en otros podría generar una lectura apreciable. Para tener esto en cuenta en tu juego, crea una zona sin movimiento para el movimiento inicial del stick analógico. Para obtener más información sobre la zona muerta, consulta [Lectura de las palancas de control](gamepad-and-vibration.md#reading-the-thumbsticks).
 
- 
+ 
 
 ###  <a name="applying-input-to-the-game-state"></a>Aplicación de la entrada al estado del juego
 
@@ -550,7 +548,7 @@ Los dispositivos notifican los valores de entrada de varias maneras. Por ejemplo
 > [!TIP]
 > Incluso si la aplicación usa un método de entrada, recomendamos que siempre normalices los valores de entrada. Al hacerlo así, puedes simplificar la forma en que otros componentes interpretan la entrada de tu juego, como la simulación de efectos físicos, y se facilita la escritura de juegos que funcionan en varias resoluciones de pantalla.
 
- 
+ 
 
 Una vez que el método **MarbleMazeMain::Update** procesa la entrada, crea un vector que representa el efecto de la inclinación del laberinto en la canica. En el siguiente ejemplo se muestra cómo Marble Maze usa la función [XMVector3Normalize](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.geometric.xmvector3normalize) para crear un vector de gravedad normalizado. La variable **maxTilt** limita la cantidad de inclinación del laberinto e impide que este se incline de lado.
 
@@ -621,9 +619,9 @@ Lee [Agregar audio a la muestra de Marble Maze](adding-audio-to-the-marble-maze-
 * [Agregar contenido visual a la muestra de Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
 * [Desarrollar Marble Maze, un juego para UWP en C++ y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
- 
+ 
 
- 
+ 
 
 
 

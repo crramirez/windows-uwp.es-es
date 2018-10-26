@@ -6,19 +6,17 @@ description: El enlace de datos es una forma para que la interfaz de usuario de 
 ms.author: stwhi
 ms.date: 10/05/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 906fb2d0d5d466f4fd691afd35ed96198929225c
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 9d990c206892872711626fb98f386f7b28f43543
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5514455"
+ms.locfileid: "5543313"
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 

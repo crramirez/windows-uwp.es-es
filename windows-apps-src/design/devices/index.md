@@ -9,15 +9,13 @@ keywords: dispositivo, entrada, interacción
 ms.author: mijacobs
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c36e60d0435db6536ea7bb0eee3011937668cb7
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 6f5e6c96c67052f1933bf4fb69988ae1eae27ee0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395394"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550840"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Dispositivo básico para aplicaciones para la Plataforma universal de Windows (UWP)
 
@@ -133,7 +131,7 @@ Funcionalidades típicas del dispositivo
 
 Los más usados de todos los dispositivos informáticos, los teléfonos pueden hacer muchas cosas con la superficie de pantalla limitada y las entradas básicas. Los teléfonos están disponibles en una amplia variedad de tamaños; los teléfonos más grandes se denominan tabléfonos. Las experiencias de la aplicación en tabléfonos son similares a las de los teléfonos, pero debido a que la superficie de pantalla de los tabléfonos es mayor, se pueden producir algunos cambios clave en el consumo de contenido.
 
-Con Continuum para teléfonos, una nueva experiencia de dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un monitor e incluso usar un mouse y un teclado para que los teléfonos funcionen como un portátil. (Para obtener más información, consulta el [artículo Continuum para teléfonos](http://go.microsoft.com/fwlink/p/?LinkID=699431)).
+Con Continuum para teléfonos, una nueva experiencia de dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un monitor e incluso usar un mouse y teclado para que los teléfonos funcionen como un portátil. (Para obtener más información, consulta el [artículo Continuum para teléfonos](http://go.microsoft.com/fwlink/p/?LinkID=699431)).
 
 Tamaños de pantalla
 -   Entre 4 y 5 pulgadas para teléfono
@@ -166,7 +164,7 @@ Funcionalidades típicas del dispositivo
 -   Sensores de movimiento
 -   Sensores de ubicación
 
- 
+ 
 
 ## <a name="surface-hub-devices"></a>Dispositivos de Surface Hub
 
@@ -199,7 +197,7 @@ Funcionalidades típicas del dispositivo
 -   Cámara
 -   Micrófono
 
- 
+ 
 
 ## <a name="windows-iot-devices"></a>Dispositivos de Windows IoT
 

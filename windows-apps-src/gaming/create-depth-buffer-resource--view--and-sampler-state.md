@@ -6,22 +6,21 @@ ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, juegos, Direct3D, búfer de profundidad
-ms.openlocfilehash: 87e4248545288f4725e0cf0b104a75f1925ad3a3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 091ac04b2a41c54fbce7294bcf6651f4ad4aafd2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238592"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549337"
 ---
 # <a name="create-depth-buffer-device-resources"></a>Crear recursos de dispositivo para búferes de profundidad
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Aprende cómo crear los recursos de dispositivo Direct3D necesarios para admitir la realización de pruebas de profundidad para instantáneas de volumen. Parte 1 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Aprende cómo crear los recursos de dispositivo Direct3D necesarios para admitir la realización de pruebas de profundidad para volúmenes de sombra. Parte 1 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## <a name="resources-youll-need"></a>Recursos que necesitarás
 
@@ -261,9 +260,9 @@ m_shadowViewport.MaxDepth = 1.f;
 
 En la parte siguiente de este tutorial, aprenderás a crear la asignación de instantáneas [representando en el búfer de profundidad](render-the-shadow-map-to-the-depth-buffer.md).
 
- 
+ 
 
- 
+ 
 
 
 

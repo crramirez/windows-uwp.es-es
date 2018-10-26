@@ -6,19 +6,18 @@ ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, juegos, DirectX, gráficos
-ms.openlocfilehash: 2ac11ce220bc1c62c81df12fbf9c2a41fda1d940
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: e9834a83620343f26acaabd0e05b30cc2c1dcfab
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238495"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543685"
 ---
 # <a name="basic-3d-graphics-for-directx-games"></a>Gráficos 3D básicos para juegos DirectX
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Te vamos a enseñar cómo usar la programación DirectX para implementar los conceptos fundamentales de los gráficos 3D.
 
@@ -36,9 +35,9 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Vamos a explicar cómo desarrollar gráficos 3D con DirectX y C++\\Cx. En este tutorial compuesto por cinco partes se presenta la API de [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466), además de conceptos y códigos que también se usan en muchas otras muestras de DirectX. Estas partes se estructuran entre sí, desde la configuración de DirectX de una aplicación para UWP con C++ hasta las texturas de primitivos y adición de efectos.
 
-> **Nota** En este tutorial se usa un sistema de coordenadas de mano derecha con vectores de columna. Muchas aplicaciones y muestras de DirectX usan un sistema de coordenadas a la izquierda con vectores de fila. Si quieres una solución matemática de gráficos completa que admita un sistema de coordenadas a la izquierda con vectores de fila, piensa en usar [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para más información, consulta [Usar DirectXMath con Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
+> **Nota**en este tutorial se usa un sistema de coordenadas a la derecha con vectores de columna. Muchas aplicaciones y muestras de DirectX usan un sistema de coordenadas a la izquierda con vectores de fila. Si quieres una solución matemática de gráficos completa que admita un sistema de coordenadas a la izquierda con vectores de fila, piensa en usar [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para más información, consulta [Usar DirectXMath con Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
 
- 
+ 
 
 Te vamos a enseñar lo siguiente:
 
@@ -48,10 +47,9 @@ Te vamos a enseñar lo siguiente:
 -   Rasterizar la escena (aplanar la escena en 3D para una proyección en 2D)
 -   Eliminar las superficies ocultas
 
-> **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota**  
 
- 
+ 
 
 A continuación, creamos un dispositivo Direct3D, una cadena de intercambio y una vista de destino de representación, y mostramos la imagen representada en la pantalla.
 
@@ -64,9 +62,9 @@ A continuación, creamos un dispositivo Direct3D, una cadena de intercambio y un
 * [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)
 * [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, contactos, calendario, citas, mensajes de correo
 ms.localizationpriority: medium
-ms.openlocfilehash: 2224ab78d5f3424904dfc2e211d9890648080574
-ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
-ms.translationtype: HT
+ms.openlocfilehash: c020a871863df6fac3dabc3ffab4bafc57227b50
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "1905340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549327"
 ---
 # <a name="contacts-my-people-and-calendar"></a>Contactos, Mis allegados y calendario
 
@@ -35,7 +33,7 @@ Para conocer los distintos modos en que tu aplicación puede obtener acceso a lo
 | [Uso compartido de Mis allegados](my-people-sharing.md) | Muestra cómo agregar compatibilidad para el uso compartido de Mis allegados, lo que permite a los usuarios compartir contenido con sus contactos anclados arrastrando archivos desde el Explorador de archivos a una ancla Mis allegados. |
 | [Notificaciones de Mis allegados](my-people-notifications.md) | Muestra cómo crear y usar las notificaciones de Mis allegados, un nuevo tipo de notificación del sistema que se envía desde un contactos anclado. |
 
- 
+ 
 
 ## <a name="related-topics"></a>Temas relacionados
 

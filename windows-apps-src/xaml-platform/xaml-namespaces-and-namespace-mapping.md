@@ -6,16 +6,14 @@ ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a4303075bb9fc8133ab40a0fb48b3742c1f2637
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a1aebe3d9aac460d444a5dffcd63142300c022b7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656180"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546528"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Espacios de nombres XAML y asignación de espacios de nombres
 
@@ -65,7 +63,7 @@ El espacio de nombres XAML "d:" se usa para la compatibilidad con diseñadores, 
 
 -   **Atributos d:DesignHeight y d:DesignWidth:** a veces, estos atributos se aplican a la raíz de un archivo XAML que Visual Studio u otra superficie de diseñador XAML crean automáticamente. Por ejemplo, estos atributos se establecen en la raíz de [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) del XAML que se crea al agregar un nuevo **UserControl** al proyecto de la aplicación. Estos atributos facilitan el diseño de la composición del contenido XAML, de forma que se pueden anticipar las limitaciones de contenido que podrían existir al usar el contenido XAML en una instancia de control o en otra parte de una página de interfaz de usuario mayor.
 
-   **Nota** Si migras el XAML desde Microsoft Silverlight, estos atributos podrían encontrarse en los elementos raíz que representan la página de interfaz de usuario completa. En ese caso, es posible que quieras quitar los atributos. Otras características de los diseñadores de XAML, como el simulador, son probablemente más útiles para crear diseños de página que controlen la escala y muestren los estados mejor que en un diseño de página de tamaño fijo con **d:DesignHeight** y **d:DesignWidth**.
+   **Nota**si migras el XAML desde Microsoft Silverlight estos atributos podrían encontrarse en los elementos raíz que representan la página interfaz de usuario completa. En ese caso, es posible que quieras quitar los atributos. Otras características de los diseñadores de XAML, como el simulador, son probablemente más útiles para crear diseños de página que controlen la escala y muestren los estados mejor que en un diseño de página de tamaño fijo con **d:DesignHeight** y **d:DesignWidth**.
 
 -   **Atributo d:DataContext:** puedes establecer este atributo en una raíz de página o en un control para invalidar cualquier elemento [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) explícito o heredado que tenga el objeto.
 -   **Atributo d:DesignSource:** especifica un origen de datos en tiempo de diseño para un elemento [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), lo que invalida la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835).
@@ -118,5 +116,5 @@ Si haces referencia a propiedades adjuntas, el fragmento del tipo de propietario
 * [Creación de componentes de Windows Runtime en C# y Visual Basic](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [Plantillas de proyecto C#, VB y C++ para aplicaciones de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Migrar de Silverlight o código XAML en WPF a una aplicación de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/br229571)
- 
+ 
 

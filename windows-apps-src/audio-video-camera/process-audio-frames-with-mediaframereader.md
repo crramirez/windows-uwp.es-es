@@ -6,16 +6,14 @@ title: Procesar tramas de audio con MediaFrameReader
 ms.author: drewbat
 ms.date: 04/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7606596937c0fa3297c049da1a313c155b1a35b9
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: Auto
+ms.openlocfilehash: d69e8d8cca3932045d4b43d727210f84e816f30b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833362"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542832"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Procesar tramas de audio con MediaFrameReader
 
@@ -85,7 +83,7 @@ Puedes usar un objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/window
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Muestra de fotogramas de cámara](http://go.microsoft.com/fwlink/?LinkId=823230)
 * [Gráficos de audio](audio-graphs.md)
- 
+ 
 
 
 

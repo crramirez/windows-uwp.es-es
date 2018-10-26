@@ -6,21 +6,19 @@ description: Mejora el rendimiento y el tiempo de inicio de las clases ListView 
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: eab90ebf2bcb1912292af6503f833e3bfa334d8b
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 92b81c79eb1be9e21aa7c306ef31b0b3bb62e7d1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547297"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualización de datos de ListView y GridView
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Nota** Para obtener más información, consulta la sesión //build/ [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView (Aumentar considerablemente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de las clases GridView y ListView)](https://channel9.msdn.com/Events/Build/2013/3-158).
+**Nota**para obtener más información, consulta la sesión de //build/ [Considerablemente aumentar el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de ListView y GridView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
 Mejorar el rendimiento y el tiempo de inicio de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de datos. Para la virtualización de la interfaz de usuario, reducción de elementos y la actualización progresiva de elementos, consulta el tema [Optimización de ListView y GridView UI](optimize-gridview-and-listview.md).
 
@@ -31,7 +29,7 @@ Se necesita un método de virtualización de datos para un conjunto de datos que
 -   El origen del conjunto de datos (disco local, red o nube)
 -   El consumo de memoria total de la aplicación
 
-**Nota** Ten en cuenta que existe una característica habilitada de manera predeterminada para las clases ListView y GridView que muestra elementos visuales de marcador de posición temporales mientras el usuario realiza un movimiento panorámico o de desplazamiento rápido. A medida que se cargan los datos, estos elementos visuales de marcador de posición se reemplazan por la plantilla de elemento. Para desactivar la característica, puedes establecer [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) en false, aunque si lo haces, te recomendamos que uses el atributo x:Phase para representar de manera progresiva los elementos de la plantilla de elemento. Consulta [Actualizar los elementos ListView y GridView de forma progresiva](optimize-gridview-and-listview.md#update-items-incrementally).
+**Nota**Ten en cuenta que una característica está habilitada de manera predeterminada para ListView y GridView que muestra elementos visuales de marcador de posición temporales mientras el usuario realiza movimiento panorámico/desplazamiento rápido. A medida que se cargan los datos, estos elementos visuales de marcador de posición se reemplazan por la plantilla de elemento. Para desactivar la característica, puedes establecer [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) en false, aunque si lo haces, te recomendamos que uses el atributo x:Phase para representar de manera progresiva los elementos de la plantilla de elemento. Consulta [Actualizar los elementos ListView y GridView de forma progresiva](optimize-gridview-and-listview.md#update-items-incrementally).
 
 Aquí encontrarás más información acerca de las técnicas de virtualización de datos incremental y de acceso aleatorio.
 
@@ -45,7 +43,7 @@ La virtualización de datos incremental carga los datos en secuencia. Un [**List
 
 Un origen de datos como el siguiente, es una lista en memoria que se puede extender continuamente. El control de elementos solicitará elementos con el indexador [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) estándar y las propiedades de recuento. El recuento debe representar el número de elementos localmente, no el tamaño real del conjunto de datos.
 
-Cuando el control de elementos se acerque al final de los datos existentes, llamará a [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems). Si devuelves **true**, a continuación, llamará a [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) pasando un número de elementos para cargar recomendado. Dependiendo desde dónde se están cargando datos (disco local, red o nube), puedes cargar un número diferente de elementos que el recomendado. Por ejemplo, si el servicio admite lotes de 50 elementos, pero el control de elementos solo solicita 10, puede cargar 50. Carga los datos desde el backend, agrégalos a la lista y genera una notificación de cambio a través de la interfaz [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) o [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052), para que el control de elementos reconozca los elementos nuevos. Asimismo, también devuelve un recuento de los elementos cargados realmente. Si cargas menos elementos que lo recomendado o el control de elementos se ha movido panorámicamente/desplazado incluso más aún en el transcurso, se llamará nuevamente al origen de datos para obtener más elementos y el ciclo continuará. Para obtener más información, descarga la [Muestra de enlace de datos XAML](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) para Windows 8.1 y vuelve a usar su código fuente en la aplicación de Windows 10.
+Cuando el control de elementos se acerque al final de los datos existentes, llamará a [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems). Si devuelves **true**, a continuación, llamará a [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) pasando un número de elementos para cargar recomendado. Dependiendo desde dónde se están cargando datos (disco local, red o nube), puedes cargar un número diferente de elementos que el recomendado. Por ejemplo, si el servicio admite lotes de 50 elementos, pero el control de elementos solo solicita 10, puede cargar 50. Carga los datos desde el backend, agrégalos a la lista y genera una notificación de cambio a través de la interfaz [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) o [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052), para que el control de elementos reconozca los elementos nuevos. Asimismo, también devuelve un recuento de los elementos cargados realmente. Si cargas menos elementos que lo recomendado o el control de elementos se ha movido panorámicamente/desplazado incluso más aún en el transcurso, se llamará nuevamente al origen de datos para obtener más elementos y el ciclo continuará. Puedes obtener más al descargar la [muestra de enlace de datos XAML](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) para Windows8.1 y volver a usar su código fuente en la aplicación de Windows 10.
 
 ## <a name="random-access-data-virtualization"></a>Virtualización de datos de acceso aleatorio
 

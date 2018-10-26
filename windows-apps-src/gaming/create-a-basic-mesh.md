@@ -1,30 +1,29 @@
 ---
 author: mtoepke
-title: "Crear y mostrar una malla básica"
-description: "En los juegos 3D para la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies."
+title: Crear y mostrar una malla básica
+description: En los juegos 3D para la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies.
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, malla, DirectX
-ms.openlocfilehash: 264563d2db7d48ab6a18bb15c53b00e75fbd5943
-ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e3ae6416217efa16d70b65b8ff55e36654a11557
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550643"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>Crear y mostrar una malla básica
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies. Las listas de vértices que comprimen la estructura de estos objetos poligonales y superficies se denominan mallas. A continuación crearemos una malla básica para un objeto de cubo y haremos que se represente y muestre a través de la canalización de sombreador.
 
-> **Importante**   El código de ejemplo incluido aquí usa tipos (como DirectX::XMFLOAT3 y DirectX::XMFLOAT4X4) y métodos insertados declarados en DirectXMath.h. Si vas a cortar y pegar este código, usa \#include &lt;DirectXMath.h&gt; en el proyecto.
+> **Importante**  el código de ejemplo incluido aquí usa tipos (como DirectX:: Xmfloat3 y DirectX:: Xmfloat4x4) y métodos insertados declarados en DirectXMath.h. Si vas a cortar y pegar este código, usa \#include &lt;DirectXMath.h&gt; en el proyecto.
 
- 
+ 
 
 ## <a name="what-you-need-to-know"></a>Lo que debes saber
 
@@ -36,7 +35,7 @@ En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usa
 ### <a name="prerequisites"></a>Requisitos previos
 
 -   Conocimiento básico sobre álgebra lineal y sistemas de coordenadas 3D
--   Plantilla Direct3D de Visual Studio 2015
+-   Un Visual Studio 2015 o posterior plantilla Direct3D
 
 ## <a name="instructions"></a>Instrucciones
 
@@ -208,9 +207,9 @@ HLSL no cambia los búferes de constantes. Puedes cambiarlos cuando el juego act
 
 En este ejemplo, lo único que no cambia son los datos DirectX::XMFLOAT4X4 para las tres matrices.
 
-> **Nota**   El código de ejemplo que presentamos aquí usa matrices principales de columna. Puedes usar matrices principales de fila en lugar de usar la palabra clave **row\_major** en HLSL y asegurarte de que coincida con los datos de la matriz de origen. DirectXMath usa matrices principales de fila y puede usarse directamente con matrices HLSL definidas con la palabra clave **row\_major**.
+> **Nota**  el código de ejemplo que presentamos aquí usa matrices principales de columna. Puedes usar matrices principales de fila en lugar de usar la palabra clave **row\_major** en HLSL y asegurarte de que coincida con los datos de la matriz de origen. DirectXMath usa matrices principales de fila y puede usarse directamente con matrices HLSL definidas con la palabra clave **row\_major**.
 
- 
+ 
 
 Declara y crea un búfer de constantes para las tres matrices que usas para transformar cada vértice.
 
@@ -260,9 +259,9 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> **Nota**  Normalmente, se declara la matriz de proyección al configurar recursos específicos del dispositivo, porque los resultados de la multiplicación deben coincidir con los parámetros de tamaño de la ventanilla 2D actual (que a menudo corresponden con el alto y ancho del píxel en pantalla). Si cambian, debes aumentar los valores de la coordenada x y la coordenada y, en consecuencia.
+> **Nota**normalmente, se declara la matriz de proyección al configurar recursos específicos del dispositivo, porque los resultados de la multiplicación deben coincidir con los parámetros de tamaño de la ventanilla 2D actual (que a menudo corresponden con el píxel alto y ancho de la Mostrar). Si cambian, debes aumentar los valores de la coordenada x y la coordenada y, en consecuencia.
 
- 
+ 
 
 ```cpp
 // Finally, update the constant buffer perspective projection parameters
@@ -443,21 +442,18 @@ m_swapChain->Present(1, 0);
 
 ## <a name="remarks"></a>Comentarios
 
-En este tema se explica cómo crear y mostrar la geometría simple que tú mismo has elaborado. Para obtener más información sobre cómo cargar geometría compleja de un archivo y convertirla al formato del objeto de búfer de vértices (.vbo) específico de la muestra, consulta [Cómo cargar recursos en tu juego DirectX](load-a-game-asset.md).
+En este tema se explica cómo crear y mostrar la geometría simple que tú mismo has elaborado. Para obtener más información sobre cómo cargar geometría compleja de un archivo y convertirla al formato del objeto de búfer de vértices (.vbo) específico de la muestra, consulta [Cómo cargar recursos en tu juego DirectX](load-a-game-asset.md).  
 
-> **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
+ 
 
 ## <a name="related-topics"></a>Temas relacionados
 
 
 * [Cómo cargar recursos en tu juego DirectX](load-a-game-asset.md)
 
- 
+ 
 
- 
+ 
 
 
 

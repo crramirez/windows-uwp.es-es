@@ -9,15 +9,13 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c82e0d77804e293176c53a9d8079e32054f9cca6
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 00923b4448d96943cf00eade46c39c42e87c4f96
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652754"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549572"
 ---
 # <a name="set-speech-recognition-timeouts"></a>Establecer tiempos de espera de reconocimiento de voz
 
@@ -35,9 +33,9 @@ Aquí especificamos diversos valores de [**Timeouts**](https://msdn.microsoft.co
 -   BabbleTimeout: el período de tiempo que un SpeechRecognizer continúa escuchando sonidos no reconocibles (hablante) antes de que se suponga que la entrada de voz ha finalizado y finaliza la operación de reconocimiento.
 -   EndSilenceTimeout: el período de tiempo en que un objeto SpeechRecognizer detecta silencio (después de que se hayan generado los resultados de reconocimiento) y da por hecho que ha finalizado la entrada de voz.
 
-**Nota** Los tiempos de espera se pueden establecer por reconocedor.
+**Nota**tiempos de espera se pueden establecer por reconocedor.
 
- 
+ 
 
 ```CSharp
 // Set timeout settings.
@@ -52,9 +50,9 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 * [Interacciones de voz](speech-interactions.md)
 **Ejemplos**
 * [Muestra de reconocimiento de voz y síntesis de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

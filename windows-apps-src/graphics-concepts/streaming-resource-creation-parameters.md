@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f2a17f69ae0353bb7682a1dbfa48d5909f48d4aa
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: Auto
+ms.openlocfilehash: 0129b44b6f1c6c8b18555e3e0e0b350a695cabe1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652994"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548935"
 ---
 # <a name="streaming-resource-creation-parameters"></a>Parámetros de creación de recursos de streaming
 
@@ -26,22 +24,22 @@ Existen algunas limitaciones en el tipo de recursos de Direct3D que se pueden cr
 <span id="Supported-Resource-Type"></span><span id="supported-resource-type"></span><span id="SUPPORTED-RESOURCE-TYPE"></span>**Tipo de recurso admitido**  
 Texture2D\[Array\] (incluido TextureCube\[Array\], que es una variante de Texture2D\[Array\]) o Buffer.
 
-**NO admitido:  **Texture1D\[Array\] .
+**No admite:** Texture1D\ [Array\].
 
 <span id="Supported-Resource-Usage"></span><span id="supported-resource-usage"></span><span id="SUPPORTED-RESOURCE-USAGE"></span>**Uso de recurso admitido**  
 Uso predeterminado.
 
-**NO admitido:  **dinámico, provisional o inmutable.
+**No admite:** Dinámico, provisional o inmutable.
 
 <span id="Supported-Resource-Misc-Flags"></span><span id="supported-resource-misc-flags"></span><span id="SUPPORTED-RESOURCE-MISC-FLAGS"></span>**Marcas variadas de los recursos admitidos**  
 En mosaico; es decir, emisión (por definición), cubo de textura, dibujo de argumentos indirectos, almacenar en búfer vistas sin procesar permitidas, búfer estructurado, compresión de recursos o generar MIP.
 
-**NO admitidos:  **compartido, exclusión mutua con clave compartida, compatible con GDI, identificador de NT compartido, contenido restringido, restringir recurso compartido, restringir controlador de recurso compartido, protegido o grupo de iconos.
+**No admite:** compartido, exclusión mutua con clave, compatible con GDI, identificador de NT compartido, contenido restringido, restringir el recurso compartido, restringir el controlador del recurso compartido, protegido o grupo de iconos.
 
 <span id="Supported-Bind-Flags"></span><span id="supported-bind-flags"></span><span id="SUPPORTED-BIND-FLAGS"></span>**Indicadores de enlace admitidos**  
 Enlazar como recurso de sombreador, destino de representación, galería de símbolos de profundidad o acceso sin ordenar.
 
-**NO admitidos:  **Enlazar como búfer de constantes, búfer de vértices (se admite el enlace de un búfer en mosaico como SRV/UAV/RTV), búfer de índices, salida de flujo, descodificador o codificador de vídeo.
+**No admite:** Enlazar como búfer de constantes, búfer de vértices (admite el enlace un búfer en mosaico como SRV/UAV/RTV es), índice de búfer, salida de flujo, descodificador o codificador de vídeo.
 
 <span id="Supported-Formats"></span><span id="supported-formats"></span><span id="SUPPORTED-FORMATS"></span>**Formatos admitidos**  
 Todos los formatos que deberían estar disponibles para la configuración dada, independientemente de esta sea en mosaico, con algunas excepciones.
@@ -76,16 +74,16 @@ El contenido inicial de la memoria del grupo de iconos no está definido.
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
 [Creación de recursos de streaming](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ title: Administrar la difusión de juegos
 ms.author: drewbat
 ms.date: 09/27/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, juego, difusión
 ms.localizationpriority: medium
-ms.openlocfilehash: f231d380af33eae36a6394aa5799b9f75a70471a
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: ae70c29927925abcf948435ed768871ba2427fd9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692616"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542750"
 ---
 # <a name="manage-game-broadcasting"></a>Administrar la difusión de juegos
 Este artículo muestra cómo administrar la difusión de juegos para una aplicación para UWP. Los usuarios deben iniciar la difusión usando la interfaz de usuario del sistema integrada en Windows pero, a partir de Windows 10, versión 1709, las aplicaciones pueden iniciar la interfaz de usuario de difusión del sistema y pueden recibir notificaciones cuando se inicia y se detiene la difusión.
@@ -25,7 +23,7 @@ Las API para administrar la emisión de la aplicación, que se encuentran en el 
 
 1. En Visual Studio, en **Explorador de soluciones**, expande el proyecto UWP, haz clic con el botón derecho en **Referencias** y entonces selecciona **Agregar referencia...**. 
 2. Expande el nodo **Windows Universal** y selecciona **Extensiones**.
-3. En la lista de extensiones, marca la casilla de verificación junto a la entrada de **Extensiones de escritorio de Windows para UWP** que coincida con la compilación de destino del proyecto. Para las funciones de difusión de aplicación, la versión debe ser 1709 o superior.
+3. En la lista de extensiones, marca la casilla de verificación junto a la entrada de **Extensiones de escritorio de Windows para UWP** que coincida con la compilación de destino del proyecto. Para las funciones de difusión de aplicaciones, la versión debe ser 1709 o superior.
 4. Haz clic en **Aceptar**.
 
 ## <a name="launch-the-system-ui-to-allow-the-user-to-initiate-broadcasting"></a>Iniciar la interfaz de usuario del sistema para permitir que el usuario inicie la difusión
@@ -57,9 +55,9 @@ En el controlador del evento **IsCurrentAppBroadcastingChanged**, puede convenir
 
 * [Juegos](index.md)
 
- 
+ 
 
- 
+ 
 
 
 

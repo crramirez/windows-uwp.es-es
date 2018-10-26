@@ -6,19 +6,18 @@ ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 70ef1ab7bc31fde2f0d4744394c1ae69c8caf7fd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 6461b6889f110bde8929e1f370f9197caa33e5f3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239829"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549026"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>Distribuir un componente de Windows Runtime administrado
 
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Puedes distribuir tu componente de Windows Runtime mediante la copia de archivos. Sin embargo, si el componente consta de muchos archivos, la instalación puede ser tediosa para los usuarios. Además, los errores en la colocación de archivos o la incapacidad para establecer referencias pueden causarles problemas. Puedes empaquetar un componente complejo como un SDK de extensión de Visual Studio, para que sea fácil de instalar y usar. Los usuarios solamente necesitan establecer una referencia para todo el paquete. Pueden localizar e instalar tu componente usando el cuadro de diálogo **Extensiones y actualizaciones**, como se describe en [Búsqueda y uso de extensiones de Visual Studio](https://msdn.microsoft.com/library/vstudio/dd293638.aspx), en la biblioteca de MSDN.
 
@@ -42,13 +41,13 @@ Para decidir cómo distribuir tu componente, considera su complejidad. Se recomi
 
 Un SDK de extensión es especialmente útil si se cumple más de una de las anteriores.
 
-> **Nota**  Para los componentes complejos, el sistema de administración de paquetes NuGet ofrece una alternativa de código abierto a los SDK de extensiones. Como el SDK de extensión, NuGet te permite crear paquetes que simplifican la instalación de componentes complejos. Para ver una comparación de paquetes NuGet y SDK de extensión de Visual Studio, consulta [Agregar referencias con el uso de NuGet frente a un SDK de extensión](https://msdn.microsoft.com/library/jj161096.aspx) en la biblioteca de MSDN.
+> **Nota**para los componentes complejos, el sistema de administración de paquetes de NuGet ofrece una alternativa de código abierto a SDK de extensión. Como el SDK de extensión, NuGet te permite crear paquetes que simplifican la instalación de componentes complejos. Para ver una comparación de paquetes NuGet y SDK de extensión de Visual Studio, consulta [Agregar referencias con el uso de NuGet frente a un SDK de extensión](https://msdn.microsoft.com/library/jj161096.aspx) en la biblioteca de MSDN.
 
 ## <a name="distribution-by-file-copy"></a>Distribución por copia de archivos
 
 Si tu componente consta de un archivo .winmd único, o un archivo .winmd y un archivo de índice de recursos (.pri), simplemente puedes hacer que el archivo .winmd esté disponible para que los usuarios lo copien. Los usuarios pueden colocar el archivo donde quieran en un proyecto, usar el cuadro de diálogo **Agregar elemento existente** para agregar el archivo .winmd al proyecto y, a continuación, usar el cuadro de diálogo Administrador de referencias para crear una referencia. Si incluyes un archivo .pri o un archivo .xml, indica a los usuarios que coloquen estos archivos con el archivo .winmd.
 
-> **Nota**  Visual Studio genera siempre un archivo .pri al compilar el componente de Windows Runtime, aunque tu proyecto no incluya ningún recurso. Si tienes una aplicación de prueba para tu componente, puedes determinar si se usa el archivo .pri examinando el contenido del paquete de la aplicación en la carpeta bin\\debug\\AppX. De todos modos, si el archivo .pri de tu componente no aparece ahí, no es necesario que lo distribuyas. Como alternativa, puedes usar la herramienta [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) para volcar el archivo de recursos de tu proyecto de componente de Windows Runtime. Por ejemplo, en la ventana del símbolo del sistema de Visual Studio, escribe: makepri dump /if MyComponent.pri /of MyComponent.pri.xml. Si lo deseas, puedes obtener más información acerca de los archivos .pri en [Resource Management System (Windows) (Sistema de administración de recursos para Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
+> **Nota**Visual Studio genera siempre un archivo .pri al compilar el componente de Windows Runtime, incluso si el proyecto no incluya ningún recurso. Si tienes una aplicación de prueba para tu componente, puedes determinar si se usa el archivo .pri examinando el contenido del paquete de la aplicación en la carpeta bin\\debug\\AppX. De todos modos, si el archivo .pri de tu componente no aparece ahí, no es necesario que lo distribuyas. Como alternativa, puedes usar la herramienta [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) para volcar el archivo de recursos de tu proyecto de componente de Windows Runtime. Por ejemplo, en la ventana del símbolo del sistema de Visual Studio, escribe: makepri dump /if MyComponent.pri /of MyComponent.pri.xml. Si lo deseas, puedes obtener más información acerca de los archivos .pri en [Resource Management System (Windows) (Sistema de administración de recursos para Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
 
 ## <a name="distribution-by-extension-sdk"></a>Distribución por SDK de extensión
 

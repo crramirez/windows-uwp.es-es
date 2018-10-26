@@ -1,46 +1,45 @@
 ---
 author: mtoepke
 title: Compatibilidad con la orientación de pantalla (DirectX y C++)
-description: Aquí se comentan los procedimientos recomendados para controlar la rotación de pantalla en una aplicación DirectX para UWP, de modo que el hardware de gráficos del dispositivo Windows 10 se pueda usar de manera eficaz.
+description: Aquí se comentan los procedimientos recomendados para controlar la rotación de pantalla en la aplicación DirectX para UWP, para que el hardware de gráficos del dispositivo Windows 10 se usan de forma eficaz y eficiente.
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, juegos, orientación de pantalla, directx
-ms.openlocfilehash: 606d32d16ad94e45cb63c73f1869735a9fbd7d25
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 4ed8739f8ba7b2049af154d458ccaa831b8526a5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "240363"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548257"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>Compatibilidad con la orientación de pantalla (DirectX y C++)
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Su aplicación de la Plataforma universal de Windows (UWP) puede admitir varias orientaciones de pantalla cuando controles el evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268). Aquí se comentan los procedimientos recomendados para controlar la rotación de pantalla en una aplicación DirectX para UWP, de modo que el hardware de gráficos del dispositivo Windows 10 se pueda usar de manera eficaz.
+Su aplicación de la Plataforma universal de Windows (UWP) puede admitir varias orientaciones de pantalla cuando controles el evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268). Aquí se comentan los procedimientos recomendados para controlar la rotación de pantalla en la aplicación DirectX para UWP, para que el hardware de gráficos del dispositivo Windows 10 se usan de forma eficaz y eficiente.
 
-Antes de comenzar, recuerda que el hardware gráfico siempre reproduce los datos en píxeles del mismo modo, independientemente de la orientación del dispositivo. Los dispositivos con Windows 10 pueden determinar su orientación de pantalla actual (mediante algún tipo de sensor o de alternancia de software) y permite a los usuarios cambiar la configuración de pantalla. Por este motivo, es el propio Windows 10 el que se encarga de rotar las imágenes para asegurarse de que estén derechas según la orientación del dispositivo. De manera predeterminada, tu aplicación recibe la notificación de que algo cambió de orientación, como por ejemplo, el tamaño de una ventana. Cuando esto ocurre, Windows 10 gira inmediatamente la imagen para la presentación final. Para tres de las cuatro orientaciones de pantalla específicas (que se describirán más adelante), Windows 10 usa otros recursos gráficos y cálculos para mostrar la imagen final.
+Antes de comenzar, recuerda que el hardware gráfico siempre reproduce los datos en píxeles del mismo modo, independientemente de la orientación del dispositivo. Los dispositivos de Windows 10 pueden determinar su orientación de pantalla actual (mediante algún tipo de sensor o con un botón de alternancia de software) y permitir que los usuarios cambiar la configuración de pantalla. Debido a esto, Windows 10 propio controla la rotación de las imágenes para asegurarse de que son "verticales" en función de la orientación del dispositivo. De manera predeterminada, tu aplicación recibe la notificación de que algo cambió de orientación, como por ejemplo, el tamaño de una ventana. Cuando esto ocurre, Windows 10 gira inmediatamente la imagen para la presentación final. Para tres de las cuatro orientaciones de pantalla específicas (se explica más adelante), Windows 10 usa otros recursos gráficos y cálculos para mostrar la imagen final.
 
 Para aplicaciones DirectX de UWP, el objeto [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/dn264258) proporciona datos de orientación de pantalla básicos que tu aplicación puede consultar. La orientación predeterminada es *horizontal*, donde el ancho de píxeles de la pantalla es mayor que el alto; la orientación alternativa es *vertical*, donde la pantalla se gira 90 grados en cualquier dirección y el ancho se vuelve menor que el alto.
 
 Windows 10 define cuatro modos de orientación de pantalla específicos:
 
--   Horizontal: orientación de pantalla predeterminada para Windows 10; se considera la base o el ángulo de identidad para la rotación (0 grados).
+-   Horizontal: el valor predeterminado orientación para Windows 10 de la pantalla y se considera el ángulo base o identidad para la rotación (0 grados).
 -   Vertical: la pantalla se giró 90 grados en el sentido de las agujas del reloj (o 270 grados en el sentido contrario de las agujas del reloj).
 -   Horizontal, volteada: la pantalla se giró 180 grados (se dio la vuelta).
 -   Vertical, volteada: la pantalla se giró 270 grados en el sentido de las agujas del reloj (o 90 grados en el sentido contrario de las agujas del reloj).
 
 Cuando la pantalla se gira de una orientación a otra, Windows 10 realiza internamente una operación de rotación para alinear la imagen con la nueva orientación y el usuario ve una imagen derecha en la pantalla.
 
-Windows 10 también muestra automáticamente animaciones de transición para crear una experiencia del usuario agradable al cambiar de una orientación de pantalla a otra. Cuando cambia la orientación de pantalla, el usuario ve estos cambios como una animación de rotación y zoom fijo de la imagen de pantalla mostrada. Windows 10 asigna una cantidad de tiempo a la aplicación para que se distribuya en la nueva orientación.
+Además, Windows 10 muestra automáticamente animaciones de transición para crear una experiencia del usuario al cambiar de una orientación a otra. Cuando cambia la orientación de pantalla, el usuario ve estos cambios como una animación de rotación y zoom fijo de la imagen de pantalla mostrada. Windows 10 asigna tiempo a la aplicación para el diseño en la nueva orientación.
 
 Este es el proceso general para administrar los cambios en la orientación de pantalla:
 
 1.  Usa una combinación de valores de límites de la ventana y los datos de la orientación de pantalla para mantener la cadena de intercambio alineada con la orientación de pantalla nativa del dispositivo.
-2.  Notifica a Windows 10 la orientación de la cadena de intercambio mediante [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801).
+2.  Notificar a Windows 10 la orientación de la cadena de intercambio con [**idxgiswapchain1:: SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801).
 3.  Cambia el código de representación para generar imágenes alineadas con la orientación del usuario del dispositivo.
 
 ## <a name="resizing-the-swap-chain-and-pre-rotating-its-contents"></a>Cambiar el tamaño de la cadena de intercambio y girar previamente su contenido
@@ -161,7 +160,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
         swapChainDesc.SampleDesc.Quality = 0;
         swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
         swapChainDesc.BufferCount = 2; // Use double-buffering to minimize latency.
-        swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // All Windows Store apps must use this SwapEffect.
+        swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // All UWP apps must use this SwapEffect.
         swapChainDesc.Flags = 0;    
         swapChainDesc.Scaling = DXGI_SCALING_NONE;
         swapChainDesc.AlphaMode = DXGI_ALPHA_MODE_IGNORE;
@@ -320,7 +319,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 
     m_d2dContext->SetTarget(m_d2dTargetBitmap.Get());
 
-    // Grayscale text anti-aliasing is recommended for all Windows Store apps.
+    // Grayscale text anti-aliasing is recommended for all UWP apps.
     m_d2dContext->SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE_GRAYSCALE);
 
 }
@@ -333,7 +332,7 @@ Después de guardar los valores actuales de alto y ancho de la ventana para la p
 
 Agrega 0,5f para redondear al valor entero más próximo.
 
-Además, las coordenadas de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) siempre se definen en DIP. Para Windows 10 y versiones anteriores de Windows, un DIP se define como 1/96 de una pulgada, y está alineado a la definición del sistema operativo de *up*. Cuando la orientación de la pantalla gira al modo vertical, la aplicación voltea el ancho y el alto de **CoreWindow** y el tamaño de destino de representación (límites) debe cambiar según corresponda. Dado que las coordenadas de Direct3D siempre se dan en píxeles físicos, debes realizar la conversión de valores DIP de **CoreWindow** a valores de píxel enteros antes de pasar estos valores a Direct3D para configurar la cadena de intercambio.
+Además, las coordenadas de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) siempre se definen en DIP. Para Windows 10 y versiones anteriores de Windows, un DIP se define como 1/96 de una pulgada y está alineado a la definición del sistema operativo de *arriba*. Cuando la orientación de la pantalla gira al modo vertical, la aplicación voltea el ancho y el alto de **CoreWindow** y el tamaño de destino de representación (límites) debe cambiar según corresponda. Dado que las coordenadas de Direct3D siempre se dan en píxeles físicos, debes realizar la conversión de valores DIP de **CoreWindow** a valores de píxel enteros antes de pasar estos valores a Direct3D para configurar la cadena de intercambio.
 
 En lo que respecta al proceso, estás realizando un poco más de trabajo que si simplemente cambiases el tamaño de la cadena de cambio: en realidad estás girando los componentes de Direct2D y Direct3D de la imagen antes de componerlos para su presentación, y estás indicando a la cadena de cambio que has representado los resultados en una nueva orientación. Aquí mostramos más detalles sobre este proceso, como se muestra en el ejemplo de código para **DX::DeviceResources::CreateWindowSizeDependentResources**:
 
@@ -348,11 +347,11 @@ En lo que respecta al proceso, estás realizando un poco más de trabajo que si 
     -   horizontal, volteada (DXGI\_MODE\_ROTATION\_ROTATE180)
     -   vertical, volteada (DXGI\_MODE\_ROTATION\_ROTATE90)
 
-    La matriz correcta se selecciona según los datos proporcionados por Windows 10 (como los resultados de [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)) para determinar la orientación de la pantalla, y se multiplicarán por las coordenadas de cada píxel (Direct2D) o vértice (Direct3D) en la escena, girándolos con eficacia para alinearlo con la orientación de la pantalla. (Ten en cuenta que en Direct2D, el origen de la pantalla se define como la esquina superior izquierda, mientras que Direct3D el origen se define como el centro lógico de la ventana).
+    La matriz correcta se selecciona en función de los datos proporcionados por Windows 10 (por ejemplo, los resultados de [**displayinformation:: OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)) para determinar la orientación de la pantalla y se multiplicarán por las coordenadas de cada píxel (Direct2D) o vértice (Direct3D) en la escena, girándolos para alinearlo con la orientación de la pantalla. (Ten en cuenta que en Direct2D, el origen de la pantalla se define como la esquina superior izquierda, mientras que Direct3D el origen se define como el centro lógico de la ventana).
 
-> **Nota** Para obtener más información sobre las transformaciones 2D usadas para la rotación y cómo definirlas, consulta el tema sobre [definición de matrices para la rotación de pantalla (2D)](#appendix-a-applying-matrices-for-screen-rotation-2-d). Para obtener más información sobre las transformaciones 3D usadas para la rotación, consulta el tema sobre [definición de matrices para la rotación de pantalla (3D)](#appendix-b-applying-matrices-for-screen-rotation-3-d).
+> **Nota**  para obtener más información sobre las transformaciones 2D usadas para que la rotación y cómo definirlas, consulta [matrices de definición para la rotación de pantalla (2D)](#appendix-a-applying-matrices-for-screen-rotation-2-d). Para obtener más información sobre las transformaciones 3D usadas para la rotación, consulta el tema sobre [definición de matrices para la rotación de pantalla (3D)](#appendix-b-applying-matrices-for-screen-rotation-3-d).
 
- 
+ 
 
 Ahora viene la parte importante: llama a [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801) e indica la matriz de rotación actualizada, como esta:
 
@@ -369,7 +368,7 @@ A continuación, presenta la cadena de cambio.
 ## <a name="reduce-the-rotation-delay-by-using-corewindowresizemanager"></a>Reduce el retraso de rotación mediante CoreWindowResizeManager.
 
 
-De manera predeterminada, Windows 10 ofrece un período de tiempo corto pero apreciable para cualquier aplicación, independientemente del modelo o el idioma de la aplicación, para completar la rotación de la imagen. Sin embargo, lo más probable es que cuando la aplicación realice el cálculo de rotación mediante una de las técnicas que hemos descrito, lo realice mucho antes de que finalice este período de tiempo. Te gustaría aprovechar ese tiempo y completar la animación de la rotación, ¿verdad? Aquí es donde entra en juego [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603).
+De manera predeterminada, Windows 10 proporciona una ventana corta pero apreciable de tiempo para cualquier aplicación, independientemente del modelo de aplicación o el idioma, para completar la rotación de la imagen. Sin embargo, lo más probable es que cuando la aplicación realice el cálculo de rotación mediante una de las técnicas que hemos descrito, lo realice mucho antes de que finalice este período de tiempo. Te gustaría aprovechar ese tiempo y completar la animación de la rotación, ¿verdad? Aquí es donde entra en juego [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603).
 
 Así es como se usa [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603): cuando se desencadene un evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268), llama a [**CoreWindowResizeManager::GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh404170) dentro del controlador para que el evento obtenga una instancia de **CoreWindowResizeManager** y, cuando se complete y presente el diseño de la nueva orientación, llama a [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605) para que Windows sepa que puede completar la animación de rotación y mostrar la pantalla de la aplicación.
 
@@ -389,7 +388,7 @@ Cuando un usuario gira la orientación de la pantalla, Windows 10 muestra una an
 -   Windows 10 conserva la imagen durante el tiempo que se tarda en reconstruir el nuevo diseño. Este es el período de tiempo que te interesa reducir, porque es probable que la aplicación no necesite todo este tiempo.
 -   Cuando finaliza el período de tiempo o cuando se recibe una notificación de finalización del diseño, Windows gira la imagen y encadena zooms a la nueva orientación.
 
-Como sugerimos en el tercer punto, cuando una aplicación llama a [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605), Windows 10 detiene el período de tiempo de espera, completa la animación de rotación y devuelve el control a la aplicación, que ahora se muestra en la nueva orientación de pantalla. El efecto general es que la aplicación se muestra algo más fluida, responde más fácilmente y funciona de manera más eficaz.
+Como sugerimos en el tercer punto, cuando una aplicación llama a [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605), Windows 10 detiene el período de tiempo de espera, completa la animación de rotación y devuelve el control a la aplicación, que ahora se en la nueva orientación de pantalla. El efecto general es que la aplicación se muestra algo más fluida, responde más fácilmente y funciona de manera más eficaz.
 
 ## <a name="appendix-a-applying-matrices-for-screen-rotation-2-d"></a>Apéndice A: Aplicar matrices para la rotación de pantalla (2D)
 
@@ -452,9 +451,9 @@ default:
 
 Una vez que tengas la matriz de rotación y el origen correctos para la imagen 2D, establécelo con una llamada a [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) entre las llamadas a [**ID2D1DeviceContext::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371768) y [**ID2D1DeviceContext::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371924).
 
-**Advertencia** Direct2D no tiene ninguna pila de transformación. Si la aplicación también está usando [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) como parte de su código de representación, esta matriz necesita multiplicarse posteriormente para cualquier otra transformación que hayas aplicado.
+**Advertencia**  Direct2D no tiene ninguna pila de transformación. Si la aplicación también está usando [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) como parte de su código de representación, esta matriz necesita multiplicarse posteriormente para cualquier otra transformación que hayas aplicado.
 
- 
+ 
 
 ```cpp
     ID2D1DeviceContext* context = m_deviceResources->GetD2DDeviceContext();
@@ -554,9 +553,9 @@ m_constantBufferData.projection = mul(m_constantBufferData.projection, m_rotatio
 
 Después, cuando llames al método de representación, la matriz de rotación actual (especificada por variable de clase **m\_orientationTransform3D**) se multiplica por la matriz de proyección actual y asigna los resultados de esta operación como la nueva matriz de proyección para el representador. Presenta la cadena de intercambio para ver la escena en la orientación de pantalla actualizada.
 
- 
+ 
 
- 
+ 
 
 
 

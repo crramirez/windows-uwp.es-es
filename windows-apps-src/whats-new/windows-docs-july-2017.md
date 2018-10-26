@@ -6,15 +6,13 @@ keywords: novedades, actualización, características, directrices para los desa
 ms.author: quradic
 ms.date: 07/05/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e439c0b1c20f03c9519d29a24979e5008f3de94e
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 62afbef1cc1f47bbc88c45a166572deca28d47a4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691844"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546591"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novedades en los documentos de los desarrolladores de Windows de julio de 2017
 
@@ -110,7 +108,7 @@ El artículo [Procesar fotogramas multimedia con MediaFrameReader](../audio-vide
 
 ### <a name="scoped-search"></a>Ámbito de búsqueda
 
-Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-started/universal-application-platform-guide.md) y de [referencia de la API](https://docs.microsoft.com/en-us/uwp/api/) en docs.microsoft.com. A menos que este ámbito esté desactivado, las búsquedas que se realicen desde dentro de estas áreas devolverán solo documentos UWP.
+Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-started/universal-application-platform-guide.md) y de la [referencia de API](https://docs.microsoft.com/en-us/uwp/api/) sobre docs.microsoft.com. A menos que este ámbito está desactivado, las búsquedas realizadas dentro de estas áreas devolverán solo documentos de UWP.
 
 ![Ámbito de búsqueda](images/scoped-search.png)
 

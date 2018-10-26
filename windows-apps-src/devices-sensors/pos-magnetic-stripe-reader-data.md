@@ -5,16 +5,14 @@ description: Obtén información sobre cómo obtener e interpretar los datos de 
 ms.author: elcowle
 ms.date: 10/04/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, punto de servicio, pos, lector de bandas magnéticas
 ms.localizationpriority: medium
-ms.openlocfilehash: ad954e8c03d92307fa72ead236d5428ac2bdddab
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: a130243fb5a77277e4e8a326316cd30bab2cd96e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5518555"
+ms.locfileid: "5572394"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>Obtener y comprender los datos de bandas magnéticas
 

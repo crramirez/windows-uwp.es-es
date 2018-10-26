@@ -8,17 +8,15 @@ title: Efectos de vídeo personalizados
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a1f53bb1165561865124a960940fab3f4325061
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 08d861355a235c9217f51ce6f925224a27a562ef
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843325"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544761"
 ---
 # <a name="custom-video-effects"></a>Efectos de vídeo personalizados
 
@@ -99,7 +97,7 @@ El sistema comprueba la propiedad [**SupportedEncodingProperties**](https://msdn
 > [!NOTE] 
 > Si se devuelve una lista vacía de objetos [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) de **SupportedEncodingProperties**, el sistema tendrá como valor predeterminado la codificación ARGB32.
 
- 
+ 
 
 ### <a name="supportedmemorytypes-property"></a>Propiedad SupportedMemoryTypes
 
@@ -111,7 +109,7 @@ El sistema comprueba la propiedad [**SupportedMemoryTypes**](https://msdn.micros
 > [!NOTE]
 > Si especificas [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822), el sistema usará la memoria del sistema o de la GPU, la que sea más eficiente para la canalización. Cuando uses este valor, debes comprobar el método [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) para ver si el valor de [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) o [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) pasado al método contiene datos y luego procesar el fotograma según corresponda.
 
- 
+ 
 
 ### <a name="timeindependent-property"></a>Propiedad TimeIndependent
 
@@ -154,7 +152,7 @@ Agrega el siguiente código dentro del espacio de nombres para que el efecto imp
 > 2.  Selecciona la pestaña **Compilación**.
 > 3.  Activa la casilla **Permitir código no seguro**.
 
- 
+ 
 
 Ahora puedes agregar la implementación del método **ProcessFrame**. Primero, este método obtiene un objeto [**BitmapBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887325) de los mapas de bits de software de entrada y salida. Ten en cuenta que el fotograma de salida se abre para la escritura y, el de entrada, para la lectura. Luego, se obtiene un valor de [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671) para cada búfer llamando a [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046). A continuación, se obtiene el búfer de datos reales convirtiendo los objetos **IMemoryBufferReference** como la interfaz de interoperabilidad definida anteriormente, **IMemoryByteAccess** y, a continuación, se llama a **GetBuffer**.
 

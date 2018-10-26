@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3781c5c907ad90cc3f587e26cdece9d1646db53e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 72be66c3bf7b0e58092ae3a7e1baf82c9e686f0c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044934"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549152"
 ---
 # <a name="rasterization-rules"></a>Reglas de rasterización
 
@@ -136,9 +134,9 @@ De hecho, se recomienda no combinar derivados con el muestreo centroide. El mues
 
 [Fase del rasterizador (RS)](rasterizer-stage--rs-.md)
 
- 
+ 
 
- 
+ 
 
 
 

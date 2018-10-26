@@ -5,16 +5,14 @@ description: Este tutorial muestra c처mo configurar un servidor web de Azure, c�
 ms.author: cdon
 ms.date: 09/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, instalador de aplicaci처n, AppInstaller, instalaci처n de prueba, conjunto relacionado, paquetes opcionales, servidor web de Azure
 ms.localizationpriority: medium
-ms.openlocfilehash: b98ca6316f733210dbdbc5201178b3a89a2b5982
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: b7ea002686199b992af45af775f53c96fd108a13
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474728"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546604"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Instalar una aplicaci처n para UWP desde una aplicaci처n Web de Azure
 

@@ -6,19 +6,17 @@ ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, citas, calendario, appointments, calendar
-ms.openlocfilehash: d4bc4832dd489508eabbddd486f782ac8b0191a3
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 345bbabb2bd80f0cbb8465941bec07c7172156e8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548925"
 ---
 # <a name="manage-appointments"></a>Administrar citas
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Con el espacio de nombres [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/Dn263359), puedes crear y administrar citas en la aplicación de calendario de un usuario. Aquí te mostraremos cómo crear una cita, agregarla a la aplicación de calendario, reemplazarla en dicha aplicación y quitarla de ella. También te enseñaremos cómo mostrar un intervalo de tiempo para una aplicación de calendario y crear un objeto de repetición de citas.
@@ -286,7 +284,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Nota** En las aplicaciones de la Tienda de Windows Phone, [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona igual que [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) en el sentido de que el cuadro de diálogo para agregar la cita es editable.
+**Nota**para aplicaciones de la tienda de Windows Phone, [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona igual que [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) en que el cuadro de diálogo para agregar la cita es editable.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>Reemplazar una cita en el calendario del usuario
 
@@ -574,6 +572,6 @@ Con esto deberías tener nociones básicas sobre cómo administrar citas. Descar
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Muestra de API de citas](http://go.microsoft.com/fwlink/p/?linkid=309836)
- 
+ 
 
- 
+ 

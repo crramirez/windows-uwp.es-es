@@ -9,15 +9,13 @@ keywords: táctil, función táctil,puntero,entrada,interacción del usuario
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ef67c179e691d14f3636a663a24ebbb862c35f7
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: fbb2b6e5edee47d75d7115a38f95abf5ae71529a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675192"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543485"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 
@@ -78,14 +76,13 @@ En la tabla siguiente, se muestran algunas de las diferencias entre los disposit
 
 
 
-**Nota**  
-La entrada indirecta tiene la ventaja de más de 25 años de perfeccionamiento. Algunas funciones, como la información sobre herramientas desencadenada al mantener el mouse sobre un elemento, se diseñaron para explorar la interfaz de usuario específicamente con entrada de panel táctil, mouse, pluma o lápiz y teclado. Funciones de UI como esta se han rediseñado para lograr la experiencia completa que reporta la entrada táctil, sin poner en riesgo la experiencia de usuario de estos otros dispositivos.
+**Nota**  entrada indirecta tiene la ventaja de más de 25 años de perfeccionamiento. Algunas funciones, como la información sobre herramientas desencadenada al mantener el mouse sobre un elemento, se diseñaron para explorar la interfaz de usuario específicamente con entrada de panel táctil, mouse, pluma o lápiz y teclado. Funciones de UI como esta se han rediseñado para lograr la experiencia completa que reporta la entrada táctil, sin poner en riesgo la experiencia de usuario de estos otros dispositivos.
 
- 
+ 
 
 ## <a name="use-touch-feedback"></a>Usar la información táctil
 
-La información visual adecuada durante las interacciones con la aplicación ayuda a los usuarios a reconocer, aprender y adaptar cómo la aplicación y la plataforma Windows interpretan sus interacciones. La información visual puede indicar interacciones satisfactorias y el estado del sistema relé, mejorar la sensación de control, reducir errores, ayudar a los usuarios a entender el sistema y el dispositivo de entrada, y alentar la interacción.
+La información visual adecuada durante las interacciones con la aplicación ayuda a los usuarios a reconocer, aprender y adaptar cómo interpretan sus interacciones por la aplicación y el Windowsplatform. La información visual puede indicar interacciones satisfactorias y el estado del sistema relé, mejorar la sensación de control, reducir errores, ayudar a los usuarios a entender el sistema y el dispositivo de entrada, y alentar la interacción.
 
 La información visual es esencial cuando el usuario usa la entrada táctil para llevar a cabo actividades que requieren exactitud y precisión en lo que respecta a ubicación. Muestra información siempre que se detecte entrada táctil para ayudar al usuario a entender cualquier regla personalizada de selección de destinos que defina la aplicación y los controles correspondientes.
 
@@ -156,9 +153,9 @@ Además, te recomendamos lo siguiente:
 -   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
 -   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
-    **Nota** Una excepción a esto se produce cuando se usan interacciones temporales específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
+    **Nota**una excepción a esto es donde se usan interacciones temporales específicas para favorecer aprendizaje y la exploración (por ejemplo, pulsar y sostener).
 
-     
+     
 
 -   Las descripciones y las indicaciones visuales adecuadas tienen un gran efecto sobre el uso de las interacciones avanzadas.
 
@@ -207,7 +204,7 @@ Este es el conjunto básico de gestos táctiles que admite la UWP.
 | Reducir          | Gesto de manipulación | Dos o más dedos tocan la pantalla y se acercan entre sí.                         |
 | Ampliar        | Gesto de manipulación | Dos o más dedos tocan la pantalla y se alejan entre sí.                           |
 
- 
+ 
 
 <!-- mijacobs: Removing for now. We don't have a real page to link to yet. 
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
@@ -239,7 +236,7 @@ Esta es una lista de eventos de puntero y su argumento de evento relacionado.
 | [**PointerWheelChanged**](https://msdn.microsoft.com/library/windows/apps/br208973)   | Se produce cuando cambia el valor delta de la rueda del mouse.         |
 | [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) | Proporciona datos para todos los eventos de puntero.                         |
 
- 
+ 
 
 En el ejemplo siguiente se muestra cómo usar los eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971), [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) y [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969) para controlar una interacción de presionar en un objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle).
 
@@ -435,15 +432,15 @@ Esta es una lista de eventos de manipulación y los argumentos de evento relacio
 | [**ManipulationVelocities**](https://msdn.microsoft.com/library/windows/apps/br242032)                                              | Describe la velocidad a la que tienen lugar las manipulaciones.                                                                                         |
 | [**ManipulationCompletedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702035)             | Proporciona datos para el evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945).                                       |
 
- 
+ 
 
 Un gesto consiste en una serie de eventos de manipulación. Cada gesto se inicia con un evento [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950), por ejemplo, cuando un usuario toca la pantalla.
 
 A continuación, se desencadenan uno o más eventos [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946). Por ejemplo, si tocas la pantalla y luego arrastras el dedo por la pantalla. Por último, cuando termina la interacción, tiene lugar un evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945).
 
-**Nota** Si no tienes monitor con pantalla táctil, puedes probar tu código para el evento de manipulación en el simulador si usas un mouse y una interfaz de rueda de mouse.
+**Nota**si no tienes un monitor con pantalla táctil, puedes probar el código de eventos de manipulación en el simulador si usas un mouse y la interfaz de rueda de mouse.
 
- 
+ 
 
 En el ejemplo siguiente se muestra cómo usar los eventos [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) para controlar una interacción de deslizamiento en un objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) y moverlo por la pantalla.
 
@@ -607,9 +604,9 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 * [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
+ 
 
- 
+ 
 
 
 

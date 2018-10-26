@@ -4,18 +4,16 @@ title: Iniciar la aplicación predeterminada de un archivo
 description: Obtén información sobre cómo iniciar la aplicación predeterminada de un archivo.
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 07/05/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 294ab01d03fd407e8aa52a4e37f17f8ff6409ff3
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 736018fbf966b547c3dd41e245149d498c1231e3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663405"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544512"
 ---
 # <a name="launch-the-default-app-for-a-file"></a>Iniciar la aplicación predeterminada para un archivo
 
@@ -48,87 +46,114 @@ Windows proporciona varias opciones distintas para iniciar el controlador predet
 
 Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) para iniciar la aplicación predeterminada. En este ejemplo, se usa el método [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para iniciar un archivo de imagen, test.png, incluido en el paquete de la aplicación.
 
+```csharp
+async void DefaultLaunch()
+{
+   // Path to the file in the app package to launch
+   string imageFile = @"images\test.png";
+   
+   var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
+   
+   if (file != null)
+   {
+      // Launch the retrieved file
+      var success = await Windows.System.Launcher.LaunchFileAsync(file);
 
-> [!div class="tabbedCodeSnippets"]
-> ```vb
-> async Sub DefaultLaunch()
->    ' Path to the file in the app package to launch
->    Dim imageFile = "images\test.png"
->    Dim file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile)
->    
->    If file IsNot Nothing Then
->       ' Launch the retrieved file
->       Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
->
->       If success Then
->          ' File launched
->       Else
->          ' File launch failed
->       End If
->    Else
->       ' Could not find file
->    End If
-> End Sub
-> ```
-> ```cpp
-> void MainPage::DefaultLaunch()
-> {
->    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
->
->    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
->    getFileOperation.then([](Windows::Storage::StorageFile^ file)
->    {
->       if (file != nullptr)
->       {
->          // Launch the retrieved file
->          concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file));
->          launchFileOperation.then([](bool success)
->          {
->             if (success)
->             {
->                // File launched
->             }
->             else
->             {
->                // File launch failed
->             }
->          });
->       }
->       else
->       {
->          // Could not find file
->       }
->    });
-> }
-> ```
-> ```cs
-> async void DefaultLaunch()
-> {
->    // Path to the file in the app package to launch
->    string imageFile = @"images\test.png";
->    
->    var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
->    
->    if (file != null)
->    {
->       // Launch the retrieved file
->       var success = await Windows.System.Launcher.LaunchFileAsync(file);
->
->       if (success)
->       {
->          // File launched
->       }
->       else
->       {
->          // File launch failed
->       }
->    }
->    else
->    {
->       // Could not find file
->    }
-> }
-> ```
+      if (success)
+      {
+         // File launched
+      }
+      else
+      {
+         // File launch failed
+      }
+   }
+   else
+   {
+      // Could not find file
+   }
+}
+```
+
+```vb
+async Sub DefaultLaunch()
+   ' Path to the file in the app package to launch
+   Dim imageFile = "images\test.png"
+   Dim file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile)
+   
+   If file IsNot Nothing Then
+      ' Launch the retrieved file
+      Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
+
+      If success Then
+         ' File launched
+      Else
+         ' File launch failed
+      End If
+   Else
+      ' Could not find file
+   End If
+End Sub
+```
+
+```cppwinrt
+Windows::Foundation::IAsyncAction MainPage::DefaultLaunch()
+{
+    auto installFolder{ Windows::ApplicationModel::Package::Current().InstalledLocation() };
+
+    Windows::Storage::StorageFile file{ co_await installFolder.GetFileAsync(L"images\\test.png") };
+
+    if (file)
+    {
+        // Launch the retrieved file
+        bool success = co_await Windows::System::Launcher::LaunchFileAsync(file);
+        if (success)
+        {
+            // File launched
+        }
+        else
+        {
+            // File launch failed
+        }
+    }
+    else
+    {
+        // Could not find file
+    }
+}
+```
+
+```cpp
+void MainPage::DefaultLaunch()
+{
+   auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
+
+   concurrency::task<Windows::Storage::StorageFile^getFileOperation(installFolder->GetFileAsync("images\\test.png"));
+   getFileOperation.then([](Windows::Storage::StorageFile^ file)
+   {
+      if (file != nullptr)
+      {
+         // Launch the retrieved file
+         concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file));
+         launchFileOperation.then([](bool success)
+         {
+            if (success)
+            {
+               // File launched
+            }
+            else
+            {
+               // File launch failed
+            }
+         });
+      }
+      else
+      {
+         // Could not find file
+      }
+   });
+}
+```
 
 ### <a name="open-with-launch"></a>Abrir con inicio
 
@@ -138,287 +163,384 @@ Recomendamos que uses el cuadro de diálogo **Abrir con**, cuando el usuario qui
 
 ![se inicia el cuadro de diálogo Abrir con de un archivo .png el cuadro de diálogo contiene una casilla que especifica si la elección del usuario se debe usar para todos los archivos .png o solo para este archivo .png. el cuadro de diálogo contiene cuatro opciones de la aplicación para iniciar el archivo y un vínculo 'más opciones'.](images/checkboxopenwithdialog.png)
 
-> [!div class="tabbedCodeSnippets"]
-> ```vb
-> async Sub DefaultLaunch()
->
->    ' Path to the file in the app package to launch
->    Dim imageFile = "images\test.png"
->
->    Dim file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile)
->
->    If file IsNot Nothing Then
->       ' Set the option to show the picker
->       Dim options = Windows.System.LauncherOptions()
->       options.DisplayApplicationPicker = True
->
->       ' Launch the retrieved file
->       Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
->
->       If success Then
->          ' File launched
->       Else
->          ' File launch failed
->       End If
->    Else
->       ' Could not find file
->    End If
-> End Sub
-> ```
-> ```cpp
-> void MainPage::DefaultLaunch()
-> {
->    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
->
->    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
->    getFileOperation.then([](Windows::Storage::StorageFile^ file)
->    {
->       if (file != nullptr)
->       {
->          // Set the option to show the picker
->          auto launchOptions = ref new Windows::System::LauncherOptions();
->          launchOptions->DisplayApplicationPicker = true;
->
->          // Launch the retrieved file
->          concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
->          launchFileOperation.then([](bool success)
->          {
->             if (success)
->             {
->                // File launched
->             }
->             else
->             {
->                // File launch failed
->             }
->          });
->       }
->       else
->       {
->          // Could not find file
->       }
->    });
-> }
-> ```
-> ```cs
-> async void DefaultLaunch()
-> {
->    // Path to the file in the app package to launch
->       string imageFile = @"images\test.png";
->       
->    var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
->
->    if (file != null)
->    {
->       // Set the option to show the picker
->       var options = new Windows.System.LauncherOptions();
->       options.DisplayApplicationPicker = true;
->
->       // Launch the retrieved file
->       bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
->       if (success)
->       {
->          // File launched
->       }
->       else
->       {
->          // File launch failed
->       }
->    }
->    else
->    {
->       // Could not find file
->    }
-> }
-> ```
+```csharp
+async void DefaultLaunch()
+{
+   // Path to the file in the app package to launch
+      string imageFile = @"images\test.png";
+      
+   var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
+
+   if (file != null)
+   {
+      // Set the option to show the picker
+      var options = new Windows.System.LauncherOptions();
+      options.DisplayApplicationPicker = true;
+
+      // Launch the retrieved file
+      bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
+      if (success)
+      {
+         // File launched
+      }
+      else
+      {
+         // File launch failed
+      }
+   }
+   else
+   {
+      // Could not find file
+   }
+}
+```
+
+```vb
+async Sub DefaultLaunch()
+
+   ' Path to the file in the app package to launch
+   Dim imageFile = "images\test.png"
+
+   Dim file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile)
+
+   If file IsNot Nothing Then
+      ' Set the option to show the picker
+      Dim options = Windows.System.LauncherOptions()
+      options.DisplayApplicationPicker = True
+
+      ' Launch the retrieved file
+      Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
+
+      If success Then
+         ' File launched
+      Else
+         ' File launch failed
+      End If
+   Else
+      ' Could not find file
+   End If
+End Sub
+```
+
+```cppwinrt
+Windows::Foundation::IAsyncAction MainPage::DefaultLaunch()
+{
+    auto installFolder{ Windows::ApplicationModel::Package::Current().InstalledLocation() };
+
+    Windows::Storage::StorageFile file{ co_await installFolder.GetFileAsync(L"images\\test.png") };
+
+    if (file)
+    {
+        // Set the option to show the picker
+        Windows::System::LauncherOptions launchOptions;
+        launchOptions.DisplayApplicationPicker(true);
+
+        // Launch the retrieved file
+        bool success = co_await Windows::System::Launcher::LaunchFileAsync(file, launchOptions);
+        if (success)
+        {
+            // File launched
+        }
+        else
+        {
+            // File launch failed
+        }
+    }
+    else
+    {
+        // Could not find file
+    }
+}
+```
+
+```cpp
+void MainPage::DefaultLaunch()
+{
+   auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
+
+   concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
+   getFileOperation.then([](Windows::Storage::StorageFile^ file)
+   {
+      if (file != nullptr)
+      {
+         // Set the option to show the picker
+         auto launchOptions = ref new Windows::System::LauncherOptions();
+         launchOptions->DisplayApplicationPicker = true;
+
+         // Launch the retrieved file
+         concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
+         launchFileOperation.then([](bool success)
+         {
+            if (success)
+            {
+               // File launched
+            }
+            else
+            {
+               // File launch failed
+            }
+         });
+      }
+      else
+      {
+         // Could not find file
+      }
+   });
+}
+```
 
 **Iniciar con una reserva de aplicación recomendada**
 
 En algunos casos, el usuario podría no tener instalada una aplicación para administrar el archivo que estás iniciando. Si esto sucede, de manera predeterminada, Windows ofrece un vínculo al usuario para que busque una aplicación apropiada en la Tienda. Si quieres recomendar al usuario qué aplicación comprar en este escenario, debes incluir la recomendación junto con el archivo que estás iniciando. Para ello, llama al método [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) con [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) establecido con el nombre de familia de paquete correspondiente a la aplicación de la Tienda que quieras recomendar. Después, establece [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481) en el nombre de dicha aplicación. Windows usará esta información para reemplazar la opción general de buscar una aplicación por una opción específica para comprar la aplicación recomendada en la Tienda.
 
-> **Nota** Debes establecer estas dos opciones para recomendar una aplicación. Si se establece una, pero la otra no, se producirá un error.
+> [!NOTE]
+> Debes establecer estas dos opciones para recomendar una aplicación. Si se establece una, pero la otra no, se producirá un error.
 
 ![se inicia el cuadro de diálogo Abrir con de un archivo .contoso dado que .contoso no tiene un controlador instalado en el equipo, el cuadro de diálogo contiene una opción con el icono de la Tienda y un texto que indica al usuario cuál es el controlador correcto de la Tienda. el cuadro de diálogo también contiene un vínculo ‘más opciones’.](images/howdoyouwanttoopen.png)
 
+```csharp
+async void DefaultLaunch()
+{
+   // Path to the file in the app package to launch
+   string imageFile = @"images\test.contoso";
 
-> [!div class="tabbedCodeSnippets"]
-> ```vb
-> async Sub DefaultLaunch()
->
->    ' Path to the file in the app package to launch
->    Dim imageFile = "images\test.contoso"
->
->    ' Get the image file from the package's image directory
->    Dim file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile)
->
->    If file IsNot Nothing Then
->       ' Set the recommended app
->       Dim options = Windows.System.LauncherOptions()
->       options.PreferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
->       options.PreferredApplicationDisplayName = "Contoso File App";
->
->       ' Launch the retrieved file pass in the recommended app
->       ' in case the user has no apps installed to handle the file
->       Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
->
->       If success Then
->          ' File launched
->       Else
->          ' File launch failed
->       End If
->    Else
->       ' Could not find file
->    End If
-> End Sub
-> ```
-> ```cpp
-> void MainPage::DefaultLaunch()
-> {
->    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
->
->    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.contoso"));
->    getFileOperation.then([](Windows::Storage::StorageFile^ file)
->    {
->       if (file != nullptr)
->       {
->          // Set the recommended app
->          auto launchOptions = ref new Windows::System::LauncherOptions();
->          launchOptions-> preferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
->          launchOptions-> preferredApplicationDisplayName = "Contoso File App";
->          
->          // Launch the retrieved file pass in the recommended app
->          // in case the user has no apps installed to handle the file
->          concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
->          launchFileOperation.then([](bool success)
->          {
->             if (success)
->             {
->                // File launched
->             }
->             else
->             {
->                // File launch failed
->             }
->          });
->       }
->       else
->       {
->          // Could not find file
->       }
->    });
-> }
-> ```
-> ```cs
-> async void DefaultLaunch()
-> {
->    // Path to the file in the app package to launch
->    string imageFile = @"images\test.contoso";
->
->    // Get the image file from the package's image directory
->    var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
->
->    if (file != null)
->    {
->       // Set the recommended app
->       var options = new Windows.System.LauncherOptions();
->       options.PreferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
->       options.PreferredApplicationDisplayName = "Contoso File App";
->
->
->       // Launch the retrieved file pass in the recommended app
->       // in case the user has no apps installed to handle the file
->       bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
->       if (success)
->       {
->          // File launched
->       }
->       else
->       {
->          // File launch failed
->       }
->    }
->    else
->    {
->       // Could not find file
->    }
-> }
-> ```
+   // Get the image file from the package's image directory
+   var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
+
+   if (file != null)
+   {
+      // Set the recommended app
+      var options = new Windows.System.LauncherOptions();
+      options.PreferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
+      options.PreferredApplicationDisplayName = "Contoso File App";
+
+      // Launch the retrieved file pass in the recommended app
+      // in case the user has no apps installed to handle the file
+      bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
+      if (success)
+      {
+         // File launched
+      }
+      else
+      {
+         // File launch failed
+      }
+   }
+   else
+   {
+      // Could not find file
+   }
+}
+```
+
+```vb
+async Sub DefaultLaunch()
+
+   ' Path to the file in the app package to launch
+   Dim imageFile = "images\test.contoso"
+
+   ' Get the image file from the package's image directory
+   Dim file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile)
+
+   If file IsNot Nothing Then
+      ' Set the recommended app
+      Dim options = Windows.System.LauncherOptions()
+      options.PreferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
+      options.PreferredApplicationDisplayName = "Contoso File App";
+
+      ' Launch the retrieved file pass in the recommended app
+      ' in case the user has no apps installed to handle the file
+      Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
+
+      If success Then
+         ' File launched
+      Else
+         ' File launch failed
+      End If
+   Else
+      ' Could not find file
+   End If
+End Sub
+```
+
+```cppwinrt
+Windows::Foundation::IAsyncAction MainPage::DefaultLaunch()
+{
+    auto installFolder{ Windows::ApplicationModel::Package::Current().InstalledLocation() };
+
+    Windows::Storage::StorageFile file{ co_await installFolder.GetFileAsync(L"images\\test.png") };
+
+    if (file)
+    {
+        // Set the recommended app
+        Windows::System::LauncherOptions launchOptions;
+        launchOptions.PreferredApplicationPackageFamilyName(L"Contoso.FileApp_8wknc82po1e");
+        launchOptions.PreferredApplicationDisplayName(L"Contoso File App");
+
+        // Launch the retrieved file, and pass in the recommended app
+        // in case the user has no apps installed to handle the file.
+        bool success = co_await Windows::System::Launcher::LaunchFileAsync(file, launchOptions);
+        if (success)
+        {
+            // File launched
+        }
+        else
+        {
+            // File launch failed
+        }
+    }
+    else
+    {
+        // Could not find file
+    }
+}
+```
+
+```cpp
+void MainPage::DefaultLaunch()
+{
+   auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
+
+   concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.contoso"));
+   getFileOperation.then([](Windows::Storage::StorageFile^ file)
+   {
+      if (file != nullptr)
+      {
+         // Set the recommended app
+         auto launchOptions = ref new Windows::System::LauncherOptions();
+         launchOptions->PreferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
+         launchOptions->PreferredApplicationDisplayName = "Contoso File App";
+         
+         // Launch the retrieved file pass, and in the recommended app
+         // in case the user has no apps installed to handle the file.
+         concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
+         launchFileOperation.then([](bool success)
+         {
+            if (success)
+            {
+               // File launched
+            }
+            else
+            {
+               // File launch failed
+            }
+         });
+      }
+      else
+      {
+         // Could not find file
+      }
+   });
+}
+```
 
 ### <a name="launch-with-a-desired-remaining-view-windows-only"></a>Inicio con una vista deseada permanente (solo Windows)
 
 Las aplicaciones de origen que llaman a [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) pueden solicitar que permanezcan en pantalla después de iniciarse un archivo. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el archivo. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. También puedes usar el elemento **DesiredRemainingView** para indicar que la aplicación de origen no necesita permanecer en pantalla después de iniciar un archivo y que la aplicación de destino puede sustituirla por completo. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
 
-> **Nota** Windows tiene en cuenta diferentes factores a la hora de determinar el tamaño final de la ventana de la aplicación de origen como, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. Establecer [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no garantiza un comportamiento de ventanas específico para la aplicación de origen.
+> [!NOTE]
+> Windows tiene en cuenta diferentes factores a la hora de determinar tamaño de ventana final de la aplicación de origen, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de pantalla y así sucesivamente. Establecer [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no garantiza un comportamiento de ventanas específico para la aplicación de origen.
 
-**Mobile device family:  **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no se admite en la familia de dispositivos móviles.
+**Familia de dispositivos móviles:** [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no se admite en la familia de dispositivos móviles.
 
-> [!div class="tabbedCodeSnippets"]
-> ```cpp
-> void MainPage::DefaultLaunch()
-> {
->    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
->
->    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
->    getFileOperation.then([](Windows::Storage::StorageFile^ file)
->    {
->       if (file != nullptr)
->       {
->          // Set the desired remaining view
->          auto launchOptions = ref new Windows::System::LauncherOptions();
->          launchOptions->DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseLess;
->
->          // Launch the retrieved file
->          concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
->          launchFileOperation.then([](bool success)
->          {
->             if (success)
->             {
->                // File launched
->             }
->             else
->             {
->                // File launch failed
->             }
->          });
->       }
->       else
->       {
->          // Could not find file
->       }
->    });
-> }
-> ```
-> ```cs
-> async void DefaultLaunch()
-> {
->    // Path to the file in the app package to launch
->    string imageFile = @"images\test.png";
->    
->    var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
->
->    if (file != null)
->    {
->       // Set the desired remaining view
->       var options = new Windows.System.LauncherOptions();
->       options.DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseLess;
->
->       // Launch the retrieved file
->       bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
->       if (success)
->       {
->          // File launched
->       }
->       else
->       {
->          // File launch failed
->       }
->    }
->    else
->    {
->       // Could not find file
->    }
-> }
-> ```
+```csharp
+async void DefaultLaunch()
+{
+   // Path to the file in the app package to launch
+   string imageFile = @"images\test.png";
+   
+   var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
+
+   if (file != null)
+   {
+      // Set the desired remaining view
+      var options = new Windows.System.LauncherOptions();
+      options.DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseLess;
+
+      // Launch the retrieved file
+      bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
+      if (success)
+      {
+         // File launched
+      }
+      else
+      {
+         // File launch failed
+      }
+   }
+   else
+   {
+      // Could not find file
+   }
+}
+```
+
+```cppwinrt
+Windows::Foundation::IAsyncAction MainPage::DefaultLaunch()
+{
+    auto installFolder{ Windows::ApplicationModel::Package::Current().InstalledLocation() };
+
+    Windows::Storage::StorageFile file{ co_await installFolder.GetFileAsync(L"images\\test.png") };
+
+    if (file)
+    {
+        // Set the desired remaining view.
+        Windows::System::LauncherOptions launchOptions;
+        launchOptions.DesiredRemainingView(Windows::UI::ViewManagement::ViewSizePreference::UseLess);
+
+        // Launch the retrieved file.
+        bool success = co_await Windows::System::Launcher::LaunchFileAsync(file, launchOptions);
+        if (success)
+        {
+            // File launched
+        }
+        else
+        {
+            // File launch failed
+        }
+    }
+    else
+    {
+        // Could not find file
+    }
+}
+```
+
+```cpp
+void MainPage::DefaultLaunch()
+{
+   auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
+
+   concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
+   getFileOperation.then([](Windows::Storage::StorageFile^ file)
+   {
+      if (file != nullptr)
+      {
+         // Set the desired remaining view.
+         auto launchOptions = ref new Windows::System::LauncherOptions();
+         launchOptions->DesiredRemainingView = Windows::UI::ViewManagement::ViewSizePreference::UseLess;
+
+         // Launch the retrieved file.
+         concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
+         launchFileOperation.then([](bool success)
+         {
+            if (success)
+            {
+               // File launched
+            }
+            else
+            {
+               // File launch failed
+            }
+         });
+      }
+      else
+      {
+         // Could not find file
+      }
+   });
+}
+```
 
 ## <a name="remarks"></a>Observaciones
 
@@ -430,25 +552,18 @@ No puedes iniciar tipos de archivo que contengan código o script, como archivos
 
 Si intentas iniciar un tipo de archivo restringido, se producirá un error en el inicio y se invocará a la devolución de llamada de error. Si tu aplicación controla una gran cantidad de tipos de archivo y esperas que este error pueda detectarse, conviene que proveas al usuario de una experiencia de reserva. Por ejemplo, puedes ofrecerle la posibilidad de guardar el archivo en el escritorio para poder abrirlo desde allí.
 
-
- 
 ## <a name="related-topics"></a>Artículos relacionados
 
-
-**Tareas**
+### <a name="tasks"></a>Tareas
 
 * [Iniciar la aplicación predeterminada de un URI](launch-default-app.md)
 * [Controlar la activación de archivos](handle-file-activation.md)
 
-**Instrucciones**
+### <a name="guidelines"></a>Instrucciones
 
 * [Directrices sobre tipos de archivo y URI](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
-**Referencia**
+### <a name="reference"></a>Referencia
 
 * [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)
 * [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
-
- 
-
- 

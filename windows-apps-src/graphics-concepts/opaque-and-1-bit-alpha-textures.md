@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b882c70701d2ea2f8abef14a7d3319616696ea4
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 672d7b2ddc913ea3a966fbd0a095367521a27d7c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044734"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550197"
 ---
 # <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas alfa de 1 bit y opacas
 
@@ -70,7 +68,7 @@ El siguiente es el diseño de la memoria para el bloque de 8 bytes (64 bits):
 | 2            | Bitmap Word\_0 |
 | 3            | Bitmap Word\_1 |
 
- 
+ 
 
 Color\_0 y Color\_1, los colores de los dos extremos, tienen el siguiente diseño:
 
@@ -80,7 +78,7 @@ Color\_0 y Color\_1, los colores de los dos extremos, tienen el siguiente diseñ
 | 10:5        | Componente de color verde |
 | 15:11       | Componente de color rojo   |
 
- 
+ 
 
 \*bit menos importante
 
@@ -97,7 +95,7 @@ Bitmap Word\_0 tiene el siguiente diseño:
 | 13:12         | Texel\[1\]\[2\] |
 | 15:14 (MSB\*) | Texel\[1\]\[3\] |
 
- 
+ 
 
 \*bit más importante (MSB)
 
@@ -114,7 +112,7 @@ Bitmap Word\_1 tiene el siguiente diseño:
 | 13:12       | Texel\[3\]\[2\] |
 | 15:14 (MSB) | Texel\[3\]\[3\] |
 
- 
+ 
 
 ## <a name="span-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanexample-of-opaque-color-encoding"></a><span id="Example_of_Opaque_Color_Encoding"></span><span id="example_of_opaque_color_encoding"></span><span id="EXAMPLE_OF_OPAQUE_COLOR_ENCODING"></span>Ejemplo de codificación de color opaco
 
@@ -134,9 +132,9 @@ El mapa de bits tiene el aspecto del siguiente diagrama.
 
 Tiene el aspecto de la siguiente serie ilustrada de colores.
 
-**Nota** en una imagen, los píxeles (0,0) aparecen en la esquina superior izquierda.
+**Nota**  en una imagen, los píxeles (0,0) aparecen en la parte superior izquierda.
 
- 
+ 
 
 ![ilustración de un degradado codificado opaco](images/redsquares.png)
 
@@ -169,9 +167,9 @@ El mapa de bits tiene el aspecto del siguiente diagrama.
 
 [Recursos de texturas comprimidas](compressed-texture-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,19 +6,18 @@ ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, juegos, OpenGL, Direct3D, canalización de sombreador
-ms.openlocfilehash: 20d02d9b9724c0cfd8120d4d38fa476b9efa3bb3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: f8e3671b5d3490cf565db34ec891c203ee1f7c7a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "240215"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547126"
 ---
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -54,7 +53,7 @@ En Direct3D, los recursos de sombreador no se crean antes de su compilación y c
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | glCreateShader | Llama a [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) y [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) después de cargar correctamente el objeto de sombreador compilado, pasándoles el CSO como búfer. |
 
- 
+ 
 
 ## <a name="compiling-a-shader"></a>Compilar un sombreador
 
@@ -66,7 +65,7 @@ Los sombreadores de Direct3D deben precompilarse como archivos de objeto de somb
 | glCompileShader                        | N/C. Compila los sombreadores en archivos .cso en Visual Studio e inclúyelos en tu paquete.                                                                                     |
 | Usar glGetShaderiv para el estado de compilación | N/C. Consulta el resultado de la compilación en la herramienta compiladora FX de Visual Studio (FXC) si hay errores en la compilación. Si la compilación es correcta, se crea un archivo CSO correspondiente. |
 
- 
+ 
 
 ## <a name="loading-a-shader"></a>Cargar un sombreador
 
@@ -77,7 +76,7 @@ Como se explicó en la sección de creación de un sombreador, Direct3D 11 crea 
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ShaderSource  | Llama a [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) y [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) después de cargar correctamente el objeto de sombreador compilado. |
 
- 
+ 
 
 ## <a name="setting-up-the-pipeline"></a>Configurar la canalización
 
@@ -91,7 +90,7 @@ OpenGL ES 2.0 tiene el objeto del"programa sombreador" que contiene varios sombr
 | glUseProgram    | N/A. Direct3D 11 no usa la abstracción de objeto de programa sombreador.                          |
 | glGetProgramiv  | Usa la referencia que creaste para [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). |
 
- 
+ 
 
 Crea una instancia de [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) y [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/dn280493) con el método [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) estático.
 
@@ -108,7 +107,7 @@ D3D11CreateDevice(
   creationFlags, // Set set debug and Direct2D compatibility flags.
   featureLevels, // List of feature levels this app can support.
   ARRAYSIZE(featureLevels),
-  D3D11_SDK_VERSION, // Always set this to D3D11_SDK_VERSION for Windows Store apps.
+  D3D11_SDK_VERSION, // Always set this to D3D11_SDK_VERSION for UWP apps.
   &device, // Returns the Direct3D device created.
   &m_featureLevel, // Returns feature level of device created.
   &m_d3dContext // Returns the device's immediate context.
@@ -136,7 +135,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | glViewport    | [**CD3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/jj151722), [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
 
- 
+ 
 
 ## <a name="configuring-the-vertex-shaders"></a>Configurar los sombreadores de vértices
 
@@ -149,7 +148,7 @@ La configuración de un sombreador de vértices en Direct3D 11 se realiza cuando
 | glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::VSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476489)                       |
 | glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::VSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh446793). |
 
- 
+ 
 
 ## <a name="configuring-the-pixel-shaders"></a>Configurar los sombreadores de píxeles
 
@@ -162,7 +161,7 @@ La configuración de un sombreador de píxeles en Direct3D 11 se realiza cuando 
 | glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::PSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476468)                       |
 | glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::PSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh404645). |
 
- 
+ 
 
 ## <a name="generating-the-final-results"></a>Generar los resultados finales
 
@@ -174,7 +173,7 @@ Cuando la canalización se completa, dibujas los resultados de las fases de somb
 | glDrawElements | [**ID3D11DeviceContext1::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407), [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (or other Draw\* methods on [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/ff476385)). |
 | eglSwapBuffers | [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)                                                                                                                                                                              |
 
- 
+ 
 
 ## <a name="porting-glsl-to-hlsl"></a>Migrar GLSL a HLSL
 
@@ -186,7 +185,7 @@ GLSL y HLSL no son muy distintos más allá de la compatibilidad con tipos compl
 | HLSL en Direct3D 11          | ~4.30.                                                                                                                                                                                                                    | SM 5.0                |
 | GLSL ES para OpenGL ES 2.0 | 1.40. Las implementaciones anteriores de GLSL ES para OpenGL ES 2.0 pueden usar de 1.10 a 1.30. Comprueba el código original con glGetString(GL\_SHADING\_LANGUAGE\_VERSION) o glGetString(SHADING\_LANGUAGE\_VERSION) para determinarlo. | ~SM 2.0               |
 
- 
+ 
 
 Para obtener más detalles sobre las diferencias entre los dos lenguajes de sombreador, así como las asignaciones comunes de sintaxis, lee la [referencia de GLSL a HLSL](glsl-to-hlsl-reference.md).
 
@@ -209,7 +208,7 @@ Estas son algunas asignaciones para intrínsecos de sombreador comunes de OpenGL
 | gl\_FragColor       | COLOR(n) para los datos RGBA suministrados a un sombreador. Ten en cuenta que el trato es idéntico para los datos de coordenadas, la semántica simplemente te ayuda a identificar que son datos de color. |
 | gl\_FragData\[n\]   | SV\_Target\[n\] para escribir de un sombreador de píxeles a una textura de destino u otro búfer de píxeles.                                                                               |
 
- 
+ 
 
 Es el método por el cual el código para la semántica no equivale a usar intrínsecos en OpenGL ES 2.0. En OpenGL puedes acceder a varios de los intrínsecos directamente sin ninguna configuración o declaración; en Direct3D debes declarar un campo en un búfer de constantes específico para usar una semántica determinada o declararlo como el valor devuelto para un método **main()** del sombreador.
 
@@ -246,9 +245,9 @@ En este caso, SV\_TARGET es la ubicación del destino de representación que el 
 
 Para obtener más detalles sobre el uso de semántica con Direct3D, lee [Semántica de HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509647).
 
- 
+ 
 
- 
+ 
 
 
 

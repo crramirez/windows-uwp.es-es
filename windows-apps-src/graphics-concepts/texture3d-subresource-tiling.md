@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d51d20ddaeca5aa0689104b3dd71e36b1a5d4132
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 17970d509fa2bf6b80431e1c07b5d135c7dcb112
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043994"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544360"
 ---
 # <a name="texture3d-subresource-tiling"></a>Organización en mosaico de los subrecursos Texture3D
 
@@ -25,9 +23,9 @@ Esta tabla muestra cómo los subrecursos [**Texture3D**](https://msdn.microsoft.
 
 Esta tabla toma la organización en mosaico de [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525), divide las dimensiones x/y por 4 y agrega 16 capas de profundidad. Todos los mosaicos del primer plano (plano 2D del mosaicos que definen las primeras 16 capas de profundidad) aparecen antes que los planos posteriores.
 
-**Nota** En la implementación inicial de los recursos de streaming no se expone la compatibilidad de [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) con dichos recursos de streaming, pero aquí se incluyen las formas de mosaico deseadas por su posible compatibilidad en una versión futura.
+**Nota** Soporte de [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) en los recursos de streaming no se expone en la implementación inicial de los recursos de streaming, pero aquí se incluyen las formas de mosaico deseadas por su posible compatibilidad en una versión futura.
 
- 
+ 
 
 | Bits/píxel (1 muestra/píxel) | Dimensiones de mosaico (píxeles, A x A x P) |
 |-----------------------------|---------------------------------|
@@ -39,7 +37,7 @@ Esta tabla toma la organización en mosaico de [**Texture2D**](https://msdn.micr
 | BC1, 4                       | 128 x 64 x 16                       |
 | BC2, 3, 5, 6 y 7                 | 64 x 64 x 16                        |
 
- 
+ 
 
 Los recuentos de bits de formato no admitidos con los recursos de streaming son los formatos de 96 bpp, los formatos de vídeo, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM y DXGI\_FORMAT\_R8R8\_G8B8\_UNORM.
 
@@ -48,9 +46,9 @@ Los recuentos de bits de formato no admitidos con los recursos de streaming son 
 
 [Cómo se organiza en mosaico el área de un recurso de streaming](how-a-streaming-resource-s-area-is-tiled.md)
 
- 
+ 
 
- 
+ 
 
 
 

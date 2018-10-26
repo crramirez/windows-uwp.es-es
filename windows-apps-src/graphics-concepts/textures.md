@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c8d48114a6d4bc7386951264a5fc94990bd0b7f5
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 516a15c17546d9f9b5e7cb7f8c0651f1372275ae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653044"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545152"
 ---
 # <a name="textures"></a>Texturas
 
@@ -70,25 +68,25 @@ Para mejorar el rendimiento, piensa en la posibilidad de usar texturas dinámica
 </tr>
 <tr class="even">
 <td align="left"><p><a href="light-mapping-with-textures.md">Mapas de luz con texturas</a></p></td>
-<td align="left"><p>Un mapa de luz es una textura o un grupo de texturas que contiene información sobre la iluminación de una escena en 3D. Los mapas de luz asignan áreas de luz y sombra a primitivos. La combinación de texturas múltiples y multipase permite a la aplicación representar las escenas con una apariencia más realista que técnicas de sombreado.</p></td>
+<td align="left"><p>Un mapa de luz es una textura o un grupo de texturas que contiene información sobre la iluminación de una escena 3D. Los mapas de luz asignan áreas de luz y sombra a primitivos. La combinación de texturas múltiples y multipase permite a la aplicación representar las escenas con una apariencia más realista que técnicas de sombreado.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="compressed-texture-resources.md">Recursos de texturas comprimidas</a></p></td>
-<td align="left"><p>Los mapas de texturas son imágenes digitalizadas que se dibujan sobre formas tridimensionales para agregar detalles visuales. Se dibujan en estas formas durante la rasterización y el proceso puede consumir grandes cantidades de bus y memoria del sistema. Para reducir la cantidad de memoria que consumen las texturas, Direct3D admite la compresión de superficies de texturas. Algunos dispositivos Direct3D admiten las superficies de texturas comprimidas de forma nativa.</p></td>
+<td align="left"><p>Los mapas de texturas son imágenes digitalizadas que se dibujan en formas tridimensionales para agregar detalles visuales. Se dibujan en estas formas durante la rasterización y el proceso puede consumir grandes cantidades de bus y memoria del sistema. Para reducir la cantidad de memoria que consumen las texturas, Direct3D admite la compresión de superficies de texturas. Algunos dispositivos Direct3D admiten las superficies de texturas comprimidas de forma nativa.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
 [Guía de aprendizaje de gráficos de Direct3D](index.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ description: Los usuarios esperan que sus aplicaciones sean dinámicas, que su u
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 083d4fea92526954e3166c496521cd01507608f4
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: e62e724cceb458ba922143e61058dffa8d16a0b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "894791"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547887"
 ---
 # <a name="planning-for-performance"></a>Planeación del rendimiento
 
@@ -44,7 +42,7 @@ Piensa en los intervalos de tiempo aceptables (*clases de interacción*) necesar
 | Continua              | Ya no se percibe dinámica      | 500 milisegundos | 5 segundos        | Descargar un archivo de Internet                                            |
 | Cautiva                 | Extensa, el usuario podría marcharse    | 500 milisegundos | 10 segundos       | Instalar varias aplicaciones de la Tienda                                         |
 
- 
+ 
 
 Ahora puedes asignar clases de interacción a escenarios de rendimiento de la aplicación. Puedes asignar, por ejemplo, una referencia en un momento dado de la aplicación, una parte de la experiencia del usuario y una clase de interacción a cada escenario. Aquí tienes algunas sugerencias para un ejemplo de aplicación de comidas.
 
@@ -175,7 +173,7 @@ Usa estas técnicas y herramientas para probar la aplicación con respecto a los
     -   Ejecuta la aplicación varias veces para eliminar las variables aleatorias de prueba y garantizar medidas coherentes.
 -   Prueba si se ha reducido la disponibilidad de consumo de energía. El dispositivo de tus usuarios podría tener mucha menos energía que el equipo de desarrollo. Windows se ha diseñado teniendo en cuenta los dispositivos de baja energía, como los dispositivos móviles. Debes asegurarte de que las aplicaciones que se ejecutan en la plataforma funcionan correctamente en estos dispositivos. Como heurístico, cuenta con que un dispositivo de bajo consumo funciona, aproximadamente, a un cuarto de la velocidad de un equipo de escritorio, y define tus objetivos en consecuencia.
 -   Combina herramientas, como Microsoft Visual Studio y el Windows Performance Analyzer, para medir el rendimiento de la aplicación. Visual Studio está diseñado para proporcionar un análisis centrado en la aplicación, como la vinculación del código de origen. Windows Performance Analyzer está diseñado para proporcionar un análisis centrado en el sistema, como la información del sistema, información sobre los eventos de manipulación táctil e información sobre la entrada y salida en disco y el coste de la unidad de procesamiento gráfico (GPU). Ambas herramientas proporcionan captura y exportación de seguimiento y pueden reabrir seguimientos compartidos y finales.
--   Antes de enviar la aplicación a la tienda de certificación, asegúrese de incorporar en sus planes de pruebas los casos de prueba relacionada con el rendimiento, tal como se describe en la sección "Pruebas de rendimiento" de [las pruebas de Kit de certificación de aplicación de Windows](windows-app-certification-kit-tests.md) y en el "rendimiento y sección de estabilidad"UWP app de [casos](https://msdn.microsoft.com/library/windows/apps/Dn275879)de prueba.
+-   Antes de enviar la aplicación a la tienda para su certificación, asegúrate de incorporar en los planes de prueba de los casos de prueba relacionados con el rendimiento, como se describe en la sección "Pruebas de rendimiento" de [pruebas del Kit de certificación de aplicaciones de Windows](windows-app-certification-kit-tests.md) y en el "rendimiento y sección estabilidad"de [casos de prueba de aplicación para UWP](https://msdn.microsoft.com/library/windows/apps/Dn275879).
 
 Para más información, consulta estos recursos y herramientas de generación de perfiles.
 

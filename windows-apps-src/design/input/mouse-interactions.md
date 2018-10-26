@@ -8,23 +8,21 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fbd6566afeff365a91c5d2ee670c0cafcb3def0
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: b79edc5499343498801081dd00554128c3b57eae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395014"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546247"
 ---
 # <a name="mouse-interactions"></a>Interacciones de mouse
 
 
 Optimiza el diseño de tu aplicación de la Plataforma universal de Windows (UWP) para la entrada táctil y obtén compatibilidad básica con mouse de manera predeterminada.
 
- 
+ 
 
 ![mouse](images/input-patterns/input-mouse.jpg)
 
@@ -69,10 +67,10 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 <td align="left"><p>Clic con el botón secundario para seleccionar y ordenar</p></td>
 <td align="left"><p>Haz clic con el botón secundario para mostrar la barra de navegación (si está disponible) y la barra de la aplicación con comandos globales. Haz clic con el botón secundario en un elemento para seleccionarlo y mostrar la barra de la aplicación con comandos contextuales para el elemento seleccionado.</p>
 <div class="alert">
-<strong>Nota</strong>  Haz clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de aplicaciones no son comportamientos de interfaz de usuario adecuados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
+<strong>Nota</strong>con el botón secundario para mostrar un menú contextual si la aplicación o selección de barra de comandos no es comportamientos de la interfaz de usuario adecuados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -100,7 +98,7 @@ Responde a las entradas de mouse de tus aplicaciones controlando los mismos even
 
 Usa los eventos de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) para implementar la funcionalidad básica de entrada sin tener que escribir un código para cada dispositivo de entrada. Sin embargo, todavía puedes sacar provecho de las funcionalidades especiales de cada dispositivo (por ejemplo, los eventos de rueda del mouse) con el puntero, con gestos y con los eventos de manipulación de este objeto.
 
-**Muestras:  **Verás esta funcionalidad en acción en nuestras [muestras de aplicaciones](http://go.microsoft.com/fwlink/p/?LinkID=264996).
+**Muestras:** Consulta esta funcionalidad en acción en nuestras [muestras de aplicaciones](http://go.microsoft.com/fwlink/p/?LinkID=264996).
 
 
 - [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
@@ -153,10 +151,10 @@ Si necesitas personalizar el cursor del mouse:
 * [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
- 
+ 
+ 
 
- 
+ 
 
 
 

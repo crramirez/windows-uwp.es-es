@@ -5,16 +5,15 @@ description: Obtén información sobre cómo tener acceso a la configuración de
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
-ms.openlocfilehash: dfde4c45a4aa5a520e0aa98cd7f31f7d84854e08
-ms.sourcegitcommit: 0e44f197e7e649d542ec3f67cd790a61dbe1226f
+ms.localizationpriority: medium
+ms.openlocfilehash: 8f3d0c09b242f8d60b06ee0dc510ad9a756466c5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2017
-ms.locfileid: "662507"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544565"
 ---
 # <a name="developer-settings-api-reference"></a>Referencia de API de la configuración de desarrollador   
 Puede obtener acceso a la configuración de Xbox One que es útil para desarrollar mediante esta API.
@@ -44,18 +43,20 @@ GET | /ext/settings
 **Respuesta**   
 La respuesta es una matriz JSON de configuración que contiene toda la configuración. Cada objeto de configuración contiene estos campos:
 
-Nombre: (cadena) el nombre de la opción de configuración.
-Valor: (cadena) el valor de la opción de configuración.
-RequiresReboot - ("Sí" | "No") Este campo indica si es necesario un reinicio para que la configuración surta efecto.
-Disabled: ("Yes" | "No") este campo indica si la configuración está deshabilitada y no puede editarse.
-Category: (cadena) la categoría de la opción de configuración.
-Type: ("Text" | "Number" | "Bool" | "Select") este campo indica de qué tipo es un valor: entrada de texto, un valor booleano ("true" o "false"), un número con un mínimo y un máximo, o si se selecciona de una lista específica de valores.
+* Nombre: (cadena) el nombre de la opción de configuración.
+* Valor: (cadena) el valor de la opción de configuración.
+* RequiresReboot: ("Yes" | "No") este campo indica si es necesario un reinicio para que la configuración surta efecto.
+* Disabled: ("Yes" | "No") este campo indica si la configuración está deshabilitada y no puede editarse.
+* Category: (cadena) la categoría de la opción de configuración.
+* Type: ("Text" | "Number" | "Bool" | "Select") este campo indica de qué tipo es un valor: entrada de texto, un valor booleano ("true" o "false"), un número con un mínimo y un máximo, o si se selecciona de una lista específica de valores.
 
-Si la configuración es Number > Min: (número) este campo indica el valor numérico mínimo de la configuración.
-Max: (número) este campo indica el valor numérico máximo de la configuración.
+Si el valor es un número:
+* Min: (número) este campo indica el valor numérico mínimo de la configuración.
+* Max: (número) este campo indica el valor numérico máximo de la configuración.
 
-Si la configuración es Select > OptionsVariable - ("Yes" | "No") este campo indica si las opciones de configuración son variables, si las opciones válidas pueden cambiar sin un reinicio.
-Options: matriz JSON que contiene la las opciones válidas de selección como cadenas.
+Si se selecciona la opción de configuración:
+* > OptionsVariable - ("Yes" | "No") este campo indica si las opciones de configuración son variables, si las opciones válidas pueden cambiar sin un reinicio.
+* Options: matriz JSON que contiene la las opciones válidas de selección como cadenas.
 
 **Código de estado**
 
@@ -93,18 +94,20 @@ GET | /ext/settings/\<setting name\>
 **Respuesta**   
 La respuesta es un objeto JSON con los siguientes campos:
 
-Nombre: (cadena) el nombre de la opción de configuración.
-Valor: (cadena) el valor de la opción de configuración.
-RequiresReboot: ("Yes" | "No") este campo indica si es necesario un reinicio para que la configuración surta efecto.
-Disabled: ("Yes" | "No") este campo indica si la configuración está deshabilitada y no puede editarse.
-Category: (cadena) la categoría de la opción de configuración.
-Type: ("Text" | "Number" | "Bool" | "Select") este campo indica de qué tipo es un valor: entrada de texto, un valor booleano ("true" o "false"), un número con un mínimo y un máximo, o si se selecciona de una lista específica de valores.
+* Nombre: (cadena) el nombre de la opción de configuración.
+* Valor: (cadena) el valor de la opción de configuración.
+* RequiresReboot: ("Yes" | "No") este campo indica si es necesario un reinicio para que la configuración surta efecto.
+* Disabled: ("Yes" | "No") este campo indica si la configuración está deshabilitada y no puede editarse.
+* Category: (cadena) la categoría de la opción de configuración.
+* Type: ("Text" | "Number" | "Bool" | "Select") este campo indica de qué tipo es un valor: entrada de texto, un valor booleano ("true" o "false"), un número con un mínimo y un máximo, o si se selecciona de una lista específica de valores.
 
-Si la configuración es Number > Min: (número) este campo indica el valor numérico mínimo de la configuración.
-Max: (número) este campo indica el valor numérico máximo de la configuración.
+Si el valor es un número:
+* Min: (número) este campo indica el valor numérico mínimo de la configuración.
+* Max: (número) este campo indica el valor numérico máximo de la configuración.
 
-Si la configuración es Select > OptionsVariable - ("Yes" | "No") este campo indica si las opciones de configuración son variables, si las opciones válidas pueden cambiar sin un reinicio.
-Options: matriz JSON que contiene la las opciones válidas de selección como cadenas.
+Si se selecciona la opción de configuración:
+* > OptionsVariable - ("Yes" | "No") este campo indica si las opciones de configuración son variables, si las opciones válidas pueden cambiar sin un reinicio.
+* Options: matriz JSON que contiene la las opciones válidas de selección como cadenas.
 
 **Código de estado**
 

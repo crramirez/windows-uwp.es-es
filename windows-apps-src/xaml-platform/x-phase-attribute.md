@@ -6,18 +6,17 @@ ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a629fb07bfa2e3f8bb3d070e9fe4994baba4336b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 17ee99553b5713acb1917ccb697abb2387d00da2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239937"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549202"
 ---
 # <a name="xphase-attribute"></a>Atributo x:Phase
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Usa **x:Phase** con la [extensión de marcado {x:Bind}](x-bind-markup-extension.md) para representar los elementos [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) de forma incremental y mejorar la experiencia de movimiento panorámica. **x:Phase** proporciona una manera declarativa de lograr el mismo efecto que si se usase el evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) para controlar manualmente la representación de los elementos de lista. Consulta también [Actualizar los elementos ListView and GridView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
@@ -33,7 +32,7 @@ Usa **x:Phase** con la [extensión de marcado {x:Bind}](x-bind-markup-extension.
 
 | Término | Descripción |
 |------|-------------|
-| PhaseValue | Un número que indica la fase en la que se procesará el elemento. El predeterminado es 0. | 
+| PhaseValue | Un número que indica la fase en la que se procesará el elemento. El predeterminado es 0. | 
 
 ## <a name="remarks"></a>Observaciones
 
@@ -45,23 +44,23 @@ El escalonamiento habilita la representación incremental de la plantilla de dat
 
 ```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
-    <Grid Width="200" Height="80">
-        <Grid.ColumnDefinitions>
-           <ColumnDefinition Width="75" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Image Grid.RowSpan="4" Source="{x:Bind ImageData}" MaxWidth="70" MaxHeight="70" x:Phase="3"/>
-        <TextBlock Text="{x:Bind DisplayName}" Grid.Column="1" FontSize="12"/>
-        <TextBlock Text="{x:Bind prettyDate}"  Grid.Column="1"  Grid.Row="1" FontSize="12" x:Phase="1"/>
-        <TextBlock Text="{x:Bind prettyFileSize}"  Grid.Column="1"  Grid.Row="2" FontSize="12" x:Phase="2"/>
-        <TextBlock Text="{x:Bind prettyImageSize}"  Grid.Column="1"  Grid.Row="3" FontSize="12" x:Phase="2"/>
-    </Grid>
+    <Grid Width="200" Height="80">
+        <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.RowSpan="4" Source="{x:Bind ImageData}" MaxWidth="70" MaxHeight="70" x:Phase="3"/>
+        <TextBlock Text="{x:Bind DisplayName}" Grid.Column="1" FontSize="12"/>
+        <TextBlock Text="{x:Bind prettyDate}"  Grid.Column="1"  Grid.Row="1" FontSize="12" x:Phase="1"/>
+        <TextBlock Text="{x:Bind prettyFileSize}"  Grid.Column="1"  Grid.Row="2" FontSize="12" x:Phase="2"/>
+        <TextBlock Text="{x:Bind prettyImageSize}"  Grid.Column="1"  Grid.Row="3" FontSize="12" x:Phase="2"/>
+    </Grid>
 </DataTemplate>
 ```
 

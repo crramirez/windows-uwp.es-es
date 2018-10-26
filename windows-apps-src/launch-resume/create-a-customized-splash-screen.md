@@ -6,20 +6,18 @@ ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 83551438a629e39407c24cfd98d4a761ba3c039b
-ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.localizationpriority: medium
+ms.openlocfilehash: 80242b95e64f0d642df0284c94455d60825f6daf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2017
-ms.locfileid: "693233"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549295"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>Mostrar una pantalla de presentación durante más tiempo
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -30,13 +28,13 @@ ms.locfileid: "693233"
 
 Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación que aparece al iniciar la aplicación, pero se puede personalizar. Tanto si lo que quieres es mostrar información en tiempo real sobre la carga como simplemente dar a tu aplicación un poco más de tiempo para preparar la interfaz de usuario inicial, la pantalla de presentación extendida te permite definir la experiencia de inicio.
 
-> **Nota**  La frase "pantalla de presentación extendida" en este tema hace referencia a una pantalla de presentación que permanece en pantalla durante un período de tiempo prolongado. No significa una subclase que se deriva de la clase [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763).
+> **Nota**la frase "pantalla de presentación extendida" en este tema hace referencia a una pantalla de presentación que permanece en la pantalla durante un período de tiempo prolongado. No significa una subclase que se deriva de la clase [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763).
 
- 
+ 
 
 Asegúrate de que tu pantalla de presentación extendida imite la pantalla de presentación predeterminada; para ello, sigue estas recomendaciones:
 
--   La página de pantalla de presentación extendida debe usar una imagen de 620 x 300 píxeles que sea coherente con la imagen especificada para tu pantalla de presentación en el manifiesto de la aplicación (la imagen de la pantalla de presentación de tu aplicación). En Microsoft Visual Studio 2015, la configuración de la pantalla de presentación se almacena en la sección **Pantalla de presentación** de la pestaña **Activos visuales** en el manifiesto de la aplicación (archivo Package.appxmanifest).
+-   La página de pantalla de presentación extendida debe usar una imagen de 620 x 300 píxeles que sea coherente con la imagen especificada para tu pantalla de presentación en el manifiesto de la aplicación (la imagen de la pantalla de presentación de tu aplicación). En Microsoft Visual Studio2015, configuración de la pantalla de presentación se almacena en la sección de la **Pantalla de presentación** de la pestaña de **Activos visuales** en el manifiesto de la aplicación (archivo Package.appxmanifest).
 -   La pantalla de presentación extendida debe usar un color de fondo que sea coherente con el color de fondo especificado para la pantalla de presentación en el manifiesto de la aplicación (el fondo de la pantalla de presentación de tu aplicación).
 -   El código debe usar la clase [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) para posicionar la imagen de la pantalla de presentación de tu aplicación en las mismas coordenadas que la pantalla de presentación predeterminada.
 -   El código debe responder a los eventos de cambio de tamaño de la ventana (como cuando se gira la pantalla o la aplicación se sitúa junto a otra aplicación en la pantalla) usando la clase [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) para volver a posicionar los elementos en la pantalla de presentación extendida.
@@ -48,7 +46,7 @@ Usa los siguientes pasos para crear una pantalla de presentación extendida que 
 
 En este tema se da por hecho que quieres agregar una pantalla de presentación extendida a un proyecto de aplicación Plataforma universal de Windows (UWP) mediante C#, Visual Basic o C++.
 
--   Abre tu aplicación en Visual Studio 2015.
+-   Abre la aplicación en Studio2015 Visual.
 -   Presiona o abre el **Proyecto** en la barra de menús y haz clic en **Agregar nuevo elemento**. Aparecerá un cuadro de diálogo **Agregar nuevo elemento**.
 -   En este cuadro de diálogo, agrega una nueva **Página en blanco** a tu aplicación. En este tema, la página de la pantalla de presentación extendida se llama "ExtendedSplash".
 
@@ -77,9 +75,9 @@ Agrega el siguiente código para definir los elementos [**Canvas**](https://msdn
     </Grid>
 ```
 
-**Nota**  Este código establece el ancho del control [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) en 20 píxeles. Puedes establecer manualmente el ancho en un valor adecuado para tu aplicación; sin embargo, los controles con un ancho inferior a 20 píxeles no se representarán.
+**Nota**este código establece el ancho de la [**clase ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) en 20 píxeles. Puedes establecer manualmente el ancho en un valor adecuado para tu aplicación; sin embargo, los controles con un ancho inferior a 20 píxeles no se representarán.
 
- 
+ 
 
 ## <a name="essential-code-for-an-extended-splash-screen-class"></a>Código esencial para una clase de pantalla de presentación extendida
 
@@ -221,9 +219,9 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
     }
     ```
 
-    **Nota**  Antes de tratar de obtener la ubicación de la imagen, asegúrate de que la variable de clase (`splash`) contenga un objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como se muestra en el ejemplo.
+    **Nota**antes de intentar obtener la ubicación de la imagen Asegúrate de que la variable de clase (`splash`) contiene un objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como se muestra en el ejemplo.
 
-     
+     
 
 8.  **(Opcional) Agregar un método de clase para restaurar un estado de sesión guardado**
 
@@ -267,7 +265,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 ## <a name="complete-code"></a>Código completo
 
 
-> **Nota**  El código siguiente difiere ligeramente de los fragmentos de código mostrados en los pasos anteriores.
+> **Nota**el código siguiente difiere ligeramente de los fragmentos de código se muestra en los pasos anteriores.
 -   ExtendedSplash.xaml incluye un botón `DismissSplash`. Al hacer clic en este botón, el controlador de eventos `DismissSplashButton_Click` llama al método `DismissExtendedSplash`. En la aplicación, llama a `DismissExtendedSplash` cuando la aplicación haya terminado de cargar los recursos o de inicializar su interfaz de usuario.
 -   Esta aplicación también usa una plantilla de proyecto de aplicación para UWP que usa la navegación [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682). Como resultado, en App.xaml.cs, el controlador de activación de inicio ([**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)) define un `rootFrame` y lo usa para establecer el contenido de la ventana de la aplicación.
 
@@ -421,7 +419,7 @@ namespace SplashScreenExample
 }
 ```
 
-App.xaml.cs: este proyecto se creó usando la plantilla de proyecto **Aplicación vacía (XAML)** de aplicación para UWP de Visual Studio 2015. Los controladores de eventos `OnNavigationFailed` y `OnSuspending` se generan automáticamente y no es necesario cambiarlos para implementar una pantalla de presentación extendida. En este tema solo se modifica `OnLaunched`.
+App.Xaml.cs: Este proyecto se creó usando la plantilla de proyecto de **Aplicación vacía (XAML)** de aplicación para UWP en Visual Studio2015. Los controladores de eventos `OnNavigationFailed` y `OnSuspending` se generan automáticamente y no es necesario cambiarlos para implementar una pantalla de presentación extendida. En este tema solo se modifica `OnLaunched`.
 
 Si no usaste una plantilla de proyecto para tu aplicación, consulta el paso 4: [Modificar el controlador de activación de inicio](#modify-the-launch-activation-handler) para ver un ejemplo de `OnLaunched` modificado que no usa la navegación de [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682).
 
@@ -552,6 +550,6 @@ namespace SplashScreenExample
 * [**Propiedad Windows.ApplicationModel.Activation.SplashScreen.ImageLocation**](https://msdn.microsoft.com/library/windows/apps/br224765)
 * [**Evento Windows.ApplicationModel.Core.CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)
 
- 
+ 
 
- 
+ 

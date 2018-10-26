@@ -4,23 +4,18 @@ ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
 description: Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados.
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 06/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8f81f3b6abea2ceb07ab4442d0b5dc24104408
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 1859d758806b4e92758decb40b8a30d02acb254d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654444"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549749"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
-
-
-
 
 Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados.
 
@@ -47,7 +42,7 @@ Una biblioteca es una colección virtual de carpetas que incluye una carpeta con
 
 > [!NOTE]
 > Recuerda que debes declarar la funcionalidad apropiada. Para más información, consulta [Declaraciones de funcionalidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
- 
+ 
 
 Para obtener una referencia a la biblioteca de música, imágenes o vídeos del usuario, llama al método [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725). Proporciona el valor correspondiente de la enumeración [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399).
 
@@ -147,7 +142,7 @@ private async void getSongs()
     QueryOptions queryOption = new QueryOptions
         (CommonFileQuery.OrderByTitle, new string[] { ".mp3", ".mp4", ".wma" });
 
-    queryOption.FolderDepth = FolderDepth.Deep
+    queryOption.FolderDepth = FolderDepth.Deep;
 
     Queue<IStorageFolder> folders = new Queue<IStorageFolder>();
 

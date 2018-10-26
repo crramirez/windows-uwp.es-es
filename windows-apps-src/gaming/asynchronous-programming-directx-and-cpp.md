@@ -6,19 +6,18 @@ ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, juegos, programación asincrónica, DirectX
-ms.openlocfilehash: fe3798e475654d4d0ae7773ac26889906d40b3df
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 9f395136ff7f331f58b9c8e0ac1ee9efea296c02
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238595"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547010"
 ---
 # <a name="asynchronous-programming-directx-and-c"></a>Programación asincrónica (DirectX y C++)
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se cubren diversos puntos que deben tener en cuenta al usar la programación asincrónica y los subprocesos con DirectX.
 
@@ -39,9 +38,9 @@ No obstante, si tu juego es lo suficientemente complejo, o si buscas obtener un 
 
 Tu aplicación puede controlar estos componentes en múltiples subprocesos simultáneos. E/S de archivo, especialmente la carga de recursos, se beneficia enormemente de la carga asincrónica, ya que tu juego o aplicación puede estar en un estado interactivo mientras se carga o transmiten varios (o varios cientos) de megabytes de recursos. La forma más sencilla de crear y administrar estos subprocesos es usando la [biblioteca de modelos de procesamiento paralelo](https://msdn.microsoft.com/library/dd492418.aspx) y el patrón **task**, según se incluye en el espacio de nombres **concurrency** definido en PPLTasks.h. El uso de la [biblioteca de modelos de procesamiento paralelo](https://msdn.microsoft.com/library/dd492418.aspx) permite sacar provecho directo de las CPU con tecnología de hyperthreading y de múltiples núcleos, y puede mejorar elementos como, por ejemplo, las horas de carga percibidas, así como las complicaciones y los retrasos que se derivan del procesamiento de red y los cálculos de CPU intensivos.
 
-> **Nota** En una aplicación para la Plataforma universal de Windows (UWP), la interfaz de usuario se ejecuta totalmente en un contenedor uniproceso (STA). Si creas una interfaz de usuario para tu juego de DirectX usando la [interoperabilidad de XAML](directx-and-xaml-interop.md), solamente puedes obtener acceso a los controles mediante el uso del STA.
+> **Nota**  en unos Universal de Windows Platform (UWP), la interfaz de usuario se ejecuta totalmente en un contenedor uniproceso (STA). Si creas una interfaz de usuario para tu juego de DirectX usando la [interoperabilidad de XAML](directx-and-xaml-interop.md), solamente puedes obtener acceso a los controles mediante el uso del STA.
 
- 
+ 
 
 ## <a name="multithreading-with-direct3d-devices"></a>Multithreading con dispositivos de Direct3D
 
@@ -64,9 +63,9 @@ Crea un contexto diferido usando [**ID3D11Device::CreateDeferredContext**](https
 
 * [Introducción a multithreading en Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476891)
 
- 
+ 
 
- 
+ 
 
 
 

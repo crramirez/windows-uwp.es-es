@@ -6,19 +6,17 @@ description: Mejora el control del inicio y la activación de la aplicación par
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: e36103953ad3fb04ee5beef7e263fc326f817c0b
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 25ddcc6c9ceaecd858733a0222c22c18682041b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894771"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545252"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Mejora el control del inicio y la activación de la aplicación para crear aplicaciones para la Plataforma universal de Windows (UWP) con tiempo de inicio optimizado.
 

@@ -6,25 +6,23 @@ description: Esta sección contiene artículos acerca de cómo integrar Bluetoot
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: da12a9121cf54334cef1eccf8b41b43683126eff
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 19f381b7fbd53ee50d4589201edf74ac1f241d40
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "299721"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549641"
 ---
 # <a name="bluetooth"></a>Bluetooth
-Esta sección contiene artículos acerca de cómo integrar Bluetooth en aplicaciones de la plataforma de Windows Universal (UWP). Existen dos tecnologías bluetooth diferentes que se pueden implementar en la aplicación.
+Esta sección contiene artículos sobre cómo integrar Bluetooth en aplicaciones de plataforma Universal de Windows (UWP). Existen dos tecnologías de bluetooth diferentes que puedes elegir implementar en tu aplicación.
 
 ## <a name="classic-bluetooth-rfcomm"></a>Bluetooth clásico (RFCOMM)
-Antes de LE Bluetooth, dispositivos suelen usan este protocolo para comunicarse con Bluetooth. Este protocolo es sencillo y útil para la comunicación de dispositivo a otro sin necesidad de ahorro de energía. Para obtener más información acerca de este protocolo, incluidos ejemplos de código, vea el tema de [RFCOMM de Bluetooth](send-or-receive-files-with-rfcomm.md) .
+Antes de Bluetooth LE, dispositivos suele utilizan este protocolo para comunicarte a través de Bluetooth. Este protocolo es simple y útiles para la comunicación sin necesidad de ahorro de energía del dispositivo a otro. Para obtener más información acerca de este protocolo, incluidos los ejemplos de código, consulta el tema de [RFCOMM de Bluetooth](send-or-receive-files-with-rfcomm.md) .
 
-## <a name="bluetooth-low-energy-le"></a>Bluetooth baja energía LE)
-Bluetooth baja energía (ej) es una especificación que define protocolos para la detección y la comunicación entre los dispositivos que tienen un requisito de uso de ahorro de energía. Para obtener más información, incluidos ejemplos de código, vea el tema [Bluetooth baja energía](bluetooth-low-energy-overview.md) .
+## <a name="bluetooth-low-energy-le"></a>Bluetooth de bajo consumo (LE)
+Bluetooth de bajo consumo (LE) es una especificación que define protocolos para la detección y la comunicación entre los dispositivos que tienen un requisito de uso de ahorro de energía. Para obtener más información, incluidos los ejemplos de código, consulta el tema de [Bluetooth de bajo consumo](bluetooth-low-energy-overview.md) .
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 - [Preguntas más frecuentes de los desarrolladores de Bluetooth](bluetooth-dev-faq.md)

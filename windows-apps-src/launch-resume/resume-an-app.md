@@ -1,25 +1,30 @@
 ---
 author: TylerMSFT
-title: "Administrar la reanudación de la aplicación"
-description: "Aprende a actualizar el contenido mostrado cuando el sistema reanuda la aplicación."
+title: Administrar la reanudación de la aplicación
+description: Aprende a actualizar el contenido mostrado cuando el sistema reanuda la aplicación.
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 07/06/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 1bfd2c4a6f9dc2cb01241b2ee9899ff7edd46ae2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+dev_langs:
+- csharp
+- vb
+- cppwinrt
+- cpp
+ms.openlocfilehash: 717c819aaa732cf8d29e0a701a1fec81485f48ac
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548819"
 ---
 # <a name="handle-app-resume"></a>Controlar la reanudación de aplicaciones
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 **API importantes**
 
--   [**Reanudar**](https://msdn.microsoft.com/library/windows/apps/br242339)
+- [**Reanudar**](https://msdn.microsoft.com/library/windows/apps/br242339)
 
 Aprende dónde actualizar la interfaz de usuario cuando el sistema reanuda la aplicación. El ejemplo de este tema registra un controlador de eventos para el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339).
 
@@ -27,35 +32,44 @@ Aprende dónde actualizar la interfaz de usuario cuando el sistema reanuda la ap
 
 Haz el registro para controlar el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339), que indica que el usuario abandonó la aplicación y después volvió.
 
-> [!div class="tabbedCodeSnippets"]
-> ```cs
-> partial class MainPage
-> {
->    public MainPage()
->    {
->       InitializeComponent();
->       Application.Current.Resuming += new EventHandler<Object>(App_Resuming);
->    }
-> }
-> ```
-> ```vb
-> Public NonInheritable Class MainPage
->
->    Public Sub New()
->       InitializeComponent()
->       AddHandler Application.Current.Resuming, AddressOf App_Resuming
->    End Sub
->
-> End Class
-> ```
-> ```cpp
-> MainPage::MainPage()
-> {
->     InitializeComponent();
->     Application::Current->Resuming +=
->         ref new EventHandler<Platform::Object^>(this, &MainPage::App_Resuming);
-> }
-> ```
+```csharp
+partial class MainPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+      Application.Current.Resuming += new EventHandler<Object>(App_Resuming);
+   }
+}
+```
+
+```vb
+Public NonInheritable Class MainPage
+
+   Public Sub New()
+      InitializeComponent()
+      AddHandler Application.Current.Resuming, AddressOf App_Resuming
+   End Sub
+
+End Class
+```
+
+```cppwinrt
+MainPage::MainPage()
+{
+    InitializeComponent();
+    Windows::UI::Xaml::Application::Current().Resuming({ this, &MainPage::App_Resuming });
+}
+```
+
+```cpp
+MainPage::MainPage()
+{
+    InitializeComponent();
+    Application::Current->Resuming +=
+        ref new EventHandler<Platform::Object^>(this, &MainPage::App_Resuming);
+}
+```
 
 ## <a name="refresh-displayed-content-and-reacquire-resources"></a>Actualizar el contenido mostrado y volver adquirir recursos
 
@@ -65,35 +79,46 @@ Cuando la aplicación controla el evento [**Resuming**](https://msdn.microsoft.c
 
 También es un buen momento para restaurar todos los recursos exclusivos que liberaste cuando se suspendió la aplicación, como los identificadores de archivos, cámaras, dispositivos de E/S, dispositivos externos y recursos de red.
 
-> [!div class="tabbedCodeSnippets"]
-> ```cs
-> partial class MainPage
-> {
->     private void App_Resuming(Object sender, Object e)
->     {
->         // TODO: Refresh network data, perform UI updates, and reacquire resources like cameras, I/O devices, etc.
->     }
-> }
-> ```
-> ```vb
-> Public NonInheritable Class MainPage
->
->     Private Sub App_Resuming(sender As Object, e As Object)
->  
->         ' TODO: Refresh network data, perform UI updates, and reacquire resources like cameras, I/O devices, etc.
->
->     End Sub
->
-> End Class
-> ```
-> ```cpp
-> void MainPage::App_Resuming(Object^ sender, Object^ e)
-> {
->     // TODO: Refresh network data, perform UI updates, and reacquire resources like cameras, I/O devices, etc.
-> }
-> ```
+```csharp
+partial class MainPage
+{
+    private void App_Resuming(Object sender, Object e)
+    {
+        // TODO: Refresh network data, perform UI updates, and reacquire resources like cameras, I/O devices, etc.
+    }
+}
+```
 
-> **Nota** Ya que el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera a partir del subproceso de interfaz de usuario, es necesario usar un distribuidor del controlador para distribuir todas las llamadas a la interfaz de usuario.
+```vb
+Public NonInheritable Class MainPage
+
+    Private Sub App_Resuming(sender As Object, e As Object)
+ 
+        ' TODO: Refresh network data, perform UI updates, and reacquire resources like cameras, I/O devices, etc.
+
+    End Sub
+>
+End Class
+```
+
+```cppwinrt
+void MainPage::App_Resuming(
+    Windows::Foundation::IInspectable const& /* sender */,
+    Windows::Foundation::IInspectable const& /* e */)
+{
+    // TODO: Refresh network data, perform UI updates, and reacquire resources like cameras, I/O devices, etc.
+}
+```
+
+```cpp
+void MainPage::App_Resuming(Object^ sender, Object^ e)
+{
+    // TODO: Refresh network data, perform UI updates, and reacquire resources like cameras, I/O devices, etc.
+}
+```
+
+> [!NOTE]
+> Dado que no se genera el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) desde el subproceso de interfaz de usuario, debe usar un distribuidor en el controlador para distribuir todas las llamadas a la interfaz de usuario.
 
 ## <a name="remarks"></a>Observaciones
 

@@ -6,18 +6,17 @@ title: Procesar archivos multimedia en segundo plano
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 8d3166b40120799818598300a049a4148a40d2cc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 866fedf35aa6f1f585825195b18cdd1fed4bad11
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238733"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548376"
 ---
 # <a name="process-media-files-in-the-background"></a>Procesar archivos multimedia en segundo plano
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se muestra cómo usar la clase [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) y una tarea en segundo plano para procesar los archivos multimedia en segundo plano.
@@ -127,9 +126,13 @@ Registra la tarea en segundo plano llamando al método [**Register**](https://ms
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-Inicia la tarea en segundo plano llamando al método [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) del objeto **MediaProcessingTrigger**. El objeto [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) que devuelve este método te permitirá saber si la tarea en segundo plano se inició correctamente y, si no es así, te permitirá saber el por qué.
+Una aplicación típica registra su tarea en segundo plano cuando la aplicación iniciada inicialmente, por ejemplo, al igual que en el evento **OnNavigatedTo** .
+
+Inicia la tarea en segundo plano llamando al método [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) del objeto **MediaProcessingTrigger**. El objeto [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) que devuelve este método te permitirá saber si la tarea en segundo plano se inició correctamente y, si no es así, te permitirá saber el por qué. 
 
 [!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
+
+Una aplicación típica iniciará la tarea en segundo plano en respuesta a la interacción del usuario, como en el evento **Click** de un control de la interfaz de usuario.
 
 Se llama al controlador de eventos **OnProgress** cuando la tarea en segundo plano actualiza el progreso de la operación. Puedes usar esta oportunidad para actualizar la interfaz de usuario con la información de progreso.
 
@@ -140,9 +143,9 @@ Se llama al controlador de eventos **OnCompleted** cuando la tarea en segundo pl
 [!code-cs[OnCompleted](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetOnCompleted)]
 
 
- 
+ 
 
- 
+ 
 
 
 
