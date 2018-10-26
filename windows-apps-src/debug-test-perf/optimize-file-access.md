@@ -6,19 +6,17 @@ description: Crea aplicaciones para la Plataforma universal de Windows (UWP) que
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 00ad06179ed4a77cb3e5144df12d5490f79a5df2
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 1b0b1a45bc967dd69d38f2e85609a5e13ffd61b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894621"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558790"
 ---
 # <a name="optimize-file-access"></a>Optimizar el acceso a archivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Crea aplicaciones para la Plataforma universal de Windows (UWP) que puedan obtener acceso al sistema de archivos de forma eficaz, y así evitar problemas de rendimiento debido a la latencia de discos o a los ciclos de memoria o de la CPU
 
@@ -137,7 +135,7 @@ Si realizas varias operaciones en objetos Windows.Storage, como `Windows.Storage
 
 ### <a name="buffering-between-uwp-and-net-streams"></a>Almacenar en búfer entre flujos UWP y .NET
 
-En muchos escenarios, quizás quieras convertir una secuencia de UWP (como [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) o [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728)) en una secuencia de .NET ([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx)). Por ejemplo, esto es útil cuando escribes una aplicación para UWP y quieres usar código .NET ya existente que funcione en secuencias con el sistema de archivos de UWP. Para ello, las API de .NET para aplicaciones de la Tienda Windows proporcionan métodos de extensión que te permiten convertir tipos de secuencias entre .NET y UWP. Para más información, consulta [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx).
+En muchos escenarios, quizás quieras convertir una secuencia de UWP (como [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) o [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728)) en una secuencia de .NET ([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx)). Por ejemplo, esto es útil cuando escribes una aplicación para UWP y quieres usar código .NET ya existente que funcione en secuencias con el sistema de archivos de UWP. Para poder habilitar esta opción, las API de .NET para aplicaciones para UWP proporciona métodos de extensión que te permiten convertir entre los tipos de secuencia de .NET y UWP. Para más información, consulta [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx).
 
 Cuando conviertes una secuencia de UWP en una de .NET, creas, de forma correcta, un adaptador para la secuencia subyacente de UWP. En algunas circunstancias, invocar métodos en flujos de UWP en tiempo de ejecución tiene asociado un coste. Esto puede afectar a la velocidad de la aplicación, especialmente en escenarios donde realizas varias operaciones pequeñas y frecuentes de lectura o escritura.
 
@@ -200,7 +198,7 @@ Este comportamiento de búfer es conveniente en la mayoría de los escenarios en
 
 Cuando leas o escribas grandes conjuntos de datos, podrás aumentar tu velocidad de lectura o escritura si proporcionas un tamaño de búfer mayor a los métodos de extensión [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) y [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx). Esto le da al adaptador de secuencias un búfer interno de mayor tamaño. Por ejemplo, cuando se pasa un flujo de un archivo grande a un analizador XML, el analizador puede hacer varias lecturas secuenciales pequeñas del flujo. Un búfer grande puede reducir la cantidad de llamadas a la secuencia de UWP y aumentar el rendimiento.
 
-> **Nota**  Debes tener cuidado cuando configures un tamaño de búfer que sea mayor que aproximadamente 80KB, ya que esto puede causar la fragmentación del montón del colector de elementos no utilizados (consulta [Mejorar el rendimiento de la recolección de elementos no utilizados](improve-garbage-collection-performance.md)). El siguiente ejemplo de código crea un adaptador de secuencias administradas con un búfer de 81.920 bytes.
+> **Nota**  debes tener cuidado cuando configures un tamaño de búfer que sea mayor que aproximadamente 80 KB, ya Esto puede causar la fragmentación del montón del colector de elementos no utilizados (consulta [mejorar el rendimiento de colección de recolección](improve-garbage-collection-performance.md)). El siguiente ejemplo de código crea un adaptador de secuencias administradas con un búfer de 81.920 bytes.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp

@@ -5,17 +5,15 @@ description: Descubre cómo habilitar o deshabilitar el seguimiento de Fiddler m
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
-ms.openlocfilehash: 819f039f04d1e0a7fd035b10e3cbe408645e8f4d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 8e0faf3a0b6a4f13c0fce24aa093cf94a1e7ee7e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "409947"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558661"
 ---
 # <a name="fiddler-settings-api-reference"></a>Referencia de API de configuración de Fiddler   
 Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de desarrollo con esta API de REST.
@@ -24,7 +22,7 @@ Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de de
 
 **Solicitud**
 
-Puede comprobar para ver si se habilita el seguimiento de Fiddler en el dispositivo con la siguiente solicitud.
+Puedes comprobar para ver si está habilitado el seguimiento de Fiddler en el dispositivo con la siguiente solicitud.
 
 Método      | URI de solicitud
 :------     | :-----
@@ -44,7 +42,7 @@ GET | /ext/fiddler
 
 **Respuesta**   
 
-- Propiedad de bool JSON IsProxyEnabled qué especificadores si el proxy está habilitado o no.
+- Propiedad JSON bool IsProxyEnabled qué especificadores indica si el proxy está habilitado o no.
 
 **Código de estado**
 

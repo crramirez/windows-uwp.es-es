@@ -9,15 +9,13 @@ keywords: teclado, texto, texto principal, texto personalizado, Text Services Fr
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 734d18d7320ecc3157fbc9896db28989e0791e8d
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 14a2811f59b8de33db51b255aee8892abf553198
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655567"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555417"
 ---
 # <a name="custom-text-input"></a>Entrada de texto personalizado
 
@@ -63,7 +61,7 @@ Los intervalos y selecciones de texto se representan mediante la estructura [**C
 | **StartCaretPosition** | **Número** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | La posición de inicio de un intervalo es la ACP inmediatamente anterior al primer carácter. |
 | **EndCaretPosition**   | **Número** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | La posición final del intervalo es la ACP inmediatamente posterior al último carácter.     |
 
- 
+ 
 
 Por ejemplo, en el intervalo de texto que se mostró anteriormente, el intervalo \[0, 5\] especifica la palabra "Hello". **StartCaretPosition** debe ser siempre menor o igual que **EndCaretPosition**. El intervalo \[5, 0\] no es válido.
 
@@ -158,9 +156,8 @@ Habrá veces que [**Range**](https://msdn.microsoft.com/library/windows/apps/dn9
 ## <a name="related-articles"></a>Artículos relacionados
 
 **Ejemplos**
-* [Ejemplo de control de edición personalizado](https://go.microsoft.com/fwlink/?linkid=831024)
- 
-**Ejemplos de archivo**
-* [Ejemplo de edición de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+* [Ejemplo de Control de edición personalizado](https://go.microsoft.com/fwlink/?linkid=831024) 
+ **Muestras de archivo**
+* [Muestra de edición de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
 
 

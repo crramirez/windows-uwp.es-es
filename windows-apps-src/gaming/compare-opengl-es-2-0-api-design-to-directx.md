@@ -6,19 +6,18 @@ ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, juegos, OpenGL, Direct3D
-ms.openlocfilehash: d2642abbfbfc6030aa00f68f30d4a45eb0e86ee1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 2308c0b931b58209d1233205c355ac09680803dd
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238725"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554770"
 ---
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>Planear la migración de OpenGL ES 2.0 a Direct3D
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -65,7 +64,7 @@ Direct3D 11 ofrece compatibilidad con los "niveles de característica" de hardwa
 | [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)                  | DirectXMath proporciona un conjunto de API y macros para controlar tipos trigonométricos y de álgebra lineal comunes, así como valores y funciones. Estos tipos y funciones están diseñados para funcionar con Direct3D y sus operaciones de sombreador.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | [DirectX HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509580) | Es la sintaxis actual de HLSL que usan los sombreadores de Direct3D. Implementa el modelo de sombreador 5.0 de Direct3D.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
- 
+ 
 
 ## <a name="review-the-windows-runtime-apis-and-template-library"></a>Revisar la biblioteca de plantillas y API de Windows Runtime
 
@@ -108,7 +107,7 @@ Si embargo Direct3D puede admitir un sistema de coordenadas a la derecha. Direct
 | [**XMMatrixPerspectiveOffCenterRH**](https://msdn.microsoft.com/library/windows/desktop/ee419983)   | Crea una versión personalizada de una matriz de proyección de perspectiva a la derecha.                                                    |
 | [**XMMatrixPerspectiveRH**](https://msdn.microsoft.com/library/windows/desktop/ee419984)                     | Crea una matriz de proyección de perspectiva a la derecha.                                                                        |
 
- 
+ 
 
 ## <a name="opengl-es20-to-direct3d-11-porting-frequently-asked-questions"></a>Preguntas más frecuentes sobre la migración de OpenGL ES 2.0 a Direct3D 11
 
@@ -116,9 +115,9 @@ Si embargo Direct3D puede admitir un sistema de coordenadas a la derecha. Direct
 -   Pregunta: "En general, ¿puedo buscar ciertas cadenas o patrones en el código de OpenGL y reemplazarlos con los equivalentes de Direct3D?
 -   Respuesta: No. OpenGL ES 2.0 y Direct3D 11 provienen de distintas generaciones de modelos de canalización de gráficos. Si bien hay algunas similitudes superficiales entre los conceptos y las API, como el contexto de representación y las instancias de sombreador, debes revisar esta orientación, así como la referencia de Direct3D 11, para asegurarte de tomar las mejores decisiones cuando recrees tu canalización en lugar de intentar una asignación 1 a 1. Sin embargo, su vas a migrar de GLSL a HLSL, crear un conjunto de alias comunes para las variables, intrínsecos y funciones de GLSL no solo puede facilitar la migración, sino que también te permite mantener un solo conjunto de archivos de código de sombreador.
 
- 
+ 
 
- 
+ 
 
 
 

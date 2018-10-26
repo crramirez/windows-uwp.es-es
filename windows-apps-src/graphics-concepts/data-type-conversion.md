@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c7f68984274cbdb3adec0a88a0c99f7a7342380
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a6ceb1e779f8622d3e358bc131b21f6ec66ac2f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045118"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556418"
 ---
 # <a name="data-type-conversion"></a>Conversión de tipos de datos
 
@@ -37,7 +35,7 @@ El conjunto de términos siguiente se usa posteriormente para caracterizar varia
 | FLOAT | Un valor de punto flotante en cualquiera de las representaciones definidas por Direct3D.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | sRGB  | Es similar a UNORM, en que, para un número de n bits, todos los 0 significan 0.0f y todos los 1 significan 1.0f. Sin embargo, a diferencia de UNORM, con sRGB, la secuencia de codificaciones de enteros sin signo entre todos los 0 para todos los 1 representa una progresión no lineal en la interpretación de punto flotante de los números, entre 0.0f y 1.0f. A grandes rasgos, si esta progresión no lineal, sRGB, se muestra como una secuencia de colores, aparecería como una rampa lineal de niveles de luminosidad para un observador "promedio" en condiciones de vista "promedias" en una pantalla "promedia". Para obtener información detallada, consulta el estándar de colores sRGB, IEC 61996-2-1, en IEC (Comisión Electrotécnica Internacional).                |
 
- 
+ 
 
 Los términos anteriores se suelen usar como "Modificadores de nombres de formato" y describen cómo se disponen los datos en la memoria y qué conversión se debe realizar en la ruta de transporte (incluido el filtrado posiblemente) de la memoria a una unidad de canalización, como un sombreador, o desde ella.
 
@@ -189,7 +187,7 @@ Con enteros, a menos que se especifique lo contrario, todas las conversiones a/d
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanfixed-point-integer-conversion"></a><span id="Fixed_Point_Integer_Conversion"></span><span id="fixed_point_integer_conversion"></span><span id="FIXED_POINT_INTEGER_CONVERSION"></span>Conversión de número entero de punto fijo
 
@@ -238,22 +236,22 @@ Las representaciones de enteros de punto fijo se usan de dos formas en Direct3D.
 <td align="left">Entero de punto fijo</td>
 <td align="left">FLOAT</td>
 <td align="left"><p>Supone que la representación de punto fijo específica que se convierte en tipo float no contiene más de un total de 24 bits de información, de los cuales, menos de 23 bits está en el componente fraccionario. Supone que un número de punto fijo dado, fxp, se encuentra en la forma i.f. (entero de bits i, fracción de bits f). La conversión al valor float es como el siguiente seudocódigo.</p>
-<p>se muestran flotando resultado = (float) (fxp &gt; &gt; f) + / / extract entero</p>
-((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); extraer fracción</td>
+<p>resultado de float = (float) (fxp &gt; &gt; f) + / / entero de extracción</p>
+((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); fracción de extracción</td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
 [Anexos](appendix.md)
 
- 
+ 
 
- 
+ 
 
 
 

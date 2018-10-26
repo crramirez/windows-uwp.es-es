@@ -2,24 +2,22 @@
 author: GrantMeStrength
 ms.assetid: 3a17e682-40be-41b4-8bd3-fbf0b15259d6
 title: Crear una aplicación Hello, world (JS)
-description: Este tutorial te enseña a usar JavaScript y HTML para crear una aplicación sencilla Hello, world para la Plataforma universal de Windows (UWP) en Windows 10.
+description: Este tutorial te enseña a usar JavaScript y HTML para crear una sencilla \#0034; Hola, mundo & \#0034; aplicación destinada a la plataforma Universal de Windows (UWP) en Windows 10.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b541f2388fd4980af4b405a89ee6a04b700a3e84
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 4d8fb1dc486c039007c3ea0d4ee36d72c0c511f9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692746"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556859"
 ---
 # <a name="create-a-hello-world-app-js"></a>Crear una aplicación Hello, world (JS)
 
-Este tutorial te enseña a usar JavaScript y HTML para crear una aplicación sencilla "Hello, world" para la Plataforma universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes compilar una aplicación que se ejecute en cualquier dispositivo de Windows 10.
+Este tutorial te enseña a usar JavaScript y HTML para crear una sencilla "Hello, world" aplicación destinada a la plataforma Universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes crear una aplicación que se ejecuta en cualquier dispositivo Windows 10.
 
 > [!NOTE]
 > En este tutorial se usa Visual Studio Community 2017. Si usas otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
@@ -27,14 +25,14 @@ Este tutorial te enseña a usar JavaScript y HTML para crear una aplicación sen
 
 Aquí aprenderás a:
 
--   Crear un nuevo proyecto de **Visual Studio 2017** diseñado para **Windows 10** y **UWP**.
+-   Crear un nuevo proyecto de **Visual Studio 2017** que está destinada a **Windows 10** y la **UWP**.
 -   Agregar contenido HTML y JavaScript
 -   Ejecutar el proyecto en el escritorio local de Visual Studio
 
 ## <a name="before-you-start"></a>Antes de comenzar...
 
 -   [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md).
--   Para realizar este tutorial, debes tener Windows10 y Visual Studio2017. [Prepárate](get-set-up.md).
+-   Para completar este tutorial, debes tener Windows 10 y Studio2017 Visual. [Prepárate](get-set-up.md).
 -   También se supone que estás usando el diseño de ventana predeterminado de Visual Studio. Si cambias el diseño predeterminado, puedes restablecerlo en el menú **Ventana** con el comando **Restablecer diseño de la ventana**.
 
 ## <a name="step-1-create-a-new-project-in-visual-studio"></a>Paso 1: Creación de un nuevo proyecto en Visual Studio.
@@ -159,7 +157,7 @@ Ahora puedes ejecutar la aplicación presionando F5. La aplicación se cargará 
 ## <a name="summary"></a>Resumen
 
 
-Enhorabuena, has creado una aplicación de JavaScript para Windows10 y la UWP. Este es un ejemplo extremadamente sencillo; sin embargo, ya puedes empezar a agregar tus bibliotecas de JavaScript y marcos favoritos para crear tu propia aplicación. Y como se trata de una aplicación para UWP, puedes publicarla en la Tienda. Para obtener ejemplos de cómo agregar marcos de terceros, consulta estos proyectos:
+Enhorabuena, has creado una aplicación de JavaScript para Windows 10 y la UWP. Este es un ejemplo extremadamente sencillo; sin embargo, ya puedes empezar a agregar tus bibliotecas de JavaScript y marcos favoritos para crear tu propia aplicación. Y como se trata de una aplicación para UWP, puedes publicarla en la Tienda. Para obtener ejemplos de cómo agregar marcos de terceros, consulta estos proyectos:
 
 * [Un sencillo juego en 2D para UWP para Microsoft Store, escrito en JavaScript y CreateJS](get-started-tutorial-game-js2d.md)
 * [Un juego en 3D para UWP para Microsoft Store, escrito en JavaScript y threeJS](get-started-tutorial-game-js3d.md)

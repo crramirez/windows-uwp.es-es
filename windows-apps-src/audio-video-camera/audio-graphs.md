@@ -6,16 +6,14 @@ title: Gráficos de audio
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 26b9f49c8f21c7c60fb99fd8eaf24156a8aed3d9
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: cdd1548a4d120027afd06a178cc338c88cb5cc4b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832506"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558276"
 ---
 # <a name="audio-graphs"></a>Gráficos de audio
 
@@ -47,7 +45,7 @@ API de gráficos de audio de Windows Runtime:
 -   Son significativamente más fáciles de usar que XAudio2.
 -   Pueden usarse desde C#, además de ser compatibles con C++.
 -   Pueden usar archivos de audio directamente, incluidos formatos de archivo comprimido. XAudio2 solo funciona en búferes de audio y no proporciona ninguna funcionalidad de E/S de archivo.
--   Puedes usar la canalización de audio de latencia baja de Windows10.
+-   Usar la canalización de audio de latencia baja en Windows 10.
 -   Admite la conmutación automática de los extremos cuando se usan los parámetros de extremo predeterminados. Por ejemplo, si el usuario cambia del altavoz de un dispositivo a unos auriculares, el audio se redirige automáticamente a la entrada nueva.
 
 ## <a name="audiograph-class"></a>Clase AudioGraph
@@ -270,9 +268,9 @@ De manera predeterminada, el audio espacial se calcula mediante el algoritmo de 
 
 ## <a name="see-also"></a>Consulta también
 - [Reproducción de contenido multimedia](media-playback.md)
- 
+ 
 
- 
+ 
 
 
 

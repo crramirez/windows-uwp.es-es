@@ -6,16 +6,14 @@ title: Efectos para la captura de vídeo
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a3c6efd0abc4061ffc567ec088171c62528e7ff
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: d427a532e9821b81b6f23d08babecd692c8c95e1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843285"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557896"
 ---
 # <a name="effects-for-video-capture"></a>Efectos para la captura de vídeo
 
@@ -107,9 +105,9 @@ Para limpiar el efecto de estabilización de vídeo, llama al método [**RemoveE
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
- 
+ 
 
- 
+ 
 
 
 

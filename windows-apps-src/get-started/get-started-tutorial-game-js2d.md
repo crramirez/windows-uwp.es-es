@@ -1,21 +1,19 @@
 ---
 title: Crear un juego para UWP en JavaScript
-description: Un simple UWP juego para el Microsoft Store, escrito en JavaScript y CreateJS
+description: Un sencillo juego para UWP para Microsoft Store, escrito en JavaScript y CreateJS
 author: GrantMeStrength
 ms.author: jken
 ms.date: 02/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, Windows 10, uwp, UWP
+keywords: Windows 10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 87625c05ea13dcb8af2c06dfba7b35308200b5eb
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 60060bb3ec7a644d29523483d0d31c0497c543d1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1018615"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558528"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Crear un juego para UWP en JavaScript
 
@@ -28,13 +26,13 @@ ms.locfileid: "1018615"
 ## <a name="introduction"></a>Introducción
 
 
-Publicación de una aplicación en los medios de Microsoft Store puede compartirlo (o Véndalo!) con millones de personas, en muchos dispositivos diferentes.  
+Publicación de una aplicación a los medios de Microsoft Store puede compartirla (o venderla a!) con millones de personas con muchos dispositivos diferentes.  
 
-Con el fin de publicar la aplicación en el Microsoft Store debe escribirse como una aplicación de UWP (plataforma Windows Universal). Sin embargo, la UWP es muy flexible y admite una amplia variedad de lenguajes y marcos. Para demostrar esto, en este ejemplo se muestra un juego sencillo escrito en JavaScript, haciendo uso de varias bibliotecas CreateJS, y se muestra cómo dibujar sprites, crear un bucle de juego, ofrecer compatibilidad con el teclado y el mouse, y adaptarse a pantallas de diferentes tamaños.
+Para poder publicar la aplicación en Microsoft Store debe estar escrita como una aplicación para UWP (plataforma Universal de Windows). Sin embargo, la UWP es muy flexible y admite una amplia variedad de lenguajes y marcos. Para demostrar esto, en este ejemplo se muestra un juego sencillo escrito en JavaScript, haciendo uso de varias bibliotecas CreateJS, y se muestra cómo dibujar sprites, crear un bucle de juego, ofrecer compatibilidad con el teclado y el mouse, y adaptarse a pantallas de diferentes tamaños.
 
 Este proyecto se crea con JavaScript mediante Visual Studio. Con algunos cambios menores, también puede hospedarse en un sitio web o adaptarse para otras plataformas. 
 
-**Nota:** Esto no es un juego completo (o buena!); está diseñado para demostrar el uso de JavaScript y una tercera biblioteca de terceros para que una aplicación esté listo para publicar en el Microsoft Store.
+**Nota:** Esto no es un juego completo (ni necesariamente bueno); está diseñada para mostrar como usar JavaScript y un tercer biblioteca de terceros para preparar una aplicación lista para publicar en Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -73,7 +71,7 @@ Presiona **F5** para ejecutar la aplicación. Deberías ver una ventana abierta 
 
 ## <a name="walkthough"></a>Tutorial
 
-Si iniciaste el juego con F5, probablemente te estarás preguntando qué está pasando. Y la respuesta es "no es un lote", como una gran parte del código está actualmente con comentarios. Hasta ahora, todo verá es el dinosaurio y un su solicitud ineficaz que presione espacio. 
+Si iniciaste el juego con F5, probablemente te estarás preguntando qué está pasando. Y la respuesta es "no mucho", como una gran parte del código está comentado. Hasta ahora, todo lo verás es el dinosaurio y una solicitud ineficaz pulsar la barra espaciadora. 
 
 ### <a name="1-setting-the-stage"></a>1. Configurar el escenario
 
@@ -92,7 +90,7 @@ A propósito, ahora es un buen momento para abrir **main.js**.
 
 ### <a name="2-loading-the-bitmaps"></a>2. Cargar los mapas de bits
 
-EaselJS nos proporciona distintos tipos de objetos gráficos. Podemos crear formas simples (por ejemplo, el rectángulo azul que se usa para el cielo), o mapas de bits (por ejemplo, las nubes que vamos a agregar), objetos de texto y sprites. Sprites usar un (SpriteSheet) [http://createjs.com/docs/easeljs/classes/SpriteSheet.html]: un mapa de bits único que contiene varias imágenes. Por ejemplo, usamos este SpriteSheet para almacenar los distintos fotogramas de la animación de dinosaurio:
+EaselJS nos proporciona distintos tipos de objetos gráficos. Podemos crear formas simples (por ejemplo, el rectángulo azul que se usa para el cielo), o mapas de bits (por ejemplo, las nubes que vamos a agregar), objetos de texto y sprites. Los sprites usan un (SpriteSheet) [http://createjs.com/docs/easeljs/classes/SpriteSheet.html]: un único mapa de bits que contiene varias imágenes. Por ejemplo, usamos este SpriteSheet para almacenar los distintos fotogramas de la animación de dinosaurio:
 
 ![Hoja de sprite de un dinosaurio caminando](images/JS2D_4.png)
 
@@ -170,7 +168,7 @@ Ahora vamos a hacer que las nubes se muevan. El secreto para hacer que las nubes
 
 <p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen">Consulta el Pen <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS - Animating clouds</a> (CreateJS, animación de nubes) de Microsoft Edge Docs (<a href="http://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>) en <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
- 
+ 
 El código para esto ya está en el archivo **main.js**, que proporciona la biblioteca CreateJS, EaselJS. Tiene esta apariencia:
 
 ```
@@ -259,9 +257,9 @@ Quita solo los comentarios de esta línea para llamar a la función cuando se de
 
 Si vuelves a ejecutar la aplicación, deberías poder cambiar el tamaño de la ventana y obtener mejores resultados.
 
-## <a name="publishing-to-the-microsoft-store"></a>Publicación en el almacén de Microsoft
+## <a name="publishing-to-the-microsoft-store"></a>Publicar en Microsoft Store
 
-Ahora tiene una aplicación UWP, es posible publicar para el Store Microsoft (suponiendo que se han mejorado en primer lugar!) 
+Ahora que tienes una aplicación para UWP, es posible publicar en Microsoft Store (siempre que la hayas mejorado). 
 
 Este proceso tiene diferentes pasos.
 
@@ -269,7 +267,7 @@ Este proceso tiene diferentes pasos.
 2. Debes usar la [lista de comprobación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) del envío de la aplicación.
 3. La aplicación debe enviarse para su [certificación](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process).
 
-Para obtener más información, vea la [publicación de la aplicación UWP](https://developer.microsoft.com/en-us/store/publish-apps).
+Para obtener más información, consulta la [publicación de tu aplicación para UWP](https://developer.microsoft.com/en-us/store/publish-apps).
 
 ## <a name="suggestions-for-other-features"></a>Sugerencias para otras características.
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf14efc4c4ec29c98ebebff91493623d55267db5
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: d7456cd773196520e066062c664f5e3073941dfe
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044614"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559397"
 ---
 # <a name="primitive-topologies"></a>Topologías primitivas
 
@@ -68,7 +66,7 @@ En la siguiente tabla, se describen los símbolos de la ilustración anterior.
 | ![Símbolo de la dirección de generación](images/d3d10-primitive-topologies-winding-direction.png) | Dirección de generación | Orden de los vértices al ensamblar un primitivo. Puede ser en el sentido de las agujas del reloj o en sentido opuesto. |
 | ![Símbolo de vértice inicial](images/d3d10-primitive-topologies-leading-vertex.png)       | Vértice inicial    | Primer vértice no adyacente de un primitivo que contiene datos por constante.       |
 
- 
+ 
 
 ## <a name="span-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspangenerating-multiple-strips"></a><span id="Generating_Multiple_Strips"></span><span id="generating_multiple_strips"></span><span id="GENERATING_MULTIPLE_STRIPS"></span>Generación de varias series
 
@@ -86,9 +84,9 @@ Para obtener más información acerca de cómo generar varias series, consulta [
 
 [Canalización de gráficos](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

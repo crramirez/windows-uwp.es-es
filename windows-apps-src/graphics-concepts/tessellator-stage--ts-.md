@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f2bdcf77a9c150195a7a4c27a064d26c525472a
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 1d57c60e8cba9be75e936c55800bac93f8df3e30
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044824"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556619"
 ---
 # <a name="tessellator-ts-stage"></a>Fase de Tessellator (TS)
 
@@ -72,7 +70,7 @@ La fase de Tessellator (TS) funciona en dos fases:
     | Integer              | Intervalo de TessFactor: \[1..64\] |
     | Pow2                 | Intervalo de TessFactor: \[1..64\] |
 
-     
+     
 
 La teselación se implementa con dos fases de sombreadores programables: un [sombreador de casco](hull-shader-stage--hs-.md) y un [sombreador de dominios](domain-shader-stage--ds-.md). Estas fases de sombreador se programan con código HLSL, que se define en el modelo de sombreador 5. Los destinos de sombreador son: hs\_5\_0 y ds\_5\_0. El título crea el sombreador y luego el código para el hardware se extrae de los sombreadores compilados pasados al tiempo de ejecución cuando los sombreadores se enlazan a la canalización.
 
@@ -97,9 +95,9 @@ El Tessellator envía coordenadas uv (y, opcionalmente, w) y la topología de su
 
 [Canalización de gráficos](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

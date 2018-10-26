@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 18746ef231f7d2b387866fba82e4f12a44476001
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 65b9f6700ddd11c41193820a5247a90c2382c98b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044624"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558184"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>Atenuación y factor de foco de luz
 
@@ -39,14 +37,14 @@ Donde:
 | att2<sub>i</sub> | 0.0           | Punto flotante | Factor de atenuación cuadrática                    | De 0 a +infinito |
 | d                | N/C           | Punto flotante | Distancia desde la posición del vértice hasta la posición de la luz | N/C            |
 
- 
+ 
 
 -   Atten = 1, si la luz es una luz direccional.
 -   Atten = 0, si la distancia entre la luz y el vértice supera el intervalo de la luz.
 
 La distancia entre la luz y la posición del vértice siempre es positiva.
 
-d. = | L<sub>dir</sub> |
+Pad = | L<sub>dir</sub> |
 
 Donde:
 
@@ -54,7 +52,7 @@ Donde:
 |-----------------|---------------|--------------------------------------------------|-------------------------------------------------------------|
 | L<sub>dir</sub> | N/C           | Vector 3D con valores de punto flotante x, y, z | Vector de dirección desde la posición del vértice hasta la posición de la luz |
 
- 
+ 
 
 Si d es mayor que el intervalo de la luz, Direct3D no hace ningún otro cálculo de atenuación y no aplica ningún efecto desde la luz al vértice.
 
@@ -76,7 +74,7 @@ La siguiente ecuación especifica el factor de foco de luz.
 | theta<sub>i</sub> | 0.0           | Punto flotante | Ángulo de umbra del foco de luz i en radianes    | \[0, pi)                 |
 | falloff           | 0.0           | Punto flotante | Factor de disminución                           | (-infinito, +infinito)   |
 
- 
+ 
 
 Donde:
 
@@ -89,7 +87,7 @@ y:
 | L<sub>dcs</sub> | N/C           | Vector 3D con valores de punto flotante x, y, z | El valor negativo de la dirección de la luz en el espacio de la cámara         |
 | L<sub>dir</sub> | N/C           | Vector 3D con valores de punto flotante x, y, z | Vector de dirección desde la posición del vértice hasta la posición de la luz |
 
- 
+ 
 
 Tras calcular la atenuación de la luz, para calcular los componentes de difusión y especulares para el vértice, Direct3D también tiene en cuenta los efectos del foco de luz, si procede, el ángulo en el que se refleja la luz desde una superficie y la reflectividad del material actual. En [Tipos de luz](light-types.md), consulta "Foco de luz".
 
@@ -98,9 +96,9 @@ Tras calcular la atenuación de la luz, para calcular los componentes de difusi�
 
 [Cálculos de iluminación](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

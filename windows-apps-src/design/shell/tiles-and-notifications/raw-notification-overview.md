@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 887600366fdf1bf3951091df27d10f54516c2bf0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 3e1a015d5d51ad0c15f20755afcb0d324acd1f36
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674552"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556055"
 ---
 # <a name="raw-notification-overview"></a>Introducción a las notificaciones sin procesar
 
@@ -28,7 +26,7 @@ Puedes usar las notificaciones sin procesar con diversos fines, como activar la 
 > [!IMPORTANT]
 > Para adquirir un mayor conocimiento sobre las notificaciones sin procesar, recomendamos que te familiarices con los conceptos que se abordan en el tema [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md).
 
- 
+ 
 
 Al igual que ocurre con las notificaciones de inserción de tipo notificación, notificación del sistema y notificación de icono, las notificaciones sin procesar se insertan desde el servicio de nube de tu aplicación en WNS a través de un identificador uniforme de recursos (URI) de canal asignado. A su vez, WNS entrega la notificación al dispositivo y la cuenta de usuario asociados a dicho canal. A diferencia del resto de las notificaciones de inserción, las notificaciones sin procesar carecen de un formato especificado. El contenido de carga se define totalmente según la aplicación.
 
@@ -97,7 +95,7 @@ WNS eliminará cualquier notificación sin procesar enviada a la aplicación si 
 > [!IMPORTANT]
 > Antes de usar tareas en segundo plano de notificaciones sin procesar, la aplicación debe tener acceso en segundo plano a través de [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_).
 
- 
+ 
 
 La tarea en segundo plano se debe registrar con un [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger); de lo contrario, dicha tarea no se ejecutará cuando se reciba una notificación sin procesar.
 
@@ -117,7 +115,7 @@ Solo se puede ejecutar una tarea en segundo plano en una aplicación cada vez. E
 ## <a name="other-resources"></a>Otros recursos
 
 
-Para obtener más información, descarga el [Ejemplo de notificaciones sin procesar](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows 8.1 y el [Ejemplo de notificaciones de inserción y periódicas](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows 8.1 y vuelve a usar su código fuente en la aplicación de Windows10.
+Puedes obtener más información, descarga la [muestra de notificaciones sin procesar](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows8.1 y la [muestra de inserción y las notificaciones periódicas](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows8.1 y volver a usar su código fuente en la aplicación de Windows 10.
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -126,9 +124,9 @@ Para obtener más información, descarga el [Ejemplo de notificaciones sin proce
 * [Inicio rápido: interceptar notificaciones de inserción para aplicaciones en ejecución](https://msdn.microsoft.com/library/windows/apps/jj709908)
 * [**RawNotification**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.RawNotification)
 * [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)
- 
+ 
 
- 
+ 
 
 
 

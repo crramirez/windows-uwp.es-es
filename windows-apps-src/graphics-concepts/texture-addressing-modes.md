@@ -12,15 +12,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 75aa946f3a0f1259adf1207e9568ca6da783883e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0e817dcc92741ca2e738784f387cfe49399a108c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044754"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552811"
 ---
 # <a name="texture-addressing-modes"></a>Modos de direccionamiento de las texturas
 
@@ -43,7 +41,7 @@ Si se habilita el ajuste de la textura de forma efectiva, las coordenadas de tex
 | Clamp                   | Comprime las coordenadas de la textura en el intervalo \[0.0, 1.0\]; el modo Clamp aplica la textura una vez y luego difumina el color de los píxeles de los bordes. |
 | Border Color            | Usa un *color del borde* arbitrario para todas las coordenadas de textura situadas fuera del intervalo de 0.0 a 1.0, ambos inclusive.                         |
 
- 
+ 
 
 ## <a name="span-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanwrap-texture-address-mode"></a><span id="Wrap_texture_address_mode"></span><span id="wrap_texture_address_mode"></span><span id="WRAP_TEXTURE_ADDRESS_MODE"></span>Modo de direccionamiento de las texturas Wrap
 
@@ -101,9 +99,9 @@ Las limitaciones de repetición de textura pueden depender del tamaño de la tex
 
 [Texturas](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

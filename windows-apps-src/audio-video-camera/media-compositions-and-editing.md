@@ -6,18 +6,17 @@ title: Composiciones y edición multimedia
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 66d14ae9335edcc5535d0dcc37cca2273874f61d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: f32d63bf03a469d8282262c358153140587d9033
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "240220"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557356"
 ---
 # <a name="media-compositions-and-editing"></a>Composiciones y edición multimedia
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo te mostramos cómo usar las API en el espacio de nombres [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565), para desarrollar rápidamente aplicaciones que permitan a los usuarios crear composiciones multimedia desde archivos de origen de audio y vídeo. Las características del marco incluyen la capacidad de anexar juntos varios clips de vídeo, agregar superposiciones de vídeo e imágenes, agregar audio en segundo plano y aplicar efectos de audio y vídeos mediante programación. Una vez creado, las composiciones multimedia pueden representarse en un archivo multimedia plano para la reproducción o uso compartido, pero composiciones también se serializa en y desde el disco, lo que permite al usuario cargar y modificar composiciones que han creado anteriormente. Toda esta funcionalidad se proporciona en una interfaz de Windows Runtime de uso fácil que reduce considerablemente la cantidad y la complejidad del código necesario para realizar estas tareas en comparación con el bajo nivel [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) API.
@@ -152,9 +151,9 @@ Se pueden deserializar composiciones multimedia desde un archivo para que el usu
 
 -   Si un archivo multimedia de la composición no está en una ubicación a la que pueda acceder tu aplicación y no está en la propiedad [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) de la clase [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) de tu aplicación, se producirá un error al cargar la composición.
 
- 
+ 
 
- 
+ 
 
 
 

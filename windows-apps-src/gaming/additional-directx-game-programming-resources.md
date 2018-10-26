@@ -6,16 +6,14 @@ ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, juegos, programación
 ms.localizationpriority: medium
-ms.openlocfilehash: e842350b7fd81c3f617d5e5a27c9f2f9466b64f6
-ms.sourcegitcommit: be5b71a8ec7b686d5f93d56d10cb9a50c3c5bb4a
+ms.openlocfilehash: d201caefedca0d810f78d893ea779bd6b814f007
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "238687"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559457"
 ---
 # <a name="game-programming-resources"></a>Recursos de programación de juegos
 
@@ -33,7 +31,7 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 ## <a name="game-design-guidance"></a>Guía de diseño de juegos
 
 
--   [Instrucciones del índice de experiencia de usuario para las aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/hh465424)
+-   [Índice de las directrices para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh465424)
 
 ## <a name="blogs"></a>Blogs
 
@@ -49,7 +47,7 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 -   [Biblioteca de procesamiento de texturas de DirectXTex](  http://go.microsoft.com/fwlink/p/?LinkID=248926)
 -   [Diagnóstico de gráficos](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx) de Microsoft Visual Studio
 -   [Win2D](https://github.com/Microsoft/Win2D): Una API de Windows Runtime fácil de usar para la representación de elementos gráficos 2D de modo inmediato con aceleración de GPU.
--   [Ángulo de almacenamiento de Microsoft](http://go.microsoft.com/fwlink/p/?linkid=618387) - contenido ES de OpenGL se ejecuta en Windows mediante la traducción de las llamadas de API de ES de OpenGL llamadas a la API de DirectX 11.
+-   [ANGLE para Microsoft Store](http://go.microsoft.com/fwlink/p/?linkid=618387) : ejecuta contenido OpenGL ES en Windows mediante la traducción de llamadas de API de OpenGL ES a llamadas de API de DirectX 11.
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Vídeos de las sesiones de GDC 2015 sobre el desarrollo de juegos
 
@@ -82,9 +80,9 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 -   [CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=76627)
 -   [GameDev.net](http://go.microsoft.com/fwlink/p/?LinkID=288870)
 
- 
+ 
 
- 
+ 
 
 
 

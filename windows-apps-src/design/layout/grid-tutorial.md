@@ -6,17 +6,15 @@ template: detail.hbs
 ms.author: mukin
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
-ms.openlocfilehash: b09c4e2e6110847a666ea367466f655e21a328e3
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
-ms.translationtype: HT
+ms.openlocfilehash: 0327437c809455cf191dcfc572e4a5145b73eb49
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707000"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556790"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: usa Grid y StackPanel para crear una aplicación meteorológica sencilla.
 
@@ -25,7 +23,7 @@ Usa XAML para crear el diseño de una aplicación meteorológica sencilla con lo
 > **API importantes**: [Clase Grid](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid), [Clase StackPanel](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>Requisitos previos
-- Windows10 y Microsoft Visual Studio2015. [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](../../get-started/get-set-up.md).
+- Windows 10 y Microsoft Visual Studio 2015 o posterior. (Más reciente de Visual Studio para la seguridad y desarrollo actual de las actualizaciones recomendadas) [Haz clic aquí para aprender a configurar la aplicación con Visual Studio](../../get-started/get-set-up.md).
 - Conocimientos acerca de cómo crear una aplicación de "Hello World" básica mediante XAML y C#. Si aún no los tienes, [haz clic aquí para aprender a crear una aplicación "Hello World"](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="step-1-create-a-blank-app"></a>Paso 1: Crear una aplicación en blanco

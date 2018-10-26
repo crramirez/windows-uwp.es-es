@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ee5dc703fe52b0ac8b7163a8067e8b8b87ac8103
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0066d38aaa3f5802ff5b1d380d405e60d90cad49
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044834"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558598"
 ---
 # <a name="streaming-resources-texture-sampling-features"></a>Características de muestreo de texturas de los recursos de streaming
 
@@ -79,9 +77,9 @@ La compatibilidad de esta característica depende de la compatibilidad de [nivel
 
 [Acceso de canalización a recursos de streaming](pipeline-access-to-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

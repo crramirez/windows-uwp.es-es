@@ -6,16 +6,14 @@ ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 82d01ab6fc70397824b4bd6b267dd5e7cdeac0ee
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 309dd2aedb2195362652da93c13648d07e5ea9f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975807"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559697"
 ---
 # <a name="rssatom-feeds"></a>Fuentes RSS y Atom
 
@@ -48,7 +46,7 @@ El aislamiento de red permite al desarrollador definir el ámbito de acceso a la
 
 El aislamiento de red afecta a todos los elementos de clase en los espacios de nombres [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) y [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609) que intentan obtener acceso a la red. Windows aplica de manera activa el aislamiento de red. Si no se habilita la funcionalidad de red que corresponde, una llamada a un elemento de clase de los espacios de nombres **Windows.Web.Syndication** o **Windows.Web.AtomPub** que implique el acceso a la red puede presentar errores debido al aislamiento de red.
 
-Las funcionalidades de red para una aplicación se configuran en su manifiesto al crear la aplicación. Las funcionalidades de red suelen agregarse con Microsoft Visual Studio 2015 cuando se desarrolla la aplicación. Las funcionalidades de red también pueden establecerse de forma manual en el archivo de manifiesto de la aplicación mediante el uso de un editor de texto.
+Las funcionalidades de red para una aplicación se configuran en su manifiesto al crear la aplicación. Las funcionalidades de red suelen agregarse con Microsoft Visual Studio2015 al desarrollar la aplicación. Las funcionalidades de red también pueden establecerse de forma manual en el archivo de manifiesto de la aplicación mediante el uso de un editor de texto.
 
 Para obtener más información sobre las funcionalidades de red y el aislamiento de red, consulta la sección "Funcionalidades" del tema [Conceptos básicos de redes](networking-basics.md).
 

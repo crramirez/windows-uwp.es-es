@@ -6,19 +6,18 @@ ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, opengl, direct3d, buffers, búferes, uniforms, uniformes, vertex attributes, atributos de vértice
-ms.openlocfilehash: d25495b282dce38c3dcad0ec996c185e64165b13
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: bc0192eb4b89ef91bc895a96e46cd39524f24c44
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238727"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558240"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -41,7 +40,7 @@ Esta es la asignación básica.
 | objeto de búfer de cuadros (FBO) | destinos de representación; consulta [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) con [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635).                                       |
 | búfer de reserva               | cadena de intercambio con superficie "búfer de reserva"; consulta [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) con la interfaz [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343) adjunta.                       |
 
- 
+ 
 
 ## <a name="port-buffers"></a>Búferes de puertos
 
@@ -298,9 +297,9 @@ struct VertexShaderInput
 };
 ```
 
- 
+ 
 
- 
+ 
 
 
 

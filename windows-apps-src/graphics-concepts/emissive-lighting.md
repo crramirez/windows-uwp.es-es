@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2717a482e0ea1ad80f0f13dc09bb6789863ef7e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9ce2082479261cd96fb1c5bafd5f2df06bf6f239
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044274"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558691"
 ---
 # <a name="emissive-lighting"></a>Luz de emisión
 
@@ -33,7 +31,7 @@ donde:
 |-----------|---------------|----------------------------------------------------------------------|-----------------|
 | Cₑ        | (0,0,0,0)     | Transparencia roja, verde, azul y alfa (todos los valores de punto flotante) | Color de emisión. |
 
- 
+ 
 
 El valor de Cₑ es el color 1 o el 2. Si no se proporciona el color de vértice, se usa el color de emisión material.
 
@@ -57,9 +55,9 @@ En la siguiente ilustración se muestra cómo la luz de emisión se combina con 
 
 [Cálculos de iluminación](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

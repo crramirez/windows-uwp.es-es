@@ -6,22 +6,19 @@ description: Mejora el rendimiento y el tiempo de inicio de ListView y GridView 
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cff6e2785434eb4fdb922d8b89b55aca242655f
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 25eeea58e1e03eedfca3aaafda1cee13cac1f3c4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816910"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553650"
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>Optimización de la interfaz de usuario de ListView y GridView
 
 
-**Nota**  
-Para más información, consulta la sesión de //build/ [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView (Aumentar considerablemente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de GridView y ListView)](https://channel9.msdn.com/events/build/2013/3-158).
+**Nota**  para obtener más información, consulta la sesión de //build/ [Considerablemente aumentar el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de ListView y GridView](https://channel9.msdn.com/events/build/2013/3-158).
 
 Mejorar el rendimiento y el tiempo de inicio de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos. Para más información sobre técnicas de virtualización de datos, consulta [la virtualización de datos de ListView y GridView](listview-and-gridview-data-optimization.md).
 
@@ -325,5 +322,5 @@ Al reciclar un elemento (**ListViewItem**/**GridViewItem**), el marco debe decid
 
 Cuando hay una distribución desigual de los elementos que usan plantillas de elemento diferentes, entonces es probable que se tengan que crear nuevas plantillas de elemento durante el movimiento panorámico, lo cual elimina muchas de las mejoras proporcionadas por la virtualización. Además, un selector de plantilla de elemento solo tiene en cuenta cinco posibles candidatos al evaluar si se puede reutilizar un contenedor particular para el elemento de datos actual. Por lo tanto, debes pensar detenidamente si tus datos son apropiados para usarlos con un selector de plantilla de elemento antes de usar uno en tu aplicación. Si tu colección es principalmente homogénea, el selector devuelve el mismo tipo la mayoría del tiempo (posiblemente todo el tiempo). Solo debes tener en cuenta el esfuerzo que te supone tener excepciones poco frecuentes en esa homogeneidad y decidir si prefieres usar [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) (o dos controles de elementos).
 
- 
+ 
 

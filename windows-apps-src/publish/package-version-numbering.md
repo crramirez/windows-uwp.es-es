@@ -4,22 +4,20 @@ Description: The Microsoft Store enforces certain rules related to version numbe
 title: Numeración de la versión del paquete
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
 ms.author: wdg-dev-content
-ms.date: 10/02/2018
+ms.date: 10/25/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cf93cf06b273605b91c31da5b6a6b8cef8dae39
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 045e44d3ba243b4c4fbf68ba37e91c06eb022d27
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5470413"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558777"
 ---
 # <a name="package-version-numbering"></a>Numeración de la versión del paquete
 
-Cada paquete que proporciones debe tener un número de versión (proporcionado como un valor en el atributo **Version** del elemento **Package/Identity** en el manifiesto de la aplicación). Microsoft Store aplica ciertas reglas relacionadas con los números de versión que dependen de las diferentes versiones del sistema operativo.
+Cada paquete que proporciones debe tener un número de versión (proporcionado como un valor en el atributo **Version** del elemento [Package/Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) en el manifiesto de la aplicación). Microsoft Store aplica ciertas reglas relacionadas con los números de versión que dependen de las diferentes versiones del sistema operativo.
 
 > [!NOTE]
 > En este tema hace referencia a "paquetes" pero, a menos que se indique lo contrario, las mismas reglas se aplican a los números de versión para los archivos.msix/.appx y.msixbundle/.appxbundle.
@@ -28,7 +26,7 @@ Cada paquete que proporciones debe tener un número de versión (proporcionado c
 ## <a name="version-numbering-for-windows10-packages"></a>Números de versión para paquetes de Windows 10
 
 > [!IMPORTANT]
-> Para los paquetes de Windows 10 (UWP), la última sección (cuarta) del número de versión se reserva para uso de la tienda y se debe mantener como 0 al compilar el paquete (aunque la tienda puede cambiar el valor de esta sección).
+> Para los paquetes de Windows 10 (UWP), la última sección (cuarta) del número de versión se reserva para uso de la tienda y se debe mantener como 0 al compilar el paquete (aunque la tienda puede cambiar el valor de esta sección). Las otras secciones deben establecerse en un entero entre 0 y 65535 (excepto la primera sección, que no puede ser 0).
 
 Al elegir un paquete para UWP desde tu envío publicado, Microsoft Store siempre usará el paquete de la última versión que sea compatible con el dispositivo del cliente de Windows 10. Esto te da más flexibilidad y te permite controlar qué paquetes se proporcionan a los clientes en tipos específicos de dispositivo. Es importante señalar que puedes enviar los paquetes en cualquier orden; no es necesario que los paquetes de un envío posterior tengan un número de versión más alto.
 

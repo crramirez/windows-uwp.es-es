@@ -6,16 +6,14 @@ ms.assetid: 41b6cd76-5c9a-e2b7-ef6f-bfbf6ef7331d
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, UWP, games, directx, plantillas
 ms.localizationpriority: medium
-ms.openlocfilehash: e0252607fcc456a1200231b401ca47132664e9c9
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: d27e4bb0d643b859958f887133a128572ca31225
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488809"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555397"
 ---
 # <a name="directx-game-project-templates"></a>Plantillas de proyectos de juegos DirectX
 
@@ -28,12 +26,12 @@ Las plantillas de DirectX y UWP (Plataforma universal de Windows) te permiten cr
 
 Para crear el proyecto, debes:
 
--   [Descargar Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions). Visual Studio2015 tiene herramientas para programación de gráficos, como herramientas de depuración. Para obtener información general sobre las herramientas y las funciones de juegos y elementos gráficos de DirectX, consulta [Herramientas de Visual Studio para programación de juegos DirectX](set-up-visual-studio-for-game-development.md).
+-   [Descargar Microsoft Visual Studio2015](https://www.visualstudio.com/vs-2015-product-editions). Visual Studio2015 tiene herramientas para programación, como herramientas de depuración de gráficos. Para obtener información general sobre las herramientas y las funciones de juegos y elementos gráficos de DirectX, consulta [Herramientas de Visual Studio para programación de juegos DirectX](set-up-visual-studio-for-game-development.md).
 
 ## <a name="choosing-a-template"></a>Elección de una plantilla
 
 
-Visual Studio2015 incluye tres plantillas de DirectX y UWP:
+Studio2015 Visual incluye tres plantillas de DirectX y UWP:
 
 -   DirectX11 App (Universal Windows): la plantilla DirectX11 App (Universal Windows) crea un proyecto de UWP, que representa directamente en una ventana de aplicación con DirectX11.
 -   DirectX12 App (Universal Windows): la plantilla DirectX12 App (Universal Windows) crea un proyecto de UWP, que representa directamente en una ventana de aplicación con DirectX12.

@@ -11,16 +11,14 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 399963b0d0c9ef4d3860daf1b090af28c9cf97d0
-ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
-ms.translationtype: HT
+ms.openlocfilehash: 8b5d2a55610b6cec2f9026a5834b00ad7015a9c6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
-ms.locfileid: "1480631"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555162"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>Referencias a ResourceDictionary y a los recursos XAML
 
@@ -99,11 +97,13 @@ Aquí, el objeto [Style](https://msdn.microsoft.com/library/windows/apps/br20884
 
     <Page.Resources>
         <Style TargetType="Button">
-              <Setter Property="Background" Value="red"/>
+            <Setter Property="Background" Value="Red"/>
         </Style>
-    </Page.Resources> 
+    </Page.Resources>
+    <Grid>
        <!-- This button will have a red background. -->
        <Button Content="Button" Height="100" VerticalAlignment="Center" Width="100"/>
+    </Grid>
 </Page>
 ```
 
@@ -113,9 +113,10 @@ Para obtener más información sobre los estilos implícitos y cómo funcionan, 
 
 El acceso a los miembros del diccionario de recursos es igual que el acceso a cualquier otro diccionario.
 
-> **Precaución**&nbsp;&nbsp;Al realizar una búsqueda de recursos en el código, solo se busca en los recursos del diccionario `Page.Resources`. A diferencia de la [extensión de marcado StaticResource](../../xaml-platform/staticresource-markup-extension.md), el código no vuelve al diccionario `Application.Resources` si los recursos no se encuentran en el primer diccionario.
+> [!WARNING]
+> Al realizar una búsqueda de recursos en el código, solo los recursos en el `Page.Resources` se busca diccionario. A diferencia de la [extensión de marcado StaticResource](../../xaml-platform/staticresource-markup-extension.md), el código no vuelve al diccionario `Application.Resources` si los recursos no se encuentran en el primer diccionario.
 
- 
+ 
 
 Este ejemplo muestra cómo recuperar el recurso `redButtonStyle` del diccionario de recursos de una página:
 
@@ -203,29 +204,7 @@ sealed partial class App : Application
 
 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) es una clase base de la que heredan los controles y tiene una propiedad [Resources](https://msdn.microsoft.com/library/windows/apps/br208740). Por lo tanto, puedes agregar un diccionario de recursos locales a cualquier objeto **FrameworkElement**.
 
-Aquí, un diccionario de recursos se agrega a un elemento de página.
-
-```XAML
-<Page
-    x:Class="MSDNSample.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
-    <Page.Resources>
-        <x:String x:Key="greeting">Hello world</x:String>
-    </Page.Resources>
-
-    <Border>
-        <Border.Resources>
-            <x:String x:Key="greeting">Hola mundo</x:String>
-        </Border.Resources>
-        <TextBlock Text="{StaticResource greeting}" Foreground="Gray" VerticalAlignment="Center"/>
-    </Border>
-</Page>
-
-```
-
-Aquí, tanto [Page](https://msdn.microsoft.com/library/windows/apps/br227503) como [Border](https://msdn.microsoft.com/library/windows/apps/br209250) tienen diccionarios de recursos, y ambos tienen un recurso denominado "greeting". El objeto [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) está dentro del objeto **Border**, de modo que la búsqueda de recursos se realiza primero en los recursos del objeto **Border**, luego en los recursos del objeto **Page** y luego en los del objeto [Application](https://msdn.microsoft.com/library/windows/apps/br242324). En el objeto **TextBlock** se pondrá "Hola mundo".
+Aquí, tanto [Page](https://msdn.microsoft.com/library/windows/apps/br227503) como [Border](https://msdn.microsoft.com/library/windows/apps/br209250) tienen diccionarios de recursos, y ambos tienen un recurso denominado "greeting". El [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) denominado 'textBlock2' es dentro del **borde**, por lo que la búsqueda de recursos busca primera del **borde**de recursos, a continuación, la **página**de recursos y, a continuación, los recursos de [aplicación](https://msdn.microsoft.com/library/windows/apps/br242324) . En el objeto **TextBlock** se pondrá "Hola mundo".
 
 Para acceder a los recursos de ese elemento desde el código, usa la propiedad [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) de ese elemento. Al acceder a los recursos de un [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) en el código, en lugar de XAML, solo buscará en ese diccionario, no en los diccionarios del elemento primario.
 
@@ -234,16 +213,25 @@ Para acceder a los recursos de ese elemento desde el código, usa la propiedad [
     x:Class="MSDNSample.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
     <Page.Resources>
         <x:String x:Key="greeting">Hello world</x:String>
     </Page.Resources>
+    
+    <StackPanel>
+        <!-- Displays "Hello world" -->
+        <TextBlock x:Name="textBlock1" Text="{StaticResource greeting}"/>
 
-    <Border x:Name="border">
-        <Border.Resources>
-            <x:String x:Key="greeting">Hola mundo</x:String>
-        </Border.Resources>
-    </Border>
+        <Border x:Name="border">
+            <Border.Resources>
+                <x:String x:Key="greeting">Hola mundo</x:String>
+            </Border.Resources>
+            <!-- Displays "Hola mundo" -->
+            <TextBlock x:Name="textBlock2" Text="{StaticResource greeting}"/>
+        </Border>
+
+        <!-- Displays "Hola mundo", set in code. -->
+        <TextBlock x:Name="textBlock3"/>
+    </StackPanel>
 </Page>
 
 ```
@@ -254,7 +242,7 @@ Para acceder a los recursos de ese elemento desde el código, usa la propiedad [
         public MainPage()
         {
             this.InitializeComponent();
-            string str = (string)border.Resources["greeting"];
+            textBlock3.Text = (string)border.Resources["greeting"];
         }
     }
 ```
@@ -359,7 +347,7 @@ Aquí, usa texto rojo para el tema claro y texto azul para el tema oscuro.
 
 </ResourceDictionary>
 
-<!—Dictionary2.xaml -->
+<!-- Dictionary2.xaml -->
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -407,7 +395,7 @@ A continuación, la secuencia de búsqueda comprueba el siguiente objeto primari
 
 > **Nota**&nbsp;&nbsp;Es una práctica habitual definir todos los recursos inmediatos en el nivel raíz de una página, tanto para aprovechar este comportamiento de búsqueda de recursos como por una convención de estilo de marcado de XAML.
 
- 
+ 
 
 Si no se encuentra el recurso solicitado en los recursos inmediatos, el siguiente paso de la búsqueda es comprobar la propiedad [Application.Resources](https://msdn.microsoft.com/library/windows/apps/br242338). **Application.Resources** es el mejor lugar para guardar los recursos específicos de la aplicación a los que varias páginas de la estructura de navegación de tu aplicación hacen referencia.
 
@@ -463,7 +451,7 @@ Un [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794
 
 La mayoría de los escenarios para un [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) se controla exclusivamente en XAML. Declaras el contenedor **ResourceDictionary** y los recursos que incluye como un archivo XAML o un conjunto de nodos XAML en un archivo de definición de interfaz de usuario. Y, a continuación, usas referencias a recursos XAML para solicitar esos recursos de otras partes del código XAML. Aun así, hay ciertos casos en que tu aplicación podría querer ajustar el contenido de un **ResourceDictionary** con código que se ejecute mientras se ejecute la aplicación, o, al menos, consultar el contenido de un **ResourceDictionary** para ver si ya se definió un recurso. Las llamadas a este código se realizan en una instancia de **ResourceDictionary**, por lo que primero tienes que recuperar una, bien un **ResourceDictionary** inmediato en algún lugar del árbol de objetos mediante la obtención de [FrameworkElement.Resources](https://msdn.microsoft.com/library/windows/apps/br208740), o bien, `Application.Current.Resources`.
 
-En el código de C\# o Microsoft Visual Basic, puedes hacer referencia a un recurso en un [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) determinado con el indexador ([Item](https://msdn.microsoft.com/library/windows/apps/jj603134)). Un **ResourceDictionary** es un diccionario de claves de cadena, por lo que el indexador usa la clave de cadena en lugar de un índice de entero. En extensiones de componentes de Visual C++ (C++/CX), usa [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800).
+En el código de C\# o Microsoft Visual Basic, puedes hacer referencia a un recurso en un [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) determinado con el indexador ([Item](https://msdn.microsoft.com/library/windows/apps/jj603134)). Un **ResourceDictionary** es un diccionario de claves de cadena, por lo que el indexador usa la clave de cadena en lugar de un índice de entero. En extensiones de componentes VisualC ++ (C++ / CX), usa la [búsqueda](https://msdn.microsoft.com/library/windows/apps/br208800).
 
 Cuando usas código para examinar o cambiar un objeto [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794), el comportamiento de las API, como [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800) o [Item](https://msdn.microsoft.com/library/windows/apps/jj603134), no se desvía de los recursos inmediatos a los recursos de la aplicación, ya que ese es un comportamiento del analizador XAML que solo tiene lugar al cargar las páginas XAML. En tiempo de ejecución, el ámbito de las claves es independiente en la instancia de **ResourceDictionary** que se usa en ese momento, aunque sí se extiende a [MergedDictionaries](https://msdn.microsoft.com/library/windows/apps/br208801).
 
@@ -484,7 +472,7 @@ Inicialmente, un [ResourceDictionary](https://msdn.microsoft.com/library/windows
 
 Para los escenarios avanzados, puedes implementar una clase que pueda tener un comportamiento distinto que el comportamiento de búsqueda de referencias a recursos XAML descrito en este tema. Para ello, implementa la clase [CustomXamlResourceLoader](https://msdn.microsoft.com/library/windows/apps/br243327) y, a continuación, podrás acceder a ese comportamiento mediante el uso de la [extensión de marcado CustomResource](https://msdn.microsoft.com/library/windows/apps/mt185580) para referencias de recursos en vez de usar [StaticResource](../../xaml-platform/staticresource-markup-extension.md) o [ThemeResource](../../xaml-platform/themeresource-markup-extension.md). La mayoría de las aplicaciones no tendrán escenarios que requieran esto. Para obtener más información, consulta [CustomXamlResourceLoader](https://msdn.microsoft.com/library/windows/apps/br243327).
 
- 
+ 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)
@@ -495,9 +483,9 @@ Para los escenarios avanzados, puedes implementar una clase que pueda tener un c
 * [Controles de estilo](xaml-styles.md)
 * [Atributo x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,23 +6,21 @@ description: Los usuarios esperan que sus aplicaciones sean dinámicas, que su u
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 40833b98483dc0197c651e2ab4bea259742c2858
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 3dfc4e5d3d2741cf36a1a9aae8c0c22feed5305e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894531"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557233"
 ---
 # <a name="performance"></a>Rendimiento
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, puedes realizar mediciones desde el principio y con la suficiente frecuencia durante el ciclo de vida del proyecto para estar seguro que cumples los objetivos. En esta sección se muestra cómo organizar el flujo de trabajo de rendimiento, solucionar problemas de animaciones y los problemas de velocidad de fotogramas y ajustar el tiempo de inicio, tiempo de navegación de páginas y el uso de la memoria.
 
-Si aún no lo has hecho, un paso que ya hemos visto y que permite realizar mejoras significativas en el rendimiento, consiste en simplemente migrar la aplicación a Windows 10. Varias optimizaciones de XAML (por ejemplo, [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) solo están disponibles en las aplicaciones de Windows 10. Consulta [Migración de aplicaciones a Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) y la sesión de //build/ [Moving to the Universal Windows Platform (Mover a la plataforma universal de Windows)](http://channel9.msdn.com/Events/Build/2015/3-741).
+Si lo has hecho, un paso que hemos visto en importantes mejoras de rendimiento es simplemente migrar la aplicación a Windows 10. Varias optimizaciones de XAML (por ejemplo, [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) solo están disponibles en las aplicaciones de Windows 10. Consulta la sesión de //build/ [mover a la plataforma Universal de Windows](http://channel9.msdn.com/Events/Build/2015/3-741)y [aplicaciones de portar a Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) .
 
 | Tema | Descripción |
 |-------|-------------|

@@ -1,6 +1,6 @@
 ---
 title: Mapas en un grupo de iconos
-description: Cuando un recurso se crea como un recurso de streaming, los iconos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de iconos. Un grupo de iconos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación).
+description: Cuando un recurso se crea como un recurso de streaming, los mosaicos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de mosaicos. Un grupo de iconos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación).
 ms.assetid: 58B8DBD5-62F5-4B94-8DD1-C7D57A812185
 keywords:
 - Mapas en un grupo de iconos
@@ -8,20 +8,18 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 45062f82955b1e353def2eadbeae36d1c9e81ce6
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 24c8787efd108acb2353f6705dbb65a34d358ef2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652664"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558863"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>Mapas en un grupo de iconos
 
 
-Cuando un recurso se crea como un recurso de streaming, los iconos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de iconos. Un grupo de iconos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación). El sistema operativo y el controlador de pantalla administran este grupo de memoria y una aplicación comprende fácilmente la superficie de memoria. Los recursos de streaming asignan áreas de 64KB apuntando a ubicaciones de un grupo de iconos. Una ventaja de esta configuración es que permite que varios recursos compartan y reutilicen los mismos iconos, y que los mismos iconos vuelvan a usarse en distintas ubicaciones dentro de un recurso, si lo prefieres.
+Cuando un recurso se crea como un recurso de streaming, los mosaicos que conforman el recurso provienen de apuntar a ubicaciones de un grupo de mosaicos. Un grupo de iconos es un grupo de memoria (respaldada por una o varias asignaciones en segundo plano, que no ve la aplicación). El sistema operativo y el controlador de pantalla administran este grupo de memoria y una aplicación comprende fácilmente la superficie de memoria. Los recursos de streaming asignan áreas de 64KB apuntando a ubicaciones de un grupo de iconos. Una ventaja de esta configuración es que permite que varios recursos compartan y reutilicen los mismos iconos, y que los mismos iconos vuelvan a usarse en distintas ubicaciones dentro de un recurso, si lo prefieres.
 
 El coste de la flexibilidad de rellenar los iconos de un recurso a partir de un grupo de iconos es que el recurso tiene que hacer el trabajo de definición y mantenimiento de la asignación de los iconos del grupo de iconos que representan los iconos necesarios para el recurso. Se pueden cambiar las asignaciones de los iconos. Además, no todos los iconos de un recurso deben asignarse simultáneamente, un recurso puede tener asignaciones **nulas**. Una asignación **nula** define un icono que no está disponible desde el punto de vista de que el recurso no puede obtener acceso a él.
 
@@ -35,7 +33,7 @@ Nos gustaría explorar qué almacenamiento podría necesitar la tabla de página
 
 Supongamos que cada entrada de la tabla de página es de 64 bits.
 
-En el peor de los casos de llamada de tabla de página para una sola superficie, dada la limitación de recursos en Direct3D 11, supongamos que se crea un recurso de streaming con un formato de 128 bits por elemento (por ejemplo, un flotante RGBA). En ese caso, un icono de 64KB contiene solo 4096 píxeles. El tamaño máximo admitido de [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 (pero con solo un mapa MIP único) necesitaría aproximadamente 1GB de almacenamiento en la tabla de página si se llena del todo (sin incluir los mapas MIP) con entradas de tabla de 64 bits. Si se agregan mapas MIP, aumentará el almacenamiento de tabla de página (en el peor de los casos) completamente asignado en aproximadamente un tercio, 1,3GB.
+La tabla de página peor para una sola superficie, dada los límites de recursos en Direct3D11, supongamos que un recurso de streaming se crea con un formato de 128 bits por elemento (por ejemplo, un flotante RGBA), por lo tanto, un icono de 64KB contiene solo 4096 píxeles. El tamaño máximo admitido de [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 (pero con solo un mapa MIP único) necesitaría aproximadamente 1GB de almacenamiento en la tabla de página si se llena del todo (sin incluir los mapas MIP) con entradas de tabla de 64 bits. Si se agregan mapas MIP, aumentará el almacenamiento de tabla de página (en el peor de los casos) completamente asignado en aproximadamente un tercio, 1,3GB.
 
 Este caso daría acceso a aproximadamente 10,6 terabytes de memoria direccionable. Puede haber un límite en la cantidad de memoria direccionable, pero podría reducir estas cantidades, quizás alrededor del rango de terabytes.
 
@@ -64,7 +62,7 @@ El contenido inicial de la tabla de página es **nulo** para todas las entradas.
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="tile-pool-creation.md">Creación de grupos de iconos</a></p></td>
-<td align="left"><p>Las aplicaciones pueden crear uno o varios grupos de iconos por dispositivo de Direct3D. El tamaño total de cada grupo de iconos está restringido al límite de tamaño del recurso de Direct3D 11, que es aproximadamente 1/4 de RAM de GPU.</p></td>
+<td align="left"><p>Las aplicaciones pueden crear uno o varios grupos de iconos por dispositivo de Direct3D. El tamaño total de cada grupo de iconos está restringido al límite de tamaño de recursos del Direct3D11, que es aproximadamente 1/4 de RAM de GPU.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="tile-pool-resizing.md">Cambio del tamaño de los grupos de iconos</a></p></td>
@@ -77,16 +75,16 @@ El contenido inicial de la tabla de página es **nulo** para todas las entradas.
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
 [Creación de recursos de streaming](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

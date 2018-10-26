@@ -6,16 +6,14 @@ description: Realiza un seguimiento de los archivos a los que el usuario accede 
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6437176ed5dce4fbcd2a7686cf7083a8b0af2557
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: Auto
+ms.openlocfilehash: 12b8a6462f6cc39ba85cddfaa7a92212955a79f5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662795"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559351"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Seguimiento de los archivos y carpetas usados recientemente
 
@@ -29,9 +27,9 @@ Realiza un seguimiento de los archivos a los que el usuario accede con mayor fre
 La lista de MRU de una aplicación se representa mediante la clase [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475), que se obtiene a partir de la propiedad estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458). Los elementos MRU se almacenan como objetos [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129), lo que significa que los objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (que representan archivos) y los objetos [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) (que representan carpetas) pueden agregarse a la lista de MRU.
 
 > [!NOTE]
-> Consulta también la [Muestra de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994) y la [Muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
+> Consulta también la [Muestra de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994) y la [Muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
- 
+ 
 
 ## <a name="prerequisites"></a>Requisitos previos
 

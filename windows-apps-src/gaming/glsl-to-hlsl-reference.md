@@ -6,16 +6,14 @@ ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, sombreados, shaders
 ms.localizationpriority: medium
-ms.openlocfilehash: 601cdd696290a1b22d7ed38d968a32db53b78ea1
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 30c925f9ebb07d578147dfba373fdeb3baa364fe
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691414"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557134"
 ---
 # <a name="glsl-to-hlsl-reference"></a>Referencia de GLSL a HLSL
 
@@ -45,7 +43,7 @@ OpenGL ES 2.0 y Direct3D 11 tienen muchas similitudes. Ambos tienen característ
 | Proporciona módulos de nivel más alto a través de bibliotecas de terceros (por ejemplo, Simple DirectMedia Layer (SDL)) | Se compilan módulos de nivel más alto, como Direct2D, a partir de módulos más bajos para simplificar el desarrollo para aplicaciones de Windows             |
 | Los proveedores de hardware se diferencian a través de extensiones                                                         | Microsoft agrega características opcionales a la API de una forma genérica para que no sean específicas de ningún proveedor de hardware en particular |
 
- 
+ 
 
 GLSL y HLSL generalmente difieren de estas maneras:
 
@@ -69,10 +67,10 @@ GLSL y HLSL generalmente difieren de estas maneras:
 <td align="left">Compilación de sombreador integrada en la API gráfica</td>
 <td align="left">El compilador de HLSL <a href="https://msdn.microsoft.com/library/windows/desktop/bb509633">compila el sombreador</a> en una representación binaria intermedia antes de que Direct3D la pase al controlador.
 <div class="alert">
-<strong>Nota</strong>  Esta representación binaria no depende del hardware. Generalmente se compila en el tiempo de compilación de la aplicación en lugar de en su tiempo de ejecución.
+<strong>Nota</strong>esta representación binaria no depende del hardware. Generalmente se compila en el tiempo de compilación de la aplicación en lugar de en su tiempo de ejecución.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -98,10 +96,10 @@ GLSL y HLSL generalmente difieren de estas maneras:
 <td align="left">Matrices principales de fila (predeterminado)</td>
 <td align="left">Matrices principales de columna (predeterminado)
 <div class="alert">
-<strong>Nota:</strong>   Usa el modificador de tipo <strong>row_major</strong> para cambiar el diseño de una variable. Para obtener más información, consulta el tema sobre la <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">sintaxis de variable</a>. También puedes especificar una marca de compilador o una pragma para cambiar el valor predeterminado global.
+<strong>Nota</strong>  usa el modificador de tipo <strong>row_major</strong> para cambiar el diseño de una variable. Para obtener más información, consulta el tema sobre la <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">sintaxis de variable</a>. También puedes especificar una marca de compilador o una pragma para cambiar el valor predeterminado global.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
@@ -111,11 +109,11 @@ GLSL y HLSL generalmente difieren de estas maneras:
 </tbody>
 </table>
 
- 
+ 
 
-> **Nota:** HLSL tiene las texturas y las muestras como dos objetos separados. En GLSL, como en Direct3D 9, el enlace de textura es parte del estado de la muestra.
+> **Nota**HLSL tiene las texturas y muestrarios como dos objetos separados. En GLSL, como en Direct3D 9, el enlace de textura es parte del estado de la muestra.
 
- 
+ 
 
 En GLSL, se presenta la mayoría del estado de OpenGL como variables globales predefinidas. Por ejemplo, con GLSL, se usa la variable **gl\_Position** para especificar la posición del vértice y la variable **gl\_FragColor** para especificar el color del fragmento. En HLSL, se pasa el estado de Direct3D explícitamente desde el código de la aplicación al sombreador. Por ejemplo, con Direct3D y HLSL, la entrada al sombreador de vértices debe coincidir con el formato de datos en el búfer de vértices, y la estructura de un búfer de constantes en el código de la aplicación debe coincidir con la estructura de un búfer de constantes ([cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581)) en el código del sombreador.
 
@@ -162,7 +160,7 @@ En GLSL, aplicas modificadores (calificadores) a una declaración de variable de
 </tbody>
 </table>
 
- 
+ 
 
 En GLSL, las variables sin modificadores son tan solo variables globales ordinarias que son privadas para cada sombreador.
 
@@ -274,7 +272,7 @@ Usa esta tabla para migrar tus tipos de GLSL a HLSL.
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="porting-glsl-pre-defined-global-variables-to-hlsl"></a>Migrar variables globales predefinidas de GLSL a HLSL
 
@@ -382,7 +380,7 @@ Usa esta tabla para migrar variables globales predefinidas de GLSL a HLSL.
 </tbody>
 </table>
 
- 
+ 
 
 Se usa la semántica para especificar la posición, el color, etc. de la entrada del sombreador de vértices y la entrada del sombreador de píxeles. Debes hacer coincidir los valores de la semántica en el diseño de entrada con la entrada del sombreador de vértices. Para ver ejemplos, consulta [Ejemplos de cómo migrar variables de GLSL a HLS](#examples-of-porting-glsl-variables-to-hlsl). Para obtener más información acerca de la semántica de HLSL, consulta el tema sobre [semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647).
 
@@ -503,14 +501,14 @@ Código del sombreador de píxeles de HLSL
 // The COLOR semantic must match the semantic in the vertex shader code.
 struct PixelShaderInput
 {
-    float4 pos : SV_Position;
-    float4 color : COLOR; // Color for the pixel
+    float4 pos : SV_Position;
+    float4 color : COLOR; // Color for the pixel
 };
 
-// Set the pixel color value for the renter target. 
+// Set the pixel color value for the renter target. 
 float4 main(PixelShaderInput input) : SV_Target
 {
-    return input.color;
+    return input.color;
 }
 ```
 
@@ -525,7 +523,7 @@ Código de representación de OpenGL
 // Bind shaders to the pipeline. 
 // Both vertex shader and fragment shader are in a program.
 glUseProgram(m_shader->getProgram());
- 
+ 
 // Input asssembly 
 // Get the position and color attributes of the vertex.
 
@@ -534,13 +532,13 @@ glEnableVertexAttribArray(m_positionLocation);
 
 m_colorLocation = glGetAttribColor(m_shader->getProgram(), "color");
 glEnableVertexAttribArray(m_colorLocation);
- 
+ 
 // Bind the vertex buffer object to the input assembler.
 glBindBuffer(GL_ARRAY_BUFFER, m_geometryBuffer);
 glVertexAttribPointer(m_positionLocation, 4, GL_FLOAT, GL_FALSE, 0, NULL);
 glBindBuffer(GL_ARRAY_BUFFER, m_colorBuffer);
 glVertexAttribPointer(m_colorLocation, 3, GL_FLOAT, GL_FALSE, 0, NULL);
- 
+ 
 // Draw a triangle with 3 vertices.
 glDrawArray(GL_TRIANGLES, 0, 3);
 ```
@@ -551,7 +549,7 @@ Código de representación de Direct3D
 // Bind the vertex shader and pixel shader to the pipeline.
 m_d3dDeviceContext->VSSetShader(vertexShader.Get(),nullptr,0);
 m_d3dDeviceContext->PSSetShader(pixelShader.Get(),nullptr,0);
- 
+ 
 // Declare the inputs that the shaders expect.
 m_d3dDeviceContext->IASetInputLayout(inputLayout.Get());
 m_d3dDeviceContext->IASetVertexBuffers(0, 1, vertexBuffer.GetAddressOf(), &stride, &offset);
@@ -568,9 +566,9 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 * [Migrar de OpenGL ES 2.0 a Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md)
 
- 
+ 
 
- 
+ 
 
 
 

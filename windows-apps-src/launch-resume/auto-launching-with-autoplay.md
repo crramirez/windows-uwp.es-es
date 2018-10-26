@@ -6,22 +6,20 @@ ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2271c8029a733e1ab05c19b2110352fee5b04fc2
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 98c537ef3b2a5d002644cc554eae72b89a1799b0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663955"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558873"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Inicio automático con Reproducción automática
 
 Puedes usar **Reproducción automática** para ofrecer tu aplicación como una opción cuando un usuario conecte un dispositivo a su PC. Esto incluye dispositivos que no son de volumen, como una cámara o un reproductor de medios, o dispositivos de volumen, como una unidad USB, una tarjeta SD o un DVD. También puedes usar **Reproducción automática** para ofrecer tu aplicación como una opción cuando los usuarios compartan archivos entre dos equipos mediante proximidad (pulsación).
 
-> **Nota** Si eres un fabricante de dispositivos y quieres asociar tu [aplicación para dispositivo de Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkID=301381) como controlador de **Reproducción automática** para tu dispositivo, puedes identificar esa aplicación en los metadatos del dispositivo. Para obtener más información, consulta [AutoPlay for Microsoft Store device apps](http://go.microsoft.com/fwlink/p/?LinkId=306684) (Reproducción automática de aplicaciones para dispositivo de Microsoft Store).
+> **Nota**si eres un fabricante de dispositivos y quieres asociar la [aplicación del dispositivo de Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkID=301381) como un controlador de **reproducción automática** para el dispositivo, puedes identificar esa aplicación en los metadatos del dispositivo. Para obtener más información, consulta [AutoPlay for Microsoft Store device apps](http://go.microsoft.com/fwlink/p/?LinkId=306684) (Reproducción automática de aplicaciones para dispositivo de Microsoft Store).
 
 ## <a name="register-for-autoplay-content"></a>Registrar una aplicación para el contenido de Reproducción automática
 
@@ -36,7 +34,7 @@ Reproducción automática también genera eventos de contenido para contenido co
 | Uso compartido de música  | PlayMusicFilesOnArrival |
 | Uso compartido de vídeos | PlayVideoFilesOnArrival |
 
- 
+ 
 Cuando se comparten archivos mediante proximidad, la propiedad **Files** del objeto **FileActivatedEventArgs** contiene una referencia a una carpeta raíz que incluye todos los archivos compartidos.
 
 ### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>Paso 1: Crear un nuevo proyecto y agregar declaraciones de Reproducción automática
@@ -110,7 +108,7 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **Nota** Los métodos `DisplayImages` y `CopyImages` se agregan en los siguientes pasos.
+> **Nota**el `DisplayImages` y `CopyImages` métodos se agregan en los siguientes pasos.
 
 ### <a name="step-4-add-code-to-display-images"></a>Paso 4: Agregar código para mostrar imágenes
 
@@ -222,7 +220,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 1.  Presiona F5 para compilar e implementar la aplicación (en modo de depuración).
 2.  Para ejecutar la aplicación, inserta una tarjeta de memoria de una cámara u otro dispositivo de almacenamiento de una cámara en el equipo. A continuación, selecciona una de las opciones de evento de contenido que especificaste en el archivo package.appxmanifest de la lista de opciones de Reproducción automática. Este código de muestra solo muestra o copia imágenes de la carpeta DCIM de una tarjeta de memoria de una cámara. Si la tarjeta de memoria de tu cámara almacena imágenes en una carpeta AVCHD o PRIVATE\\ACHD, tendrás que actualizar el código como corresponda.
-    **Nota** Si no tienes una tarjeta de memoria de una cámara, puedes usar una unidad flash si tiene una carpeta con el nombre **DCIM** en la raíz y si la carpeta DCIM tiene una subcarpeta que contenga imágenes.
+    **Nota**si no tienes una tarjeta de memoria de cámara, puedes usar una unidad flash si tiene una carpeta denominada **carpeta DCIM** en la raíz y si la carpeta DCIM tiene una subcarpeta que contiene las imágenes.
 
 ## <a name="register-for-an-autoplay-device"></a>Registro para el dispositivo de reproducción automática
 
@@ -231,9 +229,9 @@ Puedes registrar aplicaciones como opciones para eventos de dispositivo de **Rep
 
 Aquí te enseñamos a identificar tu aplicación como una opción de **Reproducción automática** cuando una cámara se conecta a un equipo. La aplicación se registra como un controlador del evento de **WPD\\ImageSourceAutoPlay**. Esto es un evento común que genera el sistema de dispositivos portátiles de Windows (WPD) cuando las cámaras y otros dispositivos de imagen notifican que son un ImageSource con MTP. Para obtener más información, consulta [Dispositivos portátiles de Windows](https://msdn.microsoft.com/library/windows/hardware/ff597729).
 
-**Importante** Las API de [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) forman parte de la [familia de dispositivos de escritorio](https://msdn.microsoft.com/library/windows/apps/dn894631). Las aplicaciones pueden usar estas API solamente en los dispositivos de Windows 10 de la familia de dispositivos de escritorio como, por ejemplo, los equipos.
+**Importante**las API [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) forman parte de la [familia de dispositivos de escritorio](https://msdn.microsoft.com/library/windows/apps/dn894631). Las aplicaciones pueden usar estas API solo en dispositivos de Windows 10 en la familia de dispositivos de escritorio, como equipos.
 
- 
+ 
 
 ### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>Paso 1: Crear un nuevo proyecto y agregar declaraciones de Reproducción automática
 
@@ -340,7 +338,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-> **Nota** En el siguiente paso se agrega el método `ShowImages`.
+> **Nota**el `ShowImages` método se agrega en el paso siguiente.
 
 ### <a name="step-5-add-code-to-display-device-information"></a>Paso 5: Agregar código para mostrar información de dispositivo
 
@@ -368,7 +366,7 @@ internal async void ShowImages(Windows.Storage.StorageFolder folder)
 }
 ```
 
-> **Nota** Los métodos `GetImageList` y `GetThumbnail` se agregan en el siguiente paso.
+> **Nota**el `GetImageList` y `GetThumbnail` métodos se agregan en el siguiente paso.
 
 ### <a name="step-6-add-code-to-display-images"></a>Paso 6: Agregar código para mostrar imágenes
 
@@ -411,7 +409,7 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 1.  Presiona F5 para compilar e implementar la aplicación (en modo de depuración).
 2.  Para ejecutar la aplicación, conecta una cámara al equipo. Después, selecciona la aplicación en la lista de opciones de Reproducción automática.
-    **Nota** No todas las cámaras se anuncian para el evento de dispositivo de Reproducción automática **WPD\\ImageSource**.
+    **Nota**no todas las cámaras se anuncian para el evento de dispositivo de reproducción automática **WPD\\ImageSource** .
 
 ## <a name="configure-removable-storage"></a>Configurar el almacenamiento extraíble
 
@@ -436,8 +434,7 @@ CustomEvent=AutoPlayCustomEventQuickstart
 2.  Abre el archivo Package.appxmanifest y selecciona la pestaña **Funcionalidades**. Selecciona la funcionalidad **Almacenamiento extraíble**. Esto permite que la aplicación tenga acceso a los archivos y carpetas de los dispositivos de almacenamiento extraíble.
 3.  En el archivo de manifiesto, selecciona la pestaña **Declaraciones**. En la lista desplegable **Declaraciones disponibles**, selecciona **Contenido de Reproducción automática** y haz clic en **Agregar**. Selecciona el elemento **Contenido de Reproducción automática** que se agregó a la lista **Declaraciones admitidas**.
 
-    **Nota** También puedes elegir agregar una declaración de **Dispositivo de Reproducción automática** para el evento de Reproducción automática personalizado.
-    
+    **Nota**como alternativa, también puedes elegir agregar una declaración de **Dispositivo de reproducción automática** para el evento de reproducción automática personalizado.  
 4.  En la sección **Acciones de inicio** de tu declaración de evento de **contenido de Reproducción automática**, especifica los valores en la siguiente tabla para la primera acción de inicio.
 5.  En la lista desplegable **Declaraciones disponibles**, selecciona **Asociaciones de tipo de archivo** y haz clic en **Agregar**. En las propiedades de la nueva declaración **Asociaciones de tipo de archivo**, establece el campo **Nombre para mostrar** en **Mostrar archivos .ms** y el campo **Nombre** en **ms\_association**. En la sección **Tipos de archivo admitidos**, haz clic en **Agregar nuevo**. Establece el campo **Tipo de archivo** en **.ms**. Para los eventos de contenido, Reproducción automática filtra todos los tipos de archivo que no están asociados explícitamente a la aplicación.
 6.  Guarda y cierra el archivo de manifiesto.
@@ -480,9 +477,9 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **Nota** En el siguiente paso se agrega el método `DisplayFiles`.
+> **Nota**el `DisplayFiles` método se agrega en el paso siguiente.
 
- 
+ 
 
 ### <a name="step-5-add-code-to-display-folders"></a>Paso 5: Agregar código para mostrar carpetas
 
@@ -558,6 +555,6 @@ Puedes agregar una extensión al archivo package.appxmanifest de tu aplicación 
   </Applications>
 ```
 
- 
+ 
 
- 
+ 

@@ -6,16 +6,14 @@ description: Algunos dispositivos deben estar emparejados para que puedan usarse
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 86cac8248db896f56757dae7678d6e146835884c
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: Auto
+ms.openlocfilehash: 64f4756df37cbfaf041e432b7e4a890123f52d2f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674002"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554975"
 ---
 # <a name="pair-devices"></a>Emparejar dispositivos
 
@@ -31,9 +29,9 @@ Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio 
 -   Emparejamiento básico
 -   Emparejamiento personalizado
 
-**Sugerencia**  No es necesario emparejar ciertos dispositivos para poder usarlos. Esto se explica en la sección de emparejamiento automático.
+**Sugerencia**algunos dispositivos no necesitan emparejarse con el fin de usarse. Esto se explica en la sección de emparejamiento automático.
 
- 
+ 
 
 ## <a name="automatic-pairing"></a>Emparejamiento automático
 
@@ -74,6 +72,6 @@ El primer paso para desemparejar un dispositivo es obtener el objeto [**DeviceIn
 
 Para descargar una muestra que te indique cómo usar las API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459), haz clic [aquí](http://go.microsoft.com/fwlink/?LinkID=620536).
 
- 
+ 
 
- 
+ 

@@ -6,18 +6,17 @@ ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d3105e8ac345e1eb6f0d974f8ea29e741dae9f58
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 6746969b1b717183894d6b941be41c9aca452960
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239905"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552871"
 ---
 # <a name="xclass-attribute"></a>Atributo x:Class
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Configura la compilación de XAML para unir clases parciales entre el marcado y el código subyacente. La clase parcial de código se define en un archivo de código separado y la clase parcial de marcado se crea mediante la generación del código durante la compilación de XAML.
 
@@ -35,7 +34,7 @@ Configura la compilación de XAML para unir clases parciales entre el marcado y 
 | Término | Descripción |
 |------|-------------|
 | espacio de nombres | Opcional. Especifica un espacio de nombres que contiene la clase parcial identificada por _classname_. Si se especifica _namespace_, un punto (.) separa _namespace_ y _classname_. Si se especifica _namespace_ , se da por hecho que _classname_ no tiene espacio de nombres. |
-| classname | Obligatorio. Especifica el nombre de la clase parcial que conecta el código XAML cargado y el código subyacente para ese XAML. | 
+| classname | Obligatorio. Especifica el nombre de la clase parcial que conecta el código XAML cargado y el código subyacente para ese XAML. | 
 
 ## <a name="remarks"></a>Observaciones
 

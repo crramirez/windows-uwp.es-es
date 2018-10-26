@@ -1,39 +1,38 @@
 ---
-author: mcleblanc
-description: Si tienes una aplicación Universal 8.1 (tanto si tiene como destino Windows8.1, Windows Phone8.1 o ambos), comprobarás que el código fuente y las habilidades se portarán sin dificultad a Windows10.
+author: stevewhims
+description: Si tienes una aplicación Universal 8.1 \#8212;whether tiene como destino Windows8.1, Windows Phone 8.1 o ambos & \#8212;then que descubrirás que el código fuente y las habilidades se portarán a Windows 10.
 title: Portar de Windows Runtime 8.x a UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 37da1d6385bf18fcf44f6425b843715e1a462379
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: eebd0467696b78458835425f7feac903ba435f42
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "239950"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556065"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Mover de Windows Runtime8.x a UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Si tienes una aplicación Universal 8.1 (tanto si tiene como destino Windows8.1, Windows Phone8.1 o ambos), comprobarás que el código fuente y las habilidades se portarán sin dificultad a Windows10. Con Windows 10, puedes crear una aplicación para la Plataforma universal de Windows (UWP), que es un único paquete de la aplicación que los clientes pueden instalar en todos los tipos de dispositivos. Para obtener más información sobre Windows 10, las aplicaciones para UWP y los conceptos de código adaptable e interfaz de usuario adaptable que mencionaremos en esta guía de migración, consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Si tienes una aplicación Universal 8.1: indica si tiene como destino Windows8.1, Windows Phone 8.1 o ambos, a continuación, encontrarás que el código fuente y las habilidades se portarán a Windows 10. Con Windows 10, puedes crear una aplicación de plataforma Universal de Windows (UWP), que es un paquete de aplicación única que los clientes pueden instalar en todos los tipos de dispositivo. Para obtener más información sobre Windows 10, las aplicaciones para UWP y los conceptos de código adaptable e interfaz de usuario adaptable que mencionaremos en esta guía de migración, consulta la [Guía para las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
-Durante la migración, verás que Windows 10 comparte la mayoría de las API con las plataformas anteriores, así como el marcado XAML, el marco de trabajo de la interfaz de usuario y las herramientas, por lo que te resultará muy familiar. Al igual que antes, aún puedes elegir entre C++, C# y Visual Basic para el lenguaje de programación a fin de usarlo junto con el marco de trabajo de la interfaz de usuario de XAML. Los primeros pasos de la planificación de qué hacer exactamente con la aplicación o las aplicaciones actuales dependerá de los tipos de aplicaciones y proyectos que tengas. Esto se explica en las siguientes secciones.
+Durante la migración, encontrarás que Windows 10 comparte la mayoría de las API con las plataformas anteriores, así como marcado XAML, marco de la interfaz de usuario y las herramientas, por lo que te resultará muy familiar. Al igual que antes, aún puedes elegir entre C++, C# y Visual Basic para el lenguaje de programación a fin de usarlo junto con el marco de trabajo de la interfaz de usuario de XAML. Los primeros pasos de la planificación de qué hacer exactamente con la aplicación o las aplicaciones actuales dependerá de los tipos de aplicaciones y proyectos que tengas. Esto se explica en las siguientes secciones.
 
 ## <a name="if-you-have-a-universal-81-app"></a>Si ya tienes una aplicación Universal 8.1
 
 Una aplicación Universal 8.1 se compila a partir de un proyecto de aplicación Universal 8.1. Supongamos que el nombre del proyecto es AppName\_81. Contiene estos subproyectos.
 
--   AppName\_81.Windows. Este es el proyecto que crea el paquete de la aplicación para Windows 8.1.
+-   AppName\_81.Windows. Este es el proyecto que crea el paquete de la aplicación para Windows8.1.
 -   AppName\_81.WindowsPhone. Este es el proyecto que crea el paquete de la aplicación para Windows Phone 8.1.
 -   AppName\_81.Shared. Este es el proyecto que contiene código fuente, archivos de marcado y otros activos y recursos, que usan los otros dos proyectos.
 
-A menudo, una aplicación Universal 8.1 de Windows ofrece las mismas funciones (y lo hace usando el mismo código y marcado) en las versiones de Windows8.1 y Windows Phone 8.1. Una aplicación como esta es ideal para la migración de una única aplicación de Windows 10 destinada a la familia de dispositivos universales (y que puedes instalar en la gama más amplia de dispositivos). Básicamente, migrarás el contenido del proyecto compartido y tendrás que usar poco o nada de los otros dos proyectos porque están vacíos o no contienen gran cosa.
+A menudo, una aplicación Universal de Windows 8.1 ofrece las mismas funciones y lo hace usando el mismo código y marcado: en los formatos Windows8.1 y Windows Phone 8.1. Una aplicación como esta es un candidato ideal para la migración a una sola aplicación de Windows 10 que tiene como objetivo la familia de dispositivos universales (y que se puede instalar en la gama más amplia de dispositivos). Básicamente, migrarás el contenido del proyecto compartido y tendrás que usar poco o nada de los otros dos proyectos porque están vacíos o no contienen gran cosa.
 
-Otras veces, la forma Windows 8.1 o Windows Phone 8.1 de la aplicación contiene funciones únicas. O bien contienen las mismas características pero las implementan con diferentes técnicas o distinta tecnología. Con una aplicación de este tipo, puedes optar por migrarla a una sola aplicación que tenga como objetivo la familia de dispositivos universales (en cuyo caso, querrás que la aplicación se adapte a diferentes dispositivos) o puedes optar por migrarla como más de una aplicación, quizás una que tenga como destino la familia de dispositivos de escritorio y otra que tenga como destino la familia de dispositivos móviles. La naturaleza de la aplicación Universal 8.1 determinará cuál de estas opciones es mejor en tu caso.
+Otras veces, el Windows8.1 o el formulario de Windows Phone 8.1 de la aplicación contiene funciones únicas. O bien contienen las mismas características pero las implementan con diferentes técnicas o distinta tecnología. Con una aplicación de este tipo, puedes optar por migrarla a una sola aplicación que tenga como objetivo la familia de dispositivos universales (en cuyo caso, querrás que la aplicación se adapte a diferentes dispositivos) o puedes optar por migrarla como más de una aplicación, quizás una que tenga como destino la familia de dispositivos de escritorio y otra que tenga como destino la familia de dispositivos móviles. La naturaleza de la aplicación Universal 8.1 determinará cuál de estas opciones es mejor en tu caso.
 
 1.  Migra el contenido del proyecto compartido a una aplicación que tenga como destino la familia de dispositivos universales. Si corresponde, recupera cualquier otro contenido de los proyectos de Windows y Windows Phone y úsalo incondicionalmente en la aplicación o condicionalmente en el dispositivo en el que la aplicación se está ejecutando en ese momento (este último comportamiento se conoce como *adaptable*).
 2.  Migra el contenido del proyecto de Windows Phone a una aplicación que tenga como destino la familia de dispositivos universales. Si corresponde, recupera cualquier otro contenido del proyecto de Windows y úsalo de manera incondicional o adaptable.

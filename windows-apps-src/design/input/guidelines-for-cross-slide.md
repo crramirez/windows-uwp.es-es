@@ -6,16 +6,14 @@ ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 ms.author: kbridge
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ecce3c9e0eee30864c2777b657e9b951a8ab0b06
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 5c9234463ad011cc0b4d289bba9fe1ff1873ed46
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393834"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559437"
 ---
 # <a name="guidelines-for-cross-slide"></a>Instrucciones para el deslizamiento transversal
 
@@ -60,16 +58,16 @@ Aquí encontrarás algunas directrices que debes tener en cuenta a la hora de in
 
 Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección. Para más información, consulta [Agregar controles ListView](https://msdn.microsoft.com/library/windows/apps/hh465382).
 
-**Nota** En los casos en que el área de contenido pueda desplazarse lateralmente en dos direcciones; por ejemplo, en un explorador web o un lector de libros electrónicos, conviene usar la interacción sincronizada de pulsar y sostener para invocar el menú contextual para objetos, como imágenes e hipervínculos.
+**Nota**en los casos donde pueda desplazarse lateralmente en dos direcciones; por ejemplo, los exploradores web o lectores de e, el área de contenido se debe usar la interacción pulsar y sostener para invocar el menú contextual para objetos como imágenes e hipervínculos.
 
- 
+ 
 
 |                                                                                         |                                                                                         |
 |-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | ![movimiento panorámico horizontal, lista de dos dimensiones](images/groupedlistview1.png)                | ![movimiento panorámico vertical, lista de una dimensión](images/listviewlistlayout.png)                |
 | Una lista de dos dimensiones con movimiento panorámico horizontal. Arrastra verticalmente para seleccionar o mover un elemento. | Una lista de una dimensión con movimiento panorámico vertical. Arrastra horizontalmente para seleccionar o mover un elemento. |
 
- 
+ 
 
 ### <span id="selection"></span><span id="SELECTION"></span>
 
@@ -150,9 +148,9 @@ Si es necesario mover más de un objeto, deja que los usuarios seleccionen vario
 * [Entrada: muestra de gestos de Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: muestra de manipulaciones y gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Muestra de entrada táctil de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

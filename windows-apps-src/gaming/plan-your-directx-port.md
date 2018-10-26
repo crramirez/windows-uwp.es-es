@@ -6,19 +6,18 @@ ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, DirectX, port, migración
-ms.openlocfilehash: e255bceae44ace0722a2df0c53d60ec0f8fa35fe
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: dea6455b4e9aaef2a4239ef70d0919a4b8841bc5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238548"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559542"
 ---
 # <a name="plan-your-directx-port"></a>Planear la migración de DirectX
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -38,9 +37,9 @@ Actualizar de Direct3D 9 a Direct3D 11 es más que un cambio de buscar y reempla
 
 Debes reemplazar las bibliotecas auxiliares de D3DX y DXUT con tus propias bibliotecas auxiliares o con herramientas de la comunidad. Consulta la sección [Asignación de características](feature-mapping.md) para obtener más información.
 
-> **Nota** Puedes usar el [kit de herramientas de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=248929) o [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) para reemplazar algunas funciones que se proporcionaban anteriormente con D3DX y DXUT.
+> **Nota**  puedes usar el [Kit de herramientas de DirectX](http://go.microsoft.com/fwlink/p/?LinkID=248929) o [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) para reemplazar algunas funciones que se proporcionaban anteriormente con D3DX y DXUT.
 
- 
+ 
 
 Los sombreadores escritos en lenguaje de ensamblado deben actualizarse a HLSL mediante la funcionalidad del modelo de sombreador 4 nivel 9\_1 o 9\_3. En cambio, los sombreadores escritos para la biblioteca de efectos necesitarán actualizarse a una versión más reciente de la sintaxis de HLSL. Consulta la sección [Asignación de características](feature-mapping.md) para obtener más información.
 
@@ -64,9 +63,9 @@ Hay dos conceptos que usarás con frecuencia:
 -   Las referencias administradas ([**operador ^**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)) y las [**clases administradas**](https://msdn.microsoft.com/library/windows/apps/6w96b5h7.aspx) (clases ref) son una parte fundamental de Windows Runtime. Necesitarás usar clases ref administradas para una interfaz con componentes de Windows Runtime, por ejemplo [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) (puedes encontrar más información sobre esto en el tutorial).
 -   Cuando trabajes con interfaces COM en Direct3D 11, usa el tipo de plantilla [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) para que los punteros COM sean más fáciles de usar.
 
- 
+ 
 
- 
+ 
 
 
 

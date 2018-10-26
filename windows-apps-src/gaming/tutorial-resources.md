@@ -6,15 +6,13 @@ keywords: DirectX, XAML
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 32696b739b430ecab25b5138f9aba9eb0ab40204
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: Auto
+ms.openlocfilehash: cb837965746eb1c2c7deab613eec239a83cac294
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673732"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558996"
 ---
 # <a name="extend-the-game-sample"></a>Amplía el juego de ejemplo
 
@@ -27,7 +25,7 @@ Llegados a este punto, ya hemos hablado de los componentes clave de un juego 3D 
 ## <a name="using-xaml-for-the-overlay"></a>Uso de XAML para la superposición
 
 
-Una opción que no hemos tratado en profundidad es el uso de XAML en lugar de [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) para la superposición. XAML presenta muchas ventajas con respecto a Direct2D para dibujar elementos de interfaz de usuario. La ventaja más importante es que facilita la incorporación de la apariencia y la experiencia Windows 10 en tu juego de DirectX. Muchos de los elementos, estilos y comportamientos comunes que definen a una aplicación para UWP están estrechamente integrados en el modelo XAML, por lo que implementarlos supone mucho menos trabajo para el desarrollador del juego. Si tu diseño de juego tiene una interfaz de usuario complicada, piensa en la posibilidad de usar XAML en lugar de Direct2D.
+Una opción que no hemos tratado en profundidad es el uso de XAML en lugar de [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) para la superposición. XAML presenta muchas ventajas con respecto a Direct2D para dibujar elementos de interfaz de usuario. La ventaja más importante es que facilita mucho incorporar la apariencia de Windows 10 en tu juego de DirectX. Muchos de los elementos, estilos y comportamientos comunes que definen a una aplicación para UWP están estrechamente integrados en el modelo XAML, por lo que implementarlos supone mucho menos trabajo para el desarrollador del juego. Si tu diseño de juego tiene una interfaz de usuario complicada, piensa en la posibilidad de usar XAML en lugar de Direct2D.
 
 Con XAML, podemos hacer una interfaz de juego similar a la de Direct2D hecha anteriormente.
 

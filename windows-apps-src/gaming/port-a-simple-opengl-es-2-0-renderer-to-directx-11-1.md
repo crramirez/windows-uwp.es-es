@@ -6,16 +6,14 @@ ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, games, juegos, opengl, direct3d 11, port, portar
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a0baee79873203f9f52fd1e9acae03c7647240
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e7541a8f54f64197c17acea5f1737e36b0e6f670
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652814"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556869"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
 
@@ -84,9 +82,9 @@ typedef struct
 
 Esta estructura tiene una sola instancia y contiene todos los componentes necesarios para representar una malla muy simple de vértices sombreados.
 
-> **Nota**  Todo el código de OpenGL ES 2.0 de este tema se basa en la implementación de la API de Windows proporcionada por Khronos Group y usa la sintaxis de programación C de Windows.
+> **Nota**OpenGL ES 2.0 cualquier código de este tema se basa en la implementación de la API de Windows proporcionada por Khronos Group y usa la sintaxis de programación C de Windows.
 
- 
+ 
 
 ## <a name="what-you-need-to-know"></a>Lo que debes saber
 
@@ -134,7 +132,7 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idadditionalresourcesspanadditional-resources"></a><span id="additional_resources"></span>Recursos adicionales
 
@@ -143,9 +141,9 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 -   [Crear un nuevo proyecto de DirectX11 para UWP](user-interface.md)
 -   [Asignar conceptos e infraestructura de OpenGL ES 2.0 a Direct3D11](map-concepts-and-infrastructure.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fbfba83dc1975b7ecda925d4e221ddaa0d6cc77
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 8e15014e39ed6d980cbe80daa0a129ff83a021b9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "239185"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557942"
 ---
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones
 
@@ -36,18 +34,18 @@ Para obtener más información, consulta [Ciclo de vida de la aplicación](https
 ## <a name="background-audio"></a>Audio en segundo plano
 
 
-Para la propiedad [**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352), **ForegroundOnlyMedia** y **BackgroundCapableMedia** están en desuso para aplicaciones de Windows 10. En su lugar, usa el modelo de aplicaciones de la Tienda de Windows Phone. Para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140).
+Para la propiedad [**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352) , **ForegroundOnlyMedia** y **BackgroundCapableMedia** están en desuso para las aplicaciones de Windows 10. En su lugar, usa el modelo de aplicaciones de la Tienda de Windows Phone. Para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140).
 
 ## <a name="detecting-the-platform-your-app-is-running-on"></a>Detección de la plataforma en la que se está ejecutando la aplicación
 
 
-La forma de concebir la selección de destinos de aplicación cambia con Windows 10. El nuevo modelo conceptual consiste en que una aplicación tiene como objetivo la Plataforma universal de Windows (UWP) y se ejecuta en todos los dispositivos Windows. A continuación, puede optar por dar a conocer funciones exclusivas de familias de dispositivos en particular. Si es necesario, la aplicación también tiene la opción de limitarse a orientarse a una o más familias de dispositivos específicamente. Para obtener más información sobre qué son las familias de dispositivos —y cómo decidir qué familia de dispositivos establecer como destino— consulta la [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+La forma de concebir destinada a la aplicación cambia con Windows 10. El nuevo modelo conceptual consiste en que una aplicación tiene como objetivo la Plataforma universal de Windows (UWP) y se ejecuta en todos los dispositivos Windows. A continuación, puede optar por dar a conocer funciones exclusivas de familias de dispositivos en particular. Si es necesario, la aplicación también tiene la opción de limitarse a orientarse a una o más familias de dispositivos específicamente. Para obtener más información sobre qué son las familias de dispositivos —y cómo decidir qué familia de dispositivos establecer como destino— consulta la [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 Si tienes código en tu aplicación Universal 8.1 que detecta el sistema operativo en el que se está ejecutando, es posible que necesites cambiarlo en función del motivo de la lógica. Si la aplicación está pasando el valor y no actúa en él, podrás continuar recopilando la información del sistema operativo.
 
-**Nota** Es recomendable que no uses el sistema operativo o la familia de dispositivos para detectar la presencia de características. Identificar el sistema operativo actual o la familia de dispositivos normalmente no es la mejor manera de determinar si una función concreta de la familia de dispositivos o del sistema operativo está presente. En lugar de detectar el sistema operativo o la familia de dispositivos (y el número de versión), prueba la presencia de la propia funcion (consulta [Compilación condicional y código adaptable](w8x-to-uwp-porting-to-a-uwp-project.md)). Si debes requerir un sistema operativo determinado o una familia de dispositivos, asegúrate de usarlo como una versión compatible mínima, en lugar de diseñar la prueba solamente para esa versión.
+**Nota**  te recomendamos que uses no del sistema operativo o la familia de dispositivos para detectar la presencia de características. Identificar el sistema operativo actual o la familia de dispositivos normalmente no es la mejor manera de determinar si una función concreta de la familia de dispositivos o del sistema operativo está presente. En lugar de detectar el sistema operativo o la familia de dispositivos (y el número de versión), prueba la presencia de la propia funcion (consulta [Compilación condicional y código adaptable](w8x-to-uwp-porting-to-a-uwp-project.md)). Si debes requerir un sistema operativo determinado o una familia de dispositivos, asegúrate de usarlo como una versión compatible mínima, en lugar de diseñar la prueba solamente para esa versión.
 
- 
+ 
 
 Para adaptar la interfaz de usuario de la aplicación a diferentes dispositivos, hay varias técnicas que recomendamos. Continúa usando elementos de tamaño automático y paneles de diseño dinámico como siempre. En el marcado XAML, sigue usando tamaños en píxeles funcionales (anteriormente denominados píxeles de vista) para que la interfaz de usuario se adapte a diferentes resoluciones y factores de escala (consulta [Píxeles funcionales, distancia de visualización y factores de escala](w8x-to-uwp-porting-xaml-and-ui.md)). Y usa los desencadenadores y establecedores adaptables de Visual State Manager para adaptar la interfaz de usuario al tamaño de la ventana (consulta [Guía para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631)).
 
@@ -73,11 +71,11 @@ Consulta también [Compilación condicional y código adaptable](w8x-to-uwp-port
 ## <a name="location"></a>Ubicación
 
 
-Si una aplicación que declara la funcionalidad de Ubicación en su manifiesto del paquete de la aplicación se usa en Windows 10, el sistema pedirá al usuario final su consentimiento. Esto ocurre tanto si la aplicación es de la Tienda de Windows Phone como si es una aplicación de Windows10. Por lo tanto, si la aplicación muestra su propia petición de consentimiento personalizado o si proporciona una alternancia de activar y desactivar, es aconsejable quitarla para que solo se le solicite una vez al usuario final.
+Cuando una aplicación que declara la funcionalidad de ubicación en su manifiesto del paquete de aplicación se ejecuta en Windows 10, el sistema pedirá al usuario final su consentimiento. Esto es true si la aplicación es una aplicación de Windows Phone Store o una aplicación de Windows 10. Por lo tanto, si la aplicación muestra su propia petición de consentimiento personalizado o si proporciona una alternancia de activar y desactivar, es aconsejable quitarla para que solo se le solicite una vez al usuario final.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,19 +6,17 @@ title: Reproducción de contenido multimedia
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 888131d37a86793d67ce71376b158bd7de734331
-ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.localizationpriority: medium
+ms.openlocfilehash: dbcd2a4f9cec02882c62c7d6493746931b7919a8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2017
-ms.locfileid: "837028"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557555"
 ---
 # <a name="media-playback"></a>Reproducción de contenido multimedia
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En esta sección se ofrece información sobre la creación de aplicaciones universales de Windows para reproducir audio y vídeo. 
 
@@ -46,7 +44,7 @@ Las siguientes muestras de SDK presentan las características de reproducción d
 * [Muestra de streaming adaptable](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/AdaptiveStreaming)
 * [Muestra de audio en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
 * [Muestra de transporte de contenido multimedia del sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)                                                                                               
- 
+ 
 
 
 
