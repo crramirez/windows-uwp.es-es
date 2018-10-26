@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, pagos, ventas de aplicaciones, ganancias por la aplicación, pago, tarifa de la store, suspensión de pago, porcentaje
 ms.localizationpriority: medium
 ms.openlocfilehash: e7a5736c48232d3fa080d13fbcbbbdb70bfa9c92
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5555479"
+ms.locfileid: "5596468"
 ---
 # <a name="getting-paid"></a>Recibir pagos
 Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y complementos, como las ganancias de publicidad.

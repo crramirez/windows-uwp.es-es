@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 6e68c1fc-a407-4c0b-b0f4-e445ccb72ff3
 ms.localizationpriority: medium
 ms.openlocfilehash: 82b42b25d3894a82e92af9a520ee5f951a5ba344
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5563524"
+ms.locfileid: "5595015"
 ---
 # <a name="how-to-turn-off-scaling"></a>Cómo desactivar el escalado   
 De manera predeterminada, las aplicaciones adoptan una escala de 200% para XAML y de 150% para aplicaciones HTML. Es posible desactivar el factor de escala de forma predeterminado. Esto hará que la aplicación use las dimensiones en píxeles reales del dispositivo (1910 x 1080 píxeles).   

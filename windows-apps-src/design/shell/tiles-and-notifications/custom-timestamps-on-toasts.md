@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, marca de tiempo personalizada, marca de tiempo, notificación, Centro de actividades
 ms.localizationpriority: medium
 ms.openlocfilehash: 290825fa079052b79fb2feaec8af928f8da93f95
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5557747"
+ms.locfileid: "5594508"
 ---
 # <a name="custom-timestamps-on-toasts"></a>Marcas de tiempo personalizadas en notificaciones del sistema
 

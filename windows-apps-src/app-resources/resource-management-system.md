@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
 ms.openlocfilehash: b80eda57ff700d732ba2402582ed6402acca4fc6
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5549235"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5605064"
 ---
 # <a name="resource-management-system"></a>Sistema de administración de recursos
 El sistema de administración de recursos tiene funciones de tiempo de compilación y de tiempo de ejecución. Al compilar, el sistema crea un índice de todas las diferentes variantes de los recursos que se empaquetan con tu aplicación. Este índice es el índice de recursos del paquete, o PRI, y también se incluye en el paquete de la aplicación. En tiempo de ejecución, el sistema detecta el usuario y la configuración de la máquina que están en vigor, consulta la información del PRI y carga automáticamente los recursos que son la mejor coincidencia para esa configuración.

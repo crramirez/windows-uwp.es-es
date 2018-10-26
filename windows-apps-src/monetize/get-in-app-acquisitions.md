@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, adquisiciones de complementos, add-on acquisitions
 ms.localizationpriority: medium
 ms.openlocfilehash: c1fb44457b8589c9e1525de9c8dca2801c0c47bf
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5552708"
+ms.locfileid: "5597364"
 ---
 # <a name="get-add-on-acquisitions"></a>Obtener los datos de las adquisiciones de complementos
 

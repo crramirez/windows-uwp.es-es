@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, input, entrada, mouse, mouse, touch, táctil, control, control
 ms.localizationpriority: medium
 ms.openlocfilehash: 8787400cc1d77afb32df51ba943ae72a99c2b470
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5555748"
+ms.locfileid: "5597054"
 ---
 # <a name="game-input-for-directx-games"></a>Entrada para juegos DirectX
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, centro de desarrollo, configuración de la cuenta, perfil, perfil de cuenta, cuenta de desabollador, configuración de la cuenta de desarrollador
 ms.localizationpriority: medium
 ms.openlocfilehash: b17281d597ea484c81896abd7efdc7d31fdc8add
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5562626"
+ms.locfileid: "5604989"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Administrar la configuración de la cuenta y la información del perfil
 

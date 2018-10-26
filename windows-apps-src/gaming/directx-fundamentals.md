@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, load, carga, rasterize, rasterizar, mesh, malla, bitmap, mapa de bits, 2D, 2D, 3D, 3D
 ms.localizationpriority: medium
 ms.openlocfilehash: 7947f1e0684bc76c95fe8099f5ef123f2a32566e
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5544940"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5621904"
 ---
 # <a name="fundamentals-of-directx-programming"></a>Conceptos básicos de programación con DirectX
 

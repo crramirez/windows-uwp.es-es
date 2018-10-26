@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, maps, mapas, map style sheet, hoja de estilo de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: eace82801b2e3d1423eeec9e9da7cf56db043666
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5543998"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5596815"
 ---
 # <a name="map-style-sheet-reference"></a>Referencia de hoja de estilo de mapa
 

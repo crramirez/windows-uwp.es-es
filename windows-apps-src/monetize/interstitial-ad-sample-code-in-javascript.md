@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, intersticial, javascript, código de muestra, ads, advertising, interstitial, sample code
 ms.localizationpriority: medium
 ms.openlocfilehash: 42ff810808e0e7b8d83152f7d23e535c721d3405
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5558936"
+ms.locfileid: "5604824"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>Código de ejemplo de anuncios intersticiales en JavaScript
 

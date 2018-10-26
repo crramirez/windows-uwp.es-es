@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: c647846aaaf8f7a5cef96e267ad979dc68ee004a
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5549539"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5593020"
 ---
 # <a name="camera-barcode-scanner"></a>Escáner de código de barras basado en cámara
 Un escáner de código de barras basado en cámara se crea dinámicamente cuando Windows empareja las cámaras conectadas a tu equipo con un descodificador de software.  Cada conjunto descodificador-equipo es un escáner de código de barras totalmente funcional.   

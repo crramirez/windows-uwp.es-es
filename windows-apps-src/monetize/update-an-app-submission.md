@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submission, envío de aplicación, update, actualizar
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bf6ed961f4f84cbc2bbef4a4fe79625dcadc326
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5559792"
+ms.locfileid: "5596263"
 ---
 # <a name="update-an-app-submission"></a>Actualizar un envío de aplicación
 
