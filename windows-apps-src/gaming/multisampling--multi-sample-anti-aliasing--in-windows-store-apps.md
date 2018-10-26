@@ -6,19 +6,18 @@ ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, juegos, muestreo múltiple, direct3d, games, multisampling
-ms.openlocfilehash: 7748bf4c2d1654dad77d5971487330d3530d9e84
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 7b967ae1709849bbe5bc944b00d9e30f22052aeb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.locfileid: "238606"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572151"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)
 
 
-\[ Actualizado para las aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aprende a usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D. El muestreo múltiple, también conocido como suavizado de contorno de muestras múltiples, es una técnica gráfica que se usa para disminuir la apariencia de bordes afilados. Se aplica dibujando más píxeles de los que existen en el destino de representación y después promediando valores para mantener la apariencia de un borde "parcial" en ciertos píxeles. Si quieres ver una descripción más minuciosa de cómo funciona el muestreo múltiple en Direct3D, consulta [Multisample Anti-Aliasing Rasterization Rules (Reglas de rasterización para el suavizado de contorno de muestras múltiples)](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample).
 
@@ -33,7 +32,7 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
 
 1.  Llama a [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para averiguar qué formatos DXGI se pueden usar con el muestreo múltiple. Suministra los formatos de destino de representación que tu juego puede usar. Tanto el destino de representación como el destino de resolución deben usar el mismo formato, por lo tanto, comprueba [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134) y **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**.
 
-    **Nivel de característica 9:  ** Si bien los dispositivos que tienen el nivel de característica 9 [garantizan la compatibilidad con formatos de destino de representación de muestras múltiples](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), no garantizan la compatibilidad con destinos de resolución de varias muestras. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
+    **Nivel de característica 9:** Aunque el nivel de característica 9 dispositivos [garantizar la compatibilidad con formatos de destino de representación de muestras múltiples](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), no se garantiza la compatibilidad con destinos garantizan. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
 
     El siguiente código comprueba la compatibilidad del muestreo múltiple en todos los valores DXGI\_FORMAT:
 
@@ -85,9 +84,9 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
     }
     ```
 
-    > **Nota**  Usa [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) si necesitas comprobar la compatibilidad de muestras múltiples con búferes de recursos en mosaico.
+    > **Nota**  uso [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) en su lugar, si es necesario comprobar la compatibilidad con multimuestra en mosaico búferes de recursos.
 
-     
+     
 
 3.  Crea un búfer y una vista de destino de representación con el recuento de muestras deseado. Usa el mismo formato DXGI\_FORMAT y el ancho y el alto de la cadena de intercambio, pero especifica un recuento mayor que 1 y usa una dimensión de texturas de varias muestras (por ejemplo, **D3D11\_RTV\_DIMENSION\_TEXTURE2DMS**). Si es necesario, puedes volver a crear la cadena de intercambio mediante una configuración nueva que sea adecuada para el muestreo múltiple.
 
@@ -206,9 +205,9 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
     hr = m_swapChain->Present(1, 0);
     ```
 
- 
+ 
 
- 
+ 
 
 
 
