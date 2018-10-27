@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarea en segundo plano, servicio de aplicaciones, los dispositivos, sistemas remotos conectados
 ms.localizationpriority: medium
 ms.openlocfilehash: bb036f0150095e6f02857d227e73b1c7f29b23df
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5642378"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709937"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Inicio, reanudación y tareas en segundo plano
 

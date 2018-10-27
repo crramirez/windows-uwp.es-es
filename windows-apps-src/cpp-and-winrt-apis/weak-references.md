@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, sólida, débil, referencia
 ms.localizationpriority: medium
 ms.openlocfilehash: c37319ce7f7d29acfc2c1822e76fadc29b5ec863
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5664856"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5707200"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Referencias fuertes y débiles en C++ / WinRT
 

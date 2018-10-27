@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f267fbcaecfdf9f1888e47d8dbe35d9cc469f4c
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5596348"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706559"
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para dispositivos móviles
 

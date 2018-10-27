@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, asignación de grupo de contenido, instalación en streaming, instalación en streaming de la app para uwp, asignación de grupo de contenido de origen
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a2922d6d3f54d693a9fe9c0982ea06cc5f2caae
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5542987"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710565"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Crear y convertir una asignación de grupo de contenido de origen
 

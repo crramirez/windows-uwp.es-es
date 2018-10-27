@@ -8,12 +8,12 @@ ms.date: 09/20/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c17c802e77d13e6e980ed5046c19bfc106d5cff
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 451a8041e0a81d43d91692e92046c32d458e0982
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5563276"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710618"
 ---
 # <a name="app-capability-declarations"></a>Declaraciones de funcionalidades de las aplicaciones
 
@@ -211,6 +211,8 @@ La siguiente tabla enumera las funcionalidades restringidas. Puedes solicitar la
 | **Elevación** | La funcionalidad de **allowElevation** restringido permite que las aplicaciones creadas por los partners de Microsoft y las empresas para conservar la funcionalidad de escritorio existente que requiere elevación automática en el inicio o durante el ciclo de vida de la aplicación.<br/><br/>No recomendamos declarar esta funcionalidad en las aplicaciones enviadas a la Store. Para la mayoría de los desarrolladores, el uso de esta funcionalidad no se aprobará. Solo se aprobará para las aplicaciones de línea de negocio implementadas por las empresas a su tienda privada a través de Microsoft Store para empresas.  |
 | **Credenciales del dispositivo de equipo de Windows** | La funcionalidad de **teamEditionDeviceCredentials** restringido permite que las aplicaciones accedan a las API que solicitar credenciales de cuenta del dispositivo en un dispositivo de Surface Hub con Windows 10, versión 1703 o posterior.<br/><br/>No recomendamos declarar esta funcionalidad en las aplicaciones enviadas a la Store. Para la mayoría de los desarrolladores, el uso de esta funcionalidad no se aprobará. |
 | **Vista de aplicación del equipo de Windows** | La funcionalidad de **teamEditionView** restringido permite que las aplicaciones accedan a las API para el hospedaje de una vista de la aplicación en un dispositivo de Surface Hub con Windows 10, versión 1703 o posterior.<br/><br/>No recomendamos declarar esta funcionalidad en las aplicaciones enviadas a la Store. Para la mayoría de los desarrolladores, el uso de esta funcionalidad no se aprobará. |
+| **Extensión de procesamiento de cámara** | La funcionalidad de **cameraProcessingExtension** restringida permite a las aplicaciones procesar imágenes capturadas desde la cámara sin control directo de la cámara.<br /><br />Esta funcionalidad es necesaria para llamar a las API en el espacio de nombres [Windows.Devices.PointOfService.Provider](/uwp/api/windows.devices.pointofservice.provider) .<br /><br />Cualquier persona puede solicitar acceso a esta funcionalidad de envío a la Tienda. |
+| **Administración de uso de datos*** | La funcionalidad de **networkDataUsageManagement** restringida permite a las aplicaciones recopilar información de uso de datos de red.<br /><br />Esta funcionalidad es necesaria para llamar a [GetAttributedNetworkUsageAsync](/uwp/api/windows.networking.connectivity.connectionprofile.getattributednetworkusageasync).<br /><br />Cualquier persona puede solicitar acceso a esta funcionalidad de envío a la Tienda. |
 
 ## <a name="custom-capabilities"></a>Capacidades personalizadas
 
