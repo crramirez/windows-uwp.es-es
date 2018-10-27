@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, encabezado, encabezados de notificación del sistema, notificación, notificaciones del sistema de grupo, Centro de actividades
 ms.localizationpriority: medium
 ms.openlocfilehash: fcc515b811a11be045ce80ed816708d230720a29
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5552177"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5690059"
 ---
 # <a name="toast-headers"></a>Encabezados de notificaciones del sistema
 

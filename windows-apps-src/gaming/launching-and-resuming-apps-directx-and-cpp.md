@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, DirectX, iniciar, reanudar, games, launching, resuming
 ms.localizationpriority: medium
 ms.openlocfilehash: ebcec430c4fc916e77ebdf25ee53deb23b02185d
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5556882"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5690988"
 ---
 # <a name="launching-and-resuming-apps-directx-and-c"></a>Iniciar y reanudar aplicaciones (DirectX y C++)
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, COM, componente, clase, interfaz
 ms.localizationpriority: medium
 ms.openlocfilehash: a07c9877a6d6d953e578d927959b1202444ede21
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5564558"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5691178"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM con C++ / WinRT
 
