@@ -9,11 +9,11 @@ keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Micr
 ms.assetid: 9ada5ac3-a86e-4bb6-8ebc-915ba9649e3c
 ms.localizationpriority: medium
 ms.openlocfilehash: bc9478659ec9ed040a83471a8f7344f235ff9cf1
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5572624"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5688015"
 ---
 # <a name="get-rollout-info-for-an-app-submission"></a>Obtener la información de lanzamiento para un envío de aplicación
 
