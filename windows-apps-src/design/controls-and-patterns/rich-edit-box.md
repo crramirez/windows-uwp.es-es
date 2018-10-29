@@ -14,11 +14,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 09b75eccdfcdd1d046618b92565fa3453a8b300e
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5690635"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5749131"
 ---
 # <a name="rich-edit-box"></a>Cuadro de texto enriquecido
 
