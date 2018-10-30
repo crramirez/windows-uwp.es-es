@@ -8,12 +8,12 @@ ms.author: kbridge
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 933c3f1c4c2c57cc0a7a92334223f6c6d4bbb010
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.openlocfilehash: 62c62aacd894163ef2c65b9ddfe6d8299733a2e5
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5707167"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5760469"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Tutorial: compatibilidad con la entrada de lápiz en tu aplicación para UWP
 
@@ -40,6 +40,7 @@ Con Windows Ink, puedes proporcionar a tus clientes el equivalente digital de ca
 * Un equipo (o máquina virtual) que ejecute la versión actual de Windows 10.
 * [Visual Studio 2017 y RS2 SDK](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* Según la configuración, es posible que tienes que instalar el paquete de NuGet [Microsoft.NETCore.UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/6.1.9) y habilitar **el modo de desarrollador** en la configuración del sistema (configuración -> actualización y seguridad -> para desarrolladores -> Usar las funciones de desarrollo).
 * Si no estás familiarizado con el desarrollo de aplicaciones para la Plataforma universal de Windows (UWP) con Visual Studio, echa un vistazo a estos temas antes de empezar este tutorial:  
     * [Preparación](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
     * [Crear una aplicación "Hola mundo" (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
