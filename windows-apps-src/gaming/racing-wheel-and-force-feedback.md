@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, racing wheel, volante, force feedback, fuerza de respuesta
 ms.localizationpriority: medium
 ms.openlocfilehash: 20b4b35bb729ee49dbfd3f2b2b2a029a4319521c
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5685448"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5754225"
 ---
 # <a name="racing-wheel-and-force-feedback"></a>Volante y fuerza de respuesta
 
