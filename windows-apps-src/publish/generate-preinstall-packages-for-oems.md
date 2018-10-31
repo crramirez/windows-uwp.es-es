@@ -4,16 +4,16 @@ Description: If your developer account has been granted the appropriate permissi
 title: Generar paquetes preinstalados para OEM
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8564d3dc7240bb556f3cb90c51165def9e2d4eba
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 02f7c1ad1a396464532a1c63c925bf9e19600f1b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761567"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5839439"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a>Generar paquetes preinstalados para OEM
 
@@ -22,7 +22,7 @@ Si tu cuenta de desarrollador tiene los permisos adecuados, puedes generar y des
 
 ## <a name="important-preinstall-policy--limitations"></a>Directivas y limitaciones de preinstalación importantes
 
-Las aplicaciones de preinstalación deben estar certificadas a través del Centro de desarrollo de Windows con la licencia más reciente de la Tienda para que puedan conectarse a la Tienda y recibir actualizaciones de aplicación.
+Las aplicaciones de preinstalación deben estar certificadas a través del [Centro de partners](https://partner.microsoft.com/dashboard) con la licencia más reciente de la tienda para que puedan conectarse a la tienda y recibir actualizaciones de la aplicación.
 
 Las aplicaciones que estén preinstaladas deben ser y permanecer gratuitas en todos los mercados.
 
@@ -31,7 +31,7 @@ Las aplicaciones que estén preinstaladas deben ser y permanecer gratuitas en to
 
 Una vez que se habilite una cuenta con permisos de preinstalación, completa los siguientes pasos:
 
-1.  En el panel, ve a la aplicación que se va a preinstalar.
+1.  En el centro de partners, ve a la aplicación que se va a preinstalar.
 2.  En el menú de navegación izquierdo, expande **Administración de aplicaciones** y selecciona **Paquetes actuales**.
 3.  En la sección **Solicitar paquetes para la preinstalación del SO**, selecciona **Habilitar los paquetes descargables**.
 4.  En el cuadro de diálogo de confirmación, selecciona **Habilitar**.

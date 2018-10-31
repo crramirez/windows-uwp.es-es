@@ -3,16 +3,16 @@ author: jnHs
 Description: Select the base price for an app and schedule price changes. You can also customize these options for specific markets.
 title: Establecer y programar los precios de las aplicaciones
 ms.author: wdg-dev-content
-ms.date: 05/08/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, precios, precios de las aplicaciones, precio de la aplicación, vender aplicaciones, cambio de precio, precio personalizado, precio, precios, costo, reemplazar el precio base, precio de forma libre, forma libre
 ms.localizationpriority: medium
-ms.openlocfilehash: 99e11e29c5625d528777046075f01a824f1b0b37
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 372abfdb0de5567b7c7d262b298d264b086fe339
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740544"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5839340"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Establecer y programar los precios de las aplicaciones
 
@@ -37,23 +37,18 @@ En la sección **Precios**, haz clic en **view conversion table** para ver los p
 Recuerda que la franja de precios que seleccionaste puede incluir el impuesto sobre el valor añadido o las ventas que tus clientes deben pagar. Para obtener más información sobre las implicaciones fiscales de la aplicación en los mercados seleccionados, consulta los [detalles de impuestos para aplicaciones de pago](tax-details-for-paid-apps.md). También deberías revisar las [consideraciones relativas a los precios para mercados concretos](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
 > [!NOTE]
-> Si eliges la opción **Detener adquisición** en **Hacer disponible este producto, pero no descubrible, en Store** en la sección [Visibilidad](choose-visibility-options.md#discoverability), no podrás establecer precios para el envío (ya que nadie podrá comprar la aplicación a menos que haya recibido un código promocional para obtener la aplicación de forma gratuita).
+> Si eliges la opción **Detener la compra** en **hacer este producto disponible, pero no detectable en la tienda** en la sección [visibilidad](choose-visibility-options.md#discoverability) ), no podrás establecer precios para el envío (ya que nadie podrá comprar la aplicación a menos que usan un código promocional para obtener la aplicación de forma gratuita).
 
 ## <a name="schedule-price-changes"></a>Programar cambios de precio
 
 También puedes programar uno o varios de los cambios de precio si quieres que el precio base de la aplicación cambie en una fecha y hora específica. 
 
 > [!IMPORTANT]
-> Los cambios en los precios solo se muestran a los clientes de dispositivos Windows10 (incluida la Xbox). Si la aplicación es compatible con versiones anteriores del sistema operativo, no se aplicarán los cambios de precios. 
->
-> - Para los clientes en Windows 8, la aplicación siempre se ofrecerá a su **precio base** (y no a cualquier precio específico del mercado), incluso si has programado cambios de precio adicionales. 
-> - Para los clientes en Windows 8.1 y en Windows Phone 8.1 y versiones anteriores, la aplicación siempre se ofrecerá a la primera franja de precios para el mercado del cliente, incluso si has programado cambios de precio adicionales en ese mercado.
-> 
-> Ten esto en cuenta al programar cambios en los precios. Por ejemplo, si inicialmente lanzas la aplicación a una franja de precios más baja y, a continuación, programas una fecha en la que debería aumentar el precio, tus clientes con versiones anteriores del sistema operativo que adquieren la aplicación pagarán un precio más bajo (original).
+> Los cambios en los precios solo se muestran a los clientes de dispositivos Windows10 (incluida la Xbox). Si la aplicación publicada anteriormente es compatible con versiones anteriores del sistema operativo, los cambios de precio no se aplicarán a estos clientes. Para los clientes en Windows 8, la aplicación siempre se ofrecerá a su **precio base** (y no a cualquier precio específico del mercado), incluso si has programado cambios de precio adicionales. Para los clientes en Windows 8.1 y en Windows Phone 8.1 y versiones anteriores, la aplicación siempre se ofrecerá a la primera franja de precios para el mercado del cliente.
 
 Haz clic en **Programar un cambio de precio** para ver las opciones de cambio de precio. Elige la franja de precios que quieres usar (o especifica un precio de forma libre para invalidaciones de precio base de mercado único) y luego selecciona la fecha, la hora y la zona horaria.
 
-Puedes hacer clic en **Schedule a price change again** para programar tantos cambios posteriores como quieras.
+Puedes hacer clic en volver a **programar un cambio de precio** para programar tantos cambios posteriores como quieras.
 
 > [!NOTE]
 > Los cambios de precios programados funcionan de una manera diferente al [Precio de oferta](put-apps-and-add-ons-on-sale.md). Cuando una aplicación está en oferta, el precio muestra un tachado en la Store y los clientes podrán comprar la aplicación en el precio de oferta durante el período que hayas seleccionado. Una vez que el periodo de oferta se acabe, ya no se aplicará el precio de venta y la aplicación estará disponible en su precio base (o un precio diferente que hayas especificado para ese mercado, si procede).
@@ -66,7 +61,7 @@ Puedes hacer clic en **Schedule a price change again** para programar tantos cam
 De manera predeterminada, las opciones que selecciones anteriormente, se aplicarán a todos los mercados en los que se ofrece la aplicación. Opcionalmente, puedes cambiar el precio de uno o más mercados, elegir una franja de precios diferente o escribir un precio de forma libre en la moneda local del mercado.
 
 > [!IMPORTANT]
-> Los clientes de Windows 8 siempre verán la aplicación con su **precio base**, incluso si seleccionas un precio diferente para el mercado.
+> Si la aplicación publicada anteriormente es compatible con Windows 8, estos clientes siempre verán la aplicación en su **precio Base**, incluso si seleccionas un precio diferente para el mercado.
 
 Para cambiar el precio para mercados específicos, haz clic en **Select markets for base price override**. La ventana emergente de **Selección de mercado** aparecerá en la lista de todos los mercados que hayas elegido en los que la aplicación estará disponible. (Si se excluye algún mercado en la sección **Mercados**, esos mercados no estará disponibles.) 
 
