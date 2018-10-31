@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d56e220a65d0de261ab0cc64b8ac417e1f480eb
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5838366"
+ms.locfileid: "5866610"
 ---
 # <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a>Tutorial: Crear un componente de Windows Runtime en C++/CX y llamarlo desde JavaScript o C#
 > [!NOTE]

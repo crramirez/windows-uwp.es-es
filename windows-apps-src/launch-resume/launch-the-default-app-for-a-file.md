@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 736018fbf966b547c3dd41e245149d498c1231e3
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5814211"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5866767"
 ---
 # <a name="launch-the-default-app-for-a-file"></a>Iniciar la aplicación predeterminada para un archivo
 

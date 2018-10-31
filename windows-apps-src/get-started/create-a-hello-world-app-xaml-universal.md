@@ -8,12 +8,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp, primera aplicación, hola mundo
 ms.localizationpriority: medium
-ms.openlocfilehash: b28d0237deda78291816a52affd1fa7b4768640b
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: d6fa9fa708df376edc94d34ea14d8dad4aed10df
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5839793"
+ms.locfileid: "5864919"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Crear una aplicación "Hello, world" (XAML)
 
@@ -85,7 +85,7 @@ Para ver y editar un archivo de tu proyecto, haz doble clic en el archivo en el 
 -   App.xaml es donde declaras recursos que se usan en la aplicación.
 -   App.xaml.cs es el archivo de código subyacente de App.xaml. Como todas las páginas de código subyacente, contiene un constructor que llama al método `InitializeComponent`. Tú no escribes el método `InitializeComponent`. Lo genera Visual Studio, y su principal propósito es inicializar los elementos declarados en el archivo XAML.
 -   App.xaml.cs es el punto de entrada para la aplicación.
--   App.xaml.cs también contiene métodos para controlar la activación y la suspensión de la aplicación.
+-   App.Xaml.cs también contiene métodos para controlar la [activación](../launch-resume/activate-an-app.md) y la [suspensión](../launch-resume/suspend-an-app.md) de la aplicación.
 
 *MainPage.xaml*
 
@@ -95,12 +95,14 @@ Para ver y editar un archivo de tu proyecto, haz doble clic en el archivo en el 
 
 *Package.appxmanifest*
 -   Un archivo de manifiesto que describe tu aplicación: su nombre, descripción, icono, página de inicio, etc.
--   Incluye una lista de los archivos que contiene la aplicación.
+-   Incluye una lista de dependencias, recursos y los archivos que contiene la aplicación.
 
-*Un conjunto de imágenes de logotipo*
--   Assets/Square150x150Logo.scale-200.png representa tu aplicación en el menú Inicio.
+*Conjunto de imágenes de logotipo*
+-   Assets/Square150x150Logo.scale-200.png y Wide310x150Logo.scale 200.png representan la aplicación (medio o todo el tamaño) en el menú Inicio.
+-   Assets/Square44x44Logo.png representa la aplicación en la lista de aplicaciones del menú Inicio, barra de tareas y el Administrador de tareas.
 -   Assets/StoreLogo.png representa tu aplicación en Microsoft Store.
 -   Assets/SplashScreen.scale-200.png es la pantalla de presentación que se muestra cuando se inicia la aplicación.
+-   Assets/LockScreenLogo.scale-200.png puede usarse para representar la aplicación en la pantalla de bloqueo cuando el sistema está bloqueado.
 
 ## <a name="step-2-adding-a-button"></a>Paso 2: Adición de un botón
 

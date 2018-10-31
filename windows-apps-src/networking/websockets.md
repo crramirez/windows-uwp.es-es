@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, networking, redes, websocket, messagewebsocket, streamwebsocket
 ms.localizationpriority: medium
 ms.openlocfilehash: eaba8d7b87d9e2762d13bd86629ee4a996e2d5e8
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5821849"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5861444"
 ---
 # <a name="websockets"></a>WebSockets
 Los WebSockets ofrecen un mecanismo para una comunicación bidireccional, rápida y segura entre un cliente y un servidor a través de Internet mediante HTTP(S) y compatible con mensajes UTF-8 y binarios.

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 60060bb3ec7a644d29523483d0d31c0497c543d1
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 597451826958c355dad9f9380dbdc1264bc87883
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5817638"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5865800"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Crear un juego para UWP en JavaScript
 
@@ -63,7 +63,7 @@ Una vez que se ha cargado la solución en Visual Studio, verás varios archivos,
 
 Ya puedes ejecutar el juego.
 
-Presiona **F5** para ejecutar la aplicación. Deberías ver una ventana abierta y a nuestro dinosaurio en un entorno idílico (aunque árido). Ahora examinaremos la aplicación, explicaremos algunas partes importantes y desbloquearemos el resto de las características a medida que avancemos.
+Presiona **F5** para ejecutar la aplicación. Deberías ver una ventana abierta y a nuestro dinosaurio en un entorno idílico (aunque) horizontal. Ahora examinaremos la aplicación, explicaremos algunas partes importantes y desbloquearemos el resto de las características a medida que avancemos.
 
 ![Un simple dinosaurio con un gato ninja en el lomo](images/JS2D_3.png)
 

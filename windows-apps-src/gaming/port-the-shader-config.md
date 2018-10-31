@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, games, juegos, port, portar, shader, sombreador, direct3d, opengl
 ms.localizationpriority: medium
 ms.openlocfilehash: bbf7e05a93ccce4188d62f9800a5f225be713cc6
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5840649"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5862034"
 ---
 # <a name="port-the-shader-objects"></a>Portar objetos de sombreador
 

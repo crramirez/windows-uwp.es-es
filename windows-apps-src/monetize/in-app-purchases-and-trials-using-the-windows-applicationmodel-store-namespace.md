@@ -9,11 +9,11 @@ ms.topic: article
 keywords: uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 330631afed95c3b0082de69d9369a62aad5a66d5
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5840439"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5865329"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store
 
