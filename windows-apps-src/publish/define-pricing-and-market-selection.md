@@ -4,16 +4,16 @@ Description: The Microsoft Store reaches customers in over 200 countries and reg
 title: Definir la selección del mercado
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
 ms.author: wdg-dev-content
-ms.date: 06/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows10, uwp, mercados, países, regiones
 ms.localizationpriority: medium
-ms.openlocfilehash: c50f20b3e86f1868732be74b0d35933658dc3ceb
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ef7136868fc9c212640c142db2751bd6e9a0b179
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752823"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835445"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
@@ -36,12 +36,12 @@ De manera predeterminada, se seleccionan todos los mercados. Puedes anular la se
 Ten en cuenta que estas selecciones se aplican solo a las nuevas adquisiciones; si alguien que ya tenga la aplicación en un mercado determinado y más adelante lo quita, las personas que ya tienen la aplicación en dicho mercado pueden seguir usándola, pero no obtendrán las actualizaciones que envíes y ningún cliente nuevo puede conseguir la aplicación en ese mercado.
 
 > [!IMPORTANT]
-> Es tu responsabilidad cumplir con todos los requisitos legales locales, incluso si estos no se mencionan aquí ni en el panel del Centro de desarrollo de Windows.
+> Es tu responsabilidad cumplir con todos los requisitos legales locales, incluso si estos no se mencionan aquí ni en el centro de partners.
 
 Ten en cuenta que incluso si seleccionas todos los mercados, las leyes y restricciones locales u otros factores pueden impedir que ciertas aplicaciones se muestren en algunos países y regiones. Además, algunos mercados pueden tener requisitos específicos en relación con las clasificaciones por edades. Si la aplicación no cumple estos requisitos, no podremos ofrecer tu aplicación en ese mercado. Consulta [Clasificaciones por edades](age-ratings.md) para más información.
 
 > [!NOTE]
-> Para las aplicaciones destinadas a Windows8 o Windows8.1, algunos mercados individuales se tratan como un solo mercado "Resto del mundo". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
+> Para las aplicaciones publicado anteriormente que incluyen paquetes destinados a Windows8 o Windows8.1, algunos mercados individuales se tratan como un solo mercado "Resto del mundo". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
 
 También verás una casilla que te permitirá indicar si ofreces tu aplicación en cualquier mercado que la Tienda pueda agregar en un futuro. Si dejas esta casilla marcada y, a más adelante, añadimos nuevos mercados, el precio base y la fecha de disponibilidad general de tu envío se usarán para tu aplicación en estos mercados. Si no quieres que esto ocurra, puedes desactivar esta casilla y, en ese caso, no mostraremos tu aplicación en los futuros mercados (aunque siempre puedes agregarlos más tarde).
  
@@ -478,12 +478,11 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Mercados "Resto del mundo" para Windows 8.x
 
-Si la aplicación incluye paquetes destinados a Windows 8.x, es importante tener en cuenta que una serie de mercados se trata como un mercado único "resto del mundo" para los clientes que usen la tienda en Windows 8.x, incluso aunque se muestren como mercados individuales en el centro de desarrollo de Windows panel (en contraposición al anterior panel de la tienda, donde había una opción de mercado "Resto del mundo" para agrupar todos estos mercados).
+Si la aplicación publicada anteriormente incluye paquetes destinados a Windows 8.x, es importante tener en cuenta que una serie de mercados se trata como un mercado único "resto del mundo" para los clientes que usen la tienda en Windows 8.x, incluso aunque se muestren como mercados individuales en el centro de partners.
 
-Si dejas la selección predeterminada al enviar la aplicación, no tienes que preocuparte de esto y la aplicación estará disponible para todos los mercados posibles. Sin embargo, si quieres excluir determinados mercados, ten en cuenta que la exclusión de solo uno de estos mercados "Resto del mundo" significa que la aplicación no estará disponible en cualquiera de los mercados "Resto del mundo" para los clientes de Windows8 o Windows8.1.
+Si dejas la selección de mercado predeterminada al enviar la aplicación, no tienes que preocuparte de esto y la aplicación estará disponible para todos los mercados posibles. Sin embargo, si quieres excluir determinados mercados, ten en cuenta que la exclusión de solo uno de estos mercados "Resto del mundo" significa que la aplicación no estará disponible en *cualquier* de los mercados "Resto del mundo" para los clientes de Windows8 o Windows8.1.
 
 Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los siguientes:
-
 
 <table>
   <tr>

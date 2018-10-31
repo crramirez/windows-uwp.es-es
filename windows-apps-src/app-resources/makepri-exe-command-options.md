@@ -8,12 +8,12 @@ ms.date: 04/10/2018
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: c6c71cf98d9720cc5bfea219f565529b3308c49c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f5d47bbe87e9319def2e8c6500fd954f2a291e18
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5756791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829915"
 ---
 # <a name="makepriexe-command-line-options"></a>Opciones de línea de comandos de MakePri.exe
 
@@ -22,9 +22,11 @@ ms.locfileid: "5756791"
 > [!NOTE]
 > MakePri.exe se instala al comprobar la opción de **SDK de Windows administra las aplicaciones para UWP** al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (también en carpetas con el nombre para el resto de arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
-## <a name="makepri-commands"></a>Comandos MakePri
+## <a name="getting-help-from-the-command-line"></a>Obtener ayuda de la línea de comandos
 
-Ejecuta `MakePri.exe help` para ver los comandos que se pueden usar con MakePri.exe.
+Puedes ejecutar `MakePri.exe help` o `MakePri.exe /?` para ver los comandos que se pueden usar con MakePri.exe. También puede emitir `MakePri.exe <command> /?` para ver detalles acerca de un comando y, en casos muy raros, incluso `MakePri.exe <command> <option>` para ver detalles acerca de una opción.
+
+## <a name="makepri-commands"></a>Comandos MakePri
 
 ```
 C:\>makepri help
@@ -424,7 +426,7 @@ Debes usar la opción de opciones de índice (/ io) con `new`, `resourcepack`, y
 /IndexOptions(io) <OPTIONS>
 ```
 
-**Opciones** es un una lista separada por comas que consta de las siguientes opciones.
+**Opciones** es una lista separada por comas que consta de las siguientes opciones.
 
 - +/-HiddenFiles(hf). El índice (+) o ignorar (-) archivos y carpetas ocultos.
 - +/-LinkedFiles(lf). El índice (+) o ignorar (-) vinculado archivos y carpetas.

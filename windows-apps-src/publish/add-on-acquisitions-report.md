@@ -1,26 +1,26 @@
 ---
 author: jnHs
-Description: The Add-on acquisitions report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details.
+Description: The Add-on acquisitions report in Partner Center lets you see how many add-ons you've sold, along with demographic and platform details.
 title: Informe de adquisiciones de complementos
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
-ms.date: 05/24/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, ventas de complementos, adquisiciones de complementos, ventas de iap, productos desde la aplicación, IAP, complementos
 ms.localizationpriority: medium
-ms.openlocfilehash: a1b25067104a664cb90ef068749d9e4cd00bcc80
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 63884d9cce24e6b85f3001ac4c6eb1a07141bfd4
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761865"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829802"
 ---
 # <a name="add-on-acquisitions-report"></a>Informe de adquisiciones de complementos
 
 
-El informe de **adquisiciones de complementos** en el panel del centro de desarrollo de Windows te permite ver cuántos complementos has vendido, junto con datos demográficos y los detalles de la plataforma y se muestra información de conversión para los clientes de Windows 10 (incluyendo Xbox). También puedes ver cerca de los datos de compra en tiempo real para el último período o de 72 horas.
+El informe de **adquisiciones de complementos** en [El centro de partners](https://partner.microsoft.com/dashboard) te permite ver cuántos complementos has vendido, junto con datos demográficos y los detalles de la plataforma y se muestra información de conversión para los clientes de Windows 10 (incluyendo Xbox). También puedes ver cerca de los datos de compra en tiempo real para el último período o de 72 horas.
 
-Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de complementos](../monetize/get-in-app-acquisitions.md) en la [API de REST de análisis de la Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
+Puedes ver estos datos en el centro de partners, o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de complementos](../monetize/get-in-app-acquisitions.md) en la [API de REST de análisis de la Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, una adquisición de complemento significa que un cliente te ha comprado un complemento (o lo ha adquirido sin tener que pagar, si lo ofrecías de forma gratuita). Varias compras del mismo complemento consumible realizadas por el mismo cliente se contabilizan como adquisiciones de complementos independientes.
 

@@ -1,24 +1,24 @@
 ---
 author: jnHs
-Description: The Usage report in the Windows Dev Center dashboard lets you see how customers are using your app.
+Description: The Usage report in Partner Center lets you see how customers are using your app.
 title: Informe Uso
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.author: wdg-dev-content
-ms.date: 10/05/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, uso, evento personalizado, informe, telemetría, sesiones de usuario
 ms.localizationpriority: medium
-ms.openlocfilehash: 3998e8c5b207d8484a621db16d2e72a136f22c80
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f07f107a5136ee50cd87032fa3911ab65d33b7c1
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766577"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831062"
 ---
 # <a name="usage-report"></a>Informe Uso
 
 
-El informe **Uso** del panel de información del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows10 (incluida la Xbox) usan la aplicación y muestra información sobre los eventos personalizados que hayas definido. Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
+El informe de **uso** del [Centro](https://partner.microsoft.com/dashboard) de partners te permite ver cómo los clientes de Windows 10 (incluyendo Xbox) usan la aplicación y muestra información sobre los eventos personalizados que hayas definido. Puedes ver estos datos en el centro de partners, o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
 
 ## <a name="apply-filters"></a>Aplicar filtros

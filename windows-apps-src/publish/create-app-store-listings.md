@@ -4,28 +4,28 @@ Description: The Store listings section of the app submission process is where y
 title: Creación de descripciones de Store de aplicaciones
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 06/18/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, enumeración, descripción, página de store, notas de la versión, título
 ms.localizationpriority: medium
-ms.openlocfilehash: 237642897beb51c9b685068ee714182fa1fe1bb5
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ec1867e747f3458e3a9cffabe9a45535d4c27489
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766537"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5830005"
 ---
 # <a name="create-app-store-listings"></a>Crear descripciones de Store de aplicaciones
 
 
 La sección **Descripciones de Store** del [proceso de envío de aplicaciones](app-submissions.md) es donde proporcionas el texto y las [imágenes](app-screenshots-and-images.md) que los clientes verán al consultar la descripción dela aplicación en Microsoft Store.
 
-Muchos de los campos de una **descripción de Store** son opcionales, pero recomendamos proporcionar varias imágenes y tanta información como sea posible para que tu descripción destaque. El mínimo necesario para considerar finalizado el paso **Descripciones de Store** es una descripción de texto y al menos una [captura de pantalla](app-screenshots-and-images.md#screenshots). Para algunos de los envíos, los campos [directiva de privacidad](#privacy-policy) y la [información de contacto de soporte técnico](#support-contact-info) también son obligatorios. 
+Muchos de los campos de una **descripción de Store** son opcionales, pero recomendamos proporcionar varias imágenes y tanta información como sea posible para que tu descripción destaque. El mínimo necesario para considerar finalizado el paso **Descripciones de Store** es una descripción de texto y al menos una [captura de pantalla](app-screenshots-and-images.md#screenshots).
 
 > [!TIP]
-> Puedes [importar y exportar las descripciones de Store](import-and-export-store-listings.md) opcionalmente, si prefieres introducir la información de descripción sin conexión en un archivo .csv, en lugar de proporcionar esta información y cargar directamente los archivos en el panel. Usar la opción Importar y exportar puede ser especialmente conveniente si tienes descripciones en varios lenguajes, ya que te permite hacer varias actualizaciones a la vez. 
+> Opcionalmente, puedes [Importar y exportar las descripciones de la tienda](import-and-export-store-listings.md) si prefieres introducir la información de descripción sin conexión en un archivo .csv, en lugar de proporcionar información y carga de archivos directamente en el centro de partners. Usar la opción Importar y exportar puede ser especialmente conveniente si tienes descripciones en varios lenguajes, ya que te permite hacer varias actualizaciones a la vez. 
 
-De manera predeterminada, usaremos la misma descripción de Store (por idioma) para todos los sistemas operativos de destino. Si quieres usar una descripción de Store personalizada para un sistema operativo específico que admita tu envío, puedes [crear descripciones de Store específicas de la plataforma](create-platform-specific-store-listings.md). La descripción predeterminada siempre se mostrará a los clientes en Windows 10.
+Si la aplicación publicada anteriormente admite Windows 8.x o Windows Phone 8.x o versiones anteriores, puedes [crear descripciones de la tienda específicas de la plataforma](create-platform-specific-store-listings.md) para mostrar a esos clientes. 
 
 ## <a name="store-listing-languages"></a>Idiomas de la descripción de la Store
 
@@ -38,19 +38,19 @@ Para agregar o eliminar idiomas para tus descripciones de la Store, haz clic en 
 
 En la sección **Idiomas de descripción de la Store adicionales**, puedes hacer clic en **Administrar idiomas adicionales** para agregar o quitar idiomas que *no* están incluidos en los paquetes. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas adicionales de descripción de la Store**. Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas adicionales** y desactiva la casilla para los idiomas que quieres quitar).
 
-Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
+Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío. 
 
 ## <a name="add-and-edit-store-listing-info"></a>Agregar y editar información de descripción de la tienda
 
-Para editar una descripción de la tienda, selecciona el nombre del idioma de la página de información general del envío.
+Para editar una descripción de la tienda, selecciona el nombre del idioma de la página de información general del envío. Debes editar cada idioma por separado, a menos que elijas exportar las descripciones de Store y funcione sin conexión y, a continuación, importar todos los datos de la descripción a la vez. Para obtener más información acerca de cómo funciona, consulta [Importar y exportar las descripciones de la tienda](import-and-export-store-listings.md).
 
-En la parte superior de la página **Descripción de la Store** se encuentran los campos asociados a tu descripción de la Store predeterminada para el idioma seleccionado. Estos campos se mostrarán a todos los clientes, a menos que tengas paquetes destinados a versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores; Windows Phone 8.x o versiones anteriores) y crees descripciones de la Store específicas de la plataforma para incluir diferentes capturas de pantalla o informaciones para mostrar a los clientes con las versiones específicas del sistema operativo. Para obtener más información, consulta [Creación de descripciones de la Store específicas de la plataforma](create-platform-specific-store-listings.md).
+A continuación se describen los campos disponibles.
 
 ## <a name="product-name"></a>Nombre del producto
 
 Este cuadro de lista desplegable permite especificar el nombre que debe usarse en la descripción de la tienda (si lo ha reservado más de un nombre de la aplicación).
 
-Si has cargado paquetes en el mismo idioma que estás trabajando en la descripción de la tienda, se seleccionarán el nombre usado en esos paquetes. Si es necesario [cambiar el nombre de la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) después de que se haya publicado, puedes seleccionar un nombre reservado diferente cuando se crea un nuevo envío con los paquetes que usan el nuevo nombre.
+Si has cargado los paquetes en el mismo idioma que la tienda de la descripción están trabajando en, se seleccionará el nombre usado en esos paquetes. Si es necesario [cambiar el nombre de la aplicación](manage-app-names.md#rename-an-app-that-has-already-been-published) después de que se haya publicado, puedes seleccionar un nombre reservado diferente cuando se crea un nuevo envío, después de haber cargado los paquetes que usan el nuevo nombre.
 
 Si no has cargado paquetes para el idioma que estás trabajando y has reservado más de un nombre, tendrás que seleccionar uno de los nombres de aplicación reservado, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre.
 
@@ -67,14 +67,14 @@ Para obtener consejos para que la descripción destaque, consulta [Escribir una 
 
 ## <a name="whats-new-in-this-version"></a>Novedades de esta versión
 
-Si es la primera vez que envías la aplicación, deja este campo en blanco. En las actualizaciones de una aplicación existente es donde puedes informar a los clientes de lo que ha cambiado en la versión más reciente. Este campo tiene un límite de 1500 caracteres. (Anteriormente, este campo se denominaba **Notas de la versión**).
+Si es la primera vez que envías la aplicación, deja este campo en blanco. Para una actualización de una aplicación existente, esto es donde puedes permitir que los clientes sepan qué ha cambiado en la versión más reciente. Este campo tiene un límite de 1500 caracteres. (Anteriormente, este campo se denominaba **Notas de la versión**).
 
-## <a name="app-features"></a>Funciones de la aplicación
+## <a name="product-features"></a>Características del producto
 
 Se trata de breves resúmenes de las funciones clave de la aplicación. Se muestran al cliente como lista de viñetas, en la sección **Funciones** de la descripción de Store de la aplicación, junto con la **descripción**. Hazlas breves, con solo unas cuantas palabras por función (y no más de 200 caracteres). Puedes incluir hasta 20 funciones.
 
 > [!NOTE]
-> Las funciones de la aplicación aparecerán con viñetas en la descripción de Store, por lo que no debes agregar tus propias viñetas.
+> Estas características aparecerán con viñetas en la descripción de Store, así que no agregues tus propias viñetas.
 
 ## <a name="screenshots"></a>Capturas de pantalla
 
@@ -93,11 +93,11 @@ Los logotipos de la Store son imágenes opcionales que puedes subir para mejorar
 Para obtener más información, consulta [Logotipos de la Store](app-screenshots-and-images.md#store-logos).
 
 
-## <a name="additional-art-assets"></a>Activos de imágenes adicionales
+## <a name="trailers-and-additional-assets"></a>Tráileres y activos adicionales
 
-Puedes enviar activos adicionales para tu producto, incluyendo los tráileres e imágenes promocionales. Son todos opcionales, pero te recomendamos que tengas en cuenta subir como tantos como sea posible. Estas imágenes pueden ayudar a ofrecer una mejor idea de tu producto y una descripción más tentadora.
+Puedes enviar a activos adicionales para tu producto, incluyendo los tráileres de vídeo e imágenes promocionales. Son todos opcionales, pero te recomendamos que tengas en cuenta subir como tantos como sea posible. Estas imágenes pueden ayudar a ofrecer una mejor idea de tu producto y una descripción más tentadora.
 
-Para obtener más información, consulta [Activos gráficos adicionales](app-screenshots-and-images.md#additional-art-assets).
+Para obtener más información, consulta [Tráileres y activos adicionales](app-screenshots-and-images.md#trailers-and-additional-assets).
 
 <a id="supplemental-information" />
 
@@ -149,7 +149,7 @@ Puedes introducir hasta 11 elementos para **Hardware mínimo** y **Hardware reco
 
 ## <a name="additional-information"></a>Información adicional
 
-Los elementos que se describen a continuación ayudan a los clientes a descubrir y comprender el producto. La información que se describe aquí se aplicarán a todas las descripciones de la Store en un idioma determinado, independientemente del sistema operativo, incluso si [creas descripciones de la Store específicas de la plataforma](create-platform-specific-store-listings.md). (Esta sección se llamaba antes **Campos compartidos**).
+Los elementos que se describen a continuación ayudan a los clientes a descubrir y comprender el producto. (Esta sección se llamaba antes **Campos compartidos**).
 
 ### <a name="search-terms"></a>Términos de búsqueda
 

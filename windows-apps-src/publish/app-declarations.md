@@ -4,16 +4,16 @@ Description: Product declarations help make sure your app is displayed appropria
 title: Declaraciones de producto
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ms.author: wdg-dev-content
-ms.date: 12/05/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c1fc444dbd106f4eeb0996903f71701a96a9735
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: de519f37c5eacfa64f23d0f438701d4ae9dbc934
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747833"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831164"
 ---
 # <a name="product-declarations"></a>Declaraciones de producto
 
@@ -46,16 +46,14 @@ Para obtener más información, consulta la [accesibilidad](../design/accessibil
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble.
 
-Esta casilla está activada de manera predeterminada, para permitir que los clientes instalen la aplicación en almacenamiento extraíble o externa multimedia, como una tarjeta SD, o en un volumen del sistema que no son de unidad, como una unidad externa. (Para Windows Phone 8.1, esto se indicaba previamente a través de StoreManifest.xml.)
+Esta casilla está activada de manera predeterminada, para permitir que los clientes instalen la aplicación en almacenamiento extraíble o externa multimedia, como una tarjeta SD, o en un volumen del sistema que no son de unidad, como una unidad externa.
 
-Si quieres impedir que la aplicación se instale en unidades alternativas o almacenamiento extraíble y solo permiten la instalación en la unidad de disco duro interna en su dispositivo, desactiva esta casilla.
-
-Ten en cuenta que no hay ninguna opción para restringir la instalación para que una aplicación *solo* puede instalarse en un medio de almacenamiento extraíble.
+Si quieres impedir que la aplicación se instale en unidades alternativas o almacenamiento extraíble y solo permiten la instalación en la unidad de disco duro interna en su dispositivo, desactiva esta casilla. (Ten en cuenta que no hay ninguna opción para restringir la instalación para que una aplicación *solo* puede instalarse en un medio de almacenamiento extraíble).
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>Windows puede incluir los datos de la aplicación en copias de seguridad automáticas en OneDrive.
 
-Esta casilla está activada de forma predeterminada para permitir que los datos de la aplicación se incluyan cuando un cliente elige que Windows realice copias de seguridad automáticas en OneDrive. (Para Windows Phone 8.1, esto se indicaba previamente a través de StoreManifest.xml.)
+Esta casilla está activada de forma predeterminada para permitir que los datos de la aplicación se incluyan cuando un cliente elige que Windows realice copias de seguridad automáticas en OneDrive.
 
 Si quieres impedir que los datos de la aplicación se incluyan en copias de seguridad automáticas, desactiva la casilla.
 

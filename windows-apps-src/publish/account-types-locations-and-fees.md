@@ -4,23 +4,23 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Tipos de cuenta, ubicaciones y precios
 description: Microsoft ofrece cuentas de desarrollador individuales y corporativas en muchos países y regiones.
 ms.author: wdg-dev-content
-ms.date: 08/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
-ms.openlocfilehash: 619b245ed6037192fe8b846a20d9fe0fe97baa24
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 7600f8a6bef19ca2d7b301931d0198638f91dc1b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741626"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831580"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
-Microsoft ofrece cuentas de individuales y corporativas en muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona acceso para publicar aplicaciones en la Store y participar en otros programas de Microsoft para desarrolladores.
+Las ventanas de programas en [El centro de partners](https://partner.microsoft.com/dashboard) ofrece ambos individuales y cuentas de empresa de muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona acceso para publicar aplicaciones en la tienda y participar en otros programas de Microsoft.
 
 > [!NOTE]
-> Al suscribirte a una cuenta, asegúrate de que inicias sesión con la cuenta Microsoft que quieres usar para tu cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
+> Al abrir la cuenta de desarrollador, asegúrate de iniciar sesión en [El centro de partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que quieres usar para tu cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
 
 Cuando [comiences el proceso de suscripción](http://go.microsoft.com/fwlink/p/?LinkId=615100), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, juegos, complementos y servicios.
 

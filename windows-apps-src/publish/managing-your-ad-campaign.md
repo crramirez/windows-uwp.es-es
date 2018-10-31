@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: Manage ad campaigns for your apps in the Windows Dev Center dashboard.
+Description: Manage ad campaigns for your apps in Partner Center.
 title: Administrar la campaña publicitaria
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
 ms.author: wdg-dev-content
@@ -8,17 +8,17 @@ ms.date: 06/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 77271d75b29cb13c1d3d1948a9f06a42e940bcb9
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 1c53ae429e4cb912ce0ed2480c8cab814cbfaf96
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835540"
 ---
 # <a name="manage-your-ad-campaign"></a>Administrar la campaña publicitaria
 
 
-Para administrar campañas publicitarias para tu aplicación, expande **Atraer** en el menú de navegación izquierdo y luego selecciona **Campañas de anuncios**. Aparecerán todas las campañas publicitarias asociadas a tus aplicaciones, junto con las impresiones, los clics y las instalaciones de cada una de ellas. Para obtener más información acerca de las impresiones, los clics y las instalaciones, consulta las definiciones de estos términos en [Informe Campaña publicitaria](promote-your-app-report.md).
+Para administrar las campañas de anuncios de la aplicación en [El centro de partners](https://partner.microsoft.com/dashboard), expande **atraer** en el menú de navegación izquierdo y, a continuación, selecciona **las campañas de anuncios**. Aparecerán todas las campañas publicitarias asociadas a tus aplicaciones, junto con las impresiones, los clics y las instalaciones de cada una de ellas. Para obtener más información acerca de las impresiones, los clics y las instalaciones, consulta las definiciones de estos términos en [Informe Campaña publicitaria](promote-your-app-report.md).
 
 Para filtrar la lista de campañas publicitarias, haz clic en el menú desplegable **Filtros de sección** desplegable y elige entre los siguientes filtros:
 

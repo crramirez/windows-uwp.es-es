@@ -1,26 +1,26 @@
 ---
 author: jnHs
-Description: To view performance data for the ad units in your apps, use the advertising performance report on the Windows Dev Center dashboard.
+Description: To view performance data for the ad units in your apps, use the advertising performance report in Partner Center.
 title: Informe Rendimiento de la publicidad
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 ms.author: wdg-dev-content
-ms.date: 05/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 562348d5077f29af9a0d0776cb421455d45444dc
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2cc47e934ca75eb581808483f7875fea901943b3
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742265"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5836654"
 ---
 # <a name="advertising-performance-report"></a>Informe Rendimiento de la publicidad
 
 
-En el **Informe Rendimiento de la publicidad** se muestra el rendimiento de tus [unidades de anuncio](in-app-ads.md), incluidos los anuncios de la comunidad. En este informe se incluyen datos de varios proveedores de anuncios de aplicaciones para UWP que usan la [mediación de anuncios](in-app-ads.md#mediation).
+El **informe de rendimiento de publicidad en el** [Centro](https://partner.microsoft.com/dashboard) de partners se muestra cómo se están comportando las [unidades de anuncios](in-app-ads.md) , incluidos los anuncios de la Comunidad. En este informe se incluyen datos de varios proveedores de anuncios de aplicaciones para UWP que usan la [mediación de anuncios](in-app-ads.md#mediation).
 
-Para ver este informe, amplía **Analizar** en el menú de navegación izquierdo y luego selecciona **Rendimiento de los anuncios**. Puedes visualizar estos datos en tu panel o descargar los datos del informe para consultarlo sin conexión haciendo clic en los iconos de flecha en la página. También puedes recuperar mediante programación estos datos mediante el método [Obtener los datos de rendimiento de los anuncios](../monetize/get-ad-performance-data.md) en nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
+Para ver este informe, amplía **Analizar** en el menú de navegación izquierdo y luego selecciona **Rendimiento de los anuncios**. Puedes visualizar estos datos en el centro de partners, o descargar los datos del informe para consultarlo sin conexión haciendo clic en los iconos de flecha en la página. También puedes recuperar mediante programación estos datos mediante el método [Obtener los datos de rendimiento de los anuncios](../monetize/get-ad-performance-data.md) en nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Al visualizar los informes de rendimiento de la publicidad, ten en cuenta que los datos de los informes de los últimos tres días pueden cambiar, ya que recibimos y procesamos nuevos datos procedentes de varios orígenes. Asimismo, pueden producirse modificaciones de datos hasta de los 90 días anteriores.
 

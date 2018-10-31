@@ -1,26 +1,29 @@
 ---
 author: jnHs
-Description: If your app displays ads using the Microsoft Advertising SDK, use the In-app ads page of the Dev Center dashboard to manage your use of ads.
+Description: If your app displays ads using the Microsoft Advertising SDK, use the In-app ads page of Partner Center to manage your use of ads.
 title: Anuncios desde la aplicación
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.author: wdg-dev-content
-ms.date: 06/28/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a99ad15d9157f13dfba9d55ad02202f62011ad9
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ccff2dce0a57e5f3219f306fa029f84162bf4974
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5759213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835774"
 ---
 # <a name="in-app-ads"></a>Anuncios desde la aplicación
 
-Usa la página **Monetizar** &gt; **Anuncios desde la aplicación** del panel del Centro de desarrollo para crear y administrar unidades de anuncios para:
+Usa la **monetizar** &gt; página de **anuncios en la aplicación** en el [Centro de partners](https://partner.microsoft.com/dashboard) para crear y administrar unidades de anuncios para:
 
 * Aplicaciones de la Plataforma universal de Windows (UWP) que usan el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp).
-* Aplicaciones de Windows 8.x y Windows Phone 8.x, que usan el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk).
+* Publicado Windows 8.x y Windows Phone 8.x aplicaciones que usan el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk).
+
+> [!IMPORTANT]
+> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 Para obtener más información sobre cómo integrar estos SDK con tus aplicaciones para mostrar anuncios, consulta [Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising](../monetize/display-ads-in-your-app.md).
 
@@ -30,7 +33,7 @@ Para obtener más información sobre cómo integrar estos SDK con tus aplicacion
 
 Para crear una unidad de anuncios para un [anuncio de banner](../monetize/banner-ads.md), [anuncio intersticial](../monetize/interstitial-ads.md) o [anuncio nativo](../monetize/native-ads.md) en tu app:
 
-1.  Ve a la página **Monetizar** &gt; **Anuncios desde la aplicación** del panel y haz clic en **Crear unidad de anuncios**.
+1.  Ve a la **monetizar** &gt; **anuncios desde la aplicación en** la página del centro de partners y haz clic en **crear unidad de anuncios**.
 2.  En la lista desplegable **Nombre de la aplicación**, selecciona la aplicación en la que se usará la unidad de anuncios.
 3.  En el campo **Nombre de la unidad de anuncios**, escribe un nombre para esta. Esto puede ser cualquier cadena descriptiva que quieras usar para identificar la unidad de anuncios para fines informativos.
 4.  En la lista desplegable **Tipo de unidad de anuncio**, selecciona el tipo de anuncio.
@@ -69,7 +72,7 @@ Después de crear unidades de anuncios para una o más aplicaciones en tu cuenta
 Para editar la [configuración de mediación](#mediation) para una unidad de anuncios para UWP o el [Cumplimiento de COPPA](#coppa) para la aplicación en la que se usa la unidad de anuncio, haz clic en el nombre de la unidad de anuncios.
 
 > [!NOTE]
-> Si una unidad de anuncios no tiene ninguna actividad durante los últimos seis meses, se etiqueta como **inactivo**y finalmente la quitaremos del panel de información. Puedes usar filtros para mostrar solo unidades de anuncios que sean de tipo **Activo** o **Inactivo**. Si ves unidades de anuncios que crees que se han marcado erróneamente como **Inactivo**, [ponte en contacto con soporte técnico](http://aka.ms/storesupport).
+> Si una unidad de anuncios no tiene ninguna actividad durante los últimos seis meses, se etiqueta como **inactivo**y finalmente la quitaremos del centro de partners. Puedes usar filtros para mostrar solo unidades de anuncios que sean de tipo **Activo** o **Inactivo**. Si ves unidades de anuncios que crees que se han marcado erróneamente como **Inactivo**, [ponte en contacto con soporte técnico](http://aka.ms/storesupport).
 
 <span id="mediation" />
 
@@ -85,21 +88,21 @@ Configurar la configuración de mediación de anuncios para UWP en tu aplicació
 1. [Crear una unidad de anuncio](#create-ad-unit) o [seleccionar una unidad de anuncio existente](#available-ad-units).
 2. En la página de **anuncios en la aplicación** , ve a la sección de **configuración de mediación** y configuración de la configuración.
 
-    * De manera predeterminada, activa la casilla **Permitir a Microsoft que elija la mejor configuración de mediación para tu aplicación** casilla está activada. Te recomendamos que uses esta opción. Esta opción usa algoritmos de aprendizaje automático para elegir automáticamente la configuración de mediación de anuncios para tu aplicación que te ayudará a maximizar los ingresos por anuncios en todos los mercados admitidos por la aplicación. Al usar esta opción, también puedes elegir las redes de anuncios que quieras usar en la configuración. Desactiva las redes de anuncios que no quieres que forman parte de la configuración y nuestro algoritmo garantizará que la aplicación recibe solo anuncios de las redes de anuncios seleccionado.
+    * De manera predeterminada, se selecciona la casilla **Permitir que Microsoft Optimizar mi configuración** . Te recomendamos que uses esta opción. Esta opción usa algoritmos de aprendizaje automático para elegir automáticamente la configuración de mediación de anuncios para tu aplicación que te ayudará a maximizar los ingresos por anuncios en todos los mercados admitidos por la aplicación. Al usar esta opción, también puedes elegir las redes de anuncios que quieras usar en la configuración. Desactiva las redes de anuncios que no quieres que forman parte de la configuración y nuestro algoritmo garantizará que la aplicación recibe solo anuncios de las redes de anuncios seleccionado.
     * Si quieres elegir tu propia ad configuración de mediación, elige **modificar la configuración de forma predeterminada**.
 
     > [!NOTE]
     > Los pasos restantes de esta sección solo son aplicables si eliges **modificar la configuración de forma predeterminada**.
 
-4. En la lista desplegable **Dirigida** elige **Base de referencia** para configurar los ajustes predeterminados de la configuración de la mediación de anuncios. Esta configuración predeterminada se aplicará a todos los mercados, excepto los mercados donde establezcas las configuraciones específicas del mercado.
-6. Después, especifica la relación de anuncios que quieras mostrar en el control de las redes de pago (de los que obtienes ingresos por las impresiones de anuncios) y otras redes de anuncios (de los que no obtienes ingresos por las impresiones de anuncios). Para ello, escribe un valor entre 0 y 100 en los campos **Peso** para **Redes de anuncios de pago** y **Otras redes de anuncios**.  
-7. En la sección **Redes de anuncios de pagos**, selecciona la casilla de verificación en la columna **Activa** para cada [red de pago](#paid-networks) que quieras usar y, a continuación, usa las flechas en la columna **Clasificación** para ordenar las redes por clasificación (especifica la frecuencia de uso por parte de tu control de cada red).
-8. Si has seleccionado una unidad de anuncios **Banner** o **Banner intersticial**, también verás una sección denominada **Otras redes de anuncios**. Las redes en esta sección no obtienen ingresos por las impresiones de anuncios. En su lugar, estas redes muestran anuncios que proceden de la campañas de promoción de la aplicación, entre otras.
+3. En la lista desplegable **Dirigida** elige **Base de referencia** para configurar los ajustes predeterminados de la configuración de la mediación de anuncios. Esta configuración predeterminada se aplicará a todos los mercados, excepto los mercados donde establezcas las configuraciones específicas del mercado.
+4. Después, especifica la relación de anuncios que quieras mostrar en el control de las redes de pago (de los que obtienes ingresos por las impresiones de anuncios) y otras redes de anuncios (de los que no obtienes ingresos por las impresiones de anuncios). Para ello, escribe un valor entre 0 y 100 en los campos **Peso** para **Redes de anuncios de pago** y **Otras redes de anuncios**.  
+5. En la sección **Redes de anuncios de pagos**, selecciona la casilla de verificación en la columna **Activa** para cada [red de pago](#paid-networks) que quieras usar y, a continuación, usa las flechas en la columna **Clasificación** para ordenar las redes por clasificación (especifica la frecuencia de uso por parte de tu control de cada red).
+6. Si has seleccionado una unidad de anuncios **Banner** o **Banner intersticial**, también verás una sección denominada **Otras redes de anuncios**. Las redes en esta sección no obtienen ingresos por las impresiones de anuncios. En su lugar, estas redes muestran anuncios que proceden de la campañas de promoción de la aplicación, entre otras.
 
     En la sección **Otras redes de anuncios**, selecciona la casilla de verificación en la columna **Activa** para cada [red que quieras usar](#other-networks) y, a continuación, usa las flechas en la columna **Clasificación** para ordenar las redes por clasificación (especifica la frecuencia de uso por parte de tu control de cada red). Actualmente se admiten las redes siguientes:
 
-9. Puedes reemplazar la configuración de mediación de forma predeterminada en los mercados y para ello, selecciona **Destinado** en la lista desplegable y actualiza las selecciones de red de anuncios y la clasificación.
-10. Haz clic en **Crear unidad de anuncios** (si vas a crear una nueva unidad de anuncio) o en **Guardar** (si estás editando una unidad de anuncios existente).
+7. Puedes reemplazar la configuración de mediación de forma predeterminada en los mercados y para ello, selecciona **Destinado** en la lista desplegable y actualiza las selecciones de red de anuncios y la clasificación.
+8. Haz clic en **Crear unidad de anuncios** (si vas a crear una nueva unidad de anuncio) o en **Guardar** (si estás editando una unidad de anuncios existente).
 
 <span id="paid-networks" />
 
@@ -151,7 +154,7 @@ Las redes de anuncios disponibles proporcionan anuncios en todos los [mercados a
 
 ## <a name="coppa-compliance"></a>Cumplimiento de COPPA
 
-Al [crear una unidad de anuncios](#create-ad-unit) o [seleccionar una unidad de anuncios existente](#available-ad-units), la sección **Cumplimiento de COPPA** aparece en la parte inferior de la página de panel si la aplicación seleccionada de la unidad de anuncios tiene al menos un envío que ha llegado al paso [en Store](../publish/the-app-certification-process.md#in-the-store) del proceso de certificación de la aplicación.
+Al [crear una unidad de anuncio](#create-ad-unit) o [Seleccionar una unidad de anuncio existente](#available-ad-units), la sección de **cumplimiento de COPPA** aparece en la parte inferior de la página si la aplicación seleccionada de la unidad de anuncios tiene al menos un envío que ha llegado [en la tienda](../publish/the-app-certification-process.md#in-the-store) el paso de la aplicación proceso de certificación.
 
 Para cumplir con la Ley de protección de la privacidad infantil en línea ("COPPA"), debes seleccionar **This application is directed at children under the age of 13** de esta sección si tu aplicación está destinada a niños menores de 13 años. Si seleccionas esta opción, Microsoft tomará medidas para deshabilitar sus servicios de publicidad conductual al ofrecer publicidad en tu aplicación.
 

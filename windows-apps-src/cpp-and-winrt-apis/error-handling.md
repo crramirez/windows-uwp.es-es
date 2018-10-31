@@ -7,12 +7,12 @@ ms.date: 05/21/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, error, gestión, excepción
 ms.localizationpriority: medium
-ms.openlocfilehash: 36f6248452d97d10b6004067b6c0a973973443db
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 15432202e61322191e27e89920f7791878177c8b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752648"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5832454"
 ---
 # <a name="error-handling-with-cwinrt"></a>Gestión de errores con C++/WinRT
 
@@ -77,7 +77,7 @@ winrt::check_bool(::SetEvent(h.get()));
 Si el valor que pasas a [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool) es false, se realiza la siguiente secuencia de las acciones.
 
 - **winrt::check_bool** llama a la función [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error).
-- **winrt::throw_last_error** llama a [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) para recuperar el valor del último código de error del subproceso de llamada y, a continuación, llama a la función [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult).
+- **winrt:: throw_last_error** llama a [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) para recuperar el valor del último código de error del subproceso de llamada y, a continuación, llama a la función [**winrt:: throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) .
 - **winrt::throw_hresult** lanza una excepción mediante un objeto [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) (o un objeto estándar) que representa dicho código de error.
 
 Dado que las API de Windows notifican errores de tiempo de ejecución mediante diversos tipos de valor de devolución, además de **winrt::check_bool** hay unas cuantas funciones auxiliares útiles adicionales para comprobar los valores y lanzar excepciones.

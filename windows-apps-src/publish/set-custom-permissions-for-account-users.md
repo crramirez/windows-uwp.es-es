@@ -4,38 +4,38 @@ Description: Set roles or custom permissions for account users.
 title: Establecer roles o permisos personalizados para usuarios de cuentas
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
 ms.author: wdg-dev-content
-ms.date: 07/11/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar
 ms.localizationpriority: medium
-ms.openlocfilehash: 753b71d409fd660687af77410f7f5796aa3c8a5c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2af203ae78ae34a0a6bc9884cbaeaa730ee83e9b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835708"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuentas
 
-Al [agregar usuarios a tu cuenta del Centro de desarrollo](add-users-groups-and-azure-ad-applications.md), tendrás que especificar el acceso que tienen en la cuenta. Para ello, asígnales [roles estándar](#roles) que se aplican a toda la cuenta, o puedes [personalizar sus permisos](#custom) para proporcionar el nivel de acceso adecuado. Algunos de los permisos personalizados se aplican a toda la cuenta y algunos pueden estar limitados a uno o varios productos específicos (o concedidos a todos los productos, si lo prefieres).
+Al [Agregar usuarios a tu cuenta del centro de partners](add-users-groups-and-azure-ad-applications.md), tendrás que especificar el acceso que tienen dentro de la cuenta. Para ello, asígnales [roles estándar](#roles) que se aplican a toda la cuenta, o puedes [personalizar sus permisos](#custom) para proporcionar el nivel de acceso adecuado. Algunos de los permisos personalizados se aplican a toda la cuenta y algunos pueden estar limitados a uno o varios productos específicos (o concedidos a todos los productos, si lo prefieres).
 
 > [!NOTE] 
 > Pueden aplicarse los mismos roles y permisos con independencia de que vayas a agregar un usuario, un grupo o una aplicación de AzureAD.
 
 Al determinar los roles o los permisos que desees aplicar, ten en cuenta: 
--   Los usuarios (incluidos los grupos y las aplicaciones de AzureAD) podrán tener acceso a la cuenta del Centro de desarrollo con los permisos asociados a su rol asignado, a no ser que [personalices los permisos](#custom) y asignes [permisos de nivel de producto](#product-level-permissions) para que puedan trabajar únicamente con aplicaciones o complementos específicos.
+-   Los usuarios (incluyendo grupos y aplicaciones de Azure AD) podrán obtener acceso a toda la cuenta del centro de partners con los permisos asociados a sus asignado roles, a menos que puedes [Personalizar permisos](#custom) y asignar [permisos de nivel de producto](#product-level-permissions) para que solo pueda trabajar con determinadas aplicaciones o complementos.
 -   Para permitir que un usuario, grupo o aplicación de Azure AD tengan acceso a las funciones de más de un rol, selecciona varios roles o utiliza permisos personalizados para conceder el acceso que quieras.
 -   Un usuario con un determinado rol (o un conjunto de permisos personalizados) también puede formar parte de un grupo que tenga un rol diferente (o un conjunto de permisos). En ese caso, el usuario tendrá acceso a toda la funcionalidad asociada con el grupo y con la cuenta individual.
 
 > [!TIP]
-> Este tema es específico del Programa de desarrolladores de aplicaciones de Windows. Para obtener información sobre los roles de usuario del Programa de desarrolladores de hardware, consulta [Administración de roles de usuario](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles). Para obtener información sobre los roles de usuario en el Programa de aplicaciones de escritorio de Windows, consulta [Programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users).
+> En este tema es específico del programa de desarrolladores de aplicaciones de Windows en [El centro de partners](https://partner.microsoft.com/dashboard). Para obtener información sobre los roles de usuario del Programa de desarrolladores de hardware, consulta [Administración de roles de usuario](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles). Para obtener información sobre los roles de usuario en el Programa de aplicaciones de escritorio de Windows, consulta [Programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users).
 
 
 <span id="roles" />
 
 ## <a name="assign-roles-to-account-users"></a>Asignar roles a usuarios de la cuenta
 
-De manera predeterminada, se presenta un conjunto de roles estándar para que elijas entre agregar un usuario, grupo o aplicación de AzureAD a tu cuenta del Centro de desarrollo. Cada rol tiene un conjunto específico de permisos para realizar determinadas funciones en la cuenta. 
+De manera predeterminada, se presenta un conjunto de roles estándar para que elijas entre agregar un usuario, grupo o aplicación de Azure AD a tu cuenta del centro de partners. Cada rol tiene un conjunto específico de permisos para realizar determinadas funciones en la cuenta. 
 
 A menos que decidas definir [permisos personalizados](#custom) seleccionando **Permisos personalizados**, a cada usuario, grupo o aplicación de AzureAD que agregas a una cuenta debes asignarle al menos uno de los siguientes roles. 
 
@@ -45,7 +45,7 @@ A menos que decidas definir [permisos personalizados](#custom) seleccionando **P
 
 | Rol                 | Descripción              |
 |----------------------|--------------------------|
-| Administrador              | Tiene acceso completo a la cuenta, excepto para cambiar la configuración fiscal y de pago. Esto incluye la administración de usuarios en el Centro de desarrollo, pero recuerda que la capacidad de crear y eliminar usuarios en el inquilino de Azure AD depende de los permisos que tenga la cuenta en AzureAD. Es decir, si a un usuario se le asigna el rol Administrador, pero no tiene permisos de administrador global en AzureAD de la organización, no podrá crear nuevos usuarios ni eliminar los usuarios del directorio (aunque puede cambiar el rol que un usuario tiene en el Centro de desarrollo). <p> Ten en cuenta que si la cuenta del Centro de desarrollo está asociada con más de un inquilino de Azure AD, un administrador no puede ver los detalles completos de un usuario (incluido el nombre, apellidos, correo electrónico de recuperación de contraseña, y si es un administrador global de Azure AD) a menos que iniciara sesión en el mismo inquilino como dicho usuario con una cuenta que tiene permisos de administrador global para ese inquilino. Sin embargo, puede agregar y quitar usuarios en cualquier inquilino que está asociado con la cuenta del Centro de desarrollo. |
+| Administrador              | Tiene acceso completo a la cuenta, excepto para cambiar la configuración fiscal y de pago. Esto incluye la administración de usuarios en el centro de partners, pero ten en cuenta que la capacidad de crear y eliminar usuarios del inquilino de Azure AD depende de los permisos de la cuenta en Azure AD. Es decir, si un usuario se le asigna el rol de administrador, pero no tiene permisos de administrador global de la organización Azure AD, no podrán crear nuevos usuarios ni eliminar los usuarios del directorio (aunque puede cambiar un rol del usuario centro de partners). <p> Ten en cuenta que si la cuenta del centro de partners está asociada con más de un inquilino de Azure AD, un administrador no puede ver los detalles completos de un usuario (incluido el nombre, apellidos, correo electrónico de recuperación de contraseña, y si son un administrador global de Azure AD) a menos que estén iniciado sesión en el mismo inquilino como dicho usuario con una cuenta que tenga permisos de administrador global para ese inquilino. Sin embargo, pueden agregar y quitar usuarios en cualquier inquilino que está asociado con la cuenta del centro de partners. |
 | Desarrollador            | Puede cargar paquetes y enviar aplicaciones y complementos, así como ver el [Informe de uso](usage-report.md) para obtener información detallada de telemetría. Puede acceder a la funcionalidad de [Experiencias entre dispositivos](https://go.microsoft.com/fwlink/?linkid=874042) . No puede ver la configuración de la cuenta ni la información financiera.   |
 | Colaborador empresarial | Puede ver informes de [estado](health-report.md) y de [uso](usage-report.md). No puede crear ni enviar productos, cambiar la configuración de cuenta ni ver información financiera.   |
 | Colaborador financiero  | Puede ver [informes de pago](payout-summary.md), información financiera e informes de adquisición. No puede modificar las aplicaciones, los complementos ni la configuración de la cuenta.    |
@@ -173,7 +173,6 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     <tr><td align="left">    <b>Mantenimiento</b> </td><td>    Permite ver el <a href="health-report.md">informe Mantenimiento</a> del producto.    </td><td>    N/D     </td><td>    N/A     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Comentarios del cliente</b>    </td><td>    Permite ver los informes <a href="reviews-report.md">Valoraciones</a> y <a href="feedback-report.md">Comentarios</a> del producto.       </td><td>    N/D (para responder a los comentarios o a las valoraciones, se debe conceder el permiso correspondiente para <b>ponerse en contacto con los clientes</b>)   </td><td>    N/D     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Análisis de Xbox</b> </td><td>    Ver el [informe de análisis de Xbox](xbox-analytics-report.md) del producto.    </td><td>    N/A   </td><td>    N/A       </td><td>    N/D          </td></tr>
-    <tr><td align="left">    <b>Tiempo real</b>   </td><td>    Permite ver el informe Tiempo real del producto. (Nota: este informe solo está disponible a través del <a href="dev-center-insider-program.md">Programa Insider del Centro de desarrollo</a>).      </td><td>    N/D   </td><td>    N/A     </td><td>    N/D                 </td></tr>
     </tbody>
     </table>
 

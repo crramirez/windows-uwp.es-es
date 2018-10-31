@@ -4,16 +4,16 @@ Description: You can use package flights to distribute packages that are only gi
 title: Paquetes piloto
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
 ms.author: wdg-dev-content
-ms.date: 6/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, distribución de paquetes piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: c34aa5f060671341900e25095ee8dc1d2d45a657
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: a873b6f6c0d1a35667b47109f5cc2205e5a02158
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757930"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5838916"
 ---
 # <a name="package-flights"></a>Paquetes piloto
 
@@ -21,7 +21,7 @@ Puedes usar paquetes piloto para distribuir paquetes específicos a un grupo de 
 
 Con paquetes piloto, solo los paquetes son diferentes; la descripción de los detalles de la tienda serán los mismos para todos los clientes. Cualquier persona del grupo piloto recibirán los paquetes que se incluyen en el paquete piloto, mientras que los clientes que no están en el grupo piloto continuarán recibiendo los paquetes normales (versión final).  Si más adelante decides que quieres que los paquetes de un paquete piloto estén disponibles para todos los clientes, puede utilizar fácilmente esos mismos paquetes en un envío de versión final. Ten en cuenta que los paquetes piloto debe pasar el [proceso de certificación](the-app-certification-process.md), al igual que cualquier envío.
 
-Cuando configuras paquetes piloto, puedes especificar las personas que deben obtener paquetes específicos agregándolos a un **grupo de usuarios conocido** (a veces se denomina grupo piloto). Cualquier persona de un grupo piloto que use un dispositivo con una versión de Windows 10 compatible con paquetes piloto (la compilación 10586 o posterior de Windows.Desktop, la compilación 10586.63 o posterior de Windows.Mobile, o Xbox One) obtendrá paquetes de los paquetes piloto que designes para ese grupo en concreto. (Los paquetes piloto pueden incluir paquetes destinados a cualquier versión del sistema operativo, incluidas Windows 8.1 o Windows Phone 8.1 o versiones anterior). Cualquier persona que no se haya agregado a uno de tus grupos piloto o que use un dispositivo no compatible con los paquetes piloto, obtendrá paquetes del envío de versión final.
+Cuando configuras paquetes piloto, puedes especificar las personas que deben obtener paquetes específicos agregándolos a un **grupo de usuarios conocido** (a veces se denomina grupo piloto). Cualquier persona de un grupo piloto que use un dispositivo con una versión de Windows 10 compatible con paquetes piloto (la compilación 10586 o posterior de Windows.Desktop, la compilación 10586.63 o posterior de Windows.Mobile, o Xbox One) obtendrá paquetes de los paquetes piloto que designes para ese grupo en concreto. (Los paquetes piloto pueden incluir paquetes destinados a cualquier versión de sistema operativo, incluidas Windows 8.1 o Windows Phone 8.1 o versiones anterior si la aplicación publicada anteriormente ya es compatible con ellos). Cualquier persona que no se ha agregado a uno de tus grupos piloto, o que use un dispositivo que no es compatible con paquetes piloto, obtendrá paquetes del envío de versión final.
 
 > [!IMPORTANT] 
 > En los dispositivo móviles y de escritorio, las personas incluidas en tus grupos piloto obtendrán automáticamente los paquetes de tu piloto cada vez que proporciones actualizaciones. Sin embargo, los **integrantes de tus grupos piloto que usan dispositivos de Xbox, tendrán que consultar manualmente si hay actualizaciones** para obtener los paquetes más recientes y asegurarse de iniciar sesión en el dispositivo con su cuenta de Microsoft (aquella que tenga la dirección de correo asociada que incluiste en el grupo de usuarios conocido).
@@ -51,7 +51,7 @@ En la página de creación del paquete piloto, tendrás que introducir un nombre
 
 ## <a name="specify-packages-to-include-in-your-package-flight"></a>Especifica los paquetes que se incluirán en tu paquete piloto
 
-Después de guardar los detalles del paquete piloto, verás la página de información general. Haz clic en **Paquetes** para especificar los paquetes que te gustaría incluir en el paquete piloto. Puedes incluir paquetes destinados a cualquier versión del sistema operativo, incluidas Windows 10, Windows 8.x y Windows Phone 8.x o versiones anteriores.
+Después de guardar los detalles del paquete piloto, verás la página de información general. Haz clic en **Paquetes** para especificar los paquetes que te gustaría incluir en el paquete piloto. Puedes incluir paquetes destinados a cualquier versión del sistema operativo que admita la aplicación.
 
 Tienes la opción de seleccionar paquetes que estaban asociados con un envío publicado anterior (un envío de versión final o uno de tus otros paquetes piloto, si tienes más de uno). Si es necesario cargar nuevos paquetes que se usará para este paquete piloto, puedes cargarlos aquí (con el [mismo proceso que al cargar paquetes de aplicación en un envío de versión final normal](upload-app-packages.md)). Haz clic en **Guardar** cuando termines de especificar los paquetes que se incluirán en este paquete piloto.
 

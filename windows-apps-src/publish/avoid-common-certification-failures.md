@@ -4,16 +4,16 @@ Description: Review this list to help avoid issues that frequently prevent apps 
 title: Evitar errores de certificación comunes
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 17a3c3cd5d7b75408a368c6b5fbc0b4a8bfe2839
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 7f37412ac88b001f412a1495f2b4efa029cf4d3a
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5762131"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835255"
 ---
 # <a name="avoid-common-certification-failures"></a>Evitar errores de certificación comunes
 
@@ -33,7 +33,7 @@ Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplic
 
 -   No te olvides de [proporciona toda la información necesaria](notes-for-certification.md) que se requiere para usar tu aplicación, como el nombre de usuario y contraseña para una cuenta de prueba en el caso de que tu aplicación necesite que los usuarios se registren en un servicio, o todos los pasos necesarios para acceder a funciones ocultas o bloqueadas.
 
--   Incluye una [directiva de privacidad](create-app-store-listings.md#privacy-policy) si tu aplicación requiere una; por ejemplo, si la aplicación tiene acceso a cualquier tipo de información personal de cualquier modo o si lo exige la ley por cualquier otro motivo. Para ayudar a determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
+-   Incluir una [dirección URL de la directiva de privacidad](enter-app-properties.md#privacy-policy-url) , si la aplicación requiere una; Por ejemplo, si la aplicación tiene acceso a cualquier tipo de información personal de cualquier forma o se exige por ley. Para ayudar a determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 -   Asegúrate de que la descripción de la aplicación refleja fielmente lo que hace la aplicación. Para obtener ayuda, consulta nuestras directrices sobre cómo [escribir una buena descripción de la aplicación](write-a-great-app-description.md).
 

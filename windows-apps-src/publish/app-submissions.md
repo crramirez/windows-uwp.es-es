@@ -5,15 +5,15 @@ title: Envíos de aplicaciones
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: lista de comprobación, windows, uwp, envío, enviar, juego, aplicación, enviar
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b3aed7c5fe912155904b3b0da666427e6727d19d
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 55235c78df29513e8d7b28e7643aec5c3a256f1d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742325"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833642"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
@@ -23,12 +23,15 @@ Una vez que hayas [creado tu aplicación reservando un nombre](create-your-app-b
 Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Las actualizaciones que realices en tu envío se guardan, para que puedas volver y trabajar en él cuando estés listo.
 
 > [!NOTE]
-> Debes tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) para poder acceder al [Centro de desarrollo de Windows](https://partner.microsoft.com/dashboard) y enviar aplicaciones a la Microsoft Store.
+> Debes tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) activa en [El centro de partners](https://partner.microsoft.com/dashboard) para poder enviar aplicaciones a la Microsoft Store.
 
-Después de publicar la aplicación, puedes publicar una versión actualizada creando otro envío en el panel. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío de una aplicación publicada, haz clic en **Actualizar** junto al envío más reciente que se muestre en la página de información general de la aplicación. También puedes [quitar una aplicación de la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si es necesario hacerlo (y, a continuación, hacer que esté disponible más tarde, si lo deseas).
+Después de publica la aplicación, puedes publicar una versión actualizada creando otro envío en el centro de partners. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío para una aplicación publicada, haz clic en **Update** junto al envío más reciente que se muestra en su página de **información general** . También puedes [quitar una aplicación de la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si es necesario hacerlo (y, a continuación, hacer que esté disponible más tarde, si lo deseas).
 
 > [!NOTE]
-> En esta sección de la documentación se describe cómo crear un envío de aplicación en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.
+> En esta sección de la documentación se describe cómo crear un envío de aplicación en el centro de partners. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.
+
+> [!IMPORTANT]
+> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="app-submission-checklist"></a>Lista de comprobación de envío de aplicaciones
 
@@ -91,17 +94,20 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Descripción**               | Obligatorio                                    | [Escribir una excelente descripción de la aplicación](write-a-great-app-description.md) |
 | **Novedades de esta versión**   | Opcional                                 | [Notas de la versión](create-app-store-listings.md#whats-new-in-this-version)       |
-| **Funciones de la aplicación**              | Opcional                                    | [Funciones de la aplicación](create-app-store-listings.md#app-features)         |
+| **Funciones de la aplicación**              | Opcional                                    | [Características del producto](create-app-store-listings.md#product-features)         |
 | **Capturas de pantalla**               | Obligatorio (al menos una captura de pantalla; se recomienda que sean cuatro o más)          | [Capturas de pantalla](app-screenshots-and-images.md#screenshots)          |
 | **Logotipos de Store**               | Recomendado; necesario para algunas versiones de sistemas operativos | [Logotipos de Store](app-screenshots-and-images.md#store-logos)             |
-| **Activos gráficos adicionales**     | Recomendado (especialmente para algunas versiones de sistemas operativos)         | [Activos de imágenes adicionales](app-screenshots-and-images.md#additional-art-assets) |
 | **Tráileres**                  | Opcional                                    | [Tráileres](app-screenshots-and-images.md#trailers)                | 
-| **Campos adicionales**  | Opcional                                    | [Información complementaria](create-app-store-listings.md#supplemental-fields) 
+| **Imagen de Windows 10 y Xbox (imagen principal súper 16:9)**     | Recomendaciones        | [Windows 10 y Xbox imagen (imagen 16:9 ilustración principal súper)
+] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+| **Imágenes de Xbox**     | Obligatorio para una correcta visualización Si publicas en Xbox        | [Imágenes de Xbox
+] (imágenes de xbox de aplicación capturas de pantalla y images.md #) |
+| **Campos adicionales**  | Opcional                                    | [Campos adicionales](create-app-store-listings.md#supplemental-fields) 
 | **Términos de búsqueda**              | Opcional                                    | [Términos de búsqueda](create-app-store-listings.md#search-terms)         |
 | **Información de copyright y marca comercial** | Opcional                                 | [Información de copyright y marca comercial](create-app-store-listings.md#copyright-and-trademark-info) |
 | **Términos de licencia adicionales**  | Opcional                                    | [Términos de licencia adicionales](create-app-store-listings.md#additional-license-terms) |
 | **Desarrollado por**              | Opcional                                    | [Desarrollado por](create-app-store-listings.md#developed-by)                   |
-| **Descripciones de Store específicas de la plataforma** | Opcional                               | [Creación de descripciones de Store específicas de la plataforma](create-platform-specific-store-listings.md)  |
+
 
 <span/>
 

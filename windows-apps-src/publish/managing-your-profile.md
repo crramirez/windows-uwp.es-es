@@ -2,29 +2,29 @@
 author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: Administrar la configuración de la cuenta y la información del perfil
-description: Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la información del perfil en la sección Configuración de la cuenta del panel del Centro de desarrollo de Windows unificado.
+description: Puedes ver y actualizar la configuración de la cuenta de desarrollador y la información del perfil en la sección de configuración de la cuenta del centro de partners.
 ms.author: wdg-dev-content
-ms.date: 03/12/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, centro de desarrollo, configuración de la cuenta, perfil, perfil de cuenta, cuenta de desabollador, configuración de la cuenta de desarrollador
 ms.localizationpriority: medium
-ms.openlocfilehash: b17281d597ea484c81896abd7efdc7d31fdc8add
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 90bf81f23bcffe05278d12bab7abb2425f7eb773
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5744011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5837413"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Administrar la configuración de la cuenta y la información del perfil
 
-Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la información del perfil en la sección **Configuración de la cuenta** del [panel del Centro de desarrollo de Windows](using-the-windows-dev-center-dashboard.md). 
+Puedes ver y actualizar la configuración de la cuenta de desarrollador y la información del perfil en la sección de **configuración de la cuenta** del [Centro de partners](https://partner.microsoft.com/dashboard). 
 
 > [!NOTE]
-> Las preferencias de notificación (por ejemplo, qué tipo de notificaciones recibir y cómo recibirlas) se pueden administrar en **Centro de mensajes** (a donde puedes acceder seleccionando el icono de mensaje próximo a la parte superior del panel).
+> Preferencias de notificación (por ejemplo, qué tipo de notificaciones recibir y cómo recibirlas) pueden administrarse en el **Centro de mensajes** (que puedes acceder seleccionando el icono de mensaje en la parte superior del centro de partners).
 
 ## <a name="account-settings"></a>Configuración de la cuenta
 
-Para ver la configuración de la cuenta, haz clic en el icono de engranaje ubicado en la esquina superior derecha del panel y, a continuación, selecciona la **configuración de desarrollador**. Aquí encontrarás los detalles de tu cuenta y vínculos a otras páginas donde puedes ver información y realizar diversas tareas relacionadas con la cuenta.
+Para ver la configuración de la cuenta, haz clic en el icono de engranaje ubicado en la esquina superior derecha del centro de partners y, a continuación, selecciona la **configuración de desarrollador**. Aquí encontrarás los detalles de tu cuenta y vínculos a otras páginas donde puedes ver información y realizar diversas tareas relacionadas con la cuenta.
 
 En la sección **Detalles de la cuenta**, puedes ver el estado y el tipo de tu cuenta. También puedes ver tu Id. del vendedor y otra información de Id. de publicador. Estos valores se asignan por Microsoft para identificar de forma exclusiva la cuenta de desarrollador y no puede editarse.
 
@@ -50,8 +50,8 @@ A continuación se muestran algunos de los otros elementos que encontrarás en l
 - **Programa de Insider del centro de desarrollo**: puedes optar por dentro o fuera del [Programa de Insider del centro de desarrollo](dev-center-insider-program.md) en la página principal página de **configuración de la cuenta** .
 - **Cuenta de pago** y **Perfil fiscal**: en esta sección puedes [configurar la cuenta de pago y los formularios fiscales](setting-up-your-payout-account-and-tax-forms.md). Deberás hacer esto para poder cobrar dinero por las aplicaciones o los complementos.
 - **Asociaciones de empresa**: puedes aceptar invitaciones de empresas que quieren que publiques aplicaciones para su uso exclusivo. Para obtener más información, consulta [Distribuir aplicaciones de LOB en las empresas](distribute-lob-apps-to-enterprises.md).
-- **Usuarios**: agrega usuarios a la cuenta del Centro de desarrollo y asígnales roles y permisos. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
-- **Inquilinos**: administrar tus asociaciones de inquilino de Azure AD. Para obtener más información, consulte [asociar Azure AD con tu cuenta del centro de desarrollo](associate-azure-ad-with-dev-center.md).
+- **Los usuarios**: agregar usuarios a tu cuenta y asignarles roles y permisos. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
+- **Inquilinos**: administrar tus asociaciones de inquilino de Azure AD. Para obtener más información, consulte [asociar Azure AD con tu cuenta del centro de partners](associate-azure-ad-with-dev-center.md).
 - **Programas**: puedes ver detalles sobre los programas en los que participas y obtener más información sobre otros programas que podrían interesarte.
 - **Contratos**: puedes ver los contratos que tu cuenta ha aceptado.
 - **Dispositivos de desarrollo**: ver y administrar [los dispositivos de Windows Phone 8.x que hayas desbloqueado para realizar pruebas](http://go.microsoft.com/fwlink/p/?LinkId=533897) y [consolas Xbox One habilitadas para el desarrollo](../xbox-apps/devkit-activation.md). 

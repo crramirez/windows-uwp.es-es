@@ -3,17 +3,17 @@ title: Responder a los comentarios de los clientes
 description: Puedes responder directamente a los comentarios que los clientes dejan en el Centro de opiniones.
 author: JnHs
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
-ms.openlocfilehash: d75eb60de1af031bbda4e5bdb37cf1fc17fe6ee0
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 5da9e96bace29dc33874d5b8c3e4ac846eddeb63
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829217"
 ---
 # <a name="respond-to-customer-feedback"></a>Responder a los comentarios de los clientes
 
@@ -24,7 +24,7 @@ Puedes usar el [informe de comentarios](feedback-report.md) para revisar los com
 
 Para proporcionar una respuesta a cualquier comentario, haz clic en el vínculo **Responder a los comentarios** que aparece junto al comentario en tu **informe de comentarios**.
 
-El Centro de desarrollo de Windows admite tres opciones de respuesta a los clientes que proporcionan comentarios sobre tu aplicación. Independientemente de la opción que elijas, ten en cuenta que hay un límite de 1000 caracteres para cada respuesta.
+[El centro de partners](https://partner.microsoft.com/dashboard) admite tres opciones para responder a los clientes que proporcionan comentarios sobre la aplicación. Independientemente de la opción que elijas, ten en cuenta que hay un límite de 1000 caracteres para cada respuesta.
 
 ## <a name="public-comments-in-feedback-hub"></a>Comentarios públicos del Centro de opiniones
 

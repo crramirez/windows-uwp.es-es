@@ -4,16 +4,16 @@ Description: Get your app noticed! Aside from making your app the best it can be
 title: Facilitar la promoción de la aplicación
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
 ms.author: wdg-dev-content
-ms.date: 3/13/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, promocional, promoción, destacados, presentar, store
 ms.localizationpriority: medium
-ms.openlocfilehash: ede4cc948b20ee90b9d2e3866e7c342caa1e2be8
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 43970ce024408032f0e2e9891eaae34efa68e014
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5830135"
 ---
 # <a name="make-your-app-easier-to-promote"></a>Facilitar la promoción de la aplicación
 
@@ -29,7 +29,7 @@ Microsoft Store presenta diferentes aplicaciones, agrupadas por categoría o tem
 
     Al destacar aplicaciones, Microsoft Store puede usar tus [capturas de pantalla e imágenes de la aplicación](app-screenshots-and-images.md) en varios formatos. Asegúrate de diseñar capturas de pantalla excelentes que representen la aplicación y de que la primera captura de pantalla sea especialmente representativa y atractiva. Puedes proporcionar distintos conjuntos de capturas de pantalla para mostrar el aspecto de la aplicación en cada tipo de dispositivo que admite.
 
-    Para maximizar la posibilidad de tu aplicación de destacarse en Store, facilita todas las imágenes aplicables en las secciones **Logotipos de Store** y **Activos gráficos adicionales** de la descripción de Store. Las imágenes en formatos **16:9 Gráfico en póster (720 x 1080 o 1440 x 2160 píxeles)** y **16:9 Ilustración principal súper (1920 x 1080 o 3840 x 2160 píxeles)** son especialmente importantes para Windows 10 (incluyendo Xbox). Si tu aplicación admite la familia de dispositivos de Xbox y/o holográficos, recomendamos proporcionar también todas las imágenes aplicables para estas familias de dispositivos. Para obtener más información e instrucciones, consulta [Capturas de pantalla, imágenes y tráileres de aplicaciones](app-screenshots-and-images.md).
+    Para maximizar la posibilidad de tu aplicación de destacarse en Store, facilita todas las imágenes aplicables en las secciones **Logotipos de Store** y **Activos gráficos adicionales** de la descripción de Store. El **9:16 póster (720 x 1080 o 1440 x 2160 píxeles)** y **16:9 ilustración principal súper (1920 x 1080 o 3840 x 2160 píxeles)** las imágenes son especialmente importantes. Si tu aplicación admite la familia de dispositivos de Xbox y/o holográficos, recomendamos proporcionar también todas las imágenes aplicables para estas familias de dispositivos. Para obtener más información e instrucciones, consulta [Capturas de pantalla, imágenes y tráileres de aplicaciones](app-screenshots-and-images.md).
 
 -   **Crea una sola versión de tu aplicación, no una gratis y otra distinta de pago**
 
