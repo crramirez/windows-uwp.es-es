@@ -3,16 +3,16 @@ author: jnHs
 Description: After your packages have been successfully uploaded, you'll see a table that indicates which packages will be offered to specific Windows 10 device families (and earlier OS versions, if applicable), in ranked order.
 title: Disponibilidad de familias de dispositivos
 ms.author: wdg-dev-content
-ms.date: 10/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, paquetes, carga, disponibilidad de familia de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: e575c3315411b7be0af14316e8063aa592b2920f
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 543b5c519e7514ccef397c2bb78eadcc5e3692f5
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740418"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5815657"
 ---
 # <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos
 
@@ -50,21 +50,22 @@ La única familia de dispositivos Windows 10 que no está activada de manera pre
 
 Si vas a enviar una aplicación para UWP para Windows 10 IoT Core, no debes realizar cambios a las selecciones predeterminadas después de cargar tu paquetes: no hay ninguna casilla de verificación independiente para Windows 10 IoT. Para obtener más información sobre la publicación de aplicaciones para UWP de IoT Core, consulta [soporte técnico de Microsoft Store para aplicaciones para UWP de IoT Core](https://docs.microsoft.com/windows/iot-core/commercialize-your-device/installingandservicing).
 
-Si tu envío incluye paquetes que se pueden ejecutar en **Windows 8/8.1** y **Windows Phone 8.x y anterior**, dichos paquetes estarán disponibles para los clientes, como se muestra en la tabla. No hay ninguna casilla para estas versiones de sistema operativo. Si quieres dejar de ofrecer la aplicación a estos clientes, quita los paquetes correspondientes del envío.
+Si tu envío para una aplicación publicada anteriormente incluye paquetes que se pueden ejecutar en **Windows 8/8.1** y **de Windows Phone 8.x y versiones anteriores**, dichos paquetes estarán disponibles para los clientes con esas versiones de sistema operativo. Si quieres dejar de ofrecer la aplicación a estos clientes, quita los paquetes correspondientes del envío.
 
 > [!IMPORTANT]
 > Para impedir totalmente que una determinada familia de dispositivos de Windows 10 obtenga el envío, actualiza el elemento [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) en el manifiesto de destino solo la familia de dispositivos que quieres admitir (es decir, Windows.Mobile o Windows.Desktop), en su lugar que dejarlo como el valor Windows.Universal (correspondiente a la familia de dispositivos universal) Microsoft Visual Studio incluye en el manifiesto de forma predeterminada.
 
-Es importante tener en cuenta que las selecciones que realices en la sección **Disponibilidad de familia de dispositivos** solo se aplican a las nuevas adquisiciones. Cualquiera que ya tenga la aplicación puede seguir usándola y obtener cualquier actualización que envíes, aunque quites aquí su familia de dispositivos. Esto se aplica incluso a los clientes que adquieren la aplicación antes de actualizar a Windows 10. Por ejemplo, si tienes una aplicación publicada con paquetes de Windows Phone 8.1 y más adelante agregas un paquete de Windows 10 (UWP) a la misma aplicación que tiene la familia de dispositivos universal como destino, a los clientes de Windows 10 Mobile que tengan el paquete de Windows Phone 8.1 se les ofrecerá actualizarse a este paquete de Windows 10 (UWP), aunque hayas desmarcado la casilla **Windows 10 Mobile** (ya que no se trata de una nueva compra, sino de una actualización). Sin embargo, si no proporcionas ningún paquete de Windows 10 (UWP) que tenga como destino las familias de dispositivos universal o móvil, tus clientes móviles de Windows 10 permanecerán en el paquete de Windows Phone 8.1.
+Es importante tener en cuenta que las selecciones que realices en la sección **Disponibilidad de familia de dispositivos** solo se aplican a las nuevas adquisiciones. Cualquiera que ya tenga la aplicación puede seguir usándola y obtener cualquier actualización que envíes, aunque quites aquí su familia de dispositivos. Esto se aplica incluso a los clientes que adquieren la aplicación antes de actualizar a Windows 10. Por ejemplo, si tienes una aplicación publicada con los paquetes de Windows Phone 8.1 y agregar un paquete de Windows 10 (UWP) destinadas a la familia de dispositivos Windows.Universal, los clientes móviles de Windows 10 que tenían el paquete de Windows Phone 8.1 se ofrecerá una actualización a esta Windows Empaquetar 10 (UWP), incluso si has sin marcar la casilla para **Windows 10 Mobile**.
 
 Para obtener más información sobre las familias de dispositivos, consulta [**Información general sobre las familias de dispositivos**](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview).
 
+
 ## <a name="understanding-ranking"></a>Comprender la clasificación
 
-Además de permitirte indicar qué familias de dispositivos Windows 10 pueden descargar el envío, la sección **Disponibilidad de familia de dispositivos** también te muestra qué paquetes estarán disponibles para distintas familias de dispositivos. Si tienes más de un paquete que se pueda ejecutar en una determinada familia de dispositivos, la tabla indicará el orden en el que se ofrecerán los paquetes, en función de los números de versión de los mismos. Para obtener más información acerca de la manera en que la Store clasifica los paquetes según sus números de versión, consulta [Numeración de la versión del paquete](package-version-numbering.md). 
+Además de permitirte indicar qué familias de dispositivos Windows 10 pueden descargar el envío, la sección de **disponibilidad de familias de dispositivo** muestra los paquetes específicos que estarán disponibles para distintas familias de dispositivo. Si tienes más de un paquete que se pueda ejecutar en una determinada familia de dispositivos, la tabla indicará el orden en el que se ofrecerán los paquetes, en función de los números de versión de los mismos. Para obtener más información acerca de la manera en que la Store clasifica los paquetes según sus números de versión, consulta [Numeración de la versión del paquete](package-version-numbering.md). 
 
-Como ejemplo, supongamos que tienes dos paquetes: Package_A.appxupload y Package_B.appxupload. En una familia de dispositivos determinada si Package_A.appxupload está clasificado en el puesto número 1 y Package_B.appxupload está en el puesto número 2, en el momento en que un cliente que usa un dispositivo de esta familia compra la aplicación, la Store intentará entregar el paquete Package_A.appxupload. Si el dispositivo del cliente no puede ejecutar el paquete Package_A.appxupload, la Tienda le ofrecerá el paquete Package_B.appxupload. Por otro lado, si el dispositivo del cliente no puede ejecutar ninguno de los paquetes para esa familia de dispositivos (por ejemplo, si la versión **MinVersion** que admite la aplicación es mayor que la versión del dispositivo del cliente), no se podrá descargar la aplicación en ese dispositivo.
+Como ejemplo, supongamos que tienes dos paquetes: Package_A.appxupload y Package_B.appxupload. En una familia de dispositivos determinada si Package_A.appxupload está clasificado en el puesto número 1 y Package_B.appxupload está en el puesto número 2, en el momento en que un cliente que usa un dispositivo de esta familia compra la aplicación, la Store intentará entregar el paquete Package_A.appxupload. Si el dispositivo del cliente no puede ejecutar el paquete Package_A.appxupload, la Tienda le ofrecerá el paquete Package_B.appxupload. Si el dispositivo del cliente no puede ejecutar ninguno de los paquetes para esa familia (por ejemplo, si admite la **MinVersion** tu aplicación es mayor que la versión en el dispositivo del cliente), a continuación, el cliente no podrá descargar la aplicación en ese dispositivo.
 
 > [!NOTE]
-> Los números de versión de los paquetes .xap no se tienen en cuenta al decidir qué paquete proporcionar a un cliente determinado. Por este motivo, si tienes más de un paquete .xap con la misma clasificación, verás un asterisco en lugar de un número y los clientes recibirán cualquiera de los paquetes. Para proporcionar a un cliente un paquete .xap más reciente, asegúrate de quitar el antiguo paquete .xap del nuevo envío.
+> Los números de versión en los paquetes .xap (para aplicaciones publicadas anteriormente) no se consideran al determinar qué paquete proporcionar a un cliente determinado. Por este motivo, si tienes más de un paquete .xap con la misma clasificación, verás un asterisco en lugar de un número y los clientes recibirán cualquiera de los paquetes. Para proporcionar a un cliente un paquete .xap más reciente, asegúrate de quitar el antiguo paquete .xap del nuevo envío.
 

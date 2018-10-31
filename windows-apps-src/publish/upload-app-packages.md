@@ -8,22 +8,26 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: Windows 10, uwp, paquetes, carga, carga de paquete
 ms.localizationpriority: medium
-ms.openlocfilehash: 535706cc0627dc89ce96981ad40faafbf242e80e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f02ca7c43443289ef9d2d0562be25f277068685b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748328"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818050"
 ---
 # <a name="upload-app-packages"></a>Cargar paquetes de aplicaciones
 
-La página **paquetes** es donde se cargan todos los archivos del paquete (.msix, .msixupload, .msixbundle, .appx, .appxupload, .appxbundle o .xap) de la aplicación que vas a enviar. En este paso puedes cargar paquetes para cualquier sistema operativo de destino de la aplicación. Cada vez que un cliente descarga la aplicación, la Tienda le proporciona automáticamente el paquete que mejor se adapta a su dispositivo. Después de cargar los paquetes, verás una tabla que indica [qué paquetes que se ofrecerán a familias específicas de dispositivos Windows 10](#device-family-availability) (y a versiones anteriores del sistema operativo, si procede) ordenados según su clasificación.
+La página **paquetes** es donde se cargan todos los archivos del paquete (.msix, .msixupload, .msixbundle, .appx, .appxupload o .appxbundle) de la aplicación que vas a enviar. Puedes cargar todos los paquetes para la misma aplicación en esta página y, cuando un cliente descarga la aplicación, la tienda le proporciona automáticamente cada cliente con el paquete que funciona mejor para su dispositivo. Después de cargar los paquetes, verás una tabla que indica [qué paquetes que se ofrecerán a familias específicas de dispositivos Windows 10](#device-family-availability) (y a versiones anteriores del sistema operativo, si procede) ordenados según su clasificación.
 
-Consulta [Requisitos del paquete de la aplicación](app-package-requirements.md) para obtener más información sobre lo que incluye un paquete y cómo debe estructurarse. También querrás obtener información sobre [cómo los números de versión pueden afectar qué paquetes se entregan a clientes específicos](package-version-numbering.md) y [cómo se distribuyen los paquetes a diferentes sistemas operativos](guidance-for-app-package-management.md).
+> [!IMPORTANT]
+> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+
+Consulta [Requisitos del paquete de la aplicación](app-package-requirements.md) para obtener más información sobre lo que incluye un paquete y cómo debe estructurarse. También querrás obtener información sobre [cómo los números de versión afectar qué paquetes se entregan a clientes específicos](package-version-numbering.md) y [cómo administrar paquetes para varios escenarios](guidance-for-app-package-management.md).
+
 
 ## <a name="uploading-packages-to-your-submission"></a>Cargar paquetes en el envío
 
-Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar los archivos. La página **paquetes** te permite cargar archivos .msix, .msixupload, .msixbundle, .appx, .appxupload, .appxbundle o .xap.
+Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar los archivos. La página **paquetes** te permite cargar archivos .msix, .msixupload, .msixbundle, .appx, .appxupload o .appxbundle.
 
 > [!IMPORTANT]
 > Para Windows 10, se recomienda cargar aquí archivo .msixupload o .appxupload en lugar de .msix, .appx, .msixbundle o .appxbundle.  Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md).

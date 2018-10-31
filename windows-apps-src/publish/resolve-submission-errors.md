@@ -4,16 +4,16 @@ Description: If you encounter errors after submitting your app to the Store, you
 title: Resolver errores de envío
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
 ms.author: wdg-dev-content
-ms.date: 10/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d9d997d2523012588348512311980f9bb4a7160b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 0ba47bdf964cab66182aadc6dafb0ae6d34c3ea7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5758446"
+ms.locfileid: "5811982"
 ---
 # <a name="resolve-submission-errors"></a>Resolver errores de envío
 
@@ -31,6 +31,9 @@ Si vas a enviar un paquete que contiene los archivos binarios de Win32 y UWP, as
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x y versiones anteriores
 
+> [!IMPORTANT]
+> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+
 Es posible que veas **error 2001** cuando se detectan problemas con los paquetes de Windows Phone durante el procesamiento previo. En la mayoría de los casos, necesitarás volver a compilar el paquete de la aplicación para corregir el error. Una vez que lo hayas hecho, reemplaza el paquete antiguo por el nuevo en la página [Paquetes](upload-app-packages.md) del envío antes de hacer clic de nuevo en **Enviar a la Tienda**.
 
 Hay una serie de problemas que pueden causar este error. Revisa la lista siguiente para determinar lo que es posible que se aplique a los paquetes.
@@ -45,7 +48,7 @@ Otro error que puede aparecer después de enviar la aplicación es el **error 13
 
 ## <a name="nameidentity-errors"></a>Errores de nombre/identidad
 
-Si aparece un error que dice **El nombre encontrado en el paquete no es uno de los nombres de aplicación reservados. Reserva el nombre de la aplicación o actualiza el paquete con el nombre de la aplicación correcto para este idioma** puede deberse a que escribiste un nombre incorrecto en el paquete. Este error también puede producirse si estás usando un nombre de aplicación que aún no has reservado en el Centro de desarrollo. Normalmente se puede resolver el error siguiendo estos pasos:
+Si aparece un error que dice **El nombre encontrado en el paquete no es uno de los nombres de aplicación reservados. Reserva el nombre de la aplicación o actualiza el paquete con el nombre de la aplicación correcto para este idioma** puede deberse a que escribiste un nombre incorrecto en el paquete. Este error también puede producirse si estás usando un nombre de aplicación que aún no has reservado en el centro de partners. Normalmente se puede resolver el error siguiendo estos pasos:
 
 - Ve a la página de la aplicación [Identidad de la aplicación](view-app-identity-details.md) (en **Administración de aplicaciones**) para confirmar si la aplicación tiene una identidad asignada. Si no la tiene, verás una opción para crear una. Debes reservar un nombre para tu aplicación con el fin de crear la identidad. Asegúrate de que este sea el nombre que usaste en el paquete.
 - Si la aplicación ya tiene una identidad, puede significar que aún tienes que reservar el nombre que quieras usar en el paquete. En **Administración de aplicaciones**, haz clic en [Administrar nombres de la aplicación](manage-app-names.md). Escribe el nombre que te gustaría usar y haz clic en **Reservar nombre de aplicación**.

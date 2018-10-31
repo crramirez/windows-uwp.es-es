@@ -1,26 +1,26 @@
 ---
 author: jnHs
-Description: The Acquisitions report in the Windows Dev Center dashboard lets you see who has acquired and installed your app, along with demographic and platform details.
+Description: The Acquisitions report in Partner Center lets you see who has acquired and installed your app, along with demographic and platform details.
 title: Informe Adquisiciones
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 09/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, adquisiciones, ventas de aplicaciones, descargas de aplicaciones, instalaciones, embudo, adquisición, conversiones, canal, vistas de página de la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: c2ccb3088d0ef241f950a5f5fcf3f40969bc0531
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: bbd84b32a4e94687ff50f553137a86885094a7d6
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5769231"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5813312"
 ---
 # <a name="acquisitions-report"></a>Informe Adquisiciones
 
 
-El informe de **adquisiciones** en el panel del centro de desarrollo de Windows te permite ver quién ha adquirido e instalado la aplicación, junto con datos demográficos y los detalles de la plataforma y se muestra información acerca de cómo los clientes de Windows 10 (incluyendo Xbox) han llegado a la aplicación la descripción. También puedes ver cerca de los datos de compra en tiempo real para el último período o de 72 horas. 
+El informe de **adquisiciones** del [Centro](https://partner.microsoft.com/dashboard) de partners te permite ver quién ha adquirido e instalado la aplicación, junto con datos demográficos y los detalles de la plataforma y se muestra información sobre cómo los clientes de Windows 10 (incluyendo Xbox) han llegado a la descripción de la aplicación. También puedes ver cerca de los datos de compra en tiempo real para el último período o de 72 horas. 
 
-Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
+Puedes ver estos datos en el centro de partners, o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, una **adquisición** significa que un cliente nuevo ha obtenido una licencia para tu aplicación (tanto si cobras dinero como si la ofreces gratis). **Instalar** hace referencia a que la aplicación se está instalando en un dispositivo Windows10.
 

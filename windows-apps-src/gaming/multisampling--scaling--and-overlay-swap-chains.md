@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, juegos, intercambiar escalado de cadenas, superposiciones, directx, games, swap chain scaling, overlays
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d159a78412bea528c1a12428288daebe31d1fe1
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5751627"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818472"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>Escalado y superposiciones de cadenas de intercambio
 

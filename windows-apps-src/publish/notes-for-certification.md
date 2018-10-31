@@ -4,16 +4,16 @@ Description: As you submit your app, you have the option to use the Notes for ce
 title: Notas para la certificación
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
 ms.author: wdg-dev-content
-ms.date: 04/03/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, notas para los evaluadores
 ms.localizationpriority: medium
-ms.openlocfilehash: 9348b7ef7c8754b63c284c0479f37dde0b297ad8
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ab3ba2eb08c01bac3b9c0536ce11b8e2bea96054
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5755882"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818948"
 ---
 # <a name="notes-for-certification"></a>Notas para la certificación
 
@@ -22,24 +22,26 @@ Cuando envías tu aplicación, tienes la opción de usar la página **Notas para
 
 Asegúrate de incluir lo siguiente (si corresponde para tu aplicación);
 
--   **Nombres de usuario y contraseñas para las cuentas de prueba** Si la aplicación requiere que los usuarios inicien sesión en un servicio o una cuenta de medios sociales, facilita el nombre de usuario y la contraseña de una cuenta de prueba. Los evaluadores de certificación usarán esta cuenta cuando revisen tu aplicación.
+-   **Nombres de usuario y contraseñas para las cuentas de prueba**: si la aplicación requiere que los usuarios inicien sesión en un servicio o cuenta de medios sociales, proporcionar el nombre de usuario y contraseña para una cuenta de prueba. Los evaluadores de certificación usarán esta cuenta cuando revisen tu aplicación.
 
--   **Pasos para acceder a funciones ocultas o bloqueadas** Describe brevemente cómo los evaluadores pueden acceder a las funciones, los modos o el contenido que puedan no resultar obvios. Las aplicaciones que parezcan estar incompletas pueden no superar la certificación.
+-   **Pasos para acceder a funciones ocultas o bloqueadas**: describe brevemente cómo los evaluadores pueden acceder a las características, los modos o contenido que puedan no resultar obvia. Las aplicaciones que parezcan estar incompletas pueden no superar la certificación.
 
--   **Pasos para verificar el uso de audio de fondo** Si la aplicación permite ejecutar audio de fondo, puede que los evaluadores necesiten instrucciones sobre cómo acceder a esta función, para que puedan confirmar que funciona correctamente.
+-   **Pasos para comprobar el uso de audio en segundo plano**: si la aplicación permite ejecutar audio en segundo plano, los evaluadores puede que necesiten instrucciones sobre cómo acceder a esta función para que puedan confirmar que funciona correctamente.
 
--  **Diferencias de comportamiento esperadas en función de la región u otras opciones de configuración** Por ejemplo, si los clientes de diferentes regiones verán contenido diferente, asegúrate de indicar esto claramente para que los evaluadores comprendan las diferencias y revisen de forma adecuada.
+-  **Diferencias de esperado en el comportamiento en función de la región u otras opciones de configuración**: por ejemplo, si los clientes de diferentes regiones verán contenido diferente, asegúrate de indicar esto claramente para que los evaluadores comprendan las diferencias y revisen de forma adecuada.
 
--   **Información sobre lo que cambia en una actualización de aplicación** En el caso de las actualizaciones de aplicaciones publicadas anteriormente, es posible que quieras que los evaluadores sepan qué ha cambiado, especialmente si los paquetes son los mismos y solo estás realizando cambios en la descripción de la aplicación (por ejemplo, si agregas más capturas de pantalla, cambias la categoría de la aplicación o modificas la descripción).
+-   **Información sobre los cambios en la actualización de una aplicación**: para las actualizaciones de aplicaciones publicadas anteriormente, es aconsejable que los evaluadores sepan qué ha cambiado, especialmente si los paquetes son los mismos y solo estás realizando cambios en la descripción (por ejemplo, la adición de más de la aplicación capturas de pantalla, cambias la categoría de la aplicación o modificas la descripción).
 
--   **Fecha en la que introduces las notas** esto es particularmente importante si estás usando un espacio aislado de desarrollo en el Centro de desarrollo (por ejemplo, este es el caso de cualquier juego que se integra con Xbox Live), ya que las notas que escribas al publicar en un espacio aislado permanecerán cuando solicites la certificación. Ver la fecha ayuda a los evaluadores a comprobar si había problemas temporales que puede que ya no se presenten.
+-   **La fecha que introduces las notas**: Esto es particularmente importante si estás usando un espacio aislado de desarrollo en el centro de partners (por ejemplo, este es el caso de cualquier juego que se integra con Xbox Live), ya que las notas que escribas al publicar en un espacio aislado te permanecer cuando solicites la certificación. Ver la fecha ayuda a los evaluadores a comprobar si había problemas temporales que puede que ya no se presenten.
 
 -  **Todo lo que consideres que evaluadores necesitarán conocer acerca de tu envío**
 
 Cuando estés considerando qué escribir, recuerda que:
 
 -   **Una persona real leerá estas notas.** Los evaluadores apreciarán una nota educada e instrucciones claras y útiles.
+
 -   **Sé breve y simplifica las instrucciones.** Si tienes que extenderte más en algunos detalles, incluye la dirección URL de una página con más información. Sin embargo, ten en cuenta que los clientes de tu aplicación no verán estas notas. Si crees que necesitas proporcionar instrucciones complicadas para evaluar tu aplicación, piensa si convendría simplificar tu aplicación para que los clientes (y evaluadores) sepan cómo usarla.
+
 -   **Los servicios y componentes externos deben estar en línea y disponibles.** Si tu aplicación tiene que conectarse a un servicio para poder funcionar, asegúrate de que el servicio esté en línea y disponible. Incluye toda la información que necesitarán los evaluadores sobre el servicio, como la información de inicio de sesión. Si la aplicación no se puede conectar a un servicio que necesite durante las pruebas, puede que no consigas la certificación.
 
  

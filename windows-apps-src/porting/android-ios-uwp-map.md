@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 821a28109c511bb2bd96bf5cbccb190cbe928abc
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f7e211ebfa28421340e716c0176cab80a9511671
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741580"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818459"
 ---
 #<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
 
@@ -300,7 +300,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Ciclo de vida de la aplicación.</strong> <br><br>Controla eventos cuando la aplicación se inicia, suspende, reanuda y cierra, y, de este modo, proporciona una oportunidad para guardar y restaurar el estado de la aplicación y ejecutar otras tareas.</td>
-<td align="left">Cada actividad tiene su propio <strong>ciclo de vida de la actividad</strong> con estados como, por ejemplo, <strong>reanudada</strong>. <strong>Las devoluciones de llamada del ciclo de vida</strong>, como <strong>onResume</strong>, se implementan en las <strong>clases de la actividad</strong>.</td>
+<td align="left">Cada actividad tiene su propio <strong>ciclo de vida de la actividad</strong> con estados como, por ejemplo, <strong>reanudada</strong>. <strong>Las devoluciones de llamada del ciclo de Vida</strong> , como <strong>onResume</strong> se implementan en las <strong>clases de la actividad</strong>.</td>
 <td align="left">El <strong>ciclo de vida de aplicación</strong> tiene estados como, por ejemplo, <strong>suspendida</strong>. Los métodos, como <strong>applicationDidEnterBackground:</strong>, se implementan en el <strong>objeto de aplicación de delegado</strong> para ejecutar código cuando se producen cambios de estado.</td>
 <td align="left">La aplicación tiene los <strong>estados de ejecución de la aplicación</strong> NotRunning, Activated, Running, Suspending, Suspended y Resuming.<br/><br/>Puedes implementar los métodos de la <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.aspx">clase Application</a></strong> OnLaunched, OnActivated, Suspending o Resuming en la aplicación para ejecutar código cuando cambie el estado.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt243287.aspx">Ciclo de vida de la aplicación</a></td>
 </tr>

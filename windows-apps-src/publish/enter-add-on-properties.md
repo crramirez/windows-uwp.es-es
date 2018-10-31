@@ -4,19 +4,18 @@ Description: When submitting an add-on, the options on the Properties page help 
 title: Especificar las propiedades de los complementos
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f616e4da96c1a2c59822d1370b49016dbca1bb7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: fa0559c79b758373347427c0aa88b351c0fbddf0
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745561"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5816474"
 ---
 # <a name="enter-add-on-properties"></a>Especificar las propiedades de los complementos
-
 
 Cuando envías un complemento, las opciones de la página **Propiedades** te ayudan a determinar el comportamiento que tendrá el complemento al ofrecerlo a los clientes.
 
@@ -32,7 +31,7 @@ Los campos que ves en esta página variarán, en función del tipo de producto d
 
 ## <a name="product-lifetime"></a>Duración del producto
 
-Si has seleccionado **Duradero** para el tipo de producto, aquí se muestra la opción **Duración del producto**. La opción predeterminada de **Duración del producto** para un complemento duradero es **Para siempre**, lo que significa que el complemento no caduca nunca. Si lo prefieres, puedes definir la **Duración del producto** de forma que el complemento expire tras un período establecido (con opciones que van de 1 a 365 días).
+Si has seleccionado **Duradero** para el tipo de producto, aquí se muestra la opción **Duración del producto**. La opción predeterminada de **Duración del producto** para un complemento duradero es **Para siempre**, lo que significa que el complemento no caduca nunca. Si lo prefieres, puedes cambiar la **duración del producto** para que el complemento expire tras un período establecido (con opciones de 1 a 365 días).
 
 
 ## <a name="quantity"></a>Cantidad

@@ -1,25 +1,25 @@
 ---
 author: jnHs
-Description: Here’s some important info you’ll need to ensure that you receive payment for your apps, in-app products (IAPs), and advertising earnings.
+Description: Learn about receiving payments for your apps, add-ons (in-app products), and advertising earnings.
 title: Recibir pagos
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 ms.author: wdg-dev-content
-ms.date: 02/05/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, pagos, ventas de aplicaciones, ganancias por la aplicación, pago, tarifa de la store, suspensión de pago, porcentaje
 ms.localizationpriority: medium
-ms.openlocfilehash: e7a5736c48232d3fa080d13fbcbbbdb70bfa9c92
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 96845e81b093b7cddb6d334286e9cfa468a43b28
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767118"
+ms.locfileid: "5816838"
 ---
 # <a name="getting-paid"></a>Recibir pagos
-Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y complementos, como las ganancias de publicidad.
+Es aquí encontrarás información importante sobre cómo recibir el pago de tus aplicaciones, complementos y las ganancias de publicidad.
 
 > [!IMPORTANT]
-> Antes de que recibas dinero por las ventas de aplicaciones en la Microsoft Store, debes [configurar tu cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
+> Antes de que recibas dinero ventas de aplicaciones en Microsoft Store, debes [configurar tu cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Comisión de la Tienda
 
@@ -48,7 +48,7 @@ Recuerda que el precio que seleccionaste puede incluir el impuesto sobre el valo
 
 ## <a name="payout-reporting"></a>Informes de pago
 
-Puedes obtener acceso a los detalles sobre la información de pago y descargar los informes en el **resumen de pago** del panel del Centro de desarrollo de Windows. Para obtener más información sobre la información que se muestra aquí, y sobre cómo que clasificamos el dinero que ganas, consulta [Resumen de pago](payout-summary.md).
+Puedes obtener acceso a los detalles sobre la información de pago y descargar los informes en el **Resumen de pago** del [Centro](https://partner.microsoft.com/dashboard)de partners. Para obtener más información sobre la información que se muestra aquí, y sobre cómo que clasificamos el dinero que ganas, consulta [Resumen de pago](payout-summary.md).
 
 
 ## <a name="payout-timeframe"></a>Período de pago
@@ -65,7 +65,7 @@ Para seleccionar la opción de pagos en suspensión, ve a **Configuración de la
 Una vez hayas establecido el estado de suspensión de pago en **Activado**, todos los pagos estarán en suspensión hasta que cambies el control deslizante por **Desactivado**. Al hacerlo, se te incluirá durante el próximo ciclo de pagos mensual (siempre que se hayas cumplido los umbrales de pago aplicables). Por ejemplo, si has tenido los pagos en suspensión, pero te gustaría que se generara un pago en junio, asegúrate de definir el estado de suspensión del pago en **Desactivado** antes de final de mayo.
 
 > [!NOTE]
-> La selección del **Estado de suspensión de pago** se aplica a **todas** las fuentes de ingresos que se pagan a través del Centro de desarrollo de Windows (Microsoft Store, publicidad, AzureMarketplace, etc.). No puedes seleccionar diferentes estados de suspensión para cada fuente de ingresos.
+> La selección de **estado de suspensión de pago** se aplica a **todas las** fuentes de ingresos que se pagan a través del programa de desarrolladores de Windows en el centro de partners (Microsoft Store, publicidad, Azure Marketplace, etcetera). No puedes seleccionar diferentes estados de suspensión para cada fuente de ingresos.
 
 
  

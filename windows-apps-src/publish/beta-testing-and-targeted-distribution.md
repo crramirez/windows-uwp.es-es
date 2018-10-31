@@ -1,25 +1,25 @@
 ---
 author: jnHs
-Description: The Windows Dev Center dashboard gives you the option to make your app available only to specified people so that you can have testers try it out before you offer it to the public.
+Description: Partner Center gives you several options to let testers try out your app before you offer it to the public.
 title: Pruebas beta y distribución dirigida
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
 ms.author: wdg-dev-content
-ms.date: 05/10/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, prueba beta, distribución limitada, beta, versiones beta, pruebas, evaluadores
 ms.localizationpriority: medium
-ms.openlocfilehash: e57490e2ad9c3991baf40b6c4d15d35def59f94f
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 49641007f939faf333ea5aca357266225f8484c8
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5746748"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5813873"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Pruebas beta y distribución dirigida
 
 No importa lo minucioso que seas al probar la aplicación, no hay nada como una prueba real de su uso por parte de otras personas. Los evaluadores pueden descubrir problemas que hayas pasado por alto, como errores de ortografía, un flujo de aplicación confuso o incluso errores que pueden hacer que la aplicación se bloquee. Luego, tendrás la oportunidad de corregir esos problemas antes de lanzar el envío al público, lo que resulta en un producto final más pulido. 
 
-El Panel del Centro de desarrollo de Windows te ofrece diversas opciones para hacer que un envío de aplicación esté disponible solo para las personas que se especifiquen, de forma que puedas hacer que la prueben los evaluadores antes de ponerla a disposición del público. 
+El centro de partners te ofrece varias opciones para permitir que los evaluadores a probar la aplicación antes de ponerla a disposición del público.
 
 Sea cual sea el método que elijas, estas son algunas cosas que debes tener en cuenta al probar la versión beta de tu aplicación.
 
@@ -33,7 +33,7 @@ Sea cual sea el método que elijas, estas son algunas cosas que debes tener en c
 
 Si quieres permitir que los evaluadores usen tu aplicación antes de que esté disponible para otras personas y asegurarte de que nadie más pueda ver su descripción, usa la opción **Audiencia privada** en [visibilidad](choose-visibility-options.md) (en la página **Precios y disponibilidad** de tu envío). Este es el único método que te permite distribuir tu aplicación a los evaluadores mientras que impide por completo que el resto pueda ver una descripción de Store de la aplicación, incluso si pudieran escribirla en su vínculo directo. 
 
-La opción de **audiencia privada** puede solo puede usarse cuando ya no haya publicado la aplicación a una audiencia pública. Puedes usar esta opción con las aplicaciones destinadas a cualquier versión del sistema operativo, pero los evaluadores deben ejecutar Windows 10, versión 1607 o posterior (incluyendo Xbox One) y deben haber iniciado sesión con la cuenta de Microsoft asociada con la dirección de correo electrónico que proporciones.
+La opción de **audiencia privada** solo puede usarse cuando ya no haya publicado la aplicación a una audiencia pública. Puedes usar esta opción con las aplicaciones destinadas a cualquier versión del sistema operativo, pero los evaluadores deben ejecutar Windows 10, versión 1607 o posterior (incluyendo Xbox One) y deben haber iniciado sesión con la cuenta de Microsoft asociada con la dirección de correo electrónico que proporciones.
 
 Para obtener más información, consulta [Audiencia privada](choose-visibility-options.md#audience).
 
@@ -71,6 +71,8 @@ Para usar esta opción:
 - Después de que tu producto se haya publicado, distribuye el vínculo (la dirección **URL** de la [Página de identidad de la aplicación](view-app-identity-details.md)) a los evaluadores para que puedan probarla.
 - Cuando estés listo para poner la aplicación a disposición del público, crea un nuevo envío y cambia la opción **Visibilidad** a **Hacer disponible y descubrible esta aplicación en Store** (junto con cualquier otro cambio que quieras realizar).
 
+> [!IMPORTANT]
+> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="targeted-distribution-to-windows-phone-customers-with-specified-email-addresses"></a>Distribución dirigida a clientes de Windows Phone con direcciones de correo electrónico específicas
 

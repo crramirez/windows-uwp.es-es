@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
-ms.openlocfilehash: 9448e8f4a61241879b739ff10fd000ea8c130d52
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 086025e46e0e5293e44dda61896fa3fd4ae6115b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5764287"
+ms.locfileid: "5814357"
 ---
 # <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>API de UWP disponibles para una aplicación de escritorio empaquetada
 
@@ -28,7 +28,7 @@ La mayoría de las API de UWP funcionan bien en aplicaciones de escritorio empaq
 <tr><td>Tareas en segundo plano</td><td>Mientras que las aplicaciones empaquetadas pueden registrar tareas en segundo plano, solo las aplicaciones que sean completamente para UWP se pueden ejecutar <i>como</i> una tarea en segundo plano. Para obtener más información, consulta la <a href="https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample">muestra de tarea en segundo plano en GitHub</a>.</td></tr>
 <tr><td>Bluetooth</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Chat y llamadas de teléfono</td><td>Las aplicaciones empaquetadas no se pueden ejecutar en dispositivos móviles hasta que se porten completamente a UWP.</td></tr>
-<tr><td>Activación del contrato</td><td>Solo las aplicaciones que sean completamente para UWP pueden activarse con un contrato.</td></tr>
+<tr><td>Activación del contrato</td><td>Solo las aplicaciones para UWP completas se pueden activar mediante un contrato.</td></tr>
 <tr><td>Criptografía</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Geolocalización</td><td>No todas las API se admiten actualmente en aplicaciones empaquetadas.</td></tr>
 <tr><td>Selectores de archivos y carpetas</td><td>Las aplicaciones empaquetadas tienen acceso completo al sistema de archivos y no necesitas selectores de UWP.</td></tr>

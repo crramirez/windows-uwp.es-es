@@ -4,21 +4,21 @@ Description: You can generate promotional codes for an app or add-on that you ha
 title: Generar códigos de promoción
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ms.author: wdg-dev-content
-ms.date: 08/24/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, código de promoción, códigos de promoción, token, tokens
 ms.localizationpriority: medium
-ms.openlocfilehash: e3a29b38ebb0e00e2c65b9050868ad1e11cc2ab2
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2fe89f65ff4f3278b0ba88ef4c5ca9d22bc67817
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5762654"
+ms.locfileid: "5817967"
 ---
 # <a name="generate-promotional-codes"></a>Generar códigos de promoción
 
 
-Puedes generar códigos de promoción para una aplicación o complemento que hayas publicado en la Microsoft Store. Los códigos de promoción son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o complemento. También podrías usar códigos promocionales para escenarios de servicio de cliente de dirección por lo que da a los usuarios acceso gratuito a la aplicación o complemento, o para [las pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10. 
+[El centro de partners](https://partner.microsoft.com/dashboard) te permite generar códigos promocionales para una aplicación o complemento que hayas publicado en Microsoft Store. Los códigos de promoción son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o complemento. También podrías usar códigos promocionales para escenarios de servicio de cliente de dirección por lo que da a los usuarios acceso gratuito a la aplicación o complemento, o para [las pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10. 
 
 Cada código promocional tiene una correspondiente URL única y canjeable que un cliente puede hacer clic con el fin de canjear el código e instalar la aplicación o complemento desde Microsoft Store.  Recuerda que la aplicación debe pasar a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md) antes de que los clientes puedan canjear un código promocional para instalarla.
 
@@ -45,7 +45,7 @@ Ten en cuenta las siguientes directivas para los códigos de promoción:
 
 Para pedir códigos promocionales para una aplicación o complemento:
 
-1.  En el menú de navegación izquierdo del panel de información del Panel del Centro de desarrollo de Windows, expande **Interactuar** y luego selecciona **Códigos promocionales**.
+1.  En el menú de navegación izquierdo del [Centro](https://partner.microsoft.com/dashboard)de partners, expande **atraer** y, a continuación, selecciona **códigos de promoción**.
 
 2.   En la página **Códigos promocionales**, haz clic en **Pedir códigos**.
 
@@ -64,7 +64,7 @@ Para pedir códigos promocionales para una aplicación o complemento:
 
 Para descargar un pedido completado de códigos promocionales y distribuirlos a los clientes:
 
-1.  En el menú de navegación izquierdo del panel de información del Centro de desarrollo de Windows, expande **Interactuar** y luego selecciona **Códigos promocionales**.
+1.  En el menú de navegación izquierdo del [Centro](https://partner.microsoft.com/dashboard)de partners, expande **atraer** y, a continuación, selecciona **códigos de promoción.**
 2.  Haz clic en el vínculo **Descargar** del pedido del código promocional y luego guarda en el equipo el archivo generado. Este archivo contiene información sobre el pedido de códigos promocionales en formato de valores separados por tabulaciones (.tsv).
 3.  Abre el archivo .tsv en el editor que quieras. Para una mejor experiencia, abre el archivo .tsv en una aplicación que pueda mostrar los datos en una estructura tabular, como MicrosoftExcel. Sin embargo, puedes abrir el archivo en cualquier editor de texto.
 
@@ -103,7 +103,7 @@ Después de que el cliente haga clic en **Canjear**, se abrirá la página de in
 
 ## <a name="review-your-promotional-codes"></a>Revisar los códigos promocionales
 
-Para ver un resumen detallado de pedidos de códigos de promoción para tus aplicaciones y complementos, ve a la página **Promotional codes** (en el menú de navegación izquierdo del panel del Centro de desarrollo, amplía **Atraer** y, a continuación, selecciona **Promo codes**). Puedes revisar la siguiente información para todos tus códigos de promoción actuales e inactivos actuales:
+Para ver un resumen detallado de pedidos de códigos promocionales para tus aplicaciones y complementos, ve a la página de **códigos promocionales** (en el menú de navegación izquierdo del centro de partners, expande **atraer** y, a continuación, selecciona **códigos de promoción**). Puedes revisar la siguiente información para todos tus códigos de promoción actuales e inactivos actuales:
 -   Nombre del pedido
 -   Aplicación o complemento
 -   Fecha de inicio

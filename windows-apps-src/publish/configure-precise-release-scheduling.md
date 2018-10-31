@@ -3,16 +3,16 @@ author: jnHs
 Description: You can set the precise date and time that your app should become available in the Store, giving you greater flexibility and the ability to customize dates for different markets.
 title: Configurar la programación precisa del lanzamiento
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, programación, fecha de lanzamiento, fechas, inicio
 ms.localizationpriority: medium
-ms.openlocfilehash: 910f0aea10e763316bedab7b96b21705c537282c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 6474fc334922d49489c377a0c29841fc45889e1d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5749040"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5816929"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar la programación precisa del lanzamiento
 
@@ -30,7 +30,7 @@ Ten en cuenta que no podrás configurar las fechas en la sección **Programació
 > [!IMPORTANT]
 > Las fechas que especifiques en la sección Programación solo se aplican a los clientes de Windows 10.
 >
->Si la aplicación es compatible con versiones anteriores del sistema operativo, los clientes con esas versiones de sistema operativo verán la descripción de la aplicación en cuanto se supere la certificación y se complete el proceso de publicación, incluso si has seleccionado una fecha de lanzamiento más adelante. Cualquier fecha para **detener la compra** que selecciones no se aplicará a los clientes; todavía podrán comprar la aplicación (a menos que envíes una actualización con una nueva selección en la sección [Visibilidad](choose-visibility-options.md#discoverability), o si seleccionas **Make app unavailable** desde la página **Introducción a la aplicación**).
+>Si la aplicación publicada anteriormente es compatible con versiones anteriores del sistema operativo, cualquier fecha **Detener la compra** que selecciones no se aplicará a los clientes; todavía podrán comprar la aplicación (a menos que envíes una actualización con una nueva selección en la sección [visibilidad](choose-visibility-options.md#discoverability) , o si seleccionas **Make app unavailable** desde la página de **Introducción a la aplicación** ).
 
 
 ## <a name="base-schedule"></a>Programación de base
@@ -60,7 +60,7 @@ En el menú desplegable **Detener la compra**, puedes establecer una fecha y hor
 
 De manera predeterminada, **Detener la compra** siempre está establecida en "Nunca". Para cambiar esta opción, selecciona **En** en la lista desplegable y especifica una fecha y hora, como se ha descrito anteriormente. En la fecha y hora que selecciones, los clientes ya no podrán comprar la aplicación.
 
-Es importante comprender que esta opción tiene el mismo impacto que seleccionar **Make this app discoverable but not available** en la sección [Visibilidad](choose-visibility-options.md#discoverability) y eligiendo **Detener la compra: Los clientes con un vínculo directo podrán ver la descripción del producto en la Store, pero solo podrán descargarlo si ya lo tienen, tienen un código promocional y están usando un dispositivo Windows 10.** Para dejar de ofrecer completamente una aplicación a los clientes nuevos, haz clic en **Make app unavailable** desde la página Información general de la aplicación. Para obtener más información, consulta [Quitar una aplicación de la Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+Es importante comprender que esta opción tiene el mismo impacto como selección de **hacer esta aplicación reconocibles pero no está disponible** en la sección [visibilidad](choose-visibility-options.md#discoverability) y eligiendo **Detener la compra: los clientes con un vínculo directo podrán ver la tienda del producto Descripción, pero solo podrán descargarlo si ya tienen el producto, o tienen un código promocional y están usando un dispositivo Windows 10.** Para dejar de ofrecer completamente una aplicación a los clientes nuevos, haz clic en **Make app unavailable** desde la página Información general de la aplicación. Para obtener más información, consulta [Quitar una aplicación de la Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 > [!TIP]
 > Si seleccionas una fecha para **detener la compra** y, más adelante decides que te gustaría que la aplicación estuviera disponible de nuevo, puedes crear un nuevo envío y cambiar la opción **impedir la compra** a **Nunca**. La aplicación volverá a estar disponible una vez que tu envío actualizado se publique.

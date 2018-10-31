@@ -3,16 +3,16 @@ author: JnHs
 Description: Target specific segments of your customers with personalized content to increase engagement, retention, and monetization.
 title: Usar ofertas dirigidas para maximizar la interacción y las conversiones
 ms.author: wdg-dev-content
-ms.date: 11/10/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, ofertas de destino, ofertas, notificaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: a808f334692d7775a34bc760bcd799cb87d05b6e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 0f6e1f8119522cd0441157131362d860feff3410
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5769081"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5815060"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>Usar ofertas dirigidas para maximizar la interacción y las conversiones
 
@@ -25,7 +25,7 @@ Segmentos específicos de destino de los clientes con contenido personalizado y 
 
 En un nivel elevado, deberás seguir tres pasos para usar las ofertas dirigidas:
 
-1. **Crear la oferta en el panel de información.** Navegar hasta la página para **Interactuar > Ofertas dirigidas** para crear ofertas. A continuación, se describe más información sobre este proceso.
+1. **Crear la oferta en [El centro de partners](https://partner.microsoft.com/dashboard).** Navegar hasta la página para **Interactuar > Ofertas dirigidas** para crear ofertas. A continuación, se describe más información sobre este proceso.
 2. **Implementar la experiencia de la oferta desde la aplicación.** Usa la *API de ofertas dirigidas de Microsoft Store* en el código de la aplicación para recuperar las ofertas disponibles para un usuario determinado. También tendrás que crear la experiencia en la aplicación para la oferta de destino. Para obtener más información, consulta [Administrar ofertas dirigidas usando los servicios de la Tienda](../monetize/manage-targeted-offers-using-windows-store-services.md).
 3. **Envía tu aplicación a la Tienda.** La aplicación debe publicarse con la experiencia de oferta en la aplicación para que las ofertas estén disponibles para los clientes.
 
@@ -34,9 +34,7 @@ Después de completar estos pasos, los clientes que usen la aplicación verán l
 
 ## <a name="to-create-and-send-a-targeted-offer"></a>Crear y enviar una oferta dirigida
 
-Sigue estos pasos para crear una oferta dirigida en el panel de información.
-
-1.  En el panel de información del Centro de desarrollo de Windows, expande **Interactuar** en el panel de navegación izquierdo y luego selecciona **Ofertas dirigidas**.
+1.  En el [Centro de partners](https://partner.microsoft.com/dashboard), expande **interactuar** en el menú de navegación izquierdo y luego selecciona **dirigido ofrece**.
 2.  En la página **Ofertas dirigidas**, revisa las ofertas disponibles. Selecciona **Crear nueva oferta** para cualquier oferta que quieras implementar.
 
     > [!NOTE]
@@ -46,7 +44,7 @@ Sigue estos pasos para crear una oferta dirigida en el panel de información.
 4.  Repite los pasos 2 y 3 si quieres crear más ofertas. Puedes implementar el mismo tipo de oferta más de una vez para la misma aplicación, siempre y cuando selecciones complementos diferentes para cada uno de ellas. Además, puedes asociar el mismo complemento con más de un tipo de oferta.
 5.  Cuando hayas terminado de crear ofertas, haz clic en **Guardar**.
 
-Después de implementar las ofertas, puedes ver el número de total de conversiones para cada oferta en la página **Ofertas dirigidas** en el panel de información.
+Después de implementar las ofertas, puedes volver a la página **dirigido ofertas** del centro de partners para ver el total de conversiones para cada oferta.
 
 Si decides no usar una oferta o si ya no quieres seguir usándola, haz clic en **Eliminar**.
 
