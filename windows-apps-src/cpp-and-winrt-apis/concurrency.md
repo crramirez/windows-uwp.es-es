@@ -7,12 +7,12 @@ ms.date: 10/27/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, simultaneidad, async, asincrónico, asincronía
 ms.localizationpriority: medium
-ms.openlocfilehash: d7807b71f1c775493e525284e61c093081eb2c2b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d59fec17c1e8cc340f630ba236f7361325046ea2
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5754848"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824492"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Operaciones simultáneas y asincrónicas con C++/WinRT
 
@@ -258,7 +258,7 @@ Consulta también [Matrices y vectores estándar](std-cpp-data-types.md#standard
 
 Una corrutina es una función como cualquier otro en que un autor de la llamada se bloquea hasta que una función devuelve la ejecución a ella. Y, en la primera oportunidad para una corrutina devolver es la primera `co_await`, `co_return`, o `co_yield`.
 
-Por lo tanto, antes de realizar trabajos de cálculo en una corrutina, debes devolver la ejecución al llamador (en otras palabras, introducir un punto de suspensión) para que no se bloquea el llamador. Si aún no lo estás haciendo que `co-await`- en alguna otra operación, puedes `co-await` la función [**winrt:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) . Eso devuelve el control a la persona que llama y, a continuación, reanuda inmediatamente en un subproceso del grupo de subprocesos.
+Por lo tanto, antes de realizar trabajos de cálculo en una corrutina, debes devolver la ejecución al llamador (en otras palabras, introducir un punto de suspensión) para que no se bloquea el llamador. Si aún no lo estás haciendo que `co_await`- en alguna otra operación, puedes `co_await` la función [**winrt:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) . Eso devuelve el control a la persona que llama y, a continuación, reanuda inmediatamente en un subproceso del grupo de subprocesos.
 
 El grupo de subprocesos que se va a usar en la implementación es el [grupo de subprocesos de Windows](https://msdn.microsoft.com/library/windows/desktop/ms686766) de bajo nivel, por lo que es eficaz en forma óptima.
 
@@ -309,7 +309,7 @@ IAsyncAction DoWorkAsync(TextBlock const& textblock)
 
 Mientras se llame la corrutina anterior desde el subproceso de interfaz de usuario que creó **TextBlock**, esta técnica funciona. Habrá muchos casos en la aplicación en los que estés seguro de ello.
 
-Una solución más general para actualizar la interfaz de usuario, que cubre los casos donde no estás seguro sobre el subproceso de llamada, puedes `co-await` la función [**winrt:: resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) para cambiar a un subproceso en primer plano específico. En el siguiente ejemplo de código, especificamos el subproceso de primer plano, pasando el objeto del distribuidor asociado a **TextBlock** (mediante el acceso a su propiedad [**Dispatcher**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher)). La implementación de **winrt::resume_foreground** llama a [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync) en ese objeto de distribuidor para ejecutar el trabajo que viene después de él en la corrutina.
+Una solución más general para actualizar la interfaz de usuario, que cubre los casos donde no estás seguro sobre el subproceso de llamada, puedes `co_await` la función [**winrt:: resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) para cambiar a un subproceso en primer plano específico. En el siguiente ejemplo de código, especificamos el subproceso de primer plano, pasando el objeto del distribuidor asociado a **TextBlock** (mediante el acceso a su propiedad [**Dispatcher**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher)). La implementación de **winrt::resume_foreground** llama a [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync) en ese objeto de distribuidor para ejecutar el trabajo que viene después de él en la corrutina.
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
@@ -328,7 +328,7 @@ IAsyncAction DoWorkAsync(TextBlock const& textblock)
 
 En términos generales, después de un punto de suspensión en una corrutina, el subproceso original de ejecución puede desaparecer y reanudación puede producirse en cualquier subproceso (en otras palabras, cualquier subproceso puede llamar al método **Completed** para la operación asincrónica).
 
-Pero si te `co-await` cualquiera de los tipos de operación asincrónica de Windows Runtime cuatro (**IAsyncXxx**), a continuación, C++ / WinRT captura el contexto de llamada en el punto `co-await`. Y garantiza que estás aún en ese contexto cuando se reanuda la continuación. C++ / WinRT hace esto al comprobar si ya estás en el contexto de llamada y, si no, cambiar a ella. Si estabas en un subproceso de contenedor uniproceso (STA) antes de `co-await`, a continuación, estarás más tarde; en el mismo Si estabas en un subproceso de contenedor multiproceso (MTA) antes de `co-await`, a continuación, estarás más adelante en uno.
+Pero si te `co_await` cualquiera de los tipos de operación asincrónica de Windows Runtime cuatro (**IAsyncXxx**), a continuación, C++ / WinRT captura el contexto de llamada en el punto `co_await`. Y garantiza que estás aún en ese contexto cuando se reanuda la continuación. C++ / WinRT hace esto al comprobar si ya estás en el contexto de llamada y, si no, cambiar a ella. Si estabas en un subproceso de contenedor uniproceso (STA) antes de `co_await`, a continuación, estarás más tarde; en el mismo Si estabas en un subproceso de contenedor multiproceso (MTA) antes de `co_await`, a continuación, estarás más adelante en uno.
 
 ```cppwinrt
 IAsyncAction ProcessFeedAsync()

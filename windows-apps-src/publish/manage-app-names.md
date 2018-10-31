@@ -8,19 +8,19 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: Windows 10, uwp, nombres de aplicación, cambiar el nombre de la aplicación, el nombre de la aplicación de actualización, el nombre del juego, nombre del producto
 ms.localizationpriority: medium
-ms.openlocfilehash: c7af04b8509dff57c65bf3a5ce74b4ba9cde4463
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: b35db620956e99791d03fb2d25dea8682d4ffaac
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766246"
+ms.locfileid: "5826700"
 ---
 # <a name="manage-app-names"></a>Administrar nombres de aplicación
 
-Lo **nombres de aplicación de administrar** le permite ver todos los nombres que has reservado para tu aplicación, reservar nombres adicionales (para otros idiomas o para cambiar el nombre de la aplicación) y eliminar nombres no es necesario. Puedes encontrar esta página en el [panel del centro de desarrollo de Windows](https://partner.microsoft.com/dashboard) , expande la sección de **administración de aplicaciones** en el menú de navegación izquierdo para cualquiera de las aplicaciones.
+Lo **nombres de aplicación de administrar** le permite ver todos los nombres que has reservado para tu aplicación, reservar nombres adicionales (para otros idiomas o para cambiar el nombre de la aplicación) y eliminar nombres no es necesario. Puedes encontrar esta página del [Centro](https://partner.microsoft.com/dashboard) de partners, expande la sección de **administración de aplicaciones** en el menú de navegación izquierdo para cualquiera de las aplicaciones.
 
 > [!IMPORTANT]
-> Puedes reservar nombres adicionales para una aplicación, y puedes optar por usar uno de ellos en la versión publicada de la aplicación en lugar de la reservado cuando se crea por primera vez la aplicación en el panel. Sin embargo, ten en cuenta que se usará el nombre que reservas para tu producto en algunos de TI de [Detalles de identidad](view-app-identity-details.md), como el **Nombre de familia de paquete (PFN)**. Estos valores pueden ser visibles para algunos usuarios y no se puede cambiar, así que asegúrate de que el nombre que reservas en primer lugar es apropiado para este uso.
+> Puedes reservar nombres adicionales para una aplicación, y puedes optar por usar uno de ellos en la versión publicada de la aplicación en lugar de la que reserva cuando se crea por primera vez la aplicación Centro de partners. Sin embargo, ten en cuenta que se usará el nombre que reservas para tu producto en algunos de TI de [Detalles de identidad](view-app-identity-details.md), como el **Nombre de familia de paquete (PFN)**. Estos valores pueden ser visibles para algunos usuarios y no se puede cambiar, así que asegúrate de que el nombre que reservas en primer lugar es apropiado para este uso.
 
 
 ## <a name="reserve-additional-names-for-your-app"></a>Reservar más nombres para la aplicación
@@ -39,7 +39,7 @@ Si ya no quieres usar un nombre que has reservado previamente, puedes liberarlo 
 
 Para eliminar uno de los nombres reservados de la aplicación, busca el nombre que quieres dejar de usar y haz clic en **Eliminar**. En el cuadro de diálogo de confirmación, vuelve a hacer clic en **Eliminar** para confirmar.
 
-Ten en cuenta que la aplicación debe tener al menos un nombre reservado. Para completamente quitar una aplicación del panel de información (y liberar todos los nombres reservados de la aplicación), haz clic en **Eliminar esta aplicación** desde la página de **Introducción a la aplicación** . Si tienes un envío de la aplicación en curso, primero deberás eliminarlo. Ten en cuenta que si ya has publicado la aplicación a la tienda, no puedes eliminarla del panel de información (aunque puedes usar la funcionalidad de **Mostrar u ocultar productos** en la página de **Introducción** para ocultarla). 
+Ten en cuenta que la aplicación debe tener al menos un nombre reservado. Para quitar completamente una aplicación del centro de partners (y liberar todos los nombres reservados de la aplicación), haz clic en **Eliminar esta aplicación** desde la página de **Introducción a la aplicación** . Si tienes un envío de la aplicación en curso, primero deberás eliminarlo. Ten en cuenta que si ya has publicado la aplicación a la tienda, no puedes eliminarla del centro de partners (aunque puedes usar la funcionalidad de **Mostrar u ocultar productos** en la página de **Introducción** para ocultarla). 
 
 
 ## <a name="rename-an-app-that-has-already-been-published"></a>Cambiar el nombre de una aplicación ya publicada
@@ -60,7 +60,7 @@ Para actualizar una descripción de la tienda para que usa el nuevo nombre, ve a
 Una vez que se ha publicado la aplicación con el nuevo nombre, puedes eliminar cualquier nombre anterior que ya no necesitas usar.
 
 > [!TIP]
-> Cada aplicación aparece en el panel con el nombre que reservado para ella. Si has seguido los pasos anteriores para cambiar el nombre de una aplicación, y quieres que aparezca en el panel con el nuevo nombre, debe eliminar el nombre original (haciendo clic en **Eliminar** en la página **Administrar nombres de aplicación** ). 
+> Cada aplicación aparece en el centro de partners con el nombre que reservado para ella. Si has seguido los pasos anteriores para cambiar el nombre de una aplicación, y quieres que aparezca en el centro de partners con el nuevo nombre, debe eliminar el nombre original (haciendo clic en **Eliminar** en la página **Administrar nombres de aplicación** ). 
 
  
 

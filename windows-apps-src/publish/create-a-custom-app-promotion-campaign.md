@@ -4,22 +4,22 @@ description: Además de crear una campaña publicitaria para tu aplicación que 
 title: Crear una campaña de promoción de la aplicación personalizada
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
 ms.author: wdg-dev-content
-ms.date: 09/27/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, personalizada, aplicación, promoción, campaña
 ms.localizationpriority: medium
-ms.openlocfilehash: 0349833c012789b55d33575702390f264335aa2f
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747466"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824847"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Crear una campaña de promoción de la aplicación personalizada
 
 Además de crear una [campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md) que se ejecutará en aplicaciones de Windows, también puedes promocionar tu aplicación en otros canales. Por ejemplo, puedes promocionarla mediante proveedores de marketing para aplicaciones, o publicar vínculos a la aplicación en sitios de redes sociales. Estas actividades se denominan *campañas personalizadas*.
 
-Si realizas campañas personalizadas para tu aplicación, puedes hacer un seguimiento del rendimiento relativo de cada una creando una dirección URL para cada campaña personalizada, de manera que cada URL contenga un *identificador de campaña* distinto. Cuando un cliente que ejecuta Windows 10 hace clic en una dirección URL que contiene un identificador de campaña, Microsoft asocia el clic a la campaña personalizada correspondiente y tendrás los datos disponibles para TI.
+Si realizas campañas personalizadas para tu aplicación, puedes hacer un seguimiento del rendimiento relativo de cada una creando una dirección URL para cada campaña personalizada, de manera que cada URL contenga un *identificador de campaña* distinto. Cuando un cliente que ejecuta Windows 10 hace clic en una dirección URL que contiene un identificador de campaña, Microsoft asocia el clic a la campaña personalizada correspondiente y tendrás los datos disponibles para TI del [Centro](https://partner.microsoft.com/dashboard)de partners.
 
 > [!IMPORTANT]
 > Estos datos se solo realiza un seguimiento de los clientes en Windows 10. Los clientes que usen otros sistemas operativos pueden seguir el vínculo a la descripción de la aplicación, pero no se incluirán los datos acerca de sus actividades.
@@ -28,7 +28,7 @@ Hay dos tipos principales de datos asociados a las campañas personalizadas: las
 
 Puedes recuperar los datos de rendimiento de una campaña personalizada para tu aplicación de las siguientes maneras:
 
-* Puedes ver los datos sobre las vistas de página y conversiones de la aplicación o complemento en los gráficos **Vistas de página y conversiones de la aplicación por identificador de campaña** y **Total de conversiones de campaña** del [Informe Adquisiciones](acquisitions-report.md) en el panel de información del Centro de desarrollo.
+* Para ver los datos sobre las vistas de página y conversiones de la aplicación o complemento desde los gráficos de **vistas de página y conversiones por identificador de campaña** y **conversiones de campaña Total** en el [informe de adquisiciones](acquisitions-report.md).
 * Si es una aplicación de la Plataforma universal de Windows (UWP), puedes usar las API del WindowsSDK para recuperar mediante programación el identificador de campaña personalizada que resultó en una conversión.
 
 ## <a name="example-custom-campaign-scenario"></a>Ejemplo de escenario de campaña personalizada
@@ -47,9 +47,9 @@ A medida que sus seguidores en Facebook y Twitter usen las direcciones URL, Micr
 
 ## <a name="understanding-how-acquisitions-qualify-as-conversions"></a>Qué adquisiciones se califican como conversiones
 
-Una *conversión* de una campaña personalizada es una adquisición producida porque el cliente ha hecho clic en una URL promocionada mediante una campaña personalizada. Existen diferentes situaciones para que una instalación se califique como conversión para los gráficos **Vistas de página y conversiones de la aplicación por identificador de campaña** y **Total de conversiones de campaña** en el [Informe Adquisiciones](acquisitions-report.md) del panel de información del Centro de desarrollo y para que se califique como conversión para la [recuperación mediante programación del identificador de campaña](#programmatically).
+Una *conversión* de una campaña personalizada es una adquisición producida porque el cliente ha hecho clic en una URL promocionada mediante una campaña personalizada. Existen diferentes escenarios para que se califique como conversión para los gráficos de **vistas de página y conversiones por identificador de campaña** y **conversiones de campaña Total** en el [informe de adquisiciones](acquisitions-report.md) y para que se califique como conversión para [ el identificador de campaña se recupere mediante programación](#programmatically).
 
-### <a name="qualifying-conversions-in-the-dashboard-report"></a>Conversiones calificadas para el informe de panel de información
+### <a name="qualifying-conversions-in-the-acquisitions-report"></a>Conversiones calificadas el informe de adquisiciones
 
 Las siguientes situaciones califican como conversión para los gráficos **Vistas de página y conversiones de la aplicación por identificador de campaña** y **Total de conversiones de campaña** en el [Informe Adquisiciones](acquisitions-report.md):
 
@@ -195,4 +195,4 @@ Antes de que promociones la dirección URL de una campaña personalizada, te rec
 
 3.  Haz clic en la dirección URL varias veces más y cierra la aplicación para UWP o la página del navegador después de cada visita a la página de tu aplicación. Durante **una** de las visitas a la página de tu aplicación, adquiere la aplicación para generar una conversión. Cuenta el número total de veces que has hecho clic en la dirección URL.
 
-4. Confirma si las conversiones y vistas de página esperadas aparecen en los gráficos **Vistas de página y conversiones de la aplicación por identificador de campaña** y **Total de conversiones de campaña** en el [Informe Adquisiciones](acquisitions-report.md) del panel de información del Centro de desarrollo, y prueba el código de tu aplicación para comprobar si puede recuperar correctamente el identificador de campaña con las API indicadas anteriormente.
+4. Confirma si las conversiones y vistas de página esperadas aparecen en los gráficos de **vistas de página y conversiones por identificador de campaña** y **Total de conversiones de campaña** en el [informe de adquisiciones](acquisitions-report.md)y probar el código de la aplicación para confirmar si es posible recuperar correctamente el identificador de campaña con las API que se ha descrito anteriormente.

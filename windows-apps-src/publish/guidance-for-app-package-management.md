@@ -4,16 +4,16 @@ Description: Learn how your app's packages are made available to your customers,
 title: Instrucciones para la administración de paquetes de la aplicación
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 ms.author: wdg-dev-content
-ms.date: 10/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dd775b1fa653df5aca9b4738249757c052c181ed
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: e625522b0e9fd03fda49eb28bbedb20c00c15634
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5764416"
+ms.locfileid: "5840689"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientación para administrar paquetes de la aplicación
 
@@ -30,52 +30,10 @@ Descubre cómo se ponen los paquetes de la aplicación a disposición de los cli
 
 Distintos sistemas operativos pueden ejecutar distintos tipos de paquetes. Si en el dispositivo de un cliente puede ejecutarse más de uno de los paquetes, Microsoft Store proporcionará el más apropiado.
 
-En general, las versiones más posteriores del sistema operativo pueden ejecutar paquetes destinados a versiones anteriores del sistema operativo de la misma familia de dispositivos. Sin embargo, los clientes solo obtendrán esos paquetes si la aplicación no incluye un paquete destinado a su versión del sistema operativo actual.
+En general, las versiones más posteriores del sistema operativo pueden ejecutar paquetes destinados a versiones anteriores del sistema operativo de la misma familia de dispositivos. Dispositivos de Windows 10 pueden ejecutar todas las versiones anteriores compatibles del sistema operativo (por familia de dispositivos). Dispositivos de escritorio de Windows 10 pueden ejecutar las aplicaciones que se han creado para Windows8.1 o Windows8; Los dispositivos móviles Windows 10 pueden ejecutar las aplicaciones que se han creado para Windows Phone 8.1, WindowsPhone8 e incluso de Windows Phone 7.x. Sin embargo, los clientes de Windows 10 solo obtendrán esos paquetes si la aplicación no incluye paquetes para UWP destinada a la familia de dispositivos aplicables.
 
-Por ejemplo, los dispositivos de Windows 10 pueden ejecutar todas las versiones anteriores compatibles del sistema operativo (por familia de dispositivos). Dispositivos de escritorio de Windows 10 pueden ejecutar las aplicaciones que se han creado para Windows8.1 o Windows8; Los dispositivos móviles Windows 10 pueden ejecutar las aplicaciones que se han creado para Windows Phone 8.1, WindowsPhone8 e incluso de Windows Phone 7.x. 
-
-En los siguientes ejemplos se muestran varios escenarios para una aplicación que incluye paquetes destinados a diferentes versiones del sistema operativo (a menos que las limitaciones específicas de los paquetes no permitan su ejecución en cada tipo de versión o dispositivo de sistema operativo que aquí se indican; por ejemplo, la arquitectura del paquete debe ser adecuada para el dispositivo). 
-
-### <a name="example-app-1"></a>Ejemplo de aplicación 1
-
-| Sistema operativo de destino del paquete | Sistemas operativos que obtendrán este paquete |
-|-------------------------------------|----------------------------------------------|
-| Windows8.1                         | Dispositivos de escritorio de Windows 10, Windows8.1      |
-| Windows Phone 8.1                   | Dispositivos móviles Windows 10, Windows Phone 8.1 |
-| WindowsPhone8                     | WindowsPhone8                              |
-| Windows Phone 7.1                   | Windows Phone 7.x                            |
-
-En el ejemplo de aplicación 1, la aplicación aún no tiene los paquetes de la plataforma Universal de Windows (UWP) creados específicamente para dispositivos de Windows 10, pero los clientes de Windows 10 podrán obtener igualmente la aplicación. Obtendrán los mejores paquetes disponibles para su tipo de dispositivo.
-
-### <a name="example-app-2"></a>Ejemplo de aplicación 2
-
-| Sistema operativo de destino del paquete  | Sistemas operativos que obtendrán este paquete |
-|--------------------------------------|----------------------------------------------|
-| Windows 10 (familia de dispositivos universal) | Windows 10 (todas las familias de dispositivo)             |
-| Windows8.1                          | Windows8.1                                  |
-| Windows Phone 8.1                    | Windows Phone 8.1                            |
-| Windows Phone 7.1                    | Windows Phone 7.x, WindowsPhone8           |
-
-En el ejemplo de aplicación 2, no hay ningún paquete que se puede ejecutar en Windows8. Los clientes que ejecutan cualquier otra versión de sistema operativo pueden obtener la aplicación. Todos los clientes con Windows 10 recibirán el mismo paquete.
-
-### <a name="example-app-3"></a>Ejemplo de aplicación 3
-
-| Sistema operativo de destino del paquete | Sistemas operativos que obtendrán este paquete                  |
-|-------------------------------------|---------------------------------------------------------------|
-| Windows 10 (familia de dispositivos de escritorio)  | Dispositivos de escritorio de Windows 10                                    |
-| WindowsPhone8                     | Dispositivos móviles Windows 10, WindowsPhone8, Windows Phone 8.1 |
-
-En el ejemplo de aplicación 3, ya que no hay ningún paquete para UWP destinado a la familia de dispositivos móviles, los clientes con dispositivos móviles de Windows 10 recibirán el paquete WindowsPhone8. Si esta aplicación agrega más adelante un paquete destinado a la familia de dispositivos móviles (o la familia de dispositivos universal), que el paquete, a continuación, estará disponible para los clientes con dispositivos móviles de Windows 10 en lugar del paquete WindowsPhone8.
-
-Ten en cuenta también que esta aplicación de ejemplo no incluye ningún paquete que se puede ejecutar en Windows Phone 7.x.
-
-### <a name="example-app-4"></a>Ejemplo de aplicación 4
-
-| Sistema operativo de destino del paquete  | Sistemas operativos que obtendrán este paquete |
-|--------------------------------------|----------------------------------------------|
-| Windows 10 (familia de dispositivos universal) | Windows 10 (todas las familias de dispositivo)             |
-
-En el ejemplo de aplicación 4, cualquier dispositivo que ejecute Windows 10 podrán obtener la aplicación, pero no estará disponible para los clientes con versiones anteriores del sistema operativo. Dado que el paquete para UWP está destinado a la familia de dispositivos universal, estará disponible para cualquier dispositivo Windows 10 (por las [selecciones de disponibilidad de familias de dispositivos](device-family-availability.md)).
+> [!IMPORTANT]
+> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/).
 
 
 ## <a name="removing-an-app-from-the-store"></a>Quitar una aplicación de Store
@@ -89,7 +47,7 @@ Esta opción tiene el mismo efecto que si hubieras creado un envío y hubieras e
 
 Ten en cuenta que los clientes que ya tengan la aplicación podrán seguir usándola y podrás volver a descargarla (y podrían incluso recibir actualizaciones si envías nuevos paquetes más adelante).
 
-Después de hacer que la aplicación deje de estar disponible, la seguirás viendo en el panel. Si decides volver a ofrecer la aplicación a los clientes, puedes hacer clic en **Make app available** en la página de información general de la aplicación. Después de confirmar la acción, la aplicación estará disponible para los nuevos clientes (a menos que la configuración de tu último envío lo impida) en cuestión de horas.
+Después de que la aplicación está disponible, aún tendrás verla en el centro de partners. Si decides volver a ofrecer la aplicación a los clientes, puedes hacer clic en **Make app available** en la página de información general de la aplicación. Después de confirmar la acción, la aplicación estará disponible para los nuevos clientes (a menos que la configuración de tu último envío lo impida) en cuestión de horas.
 
 > [!NOTE]
 > Si quieres que tu aplicación siga estando disponible, pero no quieres seguir ofreciéndola a los nuevos clientes con una versión de sistema operativo determinada, puedes crear un nuevo envío y quitar todos los paquetes de la versión de sistema operativo para la que quieres impedir nuevas compras. Por ejemplo, si anteriormente tenías paquetes para Windows Phone 8.1 y Windows 10 y no quieres seguir ofreciendo la aplicación a los clientes nuevos de WindowsPhone8.1, quita todos los paquetes de WindowsPhone8.1 del envío. Después se publique la actualización, ningún cliente nuevo en WindowsPhone8.1 no podrá comprar la aplicación, aunque los clientes que ya la tengan podrán seguir usándola). Sin embargo, la aplicación seguirá estando disponible para los clientes nuevos de Windows 10.

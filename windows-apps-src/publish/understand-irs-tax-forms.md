@@ -3,17 +3,17 @@ author: jnHs
 Description: Learn about the tax forms issued by Microsoft, including who will receive them and when they are made available.
 title: Descripción de los formularios fiscales del IRS emitidos por Microsoft
 ms.author: wdg-dev-content
-ms.date: 10/25/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, impuestos, irs, servicio de impuestos internos, impuesto, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: e16333b061c3f50d4c0d66b0704bf0977570595e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 326de9b3160f492566306b18252bbc3bacf58531
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742155"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5836073"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 
@@ -25,8 +25,8 @@ A continuación, explicaremos más sobre estos formularios, incluidos sus destin
 
 | Formulario fiscal del IRS | Descripción | Disponibilidad |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Se relacionan con la actividad de venta o los pagos realizados a raíz de la participación en los catálogos de soluciones de Microsoft. | Los formularios impresos se sellarán el **31 de enero** o antes y las copias en formato PDF estarán disponibles en el Centro de desarrollo (**Panel > Configuración de la cuenta > Perfil fiscal**) al mismo tiempo. |
-|1042-S | Se relaciona con los pagos que te efectuamos que están sujetos a la retención de impuestos de Estados Unidos. | Los formularios impresos se sellarán el **15 de marzo** o antes y las copias en formato PDF estarán disponibles en el Centro de desarrollo (**Panel > Configuración de la cuenta > Perfil fiscal**) al mismo tiempo. |
+|1099-MISC, 1099-K | Se relacionan con la actividad de venta o los pagos realizados a raíz de la participación en los catálogos de soluciones de Microsoft. | Formularios impresos se sellarán o antes **del 31 de enero**y copias en formato PDF estarán disponibles en [El centro de partners](https://partner.microsoft.com/dashboard) (en **configuración de la cuenta > perfil fiscal**) al mismo tiempo |
+|1042-S | Se relaciona con los pagos que te efectuamos que están sujetos a la retención de impuestos de Estados Unidos. | Formularios impresos se sellarán en o antes **del 15 de marzo**y copias en formato PDF estarán disponibles en el centro de partners (en **configuración de la cuenta > perfil fiscal**) al mismo tiempo |
 
 > [!NOTE]
 > La dirección que se usa en los formularios fiscales del IRS proviene de la dirección en tu [perfil fiscal](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Si ha cambiado tu dirección, asegúrate de actualizarla en tu **Perfil fiscal**.
@@ -106,7 +106,7 @@ Recibí al menos 600USD por pagos no relacionados con las ventas de aplicaciones
     <td valign="top"><b>¿Por qué se retuvieron impuestos en mis pagos si he completado un formulario W8?</b></td>
     <td valign="top">La retención de impuestos se realiza si:<br>
      1. No completaste correctamente la sección de tratado fiscal del formulario W8 o<br>
-     2. Resides en un país que no tiene un tratado fiscal con los Estados Unidos.<br><br>Puedes visitar el centro de desarrollo en cualquier momento para enviar un formulario W8 actualizado.<br><br><b>Nota</b>: no todos los ingresos están sujeto a retención de impuestos.</td>
+     2. Resides en un país que no tiene un tratado fiscal con los Estados Unidos.<br><br>Puedes visitar el centro de partners en cualquier momento para enviar un formulario W8 actualizado.<br><br><b>Nota</b>: no todos los ingresos están sujeto a retención de impuestos.</td>
   </tr>
   <tr>
     <td valign="top"><b>Envié un formulario W8 actualizado con información válida sobre el tratado. ¿Puede Microsoft reembolsarme los impuestos retenidos?</b></td>

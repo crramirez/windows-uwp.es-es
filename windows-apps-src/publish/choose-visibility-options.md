@@ -3,16 +3,16 @@ author: jnHs
 Description: Set restrictions on how your app can be discovered and acquired, including whether people can find your app in the Store or see its Store listing at all.
 title: Elegir las opciones de visibilidad
 ms.author: wdg-dev-content
-ms.date: 08/10/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, visibilidad, audiencia privada, disponible, descubrible
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a83f1ea4547e60547e427cedd5ad5338e450762
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ec6bc85c15ccf9926939c3bc2e208289c8dc4bcc
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757990"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5826607"
 ---
 # <a name="choose-visibility-options"></a>Elegir las opciones de visibilidad
 
@@ -60,7 +60,7 @@ Estas son algunas cosas importantes que debes tener en cuenta al elegir distribu
 - La aplicación no estará disponible a través de Microsoft Store para Empresas y/o Microsoft Store para Educación, independientemente de la configuración de licencias de organización, incluso para las personas de tu público privado.
 - Mientras que Store garantizará que tu aplicación solo será visible y estará disponible para las personas que hayan iniciado sesión con una cuenta de Microsoft que hayas agregado a tu audiencia privada, no podemos impedir que esas personas compartan información o capturas de pantalla fuera de tu audiencia privada. Cuando la confidencialidad es fundamental, asegúrate de que tu audiencia privada incluya solo las personas que confíes que no compartirán detalles sobre la aplicación con otras personas.
 - Asegúrate de que los evaluadores sepan cómo enviarte sus comentarios. Probablemente no quieras que dejen comentarios en el Centro de opiniones, porque cualquier otro cliente podría verlos. Plantéate incluir un vínculo para que ellos envíen correos electrónicos o proporcionen comentarios de cualquier otra forma.
-- Cualquier opinión escrita por personas de tu audiencia privada estará disponible para que puedas verla. Sin embargo, estas reseñas no se publicarán en la descripción de Store de tu aplicación, incluso después de que el envío se pase a **Audiencia pública**. Puedes leer críticas escritas de tu audiencia privada viendo el [Informe de críticas](reviews-report.md) en el Centro de desarrollo, pero no se pueden descargar estos datos ni usar la [API de análisis de Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) para acceder programáticamente a estas críticas.
+- Cualquier opinión escrita por personas de tu audiencia privada estará disponible para que puedas verla. Sin embargo, estas reseñas no se publicarán en la descripción de Store de tu aplicación, incluso después de que el envío se pase a **Audiencia pública**. Puedes leer críticas escritas de tu audiencia privada viendo el [informe de opiniones](reviews-report.md), pero no se pueden descargar estos datos ni usar la [API de análisis de Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) para obtener acceso mediante programación a estas críticas.
 - Al mover una aplicación de **Audiencia privada** a **Audiencia pública**, la **Fecha de lanzamiento** que se mostrará en la descripción de Store será la fecha en la que se publicó por primera vez para la audiencia pública.
 
 ## <a name="discoverability"></a>Detectabilidad

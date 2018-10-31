@@ -1,27 +1,27 @@
 ---
 author: jnHs
-Description: The Xbox analytics report in the Windows Dev Center dashboard shows you statistics about how your customers are engaging with the Xbox features in your product.
+Description: The Xbox analytics report in Partner Center shows you statistics about how your customers are engaging with the Xbox features in your product.
 title: Informe de análisis de Xbox
 ms.author: wdg-dev-content
-ms.date: 06/04/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, análisis de xbox, análisis dinámicos de xbox, estadística de xbox
 ms.localizationpriority: medium
-ms.openlocfilehash: e3a5ec3c81b9cddce4c38ad7f764d35bd6f34f86
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: c2c1f54a402fc4ae7184f1d588cc255525f762c2
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748015"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5827398"
 ---
 # <a name="xbox-analytics-report"></a>Informe de análisis de Xbox
 
-En el informe de **análisis de Xbox** del Panel del centro de desarrollo de Windows se muestran estadísticas sobre la manera en que tus clientes interactúan con las características de Xbox en tu juego. También proporciona información sobre el estado del servicio para ayudarte a solucionar errores de cliente.
+El informe de **análisis de Xbox** en [El centro de partners](https://partner.microsoft.com/dashboard) muestra estadísticas sobre cómo los clientes interactúan con las características de Xbox en tu juego. También proporciona información sobre el estado del servicio para ayudarte a solucionar errores de cliente.
 
 > [!IMPORTANT]
 > Solo verás este informe si publicas un juego para Xbox o un juego que usa servicios de Xbox Live. Para ello, debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [los partners de Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través de la [ ID@Xbox programa](../xbox-live/developer-program-overview.md#id). Juegos publicados a través del [Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) no son visibles actualmente en este informe.
 
-Para ver el informe de **Análisis de Xbox** en el menú de navegación izquierdo para tu juego, expande **Análisis** y selecciona **Análisis de Xbox**.  Puedes ver estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
+Puedes ver el informe de **análisis de Xbox** en el menú de navegación izquierdo para tu juego expandiendo **analizar** y seleccionando el **análisis de Xbox**.  Puedes ver estos datos en el centro de partners, o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
 
 ## <a name="overview-tab"></a>Pestaña Introducción

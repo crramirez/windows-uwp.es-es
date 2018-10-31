@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: ed2d84d6892f25dd37ae9a8992238f2fc8fe6a53
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 37d43094ba679ebe5439996373626522590e3fcc
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767138"
+ms.locfileid: "5826378"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Crear un juego para UWP en MonoGame 2D
 
@@ -68,7 +68,7 @@ Una vez creado el proyecto, abre el archivo **Game1.cs** desde el **Explorador d
 
 **protected override void UnloadContent()** Este método se usa para descargar contenido que no es del Administrador de contenido. Este método no lo usamos.
 
-**protected override void Update(GameTime gameTIme)** Este método se llama una vez durante cada ciclo del bucle del juego. Aquí se actualizan los estados de cualquier objeto o variable que se usa en el juego. Incluye cosas como las posición, la velocidad o el color de un objeto. Aquí también se controla la entrada de usuario. En resumen, este método controla todas las partes de la lógica del juego, excepto el dibujo de objetos en la pantalla.
+**protected override void Update (GameTime gameTime)** Este método se llama una vez durante cada ciclo del bucle del juego. Aquí se actualizan los estados de cualquier objeto o variable que se usa en el juego. Incluye cosas como las posición, la velocidad o el color de un objeto. También es donde se controla la entrada del usuario. En resumen, este método controla todas las partes de la lógica del juego, excepto el dibujo de objetos en la pantalla.
 **protected override void Draw(GameTime gameTime)** Aquí es donde se dibujan los objetos en la pantalla, mediante el uso de las posiciones que proporciona el método Update.
 
 ## <a name="draw-a-sprite"></a>Dibujar un sprite
@@ -82,7 +82,7 @@ En este caso, el primer sprite va a ser muy aburrido. [Haz clic aquí para desca
 - Abre el **Explorador de soluciones**
 - Haz clic con el botón derecho en **Content.mgcb** en la carpeta **Contenido** y selecciona **Abrir con**. En el menú emergente, selecciona **Canalización de Monogame** y selecciona **Aceptar**.
 - En la ventana nueva, haz clic con el botón derecho en el elemento **Contenido** y selecciona **Agregar -> Elemento existente**.
-- Localiza y selecciona el rectángulo verde en el explorador de archivos
+- Busca y selecciona el rectángulo verde en el Explorador de archivos.
 - Asígnale un nombre al elemento “grass.png” y selecciona **Agregar**.
 
 ### <a name="3-add-class-variables"></a>3. Agregar variables de clase
@@ -325,8 +325,8 @@ broccoli = new SpriteClass(GraphicsDevice, "Content/broccoli.png", ScaleToHighDP
 
 La imagen del brécol es un poco más grande de lo que queríamos, así que la reduciremos verticalmente a 0,2 veces su tamaño original.
 
-### <a name="5-program-obstacle-behavior"></a>5. Programar el comportamiento del obstáculo
-Queremos que el brécol se genere fuera de pantalla y se dirija hacia el avatar del jugador para que tenga que esquivarlo. Para esto, agrega este método a la clase **Game1.cs**:
+### <a name="5-program-obstacle-behaviour"></a>5. comportamiento del obstáculo programa
+Queremos que el brécol se genere fuera de pantalla y se dirija hacia el avatar del jugador para que tenga que esquivarlo. Para ello, agrega este método a la clase **Game1.cs** :
 
 ```CSharp
 public void SpawnBroccoli()
@@ -430,7 +430,7 @@ La primera cierra el juego si se pulsa la tecla **Escape**.
 
 La segunda, inicia el juego si se presiona la **barra espaciadora** y el juego todavía no comenzó.
 
-La tercera hace que el avatar del dinosaurio salte si se pulsa la **barra espaciadora**, al modificar su propiedad **dY**. Ten en cuenta que el jugador no puede saltar, a no ser que esté en el "suelo" (dino.y = screenHeight * SKYRATIO), y tampoco saltará si la barra espaciadora se está manteniendo pulsada en lugar de pulsarla solo una vez. Esto impide que el dinosaurio salte tan pronto como comienza el juego, aprovechándose del mismo toque que inicia el juego.
+La tercera hace que el avatar del dinosaurio salte si se pulsa la **barra espaciadora**, al modificar su propiedad **dY**. Ten en cuenta que el jugador no puede saltar a menos que estén en el "suelo" (dino.y = screenHeight * SKYRATIO) y tampoco saltará si la barra espaciadora se está sosteniendo hacia abajo en lugar de una vez está presionada. Esto impide que el dinosaurio salte tan pronto como comienza el juego, aprovechándose del mismo toque que inicia el juego.
 
 Por último, la cláusula if/else permite comprobar si las flechas izquierda y derecha se están presionando y, si es el caso, cambia la propiedad **dX** del dinosaurio consecuentemente.
 
@@ -484,9 +484,9 @@ broccoli.Draw(spriteBatch);
 dino.Draw(spriteBatch);
 ```
 
-En MonoGame, las llamadas nuevas de **spriteBatch.Draw** prevalecerán sobre cualquier llamada anterior. Esto significa que tanto el sprite del brécol como el del dinosaurio prevalecerán sobre el sprite del césped existente, para que nunca puedan esconderse independientemente de su posición.
+En MonoGame, las llamadas nuevas de **spriteBatch.Draw** prevalecerán sobre cualquier llamada anterior. Esto significa que tanto el sprite brécol como el dinosaurio prevalecerán sobre el sprite del césped existente, por lo que no pueden nunca puedan esconderse independientemente de su posición.
 
-Intenta ejecutar el juego ahora, y mover el dinosaurio con las teclas de dirección y la barra espaciadora. Si seguiste los pasos anteriores, deberías poder mover el avatar por la ventana del juego y el brécol debería moverse a una velocidad creciente.
+Intenta ejecutar el juego ahora, y mover el dinosaurio con las teclas de dirección y la barra espaciadora. Si has seguido los pasos anteriores, debe ser capaz de realizar el avatar mover dentro de la ventana del juego y el brécol debería generar a una velocidad creciente.
 
 ![Avatar del jugador y obstáculo](images/monogame-tutorial-2.png)
 
@@ -650,7 +650,7 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 Esto llama al método **RectangleCollision** que creamos en **SpriteClass** y marca el juego como terminado si devuelve true.
 
 ### <a name="4-add-user-input-for-resetting-the-game"></a>4. Agregar entrada de usuario para restablecer el juego
-Agrega este código al método **KeyboardHandler**, para permitir al usuario restablecer el juego si presiona ENTRAR:
+Agrega este código al método **KeyboardHandler** , para permitir al usuario restablecer el juego si presiona ENTRAR:
 
 ```CSharp
 if (gameOver && state.IsKeyDown(Keys.Enter))
