@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2dddd170f5f056de18c4729b6b6b5b4b6cbcea7b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757327"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5820153"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Generación de eventos en componentes de Windows Runtime
 > [!NOTE]

@@ -4,16 +4,16 @@ Description: Learn how to promote your apps and content in the Microsoft Store. 
 title: Directrices para aplicaciones de marketing de Microsoft Store
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 ms.author: wdg-dev-content
-ms.date: 10/26/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d065504385a5e7a743bd4936e9240565d3207a36
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 38dfdbc94112caa5e3fff7c1605fecece83b202d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745275"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5821099"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Directrices para aplicaciones de marketing de Microsoft Store
 
@@ -47,9 +47,9 @@ Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se
 
 -   Tener la aplicación u otro contenido disponible en Microsoft Store o formar parte del [Programa de afiliados de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=624463).
 
--   Si estás registrado con el Centro de desarrollo, cumple la sección ["Licencia para las marcas Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) del Acuerdo de desarrollador de aplicaciones.
+-   Si estás registrado como desarrollador de aplicaciones en el centro de partners, cumplir con la sección ["licencia para las marcas Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) del acuerdo para desarrolladores.
 
--   Si no estás registrado con el centro de desarrollo de Windows, Microsoft te concede una licencia mundial, no exclusiva, has, libre de regalías para usar los distintivos únicamente como se describe en las directrices de distintivo de Microsoft Store. Microsoft podría cambiar estas directrices, pero en el caso de que lo haga, usará los medios razonables para redirigirte a cualquier URL nueva donde se publiquen estas especificaciones. Microsoft se reserva todos los derechos no concedidos expresamente en el presente documento.
+-   Si no estás registrado como desarrollador de aplicaciones en el centro de partners, Microsoft te concede una licencia mundial, no exclusiva, has, libre de regalías para usar los distintivos únicamente como se describe en las directrices de distintivo de Microsoft Store. Microsoft podría cambiar estas directrices, pero en el caso de que lo haga, usará los medios razonables para redirigirte a cualquier URL nueva donde se publiquen estas especificaciones. Microsoft se reserva todos los derechos no concedidos expresamente en el presente documento.
 
 -   Sigue las especificaciones de uso de logotipos descritas en las [Directrices de distintivo de Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=529769).
 

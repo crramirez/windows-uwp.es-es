@@ -13,24 +13,20 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e27bdd3d5c57b9d45f86c25f0bce0ae1c4a5e999
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 1ce72c40d3b97942612fc2979d026c965727512e
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5760811"
+ms.locfileid: "5822484"
 ---
 # <a name="control-templates"></a>Plantillas de control
-
- 
 
 Puedes personalizar la estructura y el comportamiento visual de un control al crear una plantilla de control en el marco XAML. Los controles tienen muchas propiedades, como [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) y [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404), que puedes establecer para especificar diferentes aspectos de la apariencia del control. Sin embargo, los cambios que puedes realizar estableciendo estas propiedades son limitados. Puedes especificar personalizaciones adicionales al crear una plantilla con la clase [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). A continuación te mostramos cómo crear una clase **ControlTemplate** para personalizar la apariencia de un control de [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316).
 
 > **API importantes**: [**Clase ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391), [**Propiedad Control.Template**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)
 
-
 ## <a name="custom-control-template-example"></a>Ejemplo de plantilla de control personalizada
-
 
 De manera predeterminada, un control de [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) coloca su contenido (la cadena u objeto junto a la clase **CheckBox**) a la derecha del cuadro de selección y una marca de verificación indica que el usuario seleccionó la clase **CheckBox**. Estas características representan la estructura visual y el comportamiento visual de la clase **CheckBox**.
 
@@ -52,7 +48,6 @@ Este es el aspecto de la clase [**CheckBox**](https://msdn.microsoft.com/library
 
 ## <a name="specify-the-visual-structure-of-a-control"></a>Especificar la estructura visual de un control
 
-
 Al crear una clase [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391), combinas objetos [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) para crear un único control. Una clase **ControlTemplate** debe tener solo una clase **FrameworkElement** como elemento raíz. Normalmente, el elemento raíz contiene otros objetos **FrameworkElement**. La combinación de objetos conforma la estructura visual del control.
 
 Este código XAML crea una clase [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) para una clase [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) que especifica que el contenido del control se sitúa debajo del cuadro de selección. El elemento raíz es una clase [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250). El ejemplo especifica una clase [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) para crear una **X** que indica que un usuario seleccionó la clase **CheckBox** y una clase [**Elipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) que indica que está en estado indeterminado. Observa que la [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) se estableció en 0 en la clase **Path** y **Ellipse**, por lo que, de manera predeterminada, no aparece ninguna de ellos.
@@ -60,36 +55,36 @@ Este código XAML crea una clase [**ControlTemplate**](https://msdn.microsoft.co
 Un [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) es un enlace especial que vincula el valor de una propiedad de una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. TemplateBinding solo se puede usar dentro de una definición de ControlTemplate en XAML. Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
 
 > [!NOTE]
-> A partir de la siguiente actualización importante a Windows 10, puedes usar las extensiones de marcado [**x: Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) en lugares usas [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
+> A partir de Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)), puedes usar las extensiones de marcado [**x: Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) en lugares usas [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
-    <Border BorderBrush="{TemplateBinding BorderBrush}" 
-            BorderThickness="{TemplateBinding BorderThickness}" 
+    <Border BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
             Background="{TemplateBinding Background}">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
-            <Rectangle x:Name="NormalRectangle" Fill="Transparent" Height="20" Width="20" 
-                       Stroke="{ThemeResource SystemControlForegroundBaseMediumHighBrush}" 
-                       StrokeThickness="{ThemeResource CheckBoxBorderThemeThickness}" 
+            <Rectangle x:Name="NormalRectangle" Fill="Transparent" Height="20" Width="20"
+                       Stroke="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                       StrokeThickness="{ThemeResource CheckBoxBorderThemeThickness}"
                        UseLayoutRounding="False"/>
             <!-- Create an X to indicate that the CheckBox is selected. -->
-            <Path x:Name="CheckGlyph" 
-                  Data="M103,240 L111,240 119,248 127,240 135,240 123,252 135,264 127,264 119,257 111,264 103,264 114,252 z" 
-                  Fill="{ThemeResource CheckBoxForegroundThemeBrush}" 
-                  FlowDirection="LeftToRight" 
+            <Path x:Name="CheckGlyph"
+                  Data="M103,240 L111,240 119,248 127,240 135,240 123,252 135,264 127,264 119,257 111,264 103,264 114,252 z"
+                  Fill="{ThemeResource CheckBoxForegroundThemeBrush}"
+                  FlowDirection="LeftToRight"
                   Height="14" Width="16" Opacity="0" Stretch="Fill"/>
-            <Ellipse x:Name="IndeterminateGlyph" 
-                     Fill="{ThemeResource CheckBoxForegroundThemeBrush}" 
+            <Ellipse x:Name="IndeterminateGlyph"
+                     Fill="{ThemeResource CheckBoxForegroundThemeBrush}"
                      Height="8" Width="8" Opacity="0" UseLayoutRounding="False" />
-            <ContentPresenter x:Name="ContentPresenter" 
-                              ContentTemplate="{TemplateBinding ContentTemplate}" 
-                              Content="{TemplateBinding Content}" 
-                              Margin="{TemplateBinding Padding}" Grid.Row="1" 
-                              HorizontalAlignment="Center" 
+            <ContentPresenter x:Name="ContentPresenter"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              Content="{TemplateBinding Content}"
+                              Margin="{TemplateBinding Padding}" Grid.Row="1"
+                              HorizontalAlignment="Center"
                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
         </Grid>
     </Border>
@@ -97,7 +92,6 @@ Un [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) es
 ```
 
 ## <a name="specify-the-visual-behavior-of-a-control"></a>Especifica el comportamiento visual de un control
-
 
 Un comportamiento visual especifica la apariencia de un control cuando tiene un estado determinado. El control de [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) tiene tres estados de selección: `Checked`, `Unchecked` e `Indeterminate`. El valor de la propiedad [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/br209798) determina el estado de **CheckBox**, y su estado determina lo que aparece en el cuadro.
 
@@ -110,7 +104,6 @@ Esta tabla enumera los posibles valores de [**IsChecked**](https://msdn.microsof
 | **false**           | `Unchecked`        | Vacío.                  |
 | **nulo**            | `Indeterminate`    | Contiene un círculo.      |
 
- 
 
 La apariencia de un control se especifica cuando tiene un estado determinado mediante objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007). Un **VisualState** contiene una clase [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) o [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br243053) que cambia la apariencia de los elementos de la clase [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). Cuando el control ingresa en el estado que especifica la propiedad [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031), se aplican los cambios de propiedad en **Setter** o [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490). Cuando el control sale del estado, se eliminan los cambios. Agregas objetos **VisualState** a objetos [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014). Agregas objetos **VisualStateGroup** a la propiedad adjunta [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505), que se establece en la raíz [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) de la clase **ControlTemplate**.
 
@@ -118,10 +111,10 @@ Este código XAML muestra los objetos [**VisualState**](https://msdn.microsoft.c
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
-    <Border BorderBrush="{TemplateBinding BorderBrush}" 
-            BorderThickness="{TemplateBinding BorderThickness}" 
+    <Border BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
             Background="{TemplateBinding Background}">
-            
+
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="CheckStates">
                 <VisualState x:Name="Checked">
@@ -130,7 +123,7 @@ Este código XAML muestra los objetos [**VisualState**](https://msdn.microsoft.c
                     </VisualState.Setters>
                     <!-- This Storyboard is equivalent to the Setter. -->
                     <!--<Storyboard>
-                        <DoubleAnimation Duration="0" To="1" 
+                        <DoubleAnimation Duration="0" To="1"
                          Storyboard.TargetName="CheckGlyph" Storyboard.TargetProperty="Opacity"/>
                     </Storyboard>-->
                 </VisualState>
@@ -153,24 +146,24 @@ Este código XAML muestra los objetos [**VisualState**](https://msdn.microsoft.c
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
-            <Rectangle x:Name="NormalRectangle" Fill="Transparent" Height="20" Width="20" 
-                       Stroke="{ThemeResource SystemControlForegroundBaseMediumHighBrush}" 
-                       StrokeThickness="{ThemeResource CheckBoxBorderThemeThickness}" 
+            <Rectangle x:Name="NormalRectangle" Fill="Transparent" Height="20" Width="20"
+                       Stroke="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                       StrokeThickness="{ThemeResource CheckBoxBorderThemeThickness}"
                        UseLayoutRounding="False"/>
             <!-- Create an X to indicate that the CheckBox is selected. -->
-            <Path x:Name="CheckGlyph" 
-                  Data="M103,240 L111,240 119,248 127,240 135,240 123,252 135,264 127,264 119,257 111,264 103,264 114,252 z" 
-                  Fill="{ThemeResource CheckBoxForegroundThemeBrush}" 
-                  FlowDirection="LeftToRight" 
+            <Path x:Name="CheckGlyph"
+                  Data="M103,240 L111,240 119,248 127,240 135,240 123,252 135,264 127,264 119,257 111,264 103,264 114,252 z"
+                  Fill="{ThemeResource CheckBoxForegroundThemeBrush}"
+                  FlowDirection="LeftToRight"
                   Height="14" Width="16" Opacity="0" Stretch="Fill"/>
-            <Ellipse x:Name="IndeterminateGlyph" 
-                     Fill="{ThemeResource CheckBoxForegroundThemeBrush}" 
+            <Ellipse x:Name="IndeterminateGlyph"
+                     Fill="{ThemeResource CheckBoxForegroundThemeBrush}"
                      Height="8" Width="8" Opacity="0" UseLayoutRounding="False" />
-            <ContentPresenter x:Name="ContentPresenter" 
-                              ContentTemplate="{TemplateBinding ContentTemplate}" 
-                              Content="{TemplateBinding Content}" 
-                              Margin="{TemplateBinding Padding}" Grid.Row="1" 
-                              HorizontalAlignment="Center" 
+            <ContentPresenter x:Name="ContentPresenter"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              Content="{TemplateBinding Content}"
+                              Margin="{TemplateBinding Padding}" Grid.Row="1"
+                              HorizontalAlignment="Center"
                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
         </Grid>
     </Border>
@@ -210,10 +203,6 @@ En los artículos que documentan los estilos y plantillas de los controles XAML 
 Para algunos de los atributos de los ejemplos de XAML, quizás hayas observado referencias a recursos que usan la [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md). Esta es una técnica que permite a una única plantilla de control usar recursos que pueden ser diferentes valores en función del tema que esté activo en cada momento. Esto resulta especialmente importante para pinceles y colores, porque el principal propósito de los temas es permitir a los usuarios elegir si quieren aplicar un tema oscuro, claro o de alto contraste a todo el sistema. Las aplicaciones que usan el sistema de recursos de XAML pueden usar un conjunto de recursos que sea apropiado para ese tema, de manera que las opciones de temas en la interfaz de usuario de una aplicación reflejen el tema elegido por el usuario para todo el sistema.
 
  ## Obtener el código de muestra
-* [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+
+* [Muestra de galería de controles XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [Muestra de control de edición de texto personalizado](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
-
- 
-
-
-
