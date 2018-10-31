@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8a63e91bd5415f33118294a03567bb5e670ae2
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 3bbf7bdf1f41b1dff1049674f3b4463bac6ccb80
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5839826"
+ms.locfileid: "5860086"
 ---
 # <a name="content-links-in-text-controls"></a>Enlaces de contenido en controles de texto
 
@@ -28,7 +28,7 @@ Cuando el usuario agrega un prefijo a una entrada con un símbolo de Y comercial
 > **API importantes**: [clase ContentLink](/uwp/api/windows.ui.xaml.documents.contentlink), [clase ContentLinkInfo](/uwp/api/windows.ui.text.contentlinkinfo), [clase RichEditTextRange](/uwp/api/windows.ui.text.richedittextrange)
 
 > [!NOTE]
-> Las API de vínculos de contenido se expanden en los siguientes espacios de nombres: Windows.UI.Xaml.Controls, Windows.UI.Xaml.Documents y Windows.UI.Text.
+> La API de vínculos de contenido se expanden en los siguientes espacios de nombres: Windows.UI.Xaml.Controls, Windows.UI.Xaml.Documents y Windows.UI.Text.
 
 
 
