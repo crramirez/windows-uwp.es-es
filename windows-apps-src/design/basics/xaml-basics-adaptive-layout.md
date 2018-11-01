@@ -8,11 +8,11 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 000aa2d8f3684aa813b85076d9124a87a71b6a8c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5872342"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919249"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Creación de diseños adaptativos
 
@@ -38,7 +38,7 @@ La **página de detalles**, que muestra una sola foto después de que se haya se
 
 En este tutorial, empezaremos con una versión simplificada del ejemplo PhotoLab. 
 
-1. Ve a [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). Esto te llevará a la página de GitHub que contiene el ejemplo. 
+1. Vaya a [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). Esto te llevará a la página de GitHub que contiene el ejemplo. 
 2. A continuación deberás clonar o descarga dicho ejemplo. Haz clic en el botón **Clone or download**. Aparecerá un submenú.
     <figure>
         <img src="../basics/images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8699ee06da545e3b34711f496a887fd7aa2c935
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5874985"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919723"
 ---
 # <a name="file-access-permissions"></a>Permisos de acceso de archivos
 
@@ -23,10 +23,10 @@ Las aplicaciones universales de Windows pueden obtener acceso a determinadas ubi
 
 Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicaciones del sistema de archivos de manera predeterminada:
 
-### <a name="application-install-directory"></a>Directorio de instalación de aplicación
-La carpeta donde está instalada la aplicación en el sistema del usuario.
+### <a name="application-install-directory"></a>Directorio de instalación de la aplicación
+La carpeta donde está instalada su aplicación en el sistema del usuario.
 
-Hay dos formas principales para acceder a los archivos y carpetas en tu aplicación directorio de instalación:
+Existen dos métodos principales para tener acceso a archivos y carpetas en su aplicación el directorio de instalación:
 
 1. Puedes recuperar una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente el directorio de instalación de la aplicación como, por ejemplo:
 
@@ -89,12 +89,12 @@ El prefijo "ms-appx:///" del URI hace referencia al directorio de instalación d
 
 Además, a diferencia de lo que sucede con otras ubicaciones, también puedes tener acceso a los archivos del directorio de instalación de la aplicación si usas las API [Win32 y COM para las aplicaciones de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/br205757) y algunas de las [funciones de la biblioteca estándar de C/C++ de Microsoft Visual Studio](http://msdn.microsoft.com/library/hh875057.aspx).
 
-El directorio de instalación de la aplicación es una ubicación de solo lectura. No se puede obtener acceso al directorio de instalación mediante el selector de archivos.
+El directorio de instalación de la aplicación es una ubicación de solo lectura. No se puede obtener acceso al directorio de instalación mediante el selector de ficheros.
 
-### <a name="application-data-locations"></a>Ubicaciones de datos de aplicación
+### <a name="application-data-locations"></a>Ubicaciones de los datos de aplicación
 Son las carpetas en las que la aplicación puede almacenar datos. Estas carpetas (locales, móviles o temporales) se crean al instalar la aplicación.
 
-Hay dos formas principales para tener acceso a archivos y carpetas desde ubicaciones de datos de la aplicación:
+Hay dos formas principales para tener acceso a archivos y carpetas desde ubicaciones de los datos de la aplicación:
 
 1.  Usa las propiedades de [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) para recuperar una carpeta de datos de la aplicación.
 
@@ -161,7 +161,7 @@ El prefijo "ms-appdata:///local/" del URI hace referencia a la carpeta local de 
 
 Asimismo, a diferencia de lo que sucede con otras ubicaciones, también puedes tener acceso a los archivos de las ubicaciones de datos de tu aplicación si usas las API [Win32 y COM para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/br205757) y algunas de las funciones de la biblioteca estándar de C/C++ de Visual Studio.
 
-No puede acceder a las carpetas locales, móviles o temporales mediante el selector de archivos.
+No puede tener acceso a las carpetas locales, móviles o temporales mediante el selector de ficheros.
 
 ### <a name="removable-devices"></a>Dispositivos extraíbles
 Igualmente, la aplicación puede obtener acceso a algunos de los archivos en los dispositivos conectados de manera predeterminada. Esto es una alternativa en caso de que la aplicación use la [extensión de reproducción automática](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay) para iniciarse automáticamente cuando los usuarios conecten al sistema un dispositivo, como una cámara o una unidadUSB. Los archivos a los que la aplicación puede acceder se limitan a los tipos de archivo específicos que se definan a través de declaraciones de asociación de tipo de archivo en el manifiesto de la aplicación.
@@ -171,8 +171,8 @@ Sobra decir que también puedes tener acceso a los archivos y carpetas de un dis
 > [!NOTE]
 > Para más información sobre el acceso a una tarjeta SD u otros dispositivos extraíbles, consulta [Acceso a la tarjeta SD](access-the-sd-card.md).
 
-## <a name="locations-that-uwp-apps-can-access"></a>Ubicaciones a las que pueden tener acceso las aplicaciones para UWP
-### <a name="users-downloads-folder"></a>Carpeta descargas del usuario
+## <a name="locations-that-uwp-apps-can-access"></a>Ubicaciones que pueden tener acceso aplicaciones UWP
+### <a name="users-downloads-folder"></a>Carpeta de descargas del usuario
 
 Es la carpeta donde se guardan de forma predeterminada los archivos que se descargan.
 
@@ -257,7 +257,7 @@ En la siguiente tabla se incluyen otras ubicaciones a las que puedes tener acces
 | Ubicación | Funcionalidad | API de Windows.Storage |
 |----------|------------|---------------------|
 | Todos los archivos a los que tiene acceso el usuario. Por ejemplo: documentos, imágenes, fotos, descargas, escritorio, OneDrive, etc. | broadFileSystemAccess<br><br>Es una funcionalidad restringida. La primera vez que la utilices, el sistema solicitará al usuario que permita el acceso. Se puede configurar el acceso en Configuración > Privacidad > Sistema de archivos. Si envías una aplicación a la Store que declare esta funcionalidad, deberás proporcionar descripciones adicionales sobre por qué tu aplicación necesita esta funcionalidad y cómo pretende usarla.<br>Esta funcionalidad funciona para las API del espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) | n/d |
-| Documentos | DocumentsLibrary <br><br>Nota: debes incluir en el manifiesto de la aplicación aquellas asociaciones de tipo de archivo que declaren los tipos de archivo concretos a los que la aplicación tiene acceso en esta ubicación. <br><br>Usa esta funcionalidad si tu aplicación:<br>- Facilita el acceso sin conexión entre plataformas al contenido específico de OneDrive mediante direcciones URL o id. de recursos de OneDrive válidos.<br>-Guarda los archivos abiertos en el OneDrive del usuario automáticamente y sin conexión | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
+| Documentos | DocumentsLibrary <br><br>Nota: debes incluir en el manifiesto de la aplicación aquellas asociaciones de tipo de archivo que declaren los tipos de archivo concretos a los que la aplicación tiene acceso en esta ubicación. <br><br>Usa esta funcionalidad si tu aplicación:<br>- Facilita el acceso sin conexión entre plataformas al contenido específico de OneDrive mediante direcciones URL o id. de recursos de OneDrive válidos.<br>-Guarda archivos abiertos para OneDrive del usuario automáticamente mientras sin conexión | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | Música     | MusicLibrary <br>Consulta también [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | Imágenes  | PicturesLibrary<br> Consulta también [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
 | Vídeos    | VideosLibrary<br>Consulta también [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   

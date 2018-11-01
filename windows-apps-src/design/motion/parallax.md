@@ -15,11 +15,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 987202969f22a5b1b34efc9089ea7f7f08282d8c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5868461"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919113"
 ---
 # <a name="parallax"></a>Parallax
 
@@ -108,8 +108,8 @@ ParallaxView ajusta automáticamente el tamaño de la imagen de modo que sirva p
 
 Las propiedades VerticalShift y HorizontalShift te permiten controlar grado del efecto de paralaje.
 
-* La propiedad VerticalShift especifica cuánto queremos que se desplace verticalmente el fondo durante toda la operación de paralaje. Un valor de 0 significa que el fondo no se mueve en absoluto.
-* La propiedad HorizontalShift especifica cuánto queremos que se desplace horizontalmente el fondo durante toda la operación de paralaje. Un valor de 0 significa que el fondo no se mueve en absoluto.
+* La propiedad VerticalShift especifica cuánto queremos que se desplace verticalmente el fondo durante toda la operación de paralaje. Un valor de 0 significa que el fondo no se desplazará.
+* La propiedad HorizontalShift especifica cuánto queremos que se desplace horizontalmente el fondo durante toda la operación de paralaje. Un valor de 0 significa que el fondo no se desplazará.
 
 Los valores más grandes crean un efecto más impactante. 
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submission, envío piloto, status, estado
 ms.localizationpriority: medium
 ms.openlocfilehash: e3db0b4823b4bc6d8ac50e40026b21f288f9e64c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5887137"
+ms.locfileid: "5923361"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a>Obtener el estado de un envío de paquete piloto
 

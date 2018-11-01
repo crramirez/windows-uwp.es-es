@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, uso, evento personalizado, informe, telemetría, sesiones de usuario
 ms.localizationpriority: medium
-ms.openlocfilehash: f07f107a5136ee50cd87032fa3911ab65d33b7c1
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.openlocfilehash: c6f22d9aafada5bab8deaef246f64a7447569c82
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882072"
+ms.locfileid: "5918700"
 ---
 # <a name="usage-report"></a>Informe Uso
 
@@ -41,13 +41,14 @@ La información de todos los gráficos enumerados a continuación reflejará el 
 
 El gráfico **Uso** muestra detalles acerca de cómo los clientes están usando tu aplicación durante el período de tiempo seleccionado. Ten en cuenta que este gráfico no realiza un seguimiento de usuarios únicos de tu aplicación ni sesiones de usuario único (es decir, un usuario se representa en este gráfico tanto si usó la aplicación una vez como si lo hizo varias veces).
 
-Este gráfico tiene cuatro pestañas independientes que se pueden ver, mostrando el uso por día o semana (en función de la duración que selecciones).
+Este gráfico tiene pestañas independientes que se pueden ver, mostrando el uso por día o semana (en función de la duración que hayas seleccionado).
 
 - **Usuarios**: muestra el número total de **sesiones de usuario** durante el período de tiempo seleccionado. Cada sesión de usuario representa un período de tiempo distinto, a partir de cuando se inicia la aplicación (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad. Por este motivo, un cliente único podría tener varias sesiones de usuario en el mismo día o semana. El número total de **Usuarios activos** (cualquier cliente que use la aplicación ese día o semana) y **Nuevos usuarios** (un cliente que usó la aplicación por primera vez ese día o semana) también se muestran. Ten en cuenta que si has aplicado filtros a la página, no verás **Nuevos usuarios** en este gráfico.
 - **Dispositivos**: muestra el número de dispositivos que usan cada día todos los usuarios para interactuar con la aplicación.
 - **Duración**: muestra el total de horas de interacción (horas en las que un usuario usa la aplicación de forma activa).
 - **Participación**: muestra los minutos de interacción promedio por usuario (duración promedio de todas las sesiones de usuario). 
 - **Retención**: muestra el número total de **DAU/MAU** (usuarios activos diariamente/usuarios activos mensualmente) durante el período de tiempo seleccionado.
+- **Predicción de las renovaciones**: muestra cuántos usuarios que predecimos están probable que dejen de usar la aplicación pronto, en función de su uso reciente.
 
 Cuando la **30D** período de tiempo seleccionado, puede ver los marcadores de círculo al ver las pestañas de **los usuarios**, **dispositivos**o la **duración** . Estos representan un aumento significativo o disminución un valor determinado que creemos que querrás saber sobre. La fecha en el que se muestra el círculo representa al final de la semana en el que hemos detectado un aumento significativo o una disminución en comparación con la semana anterior. Para ver más detalles sobre qué ha cambiado, mantén el puntero encima del círculo.  
 

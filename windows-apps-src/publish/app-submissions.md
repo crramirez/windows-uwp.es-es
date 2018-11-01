@@ -9,35 +9,35 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 55235c78df29513e8d7b28e7643aec5c3a256f1d
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5875516"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919888"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
 
 Una vez que hayas [creado tu aplicación reservando un nombre](create-your-app-by-reserving-a-name.md), puedes empezar a trabajar en conseguir que se publique. El primer paso es crear un **envío**.
 
-Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Las actualizaciones que realices en tu envío se guardan, para que puedas volver y trabajar en él cuando estés listo.
+Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Se guardan las actualizaciones que realice su envío, para que pueda regresar y trabajar en él siempre que lo desee.
 
 > [!NOTE]
-> Debes tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) activa en [El centro de partners](https://partner.microsoft.com/dashboard) para poder enviar aplicaciones a la Microsoft Store.
+> Debe tener una activa [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) en el [Centro para socios](https://partner.microsoft.com/dashboard) para enviar aplicaciones a la Store Microsoft.
 
-Después de publica la aplicación, puedes publicar una versión actualizada creando otro envío en el centro de partners. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío para una aplicación publicada, haz clic en **Update** junto al envío más reciente que se muestra en su página de **información general** . También puedes [quitar una aplicación de la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si es necesario hacerlo (y, a continuación, hacer que esté disponible más tarde, si lo deseas).
+Después de publica la aplicación, puede publicar una versión actualizada creando otro envío en el Centro para socios. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear una nueva presentación para una aplicación publicada, haga clic en **Actualizar** situado junto a la presentación más reciente que se muestra en su página de **información general** . También puede [quitar una aplicación desde la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si necesita hacerlo (y ponerlo a disposición de nuevo más tarde, si lo desea).
 
 > [!NOTE]
-> En esta sección de la documentación se describe cómo crear un envío de aplicación en el centro de partners. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.
+> Esta sección de la documentación describe cómo crear una presentación de la aplicación en el Centro para socios. Como alternativa, puedes usar la [API de envío de MicrosoftStore](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.
 
 > [!IMPORTANT]
-> A partir del 31 de octubre de 2018, productos creados recientemente no pueden incluir paquetes destinados a 8.x/Windows de Windows Phone 8.x o versiones anteriores. Para obtener más información, consulta este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> A partir del 31 de octubre de 2018, productos recién creado no incluyen los paquetes dirigidos a Windows 8.x/Windows teléfono 8.x o anterior. Para obtener más información, consulte este [blog post](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="app-submission-checklist"></a>Lista de comprobación de envío de aplicaciones
 
 A continuación se incluyen los detalles que puedes proporcionar al crear el envío de tu aplicación, con vínculos a más información.
 
-Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees. No tienes que funcionan en estas secciones en el orden en que se muestran aquí.
+Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees. No tienes que trabajar en estas secciones en el orden indicado aquí.
 
 ### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
 | Nombre del campo                    | Notas                                       | Más información                                                             |
@@ -98,10 +98,10 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 | **Capturas de pantalla**               | Obligatorio (al menos una captura de pantalla; se recomienda que sean cuatro o más)          | [Capturas de pantalla](app-screenshots-and-images.md#screenshots)          |
 | **Logotipos de Store**               | Recomendado; necesario para algunas versiones de sistemas operativos | [Logotipos de Store](app-screenshots-and-images.md#store-logos)             |
 | **Tráileres**                  | Opcional                                    | [Tráileres](app-screenshots-and-images.md#trailers)                | 
-| **Imagen de Windows 10 y Xbox (imagen principal súper 16:9)**     | Recomendaciones        | [Windows 10 y Xbox imagen (imagen 16:9 ilustración principal súper)
+| **Imagen de Windows 10 y Xbox (imagen principal súper 16:9)**     | Recomendaciones        | [10 de Windows y Xbox imágenes (prediseñadas de Súper-héroe de 16:9)
 ] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
-| **Imágenes de Xbox**     | Obligatorio para una correcta visualización Si publicas en Xbox        | [Imágenes de Xbox
-] (imágenes de xbox de aplicación capturas de pantalla y images.md #) |
+| **Imágenes de Xbox**     | Requerido para una visualización adecuada si publica en Xbox        | [Imágenes de Xbox
+] (app capturas de pantalla y images.md #xbox-imágenes) |
 | **Campos adicionales**  | Opcional                                    | [Campos adicionales](create-app-store-listings.md#supplemental-fields) 
 | **Términos de búsqueda**              | Opcional                                    | [Términos de búsqueda](create-app-store-listings.md#search-terms)         |
 | **Información de copyright y marca comercial** | Opcional                                 | [Información de copyright y marca comercial](create-app-store-listings.md#copyright-and-trademark-info) |
@@ -117,7 +117,7 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Opciones de suspensión de publicación**     | Valor predeterminado: Publicar este envío tan pronto como supere la certificación (o siguiendo las fechas seleccionadas en la sección Programación)      | [Opciones de suspensión de publicación](manage-submission-options.md#publishing-hold-options)    
 | **Notas para la certificación**     | Recomendado          | [Notas para la certificación](notes-for-certification.md)             |
-| **Funcionalidades restringidas**     | Necesario si tu producto declara las [funcionalidades restringidas](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Funcionalidades restringidas](manage-submission-options.md#publishing-hold-options)       
+| **Funcionalidades restringidas**     | Requerido si el producto declara las [capacidades restringidas](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Funcionalidades restringidas](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 
