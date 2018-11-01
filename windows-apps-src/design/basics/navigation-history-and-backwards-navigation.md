@@ -9,12 +9,12 @@ ms.date: 06/21/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 42bc7fdb91a8c7642e132d4ac3d93be1f0927df0
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: d2f437db1a1792df22fd084cedee31cb6e590d24
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5840014"
+ms.locfileid: "5873194"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
 
@@ -287,21 +287,6 @@ Los ejemplos de código anteriores muestran cómo controlar todas estas entradas
 Anteriormente, las aplicaciones para UWP usaban [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility) para la navegación hacia atrás. La API seguirán siendo compatibles para garantizar la compatibilidad con versiones anteriores, pero ya no se recomienda depender de [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility). En su lugar, tu aplicación debería dibujar su propio botón Atrás en la aplicación.
 
 Si la aplicación sigue usando [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), a continuación, el sistema de la interfaz de usuario representará el sistema de botón Atrás:
-
-- Si la aplicación está **no con pestañas**, el botón Atrás se representa dentro de la barra de título. Las interacciones de usuario y la experiencia visual para el botón Atrás no han cambiado desde compilaciones anteriores.
-
-    ![Botón Atrás de la barra de título](images/nav-back-pc.png)
-
-- Si una aplicación es **con pestañas**, el botón Atrás se representa dentro de un nuevo atrás del sistema barra.
-
-    ![Sistema vuelve dibuja la barra de botones](images/back-nav/tabs.png)
-
-### <a name="system-back-bar"></a>Atrás del sistema barra
-
-> [!NOTE]
-> "Atrás del sistema barra" es solo una descripción, no un nombre oficial.
-
-Atrás del sistema barra es una "banda" que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar que el tamaño del destino táctil adecuado para el botón Atrás.
 
 - Si la aplicación está **no con pestañas**, el botón Atrás se representa dentro de la barra de título. Las interacciones de usuario y la experiencia visual para el botón Atrás no han cambiado desde compilaciones anteriores.
 

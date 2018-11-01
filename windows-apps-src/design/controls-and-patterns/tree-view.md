@@ -14,12 +14,12 @@ doc-status: Published
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 36b81cf07b92760235a18f4474a14b7b55e0a7be
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 73f6d8f9c42a632383d52194c83a4fe68261f9a7
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5828515"
+ms.locfileid: "5869776"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -289,7 +289,7 @@ Existen 2 formas de expandir o contraer un nodo de vista de árbol en el código
 
 Es posible que debas mostrar un gran número de nodos en la vista de árbol, o que no sepas con antelación cuántos nodos tendrá. El control TreeView no se virtualiza, para que puedas administrar recursos rellenado cada nodo mientras se expande y quitando los nodos secundarios cuando se contrae.
 
-Manipula el evento [Expanding](/uwp/api/windows.ui.xaml.controls.treeview.expand) y usa la propiedad [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) para agregar elementos secundarios a un nodo cuando se expande. La propiedad HasUnrealizedChildren indica si el nodo debe rellenarse, o si ya se ha rellenado su colección de elementos secundarios. Es importante recordar que el TreeViewNode no establece este valor, hay que administrarlo en el código de la aplicación.
+Manipula el evento [Expanding](/uwp/api/windows.ui.xaml.controls.treeview.expand) y usa la propiedad [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) para agregar elementos secundarios a un nodo cuando se expande. La propiedad HasUnrealizedChildren indica si el nodo debe rellenarse, o si ya se ha rellenado su colección de elementos secundarios. Es importante recordar que el TreeViewNode no establece este valor, tienes que administrar en el código de aplicación.
 
 Este es un ejemplo de estos API en uso. Consulte el código de ejemplo completo al final de este artículo para buscar contexto, incluyendo la implementación de 'FillTreeNode'.
 

@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, iconos rastreables, iconos dinámicos, notificaciones de iconos rastreables
 ms.localizationpriority: medium
 ms.openlocfilehash: 8126755dfb6f5f0e117d10daef85a83e8a171f1f
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5819869"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5877701"
 ---
 # <a name="chaseable-tile-notifications"></a>Notificaciones de iconos rastreables
 

@@ -9,11 +9,11 @@ keywords: windows 10 s, always connected, siempre conectado, limitations, limita
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
 ms.openlocfilehash: 24afc8a876b976f21d0f4ebd5892ceef7c403018
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5831531"
+ms.locfileid: "5871803"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>Limitaciones de aplicaciones y experiencias en ARM
 Windows 10 en ARM tiene las siguientes limitaciones necesarias:

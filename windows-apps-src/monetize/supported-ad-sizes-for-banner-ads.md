@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, sizes, tamaños, banner, banner
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f23be9a58a138a82cc4510039a1c0899ef092a2
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5822945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5872116"
 ---
 # <a name="supported-banner-ad-sizes"></a>Tamaños admitidos de anuncios de banner
 
