@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, revisión, comentario, revisor
 ms.localizationpriority: medium
 ms.openlocfilehash: 777decb9b060cc411d6150f199cd7a02f9ffc6cb
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5831451"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5881355"
 ---
 # <a name="reviews-report"></a>Informe de críticas
 
