@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, experimental, api
 ms.localizationpriority: medium
 ms.openlocfilehash: fe5fa437c5a1e564be07b7277de0f190d6eab862
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5884784"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5934814"
 ---
 # <a name="experimental-apis"></a>API experimentales
 
