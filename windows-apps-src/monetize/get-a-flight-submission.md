@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submission, envío piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a1c1e60a722fbba6f2a5c13e75078a11932b84e
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5877225"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5937254"
 ---
 # <a name="get-a-package-flight-submission"></a>Obtener un envío de paquete piloto
 
