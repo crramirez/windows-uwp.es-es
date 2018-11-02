@@ -8,12 +8,12 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, banner, control de anuncios, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 738c643f3c83a4f88f5c52c7337c467366ac8fe5
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 7acf2424a7d2fee322ba799ec670f0576b33a208
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938097"
+ms.locfileid: "5970674"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising
 
@@ -92,7 +92,7 @@ Para obtener instrucciones y ejemplos de código, consulta [este artículo](nati
 
 ## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>Paso 3: Crear una unidad de anuncios y configurar la mediación
 
-Una vez que termines de probar la aplicación y ya estás listo para enviarla a la Store, crea una unidad de anuncio en la página [Anuncios desde la aplicación](../publish/in-app-ads.md) en el Panel del Centro de desarrollo de Windows. Luego actualiza el código de tu aplicación para usar esta unidad de anuncios de modo que tu aplicación recibirá anuncios dinámicos. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+Cuando termines de probar la aplicación y ya estás listo para enviarla a la tienda, crea una unidad de anuncio en la página de [anuncios en la aplicación](../publish/in-app-ads.md) en el centro de partners. Luego actualiza el código de tu aplicación para usar esta unidad de anuncios de modo que tu aplicación recibirá anuncios dinámicos. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
 De manera predeterminada, la aplicación mostrará anuncios de la red de Microsoft, por lo relativo a anuncios de pago. Para maximizar tus ingresos por anuncios, puedes habilitar la [mediación de anuncios](ad-mediation-service.md) para tu unidad de anuncios, para mostrar anuncios de redes de anuncios de pago adicionales, como Taboola y Smaato. También puedes aumentar tus capacidades de promoción de la aplicación ofreciendo anuncios de las campañas de promoción de aplicaciones de Microsoft.
 
@@ -100,9 +100,9 @@ Para empezar a usar la mediación de anuncios en tu aplicación para UWP, [defin
 
 ## <a name="step-4-submit-your-app-and-review-performance"></a>Paso 4: Enviar la aplicación y revisar el rendimiento
 
-Tras finalizar el desarrollo de la aplicación con anuncios, puedes [enviar tu aplicación actualizada](https://docs.microsoft.com/windows/uwp/publish/app-submissions) al panel del Centro de desarrollo para que esté disponible en la Tienda. Las aplicaciones que muestran anuncios deben cumplir los requisitos adicionales que se especifican en la [sección 10.10 de las Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) y en el [anexo E del Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
+Después de finalizar el desarrollo de la aplicación con anuncios, puedes [enviar tu aplicación actualizada](https://docs.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners que esté disponible en la tienda. Las aplicaciones que muestran anuncios deben cumplir los requisitos adicionales que se especifican en la [sección 10.10 de las Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) y en el [anexo E del Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
 
-Después de que la aplicación esté publicada y disponible en la tienda, puedes revisar los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el panel y seguir realizando cambios a la configuración de mediación para optimizar el rendimiento de tus anuncios. Tus ingresos publicitarios se incluyen en tu [resumen de pago](../publish/payout-summary.md).
+Después de que la aplicación está publicada y disponible en la tienda, puedes revisar los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el centro de partners y seguir realizando cambios a la configuración de mediación para optimizar el rendimiento de tus anuncios. Tus ingresos publicitarios se incluyen en tu [resumen de pago](../publish/payout-summary.md).
 
 <span id="additional-help" />
 

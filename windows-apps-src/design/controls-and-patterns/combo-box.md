@@ -12,12 +12,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: f641ec3333ed0eda1fdfa5ff82ef236b5ec186ba
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: cf3a69de36f1292dd6ccabb945a33a893064bd02
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927109"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5971898"
 ---
 # <a name="combo-box"></a>Cuadro combinado
 
@@ -169,15 +169,15 @@ Para crear un cuadro combinado que "se actualice" mientras el usuario está nave
 
 #### <a name="selected-item-behavior-change"></a>Cambio de comportamiento del elemento seleccionado
 
-En RS5 (versión del SDK de Windows 10.0.NNNNN.0 (Windows 10, versión aamm), el comportamiento de los elementos seleccionados se actualiza para admitir los cuadros combinados editable.
+En Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior, se actualiza el comportamiento de los elementos seleccionados para admitir los cuadros combinados editable.
 
-Antes de RS5, el valor de la propiedad SelectedItem (y por lo tanto, SelectedValue y SelectedIndex) se necesita para estar en la colección de elementos del cuadro combinado. Con el ejemplo anterior, establecer `colorComboBox.SelectedItem = "Pink"` da como resultado:
+Antes de SDK 17763, el valor de la propiedad SelectedItem (y por lo tanto, SelectedValue y SelectedIndex) se necesita para estar en la colección de elementos del cuadro combinado. Con el ejemplo anterior, establecer `colorComboBox.SelectedItem = "Pink"` da como resultado:
 
 - SelectedItem = null
 - SelectedValue = null
 - SelectedIndex = -1
 
-En RS5 y versiones posteriores, el valor de la propiedad SelectedItem (y por lo tanto, SelectedValue y SelectedIndex) no es necesaria para estar en la colección de elementos del cuadro combinado. Con el ejemplo anterior, establecer `colorComboBox.SelectedItem = "Pink"` da como resultado:
+En el SDK 17763 y versiones posterior, el valor de la propiedad SelectedItem (y por lo tanto, SelectedValue y SelectedIndex) no es necesaria para estar en la colección de elementos del cuadro combinado. Con el ejemplo anterior, establecer `colorComboBox.SelectedItem = "Pink"` da como resultado:
 
 - SelectedItem = rosa
 - SelectedValue = rosa
@@ -192,7 +192,7 @@ Puedes establecer la propiedad [IsTextSearchEnabled](/uwp/api/windows.ui.xaml.co
 ## <a name="make-a-combo-box-editable"></a>Hacer que un cuadro combinado editable
 
 > [!IMPORTANT]
-> Esta característica requiere la [compilación de Windows 10 Insider Preview y el SDK más reciente](https://insider.windows.com/for-developers/).
+> Esta característica requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior.
 
 De manera predeterminada, un cuadro combinado permite al usuario seleccionar de una lista predefinida de opciones. Sin embargo, hay casos donde la lista contiene solo un subconjunto de los valores válidos y el usuario debe poder especificar otros valores que no se muestran. Para admitir esto, puedes hacer que el cuadro combinado editable.
 

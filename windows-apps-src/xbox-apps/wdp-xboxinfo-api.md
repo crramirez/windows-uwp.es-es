@@ -1,27 +1,27 @@
 ---
 author: M-Stahl
-title: Información de dispositivo Xbox Portal referencia de la API
-description: Obtenga información sobre cómo tener acceso a información del dispositivo de Xbox.
+title: Información del Portal Xbox de dispositivo de referencia de API
+description: Obtén información sobre cómo tener acceso a información de dispositivo de Xbox.
 ms.author: mstahl
 ms.date: 11/7/2017
 ms.topic: article
-keywords: Windows 10 uwp, xbox, portal de dispositivo
+keywords: Windows 10, uwp, xbox, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b0e2bab0ce7d5525e8032809954ff656a74a61c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919898"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5971544"
 ---
-# <a name="xbox-info-api-reference"></a>Referencia de la API de Info de Xbox   
-Puede tener acceso a información del dispositivo Xbox uno usando este API.
+# <a name="xbox-info-api-reference"></a>Referencia de API de información de Xbox   
+Puedes acceder a información del dispositivo Xbox One mediante esta API.
 
-## <a name="get-xbox-one-device-information"></a>Obtener información del dispositivo uno de Xbox
+## <a name="get-xbox-one-device-information"></a>Obtener información del dispositivo Xbox One
 
 **Solicitud**
 
-Puede obtener información del dispositivo acerca de tu Xbox uno.
+Para obtener información de dispositivo sobre tu Xbox One.
 
 Método      | URI de solicitud
 :------     | :-----
@@ -42,14 +42,14 @@ GET | /ext/xbox/info
 **Respuesta**   
 Un objeto JSON con los siguientes campos:
 
-* OsVersion - (String) la versión del sistema operativo.
-* OsEdition - (String) en la edición del sistema operativo, como "Marzo de 2017" o "marzo de 2017 QFE 1".
-* ConsoleId - identificador (de. de cadena) la consola
-* DeviceId - dispositivo de (cadena) la consola Xbox Live ID.
-* Número de serie: número de serie de (String) la consola.
-* DevMode - modo de programador actual de (cadena) la consola, como "Ninguno" o "Comercial".
-* ConsoleType - la consola del tipo String) (, como "Uno de Xbox" o "S uno de Xbox".
-* DevkitCertificateExpirationTime - el tiempo de UTC (número) en segundos cuando caduca certificado de kit de desarrolladores de la consola.
+* OsVersion - (cadena) la versión del sistema operativo.
+* OsEdition - (cadena) la edición del sistema operativo, por ejemplo, "Marzo de 2017" o "marzo de 2017 QFE 1".
+* ConsoleId - Id.. del (cadena) la consola
+* DeviceId - Xbox Live dispositivo de (cadena) la consola identificador.
+* SerialNumber - número de serie del (cadena) la consola.
+* DevMode - actual el modo de desarrollador del (cadena) la consola, por ejemplo, "None" o "Comercial".
+* ConsoleType - la consola del tipo de cadena) (, como "Xbox One" o "Xbox One S".
+* DevkitCertificateExpirationTime - (número) la hora UTC en segundos expirará certificado de kit de desarrollador de la consola.
 
 **Código de estado**
 

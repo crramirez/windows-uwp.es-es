@@ -15,12 +15,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 60bbf42acb90d81892fec2788c83c3595f5b6b2f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d3c8aad90e028ece42128e86f5e255be7fd29177
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932951"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5972286"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
@@ -35,7 +35,7 @@ Las barras de comandos proporcionan a los usuarios acceso fácil a las tareas m�
 El control CommandBar es un control de propósito general, flexible y ligero que puede mostrar contenido complejo, como imágenes o bloques de texto, así como comandos simples, como por ejemplo, controles [AppBarButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx) y [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx).
 
 > [!NOTE]
-XAML proporciona tanto el control [AppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar) como el control [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar). El control AppBar solo se debería usar cuando se actualiza una aplicación universal para Windows8 que usa dicho control y se necesita minimizar los cambios. Para nuevas aplicaciones de Windows 10, es recomendable usar el control CommandBar en su lugar. Para este documento, se supone que usas el control CommandBar.
+> XAML proporciona tanto el control [AppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar) como el control [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar). El control AppBar solo se debería usar cuando se actualiza una aplicación universal para Windows8 que usa dicho control y se necesita minimizar los cambios. Para nuevas aplicaciones de Windows 10, es recomendable usar el control CommandBar en su lugar. Para este documento, se supone que usas el control CommandBar.
 
 ## <a name="examples"></a>Ejemplos
 
