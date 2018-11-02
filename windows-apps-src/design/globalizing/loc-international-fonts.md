@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalización, localizabilidad, localización
 ms.localizationpriority: medium
 ms.openlocfilehash: 9513ed03f70a0b5efca0472bb4b0598a33a05fc2
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5864345"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5933646"
 ---
 # <a name="international-fonts"></a>Fuentes internacionales
 
@@ -41,7 +41,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Cheroqui (cheroqui) | chr-CHER-US | Gadugi |
 | Chino simplificado | zh-CN | MS YaHei UI |
 | Chino tradicional (Hong Kong) | zh-HK | MS JhengHei UI |
-| Chinese Traditional (Taiwan) | zh-TW | MS JhengHei UI |
+| Chino tradicional (Taiwán) | zh-TW | MS JhengHei UI |
 | Croata | hr-HR | Segoe UI |
 | Checo | cs-CZ | Segoe UI |
 | Danés | da-DK | Segoe UI |

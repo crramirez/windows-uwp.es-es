@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, uwp, mercados, países, regiones
 ms.localizationpriority: medium
 ms.openlocfilehash: ef7136868fc9c212640c142db2751bd6e9a0b179
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882894"
+ms.locfileid: "5925564"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
@@ -302,7 +302,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Pakistán</td>
     <td>Palaos</td>
-    <td>Palestinian Authority</td>
+    <td>Autoridad Palestina</td>
     <td>Panamá</td>
   </tr>
   <tr>
@@ -368,7 +368,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Suecia *</td>
     <td>Suiza *</td>
-    <td>Taiwan *</td>
+    <td>Taiwán *</td>
     <td>Tayikistán</td>
   </tr>
   <tr>
@@ -410,7 +410,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Vietnam</td>
     <td>Wallis y Futuna</td>
-    <td>Western Sahara (Disputed)</td>
+    <td>Sáhara Occidental (en conflicto)</td>
     <td>Yemen</td>
   </tr>
   <tr>
@@ -468,7 +468,7 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 | España                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Suecia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Suiza          | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Taiwan               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Taiwán               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Turquía               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Emiratos Árabes Unidos | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Reino Unido       | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
@@ -661,7 +661,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   </tr>
   <tr>
     <td>Palaos</td>
-    <td>Palestinian Authority</td>
+    <td>Autoridad Palestina</td>
     <td>Panamá</td>
     <td>Papúa Nueva Guinea</td>
   </tr>
