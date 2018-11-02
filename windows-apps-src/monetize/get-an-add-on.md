@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 78278741-09A4-4406-A112-9AF3C73F5C16
-description: Usa este método en la API de envío de Microsoft Store para recuperar información sobre un complemento de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows.
+description: Usa este método en la API de envío de Microsoft Store para recuperar información sobre un complemento para una aplicación que está registrada en tu cuenta del centro de partners.
 title: Obtener un complemento
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on, complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 36638c3e3890d5e2bca149d1006469bb97057f05
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 9620b0b7cf4d1ecb583215b2ab0fafe0e82712bf
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924971"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5991687"
 ---
 # <a name="get-an-add-on"></a>Obtener un complemento
 
-Usa este método en la API de envío de Microsoft Store para recuperar información sobre un complemento (también conocido como producto desde la aplicación o IAP) de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows.
+Usa este método en la API de envío de Microsoft Store para recuperar información sobre un complemento (también conocido como producto la aplicación o IAP) para una aplicación que está registrada en tu cuenta del centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -46,7 +46,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | cadena | Obligatorio. El Id. de la Store del complemento que se va a recuperar. El Id. de la Store está disponible en el panel del Centro de desarrollo.  |
+| id | cadena | Obligatorio. El Id. de la Store del complemento que se va a recuperar. El identificador de la tienda está disponible en el centro de partners.  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -99,10 +99,10 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se pudo encontrar el complemento especificado. |
-| 409  | El complemento usa una característica del panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | El complemento usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de complementos](manage-add-on-submissions.md)

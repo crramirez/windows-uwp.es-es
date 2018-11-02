@@ -7,16 +7,16 @@ ms.date: 08/04/2017
 ms.topic: article
 keywords: windows 10, uwp, servicios de Store, API de Servicios web de Windows, adquisición, embudo
 ms.localizationpriority: medium
-ms.openlocfilehash: 20c07425542c207c2289c6b512102e10f64bab66
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8aaceb9af3eed04039148bdd863ca3e473c7c245
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924302"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970212"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>Obtener datos de embudo de adquisiciones de aplicaciones
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de embudo de adquisiciones de una aplicación durante un intervalo de fechas especificado y según otros filtros opcionales. Esta información también está disponible en el [informe de adquisiciones](../publish/acquisitions-report.md#acquisition-funnel) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de embudo de adquisiciones de una aplicación durante un intervalo de fechas especificado y según otros filtros opcionales. Esta información también está disponible en el [informe de adquisiciones](../publish/acquisitions-report.md#acquisition-funnel) del centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

@@ -8,12 +8,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
-ms.openlocfilehash: 71247b8e04e63e5f792a872256dd79447c4d36cd
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 6762d31ea7ebaeb966cd60f121591ba1534517a3
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927968"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5969075"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Enviar solicitudes a Microsoft Store
 
@@ -79,7 +79,7 @@ Esta solicitud recupera las variables remotas para el grupo piloto de clasificac
 |  *requestKind*                   |  Especifica 7 para devolver el grupo piloto de clasificación más alta para el dispositivo, o especifica 8 para devolver el grupo piloto de clasificación más alta para el dispositivo y el usuario actuales. Te recomendamos que uses el valor de 8 para el parámetro *requestKind*, porque este valor devolverá el grupo piloto de clasificación más alta en la pertenencia tanto para el dispositivo como para el usuario actual.  |
 |  *parametersAsJson*                   |  Pasa una cadena con formato JSON que contiene los datos que se muestran en el siguiente ejemplo.  |
 
-En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *parametersAsJson*. El campo *type* debe estar asignado a la cadena *GetRemoteVariables*. Asigna el campo *projectId* al identificador del proyecto en el que definiste las variables remotas en el panel del Centro de desarrollo de Windows.
+En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *parametersAsJson*. El campo *type* debe estar asignado a la cadena *GetRemoteVariables*. Asigna el campo *projectId* al identificador del proyecto en el que definiste las variables remotas en el centro de partners.
 
 ```json
 { 

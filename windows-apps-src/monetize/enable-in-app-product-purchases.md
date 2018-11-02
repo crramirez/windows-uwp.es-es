@@ -8,19 +8,19 @@ ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 87e0d2bed4f2da49596a4859916637225bbbfd97
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 89e9fff8f041c4beb2a897c7be75b2f6e009f809
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945627"
+ms.locfileid: "5968719"
 ---
 # <a name="enable-in-app-product-purchases"></a>Habilitar compras de productos desde la aplicación
 
 Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.
 
 > [!IMPORTANT]
-> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar las compras de productos desde la aplicación. Este espacio de nombres ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como las suscripciones y los complementos de consumibles administrados por Microsoft Store, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y Microsoft Store. El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Para obtener más información acerca de cómo habilitar las compras de productos en la aplicación con el espacio de nombres **Windows.Services.Store** , consulta [este artículo](enable-in-app-purchases-of-apps-and-add-ons.md).
+> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar las compras de productos desde la aplicación. Este espacio de nombres ya no se actualiza con las nuevas características por lo que te recomendamos que uses el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en su lugar. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como los complementos de consumibles administrados por la tienda y suscripciones y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el centro de partners y la tienda. El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Para obtener más información acerca de cómo habilitar las compras de productos en la aplicación con el espacio de nombres **Windows.Services.Store** , consulta [este artículo](enable-in-app-purchases-of-apps-and-add-ons.md).
 
 > [!NOTE]
 > Los productos desde la aplicación no pueden ofrecerse durante la versión de prueba de una aplicación. Los clientes que usan una versión de prueba de la aplicación solamente pueden comprar un producto desde la aplicación si compran una versión completa de la misma.
@@ -54,7 +54,7 @@ Para cada función que quieras tener disponible a través de un producto desde l
     * "RainbowThemePack"
 
   > [!NOTE]
-  > El token de oferta desde la aplicación que usas en tu código debe coincidir con el valor del [id. del producto](../publish/set-your-add-on-product-id.md#product-id) que especificas al [definir el complemento correspondiente de la aplicación en el panel del Centro de desarrollo](../publish/add-on-submissions.md).
+  > El token de oferta desde la aplicación que usas en tu código debe coincidir con el valor de [Id. del producto](../publish/set-your-add-on-product-id.md#product-id) que especificas al [definir el complemento correspondiente de la aplicación en el centro de partners](../publish/add-on-submissions.md).
 
 2.  **Codifica la característica en un bloque condicional**
 
@@ -80,10 +80,10 @@ Este es un paso fácil: cambia todas las referencias a [CurrentAppSimulator](htt
 
 ## <a name="step-4-configure-the-in-app-product-offer-in-the-store"></a>Paso 4: Configura la oferta del producto desde la aplicación en la Tienda
 
-En el panel del Centro de desarrollo, ve a la aplicación y [crea un complemento](../publish/add-on-submissions.md) que coincida con la oferta del producto desde la aplicación. Define el id. del producto, el tipo, el precio y otras propiedades para el complemento. Asegúrate de que la configuración es idéntica a la configuración que estableciste en WindowsStoreProxy.xml durante las pruebas.
+En el centro de partners, ve a la aplicación y [crear un complemento](../publish/add-on-submissions.md) que coincida con la oferta del producto de la aplicación. Define el id. del producto, el tipo, el precio y otras propiedades para el complemento. Asegúrate de que la configuración es idéntica a la configuración que estableciste en WindowsStoreProxy.xml durante las pruebas.
 
   > [!NOTE]
-  > El token de oferta desde la aplicación que usas en tu código debe coincidir con el valor del [id. del producto](../publish/set-your-add-on-product-id.md#product-id) que especificas para el complemento correspondiente en el panel.
+  > El token de oferta desde la aplicación que usas en tu código debe coincidir con el valor de [Id. del producto](../publish/set-your-add-on-product-id.md#product-id) que especifiques para el complemento correspondiente en el centro de partners.
 
 ## <a name="remarks"></a>Observaciones
 

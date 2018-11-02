@@ -8,12 +8,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, intersticial, c#, código de muestra, ads, advertising, interstitial, sample code
 ms.localizationpriority: medium
-ms.openlocfilehash: 94baaa490859baf57e0bd12bc5a3800ed3b2312a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 07f0927d741bbadc31aaf26f5188af245ec44790
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5925371"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5968925"
 ---
 # <a name="interstitial-ad-sample-code-in-c"></a>Código de ejemplo de anuncios intersticiales en C\# #  
 
@@ -23,7 +23,7 @@ En este tema se proporciona un código de muestra completo para una aplicación 
 
 En esta sección se muestra el contenido de los archivos MainPage.xaml y MainPage.xaml.cs en una aplicación básica que muestra un anuncio intersticial. Para usar estos ejemplos, copia el código en un proyecto de **aplicación vacía (Windows universal)** de Visual C# en Visual Studio.
 
-Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar un anuncio intersticial. Reemplaza los valores de los campos ```myAppId``` y ```myAdUnitId``` por valores dinámicos del Centro de desarrollo de Windows antes de enviar tu aplicación a la Store. Para más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar un anuncio intersticial. Reemplaza los valores de la ```myAppId``` y ```myAdUnitId``` campos por valores dinámicos del centro de partners antes de enviar la aplicación a la tienda. Para más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
 > [!NOTE]
 > Para modificar este ejemplo y mostrar un anuncio de banner intersticial en lugar de un anuncio de vídeo intersticial, pasa el valor **AdType.Display** al primer parámetro del método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) en lugar de **AdType.Video**. Para más información, consulta [Anuncios intersticiales](interstitial-ads.md).

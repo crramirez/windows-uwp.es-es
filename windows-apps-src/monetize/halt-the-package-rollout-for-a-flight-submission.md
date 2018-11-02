@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, package rollout, lanzamiento de paquete, flight submission, envío piloto, halt, detener
 ms.assetid: f8ee0687-a421-48e7-a6eb-3fd5633c352b
 ms.localizationpriority: medium
-ms.openlocfilehash: a10b6f75d944a4a0f2935568928ce3b0782a479a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8ca3b457158ee1f509591c89ee6ac2819c819326
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5936281"
+ms.locfileid: "5981129"
 ---
 # <a name="halt-the-rollout-for-a-flight"></a>Detener el lanzamiento de un piloto
 
@@ -27,9 +27,9 @@ Usa este método en la API de envío de Microsoft Store para [detener el lanzami
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
-* Crea un envío para una aplicación de tu cuenta del Centro de desarrollo. Puedes hacer esto en el panel del Centro de desarrollo o con el método de [creación de un envío de aplicación](create-an-app-submission.md).
-* Habilita un lanzamiento de paquete gradual para el envío. Puedes hacerlo en el [panel del Centro de desarrollo](../publish/gradual-package-rollout.md) o mediante el [uso de la API de envío de Microsoft Store](manage-flight-submissions.md#manage-gradual-package-rollout).
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* Crear un envío para una de las aplicaciones. Puedes hacer esto en el centro de partners, o puedes hacerlo mediante el método [crea un envío de aplicación](create-an-app-submission.md) .
+* Habilita un lanzamiento de paquete gradual para el envío. Puedes hacer este [en el centro de partners](../publish/gradual-package-rollout.md), o puedes hacerlo mediante el [uso de la API de envío de Microsoft Store](manage-flight-submissions.md#manage-gradual-package-rollout).
 
 ## <a name="request"></a>Solicitud
 
@@ -52,8 +52,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | cadena | Obligatorio. El identificador de la Store de la aplicación que contiene el envío del paquete piloto con el lanzamiento de paquete que quieres detener. Para obtener más información sobre el identificador de la Store, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | cadena | Obligatorio. El identificador del paquete piloto que contiene el envío con el lanzamiento de paquete que quieres detener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un piloto creado en el panel del Centro de desarrollo, este id. también está disponible en la URL de la página de piloto del panel.   |
-| submissionId | cadena | Obligatorio. El identificador del envío con el lanzamiento de paquete que quieres detener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de paquete piloto](create-a-flight-submission.md). Para un envío creado en el panel del Centro de desarrollo, este id. también está disponible en la URL de la página de envío del panel.  |
+| flightId | cadena | Obligatorio. El identificador del paquete piloto que contiene el envío con el lanzamiento de paquete que quieres detener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un piloto creado en el centro de partners, este Id. también está disponible en la dirección URL de la página de piloto del centro de partners.   |
+| submissionId | cadena | Obligatorio. El identificador del envío con el lanzamiento de paquete que quieres detener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de paquete piloto](create-a-flight-submission.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -89,7 +89,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se pudo encontrar el envío de paquete piloto. |
-| 409  | Este código indica uno de los siguientes errores:<br/><br/><ul><li>El envío no está en un estado válido para la operación de lanzamiento gradual (antes de llamar a este método, se debe publicar el envío y se debe establecer el valor [packageRolloutStatus](manage-flight-submissions.md#package-rollout-object) en **PackageRolloutInProgress**).</li><li>El envío no pertenece a la aplicación especificada.</li><li>La aplicación usa una característica del panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).</li></ul> |   
+| 409  | Este código indica uno de los siguientes errores:<br/><br/><ul><li>El envío no está en un estado válido para la operación de lanzamiento gradual (antes de llamar a este método, se debe publicar el envío y se debe establecer el valor [packageRolloutStatus](manage-flight-submissions.md#package-rollout-object) en **PackageRolloutInProgress**).</li><li>El envío no pertenece a la aplicación especificada.</li><li>La aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).</li></ul> |   
 
 
 ## <a name="related-topics"></a>Temas relacionados
