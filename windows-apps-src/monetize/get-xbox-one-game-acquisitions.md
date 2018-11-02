@@ -8,16 +8,16 @@ ms.date: 10/18/2018
 ms.topic: article
 keywords: windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Windows Store analytics API, adquisiciones de juegos de Xbox One, Xbox One game acquisitions
 ms.localizationpriority: medium
-ms.openlocfilehash: 86ca46903e581922cc571a854d9fa110fa261ece
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 1bf37fa03209561540d63dd4f63a76878f9d813c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5941035"
+ms.locfileid: "5976596"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Obtener adquisiciones de juegos de Xbox One
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de adquisiciones agregados en formato JSON para un juego de Xbox One integrado mediante el Portal de desarrollador de Xbox (XDP) y disponible en el panel del Centro de desarrollo de Análisis de XDP.
+Usa este método en la Microsoft Store analytics API para obtener datos de adquisición agregados en formato JSON de una consola Xbox One juego que se ha integrado mediante el Portal de desarrollador de Xbox (XDP) y disponible en el panel de análisis de XDP.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

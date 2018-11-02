@@ -4,19 +4,19 @@ description: Las animaciones conectadas te permiten crear una experiencia de nav
 title: Animación conectada
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 10/25/2017
+ms.date: 10/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 77050103bb78788a5c1868a41d315edd6832a5fe
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 51cf9dd0d28590d86bf05cc16634e465e260626c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938852"
+ms.locfileid: "5977087"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>Animación conectada para aplicaciones para UWP
 
@@ -55,9 +55,9 @@ En general, las animaciones conectadas se usan al cambiar de página, aunque pue
 ## <a name="configure-connected-animation"></a>Configurar la animación conectada
 
 > [!IMPORTANT]
-> Esta característica requiere que la versión de destino de la aplicación sea RS5 (versión del SDK de Windows 10.0.NNNNN.0 (Windows 10, versión aamm) o superior. La propiedad de configuración no está disponible en los SDK anteriores. Puedes elegir una versión mínima menor que RS5 (10.0.NNNNN.0 (Windows 10, versión aamm) de versión de Windows SDK usando código adaptativo para versiones o XAML condicional. Para obtener más información, consulta [aplicaciones adaptables para versiones](/debug-test-perf/version-adaptive-apps).
+> Esta característica requiere que la versión de destino de la aplicación sea Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o una versión posterior. La propiedad de configuración no está disponible en los SDK anteriores. Puedes elegir una versión mínima menor que 17763 SDK usando código adaptativo para versiones o XAML condicional. Para obtener más información, consulta [aplicaciones adaptables para versiones](/debug-test-perf/version-adaptive-apps).
 
-A partir de RS5, aún más las animaciones conectadas incluyen Fluent design proporcionando animación configuraciones adaptadas específicamente para hacia delante y hacia atrás navegación de páginas.
+A partir de Windows 10, versión 1809, las animaciones conectadas aún más incluyen Fluent design proporcionando animación configuraciones adaptadas específicamente para hacia delante y hacia atrás navegación de páginas.
 
 Se especifica una configuración de animación estableciendo la propiedad de configuración en el ConnectedAnimation. (Te mostraremos ejemplos de esto en la siguiente sección.)
 
@@ -74,7 +74,7 @@ Como el usuario navega hacia adelante en la aplicación (A B), aparece el elemen
 
 | [BasicConnectedAnimationConfiguration]() |
 | - |
-| Este es el valor predeterminado (y solo) animación usada en las versiones SDK anteriores RS5 (versión del SDK de Windows 10.0.NNNNN.0 (Windows 10, versión aamm). |
+| Este es el valor predeterminado (y solo) animación usada en versiones anteriores a Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)). |
 
 ### <a name="connectedanimationservice-configuration"></a>Configuración de ConnectedAnimationService
 

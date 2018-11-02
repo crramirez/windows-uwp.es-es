@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
-description: Usa este método en la API de envío de Microsoft Store para recuperar la información del paquete piloto de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows.
+description: Usa este método en la API de envío de Microsoft Store para recuperar información del paquete piloto para una aplicación que está registrada en tu cuenta del centro de partners.
 title: Obtener paquetes piloto para una aplicación
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flights, pilotos, package flights, paquetes piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 847e837c67990b5cbdb3a7a28c0c8115e96c8644
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: f67bb76e1d964dd246be16870a7c76591eb1e7d6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930396"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5974276"
 ---
 # <a name="get-package-flights-for-an-app"></a>Obtener paquetes piloto para una aplicación
 
-Usa este método en la API de envío de Microsoft Store para enumerar los paquetes piloto de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows. Para obtener más información acerca de los paquetes piloto, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
+Usa este método en la API de envío de Microsoft Store para enumerar los paquetes piloto para una aplicación que está registrada en tu cuenta del centro de partners. Para obtener más información acerca de los paquetes piloto, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -115,7 +115,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se encontró ningún paquete piloto. |
-| 409  | La aplicación usa una característica del panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | La aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Temas relacionados

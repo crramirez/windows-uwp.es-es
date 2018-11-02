@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 91a1ca0ee99833280aaa41ca4d9c94d043a78e0a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919840"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5972433"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementar la navegación entre dos páginas
 
@@ -89,7 +89,7 @@ En Page1.xaml, agrega el siguiente contenido:
 <TextBlock x:Name="pageTitle" Text="Page 1" />
 ```
 
--   Un elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la raíz de la [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/br242704) y después de la `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
+-   Un elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/br242704) raíz y después de la `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
 ```xaml
 <HyperlinkButton Content="Click to go to page 2"
                  Click="HyperlinkButton_Click"
@@ -126,7 +126,7 @@ En Page2.xaml, agrega el siguiente contenido:
 <TextBlock x:Name="pageTitle" Text="Page 2" />
 ```
 
--   Un elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la raíz de la [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/br242704) y después de la `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
+-   Un elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la [**cuadrícula**](https://msdn.microsoft.com/library/windows/apps/br242704) raíz y después de la `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
 ```xaml
 <HyperlinkButton Content="Click to go to page 1" 
                  Click="HyperlinkButton_Click"
@@ -298,7 +298,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 ```
 
 > [!NOTE]
-> Aquí, el código utiliza el valor devuelto de [**navegar**](https://msdn.microsoft.com/library/windows/apps/br242694) para producir una excepción de aplicación si se produce un error en la barra de navegación del marco de ventana inicial de la aplicación. Cuando **Navigate** devuelve **true**, se produce la navegación.
+> El código aquí, usa el valor devuelto de [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) para generar una excepción de la aplicación si se produce un error en la navegación al marco de la ventana inicial de la aplicación. Cuando **Navigate** devuelve **true**, se produce la navegación.
 
 Ahora, compila y ejecuta la aplicación. Haz clic en el vínculo que dice "Haz clic para ir a la página 2". La segunda página que muestra "Página 2" en la parte superior, se debería cargar y mostrar en el marco.
 
@@ -318,7 +318,7 @@ Por último, siempre que se cargue una página en el marco, dicha página se agr
 
 Nuestra aplicación ya navega entre dos páginas, pero aún no hace nada interesante. A menudo, cuando una aplicación tiene varias páginas, las páginas necesitan compartir información. Pasemos parte de la información de la primera página a la segunda.
 
-En Page1.xaml, reemplace el **HyperlinkButton** agregó anteriormente con el siguiente [**elemento StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
+En Page1.xaml, reemplaza el **elemento HyperlinkButton** que agregaste anteriormente con el siguiente [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
 
 Una vez hecho esto, agregamos una etiqueta [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) y una clase [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) `name` para escribir una cadena de texto.
 
@@ -332,7 +332,7 @@ Una vez hecho esto, agregamos una etiqueta [**TextBlock**](https://msdn.microsof
 </StackPanel>
 ```
 
-En el `HyperlinkButton_Click` controlador de eventos del archivo de código subyacente Page1.xaml, agregue un parámetro hace referencia a la `Text` propiedad de la `name` **TextBox** a la `Navigate` método.
+En el `HyperlinkButton_Click` controlador de eventos del archivo de código subyacente Page1.xaml, agrega un parámetro que haga referencia a la `Text` propiedad de la `name` **TextBox** para el `Navigate` método.
 
 ```csharp
 private void HyperlinkButton_Click(object sender, RoutedEventArgs e)

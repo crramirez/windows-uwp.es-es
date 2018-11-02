@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, games, juegos, input, entrada, flight stick, palanca de mandos
 ms.localizationpriority: medium
 ms.openlocfilehash: ebe7695b3f16271f3adedae658c0d62d38d7c078
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924512"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5977239"
 ---
 # <a name="flight-stick"></a>Palanca de mandos
 

@@ -7,12 +7,12 @@ ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b89cad4c299f7326d0bb7d9ea4b8c6685f70f26c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 207203805dfee0fd54a9d6d6fd4987b098710f4c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933117"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5973710"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de una suscripción para tu aplicación
 
@@ -35,7 +35,7 @@ Los complementos de una suscripción para aplicaciones para UWP admiten las sigu
 
 Para habilitar la compra de complementos de una suscripción en la aplicación, sigue estos pasos.
 
-1. [Crear un envío de complemento](../publish/add-on-submissions.md) para tu suscripción en el panel de información del Centro de desarrollo y publicar el envío. Al seguir el proceso de envío del complemento, presta mucha atención a las siguientes propiedades:
+1. [Crear un envío de complemento](../publish/add-on-submissions.md) para la suscripción en el centro de partners y publicar el envío. Al seguir el proceso de envío del complemento, presta mucha atención a las siguientes propiedades:
 
     * [Tipo de producto](../publish/set-your-add-on-product-id.md#product-type): Asegúrate de seleccionar **Suscripción**.
 
@@ -70,8 +70,8 @@ Los ejemplos de código de esta sección muestran cómo usar las API en el espac
 
 Estos ejemplos cumplen los siguientes requisitos:
 * Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o un versión posterior.
-* Has [creado un envío de aplicación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) en el Panel del Centro de desarrollo de Windows, y esta aplicación está publicada y disponible en Microsoft Store. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Tienda mientras la pruebas. Para obtener más información, consulta la [guía para prueba](in-app-purchases-and-trials.md#testing).
-* Has [creado un complemento de suscripción para la aplicación](../publish/add-on-submissions.md) en el panel del Centro de desarrollo.
+* Tienes [creado un envío de aplicación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y esta aplicación está publicada en la tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Tienda mientras la pruebas. Para obtener más información, consulta la [guía para prueba](in-app-purchases-and-trials.md#testing).
+* Tienes [creado un complemento de suscripción para la aplicación](../publish/add-on-submissions.md) en el centro de partners.
 
 El código de estos ejemplos supone que:
 * El archivo de código requiere el **uso** de instrucciones para los espacios de nombres **Windows.Services.Store** y **System.Threading.Tasks**.

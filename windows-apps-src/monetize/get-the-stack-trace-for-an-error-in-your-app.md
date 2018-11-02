@@ -8,16 +8,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Microsoft Store, Store services, API de análisis de Microsoft Store, Microsoft Store analytics API, seguimiento de la pila, stack trace, error
 ms.localizationpriority: medium
-ms.openlocfilehash: 75eac585517ce4d4d41b8933a76cf8f4fe20be96
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0befb91175690576b4c0b44fe6e701d4c4efd7df
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941760"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5977776"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>Obtener el seguimiento de la pila de un error en la aplicación
 
-Usa este método en la API de análisis de Microsoft Store para obtener el seguimiento de la pila de un error en la aplicación. Este método solo puede descargar el seguimiento de la pila de un error en la aplicación que se haya producido en los últimos 30 días. Los seguimientos de la pila también están disponibles en la sección **Errores** del [informe de estado](../publish/health-report.md) en el panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener el seguimiento de la pila de un error en la aplicación. Este método solo puede descargar el seguimiento de la pila de un error en la aplicación que se haya producido en los últimos 30 días. Seguimientos de la pila también están disponibles en la sección de **errores** del [informe de estado](../publish/health-report.md) en el centro de partners.
 
 Para poder usar este método, debes emplear antes el método para [obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md) para recuperar el identificador del archivo CAB que está asociado con el error para el que quieres recuperar el seguimiento de la pila.
 
@@ -51,7 +51,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Necesario  |
 |---------------|--------|---------------|------|
-| applicationId | cadena | El id. de la Store de la aplicación para la que quieres recuperar el seguimiento de la pila. El id. de la Store está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8. |  Sí  |
+| applicationId | cadena | El id. de la Store de la aplicación para la que quieres recuperar el seguimiento de la pila. El identificador de la tienda está disponible en la [página de identidad de la aplicación](../publish/view-app-identity-details.md) en el centro de partners. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8. |  Sí  |
 | cabId | cadena | El identificador exclusivo del archivo CAB asociado con el error para el que quieres recuperar el seguimiento de la pila. Para obtener este identificador, usa el método [obtener los detalles de un error en la aplicación](get-details-for-an-error-in-your-app.md) para recuperar los detalles de un error específico de tu aplicación y usa el valor **cabId** en el cuerpo de la respuesta de ese método. |  Sí  |
 
  
