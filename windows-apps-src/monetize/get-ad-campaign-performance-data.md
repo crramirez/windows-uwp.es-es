@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Microsoft Store, Store services, Microsoft Store analytics API, API de análisis de Microsoft Store, campañas publicitarias, ad campaigns
 ms.localizationpriority: medium
-ms.openlocfilehash: 337342378fc42b33c0bddb980b143ab195305458
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: c9d348ffc0895d5adb16886c5a66af14a1884b8b
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5943218"
+ms.locfileid: "5991260"
 ---
 # <a name="get-ad-campaign-performance-data"></a>Obtener los datos de rendimiento de la campaña publicitaria
 
 
 Usa este método en la API de análisis de Microsoft Store para obtener un resumen agregado de datos de rendimiento de la campaña publicitaria promocional de tus aplicaciones durante un intervalo de fechas indicado y según otros filtros opcionales. Este método devuelve los datos en formato JSON.
 
-Este método devuelve los mismos datos que proporciona el [informe de anuncios de instalación de aplicaciones](../publish/app-install-ads-reports.md) en el panel del Centro de desarrollo de Windows. Para obtener más información acerca de las campañas publicitarias, consulta [Crear una campaña publicitaria para tu aplicación](../publish/create-an-ad-campaign-for-your-app.md).
+Este método devuelve los mismos datos que proporcionan el [informe campaña publicitaria](../publish/app-install-ads-reports.md) en el centro de partners. Para obtener más información acerca de las campañas publicitarias, consulta [Crear una campaña publicitaria para tu aplicación](../publish/create-an-ad-campaign-for-your-app.md).
 
 Para crear, actualizar o recuperar detalles de campañas publicitarias, puedes usar el método [Manage ad campaigns (Administrar campañas publicitarias)](manage-ad-campaigns.md) en la [API de promociones de Microsoft Store](run-ad-campaigns-using-windows-store-services.md).
 

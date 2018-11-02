@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
-description: Usa este método en la API de envío de Microsoft Store para obtener datos para un paquete piloto de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows.
+description: Usa este método en la API de envío de Microsoft Store para obtener los datos de un paquete piloto para una aplicación que está registrada en tu cuenta del centro de partners.
 title: Obtener un paquete piloto
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight, piloto, package flight, paquete piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 772dd59ad25cd5439df8b88cd8818f98334c2969
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 09fd5c703e4a601ad28a05156aec9133444cfd9e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940798"
+ms.locfileid: "5970408"
 ---
 # <a name="get-a-package-flight"></a>Obtener un paquete piloto
 
-Usa este método en la API de envío de Microsoft Store para obtener datos para un paquete piloto de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows.
+Usa este método en la API de envío de Microsoft Store para obtener los datos de un paquete piloto para una aplicación que está registrada en tu cuenta del centro de partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -46,8 +46,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadena | Obligatorio. El Id. de la Store de la aplicación que contiene el paquete piloto que quieres obtener. El Id. de la Store para la aplicación está disponible en el panel del Centro de desarrollo.  |
-| flightId | cadena | Obligatorio. El identificador del paquete piloto que se va a obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un piloto creado en el panel del Centro de desarrollo, este id. también está disponible en la URL de la página de piloto del panel.  |
+| applicationId | cadena | Obligatorio. El Id. de la Store de la aplicación que contiene el paquete piloto que quieres obtener. El identificador de la tienda de la aplicación está disponible en el centro de partners.  |
+| flightId | cadena | Obligatorio. El identificador del paquete piloto que se va a obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un piloto creado en el centro de partners, este Id. también está disponible en la dirección URL de la página de piloto del centro de partners.  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -90,7 +90,7 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightId            | cadena  | El identificador para el paquete piloto. Este valor está proporcionado por el Centro de desarrollo.  |
+| flightId            | cadena  | El identificador para el paquete piloto. Este valor lo proporciona el centro de partners.  |
 | friendlyName           | cadena  | El nombre del paquete piloto, según lo especifica el desarrollador.   |  
 | lastPublishedFlightSubmission       | objeto | Un objeto que proporciona información sobre el último envío publicado para el paquete piloto. Para obtener más información, consulta la sección [Objeto de envío](#submission_object) a continuación.  |
 | pendingFlightSubmission        | objeto  |  Un objeto que proporciona información sobre el envío pendiente actualmente para el paquete piloto. Para obtener más información, consulta la sección [Objeto de envío](#submission_object) a continuación.  |   
@@ -118,7 +118,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|---------------------  |
 | 400  | La solicitud no es válida. |
 | 404  | No se pudo encontrar el paquete piloto especificado.   |   
-| 409  | La aplicación usa una característica del panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported). |                                                                                                 
+| 409  | La aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |                                                                                                 
 
 
 ## <a name="related-topics"></a>Temas relacionados

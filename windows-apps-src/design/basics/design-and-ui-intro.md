@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 422a6b40c86a84367054a20cabe1a0b0a32cb89d
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919769"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970265"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP
 
@@ -27,11 +27,11 @@ Esta introducción proporciona una descripción general de las características 
 
 ## <a name="effective-pixels-and-scaling"></a>Escalado y píxeles efectivos
 
-UWP aplicaciones se ejecutan en todos los [dispositivos de Windows 10](../devices/index.md), desde su Televisor a su Tablet PC o un PC. ¿Cómo se puede diseñar una interfaz de usuario que se ve bien en una amplia variedad de dispositivos y tamaños de pantalla?
+Las aplicaciones para UWP se ejecutan en todos los [dispositivos Windows 10](../devices/index.md), desde la televisión a tu tableta o PC. ¿Cómo se puede diseñar una interfaz de usuario que se vea bien en una amplia variedad de dispositivos y tamaños de pantalla?
 
 ![misma aplicación en varios dispositivos](images/universal-image-1.jpg)
 
-UWP ayuda ajustando automáticamente los elementos de interfaz de usuario para que sean legibles y fácil de interactuar con en todos los dispositivos y tamaños de pantalla.
+UWP ayuda ajustando automáticamente los elementos de la interfaz de usuario para que sean legibles y fáciles de interaccionar en todos los dispositivos y tamaños de pantalla.
 
 Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24 px en un dispositivo Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24 px en un teléfono de 5 pulgadas a unos centímetros de distancia.
 

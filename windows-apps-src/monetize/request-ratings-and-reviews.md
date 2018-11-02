@@ -7,12 +7,12 @@ ms.date: 06/15/2018
 ms.topic: article
 keywords: windows 10, uwp, calificaciones, opiniones
 ms.localizationpriority: medium
-ms.openlocfilehash: d736fa47251c85491a29b324a3ed59181a5060c8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: c00e69ed7d5057db4f835f3d91320806067d86e1
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5935099"
+ms.locfileid: "5981194"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Solicitar calificaciones y opiniones de tu aplicación
 
@@ -20,7 +20,7 @@ Puedes agregar código a la aplicación Plataforma universal de Windows (UWP) pa
 * Puedes mostrar un diálogo de calificaciones y opiniones directamente en el contexto de la aplicación.
 * Puedes abrir mediante programación la página de calificaciones y opiniones para tu aplicación en Microsoft Store.
 
-Cuando estés listo para analizar los datos de calificaciones y opiniones, puedes ver los datos en el panel del Centro de desarrollo de Windows o usar la API de análisis de Microsoft Store para recuperar estos datos mediante programación.
+Cuando estés listo para analizar las clasificaciones y los datos de opiniones, puedes ver los datos en el centro de partners o usar la API de análisis de Microsoft Store para recuperar mediante programación estos datos.
 
 > [!IMPORTANT]
 > Al agregar una función de clasificación dentro de la aplicación, todas las revisiones deben enviar al usuario a los mecanismos de clasificación de la tienda, independientemente por estrellas elegida. Si recopilar comentarios o los comentarios de los usuarios, debe quedar claro que no está relacionada con la clasificación de la aplicación o a las críticas de la tienda pero se envía directamente al desarrollador de la aplicación. Consulta el desarrollador de código de conducta para obtener más información relacionada con [Fraudulent o malas intenciones de actividades](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
@@ -102,7 +102,7 @@ Para obtener más información, consulta [Iniciar la aplicación Microsoft Store
 ## <a name="analyze-your-ratings-and-reviews-data"></a>Analizar los datos de calificaciones y opiniones
 
 Para analizar los datos de calificaciones y opiniones de los clientes, tienes varias opciones:
-* Puedes usar el informe [Críticas](../publish/reviews-report.md) en el panel del Centro de desarrollo de Windows para ver las calificaciones y opiniones de los clientes. También puedes descargar este informe para verlo sin conexión.
+* Puedes usar el informe [de opiniones](../publish/reviews-report.md) en el centro de partners para ver las calificaciones y opiniones de los clientes. También puedes descargar este informe para verlo sin conexión.
 * Puedes usar los métodos [Obtener la clasificación de la aplicación](get-app-ratings.md) y [Obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de la Store para recuperar mediante programación las calificaciones y opiniones de los clientes en formato JSON.
 
 ## <a name="related-topics"></a>Artículos relacionados

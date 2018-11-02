@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bbf7bdf1f41b1dff1049674f3b4463bac6ccb80
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 3939995aa2f29f4590c8c71a877b69f0cb81d2ec
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5929619"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5969181"
 ---
 # <a name="content-links-in-text-controls"></a>Enlaces de contenido en controles de texto
 
@@ -164,7 +164,7 @@ El selector de contactos crea un ContentLinkInfo con un Uri que usa el protocolo
 - Si LinkContentKind no es "Contactos", se abrirá la aplicación **Contactos**. Por ejemplo, esto puede suceder si se ha modificado el LinkContentKind en el controlador de eventos ContentLinkChanged.
 
 > [!TIP]
-> Para obtener más información acerca de cómo abrir otras aplicaciones y sitios Web desde la aplicación, consulta los temas en [Iniciar una aplicación con un Uri] (/ windows/uwp/inicio-reanudación/inicio-app-con-uri).
+> Para obtener más información acerca de cómo abrir otras aplicaciones y sitios Web desde la aplicación, consulta los temas de [iniciar una aplicación con un Uri](/windows/uwp/launch-resume/launch-app-with-uri).
 
 #### <a name="invoked"></a>Invocado
 

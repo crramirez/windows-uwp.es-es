@@ -7,12 +7,12 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, mediación de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: f8ebffbd7a2fa209289c99780e0bbbea94afac2e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 9adae5b000277b774536c8b307cc1bc055ce3bc4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5920634"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5971251"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Servicio de mediación de anuncios de Microsoft
 
@@ -30,7 +30,7 @@ El servicio de mediación de anuncios se integra con una variedad de redes de an
 
 ## <a name="manage-complexity-of-ad-network-relationships"></a>Administrar la complejidad de las relaciones de red de anuncios  
 
-El servicio de mediación de anuncios se integra con una amplia variedad de redes de anuncios para que no tengas que hacer este trabajo. Después de usar el SDK de Microsoft Advertising para mostrar anuncios en tu aplicación, puedes modificar la configuración de mediación de anuncios [mediante el panel del centro de desarrollo](../publish/in-app-ads.md#mediation-settings) para mostrar anuncios desde varias redes de anuncios. Te beneficias de anuncios de nuevas redes de anuncios sin tener que realizar cambios en el código.
+El servicio de mediación de anuncios se integra con una amplia variedad de redes de anuncios para que no tengas que hacer este trabajo. Después de usar el SDK de Microsoft Advertising para mostrar anuncios en la aplicación, puedes modificar la configuración de mediación de anuncios [del centro de partners](../publish/in-app-ads.md#mediation-settings) para mostrar anuncios de varias redes de anuncios. Te beneficias de anuncios de nuevas redes de anuncios sin tener que realizar cambios en el código.
 
 Administramos en tu nombre la relación de principio a fin con las redes de anuncios. Se ocupa por nosotros de todo, desde la integración de redes de anuncios hasta el servicio de anuncios, informes y pagos, sin ningún esfuerzo adicional del usuario.
 
@@ -49,7 +49,7 @@ El servicio de mediación de anuncios funciona para generar el mayor rendimiento
 
 Se incluyen automáticamente nuevas redes de anuncios y se evalúan por su rendimiento mediante un presupuesto de aprendizaje. En un período corto de tiempo, encuentran su sitio en la cascada. Esto hace que las redes de anuncios sean más competitivas y ayudan al desarrollador a monetizarlo al máximo a través de aplicaciones.
 
-Es muy recomendable usar nuestra [configuración de mediación recomendada](../publish/in-app-ads.md#mediation-settings) para maximizar los ingresos de anuncios en tus aplicaciones. Esto permite que nuestros algoritmos posibiliten el mejor rendimiento de la aplicación. Sin embargo, también tienes la libertad de elegir tu propia configuración de mediación en el panel del centro de desarrollo para tener más control sobre las redes de anuncios que sirven anuncios y el orden en que lo hacen.
+Es muy recomendable usar nuestra [configuración de mediación recomendada](../publish/in-app-ads.md#mediation-settings) para maximizar los ingresos de anuncios en tus aplicaciones. Esto permite que nuestros algoritmos posibiliten el mejor rendimiento de la aplicación. Sin embargo, también tienes la libertad de elegir tu propia configuración de mediación en el centro de partners para tener más control sobre las redes de anuncios que sirven anuncios y el orden en que lo hacen.
 
 ## <a name="rich-data-and-signals"></a>Señales y datos enriquecidos
 

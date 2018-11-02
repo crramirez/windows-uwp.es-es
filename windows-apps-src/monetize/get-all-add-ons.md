@@ -1,25 +1,25 @@
 ---
 author: Xansky
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
-description: Usa este método en la API de envío de Microsoft Store para recuperar los datos de todos los complementos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
+description: Usa este método en la API de envío de Microsoft Store para recuperar datos de todos los complementos de todas las aplicaciones que están registradas en tu cuenta del centro de partners.
 title: Obtener todos los complementos
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-ons, complementos, in-app products, productos desde la aplicación, IAPs, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 43875ae33c531e66c288f8b54f74116315715380
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4d58b29a959ed791665af52018062d0cf0a3a969
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5922485"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5991290"
 ---
 # <a name="get-all-add-ons"></a>Obtener todos los complementos
 
-Usa este método en la API de envío de Microsoft Store para recuperar datos para todos los complementos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
+Usa este método en la API de envío de Microsoft Store para recuperar los datos de todos los complementos de todas las aplicaciones que están registradas en tu cuenta del centro de partners.
 
-## <a name="prerequisites"></a>Requisitos previos.
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
@@ -147,7 +147,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se encontraron complementos. |
-| 409  | Las aplicaciones o complementos usan características de panel del Centro de desarrollo que [la API de envío de Microsoft Store no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | Las aplicaciones o complementos usan características de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Temas relacionados

@@ -8,16 +8,16 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, servicios Microsoft Store, API de ofertas de destino de Microsoft Store, ofertas dirigidas
 ms.localizationpriority: medium
-ms.openlocfilehash: 706f48e64fb8e7534686b8fd7e9666b98dffd9b7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: dbfefefdb7f7b96dbe99b35656b610b393ab3afa
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5942027"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5969161"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Administrar ofertas dirigidas usando los servicios de la Store
 
-Si creas una *oferta dirigida* en la página **Interactuar > Ofertas de destino** para la aplicación en el Panel del Centro de desarrollo de Windows, usa la *API de ofertas dirigidas de Microsoft Store* en el código de la aplicación para recuperar información que te ayude a implementar la experiencia en la aplicación para la oferta dirigida. Para obtener más información sobre las ofertas dirigidas y cómo crearlas en el panel, consulta [Usar ofertas dirigidas para maximizar la interacción y las conversiones](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Si creas una *oferta dirigida* en el **interactuar > ofertas dirigidas** página de la aplicación en el centro de partners, usa la *API de ofertas dirigidas de Microsoft Store* en el código de la aplicación para recuperar información que te ayudará a implementar la experiencia de aplicación para la oferta dirigida. Para obtener más información sobre las ofertas dirigidas y cómo crearlas en el panel, consulta [Usar ofertas dirigidas para maximizar la interacción y las conversiones](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 La API de ofertas dirigidas es una API REST simple que puedes utilizar para obtener las ofertas dirigidas que están disponibles para el usuario actual, en función de si el usuario es parte del segmento de cliente para la oferta dirigida o no. Para usar esta API en el código de tu aplicación, sigue estos pasos:
 

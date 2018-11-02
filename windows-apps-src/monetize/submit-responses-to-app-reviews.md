@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store reviews API, API de opiniones de Microsoft Store, add-on acquisitions, adquisiciones de complementos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0fdfe811a90eae1e67ef7f626815be1ef78a4c61
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8a8a336d477e7d66222632821f0fa0855faae6f7
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5928596"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970119"
 ---
 # <a name="submit-responses-to-reviews"></a>Enviar respuestas a opiniones
 
@@ -23,7 +23,7 @@ Usa este método en la API de opiniones de Microsoft Store para responder median
 Cuando un cliente envía una opinión, puede elegir no recibir respuestas a dicha opinión. Si se intenta responder a una opinión para la que el cliente ha elegido no recibir respuestas, el cuerpo de la respuesta de este método indicará que el intento de respuesta no ha tenido éxito. Antes de llamar a este método, tienes la opción de determinar si puedes responder a una opinión determinada mediante el método [obtener información sobre la respuesta a las opiniones sobre la aplicación](get-response-info-for-app-reviews.md).
 
 > [!NOTE]
-> Además de usar este método para responder mediante programación a las opiniones, tienes la alternativa de responder a las opiniones [mediante el panel del Centro de desarrollo de Windows](../publish/respond-to-customer-reviews.md).
+> Además de usar este método para responder mediante programación a las opiniones, también puedes responder a las opiniones [mediante el centro de partners](../publish/respond-to-customer-reviews.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -67,7 +67,7 @@ Cada objeto de la matriz *Responses* contiene los siguientes valores.
 
 | Valor        | Tipo   | Descripción           |  Obligatorio  |
 |---------------|--------|-----------------------------|-----|
-| ApplicationId | Cadena |  El id. de la Store de la aplicación que contiene la opinión a la que deseas responder. El id. de la Store está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8.   |  Sí  |
+| ApplicationId | Cadena |  El id. de la Store de la aplicación que contiene la opinión a la que deseas responder. El identificador de la tienda está disponible en la [página de identidad de la aplicación](../publish/view-app-identity-details.md) del centro de partners. Un ejemplo de un Id. de la Store sería 9WZDNCRFJ3Q8.   |  Sí  |
 | ReviewId | Cadena |  El id. de la opinión a la que deseas responder (es un GUID). Los identificadores de opinión están disponibles en los datos de respuesta del método [obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de Microsoft Store y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).   |  Sí  |
 | ResponseText | Cadena | La respuesta que quieres enviar. La respuesta debe seguir [estas directrices](../publish/respond-to-customer-reviews.md#guidelines-for-responses).   |  Sí  |
 | SupportEmail | Cadena | La dirección de correo electrónico del soporte técnico de la aplicación, que el cliente puede usar para ponerse en contacto contigo directamente. Debe ser una dirección de correo electrónico válida.     |  Sí  |
@@ -146,7 +146,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Responder a las opiniones de los clientes mediante el panel del Centro de desarrollo](../publish/respond-to-customer-reviews.md)
+* [Responder a las opiniones de cliente mediante el centro de partners](../publish/respond-to-customer-reviews.md)
 * [Responder a las opiniones con servicios de Microsoft Store](respond-to-reviews-using-windows-store-services.md)
 * [Obtención de información acerca de las respuesta a las opiniones sobre la aplicación](get-response-info-for-app-reviews.md)
 * [Obtener las opiniones de la aplicación](get-app-reviews.md)

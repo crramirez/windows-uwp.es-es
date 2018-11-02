@@ -1,24 +1,24 @@
 ---
 author: Xansky
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
-description: Usa este método en la API de envío de Microsoft Store para crear un nuevo complemento para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows.
+description: Usa este método en la API de envío de Microsoft Store para crear un nuevo envío de complemento para una aplicación que está registrada en el centro de partners.
 title: Crear un envío de complemento
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, create add-on submission, crear envío de complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 32e5c803600d0b56e421ae87a5514f6c70cc8d11
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: c4aecb07034b7c8a161546fc9d8001247e9234cb
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924872"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5981253"
 ---
 # <a name="create-an-add-on-submission"></a>Crear un envío de complemento
 
 
-Usa este método en la API de envío de Microsoft Store para crear un nuevo envío de complemento (también conocido como producto desde la aplicación o IAP) para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows. Después de crear correctamente un nuevo envío mediante este método, [actualiza el envío](update-an-add-on-submission.md) para realizar los cambios necesarios a los datos de envío y luego [confirma el envío](commit-an-add-on-submission.md) para la recopilación y la publicación.
+Usa este método en la API de envío de Microsoft Store para crear un nuevo envío de complemento (también conocido como producto la aplicación o IAP) para una aplicación que está registrada en tu cuenta del centro de partners. Después de crear correctamente un nuevo envío mediante este método, [actualiza el envío](update-an-add-on-submission.md) para realizar los cambios necesarios a los datos de envío y luego [confirma el envío](commit-an-add-on-submission.md) para la recopilación y la publicación.
 
 Para obtener más información sobre cómo se ajusta este método en el proceso de creación del envío de un complemento mediante la API de envío de Microsoft Store, consulta [Administrar envíos de complementos)](manage-add-on-submissions.md).
 
@@ -30,8 +30,8 @@ Para obtener más información sobre cómo se ajusta este método en el proceso 
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
-* Crea un complemento para una aplicación de tu cuenta del Centro de desarrollo. Puedes hacer esto en el panel del Centro de desarrollo o puedes hacerlo mediante el método de [Creación de un envío de complemento](create-an-add-on.md).
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* Crear un complemento de una de las aplicaciones. Puedes hacer esto en el centro de partners, o puedes hacerlo mediante el método de [crear un complemento](create-an-add-on.md) .
 
 ## <a name="request"></a>Solicitud
 
@@ -53,7 +53,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | cadena | Obligatorio. Id. de la Store del complemento para el cual deseas crear un envío. El Id. de la Store está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes de [Creación de un complemento](create-an-add-on.md) u [Obtención de los detalles de los complementos](get-all-add-ons.md).  |
+| inAppProductId | cadena | Obligatorio. Id. de la Store del complemento para el cual deseas crear un envío. El identificador de la tienda está disponible en el centro de partners y se incluye en los datos de respuesta de las solicitudes para [crear un complemento](create-an-add-on.md) u [obtener detalles de complementos](get-all-add-ons.md).  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -153,7 +153,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 400  | No se pudo crear el envío porque la solicitud no es válida. |
-| 409  | No se pudo crear el envío debido al estado actual de la aplicación o a que esta aplicación usa una función del panel del Centro de desarrollo que [actualmente no admite la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | No se pudo crear el envío debido al estado actual de la aplicación o la aplicación usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Temas relacionados

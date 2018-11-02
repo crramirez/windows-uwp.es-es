@@ -12,11 +12,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 82623a86548866a78f56385ee0a535bfcb822c46
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919289"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970242"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
 
@@ -56,7 +56,7 @@ Empecemos con los principios básicos de diseño de buena navegación:
 
 ### <a name="consistency"></a>Coherencia
 
-La navegación debería ser coherente con las expectativas del usuario. Mediante [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y estilo hará exploración intuitiva y predecible para los usuarios.
+La navegación debería ser coherente con las expectativas del usuario. Con [los controles estándar](#use-the-right-controls) que los usuarios están familiarizados con y siguientes convenciones estándares para los iconos, ubicación y estilos hará que la navegación intuitiva y predecible para los usuarios.
 
 ![imagen de componentes de la página](images/nav/page-components.svg)
 
@@ -97,7 +97,7 @@ Ahora vamos a tomar nuestros principios de diseño, coherencia, simplicidad y cl
 
 1. Piensa en tus usuarios. Traza rutas habituales que podrían tomar en la aplicación, y en cada página, piensa en por qué está ahí el usuario y dónde podría querer ir.
 
-2. Evite las jerarquías de exploración profunda. Si vas más allá de tres niveles de navegación, existe el riesgo de hacer encallar al usuario en una jerarquía profunda de la que tenga dificultades para salir.
+2. Evita las jerarquías de navegación detallado. Si vas más allá de tres niveles de navegación, existe el riesgo de hacer encallar al usuario en una jerarquía profunda de la que tenga dificultades para salir.
 
 3. Evita el "pogo-sticking". El "pogo-sticking" se produce cuando hay contenido relacionado, pero navegar hasta él requiere que el usuario suba un nivel y después vuelva a bajar.
 
@@ -185,14 +185,14 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
         
         Use top navigation when:
 
-        - Desea mostrar todas las opciones de navegación en la pantalla.
-        - Usted desea más espacio para el contenido de la aplicación.
-        - Los iconos no describen claramente las categorías de navegación.
+        - Que quieras mostrar todas las opciones de exploración en la pantalla.
+        - Desean más espacio para el contenido de la aplicación.
+        - Los iconos claramente no describen las categorías de navegación.
         
-        Utilice fichas cuando:
+        Usa pestañas cuando:
 
-        - Desea preservar el estado de página y el historial de navegación.
-        - Se espera que los usuarios cambiar entre fichas con frecuencia.
+        - Desea conservar el estado de página y el historial de navegación.
+        - Espera que los usuarios cambien entre las pestañas con frecuencia.
 
 :::row-end:::
 
@@ -206,7 +206,7 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
         Displays a vertical list of links to top-level pages. Use when:
         
         - Las páginas existen en el nivel superior.
-        - Hay muchos elementos de exploración (más de 5)
+        - Hay muchos elementos de navegación (más de 5)
         - No se espera que los usuarios cambien entre las páginas con frecuencia.
         
 :::row-end:::
