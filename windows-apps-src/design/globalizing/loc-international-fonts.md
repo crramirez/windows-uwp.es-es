@@ -41,7 +41,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Cheroqui (cheroqui) | chr-CHER-US | Gadugi |
 | Chino simplificado | zh-CN | MS YaHei UI |
 | Chino tradicional (Hong Kong) | zh-HK | MS JhengHei UI |
-| Chino tradicional (Taiwán) | zh-TW | MS JhengHei UI |
+| Chinese Traditional (Taiwan) | zh-TW | MS JhengHei UI |
 | Croata | hr-HR | Segoe UI |
 | Checo | cs-CZ | Segoe UI |
 | Danés | da-DK | Segoe UI |
