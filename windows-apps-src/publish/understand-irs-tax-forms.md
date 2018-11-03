@@ -9,11 +9,11 @@ keywords: windows 10, uwp, impuestos, irs, servicio de impuestos internos, impue
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
 ms.openlocfilehash: 326de9b3160f492566306b18252bbc3bacf58531
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5920677"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5986812"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 

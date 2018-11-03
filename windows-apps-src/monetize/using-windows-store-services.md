@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 9FCBAF2E-5419-4169-A17C-9C4058DCF909
-description: Microsoft Store muestra varios servicios que se pueden llamar a través de las API de REST acceder mediante programación a determinados tipos de datos para las aplicaciones que están registradas en tu o de tu organización '' cuenta del centro de desarrollo de Windows.
+description: Microsoft Store muestra varios servicios que se pueden llamar a través de las API de REST acceder mediante programación a determinados tipos de datos para las aplicaciones que están registradas en la cuenta de centro de partners de tu o tu organización.
 title: Servicios de Microsoft Store
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, servicios de la Tienda
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b9a95937dca3ab45c0fd027252719d6b3aa57fb
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0d13c5c9428a38dd212e59688d2b4b5eae187ea4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930930"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5984039"
 ---
 # <a name="microsoft-store-services"></a>Servicios de Microsoft Store
 
-Microsoft Store muestra varios servicios que se pueden llamar a través de las API de REST acceder mediante programación a determinados tipos de datos para las aplicaciones que están registradas en la cuenta del centro de desarrollo de Windows tu o tu organización.
+Microsoft Store muestra varios servicios que se pueden llamar a través de las API de REST acceder mediante programación a determinados tipos de datos para las aplicaciones que están registradas en la cuenta de centro de partners de tu o tu organización.
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -25,9 +25,9 @@ Microsoft Store muestra varios servicios que se pueden llamar a través de las A
 | Tema            | Descripción                 |
 |------------------|-----------------------------|
 | [Obtener acceso a datos de análisis](access-analytics-data-using-windows-store-services.md) | Usa la *API de análisis de Microsoft Store* para recuperar mediante programación los datos de análisis de las aplicaciones. Esta API permite recuperar los datos para la aplicación y adquisiciones de complemento (también llamado producto desde la aplicación o IAP), errores de la aplicación, revisiones y clasificaciones de la aplicación y datos de rendimiento de anuncios desde la aplicación y campañas promocionales de anuncios. |
-| [Responder a las opiniones de los clientes](respond-to-reviews-using-windows-store-services.md) | Usa la *API de opiniones de Microsoft Store* para responder mediante programación a las opiniones de la aplicación en la Store. Esta API es especialmente útil para los desarrolladores que quieren responder de forma masiva a muchas opiniones sin usar el panel del Centro de desarrollo de Windows.  |
-| [Realizar campañas de anuncios](run-ad-campaigns-using-windows-store-services.md) | Usar la *API de promociones de Microsoft Store* para administrar mediante programación campañas de anuncios promocionales para las aplicaciones. Esta API permite crear, actualizar y supervisar las campañas y otros activos relacionados como destino y creativos. Esta API es especialmente útil para los desarrolladores que crean grandes volúmenes de campañas y que quieren hacerlo sin usar el panel del Centro de desarrollo de Windows. |
-| [Crear y administrar usuarios](create-and-manage-submissions-using-windows-store-services.md) | Usa la *API de envío de Microsoft Store* para efectuar consultas mediante programación y crear envíos de aplicaciones, complementos y paquetes piloto para tu cuenta del Centro de desarrollo de Windows o la de tu organización. Esta API es útil si tu cuenta administra muchas aplicaciones o complementos, y quieres automatizar y optimizar el proceso de envío para estos activos. |
+| [Responder a las opiniones de los clientes](respond-to-reviews-using-windows-store-services.md) | Usa la *API de opiniones de Microsoft Store* para responder mediante programación a las opiniones de la aplicación en la Store. Esta API es especialmente útil para los desarrolladores que quieren masiva de responden a muchas opiniones sin usar el centro de partners.  |
+| [Ejecutar campañas de anuncios](run-ad-campaigns-using-windows-store-services.md) | Usar la *API de promociones de Microsoft Store* para administrar mediante programación campañas de anuncios promocionales para las aplicaciones. Esta API permite crear, actualizar y supervisar las campañas y otros activos relacionados, como la selección de destino y los creativos. Esta API es especialmente útil para los desarrolladores que crean grandes volúmenes de campañas y que quieran hacerlo sin usar el centro de partners dhboard. |
+| [Crear y administrar usuarios](create-and-manage-submissions-using-windows-store-services.md) | Usar la *API de envío de Microsoft Store* para consultar mediante programación y crear envíos de aplicaciones, complementos y paquetes piloto de cuenta de centro de partners de tu o tu organización. Esta API es útil si tu cuenta administra muchas aplicaciones o complementos, y quieres automatizar y optimizar el proceso de envío para estos activos. |
 | [Administrar ofertas dirigidas ](manage-targeted-offers-using-windows-store-services.md) | Usar la *API de ofertas dirigidas de Microsoft Store* mediante programación reclamar una oferta dirigida que está asociada con la compra de un complemento en la aplicación se realiza correctamente. |
 | [Administrar los derechos de producto desde un servicio](view-and-grant-products-from-a-service.md)  | Si tienes un catálogo de aplicaciones y complementos en la tienda, puedes usar la *API de colecciones de Microsoft Store* y la *API de compras de Microsoft Store* para acceder a la información de propiedad de estos productos desde tus servicios, notificar un producto consumible como completado para un usuario y conceder un derecho para un producto gratuito a un usuario.  |
 | [API de metadatos de aplicaciones para redes de publicidad](app-metadata-api-for-advertising-networks.md)  | Las redes de publicidad pueden usar esta API para recuperar mediante programación los metadatos sobre las aplicaciones de Microsoft Store, incluidos detalles como la descripción y la categoría de la descripción de la tienda de la aplicación y si la aplicación está destinada a niños menores de 13 años. El acceso a esta API está actualmente restringido a los desarrolladores a los que Microsoft ha concedido permiso.  |

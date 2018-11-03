@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: AC74B4FA-5554-4C03-9683-86EE48546C05
-description: Usa este método en la API de envío de Microsoft Store para confirmar un envío de complemento nuevo o actualizado al Centro de desarrollo de Windows.
+description: Usa este método en la API de envío de Microsoft Store para confirmar un envío de complemento nuevo o actualizado al centro de partners.
 title: Confirmar un envío de complemento
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, commit add-on submission, confirmar envío de complemento, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 52dce19410741c0ac7b006b14d572ec7280a5e2c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 6f0d7ed15d3328ceffa9aa65a38c129f735c41ba
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926252"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5985504"
 ---
 # <a name="commit-an-add-on-submission"></a>Confirmar un envío de complemento
 
-Usa este método en la API de envío de Microsoft Store para confirmar un envío de complementos (también conocidos como productos desde la aplicación o IAP) nuevo o actualizado al Centro de desarrollo de Windows. La acción de confirmación avisa al Centro de desarrollo de que los datos del envío se han cargado (incluidos los iconos relacionados). En respuesta, el Centro de desarrollo confirma los cambios en los datos de envío para la recopilación y la publicación. Después de que la operación de confirmación se realice correctamente, los cambios en el envío se muestran en el panel del Centro de desarrollo.
+Usa este método en la API de envío de Microsoft Store para confirmar un envío de complemento nuevo o actualizado (también conocido como producto la aplicación o IAP) al centro de partners. La acción de confirmación alertas partners centro que los datos de envío se han cargado (incluidos los iconos relacionados). En respuesta, el centro de partners confirma los cambios en los datos de envío de la recopilación y la publicación. Después de que se realiza correctamente la operación de confirmación, los cambios en el envío se muestran en el centro de partners.
 
 Para obtener más información sobre cómo se ajusta la operación de confirmación en el proceso de envío de un complemento mediante la API de envío de Microsoft Store, consulta [Administrar envíos de complementos](manage-add-on-submissions.md).
 
@@ -49,8 +49,8 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | cadena | Obligatorio. El Id. de la Store del complemento que contiene el envío que deseas confirmar. El Id. de la Store está disponible en el panel del Centro de desarrollo, y se incluye en los datos de respuesta para las solicitudes de [Obtención de todos los complementos](get-all-add-ons.md) y [Creación de un complemento](create-an-add-on.md). |
-| submissionId | cadena | Obligatorio. El identificador del envío que deseas confirmar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de complemento](create-an-add-on-submission.md). Para un envío creado en el panel del Centro de desarrollo, este id. también está disponible en la URL de la página de envío del panel.  |
+| inAppProductId | cadena | Obligatorio. El Id. de la Store del complemento que contiene el envío que deseas confirmar. El identificador de la tienda está disponible en el centro de partners y se incluye en los datos de respuesta de las solicitudes para [obtener todos los complementos](get-all-add-ons.md) y [crear un complemento](create-an-add-on.md). |
+| submissionId | cadena | Obligatorio. El identificador del envío que deseas confirmar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de complemento](create-an-add-on-submission.md). Para un envío que se creó en el centro de partners, este Id. también está disponible en la dirección URL de la página de envío del centro de partners.  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -91,10 +91,10 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 |--------|------------------|
 | 400  | Los parámetros de la solicitud no son válidos. |
 | 404  | No se pudo encontrar el envío especificado. |
-| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o el complemento usa una función de panel del Centro de desarrollo que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | Se encontró el envío especificado, pero no se ha podido confirmar en su estado actual o el complemento usa una función de centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
-## <a name="related-topics"></a>Artículos relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener un envío de complemento](get-an-add-on-submission.md)

@@ -8,12 +8,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, ads, publicidad, advertising, AdControl, solución de problemas, troubleshooting, HTML, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cd19b574d6128fa1f88196c8c35f368b12c3531
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 38f0b36769d13d119965e7d15c5812b9ba1d6ecd
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5947060"
+ms.locfileid: "5983933"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>Guía de solución de problemas de HTML y JavaScript
 
@@ -48,7 +48,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     </head>
     ```
 
-3.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units) (Configurar unidades de anuncios en tu aplicación).
+3.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de anuncio que obtuviste en el centro de partners. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units) (Configurar unidades de anuncios en tu aplicación).
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -273,7 +273,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     });  
     ```
 
-4.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el id. de aplicación y el id. de unidad de anuncios que obtuviste en el Centro de desarrollo de Windows. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units) (Configurar unidades de anuncios en tu aplicación).
+4.  Comprueba el Id. de aplicación y el Id. de unidad de anuncio. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de anuncio que obtuviste en el centro de partners. Para obtener más información, consulta [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units) (Configurar unidades de anuncios en tu aplicación).
 
     > [!div class="tabbedCodeSnippets"]
     ``` javascript

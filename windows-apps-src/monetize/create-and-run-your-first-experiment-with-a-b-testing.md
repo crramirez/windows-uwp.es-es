@@ -8,32 +8,32 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, Microsoft Store Services SDK, Microsoft Store Services SDK, A/B tests, pruebas A/B, experiments, experimentos
 ms.localizationpriority: medium
-ms.openlocfilehash: eb6e3f245aaaff46156964b5a6b37b21d22a2102
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: e5a4c3607486a7163648c7aa5a0e1d03d37e421f
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5935952"
+ms.locfileid: "5985016"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Crear y ejecutar tu primer experimento
 
 En este tutorial, podrás:
-* Crear un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación en el panel del Centro de desarrollo que defina varias variables remotas que representen el texto y el color de un botón de la aplicación.
-* Crear una aplicación con código que recupere los valores de las variables remotas, use estos datos para cambiar el color de fondo de un botón y registre los datos de eventos de conversión y de visualización en el Centro de desarrollo.
+* Crear un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación en el centro de partners que defina varias variables remotas que representen el texto y el color de un botón de la aplicación.
+* Crear una aplicación con código que recupere los valores de variables remotas, use estos datos para cambiar el color de fondo de un botón y registra vista y datos de evento de conversión en el centro de partners.
 * Crear un experimento en el proyecto para comprobar si al cambiar el color de fondo de un botón de una aplicación aumenta satisfactoriamente el número de clics.
 * Ejecutar la aplicación para recopilar datos del experimento.
-* Revisa rlos resultados del experimento en el panel del Centro de desarrollo, elige una variación para habilitar para todos los usuarios de la aplicación y completa la prueba.
+* Revisar los resultados del experimento en el centro de partners, elige una variación para habilitar para todos los usuarios de la aplicación y completar el experimento.
 
-Para obtener una visión general de la prueba A/B del Centro de desarrollo, consulta [Ejecutar experimentos de la aplicación con una prueba A/B](run-app-experiments-with-a-b-testing.md).
+Para obtener información general de una prueba A/b con el centro de partners, consulta [Ejecutar experimentos de la aplicación con pruebas A/b](run-app-experiments-with-a-b-testing.md).
 
-## <a name="prerequisites"></a>Requisitos previos.
+## <a name="prerequisites"></a>Requisitos previos
 
-Para seguir con este tutorial, debes tener una cuenta del Centro de desarrollo de Windows y debes configurar el equipo de desarrollo como se describe en [Ejecución de experimentos de la aplicación con pruebas A/B](run-app-experiments-with-a-b-testing.md).
+Para seguir este tutorial, debes tener una cuenta del centro de partners y debes configurar el equipo de desarrollo como se describe en [Ejecutar experimentos de la aplicación con pruebas A/b](run-app-experiments-with-a-b-testing.md).
 
-## <a name="create-a-project-with-remote-variables-in-windows-dev-center"></a>Creación de un proyecto con variables remotas en el Centro de desarrollo de Windows
+## <a name="create-a-project-with-remote-variables-in-partner-center"></a>Crear un proyecto con variables remotas en el centro de partners
 
-1. Inicia sesión en el [panel del Centro de desarrollo](https://dev.windows.com/overview).
-2. Si ya tienes una aplicación en el Centro de desarrollo que quieres usar para crear un experimento, selecciona la aplicación en tu panel. Si aún no tienes una aplicación en el panel, [crea una aplicación nueva reservando un nombre](../publish/create-your-app-by-reserving-a-name.md) y, a continuación, selecciona esa aplicación en el panel.
+1. Inicia sesión en el [Centro de partners](https://partner.microsoft.com/dashboard).
+2. Si ya tienes una aplicación en el centro de partners que quieres usar para crear un experimento, selecciona la aplicación Centro de partners. Si todavía no tienes una aplicación en el centro de partners, [crear una nueva aplicación reservando un nombre](../publish/create-your-app-by-reserving-a-name.md) y, a continuación, selecciona la aplicación en el centro de partners.
 3. En el panel de navegación, haz clic en **Servicios** y, a continuación, haz clic en **Experimentación**.
 4. En la sección de **Proyectos** de la página siguiente, haz clic en el botón **Nuevo proyecto**.
 5. En la página **Nuevo proyecto**, escribe el nombre **Experimentos de clics de botón** para el nuevo proyecto.
@@ -53,14 +53,14 @@ Para seguir con este tutorial, debes tener una cuenta del Centro de desarrollo d
 5. En **Explorador de soluciones**, haz doble clic en MainPage.xaml para abrir el diseñador de la página principal de la aplicación.
 6. Arrastra un **botón** de **Herramientas** a la página.
 7. Haz doble clic en el botón del diseñador para abrir el archivo de código y agregar un controlador de eventos para el evento **Click**.  
-8. Reemplaza todo el contenido del archivo de código por el siguiente código. Asigna la variable ```projectId``` al valor [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms) que obtuviste en el panel del Centro de desarrollo en la sección anterior.
+8. Reemplaza todo el contenido del archivo de código por el siguiente código. Asignar el ```projectId``` variable en el valor de [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms) que obtuviste en el centro de partners en la sección anterior.
     [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
 9. Guarda el archivo de código y crea el proyecto.
 
-## <a name="create-the-experiment-in-windows-dev-center"></a>Creación del experimento en el Centro de desarrollo de Windows
+## <a name="create-the-experiment-in-partner-center"></a>Crear el experimento en el centro de partners
 
-1. Vuelve a la página de proyecto de **Experimentos de clics de botón** en el panel del Centro de desarrollo de Windows.
+1. Vuelve a la página del proyecto **Experimentos de clics de botón** en el centro de partners.
 2. En la sección **Experimentos**, haz clic en el botón **Nuevo experimento**.
 3. En la sección **Datos del experimento**, escribe el nombre **Optimizar clics de botón** en el campo **Nombre del experimento**.
 4. En la sección **Evento de visualización** , escribe **userViewedButton** en el campo de **Nombre del evento de visualización**. Ten en cuenta que este nombre coincida con la cadena de evento de visualización en la que has iniciado sesión en el código que agregaste en la sección anterior.
@@ -90,13 +90,13 @@ Para seguir con este tutorial, debes tener una cuenta del Centro de desarrollo d
 Espera al menos varias horas después de completar la sección anterior y, a continuación, sigue estos pasos para revisar los resultados del experimento y completarlo.
 
 > [!NOTE]
-> En cuanto activas un experimento, el Centro de desarrollo inicia inmediatamente la recopilación de datos de las aplicaciones que están pensadas para registrar los datos del experimento. Sin embargo, pueden pasar varias horas antes de que los datos del experimento aparezcan en el panel.
+> En cuanto activas un experimento, el centro de partners inicia inmediatamente la recopilación de datos de las aplicaciones que están pensadas para registrar los datos del experimento. Sin embargo, puede tardar varias horas para datos del experimento aparezcan en el centro de partners.
 
-1. En el Centro de desarrollo, vuelve a la página de la aplicación **Experimentación**.
+1. En el centro de partners, vuelve a la página de **experimentación** para tu aplicación.
 2. En la sección **Experimentos activos**, haz clic en **Optimizar clics de botón** y ve a la página de este experimento.
-3. Confirma que los resultados que se muestran en las secciones **Resumen de resultados** y **Detalles de resultados** coinciden con lo que se espera ver. Para más información sobre estas secciones, consulta [Administrar el experimento en el panel del Centro de desarrollo](manage-your-experiment.md#review-the-results-of-your-experiment).
+3. Confirma que los resultados que se muestran en las secciones **Resumen de resultados** y **Detalles de resultados** coinciden con lo que se espera ver. Para obtener más información acerca de estas secciones, consulte [Administrar tu experimento en el centro de partners](manage-your-experiment.md#review-the-results-of-your-experiment).
     > [!NOTE]
-    > El Centro de desarrollo solo notifica el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
+    > El centro de partners notifica solo el primer evento de conversión para cada usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. El objetivo es evitar que un usuario con muchos eventos de conversión desvíe los resultados del experimento de un grupo de usuarios de muestra.
 
 4. Ahora estás listo para finalizar el experimento. En la sección **Resumen de resultados**, en la columna **Variación B**, haz clic en **Cambiar**. Esto cambia todos los usuarios de la aplicación al botón azul.
 5. Haz clic en **Aceptar** para confirmar que deseas finalizar el experimento.
@@ -105,8 +105,8 @@ Espera al menos varias horas después de completar la sección anterior y, a con
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Creación de un proyecto y definición de variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [Programar tu aplicación para los experimentos.](code-your-experiment-in-your-app.md)
-* [Definición de tu experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md)
-* [Administración de tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md)
-* [Ejecución de experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
+* [Crear un proyecto y definir variables remotas en el centro de partners](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [Programar tu aplicación para los experimentos](code-your-experiment-in-your-app.md)
+* [Definir el experimento en el centro de partners](define-your-experiment-in-the-dev-center-dashboard.md)
+* [Administrar tu experimento en el centro de partners](manage-your-experiment.md)
+* [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)

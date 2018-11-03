@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, auriculares
 ms.localizationpriority: medium
 ms.openlocfilehash: f5097af13d0714f30eefd7771f798036d069cdea
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5943407"
+ms.locfileid: "5981559"
 ---
 # <a name="headset"></a>Auriculares
 

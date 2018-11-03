@@ -7,17 +7,17 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, multiplayer, multijugador
 ms.localizationpriority: medium
-ms.openlocfilehash: 86f6b4c5742b4abc9bfd5b56e0242376770516a7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 6074f3774d099c63f6c39ac4ef0e95a7b6745912
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932320"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5980517"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a>Obtener datos de multijugador de Xbox Live
 
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de multijugador de tu [juego habilitado para Xbox Live](../xbox-live/index.md) diaria o mensualmente. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) del Panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de multijugador de tu [juego habilitado para Xbox Live](../xbox-live/index.md) diaria o mensualmente. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
 
 > [!IMPORTANT]
 > Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](../xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).

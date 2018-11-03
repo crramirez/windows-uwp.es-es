@@ -1,25 +1,25 @@
 ---
 author: Xansky
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
-description: Usa estos métodos en la API de envío de Microsoft Store para recuperar los datos de las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
+description: Usa estos métodos en la API de envío de Microsoft Store para recuperar los datos de las aplicaciones que están registradas en tu cuenta del centro de partners.
 title: Obtener datos de la aplicación
 ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app data, datos de la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 96f30e38a05eefe3e51f0ba632585f269b96efb8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: ecda61bff6fac407dbde175f584a09d6b871d989
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945125"
+ms.locfileid: "5985985"
 ---
 # <a name="get-app-data"></a>Obtener datos de la aplicación
 
-Usa los métodos siguientes de la API de envío de Microsoft Store para obtener datos de aplicaciones existentes en tu cuenta del Centro de desarrollo. Para obtener una introducción a la API de envío de Microsoft Store, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
+Usa los siguientes métodos en la API de envío de Microsoft Store para obtener los datos de aplicaciones existentes en tu cuenta del centro de partners. Para obtener una introducción a la API de envío de Microsoft Store, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
-Antes de poder usar estos métodos, la aplicación ya debe existir en tu cuenta del Centro de desarrollo. Para crear o administrar envíos de aplicaciones, consulta los métodos de [Administrar envíos de aplicaciones](manage-app-submissions.md).
+Antes de poder usar estos métodos, la aplicación ya debe existir en tu cuenta del centro de partners. Para crear o administrar envíos de aplicaciones, consulta los métodos de [Administrar envíos de aplicaciones](manage-app-submissions.md).
 
 <table>
 <colgroup>
@@ -102,7 +102,7 @@ Este recurso tiene los siguientes valores.
 | primaryName   | cadena  | Nombre principal de la aplicación.      |
 | packageFamilyName | cadena  | El nombre de familia de paquete de la aplicación.      |
 | packageIdentityName          | cadena  | El nombre de identidad de paquete de la aplicación.                       |
-| publisherName       | cadena  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde al valor **paquete/identidad/editor** que aparece en la página de [identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) de la aplicación en el panel del Centro de desarrollo de Windows.       |
+| publisherName       | cadena  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde al valor de **Paquete/identidad/Editor** que aparece en la página de [identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) para la aplicación en el centro de partners.       |
 | firstPublishedDate      | cadena  | La fecha en que se publicó la aplicación por primera vez, en formato ISO 8601.   |
 | lastPublishedApplicationSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para la aplicación.    |
 | pendingApplicationSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   
@@ -157,7 +157,7 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción           |
 |-----------------|---------|------------------------|
-| flightId            | cadena  | El identificador para el paquete piloto. Este valor está proporcionado por el Centro de desarrollo.  |
+| flightId            | cadena  | El identificador para el paquete piloto. Este valor lo proporciona el centro de partners.  |
 | friendlyName           | cadena  | El nombre del paquete piloto, según lo especifica el desarrollador.   |
 | lastPublishedFlightSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para el paquete piloto.   |
 | pendingFlightSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para el paquete piloto.  |    

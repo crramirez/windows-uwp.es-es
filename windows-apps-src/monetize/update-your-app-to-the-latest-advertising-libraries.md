@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, AdControl, AdControl, AdMediatorControl, AdMediatorControl, migrate, migrar
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e57cc24554f851ba79cfc47e917b92b3ad3047e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 48fc818c1ae7a9a46912ff52c2b00b07f19c366e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5936528"
+ms.locfileid: "5985668"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Actualizar la aplicación a las bibliotecas de publicidad más recientes de anuncios de banner
 
@@ -29,7 +29,7 @@ Antes de que este SDK se lanzara, proporcionamos anteriormente la clase **AdCont
 
 * Cuando el control **AdControl** de tu aplicación solicite un nuevo anuncio, se generará el evento **ErrorOccurred** del control y la propiedad **ErrorCode** de los argumentos del evento tendrá el valor **NoAdAvailable**.
 
-* Se desactivarán las unidades de anuncios que están asociadas a tu aplicación. No puedes quitar estas unidades de anuncios desactivadas desde tu cuenta del Centro de desarrollo. Si actualizas la aplicación para usar el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp), pasa por alto estas unidades de anuncios y crea otras nuevas.
+* Se desactivarán las unidades de anuncios que están asociadas a tu aplicación. No puedes quitar estas unidades de anuncios desactivadas desde tu cuenta del centro de DePartnerv. Si actualizas la aplicación para usar el [SDK de Microsoft Advertising](http://aka.ms/ads-sdk-uwp), pasa por alto estas unidades de anuncios y crea otras nuevas.
 
 * Los anuncios de banner también dejarán de proporcionarse para las unidades de anuncios que se usan en más de una aplicación. Asegúrate de que las unidades de anuncios se usen cada una solo en una aplicación.
 
@@ -88,4 +88,4 @@ Elimina todas las referencias existentes a las bibliotecas de publicidad de Micr
 
 Prueba la aplicación para asegurarte de que muestra anuncios de banner según lo previsto.
 
-Si la versión anterior de la aplicación ya está disponible en la Store, [crea un nuevo envío](../publish/app-submissions.md) para la aplicación actualizada en el panel del Centro de desarrollo para publicar la aplicación.
+Si la versión anterior de la aplicación ya está disponible en la tienda, [crea un nuevo envío](../publish/app-submissions.md) de la aplicación actualizada en el centro de partners para publicar la aplicación.
